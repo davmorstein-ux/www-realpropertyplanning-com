@@ -3,9 +3,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import CTASection from "@/components/CTASection";
-import { Link } from "react-router-dom";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { Button } from "@/components/ui/button";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
 import hbmmLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
 import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
@@ -13,41 +13,93 @@ import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-lo
 import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
 import abigailPhoto from "@/assets/abigail-mckee-ginnys-girls-manager.webp";
 import ginnysGirlsLogo from "@/assets/ginnys-girls-estate-services-logo-v3.webp";
-import iconSeniorMoves from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
-import iconCall3d from "@/assets/icons/real-estate-phone-handset-3d-icon-washington.webp";
-import iconMail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
-import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
-import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D";
-import GinnysGirlsCard from "@/components/GinnysGirlsCard";
-import HeroBandTitle from "@/components/HeroBandTitle";
-import seniorMoveManagersHero from "@/assets/senior-move-managers-hero.webp";
+import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 
-const realEstateSideItems = [
+type Contact = { name: string; role?: string; photo: string; alt: string };
+
+type Provider = {
+  company: string;
+  website: string;
+  logo: string;
+  logoAlt: string;
+  contacts: Contact[];
+  specialty: string;
+  phones: { label: string; href: string }[];
+  email: string;
+};
+
+const providers: Provider[] = [
   {
-    title: "Certified Home Valuation",
-    text: "Before any decision is made, families need to know what the home is actually worth. As a Washington State Certified Residential Appraiser, we provide court-acceptable, lender-approved valuations that give families a reliable foundation for planning.",
+    company: "HB Move Management · Hansen Bros. Moving",
+    website: "https://www.hbmovemanagement.com",
+    logo: hbmmLogo,
+    logoAlt: "HB Move Management logo",
+    contacts: [
+      {
+        name: "Eric Rovner",
+        role: "Vice President of Marketing",
+        photo: ericRovnerPhoto,
+        alt: "Eric Rovner — Vice President of Marketing, HB Move Management",
+      },
+    ],
+    specialty:
+      "Senior move management including preparation, packing, moving, and resettling throughout the Puget Sound region.",
+    phones: [{ label: "(206) 257-4314", href: "tel:+12062574314" }],
+    email: "info@hbmovemanagement.com",
   },
   {
-    title: "Preparing the Home for Sale",
-    text: "Many family homes need some level of preparation before going on the market. We provide practical, no-pressure guidance on what is worth doing and what can be skipped — with full awareness that the family is already managing a great deal.",
+    company: "Monarch Transitions · Senior Move Managers",
+    website: "https://www.monarchtransitions.com",
+    logo: monarchLogo,
+    logoAlt: "Monarch Transitions logo",
+    contacts: [
+      {
+        name: "Tina Baril",
+        role: "Owner",
+        photo: tinaBarilPhoto,
+        alt: "Tina Baril — Owner, Monarch Transitions",
+      },
+    ],
+    specialty:
+      "Senior move management serving Pierce, South King, Thurston and Kitsap counties.",
+    phones: [
+      { label: "(206) 353-8617", href: "tel:+12063538617" },
+      { label: "(253) 507-3398", href: "tel:+12535073398" },
+    ],
+    email: "tina@monarchtransitions.com",
   },
   {
-    title: "Coordinating the Timeline",
-    text: "Timing the sale of the family home with the move to a new living situation requires careful coordination. Moving too fast can be traumatic. Moving too slow can create financial strain. We help families sequence these steps in a way that protects everyone.",
-  },
-  {
-    title: "Connecting Families with Trusted Partners",
-    text: "Real estate is just one piece of the puzzle. We maintain relationships with senior move managers, elder law attorneys, senior care coordinators, and other professionals who specialize in senior transitions — so families have the right people around them at every step.",
+    company: "Ginny's Girls Estate Services",
+    website: "https://www.ginnysestates.com",
+    logo: ginnysGirlsLogo,
+    logoAlt: "Ginny's Girls Estate Services logo",
+    contacts: [
+      {
+        name: "Meriann Roberts",
+        role: "Owner",
+        photo: meriannPhoto,
+        alt: "Meriann Roberts — Owner of Ginny's Girls Estate Services",
+      },
+      {
+        name: "Abigail McKee",
+        role: "Manager",
+        photo: abigailPhoto,
+        alt: "Abigail McKee — Manager at Ginny's Girls Estate Services",
+      },
+    ],
+    specialty:
+      "Senior move management, estate sales, residential clear outs, and personal property appraisals throughout North King and Snohomish Counties.",
+    phones: [{ label: "(206) 466-0759", href: "tel:+12064660759" }],
+    email: "info@ginnysestates.com",
   },
 ];
 
 const SeniorMoveManagers = () => (
-  <>
+  <div className="min-h-screen bg-background">
     <SEOHead
-      title="Senior Housing Transitions & Downsizing in Washington State | Real Property Planning"
-      description="Helping families and seniors navigate the move from a longtime family home to senior or assisted living across Washington State. Compassionate real estate guidance, certified appraisals, and trusted local partners."
+      title="Senior Move Managers in Washington State | Real Property Planning"
+      description="Featured Senior Move Managers helping older adults and families plan, pack, and resettle during life's most significant transitions across Washington State."
       canonical="https://realpropertyplanning.com/senior-move-managers"
     />
     <BreadcrumbSchema
@@ -58,512 +110,159 @@ const SeniorMoveManagers = () => (
     />
     <Header />
     <main id="main-content">
-      {/* Hero */}
-      <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
-        <img
-          src={seniorMoveManagersHero}
-          alt="Senior move managers loading a moving truck outside a Washington State home"
-          className="w-full h-auto object-cover"
-          style={{ display: "block" }}
-          loading="eager"
-          fetchPriority="high"
-        />
-        <HeroBandTitle as="h1">Senior Move Managers</HeroBandTitle>
+      <HeroBandTitle as="h1">Senior Move Managers</HeroBandTitle>
+
+      {/* Featured providers */}
+      <section className="py-10 md:py-14 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+            {providers.map((p) => (
+              <div
+                key={p.company}
+                className="interior-tile tile-white block h-full"
+              >
+                <div className="tile-white__inner h-full">
+                  <div className="tile-white__face h-full">
+                    <div className="flex h-full flex-col items-center text-center p-6">
+                      <img
+                        src={p.logo}
+                        alt={p.logoAlt}
+                        className="h-20 md:h-24 w-auto object-contain mb-4"
+                        loading="lazy"
+                      />
+
+                      <div className="flex justify-center gap-5 mb-3 flex-wrap">
+                        {p.contacts.map((c) => (
+                          <div key={c.name} className="flex flex-col items-center">
+                            <img
+                              src={c.photo}
+                              alt={c.alt}
+                              className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
+                              loading="lazy"
+                            />
+                            <p className="text-foreground font-semibold text-sm mt-2">{c.name}</p>
+                            {c.role && (
+                              <p className="text-muted-foreground text-xs">{c.role}</p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+
+                      <h2 className="font-serif text-lg md:text-xl text-navy font-semibold leading-snug mb-3">
+                        {p.company}
+                      </h2>
+
+                      <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">
+                        {p.specialty}
+                      </p>
+
+                      <div className="w-full space-y-1.5 text-sm mb-5">
+                        {p.phones.map((ph) => (
+                          <div key={ph.href} className="flex items-center gap-2 justify-center">
+                            <img
+                              src={iconPhone3d}
+                              alt=""
+                              aria-hidden="true"
+                              className="w-5 h-5 object-contain shrink-0"
+                              loading="lazy"
+                            />
+                            <a
+                              href={ph.href}
+                              className="text-accent hover:text-gold underline-offset-4 hover:underline font-medium"
+                            >
+                              {ph.label}
+                            </a>
+                          </div>
+                        ))}
+                        <div className="flex items-center gap-2 justify-center">
+                          <img
+                            src={iconEmail3d}
+                            alt=""
+                            aria-hidden="true"
+                            className="w-5 h-5 object-contain shrink-0"
+                            loading="lazy"
+                          />
+                          <a
+                            href={`mailto:${p.email}`}
+                            className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
+                          >
+                            {p.email}
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="mt-auto w-full pt-2">
+                        <Button asChild variant="outline" className="h-11 px-5 rounded-lg">
+                          <a
+                            href={p.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Learn more about ${p.company} (opens in a new tab)`}
+                          >
+                            Learn More
+                            <ExternalLink className="w-4 h-4 ml-2" aria-hidden="true" />
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
-      {/* SECTION 1: Helping Families */}
+      {/* Explanatory content */}
       <section className="py-10 md:py-14 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-4">
-              ​
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-6">
+              What Senior Move Managers Do
             </h2>
             <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
               <p>
-                ​
+                Senior Move Managers are specialists who help older adults and their families plan and manage
+                the physical and emotional process of moving from a longtime home. Whether the destination is
+                an assisted living community, a family member's home, or a smaller independent residence, a
+                Senior Move Manager brings both practical expertise and compassionate support to one of life's
+                most significant transitions.
+              </p>
+              <p>
+                Their services typically include space planning, sorting and organizing belongings, coordinating
+                donation and disposal, packing, overseeing the move itself, and unpacking and resettling in the
+                new space. Many also coordinate with estate sale companies, cleanout crews, and other service
+                providers to handle everything that remains after the move.
+              </p>
+              <p>
+                What sets a Senior Move Manager apart is their understanding of the emotional weight that comes
+                with leaving a home filled with memories. They work at the client's pace, with patience and
+                sensitivity, helping families make decisions that feel manageable rather than overwhelming.
+              </p>
+              <p>
+                Many Senior Move Managers are members of the National Association of Senior Move Managers
+                (NASMM), whose members adhere to a professional code of ethics and standards of practice.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: Who We Help */}
-      <section className="py-10 md:py-14 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-8">
-              Who Senior Move Managers Work With:
-            </h2>
-            <div className="grid gap-6 sm:grid-cols-3">
-              <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
-                <Icon3DFamily className="mx-auto mb-1.5" size={64} />
-                <h3
-                  className="font-serif font-semibold text-[#8B0000] text-center mb-1"
-                  style={{
-                    fontSize: "1rem",
-                    minHeight: "6rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Families of Aging Parents
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Adult children helping a parent leave the home they have lived in for years — whether the move is to a
-                  smaller home, an independent living community, or an assisted living or memory care facility.
-                </p>
-              </div>
-              <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
-                <Icon3DHome className="mx-auto mb-1.5" size={64} />
-                <h3
-                  className="font-serif font-semibold text-[#8B0000] text-center mb-1"
-                  style={{
-                    fontSize: "1rem",
-                    minHeight: "6rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Seniors Downsizing
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Older adults who are ready to simplify, move closer to family, or transition into a community that
-                  better fits their current lifestyle and needs.
-                </p>
-              </div>
-              <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
-                <Icon3DHeart className="mx-auto mb-1.5" size={64} />
-                <h3
-                  className="font-serif font-semibold text-[#8B0000] text-center mb-1"
-                  style={{
-                    fontSize: "0.78rem",
-                    minHeight: "6rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Senior Care Coordinators &amp; Social Workers
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Professionals who work with seniors and their families and need a trusted real estate partner who
-                  understands the pace, sensitivities, and unique demands of senior transitions.
-                </p>
-              </div>
-            </div>
-          </div>
+      <section className="py-10 bg-background">
+        <div className="container px-6 lg:px-8 flex justify-center">
+          <Button asChild variant="outline" size="lg" className="h-[52px] px-6 rounded-lg">
+            <a href="https://realpropertyplanning.com/building-your-trusted-professional-team">
+              <ArrowLeft className="w-5 h-5 mr-2" aria-hidden="true" />
+              Back to Professionals
+            </a>
+          </Button>
         </div>
       </section>
 
-
-      {/* Featured Senior Move Managers */}
-      <section className="py-10 md:py-14 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-8">
-              Featured Senior Move Managers
-            </h2>
-            <div className="bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
-              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
-                <div className="shrink-0">
-                  <img
-                    src={ericRovnerPhoto}
-                    alt="Eric Rovner — HB Move Management"
-                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="w-full flex flex-col items-center sm:flex-1 sm:items-start">
-                  <div className="w-full mt-1 text-center sm:text-left">
-                    <a
-                      href="https://www.hbmovemanagement.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block"
-                    >
-                      <img
-                        src={hbmmLogo}
-                        alt="HB Move Management logo"
-                        className="h-[240px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[70px] block"
-                        loading="lazy"
-                      />
-                    </a>
-                    <p className="text-foreground font-semibold text-base">Eric Rovner</p>
-                    <p className="text-muted-foreground text-sm mb-0.5">Vice President of Marketing</p>
-                    <p className="text-muted-foreground text-sm mb-1.5">HB Move Management · Hansen Bros. Moving</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      HB Move Management is a proud division of Hansen Bros. Moving &amp; Storage, one of the oldest and
-                      most respected service providers in the Puget Sound region. Their services go far beyond
-                      traditional moving — helping people prepare, survive the move, and get settled in their new home.
-                    </p>
-                    <div className="space-y-0.5 text-sm">
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconPin3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <span className="text-muted-foreground">10750 Aurora Ave N, Seattle, WA 98133</span>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconCall3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <a
-                          href="tel:+12062574314"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
-                        >
-                          (206) 257-4314
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconMail3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <a
-                          href="mailto:info@hbmovemanagement.com"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
-                        >
-                          info@hbmovemanagement.com
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconGlobe3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <a
-                          href="https://www.hbmovemanagement.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
-                        >
-                          www.hbmovemanagement.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6 mt-6">
-              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
-                <div className="shrink-0">
-                  <img
-                    src={tinaBarilPhoto}
-                    alt="Tina Baril — Monarch Transitions"
-                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="w-full flex flex-col items-center sm:flex-1 sm:items-start">
-                  <div className="w-full mt-1 text-center sm:text-left">
-                    <a
-                      href="https://www.monarchtransitions.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block"
-                    >
-                      <img
-                        src={monarchLogo}
-                        alt="Monarch Transitions logo"
-                        className="h-[140px] w-auto object-contain mx-auto sm:mx-0 block mb-2"
-                        loading="lazy"
-                      />
-                    </a>
-                    <p className="text-foreground font-semibold text-base">Tina Baril</p>
-                    <p className="text-muted-foreground text-sm mb-0.5">Owner</p>
-                    <p className="text-muted-foreground text-sm mb-1.5">Monarch Transitions · Senior Move Managers</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      Let us assist and guide you through a low-stress moving experience. At Monarch Transitions, we
-                      specialize in assisting older adults and their families with the emotional and physical aspects of
-                      moving and transition. Understanding the unique challenges seniors face, we offer expertise in
-                      resources and approaches that save money, reduce stress and produce quality results.
-                    </p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      Monarch Transitions is in its 16th year continuing the family business with the mother-son team of
-                      Tina Baril and Avery Baril. They continue to serve the families and service partners of Pierce,
-                      South King, Thurston and Kitsap counties.
-                    </p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      Tina's passion for assisting older adults and their families has continued to grow and thrive.
-                      While it is important to attend to the details and challenges of moving and transitioning loved
-                      ones, it is equally essential to address any emotional and physical limitations that they and/or
-                      their families may be suffering, which may be affecting the process. Tina works closely with
-                      health care and senior service professionals to connect with families that face these challenges.
-                    </p>
-                    <div className="space-y-0.5 text-sm">
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconPin3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <span className="text-muted-foreground">P.O. Box 8246, Tacoma, WA 98419</span>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconCall3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <a
-                          href="tel:+12063538617"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
-                        >
-                          (206) 353-8617
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconCall3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <a
-                          href="tel:+12535073398"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
-                        >
-                          (253) 507-3398
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconMail3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <a
-                          href="mailto:tina@monarchtransitions.com"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
-                        >
-                          tina@monarchtransitions.com
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconGlobe3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <a
-                          href="https://www.monarchtransitions.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
-                        >
-                          www.monarchtransitions.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6 mt-6">
-              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
-                <div className="shrink-0 flex gap-2">
-                  <div className="flex flex-col items-center">
-                    <img
-                      src={meriannPhoto}
-                      alt="Meriann Roberts — Owner of Ginny's Girls Estate Services"
-                      className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
-                      loading="lazy"
-                    />
-                    <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Meriann Roberts</p>
-                    <p className="text-muted-foreground text-xs">Owner</p>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img
-                      src={abigailPhoto}
-                      alt="Abigail McKee — Manager at Ginny's Girls Estate Services"
-                      className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
-                      loading="lazy"
-                    />
-                    <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Abigail McKee</p>
-                    <p className="text-muted-foreground text-xs">Manager</p>
-                  </div>
-                </div>
-                <div className="w-full flex flex-col items-center sm:flex-1 sm:items-start">
-                  <div className="w-full mt-1 text-center sm:text-left">
-                    <a
-                      href="https://www.ginnysestates.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block"
-                    >
-                      <img
-                        src={ginnysGirlsLogo}
-                        alt="Ginny's Girls Estate Services logo"
-                        className="h-[140px] w-auto object-contain mx-auto sm:mx-0 block mb-2"
-                        loading="lazy"
-                      />
-                    </a>
-                    <p className="text-muted-foreground text-sm mb-1.5">Ginny's Girls Estate Services</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      Senior move management, estate sales, residential clear outs, and personal property appraisals throughout North King and Snohomish Counties.
-                    </p>
-                    <div className="space-y-0.5 text-sm">
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconCall3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <a
-                          href="tel:+12064660759"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
-                        >
-                          (206) 466-0759
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconMail3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <a
-                          href="mailto:info@ginnysestates.com"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
-                        >
-                          info@ginnysestates.com
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img
-                          src={iconGlobe3d}
-                          alt=""
-                          aria-hidden="true"
-                          className="w-6 h-6 object-contain shrink-0"
-                          loading="lazy"
-                        />
-                        <a
-                          href="https://www.ginnysestates.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
-                        >
-                          www.ginnysestates.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <GinnysGirlsCard />
-      {/* SECTION 3: Real Estate Side */}
-      <section className="py-10 md:py-14 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-4">
-              The Real Estate Side of a Senior Transition
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed text-center mb-10">
-              The family home is often the most valuable asset involved in a senior transition — and what happens to it
-              can directly affect the family's ability to fund assisted living, distribute assets fairly, or simply move
-              forward. Here is how Real Property Planning helps:
-            </p>
-            <div className="space-y-5">
-              {realEstateSideItems.map((item) => (
-                <div key={item.title} className="bg-secondary border border-border rounded-xl p-5 sm:p-6">
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4: Independent to Assisted */}
-      <section className="py-10 md:py-14 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              From Independent Living to Assisted Living
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              Senior housing transitions do not always start from a family home. Sometimes a parent is already living in
-              an independent living or retirement community when their needs change and a move to assisted living or
-              memory care becomes necessary. When that transition involves owned real estate — whether a condo, a home
-              being held, or another property — Real Property Planning can help families manage that piece of the puzzle
-              quickly and with care.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: Serving All of WA */}
-      <section className="py-10 md:py-14 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              Serving Families Throughout Washington State
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              From Seattle and the Eastside to Everett, Tacoma, Olympia, Bellingham, Spokane, and every community in
-              between — Real Property Planning provides senior transition real estate guidance throughout Washington
-              State. Whether the family home is in a major metro area or a small rural community, we are here to help.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* More information link */}
-      <section className="py-6 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <Link
-              to="/senior-move-managers/learn-more"
-              className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors"
-            >
-              More information about Senior Move Managers →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <CTASection />
       <DisclaimerSection />
     </main>
     <Footer />
-  </>
+  </div>
 );
 
 export default SeniorMoveManagers;
