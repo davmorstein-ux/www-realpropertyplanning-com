@@ -10,6 +10,9 @@ import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washin
 import hbmmLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
 import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
 import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-logo-washington.webp";
+import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
+import abigailPhoto from "@/assets/abigail-mckee-ginnys-girls-manager.webp";
+import ginnysGirlsLogo from "@/assets/ginnys-girls-estate-services-logo-v3.webp";
 import iconSeniorMoves from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
