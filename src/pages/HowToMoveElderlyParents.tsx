@@ -204,7 +204,7 @@ const HowToMoveElderlyParents = () => (
               5. Hiring a Senior Move Manager
             </h2>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              A <Link to="/resources/senior-move-managers" className="text-accent hover:text-gold underline underline-offset-4">senior move manager</Link> is a professional who specializes in helping older adults and their families manage the logistics of a residential transition. They handle everything from sorting and packing to coordinating movers, setting up the new living space, and even arranging furniture to feel familiar and comfortable.
+              A <Link to="/senior-move-managers" className="text-accent hover:text-gold underline underline-offset-4">senior move manager</Link> is a professional who specializes in helping older adults and their families manage the logistics of a residential transition. They handle everything from sorting and packing to coordinating movers, setting up the new living space, and even arranging furniture to feel familiar and comfortable.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
               Senior move managers are especially valuable when adult children live out of state, when the timeline is tight, or when the emotional weight of the move makes it difficult for the family to manage alone. Real Property Planning works with senior move managers regularly and can coordinate the move timeline alongside the property sale.

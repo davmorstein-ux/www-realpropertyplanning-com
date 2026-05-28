@@ -59,7 +59,7 @@ export const servicePageSequence: ServicePageEntry[] = [
 
   // ── Resources ──
   { path: "/resources", label: "Resources" },
-  { path: "/resources/senior-move-managers", label: "Senior Move Managers" },
+  
   { path: "/resources/estate-sale-companies", label: "Estate Sale Companies" },
   { path: "/resources/probate-estate-attorneys", label: "Probate & Estate Attorneys" },
   { path: "/resources/cpas-financial-advisors", label: "CPAs & Financial Advisors" },

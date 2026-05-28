@@ -573,7 +573,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
       "/how-the-process-works",
       "/how-to-move-elderly-parents",
       "/resources/senior-living-communities",
-      "/resources/senior-move-managers",
+      "/senior-move-managers",
       "/senior-transitions",
       "/testimonials"
     ]
@@ -850,12 +850,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     "path": "/resources/senior-living-communities",
     "links": [
       "/contact",
-      "/senior-transitions"
-    ]
-  },
-  {
-    "path": "/resources/senior-move-managers",
-    "links": [
       "/senior-transitions"
     ]
   },
