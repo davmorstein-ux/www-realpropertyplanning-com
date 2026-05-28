@@ -177,17 +177,18 @@ const SeniorMoveManagers = () => (
                       </div>
 
                       <div className="mt-auto w-full pt-2">
-                        <Button asChild variant="outline" className="h-11 px-5 rounded-lg">
-                          <a
-                            href={p.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Learn more about ${p.company} (opens in a new tab)`}
-                          >
-                            Learn More
-                            <ExternalLink className="w-4 h-4 ml-2" aria-hidden="true" />
-                          </a>
-                        </Button>
+                        <a
+                          href={p.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Learn more about ${p.company} (opens in a new tab)`}
+                          className="gold-cta"
+                        >
+                          Learn More
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6" />
+                          </svg>
+                        </a>
                       </div>
                     </div>
                   </div>
