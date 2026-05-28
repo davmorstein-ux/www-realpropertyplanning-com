@@ -84,7 +84,7 @@ const SeniorTransitions = () => {
                   title: "Senior Living Advisors",
                   description: "Professionals who help families evaluate and choose the right next home — whether that's independent living, assisted living, memory care, or in-home support. They know local communities, availability, and costs.",
                   cta: "Find a Living Advisor",
-                  href: "/senior-placement",
+                  href: "/senior-living-advisors",
                 },
                 {
                   image: "/tiles/set2/probate-estate-sales.webp",

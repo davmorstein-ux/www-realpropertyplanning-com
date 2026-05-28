@@ -30,7 +30,7 @@ const NAV: NavItem[] = [
       { label: "All Services", href: "/services" },
       { label: "Probate Sales", href: "/probate-estate-sales" },
       { label: "Senior & Estate Services", href: "/senior-estate-services" },
-      { label: "Senior Placement", href: "/senior-placement" },
+      { label: "Senior Living Advisors", href: "/senior-living-advisors" },
       { label: "For Executors", href: "/executors" },
       { label: "How the Process Works", href: "/how-the-process-works" },
       { label: "Professional Referral Resource", href: "/professional-referral-resource" },

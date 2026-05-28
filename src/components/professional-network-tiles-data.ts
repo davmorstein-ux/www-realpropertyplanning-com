@@ -44,7 +44,7 @@ export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
     label: "Senior Housing & Care Decisions",
     tagline: "Calm support for families comparing care options, living arrangements, and senior housing transitions.",
     tiles: [
-      { title: "Senior Living Advisors", href: "/senior-living-and-relocation", imageSrc: "/tiles/set1/senior-living-advisors.webp", altText: "Senior living advisors Washington State" },
+      { title: "Senior Living Advisors", href: "/senior-living-advisors", imageSrc: "/tiles/set1/senior-living-advisors.webp", altText: "Senior living advisors Washington State" },
       { title: "Senior Living Options", href: "/understanding-housing-care-options", imageSrc: "/tiles/set3/senior-living-options.webp", altText: "Senior living options Washington State" },
       { title: "Medicare Providers", href: "/medicare-providers", imageSrc: "/tiles/set3/medicare-providers.webp", altText: "Medicare providers Washington State" },
       { title: "Paying for Senior Living", href: "/sell-house-fund-senior-living", imageSrc: "/tiles/set3/paying-for-senior-living.webp", altText: "Paying for senior living guidance Washington State" },
