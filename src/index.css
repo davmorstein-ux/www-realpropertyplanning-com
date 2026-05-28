@@ -825,10 +825,11 @@ body {
   min-width: 180px !important;
   max-width: 260px !important;
 }
-/* Wide variant for multi-person provider tiles — overrides the 260px cap so headshots fit side-by-side */
+/* Compact wide variant for multi-person provider tiles — only wide enough for side-by-side round headshots */
 .interior-tile.interior-tile--wide {
-  max-width: 100% !important;
-  width: 100% !important;
+  max-width: 360px !important;
+  width: min(100%, 360px) !important;
+  justify-self: center !important;
 }
 .interior-tile .tile-white__inner,
 .interior-tile .tile-white__face {
