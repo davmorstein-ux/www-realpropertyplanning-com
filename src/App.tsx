@@ -250,7 +250,8 @@ const App = () => (
           <Route path="/date-of-death-valuation-property-appraisals" element={<DateOfDeathValuationPropertyAppraisals />} />
           
           <Route path="/out-of-state-families" element={<Navigate to="/guides/out-of-state-families" replace />} />
-          <Route path="/senior-placement" element={<SeniorPlacement />} />
+          <Route path="/senior-living-advisors" element={<SeniorLivingAdvisors />} />
+          <Route path="/senior-placement" element={<Navigate to="/senior-living-advisors" replace />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
