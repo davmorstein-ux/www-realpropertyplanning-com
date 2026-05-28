@@ -400,64 +400,6 @@ const ProbateEstateSales = () => {
             </div>
           </div>
         </section>
-
-        {/* SECTION 6 — Explore Further (3-tile nav grid) */}
-        <section className="py-16 lg:py-20 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-8 text-center font-sans">Explore Further</h2>
-              <div className="grid md:grid-cols-3 gap-5 items-stretch">
-                <Link to="/terminology" className="interior-tile tile-white group block h-full no-underline">
-                  <div className="tile-white__inner h-full">
-                    <div className="tile-white__face p-6 flex flex-col h-full">
-                      <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
-                        Probate Terminology
-                      </h3>
-                      <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">
-                        Unfamiliar with terms like Letters Testamentary, Personal Representative, or Intestate? This plain-language glossary explains the most common probate terms.
-                      </p>
-                      <span className="mt-auto text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
-                        View the Glossary <ArrowRight className="w-3.5 h-3.5" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-                <Link to="/faq" className="interior-tile tile-white group block h-full no-underline">
-                  <div className="tile-white__inner h-full">
-                    <div className="tile-white__face p-6 flex flex-col h-full">
-                      <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
-                        Common Questions
-                      </h3>
-                      <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">
-                        Answers to the questions executors and families ask most.
-                      </p>
-                      <span className="mt-auto text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
-                        Read FAQs <ArrowRight className="w-3.5 h-3.5" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-                <Link to="/how-the-process-works" className="interior-tile tile-white group block h-full no-underline">
-                  <div className="tile-white__inner h-full">
-                    <div className="tile-white__face p-6 flex flex-col h-full">
-                      <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
-                        How the Process Works
-                      </h3>
-                      <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">
-                        A clear walkthrough from assessment to closing.
-                      </p>
-                      <span className="mt-auto text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
-                        See the process <ArrowRight className="w-3.5 h-3.5" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
       </main>
       <Footer />
     </div>
