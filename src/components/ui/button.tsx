@@ -69,10 +69,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     const is3d = variant === "gold" || variant === "outline3d" || variant === "navy3d";
+    const content = is3d ? (
+      <>
+        <GoldHighlight />
+        <span className="relative z-10 inline-flex items-center gap-2">{children}</span>
+      </>
+    ) : (
+      children
+    );
     return (
       <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
-        {is3d && <GoldHighlight />}
-        {is3d ? <span className="relative z-10 inline-flex items-center gap-2">{children}</span> : children}
+        {content}
       </Comp>
     );
   },
