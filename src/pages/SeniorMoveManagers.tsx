@@ -126,7 +126,7 @@ const SeniorMoveManagers = () => (
                       <img
                         src={p.logo}
                         alt={p.logoAlt}
-                        className="h-[96px] md:h-[115px] w-auto object-contain mb-4"
+                        className="h-[120px] md:h-[144px] w-auto object-contain mb-4"
                         loading="lazy"
                       />
 
