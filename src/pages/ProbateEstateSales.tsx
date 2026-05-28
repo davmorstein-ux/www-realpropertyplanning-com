@@ -100,7 +100,7 @@ const ProbateEstateSales = () => {
         {/* SECTION 2 — Probate vs. Inherited (two tiles, no accordions) */}
         <section className="py-16 lg:py-20 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4 font-sans text-center">
                 Probate Property vs. Inherited Property
                 <br />
@@ -109,7 +109,7 @@ const ProbateEstateSales = () => {
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">
                 ​
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-stretch">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch justify-center">
                 {[
                   {
                     image: "/tiles/set2/the-probate-process.webp",
