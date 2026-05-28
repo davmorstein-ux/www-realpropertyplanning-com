@@ -5,7 +5,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import ProviderContact from "@/components/ProviderContact";
 import {
   Accordion,
   AccordionContent,
@@ -16,22 +15,38 @@ import {
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
 import newYorkLifeLogo from "@/assets/new-york-life-logo.webp";
 
-const featuredProviders = [
+type Contact = { name: string; role?: string; photo: string; alt: string };
+
+type Provider = {
+  company: string;
+  website: string;
+  logo: string;
+  logoAlt: string;
+  contacts: Contact[];
+  specialty: string;
+  phones: { label: string; href: string }[];
+  email?: string;
+};
+
+const providers: Provider[] = [
   {
-    name: "Tiffany Lane",
-    title: "Financial Professional",
     company: "New York Life — Seattle General Office",
-    specialty: "Retirement planning, estate planning, downsizing, and legacy protection for seniors and their families",
-    photo: tiffanyPhoto,
-    alt: "Photo of Tiffany Lane, Financial Professional at New York Life — Seattle General Office",
-    href: "https://www.newyorklife.com/agent/tcford",
-    phone: "(206) 999-2116",
+    website: "https://www.newyorklife.com/agent/tcford",
     logo: newYorkLifeLogo,
     logoAlt: "New York Life logo",
-    external: true,
+    contacts: [
+      {
+        name: "Tiffany Lane",
+        role: "Financial Professional",
+        photo: tiffanyPhoto,
+        alt: "Tiffany Lane — Financial Professional, New York Life Seattle General Office",
+      },
+    ],
+    specialty:
+      "Retirement planning, estate planning, downsizing, and legacy protection for seniors and their families.",
+    phones: [{ label: "(206) 999-2116", href: "tel:+12069992116" }],
   },
 ];
-
 
 const faqs = [
   {
@@ -56,7 +71,6 @@ const faqs = [
   },
 ];
 
-
 const FinancialPlanners = () => {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -72,7 +86,7 @@ const FinancialPlanners = () => {
   };
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <SEOHead
         title="Financial Planners for Estate & Senior Transitions | Western Washington | Real Property Planning"
         description="Find financial advisors and planners in the Puget Sound region who specialize in inherited assets, estate tax planning, and financial decisions during senior transitions."
@@ -88,75 +102,116 @@ const FinancialPlanners = () => {
       />
       <Header />
       <main id="main-content">
-        <HeroBandTitle>Financial Planners & Advisors</HeroBandTitle>
+        <HeroBandTitle as="h1">Financial Planners & Advisors</HeroBandTitle>
 
-
-        {/* Featured tiles — immediately below hero band */}
-        <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
+        {/* Featured providers */}
+        <section className="py-10 md:py-14 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
-              {featuredProviders.map((p) => (
-                <a
-                  key={p.name}
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${p.name}, ${p.title} at ${p.company} — Learn more`}
-                  className="interior-tile interior-tile--wide tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              {providers.map((p) => (
+                <div
+                  key={p.company}
+                  className="interior-tile interior-tile--wide tile-white block h-full"
                 >
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face h-full">
                       <div className="flex h-full flex-col items-center text-center p-6">
                         <img
-                          src={p.photo}
-                          alt={p.alt}
-                          className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
+                          src={p.logo}
+                          alt={p.logoAlt}
+                          className="h-[120px] md:h-[144px] w-auto object-contain mb-4"
                           loading="lazy"
                         />
-                        <h3 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">
-                          {p.name}
-                        </h3>
-                        <p className="text-foreground text-sm mb-1">{p.title}</p>
-                        <p className="text-foreground text-sm font-semibold mb-3">{p.company}</p>
-                        <ProviderContact phone={(p as any).phone} email={(p as any).email} />
-                        {p.logo && (
-                          <img
-                            src={p.logo}
-                            alt={p.logoAlt || `${p.company} logo`}
-                            className="h-24 w-auto max-w-[360px] object-contain mb-4"
-                            loading="lazy"
-                          />
-                        )}
-                        <p className="text-muted-foreground text-sm leading-relaxed mb-5">{p.specialty}</p>
 
-                        <span className="gold-cta mt-auto">
-                          Learn More
-                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                            <polyline points="9 18 15 12 9 6" />
-                          </svg>
-                        </span>
+                        <div className="flex justify-center gap-5 mb-3">
+                          {p.contacts.map((c) => (
+                            <div key={c.name} className="flex flex-col items-center">
+                              <img
+                                src={c.photo}
+                                alt={c.alt}
+                                className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] rounded-full object-cover border-2 border-border shadow-sm"
+                                loading="lazy"
+                              />
+                              <p className="text-foreground font-semibold text-sm mt-2">{c.name}</p>
+                              {c.role && (
+                                <p className="text-muted-foreground text-xs">{c.role}</p>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+
+                        <h2 className="font-serif text-lg md:text-xl text-navy font-semibold leading-snug mb-3">
+                          {p.company}
+                        </h2>
+
+                        <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">
+                          {p.specialty}
+                        </p>
+
+                        <div className="w-full space-y-1.5 text-sm mb-5">
+                          {p.phones.map((ph) => (
+                            <div key={ph.href} className="flex items-center gap-2 justify-center">
+                              <a
+                                href={ph.href}
+                                className="text-accent hover:text-gold underline-offset-4 hover:underline font-medium"
+                              >
+                                {ph.label}
+                              </a>
+                            </div>
+                          ))}
+                          {p.email && (
+                            <div className="flex items-center gap-2 justify-center">
+                              <a
+                                href={`mailto:${p.email}`}
+                                className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
+                              >
+                                {p.email}
+                              </a>
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="mt-auto w-full pt-2">
+                          <a
+                            href={p.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Learn more about ${p.company} (opens in a new tab)`}
+                            className="gold-cta"
+                          >
+                            Learn More
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* Explanatory content */}
-        <section className="py-12 md:py-16 bg-background">
+        <section className="py-10 md:py-14 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
-                A financial planner or advisor can be an important part of the support team during major life transitions. For older adults and their families, they help clarify financial decisions related to retirement income, long-term care, housing changes, estate planning, and the costs involved in downsizing or relocation.
-              </p>
-              <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
-                Their role is to look at the bigger financial picture and help clients make informed choices that align with their goals, resources, and family circumstances. In situations involving a move, a change in living arrangement, or the administration of an estate, a financial planner or advisor can help bring structure and confidence to what may otherwise feel overwhelming.
-              </p>
-              <p className="text-foreground text-base md:text-lg leading-relaxed">
-                What makes a good financial planner or advisor especially valuable is their ability to explain options clearly and help families move forward with practical, well-informed decisions. That kind of guidance can be especially reassuring when coordinating with real estate, legal, and estate professionals.
-              </p>
+              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-6">
+                What Financial Planners & Advisors Do
+              </h2>
+              <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
+                <p>
+                  A financial planner or advisor can be an important part of the support team during major life transitions. For older adults and their families, they help clarify financial decisions related to retirement income, long-term care, housing changes, estate planning, and the costs involved in downsizing or relocation.
+                </p>
+                <p>
+                  Their role is to look at the bigger financial picture and help clients make informed choices that align with their goals, resources, and family circumstances. In situations involving a move, a change in living arrangement, or the administration of an estate, a financial planner or advisor can help bring structure and confidence to what may otherwise feel overwhelming.
+                </p>
+                <p>
+                  What makes a good financial planner or advisor especially valuable is their ability to explain options clearly and help families move forward with practical, well-informed decisions. That kind of guidance can be especially reassuring when coordinating with real estate, legal, and estate professionals.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -187,11 +242,12 @@ const FinancialPlanners = () => {
             </div>
           </div>
         </section>
+
         <BackToProfessionalsButton />
         <DisclaimerSection />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
