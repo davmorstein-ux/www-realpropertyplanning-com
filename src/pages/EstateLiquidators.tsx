@@ -66,7 +66,7 @@ const EstateLiquidators = () => (
 
       <section className="py-8 md:py-12 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             {liquidators.map((l) => (
               <a
                 key={l.company}
