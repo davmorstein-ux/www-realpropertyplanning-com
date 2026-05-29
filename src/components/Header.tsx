@@ -23,6 +23,7 @@ const NAV: NavItem[] = [
       { label: "CCRC Costs", href: "/articles/ccrc-costs" },
       { label: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
       { label: "Aging in Place With Support", href: "/articles/aging-in-place" },
+      { label: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
     ],
   },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
