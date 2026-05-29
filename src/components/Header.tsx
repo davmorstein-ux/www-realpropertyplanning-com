@@ -21,6 +21,7 @@ const NAV: NavItem[] = [
       { label: "Independent Living Costs", href: "/articles/independent-living-costs" },
       { label: "Memory Care Costs", href: "/articles/memory-care-costs" },
       { label: "CCRC Costs", href: "/articles/ccrc-costs" },
+      { label: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
     ],
   },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
