@@ -180,6 +180,7 @@ const Sitemap = lazy(() => import("./pages/Sitemap"));
 const Search = lazy(() => import("./pages/Search"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
 const SilverTsunami = lazy(() => import("./pages/articles/SilverTsunami"));
+const SeniorHousingOptions = lazy(() => import("./pages/articles/SeniorHousingOptions"));
 
 const queryClient = new QueryClient();
 
@@ -427,6 +428,7 @@ const App = () => (
           <Route path="/search" element={<Search />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/articles/silver-tsunami" element={<SilverTsunami />} />
+          <Route path="/articles/senior-housing-options" element={<SeniorHousingOptions />} />
 
           {/* ══════════════════════════════════════════════════════════
               REDIRECTS — Phase 2a SEO consolidation
