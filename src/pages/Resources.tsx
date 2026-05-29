@@ -10,10 +10,10 @@ const groups = [
     label: "Senior Housing & Care",
     items: [
       {
-        href: "/senior-living-advisors",
-        title: "Senior Living Advisors",
+        href: "/aging-life-care-managers",
+        title: "Aging Life Care Managers",
         description:
-          "Help evaluating assisted living, memory care, and housing options.",
+          "Expert guidance and advocacy for older adults navigating care decisions.",
       },
       {
         href: "/medicare-providers",
@@ -22,10 +22,10 @@ const groups = [
           "Navigating Medicare, Medicaid, and care funding options.",
       },
       {
-        href: "/aging-life-care-managers",
-        title: "Aging Life Care Managers",
+        href: "/senior-living-advisors",
+        title: "Senior Living Advisors",
         description:
-          "Expert guidance and advocacy for older adults navigating care decisions.",
+          "Help evaluating assisted living, memory care, and housing options.",
       },
       {
         href: "/senior-move-managers",
@@ -39,10 +39,28 @@ const groups = [
     label: "Property, Legal & Financial",
     items: [
       {
-        href: "/mortgage-lenders",
-        title: "Mortgage Lenders",
+        href: "/professionals/cpas",
+        title: "CPAs & Accountants",
         description:
-          "Trusted mortgage professionals specializing in estate, senior transition, and residential financing.",
+          "Tax guidance, estate coordination, and financial planning for inherited property.",
+      },
+      {
+        href: "/attorneys/for-divorce-attorneys",
+        title: "Divorce Attorneys",
+        description:
+          "Collaborative divorce and family law with expertise in property division.",
+      },
+      {
+        href: "/estate-liquidators",
+        title: "Estate Liquidators",
+        description:
+          "Companies that organize and conduct estate sales and residential clear outs.",
+      },
+      {
+        href: "/estate-liquidators",
+        title: "Estate Sale Companies",
+        description:
+          "Companies that organize, price, and conduct estate sales for personal property and household contents.",
       },
       {
         href: "/professionals/financial-planners",
@@ -51,10 +69,28 @@ const groups = [
           "Long-term financial planning for seniors, families, and estate matters.",
       },
       {
-        href: "/professionals/cpas",
-        title: "CPAs & Accountants",
+        href: "/mortgage-lenders",
+        title: "Mortgage Lenders",
         description:
-          "Tax guidance, estate coordination, and financial planning for inherited property.",
+          "Trusted mortgage professionals specializing in estate, senior transition, and residential financing.",
+      },
+      {
+        href: "/resources/moving-relocation-services",
+        title: "Moving & Relocation Services",
+        description:
+          "Moving companies and relocation specialists experienced with estate and senior transitions.",
+      },
+      {
+        href: "/professionals/probate-attorneys",
+        title: "Probate & Estate Attorneys",
+        description:
+          "Attorneys who guide families and fiduciaries through the probate process and estate administration.",
+      },
+      {
+        href: "/resources/property-preparation-services",
+        title: "Property Preparation Services",
+        description:
+          "Cleanout, staging, repair, and preparation services to get estate and transition properties market-ready.",
       },
       {
         href: "/real-estate-appraiser",
@@ -67,42 +103,6 @@ const groups = [
         title: "Real Estate Brokers",
         description:
           "Probate, estate, and senior transition property sales throughout Washington State.",
-      },
-      {
-        href: "/professionals/probate-attorneys",
-        title: "Probate & Estate Attorneys",
-        description:
-          "Attorneys who guide families and fiduciaries through the probate process and estate administration.",
-      },
-      {
-        href: "/attorneys/for-divorce-attorneys",
-        title: "Divorce Attorneys",
-        description:
-          "Collaborative divorce and family law with expertise in property division.",
-      },
-      {
-        href: "/estate-liquidators",
-        title: "Estate Sale Companies",
-        description:
-          "Companies that organize, price, and conduct estate sales for personal property and household contents.",
-      },
-      {
-        href: "/estate-liquidators",
-        title: "Estate Liquidators",
-        description:
-          "Companies that organize and conduct estate sales and residential clear outs.",
-      },
-      {
-        href: "/resources/property-preparation-services",
-        title: "Property Preparation Services",
-        description:
-          "Cleanout, staging, repair, and preparation services to get estate and transition properties market-ready.",
-      },
-      {
-        href: "/resources/moving-relocation-services",
-        title: "Moving & Relocation Services",
-        description:
-          "Moving companies and relocation specialists experienced with estate and senior transitions.",
       },
       {
         href: "/senior-living-advisors",
@@ -139,7 +139,7 @@ const Resources = () => {
             <div className="max-w-4xl mx-auto space-y-8">
               {groups.map((group) => (
                 <div key={group.label}>
-                  <h2 className="font-serif text-lg md:text-xl font-semibold text-navy mb-3">
+                  <h2 className="font-serif text-xl md:text-2xl font-semibold text-red-800 mb-3">
                     {group.label}
                   </h2>
                   <div className="grid gap-2">
