@@ -183,6 +183,7 @@ const SilverTsunami = lazy(() => import("./pages/articles/SilverTsunami"));
 const SeniorHousingOptions = lazy(() => import("./pages/articles/SeniorHousingOptions"));
 const IndependentLivingCosts = lazy(() => import("./pages/articles/IndependentLivingCosts"));
 const MemoryCareCosts = lazy(() => import("./pages/articles/MemoryCareCosts"));
+const CcrcCosts = lazy(() => import("./pages/articles/CcrcCosts"));
 
 const queryClient = new QueryClient();
 
@@ -433,6 +434,7 @@ const App = () => (
           <Route path="/articles/senior-housing-options" element={<SeniorHousingOptions />} />
           <Route path="/articles/independent-living-costs" element={<IndependentLivingCosts />} />
           <Route path="/articles/memory-care-costs" element={<MemoryCareCosts />} />
+          <Route path="/articles/ccrc-costs" element={<CcrcCosts />} />
 
           {/* ══════════════════════════════════════════════════════════
               REDIRECTS — Phase 2a SEO consolidation
