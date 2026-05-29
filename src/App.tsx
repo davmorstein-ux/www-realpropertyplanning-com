@@ -430,6 +430,7 @@ const App = () => (
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/articles/silver-tsunami" element={<SilverTsunami />} />
           <Route path="/articles/senior-housing-options" element={<SeniorHousingOptions />} />
+          <Route path="/articles/independent-living-costs" element={<IndependentLivingCosts />} />
 
           {/* ══════════════════════════════════════════════════════════
               REDIRECTS — Phase 2a SEO consolidation
