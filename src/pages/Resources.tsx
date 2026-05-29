@@ -71,13 +71,13 @@ const Resources = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Trusted Partners
+                ​
               </p>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
                 Resources
               </h1>
               <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Resources and service connections for property preparation, senior transitions, and estate-related real estate needs throughout Washington State, with particularly strong familiarity in Western Washington.
+                ​
               </p>
             </div>
           </div>
