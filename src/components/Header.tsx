@@ -24,6 +24,7 @@ const NAV: NavItem[] = [
       { label: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
       { label: "Aging in Place With Support", href: "/articles/aging-in-place" },
       { label: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
+      { label: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
     ],
   },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
