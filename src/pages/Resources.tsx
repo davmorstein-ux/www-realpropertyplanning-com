@@ -83,20 +83,20 @@ const Resources = () => {
           </div>
         </section>
 
-        {/* Category Cards */}
-        <section className="py-14 md:py-20">
+        {/* Category Pills */}
+        <section className="py-10 md:py-14">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto grid gap-3 md:gap-4">
+            <div className="max-w-4xl mx-auto grid gap-2">
               {categories.map((cat) => (
                 <Link
                   key={cat.href}
                   to={cat.href}
-                  className="card-3d group block px-5 py-3 md:px-6 md:py-4 rounded-lg"
+                  className="group block px-4 py-1.5 md:px-5 md:py-2 rounded-md border border-border/60 bg-cream/40 hover:border-gold/60 hover:bg-cream/70 transition-colors"
                 >
-                  <h2 className="font-serif text-base md:text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
+                  <h2 className="font-serif text-[15px] md:text-base font-semibold text-foreground group-hover:text-navy transition-colors leading-tight">
                     {cat.title}
                   </h2>
-                  <p className="text-muted-foreground text-[14px] md:text-[15px] leading-relaxed mt-0.5">
+                  <p className="text-muted-foreground text-[13px] md:text-[14px] leading-snug mt-0">
                     {cat.description}
                   </p>
                 </Link>
