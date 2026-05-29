@@ -19,6 +19,7 @@ const NAV: NavItem[] = [
       { label: "The Silver Tsunami", href: "/articles/silver-tsunami" },
       { label: "Senior Housing Options", href: "/articles/senior-housing-options" },
       { label: "Independent Living Costs", href: "/articles/independent-living-costs" },
+      { label: "Memory Care Costs", href: "/articles/memory-care-costs" },
     ],
   },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
