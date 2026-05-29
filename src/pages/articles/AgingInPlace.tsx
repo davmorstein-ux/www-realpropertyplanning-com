@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import ArticleHero from "@/components/ArticleHero";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -43,16 +44,7 @@ const AgingInPlace = () => {
       />
       <Header />
       <main id="main-content">
-        {/* Blue Banner */}
-        <section className="pt-3 md:pt-4 pb-12 md:pb-14 bg-primary">
-          <div className={contentWrap}>
-            <div className={proseWrap + " text-center"}>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.5rem] font-semibold text-primary-foreground leading-tight">
-                Aging in Place With Support
-              </h1>
-            </div>
-          </div>
-        </section>
+        <ArticleHero title="Aging in Place With Support" />
 
         {/* Article */}
         <section className={sectionBase + " bg-background"}>
