@@ -181,6 +181,7 @@ const Search = lazy(() => import("./pages/Search"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
 const SilverTsunami = lazy(() => import("./pages/articles/SilverTsunami"));
 const SeniorHousingOptions = lazy(() => import("./pages/articles/SeniorHousingOptions"));
+const IndependentLivingCosts = lazy(() => import("./pages/articles/IndependentLivingCosts"));
 
 const queryClient = new QueryClient();
 
