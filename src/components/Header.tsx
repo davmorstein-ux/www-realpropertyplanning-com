@@ -15,7 +15,10 @@ const NAV: NavItem[] = [
   {
     label: "Articles",
     href: "/articles/silver-tsunami",
-    children: [{ label: "The Silver Tsunami", href: "/articles/silver-tsunami" }],
+    children: [
+      { label: "The Silver Tsunami", href: "/articles/silver-tsunami" },
+      { label: "Senior Housing Options", href: "/articles/senior-housing-options" },
+    ],
   },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
   { label: "Senior Transitions", href: "/senior-transitions" },
