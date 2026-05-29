@@ -188,6 +188,7 @@ const AffordableSeniorHousing = lazy(() => import("./pages/articles/AffordableSe
 const AgingInPlaceArticle = lazy(() => import("./pages/articles/AgingInPlace"));
 const SeniorHousingCosts = lazy(() => import("./pages/articles/SeniorHousingCosts"));
 const SeniorHousingGuide = lazy(() => import("./pages/articles/SeniorHousingGuide"));
+const HowToChooseSeniorHousing = lazy(() => import("./pages/articles/HowToChooseSeniorHousing"));
 
 const queryClient = new QueryClient();
 
@@ -443,6 +444,7 @@ const App = () => (
           <Route path="/articles/aging-in-place" element={<AgingInPlaceArticle />} />
           <Route path="/articles/senior-housing-costs" element={<SeniorHousingCosts />} />
           <Route path="/articles/senior-housing-guide" element={<SeniorHousingGuide />} />
+          <Route path="/articles/how-to-choose-senior-housing" element={<HowToChooseSeniorHousing />} />
 
           {/* ══════════════════════════════════════════════════════════
               REDIRECTS — Phase 2a SEO consolidation
