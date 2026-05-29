@@ -3,6 +3,7 @@ import ArticleHero from "@/components/ArticleHero";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 
 const sectionBase = "py-14 md:py-20";
@@ -149,27 +150,7 @@ const CcrcCosts = () => {
           </div>
         </section>
 
-        {/* Related Resources */}
-        <section className={sectionBase + " bg-secondary"}>
-          <div className={contentWrap}>
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-8">
-                Related Resources
-              </h2>
-              <div className="flex flex-wrap justify-center gap-4">
-                {relatedResources.map((r) => (
-                  <Link
-                    key={r.href}
-                    to={r.href}
-                    className="inline-flex items-center justify-center bg-gold hover:bg-gold/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-                  >
-                    {r.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <RelatedResourcesSection resources={relatedResources} />
 
         <DisclaimerSection />
       </main>
