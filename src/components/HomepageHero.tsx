@@ -111,36 +111,44 @@ const HomepageHero = () => {
     <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F" }}>
 
 
-      {/* ===== Hero ===== */}
-      <style>{`@keyframes rppHeroFadeIn { from { opacity: 0 } to { opacity: 1 } }`}</style>
+      {/* ===== Parallax Sticky Hero ===== */}
+      <style>{`
+        @keyframes rppHeroFadeIn { from { opacity: 0 } to { opacity: 1 } }
+        .rpp-parallax-hero {
+          position: relative;
+          width: 100%;
+          height: 70vh;
+          background-image: url('/homepage-hero.webp');
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          opacity: 0;
+          animation: rppHeroFadeIn 1.2s ease forwards;
+        }
+        .rpp-parallax-peel {
+          position: relative;
+          height: 24px;
+          margin-top: -24px;
+          background: hsl(var(--cream));
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+          z-index: 2;
+        }
+        @media (max-width: 1024px) {
+          .rpp-parallax-hero {
+            background-attachment: scroll;
+            height: 40vh;
+          }
+        }
+      `}</style>
       <section
-        style={{
-          position: "relative",
-          width: "100%",
-          background: "transparent",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src="/homepage-hero.webp"
-          alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
-          fetchPriority="high"
-          loading="eager"
-          decoding="async"
-          style={{
-            display: "block",
-            width: "100%",
-            height: "auto",
-            minHeight: isMobile ? 200 : undefined,
-            objectFit: "cover",
-            objectPosition: "center center",
-            background: "transparent",
-            opacity: 0,
-            animation: "rppHeroFadeIn 1.2s ease forwards",
-          }}
-        />
+        className="rpp-parallax-hero"
+        role="img"
+        aria-label="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
+      />
+      <div className="rpp-parallax-peel" aria-hidden="true" />
 
-      </section>
       <HeroBandTitle>
         Welcome to Real Property Planning
       </HeroBandTitle>

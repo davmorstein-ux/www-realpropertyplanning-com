@@ -7,27 +7,46 @@ interface ArticleHeroProps {
 
 /**
  * Standard hero used on every /articles/* page:
- * - Full-width panoramic banner image
- * - Sitewide blue band with the article title (matches other hero pages)
+ * - Parallax sticky hero image (background-attachment: fixed on desktop)
+ * - 50vh tall desktop, 40vh static on mobile/tablet (no parallax)
+ * - Cream "peel" overlay so following content slides over the fixed image
  */
 const ArticleHero = ({ title }: ArticleHeroProps) => {
   return (
     <>
-      {/*
-        IMPORTANT: This wrapper is a <div>, NOT a <section>.
-        A sitewide rule in index.css forces 32px top/bottom padding on every
-        <section>, which would create a visible white gap between the hero
-        image and the navy band below it. Keeping this a <div> ensures the
-        blue band sits flush beneath the hero image on every article page.
-      */}
-      <div className="bg-white">
-        <img
-          src={heroImage}
-          alt="Older couple on a bench overlooking a scenic river valley with a vintage car nearby — senior housing and life-transition resources"
-          className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-          loading="eager"
-        />
-      </div>
+      <style>{`
+        .rpp-article-hero {
+          position: relative;
+          width: 100%;
+          height: 50vh;
+          background-image: url('${heroImage}');
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        }
+        .rpp-article-peel {
+          position: relative;
+          height: 24px;
+          margin-top: -24px;
+          background: hsl(var(--cream));
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+          z-index: 2;
+        }
+        @media (max-width: 1024px) {
+          .rpp-article-hero {
+            background-attachment: scroll;
+            height: 40vh;
+          }
+        }
+      `}</style>
+      <div
+        className="rpp-article-hero"
+        role="img"
+        aria-label="Older couple on a bench overlooking a scenic river valley with a vintage car nearby — senior housing and life-transition resources"
+      />
+      <div className="rpp-article-peel" aria-hidden="true" />
       <HeroBandTitle>{title}</HeroBandTitle>
     </>
   );

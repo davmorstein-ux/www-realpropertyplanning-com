@@ -55,7 +55,16 @@ const Header = () => {
         border-bottom: 1px solid transparent;
         transition: color 0.18s ease, border-color 0.18s ease;
         white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
       }
+      .rpp-top-link .rpp-home-icon {
+        font-size: 24px;
+        line-height: 1;
+        margin-right: 6px;
+        display: inline-block;
+      }
+
       .rpp-top-link:hover { color: ${GOLD}; }
       .rpp-top-link.is-active { border-bottom-color: #fff; }
     `;
@@ -118,8 +127,9 @@ const Header = () => {
                   className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
                 >
                   {item.href === "/" && (
-                    <span aria-hidden="true" style={{ marginRight: 6 }}>🏠</span>
+                    <span aria-hidden="true" className="rpp-home-icon">🏠</span>
                   )}
+
                   {item.label}
                 </Link>
               ))}
@@ -163,8 +173,9 @@ const Header = () => {
                 style={{ fontSize: 12 }}
               >
                 {item.href === "/" && (
-                  <span aria-hidden="true" style={{ marginRight: 4 }}>🏠</span>
+                  <span aria-hidden="true" className="rpp-home-icon">🏠</span>
                 )}
+
                 {item.label}
               </Link>
             ))}
