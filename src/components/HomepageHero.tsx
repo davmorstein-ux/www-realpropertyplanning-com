@@ -104,36 +104,10 @@ const HomepageHero = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Parallax: translateY only via --parallax-offset. Desktop (>=1024px) only.
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const parallaxImages = document.querySelectorAll<HTMLElement>(".no-parallax-crop");
-    if (parallaxImages.length === 0) return;
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let rafId = 0;
-    let cancelled = false;
+  // Parallax disabled — the hero image is now static. The "content peels
+  // over the photograph" effect is produced by .page-content-overlay
+  // scrolling up over a position:sticky hero (see index.css).
 
-    const updateParallax = () => {
-      if (cancelled) return;
-      const desktop = window.innerWidth >= 1024 && !reduceMotion;
-      parallaxImages.forEach((img) => {
-        if (!desktop) {
-          img.style.setProperty("--parallax-offset", "0px");
-          return;
-        }
-        const scrolled = window.scrollY;
-        const rate = 0.3;
-        const offset = scrolled * rate;
-        img.style.setProperty("--parallax-offset", `-${offset}px`);
-      });
-      rafId = requestAnimationFrame(updateParallax);
-    };
-    rafId = requestAnimationFrame(updateParallax);
-    return () => {
-      cancelled = true;
-      if (rafId) cancelAnimationFrame(rafId);
-    };
-  }, []);
 
   const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
   const fontHead = { fontFamily: "'DM Sans', 'DM Sans', sans-serif" };
@@ -173,9 +147,6 @@ const HomepageHero = () => {
         />
 
       </section>
-      <HeroBandTitle>
-        Welcome to Real Property Planning
-      </HeroBandTitle>
     </div>
   );
 };
