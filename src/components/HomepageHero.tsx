@@ -104,30 +104,34 @@ const HomepageHero = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Parallax: translateY only — never crop, zoom, or resize the image.
-  // We write the offset to a CSS variable on the .hero-panorama wrapper.
+  // Parallax: translateY only via --parallax-offset. Desktop (>=1024px) only.
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const wrapper = document.querySelector<HTMLElement>(".hero-panorama");
-    if (!wrapper) return;
-    let raf = 0;
-    const update = () => {
-      const y = window.scrollY || 0;
-      // Subtle drift: 15% of scroll, capped so the image never exposes its top/bottom edge.
-      const offset = Math.max(-60, Math.min(0, -y * 0.15));
-      wrapper.style.setProperty("--parallax-offset", `${offset}px`);
-      raf = 0;
+    const parallaxImages = document.querySelectorAll<HTMLElement>(".no-parallax-crop");
+    if (parallaxImages.length === 0) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let rafId = 0;
+    let cancelled = false;
+
+    const updateParallax = () => {
+      if (cancelled) return;
+      const desktop = window.innerWidth >= 1024 && !reduceMotion;
+      parallaxImages.forEach((img) => {
+        if (!desktop) {
+          img.style.setProperty("--parallax-offset", "0px");
+          return;
+        }
+        const scrolled = window.scrollY;
+        const rate = 0.3;
+        const offset = scrolled * rate;
+        img.style.setProperty("--parallax-offset", `-${offset}px`);
+      });
+      rafId = requestAnimationFrame(updateParallax);
     };
-    const onScroll = () => {
-      if (raf) return;
-      raf = window.requestAnimationFrame(update);
-    };
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
+    rafId = requestAnimationFrame(updateParallax);
     return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (raf) cancelAnimationFrame(raf);
+      cancelled = true;
+      if (rafId) cancelAnimationFrame(rafId);
     };
   }, []);
 
