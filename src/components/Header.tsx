@@ -76,7 +76,7 @@ const Header = () => {
         text-decoration: none;
         font-size: 13px;
         font-weight: 300;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
         font-family: Georgia, serif;
         padding: 6px 4px;
