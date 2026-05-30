@@ -59,9 +59,9 @@ const Header = () => {
         align-items: center;
       }
       .rpp-top-link .rpp-home-icon {
-        font-size: 24px;
+        font-size: 32px;
         line-height: 1;
-        margin-right: 6px;
+        margin-right: 8px;
         display: inline-block;
       }
 
