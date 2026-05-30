@@ -3,11 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 import WaterfallNav from "./WaterfallNav";
 
 const TOP_LINKS = [
+  { label: "Home", href: "/" },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
   { label: "Senior Transitions", href: "/senior-transitions" },
   { label: "Resources", href: "/guides-and-resources" },
   { label: "Contact", href: "/contact" },
 ];
+
 
 const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 const GOLD = "#c9a84c";
@@ -109,7 +111,7 @@ const Header = () => {
           {/* RIGHT: top links + CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22 }}>
             {!isMobile &&
-              TOP_LINKS.map((item) => (
+              TOP_LINKS.filter((i) => !(i.href === "/" && pathname === "/")).map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
@@ -149,7 +151,7 @@ const Header = () => {
               overflowX: "auto",
             }}
           >
-            {TOP_LINKS.map((item) => (
+            {TOP_LINKS.filter((i) => !(i.href === "/" && pathname === "/")).map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
