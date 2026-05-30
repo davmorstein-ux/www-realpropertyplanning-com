@@ -166,6 +166,40 @@ main,
   padding-bottom: 0 !important;
 }
 
+/* =============================================================
+   Panoramic hero parallax — translateY only, NEVER crop/zoom.
+   The image keeps its natural aspect ratio (object-fit: contain,
+   width 100%, height auto). A JS scroll handler writes the
+   --parallax-offset CSS variable on .hero-panorama; the inner
+   <img> moves vertically via transform.
+   ============================================================= */
+.hero-panorama {
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.hero-panorama img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  transform: translateY(var(--parallax-offset, 0px));
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+.no-parallax-crop {
+  object-fit: contain !important;
+  width: 100% !important;
+  height: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-panorama img { transform: none !important; transition: none !important; }
+}
+
 @layer base {
   :root {
     /* Premium Estate Advisory Palette */
