@@ -16,24 +16,17 @@ const ArticleHero = ({ title }: ArticleHeroProps) => {
     <>
       <style>{`
         .rpp-article-hero {
+          display: block;
           position: relative;
           width: 100%;
           height: 50vh;
           background-image: url('${heroImage}');
-          background-size: 100% auto;
+          background-size: cover;
           background-position: center center;
-
           background-repeat: no-repeat;
           background-attachment: fixed;
-        }
-        .rpp-article-peel {
-          position: relative;
-          height: 24px;
-          margin-top: -24px;
-          background: hsl(var(--cream));
-          border-top-left-radius: 16px;
-          border-top-right-radius: 16px;
-          z-index: 2;
+          margin: 0;
+          padding: 0;
         }
         @media (max-width: 1024px) {
           .rpp-article-hero {
@@ -47,7 +40,6 @@ const ArticleHero = ({ title }: ArticleHeroProps) => {
         role="img"
         aria-label="Older couple on a bench overlooking a scenic river valley with a vintage car nearby — senior housing and life-transition resources"
       />
-      <div className="rpp-article-peel" aria-hidden="true" />
       <HeroBandTitle>{title}</HeroBandTitle>
     </>
   );
