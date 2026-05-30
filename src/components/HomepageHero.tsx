@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import ParallaxHero from "@/components/ParallaxHero";
 
 /**
  * Homepage hero — floating island header + full-viewport Pine Ridge photo + trust bar.
