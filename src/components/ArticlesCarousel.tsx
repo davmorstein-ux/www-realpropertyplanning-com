@@ -2,80 +2,32 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 
 const ARTICLES = [
-  {
-    title: "The Silver Tsunami",
-    href: "/articles/silver-tsunami",
-    img: "/The_Silver_Tsunami.png",
-    category: "Demographics",
-    summary: "The surge of seniors is reshaping housing, care, and the future of our communities.",
-  },
-  {
-    title: "The Senior Housing Guide",
-    href: "/articles/senior-housing-guide",
-    img: "/The_Senior_Housing_Guide.png",
-    category: "Senior Housing",
-    summary: "Your roadmap to finding the right place, the right care, and peace of mind.",
-  },
-  {
-    title: "Senior Housing Options",
-    href: "/articles/senior-housing-options",
-    img: "/Senior_Housing_Options.png",
-    category: "Senior Housing",
-    summary: "Your roadmap to informed housing and care decisions.",
-  },
-  {
-    title: "Senior Housing Costs",
-    href: "/articles/senior-housing-costs",
-    img: "/Senior_Housing_Costs.png",
-    category: "Cost Guide",
-    summary: "Understand the real costs before making a decision.",
-  },
+  { title: "The Silver Tsunami", href: "/articles/silver-tsunami", img: "/The_Silver_Tsunami.png" },
+  { title: "The Senior Housing Guide", href: "/articles/senior-housing-guide", img: "/The_Senior_Housing_Guide.png" },
+  { title: "Senior Housing Options", href: "/articles/senior-housing-options", img: "/Senior_Housing_Options.png" },
+  { title: "Senior Housing Costs", href: "/articles/senior-housing-costs", img: "/Senior_Housing_Costs.png" },
   {
     title: "How to Choose Senior Housing",
     href: "/articles/how-to-choose-senior-housing",
     img: "/How_to_Choose_Senior_Housing.png",
-    category: "Planning",
-    summary: "A step-by-step guide to finding the right home, care, and lifestyle.",
   },
   {
     title: "Independent Living Costs",
     href: "/articles/independent-living-costs",
     img: "/Independent_Living_Costs.png",
-    category: "Cost Guide",
-    summary: "Understand the expenses, plan wisely, and enjoy the freedom you've earned.",
   },
-  {
-    title: "Memory Care Costs",
-    href: "/articles/memory-care-costs",
-    img: "/Memory_Care_Costs.png",
-    category: "Cost Guide",
-    summary: "Understand the costs, plan ahead, and invest in your loved one's future.",
-  },
-  {
-    title: "CCRC Costs",
-    href: "/articles/ccrc-costs",
-    img: "/CCRC_Costs.png",
-    category: "Cost Guide",
-    summary: "Understand today. Plan wisely. Live well tomorrow.",
-  },
+  { title: "Memory Care Costs", href: "/articles/memory-care-costs", img: "/Memory_Care_Costs.png" },
+  { title: "CCRC Costs", href: "/articles/ccrc-costs", img: "/CCRC_Costs.png" },
   {
     title: "Affordable Senior Housing",
     href: "/articles/affordable-senior-housing",
     img: "/Affordable_Senior_Housing.png",
-    category: "Affordability",
-    summary: "Smart choices. Stable costs. Better living for tomorrow.",
   },
-  {
-    title: "Aging in Place With Support",
-    href: "/articles/aging-in-place",
-    img: "/Aging_in_Place_With_Support.png",
-    category: "Care Options",
-    summary: "Live where you love. Get the support you need. Enjoy peace of mind.",
-  },
+  { title: "Aging in Place With Support", href: "/articles/aging-in-place", img: "/Aging_in_Place_With_Support.png" },
 ];
 
 const AUTO_MS = 7000;
-const TRANS_MS = 2200;
+const FADE_MS = 1200;
 
 export default function ArticlesCarousel() {
   const [index, setIndex] = useState(0);
@@ -94,8 +46,8 @@ export default function ArticlesCarousel() {
     };
   }, [next, paused]);
 
-  // Build visible indices: always show 3 cards centered on index
-  const indices = [index % ARTICLES.length, (index + 1) % ARTICLES.length, (index + 2) % ARTICLES.length];
+  // Three visible slots, wrapping around
+  const slots = [index % ARTICLES.length, (index + 1) % ARTICLES.length, (index + 2) % ARTICLES.length];
 
   return (
     <section style={{ background: "#f7f4ef", padding: "64px 0 72px", fontFamily: "Georgia, serif" }}>
@@ -123,94 +75,100 @@ export default function ArticlesCarousel() {
         <div style={{ width: 48, height: 2, background: "#8B6914", margin: "16px auto 0", borderRadius: 1 }} />
       </div>
 
-      {/* Cards — no sliding track, just fade/swap 3 cards */}
+      {/* Cards */}
       <div
         style={{ maxWidth: 960, margin: "0 auto", padding: "8px 24px 16px" }}
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
         <div style={{ display: "flex", gap: 24 }}>
-          {indices.map((artIndex, slot) => {
+          {slots.map((artIndex, slot) => {
             const article = ARTICLES[artIndex];
             return (
-              <Link
-                key={`${slot}-${artIndex}`}
-                to={article.href}
-                onMouseEnter={() => setHovered(slot)}
-                onMouseLeave={() => setHovered(null)}
+              <div
+                key={slot}
                 style={{
-                  display: "block",
-                  textDecoration: "none",
-                  position: "relative",
-                  borderRadius: 4,
-                  overflow: "hidden",
                   flex: 1,
-                  aspectRatio: "3 / 4",
-                  boxShadow: hovered === slot ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
-                  transform: hovered === slot ? "translateY(-6px)" : "translateY(0)",
-                  transition: `box-shadow 0.4s ease, transform 0.4s ease`,
-                  background: "#ddd",
+                  opacity: 1,
+                  transition: `opacity ${FADE_MS}ms ease`,
                 }}
               >
-                <img
-                  src={article.img}
-                  alt={article.title}
+                <Link
+                  to={article.href}
+                  onMouseEnter={() => setHovered(slot)}
+                  onMouseLeave={() => setHovered(null)}
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "top",
                     display: "block",
-                    transition: `transform ${TRANS_MS}ms cubic-bezier(0.16,1,0.3,1)`,
-                    transform: hovered === slot ? "scale(1.04)" : "scale(1)",
-                  }}
-                />
-                {/* Hover overlay */}
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: "rgba(10,22,40,0.18)",
-                    opacity: hovered === slot ? 1 : 0,
-                    transition: "opacity 0.5s ease",
-                    display: "flex",
-                    alignItems: "flex-end",
-                    justifyContent: "center",
-                    paddingBottom: 24,
+                    textDecoration: "none",
+                    position: "relative",
+                    borderRadius: 4,
+                    overflow: "hidden",
+                    width: "100%",
+                    aspectRatio: "3 / 4",
+                    boxShadow: hovered === slot ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
+                    transform: hovered === slot ? "translateY(-6px)" : "translateY(0)",
+                    transition: "box-shadow 0.4s ease, transform 0.4s ease",
+                    background: "#ddd",
                   }}
                 >
-                  <span
+                  <img
+                    src={article.img}
+                    alt={article.title}
                     style={{
-                      fontSize: 11,
-                      fontFamily: "'Raleway', sans-serif",
-                      fontWeight: 600,
-                      letterSpacing: "0.2em",
-                      textTransform: "uppercase",
-                      color: "#fff",
-                      background: "rgba(139,105,20,0.92)",
-                      padding: "8px 18px",
-                      borderRadius: 2,
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 6,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                      display: "block",
+                    }}
+                  />
+                  {/* Hover overlay */}
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background: "rgba(10,22,40,0.18)",
+                      opacity: hovered === slot ? 1 : 0,
+                      transition: "opacity 0.5s ease",
+                      display: "flex",
+                      alignItems: "flex-end",
+                      justifyContent: "center",
+                      paddingBottom: 24,
                     }}
                   >
-                    Read Article
-                    <svg
-                      width="11"
-                      height="11"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                    <span
+                      style={{
+                        fontSize: 11,
+                        fontFamily: "'Raleway', sans-serif",
+                        fontWeight: 600,
+                        letterSpacing: "0.2em",
+                        textTransform: "uppercase",
+                        color: "#fff",
+                        background: "rgba(139,105,20,0.92)",
+                        padding: "8px 18px",
+                        borderRadius: 2,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 6,
+                      }}
                     >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
+                      Read Article
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
+                    </span>
+                  </div>
+                </Link>
+              </div>
             );
           })}
         </div>
