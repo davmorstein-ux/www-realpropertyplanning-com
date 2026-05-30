@@ -112,10 +112,11 @@ const HomepageHero = () => {
     <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F" }}>
 
 
-      <ParallaxHero
-        src="/homepage-hero.webp"
-        alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
-        heightDesktop="70vh"
+      <div
+        className="rpp-hero"
+        role="img"
+        aria-label="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
+        style={{ backgroundImage: "url('/homepage-hero.webp')", height: "70vh" }}
       />
 
       <HeroBandTitle>
