@@ -121,10 +121,8 @@ const HomepageHero = () => {
       <section
         className="hero-panorama"
         style={{
-          position: "relative",
           width: "100%",
           background: "transparent",
-          overflow: "hidden",
           margin: 0,
           padding: 0,
         }}
