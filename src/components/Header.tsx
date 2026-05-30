@@ -330,6 +330,9 @@ const Header = () => {
               aria-label={drawerOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={drawerOpen}
               onClick={() => setDrawerOpen((v) => !v)}
+              onMouseEnter={openOnHover}
+              onMouseLeave={scheduleClose}
+              onFocus={openOnHover}
               className="rpp-hamburger"
               style={{ fontSize: 22, height: 38, width: 44 }}
             >
