@@ -111,15 +111,19 @@ const Header = () => {
           {/* RIGHT: top links + CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22 }}>
             {!isMobile &&
-              TOP_LINKS.filter((i) => !(i.href === "/" && pathname === "/")).map((item) => (
+              TOP_LINKS.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
                   className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
                 >
+                  {item.href === "/" && (
+                    <span aria-hidden="true" style={{ marginRight: 6 }}>🏠</span>
+                  )}
                   {item.label}
                 </Link>
               ))}
+
             <a
               href="tel:2069003015"
               style={{
@@ -151,16 +155,20 @@ const Header = () => {
               overflowX: "auto",
             }}
           >
-            {TOP_LINKS.filter((i) => !(i.href === "/" && pathname === "/")).map((item) => (
+            {TOP_LINKS.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
                 className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
                 style={{ fontSize: 12 }}
               >
+                {item.href === "/" && (
+                  <span aria-hidden="true" style={{ marginRight: 4 }}>🏠</span>
+                )}
                 {item.label}
               </Link>
             ))}
+
           </div>
         )}
       </header>
