@@ -102,6 +102,7 @@ const Header = () => {
       </a>
 
       <header
+        ref={headerRef}
         data-nosnippet="true"
         style={{
           position: "fixed",
@@ -109,6 +110,7 @@ const Header = () => {
           left: 0,
           width: "100%",
           zIndex: 50,
+          margin: 0,
           padding: isMobile ? "6px 16px" : "6px 32px 4px",
           backgroundColor: "rgba(8, 13, 25, 0.92)",
           backdropFilter: "blur(10px)",
@@ -118,6 +120,7 @@ const Header = () => {
           color: "#fff",
         }}
       >
+
         <div
           style={{
             display: "flex",
