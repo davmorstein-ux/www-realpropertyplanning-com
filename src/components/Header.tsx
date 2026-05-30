@@ -20,6 +20,7 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false,
   );
+  const [scrolled, setScrolled] = useState(false);
 
   const { pathname } = useLocation();
 
@@ -29,6 +30,28 @@ const Header = () => {
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Pages without a hero image — nav should be solid from the start
+  const NON_HERO_ROUTES = new Set<string>([
+    "/disclaimer",
+    "/sitemap",
+    "/terminology",
+    "/faq",
+    "/search",
+    "/404",
+  ]);
+  const hasHero = !NON_HERO_ROUTES.has(pathname);
+  const useSolid = scrolled || !hasHero;
+  const headerBackground = useSolid
+    ? "rgba(10,22,40,1)"
+    : "linear-gradient(to bottom, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0) 100%)";
 
   useEffect(() => {
     const id = "rpp-preview-fonts";
@@ -43,7 +66,7 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const id = "rpp-toplink-styles-v4";
+    const id = "rpp-toplink-styles-v5";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
     style.id = id;
@@ -53,7 +76,7 @@ const Header = () => {
         text-decoration: none;
         font-size: 13px;
         font-weight: 300;
-        letter-spacing: 0.16em;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
         font-family: Georgia, serif;
         padding: 6px 4px;
@@ -89,10 +112,11 @@ const Header = () => {
           zIndex: 50,
           margin: 0,
           padding: isMobile ? "0 16px 6px" : "0 32px 4px",
-          backgroundColor: "rgba(8, 13, 25, 0.92)",
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          background: headerBackground,
+          backdropFilter: useSolid ? "blur(10px)" : "none",
+          WebkitBackdropFilter: useSolid ? "blur(10px)" : "none",
+          borderBottom: useSolid ? "1px solid rgba(255,255,255,0.08)" : "1px solid transparent",
+          transition: "background 400ms ease, border-color 400ms ease, backdrop-filter 400ms ease",
           ...fontBody,
           color: "#fff",
         }}
