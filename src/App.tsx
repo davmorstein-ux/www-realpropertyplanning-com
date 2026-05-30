@@ -190,6 +190,7 @@ const AgingInPlaceArticle = lazy(() => import("./pages/articles/AgingInPlace"));
 const SeniorHousingCosts = lazy(() => import("./pages/articles/SeniorHousingCosts"));
 const SeniorHousingGuide = lazy(() => import("./pages/articles/SeniorHousingGuide"));
 const HowToChooseSeniorHousing = lazy(() => import("./pages/articles/HowToChooseSeniorHousing"));
+const ArticlesIndex = lazy(() => import("./pages/Articles"));
 
 const queryClient = new QueryClient();
 
@@ -437,6 +438,7 @@ const App = () => (
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/search" element={<Search />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/articles" element={<ArticlesIndex />} />
           <Route path="/articles/silver-tsunami" element={<SilverTsunami />} />
           <Route path="/articles/senior-housing-options" element={<SeniorHousingOptions />} />
           <Route path="/articles/independent-living-costs" element={<IndependentLivingCosts />} />
