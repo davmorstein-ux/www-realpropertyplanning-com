@@ -108,7 +108,7 @@ const HomepageHero = () => {
   const fontHead = { fontFamily: "'DM Sans', 'DM Sans', sans-serif" };
 
   return (
-    <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F" }}>
+    <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F", margin: 0, padding: 0 }}>
 
 
       {/* ===== Hero ===== */}
@@ -119,6 +119,8 @@ const HomepageHero = () => {
           width: "100%",
           background: "transparent",
           overflow: "hidden",
+          margin: 0,
+          padding: 0,
         }}
       >
         <img
@@ -133,10 +135,12 @@ const HomepageHero = () => {
             height: "auto",
             minHeight: isMobile ? 200 : undefined,
             objectFit: "cover",
-            objectPosition: "center center",
+            objectPosition: "left center",
             background: "transparent",
             opacity: 0,
             animation: "rppHeroFadeIn 1.2s ease forwards",
+            margin: 0,
+            padding: 0,
           }}
         />
 

@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import WaterfallNav from "./WaterfallNav";
+
 
 const TOP_LINKS = [
   { label: "Home", href: "/" },
@@ -18,6 +19,9 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false,
   );
+  const [headerH, setHeaderH] = useState<number>(isMobile ? 92 : 70);
+  const headerRef = useRef<HTMLElement | null>(null);
+
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -26,6 +30,18 @@ const Header = () => {
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
+
+  useEffect(() => {
+    if (!headerRef.current) return;
+    const el = headerRef.current;
+    const measure = () => setHeaderH(el.getBoundingClientRect().height);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    window.addEventListener("resize", measure);
+    return () => { ro.disconnect(); window.removeEventListener("resize", measure); };
+  }, []);
+
 
   useEffect(() => {
     const id = "rpp-preview-fonts";
@@ -86,6 +102,7 @@ const Header = () => {
       </a>
 
       <header
+        ref={headerRef}
         data-nosnippet="true"
         style={{
           position: "fixed",
@@ -93,6 +110,7 @@ const Header = () => {
           left: 0,
           width: "100%",
           zIndex: 50,
+          margin: 0,
           padding: isMobile ? "6px 16px" : "6px 32px 4px",
           backgroundColor: "rgba(8, 13, 25, 0.92)",
           backdropFilter: "blur(10px)",
@@ -102,6 +120,7 @@ const Header = () => {
           color: "#fff",
         }}
       >
+
         <div
           style={{
             display: "flex",
@@ -189,7 +208,7 @@ const Header = () => {
         )}
       </header>
 
-      <div style={{ height: isMobile ? 92 : 70 }} aria-hidden="true" />
+      <div style={{ height: headerH, margin: 0, padding: 0 }} aria-hidden="true" />
     </>
   );
 };
