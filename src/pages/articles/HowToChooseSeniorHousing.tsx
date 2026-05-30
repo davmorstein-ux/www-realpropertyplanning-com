@@ -12,6 +12,8 @@ const contentWrap = "container px-6 lg:px-8";
 const proseWrap = "max-w-3xl mx-auto";
 const h2Class = "font-serif text-2xl md:text-3xl font-semibold text-foreground mt-10 mb-5";
 const pClass = "text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-5 last:mb-0";
+const leadClass = "text-foreground text-[19px] md:text-xl leading-[1.75] mb-6 font-medium";
+const hrClass = "my-10 border-border/60";
 const inlineLink = "text-gold font-semibold underline underline-offset-2 hover:text-gold/80 transition-colors";
 
 const relatedResources = [
@@ -65,130 +67,181 @@ const HowToChooseSeniorHousing = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <h2 className={h2Class + " mt-0"}>
-                How to Choose Senior Housing: A Step-by-Step Guide for Families
-              </h2>
-              <p className={pClass}>
-                Choosing senior housing is one of the most important decisions an older adult and their family can make. This step-by-step guide helps families choose senior housing by walking through a practical decision process that covers needs, budget, options, visits, contracts, and moving.
+              <h2 className={h2Class + " mt-0"}>How to Choose Senior Housing</h2>
+              <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
+                A step-by-step guide for families navigating one of life's most important decisions
               </p>
+              <hr className={hrClass} />
 
-              <h2 className={h2Class}>Step 1: Assess Current and Future Senior Housing Needs</h2>
-              <p className={pClass}>
-                The first step in choosing senior housing is to understand what level of care is needed now and what may be needed in the next few years. Consider safety, mobility, memory, daily care needs, and how much support the older adult currently receives.
+              <p className={leadClass}>
+                There is a particular kind of paralysis that sets in when a family starts researching senior housing.
               </p>
-              <p className={pClass}>Ask yourself:</p>
+              <p className={pClass}>
+                The options multiply. The terminology blurs. Every community website looks professionally warm and impossibly similar. The costs are hard to compare because nothing is ever quite apples to apples. And beneath all of it runs an undercurrent that nobody names out loud: the weight of getting this wrong.
+              </p>
+              <p className={pClass}>
+                The good news is that this decision, like most important ones, becomes far more manageable when it's broken into steps. Not because the steps eliminate the difficulty — they don't — but because they give a family somewhere to put their feet.
+              </p>
+              <p className={pClass}>Here is a process that works.</p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Step One: Get Honest About What's Actually Needed</h2>
+              <p className={pClass}>
+                Before looking at a single community, the most valuable thing a family can do is take a clear-eyed look at where things stand today — and where they might reasonably stand in two or five years.
+              </p>
+              <p className={pClass}>This means asking questions that are sometimes uncomfortable:</p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
-                <li>Is the current home safe?</li>
-                <li>Is help needed every day?</li>
-                <li>Is memory support becoming necessary?</li>
-                <li>Can the current home be maintained affordably?</li>
-                <li>Are there enough resources for the next five to ten years?</li>
+                <li>Is the current home genuinely safe, or just familiar?</li>
+                <li>Is help needed with daily tasks — bathing, dressing, medications?</li>
+                <li>Are there memory concerns that are growing, not stable?</li>
+                <li>Is the older adult isolated? Is loneliness becoming a health issue in itself?</li>
+                <li>What happens if there's a fall, a hospitalization, a sudden change?</li>
               </ul>
               <p className={pClass}>
-                Being realistic about current and future needs helps narrow down which type of senior housing is most likely to fit. An{" "}
-                <Link to="/aging-life-care-managers" className={inlineLink}>Aging Life Care Manager</Link>{" "}
-                can help families conduct a thorough assessment and identify the right level of support.
+                Being realistic at this stage is an act of love, not defeat. It's what allows a family to match the right option to the right person — rather than choosing whatever feels least disruptive in the moment.
+              </p>
+              <p className={pClass}>
+                An <Link to="/aging-life-care-managers" className={inlineLink}>Aging Life Care Manager</Link> can help families complete a thorough, professional assessment and translate it into a clear picture of appropriate care levels.
               </p>
 
-              <h2 className={h2Class}>Step 2: Determine the Senior Housing Budget</h2>
-              <p className={pClass}>
-                The second step in choosing senior housing is to determine the budget. Look at available income, savings, and benefits. Compare the total monthly cost of senior housing options against the cost of staying at home with support.
-              </p>
-              <p className={pClass}>
-                For many families, the key question is not just the monthly fee, but what that fee includes and how costs may change over time. Some senior housing options include meals, utilities, and care services, while others charge extra for each service. A{" "}
-                <Link to="/professionals/financial-planners" className={inlineLink}>financial planner or advisor</Link>{" "}
-                can help families understand their full financial picture and plan for long-term affordability. See our full guide to{" "}
-                <Link to="/articles/senior-housing-costs" className={inlineLink}>senior housing costs</Link>{" "}
-                for a detailed breakdown.
-              </p>
+              <hr className={hrClass} />
 
-              <h2 className={h2Class}>Step 3: Identify the Right Type of Senior Housing</h2>
+              <h2 className={h2Class}>Step Two: Build a Real Budget</h2>
               <p className={pClass}>
-                Based on needs and budget, narrow down which type of senior housing is most likely to fit. The main options include:
+                Senior housing costs vary widely, and the advertised monthly rate is rarely the whole story. What looks affordable on the surface can carry significant additional costs for care, meals, medication management, or services that didn't seem necessary at first but become essential quickly.
               </p>
+              <p className={pClass}>A complete financial review should cover:</p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
-                <li>Independent living for older adults who want convenience and community without daily care needs</li>
-                <li>Assisted living for those who need daily personal care</li>
-                <li>Memory care for people living with Alzheimer's or dementia</li>
-                <li>Continuing Care Retirement Communities (CCRCs) for long-term planning with multiple levels of care</li>
-                <li>Affordable senior housing for older adults with limited income</li>
-                <li>Aging in place with support for those who want to stay at home while adding help as needed</li>
+                <li>Income from all sources — Social Security, pensions, investments</li>
+                <li>Savings and retirement accounts</li>
+                <li>Home equity that may be available if the family home is sold</li>
+                <li>VA benefits, long-term care insurance, or other resources</li>
+                <li>How expenses might change if care needs increase over time</li>
               </ul>
               <p className={pClass}>
-                This step helps families focus on the senior housing options that make the most sense for their situation. See our full{" "}
-                <Link to="/articles/senior-housing-guide" className={inlineLink}>senior housing guide</Link>{" "}
-                for a detailed overview of each option.
+                The goal is not just to afford the first month. It's to build a picture that holds up over five or ten years — because senior housing decisions made today often shape financial reality for a long time.
+              </p>
+              <p className={pClass}>
+                A <Link to="/professionals/financial-planners" className={inlineLink}>financial planner</Link> who understands senior housing can be invaluable here, helping families map realistic scenarios before they commit to a community.
+              </p>
+              <p className={pClass}>
+                <em><Link to="/articles/senior-housing-costs" className={inlineLink}>See our full guide to senior housing costs →</Link></em>
               </p>
 
-              <h2 className={h2Class}>Step 4: Research Local Senior Housing Communities</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Step Three: Match Needs to Options</h2>
               <p className={pClass}>
-                The fourth step in choosing senior housing is to research communities in the preferred area. Check availability, ask about waitlists, and gather information on monthly fees and included services.
+                With a clear picture of care needs and budget, the list of realistic options becomes much shorter. The main categories of senior housing each serve a different situation:
               </p>
               <p className={pClass}>
-                Look for communities that match the identified needs and budget. Compare amenities, location, and the overall feel of each community. Read reviews and ask for recommendations from trusted professionals. A{" "}
-                <Link to="/senior-living-advisors" className={inlineLink}>Senior Living Advisor</Link>{" "}
-                can help families identify and compare communities in their area with local expertise.
+                <strong>Independent living</strong> — for active older adults who want a simpler, more connected lifestyle without daily personal care.
+              </p>
+              <p className={pClass}>
+                <strong>Assisted living</strong> — for those who need help with daily activities but not full-time medical care.
+              </p>
+              <p className={pClass}>
+                <strong>Memory care</strong> — for individuals living with Alzheimer's or dementia who require a secure, specialized environment.
+              </p>
+              <p className={pClass}>
+                <strong>CCRCs</strong> — for those who want a single community that can support every stage of aging, from independent to skilled nursing.
+              </p>
+              <p className={pClass}>
+                <strong>Affordable senior housing</strong> — for older adults with limited income who need subsidized or income-based options.
+              </p>
+              <p className={pClass}>
+                <strong>Aging in place</strong> — for those who want to stay home, supported by in-home care and services.
+              </p>
+              <p className={pClass}>
+                Most families find that once needs and budget are clearly defined, two or three options rise to the top naturally.
               </p>
 
-              <h2 className={h2Class}>Step 5: Visit and Compare Senior Housing Communities</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Step Four: Research Before You Visit</h2>
               <p className={pClass}>
-                The fifth step in choosing senior housing is to visit multiple communities. Ask the same questions at each, take notes, and compare what is actually included in the monthly fee.
+                A community visit is an investment of time and emotional energy. Before making them, do the groundwork.
               </p>
-              <p className={pClass}>During the visit, pay attention to:</p>
+              <p className={pClass}>
+                Check availability and waitlists — some communities, particularly memory care and affordable housing, book months or years in advance. Gather basic information about monthly fees, included services, and care levels. Read reviews and ask for recommendations from people who have been through this process recently.
+              </p>
+              <p className={pClass}>
+                A <Link to="/senior-living-advisors" className={inlineLink}>senior living advisor</Link> can compress this research significantly, providing vetted shortlists of communities that match specific needs and budgets — and saving families from hours of calls and website searches that all start to look the same.
+              </p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Step Five: Visit With a Plan</h2>
+              <p className={pClass}>
+                Visiting senior housing communities in person is irreplaceable. No website, brochure, or phone call can substitute for walking through the door and paying attention.
+              </p>
+              <p className={pClass}>
+                Bring a list of questions and ask the same ones at every community — it makes comparison far easier afterward. While you're there, notice what the marketing materials won't tell you:
+              </p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
-                <li>Cleanliness and safety</li>
-                <li>Staff friendliness and responsiveness</li>
-                <li>Food quality and variety</li>
-                <li>Social activities and community atmosphere</li>
-                <li>Accessibility and ease of movement</li>
+                <li>How does the staff interact with residents when they don't know you're watching?</li>
+                <li>What does the dining room feel like at a meal?</li>
+                <li>Are residents engaged and moving around, or sitting quietly in hallways?</li>
+                <li>Does the building smell clean — genuinely clean, not just masked?</li>
+                <li>Can you imagine your person feeling at home here?</li>
               </ul>
               <p className={pClass}>
-                Visiting in person helps families see the difference between communities that may look similar on paper.
+                That last question matters more than most checklists acknowledge. Data and amenities can be compared on a spreadsheet. Whether a place <em>feels right</em> can only be known in person.
               </p>
 
-              <h2 className={h2Class}>Step 6: Review Senior Housing Contracts and Fees Carefully</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Step Six: Read the Contract. All of It.</h2>
               <p className={pClass}>
-                The sixth step in choosing senior housing is to review contracts and fees carefully. Before signing, review the contract, understand the fee structure, and clarify what happens if care needs change.
+                Before signing anything, understand exactly what you're agreeing to. Senior housing contracts can be complex, and the details matter enormously.
               </p>
-              <p className={pClass}>Ask:</p>
+              <p className={pClass}>Ask specifically:</p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
-                <li>What is the monthly base rate?</li>
-                <li>What services are included?</li>
-                <li>What costs extra?</li>
-                <li>Are meals included?</li>
-                <li>Is there a second-person fee?</li>
-                <li>How often do rates increase?</li>
-                <li>What happens if care needs change?</li>
-                <li>Is there a move-in fee or deposit?</li>
+                <li>What is the base monthly rate and what does it include?</li>
+                <li>What services trigger additional charges?</li>
+                <li>How is pricing structured if care needs increase?</li>
+                <li>How often do rates increase, and by how much?</li>
+                <li>What is the policy if the community is no longer the right fit?</li>
+                <li>What happens to deposits or entrance fees if the resident leaves?</li>
               </ul>
               <p className={pClass}>
-                Understanding the contract helps avoid surprises after move-in.
+                There should be no surprises after move-in. The contract review is the moment to make sure there won't be.
               </p>
 
-              <h2 className={h2Class}>Step 7: Make the Senior Housing Decision and Plan the Move</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Step Seven: Plan the Move Itself</h2>
               <p className={pClass}>
-                The final step in choosing senior housing is to make the decision and plan the move. Once the right community is chosen, plan the move, coordinate downsizing, and arrange support services.
+                Once the decision is made, the logistics begin — and they are considerable. Downsizing decades of accumulated life. Coordinating the sale of a family home. Arranging the physical move. Setting up a new space that feels like home, not a hotel room.
               </p>
               <p className={pClass}>
-                If the older adult is selling a home, factor in the time needed to prepare, list, and close. If the home is in probate or an estate situation, work with a real estate professional who understands senior transitions and estate sales. A{" "}
-                <Link to="/senior-move-managers" className={inlineLink}>Senior Move Manager</Link>{" "}
-                can help coordinate every aspect of the physical move with patience and care, making the transition as smooth as possible.
+                This is where many families hit a wall. The emotional weight of the decision has already been enormous, and now there's a mountain of practical work on top of it.
+              </p>
+              <p className={pClass}>
+                A <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link> exists precisely for this moment. These professionals specialize in coordinating every aspect of senior transitions — from helping sort and donate belongings to setting up the new residence so that it feels familiar and welcoming from day one. Their involvement typically reduces stress dramatically for both the older adult and the family.
               </p>
 
-              <h2 className={h2Class}>Why Planning Ahead for Senior Housing Matters</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>The Underlying Truth About This Process</h2>
               <p className={pClass}>
-                The earlier a family starts exploring senior housing options, the more choices they usually have. Waitlists, rising costs, and sudden health changes can make senior housing decisions much harder when they are made under pressure.
+                Choosing senior housing is hard not because the steps are complicated, but because of what the decision represents — an acknowledgment that life is changing, that the way things have been is giving way to something new.
               </p>
               <p className={pClass}>
-                Planning ahead gives older adults and their families time to compare communities, understand costs, coordinate finances, and choose a setting that supports both comfort and dignity. In a market where senior housing options may be limited, early planning can make a major difference.
+                The families who do this best are the ones who hold that truth gently, without rushing past it or getting stuck in it. Who involve the older adult in every step they're able to participate in. Who ask the hard questions early, when there's still time to get them right.
+              </p>
+              <p className={pClass}>
+                The goal, in the end, is not just to find a place to live. It's to find a place where someone can continue to live <em>well</em> — with safety, with support, with dignity, and with as much of their own life intact as possible.
+              </p>
+              <p className={pClass}>
+                That goal is achievable. It just takes the willingness to begin.
               </p>
 
-              <h2 className={h2Class}>Final Thoughts on Choosing Senior Housing</h2>
+              <hr className={hrClass} />
+
               <p className={pClass}>
-                Choosing senior housing is a big decision, but following a clear step-by-step process makes it more manageable. By assessing needs, determining the budget, identifying the right type of senior housing, researching communities, visiting, reviewing contracts, and planning the move, families can make a decision with confidence.
-              </p>
-              <p className={pClass}>
-                The right senior housing option is the one that balances safety, support, lifestyle, and long-term affordability so the older adult can live with dignity and comfort.
+                <em>Real Property Planning helps families navigate senior housing decisions with clarity and confidence. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
               </p>
             </article>
           </div>
