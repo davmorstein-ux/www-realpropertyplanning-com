@@ -20,8 +20,9 @@ const ArticleHero = ({ title }: ArticleHeroProps) => {
           width: 100%;
           height: 50vh;
           background-image: url('${heroImage}');
-          background-size: cover;
+          background-size: 100% auto;
           background-position: center center;
+
           background-repeat: no-repeat;
           background-attachment: fixed;
         }
