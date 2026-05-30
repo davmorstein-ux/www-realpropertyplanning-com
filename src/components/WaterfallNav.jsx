@@ -85,9 +85,9 @@ const RIGHT_GROUPS = [
   },
 ];
 
-const PANEL_FADE_MS = 320;
-const PANEL_HOVER_CLOSE_DELAY = 250;
-const GROUP_HOVER_CLOSE_DELAY = 150;
+const PANEL_FADE_MS = 500;
+const PANEL_HOVER_CLOSE_DELAY = 600;
+const GROUP_HOVER_CLOSE_DELAY = 400;
 
 const CSS = `
   .wf-wrap {
@@ -147,11 +147,11 @@ const CSS = `
 
   .wf-panel {
     position: fixed;
-    top: 0;
+    top: 64px;
     left: 0;
     width: 500px;
     max-width: 96vw;
-    height: 100vh;
+    height: calc(100vh - 64px);
     background: #f7f4ef;
     z-index: 9999;
     border-right: 1px solid #d4c9b0;
