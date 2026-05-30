@@ -11,7 +11,6 @@ import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import FeaturedAttorneys from "@/components/FeaturedAttorneys";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import ParallaxHero from "@/components/ParallaxHero";
 
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">

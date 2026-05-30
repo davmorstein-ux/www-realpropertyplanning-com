@@ -16,7 +16,6 @@ import realEstateAttorneyImg from "@/assets/legal/real-estate-attorney.webp";
 import familyLawAttorneyImg from "@/assets/legal/family-law-attorney.webp";
 import divorceAttorneyImg from "@/assets/legal/divorce-attorney.webp";
 import estateLiquidatorsTile from "@/assets/estate-liquidators-tile-transparent.png";
-import ParallaxHero from "@/components/ParallaxHero";
 
 type Card = {
   title: string;
@@ -186,7 +185,12 @@ const BuildingYourTrustedProfessionalTeam = () => {
         {/* Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <ParallaxHero src={wtdwHeroImage} alt="Quiet Washington street with craftsman homes" />
+            <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Quiet Washington street with craftsman homes"
+  style={{ backgroundImage: `url(${wtdwHeroImage})`, height: "50vh" }}
+/>
             <HeroBandTitle as="div">A Guide to Independent Professionals</HeroBandTitle>
           </div>
         </section>

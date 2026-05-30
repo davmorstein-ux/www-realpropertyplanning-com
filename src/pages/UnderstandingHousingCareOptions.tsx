@@ -16,7 +16,6 @@ import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/understanding-housing-care-options-hero-washington.webp";
-import ParallaxHero from "@/components/ParallaxHero";
 
 interface Pathway {
   letter: string;
@@ -107,7 +106,12 @@ const UnderstandingHousingCareOptions = () => {
       <main id="main-content">
         {/* HERO IMAGE */}
         <section className="w-full overflow-hidden">
-          <ParallaxHero src={heroImage} alt="Family touring a Washington senior living community to understand housing and care options" />
+          <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Family touring a Washington senior living community to understand housing and care options"
+  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
+/>
         </section>
         <HeroBandTitle>Understanding Housing and Care Options</HeroBandTitle>
 

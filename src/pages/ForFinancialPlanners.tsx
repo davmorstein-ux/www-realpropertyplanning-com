@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import CTASection from "@/components/CTASection";
 import TiffanyLaneCard from "@/components/TiffanyLaneCard";
 import heroImage from "@/assets/financial-planners-hero-washington.webp";
-import ParallaxHero from "@/components/ParallaxHero";
 
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for Financial Planners and Their Clients in Washington State",
@@ -33,7 +32,12 @@ const ForFinancialPlanners = () => (
 
     {/* Hero image — standardized height */}
     <section className="bg-white">
-      <ParallaxHero src={heroImage} alt="Financial planners guidance — estate and senior transition real estate in Washington State" />
+      <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Financial planners guidance — estate and senior transition real estate in Washington State"
+  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
+/>
     </section>
 
     {/* Thin white gap */}

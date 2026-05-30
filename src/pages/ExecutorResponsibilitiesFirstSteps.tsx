@@ -6,7 +6,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/executor-trustee-hero-washington.webp";
 import { articleSchema } from "@/lib/schema";
-import ParallaxHero from "@/components/ParallaxHero";
 
 const tiles = [
   {
@@ -70,7 +69,12 @@ const ExecutorResponsibilitiesFirstSteps = () => {
       <main id="main-content">
         {/* HERO IMAGE */}
         <section className="bg-white">
-          <ParallaxHero src={heroImage} alt="Serving as executor and trustee — guidance for Washington families" />
+          <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Serving as executor and trustee — guidance for Washington families"
+  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
+/>
         </section>
 
         <HeroBandTitle>SERVING&nbsp; AS&nbsp; EXECUTOR&nbsp; &amp;&nbsp; TRUSTEE</HeroBandTitle>

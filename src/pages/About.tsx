@@ -19,7 +19,6 @@ import aboutHeroImage from "@/assets/about_hero_downtown_clean_v2.webp";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
-import ParallaxHero from "@/components/ParallaxHero";
 
 
 const About = () => {
@@ -38,7 +37,12 @@ const About = () => {
       <main id="main-content">
         {/* Hero */}
         <section className="relative overflow-hidden w-full" style={{ backgroundColor: "#f5f0e8" }}>
-          <ParallaxHero src={aboutHeroImage} alt="Real Property Planning — Senior Transitions" />
+          <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Real Property Planning — Senior Transitions"
+  style={{ backgroundImage: `url(${aboutHeroImage})`, height: "50vh" }}
+/>
           <h1 className="sr-only">About Real Property Planning</h1>
         </section>
 

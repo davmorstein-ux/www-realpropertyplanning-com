@@ -21,7 +21,6 @@ import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.we
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 import SituationCards from "@/components/SituationCards";
-import ParallaxHero from "@/components/ParallaxHero";
 
 interface Pathway {
   letter: string;

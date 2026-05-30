@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconCpas from "@/assets/icons/estate-cpas-financial-icon-washington.webp";
 import CTASection from "@/components/CTASection";
-import ParallaxHero from "@/components/ParallaxHero";
 
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for CPAs and Their Clients in Washington State",

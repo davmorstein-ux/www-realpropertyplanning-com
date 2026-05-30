@@ -10,7 +10,6 @@ import MidPageCTA from "@/components/MidPageCTA";
 import NextStepBlock from "@/components/NextStepBlock";
 import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import ParallaxHero from "@/components/ParallaxHero";
 
 const tiles = [
   {
@@ -64,7 +63,12 @@ const InheritedHouseWashington = () => (
       {/* WTDW Shared Hero */}
       <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
         <div style={{ lineHeight: 0 }}>
-          <ParallaxHero src={wtdwHeroImage} alt="Quiet Washington street with craftsman homes" />
+          <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Quiet Washington street with craftsman homes"
+  style={{ backgroundImage: `url(${wtdwHeroImage})`, height: "50vh" }}
+/>
           <HeroBandTitle as="div">Inherited Property</HeroBandTitle>
         </div>
       </section>

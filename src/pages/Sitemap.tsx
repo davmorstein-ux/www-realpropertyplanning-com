@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { SITEMAP_PAGES, SITEMAP_REDIRECTS, type SitemapPage } from "@/data/sitemap-data";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import ParallaxHero from "@/components/ParallaxHero";
 
 interface TreeNode {
   segment: string;

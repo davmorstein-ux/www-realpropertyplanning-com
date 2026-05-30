@@ -25,7 +25,6 @@ import {
 } from "@/components/ui/accordion";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-import ParallaxHero from "@/components/ParallaxHero";
 
 const faqs = [
   { question: "Can you list a house for sale while probate is still open?", answer: "Yes. In Washington State, once the executor or personal representative has been granted letters testamentary by the court, they have the authority to list and sell the property — even while other aspects of the estate are still being settled." },
@@ -98,7 +97,12 @@ const SellHouseDuringProbateWashington = () => (
     <section className="bg-primary pt-6 md:pt-10 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <ParallaxHero src={heroImage} alt="Probate estate sales educational guide — open book, checklist, tablet, and Knowledge Plan Peace of Mind mug in gold circular frame" />
+          <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Probate estate sales educational guide — open book, checklist, tablet, and Knowledge Plan Peace of Mind mug in gold circular frame"
+  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
+/>
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5" style={{ fontSize: "20px" }}>Educational Guide</p>
           <h1 className="font-serif text-primary-foreground font-semibold leading-tight mb-5" style={{ fontSize: "clamp(36px, 5vw, 46px)" }}>
             Can You Sell a House During Probate in Washington State?
