@@ -47,7 +47,7 @@ const Header = () => {
         text-decoration: none;
         font-family: 'Raleway', 'Gill Sans', 'Century Gothic', sans-serif;
         font-size: 13px;
-        font-weight: 200;
+        font-weight: 400;
         letter-spacing: 0.18em;
         text-transform: uppercase;
         padding: 6px 4px;
@@ -124,7 +124,7 @@ const Header = () => {
                 background: "#1a5fa8",
                 padding: isMobile ? "6px 10px" : "4px 14px",
                 borderRadius: 6,
-                fontWeight: 300,
+                fontWeight: 400,
                 fontSize: isMobile ? 11 : 13,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
