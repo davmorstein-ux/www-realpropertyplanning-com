@@ -20,7 +20,8 @@ const Header = () => {
     typeof window !== "undefined" ? window.innerWidth < 769 : false,
   );
   const [headerH, setHeaderH] = useState<number>(isMobile ? 92 : 70);
-  const headerRef = (typeof window !== "undefined" ? (require("react") as typeof import("react")).useRef<HTMLElement>(null) : { current: null }) as React.MutableRefObject<HTMLElement | null>;
+  const headerRef = useRef<HTMLElement | null>(null);
+
   const { pathname } = useLocation();
 
   useEffect(() => {
