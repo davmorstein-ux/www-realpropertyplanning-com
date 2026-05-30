@@ -127,10 +127,6 @@ const Header = () => {
                   to={item.href}
                   className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
                 >
-                  {item.href === "/" && (
-                    <span aria-hidden="true" className="rpp-home-icon">🏠</span>
-                  )}
-
                   {item.label}
                 </Link>
               ))}
@@ -138,20 +134,22 @@ const Header = () => {
             <a
               href="tel:2069003015"
               style={{
-                ...fontBody,
                 color: "#fff",
                 background: "#1a5fa8",
                 padding: isMobile ? "6px 10px" : "4px 12px",
                 borderRadius: 6,
-                fontWeight: 700,
+                fontWeight: 400,
                 fontSize: isMobile ? 11 : 13,
-                letterSpacing: "0.06em",
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                fontFamily: "Georgia, serif",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
               }}
             >
               {isMobile ? "CALL" : "(206) 900-3015"}
             </a>
+
           </div>
         </div>
 
