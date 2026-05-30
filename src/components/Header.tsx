@@ -127,8 +127,9 @@ const Header = () => {
                   className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
                 >
                   {item.href === "/" && (
-                    <span aria-hidden="true" style={{ marginRight: 6 }}>🏠</span>
+                    <span aria-hidden="true" className="rpp-home-icon">🏠</span>
                   )}
+
                   {item.label}
                 </Link>
               ))}
