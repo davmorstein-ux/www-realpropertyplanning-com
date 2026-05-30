@@ -43,41 +43,32 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const id = "rpp-toplink-styles-v3";
+    const id = "rpp-toplink-styles-v4";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
     style.id = id;
     style.innerHTML = `
       .rpp-top-link {
-        color: rgba(255,255,255,0.92);
+        color: #ffffff;
         text-decoration: none;
         font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.06em;
+        font-weight: 300;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-family: Georgia, serif;
         padding: 6px 4px;
         border-bottom: 1px solid transparent;
-        transition: color 0.18s ease, border-color 0.18s ease;
+        transition: opacity 0.3s ease, border-color 0.3s ease;
         white-space: nowrap;
         display: inline-flex;
         align-items: center;
       }
-      .rpp-top-link .rpp-home-icon,
-      .rpp-home-icon {
-        font-size: 32px !important;
-        line-height: 1 !important;
-        width: 32px !important;
-        height: 32px !important;
-        margin-right: 8px !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-      }
-
-      .rpp-top-link:hover { color: ${GOLD}; }
-      .rpp-top-link.is-active { border-bottom-color: #fff; }
+      .rpp-top-link:hover { opacity: 0.7; }
+      .rpp-top-link.is-active { border-bottom-color: ${GOLD}; }
     `;
     document.head.appendChild(style);
   }, []);
+
 
   return (
     <>
@@ -136,10 +127,6 @@ const Header = () => {
                   to={item.href}
                   className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
                 >
-                  {item.href === "/" && (
-                    <span aria-hidden="true" className="rpp-home-icon">🏠</span>
-                  )}
-
                   {item.label}
                 </Link>
               ))}
@@ -147,20 +134,22 @@ const Header = () => {
             <a
               href="tel:2069003015"
               style={{
-                ...fontBody,
                 color: "#fff",
                 background: "#1a5fa8",
                 padding: isMobile ? "6px 10px" : "4px 12px",
                 borderRadius: 6,
-                fontWeight: 700,
+                fontWeight: 400,
                 fontSize: isMobile ? 11 : 13,
-                letterSpacing: "0.06em",
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                fontFamily: "Georgia, serif",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
               }}
             >
               {isMobile ? "CALL" : "(206) 900-3015"}
             </a>
+
           </div>
         </div>
 
@@ -182,11 +171,8 @@ const Header = () => {
                 className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
                 style={{ fontSize: 12 }}
               >
-                {item.href === "/" && (
-                  <span aria-hidden="true" className="rpp-home-icon">🏠</span>
-                )}
-
                 {item.label}
+
               </Link>
             ))}
 
