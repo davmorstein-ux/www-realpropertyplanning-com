@@ -31,7 +31,7 @@ const TRACK = [...ARTICLES, ...ARTICLES, ...ARTICLES];
 const START = ARTICLES.length; // begin in the middle copy
 const CARD_GAP = 24;
 const AUTO_MS = 7000;
-const SLIDE_MS = 2200;
+const SLIDE_MS = 4400;
 
 export default function ArticlesCarousel() {
   const [pos, setPos] = useState(START);
