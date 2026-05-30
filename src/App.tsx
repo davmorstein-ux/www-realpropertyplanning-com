@@ -207,6 +207,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <SiteBottomNav />
+        <MGFloatingNav />
 
 
         <SiteChatWidget />
