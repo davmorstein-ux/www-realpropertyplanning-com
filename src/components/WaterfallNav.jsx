@@ -117,7 +117,7 @@ const CSS = `
   .wf-trigger .wf-ln {
     display: block;
     height: 3px;
-    background: #8B6914;
+    background: #E8C97A;
     border-radius: 2px;
     transition: width 0.5s cubic-bezier(0.16,1,0.3,1);
   }
@@ -130,11 +130,11 @@ const CSS = `
   .wf-menu-word {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 1px;
     font-size: 15px;
     font-weight: 700;
-    letter-spacing: 0.14em;
-    color: #8B6914;
+    letter-spacing: 0.08em;
+    color: #E8C97A;
     text-transform: uppercase;
     font-family: Georgia, serif;
     user-select: none;
@@ -147,23 +147,24 @@ const CSS = `
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3px;
-    width: 14px;
+    gap: 2px;
+    width: 11px;
+    margin: 0 1px;
   }
   .wf-menu-e > span {
     display: block;
     height: 2px;
-    background: #8B6914;
+    background: #E8C97A;
     border-radius: 1px;
   }
-  .wf-menu-e > span:nth-child(1) { width: 14px; }
-  .wf-menu-e > span:nth-child(2) { width: 10px; }
-  .wf-menu-e > span:nth-child(3) { width: 14px; }
+  .wf-menu-e > span:nth-child(1) { width: 11px; }
+  .wf-menu-e > span:nth-child(2) { width: 8px; }
+  .wf-menu-e > span:nth-child(3) { width: 11px; }
   .wf-menu-label {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.1em;
-    color: #8B6914;
+    color: #E8C97A;
     text-transform: uppercase;
     user-select: none;
   }
