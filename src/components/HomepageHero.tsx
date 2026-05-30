@@ -113,16 +113,16 @@ const HomepageHero = () => {
   const fontHead = { fontFamily: "'DM Sans', 'DM Sans', sans-serif" };
 
   return (
-    <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F", margin: 0, padding: 0 }}>
-
-
+    <>
       {/* ===== Hero ===== */}
       <style>{`@keyframes rppHeroFadeIn { from { opacity: 0 } to { opacity: 1 } }`}</style>
       <section
         className="hero-panorama"
         style={{
+          ...fontBody,
           width: "100%",
           background: "transparent",
+          color: "#1E3A5F",
           margin: 0,
           padding: 0,
         }}
@@ -145,7 +145,7 @@ const HomepageHero = () => {
         />
 
       </section>
-    </div>
+    </>
   );
 };
 
