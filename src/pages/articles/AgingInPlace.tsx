@@ -12,6 +12,8 @@ const contentWrap = "container px-6 lg:px-8";
 const proseWrap = "max-w-3xl mx-auto";
 const h2Class = "font-serif text-2xl md:text-3xl font-semibold text-foreground mt-10 mb-5";
 const pClass = "text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-5 last:mb-0";
+const leadClass = "font-serif text-xl md:text-2xl text-foreground/90 leading-[1.6] mb-8 italic";
+const hrClass = "my-10 border-t border-border";
 const inlineLink = "text-gold font-semibold underline underline-offset-2 hover:text-gold/80 transition-colors";
 
 const relatedResources = [
@@ -62,101 +64,170 @@ const AgingInPlace = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <h2 className={h2Class + " mt-0"}>
-                Aging in Place With Support: What Older Adults Should Expect
-              </h2>
-              <p className={pClass}>
-                Aging in place with support allows older adults to remain in their own home while adding the help needed to stay safe, comfortable, and independent for as long as possible. For many seniors and couples, this is the preferred option because it preserves familiar surroundings, routines, and privacy while avoiding an immediate move to senior housing.
+              <p className={leadClass}>
+                Most older adults want to stay home. Here's what that actually takes — and how to know when it's still the right answer.
               </p>
 
-              <h2 className={h2Class}>What Aging in Place Means</h2>
+              <hr className={hrClass} />
+
+              <p className={pClass}>Ask almost any older adult where they want to grow old, and the answer comes quickly.</p>
+              <p className={pClass}>Home.</p>
               <p className={pClass}>
-                Aging in place means continuing to live at home instead of moving to an independent living, assisted living, or memory care community. When support is added, that can include home care, transportation, meal help, housekeeping, safety modifications, and other services that make daily life easier.
+                Not a community, however lovely. Not a campus, however well-staffed. Home — with its particular slant of afternoon light, its familiar sounds, the garden that has been tended for thirty years, the kitchen where every cabinet is exactly where it should be.
               </p>
               <p className={pClass}>
-                This option is often appealing to older adults who want to remain in a familiar home and community. It can also work well for couples when one spouse needs more help than the other, as long as the home can still be made safe and manageable. An{" "}
-                <Link to="/aging-life-care-managers" className={inlineLink}>Aging Life Care Manager</Link>{" "}
-                can help families assess what level of support is needed and coordinate the right services to make aging in place work safely.
+                This preference is not stubbornness. It is not denial. It is one of the most human things about us — the attachment to place, to the accumulated life that a home holds. And it deserves to be taken seriously, not managed around.
+              </p>
+              <p className={pClass}>
+                Aging in place with support takes it seriously. It says: you can stay. Here's what that takes.
               </p>
 
-              <h2 className={h2Class}>Typical Cost Considerations</h2>
-              <p className={pClass}>
-                The cost of aging in place with support can vary widely because it depends on how much help is needed and how often it is provided. Some families only need occasional help with cleaning, errands, or transportation, while others need daily personal care or supervision.
-              </p>
-              <p className={pClass}>
-                Because the cost is not a single monthly housing fee, families should think of this option as a combination of housing expenses and care expenses. Mortgage or rent, utilities, maintenance, home repairs, in-home care, and modifications all need to be considered together. A{" "}
-                <Link to="/professionals/financial-planners" className={inlineLink}>financial planner or advisor</Link>{" "}
-                can help families build a realistic long-term budget for aging in place.
-              </p>
+              <hr className={hrClass} />
 
-              <h2 className={h2Class}>What May Be Included</h2>
+              <h2 className={h2Class}>What Aging in Place Actually Means</h2>
               <p className={pClass}>
-                Support for aging in place can include a wide range of services. Common examples are meal delivery, housekeeping, personal care assistance, companionship, transportation, medication reminders, and help with bathing or dressing.
+                Aging in place means remaining at home — your own home — rather than moving to a senior living community. When support is added, that home becomes something more than it was: a foundation for independent living, reinforced by the services and modifications that make it safe and sustainable as needs change.
               </p>
-              <p className={pClass}>
-                Many families also invest in safety improvements such as grab bars, better lighting, ramps, stair lifts, walk-in tubs, or other accessibility upgrades. These changes can make a home more workable, but they also add to the overall cost.
-              </p>
-
-              <h2 className={h2Class}>Extra Costs to Watch For</h2>
-              <p className={pClass}>
-                Aging in place can become expensive when care needs increase. In-home care is often billed by the hour, and costs can rise quickly if help is needed every day or around the clock. Additional expenses may include home maintenance, snow removal, repairs, lawn care, emergency systems, and future accessibility changes.
-              </p>
-              <p className={pClass}>
-                Families should also consider whether the home is truly affordable once all costs are combined. A house that is already paid off may still require substantial spending to remain safe and functional.
-              </p>
-
-              <h2 className={h2Class}>When It Works Best</h2>
-              <p className={pClass}>
-                Aging in place with support works best when the home is still suitable, the older adult's needs are manageable, and enough help can be added without overwhelming the budget. It is often a good fit for people who are emotionally attached to their home and want to stay there as long as possible.
-              </p>
-              <p className={pClass}>
-                It can also be a good short- to medium-term solution while families decide whether a future move to senior housing will be needed. The key is being realistic about how much care the person may need over time.
-              </p>
-
-              <h2 className={h2Class}>How to Compare Costs</h2>
-              <p className={pClass}>
-                To compare aging in place with senior housing, families should add up the full monthly cost of staying home. That means including housing payments, utilities, food, transportation, home maintenance, in-home care, and any planned modifications.
-              </p>
-              <p className={pClass}>
-                It is often helpful to compare that total against the monthly cost of independent living or assisted living. In some cases, staying home may be less expensive. In others, the combined cost of services can make senior housing the more practical option. A{" "}
-                <Link to="/senior-living-advisors" className={inlineLink}>Senior Living Advisor</Link>{" "}
-                can help families compare the full cost of staying home against available senior housing options in their area.
-              </p>
-
-              <h2 className={h2Class}>Questions to Ask Before Choosing</h2>
-              <p className={pClass}>
-                Before deciding to age in place with support, ask:
-              </p>
+              <p className={pClass}>Those services can include:</p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
-                <li>Is the home safe and accessible?</li>
-                <li>How much care is needed now?</li>
-                <li>How much care may be needed later?</li>
-                <li>What services are available locally?</li>
-                <li>What will in-home care cost per month?</li>
-                <li>What home modifications are needed?</li>
-                <li>Can the budget support long-term care at home?</li>
-                <li>What happens if needs increase suddenly?</li>
+                <li>In-home personal care — help with bathing, dressing, grooming, and daily tasks</li>
+                <li>Meal delivery or preparation assistance</li>
+                <li>Housekeeping and laundry</li>
+                <li>Transportation to medical appointments, errands, and social activities</li>
+                <li>Medication reminders and management support</li>
+                <li>Companionship and social engagement</li>
+                <li>Home safety modifications — grab bars, better lighting, ramps, stair lifts, walk-in showers</li>
               </ul>
               <p className={pClass}>
-                These questions help families understand whether aging in place is truly sustainable.
+                The combination looks different for every person. Someone who is mostly independent but can no longer drive safely needs a very different support structure than someone who requires daily personal care. That flexibility is one of aging in place's greatest strengths — and one of the things that makes its costs so variable.
+              </p>
+              <p className={pClass}>
+                An{" "}
+                <Link to="/aging-life-care-managers" className={inlineLink}>Aging Life Care Manager</Link>{" "}
+                can help families assess exactly what level of support is needed, identify appropriate local services, and build a plan that is genuinely sustainable rather than cobbled together in response to each new challenge as it arrives.
               </p>
 
-              <h2 className={h2Class}>Is Aging in Place Worth It?</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>The True Cost of Staying Home</h2>
               <p className={pClass}>
-                For many older adults, aging in place is worth it because it preserves independence and comfort. There is often emotional value in remaining in a familiar home, especially after many years in the same place.
+                Here is where many families discover that staying home is more expensive than they assumed.
               </p>
               <p className={pClass}>
-                The decision becomes more complicated when care needs rise or the cost of support begins to exceed the cost of moving. In those cases, families need to weigh the benefits of staying home against safety, affordability, and long-term planning. If a move eventually becomes necessary, a{" "}
-                <Link to="/senior-move-managers" className={inlineLink}>Senior Move Manager</Link>{" "}
-                can help make the transition as smooth and manageable as possible.
+                The mistake is comparing "senior living monthly fee" to "mortgage payment" — and concluding that home is obviously cheaper. But the mortgage payment is only one piece of what home actually costs.
+              </p>
+              <p className={pClass}>A realistic accounting includes:</p>
+              <p className={pClass}>
+                <strong>Housing costs:</strong> Mortgage or rent, property taxes, homeowner's insurance, utilities.
+              </p>
+              <p className={pClass}>
+                <strong>Maintenance:</strong> Repairs, lawn care, snow removal, appliance replacement. Homes require ongoing investment, and that investment doesn't pause because the owner is aging.
+              </p>
+              <p className={pClass}>
+                <strong>Home modifications:</strong> Grab bars, ramp installations, bathroom remodels for accessibility, stair lifts. These can range from a few hundred dollars to tens of thousands, depending on what the home requires.
+              </p>
+              <p className={pClass}>
+                <strong>In-home care:</strong> This is where costs can escalate significantly. Professional in-home care is typically billed by the hour. A few hours a week is manageable. Daily care for several hours begins to add up. Around-the-clock supervision — which some families eventually need — can cost more per month than a well-staffed assisted living community.
+              </p>
+              <p className={pClass}>
+                <strong>Food and transportation:</strong> Senior living communities bundle meals and transportation into their monthly fees. At home, these are separate expenses that need to be planned for.
+              </p>
+              <p className={pClass}>
+                Adding all of these together, honestly and completely, is the only way to know whether aging in place is genuinely more affordable — or whether it only appears that way when the full picture isn't examined.
               </p>
 
-              <h2 className={h2Class}>Final Thoughts</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>When Aging in Place Works Well</h2>
+              <p className={pClass}>Aging in place with support is often an excellent solution when:</p>
+              <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
+                <li>The home is already suitable, or can be made suitable with reasonable modifications</li>
+                <li>The older adult's needs are currently modest — some help, but not daily intensive care</li>
+                <li>The financial picture supports the combined cost of housing plus services over the long term</li>
+                <li>There is family or community support nearby that supplements professional services</li>
+                <li>The older adult is emotionally well — not isolated, not lonely, genuinely thriving at home</li>
+              </ul>
               <p className={pClass}>
-                Aging in place with support can be a strong option for older adults who want to remain at home while adding the help they need. The best decisions come from looking at the full cost, the home's safety, and the likely future care needs before a crisis forces a change.
+                For couples where one partner needs more support than the other, aging in place can be particularly valuable. It keeps two people together in the home they've shared, with services tailored to the partner who needs them — without forcing either person into a more institutional setting before it's necessary.
+              </p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>When the Math Starts to Change</h2>
+              <p className={pClass}>
+                Aging in place deserves honest reassessment as circumstances evolve. A few situations that often signal it's time to reconsider:
               </p>
               <p className={pClass}>
-                For some families, staying home is the right answer. For others, it is a short-term bridge to a more supportive senior living arrangement later on.
+                <strong>When care hours multiply.</strong> What began as a few hours of help each week can grow, over months and years, into something approaching full-time supervision. At some point — and this point arrives more often than families anticipate — the cost of in-home care rivals or exceeds the cost of a senior living community that provides care around the clock.
+              </p>
+              <p className={pClass}>
+                <strong>When the home becomes the problem.</strong> Stairs that were fine at 70 become genuinely dangerous at 82. A large house that felt like comfort becomes isolation. The home itself can shift from asset to obstacle.
+              </p>
+              <p className={pClass}>
+                <strong>When safety can no longer be reliably maintained.</strong> Falls, wandering, medication errors, and other safety incidents that occur despite adequate support are signals that the current arrangement may have reached its limits.
+              </p>
+              <p className={pClass}>
+                <strong>When the primary caregiver is suffering.</strong> Family members who absorb caregiving responsibilities alongside professional services carry an enormous load. When that load begins to compromise their own health, relationships, or livelihood, the equation needs to be reexamined.
+              </p>
+              <p className={pClass}>
+                None of these are failures. They are the natural evolution of a situation that was managed well for as long as it could be.
+              </p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Comparing Aging in Place to Senior Living — The Right Way</h2>
+              <p className={pClass}>The honest comparison requires real numbers, not assumptions.</p>
+              <p className={pClass}>
+                Write down everything home costs per month — housing, utilities, maintenance, modifications, in-home care, transportation, food. Total it.
+              </p>
+              <p className={pClass}>
+                Then get a full cost breakdown from one or two senior living communities that match the level of care needed — not just the base rate, but the full monthly picture including all included services.
+              </p>
+              <p className={pClass}>
+                For many families, this comparison produces a surprise: the gap is smaller than they thought. For some, senior living is actually less expensive once the full cost of home is accounted for. For others, staying home remains the more affordable choice — and that's worth knowing too.
+              </p>
+              <p className={pClass}>
+                A{" "}
+                <Link to="/senior-living-advisors" className={inlineLink}>senior living advisor</Link>{" "}
+                can help run this comparison with actual numbers from real communities, giving families a clear-eyed view of both options before a crisis forces a rushed decision.
+              </p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Questions Worth Asking Honestly</h2>
+              <p className={pClass}>Before committing to aging in place as a long-term plan:</p>
+              <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
+                <li>Is the home safe today — and can it be made safe for the next five to ten years?</li>
+                <li>What does care actually cost at the current level of need?</li>
+                <li>What might it cost if needs increase significantly?</li>
+                <li>Is there family support available, and is it sustainable?</li>
+                <li>Is the older adult genuinely thriving at home, or simply avoiding the alternative?</li>
+                <li>What is the plan if something changes suddenly?</li>
+              </ul>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>The Answer That Fits</h2>
+              <p className={pClass}>
+                Aging in place with support is not right for everyone. It is also not wrong for everyone. It is one option among several — one that deserves to be evaluated on its actual merits, with full information, rather than chosen by default because every other option feels like giving something up.
+              </p>
+              <p className={pClass}>
+                For the older adult who is safe, supported, financially sustainable, and genuinely happy at home — staying is the right answer. For the person who is isolated, struggling, and held in place primarily by the fear of moving — a conversation about alternatives is an act of care, not defeat.
+              </p>
+              <p className={pClass}>
+                The goal, in either case, is the same: a life that fits. Wherever that life is lived.
+              </p>
+              <p className={pClass}>
+                When the time eventually comes for a transition — whether planned or prompted by circumstance — a{" "}
+                <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link>{" "}
+                can make the process feel less like loss and more like a beginning.
+              </p>
+
+              <hr className={hrClass} />
+
+              <p className={pClass + " italic text-center"}>
+                Real Property Planning helps families navigate senior housing decisions with clarity and compassion.{" "}
+                <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link>
               </p>
             </article>
           </div>
