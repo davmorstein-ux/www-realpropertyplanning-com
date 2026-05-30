@@ -89,6 +89,7 @@ const PANEL_FADE_MS = 1400;
 const PANEL_HOVER_CLOSE_DELAY = 1500;
 
 const CSS = `
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
   .wf-wrap {
     position: relative;
     display: inline-block;
@@ -466,16 +467,24 @@ export default function WaterfallNav() {
           onClick={openPanel}
           title="Menu"
         >
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 0, lineHeight: 1, userSelect: "none" }}>
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              lineHeight: 1,
+              userSelect: "none",
+              letterSpacing: "0.18em",
+            }}
+          >
             <span
               style={{
-                fontFamily: "Georgia, serif",
-                fontWeight: 300,
-                fontSize: "16px",
-                letterSpacing: "0.12em",
+                fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                fontWeight: 200,
+                fontSize: "15px",
                 textTransform: "uppercase",
                 color: "#E8C97A",
                 lineHeight: 1,
+                letterSpacing: "0.18em",
               }}
             >
               M
@@ -485,54 +494,33 @@ export default function WaterfallNav() {
                 display: "inline-flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                width: "12px",
-                height: "11px",
-                margin: "0 3px",
+                width: "14px",
+                height: "10px",
+                margin: "0 1px 0 2px",
                 padding: 0,
                 flexShrink: 0,
                 alignSelf: "center",
               }}
             >
               <span
-                style={{
-                  display: "block",
-                  height: "2px",
-                  background: "#E8C97A",
-                  borderRadius: "1px",
-                  width: "100%",
-                  flexShrink: 0,
-                }}
+                style={{ display: "block", height: "1.5px", background: "#E8C97A", borderRadius: "0", width: "100%" }}
               ></span>
               <span
-                style={{
-                  display: "block",
-                  height: "2px",
-                  background: "#E8C97A",
-                  borderRadius: "1px",
-                  width: "70%",
-                  flexShrink: 0,
-                }}
+                style={{ display: "block", height: "1.5px", background: "#E8C97A", borderRadius: "0", width: "75%" }}
               ></span>
               <span
-                style={{
-                  display: "block",
-                  height: "2px",
-                  background: "#E8C97A",
-                  borderRadius: "1px",
-                  width: "100%",
-                  flexShrink: 0,
-                }}
+                style={{ display: "block", height: "1.5px", background: "#E8C97A", borderRadius: "0", width: "100%" }}
               ></span>
             </span>
             <span
               style={{
-                fontFamily: "Georgia, serif",
-                fontWeight: 300,
-                fontSize: "16px",
-                letterSpacing: "0.12em",
+                fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                fontWeight: 200,
+                fontSize: "15px",
                 textTransform: "uppercase",
                 color: "#E8C97A",
                 lineHeight: 1,
+                letterSpacing: "0.18em",
               }}
             >
               NU
