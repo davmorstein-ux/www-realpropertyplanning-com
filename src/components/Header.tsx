@@ -136,6 +136,47 @@ const Header = () => {
     }
   }, [drawerOpen]);
 
+  // Total rows for the cascade (group label + each item)
+  const totalRows = DRAWER_GROUPS.reduce((n, g) => n + 1 + g.items.length, 0);
+
+  // After all bars have cascaded in, flip to "settled" so widths equalize
+  useEffect(() => {
+    if (settleTimerRef.current) {
+      window.clearTimeout(settleTimerRef.current);
+      settleTimerRef.current = null;
+    }
+    if (drawerOpen) {
+      const totalMs = totalRows * CASCADE_STEP_MS + CASCADE_BAR_MS + 60;
+      settleTimerRef.current = window.setTimeout(() => setSettled(true), totalMs);
+    } else {
+      setSettled(false);
+    }
+    return () => {
+      if (settleTimerRef.current) window.clearTimeout(settleTimerRef.current);
+    };
+  }, [drawerOpen, totalRows]);
+
+  // Hover intent helpers (desktop only)
+  const cancelClose = () => {
+    if (closeTimerRef.current) {
+      window.clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+  const openOnHover = () => {
+    if (isMobile) return;
+    cancelClose();
+    setDrawerOpen(true);
+  };
+  const scheduleClose = () => {
+    if (isMobile) return;
+    cancelClose();
+    closeTimerRef.current = window.setTimeout(
+      () => setDrawerOpen(false),
+      HOVER_CLOSE_DELAY_MS,
+    );
+  };
+
   useEffect(() => {
     const id = "rpp-preview-fonts";
     if (!document.getElementById(id)) {
