@@ -13,7 +13,6 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
-import ParallaxHero from "@/components/ParallaxHero";
 
 interface Decision {
   letter: string;
@@ -106,7 +105,12 @@ const WhatToDoWithTheHouse = () => {
         {/* HERO */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <ParallaxHero src={heroImage} alt="Quiet Washington street with craftsman homes — deciding what to do with an inherited or family home" />
+            <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Quiet Washington street with craftsman homes — deciding what to do with an inherited or family home"
+  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
+/>
             <HeroBandTitle>What To Do With the House</HeroBandTitle>
           </div>
         </section>

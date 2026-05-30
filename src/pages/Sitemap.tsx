@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { SITEMAP_PAGES, SITEMAP_REDIRECTS, type SitemapPage } from "@/data/sitemap-data";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import ParallaxHero from "@/components/ParallaxHero";
 
 interface TreeNode {
   segment: string;
@@ -110,7 +109,12 @@ const Sitemap = () => {
       <Header />
       <main id="main-content">
         <section className="bg-white">
-          <ParallaxHero src="/Probate-inherited_property_carride_cropped.webp" alt="Site map — Real Property Planning" />
+          <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Site map — Real Property Planning"
+  style={{ backgroundImage: `url("/Probate-inherited_property_carride_cropped.webp")`, height: "50vh" }}
+/>
         </section>
 
         <HeroBandTitle>Site Map</HeroBandTitle>

@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/real-estate-attorney-hero.webp";
-import ParallaxHero from "@/components/ParallaxHero";
 
 const AttorneysForRealEstateAttorney = () => (
   <div className="min-h-screen bg-background">
@@ -26,7 +25,12 @@ const AttorneysForRealEstateAttorney = () => (
     <main id="main-content">
       <section className="w-full bg-secondary" style={{ marginTop: 0, paddingTop: 0 }}>
         <div className="container px-6 lg:px-8 py-10 md:py-14 flex justify-center">
-          <ParallaxHero src={heroImage} alt="Real estate attorney at desk reviewing a real estate matter" />
+          <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Real estate attorney at desk reviewing a real estate matter"
+  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
+/>
         </div>
         <HeroBandTitle compact>Real Estate Attorney</HeroBandTitle>
       </section>

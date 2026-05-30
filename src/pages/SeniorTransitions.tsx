@@ -12,7 +12,6 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 import seniorTransitionsHero from "@/assets/senior-transitions-hero.webp";
 
 import HeroBandTitle from "@/components/HeroBandTitle";
-import ParallaxHero from "@/components/ParallaxHero";
 
 const jsonLd = articleSchema({
   headline: "Senior Housing Transitions in Washington State",
@@ -37,7 +36,12 @@ const SeniorTransitions = () => {
 
       {/* Hero image + brand band — matches site-wide HeroBandTitle pattern */}
       <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
-        <ParallaxHero src={seniorTransitionsHero} alt="Senior couple in front of their longtime Washington home with a Real Property Planning For Sale sign" />
+        <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Senior couple in front of their longtime Washington home with a Real Property Planning For Sale sign"
+  style={{ backgroundImage: `url(${seniorTransitionsHero})`, height: "50vh" }}
+/>
         <HeroBandTitle as="h2">Selling A Senior's Home</HeroBandTitle>
       </section>
 

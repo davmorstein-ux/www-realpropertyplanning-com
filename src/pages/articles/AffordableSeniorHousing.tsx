@@ -1,10 +1,11 @@
 import Header from "@/components/Header";
-import ArticleHero from "@/components/ArticleHero";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/articles-hero-banner.png";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -44,7 +45,15 @@ const AffordableSeniorHousing = () => {
       />
       <Header />
       <main id="main-content">
-        <ArticleHero title="Affordable Senior Housing" />
+        <>
+  <div
+    className="rpp-hero"
+    role="img"
+    aria-label="Older couple on a bench overlooking a scenic river valley with a vintage car nearby"
+    style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
+  />
+  <HeroBandTitle>{"Affordable Senior Housing"}</HeroBandTitle>
+</>
 
         {/* Article */}
         <section className={sectionBase + " bg-background"}>

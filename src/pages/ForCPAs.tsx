@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconCpas from "@/assets/icons/estate-cpas-financial-icon-washington.webp";
 import CTASection from "@/components/CTASection";
-import ParallaxHero from "@/components/ParallaxHero";
 
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for CPAs and Their Clients in Washington State",
@@ -35,7 +34,12 @@ const ForCPAs = () => (
     {/* Hero */}
     <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
       <div style={{ lineHeight: 0 }}>
-        <ParallaxHero src="/assets/cpas_hero_clean.webp" alt="Guidance for CPAs and tax professionals — Washington State estate and probate real estate" />
+        <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Guidance for CPAs and tax professionals — Washington State estate and probate real estate"
+  style={{ backgroundImage: `url("/assets/cpas_hero_clean.webp")`, height: "50vh" }}
+/>
         <HeroBandTitle>CPA &amp; TAX PROFESSIONAL GUIDANCE</HeroBandTitle>
       </div>
     </section>

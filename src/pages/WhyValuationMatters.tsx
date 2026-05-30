@@ -19,7 +19,6 @@ import scale3d from "@/assets/appraisal-scale-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconHomeValue from "@/assets/icons/real-estate-property-value-icon-washington.webp";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
-import ParallaxHero from "@/components/ParallaxHero";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",
@@ -124,7 +123,12 @@ const WhyValuationMatters = () => {
 
       {/* HERO */}
       <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
-        <ParallaxHero src="/assets/valuation_hero_clean.webp" alt="Why Valuation Matters — Real Property Planning" />
+        <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Why Valuation Matters — Real Property Planning"
+  style={{ backgroundImage: `url("/assets/valuation_hero_clean.webp")`, height: "50vh" }}
+/>
         <HeroBandTitle>Pricing &amp; Valuation Expertise</HeroBandTitle>
       </section>
 
