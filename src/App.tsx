@@ -206,7 +206,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <SiteBottomNav />
+        
         
 
 
