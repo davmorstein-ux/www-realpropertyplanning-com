@@ -43,41 +43,32 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const id = "rpp-toplink-styles-v3";
+    const id = "rpp-toplink-styles-v4";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
     style.id = id;
     style.innerHTML = `
       .rpp-top-link {
-        color: rgba(255,255,255,0.92);
+        color: #ffffff;
         text-decoration: none;
         font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.06em;
+        font-weight: 300;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-family: Georgia, serif;
         padding: 6px 4px;
         border-bottom: 1px solid transparent;
-        transition: color 0.18s ease, border-color 0.18s ease;
+        transition: opacity 0.3s ease, border-color 0.3s ease;
         white-space: nowrap;
         display: inline-flex;
         align-items: center;
       }
-      .rpp-top-link .rpp-home-icon,
-      .rpp-home-icon {
-        font-size: 32px !important;
-        line-height: 1 !important;
-        width: 32px !important;
-        height: 32px !important;
-        margin-right: 8px !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-      }
-
-      .rpp-top-link:hover { color: ${GOLD}; }
-      .rpp-top-link.is-active { border-bottom-color: #fff; }
+      .rpp-top-link:hover { opacity: 0.7; }
+      .rpp-top-link.is-active { border-bottom-color: ${GOLD}; }
     `;
     document.head.appendChild(style);
   }, []);
+
 
   return (
     <>
