@@ -135,6 +135,18 @@ const CSS = `
     text-transform: uppercase;
     user-select: none;
   }
+  .wf-menu-e {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 11px;
+    height: 13px;
+    margin: 0 1px;
+    padding: 1px 0;
+    vertical-align: middle;
+    position: relative;
+    top: -0.5px;
+  }
 
   .wf-overlay {
     position: fixed;
@@ -455,9 +467,9 @@ export default function WaterfallNav() {
           <span className="wf-menu-word">
             <span className="wf-menu-letter">M</span>
             <span className="wf-menu-e">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span style={{display:'block',height:'1.5px',background:'#E8C97A',borderRadius:'1px',width:'100%'}}></span>
+              <span style={{display:'block',height:'1.5px',background:'#E8C97A',borderRadius:'1px',width:'70%'}}></span>
+              <span style={{display:'block',height:'1.5px',background:'#E8C97A',borderRadius:'1px',width:'100%'}}></span>
             </span>
             <span className="wf-menu-letter">NU</span>
           </span>
