@@ -143,20 +143,33 @@ body {
 
 main,
 #root,
-#main-content,
 #root > div {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-main > section:first-child,
-#main-content > section:first-child,
-#main-content > div:first-child,
-main > div:first-child,
+/* Reserve space for the fixed <Header /> so page content sits flush below it
+   with only a thin visual gap (instead of disappearing behind the header
+   or floating far below it). */
+#main-content {
+  margin-top: 0 !important;
+  padding-top: 72px !important;
+}
+@media (max-width: 768px) {
+  #main-content {
+    padding-top: 110px !important;
+  }
+}
+
+/* First hero section sits directly under the header — kill the global
+   32px section padding-top so the gap stays thin. */
 #main-content > *:first-child,
-#main-content > *:first-child > section:first-child {
+#main-content > *:first-child > section,
+#main-content > *:first-child > section:first-child,
+#main-content > section:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 @layer base {
