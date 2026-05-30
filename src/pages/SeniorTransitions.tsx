@@ -36,12 +36,14 @@ const SeniorTransitions = () => {
 
       {/* Hero image + brand band — matches site-wide HeroBandTitle pattern */}
       <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
-        <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Senior couple in front of their longtime Washington home with a Real Property Planning For Sale sign"
-  style={{ backgroundImage: `url(${seniorTransitionsHero})`, height: "50vh" }}
-/>
+        <img
+          src={seniorTransitionsHero}
+          alt="Senior couple in front of their longtime Washington home with a Real Property Planning For Sale sign"
+          className="w-full h-auto object-cover"
+          style={{ display: "block" }}
+          loading="eager"
+          fetchPriority="high"
+        />
         <HeroBandTitle as="h2">Selling A Senior's Home</HeroBandTitle>
       </section>
 

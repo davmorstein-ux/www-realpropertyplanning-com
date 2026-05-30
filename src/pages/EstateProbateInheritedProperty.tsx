@@ -71,12 +71,12 @@ const EstateProbateInheritedProperty = () => {
       <main id="main-content">
         {/* HERO IMAGE */}
         <section className="bg-white">
-          <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Managing an estate, probate, or inherited property in Washington State"
-  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
-/>
+          <img
+            src={heroImage}
+            alt="Managing an estate, probate, or inherited property in Washington State"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            loading="eager"
+          />
         </section>
 
         <HeroBandTitle>Estate, Probate & Inherited Property</HeroBandTitle>

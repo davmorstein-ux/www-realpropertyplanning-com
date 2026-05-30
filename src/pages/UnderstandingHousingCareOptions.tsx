@@ -106,12 +106,15 @@ const UnderstandingHousingCareOptions = () => {
       <main id="main-content">
         {/* HERO IMAGE */}
         <section className="w-full overflow-hidden">
-          <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Family touring a Washington senior living community to understand housing and care options"
-  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
-/>
+          <img
+            src={heroImage}
+            alt="Family touring a Washington senior living community to understand housing and care options"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover"
+            width={1600}
+            height={900}
+            loading="eager"
+            fetchPriority="high"
+          />
         </section>
         <HeroBandTitle>Understanding Housing and Care Options</HeroBandTitle>
 

@@ -109,12 +109,12 @@ const Sitemap = () => {
       <Header />
       <main id="main-content">
         <section className="bg-white">
-          <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Site map — Real Property Planning"
-  style={{ backgroundImage: `url("/Probate-inherited_property_carride_cropped.webp")`, height: "50vh" }}
-/>
+          <img
+            src="/Probate-inherited_property_carride_cropped.webp"
+            alt="Site map — Real Property Planning"
+            className="w-full h-auto block"
+            loading="eager"
+          />
         </section>
 
         <HeroBandTitle>Site Map</HeroBandTitle>

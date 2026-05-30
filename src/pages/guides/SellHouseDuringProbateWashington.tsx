@@ -97,12 +97,7 @@ const SellHouseDuringProbateWashington = () => (
     <section className="bg-primary pt-6 md:pt-10 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Probate estate sales educational guide — open book, checklist, tablet, and Knowledge Plan Peace of Mind mug in gold circular frame"
-  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
-/>
+          <img src={heroImage} alt="Probate estate sales educational guide — open book, checklist, tablet, and Knowledge Plan Peace of Mind mug in gold circular frame" className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-5" loading="eager" />
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5" style={{ fontSize: "20px" }}>Educational Guide</p>
           <h1 className="font-serif text-primary-foreground font-semibold leading-tight mb-5" style={{ fontSize: "clamp(36px, 5vw, 46px)" }}>
             Can You Sell a House During Probate in Washington State?

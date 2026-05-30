@@ -58,12 +58,12 @@ const PlanningBeforeACrisis = () => {
       <main id="main-content">
         {/* HERO IMAGE — standardized height */}
         <section className="bg-white">
-          <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Planning before a crisis — thoughtful estate and property planning in Washington State"
-  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
-/>
+          <img
+            src={heroImage}
+            alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            loading="eager"
+          />
         </section>
 
         <HeroBandTitle>Planning Before a Crisis</HeroBandTitle>

@@ -34,12 +34,12 @@ const ForCPAs = () => (
     {/* Hero */}
     <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
       <div style={{ lineHeight: 0 }}>
-        <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Guidance for CPAs and tax professionals — Washington State estate and probate real estate"
-  style={{ backgroundImage: `url("/assets/cpas_hero_clean.webp")`, height: "50vh" }}
-/>
+        <img
+          src="/assets/cpas_hero_clean.webp"
+          alt="Guidance for CPAs and tax professionals — Washington State estate and probate real estate"
+          className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+          loading="eager"
+        />
         <HeroBandTitle>CPA &amp; TAX PROFESSIONAL GUIDANCE</HeroBandTitle>
       </div>
     </section>

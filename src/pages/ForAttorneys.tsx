@@ -25,12 +25,12 @@ const ForAttorneys = () => (
     {/* Hero image + navy band */}
     <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
       <div style={{ lineHeight: 0 }}>
-        <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Real Property Planning for Washington attorneys — estate, probate, and family law referral partner"
-  style={{ backgroundImage: `url("/images/hero_attorneys.webp")`, height: "50vh" }}
-/>
+        <img
+          src="/images/hero_attorneys.webp"
+          alt="Real Property Planning for Washington attorneys — estate, probate, and family law referral partner"
+          className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-top block"
+          loading="eager"
+        />
         <HeroBandTitle>Attorneys</HeroBandTitle>
       </div>
     </section>

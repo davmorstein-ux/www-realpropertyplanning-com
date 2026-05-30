@@ -76,12 +76,12 @@ const GreyDivorce = () => (
       <section className="pt-6 md:pt-8 pb-14 md:pb-20 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Older couple facing grey divorce with divorce agreement and house keys"
-  style={{ backgroundImage: `url(${greyDivorceCircle})`, height: "50vh" }}
-/>
+            <img
+              src={greyDivorceCircle}
+              alt="Older couple facing grey divorce with divorce agreement and house keys"
+              className="block mx-auto w-[220px] md:w-[260px] h-auto object-contain mb-6"
+              loading="eager"
+            />
             <p className="font-sans text-sm md:text-base tracking-[0.2em] uppercase text-gold font-semibold mb-4">
               Planning &amp; Next Steps
             </p>
