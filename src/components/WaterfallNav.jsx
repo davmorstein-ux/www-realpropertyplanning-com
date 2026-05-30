@@ -127,6 +127,38 @@ const CSS = `
   .wf-trigger:hover .wf-ln-1,
   .wf-trigger:hover .wf-ln-2,
   .wf-trigger:hover .wf-ln-3 { width: 32px; }
+  .wf-menu-word {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #8B6914;
+    text-transform: uppercase;
+    font-family: Georgia, serif;
+    user-select: none;
+    line-height: 1;
+  }
+  .wf-menu-letter {
+    display: inline-block;
+  }
+  .wf-menu-e {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    width: 14px;
+  }
+  .wf-menu-e > span {
+    display: block;
+    height: 2px;
+    background: #8B6914;
+    border-radius: 1px;
+  }
+  .wf-menu-e > span:nth-child(1) { width: 14px; }
+  .wf-menu-e > span:nth-child(2) { width: 10px; }
+  .wf-menu-e > span:nth-child(3) { width: 14px; }
   .wf-menu-label {
     font-size: 13px;
     font-weight: 700;
