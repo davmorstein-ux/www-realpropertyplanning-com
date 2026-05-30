@@ -109,7 +109,12 @@ const Sitemap = () => {
       <Header />
       <main id="main-content">
         <section className="bg-white">
-          <ParallaxHero src="/Probate-inherited_property_carride_cropped.webp" alt="Site map — Real Property Planning" />
+          <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Site map — Real Property Planning"
+  style={{ backgroundImage: `url("/Probate-inherited_property_carride_cropped.webp")`, height: "50vh" }}
+/>
         </section>
 
         <HeroBandTitle>Site Map</HeroBandTitle>

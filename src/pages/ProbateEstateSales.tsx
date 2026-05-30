@@ -85,7 +85,12 @@ const ProbateEstateSales = () => {
         {/* SECTION 1 — Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
-            <ParallaxHero src="/assets/estate_probate_sales_hero_clean.webp" alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home" />
+            <div
+  className="rpp-hero"
+  role="img"
+  aria-label="Probate and estate property sale scene with family reviewing belongings outside a Washington home"
+  style={{ backgroundImage: `url("/assets/estate_probate_sales_hero_clean.webp")`, height: "50vh" }}
+/>
           </div>
           <HeroBandTitle as="h2">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
         </section>
