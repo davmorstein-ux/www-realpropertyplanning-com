@@ -112,35 +112,10 @@ const HomepageHero = () => {
     <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F" }}>
 
 
-      {/* ===== Parallax Sticky Hero ===== */}
-      <style>{`
-        @keyframes rppHeroFadeIn { from { opacity: 0 } to { opacity: 1 } }
-        .rpp-parallax-hero {
-          display: block;
-          position: relative;
-          width: 100%;
-          height: 70vh;
-          background-image: url('/homepage-hero.webp');
-          background-size: cover;
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          margin: 0;
-          padding: 0;
-          opacity: 0;
-          animation: rppHeroFadeIn 1.2s ease forwards;
-        }
-        @media (max-width: 1024px) {
-          .rpp-parallax-hero {
-            background-attachment: scroll;
-            height: 40vh;
-          }
-        }
-      `}</style>
-      <section
-        className="rpp-parallax-hero"
-        role="img"
-        aria-label="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
+      <ParallaxHero
+        src="/homepage-hero.webp"
+        alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
+        heightDesktop="70vh"
       />
 
       <HeroBandTitle>
