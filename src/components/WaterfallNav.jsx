@@ -140,9 +140,9 @@ const CSS = `
     flex-direction: column;
     justify-content: space-between;
     width: 11px;
-    height: 13px;
+    height: 1em;
     margin: 0 1px;
-    padding: 1px 0;
+    padding: 0;
     vertical-align: middle;
     position: relative;
     top: -0.5px;
