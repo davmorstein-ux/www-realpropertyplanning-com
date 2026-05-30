@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 const LEFT_GROUPS = [
   {
     label: "Legal Professionals",
-    href: "/building-your-trusted-professional-team#legal",
+    href: "/building-your-trusted-professional-team",
     items: [
       { name: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
       { name: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
@@ -15,7 +15,7 @@ const LEFT_GROUPS = [
   },
   {
     label: "Financial & Valuation",
-    href: "/building-your-trusted-professional-team#financial",
+    href: "/building-your-trusted-professional-team",
     items: [
       { name: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
       { name: "CPAs & Accountants", href: "/professionals/cpas" },
@@ -25,7 +25,7 @@ const LEFT_GROUPS = [
   },
   {
     label: "Senior Housing & Care",
-    href: "/building-your-trusted-professional-team#senior-care",
+    href: "/building-your-trusted-professional-team",
     items: [
       { name: "Senior Living Advisors", href: "/senior-living-advisors" },
       { name: "Medicare & Benefits Advisors", href: "/medicare-providers" },
@@ -35,7 +35,7 @@ const LEFT_GROUPS = [
   },
   {
     label: "Property & Transition",
-    href: "/building-your-trusted-professional-team#property",
+    href: "/building-your-trusted-professional-team",
     items: [
       { name: "Real Estate Brokers", href: "/realtor" },
       { name: "Estate Liquidators", href: "/estate-liquidators" },
@@ -85,7 +85,6 @@ const RIGHT_GROUPS = [
   },
 ];
 
-// Flatten into bars for animation
 function flattenGroups(groups) {
   return groups.flatMap((g, gi) => [
     { type: "label", text: g.label, href: g.href, groupIndex: gi },
@@ -98,34 +97,54 @@ const RIGHT_BARS = flattenGroups(RIGHT_GROUPS);
 
 const STAGGER_MS = 45;
 const BAR_DURATION_MS = 360;
+const HOVER_CLOSE_DELAY = 200;
 
 const CSS = `
-  .wf-btn {
+  .wf-trigger {
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 10px 12px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 10001;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .wf-trigger:hover {
+    background: rgba(201,168,76,0.1);
+  }
+  .wf-icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
     align-items: flex-start;
-    position: relative;
-    z-index: 10001;
   }
-  .wf-btn .wf-ln {
+  .wf-trigger .wf-ln {
     display: block;
-    height: 2px;
+    height: 3px;
     background: #c9a84c;
     border-radius: 2px;
     transition: width 0.25s ease;
   }
-  .wf-btn .wf-ln-1 { width: 26px; }
-  .wf-btn .wf-ln-2 { width: 18px; }
-  .wf-btn .wf-ln-3 { width: 12px; }
-  .wf-btn:hover .wf-ln-1,
-  .wf-btn:hover .wf-ln-2,
-  .wf-btn:hover .wf-ln-3 { width: 26px; }
+  .wf-trigger .wf-ln-1 { width: 32px; }
+  .wf-trigger .wf-ln-2 { width: 22px; }
+  .wf-trigger .wf-ln-3 { width: 14px; }
+  .wf-trigger:hover .wf-ln-1,
+  .wf-trigger:hover .wf-ln-2,
+  .wf-trigger:hover .wf-ln-3 { width: 32px; }
+  .wf-menu-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #c9a84c;
+    text-transform: uppercase;
+    user-select: none;
+  }
 
   .wf-overlay {
     position: fixed;
@@ -139,7 +158,7 @@ const CSS = `
     position: fixed;
     top: 0;
     left: 0;
-    width: 480px;
+    width: 500px;
     max-width: 96vw;
     height: 100vh;
     background: #f7f4ef;
@@ -153,23 +172,30 @@ const CSS = `
   .wf-panel-header {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 12px 16px;
+    justify-content: space-between;
+    padding: 14px 18px 12px;
     border-bottom: 1px solid #e0d8c8;
     flex-shrink: 0;
+  }
+  .wf-what-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a2744;
+    letter-spacing: 0.02em;
   }
   .wf-close-x {
     background: none;
     border: none;
-    color: #888;
-    font-size: 20px;
+    color: #c0392b;
+    font-size: 22px;
+    font-weight: 900;
     line-height: 1;
     cursor: pointer;
     padding: 4px 8px;
     border-radius: 4px;
-    transition: color 0.15s, background 0.15s;
+    transition: background 0.15s;
   }
-  .wf-close-x:hover { color: #1a2744; background: rgba(26,39,68,0.07); }
+  .wf-close-x:hover { background: rgba(192,57,43,0.1); }
 
   .wf-columns {
     display: grid;
@@ -180,7 +206,7 @@ const CSS = `
   .wf-col {
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 6px 0 32px;
+    padding: 6px 0 16px;
   }
   .wf-col:first-child { border-right: 1px solid #e0d8c8; }
   .wf-col::-webkit-scrollbar { width: 3px; }
@@ -215,8 +241,8 @@ const CSS = `
   .wf-link {
     display: block;
     width: 100%;
-    padding: 6px 14px 6px 20px;
-    font-size: 12px;
+    padding: 7px 14px 7px 20px;
+    font-size: 13px;
     color: #2a3a5a;
     background: none;
     border: none;
@@ -231,6 +257,32 @@ const CSS = `
     color: #1a2744;
     border-left-color: #c9a84c;
     background: rgba(201,168,76,0.08);
+  }
+
+  .wf-close-footer {
+    flex-shrink: 0;
+    padding: 12px 18px 16px;
+    border-top: 1px solid #e0d8c8;
+    background: #f7f4ef;
+  }
+  .wf-close-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1a2744;
+    color: #c9a84c;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s, color 0.15s;
+  }
+  .wf-close-btn:hover {
+    background: #c9a84c;
+    color: #1a2744;
   }
 
   @keyframes wfIn {
@@ -258,27 +310,19 @@ function NavColumn({ bars, closing, colDelay, onNavigate }) {
           animation: `${closing ? "wfOut" : "wfIn"} ${BAR_DURATION_MS}ms cubic-bezier(0.22,1,0.36,1) both`,
           animationDelay: `${delay}ms`,
         };
-
         if (bar.type === "label") {
           return (
             <div key={i} className="wf-bar" style={anim}>
               {i > 0 && <hr className="wf-divider" />}
-              <button
-                className="wf-group-label"
-                onClick={() => onNavigate(bar.href)}
-              >
+              <button className="wf-group-label" onClick={() => onNavigate(bar.href)}>
                 {bar.text}
               </button>
             </div>
           );
         }
-
         return (
           <div key={i} className="wf-bar" style={anim}>
-            <button
-              className="wf-link"
-              onClick={() => onNavigate(bar.href)}
-            >
+            <button className="wf-link" onClick={() => onNavigate(bar.href)}>
               {bar.name}
             </button>
           </div>
@@ -292,8 +336,11 @@ export default function WaterfallNav() {
   const [open, setOpen] = useState(false);
   const [closing, setClosing] = useState(false);
   const timerRef = useRef(null);
+  const hoverCloseTimer = useRef(null);
+  const panelRef = useRef(null);
 
   const openPanel = () => {
+    if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
     if (open && !closing) return;
     if (timerRef.current) clearTimeout(timerRef.current);
     setClosing(false);
@@ -311,10 +358,28 @@ export default function WaterfallNav() {
     }, duration);
   };
 
+  const handleTriggerMouseLeave = () => {
+    if (!open) return;
+    hoverCloseTimer.current = setTimeout(() => {
+      closePanel();
+    }, HOVER_CLOSE_DELAY);
+  };
+
+  const handlePanelMouseEnter = () => {
+    if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
+  };
+
+  const handlePanelMouseLeave = () => {
+    hoverCloseTimer.current = setTimeout(() => {
+      closePanel();
+    }, HOVER_CLOSE_DELAY);
+  };
+
   const handleNavigate = (href) => {
     setOpen(false);
     setClosing(false);
     if (timerRef.current) clearTimeout(timerRef.current);
+    if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
     window.location.href = href;
   };
 
@@ -324,34 +389,57 @@ export default function WaterfallNav() {
     return () => document.removeEventListener("keydown", onKey);
   }, [open, closing]);
 
-  useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
+  useEffect(() => () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
+  }, []);
 
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
 
       <button
-        className="wf-btn"
+        className="wf-trigger"
         aria-label="Open navigation menu"
         aria-expanded={open}
         onClick={openPanel}
+        onMouseEnter={openPanel}
+        onMouseLeave={handleTriggerMouseLeave}
         title="Menu"
       >
-        <span className="wf-ln wf-ln-1" />
-        <span className="wf-ln wf-ln-2" />
-        <span className="wf-ln wf-ln-3" />
+        <span className="wf-icon">
+          <span className="wf-ln wf-ln-1" />
+          <span className="wf-ln wf-ln-2" />
+          <span className="wf-ln wf-ln-3" />
+        </span>
+        <span className="wf-menu-label">Menu</span>
       </button>
 
       {open && (
         <>
           <div className="wf-overlay" onClick={closePanel} aria-hidden="true" />
-          <div className="wf-panel" role="dialog" aria-label="Site navigation">
+          <div
+            className="wf-panel"
+            ref={panelRef}
+            role="dialog"
+            aria-label="Site navigation"
+            onMouseEnter={handlePanelMouseEnter}
+            onMouseLeave={handlePanelMouseLeave}
+          >
             <div className="wf-panel-header">
+              <span className="wf-what-label">What are you looking for?</span>
               <button className="wf-close-x" onClick={closePanel} aria-label="Close menu">✕</button>
             </div>
+
             <div className="wf-columns">
               <NavColumn bars={LEFT_BARS} closing={closing} colDelay={0} onNavigate={handleNavigate} />
               <NavColumn bars={RIGHT_BARS} closing={closing} colDelay={20} onNavigate={handleNavigate} />
+            </div>
+
+            <div className="wf-close-footer">
+              <button className="wf-close-btn" onClick={closePanel}>
+                Close Menu
+              </button>
             </div>
           </div>
         </>
