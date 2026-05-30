@@ -1,25 +1,6 @@
 /* Fonts loaded non-blocking from index.html (DM Sans + DM Sans) */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&display=swap');
 
-/* Site-wide parallax hero (used inline on every page) */
-.rpp-hero {
-  width: 100%;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-@media (max-width: 1024px) {
-  .rpp-hero {
-    background-attachment: scroll !important;
-    height: 40vh !important;
-  }
-}
-
-
 
 /* Global typography overhaul */
 h1, h2, h3, h4 {

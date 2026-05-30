@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
+import heroImage from "@/assets/articles-hero-banner.png";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/articles-hero-banner.png";
-import HeroBandTitle from "@/components/HeroBandTitle";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -42,14 +42,16 @@ const SeniorHousingOptions = () => {
       <Header />
       <main id="main-content">
         <>
-  <div
-    className="rpp-hero"
-    role="img"
-    aria-label="Older couple on a bench overlooking a scenic river valley with a vintage car nearby"
-    style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
-  />
-  <HeroBandTitle>{"Senior Housing Options"}</HeroBandTitle>
-</>
+          <div className="bg-white">
+            <img
+              src={heroImage}
+              alt="Older couple on a bench overlooking a scenic river valley with a vintage car nearby — senior housing and life-transition resources"
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+              loading="eager"
+            />
+          </div>
+          <HeroBandTitle>{"Senior Housing Options"}</HeroBandTitle>
+        </>
 
         {/* Article */}
         <section className={sectionBase + " bg-background"}>
