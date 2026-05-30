@@ -210,12 +210,12 @@ const PreparingHomeForSaleDuringTransition = () => {
         {/* WTDW Shared Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Quiet Washington street with craftsman homes"
-  style={{ backgroundImage: `url(${wtdwHeroImage})`, height: "50vh" }}
-/>
+            <img
+              src={wtdwHeroImage}
+              alt="Quiet Washington street with craftsman homes"
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              loading="eager"
+            />
             <HeroBandTitle as="div">Preparing For Sale</HeroBandTitle>
           </div>
         </section>

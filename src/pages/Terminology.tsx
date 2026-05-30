@@ -139,12 +139,12 @@ const Terminology = () => {
       <Header />
       <main id="main-content">
         <section className="bg-transparent" style={{ lineHeight: 0 }}>
-          <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Probate and estate terminology guide for Washington State"
-  style={{ backgroundImage: `url(${terminologyHero})`, height: "50vh" }}
-/>
+          <img
+            src={terminologyHero}
+            alt="Probate and estate terminology guide for Washington State"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            loading="eager"
+          />
           <HeroBandTitle>Probate &amp; Estate Terminology</HeroBandTitle>
         </section>
 

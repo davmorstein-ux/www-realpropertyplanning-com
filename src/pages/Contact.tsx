@@ -63,12 +63,12 @@ const Contact = () => {
       {/* Hero image + navy band */}
       <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
         <div style={{ lineHeight: 0 }}>
-          <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact"
-  style={{ backgroundImage: `url(${contactHero})`, height: "50vh" }}
-/>
+          <img
+            src={contactHero}
+            alt="Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact"
+            className="w-full h-auto block"
+            loading="eager"
+          />
           <HeroBandTitle>Get Connected</HeroBandTitle>
         </div>
       </section>

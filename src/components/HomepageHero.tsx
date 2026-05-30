@@ -111,22 +111,36 @@ const HomepageHero = () => {
     <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F" }}>
 
 
-      <div
-        className="rpp-hero"
-        role="img"
-        aria-label="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
+      {/* ===== Hero ===== */}
+      <style>{`@keyframes rppHeroFadeIn { from { opacity: 0 } to { opacity: 1 } }`}</style>
+      <section
         style={{
-          backgroundImage: "url('/New_homepage_hero_CLEAN_Finale.png')",
-          height: "50vh",
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          backgroundAttachment: "fixed",
-          backgroundRepeat: "no-repeat",
-          margin: 0,
-          padding: 0,
+          position: "relative",
+          width: "100%",
+          background: "transparent",
+          overflow: "hidden",
         }}
-      />
+      >
+        <img
+          src="/homepage-hero.webp"
+          alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          style={{
+            display: "block",
+            width: "100%",
+            height: "auto",
+            minHeight: isMobile ? 200 : undefined,
+            objectFit: "cover",
+            objectPosition: "center center",
+            background: "transparent",
+            opacity: 0,
+            animation: "rppHeroFadeIn 1.2s ease forwards",
+          }}
+        />
 
+      </section>
       <HeroBandTitle>
         Welcome to Real Property Planning
       </HeroBandTitle>

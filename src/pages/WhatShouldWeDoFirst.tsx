@@ -167,12 +167,13 @@ const WhatShouldWeDoFirst = () => {
         <section className="w-full overflow-hidden">
           {/* Watercolor image */}
           <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
-            <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Begin your journey — Real Property Planning"
-  style={{ backgroundImage: `url("/assets/start_hero_clean_v2.webp")`, height: "50vh" }}
-/>
+            <img
+              src="/assets/start_hero_clean_v2.webp"
+              alt="Begin your journey — Real Property Planning"
+              className="w-full h-auto object-cover"
+              loading="eager"
+              fetchPriority="high"
+            />
           </div>
           <HeroBandTitle as="h1">
             What Should We Do First?

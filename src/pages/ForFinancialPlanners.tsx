@@ -32,12 +32,12 @@ const ForFinancialPlanners = () => (
 
     {/* Hero image — standardized height */}
     <section className="bg-white">
-      <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Financial planners guidance — estate and senior transition real estate in Washington State"
-  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
-/>
+      <img
+        src={heroImage}
+        alt="Financial planners guidance — estate and senior transition real estate in Washington State"
+        className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+        loading="eager"
+      />
     </section>
 
     {/* Thin white gap */}

@@ -67,12 +67,12 @@ const HowProbateRealEstateWorks = () => (
     {/* Shared Hero (image + navy band) */}
     <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
       <div style={{ lineHeight: 0 }}>
-        <div
-  className="rpp-hero"
-  role="img"
-  aria-label="The Probate Shop — vintage MG service garage with executor, family, and classic red convertible representing probate real estate guidance"
-  style={{ backgroundImage: `url(${probateRealEstateHero})`, height: "50vh" }}
-/>
+        <img
+          src={probateRealEstateHero}
+          alt="The Probate Shop — vintage MG service garage with executor, family, and classic red convertible representing probate real estate guidance"
+          className="w-full h-auto object-cover object-center block"
+          loading="eager"
+        />
         <HeroBandTitle as="div">How Probate Real Estate Works</HeroBandTitle>
       </div>
     </section>

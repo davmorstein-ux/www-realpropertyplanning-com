@@ -123,12 +123,14 @@ const WhyValuationMatters = () => {
 
       {/* HERO */}
       <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
-        <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Why Valuation Matters — Real Property Planning"
-  style={{ backgroundImage: `url("/assets/valuation_hero_clean.webp")`, height: "50vh" }}
-/>
+        <img
+          src="/assets/valuation_hero_clean.webp"
+          alt="Why Valuation Matters — Real Property Planning"
+          className="w-full h-auto object-cover"
+          loading="eager"
+          fetchPriority="high"
+          style={{ display: 'block' }}
+        />
         <HeroBandTitle>Pricing &amp; Valuation Expertise</HeroBandTitle>
       </section>
 

@@ -25,12 +25,12 @@ const AttorneysForElderLawAttorneys = () => (
     <main id="main-content">
       <section className="w-full bg-secondary" style={{ marginTop: 0, paddingTop: 0 }}>
         <div className="container px-6 lg:px-8 py-10 md:py-14 flex justify-center">
-          <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Elder law attorney at desk reviewing estate plan documents"
-  style={{ backgroundImage: `url(${heroImage})`, height: "50vh" }}
-/>
+          <img
+            src={heroImage}
+            alt="Elder law attorney at desk reviewing estate plan documents"
+            className="max-w-full h-auto max-h-[420px] object-contain"
+            loading="eager"
+          />
         </div>
         <HeroBandTitle compact>Elder Law Attorney</HeroBandTitle>
       </section>

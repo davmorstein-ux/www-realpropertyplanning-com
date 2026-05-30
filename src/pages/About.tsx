@@ -37,12 +37,13 @@ const About = () => {
       <main id="main-content">
         {/* Hero */}
         <section className="relative overflow-hidden w-full" style={{ backgroundColor: "#f5f0e8" }}>
-          <div
-  className="rpp-hero"
-  role="img"
-  aria-label="Real Property Planning — Senior Transitions"
-  style={{ backgroundImage: `url(${aboutHeroImage})`, height: "50vh" }}
-/>
+          <img
+            src={aboutHeroImage}
+            alt="Real Property Planning — Senior Transitions"
+            className="w-full h-auto object-cover"
+            loading="eager"
+            fetchPriority="high"
+          />
           <h1 className="sr-only">About Real Property Planning</h1>
         </section>
 
