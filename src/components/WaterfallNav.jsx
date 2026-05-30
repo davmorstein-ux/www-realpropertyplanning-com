@@ -135,6 +135,18 @@ const CSS = `
     text-transform: uppercase;
     user-select: none;
   }
+  .wf-menu-e {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 11px;
+    height: 13px;
+    margin: 0 1px;
+    padding: 1px 0;
+    vertical-align: middle;
+    position: relative;
+    top: -0.5px;
+  }
 
   .wf-overlay {
     position: fixed;
