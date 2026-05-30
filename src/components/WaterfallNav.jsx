@@ -70,8 +70,15 @@ const RIGHT_GROUPS = [
     href: "/articles/silver-tsunami",
     items: [
       { name: "The Silver Tsunami", href: "/articles/silver-tsunami" },
+      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
+      { name: "Senior Housing Options", href: "/articles/senior-housing-options" },
+      { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
       { name: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
+      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
+      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
+      { name: "CCRC Costs", href: "/articles/ccrc-costs" },
       { name: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
+      { name: "Aging in Place With Support", href: "/articles/aging-in-place" },
     ],
   },
   {
@@ -479,12 +486,12 @@ export default function WaterfallNav() {
             <span
               style={{
                 fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                fontWeight: 200,
+                fontWeight: 400,
                 fontSize: "20px",
                 textTransform: "uppercase",
                 color: "#E8C97A",
                 lineHeight: 1,
-                letterSpacing: "0.18em",
+                letterSpacing: "0.14em",
               }}
             >
               M
@@ -536,12 +543,12 @@ export default function WaterfallNav() {
             <span
               style={{
                 fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                fontWeight: 200,
+                fontWeight: 400,
                 fontSize: "20px",
                 textTransform: "uppercase",
                 color: "#E8C97A",
                 lineHeight: 1,
-                letterSpacing: "0.18em",
+                letterSpacing: "0.14em",
               }}
             >
               NU
