@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 const NAV_GROUPS = [
   {
     label: "Find a Professional",
+    column: 0,
     items: [
       { name: "Aging Life Care Managers", href: "/aging-life-care-managers" },
       { name: "Certified Appraisers", href: "/real-estate-appraiser" },
@@ -20,6 +21,7 @@ const NAV_GROUPS = [
   },
   {
     label: "Senior Housing & Care",
+    column: 1,
     items: [
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
       { name: "Senior Housing Options", href: "/articles/senior-housing-options" },
@@ -34,6 +36,7 @@ const NAV_GROUPS = [
   },
   {
     label: "Property, Legal & Estate",
+    column: 1,
     items: [
       { name: "Probate & Estate Sales", href: "/probate-estate-sales" },
       { name: "Senior Home Sales", href: "/senior-transitions" },
@@ -43,20 +46,19 @@ const NAV_GROUPS = [
   },
   {
     label: "Articles",
+    column: 1,
     items: [
       { name: "The Silver Tsunami", href: "/articles/silver-tsunami" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
       { name: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
       { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
-      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
       { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
-      { name: "CCRC Costs", href: "/articles/ccrc-costs" },
       { name: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
-      { name: "Aging in Place With Support", href: "/articles/aging-in-place" },
     ],
   },
   {
     label: "More",
+    column: 1,
     items: [
       { name: "About", href: "/about" },
       { name: "Resources", href: "/resources" },
@@ -66,16 +68,23 @@ const NAV_GROUPS = [
   },
 ];
 
-const ALL_BARS = NAV_GROUPS.flatMap((group) => [
-  { type: "label", text: group.label },
-  ...group.items.map((item) => ({ type: "link", name: item.name, href: item.href })),
+// Build two column lists for staggered animation
+const LEFT_BARS = NAV_GROUPS.filter(g => g.column === 0).flatMap(g => [
+  { type: "label", text: g.label },
+  ...g.items.map(item => ({ type: "link", name: item.name, href: item.href })),
 ]);
 
-const STAGGER_MS = 35;
-const BAR_DURATION_MS = 280;
+const RIGHT_BARS = NAV_GROUPS.filter(g => g.column === 1).flatMap(g => [
+  { type: "label", text: g.label },
+  ...g.items.map(item => ({ type: "link", name: item.name, href: item.href })),
+]);
+
+const STAGGER_MS = 50;
+const BAR_DURATION_MS = 380;
+const CLOSE_DELAY_MS = 120;
 
 const CSS = `
-  .wf-hamburger-btn {
+  .wf-btn {
     background: transparent;
     border: none;
     cursor: pointer;
@@ -88,113 +97,189 @@ const CSS = `
     position: relative;
     z-index: 10001;
   }
-  .wf-hamburger-btn .wf-line {
+  .wf-btn .wf-ln {
     display: block;
     height: 2px;
     background: #c9a84c;
     border-radius: 2px;
     transition: width 0.25s ease;
   }
-  .wf-hamburger-btn .wf-line-1 { width: 26px; }
-  .wf-hamburger-btn .wf-line-2 { width: 18px; }
-  .wf-hamburger-btn .wf-line-3 { width: 12px; }
-  .wf-hamburger-btn:hover .wf-line-1,
-  .wf-hamburger-btn:hover .wf-line-2,
-  .wf-hamburger-btn:hover .wf-line-3 { width: 26px; }
+  .wf-btn .wf-ln-1 { width: 26px; }
+  .wf-btn .wf-ln-2 { width: 18px; }
+  .wf-btn .wf-ln-3 { width: 12px; }
+  .wf-btn:hover .wf-ln-1,
+  .wf-btn:hover .wf-ln-2,
+  .wf-btn:hover .wf-ln-3 { width: 26px; }
 
   .wf-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(26, 39, 68, 0.35);
     z-index: 9998;
     cursor: pointer;
+    backdrop-filter: blur(1px);
   }
 
   .wf-panel {
     position: fixed;
     top: 0;
     left: 0;
-    width: 280px;
+    width: 520px;
+    max-width: 95vw;
     height: 100vh;
-    background: #12203a;
+    background: #f7f4ef;
     z-index: 9999;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding-bottom: 40px;
+    overflow: hidden;
+    border-right: 1px solid #d4c9b0;
+    display: flex;
+    flex-direction: column;
   }
-  .wf-panel::-webkit-scrollbar { width: 4px; }
-  .wf-panel::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.25); border-radius: 2px; }
 
   .wf-panel-header {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 16px 16px 12px;
-    border-bottom: 1px solid rgba(201,168,76,0.15);
-    margin-bottom: 6px;
+    justify-content: space-between;
+    padding: 14px 20px 12px;
+    border-bottom: 1px solid #e0d8c8;
+    flex-shrink: 0;
+    background: #f7f4ef;
+  }
+  .wf-panel-brand {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1a2744;
+  }
+  .wf-panel-brand span {
+    color: #c9a84c;
+    margin-right: 6px;
   }
   .wf-close-x {
     background: none;
     border: none;
-    color: #8fa0c0;
-    font-size: 22px;
+    color: #888;
+    font-size: 20px;
     line-height: 1;
     cursor: pointer;
     padding: 4px 6px;
     transition: color 0.15s;
+    border-radius: 4px;
   }
-  .wf-close-x:hover { color: #ffffff; }
+  .wf-close-x:hover { color: #1a2744; background: rgba(26,39,68,0.06); }
 
-  .wf-bar {
-    display: block;
-    width: 100%;
+  .wf-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+    overflow: hidden;
   }
-  .wf-bar-label-inner {
-    padding: 12px 18px 3px;
-    font-size: 10px;
+
+  .wf-col {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 8px 0 32px;
+  }
+  .wf-col:first-child {
+    border-right: 1px solid #e0d8c8;
+  }
+  .wf-col::-webkit-scrollbar { width: 3px; }
+  .wf-col::-webkit-scrollbar-thumb { background: #d4c9b0; border-radius: 2px; }
+
+  .wf-bar { display: block; width: 100%; }
+
+  .wf-bar-label {
+    padding: 14px 16px 4px;
+    font-size: 9px;
     font-weight: 700;
     color: #c9a84c;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
+    user-select: none;
   }
-  .wf-bar-link-inner {
+
+  .wf-bar-divider {
+    margin: 4px 16px 0;
+    border: none;
+    border-top: 0.5px solid #e0d8c8;
+  }
+
+  .wf-bar-link {
     display: block;
     width: 100%;
-    padding: 8px 18px 8px 26px;
-    font-size: 13px;
-    color: #c8d4e8;
+    padding: 7px 16px 7px 22px;
+    font-size: 12px;
+    color: #2a3a5a;
     background: none;
     border: none;
     border-left: 2px solid transparent;
     text-align: left;
     cursor: pointer;
     font-family: inherit;
-    transition: color 0.15s, border-color 0.15s, background 0.15s;
-    line-height: 1.4;
+    transition: color 0.12s, border-color 0.12s, background 0.12s;
+    line-height: 1.35;
   }
-  .wf-bar-link-inner:hover {
-    color: #ffffff;
+  .wf-bar-link:hover {
+    color: #1a2744;
     border-left-color: #c9a84c;
-    background: rgba(201,168,76,0.07);
+    background: rgba(201,168,76,0.08);
   }
 
-  @keyframes wfBarIn {
-    from { opacity: 0; transform: translateX(-20px); }
+  @keyframes wfSlideIn {
+    from { opacity: 0; transform: translateX(-16px); }
     to   { opacity: 1; transform: translateX(0); }
   }
-  @keyframes wfBarOut {
+  @keyframes wfSlideOut {
     from { opacity: 1; transform: translateX(0); }
-    to   { opacity: 0; transform: translateX(-20px); }
+    to   { opacity: 0; transform: translateX(-16px); }
   }
+
   @media (prefers-reduced-motion: reduce) {
     .wf-bar { animation: none !important; opacity: 1 !important; }
   }
 `;
 
+function NavColumn({ bars, closing, columnDelay }) {
+  return (
+    <div className="wf-col">
+      {bars.map((bar, i) => {
+        const totalBars = bars.length;
+        const delayMs = closing
+          ? (totalBars - 1 - i) * STAGGER_MS + columnDelay
+          : i * STAGGER_MS + columnDelay;
+
+        const animStyle = {
+          animation: `${closing ? "wfSlideOut" : "wfSlideIn"} ${BAR_DURATION_MS}ms cubic-bezier(0.22,1,0.36,1) both`,
+          animationDelay: `${delayMs}ms`,
+        };
+
+        if (bar.type === "label") {
+          return (
+            <div key={i} className="wf-bar" style={animStyle}>
+              {i > 0 && <hr className="wf-bar-divider" />}
+              <div className="wf-bar-label">{bar.text}</div>
+            </div>
+          );
+        }
+
+        return (
+          <div key={i} className="wf-bar" style={animStyle}>
+            <button
+              className="wf-bar-link"
+              onClick={() => { window.location.href = bar.href; }}
+            >
+              {bar.name}
+            </button>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function WaterfallNav() {
   const [open, setOpen] = useState(false);
   const [closing, setClosing] = useState(false);
-  const panelRef = useRef(null);
   const closeTimerRef = useRef(null);
 
   const openPanel = () => {
@@ -207,18 +292,12 @@ export default function WaterfallNav() {
   const closePanel = () => {
     if (!open || closing) return;
     setClosing(true);
-    const totalDuration = (ALL_BARS.length - 1) * STAGGER_MS + BAR_DURATION_MS + 50;
+    const maxBars = Math.max(LEFT_BARS.length, RIGHT_BARS.length);
+    const totalDuration = (maxBars - 1) * STAGGER_MS + BAR_DURATION_MS + 80;
     closeTimerRef.current = setTimeout(() => {
       setOpen(false);
       setClosing(false);
     }, totalDuration);
-  };
-
-  const handleItemClick = (href) => {
-    setOpen(false);
-    setClosing(false);
-    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
-    window.location.href = href;
   };
 
   useEffect(() => {
@@ -236,15 +315,15 @@ export default function WaterfallNav() {
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
 
       <button
-        className="wf-hamburger-btn"
+        className="wf-btn"
         aria-label="Open navigation menu"
         aria-expanded={open}
         onClick={openPanel}
         title="Menu"
       >
-        <span className="wf-line wf-line-1" />
-        <span className="wf-line wf-line-2" />
-        <span className="wf-line wf-line-3" />
+        <span className="wf-ln wf-ln-1" />
+        <span className="wf-ln wf-ln-2" />
+        <span className="wf-ln wf-ln-3" />
       </button>
 
       {open && (
@@ -255,8 +334,15 @@ export default function WaterfallNav() {
             aria-hidden="true"
           />
 
-          <div className="wf-panel" ref={panelRef} role="dialog" aria-label="Site navigation">
+          <div
+            className="wf-panel"
+            role="dialog"
+            aria-label="Site navigation"
+          >
             <div className="wf-panel-header">
+              <span className="wf-panel-brand">
+                <span>◆</span>Real Property Planning
+              </span>
               <button
                 className="wf-close-x"
                 onClick={closePanel}
@@ -266,36 +352,18 @@ export default function WaterfallNav() {
               </button>
             </div>
 
-            {ALL_BARS.map((bar, i) => {
-              const totalBars = ALL_BARS.length;
-              const delayMs = closing
-                ? (totalBars - 1 - i) * STAGGER_MS
-                : i * STAGGER_MS;
-
-              const animStyle = {
-                animation: `${closing ? "wfBarOut" : "wfBarIn"} ${BAR_DURATION_MS}ms ease both`,
-                animationDelay: `${delayMs}ms`,
-              };
-
-              if (bar.type === "label") {
-                return (
-                  <div key={i} className="wf-bar" style={animStyle}>
-                    <div className="wf-bar-label-inner">{bar.text}</div>
-                  </div>
-                );
-              }
-
-              return (
-                <div key={i} className="wf-bar" style={animStyle}>
-                  <button
-                    className="wf-bar-link-inner"
-                    onClick={() => handleItemClick(bar.href)}
-                  >
-                    {bar.name}
-                  </button>
-                </div>
-              );
-            })}
+            <div className="wf-columns">
+              <NavColumn
+                bars={LEFT_BARS}
+                closing={closing}
+                columnDelay={0}
+              />
+              <NavColumn
+                bars={RIGHT_BARS}
+                closing={closing}
+                columnDelay={20}
+              />
+            </div>
           </div>
         </>
       )}
