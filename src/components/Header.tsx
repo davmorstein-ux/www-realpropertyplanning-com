@@ -208,7 +208,7 @@ const Header = () => {
         )}
       </header>
 
-      <div style={{ height: isMobile ? 92 : 70 }} aria-hidden="true" />
+      <div style={{ height: headerH, margin: 0, padding: 0 }} aria-hidden="true" />
     </>
   );
 };
