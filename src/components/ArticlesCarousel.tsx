@@ -28,7 +28,7 @@ const ARTICLES = [
     href: "/articles/senior-housing-costs",
     img: "/Senior_Housing_Costs.png",
     category: "Cost Guide",
-    summary: "Affordability is slipping away — understand the real costs before making a decision.",
+    summary: "Understand the real costs before making a decision.",
   },
   {
     title: "How to Choose Senior Housing",
@@ -74,62 +74,31 @@ const ARTICLES = [
   },
 ];
 
-const AUTO_ADVANCE_MS = 7000;
-// Triple the articles for seamless infinite loop
-const INFINITE = [...ARTICLES, ...ARTICLES, ...ARTICLES];
-const OFFSET = ARTICLES.length; // start in the middle copy
+const AUTO_MS = 7000;
+const TRANS_MS = 2200;
 
 export default function ArticlesCarousel() {
-  const [current, setCurrent] = useState(OFFSET);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-  const [isPaused, setIsPaused] = useState(false);
-  const [animated, setAnimated] = useState(true);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
+  const [index, setIndex] = useState(0);
+  const [hovered, setHovered] = useState<number | null>(null);
+  const [paused, setPaused] = useState(false);
+  const timer = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const jumpTo = (index: number, animate: boolean) => {
-    setAnimated(animate);
-    setCurrent(index);
-  };
-
-  const advance = useCallback(() => {
-    setCurrent((prev) => {
-      const next = prev + 1;
-      // If we've scrolled into the last copy, silently jump back to middle copy
-      if (next >= OFFSET + ARTICLES.length) {
-        setTimeout(() => jumpTo(OFFSET, false), 0);
-      }
-      return next;
-    });
-  }, []);
-
-  const prev = () => {
-    setCurrent((prev) => {
-      const next = prev - 1;
-      // If we've scrolled into the first copy, silently jump forward to middle copy
-      if (next < OFFSET) {
-        setTimeout(() => jumpTo(OFFSET + ARTICLES.length - 1, false), 0);
-      }
-      return next;
-    });
-  };
+  const next = useCallback(() => setIndex((i) => (i + 1) % ARTICLES.length), []);
+  const prev = () => setIndex((i) => (i - 1 + ARTICLES.length) % ARTICLES.length);
 
   useEffect(() => {
-    if (isPaused) return;
-    timerRef.current = setInterval(advance, AUTO_ADVANCE_MS);
+    if (paused) return;
+    timer.current = setInterval(next, AUTO_MS);
     return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
+      if (timer.current) clearInterval(timer.current);
     };
-  }, [advance, isPaused]);
+  }, [next, paused]);
+
+  // Build visible indices: always show 3 cards centered on index
+  const indices = [index % ARTICLES.length, (index + 1) % ARTICLES.length, (index + 2) % ARTICLES.length];
 
   return (
-    <section
-      style={{
-        background: "#f7f4ef",
-        padding: "64px 0 72px",
-        fontFamily: "Georgia, serif",
-      }}
-    >
+    <section style={{ background: "#f7f4ef", padding: "64px 0 72px", fontFamily: "Georgia, serif" }}>
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
@@ -147,53 +116,39 @@ export default function ArticlesCarousel() {
           Real Property Planning
         </span>
         <h2
-          style={{
-            fontSize: "clamp(28px, 4vw, 42px)",
-            fontWeight: 700,
-            color: "#0a1628",
-            margin: 0,
-            lineHeight: 1.15,
-          }}
+          style={{ fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 700, color: "#0a1628", margin: 0, lineHeight: 1.15 }}
         >
           Featured Articles
         </h2>
         <div style={{ width: 48, height: 2, background: "#8B6914", margin: "16px auto 0", borderRadius: 1 }} />
       </div>
 
-      {/* Carousel */}
+      {/* Cards — no sliding track, just fade/swap 3 cards */}
       <div
         style={{ maxWidth: 960, margin: "0 auto", padding: "8px 24px 16px" }}
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
       >
-        <div style={{ overflow: "hidden" }}>
-          <div
-            style={{
-              display: "flex",
-              gap: 24,
-              transform: `translateX(calc(-${current} * (calc((100% - 48px) / 3) + 24px)))`,
-              transition: animated ? "transform 2.2s cubic-bezier(0.16,1,0.3,1)" : "none",
-              willChange: "transform",
-            }}
-          >
-            {INFINITE.map((article, i) => (
+        <div style={{ display: "flex", gap: 24 }}>
+          {indices.map((artIndex, slot) => {
+            const article = ARTICLES[artIndex];
+            return (
               <Link
-                key={i}
+                key={`${slot}-${artIndex}`}
                 to={article.href}
-                onMouseEnter={() => setHoveredCard(i)}
-                onMouseLeave={() => setHoveredCard(null)}
+                onMouseEnter={() => setHovered(slot)}
+                onMouseLeave={() => setHovered(null)}
                 style={{
                   display: "block",
                   textDecoration: "none",
                   position: "relative",
                   borderRadius: 4,
                   overflow: "hidden",
-                  flexShrink: 0,
-                  width: "calc((100% - 48px) / 3)",
+                  flex: 1,
                   aspectRatio: "3 / 4",
-                  boxShadow: hoveredCard === i ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
-                  transform: hoveredCard === i ? "translateY(-6px)" : "translateY(0)",
-                  transition: "box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.22,1,0.36,1)",
+                  boxShadow: hovered === slot ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
+                  transform: hovered === slot ? "translateY(-6px)" : "translateY(0)",
+                  transition: `box-shadow 0.4s ease, transform 0.4s ease`,
                   background: "#ddd",
                 }}
               >
@@ -206,18 +161,17 @@ export default function ArticlesCarousel() {
                     objectFit: "cover",
                     objectPosition: "top",
                     display: "block",
-                    transition: "transform 0.6s cubic-bezier(0.22,1,0.36,1)",
-                    transform: hoveredCard === i ? "scale(1.04)" : "scale(1)",
+                    transition: `transform ${TRANS_MS}ms cubic-bezier(0.16,1,0.3,1)`,
+                    transform: hovered === slot ? "scale(1.04)" : "scale(1)",
                   }}
                 />
-
-                {/* Hover overlay — simple elegant CTA only */}
+                {/* Hover overlay */}
                 <div
                   style={{
                     position: "absolute",
                     inset: 0,
                     background: "rgba(10,22,40,0.18)",
-                    opacity: hoveredCard === i ? 1 : 0,
+                    opacity: hovered === slot ? 1 : 0,
                     transition: "opacity 0.5s ease",
                     display: "flex",
                     alignItems: "flex-end",
@@ -257,8 +211,8 @@ export default function ArticlesCarousel() {
                   </span>
                 </div>
               </Link>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
 
@@ -295,30 +249,27 @@ export default function ArticlesCarousel() {
         </button>
 
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          {ARTICLES.map((_, i) => {
-            const dotActive = (((current - OFFSET) % ARTICLES.length) + ARTICLES.length) % ARTICLES.length === i;
-            return (
-              <button
-                key={i}
-                onClick={() => jumpTo(OFFSET + i, true)}
-                aria-label={`Slide ${i + 1}`}
-                style={{
-                  background: dotActive ? "#8B6914" : "#d4c9b0",
-                  border: "none",
-                  borderRadius: 2,
-                  width: dotActive ? 24 : 8,
-                  height: 4,
-                  cursor: "pointer",
-                  padding: 0,
-                  transition: "width 0.3s ease, background 0.3s ease",
-                }}
-              />
-            );
-          })}
+          {ARTICLES.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              aria-label={`Slide ${i + 1}`}
+              style={{
+                background: index === i ? "#8B6914" : "#d4c9b0",
+                border: "none",
+                borderRadius: 2,
+                width: index === i ? 24 : 8,
+                height: 4,
+                cursor: "pointer",
+                padding: 0,
+                transition: "width 0.3s ease, background 0.3s ease",
+              }}
+            />
+          ))}
         </div>
 
         <button
-          onClick={advance}
+          onClick={next}
           aria-label="Next"
           style={{
             background: "none",
