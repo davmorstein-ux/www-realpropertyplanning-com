@@ -117,23 +117,29 @@ const Index = () => {
       <main id="main-content">
 
 
-      {/* 1. HERO — cinematic image with overlaid headline */}
+      {/* 1. HERO — static, sits behind the .page-content-overlay below */}
       <HomepageHero />
 
-      {/* 2. GUIDED ENTRY — 4 audience tiles */}
-      <HomepageFunnel />
+      {/* Everything from the blue band downward scrolls UP over the static
+          hero, producing the "content peeling over the photograph" effect. */}
+      <div className="page-content-overlay">
+        <HeroBandTitle>Welcome to Real Property Planning</HeroBandTitle>
 
-      {/* 3. POPULAR RESOURCES — compact link grid */}
-      <HomepagePopularResources />
+        {/* 2. GUIDED ENTRY — 4 audience tiles */}
+        <HomepageFunnel />
 
-      {/* SEO description — visible to crawlers, visually subtle for users */}
-      <section aria-label="Site description" className="bg-cream">
-        <div className="container px-6 lg:px-8 py-6">
-          <p className="text-center text-sm text-[#4B5563] max-w-4xl mx-auto leading-relaxed">
-            Real Property Planning is Washington State's free hub for probate real estate, estate sales, inherited property, and senior housing transitions. Serving Seattle, Bellevue, Kirkland, Tacoma, Everett, and communities throughout Western Washington and the Puget Sound region.
-          </p>
-        </div>
-      </section>
+        {/* 3. POPULAR RESOURCES — compact link grid */}
+        <HomepagePopularResources />
+
+        {/* SEO description — visible to crawlers, visually subtle for users */}
+        <section aria-label="Site description" className="bg-cream">
+          <div className="container px-6 lg:px-8 py-6">
+            <p className="text-center text-sm text-[#4B5563] max-w-4xl mx-auto leading-relaxed">
+              Real Property Planning is Washington State's free hub for probate real estate, estate sales, inherited property, and senior housing transitions. Serving Seattle, Bellevue, Kirkland, Tacoma, Everett, and communities throughout Western Washington and the Puget Sound region.
+            </p>
+          </div>
+        </section>
+      </div>
 
 
 
