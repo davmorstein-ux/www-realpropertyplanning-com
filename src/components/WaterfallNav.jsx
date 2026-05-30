@@ -98,55 +98,58 @@ const CSS = `
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 10px 14px;
+    padding: 8px 12px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
     border-radius: 6px;
     transition: background 0.3s ease;
   }
-  .wf-trigger:hover { background: rgba(139,105,20,0.1); }
-  .wf-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    align-items: flex-start;
-  }
-  .wf-trigger .wf-ln {
-    display: block;
-    height: 3px;
-    background: #8B6914;
-    border-radius: 2px;
-    transition: width 0.5s cubic-bezier(0.16,1,0.3,1);
-  }
-  .wf-trigger .wf-ln-1 { width: 32px; }
-  .wf-trigger .wf-ln-2 { width: 22px; }
-  .wf-trigger .wf-ln-3 { width: 14px; }
-  .wf-trigger:hover .wf-ln-1,
-  .wf-trigger:hover .wf-ln-2,
-  .wf-trigger:hover .wf-ln-3 { width: 32px; }
-  .wf-menu-label {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: #8B6914;
-    text-transform: uppercase;
+  .wf-trigger:hover { background: rgba(232,201,122,0.12); }
+
+  /* ── M≡NU word-mark ── */
+  .wf-menu-word {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    line-height: 1;
     user-select: none;
   }
+  .wf-menu-letter {
+    font-family: Georgia, serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #E8C97A;
+    line-height: 1;
+  }
+
+  /* The ≡ hamburger — sized to match the cap-height of the letters */
   .wf-menu-e {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 11px;
-    height: 1em;
-    margin: 0 1px;
+    width: 10px;
+    height: 9px;          /* matches Georgia cap-height at 13px */
+    margin: 0 2px;
     padding: 0;
     vertical-align: middle;
     position: relative;
-    top: -0.5px;
+    top: 0px;
+    flex-shrink: 0;
   }
+  .wf-menu-e span {
+    display: block;
+    height: 1.5px;
+    background: #E8C97A;
+    border-radius: 1px;
+    width: 100%;
+    transition: width 0.4s cubic-bezier(0.16,1,0.3,1);
+  }
+  /* middle line slightly shorter for classic hamburger look */
+  .wf-menu-e span:nth-child(2) { width: 70%; }
+  .wf-trigger:hover .wf-menu-e span { width: 100%; }
 
   .wf-overlay {
     position: fixed;
@@ -336,14 +339,14 @@ function AccordionGroup({ group, isOpen, onMouseEnter, onNavigate }) {
       group.items.forEach((_, i) => {
         setTimeout(() => {
           if (itemRefs.current[i]) {
-            itemRefs.current[i].classList.add('wf-item-visible');
+            itemRefs.current[i].classList.add("wf-item-visible");
           }
         }, i * 150);
       });
     } else {
       group.items.forEach((_, i) => {
         if (itemRefs.current[i]) {
-          itemRefs.current[i].classList.remove('wf-item-visible');
+          itemRefs.current[i].classList.remove("wf-item-visible");
         }
       });
     }
@@ -351,19 +354,17 @@ function AccordionGroup({ group, isOpen, onMouseEnter, onNavigate }) {
 
   return (
     <div className="wf-group" onMouseEnter={onMouseEnter}>
-      <button
-        className={`wf-group-btn${isOpen ? ' wf-open' : ''}`}
-        aria-expanded={isOpen}
-        onClick={onMouseEnter}
-      >
+      <button className={`wf-group-btn${isOpen ? " wf-open" : ""}`} aria-expanded={isOpen} onClick={onMouseEnter}>
         <span>{group.label}</span>
-        <span className="wf-chevron" aria-hidden="true">▾</span>
+        <span className="wf-chevron" aria-hidden="true">
+          ▾
+        </span>
       </button>
-      <div className={`wf-items${isOpen ? ' wf-items-open' : ''}`}>
+      <div className={`wf-items${isOpen ? " wf-items-open" : ""}`}>
         {group.items.map((item, i) => (
           <button
             key={i}
-            ref={el => itemRefs.current[i] = el}
+            ref={(el) => (itemRefs.current[i] = el)}
             className="wf-item"
             onClick={() => onNavigate(item.href)}
           >
@@ -438,25 +439,26 @@ export default function WaterfallNav() {
   };
 
   useEffect(() => {
-    const onKey = (e) => { if (e.key === 'Escape') closePanel(); };
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
+    const onKey = (e) => {
+      if (e.key === "Escape") closePanel();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
   }, [open, exiting]);
 
-  useEffect(() => () => {
-    if (exitTimerRef.current) clearTimeout(exitTimerRef.current);
-    if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
-  }, []);
+  useEffect(
+    () => () => {
+      if (exitTimerRef.current) clearTimeout(exitTimerRef.current);
+      if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
+    },
+    [],
+  );
 
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
 
-      <div
-        className="wf-wrap"
-        onMouseEnter={openPanel}
-        onMouseLeave={scheduleClose}
-      >
+      <div className="wf-wrap" onMouseEnter={openPanel} onMouseLeave={scheduleClose}>
         <button
           className="wf-trigger"
           aria-label="Open navigation menu"
@@ -464,14 +466,58 @@ export default function WaterfallNav() {
           onClick={openPanel}
           title="Menu"
         >
-          <span className="wf-menu-word">
-            <span className="wf-menu-letter">M</span>
-            <span className="wf-menu-e">
-              <span style={{display:'block',height:'1.5px',background:'#E8C97A',borderRadius:'1px',width:'100%'}}></span>
-              <span style={{display:'block',height:'1.5px',background:'#E8C97A',borderRadius:'1px',width:'70%'}}></span>
-              <span style={{display:'block',height:'1.5px',background:'#E8C97A',borderRadius:'1px',width:'100%'}}></span>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 0, lineHeight: 1, userSelect: "none" }}>
+            <span
+              style={{
+                fontFamily: "Georgia, serif",
+                fontWeight: 300,
+                fontSize: "13px",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                color: "#E8C97A",
+                lineHeight: 1,
+              }}
+            >
+              M
             </span>
-            <span className="wf-menu-letter">NU</span>
+            <span
+              style={{
+                display: "inline-flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                width: "10px",
+                height: "9px",
+                margin: "0 2px",
+                padding: 0,
+                verticalAlign: "middle",
+                position: "relative",
+                top: "0px",
+                flexShrink: 0,
+              }}
+            >
+              <span
+                style={{ display: "block", height: "1.5px", background: "#E8C97A", borderRadius: "1px", width: "100%" }}
+              ></span>
+              <span
+                style={{ display: "block", height: "1.5px", background: "#E8C97A", borderRadius: "1px", width: "70%" }}
+              ></span>
+              <span
+                style={{ display: "block", height: "1.5px", background: "#E8C97A", borderRadius: "1px", width: "100%" }}
+              ></span>
+            </span>
+            <span
+              style={{
+                fontFamily: "Georgia, serif",
+                fontWeight: 300,
+                fontSize: "13px",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                color: "#E8C97A",
+                lineHeight: 1,
+              }}
+            >
+              NU
+            </span>
           </span>
         </button>
       </div>
@@ -480,7 +526,7 @@ export default function WaterfallNav() {
         <>
           <div className="wf-overlay" onClick={closePanel} aria-hidden="true" />
           <div
-            className={`wf-panel${exiting ? ' wf-panel-exiting' : ' wf-panel-entering'}`}
+            className={`wf-panel${exiting ? " wf-panel-exiting" : " wf-panel-entering"}`}
             role="dialog"
             aria-label="Site navigation"
             onMouseEnter={cancelClose}
@@ -488,7 +534,9 @@ export default function WaterfallNav() {
           >
             <div className="wf-panel-header">
               <span className="wf-what-label">What are you looking for?</span>
-              <button className="wf-close-x" onClick={closePanel} aria-label="Close menu">✕</button>
+              <button className="wf-close-x" onClick={closePanel} aria-label="Close menu">
+                ✕
+              </button>
             </div>
 
             <div className="wf-columns">
