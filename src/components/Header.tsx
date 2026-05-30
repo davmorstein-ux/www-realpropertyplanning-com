@@ -173,8 +173,9 @@ const Header = () => {
                 style={{ fontSize: 12 }}
               >
                 {item.href === "/" && (
-                  <span aria-hidden="true" style={{ marginRight: 4 }}>🏠</span>
+                  <span aria-hidden="true" className="rpp-home-icon">🏠</span>
                 )}
+
                 {item.label}
               </Link>
             ))}
