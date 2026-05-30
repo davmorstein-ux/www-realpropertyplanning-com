@@ -471,8 +471,8 @@ export default function WaterfallNav() {
               style={{
                 fontFamily: "Georgia, serif",
                 fontWeight: 300,
-                fontSize: "13px",
-                letterSpacing: "0.08em",
+                fontSize: "16px",
+                letterSpacing: "0.12em",
                 textTransform: "uppercase",
                 color: "#E8C97A",
                 lineHeight: 1,
@@ -485,32 +485,51 @@ export default function WaterfallNav() {
                 display: "inline-flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                width: "10px",
-                height: "9px",
-                margin: "0 2px",
+                width: "12px",
+                height: "11px",
+                margin: "0 3px",
                 padding: 0,
-                verticalAlign: "middle",
-                position: "relative",
-                top: "0px",
                 flexShrink: 0,
+                alignSelf: "center",
               }}
             >
               <span
-                style={{ display: "block", height: "1.5px", background: "#E8C97A", borderRadius: "1px", width: "100%" }}
+                style={{
+                  display: "block",
+                  height: "2px",
+                  background: "#E8C97A",
+                  borderRadius: "1px",
+                  width: "100%",
+                  flexShrink: 0,
+                }}
               ></span>
               <span
-                style={{ display: "block", height: "1.5px", background: "#E8C97A", borderRadius: "1px", width: "70%" }}
+                style={{
+                  display: "block",
+                  height: "2px",
+                  background: "#E8C97A",
+                  borderRadius: "1px",
+                  width: "70%",
+                  flexShrink: 0,
+                }}
               ></span>
               <span
-                style={{ display: "block", height: "1.5px", background: "#E8C97A", borderRadius: "1px", width: "100%" }}
+                style={{
+                  display: "block",
+                  height: "2px",
+                  background: "#E8C97A",
+                  borderRadius: "1px",
+                  width: "100%",
+                  flexShrink: 0,
+                }}
               ></span>
             </span>
             <span
               style={{
                 fontFamily: "Georgia, serif",
                 fontWeight: 300,
-                fontSize: "13px",
-                letterSpacing: "0.08em",
+                fontSize: "16px",
+                letterSpacing: "0.12em",
                 textTransform: "uppercase",
                 color: "#E8C97A",
                 lineHeight: 1,
