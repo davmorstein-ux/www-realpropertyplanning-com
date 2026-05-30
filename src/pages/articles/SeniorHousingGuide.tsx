@@ -68,7 +68,6 @@ const SeniorHousingGuide = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <h2 className={h2Class + " mt-0"}>
               <h2 className={h2Class + " mt-0"}>The Senior Housing Guide</h2>
               <p className={leadClass}>A clear, honest roadmap for one of the most important decisions a family will ever make</p>
 
