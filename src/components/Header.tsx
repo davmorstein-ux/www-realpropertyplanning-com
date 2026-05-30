@@ -55,7 +55,16 @@ const Header = () => {
         border-bottom: 1px solid transparent;
         transition: color 0.18s ease, border-color 0.18s ease;
         white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
       }
+      .rpp-top-link .rpp-home-icon {
+        font-size: 24px;
+        line-height: 1;
+        margin-right: 6px;
+        display: inline-block;
+      }
+
       .rpp-top-link:hover { color: ${GOLD}; }
       .rpp-top-link.is-active { border-bottom-color: #fff; }
     `;
