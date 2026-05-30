@@ -113,7 +113,9 @@ const Index = () => {
         canonical="https://realpropertyplanning.com"
         schemaJson={jsonLd}
       />
+      <Header />
       <main id="main-content">
+
 
       {/* 1. HERO — cinematic image with overlaid headline */}
       <HomepageHero />
