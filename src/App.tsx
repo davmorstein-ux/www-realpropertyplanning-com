@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import SiteBottomNav from "./components/SiteBottomNav";
+import MGFloatingNav from "./components/MGFloatingNav";
 
 
 import SiteChatWidget from "./components/SiteChatWidget";
@@ -206,6 +207,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <SiteBottomNav />
+        <MGFloatingNav />
 
 
         <SiteChatWidget />
