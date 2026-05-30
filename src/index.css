@@ -126,6 +126,7 @@ nav button[aria-haspopup] svg, nav [class*="dropdown"] button svg {
 html,
 body {
   overflow-x: hidden;
+  margin: 0 !important;
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
@@ -142,7 +143,8 @@ body {
 
 main,
 #root,
-#main-content {
+#main-content,
+#root > div {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
