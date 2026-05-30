@@ -70,8 +70,15 @@ const RIGHT_GROUPS = [
     href: "/articles/silver-tsunami",
     items: [
       { name: "The Silver Tsunami", href: "/articles/silver-tsunami" },
+      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
+      { name: "Senior Housing Options", href: "/articles/senior-housing-options" },
+      { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
       { name: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
+      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
+      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
+      { name: "CCRC Costs", href: "/articles/ccrc-costs" },
       { name: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
+      { name: "Aging in Place With Support", href: "/articles/aging-in-place" },
     ],
   },
   {
