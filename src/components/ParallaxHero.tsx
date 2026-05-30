@@ -3,9 +3,9 @@ import { useEffect } from "react";
 interface ParallaxHeroProps {
   src: string;
   alt: string;
-  /** Desktop hero height as CSS value. Defaults to 50vh (use 70vh for the homepage). */
+  /** Desktop hero height. Defaults to 50vh (use 70vh for the homepage). */
   heightDesktop?: string;
-  /** Mobile/tablet hero height as CSS value. Defaults to 40vh. */
+  /** Mobile/tablet hero height. Defaults to 40vh. */
   heightMobile?: string;
   className?: string;
 }
@@ -23,7 +23,6 @@ const ParallaxHero = ({
   heightMobile = "40vh",
   className = "",
 }: ParallaxHeroProps) => {
-  // Inject shared stylesheet once.
   useEffect(() => {
     const id = "rpp-parallax-hero-styles";
     if (document.getElementById(id)) return;
@@ -34,6 +33,7 @@ const ParallaxHero = ({
         display: block;
         position: relative;
         width: 100%;
+        height: var(--rpp-hero-h-desktop, 50vh);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -44,6 +44,7 @@ const ParallaxHero = ({
       @media (max-width: 1024px) {
         .rpp-parallax {
           background-attachment: scroll;
+          height: var(--rpp-hero-h-mobile, 40vh);
         }
       }
     `;
@@ -57,17 +58,10 @@ const ParallaxHero = ({
       aria-label={alt}
       style={{
         backgroundImage: `url('${src}')`,
-        // CSS var with media-query fallback handled inline via responsive height.
-        height: `var(--rpp-hero-h, ${heightDesktop})`,
+        ["--rpp-hero-h-desktop" as never]: heightDesktop,
+        ["--rpp-hero-h-mobile" as never]: heightMobile,
       }}
-    >
-      <style>{`
-        @media (max-width: 1024px) {
-          [data-rpp-hero="true"] { height: ${heightMobile} !important; }
-        }
-      `}</style>
-      <span data-rpp-hero="true" style={{ display: "none" }} />
-    </div>
+    />
   );
 };
 
