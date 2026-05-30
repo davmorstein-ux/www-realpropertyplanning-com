@@ -167,17 +167,14 @@ main,
 }
 
 /* =============================================================
-   Panoramic hero parallax — translateY only, NEVER crop/zoom.
-   The image keeps its natural aspect ratio (object-fit: contain,
-   width 100%, height auto). A JS scroll handler writes the
-   --parallax-offset CSS variable on .hero-panorama; the inner
-   <img> moves vertically via transform.
+   Sticky hero parallax — CSS only. The hero image pins to the top
+   and the content below scrolls up over it like paper sliding
+   over a photograph.
    ============================================================= */
 .hero-panorama {
   position: sticky;
   top: 0;
   z-index: 0;
-  overflow: hidden;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -185,27 +182,27 @@ main,
 .hero-panorama img {
   width: 100%;
   height: auto;
-  object-fit: contain;
-  object-position: center;
   display: block;
   margin: 0;
   padding: 0;
 }
 .no-parallax-crop {
-  object-fit: contain !important;
   width: 100% !important;
   height: auto !important;
 }
 
-/* Content overlay — slides up over the static (sticky) hero image as the
-   visitor scrolls, producing the "content peeling over the photograph"
-   cinematic effect. */
-.page-content-overlay {
+.content-wrapper {
   position: relative;
   z-index: 1;
-  background: #ffffff;
+  background: #f7f4ef;
   margin-top: 0;
   padding-top: 0;
+}
+
+@media (max-width: 1023px) {
+  .hero-panorama {
+    position: relative;
+  }
 }
 
 @layer base {

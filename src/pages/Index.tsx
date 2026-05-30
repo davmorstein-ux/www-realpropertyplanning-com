@@ -118,12 +118,12 @@ const Index = () => {
       <main id="main-content">
 
 
-      {/* 1. HERO — static, sits behind the .page-content-overlay below */}
+      {/* 1. HERO — sticky, pinned at top; content below slides over it */}
       <HomepageHero />
 
-      {/* Everything from the blue band downward scrolls UP over the static
-          hero, producing the "content peeling over the photograph" effect. */}
-      <div className="page-content-overlay">
+      {/* Everything from the blue band downward scrolls UP over the sticky
+          hero, producing the "paper sliding over a photograph" effect. */}
+      <div className="content-wrapper">
         <HeroBandTitle>Welcome to Real Property Planning</HeroBandTitle>
 
         {/* 2. GUIDED ENTRY — 4 audience tiles */}
