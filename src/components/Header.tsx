@@ -18,6 +18,8 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false,
   );
+  const [headerH, setHeaderH] = useState<number>(isMobile ? 92 : 70);
+  const headerRef = (typeof window !== "undefined" ? (require("react") as typeof import("react")).useRef<HTMLElement>(null) : { current: null }) as React.MutableRefObject<HTMLElement | null>;
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -26,6 +28,18 @@ const Header = () => {
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
+
+  useEffect(() => {
+    if (!headerRef.current) return;
+    const el = headerRef.current;
+    const measure = () => setHeaderH(el.getBoundingClientRect().height);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    window.addEventListener("resize", measure);
+    return () => { ro.disconnect(); window.removeEventListener("resize", measure); };
+  }, []);
+
 
   useEffect(() => {
     const id = "rpp-preview-fonts";
