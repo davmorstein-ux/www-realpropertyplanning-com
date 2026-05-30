@@ -85,8 +85,8 @@ const RIGHT_GROUPS = [
   },
 ];
 
-const PANEL_FADE_MS = 800;
-const PANEL_HOVER_CLOSE_DELAY = 1000;
+const PANEL_FADE_MS = 1400;
+const PANEL_HOVER_CLOSE_DELAY = 1500;
 
 const CSS = `
   .wf-wrap {
@@ -104,7 +104,7 @@ const CSS = `
     align-items: center;
     gap: 10px;
     border-radius: 6px;
-    transition: background 0.15s;
+    transition: background 0.3s ease;
   }
   .wf-trigger:hover { background: rgba(139,105,20,0.1); }
   .wf-icon {
@@ -119,7 +119,7 @@ const CSS = `
     height: 3px;
     background: #8B6914;
     border-radius: 2px;
-    transition: width 0.25s ease;
+    transition: width 0.5s cubic-bezier(0.16,1,0.3,1);
   }
   .wf-trigger .wf-ln-1 { width: 32px; }
   .wf-trigger .wf-ln-2 { width: 22px; }
@@ -165,12 +165,14 @@ const CSS = `
     animation: panelOut ${PANEL_FADE_MS}ms cubic-bezier(0.22,1,0.36,1) forwards;
   }
   @keyframes panelIn {
-    from { opacity: 0; transform: translateX(-20px); }
-    to   { opacity: 1; transform: translateX(0); }
+    0%   { opacity: 0; transform: translateX(-32px); }
+    60%  { opacity: 0.8; transform: translateX(-4px); }
+    100% { opacity: 1; transform: translateX(0); }
   }
   @keyframes panelOut {
-    from { opacity: 1; transform: translateX(0); }
-    to   { opacity: 0; transform: translateX(-20px); }
+    0%   { opacity: 1; transform: translateX(0); }
+    40%  { opacity: 0.6; transform: translateX(-8px); }
+    100% { opacity: 0; transform: translateX(-32px); }
   }
 
   .wf-panel-header {
@@ -197,7 +199,7 @@ const CSS = `
     cursor: pointer;
     padding: 4px 8px;
     border-radius: 4px;
-    transition: background 0.15s;
+    transition: background 0.3s ease;
   }
   .wf-close-x:hover { background: rgba(192,57,43,0.1); }
 
@@ -236,7 +238,7 @@ const CSS = `
     text-align: left;
     cursor: pointer;
     font-family: inherit;
-    transition: background 0.12s;
+    transition: background 0.3s;
     border-radius: 4px;
   }
   .wf-group-btn:hover { background: rgba(139,105,20,0.08); }
@@ -245,7 +247,7 @@ const CSS = `
   .wf-chevron {
     font-size: 11px;
     color: #8B6914;
-    transition: transform 0.25s ease;
+    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
     flex-shrink: 0;
     margin-left: 6px;
   }
@@ -254,7 +256,7 @@ const CSS = `
   .wf-items {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.6s cubic-bezier(0.22,1,0.36,1);
+    transition: max-height 1.0s cubic-bezier(0.16,1,0.3,1);
   }
   .wf-items-open { max-height: 400px; }
 
@@ -273,7 +275,7 @@ const CSS = `
     line-height: 1.35;
     opacity: 0;
     transform: translateY(-5px);
-    transition: color 0.2s, border-color 0.2s, background 0.2s, opacity 0.35s, transform 0.35s;
+    transition: color 0.3s, border-color 0.3s, background 0.3s, opacity 0.6s, transform 0.6s;
   }
   .wf-item-visible {
     opacity: 1;
@@ -304,7 +306,7 @@ const CSS = `
     text-transform: uppercase;
     cursor: pointer;
     font-family: inherit;
-    transition: background 0.15s, color 0.15s;
+    transition: background 0.4s ease, color 0.4s ease;
   }
   .wf-close-btn:hover { background: #8B6914; color: #0a1628; }
 
@@ -324,7 +326,7 @@ function AccordionGroup({ group, isOpen, onMouseEnter, onNavigate }) {
           if (itemRefs.current[i]) {
             itemRefs.current[i].classList.add('wf-item-visible');
           }
-        }, i * 100);
+        }, i * 150);
       });
     } else {
       group.items.forEach((_, i) => {
