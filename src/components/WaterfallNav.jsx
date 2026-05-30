@@ -85,8 +85,8 @@ const RIGHT_GROUPS = [
   },
 ];
 
-const PANEL_FADE_MS = 500;
-const PANEL_HOVER_CLOSE_DELAY = 600;
+const PANEL_FADE_MS = 800;
+const PANEL_HOVER_CLOSE_DELAY = 1000;
 
 const CSS = `
   .wf-wrap {
@@ -159,10 +159,10 @@ const CSS = `
     overflow: hidden;
   }
   .wf-panel-entering {
-    animation: panelIn ${PANEL_FADE_MS}ms ease forwards;
+    animation: panelIn ${PANEL_FADE_MS}ms cubic-bezier(0.22,1,0.36,1) forwards;
   }
   .wf-panel-exiting {
-    animation: panelOut ${PANEL_FADE_MS}ms ease forwards;
+    animation: panelOut ${PANEL_FADE_MS}ms cubic-bezier(0.22,1,0.36,1) forwards;
   }
   @keyframes panelIn {
     from { opacity: 0; transform: translateX(-20px); }
@@ -254,7 +254,7 @@ const CSS = `
   .wf-items {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.4s cubic-bezier(0.22,1,0.36,1);
+    transition: max-height 0.6s cubic-bezier(0.22,1,0.36,1);
   }
   .wf-items-open { max-height: 400px; }
 
@@ -273,7 +273,7 @@ const CSS = `
     line-height: 1.35;
     opacity: 0;
     transform: translateY(-5px);
-    transition: color 0.12s, border-color 0.12s, background 0.12s, opacity 0.2s, transform 0.2s;
+    transition: color 0.2s, border-color 0.2s, background 0.2s, opacity 0.35s, transform 0.35s;
   }
   .wf-item-visible {
     opacity: 1;
@@ -324,7 +324,7 @@ function AccordionGroup({ group, isOpen, onMouseEnter, onNavigate }) {
           if (itemRefs.current[i]) {
             itemRefs.current[i].classList.add('wf-item-visible');
           }
-        }, i * 60);
+        }, i * 100);
       });
     } else {
       group.items.forEach((_, i) => {
