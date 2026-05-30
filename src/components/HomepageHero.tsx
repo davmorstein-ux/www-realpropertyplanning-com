@@ -147,9 +147,6 @@ const HomepageHero = () => {
         />
 
       </section>
-      <HeroBandTitle>
-        Welcome to Real Property Planning
-      </HeroBandTitle>
     </div>
   );
 };
