@@ -141,6 +141,7 @@ const HomepageHero = () => {
       {/* ===== Hero ===== */}
       <style>{`@keyframes rppHeroFadeIn { from { opacity: 0 } to { opacity: 1 } }`}</style>
       <section
+        className="hero-panorama"
         style={{
           position: "relative",
           width: "100%",
@@ -153,16 +154,12 @@ const HomepageHero = () => {
         <img
           src="/homepage-hero.webp"
           alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
+          className="no-parallax-crop"
           fetchPriority="high"
           loading="eager"
           decoding="async"
           style={{
             display: "block",
-            width: "100%",
-            height: "auto",
-            minHeight: isMobile ? 200 : undefined,
-            objectFit: "cover",
-            objectPosition: "left center",
             background: "transparent",
             opacity: 0,
             animation: "rppHeroFadeIn 1.2s ease forwards",
