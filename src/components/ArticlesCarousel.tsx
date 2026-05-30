@@ -21,7 +21,7 @@ const ARTICLES = [
     href: "/articles/senior-housing-options",
     img: "/articles/images/Senior_Housing_Options.png",
     category: "Senior Housing",
-    summary: "Your roadmap to informed housing and care decisions — from independent living to memory care.",
+    summary: "Your roadmap to informed housing and care decisions.",
   },
   {
     title: "Senior Housing Costs",
@@ -35,7 +35,7 @@ const ARTICLES = [
     href: "/articles/how-to-choose-senior-housing",
     img: "/articles/images/How_to_Choose_Senior_Housing.png",
     category: "Planning",
-    summary: "A step-by-step guide to finding the right home, care, and lifestyle for today and tomorrow.",
+    summary: "A step-by-step guide to finding the right home, care, and lifestyle.",
   },
   {
     title: "Independent Living Costs",
@@ -56,14 +56,14 @@ const ARTICLES = [
     href: "/articles/ccrc-costs",
     img: "/articles/images/CCRC_Costs.png",
     category: "Cost Guide",
-    summary: "Understand today. Plan wisely. Live well tomorrow in a continuing care retirement community.",
+    summary: "Understand today. Plan wisely. Live well tomorrow.",
   },
   {
     title: "Affordable Senior Housing",
     href: "/articles/affordable-senior-housing",
     img: "/articles/images/Affordable_Senior_Housing.png",
     category: "Affordability",
-    summary: "Smart choices. Stable costs. Better living for tomorrow — without breaking the bank.",
+    summary: "Smart choices. Stable costs. Better living for tomorrow.",
   },
   {
     title: "Aging in Place With Support",
@@ -74,7 +74,6 @@ const ARTICLES = [
   },
 ];
 
-const VISIBLE = 3;
 const AUTO_ADVANCE_MS = 5000;
 
 export default function ArticlesCarousel() {
@@ -82,77 +81,75 @@ export default function ArticlesCarousel() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const total = ARTICLES.length;
-  const maxIndex = total - VISIBLE;
+  const maxIndex = ARTICLES.length - 3;
 
   const advance = useCallback(() => {
     setCurrent((prev) => (prev >= maxIndex ? 0 : prev + 1));
   }, [maxIndex]);
 
-  const prev = () => {
-    setCurrent((prev) => (prev <= 0 ? maxIndex : prev - 1));
-  };
+  const prev = () => setCurrent((p) => (p <= 0 ? maxIndex : p - 1));
 
   useEffect(() => {
     if (isPaused) return;
     timerRef.current = setInterval(advance, AUTO_ADVANCE_MS);
-    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
   }, [advance, isPaused]);
 
-  const goTo = (index: number) => setCurrent(index);
-
   return (
-    <section style={{
-      background: "#f7f4ef",
-      padding: "64px 0 72px",
-      fontFamily: "'Georgia', serif",
-    }}>
-      {/* Section header */}
+    <section
+      style={{
+        background: "#f7f4ef",
+        padding: "64px 0 72px",
+        fontFamily: "Georgia, serif",
+      }}
+    >
+      {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
-        <span style={{
-          display: "block",
-          fontSize: 11,
-          fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-          fontWeight: 400,
-          letterSpacing: "0.22em",
-          textTransform: "uppercase",
-          color: "#8B6914",
-          marginBottom: 12,
-        }}>
+        <span
+          style={{
+            display: "block",
+            fontSize: 11,
+            fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+            fontWeight: 400,
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            color: "#8B6914",
+            marginBottom: 12,
+          }}
+        >
           Real Property Planning
         </span>
-        <h2 style={{
-          fontSize: "clamp(28px, 4vw, 42px)",
-          fontWeight: 700,
-          color: "#0a1628",
-          margin: 0,
-          lineHeight: 1.15,
-          letterSpacing: "-0.01em",
-        }}>
+        <h2
+          style={{
+            fontSize: "clamp(28px, 4vw, 42px)",
+            fontWeight: 700,
+            color: "#0a1628",
+            margin: 0,
+            lineHeight: 1.15,
+          }}
+        >
           Featured Articles
         </h2>
-        <div style={{
-          width: 48,
-          height: 2,
-          background: "#8B6914",
-          margin: "16px auto 0",
-          borderRadius: 1,
-        }} />
+        <div style={{ width: 48, height: 2, background: "#8B6914", margin: "16px auto 0", borderRadius: 1 }} />
       </div>
 
-      {/* Carousel track */}
+      {/* Carousel */}
       <div
-        style={{ overflow: "hidden", padding: "0 40px" }}
+        style={{ overflow: "hidden", padding: "8px 40px 16px" }}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: `repeat(${total}, calc((100% - 48px) / 3))`,
-          gap: 24,
-          transform: `translateX(calc(-${current} * (calc((100% + 24px * ${total}) / ${total}) + 24px / ${total})))`,
-          transition: "transform 0.7s cubic-bezier(0.22,1,0.36,1)",
-        }}>
+        <div
+          style={{
+            display: "flex",
+            gap: 24,
+            transform: `translateX(calc(-${current} * (calc((100% - 48px) / 3) + 24px)))`,
+            transition: "transform 0.7s cubic-bezier(0.22,1,0.36,1)",
+            willChange: "transform",
+          }}
+        >
           {ARTICLES.map((article, i) => (
             <Link
               key={i}
@@ -165,17 +162,15 @@ export default function ArticlesCarousel() {
                 position: "relative",
                 borderRadius: 4,
                 overflow: "hidden",
-                boxShadow: hoveredCard === i
-                  ? "0 20px 60px rgba(10,22,40,0.22), 0 4px 16px rgba(10,22,40,0.12)"
-                  : "0 4px 20px rgba(10,22,40,0.10)",
-                transform: hoveredCard === i ? "translateY(-6px) scale(1.01)" : "translateY(0) scale(1)",
-                transition: "box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.22,1,0.36,1)",
-                background: "#fff",
-                aspectRatio: "2/3",
                 flexShrink: 0,
+                width: "calc((100% - 48px) / 3)",
+                aspectRatio: "2 / 3",
+                boxShadow: hoveredCard === i ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
+                transform: hoveredCard === i ? "translateY(-6px)" : "translateY(0)",
+                transition: "box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.22,1,0.36,1)",
+                background: "#ddd",
               }}
             >
-              {/* Magazine cover image */}
               <img
                 src={article.img}
                 alt={article.title}
@@ -189,61 +184,106 @@ export default function ArticlesCarousel() {
                 }}
               />
 
-              {/* Hover overlay with summary */}
-              <div style={{
-                position: "absolute",
-                inset: 0,
-                background: "linear-gradient(to top, rgba(10,22,40,0.97) 0%, rgba(10,22,40,0.7) 50%, rgba(10,22,40,0.1) 100%)",
-                opacity: hoveredCard === i ? 1 : 0,
-                transition: "opacity 0.4s ease",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-end",
-                padding: "28px 24px",
-              }}>
-                <span style={{
-                  display: "inline-block",
-                  fontSize: 10,
-                  fontFamily: "'Raleway', sans-serif",
-                  fontWeight: 600,
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
-                  color: "#E8C97A",
-                  marginBottom: 10,
-                }}>
+              {/* Always-visible bottom gradient with title */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  background:
+                    "linear-gradient(to top, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.4) 60%, transparent 100%)",
+                  padding: "48px 20px 20px",
+                  opacity: hoveredCard === i ? 0 : 1,
+                  transition: "opacity 0.3s ease",
+                }}
+              >
+                <span
+                  style={{
+                    display: "block",
+                    fontSize: 10,
+                    fontFamily: "'Raleway', sans-serif",
+                    fontWeight: 600,
+                    letterSpacing: "0.2em",
+                    textTransform: "uppercase",
+                    color: "#E8C97A",
+                    marginBottom: 6,
+                  }}
+                >
                   {article.category}
                 </span>
-                <h3 style={{
-                  fontSize: 20,
-                  fontWeight: 700,
-                  color: "#fff",
-                  margin: "0 0 12px",
-                  lineHeight: 1.25,
-                }}>
+                <h3
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 700,
+                    color: "#fff",
+                    margin: 0,
+                    lineHeight: 1.3,
+                  }}
+                >
                   {article.title}
                 </h3>
-                <p style={{
-                  fontSize: 13,
-                  color: "rgba(255,255,255,0.82)",
-                  margin: "0 0 18px",
-                  lineHeight: 1.55,
-                  fontFamily: "'Georgia', serif",
-                }}>
+              </div>
+
+              {/* Hover overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background:
+                    "linear-gradient(to top, rgba(10,22,40,0.97) 0%, rgba(10,22,40,0.75) 55%, rgba(10,22,40,0.15) 100%)",
+                  opacity: hoveredCard === i ? 1 : 0,
+                  transition: "opacity 0.4s ease",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-end",
+                  padding: "28px 20px",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: 10,
+                    fontFamily: "'Raleway', sans-serif",
+                    fontWeight: 600,
+                    letterSpacing: "0.2em",
+                    textTransform: "uppercase",
+                    color: "#E8C97A",
+                    marginBottom: 8,
+                    display: "block",
+                  }}
+                >
+                  {article.category}
+                </span>
+                <h3 style={{ fontSize: 18, fontWeight: 700, color: "#fff", margin: "0 0 10px", lineHeight: 1.25 }}>
+                  {article.title}
+                </h3>
+                <p style={{ fontSize: 13, color: "rgba(255,255,255,0.82)", margin: "0 0 16px", lineHeight: 1.55 }}>
                   {article.summary}
                 </p>
-                <span style={{
-                  fontSize: 11,
-                  fontFamily: "'Raleway', sans-serif",
-                  fontWeight: 600,
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
-                  color: "#E8C97A",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 6,
-                }}>
+                <span
+                  style={{
+                    fontSize: 11,
+                    fontFamily: "'Raleway', sans-serif",
+                    fontWeight: 600,
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    color: "#E8C97A",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 6,
+                  }}
+                >
                   Read Article
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <polyline points="9 18 15 12 9 6" />
                   </svg>
                 </span>
@@ -253,18 +293,11 @@ export default function ArticlesCarousel() {
         </div>
       </div>
 
-      {/* Controls: prev arrow · dots · next arrow */}
-      <div style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: 24,
-        marginTop: 40,
-      }}>
-        {/* Prev arrow */}
+      {/* Controls */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, marginTop: 36 }}>
         <button
           onClick={prev}
-          aria-label="Previous articles"
+          aria-label="Previous"
           style={{
             background: "none",
             border: "1px solid #c8b98a",
@@ -276,24 +309,28 @@ export default function ArticlesCarousel() {
             justifyContent: "center",
             cursor: "pointer",
             color: "#8B6914",
-            transition: "background 0.2s, color 0.2s",
-            flexShrink: 0,
           }}
-          onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = "#8B6914"; (e.currentTarget as HTMLButtonElement).style.color = "#fff"; }}
-          onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = "none"; (e.currentTarget as HTMLButtonElement).style.color = "#8B6914"; }}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <polyline points="15 18 9 12 15 6" />
           </svg>
         </button>
 
-        {/* Dots */}
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           {Array.from({ length: maxIndex + 1 }).map((_, i) => (
             <button
               key={i}
-              onClick={() => goTo(i)}
-              aria-label={`Go to slide ${i + 1}`}
+              onClick={() => setCurrent(i)}
+              aria-label={`Slide ${i + 1}`}
               style={{
                 background: current === i ? "#8B6914" : "#d4c9b0",
                 border: "none",
@@ -308,10 +345,9 @@ export default function ArticlesCarousel() {
           ))}
         </div>
 
-        {/* Next arrow */}
         <button
           onClick={advance}
-          aria-label="Next articles"
+          aria-label="Next"
           style={{
             background: "none",
             border: "1px solid #c8b98a",
@@ -323,13 +359,18 @@ export default function ArticlesCarousel() {
             justifyContent: "center",
             cursor: "pointer",
             color: "#8B6914",
-            transition: "background 0.2s, color 0.2s",
-            flexShrink: 0,
           }}
-          onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = "#8B6914"; (e.currentTarget as HTMLButtonElement).style.color = "#fff"; }}
-          onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = "none"; (e.currentTarget as HTMLButtonElement).style.color = "#8B6914"; }}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <polyline points="9 18 15 12 9 6" />
           </svg>
         </button>
