@@ -12,6 +12,8 @@ const contentWrap = "container px-6 lg:px-8";
 const proseWrap = "max-w-3xl mx-auto";
 const h2Class = "font-serif text-2xl md:text-3xl font-semibold text-foreground mt-10 mb-5";
 const pClass = "text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-5 last:mb-0";
+const leadClass = "text-foreground text-[19px] md:text-xl leading-[1.75] mb-6 font-medium";
+const hrClass = "my-10 border-border/60";
 const inlineLink = "text-gold font-semibold underline underline-offset-2 hover:text-gold/80 transition-colors";
 
 const relatedResources = [
@@ -58,102 +60,158 @@ const MemoryCareCosts = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <h2 className={h2Class + " mt-0"}>
-                Memory Care Costs for Families: What to Expect
-              </h2>
+              <h2 className={h2Class + " mt-0"}>Memory Care Costs</h2>
+              <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
+                What families need to know — and what no brochure will tell you about making this decision
+              </p>
+              <hr className={hrClass} />
+
+              <p className={leadClass}>
+                There is a particular kind of exhaustion that comes before a family calls a memory care community for the first time.
+              </p>
               <p className={pClass}>
-                Memory care costs for families are usually higher than independent living or assisted living because memory care provides a more secure environment and a higher level of supervision. The monthly price depends on location, the layout of the community, and the amount of care and structure the resident needs.
+                It is the exhaustion of a spouse who hasn't slept through the night in months. Of an adult child who has started calling three times a day, just to check. Of a family that has been holding everything together through sheer will — and is beginning to understand, quietly and with great difficulty, that will alone is no longer enough.
+              </p>
+              <p className={pClass}>
+                Memory care is rarely a first choice. It is almost always the choice that comes after every other option has been tried, stretched, and finally outgrown. Understanding its costs — real costs, not just the number on a brochure — is part of making this transition as wisely, and as gently, as possible.
               </p>
 
-              <h2 className={h2Class}>What Memory Care Means</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>What Memory Care Actually Provides</h2>
               <p className={pClass}>
-                Memory care is a specialized type of senior housing for people living with Alzheimer's disease or other forms of dementia. These communities are designed to provide a safe, structured setting with staff trained to support memory loss, confusion, wandering, and daily supervision needs.
+                Memory care is a specialized form of senior housing built around the needs of people living with Alzheimer's disease or other forms of dementia.
               </p>
               <p className={pClass}>
-                Families often choose memory care when assisted living is no longer enough. Common signs include repeated safety issues, increased confusion, wandering, agitation, difficulty with routine tasks, or the need for close oversight throughout the day. An{" "}
-                <Link to="/aging-life-care-managers" className={inlineLink}>Aging Life Care Manager</Link>{" "}
-                can help families assess whether memory care is the right next step and identify communities that best match their loved one's needs.
+                The physical environment is purpose-designed: secured entrances and exits, enclosed outdoor spaces, layouts that minimize the confusion and anxiety that can come from navigating unfamiliar corridors. The staffing is specialized: caregivers trained in dementia care, who understand how to communicate with, calm, and support someone whose experience of the world is fundamentally different from their own.
+              </p>
+              <p className={pClass}>
+                The daily structure is intentional — routines that provide comfort, programming that supports engagement, supervision that never fully switches off.
+              </p>
+              <p className={pClass}>
+                What memory care provides, at its core, is two things: safety and expertise. For families who have been providing both on their own, the relief of handing that responsibility to a skilled team can be profound.
               </p>
 
-              <h2 className={h2Class}>Typical Monthly Cost</h2>
-              <p className={pClass}>
-                Memory care usually costs more than assisted living because it includes both housing and specialized care. Monthly fees are often in the upper thousands, and in many markets the price can be significantly higher depending on the level of supervision and the community's location.
-              </p>
-              <p className={pClass}>
-                Families should expect memory care to be one of the most expensive senior housing options. The additional cost reflects the extra staffing, secured spaces, and specialized programming required for residents with cognitive decline.
-              </p>
+              <hr className={hrClass} />
 
-              <h2 className={h2Class}>What Is Usually Included</h2>
+              <h2 className={h2Class}>When Memory Care Becomes Necessary</h2>
               <p className={pClass}>
-                Most memory care communities include a private or semi-private room, meals, housekeeping, laundry, supervision, structured activities, and help with daily living tasks. Many also include security features such as secured entrances, enclosed outdoor areas, or controlled access to protect residents who may wander.
-              </p>
-              <p className={pClass}>
-                The base fee may also cover routine reminders, cueing, and staff oversight, but the exact package varies by community. Because pricing structures differ, families should always ask what is included before comparing communities.
-              </p>
-
-              <h2 className={h2Class}>Extra Fees to Watch For</h2>
-              <p className={pClass}>
-                Memory care communities may charge extra for higher levels of assistance, special behavioral support, personal supplies, or one-on-one supervision. Other common fees can include a community fee, second-person charges for couples, transportation, medication support, and annual price increases.
-              </p>
-              <p className={pClass}>
-                It is especially important to ask how the community handles changing care needs. Dementia is progressive, and a resident's support needs may increase over time. A{" "}
-                <Link to="/professionals/financial-planners" className={inlineLink}>financial planner or advisor</Link>{" "}
-                can help families plan for these rising costs before they become a crisis.
-              </p>
-
-              <h2 className={h2Class}>Memory Care for Couples</h2>
-              <p className={pClass}>
-                Memory care can be complicated for couples because one spouse may need specialized support while the other does not. Some communities can accommodate couples, but the pricing may change significantly if both people live in the same unit or if only one person requires memory care.
-              </p>
-              <p className={pClass}>
-                Families should ask whether the spouse who does not need memory care can remain in the community, and if so, what the cost structure will look like. This can have a major effect on affordability and long-term planning. A{" "}
-                <Link to="/senior-living-advisors" className={inlineLink}>Senior Living Advisor</Link>{" "}
-                can help couples navigate these options and find communities that can accommodate both partners.
-              </p>
-
-              <h2 className={h2Class}>How to Compare Costs</h2>
-              <p className={pClass}>
-                The best way to compare memory care costs is to look beyond the monthly base rate and understand exactly what support is included. Families should compare room type, staffing levels, supervision, meals, activities, medication support, and any added care charges.
-              </p>
-              <p className={pClass}>
-                It can also be helpful to compare memory care against the cost of keeping the person at home with professional caregivers. In many cases, a home-based solution may still be expensive and difficult to manage safely over time.
-              </p>
-
-              <h2 className={h2Class}>Questions to Ask Before Choosing</h2>
-              <p className={pClass}>
-                Before selecting a memory care community, ask:
+                Families often wonder whether they are making the move too soon — or worry they have waited too long. A few signs that suggest memory care has become the appropriate level of support:
               </p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
-                <li>What is the monthly base rate?</li>
-                <li>What services are included?</li>
-                <li>What costs extra?</li>
-                <li>How is supervision handled?</li>
-                <li>Is the community secured?</li>
-                <li>How often do rates increase?</li>
-                <li>Is there a second-person fee?</li>
-                <li>What happens if care needs become more complex?</li>
-                <li>Is there a move-in fee or deposit?</li>
+                <li>Wandering that creates genuine safety risk</li>
+                <li>Repeated incidents — falls, leaving the stove on, getting lost — that are becoming impossible to prevent</li>
+                <li>Agitation, behavioral changes, or nighttime disruption that is beyond what family or home caregivers can safely manage</li>
+                <li>Needs that have grown beyond what assisted living can reliably meet</li>
+                <li>A primary caregiver whose own health is suffering under the weight of the responsibility</li>
               </ul>
               <p className={pClass}>
-                These questions help families understand the true cost and the level of support being provided.
+                The decision is rarely clean. An <Link to="/aging-life-care-managers" className={inlineLink}>Aging Life Care Manager</Link> can provide a professional assessment that helps families see clearly where their loved one actually is — and what level of support is genuinely needed.
               </p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>What Memory Care Costs — and Why</h2>
+              <p className={pClass}>
+                Memory care is typically the most expensive senior housing option, and the reason is straightforward: it requires more. More staff per resident. More specialized training. More physical infrastructure. More programming designed around a specific and demanding set of needs.
+              </p>
+              <p className={pClass}>
+                Monthly fees vary considerably by location, community design, and care level — but families should plan for costs that sit meaningfully above assisted living rates in the same market. In high-cost regions, monthly memory care costs can be substantial.
+              </p>
+              <p className={pClass}>
+                What drives the price is primarily staffing. Memory care communities maintain higher caregiver-to-resident ratios than standard assisted living, because the supervision required is more constant and the demands on individual caregivers are higher. That staffing costs money — and it's money well spent, because the quality of that staffing determines the quality of life inside the community.
+              </p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>What the Monthly Fee Typically Includes</h2>
+              <p className={pClass}>Most memory care communities bundle the following into their base monthly rate:</p>
+              <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
+                <li>A private or semi-private room</li>
+                <li>Three meals per day plus snacks</li>
+                <li>Housekeeping and laundry</li>
+                <li>24-hour supervision and support</li>
+                <li>Assistance with daily living activities — bathing, dressing, grooming, mobility</li>
+                <li>Structured daily programming designed for residents with cognitive decline</li>
+                <li>Security features including secured outdoor spaces</li>
+              </ul>
+              <p className={pClass}>
+                What is <em>not</em> always included — and should be asked about specifically:
+              </p>
+              <p className={pClass}>
+                <strong>Medication management</strong> — sometimes included, sometimes an added charge.
+              </p>
+              <p className={pClass}>
+                <strong>One-on-one behavioral support</strong> — if a resident requires individualized attention beyond the standard care model, this may be priced separately.
+              </p>
+              <p className={pClass}>
+                <strong>Higher care tiers</strong> — many communities use a tiered pricing model, where the base rate covers a standard level of care and additional needs carry additional cost. Dementia is progressive, which means care needs — and monthly costs — will likely increase over time.
+              </p>
+              <p className={pClass}>
+                <strong>Second-person fees</strong> — for couples where one partner requires memory care and the other does not, the arrangement and pricing can be complex.
+              </p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Memory Care for Couples</h2>
+              <p className={pClass}>This is one of the most emotionally complicated situations families navigate.</p>
+              <p className={pClass}>
+                When one partner has dementia and the other does not, the options are not straightforward. Some memory care communities can accommodate couples — either by allowing both partners to live in the memory care wing, or by housing one in memory care and one in an adjacent independent or assisted living setting within the same campus.
+              </p>
+              <p className={pClass}>
+                The financial structure of these arrangements varies widely, and the emotional dimensions are even more complex. A <Link to="/senior-living-advisors" className={inlineLink}>senior living advisor</Link> who has worked with couples in this situation can help families find communities that handle it thoughtfully — and understand what each option will actually cost.
+              </p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Comparing Memory Care to In-Home Care</h2>
+              <p className={pClass}>
+                Some families, before making the move to memory care, consider whether a robust in-home care arrangement might work instead.
+              </p>
+              <p className={pClass}>
+                It's worth running the numbers honestly. Professional in-home dementia care is typically billed by the hour, and the hours required for someone with advanced cognitive decline can add up quickly. Around-the-clock home care — which some families eventually need — often costs more than a well-staffed memory care community.
+              </p>
+              <p className={pClass}>
+                Beyond the financial comparison, there is the question of what in-home care can actually provide. A trained memory care community offers a physical environment specifically designed to reduce confusion and prevent accidents. It offers consistent, specialized staffing. It offers peer community — other residents, structured programming, a daily rhythm.
+              </p>
+              <p className={pClass}>That is not something an in-home caregiver, however skilled, can replicate alone.</p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Questions Every Family Should Ask</h2>
+              <p className={pClass}>Before choosing a memory care community, ask:</p>
+              <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
+                <li>What is the monthly base rate — and what does it include specifically?</li>
+                <li>How is care tiered, and what triggers a move to a higher level?</li>
+                <li>How often do rates increase?</li>
+                <li>How is the staff-to-resident ratio maintained across all shifts, including nights and weekends?</li>
+                <li>How are behavioral changes or medical needs handled?</li>
+                <li>Is the outdoor space secured and accessible to residents?</li>
+                <li>What does a typical day look like for a resident?</li>
+                <li>Is there a community fee or move-in deposit?</li>
+                <li>What happens if care needs eventually exceed what the community can provide?</li>
+              </ul>
+
+              <hr className={hrClass} />
 
               <h2 className={h2Class}>Is Memory Care Worth the Cost?</h2>
               <p className={pClass}>
-                For many families, memory care is worth the cost because it provides safety, supervision, and peace of mind. When dementia-related behaviors create risks at home or in assisted living, the added structure of memory care can make a meaningful difference in quality of life.
+                For families who have been managing dementia at home — or watching a loved one struggle in an environment that can no longer meet their needs — the answer is almost always yes.
               </p>
               <p className={pClass}>
-                The value comes from both the physical environment and the trained staff who understand dementia-related needs. For families facing difficult decisions, memory care can reduce stress and provide a more secure daily routine. When a move into memory care becomes necessary, a{" "}
-                <Link to="/senior-move-managers" className={inlineLink}>Senior Move Manager</Link>{" "}
-                can help coordinate the transition with patience and care.
+                Not because memory care is inexpensive. It isn't. But because the alternative, when dementia has progressed to a certain point, is not actually safer or cheaper. It is simply harder, on the person living with dementia and on every member of the family trying to care for them.
+              </p>
+              <p className={pClass}>
+                The value of memory care is safety, expertise, and peace of mind. For families who have spent months or years without those things, that value is not abstract.
+              </p>
+              <p className={pClass}>
+                When the time comes to make the move, a <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link> who has experience with memory care transitions can help make the process gentler — for the person moving, and for the family letting go.
               </p>
 
-              <h2 className={h2Class}>Final Thoughts</h2>
+              <hr className={hrClass} />
+
               <p className={pClass}>
-                Memory care costs for families can be substantial, but the most important issue is whether the community can provide the safety, structure, and support the resident needs. Comparing the full cost, including care services and any additional fees, is essential before making a decision.
-              </p>
-              <p className={pClass}>
-                When a person with dementia needs more supervision than other housing options can provide, memory care may be the right balance of safety and support.
+                <em>Real Property Planning helps families navigate memory care and senior housing decisions with clarity and compassion. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
               </p>
             </article>
           </div>
