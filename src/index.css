@@ -150,7 +150,9 @@ main,
 main > section:first-child,
 #main-content > section:first-child,
 #main-content > div:first-child,
-main > div:first-child {
+main > div:first-child,
+#main-content > *:first-child,
+#main-content > *:first-child > section:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
