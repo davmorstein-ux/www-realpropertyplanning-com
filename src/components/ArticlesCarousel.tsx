@@ -5,76 +5,76 @@ const ARTICLES = [
   {
     title: "The Silver Tsunami",
     href: "/articles/silver-tsunami",
-    img: "/The_Silver_Tsunami.png",
+    img: "/articles/images/The_Silver_Tsunami.png",
     category: "Demographics",
     summary: "The surge of seniors is reshaping housing, care, and the future of our communities.",
   },
   {
     title: "The Senior Housing Guide",
     href: "/articles/senior-housing-guide",
-    img: "/The_Senior_Housing_Guide.png",
+    img: "/articles/images/The_Senior_Housing_Guide.png",
     category: "Senior Housing",
     summary: "Your roadmap to finding the right place, the right care, and peace of mind.",
   },
   {
     title: "Senior Housing Options",
     href: "/articles/senior-housing-options",
-    img: "/Senior_Housing_Options.png",
+    img: "/articles/images/Senior_Housing_Options.png",
     category: "Senior Housing",
     summary: "Your roadmap to informed housing and care decisions.",
   },
   {
     title: "Senior Housing Costs",
     href: "/articles/senior-housing-costs",
-    img: "/Senior_Housing_Costs.png",
+    img: "/articles/images/Senior_Housing_Costs.png",
     category: "Cost Guide",
     summary: "Affordability is slipping away — understand the real costs before making a decision.",
   },
   {
     title: "How to Choose Senior Housing",
     href: "/articles/how-to-choose-senior-housing",
-    img: "/How_to_Choose_Senior_Housing.png",
+    img: "/articles/images/How_to_Choose_Senior_Housing.png",
     category: "Planning",
     summary: "A step-by-step guide to finding the right home, care, and lifestyle.",
   },
   {
     title: "Independent Living Costs",
     href: "/articles/independent-living-costs",
-    img: "/Independent_Living_Costs.png",
+    img: "/articles/images/Independent_Living_Costs.png",
     category: "Cost Guide",
     summary: "Understand the expenses, plan wisely, and enjoy the freedom you've earned.",
   },
   {
     title: "Memory Care Costs",
     href: "/articles/memory-care-costs",
-    img: "/Memory_Care_Costs.png",
+    img: "/articles/images/Memory_Care_Costs.png",
     category: "Cost Guide",
     summary: "Understand the costs, plan ahead, and invest in your loved one's future.",
   },
   {
     title: "CCRC Costs",
     href: "/articles/ccrc-costs",
-    img: "/CCRC_Costs.png",
+    img: "/articles/images/CCRC_Costs.png",
     category: "Cost Guide",
     summary: "Understand today. Plan wisely. Live well tomorrow.",
   },
   {
     title: "Affordable Senior Housing",
     href: "/articles/affordable-senior-housing",
-    img: "/Affordable_Senior_Housing.png",
+    img: "/articles/images/Affordable_Senior_Housing.png",
     category: "Affordability",
     summary: "Smart choices. Stable costs. Better living for tomorrow.",
   },
   {
     title: "Aging in Place With Support",
     href: "/articles/aging-in-place",
-    img: "/Aging_in_Place_With_Support.png",
+    img: "/articles/images/Aging_in_Place_With_Support.png",
     category: "Care Options",
     summary: "Live where you love. Get the support you need. Enjoy peace of mind.",
   },
 ];
 
-const AUTO_ADVANCE_MS = 4000;
+const AUTO_ADVANCE_MS = 7000;
 // Triple the articles for seamless infinite loop
 const INFINITE = [...ARTICLES, ...ARTICLES, ...ARTICLES];
 const OFFSET = ARTICLES.length; // start in the middle copy
@@ -172,7 +172,7 @@ export default function ArticlesCarousel() {
               display: "flex",
               gap: 24,
               transform: `translateX(calc(-${current} * (calc((100% - 48px) / 3) + 24px)))`,
-              transition: animated ? "transform 1.4s cubic-bezier(0.16,1,0.3,1)" : "none",
+              transition: animated ? "transform 2.2s cubic-bezier(0.16,1,0.3,1)" : "none",
               willChange: "transform",
             }}
           >
