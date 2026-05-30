@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/planning-before-a-crisis-hero-washington.webp";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const tiles = [
   {
@@ -58,12 +59,7 @@ const PlanningBeforeACrisis = () => {
       <main id="main-content">
         {/* HERO IMAGE — standardized height */}
         <section className="bg-white">
-          <img
-            src={heroImage}
-            alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager"
-          />
+          <ParallaxHero src={heroImage} alt="Planning before a crisis — thoughtful estate and property planning in Washington State" />
         </section>
 
         <HeroBandTitle>Planning Before a Crisis</HeroBandTitle>

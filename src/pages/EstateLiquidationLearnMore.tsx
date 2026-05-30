@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEstateLiquidation from "@/assets/icons/estate-liquidation-hero-washington.webp";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const Section = ({ id, title, children }: { id: string; title: string; children: React.ReactNode }) => (
   <section id={id} className="py-10 md:py-14 bg-background">
@@ -45,12 +46,7 @@ const EstateLiquidationLearnMore = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-1.5 md:mb-2">
-              <img
-                src={iconEstateLiquidation}
-                alt="Estate liquidation and estate sales guide Washington State"
-                className="block w-full max-w-[15rem] h-auto object-contain"
-                loading="eager"
-              />
+              <ParallaxHero src={iconEstateLiquidation} alt="Estate liquidation and estate sales guide Washington State" />
             </div>
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">In-Depth Guide</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">

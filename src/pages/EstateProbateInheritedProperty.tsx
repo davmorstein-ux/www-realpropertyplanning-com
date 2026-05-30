@@ -6,6 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/estate-probate-inherited-property-hero-washington.webp";
 import { articleSchema } from "@/lib/schema";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const tiles = [
   {
@@ -71,12 +72,7 @@ const EstateProbateInheritedProperty = () => {
       <main id="main-content">
         {/* HERO IMAGE */}
         <section className="bg-white">
-          <img
-            src={heroImage}
-            alt="Managing an estate, probate, or inherited property in Washington State"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager"
-          />
+          <ParallaxHero src={heroImage} alt="Managing an estate, probate, or inherited property in Washington State" />
         </section>
 
         <HeroBandTitle>Estate, Probate & Inherited Property</HeroBandTitle>

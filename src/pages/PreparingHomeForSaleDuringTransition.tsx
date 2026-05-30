@@ -20,6 +20,7 @@ import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.
 import JourneyOrientation from "@/components/JourneyOrientation";
 import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ParallaxHero from "@/components/ParallaxHero";
 
 interface Pathway {
   letter: string;
@@ -210,12 +211,7 @@ const PreparingHomeForSaleDuringTransition = () => {
         {/* WTDW Shared Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <img
-              src={wtdwHeroImage}
-              alt="Quiet Washington street with craftsman homes"
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager"
-            />
+            <ParallaxHero src={wtdwHeroImage} alt="Quiet Washington street with craftsman homes" />
             <HeroBandTitle as="div">Preparing For Sale</HeroBandTitle>
           </div>
         </section>

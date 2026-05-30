@@ -11,6 +11,7 @@ import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import FeaturedAttorneys from "@/components/FeaturedAttorneys";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
@@ -25,12 +26,7 @@ const ForAttorneys = () => (
     {/* Hero image + navy band */}
     <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
       <div style={{ lineHeight: 0 }}>
-        <img
-          src="/images/hero_attorneys.webp"
-          alt="Real Property Planning for Washington attorneys — estate, probate, and family law referral partner"
-          className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-top block"
-          loading="eager"
-        />
+        <ParallaxHero src="/images/hero_attorneys.webp" alt="Real Property Planning for Washington attorneys — estate, probate, and family law referral partner" />
         <HeroBandTitle>Attorneys</HeroBandTitle>
       </div>
     </section>

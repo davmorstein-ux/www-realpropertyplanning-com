@@ -10,6 +10,7 @@ import { articleSchema } from "@/lib/schema";
 import heroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import lauraSilversteinPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
 import silverSageLogo from "@/assets/providers/silver-sage-consulting-logo.png";
+import ParallaxHero from "@/components/ParallaxHero";
 
 interface Provider {
   name: string;
@@ -71,12 +72,7 @@ const AgingLifeCareManagers = () => {
       <main id="main-content">
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <img
-              src={heroImage}
-              alt="Aging Life Care Managers Washington State"
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager"
-            />
+            <ParallaxHero src={heroImage} alt="Aging Life Care Managers Washington State" />
             <HeroBandTitle as="div">Aging Life Care Managers</HeroBandTitle>
           </div>
         </section>

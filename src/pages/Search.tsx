@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import searchHero from "@/assets/search-hero.webp";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const Search = () => {
   const [query, setQuery] = useState("");
@@ -30,12 +31,7 @@ const Search = () => {
         {/* Hero image + navy band */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <img
-              src={searchHero}
-              alt="Senior couple driving a classic red convertible into Search City at night"
-              className="w-full h-auto block"
-              loading="eager"
-            />
+            <ParallaxHero src={searchHero} alt="Senior couple driving a classic red convertible into Search City at night" />
             <HeroBandTitle>Search Page</HeroBandTitle>
           </div>
         </section>
