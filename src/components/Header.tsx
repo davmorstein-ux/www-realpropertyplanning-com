@@ -40,7 +40,7 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const id = "rpp-toplink-styles";
+    const id = "rpp-toplink-styles-v3";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
     style.id = id;
@@ -58,11 +58,16 @@ const Header = () => {
         display: inline-flex;
         align-items: center;
       }
-      .rpp-top-link .rpp-home-icon {
-        font-size: 32px;
-        line-height: 1;
-        margin-right: 8px;
-        display: inline-block;
+      .rpp-top-link .rpp-home-icon,
+      .rpp-home-icon {
+        font-size: 32px !important;
+        line-height: 1 !important;
+        width: 32px !important;
+        height: 32px !important;
+        margin-right: 8px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
       }
 
       .rpp-top-link:hover { color: ${GOLD}; }
