@@ -115,7 +115,16 @@ const HomepageHero = () => {
         className="rpp-hero"
         role="img"
         aria-label="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
-        style={{ backgroundImage: "url('/homepage-hero.webp')", height: "50vh" }}
+        style={{
+          backgroundImage: "url('/New_homepage_hero_CLEAN_Finale.png')",
+          height: "50vh",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundAttachment: "fixed",
+          backgroundRepeat: "no-repeat",
+          margin: 0,
+          padding: 0,
+        }}
       />
 
       <HeroBandTitle>
