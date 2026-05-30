@@ -1,5 +1,5 @@
-import { Children, ElementType, ReactNode, useEffect } from "react";
-import { scheduleHeroAutoScroll } from "@/lib/hero-auto-scroll";
+import { Children, ElementType, ReactNode } from "react";
+
 
 interface HeroBandTitleProps {
   children: ReactNode;
