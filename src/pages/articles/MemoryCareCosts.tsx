@@ -12,6 +12,8 @@ const contentWrap = "container px-6 lg:px-8";
 const proseWrap = "max-w-3xl mx-auto";
 const h2Class = "font-serif text-2xl md:text-3xl font-semibold text-foreground mt-10 mb-5";
 const pClass = "text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-5 last:mb-0";
+const leadClass = "text-foreground text-[19px] md:text-xl leading-[1.75] mb-6 font-medium";
+const hrClass = "my-10 border-border/60";
 const inlineLink = "text-gold font-semibold underline underline-offset-2 hover:text-gold/80 transition-colors";
 
 const relatedResources = [
