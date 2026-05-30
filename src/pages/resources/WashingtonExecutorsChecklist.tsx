@@ -10,6 +10,7 @@ import { FileText, ArrowRight, AlertCircle } from "lucide-react";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import washingtonExecutorsHero from "@/assets/washington-executors-hero.webp";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const steps = [
   {
@@ -93,12 +94,7 @@ const WashingtonExecutorsChecklist = () => {
         {/* Shared Hero (image + navy band) */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <img
-              src={washingtonExecutorsHero}
-              alt="Senior couple driving a red convertible toward a highway sign reading 10 Steps for Executors with Seattle skyline and Mount Rainier in the distance"
-              className="w-full h-auto object-cover object-center block"
-              loading="eager"
-            />
+            <ParallaxHero src={washingtonExecutorsHero} alt="Senior couple driving a red convertible toward a highway sign reading 10 Steps for Executors with Seattle skyline and Mount Rainier in the distance" />
             <HeroBandTitle as="div">10 Steps Every Executor Should Know</HeroBandTitle>
           </div>
         </section>

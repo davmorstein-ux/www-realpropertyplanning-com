@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/estate-planning-attorney-hero.webp";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const EstatePlanningPowersOfAttorney = () => (
   <div className="min-h-screen bg-background">
@@ -21,12 +22,7 @@ const EstatePlanningPowersOfAttorney = () => (
       {/* HERO */}
       <section className="w-full bg-secondary" style={{ marginTop: 0, paddingTop: 0 }}>
         <div className="container px-6 lg:px-8 py-10 md:py-14 flex justify-center">
-          <img
-            src={heroImage}
-            alt="Estate planning attorney at desk reviewing estate plan documents"
-            className="max-w-full h-auto max-h-[420px] object-contain"
-            loading="eager"
-          />
+          <ParallaxHero src={heroImage} alt="Estate planning attorney at desk reviewing estate plan documents" />
         </div>
         <HeroBandTitle compact>Estate Planning Attorney</HeroBandTitle>
       </section>

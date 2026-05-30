@@ -17,6 +17,7 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 import iconProbateTerms from "@/assets/icons/probate-property-sales-alt-icon-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import terminologyHero from "@/assets/terminology-hero.webp";
+import ParallaxHero from "@/components/ParallaxHero";
 
 interface GlossaryTerm {
   term: string;
@@ -139,12 +140,7 @@ const Terminology = () => {
       <Header />
       <main id="main-content">
         <section className="bg-transparent" style={{ lineHeight: 0 }}>
-          <img
-            src={terminologyHero}
-            alt="Probate and estate terminology guide for Washington State"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager"
-          />
+          <ParallaxHero src={terminologyHero} alt="Probate and estate terminology guide for Washington State" />
           <HeroBandTitle>Probate &amp; Estate Terminology</HeroBandTitle>
         </section>
 

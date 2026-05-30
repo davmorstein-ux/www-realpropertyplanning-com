@@ -22,6 +22,7 @@ import contactHero from "@/assets/contact-hero-soundview-coffee.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import ParallaxHero from "@/components/ParallaxHero";
 
 const roleOptions = [
   "Family Member",
@@ -63,12 +64,7 @@ const Contact = () => {
       {/* Hero image + navy band */}
       <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
         <div style={{ lineHeight: 0 }}>
-          <img
-            src={contactHero}
-            alt="Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact"
-            className="w-full h-auto block"
-            loading="eager"
-          />
+          <ParallaxHero src={contactHero} alt="Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact" />
           <HeroBandTitle>Get Connected</HeroBandTitle>
         </div>
       </section>

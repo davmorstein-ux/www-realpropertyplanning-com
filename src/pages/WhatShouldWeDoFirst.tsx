@@ -21,6 +21,7 @@ import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.we
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 import SituationCards from "@/components/SituationCards";
+import ParallaxHero from "@/components/ParallaxHero";
 
 interface Pathway {
   letter: string;
@@ -167,13 +168,7 @@ const WhatShouldWeDoFirst = () => {
         <section className="w-full overflow-hidden">
           {/* Watercolor image */}
           <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
-            <img
-              src="/assets/start_hero_clean_v2.webp"
-              alt="Begin your journey — Real Property Planning"
-              className="w-full h-auto object-cover"
-              loading="eager"
-              fetchPriority="high"
-            />
+            <ParallaxHero src="/assets/start_hero_clean_v2.webp" alt="Begin your journey — Real Property Planning" />
           </div>
           <HeroBandTitle as="h1">
             What Should We Do First?

@@ -7,6 +7,7 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 import { Link } from "react-router-dom";
+import ParallaxHero from "@/components/ParallaxHero";
 
 // ── Data ──
 
@@ -85,13 +86,7 @@ const ProbateEstateSales = () => {
         {/* SECTION 1 — Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
-            <img
-              src="/assets/estate_probate_sales_hero_clean.webp"
-              alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home"
-              className="w-full h-auto object-cover"
-              loading="eager"
-              fetchPriority="high"
-            />
+            <ParallaxHero src="/assets/estate_probate_sales_hero_clean.webp" alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home" />
           </div>
           <HeroBandTitle as="h2">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
         </section>

@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import iconResources from "@/assets/icons/probate-estate-resources-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import { Button } from "@/components/ui/button";
+import ParallaxHero from "@/components/ParallaxHero";
 
 interface Article {
   title: string;
@@ -251,13 +252,7 @@ const GuidesAndResources = () => {
         <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <img
-                src={iconResources}
-                alt=""
-                aria-hidden="true"
-                className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4"
-                loading="eager"
-              />
+              <ParallaxHero src={iconResources} alt="" />
               <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
                 Guides & Resources
               </h1>
