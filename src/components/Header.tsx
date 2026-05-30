@@ -199,6 +199,43 @@ const Header = () => {
         background: rgba(201, 168, 76, 0.12);
         border-color: ${GOLD};
       }
+
+      /* === Cascading bar animation === */
+      .rpp-cascade-bar {
+        transform-origin: left center;
+        opacity: 0;
+        width: var(--cascade-w, 40%);
+        transform: translateY(-8px);
+        transition:
+          opacity 260ms cubic-bezier(0.22, 1, 0.36, 1),
+          transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+          width 360ms cubic-bezier(0.22, 1, 0.36, 1);
+        transition-delay: var(--cascade-delay-out, 0ms);
+        will-change: opacity, transform, width;
+      }
+      .rpp-drawer-open .rpp-cascade-bar {
+        opacity: 1;
+        transform: translateY(0);
+        width: var(--cascade-w, 40%);
+        transition-delay: var(--cascade-delay-in, 0ms);
+      }
+      /* After all bars have landed, settle to full width */
+      .rpp-drawer-settled .rpp-cascade-bar {
+        width: 100% !important;
+        transition:
+          width 280ms cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 200ms ease,
+          transform 200ms ease;
+        transition-delay: 0ms !important;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .rpp-cascade-bar {
+          width: 100% !important;
+          transition: opacity 180ms ease !important;
+          transition-delay: 0ms !important;
+          transform: none !important;
+        }
+      }
     `;
     document.head.appendChild(style);
   }, []);
