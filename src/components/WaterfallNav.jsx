@@ -87,7 +87,6 @@ const RIGHT_GROUPS = [
 
 const PANEL_FADE_MS = 500;
 const PANEL_HOVER_CLOSE_DELAY = 600;
-const GROUP_HOVER_CLOSE_DELAY = 400;
 
 const CSS = `
   .wf-wrap {
@@ -255,7 +254,7 @@ const CSS = `
   .wf-items {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.35s cubic-bezier(0.22,1,0.36,1);
+    transition: max-height 0.4s cubic-bezier(0.22,1,0.36,1);
   }
   .wf-items-open { max-height: 400px; }
 
@@ -315,9 +314,8 @@ const CSS = `
   }
 `;
 
-function AccordionGroup({ group, isOpen, onOpen, onClose, onNavigate }) {
+function AccordionGroup({ group, isOpen, onMouseEnter, onNavigate }) {
   const itemRefs = useRef([]);
-  const hoverTimer = useRef(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -337,27 +335,12 @@ function AccordionGroup({ group, isOpen, onOpen, onClose, onNavigate }) {
     }
   }, [isOpen]);
 
-  const handleMouseEnter = () => {
-    if (hoverTimer.current) clearTimeout(hoverTimer.current);
-    onOpen();
-  };
-
-  const handleMouseLeave = () => {
-    hoverTimer.current = setTimeout(() => {
-      onClose();
-    }, GROUP_HOVER_CLOSE_DELAY);
-  };
-
   return (
-    <div
-      className="wf-group"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="wf-group" onMouseEnter={onMouseEnter}>
       <button
         className={`wf-group-btn${isOpen ? ' wf-open' : ''}`}
         aria-expanded={isOpen}
-        onClick={onOpen}
+        onClick={onMouseEnter}
       >
         <span>{group.label}</span>
         <span className="wf-chevron" aria-hidden="true">▾</span>
@@ -378,7 +361,7 @@ function AccordionGroup({ group, isOpen, onOpen, onClose, onNavigate }) {
   );
 }
 
-function NavColumn({ groups, openIndex, onOpen, onClose, onNavigate }) {
+function NavColumn({ groups, openIndex, onGroupEnter, onNavigate }) {
   return (
     <div className="wf-col">
       {groups.map((group, i) => (
@@ -387,8 +370,7 @@ function NavColumn({ groups, openIndex, onOpen, onClose, onNavigate }) {
           <AccordionGroup
             group={group}
             isOpen={openIndex === i}
-            onOpen={() => onOpen(i)}
-            onClose={() => onClose(i)}
+            onMouseEnter={() => onGroupEnter(i)}
             onNavigate={onNavigate}
           />
         </div>
@@ -423,6 +405,14 @@ export default function WaterfallNav() {
     }, PANEL_FADE_MS);
   };
 
+  const cancelClose = () => {
+    if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
+  };
+
+  const scheduleClose = () => {
+    hoverTimerRef.current = setTimeout(closePanel, PANEL_HOVER_CLOSE_DELAY);
+  };
+
   const handleNavigate = (href) => {
     setOpen(false);
     setExiting(false);
@@ -451,9 +441,7 @@ export default function WaterfallNav() {
       <div
         className="wf-wrap"
         onMouseEnter={openPanel}
-        onMouseLeave={() => {
-          hoverTimerRef.current = setTimeout(closePanel, PANEL_HOVER_CLOSE_DELAY);
-        }}
+        onMouseLeave={scheduleClose}
       >
         <button
           className="wf-trigger"
@@ -478,12 +466,8 @@ export default function WaterfallNav() {
             className={`wf-panel${exiting ? ' wf-panel-exiting' : ' wf-panel-entering'}`}
             role="dialog"
             aria-label="Site navigation"
-            onMouseEnter={() => {
-              if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
-            }}
-            onMouseLeave={() => {
-              hoverTimerRef.current = setTimeout(closePanel, PANEL_HOVER_CLOSE_DELAY);
-            }}
+            onMouseEnter={cancelClose}
+            onMouseLeave={scheduleClose}
           >
             <div className="wf-panel-header">
               <span className="wf-what-label">What are you looking for?</span>
@@ -494,15 +478,13 @@ export default function WaterfallNav() {
               <NavColumn
                 groups={LEFT_GROUPS}
                 openIndex={leftOpen}
-                onOpen={(i) => setLeftOpen(i)}
-                onClose={() => setLeftOpen(null)}
+                onGroupEnter={(i) => setLeftOpen(i)}
                 onNavigate={handleNavigate}
               />
               <NavColumn
                 groups={RIGHT_GROUPS}
                 openIndex={rightOpen}
-                onOpen={(i) => setRightOpen(i)}
-                onClose={() => setRightOpen(null)}
+                onGroupEnter={(i) => setRightOpen(i)}
                 onNavigate={handleNavigate}
               />
             </div>
