@@ -5,7 +5,7 @@ const ARTICLES = [
   {
     title: "The Silver Tsunami",
     href: "/articles/silver-tsunami",
-    img: "/articles/images/The_Silver_Tsunami.png",
+    img: "/The_Silver_Tsunami.png",
     category: "Demographics",
     summary: "The surge of seniors is reshaping housing, care, and the future of our communities.",
   },
