@@ -152,12 +152,7 @@ main,
    below it — top gap matches the 0px bottom gap above the blue band. */
 #main-content {
   margin-top: 0 !important;
-  padding-top: 60px !important;
-}
-@media (max-width: 768px) {
-  #main-content {
-    padding-top: 96px !important;
-  }
+  padding-top: 0 !important;
 }
 
 /* First hero section sits directly under the header — kill the global
