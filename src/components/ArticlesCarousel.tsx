@@ -75,8 +75,9 @@ export default function ArticlesCarousel() {
     };
   }, [next, paused]);
 
-  // Card width as percentage of container
-  const cardWidthPct = (100 - CARD_GAP * 2) / 3;
+  // Card width: container is 960px, 3 cards with 2 gaps of 24px each
+  // (960 - 48) / 3 = 304px per card
+  const CARD_W = 304;
 
   return (
     <section style={{ background: "#f7f4ef", padding: "64px 0 72px", fontFamily: "Georgia, serif" }}>
@@ -116,7 +117,7 @@ export default function ArticlesCarousel() {
           style={{
             display: "flex",
             gap: CARD_GAP,
-            transform: `translateX(calc(-${pos} * (${cardWidthPct}% + ${CARD_GAP}px)))`,
+            transform: `translateX(calc(-${pos} * ${CARD_W + CARD_GAP}px))`,
             transition: transitioning ? `transform ${SLIDE_MS}ms cubic-bezier(0.16, 1, 0.3, 1)` : "none",
             willChange: "transform",
           }}
@@ -134,7 +135,7 @@ export default function ArticlesCarousel() {
                 borderRadius: 4,
                 overflow: "hidden",
                 flexShrink: 0,
-                width: `${cardWidthPct}%`,
+                width: `${CARD_W}px`,
                 aspectRatio: "3 / 4",
                 boxShadow: hovered === i ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
                 transform: hovered === i ? "translateY(-6px)" : "translateY(0)",
