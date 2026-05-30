@@ -151,7 +151,7 @@ const Header = () => {
               overflowX: "auto",
             }}
           >
-            {TOP_LINKS.map((item) => (
+            {TOP_LINKS.filter((i) => !(i.href === "/" && pathname === "/")).map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
