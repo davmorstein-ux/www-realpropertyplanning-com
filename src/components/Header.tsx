@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import WaterfallNav from "./WaterfallNav";
 
@@ -19,8 +19,6 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false,
   );
-  const [headerH, setHeaderH] = useState<number>(isMobile ? 92 : 70);
-  const headerRef = useRef<HTMLElement | null>(null);
 
   const { pathname } = useLocation();
 
@@ -30,18 +28,6 @@ const Header = () => {
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
-
-  useEffect(() => {
-    if (!headerRef.current) return;
-    const el = headerRef.current;
-    const measure = () => setHeaderH(el.getBoundingClientRect().height);
-    measure();
-    const ro = new ResizeObserver(measure);
-    ro.observe(el);
-    window.addEventListener("resize", measure);
-    return () => { ro.disconnect(); window.removeEventListener("resize", measure); };
-  }, []);
-
 
   useEffect(() => {
     const id = "rpp-preview-fonts";
@@ -102,16 +88,15 @@ const Header = () => {
       </a>
 
       <header
-        ref={headerRef}
         data-nosnippet="true"
         style={{
           position: "fixed",
           top: 0,
           left: 0,
-          width: "100%",
+          right: 0,
           zIndex: 50,
           margin: 0,
-          padding: isMobile ? "6px 16px" : "6px 32px 4px",
+          padding: isMobile ? "0 16px 6px" : "0 32px 4px",
           backgroundColor: "rgba(8, 13, 25, 0.92)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
@@ -208,7 +193,6 @@ const Header = () => {
         )}
       </header>
 
-      <div style={{ height: headerH, margin: 0, padding: 0 }} aria-hidden="true" />
     </>
   );
 };

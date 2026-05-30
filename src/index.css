@@ -126,6 +126,9 @@ nav button[aria-haspopup] svg, nav [class*="dropdown"] button svg {
 html,
 body {
   overflow-x: hidden;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 /* Reserve space at the bottom of every page for the floating SiteBottomNav pill (70px + 14px gap) */
@@ -136,6 +139,24 @@ body {
   body {
     padding-bottom: calc(90px + env(safe-area-inset-bottom));
   }
+}
+
+main,
+#root,
+#main-content,
+#root > div {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+main > section:first-child,
+#main-content > section:first-child,
+#main-content > div:first-child,
+main > div:first-child,
+#main-content > *:first-child,
+#main-content > *:first-child > section:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 @layer base {
