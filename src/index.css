@@ -166,12 +166,6 @@ main,
   padding-bottom: 0 !important;
 }
 
-.no-parallax-crop {
-  width: 100% !important;
-  height: auto !important;
-}
-
-
 @layer base {
   :root {
     /* Premium Estate Advisory Palette */

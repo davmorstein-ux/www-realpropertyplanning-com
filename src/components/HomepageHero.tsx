@@ -104,51 +104,51 @@ const HomepageHero = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Parallax disabled — the hero image is now static. The "content peels
-  // over the photograph" effect is produced by .page-content-overlay
-  // scrolling up over a position:sticky hero (see index.css).
-
-
   const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
   const fontHead = { fontFamily: "'DM Sans', 'DM Sans', sans-serif" };
 
   return (
-    <>
+    <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F", margin: 0, padding: 0 }}>
+
+
       {/* ===== Hero ===== */}
       <style>{`@keyframes rppHeroFadeIn { from { opacity: 0 } to { opacity: 1 } }`}</style>
-      <div>
-        <section
-          className="hero-panorama"
+      <section
+        style={{
+          position: "relative",
+          width: "100%",
+          background: "transparent",
+          overflow: "hidden",
+          margin: 0,
+          padding: 0,
+        }}
+      >
+        <img
+          src="/homepage-hero.webp"
+          alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
           style={{
-            ...fontBody,
-            position: "relative",
+            display: "block",
             width: "100%",
-            overflow: "hidden",
+            height: "auto",
+            minHeight: isMobile ? 200 : undefined,
+            objectFit: "cover",
+            objectPosition: "left center",
             background: "transparent",
-            color: "#1E3A5F",
+            opacity: 0,
+            animation: "rppHeroFadeIn 1.2s ease forwards",
             margin: 0,
             padding: 0,
           }}
-        >
-          <img
-            src="/homepage-hero.webp"
-            alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
-            className="no-parallax-crop"
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-            style={{
-              display: "block",
-              background: "transparent",
-              opacity: 0,
-              animation: "rppHeroFadeIn 1.2s ease forwards",
-              margin: 0,
-              padding: 0,
-            }}
-          />
-        </section>
-      </div>
-    </>
+        />
+
+      </section>
+      <HeroBandTitle>
+        Welcome to Real Property Planning
+      </HeroBandTitle>
+    </div>
   );
 };
 
