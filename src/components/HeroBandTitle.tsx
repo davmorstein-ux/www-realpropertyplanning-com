@@ -70,10 +70,8 @@ const HeroBandTitle = ({
     textAlign: "center" as const,
   };
 
-  useEffect(() => {
-    if (bare) return;
-    return scheduleHeroAutoScroll();
-  }, [bare]);
+  // Auto-scroll removed: all scrolling is manual.
+
 
   const titleEl = (
     <Tag className={`hero-band-title ${className}`.trim()} style={titleStyle}>
