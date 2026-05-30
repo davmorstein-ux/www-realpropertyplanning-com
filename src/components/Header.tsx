@@ -87,13 +87,21 @@ const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 const NAVY = "#1B2B4B";
 const GOLD = "#c9a84c";
 
+// Cascade timing
+const CASCADE_STEP_MS = 28; // delay between consecutive bars
+const CASCADE_BAR_MS = 280; // per-bar transition duration
+const HOVER_CLOSE_DELAY_MS = 180;
+
 const Header = () => {
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false,
   );
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [settled, setSettled] = useState(false);
   const { pathname } = useLocation();
   const drawerRef = useRef<HTMLDivElement>(null);
+  const closeTimerRef = useRef<number | null>(null);
+  const settleTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 769);
@@ -127,6 +135,47 @@ const Header = () => {
       };
     }
   }, [drawerOpen]);
+
+  // Total rows for the cascade (group label + each item)
+  const totalRows = DRAWER_GROUPS.reduce((n, g) => n + 1 + g.items.length, 0);
+
+  // After all bars have cascaded in, flip to "settled" so widths equalize
+  useEffect(() => {
+    if (settleTimerRef.current) {
+      window.clearTimeout(settleTimerRef.current);
+      settleTimerRef.current = null;
+    }
+    if (drawerOpen) {
+      const totalMs = totalRows * CASCADE_STEP_MS + CASCADE_BAR_MS + 60;
+      settleTimerRef.current = window.setTimeout(() => setSettled(true), totalMs);
+    } else {
+      setSettled(false);
+    }
+    return () => {
+      if (settleTimerRef.current) window.clearTimeout(settleTimerRef.current);
+    };
+  }, [drawerOpen, totalRows]);
+
+  // Hover intent helpers (desktop only)
+  const cancelClose = () => {
+    if (closeTimerRef.current) {
+      window.clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+  const openOnHover = () => {
+    if (isMobile) return;
+    cancelClose();
+    setDrawerOpen(true);
+  };
+  const scheduleClose = () => {
+    if (isMobile) return;
+    cancelClose();
+    closeTimerRef.current = window.setTimeout(
+      () => setDrawerOpen(false),
+      HOVER_CLOSE_DELAY_MS,
+    );
+  };
 
   useEffect(() => {
     const id = "rpp-preview-fonts";
@@ -199,6 +248,43 @@ const Header = () => {
         background: rgba(201, 168, 76, 0.12);
         border-color: ${GOLD};
       }
+
+      /* === Cascading bar animation === */
+      .rpp-cascade-bar {
+        transform-origin: left center;
+        opacity: 0;
+        width: var(--cascade-w, 40%);
+        transform: translateY(-8px);
+        transition:
+          opacity 260ms cubic-bezier(0.22, 1, 0.36, 1),
+          transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+          width 360ms cubic-bezier(0.22, 1, 0.36, 1);
+        transition-delay: var(--cascade-delay-out, 0ms);
+        will-change: opacity, transform, width;
+      }
+      .rpp-drawer-open .rpp-cascade-bar {
+        opacity: 1;
+        transform: translateY(0);
+        width: var(--cascade-w, 40%);
+        transition-delay: var(--cascade-delay-in, 0ms);
+      }
+      /* After all bars have landed, settle to full width */
+      .rpp-drawer-settled .rpp-cascade-bar {
+        width: 100% !important;
+        transition:
+          width 280ms cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 200ms ease,
+          transform 200ms ease;
+        transition-delay: 0ms !important;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .rpp-cascade-bar {
+          width: 100% !important;
+          transition: opacity 180ms ease !important;
+          transition-delay: 0ms !important;
+          transform: none !important;
+        }
+      }
     `;
     document.head.appendChild(style);
   }, []);
@@ -244,6 +330,9 @@ const Header = () => {
               aria-label={drawerOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={drawerOpen}
               onClick={() => setDrawerOpen((v) => !v)}
+              onMouseEnter={openOnHover}
+              onMouseLeave={scheduleClose}
+              onFocus={openOnHover}
               className="rpp-hamburger"
               style={{ fontSize: 22, height: 38, width: 44 }}
             >
@@ -340,6 +429,9 @@ const Header = () => {
         role="dialog"
         aria-modal="true"
         aria-label="Site navigation"
+        onMouseEnter={openOnHover}
+        onMouseLeave={scheduleClose}
+        className={`${drawerOpen ? "rpp-drawer-open" : ""}${settled ? " rpp-drawer-settled" : ""}`}
         style={{
           position: "fixed",
           top: 0,
@@ -402,35 +494,64 @@ const Header = () => {
         </div>
 
         <nav aria-label="Drawer navigation" style={{ padding: "14px 0 32px" }}>
-          {DRAWER_GROUPS.map((group) => (
-            <div key={group.label} style={{ marginBottom: 18 }}>
-              <div
-                style={{
-                  color: GOLD,
-                  fontSize: 15,
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  padding: "8px 18px 6px",
-                }}
-              >
-                {group.label}
-              </div>
-              <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-                {group.items.map((item) => (
-                  <li key={`${group.label}-${item.href}-${item.label}`}>
-                    <Link
-                      to={item.href}
-                      onClick={() => setDrawerOpen(false)}
-                      className={`rpp-drawer-link${pathname === item.href ? " is-active" : ""}`}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {(() => {
+            // Flat row counter so the cascade waterfall ignores group boundaries
+            let rowIdx = -1;
+            const widthFor = (i: number) => {
+              // Build-up widths: thin/narrow at top, progressively wider
+              const ramp = [42, 52, 62, 72, 82, 90, 95];
+              return `${ramp[Math.min(i, ramp.length - 1)]}%`;
+            };
+            const barStyle = (i: number): React.CSSProperties => ({
+              ["--cascade-w" as never]: widthFor(i),
+              ["--cascade-delay-in" as never]: `${i * CASCADE_STEP_MS}ms`,
+              ["--cascade-delay-out" as never]: `${(totalRows - 1 - i) * CASCADE_STEP_MS}ms`,
+            });
+
+            return DRAWER_GROUPS.map((group) => {
+              rowIdx += 1;
+              const labelIdx = rowIdx;
+              return (
+                <div key={group.label} style={{ marginBottom: 18 }}>
+                  <div
+                    className="rpp-cascade-bar"
+                    style={{
+                      ...barStyle(labelIdx),
+                      color: GOLD,
+                      fontSize: 15,
+                      fontWeight: 700,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      padding: "8px 18px 6px",
+                    }}
+                  >
+                    {group.label}
+                  </div>
+                  <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+                    {group.items.map((item) => {
+                      rowIdx += 1;
+                      const itemIdx = rowIdx;
+                      return (
+                        <li
+                          key={`${group.label}-${item.href}-${item.label}`}
+                          className="rpp-cascade-bar"
+                          style={barStyle(itemIdx)}
+                        >
+                          <Link
+                            to={item.href}
+                            onClick={() => setDrawerOpen(false)}
+                            className={`rpp-drawer-link${pathname === item.href ? " is-active" : ""}`}
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              );
+            });
+          })()}
         </nav>
       </aside>
     </>
