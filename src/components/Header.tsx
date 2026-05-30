@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import WaterfallNav from "./WaterfallNav";
 
-
 const TOP_LINKS = [
   { label: "Home", href: "/" },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
@@ -12,16 +11,10 @@ const TOP_LINKS = [
   { label: "Contact", href: "/contact" },
 ];
 
-
-const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
-const GOLD = "#c9a84c";
+const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
 
 const Header = () => {
-  const [isMobile, setIsMobile] = useState(() =>
-    typeof window !== "undefined" ? window.innerWidth < 769 : false,
-  );
-  const [scrolled, setScrolled] = useState(false);
-
+  const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -32,66 +25,43 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Pages without a hero image — nav should be solid from the start
-  const NON_HERO_ROUTES = new Set<string>([
-    "/disclaimer",
-    "/sitemap",
-    "/terminology",
-    "/faq",
-    "/search",
-    "/404",
-  ]);
-  const hasHero = !NON_HERO_ROUTES.has(pathname);
-  const useSolid = scrolled || !hasHero;
-  const headerBackground = useSolid
-    ? "rgba(10,22,40,1)"
-    : "linear-gradient(to bottom, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0) 100%)";
-
-  useEffect(() => {
-    const id = "rpp-preview-fonts";
+    // Load Raleway to match M≡NU button
+    const id = "rpp-raleway-font";
     if (!document.getElementById(id)) {
       const link = document.createElement("link");
       link.id = id;
       link.rel = "stylesheet";
-      link.href =
-        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap";
+      link.href = "https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap";
       document.head.appendChild(link);
     }
   }, []);
 
   useEffect(() => {
-    const id = "rpp-toplink-styles-v5";
+    const id = "rpp-toplink-styles-v4";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
     style.id = id;
     style.innerHTML = `
       .rpp-top-link {
-        color: #ffffff;
+        color: rgba(255,255,255,0.92);
         text-decoration: none;
+        font-family: 'Raleway', 'Gill Sans', 'Century Gothic', sans-serif;
         font-size: 13px;
-        font-weight: 300;
-        letter-spacing: 0.08em;
+        font-weight: 200;
+        letter-spacing: 0.18em;
         text-transform: uppercase;
-        font-family: Georgia, serif;
         padding: 6px 4px;
         border-bottom: 1px solid transparent;
-        transition: opacity 0.3s ease, border-color 0.3s ease;
+        transition: color 0.18s ease, border-color 0.18s ease;
         white-space: nowrap;
         display: inline-flex;
         align-items: center;
       }
-      .rpp-top-link:hover { opacity: 0.7; }
-      .rpp-top-link.is-active { border-bottom-color: ${GOLD}; }
+      .rpp-top-link:hover { color: #E8C97A; }
+      .rpp-top-link.is-active { border-bottom-color: #E8C97A; }
     `;
     document.head.appendChild(style);
   }, []);
-
 
   return (
     <>
@@ -112,24 +82,15 @@ const Header = () => {
           zIndex: 50,
           margin: 0,
           padding: isMobile ? "0 16px 6px" : "0 32px 4px",
-          background: headerBackground,
-          backdropFilter: useSolid ? "blur(10px)" : "none",
-          WebkitBackdropFilter: useSolid ? "blur(10px)" : "none",
-          borderBottom: useSolid ? "1px solid rgba(255,255,255,0.08)" : "1px solid transparent",
-          transition: "background 400ms ease, border-color 400ms ease, backdrop-filter 400ms ease",
-          ...fontBody,
+          backgroundColor: "rgba(8, 13, 25, 0.92)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          ...NAV_FONT,
           color: "#fff",
         }}
       >
-
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: 12,
-          }}
-        >
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
           {/* LEFT: WaterfallNav + logo */}
           <div style={{ display: "flex", alignItems: "center", gap: 14, flexShrink: 0 }}>
             <WaterfallNav />
@@ -158,25 +119,25 @@ const Header = () => {
             <a
               href="tel:2069003015"
               style={{
+                ...NAV_FONT,
                 color: "#fff",
                 background: "#1a5fa8",
-                padding: isMobile ? "6px 10px" : "4px 12px",
+                padding: isMobile ? "6px 10px" : "4px 14px",
                 borderRadius: 6,
-                fontWeight: 400,
+                fontWeight: 300,
                 fontSize: isMobile ? 11 : 13,
-                letterSpacing: "0.16em",
+                letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                fontFamily: "Georgia, serif",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
               }}
             >
               {isMobile ? "CALL" : "(206) 900-3015"}
             </a>
-
           </div>
         </div>
 
+        {/* Mobile nav links */}
         {isMobile && (
           <div
             style={{
@@ -193,17 +154,14 @@ const Header = () => {
                 key={item.href}
                 to={item.href}
                 className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
-                style={{ fontSize: 12 }}
+                style={{ fontSize: 11 }}
               >
                 {item.label}
-
               </Link>
             ))}
-
           </div>
         )}
       </header>
-
     </>
   );
 };
