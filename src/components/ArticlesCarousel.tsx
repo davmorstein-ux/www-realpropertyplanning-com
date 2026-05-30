@@ -5,70 +5,70 @@ const ARTICLES = [
   {
     title: "The Silver Tsunami",
     href: "/articles/silver-tsunami",
-    img: "/images/The_Silver_Tsunami.png",
+    img: "/articles/images/The_Silver_Tsunami.png",
     category: "Demographics",
     summary: "The surge of seniors is reshaping housing, care, and the future of our communities.",
   },
   {
     title: "The Senior Housing Guide",
     href: "/articles/senior-housing-guide",
-    img: "/images/The_Senior_Housing_Guide.png",
+    img: "/articles/images/The_Senior_Housing_Guide.png",
     category: "Senior Housing",
     summary: "Your roadmap to finding the right place, the right care, and peace of mind.",
   },
   {
     title: "Senior Housing Options",
     href: "/articles/senior-housing-options",
-    img: "/images/Senior_Housing_Options.png",
+    img: "/articles/images/Senior_Housing_Options.png",
     category: "Senior Housing",
     summary: "Your roadmap to informed housing and care decisions.",
   },
   {
     title: "Senior Housing Costs",
     href: "/articles/senior-housing-costs",
-    img: "/images/Senior_Housing_Costs.png",
+    img: "/articles/images/Senior_Housing_Costs.png",
     category: "Cost Guide",
     summary: "Affordability is slipping away — understand the real costs before making a decision.",
   },
   {
     title: "How to Choose Senior Housing",
     href: "/articles/how-to-choose-senior-housing",
-    img: "/images/How_to_Choose_Senior_Housing.png",
+    img: "/articles/images/How_to_Choose_Senior_Housing.png",
     category: "Planning",
     summary: "A step-by-step guide to finding the right home, care, and lifestyle.",
   },
   {
     title: "Independent Living Costs",
     href: "/articles/independent-living-costs",
-    img: "/images/Independent_Living_Costs.png",
+    img: "/articles/images/Independent_Living_Costs.png",
     category: "Cost Guide",
     summary: "Understand the expenses, plan wisely, and enjoy the freedom you've earned.",
   },
   {
     title: "Memory Care Costs",
     href: "/articles/memory-care-costs",
-    img: "/images/Memory_Care_Costs.png",
+    img: "/articles/images/Memory_Care_Costs.png",
     category: "Cost Guide",
     summary: "Understand the costs, plan ahead, and invest in your loved one's future.",
   },
   {
     title: "CCRC Costs",
     href: "/articles/ccrc-costs",
-    img: "/images/CCRC_Costs.png",
+    img: "/articles/images/CCRC_Costs.png",
     category: "Cost Guide",
     summary: "Understand today. Plan wisely. Live well tomorrow.",
   },
   {
     title: "Affordable Senior Housing",
     href: "/articles/affordable-senior-housing",
-    img: "/images/Affordable_Senior_Housing.png",
+    img: "/articles/images/Affordable_Senior_Housing.png",
     category: "Affordability",
     summary: "Smart choices. Stable costs. Better living for tomorrow.",
   },
   {
     title: "Aging in Place With Support",
     href: "/articles/aging-in-place",
-    img: "/images/Aging_in_Place_With_Support.png",
+    img: "/articles/images/Aging_in_Place_With_Support.png",
     category: "Care Options",
     summary: "Live where you love. Get the support you need. Enjoy peace of mind.",
   },
@@ -137,7 +137,7 @@ export default function ArticlesCarousel() {
 
       {/* Carousel */}
       <div
-        style={{ overflow: "hidden", padding: "8px 40px 16px" }}
+        style={{ overflow: "hidden", padding: "8px 60px 16px" }}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -164,7 +164,8 @@ export default function ArticlesCarousel() {
                 overflow: "hidden",
                 flexShrink: 0,
                 width: "calc((100% - 48px) / 3)",
-                aspectRatio: "2 / 3",
+                maxWidth: 280,
+                aspectRatio: "3 / 4",
                 boxShadow: hoveredCard === i ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
                 transform: hoveredCard === i ? "translateY(-6px)" : "translateY(0)",
                 transition: "box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.22,1,0.36,1)",
