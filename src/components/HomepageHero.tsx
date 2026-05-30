@@ -104,6 +104,33 @@ const HomepageHero = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Parallax: translateY only — never crop, zoom, or resize the image.
+  // We write the offset to a CSS variable on the .hero-panorama wrapper.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const wrapper = document.querySelector<HTMLElement>(".hero-panorama");
+    if (!wrapper) return;
+    let raf = 0;
+    const update = () => {
+      const y = window.scrollY || 0;
+      // Subtle drift: 15% of scroll, capped so the image never exposes its top/bottom edge.
+      const offset = Math.max(-60, Math.min(0, -y * 0.15));
+      wrapper.style.setProperty("--parallax-offset", `${offset}px`);
+      raf = 0;
+    };
+    const onScroll = () => {
+      if (raf) return;
+      raf = window.requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
   const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
   const fontHead = { fontFamily: "'DM Sans', 'DM Sans', sans-serif" };
 
