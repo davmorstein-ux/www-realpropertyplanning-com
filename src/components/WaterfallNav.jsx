@@ -70,15 +70,8 @@ const RIGHT_GROUPS = [
     href: "/articles/silver-tsunami",
     items: [
       { name: "The Silver Tsunami", href: "/articles/silver-tsunami" },
-      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { name: "Senior Housing Options", href: "/articles/senior-housing-options" },
-      { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
       { name: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
-      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
-      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
-      { name: "CCRC Costs", href: "/articles/ccrc-costs" },
       { name: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
-      { name: "Aging in Place With Support", href: "/articles/aging-in-place" },
     ],
   },
   {
@@ -459,12 +452,15 @@ export default function WaterfallNav() {
           onClick={openPanel}
           title="Menu"
         >
-          <span className="wf-icon">
-            <span className="wf-ln wf-ln-1" />
-            <span className="wf-ln wf-ln-2" />
-            <span className="wf-ln wf-ln-3" />
+          <span className="wf-menu-word">
+            <span className="wf-menu-letter">M</span>
+            <span className="wf-menu-e">
+              <span />
+              <span />
+              <span />
+            </span>
+            <span className="wf-menu-letter">NU</span>
           </span>
-          <span className="wf-menu-label">Menu</span>
         </button>
       </div>
 
