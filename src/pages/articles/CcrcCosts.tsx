@@ -12,6 +12,8 @@ const contentWrap = "container px-6 lg:px-8";
 const proseWrap = "max-w-3xl mx-auto";
 const h2Class = "font-serif text-2xl md:text-3xl font-semibold text-foreground mt-10 mb-5";
 const pClass = "text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-5 last:mb-0";
+const leadClass = "text-foreground text-[19px] md:text-xl leading-[1.75] mb-6 font-medium";
+const hrClass = "my-10 border-border/60";
 const inlineLink = "text-gold font-semibold underline underline-offset-2 hover:text-gold/80 transition-colors";
 
 const relatedResources = [
@@ -60,102 +62,179 @@ const CcrcCosts = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <h2 className={h2Class + " mt-0"}>
-                Continuing Care Retirement Communities Costs: What to Expect
-              </h2>
+              <h2 className={h2Class + " mt-0"}>CCRC Costs: What You're Really Buying</h2>
+              <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
+                Continuing care retirement communities are expensive. Here's why some families consider them the smartest financial decision they ever made — and why others don't.
+              </p>
+              <hr className={hrClass} />
+
+              <p className={leadClass}>
+                The first time most people hear the entrance fee for a continuing care retirement community, they go quiet.
+              </p>
               <p className={pClass}>
-                Continuing Care Retirement Communities, often called CCRCs, can be one of the most expensive senior housing options because they combine housing with access to multiple levels of care. The cost structure usually includes a large upfront fee, a monthly service fee, and possible additional charges depending on the contract and level of care needed.
+                It's a number that tends to land hard. Large enough to feel alarming, unfamiliar enough to be difficult to evaluate. Is this reasonable? Is this worth it? What exactly are we paying for?
+              </p>
+              <p className={pClass}>
+                These are the right questions. And the answers, it turns out, depend entirely on what a family values — and how honestly they're willing to think about the future.
               </p>
 
-              <h2 className={h2Class}>What a CCRC Is</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>What a CCRC Actually Is</h2>
+              <p className={pClass}>A continuing care retirement community is, at its core, a promise.</p>
               <p className={pClass}>
-                A CCRC is designed for older adults who want to move into one community and have access to different levels of support as their needs change. Residents often begin in independent living and can later transition to assisted living or skilled nursing care without having to move to a completely different campus.
+                The promise is this: move in while you're healthy and independent, and we will be here for every stage of what comes after. Independent living today. Assisted living if you need it. Skilled nursing if it comes to that. All on the same campus, with the same staff who know you, without the upheaval of another move.
               </p>
               <p className={pClass}>
-                This option appeals to people who want long-term stability and a plan for the future. It can also be useful for couples who want to reduce the risk of a later move if one spouse's health declines. A{" "}
-                <Link to="/senior-living-advisors" className={inlineLink}>Senior Living Advisor</Link>{" "}
-                can help families identify and compare CCRC options in their area.
+                For some older adults — particularly those who have watched a parent or friend go through the disorienting process of moving from one facility to another as their needs escalated — that promise has enormous value. For others, paying a large entrance fee for care they may never need feels like the wrong bet.
+              </p>
+              <p className={pClass}>
+                Both perspectives are legitimate. The question is which one reflects your situation.
               </p>
 
-              <h2 className={h2Class}>Typical Cost Structure</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>The Two-Part Cost Structure</h2>
               <p className={pClass}>
-                CCRCs usually have two main parts to the price: an entrance fee and ongoing monthly fees. The entrance fee can be substantial, and monthly costs can also be higher than standard senior living because they help cover the services and care available on site.
+                CCRCs charge in a way that is different from every other senior housing option, which is part of what makes them confusing to evaluate.
               </p>
               <p className={pClass}>
-                Some communities refund part of the entrance fee under certain contract terms, while others do not. Because contracts vary widely, families need to review the fine print carefully before making any commitment. A{" "}
-                <Link to="/professionals/financial-planners" className={inlineLink}>financial planner or advisor</Link>{" "}
-                can help families evaluate whether the cost structure is sustainable over the long term.
+                <strong>The entrance fee</strong> is a one-time upfront payment, paid when a resident moves in. It can range from modest to very substantial depending on the community, the contract type, and the market. What it buys varies: in some contracts, it secures access to the full continuum of care at no additional charge. In others, it functions more like a deposit, partially or fully refundable under certain conditions.
+              </p>
+              <p className={pClass}>
+                <strong>The monthly fee</strong> covers ongoing expenses — housing, meals, housekeeping, maintenance, utilities, activities, and typically access to community amenities. Depending on the contract, it may also cover future care needs up to a certain level.
+              </p>
+              <p className={pClass}>
+                The combination of these two figures is what makes CCRCs appear expensive at first glance. But the comparison only makes sense when set against the alternative: paying separately for independent living, then assisted living, then memory care or skilled nursing — each transition carrying its own costs, its own disruption, and its own uncertainty.
               </p>
 
-              <h2 className={h2Class}>What the Monthly Fee May Include</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>The Three Types of CCRC Contracts</h2>
               <p className={pClass}>
-                The monthly fee in a CCRC often covers housing, meals, housekeeping, maintenance, activities, transportation, and access to community amenities. In some communities, a portion of the fee also helps support future care needs or long-term care guarantees.
+                This is the detail most families don't know to ask about — and it matters more than almost anything else.
               </p>
               <p className={pClass}>
-                This can make budgeting more predictable, but it does not always mean every service is included. Residents should ask exactly what is part of the base fee and what may be billed separately.
+                <strong>Type A — Life Care or Extensive Contract:</strong> The highest entrance fee, but it includes unlimited access to higher levels of care at little or no additional monthly cost. For residents who anticipate needing significant care over time, this can be the most financially protective option.
+              </p>
+              <p className={pClass}>
+                <strong>Type B — Modified Contract:</strong> A mid-range entrance fee with a limited number of days at higher care levels included. After that, care is billed at a discounted rate. A balance between upfront cost and future coverage.
+              </p>
+              <p className={pClass}>
+                <strong>Type C — Fee-for-Service Contract:</strong> The lowest entrance fee, but care at higher levels is billed at market rates when needed. Lower initial cost, but more financial exposure if significant care is eventually required.
+              </p>
+              <p className={pClass}>
+                Understanding which contract a community offers — and what it means in practice for your specific situation — is the single most important piece of CCRC due diligence. A <Link to="/professionals/financial-planners" className={inlineLink}>financial planner</Link> who understands senior housing can help model the long-term cost of each contract type against realistic care scenarios.
               </p>
 
-              <h2 className={h2Class}>Extra Fees to Watch For</h2>
-              <p className={pClass}>
-                CCRCs may charge additional fees for higher levels of care, additional meals, special services, medication management, or a spouse who also moves in. Some communities also raise monthly fees over time, so it is important to understand how pricing changes from year to year.
-              </p>
-              <p className={pClass}>
-                A contract may also affect what happens if a resident later needs assisted living or skilled nursing. That is one of the most important parts of the decision because the future cost structure can vary significantly.
-              </p>
+              <hr className={hrClass} />
 
-              <h2 className={h2Class}>CCRC Costs for Couples</h2>
-              <p className={pClass}>
-                For couples, a CCRC can offer peace of mind because both spouses can live in the same community even if one later needs more care. However, the monthly cost may be higher for a second resident, and the level of future care included in the contract can affect long-term affordability.
-              </p>
-              <p className={pClass}>
-                Couples should ask how pricing changes if only one spouse needs assisted living or nursing care and whether the contract protects both residents in the same way. An{" "}
-                <Link to="/aging-life-care-managers" className={inlineLink}>Aging Life Care Manager</Link>{" "}
-                can help families navigate these decisions and evaluate what level of future care support each spouse is likely to need.
-              </p>
-
-              <h2 className={h2Class}>How to Compare Costs</h2>
-              <p className={pClass}>
-                The best way to compare CCRC costs is to look at the full financial picture: entrance fee, monthly fee, care coverage, refund options, and contract type. Some communities may look expensive at first but offer more predictable future costs, while others may appear cheaper upfront but charge more later for added care.
-              </p>
-              <p className={pClass}>
-                Families should also compare a CCRC against the cost of paying separately for housing and care in the future. The best choice depends on finances, health expectations, and how much certainty the older adult wants.
-              </p>
-
-              <h2 className={h2Class}>Questions to Ask Before Choosing</h2>
-              <p className={pClass}>
-                Before choosing a CCRC, ask:
-              </p>
+              <h2 className={h2Class}>What the Monthly Fee Covers</h2>
+              <p className={pClass}>The monthly fee in a CCRC typically includes:</p>
               <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
-                <li>What is the entrance fee?</li>
-                <li>Is any part of the entrance fee refundable?</li>
-                <li>What is the monthly fee?</li>
-                <li>What services are included?</li>
-                <li>What costs extra?</li>
-                <li>How are care level changes priced?</li>
-                <li>What happens if one spouse needs more care?</li>
-                <li>How often do monthly fees increase?</li>
-                <li>What type of contract does the community use?</li>
+                <li>Housing in a private apartment or cottage</li>
+                <li>Three meals per day plus snacks and dining options</li>
+                <li>Housekeeping and linen service</li>
+                <li>Building maintenance and grounds</li>
+                <li>Utilities</li>
+                <li>Transportation</li>
+                <li>Fitness and wellness programming</li>
+                <li>Social activities and community events</li>
               </ul>
               <p className={pClass}>
-                These questions help families understand both current and future costs.
+                Depending on the contract type, it may also include a portion of future care costs.
+              </p>
+              <p className={pClass}>
+                What it often does <em>not</em> include: personal care services beyond what's covered by the contract, medication management, one-on-one attention, specialized therapies, or the cost of a second resident. These need to be understood clearly before a decision is made.
               </p>
 
-              <h2 className={h2Class}>Is a CCRC Worth the Cost?</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>For Couples, the Calculus Is Different</h2>
+              <p className={pClass}>CCRCs were, in many ways, designed with couples in mind.</p>
               <p className={pClass}>
-                For some older adults, a CCRC is worth the cost because it offers stability, predictable access to care, and the possibility of aging in place within one community. That can be especially appealing for people who want to avoid the stress of another move later.
+                The scenario they address better than any other option: two partners, one of whom is healthy and independent, one of whom is beginning to need more support. In a CCRC, both can remain on the same campus — in the same community, eating in the same dining room, living near each other — even as the level of care one receives increases.
               </p>
               <p className={pClass}>
-                The value is strongest when the resident plans to stay for many years and wants a clear path through future care needs. For others, the entrance fee and ongoing costs may be too high compared with a rental-based senior living option. When the time comes to make the move, a{" "}
-                <Link to="/senior-move-managers" className={inlineLink}>Senior Move Manager</Link>{" "}
-                can help coordinate the transition smoothly.
+                That continuity has a value that is very difficult to put a dollar figure on.
+              </p>
+              <p className={pClass}>
+                What couples need to ask carefully: how does the pricing structure work when one partner transitions to a higher level of care? Does the contract cover both residents equally? What happens to the entrance fee arrangement if one partner passes away?
+              </p>
+              <p className={pClass}>
+                A <Link to="/senior-living-advisors" className={inlineLink}>senior living advisor</Link> with CCRC experience can walk couples through these specific scenarios with the communities they're considering.
               </p>
 
-              <h2 className={h2Class}>Final Thoughts</h2>
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Is the Entrance Fee Refundable?</h2>
               <p className={pClass}>
-                Continuing Care Retirement Communities can be a strong solution for older adults and couples who want long-term planning and a built-in path for future care. But because the costs can be complex, families should compare the entrance fee, monthly fees, and contract details carefully before choosing.
+                This question trips up many families, and the answer varies widely.
               </p>
               <p className={pClass}>
-                The right decision is usually the one that balances lifestyle, affordability, and future peace of mind.
+                Some communities offer a fully refundable entrance fee — effectively held in trust and returned to the resident or their estate when they leave or pass away. Others offer partial refunds on a declining scale. Others are non-refundable entirely.
+              </p>
+              <p className={pClass}>
+                The refund policy has significant implications for estate planning and for how families think about the entrance fee. A non-refundable entrance fee is, essentially, a prepayment for future care. A refundable one functions more like a security deposit.
+              </p>
+              <p className={pClass}>
+                Neither is inherently better. But families need to know which they're signing up for.
+              </p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>When a CCRC Makes Sense — and When It Doesn't</h2>
+              <p className={pClass}>A CCRC tends to be the right choice when:</p>
+              <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
+                <li>The older adult or couple values long-term certainty above most other considerations</li>
+                <li>There is genuine concern about future care needs and a desire to have them handled without additional decisions</li>
+                <li>The financial resources exist to fund the entrance fee without compromising overall security</li>
+                <li>The person is healthy enough to enter at the independent living level — most CCRCs require this</li>
+                <li>The specific community is a strong fit for lifestyle, location, and culture</li>
+              </ul>
+              <p className={pClass}>It tends to be a less compelling choice when:</p>
+              <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
+                <li>Financial resources are limited and the entrance fee creates meaningful strain</li>
+                <li>The older adult is already at a level of need that would require entering at assisted living rather than independent living</li>
+                <li>Flexibility is more important than certainty — a rental-based community offers more exit options</li>
+              </ul>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>Questions to Ask Before Committing</h2>
+              <ul className="list-disc pl-6 mb-5 text-muted-foreground text-[17px] md:text-lg leading-[1.8] space-y-2">
+                <li>What is the entrance fee, and is any portion refundable?</li>
+                <li>What type of contract does this community use — Type A, B, or C?</li>
+                <li>What is the monthly fee, and what does it include specifically?</li>
+                <li>What triggers a move to a higher level of care — and who decides?</li>
+                <li>How are monthly fees likely to increase over time?</li>
+                <li>What happens if one spouse needs a higher level of care than the other?</li>
+                <li>What are the financial health indicators of the community itself?</li>
+              </ul>
+              <p className={pClass}>
+                That last question matters. A CCRC is a long-term financial relationship with an organization. Understanding the financial stability of that organization — its occupancy rates, its reserves, its history of fee increases — is part of due diligence that shouldn't be skipped.
+              </p>
+
+              <hr className={hrClass} />
+
+              <h2 className={h2Class}>The Bottom Line</h2>
+              <p className={pClass}>
+                CCRCs are expensive. They are also, for the right family in the right situation, one of the most thoughtful ways to plan for the later chapters of a long life.
+              </p>
+              <p className={pClass}>
+                The entrance fee buys something that has real value: the removal of future uncertainty. The knowledge that wherever this goes, there is a plan already in place, a community already known, a staff already familiar with the person who lives there.
+              </p>
+              <p className={pClass}>
+                For families who have watched loved ones navigate multiple moves in their final years — each one more disorienting than the last — that removal of uncertainty is not a luxury. It is a profound act of planning.
+              </p>
+              <p className={pClass}>
+                When the time comes to make the move, a <Link to="/senior-move-managers" className={inlineLink}>senior move manager</Link> can coordinate every detail of the transition, making the beginning of this chapter feel as settled and welcoming as the promise behind it.
+              </p>
+
+              <hr className={hrClass} />
+
+              <p className={pClass}>
+                <em>Real Property Planning helps families navigate senior housing and CCRC decisions with clarity and confidence. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
               </p>
             </article>
           </div>
