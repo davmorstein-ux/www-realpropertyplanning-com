@@ -148,16 +148,15 @@ main,
   padding-top: 0 !important;
 }
 
-/* Reserve space for the fixed <Header /> so page content sits flush below it
-   with only a thin visual gap (instead of disappearing behind the header
-   or floating far below it). */
+/* Reserve space for the fixed <Header /> so the hero image sits flush
+   below it — top gap matches the 0px bottom gap above the blue band. */
 #main-content {
   margin-top: 0 !important;
-  padding-top: 72px !important;
+  padding-top: 60px !important;
 }
 @media (max-width: 768px) {
   #main-content {
-    padding-top: 110px !important;
+    padding-top: 96px !important;
   }
 }
 
