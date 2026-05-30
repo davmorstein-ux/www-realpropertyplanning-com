@@ -1,64 +1,99 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-
 /**
- * Site-wide header. Mirrors the homepage floating island nav (HomepageHero) so users
- * experience identical navigation across every page: same items, same dropdown
- * contents, same hover effects, same dropdown behavior, same CTAs, and same
- * visual treatment.
+ * Site-wide header. Clean top bar with logo, three primary links, and a
+ * gold hamburger that opens a full-height left-side drawer with grouped
+ * navigation.
  */
 type NavChild = { label: string; href: string };
-type NavItem = { label: string; href: string; children?: NavChild[] };
+type NavGroup = { label: string; items: NavChild[] };
 
-const NAV: NavItem[] = [
+const DRAWER_GROUPS: NavGroup[] = [
   {
-    label: "Articles",
-    href: "/articles/silver-tsunami",
-    children: [
-      { label: "The Silver Tsunami", href: "/articles/silver-tsunami" },
+    label: "Find a Professional",
+    items: [
+      { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
+      { label: "Certified Appraisers", href: "/real-estate-appraiser" },
+      { label: "CPAs & Accountants", href: "/professionals/cpas" },
+      { label: "Divorce Attorneys", href: "/attorneys/for-divorce-attorneys" },
+      { label: "Estate Liquidators", href: "/estate-liquidators" },
+      { label: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
+      { label: "Medicare & Benefits Advisors", href: "/medicare-providers" },
+      { label: "Mortgage Lenders", href: "/mortgage-lenders" },
+      { label: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
+      { label: "Real Estate Brokers", href: "/realtor" },
+      { label: "Senior Living Advisors", href: "/senior-living-advisors" },
+      { label: "Senior Move Managers", href: "/senior-move-managers" },
+    ],
+  },
+  {
+    label: "Senior Housing & Care",
+    items: [
+      { label: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
       { label: "Senior Housing Options", href: "/articles/senior-housing-options" },
+      { label: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
       { label: "Independent Living Costs", href: "/articles/independent-living-costs" },
       { label: "Memory Care Costs", href: "/articles/memory-care-costs" },
       { label: "CCRC Costs", href: "/articles/ccrc-costs" },
       { label: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
       { label: "Aging in Place With Support", href: "/articles/aging-in-place" },
-      { label: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
-      { label: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
       { label: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
     ],
   },
-  { label: "Probate & Estate", href: "/probate-estate-sales" },
-  { label: "Senior Transitions", href: "/senior-transitions" },
-  { label: "Property Valuation", href: "/date-of-death-valuation-property-appraisals" },
-  { label: "Services", href: "/services" },
-  { label: "Resources", href: "/resources" },
-  { label: "About", href: "/about" },
+  {
+    label: "Property, Legal & Estate",
+    items: [
+      { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
+      { label: "Senior Home Sales", href: "/senior-transitions" },
+      { label: "For Executors", href: "/executors" },
+      { label: "Building Your Trusted Professional Team", href: "/building-your-trusted-professional-team" },
+    ],
+  },
+  {
+    label: "Articles",
+    items: [
+      { label: "The Silver Tsunami", href: "/articles/silver-tsunami" },
+      { label: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
+      { label: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
+      { label: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
+      { label: "Independent Living Costs", href: "/articles/independent-living-costs" },
+      { label: "Memory Care Costs", href: "/articles/memory-care-costs" },
+      { label: "CCRC Costs", href: "/articles/ccrc-costs" },
+      { label: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
+      { label: "Aging in Place With Support", href: "/articles/aging-in-place" },
+    ],
+  },
+  {
+    label: "More",
+    items: [
+      { label: "About", href: "/about" },
+      { label: "Resources", href: "/resources" },
+      { label: "Services", href: "/services" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+];
+
+const TOP_LINKS: { label: string; href: string }[] = [
+  { label: "Home", href: "/" },
+  { label: "I Need a Professional", href: "/building-your-trusted-professional-team" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 
-const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const { pathname } = useLocation();
+// Brand colors
+const NAVY = "#1B2B4B";
+const GOLD = "#c9a84c";
 
-  const openMenu = (label: string) => {
-    if (closeTimerRef.current) {
-      clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
-    setOpenDropdown(label);
-  };
-  const scheduleClose = () => {
-    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
-    closeTimerRef.current = setTimeout(() => setOpenDropdown(null), 150);
-  };
+const Header = () => {
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth < 769 : false,
+  );
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const { pathname } = useLocation();
+  const drawerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 769);
@@ -67,21 +102,31 @@ const Header = () => {
     return () => window.removeEventListener("resize", check);
   }, []);
 
+  // Close on route change
   useEffect(() => {
-    setMenuOpen(false);
-    setOpenDropdown(null);
-    setMobileExpanded(null);
+    setDrawerOpen(false);
   }, [pathname]);
 
+  // Close on Escape
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setOpenDropdown(null);
-      }
+    if (!drawerOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setDrawerOpen(false);
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [drawerOpen]);
+
+  // Lock body scroll when drawer open
+  useEffect(() => {
+    if (drawerOpen) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = prev;
+      };
+    }
+  }, [drawerOpen]);
 
   useEffect(() => {
     const id = "rpp-preview-fonts";
@@ -93,10 +138,69 @@ const Header = () => {
         "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap";
       document.head.appendChild(link);
     }
-    const onScroll = () => setScrolled(window.scrollY > 30);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Inject hover styles once
+  useEffect(() => {
+    const id = "rpp-drawer-styles";
+    if (document.getElementById(id)) return;
+    const style = document.createElement("style");
+    style.id = id;
+    style.innerHTML = `
+      .rpp-drawer-link {
+        display: block;
+        padding: 8px 18px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        line-height: 1.4;
+        border-left: 2px solid transparent;
+        transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+      }
+      .rpp-drawer-link:hover, .rpp-drawer-link:focus-visible {
+        border-left-color: ${GOLD};
+        color: ${GOLD};
+        background: rgba(201, 168, 76, 0.08);
+        outline: none;
+      }
+      .rpp-drawer-link.is-active {
+        color: ${GOLD};
+        border-left-color: ${GOLD};
+      }
+      .rpp-top-link {
+        color: rgba(255,255,255,0.92);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        padding: 6px 4px;
+        border-bottom: 1px solid transparent;
+        transition: color 0.18s ease, border-color 0.18s ease;
+        white-space: nowrap;
+      }
+      .rpp-top-link:hover { color: ${GOLD}; }
+      .rpp-top-link.is-active { border-bottom-color: #fff; }
+      .rpp-hamburger {
+        background: transparent;
+        border: 1px solid rgba(201, 168, 76, 0.5);
+        color: ${GOLD};
+        cursor: pointer;
+        border-radius: 6px;
+        padding: 6px 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        transition: background 0.18s ease, border-color 0.18s ease;
+      }
+      .rpp-hamburger:hover {
+        background: rgba(201, 168, 76, 0.12);
+        border-color: ${GOLD};
+      }
+    `;
+    document.head.appendChild(style);
   }, []);
 
   return (
@@ -107,383 +211,228 @@ const Header = () => {
       >
         Skip to main content
       </a>
+
       <header
         data-nosnippet="true"
         style={{
           position: "fixed",
           top: 0,
-          left: "0",
-          transform: "none",
+          left: 0,
           width: "100%",
           zIndex: 50,
-          borderRadius: 0,
-          padding: "6px 48px 4px",
-          marginBottom: 0,
-          backgroundColor: scrolled ? "rgba(8, 13, 25, 0.95)" : "rgba(8, 13, 25, 0.75)",
-          backdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
-          WebkitBackdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
-          border: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0.08)",
-          transition: "all 0.45s ease",
+          padding: isMobile ? "6px 16px" : "6px 32px 4px",
+          backgroundColor: "rgba(8, 13, 25, 0.92)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
           ...fontBody,
           color: "#fff",
         }}
       >
-        {isMobile ? (
-          /* ── Mobile header layout ── */
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-            <Link to="/" className="header-logo" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 12,
+          }}
+        >
+          {/* LEFT: hamburger + logo */}
+          <div style={{ display: "flex", alignItems: "center", gap: 14, flexShrink: 0 }}>
+            <button
+              type="button"
+              aria-label={drawerOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={drawerOpen}
+              onClick={() => setDrawerOpen((v) => !v)}
+              className="rpp-hamburger"
+              style={{ fontSize: 22, height: 38, width: 44 }}
+            >
+              ☰
+            </button>
+            <Link to="/" style={{ display: "flex", alignItems: "center" }}>
               <img
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
-                style={{ height: 56, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+                style={{ height: isMobile ? 48 : 56, width: "auto", display: "block", objectFit: "contain" }}
               />
             </Link>
-            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-              <a
-                href="tel:2069003015"
-                style={{
-                  ...fontBody,
-                  color: "#fff",
-                  background: "#1a5fa8",
-                  padding: "6px 8px",
-                  borderRadius: 6,
-                  fontWeight: 700,
-                  fontSize: 10,
-                  letterSpacing: "0.06em",
-                  textDecoration: "none",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                CALL
-              </a>
-              <button
-                aria-label={menuOpen ? "Close menu" : "Open menu"}
-                onClick={() => setMenuOpen((v) => !v)}
-                style={{
-                  background: "rgba(255,255,255,0.12)",
-                  border: "2.5px solid rgba(255,255,255,0.6)",
-                  borderRadius: 14,
-                  padding: "8px 12px 6px",
-                  cursor: "pointer",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  minWidth: 72,
-                  minHeight: 62,
-                  gap: 0,
-                  flexShrink: 0,
-                  overflow: "visible",
-                }}
-              >
-                <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 6 }}>
-                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
-                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
-                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
-                </div>
-                <span
-                  style={{
-                    ...fontBody,
-                    color: "#fff",
-                    fontSize: 13,
-                    fontWeight: 900,
-                    letterSpacing: "0.15em",
-                    lineHeight: 1,
-                    marginTop: 2,
-                  }}
-                >
-                  MENU
-                </span>
-              </button>
-            </div>
           </div>
-        ) : (
-          /* ── Desktop header layout — single row ── */
+
+          {/* RIGHT: top links + CTA */}
+          <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22 }}>
+            {!isMobile &&
+              TOP_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            <a
+              href="tel:2069003015"
+              style={{
+                ...fontBody,
+                color: "#fff",
+                background: "#1a5fa8",
+                padding: isMobile ? "6px 10px" : "4px 12px",
+                borderRadius: 6,
+                fontWeight: 700,
+                fontSize: isMobile ? 11 : 13,
+                letterSpacing: "0.06em",
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {isMobile ? "CALL" : "(206) 900-3015"}
+            </a>
+          </div>
+        </div>
+
+        {/* Mobile compact top-link strip */}
+        {isMobile && (
           <div
             style={{
               display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 16,
+              gap: 14,
+              marginTop: 8,
+              paddingTop: 6,
+              borderTop: "1px solid rgba(255,255,255,0.08)",
+              overflowX: "auto",
             }}
           >
-            <Link to="/" className="header-logo" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-              <img
-                src="/rpp-logo-v4.webp"
-                alt="Real Property Planning"
-                style={{ height: 56, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
-              />
-            </Link>
-
-            <nav
-              ref={dropdownRef}
-              aria-label="Main navigation"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "nowrap",
-                justifyContent: "space-evenly",
-                alignItems: "center",
-                gap: 16,
-                flex: 1,
-              }}
-            >
-              {NAV.map((item) => {
-                const active =
-                  pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
-                const linkStyle = {
-                  ...fontBody,
-                  color: "rgba(255,255,255,0.92)",
-                  textDecoration: "none",
-                  fontSize: 13,
-                  fontWeight: 700 as const,
-                  letterSpacing: "0.06em",
-                  paddingBottom: 2,
-                  whiteSpace: "nowrap" as const,
-                  borderBottom: active ? "1px solid #fff" : "1px solid transparent",
-                };
-
-                if (item.children) {
-                  const isOpen = openDropdown === item.label;
-                  return (
-                    <div
-                      key={item.label}
-                      style={{ position: "relative" }}
-                      onMouseEnter={() => openMenu(item.label)}
-                      onMouseLeave={scheduleClose}
-                    >
-                      <button
-                        type="button"
-                        data-nav-button=""
-                        className="nav-link-hover"
-                        onClick={() => setOpenDropdown(isOpen ? null : item.label)}
-                        style={{
-                          ...linkStyle,
-                          background: "transparent",
-                          border: "none",
-                          borderBottom: linkStyle.borderBottom,
-                          cursor: "pointer",
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: 6,
-                          padding: 0,
-                          paddingBottom: 2,
-                          lineHeight: "inherit",
-                          margin: 0,
-                          appearance: "none",
-                          WebkitAppearance: "none",
-                        }}
-                        aria-haspopup="true"
-                        aria-expanded={isOpen}
-                      >
-                        {item.label}
-                        <span
-                          style={{
-                            fontSize: 10,
-                            transform: isOpen ? "rotate(180deg)" : "none",
-                            transition: "transform 0.2s",
-                          }}
-                        >
-                          ▾
-                        </span>
-                      </button>
-                      {isOpen && (
-                        <div
-                          role="menu"
-                          style={{
-                            position: "absolute",
-                            top: "100%",
-                            left: "50%",
-                            transform: "translateX(-50%)",
-                            marginTop: 0,
-                            minWidth: 260,
-                            background: "rgba(8,13,25,0.97)",
-                            backdropFilter: "blur(10px)",
-                            WebkitBackdropFilter: "blur(10px)",
-                            border: "1px solid rgba(255,255,255,0.12)",
-                            borderRadius: 10,
-                            padding: "16px 8px 8px",
-                            boxShadow: "0 12px 32px rgba(0,0,0,0.4)",
-                            zIndex: 60,
-                          }}
-                        >
-                          {item.children.map((child) => {
-                            const childActive = pathname === child.href;
-                            return (
-                              <Link
-                                key={child.href}
-                                to={child.href}
-                                role="menuitem"
-                                className="nav-link-hover"
-                                onClick={() => setOpenDropdown(null)}
-                                style={{
-                                  ...fontBody,
-                                  display: "block",
-                                  padding: "10px 14px",
-                                  color: childActive ? "#fff" : "rgba(255,255,255,0.88)",
-                                  background: childActive ? "rgba(255,255,255,0.08)" : "transparent",
-                                  textDecoration: "none",
-                                  fontSize: 13,
-                                  fontWeight: 700,
-                                  letterSpacing: "0.06em",
-                                  borderRadius: 6,
-                                  whiteSpace: "nowrap",
-                                }}
-                              >
-                                {child.label}
-                              </Link>
-                            );
-                          })}
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-
-                return (
-                  <Link key={item.href} to={item.href} className="nav-link-hover" style={linkStyle}>
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </nav>
-
-            <div style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
-              <a
-                href="tel:2069003015"
-                style={{
-                  ...fontBody,
-                  color: "#fff",
-                  background: "#1a5fa8",
-                  padding: "1px 8px",
-                  borderRadius: 6,
-                  fontWeight: 700,
-                  fontSize: 13,
-                  letterSpacing: "0.06em",
-                  textDecoration: "none",
-                  whiteSpace: "nowrap",
-                }}
+            {TOP_LINKS.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
+                style={{ fontSize: 12 }}
               >
-                (206) 900-3015
-              </a>
-            </div>
+                {item.label}
+              </Link>
+            ))}
           </div>
-        )}
-
-
-        {isMobile && menuOpen && (
-          <nav
-            aria-label="Mobile navigation"
-            style={{
-              marginTop: 12,
-              display: "flex",
-              flexDirection: "column",
-              gap: 4,
-              background: "rgba(8,13,25,0.95)",
-              borderRadius: 10,
-              padding: 12,
-              border: "1px solid rgba(255,255,255,0.1)",
-            }}
-          >
-            {NAV.map((item) => {
-              const active =
-                pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
-              const baseStyle = {
-                ...fontBody,
-                color: "rgba(255,255,255,0.95)",
-                textDecoration: "none",
-                fontSize: 15,
-                fontWeight: 700 as const,
-                letterSpacing: "0.06em",
-                padding: "12px 10px",
-                borderRadius: 6,
-                background: active ? "rgba(255,255,255,0.08)" : "transparent",
-              };
-
-              if (item.children) {
-                const isExpanded = mobileExpanded === item.label;
-                return (
-                  <div key={item.label}>
-                    <button
-                      type="button"
-                      onClick={() => setMobileExpanded(isExpanded ? null : item.label)}
-                      style={{
-                        ...baseStyle,
-                        width: "100%",
-                        border: "none",
-                        cursor: "pointer",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        textAlign: "left",
-                      }}
-                      aria-expanded={isExpanded}
-                    >
-                      <span>{item.label}</span>
-                      <span
-                        style={{
-                          fontSize: 12,
-                          transform: isExpanded ? "rotate(180deg)" : "none",
-                          transition: "transform 0.2s",
-                        }}
-                      >
-                        ▾
-                      </span>
-                    </button>
-                    {isExpanded && (
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          gap: 2,
-                          paddingLeft: 12,
-                          borderLeft: "2px solid rgba(255,255,255,0.15)",
-                          marginLeft: 10,
-                          marginTop: 4,
-                          marginBottom: 4,
-                        }}
-                      >
-                        {item.children.map((child) => {
-                          const childActive = pathname === child.href;
-                          return (
-                            <Link
-                              key={child.href}
-                              to={child.href}
-                              onClick={() => setMenuOpen(false)}
-                              style={{
-                                ...fontBody,
-                                color: childActive ? "#fff" : "rgba(255,255,255,0.85)",
-                                textDecoration: "none",
-                                fontSize: 13,
-                                fontWeight: 700,
-                                letterSpacing: "0.05em",
-                                padding: "10px 10px",
-                                borderRadius: 6,
-                                background: childActive ? "rgba(255,255,255,0.08)" : "transparent",
-                              }}
-                            >
-                              {child.label}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </div>
-                );
-              }
-
-              return (
-                <Link key={item.href} to={item.href} onClick={() => setMenuOpen(false)} style={baseStyle}>
-                  {item.label}
-                </Link>
-              );
-            })}
-          </nav>
         )}
       </header>
 
-      {/* Spacer to preserve layout below the fixed header (prevents CLS). */}
-      <div style={{ height: isMobile ? 64 : 70 }} aria-hidden="true" />
+      {/* Spacer to preserve layout below fixed header */}
+      <div style={{ height: isMobile ? 92 : 70 }} aria-hidden="true" />
+
+      {/* DRAWER OVERLAY */}
+      <div
+        onClick={() => setDrawerOpen(false)}
+        aria-hidden={!drawerOpen}
+        style={{
+          position: "fixed",
+          inset: 0,
+          background: "rgba(0,0,0,0.45)",
+          opacity: drawerOpen ? 1 : 0,
+          pointerEvents: drawerOpen ? "auto" : "none",
+          transition: "opacity 0.3s ease",
+          zIndex: 90,
+        }}
+      />
+
+      {/* DRAWER */}
+      <aside
+        ref={drawerRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Site navigation"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          height: "100vh",
+          width: 320,
+          maxWidth: "85vw",
+          background: NAVY,
+          color: "#fff",
+          transform: drawerOpen ? "translateX(0)" : "translateX(-100%)",
+          transition: "transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease",
+          opacity: drawerOpen ? 1 : 0.6,
+          zIndex: 100,
+          boxShadow: drawerOpen ? "8px 0 32px rgba(0,0,0,0.4)" : "none",
+          overflowY: "auto",
+          ...fontBody,
+        }}
+      >
+        {/* Drawer header */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "16px 18px",
+            borderBottom: "1px solid rgba(255,255,255,0.1)",
+            position: "sticky",
+            top: 0,
+            background: NAVY,
+            zIndex: 1,
+          }}
+        >
+          <Link
+            to="/"
+            onClick={() => setDrawerOpen(false)}
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <img
+              src="/rpp-logo-v4.webp"
+              alt="Real Property Planning"
+              style={{ height: 44, width: "auto", display: "block" }}
+            />
+          </Link>
+          <button
+            type="button"
+            aria-label="Close navigation menu"
+            onClick={() => setDrawerOpen(false)}
+            style={{
+              background: "transparent",
+              border: "none",
+              color: "#fff",
+              fontSize: 24,
+              lineHeight: 1,
+              cursor: "pointer",
+              padding: 6,
+            }}
+          >
+            ×
+          </button>
+        </div>
+
+        <nav aria-label="Drawer navigation" style={{ padding: "14px 0 32px" }}>
+          {DRAWER_GROUPS.map((group) => (
+            <div key={group.label} style={{ marginBottom: 18 }}>
+              <div
+                style={{
+                  color: GOLD,
+                  fontSize: 15,
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "8px 18px 6px",
+                }}
+              >
+                {group.label}
+              </div>
+              <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+                {group.items.map((item) => (
+                  <li key={`${group.label}-${item.href}-${item.label}`}>
+                    <Link
+                      to={item.href}
+                      onClick={() => setDrawerOpen(false)}
+                      className={`rpp-drawer-link${pathname === item.href ? " is-active" : ""}`}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </nav>
+      </aside>
     </>
   );
 };
