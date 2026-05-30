@@ -429,6 +429,9 @@ const Header = () => {
         role="dialog"
         aria-modal="true"
         aria-label="Site navigation"
+        onMouseEnter={openOnHover}
+        onMouseLeave={scheduleClose}
+        className={`${drawerOpen ? "rpp-drawer-open" : ""}${settled ? " rpp-drawer-settled" : ""}`}
         style={{
           position: "fixed",
           top: 0,
@@ -491,35 +494,64 @@ const Header = () => {
         </div>
 
         <nav aria-label="Drawer navigation" style={{ padding: "14px 0 32px" }}>
-          {DRAWER_GROUPS.map((group) => (
-            <div key={group.label} style={{ marginBottom: 18 }}>
-              <div
-                style={{
-                  color: GOLD,
-                  fontSize: 15,
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  padding: "8px 18px 6px",
-                }}
-              >
-                {group.label}
-              </div>
-              <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-                {group.items.map((item) => (
-                  <li key={`${group.label}-${item.href}-${item.label}`}>
-                    <Link
-                      to={item.href}
-                      onClick={() => setDrawerOpen(false)}
-                      className={`rpp-drawer-link${pathname === item.href ? " is-active" : ""}`}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {(() => {
+            // Flat row counter so the cascade waterfall ignores group boundaries
+            let rowIdx = -1;
+            const widthFor = (i: number) => {
+              // Build-up widths: thin/narrow at top, progressively wider
+              const ramp = [42, 52, 62, 72, 82, 90, 95];
+              return `${ramp[Math.min(i, ramp.length - 1)]}%`;
+            };
+            const barStyle = (i: number): React.CSSProperties => ({
+              ["--cascade-w" as never]: widthFor(i),
+              ["--cascade-delay-in" as never]: `${i * CASCADE_STEP_MS}ms`,
+              ["--cascade-delay-out" as never]: `${(totalRows - 1 - i) * CASCADE_STEP_MS}ms`,
+            });
+
+            return DRAWER_GROUPS.map((group) => {
+              rowIdx += 1;
+              const labelIdx = rowIdx;
+              return (
+                <div key={group.label} style={{ marginBottom: 18 }}>
+                  <div
+                    className="rpp-cascade-bar"
+                    style={{
+                      ...barStyle(labelIdx),
+                      color: GOLD,
+                      fontSize: 15,
+                      fontWeight: 700,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      padding: "8px 18px 6px",
+                    }}
+                  >
+                    {group.label}
+                  </div>
+                  <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+                    {group.items.map((item) => {
+                      rowIdx += 1;
+                      const itemIdx = rowIdx;
+                      return (
+                        <li
+                          key={`${group.label}-${item.href}-${item.label}`}
+                          className="rpp-cascade-bar"
+                          style={barStyle(itemIdx)}
+                        >
+                          <Link
+                            to={item.href}
+                            onClick={() => setDrawerOpen(false)}
+                            className={`rpp-drawer-link${pathname === item.href ? " is-active" : ""}`}
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              );
+            });
+          })()}
         </nav>
       </aside>
     </>
