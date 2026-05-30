@@ -156,18 +156,23 @@ const CSS = `
 
   .wf-panel {
     position: fixed;
-    top: 0;
+    top: 70px;
     left: 0;
     width: 500px;
     max-width: 96vw;
-    height: 100vh;
+    height: calc(100vh - 70px);
     background: #f7f4ef;
     z-index: 9999;
     border-right: 1px solid #d4c9b0;
+    border-top: 1px solid #d4c9b0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
   }
+  @media (max-width: 768px) {
+    .wf-panel { top: 92px; height: calc(100vh - 92px); }
+  }
+
 
   .wf-panel-header {
     display: flex;
