@@ -7,7 +7,7 @@ const TOP_LINKS = [
   { label: "Probate & Estate", href: "/probate-estate-sales" },
   { label: "Senior Transitions", href: "/senior-transitions" },
   { label: "Resources", href: "/guides-and-resources" },
-  { label: "Articles", href: "/articles/silver-tsunami" },
+  { label: "Articles", href: "/articles" },
   { label: "Contact", href: "/contact" },
 ];
 
