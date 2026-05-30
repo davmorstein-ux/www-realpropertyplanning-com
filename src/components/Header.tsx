@@ -87,13 +87,21 @@ const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 const NAVY = "#1B2B4B";
 const GOLD = "#c9a84c";
 
+// Cascade timing
+const CASCADE_STEP_MS = 28; // delay between consecutive bars
+const CASCADE_BAR_MS = 280; // per-bar transition duration
+const HOVER_CLOSE_DELAY_MS = 180;
+
 const Header = () => {
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false,
   );
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [settled, setSettled] = useState(false);
   const { pathname } = useLocation();
   const drawerRef = useRef<HTMLDivElement>(null);
+  const closeTimerRef = useRef<number | null>(null);
+  const settleTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 769);
