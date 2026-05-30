@@ -85,19 +85,9 @@ const RIGHT_GROUPS = [
   },
 ];
 
-function flattenGroups(groups) {
-  return groups.flatMap((g, gi) => [
-    { type: "label", text: g.label, href: g.href, groupIndex: gi },
-    ...g.items.map(item => ({ type: "link", name: item.name, href: item.href, groupIndex: gi })),
-  ]);
-}
-
-const LEFT_BARS = flattenGroups(LEFT_GROUPS);
-const RIGHT_BARS = flattenGroups(RIGHT_GROUPS);
-
-const STAGGER_MS = 45;
-const BAR_DURATION_MS = 360;
-const HOVER_CLOSE_DELAY = 200;
+const STAGGER_MS = 50;
+const BAR_DURATION_MS = 380;
+const PANEL_FADE_MS = 320;
 
 const CSS = `
   .wf-trigger {
@@ -114,9 +104,7 @@ const CSS = `
     border-radius: 6px;
     transition: background 0.15s;
   }
-  .wf-trigger:hover {
-    background: rgba(201,168,76,0.1);
-  }
+  .wf-trigger:hover { background: rgba(201,168,76,0.1); }
   .wf-icon {
     display: flex;
     flex-direction: column;
@@ -127,7 +115,7 @@ const CSS = `
   .wf-trigger .wf-ln {
     display: block;
     height: 3px;
-    background: #c9a84c;
+    background: #8B6914;
     border-radius: 2px;
     transition: width 0.25s ease;
   }
@@ -141,7 +129,7 @@ const CSS = `
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.1em;
-    color: #c9a84c;
+    color: #8B6914;
     text-transform: uppercase;
     user-select: none;
   }
@@ -154,25 +142,35 @@ const CSS = `
     cursor: pointer;
   }
 
+  /* Panel with fade animation */
   .wf-panel {
     position: fixed;
-    top: 70px;
+    top: 0;
     left: 0;
     width: 500px;
     max-width: 96vw;
-    height: calc(100vh - 70px);
+    height: 100vh;
     background: #f7f4ef;
     z-index: 9999;
     border-right: 1px solid #d4c9b0;
-    border-top: 1px solid #d4c9b0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
   }
-  @media (max-width: 768px) {
-    .wf-panel { top: 92px; height: calc(100vh - 92px); }
+  .wf-panel.wf-panel-entering {
+    animation: panelFadeIn ${PANEL_FADE_MS}ms ease forwards;
   }
-
+  .wf-panel.wf-panel-exiting {
+    animation: panelFadeOut ${PANEL_FADE_MS}ms ease forwards;
+  }
+  @keyframes panelFadeIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes panelFadeOut {
+    from { opacity: 1; transform: translateX(0); }
+    to   { opacity: 0; transform: translateX(-20px); }
+  }
 
   .wf-panel-header {
     display: flex;
@@ -185,7 +183,7 @@ const CSS = `
   .wf-what-label {
     font-size: 13px;
     font-weight: 600;
-    color: #1a2744;
+    color: #0a1628;
     letter-spacing: 0.02em;
   }
   .wf-close-x {
@@ -206,26 +204,35 @@ const CSS = `
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex: 1;
-    overflow: hidden;
-  }
-  .wf-col {
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 6px 0 16px;
+  }
+  .wf-col {
+    padding: 8px 0 16px;
   }
   .wf-col:first-child { border-right: 1px solid #e0d8c8; }
-  .wf-col::-webkit-scrollbar { width: 3px; }
-  .wf-col::-webkit-scrollbar-thumb { background: #d4c9b0; border-radius: 2px; }
+  .wf-columns::-webkit-scrollbar { width: 3px; }
+  .wf-columns::-webkit-scrollbar-thumb { background: #d4c9b0; border-radius: 2px; }
 
-  .wf-bar { display: block; width: 100%; }
+  /* Accordion group */
+  .wf-group { display: block; width: 100%; }
 
-  .wf-group-label {
-    display: block;
+  .wf-group-divider {
+    margin: 2px 14px;
+    border: none;
+    border-top: 0.5px solid #e0d8c8;
+  }
+
+  /* Gold heading button */
+  .wf-group-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    padding: 14px 14px 3px;
-    font-size: 9px;
+    padding: 11px 14px;
+    font-size: 10px;
     font-weight: 700;
-    color: #c9a84c;
+    color: #8B6914;
     letter-spacing: 0.13em;
     text-transform: uppercase;
     background: none;
@@ -233,22 +240,38 @@ const CSS = `
     text-align: left;
     cursor: pointer;
     font-family: inherit;
-    transition: color 0.12s;
+    transition: background 0.12s, color 0.12s;
+    border-radius: 4px;
   }
-  .wf-group-label:hover { color: #a07830; }
+  .wf-group-btn:hover { background: rgba(201,168,76,0.08); }
+  .wf-group-btn.wf-open { color: #6B4F10; }
 
-  .wf-divider {
-    margin: 3px 14px 0;
-    border: none;
-    border-top: 0.5px solid #e0d8c8;
+  .wf-chevron {
+    font-size: 12px;
+    color: #8B6914;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+    margin-left: 6px;
+  }
+  .wf-open .wf-chevron { transform: rotate(180deg); }
+
+  /* Accordion items container */
+  .wf-items {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s cubic-bezier(0.22,1,0.36,1);
+  }
+  .wf-items.wf-items-open {
+    max-height: 400px;
   }
 
-  .wf-link {
+  /* Individual nav items — staggered fade in */
+  .wf-item {
     display: block;
     width: 100%;
-    padding: 7px 14px 7px 20px;
-    font-size: 13px;
-    color: #2a3a5a;
+    padding: 7px 14px 7px 22px;
+    font-size: 12px;
+    color: #0a1628;
     background: none;
     border: none;
     border-left: 2px solid transparent;
@@ -256,25 +279,32 @@ const CSS = `
     cursor: pointer;
     font-family: inherit;
     line-height: 1.35;
-    transition: color 0.12s, border-color 0.12s, background 0.12s;
+    transition: color 0.12s, border-color 0.12s, background 0.12s, opacity 0.2s, transform 0.2s;
+    opacity: 0;
+    transform: translateY(-6px);
   }
-  .wf-link:hover {
-    color: #1a2744;
-    border-left-color: #c9a84c;
+  .wf-item.wf-item-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .wf-item:hover {
+    color: #0a1628;
+    border-left-color: #8B6914;
     background: rgba(201,168,76,0.08);
   }
 
+  /* Close footer */
   .wf-close-footer {
     flex-shrink: 0;
-    padding: 12px 18px 16px;
+    padding: 10px 18px 14px;
     border-top: 1px solid #e0d8c8;
     background: #f7f4ef;
   }
   .wf-close-btn {
     width: 100%;
-    padding: 12px;
-    background: #1a2744;
-    color: #c9a84c;
+    padding: 11px;
+    background: #0a1628;
+    color: #8B6914;
     border: none;
     border-radius: 6px;
     font-size: 13px;
@@ -285,118 +315,129 @@ const CSS = `
     font-family: inherit;
     transition: background 0.15s, color 0.15s;
   }
-  .wf-close-btn:hover {
-    background: #c9a84c;
-    color: #1a2744;
-  }
+  .wf-close-btn:hover { background: #8B6914; color: #0a1628; }
 
-  @keyframes wfIn {
-    from { opacity: 0; transform: translateX(-14px); }
-    to   { opacity: 1; transform: translateX(0); }
-  }
-  @keyframes wfOut {
-    from { opacity: 1; transform: translateX(0); }
-    to   { opacity: 0; transform: translateX(-14px); }
-  }
   @media (prefers-reduced-motion: reduce) {
-    .wf-bar { animation: none !important; opacity: 1 !important; }
+    .wf-panel { animation: none !important; opacity: 1 !important; }
+    .wf-item { opacity: 1 !important; transform: none !important; }
   }
 `;
 
-function NavColumn({ bars, closing, colDelay, onNavigate }) {
+function AccordionGroup({ group, isOpen, onToggle, onNavigate }) {
+  const itemRefs = useRef([]);
+
+  useEffect(() => {
+    if (isOpen) {
+      group.items.forEach((_, i) => {
+        setTimeout(() => {
+          if (itemRefs.current[i]) {
+            itemRefs.current[i].classList.add('wf-item-visible');
+          }
+        }, i * 60);
+      });
+    } else {
+      group.items.forEach((_, i) => {
+        if (itemRefs.current[i]) {
+          itemRefs.current[i].classList.remove('wf-item-visible');
+        }
+      });
+    }
+  }, [isOpen, group.items]);
+
+  return (
+    <div className="wf-group">
+      <button
+        className={`wf-group-btn${isOpen ? ' wf-open' : ''}`}
+        onClick={onToggle}
+        aria-expanded={isOpen}
+      >
+        <span>{group.label}</span>
+        <span className="wf-chevron" aria-hidden="true">▾</span>
+      </button>
+
+      <div className={`wf-items${isOpen ? ' wf-items-open' : ''}`}>
+        {group.items.map((item, i) => (
+          <button
+            key={i}
+            ref={el => itemRefs.current[i] = el}
+            className="wf-item"
+            onClick={() => onNavigate(item.href)}
+          >
+            {item.name}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function NavColumn({ groups, openIndex, onToggle, onNavigate }) {
   return (
     <div className="wf-col">
-      {bars.map((bar, i) => {
-        const total = bars.length;
-        const delay = closing
-          ? (total - 1 - i) * STAGGER_MS + colDelay
-          : i * STAGGER_MS + colDelay;
-        const anim = {
-          animation: `${closing ? "wfOut" : "wfIn"} ${BAR_DURATION_MS}ms cubic-bezier(0.22,1,0.36,1) both`,
-          animationDelay: `${delay}ms`,
-        };
-        if (bar.type === "label") {
-          return (
-            <div key={i} className="wf-bar" style={anim}>
-              {i > 0 && <hr className="wf-divider" />}
-              <button className="wf-group-label" onClick={() => onNavigate(bar.href)}>
-                {bar.text}
-              </button>
-            </div>
-          );
-        }
-        return (
-          <div key={i} className="wf-bar" style={anim}>
-            <button className="wf-link" onClick={() => onNavigate(bar.href)}>
-              {bar.name}
-            </button>
-          </div>
-        );
-      })}
+      {groups.map((group, i) => (
+        <div key={i}>
+          {i > 0 && <hr className="wf-group-divider" />}
+          <AccordionGroup
+            group={group}
+            isOpen={openIndex === i}
+            onToggle={() => onToggle(i)}
+            onNavigate={onNavigate}
+          />
+        </div>
+      ))}
     </div>
   );
 }
 
 export default function WaterfallNav() {
   const [open, setOpen] = useState(false);
-  const [closing, setClosing] = useState(false);
-  const timerRef = useRef(null);
-  const hoverCloseTimer = useRef(null);
-  const panelRef = useRef(null);
+  const [exiting, setExiting] = useState(false);
+  const [leftOpen, setLeftOpen] = useState(null);
+  const [rightOpen, setRightOpen] = useState(null);
+  const exitTimerRef = useRef(null);
 
   const openPanel = () => {
-    if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
-    if (open && !closing) return;
-    if (timerRef.current) clearTimeout(timerRef.current);
-    setClosing(false);
+    if (exitTimerRef.current) clearTimeout(exitTimerRef.current);
+    setExiting(false);
     setOpen(true);
   };
 
   const closePanel = () => {
-    if (!open || closing) return;
-    setClosing(true);
-    const maxBars = Math.max(LEFT_BARS.length, RIGHT_BARS.length);
-    const duration = (maxBars - 1) * STAGGER_MS + BAR_DURATION_MS + 80;
-    timerRef.current = setTimeout(() => {
+    if (!open || exiting) return;
+    setExiting(true);
+    exitTimerRef.current = setTimeout(() => {
       setOpen(false);
-      setClosing(false);
-    }, duration);
-  };
-
-  const handleTriggerMouseLeave = () => {
-    if (!open) return;
-    hoverCloseTimer.current = setTimeout(() => {
-      closePanel();
-    }, HOVER_CLOSE_DELAY);
-  };
-
-  const handlePanelMouseEnter = () => {
-    if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
-  };
-
-  const handlePanelMouseLeave = () => {
-    hoverCloseTimer.current = setTimeout(() => {
-      closePanel();
-    }, HOVER_CLOSE_DELAY);
+      setExiting(false);
+      setLeftOpen(null);
+      setRightOpen(null);
+    }, PANEL_FADE_MS);
   };
 
   const handleNavigate = (href) => {
     setOpen(false);
-    setClosing(false);
-    if (timerRef.current) clearTimeout(timerRef.current);
-    if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
+    setExiting(false);
+    setLeftOpen(null);
+    setRightOpen(null);
+    if (exitTimerRef.current) clearTimeout(exitTimerRef.current);
     window.location.href = href;
   };
 
+  const handleLeftToggle = (i) => {
+    setLeftOpen(prev => prev === i ? null : i);
+  };
+
+  const handleRightToggle = (i) => {
+    setRightOpen(prev => prev === i ? null : i);
+  };
+
   useEffect(() => {
-    const onKey = (e) => { if (e.key === "Escape") closePanel(); };
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
-  }, [open, closing]);
+    const onKey = (e) => { if (e.key === 'Escape') closePanel(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open, exiting]);
 
   useEffect(() => () => {
-    if (timerRef.current) clearTimeout(timerRef.current);
-    if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
+    if (exitTimerRef.current) clearTimeout(exitTimerRef.current);
   }, []);
 
   return (
@@ -408,8 +449,6 @@ export default function WaterfallNav() {
         aria-label="Open navigation menu"
         aria-expanded={open}
         onClick={openPanel}
-        onMouseEnter={openPanel}
-        onMouseLeave={handleTriggerMouseLeave}
         title="Menu"
       >
         <span className="wf-icon">
@@ -424,12 +463,9 @@ export default function WaterfallNav() {
         <>
           <div className="wf-overlay" onClick={closePanel} aria-hidden="true" />
           <div
-            className="wf-panel"
-            ref={panelRef}
+            className={`wf-panel${exiting ? ' wf-panel-exiting' : ' wf-panel-entering'}`}
             role="dialog"
             aria-label="Site navigation"
-            onMouseEnter={handlePanelMouseEnter}
-            onMouseLeave={handlePanelMouseLeave}
           >
             <div className="wf-panel-header">
               <span className="wf-what-label">What are you looking for?</span>
@@ -437,8 +473,18 @@ export default function WaterfallNav() {
             </div>
 
             <div className="wf-columns">
-              <NavColumn bars={LEFT_BARS} closing={closing} colDelay={0} onNavigate={handleNavigate} />
-              <NavColumn bars={RIGHT_BARS} closing={closing} colDelay={20} onNavigate={handleNavigate} />
+              <NavColumn
+                groups={LEFT_GROUPS}
+                openIndex={leftOpen}
+                onToggle={handleLeftToggle}
+                onNavigate={handleNavigate}
+              />
+              <NavColumn
+                groups={RIGHT_GROUPS}
+                openIndex={rightOpen}
+                onToggle={handleRightToggle}
+                onNavigate={handleNavigate}
+              />
             </div>
 
             <div className="wf-close-footer">
