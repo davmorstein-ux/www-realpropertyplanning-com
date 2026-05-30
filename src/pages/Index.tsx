@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 import HomepageHero from "@/components/HomepageHero";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import HomepageFunnel from "@/components/HomepageFunnel";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 
