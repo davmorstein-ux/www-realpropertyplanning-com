@@ -1,372 +1,588 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
-const NAV_GROUPS = [
-  {
-    label: "Find a Professional",
-    column: 0,
-    items: [
-      { name: "Aging Life Care Managers", href: "/aging-life-care-managers" },
-      { name: "Certified Appraisers", href: "/real-estate-appraiser" },
-      { name: "CPAs & Accountants", href: "/professionals/cpas" },
-      { name: "Divorce Attorneys", href: "/attorneys/for-divorce-attorneys" },
-      { name: "Estate Liquidators", href: "/estate-liquidators" },
-      { name: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
-      { name: "Medicare & Benefits Advisors", href: "/medicare-providers" },
-      { name: "Mortgage Lenders", href: "/mortgage-lenders" },
-      { name: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
-      { name: "Real Estate Brokers", href: "/realtor" },
-      { name: "Senior Living Advisors", href: "/senior-living-advisors" },
-      { name: "Senior Move Managers", href: "/senior-move-managers" },
-    ],
-  },
-  {
-    label: "Senior Housing & Care",
-    column: 1,
-    items: [
-      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { name: "Senior Housing Options", href: "/articles/senior-housing-options" },
-      { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
-      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
-      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
-      { name: "CCRC Costs", href: "/articles/ccrc-costs" },
-      { name: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
-      { name: "Aging in Place With Support", href: "/articles/aging-in-place" },
-      { name: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
-    ],
-  },
-  {
-    label: "Property, Legal & Estate",
-    column: 1,
-    items: [
-      { name: "Probate & Estate Sales", href: "/probate-estate-sales" },
-      { name: "Senior Home Sales", href: "/senior-transitions" },
-      { name: "For Executors", href: "/executors" },
-      { name: "Building Your Professional Team", href: "/building-your-trusted-professional-team" },
-    ],
-  },
-  {
-    label: "Articles",
-    column: 1,
-    items: [
-      { name: "The Silver Tsunami", href: "/articles/silver-tsunami" },
-      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { name: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
-      { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
-      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
-      { name: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
-    ],
-  },
-  {
-    label: "More",
-    column: 1,
-    items: [
-      { name: "About", href: "/about" },
-      { name: "Resources", href: "/resources" },
-      { name: "Services", href: "/services" },
-      { name: "Contact", href: "/contact" },
-    ],
-  },
-];
+import { useNavigate } from "react-router-dom";
 
-// Build two column lists for staggered animation
-const LEFT_BARS = NAV_GROUPS.filter(g => g.column === 0).flatMap(g => [
-  { type: "label", text: g.label },
-  ...g.items.map(item => ({ type: "link", name: item.name, href: item.href })),
-]);
+/**
+ * MGFloatingNav v3
+ * - Steering wheel spins left/right on hover
+ * - Gear stick tilts L/R on R/F hover zones (50/50 split)
+ * - Boot stays stationary at all times
+ * - All backgrounds fully opaque — no transparency
+ *
+ * Replace these image paths with actual asset paths in your project:
+ *   homeImage   → steering wheel PNG
+ *   gearImage   → full gear shifter PNG (will be clipped into stick + boot)
+ *   coupleImage → couple photo PNG
+ */
 
-const RIGHT_BARS = NAV_GROUPS.filter(g => g.column === 1).flatMap(g => [
-  { type: "label", text: g.label },
-  ...g.items.map(item => ({ type: "link", name: item.name, href: item.href })),
-]);
+export default function MGFloatingNav({
 
-const STAGGER_MS = 50;
-const BAR_DURATION_MS = 380;
-const CLOSE_DELAY_MS = 120;
+  homeImage   = "/images/steering-wheel.png",
 
-const CSS = `
-  .wf-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 10px 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    align-items: flex-start;
-    position: relative;
-    z-index: 10001;
-  }
-  .wf-btn .wf-ln {
-    display: block;
-    height: 2px;
-    background: #c9a84c;
-    border-radius: 2px;
-    transition: width 0.25s ease;
-  }
-  .wf-btn .wf-ln-1 { width: 26px; }
-  .wf-btn .wf-ln-2 { width: 18px; }
-  .wf-btn .wf-ln-3 { width: 12px; }
-  .wf-btn:hover .wf-ln-1,
-  .wf-btn:hover .wf-ln-2,
-  .wf-btn:hover .wf-ln-3 { width: 26px; }
+  gearImage   = "/images/gear-shifter.png",
 
-  .wf-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(26, 39, 68, 0.35);
-    z-index: 9998;
-    cursor: pointer;
-    backdrop-filter: blur(1px);
-  }
+  coupleImage = "/images/couple-photo.png",
 
-  .wf-panel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 520px;
-    max-width: 95vw;
-    height: 100vh;
-    background: #f7f4ef;
-    z-index: 9999;
-    overflow: hidden;
-    border-right: 1px solid #d4c9b0;
-    display: flex;
-    flex-direction: column;
-  }
+  onBack      = () => window.history.back(),
 
-  .wf-panel-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 20px 12px;
-    border-bottom: 1px solid #e0d8c8;
-    flex-shrink: 0;
-    background: #f7f4ef;
-  }
-  .wf-panel-brand {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #1a2744;
-  }
-  .wf-panel-brand span {
-    color: #c9a84c;
-    margin-right: 6px;
-  }
-  .wf-close-x {
-    background: none;
-    border: none;
-    color: #888;
-    font-size: 20px;
-    line-height: 1;
-    cursor: pointer;
-    padding: 4px 6px;
-    transition: color 0.15s;
-    border-radius: 4px;
-  }
-  .wf-close-x:hover { color: #1a2744; background: rgba(26,39,68,0.06); }
+  onForward   = () => window.history.forward(),
 
-  .wf-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex: 1;
-    overflow: hidden;
-  }
+  onChat      = () => {},
 
-  .wf-col {
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 8px 0 32px;
-  }
-  .wf-col:first-child {
-    border-right: 1px solid #e0d8c8;
-  }
-  .wf-col::-webkit-scrollbar { width: 3px; }
-  .wf-col::-webkit-scrollbar-thumb { background: #d4c9b0; border-radius: 2px; }
+}) {
 
-  .wf-bar { display: block; width: 100%; }
+  const navigate = useNavigate();
 
-  .wf-bar-label {
-    padding: 14px 16px 4px;
-    font-size: 9px;
-    font-weight: 700;
-    color: #c9a84c;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-    user-select: none;
-  }
+  // Steering wheel: 'none' | 'left' | 'right'
 
-  .wf-bar-divider {
-    margin: 4px 16px 0;
-    border: none;
-    border-top: 0.5px solid #e0d8c8;
-  }
+  const [wheelDir, setWheelDir] = useState("none");
 
-  .wf-bar-link {
-    display: block;
-    width: 100%;
-    padding: 7px 16px 7px 22px;
-    font-size: 12px;
-    color: #2a3a5a;
-    background: none;
-    border: none;
-    border-left: 2px solid transparent;
-    text-align: left;
-    cursor: pointer;
-    font-family: inherit;
-    transition: color 0.12s, border-color 0.12s, background 0.12s;
-    line-height: 1.35;
-  }
-  .wf-bar-link:hover {
-    color: #1a2744;
-    border-left-color: #c9a84c;
-    background: rgba(201,168,76,0.08);
-  }
+  // Gear shifter: 'none' | 'R' | 'F'
 
-  @keyframes wfSlideIn {
-    from { opacity: 0; transform: translateX(-16px); }
-    to   { opacity: 1; transform: translateX(0); }
-  }
-  @keyframes wfSlideOut {
-    from { opacity: 1; transform: translateX(0); }
-    to   { opacity: 0; transform: translateX(-16px); }
-  }
+  const [gearDir, setGearDir] = useState("none");
 
-  @media (prefers-reduced-motion: reduce) {
-    .wf-bar { animation: none !important; opacity: 1 !important; }
-  }
-`;
+  // ── Wheel rotation ──────────────────────────────────────────
 
-function NavColumn({ bars, closing, columnDelay }) {
-  return (
-    <div className="wf-col">
-      {bars.map((bar, i) => {
-        const totalBars = bars.length;
-        const delayMs = closing
-          ? (totalBars - 1 - i) * STAGGER_MS + columnDelay
-          : i * STAGGER_MS + columnDelay;
+  const wheelRotation =
 
-        const animStyle = {
-          animation: `${closing ? "wfSlideOut" : "wfSlideIn"} ${BAR_DURATION_MS}ms cubic-bezier(0.22,1,0.36,1) both`,
-          animationDelay: `${delayMs}ms`,
-        };
+    wheelDir === "left"  ? "rotate(-25deg)" :
 
-        if (bar.type === "label") {
-          return (
-            <div key={i} className="wf-bar" style={animStyle}>
-              {i > 0 && <hr className="wf-bar-divider" />}
-              <div className="wf-bar-label">{bar.text}</div>
-            </div>
-          );
-        }
+    wheelDir === "right" ? "rotate(25deg)"  : "rotate(0deg)";
 
-        return (
-          <div key={i} className="wf-bar" style={animStyle}>
-            <button
-              className="wf-bar-link"
-              onClick={() => { window.location.href = bar.href; }}
-            >
-              {bar.name}
-            </button>
-          </div>
-        );
-      })}
-    </div>
-  );
-}
+  // ── Stick tilt (boot stays fixed) ───────────────────────────
 
-export default function WaterfallNav() {
-  const [open, setOpen] = useState(false);
-  const [closing, setClosing] = useState(false);
-  const closeTimerRef = useRef(null);
+  const stickRotation =
 
-  const openPanel = () => {
-    if (open && !closing) return;
-    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
-    setClosing(false);
-    setOpen(true);
+    gearDir === "R" ? "rotate(-22deg)" :
+
+    gearDir === "F" ? "rotate(22deg)"  : "rotate(0deg)";
+
+  // ────────────────────────────────────────────────────────────
+
+  // STYLES
+
+  // ────────────────────────────────────────────────────────────
+
+  const barStyle = {
+
+    position:        "fixed",
+
+    bottom:          "24px",
+
+    left:            "50%",
+
+    transform:       "translateX(-50%)",
+
+    zIndex:          99999,
+
+    backgroundColor: "#1e3355",
+
+    opacity:         1,
+
+    display:         "flex",
+
+    alignItems:      "center",
+
+    justifyContent:  "center",
+
+    gap:             "10px",
+
+    padding:         "10px 20px",
+
+    borderRadius:    "999px",
+
+    boxShadow:       "0 6px 28px rgba(0,0,0,0.6)",
+
+    isolation:       "isolate",
+
+    backdropFilter:  "none",
+
+    WebkitBackdropFilter: "none",
+
+    mixBlendMode:    "normal",
+
+    overflow:        "visible",
+
   };
 
-  const closePanel = () => {
-    if (!open || closing) return;
-    setClosing(true);
-    const maxBars = Math.max(LEFT_BARS.length, RIGHT_BARS.length);
-    const totalDuration = (maxBars - 1) * STAGGER_MS + BAR_DURATION_MS + 80;
-    closeTimerRef.current = setTimeout(() => {
-      setOpen(false);
-      setClosing(false);
-    }, totalDuration);
+  // ── Steering wheel button ────────────────────────────────────
+
+  const homeBtnStyle = {
+
+    position:        "relative",
+
+    width:           "76px",
+
+    height:          "76px",
+
+    borderRadius:    "50%",
+
+    backgroundColor: "#f0ebe0",
+
+    opacity:         1,
+
+    border:          "2.5px solid #7a1a1a",
+
+    display:         "flex",
+
+    flexDirection:   "column",
+
+    alignItems:      "center",
+
+    justifyContent:  "center",
+
+    cursor:          "pointer",
+
+    flexShrink:      0,
+
+    padding:         "4px",
+
+    boxSizing:       "border-box",
+
+    overflow:        "visible",
+
+    transition:      "box-shadow 0.15s ease",
+
   };
 
-  useEffect(() => {
-    const handleKey = (e) => { if (e.key === "Escape") closePanel(); };
-    document.addEventListener("keydown", handleKey);
-    return () => document.removeEventListener("keydown", handleKey);
-  }, [open, closing]);
+  const wheelImgStyle = {
 
-  useEffect(() => {
-    return () => { if (closeTimerRef.current) clearTimeout(closeTimerRef.current); };
-  }, []);
+    width:      "46px",
+
+    height:     "46px",
+
+    objectFit:  "contain",
+
+    display:    "block",
+
+    transition: "transform 0.25s ease",
+
+    transform:  wheelRotation,
+
+  };
+
+  const homeLabelStyle = {
+
+    fontSize:    "11px",
+
+    fontWeight:  "800",
+
+    color:       "#1e3355",
+
+    marginTop:   "2px",
+
+    letterSpacing: "0.05em",
+
+    lineHeight:  1,
+
+    display:     "block",
+
+    userSelect:  "none",
+
+  };
+
+  // ── Gear oval container ──────────────────────────────────────
+
+  const gearOvalStyle = {
+
+    position:        "relative",
+
+    width:           "104px",
+
+    height:          "80px",
+
+    borderRadius:    "40px",
+
+    backgroundColor: "#f0ebe0",
+
+    opacity:         1,
+
+    border:          "2.5px solid #7a1a1a",
+
+    display:         "flex",
+
+    alignItems:      "center",
+
+    justifyContent:  "space-between",
+
+    flexShrink:      0,
+
+    padding:         "0 8px",
+
+    boxSizing:       "border-box",
+
+    overflow:        "visible",
+
+    backdropFilter:  "none",
+
+    WebkitBackdropFilter: "none",
+
+  };
+
+  // The shifter image stack (stick on top of boot)
+
+  const shifterStackStyle = {
+
+    position:   "relative",
+
+    width:      "36px",
+
+    height:     "64px",
+
+    flexShrink: 0,
+
+    overflow:   "visible",
+
+  };
+
+  // Boot — bottom portion of image, clipped, NEVER moves
+
+  const bootStyle = {
+
+    position:       "absolute",
+
+    bottom:         0,
+
+    left:           "50%",
+
+    transform:      "translateX(-50%)",
+
+    width:          "36px",
+
+    height:         "64px",
+
+    objectFit:      "contain",
+
+    objectPosition: "bottom center",
+
+    display:        "block",
+
+    // Show only bottom 45% of image (the boot + base)
+
+    clipPath:       "inset(55% 0 0 0)",
+
+    zIndex:         1,
+
+  };
+
+  // Stick + knob — top portion, tilts on hover
+
+  const stickStyle = {
+
+    position:        "absolute",
+
+    bottom:          0,
+
+    left:            "50%",
+
+    transform:       `translateX(-50%) ${stickRotation}`,
+
+    transformOrigin: "bottom center",
+
+    width:           "36px",
+
+    height:          "64px",
+
+    objectFit:       "contain",
+
+    objectPosition:  "bottom center",
+
+    display:         "block",
+
+    // Show only top 55% of image (knob + stick)
+
+    clipPath:        "inset(0 0 45% 0)",
+
+    transition:      "transform 0.2s ease",
+
+    zIndex:          2,
+
+  };
+
+  // R label
+
+  const rLabelStyle = {
+
+    fontSize:   "16px",
+
+    fontWeight: "900",
+
+    color:      gearDir === "R" ? "#7a1a1a" : "#1e3355",
+
+    lineHeight: 1,
+
+    userSelect: "none",
+
+    flexShrink: 0,
+
+    transition: "color 0.15s ease",
+
+    cursor:     "pointer",
+
+    zIndex:     3,
+
+  };
+
+  // F label
+
+  const fLabelStyle = {
+
+    fontSize:   "16px",
+
+    fontWeight: "900",
+
+    color:      gearDir === "F" ? "#7a1a1a" : "#1e3355",
+
+    lineHeight: 1,
+
+    userSelect: "none",
+
+    flexShrink: 0,
+
+    transition: "color 0.15s ease",
+
+    cursor:     "pointer",
+
+    zIndex:     3,
+
+  };
+
+  // Invisible 50/50 hover zones overlaid on top of the oval
+
+  const hoverZoneBaseStyle = {
+
+    position: "absolute",
+
+    top:      0,
+
+    height:   "100%",
+
+    width:    "50%",
+
+    zIndex:   10,
+
+    cursor:   "pointer",
+
+    borderRadius: "40px",
+
+  };
+
+  // ── Chat button ──────────────────────────────────────────────
+
+  const chatBtnStyle = {
+
+    width:           "76px",
+
+    height:          "76px",
+
+    borderRadius:    "50%",
+
+    backgroundColor: "#1e3355",
+
+    opacity:         1,
+
+    border:          "3px solid #7a1a1a",
+
+    display:         "flex",
+
+    alignItems:      "center",
+
+    justifyContent:  "center",
+
+    cursor:          "pointer",
+
+    flexShrink:      0,
+
+    padding:         0,
+
+    overflow:        "hidden",
+
+    boxSizing:       "border-box",
+
+    transition:      "box-shadow 0.15s ease",
+
+  };
+
+  const chatImgStyle = {
+
+    width:        "100%",
+
+    height:       "100%",
+
+    objectFit:    "cover",
+
+    borderRadius: "50%",
+
+    display:      "block",
+
+  };
+
+  // ────────────────────────────────────────────────────────────
+
+  // RENDER
+
+  // ────────────────────────────────────────────────────────────
 
   return (
-    <>
-      <style dangerouslySetInnerHTML={{ __html: CSS }} />
+
+    <nav style={barStyle} aria-label="Quick navigation">
+
+      {/* ── 1. Steering Wheel — Home ── */}
 
       <button
-        className="wf-btn"
-        aria-label="Open navigation menu"
-        aria-expanded={open}
-        onClick={openPanel}
-        title="Menu"
+
+        style={homeBtnStyle}
+
+        onClick={() => navigate("/")}
+
+        onMouseEnter={() => setWheelDir("left")}
+
+        onMouseLeave={() => setWheelDir("none")}
+
+        aria-label="Go to Home"
+
+        title="Home"
+
       >
-        <span className="wf-ln wf-ln-1" />
-        <span className="wf-ln wf-ln-2" />
-        <span className="wf-ln wf-ln-3" />
+
+        <img src={homeImage} alt="Steering wheel" style={wheelImgStyle} />
+
+        <span style={homeLabelStyle}>Home</span>
+
       </button>
 
-      {open && (
-        <>
-          <div
-            className="wf-overlay"
-            onClick={closePanel}
+      {/* ── 2. Gear Shifter — R (back) / F (forward) ── */}
+
+      <div style={gearOvalStyle} aria-label="Page navigation">
+
+        {/* R label */}
+
+        <span
+
+          style={rLabelStyle}
+
+          onClick={onBack}
+
+          role="button"
+
+          tabIndex={0}
+
+          aria-label="Go back"
+
+          onKeyDown={(e) => e.key === "Enter" && onBack()}
+
+        >
+
+          R
+
+        </span>
+
+        {/* Gear shifter image stack */}
+
+        <div style={shifterStackStyle}>
+
+          {/* Boot — stationary */}
+
+          <img
+
+            src={gearImage}
+
+            alt=""
+
             aria-hidden="true"
+
+            style={bootStyle}
+
           />
 
-          <div
-            className="wf-panel"
-            role="dialog"
-            aria-label="Site navigation"
-          >
-            <div className="wf-panel-header">
-              <span className="wf-panel-brand">
-                <span>◆</span>Real Property Planning
-              </span>
-              <button
-                className="wf-close-x"
-                onClick={closePanel}
-                aria-label="Close navigation menu"
-              >
-                ✕
-              </button>
-            </div>
+          {/* Stick + knob — tilts */}
 
-            <div className="wf-columns">
-              <NavColumn
-                bars={LEFT_BARS}
-                closing={closing}
-                columnDelay={0}
-              />
-              <NavColumn
-                bars={RIGHT_BARS}
-                closing={closing}
-                columnDelay={20}
-              />
-            </div>
-          </div>
-        </>
-      )}
-    </>
+          <img
+
+            src={gearImage}
+
+            alt="Gear shifter"
+
+            style={stickStyle}
+
+          />
+
+        </div>
+
+        {/* F label */}
+
+        <span
+
+          style={fLabelStyle}
+
+          onClick={onForward}
+
+          role="button"
+
+          tabIndex={0}
+
+          aria-label="Go forward"
+
+          onKeyDown={(e) => e.key === "Enter" && onForward()}
+
+        >
+
+          F
+
+        </span>
+
+        {/* Invisible 50/50 hover zones — left = R, right = F */}
+
+        <div
+
+          style={{ ...hoverZoneBaseStyle, left: 0 }}
+
+          onMouseEnter={() => setGearDir("R")}
+
+          onMouseLeave={() => setGearDir("none")}
+
+          onClick={onBack}
+
+          aria-hidden="true"
+
+        />
+
+        <div
+
+          style={{ ...hoverZoneBaseStyle, right: 0 }}
+
+          onMouseEnter={() => setGearDir("F")}
+
+          onMouseLeave={() => setGearDir("none")}
+
+          onClick={onForward}
+
+          aria-hidden="true"
+
+        />
+
+      </div>
+
+      {/* ── 3. Couple Photo — Chat ── */}
+
+      <button
+
+        style={chatBtnStyle}
+
+        onClick={onChat}
+
+        aria-label="Open chat"
+
+        title="Chat with us"
+
+      >
+
+        <img src={coupleImage} alt="Chat with us" style={chatImgStyle} />
+
+      </button>
+
+    </nav>
+
   );
+
 }
