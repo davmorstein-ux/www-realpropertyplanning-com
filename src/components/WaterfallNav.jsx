@@ -455,9 +455,9 @@ export default function WaterfallNav() {
           <span className="wf-menu-word">
             <span className="wf-menu-letter">M</span>
             <span className="wf-menu-e">
-              <span />
-              <span />
-              <span />
+              <span></span>
+              <span></span>
+              <span></span>
             </span>
             <span className="wf-menu-letter">NU</span>
           </span>
