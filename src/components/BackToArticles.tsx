@@ -11,7 +11,7 @@ export default function BackToArticles() {
           justifyContent: "center",
           gap: 10,
           fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-          fontSize: 15,
+          fontSize: 18,
           fontWeight: 900,
           letterSpacing: "0.22em",
           textTransform: "uppercase",
@@ -19,7 +19,7 @@ export default function BackToArticles() {
           textDecoration: "none",
           background: "#0a1628",
           border: "2px solid #C9A84C",
-          padding: "16px 48px",
+          padding: "10px 24px",
           borderRadius: 2,
           boxShadow: "inset 0 0 0 1px rgba(201,168,76,0.3), 0 4px 24px rgba(10,22,40,0.18)",
         }}
