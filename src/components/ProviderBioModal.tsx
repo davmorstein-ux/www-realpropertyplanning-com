@@ -47,8 +47,10 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
             padding: 24,
             pointerEvents: "none",
             opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(12px)",
-            transition: "opacity 1.4s cubic-bezier(0.16,1,0.3,1), transform 1.4s cubic-bezier(0.16,1,0.3,1)",
+            transform: visible ? "translateY(0) scale(1)" : "translateY(12px) scale(0.97)",
+            filter: visible ? "blur(0px)" : "blur(8px)",
+            transition:
+              "opacity 1.4s cubic-bezier(0.16,1,0.3,1), transform 1.4s cubic-bezier(0.16,1,0.3,1), filter 1.4s cubic-bezier(0.16,1,0.3,1)",
           }}
         >
           <div
