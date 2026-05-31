@@ -153,23 +153,26 @@ function NavItem({ item, pathname }: { item: (typeof TOP_LINKS)[0]; pathname: st
             style={{
               display: "block",
               padding: "9px 20px",
-              color: "rgba(255,255,255,0.85)",
+              color: "rgba(255,255,255,0.95)",
               textDecoration: "none",
               fontFamily: "'Raleway', 'Gill Sans', sans-serif",
               fontSize: 12,
-              fontWeight: 400,
+              fontWeight: 700,
               letterSpacing: "0.12em",
               textTransform: "uppercase",
-              transition: "color 0.18s ease, background 0.18s ease",
+              transition: "color 0.18s ease, background 0.18s ease, border-color 0.18s ease",
               whiteSpace: "nowrap",
+              borderBottom: "1px solid transparent",
             }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.color = GOLD;
               (e.currentTarget as HTMLAnchorElement).style.background = "rgba(232,201,122,0.06)";
+              (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = GOLD;
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.85)";
+              (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.95)";
               (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+              (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "transparent";
             }}
           >
             {sub.label}
