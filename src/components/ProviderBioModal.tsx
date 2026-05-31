@@ -23,41 +23,38 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
   const modal = open
     ? createPortal(
         <div
-          onClick={() => setOpen(false)}
           style={{
             position: "fixed",
             inset: 0,
             zIndex: 99999,
-            background: "rgba(10,22,40,0.8)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             padding: 24,
-            backdropFilter: "blur(4px)",
+            pointerEvents: "none",
           }}
         >
           <div
-            onClick={(e) => e.stopPropagation()}
             style={{
               background: "#fff",
               borderRadius: 8,
-              maxWidth: 620,
+              maxWidth: 580,
               width: "100%",
-              maxHeight: "90vh",
+              maxHeight: "80vh",
               overflowY: "auto",
               boxShadow: "0 24px 80px rgba(10,22,40,0.5)",
+              pointerEvents: "auto",
             }}
           >
             {/* Header */}
             <div
               style={{
                 background: "#0a1628",
-                padding: "24px 28px",
+                padding: "20px 24px",
                 borderRadius: "8px 8px 0 0",
                 display: "flex",
                 alignItems: "center",
-                gap: 20,
-                position: "relative",
+                gap: 16,
               }}
             >
               {props.photo && (
@@ -65,8 +62,8 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                   src={props.photo}
                   alt={props.alt || props.name}
                   style={{
-                    width: 80,
-                    height: 80,
+                    width: 64,
+                    height: 64,
                     borderRadius: "50%",
                     objectFit: "cover",
                     border: "2px solid #C9A84C",
@@ -78,10 +75,10 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 <div
                   style={{
                     fontFamily: "Georgia, serif",
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: 700,
                     color: "#fff",
-                    marginBottom: 4,
+                    marginBottom: 3,
                   }}
                 >
                   {props.name}
@@ -112,38 +109,20 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 <img
                   src={props.logo}
                   alt={props.logoAlt || props.company}
-                  style={{ height: 48, width: "auto", objectFit: "contain", flexShrink: 0 }}
+                  style={{ height: 40, width: "auto", objectFit: "contain", flexShrink: 0 }}
                 />
               )}
-              <button
-                onClick={() => setOpen(false)}
-                style={{
-                  position: "absolute",
-                  top: 12,
-                  right: 14,
-                  background: "none",
-                  border: "none",
-                  color: "rgba(255,255,255,0.7)",
-                  fontSize: 22,
-                  cursor: "pointer",
-                  lineHeight: 1,
-                  padding: "4px 8px",
-                }}
-                aria-label="Close"
-              >
-                ✕
-              </button>
             </div>
 
             {/* Body */}
-            <div style={{ padding: 28 }}>
+            <div style={{ padding: "20px 24px" }}>
               <p
                 style={{
                   fontFamily: "Georgia, serif",
-                  fontSize: 15,
+                  fontSize: 14,
                   color: "#4a5568",
-                  lineHeight: 1.8,
-                  marginBottom: 24,
+                  lineHeight: 1.75,
+                  marginBottom: 16,
                 }}
               >
                 {props.bio}
@@ -152,8 +131,8 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               {props.specialty && (
                 <div
                   style={{
-                    marginBottom: 24,
-                    padding: "14px 16px",
+                    marginBottom: 16,
+                    padding: "12px 14px",
                     background: "#f7f4ef",
                     borderLeft: "3px solid #8B6914",
                     borderRadius: "0 4px 4px 0",
@@ -167,12 +146,12 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
                       color: "#8B6914",
-                      marginBottom: 6,
+                      marginBottom: 5,
                     }}
                   >
                     Specialties
                   </div>
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568", lineHeight: 1.6 }}>
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#4a5568", lineHeight: 1.6 }}>
                     {props.specialty}
                   </div>
                 </div>
@@ -181,10 +160,10 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               <div
                 style={{
                   borderTop: "1px solid #e0d8c8",
-                  paddingTop: 20,
+                  paddingTop: 16,
                   display: "flex",
                   flexDirection: "column",
-                  gap: 10,
+                  gap: 8,
                 }}
               >
                 <div
@@ -195,20 +174,20 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
                     color: "#8B6914",
-                    marginBottom: 4,
+                    marginBottom: 2,
                   }}
                 >
                   Contact
                 </div>
                 {props.address && (
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568" }}>📍 {props.address}</div>
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#4a5568" }}>📍 {props.address}</div>
                 )}
                 {props.phone && (
                   <a
                     href={`tel:${props.phone.replace(/\D/g, "")}`}
                     style={{
                       fontFamily: "Georgia, serif",
-                      fontSize: 14,
+                      fontSize: 13,
                       color: "#0a1628",
                       textDecoration: "none",
                       fontWeight: 700,
@@ -220,7 +199,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 {props.email && (
                   <a
                     href={`mailto:${props.email}`}
-                    style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#8B6914", textDecoration: "none" }}
+                    style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#8B6914", textDecoration: "none" }}
                   >
                     ✉️ {props.email}
                   </a>
@@ -230,7 +209,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     href={props.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#8B6914", textDecoration: "none" }}
+                    style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#8B6914", textDecoration: "none" }}
                   >
                     🌐 {props.website.replace(/^https?:\/\//, "")}
                   </a>
@@ -245,19 +224,12 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
 
   return (
     <>
-      <style>{`
-        .pbm-trigger { position: relative; display: inline-block; cursor: pointer; }
-        .pbm-overlay {
-          position: absolute; inset: 0; border-radius: 50%;
-          background: rgba(10,22,40,0.7);
-          display: flex; flex-direction: column; align-items: center; justify-content: center;
-          opacity: 0; transition: opacity 0.3s ease; pointer-events: none; gap: 2px;
-        }
-        .pbm-trigger:hover .pbm-overlay { opacity: 1; }
-        .pbm-overlay span { color: #E8C97A; font-family: 'Raleway', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-align: center; line-height: 1.3; }
-      `}</style>
-
-      <div className="pbm-trigger" onClick={() => setOpen(true)}>
+      {/* Headshot — hover opens bio, mouse leave closes */}
+      <div
+        style={{ position: "relative", display: "inline-block", cursor: "pointer" }}
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+      >
         {props.photo ? (
           <img
             src={props.photo}
@@ -267,8 +239,9 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               height: 112,
               borderRadius: "50%",
               objectFit: "cover",
-              border: "2px solid #e0d8c8",
+              border: open ? "3px solid #C9A84C" : "2px solid #e0d8c8",
               display: "block",
+              transition: "border 0.2s ease",
             }}
           />
         ) : (
@@ -293,14 +266,19 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
             </span>
           </div>
         )}
-        <div className="pbm-overlay">
-          <span>👤</span>
-          <span>
-            View
-            <br />
-            Profile
-          </span>
-        </div>
+
+        {/* Subtle gold ring on hover */}
+        {open && (
+          <div
+            style={{
+              position: "absolute",
+              inset: -3,
+              borderRadius: "50%",
+              border: "2px solid #C9A84C",
+              pointerEvents: "none",
+            }}
+          />
+        )}
       </div>
 
       {modal}
