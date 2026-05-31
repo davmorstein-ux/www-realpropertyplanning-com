@@ -4,48 +4,32 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import ResourceCard from "@/components/ResourceCard";
-import { BookOpen, Home, Users, Compass, DollarSign, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
-import iconResources from "@/assets/icons/probate-estate-resources-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import { Button } from "@/components/ui/button";
 
-interface Article {
-  title: string;
-  description: string;
-  href: string;
-}
+const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
+const GOLD = "#8B6914";
 
-interface Category {
-  label: string;
-  id: string;
-  icon: React.ReactNode;
-  articles: Article[];
-}
-
-const categories: Category[] = [
+const categories = [
   {
     label: "Probate & Inherited Property",
     id: "probate-inherited",
-    icon: <Home className="w-5 h-5 text-gold" />,
     articles: [
       {
         title: "How Probate Real Estate Works in Washington",
         description:
-          "An overview of the probate sale process, court requirements, and what executors and attorneys need to know about selling estate property.",
+          "An overview of the probate sale process, court requirements, and what executors and attorneys need to know.",
         href: "/guides/how-probate-real-estate-works",
       },
       {
         title: "Can You Sell a House During Probate in Washington?",
-        description:
-          "What Washington law allows, what approvals may be needed, and how the timeline works when selling during probate.",
+        description: "What Washington law allows, what approvals may be needed, and how the timeline works.",
         href: "/guides/sell-house-during-probate-washington",
       },
       {
         title: "What to Do With an Inherited House in Washington",
-        description:
-          "Options, decision factors, and practical guidance when you inherit property in Washington State.",
+        description: "Options, decision factors, and practical guidance when you inherit property in Washington State.",
         href: "/guides/inherited-house-washington",
       },
       {
@@ -56,8 +40,7 @@ const categories: Category[] = [
       },
       {
         title: "How Long Does It Take to Sell a Probate Property?",
-        description:
-          "What affects timing, how probate and non-probate situations differ, and realistic expectations for estate sales.",
+        description: "What affects timing, how probate and non-probate situations differ, and realistic expectations.",
         href: "/guides/how-long-sell-probate-property",
       },
       {
@@ -81,7 +64,7 @@ const categories: Category[] = [
       {
         title: "Probate House Sale Timeline in Washington State",
         description:
-          "A realistic, step-by-step guide to how long a probate property sale actually takes — from death to distribution of proceeds.",
+          "A realistic, step-by-step guide to how long a probate property sale actually takes — from death to distribution.",
         href: "/guides/probate-house-sale-timeline-washington",
       },
     ],
@@ -89,7 +72,6 @@ const categories: Category[] = [
   {
     label: "Executors, Trustees & Families",
     id: "executors-trustees",
-    icon: <Users className="w-5 h-5 text-gold" />,
     articles: [
       {
         title: "What Executors Should Do Before Selling a Home",
@@ -99,14 +81,12 @@ const categories: Category[] = [
       },
       {
         title: "What Should an Executor Do First With a House?",
-        description:
-          "Immediate priorities, securing the property, and what to focus on in the first 30 days.",
+        description: "Immediate priorities, securing the property, and what to focus on in the first 30 days.",
         href: "/guides/executor-first-steps-house",
       },
       {
         title: "Can an Executor Sell Before Probate in Washington?",
-        description:
-          "Understanding timing, legal authority, and preparation steps before a property can be listed.",
+        description: "Understanding timing, legal authority, and preparation steps before a property can be listed.",
         href: "/guides/executor-sell-house-before-probate-washington",
       },
       {
@@ -117,8 +97,7 @@ const categories: Category[] = [
       },
       {
         title: "How Out-of-State Families Can Handle a Washington Property Sale",
-        description:
-          "Guidance for executors, trustees, and family members coordinating a sale from a distance.",
+        description: "Guidance for executors, trustees, and family members coordinating a sale from a distance.",
         href: "/guides/out-of-state-families",
       },
     ],
@@ -126,7 +105,6 @@ const categories: Category[] = [
   {
     label: "Senior Moves & Housing Options",
     id: "senior-moves",
-    icon: <Compass className="w-5 h-5 text-gold" />,
     articles: [
       {
         title: "How to Help a Parent Move From a Longtime Home",
@@ -136,20 +114,19 @@ const categories: Category[] = [
       },
       {
         title: "How Senior Transition Sales Differ From Ordinary Home Sales",
-        description:
-          "What families should expect when helping a parent or loved one sell a longtime home.",
+        description: "What families should expect when helping a parent or loved one sell a longtime home.",
         href: "/guides/senior-transition-differences",
       },
       {
         title: "Senior Housing Options Explained",
         description:
-          "An overview of independent living, assisted living, memory care, adult family homes, and skilled nursing — and how each relates to real estate decisions.",
+          "An overview of independent living, assisted living, memory care, adult family homes, and skilled nursing.",
         href: "/senior-living-and-relocation",
       },
       {
         title: "Downsizing a Senior's Home: Where to Start",
         description:
-          "Practical guidance for families helping a parent or loved one move from a larger home to a smaller space or community setting.",
+          "Practical guidance for families helping a parent or loved one move from a larger home to a smaller space.",
         href: "/senior-transitions",
       },
     ],
@@ -157,7 +134,6 @@ const categories: Category[] = [
   {
     label: "Selling, Pricing & Preparation",
     id: "selling-pricing",
-    icon: <DollarSign className="w-5 h-5 text-gold" />,
     articles: [
       {
         title: "Appraisal vs. CMA for Estate Property",
@@ -167,38 +143,32 @@ const categories: Category[] = [
       },
       {
         title: "Do You Need an Appraisal Before Selling Inherited Property?",
-        description:
-          "When a formal appraisal is required, when it's recommended, and how it protects your interests.",
+        description: "When a formal appraisal is required, when it's recommended, and how it protects your interests.",
         href: "/guides/appraisal-before-selling-inherited-property",
       },
       {
         title: "How Do You Price a House in a Trust or Estate?",
-        description:
-          "Evidence-based strategies that protect fiduciaries and support informed decisions.",
+        description: "Evidence-based strategies that protect fiduciaries and support informed decisions.",
         href: "/guides/pricing-house-trust-estate",
       },
       {
         title: "Should You Sell an Inherited House As-Is or Fix It First?",
-        description:
-          "Pros and cons of selling as-is, when repairs make sense, and how to evaluate the decision.",
+        description: "Pros and cons of selling as-is, when repairs make sense, and how to evaluate the decision.",
         href: "/guides/sell-inherited-house-as-is-or-fix",
       },
       {
         title: "What Repairs Should Be Done Before Selling Estate Property?",
-        description:
-          "Which improvements are worth the investment — and which ones to skip.",
+        description: "Which improvements are worth the investment — and which ones to skip.",
         href: "/guides/estate-property-repairs-before-sale",
       },
       {
         title: "What Are the Biggest Mistakes When Selling Estate Property?",
-        description:
-          "Common pricing, preparation, timing, and communication errors — and how to avoid them.",
+        description: "Common pricing, preparation, timing, and communication errors — and how to avoid them.",
         href: "/insights/estate-property-mistakes",
       },
       {
         title: "What Repairs Should Be Made Before Selling a Probate Home?",
-        description:
-          "A practical guide to which improvements are worth the investment in an estate property — and which ones to skip.",
+        description: "A practical guide to which improvements are worth the investment in an estate property.",
         href: "/guides/repairs-before-selling-probate-home-washington",
       },
     ],
@@ -206,12 +176,11 @@ const categories: Category[] = [
   {
     label: "Professionals & Coordination",
     id: "professionals",
-    icon: <Briefcase className="w-5 h-5 text-gold" />,
     articles: [
       {
         title: "Which Professionals May Be Needed During a Property Transition",
         description:
-          "An overview of the attorneys, appraisers, move managers, estate sale companies, and other specialists families may work with.",
+          "An overview of the attorneys, appraisers, move managers, estate sale companies, and specialists families may work with.",
         href: "/professionals",
       },
       {
@@ -247,102 +216,255 @@ const GuidesAndResources = () => {
       <Header />
 
       <main id="main-content">
-        {/* Hero */}
-        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <img
-                src={iconResources}
-                alt=""
-                aria-hidden="true"
-                className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4"
-                loading="eager"
-              />
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-                Guides & Resources
-              </h1>
-              <p className="text-primary-foreground text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-4 font-medium">
-                Everything you need to understand probate real estate, inherited property, and senior housing transitions — organized by topic and written in plain language.
-              </p>
-            </div>
-          </div>
+        {/* Hero Image */}
+        <div style={{ width: "100%", marginTop: 64, lineHeight: 0 }}>
+          <img
+            src="/resources-hero.png"
+            alt="Seniors reading guides outside a resource center"
+            style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
+            loading="eager"
+          />
+        </div>
+
+        {/* Hero Text Band */}
+        <section style={{ background: "#0a1628", padding: "40px 24px 44px", textAlign: "center" }}>
+          <h1
+            style={{
+              fontFamily: "Georgia, serif",
+              fontSize: "clamp(28px, 4vw, 42px)",
+              fontWeight: 700,
+              color: "#fff",
+              margin: "0 0 12px",
+              lineHeight: 1.15,
+            }}
+          >
+            Guides & Resources
+          </h1>
+          <p
+            style={{
+              ...NAV_FONT,
+              fontSize: 16,
+              color: "rgba(255,255,255,0.8)",
+              maxWidth: 640,
+              margin: "0 auto",
+              lineHeight: 1.7,
+              fontWeight: 300,
+              letterSpacing: "0.04em",
+            }}
+          >
+            Everything you need to understand probate real estate, inherited property, and senior housing transitions —
+            organized by topic and written in plain language.
+          </p>
         </section>
 
         {/* Category Jump Links */}
-        <section className="py-8 border-b border-border/40">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-3">
-              {categories.map((cat) => (
-                <a
-                  key={cat.id}
-                  href={`#${cat.id}`}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-foreground transition-all duration-200 ease-out bg-gradient-to-b from-white to-[hsl(40_20%_96%)] border border-border/60 shadow-sm hover:-translate-y-[1px] hover:border-gold/40 hover:text-gold hover:shadow-md"
-                >
-                  {cat.icon}
-                  {cat.label}
-                </a>
-              ))}
-            </div>
+        <section style={{ background: "#f7f4ef", padding: "24px 24px", borderBottom: "1px solid #e0d8c8" }}>
+          <div
+            style={{
+              maxWidth: 900,
+              margin: "0 auto",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: 12,
+            }}
+          >
+            {categories.map((cat) => (
+              <a
+                key={cat.id}
+                href={`#${cat.id}`}
+                style={{
+                  ...NAV_FONT,
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "#0a1628",
+                  textDecoration: "none",
+                  padding: "8px 16px",
+                  border: "1px solid #c8b98a",
+                  borderRadius: 2,
+                  background: "#fff",
+                  transition: "background 0.2s, color 0.2s",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.background = "#0a1628";
+                  (e.currentTarget as HTMLAnchorElement).style.color = "#E8C97A";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.background = "#fff";
+                  (e.currentTarget as HTMLAnchorElement).style.color = "#0a1628";
+                }}
+              >
+                {cat.label}
+              </a>
+            ))}
           </div>
         </section>
 
         {/* Category Sections */}
-        {categories.map((cat) => (
+        {categories.map((cat, catIndex) => (
           <section
             key={cat.id}
             id={cat.id}
-            className="py-14 md:py-18 even:bg-secondary"
+            style={{ background: catIndex % 2 === 0 ? "#fff" : "#f7f4ef", padding: "56px 24px" }}
           >
-            <div className="container px-6 lg:px-8">
-              <div className="max-w-5xl mx-auto">
-                <div className="flex items-center gap-3 mb-10">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold/10">
-                    {cat.icon}
-                  </div>
-                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground">
-                    {cat.label}
-                  </h2>
-                </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {cat.articles.map((article) => (
-                    <ResourceCard
-                      key={article.href}
-                      title={article.title}
-                      description={article.description}
-                      linkTo={article.href}
-                      icon={<BookOpen className="h-5 w-5 text-gold" />}
+            <div style={{ maxWidth: 900, margin: "0 auto" }}>
+              {/* Category Header */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 14,
+                  marginBottom: 8,
+                  paddingBottom: 16,
+                  borderBottom: `2px solid ${GOLD}`,
+                }}
+              >
+                <h2
+                  style={{
+                    fontFamily: "Georgia, serif",
+                    fontSize: "clamp(20px, 2.5vw, 28px)",
+                    fontWeight: 700,
+                    color: "#0a1628",
+                    margin: 0,
+                  }}
+                >
+                  {cat.label}
+                </h2>
+              </div>
+
+              {/* Article List */}
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                {cat.articles.map((article, i) => (
+                  <Link
+                    key={article.href}
+                    to={article.href}
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 20,
+                      padding: "18px 0",
+                      borderBottom: i < cat.articles.length - 1 ? "1px solid #e0d8c8" : "none",
+                      textDecoration: "none",
+                      transition: "background 0.2s",
+                      borderRadius: 4,
+                      paddingLeft: 12,
+                      paddingRight: 12,
+                    }}
+                    onMouseEnter={(e) =>
+                      ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(139,105,20,0.04)")
+                    }
+                    onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "transparent")}
+                  >
+                    {/* Gold dot */}
+                    <div
+                      style={{
+                        width: 8,
+                        height: 8,
+                        borderRadius: "50%",
+                        background: GOLD,
+                        flexShrink: 0,
+                        marginTop: 7,
+                      }}
                     />
-                  ))}
-                </div>
+
+                    {/* Text */}
+                    <div style={{ flex: 1 }}>
+                      <div
+                        style={{
+                          fontFamily: "Georgia, serif",
+                          fontSize: 16,
+                          fontWeight: 700,
+                          color: "#0a1628",
+                          marginBottom: 4,
+                          lineHeight: 1.4,
+                        }}
+                      >
+                        {article.title}
+                      </div>
+                      <div style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568", lineHeight: 1.6 }}>
+                        {article.description}
+                      </div>
+                    </div>
+
+                    {/* Arrow */}
+                    <div
+                      style={{
+                        ...NAV_FONT,
+                        fontSize: 11,
+                        fontWeight: 700,
+                        letterSpacing: "0.14em",
+                        textTransform: "uppercase",
+                        color: GOLD,
+                        flexShrink: 0,
+                        marginTop: 4,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 4,
+                      }}
+                    >
+                      Read
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
+                    </div>
+                  </Link>
+                ))}
               </div>
             </div>
           </section>
         ))}
 
         {/* CTA */}
-        <section className="py-14 md:py-20 bg-cream">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
-                Have a Question That Isn't Covered Here?
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Every property situation is different. Real Property Planning is happy to answer questions — no obligation, no pressure.
-              </p>
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg">
-                  <img
-                    src={iconPhone3d}
-                    alt=""
-                    aria-hidden="true"
-                    className="w-10 h-10 mr-2.5 object-contain shrink-0"
-                    style={{ background: "transparent" }}
-                   loading="lazy"/>
-                  Start a Conversation
-                </Button>
-              </Link>
-            </div>
-          </div>
+        <section style={{ background: "#0a1628", padding: "64px 24px", textAlign: "center" }}>
+          <h2
+            style={{
+              fontFamily: "Georgia, serif",
+              fontSize: "clamp(22px, 3vw, 32px)",
+              fontWeight: 700,
+              color: "#fff",
+              margin: "0 0 12px",
+            }}
+          >
+            Have a Question That Isn't Covered Here?
+          </h2>
+          <p
+            style={{
+              ...NAV_FONT,
+              fontSize: 15,
+              color: "rgba(255,255,255,0.75)",
+              maxWidth: 560,
+              margin: "0 auto 32px",
+              lineHeight: 1.7,
+              fontWeight: 300,
+            }}
+          >
+            Every property situation is different. Real Property Planning is happy to answer questions — no obligation,
+            no pressure.
+          </p>
+          <Link to="/contact">
+            <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg">
+              <img
+                src={iconPhone3d}
+                alt=""
+                aria-hidden="true"
+                className="w-10 h-10 mr-2.5 object-contain shrink-0"
+                style={{ background: "transparent" }}
+                loading="lazy"
+              />
+              Start a Conversation
+            </Button>
+          </Link>
         </section>
 
         <RelatedServices currentPath="/guides-and-resources" />
