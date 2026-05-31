@@ -2,6 +2,7 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BackToResources from "@/components/BackToResources";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Home, BookOpen } from "lucide-react";
@@ -50,6 +51,7 @@ const NotFound = () => {
           </div>
         </div>
       </main>
+      <BackToResources />
       <Footer />
     </div>
   );
