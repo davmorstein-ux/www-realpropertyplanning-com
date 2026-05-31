@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import React from "react";
 import { createPortal } from "react-dom";
 
 interface ProviderBioModalProps {
@@ -19,6 +20,19 @@ interface ProviderBioModalProps {
 
 export default function ProviderBioModal(props: ProviderBioModalProps) {
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleEnter = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpen(true);
+    setTimeout(() => setVisible(true), 10); // tiny delay lets CSS transition fire
+  };
+
+  const handleLeave = () => {
+    setVisible(false);
+    closeTimer.current = setTimeout(() => setOpen(false), 600); // wait for fade out
+  };
 
   const modal = open
     ? createPortal(
@@ -32,6 +46,9 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
             justifyContent: "center",
             padding: 24,
             pointerEvents: "none",
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(12px)",
+            transition: "opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1)",
           }}
         >
           <div
@@ -227,8 +244,8 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
       {/* Headshot — hover opens bio, mouse leave closes */}
       <div
         style={{ position: "relative", display: "inline-block", cursor: "pointer" }}
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
+        onMouseEnter={handleEnter}
+        onMouseLeave={handleLeave}
       >
         {props.photo ? (
           <img
