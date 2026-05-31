@@ -188,6 +188,29 @@ const SilverTsunami = () => {
               <p className={pClass + " italic"}>
                 Real Property Planning helps families navigate senior housing and transition decisions with clarity and confidence. <Link to="/guides-and-resources" className={inlineLink}>Explore our resources</Link> or <Link to="/senior-living-advisors" className={inlineLink}>connect with a senior living advisor</Link> to start the conversation.
               </p>
+
+              <div style={{ textAlign: "center", padding: "48px 24px 64px" }}>
+                <Link
+                  to="/articles"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    color: "#8B6914",
+                    textDecoration: "none",
+                    borderBottom: "2px solid #8B6914",
+                    paddingBottom: 4,
+                    transition: "color 0.2s ease, border-color 0.2s ease",
+                  }}
+                >
+                  ← Back to Featured Articles
+                </Link>
+              </div>
             </article>
           </div>
         </section>
