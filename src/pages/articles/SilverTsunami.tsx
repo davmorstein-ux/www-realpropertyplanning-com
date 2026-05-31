@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BackToArticles from "@/components/BackToArticles";
 import heroImage from "@/assets/articles-hero-banner.png";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
@@ -218,6 +219,7 @@ const SilverTsunami = () => {
         <RelatedResourcesSection resources={relatedResources} />
 
         <DisclaimerSection />
+        <BackToArticles />
       </main>
       <Footer />
     </div>
