@@ -45,7 +45,7 @@ const EstateLiquidators = () => (
                     </h2>
 
                     {/* Headshots with bio modals */}
-                    <div className="flex justify-center gap-5 mb-3" onClick={stopPropagation}>
+                    <div className="flex justify-center gap-5 mb-3">
                       <div className="flex flex-col items-center">
                         <ProviderBioModal
                           name="Meriann Roberts"
