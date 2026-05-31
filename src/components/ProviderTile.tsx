@@ -102,7 +102,7 @@ export default function ProviderTile({
                   textAlign: "center",
                   padding: "24px 24px 16px",
                   cursor: bio ? "pointer" : "default",
-                  background: hovered ? "rgba(10,22,40,0.03)" : "transparent",
+                  background: hovered ? "rgba(255,0,0,0.3)" : "transparent",
                   transition: "background 0.3s ease",
                   borderRadius: "8px 8px 0 0",
                 }}
