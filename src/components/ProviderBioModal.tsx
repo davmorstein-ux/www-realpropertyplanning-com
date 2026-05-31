@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 
 interface ProviderBioModalProps {
   name: string;
@@ -19,69 +20,8 @@ interface ProviderBioModalProps {
 export default function ProviderBioModal(props: ProviderBioModalProps) {
   const [open, setOpen] = useState(false);
 
-  return (
-    <>
-      <style>{`
-        .pbm-trigger { position: relative; display: inline-block; cursor: pointer; }
-        .pbm-overlay {
-          position: absolute; inset: 0; border-radius: 50%;
-          background: rgba(10,22,40,0.7);
-          display: flex; flex-direction: column; align-items: center; justify-content: center;
-          opacity: 0; transition: opacity 0.3s ease; pointer-events: none; gap: 2px;
-        }
-        .pbm-trigger:hover .pbm-overlay { opacity: 1; }
-        .pbm-overlay span { color: #E8C97A; font-family: 'Raleway', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-align: center; line-height: 1.3; }
-      `}</style>
-
-      {/* Clickable headshot */}
-      <div className="pbm-trigger" onClick={() => setOpen(true)}>
-        {props.photo ? (
-          <img
-            src={props.photo}
-            alt={props.alt || props.name}
-            style={{
-              width: 112,
-              height: 112,
-              borderRadius: "50%",
-              objectFit: "cover",
-              border: "2px solid #e0d8c8",
-              display: "block",
-            }}
-          />
-        ) : (
-          <div
-            style={{
-              width: 112,
-              height: 112,
-              borderRadius: "50%",
-              background: "#0a1628",
-              border: "2px solid #e0d8c8",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <span style={{ fontFamily: "Georgia, serif", fontSize: 28, color: "#fff", fontWeight: 700 }}>
-              {props.name
-                .split(" ")
-                .map((n: string) => n[0])
-                .slice(0, 2)
-                .join("")}
-            </span>
-          </div>
-        )}
-        <div className="pbm-overlay">
-          <span>👤</span>
-          <span>
-            View
-            <br />
-            Profile
-          </span>
-        </div>
-      </div>
-
-      {/* Modal */}
-      {open && (
+  const modal = open
+    ? createPortal(
         <div
           onClick={() => setOpen(false)}
           style={{
@@ -298,8 +238,72 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               </div>
             </div>
           </div>
+        </div>,
+        document.body,
+      )
+    : null;
+
+  return (
+    <>
+      <style>{`
+        .pbm-trigger { position: relative; display: inline-block; cursor: pointer; }
+        .pbm-overlay {
+          position: absolute; inset: 0; border-radius: 50%;
+          background: rgba(10,22,40,0.7);
+          display: flex; flex-direction: column; align-items: center; justify-content: center;
+          opacity: 0; transition: opacity 0.3s ease; pointer-events: none; gap: 2px;
+        }
+        .pbm-trigger:hover .pbm-overlay { opacity: 1; }
+        .pbm-overlay span { color: #E8C97A; font-family: 'Raleway', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-align: center; line-height: 1.3; }
+      `}</style>
+
+      <div className="pbm-trigger" onClick={() => setOpen(true)}>
+        {props.photo ? (
+          <img
+            src={props.photo}
+            alt={props.alt || props.name}
+            style={{
+              width: 112,
+              height: 112,
+              borderRadius: "50%",
+              objectFit: "cover",
+              border: "2px solid #e0d8c8",
+              display: "block",
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              width: 112,
+              height: 112,
+              borderRadius: "50%",
+              background: "#0a1628",
+              border: "2px solid #e0d8c8",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span style={{ fontFamily: "Georgia, serif", fontSize: 28, color: "#fff", fontWeight: 700 }}>
+              {props.name
+                .split(" ")
+                .map((n: string) => n[0])
+                .slice(0, 2)
+                .join("")}
+            </span>
+          </div>
+        )}
+        <div className="pbm-overlay">
+          <span>👤</span>
+          <span>
+            View
+            <br />
+            Profile
+          </span>
         </div>
-      )}
+      </div>
+
+      {modal}
     </>
   );
 }
