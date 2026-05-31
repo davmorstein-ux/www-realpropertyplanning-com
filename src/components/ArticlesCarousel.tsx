@@ -80,7 +80,7 @@ export default function ArticlesCarousel() {
   const CARD_W = 304;
 
   return (
-    <section style={{ background: "#f7f4ef", padding: "64px 0 72px", fontFamily: "Georgia, serif" }}>
+    <section style={{ background: "#f7f4ef", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}>
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
@@ -107,7 +107,7 @@ export default function ArticlesCarousel() {
 
       {/* Carousel viewport */}
       <div
-        style={{ maxWidth: 960, margin: "0 auto", padding: "8px 24px 16px", overflow: "hidden" }}
+        style={{ maxWidth: 960, margin: "0 auto", padding: "8px 0 16px", overflow: "hidden", boxSizing: "content-box" }}
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
