@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BackToResources from "@/components/BackToResources";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -345,6 +346,7 @@ const ProbateVsTrustSaleWashington = () => (
 
       <DisclaimerSection />
     </main>
+    <BackToResources />
     <Footer />
   </div>
 );

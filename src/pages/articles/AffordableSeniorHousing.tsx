@@ -3,6 +3,7 @@ import BackToArticles from "@/components/BackToArticles";
 import heroImage from "@/assets/articles-hero-banner.png";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
+import BackToResources from "@/components/BackToResources";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
@@ -228,6 +229,7 @@ const AffordableSeniorHousing = () => {
         <RelatedResourcesSection resources={relatedResources} />
         <DisclaimerSection />
       </main>
+      <BackToResources />
       <Footer />
     </div>
   );

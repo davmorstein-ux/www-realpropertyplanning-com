@@ -6,6 +6,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
+import BackToProfessionals from "@/components/BackToProfessionals";
 import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
 import hbmmLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
 import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
@@ -234,16 +235,7 @@ const SeniorMoveManagers = () => (
         </div>
       </section>
 
-      <section className="py-10 bg-background">
-        <div className="container px-6 lg:px-8 flex justify-center">
-          <Button asChild variant="outline" size="lg" className="h-[52px] px-6 rounded-lg">
-            <a href="https://realpropertyplanning.com/building-your-trusted-professional-team">
-              <ArrowLeft className="w-5 h-5 mr-2" aria-hidden="true" />
-              Back to Professionals
-            </a>
-          </Button>
-        </div>
-      </section>
+      <BackToProfessionals />
 
       <DisclaimerSection />
     </main>

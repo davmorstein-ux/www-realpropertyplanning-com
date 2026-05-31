@@ -6,6 +6,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import BackToProfessionals from "@/components/BackToProfessionals";
 import abbyPhoto from "@/assets/abby-durr-silver-age-senior-living-advisor.webp";
 import silverAgeLogo from "@/assets/silver-age-senior-living-advisors-logo.webp";
 
@@ -183,16 +184,7 @@ const SeniorLivingAdvisors = () => (
         </div>
       </section>
 
-      <section className="py-10 bg-background">
-        <div className="container px-6 lg:px-8 flex justify-center">
-          <Button asChild variant="outline" size="lg" className="h-[52px] px-6 rounded-lg">
-            <a href="https://realpropertyplanning.com/building-your-trusted-professional-team">
-              <ArrowLeft className="w-5 h-5 mr-2" aria-hidden="true" />
-              Back to Professionals
-            </a>
-          </Button>
-        </div>
-      </section>
+      <BackToProfessionals />
 
       <DisclaimerSection />
     </main>
