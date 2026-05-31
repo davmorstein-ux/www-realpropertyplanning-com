@@ -67,130 +67,150 @@ export default function ProviderTile({
     >
       {/* Bio tooltip — fixed position via inline style trick */}
       {hovered && bio && (
-        <div
-          style={{
-            position: "fixed",
-            top: "40%",
-            left: "50%",
-            transform: visible ? "translate(-50%, -50%) scale(1)" : "translate(-50%, -48%) scale(0.97)",
-            zIndex: 2147483647,
-            background: "#fff",
-            borderRadius: 8,
-            maxWidth: 560,
-            width: "90vw",
-            maxHeight: "70vh",
-            overflowY: "auto",
-            boxShadow: "0 24px 80px rgba(10,22,40,0.5)",
-            opacity: visible ? 1 : 0,
-            filter: visible ? "blur(0px)" : "blur(8px)",
-            transition:
-              "opacity 1.4s cubic-bezier(0.16,1,0.3,1), transform 1.4s cubic-bezier(0.16,1,0.3,1), filter 1.4s cubic-bezier(0.16,1,0.3,1)",
-            pointerEvents: "none",
-          }}
-        >
-          {/* Header */}
+        <>
+          {/* Dark backdrop */}
           <div
             style={{
-              background: "#0a1628",
-              padding: "20px 24px",
-              borderRadius: "8px 8px 0 0",
-              display: "flex",
-              alignItems: "center",
-              gap: 16,
+              position: "fixed",
+              inset: 0,
+              zIndex: 2147483646,
+              background: "rgba(10,22,40,0.5)",
+              opacity: visible ? 1 : 0,
+              transition: "opacity 1.4s ease",
+              pointerEvents: "none",
+            }}
+          />
+          <div
+            style={{
+              position: "fixed",
+              top: "50%",
+              left: "50%",
+              transform: visible ? "translate(-50%, -50%) scale(1)" : "translate(-50%, -48%) scale(0.97)",
+              zIndex: 2147483647,
+              background: "#fff",
+              borderRadius: 8,
+              maxWidth: 560,
+              width: "90vw",
+              maxHeight: "60vh",
+              overflowY: "auto",
+              boxShadow: "0 24px 80px rgba(10,22,40,0.5)",
+              opacity: visible ? 1 : 0,
+              filter: visible ? "blur(0px)" : "blur(8px)",
+              transition:
+                "opacity 1.4s cubic-bezier(0.16,1,0.3,1), transform 1.4s cubic-bezier(0.16,1,0.3,1), filter 1.4s cubic-bezier(0.16,1,0.3,1)",
+              pointerEvents: "none",
             }}
           >
-            {photo && (
-              <img
-                src={photo}
-                alt={photoAlt || name}
-                style={{
-                  width: 64,
-                  height: 64,
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                  border: "2px solid #C9A84C",
-                  flexShrink: 0,
-                }}
-              />
-            )}
-            <div style={{ flex: 1 }}>
-              <div
-                style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 3 }}
-              >
-                {name}
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Raleway', sans-serif",
-                  fontSize: 11,
-                  letterSpacing: "0.12em",
-                  color: "#E8C97A",
-                  textTransform: "uppercase",
-                }}
-              >
-                {title}
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Raleway', sans-serif",
-                  fontSize: 11,
-                  color: "rgba(255,255,255,0.65)",
-                  marginTop: 2,
-                }}
-              >
-                {company}
-              </div>
-            </div>
-            {logo && (
-              <img
-                src={logo}
-                alt={logoAlt || company}
-                style={{ height: 40, width: "auto", objectFit: "contain", flexShrink: 0 }}
-              />
-            )}
-          </div>
-          {/* Body */}
-          <div style={{ padding: "20px 24px" }}>
-            <p
+            {/* Header */}
+            <div
               style={{
-                fontFamily: "Georgia, serif",
-                fontSize: 14,
-                color: "#4a5568",
-                lineHeight: 1.75,
-                marginBottom: specialty ? 16 : 0,
+                background: "#0a1628",
+                padding: "20px 24px",
+                borderRadius: "8px 8px 0 0",
+                display: "flex",
+                alignItems: "center",
+                gap: 16,
               }}
             >
-              {bio}
-            </p>
-            {specialty && (
-              <div
-                style={{
-                  padding: "12px 14px",
-                  background: "#f7f4ef",
-                  borderLeft: "3px solid #8B6914",
-                  borderRadius: "0 4px 4px 0",
-                }}
-              >
+              {photo && (
+                <img
+                  src={photo}
+                  alt={photoAlt || name}
+                  style={{
+                    width: 64,
+                    height: 64,
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    border: "2px solid #C9A84C",
+                    flexShrink: 0,
+                  }}
+                />
+              )}
+              <div style={{ flex: 1 }}>
+                <div
+                  style={{
+                    fontFamily: "Georgia, serif",
+                    fontSize: 18,
+                    fontWeight: 700,
+                    color: "#fff",
+                    marginBottom: 3,
+                  }}
+                >
+                  {name}
+                </div>
                 <div
                   style={{
                     fontFamily: "'Raleway', sans-serif",
-                    fontSize: 10,
-                    fontWeight: 700,
-                    letterSpacing: "0.18em",
+                    fontSize: 11,
+                    letterSpacing: "0.12em",
+                    color: "#E8C97A",
                     textTransform: "uppercase",
-                    color: "#8B6914",
-                    marginBottom: 5,
                   }}
                 >
-                  Specialties
+                  {title}
                 </div>
-                <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#4a5568", lineHeight: 1.6 }}>
-                  {specialty}
+                <div
+                  style={{
+                    fontFamily: "'Raleway', sans-serif",
+                    fontSize: 11,
+                    color: "rgba(255,255,255,0.65)",
+                    marginTop: 2,
+                  }}
+                >
+                  {company}
                 </div>
               </div>
-            )}
+              {logo && (
+                <img
+                  src={logo}
+                  alt={logoAlt || company}
+                  style={{ height: 40, width: "auto", objectFit: "contain", flexShrink: 0 }}
+                />
+              )}
+            </div>
+            {/* Body */}
+            <div style={{ padding: "20px 24px" }}>
+              <p
+                style={{
+                  fontFamily: "Georgia, serif",
+                  fontSize: 14,
+                  color: "#4a5568",
+                  lineHeight: 1.75,
+                  marginBottom: specialty ? 16 : 0,
+                }}
+              >
+                {bio}
+              </p>
+              {specialty && (
+                <div
+                  style={{
+                    padding: "12px 14px",
+                    background: "#f7f4ef",
+                    borderLeft: "3px solid #8B6914",
+                    borderRadius: "0 4px 4px 0",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 10,
+                      fontWeight: 700,
+                      letterSpacing: "0.18em",
+                      textTransform: "uppercase",
+                      color: "#8B6914",
+                      marginBottom: 5,
+                    }}
+                  >
+                    Specialties
+                  </div>
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#4a5568", lineHeight: 1.6 }}>
+                    {specialty}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        </>
       )}
 
       {/* Tile content */}
