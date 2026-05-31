@@ -252,8 +252,8 @@ const GuidesAndResources = () => {
               letterSpacing: "0.04em",
             }}
           >
-            Everything you need to understand probate real estate, inherited property, and senior housing transitions —
-            organized by topic and written in plain language.
+            ​
+
           </p>
         </section>
 
