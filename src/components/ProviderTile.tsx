@@ -37,7 +37,7 @@ export default function ProviderTile({
     if (!bio) return;
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setHovered(true);
-    setTimeout(() => setVisible(true), 10);
+    setTimeout(() => { setVisible(true); console.log('BIO VISIBLE SET TRUE', bio?.substring(0, 20)); }, 10);
   };
 
   const handleLeave = () => {
