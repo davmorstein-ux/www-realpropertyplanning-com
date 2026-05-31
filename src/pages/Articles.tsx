@@ -71,132 +71,136 @@ const ARTICLES = [
 
 const Articles = () => {
   return (
-    <main id="main-content">
-      {/* Carousel */}
-      <ArticlesCarousel />
+    <>
+      <Header />
+      <main id="main-content">
+        {/* Carousel */}
+        <ArticlesCarousel />
 
-      {/* Article list */}
-      <section
-        style={{
-          maxWidth: 900,
-          margin: "0 auto",
-          padding: "56px 24px 80px",
-          fontFamily: "Georgia, serif",
-        }}
-      >
-        <h2
+        {/* Article list */}
+        <section
           style={{
-            fontSize: "clamp(22px, 3vw, 32px)",
-            fontWeight: 700,
-            color: "#0a1628",
-            marginBottom: 8,
-            letterSpacing: "-0.01em",
+            maxWidth: 900,
+            margin: "0 auto",
+            padding: "56px 24px 80px",
+            fontFamily: "Georgia, serif",
           }}
         >
-          All Articles
-        </h2>
-        <div style={{ width: 48, height: 2, background: "#8B6914", marginBottom: 40, borderRadius: 1 }} />
+          <h2
+            style={{
+              fontSize: "clamp(22px, 3vw, 32px)",
+              fontWeight: 700,
+              color: "#0a1628",
+              marginBottom: 8,
+              letterSpacing: "-0.01em",
+            }}
+          >
+            All Articles
+          </h2>
+          <div style={{ width: 48, height: 2, background: "#8B6914", marginBottom: 40, borderRadius: 1 }} />
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-          {ARTICLES.map((article, i) => (
-            <Link
-              key={article.href}
-              to={article.href}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 24,
-                padding: "20px 0",
-                borderBottom: "1px solid #e0d8c8",
-                borderTop: i === 0 ? "1px solid #e0d8c8" : "none",
-                textDecoration: "none",
-                transition: "background 0.2s ease",
-              }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(139,105,20,0.04)")}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "transparent")}
-            >
-              {/* Thumbnail */}
-              <div
+          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+            {ARTICLES.map((article, i) => (
+              <Link
+                key={article.href}
+                to={article.href}
                 style={{
-                  flexShrink: 0,
-                  width: 90,
-                  height: 120,
-                  borderRadius: 4,
-                  overflow: "hidden",
-                  boxShadow: "0 2px 12px rgba(10,22,40,0.12)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 24,
+                  padding: "20px 0",
+                  borderBottom: "1px solid #e0d8c8",
+                  borderTop: i === 0 ? "1px solid #e0d8c8" : "none",
+                  textDecoration: "none",
+                  transition: "background 0.2s ease",
                 }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(139,105,20,0.04)")}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "transparent")}
               >
-                <img
-                  src={article.img}
-                  alt={article.title}
+                {/* Thumbnail */}
+                <div
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "top",
-                    display: "block",
+                    flexShrink: 0,
+                    width: 90,
+                    height: 120,
+                    borderRadius: 4,
+                    overflow: "hidden",
+                    boxShadow: "0 2px 12px rgba(10,22,40,0.12)",
                   }}
-                />
-              </div>
+                >
+                  <img
+                    src={article.img}
+                    alt={article.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                      display: "block",
+                    }}
+                  />
+                </div>
 
-              {/* Text */}
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <h3
-                  style={{
-                    fontSize: 18,
-                    fontWeight: 700,
-                    color: "#0a1628",
-                    margin: "0 0 8px",
-                    lineHeight: 1.3,
-                    fontFamily: "Georgia, serif",
-                  }}
-                >
-                  {article.title}
-                </h3>
-                <p
-                  style={{
-                    fontSize: 14,
-                    color: "#4a5568",
-                    margin: "0 0 12px",
-                    lineHeight: 1.6,
-                    fontFamily: "Georgia, serif",
-                  }}
-                >
-                  {article.description}
-                </p>
-                <span
-                  style={{
-                    fontSize: 11,
-                    fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-                    fontWeight: 700,
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    color: "#8B6914",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 5,
-                  }}
-                >
-                  Read Article
-                  <svg
-                    width="11"
-                    height="11"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                {/* Text */}
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <h3
+                    style={{
+                      fontSize: 18,
+                      fontWeight: 700,
+                      color: "#0a1628",
+                      margin: "0 0 8px",
+                      lineHeight: 1.3,
+                      fontFamily: "Georgia, serif",
+                    }}
                   >
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-    </main>
+                    {article.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: 14,
+                      color: "#4a5568",
+                      margin: "0 0 12px",
+                      lineHeight: 1.6,
+                      fontFamily: "Georgia, serif",
+                    }}
+                  >
+                    {article.description}
+                  </p>
+                  <span
+                    style={{
+                      fontSize: 11,
+                      fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+                      fontWeight: 700,
+                      letterSpacing: "0.18em",
+                      textTransform: "uppercase",
+                      color: "#8B6914",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 5,
+                    }}
+                  >
+                    Read Article
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 };
 
