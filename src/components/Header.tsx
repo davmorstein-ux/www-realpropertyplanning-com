@@ -1,17 +1,184 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import WaterfallNav from "./WaterfallNav";
 
+const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
+const GOLD = "#E8C97A";
+
 const TOP_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Probate & Estate", href: "/probate-estate-sales" },
-  { label: "Senior Transitions", href: "/senior-transitions" },
-  { label: "Resources", href: "/guides-and-resources" },
-  { label: "Articles", href: "/articles" },
+  {
+    label: "Probate & Estate",
+    href: "/probate-estate-sales",
+    items: [
+      { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
+      { label: "For Executors", href: "/executors" },
+      { label: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
+      { label: "Probate Attorneys", href: "/professionals/probate-attorneys" },
+      { label: "Certified Appraisers", href: "/real-estate-appraiser" },
+      { label: "Estate Liquidators", href: "/estate-liquidators" },
+    ],
+  },
+  {
+    label: "Senior Transitions",
+    href: "/senior-transitions",
+    items: [
+      { label: "Senior Home Sales", href: "/senior-transitions" },
+      { label: "Senior Living Advisors", href: "/senior-living-advisors" },
+      { label: "Senior Move Managers", href: "/senior-move-managers" },
+      { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
+      { label: "Medicare & Benefits Advisors", href: "/medicare-providers" },
+    ],
+  },
+  {
+    label: "Resources",
+    href: "/guides-and-resources",
+    items: [
+      { label: "All Resources", href: "/guides-and-resources" },
+      { label: "Financial Planners", href: "/professionals/financial-planners" },
+      { label: "CPAs & Accountants", href: "/professionals/cpas" },
+      { label: "Mortgage Lenders", href: "/mortgage-lenders" },
+      { label: "Real Estate Brokers", href: "/realtor" },
+    ],
+  },
+  {
+    label: "Articles",
+    href: "/articles",
+    items: [
+      { label: "The Silver Tsunami", href: "/articles/silver-tsunami" },
+      { label: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
+      { label: "Senior Housing Options", href: "/articles/senior-housing-options" },
+      { label: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
+      { label: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
+      { label: "Independent Living Costs", href: "/articles/independent-living-costs" },
+      { label: "Memory Care Costs", href: "/articles/memory-care-costs" },
+      { label: "CCRC Costs", href: "/articles/ccrc-costs" },
+      { label: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
+      { label: "Aging in Place With Support", href: "/articles/aging-in-place" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];
 
-const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
+function NavItem({ item, pathname }: { item: (typeof TOP_LINKS)[0]; pathname: string }) {
+  const [open, setOpen] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleEnter = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpen(true);
+  };
+
+  const handleLeave = () => {
+    closeTimer.current = setTimeout(() => setOpen(false), 300);
+  };
+
+  if (!item.items) {
+    return (
+      <Link to={item.href} className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}>
+        {item.label}
+      </Link>
+    );
+  }
+
+  return (
+    <div style={{ position: "relative" }} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+      <Link
+        to={item.href}
+        className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
+        style={{ display: "inline-flex", alignItems: "center", gap: 5 }}
+      >
+        {item.label}
+        <svg
+          width="9"
+          height="9"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          style={{
+            transition: "transform 0.25s ease",
+            transform: open ? "rotate(180deg)" : "rotate(0deg)",
+            opacity: 0.7,
+          }}
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </Link>
+
+      {/* Dropdown */}
+      <div
+        style={{
+          position: "absolute",
+          top: "calc(100% + 10px)",
+          left: "50%",
+          transform: "translateX(-50%)",
+          background: "rgba(8,13,25,0.97)",
+          backdropFilter: "blur(12px)",
+          borderRadius: 6,
+          border: "1px solid rgba(232,201,122,0.15)",
+          minWidth: 220,
+          padding: "8px 0",
+          zIndex: 200,
+          opacity: open ? 1 : 0,
+          pointerEvents: open ? "auto" : "none",
+          transform: open ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(-8px)",
+          transition: "opacity 0.25s ease, transform 0.25s ease",
+          boxShadow: "0 16px 48px rgba(0,0,0,0.4)",
+        }}
+      >
+        {/* Small arrow pointer */}
+        <div
+          style={{
+            position: "absolute",
+            top: -5,
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: 10,
+            height: 10,
+            background: "rgba(8,13,25,0.97)",
+            border: "1px solid rgba(232,201,122,0.15)",
+            borderBottom: "none",
+            borderRight: "none",
+            rotate: "45deg",
+          }}
+        />
+
+        {item.items.map((sub) => (
+          <Link
+            key={sub.href}
+            to={sub.href}
+            style={{
+              display: "block",
+              padding: "9px 20px",
+              color: "rgba(255,255,255,0.85)",
+              textDecoration: "none",
+              fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+              fontSize: 12,
+              fontWeight: 400,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              transition: "color 0.18s ease, background 0.18s ease",
+              whiteSpace: "nowrap",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.color = GOLD;
+              (e.currentTarget as HTMLAnchorElement).style.background = "rgba(232,201,122,0.06)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.85)";
+              (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+            }}
+          >
+            {sub.label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
@@ -25,19 +192,18 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    // Load Raleway to match M≡NU button
     const id = "rpp-raleway-font";
     if (!document.getElementById(id)) {
       const link = document.createElement("link");
       link.id = id;
       link.rel = "stylesheet";
-      link.href = "https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap";
+      link.href = "https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600&display=swap";
       document.head.appendChild(link);
     }
   }, []);
 
   useEffect(() => {
-    const id = "rpp-toplink-styles-v4";
+    const id = "rpp-toplink-styles-v5";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
     style.id = id;
@@ -105,16 +271,7 @@ const Header = () => {
 
           {/* RIGHT: top links + CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22 }}>
-            {!isMobile &&
-              TOP_LINKS.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+            {!isMobile && TOP_LINKS.map((item) => <NavItem key={item.href} item={item} pathname={pathname} />)}
 
             <a
               href="tel:2069003015"
@@ -137,7 +294,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile nav links */}
+        {/* Mobile nav */}
         {isMobile && (
           <div
             style={{
