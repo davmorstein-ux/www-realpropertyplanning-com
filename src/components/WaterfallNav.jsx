@@ -288,6 +288,7 @@ const CSS = `
     width: 100%;
     padding: 7px 14px 7px 22px;
     font-size: 12px;
+    font-weight: 700;
     color: #0a1628;
     background: none;
     border: none;
