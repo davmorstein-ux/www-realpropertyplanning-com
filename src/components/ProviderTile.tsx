@@ -83,15 +83,15 @@ export default function ProviderTile({
           <div
             style={{
               position: "fixed",
-              top: "50%",
+              top: "80px",
               left: "50%",
-              transform: visible ? "translate(-50%, -50%) scale(1)" : "translate(-50%, -48%) scale(0.97)",
+              transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.97)",
               zIndex: 2147483647,
               background: "#fff",
               borderRadius: 8,
               maxWidth: 560,
               width: "90vw",
-              maxHeight: "60vh",
+              maxHeight: "calc(100vh - 120px)",
               overflowY: "auto",
               boxShadow: "0 24px 80px rgba(10,22,40,0.5)",
               opacity: visible ? 1 : 0,
