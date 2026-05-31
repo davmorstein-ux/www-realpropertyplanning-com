@@ -5,7 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionals from "@/components/BackToProfessionals";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import ProviderTile from "@/components/ProviderTile";
+import ProviderBioModal from "@/components/ProviderBioModal";
 import { articleSchema } from "@/lib/schema";
 import heroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import lauraSilversteinPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
@@ -56,20 +56,151 @@ const AgingLifeCareManagers = () => {
         <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
-              <ProviderTile
-                name="Laura A. Silverstein, MSW"
-                title="Aging Life Care Manager"
-                company="Silver & Sage Consulting, LLC"
-                photo={lauraSilversteinPhoto}
-                photoAlt="Photo of Laura A. Silverstein, MSW"
-                logo={silverSageLogo}
-                logoAlt="Silver & Sage Consulting logo"
-                phone="(206) 886-6012"
-                email="info@silverandsageconsulting.com"
-                website="https://www.silverandsageconsulting.com"
-                bio={LAURA_BIO}
-                specialty="Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information/referral, and placement"
-              />
+              {/* Tile — plain div, no interior-tile classes */}
+              <div
+                style={{
+                  background: "#fff",
+                  borderRadius: 8,
+                  boxShadow: "0 4px 20px rgba(10,22,40,0.08)",
+                  padding: "28px 24px 24px",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                }}
+              >
+                <img
+                  src={silverSageLogo}
+                  alt="Silver & Sage Consulting logo"
+                  style={{ height: 96, width: "auto", objectFit: "contain", marginBottom: 16 }}
+                  loading="lazy"
+                />
+
+                {/* Headshot with bio modal */}
+                <ProviderBioModal
+                  name="Laura A. Silverstein, MSW"
+                  title="Aging Life Care Manager"
+                  company="Silver & Sage Consulting, LLC"
+                  photo={lauraSilversteinPhoto}
+                  alt="Photo of Laura A. Silverstein, MSW"
+                  logo={silverSageLogo}
+                  logoAlt="Silver & Sage Consulting logo"
+                  bio={LAURA_BIO}
+                  specialty="Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information/referral, and placement"
+                />
+
+                <div
+                  style={{
+                    fontFamily: "Georgia, serif",
+                    fontSize: 18,
+                    fontWeight: 700,
+                    color: "#0a1628",
+                    marginTop: 12,
+                    marginBottom: 4,
+                  }}
+                >
+                  Laura A. Silverstein, MSW
+                </div>
+                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666", marginBottom: 2 }}>
+                  Aging Life Care Manager
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Raleway', sans-serif",
+                    fontSize: 11,
+                    fontWeight: 700,
+                    color: "#0a1628",
+                    marginBottom: 12,
+                  }}
+                >
+                  Silver & Sage Consulting, LLC
+                </div>
+
+                <div
+                  style={{
+                    fontFamily: "Georgia, serif",
+                    fontSize: 13,
+                    color: "#6b7280",
+                    fontStyle: "italic",
+                    marginBottom: 16,
+                    lineHeight: 1.5,
+                  }}
+                >
+                  Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with
+                  disabilities, information/referral, and placement
+                </div>
+
+                <div
+                  style={{
+                    fontSize: 10,
+                    fontFamily: "'Raleway', sans-serif",
+                    fontWeight: 700,
+                    letterSpacing: "0.16em",
+                    textTransform: "uppercase",
+                    color: "#ccc",
+                    marginBottom: 16,
+                  }}
+                >
+                  Hover photo for bio
+                </div>
+
+                <div
+                  style={{
+                    borderTop: "1px solid #e0d8c8",
+                    paddingTop: 16,
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 6,
+                    alignItems: "center",
+                  }}
+                >
+                  <a
+                    href="tel:+12068866012"
+                    style={{ fontSize: 13, color: "#1a5fa8", textDecoration: "none", fontWeight: 600 }}
+                  >
+                    (206) 886-6012
+                  </a>
+                  <a
+                    href="mailto:info@silverandsageconsulting.com"
+                    style={{ fontSize: 12, color: "#8B6914", textDecoration: "none" }}
+                  >
+                    info@silverandsageconsulting.com
+                  </a>
+                  <a
+                    href="https://www.silverandsageconsulting.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      marginTop: 8,
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 6,
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 11,
+                      fontWeight: 700,
+                      letterSpacing: "0.16em",
+                      textTransform: "uppercase",
+                      color: "#8B6914",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Learn More
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="12"
+                      height="12"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -101,13 +232,12 @@ const AgingLifeCareManagers = () => {
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
                 What sets an Aging Life Care Manager apart is the combination of expertise, objectivity, and local
                 knowledge. Rather than offering one-size-fits-all advice, they provide a holistic, client-centered
-                approach tailored to the older adult's wishes, needs, and changing circumstances, while also giving
-                families clear guidance and peace of mind, especially when loved ones live at a distance.
+                approach tailored to the older adult's wishes, needs, and changing circumstances.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
                 Many Aging Life Care Managers are members of the Aging Life Care Association, whose members are required
-                to meet education, experience, and, for advanced-level membership, certification standards, and to
-                follow a Code of Ethics and Standards of Practice.
+                to meet education, experience, and certification standards, and to follow a Code of Ethics and Standards
+                of Practice.
               </p>
             </div>
           </div>
