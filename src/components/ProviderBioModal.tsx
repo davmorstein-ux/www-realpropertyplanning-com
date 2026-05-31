@@ -16,36 +16,29 @@ interface ProviderBioModalProps {
   specialty?: string;
 }
 
-export default function ProviderBioModal({
-  name,
-  title,
-  company,
-  photo,
-  alt,
-  logo,
-  logoAlt,
-  phone,
-  email,
-  website,
-  address,
-  bio,
-  specialty,
-}: ProviderBioModalProps) {
+export default function ProviderBioModal(props: ProviderBioModalProps) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
+      <style>{`
+        .pbm-trigger { position: relative; display: inline-block; cursor: pointer; }
+        .pbm-overlay {
+          position: absolute; inset: 0; border-radius: 50%;
+          background: rgba(10,22,40,0.7);
+          display: flex; flex-direction: column; align-items: center; justify-content: center;
+          opacity: 0; transition: opacity 0.3s ease; pointer-events: none; gap: 2px;
+        }
+        .pbm-trigger:hover .pbm-overlay { opacity: 1; }
+        .pbm-overlay span { color: #E8C97A; font-family: 'Raleway', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-align: center; line-height: 1.3; }
+      `}</style>
+
       {/* Clickable headshot */}
-      <div
-        className="provider-bio-trigger"
-        style={{ position: "relative", display: "inline-block", cursor: "pointer" }}
-        onClick={() => setOpen(true)}
-        title={`View ${name}'s profile`}
-      >
-        {photo ? (
+      <div className="pbm-trigger" onClick={() => setOpen(true)}>
+        {props.photo ? (
           <img
-            src={photo}
-            alt={alt || name}
+            src={props.photo}
+            alt={props.alt || props.name}
             style={{
               width: 112,
               height: 112,
@@ -53,10 +46,7 @@ export default function ProviderBioModal({
               objectFit: "cover",
               border: "2px solid #e0d8c8",
               display: "block",
-              transition: "transform 0.3s ease",
             }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLImageElement).style.transform = "scale(1.05)")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLImageElement).style.transform = "scale(1)")}
           />
         ) : (
           <div
@@ -72,71 +62,42 @@ export default function ProviderBioModal({
             }}
           >
             <span style={{ fontFamily: "Georgia, serif", fontSize: 28, color: "#fff", fontWeight: 700 }}>
-              {name
+              {props.name
                 .split(" ")
-                .map((n) => n[0])
+                .map((n: string) => n[0])
                 .slice(0, 2)
                 .join("")}
             </span>
           </div>
         )}
-
-        {/* Hover overlay on headshot */}
-        <div
-          className="provider-overlay"
-          style={{
-            position: "absolute",
-            inset: 0,
-            borderRadius: "50%",
-            background: "rgba(10,22,40,0.65)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            opacity: 0,
-            transition: "opacity 0.3s ease",
-            gap: 2,
-            pointerEvents: "none",
-          }}
-        >
-          <span style={{ fontSize: 18, color: "#E8C97A" }}>👤</span>
-          <span
-            style={{
-              fontFamily: "'Raleway', sans-serif",
-              fontSize: 9,
-              fontWeight: 700,
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              color: "#E8C97A",
-              textAlign: "center",
-              lineHeight: 1.3,
-            }}
-          >
+        <div className="pbm-overlay">
+          <span>👤</span>
+          <span>
             View
             <br />
             Profile
           </span>
         </div>
-        <style>{`.provider-bio-trigger:hover .provider-overlay { opacity: 1 !important; }`}</style>
       </div>
 
-      {/* Modal overlay */}
+      {/* Modal */}
       {open && (
         <div
+          onClick={() => setOpen(false)}
           style={{
             position: "fixed",
             inset: 0,
-            background: "rgba(10,22,40,0.75)",
-            zIndex: 9999,
+            zIndex: 99999,
+            background: "rgba(10,22,40,0.8)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            padding: "24px",
+            padding: 24,
             backdropFilter: "blur(4px)",
           }}
-          onClick={() => setOpen(false)}
         >
           <div
+            onClick={(e) => e.stopPropagation()}
             style={{
               background: "#fff",
               borderRadius: 8,
@@ -144,19 +105,10 @@ export default function ProviderBioModal({
               width: "100%",
               maxHeight: "90vh",
               overflowY: "auto",
-              boxShadow: "0 24px 80px rgba(10,22,40,0.4)",
-              animation: "modalIn 0.3s cubic-bezier(0.16,1,0.3,1)",
+              boxShadow: "0 24px 80px rgba(10,22,40,0.5)",
             }}
-            onClick={(e) => e.stopPropagation()}
           >
-            <style>{`
-              @keyframes modalIn {
-                from { opacity: 0; transform: translateY(16px); }
-                to { opacity: 1; transform: translateY(0); }
-              }
-            `}</style>
-
-            {/* Modal header */}
+            {/* Header */}
             <div
               style={{
                 background: "#0a1628",
@@ -168,10 +120,10 @@ export default function ProviderBioModal({
                 position: "relative",
               }}
             >
-              {photo && (
+              {props.photo && (
                 <img
-                  src={photo}
-                  alt={alt || name}
+                  src={props.photo}
+                  alt={props.alt || props.name}
                   style={{
                     width: 80,
                     height: 80,
@@ -192,39 +144,37 @@ export default function ProviderBioModal({
                     marginBottom: 4,
                   }}
                 >
-                  {name}
+                  {props.name}
                 </div>
                 <div
                   style={{
                     fontFamily: "'Raleway', sans-serif",
-                    fontSize: 12,
-                    fontWeight: 400,
-                    letterSpacing: "0.1em",
+                    fontSize: 11,
+                    letterSpacing: "0.12em",
                     color: "#E8C97A",
                     textTransform: "uppercase",
                   }}
                 >
-                  {title}
+                  {props.title}
                 </div>
                 <div
                   style={{
                     fontFamily: "'Raleway', sans-serif",
-                    fontSize: 12,
-                    color: "rgba(255,255,255,0.7)",
+                    fontSize: 11,
+                    color: "rgba(255,255,255,0.65)",
                     marginTop: 2,
                   }}
                 >
-                  {company}
+                  {props.company}
                 </div>
               </div>
-              {logo && (
+              {props.logo && (
                 <img
-                  src={logo}
-                  alt={logoAlt || company}
+                  src={props.logo}
+                  alt={props.logoAlt || props.company}
                   style={{ height: 48, width: "auto", objectFit: "contain", flexShrink: 0 }}
                 />
               )}
-              {/* Close button */}
               <button
                 onClick={() => setOpen(false)}
                 style={{
@@ -233,7 +183,7 @@ export default function ProviderBioModal({
                   right: 14,
                   background: "none",
                   border: "none",
-                  color: "rgba(255,255,255,0.6)",
+                  color: "rgba(255,255,255,0.7)",
                   fontSize: 22,
                   cursor: "pointer",
                   lineHeight: 1,
@@ -245,9 +195,8 @@ export default function ProviderBioModal({
               </button>
             </div>
 
-            {/* Modal body */}
-            <div style={{ padding: "28px" }}>
-              {/* Bio */}
+            {/* Body */}
+            <div style={{ padding: 28 }}>
               <p
                 style={{
                   fontFamily: "Georgia, serif",
@@ -257,11 +206,10 @@ export default function ProviderBioModal({
                   marginBottom: 24,
                 }}
               >
-                {bio}
+                {props.bio}
               </p>
 
-              {/* Specialty */}
-              {specialty && (
+              {props.specialty && (
                 <div
                   style={{
                     marginBottom: 24,
@@ -285,12 +233,11 @@ export default function ProviderBioModal({
                     Specialties
                   </div>
                   <div style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568", lineHeight: 1.6 }}>
-                    {specialty}
+                    {props.specialty}
                   </div>
                 </div>
               )}
 
-              {/* Contact info */}
               <div
                 style={{
                   borderTop: "1px solid #e0d8c8",
@@ -313,12 +260,12 @@ export default function ProviderBioModal({
                 >
                   Contact
                 </div>
-                {address && (
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568" }}>📍 {address}</div>
+                {props.address && (
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568" }}>📍 {props.address}</div>
                 )}
-                {phone && (
+                {props.phone && (
                   <a
-                    href={`tel:${phone.replace(/\D/g, "")}`}
+                    href={`tel:${props.phone.replace(/\D/g, "")}`}
                     style={{
                       fontFamily: "Georgia, serif",
                       fontSize: 14,
@@ -327,25 +274,25 @@ export default function ProviderBioModal({
                       fontWeight: 700,
                     }}
                   >
-                    📞 {phone}
+                    📞 {props.phone}
                   </a>
                 )}
-                {email && (
+                {props.email && (
                   <a
-                    href={`mailto:${email}`}
+                    href={`mailto:${props.email}`}
                     style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#8B6914", textDecoration: "none" }}
                   >
-                    ✉️ {email}
+                    ✉️ {props.email}
                   </a>
                 )}
-                {website && (
+                {props.website && (
                   <a
-                    href={website}
+                    href={props.website}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#8B6914", textDecoration: "none" }}
                   >
-                    🌐 {website.replace(/^https?:\/\//, "")}
+                    🌐 {props.website.replace(/^https?:\/\//, "")}
                   </a>
                 )}
               </div>
