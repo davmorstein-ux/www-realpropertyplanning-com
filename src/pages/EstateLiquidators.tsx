@@ -30,13 +30,7 @@ const EstateLiquidators = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             {/* Ginny's Girls tile */}
-            <a
-              href="https://www.ginnysestates.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Ginny's Girls Estate Services — Visit website"
-              className="interior-tile interior-tile--wide tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-            >
+            <div className="interior-tile interior-tile--wide tile-white block h-full">
               <div className="tile-white__inner h-full">
                 <div className="tile-white__face h-full">
                   <div className="flex h-full flex-col items-center text-center p-6">
@@ -115,10 +109,34 @@ const EstateLiquidators = () => (
                         </a>
                       </div>
                     </div>
+
+                    {/* Website link */}
+                    <a
+                      href="https://www.ginnysestates.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="gold-cta mt-4"
+                      onClick={stopPropagation}
+                    >
+                      Visit Website
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>
