@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -149,6 +150,7 @@ const Executors = () => (
       microcopy="Confidential. No commitment. We can also coordinate directly with your estate attorney."
     />
     <DisclaimerSection />
+      <BackToProfessionals />
     </main>
     <Footer />
   </div>

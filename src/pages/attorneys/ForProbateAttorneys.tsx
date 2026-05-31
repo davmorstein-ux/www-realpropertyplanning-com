@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -223,6 +224,7 @@ const ForProbateAttorneys = () => (
 
     <RelatedServices currentPath="/for-probate-attorneys" />
     <DisclaimerSection />
+      <BackToProfessionals />
     </main>
     <Footer />
   </div>

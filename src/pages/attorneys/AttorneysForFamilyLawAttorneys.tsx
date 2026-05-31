@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -51,6 +52,7 @@ const AttorneysForFamilyLawAttorneys = () => (
       </div>
 
       <SiteDisclaimerBlock />
+      <BackToProfessionals />
     </main>
     <Footer />
   </div>
