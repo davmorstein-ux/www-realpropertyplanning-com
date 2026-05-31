@@ -26,12 +26,12 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
   const handleEnter = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setOpen(true);
-    setTimeout(() => setVisible(true), 10); // tiny delay lets CSS transition fire
+    setTimeout(() => setVisible(true), 20); // tiny delay lets CSS transition fire
   };
 
   const handleLeave = () => {
     setVisible(false);
-    closeTimer.current = setTimeout(() => setOpen(false), 600); // wait for fade out
+    closeTimer.current = setTimeout(() => setOpen(false), 1600); // wait for fade out
   };
 
   const modal = open
@@ -48,7 +48,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
             pointerEvents: "none",
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(12px)",
-            transition: "opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1)",
+            transition: "opacity 1.4s cubic-bezier(0.16,1,0.3,1), transform 1.4s cubic-bezier(0.16,1,0.3,1)",
           }}
         >
           <div
