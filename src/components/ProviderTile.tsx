@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 import { createPortal } from "react-dom";
 
 interface ProviderTileProps {
-  // Identity
   name: string;
   title: string;
   company: string;
@@ -10,7 +9,6 @@ interface ProviderTileProps {
   photoAlt?: string;
   logo?: string;
   logoAlt?: string;
-  // Contact — shown statically at bottom, NOT in modal
   phone?: string;
   phoneHref?: string;
   phone2?: string;
@@ -18,7 +16,6 @@ interface ProviderTileProps {
   email?: string;
   email2?: string;
   website: string;
-  // Bio modal
   bio?: string;
   specialty?: string;
 }
@@ -63,7 +60,6 @@ export default function ProviderTile({
         boxShadow: "0 24px 80px rgba(10,22,40,0.5)",
         pointerEvents: "auto",
       }}>
-        {/* Header */}
         <div style={{ background: "#0a1628", padding: "20px 24px", borderRadius: "8px 8px 0 0", display: "flex", alignItems: "center", gap: 16 }}>
           {photo && <img src={photo} alt={photoAlt || name} style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", border: "2px solid #C9A84C", flexShrink: 0 }} />}
           <div style={{ flex: 1 }}>
@@ -73,7 +69,6 @@ export default function ProviderTile({
           </div>
           {logo && <img src={logo} alt={logoAlt || company} style={{ height: 40, width: "auto", objectFit: "contain", flexShrink: 0 }} />}
         </div>
-        {/* Body */}
         <div style={{ padding: "20px 24px", overflowY: "auto", maxHeight: "50vh" }}>
           <p style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568", lineHeight: 1.75, marginBottom: specialty ? 16 : 0 }}>{bio}</p>
           {specialty && (
@@ -90,75 +85,95 @@ export default function ProviderTile({
 
   return (
     <>
-      <style>{`
-        .pvt-upper { transition: background 0.3s ease; border-radius: 8px 8px 0 0; cursor: ${bio ? "pointer" : "default"}; }
-        .pvt-upper:hover { background: rgba(10,22,40,0.04); }
-        .pvt-photo { transition: transform 0.3s ease, border-color 0.3s ease; }
-        .pvt-upper:hover .pvt-photo { transform: scale(1.05); border-color: #C9A84C !important; }
-      `}</style>
-
       <div className="interior-tile tile-white block h-full">
         <div className="tile-white__inner h-full">
           <div className="tile-white__face h-full">
-            <div className="flex h-full flex-col">
+            <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
 
-              {/* UPPER — hoverable, shows bio */}
+              {/* UPPER — entire area is hoverable */}
               <div
-                className="pvt-upper flex flex-col items-center text-center px-6 pt-6 pb-4 flex-1"
                 onMouseEnter={handleEnter}
                 onMouseLeave={handleLeave}
+                style={{
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                  padding: "24px 24px 16px",
+                  cursor: bio ? "pointer" : "default",
+                  background: hovered ? "rgba(10,22,40,0.03)" : "transparent",
+                  transition: "background 0.3s ease",
+                  borderRadius: "8px 8px 0 0",
+                }}
               >
                 {logo && (
-                  <img src={logo} alt={logoAlt || company} className="h-20 md:h-24 w-auto object-contain mb-4" loading="lazy" />
+                  <img src={logo} alt={logoAlt || company} style={{ height: 88, width: "auto", objectFit: "contain", marginBottom: 16 }} loading="lazy" />
                 )}
                 {photo && (
-                  <img src={photo} alt={photoAlt || name} className="pvt-photo w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-3" loading="lazy" />
+                  <img
+                    src={photo}
+                    alt={photoAlt || name}
+                    style={{
+                      width: 112, height: 112, borderRadius: "50%", objectFit: "cover",
+                      border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+                      marginBottom: 12,
+                      transform: hovered ? "scale(1.05)" : "scale(1)",
+                      transition: "transform 0.3s ease, border 0.3s ease",
+                    }}
+                    loading="lazy"
+                  />
                 )}
-                <h3 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">{name}</h3>
-                <p className="text-foreground text-sm mb-1">{title}</p>
-                <p className="text-foreground text-sm font-semibold mb-3">{company}</p>
-                {specialty && <p className="text-muted-foreground text-sm italic mb-2">{specialty}</p>}
-
+                <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 4 }}>{name}</div>
+                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666", marginBottom: 2 }}>{title}</div>
+                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, fontWeight: 700, color: "#0a1628", marginBottom: 10 }}>{company}</div>
+                {specialty && (
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#6b7280", fontStyle: "italic", marginBottom: 8, lineHeight: 1.5 }}>{specialty}</div>
+                )}
                 {bio && (
-                  <p className="text-muted-foreground text-xs mt-1" style={{ fontFamily: "'Raleway', sans-serif", letterSpacing: "0.1em", textTransform: "uppercase" }}>
-                    Hover for bio ↑
-                  </p>
+                  <div style={{
+                    fontFamily: "'Raleway', sans-serif", fontSize: 9, fontWeight: 700,
+                    letterSpacing: "0.16em", textTransform: "uppercase",
+                    color: hovered ? "#8B6914" : "#aaa",
+                    transition: "color 0.3s ease", marginTop: 4,
+                  }}>
+                    {hovered ? "Viewing Bio ↑" : "Hover for Bio ↑"}
+                  </div>
                 )}
               </div>
 
-              {/* LOWER — static contact info, not hoverable */}
-              <div className="px-6 pb-6 pt-2 border-t border-border/30">
-                <div className="space-y-1 text-sm text-center mb-4">
+              {/* LOWER — static, not hoverable */}
+              <div style={{
+                padding: "12px 24px 24px",
+                borderTop: "1px solid #e0d8c8",
+              }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, textAlign: "center", marginBottom: 14 }}>
                   {phone && (
-                    <div>
-                      <a href={phoneHref || `tel:${phone.replace(/\D/g, "")}`} onClick={stopProp} className="text-accent hover:text-gold underline-offset-4 hover:underline font-medium">
-                        {phone}
-                      </a>
-                    </div>
+                    <a href={phoneHref || `tel:${phone.replace(/\D/g, "")}`} onClick={stopProp}
+                      style={{ fontSize: 13, color: "#1a5fa8", textDecoration: "none", fontWeight: 600 }}>
+                      {phone}
+                    </a>
                   )}
                   {phone2 && (
-                    <div>
-                      <a href={phoneHref2 || `tel:${phone2.replace(/\D/g, "")}`} onClick={stopProp} className="text-accent hover:text-gold underline-offset-4 hover:underline font-medium">
-                        {phone2}
-                      </a>
-                    </div>
+                    <a href={phoneHref2 || `tel:${phone2.replace(/\D/g, "")}`} onClick={stopProp}
+                      style={{ fontSize: 13, color: "#1a5fa8", textDecoration: "none", fontWeight: 600 }}>
+                      {phone2}
+                    </a>
                   )}
                   {email && (
-                    <div>
-                      <a href={`mailto:${email}`} onClick={stopProp} className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
-                        {email}
-                      </a>
-                    </div>
+                    <a href={`mailto:${email}`} onClick={stopProp}
+                      style={{ fontSize: 12, color: "#8B6914", textDecoration: "none" }}>
+                      {email}
+                    </a>
                   )}
                   {email2 && (
-                    <div>
-                      <a href={`mailto:${email2}`} onClick={stopProp} className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
-                        {email2}
-                      </a>
-                    </div>
+                    <a href={`mailto:${email2}`} onClick={stopProp}
+                      style={{ fontSize: 12, color: "#8B6914", textDecoration: "none" }}>
+                      {email2}
+                    </a>
                   )}
                 </div>
-                <div className="text-center">
+                <div style={{ textAlign: "center" }}>
                   <a href={website} target="_blank" rel="noopener noreferrer" onClick={stopProp} className="gold-cta">
                     Learn More
                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -172,7 +187,6 @@ export default function ProviderTile({
           </div>
         </div>
       </div>
-
       {modal}
     </>
   );
