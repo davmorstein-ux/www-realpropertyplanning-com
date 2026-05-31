@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -114,6 +115,7 @@ const FeaturedSeniorMoveManagers = () => (
       </section>
 
       <DisclaimerSection />
+      <BackToProfessionals />
     </main>
     <Footer />
   </div>

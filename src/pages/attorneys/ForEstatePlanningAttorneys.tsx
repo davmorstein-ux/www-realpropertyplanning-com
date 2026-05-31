@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -159,6 +160,7 @@ const ForEstatePlanningAttorneys = () => (
 
     <RelatedServices currentPath="/for-estate-planning-attorneys" />
     <DisclaimerSection />
+      <BackToProfessionals />
     </main>
     <Footer />
   </div>

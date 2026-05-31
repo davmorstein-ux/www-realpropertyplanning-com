@@ -1,5 +1,6 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
 import Header from "@/components/Header";
+import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -249,6 +250,7 @@ const ForRealEstateAttorneys = () => (
     <FeaturedAttorneyPlaceholder />
     <RelatedServices currentPath="/real-estate-attorneys" />
     <DisclaimerSection />
+      <BackToProfessionals />
     </main>
     <Footer />
   </div>

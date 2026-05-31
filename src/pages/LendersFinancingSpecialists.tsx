@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -265,6 +266,7 @@ const LendersFinancingSpecialists = () => (
     <CTASection />
     <RelatedServices currentPath="/lenders-and-financing-specialists" />
     <DisclaimerSection />
+      <BackToProfessionals />
     </main>
     <Footer />
   </div>
