@@ -327,7 +327,7 @@ const ProfessionPageTemplate = ({
         </div>
       </section>
 
-      <BackToProfessionalsButton />
+      <BackToProfessionals />
       <DisclaimerSection />
       </main>
       <Footer />
