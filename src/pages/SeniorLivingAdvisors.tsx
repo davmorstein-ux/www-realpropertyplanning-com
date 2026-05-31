@@ -5,7 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import BackToProfessionals from "@/components/BackToProfessionals";
-import ProviderBioModal from "@/components/ProviderBioModal";
+import ProviderTile from "@/components/ProviderTile";
 import abbyPhoto from "@/assets/abby-durr-silver-age-senior-living-advisor.webp";
 import silverAgeLogo from "@/assets/silver-age-senior-living-advisors-logo.webp";
 
@@ -30,119 +30,29 @@ const SeniorLivingAdvisors = () => (
     <main id="main-content">
       <HeroBandTitle as="h1">Senior Living Advisors</HeroBandTitle>
 
-      {/* Featured advisors */}
       <section className="py-10 md:py-14 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
-            <div className="interior-tile interior-tile--wide tile-white block h-full">
-              <div className="tile-white__inner h-full">
-                <div className="tile-white__face h-full">
-                  <div className="flex h-full flex-col items-center text-center p-6">
-                    <img
-                      src={silverAgeLogo}
-                      alt="Silver Age Senior Living Advisors logo"
-                      className="h-[120px] md:h-[144px] w-auto object-contain mb-4"
-                      loading="lazy"
-                    />
-
-                    {/* Headshot with bio modal */}
-                    <div className="flex flex-col items-center mb-3">
-                      <ProviderBioModal
-                        name="Abby Durr"
-                        title="Senior Living Advisor"
-                        company="Silver Age Senior Living Advisors"
-                        photo={abbyPhoto}
-                        alt="Photo of Abby Durr, Senior Living Advisor at Silver Age Senior Living Advisors"
-                        logo={silverAgeLogo}
-                        logoAlt="Silver Age Senior Living Advisors logo"
-                        phone="(425) 891-7569"
-                        email="abby@silveragecare.com"
-                        website="https://www.silveragecare.com"
-                        address="1567 Highlands Dr NE, Suite 110, Issaquah, WA 98029"
-                        bio={ABBY_BIO}
-                        specialty="Assisted living, memory care, adult family homes, and in-home care throughout the Greater Seattle region and Wenatchee."
-                      />
-                      <p className="text-foreground font-semibold text-sm mt-2">Abby Durr</p>
-                      <p className="text-muted-foreground text-xs">Senior Living Advisor</p>
-                    </div>
-
-                    <h2 className="font-serif text-lg md:text-xl text-navy font-semibold leading-snug mb-3">
-                      Silver Age Senior Living Advisors
-                    </h2>
-
-                    <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">
-                      Assisted living, memory care, adult family homes, and in-home care throughout the Greater Seattle
-                      region and Wenatchee.
-                    </p>
-
-                    <div className="w-full space-y-1.5 text-sm mb-5">
-                      <div className="flex items-center gap-2 justify-center">
-                        <a
-                          href="tel:+14258917569"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline font-medium"
-                        >
-                          (425) 891-7569
-                        </a>
-                        <span className="text-muted-foreground">Main</span>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center">
-                        <a
-                          href="tel:+12066697191"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline font-medium"
-                        >
-                          (206) 669-7191
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center">
-                        <a
-                          href="mailto:info@silveragecare.com"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
-                        >
-                          info@silveragecare.com
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center">
-                        <a
-                          href="mailto:abby@silveragecare.com"
-                          className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
-                        >
-                          abby@silveragecare.com
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="mt-auto w-full pt-2">
-                      <a
-                        href="https://www.silveragecare.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="gold-cta"
-                      >
-                        Learn More
-                        <svg
-                          viewBox="0 0 24 24"
-                          width="14"
-                          height="14"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2.4"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          aria-hidden="true"
-                        >
-                          <polyline points="9 18 15 12 9 6" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ProviderTile
+              name="Abby Durr"
+              title="Owner & Founder"
+              company="Silver Age Senior Living Advisors"
+              photo={abbyPhoto}
+              photoAlt="Photo of Abby Durr, Senior Living Advisor at Silver Age Senior Living Advisors"
+              logo={silverAgeLogo}
+              logoAlt="Silver Age Senior Living Advisors logo"
+              phone="(425) 891-7569"
+              phone2="(206) 669-7191"
+              email="abby@silveragecare.com"
+              email2="info@silveragecare.com"
+              website="https://www.silveragecare.com"
+              bio={ABBY_BIO}
+              specialty="Assisted living, memory care, adult family homes, and in-home care throughout the Greater Seattle region and Wenatchee."
+            />
           </div>
         </div>
       </section>
 
-      {/* Explanatory content */}
       <section className="py-10 md:py-14 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
