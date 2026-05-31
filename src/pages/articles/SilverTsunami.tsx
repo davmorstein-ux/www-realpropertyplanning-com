@@ -253,8 +253,8 @@ const SilverTsunami = () => {
           </div>
         </section>
 
-        <RelatedResourcesSection resources={relatedResources} />
         <BackToArticles />
+        <RelatedResourcesSection resources={relatedResources} />
         <DisclaimerSection />
       </main>
       <Footer />

@@ -249,10 +249,9 @@ const HowToChooseSeniorHousing = () => {
           </div>
         </section>
 
-        <RelatedResourcesSection resources={relatedResources} />
-
-        <DisclaimerSection />
         <BackToArticles />
+        <RelatedResourcesSection resources={relatedResources} />
+        <DisclaimerSection />
       </main>
       <Footer />
     </div>
