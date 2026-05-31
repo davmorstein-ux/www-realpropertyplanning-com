@@ -37,7 +37,7 @@ export default function ProviderTile({
     if (!bio) return;
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setHovered(true);
-    setTimeout(() => { setVisible(true); console.log('BIO VISIBLE SET TRUE', bio?.substring(0, 20)); }, 10);
+    setTimeout(() => setVisible(true), 10);
   };
 
   const handleLeave = () => {
@@ -70,10 +70,10 @@ export default function ProviderTile({
         <div
           style={{
             position: "fixed",
-            top: "50%",
+            top: "40%",
             left: "50%",
             transform: visible ? "translate(-50%, -50%) scale(1)" : "translate(-50%, -48%) scale(0.97)",
-            zIndex: 99999,
+            zIndex: 2147483647,
             background: "#fff",
             borderRadius: 8,
             maxWidth: 560,
