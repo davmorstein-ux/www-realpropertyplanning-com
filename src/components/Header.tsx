@@ -114,7 +114,6 @@ function NavItem({ item, pathname }: { item: (typeof TOP_LINKS)[0]; pathname: st
           position: "absolute",
           top: "calc(100% + 10px)",
           left: "50%",
-          transform: "translateX(-50%)",
           background: "rgba(8,13,25,0.97)",
           backdropFilter: "blur(12px)",
           borderRadius: 6,
