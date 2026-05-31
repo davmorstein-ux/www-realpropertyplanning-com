@@ -85,7 +85,7 @@ export default function ProviderTile({
 
   return (
     <>
-      <div className="interior-tile tile-white block h-full">
+      <div style={{ background:"#fff", borderRadius:8, boxShadow:"0 4px 20px rgba(10,22,40,0.08)", height:"100%", display:"block" }}>
         <div className="tile-white__inner h-full">
           <div className="tile-white__face h-full">
             <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
