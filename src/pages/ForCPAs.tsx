@@ -71,6 +71,34 @@ const ForCPAs = () => (
       </div>
     </section>
 
+    {/* Featured CPAs */}
+    <section className="py-16 lg:py-20 bg-secondary">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-3">
+            Featured CPAs
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            ​
+          </p>
+        </div>
+        <div className="max-w-md mx-auto">
+          <ProviderTile
+            name="Tenly Krakoff, CPA"
+            title="Co-Founder"
+            company="The Purple Group"
+            photo={purpleGroupPhoto}
+            photoAlt="Photo of Tenly Krakoff and Jessica Simons, CPAs at The Purple Group in Seattle"
+            logo={purpleGroupLogo}
+            logoAlt="The Purple Group logo"
+            website="https://www.thepurplegroup.com"
+            bio={PURPLE_GROUP_BIO}
+            specialty="Tax planning, estate and trust taxation, and financial strategy for individuals, small businesses, and high-net-worth clients."
+          />
+        </div>
+      </div>
+    </section>
+
     <CTASection />
     <DisclaimerSection />
     </main>
