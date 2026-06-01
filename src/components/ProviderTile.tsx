@@ -35,23 +35,20 @@ export default function ProviderTile({
   const [visible, setVisible] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleEnter = () => {
+  const handleClick = () => {
     if (!bio) return;
-    if (closeTimer.current) clearTimeout(closeTimer.current);
-    setHovered(true);
-    setTimeout(() => setVisible(true), 10);
-  };
-
-  const handleLeave = () => {
-    if (!bio) return;
-    setVisible(false);
-    closeTimer.current = setTimeout(() => setHovered(false), 1600);
+    if (hovered) {
+      setVisible(false);
+      setTimeout(() => setHovered(false), 1600);
+    } else {
+      setHovered(true);
+      setTimeout(() => setVisible(true), 10);
+    }
   };
 
   return (
     <div
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
+      onClick={handleClick}
       style={{
         position: "relative",
         background: "#fff",
