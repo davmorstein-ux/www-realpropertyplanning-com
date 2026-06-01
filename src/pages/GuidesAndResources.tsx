@@ -22,7 +22,7 @@ const categories = [
       { title: "Estate Liquidators", href: "/estate-liquidators" },
       { title: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
       { title: "Family Law Attorneys", href: "/professionals/family-law-attorneys" },
-      { title: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
+      { title: "Financial Planners & Advisors", href: "/for-financial-planners" },
       { title: "Medicare & Benefits Advisors", href: "/medicare-providers" },
       { title: "Mortgage Lenders", href: "/mortgage-lenders" },
       { title: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
