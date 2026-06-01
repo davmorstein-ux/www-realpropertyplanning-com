@@ -8,8 +8,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import BackToProfessionals from "@/components/BackToProfessionals";
 import ProviderTile from "@/components/ProviderTile";
-import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
-import hbmmLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
 import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
 import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-logo-washington.webp";
 import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
