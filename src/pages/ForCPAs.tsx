@@ -10,6 +10,11 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconCpas from "@/assets/icons/estate-cpas-financial-icon-washington.webp";
 import CTASection from "@/components/CTASection";
+import ProviderTile from "@/components/ProviderTile";
+import purpleGroupPhoto from "@/assets/providers/cpa-purple-group-tenly-jessica-seattle.webp";
+import purpleGroupLogo from "@/assets/providers/cpa-purple-group-logo-seattle.webp";
+
+const PURPLE_GROUP_BIO = `The Purple Group was founded to deliver a more personalized, relationship-driven CPA experience. Tenly Krakoff, CPA, holds a Master's in Accountancy (Taxation) from Gonzaga University and is a Lean Six Sigma–certified professional specializing in tax planning, operational strategy, and process improvement for closely held businesses. Jessica Simons, CPA, holds a Master's in Accounting (Taxation) from Washington State University and brings over a decade of experience in tax strategy for high-net-worth individuals, small businesses, and estates and trusts. Together they combine expertise with technology to help clients simplify finances, support growth, and focus on what matters most.`;
 
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for CPAs and Their Clients in Washington State",
@@ -62,6 +67,34 @@ const ForCPAs = () => (
           <Link to="/for-cpas/learn-more" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
             More information about CPAs →
           </Link>
+        </div>
+      </div>
+    </section>
+
+    {/* Featured CPAs */}
+    <section className="py-16 lg:py-20 bg-secondary">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-3">
+            Featured CPAs
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            ​
+          </p>
+        </div>
+        <div className="max-w-md mx-auto">
+          <ProviderTile
+            name="Tenly Krakoff, CPA"
+            title="Co-Founder"
+            company="The Purple Group"
+            photo={purpleGroupPhoto}
+            photoAlt="Photo of Tenly Krakoff and Jessica Simons, CPAs at The Purple Group in Seattle"
+            logo={purpleGroupLogo}
+            logoAlt="The Purple Group logo"
+            website="https://www.thepurplegroup.com"
+            bio={PURPLE_GROUP_BIO}
+            specialty="Tax planning, estate and trust taxation, and financial strategy for individuals, small businesses, and high-net-worth clients."
+          />
         </div>
       </div>
     </section>
