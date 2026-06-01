@@ -15,8 +15,8 @@ import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-lo
 import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
 import abigailPhoto from "@/assets/abigail-mckee-ginnys-girls-manager.webp";
 import ginnysGirlsLogo from "@/assets/ginnys-girls-estate-services-logo-v3.webp";
-import ericPhoto from "@/assets/senior-movers-eric-rovner-washington.webp";
-import hbLogo from "@/assets/senior-movers-hbmovemanagement-logo-washington.webp";
+import ericPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
+import hbLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
 
 type Contact = { name: string; role?: string; photo: string; alt: string };
 
