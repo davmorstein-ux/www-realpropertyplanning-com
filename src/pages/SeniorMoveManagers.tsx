@@ -31,27 +31,6 @@ type Provider = {
 
 const providers: Provider[] = [
   {
-    company: "Monarch Transitions · Senior Move Managers",
-    website: "https://www.monarchtransitions.com",
-    logo: monarchLogo,
-    logoAlt: "Monarch Transitions logo",
-    contacts: [
-      {
-        name: "Tina Baril",
-        role: "Owner",
-        photo: tinaBarilPhoto,
-        alt: "Tina Baril — Owner, Monarch Transitions",
-      },
-    ],
-    specialty:
-      "Senior move management serving Pierce, South King, Thurston and Kitsap counties.",
-    phones: [
-      { label: "(206) 353-8617", href: "tel:+12063538617" },
-      { label: "(253) 507-3398", href: "tel:+12535073398" },
-    ],
-    email: "tina@monarchtransitions.com",
-  },
-  {
     company: "Ginny's Girls Estate Services",
     website: "https://www.ginnysestates.com",
     logo: ginnysGirlsLogo,
