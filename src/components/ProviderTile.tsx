@@ -382,22 +382,6 @@ export default function ProviderTile({
         </div>
       )}
 
-      {bio && (
-        <div
-          style={{
-            fontFamily: "'Raleway', sans-serif",
-            fontSize: 9,
-            fontWeight: 700,
-            letterSpacing: "0.16em",
-            textTransform: "uppercase",
-            color: hovered ? "#8B6914" : "#ccc",
-            transition: "color 0.3s ease",
-            marginTop: 4,
-          }}
-        >
-          {hovered ? "Click to close ✕" : "Click for Bio"}
-        </div>
-      )}
 
       {/* Contact section */}
       <div
