@@ -69,7 +69,27 @@ const ForFinancialPlanners = () => (
       </div>
     </section>
 
-    <TiffanyLaneCard />
+    <section className="py-10 md:py-14 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+          <ProviderTile
+            name="Tiffany Lane"
+            title="Financial Professional"
+            company="New York Life — Seattle General Office"
+            photo={tiffanyPhoto}
+            photoAlt="Photo of Tiffany Lane, Financial Planner at New York Life"
+            logo={nyLifeLogo}
+            logoAlt="New York Life logo"
+            phone="(206) 999-2116"
+            phone2="(206) 888-4960"
+            email="tcford@ft.newyorklife.com"
+            website="https://www.newyorklife.com"
+            bio={TIFFANY_BIO}
+            specialty="Retirement planning, estate planning, downsizing guidance, and legacy protection for retirees and their families."
+          />
+        </div>
+      </div>
+    </section>
 
     {/* More information link */}
     <section className="py-6 bg-background">
