@@ -55,8 +55,11 @@ export default function ProviderTile({
   };
   const handleLeave = () => {
     if (!bio) return;
-    setVisible(false);
-    closeTimer.current = setTimeout(() => setHovered(false), 1600);
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => {
+      setVisible(false);
+      setTimeout(() => setHovered(false), 1600);
+    }, 200);
   };
 
   const hasTwoPeople = !!(photo2 && name2);
