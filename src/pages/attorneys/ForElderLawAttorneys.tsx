@@ -9,8 +9,11 @@ import FeaturedAttorneyPlaceholder from "@/components/FeaturedAttorneyPlaceholde
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ProviderTile from "@/components/ProviderTile";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconElderLaw from "@/assets/icons/attorney-elder-law-icon-washington.webp";
+import scottPhoto from "@/assets/providers/elder-law-scott-schill-mercer-island.webp";
+import schillLogo from "@/assets/providers/elder-law-sr-schill-associates-logo.webp";
 
 const intersections = [
   "Accurate property valuation to support Medicaid planning or spend-down analysis",
@@ -192,6 +195,33 @@ const ForElderLawAttorneys = () => (
               </Button>
             </Link>
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Featured Elder Law Attorney */}
+    <section className="py-16 lg:py-20 bg-secondary">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-3">
+            Featured Elder Law Attorney
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            A trusted elder law colleague Real Property Planning works with on Mercer Island and across the Eastside.
+          </p>
+        </div>
+        <div className="max-w-md mx-auto">
+          <ProviderTile
+            name="Scott R. Schill"
+            title="Elder Law Attorney"
+            company="S.R. Schill & Associates — Financial and Longevity Advisors"
+            photo={scottPhoto}
+            photoAlt="Photo of Scott R. Schill, Elder Law Attorney at S.R. Schill & Associates on Mercer Island"
+            logo={schillLogo}
+            logoAlt="S.R. Schill & Associates logo"
+            website="https://www.srschill.com"
+            specialty="Elder law, estate planning, Medicaid planning, and longevity-focused legal advisory for seniors and their families."
+          />
         </div>
       </div>
     </section>
