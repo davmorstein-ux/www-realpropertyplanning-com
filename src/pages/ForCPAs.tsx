@@ -79,6 +79,17 @@ const ForCPAs = () => (
       </div>
     </section>
 
+    {/* Supporting paragraph */}
+    <section className="py-10 md:py-14 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8]">
+            CPAs and tax professionals help people understand the financial and tax consequences of major decisions, including the sale, transfer, or ownership of real estate. When a senior is transitioning from a longtime home or a property is going through probate, they are especially important because they can help identify tax implications, coordinate financial records, and support decisions that affect timing, proceeds, and potential liabilities.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <CTASection />
     <DisclaimerSection />
     </main>
