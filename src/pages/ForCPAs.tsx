@@ -49,29 +49,7 @@ const ForCPAs = () => (
       </div>
     </section>
 
-    {/* Supporting paragraph */}
-    <section className="py-10 md:py-14 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8]">
-            CPAs and tax professionals help people understand the financial and tax consequences of major decisions, including the sale, transfer, or ownership of real estate. When a senior is transitioning from a longtime home or a property is going through probate, they are especially important because they can help identify tax implications, coordinate financial records, and support decisions that affect timing, proceeds, and potential liabilities.
-          </p>
-        </div>
-      </div>
-    </section>
 
-    {/* More information link */}
-    <section className="py-6 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <Link to="/for-cpas/learn-more" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
-            More information about CPAs →
-          </Link>
-        </div>
-      </div>
-    </section>
-
-    {/* Featured CPAs */}
     <section className="py-16 lg:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10">
@@ -97,6 +75,17 @@ const ForCPAs = () => (
             bio={PURPLE_GROUP_BIO}
             specialty="Tax planning, estate and trust taxation, and financial strategy for individuals, small businesses, and high-net-worth clients."
           />
+        </div>
+      </div>
+    </section>
+
+    {/* Supporting paragraph */}
+    <section className="py-10 md:py-14 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8]">
+            CPAs and tax professionals help people understand the financial and tax consequences of major decisions, including the sale, transfer, or ownership of real estate. When a senior is transitioning from a longtime home or a property is going through probate, they are especially important because they can help identify tax implications, coordinate financial records, and support decisions that affect timing, proceeds, and potential liabilities.
+          </p>
         </div>
       </div>
     </section>
