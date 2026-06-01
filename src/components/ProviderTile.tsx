@@ -402,10 +402,7 @@ export default function ProviderTile({
       {/* Contact section */}
       <div
         onClick={(e) => e.stopPropagation()}
-        onMouseEnter={(e) => {
-          e.stopPropagation();
-          handleLeave();
-        }}
+        onMouseEnter={(e) => { e.stopPropagation(); if (closeTimer.current) clearTimeout(closeTimer.current); }}
         onMouseLeave={(e) => {
           e.stopPropagation();
         }}
