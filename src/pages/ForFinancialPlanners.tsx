@@ -16,7 +16,8 @@ const TIFFANY_BIO = `With a deep personal understanding of how life transitions 
 const ForFinancialPlanners = () => {
   const jsonLd = articleSchema({
     headline: "Real Estate Guidance for Financial Planners and Their Clients in Washington State",
-    description: "Real Property Planning supports financial planners whose clients face inherited property, trust-owned homes, or senior housing transitions in Washington State.",
+    description:
+      "Real Property Planning supports financial planners whose clients face inherited property, trust-owned homes, or senior housing transitions in Washington State.",
     url: "/for-financial-planners",
     datePublished: "2025-01-15",
     dateModified: "2026-04-14",
@@ -60,4 +61,39 @@ const ForFinancialPlanners = () => {
                 phone2="(206) 888-4960"
                 email="tcford@ft.newyorklife.com"
                 website="https://www.newyorklife.com"
-                
+                bio={TIFFANY_BIO}
+                specialty="Retirement planning, estate planning, downsizing guidance, and legacy protection for retirees and their families."
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="pb-12 md:pb-16 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
+                About Financial Planners
+              </h2>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+                Financial planners help individuals and families build strategies for long-term financial security. For
+                older adults navigating inherited property, trust-owned homes, or senior housing transitions, a
+                financial planner's guidance can be essential to making sound, well-timed decisions.
+              </p>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+                Real Property Planning works alongside financial planners to provide coordinated support — ensuring that
+                real estate decisions align with each client's broader financial plan, estate goals, and family
+                circumstances.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <BackToProfessionals />
+        <DisclaimerSection />
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default ForFinancialPlanners;
