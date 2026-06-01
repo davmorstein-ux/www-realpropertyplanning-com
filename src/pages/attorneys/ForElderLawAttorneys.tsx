@@ -63,6 +63,8 @@ const situations = [
   "A longtime family home needs preparation, cleanout, and sale management with sensitivity to the family's emotional situation",
 ];
 
+const SCOTT_BIO = `Scott Schill serves as Director of Longevity Planning at S.R. Schill & Associates and founder of Thrive Longevity Law. In collaboration with Certified Financial Planners®, he delivers integrated, fiduciary guidance bringing together wealth management, retirement strategy, estate planning, elder law, housing, and care planning. Scott's commitment to this work was shaped by personal experience advocating for his mother. Before entering longevity law, he practiced complex commercial litigation at Yarmuth Wilsdon Calfo PLLC and Perkins Coie LLP in Seattle. A graduate of UC Berkeley and The George Washington University Law School, Scott is a committed advocate for proactive planning and helping people live longer, healthier, and more fulfilling lives.`;
+
 const ForElderLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
