@@ -81,6 +81,8 @@ export default function ProviderTile({
             }}
           />
           <div
+            onMouseEnter={handleEnter}
+            onMouseLeave={handleLeave}
             style={{
               position: "fixed",
               top: "80px",
@@ -89,8 +91,8 @@ export default function ProviderTile({
               zIndex: 2147483647,
               background: "#fff",
               borderRadius: 8,
-              maxWidth: 800,
-              width: "85vw",
+              maxWidth: 1000,
+              width: "92vw",
               maxHeight: "42vh",
               overflowY: "auto",
               boxShadow: "0 24px 80px rgba(10,22,40,0.5)",
@@ -98,7 +100,7 @@ export default function ProviderTile({
               filter: visible ? "blur(0px)" : "blur(8px)",
               transition:
                 "opacity 1.4s cubic-bezier(0.16,1,0.3,1), transform 1.4s cubic-bezier(0.16,1,0.3,1), filter 1.4s cubic-bezier(0.16,1,0.3,1)",
-              pointerEvents: "none",
+              pointerEvents: "auto",
             }}
           >
             {/* Header */}
