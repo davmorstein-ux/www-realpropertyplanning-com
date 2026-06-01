@@ -142,9 +142,13 @@ const SeniorMoveManagers = () => (
             <ProviderTile
               name="Meriann Roberts"
               title="Owner"
+              name2="Abigail McKee"
+              title2="Manager"
               company="Ginny's Girls Estate Services"
               photo={meriannPhoto}
               photoAlt="Photo of Meriann Roberts, Owner of Ginny's Girls Estate Services"
+              photo2={abigailPhoto}
+              photoAlt2="Photo of Abigail McKee, Manager at Ginny's Girls Estate Services"
               logo={ginnysGirlsLogo}
               logoAlt="Ginny's Girls Estate Services logo"
               phone="(206) 466-0759"
@@ -153,6 +157,7 @@ const SeniorMoveManagers = () => (
               bio={GINNYS_BIO}
               specialty="Senior move management, estate sales, residential clear-outs, and personal property appraisals throughout North King and Snohomish Counties."
             />
+
             <ProviderTile
               name="Tina Baril"
               title="Owner"
