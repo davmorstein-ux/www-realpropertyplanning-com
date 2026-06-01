@@ -4,6 +4,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ProviderTile from "@/components/ProviderTile";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import scottPhoto from "@/assets/providers/elder-law-scott-schill-mercer-island.webp";
 import schillLogo from "@/assets/providers/elder-law-sr-schill-associates-logo.webp";
 
@@ -25,13 +26,9 @@ const ForElderLawAttorneys = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
-            Elder Law Attorneys
-          </h1>
-        </div>
+    <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+      <div style={{ lineHeight: 0 }}>
+        <HeroBandTitle as="h1">Elder Law Attorneys</HeroBandTitle>
       </div>
     </section>
 
