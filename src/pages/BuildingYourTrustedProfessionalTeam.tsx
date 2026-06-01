@@ -56,109 +56,182 @@ const property: Card[] = [
   { title: "Probate & Estate Sales", description: "Specialized real estate guidance for court-supervised and estate property sales.", href: "/probate-estate-sales", image: "/tiles/set1/probate-estate-sales-tile.png", alt: "Probate and estate sales Washington State", cta: "Learn More" },
 ];
 
-const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
-  <section className="py-10 lg:py-12">
-      <div className="mx-auto px-0" style={{ maxWidth: "1600px" }}>
-      <h2
-        className="font-serif text-2xl md:text-3xl font-semibold mb-3 text-center"
-        style={{ color: "#1B3A6B" }}
-      >
+const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; cards: Card[]; bg?: string }) => (
+
+  <section className={`py-10 lg:py-12 ${bg}`}>
+
+    <div className="container px-6 lg:px-8">
+
+      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: "#1B3A6B" }}>
+
         {heading}
+
       </h2>
-      <p className="text-muted-foreground text-base leading-relaxed text-center max-w-3xl mx-auto mb-7">
-        ​
-      </p>
-      <div className="pro-team-grid grid grid-cols-4 gap-x-0 gap-y-2 items-stretch justify-items-stretch">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
         {cards.map((s) => (
+
           <Link
+
             key={s.title + s.href}
+
             to={s.href}
-            aria-label={`${s.title} — ${s.description} — ${s.cta}`}
-            className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-            style={{ textDecoration: "none", width: "100%" }}
+
+            aria-label={`${s.title} — ${s.description}`}
+
+            style={{ textDecoration: "none" }}
+
           >
-            <div className="tile-white__inner h-full relative">
-              <div className="tile-white__face h-full">
-                <div className="flex h-full flex-col">
-                  <div style={{ width: "100%", lineHeight: "0", background: "hsl(var(--background))" }}>
-                    <img
-                      src={s.image}
-                      alt={s.alt}
-                      loading="lazy"
-                      style={{
-                        width: "100%",
-                        height: "200px",
-                        objectFit: "cover",
-                        objectPosition: "center",
-                        display: "block",
-                        margin: "0",
-                        padding: "0",
-                        background: "transparent",
-                      }}
-                    />
-                  </div>
-                  <div
-                    className="relative flex flex-1 flex-col items-center text-center overflow-hidden"
-                    style={{ padding: "8px 8px 12px" }}
-                  >
-                    <h3
-                      className="font-serif text-[17px] md:text-[19px] font-bold leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0 whitespace-nowrap"
-                      style={{ color: "#1B3A6B", textDecoration: "none" }}
-                    >
-                      {s.title}
-                    </h3>
-                    <p
-                      className="mb-2 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0"
-                      style={{ color: "#374151", fontSize: "16px", lineHeight: 1.6, textDecoration: "none" }}
-                    >
-                      {s.description}
-                    </p>
-                    <span
-                      className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0"
-                      style={{ textDecoration: "none" }}
-                    >
-                      {s.cta}
-                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
-                    </span>
-                    <div
-                      aria-hidden="true"
-                      className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100"
-                      style={{
-                        background: "rgba(10, 20, 46, 0.97)",
-                        zIndex: 10,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        textAlign: "center",
-                        padding: "1.25rem 1.5rem",
-                        transition: "opacity 0.28s ease 0.1s",
-                      }}
-                    >
-                      <h3 className="font-serif text-white text-[22px] md:text-[24px] font-bold leading-snug mb-3">
-                        {s.title}
-                      </h3>
-                      <span
-                        className="inline-flex items-center gap-2 text-[16px] font-bold tracking-wide"
-                        style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
-                      >
-                        {s.cta}
-                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <polyline points="9 18 15 12 9 6" />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                </div>
+
+            <div
+
+              style={{
+
+                background: "#fff",
+
+                borderRadius: 16,
+
+                border: "1px solid rgba(0,0,0,0.08)",
+
+                overflow: "hidden",
+
+                height: "100%",
+
+                display: "flex",
+
+                flexDirection: "column",
+
+                transition: "box-shadow 0.2s ease, transform 0.2s ease",
+
+              }}
+
+              onMouseEnter={(e) => {
+
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)";
+
+                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
+
+              }}
+
+              onMouseLeave={(e) => {
+
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+
+                (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+
+              }}
+
+            >
+
+              {/* Photo */}
+
+              <div style={{ width: "100%", aspectRatio: "16/9", overflow: "hidden" }}>
+
+                <img
+
+                  src={s.image}
+
+                  alt={s.alt}
+
+                  loading="lazy"
+
+                  style={{
+
+                    width: "100%",
+
+                    height: "100%",
+
+                    objectFit: "cover",
+
+                    objectPosition: "center",
+
+                    display: "block",
+
+                  }}
+
+                />
+
               </div>
+
+              {/* Card body */}
+
+              <div style={{ padding: "16px 20px 0", flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
+
+                <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#1B3A6B", lineHeight: 1.3 }}>
+
+                  {s.title}
+
+                </h3>
+
+                <p style={{ fontSize: 14, color: "#6B7280", lineHeight: 1.6, flex: 1 }}>
+
+                  {s.description}
+
+                </p>
+
+              </div>
+
+              {/* CTA bar */}
+
+              <div style={{ padding: "12px 20px 16px" }}>
+
+                <div
+
+                  style={{
+
+                    background: "#C9A84C",
+
+                    borderRadius: 8,
+
+                    padding: "10px 16px",
+
+                    display: "flex",
+
+                    alignItems: "center",
+
+                    justifyContent: "center",
+
+                    gap: 6,
+
+                    fontFamily: "'Raleway', sans-serif",
+
+                    fontSize: 13,
+
+                    fontWeight: 700,
+
+                    color: "#fff",
+
+                    letterSpacing: "0.04em",
+
+                  }}
+
+                >
+
+                  {s.cta}
+
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+
+                    <polyline points="9 18 15 12 9 6" />
+
+                  </svg>
+
+                </div>
+
+              </div>
+
             </div>
+
           </Link>
+
         ))}
+
       </div>
+
     </div>
+
   </section>
+
 );
 
 const jsonLd = articleSchema({
@@ -197,17 +270,17 @@ const BuildingYourTrustedProfessionalTeam = () => {
 
         <h1 className="sr-only">A Guide to Trusted, Independent Professionals</h1>
 
-        <div id="legal-professionals" className="scroll-mt-20 bg-background">
-          <Section heading="Legal Professionals" cards={legal} />
+        <div id="legal-professionals" className="scroll-mt-20">
+          <Section heading="Legal Professionals" cards={legal} bg="bg-background" />
         </div>
-        <div className="bg-secondary">
-          <Section heading="Financial & Valuation Professionals" cards={financial} />
+        <div>
+          <Section heading="Financial & Valuation Professionals" cards={financial} bg="bg-secondary" />
         </div>
-        <div className="bg-background">
-          <Section heading="Senior Housing & Care" cards={housing} />
+        <div>
+          <Section heading="Senior Housing & Care" cards={housing} bg="bg-background" />
         </div>
-        <div className="bg-secondary">
-          <Section heading="Property & Transition Support" cards={property} />
+        <div>
+          <Section heading="Property & Transition Support" cards={property} bg="bg-secondary" />
         </div>
 
         {/* Closing CTA */}
