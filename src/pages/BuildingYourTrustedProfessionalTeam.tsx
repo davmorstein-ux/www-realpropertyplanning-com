@@ -16,6 +16,7 @@ import realEstateAttorneyImg from "@/assets/legal/real-estate-attorney.webp";
 import familyLawAttorneyImg from "@/assets/legal/family-law-attorney.webp";
 import divorceAttorneyImg from "@/assets/legal/divorce-attorney.webp";
 import estateLiquidatorsTile from "@/assets/estate-liquidators-tile-transparent.png";
+import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 
 type Card = {
   title: string;
@@ -27,12 +28,7 @@ type Card = {
 };
 
 const legal: Card[] = [
-  { title: "Estate Planning Attorneys", description: "Powers of attorney, wills, trusts, guardianship, and future legal planning.", href: "/estate-planning-powers-of-attorney", image: estatePlanningAttorneyImg, alt: "Estate planning attorneys Washington State", cta: "Learn More" },
-  { title: "Probate Attorneys", description: "Estate administration, inherited property, and legal coordination after a death.", href: "/resources/probate-estate-attorneys", image: probateAttorneyImg, alt: "Probate attorneys Washington State", cta: "Learn More" },
-  { title: "Elder Law Attorneys", description: "Legal guidance for aging, care planning, and senior-related decisions.", href: "/attorneys/for-elder-law-attorneys", image: elderLawAttorneyImg, alt: "Elder law attorneys Washington State", cta: "Learn More" },
-  { title: "Real Estate Attorneys", description: "Title, property transfers, and real estate legal matters.", href: "/attorneys/for-real-estate-attorneys", image: realEstateAttorneyImg, alt: "Real estate attorneys Washington State", cta: "Learn More" },
-  { title: "Family Law Attorney", description: "Custody, parenting plans, and spousal support guidance for families navigating difficult transitions.", href: "/attorneys/for-family-law-attorneys", image: familyLawAttorneyImg, alt: "Family law attorneys Washington State", cta: "Learn More" },
-  { title: "Divorce Attorney", description: "Guidance through divorce proceedings, property division, and settlement agreements.", href: "/attorneys/for-divorce-attorneys", image: divorceAttorneyImg, alt: "Divorce attorneys Washington State", cta: "Learn More" },
+  { title: "Attorneys", description: "Estate planning, probate, elder law, family law, divorce, and real estate attorneys throughout Washington State.", href: "/for-attorneys", image: attorneysTileImg, alt: "Attorneys Washington State", cta: "Meet the Attorneys" },
 ];
 
 const financial: Card[] = [
