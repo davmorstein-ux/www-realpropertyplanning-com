@@ -288,6 +288,7 @@ export default function ProviderTile({
       )}
 
       <div
+        onClick={(e) => e.stopPropagation()}
         style={{
           marginTop: "auto",
           paddingTop: 16,
