@@ -342,20 +342,15 @@ export default function ProviderTile({
       {/* Tile: name/title/company — only shown for single-person tiles */}
       {!hasTwoPeople && (
         <>
-          <div
-            style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 4 }}
-          >
+          <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 2 }}>
             {name}
           </div>
-          <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666", marginBottom: 2 }}>{title}</div>
           {name2 && (
-            <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 4, marginTop: 6 }}>
+            <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 4 }}>
               {name2}
             </div>
           )}
-          {title2 && (
-            <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666", marginBottom: 2 }}>{title2}</div>
-          )}
+          <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666", marginBottom: 2 }}>{title}</div>
         </>
       )}
 
