@@ -4,6 +4,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ProviderTile from "@/components/ProviderTile";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import scottPhoto from "@/assets/providers/elder-law-scott-schill-mercer-island.webp";
 import schillLogo from "@/assets/providers/elder-law-sr-schill-associates-logo.webp";
 
