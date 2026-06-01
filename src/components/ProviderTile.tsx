@@ -6,6 +6,10 @@ interface ProviderTileProps {
   company: string;
   photo?: string;
   photoAlt?: string;
+  photo2?: string;
+  photoAlt2?: string;
+  name2?: string;
+  title2?: string;
   logo?: string;
   logoAlt?: string;
   phone?: string;
@@ -23,10 +27,16 @@ export default function ProviderTile({
   company,
   photo,
   photoAlt,
+  photo2,
+  photoAlt2,
+  name2,
+  title2,
   logo,
   logoAlt,
   phone,
+  phone2,
   email,
+  email2,
   website,
   bio,
   specialty,
@@ -47,6 +57,8 @@ export default function ProviderTile({
     closeTimer.current = setTimeout(() => setHovered(false), 1600);
   };
 
+  const hasTwoPeople = !!(photo2 && name2);
+
   return (
     <div
       onMouseEnter={handleEnter}
@@ -66,10 +78,9 @@ export default function ProviderTile({
         transition: "box-shadow 0.3s ease",
       }}
     >
-      {/* Bio tooltip — fixed position via inline style trick */}
+      {/* Bio overlay */}
       {hovered && bio && (
         <>
-          {/* Dark backdrop */}
           <div
             style={{
               position: "fixed",
@@ -102,7 +113,7 @@ export default function ProviderTile({
               pointerEvents: "auto",
             }}
           >
-            {/* Header */}
+            {/* Modal header */}
             <div
               style={{
                 background: "#0a1628",
@@ -113,20 +124,51 @@ export default function ProviderTile({
                 gap: 16,
               }}
             >
-              {photo && (
-                <img
-                  src={photo}
-                  alt={photoAlt || name}
-                  style={{
-                    width: 64,
-                    height: 64,
-                    borderRadius: "50%",
-                    objectFit: "cover",
-                    border: "2px solid #C9A84C",
-                    flexShrink: 0,
-                  }}
-                />
-              )}
+              {/* Photos */}
+              <div style={{ display: "flex", gap: 12, flexShrink: 0 }}>
+                {photo && (
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
+                    <img
+                      src={photo}
+                      alt={photoAlt || name}
+                      style={{
+                        width: 64,
+                        height: 64,
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        border: "2px solid #C9A84C",
+                      }}
+                    />
+                    {hasTwoPeople && (
+                      <span
+                        style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
+                      >
+                        {name}
+                      </span>
+                    )}
+                  </div>
+                )}
+                {hasTwoPeople && photo2 && (
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
+                    <img
+                      src={photo2}
+                      alt={photoAlt2 || name2}
+                      style={{
+                        width: 64,
+                        height: 64,
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        border: "2px solid #C9A84C",
+                      }}
+                    />
+                    <span style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}>
+                      {name2}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Name / title */}
               <div style={{ flex: 1 }}>
                 <div
                   style={{
@@ -137,7 +179,7 @@ export default function ProviderTile({
                     marginBottom: 3,
                   }}
                 >
-                  {name}
+                  {hasTwoPeople ? `${name} & ${name2}` : name}
                 </div>
                 <div
                   style={{
@@ -148,7 +190,7 @@ export default function ProviderTile({
                     textTransform: "uppercase",
                   }}
                 >
-                  {title}
+                  {hasTwoPeople && title2 ? `${title} · ${title2}` : title}
                 </div>
                 <div
                   style={{
@@ -161,6 +203,7 @@ export default function ProviderTile({
                   {company}
                 </div>
               </div>
+
               {logo && (
                 <img
                   src={logo}
@@ -169,7 +212,8 @@ export default function ProviderTile({
                 />
               )}
             </div>
-            {/* Body */}
+
+            {/* Modal body */}
             <div style={{ padding: "20px 24px" }}>
               <p
                 style={{
@@ -214,7 +258,7 @@ export default function ProviderTile({
         </>
       )}
 
-      {/* Tile content */}
+      {/* Tile: logo */}
       {logo && (
         <img
           src={logo}
@@ -223,27 +267,89 @@ export default function ProviderTile({
           loading="lazy"
         />
       )}
-      {photo && (
-        <img
-          src={photo}
-          alt={photoAlt || name}
-          style={{
-            width: 112,
-            height: 112,
-            borderRadius: "50%",
-            objectFit: "cover",
-            border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
-            marginBottom: 12,
-            transform: hovered ? "scale(1.05)" : "scale(1)",
-            transition: "transform 0.3s ease, border-color 0.3s ease",
-          }}
-          loading="lazy"
-        />
+
+      {/* Tile: photo(s) */}
+      {hasTwoPeople ? (
+        <div style={{ display: "flex", justifyContent: "center", gap: 16, marginBottom: 12 }}>
+          {photo && (
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+              <img
+                src={photo}
+                alt={photoAlt || name}
+                style={{
+                  width: 100,
+                  height: 100,
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+                  transform: hovered ? "scale(1.05)" : "scale(1)",
+                  transition: "transform 0.3s ease, border-color 0.3s ease",
+                }}
+                loading="lazy"
+              />
+              <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
+                {name}
+              </div>
+              <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title}</div>
+            </div>
+          )}
+          {photo2 && (
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+              <img
+                src={photo2}
+                alt={photoAlt2 || name2}
+                style={{
+                  width: 100,
+                  height: 100,
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+                  transform: hovered ? "scale(1.05)" : "scale(1)",
+                  transition: "transform 0.3s ease, border-color 0.3s ease",
+                }}
+                loading="lazy"
+              />
+              <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
+                {name2}
+              </div>
+              <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title2}</div>
+            </div>
+          )}
+        </div>
+      ) : (
+        photo && (
+          <img
+            src={photo}
+            alt={photoAlt || name}
+            style={{
+              width: 112,
+              height: 112,
+              borderRadius: "50%",
+              objectFit: "cover",
+              border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+              marginBottom: 12,
+              transform: hovered ? "scale(1.05)" : "scale(1)",
+              transition: "transform 0.3s ease, border-color 0.3s ease",
+            }}
+            loading="lazy"
+          />
+        )
       )}
-      <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 4 }}>
-        {name}
-      </div>
-      <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666", marginBottom: 2 }}>{title}</div>
+
+      {/* Tile: name/title/company — only shown for single-person tiles */}
+      {!hasTwoPeople && (
+        <>
+          <div
+            style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 4 }}
+          >
+            {name}
+          </div>
+          <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666", marginBottom: 2 }}>
+            {title}
+          </div>
+        </>
+      )}
+
       <div
         style={{
           fontFamily: "'Raleway', sans-serif",
@@ -255,6 +361,7 @@ export default function ProviderTile({
       >
         {company}
       </div>
+
       {specialty && (
         <div
           style={{
@@ -287,10 +394,16 @@ export default function ProviderTile({
         </div>
       )}
 
+      {/* Contact section */}
       <div
         onClick={(e) => e.stopPropagation()}
-        onMouseEnter={(e) => { e.stopPropagation(); handleLeave(); }}
-        onMouseLeave={(e) => { e.stopPropagation(); }}
+        onMouseEnter={(e) => {
+          e.stopPropagation();
+          handleLeave();
+        }}
+        onMouseLeave={(e) => {
+          e.stopPropagation();
+        }}
         style={{
           marginTop: "auto",
           paddingTop: 16,
@@ -311,6 +424,15 @@ export default function ProviderTile({
             {phone}
           </a>
         )}
+        {phone2 && (
+          <a
+            href={`tel:${phone2.replace(/\D/g, "")}`}
+            onClick={(e) => e.stopPropagation()}
+            style={{ fontSize: 13, color: "#1a5fa8", textDecoration: "none", fontWeight: 600 }}
+          >
+            {phone2}
+          </a>
+        )}
         {email && (
           <a
             href={`mailto:${email}`}
@@ -318,6 +440,15 @@ export default function ProviderTile({
             style={{ fontSize: 12, color: "#8B6914", textDecoration: "none" }}
           >
             {email}
+          </a>
+        )}
+        {email2 && (
+          <a
+            href={`mailto:${email2}`}
+            onClick={(e) => e.stopPropagation()}
+            style={{ fontSize: 12, color: "#8B6914", textDecoration: "none" }}
+          >
+            {email2}
           </a>
         )}
         <a
