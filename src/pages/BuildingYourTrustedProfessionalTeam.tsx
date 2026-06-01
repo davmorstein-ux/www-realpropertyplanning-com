@@ -270,17 +270,17 @@ const BuildingYourTrustedProfessionalTeam = () => {
 
         <h1 className="sr-only">A Guide to Trusted, Independent Professionals</h1>
 
-        <div id="legal-professionals" className="scroll-mt-20 bg-background">
-          <Section heading="Legal Professionals" cards={legal} />
+        <div id="legal-professionals" className="scroll-mt-20">
+          <Section heading="Legal Professionals" cards={legal} bg="bg-background" />
         </div>
-        <div className="bg-secondary">
-          <Section heading="Financial & Valuation Professionals" cards={financial} />
+        <div>
+          <Section heading="Financial & Valuation Professionals" cards={financial} bg="bg-secondary" />
         </div>
-        <div className="bg-background">
-          <Section heading="Senior Housing & Care" cards={housing} />
+        <div>
+          <Section heading="Senior Housing & Care" cards={housing} bg="bg-background" />
         </div>
-        <div className="bg-secondary">
-          <Section heading="Property & Transition Support" cards={property} />
+        <div>
+          <Section heading="Property & Transition Support" cards={property} bg="bg-secondary" />
         </div>
 
         {/* Closing CTA */}
