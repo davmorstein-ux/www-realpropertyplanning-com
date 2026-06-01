@@ -21,6 +21,8 @@ const jsonLd = articleSchema({
   about: ["Financial planner guidance", "Estate property", "Senior transition property"],
 });
 
+const TIFFANY_BIO = `With a deep personal understanding of how life transitions impact families, I focus on guiding retirees and their loved ones through every step of their financial journey. After witnessing my own family navigate the complexities of Alzheimer's and elder care, I've dedicated my career to helping others plan with confidence. I work closely with retirees and their adult children, offering guidance so families can navigate estate planning, downsizing, and legacy protection together. For over 180 years, New York Life has existed for one purpose: to help families and businesses achieve financial security and peace of mind. When you need us, we are there.`;
+
 const ForFinancialPlanners = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
