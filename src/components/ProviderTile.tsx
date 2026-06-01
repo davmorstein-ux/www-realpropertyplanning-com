@@ -288,6 +288,7 @@ export default function ProviderTile({
       )}
 
       <div
+        onClick={(e) => e.stopPropagation()}
         style={{
           marginTop: "auto",
           paddingTop: 16,
@@ -334,6 +335,9 @@ export default function ProviderTile({
             textTransform: "uppercase",
             color: "#8B6914",
             textDecoration: "none",
+            border: "1.5px solid #C9A84C",
+            borderRadius: 4,
+            padding: "8px 16px",
           }}
         >
           Learn More
