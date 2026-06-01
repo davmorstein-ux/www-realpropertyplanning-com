@@ -35,28 +35,6 @@ const ForElderLawAttorneys = () => (
       </div>
     </section>
 
-    {/* What Is an Elder Law Attorney? */}
-    <section className="py-10 md:py-14 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
-            What Is an Elder Law Attorney?
-          </h2>
-          <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
-            <p>
-              Elder law attorneys specialize in the legal needs of older adults and their families. Their practice covers a wide range of issues that arise as people age — from planning ahead for incapacity and long-term care to navigating Medicaid eligibility, guardianship, and the management of assets when someone can no longer make decisions for themselves.
-            </p>
-            <p>
-              Common areas of elder law practice include estate planning, powers of attorney, advance directives, Medicaid planning and spend-down strategies, conservatorship and guardianship, veterans' benefits, and the legal aspects of transitioning to assisted living or memory care.
-            </p>
-            <p>
-              Elder law attorneys often work closely with financial advisors, care managers, and real estate professionals to coordinate the full picture of a client's transition — ensuring that legal, financial, and housing decisions are aligned and made in the right sequence.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     {/* Featured Elder Law Attorney */}
     <section className="py-16 lg:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
@@ -81,6 +59,28 @@ const ForElderLawAttorneys = () => (
             bio={SCOTT_BIO}
             specialty="Longevity planning, elder law, estate planning, retirement strategy, and care planning on Mercer Island and throughout Washington State."
           />
+        </div>
+      </div>
+    </section>
+
+    {/* What Is an Elder Law Attorney? */}
+    <section className="py-10 md:py-14 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
+            What Is an Elder Law Attorney?
+          </h2>
+          <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
+            <p>
+              Elder law attorneys specialize in the legal needs of older adults and their families. Their practice covers a wide range of issues that arise as people age — from planning ahead for incapacity and long-term care to navigating Medicaid eligibility, guardianship, and the management of assets when someone can no longer make decisions for themselves.
+            </p>
+            <p>
+              Common areas of elder law practice include estate planning, powers of attorney, advance directives, Medicaid planning and spend-down strategies, conservatorship and guardianship, veterans' benefits, and the legal aspects of transitioning to assisted living or memory care.
+            </p>
+            <p>
+              Elder law attorneys often work closely with financial advisors, care managers, and real estate professionals to coordinate the full picture of a client's transition — ensuring that legal, financial, and housing decisions are aligned and made in the right sequence.
+            </p>
+          </div>
         </div>
       </div>
     </section>
