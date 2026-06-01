@@ -68,7 +68,7 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
 
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
         {cards.map((s) => (
 
@@ -126,7 +126,7 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
 
               {/* Photo */}
 
-              <div style={{ width: "100%", aspectRatio: "16/9", overflow: "hidden" }}>
+              <div style={{ width: "100%", height: "180px", overflow: "hidden" }}>
 
                 <img
 
