@@ -289,6 +289,8 @@ export default function ProviderTile({
 
       <div
         onClick={(e) => e.stopPropagation()}
+        onMouseEnter={(e) => { e.stopPropagation(); handleLeave(); }}
+        onMouseLeave={(e) => { e.stopPropagation(); }}
         style={{
           marginTop: "auto",
           paddingTop: 16,
