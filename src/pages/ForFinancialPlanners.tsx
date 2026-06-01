@@ -7,7 +7,9 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-import TiffanyLaneCard from "@/components/TiffanyLaneCard";
+import ProviderTile from "@/components/ProviderTile";
+import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
+import nyLifeLogo from "@/assets/new-york-life-logo.webp";
 import heroImage from "@/assets/financial-planners-hero-washington.webp";
 
 const jsonLd = articleSchema({
