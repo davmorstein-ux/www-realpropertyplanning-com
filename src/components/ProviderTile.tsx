@@ -27,6 +27,10 @@ export default function ProviderTile({
   logoAlt,
   phone,
   email,
+}: ProviderTileProps & { phone2?: string; email2?: string }) {
+  // phone2/email2 accepted but not rendered
+  void 0;
+  const _unused = ({} as any);
   website,
   bio,
   specialty,
