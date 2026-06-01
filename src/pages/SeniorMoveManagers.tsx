@@ -201,6 +201,21 @@ const SeniorMoveManagers = () => (
                 </div>
               </div>
             ))}
+            <ProviderTile
+              name="Eric Rovner"
+              title="Vice President of Marketing"
+              company="HB Move Management · Hansen Bros. Moving"
+              photo={ericPhoto}
+              photoAlt="Photo of Eric Rovner, Senior Move Manager at HB Move Management Seattle"
+              logo={hbLogo}
+              logoAlt="HB Move Management logo"
+              phone="(206) 257-4314"
+              email="erovner@hansenbros.com"
+              email2="info@hbmovemanagement.com"
+              website="https://www.hbmovemanagement.com"
+              bio={ERIC_BIO}
+              specialty="Senior move management including preparation, packing, moving, and resettling throughout the Puget Sound region."
+            />
           </div>
         </div>
       </section>
