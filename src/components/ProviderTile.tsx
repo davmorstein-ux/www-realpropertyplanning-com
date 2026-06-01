@@ -48,18 +48,16 @@ export default function ProviderTile({
   const handleEnter = () => {
     if (!bio) return;
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => {
-      setHovered(true);
-      setTimeout(() => setVisible(true), 10);
-    }, 400);
+    setHovered(true);
+    setTimeout(() => setVisible(true), 10);
   };
   const handleLeave = () => {
     if (!bio) return;
     if (closeTimer.current) clearTimeout(closeTimer.current);
     closeTimer.current = setTimeout(() => {
       setVisible(false);
-      setTimeout(() => setHovered(false), 1600);
-    }, 200);
+      setTimeout(() => setHovered(false), 400);
+    }, 300);
   };
 
   const hasTwoPeople = !!(photo2 && name2);
