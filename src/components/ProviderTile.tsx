@@ -173,36 +173,18 @@ export default function ProviderTile({
 
               {/* Name / title */}
               <div style={{ flex: 1 }}>
-                <div
-                  style={{
-                    fontFamily: "Georgia, serif",
-                    fontSize: 18,
-                    fontWeight: 700,
-                    color: "#fff",
-                    marginBottom: 3,
-                  }}
-                >
-                  {hasTwoPeople ? `${name} & ${name2}` : name}
+                <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 3 }}>
+                  {name}
                 </div>
-                <div
-                  style={{
-                    fontFamily: "'Raleway', sans-serif",
-                    fontSize: 11,
-                    letterSpacing: "0.12em",
-                    color: "#E8C97A",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  {hasTwoPeople && title2 ? `${title} · ${title2}` : title}
+                {name2 && (
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 3 }}>
+                    {name2}
+                  </div>
+                )}
+                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, letterSpacing: "0.12em", color: "#E8C97A", textTransform: "uppercase" }}>
+                  {title}
                 </div>
-                <div
-                  style={{
-                    fontFamily: "'Raleway', sans-serif",
-                    fontSize: 11,
-                    color: "rgba(255,255,255,0.65)",
-                    marginTop: 2,
-                  }}
-                >
+                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
                   {company}
                 </div>
               </div>
