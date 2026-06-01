@@ -8,8 +8,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import BackToProfessionals from "@/components/BackToProfessionals";
 import ProviderTile from "@/components/ProviderTile";
-import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
-import hbmmLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
 import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
 import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-logo-washington.webp";
 import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
@@ -32,24 +30,6 @@ type Provider = {
 };
 
 const providers: Provider[] = [
-  {
-    company: "HB Move Management · Hansen Bros. Moving",
-    website: "https://www.hbmovemanagement.com",
-    logo: hbmmLogo,
-    logoAlt: "HB Move Management logo",
-    contacts: [
-      {
-        name: "Eric Rovner",
-        role: "Vice President of Marketing",
-        photo: ericRovnerPhoto,
-        alt: "Eric Rovner — Vice President of Marketing, HB Move Management",
-      },
-    ],
-    specialty:
-      "Senior move management including preparation, packing, moving, and resettling throughout the Puget Sound region.",
-    phones: [{ label: "(206) 257-4314", href: "tel:+12062574314" }],
-    email: "info@hbmovemanagement.com",
-  },
   {
     company: "Monarch Transitions · Senior Move Managers",
     website: "https://www.monarchtransitions.com",
