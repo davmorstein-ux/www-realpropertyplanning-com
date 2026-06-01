@@ -5,7 +5,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
-import FeaturedAttorneyPlaceholder from "@/components/FeaturedAttorneyPlaceholder";
+
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -222,13 +222,14 @@ const ForElderLawAttorneys = () => (
             logo={schillLogo}
             logoAlt="S.R. Schill & Associates logo"
             website="https://www.srschill.com"
-            specialty="Elder law, estate planning, Medicaid planning, and longevity-focused legal advisory for seniors and their families."
+            bio={SCOTT_BIO}
+            specialty="Longevity planning, elder law, estate planning, retirement strategy, and care planning on Mercer Island and throughout Washington State."
           />
         </div>
       </div>
     </section>
 
-    <FeaturedAttorneyPlaceholder />
+    
     <RelatedServices currentPath="/for-elder-law-attorneys" />
     <DisclaimerSection />
       <BackToProfessionals />
