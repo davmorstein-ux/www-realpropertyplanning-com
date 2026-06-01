@@ -43,7 +43,7 @@ const TOP_LINKS = [
     href: "/guides-and-resources",
     items: [
       { label: "All Resources", href: "/guides-and-resources" },
-      { label: "Financial Planners", href: "/professionals/financial-planners" },
+      { label: "Financial Planners", href: "/for-financial-planners" },
       { label: "CPAs & Accountants", href: "/professionals/cpas" },
       { label: "Mortgage Lenders", href: "/mortgage-lenders" },
       { label: "Real Estate Brokers", href: "/realtor" },
@@ -172,7 +172,28 @@ function DropdownItem({
     );
   }
 
-  // Item with flyout
+  // Item with flyout — styled identically to regular items
+  const flyoutItemStyle: React.CSSProperties = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "9px 20px",
+    color: flyoutOpen ? GOLD : "rgba(255,255,255,0.95)",
+    textDecoration: "none",
+    fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+    fontSize: 12,
+    fontWeight: 700,
+    letterSpacing: "0.12em",
+    textTransform: "uppercase",
+    cursor: "pointer",
+    background: flyoutOpen ? "rgba(232,201,122,0.06)" : "transparent",
+    borderBottom: `1px solid ${flyoutOpen ? GOLD : "transparent"}`,
+    transition: "color 0.18s ease, background 0.18s ease",
+    whiteSpace: "nowrap",
+    gap: 6,
+    lineHeight: 1,
+  };
+
   return (
     <div
       style={{ position: "relative" }}
@@ -184,30 +205,8 @@ function DropdownItem({
         flyoutTimer.current = setTimeout(() => setFlyoutOpen(false), 200);
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "9px 20px",
-          color: flyoutOpen ? GOLD : "rgba(255,255,255,0.95)",
-          textDecoration: "none",
-          fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-          fontSize: 12,
-          fontWeight: 700,
-          letterSpacing: "0.12em",
-          textTransform: "uppercase",
-          cursor: "pointer",
-          background: flyoutOpen ? "rgba(232,201,122,0.06)" : "transparent",
-          borderBottom: `1px solid ${flyoutOpen ? GOLD : "transparent"}`,
-          transition: "color 0.18s ease, background 0.18s ease",
-          whiteSpace: "nowrap",
-          gap: 8,
-        }}
-      >
-        <Link to={sub.href} style={{ color: "inherit", textDecoration: "none", flex: 1 }}>
-          {sub.label}
-        </Link>
+      <Link to={sub.href} style={flyoutItemStyle}>
+        {sub.label}
         {/* Right-arrow indicator */}
         <svg
           width="9"
@@ -218,11 +217,11 @@ function DropdownItem({
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
-          style={{ opacity: 0.7, transform: "rotate(-90deg)" }}
+          style={{ opacity: 0.7, transform: "rotate(-90deg)", flexShrink: 0 }}
         >
           <polyline points="6 9 12 15 18 9" />
         </svg>
-      </div>
+      </Link>
       <FlyoutMenu items={SENIOR_TRANSITION_ITEMS} visible={flyoutOpen} />
     </div>
   );
