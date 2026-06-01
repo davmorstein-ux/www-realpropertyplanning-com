@@ -96,6 +96,8 @@ const providers: Provider[] = [
   },
 ];
 
+const ERIC_BIO = `Eric Rovner brings decades of moving industry experience to HB Move Management, a specialized senior move management division of Hansen Bros. Moving & Storage — one of the Pacific Northwest's most trusted names in relocation. Eric and his team provide comprehensive, compassionate support for older adults transitioning out of long-time homes, including sorting and downsizing, packing, coordinating the move, and resettling into a new space. Whether a senior is moving to a smaller home, an assisted living community, or closer to family, HB Move Management handles every detail so families don't have to.`;
+
 const SeniorMoveManagers = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
