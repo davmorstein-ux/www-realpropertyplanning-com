@@ -301,6 +301,7 @@ const App = () => (
           <Route path="/for-attorneys/divorce-attorneys" element={<ForDivorceAttorneys />} />
           <Route path="/for-attorneys/real-estate-attorneys" element={<ForRealEstateAttorneys />} />
           <Route path="/for-cpas" element={<ForCPAs />} />
+          <Route path="/professionals/cpas" element={<Navigate to="/for-cpas" replace />} />
           <Route path="/for-financial-planners" element={<ForFinancialPlanners />} />
           <Route path="/join-the-network" element={<JoinTheNetwork />} />
 
