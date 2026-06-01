@@ -85,7 +85,9 @@ const ForCPAs = () => (
         <div className="max-w-md mx-auto">
           <ProviderTile
             name="Tenly Krakoff, CPA"
-            title="Co-Founder"
+            title="Co-Founders"
+            name2="Jessica Simons, CPA"
+            title2=""
             company="The Purple Group"
             photo={purpleGroupPhoto}
             photoAlt="Photo of Tenly Krakoff and Jessica Simons, CPAs at The Purple Group in Seattle"
