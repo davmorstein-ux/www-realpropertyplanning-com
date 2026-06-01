@@ -27,7 +27,6 @@ export default function ProviderTile({
   logoAlt,
   phone,
   email,
-}: ProviderTileProps) {
   website,
   bio,
   specialty,
