@@ -29,36 +29,13 @@ type Provider = {
   email: string;
 };
 
-const providers: Provider[] = [
-  {
-    company: "Ginny's Girls Estate Services",
-    website: "https://www.ginnysestates.com",
-    logo: ginnysGirlsLogo,
-    logoAlt: "Ginny's Girls Estate Services logo",
-    contacts: [
-      {
-        name: "Meriann Roberts",
-        role: "Owner",
-        photo: meriannPhoto,
-        alt: "Meriann Roberts — Owner of Ginny's Girls Estate Services",
-      },
-      {
-        name: "Abigail McKee",
-        role: "Manager",
-        photo: abigailPhoto,
-        alt: "Abigail McKee — Manager at Ginny's Girls Estate Services",
-      },
-    ],
-    specialty:
-      "Senior move management, estate sales, residential clear outs, and personal property appraisals throughout North King and Snohomish Counties.",
-    phones: [{ label: "(206) 466-0759", href: "tel:+12064660759" }],
-    email: "info@ginnysestates.com",
-  },
-];
+const providers: Provider[] = [];
 
 const ERIC_BIO = `Eric Rovner brings decades of moving industry experience to HB Move Management, a specialized senior move management division of Hansen Bros. Moving & Storage — one of the Pacific Northwest's most trusted names in relocation. Eric and his team provide comprehensive, compassionate support for older adults transitioning out of long-time homes, including sorting and downsizing, packing, coordinating the move, and resettling into a new space. Whether a senior is moving to a smaller home, an assisted living community, or closer to family, HB Move Management handles every detail so families don't have to.`;
 
 const TINA_BIO = `Monarch Transitions was founded in 2009 by mother-daughter team Virginia Brown and Tina Baril. After retiring to Yakima, Washington, Virginia began helping friends' parents downsize, and Tina joined her, discovering a shared passion for supporting seniors. Now in its 16th year, Monarch Transitions is a family business run by Tina Baril and her son, Avery Baril, serving families and service partners in Pierce, South King, Thurston, and Kitsap counties. Tina recognizes that successful transitions require more than managing moving details — they also demand attention to the emotional and physical challenges seniors and families face. She collaborates closely with healthcare and senior service professionals to connect with families navigating these difficulties.`;
+
+const GINNYS_BIO = `Ginny's Girls is a family-owned senior move management and estate services company based in Edmonds, Washington, founded to help families in North King and Snohomish counties navigate life transitions with dignity and care. Meriann Roberts (Owner) and Abigail McKee (Manager) lead a team certified by NASMM (National Association of Senior Move Managers) and ISA (International Society of Appraisers). Together they offer comprehensive services including space planning, sorting, packing, move oversight, unpacking, resettling, estate liquidation, full-home clear-outs, and personal property valuation. Whether you're downsizing, managing an estate after a move or death, or preparing a home for sale, Ginny's Girls reduces stress and creates a smoother path forward for older adults and their families.`;
 
 const SeniorMoveManagers = () => (
   <div className="min-h-screen bg-background">
@@ -162,6 +139,20 @@ const SeniorMoveManagers = () => (
                 </div>
               </div>
             ))}
+            <ProviderTile
+              name="Meriann Roberts"
+              title="Owner"
+              company="Ginny's Girls Estate Services"
+              photo={meriannPhoto}
+              photoAlt="Photo of Meriann Roberts, Owner of Ginny's Girls Estate Services"
+              logo={ginnysGirlsLogo}
+              logoAlt="Ginny's Girls Estate Services logo"
+              phone="(206) 466-0759"
+              email="info@ginnysestates.com"
+              website="https://www.ginnysestates.com"
+              bio={GINNYS_BIO}
+              specialty="Senior move management, estate sales, residential clear-outs, and personal property appraisals throughout North King and Snohomish Counties."
+            />
             <ProviderTile
               name="Tina Baril"
               title="Owner"
