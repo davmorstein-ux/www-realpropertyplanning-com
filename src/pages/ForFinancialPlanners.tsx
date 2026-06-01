@@ -13,6 +13,18 @@ import nyLifeLogo from "@/assets/new-york-life-logo.webp";
 
 const TIFFANY_BIO = `With a deep personal understanding of how life transitions impact families, I focus on guiding retirees and their loved ones through every step of their financial journey. After witnessing my own family navigate the complexities of Alzheimer's and elder care, I've dedicated my career to helping others plan with confidence. I work closely with retirees and their adult children, offering guidance so families can navigate estate planning, downsizing, and legacy protection together. For over 180 years, New York Life has existed for one purpose: to help families and businesses achieve financial security and peace of mind. When you need us, we are there.`;
 
+const ForFinancialPlanners = () => {
+  const jsonLd = articleSchema({
+    headline: "Real Estate Guidance for Financial Planners and Their Clients in Washington State",
+    description:
+      "Real Property Planning supports financial planners whose clients face inherited property, trust-owned homes, or senior housing transitions in Washington State.",
+    url: "/for-financial-planners",
+    datePublished: "2025-01-15",
+    dateModified: "2026-04-14",
+    about: ["Financial planner guidance", "Estate property", "Senior transition property"],
+  });
+
+  return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Real Estate Guidance for Financial Planners | Real Property Planning"
