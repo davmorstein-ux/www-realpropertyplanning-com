@@ -5,6 +5,14 @@ import WaterfallNav from "./WaterfallNav";
 const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
 const GOLD = "#E8C97A";
 
+const SENIOR_TRANSITION_ITEMS = [
+  { label: "Senior Home Sales", href: "/senior-transitions" },
+  { label: "Senior Living Advisors", href: "/senior-living-advisors" },
+  { label: "Senior Move Managers", href: "/senior-move-managers" },
+  { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
+  { label: "Medicare & Benefits Advisors", href: "/medicare-providers" },
+];
+
 const TOP_LINKS = [
   { label: "Home", href: "/" },
   {
@@ -39,6 +47,7 @@ const TOP_LINKS = [
       { label: "CPAs & Accountants", href: "/professionals/cpas" },
       { label: "Mortgage Lenders", href: "/mortgage-lenders" },
       { label: "Real Estate Brokers", href: "/realtor" },
+      { label: "Senior Transitions", href: "/senior-transitions", hasFlyout: true },
     ],
   },
   {
@@ -59,6 +68,165 @@ const TOP_LINKS = [
   },
   { label: "Contact", href: "/contact" },
 ];
+
+// Flyout submenu that appears to the right of a dropdown item
+function FlyoutMenu({ items, visible }: { items: { label: string; href: string }[]; visible: boolean }) {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: 0,
+        left: "calc(100% + 4px)",
+        background: "rgba(8,13,25,0.97)",
+        backdropFilter: "blur(12px)",
+        borderRadius: 6,
+        border: "1px solid rgba(232,201,122,0.15)",
+        minWidth: 220,
+        padding: "8px 0",
+        zIndex: 300,
+        opacity: visible ? 1 : 0,
+        pointerEvents: visible ? "auto" : "none",
+        transform: visible ? "translateX(0)" : "translateX(-8px)",
+        transition: "opacity 0.2s ease, transform 0.2s ease",
+        boxShadow: "0 16px 48px rgba(0,0,0,0.4)",
+      }}
+    >
+      {items.map((sub) => (
+        <Link
+          key={sub.href}
+          to={sub.href}
+          style={{
+            display: "block",
+            padding: "9px 20px",
+            color: "rgba(255,255,255,0.95)",
+            textDecoration: "none",
+            fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+            fontSize: 12,
+            fontWeight: 700,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            transition: "color 0.18s ease, background 0.18s ease, border-color 0.18s ease",
+            whiteSpace: "nowrap",
+            borderBottom: "1px solid transparent",
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLAnchorElement).style.color = GOLD;
+            (e.currentTarget as HTMLAnchorElement).style.background = "rgba(232,201,122,0.06)";
+            (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = GOLD;
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.95)";
+            (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+            (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "transparent";
+          }}
+        >
+          {sub.label}
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+// A single dropdown item that may have a flyout
+function DropdownItem({
+  sub,
+  pathname,
+}: {
+  sub: { label: string; href: string; hasFlyout?: boolean };
+  pathname: string;
+}) {
+  const [flyoutOpen, setFlyoutOpen] = useState(false);
+  const flyoutTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  if (!sub.hasFlyout) {
+    return (
+      <Link
+        to={sub.href}
+        style={{
+          display: "block",
+          padding: "9px 20px",
+          color: "rgba(255,255,255,0.95)",
+          textDecoration: "none",
+          fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+          fontSize: 12,
+          fontWeight: 700,
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+          transition: "color 0.18s ease, background 0.18s ease, border-color 0.18s ease",
+          whiteSpace: "nowrap",
+          borderBottom: "1px solid transparent",
+        }}
+        onMouseEnter={(e) => {
+          (e.currentTarget as HTMLAnchorElement).style.color = GOLD;
+          (e.currentTarget as HTMLAnchorElement).style.background = "rgba(232,201,122,0.06)";
+          (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = GOLD;
+        }}
+        onMouseLeave={(e) => {
+          (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.95)";
+          (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+          (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "transparent";
+        }}
+      >
+        {sub.label}
+      </Link>
+    );
+  }
+
+  // Item with flyout
+  return (
+    <div
+      style={{ position: "relative" }}
+      onMouseEnter={() => {
+        if (flyoutTimer.current) clearTimeout(flyoutTimer.current);
+        setFlyoutOpen(true);
+      }}
+      onMouseLeave={() => {
+        flyoutTimer.current = setTimeout(() => setFlyoutOpen(false), 200);
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "9px 20px",
+          color: flyoutOpen ? GOLD : "rgba(255,255,255,0.95)",
+          textDecoration: "none",
+          fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+          fontSize: 12,
+          fontWeight: 700,
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+          cursor: "pointer",
+          background: flyoutOpen ? "rgba(232,201,122,0.06)" : "transparent",
+          borderBottom: `1px solid ${flyoutOpen ? GOLD : "transparent"}`,
+          transition: "color 0.18s ease, background 0.18s ease",
+          whiteSpace: "nowrap",
+          gap: 8,
+        }}
+      >
+        <Link to={sub.href} style={{ color: "inherit", textDecoration: "none", flex: 1 }}>
+          {sub.label}
+        </Link>
+        {/* Right-arrow indicator */}
+        <svg
+          width="9"
+          height="9"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          style={{ opacity: 0.7, transform: "rotate(-90deg)" }}
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </div>
+      <FlyoutMenu items={SENIOR_TRANSITION_ITEMS} visible={flyoutOpen} />
+    </div>
+  );
+}
 
 function NavItem({ item, pathname }: { item: (typeof TOP_LINKS)[0]; pathname: string }) {
   const [open, setOpen] = useState(false);
@@ -146,36 +314,7 @@ function NavItem({ item, pathname }: { item: (typeof TOP_LINKS)[0]; pathname: st
         />
 
         {item.items.map((sub) => (
-          <Link
-            key={sub.href}
-            to={sub.href}
-            style={{
-              display: "block",
-              padding: "9px 20px",
-              color: "rgba(255,255,255,0.95)",
-              textDecoration: "none",
-              fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-              fontSize: 12,
-              fontWeight: 700,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              transition: "color 0.18s ease, background 0.18s ease, border-color 0.18s ease",
-              whiteSpace: "nowrap",
-              borderBottom: "1px solid transparent",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.color = GOLD;
-              (e.currentTarget as HTMLAnchorElement).style.background = "rgba(232,201,122,0.06)";
-              (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = GOLD;
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.95)";
-              (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
-              (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "transparent";
-            }}
-          >
-            {sub.label}
-          </Link>
+          <DropdownItem key={sub.href} sub={sub} pathname={pathname} />
         ))}
       </div>
     </div>
