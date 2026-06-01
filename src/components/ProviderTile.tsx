@@ -9,9 +9,7 @@ interface ProviderTileProps {
   logo?: string;
   logoAlt?: string;
   phone?: string;
-  phone2?: string;
   email?: string;
-  email2?: string;
   website: string;
   bio?: string;
   specialty?: string;
@@ -83,8 +81,6 @@ export default function ProviderTile({
             }}
           />
           <div
-            onMouseEnter={handleEnter}
-            onMouseLeave={handleLeave}
             style={{
               position: "fixed",
               top: "80px",
@@ -286,7 +282,7 @@ export default function ProviderTile({
             marginTop: 4,
           }}
         >
-          {hovered ? "Viewing Bio ↑" : "Hover for Bio"}
+          {hovered ? "Click to close ✕" : "Click for Bio"}
         </div>
       )}
 
