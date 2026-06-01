@@ -60,18 +60,6 @@ const ForCPAs = () => (
       </div>
     </section>
 
-    {/* More information link */}
-    <section className="py-6 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <Link to="/for-cpas/learn-more" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
-            More information about CPAs →
-          </Link>
-        </div>
-      </div>
-    </section>
-
-    {/* Featured CPAs */}
     <section className="py-16 lg:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10">
