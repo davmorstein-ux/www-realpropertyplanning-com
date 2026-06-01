@@ -14,7 +14,7 @@ import ProviderTile from "@/components/ProviderTile";
 import purpleGroupPhoto from "@/assets/providers/cpa-purple-group-tenly-jessica-seattle.webp";
 import purpleGroupLogo from "@/assets/providers/cpa-purple-group-logo-seattle.webp";
 
-const PURPLE_GROUP_BIO = `The Purple Group was founded to deliver a more personalized, relationship-driven CPA experience. Tenly Krakoff, CPA, holds a Master's in Accountancy (Taxation) from Gonzaga University and is a Lean Six Sigma–certified professional specializing in tax planning, operational strategy, and process improvement for closely held businesses. Jessica Simons, CPA, holds a Master's in Accounting (Taxation) from Washington State University and brings over a decade of experience in tax strategy for high-net-worth individuals, small businesses, and estates and trusts. Together they combine expertise with technology to help clients simplify finances, support growth, and focus on what matters most.`;
+const PURPLE_GROUP_BIO = `Tenly Krakoff, CPA and Jessica Simons, CPA are the co-founders of The Purple Group, a CPA firm built to deliver a more personalized, relationship-driven experience. Tenly holds a Master's in Accountancy (Taxation) from Gonzaga University and is a Lean Six Sigma–certified professional specializing in tax planning, operational strategy, and process improvement for closely held businesses. Jessica holds a Master's in Accounting (Taxation) from Washington State University and brings over a decade of experience in tax strategy for high-net-worth individuals, small businesses, and estates and trusts. Together they combine expertise with technology to help clients simplify finances, support growth, and focus on what matters most.`;
 
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for CPAs and Their Clients in Washington State",
@@ -85,7 +85,9 @@ const ForCPAs = () => (
         <div className="max-w-md mx-auto">
           <ProviderTile
             name="Tenly Krakoff, CPA"
-            title="Co-Founder"
+            title="Co-Founders"
+            name2="Jessica Simons, CPA"
+            title2=""
             company="The Purple Group"
             photo={purpleGroupPhoto}
             photoAlt="Photo of Tenly Krakoff and Jessica Simons, CPAs at The Purple Group in Seattle"
