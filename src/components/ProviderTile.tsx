@@ -48,8 +48,10 @@ export default function ProviderTile({
   const handleEnter = () => {
     if (!bio) return;
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    setHovered(true);
-    setTimeout(() => setVisible(true), 10);
+    closeTimer.current = setTimeout(() => {
+      setHovered(true);
+      setTimeout(() => setVisible(true), 10);
+    }, 400);
   };
   const handleLeave = () => {
     if (!bio) return;
