@@ -9,8 +9,11 @@ import FeaturedAttorneyPlaceholder from "@/components/FeaturedAttorneyPlaceholde
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ProviderTile from "@/components/ProviderTile";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconElderLaw from "@/assets/icons/attorney-elder-law-icon-washington.webp";
+import scottPhoto from "@/assets/providers/elder-law-scott-schill-mercer-island.webp";
+import schillLogo from "@/assets/providers/elder-law-sr-schill-associates-logo.webp";
 
 const intersections = [
   "Accurate property valuation to support Medicaid planning or spend-down analysis",
