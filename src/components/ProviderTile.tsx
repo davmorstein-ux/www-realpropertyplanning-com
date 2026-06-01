@@ -56,8 +56,8 @@ export default function ProviderTile({
     if (closeTimer.current) clearTimeout(closeTimer.current);
     closeTimer.current = setTimeout(() => {
       setVisible(false);
-      setTimeout(() => setHovered(false), 400);
-    }, 300);
+      closeTimer.current = setTimeout(() => setHovered(false), 400);
+    }, 150);
   };
 
   const hasTwoPeople = !!(photo2 && name2);
@@ -384,10 +384,8 @@ export default function ProviderTile({
       {/* Contact section */}
       <div
         onClick={(e) => e.stopPropagation()}
-        onMouseEnter={(e) => { e.stopPropagation(); if (closeTimer.current) clearTimeout(closeTimer.current); }}
-        onMouseLeave={(e) => {
-          e.stopPropagation();
-        }}
+        onMouseEnter={(e) => { e.stopPropagation(); handleLeave(); }}
+        onMouseLeave={(e) => { e.stopPropagation(); handleEnter(); }}
         style={{
           marginTop: "auto",
           paddingTop: 16,
