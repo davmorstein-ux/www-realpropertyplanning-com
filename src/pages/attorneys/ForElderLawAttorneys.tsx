@@ -65,7 +65,7 @@ const ForElderLawAttorneys = () => (
             Featured Elder Law Attorney
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            A trusted elder law colleague Real Property Planning works with on Mercer Island and across the Eastside.
+            ​
           </p>
         </div>
         <div className="max-w-md mx-auto">
