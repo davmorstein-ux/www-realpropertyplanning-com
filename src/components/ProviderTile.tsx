@@ -9,7 +9,9 @@ interface ProviderTileProps {
   logo?: string;
   logoAlt?: string;
   phone?: string;
+  phone2?: string;
   email?: string;
+  email2?: string;
   website: string;
   bio?: string;
   specialty?: string;
