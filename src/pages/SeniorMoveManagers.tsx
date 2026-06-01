@@ -163,6 +163,20 @@ const SeniorMoveManagers = () => (
               </div>
             ))}
             <ProviderTile
+              name="Tina Baril"
+              title="Owner"
+              company="Monarch Transitions · Senior Move Managers"
+              photo={tinaBarilPhoto}
+              photoAlt="Tina Baril — Owner, Monarch Transitions"
+              logo={monarchLogo}
+              logoAlt="Monarch Transitions logo"
+              phone="(206) 353-8617"
+              email="tina@monarchtransitions.com"
+              website="https://www.monarchtransitions.com"
+              bio={TINA_BIO}
+              specialty="Senior move management serving Pierce, South King, Thurston and Kitsap counties."
+            />
+            <ProviderTile
               name="Eric Rovner"
               title="Vice President of Marketing"
               company="HB Move Management · Hansen Bros. Moving"
