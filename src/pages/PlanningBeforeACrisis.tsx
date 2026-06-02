@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import heroImage from "@/assets/planning-before-a-crisis-hero-washington.webp";
+import heroImage from "@/assets/panorama-road-scene.webp";
 
 const tiles = [
   {
@@ -61,7 +61,8 @@ const PlanningBeforeACrisis = () => {
           <img
             src={heroImage}
             alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            className="w-full block"
+            style={{ maxHeight: "340px", objectFit: "cover", objectPosition: "center center" }}
             loading="eager"
           />
         </section>
