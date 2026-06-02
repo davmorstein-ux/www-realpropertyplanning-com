@@ -32,10 +32,10 @@ const legal: Card[] = [
 ];
 
 const financial: Card[] = [
-  { title: "CPAs", description: "Tax guidance, estate coordination, and compliance for probate and inherited assets.", href: "/for-cpas", image: "/tiles/set1/cpas-tile.webp", alt: "CPAs Washington State", cta: "Learn More" },
-  { title: "Financial Planners", description: "Long-term financial planning, inherited asset guidance, and senior housing cost planning.", href: "/professionals/financial-planners", image: "/tiles/set1/financial-planners-tile.webp", alt: "Financial planners Washington State", cta: "Learn More" },
-  { title: "Mortgage Lenders", description: "Financing options for estate, inherited, and transitional properties.", href: "/mortgage-lenders", image: "/tiles/set1/mortgage-lenders-tile.webp", alt: "Mortgage lenders Washington State", cta: "Learn More" },
-  { title: "Certified Appraisers", description: "Independent property valuation for estate, probate, and trust purposes.", href: "/real-estate-appraiser", image: "/tiles/set1/real-estate-appraisers-tile.webp", alt: "Certified real estate appraisers Washington State", cta: "Learn More" },
+  { title: "CPAs", description: "Tax guidance, estate coordination, and compliance for probate and inherited assets.", href: "/for-cpas", image: "/tiles/set1/cpas-tile.png", alt: "CPAs Washington State", cta: "Learn More" },
+  { title: "Financial Planners", description: "Long-term financial planning, inherited asset guidance, and senior housing cost planning.", href: "/professionals/financial-planners", image: "/tiles/set1/financial-planners-tile.png", alt: "Financial planners Washington State", cta: "Learn More" },
+  { title: "Mortgage Lenders", description: "Financing options for estate, inherited, and transitional properties.", href: "/mortgage-lenders", image: "/tiles/set1/mortgage-lenders-tile.png", alt: "Mortgage lenders Washington State", cta: "Learn More" },
+  { title: "Certified Appraisers", description: "Independent property valuation for estate, probate, and trust purposes.", href: "/real-estate-appraiser", image: "/tiles/set1/real-estate-appraisers-tile.png", alt: "Certified real estate appraisers Washington State", cta: "Learn More" },
 ];
 
 const housing: Card[] = [
