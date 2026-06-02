@@ -153,19 +153,14 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
               {/* Card body */}
 
               <div style={{ padding: "16px 20px 0", flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
-
-                <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#1B3A6B", lineHeight: 1.3, marginBottom: 6, minHeight: 48 }}>
-
-                  {s.title}
-
-                </h3>
-
+                <div style={{ minHeight: 52 }}>
+                  <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#1B3A6B", lineHeight: 1.3 }}>
+                    {s.title}
+                  </h3>
+                </div>
                 <p style={{ fontSize: 14, color: "#6B7280", lineHeight: 1.6, flex: 1 }}>
-
                   {s.description}
-
                 </p>
-
               </div>
 
               {/* CTA bar */}
