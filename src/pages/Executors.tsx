@@ -1,156 +1,217 @@
 import Header from "@/components/Header";
-import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import PageFAQ from "@/components/PageFAQ";
-import { Button } from "@/components/ui/button";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconExecutors from "@/assets/icons/probate-executors-services-icon-washington.webp";
-import CTASection from "@/components/CTASection";
 
-const jsonLd = articleSchema({
-  headline: "Executor's Guide to Selling Estate Property in Washington State",
-  description: "Practical, fiduciary-aware real estate support for Washington personal representatives — first steps, court timing, pricing defensibility, and out-of-state coordination.",
-  url: "/executors",
-  datePublished: "2025-01-15",
-  dateModified: "2026-04-16",
-  about: ["Executors", "Personal representatives", "Washington probate", "Estate property", "Fiduciary duty"],
-});
-
-const executorFaqs = [
+const roles = [
   {
-    question: "I was just named executor. What are the first three things I should do about the house?",
-    answer: "First: secure it — change locks if anyone has access who shouldn't, confirm insurance is in force (vacant-home riders matter), and forward the mail. Second: don't throw anything away yet. Even if the house looks like it needs an immediate cleanout, important documents, life insurance papers, and original deeds are often inside. Third: get a date-of-death valuation on the calendar before condition starts to change. We can walk you through all three on the first call.",
+    title: "Executors",
+    subtitle: "Also called Personal Representatives in Washington State",
+    href: "/executors/executors-guide",
+    description:
+      "An executor is a person named in a will — or appointed by a court — to administer a deceased person's estate. In Washington State, this role is formally called a Personal Representative. The executor is responsible for identifying and securing assets, paying debts and taxes, communicating with beneficiaries, and ultimately distributing what remains according to the will or state law.",
+    responsibilities: [
+      "Secure and inventory estate assets, including real property",
+      "Obtain Letters Testamentary or Letters of Administration from the court",
+      "Arrange date-of-death valuations for tax and accounting purposes",
+      "Manage, prepare, and sell estate real estate",
+      "Pay valid debts, taxes, and estate expenses",
+      "Distribute remaining assets to beneficiaries",
+      "Maintain a defensible fiduciary record throughout",
+    ],
   },
   {
-    question: "Do I have personal liability if the house sells for less than someone thinks it was worth?",
-    answer: "A personal representative who acts prudently and in good faith is generally protected — but \"prudently\" is judged by the documentation in your file. That is why we lead with a written, valuation-based pricing analysis, document marketing exposure, log every offer, and put the rationale for the accepted price in writing. If a beneficiary later questions the sale, your file already has the answer. This is also a question for your estate attorney; we coordinate directly with them.",
+    title: "Powers of Attorney",
+    subtitle: "Acting on behalf of a living person",
+    href: "/executors/power-of-attorney-guide",
+    description:
+      "A Power of Attorney (POA) is a legal document that grants one person — the agent — the authority to act on behalf of another — the principal — while the principal is still alive. A Durable Power of Attorney remains in effect even if the principal becomes incapacitated. Agents under a POA often face real estate decisions when a senior can no longer manage their own affairs.",
+    responsibilities: [
+      "Make financial and legal decisions on the principal's behalf",
+      "Manage, maintain, or sell the principal's real property",
+      "Pay bills, manage bank accounts, and file taxes",
+      "Coordinate with care providers and family members",
+      "Act strictly in the principal's best interest at all times",
+      "Keep detailed records of all decisions and transactions",
+    ],
   },
   {
-    question: "Can I make repairs to the house before probate is fully open?",
-    answer: "Emergency and preservation work — roof leaks, frozen pipes, securing the property — is usually appropriate and reimbursable from the estate. Discretionary updates (kitchens, bathrooms, paint) generally should wait until you have authority and a documented decision that the spend is in the estate's interest. We help you draw that line and document the reasoning either way.",
-  },
-  {
-    question: "What if a beneficiary wants to buy the house from the estate instead of selling on the open market?",
-    answer: "This is common and entirely workable, but it requires a defensible price, written disclosure to all beneficiaries, and (in some Washington probates) court approval. We provide the independent valuation that supports the price and coordinate with your attorney on the disclosure and approval steps. Skipping this process is one of the most common ways executors get sued years later.",
-  },
-  {
-    question: "I live in another state. Do I have to fly out to handle this?",
-    answer: "Almost never. Out-of-state executors are one of our most common client situations. We do the in-person walk-through, coordinate vendors and cleanout, send photo and video updates, manage showings, and present every offer by phone or video. Most out-of-state PRs only travel if they choose to, not because they have to.",
-  },
-  {
-    question: "How is being an executor different from being a trustee?",
-    answer: "Both are fiduciary roles, but an executor (personal representative) is appointed by a court to administer a probate estate, while a trustee administers a trust outside of court supervision. Trust real estate sales typically don't require Letters or court approval, but the fiduciary duty to beneficiaries — and the need for defensible pricing — is just as real. We have separate guidance for trustees on the Trustees page.",
+    title: "Trustees",
+    subtitle: "Administering assets held in trust",
+    href: "/executors/trustees-guide",
+    description:
+      "A trustee is a person or institution appointed to manage assets held in a trust on behalf of the trust's beneficiaries. Unlike an executor, a trustee operates outside of court supervision — but carries an equally serious fiduciary duty. Trust-owned real estate must be managed and sold in accordance with the trust document and in the best interests of all beneficiaries.",
+    responsibilities: [
+      "Administer trust assets according to the trust document",
+      "Manage, maintain, and sell trust-owned real property",
+      "Distribute income and principal to beneficiaries as directed",
+      "Keep accurate records and provide accountings",
+      "Treat all beneficiaries impartially and act without self-interest",
+      "Obtain independent valuations before selling trust property",
+    ],
   },
 ];
 
 const Executors = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Executor's Guide to Selling Estate Property in WA"
-      description="Practical, fiduciary-aware help for Washington personal representatives — securing the home, court-aligned timing, and defensible pricing."
-      jsonLd={jsonLd}
+      title="Executors, Powers of Attorney & Trustees | Real Property Planning"
+      description="Guidance for Washington State executors, agents under power of attorney, and trustees managing estate and trust real property."
+      canonical="https://realpropertyplanning.com/executors"
     />
-    <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />
+    <BreadcrumbSchema items={[{ name: "Executors, POAs & Trustees", url: "/executors" }]} />
     <Header />
     <main id="main-content">
+      <HeroBandTitle as="h1">Executors, Powers of Attorney &amp; Trustees</HeroBandTitle>
 
-    {/* Hero */}
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="flex justify-center mb-1.5 md:mb-2">
-            <img src={iconExecutors} alt="Executor and personal representative real estate guidance Washington State" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
-          </div>
-          <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-            For Executors &amp; Personal Representatives
-          </p>
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-            You Were Named Executor. The House Doesn't Have to Be Yours to Figure Out Alone.
-          </h1>
-          <p className="text-primary-foreground/85 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-4">
-            This page is for court-appointed and family executors managing inherited or estate property in Washington State. Most personal representatives have never sold an estate home before — and many are doing it from another state, while grieving, while siblings are calling, while the carrying costs keep running. Real Property Planning takes the property workstream off your plate: securing the home, the date-of-death valuation, the cleanout, the pricing your file can defend, and the sale itself.
-          </p>
-          <p className="text-primary-foreground/70 text-[15px] md:text-base leading-relaxed max-w-2xl mx-auto mb-5">
-            Local across <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4 transition-colors">King, Snohomish, Pierce, and Kitsap Counties</Link>, with full out-of-state PR support statewide.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
-                Get Executor Guidance
-              </Button>
-            </Link>
-            <Link to="/resources/washington-executors-10-step-checklist">
-              <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold">
-                10-Step Executor Checklist
-              </Button>
-            </Link>
+      <section className="py-10 md:py-12 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              When someone is named to manage another person's property — whether through a will, a legal document, or a
+              trust — they take on a fiduciary role with real responsibilities. This page explains the three most common
+              roles and links to detailed guidance for each.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* Quick orientation links — replaces the lonely "more information" link */}
-    <section className="py-10 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-sm font-semibold text-muted-foreground mb-3">Where executors usually start</p>
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-base">
-            <Link to="/guides/executor-first-steps-house" className="text-accent hover:text-gold underline underline-offset-4">First steps with the house</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/sell-house-during-probate-washington" className="text-accent hover:text-gold underline underline-offset-4">Selling during probate in WA</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/executor-sell-before-probate" className="text-accent hover:text-gold underline underline-offset-4">Can I sell before probate?</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/out-of-state-families" className="text-accent hover:text-gold underline underline-offset-4">Handling it from out of state</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/heirs-disagree-selling" className="text-accent hover:text-gold underline underline-offset-4">When heirs disagree</Link>
+      <section className="pb-14 md:pb-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            {roles.map((role) => (
+              <div
+                key={role.title}
+                style={{
+                  background: "#fff",
+                  borderRadius: 12,
+                  border: "1px solid rgba(0,0,0,0.08)",
+                  boxShadow: "0 2px 16px rgba(0,0,0,0.06)",
+                  display: "flex",
+                  flexDirection: "column",
+                  overflow: "hidden",
+                }}
+              >
+                <div style={{ background: "#0a1628", padding: "24px 24px 20px" }}>
+                  <h2
+                    style={{
+                      fontFamily: "Georgia, serif",
+                      fontSize: 22,
+                      fontWeight: 700,
+                      color: "#fff",
+                      marginBottom: 6,
+                    }}
+                  >
+                    {role.title}
+                  </h2>
+                  <p
+                    style={{
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 11,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "#E8C97A",
+                    }}
+                  >
+                    {role.subtitle}
+                  </p>
+                </div>
+
+                <div style={{ padding: "20px 24px", flex: 1, display: "flex", flexDirection: "column", gap: 16 }}>
+                  <p style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568", lineHeight: 1.75 }}>
+                    {role.description}
+                  </p>
+
+                  <div>
+                    <div
+                      style={{
+                        fontFamily: "'Raleway', sans-serif",
+                        fontSize: 10,
+                        fontWeight: 700,
+                        letterSpacing: "0.18em",
+                        textTransform: "uppercase",
+                        color: "#8B6914",
+                        marginBottom: 10,
+                      }}
+                    >
+                      Key Responsibilities
+                    </div>
+                    <ul
+                      style={{
+                        listStyle: "none",
+                        padding: 0,
+                        margin: 0,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 8,
+                      }}
+                    >
+                      {role.responsibilities.map((r) => (
+                        <li
+                          key={r}
+                          style={{
+                            display: "flex",
+                            alignItems: "flex-start",
+                            gap: 8,
+                            fontFamily: "Georgia, serif",
+                            fontSize: 13,
+                            color: "#4a5568",
+                            lineHeight: 1.6,
+                          }}
+                        >
+                          <span style={{ color: "#C9A84C", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>›</span>
+                          {r}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div style={{ padding: "0 24px 24px" }}>
+                  <Link
+                    to={role.href}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 6,
+                      background: "#C9A84C",
+                      borderRadius: 8,
+                      padding: "10px 16px",
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 12,
+                      fontWeight: 700,
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      color: "#fff",
+                      textDecoration: "none",
+                    }}
+                  >
+                    {role.title} Guide
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="13"
+                      height="13"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <PageFAQ faqs={executorFaqs} heading="What Washington Executors Most Often Ask" eyebrow="For Personal Representatives" id="executors-main" />
-
-    <PageFAQ
-      faqs={[
-        {
-          question: "What does an executor need to do before listing an inherited home in Washington?",
-          answer: "Before listing, an executor should secure the property (locks, insurance, mail forwarding), confirm Letters Testamentary or Letters of Administration have been issued by the court, obtain a date-of-death valuation for tax and accounting purposes, and coordinate with the estate attorney on whether court approval is required for the sale. Real Property Planning handles the property-side steps so the legal workstream stays clean.",
-        },
-        {
-          question: "What is the difference between date-of-death value and listing price?",
-          answer: "The date-of-death value is the fair market value of the home on the day the decedent passed — it sets the new tax basis for the estate and heirs. The listing price is what the home is offered for today, based on current market conditions, condition, and comparable sales. The two numbers are often different, especially if months have passed or the market has shifted, and both should be documented separately in the estate file.",
-        },
-        {
-          question: "How long does it typically take to sell a home through probate in Washington State?",
-          answer: "Most Washington probate sales close within 60 to 120 days from listing, though the full timeline depends on whether the personal representative has Nonintervention Powers, the home's condition, and how quickly cleanout and preparation can be completed. Real Property Planning sequences the work so the property is ready to list as soon as the estate is positioned to sell.",
-        },
-        {
-          question: "Can an executor sell a home without court approval in Washington?",
-          answer: "Yes, in most Washington probates. If the personal representative has been granted Nonintervention Powers (which is the default in most solvent estates), the home can typically be sold without separate court approval for the sale itself. Confirm this with the estate attorney before signing a listing agreement, since intervention probates and certain estate situations still require court confirmation.",
-        },
-      ]}
-      heading="Common Executor Questions"
-      eyebrow="Quick Answers"
-      id="executors-quick"
-    />
-
-    <CTASection
-      eyebrow="For Executors"
-      heading="Tell Me What's Happening with the House"
-      body="Most executors call the first time without a plan — just a situation. That's the right time to call. We'll talk through where the estate stands, what the property needs first, and how to keep your fiduciary file clean from day one."
-      callLabel="Call David Stein — (206) 900-3015"
-      messageLabel="Email About an Estate"
-      microcopy="Confidential. No commitment. We can also coordinate directly with your estate attorney."
-    />
-    <DisclaimerSection />
-      <BackToProfessionals />
+      <DisclaimerSection />
     </main>
     <Footer />
   </div>
