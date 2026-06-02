@@ -56,13 +56,12 @@ const PlanningBeforeACrisis = () => {
       <BreadcrumbSchema items={[{ name: "Planning Before a Crisis", url: "/planning-before-a-crisis" }]} />
       <Header />
       <main id="main-content">
-        {/* HERO IMAGE — standardized height */}
-        <section className="bg-white">
+        <section className="bg-white w-full overflow-hidden">
           <img
             src={heroImage}
             alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
             className="w-full block"
-            style={{ maxHeight: "340px", objectFit: "cover", objectPosition: "center center" }}
+            style={{ objectFit: "contain", width: "100%", height: "auto" }}
             loading="eager"
           />
         </section>
