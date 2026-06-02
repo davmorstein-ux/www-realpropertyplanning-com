@@ -68,7 +68,7 @@ const ProfessionalsAndServices = () => (
       <div className="p1grid">
         <P1Tile pill="Legal Services" title="Attorneys" tagline="Probate & Estate Attorneys" imgSrc="/tiles/set1/attorneys.webp" href="/for-attorneys" />
         <P1Tile pill="Tax & Accounting" title="Certified Public Accountants" tagline="Expert Tax Guidance for Estate Matters" imgSrc="/tiles/set1/certified-public-accountants.webp" href="/for-cpas" />
-        <P1Tile pill="Real Estate" title="Real Estate Brokers" tagline="Selling Estate & Senior Properties" imgSrc="/tiles/set1/real-estate-brokers.webp" href="/realtor" />
+        <P1Tile pill="Real Estate" title="Real Estate Brokers" tagline="Selling Estate & Senior Properties" imgSrc="/tiles/set1/real-estate-brokers.webp?v=20260602b" href="/realtor" />
         <P1Tile pill="Real Estate" title="Real Estate Appraisers" tagline="Certified Property Valuations" imgSrc="/tiles/set1/real-estate-appraisers.webp" href="/real-estate-appraiser" />
         <P1Tile pill="Financial Services" title="Financial Planners" tagline="Protecting Wealth Through Transitions" imgSrc="/tiles/set1/financial-planners.webp" href="/for-financial-planners" />
         <P1Tile pill="Lending" title="Mortgage Lenders" tagline="Financing Inherited Real Estate" imgSrc="/tiles/set1/mortgage-lenders.webp" href="/lenders-and-financing-specialists" />

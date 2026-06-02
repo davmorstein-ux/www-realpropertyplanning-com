@@ -28,7 +28,7 @@ const whatMakesDifferentTiles = [
     href: "/executors",
   },
   {
-    image: "/tiles/set2/probate-estate-sales.webp",
+    image: "/tiles/set2/probate-estate-sales.webp?v=20260602b",
     alt: "Estate property condition assessment",
     title: "Property Condition",
     description: "Deferred maintenance, belongings, and vacancy are common.",
