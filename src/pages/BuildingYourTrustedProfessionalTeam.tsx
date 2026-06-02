@@ -266,8 +266,40 @@ const BuildingYourTrustedProfessionalTeam = () => {
 
         <h1 className="sr-only">A Guide to Trusted, Independent Professionals</h1>
 
-        <div id="legal-professionals" className="scroll-mt-20">
-          <Section heading="Legal Professionals" cards={legal} bg="bg-background" />
+<div id="legal-professionals" className="scroll-mt-20 bg-background">
+          <section className="py-10 lg:py-12 bg-background">
+            <div className="container px-6 lg:px-8">
+              <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: "#1B3A6B" }}>
+                Legal Professionals
+              </h2>
+              <div className="flex justify-center">
+                <div style={{ width: "100%", maxWidth: 360 }}>
+                  {legal.map((s) => (
+                    <a key={s.title} href={s.href} style={{ textDecoration: "none", display: "block" }}>
+                      <div style={{ background: "#fff", borderRadius: 16, border: "1px solid rgba(0,0,0,0.08)", overflow: "hidden", transition: "box-shadow 0.2s ease, transform 0.2s ease" }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)"; }}
+                        onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}
+                      >
+                        <div style={{ width: "100%", height: 180, overflow: "hidden" }}>
+                          <img src={s.image} alt={s.alt} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} />
+                        </div>
+                        <div style={{ padding: "16px 20px 0" }}>
+                          <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#1B3A6B", lineHeight: 1.3, marginBottom: 6 }}>{s.title}</h3>
+                          <p style={{ fontSize: 14, color: "#6B7280", lineHeight: 1.6 }}>{s.description}</p>
+                        </div>
+                        <div style={{ padding: "12px 20px 16px" }}>
+                          <div style={{ background: "#C9A84C", borderRadius: 8, padding: "10px 16px", display: "flex", alignItems: "center", justifyContent: "center", gap: 6, fontFamily: "'Raleway', sans-serif", fontSize: 13, fontWeight: 700, color: "#fff", letterSpacing: "0.04em" }}>
+                            {s.cta}
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
         <div>
           <Section heading="Financial & Valuation Professionals" cards={financial} bg="bg-secondary" />
