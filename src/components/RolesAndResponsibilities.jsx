@@ -6,8 +6,8 @@ const tileData = [
   { pill: "Estate Planning", title: "Wills", tagline: "What Every Will Should Include", img: "/tiles/set2/wills.webp", href: "/wills" },
   { pill: "Education", title: "Probate Terms", tagline: "Key Terms Every Family Should Know", img: "/tiles/set2/probate-terms.webp", href: "/terminology" },
   { pill: "Education", title: "The Probate Process", tagline: "Step-by-Step Guide to Probate", img: "/tiles/set2/the-probate-process.webp", href: "/how-the-process-works" },
-  { pill: "Real Estate", title: "Probate Estate Sales", tagline: "Selling an Inherited Property the Right Way", img: "/tiles/set2/probate-estate-sales.webp", href: "/probate-estate-sales" },
-  { pill: "Real Estate", title: "Title & Escrow", tagline: "Protecting Ownership Through Closing", img: "/tiles/set2/title-escrow.webp", href: "/title-and-escrow" },
+  { pill: "Real Estate", title: "Probate Estate Sales", tagline: "Selling an Inherited Property the Right Way", img: "/tiles/set2/probate-estate-sales.webp?v=20260602b", href: "/probate-estate-sales" },
+  { pill: "Real Estate", title: "Title & Escrow", tagline: "Protecting Ownership Through Closing", img: "/tiles/set2/title-escrow.webp?v=20260602b", href: "/title-and-escrow" },
   { pill: "Estate Planning", title: "Power of Attorney", tagline: "Granting Authority to Act on Your Behalf", img: "/tiles/set2/power-of-attorney.webp", href: "/power-of-attorney" },
 ];
 

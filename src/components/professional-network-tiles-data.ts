@@ -55,10 +55,10 @@ export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
     label: "Property, Sale & Transition Support",
     tagline: "Hands-on property support for preparing, valuing, selling, and coordinating the home side of a transition.",
     tiles: [
-      { title: "Real Estate Brokers", href: "/realtor", imageSrc: "/tiles/set1/real-estate-brokers.webp", altText: "Real estate brokers Washington State" },
+      { title: "Real Estate Brokers", href: "/realtor", imageSrc: "/tiles/set1/real-estate-brokers.webp?v=20260602b", altText: "Real estate brokers Washington State" },
       { title: "Senior Move Managers", href: "/senior-move-managers", imageSrc: "/tiles/set1/senior-move-managers.webp", altText: "Senior move managers Washington State" },
-      { title: "Probate & Estate Sales", href: "/probate-estate-sales", imageSrc: "/tiles/set2/probate-estate-sales.webp", altText: "Probate and estate sales Washington State" },
-      { title: "Title & Escrow", href: "/title-and-escrow", imageSrc: "/tiles/set2/title-escrow.webp", altText: "Title and escrow services Washington State" },
+      { title: "Probate & Estate Sales", href: "/probate-estate-sales", imageSrc: "/tiles/set2/probate-estate-sales.webp?v=20260602b", altText: "Probate and estate sales Washington State" },
+      { title: "Title & Escrow", href: "/title-and-escrow", imageSrc: "/tiles/set2/title-escrow.webp?v=20260602b", altText: "Title and escrow services Washington State" },
       { title: "Service Areas", href: "/counties", imageSrc: "/tiles/set3/service-areas.webp", altText: "Washington State service areas" },
     ],
   },

@@ -87,7 +87,7 @@ const SeniorTransitions = () => {
                   href: "/senior-living-advisors",
                 },
                 {
-                  image: "/tiles/set2/probate-estate-sales.webp",
+                  image: "/tiles/set2/probate-estate-sales.webp?v=20260602b",
                   alt: "Estate sale and liquidation services Washington State",
                   title: "Estate Sale & Liquidation",
                   description: "When a home contains decades of belongings, estate sale professionals help families sort, value, and sell or donate items — clearing the home efficiently and respectfully before it goes on the market.",
@@ -95,7 +95,7 @@ const SeniorTransitions = () => {
                   href: "/estate-liquidation",
                 },
                 {
-                  image: "/tiles/set1/real-estate-brokers.webp",
+                  image: "/tiles/set1/real-estate-brokers.webp?v=20260602b",
                   alt: "Real estate brokers experienced in senior transitions Washington State",
                   title: "Real Estate Broker",
                   description: "A broker experienced in senior transitions understands condition-based pricing, family dynamics, and the need for patience. Real Property Planning connects families with brokers who specialize in this work throughout Washington State.",
