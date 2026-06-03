@@ -26,12 +26,13 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
       <BreadcrumbSchema items={trail.slice(1).map((t) => ({ name: t.label, url: t.path }))} />
       <Header />
       <main id="main-content">
-        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
-          <div style={{ lineHeight: 0 }}>
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0, paddingBottom: 0 }}>
+          <div style={{ lineHeight: 0, margin: 0, padding: 0 }}>
             <img
               src={node.heroImage || agingParentHero.url}
               alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              className="w-full block"
+              style={{ display: 'block', width: '100%', height: 'clamp(280px, 32vw, 520px)', objectFit: 'cover', objectPosition: 'center', margin: 0, padding: 0 }}
               loading="eager"
             />
             <HeroBandTitle as="div">
