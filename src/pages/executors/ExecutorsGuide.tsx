@@ -131,7 +131,7 @@ const ExecutorsGuide = () => (
       <section style={{ background: cream, padding: "48px 0" }}>
         <div className="container px-5 md:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div style={eyebrow}>Washington State Personal Representatives</div>
+            
             <p style={bodyText}>
               Being named executor of an estate is an honor — and a responsibility that arrives at one of the hardest
               moments in a family's life. Washington State calls this role the Personal Representative. Whether
@@ -146,7 +146,7 @@ const ExecutorsGuide = () => (
       <section style={{ background: "#fff", padding: "64px 0" }}>
         <div className="container px-5 md:px-8">
           <div className="max-w-3xl mx-auto">
-            <div style={eyebrow}>Your Role</div>
+            
             <h2 style={sectionHeading}>What an Executor Actually Does</h2>
             <p style={{ ...bodyText, marginBottom: 18 }}>
               An executor is named in a will to administer a deceased person's estate. If there is no will — or if the
@@ -168,7 +168,7 @@ const ExecutorsGuide = () => (
                 borderLeft: `4px solid ${gold}`,
               }}
             >
-              <div style={{ ...eyebrow, marginBottom: 6 }}>Washington State Note</div>
+              
               <p style={{ ...bodyText, fontSize: 14 }}>
                 Washington uses the term <em>Personal Representative</em> rather than "executor." The role is
                 governed by the Washington Probate Act (RCW Title 11). Washington is one of the few states that allows{" "}
@@ -184,7 +184,7 @@ const ExecutorsGuide = () => (
       <section style={{ background: cream, padding: "64px 0" }}>
         <div className="container px-5 md:px-8">
           <div className="max-w-4xl mx-auto">
-            <div style={eyebrow}>Step by Step</div>
+            
             <h2 style={sectionHeading}>Managing Estate Real Estate: Six Key Steps</h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 20, marginTop: 28 }}>
               {firstSteps.map((step) => (
@@ -237,7 +237,7 @@ const ExecutorsGuide = () => (
       <section style={{ background: "#fff", padding: "64px 0" }}>
         <div className="container px-5 md:px-8">
           <div className="max-w-3xl mx-auto">
-            <div style={eyebrow}>What to Avoid</div>
+            
             <h2 style={sectionHeading}>Common Executor Mistakes</h2>
             <p style={{ ...bodyText, marginBottom: 24 }}>
               Executors are held to a high standard — even when they're acting in good faith. These are the mistakes
@@ -270,7 +270,7 @@ const ExecutorsGuide = () => (
       <section style={{ background: cream, padding: "64px 0" }}>
         <div className="container px-5 md:px-8">
           <div className="max-w-4xl mx-auto">
-            <div style={eyebrow}>How We Can Help</div>
+            
             <h2 style={sectionHeading}>Real Property Planning for Executors</h2>
             <p style={{ ...bodyText, marginBottom: 28 }}>
               We work alongside executors throughout Western Washington — providing the appraisal work, real estate
@@ -317,7 +317,7 @@ const ExecutorsGuide = () => (
       <section style={{ background: navy, padding: "64px 0" }}>
         <div className="container px-5 md:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <div style={{ ...eyebrow, color: gold }}>Get in Touch</div>
+            
             <h2
               style={{
                 fontFamily: raleway,
