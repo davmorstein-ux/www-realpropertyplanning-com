@@ -123,7 +123,7 @@ const Executors = () => (
                 {/* Title bar */}
                 <div style={{ padding: "14px 24px 12px", borderBottom: "1px solid rgba(0,0,0,0.06)", textAlign: "center" }}>
                   <h2 style={{ fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", color: "#1B3A6B", marginBottom: 4, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                    {role.title === "Powers of Attorney" ? "Powers of Attorney" : role.title}
+                    {role.title === "Powers of Attorney" ? "\u200bPowers of Attorney" : role.title}
                   </h2>
                   <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8B6914", textAlign: "center" }}>
                     {role.subtitle}
@@ -133,7 +133,7 @@ const Executors = () => (
                 {/* Body */}
                 <div style={{ padding: "16px 24px", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
                   <p 
-                    className={index === 0 || index === 1 ? "text-xl" : "text-base"}
+                    className="text-base"
                     style={{ fontFamily: "Georgia, serif", color: "#4a5568", lineHeight: 1.75 }}
                   >
                     {role.description}
