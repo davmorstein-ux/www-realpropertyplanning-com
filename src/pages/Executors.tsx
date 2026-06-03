@@ -124,11 +124,14 @@ const Executors = () => (
                 <div style={{ padding: "18px 24px 14px", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
                   <h2
                     style={{
-                      fontFamily: "Georgia, serif",
-                      fontSize: 20,
+                      fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                      fontSize: 14,
                       fontWeight: 700,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
                       color: "#1B3A6B",
                       marginBottom: 4,
+                      whiteSpace: "nowrap",
                     }}
                   >
                     {role.title}
@@ -136,7 +139,7 @@ const Executors = () => (
                   <p
                     style={{
                       fontFamily: "'Raleway', sans-serif",
-                      fontSize: 11,
+                      fontSize: 10,
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
                       color: "#8B6914",
