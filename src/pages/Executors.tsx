@@ -137,7 +137,7 @@ const Executors = () => (
                   <div
                     style={{
                       fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                      fontSize: 11,
+                      fontSize: 15,
                       fontWeight: 700,
                       letterSpacing: "0.14em",
                       textTransform: "uppercase",
