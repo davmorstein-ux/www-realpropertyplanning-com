@@ -34,11 +34,11 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
       <BreadcrumbSchema items={trail.slice(1).map((t) => ({ name: t.label, url: t.path }))} />
       <Header />
 
-      <main id="main-content" className="flex-1">
+      <main id="main-content" className="flex-1" style={{ marginTop: 0, paddingTop: 0 }}>
 
         {/* Hero image — full bleed, outside all containers */}
         {(isRoot || node.heroImage || node.heroBandTitle) && (
-          <div style={{ lineHeight: 0, marginTop: 2 }}>
+          <div style={{ lineHeight: 0, marginTop: 0, paddingTop: 0, display: 'block' }}>
             <img
               src={node.heroImage || agingParentHero.url}
               alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
@@ -49,7 +49,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
           </div>
         )}
 
-        <section className="pt-8 pb-10 lg:pb-16 bg-cream">
+        <section className="pb-10 lg:pb-16 bg-cream" style={{ paddingTop: '32px' }}>
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
 
