@@ -91,7 +91,7 @@ const Executors = () => (
       <section className="pb-14 md:pb-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            {roles.map((role, index) => (
+            {roles.map((role) => (
               <div
                 key={role.title}
                 style={{
@@ -121,21 +121,50 @@ const Executors = () => (
                 </div>
 
                 {/* Title bar */}
-                <div style={{ padding: "14px 24px 12px", borderBottom: "1px solid rgba(0,0,0,0.06)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", minWidth: 0 }}>
-                  <h2 style={{ fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", color: "#1B3A6B", marginBottom: 4, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", maxWidth: "100%", display: "block" }}>
-                    {role.title === "Powers of Attorney" ? "\u200bPowers of Attorney" : role.title}
+                <div
+                  style={{
+                    padding: "14px 16px 12px",
+                    borderBottom: "1px solid rgba(0,0,0,0.06)",
+                    textAlign: "center",
+                    height: 80,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <h2
+                    style={{
+                      fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                      fontSize: 12,
+                      fontWeight: 700,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "#1B3A6B",
+                      marginBottom: 5,
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {role.title}
                   </h2>
-                  <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8B6914", textAlign: "center", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", maxWidth: "100%" }}>
+                  <p
+                    style={{
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 9,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      color: "#8B6914",
+                      textAlign: "center",
+                      lineHeight: 1.4,
+                    }}
+                  >
                     {role.subtitle}
                   </p>
                 </div>
 
                 {/* Body */}
                 <div style={{ padding: "16px 24px", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
-                  <p 
-                    className="text-base"
-                    style={{ fontFamily: "Georgia, serif", color: "#4a5568", lineHeight: 1.75 }}
-                  >
+                  <p style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568", lineHeight: 1.75 }}>
                     {role.description}
                   </p>
                   <div>
