@@ -111,340 +111,289 @@ const howWeHelp = [
 ];
 
 const ExecutorsGuide = () => (
-  
+  <div className="min-h-screen bg-background">
+    <SEOHead
+      title="Executor's Guide | Real Property Planning"
+      description="A practical guide for Washington State executors and Personal Representatives managing real estate in an estate."
+      canonical="https://realpropertyplanning.com/executors/executors-guide"
+    />
+    <BreadcrumbSchema
+      items={[
+        { name: "Executors, POAs & Trustees", url: "/executors" },
+        { name: "Executor's Guide", url: "/executors/executors-guide" },
+      ]}
+    />
+    <Header />
+    <main id="main-content">
+      <HeroBandTitle as="h1">Executor's Guide</HeroBandTitle>
 
+      {/* Intro */}
+      <section style={{ background: cream, padding: "48px 0" }}>
+        <div className="container px-5 md:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <div style={eyebrow}>Washington State Personal Representatives</div>
+            <p style={bodyText}>
+              Being named executor of an estate is an honor — and a responsibility that arrives at one of the hardest
+              moments in a family's life. Washington State calls this role the Personal Representative. Whether
+              the estate includes a family home, investment property, or a house full of decades of belongings, this guide
+              covers what you need to know about the real estate portion of your duties.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    
-    
-    
+      {/* Your Role */}
+      <section style={{ background: "#fff", padding: "64px 0" }}>
+        <div className="container px-5 md:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div style={eyebrow}>Your Role</div>
+            <h2 style={sectionHeading}>What an Executor Actually Does</h2>
+            <p style={{ ...bodyText, marginBottom: 18 }}>
+              An executor is named in a will to administer a deceased person's estate. If there is no will — or if the
+              named executor cannot serve — the court appoints an administrator. Either way, the role carries the same
+              legal weight: a fiduciary duty to act in the best interests of the estate and its beneficiaries.
+            </p>
+            <p style={bodyText}>
+              For most estates, the largest and most complex asset is real property. A family home carries emotional
+              weight, practical complications, and significant financial stakes. Getting it right — on timeline, on
+              price, within legal bounds — is one of your most important jobs.
+            </p>
 
-
-    
-      Executor's Guide
-
-      
-
-
-        
-
-          
-
-Washington State Personal Representatives
-
-
-          
-
-
-            Being named executor of an estate is an honor — and a responsibility that arrives at one of the hardest
-            moments in a family's life. Washington State calls this role the Personal Representative. Whether
-            the estate includes a family home, investment property, or a house full of decades of belongings, this guide
-            covers what you need to know about the real estate portion of your duties.
-          
-
-
-        
-
-      
-
-
-      
-
-
-        
-
-          
-
-            
-
-              
-
-Your Role
-
-
-              
-
-What an Executor Actually Does
-
-
-              
-
-
-                An executor is named in a will to administer a deceased person's estate. If there is no will — or if the
-                named executor cannot serve — the court appoints an administrator. Either way, the role carries the same
-                legal weight: a fiduciary duty to act in the best interests of the estate and its beneficiaries.
-              
-
-
-              
-
-
-                For most estates, the largest and most complex asset is real property. A family home carries emotional
-                weight, practical complications, and significant financial stakes. Getting it right — on timeline, on
-                price, within legal bounds — is one of your most important jobs.
-              
-
-
-            
-
-
-            
-
-              
-
-Washington State Note
-
-
-              
-
-
-                Washington uses the term Personal Representative rather than "executor." The role is
+            <div
+              style={{
+                marginTop: 32,
+                padding: "20px 24px",
+                background: cream,
+                borderRadius: 12,
+                borderLeft: `4px solid ${gold}`,
+              }}
+            >
+              <div style={{ ...eyebrow, marginBottom: 6 }}>Washington State Note</div>
+              <p style={{ ...bodyText, fontSize: 14 }}>
+                Washington uses the term <em>Personal Representative</em> rather than "executor." The role is
                 governed by the Washington Probate Act (RCW Title 11). Washington is one of the few states that allows{" "}
-                non-intervention powers, meaning most executors can act without court approval for each
+                <em>non-intervention powers</em>, meaning most executors can act without court approval for each
                 transaction — but this authority must be formally granted by the court.
-              
-
-
-            
-
-
-          
-
-
-        
-
-      
-
-
-      
-
-
-        
-
-          
-
-            
-
-Step by Step
-
-
-            
-
-Managing Estate Real Estate: Six Key Steps
-
-
-          
-
-
-          
-
-
-            {firstSteps.map((step) => (
-              
-
-
-                
-
-
-                  {step.number}
-                
-
-
-                
-
-
-                  
-
-
-                    {step.title}
-                  
-
-
-                  
-
-{step.body}
-
-
-                
-
-
-              
-
-
-            ))}
-          
-
-
-        
-
-      
-
-
-      
-
-
-        
-
-          
-
-            
-
-              
-
-What to Avoid
-
-
-              
-
-Common Executor Mistakes
-
-
-              
-
-
-                Executors are held to a high standard — even when they're acting in good faith. These are the mistakes
-                that most often create legal exposure, delay the estate, or damage family relationships.
-              
-
-
-            
-
-
-            
-
-              
-
-
-                {commonMistakes.map((m) => (
-                  
-
-
-                    ✕
-                    {m}
-                  
-
-
-                ))}
-              
-
-
-            
-
-
-          
-
-
-        
-
-      
-
-
-      
-
-
-        
-
-          
-
-            
-
-How We Can Help
-
-
-            
-
-Real Property Planning for Executors
-
-
-            
-
-
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Step by Step */}
+      <section style={{ background: cream, padding: "64px 0" }}>
+        <div className="container px-5 md:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div style={eyebrow}>Step by Step</div>
+            <h2 style={sectionHeading}>Managing Estate Real Estate: Six Key Steps</h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20, marginTop: 28 }}>
+              {firstSteps.map((step) => (
+                <div
+                  key={step.number}
+                  style={{
+                    display: "flex",
+                    gap: 18,
+                    padding: "22px 24px",
+                    background: "#fff",
+                    borderRadius: 12,
+                    border: `1px solid ${lightBorder}`,
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: raleway,
+                      fontSize: 24,
+                      fontWeight: 800,
+                      color: gold,
+                      lineHeight: 1,
+                      flexShrink: 0,
+                      width: 40,
+                    }}
+                  >
+                    {step.number}
+                  </div>
+                  <div>
+                    <div
+                      style={{
+                        fontFamily: raleway,
+                        fontSize: 14,
+                        fontWeight: 700,
+                        color: navy,
+                        marginBottom: 6,
+                      }}
+                    >
+                      {step.title}
+                    </div>
+                    <p style={{ ...bodyText, fontSize: 14 }}>{step.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What to Avoid */}
+      <section style={{ background: "#fff", padding: "64px 0" }}>
+        <div className="container px-5 md:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div style={eyebrow}>What to Avoid</div>
+            <h2 style={sectionHeading}>Common Executor Mistakes</h2>
+            <p style={{ ...bodyText, marginBottom: 24 }}>
+              Executors are held to a high standard — even when they're acting in good faith. These are the mistakes
+              that most often create legal exposure, delay the estate, or damage family relationships.
+            </p>
+            <ul style={{ display: "flex", flexDirection: "column", gap: 12, padding: 0, margin: 0, listStyle: "none" }}>
+              {commonMistakes.map((m) => (
+                <li
+                  key={m}
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: 10,
+                    fontFamily: georgia,
+                    fontSize: 14,
+                    color: bodyGray,
+                    lineHeight: 1.6,
+                  }}
+                >
+                  <span style={{ color: crimson, fontWeight: 700, flexShrink: 0 }}>✕</span>
+                  {m}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Can Help */}
+      <section style={{ background: cream, padding: "64px 0" }}>
+        <div className="container px-5 md:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div style={eyebrow}>How We Can Help</div>
+            <h2 style={sectionHeading}>Real Property Planning for Executors</h2>
+            <p style={{ ...bodyText, marginBottom: 28 }}>
               We work alongside executors throughout Western Washington — providing the appraisal work, real estate
               expertise, and professional connections you need to fulfill your responsibilities with confidence.
-            
+            </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+                gap: 20,
+              }}
+            >
+              {howWeHelp.map((item) => (
+                <div
+                  key={item.title}
+                  style={{
+                    background: "#fff",
+                    borderRadius: 12,
+                    padding: "24px",
+                    border: `1px solid ${lightBorder}`,
+                  }}
+                >
+                  <div style={{ fontSize: 28, marginBottom: 10 }}>{item.icon}</div>
+                  <div
+                    style={{
+                      fontFamily: raleway,
+                      fontSize: 13,
+                      fontWeight: 700,
+                      color: navy,
+                      marginBottom: 8,
+                    }}
+                  >
+                    {item.title}
+                  </div>
+                  <p style={{ ...bodyText, fontSize: 13 }}>{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* CTA */}
+      <section style={{ background: navy, padding: "64px 0" }}>
+        <div className="container px-5 md:px-8">
+          <div className="max-w-2xl mx-auto text-center">
+            <div style={{ ...eyebrow, color: gold }}>Get in Touch</div>
+            <h2
+              style={{
+                fontFamily: raleway,
+                fontSize: 24,
+                fontWeight: 800,
+                color: "#fff",
+                marginBottom: 12,
+              }}
+            >
+              Ready to Talk Through the Property?
+            </h2>
+            <p
+              style={{
+                fontFamily: georgia,
+                fontSize: 15,
+                color: "rgba(255,255,255,0.85)",
+                lineHeight: 1.7,
+                marginBottom: 28,
+              }}
+            >
+              No pressure. We're happy to walk through the situation, answer questions about timing and valuation, and help
+              you understand your options — before you commit to anything.
+            </p>
+            <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
+              <Link
+                to="/contact"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 6,
+                  background: gold,
+                  borderRadius: 8,
+                  padding: "12px 28px",
+                  fontFamily: raleway,
+                  fontSize: 12,
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: "#fff",
+                  textDecoration: "none",
+                }}
+              >
+                Contact Us
+              </Link>
+              <Link
+                to="/executors"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 6,
+                  background: "transparent",
+                  border: "1px solid rgba(255,255,255,0.3)",
+                  borderRadius: 8,
+                  padding: "12px 28px",
+                  fontFamily: raleway,
+                  fontSize: 12,
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: "#fff",
+                  textDecoration: "none",
+                }}
+              >
+                ← Back to All Roles
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          
-
-
-          
-
-
-            {howWeHelp.map((item) => (
-              
-
-
-                
-
-{item.icon}
-
-
-                
-
-
-                  {item.title}
-                
-
-
-                
-
-{item.body}
-
-
-              
-
-
-            ))}
-          
-
-
-        
-
-      
-
-
-      
-
-
-        
-
-Get in Touch
-
-
-        
-
-
-          Ready to Talk Through the Property?
-        
-
-
-        
-
-
-          No pressure. We're happy to walk through the situation, answer questions about timing and valuation, and help
-          you understand your options — before you commit to anything.
-        
-
-
-        
-
-
-          
-            Contact Us
-          
-          
-            ← Back to All Roles
-          
-        
-
-
-      
-
-
-      
-    
-    
-
-
+      <Footer />
+      <DisclaimerSection />
+    </main>
+  </div>
 );
 
 export default ExecutorsGuide;
