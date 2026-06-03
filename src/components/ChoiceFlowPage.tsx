@@ -103,7 +103,7 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
           <li key={choice.path} className="h-full">
             <Link
               to={choice.path}
-              className="interior-tile tile-white group block h-full min-h-[176px] sm:min-h-[192px] no-underline"
+              className="tile-white group block h-full min-h-[176px] sm:min-h-[192px] no-underline rounded-xl"
             >
               <div className="tile-white__inner h-full">
                 <div className="tile-white__face h-full">
