@@ -320,7 +320,7 @@ const ExecutorsGuide = () => (
             </p>
             <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
               <Link
-                to="/professionals"
+                to="/building-your-trusted-professional-team"
                 style={{
                   display: "inline-block",
                   fontFamily: raleway,
