@@ -47,6 +47,7 @@ const TOP_LINKS = [
       { label: "Financial Planners", href: "/for-financial-planners" },
       { label: "CPAs & Accountants", href: "/professionals/cpas" },
       { label: "Attorneys", href: "/for-attorneys" },
+      { label: "Executors, POAs & Trustees", href: "/executors" },
       { label: "Mortgage Lenders", href: "/mortgage-lenders" },
       { label: "Real Estate Brokers", href: "/realtor" },
       { label: "Senior Transitions", href: "/senior-transitions", hasFlyout: true },
