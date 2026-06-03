@@ -31,7 +31,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
             <img
               src={node.heroImage || agingParentHero.url}
               alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
-              className="w-full h-[320px] md:h-[480px] lg:h-[600px] object-cover block"
+              style={{ display: 'block', width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'center', margin: 0, padding: 0 }}
               loading="eager"
             />
             <HeroBandTitle as="div">
