@@ -87,19 +87,19 @@ const professionals = [
   {
     title: "Certified Real Estate Appraiser",
     body: "A Washington State certified residential appraiser provides the date-of-death valuation required for tax purposes. This must be an independent, certified appraisal — not an online estimate.",
-    link: "/resources/probate-estate-attorneys",
+    link: "/real-estate-appraiser",
     label: "Find Appraisers",
   },
   {
     title: "Estate-Experienced Real Estate Broker",
     body: "Not every agent understands the constraints of a probate sale. Look for a broker with specific experience handling estate properties, court timelines, and fiduciary requirements.",
-    link: "/professionals/probate-attorneys",
+    link: "/realtor",
     label: "Find Real Estate Brokers",
   },
   {
     title: "Estate Sale Company",
     body: "Before the property can be sold, the contents often need to be cleared. An estate sale company handles pricing, marketing, and selling personal property — saving the executor significant time and effort.",
-    link: "/resources/estate-sale-companies",
+    link: "/estate-liquidators",
     label: "Find Estate Sale Companies",
   },
 ];
