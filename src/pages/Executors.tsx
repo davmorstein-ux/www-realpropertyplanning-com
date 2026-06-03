@@ -121,17 +121,18 @@ const Executors = () => (
                 </div>
 
                 {/* Title bar */}
-                <div style={{ padding: "18px 24px 14px", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+                <div style={{ padding: "18px 24px 14px", borderBottom: "1px solid rgba(0,0,0,0.06)", textAlign: "center" }}>
                   <h2
                     style={{
                       fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                      fontSize: 14,
+                      fontSize: 11,
                       fontWeight: 700,
-                      letterSpacing: "0.12em",
+                      letterSpacing: "0.14em",
                       textTransform: "uppercase",
                       color: "#1B3A6B",
                       marginBottom: 4,
                       whiteSpace: "nowrap",
+                      textAlign: "center",
                     }}
                   >
                     {role.title}
@@ -143,6 +144,7 @@ const Executors = () => (
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
                       color: "#8B6914",
+                      textAlign: "center",
                     }}
                   >
                     {role.subtitle}
