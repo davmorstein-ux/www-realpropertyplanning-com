@@ -859,7 +859,8 @@ main,
 .tile-white__inner {
   background: #ffffff !important;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
+  border: none;
   overflow: hidden;
 }
 
@@ -869,7 +870,7 @@ main,
 .interior-tile {
   background: #fff !important;
   border-radius: 12px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: none !important;
   overflow: hidden !important;
   display: flex !important;
   flex-direction: column !important;
