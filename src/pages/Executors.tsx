@@ -5,12 +5,17 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
+import executorImg from "@/assets/executors/executor-tile.webp";
+import poaImg from "@/assets/executors/power-of-attorney-tile.webp";
+import trusteeImg from "@/assets/executors/trustee-tile.webp";
 
 const roles = [
   {
     title: "Executors",
     subtitle: "Also called Personal Representatives in Washington State",
     href: "/executors/executors-guide",
+    image: executorImg,
+    alt: "Executor reviewing estate documents at a desk",
     description:
       "An executor is a person named in a will — or appointed by a court — to administer a deceased person's estate. In Washington State, this role is formally called a Personal Representative. The executor is responsible for identifying and securing assets, paying debts and taxes, communicating with beneficiaries, and ultimately distributing what remains according to the will or state law.",
     responsibilities: [
@@ -27,6 +32,8 @@ const roles = [
     title: "Powers of Attorney",
     subtitle: "Acting on behalf of a living person",
     href: "/executors/power-of-attorney-guide",
+    image: poaImg,
+    alt: "Power of attorney document with pen and estate planning book",
     description:
       "A Power of Attorney (POA) is a legal document that grants one person — the agent — the authority to act on behalf of another — the principal — while the principal is still alive. A Durable Power of Attorney remains in effect even if the principal becomes incapacitated. Agents under a POA often face real estate decisions when a senior can no longer manage their own affairs.",
     responsibilities: [
@@ -42,6 +49,8 @@ const roles = [
     title: "Trustees",
     subtitle: "Administering assets held in trust",
     href: "/executors/trustees-guide",
+    image: trusteeImg,
+    alt: "Trustee meeting with beneficiaries outside a family home",
     description:
       "A trustee is a person or institution appointed to manage assets held in a trust on behalf of the trust's beneficiaries. Unlike an executor, a trustee operates outside of court supervision — but carries an equally serious fiduciary duty. Trust-owned real estate must be managed and sold in accordance with the trust document and in the best interests of all beneficiaries.",
     responsibilities: [
@@ -87,7 +96,7 @@ const Executors = () => (
                 key={role.title}
                 style={{
                   background: "#fff",
-                  borderRadius: 12,
+                  borderRadius: 16,
                   border: "1px solid rgba(0,0,0,0.08)",
                   boxShadow: "0 2px 16px rgba(0,0,0,0.06)",
                   display: "flex",
@@ -95,14 +104,31 @@ const Executors = () => (
                   overflow: "hidden",
                 }}
               >
-                <div style={{ background: "#0a1628", padding: "24px 24px 20px" }}>
+                {/* Photo */}
+                <div style={{ width: "100%", height: 200, overflow: "hidden" }}>
+                  <img
+                    src={role.image}
+                    alt={role.alt}
+                    loading="lazy"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      display: "block",
+                    }}
+                  />
+                </div>
+
+                {/* Title bar */}
+                <div style={{ padding: "18px 24px 14px", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
                   <h2
                     style={{
                       fontFamily: "Georgia, serif",
-                      fontSize: 22,
+                      fontSize: 20,
                       fontWeight: 700,
-                      color: "#fff",
-                      marginBottom: 6,
+                      color: "#1B3A6B",
+                      marginBottom: 4,
                     }}
                   >
                     {role.title}
@@ -113,18 +139,18 @@ const Executors = () => (
                       fontSize: 11,
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
-                      color: "#E8C97A",
+                      color: "#8B6914",
                     }}
                   >
                     {role.subtitle}
                   </p>
                 </div>
 
-                <div style={{ padding: "20px 24px", flex: 1, display: "flex", flexDirection: "column", gap: 16 }}>
+                {/* Body */}
+                <div style={{ padding: "16px 24px", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
                   <p style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568", lineHeight: 1.75 }}>
                     {role.description}
                   </p>
-
                   <div>
                     <div
                       style={{
@@ -146,7 +172,7 @@ const Executors = () => (
                         margin: 0,
                         display: "flex",
                         flexDirection: "column",
-                        gap: 8,
+                        gap: 7,
                       }}
                     >
                       {role.responsibilities.map((r) => (
@@ -170,6 +196,7 @@ const Executors = () => (
                   </div>
                 </div>
 
+                {/* CTA */}
                 <div style={{ padding: "0 24px 24px" }}>
                   <Link
                     to={role.href}
