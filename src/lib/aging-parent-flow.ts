@@ -41,7 +41,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       path: "/helping-an-aging-parent/living-independently",
       label: "My parent is still living independently",
       icon: Home,
-      image: iconLivingIndependently,
+      
       heroBandTitle: "Living Independently",
       subtext: "What would you like to plan for next?",
       children: [
@@ -108,7 +108,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       path: "/helping-an-aging-parent/needs-help-at-home",
       label: "My parent needs more help at home",
       icon: HandHelping,
-      image: iconHelpAtHome,
+      
       heroBandTitle: "More Help at Home",
       subtext: "What kind of support are you looking into?",
       children: [
@@ -174,7 +174,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       path: "/helping-an-aging-parent/exploring-care-options",
       label: "We're exploring care or housing options",
       icon: Building2,
-      image: iconHousingOptions,
+      
       heroBandTitle: "Exploring Care & Housing Options",
       subtext: "What are you trying to figure out?",
       children: [
@@ -182,7 +182,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/types-of-housing",
           label: "What types of senior housing exist?",
           icon: Building2,
-          image: iconTypesOfHousing,
+          
           heroImage: housingOptionsHero,
           heroAlt: "Types of senior housing — Real Property Planning",
           heroBandTitle: "What types of senior housing exist?",
@@ -202,7 +202,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/comparing-costs",
           label: "How do I compare costs?",
           icon: DollarSign,
-          image: iconComparingCosts,
+          
           heroImage: housingOptionsHero,
           heroAlt: "Comparing senior care costs — Real Property Planning",
           heroBandTitle: "How do I compare costs?",
@@ -220,7 +220,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/eligibility",
           label: "What does my parent qualify for?",
           icon: ClipboardCheck,
-          image: iconEligibility,
+          
           heroImage: housingOptionsHero,
           heroAlt: "Senior care eligibility — Real Property Planning",
           heroBandTitle: "What does my parent qualify for?",
@@ -239,7 +239,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/having-the-conversation",
           label: "How do I have this conversation with my parent?",
           icon: MessageCircle,
-          image: iconConversation,
+          
           heroImage: housingOptionsHero,
           heroAlt: "Having the conversation with an aging parent — Real Property Planning",
           heroBandTitle: "How do I have this conversation with my parent?",
@@ -261,7 +261,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       path: "/helping-an-aging-parent/health-crisis",
       label: "There's been a health crisis or emergency",
       icon: Activity,
-      image: iconHealthCrisis,
+      
       heroBandTitle: "Health Crisis or Emergency",
       subtext: "What do you need help with right now?",
       children: [
@@ -332,7 +332,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       path: "/helping-an-aging-parent/finances-and-legal",
       label: "My parent's finances and legal documents need attention",
       icon: Scale,
-      image: iconFinancesLegal,
+      
       heroBandTitle: "Finances & Legal Documents",
       subtext: "What would you like to address first?",
       children: [
