@@ -35,43 +35,37 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
       <Header />
 
       <main id="main-content" className="flex-1">
-        <section className="pt-0 pb-10 lg:pt-0 lg:pb-16 bg-cream" style={{ paddingTop: 0 }}>
+        {/* Hero image — full bleed, outside container */}
+        {(isRoot || node.heroImage || node.heroBandTitle) && (
+          <div style={{ lineHeight: 0, marginTop: 2 }}>
+            <img
+              src={node.heroImage || agingParentHero.url}
+              alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              loading="eager"
+            />
+            <HeroBandTitle>{node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}</HeroBandTitle>
+          </div>
+        )}
+        <h1 className="sr-only">{node.heroBandTitle || node.label}</h1>
+        <section className="pt-8 pb-10 lg:pb-16 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              {/* Hero image — root page or any node with explicit heroImage */}
-              {(isRoot || node.heroImage || node.heroBandTitle) && (
-                <>
-                  <div style={{ width: '100vw', position: 'relative', left: '50%', transform: 'translateX(-50%)', lineHeight: 0, marginTop: 0 }}>
-                    <img
-                      src={node.heroImage || agingParentHero.url}
-                      alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
-                      className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-                      loading="eager"
-                    />
-                    <HeroBandTitle>{node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}</HeroBandTitle>
-                  </div>
-                  <div style={{ marginBottom: '24px' }} />
-                </>
-              )}
-
-              {/* Heading */}
-              <header className="mb-10 text-center">
-                {!isRoot && !node.heroImage && !node.heroBandTitle && (
+              {/* Heading / subtext */}
+              {(!isRoot && !node.heroImage && !node.heroBandTitle) && (
+                <header className="mb-10 text-center">
                   <h1 className="font-serif text-3xl md:text-5xl text-navy font-semibold leading-tight mb-4">
                     {node.label}
                   </h1>
-                )}
-                {(isRoot || node.heroImage || node.heroBandTitle) && (
-                  <h1 className="sr-only">{node.heroBandTitle || node.label}</h1>
-                )}
-                {node.subtext && (
-                  <p className="text-navy/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                    {node.subtext}
-                  </p>
-                )}
-              </header>
+                </header>
+              )}
+              {node.subtext && (
+                <p className="text-navy/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-center mb-10">
+                  {node.subtext}
+                </p>
+              )}
 
-              {/* Choice cards or placeholder */}
+              {/* Choice cards or content */}
               {hasChildren ? (
                 <ChoiceGrid choices={node.children!} />
               ) : node.content ? (
