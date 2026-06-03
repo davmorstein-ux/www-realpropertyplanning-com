@@ -21,25 +21,26 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
   const isRoot = parent === null;
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background">
       <SEOHead title={`${node.label} | Real Property Planning`} description={node.subtext || node.label} />
       <BreadcrumbSchema items={trail.slice(1).map((t) => ({ name: t.label, url: t.path }))} />
       <Header />
-      <main id="main-content" className="flex-1">
-        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
-          <div style={{ lineHeight: 0 }}>
-            <img
-              src={node.heroImage || agingParentHero.url}
-              alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager"
-            />
-            <HeroBandTitle as="div">
-              {node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}
-            </HeroBandTitle>
-          </div>
-        </section>
-        <h1 className="sr-only">{node.heroBandTitle || node.label}</h1>
+      <main id="main-content">
+
+      {/* Hero */}
+      <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+        <div style={{ lineHeight: 0 }}>
+          <img
+            src={node.heroImage || agingParentHero.url}
+            alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+            loading="eager"
+          />
+          <HeroBandTitle>
+            {node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}
+          </HeroBandTitle>
+        </div>
+      </section>
         <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
