@@ -154,7 +154,8 @@ const Executors = () => (
                       fontSize: 9,
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
-                      color: "#8B6914",
+                      color: "#8B0000",
+                      fontWeight: 700,
                       lineHeight: 1.4,
                     }}
                   >
