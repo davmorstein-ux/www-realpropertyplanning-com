@@ -133,7 +133,7 @@ const Executors = () => (
                 {/* Body */}
                 <div style={{ padding: "16px 24px", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
                   <p 
-                    className={index === 0 || index === 1 ? "text-lg" : "text-base"}
+                    className={index === 0 || index === 1 ? "text-xl" : "text-base"}
                     style={{ fontFamily: "Georgia, serif", color: "#4a5568", lineHeight: 1.75 }}
                   >
                     {role.description}
