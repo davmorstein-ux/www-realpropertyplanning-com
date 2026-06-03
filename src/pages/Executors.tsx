@@ -91,7 +91,7 @@ const Executors = () => (
       <section className="pb-14 md:pb-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            {roles.map((role) => (
+            {roles.map((role, index) => (
               <div
                 key={role.title}
                 style={{
@@ -153,7 +153,10 @@ const Executors = () => (
 
                 {/* Body */}
                 <div style={{ padding: "16px 24px", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
-                  <p style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568", lineHeight: 1.75 }}>
+                  <p 
+                    className={index === 0 || index === 1 ? "text-lg" : "text-base"}
+                    style={{ fontFamily: "Georgia, serif", color: "#4a5568", lineHeight: 1.75 }}
+                  >
                     {role.description}
                   </p>
                   <div>
