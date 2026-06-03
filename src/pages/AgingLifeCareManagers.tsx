@@ -75,9 +75,13 @@ const AgingLifeCareManagers = () => {
                 specialty="Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information/referral, and placement"
               />
               <ProviderTile
-                name="Family First at Home"
-                title="Home Care & Care Management"
+                name="Jennipher Ama, RN, CMC"
+                title="President"
                 company="Family First at Home"
+                photo={jennipherAmaPhoto.url}
+                photoAlt="Photo of Jennipher Ama, RN, CMC, President of Family First at Home"
+                logo={familyFirstLogo.url}
+                logoAlt="Family First at Home logo"
                 phone="(866) 412-3861"
                 email="contact@familyfirstathome.com"
                 website="https://familyfirstathome.com"
