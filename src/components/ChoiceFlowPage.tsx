@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { AGING_PARENT_LOOKUP, type FlowNode } from "@/lib/aging-parent-flow";
-import agingParentHero from "@/assets/helping-an-aging-parent-hero.png.asset.json";
+import agingParentHero from "@/assets/helping-an-aging-parent-hero.webp.asset.json";
 
 /**
  * Renders a single page in the guided choice flow based on the current pathname.
