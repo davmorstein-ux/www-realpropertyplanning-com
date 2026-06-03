@@ -12,7 +12,7 @@ import trusteeImg from "@/assets/executors/trustee-tile.webp";
 const roles = [
   {
     title: "Executors",
-    subtitle: "Also called Personal Representatives in Washington State",
+    subtitle: "Personal Representatives in Washington State",
     href: "/executors/executors-guide",
     image: executorImg,
     alt: "Executor reviewing estate documents at a desk",
@@ -104,8 +104,8 @@ const Executors = () => (
                   overflow: "hidden",
                 }}
               >
-                {/* Photo */}
-                <div style={{ width: "100%", height: 200, overflow: "hidden" }}>
+                {/* Photo — sits cleanly above content, no overlap */}
+                <div style={{ width: "100%", height: 200, overflow: "hidden", flexShrink: 0 }}>
                   <img
                     src={role.image}
                     alt={role.alt}
@@ -120,63 +120,71 @@ const Executors = () => (
                   />
                 </div>
 
-                {/* Title bar */}
+                {/* Title bar — fixed height so all 3 align */}
                 <div
                   style={{
-                    padding: "14px 16px 12px",
+                    height: 72,
+                    padding: "0 20px",
                     borderBottom: "1px solid rgba(0,0,0,0.06)",
-                    textAlign: "center",
-                    height: 80,
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
+                    textAlign: "center",
+                    flexShrink: 0,
                   }}
                 >
-                  <h2
+                  <div
                     style={{
                       fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                      fontSize: 12,
+                      fontSize: 11,
                       fontWeight: 700,
-                      letterSpacing: "0.12em",
+                      letterSpacing: "0.14em",
                       textTransform: "uppercase",
                       color: "#1B3A6B",
-                      marginBottom: 5,
+                      marginBottom: 4,
                       whiteSpace: "nowrap",
                     }}
                   >
                     {role.title}
-                  </h2>
-                  <p
+                  </div>
+                  <div
                     style={{
                       fontFamily: "'Raleway', sans-serif",
                       fontSize: 9,
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
                       color: "#8B6914",
-                      textAlign: "center",
                       lineHeight: 1.4,
                     }}
                   >
                     {role.subtitle}
-                  </p>
+                  </div>
                 </div>
 
                 {/* Body */}
-                <div style={{ padding: "16px 24px", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
-                  <p style={{ fontFamily: "Georgia, serif", fontSize: 14, color: "#4a5568", lineHeight: 1.75 }}>
+                <div style={{ padding: "16px 20px", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
+                  <p
+                    style={{
+                      fontFamily: "Georgia, serif",
+                      fontSize: 13,
+                      color: "#4a5568",
+                      lineHeight: 1.75,
+                      margin: 0,
+                    }}
+                  >
                     {role.description}
                   </p>
                   <div>
                     <div
                       style={{
                         fontFamily: "'Raleway', sans-serif",
-                        fontSize: 10,
+                        fontSize: 9,
                         fontWeight: 700,
                         letterSpacing: "0.18em",
                         textTransform: "uppercase",
                         color: "#8B6914",
-                        marginBottom: 10,
+                        marginBottom: 8,
                       }}
                     >
                       Key Responsibilities
@@ -199,7 +207,7 @@ const Executors = () => (
                             alignItems: "flex-start",
                             gap: 8,
                             fontFamily: "Georgia, serif",
-                            fontSize: 13,
+                            fontSize: 12,
                             color: "#4a5568",
                             lineHeight: 1.6,
                           }}
@@ -213,7 +221,7 @@ const Executors = () => (
                 </div>
 
                 {/* CTA */}
-                <div style={{ padding: "0 24px 24px" }}>
+                <div style={{ padding: "0 20px 20px", flexShrink: 0 }}>
                   <Link
                     to={role.href}
                     style={{
@@ -225,9 +233,9 @@ const Executors = () => (
                       borderRadius: 8,
                       padding: "10px 16px",
                       fontFamily: "'Raleway', sans-serif",
-                      fontSize: 12,
+                      fontSize: 11,
                       fontWeight: 700,
-                      letterSpacing: "0.08em",
+                      letterSpacing: "0.1em",
                       textTransform: "uppercase",
                       color: "#fff",
                       textDecoration: "none",
@@ -236,8 +244,8 @@ const Executors = () => (
                     {role.title} Guide
                     <svg
                       viewBox="0 0 24 24"
-                      width="13"
-                      height="13"
+                      width="12"
+                      height="12"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2.5"
