@@ -63,6 +63,7 @@ const RIGHT_GROUPS = [
       { name: "Probate & Estate Sales", href: "/probate-estate-sales" },
       { name: "Senior Home Sales", href: "/senior-transitions" },
       { name: "For Executors", href: "/executors" },
+      { name: "Executors, POAs & Trustees", href: "/executors" },
     ],
   },
   {
