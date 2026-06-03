@@ -21,6 +21,7 @@ const TOP_LINKS = [
     items: [
       { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
       { label: "For Executors", href: "/executors" },
+      { label: "Executors, POAs & Trustees", href: "/executors" },
       { label: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
       { label: "Probate Attorneys", href: "/professionals/probate-attorneys" },
       { label: "Certified Appraisers", href: "/real-estate-appraiser" },
