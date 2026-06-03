@@ -35,7 +35,8 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
       <Header />
 
       <main id="main-content" className="flex-1">
-        {/* Hero image — full bleed, outside container */}
+
+        {/* Hero image — full bleed, outside all containers */}
         {(isRoot || node.heroImage || node.heroBandTitle) && (
           <div style={{ lineHeight: 0, marginTop: 2 }}>
             <img
@@ -47,11 +48,13 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
             <HeroBandTitle>{node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}</HeroBandTitle>
           </div>
         )}
-        <h1 className="sr-only">{node.heroBandTitle || node.label}</h1>
+
         <section className="pt-8 pb-10 lg:pb-16 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              {/* Heading / subtext */}
+
+              <h1 className="sr-only">{node.heroBandTitle || node.label}</h1>
+
               {(!isRoot && !node.heroImage && !node.heroBandTitle) && (
                 <header className="mb-10 text-center">
                   <h1 className="font-serif text-3xl md:text-5xl text-navy font-semibold leading-tight mb-4">
@@ -59,13 +62,13 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                   </h1>
                 </header>
               )}
+
               {node.subtext && (
                 <p className="text-navy/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-center mb-10">
                   {node.subtext}
                 </p>
               )}
 
-              {/* Choice cards or content */}
               {hasChildren ? (
                 <ChoiceGrid choices={node.children!} />
               ) : node.content ? (
@@ -73,6 +76,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
               ) : (
                 <ComingSoon />
               )}
+
             </div>
           </div>
         </section>
