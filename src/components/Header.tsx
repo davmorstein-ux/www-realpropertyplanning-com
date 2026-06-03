@@ -50,6 +50,7 @@ const TOP_LINKS = [
       { label: "Executors, POAs & Trustees", href: "/executors" },
       { label: "Mortgage Lenders", href: "/mortgage-lenders" },
       { label: "Real Estate Brokers", href: "/realtor" },
+      { label: "Certified Appraisers", href: "/real-estate-appraiser" },
       { label: "Senior Transitions", href: "/senior-transitions", hasFlyout: true },
     ],
   },
