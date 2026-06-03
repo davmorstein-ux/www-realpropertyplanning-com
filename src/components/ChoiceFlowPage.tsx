@@ -21,11 +21,11 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
   const isRoot = parent === null;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col" style={{ marginTop: 0, paddingTop: 0 }}>
       <SEOHead title={`${node.label} | Real Property Planning`} description={node.subtext || node.label} />
       <BreadcrumbSchema items={trail.slice(1).map((t) => ({ name: t.label, url: t.path }))} />
       <Header />
-      <main id="main-content">
+      <main id="main-content" className="flex-1" style={{ marginTop: '-64px', paddingTop: 0 }}>
 
       {/* Hero */}
       <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
