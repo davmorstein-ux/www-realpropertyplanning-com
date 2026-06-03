@@ -25,68 +25,6 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
   const hasChildren = !!node.children?.length;
   const isRoot = parent === null;
 
-  return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <SEOHead
-        title={`${node.label} | Real Property Planning`}
-        description={node.subtext || node.label}
-      />
-      <BreadcrumbSchema items={trail.slice(1).map((t) => ({ name: t.label, url: t.path }))} />
-      <Header />
-
-      <main id="main-content" className="flex-1" style={{ marginTop: 0, paddingTop: 0 }}>
-
-        {/* Hero image — full bleed, outside all containers */}
-        {(isRoot || node.heroImage || node.heroBandTitle) && (
-          <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
-            <div style={{ lineHeight: 0 }}>
-              <img
-                src={node.heroImage || agingParentHero.url}
-                alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
-                className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-                loading="eager"
-              />
-              <HeroBandTitle as="div">{node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}</HeroBandTitle>
-            </div>
-          </section>
-        )}
-
-        <section className="pb-10 lg:pb-16 bg-cream" style={{ paddingTop: '32px' }}>
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-
-              <h1 className="sr-only">{node.heroBandTitle || node.label}</h1>
-
-              {(!isRoot && !node.heroImage && !node.heroBandTitle) && (
-                <header className="mb-10 text-center">
-                  <h1 className="font-serif text-3xl md:text-5xl text-navy font-semibold leading-tight mb-4">
-                    {node.label}
-                  </h1>
-                </header>
-              )}
-
-              {node.subtext && (
-                <p className="text-navy/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-center mb-10">
-                  {node.subtext}
-                </p>
-              )}
-
-              {hasChildren ? (
-                <ChoiceGrid choices={node.children!} />
-              ) : node.content ? (
-                <ContentBlock content={node.content} />
-              ) : (
-                <ComingSoon />
-              )}
-
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
-  );
 };
 
 const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
