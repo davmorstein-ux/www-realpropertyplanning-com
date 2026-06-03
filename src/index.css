@@ -160,7 +160,9 @@ main,
 #main-content > *:first-child,
 #main-content > *:first-child > section,
 #main-content > *:first-child > section:first-child,
-#main-content > section:first-child {
+#main-content > section:first-child,
+#main-content > section.w-full,
+#main-content > section.w-full > div {
   margin-top: 0 !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
