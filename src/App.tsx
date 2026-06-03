@@ -272,6 +272,9 @@ const App = () => (
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/executors" element={<Executors />} />
+          <Route path="/executors/executors-guide" element={<ExecutorsGuide />} />
+          <Route path="/executors/power-of-attorney-guide" element={<PowerOfAttorneyGuide />} />
+          <Route path="/executors/trustees-guide" element={<TrusteesGuide />} />
           <Route path="/trustees" element={<Trustees />} />
           <Route path="/estate-liquidation" element={<EstateLiquidation />} />
           <Route path="/estate-liquidation/learn-more" element={<EstateLiquidationLearnMore />} />
