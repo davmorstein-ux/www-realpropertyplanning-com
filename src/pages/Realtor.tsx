@@ -14,7 +14,7 @@ const featuredBrokers = [
     title: "President, Real Property Planning",
     company: "eXp Realty",
     specialty:
-      "Residential and investment property sales throughout the Puget Sound region, including single family homes, multi-family, condominiums, investment properties, new construction, mobile homes, houseboats, floating homes, and vacant land.",
+      "Probate, estate, and trust property sales across Washington State — working with executors, trustees, and families navigating inherited real estate. Also handles residential and investment property sales throughout the Puget Sound region, including single family homes, multi-family, condominiums, investment properties, new construction, mobile homes, houseboats, floating homes, and vacant land.",
     photo: davidSteinPhoto,
     alt: "Photo of David Stein",
     href: "https://davestein.exprealty.com",
@@ -104,7 +104,7 @@ const Realtor = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-5">
-              With over 20 years of experience, David Stein has bought and sold single family homes, multi-family properties, condominiums, investment properties, new construction, renovations, mobile homes, manufactured homes, houseboats, floating homes, and vacant land throughout the Puget Sound region. As a broker with eXp Realty — the largest independent real estate brokerage in the world with over 83,000 agents across 28 countries — David combines deep local knowledge with a powerful nationwide network, ensuring every client receives both personal attention and broad reach.
+              David Stein is a Washington State licensed real estate broker specializing in probate, estate, and trust property sales across the Puget Sound region. With over 20 years of experience, he works with executors, personal representatives, trustees, and agents under power of attorney navigating the sale of inherited and estate-owned real property — bringing calm, practical guidance to one of the most complex transactions a family can face. His property experience spans single family homes, multi-family properties, condominiums, investment properties, new construction, renovations, mobile homes, manufactured homes, houseboats, floating homes, and vacant land throughout Western Washington. As a broker with eXp Realty — the largest independent real estate brokerage in the world with over 83,000 agents across 28 countries — David combines deep local knowledge with a powerful nationwide network.
             </p>
             <div className="text-muted-foreground text-base leading-relaxed mb-5 space-y-1">
               <p>Washington State Licensed Real Estate Broker — David Stein's real estate license is held under eXp Realty</p>
