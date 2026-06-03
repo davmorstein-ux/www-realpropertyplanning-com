@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { AGING_PARENT_LOOKUP, type FlowNode } from "@/lib/aging-parent-flow";
-import agingParentHero from "@/assets/aging_parent_hero_clean.webp";
+import agingParentHero from "@/assets/helping-an-aging-parent-hero.png.asset.json";
 
 /**
  * Renders a single page in the guided choice flow based on the current pathname.
@@ -43,7 +43,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                 <>
                   <div style={{ width: '100vw', position: 'relative', left: '50%', transform: 'translateX(-50%)', lineHeight: 0 }}>
                     <img
-                      src={node.heroImage || agingParentHero}
+                      src={node.heroImage || agingParentHero.url}
                       alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
                       className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
                       loading="eager"
