@@ -11,6 +11,8 @@ import heroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import lauraSilversteinPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
 import silverSageLogo from "@/assets/providers/silver-sage-consulting-logo.png";
 
+const FAMILY_FIRST_BIO = `Family First at Home is a leading Pacific Northwest home care and care management provider helping families navigate caregiving challenges with compassion, clarity, and trusted expertise. Since 1989, Family First has supported older adults, caregivers, and families across Washington State — including Tacoma, Spokane, Renton, Seattle, and the greater Puget Sound region — with personalized home care, care management, licensed counseling, and insurance advocacy. Backed by experienced caregivers, care managers, licensed counselors, and advocates, the team delivers flexible support ranging from a few hours of assistance to 24/7 care, always with a focus on dignity, safety, and peace of mind. Under the leadership of President Jennipher Ama, RN, CMC, Family First continues to expand its mission of making home care more accessible, dependable, and family-centered.`;
+
 const LAURA_BIO = `Laura A. Silverstein, MSW is an Aging Life Care Manager with Silver & Sage Consulting, LLC, based in Washington State. With a background in social work and extensive experience in geriatric care management, Laura helps older adults and their families navigate the complexities of aging with clarity, compassion, and expert guidance. Her services include advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information and referral, and placement support. Laura brings both professional expertise and personal dedication to every client relationship, ensuring that older adults receive the right level of support while maintaining their dignity and independence.`;
 
 const jsonLd = articleSchema({
@@ -69,6 +71,16 @@ const AgingLifeCareManagers = () => {
                 website="https://www.silverandsageconsulting.com"
                 bio={LAURA_BIO}
                 specialty="Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information/referral, and placement"
+              />
+              <ProviderTile
+                name="Family First at Home"
+                title="Home Care & Care Management"
+                company="Family First at Home"
+                phone="(866) 412-3861"
+                email="contact@familyfirstathome.com"
+                website="https://familyfirstathome.com"
+                bio={FAMILY_FIRST_BIO}
+                specialty="Home care, care management, licensed counseling, and insurance advocacy across Washington State since 1989."
               />
             </div>
           </div>
