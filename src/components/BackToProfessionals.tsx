@@ -10,7 +10,7 @@ export default function BackToProfessionals() {
 
         <img
 
-          src="/back-to-professionals.png"
+          src="/back-to-professionals.webp"
 
           alt="← Back to Professionals"
 

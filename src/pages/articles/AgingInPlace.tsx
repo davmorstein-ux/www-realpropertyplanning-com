@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import BackToArticles from "@/components/BackToArticles";
-import heroImage from "@/assets/articles-hero-banner.png";
+import heroImage from "@/assets/articles-hero-banner.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import BackToResources from "@/components/BackToResources";

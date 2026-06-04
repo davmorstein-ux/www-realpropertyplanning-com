@@ -145,7 +145,7 @@ const GuidesAndResources = () => {
         {/* Hero Image */}
         <div style={{ width: "100%", marginTop: 64, lineHeight: 0 }}>
           <img
-            src="/resources-hero.png"
+            src="/resources-hero.webp"
             alt="Seniors reading guides outside a resource center"
             style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
             loading="eager"

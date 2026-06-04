@@ -10,7 +10,7 @@ export default function BackToResources() {
 
         <img
 
-          src="/back-to-resources.png"
+          src="/back-to-resources.webp"
 
           alt="← Back to Resources"
 
