@@ -17,6 +17,7 @@ interface ProviderTileProps {
   email?: string;
   email2?: string;
   website: string;
+  emailHref?: string;
   bio?: string;
   specialty?: string;
 }
@@ -38,6 +39,7 @@ export default function ProviderTile({
   email,
   email2,
   website,
+  emailHref,
   bio,
   specialty,
 }: ProviderTileProps) {
@@ -400,7 +402,7 @@ export default function ProviderTile({
         )}
         {email && (
           <a
-            href={`mailto:${email}`}
+            href={emailHref || `mailto:${email}`}
             onClick={(e) => e.stopPropagation()}
             style={{ fontSize: 12, color: "#8B6914", textDecoration: "none" }}
           >
