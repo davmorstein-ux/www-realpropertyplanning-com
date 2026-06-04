@@ -73,7 +73,8 @@ const ForCPAs = () => (
             logo={purpleGroupLogo}
             logoAlt="The Purple Group logo"
             phone="(425) 207-3990"
-            email="Intake@familyfirstathome.com"
+            email="intake@familyfirstathome.com"
+            emailHref="familyfirstathome.com"
             website="https://www.thepurplegroup.com"
             bio={PURPLE_GROUP_BIO}
             specialty="Tax planning, estate and trust taxation, and financial strategy for individuals, small businesses, and high-net-worth clients."
