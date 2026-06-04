@@ -7,6 +7,9 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.webp";
+import purpleGroupLogoAsset from "@/assets/providers/the-purple-group-logo.png.asset.json";
+
+const purpleGroupLogo = purpleGroupLogoAsset.url;
 
 const CPAsFinancialAdvisors = () => (
   <>
@@ -85,7 +88,7 @@ const CPAsFinancialAdvisors = () => (
               <div className="flex flex-col sm:flex-row items-stretch">
                 <div className="sm:w-48 flex-shrink-0 bg-[#3b2060] flex items-center justify-center p-6">
                   <img
-                    src="/the-purple-group-logo.png"
+                    src={purpleGroupLogo}
                     alt="The Purple Group — Tax, Accounting, and Advisory"
                     className="w-full h-auto object-contain"
                     loading="lazy"
