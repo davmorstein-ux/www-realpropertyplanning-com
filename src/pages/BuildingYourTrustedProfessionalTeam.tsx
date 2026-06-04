@@ -15,7 +15,7 @@ import elderLawAttorneyImg from "@/assets/legal/elder-law-attorney.webp";
 import realEstateAttorneyImg from "@/assets/legal/real-estate-attorney.webp";
 import familyLawAttorneyImg from "@/assets/legal/family-law-attorney.webp";
 import divorceAttorneyImg from "@/assets/legal/divorce-attorney.webp";
-import estateLiquidatorsTile from "@/assets/estate-liquidators-tile-transparent.png";
+import estateLiquidatorsTile from "@/assets/estate-liquidators-tile-transparent.webp";
 import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 
 type Card = {

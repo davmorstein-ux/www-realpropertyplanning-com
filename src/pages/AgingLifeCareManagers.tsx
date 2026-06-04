@@ -9,7 +9,7 @@ import ProviderTile from "@/components/ProviderTile";
 import { articleSchema } from "@/lib/schema";
 import heroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import lauraSilversteinPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
-import silverSageLogo from "@/assets/providers/silver-sage-consulting-logo.png";
+import silverSageLogo from "@/assets/providers/silver-sage-consulting-logo.webp";
 import familyFirstLogo from "@/assets/providers/family-first-at-home-logo.png.asset.json";
 import jennipherAmaPhoto from "@/assets/providers/jennipher-ama-family-first-at-home.jpg.asset.json";
 
