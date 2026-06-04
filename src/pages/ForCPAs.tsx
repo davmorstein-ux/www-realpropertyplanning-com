@@ -12,7 +12,8 @@ import iconCpas from "@/assets/icons/estate-cpas-financial-icon-washington.webp"
 import CTASection from "@/components/CTASection";
 import ProviderTile from "@/components/ProviderTile";
 import purpleGroupPhoto from "@/assets/providers/cpa-purple-group-tenly-jessica-seattle.webp";
-import purpleGroupLogo from "@/assets/providers/cpa-purple-group-logo-seattle.webp";
+import purpleGroupLogoAsset from "@/assets/providers/the-purple-group-logo.png.asset.json";
+const purpleGroupLogo = purpleGroupLogoAsset.url;
 
 const PURPLE_GROUP_BIO = `Tenly Krakoff, CPA and Jessica Simons, CPA are the co-founders of The Purple Group, a CPA firm built to deliver a more personalized, relationship-driven experience. Tenly holds a Master's in Accountancy (Taxation) from Gonzaga University and is a Lean Six Sigma–certified professional specializing in tax planning, operational strategy, and process improvement for closely held businesses. Jessica holds a Master's in Accounting (Taxation) from Washington State University and brings over a decade of experience in tax strategy for high-net-worth individuals, small businesses, and estates and trusts. Together they combine expertise with technology to help clients simplify finances, support growth, and focus on what matters most.`;
 
