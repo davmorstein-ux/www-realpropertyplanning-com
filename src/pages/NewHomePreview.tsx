@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 
 /**
  * Preview-only page (route: /new-home).
@@ -43,6 +44,11 @@ export default function NewHomePreview() {
 
   return (
     <div style={{ ...fontBody, background: "#0b1220", color: "#fff", minHeight: "100vh" }}>
+      <SEOHead
+        title="Homepage Preview | Real Property Planning"
+        description="Internal homepage preview for Real Property Planning."
+        noIndex
+      />
       {/* ===== Floating Header Island ===== */}
       <header
         style={{

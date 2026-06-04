@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import ArticlesCarousel from "@/components/ArticlesCarousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const ARTICLES = [
   {
@@ -72,6 +74,11 @@ const ARTICLES = [
 const Articles = () => {
   return (
     <>
+      <SEOHead
+        title="Articles & Insights | Senior Housing, Probate & Estate Guidance — WA"
+        description="Plain-English articles on senior housing options, probate timelines, inherited property decisions, and estate transitions across Washington State."
+      />
+      <BreadcrumbSchema items={[{ name: "Articles", url: "/articles" }]} />
       <Header />
       <main id="main-content">
         {/* Carousel */}
