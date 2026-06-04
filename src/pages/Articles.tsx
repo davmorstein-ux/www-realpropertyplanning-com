@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import ArticlesCarousel from "@/components/ArticlesCarousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const ARTICLES = [
   {
