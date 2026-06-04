@@ -2,28 +2,28 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 
 const ARTICLES = [
-  { title: "The Silver Tsunami", href: "/articles/silver-tsunami", img: "/The_Silver_Tsunami.png" },
-  { title: "The Senior Housing Guide", href: "/articles/senior-housing-guide", img: "/The_Senior_Housing_Guide.png" },
-  { title: "Senior Housing Options", href: "/articles/senior-housing-options", img: "/Senior_Housing_Options.png" },
-  { title: "Senior Housing Costs", href: "/articles/senior-housing-costs", img: "/Senior_Housing_Costs.png" },
+  { title: "The Silver Tsunami", href: "/articles/silver-tsunami", img: "/The_Silver_Tsunami.webp" },
+  { title: "The Senior Housing Guide", href: "/articles/senior-housing-guide", img: "/The_Senior_Housing_Guide.webp" },
+  { title: "Senior Housing Options", href: "/articles/senior-housing-options", img: "/Senior_Housing_Options.webp" },
+  { title: "Senior Housing Costs", href: "/articles/senior-housing-costs", img: "/Senior_Housing_Costs.webp" },
   {
     title: "How to Choose Senior Housing",
     href: "/articles/how-to-choose-senior-housing",
-    img: "/How_to_Choose_Senior_Housing.png",
+    img: "/How_to_Choose_Senior_Housing.webp",
   },
   {
     title: "Independent Living Costs",
     href: "/articles/independent-living-costs",
-    img: "/Independent_Living_Costs.png",
+    img: "/Independent_Living_Costs.webp",
   },
-  { title: "Memory Care Costs", href: "/articles/memory-care-costs", img: "/Memory_Care_Costs.png" },
-  { title: "CCRC Costs", href: "/articles/ccrc-costs", img: "/CCRC_Costs.png" },
+  { title: "Memory Care Costs", href: "/articles/memory-care-costs", img: "/Memory_Care_Costs.webp" },
+  { title: "CCRC Costs", href: "/articles/ccrc-costs", img: "/CCRC_Costs.webp" },
   {
     title: "Affordable Senior Housing",
     href: "/articles/affordable-senior-housing",
-    img: "/Affordable_Senior_Housing.png",
+    img: "/Affordable_Senior_Housing.webp",
   },
-  { title: "Aging in Place With Support", href: "/articles/aging-in-place", img: "/Aging_in_Place_With_Support.png" },
+  { title: "Aging in Place With Support", href: "/articles/aging-in-place", img: "/Aging_in_Place_With_Support.webp" },
 ];
 
 // Duplicate articles so we always have enough cards ahead to slide into

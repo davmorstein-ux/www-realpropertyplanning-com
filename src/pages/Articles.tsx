@@ -7,63 +7,63 @@ const ARTICLES = [
   {
     title: "The Silver Tsunami",
     href: "/articles/silver-tsunami",
-    img: "/The_Silver_Tsunami.png",
+    img: "/The_Silver_Tsunami.webp",
     description: "The surge of seniors is reshaping housing, care, and the future of our communities — ready or not.",
   },
   {
     title: "The Senior Housing Guide",
     href: "/articles/senior-housing-guide",
-    img: "/The_Senior_Housing_Guide.png",
+    img: "/The_Senior_Housing_Guide.webp",
     description: "A clear, honest roadmap for one of the most important decisions a family will ever make.",
   },
   {
     title: "Senior Housing Options",
     href: "/articles/senior-housing-options",
-    img: "/Senior_Housing_Options.png",
+    img: "/Senior_Housing_Options.webp",
     description: "A roadmap to informed decisions — before urgency makes the choice for you.",
   },
   {
     title: "Senior Housing Costs",
     href: "/articles/senior-housing-costs",
-    img: "/Senior_Housing_Costs.png",
+    img: "/Senior_Housing_Costs.webp",
     description:
       "What families need to know before they start comparing options — and what the brochure won't tell you.",
   },
   {
     title: "How to Choose Senior Housing",
     href: "/articles/how-to-choose-senior-housing",
-    img: "/How_to_Choose_Senior_Housing.png",
+    img: "/How_to_Choose_Senior_Housing.webp",
     description: "A step-by-step guide for families navigating one of life's most important decisions.",
   },
   {
     title: "Independent Living Costs",
     href: "/articles/independent-living-costs",
-    img: "/Independent_Living_Costs.png",
+    img: "/Independent_Living_Costs.webp",
     description: "What the monthly fee actually covers — and what the number on the brochure doesn't tell you.",
   },
   {
     title: "Memory Care Costs",
     href: "/articles/memory-care-costs",
-    img: "/Memory_Care_Costs.png",
+    img: "/Memory_Care_Costs.webp",
     description: "What families need to know — and what no brochure will tell you about making this decision.",
   },
   {
     title: "CCRC Costs",
     href: "/articles/ccrc-costs",
-    img: "/CCRC_Costs.png",
+    img: "/CCRC_Costs.webp",
     description: "Continuing care retirement communities are expensive. Here's what you're really buying.",
   },
   {
     title: "Affordable Senior Housing",
     href: "/articles/affordable-senior-housing",
-    img: "/Affordable_Senior_Housing.png",
+    img: "/Affordable_Senior_Housing.webp",
     description:
       "For older adults on fixed incomes, the right housing isn't just about comfort — it's about financial survival.",
   },
   {
     title: "Aging in Place With Support",
     href: "/articles/aging-in-place",
-    img: "/Aging_in_Place_With_Support.png",
+    img: "/Aging_in_Place_With_Support.webp",
     description:
       "Most older adults want to stay home. Here's what that actually takes — and how to know when it's still the right answer.",
   },
