@@ -19,7 +19,10 @@ const CPAsFinancialAdvisors = () => (
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
         { name: "Resources", url: "https://realpropertyplanning.com/resources" },
-        { name: "CPAs & Financial Advisors", url: "https://realpropertyplanning.com/resources/cpas-financial-advisors" },
+        {
+          name: "CPAs & Financial Advisors",
+          url: "https://realpropertyplanning.com/resources/cpas-financial-advisors",
+        },
       ]}
     />
     <Header />
@@ -28,11 +31,19 @@ const CPAsFinancialAdvisors = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
+              <img
+                src={heroIcon}
+                alt=""
+                aria-hidden="true"
+                className="block w-full max-w-[15rem] h-auto object-contain"
+                loading="lazy"
+              />
             </div>
 
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Resources</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">CPAs & Financial Advisors</h1>
+            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">
+              CPAs & Financial Advisors
+            </h1>
           </div>
         </div>
       </section>
@@ -44,24 +55,56 @@ const CPAsFinancialAdvisors = () => (
               The Role of CPAs & Financial Advisors
             </h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-              CPAs and financial advisors play a critical role in estate and inherited property situations — advising on estate tax obligations, capital gains considerations, stepped-up basis calculations, and the financial implications of holding versus selling property. Their guidance helps families and fiduciaries make informed decisions.
+              CPAs and financial advisors play a critical role in estate and inherited property situations — advising on
+              estate tax obligations, capital gains considerations, stepped-up basis calculations, and the financial
+              implications of holding versus selling property. Their guidance helps families and fiduciaries make
+              informed decisions.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Real Property Planning works with CPAs and financial advisors to provide property-specific market data and <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">valuation insights</Link> that support tax and financial planning. Learn more about <Link to="/for-cpas" className="text-accent hover:text-gold underline underline-offset-4">how David Stein works with CPAs</Link> and <Link to="/for-financial-planners" className="text-accent hover:text-gold underline underline-offset-4">financial planners</Link>.
+              Real Property Planning works with CPAs and financial advisors to provide property-specific market data and{" "}
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">
+                valuation insights
+              </Link>{" "}
+              that support tax and financial planning. Learn more about{" "}
+              <Link to="/for-cpas" className="text-accent hover:text-gold underline underline-offset-4">
+                how David Stein works with CPAs
+              </Link>{" "}
+              and{" "}
+              <Link to="/for-financial-planners" className="text-accent hover:text-gold underline underline-offset-4">
+                financial planners
+              </Link>
+              .
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">
               Recommended Professionals
             </h2>
-            <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
-              <p className="text-muted-foreground text-base leading-relaxed">
-                David Stein is currently compiling a list of recommended CPAs and financial advisors throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for a current referral.
-              </p>
+
+            {/* The Purple Group */}
+            <div className="bg-secondary border border-border rounded-xl overflow-hidden mb-6">
+              <div className="flex flex-col sm:flex-row items-stretch">
+                <div className="sm:w-48 flex-shrink-0 bg-[#3b2060] flex items-center justify-center p-6">
+                  <img
+                    src="/the-purple-group-logo.png"
+                    alt="The Purple Group — Tax, Accounting, and Advisory"
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex-1 px-6 py-7 md:px-8">
+                  <p className="text-muted-foreground text-base leading-relaxed">
+                    The Purple Group is a full-service CPA firm providing tax, accounting, and advisory services for
+                    individuals, families, and businesses — including estate and trust tax matters, capital gains
+                    planning, and financial guidance for inherited property situations.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="mt-12 pt-8 border-t border-border">
               <p className="text-muted-foreground/60 text-[15px] leading-relaxed italic">
-                These professionals are listed as informational resources for visitors navigating senior transitions and estate property matters. Real Property Planning does not receive compensation for these listings.
+                These professionals are listed as informational resources for visitors navigating senior transitions and
+                estate property matters. Real Property Planning does not receive compensation for these listings.
               </p>
             </div>
           </div>
