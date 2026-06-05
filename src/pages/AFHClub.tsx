@@ -5,7 +5,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import AFHCarousel from "@/components/AFHCarousel";
-import afhClubBadge from "@/assets/afh-club-badge.png.asset.json";
 
 const AFHClub = () => (
   <>
@@ -22,23 +21,24 @@ const AFHClub = () => (
     />
     <Header />
     <main id="main-content">
-      {/* Hero */}
+      {/* Hero — light slate, dark text, WCAG AA compliant */}
       <section
         style={{
-          background: "#1e2830",
+          background: "#edf0f3",
           padding: "72px 24px 64px",
           textAlign: "center",
+          borderBottom: "3px solid #b87333",
         }}
       >
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           {/* Badge */}
-          <div style={{ marginBottom: 40 }}>
+          <div style={{ marginBottom: 36 }}>
             <img
-              src={afhClubBadge.url}
+              src="/afh-club-badge.webp"
               alt="AFH Club — Washington State Adult Family Home Resource Network"
               style={{
                 width: "100%",
-                maxWidth: 220,
+                maxWidth: 200,
                 height: "auto",
                 display: "block",
                 margin: "0 auto",
@@ -50,14 +50,13 @@ const AFHClub = () => (
           {/* Eyebrow */}
           <p
             style={{
-              fontSize: 11,
+              fontSize: 12,
               fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-              fontWeight: 400,
+              fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#b87333",
-              marginBottom: 16,
-              margin: "0 0 16px",
+              color: "#7a4e1a",
+              margin: "0 0 14px",
             }}
           >
             Real Property Planning
@@ -66,12 +65,12 @@ const AFHClub = () => (
           {/* Headline */}
           <h1
             style={{
-              fontSize: "clamp(32px, 5vw, 52px)",
+              fontSize: "clamp(36px, 5vw, 54px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#e8e2d9",
+              color: "#1a2530",
               lineHeight: 1.15,
-              margin: "0 0 8px",
+              margin: "0 0 10px",
             }}
           >
             AFH Club
@@ -79,12 +78,12 @@ const AFHClub = () => (
 
           <p
             style={{
-              fontSize: 18,
+              fontSize: 19,
               fontFamily: "Georgia, serif",
               fontWeight: 400,
-              color: "#b87333",
-              letterSpacing: "0.08em",
-              margin: "0 0 28px",
+              color: "#7a4e1a",
+              letterSpacing: "0.06em",
+              margin: "0 0 24px",
             }}
           >
             Washington State Adult Family Home Resource Network
@@ -94,7 +93,7 @@ const AFHClub = () => (
           <div
             style={{
               width: 48,
-              height: 2,
+              height: 3,
               background: "#b87333",
               margin: "0 auto 32px",
               borderRadius: 1,
@@ -104,11 +103,11 @@ const AFHClub = () => (
           {/* Intro copy */}
           <p
             style={{
-              fontSize: "clamp(16px, 2vw, 18px)",
+              fontSize: "clamp(17px, 2vw, 19px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#8fa0af",
-              lineHeight: 1.8,
+              color: "#1e2e3e",
+              lineHeight: 1.85,
               margin: "0 auto 20px",
               maxWidth: 640,
             }}
@@ -121,11 +120,11 @@ const AFHClub = () => (
 
           <p
             style={{
-              fontSize: 16,
+              fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#6a7a8a",
-              lineHeight: 1.8,
+              color: "#2e3e4e",
+              lineHeight: 1.85,
               margin: "0 auto",
               maxWidth: 580,
             }}
@@ -139,22 +138,20 @@ const AFHClub = () => (
       {/* Topic divider */}
       <div
         style={{
-          background: "#161e26",
-          padding: "20px 24px",
+          background: "#2c3a48",
+          padding: "18px 24px",
           textAlign: "center",
-          borderTop: "1px solid #2a3a4a",
-          borderBottom: "1px solid #2a3a4a",
         }}
       >
         <p
           style={{
             margin: 0,
-            fontSize: 11,
+            fontSize: 12,
             fontFamily: "'Raleway', sans-serif",
             fontWeight: 600,
             letterSpacing: "0.25em",
             textTransform: "uppercase",
-            color: "#4a5a6a",
+            color: "#e8e2d9",
           }}
         >
           Select a topic below to explore
@@ -174,13 +171,12 @@ const AFHClub = () => (
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 11,
+              fontSize: 12,
               fontFamily: "'Raleway', sans-serif",
-              fontWeight: 400,
+              fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#8B6914",
-              marginBottom: 16,
+              color: "#7a4e1a",
               margin: "0 0 16px",
             }}
           >
@@ -188,12 +184,12 @@ const AFHClub = () => (
           </p>
           <h2
             style={{
-              fontSize: "clamp(24px, 3.5vw, 36px)",
+              fontSize: "clamp(26px, 3.5vw, 38px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
               color: "#0a1628",
               lineHeight: 1.2,
-              margin: "0 0 24px",
+              margin: "0 0 20px",
             }}
           >
             What Is an Adult Family Home?
@@ -201,20 +197,20 @@ const AFHClub = () => (
           <div
             style={{
               width: 40,
-              height: 2,
-              background: "#8B6914",
+              height: 3,
+              background: "#b87333",
               marginBottom: 32,
               borderRadius: 1,
             }}
           />
           <p
             style={{
-              fontSize: 17,
+              fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#4a5060",
+              color: "#1e2a38",
               lineHeight: 1.85,
-              margin: "0 0 20px",
+              margin: "0 0 22px",
             }}
           >
             An Adult Family Home (AFH) is a private residence licensed by the Washington State Department of Social and
@@ -224,12 +220,12 @@ const AFHClub = () => (
           </p>
           <p
             style={{
-              fontSize: 17,
+              fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#4a5060",
+              color: "#1e2a38",
               lineHeight: 1.85,
-              margin: "0 0 20px",
+              margin: "0 0 22px",
             }}
           >
             AFHs are permitted in all single-family residential zoning districts throughout Washington State and are
@@ -238,10 +234,10 @@ const AFHClub = () => (
           </p>
           <p
             style={{
-              fontSize: 17,
+              fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#4a5060",
+              color: "#1e2a38",
               lineHeight: 1.85,
               margin: 0,
             }}
