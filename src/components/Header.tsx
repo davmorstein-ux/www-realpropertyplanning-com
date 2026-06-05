@@ -12,7 +12,6 @@ const SENIOR_TRANSITION_ITEMS = [
   { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
   { label: "Medicare & Benefits Advisors", href: "/medicare-providers" },
 ];
-f;
 
 const TOP_LINKS = [
   { label: "Home", href: "/" },
