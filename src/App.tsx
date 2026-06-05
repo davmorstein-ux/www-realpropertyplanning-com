@@ -6,15 +6,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
-
-
-
 import SiteChatWidget from "./components/SiteChatWidget";
-
 
 // Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
 import Index from "./pages/Index";
-
 
 // All other routes are lazy-loaded so the homepage bundle stays small.
 const ProbateEstateSales = lazy(() => import("./pages/ProbateEstateSales"));
@@ -47,9 +42,13 @@ const ExecutorResponsibilitiesFirstSteps = lazy(() => import("./pages/ExecutorRe
 const ERFFirst30Days = lazy(() => import("./pages/executor-responsibilities-first-steps/First30Days"));
 const ERFLegalDuties = lazy(() => import("./pages/executor-responsibilities-first-steps/LegalDuties"));
 const ERFPropertyDecisions = lazy(() => import("./pages/executor-responsibilities-first-steps/PropertyDecisions"));
-const ERFWorkingWithProfessionals = lazy(() => import("./pages/executor-responsibilities-first-steps/WorkingWithProfessionals"));
+const ERFWorkingWithProfessionals = lazy(
+  () => import("./pages/executor-responsibilities-first-steps/WorkingWithProfessionals"),
+);
 const ERFCommonMistakes = lazy(() => import("./pages/executor-responsibilities-first-steps/CommonMistakes"));
-const ERFWhenYouNeedExtraHelp = lazy(() => import("./pages/executor-responsibilities-first-steps/WhenYouNeedExtraHelp"));
+const ERFWhenYouNeedExtraHelp = lazy(
+  () => import("./pages/executor-responsibilities-first-steps/WhenYouNeedExtraHelp"),
+);
 const PreparingHomeForSaleDuringTransition = lazy(() => import("./pages/PreparingHomeForSaleDuringTransition"));
 const SellingAnInheritedHome = lazy(() => import("./pages/SellingAnInheritedHome"));
 const AgingInPlaceStayingHomeSafely = lazy(() => import("./pages/AgingInPlaceStayingHomeSafely"));
@@ -146,7 +145,9 @@ const SellInheritedHouseAsIsOrFix = lazy(() => import("./pages/guides/SellInheri
 const ProbateVsTrustSaleWashington = lazy(() => import("./pages/guides/ProbateVsTrustSaleWashington"));
 const WhoHasAuthoritySellProbateProperty = lazy(() => import("./pages/guides/WhoHasAuthoritySellProbateProperty"));
 const ProbateHouseSaleTimelineWashington = lazy(() => import("./pages/guides/ProbateHouseSaleTimelineWashington"));
-const RepairsBeforeSellingProbateHomeWashington = lazy(() => import("./pages/guides/RepairsBeforeSellingProbateHomeWashington"));
+const RepairsBeforeSellingProbateHomeWashington = lazy(
+  () => import("./pages/guides/RepairsBeforeSellingProbateHomeWashington"),
+);
 const SeattleProbateEstate = lazy(() => import("./pages/SeattleProbateEstate"));
 const BellevueProbateEstate = lazy(() => import("./pages/BellevueProbateEstate"));
 const TacomaProbateEstate = lazy(() => import("./pages/TacomaProbateEstate"));
@@ -194,35 +195,26 @@ const SeniorHousingCosts = lazy(() => import("./pages/articles/SeniorHousingCost
 const SeniorHousingGuide = lazy(() => import("./pages/articles/SeniorHousingGuide"));
 const HowToChooseSeniorHousing = lazy(() => import("./pages/articles/HowToChooseSeniorHousing"));
 const ArticlesIndex = lazy(() => import("./pages/Articles"));
-
+const AFHClub = lazy(() => import("./pages/AFHClub"));
 const queryClient = new QueryClient();
 
 // Minimal full-viewport fallback in brand cream — no spinner, no layout shift,
 // matches the page background so navigation feels instant on fast chunks.
-const RouteFallback = () => (
-  <div className="min-h-screen bg-cream" aria-hidden="true" />
-);
+const RouteFallback = () => <div className="min-h-screen bg-cream" aria-hidden="true" />;
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        
-        
+    <Toaster />
+    <Sonner />
+    <BrowserRouter>
+      <ScrollToTop />
 
+      <SiteChatWidget />
 
-        <SiteChatWidget />
-        
-        
-
-        <Suspense fallback={<RouteFallback />}>
+      <Suspense fallback={<RouteFallback />}>
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
           <Route path="/" element={<Index />} />
-          
 
           {/* ─── Core commercial pages ────────────────────────────── */}
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
@@ -233,7 +225,10 @@ const App = () => (
           <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />
           <Route path="/estate-probate-inherited-property" element={<EstateProbateInheritedProperty />} />
           <Route path="/estate-probate-inherited-property/first-steps" element={<EPIPFirstSteps />} />
-          <Route path="/estate-probate-inherited-property/probate-and-legal-authority" element={<EPIPProbateAuthority />} />
+          <Route
+            path="/estate-probate-inherited-property/probate-and-legal-authority"
+            element={<EPIPProbateAuthority />}
+          />
           <Route path="/estate-probate-inherited-property/property-value" element={<EPIPPropertyValue />} />
           <Route path="/estate-probate-inherited-property/what-to-do-with-the-property" element={<EPIPWhatToDo />} />
           <Route path="/estate-probate-inherited-property/preparing-the-property" element={<EPIPPreparing />} />
@@ -257,14 +252,23 @@ const App = () => (
           <Route path="/executor-responsibilities-first-steps/first-30-days" element={<ERFFirst30Days />} />
           <Route path="/executor-responsibilities-first-steps/legal-duties" element={<ERFLegalDuties />} />
           <Route path="/executor-responsibilities-first-steps/property-decisions" element={<ERFPropertyDecisions />} />
-          <Route path="/executor-responsibilities-first-steps/working-with-professionals" element={<ERFWorkingWithProfessionals />} />
+          <Route
+            path="/executor-responsibilities-first-steps/working-with-professionals"
+            element={<ERFWorkingWithProfessionals />}
+          />
           <Route path="/executor-responsibilities-first-steps/common-mistakes" element={<ERFCommonMistakes />} />
-          <Route path="/executor-responsibilities-first-steps/when-you-need-extra-help" element={<ERFWhenYouNeedExtraHelp />} />
+          <Route
+            path="/executor-responsibilities-first-steps/when-you-need-extra-help"
+            element={<ERFWhenYouNeedExtraHelp />}
+          />
           <Route path="/preparing-home-for-sale-during-transition" element={<PreparingHomeForSaleDuringTransition />} />
           <Route path="/selling-an-inherited-home" element={<SellingAnInheritedHome />} />
           <Route path="/aging-in-place-staying-home-safely" element={<AgingInPlaceStayingHomeSafely />} />
-          <Route path="/date-of-death-valuation-property-appraisals" element={<DateOfDeathValuationPropertyAppraisals />} />
-          
+          <Route
+            path="/date-of-death-valuation-property-appraisals"
+            element={<DateOfDeathValuationPropertyAppraisals />}
+          />
+
           <Route path="/out-of-state-families" element={<Navigate to="/guides/out-of-state-families" replace />} />
           <Route path="/senior-living-advisors" element={<SeniorLivingAdvisors />} />
           <Route path="/senior-placement" element={<Navigate to="/senior-living-advisors" replace />} />
@@ -382,14 +386,26 @@ const App = () => (
           <Route path="/guides/heirs-disagree-selling-house" element={<HeirsDisagreeSelling />} />
           <Route path="/guides/pricing-house-trust-estate" element={<PricingHouseTrustEstate />} />
           <Route path="/guides/sell-house-during-probate-washington" element={<SellHouseDuringProbateWashington />} />
-          <Route path="/guides/taxes-selling-inherited-house-washington" element={<TaxesSellingInheritedHouseWashington />} />
+          <Route
+            path="/guides/taxes-selling-inherited-house-washington"
+            element={<TaxesSellingInheritedHouseWashington />}
+          />
           <Route path="/guides/how-long-sell-probate-property" element={<HowLongSellProbateProperty />} />
           <Route path="/guides/executor-first-steps-house" element={<ExecutorFirstStepsHouse />} />
           <Route path="/guides/sell-inherited-house-as-is-or-fix" element={<SellInheritedHouseAsIsOrFix />} />
           <Route path="/guides/probate-vs-trust-sale-washington" element={<ProbateVsTrustSaleWashington />} />
-          <Route path="/guides/who-has-authority-sell-probate-property-washington" element={<WhoHasAuthoritySellProbateProperty />} />
-          <Route path="/guides/probate-house-sale-timeline-washington" element={<ProbateHouseSaleTimelineWashington />} />
-          <Route path="/guides/repairs-before-selling-probate-home-washington" element={<RepairsBeforeSellingProbateHomeWashington />} />
+          <Route
+            path="/guides/who-has-authority-sell-probate-property-washington"
+            element={<WhoHasAuthoritySellProbateProperty />}
+          />
+          <Route
+            path="/guides/probate-house-sale-timeline-washington"
+            element={<ProbateHouseSaleTimelineWashington />}
+          />
+          <Route
+            path="/guides/repairs-before-selling-probate-home-washington"
+            element={<RepairsBeforeSellingProbateHomeWashington />}
+          />
 
           {/* ─── Professionals directory (for families) ───────────── */}
           <Route path="/professionals" element={<Professionals />} />
@@ -468,14 +484,44 @@ const App = () => (
                       /service-areas/{slug}-county, and *-probate-estate-real-estate
               Note: /counties/{slug} are now direct routes above */}
           {[
-            "king", "snohomish", "pierce", "kitsap", "skagit", "thurston", "whatcom",
-            "clark", "spokane", "benton", "yakima", "franklin", "cowlitz",
-            "grays-harbor", "island", "jefferson", "lewis", "mason", "pacific",
-            "san-juan", "skamania", "wahkiakum",
+            "king",
+            "snohomish",
+            "pierce",
+            "kitsap",
+            "skagit",
+            "thurston",
+            "whatcom",
+            "clark",
+            "spokane",
+            "benton",
+            "yakima",
+            "franklin",
+            "cowlitz",
+            "grays-harbor",
+            "island",
+            "jefferson",
+            "lewis",
+            "mason",
+            "pacific",
+            "san-juan",
+            "skamania",
+            "wahkiakum",
           ].flatMap((slug) => [
-            <Route key={`c2-${slug}`} path={`/counties/${slug}-county`} element={<Navigate to={`/${slug}-county`} replace />} />,
-            <Route key={`sa-${slug}`} path={`/service-areas/${slug}-county`} element={<Navigate to={`/${slug}-county`} replace />} />,
-            <Route key={`pe-${slug}`} path={`/${slug}-county-probate-estate-real-estate`} element={<Navigate to={`/${slug}-county`} replace />} />,
+            <Route
+              key={`c2-${slug}`}
+              path={`/counties/${slug}-county`}
+              element={<Navigate to={`/${slug}-county`} replace />}
+            />,
+            <Route
+              key={`sa-${slug}`}
+              path={`/service-areas/${slug}-county`}
+              element={<Navigate to={`/${slug}-county`} replace />}
+            />,
+            <Route
+              key={`pe-${slug}`}
+              path={`/${slug}-county-probate-estate-real-estate`}
+              element={<Navigate to={`/${slug}-county`} replace />}
+            />,
           ])}
 
           {/* Tier-2 cities → their county hub */}
@@ -506,32 +552,80 @@ const App = () => (
           <Route path="/services/attorney-fiduciary-support" element={<Navigate to="/for-attorneys" replace />} />
           <Route path="/services/valuation-guidance" element={<Navigate to="/why-valuation-matters" replace />} />
           <Route path="/services/preparing-home-for-sale" element={<Navigate to="/probate-estate-sales" replace />} />
-          <Route path="/services/divorce-related-home-sales" element={<Navigate to="/for-divorce-attorneys" replace />} />
+          <Route
+            path="/services/divorce-related-home-sales"
+            element={<Navigate to="/for-divorce-attorneys" replace />}
+          />
           <Route path="/services/trust-estate-property-sales" element={<Navigate to="/trustees" replace />} />
 
           {/* /insights and /insights-guidance → /guides */}
           <Route path="/insights" element={<Navigate to="/guides-and-resources" replace />} />
-          <Route path="/insights/first-steps-inherited-house-washington" element={<Navigate to="/guides/executor-first-steps-house" replace />} />
-          <Route path="/insights/out-of-state-inherited-house-help" element={<Navigate to="/guides/out-of-state-families" replace />} />
-          <Route path="/insights/out-of-state-executor-case-study" element={<Navigate to="/guides/out-of-state-families" replace />} />
-          <Route path="/insights/estate-property-sale-timeline" element={<Navigate to="/guides/how-long-sell-probate-property" replace />} />
-          <Route path="/insights/estate-property-cleanout-before-sale" element={<Navigate to="/guides/estate-property-repairs-before-sale" replace />} />
-          <Route path="/insights/empty-house-before-selling" element={<Navigate to="/guides/estate-property-repairs-before-sale" replace />} />
-          <Route path="/insights/pricing-inherited-property-differences" element={<Navigate to="/guides/pricing-house-trust-estate" replace />} />
-          <Route path="/insights/sell-inherited-house-without-repairs" element={<Navigate to="/guides/sell-inherited-house-as-is-or-fix" replace />} />
-          <Route path="/insights/family-disagreement-selling-house" element={<Navigate to="/guides/heirs-disagree-selling-house" replace />} />
-          <Route path="/insights/sell-or-keep-inherited-property" element={<Navigate to="/guides/sell-inherited-house-as-is-or-fix" replace />} />
-          <Route path="/insights/estate-property-mistakes" element={<Navigate to="/guides/what-executors-should-do" replace />} />
-          <Route path="/insights-guidance/how-does-probate-real-estate-work-in-washington" element={<Navigate to="/guides/how-probate-real-estate-works" replace />} />
-          <Route path="/insights-guidance/how-to-move-elderly-parents-safely-and-respectfully" element={<Navigate to="/guides/senior-transition-differences" replace />} />
-          <Route path="/how-to-move-elderly-parents" element={<Navigate to="/guides/senior-transition-differences" replace />} />
+          <Route
+            path="/insights/first-steps-inherited-house-washington"
+            element={<Navigate to="/guides/executor-first-steps-house" replace />}
+          />
+          <Route
+            path="/insights/out-of-state-inherited-house-help"
+            element={<Navigate to="/guides/out-of-state-families" replace />}
+          />
+          <Route
+            path="/insights/out-of-state-executor-case-study"
+            element={<Navigate to="/guides/out-of-state-families" replace />}
+          />
+          <Route
+            path="/insights/estate-property-sale-timeline"
+            element={<Navigate to="/guides/how-long-sell-probate-property" replace />}
+          />
+          <Route
+            path="/insights/estate-property-cleanout-before-sale"
+            element={<Navigate to="/guides/estate-property-repairs-before-sale" replace />}
+          />
+          <Route
+            path="/insights/empty-house-before-selling"
+            element={<Navigate to="/guides/estate-property-repairs-before-sale" replace />}
+          />
+          <Route
+            path="/insights/pricing-inherited-property-differences"
+            element={<Navigate to="/guides/pricing-house-trust-estate" replace />}
+          />
+          <Route
+            path="/insights/sell-inherited-house-without-repairs"
+            element={<Navigate to="/guides/sell-inherited-house-as-is-or-fix" replace />}
+          />
+          <Route
+            path="/insights/family-disagreement-selling-house"
+            element={<Navigate to="/guides/heirs-disagree-selling-house" replace />}
+          />
+          <Route
+            path="/insights/sell-or-keep-inherited-property"
+            element={<Navigate to="/guides/sell-inherited-house-as-is-or-fix" replace />}
+          />
+          <Route
+            path="/insights/estate-property-mistakes"
+            element={<Navigate to="/guides/what-executors-should-do" replace />}
+          />
+          <Route
+            path="/insights-guidance/how-does-probate-real-estate-work-in-washington"
+            element={<Navigate to="/guides/how-probate-real-estate-works" replace />}
+          />
+          <Route
+            path="/insights-guidance/how-to-move-elderly-parents-safely-and-respectfully"
+            element={<Navigate to="/guides/senior-transition-differences" replace />}
+          />
+          <Route
+            path="/how-to-move-elderly-parents"
+            element={<Navigate to="/guides/senior-transition-differences" replace />}
+          />
 
           {/* /learn-more pages → fold into parent (Phase 2c will merge content) */}
           <Route path="/executors/learn-more" element={<Navigate to="/executors" replace />} />
           <Route path="/trustees/learn-more" element={<Navigate to="/trustees" replace />} />
           <Route path="/for-attorneys/learn-more" element={<Navigate to="/for-attorneys" replace />} />
           <Route path="/for-cpas/learn-more" element={<Navigate to="/for-cpas" replace />} />
-          <Route path="/for-financial-planners/learn-more" element={<Navigate to="/for-financial-planners" replace />} />
+          <Route
+            path="/for-financial-planners/learn-more"
+            element={<Navigate to="/for-financial-planners" replace />}
+          />
           <Route path="/realtor/learn-more" element={<Navigate to="/realtor" replace />} />
           <Route path="/real-estate-appraiser/learn-more" element={<Navigate to="/real-estate-appraiser" replace />} />
           <Route path="/senior-move-managers/learn-more" element={<Navigate to="/senior-transitions" replace />} />
@@ -540,11 +634,17 @@ const App = () => (
 
           {/* Redundant professional / referral pages → consolidated targets */}
           <Route path="/professional-referral-resource" element={<Navigate to="/join-the-network" replace />} />
-          <Route path="/professional-network" element={<Navigate to="/building-your-trusted-professional-team" replace />} />
+          <Route
+            path="/professional-network"
+            element={<Navigate to="/building-your-trusted-professional-team" replace />}
+          />
           <Route path="/attorney-referral" element={<Navigate to="/for-attorneys" replace />} />
           <Route path="/for-referral-partners" element={<Navigate to="/join-the-network" replace />} />
           <Route path="/for-professionals" element={<Navigate to="/professionals" replace />} />
-          <Route path="/for-senior-living-professionals" element={<Navigate to="/professionals/senior-housing-advisors" replace />} />
+          <Route
+            path="/for-senior-living-professionals"
+            element={<Navigate to="/professionals/senior-housing-advisors" replace />}
+          />
 
           {/* Redundant senior pages → /senior-transitions */}
           <Route path="/senior-estate-services" element={<Navigate to="/senior-transitions" replace />} />
@@ -558,13 +658,12 @@ const App = () => (
           <Route path="/financial-planning" element={<Navigate to="/for-financial-planners" replace />} />
           <Route path="/senior-living" element={<Navigate to="/senior-living-and-relocation" replace />} />
           <Route path="/lenders-financing" element={<Navigate to="/lenders-and-financing-specialists" replace />} />
-
+          <Route path="/afh-club" element={<AFHClub />} />
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        </Suspense>
-      </BrowserRouter>
-    
+      </Suspense>
+    </BrowserRouter>
   </QueryClientProvider>
 );
 
