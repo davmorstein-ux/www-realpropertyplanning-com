@@ -5,6 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import AFHCarousel from "@/components/AFHCarousel";
+import afhClubBadge from "@/assets/afh-club-badge.png.asset.json";
 
 const AFHClub = () => (
   <>
@@ -33,7 +34,7 @@ const AFHClub = () => (
           {/* Badge */}
           <div style={{ marginBottom: 40 }}>
             <img
-              src="/afh-club-badge.webp"
+              src={afhClubBadge.url}
               alt="AFH Club — Washington State Adult Family Home Resource Network"
               style={{
                 width: "100%",
