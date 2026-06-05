@@ -12,6 +12,7 @@ const SENIOR_TRANSITION_ITEMS = [
   { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
   { label: "Medicare & Benefits Advisors", href: "/medicare-providers" },
 ];
+f;
 
 const TOP_LINKS = [
   { label: "Home", href: "/" },
@@ -70,9 +71,9 @@ const TOP_LINKS = [
       { label: "Aging in Place With Support", href: "/articles/aging-in-place" },
     ],
   },
+  { label: "AFH Club", href: "/afh-club" },
   { label: "Contact", href: "/contact" },
 ];
-
 // Flyout submenu that appears to the right of a dropdown item
 function FlyoutMenu({ items, visible }: { items: { label: string; href: string }[]; visible: boolean }) {
   return (
