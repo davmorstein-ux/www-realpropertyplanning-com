@@ -108,18 +108,18 @@ export default function AFHCarousel() {
   }, [next, paused]);
 
   return (
-    <section style={{ background: "#1e2830", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}>
+    <section style={{ background: "#f0f3f6", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}>
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
           style={{
             display: "block",
-            fontSize: 11,
+            fontSize: 12,
             fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-            fontWeight: 400,
+            fontWeight: 600,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "#b87333",
+            color: "#7a4e1a",
             marginBottom: 12,
           }}
         >
@@ -129,23 +129,23 @@ export default function AFHCarousel() {
           style={{
             fontSize: "clamp(28px, 4vw, 42px)",
             fontWeight: 700,
-            color: "#e8e2d9",
+            color: "#0a1628",
             margin: 0,
             lineHeight: 1.15,
           }}
         >
           Resource Network
         </h2>
-        <div style={{ width: 48, height: 2, background: "#b87333", margin: "16px auto 0", borderRadius: 1 }} />
+        <div style={{ width: 48, height: 3, background: "#b87333", margin: "16px auto 0", borderRadius: 1 }} />
         <p
           style={{
             marginTop: 20,
-            fontSize: 16,
-            color: "#8fa0af",
+            fontSize: 17,
+            color: "#1e2a38",
             maxWidth: 560,
             marginLeft: "auto",
             marginRight: "auto",
-            lineHeight: 1.7,
+            lineHeight: 1.75,
             fontFamily: "'Raleway', sans-serif",
             fontWeight: 400,
           }}
@@ -315,7 +315,7 @@ export default function AFHCarousel() {
           aria-label="Previous"
           style={{
             background: "none",
-            border: "1px solid #4a5a6a",
+            border: "1px solid #9aabb8",
             borderRadius: "50%",
             width: 40,
             height: 40,
@@ -323,7 +323,7 @@ export default function AFHCarousel() {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#b87333",
+            color: "#7a4e1a",
           }}
         >
           <svg
@@ -349,7 +349,7 @@ export default function AFHCarousel() {
                 onClick={() => slideTo(START + i)}
                 aria-label={`Slide ${i + 1}`}
                 style={{
-                  background: normalizedPos === i ? "#b87333" : "#3a4a5a",
+                  background: normalizedPos === i ? "#b87333" : "#9aabb8",
                   border: "none",
                   borderRadius: 2,
                   width: normalizedPos === i ? 24 : 8,
@@ -368,7 +368,7 @@ export default function AFHCarousel() {
           aria-label="Next"
           style={{
             background: "none",
-            border: "1px solid #4a5a6a",
+            border: "1px solid #9aabb8",
             borderRadius: "50%",
             width: 40,
             height: 40,
@@ -376,7 +376,7 @@ export default function AFHCarousel() {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#b87333",
+            color: "#7a4e1a",
           }}
         >
           <svg
