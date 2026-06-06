@@ -57,8 +57,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
                 width: "auto",
                 mixBlendMode: isRealtor ? "screen" : "multiply",
               }}
-              className="max-w-full object-contain"
-            />
+              className="max-w-full object-contain" sizes="100vw" decoding="async"/>
           );
           return (
             <li key={i} className="flex items-center justify-center">

@@ -42,8 +42,7 @@ const SeniorTransitions = () => {
           className="w-full h-auto object-cover"
           style={{ display: "block" }}
           loading="eager"
-          fetchPriority="high"
-        />
+          fetchPriority="high" sizes="100vw"/>
         <HeroBandTitle as="h2">Selling A Senior's Home</HeroBandTitle>
       </section>
 
@@ -149,8 +148,7 @@ const SeniorTransitions = () => {
                             src={s.image}
                             alt={s.alt}
                             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
-                            loading="lazy"
-                          />
+                            loading="lazy" sizes="100vw" decoding="async"/>
                         </div>
                         <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
                           <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
@@ -216,7 +214,7 @@ const SeniorTransitions = () => {
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                 Start a Conversation
               </Button>
             </Link>

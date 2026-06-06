@@ -28,8 +28,7 @@ const HeroSection = () => {
                 width={700}
                 height={200}
                 loading="eager"
-                fetchPriority="high"
-              />
+                fetchPriority="high" sizes="100vw"/>
             </div>
 
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-medium leading-tight mb-4" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
@@ -46,7 +45,7 @@ const HeroSection = () => {
                   size="lg" 
                   className="text-primary px-8"
                 >
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async"/>
                   Call (206) 900-3015
                 </Button>
               </a>
@@ -55,7 +54,7 @@ const HeroSection = () => {
                 variant="outline3d" 
                 className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold"
               >
-                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0 mr-2"  loading="lazy"/>
+                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0 mr-2"  loading="lazy" sizes="100vw" decoding="async"/>
                 Contact Me
               </Button>
             </div>
@@ -89,8 +88,7 @@ const HeroSection = () => {
                    alt="Real Property Planning, probate real estate specialist and certified appraiser in Western Washington"
                    className="w-full h-full object-cover object-top"
                    loading="eager"
-                   fetchPriority="high"
-                 />
+                   fetchPriority="high" sizes="100vw"/>
               </div>
               <div className="absolute -bottom-4 -right-4 w-80 h-96 rounded-2xl border-2 border-gold/20 -z-10" />
             </div>

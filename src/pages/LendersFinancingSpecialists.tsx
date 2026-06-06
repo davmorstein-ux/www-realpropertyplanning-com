@@ -44,7 +44,7 @@ const LendersFinancingSpecialists = () => (
             src={lendersIcon}
             alt="Lenders & Financing"
             className="block w-full max-w-[15rem] h-auto mx-auto mb-3 md:mb-4"
-           loading="lazy"/>
+           loading="lazy" sizes="100vw" decoding="async"/>
           <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
             
           </p>
@@ -56,7 +56,7 @@ const LendersFinancingSpecialists = () => (
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async"/>
               Schedule a Conversation
             </Button>
           </Link>
@@ -137,11 +137,11 @@ const LendersFinancingSpecialists = () => (
           <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
               <div className="shrink-0">
-                <img src={danBartelPhoto} alt="Photo of Daniel Bartel" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
+                <img src={danBartelPhoto} alt="Photo of Daniel Bartel" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy" sizes="100vw" decoding="async"/>
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
-                  <img src={c2FinancialLogo} alt="C2 Financial logo" className="h-[84px] w-auto object-contain mx-auto sm:mx-0 block"  loading="lazy"/>
+                  <img src={c2FinancialLogo} alt="C2 Financial logo" className="h-[84px] w-auto object-contain mx-auto sm:mx-0 block"  loading="lazy" sizes="100vw" decoding="async"/>
                 </a>
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
                   <p className="text-foreground font-semibold text-lg">Daniel Bartel <span className="text-muted-foreground text-sm font-normal">· NMLS 110735</span></p>
@@ -151,22 +151,22 @@ const LendersFinancingSpecialists = () => (
                   </p>
                   <div className="space-y-1.5 text-sm">
                     <div className="flex items-start gap-2 justify-center sm:justify-start">
-                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" />
+                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async"/>
                       <span className="text-muted-foreground">1721 Hewitt Ave Ste. 612, Everett, WA 98201</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start pl-6">
                       <span className="text-muted-foreground">NMLS 135622</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                       <a href="tel:+12063105766" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 310-5766</a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                       <a href="mailto:santadan@c2financial.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">santadan@c2financial.com</a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                       <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Daniel Bartel's website at santadanmortgage.com" className="text-accent hover:text-gold underline-offset-4 hover:underline">www.santadanmortgage.com</a>
                     </div>
                   </div>
@@ -179,11 +179,11 @@ const LendersFinancingSpecialists = () => (
           <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
               <div className="shrink-0">
-                <img src={jeffMcGinnisPhoto} alt="Photo of Jeff McGinnis" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
+                <img src={jeffMcGinnisPhoto} alt="Photo of Jeff McGinnis" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy" sizes="100vw" decoding="async"/>
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
-                  <img src={crossCountryLogo} alt="CrossCountry Mortgage logo" className="h-[180px] w-auto object-contain mx-auto sm:mx-0 block scale-[2.5] origin-left sm:-ml-[36px] sm:-mt-[16px]"  loading="lazy"/>
+                  <img src={crossCountryLogo} alt="CrossCountry Mortgage logo" className="h-[180px] w-auto object-contain mx-auto sm:mx-0 block scale-[2.5] origin-left sm:-ml-[36px] sm:-mt-[16px]"  loading="lazy" sizes="100vw" decoding="async"/>
                 </a>
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
                   <p className="text-foreground font-semibold text-lg">Jeff McGinnis <span className="text-muted-foreground text-sm font-normal">· NMLS 279369</span></p>
@@ -193,22 +193,22 @@ const LendersFinancingSpecialists = () => (
                   </p>
                   <div className="space-y-1.5 text-sm">
                     <div className="flex items-start gap-2 justify-center sm:justify-start">
-                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" />
+                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async"/>
                       <span className="text-muted-foreground">1000 Dexter Ave N, Suite 310, Seattle, WA 98109</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start pl-6">
                       <span className="text-muted-foreground">NMLS 1958276</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                       <a href="tel:+12062835626" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 283-5626</a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                       <a href="mailto:jejj.mcginnis@ccm.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">jejj.mcginnis@ccm.com</a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                       <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" aria-label="Visit Jeff McGinnis's profile at crosscountrymortgage.com" className="text-accent hover:text-gold underline-offset-4 hover:underline">crosscountrymortgage.com</a>
                     </div>
                   </div>
@@ -221,11 +221,11 @@ const LendersFinancingSpecialists = () => (
           <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
               <div className="shrink-0">
-                <img src={hansWestermarkPhoto} alt="Photo of Hans Westermark" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" loading="lazy"/>
+                <img src={hansWestermarkPhoto} alt="Photo of Hans Westermark" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" loading="lazy" sizes="100vw" decoding="async"/>
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
-                  <img src={familyFirstLogo} alt="Family First Mortgage logo" className="h-[126px] w-auto object-contain mx-auto sm:mx-0 block" loading="lazy"/>
+                  <img src={familyFirstLogo} alt="Family First Mortgage logo" className="h-[126px] w-auto object-contain mx-auto sm:mx-0 block" loading="lazy" sizes="100vw" decoding="async"/>
                 </a>
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
                   <p className="text-foreground font-semibold text-lg">Hans Westermark</p>
@@ -235,24 +235,24 @@ const LendersFinancingSpecialists = () => (
                   </p>
                   <div className="space-y-1.5 text-sm">
                     <div className="flex items-start gap-2 justify-center sm:justify-start">
-                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" />
+                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async"/>
                       <span className="text-muted-foreground">20806 Bothell Everett Hwy, Suite 102, Bothell, WA 98021</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                       <a href="tel:+12063909915" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 390-9915</a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                       <a href="mailto:Hans.Westermark@famfirstmtg.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">Hans.Westermark@famfirstmtg.com</a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                       <a href="https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark" target="_blank" rel="noopener noreferrer" aria-label="Visit Hans Westermark's website at familyfirstmortgagegroup.com" className="text-accent hover:text-gold underline-offset-4 hover:underline">familyfirstmortgagegroup.com</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 mt-4 justify-center sm:justify-start">
-                    <img src={equalHousingIcon} alt="Equal Housing Lender" className="h-8 w-auto object-contain opacity-70" loading="lazy"/>
+                    <img src={equalHousingIcon} alt="Equal Housing Lender" className="h-8 w-auto object-contain opacity-70" loading="lazy" sizes="100vw" decoding="async"/>
                     <span className="text-muted-foreground text-xs">Family First Mortgage LLC · NMLS 2546884</span>
                   </div>
                 </div>

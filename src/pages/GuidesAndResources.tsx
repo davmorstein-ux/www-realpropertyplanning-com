@@ -148,8 +148,7 @@ const GuidesAndResources = () => {
             src="/resources-hero.webp"
             alt="Seniors reading guides outside a resource center"
             style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
-            loading="eager"
-          />
+            loading="eager" sizes="100vw" decoding="async"/>
         </div>
 
         {/* Blue band — matches site standard */}

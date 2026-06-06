@@ -144,9 +144,7 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
 
                     display: "block",
 
-                  }}
-
-                />
+                  }} sizes="100vw" decoding="async"/>
 
               </div>
 
@@ -253,8 +251,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
               src={wtdwHeroImage}
               alt="Quiet Washington street with craftsman homes"
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager"
-            />
+              loading="eager" sizes="100vw" decoding="async"/>
             <HeroBandTitle as="div">A Guide to Independent Professionals</HeroBandTitle>
           </div>
         </section>
@@ -276,7 +273,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                         onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}
                       >
                         <div style={{ width: "100%", height: 180, overflow: "hidden" }}>
-                          <img src={s.image} alt={s.alt} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} />
+                          <img src={s.image} alt={s.alt} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} sizes="100vw" decoding="async"/>
                         </div>
                         <div style={{ padding: "16px 20px 0" }}>
                           <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#1B3A6B", lineHeight: 1.3, marginBottom: 6 }}>{s.title}</h3>

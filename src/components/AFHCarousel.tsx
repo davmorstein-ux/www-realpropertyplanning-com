@@ -217,7 +217,7 @@ export default function AFHCarousel() {
                   objectPosition: "top",
                   display: "block",
                 }}
-                onError={(e) => {
+                onError={(e) = sizes="(max-width: 768px) 100vw, 304px"> {
                   (e.target as HTMLImageElement).style.display = "none";
                 }}
               />

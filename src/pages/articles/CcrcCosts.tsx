@@ -54,8 +54,7 @@ const CcrcCosts = () => {
               src={heroImage}
               alt="Older couple on a bench overlooking a scenic river valley with a vintage car nearby — senior housing and life-transition resources"
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-              loading="eager"
-            />
+              loading="eager" sizes="100vw" decoding="async"/>
           </div>
           <HeroBandTitle>{"Continuing Care Retirement Community Costs"}</HeroBandTitle>
         </>

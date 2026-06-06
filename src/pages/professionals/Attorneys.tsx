@@ -88,8 +88,7 @@ const Attorneys = () => (
                   alt=""
                   aria-hidden="true"
                   className="w-16 h-16 object-contain mb-5"
-                  loading="lazy"
-                />
+                  loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                 <h2 className="font-serif text-[1.375rem] font-semibold text-foreground mb-2">
                   {a.title}
                 </h2>

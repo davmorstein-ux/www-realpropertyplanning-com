@@ -86,8 +86,7 @@ const HomepageFunnel = () => (
                       width: "100%",
                       height: "auto",
                       margin: 0,
-                    }}
-                  />
+                    }} sizes="100vw" decoding="async"/>
                   <div
                     className="flex flex-1 flex-col items-center text-center"
                     style={{ padding: "24px 20px 26px" }}

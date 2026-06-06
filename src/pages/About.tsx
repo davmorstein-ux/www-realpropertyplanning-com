@@ -42,8 +42,7 @@ const About = () => {
             alt="Real Property Planning — Senior Transitions"
             className="w-full h-auto object-cover"
             loading="eager"
-            fetchPriority="high"
-          />
+            fetchPriority="high" sizes="100vw"/>
           <h1 className="sr-only">About Real Property Planning</h1>
         </section>
 
@@ -56,8 +55,7 @@ const About = () => {
                   src={daveHeadshot}
                   alt="David Stein licensed real estate broker and certified appraiser Kirkland Washington"
                   className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
+                  loading="lazy" sizes="100vw" decoding="async"/>
               </div>
               <p className="mt-4 font-serif text-4xl text-foreground font-bold leading-tight text-center">
                 David Stein

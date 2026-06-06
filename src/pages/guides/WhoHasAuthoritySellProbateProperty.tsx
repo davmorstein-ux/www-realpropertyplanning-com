@@ -101,8 +101,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
               src={wtdwHeroImage}
               alt="Quiet Washington street with craftsman homes"
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager"
-            />
+              loading="eager" sizes="100vw" decoding="async"/>
             <HeroBandTitle as="div">Transfer Ownership</HeroBandTitle>
           </div>
         </section>
@@ -126,7 +125,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
               </Link>
               <a href="tel:2069003015">
                 <Button variant="outline" size="lg" className="rounded-lg bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" loading="lazy" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                   Call (206) 900-3015
                 </Button>
               </a>
@@ -305,7 +304,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">
                 <Button variant="gold" size="lg" className="rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" loading="lazy" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                   Call (206) 900-3015
                 </Button>
               </a>

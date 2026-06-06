@@ -31,8 +31,7 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
         className="block w-full h-auto select-none"
         style={{ background: "transparent", backgroundColor: "transparent" }}
         draggable={false}
-        loading="lazy"
-      />
+        loading="lazy" sizes="100vw" decoding="async"/>
     </Link>
   );
 };

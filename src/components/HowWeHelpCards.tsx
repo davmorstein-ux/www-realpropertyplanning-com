@@ -54,8 +54,7 @@ const HowWeHelpCards = () => {
                         src={card.iconSrc}
                         alt={card.iconAlt}
                         className={`${card.iconSize} object-contain`}
-                        loading="lazy"
-                      />
+                        loading="lazy" sizes="100vw" decoding="async"/>
                     </div>
                     <h3
                       className="font-serif font-extrabold mb-3 text-center text-foreground"

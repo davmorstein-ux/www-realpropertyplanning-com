@@ -73,8 +73,7 @@ export default function NewHomePreview() {
             <img
               src="/rpp-logo-v4.webp"
               alt="Real Property Planning"
-              style={{ height: 52, width: "auto", display: "block" }}
-            />
+              style={{ height: 52, width: "auto", display: "block" }} sizes="100vw" decoding="async"/>
           </Link>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <Link

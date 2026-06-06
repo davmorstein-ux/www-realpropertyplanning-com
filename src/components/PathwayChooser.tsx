@@ -60,8 +60,7 @@ const PathwayChooser = () => {
                     alt=""
                     aria-hidden="true"
                     className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
-                    loading="lazy"
-                  />
+                    loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                 </div>
 
                 {/* Text */}

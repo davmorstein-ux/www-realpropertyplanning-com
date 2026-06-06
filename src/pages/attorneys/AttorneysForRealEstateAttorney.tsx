@@ -30,8 +30,7 @@ const AttorneysForRealEstateAttorney = () => (
             src={heroImage}
             alt="Real estate attorney at desk reviewing a real estate matter"
             className="max-w-full h-auto max-h-[420px] object-contain"
-            loading="eager"
-          />
+            loading="eager" sizes="100vw" decoding="async"/>
         </div>
         <HeroBandTitle compact>Real Estate Attorney</HeroBandTitle>
       </section>

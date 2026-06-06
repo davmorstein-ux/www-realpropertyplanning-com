@@ -30,8 +30,7 @@ const AttorneysForElderLawAttorneys = () => (
             src={heroImage}
             alt="Elder law attorney at desk reviewing estate plan documents"
             className="max-w-full h-auto max-h-[420px] object-contain"
-            loading="eager"
-          />
+            loading="eager" sizes="100vw" decoding="async"/>
         </div>
         <HeroBandTitle compact>Elder Law Attorney</HeroBandTitle>
       </section>

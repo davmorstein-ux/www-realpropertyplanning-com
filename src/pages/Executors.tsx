@@ -116,8 +116,7 @@ const Executors = () => (
                       objectFit: "cover",
                       objectPosition: "center",
                       display: "block",
-                    }}
-                  />
+                    }} sizes="100vw" decoding="async"/>
                 </div>
 
                 {/* Title bar — fixed height so all 3 align */}

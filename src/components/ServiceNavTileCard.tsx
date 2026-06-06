@@ -97,7 +97,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
         aria-hidden="true"
         className="block h-auto w-full pointer-events-none select-none"
         draggable={false}
-       loading="lazy"/>
+       loading="lazy" sizes="100vw" decoding="async"/>
 
       <span
         className={`absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] pointer-events-none sm:px-[10px] sm:py-[6px] ${tile.contentOffsetY ? '' : '-translate-y-[10.2%]'} ${tile.mobileContentOffsetY ? 'has-mobile-offset' : ''}`}
@@ -116,8 +116,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
               ...(tile.iconScale && tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY}) scale(${tile.iconScale})` } : {}),
               ...(tile.mobileIconOffsetY ? { '--mobile-icon-mt': tile.mobileIconOffsetY } as React.CSSProperties : {}),
             }}
-            loading="lazy"
-          />
+            loading="lazy" sizes="100vw" decoding="async"/>
         ) : (
           <span aria-hidden="true" className="block w-[45%] max-h-[38%]" style={{ aspectRatio: "1 / 1" }} />
         )}

@@ -50,7 +50,7 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
             <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${
               isDark ? "bg-gold/15 border border-gold/25" : "bg-gold/10 border border-gold/20"
             }`}>
-              <img src={step.iconSrc} alt="" aria-hidden="true" className="w-6 h-6 object-contain" loading="lazy" />
+              <img src={step.iconSrc} alt="" aria-hidden="true" className="w-6 h-6 object-contain" loading="lazy" sizes="100vw" decoding="async"/>
             </div>
             <div className="pt-1">
               <p className={`font-semibold text-lg leading-snug mb-1 ${

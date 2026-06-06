@@ -67,8 +67,7 @@ const Contact = () => {
             src={contactHero}
             alt="Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact"
             className="w-full h-auto block"
-            loading="eager"
-          />
+            loading="eager" sizes="100vw" decoding="async"/>
           <HeroBandTitle>Get Connected</HeroBandTitle>
         </div>
       </section>
@@ -92,7 +91,7 @@ const Contact = () => {
                 <div>
                   <p className="mb-1 font-medium text-foreground">Phone</p>
                   <a href="tel:2069003015" className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" loading="lazy" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" loading="lazy" sizes="100vw" decoding="async"/>
                     <span>(206) 900-3015</span>
                   </a>
                 </div>
@@ -100,7 +99,7 @@ const Contact = () => {
                 <div>
                   <p className="mb-1 font-medium text-foreground">Email</p>
                   <a href="mailto:info@realpropertyplanning.com" className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" loading="lazy" />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" loading="lazy" sizes="100vw" decoding="async"/>
                     <span>info@realpropertyplanning.com</span>
                   </a>
                 </div>
@@ -108,7 +107,7 @@ const Contact = () => {
                 <div>
                   <p className="mb-1 font-medium text-foreground">Service Areas</p>
                   <p className="inline-flex items-center text-muted-foreground">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" loading="lazy" />
+                    <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" loading="lazy" sizes="100vw" decoding="async"/>
                     <span>Throughout Washington State, with a strong focus in Western WA &amp; Puget Sound</span>
                   </p>
                 </div>

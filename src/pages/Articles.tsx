@@ -144,8 +144,7 @@ const Articles = () => {
                       objectFit: "cover",
                       objectPosition: "top",
                       display: "block",
-                    }}
-                  />
+                    }} sizes="100vw" decoding="async"/>
                 </div>
 
                 {/* Text */}

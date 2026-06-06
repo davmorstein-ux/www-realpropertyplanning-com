@@ -26,8 +26,7 @@ const EstatePlanningPowersOfAttorney = () => (
             src={heroImage}
             alt="Estate planning attorney at desk reviewing estate plan documents"
             className="max-w-full h-auto max-h-[420px] object-contain"
-            loading="eager"
-          />
+            loading="eager" sizes="100vw" decoding="async"/>
         </div>
         <HeroBandTitle compact>Estate Planning Attorney</HeroBandTitle>
       </section>

@@ -227,7 +227,7 @@ const TransitionResources = () => {
                   size="lg"
  className="hover:-light px-8 h-[52px] text-base rounded-lg w-full sm:w-auto"
                 >
-                  <img src={iconBookOpen3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" />
+                  <img src={iconBookOpen3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" sizes="100vw" decoding="async"/>
                   Explore Resources
                 </Button>
               </a>
@@ -237,7 +237,7 @@ const TransitionResources = () => {
                   variant="outline3d"
                   className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto px-8 h-[52px] text-base rounded-lg"
                 >
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async"/>
                   Contact Real Property Planning
                 </Button>
               </Link>
@@ -300,9 +300,9 @@ const TransitionResources = () => {
                 >
                   <div className="flex items-start gap-4">
                     {cat.image ? (
-                      <img src={cat.image} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-1 shrink-0 transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" />
+                      <img src={cat.image} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-1 shrink-0 transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async"/>
                     ) : cat.iconSrc ? (
-                      <img src={cat.iconSrc} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-1 shrink-0 transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" />
+                      <img src={cat.iconSrc} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-1 shrink-0 transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async"/>
                     ) : null}
                     <div>
                       <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground group-hover:text-accent transition-colors mb-1">
@@ -358,7 +358,7 @@ const TransitionResources = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center gap-3 mb-4">
-              <img src={iconHandshake3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0" loading="lazy" />
+              <img src={iconHandshake3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
               <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold">
                 For Professional Referral Partners
               </h2>
@@ -436,7 +436,7 @@ const TransitionResources = () => {
                 size="lg"
  className="hover:-light px-8 h-[52px] text-base rounded-lg"
               >
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async"/>
                 Start the Conversation
               </Button>
             </Link>

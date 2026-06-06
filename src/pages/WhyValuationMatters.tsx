@@ -129,8 +129,7 @@ const WhyValuationMatters = () => {
           className="w-full h-auto object-cover"
           loading="eager"
           fetchPriority="high"
-          style={{ display: 'block' }}
-        />
+          style={{ display: 'block' }} sizes="100vw"/>
         <HeroBandTitle>Pricing &amp; Valuation Expertise</HeroBandTitle>
       </section>
 
@@ -192,7 +191,7 @@ const WhyValuationMatters = () => {
       <section className="py-12 lg:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-5" loading="lazy"/>
+            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-5" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-3">
               What Happens When Estate Property Pricing Goes Wrong?
             </h2>

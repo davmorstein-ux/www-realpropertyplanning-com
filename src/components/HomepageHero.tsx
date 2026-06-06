@@ -155,8 +155,7 @@ const HomepageHero = () => {
               animation: "rppHeroFadeIn 1.2s ease forwards",
               margin: 0,
               padding: 0,
-            }}
-          />
+            }} sizes="100vw"/>
         </picture>
 
       </section>

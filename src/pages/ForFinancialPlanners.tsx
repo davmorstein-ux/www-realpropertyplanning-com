@@ -40,8 +40,7 @@ const ForFinancialPlanners = () => {
               src={heroImage}
               alt="Financial planners guidance — estate and senior transition real estate in Washington State"
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager"
-            />
+              loading="eager" sizes="100vw" decoding="async"/>
             <HeroBandTitle as="div">Guidance for Financial Planning</HeroBandTitle>
           </div>
         </section>

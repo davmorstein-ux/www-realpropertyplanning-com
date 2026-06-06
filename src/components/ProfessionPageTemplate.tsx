@@ -173,8 +173,7 @@ const ProfessionPageTemplate = ({
                           src={pro.photo}
                           alt={pro.name}
                           className="w-[100px] h-[100px] rounded-full object-cover shrink-0"
-                          loading="lazy"
-                        />
+                          loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                       ) : (
                         <div className="w-[100px] h-[100px] rounded-full bg-muted flex items-center justify-center shrink-0">
                           <User className="w-10 h-10 text-muted-foreground/50" />

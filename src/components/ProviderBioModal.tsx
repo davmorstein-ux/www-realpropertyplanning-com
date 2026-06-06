@@ -87,8 +87,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     objectFit: "cover",
                     border: "2px solid #C9A84C",
                     flexShrink: 0,
-                  }}
-                />
+                  }} sizes="100vw" decoding="async"/>
               )}
               <div style={{ flex: 1 }}>
                 <div
@@ -128,8 +127,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 <img
                   src={props.logo}
                   alt={props.logoAlt || props.company}
-                  style={{ height: 40, width: "auto", objectFit: "contain", flexShrink: 0 }}
-                />
+                  style={{ height: 40, width: "auto", objectFit: "contain", flexShrink: 0 }} sizes="100vw" decoding="async"/>
               )}
             </div>
 
@@ -261,8 +259,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               border: open ? "3px solid #C9A84C" : "2px solid #e0d8c8",
               display: "block",
               transition: "border 0.2s ease",
-            }}
-          />
+            }} sizes="100vw" decoding="async"/>
         ) : (
           <div
             style={{
