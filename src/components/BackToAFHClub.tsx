@@ -2,46 +2,31 @@ import { Link } from "react-router-dom";
 
 export default function BackToAFHClub() {
   return (
-    <div
-      style={{
-        padding: "48px 24px",
-        textAlign: "center",
-        background: "#f7f4ef",
-      }}
-    >
+    <div style={{ textAlign: "center", padding: "48px 24px 64px" }}>
       <Link
         to="/afh-club"
         style={{
           display: "inline-flex",
           alignItems: "center",
+          justifyContent: "center",
           gap: 10,
-          fontSize: 12,
           fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-          fontWeight: 700,
-          letterSpacing: "0.2em",
+          fontSize: 18,
+          fontWeight: 900,
+          letterSpacing: "0.22em",
           textTransform: "uppercase",
-          color: "#e8e2d9",
-          background: "#2c3a48",
-          border: "1px solid #b87333",
-          padding: "14px 28px",
-          borderRadius: 4,
+          color: "#ffffff",
           textDecoration: "none",
-          transition: "background 0.2s ease",
+          background: "#0a1628",
+          border: "2px solid #C9A84C",
+          padding: "10px 24px",
+          borderRadius: 2,
+          boxShadow: "inset 0 0 0 1px rgba(201,168,76,0.3), 0 4px 24px rgba(10,22,40,0.18)",
         }}
+        onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#1a2a42")}
+        onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#0a1628")}
       >
-        <svg
-          width="12"
-          height="12"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <polyline points="15 18 9 12 15 6" />
-        </svg>
-        Back to AFH Club
+        ← Back to AFH Club
       </Link>
     </div>
   );
