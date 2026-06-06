@@ -595,12 +595,6 @@ main,
   filter: brightness(1.05);
 }
 
-.date-valuation-cta-text {
-  font-weight: 900 !important;
-  -webkit-text-stroke: 0.18px currentColor;
-  text-shadow: 0.16px 0 currentColor, -0.16px 0 currentColor;
-}
-
 /* ═══════════════════════════════════════════════
    PREMIUM GOLD DIVIDER
    Usage: <div class="premium-divider" />
@@ -691,74 +685,6 @@ main,
 .bg-navy-dark .card-3d,
 [class*="bg-primary"] .card-3d {
   background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 25% 97%) 50%, hsl(38 18% 94%) 100%);
-}
-
-/* ═══════════════════════════════════════════════
-   BLUE PREMIUM FLAT — drop-in for card-3d with blue tile look
-═══════════════════════════════════════════════ */
-.card-3d-blue-skin {
-  @apply relative cursor-pointer transition-all duration-200;
-  border-radius: 18px;
-  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 50%, hsl(210 12% 96%) 100%);
-  border: 2px solid hsl(210 85% 58% / 0.45);
-  box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.03);
-}
-.card-3d-blue-skin::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 8%;
-  right: 8%;
-  height: 2px;
-  border-radius: 9999px;
-  background: linear-gradient(to right, transparent, hsl(210 80% 60% / 0.5), transparent);
-  pointer-events: none;
-  z-index: 2;
-}
-.card-3d-blue-skin::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 4%;
-  right: 4%;
-  height: 6px;
-  border-radius: 0 0 14px 14px;
-  background: linear-gradient(180deg, transparent 0%, hsl(210 50% 70%) 70%, hsl(210 55% 60%) 100%);
-  pointer-events: none;
-  z-index: 0;
-}
-.card-3d-blue-skin:hover {
-  transform: translateY(-4px);
-  border-color: hsl(210 85% 50% / 0.7);
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.10),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.03);
-}
-.card-3d-blue-skin:active {
-  transform: translateY(1px);
-  box-shadow:
-    0 2px 6px -2px rgba(0, 0, 0, 0.12),
-    inset 0 1px 3px 0 rgba(0, 0, 0, 0.06);
-}
-
-/* ═══════════════════════════════════════════════
-   PREMIUM SHELL TILE — image-backed nav card
-═══════════════════════════════════════════════ */
-.premium-shell-tile {
-  @apply relative overflow-hidden cursor-pointer transition-all duration-300 ease-out;
-  border-radius: 18px;
-  min-height: 180px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-.premium-shell-tile:hover {
-  transform: translateY(-3px);
-  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.08));
 }
 
 /* ═══════════════════════════════════════════════
@@ -928,95 +854,6 @@ main,
   max-width: 100% !important;
   padding: 16px 8px 12px !important;
 }
-.pro-team-grid .interior-tile h3 {
-  min-height: 40px !important;
-}
-
-/* ═══════════════════════════════════════════════
-   BLUE TRIM 3D PREMIUM KEYCAP — electric blue variant (retained for legacy refs)
-═══════════════════════════════════════════════ */
-.card-3d-blue {
-  @apply relative cursor-pointer transition-all duration-200;
-  border-radius: 22px;
-  background: linear-gradient(
-    180deg,
-    hsl(210 15% 96%) 0%,
-    hsl(210 12% 91%) 40%,
-    hsl(210 10% 86%) 80%,
-    hsl(210 8% 82%) 100%
-  );
-  border: 1.5px solid hsl(210 15% 80%);
-  padding: 8px 8px 12px 8px;
-  box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
-    inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
-}
-.card-3d-blue .card-3d-blue__inner {
-  @apply relative;
-  border-radius: 14px;
-  border: 3px solid hsl(var(--gold));
-  box-shadow:
-    0 0 0 1.5px hsl(var(--gold) / 0.5),
-    0 0 6px 0 hsl(var(--gold) / 0.12),
-    inset 0 0 0 1px hsl(var(--gold) / 0.3);
-  overflow: hidden;
-}
-.card-3d-blue .card-3d-blue__face {
-  @apply relative;
-  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 99%) 50%, hsl(210 15% 97%) 100%);
-  border-radius: 11px;
-  box-shadow:
-    inset 0 3px 6px 0 rgba(255, 255, 255, 0.95),
-    inset 0 -2px 4px 0 rgba(0, 0, 0, 0.04),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
-}
-.card-3d-blue::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 6%;
-  right: 6%;
-  height: 3px;
-  border-radius: 9999px;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.9), transparent);
-  pointer-events: none;
-  z-index: 2;
-}
-.card-3d-blue::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 3%;
-  right: 3%;
-  height: 10px;
-  border-radius: 0 0 18px 18px;
-  background: linear-gradient(180deg, transparent 0%, hsl(210 10% 82%) 60%, hsl(210 8% 78%) 100%);
-  pointer-events: none;
-  z-index: 0;
-}
-.card-3d-blue:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.10),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
-    inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
-}
-.card-3d-blue:hover .card-3d-blue__inner {
-  border-color: hsl(var(--gold));
-  box-shadow:
-    0 0 0 1.5px hsl(var(--gold) / 0.6),
-    0 0 10px 0 hsl(var(--gold) / 0.2),
-    inset 0 0 0 1px hsl(var(--gold) / 0.4);
-}
-.card-3d-blue:active {
-  transform: translateY(1px);
-  padding-bottom: 8px;
-  box-shadow:
-    0 3px 8px -3px rgba(0, 0, 0, 0.14),
-    0 1px 3px -1px rgba(0, 0, 0, 0.08),
-    inset 0 2px 3px 0 rgba(0, 0, 0, 0.06);
-}
 
 /* ═══════════════════════════════════════════════
    PREMIUM 3D PILL — quick prompts + county links
@@ -1159,13 +996,6 @@ main,
   .premium-tile[data-tile-name="realtor"] .tile-icon {
     transform: translateY(15%) scale(1.1) !important;
   }
-}
-/* Non-premium tile icons (cards with group class) */
-.tile-icon-hover {
-  @apply transition-transform duration-300 ease-out;
-}
-.group:hover .tile-icon-hover {
-  @apply scale-110;
 }
 
 @media (max-width: 639px) {
@@ -1409,21 +1239,6 @@ main,
     font-size: 0.9rem !important;
   }
 }
-/* Attorney tiles: tighten line spacing without changing font size */
-.attorney-tiles-grid .premium-tile h3 {
-  line-height: 0.92 !important;
-}
-
-/* Attorney tiles: vertically balance content within tile face */
-.attorney-tiles-grid .premium-tile > span {
-  transform: translateY(-9%) !important;
-}
-.attorney-tiles-grid .premium-tile .tile-icon {
-  margin-top: -3% !important;
-}
-.attorney-tiles-grid .premium-tile h3 {
-  margin-top: -0.2rem !important;
-}
 
 @media (min-width: 640px) {
   .premium-tile .tile-label-tight {
@@ -1647,15 +1462,6 @@ main,
     0 1px 0 0 hsl(36 14% 85%),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
     inset 0 -1px 2px 0 rgba(0, 0, 0, 0.03) !important;
-}
-
-/* ═══════════════════════════════════════════════
-   FOOTER DIVIDER — refined gold-tint line
-═══════════════════════════════════════════════ */
-.footer-divider {
-  border: 0;
-  height: 1px;
-  background: linear-gradient(to right, transparent, hsl(var(--gold) / 0.18), transparent);
 }
 
 /* ═══════════════════════════════════════════════
@@ -1948,15 +1754,6 @@ h4 + .text-muted-foreground {
   font-size: unset !important;
   line-height: unset !important;
 }
-
-/* 7. Hero subheading — bright white + match h1 typography (beats h1+p global rule) */
-.hero-bright-subheading {
-  color: #ffffff !important;
-  opacity: 1 !important;
-  font-size: 18px !important;
-  line-height: 1.625 !important;
-  font-weight: 700 !important;
-}
 @media (min-width: 768px) {
   .hero-bright-subheading {
     font-size: 22px !important;
@@ -2087,9 +1884,7 @@ button:not([data-nav-button]),
   .p1title, .p2title, .p3title, .patitle { font-size: 26px !important; }
   .r2-label { font-size: 13px !important; font-family: 'DM Sans', sans-serif !important; }
   .p1label { font-size: 13px !important; font-family: 'DM Sans', sans-serif !important; }
-  .p2label { font-size: 13px !important; font-family: 'DM Sans', sans-serif !important; }
   .p3label { font-size: 13px !important; font-family: 'DM Sans', sans-serif !important; }
-  .palabel { font-size: 13px !important; font-family: 'DM Sans', sans-serif !important; }
   .r2-pill { font-size: 13px !important; }
   .hn-question { font-size: 38px !important; font-family: 'DM Sans', serif !important; color: #8B1A1A !important; }
   .hn-title { font-size: 28px !important; font-family: 'DM Sans', serif !important; color: #8B1A1A !important; }
@@ -2111,15 +1906,6 @@ button:not([data-nav-button]),
   to   { transform: translate3d(-50%, 0, 0); }
 }
 
-.affiliation-marquee-track {
-  animation: affiliation-marquee-scroll 120s linear infinite;
-  will-change: transform;
-}
-
-.group:hover .affiliation-marquee-track {
-  animation-play-state: paused;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .affiliation-marquee-track {
     animation: none;
@@ -2134,12 +1920,6 @@ button:not([data-nav-button]),
 @keyframes affiliation-ring-spin {
   from { transform: rotateY(0deg); }
   to   { transform: rotateY(-360deg); }
-}
-
-.affiliation-ring-spin {
-  animation: affiliation-ring-spin 36s linear infinite;
-  transform-style: preserve-3d;
-  will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2193,34 +1973,6 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
 .homepage-cta-card .homepage-cta-card__label {
   font-weight: 700 !important;
   font-size: 19px !important;
-}
-
-/* ==================================================================
- * Homepage nav link hover — gold color shift + left-to-right underline
- * Applied to all top-level nav items in HomepageHero (links + Services button).
- * ================================================================== */
-.nav-link-hover {
-  position: relative;
-  transition: color 0.2s ease;
-}
-.nav-link-hover::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 100%;
-  background-color: #C9A84C;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.2s ease;
-  pointer-events: none;
-}
-.nav-link-hover:hover {
-  color: #C9A84C !important;
-}
-.nav-link-hover:hover::after {
-  transform: scaleX(1);
 }
 
 /* Override Tailwind alpha-modified text colors so descriptive copy
@@ -2323,17 +2075,6 @@ img, svg, hr {
 
 [data-radix-accordion-content][data-state='closed'] {
   animation: accordionUp 3.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.header-logo {
-  transition: filter 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-}
-
-.header-logo:hover {
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))
-          drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
-  transform: scale(1.05);
 }
 
 /* Premium cards: no underlines on any text within gold-bordered card links */
