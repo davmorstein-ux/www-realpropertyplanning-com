@@ -42,6 +42,9 @@ export default function ArticlesCarousel() {
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const isVisible = useIsVisible(sectionRef, "0px");
+  const prefersReducedMotion = useReducedMotion();
 
   const slideTo = useCallback(
     (newPos: number) => {
