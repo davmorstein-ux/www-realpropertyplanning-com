@@ -206,6 +206,10 @@ export default function AFHCarousel() {
               <img
                 src={topic.img}
                 alt={topic.title}
+                width={304}
+                height={405}
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: "100%",
                   height: "100%",
@@ -217,6 +221,7 @@ export default function AFHCarousel() {
                   (e.target as HTMLImageElement).style.display = "none";
                 }}
               />
+
 
               {/* Permanent bottom label */}
               <div
