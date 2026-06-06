@@ -49,7 +49,7 @@ const ExecutorSellBeforeProbate = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
             <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async"/>
             </div>
 
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
@@ -219,7 +219,7 @@ const ExecutorSellBeforeProbate = () => (
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear Next Step</h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you're dealing with this situation and want help thinking through your options, a short conversation can often bring clarity.</p>
           <p className="text-primary-foreground/50 text-base mb-8">No pressure. Just practical guidance.</p>
-          <Link to="/contact"><Button variant="gold" size="lg"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>Schedule a Consultation</Button></Link>
+          <Link to="/contact"><Button variant="gold" size="lg"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async"/>Schedule a Consultation</Button></Link>
         </div>
       </div>
     </section>

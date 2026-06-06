@@ -35,8 +35,7 @@ const AttorneyEducationalPage = (p: AttorneyEducationalPageProps) => (
               src={p.heroImage}
               alt={p.heroImageAlt || ""}
               className="max-w-full h-auto max-h-[420px] object-contain"
-              loading="eager"
-            />
+              loading="eager" sizes="100vw" decoding="async"/>
           </div>
           <HeroBandTitle compact>{p.title}</HeroBandTitle>
         </section>

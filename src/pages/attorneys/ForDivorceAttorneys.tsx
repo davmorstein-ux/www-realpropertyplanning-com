@@ -81,8 +81,7 @@ const ForDivorceAttorneys = () => (
                         src={a.photo}
                         alt={a.alt}
                         className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
-                        loading="lazy"
-                      />
+                        loading="lazy" sizes="100vw" decoding="async"/>
                       <h2 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">
                         {a.name}
                       </h2>
@@ -94,8 +93,7 @@ const ForDivorceAttorneys = () => (
                           src={a.logo}
                           alt={a.logoAlt || `${a.company} logo`}
                           className="h-12 w-auto max-w-[180px] object-contain mb-4"
-                          loading="lazy"
-                        />
+                          loading="lazy" sizes="100vw" decoding="async"/>
                       )}
                       <p className="text-muted-foreground text-sm italic mb-5">{a.specialty}</p>
 

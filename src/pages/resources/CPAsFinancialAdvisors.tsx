@@ -39,8 +39,7 @@ const CPAsFinancialAdvisors = () => (
                 alt=""
                 aria-hidden="true"
                 className="block w-full max-w-[15rem] h-auto object-contain"
-                loading="lazy"
-              />
+                loading="lazy" sizes="100vw" decoding="async"/>
             </div>
 
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Resources</p>
@@ -91,8 +90,7 @@ const CPAsFinancialAdvisors = () => (
                     src={purpleGroupLogo}
                     alt="The Purple Group — Tax, Accounting, and Advisory"
                     className="w-full h-auto object-contain"
-                    loading="lazy"
-                  />
+                    loading="lazy" sizes="100vw" decoding="async"/>
                 </div>
                 <div className="flex-1 px-6 py-7 md:px-8">
                   <p className="text-muted-foreground text-base leading-relaxed">

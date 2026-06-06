@@ -113,8 +113,7 @@ const Sitemap = () => {
             src="/Probate-inherited_property_carride_cropped.webp"
             alt="Site map — Real Property Planning"
             className="w-full h-auto block"
-            loading="eager"
-          />
+            loading="eager" sizes="100vw" decoding="async"/>
         </section>
 
         <HeroBandTitle>Site Map</HeroBandTitle>

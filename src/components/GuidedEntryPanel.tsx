@@ -46,7 +46,7 @@ const GuidedEntryPanel = () => {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 border border-gold/20 mb-5">
-              <img src={iconHelp3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain" loading="lazy" />
+              <img src={iconHelp3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
             </div>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
               Let's Point You in the Right Direction
@@ -69,7 +69,7 @@ const GuidedEntryPanel = () => {
                   <div className="card-3d-premium__face flex items-center gap-5 p-5 sm:p-6">
                     {/* Icon — standalone 3D, no background */}
                     <div className="flex shrink-0 items-center justify-center w-[72px] sm:w-[80px]">
-                      <img src={opt.iconSrc} alt="" aria-hidden="true" className="h-14 w-14 sm:h-16 sm:w-16 object-contain drop-shadow-md transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" />
+                      <img src={opt.iconSrc} alt="" aria-hidden="true" className="h-14 w-14 sm:h-16 sm:w-16 object-contain drop-shadow-md transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                     </div>
 
                     {/* Text block */}

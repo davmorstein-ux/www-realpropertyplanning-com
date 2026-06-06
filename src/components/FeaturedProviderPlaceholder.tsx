@@ -26,8 +26,7 @@ const FeaturedProviderPlaceholder = ({ heading, altLabel }: Props) => (
                 src="/placeholder.svg"
                 alt={`Photo placeholder for ${altLabel}`}
                 className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
-                loading="lazy"
-              />
+                loading="lazy" sizes="100vw" decoding="async"/>
             </div>
             <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
               <div className="w-full mt-2 text-center sm:text-left">
@@ -41,19 +40,19 @@ const FeaturedProviderPlaceholder = ({ heading, altLabel }: Props) => (
                 </p>
                 <div className="space-y-1.5 text-sm">
                   <div className="flex items-start gap-2 justify-center sm:justify-start">
-                    <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" />
+                    <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async"/>
                     <span className="text-muted-foreground">Address</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                     <span className="text-accent">Phone</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                     <span className="text-accent">Email</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                    <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                     <span className="text-accent">Website</span>
                   </div>
                 </div>

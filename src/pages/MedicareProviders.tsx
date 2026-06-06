@@ -129,8 +129,7 @@ const MedicareProviders = () => (
                           src={p.photo}
                           alt={p.alt}
                           className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
-                          loading="lazy"
-                        />
+                          loading="lazy" sizes="100vw" decoding="async"/>
                         <h2 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">
                           {p.name}
                         </h2>
@@ -142,8 +141,7 @@ const MedicareProviders = () => (
                             src={p.logo}
                             alt={p.logoAlt || `${p.company} logo`}
                             className="h-36 w-auto max-w-[540px] object-contain mb-4"
-                            loading="lazy"
-                          />
+                            loading="lazy" sizes="100vw" decoding="async"/>
                         )}
                         <p className="text-muted-foreground text-sm italic mb-5">{p.specialty}</p>
 

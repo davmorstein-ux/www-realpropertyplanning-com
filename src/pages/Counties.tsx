@@ -170,7 +170,7 @@ const Counties = () => {
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconServiceAreas} alt="Service areas map illustration" width="240" height="240" className="mx-auto w-full max-w-[15rem] aspect-square h-auto object-contain mb-1.5" loading="lazy"/>
+            <img src={iconServiceAreas} alt="Service areas map illustration" width="240" height="240" className="mx-auto w-full max-w-[15rem] aspect-square h-auto object-contain mb-1.5" loading="lazy" sizes="100vw" decoding="async"/>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Service Areas
             </p>
@@ -213,8 +213,7 @@ const Counties = () => {
                           src={card.logo}
                           alt={`${card.county}, Washington official seal — probate, estate, and senior transition real estate services`}
                           className="w-full h-full object-contain"
-                          loading="lazy"
-                        />
+                          loading="lazy" sizes="100vw" decoding="async"/>
                       </span>
                       <h2 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
                         {card.county}

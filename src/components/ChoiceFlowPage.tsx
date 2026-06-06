@@ -46,8 +46,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                       src={node.heroImage || agingParentHero}
                       alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
                       className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-                      loading="eager"
-                    />
+                      loading="eager" sizes="100vw" decoding="async"/>
                     <HeroBandTitle>{node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}</HeroBandTitle>
                   </div>
                   <div style={{ marginBottom: '40px' }} />
@@ -116,8 +115,7 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
                           aria-hidden="true"
                           loading="lazy"
                           style={{ width: 56, height: 56 }}
-                          className="shrink-0 object-contain"
-                        />
+                          className="shrink-0 object-contain" sizes="100vw" decoding="async"/>
                       ) : (
                         <span style={{ width: 56, height: 56 }} className="shrink-0 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 text-gold flex items-center justify-center">
                           <Icon className="w-7 h-7" aria-hidden="true" />

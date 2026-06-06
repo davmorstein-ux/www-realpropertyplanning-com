@@ -375,8 +375,7 @@ const CountyPageTemplate = ({
                       src={COUNTY_LOGOS[countySlug]}
                       alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
                       className="w-full h-full object-contain"
-                      loading="eager"
-                    />
+                      loading="eager" sizes="100vw" decoding="async"/>
                   </a>
                 ) : (
                   <div
@@ -387,12 +386,11 @@ const CountyPageTemplate = ({
                       src={COUNTY_LOGOS[countySlug]}
                       alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
                       className="w-full h-full object-contain"
-                      loading="eager"
-                    />
+                      loading="eager" sizes="100vw" decoding="async"/>
                   </div>
                 )
               ) : (
-                <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
+                <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async"/>
               )}
             </div>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
@@ -530,14 +528,14 @@ const CountyPageTemplate = ({
                 if (cityData) {
                   return (
                     <Link key={cityName} to={`/cities/${cityData.slug}`} className="flex items-center gap-2 hover:text-gold transition-colors">
-                      <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0"  loading="lazy"/>
+                      <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async"/>
                       <span className="text-foreground hover:text-gold transition-colors text-sm">{cityName}</span>
                     </Link>
                   );
                 }
                 return (
                   <div key={cityName} className="flex items-center gap-2">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0"  loading="lazy"/>
+                    <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async"/>
                     <span className="text-muted-foreground text-sm">{cityName}</span>
                   </div>
                 );

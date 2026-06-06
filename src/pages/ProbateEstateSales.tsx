@@ -90,8 +90,7 @@ const ProbateEstateSales = () => {
               alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home"
               className="w-full h-auto object-cover"
               loading="eager"
-              fetchPriority="high"
-            />
+              fetchPriority="high" sizes="100vw"/>
           </div>
           <HeroBandTitle as="h2">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
         </section>
@@ -142,8 +141,7 @@ const ProbateEstateSales = () => {
                               src={s.image}
                               alt={s.alt}
                               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
-                              loading="lazy"
-                            />
+                              loading="lazy" sizes="100vw" decoding="async"/>
                           </div>
                           <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden p-5 md:p-6">
                             <h3 className="font-serif text-[19px] md:text-[22px] font-semibold text-navy mb-2 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ lineHeight: 1.3 }}>

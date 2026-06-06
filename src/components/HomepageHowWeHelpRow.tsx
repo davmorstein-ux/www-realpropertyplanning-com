@@ -47,8 +47,7 @@ const HomepageHowWeHelpRow = () => (
                 objectFit: "contain",
                 marginBottom: 16,
                 background: "transparent",
-              }}
-            />
+              }} sizes="100vw" decoding="async"/>
             <span
               className="font-serif font-semibold text-navy"
               style={{ fontSize: "18px", lineHeight: 1.3 }}

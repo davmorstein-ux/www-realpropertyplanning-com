@@ -120,8 +120,7 @@ const FinancialPlanners = () => {
                           src={p.logo}
                           alt={p.logoAlt}
                           className="h-[120px] md:h-[144px] w-auto object-contain mb-4"
-                          loading="lazy"
-                        />
+                          loading="lazy" sizes="100vw" decoding="async"/>
 
                         <div className="flex justify-center gap-5 mb-3">
                           {p.contacts.map((c) => (
@@ -130,8 +129,7 @@ const FinancialPlanners = () => {
                                 src={c.photo}
                                 alt={c.alt}
                                 className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] rounded-full object-cover border-2 border-border shadow-sm"
-                                loading="lazy"
-                              />
+                                loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                               <p className="text-foreground font-semibold text-sm mt-2">{c.name}</p>
                               {c.role && (
                                 <p className="text-muted-foreground text-xs">{c.role}</p>

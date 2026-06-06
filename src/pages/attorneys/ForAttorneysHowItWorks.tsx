@@ -72,8 +72,7 @@ const ForAttorneysHowItWorks = () => (
                 src={iconAttorneys}
                 alt="Referral process for Washington estate and probate attorneys"
                 className="block w-full max-w-[15rem] h-auto object-contain"
-                loading="lazy"
-              />
+                loading="lazy" sizes="100vw" decoding="async"/>
             </div>
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
               For Attorneys — Referral Process
@@ -87,7 +86,7 @@ const ForAttorneysHowItWorks = () => (
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                   Make a Referral
                 </Button>
               </Link>
@@ -224,7 +223,7 @@ const ForAttorneysHowItWorks = () => (
             <div className="flex flex-wrap gap-4">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                   Send a File Overview
                 </Button>
               </Link>

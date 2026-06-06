@@ -80,8 +80,7 @@ const GreyDivorce = () => (
               src={greyDivorceCircle}
               alt="Older couple facing grey divorce with divorce agreement and house keys"
               className="block mx-auto w-[220px] md:w-[260px] h-auto object-contain mb-6"
-              loading="eager"
-            />
+              loading="eager" sizes="100vw" decoding="async"/>
             <p className="font-sans text-sm md:text-base tracking-[0.2em] uppercase text-gold font-semibold mb-4">
               Planning &amp; Next Steps
             </p>

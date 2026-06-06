@@ -14,8 +14,7 @@ const GoldCheck3D = ({ size = 20, className = "" }: GoldCheck3DProps) => (
     width={size}
     height={size}
     className={`shrink-0 ${className}`}
-    style={{ width: size, height: size, minWidth: size }}
-  />
+    style={{ width: size, height: size, minWidth: size }} sizes="100vw" decoding="async"/>
 );
 
 export default GoldCheck3D;

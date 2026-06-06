@@ -142,8 +142,7 @@ export default function ProviderTile({
                         borderRadius: "50%",
                         objectFit: "cover",
                         border: "2px solid #C9A84C",
-                      }}
-                    />
+                      }} sizes="100vw" decoding="async"/>
                     {hasTwoPeople && (
                       <span
                         style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
@@ -164,8 +163,7 @@ export default function ProviderTile({
                         borderRadius: "50%",
                         objectFit: "cover",
                         border: "2px solid #C9A84C",
-                      }}
-                    />
+                      }} sizes="100vw" decoding="async"/>
                     <span style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}>
                       {name2}
                     </span>
@@ -195,8 +193,7 @@ export default function ProviderTile({
                 <img
                   src={logo}
                   alt={logoAlt || company}
-                  style={{ height: 40, width: "auto", objectFit: "contain", flexShrink: 0 }}
-                />
+                  style={{ height: 40, width: "auto", objectFit: "contain", flexShrink: 0 }} sizes="100vw" decoding="async"/>
               )}
             </div>
 
@@ -251,8 +248,7 @@ export default function ProviderTile({
           src={logo}
           alt={logoAlt || company}
           style={{ height: 88, width: "auto", objectFit: "contain", marginBottom: 16 }}
-          loading="lazy"
-        />
+          loading="lazy" sizes="100vw" decoding="async"/>
       )}
 
       {/* Tile: photo(s) */}
@@ -272,8 +268,7 @@ export default function ProviderTile({
                   transform: hovered ? "scale(1.05)" : "scale(1)",
                   transition: "transform 0.3s ease, border-color 0.3s ease",
                 }}
-                loading="lazy"
-              />
+                loading="lazy" sizes="100vw" decoding="async"/>
               <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
                 {name}
               </div>
@@ -294,8 +289,7 @@ export default function ProviderTile({
                   transform: hovered ? "scale(1.05)" : "scale(1)",
                   transition: "transform 0.3s ease, border-color 0.3s ease",
                 }}
-                loading="lazy"
-              />
+                loading="lazy" sizes="100vw" decoding="async"/>
               <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
                 {name2}
               </div>
@@ -318,8 +312,7 @@ export default function ProviderTile({
               transform: hovered ? "scale(1.05)" : "scale(1)",
               transition: "transform 0.3s ease, border-color 0.3s ease",
             }}
-            loading="lazy"
-          />
+            loading="lazy" sizes="100vw" decoding="async"/>
         )
       )}
 

@@ -28,8 +28,7 @@ const ResourceCard = ({
                   alt=""
                   aria-hidden="true"
                   className="h-9 w-9 object-contain transition-transform duration-300 ease-out group-hover:scale-110"
-                  loading="lazy"
-                />
+                  loading="lazy" sizes="100vw" decoding="async"/>
               )}
             </div>
             <div className="min-w-0 flex-1">

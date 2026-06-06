@@ -32,8 +32,7 @@ const GrayDivorce = () => {
                 alt=""
                 aria-hidden="true"
                 className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4"
-                loading="lazy"
-              />
+                loading="lazy" sizes="100vw" decoding="async"/>
               <p className="font-sans text-sm md:text-base tracking-[0.2em] uppercase text-gold font-semibold mb-4">
                 Planning &amp; Next Steps
               </p>

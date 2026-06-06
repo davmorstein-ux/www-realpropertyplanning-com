@@ -161,8 +161,7 @@ export default function ArticlesCarousel() {
                   objectFit: "cover",
                   objectPosition: "top",
                   display: "block",
-                }}
-              />
+                }} sizes="(max-width: 768px) 100vw, 304px"/>
 
               {/* Hover overlay */}
               <div

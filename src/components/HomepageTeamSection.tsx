@@ -37,8 +37,7 @@ const HomepageTeamSection = () => {
                 src={tile.icon}
                 alt={tile.label}
                 className="w-36 h-36 object-contain mb-3"
-                loading="lazy"
-              />
+                loading="lazy" sizes="100vw" decoding="async"/>
               <span className="text-foreground text-xl font-bold text-center">{tile.label}</span>
             </div>
           ))}

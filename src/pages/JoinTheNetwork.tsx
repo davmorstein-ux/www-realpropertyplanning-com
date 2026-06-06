@@ -351,13 +351,13 @@ const JoinTheNetwork = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <a href="tel:+12069003015">
                   <Button variant="gold" size="lg">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                     (206) 900-3015
                   </Button>
                 </a>
                 <a href="mailto:info@realpropertyplanning.com">
                   <Button variant="gold" size="lg">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                     info@realpropertyplanning.com
                   </Button>
                 </a>

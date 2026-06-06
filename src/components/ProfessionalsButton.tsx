@@ -133,8 +133,7 @@ export default function ProfessionalsButton() {
             display: "block",
             transition: "none",
             zIndex: 1,
-          }}
-        />
+          }} sizes="100vw" decoding="async"/>
         <canvas
           ref={canvasRef}
           width={W}

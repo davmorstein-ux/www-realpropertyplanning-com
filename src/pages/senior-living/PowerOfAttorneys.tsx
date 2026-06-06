@@ -189,7 +189,7 @@ const PowerOfAttorneys = () => {
                       transition: "filter 0.5s ease",
                     }}
                     draggable={false}
-                   loading="lazy"/>
+                   loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                 );
               })}
             </div>
@@ -306,7 +306,7 @@ const PowerOfAttorneys = () => {
                 alt=""
                 aria-hidden="true"
                 className="pointer-events-none absolute left-1/2 top-1/2 z-10 h-7 w-7 -translate-x-1/2 -translate-y-1/2 sm:h-9 sm:w-9"
-               loading="lazy"/>
+               loading="lazy" sizes="100vw" decoding="async"/>
             </div>
           </div>
         </div>
@@ -508,14 +508,14 @@ const PowerOfAttorneys = () => {
                 href="tel:+12069003015"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gold text-primary font-semibold rounded-lg hover:bg-gold/90 transition-colors text-base"
               >
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                 Call (206) 900-3015
               </a>
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary-foreground/10 text-primary-foreground font-semibold rounded-lg border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-colors text-base"
               >
-                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
                 Send a Message
               </Link>
             </div>

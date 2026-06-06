@@ -49,8 +49,7 @@ const AgingLifeCareManagers = () => {
               src={heroImage}
               alt="Aging Life Care Managers Washington State"
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager"
-            />
+              loading="eager" sizes="100vw" decoding="async"/>
             <HeroBandTitle as="div">Aging Life Care Managers</HeroBandTitle>
           </div>
         </section>

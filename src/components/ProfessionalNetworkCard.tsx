@@ -17,8 +17,7 @@ const ProfessionalNetworkCard = ({ tile }: { tile: ProfessionalNetworkTile }) =>
           src={tile.imageSrc}
           alt={tile.altText}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-          loading="lazy"
-        />
+          loading="lazy" sizes="100vw" decoding="async"/>
       </div>
       <h3 className="flex min-h-[74px] w-full items-center justify-center px-3 py-3 text-center font-serif font-semibold text-navy text-[18px] md:text-[19px] leading-tight bg-card">
         {tile.title}

@@ -70,7 +70,7 @@ const SituationFinderBlock = () => (
             >
               <div className="flex items-start gap-3">
                 <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center">
-                  <img src={s.iconSrc} alt="" aria-hidden="true" className="h-7 w-7 object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" />
+                  <img src={s.iconSrc} alt="" aria-hidden="true" className="h-7 w-7 object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async"/>
                 </div>
                 <div>
                   <p className="font-semibold text-foreground text-base leading-snug group-hover:text-gold transition-colors">

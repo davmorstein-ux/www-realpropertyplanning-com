@@ -110,8 +110,7 @@ const FeaturedSeniorMoveManagers = () => (
                           src={m.photo}
                           alt={m.alt}
                           className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
-                          loading="lazy"
-                        />
+                          loading="lazy" sizes="100vw" decoding="async"/>
                       )}
 
                       <h2 className="font-serif text-xl text-navy font-semibold leading-snug mb-1 mt-3">{m.name}</h2>

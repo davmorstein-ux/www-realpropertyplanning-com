@@ -280,8 +280,7 @@ const UnderstandingSeniorTransitions = () => {
                         alt=""
                         aria-hidden="true"
                         className="w-14 h-14 md:w-16 md:h-16 object-contain shrink-0 hidden sm:block"
-                        loading="lazy"
-                      />
+                        loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                       <div className="flex-1">
                         <h3 className="font-serif text-xl md:text-2xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                           {p.title}
@@ -389,7 +388,7 @@ const UnderstandingSeniorTransitions = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-7">
-                <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" />
+                <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
                   Keep Going
                 </p>
@@ -408,7 +407,7 @@ const UnderstandingSeniorTransitions = () => {
                     to={c.href}
                     className="group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/55 hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all flex flex-col"
                   >
-                    <img src={c.icon} alt="" aria-hidden="true" className="w-12 h-12 object-contain mb-4" loading="lazy" />
+                    <img src={c.icon} alt="" aria-hidden="true" className="w-12 h-12 object-contain mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                     <h3 className="font-serif text-xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                       {c.title}
                     </h3>
@@ -468,7 +467,7 @@ const UnderstandingSeniorTransitions = () => {
               </p>
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <img src={iconPhone} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" />
+                  <img src={iconPhone} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" sizes="100vw" decoding="async"/>
                   Start the Conversation
                 </Button>
               </Link>
