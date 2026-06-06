@@ -140,7 +140,6 @@ const HomepageHero = () => {
             width={1440}
             height={606}
             alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
-            fetchPriority="high"
             loading="eager"
             decoding="async"
             style={{
