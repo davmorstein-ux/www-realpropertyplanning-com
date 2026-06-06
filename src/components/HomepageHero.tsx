@@ -123,26 +123,41 @@ const HomepageHero = () => {
           padding: 0,
         }}
       >
-        <img
-          src="/homepage-hero.webp"
-          alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
-          fetchPriority="high"
-          loading="eager"
-          decoding="async"
-          style={{
-            display: "block",
-            width: "100%",
-            height: "auto",
-            minHeight: isMobile ? 200 : undefined,
-            objectFit: "cover",
-            objectPosition: "left center",
-            background: "transparent",
-            opacity: 0,
-            animation: "rppHeroFadeIn 1.2s ease forwards",
-            margin: 0,
-            padding: 0,
-          }}
-        />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcSet="/homepage-hero-mobile.webp"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 769px)"
+            srcSet="/homepage-hero.webp 1440w, /homepage-hero-1280.webp 1280w, /homepage-hero-1920.webp 1920w"
+            sizes="100vw"
+            type="image/webp"
+          />
+          <img
+            src="/homepage-hero.webp"
+            width={1440}
+            height={606}
+            alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            style={{
+              display: "block",
+              width: "100%",
+              height: "auto",
+              minHeight: isMobile ? 200 : undefined,
+              objectFit: "cover",
+              objectPosition: "left center",
+              background: "transparent",
+              opacity: 0,
+              animation: "rppHeroFadeIn 1.2s ease forwards",
+              margin: 0,
+              padding: 0,
+            }}
+          />
+        </picture>
 
       </section>
       <HeroBandTitle>
