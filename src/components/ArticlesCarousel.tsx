@@ -85,7 +85,7 @@ export default function ArticlesCarousel() {
   const CARD_W = 304;
 
   return (
-    <section style={{ background: "#f7f4ef", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}>
+    <section ref={sectionRef} style={{ background: "#f7f4ef", padding: "64px 24px 72px", fontFamily: "Georgia, serif", minHeight: 640 }}>
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
