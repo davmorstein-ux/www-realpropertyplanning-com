@@ -659,6 +659,14 @@ const App = () => (
           <Route path="/senior-living" element={<Navigate to="/senior-living-and-relocation" replace />} />
           <Route path="/lenders-financing" element={<Navigate to="/lenders-and-financing-specialists" replace />} />
           <Route path="/afh-club" element={<AFHClub />} />
+          <Route path="/afh-club/getting-started" element={<AFHGettingStarted />} />
+          <Route path="/afh-club/licensing-certification" element={<AFHLicensingCertification />} />
+          <Route path="/afh-club/training-education" element={<AFHTrainingEducation />} />
+          <Route path="/afh-club/building-inspection" element={<AFHBuildingInspection />} />
+          <Route path="/afh-club/costs-fees" element={<AFHCostsFees />} />
+          <Route path="/afh-club/buying-selling" element={<AFHBuyingSelling />} />
+          <Route path="/afh-club/regulations-compliance" element={<AFHRegulationsCompliance />} />
+          <Route path="/afh-club/find-a-professional" element={<AFHFindProfessional />} />
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
