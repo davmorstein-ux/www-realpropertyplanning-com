@@ -151,6 +151,10 @@ export default function ArticlesCarousel() {
               <img
                 src={article.img}
                 alt={article.title}
+                width={304}
+                height={405}
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: "100%",
                   height: "100%",
@@ -159,6 +163,7 @@ export default function ArticlesCarousel() {
                   display: "block",
                 }}
               />
+
               {/* Hover overlay */}
               <div
                 style={{
