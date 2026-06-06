@@ -1,20 +1,13 @@
 import { Children, ElementType, ReactNode } from "react";
 
-
 interface HeroBandTitleProps {
   children: ReactNode;
   as?: ElementType;
-  /** Render only the title element (skip the white spacer + bg-primary band wrapper). */
   bare?: boolean;
-  /** Use tighter vertical padding in the navy band. */
   compact?: boolean;
   className?: string;
 }
 
-// Sitewide hero-band title casing rule:
-// Title Case every word, EXCEPT 'to', 'a', 'an' which stay lowercase —
-// unless the word is the first word of the title (always capitalized).
-// Acronyms in KEEP_UPPER are preserved fully uppercase.
 const KEEP_LOWER = new Set(["to", "a", "an"]);
 const KEEP_UPPER = new Set(["CPA", "CPAS", "POA", "FAQ", "WA"]);
 
@@ -59,19 +52,16 @@ const HeroBandTitle = ({
 }: HeroBandTitleProps) => {
   const titleStyle = {
     color: "#FFFFFF",
-    fontFamily: '"Cormorant Garamond", "DM Sans", serif',
-    fontWeight: 500,
-    fontSize: ".85rem",
-    letterSpacing: "0.1em",
+    fontFamily: '"Raleway", "DM Sans", sans-serif',
+    fontWeight: 700,
+    fontSize: "1.25rem",
+    letterSpacing: "0.18em",
     lineHeight: 1.2,
     opacity: 1,
     margin: 0,
-    wordSpacing: "normal",
+    textTransform: "uppercase" as const,
     textAlign: "center" as const,
   };
-
-  // Auto-scroll removed: all scrolling is manual.
-
 
   const titleEl = (
     <Tag className={`hero-band-title ${className}`.trim()} style={titleStyle}>
@@ -88,8 +78,8 @@ const HeroBandTitle = ({
         data-hero-band
         style={{
           background: "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)",
-          height: "46px",
-          padding: "0 16px 4px 16px",
+          height: compact ? "52px" : "60px",
+          padding: "0 24px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
