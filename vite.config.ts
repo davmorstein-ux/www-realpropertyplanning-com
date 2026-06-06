@@ -968,13 +968,36 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    legacy({
+      targets: ["defaults", "not IE 11"],
+    }),
     ViteImageOptimizer({
-      png: { quality: 80 },
-      jpeg: { quality: 80 },
-      jpg: { quality: 80 },
-      webp: { quality: 80 },
+      test: /\.(jpe?g|png|webp|svg)$/i,
+      includePublic: true,
+      png: { quality: 78 },
+      jpeg: { quality: 78 },
+      jpg: { quality: 78 },
+      webp: { quality: 78 },
+      svg: {
+        multipass: true,
+        plugins: [
+          {
+            name: "preset-default",
+            params: {
+              overrides: {
+                removeViewBox: false,
+                cleanupNumericValues: { floatPrecision: 2 },
+              },
+            },
+          },
+        ],
+      },
+      // Skip files under 10KB
+      cache: false,
+      logStats: true,
     }),
     routeMetadataPlugin,
+
   ],
   resolve: {
     alias: {
