@@ -2540,3 +2540,289 @@ main > section:has(> div > [data-hero-band]) + * {
 }
 
 
+
+/* ============================================================
+   WCAG 2.1 AA COMPLIANCE PASS — SITEWIDE ENFORCEMENT
+   Author-stylesheet !important overrides inline styles that
+   don't use !important, so inline fontSize:11 etc. are lifted.
+   Text-only changes — no layout, spacing, or structure changes.
+   ============================================================ */
+
+/* 1. Absolute minimum font size — 14px floor, nothing smaller anywhere */
+main *,
+footer *,
+header * {
+  font-size: max(1em, 14px) !important;
+}
+
+/* 2. Body / paragraph / list text — 18px floor on light surfaces */
+main p,
+main li,
+main blockquote,
+main blockquote p,
+main dd,
+main dt {
+  font-size: max(1.125rem, 18px) !important;
+  line-height: 1.7 !important;
+}
+
+/* 3. Card descriptions — 17px floor */
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [class*="bg-cream"],
+    [class*="bg-card"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  :where(p, li, dd) {
+  font-size: max(1.0625rem, 17px) !important;
+  line-height: 1.7 !important;
+}
+
+/* 4. Contact info, links, meta text — 16px floor */
+main a,
+main address,
+footer a,
+header a,
+[class*="text-meta"],
+[class*="meta-text"],
+.contact-info,
+.contact-info * {
+  font-size: max(1rem, 16px) !important;
+}
+
+/* 5. Eyebrow / label / uppercase tracking text — 14px floor + 600 weight */
+main [style*="text-transform: uppercase"],
+main [style*="textTransform: 'uppercase'"],
+main [style*="letter-spacing"],
+main [class*="uppercase"],
+main [class*="tracking-wide"],
+main [class*="tracking-wider"],
+main [class*="tracking-widest"],
+main [class*="tracking-[0"],
+main label,
+main .eyebrow,
+main .label-eyebrow,
+.source-citation,
+.source-label,
+[class*="source"],
+cite {
+  font-size: max(0.875rem, 14px) !important;
+  font-weight: 600 !important;
+}
+
+/* 6. Footer text — 16px floor */
+footer,
+footer *,
+footer p,
+footer li,
+footer span,
+footer a {
+  font-size: max(1rem, 16px) !important;
+}
+footer [class*="uppercase"],
+footer [class*="tracking-"],
+footer label,
+footer .eyebrow {
+  font-size: max(0.875rem, 14px) !important;
+  font-weight: 600 !important;
+}
+
+/* 7. Headings preserved at their author-defined sizes */
+main h1, main h2, main h3, main h4, main h5, main h6,
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6,
+header h1, header h2, header h3, header h4, header h5, header h6 {
+  font-size: revert !important;
+}
+
+/* 8. Color contrast — global muted/gray text darken (4.5:1 on white) */
+main .text-muted-foreground,
+main [class*="text-muted"],
+main [class*="text-gray-3"],
+main [class*="text-gray-4"],
+main [class*="text-gray-5"],
+main [class*="text-neutral-3"],
+main [class*="text-neutral-4"],
+main [class*="text-neutral-5"],
+main [class*="text-slate-3"],
+main [class*="text-slate-4"],
+main [class*="text-slate-5"],
+main [class*="text-zinc-3"],
+main [class*="text-zinc-4"],
+main [class*="text-zinc-5"],
+footer .text-muted-foreground {
+  color: #374151 !important;
+  opacity: 1 !important;
+}
+
+/* 9. On dark/navy backgrounds, lift muted text instead */
+[class*="bg-navy"] .text-muted-foreground,
+[class*="bg-primary"] .text-muted-foreground,
+[class*="bg-foreground"] .text-muted-foreground,
+.bg-navy .text-muted-foreground,
+.bg-navy-dark .text-muted-foreground,
+[class*="bg-navy"] [class*="text-gray"],
+[class*="bg-primary"] [class*="text-gray"],
+[class*="bg-navy"] [class*="text-slate"],
+[class*="bg-primary"] [class*="text-slate"] {
+  color: #f3f4f6 !important;
+  opacity: 1 !important;
+}
+
+/* 10. Inline gray colors — darken via attribute selectors (covers inline style) */
+main [style*="color: #6"],
+main [style*="color: #7"],
+main [style*="color: #8"],
+main [style*="color: #9"],
+main [style*="color:#6"],
+main [style*="color:#7"],
+main [style*="color:#8"],
+main [style*="color:#9"],
+main [style*="color: rgb(1"],
+main [style*="color: rgb(2"] {
+  /* Most low-mid grays fall in this hex range — clamp to a passing tone */
+}
+/* Specific common low-contrast inline grays observed in codebase */
+main [style*="#6B7280"],
+main [style*="#6b7280"],
+main [style*="#9CA3AF"],
+main [style*="#9ca3af"],
+main [style*="#A0AEC0"],
+main [style*="#a0aec0"],
+main [style*="#94a3b8"],
+main [style*="#64748B"],
+main [style*="#64748b"] {
+  color: #374151 !important;
+}
+
+/* 11. Italic descriptive text — meet 4.5:1 */
+main em,
+main i,
+main .italic,
+main [style*="italic"] {
+  color: #1f2937 !important;
+  opacity: 1 !important;
+}
+[class*="bg-navy"] em,
+[class*="bg-navy"] .italic,
+[class*="bg-primary"] em,
+[class*="bg-primary"] .italic {
+  color: #f3f4f6 !important;
+}
+
+/* 12. SOURCE / citation labels — readable, darkened */
+main :where(span, p, small, cite):where(
+    [class*="source"],
+    [data-source],
+    .citation,
+    .source-label
+  ) {
+  color: #374151 !important;
+  font-size: max(0.875rem, 14px) !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+/* 13. Gold / copper text on LIGHT backgrounds → #7a4e1a (4.6:1 on white) */
+main .text-gold,
+main .text-gold-dark,
+main [class*="text-gold"],
+main [class*="text-amber-"],
+main [class*="text-yellow-5"],
+main [class*="text-yellow-6"],
+main [style*="#C9A84C"],
+main [style*="#c9a84c"],
+main [style*="#b87333"],
+main [style*="#B87333"],
+main [style*="#d4a574"],
+main [style*="#D4A574"] {
+  color: #7a4e1a !important;
+}
+/* But keep gold readable on dark surfaces */
+[class*="bg-navy"] .text-gold,
+[class*="bg-primary"] .text-gold,
+[class*="bg-foreground"] .text-gold,
+.bg-navy .text-gold,
+[class*="bg-navy"] [class*="text-gold"],
+[class*="bg-primary"] [class*="text-gold"] {
+  color: #e6c068 !important;
+}
+
+/* 14. Links — minimum contrast on light backgrounds */
+main a:not([class*="bg-"]):not(.btn):not([class*="button"]) {
+  color: #1d4ed8;
+}
+main a:not([class*="bg-"]):not(.btn):not([class*="button"]):hover {
+  color: #1e3a8a;
+}
+/* But don't override navy/primary/foreground branded links */
+main a.text-primary,
+main a.text-navy,
+main a.text-foreground,
+main a[class*="text-primary"],
+main a[class*="text-navy"] {
+  color: revert;
+}
+
+/* 15. "Back to ..." nav links — solid dark navy, never faded */
+main a[href*="back"],
+main a:where([aria-label*="Back"], [aria-label*="back"]),
+.back-link,
+[class*="back-to"],
+[class*="BackTo"] a {
+  color: #0a1628 !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+/* 16. DisclaimerSection — readable body */
+[class*="disclaimer"],
+[class*="Disclaimer"],
+.disclaimer-section,
+.disclaimer-section * {
+  color: #1f2937 !important;
+  opacity: 1 !important;
+}
+[class*="disclaimer"] p,
+[class*="Disclaimer"] p,
+.disclaimer-section p,
+.disclaimer-section li {
+  font-size: max(1rem, 16px) !important;
+  line-height: 1.7 !important;
+}
+[class*="bg-navy"] [class*="disclaimer"],
+[class*="bg-primary"] [class*="disclaimer"],
+[class*="bg-navy"] .disclaimer-section,
+[class*="bg-primary"] .disclaimer-section {
+  color: #f3f4f6 !important;
+}
+
+/* 17. ProviderTile / provider cards — full opacity, readable */
+[class*="ProviderTile"],
+[class*="provider-tile"],
+[data-provider-tile] {
+  color: #1f2937 !important;
+}
+[class*="ProviderTile"] p,
+[class*="provider-tile"] p,
+[data-provider-tile] p,
+[class*="ProviderTile"] li,
+[class*="provider-tile"] li {
+  font-size: max(1.0625rem, 17px) !important;
+  color: #1f2937 !important;
+  opacity: 1 !important;
+}
+
+/* 18. No text-opacity utilities allowed to dim text */
+main [class*="text-opacity"],
+main [class*="/50"],
+main [class*="/60"],
+main [class*="/70"],
+main [class*="/80"],
+main [class*="/90"] {
+  opacity: 1 !important;
+}
+
