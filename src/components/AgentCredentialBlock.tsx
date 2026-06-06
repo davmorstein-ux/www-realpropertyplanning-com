@@ -11,7 +11,7 @@ const AgentCredentialBlock = () => (
         src={expRealtyLogo}
         alt="eXp Realty — Real estate licenses are held under eXp Realty (real estate license disclosure)"
         className="h-6 w-auto opacity-70"
-        loading="lazy" sizes="100vw" decoding="async"/>
+        loading="lazy" sizes="100vw" decoding="async width={993} height={540} />
     </div>
   </div>
 );

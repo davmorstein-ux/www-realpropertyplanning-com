@@ -19,7 +19,7 @@ const GinnysGirlsCard = () => (
                   src={meriannPhoto}
                   alt="Photo of Meriann Roberts, Owner of Ginny's Girls Estate Services"
                   className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
-                  loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
+                  loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={166} height={187} />
                 <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Meriann Roberts</p>
               </div>
               <div className="flex flex-col items-center">
@@ -27,7 +27,7 @@ const GinnysGirlsCard = () => (
                   src={abigailPhoto}
                   alt="Photo of Abigail McKee, Manager at Ginny's Girls Estate Services"
                   className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
-                  loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
+                  loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={211} height={187} />
                 <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Abigail McKee</p>
               </div>
             </div>
@@ -37,7 +37,7 @@ const GinnysGirlsCard = () => (
                   src={ginnysGirlsLogo}
                   alt="Ginny's Girls Estate Services logo"
                   className="h-auto w-full max-w-[420px] object-contain mx-auto sm:mx-0 block rounded-md"
-                  loading="lazy" sizes="100vw" decoding="async"/>
+                  loading="lazy" sizes="100vw" decoding="async width={609} height={222} />
               </div>
               <div className="w-full mt-2 text-center sm:pl-[58px] sm:text-left">
                 <p className="text-foreground font-semibold text-lg">Meriann Roberts - Owner</p>
@@ -66,19 +66,19 @@ const GinnysGirlsCard = () => (
                 </p>
                 <div className="space-y-1.5 text-sm">
                   <div className="flex items-start gap-2 justify-center sm:justify-start">
-                    <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async"/>
+                    <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
                     <span className="text-muted-foreground">Edmonds, WA — Serving North King and Snohomish Counties</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
                     <a href="tel:+12064660759" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 466-0759</a>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1254} height={1254} />
                     <a href="mailto:info@ginnysestates.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">info@ginnysestates.com</a>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
+                    <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={976} height={859} />
                     <a href="https://www.ginnysestates.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">www.ginnysestates.com</a>
                   </div>
                 </div>

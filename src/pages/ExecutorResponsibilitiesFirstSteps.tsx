@@ -73,7 +73,7 @@ const ExecutorResponsibilitiesFirstSteps = () => {
             src={heroImage}
             alt="Serving as executor and trustee — guidance for Washington families"
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async"/>
+            loading="eager" sizes="100vw" decoding="async width={1806} height={820} />
         </section>
 
         <HeroBandTitle>SERVING&nbsp; AS&nbsp; EXECUTOR&nbsp; &amp;&nbsp; TRUSTEE</HeroBandTitle>

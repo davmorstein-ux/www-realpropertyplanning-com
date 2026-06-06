@@ -34,7 +34,7 @@ const Search = () => {
               src={searchHero}
               alt="Senior couple driving a classic red convertible into Search City at night"
               className="w-full h-auto block"
-              loading="eager" sizes="100vw" decoding="async"/>
+              loading="eager" sizes="100vw" decoding="async width={1920} height={564} />
             <HeroBandTitle>Search Page</HeroBandTitle>
           </div>
         </section>

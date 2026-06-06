@@ -202,7 +202,7 @@ const DateOfDeathValuationPropertyAppraisals = () => {
               src={wtdwHeroImage}
               alt="Quiet Washington street with craftsman homes"
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager" sizes="100vw" decoding="async"/>
+              loading="eager" sizes="100vw" decoding="async width={1829} height={640} />
             <HeroBandTitle as="div">Date Of Death Valuation</HeroBandTitle>
           </div>
         </section>
@@ -274,7 +274,7 @@ const DateOfDeathValuationPropertyAppraisals = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-7">
-                <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
+                <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={512} height={512} />
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
                   Keep Going
                 </p>

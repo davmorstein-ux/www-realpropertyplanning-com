@@ -46,7 +46,7 @@ const GuidedEntryPanel = () => {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 border border-gold/20 mb-5">
-              <img src={iconHelp3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
+              <img src={iconHelp3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={512} height={512} />
             </div>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
               Let's Point You in the Right Direction

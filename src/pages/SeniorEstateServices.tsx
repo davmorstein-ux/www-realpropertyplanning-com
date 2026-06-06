@@ -265,7 +265,7 @@ const SeniorEstateServices = () => {
                   size="lg"
  className="hover:-light px-8 rounded-[14px] text-base h-[52px] w-full sm:w-auto"
                 >
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async"/>
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
                   Schedule a Consultation
                 </Button>
               </Link>

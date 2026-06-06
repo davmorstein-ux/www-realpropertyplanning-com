@@ -90,7 +90,7 @@ const PowerOfAttorney = () => {
           <div className={contentWrap}>
             <div className={proseWrap + " text-center"}>
               <div className="flex justify-center mb-1.5 md:mb-2">
-                <img src={poaIcon} alt="Power of Attorney real estate guidance in Washington State" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async"/>
+                <img src={poaIcon} alt="Power of Attorney real estate guidance in Washington State" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
               </div>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.5rem] font-semibold text-primary-foreground leading-tight mb-6">
                 Helping Those Who Hold Power of Attorney Navigate Real Estate in Washington State
@@ -240,7 +240,7 @@ const PowerOfAttorney = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:2069003015" className="inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold/90 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain" loading="lazy" sizes="100vw" decoding="async"/>
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
                   Call (206) 900-3015
                 </a>
                 <Link to="/contact" className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-primary-foreground font-semibold px-8 py-4 rounded-lg text-lg transition-colors border border-white/20">

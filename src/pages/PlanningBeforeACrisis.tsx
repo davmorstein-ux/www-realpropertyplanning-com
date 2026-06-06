@@ -62,7 +62,7 @@ const PlanningBeforeACrisis = () => {
             alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
             className="w-full block"
             style={{ objectFit: "contain", width: "100%", height: "auto" }}
-            loading="eager" sizes="100vw" decoding="async"/>
+            loading="eager" sizes="100vw" decoding="async width={1920} height={487} />
         </section>
 
         <HeroBandTitle>Planning Before a Crisis</HeroBandTitle>
