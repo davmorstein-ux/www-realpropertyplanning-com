@@ -118,6 +118,16 @@ nav button[aria-haspopup] svg, nav [class*="dropdown"] button svg {
   font-size: 1rem !important;
 }
 
+[data-hero-band] .hero-band-title {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  font-family: 'Raleway', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
