@@ -105,12 +105,12 @@ export default function AFHCarousel() {
   }, [transitioning, pos]);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || !isVisible || prefersReducedMotion) return;
     timerRef.current = setInterval(next, AUTO_MS);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [next, paused]);
+  }, [next, paused, isVisible, prefersReducedMotion]);
 
   return (
     <section style={{ background: "#f0f3f6", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}>
