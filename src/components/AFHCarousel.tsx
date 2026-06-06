@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
+import { useIsVisible } from "@/hooks/use-is-visible";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 const TOPICS = [
   {
