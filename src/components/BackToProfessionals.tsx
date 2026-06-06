@@ -28,7 +28,7 @@ export default function BackToProfessionals() {
 
           }}
 
-          onMouseEnter={e = sizes="100vw" decoding="async"> {
+          onMouseEnter={e => {
 
             (e.currentTarget as HTMLImageElement).style.transform = "scale(1.03)";
 

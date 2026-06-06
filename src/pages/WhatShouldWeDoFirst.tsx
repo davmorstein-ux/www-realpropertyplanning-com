@@ -172,7 +172,7 @@ const WhatShouldWeDoFirst = () => {
               alt="Begin your journey — Real Property Planning"
               className="w-full h-auto object-cover"
               loading="eager"
-              fetchPriority="high" sizes="100vw width={1911} height={619} />
+              fetchPriority="high" sizes="100vw" width={1911} height={619} />
           </div>
           <HeroBandTitle as="h1">
             What Should We Do First?

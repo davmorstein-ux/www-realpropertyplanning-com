@@ -42,7 +42,7 @@ const About = () => {
             alt="Real Property Planning — Senior Transitions"
             className="w-full h-auto object-cover"
             loading="eager"
-            fetchPriority="high" sizes="100vw width={1885} height={591} />
+            fetchPriority="high" sizes="100vw" width={1885} height={591} />
           <h1 className="sr-only">About Real Property Planning</h1>
         </section>
 

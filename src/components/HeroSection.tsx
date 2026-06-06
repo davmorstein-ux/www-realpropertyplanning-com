@@ -88,7 +88,7 @@ const HeroSection = () => {
                    alt="Real Property Planning, probate real estate specialist and certified appraiser in Western Washington"
                    className="w-full h-full object-cover object-top"
                    loading="eager"
-                   fetchPriority="high" sizes="100vw width={720} height={940} />
+                   fetchPriority="high" sizes="100vw" width={720} height={940} />
               </div>
               <div className="absolute -bottom-4 -right-4 w-80 h-96 rounded-2xl border-2 border-gold/20 -z-10" />
             </div>

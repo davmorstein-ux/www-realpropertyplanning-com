@@ -42,7 +42,7 @@ const SeniorTransitions = () => {
           className="w-full h-auto object-cover"
           style={{ display: "block" }}
           loading="eager"
-          fetchPriority="high" sizes="100vw width={1920} height={763} />
+          fetchPriority="high" sizes="100vw" width={1920} height={763} />
         <HeroBandTitle as="h2">Selling A Senior's Home</HeroBandTitle>
       </section>
 

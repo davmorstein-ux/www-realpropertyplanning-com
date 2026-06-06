@@ -129,7 +129,7 @@ const WhyValuationMatters = () => {
           className="w-full h-auto object-cover"
           loading="eager"
           fetchPriority="high"
-          style={{ display: 'block' }} sizes="100vw width={1902} height={459} />
+          style={{ display: 'block' }} sizes="100vw" width={1902} height={459} />
         <HeroBandTitle>Pricing &amp; Valuation Expertise</HeroBandTitle>
       </section>
 
