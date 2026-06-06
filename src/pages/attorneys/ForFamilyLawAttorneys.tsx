@@ -11,7 +11,6 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconFamilyLaw from "@/assets/icons/attorney-family-law-property-icon-washington.webp";
 
 const intersections = [
   "Division of real property between parties who may not agree on value or timing",

@@ -5,7 +5,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { articleSchema } from "@/lib/schema";
 import { Search, Handshake, Phone } from "lucide-react";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";

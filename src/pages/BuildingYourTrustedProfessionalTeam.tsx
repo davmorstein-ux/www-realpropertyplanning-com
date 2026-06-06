@@ -9,13 +9,6 @@ import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 import wtdwHeroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import probateAttorneyImg from "@/assets/legal/probate-attorney.webp";
-import estatePlanningAttorneyImg from "@/assets/legal/estate-planning-attorney.webp";
-import elderLawAttorneyImg from "@/assets/legal/elder-law-attorney.webp";
-import realEstateAttorneyImg from "@/assets/legal/real-estate-attorney.webp";
-import familyLawAttorneyImg from "@/assets/legal/family-law-attorney.webp";
-import divorceAttorneyImg from "@/assets/legal/divorce-attorney.webp";
-import estateLiquidatorsTile from "@/assets/estate-liquidators-tile-transparent.webp";
 import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 
 type Card = {

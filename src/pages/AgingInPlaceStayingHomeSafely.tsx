@@ -17,10 +17,8 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconTeam from "@/assets/icons/real-estate-people-team-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconMemoryCare from "@/assets/icons/senior-memory-care-3d-icon-washington.webp";
 import iconIndependent from "@/assets/icons/senior-independent-living-icon-washington.webp";
 import iconEstatePlanning from "@/assets/icons/estate-wills-planning-icon-washington.webp";
-import iconExecutors from "@/assets/icons/probate-executors-services-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {

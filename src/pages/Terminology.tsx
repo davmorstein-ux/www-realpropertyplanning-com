@@ -3,9 +3,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { MessageSquare } from "lucide-react";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import {
   Accordion,
@@ -13,8 +10,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconProbateTerms from "@/assets/icons/probate-property-sales-alt-icon-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import terminologyHero from "@/assets/terminology-hero.webp";
 

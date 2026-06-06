@@ -3,12 +3,7 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
-import CTASection from "@/components/CTASection";
-import PageFAQ from "@/components/PageFAQ";
 import FeaturedAttorneys from "@/components/FeaturedAttorneys";
 import HeroBandTitle from "@/components/HeroBandTitle";
 

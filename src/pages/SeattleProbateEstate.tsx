@@ -10,7 +10,6 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import { realEstateAgentSchema, areaServed } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";

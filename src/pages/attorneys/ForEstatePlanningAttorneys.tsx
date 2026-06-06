@@ -10,7 +10,6 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconEstatePlanning from "@/assets/icons/attorney-estate-planning-icon-washington.webp";
 
 const questions = [
   "The client wants to understand the current market value of a property held in trust",

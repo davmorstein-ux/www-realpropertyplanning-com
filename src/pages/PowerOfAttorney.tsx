@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
-import { Phone, Home, Heart, Globe, ShieldCheck, FileText, Users, Briefcase, Scale } from "lucide-react";
+import { Home, Heart, Globe, ShieldCheck, FileText, Users, Briefcase } from "lucide-react";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import poaIcon from "@/assets/icons/power-of-attorney-icon-washington.webp";
 

@@ -11,7 +11,6 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconRealEstateAttorney from "@/assets/icons/real-estate-attorney-services-icon-washington.webp";
 
 const whatTheyDo = [
   "Reviewing or drafting purchase and sale agreements",

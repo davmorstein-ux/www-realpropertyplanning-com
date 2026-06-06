@@ -6,7 +6,6 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
-import MidPageCTA from "@/components/MidPageCTA";
 import NextStepBlock from "@/components/NextStepBlock";
 import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";

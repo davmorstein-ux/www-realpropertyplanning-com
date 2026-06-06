@@ -11,7 +11,6 @@ import JamesJacksonCard from "@/components/JamesJacksonCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconProbate from "@/assets/icons/probate-property-sales-icon-washington.webp";
 
 const intersections = [
   "What is the property actually worth in its current condition — not what an automated tool says, but a defensible, condition-adjusted market value?",

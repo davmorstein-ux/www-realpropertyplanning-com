@@ -3,8 +3,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import PremiumTile from "@/components/PremiumTile";
 import { articleSchema } from "@/lib/schema";
 
