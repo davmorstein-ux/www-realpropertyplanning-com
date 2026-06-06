@@ -40,19 +40,19 @@ const FeaturedProviderPlaceholder = ({ heading, altLabel }: Props) => (
                 </p>
                 <div className="space-y-1.5 text-sm">
                   <div className="flex items-start gap-2 justify-center sm:justify-start">
-                    <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+                    <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
                     <span className="text-muted-foreground">Address</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                     <span className="text-accent">Phone</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1254} height={1254} />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1254} height={1254} />
                     <span className="text-accent">Email</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={976} height={859} />
+                    <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={976} height={859} />
                     <span className="text-accent">Website</span>
                   </div>
                 </div>

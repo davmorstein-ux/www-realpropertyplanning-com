@@ -76,7 +76,7 @@ const EducationalPathways = ({
               className="card-3d group block p-6"
             >
               <div className="flex items-start gap-3 mb-3">
-                <img src={iconBookOpen3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+                <img src={iconBookOpen3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
                 <h3 className="font-serif text-base text-foreground font-semibold leading-snug group-hover:text-gold transition-colors">
                   {p.title}
                 </h3>
@@ -86,7 +86,7 @@ const EducationalPathways = ({
               </p>
               <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors pl-10">
                 Read more
-                <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 ml-1.5 object-contain group-hover:translate-x-1 transition-transform" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+                <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 ml-1.5 object-contain group-hover:translate-x-1 transition-transform" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
               </span>
             </Link>
           ))}

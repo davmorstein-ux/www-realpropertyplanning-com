@@ -10,15 +10,12 @@ import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderContact from "@/components/ProviderContact";
 import CTASection from "@/components/CTASection";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 interface Provider {
   name: string;

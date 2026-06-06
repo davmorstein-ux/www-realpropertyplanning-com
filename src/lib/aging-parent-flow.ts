@@ -3,9 +3,8 @@
 // Leaf nodes (no children) render a "Content coming soon" placeholder.
 
 import {
-  Home, HeartHandshake, Building2, Activity, Scale,
-  HelpCircle, DollarSign, ClipboardCheck, MessageCircle,
-  ShieldAlert, Hospital, ArrowRightLeft, Users,
+  Home, HeartHandshake, Building2, Activity, Scale, DollarSign, ClipboardCheck, MessageCircle,
+  ShieldAlert, Hospital, Users,
   HandHelping, Stethoscope, Wrench, Calendar,
   FileText, KeyRound, Landmark, Banknote,
   type LucideIcon,

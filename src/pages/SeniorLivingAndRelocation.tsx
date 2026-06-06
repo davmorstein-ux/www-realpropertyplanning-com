@@ -6,7 +6,6 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import iconSeniorLiving from "@/assets/icons/senior-living-placement-hero-washington.webp";
-import tealTileBg from "@/assets/icons/property-services-teal-tile-washington.webp";
 import iconAfh3d from "@/assets/icons/senior-adult-family-home-3d-washington.webp";
 import iconAssistedLiving3d from "@/assets/icons/senior-assisted-living-icon-washington.webp";
 import iconMemoryCare3d from "@/assets/icons/senior-memory-care-3d-icon-washington.webp";
@@ -100,7 +99,7 @@ const SeniorLivingAndRelocation = () => {
                   src={iconSeniorLiving}
                   alt="Senior Living & Relocation"
                   className="block w-full max-w-[15rem] h-auto object-contain"
-                 loading="lazy" sizes="100vw" decoding="async width={512} height={349} />
+                 loading="lazy" sizes="100vw" decoding="async" width={512} height={349} />
               </div>
               <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
                 Senior Living
@@ -149,15 +148,15 @@ const SeniorLivingAndRelocation = () => {
                           {/* Image area — fixed height */}
                           <div className="h-28 w-full flex items-center justify-center shrink-0 pt-2">
                             {option.title === "Adult Family Homes" ? (
-                              <img src={iconAfh3d} alt="Adult Family Homes" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async width={512} height={429} />
+                              <img src={iconAfh3d} alt="Adult Family Homes" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async" width={512} height={429} />
                             ) : option.title === "Assisted Living Communities" ? (
-                              <img src={iconAssistedLiving3d} alt="Assisted Living Communities" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+                              <img src={iconAssistedLiving3d} alt="Assisted Living Communities" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
                             ) : option.title === "Memory Care" ? (
-                              <img src={iconMemoryCare3d} alt="Memory Care" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async width={512} height={437} />
+                              <img src={iconMemoryCare3d} alt="Memory Care" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async" width={512} height={437} />
                             ) : option.title === "Nursing & Skilled Care" ? (
-                              <img src={iconNursingCare3d} alt="Nursing & Skilled Care" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async width={512} height={429} />
+                              <img src={iconNursingCare3d} alt="Nursing & Skilled Care" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async" width={512} height={429} />
                             ) : option.title === "Independent Living" ? (
-                              <img src={iconIndependentLiving3d} alt="Independent Living" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+                              <img src={iconIndependentLiving3d} alt="Independent Living" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
                             ) : (
                               <div className="w-14 h-14 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)]" />
                             )}

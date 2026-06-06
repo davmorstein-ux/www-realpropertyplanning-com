@@ -11,14 +11,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import MidPageCTA from "@/components/MidPageCTA";
 import PageFAQ from "@/components/PageFAQ";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
-import scale3d from "@/assets/appraisal-scale-icon-washington.webp";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconHomeValue from "@/assets/icons/real-estate-property-value-icon-washington.webp";
-import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",
@@ -129,7 +123,7 @@ const WhyValuationMatters = () => {
           className="w-full h-auto object-cover"
           loading="eager"
           fetchPriority="high"
-          style={{ display: 'block' }} sizes="100vw width={1902} height={459} />
+          style={{ display: 'block' }} sizes="100vw" width={1902} height={459} />
         <HeroBandTitle>Pricing &amp; Valuation Expertise</HeroBandTitle>
       </section>
 
@@ -191,7 +185,7 @@ const WhyValuationMatters = () => {
       <section className="py-12 lg:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-5" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={1536} height={1024} />
+            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-5" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={1536} height={1024} />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-3">
               What Happens When Estate Property Pricing Goes Wrong?
             </h2>

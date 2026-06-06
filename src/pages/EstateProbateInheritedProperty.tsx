@@ -75,7 +75,7 @@ const EstateProbateInheritedProperty = () => {
             src={heroImage}
             alt="Managing an estate, probate, or inherited property in Washington State"
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async width={1465} height={792} />
+            loading="eager" sizes="100vw" decoding="async" width={1465} height={792} />
         </section>
 
         <HeroBandTitle>Estate, Probate & Inherited Property</HeroBandTitle>

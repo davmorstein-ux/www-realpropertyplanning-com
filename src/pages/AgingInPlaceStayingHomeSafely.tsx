@@ -17,10 +17,8 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconTeam from "@/assets/icons/real-estate-people-team-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconMemoryCare from "@/assets/icons/senior-memory-care-3d-icon-washington.webp";
 import iconIndependent from "@/assets/icons/senior-independent-living-icon-washington.webp";
 import iconEstatePlanning from "@/assets/icons/estate-wills-planning-icon-washington.webp";
-import iconExecutors from "@/assets/icons/probate-executors-services-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
@@ -441,7 +439,7 @@ const AgingInPlaceStayingHomeSafely = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-7">
-                <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={512} height={512} />
+                <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={512} height={512} />
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
                   Keep Going
                 </p>
@@ -519,7 +517,7 @@ const AgingInPlaceStayingHomeSafely = () => {
               </p>
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <img src={iconPhone} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                  <img src={iconPhone} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                   Start the Conversation
                 </Button>
               </Link>

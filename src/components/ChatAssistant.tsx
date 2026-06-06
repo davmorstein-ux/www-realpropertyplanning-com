@@ -351,7 +351,7 @@ const ChatAssistant = () => {
           aria-label={open ? "Close chat assistant" : "Open chat assistant"}
           onClick={() => setOpen((v) => !v)}
         >
-          <img src={chatCouple} alt="Chat with us" className="rpp-chat-couple-layer" sizes="100vw" decoding="async width={400} height={400} />
+          <img src={chatCouple} alt="Chat with us" className="rpp-chat-couple-layer" sizes="100vw" decoding="async" width={400} height={400} />
           
         </button>
 
@@ -373,7 +373,7 @@ const ChatAssistant = () => {
             }}
           >
             <div className="rpp-chat-header">
-              <img src={chatCouple} alt="" aria-hidden="true" sizes="100vw" decoding="async width={400} height={400} />
+              <img src={chatCouple} alt="" aria-hidden="true" sizes="100vw" decoding="async" width={400} height={400} />
               <div className="rpp-chat-header-text">
                 <h3>Ask Us Anything</h3>
               </div>

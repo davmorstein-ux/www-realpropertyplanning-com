@@ -3,9 +3,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { MessageSquare } from "lucide-react";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import {
   Accordion,
@@ -13,8 +10,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconProbateTerms from "@/assets/icons/probate-property-sales-alt-icon-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import terminologyHero from "@/assets/terminology-hero.webp";
 
@@ -143,7 +138,7 @@ const Terminology = () => {
             src={terminologyHero}
             alt="Probate and estate terminology guide for Washington State"
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async width={1919} height={711} />
+            loading="eager" sizes="100vw" decoding="async" width={1919} height={711} />
           <HeroBandTitle>Probate &amp; Estate Terminology</HeroBandTitle>
         </section>
 

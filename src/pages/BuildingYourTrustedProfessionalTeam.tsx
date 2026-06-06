@@ -9,13 +9,6 @@ import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 import wtdwHeroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import probateAttorneyImg from "@/assets/legal/probate-attorney.webp";
-import estatePlanningAttorneyImg from "@/assets/legal/estate-planning-attorney.webp";
-import elderLawAttorneyImg from "@/assets/legal/elder-law-attorney.webp";
-import realEstateAttorneyImg from "@/assets/legal/real-estate-attorney.webp";
-import familyLawAttorneyImg from "@/assets/legal/family-law-attorney.webp";
-import divorceAttorneyImg from "@/assets/legal/divorce-attorney.webp";
-import estateLiquidatorsTile from "@/assets/estate-liquidators-tile-transparent.webp";
 import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 
 type Card = {
@@ -251,7 +244,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
               src={wtdwHeroImage}
               alt="Quiet Washington street with craftsman homes"
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager" sizes="100vw" decoding="async width={1920} height={510} />
+              loading="eager" sizes="100vw" decoding="async" width={1920} height={510} />
             <HeroBandTitle as="div">A Guide to Independent Professionals</HeroBandTitle>
           </div>
         </section>

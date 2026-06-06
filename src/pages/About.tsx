@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -8,17 +7,12 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import TrustStrip from "@/components/TrustStrip";
 import RelatedServices from "@/components/RelatedServices";
 import StatewideSupport from "@/components/StatewideSupport";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
 import aboutHeroImage from "@/assets/about_hero_downtown_clean_v2.webp";
-import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 
 
 const About = () => {
@@ -42,7 +36,7 @@ const About = () => {
             alt="Real Property Planning — Senior Transitions"
             className="w-full h-auto object-cover"
             loading="eager"
-            fetchPriority="high" sizes="100vw width={1885} height={591} />
+            fetchPriority="high" sizes="100vw" width={1885} height={591} />
           <h1 className="sr-only">About Real Property Planning</h1>
         </section>
 
@@ -55,7 +49,7 @@ const About = () => {
                   src={daveHeadshot}
                   alt="David Stein licensed real estate broker and certified appraiser Kirkland Washington"
                   className="w-full h-full object-cover object-top"
-                  loading="lazy" sizes="100vw" decoding="async width={720} height={940} />
+                  loading="lazy" sizes="100vw" decoding="async" width={720} height={940} />
               </div>
               <p className="mt-4 font-serif text-4xl text-foreground font-bold leading-tight text-center">
                 David Stein

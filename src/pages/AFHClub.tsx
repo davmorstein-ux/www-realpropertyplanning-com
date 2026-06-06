@@ -95,7 +95,7 @@ const AFHClub = () => (
                 display: "block",
                 margin: "0 auto",
               }}
-              loading="eager" sizes="100vw" decoding="async width={1024} height={1536} />
+              loading="eager" sizes="100vw" decoding="async" width={1024} height={1536} />
           </div>
 
           <p
@@ -270,7 +270,7 @@ const AFHClub = () => (
                     objectPosition: "top",
                     display: "block",
                   }}
-                  onError={(e) = sizes="100vw" decoding="async"> {
+                  onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
                   }}
                 />

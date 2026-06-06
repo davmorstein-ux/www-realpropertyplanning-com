@@ -67,7 +67,7 @@ const SecureWillSection = () => {
                 src={willVaultIcon}
                 alt="Secure blockchain will vault with permanent time-stamp seal"
                 className="w-full drop-shadow-2xl"
-                loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+                loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
               <button
                 onClick={() => setWizardOpen(true)}
                 className="absolute bottom-[6%] left-1/2 -translate-x-1/2 w-[55%] h-[14%] cursor-pointer rounded-md bg-transparent hover:bg-white/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"

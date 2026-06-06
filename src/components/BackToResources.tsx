@@ -28,7 +28,7 @@ export default function BackToResources() {
 
           }}
 
-          onMouseEnter={e = sizes="100vw" decoding="async" width={1608} height={219}> {
+          onMouseEnter={e => {
 
             (e.currentTarget as HTMLImageElement).style.transform = "scale(1.03)";
 

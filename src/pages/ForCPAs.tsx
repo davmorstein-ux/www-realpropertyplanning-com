@@ -5,10 +5,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconCpas from "@/assets/icons/estate-cpas-financial-icon-washington.webp";
 import CTASection from "@/components/CTASection";
 import ProviderTile from "@/components/ProviderTile";
 import purpleGroupPhoto from "@/assets/providers/cpa-purple-group-tenly-jessica-seattle.webp";
@@ -44,7 +40,7 @@ const ForCPAs = () => (
           src="/assets/cpas_hero_clean.webp"
           alt="Guidance for CPAs and tax professionals — Washington State estate and probate real estate"
           className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-          loading="eager" sizes="100vw" decoding="async width={1920} height={852} />
+          loading="eager" sizes="100vw" decoding="async" width={1920} height={852} />
         <HeroBandTitle>CPA &amp; TAX PROFESSIONAL GUIDANCE</HeroBandTitle>
       </div>
     </section>

@@ -72,7 +72,7 @@ const TitleAndEscrow = () => (
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" className="w-6 h-6 mr-2" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                <img src={iconPhone3d} alt="" className="w-6 h-6 mr-2" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                 Get Connected
               </Button>
             </Link>

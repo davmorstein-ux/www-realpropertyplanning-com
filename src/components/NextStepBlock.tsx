@@ -39,7 +39,7 @@ const NextStepBlock = ({
                   {step.description}
                 </p>
               </div>
-              <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0 opacity-40 group-hover:opacity-100 transition-opacity" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+              <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0 opacity-40 group-hover:opacity-100 transition-opacity" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
             </Link>
           ))}
         </div>

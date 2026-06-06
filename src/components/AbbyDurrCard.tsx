@@ -23,7 +23,7 @@ const AbbyDurrCard = () => (
                 src={abbyPhoto}
                 alt="Photo of Abby Durr, Senior Living Advisor at Silver Age Senior Living Advisors"
                 className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
-                loading="lazy" sizes="100vw" decoding="async width={700} height={658} />
+                loading="lazy" sizes="100vw" decoding="async" width={700} height={658} />
             </div>
             <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
               <div className="sm:self-start sm:ml-[58px]">
@@ -31,7 +31,7 @@ const AbbyDurrCard = () => (
                   src={silverAgeLogo}
                   alt="Silver Age Senior Living Advisors logo"
                   className="h-[80px] w-auto object-contain mx-auto sm:mx-0 block"
-                  loading="lazy" sizes="100vw" decoding="async width={500} height={389} />
+                  loading="lazy" sizes="100vw" decoding="async" width={500} height={389} />
               </div>
               <div className="w-full mt-2 text-center sm:pl-[58px] sm:text-left">
                 <p className="text-foreground font-semibold text-lg">Abby Durr</p>
@@ -46,28 +46,28 @@ const AbbyDurrCard = () => (
                 </p>
                 <div className="space-y-1.5 text-sm">
                   <div className="flex items-start gap-2 justify-center sm:justify-start">
-                    <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+                    <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
                     <span className="text-muted-foreground">1567 Highlands Dr NE, Suite 110, Issaquah, WA 98029</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                     <a href="tel:+14258917569" className="text-accent hover:text-gold underline-offset-4 hover:underline">(425) 891-7569</a>
                     <span className="text-muted-foreground">Main</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                     <a href="tel:+12066697191" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 669-7191</a>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1254} height={1254} />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1254} height={1254} />
                     <a href="mailto:info@silveragecare.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">info@silveragecare.com</a>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1254} height={1254} />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1254} height={1254} />
                     <a href="mailto:abby@silveragecare.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">abby@silveragecare.com</a>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={976} height={859} />
+                    <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={976} height={859} />
                     <a href="https://www.silveragecare.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">www.silveragecare.com</a>
                   </div>
                 </div>

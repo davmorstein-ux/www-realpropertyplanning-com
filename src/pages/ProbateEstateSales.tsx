@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
-import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -90,7 +89,7 @@ const ProbateEstateSales = () => {
               alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home"
               className="w-full h-auto object-cover"
               loading="eager"
-              fetchPriority="high" sizes="100vw width={1920} height={814} />
+              fetchPriority="high" sizes="100vw" width={1920} height={814} />
           </div>
           <HeroBandTitle as="h2">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
         </section>
