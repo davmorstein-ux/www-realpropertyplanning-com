@@ -11,14 +11,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import MidPageCTA from "@/components/MidPageCTA";
 import PageFAQ from "@/components/PageFAQ";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
-import scale3d from "@/assets/appraisal-scale-icon-washington.webp";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconHomeValue from "@/assets/icons/real-estate-property-value-icon-washington.webp";
-import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",

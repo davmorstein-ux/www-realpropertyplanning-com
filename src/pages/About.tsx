@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -8,17 +7,12 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import TrustStrip from "@/components/TrustStrip";
 import RelatedServices from "@/components/RelatedServices";
 import StatewideSupport from "@/components/StatewideSupport";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
 import aboutHeroImage from "@/assets/about_hero_downtown_clean_v2.webp";
-import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 
 
 const About = () => {
