@@ -1,9 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import legacy from "@vitejs/plugin-legacy";
 import path from "path";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile, stat } from "node:fs/promises";
 import { componentTagger } from "lovable-tagger";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+
+// Skip optimization for images smaller than 10KB
+const MIN_OPTIMIZE_BYTES = 10 * 1024;
+
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -963,13 +968,36 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    legacy({
+      targets: ["defaults", "not IE 11"],
+    }),
     ViteImageOptimizer({
-      png: { quality: 80 },
-      jpeg: { quality: 80 },
-      jpg: { quality: 80 },
-      webp: { quality: 80 },
+      test: /\.(jpe?g|png|webp|svg)$/i,
+      includePublic: true,
+      png: { quality: 78 },
+      jpeg: { quality: 78 },
+      jpg: { quality: 78 },
+      webp: { quality: 78 },
+      svg: {
+        multipass: true,
+        plugins: [
+          {
+            name: "preset-default",
+            params: {
+              overrides: {
+                removeViewBox: false,
+                cleanupNumericValues: { floatPrecision: 2 },
+              },
+            },
+          },
+        ],
+      },
+      // Skip files under 10KB
+      cache: false,
+      logStats: true,
     }),
     routeMetadataPlugin,
+
   ],
   resolve: {
     alias: {
