@@ -77,7 +77,7 @@ const Wills = () => {
           {/* Hero */}
           <section className="pt-3 md:pt-4 pb-10 sm:pb-14 bg-gradient-to-b from-primary to-primary">
             <div className="mx-auto max-w-3xl px-6 text-center">
-              <img src={iconWills} alt="Wills and real estate guidance for Washington State families" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy" sizes="100vw" decoding="async"/>
+              <img src={iconWills} alt="Wills and real estate guidance for Washington State families" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy" sizes="100vw" decoding="async width={341} height={512} />
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
                 Wills &amp; Real Estate
               </h1>
@@ -318,7 +318,7 @@ const Wills = () => {
                       boxShadow: 'inset 0 2px 2px rgba(255,255,255,0.25), inset 0 -2px 4px rgba(0,0,0,0.15)',
                       borderTop: '1px solid rgba(255,255,255,0.3)',
                     }}>
-                      <img src={iconPhone3d} alt="" className="w-7 h-7" aria-hidden="true"  loading="lazy" sizes="100vw" decoding="async"/>
+                      <img src={iconPhone3d} alt="" className="w-7 h-7" aria-hidden="true"  loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
                       <span className="font-bold text-lg text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Schedule a Conversation</span>
                     </div>
                   </div>

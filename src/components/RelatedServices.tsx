@@ -343,7 +343,7 @@ const RelatedServices = ({ currentPath, links: linksOverride, heading: headingOv
                     transition: "filter 0.5s ease",
                   }}
                   draggable={false}
-                  loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
+                  loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={1536} height={1024} />
               );
             })}
           </div>

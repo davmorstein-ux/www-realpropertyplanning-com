@@ -97,7 +97,7 @@ const SellHouseDuringProbateWashington = () => (
     <section className="bg-primary pt-6 md:pt-10 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <img src={heroImage} alt="Probate estate sales educational guide — open book, checklist, tablet, and Knowledge Plan Peace of Mind mug in gold circular frame" className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-5" loading="eager" sizes="100vw" decoding="async"/>
+          <img src={heroImage} alt="Probate estate sales educational guide — open book, checklist, tablet, and Knowledge Plan Peace of Mind mug in gold circular frame" className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-5" loading="eager" sizes="100vw" decoding="async width={1185} height={1226} />
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5" style={{ fontSize: "20px" }}>Educational Guide</p>
           <h1 className="font-serif text-primary-foreground font-semibold leading-tight mb-5" style={{ fontSize: "clamp(36px, 5vw, 46px)" }}>
             Can You Sell a House During Probate in Washington State?
@@ -283,7 +283,7 @@ const SellHouseDuringProbateWashington = () => (
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear Next Step</h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">If you're working through this situation and want help thinking it through, a short conversation can often bring clarity.</p>
           <p className="text-primary-foreground/50 text-base mb-8">No pressure. Just practical guidance.</p>
-          <Link to="/contact"><Button variant="gold" size="lg"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>Schedule a Consultation</Button></Link>
+          <Link to="/contact"><Button variant="gold" size="lg"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />Schedule a Consultation</Button></Link>
         </div>
       </div>
     </section>

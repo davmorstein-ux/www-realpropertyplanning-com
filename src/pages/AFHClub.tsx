@@ -95,7 +95,7 @@ const AFHClub = () => (
                 display: "block",
                 margin: "0 auto",
               }}
-              loading="eager" sizes="100vw" decoding="async"/>
+              loading="eager" sizes="100vw" decoding="async width={1024} height={1536} />
           </div>
 
           <p

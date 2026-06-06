@@ -90,7 +90,7 @@ const ProbateEstateSales = () => {
               alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home"
               className="w-full h-auto object-cover"
               loading="eager"
-              fetchPriority="high" sizes="100vw"/>
+              fetchPriority="high" sizes="100vw width={1920} height={814} />
           </div>
           <HeroBandTitle as="h2">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
         </section>

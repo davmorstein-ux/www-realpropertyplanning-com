@@ -42,7 +42,7 @@ const SeniorTransitions = () => {
           className="w-full h-auto object-cover"
           style={{ display: "block" }}
           loading="eager"
-          fetchPriority="high" sizes="100vw"/>
+          fetchPriority="high" sizes="100vw width={1920} height={763} />
         <HeroBandTitle as="h2">Selling A Senior's Home</HeroBandTitle>
       </section>
 
@@ -214,7 +214,7 @@ const SeniorTransitions = () => {
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async"/>
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
                 Start a Conversation
               </Button>
             </Link>

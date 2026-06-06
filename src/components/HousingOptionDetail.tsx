@@ -60,7 +60,7 @@ const HousingOptionDetail = ({
               src={housingOptionsHero}
               alt={`${title} — senior housing option in Washington State`}
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-              loading="eager" sizes="100vw" decoding="async"/>
+              loading="eager" sizes="100vw" decoding="async width={1920} height={595} />
             <HeroBandTitle>{title}</HeroBandTitle>
           </div>
         </section>

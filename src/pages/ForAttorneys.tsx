@@ -29,7 +29,7 @@ const ForAttorneys = () => (
           src="/images/hero_attorneys.webp"
           alt="Real Property Planning for Washington attorneys — estate, probate, and family law referral partner"
           className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-top block"
-          loading="eager" sizes="100vw" decoding="async"/>
+          loading="eager" sizes="100vw" decoding="async width={1983} height={595} />
         <HeroBandTitle>Attorneys</HeroBandTitle>
       </div>
     </section>

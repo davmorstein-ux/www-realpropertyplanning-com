@@ -22,7 +22,7 @@ const ProfessionalsPage = () => (
             src={heroImage}
             alt="Professionals and services — Washington State estate, probate, and senior transition specialists"
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-            loading="eager" sizes="100vw" decoding="async"/>
+            loading="eager" sizes="100vw" decoding="async width={1920} height={493} />
           <HeroBandTitle>Professionals &amp; Services</HeroBandTitle>
         </div>
       </section>
