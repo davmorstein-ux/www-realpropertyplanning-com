@@ -113,7 +113,7 @@ export default function AFHCarousel() {
   }, [next, paused, isVisible, prefersReducedMotion]);
 
   return (
-    <section style={{ background: "#f0f3f6", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}>
+    <section ref={sectionRef} style={{ background: "#f0f3f6", padding: "64px 24px 72px", fontFamily: "Georgia, serif", minHeight: 720 }}>
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
