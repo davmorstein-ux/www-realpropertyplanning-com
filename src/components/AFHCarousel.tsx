@@ -75,6 +75,9 @@ export default function AFHCarousel() {
   const [hovered, setHovered] = useState<number | null>(null);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const isVisible = useIsVisible(sectionRef, "0px");
+  const prefersReducedMotion = useReducedMotion();
 
   const slideTo = useCallback(
     (newPos: number) => {
