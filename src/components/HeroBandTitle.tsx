@@ -78,7 +78,7 @@ const HeroBandTitle = ({
         data-hero-band
         style={{
           background: "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)",
-          height: compact ? "52px" : "60px",
+          height: "60px",
           padding: "0 24px",
           display: "flex",
           alignItems: "center",
