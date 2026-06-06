@@ -79,12 +79,12 @@ const AFHGettingStarted = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -120,10 +120,10 @@ const AFHGettingStarted = () => (
           </p>
           <p
             style={{
-              fontSize: 16,
+              fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#2e3e4e",
+              color: "#1e2a38",
               lineHeight: 1.8,
               maxWidth: 680,
             }}
@@ -139,12 +139,12 @@ const AFHGettingStarted = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -205,12 +205,12 @@ const AFHGettingStarted = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -301,7 +301,7 @@ const AFHGettingStarted = () => (
                 <div>
                   <p
                     style={{
-                      fontSize: 16,
+                      fontSize: 18,
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
                       color: "#0a1628",
@@ -312,9 +312,9 @@ const AFHGettingStarted = () => (
                   </p>
                   <p
                     style={{
-                      fontSize: 14,
+                      fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#2e3e4e",
+                      color: "#1e2a38",
                       lineHeight: 1.65,
                       margin: 0,
                     }}
@@ -337,7 +337,7 @@ const AFHGettingStarted = () => (
           >
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1a2a3a",
                 lineHeight: 1.75,
@@ -365,12 +365,12 @@ const AFHGettingStarted = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -426,7 +426,7 @@ const AFHGettingStarted = () => (
                 </h3>
                 <p
                   style={{
-                    fontSize: 15,
+                    fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
                     color: "#1e2a38",
                     lineHeight: 1.75,
@@ -446,12 +446,12 @@ const AFHGettingStarted = () => (
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -508,7 +508,7 @@ const AFHGettingStarted = () => (
                 </h3>
                 <p
                   style={{
-                    fontSize: 15,
+                    fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
                     color: "#1e2a38",
                     lineHeight: 1.75,
@@ -519,12 +519,12 @@ const AFHGettingStarted = () => (
                 </p>
                 <p
                   style={{
-                    fontSize: 12,
+                    fontSize: 15,
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "#7a4e1a",
+                    color: "#5a3200",
                     margin: "0 0 8px",
                   }}
                 >
@@ -534,7 +534,7 @@ const AFHGettingStarted = () => (
                   <p
                     key={i}
                     style={{
-                      fontSize: 14,
+                      fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
                       color: "#1e2a38",
                       lineHeight: 1.65,
@@ -547,12 +547,12 @@ const AFHGettingStarted = () => (
                 ))}
                 <p
                   style={{
-                    fontSize: 12,
+                    fontSize: 15,
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "#7a4e1a",
+                    color: "#5a3200",
                     margin: "16px 0 8px",
                   }}
                 >
@@ -562,7 +562,7 @@ const AFHGettingStarted = () => (
                   <p
                     key={i}
                     style={{
-                      fontSize: 14,
+                      fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
                       color: "#1e2a38",
                       lineHeight: 1.65,
@@ -588,7 +588,7 @@ const AFHGettingStarted = () => (
           >
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1e2a38",
                 lineHeight: 1.75,
@@ -608,12 +608,12 @@ const AFHGettingStarted = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -689,7 +689,7 @@ const AFHGettingStarted = () => (
                     justifyContent: "center",
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    fontSize: 16,
+                    fontSize: 18,
                   }}
                 >
                   {item.step}
@@ -708,7 +708,7 @@ const AFHGettingStarted = () => (
                   </h3>
                   <p
                     style={{
-                      fontSize: 15,
+                      fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
                       color: "#1e2a38",
                       lineHeight: 1.75,
@@ -744,7 +744,7 @@ const AFHGettingStarted = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  fontSize: 14,
+                  fontSize: 16,
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: 600,
                   color: "#2c6e9e",

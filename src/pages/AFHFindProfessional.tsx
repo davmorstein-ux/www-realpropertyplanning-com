@@ -109,12 +109,12 @@ const AFHFindProfessional = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -150,10 +150,10 @@ const AFHFindProfessional = () => (
           </p>
           <p
             style={{
-              fontSize: 16,
+              fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#2e3e4e",
+              color: "#1e2a38",
               lineHeight: 1.8,
               maxWidth: 680,
             }}
@@ -195,7 +195,7 @@ const AFHFindProfessional = () => (
                     </h2>
                     <p
                       style={{
-                        fontSize: 16,
+                        fontSize: 18,
                         fontFamily: "'Raleway', sans-serif",
                         color: "#1e2a38",
                         lineHeight: 1.8,
@@ -206,12 +206,12 @@ const AFHFindProfessional = () => (
                     </p>
                     <p
                       style={{
-                        fontSize: 12,
+                        fontSize: 15,
                         fontFamily: "'Raleway', sans-serif",
                         fontWeight: 700,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
-                        color: "#7a4e1a",
+                        color: "#5a3200",
                         margin: "0 0 10px",
                       }}
                     >
@@ -232,7 +232,7 @@ const AFHFindProfessional = () => (
                           />
                           <p
                             style={{
-                              fontSize: 14,
+                              fontSize: 16,
                               fontFamily: "'Raleway', sans-serif",
                               color: "#1e2a38",
                               lineHeight: 1.65,
@@ -249,12 +249,12 @@ const AFHFindProfessional = () => (
                         <Link
                           to={cat.link.href}
                           style={{
-                            fontSize: 13,
+                            fontSize: 16,
                             fontFamily: "'Raleway', sans-serif",
                             fontWeight: 700,
                             letterSpacing: "0.14em",
                             textTransform: "uppercase",
-                            color: "#7a4e1a",
+                            color: "#5a3200",
                             textDecoration: "none",
                             borderBottom: "1px solid #b87333",
                             paddingBottom: 2,
@@ -268,12 +268,12 @@ const AFHFindProfessional = () => (
                           target="_blank"
                           rel="noopener noreferrer"
                           style={{
-                            fontSize: 13,
+                            fontSize: 16,
                             fontFamily: "'Raleway', sans-serif",
                             fontWeight: 700,
                             letterSpacing: "0.14em",
                             textTransform: "uppercase",
-                            color: "#7a4e1a",
+                            color: "#5a3200",
                             textDecoration: "none",
                             borderBottom: "1px solid #b87333",
                             paddingBottom: 2,
@@ -295,12 +295,12 @@ const AFHFindProfessional = () => (
         <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 16px",
             }}
           >
@@ -336,7 +336,7 @@ const AFHFindProfessional = () => (
             to="/join-the-network"
             style={{
               display: "inline-block",
-              fontSize: 13,
+              fontSize: 16,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 700,
               letterSpacing: "0.16em",

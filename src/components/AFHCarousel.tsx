@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
+import { useIsVisible } from "@/hooks/use-is-visible";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 const TOPICS = [
   {
@@ -73,6 +75,9 @@ export default function AFHCarousel() {
   const [hovered, setHovered] = useState<number | null>(null);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const isVisible = useIsVisible(sectionRef, "0px");
+  const prefersReducedMotion = useReducedMotion();
 
   const slideTo = useCallback(
     (newPos: number) => {
@@ -100,15 +105,15 @@ export default function AFHCarousel() {
   }, [transitioning, pos]);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || !isVisible || prefersReducedMotion) return;
     timerRef.current = setInterval(next, AUTO_MS);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [next, paused]);
+  }, [next, paused, isVisible, prefersReducedMotion]);
 
   return (
-    <section style={{ background: "#f0f3f6", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}>
+    <section ref={sectionRef} style={{ background: "#f0f3f6", padding: "64px 24px 72px", fontFamily: "Georgia, serif", minHeight: 720 }}>
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
@@ -201,6 +206,10 @@ export default function AFHCarousel() {
               <img
                 src={topic.img}
                 alt={topic.title}
+                width={304}
+                height={405}
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: "100%",
                   height: "100%",
@@ -212,6 +221,7 @@ export default function AFHCarousel() {
                   (e.target as HTMLImageElement).style.display = "none";
                 }}
               />
+
 
               {/* Permanent bottom label */}
               <div

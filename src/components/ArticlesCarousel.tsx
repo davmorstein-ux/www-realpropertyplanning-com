@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
+import { useIsVisible } from "@/hooks/use-is-visible";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 const ARTICLES = [
   { title: "The Silver Tsunami", href: "/articles/silver-tsunami", img: "/The_Silver_Tsunami.webp" },
@@ -40,6 +42,9 @@ export default function ArticlesCarousel() {
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const isVisible = useIsVisible(sectionRef, "0px");
+  const prefersReducedMotion = useReducedMotion();
 
   const slideTo = useCallback(
     (newPos: number) => {
@@ -68,19 +73,19 @@ export default function ArticlesCarousel() {
   }, [transitioning, pos]);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || !isVisible || prefersReducedMotion) return;
     timerRef.current = setInterval(next, AUTO_MS);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [next, paused]);
+  }, [next, paused, isVisible, prefersReducedMotion]);
 
   // Card width: container is 960px, 3 cards with 2 gaps of 24px each
   // (960 - 48) / 3 = 304px per card
   const CARD_W = 304;
 
   return (
-    <section style={{ background: "#f7f4ef", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}>
+    <section ref={sectionRef} style={{ background: "#f7f4ef", padding: "64px 24px 72px", fontFamily: "Georgia, serif", minHeight: 640 }}>
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
@@ -146,6 +151,10 @@ export default function ArticlesCarousel() {
               <img
                 src={article.img}
                 alt={article.title}
+                width={304}
+                height={405}
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: "100%",
                   height: "100%",
@@ -154,6 +163,7 @@ export default function ArticlesCarousel() {
                   display: "block",
                 }}
               />
+
               {/* Hover overlay */}
               <div
                 style={{

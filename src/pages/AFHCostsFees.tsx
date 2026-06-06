@@ -115,12 +115,12 @@ const AFHCostsFees = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -166,7 +166,7 @@ const AFHCostsFees = () => (
           >
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1a2a3a",
                 lineHeight: 1.75,
@@ -185,12 +185,12 @@ const AFHCostsFees = () => (
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -249,10 +249,10 @@ const AFHCostsFees = () => (
                   </h3>
                   <span
                     style={{
-                      fontSize: 15,
+                      fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
-                      color: "#7a4e1a",
+                      color: "#5a3200",
                       whiteSpace: "nowrap",
                     }}
                   >
@@ -261,7 +261,7 @@ const AFHCostsFees = () => (
                 </div>
                 <p
                   style={{
-                    fontSize: 15,
+                    fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
                     color: "#1e2a38",
                     lineHeight: 1.7,
@@ -272,12 +272,12 @@ const AFHCostsFees = () => (
                 </p>
                 <p
                   style={{
-                    fontSize: 12,
+                    fontSize: 15,
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 600,
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
-                    color: "#6a7a8a",
+                    color: "#1e2a38",
                     margin: 0,
                   }}
                 >
@@ -294,12 +294,12 @@ const AFHCostsFees = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -356,7 +356,7 @@ const AFHCostsFees = () => (
           >
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1a0a0a",
                 lineHeight: 1.75,
@@ -376,12 +376,12 @@ const AFHCostsFees = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -433,7 +433,7 @@ const AFHCostsFees = () => (
                 <div>
                   <p
                     style={{
-                      fontSize: 16,
+                      fontSize: 18,
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
                       color: "#0a1628",
@@ -444,9 +444,9 @@ const AFHCostsFees = () => (
                   </p>
                   <p
                     style={{
-                      fontSize: 14,
+                      fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#2e3e4e",
+                      color: "#1e2a38",
                       lineHeight: 1.65,
                       margin: 0,
                     }}
@@ -456,10 +456,10 @@ const AFHCostsFees = () => (
                 </div>
                 <span
                   style={{
-                    fontSize: 16,
+                    fontSize: 18,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#7a4e1a",
+                    color: "#5a3200",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -492,7 +492,7 @@ const AFHCostsFees = () => (
           >
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1a2a3a",
                 lineHeight: 1.75,
@@ -542,7 +542,7 @@ const AFHCostsFees = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  fontSize: 15,
+                  fontSize: 17,
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: 600,
                   color: "#2c6e9e",
