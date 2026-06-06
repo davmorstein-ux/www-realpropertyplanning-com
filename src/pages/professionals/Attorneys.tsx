@@ -5,7 +5,6 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import { Button } from "@/components/ui/button";
 import BackToProfessionals from "@/components/BackToProfessionals";
 
 import iconProbate from "@/assets/icons/probate-attorney-services-icon-washington.webp";
