@@ -2826,3 +2826,16 @@ main [class*="/90"] {
   opacity: 1 !important;
 }
 
+
+/* ============================================================
+   Global reduced-motion enforcement (WCAG 2.3.3 / 2.1)
+   Disables all transitions/animations for users who request it.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
