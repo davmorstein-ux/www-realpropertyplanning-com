@@ -101,12 +101,12 @@ const AFHClub = () => (
 
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', 'Gill Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -131,7 +131,7 @@ const AFHClub = () => (
               fontSize: 19,
               fontFamily: "Georgia, serif",
               fontWeight: 400,
-              color: "#7a4e1a",
+              color: "#5a3200",
               letterSpacing: "0.06em",
               margin: "0 0 24px",
             }}
@@ -171,7 +171,7 @@ const AFHClub = () => (
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#2e3e4e",
+              color: "#1e2a38",
               lineHeight: 1.85,
               margin: "0 auto",
               maxWidth: 580,
@@ -194,7 +194,7 @@ const AFHClub = () => (
         <p
           style={{
             margin: 0,
-            fontSize: 12,
+            fontSize: 15,
             fontFamily: "'Raleway', sans-serif",
             fontWeight: 600,
             letterSpacing: "0.25em",
@@ -293,7 +293,7 @@ const AFHClub = () => (
                 </h3>
                 <p
                   style={{
-                    fontSize: 15,
+                    fontSize: 17,
                     color: "#1e2a38",
                     margin: "0 0 12px",
                     lineHeight: 1.65,
@@ -305,12 +305,12 @@ const AFHClub = () => (
                 </p>
                 <span
                   style={{
-                    fontSize: 11,
+                    fontSize: 15,
                     fontFamily: "'Raleway', 'Gill Sans', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
-                    color: "#7a4e1a",
+                    color: "#5a3200",
                     display: "inline-flex",
                     alignItems: "center",
                     gap: 5,
@@ -346,12 +346,12 @@ const AFHClub = () => (
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 16px",
             }}
           >

@@ -17,7 +17,7 @@ const ENFORCEMENT_LEVELS = [
   },
   {
     level: "Civil Fines",
-    color: "#7a4e1a",
+    color: "#5a3200",
     bg: "#fdf3e8",
     border: "#b87333",
     description:
@@ -143,12 +143,12 @@ const AFHRegulationsCompliance = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -184,10 +184,10 @@ const AFHRegulationsCompliance = () => (
           </p>
           <p
             style={{
-              fontSize: 16,
+              fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#2e3e4e",
+              color: "#1e2a38",
               lineHeight: 1.8,
               maxWidth: 680,
             }}
@@ -203,12 +203,12 @@ const AFHRegulationsCompliance = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -297,7 +297,7 @@ const AFHRegulationsCompliance = () => (
                 </h3>
                 <p
                   style={{
-                    fontSize: 15,
+                    fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
                     color: "#1e2a38",
                     lineHeight: 1.75,
@@ -322,7 +322,7 @@ const AFHRegulationsCompliance = () => (
           >
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1a2a3a",
                 lineHeight: 1.75,
@@ -343,12 +343,12 @@ const AFHRegulationsCompliance = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -408,7 +408,7 @@ const AFHRegulationsCompliance = () => (
                     justifyContent: "center",
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    fontSize: 15,
+                    fontSize: 17,
                   }}
                 >
                   {i + 1}
@@ -427,7 +427,7 @@ const AFHRegulationsCompliance = () => (
                   </h3>
                   <p
                     style={{
-                      fontSize: 15,
+                      fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
                       color: "#1e2a38",
                       lineHeight: 1.75,
@@ -448,12 +448,12 @@ const AFHRegulationsCompliance = () => (
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -512,7 +512,7 @@ const AFHRegulationsCompliance = () => (
                     justifyContent: "center",
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    fontSize: 16,
+                    fontSize: 18,
                   }}
                 >
                   {item.rank}
@@ -531,7 +531,7 @@ const AFHRegulationsCompliance = () => (
                   </h3>
                   <p
                     style={{
-                      fontSize: 15,
+                      fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
                       color: "#1e2a38",
                       lineHeight: 1.75,
@@ -542,12 +542,12 @@ const AFHRegulationsCompliance = () => (
                   </p>
                   <span
                     style={{
-                      fontSize: 11,
+                      fontSize: 15,
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 600,
                       letterSpacing: "0.14em",
                       textTransform: "uppercase",
-                      color: "#7a4e1a",
+                      color: "#5a3200",
                     }}
                   >
                     {item.wac}
@@ -569,7 +569,7 @@ const AFHRegulationsCompliance = () => (
           >
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1e2a38",
                 lineHeight: 1.75,
@@ -597,12 +597,12 @@ const AFHRegulationsCompliance = () => (
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -668,7 +668,7 @@ const AFHRegulationsCompliance = () => (
                 </h3>
                 <p
                   style={{
-                    fontSize: 15,
+                    fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
                     color: "#1e2a38",
                     lineHeight: 1.75,
@@ -683,12 +683,12 @@ const AFHRegulationsCompliance = () => (
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    fontSize: 12,
+                    fontSize: 15,
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "#7a4e1a",
+                    color: "#5a3200",
                     textDecoration: "none",
                     display: "inline-flex",
                     alignItems: "center",
@@ -717,7 +717,7 @@ const AFHRegulationsCompliance = () => (
           >
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1a2a3a",
                 lineHeight: 1.75,
@@ -738,12 +738,12 @@ const AFHRegulationsCompliance = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -819,7 +819,7 @@ const AFHRegulationsCompliance = () => (
                   </p>
                   <p
                     style={{
-                      fontSize: 16,
+                      fontSize: 18,
                       fontFamily: "'Raleway', sans-serif",
                       color: "#1e2a38",
                       lineHeight: 1.8,

@@ -107,12 +107,12 @@ const AFHBuildingInspection = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -155,12 +155,12 @@ const AFHBuildingInspection = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -225,12 +225,12 @@ const AFHBuildingInspection = () => (
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                fontSize: 13,
+                fontSize: 16,
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.14em",
                 textTransform: "uppercase",
-                color: "#7a4e1a",
+                color: "#5a3200",
                 textDecoration: "none",
                 borderBottom: "1px solid #b87333",
                 paddingBottom: 2,
@@ -243,12 +243,12 @@ const AFHBuildingInspection = () => (
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                fontSize: 13,
+                fontSize: 16,
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.14em",
                 textTransform: "uppercase",
-                color: "#7a4e1a",
+                color: "#5a3200",
                 textDecoration: "none",
                 borderBottom: "1px solid #b87333",
                 paddingBottom: 2,
@@ -265,12 +265,12 @@ const AFHBuildingInspection = () => (
         <div style={{ maxWidth: 960, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -327,7 +327,7 @@ const AFHBuildingInspection = () => (
                 </h3>
                 <p
                   style={{
-                    fontSize: 15,
+                    fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
                     color: "#1e2a38",
                     lineHeight: 1.75,
@@ -338,7 +338,7 @@ const AFHBuildingInspection = () => (
                 </p>
                 <p
                   style={{
-                    fontSize: 11,
+                    fontSize: 15,
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.12em",
@@ -353,7 +353,7 @@ const AFHBuildingInspection = () => (
                   <p
                     key={i}
                     style={{
-                      fontSize: 13,
+                      fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
                       color: "#1e2a38",
                       margin: "0 0 3px",
@@ -365,7 +365,7 @@ const AFHBuildingInspection = () => (
                 ))}
                 <p
                   style={{
-                    fontSize: 11,
+                    fontSize: 15,
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.12em",
@@ -380,7 +380,7 @@ const AFHBuildingInspection = () => (
                   <p
                     key={i}
                     style={{
-                      fontSize: 13,
+                      fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
                       color: "#1e2a38",
                       margin: "0 0 3px",
@@ -401,12 +401,12 @@ const AFHBuildingInspection = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -463,7 +463,7 @@ const AFHBuildingInspection = () => (
                 <div>
                   <p
                     style={{
-                      fontSize: 16,
+                      fontSize: 18,
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
                       color: "#0a1628",
@@ -474,7 +474,7 @@ const AFHBuildingInspection = () => (
                   </p>
                   <p
                     style={{
-                      fontSize: 15,
+                      fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
                       color: "#1e2a38",
                       lineHeight: 1.7,
@@ -499,7 +499,7 @@ const AFHBuildingInspection = () => (
           >
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1a2a3a",
                 lineHeight: 1.75,
@@ -519,12 +519,12 @@ const AFHBuildingInspection = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -594,7 +594,7 @@ const AFHBuildingInspection = () => (
                   justifyContent: "center",
                   fontFamily: "Georgia, serif",
                   fontWeight: 700,
-                  fontSize: 16,
+                  fontSize: 18,
                 }}
               >
                 {item.step}
@@ -613,7 +613,7 @@ const AFHBuildingInspection = () => (
                 </h3>
                 <p
                   style={{
-                    fontSize: 15,
+                    fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
                     color: "#1e2a38",
                     lineHeight: 1.75,
@@ -631,7 +631,7 @@ const AFHBuildingInspection = () => (
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 600,
                 color: "#2c6e9e",
@@ -645,7 +645,7 @@ const AFHBuildingInspection = () => (
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 600,
                 color: "#2c6e9e",
@@ -659,7 +659,7 @@ const AFHBuildingInspection = () => (
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 600,
                 color: "#2c6e9e",

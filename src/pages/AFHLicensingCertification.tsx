@@ -85,12 +85,12 @@ const AFHLicensingCertification = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -132,12 +132,12 @@ const AFHLicensingCertification = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -203,7 +203,7 @@ const AFHLicensingCertification = () => (
             </h3>
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1e2a38",
                 lineHeight: 1.75,
@@ -226,7 +226,7 @@ const AFHLicensingCertification = () => (
                 />
                 <p
                   style={{
-                    fontSize: 15,
+                    fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
                     color: "#1e2a38",
                     lineHeight: 1.65,
@@ -239,9 +239,9 @@ const AFHLicensingCertification = () => (
             ))}
             <p
               style={{
-                fontSize: 13,
+                fontSize: 16,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#4a5060",
+                color: "#1e2a38",
                 lineHeight: 1.6,
                 margin: "16px 0 0",
                 fontStyle: "italic",
@@ -258,12 +258,12 @@ const AFHLicensingCertification = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -320,7 +320,7 @@ const AFHLicensingCertification = () => (
                     justifyContent: "center",
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    fontSize: 16,
+                    fontSize: 18,
                   }}
                 >
                   {item.step}
@@ -339,7 +339,7 @@ const AFHLicensingCertification = () => (
                   </h3>
                   <p
                     style={{
-                      fontSize: 15,
+                      fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
                       color: "#1e2a38",
                       lineHeight: 1.75,
@@ -360,12 +360,12 @@ const AFHLicensingCertification = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -420,7 +420,7 @@ const AFHLicensingCertification = () => (
           >
             <p
               style={{
-                fontSize: 15,
+                fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 color: "#1a0a0a",
                 lineHeight: 1.75,
@@ -439,12 +439,12 @@ const AFHLicensingCertification = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 12,
+              fontSize: 15,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               margin: "0 0 14px",
             }}
           >
@@ -507,12 +507,12 @@ const AFHLicensingCertification = () => (
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              fontSize: 13,
+              fontSize: 16,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 700,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#7a4e1a",
+              color: "#5a3200",
               textDecoration: "none",
               borderBottom: "1px solid #b87333",
               paddingBottom: 2,
@@ -562,7 +562,7 @@ const AFHLicensingCertification = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  fontSize: 15,
+                  fontSize: 17,
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: 600,
                   color: "#2c6e9e",
