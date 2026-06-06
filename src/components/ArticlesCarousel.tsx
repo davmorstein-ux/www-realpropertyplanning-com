@@ -73,12 +73,12 @@ export default function ArticlesCarousel() {
   }, [transitioning, pos]);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || !isVisible || prefersReducedMotion) return;
     timerRef.current = setInterval(next, AUTO_MS);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [next, paused]);
+  }, [next, paused, isVisible, prefersReducedMotion]);
 
   // Card width: container is 960px, 3 cards with 2 gaps of 24px each
   // (960 - 48) / 3 = 304px per card
