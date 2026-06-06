@@ -196,6 +196,14 @@ const SeniorHousingGuide = lazy(() => import("./pages/articles/SeniorHousingGuid
 const HowToChooseSeniorHousing = lazy(() => import("./pages/articles/HowToChooseSeniorHousing"));
 const ArticlesIndex = lazy(() => import("./pages/Articles"));
 const AFHClub = lazy(() => import("./pages/AFHClub"));
+const AFHGettingStarted = lazy(() => import("./pages/AFHGettingStarted"));
+const AFHLicensingCertification = lazy(() => import("./pages/AFHLicensingCertification"));
+const AFHTrainingEducation = lazy(() => import("./pages/AFHTrainingEducation"));
+const AFHBuildingInspection = lazy(() => import("./pages/AFHBuildingInspection"));
+const AFHCostsFees = lazy(() => import("./pages/AFHCostsFees"));
+const AFHBuyingSelling = lazy(() => import("./pages/AFHBuyingSelling"));
+const AFHRegulationsCompliance = lazy(() => import("./pages/AFHRegulationsCompliance"));
+const AFHFindProfessional = lazy(() => import("./pages/AFHFindProfessional"));
 const queryClient = new QueryClient();
 
 // Minimal full-viewport fallback in brand cream — no spinner, no layout shift,
