@@ -128,7 +128,6 @@ const HomepageHero = () => {
             media="(max-width: 768px)"
             srcSet="/homepage-hero-mobile.webp"
             type="image/webp"
-            fetchPriority="high"
           />
           <source
             media="(min-width: 769px)"
