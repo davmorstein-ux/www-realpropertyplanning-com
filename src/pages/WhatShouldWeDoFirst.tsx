@@ -254,7 +254,7 @@ const WhatShouldWeDoFirst = () => {
               </p>
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <img src={iconPhone} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                  <img src={iconPhone} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                   Start the Conversation
                 </Button>
               </Link>

@@ -77,7 +77,7 @@ const HowProbateRealEstateWorks = () => (
             src={probateRealEstateHero}
             alt="Probate real estate guidance for Washington families"
             className="w-full h-auto object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async width={1782} height={509} />
+            loading="eager" sizes="100vw" decoding="async" width={1782} height={509} />
           <HeroBandTitle as="div">How Probate Real Estate Works</HeroBandTitle>
         </div>
       </section>

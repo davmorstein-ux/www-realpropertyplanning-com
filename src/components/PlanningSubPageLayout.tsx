@@ -54,7 +54,7 @@ const PlanningSubPageLayout = ({
             src={heroImage}
             alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async width={1920} height={487} />
+            loading="eager" sizes="100vw" decoding="async" width={1920} height={487} />
         </section>
 
         {/* BLUE BAND */}

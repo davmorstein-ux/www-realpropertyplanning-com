@@ -97,7 +97,7 @@ const RetirementReverseMortgage = () => (
                   src={danBartelPhoto}
                   alt="Daniel Bartel — Retirement Mortgage Specialist, C2 Financial"
                   className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
-                 loading="lazy" sizes="100vw" decoding="async width={1536} height={1024} />
+                 loading="lazy" sizes="100vw" decoding="async" width={1536} height={1024} />
               </div>
 
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
@@ -106,7 +106,7 @@ const RetirementReverseMortgage = () => (
                     src={c2FinancialLogo}
                     alt="C2 Financial logo"
                     className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
-                   loading="lazy" sizes="100vw" decoding="async width={1220} height={286} />
+                   loading="lazy" sizes="100vw" decoding="async" width={1220} height={286} />
                 </a>
 
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
@@ -119,23 +119,23 @@ const RetirementReverseMortgage = () => (
 
                   <div className="space-y-1.5 text-sm">
                     <div className="flex items-start gap-2 justify-center sm:justify-start">
-                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
                       <span className="text-muted-foreground">1721 Hewitt Ave Ste. 612, Everett, WA 98201</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                       <a href="tel:+12063105766" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                         (206) 310-5766
                       </a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1254} height={1254} />
+                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1254} height={1254} />
                       <a href="mailto:santadan@c2financial.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
                         santadan@c2financial.com
                       </a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={976} height={859} />
+                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={976} height={859} />
                       <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                         www.santadanmortgage.com
                       </a>
@@ -154,7 +154,7 @@ const RetirementReverseMortgage = () => (
                   src={jeffMcGinnisPhoto}
                   alt="Jeff McGinnis — Senior Loan Officer, CrossCountry Mortgage"
                   className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
-                 loading="lazy" sizes="100vw" decoding="async width={350} height={433} />
+                 loading="lazy" sizes="100vw" decoding="async" width={350} height={433} />
               </div>
 
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
@@ -163,7 +163,7 @@ const RetirementReverseMortgage = () => (
                     src={crossCountryLogo}
                     alt="CrossCountry Mortgage logo"
                     className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
-                   loading="lazy" sizes="100vw" decoding="async width={1536} height={1024} />
+                   loading="lazy" sizes="100vw" decoding="async" width={1536} height={1024} />
                 </a>
 
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
@@ -176,23 +176,23 @@ const RetirementReverseMortgage = () => (
 
                   <div className="space-y-1.5 text-sm">
                     <div className="flex items-start gap-2 justify-center sm:justify-start">
-                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
                       <span className="text-muted-foreground">1000 Dexter Ave N, Suite 310, Seattle, WA 98109</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                       <a href="tel:+12062835626" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                         (206) 283-5626
                       </a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1254} height={1254} />
+                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1254} height={1254} />
                       <a href="mailto:jejj.mcginnis@ccm.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
                         jejj.mcginnis@ccm.com
                       </a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={976} height={859} />
+                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={976} height={859} />
                       <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                         crosscountrymortgage.com
                       </a>
@@ -239,7 +239,7 @@ const RetirementReverseMortgage = () => (
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
               Schedule a Conversation
             </Button>
           </Link>

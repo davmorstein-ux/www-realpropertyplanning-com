@@ -91,7 +91,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
             </div>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
               {city.name}, {city.county}

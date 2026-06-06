@@ -55,7 +55,7 @@ const About = () => {
                   src={daveHeadshot}
                   alt="David Stein licensed real estate broker and certified appraiser Kirkland Washington"
                   className="w-full h-full object-cover object-top"
-                  loading="lazy" sizes="100vw" decoding="async width={720} height={940} />
+                  loading="lazy" sizes="100vw" decoding="async" width={720} height={940} />
               </div>
               <p className="mt-4 font-serif text-4xl text-foreground font-bold leading-tight text-center">
                 David Stein

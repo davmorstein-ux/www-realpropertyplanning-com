@@ -106,7 +106,7 @@ const HowWeWork = () => {
                     variant="navy3d"
                     size="lg"
                   >
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                     Request a Confidential Consultation
                   </Button>
                 </Link>

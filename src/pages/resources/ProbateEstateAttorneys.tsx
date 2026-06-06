@@ -31,7 +31,7 @@ const ProbateEstateAttorneys = () => (
             src={heroIcon}
             alt="Probate attorney at desk reviewing estate plan documents"
             className="max-w-full h-auto max-h-[420px] object-contain"
-            loading="eager" sizes="100vw" decoding="async width={1254} height={1254} />
+            loading="eager" sizes="100vw" decoding="async" width={1254} height={1254} />
         </div>
         <HeroBandTitle compact>Probate Attorney</HeroBandTitle>
       </section>

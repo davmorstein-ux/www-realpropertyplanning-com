@@ -143,7 +143,7 @@ const Terminology = () => {
             src={terminologyHero}
             alt="Probate and estate terminology guide for Washington State"
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async width={1919} height={711} />
+            loading="eager" sizes="100vw" decoding="async" width={1919} height={711} />
           <HeroBandTitle>Probate &amp; Estate Terminology</HeroBandTitle>
         </section>
 

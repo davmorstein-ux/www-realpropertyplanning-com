@@ -52,19 +52,19 @@ const Footer = () => {
             <ul className="flex flex-col gap-2.5 text-[16px] text-left">
               <li>
                 <a href="tel:2069003015" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 leading-tight">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={1024} height={1536} />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={1024} height={1536} />
                   <span>(206) 900-3015</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 break-all leading-tight">
-                  <img src={iconEmail3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={128} height={128} />
+                  <img src={iconEmail3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={128} height={128} />
                   <span className="rpp-footer-email">info@realpropertyplanning.com</span>
                 </a>
               </li>
 
               <li className="text-primary-foreground flex items-start gap-3.5 leading-snug">
-                <img src={iconPin3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain mt-0.5 shrink-0" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={512} height={512} />
+                <img src={iconPin3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain mt-0.5 shrink-0" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={512} height={512} />
                 <span>PO Box 1462, Woodinville, WA 98072</span>
               </li>
             </ul>
@@ -114,16 +114,16 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/30 pt-10 mb-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-[820px] mx-auto items-center">
             <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
-              <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="object-contain max-h-[72px] w-auto" loading="lazy" sizes="100vw" decoding="async width={1185} height={819} />
+              <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="object-contain max-h-[72px] w-auto" loading="lazy" sizes="100vw" decoding="async" width={1185} height={819} />
             </a>
             <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
-              <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="object-contain max-h-[72px] w-auto" loading="lazy" sizes="100vw" decoding="async width={864} height={265} />
+              <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="object-contain max-h-[72px] w-auto" loading="lazy" sizes="100vw" decoding="async" width={864} height={265} />
             </a>
             <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
-              <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="object-contain max-h-[88px] w-auto" loading="lazy" sizes="100vw" decoding="async width={423} height={512} />
+              <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="object-contain max-h-[88px] w-auto" loading="lazy" sizes="100vw" decoding="async" width={423} height={512} />
             </a>
             <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
-              <img src={kccLogo} alt="Friends of King County Collaborative Law" className="object-contain max-h-[72px] w-auto" loading="lazy" sizes="100vw" decoding="async width={496} height={101} />
+              <img src={kccLogo} alt="Friends of King County Collaborative Law" className="object-contain max-h-[72px] w-auto" loading="lazy" sizes="100vw" decoding="async" width={496} height={101} />
             </a>
           </div>
         </div>

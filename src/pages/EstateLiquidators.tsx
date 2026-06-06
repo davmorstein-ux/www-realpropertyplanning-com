@@ -38,7 +38,7 @@ const EstateLiquidators = () => (
                       src={ginnysGirlsLogo}
                       alt="Ginny's Girls Estate Services logo"
                       className="h-20 md:h-24 w-auto object-contain mb-4"
-                      loading="lazy" sizes="100vw" decoding="async width={609} height={222} />
+                      loading="lazy" sizes="100vw" decoding="async" width={609} height={222} />
                     <h2 className="font-serif text-xl md:text-2xl text-navy font-semibold leading-snug mb-3">
                       Ginny's Girls Estate Services
                     </h2>

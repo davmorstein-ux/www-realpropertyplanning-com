@@ -49,7 +49,7 @@ const EstateLiquidationLearnMore = () => (
                 src={iconEstateLiquidation}
                 alt="Estate liquidation and estate sales guide Washington State"
                 className="block w-full max-w-[15rem] h-auto object-contain"
-                loading="eager" sizes="100vw" decoding="async width={1024} height={1024} />
+                loading="eager" sizes="100vw" decoding="async" width={1024} height={1024} />
             </div>
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">In-Depth Guide</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
@@ -60,7 +60,7 @@ const EstateLiquidationLearnMore = () => (
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                 Schedule a Conversation
               </Button>
             </Link>

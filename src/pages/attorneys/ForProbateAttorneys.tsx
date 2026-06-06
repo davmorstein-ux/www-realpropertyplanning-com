@@ -208,7 +208,7 @@ const ForProbateAttorneys = () => (
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+12069003015">
               <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async width={1024} height={1536} />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                 Call (206) 900-3015
               </Button>
             </a>

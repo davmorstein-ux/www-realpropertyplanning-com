@@ -165,7 +165,7 @@ const UnderstandingHousingCareOptions = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-7">
-                <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={512} height={512} />
+                <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={512} height={512} />
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
                   Keep Going
                 </p>

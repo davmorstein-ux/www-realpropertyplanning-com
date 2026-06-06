@@ -39,7 +39,7 @@ const CPAsFinancialAdvisors = () => (
                 alt=""
                 aria-hidden="true"
                 className="block w-full max-w-[15rem] h-auto object-contain"
-                loading="lazy" sizes="100vw" decoding="async width={512} height={512} />
+                loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
             </div>
 
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Resources</p>

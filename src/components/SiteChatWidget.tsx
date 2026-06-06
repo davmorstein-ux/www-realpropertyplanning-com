@@ -482,7 +482,7 @@ const SiteChatWidget = () => {
             <>
               <div className="rpp-cw-messages">
                 <div className="rpp-cw-msg-row">
-                  <img className="rpp-cw-avatar" src={chatAvatar} alt="Real Property Planning representative" sizes="100vw" decoding="async width={200} height={200} />
+                  <img className="rpp-cw-avatar" src={chatAvatar} alt="Real Property Planning representative" sizes="100vw" decoding="async" width={200} height={200} />
                   <div className="rpp-cw-bubble welcome">
                     How can we help you today?
                   </div>

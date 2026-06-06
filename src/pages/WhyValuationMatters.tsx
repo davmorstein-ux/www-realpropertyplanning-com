@@ -191,7 +191,7 @@ const WhyValuationMatters = () => {
       <section className="py-12 lg:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-5" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async width={1536} height={1024} />
+            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-5" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={1536} height={1024} />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-3">
               What Happens When Estate Property Pricing Goes Wrong?
             </h2>
