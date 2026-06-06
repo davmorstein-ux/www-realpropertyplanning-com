@@ -4,24 +4,29 @@ export default function BackToAFHClub() {
   return (
     <div
       style={{
-        background: "#2c3a48",
-        padding: "20px 24px",
+        padding: "48px 24px",
         textAlign: "center",
+        background: "#f7f4ef",
       }}
     >
       <Link
         to="/afh-club"
         style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: 10,
           fontSize: 12,
-          fontFamily: "'Raleway', sans-serif",
+          fontFamily: "'Raleway', 'Gill Sans', sans-serif",
           fontWeight: 700,
           letterSpacing: "0.2em",
           textTransform: "uppercase",
           color: "#e8e2d9",
+          background: "#2c3a48",
+          border: "1px solid #b87333",
+          padding: "14px 28px",
+          borderRadius: 4,
           textDecoration: "none",
-          display: "inline-flex",
-          alignItems: "center",
-          gap: 8,
+          transition: "background 0.2s ease",
         }}
       >
         <svg
