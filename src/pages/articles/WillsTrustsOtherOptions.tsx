@@ -43,17 +43,15 @@ const WillsTrustsOtherOptions = () => {
       <Header />
       <main id="main-content">
         {/* Hero image */}
-        <section style={{ marginTop: 0, paddingTop: 0, paddingBottom: 0 }}>
-          <div style={{ display: "block", lineHeight: 0 }}>
-            <img
-              src="/Wills_Trusts_Other_Options.webp"
-              alt="How to Pass Real Estate to Your Children: Wills, Trusts, and Other Options"
-              style={{ width: "100%", maxHeight: 540, objectFit: "cover", objectPosition: "center top", display: "block" }}
-              loading="eager"
-              fetchPriority="high"
-            />
-          </div>
-        </section>
+        <div className="bg-white">
+          <img
+            src={heroImage}
+            alt="How to Pass Real Estate to Your Children: Wills, Trusts, and Other Options"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            loading="eager" sizes="100vw" decoding="async" width={1904} height={521}
+          />
+        </div>
+        <HeroBandTitle>{"Wills, Trusts & Other Options"}</HeroBandTitle>
 
         {/* Article body */}
         <section style={{ backgroundColor: "hsl(40 20% 98%)", padding: "48px 24px 64px" }}>
