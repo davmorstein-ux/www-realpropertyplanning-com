@@ -7,54 +7,34 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import AFHCarousel from "@/components/AFHCarousel";
 
-const TOPICS = [
+const CATEGORIES = [
   {
-    title: "Getting Started",
-    href: "/afh-club/getting-started",
-    img: "/afh-getting-started.webp",
-    description: "Is an Adult Family Home the right business for you? What to know before you begin.",
+    title: "AFH Resources",
+    href: "/afh-club/resources",
+    img: "/afh-resources.webp",
+    description: "Licensing, training, building requirements, costs, regulations, and more — organized by topic.",
+    placeholder: "#2c3a48",
   },
   {
-    title: "Licensing & Certification",
-    href: "/afh-club/licensing-certification",
-    img: "/afh-licensing-certification.webp",
-    description: "DSHS license application, Home Care Aide certification, background checks, and more.",
+    title: "AFH Listings",
+    href: "/afh-club/listings",
+    img: "/afh-listings.webp",
+    description: "Adult Family Homes currently available for sale throughout Washington State.",
+    placeholder: "#2a3848",
   },
   {
-    title: "Training & Education",
-    href: "/afh-club/training-education",
-    img: "/afh-training-education.webp",
-    description: "75-hour orientation, AFH Administrator training, specialty courses, and where to enroll.",
+    title: "Management Companies",
+    href: "/afh-club/management-companies",
+    img: "/afh-management-companies.webp",
+    description: "Professional AFH management companies serving Washington State owners and operators.",
+    placeholder: "#283646",
   },
   {
-    title: "Building & Inspection",
-    href: "/afh-club/building-inspection",
-    img: "/afh-building-inspection.webp",
-    description: "Building code requirements, WABO, permits, floor plans, and septic system considerations.",
-  },
-  {
-    title: "Costs & Fees",
-    href: "/afh-club/costs-fees",
-    img: "/afh-costs-fees.webp",
-    description: "Licensing fees, application costs, liability insurance requirements, and Medicaid rates.",
-  },
-  {
-    title: "Buying or Selling an AFH",
-    href: "/afh-club/buying-selling",
-    img: "/afh-buying-selling.webp",
-    description: "The CHOW process, AFH listings, specialty contract transferability, and real estate guidance.",
-  },
-  {
-    title: "Regulations & Compliance",
-    href: "/afh-club/regulations-compliance",
-    img: "/afh-regulations-compliance.webp",
-    description: "WAC 388-76, RCW 70.128, DSHS unannounced inspections, violations, and record-keeping.",
-  },
-  {
-    title: "Find a Professional",
-    href: "/afh-club/find-a-professional",
-    img: "/afh-find-professional.webp",
-    description: "AFH management companies, inspectors, CPAs, elder law attorneys, and real estate brokers.",
+    title: "AFH Real Estate Broker",
+    href: "/afh-club/real-estate-broker",
+    img: "/afh-real-estate-broker.webp",
+    description: "A licensed Washington State real estate broker specializing in Adult Family Home transactions.",
+    placeholder: "#263444",
   },
 ];
 
@@ -82,164 +62,129 @@ const AFHClub = () => (
           borderBottom: "3px solid #b87333",
         }}
       >
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          {/* Badge */}
+        <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <div style={{ marginBottom: 36 }}>
             <img
               src="/afh-club-badge.webp"
               alt="AFH Club — Washington State Adult Family Home Resource Network"
-              style={{
-                width: "100%",
-                maxWidth: 200,
-                height: "auto",
-                display: "block",
-                margin: "0 auto",
-              }}
-              loading="eager" sizes="100vw" decoding="async" width={1024} height={1536} />
+              style={{ width: "100%", maxWidth: 200, height: "auto", display: "block", margin: "0 auto" }}
+              loading="eager"
+              width={200}
+              height={200}
+            />
           </div>
-
           <p
             style={{
-              fontSize: 15,
-              fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+              fontSize: 14,
+              fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
               color: "#5a3200",
-              margin: "0 0 14px",
+              margin: "0 0 16px",
             }}
           >
             Real Property Planning
           </p>
-
           <h1
             style={{
-              fontSize: "clamp(36px, 5vw, 54px)",
+              fontSize: "clamp(42px, 6vw, 64px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
               color: "#1a2530",
-              lineHeight: 1.15,
-              margin: "0 0 10px",
+              lineHeight: 1.1,
+              margin: "0 0 12px",
             }}
           >
             AFH Club
           </h1>
-
           <p
             style={{
-              fontSize: 19,
+              fontSize: "clamp(20px, 2.5vw, 26px)",
               fontFamily: "Georgia, serif",
               fontWeight: 400,
               color: "#5a3200",
               letterSpacing: "0.06em",
-              margin: "0 0 24px",
+              margin: "0 0 28px",
             }}
           >
             Washington State Adult Family Home Resource Network
           </p>
-
-          <div
-            style={{
-              width: 48,
-              height: 3,
-              background: "#b87333",
-              margin: "0 auto 32px",
-              borderRadius: 1,
-            }}
-          />
-
+          <div style={{ width: 56, height: 3, background: "#b87333", margin: "0 auto 36px", borderRadius: 1 }} />
           <p
             style={{
-              fontSize: "clamp(17px, 2vw, 19px)",
-              fontFamily: "'Raleway', sans-serif",
-              fontWeight: 400,
-              color: "#1e2e3e",
-              lineHeight: 1.85,
-              margin: "0 auto 20px",
-              maxWidth: 640,
-            }}
-          >
-            Adult Family Homes are among Washington State's most vital — and most complex — care environments. Whether
-            you are exploring the business for the first time, navigating licensing and building requirements, looking
-            to buy or sell an AFH, or searching for qualified professionals, AFH Club exists as a neutral resource
-            network for everyone in the AFH community.
-          </p>
-
-          <p
-            style={{
-              fontSize: 17,
+              fontSize: "clamp(18px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
               color: "#1e2a38",
-              lineHeight: 1.85,
-              margin: "0 auto",
-              maxWidth: 580,
+              lineHeight: 1.8,
+              margin: "0 auto 20px",
+              maxWidth: 680,
             }}
           >
-            No memberships. No fees. Simply a curated collection of resources, directories, and connections — organized
-            so you can find exactly what you need.
+            A neutral resource network for Adult Family Home owners, prospective providers, buyers, and the
+            professionals who serve them — throughout Washington State.
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(17px, 1.8vw, 20px)",
+              fontFamily: "'Raleway', sans-serif",
+              fontWeight: 400,
+              color: "#1e2a38",
+              lineHeight: 1.8,
+              margin: "0 auto",
+              maxWidth: 600,
+            }}
+          >
+            No memberships. No fees. Just the information you need, organized so you can find it.
           </p>
         </div>
       </section>
 
-      {/* Topic divider */}
-      <div
-        style={{
-          background: "#2c3a48",
-          padding: "18px 24px",
-          textAlign: "center",
-        }}
-      >
+      {/* Welcome banner */}
+      <div style={{ background: "#2c3a48", padding: "22px 24px", textAlign: "center" }}>
         <p
           style={{
             margin: 0,
-            fontSize: 15,
+            fontSize: 18,
             fontFamily: "'Raleway', sans-serif",
-            fontWeight: 600,
-            letterSpacing: "0.25em",
+            fontWeight: 700,
+            letterSpacing: "0.28em",
             textTransform: "uppercase",
             color: "#e8e2d9",
           }}
         >
-          Select a topic below to explore
+          Welcome to the AFH Club
         </p>
       </div>
 
       {/* Carousel */}
-      <AFHCarousel />
+      <AFHCarousel categories={CATEGORIES} />
 
-      {/* Topic list */}
-      <section
-        style={{
-          maxWidth: 900,
-          margin: "0 auto",
-          padding: "56px 24px 80px",
-          fontFamily: "Georgia, serif",
-        }}
-      >
+      {/* Category list */}
+      <section style={{ maxWidth: 900, margin: "0 auto", padding: "56px 24px 80px" }}>
         <h2
           style={{
-            fontSize: "clamp(22px, 3vw, 32px)",
+            fontSize: "clamp(26px, 3vw, 36px)",
+            fontFamily: "Georgia, serif",
             fontWeight: 700,
             color: "#0a1628",
             marginBottom: 8,
-            letterSpacing: "-0.01em",
           }}
         >
-          All Topics
+          Explore AFH Club
         </h2>
         <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 40, borderRadius: 1 }} />
-
         <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-          {TOPICS.map((topic, i) => (
+          {CATEGORIES.map((cat, i) => (
             <Link
-              key={topic.href}
-              to={topic.href}
+              key={cat.href}
+              to={cat.href}
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 24,
-                padding: "20px 0",
+                padding: "22px 0",
                 borderBottom: "1px solid #e0d8c8",
                 borderTop: i === 0 ? "1px solid #e0d8c8" : "none",
                 textDecoration: "none",
@@ -248,7 +193,6 @@ const AFHClub = () => (
               onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(184,115,51,0.04)")}
               onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "transparent")}
             >
-              {/* Thumbnail */}
               <div
                 style={{
                   flexShrink: 0,
@@ -256,31 +200,26 @@ const AFHClub = () => (
                   height: 120,
                   borderRadius: 4,
                   overflow: "hidden",
-                  background: "#2c3a48",
+                  background: cat.placeholder,
                   boxShadow: "0 2px 12px rgba(10,22,40,0.12)",
                 }}
               >
                 <img
-                  src={topic.img}
-                  alt={topic.title}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "top",
-                    display: "block",
-                  }}
+                  src={cat.img}
+                  alt={cat.title}
+                  width={90}
+                  height={120}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
                   }}
+                  loading="lazy"
                 />
               </div>
-
-              {/* Text */}
               <div style={{ flex: 1, minWidth: 0 }}>
                 <h3
                   style={{
-                    fontSize: 19,
+                    fontSize: "clamp(18px, 2vw, 22px)",
                     fontWeight: 700,
                     color: "#0a1628",
                     margin: "0 0 8px",
@@ -288,11 +227,11 @@ const AFHClub = () => (
                     fontFamily: "Georgia, serif",
                   }}
                 >
-                  {topic.title}
+                  {cat.title}
                 </h3>
                 <p
                   style={{
-                    fontSize: 17,
+                    fontSize: "clamp(16px, 1.6vw, 18px)",
                     color: "#1e2a38",
                     margin: "0 0 12px",
                     lineHeight: 1.65,
@@ -300,12 +239,12 @@ const AFHClub = () => (
                     fontWeight: 400,
                   }}
                 >
-                  {topic.description}
+                  {cat.description}
                 </p>
                 <span
                   style={{
-                    fontSize: 15,
-                    fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+                    fontSize: 14,
+                    fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
@@ -315,7 +254,7 @@ const AFHClub = () => (
                     gap: 5,
                   }}
                 >
-                  Explore Topic
+                  Explore{" "}
                   <svg
                     width="11"
                     height="11"
@@ -335,17 +274,12 @@ const AFHClub = () => (
         </div>
       </section>
 
-      {/* What is an AFH section */}
-      <section
-        style={{
-          background: "#f7f4ef",
-          padding: "80px 24px",
-        }}
-      >
+      {/* What is an AFH */}
+      <section style={{ background: "#f7f4ef", padding: "80px 24px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 15,
+              fontSize: 14,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
@@ -358,7 +292,7 @@ const AFHClub = () => (
           </p>
           <h2
             style={{
-              fontSize: "clamp(26px, 3.5vw, 38px)",
+              fontSize: "clamp(28px, 3.5vw, 40px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
               color: "#0a1628",
@@ -368,20 +302,11 @@ const AFHClub = () => (
           >
             What Is an Adult Family Home?
           </h2>
-          <div
-            style={{
-              width: 40,
-              height: 3,
-              background: "#b87333",
-              marginBottom: 32,
-              borderRadius: 1,
-            }}
-          />
+          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
           <p
             style={{
-              fontSize: 18,
+              fontSize: "clamp(17px, 1.8vw, 20px)",
               fontFamily: "'Raleway', sans-serif",
-              fontWeight: 400,
               color: "#1e2a38",
               lineHeight: 1.85,
               margin: "0 0 22px",
@@ -389,36 +314,32 @@ const AFHClub = () => (
           >
             An Adult Family Home (AFH) is a private residence licensed by the Washington State Department of Social and
             Health Services (DSHS) to provide personal care, room, and board for up to six adults who are unrelated to
-            the service provider. In certain circumstances, an existing licensed AFH may be expanded to serve up to
-            eight residents.
+            the service provider.
           </p>
           <p
             style={{
-              fontSize: 18,
+              fontSize: "clamp(17px, 1.8vw, 20px)",
               fontFamily: "'Raleway', sans-serif",
-              fontWeight: 400,
               color: "#1e2a38",
               lineHeight: 1.85,
               margin: "0 0 22px",
             }}
           >
             AFHs are permitted in all single-family residential zoning districts throughout Washington State and are
-            regulated under WAC 388-76 and RCW 70.128. They represent one of the most personal and community-integrated
-            forms of long-term care available — and one of the most regulated.
+            regulated under WAC 388-76 and RCW 70.128.
           </p>
           <p
             style={{
-              fontSize: 18,
+              fontSize: "clamp(17px, 1.8vw, 20px)",
               fontFamily: "'Raleway', sans-serif",
-              fontWeight: 400,
               color: "#1e2a38",
               lineHeight: 1.85,
               margin: 0,
             }}
           >
             DSHS licensors conduct unannounced inspections on a regular cycle. Providers must maintain continuous
-            compliance with licensing, training, building, and care standards — which is precisely why having access to
-            organized, reliable information matters.
+            compliance with licensing, training, building, and care standards — which is precisely why organized,
+            reliable information matters.
           </p>
         </div>
       </section>
