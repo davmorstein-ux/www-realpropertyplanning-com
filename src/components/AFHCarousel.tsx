@@ -242,7 +242,8 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 </span>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
