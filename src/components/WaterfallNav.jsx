@@ -68,24 +68,14 @@ const RIGHT_GROUPS = [
   },
   {
     label: "Articles",
-    href: "/articles/silver-tsunami",
-    items: [
-      { name: "The Silver Tsunami", href: "/articles/silver-tsunami" },
-      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { name: "Senior Housing Options", href: "/articles/senior-housing-options" },
-      { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
-      { name: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
-      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
-      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
-      { name: "CCRC Costs", href: "/articles/ccrc-costs" },
-      { name: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
-      { name: "Aging in Place With Support", href: "/articles/aging-in-place" },
-    ],
+    href: "/articles",
+    items: [{ name: "Featured Articles", href: "/articles" }],
   },
   {
     label: "More",
     href: "/resources",
     items: [
+      { name: "AFH Club", href: "/afh-club" },
       { name: "Resources", href: "/resources" },
       { name: "About", href: "/about" },
       { name: "Contact", href: "/contact" },
