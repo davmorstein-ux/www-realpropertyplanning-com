@@ -1,23 +1,13 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { useIsVisible } from "@/hooks/use-is-visible";
-import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
-export interface CategoryItem {
-  title: string;
-  href: string;
-  img: string;
-  description: string;
-  placeholder: string;
-}
-
-const TOPICS: CategoryItem[] = [
+const TOPICS = [
   {
     title: "Getting Started",
-    description: "Is an AFH right for you?",
+    description: "Is an Adult Family Home the right business for you?",
     href: "/afh-club/getting-started",
     img: "/afh-getting-started.webp",
-    placeholder: "#3a4a5a",
+    placeholder: "#2c3a48",
   },
   {
     title: "Licensing & Certification",
@@ -75,23 +65,29 @@ const AUTO_MS = 7000;
 const SLIDE_MS = 4400;
 const CARD_W = 304;
 
+interface Category {
+  title: string;
+  description: string;
+  href: string;
+  img: string;
+  placeholder: string;
+}
+
 interface AFHCarouselProps {
-  categories?: CategoryItem[];
+  categories?: Category[];
 }
 
 export default function AFHCarousel({ categories }: AFHCarouselProps) {
-  const topics = categories ?? TOPICS;
-  const track = [...topics, ...topics, ...topics];
-  const start = topics.length;
+  const ITEMS = categories || TOPICS;
+  const TRACK = [...ITEMS, ...ITEMS, ...ITEMS];
+  const START = ITEMS.length;
 
-  const [pos, setPos] = useState(start);
+  const [pos, setPos] = useState(START);
   const [transitioning, setTransitioning] = useState(false);
   const [hovered, setHovered] = useState<number | null>(null);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const sectionRef = useRef<HTMLElement>(null);
-  const isVisible = useIsVisible(sectionRef, "0px");
-  const prefersReducedMotion = useReducedMotion();
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   const slideTo = useCallback(
     (newPos: number) => {
@@ -106,52 +102,53 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
   const next = useCallback(() => {
     slideTo(pos + 1);
   }, [pos, slideTo]);
-
   const prev = () => slideTo(pos - 1);
 
   useEffect(() => {
     if (transitioning) return;
-    if (pos >= start + topics.length) {
-      setPos(pos - topics.length);
-    } else if (pos < start) {
-      setPos(pos + topics.length);
-    }
-  }, [transitioning, pos, start, topics.length]);
+    if (pos >= START + ITEMS.length) setPos(pos - ITEMS.length);
+    else if (pos < START) setPos(pos + ITEMS.length);
+  }, [transitioning, pos]);
 
   useEffect(() => {
-    if (paused || !isVisible || prefersReducedMotion) return;
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => setPaused(!entry.isIntersecting), { threshold: 0.1 });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (paused) return;
     timerRef.current = setInterval(next, AUTO_MS);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [next, paused, isVisible, prefersReducedMotion]);
+  }, [next, paused]);
 
   return (
-    <section ref={sectionRef} style={{ background: "#f0f3f6", padding: "64px 24px 72px", fontFamily: "Georgia, serif", minHeight: 720 }}>
+    <section
+      ref={sectionRef}
+      style={{ background: "#f0f3f6", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}
+    >
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
           style={{
             display: "block",
-            fontSize: 12,
-            fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+            fontSize: 14,
+            fontFamily: "'Raleway', sans-serif",
             fontWeight: 600,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "#7a4e1a",
+            color: "#5a3200",
             marginBottom: 12,
           }}
         >
           AFH Club
         </span>
         <h2
-          style={{
-            fontSize: "clamp(28px, 4vw, 42px)",
-            fontWeight: 700,
-            color: "#0a1628",
-            margin: 0,
-            lineHeight: 1.15,
-          }}
+          style={{ fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 700, color: "#0a1628", margin: 0, lineHeight: 1.15 }}
         >
           Resource Network
         </h2>
@@ -159,7 +156,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
         <p
           style={{
             marginTop: 20,
-            fontSize: 17,
+            fontSize: 20,
             color: "#1e2a38",
             maxWidth: 560,
             marginLeft: "auto",
@@ -176,17 +173,10 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
 
       {/* Carousel viewport */}
       <div
-        style={{
-          maxWidth: 960,
-          margin: "0 auto",
-          padding: "8px 0 16px",
-          overflow: "hidden",
-          boxSizing: "content-box",
-        }}
+        style={{ maxWidth: 960, margin: "0 auto", padding: "8px 0 16px", overflow: "hidden", boxSizing: "content-box" }}
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        {/* Sliding track */}
         <div
           style={{
             display: "flex",
@@ -196,10 +186,10 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             willChange: "transform",
           }}
         >
-          {track.map((topic, i) => (
+          {TRACK.map((item, i) => (
             <Link
               key={i}
-              to={topic.href}
+              to={item.href}
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
               style={{
@@ -211,76 +201,30 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 flexShrink: 0,
                 width: `${CARD_W}px`,
                 aspectRatio: "3 / 4",
-                boxShadow: hovered === i ? "0 20px 60px rgba(0,0,0,0.5)" : "0 4px 20px rgba(0,0,0,0.3)",
+                boxShadow: hovered === i ? "0 20px 60px rgba(0,0,0,0.3)" : "0 4px 20px rgba(0,0,0,0.15)",
                 transform: hovered === i ? "translateY(-6px)" : "translateY(0)",
                 transition: "box-shadow 0.4s ease, transform 0.4s ease",
-                background: topic.placeholder,
+                background: item.placeholder,
               }}
             >
               <img
-                src={topic.img}
-                alt={topic.title}
-                width={304}
-                height={405}
+                src={item.img}
+                alt={item.title}
+                width={CARD_W}
+                height={Math.round((CARD_W * 4) / 3)}
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
                 loading="lazy"
-                decoding="async"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  objectPosition: "top",
-                  display: "block",
-                }}
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = "none";
                 }}
               />
 
-
-              {/* Permanent bottom label */}
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  padding: "40px 20px 20px",
-                  background: "linear-gradient(to top, rgba(10,18,26,0.92) 0%, transparent 100%)",
-                }}
-              >
-                <p
-                  style={{
-                    margin: 0,
-                    fontSize: 17,
-                    fontFamily: "Georgia, serif",
-                    fontWeight: 700,
-                    color: "#e8e2d9",
-                    lineHeight: 1.25,
-                    marginBottom: 4,
-                  }}
-                >
-                  {topic.title}
-                </p>
-                <p
-                  style={{
-                    margin: 0,
-                    fontSize: 12,
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 400,
-                    color: "#8fa0af",
-                    lineHeight: 1.4,
-                  }}
-                >
-                  {topic.description}
-                </p>
-              </div>
-
-              {/* Hover overlay */}
+              {/* Hover overlay only — no permanent label */}
               <div
                 style={{
                   position: "absolute",
                   inset: 0,
-                  background: "rgba(10,18,26,0.22)",
+                  background: "rgba(10,18,26,0.3)",
                   opacity: hovered === i ? 1 : 0,
                   transition: "opacity 0.5s ease",
                   display: "flex",
@@ -290,14 +234,14 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
               >
                 <span
                   style={{
-                    fontSize: 11,
+                    fontSize: 13,
                     fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 600,
+                    fontWeight: 700,
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
                     color: "#fff",
                     background: "rgba(184,115,51,0.92)",
-                    padding: "8px 18px",
+                    padding: "10px 20px",
                     borderRadius: 2,
                     display: "inline-flex",
                     alignItems: "center",
@@ -325,15 +269,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
       </div>
 
       {/* Controls */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 24,
-          marginTop: 36,
-        }}
-      >
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, marginTop: 36 }}>
         <button
           onClick={prev}
           aria-label="Previous"
@@ -347,7 +283,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#7a4e1a",
+            color: "#5a3200",
           }}
         >
           <svg
@@ -365,12 +301,12 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
         </button>
 
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          {topics.map((_, i) => {
-            const normalizedPos = (((pos - start) % topics.length) + topics.length) % topics.length;
+          {ITEMS.map((_, i) => {
+            const normalizedPos = (((pos - START) % ITEMS.length) + ITEMS.length) % ITEMS.length;
             return (
               <button
                 key={i}
-                onClick={() => slideTo(start + i)}
+                onClick={() => slideTo(START + i)}
                 aria-label={`Slide ${i + 1}`}
                 style={{
                   background: normalizedPos === i ? "#b87333" : "#9aabb8",
@@ -400,7 +336,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#7a4e1a",
+            color: "#5a3200",
           }}
         >
           <svg
