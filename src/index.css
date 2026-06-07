@@ -2978,7 +2978,10 @@ main [class*="/90"] {
   opacity: 1 !important;
 }
 
-/* Hero blue band title — override global p/body font-size rules */
+/* Hero blue band title — override global p/body/main * font-size rules */
+html body main .rpp-hero-band-text,
+html body .rpp-hero-band-text,
+main .rpp-hero-band-text,
 .rpp-hero-band-text {
   font-size: 56px !important;
   line-height: 1 !important;
@@ -2992,3 +2995,4 @@ main [class*="/90"] {
   opacity: 1 !important;
   font-family: 'Raleway', sans-serif !important;
 }
+
