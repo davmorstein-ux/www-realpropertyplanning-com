@@ -63,7 +63,7 @@ const AFHClub = () => (
         }}
       >
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          <div style={{ marginBottom: 36 }}>
+          <div style={{ marginBottom: 16 }}>
             <img
               src="/afh-club-badge.webp"
               alt="AFH Club — Washington State Adult Family Home Resource Network"
@@ -82,9 +82,9 @@ const AFHClub = () => (
           </div>
           <p
             style={{
-              fontSize: 16,
+              fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              fontWeight: 600,
+              fontWeight: 700,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
               color: "#5a3200",
@@ -95,7 +95,7 @@ const AFHClub = () => (
           </p>
           <h1
             style={{
-              fontSize: "clamp(48px, 6vw, 68px)",
+              fontSize: "clamp(52px, 7vw, 72px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
               color: "#1a2530",
@@ -107,7 +107,7 @@ const AFHClub = () => (
           </h1>
           <p
             style={{
-              fontSize: "clamp(22px, 2.5vw, 28px)",
+              fontSize: "clamp(24px, 3vw, 30px)",
               fontFamily: "Georgia, serif",
               fontWeight: 400,
               color: "#5a3200",
@@ -120,7 +120,7 @@ const AFHClub = () => (
           <div style={{ width: 56, height: 3, background: "#b87333", margin: "0 auto 36px", borderRadius: 1 }} />
           <p
             style={{
-              fontSize: "clamp(19px, 2vw, 22px)",
+              fontSize: "clamp(20px, 2vw, 24px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
               color: "#1e2a38",
@@ -135,7 +135,7 @@ const AFHClub = () => (
           </p>
           <p
             style={{
-              fontSize: "clamp(19px, 2vw, 22px)",
+              fontSize: "clamp(20px, 2vw, 24px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
               color: "#1e2a38",
@@ -314,7 +314,7 @@ const AFHClub = () => (
           <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
           <p
             style={{
-              fontSize: "clamp(19px, 2vw, 22px)",
+              fontSize: "clamp(20px, 2vw, 24px)",
               fontFamily: "'Raleway', sans-serif",
               color: "#1e2a38",
               lineHeight: 1.85,
@@ -327,7 +327,7 @@ const AFHClub = () => (
           </p>
           <p
             style={{
-              fontSize: "clamp(19px, 2vw, 22px)",
+              fontSize: "clamp(20px, 2vw, 24px)",
               fontFamily: "'Raleway', sans-serif",
               color: "#1e2a38",
               lineHeight: 1.85,
@@ -339,7 +339,7 @@ const AFHClub = () => (
           </p>
           <p
             style={{
-              fontSize: "clamp(19px, 2vw, 22px)",
+              fontSize: "clamp(20px, 2vw, 24px)",
               fontFamily: "'Raleway', sans-serif",
               color: "#1e2a38",
               lineHeight: 1.85,
