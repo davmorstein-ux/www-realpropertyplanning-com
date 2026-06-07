@@ -111,12 +111,12 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
 
   useEffect(() => {
     if (transitioning) return;
-    if (pos >= START + TOPICS.length) {
-      setPos(pos - TOPICS.length);
-    } else if (pos < START) {
-      setPos(pos + TOPICS.length);
+    if (pos >= start + topics.length) {
+      setPos(pos - topics.length);
+    } else if (pos < start) {
+      setPos(pos + topics.length);
     }
-  }, [transitioning, pos]);
+  }, [transitioning, pos, start, topics.length]);
 
   useEffect(() => {
     if (paused || !isVisible || prefersReducedMotion) return;
