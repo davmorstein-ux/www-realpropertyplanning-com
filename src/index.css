@@ -128,6 +128,23 @@ nav button[aria-haspopup] svg, nav [class*="dropdown"] button svg {
   opacity: 1 !important;
 }
 
+@keyframes afh-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.afh-marquee-track {
+  animation: afh-marquee var(--afh-marquee-duration, 60s) linear infinite;
+}
+.afh-marquee-viewport:hover .afh-marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .afh-marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
