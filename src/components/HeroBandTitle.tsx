@@ -54,7 +54,7 @@ const HeroBandTitle = ({
     color: "#FFFFFF",
     fontFamily: '"Raleway", "DM Sans", sans-serif',
     fontWeight: 700,
-    fontSize: "1.25rem",
+    fontSize: "22px",
     letterSpacing: "0.18em",
     lineHeight: 1.2,
     opacity: 1,
