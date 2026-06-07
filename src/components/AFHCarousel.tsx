@@ -189,7 +189,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 flexShrink: 0,
                 width: `${CARD_W}px`,
                 aspectRatio: "3 / 4",
-                boxShadow: hovered === i ? ""0 32px 80px rgba(10,22,40,0.4)" : "0 4px 20px rgba(10,22,40,0.10)",
+                boxShadow: hovered === i ? "0 32px 80px rgba(10,22,40,0.4)" : "0 4px 20px rgba(10,22,40,0.10)",
                 transform: hovered === i ? "translateY(-20px)" : "translateY(0)",
                 transition: "box-shadow 0.4s ease, transform 0.4s ease",
                 background: item.placeholder,
