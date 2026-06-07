@@ -99,6 +99,7 @@ const AFHClub = () => (
           </p>
 
           <h1
+            className="afh-h1"
             style={{
               fontSize: "clamp(52px, 7vw, 72px)",
               fontFamily: "Georgia, serif",
@@ -112,6 +113,7 @@ const AFHClub = () => (
           </h1>
 
           <p
+            className="afh-subtitle"
             style={{
               fontSize: "clamp(22px, 3vw, 28px)",
               fontFamily: "Georgia, serif",
