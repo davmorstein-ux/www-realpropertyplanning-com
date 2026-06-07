@@ -61,8 +61,11 @@ const TOPICS = [
 ];
 
 const CARD_GAP = 24;
-const CARD_W = 304;
+const CARD_W = 300;
+const CARD_W_HOVER = 360;
+const CARD_W_ADJACENT = 270;
 const PX_PER_SEC = 60;
+const VIEWPORT_W = `calc(3 * ${CARD_W}px + 2 * ${CARD_GAP}px)`;
 
 interface Category {
   title: string;
