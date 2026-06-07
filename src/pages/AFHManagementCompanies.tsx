@@ -43,30 +43,30 @@ const AFHManagementCompanies = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 48px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: "clamp(18px, 2vw, 20px)",
+              fontSize: "20px",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
               color: "#1e2a38",
               lineHeight: 1.85,
+              margin: "0 0 16px",
               maxWidth: 680,
             }}
           >
             Professional management companies help Adult Family Home owners operate compliantly and deliver exceptional
-            care — handling staffing, medication management, DSHS compliance, and daily operations so owners can focus
-            on what matters most.
+            care — handling staffing, medication management, DSHS compliance, and daily operations.
           </p>
           <p
             style={{
-              fontSize: "clamp(16px, 1.6vw, 18px)",
+              fontSize: "18px",
               fontFamily: "'Raleway', sans-serif",
+              fontWeight: 400,
               color: "#1e2a38",
               lineHeight: 1.8,
               maxWidth: 680,
-              marginTop: 16,
             }}
           >
             Real Property Planning does not receive compensation for these listings. Companies are featured as an
@@ -74,6 +74,7 @@ const AFHManagementCompanies = () => (
           </p>
         </div>
       </section>
+
       <HeroBandTitle>AFH Management Companies</HeroBandTitle>
 
       {/* Aura Living Care */}
@@ -81,10 +82,10 @@ const AFHManagementCompanies = () => (
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 14,
+              fontSize: "18px",
               fontFamily: "'Raleway', sans-serif",
-              fontWeight: 600,
-              letterSpacing: "0.22em",
+              fontWeight: 700,
+              letterSpacing: "0.18em",
               textTransform: "uppercase",
               color: "#5a3200",
               margin: "0 0 14px",
@@ -94,12 +95,12 @@ const AFHManagementCompanies = () => (
           </p>
           <h2
             style={{
-              fontSize: "clamp(24px, 3.5vw, 36px)",
+              fontSize: "clamp(32px, 4vw, 44px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
               color: "#0a1628",
               lineHeight: 1.2,
-              margin: "0 0 20px",
+              margin: "0 0 16px",
             }}
           >
             Aura Living Care
@@ -117,15 +118,15 @@ const AFHManagementCompanies = () => (
               boxShadow: "0 2px 16px rgba(10,22,40,0.07)",
             }}
           >
-            {/* Top section — photo, logo, contact */}
+            {/* Top section */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: 0 }}>
               {/* Left — headshot + logo */}
               <div
                 style={{
                   width: "100%",
-                  maxWidth: 260,
+                  maxWidth: 240,
                   background: "#edf0f3",
-                  padding: "36px 28px",
+                  padding: "36px 24px",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -150,17 +151,22 @@ const AFHManagementCompanies = () => (
                 <div style={{ textAlign: "center" }}>
                   <p
                     style={{
-                      fontSize: 18,
+                      fontSize: "20px",
                       fontFamily: "Georgia, serif",
                       fontWeight: 700,
                       color: "#0a1628",
-                      margin: "0 0 4px",
+                      margin: "0 0 6px",
                     }}
                   >
                     Fengquan Song
                   </p>
                   <p
-                    style={{ fontSize: 15, fontFamily: "'Raleway', sans-serif", color: "#1e2a38", margin: "0 0 16px" }}
+                    style={{
+                      fontSize: "18px",
+                      fontFamily: "'Raleway', sans-serif",
+                      color: "#1e2a38",
+                      margin: "0 0 16px",
+                    }}
                   >
                     Owner, Aura Living Care
                   </p>
@@ -176,10 +182,10 @@ const AFHManagementCompanies = () => (
               </div>
 
               {/* Right — contact + description */}
-              <div style={{ flex: 1, minWidth: 240, padding: "36px 32px" }}>
+              <div style={{ flex: 1, minWidth: 240, padding: "36px 28px" }}>
                 <h3
                   style={{
-                    fontSize: 22,
+                    fontSize: "clamp(22px, 2.5vw, 28px)",
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
                     color: "#0a1628",
@@ -190,7 +196,7 @@ const AFHManagementCompanies = () => (
                 </h3>
                 <p
                   style={{
-                    fontSize: "clamp(16px, 1.6vw, 18px)",
+                    fontSize: "19px",
                     fontFamily: "'Raleway', sans-serif",
                     color: "#1e2a38",
                     lineHeight: 1.8,
@@ -204,7 +210,7 @@ const AFHManagementCompanies = () => (
                 </p>
 
                 {/* Contact details */}
-                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                     <div
                       style={{
@@ -234,7 +240,7 @@ const AFHManagementCompanies = () => (
                     <a
                       href="tel:2142054091"
                       style={{
-                        fontSize: 18,
+                        fontSize: "20px",
                         fontFamily: "'Raleway', sans-serif",
                         fontWeight: 700,
                         color: "#0a1628",
@@ -274,7 +280,7 @@ const AFHManagementCompanies = () => (
                     <a
                       href="mailto:aura@auralivingcare.com"
                       style={{
-                        fontSize: 17,
+                        fontSize: "19px",
                         fontFamily: "'Raleway', sans-serif",
                         fontWeight: 600,
                         color: "#0a1628",
@@ -311,7 +317,7 @@ const AFHManagementCompanies = () => (
                         <polyline points="12 6 12 12 16 14" />
                       </svg>
                     </div>
-                    <p style={{ fontSize: 17, fontFamily: "'Raleway', sans-serif", color: "#1e2a38", margin: 0 }}>
+                    <p style={{ fontSize: "19px", fontFamily: "'Raleway', sans-serif", color: "#1e2a38", margin: 0 }}>
                       Mon–Sun: 9:00 AM – 6:00 PM
                     </p>
                   </div>
@@ -342,7 +348,7 @@ const AFHManagementCompanies = () => (
                         <circle cx="12" cy="10" r="3" />
                       </svg>
                     </div>
-                    <p style={{ fontSize: 17, fontFamily: "'Raleway', sans-serif", color: "#1e2a38", margin: 0 }}>
+                    <p style={{ fontSize: "19px", fontFamily: "'Raleway', sans-serif", color: "#1e2a38", margin: 0 }}>
                       Seattle, WA
                     </p>
                   </div>
@@ -352,10 +358,10 @@ const AFHManagementCompanies = () => (
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
-                        fontSize: 14,
+                        fontSize: "17px",
                         fontFamily: "'Raleway', sans-serif",
                         fontWeight: 700,
-                        letterSpacing: "0.16em",
+                        letterSpacing: "0.12em",
                         textTransform: "uppercase",
                         color: "#fff",
                         background: "#0d9488",
@@ -373,10 +379,10 @@ const AFHManagementCompanies = () => (
             </div>
 
             {/* Services grid */}
-            <div style={{ borderTop: "1px solid #e0d8c8", padding: "32px 32px 36px" }}>
+            <div style={{ borderTop: "1px solid #e0d8c8", padding: "32px 32px 36px", background: "#fff" }}>
               <h3
                 style={{
-                  fontSize: 20,
+                  fontSize: "clamp(22px, 2.5vw, 28px)",
                   fontFamily: "Georgia, serif",
                   fontWeight: 700,
                   color: "#0a1628",
@@ -385,14 +391,14 @@ const AFHManagementCompanies = () => (
               >
                 Services & Programs
               </h3>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
                 {SERVICES.map((svc) => (
                   <div key={svc.name} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
                     <div
                       style={{
                         flexShrink: 0,
-                        width: 8,
-                        height: 8,
+                        width: 10,
+                        height: 10,
                         borderRadius: "50%",
                         background: "#0d9488",
                         marginTop: 8,
@@ -401,21 +407,21 @@ const AFHManagementCompanies = () => (
                     <div>
                       <p
                         style={{
-                          fontSize: 16,
+                          fontSize: "18px",
                           fontFamily: "'Raleway', sans-serif",
                           fontWeight: 700,
                           color: "#0a1628",
-                          margin: "0 0 2px",
+                          margin: "0 0 4px",
                         }}
                       >
                         {svc.name}
                       </p>
                       <p
                         style={{
-                          fontSize: 15,
+                          fontSize: "17px",
                           fontFamily: "'Raleway', sans-serif",
                           color: "#1e2a38",
-                          lineHeight: 1.6,
+                          lineHeight: 1.65,
                           margin: 0,
                         }}
                       >
@@ -428,27 +434,35 @@ const AFHManagementCompanies = () => (
             </div>
           </div>
 
-          {/* Looking to buy CTA */}
-          <div style={{ background: "#2c3a48", borderRadius: 8, padding: "36px 32px", textAlign: "center" }}>
+          {/* Looking to buy CTA — light background, dark readable text */}
+          <div
+            style={{
+              background: "#edf0f3",
+              border: "2px solid #b87333",
+              borderRadius: 8,
+              padding: "40px 32px",
+              textAlign: "center",
+            }}
+          >
             <p
               style={{
-                fontSize: 14,
+                fontSize: "18px",
                 fontFamily: "'Raleway', sans-serif",
-                fontWeight: 600,
-                letterSpacing: "0.22em",
+                fontWeight: 700,
+                letterSpacing: "0.18em",
                 textTransform: "uppercase",
-                color: "#b87333",
-                margin: "0 0 12px",
+                color: "#5a3200",
+                margin: "0 0 14px",
               }}
             >
               Thinking About Buying an AFH?
             </p>
             <h3
               style={{
-                fontSize: "clamp(22px, 3vw, 30px)",
+                fontSize: "clamp(24px, 3vw, 32px)",
                 fontFamily: "Georgia, serif",
                 fontWeight: 700,
-                color: "#e8e2d9",
+                color: "#0a1628",
                 margin: "0 0 16px",
               }}
             >
@@ -456,9 +470,9 @@ const AFHManagementCompanies = () => (
             </h3>
             <p
               style={{
-                fontSize: "clamp(16px, 1.6vw, 18px)",
+                fontSize: "19px",
                 fontFamily: "'Raleway', sans-serif",
-                color: "#a0b0c0",
+                color: "#1e2a38",
                 lineHeight: 1.8,
                 margin: "0 auto 28px",
                 maxWidth: 560,
@@ -473,16 +487,17 @@ const AFHManagementCompanies = () => (
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
-                fontSize: 14,
+                fontSize: "17px",
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
-                color: "#e8e2d9",
-                background: "#b87333",
+                color: "#fff",
+                background: "#2c3a48",
                 padding: "14px 28px",
                 borderRadius: 4,
                 textDecoration: "none",
+                border: "2px solid #C9A84C",
               }}
             >
               Meet Our AFH Broker →
