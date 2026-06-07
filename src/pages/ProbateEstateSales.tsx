@@ -83,13 +83,17 @@ const ProbateEstateSales = () => {
       <main id="main-content">
         {/* SECTION 1 — Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
-          <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
+          <div className="relative w-full" style={{ display: "block", lineHeight: 0 }}>
             <img
               src="/assets/estate_probate_sales_hero_clean.webp"
               alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home"
               className="w-full h-auto object-cover"
               loading="eager"
-              fetchPriority="high" sizes="100vw" width={1920} height={814} />
+              fetchPriority="high"
+              sizes="100vw"
+              width={1920}
+              height={814}
+            />
           </div>
           <HeroBandTitle as="h2">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
         </section>
@@ -103,10 +107,18 @@ const ProbateEstateSales = () => {
                 <br />
                 What's the Difference?
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-                ​
-              </p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, auto)", columnGap: "8px", rowGap: "16px", width: "fit-content", margin: "0 auto", alignItems: "stretch" }}>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-10">​</p>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(2, auto)",
+                  columnGap: "8px",
+                  rowGap: "16px",
+                  width: "fit-content",
+                  margin: "0 auto",
+                  alignItems: "stretch",
+                }}
+              >
                 {[
                   {
                     image: "/tiles/set2/the-probate-process.webp",
@@ -120,7 +132,8 @@ const ProbateEstateSales = () => {
                     image: "/tiles/set2/wills.webp",
                     alt: "Inherited property non-probate Washington State",
                     title: "Inherited Property (Non-Probate)",
-                    description: "Passes outside probate via trust or joint tenancy. Fewer legal hurdles, but still complex.",
+                    description:
+                      "Passes outside probate via trust or joint tenancy. Fewer legal hurdles, but still complex.",
                     cta: "Learn More",
                     href: "/guides/inherited-house-washington",
                   },
@@ -135,23 +148,45 @@ const ProbateEstateSales = () => {
                     <div className="tile-white__inner h-full relative">
                       <div className="tile-white__face h-full">
                         <div className="flex h-full flex-col">
-                          <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 360" }}>
+                          <div
+                            className="relative w-full overflow-hidden bg-transparent flex items-center justify-center"
+                            style={{ aspectRatio: "500 / 360" }}
+                          >
                             <img
                               src={s.image}
                               alt={s.alt}
                               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
-                              loading="lazy" sizes="100vw" decoding="async"/>
+                              loading="lazy"
+                              sizes="100vw"
+                              decoding="async"
+                            />
                           </div>
                           <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden p-5 md:p-6">
-                            <h3 className="font-serif text-[19px] md:text-[22px] font-semibold text-navy mb-2 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ lineHeight: 1.3 }}>
+                            <h3
+                              className="font-serif text-[19px] md:text-[22px] font-semibold text-navy mb-2 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0"
+                              style={{ lineHeight: 1.3 }}
+                            >
                               {s.title}
                             </h3>
-                            <p className="text-foreground text-[15px] md:text-[16px] mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ lineHeight: 1.5 }}>
+                            <p
+                              className="text-foreground text-[15px] md:text-[16px] mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0"
+                              style={{ lineHeight: 1.5 }}
+                            >
                               {s.description}
                             </p>
                             <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
                               {s.cta}
-                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <svg
+                                viewBox="0 0 24 24"
+                                width="14"
+                                height="14"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.4"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                aria-hidden="true"
+                              >
                                 <polyline points="9 18 15 12 9 6" />
                               </svg>
                             </span>
@@ -178,7 +213,17 @@ const ProbateEstateSales = () => {
                                 style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
                               >
                                 {s.cta}
-                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <svg
+                                  viewBox="0 0 24 24"
+                                  width="14"
+                                  height="14"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2.4"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  aria-hidden="true"
+                                >
                                   <polyline points="9 18 15 12 9 6" />
                                 </svg>
                               </span>
@@ -205,7 +250,17 @@ const ProbateEstateSales = () => {
                 Estate property sales are genuinely different from standard real estate transactions — and treating them
                 like ordinary listings is where families and executors most often run into trouble.
               </p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, auto)", rowGap: "16px", columnGap: "8px", width: "fit-content", margin: "0 auto", alignItems: "stretch" }}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, auto)",
+                  rowGap: "16px",
+                  columnGap: "8px",
+                  width: "fit-content",
+                  margin: "0 auto",
+                  alignItems: "stretch",
+                }}
+              >
                 {whatMakesDifferentTiles.map((s) => (
                   <Link
                     key={s.title}
@@ -217,8 +272,14 @@ const ProbateEstateSales = () => {
                     <div className="tile-white__inner h-full relative">
                       <div className="tile-white__face h-full">
                         <div className="flex h-full flex-col">
-                          <div className="relative flex flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
-                            <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ display: "flex", alignItems: "flex-start", marginBottom: "8px" }}>
+                          <div
+                            className="relative flex flex-1 flex-col items-center text-center overflow-hidden"
+                            style={{ padding: "16px" }}
+                          >
+                            <h3
+                              className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0"
+                              style={{ display: "flex", alignItems: "flex-start", marginBottom: "8px" }}
+                            >
                               {s.title}
                             </h3>
                             <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
@@ -226,7 +287,17 @@ const ProbateEstateSales = () => {
                             </p>
                             <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
                               {s.cta}
-                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <svg
+                                viewBox="0 0 24 24"
+                                width="14"
+                                height="14"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.4"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                aria-hidden="true"
+                              >
                                 <polyline points="9 18 15 12 9 6" />
                               </svg>
                             </span>
@@ -253,7 +324,17 @@ const ProbateEstateSales = () => {
                                 style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
                               >
                                 {s.cta}
-                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <svg
+                                  viewBox="0 0 24 24"
+                                  width="14"
+                                  height="14"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2.4"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  aria-hidden="true"
+                                >
                                   <polyline points="9 18 15 12 9 6" />
                                 </svg>
                               </span>
