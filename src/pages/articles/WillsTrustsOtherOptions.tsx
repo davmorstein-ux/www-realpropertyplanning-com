@@ -5,6 +5,8 @@ import BackToArticles from "@/components/BackToArticles";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import HeroBandTitle from "@/components/HeroBandTitle";
+import heroImage from "@/assets/articles-hero-banner.webp";
 
 const relatedResources = [
   { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
