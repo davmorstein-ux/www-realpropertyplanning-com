@@ -196,7 +196,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             willChange: "transform",
           }}
         >
-          {TRACK.map((topic, i) => (
+          {track.map((topic, i) => (
             <Link
               key={i}
               to={topic.href}
@@ -365,12 +365,12 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
         </button>
 
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          {TOPICS.map((_, i) => {
-            const normalizedPos = (((pos - START) % TOPICS.length) + TOPICS.length) % TOPICS.length;
+          {topics.map((_, i) => {
+            const normalizedPos = (((pos - start) % topics.length) + topics.length) % topics.length;
             return (
               <button
                 key={i}
-                onClick={() => slideTo(START + i)}
+                onClick={() => slideTo(start + i)}
                 aria-label={`Slide ${i + 1}`}
                 style={{
                   background: normalizedPos === i ? "#b87333" : "#9aabb8",
