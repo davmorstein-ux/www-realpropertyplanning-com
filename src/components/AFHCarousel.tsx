@@ -4,56 +4,43 @@ import { Link } from "react-router-dom";
 const DEFAULT_TOPICS = [
   {
     title: "Getting Started",
-    description: "Is an Adult Family Home the right business for you?",
     href: "/afh-club/getting-started",
     img: "/afh-getting-started.webp",
     placeholder: "#2c3a48",
   },
   {
     title: "Licensing & Certification",
-    description: "DSHS license application & HCA certification",
     href: "/afh-club/licensing-certification",
     img: "/afh-licensing-certification.webp",
     placeholder: "#2c3e4e",
   },
   {
     title: "Training & Education",
-    description: "75-hour training, administrator course & more",
     href: "/afh-club/training-education",
     img: "/afh-training-education.webp",
     placeholder: "#354555",
   },
   {
     title: "Building & Inspection",
-    description: "Building codes, WABO, permits & septic",
     href: "/afh-club/building-inspection",
     img: "/afh-building-inspection.webp",
     placeholder: "#2e3d4d",
   },
-  {
-    title: "Costs & Fees",
-    description: "Licensing fees, insurance & Medicaid rates",
-    href: "/afh-club/costs-fees",
-    img: "/afh-costs-fees.webp",
-    placeholder: "#384858",
-  },
+  { title: "Costs & Fees", href: "/afh-club/costs-fees", img: "/afh-costs-fees.webp", placeholder: "#384858" },
   {
     title: "Buying or Selling an AFH",
-    description: "CHOW process, listings & real estate",
     href: "/afh-club/buying-selling",
     img: "/afh-buying-selling.webp",
     placeholder: "#2a3a4a",
   },
   {
     title: "Regulations & Compliance",
-    description: "WACs, RCWs, violations & inspections",
     href: "/afh-club/regulations-compliance",
     img: "/afh-regulations-compliance.webp",
     placeholder: "#334353",
   },
   {
     title: "Find a Professional",
-    description: "Management companies, inspectors & advisors",
     href: "/afh-club/find-a-professional",
     img: "/afh-find-professional.webp",
     placeholder: "#3c4c5c",
@@ -64,13 +51,14 @@ const CARD_GAP = 24;
 const AUTO_MS = 7000;
 const SLIDE_MS = 4400;
 const CARD_W = 304;
+const CARD_H = Math.round((CARD_W * 4) / 3);
 
 interface Category {
   title: string;
-  description: string;
   href: string;
   img: string;
   placeholder: string;
+  description?: string;
 }
 
 interface AFHCarouselProps {
@@ -118,50 +106,10 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
   }, [next, paused]);
 
   return (
-    <section style={{ background: "#f0f3f6", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}>
-      {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: 48 }}>
-        <span
-          style={{
-            display: "block",
-            fontSize: "18px",
-            fontFamily: "'Raleway', sans-serif",
-            fontWeight: 700,
-            letterSpacing: "0.22em",
-            textTransform: "uppercase",
-            color: "#5a3200",
-            marginBottom: 14,
-          }}
-        >
-          AFH Club
-        </span>
-        <h2
-          style={{ fontSize: "clamp(34px, 4vw, 50px)", fontWeight: 700, color: "#0a1628", margin: 0, lineHeight: 1.15 }}
-        >
-          Resource Network
-        </h2>
-        <div style={{ width: 48, height: 3, background: "#b87333", margin: "16px auto 0", borderRadius: 1 }} />
-        <p
-          style={{
-            marginTop: 20,
-            fontSize: "clamp(19px, 2vw, 22px)",
-            color: "#1e2a38",
-            maxWidth: 560,
-            marginLeft: "auto",
-            marginRight: "auto",
-            lineHeight: 1.75,
-            fontFamily: "'Raleway', sans-serif",
-            fontWeight: 400,
-          }}
-        >
-          A curated hub of resources for Adult Family Home owners, prospective providers, buyers, and the professionals
-          who serve them throughout Washington State.
-        </p>
-      </div>
-
+    <section style={{ background: "#f0f3f6", padding: "48px 24px 64px" }}>
       {/* Carousel viewport */}
       <div
-        style={{ maxWidth: 960, margin: "0 auto", padding: "8px 0 16px", overflow: "hidden", boxSizing: "content-box" }}
+        style={{ maxWidth: 960, margin: "0 auto", padding: "8px 0 16px", overflow: "hidden" }}
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
@@ -172,6 +120,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             transform: `translateX(calc(-${pos} * ${CARD_W + CARD_GAP}px))`,
             transition: transitioning ? `transform ${SLIDE_MS}ms cubic-bezier(0.16, 1, 0.3, 1)` : "none",
             willChange: "transform",
+            alignItems: "flex-end",
           }}
         >
           {TRACK.map((item, i) => (
@@ -187,19 +136,20 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 borderRadius: 4,
                 overflow: "hidden",
                 flexShrink: 0,
-                width: `${CARD_W}px`,
-                aspectRatio: "3 / 4",
-                boxShadow: hovered === i ? "0 32px 80px rgba(10,22,40,0.4)" : "0 4px 20px rgba(10,22,40,0.10)",
-                transform: hovered === i ? "translateY(-20px)" : "translateY(0)",
-                transition: "box-shadow 0.4s ease, transform 0.4s ease",
+                width: hovered === i ? `${CARD_W + 60}px` : `${CARD_W}px`,
+                height: hovered === i ? `${CARD_H + 80}px` : `${CARD_H}px`,
+                boxShadow: hovered === i ? "0 40px 100px rgba(10,22,40,0.45)" : "0 4px 20px rgba(10,22,40,0.10)",
+                transform: hovered === i ? "translateY(-30px)" : "translateY(0)",
+                transition: "width 0.4s ease, height 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease",
                 background: item.placeholder,
+                zIndex: hovered === i ? 10 : 1,
               }}
             >
               <img
                 src={item.img}
                 alt={item.title}
-                width={CARD_W}
-                height={Math.round((CARD_W * 4) / 3)}
+                width={CARD_W + 60}
+                height={CARD_H + 80}
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
                 loading="lazy"
                 onError={(e) => {
@@ -218,19 +168,19 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                   display: "flex",
                   alignItems: "flex-end",
                   justifyContent: "center",
-                  paddingBottom: 24,
+                  paddingBottom: 28,
                 }}
               >
                 <span
                   style={{
-                    fontSize: "13px",
+                    fontSize: "14px",
                     fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 600,
+                    fontWeight: 700,
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
                     color: "#fff",
-                    background: "rgba(184,115,51,0.92)",
-                    padding: "8px 18px",
+                    background: "rgba(184,115,51,0.95)",
+                    padding: "10px 22px",
                     borderRadius: 2,
                     display: "inline-flex",
                     alignItems: "center",
@@ -239,8 +189,8 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 >
                   Explore
                   <svg
-                    width="11"
-                    height="11"
+                    width="12"
+                    height="12"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -257,7 +207,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
         </div>
       </div>
 
-      {/* Controls — identical pattern to ArticlesCarousel */}
+      {/* Controls */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, marginTop: 36 }}>
         <button
           onClick={prev}
@@ -266,8 +216,8 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             background: "none",
             border: "1px solid #c8b98a",
             borderRadius: "50%",
-            width: 40,
-            height: 40,
+            width: 44,
+            height: 44,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -276,8 +226,8 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           }}
         >
           <svg
-            width="14"
-            height="14"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -319,8 +269,8 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             background: "none",
             border: "1px solid #c8b98a",
             borderRadius: "50%",
-            width: 40,
-            height: 40,
+            width: 44,
+            height: 44,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -329,8 +279,8 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           }}
         >
           <svg
-            width="14"
-            height="14"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
