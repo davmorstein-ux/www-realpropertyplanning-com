@@ -66,7 +66,7 @@ const HeroBandTitle = ({
   return (
     <>
       <div style={{ height: "3px", background: "#FFFFFF" }} />
-      <div style={{ background: "red", padding: "4px 24px", display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 0 }}>
+      <div style={{ background: "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)", padding: "4px 24px", display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 0 }}>
         <Tag className="rpp-hero-band-text" style={textStyle}>
           {transformChildren(children)}
         </Tag>
