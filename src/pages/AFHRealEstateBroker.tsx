@@ -187,32 +187,6 @@ const AFHRealEstateBroker = () => (
       {/* Featured Broker + Why You Need a Specialist — side by side */}
       <section style={{ background: "#f7f4ef", padding: "72px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: 14,
-              fontFamily: "'Raleway', sans-serif",
-              fontWeight: 600,
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "#5a3200",
-              margin: "0 0 14px",
-            }}
-          >
-            Featured AFH Broker
-          </p>
-          <h2
-            style={{
-              fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "Georgia, serif",
-              fontWeight: 700,
-              color: "#0a1628",
-              lineHeight: 1.2,
-              margin: "0 0 20px",
-            }}
-          >
-            Real Property Planning
-          </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 36, borderRadius: 1 }} />
 
           {/* Two-column layout */}
           <div
@@ -225,6 +199,32 @@ const AFHRealEstateBroker = () => (
           >
             {/* Left — Provider tile */}
             <div>
+              <p
+                style={{
+                  fontSize: 14,
+                  fontFamily: "'Raleway', sans-serif",
+                  fontWeight: 600,
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  color: "#5a3200",
+                  margin: "0 0 14px",
+                }}
+              >
+                Featured AFH Broker
+              </p>
+              <h2
+                style={{
+                  fontSize: "clamp(24px, 3.5vw, 36px)",
+                  fontFamily: "Georgia, serif",
+                  fontWeight: 700,
+                  color: "#0a1628",
+                  lineHeight: 1.2,
+                  margin: "0 0 20px",
+                }}
+              >
+                Real Property Planning
+              </h2>
+              <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 36, borderRadius: 1 }} />
               <ProviderTile
                 name="David Stein"
                 title="President, Real Property Planning"
