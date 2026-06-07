@@ -142,32 +142,6 @@ const AFHRealEstateBroker = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 14,
-              fontFamily: "'Raleway', sans-serif",
-              fontWeight: 600,
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "#5a3200",
-              margin: "0 0 14px",
-            }}
-          >
-            AFH Club · Real Estate Broker
-          </p>
-          <h1
-            style={{
-              fontSize: "clamp(32px, 5vw, 50px)",
-              fontFamily: "Georgia, serif",
-              fontWeight: 700,
-              color: "#1a2530",
-              lineHeight: 1.15,
-              margin: "0 0 20px",
-            }}
-          >
-            AFH Real Estate Broker
-          </h1>
-          <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
-          <p
-            style={{
               fontSize: "clamp(18px, 2vw, 20px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
