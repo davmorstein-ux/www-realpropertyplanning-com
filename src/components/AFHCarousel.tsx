@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const TOPICS = [
@@ -61,9 +61,8 @@ const TOPICS = [
 ];
 
 const CARD_GAP = 24;
-const AUTO_MS = 7000;
-const SLIDE_MS = 4400;
 const CARD_W = 304;
+const PX_PER_SEC = 60;
 
 interface Category {
   title: string;
@@ -79,56 +78,15 @@ interface AFHCarouselProps {
 
 export default function AFHCarousel({ categories }: AFHCarouselProps) {
   const ITEMS = categories || TOPICS;
-  const TRACK = [...ITEMS, ...ITEMS, ...ITEMS];
-  const START = ITEMS.length;
-
-  const [pos, setPos] = useState(START);
-  const [transitioning, setTransitioning] = useState(false);
+  const TRACK = [...ITEMS, ...ITEMS];
   const [hovered, setHovered] = useState<number | null>(null);
-  const [paused, setPaused] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const sectionRef = useRef<HTMLElement | null>(null);
 
-  const slideTo = useCallback(
-    (newPos: number) => {
-      if (transitioning) return;
-      setTransitioning(true);
-      setPos(newPos);
-      setTimeout(() => setTransitioning(false), SLIDE_MS + 100);
-    },
-    [transitioning],
-  );
-
-  const next = useCallback(() => {
-    slideTo(pos + 1);
-  }, [pos, slideTo]);
-  const prev = () => slideTo(pos - 1);
-
-  useEffect(() => {
-    if (transitioning) return;
-    if (pos >= START + ITEMS.length) setPos(pos - ITEMS.length);
-    else if (pos < START) setPos(pos + ITEMS.length);
-  }, [transitioning, pos]);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => setPaused(!entry.isIntersecting), { threshold: 0.1 });
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (paused) return;
-    timerRef.current = setInterval(next, AUTO_MS);
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [next, paused]);
+  // Duration so a full loop = total width of one ITEMS set
+  const loopWidth = ITEMS.length * (CARD_W + CARD_GAP);
+  const duration = `${loopWidth / PX_PER_SEC}s`;
 
   return (
     <section
-      ref={sectionRef}
       style={{ background: "#f0f3f6", padding: "64px 24px 72px", fontFamily: "Georgia, serif" }}
     >
       {/* Header */}
@@ -171,20 +129,22 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
         </p>
       </div>
 
-      {/* Carousel viewport */}
+      {/* Marquee viewport */}
       <div
-        style={{ maxWidth: 960, margin: "0 auto", padding: "8px 0 16px", overflow: "hidden", boxSizing: "content-box" }}
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
+        className="afh-marquee-viewport"
+        style={{ overflow: "hidden", padding: "8px 0 16px" }}
       >
         <div
-          style={{
-            display: "flex",
-            gap: CARD_GAP,
-            transform: `translateX(calc(-${pos} * ${CARD_W + CARD_GAP}px))`,
-            transition: transitioning ? `transform ${SLIDE_MS}ms cubic-bezier(0.16, 1, 0.3, 1)` : "none",
-            willChange: "transform",
-          }}
+          className="afh-marquee-track"
+          style={
+            {
+              display: "flex",
+              gap: CARD_GAP,
+              width: "max-content",
+              willChange: "transform",
+              "--afh-marquee-duration": duration,
+            } as React.CSSProperties
+          }
         >
           {TRACK.map((item, i) => (
             <Link
@@ -219,7 +179,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 }}
               />
 
-              {/* Hover overlay only — no permanent label */}
+              {/* Hover overlay */}
               <div
                 style={{
                   position: "absolute",
@@ -266,92 +226,6 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             </Link>
           ))}
         </div>
-      </div>
-
-      {/* Controls */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, marginTop: 36 }}>
-        <button
-          onClick={prev}
-          aria-label="Previous"
-          style={{
-            background: "none",
-            border: "1px solid #9aabb8",
-            borderRadius: "50%",
-            width: 40,
-            height: 40,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            color: "#5a3200",
-          }}
-        >
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </button>
-
-        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          {ITEMS.map((_, i) => {
-            const normalizedPos = (((pos - START) % ITEMS.length) + ITEMS.length) % ITEMS.length;
-            return (
-              <button
-                key={i}
-                onClick={() => slideTo(START + i)}
-                aria-label={`Slide ${i + 1}`}
-                style={{
-                  background: normalizedPos === i ? "#b87333" : "#9aabb8",
-                  border: "none",
-                  borderRadius: 2,
-                  width: normalizedPos === i ? 24 : 8,
-                  height: 4,
-                  cursor: "pointer",
-                  padding: 0,
-                  transition: "width 0.3s ease, background 0.3s ease",
-                }}
-              />
-            );
-          })}
-        </div>
-
-        <button
-          onClick={next}
-          aria-label="Next"
-          style={{
-            background: "none",
-            border: "1px solid #9aabb8",
-            borderRadius: "50%",
-            width: 40,
-            height: 40,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            color: "#5a3200",
-          }}
-        >
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </button>
       </div>
     </section>
   );
