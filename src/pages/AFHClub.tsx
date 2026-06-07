@@ -84,6 +84,7 @@ const AFHClub = () => (
 
           {/* Eyebrow — immediately below badge */}
           <p
+            className="afh-eyebrow"
             style={{
               fontSize: "18px",
               fontFamily: "'Raleway', sans-serif",
@@ -98,6 +99,7 @@ const AFHClub = () => (
           </p>
 
           <h1
+            className="afh-h1"
             style={{
               fontSize: "clamp(52px, 7vw, 72px)",
               fontFamily: "Georgia, serif",
@@ -111,6 +113,7 @@ const AFHClub = () => (
           </h1>
 
           <p
+            className="afh-subtitle"
             style={{
               fontSize: "clamp(22px, 3vw, 28px)",
               fontFamily: "Georgia, serif",
@@ -126,6 +129,7 @@ const AFHClub = () => (
           <div style={{ width: 56, height: 3, background: "#b87333", margin: "0 auto 28px", borderRadius: 1 }} />
 
           <p
+            className="afh-body"
             style={{
               fontSize: "clamp(20px, 2.2vw, 24px)",
               fontFamily: "'Raleway', sans-serif",
@@ -142,6 +146,7 @@ const AFHClub = () => (
           </p>
 
           <p
+            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
@@ -321,6 +326,7 @@ const AFHClub = () => (
           </h2>
           <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
           <p
+            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
@@ -335,6 +341,7 @@ const AFHClub = () => (
             the service provider.
           </p>
           <p
+            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
@@ -348,6 +355,7 @@ const AFHClub = () => (
             regulated under WAC 388-76 and RCW 70.128.
           </p>
           <p
+            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
