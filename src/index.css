@@ -3012,9 +3012,5 @@ div {
 .hero-band-title {
   font-size: 22px !important;
   font-weight: 700 !important;
-  letter-spacing: 0.18em !important;
-  text-transform: uppercase !important;
   color: #FFFFFF !important;
-  opacity: 1 !important;
-  line-height: 1.2 !important;
 }
