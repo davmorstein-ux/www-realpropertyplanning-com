@@ -69,6 +69,12 @@ const ARTICLES = [
     description:
       "Most older adults want to stay home. Here's what that actually takes — and how to know when it's still the right answer.",
   },
+  {
+    title: "Wills, Trusts, and Other Options",
+    href: "/articles/wills-trusts-other-options",
+    img: "/Wills_Trusts_Other_Options.webp",
+    description: "How to pass real estate to your children — and the tradeoffs each method carries.",
+  },
 ];
 
 const Articles = () => {
