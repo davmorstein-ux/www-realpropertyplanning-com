@@ -146,6 +146,7 @@ const AFHClub = () => (
           </p>
 
           <p
+            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
@@ -325,6 +326,7 @@ const AFHClub = () => (
           </h2>
           <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
           <p
+            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
@@ -339,6 +341,7 @@ const AFHClub = () => (
             the service provider.
           </p>
           <p
+            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
@@ -352,6 +355,7 @@ const AFHClub = () => (
             regulated under WAC 388-76 and RCW 70.128.
           </p>
           <p
+            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
