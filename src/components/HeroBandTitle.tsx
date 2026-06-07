@@ -21,23 +21,15 @@ const capitalizeWord = (part: string): string => {
 const titleCase = (input: string): string => {
   const parts = input.split(/(\s+)/);
   let firstWordSeen = false;
-  return parts
-    .map((part) => {
-      if (!part || /^\s+$/.test(part)) return part;
-      const upper = part.toUpperCase();
-      if (KEEP_UPPER.has(upper)) {
-        firstWordSeen = true;
-        return upper;
-      }
-      const lower = part.toLowerCase();
-      if (!firstWordSeen) {
-        firstWordSeen = true;
-        return capitalizeWord(part);
-      }
-      if (KEEP_LOWER.has(lower)) return lower;
-      return capitalizeWord(part);
-    })
-    .join("");
+  return parts.map((part) => {
+    if (!part || /^\s+$/.test(part)) return part;
+    const upper = part.toUpperCase();
+    if (KEEP_UPPER.has(upper)) { firstWordSeen = true; return upper; }
+    const lower = part.toLowerCase();
+    if (!firstWordSeen) { firstWordSeen = true; return capitalizeWord(part); }
+    if (KEEP_LOWER.has(lower)) return lower;
+    return capitalizeWord(part);
+  }).join("");
 };
 
 const transformChildren = (children: ReactNode): ReactNode =>
@@ -45,47 +37,25 @@ const transformChildren = (children: ReactNode): ReactNode =>
 
 const HeroBandTitle = ({
   children,
-  as: Tag = "h1",
+  as: Tag = "p",
   bare = false,
   compact = false,
   className = "",
 }: HeroBandTitleProps) => {
-  const titleStyle = {
-    color: "#FFFFFF",
-    fontFamily: '"Raleway", "DM Sans", sans-serif',
-    fontWeight: 700,
-    fontSize: "22px",
-    letterSpacing: "0.18em",
-    lineHeight: 1.2,
-    opacity: 1,
-    margin: 0,
-    textTransform: "uppercase" as const,
-    textAlign: "center" as const,
-  };
-
-  const titleEl = (
-    <Tag className={`hero-band-title ${className}`.trim()} style={titleStyle}>
-      {transformChildren(children)}
-    </Tag>
-  );
-
-  if (bare) return titleEl;
-
+  if (bare) {
+    return (
+      <Tag style={{ color: "#FFFFFF", fontFamily: "'Raleway', sans-serif", fontWeight: 900, fontSize: "28px", letterSpacing: "0.18em", lineHeight: 1.2, opacity: 1, margin: 0, textTransform: "uppercase", textAlign: "center" }}>
+        {transformChildren(children)}
+      </Tag>
+    );
+  }
   return (
     <>
       <div style={{ height: "3px", background: "#FFFFFF" }} />
-      <div
-        data-hero-band
-        style={{
-          background: "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)",
-          height: "60px",
-          padding: "0 24px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {titleEl}
+      <div style={{ background: "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)", height: "68px", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Tag style={{ color: "#FFFFFF", fontFamily: "'Raleway', sans-serif", fontWeight: 900, fontSize: "28px", letterSpacing: "0.18em", lineHeight: 1.2, opacity: 1, margin: 0, textTransform: "uppercase", textAlign: "center" }}>
+          {transformChildren(children)}
+        </Tag>
       </div>
     </>
   );
