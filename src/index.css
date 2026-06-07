@@ -157,19 +157,7 @@ nav [class*="dropdown"] button svg {
   overflow: visible !important;
 }
 
-.hero-band-title {
-  font-size: 1rem !important;
-}
 
-[data-hero-band] .hero-band-title {
-  font-size: 1.25rem !important;
-  font-weight: 700 !important;
-  font-family: "Raleway", sans-serif !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.18em !important;
-  color: #ffffff !important;
-  opacity: 1 !important;
-}
 
 @keyframes afh-marquee {
   from {
@@ -1844,21 +1832,6 @@ h4 + .text-muted-foreground {
   }
 }
 
-/* Global standardized hero blue band title — beats global p/h1/h2 !important rules */
-.hero-band-title,
-p.hero-band-title,
-h1.hero-band-title,
-h2.hero-band-title,
-h3.hero-band-title {
-  font-family: "DM Sans", serif !important;
-  font-weight: 600 !important;
-  color: #ffffff !important;
-  text-align: center !important;
-  line-height: 1.2 !important;
-  font-size: clamp(16px, 2.4vw, 22px) !important;
-  margin: 0 !important;
-  opacity: 1 !important;
-}
 [data-hero-band] {
   padding: 4px 24px !important;
   min-height: 0 !important;
@@ -2390,12 +2363,6 @@ hr {
     max-height: 220px !important;
     object-fit: cover !important;
     object-position: center !important;
-  }
-  /* 4. Blue band hero title — reduce 2 steps */
-  .hero-band-title {
-    font-size: clamp(12px, 3.5vw, 16px) !important;
-    line-height: 1.25 !important;
-    padding: 0 12px;
   }
 
   /* 8. Halve section padding */
@@ -3011,14 +2978,6 @@ th,
 div {
   font-size: max(var(--font-size, 1rem), 1rem) !important;
 }
-.hero-band-title,
-[data-hero-band] * {
-  font-size: 1.25rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.18em !important;
-  color: #ffffff !important;
-}
 
 /* ============================================
    WCAG AA ACCESSIBILITY — DO NOT REMOVE
@@ -3049,11 +3008,3 @@ div {
   line-height: 1.85 !important;
 }
 
-[data-hero-band] .hero-band-title {
-  font-size: 22px !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.18em !important;
-  color: #FFFFFF !important;
-  opacity: 1 !important;
-}
