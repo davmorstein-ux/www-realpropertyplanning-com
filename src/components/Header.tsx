@@ -68,6 +68,7 @@ const TOP_LINKS = [
       { label: "CCRC Costs", href: "/articles/ccrc-costs" },
       { label: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
       { label: "Aging in Place With Support", href: "/articles/aging-in-place" },
+      { label: "Wills, Trusts, and Other Options", href: "/articles/wills-trusts-other-options" },
     ],
   },
   { label: "AFH Club", href: "/afh-club" },
