@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import { useIsVisible } from "@/hooks/use-is-visible";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
-const TOPICS = [
+export interface CategoryItem {
+  title: string;
+  href: string;
+  img: string;
+  description: string;
+  placeholder: string;
+}
+
+const TOPICS: CategoryItem[] = [
   {
     title: "Getting Started",
     description: "Is an AFH right for you?",
@@ -62,15 +70,21 @@ const TOPICS = [
   },
 ];
 
-const TRACK = [...TOPICS, ...TOPICS, ...TOPICS];
-const START = TOPICS.length;
 const CARD_GAP = 24;
 const AUTO_MS = 7000;
 const SLIDE_MS = 4400;
 const CARD_W = 304;
 
-export default function AFHCarousel() {
-  const [pos, setPos] = useState(START);
+interface AFHCarouselProps {
+  categories?: CategoryItem[];
+}
+
+export default function AFHCarousel({ categories }: AFHCarouselProps) {
+  const topics = categories ?? TOPICS;
+  const track = [...topics, ...topics, ...topics];
+  const start = topics.length;
+
+  const [pos, setPos] = useState(start);
   const [transitioning, setTransitioning] = useState(false);
   const [hovered, setHovered] = useState<number | null>(null);
   const [paused, setPaused] = useState(false);
@@ -97,12 +111,12 @@ export default function AFHCarousel() {
 
   useEffect(() => {
     if (transitioning) return;
-    if (pos >= START + TOPICS.length) {
-      setPos(pos - TOPICS.length);
-    } else if (pos < START) {
-      setPos(pos + TOPICS.length);
+    if (pos >= start + topics.length) {
+      setPos(pos - topics.length);
+    } else if (pos < start) {
+      setPos(pos + topics.length);
     }
-  }, [transitioning, pos]);
+  }, [transitioning, pos, start, topics.length]);
 
   useEffect(() => {
     if (paused || !isVisible || prefersReducedMotion) return;
@@ -182,7 +196,7 @@ export default function AFHCarousel() {
             willChange: "transform",
           }}
         >
-          {TRACK.map((topic, i) => (
+          {track.map((topic, i) => (
             <Link
               key={i}
               to={topic.href}
@@ -351,12 +365,12 @@ export default function AFHCarousel() {
         </button>
 
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          {TOPICS.map((_, i) => {
-            const normalizedPos = (((pos - START) % TOPICS.length) + TOPICS.length) % TOPICS.length;
+          {topics.map((_, i) => {
+            const normalizedPos = (((pos - start) % topics.length) + topics.length) % topics.length;
             return (
               <button
                 key={i}
-                onClick={() => slideTo(START + i)}
+                onClick={() => slideTo(start + i)}
                 aria-label={`Slide ${i + 1}`}
                 style={{
                   background: normalizedPos === i ? "#b87333" : "#9aabb8",
