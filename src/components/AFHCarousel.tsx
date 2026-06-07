@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import { useIsVisible } from "@/hooks/use-is-visible";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
-const TOPICS = [
+export interface CategoryItem {
+  title: string;
+  href: string;
+  img: string;
+  description: string;
+  placeholder: string;
+}
+
+const TOPICS: CategoryItem[] = [
   {
     title: "Getting Started",
     description: "Is an AFH right for you?",
@@ -62,15 +70,21 @@ const TOPICS = [
   },
 ];
 
-const TRACK = [...TOPICS, ...TOPICS, ...TOPICS];
-const START = TOPICS.length;
 const CARD_GAP = 24;
 const AUTO_MS = 7000;
 const SLIDE_MS = 4400;
 const CARD_W = 304;
 
-export default function AFHCarousel() {
-  const [pos, setPos] = useState(START);
+interface AFHCarouselProps {
+  categories?: CategoryItem[];
+}
+
+export default function AFHCarousel({ categories }: AFHCarouselProps) {
+  const topics = categories ?? TOPICS;
+  const track = [...topics, ...topics, ...topics];
+  const start = topics.length;
+
+  const [pos, setPos] = useState(start);
   const [transitioning, setTransitioning] = useState(false);
   const [hovered, setHovered] = useState<number | null>(null);
   const [paused, setPaused] = useState(false);
