@@ -51,14 +51,14 @@ const textStyle = {
 
 const HeroBandTitle = ({
   children,
-  as: Tag = "p",
+  as: Tag = "div",
   bare = false,
   compact = false,
   className = "",
 }: HeroBandTitleProps) => {
   if (bare) {
     return (
-      <Tag style={textStyle}>
+      <Tag className="rpp-hero-band-text" style={textStyle}>
         {transformChildren(children)}
       </Tag>
     );
@@ -67,7 +67,7 @@ const HeroBandTitle = ({
     <>
       <div style={{ height: "3px", background: "#FFFFFF" }} />
       <div style={{ background: "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)", padding: "4px 24px", display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 0 }}>
-        <Tag style={textStyle}>
+        <Tag className="rpp-hero-band-text" style={textStyle}>
           {transformChildren(children)}
         </Tag>
       </div>
