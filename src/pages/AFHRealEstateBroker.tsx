@@ -181,97 +181,11 @@ const AFHRealEstateBroker = () => (
             it.
           </p>
         </div>
-      </section>
-
-      {/* Why AFH transactions are different */}
+      </section>{" "}
+      <HeroBandTitle>AFH Real Estate Broker</HeroBandTitle>
+      {/* Featured Broker + Why You Need a Specialist — side by side */}
       <section style={{ background: "#f7f4ef", padding: "72px 24px" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: 14,
-              fontFamily: "'Raleway', sans-serif",
-              fontWeight: 600,
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "#5a3200",
-              margin: "0 0 14px",
-            }}
-          >
-            What Makes AFH Real Estate Different
-          </p>
-          <h2
-            style={{
-              fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "Georgia, serif",
-              fontWeight: 700,
-              color: "#0a1628",
-              lineHeight: 1.2,
-              margin: "0 0 20px",
-            }}
-          >
-            Why You Need a Specialist
-          </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
-          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            {[
-              {
-                title: "The license doesn't transfer",
-                body: "Every AFH sale is a Change of Ownership (CHOW). The buyer must apply for a new DSHS license — the process requires understanding both the real estate closing timeline and the DSHS licensing timeline simultaneously.",
-              },
-              {
-                title: "Valuing an AFH requires dual expertise",
-                body: "An AFH's value includes the real estate and the licensed business operation — bed capacity, compliance history, specialty contracts, and Medicaid relationships all affect price. A broker who is also a certified appraiser brings a rare combination of skills to this analysis.",
-              },
-              {
-                title: "Specialty contracts need careful handling",
-                body: "Dementia, ECS, and SBS specialty contracts don't transfer in a CHOW. A knowledgeable broker helps buyers understand what they are actually acquiring and what they will need to independently qualify for.",
-              },
-              {
-                title: "Compliance history matters more than curb appeal",
-                body: "Checking the DSHS AFH Locator, understanding enforcement history, and asking the right due diligence questions before closing protects buyers from inheriting problems that aren't visible in a standard inspection.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  background: "#fff",
-                  border: "1px solid #e0d8c8",
-                  borderLeft: "4px solid #b87333",
-                  borderRadius: 6,
-                  padding: "22px 24px",
-                }}
-              >
-                <h3
-                  style={{
-                    fontSize: 18,
-                    fontFamily: "Georgia, serif",
-                    fontWeight: 700,
-                    color: "#0a1628",
-                    margin: "0 0 10px",
-                  }}
-                >
-                  {item.title}
-                </h3>
-                <p
-                  style={{
-                    fontSize: "clamp(16px, 1.6vw, 18px)",
-                    fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
-                    lineHeight: 1.8,
-                    margin: 0,
-                  }}
-                >
-                  {item.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Broker */}
-      <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <p
             style={{
               fontSize: 14,
@@ -298,52 +212,146 @@ const AFHRealEstateBroker = () => (
             Real Property Planning
           </h2>
           <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 36, borderRadius: 1 }} />
-          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
-            <ProviderTile
-              name="David Stein"
-              title="President, Real Property Planning"
-              company="eXp Realty"
-              photo={davidSteinPhoto}
-              photoAlt="Photo of David Stein, AFH Real Estate Broker"
-              logo={expRealtyLogo}
-              logoAlt="eXp Realty logo"
-              phone="(206) 900-3015"
-              email="dave.stein@exprealty.com"
-              website="https://davestein.exprealty.com"
-              specialty="Adult Family Home transactions, probate, estate, and trust property sales across Washington State."
-              bio="David Stein is a Washington State licensed real estate broker and Certified Residential Appraiser with over 20 years of experience in complex property transactions. He brings a rare combination of appraisal expertise and brokerage experience to AFH transactions — understanding both how to value a licensed care facility and how to navigate the CHOW process, DSHS timelines, and specialty contract considerations that define AFH real estate. His property experience spans single family homes, multi-family properties, investment properties, and specialty-use residential properties throughout Western Washington."
-            />
-          </div>
-          <div style={{ marginTop: 28 }}>
-            <div
-              style={{
-                background: "#fff",
-                border: "1px solid #e0d8c8",
-                borderLeft: "4px solid #2c3a48",
-                borderRadius: 6,
-                padding: "20px 24px",
-              }}
-            >
-              <p
+
+          {/* Two-column layout */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: 40,
+              alignItems: "start",
+            }}
+          >
+            {/* Left — Provider tile */}
+            <div>
+              <ProviderTile
+                name="David Stein"
+                title="President, Real Property Planning"
+                company="eXp Realty"
+                photo={davidSteinPhoto}
+                photoAlt="Photo of David Stein, AFH Real Estate Broker"
+                logo={expRealtyLogo}
+                logoAlt="eXp Realty logo"
+                phone="(206) 900-3015"
+                email="dave.stein@exprealty.com"
+                website="https://davestein.exprealty.com"
+                specialty="Adult Family Home transactions, probate, estate, and trust property sales across Washington State."
+                bio="David Stein is a Washington State licensed real estate broker and Certified Residential Appraiser with over 20 years of experience in complex property transactions. He brings a rare combination of appraisal expertise and brokerage experience to AFH transactions — understanding both how to value a licensed care facility and how to navigate the CHOW process, DSHS timelines, and specialty contract considerations that define AFH real estate."
+              />
+              <div
                 style={{
-                  fontSize: "clamp(16px, 1.6vw, 18px)",
-                  fontFamily: "'Raleway', sans-serif",
-                  color: "#1e2a38",
-                  lineHeight: 1.8,
-                  margin: 0,
+                  marginTop: 16,
+                  background: "#fff",
+                  border: "1px solid #e0d8c8",
+                  borderLeft: "4px solid #2c3a48",
+                  borderRadius: 6,
+                  padding: "18px 22px",
                 }}
               >
-                Washington State Licensed Real Estate Broker · eXp Realty · License #113972
-                <br />
-                Washington State Certified Residential Appraiser · Stein Appraisal
-                <br />
-                Member: ALCA · NAOSA · NAEPC · NAR
+                <p
+                  style={{
+                    fontSize: 16,
+                    fontFamily: "'Raleway', sans-serif",
+                    color: "#1e2a38",
+                    lineHeight: 1.8,
+                    margin: 0,
+                  }}
+                >
+                  WA Licensed Real Estate Broker · eXp Realty · License #113972
+                  <br />
+                  WA Certified Residential Appraiser · Stein Appraisal
+                  <br />
+                  Member: ALCA · NAOSA · NAEPC · NAR
+                </p>
+              </div>
+            </div>
+
+            {/* Right — Why You Need a Specialist */}
+            <div>
+              <p
+                style={{
+                  fontSize: 14,
+                  fontFamily: "'Raleway', sans-serif",
+                  fontWeight: 600,
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  color: "#5a3200",
+                  margin: "0 0 14px",
+                }}
+              >
+                What Makes AFH Real Estate Different
               </p>
+              <h3
+                style={{
+                  fontSize: "clamp(22px, 2.5vw, 30px)",
+                  fontFamily: "Georgia, serif",
+                  fontWeight: 700,
+                  color: "#0a1628",
+                  lineHeight: 1.2,
+                  margin: "0 0 20px",
+                }}
+              >
+                Why You Need a Specialist
+              </h3>
+              <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+              <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                {[
+                  {
+                    title: "The license doesn't transfer",
+                    body: "Every AFH sale is a Change of Ownership (CHOW). The buyer must apply for a new DSHS license — requiring an understanding of both the real estate closing timeline and the DSHS licensing timeline simultaneously.",
+                  },
+                  {
+                    title: "Valuing an AFH requires dual expertise",
+                    body: "An AFH's value includes the real estate and the licensed business operation — bed capacity, compliance history, specialty contracts, and Medicaid relationships all affect price. A broker who is also a certified appraiser brings a rare combination of skills.",
+                  },
+                  {
+                    title: "Specialty contracts need careful handling",
+                    body: "Dementia, ECS, and SBS specialty contracts don't transfer in a CHOW. A knowledgeable broker helps buyers understand what they are actually acquiring and what they will need to independently qualify for.",
+                  },
+                  {
+                    title: "Compliance history matters more than curb appeal",
+                    body: "Checking the DSHS AFH Locator, understanding enforcement history, and asking the right due diligence questions before closing protects buyers from inheriting problems not visible in a standard inspection.",
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      background: "#fff",
+                      border: "1px solid #e0d8c8",
+                      borderLeft: "4px solid #b87333",
+                      borderRadius: 6,
+                      padding: "20px 22px",
+                    }}
+                  >
+                    <h4
+                      style={{
+                        fontSize: 18,
+                        fontFamily: "Georgia, serif",
+                        fontWeight: 700,
+                        color: "#0a1628",
+                        margin: "0 0 8px",
+                      }}
+                    >
+                      {item.title}
+                    </h4>
+                    <p
+                      style={{
+                        fontSize: 16,
+                        fontFamily: "'Raleway', sans-serif",
+                        color: "#1e2a38",
+                        lineHeight: 1.8,
+                        margin: 0,
+                      }}
+                    >
+                      {item.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Zillow Reviews */}
       <section style={{ background: "#f7f4ef", padding: "72px 24px" }}>
         <div style={{ maxWidth: 960, margin: "0 auto" }}>
@@ -500,7 +508,6 @@ const AFHRealEstateBroker = () => (
           </div>
         </div>
       </section>
-
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />
