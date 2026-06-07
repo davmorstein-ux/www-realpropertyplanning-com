@@ -6,13 +6,14 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import AFHCarousel from "@/components/AFHCarousel";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 const CATEGORIES = [
   {
     title: "AFH Resources",
     href: "/afh-club/resources",
     img: "/afh-resources.webp",
-    description: "Licensing, training, building requirements, costs, regulations, and more — organized by topic.",
+    description: "Licensing, training, building requirements, costs, regulations, and more.",
     placeholder: "#2c3a48",
   },
   {
@@ -26,14 +27,14 @@ const CATEGORIES = [
     title: "Management Companies",
     href: "/afh-club/management-companies",
     img: "/afh-management-companies.webp",
-    description: "Professional AFH management companies serving Washington State owners and operators.",
+    description: "Professional AFH management companies serving Washington State owners.",
     placeholder: "#283646",
   },
   {
     title: "AFH Real Estate Broker",
     href: "/afh-club/real-estate-broker",
     img: "/afh-real-estate-broker.webp",
-    description: "A licensed Washington State real estate broker specializing in Adult Family Home transactions.",
+    description: "A licensed Washington State broker specializing in Adult Family Home transactions.",
     placeholder: "#263444",
   },
 ];
@@ -53,134 +54,99 @@ const AFHClub = () => (
     />
     <Header />
     <main id="main-content">
-      {/* Hero */}
+      {/* Hero — badge, title, subtitle, one description line only */}
       <section
         style={{
           background: "#edf0f3",
-          padding: "56px 24px 48px",
+          padding: "48px 24px 40px",
           textAlign: "center",
           borderBottom: "3px solid #b87333",
         }}
       >
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          {/* Badge — tight spacing below */}
-          <div style={{ marginBottom: 12 }}>
+          {/* Badge — tight */}
+          <div style={{ marginBottom: 8 }}>
             <img
               src="/afh-club-badge.webp"
               alt="AFH Club — Washington State Adult Family Home Resource Network"
               style={{
                 width: "100%",
-                maxWidth: 180,
+                maxWidth: 160,
                 height: "auto",
                 display: "block",
                 margin: "0 auto",
                 mixBlendMode: "multiply",
               }}
               loading="eager"
-              width={180}
-              height={180}
+              width={160}
+              height={160}
             />
           </div>
 
-          {/* Eyebrow — immediately below badge */}
+          {/* Eyebrow — tight below badge */}
           <p
-            className="afh-eyebrow"
             style={{
-              fontSize: "18px",
+              fontSize: "20px",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 700,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
               color: "#5a3200",
-              margin: "0 0 10px",
+              margin: "0 0 8px",
             }}
           >
             Real Property Planning
           </p>
 
           <h1
-            className="afh-h1"
             style={{
               fontSize: "clamp(52px, 7vw, 72px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
               color: "#1a2530",
               lineHeight: 1.1,
-              margin: "0 0 10px",
+              margin: "0 0 8px",
             }}
           >
             AFH Club
           </h1>
 
           <p
-            className="afh-subtitle"
             style={{
               fontSize: "clamp(22px, 3vw, 28px)",
               fontFamily: "Georgia, serif",
               fontWeight: 400,
               color: "#5a3200",
-              letterSpacing: "0.04em",
-              margin: "0 0 24px",
+              margin: "0 0 20px",
             }}
           >
             Washington State Adult Family Home Resource Network
           </p>
 
-          <div style={{ width: 56, height: 3, background: "#b87333", margin: "0 auto 28px", borderRadius: 1 }} />
+          <div style={{ width: 56, height: 3, background: "#b87333", margin: "0 auto 20px", borderRadius: 1 }} />
 
+          {/* Single description line — moved from carousel */}
           <p
-            className="afh-body"
             style={{
               fontSize: "clamp(20px, 2.2vw, 24px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
               color: "#1e2a38",
               lineHeight: 1.8,
-              margin: "0 auto 18px",
+              margin: "0 auto",
               maxWidth: 680,
             }}
           >
-            Washington State's most comprehensive resource network for Adult Family Home owners, prospective providers,
-            investors, and the professionals who serve them. Whether you are opening your first AFH, managing an
-            existing operation, or looking to buy or sell — AFH Club is your starting point.
-          </p>
-
-          <p
-            className="afh-body"
-            style={{
-              fontSize: "clamp(19px, 2vw, 22px)",
-              fontFamily: "'Raleway', sans-serif",
-              fontWeight: 400,
-              color: "#1e2a38",
-              lineHeight: 1.8,
-              margin: "0 auto",
-              maxWidth: 600,
-            }}
-          >
-            No memberships. No fees. No agenda. Simply authoritative, organized resources built for the AFH community
-            throughout Washington State.
+            A curated hub of resources for Adult Family Home owners, prospective providers, buyers, and the
+            professionals who serve them throughout Washington State.
           </p>
         </div>
       </section>
 
       {/* Welcome banner */}
-      <div style={{ background: "#2c3a48", padding: "20px 24px", textAlign: "center" }}>
-        <p
-          style={{
-            margin: 0,
-            fontSize: "20px",
-            fontFamily: "'Raleway', sans-serif",
-            fontWeight: 700,
-            letterSpacing: "0.28em",
-            textTransform: "uppercase",
-            color: "#e8e2d9",
-          }}
-        >
-          Welcome to the AFH Club
-        </p>
-      </div>
+      <HeroBandTitle>Welcome to the AFH Club</HeroBandTitle>
 
-      {/* Carousel */}
+      {/* Carousel — no text above it */}
       <AFHCarousel categories={CATEGORIES} />
 
       {/* Category list */}
@@ -301,7 +267,7 @@ const AFHClub = () => (
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: "18px",
+              fontSize: "20px",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 700,
               letterSpacing: "0.22em",
@@ -326,7 +292,6 @@ const AFHClub = () => (
           </h2>
           <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
           <p
-            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
@@ -341,7 +306,6 @@ const AFHClub = () => (
             the service provider.
           </p>
           <p
-            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
@@ -355,7 +319,6 @@ const AFHClub = () => (
             regulated under WAC 388-76 and RCW 70.128.
           </p>
           <p
-            className="afh-body"
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
