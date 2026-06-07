@@ -129,6 +129,7 @@ const AFHClub = () => (
           <div style={{ width: 56, height: 3, background: "#b87333", margin: "0 auto 28px", borderRadius: 1 }} />
 
           <p
+            className="afh-body"
             style={{
               fontSize: "clamp(20px, 2.2vw, 24px)",
               fontFamily: "'Raleway', sans-serif",
