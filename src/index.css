@@ -2977,3 +2977,18 @@ main [class*="/90"] {
   letter-spacing: 0.18em !important;
   opacity: 1 !important;
 }
+
+/* Hero blue band title — override global p/body font-size rules */
+.rpp-hero-band-text {
+  font-size: 56px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.18em !important;
+  color: #FFFFFF !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  font-family: 'Raleway', sans-serif !important;
+}
