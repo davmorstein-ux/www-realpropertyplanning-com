@@ -2969,17 +2969,6 @@ main [class*="/90"] {
     scroll-behavior: auto !important;
   }
 }
-/* WCAG AA — Global font size enforcement */
-p,
-li,
-span,
-a,
-label,
-td,
-th,
-div {
-  font-size: max(var(--font-size, 1rem), 1rem) !important;
-}
 .hero-band-title {
   font-size: 22px !important;
   font-weight: 700 !important;
