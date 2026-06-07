@@ -39,7 +39,7 @@ const textStyle = {
   color: "#FFFFFF",
   fontFamily: "'Raleway', sans-serif",
   fontWeight: 900,
-  fontSize: "56px",
+  fontSize: "200px",
   letterSpacing: "0.18em",
   lineHeight: 1,
   opacity: 1,
