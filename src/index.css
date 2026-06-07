@@ -106,9 +106,9 @@ nav [class*="dropdown"] button svg {
 [class*="card"] h3,
 [class*="tile"] h2,
 [class*="tile"] h3 {
-  min-height: 64px !important;
+  min-height: unset !important;
   display: flex !important;
-  align-items: flex-end !important;
+  align-items: center !important;
   margin-bottom: 8px !important;
 }
 .card p,
