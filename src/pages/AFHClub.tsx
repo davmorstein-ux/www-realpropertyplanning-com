@@ -57,42 +57,46 @@ const AFHClub = () => (
       <section
         style={{
           background: "#edf0f3",
-          padding: "72px 24px 64px",
+          padding: "56px 24px 48px",
           textAlign: "center",
           borderBottom: "3px solid #b87333",
         }}
       >
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          <div style={{ marginBottom: 16 }}>
+          {/* Badge — tight spacing below */}
+          <div style={{ marginBottom: 12 }}>
             <img
               src="/afh-club-badge.webp"
               alt="AFH Club — Washington State Adult Family Home Resource Network"
               style={{
                 width: "100%",
-                maxWidth: 200,
+                maxWidth: 180,
                 height: "auto",
                 display: "block",
                 margin: "0 auto",
                 mixBlendMode: "multiply",
               }}
               loading="eager"
-              width={200}
-              height={200}
+              width={180}
+              height={180}
             />
           </div>
+
+          {/* Eyebrow — immediately below badge */}
           <p
             style={{
-              fontSize: 18,
+              fontSize: "18px",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 700,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
               color: "#5a3200",
-              margin: "0 0 16px",
+              margin: "0 0 10px",
             }}
           >
             Real Property Planning
           </p>
+
           <h1
             style={{
               fontSize: "clamp(52px, 7vw, 72px)",
@@ -100,32 +104,35 @@ const AFHClub = () => (
               fontWeight: 700,
               color: "#1a2530",
               lineHeight: 1.1,
-              margin: "0 0 12px",
+              margin: "0 0 10px",
             }}
           >
             AFH Club
           </h1>
+
           <p
             style={{
-              fontSize: "clamp(24px, 3vw, 30px)",
+              fontSize: "clamp(22px, 3vw, 28px)",
               fontFamily: "Georgia, serif",
               fontWeight: 400,
               color: "#5a3200",
-              letterSpacing: "0.06em",
-              margin: "0 0 28px",
+              letterSpacing: "0.04em",
+              margin: "0 0 24px",
             }}
           >
             Washington State Adult Family Home Resource Network
           </p>
-          <div style={{ width: 56, height: 3, background: "#b87333", margin: "0 auto 36px", borderRadius: 1 }} />
+
+          <div style={{ width: 56, height: 3, background: "#b87333", margin: "0 auto 28px", borderRadius: 1 }} />
+
           <p
             style={{
-              fontSize: "clamp(20px, 2vw, 24px)",
+              fontSize: "clamp(20px, 2.2vw, 24px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
               color: "#1e2a38",
               lineHeight: 1.8,
-              margin: "0 auto 20px",
+              margin: "0 auto 18px",
               maxWidth: 680,
             }}
           >
@@ -133,9 +140,10 @@ const AFHClub = () => (
             investors, and the professionals who serve them. Whether you are opening your first AFH, managing an
             existing operation, or looking to buy or sell — AFH Club is your starting point.
           </p>
+
           <p
             style={{
-              fontSize: "clamp(20px, 2vw, 24px)",
+              fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
               color: "#1e2a38",
@@ -151,11 +159,11 @@ const AFHClub = () => (
       </section>
 
       {/* Welcome banner */}
-      <div style={{ background: "#2c3a48", padding: "22px 24px", textAlign: "center" }}>
+      <div style={{ background: "#2c3a48", padding: "20px 24px", textAlign: "center" }}>
         <p
           style={{
             margin: 0,
-            fontSize: 18,
+            fontSize: "20px",
             fontFamily: "'Raleway', sans-serif",
             fontWeight: 700,
             letterSpacing: "0.28em",
@@ -174,7 +182,7 @@ const AFHClub = () => (
       <section style={{ maxWidth: 900, margin: "0 auto", padding: "56px 24px 80px" }}>
         <h2
           style={{
-            fontSize: "clamp(26px, 3vw, 36px)",
+            fontSize: "clamp(28px, 3vw, 38px)",
             fontFamily: "Georgia, serif",
             fontWeight: 700,
             color: "#0a1628",
@@ -228,7 +236,7 @@ const AFHClub = () => (
               <div style={{ flex: 1, minWidth: 0 }}>
                 <h3
                   style={{
-                    fontSize: "clamp(18px, 2vw, 22px)",
+                    fontSize: "clamp(20px, 2vw, 24px)",
                     fontWeight: 700,
                     color: "#0a1628",
                     margin: "0 0 8px",
@@ -240,7 +248,7 @@ const AFHClub = () => (
                 </h3>
                 <p
                   style={{
-                    fontSize: "clamp(16px, 1.6vw, 18px)",
+                    fontSize: "clamp(18px, 1.8vw, 20px)",
                     color: "#1e2a38",
                     margin: "0 0 12px",
                     lineHeight: 1.65,
@@ -252,7 +260,7 @@ const AFHClub = () => (
                 </p>
                 <span
                   style={{
-                    fontSize: 14,
+                    fontSize: "16px",
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.18em",
@@ -263,10 +271,10 @@ const AFHClub = () => (
                     gap: 5,
                   }}
                 >
-                  Explore{" "}
+                  Explore
                   <svg
-                    width="11"
-                    height="11"
+                    width="12"
+                    height="12"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -288,9 +296,9 @@ const AFHClub = () => (
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: 14,
+              fontSize: "18px",
               fontFamily: "'Raleway', sans-serif",
-              fontWeight: 600,
+              fontWeight: 700,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
               color: "#5a3200",
@@ -301,7 +309,7 @@ const AFHClub = () => (
           </p>
           <h2
             style={{
-              fontSize: "clamp(28px, 3.5vw, 40px)",
+              fontSize: "clamp(30px, 3.5vw, 42px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
               color: "#0a1628",
@@ -314,8 +322,9 @@ const AFHClub = () => (
           <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
           <p
             style={{
-              fontSize: "clamp(20px, 2vw, 24px)",
+              fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
+              fontWeight: 400,
               color: "#1e2a38",
               lineHeight: 1.85,
               margin: "0 0 22px",
@@ -327,8 +336,9 @@ const AFHClub = () => (
           </p>
           <p
             style={{
-              fontSize: "clamp(20px, 2vw, 24px)",
+              fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
+              fontWeight: 400,
               color: "#1e2a38",
               lineHeight: 1.85,
               margin: "0 0 22px",
@@ -339,8 +349,9 @@ const AFHClub = () => (
           </p>
           <p
             style={{
-              fontSize: "clamp(20px, 2vw, 24px)",
+              fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
+              fontWeight: 400,
               color: "#1e2a38",
               lineHeight: 1.85,
               margin: 0,
