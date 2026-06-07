@@ -26,6 +26,7 @@ const ARTICLES = [
     img: "/Affordable_Senior_Housing.webp",
   },
   { title: "Aging in Place With Support", href: "/articles/aging-in-place", img: "/Aging_in_Place_With_Support.webp" },
+  { title: "Wills, Trusts, and Other Options", href: "/articles/wills-trusts-other-options", img: "/Wills_Trusts_Other_Options.webp" },
 ];
 
 // Duplicate articles so we always have enough cards ahead to slide into
