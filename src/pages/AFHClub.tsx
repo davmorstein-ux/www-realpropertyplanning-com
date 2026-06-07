@@ -128,7 +128,7 @@ const AFHClub = () => (
           {/* Single description line — moved from carousel */}
           <p
             style={{
-              fontSize: "clamp(20px, 2.2vw, 24px)",
+              fontSize: "clamp(22px, 2.4vw, 28px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
               color: "#1e2a38",
@@ -137,8 +137,7 @@ const AFHClub = () => (
               maxWidth: 680,
             }}
           >
-            A curated hub of resources for Adult Family Home owners, prospective providers, buyers, and the
-            professionals who serve them throughout Washington State.
+            A curated hub of resources for Adult Family Home owners looking to sell, buyers, and AFH management services.
           </p>
         </div>
       </section>
