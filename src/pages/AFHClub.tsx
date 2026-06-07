@@ -67,7 +67,14 @@ const AFHClub = () => (
             <img
               src="/afh-club-badge.webp"
               alt="AFH Club — Washington State Adult Family Home Resource Network"
-              style={{ width: "100%", maxWidth: 200, height: "auto", display: "block", margin: "0 auto" }}
+              style={{
+                width: "100%",
+                maxWidth: 200,
+                height: "auto",
+                display: "block",
+                margin: "0 auto",
+                mixBlendMode: "multiply",
+              }}
               loading="eager"
               width={200}
               height={200}
@@ -122,8 +129,9 @@ const AFHClub = () => (
               maxWidth: 680,
             }}
           >
-            A neutral resource network for Adult Family Home owners, prospective providers, buyers, and the
-            professionals who serve them — throughout Washington State.
+            Washington State's most comprehensive resource network for Adult Family Home owners, prospective providers,
+            investors, and the professionals who serve them. Whether you are opening your first AFH, managing an
+            existing operation, or looking to buy or sell — AFH Club is your starting point.
           </p>
           <p
             style={{
@@ -136,7 +144,8 @@ const AFHClub = () => (
               maxWidth: 600,
             }}
           >
-            No memberships. No fees. Just the information you need, organized so you can find it.
+            No memberships. No fees. No agenda. Simply authoritative, organized resources built for the AFH community
+            throughout Washington State.
           </p>
         </div>
       </section>
