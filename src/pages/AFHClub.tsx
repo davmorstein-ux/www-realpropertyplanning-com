@@ -82,7 +82,7 @@ const AFHClub = () => (
           </div>
           <p
             style={{
-              fontSize: 14,
+              fontSize: 16,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
@@ -95,7 +95,7 @@ const AFHClub = () => (
           </p>
           <h1
             style={{
-              fontSize: "clamp(42px, 6vw, 64px)",
+              fontSize: "clamp(48px, 6vw, 68px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
               color: "#1a2530",
@@ -107,7 +107,7 @@ const AFHClub = () => (
           </h1>
           <p
             style={{
-              fontSize: "clamp(20px, 2.5vw, 26px)",
+              fontSize: "clamp(22px, 2.5vw, 28px)",
               fontFamily: "Georgia, serif",
               fontWeight: 400,
               color: "#5a3200",
@@ -120,7 +120,7 @@ const AFHClub = () => (
           <div style={{ width: 56, height: 3, background: "#b87333", margin: "0 auto 36px", borderRadius: 1 }} />
           <p
             style={{
-              fontSize: "clamp(18px, 2vw, 22px)",
+              fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
               color: "#1e2a38",
@@ -135,7 +135,7 @@ const AFHClub = () => (
           </p>
           <p
             style={{
-              fontSize: "clamp(17px, 1.8vw, 20px)",
+              fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
               color: "#1e2a38",
@@ -314,7 +314,7 @@ const AFHClub = () => (
           <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
           <p
             style={{
-              fontSize: "clamp(17px, 1.8vw, 20px)",
+              fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
               color: "#1e2a38",
               lineHeight: 1.85,
@@ -327,7 +327,7 @@ const AFHClub = () => (
           </p>
           <p
             style={{
-              fontSize: "clamp(17px, 1.8vw, 20px)",
+              fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
               color: "#1e2a38",
               lineHeight: 1.85,
@@ -339,7 +339,7 @@ const AFHClub = () => (
           </p>
           <p
             style={{
-              fontSize: "clamp(17px, 1.8vw, 20px)",
+              fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
               color: "#1e2a38",
               lineHeight: 1.85,
