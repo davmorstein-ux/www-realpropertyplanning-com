@@ -122,7 +122,6 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 48 }}>
         <span
-          className="afh-eyebrow"
           style={{
             display: "block",
             fontSize: "18px",
@@ -137,14 +136,12 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           AFH Club
         </span>
         <h2
-          className="afh-h2"
           style={{ fontSize: "clamp(34px, 4vw, 50px)", fontWeight: 700, color: "#0a1628", margin: 0, lineHeight: 1.15 }}
         >
           Resource Network
         </h2>
         <div style={{ width: 48, height: 3, background: "#b87333", margin: "16px auto 0", borderRadius: 1 }} />
         <p
-          className="afh-body"
           style={{
             marginTop: 20,
             fontSize: "clamp(19px, 2vw, 22px)",
@@ -192,8 +189,8 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 flexShrink: 0,
                 width: `${CARD_W}px`,
                 aspectRatio: "3 / 4",
-                boxShadow: hovered === i ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
-                transform: hovered === i ? "translateY(-6px)" : "translateY(0)",
+                boxShadow: hovered === i ? ""0 32px 80px rgba(10,22,40,0.4)" : "0 4px 20px rgba(10,22,40,0.10)",
+                transform: hovered === i ? "translateY(-20px)" : "translateY(0)",
                 transition: "box-shadow 0.4s ease, transform 0.4s ease",
                 background: item.placeholder,
               }}
