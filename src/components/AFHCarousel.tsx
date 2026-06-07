@@ -135,7 +135,12 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
       {/* Marquee viewport */}
       <div
         className="afh-marquee-viewport"
-        style={{ overflow: "hidden", padding: "8px 0 16px" }}
+        style={{
+          overflow: "hidden",
+          padding: "8px 0 16px",
+          maxWidth: VIEWPORT_W,
+          margin: "0 auto",
+        }}
       >
         <div
           className="afh-marquee-track"
@@ -146,10 +151,20 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
               width: "max-content",
               willChange: "transform",
               "--afh-marquee-duration": duration,
+              animationPlayState: hovered !== null ? "paused" : "running",
             } as React.CSSProperties
           }
         >
-          {TRACK.map((item, i) => (
+          {TRACK.map((item, i) => {
+            const isHovered = hovered === i;
+            const isAdjacent =
+              hovered !== null && (i === hovered - 1 || i === hovered + 1);
+            const cardWidth = isHovered
+              ? CARD_W_HOVER
+              : isAdjacent
+              ? CARD_W_ADJACENT
+              : CARD_W;
+            return (
             <Link
               key={i}
               to={item.href}
@@ -162,11 +177,11 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 borderRadius: 4,
                 overflow: "hidden",
                 flexShrink: 0,
-                width: `${CARD_W}px`,
+                width: `${cardWidth}px`,
                 aspectRatio: "3 / 4",
-                boxShadow: hovered === i ? "0 20px 60px rgba(0,0,0,0.3)" : "0 4px 20px rgba(0,0,0,0.15)",
-                transform: hovered === i ? "translateY(-6px)" : "translateY(0)",
-                transition: "box-shadow 0.4s ease, transform 0.4s ease",
+                boxShadow: isHovered ? "0 20px 60px rgba(0,0,0,0.3)" : "0 4px 20px rgba(0,0,0,0.15)",
+                transform: isHovered ? "translateY(-6px)" : "translateY(0)",
+                transition: "box-shadow 0.4s ease, transform 0.4s ease, width 0.4s ease",
                 background: item.placeholder,
               }}
             >
