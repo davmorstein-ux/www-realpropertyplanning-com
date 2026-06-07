@@ -136,7 +136,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
         <span
           style={{
             display: "block",
-            fontSize: 14,
+            fontSize: 16,
             fontFamily: "'Raleway', sans-serif",
             fontWeight: 600,
             letterSpacing: "0.22em",
@@ -148,7 +148,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           AFH Club
         </span>
         <h2
-          style={{ fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 700, color: "#0a1628", margin: 0, lineHeight: 1.15 }}
+          style={{ fontSize: "clamp(34px, 4vw, 50px)", fontWeight: 700, color: "#0a1628", margin: 0, lineHeight: 1.15 }}
         >
           Resource Network
         </h2>
