@@ -269,12 +269,12 @@ const ProbateEstateSales = () => {
                     className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                     style={{ width: "380px" }}
                   >
-                    <div className="tile-white__inner h-full relative">
-                      <div className="tile-white__face h-full">
+                    <div className="tile-white__inner h-full relative" style={{ minHeight: "unset" }}>
+                      <div className="tile-white__face h-full" style={{ minHeight: "unset" }}>
                         <div className="flex h-full flex-col">
                           <div
                             className="relative flex flex-1 flex-col items-center text-center overflow-hidden"
-                            style={{ padding: "16px" }}
+                            style={{ padding: "16px 16px 12px 16px", paddingTop: "20px" }}
                           >
                             <h3
                               className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0"
