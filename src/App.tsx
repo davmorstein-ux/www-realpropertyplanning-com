@@ -205,7 +205,10 @@ const AFHBuyingSelling = lazy(() => import("./pages/AFHBuyingSelling"));
 const AFHRegulationsCompliance = lazy(() => import("./pages/AFHRegulationsCompliance"));
 const AFHFindProfessional = lazy(() => import("./pages/AFHFindProfessional"));
 const queryClient = new QueryClient();
-
+const AFHResources = lazy(() => import("./pages/AFHResources"));
+const AFHListings = lazy(() => import("./pages/AFHListings"));
+const AFHManagementCompanies = lazy(() => import("./pages/AFHManagementCompanies"));
+const AFHRealEstateBroker = lazy(() => import("./pages/AFHRealEstateBroker"));
 // Minimal full-viewport fallback in brand cream — no spinner, no layout shift,
 // matches the page background so navigation feels instant on fast chunks.
 const RouteFallback = () => <div className="min-h-screen bg-cream" aria-hidden="true" />;
@@ -675,6 +678,10 @@ const App = () => (
           <Route path="/afh-club/buying-selling" element={<AFHBuyingSelling />} />
           <Route path="/afh-club/regulations-compliance" element={<AFHRegulationsCompliance />} />
           <Route path="/afh-club/find-a-professional" element={<AFHFindProfessional />} />
+          <Route path="/afh-club/resources" element={<AFHResources />} />
+          <Route path="/afh-club/listings" element={<AFHListings />} />
+          <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />
+          <Route path="/afh-club/real-estate-broker" element={<AFHRealEstateBroker />} />
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
