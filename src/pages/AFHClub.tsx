@@ -84,6 +84,7 @@ const AFHClub = () => (
 
           {/* Eyebrow — immediately below badge */}
           <p
+            className="afh-eyebrow"
             style={{
               fontSize: "18px",
               fontFamily: "'Raleway', sans-serif",
