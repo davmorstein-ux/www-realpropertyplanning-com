@@ -5,6 +5,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/getting-started.mp3.asset.json";
 
 const REALITY_CHECKS = [
   {
@@ -103,6 +105,9 @@ const AFHGettingStarted = () => (
             Is an Adult Family Home Right for You?
           </h1>
           <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ marginBottom: 24 }}>
+            <ArticleAudioPlayer audioSrc={audioAsset.url} />
+          </div>
           <p
             style={{
               fontSize: 18,
