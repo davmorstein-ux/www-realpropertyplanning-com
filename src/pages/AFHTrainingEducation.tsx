@@ -5,6 +5,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/afh-training-and-education-requirements.mp3.asset.json";
 
 const TRAINING_REQUIREMENTS = [
   {
@@ -106,6 +108,7 @@ const AFHTrainingEducation = () => (
             AFH Training & Education Requirements
           </h1>
           <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
           <p
             style={{
               fontSize: 18,
