@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import BackToArticles from "@/components/BackToArticles";
 import heroImage from "@/assets/articles-hero-banner.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
+F;
 import Footer from "@/components/Footer";
 import BackToResources from "@/components/BackToResources";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -68,7 +69,7 @@ const SeniorHousingGuide = () => {
               height={521}
             />
           </div>
-          <HeroBandTitle>{"Senior Housing Guide"}</HeroBandTitle>
+          <HeroBandTitle>{"The Senior Housing Guide"}</HeroBandTitle>
         </>
 
         {/* Article */}
