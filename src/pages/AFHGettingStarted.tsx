@@ -105,6 +105,9 @@ const AFHGettingStarted = () => (
             Is an Adult Family Home Right for You?
           </h1>
           <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ marginBottom: 24 }}>
+            <ArticleAudioPlayer audioSrc={audioAsset.url} />
+          </div>
           <p
             style={{
               fontSize: 18,
