@@ -8,6 +8,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/the-silver-tsunami.mp3.asset.json";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -63,6 +65,8 @@ const SilverTsunami = () => {
               <h3 className="font-serif text-xl md:text-2xl text-muted-foreground mb-8 italic">
                 America's aging population is reshaping housing, care, and the future of our communities — ready or not
               </h3>
+
+              <div className="mb-8"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
 
               <hr className="my-8 border-border" />
 
