@@ -107,6 +107,7 @@ const AFHBuildingInspection = () => (
       {/* Hero */}
       <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
           <p
             style={{
               fontSize: 15,
