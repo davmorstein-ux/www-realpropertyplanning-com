@@ -51,7 +51,12 @@ const SilverTsunami = () => {
               src={heroImage}
               alt="Older couple on a bench overlooking a scenic river valley with a vintage car nearby — senior housing and life-transition resources"
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-              loading="eager" sizes="100vw" decoding="async" width={1904} height={521} />
+              loading="eager"
+              sizes="100vw"
+              decoding="async"
+              width={1904}
+              height={521}
+            />
           </div>
           <HeroBandTitle>{"The Silver Tsunami"}</HeroBandTitle>
         </>
@@ -59,9 +64,9 @@ const SilverTsunami = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <div className="mb-8"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
-
-
+              <div className="mb-8">
+                <ArticleAudioPlayer audioSrc={audioAsset.url} />
+              </div>
 
               <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-0 mb-3">
                 The Silver Tsunami Is Here
@@ -69,7 +74,6 @@ const SilverTsunami = () => {
               <h3 className="font-serif text-xl md:text-2xl text-muted-foreground mb-8 italic">
                 America's aging population is reshaping housing, care, and the future of our communities — ready or not
               </h3>
-              <div className="mb-8"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
 
               <hr className="my-8 border-border" />
 
