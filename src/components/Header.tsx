@@ -59,7 +59,7 @@ const TOP_LINKS = [
     href: "/articles",
     items: [
       { label: "The Silver Tsunami", href: "/articles/silver-tsunami" },
-      { label: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
+      { label: "The Senior Housing Guide", href: "/articles/senior-housing-guide" },
       { label: "Senior Housing Options", href: "/articles/senior-housing-options" },
       { label: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
       { label: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
@@ -409,7 +409,12 @@ const Header = () => {
               <img
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
-                style={{ height: isMobile ? 48 : 56, width: "auto", display: "block", objectFit: "contain" }} sizes="100vw" decoding="async" width={946} height={449} />
+                style={{ height: isMobile ? 48 : 56, width: "auto", display: "block", objectFit: "contain" }}
+                sizes="100vw"
+                decoding="async"
+                width={946}
+                height={449}
+              />
             </Link>
           </div>
 
