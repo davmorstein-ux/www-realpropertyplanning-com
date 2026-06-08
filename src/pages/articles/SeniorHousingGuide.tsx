@@ -45,7 +45,7 @@ const jsonLd = {
   url: "https://realpropertyplanning.com/articles/senior-housing-guide",
 };
 
-const SeniorHousingGuide = () => {
+const TheSeniorHousingGuide = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -75,7 +75,9 @@ const SeniorHousingGuide = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+              <div className="mb-6">
+                <ArticleAudioPlayer audioSrc={audioAsset.url} />
+              </div>
               <h2 className={h2Class + " mt-0"}>The Senior Housing Guide</h2>
               <p className={leadClass}>
                 A clear, honest roadmap for one of the most important decisions a family will ever make
