@@ -67,6 +67,7 @@ const AgingInPlace = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
+              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
               <p className={leadClass}>
                 Most older adults want to stay home. Here's what that actually takes — and how to know when it's still the right answer.
               </p>
