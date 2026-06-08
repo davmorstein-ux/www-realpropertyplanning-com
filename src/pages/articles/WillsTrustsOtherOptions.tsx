@@ -7,6 +7,8 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/articles-hero-banner.webp";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/how-to-pass-real-estate-to-your-children.mp3.asset.json";
 
 const relatedResources = [
   { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
@@ -68,6 +70,7 @@ const WillsTrustsOtherOptions = () => {
               Wills, Trusts, and Other Options
             </h2>
 
+            <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.75, color: "hsl(220 35% 18%)", marginBottom: 32, borderLeft: "4px solid #C9A84C", paddingLeft: 20 }}>
               A house is never just a house. It is memory, leverage, shelter, status, and, for many families, the largest piece of wealth they will ever hand down. So when the time comes to decide how that property should move to the next generation, the question is not only legal. It is emotional, financial, and surprisingly personal.
             </p>
