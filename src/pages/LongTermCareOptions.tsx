@@ -6,16 +6,22 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import AFHCarousel from "@/components/AFHCarousel";
 import heroImage from "@/assets/articles-hero-banner.webp";
+import nursingHomesImg from "@/assets/long-term-care/Nursing_Homes_in_Washington_State.webp.asset.json";
+import shortTermImg from "@/assets/long-term-care/Short_Term_Nursing_Homes.webp.asset.json";
+import nurseDelegationImg from "@/assets/long-term-care/Nurse_Delegation_Program.webp.asset.json";
+import medicaidImg from "@/assets/long-term-care/Medicaid_and_Long-Term_Care.webp.asset.json";
+import waCaresImg from "@/assets/long-term-care/WA_Cares_Washington_s_Long-Term_Care_Insurance.webp.asset.json";
+import chooseCareImg from "@/assets/long-term-care/How_to_Choose_Between_Care_Settings.webp.asset.json";
+import hospitalDischargeImg from "@/assets/long-term-care/Planning_Your_Hospital_Discharge.webp.asset.json";
 
 const cards = [
-  { title: "Nursing Homes in Washington State", href: "/long-term-care/nursing-homes", img: "", placeholder: "#2c3a48" },
-  { title: "Short-Term Nursing Home Stays", href: "/long-term-care/short-term-nursing-home-stays", img: "", placeholder: "#2c3e4e" },
-  { title: "Nurse Delegation Program", href: "/long-term-care/nurse-delegation", img: "", placeholder: "#354555" },
-  { title: "Medicaid & Long-Term Care", href: "/long-term-care/medicaid-and-long-term-care", img: "", placeholder: "#2e3d4d" },
-  { title: "WA Cares: Washington's Long-Term Care Insurance", href: "/long-term-care/wa-cares", img: "", placeholder: "#384858" },
-  { title: "How to Choose Between Care Settings", href: "/long-term-care/how-to-choose-care-settings", img: "", placeholder: "#2a3a4a" },
-  { title: "Planning Your Hospital Discharge", href: "/long-term-care/hospital-discharge-planning", img: "", placeholder: "#334353" },
-  { title: "Finding Care: RoomandCare.com", href: "/long-term-care/finding-care-roomandcare", img: "", placeholder: "#3c4c5c" },
+  { title: "Nursing Homes in Washington State", href: "/long-term-care/nursing-homes", img: nursingHomesImg.url, placeholder: "#2c3a48" },
+  { title: "Short-Term Nursing Home Stays", href: "/long-term-care/short-term-nursing-home-stays", img: shortTermImg.url, placeholder: "#2c3e4e" },
+  { title: "Nurse Delegation Program", href: "/long-term-care/nurse-delegation", img: nurseDelegationImg.url, placeholder: "#354555" },
+  { title: "Medicaid & Long-Term Care", href: "/long-term-care/medicaid-and-long-term-care", img: medicaidImg.url, placeholder: "#2e3d4d" },
+  { title: "WA Cares: Washington's Long-Term Care Insurance", href: "/long-term-care/wa-cares", img: waCaresImg.url, placeholder: "#384858" },
+  { title: "How to Choose Between Care Settings", href: "/long-term-care/how-to-choose-care-settings", img: chooseCareImg.url, placeholder: "#2a3a4a" },
+  { title: "Planning Your Hospital Discharge", href: "/long-term-care/hospital-discharge-planning", img: hospitalDischargeImg.url, placeholder: "#334353" },
 ];
 
 const LongTermCareOptions = () => {
