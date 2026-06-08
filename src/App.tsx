@@ -210,6 +210,15 @@ const AFHResources = lazy(() => import("./pages/AFHResources"));
 const AFHListings = lazy(() => import("./pages/AFHListings"));
 const AFHManagementCompanies = lazy(() => import("./pages/AFHManagementCompanies"));
 const AFHRealEstateBroker = lazy(() => import("./pages/AFHRealEstateBroker"));
+const LongTermCareOptions = lazy(() => import("./pages/LongTermCareOptions"));
+const LTCNursingHomes = lazy(() => import("./pages/long-term-care/NursingHomes"));
+const LTCShortTermNursingHomeStays = lazy(() => import("./pages/long-term-care/ShortTermNursingHomeStays"));
+const LTCNurseDelegation = lazy(() => import("./pages/long-term-care/NurseDelegation"));
+const LTCMedicaidAndLongTermCare = lazy(() => import("./pages/long-term-care/MedicaidAndLongTermCare"));
+const LTCWaCares = lazy(() => import("./pages/long-term-care/WaCares"));
+const LTCHowToChooseCareSettings = lazy(() => import("./pages/long-term-care/HowToChooseCareSettings"));
+const LTCHospitalDischargePlanning = lazy(() => import("./pages/long-term-care/HospitalDischargePlanning"));
+const LTCFindingCareRoomAndCare = lazy(() => import("./pages/long-term-care/FindingCareRoomAndCare"));
 // Minimal full-viewport fallback in brand cream — no spinner, no layout shift,
 // matches the page background so navigation feels instant on fast chunks.
 const RouteFallback = () => <div className="min-h-screen bg-cream" aria-hidden="true" />;
@@ -684,6 +693,15 @@ const App = () => (
           <Route path="/afh-club/listings" element={<AFHListings />} />
           <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />
           <Route path="/afh-club/real-estate-broker" element={<AFHRealEstateBroker />} />
+          <Route path="/long-term-care" element={<LongTermCareOptions />} />
+          <Route path="/long-term-care/nursing-homes" element={<LTCNursingHomes />} />
+          <Route path="/long-term-care/short-term-nursing-home-stays" element={<LTCShortTermNursingHomeStays />} />
+          <Route path="/long-term-care/nurse-delegation" element={<LTCNurseDelegation />} />
+          <Route path="/long-term-care/medicaid-and-long-term-care" element={<LTCMedicaidAndLongTermCare />} />
+          <Route path="/long-term-care/wa-cares" element={<LTCWaCares />} />
+          <Route path="/long-term-care/how-to-choose-care-settings" element={<LTCHowToChooseCareSettings />} />
+          <Route path="/long-term-care/hospital-discharge-planning" element={<LTCHospitalDischargePlanning />} />
+          <Route path="/long-term-care/finding-care-roomandcare" element={<LTCFindingCareRoomAndCare /> } />
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>

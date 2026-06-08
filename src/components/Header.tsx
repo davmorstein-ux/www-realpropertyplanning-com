@@ -37,6 +37,7 @@ const TOP_LINKS = [
       { label: "Senior Move Managers", href: "/senior-move-managers" },
       { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
       { label: "Medicare & Benefits Advisors", href: "/medicare-providers" },
+      { label: "Long-Term Care Options", href: "/long-term-care" },
     ],
   },
   {
