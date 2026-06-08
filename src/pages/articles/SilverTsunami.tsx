@@ -57,15 +57,14 @@ const SilverTsunami = () => {
         </>
 
         <section className={sectionBase + " bg-background"}>
-          <div className={contentWrap}>
-            <article className={proseWrap}>
+          <div className="mb-8"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+
               <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-0 mb-3">
                 The Silver Tsunami Is Here
               </h1>
               <h3 className="font-serif text-xl md:text-2xl text-muted-foreground mb-8 italic">
                 America's aging population is reshaping housing, care, and the future of our communities — ready or not
               </h3>
-
               <div className="mb-8"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
 
               <hr className="my-8 border-border" />
