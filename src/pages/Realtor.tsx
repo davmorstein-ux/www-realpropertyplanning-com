@@ -151,7 +151,13 @@ const Realtor = () => (
               email="dave.stein@exprealty.com"
               website="https://davestein.exprealty.com"
               specialty="Probate, estate, and trust property sales across Washington State — working with executors, trustees, and families navigating inherited real estate."
-              bio="David Stein is a Washington State licensed real estate broker specializing in probate, estate, and trust property sales across the Puget Sound region. With over 20 years of experience, he works with executors, personal representatives, trustees, and agents under power of attorney navigating the sale of inherited and estate-owned real property — bringing calm, practical guidance to one of the most complex transactions a family can face. His property experience spans single family homes, multi-family properties, condominiums, investment properties, new construction, renovations, mobile homes, manufactured homes, houseboats, floating homes, and vacant land throughout Western Washington. As a broker with eXp Realty — the largest independent real estate brokerage in the world with over 83,000 agents across 28 countries — David combines deep local knowledge with a powerful nationwide network. David also holds a Washington State Certified Residential Appraiser license, giving him a rare combination of appraisal expertise and brokerage experience — particularly valuable when an estate or trust property must be both valued and sold."
+              bio="David Stein is a Washington State licensed real estate broker and Certified Residential Appraiser specializing in Adult Family Home sales, probate and estate properties, and trust-owned real estate across the Puget Sound region.
+
+With over 20 years of experience, David represents buyers and sellers of licensed Adult Family Homes, and works with executors, trustees, personal representatives, and agents under power of attorney navigating the sale of inherited real estate — bringing calm, expert guidance to some of the most complex transactions a family can face.
+
+As a broker with eXp Realty, he combines deep local knowledge with a powerful nationwide network. His dual license as both broker and appraiser is a rare advantage — particularly valuable when an AFH, estate, or trust property must be both accurately valued and strategically sold.
+
+Specialties: Adult Family Home sales · Probate, estate & trust properties · Executors, trustees & families navigating inherited real estate across Washington State."
             />
           </div>
         </div>

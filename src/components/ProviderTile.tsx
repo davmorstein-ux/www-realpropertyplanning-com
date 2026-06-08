@@ -416,6 +416,15 @@ export default function ProviderTile({
           target="_blank"
           rel="noopener noreferrer"
           onClick={(e) => e.stopPropagation()}
+          style={{ fontSize: 12, color: "#8B6914", textDecoration: "none" }}
+        >
+          {website.replace(/^https?:\/\//, "")}
+        </a>
+        <a
+          href={website}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
           style={{
             marginTop: 8,
             display: "inline-flex",
