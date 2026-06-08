@@ -64,6 +64,8 @@ const SilverTsunami = () => {
                 America's aging population is reshaping housing, care, and the future of our communities — ready or not
               </h3>
 
+              <div className="mb-8"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+
               <hr className="my-8 border-border" />
 
               <p className={pClass}>It started quietly, as most demographic shifts do.</p>
