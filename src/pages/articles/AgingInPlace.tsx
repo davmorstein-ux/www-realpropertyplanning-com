@@ -8,6 +8,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/aging-in-place.mp3.asset.json";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -65,6 +67,7 @@ const AgingInPlace = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
+              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
               <p className={leadClass}>
                 Most older adults want to stay home. Here's what that actually takes — and how to know when it's still the right answer.
               </p>
