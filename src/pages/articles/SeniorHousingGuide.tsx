@@ -8,8 +8,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
-import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
-import audioAsset from "@/assets/the-senior-housing-guide.mp3.asset.json";
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
 const proseWrap = "max-w-3xl mx-auto";
@@ -75,9 +73,6 @@ const SeniorHousingGuide = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              <div className="mb-6">
-                <ArticleAudioPlayer audioSrc={audioAsset.url} />
-              </div>
               <h2 className={h2Class + " mt-0"}>The Senior Housing Guide</h2>
               <p className={leadClass}>
                 A clear, honest roadmap for one of the most important decisions a family will ever make
