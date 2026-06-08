@@ -67,6 +67,13 @@ const RIGHT_GROUPS = [
     ],
   },
   {
+    label: "Long-Term Care Options",
+    href: "/long-term-care",
+    items: [
+      { name: "Long-Term Care Options", href: "/long-term-care" },
+    ],
+  },
+  {
     label: "Articles",
     href: "/articles",
     items: [{ name: "Featured Articles", href: "/articles" }],
