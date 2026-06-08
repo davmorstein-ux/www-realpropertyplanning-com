@@ -5,6 +5,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/afh-licensing-and-certification.mp3.asset.json";
 
 const APPLICATION_STEPS = [
   {
@@ -83,6 +85,7 @@ const AFHLicensingCertification = () => (
       {/* Hero */}
       <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
           <p
             style={{
               fontSize: 15,
