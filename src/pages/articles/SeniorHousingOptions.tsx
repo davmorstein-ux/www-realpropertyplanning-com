@@ -8,6 +8,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/senior-housing-options.mp3.asset.json";
 
 
 const sectionBase = "py-14 md:py-20";
@@ -66,6 +68,7 @@ const SeniorHousingOptions = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
+              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
               <h2 className={h2Class + " mt-0"}>Senior Housing Options</h2>
               <p className={leadClass}>A roadmap to informed decisions — before urgency makes the choice for you</p>
 
