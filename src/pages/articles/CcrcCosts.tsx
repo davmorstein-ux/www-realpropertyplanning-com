@@ -8,6 +8,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/ccrc-costs.mp3.asset.json";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -63,6 +65,7 @@ const CcrcCosts = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
+              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
               <h2 className={h2Class + " mt-0"}>CCRC Costs: What You're Really Buying</h2>
               <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
                 Continuing care retirement communities are expensive. Here's why some families consider them the smartest financial decision they ever made — and why others don't.
