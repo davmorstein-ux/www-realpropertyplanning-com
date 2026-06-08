@@ -60,6 +60,7 @@ const SeniorHousingOptions = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
+              <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
               <h2 className={h2Class + " mt-0"}>Senior Housing Options</h2>
               <p className={leadClass}>A roadmap to informed decisions — before urgency makes the choice for you</p>
 
