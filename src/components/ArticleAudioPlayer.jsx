@@ -369,7 +369,7 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
           <HeadphoneIcon size={26} color={COLORS.brass} />
           <div>
             <div style={pillLabelStyle}>Listen to this Article</div>
-            <div style={pillSubStyle}>AI-generated audio · NotebookLM</div>
+            <div style={pillSubStyle}>AI-generated audio · Real Property Planning</div>
           </div>
         </div>
       )}
@@ -382,7 +382,7 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
             <HeadphoneIcon size={30} color={COLORS.brass} />
             <div style={labelStyle}>
               <p style={titleStyle}>Listen to this Article</p>
-              <p style={subtitleStyle}>AI-generated audio overview · NotebookLM</p>
+              <p style={subtitleStyle}>AI-generated audio overview · Real Property Planning</p>
             </div>
             <button
               style={dismissStyle}
