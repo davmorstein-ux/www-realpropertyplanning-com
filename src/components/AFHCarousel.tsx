@@ -300,6 +300,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             opacity: 1,
             transition: "transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
             boxShadow: "0 2px 8px rgba(10,22,40,0.08)",
+            userSelect: "none",
           }}
           onMouseEnter={(e) => {
             const el = e.currentTarget;
