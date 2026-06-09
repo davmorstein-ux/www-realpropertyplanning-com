@@ -285,22 +285,42 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
         <button
           onClick={next}
           aria-label="Next"
+          className="rpp-carousel-arrow"
           style={{
-            background: "none",
-            border: "1px solid #c8b98a",
+            background: "#fff",
+            border: "1.5px solid #c8b98a",
             borderRadius: "50%",
-            width: 44,
-            height: 44,
+            width: 48,
+            height: 48,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
             color: "#5a3200",
+            opacity: 1,
+            transition: "transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
+            boxShadow: "0 2px 8px rgba(10,22,40,0.08)",
+          }}
+          onMouseEnter={(e) => {
+            const el = e.currentTarget;
+            el.style.background = "#b87333";
+            el.style.color = "#fff";
+            el.style.borderColor = "#b87333";
+            el.style.transform = "scale(1.1)";
+            el.style.boxShadow = "0 6px 18px rgba(184,115,51,0.35)";
+          }}
+          onMouseLeave={(e) => {
+            const el = e.currentTarget;
+            el.style.background = "#fff";
+            el.style.color = "#5a3200";
+            el.style.borderColor = "#c8b98a";
+            el.style.transform = "scale(1)";
+            el.style.boxShadow = "0 2px 8px rgba(10,22,40,0.08)";
           }}
         >
           <svg
-            width="16"
-            height="16"
+            width="18"
+            height="18"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
