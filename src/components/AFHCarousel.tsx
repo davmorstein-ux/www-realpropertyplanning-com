@@ -78,12 +78,11 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
 
   const slideTo = useCallback(
     (newPos: number) => {
-      if (transitioning) return;
       setTransitioning(true);
       setPos(newPos);
-      setTimeout(() => setTransitioning(false), SLIDE_MS + 100);
+      setTimeout(() => setTransitioning(false), SLIDE_MS + 50);
     },
-    [transitioning],
+    [],
   );
 
   const next = useCallback(() => {
