@@ -49,7 +49,7 @@ const DEFAULT_TOPICS = [
 
 const CARD_GAP = 24;
 const AUTO_MS = 7000;
-const SLIDE_MS = 4400;
+const SLIDE_MS = 300;
 const CARD_W = 304;
 const CARD_H = Math.round((CARD_W * 4) / 3);
 
@@ -78,12 +78,11 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
 
   const slideTo = useCallback(
     (newPos: number) => {
-      if (transitioning) return;
       setTransitioning(true);
       setPos(newPos);
-      setTimeout(() => setTransitioning(false), SLIDE_MS + 100);
+      setTimeout(() => setTransitioning(false), SLIDE_MS + 50);
     },
-    [transitioning],
+    [],
   );
 
   const next = useCallback(() => {
@@ -227,6 +226,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             opacity: 1,
             transition: "transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
             boxShadow: "0 2px 8px rgba(10,22,40,0.08)",
+            userSelect: "none",
           }}
           onMouseEnter={(e) => {
             const el = e.currentTarget;
@@ -300,6 +300,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             opacity: 1,
             transition: "transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
             boxShadow: "0 2px 8px rgba(10,22,40,0.08)",
+            userSelect: "none",
           }}
           onMouseEnter={(e) => {
             const el = e.currentTarget;
