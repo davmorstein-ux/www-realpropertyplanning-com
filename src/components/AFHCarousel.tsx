@@ -49,7 +49,7 @@ const DEFAULT_TOPICS = [
 
 const CARD_GAP = 24;
 const AUTO_MS = 7000;
-const SLIDE_MS = 4400;
+const SLIDE_MS = 300;
 const CARD_W = 304;
 const CARD_H = Math.round((CARD_W * 4) / 3);
 
