@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import BackToResources from "@/components/BackToResources";
+import BackToLongTermCare from "@/components/BackToLongTermCare";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/articles-hero-banner.webp";
@@ -41,7 +41,7 @@ const StubLayout = ({ title }: Props) => {
           </div>
         </section>
 
-        <BackToResources />
+        <BackToLongTermCare />
         <DisclaimerSection />
       </main>
       <Footer />
