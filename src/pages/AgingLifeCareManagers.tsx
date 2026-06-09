@@ -49,7 +49,12 @@ const AgingLifeCareManagers = () => {
               src={heroImage}
               alt="Aging Life Care Managers Washington State"
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager" sizes="100vw" decoding="async" width={1920} height={510} />
+              loading="eager"
+              sizes="100vw"
+              decoding="async"
+              width={1920}
+              height={510}
+            />
             <HeroBandTitle as="div">Aging Life Care Managers</HeroBandTitle>
           </div>
         </section>
@@ -78,9 +83,9 @@ const AgingLifeCareManagers = () => {
                 title="President"
                 company="Family First at Home"
                 photo={jennipherAmaPhoto.url}
-                photoAlt="Photo of Jennipher Ama, RN, CMC, President of Family First at Home"
+                photoAlt="Photo of Jennipher Ama, RN, CMC, President of Family First"
                 logo={familyFirstLogo.url}
-                logoAlt="Family First at Home logo"
+                logoAlt="Family First logo"
                 phone="(866) 412-3861"
                 email="intake@familyfirstathome.com"
                 emailHref="familyfirstathome.com"
