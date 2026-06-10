@@ -12,10 +12,14 @@ import lauraSilversteinPhoto from "@/assets/providers/laura-silverstein-aging-li
 import silverSageLogo from "@/assets/providers/silver-sage-consulting-logo.webp";
 import familyFirstLogo from "@/assets/providers/family-first-at-home-logo.webp.asset.json";
 import jennipherAmaPhoto from "@/assets/providers/jennipher-ama-family-first-at-home.webp.asset.json";
+import agingWisdomLogo from "@/assets/providers/aging-wisdom-logo.webp.asset.json";
+import nicolePhoto from "@/assets/providers/nicole-aging-wisdom.webp.asset.json";
 
 const FAMILY_FIRST_BIO = `Family First is a leading Pacific Northwest home care and care management provider helping families navigate caregiving challenges with compassion, clarity, and trusted expertise. Since 1989, Family First has supported older adults, caregivers, and families across Washington State — including Tacoma, Spokane, Renton, Seattle, and the greater Puget Sound region — with personalized home care, care management, licensed counseling, and insurance advocacy. Backed by experienced caregivers, care managers, licensed counselors, and advocates, the team delivers flexible support ranging from a few hours of assistance to 24/7 care, always with a focus on dignity, safety, and peace of mind. Under the leadership of President Jennipher Ama, RN, CMC, Family First continues to expand its mission of making home care more accessible, dependable, and family-centered.`;
 
 const LAURA_BIO = `Laura A. Silverstein, MSW is an Aging Life Care Manager with Silver & Sage Consulting, LLC, based in Washington State. With a background in social work and extensive experience in geriatric care management, Laura helps older adults and their families navigate the complexities of aging with clarity, compassion, and expert guidance. Her services include advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information and referral, and placement support. Laura brings both professional expertise and personal dedication to every client relationship, ensuring that older adults receive the right level of support while maintaining their dignity and independence.`;
+
+const AGING_WISDOM_BIO = `Aging Wisdom has been helping older adults, families, and professionals navigate life changes with clarity and compassion since 2003. Their team provides expert guidance for complex decisions related to aging, care, memory changes, hospitalization, and long-term planning — supporting families facing dementia, care transitions, family conflict, and the challenge of finding the right home or care setting. Nicole Amico Kane, MSW, LICSW, CMC serves as Director of Care Management, bringing deep expertise in private care management, clinical social work, and family consultation to every client relationship.`;
 
 const jsonLd = articleSchema({
   headline: "Aging Life Care Managers",
@@ -92,6 +96,20 @@ const AgingLifeCareManagers = () => {
                 website="https://familyfirstathome.com"
                 bio={FAMILY_FIRST_BIO}
                 specialty="Home care, care management, licensed counseling, and insurance advocacy across Washington State since 1989."
+              />
+              <ProviderTile
+                name="Nicole Amico Kane, MSW, LICSW, CMC"
+                title="Director of Care Management, Certified Care Manager"
+                company="Aging Wisdom"
+                photo={nicolePhoto.url}
+                photoAlt="Photo of Nicole Amico Kane, MSW, LICSW, CMC"
+                logo={agingWisdomLogo.url}
+                logoAlt="Aging Wisdom logo"
+                phone="(206) 456-5155"
+                email="inquiries@agingwisdom.com"
+                website="https://agingwisdom.com"
+                bio={AGING_WISDOM_BIO}
+                specialty="Care management, dementia support, care transitions, family consultation, crisis planning, and long-term planning across the greater Seattle and Bellevue area."
               />
             </div>
           </div>
