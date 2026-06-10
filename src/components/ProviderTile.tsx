@@ -142,7 +142,10 @@ export default function ProviderTile({
                         borderRadius: "50%",
                         objectFit: "cover",
                         border: "2px solid #C9A84C",
-                      }} sizes="100vw" decoding="async"/>
+                      }}
+                      sizes="100vw"
+                      decoding="async"
+                    />
                     {hasTwoPeople && (
                       <span
                         style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
@@ -163,7 +166,10 @@ export default function ProviderTile({
                         borderRadius: "50%",
                         objectFit: "cover",
                         border: "2px solid #C9A84C",
-                      }} sizes="100vw" decoding="async"/>
+                      }}
+                      sizes="100vw"
+                      decoding="async"
+                    />
                     <span style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}>
                       {name2}
                     </span>
@@ -173,18 +179,49 @@ export default function ProviderTile({
 
               {/* Name / title */}
               <div style={{ flex: 1 }}>
-                <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 3 }}>
+                <div
+                  style={{
+                    fontFamily: "Georgia, serif",
+                    fontSize: 18,
+                    fontWeight: 700,
+                    color: "#fff",
+                    marginBottom: 3,
+                  }}
+                >
                   {name}
                 </div>
                 {name2 && (
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 3 }}>
+                  <div
+                    style={{
+                      fontFamily: "Georgia, serif",
+                      fontSize: 18,
+                      fontWeight: 700,
+                      color: "#fff",
+                      marginBottom: 3,
+                    }}
+                  >
                     {name2}
                   </div>
                 )}
-                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, letterSpacing: "0.12em", color: "#E8C97A", textTransform: "uppercase" }}>
+                <div
+                  style={{
+                    fontFamily: "'Raleway', sans-serif",
+                    fontSize: 11,
+                    letterSpacing: "0.12em",
+                    color: "#E8C97A",
+                    textTransform: "uppercase",
+                  }}
+                >
                   {title}
                 </div>
-                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
+                <div
+                  style={{
+                    fontFamily: "'Raleway', sans-serif",
+                    fontSize: 11,
+                    color: "rgba(255,255,255,0.65)",
+                    marginTop: 2,
+                  }}
+                >
                   {company}
                 </div>
               </div>
@@ -193,7 +230,10 @@ export default function ProviderTile({
                 <img
                   src={logo}
                   alt={logoAlt || company}
-                  style={{ height: 40, width: "auto", objectFit: "contain", flexShrink: 0 }} sizes="100vw" decoding="async"/>
+                  style={{ height: 40, width: "auto", objectFit: "contain", flexShrink: 0 }}
+                  sizes="100vw"
+                  decoding="async"
+                />
               )}
             </div>
 
@@ -244,18 +284,39 @@ export default function ProviderTile({
 
       {/* Tile: logo */}
       {logo && (
-        <div style={{ minHeight: 80, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16, width: "100%" }}>
+        <div
+          style={{
+            minHeight: 80,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: 16,
+            width: "100%",
+          }}
+        >
           <img
             src={logo}
             alt={logoAlt || company}
             style={{ height: 88, width: "auto", objectFit: "contain" }}
-            loading="lazy" sizes="100vw" decoding="async"/>
+            loading="lazy"
+            sizes="100vw"
+            decoding="async"
+          />
         </div>
       )}
 
       {/* Tile: photo(s) */}
       {hasTwoPeople ? (
-        <div style={{ minHeight: 200, display: "flex", justifyContent: "center", alignItems: "center", marginBottom: 12, width: "100%" }}>
+        <div
+          style={{
+            minHeight: 200,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginBottom: 12,
+            width: "100%",
+          }}
+        >
           <div style={{ display: "flex", justifyContent: "center", gap: 16 }}>
             {photo && (
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
@@ -271,7 +332,10 @@ export default function ProviderTile({
                     transform: hovered ? "scale(1.05)" : "scale(1)",
                     transition: "transform 0.3s ease, border-color 0.3s ease",
                   }}
-                  loading="lazy" sizes="100vw" decoding="async"/>
+                  loading="lazy"
+                  sizes="100vw"
+                  decoding="async"
+                />
                 <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
                   {name}
                 </div>
@@ -292,7 +356,10 @@ export default function ProviderTile({
                     transform: hovered ? "scale(1.05)" : "scale(1)",
                     transition: "transform 0.3s ease, border-color 0.3s ease",
                   }}
-                  loading="lazy" sizes="100vw" decoding="async"/>
+                  loading="lazy"
+                  sizes="100vw"
+                  decoding="async"
+                />
                 <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
                   {name2}
                 </div>
@@ -303,7 +370,16 @@ export default function ProviderTile({
         </div>
       ) : (
         photo && (
-          <div style={{ height: 120, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 12, width: "100%" }}>
+          <div
+            style={{
+              height: 120,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: 12,
+              width: "100%",
+            }}
+          >
             <img
               src={photo}
               alt={photoAlt || name}
@@ -316,7 +392,10 @@ export default function ProviderTile({
                 transform: hovered ? "scale(1.05)" : "scale(1)",
                 transition: "transform 0.3s ease, border-color 0.3s ease",
               }}
-              loading="lazy" sizes="100vw" decoding="async"/>
+              loading="lazy"
+              sizes="100vw"
+              decoding="async"
+            />
           </div>
         )
       )}
@@ -324,23 +403,57 @@ export default function ProviderTile({
       {/* Tile: name/title/company — only shown for single-person tiles */}
       {!hasTwoPeople && (
         <>
-          <div style={{ minHeight: 60, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", marginBottom: 2, width: "100%" }}>
-            <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628" }}>
-              {name}
-            </div>
+          <div
+            style={{
+              minHeight: 60,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: 2,
+              width: "100%",
+            }}
+          >
+            <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628" }}>{name}</div>
             {name2 && (
-              <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 4 }}>
+              <div
+                style={{
+                  fontFamily: "Georgia, serif",
+                  fontSize: 18,
+                  fontWeight: 700,
+                  color: "#0a1628",
+                  marginBottom: 4,
+                }}
+              >
                 {name2}
               </div>
             )}
           </div>
-          <div style={{ minHeight: 48, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 2, width: "100%" }}>
+          <div
+            style={{
+              minHeight: 48,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: 2,
+              width: "100%",
+            }}
+          >
             <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666" }}>{title}</div>
           </div>
         </>
       )}
 
-      <div style={{ minHeight: 32, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10, width: "100%" }}>
+      <div
+        style={{
+          minHeight: 32,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: 10,
+          width: "100%",
+        }}
+      >
         <div
           style={{
             fontFamily: "'Raleway', sans-serif",
@@ -354,7 +467,16 @@ export default function ProviderTile({
       </div>
 
       {specialty && (
-        <div style={{ minHeight: 100, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 8, width: "100%" }}>
+        <div
+          style={{
+            minHeight: 100,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: 8,
+            width: "100%",
+          }}
+        >
           <div
             style={{
               fontFamily: "Georgia, serif",
@@ -369,12 +491,15 @@ export default function ProviderTile({
         </div>
       )}
 
-
       {/* Contact section */}
       <div
         onClick={(e) => e.stopPropagation()}
-        onMouseEnter={(e) => { e.stopPropagation(); handleLeave(); }}
-        onMouseLeave={(e) => { e.stopPropagation(); handleEnter(); }}
+        onMouseEnter={(e) => {
+          e.stopPropagation();
+        }}
+        onMouseLeave={(e) => {
+          e.stopPropagation();
+        }}
         style={{
           marginTop: "auto",
           paddingTop: 16,
