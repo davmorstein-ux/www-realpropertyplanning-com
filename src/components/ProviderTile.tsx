@@ -244,11 +244,13 @@ export default function ProviderTile({
 
       {/* Tile: logo */}
       {logo && (
-        <img
-          src={logo}
-          alt={logoAlt || company}
-          style={{ height: 88, width: "auto", objectFit: "contain", marginBottom: 16 }}
-          loading="lazy" sizes="100vw" decoding="async"/>
+        <div style={{ minHeight: 80, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16, width: "100%" }}>
+          <img
+            src={logo}
+            alt={logoAlt || company}
+            style={{ height: 88, width: "auto", objectFit: "contain" }}
+            loading="lazy" sizes="100vw" decoding="async"/>
+        </div>
       )}
 
       {/* Tile: photo(s) */}
