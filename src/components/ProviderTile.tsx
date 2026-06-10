@@ -244,117 +244,128 @@ export default function ProviderTile({
 
       {/* Tile: logo */}
       {logo && (
-        <img
-          src={logo}
-          alt={logoAlt || company}
-          style={{ height: 88, width: "auto", objectFit: "contain", marginBottom: 16 }}
-          loading="lazy" sizes="100vw" decoding="async"/>
+        <div style={{ minHeight: 80, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16, width: "100%" }}>
+          <img
+            src={logo}
+            alt={logoAlt || company}
+            style={{ height: 88, width: "auto", objectFit: "contain" }}
+            loading="lazy" sizes="100vw" decoding="async"/>
+        </div>
       )}
 
       {/* Tile: photo(s) */}
       {hasTwoPeople ? (
-        <div style={{ display: "flex", justifyContent: "center", gap: 16, marginBottom: 12 }}>
-          {photo && (
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-              <img
-                src={photo}
-                alt={photoAlt || name}
-                style={{
-                  width: 100,
-                  height: 100,
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                  border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
-                  transform: hovered ? "scale(1.05)" : "scale(1)",
-                  transition: "transform 0.3s ease, border-color 0.3s ease",
-                }}
-                loading="lazy" sizes="100vw" decoding="async"/>
-              <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
-                {name}
+        <div style={{ minHeight: 200, display: "flex", justifyContent: "center", alignItems: "center", marginBottom: 12, width: "100%" }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: 16 }}>
+            {photo && (
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+                <img
+                  src={photo}
+                  alt={photoAlt || name}
+                  style={{
+                    width: 100,
+                    height: 100,
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+                    transform: hovered ? "scale(1.05)" : "scale(1)",
+                    transition: "transform 0.3s ease, border-color 0.3s ease",
+                  }}
+                  loading="lazy" sizes="100vw" decoding="async"/>
+                <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
+                  {name}
+                </div>
+                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title}</div>
               </div>
-              <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title}</div>
-            </div>
-          )}
-          {photo2 && (
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-              <img
-                src={photo2}
-                alt={photoAlt2 || name2}
-                style={{
-                  width: 100,
-                  height: 100,
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                  border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
-                  transform: hovered ? "scale(1.05)" : "scale(1)",
-                  transition: "transform 0.3s ease, border-color 0.3s ease",
-                }}
-                loading="lazy" sizes="100vw" decoding="async"/>
-              <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
-                {name2}
+            )}
+            {photo2 && (
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+                <img
+                  src={photo2}
+                  alt={photoAlt2 || name2}
+                  style={{
+                    width: 100,
+                    height: 100,
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+                    transform: hovered ? "scale(1.05)" : "scale(1)",
+                    transition: "transform 0.3s ease, border-color 0.3s ease",
+                  }}
+                  loading="lazy" sizes="100vw" decoding="async"/>
+                <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
+                  {name2}
+                </div>
+                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title2}</div>
               </div>
-              <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title2}</div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       ) : (
         photo && (
-          <img
-            src={photo}
-            alt={photoAlt || name}
-            style={{
-              width: 112,
-              height: 112,
-              borderRadius: "50%",
-              objectFit: "cover",
-              border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
-              marginBottom: 12,
-              transform: hovered ? "scale(1.05)" : "scale(1)",
-              transition: "transform 0.3s ease, border-color 0.3s ease",
-            }}
-            loading="lazy" sizes="100vw" decoding="async"/>
+          <div style={{ height: 120, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 12, width: "100%" }}>
+            <img
+              src={photo}
+              alt={photoAlt || name}
+              style={{
+                width: 112,
+                height: 112,
+                borderRadius: "50%",
+                objectFit: "cover",
+                border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+                transform: hovered ? "scale(1.05)" : "scale(1)",
+                transition: "transform 0.3s ease, border-color 0.3s ease",
+              }}
+              loading="lazy" sizes="100vw" decoding="async"/>
+          </div>
         )
       )}
 
       {/* Tile: name/title/company — only shown for single-person tiles */}
       {!hasTwoPeople && (
         <>
-          <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 2 }}>
-            {name}
-          </div>
-          {name2 && (
-            <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 4 }}>
-              {name2}
+          <div style={{ minHeight: 60, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", marginBottom: 2, width: "100%" }}>
+            <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628" }}>
+              {name}
             </div>
-          )}
-          <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666", marginBottom: 2 }}>{title}</div>
+            {name2 && (
+              <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628", marginBottom: 4 }}>
+                {name2}
+              </div>
+            )}
+          </div>
+          <div style={{ minHeight: 48, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 2, width: "100%" }}>
+            <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666" }}>{title}</div>
+          </div>
         </>
       )}
 
-      <div
-        style={{
-          fontFamily: "'Raleway', sans-serif",
-          fontSize: 11,
-          fontWeight: 700,
-          color: "#0a1628",
-          marginBottom: 10,
-        }}
-      >
-        {company}
+      <div style={{ minHeight: 32, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10, width: "100%" }}>
+        <div
+          style={{
+            fontFamily: "'Raleway', sans-serif",
+            fontSize: 11,
+            fontWeight: 700,
+            color: "#0a1628",
+          }}
+        >
+          {company}
+        </div>
       </div>
 
       {specialty && (
-        <div
-          style={{
-            fontFamily: "Georgia, serif",
-            fontSize: 13,
-            color: "#6b7280",
-            fontStyle: "italic",
-            marginBottom: 8,
-            lineHeight: 1.5,
-          }}
-        >
-          {specialty}
+        <div style={{ minHeight: 100, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 8, width: "100%" }}>
+          <div
+            style={{
+              fontFamily: "Georgia, serif",
+              fontSize: 13,
+              color: "#6b7280",
+              fontStyle: "italic",
+              lineHeight: 1.5,
+            }}
+          >
+            {specialty}
+          </div>
         </div>
       )}
 
