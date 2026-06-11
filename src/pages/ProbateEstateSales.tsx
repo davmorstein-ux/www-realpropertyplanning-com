@@ -95,7 +95,7 @@ const ProbateEstateSales = () => {
               height={814}
             />
           </div>
-          <HeroBandTitle as="h2">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
+          <HeroBandTitle as="h1">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
         </section>
 
         {/* SECTION 2 — Probate vs. Inherited (two tiles, no accordions) */}
