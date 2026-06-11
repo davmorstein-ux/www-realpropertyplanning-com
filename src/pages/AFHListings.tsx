@@ -265,6 +265,24 @@ const AFHListings = () => {
       {/* Page header band */}
       <div style={{ backgroundColor: WHITE, borderBottom: `1px solid ${GRAY_BORDER}`, padding: "2.5rem 1.5rem 2rem" }}>
         <div style={{ maxWidth: "920px", margin: "0 auto" }}>
+          {/* Back to AFH Club button */}
+          <div style={{ marginBottom: "1.5rem" }}>
+            <a href="/afh-club" style={{ display: "inline-block", textDecoration: "none" }}>
+              <img
+                src="/listing-photos/back-to-afh-club.png"
+                alt="Back to AFH Club"
+                style={{
+                  height: "52px",
+                  width: "auto",
+                  display: "block",
+                  transition: "opacity 0.15s",
+                }}
+                onMouseOver={(e) => (e.currentTarget.style.opacity = "0.85")}
+                onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
+              />
+            </a>
+          </div>
+
           <div style={{ marginBottom: "0.75rem" }}>
             <span
               style={{
