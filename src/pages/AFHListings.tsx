@@ -263,7 +263,25 @@ const AFHListings = () => {
   return (
     <div style={{ minHeight: "100vh", backgroundColor: GRAY_BG, fontFamily: "Inter, system-ui, sans-serif" }}>
       {/* Page header band */}
-      <div style={{ backgroundColor: WHITE, borderBottom: `1px solid ${GRAY_BORDER}`, padding: "2.5rem 1.5rem 2rem" }}>
+      <div
+        style={{
+          backgroundColor: WHITE,
+          borderBottom: `1px solid ${GRAY_BORDER}`,
+          padding: "2.5rem 1.5rem 2rem",
+          position: "relative",
+        }}
+      >
+        {/* AFH Club badge — absolute top right */}
+        <div style={{ position: "absolute", top: "1rem", right: "1.5rem", zIndex: 10 }}>
+          <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
+            <img
+              src="/afh-club-badge.png"
+              alt="AFH Club"
+              style={{ height: "180px", width: "auto", display: "block" }}
+            />
+          </a>
+        </div>
+
         <div style={{ maxWidth: "920px", margin: "0 auto" }}>
           {/* Back to AFH Club button */}
           <div style={{ marginBottom: "1.5rem" }}>
@@ -283,18 +301,8 @@ const AFHListings = () => {
             </a>
           </div>
 
-          {/* Pill label + AFH Badge row */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginBottom: "0.75rem",
-              flexWrap: "wrap",
-              gap: "0.75rem",
-              maxWidth: "920px",
-            }}
-          >
+          {/* Pill label */}
+          <div style={{ marginBottom: "0.75rem" }}>
             <span
               style={{
                 display: "inline-flex",
@@ -322,15 +330,6 @@ const AFHListings = () => {
               />
               AFH Club · Active Listings
             </span>
-
-            {/* AFH Club badge */}
-            <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
-              <img
-                src="/afh-club-badge.png"
-                alt="AFH Club"
-                style={{ height: "110px", width: "auto", display: "block" }}
-              />
-            </a>
           </div>
 
           <h1
