@@ -2,7 +2,6 @@ import React from "react";
 import { Phone, Mail, MapPin, Bed, Bath, Square, Home } from "lucide-react";
 
 const TEAL = "#1a7a78";
-const TEAL_LIGHT = "#e8f5f5";
 const TEAL_MID = "#2a9d9a";
 const SLATE = "#2c3e50";
 const GRAY_BG = "#f4f6f7";
@@ -133,6 +132,18 @@ const listings = [
   },
 ];
 
+const BackButton = () => (
+  <a href="/afh-club" style={{ display: "inline-block", textDecoration: "none" }}>
+    <img
+      src="/listing-photos/back-to-afh-club.png"
+      alt="Back to AFH Club"
+      style={{ height: "70px", width: "auto", display: "block" }}
+      onMouseOver={(e) => (e.currentTarget.style.opacity = "0.8")}
+      onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
+    />
+  </a>
+);
+
 const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; value: string }) => (
   <div
     style={{
@@ -205,8 +216,6 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
         </span>
       </div>
     )}
-
-    {/* Listing counter */}
     <div
       style={{
         position: "absolute",
@@ -224,8 +233,6 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
     >
       {String(index + 1).padStart(2, "0")} / {total}
     </div>
-
-    {/* Active badge */}
     <div
       style={{
         position: "absolute",
@@ -261,47 +268,42 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
 
 const AFHListings = () => {
   return (
-    <div style={{ minHeight: "100vh", backgroundColor: GRAY_BG, fontFamily: "Inter, system-ui, sans-serif" }}>
-      {/* Page header band */}
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: GRAY_BG,
+        fontFamily: "Inter, system-ui, sans-serif",
+      }}
+    >
+      {/* ── HEADER ── */}
       <div
         style={{
           backgroundColor: WHITE,
           borderBottom: `1px solid ${GRAY_BORDER}`,
-          padding: "2.5rem 1.5rem 2rem",
-          position: "relative",
+          padding: "2rem 1.5rem",
         }}
       >
-        {/* AFH Club badge — absolute top right */}
-        <div style={{ position: "absolute", top: "1rem", right: "1.5rem", zIndex: 10 }}>
-          <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
-            <img
-              src="/afh-club-badge.png"
-              alt="AFH Club"
-              style={{ height: "180px", width: "auto", display: "block" }}
-            />
-          </a>
-        </div>
-
         <div style={{ maxWidth: "920px", margin: "0 auto" }}>
-          {/* Back to AFH Club button */}
-          <div style={{ marginBottom: "1.5rem" }}>
-            <a href="/afh-club" style={{ display: "inline-block", textDecoration: "none" }}>
+          {/* Top row: back button left, badge right */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              marginBottom: "1.5rem",
+            }}
+          >
+            <BackButton />
+            <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
               <img
-                src="/listing-photos/back-to-afh-club.png"
-                alt="Back to AFH Club"
-                style={{
-                  height: "52px",
-                  width: "auto",
-                  display: "block",
-                  transition: "opacity 0.15s",
-                }}
-                onMouseOver={(e) => (e.currentTarget.style.opacity = "0.85")}
-                onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
+                src="/afh-club-badge.png"
+                alt="AFH Club"
+                style={{ height: "160px", width: "auto", display: "block" }}
               />
             </a>
           </div>
 
-          {/* Pill label */}
+          {/* Pill */}
           <div style={{ marginBottom: "0.75rem" }}>
             <span
               style={{
@@ -332,6 +334,7 @@ const AFHListings = () => {
             </span>
           </div>
 
+          {/* Heading */}
           <h1
             style={{
               fontSize: "clamp(1.6rem, 3.5vw, 2.1rem)",
@@ -345,12 +348,21 @@ const AFHListings = () => {
             Adult Family Home Properties
           </h1>
 
-          <p style={{ fontSize: "15px", color: GRAY_TEXT, lineHeight: 1.7, margin: "0 0 1.5rem", maxWidth: "560px" }}>
+          {/* Subtext */}
+          <p
+            style={{
+              fontSize: "15px",
+              color: GRAY_TEXT,
+              lineHeight: 1.7,
+              margin: "0 0 1.5rem",
+              maxWidth: "560px",
+            }}
+          >
             Licensed Adult Family Home properties currently available for sale in the Puget Sound region. Contact David
             Stein for showings or additional information on any listing.
           </p>
 
-          {/* Summary stats bar */}
+          {/* Stats bar */}
           <div
             style={{
               display: "flex",
@@ -388,8 +400,14 @@ const AFHListings = () => {
         </div>
       </div>
 
-      {/* Listings */}
-      <div style={{ maxWidth: "920px", margin: "0 auto", padding: "2rem 1.5rem 3rem" }}>
+      {/* ── LISTINGS ── */}
+      <div
+        style={{
+          maxWidth: "920px",
+          margin: "0 auto",
+          padding: "2rem 1.5rem 1rem",
+        }}
+      >
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           {listings.map((listing, index) => (
             <div
@@ -405,9 +423,14 @@ const AFHListings = () => {
             >
               <PhotoPanel photo={listing.photo} index={index} total={listings.length} />
 
-              {/* Card content */}
               <div
-                style={{ flex: 1, padding: "1.25rem 1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}
+                style={{
+                  flex: 1,
+                  padding: "1.25rem 1.5rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.75rem",
+                }}
               >
                 {/* Address + price */}
                 <div
@@ -433,7 +456,13 @@ const AFHListings = () => {
                       {listing.address}
                     </h2>
                     <div
-                      style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "13px", color: GRAY_TEXT }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "4px",
+                        fontSize: "13px",
+                        color: GRAY_TEXT,
+                      }}
                     >
                       <MapPin size={12} style={{ color: TEAL_MID }} />
                       {listing.city}, {listing.state}
@@ -468,7 +497,6 @@ const AFHListings = () => {
                   <StatPill icon={<Square size={13} />} value={listing.sqft} label="sq ft" />
                 </div>
 
-                {/* Divider */}
                 <div style={{ height: "1px", backgroundColor: GRAY_BORDER }} />
 
                 {/* CTAs */}
@@ -513,7 +541,7 @@ const AFHListings = () => {
                   </a>
                 </div>
 
-                {/* NWMLS compliance attribution */}
+                {/* Broker compliance */}
                 <div
                   style={{
                     display: "flex",
@@ -536,7 +564,7 @@ const AFHListings = () => {
           ))}
         </div>
 
-        {/* Footer disclaimer */}
+        {/* ── DISCLAIMER ── */}
         <div
           style={{
             marginTop: "2.5rem",
@@ -554,6 +582,11 @@ const AFHListings = () => {
           independent educational hub and does not represent buyers or sellers on these properties directly — contact
           David Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #113972), for all inquiries,
           showings, and full listing details.
+        </div>
+
+        {/* ── SECOND BACK BUTTON ── */}
+        <div style={{ marginTop: "2rem", paddingBottom: "2.5rem" }}>
+          <BackButton />
         </div>
       </div>
     </div>
