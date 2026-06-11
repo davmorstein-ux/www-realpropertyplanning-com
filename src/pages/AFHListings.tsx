@@ -17,11 +17,14 @@ const listings = [
     city: "Edmonds",
     state: "WA",
     beds: 9,
-    bathDisplay: "5",
-    bathDetail: "1 full · 4 three-quarter",
+    bathDisplay: "4",
+    bathDetail: "4 full",
     sqft: "3,802",
     price: "$2,250,000",
     photo: "/listing-photos/16342_72nd_Ave_W_Edmonds.webp",
+    broker: "Adrian Marchis",
+    brokerage: "Skyline Properties, Inc.",
+    mlsNum: "2470647",
   },
   {
     id: 2,
@@ -29,11 +32,14 @@ const listings = [
     city: "Edmonds",
     state: "WA",
     beds: 8,
-    bathDisplay: "6",
+    bathDisplay: "4.25",
     bathDetail: "5 three-quarter · 1 half",
     sqft: "3,898",
     price: "$1,650,000",
     photo: "/listing-photos/17926_73rd_Ave_W_Edmonds.webp",
+    broker: "Douglas Linton",
+    brokerage: "John L. Scott, Inc.",
+    mlsNum: "2459655",
   },
   {
     id: 3,
@@ -41,11 +47,14 @@ const listings = [
     city: "Kirkland",
     state: "WA",
     beds: 6,
-    bathDisplay: "4",
-    bathDetail: "2 full · 2 half",
+    bathDisplay: "3",
+    bathDetail: "3 full",
     sqft: "2,820",
     price: "$1,449,000",
     photo: "/listing-photos/7339_NE_140th_St_Kirkland.webp",
+    broker: "Zora Brzac",
+    brokerage: "HomeSmart Real Estate Assoc",
+    mlsNum: "2476640",
   },
   {
     id: 4,
@@ -58,6 +67,9 @@ const listings = [
     sqft: "2,948",
     price: "$1,600,000",
     photo: null,
+    broker: "Demba Baldeh",
+    brokerage: "Skyline Properties, Inc.",
+    mlsNum: "2510101",
   },
   {
     id: 5,
@@ -65,11 +77,14 @@ const listings = [
     city: "Lynnwood",
     state: "WA",
     beds: 8,
-    bathDisplay: "4",
+    bathDisplay: "3.25",
     bathDetail: "1 full · 3 three-quarter",
     sqft: "3,080",
     price: "$1,649,000",
     photo: "/listing-photos/611313_Lynnwood.webp",
+    broker: "Angie Holmstrom",
+    brokerage: "Windermere RE Greenwood",
+    mlsNum: "2535843",
   },
   {
     id: 6,
@@ -82,6 +97,9 @@ const listings = [
     sqft: "3,246",
     price: "$1,900,000",
     photo: "/listing-photos/32562_Edmonds.webp",
+    broker: "Samuel Mottley",
+    brokerage: "Skyline Properties, Inc.",
+    mlsNum: "2496559",
   },
   {
     id: 7,
@@ -89,11 +107,14 @@ const listings = [
     city: "Edmonds",
     state: "WA",
     beds: 6,
-    bathDisplay: "5",
+    bathDisplay: "4",
     bathDetail: "3 full · 2 half",
     sqft: "2,356",
     price: "$2,100,000",
     photo: "/listing-photos/122263_Edmonds.webp",
+    broker: "Nicolae Leva",
+    brokerage: "206 Realty LLC",
+    mlsNum: "2471335",
   },
   {
     id: 8,
@@ -101,11 +122,14 @@ const listings = [
     city: "Lynnwood",
     state: "WA",
     beds: 10,
-    bathDisplay: "6",
+    bathDisplay: "4.5",
     bathDetail: "3 full · 3 half",
     sqft: "3,960",
     price: "$2,429,000",
     photo: "/listing-photos/22625_Lynnwood.webp",
+    broker: "Vasi Nemes Jr",
+    brokerage: "206 Realty LLC",
+    mlsNum: "2336582",
   },
 ];
 
@@ -196,7 +220,6 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
         padding: "3px 8px",
         borderRadius: "4px",
         fontFamily: "Inter, sans-serif",
-        backdropFilter: "blur(4px)",
       }}
     >
       {String(index + 1).padStart(2, "0")} / {total}
@@ -220,7 +243,6 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
         letterSpacing: "0.05em",
         textTransform: "uppercase" as const,
         fontFamily: "Inter, sans-serif",
-        backdropFilter: "blur(4px)",
       }}
     >
       <span
@@ -242,8 +264,7 @@ const AFHListings = () => {
     <div style={{ minHeight: "100vh", backgroundColor: GRAY_BG, fontFamily: "Inter, system-ui, sans-serif" }}>
       {/* Page header band */}
       <div style={{ backgroundColor: WHITE, borderBottom: `1px solid ${GRAY_BORDER}`, padding: "2.5rem 1.5rem 2rem" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          {/* Pill label */}
+        <div style={{ maxWidth: "920px", margin: "0 auto" }}>
           <div style={{ marginBottom: "0.75rem" }}>
             <span
               style={{
@@ -330,8 +351,8 @@ const AFHListings = () => {
         </div>
       </div>
 
-      {/* Listings grid */}
-      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "2rem 1.5rem 3rem" }}>
+      {/* Listings */}
+      <div style={{ maxWidth: "920px", margin: "0 auto", padding: "2rem 1.5rem 3rem" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           {listings.map((listing, index) => (
             <div
@@ -349,7 +370,7 @@ const AFHListings = () => {
 
               {/* Card content */}
               <div
-                style={{ flex: 1, padding: "1.25rem 1.5rem", display: "flex", flexDirection: "column", gap: "0.85rem" }}
+                style={{ flex: 1, padding: "1.25rem 1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}
               >
                 {/* Address + price */}
                 <div
@@ -393,8 +414,8 @@ const AFHListings = () => {
                     >
                       {listing.price}
                     </div>
-                    <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px", letterSpacing: "0.03em" }}>
-                      Asking price
+                    <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
+                      Asking price · MLS# {listing.mlsNum}
                     </div>
                   </div>
                 </div>
@@ -453,9 +474,25 @@ const AFHListings = () => {
                     <Mail size={13} />
                     Email inquiry
                   </a>
-                  <span style={{ marginLeft: "auto", fontSize: "11px", color: GRAY_TEXT, fontStyle: "italic" }}>
-                    NWMLS · David Stein · eXp Realty
+                </div>
+
+                {/* NWMLS compliance attribution */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "6px",
+                    paddingTop: "4px",
+                    fontSize: "11px",
+                    color: GRAY_TEXT,
+                    borderTop: `1px solid ${GRAY_BORDER}`,
+                  }}
+                >
+                  <span style={{ fontWeight: 600, color: SLATE }}>Listing broker:</span>
+                  <span>
+                    {listing.broker} · {listing.brokerage}
                   </span>
+                  <span style={{ marginLeft: "auto", opacity: 0.6 }}>NWMLS</span>
                 </div>
               </div>
             </div>
