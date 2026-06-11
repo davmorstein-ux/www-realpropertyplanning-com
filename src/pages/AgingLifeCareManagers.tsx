@@ -263,62 +263,31 @@ const AFHListings = () => {
   return (
     <div style={{ minHeight: "100vh", backgroundColor: GRAY_BG, fontFamily: "Inter, system-ui, sans-serif" }}>
       {/* Page header band */}
-      <div
-        style={{
-          backgroundColor: WHITE,
-          borderBottom: `1px solid ${GRAY_BORDER}`,
-          padding: "2.5rem 1.5rem 2rem",
-          position: "relative",
-        }}
-      >
-        {/* AFH Club badge — top right, aligned to content container edge */}
-        <div
-          style={{
-            position: "absolute",
-            top: "1rem",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "100%",
-            maxWidth: "920px",
-            pointerEvents: "none",
-          }}
-        >
-          <div style={{ position: "relative", width: "100%", pointerEvents: "none" }}>
-            <a
-              href="/afh-club"
-              style={{
-                textDecoration: "none",
-                display: "inline-block",
-                position: "absolute",
-                right: "1.5rem",
-                top: 0,
-                pointerEvents: "auto",
-              }}
-            >
-              <img
-                src="/afh-club-badge.png"
-                alt="AFH Club"
-                style={{ height: "180px", width: "auto", display: "block" }}
-              />
-            </a>
-          </div>
-        </div>
-
+      <div style={{ backgroundColor: WHITE, borderBottom: `1px solid ${GRAY_BORDER}`, padding: "2.5rem 1.5rem 2rem" }}>
         <div style={{ maxWidth: "920px", margin: "0 auto" }}>
-          {/* Back to AFH Club button */}
-          <div style={{ marginBottom: "1.5rem" }}>
+          {/* Back button row with badge aligned to right */}
+          <div
+            style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.5rem" }}
+          >
             <a href="/afh-club" style={{ display: "inline-block", textDecoration: "none" }}>
               <img
                 src="/listing-photos/back-to-afh-club.png"
                 alt="Back to AFH Club"
                 style={{
-                  height: "52px",
+                  height: "70px",
                   width: "auto",
                   display: "block",
                   transition: "opacity 0.15s",
                 }}
                 onMouseOver={(e) => (e.currentTarget.style.opacity = "0.85")}
                 onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
+              />
+            </a>
+            <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
+              <img
+                src="/afh-club-badge.png"
+                alt="AFH Club"
+                style={{ height: "160px", width: "auto", display: "block" }}
               />
             </a>
           </div>
@@ -576,6 +545,24 @@ const AFHListings = () => {
           independent educational hub and does not represent buyers or sellers on these properties directly — contact
           David Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #113972), for all inquiries,
           showings, and full listing details.
+        </div>
+
+        {/* Second back button below listings */}
+        <div style={{ marginTop: "2rem" }}>
+          <a href="/afh-club" style={{ display: "inline-block", textDecoration: "none" }}>
+            <img
+              src="/listing-photos/back-to-afh-club.png"
+              alt="Back to AFH Club"
+              style={{
+                height: "70px",
+                width: "auto",
+                display: "block",
+                transition: "opacity 0.15s",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.opacity = "0.85")}
+              onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
+            />
+          </a>
         </div>
       </div>
     </div>
