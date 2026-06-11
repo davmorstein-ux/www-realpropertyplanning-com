@@ -12,8 +12,8 @@ import lauraSilversteinPhoto from "@/assets/providers/laura-silverstein-aging-li
 import silverSageLogo from "@/assets/providers/silver-sage-consulting-logo.webp";
 import familyFirstLogo from "@/assets/providers/family-first-at-home-logo.webp.asset.json";
 import jennipherAmaPhoto from "@/assets/providers/jennipher-ama-family-first-at-home.webp.asset.json";
-import agingWisdomLogo from "@/assets/providers/aging-wisdom-logo.webp.asset.json";
-import nicolePhoto from "@/assets/providers/nicole-aging-wisdom.webp.asset.json";
+import agingWisdomLogo from "@/assets/providers/aging-wisdom-logo.webp";
+import nicolePhoto from "@/assets/providers/nicole-aging-wisdom.webp";
 
 const FAMILY_FIRST_BIO = `Family First is a leading Pacific Northwest home care and care management provider helping families navigate caregiving challenges with compassion, clarity, and trusted expertise. Since 1989, Family First has supported older adults, caregivers, and families across Washington State — including Tacoma, Spokane, Renton, Seattle, and the greater Puget Sound region — with personalized home care, care management, licensed counseling, and insurance advocacy. Backed by experienced caregivers, care managers, licensed counselors, and advocates, the team delivers flexible support ranging from a few hours of assistance to 24/7 care, always with a focus on dignity, safety, and peace of mind. Under the leadership of President Jennipher Ama, RN, CMC, Family First continues to expand its mission of making home care more accessible, dependable, and family-centered.`;
 
@@ -101,9 +101,9 @@ const AgingLifeCareManagers = () => {
                 name="Nicole Amico Kane, MSW, LICSW, CMC"
                 title="Director of Care Management, Certified Care Manager"
                 company="Aging Wisdom"
-                photo={nicolePhoto.url}
+                photo={nicolePhoto}
                 photoAlt="Photo of Nicole Amico Kane, MSW, LICSW, CMC"
-                logo={agingWisdomLogo.url}
+                logo={agingWisdomLogo}
                 logoAlt="Aging Wisdom logo"
                 phone="(206) 456-5155"
                 email="inquiries@agingwisdom.com"
