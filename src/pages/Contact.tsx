@@ -51,8 +51,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Get Connected | Real Property Planning — Washington State Resource Hub"
-        description="Real Property Planning is a free resource hub connecting elderly individuals, families, and professionals across Washington State. Reach out with questions or to join our network."
+        title="Contact | Real Property Planning — WA Resource Hub"
+        description="Reach Real Property Planning, a free Washington State resource hub for elderly individuals, families, and professionals. Ask a question or join our network."
         jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
