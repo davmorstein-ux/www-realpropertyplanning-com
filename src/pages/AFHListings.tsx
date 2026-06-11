@@ -283,21 +283,31 @@ const AFHListings = () => {
             </a>
           </div>
 
-          <div style={{ marginBottom: "0.75rem" }}>
+          {/* Pill label + AFH Badge row */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              marginBottom: "0.75rem",
+              flexWrap: "wrap",
+              gap: "0.75rem",
+            }}
+          >
             <span
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "6px",
-                backgroundColor: TEAL_LIGHT,
-                color: TEAL,
+                backgroundColor: "#f0f0f0",
+                color: "#8b1a1a",
                 fontSize: "11px",
                 fontWeight: 700,
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 padding: "4px 12px",
                 borderRadius: "100px",
-                border: `1px solid ${TEAL}22`,
+                border: "1px solid #d0c0c0",
               }}
             >
               <span
@@ -305,12 +315,21 @@ const AFHListings = () => {
                   width: "6px",
                   height: "6px",
                   borderRadius: "50%",
-                  backgroundColor: TEAL_MID,
+                  backgroundColor: "#8b1a1a",
                   display: "inline-block",
                 }}
               />
               AFH Club · Active Listings
             </span>
+
+            {/* AFH Club badge top-right */}
+            <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
+              <img
+                src="/afh-club-badge.png"
+                alt="AFH Club"
+                style={{ height: "56px", width: "auto", display: "block" }}
+              />
+            </a>
           </div>
 
           <h1
@@ -338,9 +357,9 @@ const AFHListings = () => {
               gap: "2rem",
               flexWrap: "wrap",
               padding: "1rem 1.25rem",
-              backgroundColor: TEAL_LIGHT,
+              backgroundColor: "#f0f0f0",
               borderRadius: "8px",
-              border: `1px solid ${TEAL}22`,
+              border: "1px solid #d8d8d8",
             }}
           >
             {[
@@ -356,7 +375,7 @@ const AFHListings = () => {
                     fontWeight: 600,
                     letterSpacing: "0.06em",
                     textTransform: "uppercase",
-                    color: TEAL,
+                    color: "#8b1a1a",
                     marginBottom: "2px",
                   }}
                 >
