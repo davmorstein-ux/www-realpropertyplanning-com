@@ -158,8 +158,8 @@ const HomepageHero = () => {
         </picture>
 
       </section>
-      <HeroBandTitle>
-        Welcome to Real Property Planning
+      <HeroBandTitle as="h1">
+        Welcome to Real Property Planning — Estate &amp; Senior Transitions
       </HeroBandTitle>
     </div>
   );
