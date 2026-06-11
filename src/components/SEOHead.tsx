@@ -27,6 +27,7 @@ const SEOHead = ({
   ogImage,
   noIndex,
   schemaJson,
+  ogType = "website",
   jsonLd,
   noindex,
 }: SEOHeadProps) => {
