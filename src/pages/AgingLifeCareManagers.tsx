@@ -2,7 +2,6 @@ import React from "react";
 import { Phone, Mail, MapPin, Bed, Bath, Square, Home } from "lucide-react";
 
 const TEAL = "#1a7a78";
-const TEAL_LIGHT = "#e8f5f5";
 const TEAL_MID = "#2a9d9a";
 const SLATE = "#2c3e50";
 const GRAY_BG = "#f4f6f7";
@@ -133,6 +132,18 @@ const listings = [
   },
 ];
 
+const BackButton = () => (
+  <a href="/afh-club" style={{ display: "inline-block", textDecoration: "none" }}>
+    <img
+      src="/listing-photos/back-to-afh-club.png"
+      alt="Back to AFH Club"
+      style={{ height: "70px", width: "auto", display: "block" }}
+      onMouseOver={(e) => (e.currentTarget.style.opacity = "0.8")}
+      onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
+    />
+  </a>
+);
+
 const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; value: string }) => (
   <div
     style={{
@@ -155,25 +166,13 @@ const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; va
 
 const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: number; total: number }) => (
   <div
-    style={{
-      width: "220px",
-      minWidth: "220px",
-      position: "relative",
-      overflow: "hidden",
-      backgroundColor: "#e4ecec",
-    }}
+    style={{ width: "220px", minWidth: "220px", position: "relative", overflow: "hidden", backgroundColor: "#e4ecec" }}
   >
     {photo ? (
       <img
         src={photo}
         alt={`Listing ${index + 1}`}
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          display: "block",
-          minHeight: "180px",
-        }}
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", minHeight: "180px" }}
       />
     ) : (
       <div
@@ -205,8 +204,6 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
         </span>
       </div>
     )}
-
-    {/* Listing counter */}
     <div
       style={{
         position: "absolute",
@@ -224,8 +221,6 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
     >
       {String(index + 1).padStart(2, "0")} / {total}
     </div>
-
-    {/* Active badge */}
     <div
       style={{
         position: "absolute",
@@ -262,27 +257,14 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
 const AFHListings = () => {
   return (
     <div style={{ minHeight: "100vh", backgroundColor: GRAY_BG, fontFamily: "Inter, system-ui, sans-serif" }}>
-      {/* Page header band */}
-      <div style={{ backgroundColor: WHITE, borderBottom: `1px solid ${GRAY_BORDER}`, padding: "2.5rem 1.5rem 2rem" }}>
+      {/* ── HEADER BAND ── */}
+      <div style={{ backgroundColor: WHITE, borderBottom: `1px solid ${GRAY_BORDER}`, padding: "2rem 1.5rem" }}>
         <div style={{ maxWidth: "920px", margin: "0 auto" }}>
-          {/* Back button row with badge aligned to right */}
+          {/* Row 1: Back button LEFT, Badge RIGHT — both inside the same 920px container */}
           <div
             style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.5rem" }}
           >
-            <a href="/afh-club" style={{ display: "inline-block", textDecoration: "none" }}>
-              <img
-                src="/listing-photos/back-to-afh-club.png"
-                alt="Back to AFH Club"
-                style={{
-                  height: "70px",
-                  width: "auto",
-                  display: "block",
-                  transition: "opacity 0.15s",
-                }}
-                onMouseOver={(e) => (e.currentTarget.style.opacity = "0.85")}
-                onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
-              />
-            </a>
+            <BackButton />
             <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
               <img
                 src="/afh-club-badge.png"
@@ -292,7 +274,7 @@ const AFHListings = () => {
             </a>
           </div>
 
-          {/* Pill label */}
+          {/* Pill */}
           <div style={{ marginBottom: "0.75rem" }}>
             <span
               style={{
@@ -323,6 +305,7 @@ const AFHListings = () => {
             </span>
           </div>
 
+          {/* Heading */}
           <h1
             style={{
               fontSize: "clamp(1.6rem, 3.5vw, 2.1rem)",
@@ -336,12 +319,13 @@ const AFHListings = () => {
             Adult Family Home Properties
           </h1>
 
+          {/* Subtext */}
           <p style={{ fontSize: "15px", color: GRAY_TEXT, lineHeight: 1.7, margin: "0 0 1.5rem", maxWidth: "560px" }}>
             Licensed Adult Family Home properties currently available for sale in the Puget Sound region. Contact David
             Stein for showings or additional information on any listing.
           </p>
 
-          {/* Summary stats bar */}
+          {/* Stats bar */}
           <div
             style={{
               display: "flex",
@@ -379,8 +363,8 @@ const AFHListings = () => {
         </div>
       </div>
 
-      {/* Listings */}
-      <div style={{ maxWidth: "920px", margin: "0 auto", padding: "2rem 1.5rem 3rem" }}>
+      {/* ── LISTINGS ── */}
+      <div style={{ maxWidth: "920px", margin: "0 auto", padding: "2rem 1.5rem 1rem" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           {listings.map((listing, index) => (
             <div
@@ -395,8 +379,6 @@ const AFHListings = () => {
               }}
             >
               <PhotoPanel photo={listing.photo} index={index} total={listings.length} />
-
-              {/* Card content */}
               <div
                 style={{ flex: 1, padding: "1.25rem 1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}
               >
@@ -459,7 +441,6 @@ const AFHListings = () => {
                   <StatPill icon={<Square size={13} />} value={listing.sqft} label="sq ft" />
                 </div>
 
-                {/* Divider */}
                 <div style={{ height: "1px", backgroundColor: GRAY_BORDER }} />
 
                 {/* CTAs */}
@@ -504,7 +485,7 @@ const AFHListings = () => {
                   </a>
                 </div>
 
-                {/* NWMLS compliance attribution */}
+                {/* Broker compliance */}
                 <div
                   style={{
                     display: "flex",
@@ -527,7 +508,7 @@ const AFHListings = () => {
           ))}
         </div>
 
-        {/* Footer disclaimer */}
+        {/* Disclaimer */}
         <div
           style={{
             marginTop: "2.5rem",
@@ -547,22 +528,9 @@ const AFHListings = () => {
           showings, and full listing details.
         </div>
 
-        {/* Second back button below listings */}
-        <div style={{ marginTop: "2rem" }}>
-          <a href="/afh-club" style={{ display: "inline-block", textDecoration: "none" }}>
-            <img
-              src="/listing-photos/back-to-afh-club.png"
-              alt="Back to AFH Club"
-              style={{
-                height: "70px",
-                width: "auto",
-                display: "block",
-                transition: "opacity 0.15s",
-              }}
-              onMouseOver={(e) => (e.currentTarget.style.opacity = "0.85")}
-              onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
-            />
-          </a>
+        {/* SECOND BACK BUTTON — below last listing */}
+        <div style={{ marginTop: "2rem", paddingBottom: "2rem" }}>
+          <BackButton />
         </div>
       </div>
     </div>
