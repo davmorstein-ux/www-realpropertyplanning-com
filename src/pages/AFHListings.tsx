@@ -292,6 +292,7 @@ const AFHListings = () => {
               marginBottom: "0.75rem",
               flexWrap: "wrap",
               gap: "0.75rem",
+              maxWidth: "920px",
             }}
           >
             <span
@@ -322,12 +323,12 @@ const AFHListings = () => {
               AFH Club · Active Listings
             </span>
 
-            {/* AFH Club badge top-right */}
+            {/* AFH Club badge */}
             <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
               <img
                 src="/afh-club-badge.png"
                 alt="AFH Club"
-                style={{ height: "56px", width: "auto", display: "block" }}
+                style={{ height: "110px", width: "auto", display: "block" }}
               />
             </a>
           </div>
