@@ -21,6 +21,7 @@ const listings = [
     bathDetail: "1 full · 4 three-quarter",
     sqft: "3,802",
     price: "$2,250,000",
+    photo: "/listing-photos/16342_72nd_Ave_W_Edmonds.webp",
   },
   {
     id: 2,
@@ -32,6 +33,7 @@ const listings = [
     bathDetail: "5 three-quarter · 1 half",
     sqft: "3,898",
     price: "$1,650,000",
+    photo: "/listing-photos/17926_73rd_Ave_W_Edmonds.webp",
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ const listings = [
     bathDetail: "2 full · 2 half",
     sqft: "2,820",
     price: "$1,449,000",
+    photo: "/listing-photos/7339_NE_140th_St_Kirkland.webp",
   },
   {
     id: 4,
@@ -54,6 +57,7 @@ const listings = [
     bathDetail: "4 full",
     sqft: "2,948",
     price: "$1,600,000",
+    photo: null,
   },
   {
     id: 5,
@@ -65,6 +69,7 @@ const listings = [
     bathDetail: "1 full · 3 three-quarter",
     sqft: "3,080",
     price: "$1,649,000",
+    photo: "/listing-photos/611313_Lynnwood.webp",
   },
   {
     id: 6,
@@ -76,6 +81,7 @@ const listings = [
     bathDetail: "3 full",
     sqft: "3,246",
     price: "$1,900,000",
+    photo: "/listing-photos/32562_Edmonds.webp",
   },
   {
     id: 7,
@@ -87,6 +93,7 @@ const listings = [
     bathDetail: "3 full · 2 half",
     sqft: "2,356",
     price: "$2,100,000",
+    photo: "/listing-photos/122263_Edmonds.webp",
   },
   {
     id: 8,
@@ -98,6 +105,7 @@ const listings = [
     bathDetail: "3 full · 3 half",
     sqft: "3,960",
     price: "$2,429,000",
+    photo: "/listing-photos/22625_Lynnwood.webp",
   },
 ];
 
@@ -118,6 +126,114 @@ const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; va
     <span style={{ color: TEAL, display: "flex", alignItems: "center" }}>{icon}</span>
     <span style={{ fontWeight: 600, color: SLATE }}>{value}</span>
     <span style={{ color: GRAY_TEXT }}>{label}</span>
+  </div>
+);
+
+const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: number; total: number }) => (
+  <div
+    style={{
+      width: "220px",
+      minWidth: "220px",
+      position: "relative",
+      overflow: "hidden",
+      backgroundColor: "#e4ecec",
+    }}
+  >
+    {photo ? (
+      <img
+        src={photo}
+        alt={`Listing ${index + 1}`}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          display: "block",
+          minHeight: "180px",
+        }}
+      />
+    ) : (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          minHeight: "180px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "8px",
+          backgroundImage:
+            "linear-gradient(rgba(26,122,120,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(26,122,120,0.06) 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
+        }}
+      >
+        <Home size={28} style={{ color: TEAL, opacity: 0.45 }} />
+        <span
+          style={{
+            fontSize: "10px",
+            color: TEAL,
+            opacity: 0.6,
+            letterSpacing: "0.07em",
+            textTransform: "uppercase" as const,
+          }}
+        >
+          Photo pending
+        </span>
+      </div>
+    )}
+
+    {/* Listing counter */}
+    <div
+      style={{
+        position: "absolute",
+        top: "10px",
+        left: "10px",
+        backgroundColor: "rgba(26,122,120,0.88)",
+        color: WHITE,
+        fontSize: "10px",
+        fontWeight: 700,
+        letterSpacing: "0.06em",
+        padding: "3px 8px",
+        borderRadius: "4px",
+        fontFamily: "Inter, sans-serif",
+        backdropFilter: "blur(4px)",
+      }}
+    >
+      {String(index + 1).padStart(2, "0")} / {total}
+    </div>
+
+    {/* Active badge */}
+    <div
+      style={{
+        position: "absolute",
+        bottom: "10px",
+        left: "10px",
+        display: "flex",
+        alignItems: "center",
+        gap: "5px",
+        backgroundColor: "rgba(255,255,255,0.92)",
+        padding: "3px 8px",
+        borderRadius: "4px",
+        fontSize: "10px",
+        fontWeight: 600,
+        color: "#2d7a3a",
+        letterSpacing: "0.05em",
+        textTransform: "uppercase" as const,
+        fontFamily: "Inter, sans-serif",
+        backdropFilter: "blur(4px)",
+      }}
+    >
+      <span
+        style={{
+          width: "6px",
+          height: "6px",
+          borderRadius: "50%",
+          backgroundColor: "#3aaa4a",
+          display: "inline-block",
+        }}
+      />
+      Active
+    </div>
   </div>
 );
 
@@ -229,94 +345,7 @@ const AFHListings = () => {
                 flexDirection: "row",
               }}
             >
-              {/* Photo placeholder */}
-              <div
-                style={{
-                  width: "200px",
-                  minWidth: "200px",
-                  backgroundColor: "#e4ecec",
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "8px",
-                }}
-              >
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    backgroundImage:
-                      "linear-gradient(rgba(26,122,120,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(26,122,120,0.06) 1px, transparent 1px)",
-                    backgroundSize: "20px 20px",
-                  }}
-                />
-                <Home size={30} style={{ color: TEAL, opacity: 0.5, position: "relative" }} />
-                <span
-                  style={{
-                    fontFamily: "Inter, sans-serif",
-                    fontSize: "10px",
-                    color: TEAL,
-                    opacity: 0.6,
-                    letterSpacing: "0.07em",
-                    textTransform: "uppercase",
-                    position: "relative",
-                  }}
-                >
-                  Photo pending
-                </span>
-
-                {/* Listing counter */}
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "10px",
-                    left: "10px",
-                    backgroundColor: TEAL,
-                    color: WHITE,
-                    fontSize: "10px",
-                    fontWeight: 700,
-                    letterSpacing: "0.06em",
-                    padding: "3px 8px",
-                    borderRadius: "4px",
-                  }}
-                >
-                  {String(index + 1).padStart(2, "0")} / {listings.length}
-                </div>
-
-                {/* Active badge */}
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "10px",
-                    left: "10px",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "5px",
-                    backgroundColor: WHITE,
-                    padding: "3px 8px",
-                    borderRadius: "4px",
-                    border: `1px solid ${GRAY_BORDER}`,
-                    fontSize: "10px",
-                    fontWeight: 600,
-                    color: "#2d7a3a",
-                    letterSpacing: "0.05em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  <span
-                    style={{
-                      width: "6px",
-                      height: "6px",
-                      borderRadius: "50%",
-                      backgroundColor: "#3aaa4a",
-                      display: "inline-block",
-                    }}
-                  />
-                  Active
-                </div>
-              </div>
+              <PhotoPanel photo={listing.photo} index={index} total={listings.length} />
 
               {/* Card content */}
               <div
