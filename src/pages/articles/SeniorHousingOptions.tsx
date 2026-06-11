@@ -42,6 +42,7 @@ const SeniorHousingOptions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="Senior Housing Options for Older Adults: Choosing the Right Next Home"
         description="Explore senior housing options including independent living, assisted living, memory care, CCRCs, affordable housing, and aging in place with support."
         jsonLd={jsonLd}

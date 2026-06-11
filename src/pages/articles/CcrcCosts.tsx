@@ -44,6 +44,7 @@ const CcrcCosts = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="Continuing Care Retirement Communities Costs: What to Expect"
         description="Understand CCRC costs, entrance fees, monthly fees, contract types, and what is included. Compare continuing care retirement communities before committing."
         jsonLd={jsonLd}

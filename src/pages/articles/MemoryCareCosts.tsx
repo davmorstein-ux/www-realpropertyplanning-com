@@ -42,6 +42,7 @@ const MemoryCareCosts = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="Memory Care Costs for Families: What to Expect"
         description="Understand memory care costs for families. Learn what is included, extra fees to watch for, and how to compare communities before choosing memory care for a loved one."
         jsonLd={jsonLd}

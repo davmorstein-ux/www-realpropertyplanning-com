@@ -45,6 +45,7 @@ const AffordableSeniorHousing = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="Affordable Senior Housing for Older Adults: What to Expect"
         description="Understand affordable senior housing options, income-based rent, waitlists, and what is included. Learn how to compare and apply for low-cost senior housing."
         jsonLd={jsonLd}
