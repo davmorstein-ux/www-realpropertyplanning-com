@@ -43,7 +43,7 @@ const SeniorTransitions = () => {
           style={{ display: "block" }}
           loading="eager"
           fetchPriority="high" sizes="100vw" width={1920} height={763} />
-        <HeroBandTitle as="h2">Selling A Senior's Home</HeroBandTitle>
+        <HeroBandTitle as="h1">Selling A Senior's Home</HeroBandTitle>
       </section>
 
       {/* What Goes Into a Senior Transition */}

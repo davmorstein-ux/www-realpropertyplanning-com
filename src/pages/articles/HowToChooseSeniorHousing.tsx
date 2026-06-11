@@ -49,6 +49,7 @@ const HowToChooseSeniorHousing = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="How to Choose Senior Housing: A Step-by-Step Guide for Families"
         description="A practical step-by-step guide to help families choose senior housing by assessing needs, budget, options, visits, contracts, and moving."
         jsonLd={jsonLd}

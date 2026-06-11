@@ -158,7 +158,7 @@ const FAQ = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate Real Estate FAQ | Real Property Planning"
-        description="Answers to common questions about probate real estate, inherited homes, estate sales, trust-owned property, valuation, executors, and senior transitions in Washington."
+        description="Answers to common questions about probate real estate, inherited homes, estate sales, valuation, executors, and senior transitions in Washington."
       />
       <BreadcrumbSchema items={[{ name: "FAQ", url: "/faq" }]} />
       <Header />

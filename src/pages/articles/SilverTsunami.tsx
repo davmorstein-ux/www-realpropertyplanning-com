@@ -39,6 +39,7 @@ const SilverTsunami = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="The Silver Tsunami: Aging America's Housing & Care Shift"
         description="How the Silver Tsunami — millions of Baby Boomers turning 65 — is reshaping housing, retirement, caregiving, and senior support across America."
         jsonLd={jsonLd}

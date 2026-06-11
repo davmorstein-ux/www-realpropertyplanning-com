@@ -47,6 +47,7 @@ const SeniorHousingCosts = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="Senior Housing Costs: What Older Adults and Families Should Expect"
         description="Understand senior housing costs including independent living, assisted living, memory care, CCRCs, affordable housing, and aging in place with support."
         jsonLd={jsonLd}

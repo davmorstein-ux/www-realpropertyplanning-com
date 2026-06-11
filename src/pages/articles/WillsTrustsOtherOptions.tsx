@@ -32,6 +32,7 @@ const WillsTrustsOtherOptions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="How to Pass Real Estate to Your Children: Wills, Trusts, and Other Options | Real Property Planning"
         description="A plain-language guide to the most common ways Washington homeowners transfer real estate to the next generation — and the tradeoffs each method carries."
         jsonLd={jsonLd}

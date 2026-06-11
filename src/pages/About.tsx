@@ -23,7 +23,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="About Real Property Planning | Senior Transitions & Estate Hub"
-        description="Real Property Planning is Washington State's resource hub for senior transitions, probate, and estate real estate — coordinating brokers, appraisers, and trusted professionals across the Puget Sound region."
+        description="Washington State's resource hub for senior transitions, probate, and estate real estate — coordinating brokers, appraisers, and trusted professionals."
         schemaJson={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />

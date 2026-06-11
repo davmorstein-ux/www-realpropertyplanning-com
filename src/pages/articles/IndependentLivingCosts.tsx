@@ -39,6 +39,7 @@ const IndependentLivingCosts = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="Independent Living Costs for Older Adults: What to Expect"
         description="Understand independent living costs for seniors. Learn what is included, extra fees to watch for, and how to compare communities before making a move."
         jsonLd={jsonLd}

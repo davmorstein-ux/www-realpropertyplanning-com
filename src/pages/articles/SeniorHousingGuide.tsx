@@ -49,6 +49,7 @@ const SeniorHousingGuide = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="The Senior Housing Guide for Older Adults and Families: A Complete Resource"
         description="A comprehensive senior housing guide covering independent living, assisted living, memory care, CCRCs, affordable housing, and aging in place with support."
         jsonLd={jsonLd}

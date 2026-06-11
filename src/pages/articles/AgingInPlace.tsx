@@ -46,6 +46,7 @@ const AgingInPlace = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
+        ogType="article"
         title="Aging in Place With Support: What Older Adults Should Expect"
         description="Learn about aging in place with support, including costs, home care options, safety modifications, and how to compare staying home with senior housing."
         jsonLd={jsonLd}
