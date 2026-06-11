@@ -9,6 +9,8 @@ interface SEOHeadProps {
   /** Set to true to add noindex,follow — keeps links crawlable but page out of index */
   noIndex?: boolean;
   schemaJson?: object | object[];
+  /** OpenGraph type — defaults to "website". Use "article" for blog/article routes. */
+  ogType?: string;
   /** @deprecated Use schemaJson instead */
   jsonLd?: object;
   /** @deprecated Use noIndex instead */
