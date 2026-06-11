@@ -1,247 +1,460 @@
-import { Link } from "react-router-dom";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
-import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import CTASection from "@/components/CTASection";
-import DisclaimerSection from "@/components/DisclaimerSection";
-import BackToAFHClub from "@/components/BackToAFHClub";
-import HeroBandTitle from "@/components/HeroBandTitle";
+import React from "react";
+import { Phone, Mail, MapPin, Bed, Bath, Square, Home } from "lucide-react";
 
-const AFHListings = () => (
-  <>
-    <SEOHead
-      title="AFH Listings | AFH Club | Real Property Planning"
-      description="Adult Family Homes available for sale throughout Washington State — browse current listings or contact our AFH real estate broker for assistance."
-      canonical="https://realpropertyplanning.com/afh-club/listings"
-    />
-    <BreadcrumbSchema
-      items={[
-        { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "AFH Club", url: "https://realpropertyplanning.com/afh-club" },
-        { name: "AFH Listings", url: "https://realpropertyplanning.com/afh-club/listings" },
-      ]}
-    />
-    <Header />
-    <main id="main-content">
-      {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: "clamp(18px, 2vw, 20px)",
-              fontFamily: "'Raleway', sans-serif",
-              fontWeight: 400,
-              color: "#1e2a38",
-              lineHeight: 1.85,
-              maxWidth: 680,
-            }}
-          >
-            Adult Family Homes available for sale throughout Washington State. Buying an AFH is a unique transaction —
-            the real estate and the DSHS license are handled separately. Our AFH real estate broker can guide you
-            through every step.
-          </p>
-        </div>
-      </section>
-      <HeroBandTitle>AFH Listings</HeroBandTitle>
+const TEAL = "#1a7a78";
+const TEAL_LIGHT = "#e8f5f5";
+const TEAL_MID = "#2a9d9a";
+const SLATE = "#2c3e50";
+const GRAY_BG = "#f4f6f7";
+const GRAY_BORDER = "#dde3e8";
+const GRAY_TEXT = "#6b7a87";
+const WHITE = "#ffffff";
 
-      {/* Coming Soon */}
-      <section style={{ background: "#f7f4ef", padding: "80px 24px" }}>
-        <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
-          <div
-            style={{
-              background: "#fff",
-              border: "1px solid #e0d8c8",
-              borderTop: "4px solid #b87333",
-              borderRadius: 8,
-              padding: "56px 40px",
-            }}
-          >
-            <div style={{ fontSize: 48, marginBottom: 24 }}>🏡</div>
-            <h2
+const listings = [
+  {
+    id: 1,
+    address: "16342 72nd Avenue W",
+    city: "Edmonds",
+    state: "WA",
+    beds: 9,
+    bathDisplay: "5",
+    bathDetail: "1 full · 4 three-quarter",
+    sqft: "3,802",
+    price: "$2,250,000",
+  },
+  {
+    id: 2,
+    address: "17926 73rd Avenue W",
+    city: "Edmonds",
+    state: "WA",
+    beds: 8,
+    bathDisplay: "6",
+    bathDetail: "5 three-quarter · 1 half",
+    sqft: "3,898",
+    price: "$1,650,000",
+  },
+  {
+    id: 3,
+    address: "7339 NE 140th Street",
+    city: "Kirkland",
+    state: "WA",
+    beds: 6,
+    bathDisplay: "4",
+    bathDetail: "2 full · 2 half",
+    sqft: "2,820",
+    price: "$1,449,000",
+  },
+  {
+    id: 4,
+    address: "Address Upon Request",
+    city: "Lynnwood",
+    state: "WA",
+    beds: 9,
+    bathDisplay: "4",
+    bathDetail: "4 full",
+    sqft: "2,948",
+    price: "$1,600,000",
+  },
+  {
+    id: 5,
+    address: "Address Upon Request",
+    city: "Lynnwood",
+    state: "WA",
+    beds: 8,
+    bathDisplay: "4",
+    bathDetail: "1 full · 3 three-quarter",
+    sqft: "3,080",
+    price: "$1,649,000",
+  },
+  {
+    id: 6,
+    address: "Address Upon Request",
+    city: "Edmonds",
+    state: "WA",
+    beds: 7,
+    bathDisplay: "3",
+    bathDetail: "3 full",
+    sqft: "3,246",
+    price: "$1,900,000",
+  },
+  {
+    id: 7,
+    address: "Address Upon Request",
+    city: "Edmonds",
+    state: "WA",
+    beds: 6,
+    bathDisplay: "5",
+    bathDetail: "3 full · 2 half",
+    sqft: "2,356",
+    price: "$2,100,000",
+  },
+  {
+    id: 8,
+    address: "Address Upon Request",
+    city: "Lynnwood",
+    state: "WA",
+    beds: 10,
+    bathDisplay: "6",
+    bathDetail: "3 full · 3 half",
+    sqft: "3,960",
+    price: "$2,429,000",
+  },
+];
+
+const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; value: string }) => (
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "7px",
+      backgroundColor: GRAY_BG,
+      border: `1px solid ${GRAY_BORDER}`,
+      borderRadius: "6px",
+      padding: "6px 12px",
+      fontFamily: "Inter, system-ui, sans-serif",
+      fontSize: "13px",
+    }}
+  >
+    <span style={{ color: TEAL, display: "flex", alignItems: "center" }}>{icon}</span>
+    <span style={{ fontWeight: 600, color: SLATE }}>{value}</span>
+    <span style={{ color: GRAY_TEXT }}>{label}</span>
+  </div>
+);
+
+const AFHListings = () => {
+  return (
+    <div style={{ minHeight: "100vh", backgroundColor: GRAY_BG, fontFamily: "Inter, system-ui, sans-serif" }}>
+      {/* Page header band */}
+      <div style={{ backgroundColor: WHITE, borderBottom: `1px solid ${GRAY_BORDER}`, padding: "2.5rem 1.5rem 2rem" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          {/* Pill label */}
+          <div style={{ marginBottom: "0.75rem" }}>
+            <span
               style={{
-                fontSize: "clamp(26px, 3.5vw, 36px)",
-                fontFamily: "Georgia, serif",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                backgroundColor: TEAL_LIGHT,
+                color: TEAL,
+                fontSize: "11px",
                 fontWeight: 700,
-                color: "#0a1628",
-                margin: "0 0 16px",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "4px 12px",
+                borderRadius: "100px",
+                border: `1px solid ${TEAL}22`,
               }}
             >
-              Listings Coming Soon
-            </h2>
-            <div style={{ width: 40, height: 3, background: "#b87333", margin: "0 auto 24px", borderRadius: 1 }} />
-            <p
-              style={{
-                fontSize: "clamp(17px, 1.8vw, 19px)",
-                fontFamily: "'Raleway', sans-serif",
-                color: "#1e2a38",
-                lineHeight: 1.85,
-                margin: "0 0 32px",
-              }}
-            >
-              We are currently building this directory. If you have an Adult Family Home you are looking to sell, or if
-              you are searching for an AFH to purchase, contact our AFH real estate broker directly for current
-              opportunities throughout Washington State.
-            </p>
-            <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-              <Link
-                to="/afh-club/real-estate-broker"
+              <span
                 style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8,
-                  fontSize: 14,
-                  fontFamily: "'Raleway', sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                  color: "#fff",
-                  background: "#2c3a48",
-                  padding: "14px 28px",
-                  borderRadius: 4,
-                  textDecoration: "none",
-                  border: "2px solid #C9A84C",
-                }}
-              >
-                Contact Our AFH Broker →
-              </Link>
-              <Link
-                to="/contact"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8,
-                  fontSize: 14,
-                  fontFamily: "'Raleway', sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                  color: "#1e2a38",
-                  background: "transparent",
-                  padding: "14px 28px",
-                  borderRadius: 4,
-                  textDecoration: "none",
-                  border: "1px solid #b87333",
-                }}
-              >
-                General Inquiry
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What to know about buying */}
-      <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
-        <div style={{ maxWidth: 720, margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: 14,
-              fontFamily: "'Raleway', sans-serif",
-              fontWeight: 600,
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "#5a3200",
-              margin: "0 0 14px",
-            }}
-          >
-            Buyer's Guide
-          </p>
-          <h2
-            style={{
-              fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "Georgia, serif",
-              fontWeight: 700,
-              color: "#0a1628",
-              lineHeight: 1.2,
-              margin: "0 0 20px",
-            }}
-          >
-            What to Know Before Buying an AFH
-          </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
-          {[
-            {
-              heading: "The license does not transfer.",
-              body: "Purchasing an AFH is a Change of Ownership (CHOW). You must apply for a new DSHS license — the seller's license stays with the seller. Budget time for this process.",
-            },
-            {
-              heading: "Specialty contracts don't transfer either.",
-              body: "If the home operates under Dementia, ECS, or SBS specialty contracts, you must independently qualify and execute new contracts. These cannot be assigned to you.",
-            },
-            {
-              heading: "Check the DSHS AFH Locator first.",
-              body: "Research the current license's compliance history, any enforcement actions, and active limits before making an offer. Some violations disappear when ownership changes.",
-            },
-            {
-              heading: "The real estate and the business are two different transactions.",
-              body: "You are buying a home and acquiring a licensed care operation simultaneously. Both require professional guidance — a real estate broker who understands AFH transactions is essential.",
-            },
-          ].map((item, i) => (
-            <div key={i} style={{ display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 24 }}>
-              <div
-                style={{
-                  flexShrink: 0,
-                  width: 8,
-                  height: 8,
+                  width: "6px",
+                  height: "6px",
                   borderRadius: "50%",
-                  background: "#b87333",
-                  marginTop: 10,
+                  backgroundColor: TEAL_MID,
+                  display: "inline-block",
                 }}
               />
-              <div>
-                <p
+              AFH Club · Active Listings
+            </span>
+          </div>
+
+          <h1
+            style={{
+              fontSize: "clamp(1.6rem, 3.5vw, 2.1rem)",
+              fontWeight: 700,
+              color: SLATE,
+              margin: "0 0 0.6rem",
+              letterSpacing: "-0.02em",
+              lineHeight: 1.2,
+            }}
+          >
+            Adult Family Home Properties
+          </h1>
+
+          <p style={{ fontSize: "15px", color: GRAY_TEXT, lineHeight: 1.7, margin: "0 0 1.5rem", maxWidth: "560px" }}>
+            Licensed Adult Family Home properties currently available for sale in the Puget Sound region. Contact David
+            Stein for showings or additional information on any listing.
+          </p>
+
+          {/* Summary stats bar */}
+          <div
+            style={{
+              display: "flex",
+              gap: "2rem",
+              flexWrap: "wrap",
+              padding: "1rem 1.25rem",
+              backgroundColor: TEAL_LIGHT,
+              borderRadius: "8px",
+              border: `1px solid ${TEAL}22`,
+            }}
+          >
+            {[
+              { label: "Active listings", value: "8" },
+              { label: "Locations", value: "Edmonds · Kirkland · Lynnwood" },
+              { label: "Price range", value: "$1.45M – $2.43M" },
+              { label: "Updated", value: "June 2026" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div
                   style={{
-                    fontSize: "clamp(17px, 1.8vw, 19px)",
-                    fontFamily: "'Raleway', sans-serif",
+                    fontSize: "11px",
+                    fontWeight: 600,
+                    letterSpacing: "0.06em",
+                    textTransform: "uppercase",
+                    color: TEAL,
+                    marginBottom: "2px",
+                  }}
+                >
+                  {stat.label}
+                </div>
+                <div style={{ fontSize: "14px", fontWeight: 600, color: SLATE }}>{stat.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Listings grid */}
+      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "2rem 1.5rem 3rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          {listings.map((listing, index) => (
+            <div
+              key={listing.id}
+              style={{
+                backgroundColor: WHITE,
+                borderRadius: "10px",
+                border: `1px solid ${GRAY_BORDER}`,
+                overflow: "hidden",
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              {/* Photo placeholder */}
+              <div
+                style={{
+                  width: "200px",
+                  minWidth: "200px",
+                  backgroundColor: "#e4ecec",
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "8px",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    backgroundImage:
+                      "linear-gradient(rgba(26,122,120,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(26,122,120,0.06) 1px, transparent 1px)",
+                    backgroundSize: "20px 20px",
+                  }}
+                />
+                <Home size={30} style={{ color: TEAL, opacity: 0.5, position: "relative" }} />
+                <span
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontSize: "10px",
+                    color: TEAL,
+                    opacity: 0.6,
+                    letterSpacing: "0.07em",
+                    textTransform: "uppercase",
+                    position: "relative",
+                  }}
+                >
+                  Photo pending
+                </span>
+
+                {/* Listing counter */}
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "10px",
+                    left: "10px",
+                    backgroundColor: TEAL,
+                    color: WHITE,
+                    fontSize: "10px",
                     fontWeight: 700,
-                    color: "#0a1628",
-                    margin: "0 0 6px",
+                    letterSpacing: "0.06em",
+                    padding: "3px 8px",
+                    borderRadius: "4px",
                   }}
                 >
-                  {item.heading}
-                </p>
-                <p
+                  {String(index + 1).padStart(2, "0")} / {listings.length}
+                </div>
+
+                {/* Active badge */}
+                <div
                   style={{
-                    fontSize: "clamp(16px, 1.6vw, 18px)",
-                    fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
-                    lineHeight: 1.8,
-                    margin: 0,
+                    position: "absolute",
+                    bottom: "10px",
+                    left: "10px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    backgroundColor: WHITE,
+                    padding: "3px 8px",
+                    borderRadius: "4px",
+                    border: `1px solid ${GRAY_BORDER}`,
+                    fontSize: "10px",
+                    fontWeight: 600,
+                    color: "#2d7a3a",
+                    letterSpacing: "0.05em",
+                    textTransform: "uppercase",
                   }}
                 >
-                  {item.body}
-                </p>
+                  <span
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      borderRadius: "50%",
+                      backgroundColor: "#3aaa4a",
+                      display: "inline-block",
+                    }}
+                  />
+                  Active
+                </div>
+              </div>
+
+              {/* Card content */}
+              <div
+                style={{ flex: 1, padding: "1.25rem 1.5rem", display: "flex", flexDirection: "column", gap: "0.85rem" }}
+              >
+                {/* Address + price */}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    gap: "1rem",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <div>
+                    <h2
+                      style={{
+                        fontSize: "1.05rem",
+                        fontWeight: 700,
+                        color: SLATE,
+                        margin: "0 0 4px",
+                        letterSpacing: "-0.01em",
+                        lineHeight: 1.25,
+                      }}
+                    >
+                      {listing.address}
+                    </h2>
+                    <div
+                      style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "13px", color: GRAY_TEXT }}
+                    >
+                      <MapPin size={12} style={{ color: TEAL_MID }} />
+                      {listing.city}, {listing.state}
+                    </div>
+                  </div>
+                  <div style={{ textAlign: "right" }}>
+                    <div
+                      style={{
+                        fontSize: "1.4rem",
+                        fontWeight: 700,
+                        color: TEAL,
+                        letterSpacing: "-0.02em",
+                        lineHeight: 1,
+                      }}
+                    >
+                      {listing.price}
+                    </div>
+                    <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px", letterSpacing: "0.03em" }}>
+                      Asking price
+                    </div>
+                  </div>
+                </div>
+
+                {/* Stat pills */}
+                <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                  <StatPill icon={<Bed size={13} />} value={String(listing.beds)} label="beds" />
+                  <StatPill
+                    icon={<Bath size={13} />}
+                    value={listing.bathDisplay}
+                    label={`baths (${listing.bathDetail})`}
+                  />
+                  <StatPill icon={<Square size={13} />} value={listing.sqft} label="sq ft" />
+                </div>
+
+                {/* Divider */}
+                <div style={{ height: "1px", backgroundColor: GRAY_BORDER }} />
+
+                {/* CTAs */}
+                <div style={{ display: "flex", gap: "8px", alignItems: "center", flexWrap: "wrap" }}>
+                  <a
+                    href="tel:+12069003015"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
+                      backgroundColor: TEAL,
+                      color: WHITE,
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      padding: "8px 16px",
+                      borderRadius: "6px",
+                      textDecoration: "none",
+                      letterSpacing: "0.02em",
+                    }}
+                  >
+                    <Phone size={13} />
+                    (206) 900-3015
+                  </a>
+                  <a
+                    href="mailto:dave.stein@exprealty.com"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
+                      backgroundColor: "transparent",
+                      color: TEAL,
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      padding: "8px 16px",
+                      borderRadius: "6px",
+                      border: `1px solid ${TEAL}55`,
+                      textDecoration: "none",
+                    }}
+                  >
+                    <Mail size={13} />
+                    Email inquiry
+                  </a>
+                  <span style={{ marginLeft: "auto", fontSize: "11px", color: GRAY_TEXT, fontStyle: "italic" }}>
+                    NWMLS · David Stein · eXp Realty
+                  </span>
+                </div>
               </div>
             </div>
           ))}
-          <div style={{ marginTop: 16 }}>
-            <Link
-              to="/afh-club/buying-selling"
-              style={{
-                fontSize: 14,
-                fontFamily: "'Raleway', sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                textTransform: "uppercase",
-                color: "#5a3200",
-                textDecoration: "none",
-                borderBottom: "1px solid #b87333",
-                paddingBottom: 2,
-              }}
-            >
-              Read the full Buying & Selling guide →
-            </Link>
-          </div>
         </div>
-      </section>
 
-      <BackToAFHClub />
-      <CTASection />
-      <DisclaimerSection />
-    </main>
-    <Footer />
-  </>
-);
+        {/* Footer disclaimer */}
+        <div
+          style={{
+            marginTop: "2.5rem",
+            padding: "1.25rem",
+            backgroundColor: WHITE,
+            borderRadius: "8px",
+            border: `1px solid ${GRAY_BORDER}`,
+            fontSize: "11.5px",
+            color: GRAY_TEXT,
+            lineHeight: 1.75,
+            textAlign: "center",
+          }}
+        >
+          Listings sourced from NWMLS. Information deemed reliable but not guaranteed. Real Property Planning is an
+          independent educational hub and does not represent buyers or sellers on these properties directly — contact
+          David Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #113972), for all inquiries,
+          showings, and full listing details.
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default AFHListings;
