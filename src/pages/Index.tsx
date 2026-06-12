@@ -34,7 +34,7 @@ const homepageFaqJsonLd = `{
       "name": "What is a senior transition specialist?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A senior transition specialist is a real estate professional trained to support older adults and their families when it's time to move from a longtime home. They coordinate the process thoughtfully — from decluttering and downsizing support to finding appropriate housing and selling the home."
+        "text": "A senior transition specialist is a real estate professional trained to support older adults and their families when it's time to move from a longtime home."
       }
     },
     {
@@ -42,7 +42,7 @@ const homepageFaqJsonLd = `{
       "name": "What is an estate appraisal and why does it matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "An estate appraisal is a certified valuation of a property at the time of the owner's death. It's used to set a fair listing price, satisfy court requirements in probate, calculate estate taxes, and ensure heirs are treated fairly."
+        "text": "An estate appraisal is a certified valuation of a property at the time of the owner's death. It establishes fair market value for probate, tax, and equitable distribution purposes."
       }
     },
     {
@@ -50,7 +50,7 @@ const homepageFaqJsonLd = `{
       "name": "How is Real Property Planning different from a regular real estate agent?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Real Property Planning brings two credentials most real estate practices don't combine: a licensed real estate broker and a Washington State Certified Residential Appraiser."
+        "text": "Real Property Planning combines a licensed real estate broker and a Washington State Certified Residential Appraiser under one platform."
       }
     },
     {
@@ -71,14 +71,6 @@ const homepageFaqJsonLd = `{
     },
     {
       "@type": "Question",
-      "name": "Can Real Property Planning help out-of-state executors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — David Stein manages the full property process locally with regular updates so out-of-state executors never need to be present for every step."
-      }
-    },
-    {
-      "@type": "Question",
       "name": "Is there a cost to consult with Real Property Planning?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -88,8 +80,8 @@ const homepageFaqJsonLd = `{
   ]
 }`;
 
-/* ─── ALL INLINE STYLES ─── */
 const pageStyles = `
+  /* ── HERO ── */
   .rpp-hero-section {
     position: relative !important;
     width: 100% !important;
@@ -105,129 +97,143 @@ const pageStyles = `
   }
   .rpp-hero-section img {
     position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
+    top: 0 !important; left: 0 !important;
+    width: 100% !important; height: 100% !important;
     object-fit: cover !important;
     object-position: left center !important;
     display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0 !important; padding: 0 !important;
   }
   .rpp-hero-band {
     background-color: #1a2744 !important;
     width: 100% !important;
-    padding: 2rem 3.5rem !important;
+    padding: 0.5rem 3.5rem !important;
     margin: 0 !important;
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    flex-wrap: wrap !important;
   }
   @media (max-width: 768px) {
-    .rpp-hero-band { padding: 1.5rem 1.5rem !important; }
+    .rpp-hero-band {
+      padding: 0.5rem 1.25rem !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.2rem !important;
+    }
   }
   .rpp-hero-h1 {
     font-family: 'Cormorant Garamond', Georgia, serif !important;
-    font-size: 3rem !important;
-    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
     color: #ffffff !important;
-    line-height: 1.15 !important;
-    margin: 0 0 0.5rem 0 !important;
+    line-height: 1 !important;
+    margin: 0 !important;
     padding: 0 !important;
     opacity: 1 !important;
     text-shadow: none !important;
+    white-space: nowrap !important;
   }
   @media (max-width: 768px) {
-    .rpp-hero-h1 { font-size: 2rem !important; }
+    .rpp-hero-h1 { font-size: 1.2rem !important; white-space: normal !important; }
   }
   .rpp-hero-sub {
     font-family: Inter, system-ui, sans-serif !important;
-    font-size: 22px !important;
-    font-weight: 600 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
     color: #d4a843 !important;
-    line-height: 1.4 !important;
+    line-height: 1 !important;
     margin: 0 !important;
     padding: 0 !important;
     opacity: 1 !important;
     text-shadow: none !important;
   }
   @media (max-width: 768px) {
-    .rpp-hero-sub { font-size: 18px !important; }
+    .rpp-hero-sub { font-size: 12px !important; }
   }
+
+  /* ── QUICK LINKS ── */
   .rpp-ql-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2rem !important;
+    gap: 2.5rem !important;
   }
   @media (max-width: 900px) {
     .rpp-ql-grid { grid-template-columns: 1fr !important; }
   }
   .rpp-ql-col-heading {
     font-family: Inter, system-ui, sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 700 !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
     letter-spacing: 0.16em !important;
     text-transform: uppercase !important;
-    color: #d4a843 !important;
-    margin: 0 0 1.25rem 0 !important;
-    padding-bottom: 0.75rem !important;
-    border-bottom: 1px solid rgba(212,168,67,0.35) !important;
+    color: #b8963e !important;
+    margin: 0 0 0.75rem 0 !important;
+    padding-bottom: 0.6rem !important;
+    border-bottom: 2px solid #e2ddd6 !important;
     display: block !important;
+    opacity: 1 !important;
   }
   .rpp-ql-link {
     display: flex !important;
     align-items: center !important;
-    gap: 10px !important;
+    gap: 8px !important;
     font-family: Inter, system-ui, sans-serif !important;
-    font-size: 17px !important;
+    font-size: 16px !important;
     font-weight: 500 !important;
-    color: #e8e4dc !important;
+    color: #1a2744 !important;
     text-decoration: none !important;
-    padding: 0.6rem 0 !important;
-    border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+    padding: 0.35rem 0 !important;
+    line-height: 1.3 !important;
+    opacity: 1 !important;
     transition: color 0.15s ease !important;
   }
-  .rpp-ql-link:hover { color: #d4a843 !important; }
+  .rpp-ql-link:hover { color: #b8963e !important; }
   .rpp-ql-view-all {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 6px !important;
+    gap: 5px !important;
     font-family: Inter, system-ui, sans-serif !important;
-    font-size: 15px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
-    color: #d4a843 !important;
+    color: #b8963e !important;
     text-decoration: none !important;
-    margin-top: 1.25rem !important;
+    margin-top: 0.85rem !important;
+    opacity: 1 !important;
+    letter-spacing: 0.02em !important;
   }
   .rpp-ql-view-all:hover { opacity: 0.75 !important; }
 `;
 
-const Arrow = ({ size = 14 }: { size?: number }) => (
+const GoldArrow = ({ size = 13 }: { size?: number }) => (
   <svg
     viewBox="0 0 24 24"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke="#b8963e"
     strokeWidth="2.5"
     strokeLinecap="round"
     strokeLinejoin="round"
     aria-hidden="true"
+    style={{ flexShrink: 0 }}
   >
     <polyline points="9 18 15 12 9 6" />
   </svg>
 );
 
-const GoldArrow = ({ size = 14 }: { size?: number }) => (
+const NavyArrow = ({ size = 13 }: { size?: number }) => (
   <svg
     viewBox="0 0 24 24"
     width={size}
     height={size}
     fill="none"
-    stroke="#d4a843"
+    stroke="#1a2744"
     strokeWidth="2.5"
     strokeLinecap="round"
     strokeLinejoin="round"
     aria-hidden="true"
+    style={{ flexShrink: 0, opacity: 0.4 }}
   >
     <polyline points="9 18 15 12 9 6" />
   </svg>
@@ -270,7 +276,7 @@ const Index = () => {
           </picture>
         </section>
 
-        {/* ── 2. HERO BAND ── */}
+        {/* ── 2. HERO TEXT BAND — slim single line ── */}
         <div className="rpp-hero-band">
           <h1 className="rpp-hero-h1">Where do you need to go?</h1>
           <p className="rpp-hero-sub">
@@ -281,8 +287,15 @@ const Index = () => {
         {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
         <HomepageFunnel />
 
-        {/* ── 4. QUICK LINKS BAND ── */}
-        <section style={{ backgroundColor: "#1a2744", padding: "3.5rem 0" }}>
+        {/* ── 4. QUICK LINKS — white background, dark text ── */}
+        <section
+          style={{
+            backgroundColor: "#ffffff",
+            padding: "3.5rem 0",
+            borderTop: "1px solid #e2ddd6",
+            borderBottom: "1px solid #e2ddd6",
+          }}
+        >
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div className="rpp-ql-grid">
               {/* Column 1 — Featured Resources */}
@@ -299,12 +312,12 @@ const Index = () => {
                   { label: "Estate Sale Planning Guide", href: "/guides/inherited-house-washington" },
                 ].map((item) => (
                   <Link key={item.href} to={item.href} className="rpp-ql-link">
-                    <GoldArrow size={14} />
+                    <NavyArrow size={13} />
                     {item.label}
                   </Link>
                 ))}
                 <Link to="/resources" className="rpp-ql-view-all">
-                  View all resources <Arrow size={13} />
+                  View all resources <GoldArrow size={12} />
                 </Link>
               </div>
 
@@ -320,12 +333,12 @@ const Index = () => {
                   { label: "More Professionals", href: "/building-your-trusted-professional-team" },
                 ].map((item) => (
                   <Link key={item.href} to={item.href} className="rpp-ql-link">
-                    <GoldArrow size={14} />
+                    <NavyArrow size={13} />
                     {item.label}
                   </Link>
                 ))}
                 <Link to="/building-your-trusted-professional-team" className="rpp-ql-view-all">
-                  Search directory <Arrow size={13} />
+                  Search directory <GoldArrow size={12} />
                 </Link>
               </div>
 
@@ -339,12 +352,12 @@ const Index = () => {
                   { label: "Resources & Education", href: "/afh-club/afh-resources" },
                 ].map((item) => (
                   <Link key={item.href} to={item.href} className="rpp-ql-link">
-                    <GoldArrow size={14} />
+                    <NavyArrow size={13} />
                     {item.label}
                   </Link>
                 ))}
                 <Link to="/afh-club" className="rpp-ql-view-all">
-                  View AFH Club <Arrow size={13} />
+                  View AFH Club <GoldArrow size={12} />
                 </Link>
               </div>
             </div>
