@@ -203,6 +203,60 @@ const pageStyles = `
     letter-spacing: 0.02em !important;
   }
   .rpp-ql-view-all:hover { opacity: 0.75 !important; }
+
+  /* ── WAYFINDING STRIP ── */
+  .rpp-wf-strip {
+    background-color: #ffffff !important;
+    border-top: 1px solid #e2ddd6 !important;
+    border-bottom: 3px solid #1a2744 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: stretch !important;
+    overflow-x: auto !important;
+  }
+  .rpp-wf-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0.9rem 1.5rem !important;
+    text-decoration: none !important;
+    border-right: 1px solid #e2ddd6 !important;
+    flex: 1 !important;
+    min-width: 160px !important;
+    transition: background-color 0.15s ease !important;
+    white-space: nowrap !important;
+  }
+  .rpp-wf-item:hover { background-color: #f5f2ec !important; }
+  .rpp-wf-item:last-child { border-right: none !important; }
+  .rpp-wf-label {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #1a2744 !important;
+    line-height: 1.2 !important;
+    opacity: 1 !important;
+  }
+  .rpp-wf-cta {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 0.9rem 1.75rem !important;
+    background-color: #1a2744 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    transition: background-color 0.15s ease !important;
+  }
+  .rpp-wf-cta:hover { background-color: #243660 !important; }
+  .rpp-wf-cta-text {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #d4a843 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    opacity: 1 !important;
+  }
 `;
 
 const GoldArrow = ({ size = 13 }: { size?: number }) => (
@@ -284,7 +338,38 @@ const Index = () => {
           </p>
         </div>
 
-        {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
+        {/* ── 3. WAYFINDING STRIP ── */}
+        <div className="rpp-wf-strip">
+          {[
+            { icon: "⚖️", label: "Settling an Estate", href: "/estate-probate-inherited-property" },
+            { icon: "🤝", label: "Helping an Aging Parent", href: "/helping-aging-parents" },
+            { icon: "🏠", label: "Adult Family Homes", href: "/afh-club" },
+            { icon: "👔", label: "Professional Resources", href: "/building-your-trusted-professional-team" },
+          ].map((item) => (
+            <Link key={item.href} to={item.href} className="rpp-wf-item">
+              <span style={{ fontSize: "20px", lineHeight: 1, flexShrink: 0 }}>{item.icon}</span>
+              <span className="rpp-wf-label">{item.label}</span>
+            </Link>
+          ))}
+          <Link to="/afh-club/listings" className="rpp-wf-cta">
+            <span className="rpp-wf-cta-text">Find Your Path</span>
+            <svg
+              viewBox="0 0 24 24"
+              width="14"
+              height="14"
+              fill="none"
+              stroke="#d4a843"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* ── 4. WAYFINDING TILES + AFH CLUB ── */}
         <HomepageFunnel />
 
         {/* ── 4. QUICK LINKS — white background, dark text ── */}
