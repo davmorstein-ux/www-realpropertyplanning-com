@@ -85,7 +85,7 @@ const pageStyles = `
   .rpp-hero-section {
     position: relative !important;
     width: 100% !important;
-    height: 560px !important;
+    height: 600px !important;
     overflow: hidden !important;
     display: block !important;
     margin: 0 !important;
@@ -93,7 +93,7 @@ const pageStyles = `
     background-color: #1a2744 !important;
   }
   @media (max-width: 768px) {
-    .rpp-hero-section { height: 320px !important; }
+    .rpp-hero-section { height: 360px !important; }
   }
   .rpp-hero-section img {
     position: absolute !important;
@@ -331,42 +331,41 @@ const Index = () => {
             />
           </picture>
 
-          {/* White gradient fade over bottom third */}
+          {/* White gradient fade over bottom half — deeper to match cream section below */}
           <div
             style={{
               position: "absolute",
               bottom: 0,
               left: 0,
               right: 0,
-              height: "55%",
+              height: "65%",
               background:
-                "linear-gradient(to bottom, transparent 0%, rgba(245,242,236,0.75) 50%, rgba(245,242,236,0.97) 100%)",
+                "linear-gradient(to bottom, transparent 0%, rgba(245,242,236,0.6) 40%, rgba(245,242,236,1) 100%)",
               pointerEvents: "none",
             }}
           />
 
-          {/* Text overlaid on the lightened area */}
+          {/* Text — raised up from bottom */}
           <div
             style={{
               position: "absolute",
-              bottom: 0,
+              bottom: "3.5rem",
               left: 0,
               right: 0,
-              padding: "1.5rem 3.5rem",
+              padding: "0 3.5rem",
               textAlign: "center",
             }}
           >
             <p
               style={{
                 fontFamily: "Inter, system-ui, sans-serif",
-                fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
+                fontSize: "clamp(1.75rem, 3vw, 2.75rem)",
                 fontWeight: 900,
                 color: "#0f1a30",
-                letterSpacing: "0.16em",
+                letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                margin: "0 0 0.35rem 0",
-                lineHeight: 1.15,
-                textShadow: "0 1px 0 rgba(255,255,255,0.5)",
+                margin: "0 0 0.5rem 0",
+                lineHeight: 1.1,
               }}
             >
               Welcome to Real Property Planning
@@ -374,12 +373,11 @@ const Index = () => {
             <p
               style={{
                 fontFamily: "Inter, system-ui, sans-serif",
-                fontSize: "clamp(0.95rem, 1.4vw, 1.15rem)",
+                fontSize: "clamp(1rem, 1.4vw, 1.2rem)",
                 fontWeight: 600,
                 color: "#1a2744",
                 margin: 0,
                 letterSpacing: "0.05em",
-                textShadow: "0 1px 0 rgba(255,255,255,0.5)",
               }}
             >
               Estate &amp; Probate &nbsp;·&nbsp; Senior Transitions &nbsp;·&nbsp; Adult Family Homes Marketplace
