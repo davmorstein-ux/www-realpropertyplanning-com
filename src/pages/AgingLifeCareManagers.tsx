@@ -17,7 +17,13 @@ const LAURA_BIO = `Silver & Sage Consulting, LLC is led by Laura A. Silverstein,
 
 const FAMILY_FIRST_BIO = `Family First at Home provides personalized care management and in-home support for older adults and families navigating the realities of aging. Their team works closely with clients to assess needs, coordinate services, and advocate for the right level of care — whether that means support at home, help during a medical transition, or guidance toward the right next setting. Family First combines clinical expertise with a deeply personal approach, helping families stay connected and informed through every stage of the journey.`;
 
-const AGING_WISDOM_BIO = `Aging Wisdom has been helping older adults, families, and professionals navigate life changes with clarity and compassion since 2003. Their team provides expert guidance for complex decisions related to aging, care, memory changes, hospitalization, and long-term planning — supporting families facing dementia, care transitions, family conflict, and the challenge of finding the right home or care setting. Nicole Amico Kane, MSW, LICSW, CMC serves as Director of Care Management, bringing deep expertise in private care management, clinical social work, and family consultation to every client relationship.`;
+const AGING_WISDOM_BIO = `Planning for the future and adapting to unexpected health or memory changes gives you and your family a lot to think about. Services are confusing, fragmented, and expensive. Without expert guidance, it's easy to become overwhelmed. We are Aging Life Care™ professionals and Creative Engagement specialists. Since 2003, Aging Wisdom has been helping clients navigate options for living, caring, and aging well. Our team of Aging Life Care Experts brings an unparalleled depth and breadth of knowledge and experience. Our role is often described as coach, educator, stress reducer, navigator, and even life saver.
+
+Nicole Amico Kane, MSW, LICSW, CMC, serves as Director of Care Management. Nicole and our team are passionate about helping you navigate the journey of aging with clarity, making sense of and anticipating changes, and finding the support, resources, and solutions you need. We provide you with tailored information, tools, and expert guidance to make the best decisions.
+
+As Aging Life Care professionals, our work is guided by Standards of Practice and Code of Ethics. We are a non-commission-based model.
+
+Specialties: Care management, consultation, creative engagement, proactive planning, assessment, advocacy, housing and long-term care options, health & disability, and crisis intervention.`;
 
 const AgingLifeCareManagers = () => (
   <div className="min-h-screen bg-background">
@@ -78,7 +84,7 @@ const AgingLifeCareManagers = () => (
               email="inquiries@agingwisdom.com"
               website="https://agingwisdom.com"
               bio={AGING_WISDOM_BIO}
-              specialty="Care management, dementia support, care transitions, family consultation, crisis planning, and long-term planning across the greater Seattle and Bellevue area."
+              specialty="Care management, consultation, creative engagement, proactive planning, assessment, advocacy, housing and long-term care options, health & disability, and crisis intervention."
             />
           </div>
         </div>
