@@ -94,15 +94,17 @@ const HomepageFunnel = () => (
         line-height: 1.2 !important;
         margin: 0 0 0.4rem 0 !important;
         opacity: 1 !important;
+        text-shadow: none !important;
       }
       .rpp-afh-sub {
         font-family: Inter, system-ui, sans-serif !important;
         font-size: 17px !important;
         font-weight: 500 !important;
-        color: #d4f0ee !important;
+        color: #ffffff !important;
         line-height: 1.5 !important;
         margin: 0 !important;
         opacity: 1 !important;
+        text-shadow: none !important;
       }
       .rpp-afh-btn {
         font-family: Inter, system-ui, sans-serif !important;
@@ -211,8 +213,7 @@ const HomepageFunnel = () => (
               width: "auto",
               display: "block",
               flexShrink: 0,
-              background: "transparent",
-              mixBlendMode: "lighten",
+              mixBlendMode: "multiply",
             }}
           />
           <div>
