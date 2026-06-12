@@ -174,6 +174,9 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
       position: "relative",
       overflow: "hidden",
       backgroundColor: "#e4ecec",
+      border: "3px solid #111111",
+      borderRadius: "4px",
+      flexShrink: 0,
     }}
   >
     {photo ? (
@@ -420,7 +423,7 @@ const AFHListings = () => {
                   backgroundColor: WHITE,
                   borderRadius: "10px",
                   border: `1px solid ${GRAY_BORDER}`,
-                  overflow: "hidden",
+                  overflow: "visible",
                   display: "flex",
                   flexDirection: "row",
                 }}
