@@ -8,91 +8,94 @@ const resources = [
 ];
 
 const HomepagePopularResources = () => (
-  <section style={{ backgroundColor: "#ffffff", padding: "4rem 0 4.5rem" }}>
+  <section style={{ backgroundColor: "#ffffff", padding: "3.5rem 0 4rem" }}>
     <style>{`
-      @media (max-width: 900px) { .rpp-resources-grid { grid-template-columns: repeat(2,1fr) !important; } }
-      @media (max-width: 520px)  { .rpp-resources-grid { grid-template-columns: 1fr !important; } }
+      .rpp-pr-eyebrow {
+        font-family: Inter, system-ui, sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.18em !important;
+        text-transform: uppercase !important;
+        color: #b8963e !important;
+        margin: 0 0 0.5rem 0 !important;
+        display: block !important;
+        opacity: 1 !important;
+      }
+      .rpp-pr-heading {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: 2rem !important;
+        font-weight: 700 !important;
+        color: #1a2744 !important;
+        margin: 0 !important;
+        line-height: 1.2 !important;
+        opacity: 1 !important;
+      }
+      .rpp-pr-card {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 1rem !important;
+        background-color: #f5f2ec !important;
+        border: 2px solid #c8c0b0 !important;
+        border-radius: 8px !important;
+        padding: 1.25rem !important;
+        min-height: 90px !important;
+        text-decoration: none !important;
+        transition: border-color 0.15s ease, background-color 0.15s ease !important;
+      }
+      .rpp-pr-card:hover {
+        border-color: #b8963e !important;
+        background-color: #faf8f4 !important;
+      }
+      .rpp-pr-card-text {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        color: #1a2744 !important;
+        line-height: 1.3 !important;
+        opacity: 1 !important;
+      }
+      .rpp-pr-browse {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        font-family: Inter, system-ui, sans-serif !important;
+        font-size: 17px !important;
+        font-weight: 700 !important;
+        color: #1a2744 !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+      }
+      .rpp-pr-browse:hover { color: #b8963e !important; }
+      .rpp-pr-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 1rem !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      @media (max-width: 900px) {
+        .rpp-pr-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      }
+      @media (max-width: 520px) {
+        .rpp-pr-grid { grid-template-columns: 1fr !important; }
+      }
     `}</style>
 
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
       {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-        <p
-          style={{
-            fontFamily: "Inter, system-ui, sans-serif",
-            fontSize: "14px",
-            fontWeight: 700,
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "#b8963e",
-            margin: "0 0 0.75rem",
-          }}
-        >
-          Popular Resources
-        </p>
-        <h2
-          style={{
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontSize: "2.25rem",
-            fontWeight: 600,
-            color: "#1a2744",
-            margin: 0,
-            lineHeight: 1.3,
-          }}
-        >
-          The guides people open most
-        </h2>
+      <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+        <span className="rpp-pr-eyebrow">Popular Resources</span>
+        <h2 className="rpp-pr-heading">The guides people open most</h2>
       </div>
 
       {/* Cards */}
-      <ul
-        className="rpp-resources-grid"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4,1fr)",
-          gap: "1rem",
-          listStyle: "none",
-          margin: 0,
-          padding: 0,
-        }}
-      >
+      <ul className="rpp-pr-grid">
         {resources.map((r) => (
           <li key={r.href}>
-            <Link
-              to={r.href}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: "1rem",
-                backgroundColor: "#f5f2ec",
-                border: "2px solid #c8c0b0",
-                borderRadius: "8px",
-                padding: "1.25rem 1.25rem",
-                minHeight: "90px",
-                textDecoration: "none",
-                transition: "border-color 0.15s ease, background-color 0.15s ease",
-              }}
-              onMouseOver={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#b8963e";
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#faf8f4";
-              }}
-              onMouseOut={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#c8c0b0";
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#f5f2ec";
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "20px",
-                  fontWeight: 600,
-                  color: "#1a2744",
-                  lineHeight: 1.35,
-                }}
-              >
-                {r.title}
-              </span>
+            <Link to={r.href} className="rpp-pr-card">
+              <span className="rpp-pr-card-text">{r.title}</span>
               <svg
                 viewBox="0 0 24 24"
                 width="20"
@@ -113,23 +116,8 @@ const HomepagePopularResources = () => (
       </ul>
 
       {/* Browse all */}
-      <div style={{ textAlign: "center", marginTop: "2.25rem" }}>
-        <Link
-          to="/resources"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "8px",
-            fontFamily: "Inter, system-ui, sans-serif",
-            fontSize: "18px",
-            fontWeight: 700,
-            color: "#1a2744",
-            textDecoration: "none",
-            letterSpacing: "0.02em",
-          }}
-          onMouseOver={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#b8963e")}
-          onMouseOut={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#1a2744")}
-        >
+      <div style={{ textAlign: "center", marginTop: "2rem" }}>
+        <Link to="/resources" className="rpp-pr-browse">
           Browse all resources
           <svg
             viewBox="0 0 24 24"
