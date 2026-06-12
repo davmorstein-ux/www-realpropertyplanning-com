@@ -21,18 +21,27 @@ const resources = [
 
 const HomepagePopularResources = () => (
   <section style={{ backgroundColor: "#ffffff", padding: "4rem 0 4.5rem" }}>
+    <style>{`
+      @media (max-width: 900px) {
+        .rpp-resources-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      }
+      @media (max-width: 520px) {
+        .rpp-resources-grid { grid-template-columns: 1fr !important; }
+      }
+    `}</style>
+
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
       {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: "2.25rem" }}>
+      <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
         <p
           style={{
             fontFamily: "Inter, system-ui, sans-serif",
-            fontSize: "12px",
+            fontSize: "13px",
             fontWeight: 700,
             letterSpacing: "0.18em",
             textTransform: "uppercase",
             color: "#b8963e",
-            margin: "0 0 0.6rem",
+            margin: "0 0 0.75rem",
           }}
         >
           Popular Resources
@@ -40,7 +49,7 @@ const HomepagePopularResources = () => (
         <h2
           style={{
             fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)",
+            fontSize: "2rem",
             fontWeight: 600,
             color: "#1a2744",
             margin: 0,
@@ -51,8 +60,9 @@ const HomepagePopularResources = () => (
         </h2>
       </div>
 
-      {/* Resource links */}
+      {/* Resource cards */}
       <ul
+        className="rpp-resources-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(4, 1fr)",
@@ -72,10 +82,10 @@ const HomepagePopularResources = () => (
                 justifyContent: "space-between",
                 gap: "1rem",
                 backgroundColor: "#f5f2ec",
-                border: "1px solid #e2ddd6",
+                border: "2px solid #e2ddd6",
                 borderRadius: "8px",
-                padding: "1.1rem 1.25rem",
-                minHeight: "80px",
+                padding: "1.25rem 1.25rem",
+                minHeight: "90px",
                 textDecoration: "none",
                 transition: "border-color 0.15s ease, background-color 0.15s ease",
               }}
@@ -91,8 +101,8 @@ const HomepagePopularResources = () => (
               <span
                 style={{
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "clamp(15px, 1.3vw, 18px)",
-                  fontWeight: 500,
+                  fontSize: "19px",
+                  fontWeight: 600,
                   color: "#1a2744",
                   lineHeight: 1.35,
                 }}
@@ -101,11 +111,11 @@ const HomepagePopularResources = () => (
               </span>
               <svg
                 viewBox="0 0 24 24"
-                width="16"
-                height="16"
+                width="18"
+                height="18"
                 fill="none"
                 stroke="#b8963e"
-                strokeWidth="2.2"
+                strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 aria-hidden="true"
@@ -118,34 +128,20 @@ const HomepagePopularResources = () => (
         ))}
       </ul>
 
-      {/* Mobile responsive */}
-      <style>{`
-        @media (max-width: 768px) {
-          #popular-resources-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-        }
-        @media (max-width: 480px) {
-          #popular-resources-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
-
       {/* Browse all */}
-      <div style={{ textAlign: "center", marginTop: "2rem" }}>
+      <div style={{ textAlign: "center", marginTop: "2.25rem" }}>
         <Link
           to="/resources"
           style={{
             display: "inline-flex",
             alignItems: "center",
-            gap: "6px",
+            gap: "8px",
             fontFamily: "Inter, system-ui, sans-serif",
-            fontSize: "15px",
+            fontSize: "17px",
             fontWeight: 600,
             color: "#1a2744",
             textDecoration: "none",
-            letterSpacing: "0.03em",
+            letterSpacing: "0.02em",
             transition: "color 0.15s ease",
           }}
           onMouseOver={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#b8963e")}
@@ -154,8 +150,8 @@ const HomepagePopularResources = () => (
           Browse all resources
           <svg
             viewBox="0 0 24 24"
-            width="14"
-            height="14"
+            width="16"
+            height="16"
             fill="none"
             stroke="currentColor"
             strokeWidth="2.4"
