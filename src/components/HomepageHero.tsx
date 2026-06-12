@@ -1,167 +1,115 @@
-import { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
-import HeroBandTitle from "@/components/HeroBandTitle";
-
-/**
- * Homepage hero — floating island header + full-viewport Pine Ridge photo + trust bar.
- * This component is rendered on `/` only (see src/pages/Index.tsx). The site-wide
- * <Header /> is intentionally still rendered above it; this floating header sits on
- * top of the hero photo as a homepage-only visual treatment.
- */
-type NavChild = { label: string; href: string };
-type NavItem = { label: string; href: string; children?: NavChild[] };
-
-const NAV: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Probate & Estate", href: "/probate-estate-sales" },
-  {
-    label: "Senior Transitions",
-    href: "/senior-transitions",
-    children: [
-      { label: "Senior Transitions", href: "/senior-transitions" },
-      { label: "Downsizing", href: "/sell-house-fund-senior-living" },
-    ],
-  },
-  { label: "Property Valuation", href: "/why-valuation-matters" },
-  {
-    label: "Services",
-    href: "/services",
-    children: [
-      { label: "All Services", href: "/services" },
-      { label: "Probate Sales", href: "/probate-estate-sales" },
-      { label: "Senior & Estate Services", href: "/senior-estate-services" },
-      { label: "Senior Living Advisors", href: "/senior-living-advisors" },
-      { label: "For Executors", href: "/executors" },
-      { label: "How the Process Works", href: "/how-the-process-works" },
-      { label: "Professional Referral Resource", href: "/professional-referral-resource" },
-      { label: "Gray Divorce", href: "/gray-divorce" },
-    ],
-  },
-  { label: "Resources", href: "/resources" },
-
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
+import { useState, useEffect } from "react";
 
 const HomepageHero = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const openMenu = (label: string) => {
-    if (closeTimerRef.current) {
-      clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
-    setOpenDropdown(label);
-  };
-  const scheduleClose = () => {
-    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
-    closeTimerRef.current = setTimeout(() => setOpenDropdown(null), 150);
-  };
-  const { pathname } = useLocation();
+  const [isMobile, setIsMobile] = useState(() => typeof window !== "undefined" && window.innerWidth < 769);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 769);
-    check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  useEffect(() => {
-    setMenuOpen(false);
-    setOpenDropdown(null);
-    setMobileExpanded(null);
-  }, [pathname]);
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setOpenDropdown(null);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  useEffect(() => {
-    const id = "rpp-preview-fonts";
-    if (!document.getElementById(id)) {
-      const link = document.createElement("link");
-      link.id = id;
-      link.rel = "stylesheet";
-      link.href =
-        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap";
-      document.head.appendChild(link);
-    }
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
-  const fontHead = { fontFamily: "'DM Sans', 'DM Sans', sans-serif" };
-
   return (
-    <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F", margin: 0, padding: 0 }}>
+    <section
+      style={{
+        position: "relative",
+        width: "100%",
+        overflow: "hidden",
+        margin: 0,
+        padding: 0,
+      }}
+    >
+      {/* Hero image */}
+      <style>{`
+        @keyframes rppHeroFadeIn { from { opacity: 0 } to { opacity: 1 } }
+        @keyframes rppTextRise {
+          from { opacity: 0; transform: translateY(16px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
 
+      <picture>
+        <source media="(max-width: 768px)" srcSet="/homepage-hero-mobile.webp" type="image/webp" />
+        <source
+          media="(min-width: 769px)"
+          srcSet="/homepage-hero.webp 1440w, /homepage-hero-1280.webp 1280w, /homepage-hero-1920.webp 1920w"
+          sizes="100vw"
+          type="image/webp"
+        />
+        <img
+          src="/homepage-hero.webp"
+          width={1440}
+          height={606}
+          alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign"
+          loading="eager"
+          decoding="async"
+          style={{
+            display: "block",
+            width: "100%",
+            height: "auto",
+            minHeight: isMobile ? 200 : undefined,
+            objectFit: "cover",
+            objectPosition: "left center",
+            opacity: 0,
+            animation: "rppHeroFadeIn 1.2s ease forwards",
+            margin: 0,
+            padding: 0,
+          }}
+          sizes="100vw"
+        />
+      </picture>
 
-      {/* ===== Hero ===== */}
-      <style>{`@keyframes rppHeroFadeIn { from { opacity: 0 } to { opacity: 1 } }`}</style>
-      <section
+      {/* Overlaid headline — bottom-left, short and directional */}
+      <div
         style={{
-          position: "relative",
-          width: "100%",
-          background: "transparent",
-          overflow: "hidden",
-          margin: 0,
-          padding: 0,
+          position: "absolute",
+          bottom: isMobile ? "1.25rem" : "2.5rem",
+          left: isMobile ? "1.25rem" : "4rem",
+          maxWidth: isMobile ? "260px" : "520px",
+          animation: "rppTextRise 1s ease 0.4s both",
         }}
       >
-        <picture>
-          <source
-            media="(max-width: 768px)"
-            srcSet="/homepage-hero-mobile.webp"
-            type="image/webp"
-          />
-          <source
-            media="(min-width: 769px)"
-            srcSet="/homepage-hero.webp 1440w, /homepage-hero-1280.webp 1280w, /homepage-hero-1920.webp 1920w"
-            sizes="100vw"
-            type="image/webp"
-          />
-          <img
-            src="/homepage-hero.webp"
-            width={1440}
-            height={606}
-            alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
-            loading="eager"
-            decoding="async"
-            style={{
-              display: "block",
-              width: "100%",
-              height: "auto",
-              minHeight: isMobile ? 200 : undefined,
-              objectFit: "cover",
-              objectPosition: "left center",
-              background: "transparent",
-              opacity: 0,
-              animation: "rppHeroFadeIn 1.2s ease forwards",
-              margin: 0,
-              padding: 0,
-            }} sizes="100vw"/>
-        </picture>
+        <h1
+          style={{
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontSize: isMobile ? "1.6rem" : "clamp(2rem, 3.5vw, 3rem)",
+            fontWeight: 600,
+            color: "#ffffff",
+            lineHeight: 1.2,
+            margin: 0,
+            textShadow: "0 2px 16px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.3)",
+            letterSpacing: "-0.01em",
+          }}
+        >
+          Where do you need to go?
+        </h1>
+        <p
+          style={{
+            fontFamily: "Inter, system-ui, sans-serif",
+            fontSize: isMobile ? "13px" : "16px",
+            color: "rgba(255,255,255,0.88)",
+            margin: "0.6rem 0 0",
+            textShadow: "0 1px 6px rgba(0,0,0,0.4)",
+            lineHeight: 1.5,
+          }}
+        >
+          Estate &amp; probate · Senior transitions · Adult Family Homes
+        </p>
+      </div>
 
-      </section>
-      <HeroBandTitle as="h1">
-        Welcome to Real Property Planning — Estate &amp; Senior Transitions
-      </HeroBandTitle>
-    </div>
+      {/* Subtle gradient at bottom to blend into tiles below */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "80px",
+          background: "linear-gradient(to bottom, transparent, rgba(245,242,236,0.6))",
+          pointerEvents: "none",
+        }}
+      />
+    </section>
   );
 };
 
