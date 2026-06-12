@@ -413,38 +413,23 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* CENTER: Tagline — desktop only */}
+          {/* CENTER: Tagline — single line, desktop only */}
           {!isMobile && (
-            <div style={{ flex: 1, textAlign: "center", padding: "0 1rem" }}>
+            <div style={{ flex: 1, textAlign: "center", padding: "0 0.5rem" }}>
               <p
                 style={{
                   fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  letterSpacing: "0.12em",
+                  fontSize: "11px",
+                  fontWeight: 500,
+                  letterSpacing: "0.10em",
                   textTransform: "uppercase",
-                  color: "#E8C97A",
+                  color: "rgba(232,201,122,0.85)",
                   margin: 0,
-                  lineHeight: 1.3,
+                  lineHeight: 1,
                   whiteSpace: "nowrap",
                 }}
               >
-                Washington's Resource Hub for
-              </p>
-              <p
-                style={{
-                  fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.88)",
-                  margin: 0,
-                  lineHeight: 1.3,
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Probate, Senior Transitions &amp; Adult Family Homes
+                Washington's Resource Hub for Probate, Senior Transitions &amp; Adult Family Homes
               </p>
             </div>
           )}
