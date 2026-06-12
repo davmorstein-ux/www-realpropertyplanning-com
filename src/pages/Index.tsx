@@ -139,17 +139,19 @@ const pageStyles = `
   }
   .rpp-hero-sub {
     font-family: Inter, system-ui, sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    color: #d4a843 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
     line-height: 1 !important;
     margin: 0 !important;
     padding: 0 !important;
     opacity: 1 !important;
     text-shadow: none !important;
+    text-align: center !important;
+    letter-spacing: 0.04em !important;
   }
   @media (max-width: 768px) {
-    .rpp-hero-sub { font-size: 12px !important; }
+    .rpp-hero-sub { font-size: 14px !important; }
   }
 
   /* ── QUICK LINKS ── */
@@ -330,11 +332,10 @@ const Index = () => {
           </picture>
         </section>
 
-        {/* ── 2. HERO TEXT BAND — slim single line ── */}
-        <div className="rpp-hero-band">
-          <h1 className="rpp-hero-h1">Where do you need to go?</h1>
+        {/* ── 2. HERO TEXT BAND ── */}
+        <div className="rpp-hero-band" style={{ justifyContent: "center" }}>
           <p className="rpp-hero-sub">
-            Estate &amp; probate &nbsp;·&nbsp; Senior transitions &nbsp;·&nbsp; Adult Family Homes
+            Estate &amp; Probate &nbsp;·&nbsp; Senior Transitions &nbsp;·&nbsp; Adult Family Homes Marketplace
           </p>
         </div>
 
