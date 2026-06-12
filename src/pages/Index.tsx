@@ -359,13 +359,14 @@ const Index = () => {
             <p
               style={{
                 fontFamily: "Inter, system-ui, sans-serif",
-                fontSize: "clamp(1rem, 2vw, 1.5rem)",
-                fontWeight: 800,
-                color: "#1a2744",
-                letterSpacing: "0.18em",
+                fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
+                fontWeight: 900,
+                color: "#0f1a30",
+                letterSpacing: "0.16em",
                 textTransform: "uppercase",
-                margin: "0 0 0.25rem 0",
-                lineHeight: 1.2,
+                margin: "0 0 0.35rem 0",
+                lineHeight: 1.15,
+                textShadow: "0 1px 0 rgba(255,255,255,0.5)",
               }}
             >
               Welcome to Real Property Planning
@@ -373,11 +374,12 @@ const Index = () => {
             <p
               style={{
                 fontFamily: "Inter, system-ui, sans-serif",
-                fontSize: "clamp(0.85rem, 1.2vw, 1rem)",
-                fontWeight: 500,
-                color: "#3a4a6b",
+                fontSize: "clamp(0.95rem, 1.4vw, 1.15rem)",
+                fontWeight: 600,
+                color: "#1a2744",
                 margin: 0,
-                letterSpacing: "0.06em",
+                letterSpacing: "0.05em",
+                textShadow: "0 1px 0 rgba(255,255,255,0.5)",
               }}
             >
               Estate &amp; Probate &nbsp;·&nbsp; Senior Transitions &nbsp;·&nbsp; Adult Family Homes Marketplace
