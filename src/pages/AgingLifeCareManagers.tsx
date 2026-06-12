@@ -5,7 +5,19 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import BackToProfessionals from "@/components/BackToProfessionals";
-import FeaturedProviderPlaceholder from "@/components/FeaturedProviderPlaceholder";
+import ProviderTile from "@/components/ProviderTile";
+import lauraPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
+import silverSageLogo from "@/assets/providers/silver-sage-consulting-logo.webp";
+import jennipherPhoto from "@/assets/providers/jennipher-ama-family-first-at-home.webp.asset.json";
+import familyFirstLogo from "@/assets/providers/family-first-at-home-logo.webp.asset.json";
+import nicolePhoto from "@/assets/providers/nicole-aging-wisdom.webp.asset.json";
+import agingWisdomLogo from "@/assets/providers/aging-wisdom-logo.webp.asset.json";
+
+const LAURA_BIO = `Silver & Sage Consulting, LLC is led by Laura A. Silverstein, MSW — an experienced Aging Life Care Manager who guides older adults, adults with disabilities, and their families through complex life transitions. Laura provides advocacy, comprehensive assessments, ongoing care management, consultation, and crisis intervention, and helps families navigate placement decisions with clarity and compassion. Her work centers on helping clients live as safely and independently as possible while giving families the information, referrals, and support they need to make confident decisions.`;
+
+const FAMILY_FIRST_BIO = `Family First at Home provides personalized care management and in-home support for older adults and families navigating the realities of aging. Their team works closely with clients to assess needs, coordinate services, and advocate for the right level of care — whether that means support at home, help during a medical transition, or guidance toward the right next setting. Family First combines clinical expertise with a deeply personal approach, helping families stay connected and informed through every stage of the journey.`;
+
+const AGING_WISDOM_BIO = `Aging Wisdom has been helping older adults, families, and professionals navigate life changes with clarity and compassion since 2003. Their team provides expert guidance for complex decisions related to aging, care, memory changes, hospitalization, and long-term planning — supporting families facing dementia, care transitions, family conflict, and the challenge of finding the right home or care setting. Nicole Amico Kane, MSW, LICSW, CMC serves as Director of Care Management, bringing deep expertise in private care management, clinical social work, and family consultation to every client relationship.`;
 
 const AgingLifeCareManagers = () => (
   <div className="min-h-screen bg-background">
@@ -24,10 +36,52 @@ const AgingLifeCareManagers = () => (
     <main id="main-content">
       <HeroBandTitle as="h1">Aging Life Care Managers</HeroBandTitle>
 
-      <FeaturedProviderPlaceholder
-        heading="Featured Aging Life Care Manager — Coming Soon"
-        altLabel="featured aging life care manager"
-      />
+      {/* Featured providers */}
+      <section className="py-10 md:py-14 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 items-stretch">
+            <ProviderTile
+              name="Laura A. Silverstein, MSW"
+              title="Aging Life Care Manager"
+              company="Silver & Sage Consulting, LLC"
+              photo={lauraPhoto}
+              photoAlt="Photo of Laura A. Silverstein, MSW — Aging Life Care Manager at Silver & Sage Consulting"
+              logo={silverSageLogo}
+              logoAlt="Silver & Sage Consulting logo"
+              website="https://www.silverandsageconsulting.com"
+              bio={LAURA_BIO}
+              specialty="Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information/referral, and placement."
+            />
+
+            <ProviderTile
+              name="Nicole Amico Kane"
+              company="Family First at Home"
+              photo={jennipherPhoto.url}
+              photoAlt="Photo of provider at Family First at Home"
+              logo={familyFirstLogo.url}
+              logoAlt="Family First at Home logo"
+              website="https://www.familyfirstathome.com"
+              bio={FAMILY_FIRST_BIO}
+              specialty="Personalized care management and in-home support for older adults and families across Washington."
+            />
+
+            <ProviderTile
+              name="Nicole Amico Kane, MSW, LICSW, CMC"
+              title="Director of Care Management, Certified Care Manager"
+              company="Aging Wisdom"
+              photo={nicolePhoto.url}
+              photoAlt="Photo of Nicole Amico Kane, MSW, LICSW, CMC — Director of Care Management at Aging Wisdom"
+              logo={agingWisdomLogo.url}
+              logoAlt="Aging Wisdom logo"
+              phone="(206) 456-5155"
+              email="inquiries@agingwisdom.com"
+              website="https://agingwisdom.com"
+              bio={AGING_WISDOM_BIO}
+              specialty="Care management, dementia support, care transitions, family consultation, crisis planning, and long-term planning across the greater Seattle and Bellevue area."
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Explanatory content */}
       <section className="py-10 md:py-14 bg-background">
