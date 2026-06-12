@@ -371,9 +371,9 @@ const Index = () => {
               }
               .rpp-hero-tagline {
                 font-family: Inter, system-ui, sans-serif !important;
-                font-size: 20px !important;
+                font-size: 22px !important;
                 font-weight: 600 !important;
-                color: #1a2744 !important;
+                color: #1a5fa8 !important;
                 margin: 0 !important;
                 letter-spacing: 0.05em !important;
                 display: block !important;
@@ -381,7 +381,7 @@ const Index = () => {
               }
               @media (max-width: 768px) {
                 .rpp-hero-welcome { font-size: 22px !important; }
-                .rpp-hero-tagline { font-size: 14px !important; }
+                .rpp-hero-tagline { font-size: 15px !important; }
               }
             `}</style>
             <span className="rpp-hero-welcome">Welcome to Real Property Planning</span>
