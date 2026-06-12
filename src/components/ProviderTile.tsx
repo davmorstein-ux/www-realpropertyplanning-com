@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface ProviderTileProps {
   name: string;
@@ -46,6 +46,7 @@ export default function ProviderTile({
   const [hovered, setHovered] = useState(false);
   const [visible, setVisible] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
 
   const handleEnter = () => {
     if (!bio) return;
@@ -62,10 +63,34 @@ export default function ProviderTile({
     }, 150);
   };
 
+  // Robust dismissal: while hovered, watch the document pointer and close
+  // as soon as it leaves the tile's bounding rect. Guards against missed
+  // mouseleave events caused by interior elements, fast pointer movement,
+  // or portaled overlays.
+  useEffect(() => {
+    if (!hovered || !bio) return;
+    const onMove = (e: MouseEvent) => {
+      const el = wrapperRef.current;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const inside =
+        e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+      if (!inside) handleLeave();
+    };
+    const onLeaveWindow = () => handleLeave();
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseleave", onLeaveWindow);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseleave", onLeaveWindow);
+    };
+  }, [hovered, bio]);
+
   const hasTwoPeople = !!(photo2 && name2);
 
   return (
     <div
+      ref={wrapperRef}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
       style={{
