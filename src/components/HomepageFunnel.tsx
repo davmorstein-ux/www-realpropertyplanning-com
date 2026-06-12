@@ -127,12 +127,12 @@ const HomepageFunnel = () => (
         background-color: #f8fafa !important;
         border: 2px solid #1a2744 !important;
         border-radius: 10px !important;
-        padding: 1.5rem 2rem !important;
+        padding: 1rem 1.5rem !important;
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
-        gap: 2rem !important;
-        flex-wrap: wrap !important;
+        gap: 1.5rem !important;
+        flex-wrap: nowrap !important;
         box-shadow: 0 1px 6px rgba(0,0,0,0.06) !important;
         transition: transform 0.2s ease, box-shadow 0.2s ease !important;
         cursor: pointer !important;
@@ -205,12 +205,12 @@ const HomepageFunnel = () => (
 
       {/* AFH Club — full width feature tile */}
       <a href="/afh-club" className="rpp-afh-tile">
-        <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "nowrap", flex: 1, minWidth: 0 }}>
           <img
             src="/afh-club-badge.png"
             alt="AFH Club"
             style={{
-              height: "110px",
+              height: "130px",
               width: "auto",
               display: "block",
               flexShrink: 0,
