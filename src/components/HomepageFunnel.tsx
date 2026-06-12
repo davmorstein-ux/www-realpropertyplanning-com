@@ -10,7 +10,7 @@ const tiles = [
     imgAlt: "Older couple reviewing an estate plan together at home",
     title: "I Want to Plan Ahead",
     href: "/planning-before-a-crisis",
-    bgColor: "#2e7d6e", // warm emerald
+    bgColor: "#8b2e2e", // warm red
   },
   {
     imgSrc: tileHelping,
@@ -92,7 +92,7 @@ const HomepageFunnel = () => (
         font-weight: 800 !important;
         color: #1a5c58 !important;
         line-height: 1.2 !important;
-        margin: 0 0 0.4rem 0 !important;
+        margin: 0 0 0.2rem 0 !important;
         opacity: 1 !important;
         text-shadow: none !important;
       }
@@ -127,11 +127,11 @@ const HomepageFunnel = () => (
         background-color: #f8fafa !important;
         border: 2px solid #1a2744 !important;
         border-radius: 10px !important;
-        padding: 1rem 1.5rem !important;
+        padding: 0.6rem 1.25rem 0.6rem 0.75rem !important;
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
-        gap: 1.5rem !important;
+        gap: 1rem !important;
         flex-wrap: nowrap !important;
         box-shadow: 0 1px 6px rgba(0,0,0,0.06) !important;
         transition: transform 0.2s ease, box-shadow 0.2s ease !important;
@@ -210,7 +210,7 @@ const HomepageFunnel = () => (
             src="/afh-club-badge.png"
             alt="AFH Club"
             style={{
-              height: "130px",
+              height: "80px",
               width: "auto",
               display: "block",
               flexShrink: 0,
