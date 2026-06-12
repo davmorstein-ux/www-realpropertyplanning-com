@@ -85,7 +85,7 @@ const pageStyles = `
   .rpp-hero-section {
     position: relative !important;
     width: 100% !important;
-    height: 500px !important;
+    height: 560px !important;
     overflow: hidden !important;
     display: block !important;
     margin: 0 !important;
@@ -93,7 +93,7 @@ const pageStyles = `
     background-color: #1a2744 !important;
   }
   @media (max-width: 768px) {
-    .rpp-hero-section { height: 260px !important; }
+    .rpp-hero-section { height: 320px !important; }
   }
   .rpp-hero-section img {
     position: absolute !important;
@@ -310,7 +310,7 @@ const Index = () => {
       />
       <Header />
       <main id="main-content">
-        {/* ── 1. HERO IMAGE ── */}
+        {/* ── 1. HERO IMAGE with text overlaid on lightened bottom ── */}
         <section className="rpp-hero-section">
           <picture>
             <source media="(max-width: 768px)" srcSet="/homepage-hero-mobile.webp" type="image/webp" />
@@ -330,14 +330,60 @@ const Index = () => {
               sizes="100vw"
             />
           </picture>
-        </section>
 
-        {/* ── 2. HERO TEXT BAND ── */}
-        <div className="rpp-hero-band" style={{ justifyContent: "center" }}>
-          <p className="rpp-hero-sub">
-            Estate &amp; Probate &nbsp;·&nbsp; Senior Transitions &nbsp;·&nbsp; Adult Family Homes Marketplace
-          </p>
-        </div>
+          {/* White gradient fade over bottom third */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: "55%",
+              background:
+                "linear-gradient(to bottom, transparent 0%, rgba(245,242,236,0.75) 50%, rgba(245,242,236,0.97) 100%)",
+              pointerEvents: "none",
+            }}
+          />
+
+          {/* Text overlaid on the lightened area */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              padding: "1.5rem 3.5rem",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "Inter, system-ui, sans-serif",
+                fontSize: "clamp(1rem, 2vw, 1.5rem)",
+                fontWeight: 800,
+                color: "#1a2744",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                margin: "0 0 0.25rem 0",
+                lineHeight: 1.2,
+              }}
+            >
+              Welcome to Real Property Planning
+            </p>
+            <p
+              style={{
+                fontFamily: "Inter, system-ui, sans-serif",
+                fontSize: "clamp(0.85rem, 1.2vw, 1rem)",
+                fontWeight: 500,
+                color: "#3a4a6b",
+                margin: 0,
+                letterSpacing: "0.06em",
+              }}
+            >
+              Estate &amp; Probate &nbsp;·&nbsp; Senior Transitions &nbsp;·&nbsp; Adult Family Homes Marketplace
+            </p>
+          </div>
+        </section>
 
         {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
         <HomepageFunnel />
