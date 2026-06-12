@@ -413,26 +413,7 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* CENTER: Tagline — single line, desktop only */}
-          {!isMobile && (
-            <div style={{ flex: 1, textAlign: "center", padding: "0 0.5rem" }}>
-              <p
-                style={{
-                  fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                  fontSize: "11px",
-                  fontWeight: 500,
-                  letterSpacing: "0.10em",
-                  textTransform: "uppercase",
-                  color: "rgba(232,201,122,0.85)",
-                  margin: 0,
-                  lineHeight: 1,
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Washington's Resource Hub for Probate, Senior Transitions &amp; Adult Family Homes
-              </p>
-            </div>
-          )}
+          {/* Tagline removed */}
 
           {/* RIGHT: top links + CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0 }}>
