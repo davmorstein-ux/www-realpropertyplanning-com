@@ -75,7 +75,7 @@ const TOP_LINKS = [
   { label: "AFH Club", href: "/afh-club" },
   { label: "Contact", href: "/contact" },
 ];
-// Flyout submenu that appears to the right of a dropdown item
+
 function FlyoutMenu({ items, visible }: { items: { label: string; href: string }[]; visible: boolean }) {
   return (
     <div
@@ -133,7 +133,6 @@ function FlyoutMenu({ items, visible }: { items: { label: string; href: string }
   );
 }
 
-// A single dropdown item that may have a flyout
 function DropdownItem({
   sub,
   pathname,
@@ -178,7 +177,6 @@ function DropdownItem({
     );
   }
 
-  // Item with flyout — styled identically to regular items
   const flyoutItemStyle: React.CSSProperties = {
     display: "flex",
     alignItems: "center",
@@ -213,7 +211,6 @@ function DropdownItem({
     >
       <Link to={sub.href} style={flyoutItemStyle}>
         {sub.label}
-        {/* Right-arrow indicator */}
         <svg
           width="9"
           height="9"
@@ -281,7 +278,6 @@ function NavItem({ item, pathname }: { item: (typeof TOP_LINKS)[0]; pathname: st
         </svg>
       </Link>
 
-      {/* Dropdown */}
       <div
         style={{
           position: "absolute",
@@ -301,7 +297,6 @@ function NavItem({ item, pathname }: { item: (typeof TOP_LINKS)[0]; pathname: st
           boxShadow: "0 16px 48px rgba(0,0,0,0.4)",
         }}
       >
-        {/* Small arrow pointer */}
         <div
           style={{
             position: "absolute",
@@ -317,7 +312,6 @@ function NavItem({ item, pathname }: { item: (typeof TOP_LINKS)[0]; pathname: st
             rotate: "45deg",
           }}
         />
-
         {item.items.map((sub) => (
           <DropdownItem key={sub.href} sub={sub} pathname={pathname} />
         ))}
@@ -419,10 +413,45 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* RIGHT: top links + CTA */}
-          <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22 }}>
-            {!isMobile && TOP_LINKS.map((item) => <NavItem key={item.href} item={item} pathname={pathname} />)}
+          {/* CENTER: Tagline — desktop only */}
+          {!isMobile && (
+            <div style={{ flex: 1, textAlign: "center", padding: "0 1rem" }}>
+              <p
+                style={{
+                  fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                  fontSize: "12px",
+                  fontWeight: 600,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#E8C97A",
+                  margin: 0,
+                  lineHeight: 1.3,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Washington's Resource Hub for
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                  fontSize: "12px",
+                  fontWeight: 600,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.88)",
+                  margin: 0,
+                  lineHeight: 1.3,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Probate, Senior Transitions &amp; Adult Family Homes
+              </p>
+            </div>
+          )}
 
+          {/* RIGHT: top links + CTA */}
+          <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0 }}>
+            {!isMobile && TOP_LINKS.map((item) => <NavItem key={item.href} item={item} pathname={pathname} />)}
             <a
               href="tel:2069003015"
               style={{
