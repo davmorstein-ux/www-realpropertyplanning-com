@@ -1,170 +1,103 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-const resources = [
-  {
-    title: "Washington Executor's 10-Step Checklist",
-    href: "/resources/washington-executors-10-step-checklist",
-  },
-  {
-    title: "How Probate Real Estate Works",
-    href: "/guides/how-probate-real-estate-works",
-  },
-  {
-    title: "Senior Housing & Care Options",
-    href: "/understanding-housing-care-options",
-  },
-  {
-    title: "What to Do With an Inherited House",
-    href: "/guides/inherited-house-washington",
-  },
-];
+const HomepageHero = () => {
+  const [isMobile, setIsMobile] = useState(() => typeof window !== "undefined" && window.innerWidth < 769);
 
-const HomepagePopularResources = () => (
-  <section style={{ backgroundColor: "#ffffff", padding: "4rem 0 4.5rem" }}>
-    <style>{`
-      @media (max-width: 900px) {
-        .rpp-resources-grid { grid-template-columns: repeat(2, 1fr) !important; }
-      }
-      @media (max-width: 520px) {
-        .rpp-resources-grid { grid-template-columns: 1fr !important; }
-      }
-    `}</style>
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 769);
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
-      {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+  const heroHeight = isMobile ? "260px" : "520px";
+
+  return (
+    <section
+      style={{
+        position: "relative",
+        width: "100%",
+        height: heroHeight,
+        minHeight: heroHeight,
+        overflow: "hidden",
+        display: "block",
+        margin: 0,
+        padding: 0,
+        backgroundColor: "#1a2744",
+      }}
+    >
+      {/* Image fills the container absolutely — cannot collapse */}
+      <picture>
+        <source media="(max-width: 768px)" srcSet="/homepage-hero-mobile.webp" type="image/webp" />
+        <source
+          media="(min-width: 769px)"
+          srcSet="/homepage-hero.webp 1440w, /homepage-hero-1280.webp 1280w, /homepage-hero-1920.webp 1920w"
+          sizes="100vw"
+          type="image/webp"
+        />
+        <img
+          src="/homepage-hero.webp"
+          width={1440}
+          height={606}
+          alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign"
+          loading="eager"
+          decoding="async"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "left center",
+            display: "block",
+            margin: 0,
+            padding: 0,
+          }}
+          sizes="100vw"
+        />
+      </picture>
+
+      {/* Dark scrim panel — guaranteed readable text */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: isMobile ? "1.25rem" : "2.5rem",
+          left: isMobile ? "1rem" : "3.5rem",
+          maxWidth: isMobile ? "260px" : "500px",
+          backgroundColor: "rgba(0,0,0,0.65)",
+          borderRadius: "8px",
+          padding: isMobile ? "1rem 1.25rem" : "1.5rem 2rem",
+          zIndex: 2,
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontSize: isMobile ? "2rem" : "2.75rem",
+            fontWeight: 600,
+            color: "#ffffff",
+            lineHeight: 1.15,
+            margin: "0 0 0.5rem",
+            letterSpacing: "-0.01em",
+          }}
+        >
+          Where do you need to go?
+        </h1>
         <p
           style={{
             fontFamily: "Inter, system-ui, sans-serif",
-            fontSize: "13px",
-            fontWeight: 700,
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "#b8963e",
-            margin: "0 0 0.75rem",
-          }}
-        >
-          Popular Resources
-        </p>
-        <h2
-          style={{
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontSize: "2rem",
-            fontWeight: 600,
-            color: "#1a2744",
+            fontSize: isMobile ? "16px" : "18px",
+            color: "#f0ece4",
             margin: 0,
-            lineHeight: 1.3,
+            lineHeight: 1.55,
+            fontWeight: 400,
           }}
         >
-          The guides people open most
-        </h2>
+          Estate &amp; probate · Senior transitions · Adult Family Homes
+        </p>
       </div>
+    </section>
+  );
+};
 
-      {/* Resource cards */}
-      <ul
-        className="rpp-resources-grid"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: "1rem",
-          listStyle: "none",
-          margin: 0,
-          padding: 0,
-        }}
-      >
-        {resources.map((r) => (
-          <li key={r.href}>
-            <Link
-              to={r.href}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: "1rem",
-                backgroundColor: "#f5f2ec",
-                border: "2px solid #e2ddd6",
-                borderRadius: "8px",
-                padding: "1.25rem 1.25rem",
-                minHeight: "90px",
-                textDecoration: "none",
-                transition: "border-color 0.15s ease, background-color 0.15s ease",
-              }}
-              onMouseOver={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#b8963e";
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#faf8f4";
-              }}
-              onMouseOut={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#e2ddd6";
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#f5f2ec";
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "19px",
-                  fontWeight: 600,
-                  color: "#1a2744",
-                  lineHeight: 1.35,
-                }}
-              >
-                {r.title}
-              </span>
-              <svg
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="#b8963e"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-                style={{ flexShrink: 0 }}
-              >
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </Link>
-          </li>
-        ))}
-      </ul>
-
-      {/* Browse all */}
-      <div style={{ textAlign: "center", marginTop: "2.25rem" }}>
-        <Link
-          to="/resources"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "8px",
-            fontFamily: "Inter, system-ui, sans-serif",
-            fontSize: "17px",
-            fontWeight: 600,
-            color: "#1a2744",
-            textDecoration: "none",
-            letterSpacing: "0.02em",
-            transition: "color 0.15s ease",
-          }}
-          onMouseOver={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#b8963e")}
-          onMouseOut={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#1a2744")}
-        >
-          Browse all resources
-          <svg
-            viewBox="0 0 24 24"
-            width="16"
-            height="16"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </Link>
-      </div>
-    </div>
-  </section>
-);
-
-export default HomepagePopularResources;
+export default HomepageHero;
