@@ -55,6 +55,7 @@ const AgingLifeCareManagers = () => (
 
             <ProviderTile
               name="Nicole Amico Kane"
+              title="Care Manager"
               company="Family First at Home"
               photo={jennipherPhoto.url}
               photoAlt="Photo of provider at Family First at Home"
