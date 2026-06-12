@@ -54,6 +54,8 @@ const AgingLifeCareManagers = () => (
               photoAlt="Photo of Laura A. Silverstein, MSW — Aging Life Care Manager at Silver & Sage Consulting"
               logo={silverSageLogo}
               logoAlt="Silver & Sage Consulting logo"
+              phone="(206) 327-0344"
+              email="laura@silverandsageconsulting.com"
               website="https://www.silverandsageconsulting.com"
               bio={LAURA_BIO}
               specialty="Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information/referral, and placement."
@@ -67,6 +69,8 @@ const AgingLifeCareManagers = () => (
               photoAlt="Photo of provider at Family First at Home"
               logo={familyFirstLogo.url}
               logoAlt="Family First at Home logo"
+              phone="(425) 454-0404"
+              email="nicole@familyfirstathome.com"
               website="https://www.familyfirstathome.com"
               bio={FAMILY_FIRST_BIO}
               specialty="Personalized care management and in-home support for older adults and families across Washington."
