@@ -206,12 +206,19 @@ const HomepageFunnel = () => (
           <img
             src="/afh-club-badge.png"
             alt="AFH Club"
-            style={{ height: "80px", width: "auto", display: "block", flexShrink: 0 }}
+            style={{
+              height: "80px",
+              width: "auto",
+              display: "block",
+              flexShrink: 0,
+              background: "transparent",
+              mixBlendMode: "lighten",
+            }}
           />
           <div>
-            <p className="rpp-afh-title">Adult Family Home Club</p>
+            <p className="rpp-afh-title">AFH Club</p>
             <p className="rpp-afh-sub">
-              Listings, resources, management companies &amp; real estate services — Washington's AFH network.
+              The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
             </p>
           </div>
         </div>
