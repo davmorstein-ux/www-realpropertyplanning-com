@@ -356,32 +356,38 @@ const Index = () => {
               textAlign: "center",
             }}
           >
-            <p
-              style={{
-                fontFamily: "Inter, system-ui, sans-serif",
-                fontSize: "clamp(1.75rem, 3vw, 2.75rem)",
-                fontWeight: 900,
-                color: "#0f1a30",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                margin: "0 0 0.5rem 0",
-                lineHeight: 1.1,
-              }}
-            >
-              Welcome to Real Property Planning
-            </p>
-            <p
-              style={{
-                fontFamily: "Inter, system-ui, sans-serif",
-                fontSize: "clamp(1rem, 1.4vw, 1.2rem)",
-                fontWeight: 600,
-                color: "#1a2744",
-                margin: 0,
-                letterSpacing: "0.05em",
-              }}
-            >
+            <style>{`
+              .rpp-hero-welcome {
+                font-family: Inter, system-ui, sans-serif !important;
+                font-size: 42px !important;
+                font-weight: 900 !important;
+                color: #0f1a30 !important;
+                letter-spacing: 0.12em !important;
+                text-transform: uppercase !important;
+                margin: 0 0 0.5rem 0 !important;
+                line-height: 1.1 !important;
+                display: block !important;
+                opacity: 1 !important;
+              }
+              .rpp-hero-tagline {
+                font-family: Inter, system-ui, sans-serif !important;
+                font-size: 20px !important;
+                font-weight: 600 !important;
+                color: #1a2744 !important;
+                margin: 0 !important;
+                letter-spacing: 0.05em !important;
+                display: block !important;
+                opacity: 1 !important;
+              }
+              @media (max-width: 768px) {
+                .rpp-hero-welcome { font-size: 22px !important; }
+                .rpp-hero-tagline { font-size: 14px !important; }
+              }
+            `}</style>
+            <span className="rpp-hero-welcome">Welcome to Real Property Planning</span>
+            <span className="rpp-hero-tagline">
               Estate &amp; Probate &nbsp;·&nbsp; Senior Transitions &nbsp;·&nbsp; Adult Family Homes Marketplace
-            </p>
+            </span>
           </div>
         </section>
 
