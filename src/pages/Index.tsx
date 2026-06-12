@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema, organizationSchema } from "@/lib/schema";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFunnel from "@/components/HomepageFunnel";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
@@ -96,6 +97,208 @@ const homepageFaqJsonLd = `{
   ]
 }`;
 
+/* ─────────────────────────────────────────────
+   QUICK LINKS BAND — inlined here so no new
+   file is needed in Lovable
+───────────────────────────────────────────── */
+const qlStyles = `
+  .rpp-ql-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  @media (max-width: 900px) {
+    .rpp-ql-grid { grid-template-columns: 1fr !important; }
+  }
+  .rpp-ql-col-heading {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    color: #d4a843 !important;
+    margin: 0 0 1.25rem 0 !important;
+    padding-bottom: 0.75rem !important;
+    border-bottom: 1px solid rgba(212,168,67,0.35) !important;
+    display: block !important;
+  }
+  .rpp-ql-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    color: #e8e4dc !important;
+    text-decoration: none !important;
+    padding: 0.6rem 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+    transition: color 0.15s ease !important;
+  }
+  .rpp-ql-link:last-of-type { border-bottom: none !important; }
+  .rpp-ql-link:hover { color: #d4a843 !important; }
+  .rpp-ql-view-all {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #d4a843 !important;
+    text-decoration: none !important;
+    margin-top: 1.25rem !important;
+    transition: opacity 0.15s ease !important;
+  }
+  .rpp-ql-view-all:hover { opacity: 0.75 !important; }
+`;
+
+const QuickLinksSection = () => (
+  <section style={{ backgroundColor: "#1a2744", padding: "3.5rem 0" }}>
+    <style>{qlStyles}</style>
+    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
+      <div className="rpp-ql-grid">
+        {/* Column 1 — Featured Resources */}
+        <div>
+          <span className="rpp-ql-col-heading">Featured Resources</span>
+          {[
+            { label: "Washington Executor's Checklist", href: "/resources/washington-executors-10-step-checklist" },
+            { label: "Senior Housing Guide", href: "/understanding-housing-care-options" },
+            { label: "Adult Family Home Resources", href: "/afh-club/afh-resources" },
+            { label: "Probate Real Estate Guide", href: "/guides/how-probate-real-estate-works" },
+            { label: "Estate Sale Planning Guide", href: "/guides/inherited-house-washington" },
+          ].map((item) => (
+            <Link key={item.href} to={item.href} className="rpp-ql-link">
+              <svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="none"
+                stroke="#d4a843"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+              {item.label}
+            </Link>
+          ))}
+          <Link to="/resources" className="rpp-ql-view-all">
+            View all resources
+            <svg
+              viewBox="0 0 24 24"
+              width="13"
+              height="13"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Column 2 — Find a Professional */}
+        <div>
+          <span className="rpp-ql-col-heading">Find a Professional</span>
+          {[
+            { label: "Elder Law Attorneys", href: "/elder-law-attorneys" },
+            { label: "CPAs & Tax Advisors", href: "/cpas-tax-advisors" },
+            { label: "Financial Planners", href: "/financial-planners" },
+            { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
+            { label: "Senior Living Advisors", href: "/senior-living-advisors" },
+            { label: "More Professionals", href: "/building-your-trusted-professional-team" },
+          ].map((item) => (
+            <Link key={item.href} to={item.href} className="rpp-ql-link">
+              <svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="none"
+                stroke="#d4a843"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+              {item.label}
+            </Link>
+          ))}
+          <Link to="/building-your-trusted-professional-team" className="rpp-ql-view-all">
+            Search directory
+            <svg
+              viewBox="0 0 24 24"
+              width="13"
+              height="13"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Column 3 — AFH Opportunities */}
+        <div>
+          <span className="rpp-ql-col-heading">AFH Opportunities</span>
+          {[
+            { label: "AFHs for Sale — Current Listings", href: "/afh-club/listings" },
+            { label: "Buyers Seeking AFHs", href: "/afh-club/afh-resources" },
+            { label: "Management Companies", href: "/afh-club/management-companies" },
+            { label: "Resources & Education", href: "/afh-club/afh-resources" },
+          ].map((item) => (
+            <Link key={item.href} to={item.href} className="rpp-ql-link">
+              <svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="none"
+                stroke="#d4a843"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+              {item.label}
+            </Link>
+          ))}
+          <Link to="/afh-club" className="rpp-ql-view-all">
+            View AFH Club
+            <svg
+              viewBox="0 0 24 24"
+              width="13"
+              height="13"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────
+   PAGE
+───────────────────────────────────────────── */
 const Index = () => {
   return (
     <div className="min-h-screen bg-cream">
@@ -113,10 +316,13 @@ const Index = () => {
         {/* 1. HERO */}
         <HomepageHero />
 
-        {/* 2. WAYFINDING TILES */}
+        {/* 2. WAYFINDING TILES + AFH CLUB FEATURE */}
         <HomepageFunnel />
 
-        {/* 3. POPULAR RESOURCES */}
+        {/* 3. QUICK LINKS — 3-column navy band, inlined above */}
+        <QuickLinksSection />
+
+        {/* 4. POPULAR RESOURCES */}
         <HomepagePopularResources />
 
         {/* SEO description */}
