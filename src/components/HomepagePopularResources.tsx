@@ -20,71 +20,152 @@ const resources = [
 ];
 
 const HomepagePopularResources = () => (
-  <section className="bg-background py-16 md:py-20">
-    <div className="container px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10">
-          <p
-            className="text-gold mb-3"
-            style={{
-              fontSize: "13px",
-              fontWeight: 600,
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-            }}
-          >
-            Popular Resources
-          </p>
-          <h2
-            className="font-serif text-navy"
-            style={{ fontSize: "clamp(22px, 2.2vw, 30px)", fontWeight: 500, lineHeight: 1.3 }}
-          >
-            The guides people open most
-          </h2>
-        </div>
+  <section style={{ backgroundColor: "#ffffff", padding: "4rem 0 4.5rem" }}>
+    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
+      {/* Header */}
+      <div style={{ textAlign: "center", marginBottom: "2.25rem" }}>
+        <p
+          style={{
+            fontFamily: "Inter, system-ui, sans-serif",
+            fontSize: "12px",
+            fontWeight: 700,
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "#b8963e",
+            margin: "0 0 0.6rem",
+          }}
+        >
+          Popular Resources
+        </p>
+        <h2
+          style={{
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)",
+            fontWeight: 600,
+            color: "#1a2744",
+            margin: 0,
+            lineHeight: 1.3,
+          }}
+        >
+          The guides people open most
+        </h2>
+      </div>
 
-        <ul className="grid gap-4" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
-          {resources.map((r) => (
-            <li key={r.href}>
-              <Link
-                to={r.href}
-                className="group flex items-center justify-between gap-4 rounded-lg border border-border bg-cream px-5 py-4 transition-colors hover:border-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                style={{ minHeight: "80px", display: "flex", alignItems: "center", width: "100%" }}
+      {/* Resource links */}
+      <ul
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 1fr)",
+          gap: "1rem",
+          listStyle: "none",
+          margin: 0,
+          padding: 0,
+        }}
+      >
+        {resources.map((r) => (
+          <li key={r.href}>
+            <Link
+              to={r.href}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: "1rem",
+                backgroundColor: "#f5f2ec",
+                border: "1px solid #e2ddd6",
+                borderRadius: "8px",
+                padding: "1.1rem 1.25rem",
+                minHeight: "80px",
+                textDecoration: "none",
+                transition: "border-color 0.15s ease, background-color 0.15s ease",
+              }}
+              onMouseOver={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#b8963e";
+                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#faf8f4";
+              }}
+              onMouseOut={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#e2ddd6";
+                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#f5f2ec";
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontSize: "clamp(15px, 1.3vw, 18px)",
+                  fontWeight: 500,
+                  color: "#1a2744",
+                  lineHeight: 1.35,
+                }}
               >
-                <span className="font-serif text-navy" style={{ fontSize: "18px", fontWeight: 500, lineHeight: 1.35 }}>
-                  {r.title}
-                </span>
-                <svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                  className="shrink-0 text-gold transition-transform group-hover:translate-x-1"
-                >
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </Link>
-            </li>
-          ))}
-        </ul>
+                {r.title}
+              </span>
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="#b8963e"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+                style={{ flexShrink: 0 }}
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </Link>
+          </li>
+        ))}
+      </ul>
 
-        <div className="text-center mt-10">
-          <Link
-            to="/resources"
-            className="inline-flex items-center gap-2 text-navy font-semibold hover:text-gold transition-colors"
-            style={{ fontSize: "16px", letterSpacing: "0.04em" }}
+      {/* Mobile responsive */}
+      <style>{`
+        @media (max-width: 768px) {
+          #popular-resources-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 480px) {
+          #popular-resources-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+
+      {/* Browse all */}
+      <div style={{ textAlign: "center", marginTop: "2rem" }}>
+        <Link
+          to="/resources"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "6px",
+            fontFamily: "Inter, system-ui, sans-serif",
+            fontSize: "15px",
+            fontWeight: 600,
+            color: "#1a2744",
+            textDecoration: "none",
+            letterSpacing: "0.03em",
+            transition: "color 0.15s ease",
+          }}
+          onMouseOver={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#b8963e")}
+          onMouseOut={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "#1a2744")}
+        >
+          Browse all resources
+          <svg
+            viewBox="0 0 24 24"
+            width="14"
+            height="14"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
           >
-            Browse all resources
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </Link>
-        </div>
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </Link>
       </div>
     </div>
   </section>
