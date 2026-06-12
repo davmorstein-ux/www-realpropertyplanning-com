@@ -10,144 +10,286 @@ import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washingto
 
 const Footer = () => {
   return (
-    <footer data-nosnippet="true" className="rpp-footer bg-navy-dark py-14 md:py-16">
+    <footer data-nosnippet="true" style={{ backgroundColor: "#1c1f26", padding: "2.5rem 0 1.5rem" }}>
       <style>{`
-        .rpp-footer, .rpp-footer p, .rpp-footer a, .rpp-footer li, .rpp-footer span, .rpp-footer ul {
-          font-size: 12px !important;
-          line-height: 1.6 !important;
+        .rpp-footer-link {
+          color: rgba(255,255,255,0.72) !important;
+          text-decoration: none !important;
+          font-family: Inter, system-ui, sans-serif !important;
+          font-size: 14px !important;
+          line-height: 1.4 !important;
+          transition: color 0.15s ease !important;
+          display: block !important;
+          padding: 2px 0 !important;
         }
-        .rpp-footer h1, .rpp-footer h2, .rpp-footer h3, .rpp-footer h4 {
-          font-size: 13px !important;
+        .rpp-footer-link:hover { color: #d4a843 !important; }
+        .rpp-footer-col-heading {
+          font-family: Inter, system-ui, sans-serif !important;
+          font-size: 11px !important;
           font-weight: 700 !important;
-          line-height: 1.6 !important;
+          letter-spacing: 0.14em !important;
+          text-transform: uppercase !important;
+          color: #d4a843 !important;
+          margin: 0 0 0.6rem 0 !important;
+          padding-bottom: 0.4rem !important;
+          border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+          display: block !important;
         }
-        .rpp-footer li { margin-bottom: 4px !important; padding-top: 0 !important; padding-bottom: 0 !important; }
-        .rpp-footer ul { margin-top: 0 !important; }
-        .rpp-footer .rpp-footer-email { word-break: break-all !important; }
-        @media (min-width: 768px) {
-          .rpp-footer-cols {
-            display: flex !important;
-            flex-direction: row !important;
-            justify-content: space-evenly !important;
-            align-items: flex-start !important;
-            gap: 2rem !important;
-          }
-          .rpp-footer-cols > * { flex: 0 1 auto !important; min-width: 0 !important; max-width: 100% !important; }
+        .rpp-footer-grid {
+          display: grid !important;
+          grid-template-columns: 2fr 2fr 1.5fr 1fr !important;
+          gap: 2rem !important;
+          margin-bottom: 2rem !important;
+        }
+        @media (max-width: 900px) {
+          .rpp-footer-grid { grid-template-columns: 1fr 1fr !important; }
+        }
+        @media (max-width: 520px) {
+          .rpp-footer-grid { grid-template-columns: 1fr !important; }
+        }
+        .rpp-footer-nap {
+          font-family: Inter, system-ui, sans-serif !important;
+          font-size: 13px !important;
+          color: rgba(255,255,255,0.65) !important;
+          display: flex !important;
+          align-items: center !important;
+          gap: 8px !important;
+          padding: 3px 0 !important;
+          text-decoration: none !important;
+          transition: color 0.15s ease !important;
+        }
+        .rpp-footer-nap:hover { color: #d4a843 !important; }
+        .rpp-footer-disclaimer {
+          font-family: Inter, system-ui, sans-serif !important;
+          font-size: 11px !important;
+          color: rgba(255,255,255,0.38) !important;
+          line-height: 1.6 !important;
+          text-align: center !important;
+          max-width: 820px !important;
+          margin: 0 auto 0.4rem auto !important;
         }
       `}</style>
-      <div className="container px-6 lg:px-10">
-        {/* Compact link grid — wider Guided Journeys column so links never clip */}
-        <div className="rpp-footer-cols grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 mb-12 text-left">
 
-          {/* Brand & NAP — 3/12 */}
-          <div className="lg:col-span-3">
-            <Link to="/" className="block mb-2.5">
-              <span className="font-serif text-primary-foreground" style={{ fontSize: '22px', fontWeight: '700', letterSpacing: '0.5px' }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
+        {/* Main columns */}
+        <div className="rpp-footer-grid">
+          {/* Brand & NAP */}
+          <div>
+            <Link to="/" style={{ display: "block", marginBottom: "0.5rem" }}>
+              <span
+                style={{
+                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontSize: "18px",
+                  fontWeight: 700,
+                  color: "#ffffff",
+                  letterSpacing: "0.02em",
+                }}
+              >
                 Real Property Planning
               </span>
             </Link>
-            <p className="text-primary-foreground text-[16px] leading-[1.7] mb-5 max-w-[320px]">
+            <p
+              style={{
+                fontFamily: "Inter, system-ui, sans-serif",
+                fontSize: "13px",
+                color: "rgba(255,255,255,0.55)",
+                lineHeight: 1.5,
+                margin: "0 0 0.75rem",
+                maxWidth: "260px",
+              }}
+            >
               Probate, estate &amp; senior transition real estate — Washington State.
             </p>
-            <ul className="flex flex-col gap-2.5 text-[16px] text-left">
-              <li>
-                <a href="tel:2069003015" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 leading-tight">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={1024} height={1536} />
-                  <span>(206) 900-3015</span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 break-all leading-tight">
-                  <img src={iconEmail3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={128} height={128} />
-                  <span className="rpp-footer-email">info@realpropertyplanning.com</span>
-                </a>
-              </li>
-
-              <li className="text-primary-foreground flex items-start gap-3.5 leading-snug">
-                <img src={iconPin3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain mt-0.5 shrink-0" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={512} height={512} />
-                <span>PO Box 1462, Woodinville, WA 98072</span>
-              </li>
-            </ul>
+            <a href="tel:2069003015" className="rpp-footer-nap">
+              <img
+                src={iconPhone3d}
+                alt=""
+                aria-hidden="true"
+                style={{ width: 20, height: 20, objectFit: "contain", flexShrink: 0 }}
+                loading="lazy"
+                decoding="async"
+                width={1024}
+                height={1536}
+              />
+              (206) 900-3015
+            </a>
+            <a href="mailto:info@realpropertyplanning.com" className="rpp-footer-nap">
+              <img
+                src={iconEmail3d}
+                alt=""
+                aria-hidden="true"
+                style={{ width: 20, height: 20, objectFit: "contain", flexShrink: 0 }}
+                loading="lazy"
+                decoding="async"
+                width={128}
+                height={128}
+              />
+              info@realpropertyplanning.com
+            </a>
+            <div className="rpp-footer-nap">
+              <img
+                src={iconPin3d}
+                alt=""
+                aria-hidden="true"
+                style={{ width: 20, height: 20, objectFit: "contain", flexShrink: 0 }}
+                loading="lazy"
+                decoding="async"
+                width={512}
+                height={512}
+              />
+              PO Box 1462, Woodinville, WA 98072
+            </div>
           </div>
 
-          {/* Guided Journeys — 4/12 */}
-          <div className="lg:col-span-4 min-w-0">
-            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-3">Guided Journeys</h3>
-            <ul className="space-y-1.5 text-primary-foreground text-[16px] leading-snug">
-              <li><Link to="/helping-aging-parents" className="hover:text-gold transition-colors break-words">Helping an Aging Parent</Link></li>
-              <li><Link to="/estate-probate-inherited-property" className="hover:text-gold transition-colors break-words">Estate &amp; Probate</Link></li>
-              <li><Link to="/what-to-do-with-the-house" className="hover:text-gold transition-colors break-words">What To Do With the House</Link></li>
-              <li><Link to="/understanding-housing-care-options" className="hover:text-gold transition-colors break-words">Housing &amp; Care Options</Link></li>
-              <li><Link to="/executor-responsibilities-first-steps" className="hover:text-gold transition-colors break-words">Executor First Steps</Link></li>
-              <li><Link to="/estate-planning-powers-of-attorney" className="hover:text-gold transition-colors break-words">Estate Planning &amp; POA</Link></li>
-            </ul>
+          {/* Guided Journeys */}
+          <div>
+            <span className="rpp-footer-col-heading">Guided Journeys</span>
+            <Link to="/helping-aging-parents" className="rpp-footer-link">
+              Helping an Aging Parent
+            </Link>
+            <Link to="/estate-probate-inherited-property" className="rpp-footer-link">
+              Estate &amp; Probate
+            </Link>
+            <Link to="/what-to-do-with-the-house" className="rpp-footer-link">
+              What To Do With the House
+            </Link>
+            <Link to="/understanding-housing-care-options" className="rpp-footer-link">
+              Housing &amp; Care Options
+            </Link>
+            <Link to="/executor-responsibilities-first-steps" className="rpp-footer-link">
+              Executor First Steps
+            </Link>
+            <Link to="/estate-planning-powers-of-attorney" className="rpp-footer-link">
+              Estate Planning &amp; POA
+            </Link>
           </div>
 
-          {/* Services — 3/12 */}
-          <div className="lg:col-span-3 min-w-0">
-            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-3">Services</h3>
-            <ul className="space-y-1.5 text-primary-foreground text-[16px] leading-snug">
-              <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors break-words">Probate &amp; Estate Sales</Link></li>
-              <li><Link to="/senior-transitions" className="hover:text-gold transition-colors break-words">Senior Transitions</Link></li>
-              <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors break-words">Valuation &amp; Pricing</Link></li>
-              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors break-words">For Attorneys</Link></li>
-              <li><Link to="/guides-and-resources" className="hover:text-gold transition-colors break-words">Guides &amp; Resources</Link></li>
-            </ul>
+          {/* Services */}
+          <div>
+            <span className="rpp-footer-col-heading">Services</span>
+            <Link to="/probate-estate-sales" className="rpp-footer-link">
+              Probate &amp; Estate Sales
+            </Link>
+            <Link to="/senior-transitions" className="rpp-footer-link">
+              Senior Transitions
+            </Link>
+            <Link to="/why-valuation-matters" className="rpp-footer-link">
+              Valuation &amp; Pricing
+            </Link>
+            <Link to="/for-attorneys" className="rpp-footer-link">
+              For Attorneys
+            </Link>
+            <Link to="/guides-and-resources" className="rpp-footer-link">
+              Guides &amp; Resources
+            </Link>
           </div>
 
-          {/* About — 2/12 */}
-          <div className="lg:col-span-2 min-w-0">
-            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-3">About</h3>
-            <ul className="space-y-1.5 text-primary-foreground text-[16px] leading-snug">
-              <li><Link to="/about" className="hover:text-gold transition-colors">About</Link></li>
-              <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
-              <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
-              <li><Link to="/counties" className="hover:text-gold transition-colors">Service Areas</Link></li>
-              <li><Link to="/faq" className="hover:text-gold transition-colors">FAQs</Link></li>
-              <li><Link to="/disclaimer" className="hover:text-gold transition-colors">Disclaimer</Link></li>
-              <li><Link to="/search" className="hover:text-gold transition-colors">Site Map</Link></li>
-            </ul>
+          {/* About */}
+          <div>
+            <span className="rpp-footer-col-heading">About</span>
+            <Link to="/about" className="rpp-footer-link">
+              About
+            </Link>
+            <Link to="/how-we-work" className="rpp-footer-link">
+              How We Work
+            </Link>
+            <Link to="/contact" className="rpp-footer-link">
+              Contact
+            </Link>
+            <Link to="/counties" className="rpp-footer-link">
+              Service Areas
+            </Link>
+            <Link to="/faq" className="rpp-footer-link">
+              FAQs
+            </Link>
+            <Link to="/disclaimer" className="rpp-footer-link">
+              Disclaimer
+            </Link>
+            <Link to="/search" className="rpp-footer-link">
+              Site Map
+            </Link>
           </div>
         </div>
 
-        {/* Affiliations — quieter row */}
-        <div className="border-t border-primary-foreground/30 pt-10 mb-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-[820px] mx-auto items-center">
-            <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
-              <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="object-contain max-h-[72px] w-auto" loading="lazy" sizes="100vw" decoding="async" width={1185} height={819} />
-            </a>
-            <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
-              <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="object-contain max-h-[72px] w-auto" loading="lazy" sizes="100vw" decoding="async" width={864} height={265} />
-            </a>
-            <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
-              <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="object-contain max-h-[88px] w-auto" loading="lazy" sizes="100vw" decoding="async" width={423} height={512} />
-            </a>
-            <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
-              <img src={kccLogo} alt="Friends of King County Collaborative Law" className="object-contain max-h-[72px] w-auto" loading="lazy" sizes="100vw" decoding="async" width={496} height={101} />
-            </a>
-          </div>
+        {/* Affiliations */}
+        <div
+          style={{
+            borderTop: "1px solid rgba(255,255,255,0.08)",
+            paddingTop: "1.5rem",
+            marginBottom: "1.5rem",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "2.5rem",
+            flexWrap: "wrap",
+          }}
+        >
+          <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
+            <img
+              src={alcaLogo}
+              alt="Aging Life Care Association Corporate Partner"
+              style={{ maxHeight: 52, width: "auto", objectFit: "contain" }}
+              loading="lazy"
+              decoding="async"
+              width={1185}
+              height={819}
+            />
+          </a>
+          <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
+            <img
+              src={naepcLogo}
+              alt="National Association of Estate Planners & Councils"
+              style={{ maxHeight: 52, width: "auto", objectFit: "contain" }}
+              loading="lazy"
+              decoding="async"
+              width={864}
+              height={265}
+            />
+          </a>
+          <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
+            <img
+              src={naosaBadge}
+              alt="National Association of Senior Advocates"
+              style={{ maxHeight: 64, width: "auto", objectFit: "contain" }}
+              loading="lazy"
+              decoding="async"
+              width={423}
+              height={512}
+            />
+          </a>
+          <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer">
+            <img
+              src={kccLogo}
+              alt="Friends of King County Collaborative Law"
+              style={{ maxHeight: 52, width: "auto", objectFit: "contain" }}
+              loading="lazy"
+              decoding="async"
+              width={496}
+              height={101}
+            />
+          </a>
         </div>
 
-        {/* Compliance & disclaimer — single compact block */}
-        <div className="border-t border-primary-foreground pt-6 text-center" data-nosnippet="true">
-          <p className="text-primary-foreground text-base leading-relaxed max-w-3xl mx-auto mb-3">
-            Real Property Planning — independent hub for probate, estate, and senior transition real estate in Washington State. Real Property Planning is not a law firm or tax advisor. For legal, tax, or probate-specific advice, consult a qualified professional.
-          </p>
-          <p className="text-primary-foreground text-base leading-relaxed max-w-3xl mx-auto mb-3">
-            Real Property Planning is an independent educational hub. It does not provide legal, financial, tax, real estate brokerage, medical, or other professional services through this website. Professionals and companies referenced on this site are independent and are not employees, partners, members, or affiliates of Real Property Planning. Read the full{" "}
-            <Link to="/disclaimer" className="underline underline-offset-2 hover:text-gold transition-colors">
-              disclaimer
+        {/* Disclaimer — compact */}
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "1rem" }}>
+          <p className="rpp-footer-disclaimer">
+            Real Property Planning is an independent educational hub. It does not provide legal, financial, tax, real
+            estate brokerage, medical, or other professional services. Professionals referenced on this site are
+            independent and not affiliated with Real Property Planning.{" "}
+            <Link to="/disclaimer" style={{ color: "rgba(255,255,255,0.45)", textDecoration: "underline" }}>
+              Full disclaimer
             </Link>
             .
           </p>
-          <p className="text-primary-foreground text-base leading-relaxed max-w-2xl mx-auto mb-3">
-            Accessibility questions or concerns:{" "}
-            <a href="mailto:info@realpropertyplanning.com" className="underline underline-offset-2 hover:text-gold transition-colors">
+          <p className="rpp-footer-disclaimer">
+            Accessibility:{" "}
+            <a
+              href="mailto:info@realpropertyplanning.com"
+              style={{ color: "rgba(255,255,255,0.38)", textDecoration: "underline" }}
+            >
               info@realpropertyplanning.com
             </a>
-          </p>
-          <p className="text-primary-foreground text-base">
-            © {new Date().getFullYear()} Real Property Planning
+            &nbsp;·&nbsp; © {new Date().getFullYear()} Real Property Planning
           </p>
         </div>
       </div>
