@@ -68,7 +68,7 @@ const HomepageFunnel = () => (
       }
       .rpp-eyebrow {
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 13px !important;
+        font-size: 18px !important;
         font-weight: 700 !important;
         letter-spacing: 0.18em !important;
         text-transform: uppercase !important;
