@@ -1,5 +1,7 @@
 import React from "react";
 import { Phone, Mail, MapPin, Bed, Bath, Square, Home } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const TEAL = "#1a7a78";
 const TEAL_MID = "#2a9d9a";
@@ -275,320 +277,324 @@ const AFHListings = () => {
         fontFamily: "Inter, system-ui, sans-serif",
       }}
     >
-      {/* ── HEADER ── */}
-      <div
-        style={{
-          backgroundColor: WHITE,
-          borderBottom: `1px solid ${GRAY_BORDER}`,
-          padding: "2rem 1.5rem",
-        }}
-      >
-        <div style={{ maxWidth: "920px", margin: "0 auto" }}>
-          {/* Top row: back button left, badge right */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginBottom: "1.5rem",
-            }}
-          >
-            <BackButton />
-            <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
-              <img
-                src="/afh-club-badge.png"
-                alt="AFH Club"
-                style={{ height: "160px", width: "auto", display: "block" }}
-              />
-            </a>
-          </div>
-
-          {/* Pill */}
-          <div style={{ marginBottom: "0.75rem" }}>
-            <span
+      <Header />
+      <main id="main-content" style={{ paddingTop: "80px" }}>
+        {/* ── HEADER ── */}
+        <div
+          style={{
+            backgroundColor: WHITE,
+            borderBottom: `1px solid ${GRAY_BORDER}`,
+            padding: "2rem 1.5rem",
+          }}
+        >
+          <div style={{ maxWidth: "920px", margin: "0 auto" }}>
+            {/* Top row: back button left, badge right */}
+            <div
               style={{
-                display: "inline-flex",
+                display: "flex",
                 alignItems: "center",
-                gap: "6px",
-                backgroundColor: "#f0f0f0",
-                color: "#8b1a1a",
-                fontSize: "11px",
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                padding: "4px 12px",
-                borderRadius: "100px",
-                border: "1px solid #d0c0c0",
+                justifyContent: "space-between",
+                marginBottom: "1.5rem",
               }}
             >
+              <BackButton />
+              <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
+                <img
+                  src="/afh-club-badge.png"
+                  alt="AFH Club"
+                  style={{ height: "160px", width: "auto", display: "block" }}
+                />
+              </a>
+            </div>
+
+            {/* Pill */}
+            <div style={{ marginBottom: "0.75rem" }}>
               <span
                 style={{
-                  width: "6px",
-                  height: "6px",
-                  borderRadius: "50%",
-                  backgroundColor: "#8b1a1a",
-                  display: "inline-block",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  backgroundColor: "#f0f0f0",
+                  color: "#8b1a1a",
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "4px 12px",
+                  borderRadius: "100px",
+                  border: "1px solid #d0c0c0",
                 }}
-              />
-              AFH Club · Active Listings
-            </span>
+              >
+                <span
+                  style={{
+                    width: "6px",
+                    height: "6px",
+                    borderRadius: "50%",
+                    backgroundColor: "#8b1a1a",
+                    display: "inline-block",
+                  }}
+                />
+                AFH Club · Active Listings
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h1
+              style={{
+                fontSize: "clamp(1.6rem, 3.5vw, 2.1rem)",
+                fontWeight: 700,
+                color: SLATE,
+                margin: "0 0 0.6rem",
+                letterSpacing: "-0.02em",
+                lineHeight: 1.2,
+              }}
+            >
+              Adult Family Home Properties
+            </h1>
+
+            {/* Subtext */}
+            <p
+              style={{
+                fontSize: "15px",
+                color: GRAY_TEXT,
+                lineHeight: 1.7,
+                margin: "0 0 1.5rem",
+                maxWidth: "560px",
+              }}
+            >
+              Licensed Adult Family Home properties currently available for sale in the Puget Sound region. Contact
+              David Stein for showings or additional information on any listing.
+            </p>
+
+            {/* Stats bar */}
+            <div
+              style={{
+                display: "flex",
+                gap: "2rem",
+                flexWrap: "wrap",
+                padding: "1rem 1.25rem",
+                backgroundColor: "#f0f0f0",
+                borderRadius: "8px",
+                border: "1px solid #d8d8d8",
+              }}
+            >
+              {[
+                { label: "Active listings", value: "8" },
+                { label: "Locations", value: "Edmonds · Kirkland · Lynnwood" },
+                { label: "Price range", value: "$1.45M – $2.43M" },
+                { label: "Updated", value: "June 2026" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div
+                    style={{
+                      fontSize: "11px",
+                      fontWeight: 600,
+                      letterSpacing: "0.06em",
+                      textTransform: "uppercase",
+                      color: "#8b1a1a",
+                      marginBottom: "2px",
+                    }}
+                  >
+                    {stat.label}
+                  </div>
+                  <div style={{ fontSize: "14px", fontWeight: 600, color: SLATE }}>{stat.value}</div>
+                </div>
+              ))}
+            </div>
           </div>
+        </div>
 
-          {/* Heading */}
-          <h1
-            style={{
-              fontSize: "clamp(1.6rem, 3.5vw, 2.1rem)",
-              fontWeight: 700,
-              color: SLATE,
-              margin: "0 0 0.6rem",
-              letterSpacing: "-0.02em",
-              lineHeight: 1.2,
-            }}
-          >
-            Adult Family Home Properties
-          </h1>
+        {/* ── LISTINGS ── */}
+        <div
+          style={{
+            maxWidth: "920px",
+            margin: "0 auto",
+            padding: "2rem 1.5rem 1rem",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            {listings.map((listing, index) => (
+              <div
+                key={listing.id}
+                style={{
+                  backgroundColor: WHITE,
+                  borderRadius: "10px",
+                  border: `1px solid ${GRAY_BORDER}`,
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "row",
+                }}
+              >
+                <PhotoPanel photo={listing.photo} index={index} total={listings.length} />
 
-          {/* Subtext */}
-          <p
-            style={{
-              fontSize: "15px",
-              color: GRAY_TEXT,
-              lineHeight: 1.7,
-              margin: "0 0 1.5rem",
-              maxWidth: "560px",
-            }}
-          >
-            Licensed Adult Family Home properties currently available for sale in the Puget Sound region. Contact David
-            Stein for showings or additional information on any listing.
-          </p>
-
-          {/* Stats bar */}
-          <div
-            style={{
-              display: "flex",
-              gap: "2rem",
-              flexWrap: "wrap",
-              padding: "1rem 1.25rem",
-              backgroundColor: "#f0f0f0",
-              borderRadius: "8px",
-              border: "1px solid #d8d8d8",
-            }}
-          >
-            {[
-              { label: "Active listings", value: "8" },
-              { label: "Locations", value: "Edmonds · Kirkland · Lynnwood" },
-              { label: "Price range", value: "$1.45M – $2.43M" },
-              { label: "Updated", value: "June 2026" },
-            ].map((stat) => (
-              <div key={stat.label}>
                 <div
                   style={{
-                    fontSize: "11px",
-                    fontWeight: 600,
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                    color: "#8b1a1a",
-                    marginBottom: "2px",
+                    flex: 1,
+                    padding: "1.25rem 1.5rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.75rem",
                   }}
                 >
-                  {stat.label}
+                  {/* Address + price */}
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "flex-start",
+                      gap: "1rem",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <div>
+                      <h2
+                        style={{
+                          fontSize: "1.05rem",
+                          fontWeight: 700,
+                          color: SLATE,
+                          margin: "0 0 4px",
+                          letterSpacing: "-0.01em",
+                          lineHeight: 1.25,
+                        }}
+                      >
+                        {listing.address}
+                      </h2>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "4px",
+                          fontSize: "13px",
+                          color: GRAY_TEXT,
+                        }}
+                      >
+                        <MapPin size={12} style={{ color: TEAL_MID }} />
+                        {listing.city}, {listing.state}
+                      </div>
+                    </div>
+                    <div style={{ textAlign: "right" }}>
+                      <div
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: 700,
+                          color: TEAL,
+                          letterSpacing: "-0.02em",
+                          lineHeight: 1,
+                        }}
+                      >
+                        {listing.price}
+                      </div>
+                      <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
+                        Asking price · MLS# {listing.mlsNum}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Stat pills */}
+                  <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                    <StatPill icon={<Bed size={13} />} value={String(listing.beds)} label="beds" />
+                    <StatPill
+                      icon={<Bath size={13} />}
+                      value={listing.bathDisplay}
+                      label={`baths (${listing.bathDetail})`}
+                    />
+                    <StatPill icon={<Square size={13} />} value={listing.sqft} label="sq ft" />
+                  </div>
+
+                  <div style={{ height: "1px", backgroundColor: GRAY_BORDER }} />
+
+                  {/* CTAs */}
+                  <div style={{ display: "flex", gap: "8px", alignItems: "center", flexWrap: "wrap" }}>
+                    <a
+                      href="tel:+12069003015"
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "6px",
+                        backgroundColor: TEAL,
+                        color: WHITE,
+                        fontSize: "13px",
+                        fontWeight: 600,
+                        padding: "8px 16px",
+                        borderRadius: "6px",
+                        textDecoration: "none",
+                        letterSpacing: "0.02em",
+                      }}
+                    >
+                      <Phone size={13} />
+                      (206) 900-3015
+                    </a>
+                    <a
+                      href="mailto:dave.stein@exprealty.com"
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "6px",
+                        backgroundColor: "transparent",
+                        color: TEAL,
+                        fontSize: "13px",
+                        fontWeight: 600,
+                        padding: "8px 16px",
+                        borderRadius: "6px",
+                        border: `1px solid ${TEAL}55`,
+                        textDecoration: "none",
+                      }}
+                    >
+                      <Mail size={13} />
+                      Email inquiry
+                    </a>
+                  </div>
+
+                  {/* Broker compliance */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "6px",
+                      paddingTop: "4px",
+                      fontSize: "11px",
+                      color: GRAY_TEXT,
+                      borderTop: `1px solid ${GRAY_BORDER}`,
+                    }}
+                  >
+                    <span style={{ fontWeight: 600, color: SLATE }}>Listing broker:</span>
+                    <span>
+                      {listing.broker} · {listing.brokerage}
+                    </span>
+                    <span style={{ marginLeft: "auto", opacity: 0.6 }}>NWMLS</span>
+                  </div>
                 </div>
-                <div style={{ fontSize: "14px", fontWeight: 600, color: SLATE }}>{stat.value}</div>
               </div>
             ))}
           </div>
+
+          {/* ── DISCLAIMER ── */}
+          <div
+            style={{
+              marginTop: "2.5rem",
+              padding: "1.25rem",
+              backgroundColor: WHITE,
+              borderRadius: "8px",
+              border: `1px solid ${GRAY_BORDER}`,
+              fontSize: "11.5px",
+              color: GRAY_TEXT,
+              lineHeight: 1.75,
+              textAlign: "center",
+            }}
+          >
+            Listings sourced from NWMLS. Information deemed reliable but not guaranteed. Real Property Planning is an
+            independent educational hub and does not represent buyers or sellers on these properties directly — contact
+            David Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #113972), for all inquiries,
+            showings, and full listing details.
+          </div>
+
+          {/* ── SECOND BACK BUTTON ── */}
+          <div style={{ marginTop: "2rem", paddingBottom: "2.5rem" }}>
+            <BackButton />
+          </div>
         </div>
-      </div>
-
-      {/* ── LISTINGS ── */}
-      <div
-        style={{
-          maxWidth: "920px",
-          margin: "0 auto",
-          padding: "2rem 1.5rem 1rem",
-        }}
-      >
-        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          {listings.map((listing, index) => (
-            <div
-              key={listing.id}
-              style={{
-                backgroundColor: WHITE,
-                borderRadius: "10px",
-                border: `1px solid ${GRAY_BORDER}`,
-                overflow: "hidden",
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <PhotoPanel photo={listing.photo} index={index} total={listings.length} />
-
-              <div
-                style={{
-                  flex: 1,
-                  padding: "1.25rem 1.5rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0.75rem",
-                }}
-              >
-                {/* Address + price */}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    gap: "1rem",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <div>
-                    <h2
-                      style={{
-                        fontSize: "1.05rem",
-                        fontWeight: 700,
-                        color: SLATE,
-                        margin: "0 0 4px",
-                        letterSpacing: "-0.01em",
-                        lineHeight: 1.25,
-                      }}
-                    >
-                      {listing.address}
-                    </h2>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "4px",
-                        fontSize: "13px",
-                        color: GRAY_TEXT,
-                      }}
-                    >
-                      <MapPin size={12} style={{ color: TEAL_MID }} />
-                      {listing.city}, {listing.state}
-                    </div>
-                  </div>
-                  <div style={{ textAlign: "right" }}>
-                    <div
-                      style={{
-                        fontSize: "1.4rem",
-                        fontWeight: 700,
-                        color: TEAL,
-                        letterSpacing: "-0.02em",
-                        lineHeight: 1,
-                      }}
-                    >
-                      {listing.price}
-                    </div>
-                    <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
-                      Asking price · MLS# {listing.mlsNum}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Stat pills */}
-                <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                  <StatPill icon={<Bed size={13} />} value={String(listing.beds)} label="beds" />
-                  <StatPill
-                    icon={<Bath size={13} />}
-                    value={listing.bathDisplay}
-                    label={`baths (${listing.bathDetail})`}
-                  />
-                  <StatPill icon={<Square size={13} />} value={listing.sqft} label="sq ft" />
-                </div>
-
-                <div style={{ height: "1px", backgroundColor: GRAY_BORDER }} />
-
-                {/* CTAs */}
-                <div style={{ display: "flex", gap: "8px", alignItems: "center", flexWrap: "wrap" }}>
-                  <a
-                    href="tel:+12069003015"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "6px",
-                      backgroundColor: TEAL,
-                      color: WHITE,
-                      fontSize: "13px",
-                      fontWeight: 600,
-                      padding: "8px 16px",
-                      borderRadius: "6px",
-                      textDecoration: "none",
-                      letterSpacing: "0.02em",
-                    }}
-                  >
-                    <Phone size={13} />
-                    (206) 900-3015
-                  </a>
-                  <a
-                    href="mailto:dave.stein@exprealty.com"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "6px",
-                      backgroundColor: "transparent",
-                      color: TEAL,
-                      fontSize: "13px",
-                      fontWeight: 600,
-                      padding: "8px 16px",
-                      borderRadius: "6px",
-                      border: `1px solid ${TEAL}55`,
-                      textDecoration: "none",
-                    }}
-                  >
-                    <Mail size={13} />
-                    Email inquiry
-                  </a>
-                </div>
-
-                {/* Broker compliance */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "6px",
-                    paddingTop: "4px",
-                    fontSize: "11px",
-                    color: GRAY_TEXT,
-                    borderTop: `1px solid ${GRAY_BORDER}`,
-                  }}
-                >
-                  <span style={{ fontWeight: 600, color: SLATE }}>Listing broker:</span>
-                  <span>
-                    {listing.broker} · {listing.brokerage}
-                  </span>
-                  <span style={{ marginLeft: "auto", opacity: 0.6 }}>NWMLS</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* ── DISCLAIMER ── */}
-        <div
-          style={{
-            marginTop: "2.5rem",
-            padding: "1.25rem",
-            backgroundColor: WHITE,
-            borderRadius: "8px",
-            border: `1px solid ${GRAY_BORDER}`,
-            fontSize: "11.5px",
-            color: GRAY_TEXT,
-            lineHeight: 1.75,
-            textAlign: "center",
-          }}
-        >
-          Listings sourced from NWMLS. Information deemed reliable but not guaranteed. Real Property Planning is an
-          independent educational hub and does not represent buyers or sellers on these properties directly — contact
-          David Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #113972), for all inquiries,
-          showings, and full listing details.
-        </div>
-
-        {/* ── SECOND BACK BUTTON ── */}
-        <div style={{ marginTop: "2rem", paddingBottom: "2.5rem" }}>
-          <BackButton />
-        </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 };
