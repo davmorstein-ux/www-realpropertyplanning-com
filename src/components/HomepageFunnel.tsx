@@ -36,19 +36,28 @@ const tiles = [
 ];
 
 const HomepageFunnel = () => (
-  <section id="guided-entry" style={{ backgroundColor: "#f5f2ec", padding: "3rem 0 4rem" }}>
+  <section id="guided-entry" style={{ backgroundColor: "#f5f2ec", padding: "3.5rem 0 4.5rem" }}>
+    <style>{`
+      @media (max-width: 900px) {
+        .rpp-funnel-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      }
+      @media (max-width: 520px) {
+        .rpp-funnel-grid { grid-template-columns: 1fr !important; }
+      }
+    `}</style>
+
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
-      {/* Section label — short, terminal-style */}
-      <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+      {/* Section header */}
+      <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
         <p
           style={{
             fontFamily: "Inter, system-ui, sans-serif",
-            fontSize: "12px",
+            fontSize: "13px",
             fontWeight: 700,
             letterSpacing: "0.18em",
             textTransform: "uppercase",
             color: "#b8963e",
-            margin: "0 0 0.6rem",
+            margin: "0 0 0.75rem",
           }}
         >
           Choose your path
@@ -56,7 +65,7 @@ const HomepageFunnel = () => (
         <h2
           style={{
             fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
+            fontSize: "2rem",
             fontWeight: 600,
             color: "#1a2744",
             margin: 0,
@@ -68,8 +77,9 @@ const HomepageFunnel = () => (
         </h2>
       </div>
 
-      {/* Tiles */}
+      {/* Tiles grid */}
       <div
+        className="rpp-funnel-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(4, 1fr)",
@@ -85,10 +95,11 @@ const HomepageFunnel = () => (
                 boxShadow: "0 2px 12px rgba(0,0,0,0.09)",
                 transition: "transform 0.2s ease, box-shadow 0.2s ease",
                 cursor: "pointer",
+                height: "100%",
               }}
               onMouseOver={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)";
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 24px rgba(0,0,0,0.14)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 10px 28px rgba(0,0,0,0.15)";
               }}
               onMouseOut={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
@@ -96,38 +107,36 @@ const HomepageFunnel = () => (
               }}
             >
               {/* Photo */}
-              <div style={{ position: "relative", overflow: "hidden" }}>
-                <img
-                  src={imgSrc}
-                  alt={imgAlt}
-                  loading="lazy"
-                  decoding="async"
-                  style={{
-                    display: "block",
-                    width: "100%",
-                    height: "180px",
-                    objectFit: "cover",
-                    transition: "transform 0.35s ease",
-                  }}
-                />
-              </div>
+              <img
+                src={imgSrc}
+                alt={imgAlt}
+                loading="lazy"
+                decoding="async"
+                style={{
+                  display: "block",
+                  width: "100%",
+                  height: "190px",
+                  objectFit: "cover",
+                }}
+              />
 
-              {/* Label band */}
+              {/* Label band — solid color, large text */}
               <div
                 style={{
                   backgroundColor: color,
-                  padding: "1.1rem 1.25rem",
+                  padding: "1.25rem 1.25rem",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
                   gap: "0.75rem",
+                  minHeight: "72px",
                 }}
               >
                 <span
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontSize: "clamp(1rem, 1.4vw, 1.2rem)",
-                    fontWeight: 600,
+                    fontSize: "20px",
+                    fontWeight: 700,
                     color: "#ffffff",
                     lineHeight: 1.25,
                     letterSpacing: "0.01em",
@@ -135,13 +144,12 @@ const HomepageFunnel = () => (
                 >
                   {title}
                 </span>
-                {/* Arrow */}
                 <svg
                   viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
+                  width="20"
+                  height="20"
                   fill="none"
-                  stroke="#b8963e"
+                  stroke="#d4a843"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -155,20 +163,6 @@ const HomepageFunnel = () => (
           </Link>
         ))}
       </div>
-
-      {/* Mobile: stack to 2 columns */}
-      <style>{`
-        @media (max-width: 768px) {
-          #guided-entry > div > div:last-child {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-        }
-        @media (max-width: 480px) {
-          #guided-entry > div > div:last-child {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
     </div>
   </section>
 );
