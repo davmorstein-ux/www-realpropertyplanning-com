@@ -147,7 +147,6 @@ const HomepageFunnel = () => (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
       {/* Section header */}
       <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
-        <span className="rpp-eyebrow">Welcome to Real Property Planning</span>
         <h2 className="rpp-heading">What brings you here today?</h2>
       </div>
 
