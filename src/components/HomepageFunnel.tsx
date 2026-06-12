@@ -90,7 +90,7 @@ const HomepageFunnel = () => (
         font-family: Inter, system-ui, sans-serif !important;
         font-size: 24px !important;
         font-weight: 800 !important;
-        color: #ffffff !important;
+        color: #1a5c58 !important;
         line-height: 1.2 !important;
         margin: 0 0 0.4rem 0 !important;
         opacity: 1 !important;
@@ -98,9 +98,9 @@ const HomepageFunnel = () => (
       }
       .rpp-afh-sub {
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 17px !important;
+        font-size: 16px !important;
         font-weight: 500 !important;
-        color: #ffffff !important;
+        color: #2c3e50 !important;
         line-height: 1.5 !important;
         margin: 0 !important;
         opacity: 1 !important;
@@ -108,10 +108,10 @@ const HomepageFunnel = () => (
       }
       .rpp-afh-btn {
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 16px !important;
+        font-size: 15px !important;
         font-weight: 700 !important;
-        color: #1a7a78 !important;
-        background-color: #ffffff !important;
+        color: #ffffff !important;
+        background-color: #1a5c58 !important;
         padding: 0.7rem 1.5rem !important;
         border-radius: 6px !important;
         text-decoration: none !important;
@@ -122,24 +122,25 @@ const HomepageFunnel = () => (
         flex-shrink: 0 !important;
         opacity: 1 !important;
       }
-      .rpp-afh-btn:hover { background-color: #e8f5f5 !important; }
+      .rpp-afh-btn:hover { background-color: #134a46 !important; }
       .rpp-afh-tile {
-        background-color: #1a7a78 !important;
+        background-color: #f8fafa !important;
+        border: 2px solid #1a2744 !important;
         border-radius: 10px !important;
-        padding: 2rem 2.5rem !important;
+        padding: 1.5rem 2rem !important;
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
         gap: 2rem !important;
         flex-wrap: wrap !important;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.12) !important;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.06) !important;
         transition: transform 0.2s ease, box-shadow 0.2s ease !important;
         cursor: pointer !important;
         text-decoration: none !important;
       }
       .rpp-afh-tile:hover {
-        transform: translateY(-3px) !important;
-        box-shadow: 0 10px 28px rgba(0,0,0,0.18) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.10) !important;
       }
     `}</style>
 
@@ -209,7 +210,7 @@ const HomepageFunnel = () => (
             src="/afh-club-badge.png"
             alt="AFH Club"
             style={{
-              height: "80px",
+              height: "110px",
               width: "auto",
               display: "block",
               flexShrink: 0,
