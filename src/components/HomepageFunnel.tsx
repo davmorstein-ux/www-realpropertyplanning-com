@@ -38,12 +38,8 @@ const tiles = [
 const HomepageFunnel = () => (
   <section id="guided-entry" style={{ backgroundColor: "#f5f2ec", padding: "3.5rem 0 4.5rem" }}>
     <style>{`
-      @media (max-width: 900px) {
-        .rpp-funnel-grid { grid-template-columns: repeat(2, 1fr) !important; }
-      }
-      @media (max-width: 520px) {
-        .rpp-funnel-grid { grid-template-columns: 1fr !important; }
-      }
+      @media (max-width: 900px) { .rpp-funnel-grid { grid-template-columns: repeat(2,1fr) !important; } }
+      @media (max-width: 520px)  { .rpp-funnel-grid { grid-template-columns: 1fr !important; } }
     `}</style>
 
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
@@ -52,7 +48,7 @@ const HomepageFunnel = () => (
         <p
           style={{
             fontFamily: "Inter, system-ui, sans-serif",
-            fontSize: "13px",
+            fontSize: "14px",
             fontWeight: 700,
             letterSpacing: "0.18em",
             textTransform: "uppercase",
@@ -65,26 +61,21 @@ const HomepageFunnel = () => (
         <h2
           style={{
             fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontSize: "2rem",
+            fontSize: "2.25rem",
             fontWeight: 600,
             color: "#1a2744",
             margin: 0,
             lineHeight: 1.2,
-            letterSpacing: "-0.01em",
           }}
         >
           What brings you here today?
         </h2>
       </div>
 
-      {/* Tiles grid */}
+      {/* Tiles */}
       <div
         className="rpp-funnel-grid"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: "1.25rem",
-        }}
+        style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "1.25rem" }}
       >
         {tiles.map(({ imgSrc, imgAlt, title, href, color }) => (
           <Link key={title} to={href} aria-label={title} style={{ textDecoration: "none", display: "block" }}>
@@ -92,18 +83,17 @@ const HomepageFunnel = () => (
               style={{
                 borderRadius: "10px",
                 overflow: "hidden",
-                boxShadow: "0 2px 12px rgba(0,0,0,0.09)",
+                boxShadow: "0 2px 12px rgba(0,0,0,0.10)",
                 transition: "transform 0.2s ease, box-shadow 0.2s ease",
                 cursor: "pointer",
-                height: "100%",
               }}
               onMouseOver={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)";
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 10px 28px rgba(0,0,0,0.15)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 10px 28px rgba(0,0,0,0.16)";
               }}
               onMouseOut={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.09)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.10)";
               }}
             >
               {/* Photo */}
@@ -112,15 +102,10 @@ const HomepageFunnel = () => (
                 alt={imgAlt}
                 loading="lazy"
                 decoding="async"
-                style={{
-                  display: "block",
-                  width: "100%",
-                  height: "190px",
-                  objectFit: "cover",
-                }}
+                style={{ display: "block", width: "100%", height: "190px", objectFit: "cover" }}
               />
 
-              {/* Label band — solid color, large text */}
+              {/* Label band */}
               <div
                 style={{
                   backgroundColor: color,
@@ -129,25 +114,24 @@ const HomepageFunnel = () => (
                   alignItems: "center",
                   justifyContent: "space-between",
                   gap: "0.75rem",
-                  minHeight: "72px",
+                  minHeight: "76px",
                 }}
               >
                 <span
                   style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    fontFamily: "Inter, system-ui, sans-serif",
                     fontSize: "20px",
                     fontWeight: 700,
                     color: "#ffffff",
                     lineHeight: 1.25,
-                    letterSpacing: "0.01em",
                   }}
                 >
                   {title}
                 </span>
                 <svg
                   viewBox="0 0 24 24"
-                  width="20"
-                  height="20"
+                  width="22"
+                  height="22"
                   fill="none"
                   stroke="#d4a843"
                   strokeWidth="2.5"
