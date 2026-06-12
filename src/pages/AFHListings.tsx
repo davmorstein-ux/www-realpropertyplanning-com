@@ -139,7 +139,7 @@ const BackButton = () => (
     <img
       src="/listing-photos/back-to-afh-club.png"
       alt="Back to AFH Club"
-      style={{ height: "70px", width: "auto", display: "block" }}
+      style={{ height: "70px", width: "auto", display: "block", mixBlendMode: "multiply" as const }}
       onMouseOver={(e) => (e.currentTarget.style.opacity = "0.8")}
       onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
     />
