@@ -338,38 +338,7 @@ const Index = () => {
           </p>
         </div>
 
-        {/* ── 3. WAYFINDING STRIP ── */}
-        <div className="rpp-wf-strip">
-          {[
-            { icon: "⚖️", label: "Settling an Estate", href: "/estate-probate-inherited-property" },
-            { icon: "🤝", label: "Helping an Aging Parent", href: "/helping-aging-parents" },
-            { icon: "🏠", label: "Adult Family Homes", href: "/afh-club" },
-            { icon: "👔", label: "Professional Resources", href: "/building-your-trusted-professional-team" },
-          ].map((item) => (
-            <Link key={item.href} to={item.href} className="rpp-wf-item">
-              <span style={{ fontSize: "20px", lineHeight: 1, flexShrink: 0 }}>{item.icon}</span>
-              <span className="rpp-wf-label">{item.label}</span>
-            </Link>
-          ))}
-          <Link to="/afh-club/listings" className="rpp-wf-cta">
-            <span className="rpp-wf-cta-text">Find Your Path</span>
-            <svg
-              viewBox="0 0 24 24"
-              width="14"
-              height="14"
-              fill="none"
-              stroke="#d4a843"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </Link>
-        </div>
-
-        {/* ── 4. WAYFINDING TILES + AFH CLUB ── */}
+        {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
         <HomepageFunnel />
 
         {/* ── 4. QUICK LINKS — white background, dark text ── */}
