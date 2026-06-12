@@ -72,7 +72,15 @@ const TOP_LINKS = [
       { label: "Wills, Trusts, and Other Options", href: "/articles/wills-trusts-other-options" },
     ],
   },
-  { label: "AFH Club", href: "/afh-club" },
+  {
+    label: "AFH Club",
+    href: "/afh-club",
+    items: [
+      { label: "AFH Resources", href: "/afh-club/afh-resources" },
+      { label: "AFH Listings", href: "/afh-club/listings" },
+      { label: "Management Companies", href: "/afh-club/management-companies" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];
 
