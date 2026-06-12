@@ -78,7 +78,7 @@ const HomepageFunnel = () => (
         opacity: 1 !important;
       }
       .rpp-heading {
-        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-family: Inter, system-ui, sans-serif !important;
         font-size: 2.25rem !important;
         font-weight: 600 !important;
         color: #b8963e !important;
