@@ -10,33 +10,33 @@ const tiles = [
     imgAlt: "Older couple reviewing an estate plan together at home",
     title: "I Want to Plan Ahead",
     href: "/planning-before-a-crisis",
-    color: "#1a2744",
+    bgColor: "#2e7d6e", // warm emerald
   },
   {
     imgSrc: tileHelping,
     imgAlt: "Adult daughter hugging her senior mother on a couch",
     title: "I'm Helping an Aging Parent",
     href: "/helping-aging-parents",
-    color: "#2d5a3d",
+    bgColor: "#c47c2b", // warm amber
   },
   {
     imgSrc: tileEstate,
     imgAlt: "Family reviewing an estate property plan with documents",
     title: "I'm Handling an Estate",
     href: "/estate-probate-inherited-property",
-    color: "#1a2744",
+    bgColor: "#5c6e9e", // soft periwinkle blue
   },
   {
     imgSrc: tileProfessionals,
     imgAlt: "Man at a laptop browsing trusted professional resources",
     title: "I Need a Professional",
     href: "/building-your-trusted-professional-team",
-    color: "#2d5a3d",
+    bgColor: "#7a4f8a", // warm plum
   },
 ];
 
 const HomepageFunnel = () => (
-  <section id="guided-entry" style={{ backgroundColor: "#f5f2ec", padding: "3.5rem 0 4.5rem" }}>
+  <section id="guided-entry" style={{ backgroundColor: "#f5f2ec", padding: "2.5rem 0 4rem" }}>
     <style>{`
       @media (max-width: 900px) {
         .rpp-funnel-grid { grid-template-columns: repeat(2,1fr) !important; }
@@ -62,30 +62,55 @@ const HomepageFunnel = () => (
         font-weight: 700 !important;
         color: #ffffff !important;
         line-height: 1.25 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        opacity: 1 !important;
+      }
+      .rpp-eyebrow {
+        font-family: Inter, system-ui, sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.18em !important;
+        text-transform: uppercase !important;
+        color: #b8963e !important;
+        margin: 0 0 0.35rem 0 !important;
+        display: block !important;
+        opacity: 1 !important;
+      }
+      .rpp-heading {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: 2.25rem !important;
+        font-weight: 600 !important;
+        color: #1a2744 !important;
+        margin: 0 !important;
+        line-height: 1.2 !important;
+        opacity: 1 !important;
       }
       .rpp-afh-title {
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 26px !important;
+        font-size: 24px !important;
         font-weight: 800 !important;
         color: #ffffff !important;
         line-height: 1.2 !important;
         margin: 0 0 0.4rem 0 !important;
+        opacity: 1 !important;
       }
       .rpp-afh-sub {
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 18px !important;
+        font-size: 17px !important;
         font-weight: 500 !important;
         color: #d4f0ee !important;
-        line-height: 1.4 !important;
+        line-height: 1.5 !important;
         margin: 0 !important;
+        opacity: 1 !important;
       }
-      .rpp-afh-cta {
+      .rpp-afh-btn {
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 17px !important;
+        font-size: 16px !important;
         font-weight: 700 !important;
         color: #1a7a78 !important;
         background-color: #ffffff !important;
-        padding: 0.65rem 1.5rem !important;
+        padding: 0.7rem 1.5rem !important;
         border-radius: 6px !important;
         text-decoration: none !important;
         display: inline-flex !important;
@@ -93,43 +118,47 @@ const HomepageFunnel = () => (
         gap: 8px !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
-        transition: background-color 0.15s ease !important;
+        opacity: 1 !important;
       }
-      .rpp-afh-cta:hover {
-        background-color: #e8f5f5 !important;
+      .rpp-afh-btn:hover { background-color: #e8f5f5 !important; }
+      .rpp-afh-tile {
+        background-color: #1a7a78 !important;
+        border-radius: 10px !important;
+        padding: 2rem 2.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 2rem !important;
+        flex-wrap: wrap !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.12) !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        cursor: pointer !important;
+        text-decoration: none !important;
       }
-      .rpp-section-eyebrow {
-        font-family: Inter, system-ui, sans-serif !important;
-        font-size: 14px !important;
-        font-weight: 700 !important;
-        letter-spacing: 0.18em !important;
-        text-transform: uppercase !important;
-        color: #b8963e !important;
-        margin: 0 0 0.75rem 0 !important;
-      }
-      .rpp-section-heading {
-        font-family: 'Cormorant Garamond', Georgia, serif !important;
-        font-size: 2.25rem !important;
-        font-weight: 600 !important;
-        color: #1a2744 !important;
-        margin: 0 !important;
-        line-height: 1.2 !important;
+      .rpp-afh-tile:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 10px 28px rgba(0,0,0,0.18) !important;
       }
     `}</style>
 
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
       {/* Section header */}
-      <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-        <p className="rpp-section-eyebrow">Choose your path</p>
-        <h2 className="rpp-section-heading">What brings you here today?</h2>
+      <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
+        <span className="rpp-eyebrow">Choose your path</span>
+        <h2 className="rpp-heading">What brings you here today?</h2>
       </div>
 
       {/* Four situation tiles */}
       <div
         className="rpp-funnel-grid"
-        style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "1.25rem", marginBottom: "1.25rem" }}
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4,1fr)",
+          gap: "1.25rem",
+          marginBottom: "1.25rem",
+        }}
       >
-        {tiles.map(({ imgSrc, imgAlt, title, href, color }) => (
+        {tiles.map(({ imgSrc, imgAlt, title, href, bgColor }) => (
           <Link key={title} to={href} aria-label={title} style={{ textDecoration: "none", display: "block" }}>
             <div className="rpp-tile-card">
               <img
@@ -141,27 +170,27 @@ const HomepageFunnel = () => (
               />
               <div
                 style={{
-                  backgroundColor: color,
-                  padding: "1.25rem",
+                  backgroundColor: bgColor,
+                  padding: "1.1rem 1.25rem",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
                   gap: "0.75rem",
-                  minHeight: "76px",
+                  minHeight: "70px",
                 }}
               >
                 <span className="rpp-tile-label">{title}</span>
                 <svg
                   viewBox="0 0 24 24"
-                  width="22"
-                  height="22"
+                  width="20"
+                  height="20"
                   fill="none"
-                  stroke="#d4a843"
+                  stroke="#ffffff"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   aria-hidden="true"
-                  style={{ flexShrink: 0 }}
+                  style={{ flexShrink: 0, opacity: 0.8 }}
                 >
                   <polyline points="9 18 15 12 9 6" />
                 </svg>
@@ -171,65 +200,38 @@ const HomepageFunnel = () => (
         ))}
       </div>
 
-      {/* AFH Club feature tile — full width, distinct teal */}
-      <Link to="/afh-club" aria-label="Explore the AFH Club" style={{ textDecoration: "none", display: "block" }}>
-        <div
-          style={{
-            backgroundColor: "#1a7a78",
-            borderRadius: "10px",
-            padding: "2rem 2.5rem",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "2rem",
-            flexWrap: "wrap",
-            boxShadow: "0 2px 12px rgba(0,0,0,0.12)",
-            transition: "transform 0.2s ease, box-shadow 0.2s ease",
-            cursor: "pointer",
-          }}
-          onMouseOver={(e) => {
-            (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)";
-            (e.currentTarget as HTMLDivElement).style.boxShadow = "0 10px 28px rgba(0,0,0,0.18)";
-          }}
-          onMouseOut={(e) => {
-            (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
-            (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.12)";
-          }}
-        >
-          {/* Left: badge + text */}
-          <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" }}>
-            <img
-              src="/afh-club-badge.png"
-              alt="AFH Club"
-              style={{ height: "80px", width: "auto", display: "block", flexShrink: 0 }}
-            />
-            <div>
-              <p className="rpp-afh-title">Adult Family Home Club</p>
-              <p className="rpp-afh-sub">
-                Listings, resources, management companies &amp; real estate services — Washington's AFH network.
-              </p>
-            </div>
+      {/* AFH Club — full width feature tile */}
+      <a href="/afh-club" className="rpp-afh-tile">
+        <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" }}>
+          <img
+            src="/afh-club-badge.png"
+            alt="AFH Club"
+            style={{ height: "80px", width: "auto", display: "block", flexShrink: 0 }}
+          />
+          <div>
+            <p className="rpp-afh-title">Adult Family Home Club</p>
+            <p className="rpp-afh-sub">
+              Listings, resources, management companies &amp; real estate services — Washington's AFH network.
+            </p>
           </div>
-
-          {/* Right: CTA button */}
-          <span className="rpp-afh-cta">
-            Explore AFH Club
-            <svg
-              viewBox="0 0 24 24"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </span>
         </div>
-      </Link>
+        <span className="rpp-afh-btn">
+          Explore AFH Club
+          <svg
+            viewBox="0 0 24 24"
+            width="15"
+            height="15"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </span>
+      </a>
     </div>
   </section>
 );
