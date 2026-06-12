@@ -4,7 +4,6 @@ import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema, organizationSchema } from "@/lib/schema";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import HomepageHero from "@/components/HomepageHero";
 import HomepageFunnel from "@/components/HomepageFunnel";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 
@@ -43,7 +42,7 @@ const homepageFaqJsonLd = `{
       "name": "What is an estate appraisal and why does it matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "An estate appraisal is a certified valuation of a property at the time of the owner's death. It's used to set a fair listing price, satisfy court requirements in probate, calculate estate taxes, and ensure heirs are treated fairly. Courts and the IRS have specific requirements — a certified appraiser ensures your appraisal holds up."
+        "text": "An estate appraisal is a certified valuation of a property at the time of the owner's death. It's used to set a fair listing price, satisfy court requirements in probate, calculate estate taxes, and ensure heirs are treated fairly."
       }
     },
     {
@@ -51,7 +50,7 @@ const homepageFaqJsonLd = `{
       "name": "How is Real Property Planning different from a regular real estate agent?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Real Property Planning brings two credentials most real estate practices don't combine: a licensed real estate broker and a Washington State Certified Residential Appraiser. That means properties can be valued with professional appraisal standards and sold with integrated guidance — under one platform families can trust."
+        "text": "Real Property Planning brings two credentials most real estate practices don't combine: a licensed real estate broker and a Washington State Certified Residential Appraiser."
       }
     },
     {
@@ -59,7 +58,7 @@ const homepageFaqJsonLd = `{
       "name": "What areas does Real Property Planning serve?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We serve all of Western Washington and the Puget Sound region, including King, Snohomish, Pierce, Skagit, and Kitsap Counties — cities like Seattle, Bellevue, Kirkland, Everett, Tacoma, Bainbridge Island, and many more."
+        "text": "We serve all of Western Washington and the Puget Sound region, including King, Snohomish, Pierce, Skagit, and Kitsap Counties."
       }
     },
     {
@@ -67,7 +66,7 @@ const homepageFaqJsonLd = `{
       "name": "How do I get started?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Simply call (206) 900-3015 or send an email to info@realpropertyplanning.com. There's no pressure — just a calm, honest conversation about your situation."
+        "text": "Simply call (206) 900-3015 or send an email to info@realpropertyplanning.com."
       }
     },
     {
@@ -75,15 +74,7 @@ const homepageFaqJsonLd = `{
       "name": "Can Real Property Planning help out-of-state executors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — this is one of the most common situations we work with. David Stein manages the full property process locally, including assessment, cleanout coordination, repairs, listing, and sale, with regular updates so out-of-state executors never need to be present for every step."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What professional organizations is Real Property Planning affiliated with?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Real Property Planning is a Corporate Partner of the Aging Life Care Association (ALCA), a recognized member of the National Association of Senior Advocates, and a member of the National Association of Estate Planners & Councils."
+        "text": "Yes — David Stein manages the full property process locally with regular updates so out-of-state executors never need to be present for every step."
       }
     },
     {
@@ -91,21 +82,81 @@ const homepageFaqJsonLd = `{
       "name": "Is there a cost to consult with Real Property Planning?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Initial consultations are free and carry no obligation. We typically respond within one business day. Call (206) 900-3015 or visit realpropertyplanning.com to get started."
+        "text": "Initial consultations are free and carry no obligation. We typically respond within one business day."
       }
     }
   ]
 }`;
 
-/* ─────────────────────────────────────────────
-   QUICK LINKS BAND — inlined here so no new
-   file is needed in Lovable
-───────────────────────────────────────────── */
-const qlStyles = `
+/* ─── ALL INLINE STYLES ─── */
+const pageStyles = `
+  .rpp-hero-section {
+    position: relative !important;
+    width: 100% !important;
+    height: 500px !important;
+    overflow: hidden !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #1a2744 !important;
+  }
+  @media (max-width: 768px) {
+    .rpp-hero-section { height: 260px !important; }
+  }
+  .rpp-hero-section img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: left center !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .rpp-hero-band {
+    background-color: #1a2744 !important;
+    width: 100% !important;
+    padding: 2rem 3.5rem !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+  @media (max-width: 768px) {
+    .rpp-hero-band { padding: 1.5rem 1.5rem !important; }
+  }
+  .rpp-hero-h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.15 !important;
+    margin: 0 0 0.5rem 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+  @media (max-width: 768px) {
+    .rpp-hero-h1 { font-size: 2rem !important; }
+  }
+  .rpp-hero-sub {
+    font-family: Inter, system-ui, sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    color: #d4a843 !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+  @media (max-width: 768px) {
+    .rpp-hero-sub { font-size: 18px !important; }
+  }
   .rpp-ql-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
   }
   @media (max-width: 900px) {
     .rpp-ql-grid { grid-template-columns: 1fr !important; }
@@ -135,7 +186,6 @@ const qlStyles = `
     border-bottom: 1px solid rgba(255,255,255,0.07) !important;
     transition: color 0.15s ease !important;
   }
-  .rpp-ql-link:last-of-type { border-bottom: none !important; }
   .rpp-ql-link:hover { color: #d4a843 !important; }
   .rpp-ql-view-all {
     display: inline-flex !important;
@@ -147,161 +197,46 @@ const qlStyles = `
     color: #d4a843 !important;
     text-decoration: none !important;
     margin-top: 1.25rem !important;
-    transition: opacity 0.15s ease !important;
   }
   .rpp-ql-view-all:hover { opacity: 0.75 !important; }
 `;
 
-const QuickLinksSection = () => (
-  <section style={{ backgroundColor: "#1a2744", padding: "3.5rem 0" }}>
-    <style>{qlStyles}</style>
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
-      <div className="rpp-ql-grid">
-        {/* Column 1 — Featured Resources */}
-        <div>
-          <span className="rpp-ql-col-heading">Featured Resources</span>
-          {[
-            { label: "Washington Executor's Checklist", href: "/resources/washington-executors-10-step-checklist" },
-            { label: "Senior Housing Guide", href: "/understanding-housing-care-options" },
-            { label: "Adult Family Home Resources", href: "/afh-club/afh-resources" },
-            { label: "Probate Real Estate Guide", href: "/guides/how-probate-real-estate-works" },
-            { label: "Estate Sale Planning Guide", href: "/guides/inherited-house-washington" },
-          ].map((item) => (
-            <Link key={item.href} to={item.href} className="rpp-ql-link">
-              <svg
-                viewBox="0 0 24 24"
-                width="14"
-                height="14"
-                fill="none"
-                stroke="#d4a843"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-              {item.label}
-            </Link>
-          ))}
-          <Link to="/resources" className="rpp-ql-view-all">
-            View all resources
-            <svg
-              viewBox="0 0 24 24"
-              width="13"
-              height="13"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </Link>
-        </div>
-
-        {/* Column 2 — Find a Professional */}
-        <div>
-          <span className="rpp-ql-col-heading">Find a Professional</span>
-          {[
-            { label: "Elder Law Attorneys", href: "/elder-law-attorneys" },
-            { label: "CPAs & Tax Advisors", href: "/cpas-tax-advisors" },
-            { label: "Financial Planners", href: "/financial-planners" },
-            { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
-            { label: "Senior Living Advisors", href: "/senior-living-advisors" },
-            { label: "More Professionals", href: "/building-your-trusted-professional-team" },
-          ].map((item) => (
-            <Link key={item.href} to={item.href} className="rpp-ql-link">
-              <svg
-                viewBox="0 0 24 24"
-                width="14"
-                height="14"
-                fill="none"
-                stroke="#d4a843"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-              {item.label}
-            </Link>
-          ))}
-          <Link to="/building-your-trusted-professional-team" className="rpp-ql-view-all">
-            Search directory
-            <svg
-              viewBox="0 0 24 24"
-              width="13"
-              height="13"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </Link>
-        </div>
-
-        {/* Column 3 — AFH Opportunities */}
-        <div>
-          <span className="rpp-ql-col-heading">AFH Opportunities</span>
-          {[
-            { label: "AFHs for Sale — Current Listings", href: "/afh-club/listings" },
-            { label: "Buyers Seeking AFHs", href: "/afh-club/afh-resources" },
-            { label: "Management Companies", href: "/afh-club/management-companies" },
-            { label: "Resources & Education", href: "/afh-club/afh-resources" },
-          ].map((item) => (
-            <Link key={item.href} to={item.href} className="rpp-ql-link">
-              <svg
-                viewBox="0 0 24 24"
-                width="14"
-                height="14"
-                fill="none"
-                stroke="#d4a843"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-              {item.label}
-            </Link>
-          ))}
-          <Link to="/afh-club" className="rpp-ql-view-all">
-            View AFH Club
-            <svg
-              viewBox="0 0 24 24"
-              width="13"
-              height="13"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </Link>
-        </div>
-      </div>
-    </div>
-  </section>
+const Arrow = ({ size = 14 }: { size?: number }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <polyline points="9 18 15 12 9 6" />
+  </svg>
 );
 
-/* ─────────────────────────────────────────────
-   PAGE
-───────────────────────────────────────────── */
+const GoldArrow = ({ size = 14 }: { size?: number }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke="#d4a843"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <polyline points="9 18 15 12 9 6" />
+  </svg>
+);
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-cream">
+      <style>{pageStyles}</style>
       <Helmet>
         <script type="application/ld+json">{homepageFaqJsonLd}</script>
       </Helmet>
@@ -313,16 +248,110 @@ const Index = () => {
       />
       <Header />
       <main id="main-content">
-        {/* 1. HERO */}
-        <HomepageHero />
+        {/* ── 1. HERO IMAGE ── */}
+        <section className="rpp-hero-section">
+          <picture>
+            <source media="(max-width: 768px)" srcSet="/homepage-hero-mobile.webp" type="image/webp" />
+            <source
+              media="(min-width: 769px)"
+              srcSet="/homepage-hero.webp 1440w, /homepage-hero-1280.webp 1280w, /homepage-hero-1920.webp 1920w"
+              sizes="100vw"
+              type="image/webp"
+            />
+            <img
+              src="/homepage-hero.webp"
+              width={1440}
+              height={606}
+              alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign"
+              loading="eager"
+              decoding="async"
+              sizes="100vw"
+            />
+          </picture>
+        </section>
 
-        {/* 2. WAYFINDING TILES + AFH CLUB FEATURE */}
+        {/* ── 2. HERO BAND ── */}
+        <div className="rpp-hero-band">
+          <h1 className="rpp-hero-h1">Where do you need to go?</h1>
+          <p className="rpp-hero-sub">
+            Estate &amp; probate &nbsp;·&nbsp; Senior transitions &nbsp;·&nbsp; Adult Family Homes
+          </p>
+        </div>
+
+        {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
         <HomepageFunnel />
 
-        {/* 3. QUICK LINKS — 3-column navy band, inlined above */}
-        <QuickLinksSection />
+        {/* ── 4. QUICK LINKS BAND ── */}
+        <section style={{ backgroundColor: "#1a2744", padding: "3.5rem 0" }}>
+          <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
+            <div className="rpp-ql-grid">
+              {/* Column 1 — Featured Resources */}
+              <div>
+                <span className="rpp-ql-col-heading">Featured Resources</span>
+                {[
+                  {
+                    label: "Washington Executor's Checklist",
+                    href: "/resources/washington-executors-10-step-checklist",
+                  },
+                  { label: "Senior Housing Guide", href: "/understanding-housing-care-options" },
+                  { label: "Adult Family Home Resources", href: "/afh-club/afh-resources" },
+                  { label: "Probate Real Estate Guide", href: "/guides/how-probate-real-estate-works" },
+                  { label: "Estate Sale Planning Guide", href: "/guides/inherited-house-washington" },
+                ].map((item) => (
+                  <Link key={item.href} to={item.href} className="rpp-ql-link">
+                    <GoldArrow size={14} />
+                    {item.label}
+                  </Link>
+                ))}
+                <Link to="/resources" className="rpp-ql-view-all">
+                  View all resources <Arrow size={13} />
+                </Link>
+              </div>
 
-        {/* 4. POPULAR RESOURCES */}
+              {/* Column 2 — Find a Professional */}
+              <div>
+                <span className="rpp-ql-col-heading">Find a Professional</span>
+                {[
+                  { label: "Elder Law Attorneys", href: "/elder-law-attorneys" },
+                  { label: "CPAs & Tax Advisors", href: "/cpas-tax-advisors" },
+                  { label: "Financial Planners", href: "/financial-planners" },
+                  { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
+                  { label: "Senior Living Advisors", href: "/senior-living-advisors" },
+                  { label: "More Professionals", href: "/building-your-trusted-professional-team" },
+                ].map((item) => (
+                  <Link key={item.href} to={item.href} className="rpp-ql-link">
+                    <GoldArrow size={14} />
+                    {item.label}
+                  </Link>
+                ))}
+                <Link to="/building-your-trusted-professional-team" className="rpp-ql-view-all">
+                  Search directory <Arrow size={13} />
+                </Link>
+              </div>
+
+              {/* Column 3 — AFH Opportunities */}
+              <div>
+                <span className="rpp-ql-col-heading">AFH Opportunities</span>
+                {[
+                  { label: "AFHs for Sale — Current Listings", href: "/afh-club/listings" },
+                  { label: "Buyers Seeking AFHs", href: "/afh-club/afh-resources" },
+                  { label: "Management Companies", href: "/afh-club/management-companies" },
+                  { label: "Resources & Education", href: "/afh-club/afh-resources" },
+                ].map((item) => (
+                  <Link key={item.href} to={item.href} className="rpp-ql-link">
+                    <GoldArrow size={14} />
+                    {item.label}
+                  </Link>
+                ))}
+                <Link to="/afh-club" className="rpp-ql-view-all">
+                  View AFH Club <Arrow size={13} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 5. POPULAR RESOURCES ── */}
         <HomepagePopularResources />
 
         {/* SEO description */}
