@@ -92,7 +92,7 @@ const pageStyles = `
     position: absolute !important;
     top: 0 !important; left: 0 !important;
     width: 100% !important; height: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
     object-position: center top !important;
     display: block !important;
     margin: 0 !important; padding: 0 !important;
