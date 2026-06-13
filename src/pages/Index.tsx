@@ -338,7 +338,7 @@ const Index = () => {
         </section>
 
         {/* Tagline bridge */}
-        <div style={{ backgroundColor: "#f5f2ec", padding: "1.75rem 1.5rem 0", textAlign: "center" }}>
+        <div style={{ backgroundColor: "#f5f2ec", padding: "1.75rem 1.5rem 0", textAlign: "center", border: "none", boxShadow: "none" }}>
           <p
             style={{
               fontFamily: "Inter, system-ui, sans-serif",
@@ -346,9 +346,12 @@ const Index = () => {
               fontWeight: 600,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
-              color: "#b8963e",
+              color: "#1a3a6b",
               margin: 0,
               opacity: 1,
+              border: "none",
+              textDecoration: "none",
+              boxShadow: "none",
             }}
           >
             Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
