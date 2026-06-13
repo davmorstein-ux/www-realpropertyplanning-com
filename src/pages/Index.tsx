@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import HomepageFunnel from "@/components/HomepageFunnel";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
-import homepageHeroRpp from "@/assets/homepage-hero-rpp.png.asset.json";
+import homepageHeroRpp from "@/assets/hero-homepage-v2.png.asset.json";
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
 
@@ -91,7 +91,7 @@ const pageStyles = `
     display: block !important;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: #1a2744 !important;
+    background-color: #f5f1ea !important;
   }
   @media (max-width: 768px) {
     .rpp-hero-section { height: 360px !important; }
@@ -101,7 +101,7 @@ const pageStyles = `
     top: 0 !important; left: 0 !important;
     width: 100% !important; height: 100% !important;
     object-fit: cover !important;
-    object-position: top !important;
+    object-position: center top !important;
     display: block !important;
     margin: 0 !important; padding: 0 !important;
   }
@@ -326,71 +326,20 @@ const Index = () => {
             sizes="100vw"
           />
 
-          {/* Full-height fade overlay blending image into page background */}
+          {/* Bottom fade overlay only */}
           <div
             style={{
               position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
               bottom: 0,
-              background:
-                "linear-gradient(to bottom, transparent 55%, rgba(245,241,234,0.4) 68%, rgba(245,241,234,0.85) 82%, #f5f1ea 100%)",
-              pointerEvents: "none",
-              zIndex: 2,
-            }}
-          />
-
-          {/* RPP logo floating on the faded portion */}
-          <img
-            src="/rpp-logo-v4.webp"
-            alt=""
-            aria-hidden="true"
-            style={{
-              position: "absolute",
-              bottom: "3.5rem",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "90px",
-              opacity: 1,
-              zIndex: 10,
-              pointerEvents: "none",
-            }}
-          />
-
-          {/* Tagline floats on the fully-faded portion of the hero */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "1rem",
               left: 0,
               right: 0,
-              textAlign: "center",
-              backgroundColor: "transparent",
-              border: "none",
-              boxShadow: "none",
-              zIndex: 3,
-              padding: "0 1.5rem",
+              height: "35%",
+              background:
+                "linear-gradient(to bottom, transparent 0%, rgba(245,241,234,0.5) 50%, #f5f1ea 100%)",
+              pointerEvents: "none",
+              zIndex: 1,
             }}
-          >
-            <p
-              style={{
-                fontFamily: "Inter, system-ui, sans-serif",
-                fontSize: "14px",
-                fontWeight: 600,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "#1a3a6b",
-                margin: 0,
-                opacity: 1,
-                border: "none",
-                textDecoration: "none",
-                boxShadow: "none",
-              }}
-            >
-              Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
-            </p>
-          </div>
+          />
         </section>
 
         {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
