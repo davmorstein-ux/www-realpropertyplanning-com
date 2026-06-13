@@ -181,6 +181,21 @@ nav [class*="dropdown"] button svg {
 @tailwind components;
 @tailwind utilities;
 
+/* Utility: standardized content container and image rules */
+.content-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Global overflow safeguard */
 html,
 body {
