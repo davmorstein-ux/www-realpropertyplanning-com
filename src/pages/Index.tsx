@@ -97,7 +97,7 @@ const pageStyles = `
   @media (max-width: 768px) {
     .rpp-hero-section { height: 360px !important; }
   }
-  .rpp-hero-section img {
+  .rpp-hero-section > img.rpp-hero-bg {
     position: absolute !important;
     top: 0 !important; left: 0 !important;
     width: 100% !important; height: 100% !important;
