@@ -348,7 +348,7 @@ const Index = () => {
           <div
             style={{
               position: "absolute",
-              bottom: "1.5rem",
+              bottom: "2.5rem",
               left: 0,
               right: 0,
               textAlign: "center",
