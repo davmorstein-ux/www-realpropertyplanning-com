@@ -87,7 +87,7 @@ const pageStyles = `
   .rpp-hero-section {
     position: relative !important;
     width: 100% !important;
-    height: 520px !important;
+    height: 560px !important;
     overflow: hidden !important;
     display: block !important;
     margin: 0 !important;
