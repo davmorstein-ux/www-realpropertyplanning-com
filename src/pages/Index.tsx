@@ -374,7 +374,7 @@ const Index = () => {
             <div
               style={{
                 fontFamily: "inherit",
-                fontSize: "18px",
+                fontSize: "22px",
                 fontWeight: 800,
                 letterSpacing: "2px",
                 textTransform: "uppercase",
@@ -385,7 +385,7 @@ const Index = () => {
             </div>
             <div
               style={{
-                fontSize: "15px",
+                fontSize: "18px",
                 fontStyle: "italic",
                 fontWeight: 400,
                 color: "#3a3a3a",
