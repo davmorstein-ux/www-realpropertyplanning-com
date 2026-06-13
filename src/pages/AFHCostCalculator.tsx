@@ -278,6 +278,30 @@ const AFHCostCalculator = () => {
       if (el) el.addEventListener("input", calc);
     });
 
+    const defaults: Record<string, number> = {
+      purchase: 650000,
+      down: 25,
+      reno: 50000,
+      "mort-rate": 7,
+      beds: 6,
+      "rate-res": 5500,
+      occ: 85,
+      staff: 14000,
+      supplies: 3000,
+      other: 1500,
+    };
+
+    const resetBtn = document.getElementById("reset-btn");
+    if (resetBtn) {
+      resetBtn.addEventListener("click", () => {
+        Object.entries(defaults).forEach(([id, val]) => {
+          const el = document.getElementById(id) as HTMLInputElement;
+          if (el) el.value = String(val);
+        });
+        calc();
+      });
+    }
+
     calc();
   };
 
@@ -365,6 +389,12 @@ const AFHCostCalculator = () => {
                 <span className="calc-field-val" id="other-out">$1,500</span>
               </div>
             </div>
+          </div>
+
+          <div style={{ textAlign: "center", margin: "0.5rem 0 1rem" }}>
+            <button id="reset-btn" style={{ padding: "0.6rem 1.75rem", background: "#1a2744", color: "#ffffff", border: "none", borderRadius: "8px", fontSize: "14px", fontWeight: 600, letterSpacing: "0.05em", cursor: "pointer" }}>
+              ↺ Reset to Typical Values
+            </button>
           </div>
 
           <div id="calc-verdict" className="calc-verdict good">Calculating...</div>
