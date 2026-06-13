@@ -341,6 +341,22 @@ const Index = () => {
               zIndex: 1,
             }}
           />
+
+          {/* RPP logo overlay centered */}
+          <img
+            src={rppLogoTransparent.url}
+            alt="Real Property Planning"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "420px",
+              maxWidth: "55%",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
         </section>
 
         {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
