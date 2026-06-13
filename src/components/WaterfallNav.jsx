@@ -83,6 +83,7 @@ const RIGHT_GROUPS = [
     href: "/resources",
     items: [
       { name: "AFH Club", href: "/afh-club" },
+      { name: "AFH Cost Calculator", href: "/afh-club/afh-cost-calculator" },
       { name: "Resources", href: "/resources" },
       { name: "About", href: "/about" },
       { name: "Contact", href: "/contact" },
