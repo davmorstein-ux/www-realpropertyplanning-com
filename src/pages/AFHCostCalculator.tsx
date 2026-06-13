@@ -58,13 +58,17 @@ const pageStyles = `
   .calc-field input[type=range] {
     width: 100%;
     margin: 4px 0;
-    accent-color: #1a2744;
   }
+  .calc-field.navy input[type=range] { accent-color: #1a2744; }
+  .calc-field.green input[type=range] { accent-color: #2d6a4f; }
+  .calc-field.burgundy input[type=range] { accent-color: #7b2d42; }
   .calc-field-val {
     font-size: 15px;
     font-weight: 600;
-    color: #1a2744;
   }
+  .calc-field.navy .calc-field-val { color: #1a2744; }
+  .calc-field.green .calc-field-val { color: #2d6a4f; }
+  .calc-field.burgundy .calc-field-val { color: #7b2d42; }
   .calc-metric-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
