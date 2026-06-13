@@ -311,85 +311,30 @@ const Index = () => {
       />
       <Header />
       <main id="main-content">
-        {/* ── 1. HERO IMAGE with text overlaid on lightened bottom ── */}
+        {/* ── 1. HERO IMAGE (contains its own text/logo) with bottom fade to page bg ── */}
         <section className="rpp-hero-section">
-          <picture>
-            <source media="(max-width: 768px)" srcSet="/homepage-hero-mobile.webp" type="image/webp" />
-            <source
-              media="(min-width: 769px)"
-              srcSet="/homepage-hero.webp 1440w, /homepage-hero-1280.webp 1280w, /homepage-hero-1920.webp 1920w"
-              sizes="100vw"
-              type="image/webp"
-            />
-            <img
-              src="/homepage-hero.webp"
-              width={1440}
-              height={606}
-              alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign"
-              loading="eager"
-              decoding="async"
-              sizes="100vw"
-            />
-          </picture>
+          <img
+            src={homepageHeroRpp.url}
+            width={1920}
+            height={960}
+            alt="Welcome to Real Property Planning — senior couple by a red convertible with a SOLD sign and moving truck at a craftsman home"
+            loading="eager"
+            decoding="async"
+            sizes="100vw"
+          />
 
-          {/* White gradient fade over bottom half — deeper to match cream section below */}
+          {/* Bottom fade overlay to blend hero into page background */}
           <div
             style={{
               position: "absolute",
               bottom: 0,
               left: 0,
               right: 0,
-              height: "65%",
-              background:
-                "linear-gradient(to bottom, transparent 0%, rgba(245,242,236,0.6) 40%, rgba(245,242,236,1) 100%)",
+              height: "25%",
+              background: "linear-gradient(to bottom, transparent, #f5f2ec)",
               pointerEvents: "none",
             }}
           />
-
-          {/* Text — raised up from bottom */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "3.5rem",
-              left: 0,
-              right: 0,
-              padding: "0 3.5rem",
-              textAlign: "center",
-            }}
-          >
-            <style>{`
-              .rpp-hero-welcome {
-                font-family: Inter, system-ui, sans-serif !important;
-                font-size: 42px !important;
-                font-weight: 900 !important;
-                color: #0f1a30 !important;
-                letter-spacing: 0.12em !important;
-                text-transform: uppercase !important;
-                margin: 0 0 0.5rem 0 !important;
-                line-height: 1.1 !important;
-                display: block !important;
-                opacity: 1 !important;
-              }
-              .rpp-hero-tagline {
-                font-family: Inter, system-ui, sans-serif !important;
-                font-size: 22px !important;
-                font-weight: 600 !important;
-                color: #1a5fa8 !important;
-                margin: 0 !important;
-                letter-spacing: 0.05em !important;
-                display: block !important;
-                opacity: 1 !important;
-              }
-              @media (max-width: 768px) {
-                .rpp-hero-welcome { font-size: 22px !important; }
-                .rpp-hero-tagline { font-size: 15px !important; }
-              }
-            `}</style>
-            <span className="rpp-hero-welcome">Welcome to Real Property Planning</span>
-            <span className="rpp-hero-tagline">
-              Estate &amp; Probate &nbsp;·&nbsp; Senior Transitions &nbsp;·&nbsp; Adult Family Homes Marketplace
-            </span>
-          </div>
         </section>
 
         {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
