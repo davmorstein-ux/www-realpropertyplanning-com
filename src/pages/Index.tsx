@@ -375,7 +375,7 @@ const Index = () => {
               style={{
                 fontFamily: "inherit",
                 fontSize: "22px",
-                fontWeight: 800,
+                fontWeight: 900,
                 letterSpacing: "2px",
                 textTransform: "uppercase",
                 color: "#1a3a6b",
@@ -386,8 +386,7 @@ const Index = () => {
             <div
               style={{
                 fontSize: "18px",
-                fontStyle: "italic",
-                fontWeight: 400,
+                fontWeight: 700,
                 color: "#3a3a3a",
                 textAlign: "center",
                 marginTop: "6px",
