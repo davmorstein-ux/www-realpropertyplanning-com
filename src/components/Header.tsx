@@ -441,7 +441,7 @@ const Header = () => {
               <img
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
-                style={{ height: isMobile ? 48 : 56, width: "auto", display: "block", objectFit: "contain" }}
+                className="rpp-header-logo"
                 sizes="100vw"
                 decoding="async"
                 width={946}
