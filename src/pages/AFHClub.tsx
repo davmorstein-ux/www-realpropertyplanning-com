@@ -37,6 +37,13 @@ const CATEGORIES = [
     description: "A licensed Washington State broker specializing in Adult Family Home transactions.",
     placeholder: "#263444",
   },
+  {
+    title: "AFH Cost Calculator",
+    href: "/afh-club/afh-cost-calculator",
+    img: "/__l5e/assets-v1/f6d8b31f-90b0-4639-a379-feeff961e81c/afh-cost-calculator-v2.webp",
+    description: "Estimate your startup costs, monthly cash flow, and projected return on investment before you invest in an Adult Family Home.",
+    placeholder: "#2c3e4e",
+  },
 ];
 
 const AFHClub = () => (
