@@ -359,7 +359,7 @@ const Index = () => {
             }}
           />
 
-          {/* Tagline */}
+          {/* Tagline + description */}
           <div
             style={{
               position: "absolute",
@@ -367,17 +367,35 @@ const Index = () => {
               left: 0,
               right: 0,
               textAlign: "center",
-              fontFamily: "inherit",
-              fontSize: "18px",
-              fontWeight: 800,
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              color: "#1a3a6b",
               zIndex: 3,
               pointerEvents: "none",
             }}
           >
-            Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
+            <div
+              style={{
+                fontFamily: "inherit",
+                fontSize: "18px",
+                fontWeight: 800,
+                letterSpacing: "2px",
+                textTransform: "uppercase",
+                color: "#1a3a6b",
+              }}
+            >
+              Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
+            </div>
+            <div
+              style={{
+                fontSize: "15px",
+                fontStyle: "italic",
+                fontWeight: 400,
+                color: "#3a3a3a",
+                textAlign: "center",
+                marginTop: "6px",
+                letterSpacing: "0.5px",
+              }}
+            >
+              A free educational resource and professional referral network serving Washington State families
+            </div>
           </div>
         </section>
 
