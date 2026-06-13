@@ -71,19 +71,46 @@ const homepageFaqJsonLd = `{
         "text": "Simply call (206) 900-3015 or send an email to info@realpropertyplanning.com."
       }
     },
-    {
-      "@type": "Question",
-      "name": "Is there a cost to consult with Real Property Planning?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Initial consultations are free and carry no obligation. We typically respond within one business day."
-      }
-    }
-  ]
-}`;
-
-const pageStyles = `
-  /* ── HERO ── */
+    {/* Tagline + description */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "1.5rem",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              zIndex: 3,
+              pointerEvents: "none",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "Inter, system-ui, sans-serif",
+                fontSize: "22px !important" as any,
+                fontWeight: 900,
+                letterSpacing: "2px",
+                textTransform: "uppercase" as const,
+                color: "#1a3a6b",
+                lineHeight: 1.3,
+              }}
+            >
+              Estate &amp; Probate · Senior Transitions · Adult Family Homes Marketplace
+            </div>
+            <div
+              style={{
+                fontFamily: "Inter, system-ui, sans-serif",
+                fontSize: "18px",
+                fontWeight: 700,
+                color: "#3a3a3a",
+                textAlign: "center",
+                marginTop: "8px",
+                letterSpacing: "0.5px",
+                lineHeight: 1.4,
+              }}
+            >
+              A free educational resource and professional referral network serving Washington State families
+            </div>
+          </div>
   .rpp-hero-section {
     position: relative !important;
     width: 100% !important;
@@ -139,19 +166,7 @@ const pageStyles = `
   @media (max-width: 768px) {
     .rpp-hero-h1 { font-size: 1.2rem !important; white-space: normal !important; }
   }
-  .rpp-hero-sub {
-    font-family: Inter, system-ui, sans-serif !important;
-    font-size: 18px !important;
-    font-weight: 600 !important;
-    color: #ffffff !important;
-    line-height: 1 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-    text-align: center !important;
-    letter-spacing: 0.04em !important;
-  }
+
   @media (max-width: 768px) {
     .rpp-hero-sub { font-size: 14px !important; }
   }
@@ -313,10 +328,7 @@ const Index = () => {
       <Header />
       <main id="main-content">
         {/* ── 1. HERO IMAGE (contains its own text/logo) with bottom fade + tagline ── */}
-        <section
-          className="rpp-hero-section"
-          style={{ backgroundColor: "#f5f1ea" }}
-        >
+        <section className="rpp-hero-section" style={{ backgroundColor: "#f5f1ea" }}>
           <img
             className="rpp-hero-bg"
             src={homepageHeroRpp.url}
