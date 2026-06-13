@@ -70,47 +70,11 @@ const homepageFaqJsonLd = `{
         "@type": "Answer",
         "text": "Simply call (206) 900-3015 or send an email to info@realpropertyplanning.com."
       }
-    },
-    {/* Tagline + description */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "1.5rem",
-              left: 0,
-              right: 0,
-              textAlign: "center",
-              zIndex: 3,
-              pointerEvents: "none",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "Inter, system-ui, sans-serif",
-                fontSize: "22px !important" as any,
-                fontWeight: 900,
-                letterSpacing: "2px",
-                textTransform: "uppercase" as const,
-                color: "#1a3a6b",
-                lineHeight: 1.3,
-              }}
-            >
-              Estate &amp; Probate · Senior Transitions · Adult Family Homes Marketplace
-            </div>
-            <div
-              style={{
-                fontFamily: "Inter, system-ui, sans-serif",
-                fontSize: "18px",
-                fontWeight: 700,
-                color: "#3a3a3a",
-                textAlign: "center",
-                marginTop: "8px",
-                letterSpacing: "0.5px",
-                lineHeight: 1.4,
-              }}
-            >
-              A free educational resource and professional referral network serving Washington State families
-            </div>
-          </div>
+    }
+  ]
+}`;
+
+const pageStyles = `
   .rpp-hero-section {
     position: relative !important;
     width: 100% !important;
