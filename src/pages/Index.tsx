@@ -327,15 +327,33 @@ const Index = () => {
           <div
             style={{
               position: "absolute",
-              bottom: 0,
+              top: 0,
               left: 0,
               right: 0,
-              height: "25%",
-              background: "linear-gradient(to bottom, transparent, #f5f2ec)",
+              height: "100%",
+              background: "linear-gradient(to bottom, transparent 40%, rgba(245,242,236,0.5) 65%, #f5f2ec 100%)",
               pointerEvents: "none",
             }}
           />
         </section>
+
+        {/* Tagline bridge */}
+        <div style={{ backgroundColor: "#f5f2ec", padding: "1.75rem 1.5rem 0", textAlign: "center" }}>
+          <p
+            style={{
+              fontFamily: "Inter, system-ui, sans-serif",
+              fontSize: "14px",
+              fontWeight: 600,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "#b8963e",
+              margin: 0,
+              opacity: 1,
+            }}
+          >
+            Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
+          </p>
+        </div>
 
         {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
         <HomepageFunnel />
