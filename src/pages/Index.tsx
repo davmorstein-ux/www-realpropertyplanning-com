@@ -358,6 +358,27 @@ const Index = () => {
               pointerEvents: "none",
             }}
           />
+
+          {/* Tagline */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "1.5rem",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              fontFamily: "inherit",
+              fontSize: "15px",
+              fontWeight: 700,
+              letterSpacing: "2px",
+              textTransform: "uppercase",
+              color: "#1a3a6b",
+              zIndex: 3,
+              pointerEvents: "none",
+            }}
+          >
+            Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
+          </div>
         </section>
 
         {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
