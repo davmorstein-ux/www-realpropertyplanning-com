@@ -78,6 +78,7 @@ const pageStyles = `
   .rpp-hero-section {
     position: relative !important;
     width: 100% !important;
+    max-width: 100vw !important;
     height: 560px !important;
     overflow: hidden !important;
     display: block !important;
@@ -85,9 +86,10 @@ const pageStyles = `
     padding: 0 !important;
     background-color: #f5f1ea !important;
   }
-  @media (max-width: 768px) {
-    .rpp-hero-section { height: 360px !important; }
-  }
+  @media (min-width: 1400px) { .rpp-hero-section { height: 720px !important; } }
+  @media (min-width: 1024px) and (max-width: 1399px) { .rpp-hero-section { height: 580px !important; } }
+  @media (min-width: 768px) and (max-width: 1023px) { .rpp-hero-section { height: 440px !important; } }
+  @media (max-width: 767px) { .rpp-hero-section { height: 280px !important; } }
   .rpp-hero-section > img.rpp-hero-bg {
     position: absolute !important;
     top: 0 !important; left: 0 !important;
@@ -249,6 +251,12 @@ const pageStyles = `
     letter-spacing: 0.5px !important;
     line-height: 1.4 !important;
   }
+  @media (max-width: 1023px) { .rpp-hero-logo { width: 260px !important; } }
+  @media (max-width: 767px) { .rpp-hero-logo { width: 160px !important; } }
+  @media (max-width: 1023px) { .rpp-tagline { font-size: 16px !important; } }
+  @media (max-width: 767px) { .rpp-tagline { font-size: 13px !important; letter-spacing: 1px !important; } }
+  @media (max-width: 1023px) { .rpp-descriptor { font-size: 14px !important; } }
+  @media (max-width: 767px) { .rpp-descriptor { font-size: 12px !important; } }
 `;
 
 const GoldArrow = ({ size = 13 }: { size?: number }) => (
@@ -330,6 +338,7 @@ const Index = () => {
 
           {/* RPP logo overlay centered */}
           <img
+            className="rpp-hero-logo"
             src={rppLogoTransparent.url}
             alt="Real Property Planning"
             style={{
