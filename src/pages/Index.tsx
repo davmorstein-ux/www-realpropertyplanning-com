@@ -86,7 +86,7 @@ const pageStyles = `
   .rpp-hero-section {
     position: relative !important;
     width: 100% !important;
-    height: 600px !important;
+    height: 420px !important;
     overflow: hidden !important;
     display: block !important;
     margin: 0 !important;
@@ -101,7 +101,7 @@ const pageStyles = `
     top: 0 !important; left: 0 !important;
     width: 100% !important; height: 100% !important;
     object-fit: cover !important;
-    object-position: left center !important;
+    object-position: top !important;
     display: block !important;
     margin: 0 !important; padding: 0 !important;
   }
@@ -338,7 +338,7 @@ const Index = () => {
         </section>
 
         {/* Tagline bridge */}
-        <div style={{ backgroundColor: "#f5f2ec", padding: "1.75rem 1.5rem 0", textAlign: "center", border: "none", boxShadow: "none" }}>
+        <div style={{ backgroundColor: "#f5f2ec", padding: "1.25rem 1.5rem 0", textAlign: "center", border: "none", boxShadow: "none" }}>
           <p
             style={{
               fontFamily: "Inter, system-ui, sans-serif",
