@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import HomepageFunnel from "@/components/HomepageFunnel";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import homepageHeroRpp from "@/assets/hero-homepage-v2.png.asset.json";
+import rppLogoTransparent from "@/assets/rpp-logo-transparent.png.asset.json";
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
 
