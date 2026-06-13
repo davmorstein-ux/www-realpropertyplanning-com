@@ -371,10 +371,22 @@ const Index = () => {
             <div className="rpp-tagline" style={{ marginTop: "4px" }}>
               Adult Family Home Marketplace
             </div>
-            <div style={{ paddingTop: "40px" }}>
-              <div className="rpp-descriptor" style={{}}>
-                A free educational resource and professional referral network serving Washington State families
-              </div>
+          </div>
+
+          {/* Descriptor — bottom of hero */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "1.5rem",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              zIndex: 3,
+              pointerEvents: "none",
+            }}
+          >
+            <div className="rpp-descriptor" style={{}}>
+              A free educational resource and professional referral network serving Washington State families
             </div>
           </div>
         </section>
