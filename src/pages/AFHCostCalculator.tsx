@@ -304,24 +304,24 @@ const AFHCostCalculator = () => {
           <div className="calc-section">
             <p className="calc-section-title">Property & acquisition</p>
             <div className="calc-field-row">
-              <div className="calc-field">
+              <div className="calc-field navy">
                 <label htmlFor="purchase">Purchase price</label>
                 <input type="range" id="purchase" min="300000" max="1500000" step="10000" defaultValue="650000" />
                 <span className="calc-field-val" id="purchase-out">$650,000</span>
               </div>
-              <div className="calc-field">
+              <div className="calc-field navy">
                 <label htmlFor="down">Down payment</label>
                 <input type="range" id="down" min="10" max="40" step="1" defaultValue="25" />
                 <span className="calc-field-val" id="down-out">25%</span>
               </div>
             </div>
             <div className="calc-field-row">
-              <div className="calc-field">
+              <div className="calc-field navy">
                 <label htmlFor="reno">Renovation / startup costs</label>
                 <input type="range" id="reno" min="0" max="200000" step="5000" defaultValue="50000" />
                 <span className="calc-field-val" id="reno-out">$50,000</span>
               </div>
-              <div className="calc-field">
+              <div className="calc-field navy">
                 <label htmlFor="mort-rate">Mortgage rate</label>
                 <input type="range" id="mort-rate" min="5" max="10" step="0.25" defaultValue="7" />
                 <span className="calc-field-val" id="rate-out">7.00%</span>
@@ -332,34 +332,34 @@ const AFHCostCalculator = () => {
           <div className="calc-section">
             <p className="calc-section-title">Operations & revenue</p>
             <div className="calc-field-row three">
-              <div className="calc-field">
+              <div className="calc-field green">
                 <label htmlFor="beds">Licensed beds</label>
                 <input type="range" id="beds" min="2" max="6" step="1" defaultValue="6" />
                 <span className="calc-field-val" id="beds-out">6 beds</span>
               </div>
-              <div className="calc-field">
+              <div className="calc-field green">
                 <label htmlFor="rate-res">Monthly rate per resident</label>
                 <input type="range" id="rate-res" min="3000" max="9000" step="250" defaultValue="5500" />
                 <span className="calc-field-val" id="rate-res-out">$5,500</span>
               </div>
-              <div className="calc-field">
+              <div className="calc-field green">
                 <label htmlFor="occ">Occupancy rate</label>
                 <input type="range" id="occ" min="50" max="100" step="5" defaultValue="85" />
                 <span className="calc-field-val" id="occ-out">85%</span>
               </div>
             </div>
             <div className="calc-field-row three">
-              <div className="calc-field">
+              <div className="calc-field burgundy">
                 <label htmlFor="staff">Staff cost / month</label>
                 <input type="range" id="staff" min="5000" max="30000" step="500" defaultValue="14000" />
                 <span className="calc-field-val" id="staff-out">$14,000</span>
               </div>
-              <div className="calc-field">
+              <div className="calc-field burgundy">
                 <label htmlFor="supplies">Supplies & food / month</label>
                 <input type="range" id="supplies" min="1000" max="8000" step="250" defaultValue="3000" />
                 <span className="calc-field-val" id="supplies-out">$3,000</span>
               </div>
-              <div className="calc-field">
+              <div className="calc-field burgundy">
                 <label htmlFor="other">Insurance & other / month</label>
                 <input type="range" id="other" min="500" max="4000" step="100" defaultValue="1500" />
                 <span className="calc-field-val" id="other-out">$1,500</span>
