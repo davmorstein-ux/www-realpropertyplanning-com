@@ -91,7 +91,7 @@ const pageStyles = `
     display: block !important;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: #1a2744 !important;
+    background-color: #f5f1ea !important;
   }
   @media (max-width: 768px) {
     .rpp-hero-section { height: 360px !important; }
@@ -101,7 +101,7 @@ const pageStyles = `
     top: 0 !important; left: 0 !important;
     width: 100% !important; height: 100% !important;
     object-fit: cover !important;
-    object-position: top !important;
+    object-position: center top !important;
     display: block !important;
     margin: 0 !important; padding: 0 !important;
   }
