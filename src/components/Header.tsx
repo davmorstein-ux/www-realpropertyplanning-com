@@ -373,6 +373,35 @@ const Header = () => {
       }
       .rpp-top-link:hover { color: #E8C97A; }
       .rpp-top-link.is-active { border-bottom-color: #E8C97A; }
+
+      @media (min-width: 1024px) and (max-width: 1366px) {
+        .rpp-top-link {
+          font-size: 13px;
+          padding: 6px 0.5rem;
+          letter-spacing: 0.02em;
+        }
+      }
+
+      .rpp-header-logo {
+        height: 56px;
+        width: auto;
+        display: block;
+        object-fit: contain;
+      }
+
+      @media (min-width: 1024px) and (max-width: 1366px) {
+        .rpp-header-logo {
+          width: 120px;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .rpp-header-logo {
+          height: 48px;
+          width: auto;
+        }
+      }
     `;
     document.head.appendChild(style);
   }, []);
