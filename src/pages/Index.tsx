@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import HomepageFunnel from "@/components/HomepageFunnel";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
-import homepageHeroRpp from "@/assets/hero-homepage-v3.webp.asset.json";
+import homepageHeroRpp from "@/assets/hero-homepage-v4.webp.asset.json";
 import rppLogoTransparent from "@/assets/rpp-logo-transparent.png.asset.json";
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
