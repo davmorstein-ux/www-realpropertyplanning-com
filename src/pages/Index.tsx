@@ -356,30 +356,13 @@ const Index = () => {
               pointerEvents: "none",
             }}
           >
-            <div
-              className="rpp-tagline"
-              style={{
-                fontFamily: "inherit",
-                fontSize: "22px",
-                fontWeight: 900,
-                letterSpacing: "2px",
-                textTransform: "uppercase",
-                color: "#1a3a6b",
-              }}
-            >
-              Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
+            <div className="rpp-tagline" style={{}}>
+              Estate & Probate Sales · Senior Transitions
             </div>
-            <div
-              className="rpp-descriptor"
-              style={{
-                fontSize: "18px",
-                fontWeight: 700,
-                color: "#3a3a3a",
-                textAlign: "center",
-                marginTop: "6px",
-                letterSpacing: "0.5px",
-              }}
-            >
+            <div className="rpp-tagline" style={{ marginTop: "4px" }}>
+              Adult Family Home Marketplace
+            </div>
+            <div className="rpp-descriptor" style={{ marginTop: "18px" }}>
               A free educational resource and professional referral network serving Washington State families
             </div>
           </div>
