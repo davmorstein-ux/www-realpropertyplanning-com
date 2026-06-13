@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import HomepageFunnel from "@/components/HomepageFunnel";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import homepageHeroRpp from "@/assets/hero-homepage-v2.png.asset.json";
+import rppLogoTransparent from "@/assets/rpp-logo-transparent.png.asset.json";
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
 
@@ -338,6 +339,22 @@ const Index = () => {
                 "linear-gradient(to bottom, transparent 0%, rgba(245,241,234,0.5) 50%, #f5f1ea 100%)",
               pointerEvents: "none",
               zIndex: 1,
+            }}
+          />
+
+          {/* RPP logo overlay centered */}
+          <img
+            src={rppLogoTransparent.url}
+            alt="Real Property Planning"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "420px",
+              maxWidth: "55%",
+              zIndex: 2,
+              pointerEvents: "none",
             }}
           />
         </section>
