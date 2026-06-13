@@ -45,6 +45,12 @@ const DEFAULT_TOPICS = [
     img: "/afh-find-professional.webp",
     placeholder: "#3c4c5c",
   },
+  {
+    title: "AFH Cost Calculator",
+    href: "/afh-club/afh-cost-calculator",
+    img: "/afh-cost-calculator.webp",
+    placeholder: "#2c3e4e",
+  },
 ];
 
 const CARD_GAP = 24;
