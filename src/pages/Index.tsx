@@ -343,7 +343,7 @@ const Index = () => {
             alt="Real Property Planning"
             style={{
               position: "absolute",
-              top: "45%",
+              top: "38%",
               left: "50%",
               transform: "translate(-50%, -50%)",
               width: "380px",
@@ -357,7 +357,7 @@ const Index = () => {
           <div
             style={{
               position: "absolute",
-              bottom: "2.5rem",
+              top: "58%",
               left: 0,
               right: 0,
               textAlign: "center",
