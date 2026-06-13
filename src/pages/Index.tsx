@@ -231,14 +231,23 @@ const pageStyles = `
     transition: background-color 0.15s ease !important;
   }
   .rpp-wf-cta:hover { background-color: #243660 !important; }
-  .rpp-wf-cta-text {
-    font-family: Inter, system-ui, sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    color: #d4a843 !important;
-    letter-spacing: 0.08em !important;
+  .rpp-tagline {
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    letter-spacing: 2px !important;
     text-transform: uppercase !important;
-    opacity: 1 !important;
+    color: #1a3a6b !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+  .rpp-descriptor {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #3a3a3a !important;
+    text-align: center !important;
+    margin-top: 8px !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.4 !important;
   }
 `;
 
@@ -348,6 +357,7 @@ const Index = () => {
             }}
           >
             <div
+              className="rpp-tagline"
               style={{
                 fontFamily: "inherit",
                 fontSize: "22px",
@@ -360,6 +370,7 @@ const Index = () => {
               Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
             </div>
             <div
+              className="rpp-descriptor"
               style={{
                 fontSize: "18px",
                 fontWeight: 700,
