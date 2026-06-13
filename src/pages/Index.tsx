@@ -311,45 +311,49 @@ const Index = () => {
       />
       <Header />
       <main id="main-content">
-        {/* ── 1. HERO IMAGE (contains its own text/logo) with bottom fade to page bg ── */}
-        <div style={{ position: "relative", backgroundColor: "#f5f2ec" }}>
-          <section className="rpp-hero-section">
-            <img
-              src={homepageHeroRpp.url}
-              width={1920}
-              height={960}
-              alt="Welcome to Real Property Planning — senior couple by a red convertible with a SOLD sign and moving truck at a craftsman home"
-              loading="eager"
-              decoding="async"
-              sizes="100vw"
-            />
-          </section>
+        {/* ── 1. HERO IMAGE (contains its own text/logo) with bottom fade + tagline ── */}
+        <section
+          className="rpp-hero-section"
+          style={{ backgroundColor: "#f5f1ea" }}
+        >
+          <img
+            src={homepageHeroRpp.url}
+            width={1920}
+            height={960}
+            alt="Welcome to Real Property Planning — senior couple by a red convertible with a SOLD sign and moving truck at a craftsman home"
+            loading="eager"
+            decoding="async"
+            sizes="100vw"
+          />
 
-          {/* Fade overlay bleeding from hero into tagline area for seamless transition */}
+          {/* Full-height fade overlay blending image into page background */}
           <div
             style={{
               position: "absolute",
+              top: 0,
               left: 0,
               right: 0,
-              top: "40%",
               bottom: 0,
               background:
-                "linear-gradient(to bottom, transparent 30%, rgba(245,242,236,0.6) 55%, #f5f2ec 80%, #f5f2ec 100%)",
+                "linear-gradient(to bottom, transparent 35%, rgba(245,241,234,0.4) 50%, rgba(245,241,234,0.85) 70%, #f5f1ea 100%)",
               pointerEvents: "none",
               zIndex: 2,
             }}
           />
 
-          {/* Tagline bridge — transparent, sits on the faded surface */}
+          {/* Tagline floats on the fully-faded portion of the hero */}
           <div
             style={{
-              position: "relative",
-              zIndex: 3,
-              backgroundColor: "transparent",
-              padding: "1.25rem 1.5rem 0",
+              position: "absolute",
+              bottom: "1.5rem",
+              left: 0,
+              right: 0,
               textAlign: "center",
+              backgroundColor: "transparent",
               border: "none",
               boxShadow: "none",
+              zIndex: 3,
+              padding: "0 1.5rem",
             }}
           >
             <p
@@ -370,7 +374,7 @@ const Index = () => {
               Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
             </p>
           </div>
-        </div>
+        </section>
 
         {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
         <HomepageFunnel />
