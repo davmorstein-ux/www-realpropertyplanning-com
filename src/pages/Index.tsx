@@ -318,6 +318,7 @@ const Index = () => {
           style={{ backgroundColor: "#f5f1ea" }}
         >
           <img
+            className="rpp-hero-bg"
             src={homepageHeroRpp.url}
             width={1920}
             height={960}
@@ -348,11 +349,11 @@ const Index = () => {
             alt="Real Property Planning"
             style={{
               position: "absolute",
-              top: "50%",
+              top: "45%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              width: "420px",
-              maxWidth: "55%",
+              width: "380px",
+              maxWidth: "50%",
               zIndex: 2,
               pointerEvents: "none",
             }}
