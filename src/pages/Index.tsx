@@ -87,7 +87,7 @@ const pageStyles = `
   .rpp-hero-section {
     position: relative !important;
     width: 100% !important;
-    height: 520px !important;
+    height: 560px !important;
     overflow: hidden !important;
     display: block !important;
     margin: 0 !important;
@@ -335,9 +335,9 @@ const Index = () => {
               bottom: 0,
               left: 0,
               right: 0,
-              height: "35%",
+              height: "100%",
               background:
-                "linear-gradient(to bottom, transparent 0%, rgba(245,241,234,0.5) 50%, #f5f1ea 100%)",
+                "linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(245,241,234,0.2) 72%, rgba(245,241,234,0.6) 82%, rgba(245,241,234,0.9) 92%, #f5f1ea 100%)",
               pointerEvents: "none",
               zIndex: 1,
             }}
