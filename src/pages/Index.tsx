@@ -335,9 +335,26 @@ const Index = () => {
               right: 0,
               bottom: 0,
               background:
-                "linear-gradient(to bottom, transparent 35%, rgba(245,241,234,0.4) 50%, rgba(245,241,234,0.85) 70%, #f5f1ea 100%)",
+                "linear-gradient(to bottom, transparent 55%, rgba(245,241,234,0.4) 68%, rgba(245,241,234,0.85) 82%, #f5f1ea 100%)",
               pointerEvents: "none",
               zIndex: 2,
+            }}
+          />
+
+          {/* RPP logo floating on the faded portion */}
+          <img
+            src="/rpp-logo-v4.webp"
+            alt=""
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              bottom: "3.5rem",
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "90px",
+              opacity: 1,
+              zIndex: 10,
+              pointerEvents: "none",
             }}
           />
 
@@ -345,7 +362,7 @@ const Index = () => {
           <div
             style={{
               position: "absolute",
-              bottom: "1.5rem",
+              bottom: "1rem",
               left: 0,
               right: 0,
               textAlign: "center",
