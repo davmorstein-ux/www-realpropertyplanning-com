@@ -86,7 +86,7 @@ const pageStyles = `
   .rpp-hero-section {
     position: relative !important;
     width: 100% !important;
-    height: 420px !important;
+    height: 520px !important;
     overflow: hidden !important;
     display: block !important;
     margin: 0 !important;
@@ -312,50 +312,64 @@ const Index = () => {
       <Header />
       <main id="main-content">
         {/* ── 1. HERO IMAGE (contains its own text/logo) with bottom fade to page bg ── */}
-        <section className="rpp-hero-section">
-          <img
-            src={homepageHeroRpp.url}
-            width={1920}
-            height={960}
-            alt="Welcome to Real Property Planning — senior couple by a red convertible with a SOLD sign and moving truck at a craftsman home"
-            loading="eager"
-            decoding="async"
-            sizes="100vw"
-          />
+        <div style={{ position: "relative", backgroundColor: "#f5f2ec" }}>
+          <section className="rpp-hero-section">
+            <img
+              src={homepageHeroRpp.url}
+              width={1920}
+              height={960}
+              alt="Welcome to Real Property Planning — senior couple by a red convertible with a SOLD sign and moving truck at a craftsman home"
+              loading="eager"
+              decoding="async"
+              sizes="100vw"
+            />
+          </section>
 
-          {/* Bottom fade overlay to blend hero into page background */}
+          {/* Fade overlay bleeding from hero into tagline area for seamless transition */}
           <div
             style={{
               position: "absolute",
-              top: 0,
               left: 0,
               right: 0,
-              height: "100%",
-              background: "linear-gradient(to bottom, transparent 40%, rgba(245,242,236,0.5) 65%, #f5f2ec 100%)",
+              top: "40%",
+              bottom: 0,
+              background:
+                "linear-gradient(to bottom, transparent 30%, rgba(245,242,236,0.6) 55%, #f5f2ec 80%, #f5f2ec 100%)",
               pointerEvents: "none",
+              zIndex: 2,
             }}
           />
-        </section>
 
-        {/* Tagline bridge */}
-        <div style={{ backgroundColor: "#f5f2ec", padding: "1.25rem 1.5rem 0", textAlign: "center", border: "none", boxShadow: "none" }}>
-          <p
+          {/* Tagline bridge — transparent, sits on the faded surface */}
+          <div
             style={{
-              fontFamily: "Inter, system-ui, sans-serif",
-              fontSize: "14px",
-              fontWeight: 600,
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: "#1a3a6b",
-              margin: 0,
-              opacity: 1,
+              position: "relative",
+              zIndex: 3,
+              backgroundColor: "transparent",
+              padding: "1.25rem 1.5rem 0",
+              textAlign: "center",
               border: "none",
-              textDecoration: "none",
               boxShadow: "none",
             }}
           >
-            Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
-          </p>
+            <p
+              style={{
+                fontFamily: "Inter, system-ui, sans-serif",
+                fontSize: "14px",
+                fontWeight: 600,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "#1a3a6b",
+                margin: 0,
+                opacity: 1,
+                border: "none",
+                textDecoration: "none",
+                boxShadow: "none",
+              }}
+            >
+              Estate & Probate · Senior Transitions · Adult Family Homes Marketplace
+            </p>
+          </div>
         </div>
 
         {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
