@@ -349,18 +349,11 @@ const Index = () => {
             style={{
               position: "absolute",
               bottom: "2.5rem",
-              left: "50%",
-              right: "auto",
+              left: 0,
+              right: 0,
               textAlign: "center",
               zIndex: 3,
               pointerEvents: "none",
-              background: "rgba(255, 255, 255, 0.55)",
-              backdropFilter: "blur(4px)",
-              borderRadius: "8px",
-              padding: "0.75rem 2.5rem",
-              margin: "0 auto",
-              maxWidth: "800px",
-              transform: "translateX(-50%)",
             }}
           >
             <div className="rpp-tagline" style={{}}>
