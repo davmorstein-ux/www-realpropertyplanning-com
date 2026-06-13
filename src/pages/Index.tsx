@@ -251,6 +251,12 @@ const pageStyles = `
     letter-spacing: 0.5px !important;
     line-height: 1.4 !important;
   }
+  @media (max-width: 1023px) { .rpp-hero-logo { width: 260px !important; } }
+  @media (max-width: 767px) { .rpp-hero-logo { width: 160px !important; } }
+  @media (max-width: 1023px) { .rpp-tagline { font-size: 16px !important; } }
+  @media (max-width: 767px) { .rpp-tagline { font-size: 13px !important; letter-spacing: 1px !important; } }
+  @media (max-width: 1023px) { .rpp-descriptor { font-size: 14px !important; } }
+  @media (max-width: 767px) { .rpp-descriptor { font-size: 12px !important; } }
 `;
 
 const GoldArrow = ({ size = 13 }: { size?: number }) => (
@@ -332,6 +338,7 @@ const Index = () => {
 
           {/* RPP logo overlay centered */}
           <img
+            className="rpp-hero-logo"
             src={rppLogoTransparent.url}
             alt="Real Property Planning"
             style={{
