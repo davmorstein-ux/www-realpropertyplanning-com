@@ -2671,7 +2671,7 @@ main > section:has(> div > [data-hero-band]) + * {
 main *,
 footer *,
 header * {
-  font-size: max(1em, 14px) !important;
+  font-size: max(1em, 14px);
 }
 
 /* 2. Body / paragraph / list text — 18px floor on light surfaces */
