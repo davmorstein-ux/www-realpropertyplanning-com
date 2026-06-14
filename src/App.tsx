@@ -211,6 +211,7 @@ const AFHResources = lazy(() => import("./pages/AFHResources"));
 const AFHListings = lazy(() => import("./pages/AFHListings"));
 const AFHManagementCompanies = lazy(() => import("./pages/AFHManagementCompanies"));
 const AFHRealEstateBroker = lazy(() => import("./pages/AFHRealEstateBroker"));
+const AFHMarketplace = lazy(() => import("./pages/AFHMarketplace"));
 const LongTermCareOptions = lazy(() => import("./pages/LongTermCareOptions"));
 const LTCNursingHomes = lazy(() => import("./pages/long-term-care/NursingHomes"));
 const LTCShortTermNursingHomeStays = lazy(() => import("./pages/long-term-care/ShortTermNursingHomeStays"));
@@ -695,6 +696,7 @@ const App = () => (
           <Route path="/afh-club/listings" element={<AFHListings />} />
           <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />
           <Route path="/afh-club/real-estate-broker" element={<AFHRealEstateBroker />} />
+          <Route path="/afh-marketplace" element={<AFHMarketplace />} />
           <Route path="/long-term-care" element={<LongTermCareOptions />} />
           <Route path="/long-term-care/nursing-homes" element={<LTCNursingHomes />} />
           <Route path="/long-term-care/short-term-nursing-home-stays" element={<LTCShortTermNursingHomeStays />} />
