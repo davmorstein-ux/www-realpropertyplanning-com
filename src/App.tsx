@@ -698,6 +698,7 @@ const App = () => (
           <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />
           <Route path="/afh-club/real-estate-broker" element={<AFHRealEstateBroker />} />
           <Route path="/afh-marketplace" element={<AFHMarketplace />} />
+          <Route path="/afh-submit" element={<AFHSubmit />} />
           <Route path="/long-term-care" element={<LongTermCareOptions />} />
           <Route path="/long-term-care/nursing-homes" element={<LTCNursingHomes />} />
           <Route path="/long-term-care/short-term-nursing-home-stays" element={<LTCShortTermNursingHomeStays />} />
