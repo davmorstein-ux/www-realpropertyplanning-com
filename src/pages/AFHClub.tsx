@@ -155,6 +155,24 @@ const AFHClub = () => (
       {/* Carousel — no text above it */}
       <AFHCarousel categories={CATEGORIES} />
 
+      <section style={{ background: "#fff", padding: "48px 24px" }}>
+        <div style={{ maxWidth: 960, margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#b87333", marginBottom: 12 }}>Buy · Sell · Invest</p>
+          <h2 style={{ fontSize: "clamp(26px, 3vw, 36px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#1e2a38", marginBottom: 16 }}>AFH Marketplace</h2>
+          <p style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#4a5568", maxWidth: 600, margin: "0 auto 32px", lineHeight: 1.7 }}>
+            Washington's only dedicated marketplace for buying and selling Adult Family Homes — property, business, or both.
+          </p>
+          <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+            <Link to="/afh-marketplace" style={{ display: "inline-block", background: "#1e2a38", color: "#fff", fontFamily: "'Raleway', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.08em", padding: "14px 32px", borderRadius: 3, textDecoration: "none" }}>
+              Browse Listings
+            </Link>
+            <Link to="/afh-submit" style={{ display: "inline-block", background: "transparent", color: "#1e2a38", fontFamily: "'Raleway', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.08em", padding: "14px 32px", borderRadius: 3, textDecoration: "none", border: "2px solid #1e2a38" }}>
+              Submit a Listing
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Category list */}
       <section style={{ maxWidth: 900, margin: "0 auto", padding: "56px 24px 80px" }}>
         <h2
