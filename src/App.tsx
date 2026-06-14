@@ -206,6 +206,7 @@ const AFHBuyingSelling = lazy(() => import("./pages/AFHBuyingSelling"));
 const AFHRegulationsCompliance = lazy(() => import("./pages/AFHRegulationsCompliance"));
 const AFHFindProfessional = lazy(() => import("./pages/AFHFindProfessional"));
 const AFHCostCalculator = lazy(() => import("./pages/AFHCostCalculator"));
+const AFHCalculators = lazy(() => import("./pages/AFHCalculators"));
 const queryClient = new QueryClient();
 const AFHResources = lazy(() => import("./pages/AFHResources"));
 const AFHListings = lazy(() => import("./pages/AFHListings"));
