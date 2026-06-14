@@ -211,6 +211,7 @@ const AFHResources = lazy(() => import("./pages/AFHResources"));
 const AFHListings = lazy(() => import("./pages/AFHListings"));
 const AFHManagementCompanies = lazy(() => import("./pages/AFHManagementCompanies"));
 const AFHRealEstateBroker = lazy(() => import("./pages/AFHRealEstateBroker"));
+const AFHMarketplace = lazy(() => import("./pages/AFHMarketplace"));
 const LongTermCareOptions = lazy(() => import("./pages/LongTermCareOptions"));
 const LTCNursingHomes = lazy(() => import("./pages/long-term-care/NursingHomes"));
 const LTCShortTermNursingHomeStays = lazy(() => import("./pages/long-term-care/ShortTermNursingHomeStays"));
