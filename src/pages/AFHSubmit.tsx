@@ -61,12 +61,34 @@ const AFHSubmit: React.FC = () => {
   const set = <K extends keyof FormState>(k: K, v: FormState[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
 
-  const onSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // eslint-disable-next-line no-console
-    console.log("AFH seller inquiry:", form);
-    setSubmitted(true);
-    if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+    const { firstName, lastName, email, phone, city, county, sellType: listingType, priceRange, timeline, workingWithBroker: hasBroker, notes } = form;
+    const formData = {
+      access_key: "6ce32857-7083-46b2-aef1-13b7203cba98",
+      subject: "New AFH Seller Inquiry — " + county + " County",
+      from_name: firstName + " " + lastName,
+      email: email,
+      phone: phone,
+      city: city,
+      county: county,
+      listingType: listingType,
+      priceRange: priceRange,
+      timeline: timeline,
+      hasBroker: hasBroker,
+      notes: notes,
+    };
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+    if (response.ok) {
+      setSubmitted(true);
+      if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      alert("Something went wrong. Please try again or call David directly.");
+    }
   };
 
   return (
@@ -92,12 +114,12 @@ const AFHSubmit: React.FC = () => {
             <div className="bg-white border border-slate-200 rounded-xl p-8 md:p-10 text-center">
               <h2 className="text-[24px] md:text-[28px] font-bold text-slate-900">Thank you</h2>
               <p className="text-[17px] text-slate-700 mt-3 leading-relaxed">
-                David will be in touch within 1–2 business days to schedule a conversation.
+                Thank you — David will be in touch within 24 hours to schedule a conversation.
               </p>
             </div>
           ) : (
             <form
-              onSubmit={onSubmit}
+              onSubmit={handleSubmit}
               className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 space-y-6"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
