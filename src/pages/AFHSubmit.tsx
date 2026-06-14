@@ -114,7 +114,7 @@ const AFHSubmit: React.FC = () => {
             <div className="bg-white border border-slate-200 rounded-xl p-8 md:p-10 text-center">
               <h2 className="text-[24px] md:text-[28px] font-bold text-slate-900">Thank you</h2>
               <p className="text-[17px] text-slate-700 mt-3 leading-relaxed">
-                David will be in touch within 1–2 business days to schedule a conversation.
+                Thank you — David will be in touch within 24 hours to schedule a conversation.
               </p>
             </div>
           ) : (
