@@ -341,6 +341,63 @@ const AFHClub = () => (
         </div>
       </section>
 
+      {/* Featured: AFH Marketplace */}
+      <section
+        style={{
+          background: "linear-gradient(135deg, #1a7a78 0%, #155f5d 100%)",
+          padding: "56px 24px",
+          color: "#ffffff",
+        }}
+      >
+        <div style={{ maxWidth: 920, margin: "0 auto", textAlign: "center" }}>
+          <h2 style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontSize: "clamp(28px, 4vw, 40px)",
+            fontWeight: 600,
+            margin: "0 0 12px",
+            letterSpacing: "-0.01em",
+            lineHeight: 1.2,
+          }}>
+            AFH Marketplace
+          </h2>
+          <p style={{
+            fontSize: 19,
+            lineHeight: 1.7,
+            margin: "0 auto 28px",
+            maxWidth: 640,
+            color: "rgba(255,255,255,0.95)",
+          }}>
+            Browse Adult Family Homes for sale — property, business, or both. Washington's only dedicated AFH buy/sell marketplace.
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
+            <Link
+              to="/afh-marketplace"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 8,
+                background: "#ffffff", color: "#1a7a78",
+                fontSize: 16, fontWeight: 700, padding: "14px 28px",
+                borderRadius: 10, textDecoration: "none", minHeight: 52,
+                boxShadow: "0 4px 14px rgba(0,0,0,0.15)",
+              }}
+            >
+              Browse listings
+            </Link>
+            <Link
+              to="/afh-submit"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 8,
+                background: "transparent", color: "#ffffff",
+                fontSize: 16, fontWeight: 700, padding: "14px 28px",
+                borderRadius: 10, textDecoration: "none", minHeight: 52,
+                border: "2px solid rgba(255,255,255,0.85)",
+              }}
+            >
+              Submit a listing
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <CTASection />
       <DisclaimerSection />
     </main>
