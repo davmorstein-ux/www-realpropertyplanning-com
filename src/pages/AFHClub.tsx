@@ -410,7 +410,7 @@ const AFHClub = () => (
                 border: "2px solid rgba(255,255,255,0.85)",
               }}
             >
-              Submit a listing
+              Sell Your AFH
             </Link>
           </div>
         </div>
