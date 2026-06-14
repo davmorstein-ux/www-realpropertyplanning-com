@@ -82,14 +82,11 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const slideTo = useCallback(
-    (newPos: number) => {
-      setTransitioning(true);
-      setPos(newPos);
-      setTimeout(() => setTransitioning(false), SLIDE_MS + 50);
-    },
-    [],
-  );
+  const slideTo = useCallback((newPos: number) => {
+    setTransitioning(true);
+    setPos(newPos);
+    setTimeout(() => setTransitioning(false), SLIDE_MS + 50);
+  }, []);
 
   const next = useCallback(() => {
     slideTo(pos + 1);
@@ -115,15 +112,19 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
       {/* Carousel viewport */}
       <div
         className="afh-carousel-container"
-        style={{ maxWidth: 960, margin: "0 auto", padding: "8px 0 16px", overflow: "hidden" }}
+        style={{ maxWidth: 960, margin: "0 auto", padding: "8px 0 40px", overflow: "hidden" }}
         onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
+        onMouseLeave={() => {
+          setPaused(false);
+          setHovered(null);
+        }}
       >
         <div
           className="afh-carousel-track"
           style={{
             display: "flex",
             gap: CARD_GAP,
+            // Width never changes on hover — always CARD_W + CARD_GAP per step
             transform: `translateX(calc(-${pos} * ${CARD_W + CARD_GAP}px))`,
             transition: transitioning ? `transform ${SLIDE_MS}ms cubic-bezier(0.16, 1, 0.3, 1)` : "none",
             willChange: "transform",
@@ -144,11 +145,16 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 borderRadius: 4,
                 overflow: "hidden",
                 flexShrink: 0,
-                width: hovered === i ? `${CARD_W + 60}px` : `${CARD_W}px`,
+                // WIDTH is always fixed — hover only affects height and transform
+                width: `${CARD_W}px`,
+                minWidth: `${CARD_W}px`,
+                maxWidth: `${CARD_W}px`,
+                // Height grows downward on hover
                 height: hovered === i ? `${CARD_H + 80}px` : `${CARD_H}px`,
                 boxShadow: hovered === i ? "0 40px 100px rgba(10,22,40,0.45)" : "0 4px 20px rgba(10,22,40,0.10)",
+                // Card rises upward on hover
                 transform: hovered === i ? "translateY(-30px)" : "translateY(0)",
-                transition: "width 0.4s ease, height 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease",
+                transition: "height 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease",
                 background: item.placeholder,
                 zIndex: hovered === i ? 10 : 1,
               }}
@@ -156,7 +162,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
               <img
                 src={item.img}
                 alt={item.title}
-                width={CARD_W + 60}
+                width={CARD_W}
                 height={CARD_H + 80}
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
                 loading="lazy"
@@ -216,7 +222,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
       </div>
 
       {/* Controls */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, marginTop: 36 }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, marginTop: 12 }}>
         <button
           onClick={prev}
           aria-label="Previous"
