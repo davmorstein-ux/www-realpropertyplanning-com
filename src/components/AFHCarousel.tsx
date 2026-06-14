@@ -46,8 +46,8 @@ const DEFAULT_TOPICS = [
     placeholder: "#3c4c5c",
   },
   {
-    title: "AFH Cost Calculator",
-    href: "/afh-club/afh-cost-calculator",
+    title: "AFH Calculators",
+    href: "/afh-club/calculators",
     img: "/__l5e/assets-v1/f6d8b31f-90b0-4639-a379-feeff961e81c/afh-cost-calculator-v2.webp",
     placeholder: "#2c3e4e",
   },
