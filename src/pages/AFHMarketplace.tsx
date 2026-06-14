@@ -226,21 +226,21 @@ const AFHMarketplace: React.FC = () => {
             </div>
           )}
 
-          {/* Submit CTA band */}
+          {/* Seller CTA band */}
           <div className="mt-10 bg-gradient-to-r from-[#1a7a78] to-[#155f5d] text-white rounded-xl p-8 md:p-10 flex flex-wrap items-center justify-between gap-5">
-            <div>
+            <div className="max-w-2xl">
               <h3 className="text-[22px] md:text-[24px] font-bold leading-tight">
-                Selling an AFH?
+                Thinking of selling your AFH?
               </h3>
-              <p className="text-[17px] text-white/90 mt-1 leading-relaxed">
-                Submit your listing for review — we'll post it within 48 hours.
+              <p className="text-[17px] text-white/90 mt-2 leading-relaxed">
+                Contact David first to discuss your goals, timeline, and options. A signed listing agreement is required before any property is marketed.
               </p>
             </div>
             <Link
-              to="/afh-submit"
+              to="/contact"
               className="inline-flex items-center gap-2 bg-white text-[#1a7a78] text-[15px] font-bold px-6 py-3 rounded-lg hover:bg-slate-100 transition-colors"
             >
-              <Plus size={16} /> Submit a listing
+              Get in Touch
             </Link>
           </div>
         </section>
