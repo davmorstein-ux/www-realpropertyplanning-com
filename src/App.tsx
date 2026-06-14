@@ -694,6 +694,7 @@ const App = () => (
           <Route path="/afh-club/regulations-compliance" element={<AFHRegulationsCompliance />} />
           <Route path="/afh-club/find-a-professional" element={<AFHFindProfessional />} />
           <Route path="/afh-club/afh-cost-calculator" element={<AFHCostCalculator />} />
+          <Route path="/afh-club/calculators" element={<AFHCalculators />} />
           <Route path="/afh-club/resources" element={<AFHResources />} />
           <Route path="/afh-club/listings" element={<AFHListings />} />
           <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />
