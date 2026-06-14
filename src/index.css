@@ -3011,3 +3011,23 @@ main .rpp-hero-band-text,
   font-family: 'Raleway', sans-serif !important;
 }
 
+
+/* AFH carousel — mobile centering */
+@media (max-width: 768px) {
+  .afh-carousel-container {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .afh-carousel-track {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .afh-carousel-item, .afh-carousel-card {
+    margin: 0 auto !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+  .afh-carousel-item img, .afh-carousel-card img {
+    margin: 0 auto !important;
+  }
+}

@@ -114,11 +114,13 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
     <section style={{ background: "#f0f3f6", padding: "48px 24px 64px" }}>
       {/* Carousel viewport */}
       <div
+        className="afh-carousel-container"
         style={{ maxWidth: 960, margin: "0 auto", padding: "8px 0 16px", overflow: "hidden" }}
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
         <div
+          className="afh-carousel-track"
           style={{
             display: "flex",
             gap: CARD_GAP,
@@ -132,6 +134,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             <Link
               key={i}
               to={item.href}
+              className="afh-carousel-card afh-carousel-item"
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
               style={{
