@@ -120,6 +120,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
         onMouseLeave={() => setPaused(false)}
       >
         <div
+          className="afh-carousel-track"
           style={{
             display: "flex",
             gap: CARD_GAP,
@@ -133,6 +134,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             <Link
               key={i}
               to={item.href}
+              className="afh-carousel-card afh-carousel-item"
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
               style={{
