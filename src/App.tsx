@@ -206,6 +206,7 @@ const AFHBuyingSelling = lazy(() => import("./pages/AFHBuyingSelling"));
 const AFHRegulationsCompliance = lazy(() => import("./pages/AFHRegulationsCompliance"));
 const AFHFindProfessional = lazy(() => import("./pages/AFHFindProfessional"));
 const AFHCostCalculator = lazy(() => import("./pages/AFHCostCalculator"));
+const AFHCalculators = lazy(() => import("./pages/AFHCalculators"));
 const queryClient = new QueryClient();
 const AFHResources = lazy(() => import("./pages/AFHResources"));
 const AFHListings = lazy(() => import("./pages/AFHListings"));
@@ -693,6 +694,7 @@ const App = () => (
           <Route path="/afh-club/regulations-compliance" element={<AFHRegulationsCompliance />} />
           <Route path="/afh-club/find-a-professional" element={<AFHFindProfessional />} />
           <Route path="/afh-club/afh-cost-calculator" element={<AFHCostCalculator />} />
+          <Route path="/afh-club/calculators" element={<AFHCalculators />} />
           <Route path="/afh-club/resources" element={<AFHResources />} />
           <Route path="/afh-club/listings" element={<AFHListings />} />
           <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />

@@ -80,7 +80,7 @@ const TOP_LINKS = [
       { label: "AFH Resources", href: "/afh-club/afh-resources" },
       { label: "AFH Listings", href: "/afh-club/listings" },
       { label: "Management Companies", href: "/afh-club/management-companies" },
-      { label: "AFH Cost Calculator", href: "/afh-club/afh-cost-calculator" },
+      { label: "AFH Calculators", href: "/afh-club/calculators" },
     ],
   },
   { label: "Contact", href: "/contact" },
