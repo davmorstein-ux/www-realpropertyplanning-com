@@ -102,10 +102,14 @@ const AFHMarketplace: React.FC = () => {
       />
       <Header />
       <main id="main-content" className="min-h-screen bg-slate-50" style={{ paddingTop: 80 }}>
-        <HeroBandTitle
-          title="AFH Marketplace"
-          subtitle="Washington State Adult Family Homes for sale — property, business, or both."
-        />
+        <section className="bg-white border-b border-slate-200 py-10 md:py-14">
+          <div className="max-w-6xl mx-auto px-6">
+            <HeroBandTitle>AFH Marketplace</HeroBandTitle>
+            <p className="text-[17px] md:text-[19px] text-slate-600 mt-3 max-w-3xl leading-relaxed">
+              Washington State Adult Family Homes for sale — property, business, or both.
+            </p>
+          </div>
+        </section>
 
         {/* Filters */}
         <section className="bg-white border-b border-slate-200">
