@@ -119,7 +119,7 @@ const AFHSubmit: React.FC = () => {
             </div>
           ) : (
             <form
-              onSubmit={onSubmit}
+              onSubmit={handleSubmit}
               className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 space-y-6"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
