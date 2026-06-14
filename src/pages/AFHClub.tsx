@@ -44,6 +44,20 @@ const CATEGORIES = [
     description: "Estimate your startup costs, monthly cash flow, and projected return on investment before you invest in an Adult Family Home.",
     placeholder: "#2c3e4e",
   },
+  {
+    title: "AFH Marketplace",
+    href: "/afh-marketplace",
+    img: "/afh-listings.webp",
+    description: "Browse AFH property, business, and combined opportunities across Washington State with filters and financial metrics.",
+    placeholder: "#283646",
+  },
+  {
+    title: "Submit a Listing",
+    href: "/afh-submit",
+    img: "/afh-resources.webp",
+    description: "List your Adult Family Home property, business, or both with our guided 5-step seller submission form.",
+    placeholder: "#2a3848",
+  },
 ];
 
 const AFHClub = () => (
