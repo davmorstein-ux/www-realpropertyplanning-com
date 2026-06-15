@@ -3051,3 +3051,17 @@ main .rpp-hero-band-text,
   color: #c8b98a !important;
   opacity: 1 !important;
 }
+
+/* ── Calculator page white text override ─────────────────── */
+.calc-page-hero,
+.calc-page-hero *,
+.calc-page-hero p,
+.calc-page-hero h1,
+.calc-page-hero span {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.calc-page-hero .eyebrow-label {
+  color: #c8b98a !important;
+}
