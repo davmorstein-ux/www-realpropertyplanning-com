@@ -54,7 +54,7 @@ const calculatorHTML = `
 .courtesyv{text-align:center;font-size:13px;color:#00e676;letter-spacing:.15em;text-transform:uppercase;margin-top:1.75rem;font-weight:700;padding-top:1.25rem;border-top:1px solid rgba(0,230,118,0.2);text-shadow:0 0 12px rgba(0,230,118,0.5)}
 </style>
 <div class="scene2">
-<canvas id="dot-matrix2" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.18"></canvas>
+<canvas id="dot-matrix2" class="dot-matrix-canvas"></canvas>
 <script>
 (function(){
   var c=document.getElementById('dot-matrix2');
