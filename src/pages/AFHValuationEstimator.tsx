@@ -198,7 +198,7 @@ const AFHValuationEstimator = () => {
     boxSizing: "border-box",
   };
   const labelStyle: React.CSSProperties = {
-    display: "block",
+    fontFamily: "'Raleway',sans-serif",
     fontSize: 12,
     letterSpacing: ".1em",
     textTransform: "uppercase",
