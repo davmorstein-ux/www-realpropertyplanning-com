@@ -1,4 +1,4 @@
-/* refreshed: force rebuild 2026-06-15 */
+/* refreshed: force rebuild 2026-06-15b */
 const HomepageOrientation = () => {
   return (
     <section className="py-8 md:py-10 lg:py-12 bg-cream">
