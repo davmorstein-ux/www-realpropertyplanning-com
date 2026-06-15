@@ -3155,3 +3155,8 @@ main .rpp-hero-band-text,
   min-height: unset !important;
   height: auto !important;
 }
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
