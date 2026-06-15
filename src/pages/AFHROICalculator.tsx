@@ -6,7 +6,7 @@ const calculatorHTML = `
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 .scene{background:linear-gradient(160deg,#000510 0%,#000 50%,#000d20 100%);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px}
-.clipboard{background:linear-gradient(170deg,#071830 0%,#030d1e 60%,#050f22 100%);border:1px solid rgba(30,144,255,0.6);border-radius:14px;padding:2rem;position:relative;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(30,144,255,0.4),0 4px 0 #030d1e,0 6px 0 rgba(30,144,255,0.2),0 8px 0 #020a18,0 10px 0 rgba(30,144,255,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(30,144,255,0.3)}
+.clipboard{background:linear-gradient(170deg,#071830 0%,#030d1e 60%,#050f22 100%);border:2px solid #1e90ff;border-radius:14px;padding:2rem;position:relative;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(30,144,255,0.4),0 4px 0 #030d1e,0 6px 0 rgba(30,144,255,0.2),0 8px 0 #020a18,0 10px 0 rgba(30,144,255,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(30,144,255,0.3)}
 .clipboard::before{content:'';position:absolute;top:0;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,rgba(30,144,255,0.8),transparent)}
 .clipboard::after{content:'';position:absolute;bottom:-12px;left:10%;right:10%;height:12px;background:radial-gradient(ellipse at center,rgba(30,144,255,0.15) 0%,transparent 70%);filter:blur(4px)}
 .clip{position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:60px;height:22px;background:linear-gradient(135deg,#1a3a6e,#0d2244);border:1px solid rgba(30,144,255,0.5);border-radius:4px 4px 0 0}
@@ -15,7 +15,7 @@ const calculatorHTML = `
 .ch h2{font-size:30px;font-weight:700;color:#fff;letter-spacing:.05em;text-shadow:0 0 30px rgba(30,144,255,0.5)}
 .ch h2 span{color:#1e90ff;text-shadow:0 0 20px rgba(30,144,255,0.8)}
 .ch .tg{font-size:13px;color:#1e90ff;margin-top:6px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
-.panel{background:linear-gradient(135deg,rgba(255,255,255,0.03) 0%,rgba(0,0,0,0.3) 100%);border:1px solid rgba(30,144,255,0.35);border-radius:10px;padding:1.4rem 1.6rem;margin-bottom:14px;box-shadow:inset 0 1px 0 rgba(30,144,255,0.15),0 2px 12px rgba(0,0,0,0.4);position:relative}
+.panel{background:linear-gradient(135deg,rgba(255,255,255,0.03) 0%,rgba(0,0,0,0.3) 100%);border:2px solid #1e90ff;border-radius:10px;padding:1.4rem 1.6rem;margin-bottom:14px;box-shadow:inset 0 1px 0 rgba(30,144,255,0.15),0 2px 12px rgba(0,0,0,0.4);position:relative}
 .panel::before{content:'';position:absolute;top:0;left:16px;right:16px;height:1px;background:linear-gradient(90deg,transparent,rgba(30,144,255,0.4),transparent)}
 .pt{font-size:17px;letter-spacing:.2em;text-transform:uppercase;color:#1e90ff;margin-bottom:16px;font-weight:700;text-shadow:0 0 14px rgba(30,144,255,0.6)}
 .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(30,144,255,0.25),transparent);margin:0 0 18px}
@@ -23,7 +23,7 @@ const calculatorHTML = `
 .g2+.g2{margin-top:16px}
 .field{display:flex;flex-direction:column}
 .field label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#1e90ff;margin-bottom:8px;font-weight:700;min-height:32px;display:flex;align-items:flex-end;line-height:1.3}
-.field input,.field select{width:100%;background:rgba(0,10,28,0.8);border:1px solid rgba(30,144,255,0.4);border-radius:6px;color:#fff;font-size:15px;padding:11px 14px;font-family:'Raleway',sans-serif;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6);transition:border-color .2s,box-shadow .2s}
+.field input,.field select{width:100%;background:rgba(0,10,28,0.8);border:2px solid #1e90ff;border-radius:6px;color:#fff;font-size:15px;padding:11px 14px;font-family:'Raleway',sans-serif;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6);transition:border-color .2s,box-shadow .2s}
 .field input::placeholder{color:rgba(30,144,255,0.25)}
 .field input:focus,.field select:focus{outline:none;border-color:#1e90ff;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6),0 0 14px rgba(30,144,255,0.35)}
 .field select option{background:#030d1e;color:#fff}
@@ -31,7 +31,7 @@ const calculatorHTML = `
 .dp-label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .dp-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#1e90ff;font-weight:700}
 .dp-input-row{display:flex;align-items:center;gap:12px;margin-top:10px}
-.dp-input-row input{flex:1;background:rgba(0,10,28,0.8);border:1px solid rgba(30,144,255,0.4);border-radius:6px;color:#fff;font-size:15px;padding:11px 14px;font-family:'Raleway',sans-serif;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6)}
+.dp-input-row input{flex:1;background:rgba(0,10,28,0.8);border:2px solid #1e90ff;border-radius:6px;color:#fff;font-size:15px;padding:11px 14px;font-family:'Raleway',sans-serif;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6)}
 .dp-input-row input:focus{outline:none;border-color:#1e90ff;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6),0 0 14px rgba(30,144,255,0.35)}
 .dp-derived{font-size:14px;color:#1e90ff;font-weight:700;white-space:nowrap;min-width:120px;text-align:right}
 .dp-hint{font-size:12px;color:#7ab8ff;margin-top:6px}
