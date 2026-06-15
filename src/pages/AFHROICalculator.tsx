@@ -248,7 +248,7 @@ const AFHROICalculator = () => {
             <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#fff", marginBottom: 12, lineHeight: 1.2 }}>
               AFH ROI Calculator
             </h1>
-            <p style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "rgba(255,255,255,0.75)", lineHeight: 1.7, maxWidth: 600 }}>
+            <p style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#ffffff", lineHeight: 1.7, maxWidth: 600 }}>
               Know your numbers before you commit. Analyze cash-on-cash return, cap rate, NOI, and monthly cash flow.
             </p>
           </div>
