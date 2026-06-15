@@ -1,4 +1,5 @@
 /* Fonts loaded non-blocking from index.html (DM Sans + DM Sans) */
+.hero-text-white { color: #ffffff !important; opacity: 1 !important; }
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&display=swap");
 
 /* Global typography overhaul */
