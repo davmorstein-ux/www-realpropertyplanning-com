@@ -1,10 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&display=swap");
-
 /* Fonts loaded non-blocking from index.html (DM Sans + DM Sans) */
-.hero-text-white {
-  color: #ffffff !important;
-  opacity: 1 !important;
-}
+.hero-text-white { color: #ffffff !important; opacity: 1 !important; }
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&display=swap");
 
 /* Global typography overhaul */
 h1,
@@ -145,7 +141,9 @@ nav [class*="dropdown"] button svg {
 }
 
 /* (Removed: overly broad uniform tile sizing block — it matched every
-   class containing "card", "tile", or "grid". */
+   class containing "card", "tile", or "grid" — including Tailwind's
+   `grid`, `card-3d`, `bg-card`, etc. — and forced the entire layout into
+   a 220px-wide no-wrap row, breaking mobile responsiveness sitewide.) */
 
 /* Hero blue title band — prevent descender clipping */
 [class*="hero-band"],
@@ -1792,39 +1790,12 @@ h4 + .text-muted-foreground {
   color: #4b5563 !important;
   opacity: 1 !important;
 }
-/* (Removed: overly broad uniform tile sizing block — it matched every class containing "card". */
-#calc-roi-btn,
-#calc-val-btn {
-  font-size: 22px !important;
-  font-weight: 900 !important;
-}
-#r-occ,
-#r-cap {
-  padding: 11px 14px !important;
-  min-height: unset !important;
-  height: auto !important;
-}
+
 [class*="bg-navy"] :where(h1, h2, h3, h4) + p,
 [class*="bg-primary"] :where(h1, h2, h3, h4) + p {
   color: #ffffff !important;
 }
-.calc-page-hero h1 + p,
-.calc-page-hero p,
-.calc-page-hero span {
-  color: #ffffff !important;
-  opacity: 1 !important;
-}
-#calc-roi-btn,
-#calc-val-btn {
-  font-size: 22px !important;
-  font-weight: 900 !important;
-}
-#r-occ,
-#r-cap {
-  padding: 11px 14px !important;
-  min-height: unset !important;
-  height: auto !important;
-}
+
 /* 5. Card body text — readable, never faded */
 :where(
     [class*="rounded-"][class*="bg-card"],
@@ -3032,14 +3003,15 @@ main .rpp-hero-band-text,
   line-height: 1 !important;
   font-weight: 900 !important;
   letter-spacing: 0.18em !important;
-  color: #ffffff !important;
+  color: #FFFFFF !important;
   text-transform: uppercase !important;
   text-align: center !important;
   margin: 0 !important;
   padding: 0 !important;
   opacity: 1 !important;
-  font-family: "Raleway", sans-serif !important;
+  font-family: 'Raleway', sans-serif !important;
 }
+
 
 /* AFH carousel — mobile centering */
 @media (max-width: 768px) {
@@ -3051,143 +3023,12 @@ main .rpp-hero-band-text,
     justify-content: center !important;
     align-items: center !important;
   }
-  .afh-carousel-item,
-  .afh-carousel-card {
+  .afh-carousel-item, .afh-carousel-card {
     margin: 0 auto !important;
     text-align: center !important;
     align-items: center !important;
   }
-  .afh-carousel-item img,
-  .afh-carousel-card img {
+  .afh-carousel-item img, .afh-carousel-card img {
     margin: 0 auto !important;
   }
 }
-
-/* Calculator page overrides — do not remove */
-.calc-hero-text {
-  color: #ffffff !important;
-  opacity: 1 !important;
-  font-family: "Raleway", sans-serif !important;
-}
-
-.calc-hero-subtitle {
-  color: #ffffff !important;
-  opacity: 1 !important;
-  font-size: 18px !important;
-  line-height: 1.7 !important;
-}
-
-.calc-hero-eyebrow {
-  color: #c8b98a !important;
-  opacity: 1 !important;
-}
-
-/* ── Calculator page white text override ─────────────────── */
-.calc-page-hero,
-.calc-page-hero *,
-.calc-page-hero p,
-.calc-page-hero h1,
-.calc-page-hero span {
-  color: #ffffff !important;
-  opacity: 1 !important;
-}
-
-.calc-page-hero .eyebrow-label {
-  color: #c8b98a !important;
-}
-/* ── Calculator fixes — do not remove ── */
-#r-occ,
-#r-cap,
-#r-rev,
-#r-exp,
-#r-price,
-#r-rate,
-#r-down {
-  padding: 11px 14px !important;
-  font-size: 15px !important;
-  box-sizing: border-box !important;
-  height: auto !important;
-  min-height: unset !important;
-}
-
-#calc-roi-btn {
-  font-size: 22px !important;
-  font-weight: 900 !important;
-  line-height: 1 !important;
-}
-
-#calc-val-btn {
-  font-size: 22px !important;
-  font-weight: 900 !important;
-  line-height: 1 !important;
-}
-/* Calculator fixes */
-#r-occ,
-#r-cap,
-#r-rev,
-#r-exp,
-#r-price,
-#r-rate,
-#r-down,
-#r-rerm {
-  padding: 11px 14px !important;
-  font-size: 15px !important;
-  height: auto !important;
-  min-height: unset !important;
-  box-sizing: border-box !important;
-}
-#calc-roi-btn,
-#calc-val-btn {
-  font-size: 22px !important;
-  font-weight: 900 !important;
-}
-#calc-roi-btn,
-#calc-val-btn {
-  font-size: 22px !important;
-  font-weight: 900 !important;
-}
-#r-occ {
-  padding: 11px 14px !important;
-  min-height: unset !important;
-  height: auto !important;
-}
-#r-cap {
-  padding: 11px 14px !important;
-  min-height: unset !important;
-  height: auto !important;
-}
-#calc-roi-btn,
-#calc-val-btn {
-  font-size: 22px !important;
-  font-weight: 900 !important;
-}
-/* FINAL OVERRIDES — must stay at bottom of file */
-#calc-roi-btn,
-#calc-val-btn {
-  font-size: 22px !important;
-  font-weight: 900 !important;
-}
-#r-occ,
-#r-cap {
-  padding: 11px 14px !important;
-  min-height: unset !important;
-  height: auto !important;
-  font-size: 15px !important;
-}
-.calc-page-hero p,
-.calc-page-hero h1,
-.calc-page-hero span,
-.calc-page-hero * {
-  color: #ffffff !important;
-  opacity: 1 !important;
-}
-.calc-page-hero .eyebrow-label {
-  color: #c8b98a !important;
-}
-
-#calc-roi-btn, #calc-val-btn { font-size: 22px !important; font-weight: 900 !important; }
-#r-occ, #r-cap { padding: 11px 14px !important; min-height: unset !important; height: auto !important; }
-.calc-page-hero p, .calc-page-hero h1, .calc-page-hero span, .calc-page-hero * { color: #ffffff !important; opacity: 1 !important; }
-.calc-page-hero .eyebrow-label { color: #c8b98a !important; }
-#v-prop, #v-dshs, #v-county { height: 46px !important; box-sizing: border-box !important; }
-#r-rev, #r-exp, #r-cap, #r-occ { height: 46px !important; box-sizing: border-box !important; }
