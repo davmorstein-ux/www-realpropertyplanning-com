@@ -57,6 +57,36 @@ const calculatorHTML = `
 .courtesy{text-align:center;font-size:13px;color:#1e90ff;letter-spacing:.15em;text-transform:uppercase;margin-top:1.75rem;font-weight:700;padding-top:1.25rem;border-top:1px solid rgba(30,144,255,0.2);text-shadow:0 0 12px rgba(30,144,255,0.5)}
 </style>
 <div class="scene">
+<canvas id="dot-matrix" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.18"></canvas>
+<script>
+(function(){
+  var c=document.getElementById('dot-matrix');
+  var ctx=c.getContext('2d');
+  var cols,rows;
+  var spacing=28;
+  var t=0;
+  function resize(){c.width=window.innerWidth;c.height=window.innerHeight;cols=Math.ceil(c.width/spacing)+1;rows=Math.ceil(c.height/spacing)+1;}
+  resize();
+  window.addEventListener('resize',resize);
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    for(var i=0;i<cols;i++){
+      for(var j=0;j<rows;j++){
+        var wave=Math.sin(i*0.4+j*0.3+t)*0.5+0.5;
+        var r=2+wave*1.5;
+        var alpha=0.3+wave*0.7;
+        ctx.beginPath();
+        ctx.arc(i*spacing,j*spacing,r,0,Math.PI*2);
+        ctx.fillStyle='rgba(30,144,255,'+alpha+')';
+        ctx.fill();
+      }
+    }
+    t+=0.012;
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
 <div class="clipboard">
   <div class="clip"></div>
   <div class="ch">
@@ -79,8 +109,8 @@ const calculatorHTML = `
       <div class="dp-label-row">
         <span class="dp-label">Down payment</span>
         <div style="display:inline-flex;border-radius:6px;overflow:hidden;border:2px solid #003380">
-          <button id="btn-pct" onclick="setDPMode('pct')" style="padding:10px 28px;font-size:18px;font-weight:700;cursor:pointer;font-family:'Raleway',sans-serif;border:none;background:#ffffff;color:#003380;border:2px solid #ffffff;transition:all 0.2s">%</button>
-          <button id="btn-dollar" onclick="setDPMode('dollar')" style="padding:10px 28px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Raleway',sans-serif;border:none;background:#003380;color:#ffffff;border:2px solid transparent;transition:all 0.2s">$</button>
+          <button id="btn-pct" onclick="setDPMode('pct')" style="padding:10px 28px;font-size:18px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#ffffff;color:#003380;outline:none">%</button>
+          <button id="btn-dollar" onclick="setDPMode('dollar')" style="padding:10px 28px;font-size:14px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#003380;color:#ffffff;border-left:2px solid #003380;outline:none">$</button>
         </div>
       </div>
       <div class="dp-input-row">
@@ -236,36 +266,8 @@ const AFHROICalculator = () => {
         {/* Hero Band */}
         <section style={{ background: "#1e2a38", padding: "48px 24px 40px", color: "#ffffff" }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
-            <Link
-              to="/afh-club/calculators"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 12,
-                marginBottom: 24,
-                padding: "14px 28px",
-                background: "linear-gradient(135deg, #071830, #030d1e)",
-                border: "2px solid #1e90ff",
-                borderRadius: 6,
-                textDecoration: "none",
-                boxShadow: "0 0 20px rgba(30,144,255,0.4), inset 0 1px 0 rgba(30,144,255,0.2)",
-                fontFamily: "'Raleway', sans-serif",
-                fontSize: 15,
-                fontWeight: 700,
-                letterSpacing: "0.2em",
-                textTransform: "uppercase" as const,
-                color: "#ffffff",
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLElement).style.boxShadow = "0 0 35px rgba(30,144,255,0.7), inset 0 1px 0 rgba(30,144,255,0.3)";
-                (e.currentTarget as HTMLElement).style.borderColor = "#4db8ff";
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(30,144,255,0.4), inset 0 1px 0 rgba(30,144,255,0.2)";
-                (e.currentTarget as HTMLElement).style.borderColor = "#1e90ff";
-              }}
-            >
-              ← Back to Calculators
+            <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
+              <img src="/back-to-calculators-blue.webp" alt="Back to Calculators" style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }} />
             </Link>
             <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase" as const, color: "#ffffff", opacity: 1, marginBottom: 10, fontFamily: "'Raleway', sans-serif" }}>
               For buyers &amp; investors
