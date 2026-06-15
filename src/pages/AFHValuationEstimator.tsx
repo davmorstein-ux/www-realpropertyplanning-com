@@ -425,13 +425,12 @@ const AFHValuationEstimator = () => {
             <div style={panelStyle}>
               <div style={panelTitleStyle}>Property (if included)</div>
               <div style={dividerStyle} />
-              <div style={grid3}>
-                <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 16, alignItems: "start" }}>
+                <div>
                   <label style={labelStyle}>Property value est.</label>
                   <input type="number" id="v-prop" placeholder="650000" style={inputStyle} />
-                  <div style={{ fontSize: 12, color: "#4dffaa", marginTop: 4, minHeight: 18 }}>Leave blank if business only</div>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
+                <div>
                   <label style={labelStyle}>DSHS license status</label>
                   <select id="v-dshs" style={inputStyle}>
                     <option value="active">Active — good standing</option>
@@ -439,9 +438,8 @@ const AFHValuationEstimator = () => {
                     <option value="expired">Expired</option>
                     <option value="none">Never licensed</option>
                   </select>
-                  <div style={{ fontSize: 12, color: "transparent", marginTop: 4, minHeight: 18 }}>&nbsp;</div>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
+                <div>
                   <label style={labelStyle}>County</label>
                   <select id="v-county" style={inputStyle}>
                     <option value="king">King</option>
@@ -451,8 +449,10 @@ const AFHValuationEstimator = () => {
                     <option value="thurston">Thurston</option>
                     <option value="other">Other WA county</option>
                   </select>
-                  <div style={{ fontSize: 12, color: "transparent", marginTop: 4, minHeight: 18 }}>&nbsp;</div>
                 </div>
+              </div>
+              <div style={{ fontSize: 12, color: "#4dffaa", marginTop: -10, marginBottom: 8 }}>
+                Property value est. — leave blank if selling business only
               </div>
             </div>
 
