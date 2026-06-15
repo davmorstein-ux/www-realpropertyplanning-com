@@ -473,7 +473,7 @@ const AFHROICalculator = () => {
                 </div>
               </div>
               <div style={grid2}>
-                <div>
+                <div style={{ display: "flex", flexDirection: "column" }}>
                   <label style={labelStyle}>Licensed capacity</label>
                   <select id="r-cap" style={inputStyle}>
                     <option value="1">1 bed</option>
@@ -486,7 +486,7 @@ const AFHROICalculator = () => {
                     <option value="8">8 beds</option>
                   </select>
                 </div>
-                <div>
+                <div style={{ display: "flex", flexDirection: "column" }}>
                   <label style={labelStyle}>Current occupancy (%)</label>
                   <input type="number" id="r-occ" placeholder="83" style={inputStyle} />
                 </div>
