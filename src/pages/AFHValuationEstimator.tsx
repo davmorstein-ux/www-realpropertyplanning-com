@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 const calculatorHTML = `
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-.scene2{background:rgba(0,5,16,0.75);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px;position:relative}
+.scene2{background:rgba(0,5,16,0.6);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px;position:relative}
 .clipboard2{background:linear-gradient(170deg,#041808 0%,#020d04 60%,#041006 100%);border:2px solid #00e676;border-radius:14px;padding:2rem;position:relative;z-index:1;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(0,230,118,0.4),0 4px 0 #020d04,0 6px 0 rgba(0,230,118,0.2),0 8px 0 #010902,0 10px 0 rgba(0,230,118,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(0,230,118,0.3)}
 .clipboard2::before{content:'';position:absolute;top:0;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,rgba(0,230,118,0.8),transparent)}
 .clipboard2::after{content:'';position:absolute;bottom:-12px;left:10%;right:10%;height:12px;background:radial-gradient(ellipse at center,rgba(0,230,118,0.15) 0%,transparent 70%);filter:blur(4px)}
@@ -56,33 +56,27 @@ const calculatorHTML = `
 <div class="scene2">
 <canvas id="dot-matrix2" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.25;display:block"></canvas>
 <script>
-(function(){
+setTimeout(function(){
   var c=document.getElementById('dot-matrix2');
+  if(!c)return;
   var ctx=c.getContext('2d');
-  var cols,rows;
-  var spacing=28;
-  var t=0;
-  function resize(){c.width=c.offsetWidth;c.height=c.offsetHeight;cols=Math.ceil(c.width/spacing)+1;rows=Math.ceil(c.height/spacing)+1;}
+  var spacing=28,t=0;
+  function resize(){c.width=c.offsetWidth;c.height=c.offsetHeight;}
   resize();
   window.addEventListener('resize',resize);
   function draw(){
+    var cols=Math.ceil(c.width/spacing)+1;
+    var rows=Math.ceil(c.height/spacing)+1;
     ctx.clearRect(0,0,c.width,c.height);
-    for(var i=0;i<cols;i++){
-      for(var j=0;j<rows;j++){
-        var wave=Math.sin(i*0.4+j*0.3+t)*0.5+0.5;
-        var r=2+wave*1.5;
-        var alpha=0.3+wave*0.7;
-        ctx.beginPath();
-        ctx.arc(i*spacing,j*spacing,r,0,Math.PI*2);
-        ctx.fillStyle='rgba(0,230,118,'+alpha+')';
-        ctx.fill();
-      }
-    }
-    t+=0.012;
-    requestAnimationFrame(draw);
+    for(var i=0;i<cols;i++){for(var j=0;j<rows;j++){
+      var wave=Math.sin(i*0.4+j*0.3+t)*0.5+0.5;
+      ctx.beginPath();ctx.arc(i*spacing,j*spacing,2+wave*1.5,0,Math.PI*2);
+      ctx.fillStyle='rgba(0,230,118,'+(0.3+wave*0.7)+')';ctx.fill();
+    }}
+    t+=0.012;requestAnimationFrame(draw);
   }
   draw();
-})();
+},100);
 </script>
 <div class="clipboard2">
   <div class="clip2"></div>
