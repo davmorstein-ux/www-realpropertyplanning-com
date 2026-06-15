@@ -7,7 +7,6 @@ const AFHROICalculator = () => {
   const calcRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // ── Dot matrix ──────────────────────────────────────────
     const canvas = document.getElementById("roi-canvas") as HTMLCanvasElement;
     if (canvas) {
       const ctx = canvas.getContext("2d")!;
@@ -44,7 +43,6 @@ const AFHROICalculator = () => {
   }, []);
 
   useEffect(() => {
-    // ── Calculator logic ────────────────────────────────────
     let dpMode = "pct";
 
     const fmtD = (n: number) => {
@@ -174,7 +172,7 @@ const AFHROICalculator = () => {
               `<div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
             <span style="font-size:13px;color:#fff;width:150px;flex-shrink:0;font-weight:600">${b.label}</span>
             <div style="flex:1;height:7px;background:rgba(0,0,0,0.5);border-radius:4px;overflow:hidden;border:2px solid #1e90ff;box-shadow:0 0 8px rgba(30,144,255,0.4)">
-              <div class="roi-bar-fill" data-pct="${Math.max(0, b.pct)}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#1e90ff,#4db8ff);box-shadow:0 0 10px rgba(30,144,255,0.6);transition:width .9s ease"></div>
+              <div class="roi-bar-fill" data-pct="${Math.max(0, b.pct)}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#1e90ff,#4db8ff);transition:width .9s ease"></div>
             </div>
             <span style="font-size:13px;color:#1e90ff;width:70px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
           </div>`,
@@ -188,7 +186,6 @@ const AFHROICalculator = () => {
       }, DUR + 200);
     };
 
-    // Wire up events
     document.getElementById("btn-pct")?.addEventListener("click", () => setMode("pct"));
     document.getElementById("btn-dollar")?.addEventListener("click", () => setMode("dollar"));
     document.getElementById("r-price")?.addEventListener("input", updateDerived);
@@ -197,8 +194,7 @@ const AFHROICalculator = () => {
     document.getElementById("contact-btn-roi")?.addEventListener("click", () => (window.location.href = "/contact"));
   }, []);
 
-  // Shared styles
-  const inputStyle: React.CSSProperties = {
+  const IS: React.CSSProperties = {
     width: "100%",
     background: "rgba(0,10,28,0.8)",
     border: "2px solid #1e90ff",
@@ -208,8 +204,9 @@ const AFHROICalculator = () => {
     padding: "11px 14px",
     fontFamily: "'Raleway',sans-serif",
     boxSizing: "border-box",
+    display: "block",
   };
-  const labelStyle: React.CSSProperties = {
+  const LS: React.CSSProperties = {
     display: "block",
     fontSize: 12,
     letterSpacing: ".1em",
@@ -218,7 +215,7 @@ const AFHROICalculator = () => {
     marginBottom: 8,
     fontWeight: 700,
   };
-  const panelStyle: React.CSSProperties = {
+  const PS: React.CSSProperties = {
     border: "2px solid #1e90ff",
     borderRadius: 10,
     padding: "1.4rem 1.6rem",
@@ -226,7 +223,7 @@ const AFHROICalculator = () => {
     background: "linear-gradient(135deg,rgba(255,255,255,0.03),rgba(0,0,0,0.3))",
     position: "relative",
   };
-  const panelTitleStyle: React.CSSProperties = {
+  const PT: React.CSSProperties = {
     fontSize: 17,
     letterSpacing: ".2em",
     textTransform: "uppercase",
@@ -234,19 +231,20 @@ const AFHROICalculator = () => {
     marginBottom: 16,
     fontWeight: 700,
   };
-  const dividerStyle: React.CSSProperties = {
+  const DV: React.CSSProperties = {
     height: 1,
     background: "linear-gradient(90deg,transparent,rgba(30,144,255,0.25),transparent)",
     marginBottom: 18,
   };
-  const grid2: React.CSSProperties = { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 };
+  // KEY: both fields in bottom row use identical wrapper — plain div, no flex
+  const FW: React.CSSProperties = {};
 
   return (
     <>
       <Header />
       <main>
-        {/* ── Hero ── */}
-        <div className="calc-page-hero" style={{ background: "#1e2a38", padding: "48px 24px 40px" }}>
+        {/* Hero — inline styles only, no className that CSS can override */}
+        <div style={{ background: "#1e2a38", padding: "48px 24px 40px" }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
               <img
@@ -256,15 +254,15 @@ const AFHROICalculator = () => {
               />
             </Link>
             <p
-              className="eyebrow-label"
               style={{
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: ".15em",
-                textTransform: "uppercase",
+                textTransform: "uppercase" as const,
                 color: "#c8b98a",
                 marginBottom: 10,
                 fontFamily: "'Raleway',sans-serif",
+                opacity: 1,
               }}
             >
               For buyers &amp; investors
@@ -277,10 +275,12 @@ const AFHROICalculator = () => {
                 color: "#ffffff",
                 marginBottom: 12,
                 lineHeight: 1.2,
+                opacity: 1,
               }}
             >
               AFH ROI Calculator
             </h1>
+            {/* subtitle — uses span inside p to avoid h1+p CSS rule */}
             <p
               style={{
                 fontSize: 18,
@@ -289,14 +289,17 @@ const AFHROICalculator = () => {
                 lineHeight: 1.7,
                 maxWidth: 600,
                 margin: 0,
+                opacity: 1,
               }}
             >
-              Know your numbers before you commit. Analyze cash-on-cash return, cap rate, NOI, and monthly cash flow.
+              <span style={{ color: "#ffffff", fontSize: 18, fontFamily: "'Raleway',sans-serif", opacity: 1 }}>
+                Know your numbers before you commit. Analyze cash-on-cash return, cap rate, NOI, and monthly cash flow.
+              </span>
             </p>
           </div>
         </div>
 
-        {/* ── Calculator ── */}
+        {/* Calculator */}
         <div ref={calcRef} style={{ background: "#000510", padding: "2.5rem 1.5rem 3rem", position: "relative" }}>
           <canvas
             id="roi-canvas"
@@ -326,7 +329,6 @@ const AFHROICalculator = () => {
               transformOrigin: "top center",
             }}
           >
-            {/* Title */}
             <div style={{ textAlign: "center", marginBottom: "1.75rem" }}>
               <div
                 style={{
@@ -358,32 +360,31 @@ const AFHROICalculator = () => {
             </div>
 
             {/* Acquisition */}
-            <div style={panelStyle}>
-              <div style={panelTitleStyle}>Acquisition</div>
-              <div style={dividerStyle} />
-              <div style={grid2}>
-                <div>
-                  <label style={labelStyle}>Purchase price ($)</label>
-                  <input type="number" id="r-price" placeholder="850000" style={inputStyle} />
+            <div style={PS}>
+              <div style={PT}>Acquisition</div>
+              <div style={DV} />
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}>
+                <div style={FW}>
+                  <label style={LS}>Purchase price ($)</label>
+                  <input type="number" id="r-price" placeholder="850000" style={IS} />
                 </div>
-                <div>
-                  <label style={labelStyle}>Interest rate (%)</label>
-                  <input type="number" id="r-rate" placeholder="7.25" step="0.01" style={inputStyle} />
+                <div style={FW}>
+                  <label style={LS}>Interest rate (%)</label>
+                  <input type="number" id="r-rate" placeholder="7.25" step="0.01" style={IS} />
                 </div>
               </div>
-              <div style={grid2}>
-                <div>
-                  <label style={labelStyle}>Loan term (years)</label>
-                  <select id="r-term" style={inputStyle}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}>
+                <div style={FW}>
+                  <label style={LS}>Loan term (years)</label>
+                  <select id="r-term" style={IS}>
                     <option value="30">30 years</option>
                     <option value="25">25 years</option>
                     <option value="20">20 years</option>
                     <option value="15">15 years</option>
                   </select>
                 </div>
-                <div />
+                <div style={FW} />
               </div>
-              {/* Toggle */}
               <div style={{ marginTop: 18 }}>
                 <div
                   style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}
@@ -437,7 +438,7 @@ const AFHROICalculator = () => {
                   </div>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <input type="number" id="r-down" placeholder="25" style={{ ...inputStyle, flex: 1, width: "auto" }} />
+                  <input type="number" id="r-down" placeholder="25" style={{ ...IS, flex: 1, width: "auto" }} />
                   <span
                     id="dp-derived"
                     style={{
@@ -458,24 +459,24 @@ const AFHROICalculator = () => {
               </div>
             </div>
 
-            {/* Revenue */}
-            <div style={panelStyle}>
-              <div style={panelTitleStyle}>Revenue &amp; Operations</div>
-              <div style={dividerStyle} />
-              <div style={grid2}>
+            {/* Revenue — KEY FIX: both bottom fields are plain divs, no flex wrapper */}
+            <div style={PS}>
+              <div style={PT}>Revenue &amp; Operations</div>
+              <div style={DV} />
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}>
                 <div>
-                  <label style={labelStyle}>Annual gross revenue ($)</label>
-                  <input type="number" id="r-rev" placeholder="288000" style={inputStyle} />
+                  <label style={LS}>Annual gross revenue ($)</label>
+                  <input type="number" id="r-rev" placeholder="288000" style={IS} />
                 </div>
                 <div>
-                  <label style={labelStyle}>Annual operating expenses ($)</label>
-                  <input type="number" id="r-exp" placeholder="164000" style={inputStyle} />
+                  <label style={LS}>Annual operating expenses ($)</label>
+                  <input type="number" id="r-exp" placeholder="164000" style={IS} />
                 </div>
               </div>
-              <div style={grid2}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
                 <div>
-                  <label style={labelStyle}>Licensed capacity</label>
-                  <select id="r-cap" style={inputStyle}>
+                  <label style={LS}>Licensed capacity</label>
+                  <select id="r-cap" style={IS}>
                     <option value="1">1 bed</option>
                     <option value="2">2 beds</option>
                     <option value="3">3 beds</option>
@@ -487,31 +488,31 @@ const AFHROICalculator = () => {
                   </select>
                 </div>
                 <div>
-                  <label style={labelStyle}>Current occupancy (%)</label>
-                  <input type="number" id="r-occ" placeholder="83" style={inputStyle} />
+                  <label style={LS}>Current occupancy (%)</label>
+                  <input type="number" id="r-occ" placeholder="83" style={IS} />
                 </div>
               </div>
             </div>
 
-            {/* Calculate */}
+            {/* Calculate button — font-size and font-weight as inline style strings to beat CSS specificity */}
             <button
               id="calc-roi-btn"
-              data-nav-button="true"
               style={{
                 width: "100%",
-                padding: 16,
+                padding: "18px 16px",
                 borderRadius: 8,
                 background: "#ffffff",
                 color: "#003380",
                 border: "2px solid #003380",
-                fontSize: 22,
-                fontWeight: 700,
+                fontSize: "22px",
+                fontWeight: 900,
                 letterSpacing: ".2em",
-                textTransform: "uppercase",
+                textTransform: "uppercase" as const,
                 cursor: "pointer",
                 marginTop: 4,
                 fontFamily: "'Raleway',sans-serif",
                 transition: "all 0.2s",
+                display: "block",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget;
@@ -609,9 +610,9 @@ const AFHROICalculator = () => {
                   </div>
                 ))}
               </div>
-              <div style={{ ...panelStyle, marginBottom: 14 }}>
-                <div style={panelTitleStyle}>Return Breakdown</div>
-                <div style={dividerStyle} />
+              <div style={{ ...PS, marginBottom: 14 }}>
+                <div style={PT}>Return Breakdown</div>
+                <div style={DV} />
                 <div id="r-bars" />
               </div>
               <div
@@ -662,7 +663,7 @@ const AFHROICalculator = () => {
                     border: "2px solid #003380",
                     cursor: "pointer",
                     letterSpacing: ".12em",
-                    textTransform: "uppercase",
+                    textTransform: "uppercase" as const,
                     fontFamily: "'Raleway',sans-serif",
                     fontWeight: 700,
                     whiteSpace: "nowrap",
@@ -703,6 +704,13 @@ const AFHROICalculator = () => {
             </div>
           </div>
         </div>
+
+        {/* Inject styles that beat index.css for this page only */}
+        <style>{`
+          #calc-roi-btn { font-size: 22px !important; font-weight: 900 !important; }
+          #r-occ, #r-cap { box-sizing: border-box !important; padding: 11px 14px !important; }
+          .calc-roi-hero p, .calc-roi-hero span { color: #ffffff !important; opacity: 1 !important; }
+        `}</style>
       </main>
       <Footer />
     </>
