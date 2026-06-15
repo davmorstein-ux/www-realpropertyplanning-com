@@ -239,7 +239,7 @@ const AFHValuationEstimator = () => {
       <Header />
       <main>
         {/* ── Hero ── */}
-        <div style={{ background: "#1e2a38", padding: "48px 24px 40px" }}>
+        <div className="calc-page-hero" style={{ background: "#1e2a38", padding: "48px 24px 40px" }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
               <img
