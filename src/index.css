@@ -143,14 +143,8 @@ nav [class*="dropdown"] button svg {
   -webkit-box-orient: vertical !important;
 }
 
-/* (Removed: overly broad uniform tile sizing block — it matched every
-#calc-roi-btn, #calc-val-btn {
-  font-size: 22px !important;
-  font-weight: 900 !important;
-}
-   class containing "card", "tile", or "grid" — including Tailwind's
-   `grid`, `card-3d`, `bg-card`, etc. — and forced the entire layout into
-   a 220px-wide no-wrap row, breaking mobile responsiveness sitewide.) */
+//* (Removed: overly broad uniform tile sizing block — it matched every
+   class containing "card", "tile", or "grid". */
 
 /* Hero blue title band — prevent descender clipping */
 [class*="hero-band"],
@@ -1802,7 +1796,12 @@ h4 + .text-muted-foreground {
 [class*="bg-primary"] :where(h1, h2, h3, h4) + p {
   color: #ffffff !important;
 }
-
+.calc-page-hero h1 + p,
+.calc-page-hero p,
+.calc-page-hero span {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
 /* 5. Card body text — readable, never faded */
 :where(
     [class*="rounded-"][class*="bg-card"],
