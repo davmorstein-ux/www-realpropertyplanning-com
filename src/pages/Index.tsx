@@ -1,493 +1,314 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import SEOHead from "@/components/SEOHead";
-import { realEstateAgentSchema, organizationSchema } from "@/lib/schema";
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import HomepageFunnel from "@/components/HomepageFunnel";
-import HomepagePopularResources from "@/components/HomepagePopularResources";
-import homepageHeroRpp from "@/assets/hero-homepage-v5.webp.asset.json";
-import rppLogoTransparent from "@/assets/rpp-logo-transparent.png.asset.json";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const jsonLd = [realEstateAgentSchema, organizationSchema];
+const calculatorHTML = `
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.scene{background:linear-gradient(160deg,#000510 0%,#000 50%,#000d20 100%);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px;position:relative}
+.clipboard{background:linear-gradient(170deg,#071830 0%,#030d1e 60%,#050f22 100%);border:2px solid #1e90ff;border-radius:14px;padding:2rem;position:relative;z-index:1;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(30,144,255,0.4),0 4px 0 #030d1e,0 6px 0 rgba(30,144,255,0.2),0 8px 0 #020a18,0 10px 0 rgba(30,144,255,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(30,144,255,0.3)}
+.clipboard::before{content:'';position:absolute;top:0;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,rgba(30,144,255,0.8),transparent)}
+.clipboard::after{content:'';position:absolute;bottom:-12px;left:10%;right:10%;height:12px;background:radial-gradient(ellipse at center,rgba(30,144,255,0.15) 0%,transparent 70%);filter:blur(4px)}
+.clip{position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:60px;height:22px;background:linear-gradient(135deg,#1a3a6e,#0d2244);border:1px solid rgba(30,144,255,0.5);border-radius:4px 4px 0 0}
+.ch{text-align:center;margin-bottom:1.75rem}
+.ch .ey{font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#1e90ff;margin-bottom:8px;font-weight:700}
+.ch h2{font-size:30px;font-weight:700;color:#fff;letter-spacing:.05em;text-shadow:0 0 30px rgba(30,144,255,0.5)}
+.ch h2 span{color:#1e90ff;text-shadow:0 0 20px rgba(30,144,255,0.8)}
+.ch .tg{font-size:13px;color:#1e90ff;margin-top:6px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.panel{background:linear-gradient(135deg,rgba(255,255,255,0.03) 0%,rgba(0,0,0,0.3) 100%);border:2px solid #1e90ff;border-radius:10px;padding:1.4rem 1.6rem;margin-bottom:14px;box-shadow:inset 0 1px 0 rgba(30,144,255,0.15),0 2px 12px rgba(0,0,0,0.4);position:relative}
+.panel::before{content:'';position:absolute;top:0;left:16px;right:16px;height:1px;background:linear-gradient(90deg,transparent,rgba(30,144,255,0.4),transparent)}
+.pt{font-size:17px;letter-spacing:.2em;text-transform:uppercase;color:#1e90ff;margin-bottom:16px;font-weight:700;text-shadow:0 0 14px rgba(30,144,255,0.6)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(30,144,255,0.25),transparent);margin:0 0 18px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.g2+.g2{margin-top:16px}
+.field{display:flex;flex-direction:column}
+.field label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#1e90ff;margin-bottom:8px;font-weight:700;min-height:32px;display:flex;align-items:flex-end;line-height:1.3}
+.field input,.field select{width:100%;background:rgba(0,10,28,0.8);border:2px solid #1e90ff;border-radius:6px;color:#fff;font-size:15px;padding:11px 14px;font-family:'Raleway',sans-serif;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6);transition:border-color .2s,box-shadow .2s}
+.field input::placeholder{color:rgba(30,144,255,0.25)}
+.field input:focus,.field select:focus{outline:none;border-color:#1e90ff;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6),0 0 14px rgba(30,144,255,0.35)}
+.field select option{background:#030d1e;color:#fff}
+.dp-wrap{margin-top:18px}
+.dp-label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.dp-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#1e90ff;font-weight:700}
+.dp-input-row{display:flex;align-items:center;gap:12px;margin-top:10px}
+.dp-input-row input{flex:1;background:rgba(0,10,28,0.8);border:2px solid #1e90ff;border-radius:6px;color:#fff;font-size:15px;padding:11px 14px;font-family:'Raleway',sans-serif;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6)}
+.dp-input-row input:focus{outline:none;border-color:#1e90ff;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6),0 0 14px rgba(30,144,255,0.35)}
+.dp-derived{font-size:14px;color:#1e90ff;font-weight:700;white-space:nowrap;min-width:120px;text-align:right}
+.dp-hint{font-size:12px;color:#7ab8ff;margin-top:6px}
+.results{display:none;margin-top:14px}
+.results.visible{display:block}
+.fm{background:linear-gradient(135deg,rgba(255,255,255,0.03),rgba(0,0,0,0.3));border:1px solid #1e90ff;border-radius:12px;padding:1.6rem;text-align:center;margin-bottom:14px;box-shadow:0 0 40px rgba(30,144,255,0.2),inset 0 1px 0 rgba(30,144,255,0.2)}
+.fl{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#1e90ff;margin-bottom:10px;font-weight:700}
+.fv{font-size:50px;font-weight:700;color:#1e90ff;line-height:1;text-shadow:0 0 30px rgba(30,144,255,0.8);font-variant-numeric:tabular-nums;min-height:60px;display:flex;align-items:center;justify-content:center}
+.fu{font-size:14px;color:#fff;margin-top:8px}
+.mg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.mc{background:rgba(0,10,28,0.6);border:1px solid rgba(30,144,255,0.3);border-radius:8px;padding:1rem;text-align:center;box-shadow:inset 0 2px 6px rgba(0,0,0,0.4)}
+.ml{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#1e90ff;margin-bottom:7px;font-weight:700}
+.mv{font-size:19px;font-weight:700;color:#fff;min-height:28px}
+.br{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.bl{font-size:13px;color:#fff;width:150px;flex-shrink:0;font-weight:600}
+.bt{flex:1;height:7px;background:rgba(0,0,0,0.5);border-radius:4px;overflow:hidden;border:2px solid #1e90ff;box-shadow:0 0 8px rgba(30,144,255,0.4),inset 0 2px 4px rgba(0,0,0,0.5)}
+.bf{height:100%;border-radius:4px;background:linear-gradient(90deg,#1e90ff,#4db8ff);box-shadow:0 0 10px rgba(30,144,255,0.6);transition:width .9s ease}
+.bv{font-size:13px;color:#1e90ff;width:70px;text-align:right;flex-shrink:0;font-weight:700}
+.disc{font-size:12px;color:rgba(255,255,255,0.75);line-height:1.8;margin-top:12px;padding:12px 16px;border:1px solid rgba(30,144,255,0.2);border-radius:8px;background:rgba(0,10,28,0.5)}
+.cta{background:linear-gradient(135deg,rgba(255,255,255,0.03),rgba(0,0,0,0.3));border:1px solid #1e90ff;border-radius:10px;padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:12px}
+.cta p{font-size:13px;color:rgba(255,255,255,0.85);margin-top:3px}
+.cta strong{color:#1e90ff;font-size:15px;display:block}
+.courtesy{text-align:center;font-size:13px;color:#1e90ff;letter-spacing:.15em;text-transform:uppercase;margin-top:1.75rem;font-weight:700;padding-top:1.25rem;border-top:1px solid rgba(30,144,255,0.2);text-shadow:0 0 12px rgba(30,144,255,0.5)}
+</style>
 
-const homepageFaqJsonLd = `{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a probate real estate agent?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A probate real estate agent specializes in selling homes that are part of a deceased person's estate. They understand the legal requirements, court timelines, and family sensitivities involved — and work alongside attorneys and executors to get the property sold properly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a special agent to sell an inherited home in Washington State?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Not legally required, but strongly recommended. Probate sales have specific legal steps, documentation requirements, and timelines. An agent with probate experience — especially one who is also a certified appraiser — can save families significant time, money, and stress."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a senior transition specialist?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A senior transition specialist is a real estate professional trained to support older adults and their families when it's time to move from a longtime home."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is an estate appraisal and why does it matter?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An estate appraisal is a certified valuation of a property at the time of the owner's death. It establishes fair market value for probate, tax, and equitable distribution purposes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is Real Property Planning different from a regular real estate agent?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Real Property Planning combines a licensed real estate broker and a Washington State Certified Residential Appraiser under one platform."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What areas does Real Property Planning serve?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We serve all of Western Washington and the Puget Sound region, including King, Snohomish, Pierce, Skagit, and Kitsap Counties."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I get started?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Simply call (206) 900-3015 or send an email to info@realpropertyplanning.com."
-      }
-    }
-  ]
-}`;
+<div class="scene">
+<canvas id="dot-matrix" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.18"></canvas>
+<div class="clipboard">
+  <div class="clip"></div>
+  <div class="ch">
+    <div class="ey">Adult Family Home</div>
+    <h2>AFH <span>ROI</span> Calculator</h2>
+    <div class="tg">Know your numbers · Grow with confidence</div>
+  </div>
+  <div class="panel">
+    <div class="pt">Acquisition</div>
+    <div class="divider"></div>
+    <div class="g2">
+      <div class="field"><label>Purchase price ($)</label><input type="number" id="r-price" placeholder="850000" oninput="updateDerived()"></div>
+      <div class="field"><label>Interest rate (%)</label><input type="number" id="r-rate" placeholder="7.25" step="0.01"></div>
+    </div>
+    <div class="g2">
+      <div class="field"><label>Loan term (years)</label><select id="r-term"><option value="30">30 years</option><option value="25">25 years</option><option value="20">20 years</option><option value="15">15 years</option></select></div>
+      <div class="field"></div>
+    </div>
+    <div class="dp-wrap">
+      <div class="dp-label-row">
+        <span class="dp-label">Down payment</span>
+        <div style="display:inline-flex;border-radius:6px;overflow:hidden;border:2px solid #1e90ff">
+          <button id="btn-pct" onclick="setDPMode('pct')" style="padding:10px 28px;font-size:18px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#ffffff;color:#003380;outline:none">%</button>
+          <button id="btn-dollar" onclick="setDPMode('dollar')" style="padding:10px 28px;font-size:14px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#003380;color:#ffffff;outline:none">$</button>
+        </div>
+      </div>
+      <div class="dp-input-row">
+        <input type="number" id="r-down" placeholder="25" oninput="updateDerived()">
+        <span class="dp-derived" id="dp-derived">= —</span>
+      </div>
+      <div class="dp-hint" id="dp-hint">Enter percentage of purchase price</div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="pt">Revenue & Operations</div>
+    <div class="divider"></div>
+    <div class="g2">
+      <div class="field"><label>Annual gross revenue ($)</label><input type="number" id="r-rev" placeholder="288000"></div>
+      <div class="field"><label>Annual operating expenses ($)</label><input type="number" id="r-exp" placeholder="164000"></div>
+    </div>
+    <div class="g2">
+      <div class="field"><label>Licensed capacity</label><select id="r-cap"><option value="2">2 beds</option><option value="4">4 beds</option><option value="6">6 beds</option></select></div>
+      <div class="field"><label>Current occupancy (%)</label><input type="number" id="r-occ" placeholder="83"></div>
+    </div>
+  </div>
+  <button style="width:100%;padding:16px;border-radius:8px;background:#ffffff;color:#003380;border:2px solid #003380;font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;margin-top:4px;font-family:'Raleway',sans-serif;transition:background 0.2s,color 0.2s,border-color 0.2s" onmouseenter="this.style.background='#003380';this.style.color='#ffffff';this.style.borderColor='#ffffff'" onmouseleave="this.style.background='#ffffff';this.style.color='#003380';this.style.borderColor='#003380'" onclick="calcROI()">Calculate ROI</button>
+  <div class="results" id="roi-results">
+    <div class="fm" style="margin-top:16px">
+      <div class="fl">Estimated annual ROI</div>
+      <div class="fv" id="r-roi">—</div>
+      <div class="fu">cash-on-cash return</div>
+    </div>
+    <div class="mg">
+      <div class="mc"><div class="ml">Monthly cash flow</div><div class="mv" id="r-cf">—</div></div>
+      <div class="mc"><div class="ml">Annual NOI</div><div class="mv" id="r-noi">—</div></div>
+      <div class="mc"><div class="ml">Cap rate</div><div class="mv" id="r-caprate">—</div></div>
+    </div>
+    <div class="mg">
+      <div class="mc"><div class="ml">Monthly mortgage</div><div class="mv" id="r-mort">—</div></div>
+      <div class="mc"><div class="ml">Cash invested</div><div class="mv" id="r-invested">—</div></div>
+      <div class="mc"><div class="ml">Operating margin</div><div class="mv" id="r-margin">—</div></div>
+    </div>
+    <div class="panel">
+      <div class="pt">Return Breakdown</div>
+      <div class="divider"></div>
+      <div id="r-bars"></div>
+    </div>
+    <div class="disc">Estimates are for informational purposes only. Actual returns depend on financing terms, occupancy, staffing costs, regulatory changes, and market conditions. Consult David Stein for a professional investment analysis.</div>
+    <div class="cta">
+      <div><strong>Ready to analyze a specific deal?</strong><p>David Stein — Licensed Broker & Certified Appraiser · eXp Realty · 20+ years AFH experience</p></div>
+      <button style="font-size:12px;padding:10px 22px;border-radius:6px;background:#ffffff;color:#003380;border:2px solid #003380;cursor:pointer;letter-spacing:.12em;text-transform:uppercase;font-family:'Raleway',sans-serif;font-weight:700;white-space:nowrap;transition:background 0.2s,color 0.2s,border-color 0.2s" onmouseenter="this.style.background='#003380';this.style.color='#ffffff';this.style.borderColor='#ffffff'" onmouseleave="this.style.background='#ffffff';this.style.color='#003380';this.style.borderColor='#003380'" onclick="window.location.href='/contact'">Contact David ↗</button>
+    </div>
+  </div>
+  <div class="courtesy">Courtesy of Real Property Planning</div>
+</div>
+</div>
 
-const pageStyles = `
-  .rpp-hero-section {
-    position: relative !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-    height: 560px !important;
-    overflow: hidden !important;
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: #f5f1ea !important;
+<script>
+(function(){
+  var c=document.getElementById('dot-matrix');
+  if(!c)return;
+  var ctx=c.getContext('2d');
+  var cols,rows,spacing=28,t=0;
+  function resize(){c.width=c.offsetWidth;c.height=c.offsetHeight;cols=Math.ceil(c.width/spacing)+1;rows=Math.ceil(c.height/spacing)+1;}
+  resize();
+  window.addEventListener('resize',resize);
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    for(var i=0;i<cols;i++){for(var j=0;j<rows;j++){
+      var wave=Math.sin(i*0.4+j*0.3+t)*0.5+0.5;
+      ctx.beginPath();ctx.arc(i*spacing,j*spacing,2+wave*1.5,0,Math.PI*2);
+      ctx.fillStyle='rgba(30,144,255,'+(0.3+wave*0.7)+')';ctx.fill();
+    }}
+    t+=0.012;requestAnimationFrame(draw);
   }
-  @media (min-width: 1400px) { .rpp-hero-section { height: 720px !important; } }
-  @media (min-width: 1024px) and (max-width: 1399px) { .rpp-hero-section { height: 580px !important; } }
-  @media (min-width: 768px) and (max-width: 1023px) { .rpp-hero-section { height: 440px !important; } }
-  @media (max-width: 767px) { .rpp-hero-section { height: 280px !important; } }
-  .rpp-hero-section > img.rpp-hero-bg {
-    position: absolute !important;
-    top: 0 !important; left: 0 !important;
-    width: 100% !important; height: 100% !important;
-    object-fit: contain !important;
-    object-position: center top !important;
-    display: block !important;
-    margin: 0 !important; padding: 0 !important;
-  }
-  .rpp-hero-band {
-    background-color: #1a2744 !important;
-    width: 100% !important;
-    padding: 0.5rem 3.5rem !important;
-    margin: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 1.5rem !important;
-    flex-wrap: wrap !important;
-  }
-  @media (max-width: 768px) {
-    .rpp-hero-band {
-      padding: 0.5rem 1.25rem !important;
-      flex-direction: column !important;
-      align-items: flex-start !important;
-      gap: 0.2rem !important;
-    }
-  }
-  .rpp-hero-h1 {
-    font-family: 'Cormorant Garamond', Georgia, serif !important;
-    font-size: 1.5rem !important;
-    font-weight: 600 !important;
-    color: #ffffff !important;
-    line-height: 1 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-    white-space: nowrap !important;
-  }
-  @media (max-width: 768px) {
-    .rpp-hero-h1 { font-size: 1.2rem !important; white-space: normal !important; }
-  }
+  draw();
+})();
 
-  @media (max-width: 768px) {
-    .rpp-hero-sub { font-size: 14px !important; }
+var dpMode='pct';
+function setDPMode(m){
+  dpMode=m;
+  var price=parseFloat(document.getElementById('r-price').value)||0;
+  var cur=parseFloat(document.getElementById('r-down').value)||0;
+  var btnPct=document.getElementById('btn-pct');
+  var btnDollar=document.getElementById('btn-dollar');
+  if(m==='pct'){
+    btnPct.style.background='#ffffff';btnPct.style.color='#003380';btnPct.style.fontSize='18px';
+    btnDollar.style.background='#003380';btnDollar.style.color='#ffffff';btnDollar.style.fontSize='14px';
+    document.getElementById('r-down').placeholder='25';
+    document.getElementById('dp-hint').textContent='Enter percentage of purchase price';
+    if(price>0&&cur>0)document.getElementById('r-down').value=Math.round((cur/price)*100);
+    else document.getElementById('r-down').value='';
+  }else{
+    btnDollar.style.background='#ffffff';btnDollar.style.color='#003380';btnDollar.style.fontSize='18px';
+    btnPct.style.background='#003380';btnPct.style.color='#ffffff';btnPct.style.fontSize='14px';
+    document.getElementById('r-down').placeholder='212500';
+    document.getElementById('dp-hint').textContent='Enter dollar amount of down payment';
+    if(price>0&&cur>0)document.getElementById('r-down').value=Math.round(price*(cur/100));
+    else document.getElementById('r-down').value='';
   }
-
-  /* ── QUICK LINKS ── */
-  .rpp-ql-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2.5rem !important;
+  updateDerived();
+}
+function updateDerived(){
+  var price=parseFloat(document.getElementById('r-price').value)||0;
+  var val=parseFloat(document.getElementById('r-down').value)||0;
+  var derived=document.getElementById('dp-derived');
+  if(dpMode==='pct'){derived.textContent=price>0&&val>0?'= $'+Math.round(price*(val/100)).toLocaleString():'= —';}
+  else{var p=price>0?(val/price)*100:0;derived.textContent=price>0&&val>0?'= '+Math.round(p*10)/10+'%':'= —';}
+}
+function getDownAmt(){
+  var price=parseFloat(document.getElementById('r-price').value)||0;
+  var val=parseFloat(document.getElementById('r-down').value)||0;
+  return dpMode==='pct'?price*(val/100):val;
+}
+function fmtD(n){if(Math.abs(n)>=1000000)return'$'+(n/1000000).toFixed(2)+'M';if(Math.abs(n)>=1000)return'$'+(n/1000).toFixed(0)+'K';return'$'+Math.round(n).toLocaleString();}
+function fmtP(n){return Math.round(n*10)/10+'%';}
+function odometer(el,finalStr,duration){
+  var start=Date.now();
+  var isMoney=finalStr.startsWith('$');var isPct=finalStr.endsWith('%');
+  function tick(){
+    var elapsed=Date.now()-start;
+    if(elapsed<duration){
+      if(isMoney){var r=Math.round(Math.random()*2000000);el.textContent=r>=1000000?'$'+(r/1000000).toFixed(2)+'M':'$'+(r/1000).toFixed(0)+'K';}
+      else if(isPct){el.textContent=(Math.random()*30).toFixed(1)+'%';}
+      else{el.textContent=(Math.random()*10).toFixed(2)+'x';}
+      requestAnimationFrame(tick);
+    }else{el.textContent=finalStr;}
   }
-  @media (max-width: 900px) {
-    .rpp-ql-grid { grid-template-columns: 1fr !important; }
-  }
-  .rpp-ql-col-heading {
-    font-family: Inter, system-ui, sans-serif !important;
-    font-size: 12px !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.16em !important;
-    text-transform: uppercase !important;
-    color: #b8963e !important;
-    margin: 0 0 0.75rem 0 !important;
-    padding-bottom: 0.6rem !important;
-    border-bottom: 2px solid #e2ddd6 !important;
-    display: block !important;
-    opacity: 1 !important;
-  }
-  .rpp-ql-link {
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    font-family: Inter, system-ui, sans-serif !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    color: #1a2744 !important;
-    text-decoration: none !important;
-    padding: 0.35rem 0 !important;
-    line-height: 1.3 !important;
-    opacity: 1 !important;
-    transition: color 0.15s ease !important;
-  }
-  .rpp-ql-link:hover { color: #b8963e !important; }
-  .rpp-ql-view-all {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 5px !important;
-    font-family: Inter, system-ui, sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    color: #b8963e !important;
-    text-decoration: none !important;
-    margin-top: 0.85rem !important;
-    opacity: 1 !important;
-    letter-spacing: 0.02em !important;
-  }
-  .rpp-ql-view-all:hover { opacity: 0.75 !important; }
-
-  /* ── WAYFINDING STRIP ── */
-  .rpp-wf-strip {
-    background-color: #ffffff !important;
-    border-top: 1px solid #e2ddd6 !important;
-    border-bottom: 3px solid #1a2744 !important;
-    padding: 0 !important;
-    display: flex !important;
-    align-items: stretch !important;
-    overflow-x: auto !important;
-  }
-  .rpp-wf-item {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    padding: 0.9rem 1.5rem !important;
-    text-decoration: none !important;
-    border-right: 1px solid #e2ddd6 !important;
-    flex: 1 !important;
-    min-width: 160px !important;
-    transition: background-color 0.15s ease !important;
-    white-space: nowrap !important;
-  }
-  .rpp-wf-item:hover { background-color: #f5f2ec !important; }
-  .rpp-wf-item:last-child { border-right: none !important; }
-  .rpp-wf-label {
-    font-family: Inter, system-ui, sans-serif !important;
-    font-size: 15px !important;
-    font-weight: 600 !important;
-    color: #1a2744 !important;
-    line-height: 1.2 !important;
-    opacity: 1 !important;
-  }
-  .rpp-wf-cta {
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    padding: 0.9rem 1.75rem !important;
-    background-color: #1a2744 !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-    transition: background-color 0.15s ease !important;
-  }
-  .rpp-wf-cta:hover { background-color: #243660 !important; }
-  .rpp-tagline {
-    font-size: 22px !important;
-    font-weight: 900 !important;
-    letter-spacing: 2px !important;
-    text-transform: uppercase !important;
-    color: #1a3a6b !important;
-    line-height: 1.3 !important;
-    text-align: center !important;
-  }
-  .rpp-descriptor {
-    font-size: 18px !important;
-    font-weight: 700 !important;
-    color: #3a3a3a !important;
-    text-align: center !important;
-    margin-top: 8px !important;
-    letter-spacing: 0.5px !important;
-    line-height: 1.4 !important;
-  }
-  @media (max-width: 1023px) { .rpp-hero-logo { width: 260px !important; } }
-  @media (max-width: 767px) { .rpp-hero-logo { width: 160px !important; } }
-  @media (max-width: 1023px) { .rpp-tagline { font-size: 16px !important; } }
-  @media (max-width: 767px) { .rpp-tagline { font-size: 13px !important; letter-spacing: 1px !important; } }
-  @media (max-width: 1023px) { .rpp-descriptor { font-size: 14px !important; } }
-  @media (max-width: 767px) { .rpp-descriptor { font-size: 12px !important; } }
+  requestAnimationFrame(tick);
+}
+function calcROI(){
+  var price=parseFloat(document.getElementById('r-price').value)||0;
+  var rate=parseFloat(document.getElementById('r-rate').value)||7.25;
+  var term=parseInt(document.getElementById('r-term').value)||30;
+  var rev=parseFloat(document.getElementById('r-rev').value)||0;
+  var exp=parseFloat(document.getElementById('r-exp').value)||0;
+  var occ=parseFloat(document.getElementById('r-occ').value)||83;
+  var downAmt=getDownAmt();
+  if(!price||!rev||!downAmt){alert('Please enter purchase price, down payment, and annual gross revenue.');return;}
+  var loanAmt=price-downAmt;
+  var mr=(rate/100)/12;var np=term*12;
+  var mortgage=loanAmt*(mr*Math.pow(1+mr,np))/(Math.pow(1+mr,np)-1);
+  var annMort=mortgage*12;
+  var adjRev=rev*(occ/100);var noi=adjRev-exp;
+  var annCF=noi-annMort;var roi=(annCF/downAmt)*100;
+  var capRate=(noi/price)*100;var margin=(noi/adjRev)*100;
+  document.getElementById('roi-results').classList.add('visible');
+  document.getElementById('roi-results').scrollIntoView({behavior:'smooth',block:'start'});
+  var DUR=2000;
+  odometer(document.getElementById('r-roi'),fmtP(roi),DUR);
+  setTimeout(function(){
+    odometer(document.getElementById('r-cf'),fmtD(annCF/12)+'/mo',DUR*0.6);
+    odometer(document.getElementById('r-noi'),fmtD(noi),DUR*0.6);
+    odometer(document.getElementById('r-caprate'),fmtP(capRate),DUR*0.6);
+    odometer(document.getElementById('r-mort'),fmtD(mortgage)+'/mo',DUR*0.6);
+    odometer(document.getElementById('r-invested'),fmtD(downAmt),DUR*0.6);
+    odometer(document.getElementById('r-margin'),fmtP(margin),DUR*0.6);
+  },300);
+  setTimeout(function(){
+    var bars=[
+      {label:'Cash-on-cash ROI',pct:Math.min(100,Math.max(0,roi/30*100)),val:fmtP(Math.max(0,roi))},
+      {label:'Cap rate',pct:Math.min(100,capRate/20*100),val:fmtP(capRate)},
+      {label:'Operating margin',pct:Math.min(100,Math.max(0,margin)),val:fmtP(margin)},
+      {label:'Debt coverage',pct:Math.min(100,(noi/annMort)/2*100),val:Math.round((noi/annMort)*100)/100+'x'},
+    ];
+    document.getElementById('r-bars').innerHTML=bars.map(function(b){return'<div class="br"><span class="bl">'+b.label+'</span><div class="bt"><div class="bf" style="width:0%" data-pct="'+Math.max(0,b.pct)+'"></div></div><span class="bv">'+b.val+'</span></div>';}).join('');
+    setTimeout(function(){document.querySelectorAll('#r-bars .bf').forEach(function(el){el.style.width=el.dataset.pct+'%';});},50);
+  },DUR+200);
+}
+</script>
 `;
 
-const GoldArrow = ({ size = 13 }: { size?: number }) => (
-  <svg
-    viewBox="0 0 24 24"
-    width={size}
-    height={size}
-    fill="none"
-    stroke="#b8963e"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-    style={{ flexShrink: 0 }}
-  >
-    <polyline points="9 18 15 12 9 6" />
-  </svg>
-);
-
-const NavyArrow = ({ size = 13 }: { size?: number }) => (
-  <svg
-    viewBox="0 0 24 24"
-    width={size}
-    height={size}
-    fill="none"
-    stroke="#1a2744"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-    style={{ flexShrink: 0, opacity: 0.4 }}
-  >
-    <polyline points="9 18 15 12 9 6" />
-  </svg>
-);
-
-const Index = () => {
+const AFHROICalculator = () => {
   return (
-    <div className="min-h-screen bg-cream">
-      <style>{pageStyles}</style>
-      <Helmet>
-        <script type="application/ld+json">{homepageFaqJsonLd}</script>
-      </Helmet>
-      <SEOHead
-        title="Real Property Planning | WA Probate & Senior Transitions"
-        description="Washington State resource for probate real estate, estate sales, and senior transitions — guidance for families, executors, and attorneys statewide."
-        canonical="https://realpropertyplanning.com"
-        schemaJson={jsonLd}
-      />
+    <>
       <Header />
-      <main id="main-content">
-        {/* ── 1. HERO IMAGE (contains its own text/logo) with bottom fade + tagline ── */}
-        <section className="rpp-hero-section" style={{ backgroundColor: "#f5f1ea" }}>
-          <img
-            className="rpp-hero-bg"
-            src={homepageHeroRpp.url}
-            width={1920}
-            height={960}
-            alt="Welcome to Real Property Planning — senior couple by a red convertible with a SOLD sign and moving truck at a craftsman home"
-            loading="eager"
-            decoding="async"
-            sizes="100vw"
-          />
-
-          {/* Bottom fade overlay only */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              right: 0,
-              height: "100%",
-              background:
-                "linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(245,241,234,0.2) 72%, rgba(245,241,234,0.6) 82%, rgba(245,241,234,0.9) 92%, #f5f1ea 100%)",
-              pointerEvents: "none",
-              zIndex: 1,
-            }}
-          />
-
-          {/* RPP logo overlay centered */}
-          <img
-            className="rpp-hero-logo"
-            src={rppLogoTransparent.url}
-            alt="Real Property Planning"
-            style={{
-              position: "absolute",
-              top: "38%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "380px",
-              maxWidth: "50%",
-              zIndex: 2,
-              pointerEvents: "none",
-            }}
-          />
-
-          {/* Tagline + description */}
-          <div
-            style={{
-              position: "absolute",
-              top: "58%",
-              left: 0,
-              right: 0,
-              textAlign: "center",
-              zIndex: 3,
-              pointerEvents: "none",
-            }}
-          >
-            <div className="rpp-tagline" style={{}}>
-              Estate & Probate Sales · Senior Transitions
-            </div>
-            <div className="rpp-tagline" style={{ marginTop: "4px" }}>
-              Adult Family Home Marketplace
-            </div>
-          </div>
-
-          {/* Descriptor — bottom of hero */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "1.5rem",
-              left: 0,
-              right: 0,
-              textAlign: "center",
-              zIndex: 3,
-              pointerEvents: "none",
-            }}
-          >
-            <div className="rpp-descriptor" style={{}}>
-              A free educational resource and professional referral network serving Washington State families
-            </div>
-          </div>
-        </section>
-
-        {/* ── 3. WAYFINDING TILES + AFH CLUB ── */}
-        <HomepageFunnel />
-
-        {/* ── 4. QUICK LINKS — white background, dark text ── */}
-        <section
-          style={{
-            backgroundColor: "#ffffff",
-            padding: "3.5rem 0",
-            borderTop: "1px solid #e2ddd6",
-            borderBottom: "1px solid #e2ddd6",
-          }}
-        >
-          <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div className="rpp-ql-grid">
-              {/* Column 1 — Featured Resources */}
-              <div>
-                <span className="rpp-ql-col-heading">Featured Resources</span>
-                {[
-                  {
-                    label: "Washington Executor's Checklist",
-                    href: "/resources/washington-executors-10-step-checklist",
-                  },
-                  { label: "Senior Housing Guide", href: "/understanding-housing-care-options" },
-                  { label: "Adult Family Home Resources", href: "/afh-club/afh-resources" },
-                  { label: "Probate Real Estate Guide", href: "/guides/how-probate-real-estate-works" },
-                  { label: "Estate Sale Planning Guide", href: "/guides/inherited-house-washington" },
-                ].map((item) => (
-                  <Link key={item.href} to={item.href} className="rpp-ql-link">
-                    <NavyArrow size={13} />
-                    {item.label}
-                  </Link>
-                ))}
-                <Link to="/resources" className="rpp-ql-view-all">
-                  View all resources <GoldArrow size={12} />
-                </Link>
-              </div>
-
-              {/* Column 2 — Find a Professional */}
-              <div>
-                <span className="rpp-ql-col-heading">Find a Professional</span>
-                {[
-                  { label: "Elder Law Attorneys", href: "/elder-law-attorneys" },
-                  { label: "CPAs & Tax Advisors", href: "/cpas-tax-advisors" },
-                  { label: "Financial Planners", href: "/financial-planners" },
-                  { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
-                  { label: "Senior Living Advisors", href: "/senior-living-advisors" },
-                  { label: "More Professionals", href: "/building-your-trusted-professional-team" },
-                ].map((item) => (
-                  <Link key={item.href} to={item.href} className="rpp-ql-link">
-                    <NavyArrow size={13} />
-                    {item.label}
-                  </Link>
-                ))}
-                <Link to="/building-your-trusted-professional-team" className="rpp-ql-view-all">
-                  Search directory <GoldArrow size={12} />
-                </Link>
-              </div>
-
-              {/* Column 3 — AFH Opportunities */}
-              <div>
-                <span className="rpp-ql-col-heading">AFH Opportunities</span>
-                {[
-                  { label: "AFHs for Sale — Current Listings", href: "/afh-club/listings" },
-                  { label: "Buyers Seeking AFHs", href: "/afh-club/afh-resources" },
-                  { label: "Management Companies", href: "/afh-club/management-companies" },
-                  { label: "Resources & Education", href: "/afh-club/afh-resources" },
-                ].map((item) => (
-                  <Link key={item.href} to={item.href} className="rpp-ql-link">
-                    <NavyArrow size={13} />
-                    {item.label}
-                  </Link>
-                ))}
-                <Link to="/afh-club" className="rpp-ql-view-all">
-                  View AFH Club <GoldArrow size={12} />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── 5. POPULAR RESOURCES ── */}
-        <HomepagePopularResources />
-
-        {/* SEO description */}
-        <section aria-label="Site description" className="bg-cream">
-          <div className="container px-6 lg:px-8 py-6">
-            <p className="text-center text-sm text-[#4B5563] max-w-4xl mx-auto leading-relaxed">
-              Real Property Planning is Washington State's free hub for probate real estate, estate sales, inherited
-              property, and senior housing transitions. Serving Seattle, Bellevue, Kirkland, Tacoma, Everett, and
-              communities throughout Western Washington and the Puget Sound region.
+      <main>
+        <section style={{ background: "#1e2a38", padding: "48px 24px 40px", color: "#ffffff" }}>
+          <div style={{ maxWidth: 960, margin: "0 auto" }}>
+            <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
+              <img
+                src="/back-to-calculators-blue.webp"
+                alt="Back to Calculators"
+                style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
+              />
+            </Link>
+            <p
+              style={{
+                fontSize: 13,
+                fontWeight: 700,
+                letterSpacing: ".15em",
+                textTransform: "uppercase" as const,
+                color: "#c8b98a",
+                marginBottom: 10,
+                fontFamily: "'Raleway', sans-serif",
+              }}
+            >
+              For buyers &amp; investors
+            </p>
+            <h1
+              style={{
+                fontSize: "clamp(28px, 4vw, 42px)",
+                fontFamily: "'Raleway', sans-serif",
+                fontWeight: 700,
+                color: "#ffffff",
+                marginBottom: 12,
+                lineHeight: 1.2,
+              }}
+            >
+              AFH ROI Calculator
+            </h1>
+            <p
+              style={{
+                fontSize: 18,
+                fontFamily: "'Raleway', sans-serif",
+                color: "#ffffff",
+                lineHeight: 1.7,
+                maxWidth: 600,
+                opacity: 1,
+              }}
+            >
+              Know your numbers before you commit. Analyze cash-on-cash return, cap rate, NOI, and monthly cash flow.
             </p>
           </div>
         </section>
+        <div dangerouslySetInnerHTML={{ __html: calculatorHTML }} />
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
-export default Index;
+export default AFHROICalculator;
