@@ -143,7 +143,7 @@ nav [class*="dropdown"] button svg {
   -webkit-box-orient: vertical !important;
 }
 
-//* (Removed: overly broad uniform tile sizing block — it matched every
+/* (Removed: overly broad uniform tile sizing block — it matched every
    class containing "card", "tile", or "grid". */
 
 /* Hero blue title band — prevent descender clipping */
@@ -1791,7 +1791,18 @@ h4 + .text-muted-foreground {
   color: #4b5563 !important;
   opacity: 1 !important;
 }
-
+/* (Removed: overly broad uniform tile sizing block — it matched every class containing "card". */
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+#r-occ,
+#r-cap {
+  padding: 11px 14px !important;
+  min-height: unset !important;
+  height: auto !important;
+}
 [class*="bg-navy"] :where(h1, h2, h3, h4) + p,
 [class*="bg-primary"] :where(h1, h2, h3, h4) + p {
   color: #ffffff !important;
@@ -1801,6 +1812,17 @@ h4 + .text-muted-foreground {
 .calc-page-hero span {
   color: #ffffff !important;
   opacity: 1 !important;
+}
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+#r-occ,
+#r-cap {
+  padding: 11px 14px !important;
+  min-height: unset !important;
+  height: auto !important;
 }
 /* 5. Card body text — readable, never faded */
 :where(
