@@ -155,16 +155,40 @@ const AFHValuationEstimator = () => {
       <main>
         <section style={{ background: "#1e2a38", padding: "48px 24px 40px", color: "#ffffff" }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
-            <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
-              <img
-                src="/back-to-calculators-green.webp"
-                alt="Back to Calculators"
-                style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
-              />
+            <Link
+              to="/afh-club/calculators"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 12,
+                marginBottom: 24,
+                padding: "14px 28px",
+                background: "linear-gradient(135deg, #071830, #030d1e)",
+                border: "2px solid #00e676",
+                borderRadius: 6,
+                textDecoration: "none",
+                boxShadow: "0 0 20px rgba(0,230,118,0.4), inset 0 1px 0 rgba(0,230,118,0.2)",
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: 15,
+                fontWeight: 700,
+                letterSpacing: "0.2em",
+                textTransform: "uppercase" as const,
+                color: "#ffffff",
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 0 35px rgba(0,230,118,0.7), inset 0 1px 0 rgba(0,230,118,0.3)";
+                (e.currentTarget as HTMLElement).style.borderColor = "#4dffaa";
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(0,230,118,0.4), inset 0 1px 0 rgba(0,230,118,0.2)";
+                (e.currentTarget as HTMLElement).style.borderColor = "#00e676";
+              }}
+            >
+              ← Back to Calculators
             </Link>
-            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase" as const, color: "#c8b98a", marginBottom: 10, fontFamily: "'Raleway', sans-serif" }}>For sellers</p>
-            <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#ffffff", marginBottom: 12, lineHeight: 1.2 }}>AFH Valuation Estimator</h1>
-            <p className="hero-text-white" style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", lineHeight: 1.7, maxWidth: 600 }}>Know what your AFH is worth before you list. Estimate business and property value using income capitalization.</p>
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase" as const, color: "#ffffff", opacity: 1, marginBottom: 10, fontFamily: "'Raleway', sans-serif" }}>For sellers</p>
+            <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#ffffff", opacity: 1, marginBottom: 12, lineHeight: 1.2 }}>AFH Valuation Estimator</h1>
+            <p className="hero-text-white" style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", lineHeight: 1.7, maxWidth: 600, color: "#ffffff", opacity: 1 }}>Know what your AFH is worth before you list. Estimate business and property value using income capitalization.</p>
           </div>
         </section>
         <div dangerouslySetInnerHTML={{ __html: calculatorHTML }} />

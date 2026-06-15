@@ -236,20 +236,44 @@ const AFHROICalculator = () => {
         {/* Hero Band */}
         <section style={{ background: "#1e2a38", padding: "48px 24px 40px", color: "#ffffff" }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
-            <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
-              <img
-                src="/back-to-calculators-blue.webp"
-                alt="Back to Calculators"
-                style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
-              />
+            <Link
+              to="/afh-club/calculators"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 12,
+                marginBottom: 24,
+                padding: "14px 28px",
+                background: "linear-gradient(135deg, #071830, #030d1e)",
+                border: "2px solid #1e90ff",
+                borderRadius: 6,
+                textDecoration: "none",
+                boxShadow: "0 0 20px rgba(30,144,255,0.4), inset 0 1px 0 rgba(30,144,255,0.2)",
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: 15,
+                fontWeight: 700,
+                letterSpacing: "0.2em",
+                textTransform: "uppercase" as const,
+                color: "#ffffff",
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 0 35px rgba(30,144,255,0.7), inset 0 1px 0 rgba(30,144,255,0.3)";
+                (e.currentTarget as HTMLElement).style.borderColor = "#4db8ff";
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(30,144,255,0.4), inset 0 1px 0 rgba(30,144,255,0.2)";
+                (e.currentTarget as HTMLElement).style.borderColor = "#1e90ff";
+              }}
+            >
+              ← Back to Calculators
             </Link>
-            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase" as const, color: "#c8b98a", marginBottom: 10, fontFamily: "'Raleway', sans-serif" }}>
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase" as const, color: "#ffffff", opacity: 1, marginBottom: 10, fontFamily: "'Raleway', sans-serif" }}>
               For buyers &amp; investors
             </p>
-            <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#ffffff", marginBottom: 12, lineHeight: 1.2 }}>
+            <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#ffffff", opacity: 1, marginBottom: 12, lineHeight: 1.2 }}>
               AFH ROI Calculator
             </h1>
-            <p className="hero-text-white" style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", lineHeight: 1.7, maxWidth: 600 }}>
+            <p className="hero-text-white" style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", lineHeight: 1.7, maxWidth: 600, color: "#ffffff", opacity: 1 }}>
               Know your numbers before you commit. Analyze cash-on-cash return, cap rate, NOI, and monthly cash flow.
             </p>
           </div>
