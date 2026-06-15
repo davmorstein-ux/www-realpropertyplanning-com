@@ -710,7 +710,7 @@ const AFHROICalculator = () => {
                 background: "#ffffff",
                 color: "#003380",
                 border: "2px solid #003380",
-                fontSize: 15,
+                fontSize: 18,
                 fontWeight: 700,
                 letterSpacing: ".2em",
                 textTransform: "uppercase",
