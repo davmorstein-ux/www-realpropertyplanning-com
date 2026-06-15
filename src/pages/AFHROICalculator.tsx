@@ -214,7 +214,7 @@ const AFHROICalculator = () => {
         {/* Hero */}
         <section
           style={{
-            background: "#1e2a38",
+            background: "rgba(30,42,56,0.85)",
             padding: "48px 24px 40px",
             color: "#ffffff",
             position: "relative",
@@ -272,7 +272,7 @@ const AFHROICalculator = () => {
         <div
           ref={containerRef}
           style={{
-            background: "linear-gradient(160deg,#000510 0%,#000 50%,#000d20 100%)",
+            background: "rgba(0,5,16,0.82)",
             padding: "2.5rem 1.5rem 3rem",
             fontFamily: "'Raleway',sans-serif",
             position: "relative",
