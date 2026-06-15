@@ -3051,15 +3051,3 @@ main .rpp-hero-band-text,
   color: #c8b98a !important;
   opacity: 1 !important;
 }
-
-.dot-matrix-canvas {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  pointer-events: none !important;
-  z-index: 0 !important;
-  opacity: 0.25 !important;
-  display: block !important;
-}
