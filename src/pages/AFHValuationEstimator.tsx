@@ -6,7 +6,7 @@ const calculatorHTML = `
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 .scene2{background:linear-gradient(160deg,#000a02 0%,#000 50%,#001805 100%);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px}
-.clipboard2{background:linear-gradient(170deg,#041808 0%,#020d04 60%,#041006 100%);border:1px solid rgba(0,230,118,0.6);border-radius:14px;padding:2rem;position:relative;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(0,230,118,0.4),0 4px 0 #020d04,0 6px 0 rgba(0,230,118,0.2),0 8px 0 #010902,0 10px 0 rgba(0,230,118,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(0,230,118,0.3)}
+.clipboard2{background:linear-gradient(170deg,#041808 0%,#020d04 60%,#041006 100%);border:2px solid #00e676;border-radius:14px;padding:2rem;position:relative;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(0,230,118,0.4),0 4px 0 #020d04,0 6px 0 rgba(0,230,118,0.2),0 8px 0 #010902,0 10px 0 rgba(0,230,118,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(0,230,118,0.3)}
 .clipboard2::before{content:'';position:absolute;top:0;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,rgba(0,230,118,0.8),transparent)}
 .clipboard2::after{content:'';position:absolute;bottom:-12px;left:10%;right:10%;height:12px;background:radial-gradient(ellipse at center,rgba(0,230,118,0.15) 0%,transparent 70%);filter:blur(4px)}
 .clip2{position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:60px;height:22px;background:linear-gradient(135deg,#0a3d1a,#041408);border:1px solid rgba(0,230,118,0.5);border-radius:4px 4px 0 0}
@@ -15,7 +15,7 @@ const calculatorHTML = `
 .ch2 h2{font-size:30px;font-weight:700;color:#fff;letter-spacing:.05em;text-shadow:0 0 30px rgba(0,230,118,0.5)}
 .ch2 h2 span{color:#00e676;text-shadow:0 0 20px rgba(0,230,118,0.8)}
 .ch2 .tg2{font-size:13px;color:#00e676;margin-top:6px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
-.panel2{background:linear-gradient(135deg,rgba(255,255,255,0.02) 0%,rgba(0,0,0,0.3) 100%);border:1px solid rgba(0,230,118,0.3);border-radius:10px;padding:1.4rem 1.6rem;margin-bottom:14px;box-shadow:inset 0 1px 0 rgba(0,230,118,0.12),0 2px 12px rgba(0,0,0,0.4);position:relative}
+.panel2{background:linear-gradient(135deg,rgba(255,255,255,0.02) 0%,rgba(0,0,0,0.3) 100%);border:2px solid #00e676;border-radius:10px;padding:1.4rem 1.6rem;margin-bottom:14px;box-shadow:inset 0 1px 0 rgba(0,230,118,0.12),0 2px 12px rgba(0,0,0,0.4);position:relative}
 .panel2::before{content:'';position:absolute;top:0;left:16px;right:16px;height:1px;background:linear-gradient(90deg,transparent,rgba(0,230,118,0.4),transparent)}
 .pt2{font-size:17px;letter-spacing:.2em;text-transform:uppercase;color:#00e676;margin-bottom:16px;font-weight:700;text-shadow:0 0 14px rgba(0,230,118,0.6)}
 .divider2{height:1px;background:linear-gradient(90deg,transparent,rgba(0,230,118,0.25),transparent);margin:0 0 18px}
@@ -24,7 +24,7 @@ const calculatorHTML = `
 .g3v{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
 .fieldv{display:flex;flex-direction:column}
 .fieldv label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#00e676;margin-bottom:8px;font-weight:700;min-height:32px;display:flex;align-items:flex-end;line-height:1.3}
-.fieldv input,.fieldv select{width:100%;background:rgba(0,15,5,0.8);border:1px solid rgba(0,230,118,0.35);border-radius:6px;color:#fff;font-size:15px;padding:11px 14px;font-family:'Raleway',sans-serif;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6);transition:border-color .2s,box-shadow .2s}
+.fieldv input,.fieldv select{width:100%;background:rgba(0,15,5,0.8);border:2px solid #00e676;border-radius:6px;color:#fff;font-size:15px;padding:11px 14px;font-family:'Raleway',sans-serif;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6);transition:border-color .2s,box-shadow .2s}
 .fieldv input::placeholder{color:rgba(0,230,118,0.2)}
 .fieldv input:focus,.fieldv select:focus{outline:none;border-color:#00e676;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6),0 0 14px rgba(0,230,118,0.3)}
 .fieldv select option{background:#020d04;color:#fff}
