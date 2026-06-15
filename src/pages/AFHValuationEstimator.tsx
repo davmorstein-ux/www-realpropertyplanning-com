@@ -426,14 +426,12 @@ const AFHValuationEstimator = () => {
               <div style={panelTitleStyle}>Property (if included)</div>
               <div style={dividerStyle} />
               <div style={grid3}>
-                <div>
+                <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
                   <label style={labelStyle}>Property value est.</label>
-                  <div style={{ position: "relative" }}>
-                    <input type="number" id="v-prop" placeholder="650000" style={inputStyle} />
-                    <div style={{ position: "absolute", top: "100%", left: 0, fontSize: 12, color: "#4dffaa", marginTop: 4 }}>Leave blank if business only</div>
-                  </div>
+                  <input type="number" id="v-prop" placeholder="650000" style={inputStyle} />
+                  <div style={{ fontSize: 12, color: "#4dffaa", marginTop: 4, minHeight: 18 }}>Leave blank if business only</div>
                 </div>
-                <div>
+                <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
                   <label style={labelStyle}>DSHS license status</label>
                   <select id="v-dshs" style={inputStyle}>
                     <option value="active">Active — good standing</option>
@@ -441,8 +439,9 @@ const AFHValuationEstimator = () => {
                     <option value="expired">Expired</option>
                     <option value="none">Never licensed</option>
                   </select>
+                  <div style={{ fontSize: 12, color: "transparent", marginTop: 4, minHeight: 18 }}>&nbsp;</div>
                 </div>
-                <div>
+                <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
                   <label style={labelStyle}>County</label>
                   <select id="v-county" style={inputStyle}>
                     <option value="king">King</option>
@@ -452,6 +451,7 @@ const AFHValuationEstimator = () => {
                     <option value="thurston">Thurston</option>
                     <option value="other">Other WA county</option>
                   </select>
+                  <div style={{ fontSize: 12, color: "transparent", marginTop: 4, minHeight: 18 }}>&nbsp;</div>
                 </div>
               </div>
             </div>
