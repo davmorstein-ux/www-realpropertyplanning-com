@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 const calculatorHTML = `
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-.scene2{background:rgba(0,5,16,0.75);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px}
+.scene2{background:rgba(0,5,16,0.75);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px;position:relative}
 .clipboard2{background:linear-gradient(170deg,#041808 0%,#020d04 60%,#041006 100%);border:2px solid #00e676;border-radius:14px;padding:2rem;position:relative;z-index:1;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(0,230,118,0.4),0 4px 0 #020d04,0 6px 0 rgba(0,230,118,0.2),0 8px 0 #010902,0 10px 0 rgba(0,230,118,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(0,230,118,0.3)}
 .clipboard2::before{content:'';position:absolute;top:0;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,rgba(0,230,118,0.8),transparent)}
 .clipboard2::after{content:'';position:absolute;bottom:-12px;left:10%;right:10%;height:12px;background:radial-gradient(ellipse at center,rgba(0,230,118,0.15) 0%,transparent 70%);filter:blur(4px)}
@@ -54,7 +54,7 @@ const calculatorHTML = `
 .courtesyv{text-align:center;font-size:13px;color:#00e676;letter-spacing:.15em;text-transform:uppercase;margin-top:1.75rem;font-weight:700;padding-top:1.25rem;border-top:1px solid rgba(0,230,118,0.2);text-shadow:0 0 12px rgba(0,230,118,0.5)}
 </style>
 <div class="scene2">
-<canvas id="dot-matrix2" class="dot-matrix-canvas"></canvas>
+<canvas id="dot-matrix2" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.25;display:block"></canvas>
 <script>
 (function(){
   var c=document.getElementById('dot-matrix2');
@@ -62,7 +62,7 @@ const calculatorHTML = `
   var cols,rows;
   var spacing=28;
   var t=0;
-  function resize(){c.width=window.innerWidth;c.height=window.innerHeight;cols=Math.ceil(c.width/spacing)+1;rows=Math.ceil(c.height/spacing)+1;}
+  function resize(){c.width=c.offsetWidth;c.height=c.offsetHeight;cols=Math.ceil(c.width/spacing)+1;rows=Math.ceil(c.height/spacing)+1;}
   resize();
   window.addEventListener('resize',resize);
   function draw(){
