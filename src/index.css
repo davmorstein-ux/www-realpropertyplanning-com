@@ -1,5 +1,8 @@
 /* Fonts loaded non-blocking from index.html (DM Sans + DM Sans) */
-.hero-text-white { color: #ffffff !important; opacity: 1 !important; }
+.hero-text-white {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&display=swap");
 
 /* Global typography overhaul */
@@ -141,6 +144,10 @@ nav [class*="dropdown"] button svg {
 }
 
 /* (Removed: overly broad uniform tile sizing block — it matched every
+#calc-roi-btn, #calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
    class containing "card", "tile", or "grid" — including Tailwind's
    `grid`, `card-3d`, `bg-card`, etc. — and forced the entire layout into
    a 220px-wide no-wrap row, breaking mobile responsiveness sitewide.) */
@@ -3003,15 +3010,14 @@ main .rpp-hero-band-text,
   line-height: 1 !important;
   font-weight: 900 !important;
   letter-spacing: 0.18em !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   text-transform: uppercase !important;
   text-align: center !important;
   margin: 0 !important;
   padding: 0 !important;
   opacity: 1 !important;
-  font-family: 'Raleway', sans-serif !important;
+  font-family: "Raleway", sans-serif !important;
 }
-
 
 /* AFH carousel — mobile centering */
 @media (max-width: 768px) {
@@ -3023,12 +3029,14 @@ main .rpp-hero-band-text,
     justify-content: center !important;
     align-items: center !important;
   }
-  .afh-carousel-item, .afh-carousel-card {
+  .afh-carousel-item,
+  .afh-carousel-card {
     margin: 0 auto !important;
     text-align: center !important;
     align-items: center !important;
   }
-  .afh-carousel-item img, .afh-carousel-card img {
+  .afh-carousel-item img,
+  .afh-carousel-card img {
     margin: 0 auto !important;
   }
 }
@@ -3037,7 +3045,7 @@ main .rpp-hero-band-text,
 .calc-hero-text {
   color: #ffffff !important;
   opacity: 1 !important;
-  font-family: 'Raleway', sans-serif !important;
+  font-family: "Raleway", sans-serif !important;
 }
 
 .calc-hero-subtitle {
