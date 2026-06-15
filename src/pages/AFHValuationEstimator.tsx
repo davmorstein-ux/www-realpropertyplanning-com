@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 const calculatorHTML = `
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-.scene2{background:linear-gradient(160deg,#000a02 0%,#000 50%,#001805 100%);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px}
+.scene2{background:rgba(0,10,3,0.82);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px}
 .clipboard2{background:linear-gradient(170deg,#041808 0%,#020d04 60%,#041006 100%);border:2px solid #00e676;border-radius:14px;padding:2rem;position:relative;z-index:1;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(0,230,118,0.4),0 4px 0 #020d04,0 6px 0 rgba(0,230,118,0.2),0 8px 0 #010902,0 10px 0 rgba(0,230,118,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(0,230,118,0.3)}
 .clipboard2::before{content:'';position:absolute;top:0;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,rgba(0,230,118,0.8),transparent)}
 .clipboard2::after{content:'';position:absolute;bottom:-12px;left:10%;right:10%;height:12px;background:radial-gradient(ellipse at center,rgba(0,230,118,0.15) 0%,transparent 70%);filter:blur(4px)}
@@ -184,7 +184,7 @@ const AFHValuationEstimator = () => {
     <>
       <Header />
       <main>
-        <section style={{ background: "#1e2a38", padding: "48px 24px 40px", color: "#ffffff" }}>
+        <section style={{ background: "rgba(30,42,56,0.85)", padding: "48px 24px 40px", color: "#ffffff" }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
               <img src="/back-to-calculators-green.webp" alt="Back to Calculators" style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }} />
