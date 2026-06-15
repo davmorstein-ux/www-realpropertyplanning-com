@@ -3099,3 +3099,23 @@ main .rpp-hero-band-text,
   font-weight: 900 !important;
   line-height: 1 !important;
 }
+/* Calculator fixes */
+#r-occ,
+#r-cap,
+#r-rev,
+#r-exp,
+#r-price,
+#r-rate,
+#r-down,
+#r-rerm {
+  padding: 11px 14px !important;
+  font-size: 15px !important;
+  height: auto !important;
+  min-height: unset !important;
+  box-sizing: border-box !important;
+}
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
