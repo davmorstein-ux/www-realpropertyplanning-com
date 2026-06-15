@@ -243,8 +243,8 @@ const AFHROICalculator = () => {
     <>
       <Header />
       <main>
-        {/* Hero — inline styles only, no className that CSS can override */}
-        <div style={{ background: "#1e2a38", padding: "48px 24px 40px" }}>
+        {/* ── Hero ── */}
+        <div className="calc-page-hero" style={{ background: "#1e2a38", padding: "48px 24px 40px" }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
               <img
@@ -254,15 +254,15 @@ const AFHROICalculator = () => {
               />
             </Link>
             <p
+              className="eyebrow-label"
               style={{
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: ".15em",
-                textTransform: "uppercase" as const,
+                textTransform: "uppercase",
                 color: "#c8b98a",
                 marginBottom: 10,
                 fontFamily: "'Raleway',sans-serif",
-                opacity: 1,
               }}
             >
               For buyers &amp; investors
@@ -275,12 +275,10 @@ const AFHROICalculator = () => {
                 color: "#ffffff",
                 marginBottom: 12,
                 lineHeight: 1.2,
-                opacity: 1,
               }}
             >
               AFH ROI Calculator
             </h1>
-            {/* subtitle — uses span inside p to avoid h1+p CSS rule */}
             <p
               style={{
                 fontSize: 18,
@@ -289,12 +287,9 @@ const AFHROICalculator = () => {
                 lineHeight: 1.7,
                 maxWidth: 600,
                 margin: 0,
-                opacity: 1,
               }}
             >
-              <span style={{ color: "#ffffff", fontSize: 18, fontFamily: "'Raleway',sans-serif", opacity: 1 }}>
-                Know your numbers before you commit. Analyze cash-on-cash return, cap rate, NOI, and monthly cash flow.
-              </span>
+              Know your numbers before you commit. Analyze cash-on-cash return, cap rate, NOI, and monthly cash flow.
             </p>
           </div>
         </div>
