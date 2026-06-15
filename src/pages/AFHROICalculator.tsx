@@ -486,7 +486,7 @@ const AFHROICalculator = () => {
                     <option value="8">8 beds</option>
                   </select>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <div>
                   <label style={labelStyle}>Current occupancy (%)</label>
                   <input type="number" id="r-occ" placeholder="83" style={inputStyle} />
                 </div>
