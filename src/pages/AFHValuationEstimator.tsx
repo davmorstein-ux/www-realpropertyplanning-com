@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 const calculatorHTML = `
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-.scene2{background:rgba(0,10,3,0.82);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px}
+.scene2{background:rgba(0,5,16,0.75);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px}
 .clipboard2{background:linear-gradient(170deg,#041808 0%,#020d04 60%,#041006 100%);border:2px solid #00e676;border-radius:14px;padding:2rem;position:relative;z-index:1;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(0,230,118,0.4),0 4px 0 #020d04,0 6px 0 rgba(0,230,118,0.2),0 8px 0 #010902,0 10px 0 rgba(0,230,118,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(0,230,118,0.3)}
 .clipboard2::before{content:'';position:absolute;top:0;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,rgba(0,230,118,0.8),transparent)}
 .clipboard2::after{content:'';position:absolute;bottom:-12px;left:10%;right:10%;height:12px;background:radial-gradient(ellipse at center,rgba(0,230,118,0.15) 0%,transparent 70%);filter:blur(4px)}
@@ -184,14 +184,14 @@ const AFHValuationEstimator = () => {
     <>
       <Header />
       <main>
-        <section style={{ background: "rgba(30,42,56,0.85)", padding: "48px 24px 40px", color: "#ffffff" }}>
+        <section style={{ background: "rgba(20,32,48,0.7)", padding: "48px 24px 40px", color: "#ffffff", position: "relative", zIndex: 1 }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
               <img src="/back-to-calculators-green.webp" alt="Back to Calculators" style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }} />
             </Link>
-            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase" as const, color: "#ffffff", opacity: 1, marginBottom: 10, fontFamily: "'Raleway', sans-serif" }}>For sellers</p>
-            <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#ffffff", opacity: 1, marginBottom: 12, lineHeight: 1.2 }}>AFH Valuation Estimator</h1>
-            <p className="hero-text-white" style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", lineHeight: 1.7, maxWidth: 600, color: "#ffffff", opacity: 1 }}>Know what your AFH is worth before you list. Estimate business and property value using income capitalization.</p>
+            <p className="calc-hero-eyebrow" style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase" as const, marginBottom: 10, fontFamily: "'Raleway', sans-serif" }}>For sellers</p>
+            <h1 className="calc-hero-text" style={{ fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 700, marginBottom: 12, lineHeight: 1.2 }}>AFH Valuation Estimator</h1>
+            <p className="calc-hero-subtitle" style={{ fontFamily: "'Raleway', sans-serif", maxWidth: 600 }}>Know what your AFH is worth before you list. Estimate business and property value using income capitalization.</p>
           </div>
         </section>
         <div dangerouslySetInnerHTML={{ __html: calculatorHTML }} />
