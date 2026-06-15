@@ -4,18 +4,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const AFHROICalculator = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const calcRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
-
-    // Dot matrix canvas
-    const canvas = document.getElementById("dot-matrix-roi") as HTMLCanvasElement;
+    // ── Dot matrix ──────────────────────────────────────────
+    const canvas = document.getElementById("roi-canvas") as HTMLCanvasElement;
     if (canvas) {
       const ctx = canvas.getContext("2d")!;
-      let t = 0;
-      const spacing = 28;
-      let animId: number;
+      let t = 0,
+        animId: number;
+      const sp = 28;
       const resize = () => {
         canvas.width = canvas.offsetWidth;
         canvas.height = canvas.offsetHeight;
@@ -23,18 +21,17 @@ const AFHROICalculator = () => {
       resize();
       window.addEventListener("resize", resize);
       const draw = () => {
-        const cols = Math.ceil(canvas.width / spacing) + 1;
-        const rows = Math.ceil(canvas.height / spacing) + 1;
+        const cols = Math.ceil(canvas.width / sp) + 1;
+        const rows = Math.ceil(canvas.height / sp) + 1;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < cols; i++) {
+        for (let i = 0; i < cols; i++)
           for (let j = 0; j < rows; j++) {
-            const wave = Math.sin(i * 0.4 + j * 0.3 + t) * 0.5 + 0.5;
+            const w = Math.sin(i * 0.4 + j * 0.3 + t) * 0.5 + 0.5;
             ctx.beginPath();
-            ctx.arc(i * spacing, j * spacing, 2 + wave * 1.5, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(30,144,255,${0.3 + wave * 0.7})`;
+            ctx.arc(i * sp, j * sp, 2 + w * 1.5, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(30,144,255,${0.3 + w * 0.7})`;
             ctx.fill();
           }
-        }
         t += 0.012;
         animId = requestAnimationFrame(draw);
       };
@@ -46,64 +43,9 @@ const AFHROICalculator = () => {
     }
   }, []);
 
-
   useEffect(() => {
-    (window as any).dpMode = "pct";
-
-    (window as any).setDPMode = (mode: string) => {
-      const btnPct = document.getElementById("btn-pct") as HTMLButtonElement;
-      const btnDollar = document.getElementById("btn-dollar") as HTMLButtonElement;
-      const downInput = document.getElementById("r-down") as HTMLInputElement;
-      const hint = document.getElementById("dp-hint")!;
-      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement).value) || 0;
-      const cur = parseFloat(downInput.value) || 0;
-
-      (window as any).dpMode = mode;
-
-      if (mode === "pct") {
-        btnPct.style.background = "#ffffff";
-        btnPct.style.color = "#003380";
-        btnPct.style.fontSize = "18px";
-        btnDollar.style.background = "#003380";
-        btnDollar.style.color = "#ffffff";
-        btnDollar.style.fontSize = "14px";
-        downInput.placeholder = "25";
-        hint.textContent = "Enter percentage of purchase price";
-        if (price > 0 && cur > 0) downInput.value = String(Math.round((cur / price) * 100));
-        else downInput.value = "";
-      } else {
-        btnDollar.style.background = "#ffffff";
-        btnDollar.style.color = "#003380";
-        btnDollar.style.fontSize = "18px";
-        btnPct.style.background = "#003380";
-        btnPct.style.color = "#ffffff";
-        btnPct.style.fontSize = "14px";
-        downInput.placeholder = "212500";
-        hint.textContent = "Enter dollar amount of down payment";
-        if (price > 0 && cur > 0) downInput.value = String(Math.round(price * (cur / 100)));
-        else downInput.value = "";
-      }
-      (window as any).updateDerived();
-    };
-
-    (window as any).updateDerived = () => {
-      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement)?.value) || 0;
-      const val = parseFloat((document.getElementById("r-down") as HTMLInputElement)?.value) || 0;
-      const derived = document.getElementById("dp-derived")!;
-      if (!derived) return;
-      if ((window as any).dpMode === "pct") {
-        derived.textContent = price > 0 && val > 0 ? "= $" + Math.round(price * (val / 100)).toLocaleString() : "= —";
-      } else {
-        const p = price > 0 ? (val / price) * 100 : 0;
-        derived.textContent = price > 0 && val > 0 ? "= " + Math.round(p * 10) / 10 + "%" : "= —";
-      }
-    };
-
-    (window as any).getDownAmt = () => {
-      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement)?.value) || 0;
-      const val = parseFloat((document.getElementById("r-down") as HTMLInputElement)?.value) || 0;
-      return (window as any).dpMode === "pct" ? price * (val / 100) : val;
-    };
+    // ── Calculator logic ────────────────────────────────────
+    let dpMode = "pct";
 
     const fmtD = (n: number) => {
       if (Math.abs(n) >= 1000000) return "$" + (n / 1000000).toFixed(2) + "M";
@@ -112,13 +54,56 @@ const AFHROICalculator = () => {
     };
     const fmtP = (n: number) => Math.round(n * 10) / 10 + "%";
 
+    const updateDerived = () => {
+      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement)?.value) || 0;
+      const val = parseFloat((document.getElementById("r-down") as HTMLInputElement)?.value) || 0;
+      const el = document.getElementById("dp-derived");
+      if (!el) return;
+      if (dpMode === "pct")
+        el.textContent = price > 0 && val > 0 ? "= $" + Math.round(price * (val / 100)).toLocaleString() : "= —";
+      else {
+        const p = price > 0 ? (val / price) * 100 : 0;
+        el.textContent = price > 0 && val > 0 ? "= " + Math.round(p * 10) / 10 + "%" : "= —";
+      }
+    };
+
+    const setMode = (mode: string) => {
+      dpMode = mode;
+      const pBtn = document.getElementById("btn-pct") as HTMLButtonElement;
+      const dBtn = document.getElementById("btn-dollar") as HTMLButtonElement;
+      const inp = document.getElementById("r-down") as HTMLInputElement;
+      const hint = document.getElementById("dp-hint");
+      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement)?.value) || 0;
+      const cur = parseFloat(inp?.value) || 0;
+      if (!pBtn || !dBtn) return;
+      if (mode === "pct") {
+        pBtn.style.cssText =
+          "padding:10px 28px;font-size:20px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#ffffff;color:#003380;outline:none";
+        dBtn.style.cssText =
+          "padding:10px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#003380;color:#ffffff;outline:none";
+        if (inp) inp.placeholder = "25";
+        if (hint) hint.textContent = "Enter percentage of purchase price";
+        if (price > 0 && cur > 0 && inp) inp.value = String(Math.round((cur / price) * 100));
+        else if (inp) inp.value = "";
+      } else {
+        dBtn.style.cssText =
+          "padding:10px 28px;font-size:20px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#ffffff;color:#003380;outline:none";
+        pBtn.style.cssText =
+          "padding:10px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#003380;color:#ffffff;outline:none";
+        if (inp) inp.placeholder = "212500";
+        if (hint) hint.textContent = "Enter dollar amount of down payment";
+        if (price > 0 && cur > 0 && inp) inp.value = String(Math.round(price * (cur / 100)));
+        else if (inp) inp.value = "";
+      }
+      updateDerived();
+    };
+
     const odometer = (el: HTMLElement, finalStr: string, duration: number) => {
       const start = Date.now();
-      const isMoney = finalStr.startsWith("$");
-      const isPct = finalStr.endsWith("%");
+      const isMoney = finalStr.startsWith("$"),
+        isPct = finalStr.endsWith("%");
       const tick = () => {
-        const elapsed = Date.now() - start;
-        if (elapsed < duration) {
+        if (Date.now() - start < duration) {
           if (isMoney) {
             const r = Math.round(Math.random() * 2000000);
             el.textContent = r >= 1000000 ? "$" + (r / 1000000).toFixed(2) + "M" : "$" + (r / 1000).toFixed(0) + "K";
@@ -130,32 +115,37 @@ const AFHROICalculator = () => {
       requestAnimationFrame(tick);
     };
 
-    (window as any).calcROI = () => {
+    const getDown = () => {
+      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement)?.value) || 0;
+      const val = parseFloat((document.getElementById("r-down") as HTMLInputElement)?.value) || 0;
+      return dpMode === "pct" ? price * (val / 100) : val;
+    };
+
+    const calcROI = () => {
       const price = parseFloat((document.getElementById("r-price") as HTMLInputElement).value) || 0;
       const rate = parseFloat((document.getElementById("r-rate") as HTMLInputElement).value) || 7.25;
       const term = parseInt((document.getElementById("r-term") as HTMLSelectElement).value) || 30;
       const rev = parseFloat((document.getElementById("r-rev") as HTMLInputElement).value) || 0;
       const exp = parseFloat((document.getElementById("r-exp") as HTMLInputElement).value) || 0;
       const occ = parseFloat((document.getElementById("r-occ") as HTMLInputElement).value) || 83;
-      const downAmt = (window as any).getDownAmt();
+      const downAmt = getDown();
       if (!price || !rev || !downAmt) {
         alert("Please enter purchase price, down payment, and annual gross revenue.");
         return;
       }
-      const loanAmt = price - downAmt;
-      const mr = rate / 100 / 12;
-      const np = term * 12;
-      const mortgage = (loanAmt * (mr * Math.pow(1 + mr, np))) / (Math.pow(1 + mr, np) - 1);
-      const annMort = mortgage * 12;
-      const adjRev = rev * (occ / 100);
-      const noi = adjRev - exp;
-      const annCF = noi - annMort;
-      const roi = (annCF / downAmt) * 100;
-      const capRate = (noi / price) * 100;
-      const margin = (noi / adjRev) * 100;
-      const results = document.getElementById("roi-results")!;
-      results.classList.add("visible");
-      results.scrollIntoView({ behavior: "smooth", block: "start" });
+      const mr = rate / 100 / 12,
+        np = term * 12;
+      const mortgage = ((price - downAmt) * (mr * Math.pow(1 + mr, np))) / (Math.pow(1 + mr, np) - 1);
+      const annMort = mortgage * 12,
+        adjRev = rev * (occ / 100),
+        noi = adjRev - exp;
+      const annCF = noi - annMort,
+        roi = (annCF / downAmt) * 100;
+      const capRate = (noi / price) * 100,
+        margin = (noi / adjRev) * 100;
+      const res = document.getElementById("roi-results")!;
+      res.style.display = "block";
+      res.scrollIntoView({ behavior: "smooth", block: "start" });
       const DUR = 2000;
       odometer(document.getElementById("r-roi")!, fmtP(roi), DUR);
       setTimeout(() => {
@@ -177,36 +167,86 @@ const AFHROICalculator = () => {
             val: Math.round((noi / annMort) * 100) / 100 + "x",
           },
         ];
-        document.getElementById("r-bars")!.innerHTML = bars
+        const barsEl = document.getElementById("r-bars")!;
+        barsEl.innerHTML = bars
           .map(
             (b) =>
-              `<div class="br"><span class="bl">${b.label}</span><div class="bt"><div class="bf" style="width:0%" data-pct="${Math.max(0, b.pct)}"></div></div><span class="bv">${b.val}</span></div>`,
+              `<div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
+            <span style="font-size:13px;color:#fff;width:150px;flex-shrink:0;font-weight:600">${b.label}</span>
+            <div style="flex:1;height:7px;background:rgba(0,0,0,0.5);border-radius:4px;overflow:hidden;border:2px solid #1e90ff;box-shadow:0 0 8px rgba(30,144,255,0.4)">
+              <div class="roi-bar-fill" data-pct="${Math.max(0, b.pct)}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#1e90ff,#4db8ff);box-shadow:0 0 10px rgba(30,144,255,0.6);transition:width .9s ease"></div>
+            </div>
+            <span style="font-size:13px;color:#1e90ff;width:70px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
+          </div>`,
           )
           .join("");
         setTimeout(() => {
-          document.querySelectorAll("#r-bars .bf").forEach((el: any) => {
+          document.querySelectorAll(".roi-bar-fill").forEach((el: any) => {
             el.style.width = el.dataset.pct + "%";
           });
         }, 50);
       }, DUR + 200);
     };
+
+    // Wire up events
+    document.getElementById("btn-pct")?.addEventListener("click", () => setMode("pct"));
+    document.getElementById("btn-dollar")?.addEventListener("click", () => setMode("dollar"));
+    document.getElementById("r-price")?.addEventListener("input", updateDerived);
+    document.getElementById("r-down")?.addEventListener("input", updateDerived);
+    document.getElementById("calc-roi-btn")?.addEventListener("click", calcROI);
+    document.getElementById("contact-btn-roi")?.addEventListener("click", () => (window.location.href = "/contact"));
   }, []);
+
+  // Shared styles
+  const inputStyle: React.CSSProperties = {
+    width: "100%",
+    background: "rgba(0,10,28,0.8)",
+    border: "2px solid #1e90ff",
+    borderRadius: 6,
+    color: "#fff",
+    fontSize: 15,
+    padding: "11px 14px",
+    fontFamily: "'Raleway',sans-serif",
+    boxSizing: "border-box",
+  };
+  const labelStyle: React.CSSProperties = {
+    display: "block",
+    fontSize: 12,
+    letterSpacing: ".1em",
+    textTransform: "uppercase",
+    color: "#1e90ff",
+    marginBottom: 8,
+    fontWeight: 700,
+  };
+  const panelStyle: React.CSSProperties = {
+    border: "2px solid #1e90ff",
+    borderRadius: 10,
+    padding: "1.4rem 1.6rem",
+    marginBottom: 14,
+    background: "linear-gradient(135deg,rgba(255,255,255,0.03),rgba(0,0,0,0.3))",
+    position: "relative",
+  };
+  const panelTitleStyle: React.CSSProperties = {
+    fontSize: 17,
+    letterSpacing: ".2em",
+    textTransform: "uppercase",
+    color: "#1e90ff",
+    marginBottom: 16,
+    fontWeight: 700,
+  };
+  const dividerStyle: React.CSSProperties = {
+    height: 1,
+    background: "linear-gradient(90deg,transparent,rgba(30,144,255,0.25),transparent)",
+    marginBottom: 18,
+  };
+  const grid2: React.CSSProperties = { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 };
 
   return (
     <>
       <Header />
       <main>
-
-        {/* Hero */}
-        <section
-          style={{
-            background: "rgba(20,32,48,0.7)",
-            padding: "48px 24px 40px",
-            color: "#ffffff",
-            position: "relative",
-            zIndex: 1,
-          }}
-        >
+        {/* ── Hero ── */}
+        <div style={{ background: "#1e2a38", padding: "48px 24px 40px" }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
               <img
@@ -216,23 +256,24 @@ const AFHROICalculator = () => {
               />
             </Link>
             <p
-              className="calc-hero-eyebrow"
               style={{
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: ".15em",
                 textTransform: "uppercase",
+                color: "#c8b98a",
                 marginBottom: 10,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'Raleway',sans-serif",
               }}
             >
               For buyers &amp; investors
             </p>
             <h1
-              className="calc-hero-text"
               style={{
-                fontSize: "clamp(28px, 4vw, 42px)",
+                fontSize: "clamp(28px,4vw,42px)",
+                fontFamily: "'Raleway',sans-serif",
                 fontWeight: 700,
+                color: "#ffffff",
                 marginBottom: 12,
                 lineHeight: 1.2,
               }}
@@ -240,48 +281,51 @@ const AFHROICalculator = () => {
               AFH ROI Calculator
             </h1>
             <p
-              className="calc-hero-subtitle"
               style={{
-                fontFamily: "'Raleway', sans-serif",
+                fontSize: 18,
+                fontFamily: "'Raleway',sans-serif",
+                color: "#ffffff",
+                lineHeight: 1.7,
                 maxWidth: 600,
+                margin: 0,
               }}
             >
               Know your numbers before you commit. Analyze cash-on-cash return, cap rate, NOI, and monthly cash flow.
             </p>
           </div>
-        </section>
+        </div>
 
-        {/* Calculator */}
-        <div
-          ref={containerRef}
-          style={{
-            background: "rgba(0,5,16,0.75)",
-            padding: "2.5rem 1.5rem 3rem",
-            fontFamily: "'Raleway',sans-serif",
-            position: "relative",
-            zIndex: 1,
-          }}
-        >
+        {/* ── Calculator ── */}
+        <div ref={calcRef} style={{ background: "#000510", padding: "2.5rem 1.5rem 3rem", position: "relative" }}>
           <canvas
-            id="dot-matrix-roi"
-            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 0, opacity: 0.25, display: "block" }}
+            id="roi-canvas"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              pointerEvents: "none",
+              zIndex: 0,
+              opacity: 0.3,
+            }}
           />
           <div
             style={{
-              background: "linear-gradient(170deg,#071830 0%,#030d1e 60%,#050f22 100%)",
+              maxWidth: 900,
+              margin: "0 auto",
+              position: "relative",
+              zIndex: 1,
+              background: "linear-gradient(170deg,#071830,#030d1e)",
               border: "2px solid #1e90ff",
               borderRadius: 14,
               padding: "2rem",
-              position: "relative",
+              boxShadow: "0 2px 0 rgba(30,144,255,0.4),0 20px 40px rgba(0,0,0,0.8),inset 0 1px 0 rgba(30,144,255,0.3)",
               transform: "rotateX(2deg)",
               transformOrigin: "top center",
-              boxShadow:
-                "0 2px 0 rgba(30,144,255,0.4),0 4px 0 #030d1e,0 6px 0 rgba(30,144,255,0.2),0 20px 40px rgba(0,0,0,0.8),inset 0 1px 0 rgba(30,144,255,0.3)",
-              maxWidth: 900,
-              margin: "0 auto",
             }}
           >
-            {/* Header */}
+            {/* Title */}
             <div style={{ textAlign: "center", marginBottom: "1.75rem" }}>
               <div
                 style={{
@@ -295,15 +339,7 @@ const AFHROICalculator = () => {
               >
                 Adult Family Home
               </div>
-              <h2
-                style={{
-                  fontSize: 30,
-                  fontWeight: 700,
-                  color: "#fff",
-                  letterSpacing: ".05em",
-                  textShadow: "0 0 30px rgba(30,144,255,0.5)",
-                }}
-              >
+              <h2 style={{ fontSize: 30, fontWeight: 700, color: "#fff", textShadow: "0 0 30px rgba(30,144,255,0.5)" }}>
                 AFH <span style={{ color: "#1e90ff" }}>ROI</span> Calculator
               </h2>
               <div
@@ -320,128 +356,24 @@ const AFHROICalculator = () => {
               </div>
             </div>
 
-            {/* Acquisition Panel */}
-            <div
-              style={{
-                border: "2px solid #1e90ff",
-                borderRadius: 10,
-                padding: "1.4rem 1.6rem",
-                marginBottom: 14,
-                background: "linear-gradient(135deg,rgba(255,255,255,0.03),rgba(0,0,0,0.3))",
-                position: "relative",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: 17,
-                  letterSpacing: ".2em",
-                  textTransform: "uppercase",
-                  color: "#1e90ff",
-                  marginBottom: 16,
-                  fontWeight: 700,
-                }}
-              >
-                Acquisition
-              </div>
-              <div
-                style={{
-                  height: 1,
-                  background: "linear-gradient(90deg,transparent,rgba(30,144,255,0.25),transparent)",
-                  marginBottom: 18,
-                }}
-              />
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}>
+            {/* Acquisition */}
+            <div style={panelStyle}>
+              <div style={panelTitleStyle}>Acquisition</div>
+              <div style={dividerStyle} />
+              <div style={grid2}>
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      fontSize: 12,
-                      letterSpacing: ".1em",
-                      textTransform: "uppercase",
-                      color: "#1e90ff",
-                      marginBottom: 8,
-                      fontWeight: 700,
-                    }}
-                  >
-                    Purchase price ($)
-                  </label>
-                  <input
-                    type="number"
-                    id="r-price"
-                    placeholder="850000"
-                    onInput={(window as any).updateDerived}
-                    style={{
-                      width: "100%",
-                      background: "rgba(0,10,28,0.8)",
-                      border: "2px solid #1e90ff",
-                      borderRadius: 6,
-                      color: "#fff",
-                      fontSize: 15,
-                      padding: "11px 14px",
-                      fontFamily: "'Raleway',sans-serif",
-                    }}
-                  />
+                  <label style={labelStyle}>Purchase price ($)</label>
+                  <input type="number" id="r-price" placeholder="850000" style={inputStyle} />
                 </div>
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      fontSize: 12,
-                      letterSpacing: ".1em",
-                      textTransform: "uppercase",
-                      color: "#1e90ff",
-                      marginBottom: 8,
-                      fontWeight: 700,
-                    }}
-                  >
-                    Interest rate (%)
-                  </label>
-                  <input
-                    type="number"
-                    id="r-rate"
-                    placeholder="7.25"
-                    step="0.01"
-                    style={{
-                      width: "100%",
-                      background: "rgba(0,10,28,0.8)",
-                      border: "2px solid #1e90ff",
-                      borderRadius: 6,
-                      color: "#fff",
-                      fontSize: 15,
-                      padding: "11px 14px",
-                      fontFamily: "'Raleway',sans-serif",
-                    }}
-                  />
+                  <label style={labelStyle}>Interest rate (%)</label>
+                  <input type="number" id="r-rate" placeholder="7.25" step="0.01" style={inputStyle} />
                 </div>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}>
+              <div style={grid2}>
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      fontSize: 12,
-                      letterSpacing: ".1em",
-                      textTransform: "uppercase",
-                      color: "#1e90ff",
-                      marginBottom: 8,
-                      fontWeight: 700,
-                    }}
-                  >
-                    Loan term (years)
-                  </label>
-                  <select
-                    id="r-term"
-                    style={{
-                      width: "100%",
-                      background: "rgba(0,10,28,0.8)",
-                      border: "2px solid #1e90ff",
-                      borderRadius: 6,
-                      color: "#fff",
-                      fontSize: 15,
-                      padding: "11px 14px",
-                      fontFamily: "'Raleway',sans-serif",
-                    }}
-                  >
+                  <label style={labelStyle}>Loan term (years)</label>
+                  <select id="r-term" style={inputStyle}>
                     <option value="30">30 years</option>
                     <option value="25">25 years</option>
                     <option value="20">20 years</option>
@@ -450,8 +382,7 @@ const AFHROICalculator = () => {
                 </div>
                 <div />
               </div>
-
-              {/* Down payment toggle */}
+              {/* Toggle */}
               <div style={{ marginTop: 18 }}>
                 <div
                   style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}
@@ -472,13 +403,12 @@ const AFHROICalculator = () => {
                   >
                     <button
                       id="btn-pct"
-                      onClick={() => (window as any).setDPMode("pct")}
                       style={{
                         padding: "10px 28px",
-                        fontSize: 18,
+                        fontSize: 20,
                         fontWeight: 700,
                         cursor: "pointer",
-                        fontFamily: "'Raleway',sans-serif",
+                        fontFamily: "Raleway,sans-serif",
                         border: "none",
                         background: "#ffffff",
                         color: "#003380",
@@ -489,13 +419,12 @@ const AFHROICalculator = () => {
                     </button>
                     <button
                       id="btn-dollar"
-                      onClick={() => (window as any).setDPMode("dollar")}
                       style={{
                         padding: "10px 28px",
-                        fontSize: 14,
+                        fontSize: 15,
                         fontWeight: 700,
                         cursor: "pointer",
-                        fontFamily: "'Raleway',sans-serif",
+                        fontFamily: "Raleway,sans-serif",
                         border: "none",
                         background: "#003380",
                         color: "#ffffff",
@@ -506,23 +435,8 @@ const AFHROICalculator = () => {
                     </button>
                   </div>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 10 }}>
-                  <input
-                    type="number"
-                    id="r-down"
-                    placeholder="25"
-                    onChange={(e) => (window as any).updateDerived()}
-                    style={{
-                      flex: 1,
-                      background: "rgba(0,10,28,0.8)",
-                      border: "2px solid #1e90ff",
-                      borderRadius: 6,
-                      color: "#fff",
-                      fontSize: 15,
-                      padding: "11px 14px",
-                      fontFamily: "'Raleway',sans-serif",
-                    }}
-                  />
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <input type="number" id="r-down" placeholder="25" style={{ ...inputStyle, flex: 1, width: "auto" }} />
                   <span
                     id="dp-derived"
                     style={{
@@ -543,166 +457,39 @@ const AFHROICalculator = () => {
               </div>
             </div>
 
-            {/* Revenue Panel */}
-            <div
-              style={{
-                border: "2px solid #1e90ff",
-                borderRadius: 10,
-                padding: "1.4rem 1.6rem",
-                marginBottom: 14,
-                background: "linear-gradient(135deg,rgba(255,255,255,0.03),rgba(0,0,0,0.3))",
-                position: "relative",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: 17,
-                  letterSpacing: ".2em",
-                  textTransform: "uppercase",
-                  color: "#1e90ff",
-                  marginBottom: 16,
-                  fontWeight: 700,
-                }}
-              >
-                Revenue & Operations
-              </div>
-              <div
-                style={{
-                  height: 1,
-                  background: "linear-gradient(90deg,transparent,rgba(30,144,255,0.25),transparent)",
-                  marginBottom: 18,
-                }}
-              />
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}>
+            {/* Revenue */}
+            <div style={panelStyle}>
+              <div style={panelTitleStyle}>Revenue &amp; Operations</div>
+              <div style={dividerStyle} />
+              <div style={grid2}>
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      fontSize: 12,
-                      letterSpacing: ".1em",
-                      textTransform: "uppercase",
-                      color: "#1e90ff",
-                      marginBottom: 8,
-                      fontWeight: 700,
-                    }}
-                  >
-                    Annual gross revenue ($)
-                  </label>
-                  <input
-                    type="number"
-                    id="r-rev"
-                    placeholder="288000"
-                    style={{
-                      width: "100%",
-                      background: "rgba(0,10,28,0.8)",
-                      border: "2px solid #1e90ff",
-                      borderRadius: 6,
-                      color: "#fff",
-                      fontSize: 15,
-                      padding: "11px 14px",
-                      fontFamily: "'Raleway',sans-serif",
-                    }}
-                  />
+                  <label style={labelStyle}>Annual gross revenue ($)</label>
+                  <input type="number" id="r-rev" placeholder="288000" style={inputStyle} />
                 </div>
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      fontSize: 12,
-                      letterSpacing: ".1em",
-                      textTransform: "uppercase",
-                      color: "#1e90ff",
-                      marginBottom: 8,
-                      fontWeight: 700,
-                    }}
-                  >
-                    Annual operating expenses ($)
-                  </label>
-                  <input
-                    type="number"
-                    id="r-exp"
-                    placeholder="164000"
-                    style={{
-                      width: "100%",
-                      background: "rgba(0,10,28,0.8)",
-                      border: "2px solid #1e90ff",
-                      borderRadius: 6,
-                      color: "#fff",
-                      fontSize: 15,
-                      padding: "11px 14px",
-                      fontFamily: "'Raleway',sans-serif",
-                    }}
-                  />
+                  <label style={labelStyle}>Annual operating expenses ($)</label>
+                  <input type="number" id="r-exp" placeholder="164000" style={inputStyle} />
                 </div>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
+              <div style={grid2}>
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      fontSize: 12,
-                      letterSpacing: ".1em",
-                      textTransform: "uppercase",
-                      color: "#1e90ff",
-                      marginBottom: 8,
-                      fontWeight: 700,
-                    }}
-                  >
-                    Licensed capacity
-                  </label>
-                  <select
-                    id="r-cap"
-                    style={{
-                      width: "100%",
-                      background: "rgba(0,10,28,0.8)",
-                      border: "2px solid #1e90ff",
-                      borderRadius: 6,
-                      color: "#fff",
-                      fontSize: 15,
-                      padding: "11px 14px",
-                      fontFamily: "'Raleway',sans-serif",
-                    }}
-                  >
+                  <label style={labelStyle}>Licensed capacity</label>
+                  <select id="r-cap" style={inputStyle}>
                     <option value="2">2 beds</option>
                     <option value="4">4 beds</option>
                     <option value="6">6 beds</option>
                   </select>
                 </div>
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      fontSize: 12,
-                      letterSpacing: ".1em",
-                      textTransform: "uppercase",
-                      color: "#1e90ff",
-                      marginBottom: 8,
-                      fontWeight: 700,
-                    }}
-                  >
-                    Current occupancy (%)
-                  </label>
-                  <input
-                    type="number"
-                    id="r-occ"
-                    placeholder="83"
-                    style={{
-                      width: "100%",
-                      background: "rgba(0,10,28,0.8)",
-                      border: "2px solid #1e90ff",
-                      borderRadius: 6,
-                      color: "#fff",
-                      fontSize: 15,
-                      padding: "11px 14px",
-                      fontFamily: "'Raleway',sans-serif",
-                    }}
-                  />
+                  <label style={labelStyle}>Current occupancy (%)</label>
+                  <input type="number" id="r-occ" placeholder="83" style={inputStyle} />
                 </div>
               </div>
             </div>
 
-            {/* Calculate button */}
+            {/* Calculate */}
             <button
+              id="calc-roi-btn"
               style={{
                 width: "100%",
                 padding: 16,
@@ -710,14 +497,14 @@ const AFHROICalculator = () => {
                 background: "#ffffff",
                 color: "#003380",
                 border: "2px solid #003380",
-                fontSize: 18,
+                fontSize: 19,
                 fontWeight: 700,
                 letterSpacing: ".2em",
                 textTransform: "uppercase",
                 cursor: "pointer",
                 marginTop: 4,
                 fontFamily: "'Raleway',sans-serif",
-                transition: "background 0.2s,color 0.2s,border-color 0.2s",
+                transition: "all 0.2s",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget;
@@ -731,7 +518,6 @@ const AFHROICalculator = () => {
                 el.style.color = "#003380";
                 el.style.borderColor = "#003380";
               }}
-              onClick={() => (window as any).calcROI()}
             >
               Calculate ROI
             </button>
@@ -745,8 +531,8 @@ const AFHROICalculator = () => {
                   padding: "1.6rem",
                   textAlign: "center",
                   marginBottom: 14,
-                  boxShadow: "0 0 40px rgba(30,144,255,0.2)",
                   marginTop: 16,
+                  boxShadow: "0 0 40px rgba(30,144,255,0.2)",
                 }}
               >
                 <div
@@ -787,7 +573,7 @@ const AFHROICalculator = () => {
                   ["Monthly mortgage", "r-mort"],
                   ["Cash invested", "r-invested"],
                   ["Operating margin", "r-margin"],
-                ].map(([label, id]) => (
+                ].map(([lbl, id]) => (
                   <div
                     key={id}
                     style={{
@@ -808,7 +594,7 @@ const AFHROICalculator = () => {
                         fontWeight: 700,
                       }}
                     >
-                      {label}
+                      {lbl}
                     </div>
                     <div id={id} style={{ fontSize: 19, fontWeight: 700, color: "#fff", minHeight: 28 }}>
                       —
@@ -816,34 +602,9 @@ const AFHROICalculator = () => {
                   </div>
                 ))}
               </div>
-              <div
-                style={{
-                  border: "2px solid #1e90ff",
-                  borderRadius: 10,
-                  padding: "1.4rem 1.6rem",
-                  marginBottom: 14,
-                  background: "linear-gradient(135deg,rgba(255,255,255,0.03),rgba(0,0,0,0.3))",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: 17,
-                    letterSpacing: ".2em",
-                    textTransform: "uppercase",
-                    color: "#1e90ff",
-                    marginBottom: 16,
-                    fontWeight: 700,
-                  }}
-                >
-                  Return Breakdown
-                </div>
-                <div
-                  style={{
-                    height: 1,
-                    background: "linear-gradient(90deg,transparent,rgba(30,144,255,0.25),transparent)",
-                    marginBottom: 18,
-                  }}
-                />
+              <div style={{ ...panelStyle, marginBottom: 14 }}>
+                <div style={panelTitleStyle}>Return Breakdown</div>
+                <div style={dividerStyle} />
                 <div id="r-bars" />
               </div>
               <div
@@ -884,6 +645,7 @@ const AFHROICalculator = () => {
                   </p>
                 </div>
                 <button
+                  id="contact-btn-roi"
                   style={{
                     fontSize: 12,
                     padding: "10px 22px",
@@ -897,7 +659,7 @@ const AFHROICalculator = () => {
                     fontFamily: "'Raleway',sans-serif",
                     fontWeight: 700,
                     whiteSpace: "nowrap",
-                    transition: "background 0.2s,color 0.2s,border-color 0.2s",
+                    transition: "all 0.2s",
                   }}
                   onMouseEnter={(e) => {
                     const el = e.currentTarget;
@@ -911,7 +673,6 @@ const AFHROICalculator = () => {
                     el.style.color = "#003380";
                     el.style.borderColor = "#003380";
                   }}
-                  onClick={() => (window.location.href = "/contact")}
                 >
                   Contact David ↗
                 </button>
@@ -929,23 +690,12 @@ const AFHROICalculator = () => {
                 fontWeight: 700,
                 paddingTop: "1.25rem",
                 borderTop: "1px solid rgba(30,144,255,0.2)",
-                textShadow: "0 0 12px rgba(30,144,255,0.5)",
               }}
             >
               Courtesy of Real Property Planning
             </div>
           </div>
         </div>
-
-        {/* Bar styles injected */}
-        <style>{`
-          #r-bars .br{display:flex;align-items:center;gap:14px;margin-bottom:12px}
-          #r-bars .bl{font-size:13px;color:#fff;width:150px;flex-shrink:0;font-weight:600}
-          #r-bars .bt{flex:1;height:7px;background:rgba(0,0,0,0.5);border-radius:4px;overflow:hidden;border:2px solid #1e90ff;box-shadow:0 0 8px rgba(30,144,255,0.4)}
-          #r-bars .bf{height:100%;border-radius:4px;background:linear-gradient(90deg,#1e90ff,#4db8ff);box-shadow:0 0 10px rgba(30,144,255,0.6);transition:width .9s ease}
-          #r-bars .bv{font-size:13px;color:#1e90ff;width:70px;text-align:right;flex-shrink:0;font-weight:700}
-          #roi-results.visible{display:block!important}
-        `}</style>
       </main>
       <Footer />
     </>
