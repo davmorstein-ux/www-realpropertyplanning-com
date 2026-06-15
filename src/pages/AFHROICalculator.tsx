@@ -495,7 +495,8 @@ const AFHROICalculator = () => {
 
             {/* Calculate */}
             <button
-              i<button id="calc-roi-btn" data-nav-button="true" style={{...fontSize: 22, fontWeight: 700...}}>
+              id="calc-roi-btn"
+              data-nav-button="true"
               style={{
                 width: "100%",
                 padding: 16,
