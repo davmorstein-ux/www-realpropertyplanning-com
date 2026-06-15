@@ -197,24 +197,12 @@ const AFHROICalculator = () => {
       <Header />
       <main>
         {/* Dot matrix canvas */}
-        <canvas
-          id="dot-matrix-roi"
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            pointerEvents: "none",
-            zIndex: 0,
-            opacity: 0.15,
-          }}
-        />
+        <canvas id="dot-matrix-roi" className="dot-matrix-canvas" />
 
         {/* Hero */}
         <section
           style={{
-            background: "rgba(30,42,56,0.85)",
+            background: "rgba(20,32,48,0.7)",
             padding: "48px 24px 40px",
             color: "#ffffff",
             position: "relative",
@@ -230,12 +218,12 @@ const AFHROICalculator = () => {
               />
             </Link>
             <p
+              className="calc-hero-eyebrow"
               style={{
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: ".15em",
                 textTransform: "uppercase",
-                color: "#c8b98a",
                 marginBottom: 10,
                 fontFamily: "'Raleway', sans-serif",
               }}
@@ -243,11 +231,10 @@ const AFHROICalculator = () => {
               For buyers &amp; investors
             </p>
             <h1
+              className="calc-hero-text"
               style={{
                 fontSize: "clamp(28px, 4vw, 42px)",
-                fontFamily: "'Raleway', sans-serif",
                 fontWeight: 700,
-                color: "#ffffff",
                 marginBottom: 12,
                 lineHeight: 1.2,
               }}
@@ -255,11 +242,9 @@ const AFHROICalculator = () => {
               AFH ROI Calculator
             </h1>
             <p
+              className="calc-hero-subtitle"
               style={{
-                fontSize: 18,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#ffffff",
-                lineHeight: 1.7,
                 maxWidth: 600,
               }}
             >
@@ -272,7 +257,7 @@ const AFHROICalculator = () => {
         <div
           ref={containerRef}
           style={{
-            background: "rgba(0,5,16,0.82)",
+            background: "rgba(0,5,16,0.75)",
             padding: "2.5rem 1.5rem 3rem",
             fontFamily: "'Raleway',sans-serif",
             position: "relative",
