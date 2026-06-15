@@ -3183,3 +3183,8 @@ main .rpp-hero-band-text,
 .calc-page-hero .eyebrow-label {
   color: #c8b98a !important;
 }
+
+#calc-roi-btn, #calc-val-btn { font-size: 22px !important; font-weight: 900 !important; }
+#r-occ, #r-cap { padding: 11px 14px !important; min-height: unset !important; height: auto !important; }
+.calc-page-hero p, .calc-page-hero h1, .calc-page-hero span, .calc-page-hero * { color: #ffffff !important; opacity: 1 !important; }
+.calc-page-hero .eyebrow-label { color: #c8b98a !important; }
