@@ -153,14 +153,14 @@ const AFHValuationEstimator = () => {
     <>
       <Header />
       <main>
-        <section style={{ background: "#1e2a38", padding: "48px 24px 40px" }}>
+        <section style={{ background: "#1e2a38", padding: "48px 24px 40px", color: "#ffffff" }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
-            <Link to="/afh-club/calculators" style={{ display: "inline-block", fontSize: 13, color: "#c8b98a", letterSpacing: ".08em", textTransform: "uppercase", fontWeight: 700, marginBottom: 20, textDecoration: "none", fontFamily: "'Raleway', sans-serif" }}>
-              Back to Calculators
+            <Link to="/afh-club/calculators" style={{ display: "inline-block", fontSize: 13, color: "#c8b98a", letterSpacing: ".08em", textTransform: "uppercase" as const, fontWeight: 700, marginBottom: 20, textDecoration: "none", fontFamily: "'Raleway', sans-serif" }}>
+              ← Back to Calculators
             </Link>
-            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: "#c8b98a", marginBottom: 10, fontFamily: "'Raleway', sans-serif" }}>For sellers</p>
-            <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#fff", marginBottom: 12, lineHeight: 1.2 }}>AFH Valuation Estimator</h1>
-            <p style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "rgba(255,255,255,0.75)", lineHeight: 1.7, maxWidth: 600 }}>Know what your AFH is worth before you list. Estimate business and property value using income capitalization.</p>
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase" as const, color: "#c8b98a", marginBottom: 10, fontFamily: "'Raleway', sans-serif" }}>For sellers</p>
+            <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#ffffff", marginBottom: 12, lineHeight: 1.2 }}>AFH Valuation Estimator</h1>
+            <p className="hero-text-white" style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", lineHeight: 1.7, maxWidth: 600 }}>Know what your AFH is worth before you list. Estimate business and property value using income capitalization.</p>
           </div>
         </section>
         <div dangerouslySetInnerHTML={{ __html: calculatorHTML }} />
