@@ -428,8 +428,10 @@ const AFHValuationEstimator = () => {
               <div style={grid3}>
                 <div>
                   <label style={labelStyle}>Property value est.</label>
-                  <input type="number" id="v-prop" placeholder="650000" style={inputStyle} />
-                  <div style={{ fontSize: 12, color: "#4dffaa", marginTop: 6 }}>Leave blank if business only</div>
+                  <div style={{ position: "relative" }}>
+                    <input type="number" id="v-prop" placeholder="650000" style={inputStyle} />
+                    <div style={{ position: "absolute", top: "100%", left: 0, fontSize: 12, color: "#4dffaa", marginTop: 4 }}>Leave blank if business only</div>
+                  </div>
                 </div>
                 <div>
                   <label style={labelStyle}>DSHS license status</label>
