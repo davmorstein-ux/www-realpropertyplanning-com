@@ -3160,3 +3160,26 @@ main .rpp-hero-band-text,
   font-size: 22px !important;
   font-weight: 900 !important;
 }
+/* FINAL OVERRIDES — must stay at bottom of file */
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+#r-occ,
+#r-cap {
+  padding: 11px 14px !important;
+  min-height: unset !important;
+  height: auto !important;
+  font-size: 15px !important;
+}
+.calc-page-hero p,
+.calc-page-hero h1,
+.calc-page-hero span,
+.calc-page-hero * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.calc-page-hero .eyebrow-label {
+  color: #c8b98a !important;
+}
