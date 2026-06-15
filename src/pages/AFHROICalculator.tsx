@@ -476,9 +476,14 @@ const AFHROICalculator = () => {
                 <div>
                   <label style={labelStyle}>Licensed capacity</label>
                   <select id="r-cap" style={inputStyle}>
+                    <option value="1">1 bed</option>
                     <option value="2">2 beds</option>
+                    <option value="3">3 beds</option>
                     <option value="4">4 beds</option>
+                    <option value="5">5 beds</option>
                     <option value="6">6 beds</option>
+                    <option value="7">7 beds</option>
+                    <option value="8">8 beds</option>
                   </select>
                 </div>
                 <div>
