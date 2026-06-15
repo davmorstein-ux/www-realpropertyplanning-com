@@ -6,7 +6,7 @@ const calculatorHTML = `
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 .scene{background:linear-gradient(160deg,#000510 0%,#000 50%,#000d20 100%);padding:2.5rem 1.5rem 3rem;font-family:'Raleway',sans-serif;perspective:1200px}
-.clipboard{background:linear-gradient(170deg,#071830 0%,#030d1e 60%,#050f22 100%);border:2px solid #1e90ff;border-radius:14px;padding:2rem;position:relative;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(30,144,255,0.4),0 4px 0 #030d1e,0 6px 0 rgba(30,144,255,0.2),0 8px 0 #020a18,0 10px 0 rgba(30,144,255,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(30,144,255,0.3)}
+.clipboard{background:linear-gradient(170deg,#071830 0%,#030d1e 60%,#050f22 100%);border:2px solid #1e90ff;border-radius:14px;padding:2rem;position:relative;z-index:1;transform:rotateX(2deg);transform-origin:top center;box-shadow:0 2px 0 rgba(30,144,255,0.4),0 4px 0 #030d1e,0 6px 0 rgba(30,144,255,0.2),0 8px 0 #020a18,0 10px 0 rgba(30,144,255,0.1),0 20px 40px rgba(0,0,0,0.8),0 40px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(30,144,255,0.3)}
 .clipboard::before{content:'';position:absolute;top:0;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,rgba(30,144,255,0.8),transparent)}
 .clipboard::after{content:'';position:absolute;bottom:-12px;left:10%;right:10%;height:12px;background:radial-gradient(ellipse at center,rgba(30,144,255,0.15) 0%,transparent 70%);filter:blur(4px)}
 .clip{position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:60px;height:22px;background:linear-gradient(135deg,#1a3a6e,#0d2244);border:1px solid rgba(30,144,255,0.5);border-radius:4px 4px 0 0}
