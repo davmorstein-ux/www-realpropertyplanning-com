@@ -256,6 +256,7 @@ const AFHROICalculator = () => {
               />
             </Link>
             <p
+              className="eyebrow-label"
               style={{
                 fontSize: 13,
                 fontWeight: 700,
