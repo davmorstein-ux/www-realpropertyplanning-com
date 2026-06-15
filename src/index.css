@@ -3073,3 +3073,29 @@ main .rpp-hero-band-text,
 .calc-page-hero .eyebrow-label {
   color: #c8b98a !important;
 }
+/* ── Calculator fixes — do not remove ── */
+#r-occ,
+#r-cap,
+#r-rev,
+#r-exp,
+#r-price,
+#r-rate,
+#r-down {
+  padding: 11px 14px !important;
+  font-size: 15px !important;
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: unset !important;
+}
+
+#calc-roi-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
