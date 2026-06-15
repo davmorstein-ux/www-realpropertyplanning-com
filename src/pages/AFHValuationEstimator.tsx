@@ -155,8 +155,12 @@ const AFHValuationEstimator = () => {
       <main>
         <section style={{ background: "#1e2a38", padding: "48px 24px 40px", color: "#ffffff" }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
-            <Link to="/afh-club/calculators" style={{ display: "inline-block", fontSize: 13, color: "#c8b98a", letterSpacing: ".08em", textTransform: "uppercase" as const, fontWeight: 700, marginBottom: 20, textDecoration: "none", fontFamily: "'Raleway', sans-serif" }}>
-              ← Back to Calculators
+            <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
+              <img
+                src="/back-to-calculators-green.webp"
+                alt="Back to Calculators"
+                style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
+              />
             </Link>
             <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase" as const, color: "#c8b98a", marginBottom: 10, fontFamily: "'Raleway', sans-serif" }}>For sellers</p>
             <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#ffffff", marginBottom: 12, lineHeight: 1.2 }}>AFH Valuation Estimator</h1>
