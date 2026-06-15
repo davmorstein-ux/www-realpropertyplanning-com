@@ -46,45 +46,45 @@ const AFHROICalculator = () => {
     }
   }, []);
 
-  // Toggle handler
-  const setDPMode = (mode: string) => {
-    const btnPct = document.getElementById("btn-pct") as HTMLButtonElement;
-    const btnDollar = document.getElementById("btn-dollar") as HTMLButtonElement;
-    const downInput = document.getElementById("r-down") as HTMLInputElement;
-    const hint = document.getElementById("dp-hint")!;
-    const price = parseFloat((document.getElementById("r-price") as HTMLInputElement).value) || 0;
-    const cur = parseFloat(downInput.value) || 0;
-
-    (window as any).dpMode = mode;
-
-    if (mode === "pct") {
-      btnPct.style.background = "#ffffff";
-      btnPct.style.color = "#003380";
-      btnPct.style.fontSize = "18px";
-      btnDollar.style.background = "#003380";
-      btnDollar.style.color = "#ffffff";
-      btnDollar.style.fontSize = "14px";
-      downInput.placeholder = "25";
-      hint.textContent = "Enter percentage of purchase price";
-      if (price > 0 && cur > 0) downInput.value = String(Math.round((cur / price) * 100));
-      else downInput.value = "";
-    } else {
-      btnDollar.style.background = "#ffffff";
-      btnDollar.style.color = "#003380";
-      btnDollar.style.fontSize = "18px";
-      btnPct.style.background = "#003380";
-      btnPct.style.color = "#ffffff";
-      btnPct.style.fontSize = "14px";
-      downInput.placeholder = "212500";
-      hint.textContent = "Enter dollar amount of down payment";
-      if (price > 0 && cur > 0) downInput.value = String(Math.round(price * (cur / 100)));
-      else downInput.value = "";
-    }
-    (window as any).updateDerived();
-  };
 
   useEffect(() => {
     (window as any).dpMode = "pct";
+
+    (window as any).setDPMode = (mode: string) => {
+      const btnPct = document.getElementById("btn-pct") as HTMLButtonElement;
+      const btnDollar = document.getElementById("btn-dollar") as HTMLButtonElement;
+      const downInput = document.getElementById("r-down") as HTMLInputElement;
+      const hint = document.getElementById("dp-hint")!;
+      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement).value) || 0;
+      const cur = parseFloat(downInput.value) || 0;
+
+      (window as any).dpMode = mode;
+
+      if (mode === "pct") {
+        btnPct.style.background = "#ffffff";
+        btnPct.style.color = "#003380";
+        btnPct.style.fontSize = "18px";
+        btnDollar.style.background = "#003380";
+        btnDollar.style.color = "#ffffff";
+        btnDollar.style.fontSize = "14px";
+        downInput.placeholder = "25";
+        hint.textContent = "Enter percentage of purchase price";
+        if (price > 0 && cur > 0) downInput.value = String(Math.round((cur / price) * 100));
+        else downInput.value = "";
+      } else {
+        btnDollar.style.background = "#ffffff";
+        btnDollar.style.color = "#003380";
+        btnDollar.style.fontSize = "18px";
+        btnPct.style.background = "#003380";
+        btnPct.style.color = "#ffffff";
+        btnPct.style.fontSize = "14px";
+        downInput.placeholder = "212500";
+        hint.textContent = "Enter dollar amount of down payment";
+        if (price > 0 && cur > 0) downInput.value = String(Math.round(price * (cur / 100)));
+        else downInput.value = "";
+      }
+      (window as any).updateDerived();
+    };
 
     (window as any).updateDerived = () => {
       const price = parseFloat((document.getElementById("r-price") as HTMLInputElement)?.value) || 0;
@@ -472,7 +472,7 @@ const AFHROICalculator = () => {
                   >
                     <button
                       id="btn-pct"
-                      onClick={() => setDPMode("pct")}
+                      onClick={() => (window as any).setDPMode("pct")}
                       style={{
                         padding: "10px 28px",
                         fontSize: 18,
@@ -489,7 +489,7 @@ const AFHROICalculator = () => {
                     </button>
                     <button
                       id="btn-dollar"
-                      onClick={() => setDPMode("dollar")}
+                      onClick={() => (window as any).setDPMode("dollar")}
                       style={{
                         padding: "10px 28px",
                         fontSize: 14,
