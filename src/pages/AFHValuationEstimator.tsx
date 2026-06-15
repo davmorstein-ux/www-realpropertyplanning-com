@@ -28,7 +28,7 @@ const calculatorHTML = `
 .fieldv input::placeholder{color:rgba(0,230,118,0.2)}
 .fieldv input:focus,.fieldv select:focus{outline:none;border-color:#00e676;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6),0 0 14px rgba(0,230,118,0.3)}
 .fieldv select option{background:#020d04;color:#fff}
-.fieldv .hintv{font-size:12px;color:rgba(0,230,118,0.7);margin-top:6px}
+.fieldv .hintv{font-size:12px;color:#4dffaa;margin-top:6px}
 .resultsv{display:none;margin-top:14px}
 .resultsv.visible{display:block}
 .fmv{background:linear-gradient(135deg,rgba(255,255,255,0.02),rgba(0,0,0,0.3));border:1px solid #00e676;border-radius:12px;padding:1.6rem;text-align:center;margin-bottom:14px;box-shadow:0 0 40px rgba(0,230,118,0.18),inset 0 1px 0 rgba(0,230,118,0.18)}

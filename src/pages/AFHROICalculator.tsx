@@ -34,7 +34,7 @@ const calculatorHTML = `
 .dp-input-row input{flex:1;background:rgba(0,10,28,0.8);border:1px solid rgba(30,144,255,0.4);border-radius:6px;color:#fff;font-size:15px;padding:11px 14px;font-family:'Raleway',sans-serif;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6)}
 .dp-input-row input:focus{outline:none;border-color:#1e90ff;box-shadow:inset 0 3px 8px rgba(0,0,0,0.6),0 0 14px rgba(30,144,255,0.35)}
 .dp-derived{font-size:14px;color:#1e90ff;font-weight:700;white-space:nowrap;min-width:120px;text-align:right}
-.dp-hint{font-size:12px;color:rgba(30,144,255,0.6);margin-top:6px}
+.dp-hint{font-size:12px;color:#7ab8ff;margin-top:6px}
 .results{display:none;margin-top:14px}
 .results.visible{display:block}
 .fm{background:linear-gradient(135deg,rgba(255,255,255,0.03),rgba(0,0,0,0.3));border:1px solid #1e90ff;border-radius:12px;padding:1.6rem;text-align:center;margin-bottom:14px;box-shadow:0 0 40px rgba(30,144,255,0.2),inset 0 1px 0 rgba(30,144,255,0.2)}
