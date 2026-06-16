@@ -15,15 +15,25 @@
 /*.css
   Cache-Control: public, max-age=31536000, immutable
 
-# Images — short cache with revalidation
+# Images in /public — always revalidate so replaced files update immediately.
+# (Hashed images bundled into /assets/* are still immutable via the rule above.)
 /*.png
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.jpg
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.jpeg
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.webp
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.svg
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.ico
+  Cache-Control: public, max-age=0, must-revalidate
 
 # Static files
 /sitemap.xml
