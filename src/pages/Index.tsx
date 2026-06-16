@@ -37,47 +37,6 @@ const Index = () => {
             loading="eager"
             decoding="async"
           />
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              padding: "0 16px",
-            }}
-          >
-            <img
-              src="/rpp-logo-v4.webp"
-              alt="Real Property Planning"
-              style={{
-                width: "min(420px, 70%)",
-                maxWidth: "100%",
-                height: "auto",
-                display: "block",
-                marginBottom: "0.5rem",
-                filter: "drop-shadow(0 2px 14px rgba(255,255,255,0.85))",
-              }}
-            />
-            <p
-              style={{
-                fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-                fontSize: "clamp(16px, 2vw, 22px)",
-                fontWeight: 700,
-                color: "#1a2744",
-                letterSpacing: "0.04em",
-                margin: 0,
-                textShadow: "0 1px 8px rgba(255,255,255,0.9), 0 0 24px rgba(255,255,255,0.7)",
-              }}
-            >
-              Washington's Resource Hub for Probate, Senior Transitions, and Adult Family Homes
-            </p>
-          </div>
         </div>
 
         {/* Orientation */}
