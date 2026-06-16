@@ -31,7 +31,7 @@ const Index = () => {
       <main id="main-content">
         <div style={{ position: "relative", width: "100%", lineHeight: 0 }}>
           <img
-            src="/hero-homepage-v5.webp"
+          src={heroAsset.url}
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
             style={{ width: "100%", display: "block", maxHeight: "480px", objectFit: "cover", objectPosition: "center" }}
             loading="eager"
