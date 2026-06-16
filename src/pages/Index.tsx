@@ -88,17 +88,18 @@ const Index = () => {
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
+                marginBottom: "-0.5rem",
               }}
             />
             <p
               style={{
                 fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-                fontSize: "clamp(16px, 1.8vw, 22px)",
-                fontWeight: 600,
+                fontSize: "clamp(22px, 2.6vw, 30px)",
+                fontWeight: 800,
                 color: "#1a2744",
                 letterSpacing: "0.04em",
                 textAlign: "center",
-                margin: "0.15rem 0 0 0",
+                margin: "0",
                 textShadow: "0 1px 6px rgba(255,255,255,0.9), 0 0 18px rgba(255,255,255,0.7)",
               }}
             >
