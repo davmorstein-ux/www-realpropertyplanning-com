@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import heroAsset from "@/assets/hero-homepage-v5_1.webp.asset.json";
 import tilePlanning from "@/assets/tiles/tile-planning-ahead.webp";
 import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
 import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
@@ -31,7 +30,7 @@ const Index = () => {
       <main id="main-content">
         <div style={{ position: "relative", width: "100%", lineHeight: 0 }}>
           <img
-          src={heroAsset.url}
+            src="/hero-homepage-final.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
             style={{ width: "100%", display: "block", maxHeight: "480px", objectFit: "cover", objectPosition: "center" }}
             loading="eager"
