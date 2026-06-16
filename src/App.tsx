@@ -246,6 +246,8 @@ const App = () => (
           {/* ─── Homepage ─────────────────────────────────────────── */}
           <Route path="/" element={<Index />} />
           <Route path="/home-new" element={<HomepageNew />} />
+          <Route path="/hero-test" element={<HeroTest />} />
+
 
           {/* ─── Core commercial pages ────────────────────────────── */}
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
