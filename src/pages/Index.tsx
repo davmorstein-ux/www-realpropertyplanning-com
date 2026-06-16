@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import heroAsset from "@/assets/hero-homepage-v5_1.webp.asset.json";
 import tilePlanning from "@/assets/tiles/tile-planning-ahead.webp";
 import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
 import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
