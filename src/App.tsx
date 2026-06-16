@@ -11,6 +11,8 @@ import SiteChatWidget from "./components/SiteChatWidget";
 // Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
 import Index from "./pages/Index";
 import HeroTest from "./pages/HeroTest";
+import HomepageFinal from "./pages/HomepageFinal";
+
 
 
 // All other routes are lazy-loaded so the homepage bundle stays small.
@@ -244,9 +246,10 @@ const App = () => (
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<HomepageFinal />} />
           <Route path="/home-new" element={<HomepageNew />} />
           <Route path="/hero-test" element={<HeroTest />} />
+
 
 
           {/* ─── Core commercial pages ────────────────────────────── */}
