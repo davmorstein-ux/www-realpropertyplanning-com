@@ -10,6 +10,8 @@ import SiteChatWidget from "./components/SiteChatWidget";
 
 // Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
 import Index from "./pages/Index";
+import HeroTest from "./pages/HeroTest";
+
 
 // All other routes are lazy-loaded so the homepage bundle stays small.
 const ProbateEstateSales = lazy(() => import("./pages/ProbateEstateSales"));
