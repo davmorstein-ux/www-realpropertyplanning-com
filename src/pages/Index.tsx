@@ -94,8 +94,8 @@ const Index = () => {
             <p
               style={{
                 fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-                fontSize: "clamp(24px, 3vw, 34px)",
-                fontWeight: 900,
+                fontSize: "clamp(16px, 1.8vw, 22px)",
+                fontWeight: 600,
                 color: "#1a2744",
                 letterSpacing: "0.04em",
                 textAlign: "center",
