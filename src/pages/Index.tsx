@@ -6,7 +6,6 @@ import tilePlanning from "@/assets/tiles/tile-planning-ahead.webp";
 import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
 import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
 import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
-
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageReassurance from "@/components/HomepageReassurance";
 import HomepageFAQ from "@/components/HomepageFAQ";
@@ -134,7 +133,7 @@ const Index = () => {
               <h2
                 style={{
                   fontFamily: "Inter, system-ui, sans-serif",
-                  fontSize: "2.25rem",
+                  fontSize: "3rem",
                   fontWeight: 600,
                   color: "#b8963e",
                   margin: 0,
@@ -283,7 +282,6 @@ const Index = () => {
           </div>
         </section>
 
-        
         <HomepagePopularResources />
         <HomepageReassurance />
         <HomepageFAQ />
