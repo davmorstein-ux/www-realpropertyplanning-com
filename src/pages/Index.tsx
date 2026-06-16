@@ -63,12 +63,12 @@ const Index = () => {
             <p
               style={{
                 fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-                fontSize: "clamp(20px, 2.4vw, 28px)",
+                fontSize: "clamp(24px, 3vw, 36px)",
                 fontWeight: 700,
                 color: "#1a2744",
                 letterSpacing: "0.05em",
                 textAlign: "center",
-                margin: "0.1rem 0 0 0",
+                margin: "-0.15rem 0 0 0",
                 textShadow: "0 1px 6px rgba(255,255,255,0.9), 0 0 18px rgba(255,255,255,0.7)",
               }}
             >
