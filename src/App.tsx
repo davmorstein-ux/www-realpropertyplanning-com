@@ -217,6 +217,7 @@ const AFHRealEstateBroker = lazy(() => import("./pages/AFHRealEstateBroker"));
 const AFHMarketplace = lazy(() => import("./pages/AFHMarketplace"));
 const AFHSubmit = lazy(() => import("./pages/AFHSubmit"));
 const LongTermCareOptions = lazy(() => import("./pages/LongTermCareOptions"));
+const HomepageNew = lazy(() => import("./pages/HomepageNew"));
 const LTCNursingHomes = lazy(() => import("./pages/long-term-care/NursingHomes"));
 const LTCShortTermNursingHomeStays = lazy(() => import("./pages/long-term-care/ShortTermNursingHomeStays"));
 const LTCNurseDelegation = lazy(() => import("./pages/long-term-care/NurseDelegation"));
@@ -242,6 +243,7 @@ const App = () => (
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
           <Route path="/" element={<Index />} />
+          <Route path="/home-new" element={<HomepageNew />} />
 
           {/* ─── Core commercial pages ────────────────────────────── */}
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />

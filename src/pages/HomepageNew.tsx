@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import heroAsset from "@/assets/hero-homepage-new.webp.asset.json";
 import tilePlanning from "@/assets/tiles/tile-planning-ahead.webp";
 import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
 import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
@@ -24,11 +25,13 @@ const HomepageNew = () => (
     <Header />
     <main id="main-content">
       {/* Hero Image */}
-      <section style={{ backgroundColor: "#1a2744", minHeight: "320px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <section style={{ position: "relative", width: "100%", overflow: "hidden" }}>
         <img
-          src="/logo.webp"
-          alt="Real Property Planning"
-          style={{ maxHeight: "120px", width: "auto" }}
+          src={heroAsset.url}
+          alt="Real Property Planning — Washington estate and senior transition resources"
+          style={{ display: "block", width: "100%", height: "auto", objectFit: "cover" }}
+          loading="eager"
+          decoding="async"
         />
       </section>
 
