@@ -6,7 +6,7 @@ import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import HomepageHowWeHelpRow from "@/components/HomepageHowWeHelpRow";
+
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageReassurance from "@/components/HomepageReassurance";
 import HomepageFAQ from "@/components/HomepageFAQ";
@@ -298,7 +298,7 @@ const Index = () => {
           </div>
         </section>
 
-        <HomepageHowWeHelpRow />
+        
         <HomepagePopularResources />
         <HomepageReassurance />
         <HomepageFAQ />
