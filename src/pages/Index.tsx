@@ -6,7 +6,7 @@ import tilePlanning from "@/assets/tiles/tile-planning-ahead.webp";
 import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
 import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
 import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
-import HomepageHowWeHelpRow from "@/components/HomepageHowWeHelpRow";
+
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageReassurance from "@/components/HomepageReassurance";
 import HomepageFAQ from "@/components/HomepageFAQ";
@@ -283,7 +283,7 @@ const Index = () => {
           </div>
         </section>
 
-        <HomepageHowWeHelpRow />
+        
         <HomepagePopularResources />
         <HomepageReassurance />
         <HomepageFAQ />
