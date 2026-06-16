@@ -8,8 +8,6 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import SiteChatWidget from "./components/SiteChatWidget";
 
-// Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
-import Index from "./pages/Index";
 import HeroTest from "./pages/HeroTest";
 import HomepageFinal from "./pages/HomepageFinal";
 
