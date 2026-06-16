@@ -243,6 +243,7 @@ const App = () => (
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
           <Route path="/" element={<Index />} />
+          <Route path="/home-new" element={<HomepageNew />} />
 
           {/* ─── Core commercial pages ────────────────────────────── */}
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
