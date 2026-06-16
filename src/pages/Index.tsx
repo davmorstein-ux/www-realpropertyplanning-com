@@ -52,7 +52,7 @@ const Index = () => {
               src="/rpp-logo-correct-proportions.webp"
               alt="Real Property Planning"
               style={{
-                width: "min(260px, 35%)",
+                width: "min(380px, 48%)",
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
