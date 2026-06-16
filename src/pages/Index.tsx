@@ -30,12 +30,35 @@ const Index = () => {
       <main id="main-content">
         <div style={{ position: "relative", width: "100%", lineHeight: 0 }}>
           <img
-            src="/hero-homepage-final.webp"
+            src="/hero-homepage-final-v2.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
-            style={{ width: "100%", display: "block", maxHeight: "480px", objectFit: "cover", objectPosition: "center" }}
+            style={{ width: "100%", display: "block", maxHeight: "520px", objectFit: "cover", objectPosition: "center" }}
             loading="eager"
             decoding="async"
           />
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "100%",
+              maxWidth: "90%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              src="/rpp-logo-final.png"
+              alt="Real Property Planning"
+              style={{
+                width: "min(480px, 60%)",
+                maxWidth: "100%",
+                height: "auto",
+                display: "block",
+              }}
+            />
+          </div>
         </div>
 
         {/* Orientation */}
