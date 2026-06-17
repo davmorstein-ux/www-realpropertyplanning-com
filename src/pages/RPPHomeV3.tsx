@@ -42,7 +42,7 @@ const tiles = [
   },
 ];
 
-const RPPHomeV2 = () => {
+const RPPHomeV3 = () => {
   return (
     <>
       <SEOHead
@@ -297,4 +297,4 @@ const RPPHomeV2 = () => {
   );
 };
 
-export default RPPHomeV2;
+export default RPPHomeV3;
