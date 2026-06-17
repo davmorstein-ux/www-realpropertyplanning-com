@@ -88,7 +88,7 @@ const RPPHome = () => {
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
-                marginBottom: "0.75rem",
+                marginBottom: "1rem",
               }}
             />
             <p
