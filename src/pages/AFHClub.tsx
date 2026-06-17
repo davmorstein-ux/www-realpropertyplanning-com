@@ -78,15 +78,14 @@ const AFHClub = () => (
               alt="AFH Club — Washington State Adult Family Home Resource Network"
               style={{
                 width: "100%",
-                maxWidth: 160,
+                maxWidth: 320,
                 height: "auto",
                 display: "block",
                 margin: "0 auto",
-                mixBlendMode: "multiply",
               }}
               loading="eager"
-              width={160}
-              height={160}
+              width={320}
+              height={320}
             />
           </div>
 
