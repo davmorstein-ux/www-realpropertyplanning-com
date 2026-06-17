@@ -74,7 +74,7 @@ const AFHClub = () => (
           {/* Badge — tight */}
           <div style={{ marginBottom: 8 }}>
             <img
-              src="/afh-club-badge.webp"
+              src="/afh-club-badge.png"
               alt="AFH Club — Washington State Adult Family Home Resource Network"
               style={{
                 width: "100%",
