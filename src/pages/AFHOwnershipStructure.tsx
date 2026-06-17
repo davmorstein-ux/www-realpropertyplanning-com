@@ -52,10 +52,7 @@ const AFHOwnershipStructure = () => (
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
         { name: "AFH Club", url: "https://realpropertyplanning.com/afh-club" },
-        {
-          name: "AFH Ownership: Individual or LLC?",
-          url: "https://realpropertyplanning.com/afh-club/ownership-structure",
-        },
+        { name: "AFH Ownership: Individual or LLC?", url: "https://realpropertyplanning.com/afh-club/ownership-structure" },
       ]}
     />
     <Header />
@@ -100,9 +97,9 @@ const AFHOwnershipStructure = () => (
               maxWidth: 680,
             }}
           >
-            Buying an Adult Family Home is different from buying a typical house. In many cases, you are buying both a
-            home and a business location — which makes ownership structure one of the most important early decisions a
-            buyer can make.
+            Buying an Adult Family Home is different from buying a typical house. In many cases, you are buying both
+            a home and a business location — which makes ownership structure one of the most important early
+            decisions a buyer can make.
           </p>
         </div>
       </section>
@@ -147,8 +144,8 @@ const AFHOwnershipStructure = () => (
           >
             One of the first questions buyers ask is whether they should purchase the property in their own name or
             through a limited liability company, or LLC. There is no single right answer. The best choice depends on
-            your financing, your risk tolerance, your tax and estate planning goals, and whether you are buying one AFH
-            or planning to build a larger business.
+            your financing, your risk tolerance, your tax and estate planning goals, and whether you are buying one
+            AFH or planning to build a larger business.
           </p>
           <p
             style={{
@@ -160,9 +157,9 @@ const AFHOwnershipStructure = () => (
             }}
           >
             When you buy an Adult Family Home, you are not just deciding how to hold title. You are also deciding how
-            the property will be financed, how liability will be handled, and how easy it may be to transfer ownership
-            later. For some buyers, simplicity is the priority. For others, liability protection matters more. In many
-            cases, the right answer is a balance between convenience and protection.
+            the property will be financed, how liability will be handled, and how easy it may be to transfer
+            ownership later. For some buyers, simplicity is the priority. For others, liability protection matters
+            more. In many cases, the right answer is a balance between convenience and protection.
           </p>
           <div
             style={{
@@ -296,10 +293,11 @@ const AFHOwnershipStructure = () => (
               margin: "0 0 20px",
             }}
           >
-            Financing is often one of the biggest differences between the two options. Lenders are usually more familiar
-            with individual borrowers than with newly formed entities. If you buy in your own name, you may have a
-            smoother path to conventional financing. If you buy through an LLC, the lender may treat the transaction
-            more like a business loan, which can mean more paperwork and potentially less favorable terms.
+            Financing is often one of the biggest differences between the two options. Lenders are usually more
+            familiar with individual borrowers than with newly formed entities. If you buy in your own name, you may
+            have a smoother path to conventional financing. If you buy through an LLC, the lender may treat the
+            transaction more like a business loan, which can mean more paperwork and potentially less favorable
+            terms.
           </p>
         </div>
       </section>
@@ -342,10 +340,10 @@ const AFHOwnershipStructure = () => (
               margin: "0 0 20px",
             }}
           >
-            In Washington State, Adult Family Homes are regulated and licensed. Ownership changes can affect licensing,
-            and in some cases may require a new application or other compliance steps. That means the ownership
-            structure is not just a real estate issue — it can also affect how the AFH is licensed and whether the
-            business can continue operating smoothly after the purchase.
+            In Washington State, Adult Family Homes are regulated and licensed. Ownership changes can affect
+            licensing, and in some cases may require a new application or other compliance steps. That means the
+            ownership structure is not just a real estate issue — it can also affect how the AFH is licensed and
+            whether the business can continue operating smoothly after the purchase.
           </p>
         </div>
       </section>
@@ -388,9 +386,9 @@ const AFHOwnershipStructure = () => (
               margin: "0 0 28px",
             }}
           >
-            A simple way to think about it is to ask four questions. If ease and speed matter most, individual ownership
-            may be the better fit. If protection and long-term structure matter more, an LLC may be worth the added
-            complexity.
+            A simple way to think about it is to ask four questions. If ease and speed matter most, individual
+            ownership may be the better fit. If protection and long-term structure matter more, an LLC may be worth
+            the added complexity.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {DECIDE_QUESTIONS.map((item, i) => (
