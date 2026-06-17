@@ -10,6 +10,7 @@ import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageReassurance from "@/components/HomepageReassurance";
 import HomepageFAQ from "@/components/HomepageFAQ";
+import HomepageCostOfCareTeaser from "@/components/HomepageCostOfCareTeaser";
 
 const tiles = [
   {
@@ -203,84 +204,89 @@ const Index = () => {
                 </Link>
               ))}
             </div>
-            <a
-              href="/afh-club"
-              style={{
-                backgroundColor: "#f8fafa",
-                border: "2px solid #1a2744",
-                borderRadius: 10,
-                padding: "0.6rem 1.25rem 0.6rem 0.75rem",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: "1rem",
-                textDecoration: "none",
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-                <img
-                  src="/afh-club-badge.png"
-                  alt="AFH Club"
-                  style={{ height: 80, width: "auto", mixBlendMode: "multiply" }}
-                />
-                <div>
-                  <p
-                    style={{
-                      fontFamily: "Inter, system-ui, sans-serif",
-                      fontSize: 24,
-                      fontWeight: 800,
-                      color: "#1a5c58",
-                      margin: "0 0 0.2rem 0",
-                    }}
-                  >
-                    AFH Club
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: "Inter, system-ui, sans-serif",
-                      fontSize: 16,
-                      fontWeight: 500,
-                      color: "#2c3e50",
-                      margin: 0,
-                    }}
-                  >
-                    The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
-                  </p>
-                </div>
-              </div>
-              <span
-                style={{
-                  fontFamily: "Inter, system-ui, sans-serif",
-                  fontSize: 15,
-                  fontWeight: 700,
-                  color: "#ffffff",
-                  backgroundColor: "#1a5c58",
-                  padding: "0.7rem 1.5rem",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8,
-                  whiteSpace: "nowrap",
-                  flexShrink: 0,
-                }}
-              >
-                Explore AFH Club
-                <svg
-                  viewBox="0 0 24 24"
-                  width="15"
-                  height="15"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
+              <div>
+                <a
+                  href="/afh-club"
+                  style={{
+                    backgroundColor: "#f8fafa",
+                    border: "2px solid #1a2744",
+                    borderRadius: 10,
+                    padding: "0.6rem 1.25rem 0.6rem 0.75rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: "1rem",
+                    textDecoration: "none",
+                  }}
                 >
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </span>
-            </a>
+                  <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+                    <img
+                      src="/afh-club-badge.png"
+                      alt="AFH Club"
+                      style={{ height: 80, width: "auto", mixBlendMode: "multiply" }}
+                    />
+                    <div>
+                      <p
+                        style={{
+                          fontFamily: "Inter, system-ui, sans-serif",
+                          fontSize: 24,
+                          fontWeight: 800,
+                          color: "#1a5c58",
+                          margin: "0 0 0.2rem 0",
+                        }}
+                      >
+                        AFH Club
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: "Inter, system-ui, sans-serif",
+                          fontSize: 16,
+                          fontWeight: 500,
+                          color: "#2c3e50",
+                          margin: 0,
+                        }}
+                      >
+                        The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
+                      </p>
+                    </div>
+                  </div>
+                  <span
+                    style={{
+                      fontFamily: "Inter, system-ui, sans-serif",
+                      fontSize: 15,
+                      fontWeight: 700,
+                      color: "#ffffff",
+                      backgroundColor: "#1a5c58",
+                      padding: "0.7rem 1.5rem",
+                      borderRadius: 6,
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      whiteSpace: "nowrap",
+                      flexShrink: 0,
+                    }}
+                  >
+                    Explore AFH Club
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="15"
+                      height="15"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <HomepageCostOfCareTeaser />
+            </div>
           </div>
         </section>
 
