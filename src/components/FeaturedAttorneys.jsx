@@ -22,7 +22,7 @@ const FeaturedAttorneys = () => (
             Featured Attorneys
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 items-stretch">
           {TILES.map((s) => (
             <Link
               key={s.title}
@@ -43,51 +43,23 @@ const FeaturedAttorneys = () => (
                     </div>
                     <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
                       <span
-                        className="block mb-2 text-[11px] font-bold tracking-[0.18em] uppercase transition-opacity duration-200 group-hover:opacity-0"
+                        className="block mb-2 text-[11px] font-bold tracking-[0.18em] uppercase"
                         style={{ color: "#b89a5a", fontFamily: "'DM Sans', sans-serif" }}
                       >
                         {s.pill}
                       </span>
-                      <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                      <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center">
                         {s.title}
                       </h3>
-                      <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
+                      <p className="text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', sans-serif", color: "#6B7280" }}>
+                        {s.tagline}
+                      </p>
+                      <span className="gold-cta mt-auto">
                         Learn More
                         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                           <polyline points="9 18 15 12 9 6" />
                         </svg>
                       </span>
-                      <div
-                        aria-hidden="true"
-                        className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100"
-                        style={{
-                          background: "rgba(10, 20, 46, 0.97)",
-                          zIndex: 10,
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          textAlign: "center",
-                          padding: "1.25rem 1.5rem",
-                          transition: "opacity 0.28s ease 0.1s",
-                        }}
-                      >
-                        <h3 className="font-serif text-white text-[20px] md:text-[22px] font-bold leading-snug mb-3">
-                          {s.title}
-                        </h3>
-                        <p className="text-white/90 text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                          {s.tagline}
-                        </p>
-                        <span
-                          className="inline-flex items-center gap-2 text-[15px] font-bold tracking-wide"
-                          style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
-                        >
-                          Learn More
-                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                            <polyline points="9 18 15 12 9 6" />
-                          </svg>
-                        </span>
-                      </div>
                     </div>
                   </div>
                 </div>
