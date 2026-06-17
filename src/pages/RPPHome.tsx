@@ -100,7 +100,7 @@ const RPPHome = () => {
                 color: "#1a2744",
                 textAlign: "center",
                 margin: "0",
-                marginTop: "1.25rem",
+                marginTop: "6rem",
                 textShadow: "0 1px 6px rgba(255,255,255,0.9), 0 0 18px rgba(255,255,255,0.7)",
               }}
             >
