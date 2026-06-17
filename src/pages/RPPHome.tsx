@@ -81,10 +81,10 @@ const RPPHome = () => {
             }}
           >
             <img
-              src="/rpp-logo-correct-proportions.webp"
+              src="/__l5e/assets-v1/6d8640b8-ac3f-42f3-a6cf-bb5356692646/rpp-logo-hires-final.png"
               alt="Real Property Planning"
               style={{
-                width: "min(520px, 62%)",
+                width: "min(640px, 72%)",
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
