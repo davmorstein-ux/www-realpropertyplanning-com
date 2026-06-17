@@ -203,90 +203,91 @@ const Index = () => {
                   </div>
                 </Link>
               ))}
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
-              <div>
-                <a
-                  href="/afh-club"
-                  style={{
-                    backgroundColor: "#f8fafa",
-                    border: "2px solid #1a2744",
-                    borderRadius: 10,
-                    padding: "0.6rem 1.25rem 0.6rem 0.75rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: "1rem",
-                    textDecoration: "none",
-                  }}
-                >
-                  <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-                    <img
-                      src="/afh-club-badge.png"
-                      alt="AFH Club"
-                      style={{ height: 80, width: "auto", mixBlendMode: "multiply" }}
-                    />
-                    <div>
-                      <p
-                        style={{
-                          fontFamily: "Inter, system-ui, sans-serif",
-                          fontSize: 24,
-                          fontWeight: 800,
-                          color: "#1a5c58",
-                          margin: "0 0 0.2rem 0",
-                        }}
-                      >
-                        AFH Club
-                      </p>
-                      <p
-                        style={{
-                          fontFamily: "Inter, system-ui, sans-serif",
-                          fontSize: 16,
-                          fontWeight: 500,
-                          color: "#2c3e50",
-                          margin: 0,
-                        }}
-                      >
-                        The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
-                      </p>
-                    </div>
-                  </div>
-                  <span
-                    style={{
-                      fontFamily: "Inter, system-ui, sans-serif",
-                      fontSize: 15,
-                      fontWeight: 700,
-                      color: "#ffffff",
-                      backgroundColor: "#1a5c58",
-                      padding: "0.7rem 1.5rem",
-                      borderRadius: 6,
-                      textDecoration: "none",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 8,
-                      whiteSpace: "nowrap",
-                      flexShrink: 0,
-                    }}
-                  >
-                    Explore AFH Club
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="15"
-                      height="15"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </span>
-                </a>
-              </div>
-              <CostOfCareTeaser />
-            </div>
+            </div{/* Replace the entire two-column grid div (containing CostOfCareTeaser and the AFH Club tile) with this block */}
+
+<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
+  <CostOfCareTeaser />
+  <a
+    href="/afh-club"
+    style={{
+      backgroundColor: "#f8fafa",
+      border: "2px solid #1a2744",
+      borderRadius: 10,
+      padding: "1rem 1.25rem",
+      display: "flex",
+      flexDirection: "column",
+      textDecoration: "none",
+      height: "100%",
+    }}
+  >
+    <div style={{ display: "flex", alignItems: "flex-start", gap: "1.25rem", marginBottom: "1rem" }}>
+      <img
+        src="/afh-club-badge.png"
+        alt="AFH Club"
+        style={{ height: 240, width: "auto", mixBlendMode: "multiply", flexShrink: 0 }}
+      />
+      <div style={{ paddingTop: "0.5rem" }}>
+        <p
+          style={{
+            fontFamily: "Inter, system-ui, sans-serif",
+            fontSize: 32,
+            fontWeight: 800,
+            color: "#1a5c58",
+            margin: "0 0 0.4rem 0",
+          }}
+        >
+          AFH Club
+        </p>
+        <p
+          style={{
+            fontFamily: "Inter, system-ui, sans-serif",
+            fontSize: 16,
+            fontWeight: 500,
+            color: "#2c3e50",
+            margin: 0,
+          }}
+        >
+          The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
+        </p>
+      </div>
+    </div>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <span
+        style={{
+          fontFamily: "Inter, system-ui, sans-serif",
+          fontSize: 15,
+          fontWeight: 700,
+          color: "#ffffff",
+          backgroundColor: "#1a5c58",
+          padding: "0.7rem 1.5rem",
+          borderRadius: 6,
+          textDecoration: "none",
+          display: "inline-flex",
+          alignItems: "center",
+          gap: 8,
+          whiteSpace: "nowrap",
+        }}
+      >
+        Explore AFH Club
+        <svg
+          viewBox="0 0 24 24"
+          width="15"
+          height="15"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </span>
+    </div>
+  </a>
+</div>
+>
+           
           </div>
         </section>
 
