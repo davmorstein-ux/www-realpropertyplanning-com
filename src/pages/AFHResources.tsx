@@ -104,6 +104,54 @@ const AFHResources = () => (
       <AFHCarousel
         categories={[
           {
+            title: "Getting Started",
+            href: "/afh-club/getting-started",
+            img: "/afh-getting-started.webp",
+            placeholder: "#2c3a48",
+          },
+          {
+            title: "Licensing & Certification",
+            href: "/afh-club/licensing-certification",
+            img: "/afh-licensing-certification.webp",
+            placeholder: "#2c3e4e",
+          },
+          {
+            title: "Training & Education",
+            href: "/afh-club/training-education",
+            img: "/afh-training-education.webp",
+            placeholder: "#354555",
+          },
+          {
+            title: "Building & Inspection",
+            href: "/afh-club/building-inspection",
+            img: "/afh-building-inspection.webp",
+            placeholder: "#2e3d4d",
+          },
+          {
+            title: "Costs & Fees",
+            href: "/afh-club/costs-fees",
+            img: "/afh-costs-fees.webp",
+            placeholder: "#384858",
+          },
+          {
+            title: "Buying or Selling an AFH",
+            href: "/afh-club/buying-selling",
+            img: "/afh-buying-selling.webp",
+            placeholder: "#2a3a4a",
+          },
+          {
+            title: "Regulations & Compliance",
+            href: "/afh-club/regulations-compliance",
+            img: "/afh-regulations-compliance.webp",
+            placeholder: "#334353",
+          },
+          {
+            title: "Find a Professional",
+            href: "/afh-club/find-a-professional",
+            img: "/afh-find-professional.webp",
+            placeholder: "#3c4c5c",
+          },
+          {
             title: "AFH Ownership: Individual or LLC?",
             href: "/afh-club/ownership-structure",
             img: "/afh-ownership-img.webp",
