@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-
+import RPPHome from "./pages/RPPHome";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
@@ -10,8 +10,6 @@ import SiteChatWidget from "./components/SiteChatWidget";
 
 import HeroTest from "./pages/HeroTest";
 import HomepageFinal from "./pages/HomepageFinal";
-
-
 
 // All other routes are lazy-loaded so the homepage bundle stays small.
 const ProbateEstateSales = lazy(() => import("./pages/ProbateEstateSales"));
@@ -244,11 +242,9 @@ const App = () => (
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
-          <Route path="/" element={<HomepageFinal />} />
+          <Route path="/" element={<RPPHome />} />
           <Route path="/home-new" element={<HomepageNew />} />
           <Route path="/hero-test" element={<HeroTest />} />
-
-
 
           {/* ─── Core commercial pages ────────────────────────────── */}
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
@@ -720,7 +716,7 @@ const App = () => (
           <Route path="/long-term-care/wa-cares" element={<LTCWaCares />} />
           <Route path="/long-term-care/how-to-choose-care-settings" element={<LTCHowToChooseCareSettings />} />
           <Route path="/long-term-care/hospital-discharge-planning" element={<LTCHospitalDischargePlanning />} />
-          <Route path="/long-term-care/finding-care-roomandcare" element={<LTCFindingCareRoomAndCare /> } />
+          <Route path="/long-term-care/finding-care-roomandcare" element={<LTCFindingCareRoomAndCare />} />
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
