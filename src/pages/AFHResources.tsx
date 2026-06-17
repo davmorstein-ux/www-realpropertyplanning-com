@@ -14,57 +14,59 @@ const TOPICS = [
     title: "Getting Started",
     href: "/afh-club/getting-started",
     img: "/afh-getting-started.webp",
-    description: "Is an Adult Family Home the right business for you? What to know before you begin.",
+    description:
+      "What it takes to open an Adult Family Home in Washington State — licensing basics, qualifications, and first steps.",
   },
   {
     title: "Licensing & Certification",
     href: "/afh-club/licensing-certification",
     img: "/afh-licensing-certification.webp",
-    description: "DSHS license application, Home Care Aide certification, background checks, and more.",
+    description: "DSHS licensing requirements, application steps, and what certifications are required to operate.",
   },
   {
     title: "Training & Education",
     href: "/afh-club/training-education",
     img: "/afh-training-education.webp",
-    description: "75-hour orientation, AFH Administrator training, specialty courses, and where to enroll.",
+    description: "Required training hours, continuing education, and how to meet Washington State caregiver standards.",
   },
   {
     title: "Building & Inspection",
     href: "/afh-club/building-inspection",
     img: "/afh-building-inspection.webp",
-    description: "Building code requirements, WABO, permits, floor plans, and septic system considerations.",
+    description: "WABO building requirements, fire safety standards, and what inspectors look for before licensing.",
   },
   {
     title: "Costs & Fees",
     href: "/afh-club/costs-fees",
     img: "/afh-costs-fees.webp",
-    description: "Licensing fees, application costs, liability insurance requirements, and Medicaid rates.",
+    description: "Startup costs, licensing fees, and ongoing operating expenses for running an AFH.",
   },
   {
     title: "Buying or Selling an AFH",
     href: "/afh-club/buying-selling",
     img: "/afh-buying-selling.webp",
-    description: "The CHOW process, AFH listings, specialty contract transferability, and real estate guidance.",
+    description:
+      "The CHOW process, what transfers to a new owner, and real estate considerations for AFH transactions.",
   },
   {
     title: "Regulations & Compliance",
     href: "/afh-club/regulations-compliance",
     img: "/afh-regulations-compliance.webp",
-    description: "WAC 388-76, RCW 70.128, DSHS unannounced inspections, violations, and record-keeping.",
+    description: "Ongoing compliance obligations, inspections, and how to stay in good standing with DSHS.",
   },
   {
     title: "Find a Professional",
     href: "/afh-club/find-a-professional",
     img: "/afh-find-professional.webp",
-    description: "AFH management companies, inspectors, CPAs, elder law attorneys, and real estate brokers.",
+    description: "Connect with attorneys, CPAs, lenders, and brokers experienced in Adult Family Home transactions.",
   },
 ];
 
 const AFHResources = () => (
   <>
     <SEOHead
-      title="AFH Resources | AFH Club | Real Property Planning"
-      description="Comprehensive Adult Family Home resources for Washington State — licensing, training, building requirements, costs, regulations, and professional directories."
+      title="AFH Resource Library | AFH Club | Real Property Planning"
+      description="Everything you need to know about opening, operating, buying, or selling an Adult Family Home in Washington State — organized by topic."
       canonical="https://realpropertyplanning.com/afh-club/resources"
     />
     <BreadcrumbSchema
@@ -81,11 +83,12 @@ const AFHResources = () => (
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
-              fontSize: "clamp(18px, 2vw, 20px)",
+              fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2a38",
+              color: "#1e2e3e",
               lineHeight: 1.85,
+              margin: 0,
               maxWidth: 680,
             }}
           >
@@ -94,23 +97,17 @@ const AFHResources = () => (
           </p>
         </div>
       </section>
+
       <HeroBandTitle>AFH Resource Library</HeroBandTitle>
 
-      {/* DEBUG: plain image test */}
-      <img
-        src="/__l5e/assets-v1/7a895a21-63fc-4733-bc7a-2faa63337afa/afh-ownership-structure.webp"
-        alt="debug"
-        width={200}
-        style={{ display: "block", margin: "20px auto", border: "2px solid green" }}
-      />
-
+      {/* Featured Articles Carousel */}
       <AFHCarousel
         categories={[
           {
             title: "AFH Ownership: Individual or LLC?",
             href: "/afh-club/ownership-structure",
-            img: "/__l5e/assets-v1/7a895a21-63fc-4733-bc7a-2faa63337afa/afh-ownership-structure.webp",
-            placeholder: "#ff0000",
+            img: "/afh-ownership-structure.webp",
+            placeholder: "#3a2a3a",
           },
         ]}
       />
@@ -119,11 +116,12 @@ const AFHResources = () => (
       <section style={{ maxWidth: 900, margin: "0 auto", padding: "56px 24px 80px" }}>
         <h2
           style={{
-            fontSize: "clamp(24px, 3vw, 34px)",
+            fontSize: "clamp(24px, 3.5vw, 36px)",
             fontFamily: "Georgia, serif",
             fontWeight: 700,
             color: "#0a1628",
-            marginBottom: 8,
+            lineHeight: 1.2,
+            margin: "0 0 16px",
           }}
         >
           All Topics
@@ -136,16 +134,13 @@ const AFHResources = () => (
               to={topic.href}
               style={{
                 display: "flex",
-                alignItems: "center",
                 gap: 24,
-                padding: "22px 0",
-                borderBottom: "1px solid #e0d8c8",
-                borderTop: i === 0 ? "1px solid #e0d8c8" : "none",
+                padding: "24px 0",
+                borderBottom: "1px solid #d0ccc4",
+                borderTop: i === 0 ? "1px solid #d0ccc4" : "none",
                 textDecoration: "none",
-                transition: "background 0.2s ease",
+                alignItems: "center",
               }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(184,115,51,0.04)")}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "transparent")}
             >
               <div
                 style={{
@@ -155,7 +150,6 @@ const AFHResources = () => (
                   borderRadius: 4,
                   overflow: "hidden",
                   background: "#2c3a48",
-                  boxShadow: "0 2px 12px rgba(10,22,40,0.12)",
                 }}
               >
                 <img
@@ -163,33 +157,29 @@ const AFHResources = () => (
                   alt={topic.title}
                   width={90}
                   height={120}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = "none";
-                  }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                   loading="lazy"
                 />
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <h3
                   style={{
-                    fontSize: "clamp(18px, 2vw, 22px)",
+                    fontSize: 20,
+                    fontFamily: "Georgia, serif",
                     fontWeight: 700,
                     color: "#0a1628",
                     margin: "0 0 8px",
-                    lineHeight: 1.3,
-                    fontFamily: "Georgia, serif",
                   }}
                 >
                   {topic.title}
                 </h3>
                 <p
                   style={{
-                    fontSize: "clamp(16px, 1.6vw, 18px)",
-                    color: "#1e2a38",
-                    margin: "0 0 12px",
-                    lineHeight: 1.65,
+                    fontSize: 16,
                     fontFamily: "'Raleway', sans-serif",
+                    color: "#5a5a5a",
+                    lineHeight: 1.6,
+                    margin: "0 0 10px",
                   }}
                 >
                   {topic.description}
@@ -199,18 +189,18 @@ const AFHResources = () => (
                     fontSize: 14,
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
-                    letterSpacing: "0.18em",
+                    letterSpacing: "0.1em",
                     textTransform: "uppercase",
-                    color: "#5a3200",
+                    color: "#b87333",
                     display: "inline-flex",
                     alignItems: "center",
-                    gap: 5,
+                    gap: 6,
                   }}
                 >
-                  Explore Topic{" "}
+                  Explore Topic
                   <svg
-                    width="11"
-                    height="11"
+                    width="12"
+                    height="12"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
