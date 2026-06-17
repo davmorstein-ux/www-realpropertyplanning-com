@@ -9,6 +9,7 @@ import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
 import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageReassurance from "@/components/HomepageReassurance";
+import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageCostOfCareTeaser from "@/components/HomepageCostOfCareTeaser";
 
 const tiles = [
