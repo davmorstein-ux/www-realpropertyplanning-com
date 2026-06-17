@@ -165,7 +165,6 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 width={CARD_W}
                 height={CARD_H + 80}
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
-                loading="lazy"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = "none";
                 }}
