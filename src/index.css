@@ -435,6 +435,13 @@ main,
       line-height: 1.7 !important;
     }
 
+    /* Hero tagline override — preserve large hero text */
+    .hero-tagline-override {
+      font-size: clamp(28px, 3.6vw, 42px) !important;
+      font-weight: 800 !important;
+      line-height: 1.3 !important;
+    }
+
     p {
       margin-bottom: 0.5em;
     }
