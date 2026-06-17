@@ -96,6 +96,14 @@ const AFHResources = () => (
       </section>
       <HeroBandTitle>AFH Resource Library</HeroBandTitle>
 
+      {/* DEBUG: plain image test */}
+      <img
+        src="/__l5e/assets-v1/7a895a21-63fc-4733-bc7a-2faa63337afa/afh-ownership-structure.webp"
+        alt="debug"
+        width={200}
+        style={{ display: "block", margin: "20px auto", border: "2px solid green" }}
+      />
+
       <AFHCarousel
         categories={[
           {
