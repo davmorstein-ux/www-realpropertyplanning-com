@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import RPPHomeV2 from "./pages/RPPHomeV2";
 import SiteChatWidget from "./components/SiteChatWidget";
-
+import RPPHomeV3 from "./pages/RPPHomeV3";
 import HeroTest from "./pages/HeroTest";
 import HomepageFinal from "./pages/HomepageFinal";
 
@@ -244,7 +244,7 @@ const App = () => (
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
-          <Route path="/" element={<RPPHomeV2 />} />
+          <Route path="/" element={<RPPHomeV3 />} />
           <Route path="/home-new" element={<HomepageNew />} />
           <Route path="/hero-test" element={<HeroTest />} />
 
