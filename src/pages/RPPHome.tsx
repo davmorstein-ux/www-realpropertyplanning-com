@@ -98,7 +98,6 @@ const RPPHome = () => {
                 fontSize: "clamp(28px, 3.6vw, 42px)",
                 fontWeight: 800,
                 color: "#1a2744",
-                letterSpacing: "0.04em",
                 textAlign: "center",
                 margin: "0",
                 textShadow: "0 1px 6px rgba(255,255,255,0.9), 0 0 18px rgba(255,255,255,0.7)",
