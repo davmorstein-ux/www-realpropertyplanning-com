@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import teaserAsset from "@/assets/cost-of-care-teaser.webp.asset.json";
 
 const HomepageCostOfCareTeaser = () => (
   <a
@@ -17,7 +17,7 @@ const HomepageCostOfCareTeaser = () => (
     }}
   >
     <img
-      src="/cost-of-care-teaser.webp"
+      src={teaserAsset.url}
       alt="Cost of Care Calculator — compare Washington senior care costs to national averages"
       style={{
         width: "100%",
