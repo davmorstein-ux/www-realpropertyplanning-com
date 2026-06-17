@@ -101,7 +101,7 @@ const AFHResources = () => (
           {
             title: "AFH Ownership: Individual or LLC?",
             href: "/afh-club/ownership-structure",
-            img: "/afh-ownership-img.webp?v=2",
+            img: "/__l5e/assets-v1/7a895a21-63fc-4733-bc7a-2faa63337afa/afh-ownership-structure.webp",
             placeholder: "#3a2a3a",
           },
         ]}
