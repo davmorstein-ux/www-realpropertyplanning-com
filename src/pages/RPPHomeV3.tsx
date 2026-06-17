@@ -212,7 +212,7 @@ const RPPHomeV3 = () => {
                   backgroundColor: "#f8fafa",
                   border: "2px solid #1a2744",
                   borderRadius: 10,
-                  padding: "1rem 1.25rem",
+                  padding: "0.5rem 1.25rem 1rem",
                   display: "flex",
                   flexDirection: "column",
                   textDecoration: "none",
