@@ -226,6 +226,7 @@ const LTCMedicaidAndLongTermCare = lazy(() => import("./pages/long-term-care/Med
 const LTCWaCares = lazy(() => import("./pages/long-term-care/WaCares"));
 const LTCHowToChooseCareSettings = lazy(() => import("./pages/long-term-care/HowToChooseCareSettings"));
 const LTCHospitalDischargePlanning = lazy(() => import("./pages/long-term-care/HospitalDischargePlanning"));
+const CostOfCareCalculator = lazy(() => import("./pages/CostOfCareCalculator"));
 const LTCFindingCareRoomAndCare = lazy(() => import("./pages/long-term-care/FindingCareRoomAndCare"));
 // Minimal full-viewport fallback in brand cream — no spinner, no layout shift,
 // matches the page background so navigation feels instant on fast chunks.
@@ -304,6 +305,7 @@ const App = () => (
           <Route path="/senior-living-advisors" element={<SeniorLivingAdvisors />} />
           <Route path="/senior-placement" element={<Navigate to="/senior-living-advisors" replace />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
+          <Route path="/cost-of-care-calculator" element={<CostOfCareCalculator />} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/executors" element={<Executors />} />
