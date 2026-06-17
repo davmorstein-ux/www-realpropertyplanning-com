@@ -77,7 +77,7 @@ const TOP_LINKS = [
     href: "/afh-club",
     items: [
       { label: "AFH Marketplace", href: "/afh-marketplace" },
-      { label: "AFH Resources", href: "/afh-club/afh-resources" },
+      { label: "AFH Resources", href: "/afh-club/resources" },
       { label: "AFH Listings", href: "/afh-club/listings" },
       { label: "Management Companies", href: "/afh-club/management-companies" },
       { label: "AFH Calculators", href: "/afh-club/calculators" },
