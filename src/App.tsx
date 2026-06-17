@@ -5,7 +5,7 @@ import RPPHome from "./pages/RPPHome";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-
+import RPPHomeV2 from "./pages/RPPHomeV2";
 import SiteChatWidget from "./components/SiteChatWidget";
 
 import HeroTest from "./pages/HeroTest";
@@ -244,7 +244,7 @@ const App = () => (
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
-          <Route path="/" element={<RPPHome />} />
+          <Route path="/" element={<RPPHomeV2 />} />
           <Route path="/home-new" element={<HomepageNew />} />
           <Route path="/hero-test" element={<HeroTest />} />
 
