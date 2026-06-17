@@ -15,7 +15,7 @@ const CostOfCareTeaser = () => (
     }}
   >
     <img
-      src="/cost-of-care-teaser-v2.webp"
+      src="/cost-of-care-teaser-v3.webp"
       alt="Cost of Care Calculator — compare Washington senior care costs to national averages"
       style={{
         width: "100%",
