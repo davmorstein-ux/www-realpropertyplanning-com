@@ -212,7 +212,7 @@ const RPPHomeV3 = () => {
                   backgroundColor: "#f8fafa",
                   border: "2px solid #1a2744",
                   borderRadius: 10,
-                  padding: "1rem 1.25rem",
+                  padding: "0.5rem 1.25rem 1rem",
                   display: "flex",
                   flexDirection: "column",
                   textDecoration: "none",
@@ -223,7 +223,7 @@ const RPPHomeV3 = () => {
                   <img
                     src="/afh-club-badge.png"
                     alt="AFH Club"
-                    style={{ height: 240, width: "auto", mixBlendMode: "multiply", flexShrink: 0 }}
+                    style={{ height: 240, width: "auto", mixBlendMode: "multiply", flexShrink: 0, marginTop: "-0.5rem" }}
                   />
                   <div>
                     <p
