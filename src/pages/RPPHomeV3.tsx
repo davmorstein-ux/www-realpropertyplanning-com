@@ -223,13 +223,13 @@ const RPPHomeV3 = () => {
                   <img
                     src="/afh-club-badge.png"
                     alt="AFH Club"
-                    style={{ height: 240, width: "auto", mixBlendMode: "multiply", flexShrink: 0, marginTop: "-0.5rem" }}
+                    style={{ height: 240, width: "auto", mixBlendMode: "multiply", flexShrink: 0 }}
                   />
                   <div>
                     <p
                       style={{
                         fontFamily: "Inter, system-ui, sans-serif",
-                        fontSize: 36,
+                        fontSize: 40,
                         fontWeight: 800,
                         color: "#1a5c58",
                         margin: "0 0 0.4rem 0",
