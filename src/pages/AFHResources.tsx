@@ -60,6 +60,13 @@ const TOPICS = [
     img: "/afh-find-professional.webp",
     description: "Connect with attorneys, CPAs, lenders, and brokers experienced in Adult Family Home transactions.",
   },
+  {
+    title: "AFH Ownership: Individual or LLC?",
+    href: "/afh-club/ownership-structure",
+    img: "/afh-ownership-img.webp",
+    description:
+      "Should you buy an Adult Family Home as an individual or through an LLC? A guide to financing, liability, and Washington State licensing considerations.",
+  },
 ];
 
 const AFHResources = () => (
