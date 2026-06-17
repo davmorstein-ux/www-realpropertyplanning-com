@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -74,12 +74,85 @@ function formatCurrency(value: number) {
   return value.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 }
 
+const GOLD = "#d4a843";
+
+const AnimatedValue = ({ value, formatter }: { value: number; formatter: (n: number) => string }) => {
+  const [display, setDisplay] = useState(value);
+  const prevValue = useRef(value);
+
+  useEffect(() => {
+    const start = prevValue.current;
+    const end = value;
+    if (Math.abs(end - start) < 0.5) {
+      setDisplay(end);
+      prevValue.current = end;
+      return;
+    }
+    const startTime = performance.now();
+    const duration = 600;
+    let raf: number;
+    const tick = (now: number) => {
+      const progress = Math.min(1, (now - startTime) / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(start + (end - start) * eased);
+      if (progress < 1) {
+        raf = requestAnimationFrame(tick);
+      } else {
+        prevValue.current = end;
+      }
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [value]);
+
+  return <>{formatter(display)}</>;
+};
+
 const CostOfCareCalculator = () => {
   const [careTypeId, setCareTypeId] = useState(CARE_TYPES[2].id);
   const [yearsOut, setYearsOut] = useState(0);
   const [inflationRate, setInflationRate] = useState(3);
 
   const careType = useMemo(() => CARE_TYPES.find((c) => c.id === careTypeId) ?? CARE_TYPES[0], [careTypeId]);
+
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    let t = 0;
+    let animId: number;
+    const sp = 30;
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+    const draw = () => {
+      const cols = Math.ceil(canvas.width / sp) + 1;
+      const rows = Math.ceil(canvas.height / sp) + 1;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+          const w = Math.sin(i * 0.4 + j * 0.3 + t) * 0.5 + 0.5;
+          ctx.beginPath();
+          ctx.arc(i * sp, j * sp, 1.5 + w * 1.3, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(212,168,67,${0.15 + w * 0.45})`;
+          ctx.fill();
+        }
+      }
+      t += 0.01;
+      animId = requestAnimationFrame(draw);
+    };
+    draw();
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
 
   const projectedWaMonthly = useMemo(() => {
     return careType.waMonthly * Math.pow(1 + inflationRate / 100, yearsOut);
@@ -91,7 +164,9 @@ const CostOfCareCalculator = () => {
 
   const projectedWaAnnual = projectedWaMonthly * 12;
   const projectedNationalAnnual = projectedNationalMonthly * 12;
-  const percentAboveNational = Math.round(((careType.waMonthly - careType.nationalMonthly) / careType.nationalMonthly) * 100);
+  const percentAboveNational = Math.round(
+    ((careType.waMonthly - careType.nationalMonthly) / careType.nationalMonthly) * 100,
+  );
 
   return (
     <>
@@ -148,301 +223,449 @@ const CostOfCareCalculator = () => {
                 maxWidth: 680,
               }}
             >
-              Compare the cost of senior care in Washington State against national averages, and see how those
-              costs may grow over time. Use this as a starting point for planning — actual costs vary by location,
-              provider, and level of care needed.
+              Compare the cost of senior care in Washington State against national averages, and see how those costs may
+              grow over time. Use this as a starting point for planning — actual costs vary by location, provider, and
+              level of care needed.
             </p>
           </div>
         </section>
 
         {/* Calculator */}
-        <section style={{ background: "#f7f4ef", padding: "56px 24px 72px" }}>
-          <div style={{ maxWidth: 820, margin: "0 auto" }}>
+        <section
+          style={{
+            background: "linear-gradient(180deg,#0a0e18,#05070d)",
+            padding: "64px 24px 76px",
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              pointerEvents: "none",
+              zIndex: 0,
+              opacity: 0.4,
+            }}
+          />
+          <div style={{ maxWidth: 820, margin: "0 auto", position: "relative", zIndex: 1 }}>
             <div
               style={{
-                background: "#fff",
-                border: "1px solid #ddd8cc",
-                borderRadius: 10,
-                padding: "32px 28px",
-                boxShadow: "0 4px 24px rgba(10,22,40,0.06)",
+                background: "linear-gradient(170deg,#172441,#0a0f1c)",
+                border: "1px solid rgba(212,168,67,0.45)",
+                borderRadius: 16,
+                padding: "2.5rem 2rem",
+                boxShadow:
+                  "0 1px 0 rgba(212,168,67,0.35), 0 30px 60px rgba(0,0,0,0.55), inset 0 1px 0 rgba(212,168,67,0.12)",
               }}
             >
-              {/* Care type selector */}
-              <label
-                style={{
-                  display: "block",
-                  fontSize: 14,
-                  fontFamily: "'Raleway', sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: "#5a3200",
-                  marginBottom: 10,
-                }}
-              >
-                Type of Care
-              </label>
-              <select
-                value={careTypeId}
-                onChange={(e) => setCareTypeId(e.target.value)}
-                style={{
-                  width: "100%",
-                  fontSize: 18,
-                  fontFamily: "'Raleway', sans-serif",
-                  color: "#1a2530",
-                  padding: "14px 16px",
-                  borderRadius: 6,
-                  border: "1.5px solid #c8b98a",
-                  background: "#fff",
-                  marginBottom: 28,
-                  cursor: "pointer",
-                }}
-              >
-                {CARE_TYPES.map((c) => (
-                  <option key={c.id} value={c.id}>
-                    {c.label}
-                  </option>
-                ))}
-              </select>
-
-              {/* Years out slider */}
-              <label
-                style={{
-                  display: "block",
-                  fontSize: 14,
-                  fontFamily: "'Raleway', sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: "#5a3200",
-                  marginBottom: 10,
-                }}
-              >
-                Project Future Cost: {yearsOut === 0 ? "Today" : `${yearsOut} years from now`}
-              </label>
-              <input
-                type="range"
-                min={0}
-                max={YEARS_OUT_OPTIONS.length - 1}
-                step={1}
-                value={YEARS_OUT_OPTIONS.indexOf(yearsOut)}
-                onChange={(e) => setYearsOut(YEARS_OUT_OPTIONS[Number(e.target.value)])}
-                style={{ width: "100%", marginBottom: 8, accentColor: "#b87333" }}
-              />
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  fontSize: 13,
-                  fontFamily: "'Raleway', sans-serif",
-                  color: "#8a8478",
-                  marginBottom: 28,
-                }}
-              >
-                <span>Today</span>
-                <span>50 years</span>
-              </div>
-
-              {/* Inflation rate */}
-              <label
-                style={{
-                  display: "block",
-                  fontSize: 14,
-                  fontFamily: "'Raleway', sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: "#5a3200",
-                  marginBottom: 10,
-                }}
-              >
-                Annual Inflation Rate
-              </label>
-              <div style={{ display: "flex", gap: 10, marginBottom: 8, flexWrap: "wrap" }}>
-                {INFLATION_OPTIONS.map((rate) => (
-                  <button
-                    key={rate}
-                    onClick={() => setInflationRate(rate)}
-                    style={{
-                      flex: "1 1 60px",
-                      padding: "10px 0",
-                      fontSize: 16,
-                      fontFamily: "'Raleway', sans-serif",
-                      fontWeight: 700,
-                      borderRadius: 6,
-                      border: inflationRate === rate ? "2px solid #b87333" : "1.5px solid #d8d2c4",
-                      background: inflationRate === rate ? "#b87333" : "#fff",
-                      color: inflationRate === rate ? "#fff" : "#1a2530",
-                      cursor: "pointer",
-                      transition: "all 0.2s ease",
-                    }}
-                  >
-                    {rate}%
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Results */}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 16,
-                marginTop: 28,
-              }}
-            >
-              <div
-                style={{
-                  background: "#2c3a48",
-                  borderRadius: 10,
-                  padding: "24px 20px",
-                  textAlign: "center",
-                }}
-              >
-                <p
+              {/* Header */}
+              <div style={{ textAlign: "center", marginBottom: "2.25rem" }}>
+                <div
                   style={{
                     fontSize: 13,
                     fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 700,
-                    letterSpacing: "0.12em",
+                    letterSpacing: "0.22em",
                     textTransform: "uppercase",
-                    color: "#b87333",
-                    margin: "0 0 10px",
+                    color: GOLD,
+                    fontWeight: 700,
+                    marginBottom: 10,
                   }}
                 >
-                  Washington State
-                </p>
-                <p
+                  Senior Transitions · Cost of Care
+                </div>
+                <h2
                   style={{
-                    fontSize: "clamp(26px, 4vw, 36px)",
+                    fontSize: 30,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
                     color: "#fff",
-                    margin: "0 0 4px",
-                    lineHeight: 1.1,
-                  }}
-                >
-                  {formatCurrency(projectedWaMonthly)}
-                </p>
-                <p
-                  style={{
-                    fontSize: 14,
-                    fontFamily: "'Raleway', sans-serif",
-                    color: "#c8c2b8",
-                    margin: "0 0 14px",
-                  }}
-                >
-                  per month
-                </p>
-                <p
-                  style={{
-                    fontSize: 15,
-                    fontFamily: "'Raleway', sans-serif",
-                    color: "#e8e2d9",
                     margin: 0,
                   }}
                 >
-                  {formatCurrency(projectedWaAnnual)} / year
-                </p>
+                  Cost of <span style={{ color: GOLD, textShadow: "0 0 30px rgba(212,168,67,0.5)" }}>Care</span>{" "}
+                  Calculator
+                </h2>
+                <div
+                  style={{
+                    fontSize: 13,
+                    fontFamily: "'Raleway', sans-serif",
+                    color: GOLD,
+                    marginTop: 8,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    fontWeight: 600,
+                  }}
+                >
+                  Know your costs · Plan with confidence
+                </div>
+              </div>
+
+              {/* Care details panel */}
+              <div
+                style={{
+                  border: "1px solid rgba(212,168,67,0.3)",
+                  borderRadius: 12,
+                  padding: "1.6rem 1.6rem 1.4rem",
+                  marginBottom: 18,
+                  background: "linear-gradient(135deg,rgba(255,255,255,0.03),rgba(0,0,0,0.25))",
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: 15,
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    color: GOLD,
+                    marginBottom: 14,
+                    fontWeight: 700,
+                    fontFamily: "'Raleway', sans-serif",
+                  }}
+                >
+                  Care Details
+                </div>
+                <div
+                  style={{
+                    height: 1,
+                    background: "linear-gradient(90deg,transparent,rgba(212,168,67,0.3),transparent)",
+                    marginBottom: 20,
+                  }}
+                />
+
+                {/* Care type selector */}
+                <label
+                  style={{
+                    display: "block",
+                    fontSize: 12,
+                    fontFamily: "'Raleway', sans-serif",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: GOLD,
+                    marginBottom: 9,
+                  }}
+                >
+                  Type of Care
+                </label>
+                <select
+                  value={careTypeId}
+                  onChange={(e) => setCareTypeId(e.target.value)}
+                  style={{
+                    width: "100%",
+                    fontSize: 16,
+                    fontFamily: "'Raleway', sans-serif",
+                    color: "#fff",
+                    padding: "13px 16px",
+                    borderRadius: 8,
+                    border: "1.5px solid rgba(212,168,67,0.45)",
+                    background: "rgba(5,8,14,0.75)",
+                    marginBottom: 26,
+                    cursor: "pointer",
+                    boxSizing: "border-box",
+                  }}
+                >
+                  {CARE_TYPES.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.label}
+                    </option>
+                  ))}
+                </select>
+
+                {/* Years out slider */}
+                <label
+                  style={{
+                    display: "block",
+                    fontSize: 12,
+                    fontFamily: "'Raleway', sans-serif",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: GOLD,
+                    marginBottom: 12,
+                  }}
+                >
+                  Project Future Cost: {yearsOut === 0 ? "Today" : `${yearsOut} years from now`}
+                </label>
+                <input
+                  type="range"
+                  className="coc-range"
+                  min={0}
+                  max={YEARS_OUT_OPTIONS.length - 1}
+                  step={1}
+                  value={YEARS_OUT_OPTIONS.indexOf(yearsOut)}
+                  onChange={(e) => setYearsOut(YEARS_OUT_OPTIONS[Number(e.target.value)])}
+                  style={{ width: "100%", marginBottom: 8 }}
+                />
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    fontSize: 12,
+                    fontFamily: "'Raleway', sans-serif",
+                    color: "rgba(255,255,255,0.45)",
+                    marginBottom: 26,
+                  }}
+                >
+                  <span>Today</span>
+                  <span>50 years</span>
+                </div>
+
+                {/* Inflation rate */}
+                <label
+                  style={{
+                    display: "block",
+                    fontSize: 12,
+                    fontFamily: "'Raleway', sans-serif",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: GOLD,
+                    marginBottom: 12,
+                  }}
+                >
+                  Annual Inflation Rate
+                </label>
+                <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                  {INFLATION_OPTIONS.map((rate) => (
+                    <button
+                      key={rate}
+                      onClick={() => setInflationRate(rate)}
+                      style={{
+                        flex: "1 1 60px",
+                        padding: "10px 0",
+                        fontSize: 15,
+                        fontFamily: "'Raleway', sans-serif",
+                        fontWeight: 700,
+                        borderRadius: 7,
+                        border: inflationRate === rate ? `1.5px solid ${GOLD}` : "1.5px solid rgba(255,255,255,0.15)",
+                        background: inflationRate === rate ? GOLD : "rgba(5,8,14,0.6)",
+                        color: inflationRate === rate ? "#1a1206" : "rgba(255,255,255,0.8)",
+                        cursor: "pointer",
+                        transition: "all 0.2s ease",
+                        boxShadow: inflationRate === rate ? "0 0 16px rgba(212,168,67,0.45)" : "none",
+                      }}
+                    >
+                      {rate}%
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Results */}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: 16,
+                  marginBottom: 18,
+                }}
+              >
+                <div
+                  style={{
+                    background: "linear-gradient(160deg,rgba(212,168,67,0.14),rgba(0,0,0,0.35))",
+                    border: `1.5px solid ${GOLD}`,
+                    borderRadius: 12,
+                    padding: "24px 18px",
+                    textAlign: "center",
+                    boxShadow: "0 0 30px rgba(212,168,67,0.18)",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: 12,
+                      fontFamily: "'Raleway', sans-serif",
+                      fontWeight: 700,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: GOLD,
+                      margin: "0 0 10px",
+                    }}
+                  >
+                    Washington State
+                  </p>
+                  <p
+                    className="coc-glow"
+                    style={{
+                      fontSize: "clamp(24px, 4vw, 34px)",
+                      fontFamily: "Georgia, serif",
+                      fontWeight: 700,
+                      color: "#fff",
+                      margin: "0 0 4px",
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    <AnimatedValue value={projectedWaMonthly} formatter={formatCurrency} />
+                  </p>
+                  <p
+                    style={{
+                      fontSize: 13,
+                      fontFamily: "'Raleway', sans-serif",
+                      color: "rgba(255,255,255,0.55)",
+                      margin: "0 0 14px",
+                    }}
+                  >
+                    per month
+                  </p>
+                  <p
+                    style={{
+                      fontSize: 14,
+                      fontFamily: "'Raleway', sans-serif",
+                      color: "rgba(255,255,255,0.8)",
+                      margin: 0,
+                    }}
+                  >
+                    <AnimatedValue value={projectedWaAnnual} formatter={formatCurrency} /> / year
+                  </p>
+                </div>
+
+                <div
+                  style={{
+                    background: "rgba(255,255,255,0.03)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                    borderRadius: 12,
+                    padding: "24px 18px",
+                    textAlign: "center",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: 12,
+                      fontFamily: "'Raleway', sans-serif",
+                      fontWeight: 700,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "rgba(255,255,255,0.55)",
+                      margin: "0 0 10px",
+                    }}
+                  >
+                    National Median
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "clamp(24px, 4vw, 34px)",
+                      fontFamily: "Georgia, serif",
+                      fontWeight: 700,
+                      color: "rgba(255,255,255,0.85)",
+                      margin: "0 0 4px",
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    <AnimatedValue value={projectedNationalMonthly} formatter={formatCurrency} />
+                  </p>
+                  <p
+                    style={{
+                      fontSize: 13,
+                      fontFamily: "'Raleway', sans-serif",
+                      color: "rgba(255,255,255,0.45)",
+                      margin: "0 0 14px",
+                    }}
+                  >
+                    per month
+                  </p>
+                  <p
+                    style={{
+                      fontSize: 14,
+                      fontFamily: "'Raleway', sans-serif",
+                      color: "rgba(255,255,255,0.65)",
+                      margin: 0,
+                    }}
+                  >
+                    <AnimatedValue value={projectedNationalAnnual} formatter={formatCurrency} /> / year
+                  </p>
+                </div>
               </div>
 
               <div
                 style={{
-                  background: "#edf0f3",
-                  border: "1px solid #d0ccc4",
-                  borderRadius: 10,
-                  padding: "24px 20px",
-                  textAlign: "center",
+                  background: "rgba(212,168,67,0.08)",
+                  border: "1px solid rgba(212,168,67,0.35)",
+                  borderLeft: `4px solid ${GOLD}`,
+                  borderRadius: 8,
+                  padding: "16px 20px",
+                  marginBottom: 22,
                 }}
               >
                 <p
                   style={{
-                    fontSize: 13,
+                    fontSize: 16,
                     fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 700,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "#5a3200",
-                    margin: "0 0 10px",
-                  }}
-                >
-                  National Median
-                </p>
-                <p
-                  style={{
-                    fontSize: "clamp(26px, 4vw, 36px)",
-                    fontFamily: "Georgia, serif",
-                    fontWeight: 700,
-                    color: "#1a2530",
-                    margin: "0 0 4px",
-                    lineHeight: 1.1,
-                  }}
-                >
-                  {formatCurrency(projectedNationalMonthly)}
-                </p>
-                <p
-                  style={{
-                    fontSize: 14,
-                    fontFamily: "'Raleway', sans-serif",
-                    color: "#5a5a5a",
-                    margin: "0 0 14px",
-                  }}
-                >
-                  per month
-                </p>
-                <p
-                  style={{
-                    fontSize: 15,
-                    fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "rgba(255,255,255,0.9)",
+                    lineHeight: 1.7,
                     margin: 0,
                   }}
                 >
-                  {formatCurrency(projectedNationalAnnual)} / year
+                  <strong style={{ color: GOLD }}>{careType.label}</strong> in Washington currently runs about{" "}
+                  <strong style={{ color: GOLD }}>
+                    {percentAboveNational > 0
+                      ? `${percentAboveNational}% above`
+                      : `${Math.abs(percentAboveNational)}% below`}
+                  </strong>{" "}
+                  the national median. {careType.note}
                 </p>
               </div>
-            </div>
 
-            <div
-              style={{
-                background: "#e8f2f9",
-                border: "1px solid #2c6e9e",
-                borderLeft: "4px solid #2c6e9e",
-                borderRadius: 6,
-                padding: "16px 20px",
-                marginTop: 20,
-              }}
-            >
               <p
                 style={{
-                  fontSize: 16,
+                  fontSize: 12,
                   fontFamily: "'Raleway', sans-serif",
-                  color: "#1a2a3a",
-                  lineHeight: 1.7,
+                  color: "rgba(255,255,255,0.4)",
+                  lineHeight: 1.6,
+                  textAlign: "center",
                   margin: 0,
                 }}
               >
-                <strong>{careType.label}</strong> in Washington currently runs about{" "}
-                <strong>{percentAboveNational > 0 ? `${percentAboveNational}% above` : `${Math.abs(percentAboveNational)}% below`}</strong>{" "}
-                the national median. {careType.note}
+                Figures based on the CareScout/Genworth Cost of Care Survey and related industry sources. Actual costs
+                vary by region, provider, and level of care. This tool is for general planning purposes only.
               </p>
             </div>
-
-            <p
-              style={{
-                fontSize: 13,
-                fontFamily: "'Raleway', sans-serif",
-                color: "#8a8478",
-                lineHeight: 1.6,
-                marginTop: 20,
-                textAlign: "center",
-              }}
-            >
-              Figures based on the CareScout/Genworth Cost of Care Survey and related industry sources. Actual costs
-              vary by region, provider, and level of care. This tool is for general planning purposes only.
-            </p>
           </div>
+
+          <style>{`
+            .coc-range {
+              -webkit-appearance: none;
+              appearance: none;
+              height: 6px;
+              border-radius: 3px;
+              background: rgba(212,168,67,0.18);
+              outline: none;
+            }
+            .coc-range::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: #d4a843;
+              border: 2px solid #0a0f1c;
+              box-shadow: 0 0 12px rgba(212,168,67,0.85), 0 0 0 4px rgba(212,168,67,0.15);
+              cursor: pointer;
+            }
+            .coc-range::-moz-range-thumb {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: #d4a843;
+              border: 2px solid #0a0f1c;
+              box-shadow: 0 0 12px rgba(212,168,67,0.85);
+              cursor: pointer;
+            }
+            .coc-range::-moz-range-track {
+              background: rgba(212,168,67,0.18);
+              height: 6px;
+              border-radius: 3px;
+            }
+            .coc-glow {
+              animation: coc-glow-pulse 3.2s ease-in-out infinite;
+            }
+            @keyframes coc-glow-pulse {
+              0%, 100% { text-shadow: 0 0 18px rgba(212,168,67,0.45); }
+              50% { text-shadow: 0 0 32px rgba(212,168,67,0.8); }
+            }
+          `}</style>
         </section>
 
         {/* Why costs vary */}
@@ -483,8 +706,8 @@ const CostOfCareCalculator = () => {
                 margin: "0 0 20px",
               }}
             >
-              Washington State consistently ranks above the national median across nearly every category of senior
-              care. Higher regional labor costs, a competitive caregiving job market, and higher costs of living in
+              Washington State consistently ranks above the national median across nearly every category of senior care.
+              Higher regional labor costs, a competitive caregiving job market, and higher costs of living in
               metropolitan areas like Seattle, Bellevue, and Bellingham all contribute to this gap.
             </p>
             <p
@@ -496,10 +719,10 @@ const CostOfCareCalculator = () => {
                 margin: 0,
               }}
             >
-              Costs also vary significantly within the state itself. Families in lower-cost areas such as Walla
-              Walla or Yakima often find meaningfully lower rates than those in the Puget Sound region. An Adult
-              Family Home is frequently a more affordable alternative to assisted living or nursing home care while
-              still providing a high level of personalized support — worth exploring through our{" "}
+              Costs also vary significantly within the state itself. Families in lower-cost areas such as Walla Walla or
+              Yakima often find meaningfully lower rates than those in the Puget Sound region. An Adult Family Home is
+              frequently a more affordable alternative to assisted living or nursing home care while still providing a
+              high level of personalized support — worth exploring through our{" "}
               <Link to="/afh-club" style={{ color: "#2c6e9e" }}>
                 AFH Club
               </Link>
@@ -546,8 +769,8 @@ const CostOfCareCalculator = () => {
                 margin: "0 0 32px",
               }}
             >
-              Real Property Planning connects families with senior living advisors, financial planners, and
-              resources to help fund the cost of care — including options like selling a home to fund senior living.
+              Real Property Planning connects families with senior living advisors, financial planners, and resources to
+              help fund the cost of care — including options like selling a home to fund senior living.
             </p>
             <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
               <Link
