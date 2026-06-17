@@ -305,6 +305,7 @@ const App = () => (
           <Route path="/senior-living-advisors" element={<SeniorLivingAdvisors />} />
           <Route path="/senior-placement" element={<Navigate to="/senior-living-advisors" replace />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
+          <Route path="/cost-of-care-calculator" element={<CostOfCareCalculator />} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/executors" element={<Executors />} />
