@@ -229,7 +229,7 @@ const RPPHomeV3 = () => {
                     <p
                       style={{
                         fontFamily: "Inter, system-ui, sans-serif",
-                        fontSize: 40,
+                        fontSize: 52,
                         fontWeight: 800,
                         color: "#1a5c58",
                         margin: "0 0 0.4rem 0",
