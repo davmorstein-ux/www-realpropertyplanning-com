@@ -435,6 +435,9 @@ main,
       line-height: 1.7 !important;
     }
 
+    /* TEMPORARY: confirm CSS is reaching browser */
+    body { border: 20px solid red !important; }
+
     /* Hero tagline override — preserve large hero text */
     .hero-tagline-override {
       font-size: clamp(28px, 3.6vw, 42px) !important;
