@@ -7,6 +7,7 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import AFHCarousel from "@/components/AFHCarousel";
 
 const TOPICS = [
   {
@@ -94,6 +95,17 @@ const AFHResources = () => (
         </div>
       </section>
       <HeroBandTitle>AFH Resource Library</HeroBandTitle>
+
+      <AFHCarousel
+        categories={[
+          {
+            title: "AFH Ownership: Individual or LLC?",
+            href: "/afh-club/ownership-structure",
+            img: "/afh-ownership-structure.webp",
+            placeholder: "#3a2a3a",
+          },
+        ]}
+      />
 
       {/* Topic list */}
       <section style={{ maxWidth: 900, margin: "0 auto", padding: "56px 24px 80px" }}>
