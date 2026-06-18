@@ -441,13 +441,13 @@ main,
     .hero-tagline-override,
     .homepage-hero-tagline,
     div.homepage-hero-tagline {
-      font-size: clamp(44px, 4vw, 64px) !important;
+      font-size: clamp(24px, 2.2vw, 34px) !important;
       font-weight: 800 !important;
       line-height: 1.1 !important;
       letter-spacing: 0.04em !important;
       color: #1a2744 !important;
       font-family: 'Raleway', 'Gill Sans', sans-serif !important;
-      margin: 0 !important;
+      margin: 2.8rem 0 0 !important;
       text-align: center !important;
       text-shadow: 0 1px 6px rgba(255,255,255,0.9), 0 0 18px rgba(255,255,255,0.7) !important;
     }
