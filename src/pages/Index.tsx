@@ -83,14 +83,14 @@ const Index = () => {
             }}
           >
             <img
-              src="/rpp-logo-correct-proportions.webp"
+              src="/rpp-logo-final.webp"
               alt="Real Property Planning"
               style={{
                 width: "min(520px, 62%)",
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
-                marginBottom: "-0.5rem",
+                marginBottom: "1.5rem",
               }}
             />
             <p
