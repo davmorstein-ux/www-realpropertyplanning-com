@@ -230,8 +230,8 @@ const RPPHomeV3 = () => {
                     >
                       The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
                     </p>
-                  </div>
                 </div>
+
                 <div style={{ display: "flex", justifyContent: "center" }}>
                   <span
                     style={{
