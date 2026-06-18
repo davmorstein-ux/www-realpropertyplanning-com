@@ -191,7 +191,7 @@ const RPPHomeV3 = () => {
               ))}
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <CostOfCareTeaser />
               <a
                 href="/afh-club"
@@ -207,13 +207,17 @@ const RPPHomeV3 = () => {
                 }}
               >
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "1.25rem", marginBottom: "1rem" }}>
-                  <img
-                    src="/afh-club-badge.png"
-                    alt="AFH Club"
-                    style={{ height: 240, width: "auto", mixBlendMode: "multiply", flexShrink: 0, marginTop: "-0.5rem" }}
-                  />
-                  <div>
-                    <p
+                  <p
+                      className="text-[28px] sm:text-[38px] lg:text-[52px]"
+                      style={{
+                        fontFamily: "Inter, system-ui, sans-serif",
+                        fontWeight: 800,
+                        color: "#1a5c58",
+                        margin: "0 0 0.4rem 0",
+                      }}
+                    >
+                      AFH Club
+                    </p>
                       style={{
                         fontFamily: "Inter, system-ui, sans-serif",
                         fontSize: 52,
