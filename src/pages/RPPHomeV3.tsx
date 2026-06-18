@@ -92,20 +92,7 @@ const RPPHomeV3 = () => {
                 marginBottom: "-2.5rem",
               }}
             />
-            <div
-              className="homepage-hero-tagline"
-              style={{
-                fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-                fontSize: "clamp(44px, 4vw, 64px)",
-                fontWeight: 800,
-                color: "#1a2744",
-                letterSpacing: "0.04em",
-                textAlign: "center",
-                lineHeight: 1.1,
-                margin: "0",
-                textShadow: "0 1px 6px rgba(255,255,255,0.9), 0 0 18px rgba(255,255,255,0.7)",
-              }}
-            >
+            <div className="homepage-hero-tagline">
               Estate & Probate Sales · Senior Transitions
               <br />
               Adult Family Home Marketplace
