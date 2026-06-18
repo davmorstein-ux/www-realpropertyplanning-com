@@ -93,9 +93,10 @@ const RPPHomeV3 = () => {
               }}
             />
             <p
+              className="homepage-hero-tagline"
               style={{
                 fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-                fontSize: "clamp(36px, 5vw, 56px)",
+                fontSize: "clamp(44px, 4vw, 64px)",
                 fontWeight: 800,
                 color: "#1a2744",
                 letterSpacing: "0.04em",
