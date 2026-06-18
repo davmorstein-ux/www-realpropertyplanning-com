@@ -89,7 +89,7 @@ const RPPHomeV3 = () => {
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
-                marginBottom: "2.5rem",
+                marginBottom: "5rem",
               }}
             />
           </div>
@@ -104,7 +104,7 @@ const RPPHomeV3 = () => {
         <section className="py-8 md:py-10 lg:py-12 bg-cream">
           <div className="container px-5 md:px-8">
             <div className="max-w-[820px] mx-auto text-center">
-              <p className="font-sans text-[12px] md:text-[13px] font-extrabold tracking-[0.18em] uppercase text-[hsl(var(--gold-dark))] mb-4 md:mb-5">
+              <p className="font-sans text-[12px] md:text-[13px] font-extrabold tracking-[0.18em] uppercase text-red-900 mb-4 md:mb-5">
                 A Free-To-Use Hub · Built For Families · Trusted By Professionals
               </p>
               <p className="text-[22px] md:text-[26px] lg:text-[28px] text-navy font-medium leading-[1.55]">
