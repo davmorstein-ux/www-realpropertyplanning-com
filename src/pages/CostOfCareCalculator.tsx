@@ -458,7 +458,7 @@ const CostOfCareCalculator = () => {
                 </h2>
                 <div
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     fontFamily: "'Raleway', sans-serif",
                     color: "rgba(255,255,255,0.7)",
                     marginTop: 11,
@@ -486,7 +486,7 @@ const CostOfCareCalculator = () => {
               >
                 <div
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
                     color: AMBER_LIGHT,
@@ -511,7 +511,7 @@ const CostOfCareCalculator = () => {
                 <label
                   style={{
                     display: "block",
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.1em",
@@ -535,7 +535,7 @@ const CostOfCareCalculator = () => {
                         style={{
                           padding: "10px 12px",
                           borderRadius: 8,
-                          fontSize: 16,
+                          fontSize: "16px !important",
                           fontWeight: 700,
                           fontFamily: "'Raleway', sans-serif",
                           color: active ? "#062420" : "rgba(255,255,255,0.78)",
@@ -558,7 +558,7 @@ const CostOfCareCalculator = () => {
                 <label
                   style={{
                     display: "block",
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.1em",
@@ -582,7 +582,7 @@ const CostOfCareCalculator = () => {
                         style={{
                           padding: "10px 12px",
                           borderRadius: 8,
-                          fontSize: 16,
+                          fontSize: "16px !important",
                           fontWeight: 700,
                           fontFamily: "'Raleway', sans-serif",
                           color: active ? "#062420" : "rgba(255,255,255,0.78)",
@@ -605,7 +605,7 @@ const CostOfCareCalculator = () => {
                 <label
                   style={{
                     display: "block",
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.1em",
@@ -623,7 +623,7 @@ const CostOfCareCalculator = () => {
                       width: 38,
                       height: 38,
                       borderRadius: 9,
-                      fontSize: 18,
+                      fontSize: "18px !important",
                       fontWeight: 700,
                       color: "rgba(255,255,255,0.85)",
                       background: "linear-gradient(180deg,#23262a,#181a1d)",
@@ -649,7 +649,7 @@ const CostOfCareCalculator = () => {
                       style={{
                         fontFamily: "'Courier New', monospace",
                         fontWeight: 700,
-                        fontSize: 24,
+                        fontSize: "24px !important",
                         letterSpacing: "0.06em",
                         color: "#5ce8d9",
                         textShadow: "0 0 10px rgba(45,217,196,0.85)",
@@ -660,7 +660,7 @@ const CostOfCareCalculator = () => {
                     <span
                       style={{
                         fontFamily: "'Raleway', sans-serif",
-                        fontSize: 16,
+                        fontSize: "16px !important",
                         color: "#5ce8d9",
                         marginLeft: 8,
                       }}
@@ -674,7 +674,7 @@ const CostOfCareCalculator = () => {
                       width: 38,
                       height: 38,
                       borderRadius: 9,
-                      fontSize: 18,
+                      fontSize: "18px !important",
                       fontWeight: 700,
                       color: "rgba(255,255,255,0.85)",
                       background: "linear-gradient(180deg,#23262a,#181a1d)",
@@ -703,7 +703,7 @@ const CostOfCareCalculator = () => {
               >
                 <div
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
                     color: AMBER_LIGHT,
@@ -740,7 +740,7 @@ const CostOfCareCalculator = () => {
                           padding: "13px 10px",
                           borderRadius: 9,
                           textAlign: "center",
-                          fontSize: 16,
+                          fontSize: "16px !important",
                           fontWeight: 700,
                           fontFamily: "'Raleway', sans-serif",
                           color: active ? colors.text : "rgba(255,255,255,0.85)",
@@ -788,7 +788,7 @@ const CostOfCareCalculator = () => {
               >
                 <div
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
                     color: AMBER_LIGHT,
@@ -846,7 +846,7 @@ const CostOfCareCalculator = () => {
                       <div style={{ paddingBottom: i < 2 ? 18 : 0 }}>
                         <div
                           style={{
-                            fontSize: 17,
+                            fontSize: "17px !important",
                             fontWeight: 800,
                             letterSpacing: "0.04em",
                             color: i === 1 ? "#2dd9c4" : "rgba(255,255,255,0.9)",
@@ -858,7 +858,7 @@ const CostOfCareCalculator = () => {
                         </div>
                         <div
                           style={{
-                            fontSize: 16,
+                            fontSize: "16px !important",
                             color: "rgba(255,255,255,0.78)",
                             fontFamily: "'Raleway', sans-serif",
                           }}
@@ -882,7 +882,7 @@ const CostOfCareCalculator = () => {
                 <label
                   style={{
                     display: "block",
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     color: "#fff",
@@ -906,7 +906,7 @@ const CostOfCareCalculator = () => {
                     style={{
                       fontFamily: "'Courier New', monospace",
                       fontWeight: 700,
-                      fontSize: 28,
+                      fontSize: "28px !important",
                       letterSpacing: "0.06em",
                       color: "#5ce8d9",
                       textShadow: "0 0 10px rgba(45,217,196,0.85), 0 0 24px rgba(45,217,196,0.45)",
@@ -916,7 +916,7 @@ const CostOfCareCalculator = () => {
                   </div>
                   <div
                     style={{
-                      fontSize: 16,
+                      fontSize: "16px !important",
                       color: "#9ff7ec",
                       marginTop: 6,
                       fontWeight: 600,
@@ -940,7 +940,7 @@ const CostOfCareCalculator = () => {
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     fontFamily: "'Raleway', sans-serif",
                     color: "rgba(255,255,255,0.85)",
                     letterSpacing: "0.05em",
@@ -956,7 +956,7 @@ const CostOfCareCalculator = () => {
                 <label
                   style={{
                     display: "block",
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     fontFamily: "'Raleway', sans-serif",
                     fontWeight: 700,
                     color: "#fff",
@@ -980,7 +980,7 @@ const CostOfCareCalculator = () => {
                     style={{
                       fontFamily: "'Courier New', monospace",
                       fontWeight: 700,
-                      fontSize: 28,
+                      fontSize: "28px !important",
                       letterSpacing: "0.06em",
                       color: "#5ce8d9",
                       textShadow: "0 0 10px rgba(45,217,196,0.85), 0 0 24px rgba(45,217,196,0.45)",
@@ -990,7 +990,7 @@ const CostOfCareCalculator = () => {
                   </div>
                   <div
                     style={{
-                      fontSize: 16,
+                      fontSize: "16px !important",
                       color: "#9ff7ec",
                       marginTop: 6,
                       fontWeight: 600,
@@ -1014,7 +1014,7 @@ const CostOfCareCalculator = () => {
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     fontFamily: "'Raleway', sans-serif",
                     color: "rgba(255,255,255,0.85)",
                     letterSpacing: "0.05em",
@@ -1039,7 +1039,7 @@ const CostOfCareCalculator = () => {
               >
                 <div
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
                     color: AMBER_LIGHT,
@@ -1119,7 +1119,7 @@ const CostOfCareCalculator = () => {
                             top: `calc(50% + ${y}px)`,
                             left: `calc(50% + ${x}px)`,
                             transform: "translate(-50%,-50%)",
-                            fontSize: 16,
+                            fontSize: "16px !important",
                             fontWeight: 800,
                             fontFamily: "'Raleway', sans-serif",
                             color: active ? "#2dd9c4" : "rgba(255,255,255,0.8)",
@@ -1167,7 +1167,7 @@ const CostOfCareCalculator = () => {
                           />
                           <span
                             style={{
-                              fontSize: 16,
+                              fontSize: "16px !important",
                               fontWeight: 700,
                               fontFamily: "'Raleway', sans-serif",
                               color: active ? "#2dd9c4" : "rgba(255,255,255,0.8)",
@@ -1197,7 +1197,7 @@ const CostOfCareCalculator = () => {
               >
                 <div
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
                     color: AMBER_LIGHT,
@@ -1260,9 +1260,9 @@ const CostOfCareCalculator = () => {
                       y={162}
                       textAnchor="start"
                       fill="rgba(255,255,255,0.85)"
-                      fontSize={16}
                       fontWeight={700}
                       fontFamily="Raleway"
+                      style={{ fontSize: "16px !important" }}
                     >
                       LOW
                     </text>
@@ -1271,16 +1271,16 @@ const CostOfCareCalculator = () => {
                       y={162}
                       textAnchor="end"
                       fill="rgba(255,255,255,0.85)"
-                      fontSize={16}
                       fontWeight={700}
                       fontFamily="Raleway"
+                      style={{ fontSize: "16px !important" }}
                     >
                       HIGH
                     </text>
                   </svg>
                   <div
                     style={{
-                      fontSize: 16,
+                      fontSize: "16px !important",
                       color: "rgba(255,255,255,0.85)",
                       marginTop: 2,
                       marginBottom: 14,
@@ -1317,7 +1317,7 @@ const CostOfCareCalculator = () => {
                 >
                   <span
                     style={{
-                      fontSize: 16,
+                      fontSize: "16px !important",
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
                       color: unit === "monthly" ? AMBER_LIGHT : "rgba(255,255,255,0.8)",
@@ -1355,7 +1355,7 @@ const CostOfCareCalculator = () => {
                   </div>
                   <span
                     style={{
-                      fontSize: 16,
+                      fontSize: "16px !important",
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
                       color: unit === "annual" ? AMBER_LIGHT : "rgba(255,255,255,0.8)",
@@ -1380,7 +1380,7 @@ const CostOfCareCalculator = () => {
                   >
                     <div
                       style={{
-                        fontSize: 16,
+                        fontSize: "16px !important",
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
                         fontWeight: 700,
@@ -1406,7 +1406,7 @@ const CostOfCareCalculator = () => {
                         formatter={formatCurrency}
                       />
                     </div>
-                    <div style={{ fontSize: 16, color: "#9ff7ec", fontFamily: "'Raleway', sans-serif" }}>
+                    <div style={{ fontSize: "16px !important", color: "#9ff7ec", fontFamily: "'Raleway', sans-serif" }}>
                       per {unit === "monthly" ? "month" : "year"}
                     </div>
                   </div>
@@ -1423,7 +1423,7 @@ const CostOfCareCalculator = () => {
                   >
                     <div
                       style={{
-                        fontSize: 16,
+                        fontSize: "16px !important",
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
                         fontWeight: 700,
@@ -1448,7 +1448,13 @@ const CostOfCareCalculator = () => {
                         formatter={formatCurrency}
                       />
                     </div>
-                    <div style={{ fontSize: 16, color: "rgba(255,255,255,0.8)", fontFamily: "'Raleway', sans-serif" }}>
+                    <div
+                      style={{
+                        fontSize: "16px !important",
+                        color: "rgba(255,255,255,0.8)",
+                        fontFamily: "'Raleway', sans-serif",
+                      }}
+                    >
                       per {unit === "monthly" ? "month" : "year"}
                     </div>
                   </div>
@@ -1469,7 +1475,7 @@ const CostOfCareCalculator = () => {
               >
                 <div
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
                     color: AMBER_LIGHT,
@@ -1493,7 +1499,7 @@ const CostOfCareCalculator = () => {
                 </div>
                 <div
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     color: "rgba(255,255,255,0.8)",
                     fontFamily: "'Raleway', sans-serif",
                     marginTop: 4,
@@ -1503,7 +1509,7 @@ const CostOfCareCalculator = () => {
                 </div>
                 <div
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     color: "rgba(255,255,255,0.5)",
                     fontFamily: "'Raleway', sans-serif",
                     marginTop: 8,
@@ -1528,7 +1534,7 @@ const CostOfCareCalculator = () => {
               >
                 <p
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     fontFamily: "'Raleway', sans-serif",
                     color: "rgba(255,255,255,0.85)",
                     lineHeight: 1.65,
@@ -1546,7 +1552,7 @@ const CostOfCareCalculator = () => {
                 </p>
                 <p
                   style={{
-                    fontSize: 16,
+                    fontSize: "16px !important",
                     fontFamily: "'Raleway', sans-serif",
                     color: "rgba(255,255,255,0.7)",
                     lineHeight: 1.6,
@@ -1561,7 +1567,7 @@ const CostOfCareCalculator = () => {
 
               <p
                 style={{
-                  fontSize: 16,
+                  fontSize: "16px !important",
                   fontFamily: "'Raleway', sans-serif",
                   color: "rgba(255,255,255,0.65)",
                   lineHeight: 1.6,
