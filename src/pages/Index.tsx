@@ -119,7 +119,7 @@ const Index = () => {
               <h2 className="font-serif text-[48px] md:text-[56px] lg:text-[60px] font-semibold text-red-900 leading-tight mb-3 md:mb-4">
                 Welcome to Real Property Planning
               </h2>
-              <p className="font-sans text-[12px] md:text-[13px] font-bold tracking-[0.18em] uppercase text-[hsl(var(--gold-dark))] mb-4 md:mb-5">
+              <p className="font-sans text-[12px] md:text-[13px] font-extrabold tracking-[0.18em] uppercase text-[hsl(var(--gold-dark))] mb-4 md:mb-5">
                 A Free-To-Use Hub · Built For Families · Trusted By Professionals
               </p>
               <p className="text-[19px] md:text-[22px] lg:text-[24px] text-navy font-medium leading-[1.55]">
