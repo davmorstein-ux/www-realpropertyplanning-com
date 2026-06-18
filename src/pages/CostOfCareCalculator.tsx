@@ -94,6 +94,11 @@ const CARE_TYPE_COLORS: Record<string, { base: string; light: string; text: stri
   ccrc: { base: "#7c6840", light: "#b3946a", text: "#ffffff" },
 };
 
+// Most recent published U.S. CPI-U year-over-year figure (BLS releases on a
+// ~6-week lag; update when a newer report is published at bls.gov/cpi).
+const ACTUAL_US_INFLATION_RATE = 4.2;
+const ACTUAL_INFLATION_AS_OF = "May 2026 report";
+
 const YEARS_OUT_OPTIONS = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
 const INFLATION_OPTIONS = [1, 2, 3, 4, 5];
 const YEARS_OF_CARE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -775,416 +780,472 @@ const CostOfCareCalculator = () => {
                 </div>
               </div>
 
-              {/* Care Timeline — full width, with a visual timeline for clarity */}
+              {/* Care Timeline + Inflation Rate, side by side on wider screens */}
               <div
-                style={{
-                  background: "linear-gradient(160deg,#1d1f23,#141517)",
-                  border: "1px solid rgba(255,255,255,0.07)",
-                  borderRadius: 14,
-                  padding: "1.4rem 1.5rem 1.5rem",
-                  marginBottom: 16,
-                  boxShadow: "0 1px 0 rgba(255,255,255,0.05) inset, 0 10px 24px rgba(0,0,0,0.4)",
-                }}
+                className="coc-two-col"
+                style={{ display: "grid", gridTemplateColumns: "1fr", gap: 16, marginBottom: 16 }}
               >
+                {/* Care Timeline */}
                 <div
                   style={{
-                    fontSize: "16px !important",
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    color: AMBER_LIGHT,
-                    marginBottom: 18,
-                    fontWeight: 700,
-                    fontFamily: "'Raleway', sans-serif",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
+                    background: "linear-gradient(160deg,#1d1f23,#141517)",
+                    border: "1px solid rgba(255,255,255,0.07)",
+                    borderRadius: 14,
+                    padding: "1.4rem 1.5rem 1.5rem",
+                    boxShadow: "0 1px 0 rgba(255,255,255,0.05) inset, 0 10px 24px rgba(0,0,0,0.4)",
                   }}
                 >
-                  Care Timeline
-                  <span
-                    style={{
-                      flex: 1,
-                      height: 1,
-                      background: "linear-gradient(90deg, rgba(45,217,196,0.4), transparent)",
-                    }}
-                  />
-                </div>
-
-                {/* Visual timeline — vertical stepper, safe at any screen width */}
-                <div style={{ marginBottom: 22 }}>
-                  {[
-                    { label: "TODAY", sub: `Age ${currentAge}` },
-                    { label: "CARE BEGINS", sub: `Age ${ageAtCareStart} · Year ${currentYear + yearsOut}` },
-                    { label: "CARE ENDS", sub: `Age ${ageAtCareEnd}` },
-                  ].map((m, i) => (
-                    <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
-                      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 16 }}>
-                        <div
-                          style={{
-                            width: 16,
-                            height: 16,
-                            borderRadius: "50%",
-                            flexShrink: 0,
-                            background: i === 1 ? "#2dd9c4" : "#5a5f66",
-                            boxShadow: i === 1 ? "0 0 10px rgba(45,217,196,0.9)" : "none",
-                            border: "2px solid #141517",
-                          }}
-                        />
-                        {i < 2 && (
-                          <div
-                            style={{
-                              width: 4,
-                              flex: 1,
-                              minHeight: 32,
-                              background: i === 0 ? "linear-gradient(180deg,#0d9488,#2dd9c4)" : "#2a2d32",
-                              borderRadius: 2,
-                              margin: "4px 0",
-                            }}
-                          />
-                        )}
-                      </div>
-                      <div style={{ paddingBottom: i < 2 ? 18 : 0 }}>
-                        <div
-                          style={{
-                            fontSize: "17px !important",
-                            fontWeight: 800,
-                            letterSpacing: "0.04em",
-                            color: i === 1 ? "#2dd9c4" : "rgba(255,255,255,0.9)",
-                            fontFamily: "'Raleway', sans-serif",
-                            marginBottom: 3,
-                          }}
-                        >
-                          {m.label}
-                        </div>
-                        <div
-                          style={{
-                            fontSize: "16px !important",
-                            color: "rgba(255,255,255,0.78)",
-                            fontFamily: "'Raleway', sans-serif",
-                          }}
-                        >
-                          {m.sub}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div
-                  style={{
-                    height: 1,
-                    background: "rgba(255,255,255,0.08)",
-                    marginBottom: 22,
-                  }}
-                />
-
-                {/* When will care begin */}
-                <label
-                  style={{
-                    display: "block",
-                    fontSize: "16px !important",
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 700,
-                    color: "#fff",
-                    marginBottom: 12,
-                  }}
-                >
-                  When will care begin?
-                </label>
-                <div
-                  style={{
-                    background: "linear-gradient(180deg,#050605,#0a0c0a)",
-                    borderRadius: 9,
-                    border: "1px solid rgba(0,0,0,0.7)",
-                    boxShadow: "inset 0 0 18px rgba(0,0,0,0.85), inset 0 2px 4px rgba(0,0,0,0.9)",
-                    padding: "14px 16px",
-                    textAlign: "center",
-                    marginBottom: 16,
-                  }}
-                >
-                  <div
-                    style={{
-                      fontFamily: "'Courier New', monospace",
-                      fontWeight: 700,
-                      fontSize: "28px !important",
-                      letterSpacing: "0.06em",
-                      color: "#5ce8d9",
-                      textShadow: "0 0 10px rgba(45,217,196,0.85), 0 0 24px rgba(45,217,196,0.45)",
-                    }}
-                  >
-                    {yearsOut === 0 ? "TODAY" : `IN ${yearsOut} YEARS`}
-                  </div>
                   <div
                     style={{
                       fontSize: "16px !important",
-                      color: "#9ff7ec",
-                      marginTop: 6,
-                      fontWeight: 600,
-                      fontFamily: "'Raleway', sans-serif",
-                    }}
-                  >
-                    Age {ageAtCareStart} · Year {currentYear + yearsOut}
-                  </div>
-                </div>
-                <input
-                  type="range"
-                  className="coc-range"
-                  min={0}
-                  max={YEARS_OUT_OPTIONS.length - 1}
-                  step={1}
-                  value={yearsOutIndex}
-                  onChange={(e) => setYearsOut(YEARS_OUT_OPTIONS[Number(e.target.value)])}
-                  style={{ width: "100%", marginBottom: 8 }}
-                />
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    fontSize: "16px !important",
-                    fontFamily: "'Raleway', sans-serif",
-                    color: "rgba(255,255,255,0.85)",
-                    letterSpacing: "0.05em",
-                    fontWeight: 600,
-                    marginBottom: 24,
-                  }}
-                >
-                  <span>Today</span>
-                  <span>50 yrs</span>
-                </div>
-
-                {/* How long will care be needed */}
-                <label
-                  style={{
-                    display: "block",
-                    fontSize: "16px !important",
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 700,
-                    color: "#fff",
-                    marginBottom: 12,
-                  }}
-                >
-                  How long will care be needed?
-                </label>
-                <div
-                  style={{
-                    background: "linear-gradient(180deg,#050605,#0a0c0a)",
-                    borderRadius: 9,
-                    border: "1px solid rgba(0,0,0,0.7)",
-                    boxShadow: "inset 0 0 18px rgba(0,0,0,0.85), inset 0 2px 4px rgba(0,0,0,0.9)",
-                    padding: "14px 16px",
-                    textAlign: "center",
-                    marginBottom: 16,
-                  }}
-                >
-                  <div
-                    style={{
-                      fontFamily: "'Courier New', monospace",
+                      letterSpacing: "0.18em",
+                      textTransform: "uppercase",
+                      color: AMBER_LIGHT,
+                      marginBottom: 18,
                       fontWeight: 700,
-                      fontSize: "28px !important",
-                      letterSpacing: "0.06em",
-                      color: "#5ce8d9",
-                      textShadow: "0 0 10px rgba(45,217,196,0.85), 0 0 24px rgba(45,217,196,0.45)",
-                    }}
-                  >
-                    {yearsOfCareNeeded} {yearsOfCareNeeded === 1 ? "YEAR" : "YEARS"}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: "16px !important",
-                      color: "#9ff7ec",
-                      marginTop: 6,
-                      fontWeight: 600,
                       fontFamily: "'Raleway', sans-serif",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 8,
                     }}
                   >
-                    Through age {ageAtCareEnd}
-                  </div>
-                </div>
-                <input
-                  type="range"
-                  className="coc-range"
-                  min={0}
-                  max={YEARS_OF_CARE_OPTIONS.length - 1}
-                  step={1}
-                  value={yearsOfCareIndex}
-                  onChange={(e) => setYearsOfCareNeeded(YEARS_OF_CARE_OPTIONS[Number(e.target.value)])}
-                  style={{ width: "100%", marginBottom: 8 }}
-                />
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    fontSize: "16px !important",
-                    fontFamily: "'Raleway', sans-serif",
-                    color: "rgba(255,255,255,0.85)",
-                    letterSpacing: "0.05em",
-                    fontWeight: 600,
-                  }}
-                >
-                  <span>1 yr</span>
-                  <span>10 yrs</span>
-                </div>
-              </div>
-
-              {/* Inflation rate */}
-              <div
-                style={{
-                  background: "linear-gradient(160deg,#1d1f23,#141517)",
-                  border: "1px solid rgba(255,255,255,0.07)",
-                  borderRadius: 14,
-                  padding: "1.4rem 1.5rem 1.5rem",
-                  marginBottom: 16,
-                  boxShadow: "0 1px 0 rgba(255,255,255,0.05) inset, 0 10px 24px rgba(0,0,0,0.4)",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "16px !important",
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    color: AMBER_LIGHT,
-                    marginBottom: 14,
-                    fontWeight: 700,
-                    fontFamily: "'Raleway', sans-serif",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  Inflation Rate
-                  <span
-                    style={{
-                      flex: 1,
-                      height: 1,
-                      background: "linear-gradient(90deg, rgba(45,217,196,0.4), transparent)",
-                    }}
-                  />
-                </div>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <div
-                    ref={knobRef}
-                    onPointerDown={handleKnobPointerDown}
-                    onPointerMove={handleKnobPointerMove}
-                    style={{
-                      width: 110,
-                      height: 110,
-                      borderRadius: "50%",
-                      position: "relative",
-                      marginTop: 22,
-                      marginBottom: 46,
-                      cursor: "grab",
-                      touchAction: "none",
-                      background: "radial-gradient(circle at 32% 28%, #4a4d52, #23262a 55%, #141517 80%)",
-                      boxShadow:
-                        "0 6px 14px rgba(0,0,0,0.6), 0 0 0 4px #0e0f11, 0 0 0 5px rgba(255,255,255,0.04), 0 0 22px rgba(45,217,196,0.25)",
-                    }}
-                  >
-                    <div
+                    Care Timeline
+                    <span
                       style={{
-                        position: "absolute",
-                        inset: 6,
-                        borderRadius: "50%",
-                        background:
-                          "repeating-conic-gradient(from 0deg, rgba(255,255,255,0.05) 0deg 3deg, transparent 3deg 9deg)",
-                        pointerEvents: "none",
+                        flex: 1,
+                        height: 1,
+                        background: "linear-gradient(90deg, rgba(45,217,196,0.4), transparent)",
                       }}
                     />
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "8%",
-                        left: "50%",
-                        width: 4,
-                        height: "32%",
-                        background: "linear-gradient(180deg,#9ff7ec,#14b8a8)",
-                        borderRadius: 3,
-                        transformOrigin: "50% 90%",
-                        boxShadow: "0 0 8px rgba(45,217,196,0.9)",
-                        transform: `translateX(-50%) rotate(${KNOB_TICK_ANGLES[inflationIndex]}deg)`,
-                        pointerEvents: "none",
-                      }}
-                    />
-                    {INFLATION_OPTIONS.map((rate, i) => {
-                      const angle = KNOB_TICK_ANGLES[i];
-                      const rad = (angle * Math.PI) / 180;
-                      const r = 60;
-                      const x = r * Math.sin(rad);
-                      const y = -r * Math.cos(rad);
-                      const active = inflationRate === rate;
-                      return (
-                        <button
-                          key={rate}
-                          onClick={() => setInflationRate(rate)}
-                          aria-label={`Set inflation rate to ${rate}%`}
-                          style={{
-                            position: "absolute",
-                            top: `calc(50% + ${y}px)`,
-                            left: `calc(50% + ${x}px)`,
-                            transform: "translate(-50%,-50%)",
-                            fontSize: "16px !important",
-                            fontWeight: 800,
-                            fontFamily: "'Raleway', sans-serif",
-                            color: active ? "#2dd9c4" : "rgba(255,255,255,0.8)",
-                            textShadow: active ? "0 0 10px rgba(45,217,196,0.8)" : "none",
-                            background: "none",
-                            border: "none",
-                            padding: 8,
-                            margin: -8,
-                            cursor: "pointer",
-                            lineHeight: 1,
-                          }}
-                        >
-                          {rate}%
-                        </button>
-                      );
-                    })}
                   </div>
 
-                  <div style={{ display: "flex", alignItems: "flex-end", gap: 12, height: 50 }}>
-                    {INFLATION_OPTIONS.map((rate) => {
-                      const active = inflationRate === rate;
-                      const barHeight = 14 + (rate / INFLATION_OPTIONS.length) * 36;
-                      return (
-                        <button
-                          key={rate}
-                          onClick={() => setInflationRate(rate)}
-                          aria-label={`Set inflation rate to ${rate}%`}
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            gap: 8,
-                            background: "none",
-                            border: "none",
-                            cursor: "pointer",
-                            padding: 0,
-                          }}
-                        >
+                  {/* Visual timeline — vertical stepper, safe at any screen width */}
+                  <div style={{ marginBottom: 22 }}>
+                    {[
+                      { label: "TODAY", sub: `Age ${currentAge}` },
+                      { label: "CARE BEGINS", sub: `Age ${ageAtCareStart} · Year ${currentYear + yearsOut}` },
+                      { label: "CARE ENDS", sub: `Age ${ageAtCareEnd}` },
+                    ].map((m, i) => (
+                      <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
+                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 16 }}>
                           <div
                             style={{
-                              width: 18,
-                              height: barHeight,
-                              borderRadius: 4,
-                              background: active
-                                ? "linear-gradient(180deg,#ff7a6e,#d62828)"
-                                : "linear-gradient(180deg,#7a2c2c,#4a1414)",
-                              boxShadow: active ? "0 0 14px rgba(214,40,40,0.7)" : "none",
-                              transition: "all 0.2s ease",
+                              width: 16,
+                              height: 16,
+                              borderRadius: "50%",
+                              flexShrink: 0,
+                              background: i === 1 ? "#2dd9c4" : "#5a5f66",
+                              boxShadow: i === 1 ? "0 0 10px rgba(45,217,196,0.9)" : "none",
+                              border: "2px solid #141517",
                             }}
                           />
-                          <span
+                          {i < 2 && (
+                            <div
+                              style={{
+                                width: 4,
+                                flex: 1,
+                                minHeight: 32,
+                                background: i === 0 ? "linear-gradient(180deg,#0d9488,#2dd9c4)" : "#2a2d32",
+                                borderRadius: 2,
+                                margin: "4px 0",
+                              }}
+                            />
+                          )}
+                        </div>
+                        <div style={{ paddingBottom: i < 2 ? 18 : 0 }}>
+                          <div
+                            style={{
+                              fontSize: "17px !important",
+                              fontWeight: 800,
+                              letterSpacing: "0.04em",
+                              color: i === 1 ? "#2dd9c4" : "rgba(255,255,255,0.9)",
+                              fontFamily: "'Raleway', sans-serif",
+                              marginBottom: 3,
+                            }}
+                          >
+                            {m.label}
+                          </div>
+                          <div
                             style={{
                               fontSize: "16px !important",
-                              fontWeight: 700,
+                              color: "rgba(255,255,255,0.78)",
+                              fontFamily: "'Raleway', sans-serif",
+                            }}
+                          >
+                            {m.sub}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div
+                    style={{
+                      height: 1,
+                      background: "rgba(255,255,255,0.08)",
+                      marginBottom: 22,
+                    }}
+                  />
+
+                  {/* When will care begin */}
+                  <label
+                    style={{
+                      display: "block",
+                      fontSize: "16px !important",
+                      fontFamily: "'Raleway', sans-serif",
+                      fontWeight: 700,
+                      color: "#fff",
+                      marginBottom: 12,
+                    }}
+                  >
+                    When will care begin?
+                  </label>
+                  <div
+                    style={{
+                      background: "linear-gradient(180deg,#050605,#0a0c0a)",
+                      borderRadius: 9,
+                      border: "1px solid rgba(0,0,0,0.7)",
+                      boxShadow: "inset 0 0 18px rgba(0,0,0,0.85), inset 0 2px 4px rgba(0,0,0,0.9)",
+                      padding: "14px 16px",
+                      textAlign: "center",
+                      marginBottom: 16,
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontFamily: "'Courier New', monospace",
+                        fontWeight: 700,
+                        fontSize: "28px !important",
+                        letterSpacing: "0.06em",
+                        color: "#5ce8d9",
+                        textShadow: "0 0 10px rgba(45,217,196,0.85), 0 0 24px rgba(45,217,196,0.45)",
+                      }}
+                    >
+                      {yearsOut === 0 ? "TODAY" : `IN ${yearsOut} YEARS`}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "16px !important",
+                        color: "#9ff7ec",
+                        marginTop: 6,
+                        fontWeight: 600,
+                        fontFamily: "'Raleway', sans-serif",
+                      }}
+                    >
+                      Age {ageAtCareStart} · Year {currentYear + yearsOut}
+                    </div>
+                  </div>
+                  <input
+                    type="range"
+                    className="coc-range"
+                    min={0}
+                    max={YEARS_OUT_OPTIONS.length - 1}
+                    step={1}
+                    value={yearsOutIndex}
+                    onChange={(e) => setYearsOut(YEARS_OUT_OPTIONS[Number(e.target.value)])}
+                    style={{ width: "100%", marginBottom: 8 }}
+                  />
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      fontSize: "16px !important",
+                      fontFamily: "'Raleway', sans-serif",
+                      color: "rgba(255,255,255,0.85)",
+                      letterSpacing: "0.05em",
+                      fontWeight: 600,
+                      marginBottom: 24,
+                    }}
+                  >
+                    <span>Today</span>
+                    <span>50 yrs</span>
+                  </div>
+
+                  {/* How long will care be needed */}
+                  <label
+                    style={{
+                      display: "block",
+                      fontSize: "16px !important",
+                      fontFamily: "'Raleway', sans-serif",
+                      fontWeight: 700,
+                      color: "#fff",
+                      marginBottom: 12,
+                    }}
+                  >
+                    How long will care be needed?
+                  </label>
+                  <div
+                    style={{
+                      background: "linear-gradient(180deg,#050605,#0a0c0a)",
+                      borderRadius: 9,
+                      border: "1px solid rgba(0,0,0,0.7)",
+                      boxShadow: "inset 0 0 18px rgba(0,0,0,0.85), inset 0 2px 4px rgba(0,0,0,0.9)",
+                      padding: "14px 16px",
+                      textAlign: "center",
+                      marginBottom: 16,
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontFamily: "'Courier New', monospace",
+                        fontWeight: 700,
+                        fontSize: "28px !important",
+                        letterSpacing: "0.06em",
+                        color: "#5ce8d9",
+                        textShadow: "0 0 10px rgba(45,217,196,0.85), 0 0 24px rgba(45,217,196,0.45)",
+                      }}
+                    >
+                      {yearsOfCareNeeded} {yearsOfCareNeeded === 1 ? "YEAR" : "YEARS"}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "16px !important",
+                        color: "#9ff7ec",
+                        marginTop: 6,
+                        fontWeight: 600,
+                        fontFamily: "'Raleway', sans-serif",
+                      }}
+                    >
+                      Through age {ageAtCareEnd}
+                    </div>
+                  </div>
+                  <input
+                    type="range"
+                    className="coc-range"
+                    min={0}
+                    max={YEARS_OF_CARE_OPTIONS.length - 1}
+                    step={1}
+                    value={yearsOfCareIndex}
+                    onChange={(e) => setYearsOfCareNeeded(YEARS_OF_CARE_OPTIONS[Number(e.target.value)])}
+                    style={{ width: "100%", marginBottom: 8 }}
+                  />
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      fontSize: "16px !important",
+                      fontFamily: "'Raleway', sans-serif",
+                      color: "rgba(255,255,255,0.85)",
+                      letterSpacing: "0.05em",
+                      fontWeight: 600,
+                    }}
+                  >
+                    <span>1 yr</span>
+                    <span>10 yrs</span>
+                  </div>
+                </div>
+
+                {/* Inflation rate */}
+                <div
+                  style={{
+                    background: "linear-gradient(160deg,#1d1f23,#141517)",
+                    border: "1px solid rgba(255,255,255,0.07)",
+                    borderRadius: 14,
+                    padding: "1.4rem 1.5rem 1.5rem",
+                    boxShadow: "0 1px 0 rgba(255,255,255,0.05) inset, 0 10px 24px rgba(0,0,0,0.4)",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "16px !important",
+                      letterSpacing: "0.18em",
+                      textTransform: "uppercase",
+                      color: AMBER_LIGHT,
+                      marginBottom: 14,
+                      fontWeight: 700,
+                      fontFamily: "'Raleway', sans-serif",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 8,
+                    }}
+                  >
+                    Inflation Rate
+                    <span
+                      style={{
+                        flex: 1,
+                        height: 1,
+                        background: "linear-gradient(90deg, rgba(45,217,196,0.4), transparent)",
+                      }}
+                    />
+                  </div>
+
+                  <div
+                    style={{
+                      background: "linear-gradient(180deg,#050605,#0a0c0a)",
+                      borderRadius: 9,
+                      border: "1px solid rgba(0,0,0,0.7)",
+                      boxShadow: "inset 0 0 18px rgba(0,0,0,0.85), inset 0 2px 4px rgba(0,0,0,0.9)",
+                      padding: "12px 16px",
+                      textAlign: "center",
+                      marginBottom: 18,
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontFamily: "'Courier New', monospace",
+                        fontWeight: 700,
+                        fontSize: "26px !important",
+                        letterSpacing: "0.04em",
+                        color: "#5ce8d9",
+                        textShadow: "0 0 10px rgba(45,217,196,0.85)",
+                      }}
+                    >
+                      {ACTUAL_US_INFLATION_RATE.toFixed(1)}%
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "13px !important",
+                        color: "#9ff7ec",
+                        marginTop: 4,
+                        fontWeight: 600,
+                        fontFamily: "'Raleway', sans-serif",
+                      }}
+                    >
+                      Actual U.S. inflation (CPI) · {ACTUAL_INFLATION_AS_OF}
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "14px !important",
+                      color: "rgba(255,255,255,0.7)",
+                      fontFamily: "'Raleway', sans-serif",
+                      textAlign: "center",
+                      marginBottom: 18,
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    Use this as a reference, then pick the rate below to project your own care costs forward.
+                  </div>
+
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                    <div
+                      ref={knobRef}
+                      onPointerDown={handleKnobPointerDown}
+                      onPointerMove={handleKnobPointerMove}
+                      style={{
+                        width: 110,
+                        height: 110,
+                        borderRadius: "50%",
+                        position: "relative",
+                        marginTop: 22,
+                        marginBottom: 46,
+                        cursor: "grab",
+                        touchAction: "none",
+                        background: "radial-gradient(circle at 32% 28%, #4a4d52, #23262a 55%, #141517 80%)",
+                        boxShadow:
+                          "0 6px 14px rgba(0,0,0,0.6), 0 0 0 4px #0e0f11, 0 0 0 5px rgba(255,255,255,0.04), 0 0 22px rgba(45,217,196,0.25)",
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 6,
+                          borderRadius: "50%",
+                          background:
+                            "repeating-conic-gradient(from 0deg, rgba(255,255,255,0.05) 0deg 3deg, transparent 3deg 9deg)",
+                          pointerEvents: "none",
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "8%",
+                          left: "50%",
+                          width: 4,
+                          height: "32%",
+                          background: "linear-gradient(180deg,#9ff7ec,#14b8a8)",
+                          borderRadius: 3,
+                          transformOrigin: "50% 90%",
+                          boxShadow: "0 0 8px rgba(45,217,196,0.9)",
+                          transform: `translateX(-50%) rotate(${KNOB_TICK_ANGLES[inflationIndex]}deg)`,
+                          pointerEvents: "none",
+                        }}
+                      />
+                      {INFLATION_OPTIONS.map((rate, i) => {
+                        const angle = KNOB_TICK_ANGLES[i];
+                        const rad = (angle * Math.PI) / 180;
+                        const r = 60;
+                        const x = r * Math.sin(rad);
+                        const y = -r * Math.cos(rad);
+                        const active = inflationRate === rate;
+                        return (
+                          <button
+                            key={rate}
+                            onClick={() => setInflationRate(rate)}
+                            aria-label={`Set inflation rate to ${rate}%`}
+                            style={{
+                              position: "absolute",
+                              top: `calc(50% + ${y}px)`,
+                              left: `calc(50% + ${x}px)`,
+                              transform: "translate(-50%,-50%)",
+                              fontSize: "16px !important",
+                              fontWeight: 800,
                               fontFamily: "'Raleway', sans-serif",
                               color: active ? "#2dd9c4" : "rgba(255,255,255,0.8)",
+                              textShadow: active ? "0 0 10px rgba(45,217,196,0.8)" : "none",
+                              background: "none",
+                              border: "none",
+                              padding: 8,
+                              margin: -8,
+                              cursor: "pointer",
+                              lineHeight: 1,
                             }}
                           >
                             {rate}%
-                          </span>
-                        </button>
-                      );
-                    })}
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    <div style={{ display: "flex", alignItems: "flex-end", gap: 12, height: 50 }}>
+                      {INFLATION_OPTIONS.map((rate) => {
+                        const active = inflationRate === rate;
+                        const barHeight = 14 + (rate / INFLATION_OPTIONS.length) * 36;
+                        return (
+                          <button
+                            key={rate}
+                            onClick={() => setInflationRate(rate)}
+                            aria-label={`Set inflation rate to ${rate}%`}
+                            style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              gap: 8,
+                              background: "none",
+                              border: "none",
+                              cursor: "pointer",
+                              padding: 0,
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: 18,
+                                height: barHeight,
+                                borderRadius: 4,
+                                background: active
+                                  ? "linear-gradient(180deg,#ff7a6e,#d62828)"
+                                  : "linear-gradient(180deg,#7a2c2c,#4a1414)",
+                                boxShadow: active ? "0 0 14px rgba(214,40,40,0.7)" : "none",
+                                transition: "all 0.2s ease",
+                              }}
+                            />
+                            <span
+                              style={{
+                                fontSize: "16px !important",
+                                fontWeight: 700,
+                                fontFamily: "'Raleway', sans-serif",
+                                color: active ? "#2dd9c4" : "rgba(255,255,255,0.8)",
+                              }}
+                            >
+                              {rate}%
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
