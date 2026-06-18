@@ -1469,12 +1469,12 @@ main,
 
 @media (max-width: 639px) {
   .premium-tile .tile-label-tight {
-    font-size: 0.8rem !important;
+    font-size: 0.95rem !important;
     margin-top: -0.45rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="financial-planning"],
   .premium-tile .tile-label-tight[data-tile-id="lending"] {
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="financial-planning"],
   .premium-tile .tile-label-tight[data-tile-id="lending"] {
@@ -1482,71 +1482,71 @@ main,
   }
   .premium-tile .tile-label-tight[data-tile-id="estate-liquidation"] {
     margin-top: -0.1rem !important;
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="estate-liquidation"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="appraiser"] {
     margin-top: -1.1rem !important;
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="appraiser"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="power-of-attorney"] {
     margin-top: 0.7rem !important;
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="power-of-attorney"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile h3.mobile-text-xsmall[data-tile-id="power-of-attorney"] {
-    font-size: 0.6rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="senior-transitions"] {
     margin-top: 0.3rem !important;
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="senior-transitions"] {
-    font-size: 0.7rem !important;
-  }
-  .premium-tile h3.mobile-text-xsmall[data-tile-id="senior-transitions"] {
-    font-size: 0.6rem !important;
-  }
-  .premium-tile .tile-label-tight[data-tile-id="guides-resources"] {
     font-size: 0.95rem !important;
   }
+  .premium-tile h3.mobile-text-xsmall[data-tile-id="senior-transitions"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="guides-resources"] {
+    font-size: 1.05rem !important;
+  }
   .premium-tile h3.mobile-text-small[data-tile-id="guides-resources"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="senior-living"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="realtor"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="financial-planning"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="lending"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="attorneys"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="cpas"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="home-values"] {
     margin-top: -0.25rem !important;
-    font-size: 0.95rem !important;
+    font-size: 1.05rem !important;
   }
   .premium-tile h3.mobile-text-small[data-tile-id="home-values"] {
-    font-size: 0.7rem !important;
+    font-size: 0.95rem !important;
   }
   .premium-tile h3.mobile-text-xsmall[data-tile-id="home-values"] {
-    font-size: 0.6rem !important;
+    font-size: 0.95rem !important;
   }
 }
 
