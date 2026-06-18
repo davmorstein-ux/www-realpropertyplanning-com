@@ -111,6 +111,13 @@ const AFHOwnershipStructure = () => (
         </div>
       </section>
 
+      {/* Audio Player */}
+      <section style={{ background: "#edf0f3", padding: "48px 24px 32px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleAudioPlayer audioSrc={audioAsset.url} />
+        </div>
+      </section>
+
       {/* Why ownership structure matters */}
       <section style={{ background: "#f7f4ef", padding: "72px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
