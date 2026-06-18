@@ -67,7 +67,7 @@ const CalcTile: React.FC<{ tile: Tile }> = ({ tile }) => {
         src={tile.img}
         alt={tile.alt}
         loading="lazy"
-        style={{ width: "100%", height: 420, objectFit: "cover", display: "block" }}
+        style={{ width: "100%", height: "auto", display: "block" }}
       />
       <div className="p-6 md:p-7 bg-white">
         <span
