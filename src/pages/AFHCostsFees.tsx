@@ -182,6 +182,13 @@ const AFHCostsFees = () => (
         </div>
       </section>
 
+      {/* Audio Player */}
+      <section style={{ background: "#edf0f3", padding: "0 24px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleAudioPlayer audioSrc={audioAsset.url} />
+        </div>
+      </section>
+
       {/* Startup Cost Table */}
       <section style={{ background: "#f7f4ef", padding: "72px 24px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
