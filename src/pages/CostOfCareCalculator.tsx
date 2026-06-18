@@ -1071,7 +1071,7 @@ const CostOfCareCalculator = () => {
                       borderRadius: "50%",
                       position: "relative",
                       marginTop: 22,
-                      marginBottom: 30,
+                      marginBottom: 46,
                       cursor: "grab",
                       touchAction: "none",
                       background: "radial-gradient(circle at 32% 28%, #4a4d52, #23262a 55%, #141517 80%)",
@@ -1107,13 +1107,15 @@ const CostOfCareCalculator = () => {
                     {INFLATION_OPTIONS.map((rate, i) => {
                       const angle = KNOB_TICK_ANGLES[i];
                       const rad = (angle * Math.PI) / 180;
-                      const r = 70;
+                      const r = 60;
                       const x = r * Math.sin(rad);
                       const y = -r * Math.cos(rad);
                       const active = inflationRate === rate;
                       return (
-                        <span
+                        <button
                           key={rate}
+                          onClick={() => setInflationRate(rate)}
+                          aria-label={`Set inflation rate to ${rate}%`}
                           style={{
                             position: "absolute",
                             top: `calc(50% + ${y}px)`,
@@ -1124,19 +1126,24 @@ const CostOfCareCalculator = () => {
                             fontFamily: "'Raleway', sans-serif",
                             color: active ? "#2dd9c4" : "rgba(255,255,255,0.8)",
                             textShadow: active ? "0 0 10px rgba(45,217,196,0.8)" : "none",
-                            pointerEvents: "none",
+                            background: "none",
+                            border: "none",
+                            padding: 8,
+                            margin: -8,
+                            cursor: "pointer",
+                            lineHeight: 1,
                           }}
                         >
                           {rate}%
-                        </span>
+                        </button>
                       );
                     })}
                   </div>
 
-                  <div style={{ display: "flex", alignItems: "flex-end", gap: 12, height: 70 }}>
+                  <div style={{ display: "flex", alignItems: "flex-end", gap: 12, height: 50 }}>
                     {INFLATION_OPTIONS.map((rate) => {
                       const active = inflationRate === rate;
-                      const barHeight = 16 + (rate / INFLATION_OPTIONS.length) * 54;
+                      const barHeight = 14 + (rate / INFLATION_OPTIONS.length) * 36;
                       return (
                         <button
                           key={rate}
@@ -1510,7 +1517,7 @@ const CostOfCareCalculator = () => {
                 <div
                   style={{
                     fontSize: "16px !important",
-                    color: "rgba(255,255,255,0.5)",
+                    color: "rgba(255,255,255,0.8)",
                     fontFamily: "'Raleway', sans-serif",
                     marginTop: 8,
                   }}
@@ -1569,7 +1576,7 @@ const CostOfCareCalculator = () => {
                 style={{
                   fontSize: "16px !important",
                   fontFamily: "'Raleway', sans-serif",
-                  color: "rgba(255,255,255,0.65)",
+                  color: "rgba(255,255,255,0.8)",
                   lineHeight: 1.6,
                   textAlign: "center",
                   margin: 0,
