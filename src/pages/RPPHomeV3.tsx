@@ -218,16 +218,7 @@ const RPPHomeV3 = () => {
                     >
                       AFH Club
                     </p>
-                      style={{
-                        fontFamily: "Inter, system-ui, sans-serif",
-                        fontSize: 52,
-                        fontWeight: 800,
-                        color: "#1a5c58",
-                        margin: "0 0 0.4rem 0",
-                      }}
-                    >
-                      AFH Club
-                    </p>
+
                     <p
                       style={{
                         fontFamily: "Inter, system-ui, sans-serif",
