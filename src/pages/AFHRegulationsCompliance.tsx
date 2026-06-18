@@ -5,6 +5,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/afh-regulations-compliance.mp3.asset.json";
 
 const ENFORCEMENT_LEVELS = [
   {
@@ -195,6 +197,13 @@ const AFHRegulationsCompliance = () => (
             This page is written for two audiences: <strong>families</strong> researching a home for a loved one, and{" "}
             <strong>providers</strong> who need to stay inspection-ready year-round.
           </p>
+        </div>
+      </section>
+
+      {/* Audio Player */}
+      <section style={{ background: "#edf0f3", padding: "48px 24px 32px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleAudioPlayer audioSrc={audioAsset.url} />
         </div>
       </section>
 
