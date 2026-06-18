@@ -124,6 +124,12 @@ const AFHBuyingSelling = () => (
         </div>
       </section>
 
+      <section style={{ background: "#edf0f3", padding: "32px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleAudioPlayer src={audioAsset.url} title="Listen to this article" />
+        </div>
+      </section>
+
       {/* What is CHOW */}
       <section style={{ background: "#f7f4ef", padding: "72px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
