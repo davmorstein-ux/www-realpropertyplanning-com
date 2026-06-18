@@ -89,13 +89,13 @@ const RPPHomeV3 = () => {
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
-                marginBottom: "-0.5rem",
+                marginBottom: "-2.5rem",
               }}
             />
             <p
               style={{
                 fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-                fontSize: "clamp(32px, 4.2vw, 48px)",
+                fontSize: "clamp(36px, 5vw, 56px)",
                 fontWeight: 800,
                 color: "#1a2744",
                 letterSpacing: "0.04em",
