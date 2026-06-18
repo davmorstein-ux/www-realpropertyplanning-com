@@ -85,7 +85,7 @@ const RPPHomeV3 = () => {
               src="/rpp-logo-correct-proportions.webp"
               alt="Real Property Planning"
               style={{
-                width: "min(520px, 62%)",
+                width: "min(780px, 93%)",
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
@@ -95,7 +95,7 @@ const RPPHomeV3 = () => {
             <p
               style={{
                 fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-                fontSize: "clamp(28px, 3.6vw, 42px)",
+                fontSize: "clamp(32px, 4.2vw, 48px)",
                 fontWeight: 800,
                 color: "#1a2744",
                 letterSpacing: "0.04em",
