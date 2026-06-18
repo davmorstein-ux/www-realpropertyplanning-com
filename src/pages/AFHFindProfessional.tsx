@@ -21,7 +21,7 @@ const PROFESSIONAL_CATEGORIES = [
       "Familiarity with AFH valuation beyond residential comps",
       "Network of AFH-related professionals",
     ],
-    link: { label: "Real Property Planning — AFH Real Estate Services", href: "/contact" },
+    link: { label: "Real Property Planning — AFH Real Estate Services", href: "/realtor" },
   },
   {
     title: "Certified Residential Appraisers",
