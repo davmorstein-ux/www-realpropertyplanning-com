@@ -5,6 +5,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/afh-costs-fees.mp3.asset.json";
 
 const STARTUP_COSTS = [
   {
@@ -177,6 +179,13 @@ const AFHCostsFees = () => (
               $225 to $450 per bed as part of the state budget (ESSB 5167). Plan accordingly.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Audio Player */}
+      <section style={{ background: "#edf0f3", padding: "0 24px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleAudioPlayer audioSrc={audioAsset.url} />
         </div>
       </section>
 
