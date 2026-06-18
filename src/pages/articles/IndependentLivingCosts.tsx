@@ -8,6 +8,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/independent-living-costs.mp3.asset.json";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -65,6 +67,7 @@ const IndependentLivingCosts = () => {
               <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
                 What the monthly fee actually covers — and what the number on the brochure doesn't tell you
               </p>
+              <ArticleAudioPlayer src={audioAsset.url} title="Listen to this article" />
               <hr className={hrClass} />
 
               <p className={leadClass}>
