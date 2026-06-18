@@ -82,14 +82,14 @@ const RPPHomeV3 = () => {
             }}
           >
             <img
-              src="/rpp-logo-correct-proportions.webp"
+              src="/rpp-logo-final.webp"
               alt="Real Property Planning"
               style={{
                 width: "min(780px, 93%)",
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
-                marginBottom: "-2.5rem",
+                marginBottom: "2.5rem",
               }}
             />
           </div>
@@ -104,13 +104,10 @@ const RPPHomeV3 = () => {
         <section className="py-8 md:py-10 lg:py-12 bg-cream">
           <div className="container px-5 md:px-8">
             <div className="max-w-[820px] mx-auto text-center">
-              <h2 className="font-serif text-[48px] md:text-[56px] lg:text-[60px] font-semibold text-red-900 leading-tight mb-3 md:mb-4">
-                Welcome to Real Property Planning
-              </h2>
-              <p className="font-sans text-[12px] md:text-[13px] font-bold tracking-[0.18em] uppercase text-[hsl(var(--gold-dark))] mb-4 md:mb-5">
+              <p className="font-sans text-[12px] md:text-[13px] font-extrabold tracking-[0.18em] uppercase text-[hsl(var(--gold-dark))] mb-4 md:mb-5">
                 A Free-To-Use Hub · Built For Families · Trusted By Professionals
               </p>
-              <p className="text-[19px] md:text-[22px] lg:text-[24px] text-navy font-medium leading-[1.55]">
+              <p className="text-[22px] md:text-[26px] lg:text-[28px] text-navy font-medium leading-[1.55]">
                 Connecting families, seniors, and professionals with the right people and resources.
               </p>
             </div>
@@ -122,6 +119,7 @@ const RPPHomeV3 = () => {
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
               <h2
+                className="rpp-funnel-heading"
                 style={{
                   fontFamily: "Inter, system-ui, sans-serif",
                   fontSize: "3rem",
