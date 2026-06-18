@@ -386,6 +386,7 @@ const CostOfCareCalculator = () => {
 
         {/* Calculator */}
         <section
+          className="coc-no-print"
           style={{
             background: "linear-gradient(180deg,#0d0e10,#040506)",
             padding: "60px 24px 90px",
@@ -1684,157 +1685,6 @@ const CostOfCareCalculator = () => {
                   Print or Save as PDF
                 </button>
               </div>
-
-              {/* Print-only summary — invisible on screen, shown only in the print stylesheet */}
-              <div className="coc-print-summary">
-                <h2 style={{ fontSize: "22px", margin: "0 0 4px", color: "#111" }}>
-                  Senior Living Cost Calculator — Results Summary
-                </h2>
-                <p style={{ fontSize: "12px", color: "#555", margin: "0 0 18px" }}>
-                  Prepared via realpropertyplanning.com on{" "}
-                  {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-                </p>
-
-                <h3
-                  style={{
-                    fontSize: "16px",
-                    color: "#111",
-                    margin: "16px 0 6px",
-                    borderBottom: "1px solid #ccc",
-                    paddingBottom: 4,
-                  }}
-                >
-                  Planning Profile
-                </h3>
-                <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>Planning for: {planningLabel}</p>
-                <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>Marital status: {maritalLabel}</p>
-                <p style={{ fontSize: "14px", color: "#222", margin: "0" }}>Current age: {currentAge}</p>
-
-                <h3
-                  style={{
-                    fontSize: "16px",
-                    color: "#111",
-                    margin: "16px 0 6px",
-                    borderBottom: "1px solid #ccc",
-                    paddingBottom: 4,
-                  }}
-                >
-                  Care Type
-                </h3>
-                <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>{careType.label}</p>
-
-                <h3
-                  style={{
-                    fontSize: "16px",
-                    color: "#111",
-                    margin: "16px 0 6px",
-                    borderBottom: "1px solid #ccc",
-                    paddingBottom: 4,
-                  }}
-                >
-                  Care Timeline
-                </h3>
-                <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>Today: age {currentAge}</p>
-                <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>
-                  Care begins: {yearsOut === 0 ? "today" : `in ${yearsOut} years`} (age {ageAtCareStart}, year{" "}
-                  {currentYear + yearsOut})
-                </p>
-                <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
-                  Care ends: after {yearsOfCareNeeded} {yearsOfCareNeeded === 1 ? "year" : "years"} (age {ageAtCareEnd})
-                </p>
-
-                <h3
-                  style={{
-                    fontSize: "16px",
-                    color: "#111",
-                    margin: "16px 0 6px",
-                    borderBottom: "1px solid #ccc",
-                    paddingBottom: 4,
-                  }}
-                >
-                  Inflation Assumption
-                </h3>
-                <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>
-                  Rate used for this projection: {inflationRate}% per year
-                </p>
-                <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
-                  Reference — actual U.S. inflation (CPI): {ACTUAL_US_INFLATION_RATE.toFixed(1)}% (
-                  {ACTUAL_INFLATION_AS_OF})
-                </p>
-
-                <h3
-                  style={{
-                    fontSize: "16px",
-                    color: "#111",
-                    margin: "16px 0 6px",
-                    borderBottom: "1px solid #ccc",
-                    paddingBottom: 4,
-                  }}
-                >
-                  Projected Cost — {currentYear + yearsOut}
-                </h3>
-                <table
-                  style={{
-                    width: "100%",
-                    fontSize: "14px",
-                    color: "#222",
-                    borderCollapse: "collapse",
-                    marginBottom: 8,
-                  }}
-                >
-                  <thead>
-                    <tr>
-                      <th style={{ textAlign: "left", borderBottom: "1px solid #999", paddingBottom: 4 }}></th>
-                      <th style={{ textAlign: "right", borderBottom: "1px solid #999", paddingBottom: 4 }}>
-                        Washington
-                      </th>
-                      <th style={{ textAlign: "right", borderBottom: "1px solid #999", paddingBottom: 4 }}>National</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td style={{ padding: "4px 0" }}>Per month</td>
-                      <td style={{ textAlign: "right" }}>{formatCurrency(projectedWaMonthly)}</td>
-                      <td style={{ textAlign: "right" }}>{formatCurrency(projectedNationalMonthly)}</td>
-                    </tr>
-                    <tr>
-                      <td style={{ padding: "4px 0" }}>Per year</td>
-                      <td style={{ textAlign: "right" }}>{formatCurrency(projectedWaAnnual)}</td>
-                      <td style={{ textAlign: "right" }}>{formatCurrency(projectedNationalAnnual)}</td>
-                    </tr>
-                    <tr>
-                      <td style={{ padding: "4px 0", fontWeight: 700 }}>Total over {yearsOfCareNeeded}-year plan</td>
-                      <td style={{ textAlign: "right", fontWeight: 700 }}>{formatCurrency(totalWaCost)}</td>
-                      <td style={{ textAlign: "right", fontWeight: 700 }}>{formatCurrency(totalNationalCost)}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p style={{ fontSize: "13px", color: "#444", margin: "8px 0 0" }}>
-                  {careType.label} for {planningPhrase} care in Washington runs about{" "}
-                  {percentAboveNational > 0
-                    ? `${percentAboveNational}% above`
-                    : `${Math.abs(percentAboveNational)}% below`}{" "}
-                  the national median. {careType.note}
-                </p>
-                <p style={{ fontSize: "13px", color: "#444", margin: "8px 0 0" }}>
-                  {MARITAL_STATUS_NOTES[maritalStatus]}
-                </p>
-
-                <p
-                  style={{
-                    fontSize: "11px",
-                    color: "#777",
-                    margin: "20px 0 0",
-                    borderTop: "1px solid #ccc",
-                    paddingTop: 8,
-                  }}
-                >
-                  Figures based on the CareScout/Genworth Cost of Care Survey and related industry sources. Actual costs
-                  vary by region, provider, and level of care. This tool is for general planning purposes only and is
-                  not financial, legal, or medical advice. Prepared as a courtesy of Real Property Planning —
-                  realpropertyplanning.com.
-                </p>
-              </div>
             </div>
 
             {/* Power cord */}
@@ -1879,16 +1729,6 @@ const CostOfCareCalculator = () => {
               }
               .coc-no-print {
                 display: none !important;
-              }
-              .coc-chassis > *:not(.coc-print-summary) {
-                display: none !important;
-              }
-              .coc-chassis {
-                background: #fff !important;
-                border: none !important;
-                box-shadow: none !important;
-                padding: 0 !important;
-                border-radius: 0 !important;
               }
               .coc-print-summary {
                 display: block !important;
@@ -1941,6 +1781,138 @@ const CostOfCareCalculator = () => {
             }
           `}</style>
         </section>
+
+        {/* Print-only summary — invisible on screen, shown only in the print stylesheet */}
+        <div className="coc-print-summary" style={{ padding: "24px" }}>
+          <h2 style={{ fontSize: "22px", margin: "0 0 4px", color: "#111" }}>
+            Senior Living Cost Calculator — Results Summary
+          </h2>
+          <p style={{ fontSize: "12px", color: "#555", margin: "0 0 18px" }}>
+            Prepared via realpropertyplanning.com on{" "}
+            {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+          </p>
+
+          <h3
+            style={{
+              fontSize: "16px",
+              color: "#111",
+              margin: "16px 0 6px",
+              borderBottom: "1px solid #ccc",
+              paddingBottom: 4,
+            }}
+          >
+            Planning Profile
+          </h3>
+          <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>Planning for: {planningLabel}</p>
+          <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>Marital status: {maritalLabel}</p>
+          <p style={{ fontSize: "14px", color: "#222", margin: "0" }}>Current age: {currentAge}</p>
+
+          <h3
+            style={{
+              fontSize: "16px",
+              color: "#111",
+              margin: "16px 0 6px",
+              borderBottom: "1px solid #ccc",
+              paddingBottom: 4,
+            }}
+          >
+            Care Type
+          </h3>
+          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>{careType.label}</p>
+
+          <h3
+            style={{
+              fontSize: "16px",
+              color: "#111",
+              margin: "16px 0 6px",
+              borderBottom: "1px solid #ccc",
+              paddingBottom: 4,
+            }}
+          >
+            Care Timeline
+          </h3>
+          <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>Today: age {currentAge}</p>
+          <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>
+            Care begins: {yearsOut === 0 ? "today" : `in ${yearsOut} years`} (age {ageAtCareStart}, year{" "}
+            {currentYear + yearsOut})
+          </p>
+          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
+            Care ends: after {yearsOfCareNeeded} {yearsOfCareNeeded === 1 ? "year" : "years"} (age {ageAtCareEnd})
+          </p>
+
+          <h3
+            style={{
+              fontSize: "16px",
+              color: "#111",
+              margin: "16px 0 6px",
+              borderBottom: "1px solid #ccc",
+              paddingBottom: 4,
+            }}
+          >
+            Inflation Assumption
+          </h3>
+          <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>
+            Rate used for this projection: {inflationRate}% per year
+          </p>
+          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
+            Reference — actual U.S. inflation (CPI): {ACTUAL_US_INFLATION_RATE.toFixed(1)}% ({ACTUAL_INFLATION_AS_OF})
+          </p>
+
+          <h3
+            style={{
+              fontSize: "16px",
+              color: "#111",
+              margin: "16px 0 6px",
+              borderBottom: "1px solid #ccc",
+              paddingBottom: 4,
+            }}
+          >
+            Projected Cost — {currentYear + yearsOut}
+          </h3>
+          <table
+            style={{ width: "100%", fontSize: "14px", color: "#222", borderCollapse: "collapse", marginBottom: 8 }}
+          >
+            <thead>
+              <tr>
+                <th style={{ textAlign: "left", borderBottom: "1px solid #999", paddingBottom: 4 }}></th>
+                <th style={{ textAlign: "right", borderBottom: "1px solid #999", paddingBottom: 4 }}>Washington</th>
+                <th style={{ textAlign: "right", borderBottom: "1px solid #999", paddingBottom: 4 }}>National</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ padding: "4px 0" }}>Per month</td>
+                <td style={{ textAlign: "right" }}>{formatCurrency(projectedWaMonthly)}</td>
+                <td style={{ textAlign: "right" }}>{formatCurrency(projectedNationalMonthly)}</td>
+              </tr>
+              <tr>
+                <td style={{ padding: "4px 0" }}>Per year</td>
+                <td style={{ textAlign: "right" }}>{formatCurrency(projectedWaAnnual)}</td>
+                <td style={{ textAlign: "right" }}>{formatCurrency(projectedNationalAnnual)}</td>
+              </tr>
+              <tr>
+                <td style={{ padding: "4px 0", fontWeight: 700 }}>Total over {yearsOfCareNeeded}-year plan</td>
+                <td style={{ textAlign: "right", fontWeight: 700 }}>{formatCurrency(totalWaCost)}</td>
+                <td style={{ textAlign: "right", fontWeight: 700 }}>{formatCurrency(totalNationalCost)}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style={{ fontSize: "13px", color: "#444", margin: "8px 0 0" }}>
+            {careType.label} for {planningPhrase} care in Washington runs about{" "}
+            {percentAboveNational > 0 ? `${percentAboveNational}% above` : `${Math.abs(percentAboveNational)}% below`}{" "}
+            the national median. {careType.note}
+          </p>
+          <p style={{ fontSize: "13px", color: "#444", margin: "8px 0 0" }}>{MARITAL_STATUS_NOTES[maritalStatus]}</p>
+
+          <p
+            style={{ fontSize: "11px", color: "#777", margin: "20px 0 0", borderTop: "1px solid #ccc", paddingTop: 8 }}
+          >
+            Figures based on the CareScout/Genworth Cost of Care Survey and related industry sources. Actual costs vary
+            by region, provider, and level of care. This tool is for general planning purposes only and is not
+            financial, legal, or medical advice. Prepared as a courtesy of Real Property Planning —
+            realpropertyplanning.com.
+          </p>
+        </div>
 
         {/* Why costs vary */}
         <section style={{ background: "#edf0f3", padding: "72px 24px" }}>
