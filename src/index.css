@@ -1943,6 +1943,10 @@ h2 {
   font-size: 36px !important;
 }
 
+.rpp-funnel-heading {
+  font-size: clamp(2rem, 5vw, 3.25rem) !important;
+}
+
 h3 {
   font-size: 28px !important;
   line-height: 1.2 !important;
