@@ -119,7 +119,7 @@ const Index = () => {
               <p className="font-sans text-[12px] md:text-[13px] font-extrabold tracking-[0.18em] uppercase text-[hsl(var(--gold-dark))] mb-4 md:mb-5">
                 A Free-To-Use Hub · Built For Families · Trusted By Professionals
               </p>
-              <p className="text-[19px] md:text-[22px] lg:text-[24px] text-navy font-medium leading-[1.55]">
+              <p className="text-[22px] md:text-[26px] lg:text-[28px] text-navy font-medium leading-[1.55]">
                 Connecting families, seniors, and professionals with the right people and resources.
               </p>
             </div>
@@ -131,6 +131,7 @@ const Index = () => {
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
               <h2
+                className="rpp-funnel-heading"
                 style={{
                   fontFamily: "Inter, system-ui, sans-serif",
                   fontSize: "3rem",
