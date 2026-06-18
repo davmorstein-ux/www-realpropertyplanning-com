@@ -92,11 +92,11 @@ const RPPHomeV3 = () => {
                 marginBottom: "-2.5rem",
               }}
             />
-            <div className="homepage-hero-tagline">
-              Estate & Probate Sales · Senior Transitions
-              <br />
-              Adult Family Home Marketplace
-            </div>
+          </div>
+          <div className="homepage-hero-tagline">
+            Estate & Probate Sales · Senior Transitions
+            <br />
+            Adult Family Home Marketplace
           </div>
         </div>
 

@@ -441,15 +441,21 @@ main,
     .hero-tagline-override,
     .homepage-hero-tagline,
     div.homepage-hero-tagline {
+      position: absolute !important;
+      left: 50% !important;
+      bottom: 1.2rem !important;
+      transform: translateX(-50%) !important;
+      width: min(960px, 92%) !important;
       font-size: clamp(24px, 2vw, 32px) !important;
       font-weight: 800 !important;
       line-height: 1.1 !important;
       letter-spacing: 0.04em !important;
       color: #1a2744 !important;
       font-family: 'Raleway', 'Gill Sans', sans-serif !important;
-      margin: 1.2rem 0 0 !important;
+      margin: 0 !important;
       text-align: center !important;
       text-shadow: 0 1px 6px rgba(255,255,255,0.9), 0 0 18px rgba(255,255,255,0.7) !important;
+      z-index: 2 !important;
     }
 
     p {
