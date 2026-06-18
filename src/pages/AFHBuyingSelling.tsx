@@ -6,6 +6,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import audioAsset from "@/assets/afh-buying-selling.mp3.asset.json";
 
 const CHOW_STEPS = [
   {
@@ -119,6 +121,12 @@ const AFHBuyingSelling = () => (
             running in parallel. Understanding how these two tracks interact — and where they diverge — is essential for
             both buyers and sellers to protect their interests and their residents.
           </p>
+        </div>
+      </section>
+
+      <section style={{ background: "#edf0f3", padding: "32px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleAudioPlayer src={audioAsset.url} title="Listen to this article" />
         </div>
       </section>
 
