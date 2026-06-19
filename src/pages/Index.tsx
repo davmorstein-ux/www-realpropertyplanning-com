@@ -1,4 +1,4 @@
-/* force rebuild v2 */
+/* force rebuild v3 */
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -96,8 +96,9 @@ const Index = () => {
             <p
               style={{
                 fontFamily: "'Raleway', 'Gill Sans', sans-serif",
-                fontSize: "clamp(28px, 3.6vw, 42px)",
+                fontSize: "clamp(18px, 3.6vw, 42px)",
                 fontWeight: 800,
+                lineHeight: 1.3,
                 color: "#1a2744",
                 letterSpacing: "0.04em",
                 textAlign: "center",
@@ -143,14 +144,7 @@ const Index = () => {
                 What brings you here today?
               </h2>
             </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(4,1fr)",
-                gap: "1.25rem",
-                marginBottom: "1.25rem",
-              }}
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
               {tiles.map(({ imgSrc, imgAlt, title, href, bgColor }) => (
                 <Link key={title} to={href} style={{ textDecoration: "none", display: "block" }}>
                   <div style={{ borderRadius: 10, overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.10)" }}>
@@ -203,7 +197,7 @@ const Index = () => {
               ))}
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <CostOfCareTeaser />
               <a
                 href="/afh-club"
@@ -222,13 +216,14 @@ const Index = () => {
                   <img
                     src="/afh-club-badge.png"
                     alt="AFH Club"
-                    style={{ height: 240, width: "auto", mixBlendMode: "multiply", flexShrink: 0 }}
+                    className="h-[120px] sm:h-[160px] lg:h-[240px] w-auto"
+                    style={{ mixBlendMode: "multiply", flexShrink: 0 }}
                   />
                   <div style={{ paddingTop: "0.5rem" }}>
                     <p
+                      className="text-[22px] sm:text-[26px] lg:text-[32px]"
                       style={{
                         fontFamily: "Inter, system-ui, sans-serif",
-                        fontSize: 32,
                         fontWeight: 800,
                         color: "#1a5c58",
                         margin: "0 0 0.4rem 0",
@@ -285,7 +280,6 @@ const Index = () => {
               </a>
             </div>
           </div>
-
         </section>
 
         <HomepagePopularResources />
