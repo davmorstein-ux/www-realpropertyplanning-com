@@ -437,7 +437,7 @@ main,
 
     /* TEMPORARY: confirm CSS is reaching browser */
 
-    /* Hero tagline override — preserve large hero text */
+    /* Hero tagline override — preserve large hero text (desktop) */
     .hero-tagline-override,
     .homepage-hero-tagline,
     div.homepage-hero-tagline {
@@ -451,10 +451,12 @@ main,
       line-height: 1.1 !important;
       letter-spacing: 0.04em !important;
       color: #1a2744 !important;
-      font-family: 'Raleway', 'Gill Sans', sans-serif !important;
+      font-family: "Raleway", "Gill Sans", sans-serif !important;
       margin: 0 !important;
       text-align: center !important;
-      text-shadow: 0 1px 6px rgba(255,255,255,0.9), 0 0 18px rgba(255,255,255,0.7) !important;
+      text-shadow:
+        0 1px 6px rgba(255, 255, 255, 0.9),
+        0 0 18px rgba(255, 255, 255, 0.7) !important;
       z-index: 2 !important;
     }
 
