@@ -95,7 +95,7 @@ Deno.serve(async (req) => {
       },
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
-        max_tokens: 300,
+        max_tokens: 200,
         system: [
           {
             type: "text",
@@ -111,7 +111,7 @@ Deno.serve(async (req) => {
       const errText = await anthropicResponse.text();
       console.error("Anthropic API error:", anthropicResponse.status, errText);
       return new Response(
-        JSON.stringify({ error: `Anthropic error ${anthropicResponse.status}`, details: errText }),
+        JSON.stringify({ error: "Service temporarily unavailable. Please try again." }),
         { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } },
       );
     }
@@ -127,10 +127,9 @@ Deno.serve(async (req) => {
     });
   } catch (err) {
     console.error("chat-assistant error:", err);
-    const message = err instanceof Error ? err.message : "Unknown error";
-    return new Response(JSON.stringify({ error: message }), {
-      status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
+    return new Response(
+      JSON.stringify({ error: "Service temporarily unavailable. Please try again." }),
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+    );
   }
 });
