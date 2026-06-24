@@ -9,7 +9,6 @@ import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageReassurance from "@/components/HomepageReassurance";
 import HomepageFAQ from "@/components/HomepageFAQ";
-import CostOfCareTeaser from "@/components/CostOfCareTeaser";
 
 const tiles = [
   {
@@ -52,22 +51,21 @@ const RPPHomeV3 = () => {
       />
       <Header />
       <main id="main-content">
-        {/* Hero image with logo + tagline overlay */}
+        {/* ── Hero ── shrinks gracefully on mobile ─────────────────── */}
         <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
           <img
             src="/hero-v2.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
+            className="block w-full object-cover object-center"
             style={{
-              width: "100%",
-              display: "block",
-              maxHeight: "520px",
-              objectFit: "cover",
-              objectPosition: "center",
+              height: "clamp(180px, 38vw, 520px)",
             }}
             loading="eager"
             decoding="async"
           />
+          {/* Logo overlay — hidden on very small screens to reduce clutter */}
           <div
+            className="hidden sm:flex"
             style={{
               position: "absolute",
               top: "50%",
@@ -75,7 +73,6 @@ const RPPHomeV3 = () => {
               transform: "translate(-50%, -50%)",
               width: "100%",
               maxWidth: "90%",
-              display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
@@ -89,7 +86,7 @@ const RPPHomeV3 = () => {
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
-                marginBottom: "5rem",
+                marginBottom: "4rem",
               }}
             />
           </div>
@@ -100,9 +97,9 @@ const RPPHomeV3 = () => {
           </div>
         </div>
 
-        {/* Orientation */}
+        {/* ── Orientation ──────────────────────────────────────────── */}
         <section className="py-8 md:py-10 lg:py-12 bg-cream">
-          <div className="container px-5 md:px-8">
+          <div className="w-full px-5 md:px-8">
             <div className="max-w-[820px] mx-auto text-center">
               <p className="font-sans text-[12px] md:text-[13px] font-extrabold tracking-[0.18em] uppercase text-red-900 mb-4 md:mb-5">
                 A Free-To-Use Hub · Built For Families · Trusted By Professionals
@@ -114,10 +111,10 @@ const RPPHomeV3 = () => {
           </div>
         </section>
 
-        {/* Funnel Tiles */}
+        {/* ── Funnel Tiles ─────────────────────────────────────────── */}
         <section style={{ backgroundColor: "#f5f2ec", padding: "0.5rem 0 4rem" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
+            <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
               <h2
                 className="rpp-funnel-heading"
                 style={{
@@ -131,16 +128,48 @@ const RPPHomeV3 = () => {
                 What brings you here today?
               </h2>
             </div>
+
+            {/* Tap hint — mobile only */}
+            <p className="block sm:hidden text-center text-[13px] text-navy/60 font-medium mb-4 tracking-wide">
+              Tap a card to get started
+            </p>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
               {tiles.map(({ imgSrc, imgAlt, title, href, bgColor }) => (
-                <Link key={title} to={href} style={{ textDecoration: "none", display: "block" }}>
-                  <div style={{ borderRadius: 10, overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.10)" }}>
-                    <img
-                      src={imgSrc}
-                      alt={imgAlt}
-                      loading="lazy"
-                      style={{ display: "block", width: "100%", height: "190px", objectFit: "cover" }}
-                    />
+                <Link key={title} to={href} className="group block" style={{ textDecoration: "none" }}>
+                  <div
+                    className="transition-transform duration-200 group-hover:-translate-y-1 group-active:scale-[0.98]"
+                    style={{
+                      borderRadius: 10,
+                      overflow: "hidden",
+                      boxShadow: "0 2px 12px rgba(0,0,0,0.10)",
+                    }}
+                  >
+                    <div style={{ position: "relative" }}>
+                      <img
+                        src={imgSrc}
+                        alt={imgAlt}
+                        loading="lazy"
+                        style={{ display: "block", width: "100%", height: "190px", objectFit: "cover" }}
+                      />
+                      {/* "Tap to explore" ribbon — mobile only */}
+                      <span
+                        className="absolute top-3 right-3 sm:hidden"
+                        style={{
+                          backgroundColor: "rgba(255,255,255,0.88)",
+                          color: "#1a2744",
+                          fontSize: 11,
+                          fontWeight: 700,
+                          fontFamily: "Inter, system-ui, sans-serif",
+                          padding: "3px 8px",
+                          borderRadius: 20,
+                          letterSpacing: "0.04em",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        Explore →
+                      </span>
+                    </div>
                     <div
                       style={{
                         backgroundColor: bgColor,
@@ -184,79 +213,93 @@ const RPPHomeV3 = () => {
               ))}
             </div>
 
+            {/* ── Secondary cards: Cost of Care + AFH Club ─────────── */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <CostOfCareTeaser />
-              <a
-                href="/afh-club"
-                style={{
-                  backgroundColor: "#f8fafa",
-                  border: "2px solid #1a2744",
-                  borderRadius: 10,
-                  padding: "0.5rem 1.25rem 1rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  textDecoration: "none",
-                  height: "100%",
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "1.25rem", marginBottom: "1rem" }}>
-                  <p
-                    className="text-[28px] sm:text-[38px] lg:text-[52px]"
-                    style={{
-                      fontFamily: "Inter, system-ui, sans-serif",
-                      fontWeight: 800,
-                      color: "#1a5c58",
-                      margin: "0 0 0.4rem 0",
-                    }}
-                  >
-                    AFH Club
-                  </p>
+              {/* Cost of Care — image button */}
+              <a href="/cost-of-care-calculator" className="group block" style={{ textDecoration: "none" }}>
+                <img
+                  src="/cost-of-care-button.png"
+                  alt="Cost of Care Calculator — compare Home Care, Assisted Living, Memory Care, Adult Family Homes, Nursing Homes, and Adult Day Care costs. Plan Ahead With Confidence."
+                  className="transition-transform duration-200 group-hover:-translate-y-1 w-full h-auto block"
+                  style={{ borderRadius: 10 }}
+                />
+              </a>
 
+              {/* AFH Club */}
+              <a href="/afh-club" className="group block" style={{ textDecoration: "none" }}>
+                <div
+                  className="transition-transform duration-200 group-hover:-translate-y-1"
+                  style={{
+                    backgroundColor: "#f4fafa",
+                    border: "2px solid #1a5c58",
+                    borderRadius: 10,
+                    padding: "1.5rem 1.5rem 1.25rem",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.75rem",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                    <span style={{ fontSize: 32 }} aria-hidden="true">
+                      🏠
+                    </span>
+                    <p
+                      style={{
+                        fontFamily: "Inter, system-ui, sans-serif",
+                        fontSize: 22,
+                        fontWeight: 800,
+                        color: "#1a5c58",
+                        margin: 0,
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      AFH Club
+                    </p>
+                  </div>
                   <p
                     style={{
                       fontFamily: "Inter, system-ui, sans-serif",
                       fontSize: 16,
-                      fontWeight: 500,
-                      color: "#2c3e50",
+                      fontWeight: 400,
+                      color: "#1a2744",
                       margin: 0,
+                      lineHeight: 1.6,
                     }}
                   >
                     The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
                   </p>
-                </div>
-
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <span
-                    style={{
-                      fontFamily: "Inter, system-ui, sans-serif",
-                      fontSize: 15,
-                      fontWeight: 700,
-                      color: "#ffffff",
-                      backgroundColor: "#1a5c58",
-                      padding: "0.7rem 1.5rem",
-                      borderRadius: 6,
-                      textDecoration: "none",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 8,
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    Explore AFH Club
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="15"
-                      height="15"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
+                  <div style={{ marginTop: "auto", paddingTop: "0.5rem" }}>
+                    <span
+                      style={{
+                        fontFamily: "Inter, system-ui, sans-serif",
+                        fontSize: 14,
+                        fontWeight: 700,
+                        color: "#ffffff",
+                        backgroundColor: "#1a5c58",
+                        padding: "0.6rem 1.25rem",
+                        borderRadius: 6,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 6,
+                      }}
                     >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </span>
+                      Explore AFH Club
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="13"
+                        height="13"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
               </a>
             </div>
