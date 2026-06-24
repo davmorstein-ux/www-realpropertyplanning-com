@@ -93,14 +93,10 @@ const RPPHomeV3 = () => {
         <section className="py-6 md:py-8 lg:py-10 bg-cream">
           <div className="w-full px-5 md:px-8">
             <div className="max-w-[820px] mx-auto text-center">
-              {/* Tagline — moved from inside hero so it's always readable */}
-              <p className="font-sans text-[13px] md:text-[14px] font-extrabold tracking-[0.16em] uppercase text-navy mb-3">
-                Estate & Probate Sales · Senior Transitions · Adult Family Home Marketplace
-              </p>
-              <p className="font-sans text-[11px] md:text-[12px] font-extrabold tracking-[0.18em] uppercase text-red-900 mb-4 md:mb-5">
+              <p className="font-sans text-[12px] md:text-[13px] font-extrabold tracking-[0.18em] uppercase text-red-900 mb-3 md:mb-4">
                 A Free-To-Use Hub · Built For Families · Trusted By Professionals
               </p>
-              <p className="text-[22px] md:text-[26px] lg:text-[28px] text-navy font-medium leading-[1.55]">
+              <p className="text-[20px] md:text-[26px] lg:text-[28px] text-navy font-medium leading-[1.5]">
                 Connecting families, seniors, and professionals with the right people and resources.
               </p>
             </div>
