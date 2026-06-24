@@ -384,7 +384,11 @@ const CostOfCareCalculator = () => {
                   Planning Profile
                   <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+                {/* Planning For + Marital Status — stacks to 1-col on mobile via class */}
+                <div
+                  className="coc-profile-grid"
+                  style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}
+                >
                   <div>
                     <label style={fieldLabel}>Planning For</label>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6 }}>
@@ -531,7 +535,8 @@ const CostOfCareCalculator = () => {
                   Care Timeline
                   <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+                {/* Timeline inner — stacks on mobile via class */}
+                <div className="coc-timeline-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
                   {/* Visual stepper */}
                   <div>
                     {[
@@ -1009,7 +1014,11 @@ const CostOfCareCalculator = () => {
                     Annual
                   </span>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 14 }}>
+                {/* WA vs National results — stacks to 1-col on mobile via class */}
+                <div
+                  className="coc-results-grid"
+                  style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 14 }}
+                >
                   <div
                     style={{
                       borderRadius: 10,
@@ -1233,20 +1242,45 @@ const CostOfCareCalculator = () => {
           </div>
 
           <style>{`
+            /* ── Outer row grids: 1-col mobile → 2-col at 640px ── */
             @media (min-width: 640px) {
               .coc-row1 { grid-template-columns: 1fr 1fr !important; }
               .coc-row2 { grid-template-columns: 1fr 1fr !important; }
               .coc-row3 { grid-template-columns: 1fr 1fr !important; }
             }
+
+            /* ── Care type toggle: 2-col mobile → 4-col at 560px ── */
             @media (min-width: 560px) {
               .coc-toggle-grid { grid-template-columns: repeat(4,1fr) !important; }
             }
+
+            /* ── Planning Profile inner grid: 1-col mobile → 2-col at 520px ── */
+            .coc-profile-grid { grid-template-columns: 1fr !important; }
+            @media (min-width: 520px) {
+              .coc-profile-grid { grid-template-columns: 1fr 1fr !important; }
+            }
+
+            /* ── Care Timeline inner grid: 1-col mobile → 2-col at 520px ── */
+            .coc-timeline-grid { grid-template-columns: 1fr !important; }
+            @media (min-width: 520px) {
+              .coc-timeline-grid { grid-template-columns: 1fr 1fr !important; }
+            }
+
+            /* ── Results WA/National: 1-col mobile → 2-col at 400px ── */
+            .coc-results-grid { grid-template-columns: 1fr !important; }
+            @media (min-width: 400px) {
+              .coc-results-grid { grid-template-columns: 1fr 1fr !important; }
+            }
+
+            /* ── Print rules ── */
             .coc-print-summary { display: none; }
             @media print {
               header, footer, nav { display: none !important; }
               .coc-no-print { display: none !important; }
               .coc-print-summary { display: block !important; font-family: Arial, Helvetica, sans-serif; color: #111; background: #fff; }
             }
+
+            /* ── Range slider styling ── */
             .coc-range { -webkit-appearance: none; appearance: none; height: 6px; border-radius: 4px; background: linear-gradient(90deg,${TEAL},${TEAL_LIGHT}); outline: none; }
             .coc-range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #d9d9d9 30%, #8a8d92 70%); box-shadow: 0 2px 5px rgba(0,0,0,0.3), 0 0 0 2px ${TEAL}40; cursor: pointer; }
             .coc-range::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #d9d9d9 30%, #8a8d92 70%); box-shadow: 0 2px 5px rgba(0,0,0,0.3); cursor: pointer; border: none; }
