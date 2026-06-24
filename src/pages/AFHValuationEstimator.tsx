@@ -198,8 +198,6 @@ const AFHValuationEstimator = () => {
     background: `linear-gradient(90deg,transparent,${GREEN}30,transparent)`,
     marginBottom: 16,
   };
-  const grid2: React.CSSProperties = { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 };
-  const grid3: React.CSSProperties = { display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 16 };
 
   return (
     <>
@@ -257,7 +255,7 @@ const AFHValuationEstimator = () => {
         </div>
 
         {/* Calculator */}
-        <div ref={calcRef} style={{ background: "#f5f2ec", padding: "2.5rem 1.5rem 3rem" }}>
+        <div ref={calcRef} style={{ background: "#f5f2ec", padding: "2.5rem 1rem 3rem" }}>
           <div
             style={{
               maxWidth: 900,
@@ -265,7 +263,7 @@ const AFHValuationEstimator = () => {
               background: "#ffffff",
               border: `2px solid ${GREEN}40`,
               borderRadius: 14,
-              padding: "2rem",
+              padding: "1.5rem 1.25rem",
               boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
             }}
           >
@@ -306,7 +304,11 @@ const AFHValuationEstimator = () => {
                 <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
               </div>
               <div style={dividerStyle} />
-              <div style={grid2}>
+              {/* 2-col → 1-col mobile */}
+              <div
+                className="val-grid2"
+                style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
+              >
                 <div>
                   <label style={labelStyle}>Annual net income ($)</label>
                   <input type="number" id="v-net" placeholder="124000" style={inputStyle} />
@@ -319,7 +321,11 @@ const AFHValuationEstimator = () => {
                   <input type="number" id="v-rev" placeholder="288000" style={inputStyle} />
                 </div>
               </div>
-              <div style={grid3}>
+              {/* 3-col → 1-col mobile */}
+              <div
+                className="val-grid3"
+                style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 16 }}
+              >
                 <div>
                   <label style={labelStyle}>Licensed capacity</label>
                   <select id="v-cap" style={inputStyle}>
@@ -352,7 +358,10 @@ const AFHValuationEstimator = () => {
                   </select>
                 </div>
               </div>
-              <div style={grid2}>
+              <div
+                className="val-grid2"
+                style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 0 }}
+              >
                 <div>
                   <label style={labelStyle}>Payer mix</label>
                   <select id="v-payer" style={inputStyle}>
@@ -379,7 +388,9 @@ const AFHValuationEstimator = () => {
                 <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
               </div>
               <div style={dividerStyle} />
+              {/* 3-col → 1-col mobile */}
               <div
+                className="val-grid3"
                 style={{
                   display: "grid",
                   gridTemplateColumns: "1fr 1fr 1fr",
@@ -493,7 +504,11 @@ const AFHValuationEstimator = () => {
                   Range: — to —
                 </div>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10, marginBottom: 14 }}>
+              {/* Results metric tiles — 3-col desktop, 2-col mobile */}
+              <div
+                className="val-results-grid"
+                style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10, marginBottom: 14 }}
+              >
                 {[
                   ["Business value", "v-biz", "Income approach"],
                   ["Property value", "v-propout", "As entered"],
@@ -629,6 +644,29 @@ const AFHValuationEstimator = () => {
             </div>
           </div>
         </div>
+
+        <style>{`
+          /* 2-col input grids → 1-col mobile */
+          .val-grid2 { grid-template-columns: 1fr !important; }
+          @media (min-width: 520px) {
+            .val-grid2 { grid-template-columns: 1fr 1fr !important; }
+          }
+
+          /* 3-col input grids → 1-col mobile, 2-col mid */
+          .val-grid3 { grid-template-columns: 1fr !important; }
+          @media (min-width: 400px) {
+            .val-grid3 { grid-template-columns: 1fr 1fr !important; }
+          }
+          @media (min-width: 600px) {
+            .val-grid3 { grid-template-columns: 1fr 1fr 1fr !important; }
+          }
+
+          /* Results metric tiles: 3-col desktop → 2-col mobile */
+          .val-results-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          @media (min-width: 560px) {
+            .val-results-grid { grid-template-columns: repeat(3, 1fr) !important; }
+          }
+        `}</style>
       </main>
       <Footer />
     </>
