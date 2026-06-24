@@ -65,7 +65,7 @@ const RPPHomeV3 = () => {
           <div
             style={{
               position: "absolute",
-              top: "50%",
+              top: "calc(50% + 20px)",
               left: "50%",
               transform: "translate(-50%, -50%)",
               width: "100%",
