@@ -93,6 +93,8 @@ const Articles = () => {
         {/* Article list */}
         <section
           style={{
+            width: "100%",
+            boxSizing: "border-box",
             maxWidth: 900,
             margin: "0 auto",
             padding: "56px 24px 80px",
@@ -127,7 +129,9 @@ const Articles = () => {
                   textDecoration: "none",
                   transition: "background 0.2s ease",
                 }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(139,105,20,0.04)")}
+                onMouseEnter={(e) =>
+                  ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(139,105,20,0.04)")
+                }
                 onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "transparent")}
               >
                 {/* Thumbnail */}
@@ -150,7 +154,10 @@ const Articles = () => {
                       objectFit: "cover",
                       objectPosition: "top",
                       display: "block",
-                    }} sizes="100vw" decoding="async"/>
+                    }}
+                    sizes="100vw"
+                    decoding="async"
+                  />
                 </div>
 
                 {/* Text */}
