@@ -248,7 +248,13 @@ const RPPHomeV3 = () => {
                     <img
                       src="/afh-club-badge.webp"
                       alt="AFH Club"
-                      style={{ width: 48, height: 48, objectFit: "contain", flexShrink: 0 }}
+                      style={{
+                        width: 72,
+                        height: 72,
+                        objectFit: "contain",
+                        flexShrink: 0,
+                        mixBlendMode: "multiply",
+                      }}
                     />
                     <p
                       style={{
