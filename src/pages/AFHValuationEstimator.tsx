@@ -3,48 +3,13 @@ import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const GREEN = "#1a7a4a";
+const GREEN_LIGHT = "#2ecc71";
+
 const AFHValuationEstimator = () => {
   const calcRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // ── Dot matrix ──────────────────────────────────────────
-    const canvas = document.getElementById("val-canvas") as HTMLCanvasElement;
-    if (canvas) {
-      const ctx = canvas.getContext("2d")!;
-      let t = 0,
-        animId: number;
-      const sp = 28;
-      const resize = () => {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-      };
-      resize();
-      window.addEventListener("resize", resize);
-      const draw = () => {
-        const cols = Math.ceil(canvas.width / sp) + 1;
-        const rows = Math.ceil(canvas.height / sp) + 1;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < cols; i++)
-          for (let j = 0; j < rows; j++) {
-            const w = Math.sin(i * 0.4 + j * 0.3 + t) * 0.5 + 0.5;
-            ctx.beginPath();
-            ctx.arc(i * sp, j * sp, 2 + w * 1.5, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(0,230,118,${0.3 + w * 0.7})`;
-            ctx.fill();
-          }
-        t += 0.012;
-        animId = requestAnimationFrame(draw);
-      };
-      draw();
-      return () => {
-        cancelAnimationFrame(animId);
-        window.removeEventListener("resize", resize);
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    // ── Calculator logic ────────────────────────────────────
     const fmtV = (n: number) => {
       if (!n || isNaN(n)) return "—";
       if (Math.abs(n) >= 1000000) return "$" + (n / 1000000).toFixed(2) + "M";
@@ -150,11 +115,11 @@ const AFHValuationEstimator = () => {
           .map(
             (b) =>
               `<div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
-            <span style="font-size:13px;color:#fff;width:160px;flex-shrink:0;font-weight:600">${b.label}</span>
-            <div style="flex:1;height:7px;background:rgba(0,0,0,0.5);border-radius:4px;overflow:hidden;border:2px solid #00e676;box-shadow:0 0 8px rgba(0,230,118,0.4)">
-              <div class="val-bar-fill" data-pct="${b.pct}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#00e676,#4dffaa);box-shadow:0 0 10px rgba(0,230,118,0.6);transition:width .9s ease"></div>
+            <span style="font-size:13px;color:#1a2744;width:160px;flex-shrink:0;font-weight:600">${b.label}</span>
+            <div style="flex:1;height:7px;background:#e0d8c8;border-radius:4px;overflow:hidden">
+              <div class="val-bar-fill" data-pct="${b.pct}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#1a7a4a,#2ecc71);transition:width .9s ease"></div>
             </div>
-            <span style="font-size:13px;color:#00e676;width:80px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
+            <span style="font-size:13px;color:#1a7a4a;width:80px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
           </div>`,
           )
           .join("");
@@ -188,12 +153,12 @@ const AFHValuationEstimator = () => {
 
   const inputStyle: React.CSSProperties = {
     width: "100%",
-    background: "rgba(0,15,5,0.8)",
-    border: "2px solid #00e676",
+    background: "#ffffff",
+    border: `1.5px solid #b8d8c0`,
     borderRadius: 6,
-    color: "#fff",
+    color: "#1a2744",
     fontSize: 15,
-    padding: "11px 14px",
+    padding: "10px 13px",
     fontFamily: "'Raleway',sans-serif",
     boxSizing: "border-box",
   };
@@ -202,34 +167,36 @@ const AFHValuationEstimator = () => {
     fontSize: 12,
     letterSpacing: ".1em",
     textTransform: "uppercase",
-    color: "#00e676",
-    marginBottom: 8,
+    color: GREEN,
+    marginBottom: 7,
     fontWeight: 700,
-    minHeight: 32,
+    minHeight: 30,
     display: "flex",
     alignItems: "flex-end",
     lineHeight: 1.3,
   } as React.CSSProperties;
   const panelStyle: React.CSSProperties = {
-    border: "2px solid #00e676",
+    border: `1px solid #b8d8c0`,
     borderRadius: 10,
-    padding: "1.4rem 1.6rem",
+    padding: "1.25rem 1.4rem",
     marginBottom: 14,
-    background: "linear-gradient(135deg,rgba(255,255,255,0.02),rgba(0,0,0,0.3))",
-    position: "relative",
+    background: "#ffffff",
   };
   const panelTitleStyle: React.CSSProperties = {
-    fontSize: 17,
-    letterSpacing: ".2em",
+    fontSize: 14,
+    letterSpacing: ".18em",
     textTransform: "uppercase",
-    color: "#00e676",
-    marginBottom: 16,
+    color: GREEN,
+    marginBottom: 14,
     fontWeight: 700,
+    display: "flex",
+    alignItems: "center",
+    gap: 8,
   };
   const dividerStyle: React.CSSProperties = {
     height: 1,
-    background: "linear-gradient(90deg,transparent,rgba(0,230,118,0.25),transparent)",
-    marginBottom: 18,
+    background: `linear-gradient(90deg,transparent,${GREEN}30,transparent)`,
+    marginBottom: 16,
   };
   const grid2: React.CSSProperties = { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 };
   const grid3: React.CSSProperties = { display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 16 };
@@ -238,8 +205,8 @@ const AFHValuationEstimator = () => {
     <>
       <Header />
       <main>
-        {/* ── Hero ── */}
-        <div className="calc-page-hero" style={{ background: "#1e2a38", padding: "48px 24px 40px" }}>
+        {/* Hero */}
+        <div style={{ background: "#f5f2ec", padding: "48px 24px 40px", borderBottom: `3px solid ${GREEN}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
               <img
@@ -249,13 +216,12 @@ const AFHValuationEstimator = () => {
               />
             </Link>
             <p
-              className="eyebrow-label"
               style={{
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: ".15em",
                 textTransform: "uppercase",
-                color: "#c8b98a",
+                color: "#b8963e",
                 marginBottom: 10,
                 fontFamily: "'Raleway',sans-serif",
               }}
@@ -267,7 +233,7 @@ const AFHValuationEstimator = () => {
                 fontSize: "clamp(28px,4vw,42px)",
                 fontFamily: "'Raleway',sans-serif",
                 fontWeight: 700,
-                color: "#ffffff",
+                color: "#1a2744",
                 marginBottom: 12,
                 lineHeight: 1.2,
               }}
@@ -278,7 +244,7 @@ const AFHValuationEstimator = () => {
               style={{
                 fontSize: 18,
                 fontFamily: "'Raleway',sans-serif",
-                color: "#ffffff",
+                color: "#1e2a38",
                 lineHeight: 1.7,
                 maxWidth: 600,
                 margin: 0,
@@ -290,57 +256,39 @@ const AFHValuationEstimator = () => {
           </div>
         </div>
 
-        {/* ── Calculator ── */}
-        <div ref={calcRef} style={{ background: "#000a02", padding: "2.5rem 1.5rem 3rem", position: "relative" }}>
-          <canvas
-            id="val-canvas"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              pointerEvents: "none",
-              zIndex: 0,
-              opacity: 0.3,
-            }}
-          />
+        {/* Calculator */}
+        <div ref={calcRef} style={{ background: "#f5f2ec", padding: "2.5rem 1.5rem 3rem" }}>
           <div
             style={{
               maxWidth: 900,
               margin: "0 auto",
-              position: "relative",
-              zIndex: 1,
-              background: "linear-gradient(170deg,#041808,#020d04)",
-              border: "2px solid #00e676",
+              background: "#ffffff",
+              border: `2px solid ${GREEN}40`,
               borderRadius: 14,
               padding: "2rem",
-              boxShadow: "0 2px 0 rgba(0,230,118,0.4),0 20px 40px rgba(0,0,0,0.8),inset 0 1px 0 rgba(0,230,118,0.3)",
-              transform: "rotateX(2deg)",
-              transformOrigin: "top center",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
             }}
           >
-            {/* Title */}
             <div style={{ textAlign: "center", marginBottom: "1.75rem" }}>
               <div
                 style={{
                   fontSize: 13,
                   letterSpacing: ".25em",
                   textTransform: "uppercase",
-                  color: "#00e676",
+                  color: GREEN,
                   marginBottom: 8,
                   fontWeight: 700,
                 }}
               >
                 Adult Family Home
               </div>
-              <h2 style={{ fontSize: 30, fontWeight: 700, color: "#fff", textShadow: "0 0 30px rgba(0,230,118,0.5)" }}>
-                AFH <span style={{ color: "#00e676" }}>Valuation</span> Estimator
+              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#1a2744" }}>
+                AFH <span style={{ color: GREEN }}>Valuation</span> Estimator
               </h2>
               <div
                 style={{
                   fontSize: 13,
-                  color: "#00e676",
+                  color: "#5a6a7a",
                   marginTop: 6,
                   letterSpacing: ".1em",
                   textTransform: "uppercase",
@@ -353,13 +301,16 @@ const AFHValuationEstimator = () => {
 
             {/* Business Financials */}
             <div style={panelStyle}>
-              <div style={panelTitleStyle}>Business Financials</div>
+              <div style={panelTitleStyle}>
+                Business Financials{" "}
+                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
+              </div>
               <div style={dividerStyle} />
               <div style={grid2}>
                 <div>
                   <label style={labelStyle}>Annual net income ($)</label>
                   <input type="number" id="v-net" placeholder="124000" style={inputStyle} />
-                  <div style={{ fontSize: 12, color: "#4dffaa", marginTop: 6 }}>
+                  <div style={{ fontSize: 12, color: "#5a6a7a", marginTop: 5 }}>
                     After expenses, before owner salary
                   </div>
                 </div>
@@ -423,9 +374,20 @@ const AFHValuationEstimator = () => {
 
             {/* Property */}
             <div style={panelStyle}>
-              <div style={panelTitleStyle}>Property (if included)</div>
+              <div style={panelTitleStyle}>
+                Property (if included){" "}
+                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
+              </div>
               <div style={dividerStyle} />
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 16, alignItems: "start" }}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr 1fr",
+                  gap: 14,
+                  marginBottom: 8,
+                  alignItems: "start",
+                }}
+              >
                 <div>
                   <label style={labelStyle}>Property value est.</label>
                   <input type="number" id="v-prop" placeholder="650000" style={inputStyle} />
@@ -451,9 +413,7 @@ const AFHValuationEstimator = () => {
                   </select>
                 </div>
               </div>
-              <div style={{ fontSize: 12, color: "#4dffaa", marginTop: -10, marginBottom: 8 }}>
-                Property value est. — leave blank if selling business only
-              </div>
+              <div style={{ fontSize: 12, color: "#5a6a7a" }}>Leave property value blank if selling business only.</div>
             </div>
 
             {/* Calculate */}
@@ -463,12 +423,12 @@ const AFHValuationEstimator = () => {
                 width: "100%",
                 padding: 16,
                 borderRadius: 8,
-                background: "#ffffff",
-                color: "#004d1a",
-                border: "2px solid #004d1a",
+                background: GREEN,
+                color: "#ffffff",
+                border: `2px solid ${GREEN}`,
                 fontSize: 19,
                 fontWeight: 700,
-                letterSpacing: ".2em",
+                letterSpacing: ".16em",
                 textTransform: "uppercase",
                 cursor: "pointer",
                 marginTop: 4,
@@ -477,15 +437,13 @@ const AFHValuationEstimator = () => {
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget;
-                el.style.background = "#004d1a";
-                el.style.color = "#ffffff";
-                el.style.borderColor = "#ffffff";
+                el.style.background = "#1a2744";
+                el.style.borderColor = "#1a2744";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget;
-                el.style.background = "#ffffff";
-                el.style.color = "#004d1a";
-                el.style.borderColor = "#004d1a";
+                el.style.background = GREEN;
+                el.style.borderColor = GREEN;
               }}
             >
               Calculate Estimated Value
@@ -495,13 +453,13 @@ const AFHValuationEstimator = () => {
             <div id="val-results" style={{ display: "none", marginTop: 14 }}>
               <div
                 style={{
-                  border: "1px solid #00e676",
+                  border: `2px solid ${GREEN}40`,
                   borderRadius: 12,
                   padding: "1.6rem",
                   textAlign: "center",
                   marginBottom: 14,
                   marginTop: 16,
-                  boxShadow: "0 0 40px rgba(0,230,118,0.18)",
+                  background: "#f5f2ec",
                 }}
               >
                 <div
@@ -509,7 +467,7 @@ const AFHValuationEstimator = () => {
                     fontSize: 12,
                     letterSpacing: ".2em",
                     textTransform: "uppercase",
-                    color: "#00e676",
+                    color: GREEN,
                     marginBottom: 10,
                     fontWeight: 700,
                   }}
@@ -521,9 +479,8 @@ const AFHValuationEstimator = () => {
                   style={{
                     fontSize: 50,
                     fontWeight: 700,
-                    color: "#00e676",
+                    color: GREEN,
                     lineHeight: 1,
-                    textShadow: "0 0 30px rgba(0,230,118,0.8)",
                     minHeight: 60,
                     display: "flex",
                     alignItems: "center",
@@ -532,7 +489,7 @@ const AFHValuationEstimator = () => {
                 >
                   —
                 </div>
-                <div id="v-range" style={{ fontSize: 14, color: "#fff", marginTop: 8 }}>
+                <div id="v-range" style={{ fontSize: 14, color: "#1a2744", marginTop: 8 }}>
                   Range: — to —
                 </div>
               </div>
@@ -548,8 +505,8 @@ const AFHValuationEstimator = () => {
                   <div
                     key={id}
                     style={{
-                      background: "rgba(0,15,5,0.6)",
-                      border: "1px solid rgba(0,230,118,0.25)",
+                      background: "#f5f2ec",
+                      border: `1px solid ${GREEN}30`,
                       borderRadius: 8,
                       padding: "1rem",
                       textAlign: "center",
@@ -560,47 +517,50 @@ const AFHValuationEstimator = () => {
                         fontSize: 11,
                         letterSpacing: ".1em",
                         textTransform: "uppercase",
-                        color: "#00e676",
+                        color: GREEN,
                         marginBottom: 7,
                         fontWeight: 700,
                       }}
                     >
                       {lbl}
                     </div>
-                    <div id={id} style={{ fontSize: 19, fontWeight: 700, color: "#fff", minHeight: 28 }}>
+                    <div id={id} style={{ fontSize: 18, fontWeight: 700, color: "#1a2744", minHeight: 28 }}>
                       —
                     </div>
-                    {sub && <div style={{ fontSize: 11, color: "rgba(0,230,118,0.65)", marginTop: 3 }}>{sub}</div>}
+                    {sub && <div style={{ fontSize: 11, color: "#5a6a7a", marginTop: 3 }}>{sub}</div>}
                   </div>
                 ))}
               </div>
               <div style={{ ...panelStyle, marginBottom: 14 }}>
-                <div style={panelTitleStyle}>Value Factors</div>
+                <div style={panelTitleStyle}>
+                  Value Factors{" "}
+                  <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
+                </div>
                 <div style={dividerStyle} />
                 <div id="v-bars" />
               </div>
               <div
                 id="v-assumptions"
                 style={{
-                  background: "rgba(0,15,5,0.5)",
-                  border: "1px solid rgba(0,230,118,0.25)",
+                  background: "#f5f2ec",
+                  border: `1px solid ${GREEN}25`,
                   borderRadius: 8,
                   padding: "1rem 1.25rem",
                   marginBottom: 12,
                   fontSize: 14,
-                  color: "#fff",
+                  color: "#1a2744",
                   lineHeight: 2,
                 }}
               />
               <div
                 style={{
                   fontSize: 12,
-                  color: "rgba(255,255,255,0.75)",
+                  color: "#5a6a7a",
                   lineHeight: 1.8,
                   padding: "12px 16px",
-                  border: "1px solid rgba(0,230,118,0.18)",
+                  border: `1px solid ${GREEN}18`,
                   borderRadius: 8,
-                  background: "rgba(0,15,5,0.5)",
+                  background: "#f5f2ec",
                 }}
               >
                 This estimate uses income capitalization methodology and Washington AFH market data. It is for
@@ -609,7 +569,7 @@ const AFHValuationEstimator = () => {
               </div>
               <div
                 style={{
-                  border: "1px solid #00e676",
+                  border: `1px solid ${GREEN}40`,
                   borderRadius: 10,
                   padding: "1.2rem 1.5rem",
                   display: "flex",
@@ -618,14 +578,14 @@ const AFHValuationEstimator = () => {
                   gap: 14,
                   flexWrap: "wrap",
                   marginTop: 12,
-                  background: "linear-gradient(135deg,rgba(255,255,255,0.02),rgba(0,0,0,0.3))",
+                  background: "#f5f2ec",
                 }}
               >
                 <div>
-                  <strong style={{ color: "#00e676", fontSize: 15, display: "block" }}>
+                  <strong style={{ color: GREEN, fontSize: 15, display: "block" }}>
                     Get a certified professional valuation
                   </strong>
-                  <p style={{ fontSize: 13, color: "rgba(255,255,255,0.85)", marginTop: 3 }}>
+                  <p style={{ fontSize: 13, color: "#1a2744", marginTop: 3 }}>
                     David Stein · Licensed Broker &amp; Certified Appraiser · eXp Realty · 20+ years AFH experience
                   </p>
                 </div>
@@ -635,9 +595,9 @@ const AFHValuationEstimator = () => {
                     fontSize: 12,
                     padding: "10px 22px",
                     borderRadius: 6,
-                    background: "#ffffff",
-                    color: "#004d1a",
-                    border: "2px solid #004d1a",
+                    background: GREEN,
+                    color: "#ffffff",
+                    border: `2px solid ${GREEN}`,
                     cursor: "pointer",
                     letterSpacing: ".12em",
                     textTransform: "uppercase",
@@ -645,18 +605,6 @@ const AFHValuationEstimator = () => {
                     fontWeight: 700,
                     whiteSpace: "nowrap",
                     transition: "all 0.2s",
-                  }}
-                  onMouseEnter={(e) => {
-                    const el = e.currentTarget;
-                    el.style.background = "#004d1a";
-                    el.style.color = "#ffffff";
-                    el.style.borderColor = "#ffffff";
-                  }}
-                  onMouseLeave={(e) => {
-                    const el = e.currentTarget;
-                    el.style.background = "#ffffff";
-                    el.style.color = "#004d1a";
-                    el.style.borderColor = "#004d1a";
                   }}
                 >
                   Contact David ↗
@@ -668,13 +616,13 @@ const AFHValuationEstimator = () => {
               style={{
                 textAlign: "center",
                 fontSize: 13,
-                color: "#00e676",
-                letterSpacing: ".15em",
+                color: "#5a6a7a",
+                letterSpacing: ".12em",
                 textTransform: "uppercase",
                 marginTop: "1.75rem",
-                fontWeight: 700,
+                fontWeight: 600,
                 paddingTop: "1.25rem",
-                borderTop: "1px solid rgba(0,230,118,0.2)",
+                borderTop: `1px solid ${GREEN}20`,
               }}
             >
               Courtesy of Real Property Planning
