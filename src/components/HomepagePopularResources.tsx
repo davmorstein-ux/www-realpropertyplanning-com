@@ -30,6 +30,17 @@ const HomepagePopularResources = () => (
         line-height: 1.2 !important;
         opacity: 1 !important;
       }
+      .rpp-pr-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 1rem !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .rpp-pr-grid li {
+        display: flex !important;
+      }
       .rpp-pr-card {
         display: flex !important;
         align-items: center !important;
@@ -40,6 +51,7 @@ const HomepagePopularResources = () => (
         border-radius: 8px !important;
         padding: 1.25rem !important;
         min-height: 90px !important;
+        width: 100% !important;
         text-decoration: none !important;
         transition: border-color 0.15s ease, background-color 0.15s ease !important;
       }
@@ -67,14 +79,6 @@ const HomepagePopularResources = () => (
         opacity: 1 !important;
       }
       .rpp-pr-browse:hover { color: #b8963e !important; }
-      .rpp-pr-grid {
-        display: grid !important;
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 1rem !important;
-        list-style: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
       @media (max-width: 900px) {
         .rpp-pr-grid { grid-template-columns: repeat(2, 1fr) !important; }
       }
