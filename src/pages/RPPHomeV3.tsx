@@ -57,51 +57,47 @@ const RPPHomeV3 = () => {
             src="/hero-v2.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
             className="block w-full object-cover object-center"
-            style={{
-              height: "clamp(180px, 38vw, 520px)",
-            }}
+            style={{ height: "clamp(180px, 38vw, 520px)" }}
             loading="eager"
             decoding="async"
           />
-          {/* Logo overlay — hidden on very small screens to reduce clutter */}
+          {/* Logo overlay — contained within hero with padding on all sides */}
           <div
-            className="hidden sm:flex"
             style={{
               position: "absolute",
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
               width: "100%",
-              maxWidth: "90%",
-              flexDirection: "column",
+              padding: "0 8%",
+              display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              boxSizing: "border-box",
             }}
           >
             <img
               src="/rpp-logo-final.webp"
               alt="Real Property Planning"
               style={{
-                width: "min(780px, 93%)",
+                width: "clamp(160px, 50vw, 580px)",
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
-                marginBottom: "4rem",
               }}
             />
-          </div>
-          <div className="homepage-hero-tagline">
-            Estate & Probate Sales · Senior Transitions
-            <br />
-            Adult Family Home Marketplace
           </div>
         </div>
 
         {/* ── Orientation ──────────────────────────────────────────── */}
-        <section className="py-8 md:py-10 lg:py-12 bg-cream">
+        <section className="py-6 md:py-8 lg:py-10 bg-cream">
           <div className="w-full px-5 md:px-8">
             <div className="max-w-[820px] mx-auto text-center">
-              <p className="font-sans text-[12px] md:text-[13px] font-extrabold tracking-[0.18em] uppercase text-red-900 mb-4 md:mb-5">
+              {/* Tagline — moved from inside hero so it's always readable */}
+              <p className="font-sans text-[13px] md:text-[14px] font-extrabold tracking-[0.16em] uppercase text-navy mb-3">
+                Estate & Probate Sales · Senior Transitions · Adult Family Home Marketplace
+              </p>
+              <p className="font-sans text-[11px] md:text-[12px] font-extrabold tracking-[0.18em] uppercase text-red-900 mb-4 md:mb-5">
                 A Free-To-Use Hub · Built For Families · Trusted By Professionals
               </p>
               <p className="text-[22px] md:text-[26px] lg:text-[28px] text-navy font-medium leading-[1.55]">
@@ -214,15 +210,27 @@ const RPPHomeV3 = () => {
             </div>
 
             {/* ── Secondary cards: Cost of Care + AFH Club ─────────── */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {/* Cost of Care — image button */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
+              {/* Cost of Care — image button, matched height to AFH card */}
               <a href="/cost-of-care-calculator" className="group block" style={{ textDecoration: "none" }}>
-                <img
-                  src="/cost-of-care-button.png"
-                  alt="Cost of Care Calculator — compare Home Care, Assisted Living, Memory Care, Adult Family Homes, Nursing Homes, and Adult Day Care costs. Plan Ahead With Confidence."
-                  className="transition-transform duration-200 group-hover:-translate-y-1 w-full h-auto block"
-                  style={{ borderRadius: 10 }}
-                />
+                <div
+                  className="transition-transform duration-200 group-hover:-translate-y-1"
+                  style={{
+                    border: "2px solid #b8963e",
+                    borderRadius: 10,
+                    overflow: "hidden",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    backgroundColor: "#ffffff",
+                  }}
+                >
+                  <img
+                    src="/cost-of-care-button.png"
+                    alt="Cost of Care Calculator — compare Home Care, Assisted Living, Memory Care, Adult Family Homes, Nursing Homes, and Adult Day Care costs. Plan Ahead With Confidence."
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                </div>
               </a>
 
               {/* AFH Club */}
@@ -241,9 +249,11 @@ const RPPHomeV3 = () => {
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-                    <span style={{ fontSize: 32 }} aria-hidden="true">
-                      🏠
-                    </span>
+                    <img
+                      src="/afh-club-badge.webp"
+                      alt="AFH Club"
+                      style={{ width: 48, height: 48, objectFit: "contain", flexShrink: 0 }}
+                    />
                     <p
                       style={{
                         fontFamily: "Inter, system-ui, sans-serif",
