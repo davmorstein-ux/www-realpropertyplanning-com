@@ -261,7 +261,7 @@ const AFHROICalculator = () => {
         </div>
 
         {/* Calculator */}
-        <div ref={calcRef} style={{ background: "#f5f2ec", padding: "2.5rem 1.5rem 3rem" }}>
+        <div ref={calcRef} style={{ background: "#f5f2ec", padding: "2.5rem 1rem 3rem" }}>
           <div
             style={{
               maxWidth: 900,
@@ -269,7 +269,7 @@ const AFHROICalculator = () => {
               background: "#ffffff",
               border: `2px solid ${BLUE}40`,
               borderRadius: 14,
-              padding: "2rem",
+              padding: "1.5rem 1.25rem",
               boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
             }}
           >
@@ -310,7 +310,11 @@ const AFHROICalculator = () => {
                 <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${BLUE}30,transparent)` }} />
               </div>
               <div style={DV} />
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}>
+              {/* 2-col grid — stacks on mobile */}
+              <div
+                className="roi-grid2"
+                style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
+              >
                 <div>
                   <label style={LS}>Purchase price ($)</label>
                   <input type="number" id="r-price" placeholder="850000" style={IS} />
@@ -320,7 +324,11 @@ const AFHROICalculator = () => {
                   <input type="number" id="r-rate" placeholder="7.25" step="0.01" style={IS} />
                 </div>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}>
+              {/* Loan term — full width on mobile, half on desktop */}
+              <div
+                className="roi-grid2"
+                style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
+              >
                 <div>
                   <label style={LS}>Loan term (years)</label>
                   <select id="r-term" style={IS}>
@@ -400,7 +408,7 @@ const AFHROICalculator = () => {
                       color: BLUE,
                       fontWeight: 700,
                       whiteSpace: "nowrap",
-                      minWidth: 110,
+                      minWidth: 90,
                       textAlign: "right",
                     }}
                   >
@@ -420,7 +428,10 @@ const AFHROICalculator = () => {
                 <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${BLUE}30,transparent)` }} />
               </div>
               <div style={DV} />
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}>
+              <div
+                className="roi-grid2"
+                style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
+              >
                 <div>
                   <label style={LS}>Annual gross revenue ($)</label>
                   <input type="number" id="r-rev" placeholder="288000" style={IS} />
@@ -430,7 +441,7 @@ const AFHROICalculator = () => {
                   <input type="number" id="r-exp" placeholder="164000" style={IS} />
                 </div>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
+              <div className="roi-grid2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
                 <div>
                   <label style={LS}>Licensed capacity</label>
                   <select id="r-cap" style={IS}>
@@ -527,7 +538,11 @@ const AFHROICalculator = () => {
                 </div>
                 <div style={{ fontSize: 14, color: "#1a2744", marginTop: 8 }}>cash-on-cash return</div>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10, marginBottom: 14 }}>
+              {/* Results metric tiles — 3-col desktop, 2-col mobile */}
+              <div
+                className="roi-results-grid"
+                style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10, marginBottom: 14 }}
+              >
                 {[
                   ["Monthly cash flow", "r-cf"],
                   ["Annual NOI", "r-noi"],
@@ -651,6 +666,18 @@ const AFHROICalculator = () => {
         </div>
 
         <style>{`
+          /* Input grids: 2-col desktop → 1-col mobile */
+          .roi-grid2 { grid-template-columns: 1fr !important; }
+          @media (min-width: 520px) {
+            .roi-grid2 { grid-template-columns: 1fr 1fr !important; }
+          }
+
+          /* Results metric tiles: 3-col desktop → 2-col mobile */
+          .roi-results-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          @media (min-width: 560px) {
+            .roi-results-grid { grid-template-columns: repeat(3, 1fr) !important; }
+          }
+
           #calc-roi-btn { font-size: 20px !important; font-weight: 900 !important; }
           #r-occ, #r-cap { box-sizing: border-box !important; padding: 10px 13px !important; }
         `}</style>
