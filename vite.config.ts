@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import legacy from "@vitejs/plugin-legacy";
+
 import path from "path";
 import { mkdir, readFile, writeFile, stat } from "node:fs/promises";
 import { componentTagger } from "lovable-tagger";
@@ -968,9 +968,6 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    legacy({
-      targets: ["defaults", "not IE 11"],
-    }),
     ViteImageOptimizer({
       test: /\.(jpe?g|png|webp|svg)$/i,
       includePublic: true,
