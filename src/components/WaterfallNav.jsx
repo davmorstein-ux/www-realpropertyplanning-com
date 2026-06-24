@@ -14,13 +14,15 @@ const LEFT_GROUPS = [
     ],
   },
   {
-    label: "Financial & Valuation",
+    label: "Real Estate & Valuation",
     href: "/building-your-trusted-professional-team",
     items: [
       { name: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
       { name: "CPAs & Accountants", href: "/professionals/cpas" },
       { name: "Certified Appraisers", href: "/real-estate-appraiser" },
       { name: "Mortgage Lenders", href: "/mortgage-lenders" },
+      { name: "Real Estate Brokers", href: "/realtor" },
+      { name: "Estate Liquidators", href: "/estate-liquidators" },
     ],
   },
   {
@@ -33,50 +35,34 @@ const LEFT_GROUPS = [
       { name: "Senior Move Managers", href: "/senior-move-managers" },
     ],
   },
-  {
-    label: "Property & Transition",
-    href: "/building-your-trusted-professional-team",
-    items: [
-      { name: "Real Estate Brokers", href: "/realtor" },
-      { name: "Estate Liquidators", href: "/estate-liquidators" },
-    ],
-  },
 ];
 
 const RIGHT_GROUPS = [
   {
-    label: "Senior Housing",
-    href: "/articles/senior-housing-guide",
+    label: "Guides & Articles",
+    href: "/guides-and-resources",
     items: [
+      { name: "All Resources & Guides", href: "/guides-and-resources" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { name: "Senior Housing Options", href: "/articles/senior-housing-options" },
       { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
       { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
       { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
       { name: "Aging in Place", href: "/articles/aging-in-place" },
-    ],
-  },
-  {
-    label: "Property & Estate",
-    href: "/probate-estate-sales",
-    items: [
       { name: "Probate & Estate Sales", href: "/probate-estate-sales" },
-      { name: "Senior Home Sales", href: "/senior-transitions" },
       { name: "For Executors", href: "/executors" },
-      { name: "Executors, POAs & Trustees", href: "/executors" },
     ],
   },
   {
-    label: "Long-Term Care Options",
+    label: "Long-Term Care",
     href: "/long-term-care",
     items: [
-      { name: "Long-Term Care Options", href: "/long-term-care" },
+      { name: "Long-Term Care Overview", href: "/long-term-care" },
+      { name: "Nursing Homes", href: "/long-term-care/nursing-homes" },
+      { name: "Nurse Delegation", href: "/long-term-care/nurse-delegation" },
+      { name: "Medicaid & Long-Term Care", href: "/long-term-care/medicaid-and-long-term-care" },
+      { name: "WA Cares Fund", href: "/long-term-care/wa-cares" },
+      { name: "Hospital Discharge Planning", href: "/long-term-care/hospital-discharge-planning" },
     ],
-  },
-  {
-    label: "Articles",
-    href: "/articles",
-    items: [{ name: "Featured Articles", href: "/articles" }],
   },
   {
     label: "More",
@@ -84,6 +70,7 @@ const RIGHT_GROUPS = [
     items: [
       { name: "AFH Club", href: "/afh-club" },
       { name: "AFH Calculators", href: "/afh-club/calculators" },
+      { name: "Cost of Care Calculator", href: "/cost-of-care-calculator" },
       { name: "Resources", href: "/resources" },
       { name: "About", href: "/about" },
       { name: "Contact", href: "/contact" },
@@ -113,50 +100,6 @@ const CSS = `
     transition: background 0.3s ease;
   }
   .wf-trigger:hover { background: rgba(232,201,122,0.12); }
-
-  /* ── M≡NU word-mark ── */
-  .wf-menu-word {
-    display: inline-flex;
-    align-items: center;
-    gap: 0;
-    line-height: 1;
-    user-select: none;
-  }
-  .wf-menu-letter {
-    font-family: Georgia, serif;
-    font-weight: 300;
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #E8C97A;
-    line-height: 1;
-  }
-
-  /* The ≡ hamburger — sized to match the cap-height of the letters */
-  .wf-menu-e {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 10px;
-    height: 9px;          /* matches Georgia cap-height at 13px */
-    margin: 0 2px;
-    padding: 0;
-    vertical-align: middle;
-    position: relative;
-    top: 0px;
-    flex-shrink: 0;
-  }
-  .wf-menu-e span {
-    display: block;
-    height: 1.5px;
-    background: #E8C97A;
-    border-radius: 1px;
-    width: 100%;
-    transition: width 0.4s cubic-bezier(0.16,1,0.3,1);
-  }
-  /* middle line slightly shorter for classic hamburger look */
-  .wf-menu-e span:nth-child(2) { width: 70%; }
-  .wf-trigger:hover .wf-menu-e span { width: 100%; }
 
   .wf-overlay {
     position: fixed;
@@ -474,85 +417,27 @@ export default function WaterfallNav() {
           onClick={openPanel}
           title="Menu"
         >
+          {/* Hamburger icon only — no MENU text */}
           <span
             style={{
               display: "inline-flex",
-              alignItems: "center",
-              lineHeight: 1,
-              userSelect: "none",
-              letterSpacing: "0.18em",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              width: "22px",
+              height: "15px",
+              padding: 0,
+              flexShrink: 0,
             }}
           >
             <span
-              style={{
-                fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                fontWeight: 400,
-                fontSize: "20px",
-                textTransform: "uppercase",
-                color: "#E8C97A",
-                lineHeight: 1,
-                letterSpacing: "0.14em",
-              }}
-            >
-              M
-            </span>
+              style={{ display: "block", height: "2px", background: "#E8C97A", borderRadius: "1px", width: "100%" }}
+            />
             <span
-              style={{
-                display: "inline-flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                width: "18px",
-                height: "13px",
-                margin: "0 2px 0 3px",
-                padding: 0,
-                flexShrink: 0,
-                alignSelf: "center",
-              }}
-            >
-              <span
-                style={{
-                  display: "block",
-                  height: "2px",
-                  minHeight: "2px",
-                  background: "#E8C97A",
-                  borderRadius: "0",
-                  width: "100%",
-                }}
-              ></span>
-              <span
-                style={{
-                  display: "block",
-                  height: "2px",
-                  minHeight: "2px",
-                  background: "#E8C97A",
-                  borderRadius: "0",
-                  width: "75%",
-                }}
-              ></span>
-              <span
-                style={{
-                  display: "block",
-                  height: "2px",
-                  minHeight: "2px",
-                  background: "#E8C97A",
-                  borderRadius: "0",
-                  width: "100%",
-                }}
-              ></span>
-            </span>
+              style={{ display: "block", height: "2px", background: "#E8C97A", borderRadius: "1px", width: "75%" }}
+            />
             <span
-              style={{
-                fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                fontWeight: 400,
-                fontSize: "20px",
-                textTransform: "uppercase",
-                color: "#E8C97A",
-                lineHeight: 1,
-                letterSpacing: "0.14em",
-              }}
-            >
-              NU
-            </span>
+              style={{ display: "block", height: "2px", background: "#E8C97A", borderRadius: "1px", width: "100%" }}
+            />
           </span>
         </button>
       </div>
