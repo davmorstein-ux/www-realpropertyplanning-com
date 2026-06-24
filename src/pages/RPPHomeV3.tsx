@@ -53,7 +53,7 @@ const RPPHomeV3 = () => {
       <Header />
       <main id="main-content">
         {/* Hero image with logo + tagline overlay */}
-        <div style={{ position: "relative", width: "100%", lineHeight: 0 }}>
+        <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
           <img
             src="/hero-v2.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
@@ -131,14 +131,7 @@ const RPPHomeV3 = () => {
                 What brings you here today?
               </h2>
             </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(4,1fr)",
-                gap: "1.25rem",
-                marginBottom: "1.25rem",
-              }}
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
               {tiles.map(({ imgSrc, imgAlt, title, href, bgColor }) => (
                 <Link key={title} to={href} style={{ textDecoration: "none", display: "block" }}>
                   <div style={{ borderRadius: 10, overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.10)" }}>
@@ -191,7 +184,7 @@ const RPPHomeV3 = () => {
               ))}
             </div>
 
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <CostOfCareTeaser />
               <a
                 href="/afh-club"
@@ -208,28 +201,28 @@ const RPPHomeV3 = () => {
               >
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "1.25rem", marginBottom: "1rem" }}>
                   <p
-                      className="text-[28px] sm:text-[38px] lg:text-[52px]"
-                      style={{
-                        fontFamily: "Inter, system-ui, sans-serif",
-                        fontWeight: 800,
-                        color: "#1a5c58",
-                        margin: "0 0 0.4rem 0",
-                      }}
-                    >
-                      AFH Club
-                    </p>
+                    className="text-[28px] sm:text-[38px] lg:text-[52px]"
+                    style={{
+                      fontFamily: "Inter, system-ui, sans-serif",
+                      fontWeight: 800,
+                      color: "#1a5c58",
+                      margin: "0 0 0.4rem 0",
+                    }}
+                  >
+                    AFH Club
+                  </p>
 
-                    <p
-                      style={{
-                        fontFamily: "Inter, system-ui, sans-serif",
-                        fontSize: 16,
-                        fontWeight: 500,
-                        color: "#2c3e50",
-                        margin: 0,
-                      }}
-                    >
-                      The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
-                    </p>
+                  <p
+                    style={{
+                      fontFamily: "Inter, system-ui, sans-serif",
+                      fontSize: 16,
+                      fontWeight: 500,
+                      color: "#2c3e50",
+                      margin: 0,
+                    }}
+                  >
+                    The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
+                  </p>
                 </div>
 
                 <div style={{ display: "flex", justifyContent: "center" }}>
