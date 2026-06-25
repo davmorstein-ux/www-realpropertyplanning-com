@@ -1274,10 +1274,8 @@ const CostOfCareCalculator = () => {
               .coc-row3 { grid-template-columns: 1fr 1fr !important; }
             }
 
-            /* ── Care type toggle: 2-col mobile → 4-col at 560px ── */
-            @media (min-width: 560px) {
-              .coc-toggle-grid { grid-template-columns: repeat(4,1fr) !important; }
-            }
+            /* ── Care type toggle: 2-col at every size (wider tiles) ── */
+            .coc-toggle-grid { grid-template-columns: repeat(2,1fr) !important; }
 
             /* ── Planning Profile inner grid: 1-col mobile → 2-col at 520px ── */
             .coc-profile-grid { grid-template-columns: 1fr !important; }
