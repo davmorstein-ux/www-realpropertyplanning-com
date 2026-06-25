@@ -427,10 +427,10 @@ const CostOfCareCalculator = () => {
                     <button
                       onClick={() => setCurrentAge((a) => Math.max(18, a - 1))}
                       style={{
-                        width: 36,
-                        height: 36,
+                        width: 48,
+                        height: 48,
                         borderRadius: 8,
-                        fontSize: "18px !important" as any,
+                        fontSize: "28px",
                         fontWeight: 700,
                         color: "#1a2744",
                         background: "#f5f2ec",
@@ -445,17 +445,18 @@ const CostOfCareCalculator = () => {
                         background: "#f5f2ec",
                         border: "1px solid #ddd8cc",
                         borderRadius: 8,
-                        padding: "8px 24px",
+                        padding: "12px 28px",
                         textAlign: "center",
-                        minWidth: 110,
+                        minWidth: 140,
                       }}
                     >
                       <span
                         style={{
                           fontFamily: "'Courier New', monospace",
                           fontWeight: 700,
-                          fontSize: "24px !important" as any,
+                          fontSize: "42px",
                           color: TEAL,
+                          lineHeight: 1,
                         }}
                       >
                         {currentAge}
@@ -463,9 +464,10 @@ const CostOfCareCalculator = () => {
                       <span
                         style={{
                           fontFamily: "'Raleway', sans-serif",
-                          fontSize: "15px !important" as any,
+                          fontSize: "20px",
+                          fontWeight: 600,
                           color: "#1a2744",
-                          marginLeft: 6,
+                          marginLeft: 8,
                         }}
                       >
                         yrs old
@@ -474,10 +476,10 @@ const CostOfCareCalculator = () => {
                     <button
                       onClick={() => setCurrentAge((a) => Math.min(105, a + 1))}
                       style={{
-                        width: 36,
-                        height: 36,
+                        width: 48,
+                        height: 48,
                         borderRadius: 8,
-                        fontSize: "18px !important" as any,
+                        fontSize: "28px",
                         fontWeight: 700,
                         color: "#1a2744",
                         background: "#f5f2ec",
@@ -812,41 +814,42 @@ const CostOfCareCalculator = () => {
                   </div>
 
                   {/* LED digital readout */}
-                  <div
-                    style={{
-                      width: 140,
-                      height: 100,
-                      flexShrink: 0,
-                      background: "#0a0e14",
-                      borderRadius: 10,
-                      border: `2px solid ${ELECTRIC_BLUE}60`,
-                      boxShadow: `0 0 12px ${ELECTRIC_BLUE}40, inset 0 0 16px rgba(0,0,0,0.6)`,
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: 4,
-                    }}
-                  >
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
                     <div
                       style={{
-                        fontFamily: "'Courier New', monospace",
-                        fontWeight: 700,
-                        fontSize: "48px",
-                        color: ELECTRIC_BLUE,
-                        lineHeight: 1,
-                        textShadow: `0 0 10px ${ELECTRIC_BLUE}, 0 0 20px ${ELECTRIC_BLUE}80`,
-                        letterSpacing: "0.05em",
+                        width: 140,
+                        height: 100,
+                        flexShrink: 0,
+                        background: "#0a0e14",
+                        borderRadius: 10,
+                        border: `2px solid ${ELECTRIC_BLUE}60`,
+                        boxShadow: `0 0 12px ${ELECTRIC_BLUE}40, inset 0 0 16px rgba(0,0,0,0.6)`,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                       }}
                     >
-                      {inflationRate.toFixed(1)}
+                      <div
+                        style={{
+                          fontFamily: "'Courier New', monospace",
+                          fontWeight: 700,
+                          fontSize: "62px",
+                          color: ELECTRIC_BLUE,
+                          lineHeight: 1,
+                          textShadow: `0 0 10px ${ELECTRIC_BLUE}, 0 0 24px ${ELECTRIC_BLUE}80`,
+                          letterSpacing: "0.04em",
+                        }}
+                      >
+                        {inflationRate.toFixed(1)}
+                      </div>
                     </div>
                     <div
                       style={{
                         fontFamily: "'Courier New', monospace",
-                        fontSize: "14px",
-                        color: `${ELECTRIC_BLUE}cc`,
-                        letterSpacing: "0.15em",
+                        fontSize: "15px",
+                        fontWeight: 700,
+                        color: ELECTRIC_BLUE,
+                        letterSpacing: "0.2em",
                         textShadow: `0 0 6px ${ELECTRIC_BLUE}`,
                       }}
                     >
@@ -911,7 +914,7 @@ const CostOfCareCalculator = () => {
                   />
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <svg width="240" height="150" viewBox="0 0 260 168">
+                  <svg width="240" height="175" viewBox="0 0 260 185">
                     {Array.from({ length: 48 }).map((_, i) => {
                       const t0 = 180 - (i / 48) * 180;
                       const t1 = 180 - ((i + 1) / 48) * 180;
@@ -945,7 +948,7 @@ const CostOfCareCalculator = () => {
                     <circle cx={130} cy={140} r={9} fill="#f5f2ec" stroke="#ddd8cc" strokeWidth={2} />
                     <text
                       x={10}
-                      y={175}
+                      y={183}
                       textAnchor="start"
                       fill={ELECTRIC_BLUE}
                       fontWeight={700}
@@ -956,7 +959,7 @@ const CostOfCareCalculator = () => {
                     </text>
                     <text
                       x={250}
-                      y={175}
+                      y={183}
                       textAnchor="end"
                       fill={ELECTRIC_BLUE}
                       fontWeight={700}
