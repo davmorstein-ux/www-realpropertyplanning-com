@@ -391,7 +391,7 @@ const CostOfCareCalculator = () => {
             <div className="coc-row1" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14, marginBottom: 0 }}>
               {/* Planning Profile */}
               <div style={card}>
-                <div style={sectionLabel(TEAL)}>
+                <div style={sectionLabel(TEAL)} className="coc-section-title">
                   Planning Profile
                   <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
                 </div>
@@ -517,7 +517,7 @@ const CostOfCareCalculator = () => {
 
               {/* Care Type */}
               <div style={card}>
-                <div style={sectionLabel(TEAL)}>
+                <div style={sectionLabel(TEAL)} className="coc-section-title">
                   Select Care Type
                   <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
                 </div>
@@ -563,7 +563,7 @@ const CostOfCareCalculator = () => {
             <div className="coc-row2" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14, marginTop: 14 }}>
               {/* Care Timeline */}
               <div style={card}>
-                <div style={sectionLabel(TEAL)}>
+                <div style={sectionLabel(TEAL)} className="coc-section-title">
                   Care Timeline
                   <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
                 </div>
@@ -638,19 +638,14 @@ const CostOfCareCalculator = () => {
                         padding: "10px 14px",
                         textAlign: "center",
                         marginBottom: 10,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        gap: 2,
                       }}
                     >
                       <span
                         style={{
                           fontFamily: "'Courier New', monospace",
                           fontWeight: 700,
-                          fontSize: "22px",
+                          fontSize: "22px !important" as any,
                           color: TEAL,
-                          lineHeight: 1.2,
                         }}
                       >
                         {yearsOut === 0 ? "TODAY" : `IN ${yearsOut} YRS`}
@@ -660,8 +655,8 @@ const CostOfCareCalculator = () => {
                           fontSize: "17px",
                           fontWeight: 600,
                           color: "#374151",
+                          marginLeft: 8,
                           fontFamily: "'Raleway', sans-serif",
-                          lineHeight: 1.2,
                         }}
                       >
                         Age {ageAtCareStart}
@@ -721,7 +716,7 @@ const CostOfCareCalculator = () => {
                           fontFamily: "'Raleway', sans-serif",
                         }}
                       >
-                        Through age {ageAtCareEnd}
+                        Through Age {ageAtCareEnd}
                       </span>
                     </div>
                     <input
@@ -753,7 +748,7 @@ const CostOfCareCalculator = () => {
 
               {/* Inflation Rate */}
               <div style={{ ...card, display: "flex", flexDirection: "column" }}>
-                <div style={sectionLabel(TEAL)}>
+                <div style={sectionLabel(TEAL)} className="coc-section-title">
                   Inflation Rate
                   <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
                 </div>
@@ -1024,7 +1019,7 @@ const CostOfCareCalculator = () => {
             <div className="coc-row3" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14, marginTop: 14 }}>
               {/* Cost Intensity Gauge */}
               <div style={card}>
-                <div style={sectionLabel(ELECTRIC_BLUE)}>
+                <div style={sectionLabel(ELECTRIC_BLUE)} className="coc-section-title">
                   Cost Intensity Gauge
                   <span
                     style={{
