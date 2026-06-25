@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
   {
@@ -26,34 +21,78 @@ const faqs = [
 
 const HomepageFAQ = () => {
   return (
-    <section className="py-10 md:py-12 bg-secondary">
-      <div className="container px-5 md:px-8">
-        <div className="max-w-[960px] mx-auto">
-          <h2 className="font-serif text-navy mb-6 md:mb-7 text-center font-semibold text-[34px] md:text-[44px] leading-tight">
-            Common Questions
-          </h2>
-          <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
-            {faqs.map((faq, i) => (
-              <AccordionItem
-                key={i}
-                value={`faq-${i}`}
-                className="homepage-faq-item rounded-xl overflow-hidden transition-colors"
-                style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #C9A84C',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-                }}
-              >
-                <AccordionTrigger className="homepage-faq-trigger text-left px-5 md:px-6 py-4 md:py-5 min-h-[68px] gap-4 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:text-navy [&>svg]:shrink-0">
-                  <span className="text-base md:text-lg font-bold">{faq.q}</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-5 md:px-6 pb-5 md:pb-6 pt-0 text-foreground">
-                  <div className="homepage-faq-answer">{faq.a}</div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+    <section style={{ padding: "4rem 0 5rem", background: "#f5f2ec" }}>
+      <style>{`
+        .faq-heading {
+          font-family: 'Cormorant Garamond', Georgia, serif !important;
+          font-size: clamp(34px, 3.5vw, 48px) !important;
+          font-weight: 700 !important;
+          color: #1a2744 !important;
+          text-align: center !important;
+          margin: 0 0 2.5rem !important;
+          line-height: 1.15 !important;
+        }
+        .faq-item {
+          background: #ffffff !important;
+          border: 2px solid #c9a84c !important;
+          border-left: 6px solid #c9a84c !important;
+          border-radius: 10px !important;
+          overflow: hidden !important;
+          box-shadow: 0 2px 12px rgba(0,0,0,0.07) !important;
+          transition: box-shadow 0.2s ease, border-color 0.2s ease !important;
+          margin-bottom: 1.1rem !important;
+        }
+        .faq-item:hover {
+          box-shadow: 0 6px 24px rgba(0,0,0,0.12) !important;
+          border-color: #b8963e !important;
+        }
+        .faq-item [data-state="open"] {
+          border-left-color: #1a2744 !important;
+        }
+        .homepage-faq-trigger {
+          padding: 1.5rem 1.75rem !important;
+          min-height: 80px !important;
+          gap: 1rem !important;
+        }
+        .homepage-faq-trigger span {
+          font-family: 'Cormorant Garamond', Georgia, serif !important;
+          font-size: 24px !important;
+          font-weight: 700 !important;
+          color: #1a2744 !important;
+          line-height: 1.35 !important;
+          text-align: left !important;
+        }
+        .homepage-faq-trigger [data-lucide], .homepage-faq-trigger svg {
+          width: 28px !important;
+          height: 28px !important;
+          color: #b8963e !important;
+          flex-shrink: 0 !important;
+        }
+        .homepage-faq-answer {
+          font-family: Inter, system-ui, sans-serif !important;
+          font-size: 20px !important;
+          color: #2d3a4a !important;
+          line-height: 1.75 !important;
+          padding: 0 1.75rem 1.75rem !important;
+          border-top: 1px solid #e8e0d0 !important;
+          padding-top: 1.25rem !important;
+        }
+      `}</style>
+
+      <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
+        <h2 className="faq-heading">Common Questions</h2>
+        <Accordion type="single" collapsible>
+          {faqs.map((faq, i) => (
+            <AccordionItem key={i} value={`faq-${i}`} className="faq-item" style={{ border: "none" }}>
+              <AccordionTrigger className="homepage-faq-trigger">
+                <span>{faq.q}</span>
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="homepage-faq-answer">{faq.a}</div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );
