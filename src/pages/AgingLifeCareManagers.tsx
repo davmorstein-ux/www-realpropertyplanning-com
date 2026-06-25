@@ -71,7 +71,7 @@ const AgingLifeCareManagers = () => (
               logoAlt="Family First at Home logo"
               phone="(866) 412-3861"
               email="intake@familyfirstathome.com"
-              website="https://www.familyfirstathome.com"
+              website="https://familyfirstathome.com"
               bio={FAMILY_FIRST_BIO}
               specialty="Personalized care management and in-home support for older adults and families across Washington."
             />
