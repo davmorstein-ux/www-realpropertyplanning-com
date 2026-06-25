@@ -793,89 +793,147 @@ const CostOfCareCalculator = () => {
                   Use the knob or bars below to set your projection rate.
                 </p>
 
-                {/* Knob (left) + LED readout (right) */}
+                {/* Knob (left) + LED readout (right) — top-aligned */}
                 <div
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     justifyContent: "center",
                     gap: 28,
-                    marginBottom: 24,
+                    marginBottom: 8,
                     marginTop: 8,
                   }}
                 >
-                  {/* Knob */}
-                  <div
-                    ref={knobRef}
-                    onPointerDown={handleKnobPointerDown}
-                    onPointerMove={handleKnobPointerMove}
-                    style={{
-                      width: 140,
-                      height: 140,
-                      borderRadius: "50%",
-                      position: "relative",
-                      flexShrink: 0,
-                      cursor: "grab",
-                      touchAction: "none",
-                      background: "radial-gradient(circle at 32% 28%, #e8e2d9, #c8c0b0 55%, #a8a099 80%)",
-                      boxShadow: "0 4px 12px rgba(0,0,0,0.15), 0 0 0 3px #f5f2ec, 0 0 0 4px #ddd8cc",
-                    }}
-                  >
+                  {/* Knob + +/- buttons below */}
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
                     <div
+                      ref={knobRef}
+                      onPointerDown={handleKnobPointerDown}
+                      onPointerMove={handleKnobPointerMove}
                       style={{
-                        position: "absolute",
-                        inset: 6,
+                        width: 140,
+                        height: 140,
                         borderRadius: "50%",
-                        background:
-                          "repeating-conic-gradient(from 0deg, rgba(255,255,255,0.15) 0deg 3deg, transparent 3deg 9deg)",
-                        pointerEvents: "none",
+                        position: "relative",
+                        flexShrink: 0,
+                        cursor: "grab",
+                        touchAction: "none",
+                        background: "radial-gradient(circle at 32% 28%, #e8e2d9, #c8c0b0 55%, #a8a099 80%)",
+                        boxShadow: "0 4px 12px rgba(0,0,0,0.15), 0 0 0 3px #f5f2ec, 0 0 0 4px #ddd8cc",
                       }}
-                    />
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "50%",
-                        left: "50%",
-                        width: 3,
-                        height: "38%",
-                        background: `linear-gradient(180deg,${TEAL_LIGHT},${TEAL})`,
-                        borderRadius: "3px 3px 0 0",
-                        transformOrigin: "50% 100%",
-                        transform: `translate(-50%, -100%) rotate(${KNOB_TICK_ANGLES[inflationIndex]}deg)`,
-                        pointerEvents: "none",
-                      }}
-                    />
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "50%",
-                        left: "50%",
-                        width: 10,
-                        height: 10,
-                        borderRadius: "50%",
-                        background: TEAL,
-                        transform: "translate(-50%, -50%)",
-                        pointerEvents: "none",
-                        zIndex: 2,
-                      }}
-                    />
+                    >
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 6,
+                          borderRadius: "50%",
+                          background:
+                            "repeating-conic-gradient(from 0deg, rgba(255,255,255,0.15) 0deg 3deg, transparent 3deg 9deg)",
+                          pointerEvents: "none",
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          width: 3,
+                          height: "38%",
+                          background: `linear-gradient(180deg,${TEAL_LIGHT},${TEAL})`,
+                          borderRadius: "3px 3px 0 0",
+                          transformOrigin: "50% 100%",
+                          transform: `translate(-50%, -100%) rotate(${KNOB_TICK_ANGLES[inflationIndex]}deg)`,
+                          pointerEvents: "none",
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          width: 10,
+                          height: 10,
+                          borderRadius: "50%",
+                          background: TEAL,
+                          transform: "translate(-50%, -50%)",
+                          pointerEvents: "none",
+                          zIndex: 2,
+                        }}
+                      />
+                    </div>
+                    {/* − / + buttons under knob */}
+                    <div style={{ display: "flex", gap: 12 }}>
+                      <button
+                        onClick={() =>
+                          setInflationRate((r) => {
+                            const i = INFLATION_OPTIONS.indexOf(r);
+                            return i > 0 ? INFLATION_OPTIONS[i - 1] : r;
+                          })
+                        }
+                        aria-label="Decrease inflation rate"
+                        style={{
+                          width: 52,
+                          height: 52,
+                          borderRadius: 8,
+                          fontSize: "28px",
+                          fontWeight: 700,
+                          color: "#1a2744",
+                          background: "#f5f2ec",
+                          border: "2px solid #ddd8cc",
+                          cursor: "pointer",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          lineHeight: 1,
+                          fontFamily: "system-ui, sans-serif",
+                        }}
+                      >
+                        −
+                      </button>
+                      <button
+                        onClick={() =>
+                          setInflationRate((r) => {
+                            const i = INFLATION_OPTIONS.indexOf(r);
+                            return i < INFLATION_OPTIONS.length - 1 ? INFLATION_OPTIONS[i + 1] : r;
+                          })
+                        }
+                        aria-label="Increase inflation rate"
+                        style={{
+                          width: 52,
+                          height: 52,
+                          borderRadius: 8,
+                          fontSize: "28px",
+                          fontWeight: 700,
+                          color: "#1a2744",
+                          background: "#f5f2ec",
+                          border: "2px solid #ddd8cc",
+                          cursor: "pointer",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          lineHeight: 1,
+                          fontFamily: "system-ui, sans-serif",
+                        }}
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
 
-                  {/* LED digital readout */}
-                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
+                  {/* LED digital readout + % / YR */}
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
                     <div
                       style={{
                         width: 220,
                         height: 140,
                         flexShrink: 0,
-                        background: "#0a0e14",
+                        background: "#050810",
                         borderRadius: 12,
-                        border: `2px solid ${ELECTRIC_BLUE}60`,
-                        boxShadow: `0 0 14px ${ELECTRIC_BLUE}40, inset 0 0 18px rgba(0,0,0,0.6)`,
+                        border: "2px solid #00aaff",
+                        boxShadow: "0 0 18px #00aaff60, 0 0 40px #00aaff20, inset 0 0 20px rgba(0,0,0,0.8)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        padding: "0 14px",
                       }}
                     >
                       <div
@@ -884,10 +942,10 @@ const CostOfCareCalculator = () => {
                           fontFamily: "'Courier New', monospace",
                           fontWeight: 900,
                           fontSize: "110px",
-                          color: ELECTRIC_BLUE,
+                          color: "#00ccff",
                           lineHeight: 1,
-                          textShadow: `0 0 4px ${ELECTRIC_BLUE}`,
-                          letterSpacing: "-0.02em",
+                          textShadow: "0 0 8px #00ccff, 0 0 20px #00aaff",
+                          letterSpacing: "-0.05em",
                         }}
                       >
                         {inflationRate.toFixed(1)}
@@ -896,11 +954,11 @@ const CostOfCareCalculator = () => {
                     <div
                       style={{
                         fontFamily: "'Courier New', monospace",
-                        fontSize: "20px",
-                        fontWeight: 700,
-                        color: ELECTRIC_BLUE,
-                        letterSpacing: "0.22em",
-                        textShadow: `0 0 6px ${ELECTRIC_BLUE}`,
+                        fontSize: "28px",
+                        fontWeight: 800,
+                        color: "#00ccff",
+                        letterSpacing: "0.2em",
+                        textShadow: "0 0 8px #00ccff, 0 0 16px #00aaff",
                       }}
                     >
                       % / YR
