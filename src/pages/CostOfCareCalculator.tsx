@@ -814,7 +814,7 @@ const CostOfCareCalculator = () => {
                   {/* LED digital readout */}
                   <div
                     style={{
-                      width: 100,
+                      width: 140,
                       height: 100,
                       flexShrink: 0,
                       background: "#0a0e14",
@@ -832,7 +832,7 @@ const CostOfCareCalculator = () => {
                       style={{
                         fontFamily: "'Courier New', monospace",
                         fontWeight: 700,
-                        fontSize: "36px",
+                        fontSize: "48px",
                         color: ELECTRIC_BLUE,
                         lineHeight: 1,
                         textShadow: `0 0 10px ${ELECTRIC_BLUE}, 0 0 20px ${ELECTRIC_BLUE}80`,
@@ -844,9 +844,9 @@ const CostOfCareCalculator = () => {
                     <div
                       style={{
                         fontFamily: "'Courier New', monospace",
-                        fontSize: "13px",
+                        fontSize: "14px",
                         color: `${ELECTRIC_BLUE}cc`,
-                        letterSpacing: "0.1em",
+                        letterSpacing: "0.15em",
                         textShadow: `0 0 6px ${ELECTRIC_BLUE}`,
                       }}
                     >
@@ -945,7 +945,7 @@ const CostOfCareCalculator = () => {
                     <circle cx={130} cy={140} r={9} fill="#f5f2ec" stroke="#ddd8cc" strokeWidth={2} />
                     <text
                       x={10}
-                      y={162}
+                      y={175}
                       textAnchor="start"
                       fill={ELECTRIC_BLUE}
                       fontWeight={700}
@@ -956,7 +956,7 @@ const CostOfCareCalculator = () => {
                     </text>
                     <text
                       x={250}
-                      y={162}
+                      y={175}
                       textAnchor="end"
                       fill={ELECTRIC_BLUE}
                       fontWeight={700}
@@ -972,11 +972,16 @@ const CostOfCareCalculator = () => {
                       color: "#1a2744",
                       textAlign: "center",
                       fontFamily: "'Raleway', sans-serif",
-                      marginTop: 4,
+                      marginTop: 16,
+                      lineHeight: 1.5,
                     }}
                   >
-                    <strong style={{ color: ELECTRIC_BLUE }}>{careType.label}</strong> —{" "}
-                    <strong>{gaugeLabel.toLowerCase()}</strong>
+                    <div>
+                      <strong style={{ color: ELECTRIC_BLUE }}>{careType.label}</strong>
+                    </div>
+                    <div>
+                      <strong>{gaugeLabel.replace("washington", "Washington")}</strong>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1262,8 +1267,6 @@ const CostOfCareCalculator = () => {
             /* ── Outer row grids: 1-col mobile → 2-col at 640px ── */
             @media (min-width: 640px) {
               .coc-row1 { grid-template-columns: 1fr 1fr !important; }
-            }
-            @media (min-width: 800px) {
               .coc-row2 { grid-template-columns: 1fr 1fr !important; }
               .coc-row3 { grid-template-columns: 1fr 1fr !important; }
             }
