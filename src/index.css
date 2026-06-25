@@ -3249,14 +3249,20 @@ main .rpp-hero-band-text,
   box-sizing: border-box !important;
 }
 
-/* ── Homepage Orientation section — beat main p !important font-size floor ── */
-/* Must be at the very end of this file and use higher specificity than "main p" */
-main #rpp-orientation p:first-of-type {
-  font-size: clamp(15px, 1.4vw, 18px) !important;
+/* ── Homepage Orientation section — hardcoded sizes, beats all other rules ── */
+main #rpp-orientation p,
+main #rpp-orientation p:first-of-type,
+main #rpp-orientation p:last-of-type,
+main #rpp-orientation div,
+#rpp-orientation p,
+#rpp-orientation div {
+  font-size: 22px !important;
   line-height: 1.5 !important;
-  margin-bottom: 2rem !important;
 }
-main #rpp-orientation p:last-of-type {
-  font-size: clamp(24px, 3vw, 34px) !important;
+main #rpp-orientation p:last-of-type,
+main #rpp-orientation div:last-of-type,
+#rpp-orientation p:last-of-type,
+#rpp-orientation div:last-of-type {
+  font-size: 32px !important;
   line-height: 1.6 !important;
 }
