@@ -3257,8 +3257,9 @@ main .rpp-hero-band-text,
 #coc-led-number {
   font-size: 110px !important;
   line-height: 1 !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: -0.05em !important;
   font-weight: 900 !important;
+  color: #00ccff !important;
 }
 
 /* Homepage Orientation section — beat main p !important floor */
