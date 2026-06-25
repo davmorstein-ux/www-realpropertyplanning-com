@@ -3254,12 +3254,19 @@ main .rpp-hero-band-text,
    Beat: main * { font-size: max(1em, 14px) }
    ════════════════════════════════════════════════════════════ */
 
-/* Cost of Care Calculator — section title labels */
+/* Cost of Care Calculator — section tile titles */
 .coc-section-title,
 .coc-section-title * {
   font-size: 18px !important;
   font-weight: 900 !important;
   letter-spacing: 0.12em !important;
+}
+
+/* Remove underline from all headings (prevents gold decorative div appearing as underline) */
+main h1,
+main h2,
+main h3 {
+  text-decoration: none !important;
 }
 
 /* LED inflation rate number */
