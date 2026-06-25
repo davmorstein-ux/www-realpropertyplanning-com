@@ -62,15 +62,15 @@ const AgingLifeCareManagers = () => (
             />
 
             <ProviderTile
-              name="Nicole Amico Kane"
-              title="Care Manager"
+              name="Jennipher Ama"
+              title="President, RN, CMC"
               company="Family First at Home"
               photo={jennipherPhoto.url}
-              photoAlt="Photo of provider at Family First at Home"
+              photoAlt="Photo of Jennipher Ama, President of Family First at Home"
               logo={familyFirstLogo.url}
               logoAlt="Family First at Home logo"
-              phone="(425) 454-0404"
-              email="nicole@familyfirstathome.com"
+              phone="(866) 412-3861"
+              email="intake@familyfirstathome.com"
               website="https://www.familyfirstathome.com"
               bio={FAMILY_FIRST_BIO}
               specialty="Personalized care management and in-home support for older adults and families across Washington."
