@@ -90,13 +90,13 @@ const RPPHomeV3 = () => {
         </div>
 
         {/* ── Orientation ──────────────────────────────────────────── */}
-        <section className="py-6 md:py-8 lg:py-10 bg-cream">
+        <section className="py-8 md:py-10 lg:py-12 bg-cream">
           <div className="w-full px-5 md:px-8">
             <div className="max-w-[820px] mx-auto text-center">
-              <p className="font-sans text-[12px] md:text-[13px] font-extrabold tracking-[0.18em] uppercase text-red-900 mb-3 md:mb-4">
+              <p className="font-sans text-[15px] md:text-[16px] font-extrabold tracking-[0.18em] uppercase text-red-900 mb-6 md:mb-8">
                 A Free-To-Use Hub · Built For Families · Trusted By Professionals
               </p>
-              <p className="text-[20px] md:text-[26px] lg:text-[28px] text-navy font-medium leading-[1.5]">
+              <p className="text-[22px] md:text-[28px] lg:text-[32px] text-navy font-medium leading-[1.6]">
                 Connecting families, seniors, and professionals with the right people and resources.
               </p>
             </div>
