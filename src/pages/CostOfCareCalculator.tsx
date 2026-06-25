@@ -427,15 +427,19 @@ const CostOfCareCalculator = () => {
                     <button
                       onClick={() => setCurrentAge((a) => Math.max(18, a - 1))}
                       style={{
-                        width: 48,
-                        height: 48,
+                        width: 52,
+                        height: 52,
                         borderRadius: 8,
-                        fontSize: "28px",
+                        fontSize: "32px",
                         fontWeight: 700,
                         color: "#1a2744",
                         background: "#f5f2ec",
                         border: "1px solid #ddd8cc",
                         cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
                       }}
                     >
                       −
@@ -443,20 +447,25 @@ const CostOfCareCalculator = () => {
                     <div
                       style={{
                         background: "#f5f2ec",
-                        border: "1px solid #ddd8cc",
+                        border: "2px solid #ddd8cc",
                         borderRadius: 8,
-                        padding: "12px 28px",
+                        padding: "10px 20px",
                         textAlign: "center",
-                        minWidth: 140,
+                        flex: 1,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: 4,
                       }}
                     >
                       <span
                         style={{
                           fontFamily: "'Courier New', monospace",
                           fontWeight: 700,
-                          fontSize: "42px",
+                          fontSize: "52px",
                           color: TEAL,
                           lineHeight: 1,
+                          display: "block",
                         }}
                       >
                         {currentAge}
@@ -464,10 +473,11 @@ const CostOfCareCalculator = () => {
                       <span
                         style={{
                           fontFamily: "'Raleway', sans-serif",
-                          fontSize: "20px",
+                          fontSize: "16px",
                           fontWeight: 600,
-                          color: "#1a2744",
-                          marginLeft: 8,
+                          color: "#5a6a7a",
+                          letterSpacing: "0.06em",
+                          textTransform: "uppercase",
                         }}
                       >
                         yrs old
@@ -476,15 +486,19 @@ const CostOfCareCalculator = () => {
                     <button
                       onClick={() => setCurrentAge((a) => Math.min(105, a + 1))}
                       style={{
-                        width: 48,
-                        height: 48,
+                        width: 52,
+                        height: 52,
                         borderRadius: 8,
-                        fontSize: "28px",
+                        fontSize: "32px",
                         fontWeight: 700,
                         color: "#1a2744",
                         background: "#f5f2ec",
                         border: "1px solid #ddd8cc",
                         cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
                       }}
                     >
                       +
@@ -511,12 +525,17 @@ const CostOfCareCalculator = () => {
                         key={c.id}
                         onClick={() => setCareTypeId(c.id)}
                         style={{
-                          padding: "10px 8px",
+                          padding: "14px 6px",
                           borderRadius: 8,
                           textAlign: "center",
-                          fontSize: "15px !important" as any,
+                          fontSize: "15px",
                           fontWeight: 700,
                           fontFamily: "'Raleway', sans-serif",
+                          lineHeight: 1.25,
+                          minHeight: 64,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
                           color: active ? "#ffffff" : "#1a2744",
                           background: active ? color : "#f5f2ec",
                           border: `1px solid ${active ? color : "#ddd8cc"}`,
@@ -769,7 +788,7 @@ const CostOfCareCalculator = () => {
 
                 {/* Knob (left) + LED readout (right) */}
                 <div
-                  style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, marginBottom: 28 }}
+                  style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 28, marginBottom: 24 }}
                 >
                   {/* Knob */}
                   <div
@@ -777,8 +796,8 @@ const CostOfCareCalculator = () => {
                     onPointerDown={handleKnobPointerDown}
                     onPointerMove={handleKnobPointerMove}
                     style={{
-                      width: 100,
-                      height: 100,
+                      width: 140,
+                      height: 140,
                       borderRadius: "50%",
                       position: "relative",
                       flexShrink: 0,
@@ -801,15 +820,29 @@ const CostOfCareCalculator = () => {
                     <div
                       style={{
                         position: "absolute",
-                        top: "8%",
+                        top: "50%",
                         left: "50%",
-                        width: 4,
-                        height: "30%",
+                        width: 3,
+                        height: "38%",
                         background: `linear-gradient(180deg,${TEAL_LIGHT},${TEAL})`,
-                        borderRadius: 3,
-                        transformOrigin: "50% 90%",
-                        transform: `translateX(-50%) rotate(${KNOB_TICK_ANGLES[inflationIndex]}deg)`,
+                        borderRadius: "3px 3px 0 0",
+                        transformOrigin: "50% 100%",
+                        transform: `translate(-50%, -100%) rotate(${KNOB_TICK_ANGLES[inflationIndex]}deg)`,
                         pointerEvents: "none",
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        width: 10,
+                        height: 10,
+                        borderRadius: "50%",
+                        background: TEAL,
+                        transform: "translate(-50%, -50%)",
+                        pointerEvents: "none",
+                        zIndex: 2,
                       }}
                     />
                   </div>
