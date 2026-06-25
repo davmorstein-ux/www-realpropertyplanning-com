@@ -374,8 +374,11 @@ const CostOfCareCalculator = () => {
         </section>
 
         {/* Calculator */}
-        <section className="coc-no-print" style={{ background: "#f5f2ec", padding: "40px 24px 72px" }}>
-          <div style={{ maxWidth: 900, margin: "0 auto" }}>
+        <section
+          className="coc-no-print"
+          style={{ background: "#f5f2ec", padding: "40px 24px 72px", width: "100%", boxSizing: "border-box" }}
+        >
+          <div style={{ maxWidth: 900, margin: "0 auto", width: "100%", boxSizing: "border-box" }}>
             {/* Row 1: Planning Profile + Care Type side by side */}
             <div className="coc-row1" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14, marginBottom: 0 }}>
               {/* Planning Profile */}
@@ -763,13 +766,14 @@ const CostOfCareCalculator = () => {
                     onPointerDown={handleKnobPointerDown}
                     onPointerMove={handleKnobPointerMove}
                     style={{
-                      width: 80,
-                      height: 80,
+                      width: 100,
+                      height: 100,
                       borderRadius: "50%",
                       position: "relative",
-                      marginBottom: 36,
+                      marginBottom: 52,
                       cursor: "grab",
                       touchAction: "none",
+                      overflow: "visible",
                       background: "radial-gradient(circle at 32% 28%, #e8e2d9, #c8c0b0 55%, #a8a099 80%)",
                       boxShadow: "0 4px 12px rgba(0,0,0,0.15), 0 0 0 3px #f5f2ec, 0 0 0 4px #ddd8cc",
                     }}
@@ -777,7 +781,7 @@ const CostOfCareCalculator = () => {
                     <div
                       style={{
                         position: "absolute",
-                        inset: 4,
+                        inset: 6,
                         borderRadius: "50%",
                         background:
                           "repeating-conic-gradient(from 0deg, rgba(255,255,255,0.15) 0deg 3deg, transparent 3deg 9deg)",
@@ -802,7 +806,7 @@ const CostOfCareCalculator = () => {
                       if (rate % 1 !== 0) return null;
                       const angle = KNOB_TICK_ANGLES[i];
                       const rad = (angle * Math.PI) / 180;
-                      const r = 68;
+                      const r = 72;
                       return (
                         <button
                           key={rate}
