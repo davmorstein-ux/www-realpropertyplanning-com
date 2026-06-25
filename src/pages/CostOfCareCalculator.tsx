@@ -763,8 +763,8 @@ const CostOfCareCalculator = () => {
                     onPointerDown={handleKnobPointerDown}
                     onPointerMove={handleKnobPointerMove}
                     style={{
-                      width: 100,
-                      height: 100,
+                      width: 80,
+                      height: 80,
                       borderRadius: "50%",
                       position: "relative",
                       marginBottom: 36,
@@ -777,7 +777,7 @@ const CostOfCareCalculator = () => {
                     <div
                       style={{
                         position: "absolute",
-                        inset: 6,
+                        inset: 4,
                         borderRadius: "50%",
                         background:
                           "repeating-conic-gradient(from 0deg, rgba(255,255,255,0.15) 0deg 3deg, transparent 3deg 9deg)",
@@ -802,7 +802,7 @@ const CostOfCareCalculator = () => {
                       if (rate % 1 !== 0) return null;
                       const angle = KNOB_TICK_ANGLES[i];
                       const rad = (angle * Math.PI) / 180;
-                      const r = 56;
+                      const r = 68;
                       return (
                         <button
                           key={rate}
@@ -1245,6 +1245,8 @@ const CostOfCareCalculator = () => {
             /* ── Outer row grids: 1-col mobile → 2-col at 640px ── */
             @media (min-width: 640px) {
               .coc-row1 { grid-template-columns: 1fr 1fr !important; }
+            }
+            @media (min-width: 800px) {
               .coc-row2 { grid-template-columns: 1fr 1fr !important; }
               .coc-row3 { grid-template-columns: 1fr 1fr !important; }
             }
