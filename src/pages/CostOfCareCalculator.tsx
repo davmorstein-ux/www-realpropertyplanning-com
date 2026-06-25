@@ -107,9 +107,9 @@ const SHORT_CARE_LABELS: Record<string, string> = {
   "adult-family-home": "Adult Family Home",
   "assisted-living": "Assisted Living",
   "memory-care": "Memory Care",
-  "nursing-semi": "Nursing — Semi",
-  "nursing-private": "Nursing — Private",
-  ccrc: "CCRC",
+  "nursing-semi": "Nursing Home Shared Room",
+  "nursing-private": "Nursing Home Private Room",
+  ccrc: "CCRC / Life Plan",
 };
 
 const PLANNING_FOR_OPTIONS = [
@@ -797,7 +797,7 @@ const CostOfCareCalculator = () => {
                 <div
                   style={{
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "center",
                     justifyContent: "center",
                     gap: 28,
                     marginBottom: 24,
@@ -815,7 +815,6 @@ const CostOfCareCalculator = () => {
                       borderRadius: "50%",
                       position: "relative",
                       flexShrink: 0,
-                      marginTop: 0,
                       cursor: "grab",
                       touchAction: "none",
                       background: "radial-gradient(circle at 32% 28%, #e8e2d9, #c8c0b0 55%, #a8a099 80%)",
@@ -894,22 +893,19 @@ const CostOfCareCalculator = () => {
                         {inflationRate.toFixed(1)}
                       </div>
                     </div>
+                    <div
+                      style={{
+                        fontFamily: "'Courier New', monospace",
+                        fontSize: "20px",
+                        fontWeight: 700,
+                        color: ELECTRIC_BLUE,
+                        letterSpacing: "0.22em",
+                        textShadow: `0 0 6px ${ELECTRIC_BLUE}`,
+                      }}
+                    >
+                      % / YR
+                    </div>
                   </div>
-                </div>
-                {/* % / YR centered below knob + LED */}
-                <div style={{ textAlign: "center", marginTop: 10, marginBottom: 4 }}>
-                  <span
-                    style={{
-                      fontFamily: "'Courier New', monospace",
-                      fontSize: "26px",
-                      fontWeight: 800,
-                      color: ELECTRIC_BLUE,
-                      letterSpacing: "0.18em",
-                      textShadow: `0 0 6px ${ELECTRIC_BLUE}`,
-                    }}
-                  >
-                    % / YR
-                  </span>
                 </div>
 
                 {/* Bar graph — red fills from left as rate increases, no % labels */}
@@ -1109,10 +1105,10 @@ const CostOfCareCalculator = () => {
                   >
                     <div
                       style={{
-                        fontSize: "16px",
+                        fontSize: "13px !important" as any,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase" as const,
-                        fontWeight: 800,
+                        fontWeight: 700,
                         marginBottom: 6,
                         color: "#1a2744",
                         fontFamily: "'Raleway', sans-serif",
@@ -1135,9 +1131,8 @@ const CostOfCareCalculator = () => {
                     </div>
                     <div
                       style={{
-                        fontSize: "16px",
-                        fontWeight: 600,
-                        color: "#374151",
+                        fontSize: "13px !important" as any,
+                        color: "#5a6a7a",
                         fontFamily: "'Raleway', sans-serif",
                       }}
                     >
@@ -1150,15 +1145,15 @@ const CostOfCareCalculator = () => {
                       padding: "16px 12px",
                       textAlign: "center",
                       background: "#f5f2ec",
-                      border: "1px solid #ddd8cc",
+                      border: `2px solid ${TEAL}50`,
                     }}
                   >
                     <div
                       style={{
-                        fontSize: "16px",
+                        fontSize: "13px !important" as any,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase" as const,
-                        fontWeight: 800,
+                        fontWeight: 700,
                         marginBottom: 6,
                         color: "#1a2744",
                         fontFamily: "'Raleway', sans-serif",
@@ -1181,9 +1176,8 @@ const CostOfCareCalculator = () => {
                     </div>
                     <div
                       style={{
-                        fontSize: "16px",
-                        fontWeight: 600,
-                        color: "#374151",
+                        fontSize: "13px !important" as any,
+                        color: "#5a6a7a",
                         fontFamily: "'Raleway', sans-serif",
                       }}
                     >
@@ -1203,11 +1197,11 @@ const CostOfCareCalculator = () => {
                 >
                   <div
                     style={{
-                      fontSize: "16px",
-                      letterSpacing: "0.10em",
+                      fontSize: "13px !important" as any,
+                      letterSpacing: "0.12em",
                       textTransform: "uppercase" as const,
                       color: "#1a2744",
-                      fontWeight: 800,
+                      fontWeight: 700,
                       fontFamily: "'Raleway', sans-serif",
                       marginBottom: 6,
                     }}
@@ -1226,9 +1220,8 @@ const CostOfCareCalculator = () => {
                   </div>
                   <div
                     style={{
-                      fontSize: "16px",
-                      fontWeight: 600,
-                      color: "#374151",
+                      fontSize: "13px !important" as any,
+                      color: "#5a6a7a",
                       fontFamily: "'Raleway', sans-serif",
                       marginTop: 4,
                     }}
