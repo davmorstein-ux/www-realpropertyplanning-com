@@ -96,7 +96,7 @@ const RPPHomeV3 = () => {
               <div
                 style={{
                   fontFamily: "Inter, system-ui, sans-serif",
-                  fontSize: "clamp(16px, 1.6vw, 20px)",
+                  fontSize: "22px",
                   fontWeight: 800,
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
@@ -109,7 +109,7 @@ const RPPHomeV3 = () => {
               </div>
               <div
                 style={{
-                  fontSize: "clamp(24px, 3vw, 34px)",
+                  fontSize: "32px",
                   color: "#1a2744",
                   fontWeight: 500,
                   lineHeight: 1.6,
