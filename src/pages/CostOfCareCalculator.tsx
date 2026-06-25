@@ -814,29 +814,30 @@ const CostOfCareCalculator = () => {
                   </div>
 
                   {/* LED digital readout */}
-                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
                     <div
                       style={{
-                        width: 140,
-                        height: 100,
+                        width: 220,
+                        height: 140,
                         flexShrink: 0,
                         background: "#0a0e14",
-                        borderRadius: 10,
+                        borderRadius: 12,
                         border: `2px solid ${ELECTRIC_BLUE}60`,
-                        boxShadow: `0 0 12px ${ELECTRIC_BLUE}40, inset 0 0 16px rgba(0,0,0,0.6)`,
+                        boxShadow: `0 0 14px ${ELECTRIC_BLUE}40, inset 0 0 18px rgba(0,0,0,0.6)`,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
+                        padding: "0 14px",
                       }}
                     >
                       <div
                         style={{
                           fontFamily: "'Courier New', monospace",
                           fontWeight: 700,
-                          fontSize: "62px",
+                          fontSize: "110px",
                           color: ELECTRIC_BLUE,
                           lineHeight: 1,
-                          textShadow: `0 0 10px ${ELECTRIC_BLUE}, 0 0 24px ${ELECTRIC_BLUE}80`,
+                          textShadow: `0 0 12px ${ELECTRIC_BLUE}, 0 0 28px ${ELECTRIC_BLUE}80`,
                           letterSpacing: "0.04em",
                         }}
                       >
@@ -846,10 +847,10 @@ const CostOfCareCalculator = () => {
                     <div
                       style={{
                         fontFamily: "'Courier New', monospace",
-                        fontSize: "15px",
+                        fontSize: "20px",
                         fontWeight: 700,
                         color: ELECTRIC_BLUE,
-                        letterSpacing: "0.2em",
+                        letterSpacing: "0.22em",
                         textShadow: `0 0 6px ${ELECTRIC_BLUE}`,
                       }}
                     >
