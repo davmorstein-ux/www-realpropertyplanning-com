@@ -98,7 +98,10 @@ const CARE_TYPE_COLORS: Record<string, string> = {
 const ACTUAL_US_INFLATION_RATE = 4.2;
 const ACTUAL_INFLATION_AS_OF = "May 2026 report";
 const YEARS_OUT_OPTIONS = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-const INFLATION_OPTIONS = [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
+const INFLATION_OPTIONS = [
+  1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4,
+  3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5,
+];
 const YEARS_OF_CARE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const SHORT_CARE_LABELS: Record<string, string> = {
@@ -187,11 +190,11 @@ const card: React.CSSProperties = {
 };
 
 const sectionLabel = (color: string): React.CSSProperties => ({
-  fontSize: "15px",
+  fontSize: "16px",
   letterSpacing: "0.14em",
   textTransform: "uppercase" as const,
   color,
-  fontWeight: 800,
+  fontWeight: 900,
   fontFamily: "'Raleway', sans-serif",
   marginBottom: 12,
   display: "flex",
@@ -201,9 +204,9 @@ const sectionLabel = (color: string): React.CSSProperties => ({
 
 const fieldLabel: React.CSSProperties = {
   display: "block",
-  fontSize: "16px !important" as any,
+  fontSize: "17px",
   fontFamily: "'Raleway', sans-serif",
-  fontWeight: 700,
+  fontWeight: 900,
   letterSpacing: "0.08em",
   textTransform: "uppercase" as const,
   color: "#1a2744",
@@ -222,7 +225,11 @@ const CostOfCareCalculator = () => {
 
   const knobRef = useRef<HTMLDivElement>(null);
 
-  const KNOB_TICK_ANGLES = [210, 247.5, 285, 322.5, 360, 397.5, 435, 472.5, 510];
+  const KNOB_TICK_ANGLES = [
+    210.0, 217.5, 225.0, 232.5, 240.0, 247.5, 255.0, 262.5, 270.0, 277.5, 285.0, 292.5, 300.0, 307.5, 315.0, 322.5,
+    330.0, 337.5, 345.0, 352.5, 360.0, 367.5, 375.0, 382.5, 390.0, 397.5, 405.0, 412.5, 420.0, 427.5, 435.0, 442.5,
+    450.0, 457.5, 465.0, 472.5, 480.0, 487.5, 495.0, 502.5, 510.0,
+  ];
 
   const setInflationFromPointer = (clientX: number, clientY: number) => {
     const rect = knobRef.current?.getBoundingClientRect();
@@ -839,7 +846,7 @@ const CostOfCareCalculator = () => {
                           left: "50%",
                           width: 3,
                           height: "38%",
-                          background: `linear-gradient(180deg,${TEAL_LIGHT},${TEAL})`,
+                          background: "linear-gradient(180deg,#33bbff,#0099ee)",
                           borderRadius: "3px 3px 0 0",
                           transformOrigin: "50% 100%",
                           transform: `translate(-50%, -100%) rotate(${KNOB_TICK_ANGLES[inflationIndex]}deg)`,
@@ -929,8 +936,8 @@ const CostOfCareCalculator = () => {
                         flexShrink: 0,
                         background: "#050810",
                         borderRadius: 12,
-                        border: "2px solid #00aaff",
-                        boxShadow: "0 0 18px #00aaff60, 0 0 40px #00aaff20, inset 0 0 20px rgba(0,0,0,0.8)",
+                        border: "2px solid #0088dd",
+                        boxShadow: "0 0 12px #0088dd50, inset 0 0 20px rgba(0,0,0,0.8)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -942,9 +949,9 @@ const CostOfCareCalculator = () => {
                           fontFamily: "'Courier New', monospace",
                           fontWeight: 900,
                           fontSize: "110px",
-                          color: "#00ccff",
+                          color: "#0099ee",
                           lineHeight: 1,
-                          textShadow: "0 0 8px #00ccff, 0 0 20px #00aaff",
+                          textShadow: "0 0 3px #0099ee",
                           letterSpacing: "-0.05em",
                         }}
                       >
@@ -954,10 +961,10 @@ const CostOfCareCalculator = () => {
                     <div
                       style={{
                         fontFamily: "'Courier New', monospace",
-                        fontSize: "28px",
-                        fontWeight: 800,
+                        fontSize: "42px",
+                        fontWeight: 900,
                         color: "#00ccff",
-                        letterSpacing: "0.2em",
+                        letterSpacing: "0.15em",
                         textShadow: "0 0 8px #00ccff, 0 0 16px #00aaff",
                       }}
                     >
