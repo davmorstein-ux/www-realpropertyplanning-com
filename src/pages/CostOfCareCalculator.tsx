@@ -638,14 +638,19 @@ const CostOfCareCalculator = () => {
                         padding: "10px 14px",
                         textAlign: "center",
                         marginBottom: 10,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: 2,
                       }}
                     >
                       <span
                         style={{
                           fontFamily: "'Courier New', monospace",
                           fontWeight: 700,
-                          fontSize: "22px !important" as any,
+                          fontSize: "22px",
                           color: TEAL,
+                          lineHeight: 1.2,
                         }}
                       >
                         {yearsOut === 0 ? "TODAY" : `IN ${yearsOut} YRS`}
@@ -655,8 +660,8 @@ const CostOfCareCalculator = () => {
                           fontSize: "17px",
                           fontWeight: 600,
                           color: "#374151",
-                          marginLeft: 8,
                           fontFamily: "'Raleway', sans-serif",
+                          lineHeight: 1.2,
                         }}
                       >
                         Age {ageAtCareStart}
@@ -695,25 +700,30 @@ const CostOfCareCalculator = () => {
                         padding: "10px 14px",
                         textAlign: "center",
                         marginBottom: 10,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: 2,
                       }}
                     >
                       <span
                         style={{
                           fontFamily: "'Courier New', monospace",
                           fontWeight: 700,
-                          fontSize: "22px !important" as any,
+                          fontSize: "26px",
                           color: TEAL,
+                          lineHeight: 1.2,
                         }}
                       >
                         {yearsOfCareNeeded} {yearsOfCareNeeded === 1 ? "YR" : "YRS"}
                       </span>
                       <span
                         style={{
-                          fontSize: "17px",
+                          fontSize: "18px",
                           fontWeight: 600,
                           color: "#374151",
-                          marginLeft: 8,
                           fontFamily: "'Raleway', sans-serif",
+                          lineHeight: 1.2,
                         }}
                       >
                         Through Age {ageAtCareEnd}
