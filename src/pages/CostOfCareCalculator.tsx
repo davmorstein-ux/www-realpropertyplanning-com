@@ -1340,10 +1340,10 @@ const CostOfCareCalculator = () => {
               </p>
               <p
                 style={{
-                  fontSize: "15px !important" as any,
+                  fontSize: "18px",
                   fontFamily: "'Raleway', sans-serif",
-                  color: "#4a5568",
-                  lineHeight: 1.6,
+                  color: "#1a2744",
+                  lineHeight: 1.7,
                   margin: 0,
                   paddingTop: 10,
                   borderTop: "1px solid #e0d8c8",
@@ -1355,9 +1355,9 @@ const CostOfCareCalculator = () => {
 
             <p
               style={{
-                fontSize: "14px !important" as any,
+                fontSize: "17px",
                 fontFamily: "'Raleway', sans-serif",
-                color: "#4a5568",
+                color: "#374151",
                 lineHeight: 1.6,
                 textAlign: "center",
                 margin: "14px 0 0",
@@ -1543,10 +1543,10 @@ const CostOfCareCalculator = () => {
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
             <p
               style={{
-                fontSize: 13,
+                fontSize: 16,
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 700,
-                letterSpacing: "0.22em",
+                letterSpacing: "0.18em",
                 textTransform: "uppercase",
                 color: "#b8963e",
                 margin: "0 0 14px",
@@ -1566,12 +1566,22 @@ const CostOfCareCalculator = () => {
             >
               Why Washington Costs More Than the National Average
             </h2>
-            <div style={{ width: 40, height: 3, background: "#b8963e", marginBottom: 28, borderRadius: 1 }} />
+            <div
+              style={{
+                width: 40,
+                height: 3,
+                background: "#b8963e",
+                marginBottom: 28,
+                marginTop: 16,
+                borderRadius: 1,
+                display: "block",
+              }}
+            />
             <p
               style={{
                 fontSize: 18,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1e2a38",
+                color: "#1a2744",
                 lineHeight: 1.85,
                 margin: "0 0 20px",
               }}
