@@ -3248,3 +3248,30 @@ main .rpp-hero-band-text,
   height: 46px !important;
   box-sizing: border-box !important;
 }
+
+/* ── Homepage Orientation section — exempt from WCAG font-size floor ── */
+#rpp-orientation p:first-child {
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+@media (min-width: 768px) {
+  #rpp-orientation p:first-child {
+    font-size: 17px !important;
+  }
+}
+#rpp-orientation p:last-child {
+  font-size: 22px !important;
+  line-height: 1.6 !important;
+}
+@media (min-width: 768px) {
+  #rpp-orientation p:last-child {
+    font-size: 28px !important;
+    line-height: 1.6 !important;
+  }
+}
+@media (min-width: 1024px) {
+  #rpp-orientation p:last-child {
+    font-size: 32px !important;
+    line-height: 1.6 !important;
+  }
+}
