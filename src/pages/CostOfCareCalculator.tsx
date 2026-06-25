@@ -736,7 +736,8 @@ const CostOfCareCalculator = () => {
                     style={{
                       fontFamily: "'Courier New', monospace",
                       fontWeight: 700,
-                      fontSize: "32px !important" as any,
+                      fontSize: "48px !important" as any,
+                      lineHeight: 1.05,
                       color: ELECTRIC_BLUE,
                     }}
                   >
