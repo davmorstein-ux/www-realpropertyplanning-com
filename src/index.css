@@ -3249,20 +3249,35 @@ main .rpp-hero-band-text,
   box-sizing: border-box !important;
 }
 
-/* ── Homepage Orientation section — hardcoded sizes, beats all other rules ── */
-main #rpp-orientation p,
+/* ════════════════════════════════════════════════════════════
+   CALCULATOR OVERRIDES — beat main * { font-size: max(1em,14px) }
+   ════════════════════════════════════════════════════════════ */
+
+/* LED inflation rate number — must be large, immune to main * rule */
+#coc-led-number {
+  font-size: 110px !important;
+  line-height: 1 !important;
+}
+
+/* Homepage Orientation section — beat main p !important floor */
 main #rpp-orientation p:first-of-type,
-main #rpp-orientation p:last-of-type,
-main #rpp-orientation div,
-#rpp-orientation p,
-#rpp-orientation div {
+main #rpp-orientation div:first-of-type {
   font-size: 24px !important;
   line-height: 1.5 !important;
+  margin-bottom: 2rem !important;
 }
 main #rpp-orientation p:last-of-type,
-main #rpp-orientation div:last-of-type,
-#rpp-orientation p:last-of-type,
-#rpp-orientation div:last-of-type {
+main #rpp-orientation div:last-of-type {
   font-size: 32px !important;
   line-height: 1.6 !important;
+}
+
+/* WCAG AA contrast fixes — ensure all small text meets 4.5:1 ratio */
+/* #5a6a7a on white = 4.1:1 — failing AA. Replace with #4a5568 = 5.9:1 */
+.rpp-pr-card-cta {
+  color: #1a2744 !important;
+}
+/* Teal #0d9488 on #f5f2ec cream = 3.8:1 — failing. Use #0a7a70 = 4.6:1 */
+.coc-range {
+  background: linear-gradient(90deg, #0a7a70, #1db8a8) !important;
 }
