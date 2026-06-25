@@ -788,7 +788,14 @@ const CostOfCareCalculator = () => {
 
                 {/* Knob (left) + LED readout (right) */}
                 <div
-                  style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 28, marginBottom: 24 }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 28,
+                    marginBottom: 24,
+                    marginTop: 8,
+                  }}
                 >
                   {/* Knob */}
                   <div
@@ -865,6 +872,7 @@ const CostOfCareCalculator = () => {
                       }}
                     >
                       <div
+                        id="coc-led-number"
                         style={{
                           fontFamily: "'Courier New', monospace",
                           fontWeight: 700,
