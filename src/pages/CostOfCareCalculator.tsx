@@ -482,7 +482,7 @@ const CostOfCareCalculator = () => {
                           fontFamily: "'Raleway', sans-serif",
                           fontSize: "16px",
                           fontWeight: 600,
-                          color: "#5a6a7a",
+                          color: "#4a5568",
                           letterSpacing: "0.06em",
                           textTransform: "uppercase",
                         }}
@@ -579,7 +579,7 @@ const CostOfCareCalculator = () => {
                         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 16 }}>
                           <div
                             style={{
-                              width: 14,
+                              width: 7,
                               height: 14,
                               borderRadius: "50%",
                               flexShrink: 0,
@@ -976,10 +976,10 @@ const CostOfCareCalculator = () => {
                 {/* Bar graph — red fills from left as rate increases, no % labels */}
                 <div style={{ marginTop: 8 }}>
                   <div
-                    style={{ display: "flex", alignItems: "flex-end", gap: 5, justifyContent: "center", height: 52 }}
+                    style={{ display: "flex", alignItems: "flex-end", gap: 3, justifyContent: "center", height: 52 }}
                   >
                     {INFLATION_OPTIONS.map((rate, i) => {
-                      const barHeight = 14 + (i / (INFLATION_OPTIONS.length - 1)) * 34;
+                      const barHeight = 10 + (i / (INFLATION_OPTIONS.length - 1)) * 38;
                       const isLit = rate <= inflationRate;
                       return (
                         <button
@@ -998,7 +998,7 @@ const CostOfCareCalculator = () => {
                         >
                           <div
                             style={{
-                              width: 14,
+                              width: 7,
                               height: barHeight,
                               borderRadius: 3,
                               background: isLit ? `linear-gradient(180deg, #ff6b6b, #dc2626)` : "#ddd8cc",
@@ -1196,8 +1196,9 @@ const CostOfCareCalculator = () => {
                     </div>
                     <div
                       style={{
-                        fontSize: "13px !important" as any,
-                        color: "#5a6a7a",
+                        fontSize: "16px",
+                        fontWeight: 600,
+                        color: "#374151",
                         fontFamily: "'Raleway', sans-serif",
                       }}
                     >
@@ -1241,8 +1242,9 @@ const CostOfCareCalculator = () => {
                     </div>
                     <div
                       style={{
-                        fontSize: "13px !important" as any,
-                        color: "#5a6a7a",
+                        fontSize: "16px",
+                        fontWeight: 600,
+                        color: "#374151",
                         fontFamily: "'Raleway', sans-serif",
                       }}
                     >
@@ -1285,8 +1287,9 @@ const CostOfCareCalculator = () => {
                   </div>
                   <div
                     style={{
-                      fontSize: "13px !important" as any,
-                      color: "#5a6a7a",
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      color: "#374151",
                       fontFamily: "'Raleway', sans-serif",
                       marginTop: 4,
                     }}
@@ -1331,7 +1334,7 @@ const CostOfCareCalculator = () => {
                 style={{
                   fontSize: "15px !important" as any,
                   fontFamily: "'Raleway', sans-serif",
-                  color: "#5a6a7a",
+                  color: "#4a5568",
                   lineHeight: 1.6,
                   margin: 0,
                   paddingTop: 10,
@@ -1346,7 +1349,7 @@ const CostOfCareCalculator = () => {
               style={{
                 fontSize: "14px !important" as any,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#5a6a7a",
+                color: "#4a5568",
                 lineHeight: 1.6,
                 textAlign: "center",
                 margin: "14px 0 0",
