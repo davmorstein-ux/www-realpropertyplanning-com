@@ -12,7 +12,7 @@ const HomepagePopularResources = () => (
     <style>{`
       .rpp-pr-eyebrow {
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 13px !important;
+        font-size: 15px !important;
         font-weight: 700 !important;
         letter-spacing: 0.18em !important;
         text-transform: uppercase !important;
@@ -23,7 +23,7 @@ const HomepagePopularResources = () => (
       }
       .rpp-pr-heading {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
-        font-size: 2rem !important;
+        font-size: clamp(32px, 3vw, 42px) !important;
         font-weight: 700 !important;
         color: #1a2744 !important;
         margin: 0 !important;
@@ -49,8 +49,8 @@ const HomepagePopularResources = () => (
         background-color: #f5f2ec !important;
         border: 2px solid #c8c0b0 !important;
         border-radius: 8px !important;
-        padding: 1.25rem !important;
-        min-height: 90px !important;
+        padding: 1.5rem !important;
+        min-height: 110px !important;
         width: 100% !important;
         text-decoration: none !important;
         transition: border-color 0.15s ease, background-color 0.15s ease !important;
@@ -61,10 +61,10 @@ const HomepagePopularResources = () => (
       }
       .rpp-pr-card-text {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
-        font-size: 20px !important;
+        font-size: 22px !important;
         font-weight: 700 !important;
         color: #1a2744 !important;
-        line-height: 1.3 !important;
+        line-height: 1.35 !important;
         opacity: 1 !important;
       }
       .rpp-pr-browse {
@@ -72,7 +72,7 @@ const HomepagePopularResources = () => (
         align-items: center !important;
         gap: 8px !important;
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 17px !important;
+        font-size: 20px !important;
         font-weight: 700 !important;
         color: #1a2744 !important;
         text-decoration: none !important;
@@ -102,8 +102,8 @@ const HomepagePopularResources = () => (
               <span className="rpp-pr-card-text">{r.title}</span>
               <svg
                 viewBox="0 0 24 24"
-                width="20"
-                height="20"
+                width="24"
+                height="24"
                 fill="none"
                 stroke="#b8963e"
                 strokeWidth="2.5"
@@ -125,8 +125,8 @@ const HomepagePopularResources = () => (
           Browse all resources
           <svg
             viewBox="0 0 24 24"
-            width="16"
-            height="16"
+            width="20"
+            height="20"
             fill="none"
             stroke="currentColor"
             strokeWidth="2.5"
