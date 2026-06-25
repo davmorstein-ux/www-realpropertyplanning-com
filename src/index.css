@@ -3259,7 +3259,8 @@ main .rpp-hero-band-text,
   line-height: 1 !important;
   letter-spacing: -0.05em !important;
   font-weight: 900 !important;
-  color: #00ccff !important;
+  color: #0099ee !important;
+  text-shadow: 0 0 3px #0099ee !important;
 }
 
 /* Homepage Orientation section — beat main p !important floor */
