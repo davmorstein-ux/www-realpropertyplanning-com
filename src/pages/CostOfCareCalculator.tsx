@@ -187,11 +187,11 @@ const card: React.CSSProperties = {
 };
 
 const sectionLabel = (color: string): React.CSSProperties => ({
-  fontSize: "13px",
-  letterSpacing: "0.16em",
+  fontSize: "15px",
+  letterSpacing: "0.14em",
   textTransform: "uppercase" as const,
   color,
-  fontWeight: 700,
+  fontWeight: 800,
   fontFamily: "'Raleway', sans-serif",
   marginBottom: 12,
   display: "flex",
@@ -607,8 +607,9 @@ const CostOfCareCalculator = () => {
                           </div>
                           <div
                             style={{
-                              fontSize: "14px !important" as any,
-                              color: "#5a6a7a",
+                              fontSize: "17px",
+                              fontWeight: 600,
+                              color: "#374151",
                               fontFamily: "'Raleway', sans-serif",
                             }}
                           >
@@ -643,8 +644,9 @@ const CostOfCareCalculator = () => {
                       </span>
                       <span
                         style={{
-                          fontSize: "13px !important" as any,
-                          color: "#5a6a7a",
+                          fontSize: "17px",
+                          fontWeight: 600,
+                          color: "#374151",
                           marginLeft: 8,
                           fontFamily: "'Raleway', sans-serif",
                         }}
@@ -666,8 +668,9 @@ const CostOfCareCalculator = () => {
                       style={{
                         display: "flex",
                         justifyContent: "space-between",
-                        fontSize: "13px !important" as any,
-                        color: "#5a6a7a",
+                        fontSize: "16px",
+                        fontWeight: 600,
+                        color: "#374151",
                         fontFamily: "'Raleway', sans-serif",
                         marginBottom: 16,
                       }}
@@ -698,8 +701,9 @@ const CostOfCareCalculator = () => {
                       </span>
                       <span
                         style={{
-                          fontSize: "13px !important" as any,
-                          color: "#5a6a7a",
+                          fontSize: "17px",
+                          fontWeight: 600,
+                          color: "#374151",
                           marginLeft: 8,
                           fontFamily: "'Raleway', sans-serif",
                         }}
@@ -721,8 +725,9 @@ const CostOfCareCalculator = () => {
                       style={{
                         display: "flex",
                         justifyContent: "space-between",
-                        fontSize: "13px !important" as any,
-                        color: "#5a6a7a",
+                        fontSize: "16px",
+                        fontWeight: 600,
+                        color: "#374151",
                         fontFamily: "'Raleway', sans-serif",
                       }}
                     >
@@ -764,8 +769,9 @@ const CostOfCareCalculator = () => {
                   </div>
                   <div
                     style={{
-                      fontSize: "13px !important" as any,
-                      color: "#5a6a7a",
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      color: "#374151",
                       fontFamily: "'Raleway', sans-serif",
                     }}
                   >
@@ -775,8 +781,9 @@ const CostOfCareCalculator = () => {
 
                 <p
                   style={{
-                    fontSize: "14px !important" as any,
-                    color: "#5a6a7a",
+                    fontSize: "17px",
+                    fontWeight: 600,
+                    color: "#1a2744",
                     fontFamily: "'Raleway', sans-serif",
                     textAlign: "center",
                     marginBottom: 20,
@@ -875,12 +882,12 @@ const CostOfCareCalculator = () => {
                         id="coc-led-number"
                         style={{
                           fontFamily: "'Courier New', monospace",
-                          fontWeight: 700,
+                          fontWeight: 900,
                           fontSize: "110px",
                           color: ELECTRIC_BLUE,
                           lineHeight: 1,
-                          textShadow: `0 0 12px ${ELECTRIC_BLUE}, 0 0 28px ${ELECTRIC_BLUE}80`,
-                          letterSpacing: "0.04em",
+                          textShadow: `0 0 4px ${ELECTRIC_BLUE}`,
+                          letterSpacing: "-0.02em",
                         }}
                       >
                         {inflationRate.toFixed(1)}
@@ -946,7 +953,7 @@ const CostOfCareCalculator = () => {
             <div className="coc-row3" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14, marginTop: 14 }}>
               {/* Cost Intensity Gauge */}
               <div style={card}>
-                <div style={sectionLabel(ELECTRIC_BLUE_LIGHT)}>
+                <div style={sectionLabel(ELECTRIC_BLUE)}>
                   Cost Intensity Gauge
                   <span
                     style={{
