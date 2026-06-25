@@ -718,6 +718,8 @@ const CostOfCareCalculator = () => {
                   Inflation Rate
                   <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
                 </div>
+
+                {/* Actual CPI readout */}
                 <div
                   style={{
                     background: "#f5f2ec",
@@ -748,19 +750,25 @@ const CostOfCareCalculator = () => {
                     Actual U.S. CPI · {ACTUAL_INFLATION_AS_OF}
                   </div>
                 </div>
+
                 <p
                   style={{
                     fontSize: "14px !important" as any,
                     color: "#5a6a7a",
                     fontFamily: "'Raleway', sans-serif",
                     textAlign: "center",
-                    marginBottom: 16,
+                    marginBottom: 20,
                     lineHeight: 1.5,
                   }}
                 >
                   Use the knob or bars below to set your projection rate.
                 </p>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+
+                {/* Knob (left) + LED readout (right) */}
+                <div
+                  style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, marginBottom: 28 }}
+                >
+                  {/* Knob */}
                   <div
                     ref={knobRef}
                     onPointerDown={handleKnobPointerDown}
@@ -770,10 +778,9 @@ const CostOfCareCalculator = () => {
                       height: 100,
                       borderRadius: "50%",
                       position: "relative",
-                      marginBottom: 52,
+                      flexShrink: 0,
                       cursor: "grab",
                       touchAction: "none",
-                      overflow: "visible",
                       background: "radial-gradient(circle at 32% 28%, #e8e2d9, #c8c0b0 55%, #a8a099 80%)",
                       boxShadow: "0 4px 12px rgba(0,0,0,0.15), 0 0 0 3px #f5f2ec, 0 0 0 4px #ddd8cc",
                     }}
@@ -802,43 +809,60 @@ const CostOfCareCalculator = () => {
                         pointerEvents: "none",
                       }}
                     />
-                    {INFLATION_OPTIONS.map((rate, i) => {
-                      if (rate % 1 !== 0) return null;
-                      const angle = KNOB_TICK_ANGLES[i];
-                      const rad = (angle * Math.PI) / 180;
-                      const r = 72;
-                      return (
-                        <button
-                          key={rate}
-                          onClick={() => setInflationRate(rate)}
-                          aria-label={`Set inflation rate to ${rate}%`}
-                          style={{
-                            position: "absolute",
-                            top: `calc(50% + ${-r * Math.cos(rad)}px)`,
-                            left: `calc(50% + ${r * Math.sin(rad)}px)`,
-                            transform: "translate(-50%,-50%)",
-                            fontSize: "14px !important" as any,
-                            fontWeight: 800,
-                            fontFamily: "'Raleway', sans-serif",
-                            color: inflationRate === rate ? TEAL : "#1a2744",
-                            background: "none",
-                            border: "none",
-                            padding: 6,
-                            margin: -6,
-                            cursor: "pointer",
-                            lineHeight: 1,
-                          }}
-                        >
-                          {rate}%
-                        </button>
-                      );
-                    })}
                   </div>
-                  <div style={{ display: "flex", alignItems: "flex-end", gap: 6, height: 46 }}>
+
+                  {/* LED digital readout */}
+                  <div
+                    style={{
+                      width: 100,
+                      height: 100,
+                      flexShrink: 0,
+                      background: "#0a0e14",
+                      borderRadius: 10,
+                      border: `2px solid ${ELECTRIC_BLUE}60`,
+                      boxShadow: `0 0 12px ${ELECTRIC_BLUE}40, inset 0 0 16px rgba(0,0,0,0.6)`,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 4,
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontFamily: "'Courier New', monospace",
+                        fontWeight: 700,
+                        fontSize: "36px",
+                        color: ELECTRIC_BLUE,
+                        lineHeight: 1,
+                        textShadow: `0 0 10px ${ELECTRIC_BLUE}, 0 0 20px ${ELECTRIC_BLUE}80`,
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      {inflationRate.toFixed(1)}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "'Courier New', monospace",
+                        fontSize: "13px",
+                        color: `${ELECTRIC_BLUE}cc`,
+                        letterSpacing: "0.1em",
+                        textShadow: `0 0 6px ${ELECTRIC_BLUE}`,
+                      }}
+                    >
+                      % / YR
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bar graph — red fills from left as rate increases, no % labels */}
+                <div style={{ marginTop: 8 }}>
+                  <div
+                    style={{ display: "flex", alignItems: "flex-end", gap: 5, justifyContent: "center", height: 52 }}
+                  >
                     {INFLATION_OPTIONS.map((rate, i) => {
-                      const active = inflationRate === rate;
-                      const isWhole = rate % 1 === 0;
-                      const barHeight = 12 + (i / (INFLATION_OPTIONS.length - 1)) * 30;
+                      const barHeight = 14 + (i / (INFLATION_OPTIONS.length - 1)) * 34;
+                      const isLit = rate <= inflationRate;
                       return (
                         <button
                           key={rate}
@@ -848,7 +872,6 @@ const CostOfCareCalculator = () => {
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
-                            gap: 4,
                             background: "none",
                             border: "none",
                             cursor: "pointer",
@@ -857,24 +880,14 @@ const CostOfCareCalculator = () => {
                         >
                           <div
                             style={{
-                              width: 13,
+                              width: 14,
                               height: barHeight,
                               borderRadius: 3,
-                              background: active ? `linear-gradient(180deg,#f87171,#dc2626)` : "#ddd8cc",
-                              transition: "all 0.2s ease",
+                              background: isLit ? `linear-gradient(180deg, #ff6b6b, #dc2626)` : "#ddd8cc",
+                              boxShadow: isLit ? "0 0 6px rgba(220,38,38,0.5)" : "none",
+                              transition: "background 0.15s ease, box-shadow 0.15s ease",
                             }}
                           />
-                          <span
-                            style={{
-                              fontSize: "12px !important" as any,
-                              fontWeight: 700,
-                              fontFamily: "'Raleway', sans-serif",
-                              color: active ? TEAL : "#5a6a7a",
-                              visibility: isWhole ? "visible" : "hidden",
-                            }}
-                          >
-                            {isWhole ? `${rate}%` : "•"}
-                          </span>
                         </button>
                       );
                     })}
