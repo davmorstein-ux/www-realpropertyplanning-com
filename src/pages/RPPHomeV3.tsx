@@ -206,115 +206,31 @@ const RPPHomeV3 = () => {
             </div>
 
             {/* ── Secondary cards: Cost of Care + AFH Club ─────────── */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
-              {/* Cost of Care — image button, matched height to AFH card */}
-              <a href="/cost-of-care-calculator" className="group block" style={{ textDecoration: "none" }}>
-                <div
-                  className="transition-transform duration-200 group-hover:-translate-y-1"
-                  style={{
-                    border: "2px solid #b8963e",
-                    borderRadius: 10,
-                    overflow: "hidden",
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor: "#ffffff",
-                    padding: "0.75rem",
-                  }}
-                >
-                  <img
-                    src="/cost-of-care-button.png"
-                    alt="Cost of Care Calculator — compare Home Care, Assisted Living, Memory Care, Adult Family Homes, Nursing Homes, and Adult Day Care costs. Plan Ahead With Confidence."
-                    style={{ width: "100%", height: "auto", display: "block" }}
-                  />
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+              {/* Cost of Care — bare image button, no tile wrapper */}
+              <a
+                href="/cost-of-care-calculator"
+                className="group block transition-transform duration-200 hover:-translate-y-1"
+                style={{ textDecoration: "none", display: "block" }}
+              >
+                <img
+                  src="/cost-of-care-button.png"
+                  alt="Cost of Care Calculator — compare Home Care, Assisted Living, Memory Care, Adult Family Homes, Nursing Homes, and Adult Day Care costs. Plan Ahead With Confidence."
+                  style={{ width: "100%", height: "auto", display: "block", borderRadius: 10 }}
+                />
               </a>
 
-              {/* AFH Club */}
-              <a href="/afh-club" className="group block" style={{ textDecoration: "none" }}>
-                <div
-                  className="transition-transform duration-200 group-hover:-translate-y-1"
-                  style={{
-                    backgroundColor: "#f4fafa",
-                    border: "2px solid #1a5c58",
-                    borderRadius: 10,
-                    padding: "1.5rem 1.5rem 1.25rem",
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "0.75rem",
-                  }}
-                >
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-                    <img
-                      src="/afh-club-badge.webp"
-                      alt="AFH Club"
-                      style={{
-                        width: 72,
-                        height: 72,
-                        objectFit: "contain",
-                        flexShrink: 0,
-                        mixBlendMode: "multiply",
-                      }}
-                    />
-                    <p
-                      style={{
-                        fontFamily: "Inter, system-ui, sans-serif",
-                        fontSize: 22,
-                        fontWeight: 800,
-                        color: "#1a5c58",
-                        margin: 0,
-                        lineHeight: 1.2,
-                      }}
-                    >
-                      AFH Club
-                    </p>
-                  </div>
-                  <p
-                    style={{
-                      fontFamily: "Inter, system-ui, sans-serif",
-                      fontSize: 16,
-                      fontWeight: 400,
-                      color: "#1a2744",
-                      margin: 0,
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
-                  </p>
-                  <div style={{ marginTop: "auto", paddingTop: "0.5rem" }}>
-                    <span
-                      style={{
-                        fontFamily: "Inter, system-ui, sans-serif",
-                        fontSize: 14,
-                        fontWeight: 700,
-                        color: "#ffffff",
-                        backgroundColor: "#1a5c58",
-                        padding: "0.6rem 1.25rem",
-                        borderRadius: 6,
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: 6,
-                      }}
-                    >
-                      Explore AFH Club
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="13"
-                        height="13"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                      >
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
+              {/* AFH Club — image button, same treatment */}
+              <a
+                href="/afh-club"
+                className="group block transition-transform duration-200 hover:-translate-y-1"
+                style={{ textDecoration: "none", display: "block" }}
+              >
+                <img
+                  src="/afh-club-button.webp"
+                  alt="AFH Club — the ultimate resource network for buying, selling, managing and learning about Adult Family Homes."
+                  style={{ width: "100%", height: "auto", display: "block", borderRadius: 10 }}
+                />
               </a>
             </div>
           </div>
