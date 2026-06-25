@@ -190,8 +190,8 @@ const card: React.CSSProperties = {
 };
 
 const sectionLabel = (color: string): React.CSSProperties => ({
-  fontSize: "16px",
-  letterSpacing: "0.14em",
+  fontSize: "18px",
+  letterSpacing: "0.12em",
   textTransform: "uppercase" as const,
   color,
   fontWeight: 900,
@@ -200,6 +200,7 @@ const sectionLabel = (color: string): React.CSSProperties => ({
   display: "flex",
   alignItems: "center",
   gap: 8,
+  textShadow: "0 1px 0 rgba(255,255,255,0.8)",
 });
 
 const fieldLabel: React.CSSProperties = {
@@ -1029,7 +1030,7 @@ const CostOfCareCalculator = () => {
                   />
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <svg width="240" height="175" viewBox="0 0 260 185">
+                  <svg width="300" height="218" viewBox="0 0 260 185">
                     {Array.from({ length: 48 }).map((_, i) => {
                       const t0 = 180 - (i / 48) * 180;
                       const t1 = 180 - ((i + 1) / 48) * 180;
@@ -1068,7 +1069,7 @@ const CostOfCareCalculator = () => {
                       fill={ELECTRIC_BLUE}
                       fontWeight={700}
                       fontFamily="Raleway"
-                      style={{ fontSize: "14px !important" as any }}
+                      style={{ fontSize: "16px" }}
                     >
                       LOW
                     </text>
@@ -1079,27 +1080,24 @@ const CostOfCareCalculator = () => {
                       fill={ELECTRIC_BLUE}
                       fontWeight={700}
                       fontFamily="Raleway"
-                      style={{ fontSize: "14px !important" as any }}
+                      style={{ fontSize: "16px" }}
                     >
                       HIGH
                     </text>
                   </svg>
                   <div
                     style={{
-                      fontSize: "15px !important" as any,
+                      fontSize: "18px",
+                      fontWeight: 700,
                       color: "#1a2744",
                       textAlign: "center",
                       fontFamily: "'Raleway', sans-serif",
-                      marginTop: 16,
-                      lineHeight: 1.5,
+                      marginTop: 24,
+                      lineHeight: 1.6,
                     }}
                   >
-                    <div>
-                      <strong style={{ color: ELECTRIC_BLUE }}>{careType.label}</strong>
-                    </div>
-                    <div>
-                      <strong>{gaugeLabel.replace("washington", "Washington")}</strong>
-                    </div>
+                    <div style={{ color: ELECTRIC_BLUE, fontWeight: 800 }}>{careType.label}</div>
+                    <div>{gaugeLabel.replace("washington", "Washington")}</div>
                   </div>
                 </div>
               </div>
