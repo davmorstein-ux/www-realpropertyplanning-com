@@ -214,7 +214,7 @@ const RPPHomeV3 = () => {
                 style={{ textDecoration: "none", display: "block" }}
               >
                 <img
-                  src="/cost-of-care-button.png"
+                  src="/cost-of-care-button.webp"
                   alt="Cost of Care Calculator — compare Home Care, Assisted Living, Memory Care, Adult Family Homes, Nursing Homes, and Adult Day Care costs. Plan Ahead With Confidence."
                   style={{ width: "100%", height: "auto", display: "block", borderRadius: 10 }}
                 />
