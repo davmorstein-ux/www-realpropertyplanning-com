@@ -90,7 +90,7 @@ const RPPHomeV3 = () => {
         </div>
 
         {/* ── Orientation ──────────────────────────────────────────── */}
-        <section className="py-8 md:py-10 lg:py-12 bg-cream">
+        <section id="rpp-orientation" className="py-8 md:py-10 lg:py-12 bg-cream">
           <div className="w-full px-5 md:px-8">
             <div className="max-w-[820px] mx-auto text-center">
               <p
