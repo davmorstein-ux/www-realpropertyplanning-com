@@ -3292,3 +3292,7 @@ main #rpp-orientation div:last-of-type {
   line-height: 1.6 !important;
   margin-bottom: 0 !important;
 }
+#rpp-tagline {
+  font-size: clamp(26px, 3.5vw, 42px) !important;
+  color: #b8963e !important;
+}
