@@ -3296,3 +3296,11 @@ main #rpp-orientation div:last-of-type {
   font-size: clamp(26px, 3.5vw, 42px) !important;
   color: #b8963e !important;
 }
+#rpp-tagline {
+  font-size: clamp(26px, 3.5vw, 42px) !important;
+  color: #7f1d1d !important;
+}
+
+.rpp-funnel-heading {
+  color: #1a2744 !important;
+}
