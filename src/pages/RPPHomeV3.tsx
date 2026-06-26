@@ -104,7 +104,7 @@ const RPPHomeV3 = () => {
                 whiteSpace: "pre-line",
               }}
             >
-              {"Guidance for real estate decisions\nand life transitions"}
+              {"Guidance for real estate decisions\nand later life transitions"}
             </p>
           </div>
         </div>
