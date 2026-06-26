@@ -89,35 +89,25 @@ const RPPHomeV3 = () => {
           </div>
         </div>
 
-        {/* ── Orientation ──────────────────────────────────────────── */}
-        <section id="rpp-orientation" className="py-8 md:py-10 lg:py-12 bg-cream">
+        {/* ── Tagline ──────────────────────────────────────────────── */}
+        <section id="rpp-orientation" className="py-6 md:py-8 bg-cream">
           <div className="w-full px-5 md:px-8">
             <div className="max-w-[820px] mx-auto text-center">
-              <div
+              <p
+                id="rpp-tagline"
                 style={{
-                  fontFamily: "Inter, system-ui, sans-serif",
-                  fontSize: "22px",
-                  fontWeight: 800,
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
-                  color: "#7f1d1d",
-                  marginBottom: "2.25rem",
-                  lineHeight: 1.5,
-                }}
-              >
-                A Free-To-Use Hub · Built For Families · Trusted By Professionals
-              </div>
-              <div
-                style={{
-                  fontSize: "32px",
-                  color: "#1a2744",
-                  fontWeight: 500,
-                  lineHeight: 1.6,
+                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontSize: "clamp(22px, 3vw, 34px)",
+                  fontWeight: 600,
+                  fontStyle: "italic",
+                  color: "#b8963e",
                   margin: 0,
+                  lineHeight: 1.4,
+                  letterSpacing: "0.01em",
                 }}
               >
-                Connecting families, seniors, and professionals with the right people and resources.
-              </div>
+                Guidance for real estate decisions and life transitions
+              </p>
             </div>
           </div>
         </section>
