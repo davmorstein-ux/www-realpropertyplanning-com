@@ -3301,9 +3301,7 @@ main #rpp-orientation div:last-of-type {
   color: #7f1d1d !important;
 }
 
-.rpp-funnel-heading {
-  color: #1a2744 !important;
-  /* Tagline + funnel heading — final overrides, must stay at bottom */
+/* Tagline + funnel heading — final overrides, must stay at bottom */
 #rpp-tagline {
   font-size: clamp(32px, 4.5vw, 52px) !important;
   font-family: 'Cormorant Garamond', Georgia, serif !important;
