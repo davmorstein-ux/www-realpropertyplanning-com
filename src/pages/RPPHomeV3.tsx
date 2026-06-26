@@ -101,9 +101,10 @@ const RPPHomeV3 = () => {
                 letterSpacing: "0.01em",
                 textAlign: "center",
                 textShadow: "0 1px 4px rgba(255,255,255,0.7)",
+                whiteSpace: "pre-line",
               }}
             >
-              Guidance for real estate decisions and life transitions
+              {"Guidance for real estate decisions\nand life transitions"}
             </p>
           </div>
         </div>
