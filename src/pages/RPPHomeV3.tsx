@@ -75,9 +75,10 @@ const RPPHomeV3 = () => {
               alignItems: "center",
               justifyContent: "center",
               boxSizing: "border-box",
-              gap: "clamp(8px, 1.5vw, 20px)",
+              gap: "clamp(16px, 2.5vw, 36px)",
             }}
           >
+            life transitions
             <img
               src="/rpp-logo-final.webp"
               alt="Real Property Planning"
@@ -127,7 +128,7 @@ const RPPHomeV3 = () => {
                 }}
               >
                 Washington State's leading resource for senior transitions, estate &amp; probate sales,and the Adult
-                Family Home Marketplace homes
+                Family Home Marketplace
               </p>
             </div>
           </div>
