@@ -126,8 +126,8 @@ const RPPHomeV3 = () => {
                   letterSpacing: "0.01em",
                 }}
               >
-                Washington State's leading resource for senior transitions, estate &amp; probate sales, and adult family
-                homes
+                Washington State's leading resource for senior transitions, estate &amp; probate sales,and the Adult
+                Family Home Marketplace homes
               </p>
             </div>
           </div>
