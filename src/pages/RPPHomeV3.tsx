@@ -57,7 +57,7 @@ const RPPHomeV3 = () => {
             src="/hero-v2.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
             className="block w-full object-cover object-center"
-            style={{ height: "clamp(220px, 42vw, 560px)" }}
+            style={{ height: "clamp(260px, 46vw, 600px)" }}
             loading="eager"
             decoding="async"
           />
@@ -65,25 +65,21 @@ const RPPHomeV3 = () => {
           <div
             style={{
               position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "100%",
-              padding: "0 8%",
+              inset: 0,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
+              padding: "0 8%",
               boxSizing: "border-box",
-              gap: "clamp(16px, 2.5vw, 36px)",
+              gap: "clamp(12px, 2vw, 28px)",
             }}
           >
-            life transitions
             <img
               src="/rpp-logo-final.webp"
               alt="Real Property Planning"
               style={{
-                width: "clamp(160px, 48vw, 560px)",
+                width: "clamp(160px, 46vw, 540px)",
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
@@ -93,12 +89,12 @@ const RPPHomeV3 = () => {
               id="rpp-tagline"
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontSize: "clamp(14px, 2.2vw, 30px)",
+                fontSize: "clamp(16px, 2.2vw, 32px)",
                 fontWeight: 600,
                 fontStyle: "italic",
                 color: "#7f1d1d",
                 margin: 0,
-                lineHeight: 1.3,
+                lineHeight: 1.35,
                 letterSpacing: "0.01em",
                 textAlign: "center",
                 textShadow: "0 1px 4px rgba(255,255,255,0.7)",
@@ -120,15 +116,15 @@ const RPPHomeV3 = () => {
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
                   fontSize: "clamp(18px, 2.4vw, 28px)",
                   fontWeight: 600,
-                  fontStyle: "italic",
+                  fontStyle: "normal",
                   color: "#1a2744",
                   margin: 0,
                   lineHeight: 1.5,
                   letterSpacing: "0.01em",
                 }}
               >
-                Washington State's leading resource for senior transitions, estate &amp; probate sales,and the Adult
-                Family Home Marketplace
+                Washington State's leading resource for senior transitions, estate &amp; probate sales, and the Adult
+                Family Home marketplace
               </p>
             </div>
           </div>
