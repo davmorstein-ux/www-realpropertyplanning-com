@@ -57,56 +57,76 @@ const RPPHomeV3 = () => {
             src="/hero-v2.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
             className="block w-full object-cover object-center"
-            style={{ height: "clamp(180px, 38vw, 520px)" }}
+            style={{ height: "clamp(220px, 42vw, 560px)" }}
             loading="eager"
             decoding="async"
           />
-          {/* Logo overlay — contained within hero with padding on all sides */}
+          {/* Logo + tagline overlay — stacked vertically, centered in hero */}
           <div
             style={{
               position: "absolute",
-              top: "calc(50% + 20px)",
+              top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
               width: "100%",
               padding: "0 8%",
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
               boxSizing: "border-box",
+              gap: "clamp(8px, 1.5vw, 20px)",
             }}
           >
             <img
               src="/rpp-logo-final.webp"
               alt="Real Property Planning"
               style={{
-                width: "clamp(160px, 50vw, 580px)",
+                width: "clamp(160px, 48vw, 560px)",
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
               }}
             />
+            <p
+              id="rpp-tagline"
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: "clamp(14px, 2.2vw, 30px)",
+                fontWeight: 600,
+                fontStyle: "italic",
+                color: "#7f1d1d",
+                margin: 0,
+                lineHeight: 1.3,
+                letterSpacing: "0.01em",
+                textAlign: "center",
+                textShadow: "0 1px 4px rgba(255,255,255,0.7)",
+              }}
+            >
+              Guidance for real estate decisions and life transitions
+            </p>
           </div>
         </div>
 
-        {/* ── Tagline ──────────────────────────────────────────────── */}
-        <section id="rpp-orientation" className="py-6 md:py-8 bg-cream">
+        {/* ── Descriptor ───────────────────────────────────────────── */}
+        <section id="rpp-orientation" className="py-5 md:py-7 bg-cream">
           <div className="w-full px-5 md:px-8">
-            <div className="max-w-[820px] mx-auto text-center">
+            <div className="max-w-[860px] mx-auto text-center">
               <p
-                id="rpp-tagline"
+                id="rpp-descriptor"
                 style={{
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "clamp(22px, 3vw, 34px)",
+                  fontSize: "clamp(18px, 2.4vw, 28px)",
                   fontWeight: 600,
                   fontStyle: "italic",
-                  color: "#b8963e",
+                  color: "#1a2744",
                   margin: 0,
-                  lineHeight: 1.4,
+                  lineHeight: 1.5,
                   letterSpacing: "0.01em",
                 }}
               >
-                Guidance for real estate decisions and life transitions
+                Washington State's leading resource for senior transitions, estate &amp; probate sales, and adult family
+                homes
               </p>
             </div>
           </div>
@@ -153,7 +173,6 @@ const RPPHomeV3 = () => {
                         loading="lazy"
                         style={{ display: "block", width: "100%", height: "190px", objectFit: "cover" }}
                       />
-                      {/* "Tap to explore" ribbon — mobile only */}
                       <span
                         className="absolute top-3 right-3 sm:hidden"
                         style={{
@@ -216,7 +235,6 @@ const RPPHomeV3 = () => {
 
             {/* ── Secondary cards: Cost of Care + AFH Club ─────────── */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
-              {/* Cost of Care — bare image button, no tile wrapper */}
               <a
                 href="/cost-of-care-calculator"
                 className="group block transition-transform duration-200 hover:-translate-y-1"
@@ -228,8 +246,6 @@ const RPPHomeV3 = () => {
                   style={{ width: "100%", height: "auto", display: "block", borderRadius: 10 }}
                 />
               </a>
-
-              {/* AFH Club — image button, same treatment */}
               <a
                 href="/afh-club"
                 className="group block transition-transform duration-200 hover:-translate-y-1"
