@@ -70,10 +70,10 @@ const RPPHomeV3 = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "flex-end",
-              paddingBottom: "clamp(16px, 3vw, 48px)",
+              paddingBottom: "clamp(32px, 5vw, 72px)",
               padding: "0 8%",
               boxSizing: "border-box",
-              gap: "clamp(10px, 1.8vw, 22px)",
+              gap: "clamp(6px, 1vw, 12px)",
             }}
           >
             <img
@@ -95,7 +95,7 @@ const RPPHomeV3 = () => {
                 fontStyle: "italic",
                 color: "#7f1d1d",
                 margin: 0,
-                lineHeight: 1.2,
+                lineHeight: 1.05,
                 letterSpacing: "0.01em",
                 textAlign: "center",
                 textShadow: "0 1px 4px rgba(255,255,255,0.7)",
