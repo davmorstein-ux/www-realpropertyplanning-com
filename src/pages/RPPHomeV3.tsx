@@ -71,6 +71,7 @@ const RPPHomeV3 = () => {
               alignItems: "center",
               justifyContent: "flex-end",
               paddingBottom: "clamp(32px, 5vw, 72px)",
+              padding: "0 8% clamp(32px, 5vw, 72px)",
               boxSizing: "border-box",
               gap: "clamp(6px, 1vw, 12px)",
             }}
@@ -81,19 +82,12 @@ const RPPHomeV3 = () => {
               style={{
                 width: "clamp(160px, 46vw, 540px)",
                 maxWidth: "100%",
-                padding: "0 8%",
                 height: "auto",
                 display: "block",
               }}
             />
-            {/* Tagline — two lines as separate spans so first line can be nudged down independently */}
-            <div
-              id="rpp-tagline"
-              style={{
-                textAlign: "center",
-                padding: "0 8%",
-              }}
-            >
+            {/* Tagline — two lines as separate spans */}
+            <div id="rpp-tagline" style={{ textAlign: "center" }}>
               <span
                 style={{
                   display: "block",
