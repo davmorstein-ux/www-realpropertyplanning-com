@@ -99,7 +99,7 @@ const RPPHomeV3 = () => {
                   lineHeight: 1,
                   letterSpacing: "0.01em",
                   textShadow: "0 1px 4px rgba(255,255,255,0.7)",
-                  marginTop: "clamp(8px, 2vw, 28px)",
+                  marginTop: "clamp(24px, 4vw, 56px)",
                 }}
               >
                 Guidance for real estate decisions
