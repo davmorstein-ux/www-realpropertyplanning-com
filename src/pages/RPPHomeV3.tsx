@@ -80,7 +80,7 @@ const RPPHomeV3 = () => {
               src="/rpp-logo-final.webp"
               alt="Real Property Planning"
               style={{
-                width: "clamp(160px, 46vw, 540px)",
+                width: "clamp(200px, 55vw, 640px)",
                 maxWidth: "100%",
                 height: "auto",
                 display: "block",
