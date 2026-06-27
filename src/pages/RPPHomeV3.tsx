@@ -118,13 +118,14 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(18px, 2.4vw, 28px)",
                   fontWeight: 600,
                   fontStyle: "normal",
+                  whiteSpace: "pre-line",
                   color: "#1a2744",
                   margin: 0,
                   lineHeight: 1.5,
                   letterSpacing: "0.01em",
                 }}
               >
-                Washington State's leading resource for senior transitions, estate &amp; probate sales, and the Adult
+                Washington State's leading resource for senior transitions, \estate &amp; probate sales, and the Adult
                 Family Home marketplace
               </p>
             </div>
