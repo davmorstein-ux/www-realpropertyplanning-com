@@ -61,7 +61,7 @@ const RPPHomeV3 = () => {
             loading="eager"
             decoding="async"
           />
-          {/* Logo + tagline overlay — stacked vertically, centered in hero */}
+          {/* Logo + tagline overlay */}
           <div
             style={{
               position: "absolute",
@@ -73,7 +73,7 @@ const RPPHomeV3 = () => {
               paddingBottom: "clamp(16px, 3vw, 48px)",
               padding: "0 8%",
               boxSizing: "border-box",
-              gap: "clamp(12px, 2vw, 28px)",
+              gap: "clamp(10px, 1.8vw, 22px)",
             }}
           >
             <img
@@ -95,14 +95,15 @@ const RPPHomeV3 = () => {
                 fontStyle: "italic",
                 color: "#7f1d1d",
                 margin: 0,
-                lineHeight: 1.35,
+                lineHeight: 1.2,
                 letterSpacing: "0.01em",
                 textAlign: "center",
                 textShadow: "0 1px 4px rgba(255,255,255,0.7)",
-                whiteSpace: "pre-line",
               }}
             >
-              {"Guidance for real estate decisions\nand later life transitions"}
+              Guidance for real estate decisions
+              <br />
+              and later life transitions
             </p>
           </div>
         </div>
@@ -118,15 +119,15 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(18px, 2.4vw, 28px)",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  whiteSpace: "pre-line",
                   color: "#1a2744",
                   margin: 0,
                   lineHeight: 1.5,
                   letterSpacing: "0.01em",
                 }}
               >
-                Washington State's leading resource for senior transitions, \estate &amp; probate sales, and the Adult
-                Family Home marketplace
+                Washington State's leading resource for senior transitions,
+                <br />
+                estate &amp; probate sales, and the Adult Family Home marketplace
               </p>
             </div>
           </div>
