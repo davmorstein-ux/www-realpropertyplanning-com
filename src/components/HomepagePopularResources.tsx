@@ -12,17 +12,17 @@ const HomepagePopularResources = () => (
     <style>{`
       .rpp-pr-eyebrow {
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 15px !important;
+        font-size: 13px !important;
         font-weight: 700 !important;
         letter-spacing: 0.18em !important;
         text-transform: uppercase !important;
-        color: #b8963e !important;
+        color: #1a2744 !important;
         margin: 0 0 0.5rem 0 !important;
         display: block !important;
       }
       .rpp-pr-heading {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
-        font-size: clamp(32px, 3vw, 42px) !important;
+        font-size: clamp(32px, 3vw, 48px) !important;
         font-weight: 700 !important;
         color: #1a2744 !important;
         margin: 0 !important;
@@ -43,53 +43,57 @@ const HomepagePopularResources = () => (
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
+        align-items: center !important;
+        text-align: center !important;
         background-color: #f5f2ec !important;
-        border: 2px solid #c8c0b0 !important;
-        border-left: 5px solid #b8963e !important;
-        border-radius: 8px !important;
-        padding: 1.75rem 1.5rem 1.5rem !important;
+        border: 1px solid #e0dbd2 !important;
+        border-radius: 10px !important;
+        padding: 1.75rem 1.25rem 1.5rem !important;
         min-height: 160px !important;
         width: 100% !important;
         text-decoration: none !important;
-        transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+        transition: box-shadow 0.15s ease, transform 0.15s ease !important;
       }
       .rpp-pr-card:hover {
-        border-color: #b8963e !important;
-        border-left-color: #1a2744 !important;
+        box-shadow: 0 6px 20px rgba(26,39,68,0.12) !important;
+        transform: translateY(-2px) !important;
         background-color: #faf8f4 !important;
-        box-shadow: 0 4px 16px rgba(26,39,68,0.10) !important;
       }
       .rpp-pr-card-text {
-        font-family: 'Cormorant Garamond', Georgia, serif !important;
-        font-size: 26px !important;
-        font-weight: 700 !important;
+        font-family: Inter, system-ui, sans-serif !important;
+        font-size: 18px !important;
+        font-weight: 600 !important;
         color: #1a2744 !important;
-        line-height: 1.3 !important;
+        line-height: 1.35 !important;
         flex: 1 !important;
         margin-bottom: 1.25rem !important;
+        text-align: center !important;
       }
       .rpp-pr-card-cta {
         display: inline-flex !important;
         align-items: center !important;
         gap: 6px !important;
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 14px !important;
+        font-size: 13px !important;
         font-weight: 700 !important;
         letter-spacing: 0.1em !important;
         text-transform: uppercase !important;
-        color: #b8963e !important;
+        color: #1a2744 !important;
+        text-decoration: underline !important;
+        text-underline-offset: 3px !important;
       }
       .rpp-pr-browse {
         display: inline-flex !important;
         align-items: center !important;
         gap: 8px !important;
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 20px !important;
+        font-size: 18px !important;
         font-weight: 700 !important;
         color: #1a2744 !important;
         text-decoration: none !important;
       }
-      .rpp-pr-browse:hover { color: #b8963e !important; }
+      .rpp-pr-browse:hover { color: #7f1d1d !important; }
       @media (max-width: 900px) {
         .rpp-pr-grid { grid-template-columns: repeat(2, 1fr) !important; }
       }
@@ -115,8 +119,8 @@ const HomepagePopularResources = () => (
                 Read guide
                 <svg
                   viewBox="0 0 24 24"
-                  width="14"
-                  height="14"
+                  width="13"
+                  height="13"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -138,8 +142,8 @@ const HomepagePopularResources = () => (
           Browse all resources
           <svg
             viewBox="0 0 24 24"
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             fill="none"
             stroke="currentColor"
             strokeWidth="2.5"
