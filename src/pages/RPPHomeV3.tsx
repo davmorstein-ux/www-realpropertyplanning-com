@@ -71,7 +71,6 @@ const RPPHomeV3 = () => {
               alignItems: "center",
               justifyContent: "flex-end",
               paddingBottom: "clamp(32px, 5vw, 72px)",
-              padding: "0 8%",
               boxSizing: "border-box",
               gap: "clamp(6px, 1vw, 12px)",
             }}
@@ -82,29 +81,52 @@ const RPPHomeV3 = () => {
               style={{
                 width: "clamp(160px, 46vw, 540px)",
                 maxWidth: "100%",
+                padding: "0 8%",
                 height: "auto",
                 display: "block",
               }}
             />
-            <p
+            {/* Tagline — two lines as separate spans so first line can be nudged down independently */}
+            <div
               id="rpp-tagline"
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontSize: "clamp(16px, 2.2vw, 32px)",
-                fontWeight: 600,
-                fontStyle: "italic",
-                color: "#7f1d1d",
-                margin: 0,
-                lineHeight: 1.05,
-                letterSpacing: "0.01em",
                 textAlign: "center",
-                textShadow: "0 1px 4px rgba(255,255,255,0.7)",
+                padding: "0 8%",
               }}
             >
-              Guidance for real estate decisions
-              <br />
-              and later life transitions
-            </p>
+              <span
+                style={{
+                  display: "block",
+                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontSize: "clamp(16px, 2.2vw, 32px)",
+                  fontWeight: 600,
+                  fontStyle: "italic",
+                  color: "#7f1d1d",
+                  lineHeight: 1,
+                  letterSpacing: "0.01em",
+                  textShadow: "0 1px 4px rgba(255,255,255,0.7)",
+                  marginTop: "clamp(8px, 2vw, 28px)",
+                }}
+              >
+                Guidance for real estate decisions
+              </span>
+              <span
+                style={{
+                  display: "block",
+                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontSize: "clamp(16px, 2.2vw, 32px)",
+                  fontWeight: 600,
+                  fontStyle: "italic",
+                  color: "#7f1d1d",
+                  lineHeight: 1,
+                  letterSpacing: "0.01em",
+                  textShadow: "0 1px 4px rgba(255,255,255,0.7)",
+                  marginTop: "0.2em",
+                }}
+              >
+                and later life transitions
+              </span>
+            </div>
           </div>
         </div>
 
