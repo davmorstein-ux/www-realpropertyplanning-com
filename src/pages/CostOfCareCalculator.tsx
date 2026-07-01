@@ -95,15 +95,6 @@ const CARE_TYPE_COLORS: Record<string, string> = {
   ccrc: "#7c6840",
 };
 
-const ACTUAL_US_INFLATION_RATE = 4.2;
-const ACTUAL_INFLATION_AS_OF = "May 2026 report";
-const YEARS_OUT_OPTIONS = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-const INFLATION_OPTIONS = [
-  1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4,
-  3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5,
-];
-const YEARS_OF_CARE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 const SHORT_CARE_LABELS: Record<string, string> = {
   "in-home": "In-Home Care",
   "adult-day": "Adult Day Care",
@@ -115,40 +106,23 @@ const SHORT_CARE_LABELS: Record<string, string> = {
   ccrc: "CCRC / Life Plan",
 };
 
-const PLANNING_FOR_OPTIONS = [
-  { id: "self", label: "Myself", phrase: "your" },
-  { id: "parent", label: "A Parent", phrase: "your parent's" },
-  { id: "spouse", label: "Partner/Spouse", phrase: "your partner's" },
-  { id: "family", label: "Family Member", phrase: "your family member's" },
+// Simple, disclosed cost-growth assumptions — no rate the visitor has to
+// research or guess. "Average" is applied automatically; the other two
+// are available behind an optional "Adjust this assumption" reveal.
+const INFLATION_PRESETS = [
+  { id: "conservative", label: "Conservative", value: 2 },
+  { id: "average", label: "Average", value: 3.5 },
+  { id: "aggressive", label: "Aggressive", value: 5 },
 ] as const;
 
-const MARITAL_STATUS_OPTIONS = [
-  { id: "single", label: "Single" },
-  { id: "married", label: "Married" },
-  { id: "divorced", label: "Divorced" },
-  { id: "widowed", label: "Widowed" },
-] as const;
-
-const MARITAL_STATUS_NOTES: Record<string, string> = {
-  single:
-    "As a single applicant, Medicaid asset and income limits apply directly to one person's finances — an elder law attorney can walk through eligibility and planning options.",
-  married:
-    "Married couples often have additional Medicaid planning options, such as spousal asset protections, worth discussing with an elder law attorney.",
-  divorced:
-    "Divorce settlements and any spousal support can affect countable assets for Medicaid planning — worth reviewing with an elder law attorney.",
-  widowed:
-    "Losing a spouse often changes income and asset eligibility for benefit programs — an elder law attorney can help reassess the picture.",
-};
+const YEARS_OUT_OPTIONS = [0, 5, 10, 15, 20, 25, 30];
+const YEARS_OF_CARE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function formatCurrency(value: number) {
   return value.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 }
 
 const TEAL = "#0d9488";
-const TEAL_LIGHT = "#2dd9c4";
-const ELECTRIC_BLUE = "#2979ff";
-const ELECTRIC_BLUE_LIGHT = "#7eb6ff";
-const ELECTRIC_BLUE_RGB = "41,121,255";
 
 const AnimatedValue = ({ value, formatter }: { value: number; formatter: (n: number) => string }) => {
   const [display, setDisplay] = useState(value);
@@ -162,7 +136,7 @@ const AnimatedValue = ({ value, formatter }: { value: number; formatter: (n: num
       return;
     }
     const startTime = performance.now();
-    const duration = 600;
+    const duration = 500;
     let raf: number;
     const tick = (now: number) => {
       const progress = Math.min(1, (now - startTime) / duration);
@@ -180,7 +154,7 @@ const AnimatedValue = ({ value, formatter }: { value: number; formatter: (n: num
   return <>{formatter(display)}</>;
 };
 
-// Shared card style
+// Shared style tokens
 const card: React.CSSProperties = {
   background: "#ffffff",
   border: "1px solid #ddd8cc",
@@ -214,76 +188,47 @@ const fieldLabel: React.CSSProperties = {
   marginBottom: 8,
 };
 
+const stepperBtn: React.CSSProperties = {
+  width: 52,
+  height: 52,
+  borderRadius: 8,
+  fontSize: "32px",
+  fontWeight: 700,
+  color: "#1a2744",
+  background: "#f5f2ec",
+  border: "1px solid #ddd8cc",
+  cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flexShrink: 0,
+};
+
+const pillBtn = (active: boolean, color: string): React.CSSProperties => ({
+  padding: "10px 12px",
+  borderRadius: 8,
+  fontSize: "16px",
+  fontWeight: 700,
+  fontFamily: "'Raleway', sans-serif",
+  color: active ? "#ffffff" : "#1a2744",
+  background: active ? color : "#f5f2ec",
+  border: `1px solid ${active ? color : "#ddd8cc"}`,
+  cursor: "pointer",
+  transition: "all .15s ease",
+});
+
 const CostOfCareCalculator = () => {
   const [careTypeId, setCareTypeId] = useState("assisted-living");
-  const [yearsOut, setYearsOut] = useState(0);
-  const [inflationRate, setInflationRate] = useState(3);
-  const [unit, setUnit] = useState<"monthly" | "annual">("monthly");
-  const [planningFor, setPlanningFor] = useState<(typeof PLANNING_FOR_OPTIONS)[number]["id"]>("self");
-  const [maritalStatus, setMaritalStatus] = useState<(typeof MARITAL_STATUS_OPTIONS)[number]["id"]>("married");
   const [currentAge, setCurrentAge] = useState(75);
+  const [yearsOut, setYearsOut] = useState(0);
   const [yearsOfCareNeeded, setYearsOfCareNeeded] = useState(3);
-
-  const knobRef = useRef<HTMLDivElement>(null);
-
-  const KNOB_TICK_ANGLES = [
-    210.0, 217.5, 225.0, 232.5, 240.0, 247.5, 255.0, 262.5, 270.0, 277.5, 285.0, 292.5, 300.0, 307.5, 315.0, 322.5,
-    330.0, 337.5, 345.0, 352.5, 360.0, 367.5, 375.0, 382.5, 390.0, 397.5, 405.0, 412.5, 420.0, 427.5, 435.0, 442.5,
-    450.0, 457.5, 465.0, 472.5, 480.0, 487.5, 495.0, 502.5, 510.0,
-  ];
-
-  const setInflationFromPointer = (clientX: number, clientY: number) => {
-    const rect = knobRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-    const dx = clientX - cx;
-    const dy = clientY - cy;
-    const raw = (((Math.atan2(dx, -dy) * (180 / Math.PI)) % 360) + 360) % 360;
-    const circDist = (a: number, b: number) => {
-      const d = Math.abs(a - (b % 360)) % 360;
-      return Math.min(d, 360 - d);
-    };
-    let bestIdx = 0,
-      bestDist = Infinity;
-    KNOB_TICK_ANGLES.forEach((angle, i) => {
-      const d = circDist(raw, angle);
-      if (d < bestDist) {
-        bestDist = d;
-        bestIdx = i;
-      }
-    });
-    setInflationRate(INFLATION_OPTIONS[bestIdx]);
-  };
-
-  const handleKnobPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    e.currentTarget.setPointerCapture(e.pointerId);
-    setInflationFromPointer(e.clientX, e.clientY);
-  };
-  const handleKnobPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (e.buttons !== 1) return;
-    setInflationFromPointer(e.clientX, e.clientY);
-  };
+  const [unit, setUnit] = useState<"monthly" | "annual">("monthly");
+  const [inflationId, setInflationId] = useState<(typeof INFLATION_PRESETS)[number]["id"]>("average");
+  const [showInflationAdjust, setShowInflationAdjust] = useState(false);
 
   const careType = useMemo(() => CARE_TYPES.find((c) => c.id === careTypeId) ?? CARE_TYPES[0], [careTypeId]);
-  const sortedByCost = useMemo(() => [...CARE_TYPES].sort((a, b) => a.waMonthly - b.waMonthly), []);
-  const minCost = sortedByCost[0].waMonthly;
-  const maxCost = sortedByCost[sortedByCost.length - 1].waMonthly;
-  const gaugePct = useMemo(() => (careType.waMonthly - minCost) / (maxCost - minCost), [careType, minCost, maxCost]);
-  const gaugeLabel = useMemo(() => {
-    const rank = sortedByCost.findIndex((c) => c.id === careType.id);
-    const total = sortedByCost.length;
-    if (rank === 0) return "Lowest-cost option in Washington";
-    if (rank === total - 1) return "Highest-cost option in Washington";
-    const frac = rank / (total - 1);
-    if (frac < 0.4) return "Below-average cost in Washington";
-    if (frac < 0.6) return "Mid-range cost in Washington";
-    return "Above-average cost in Washington";
-  }, [careType, sortedByCost]);
+  const inflationRate = INFLATION_PRESETS.find((p) => p.id === inflationId)?.value ?? 3.5;
 
-  const inflationIndex = INFLATION_OPTIONS.indexOf(inflationRate);
-  const yearsOutIndex = YEARS_OUT_OPTIONS.indexOf(yearsOut);
-  const yearsOfCareIndex = YEARS_OF_CARE_OPTIONS.indexOf(yearsOfCareNeeded);
   const currentYear = new Date().getFullYear();
   const ageAtCareStart = currentAge + yearsOut;
   const ageAtCareEnd = ageAtCareStart + yearsOfCareNeeded;
@@ -304,28 +249,11 @@ const CostOfCareCalculator = () => {
     ((careType.waMonthly - careType.nationalMonthly) / careType.nationalMonthly) * 100,
   );
 
-  const planningPhrase = PLANNING_FOR_OPTIONS.find((p) => p.id === planningFor)?.phrase ?? "your";
-  const planningLabel = PLANNING_FOR_OPTIONS.find((p) => p.id === planningFor)?.label ?? "Myself";
-  const maritalLabel = MARITAL_STATUS_OPTIONS.find((m) => m.id === maritalStatus)?.label ?? "Married";
-
-  const pillBtn = (active: boolean, color: string) => ({
-    padding: "9px 10px",
-    borderRadius: 8,
-    fontSize: "16px !important" as any,
-    fontWeight: 700,
-    fontFamily: "'Raleway', sans-serif",
-    color: active ? "#ffffff" : "#1a2744",
-    background: active ? color : "#f5f2ec",
-    border: `1px solid ${active ? color : "#ddd8cc"}`,
-    cursor: "pointer",
-    transition: "all .15s ease",
-  });
-
   return (
     <>
       <SEOHead
         title="Cost of Care Calculator | Washington State Long-Term Care Costs"
-        description="Compare the cost of in-home care, assisted living, memory care, and nursing homes in Washington State versus national averages, with future cost projections based on inflation."
+        description="Compare the cost of in-home care, assisted living, memory care, and nursing homes in Washington State versus national averages, with future cost projections."
         canonical="https://realpropertyplanning.com/cost-of-care-calculator"
       />
       <BreadcrumbSchema
@@ -387,1052 +315,463 @@ const CostOfCareCalculator = () => {
           style={{ background: "#f5f2ec", padding: "40px 24px 72px", width: "100%", boxSizing: "border-box" }}
         >
           <div style={{ maxWidth: 900, margin: "0 auto", width: "100%", boxSizing: "border-box" }}>
-            {/* Row 1: Planning Profile + Care Type side by side */}
-            <div className="coc-row1" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14, marginBottom: 0 }}>
-              {/* Planning Profile */}
-              <div style={card}>
-                <div style={sectionLabel(TEAL)} className="coc-section-title">
-                  Planning Profile
-                  <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
-                </div>
-                {/* Planning For + Marital Status — stacks to 1-col on mobile via class */}
-                <div
-                  className="coc-profile-grid"
-                  style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}
-                >
-                  <div>
-                    <label style={fieldLabel}>Planning For</label>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6 }}>
-                      {PLANNING_FOR_OPTIONS.map((p) => (
-                        <button
-                          key={p.id}
-                          onClick={() => setPlanningFor(p.id)}
-                          style={pillBtn(p.id === planningFor, TEAL)}
-                        >
-                          {p.label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <label style={fieldLabel}>Marital Status</label>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6 }}>
-                      {MARITAL_STATUS_OPTIONS.map((m) => (
-                        <button
-                          key={m.id}
-                          onClick={() => setMaritalStatus(m.id)}
-                          style={pillBtn(m.id === maritalStatus, TEAL)}
-                        >
-                          {m.label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <label style={fieldLabel}>Current Age</label>
-                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                    <button
-                      onClick={() => setCurrentAge((a) => Math.max(18, a - 1))}
-                      style={{
-                        width: 52,
-                        height: 52,
-                        borderRadius: 8,
-                        fontSize: "32px",
-                        fontWeight: 700,
-                        color: "#1a2744",
-                        background: "#f5f2ec",
-                        border: "1px solid #ddd8cc",
-                        cursor: "pointer",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexShrink: 0,
-                      }}
-                    >
-                      −
-                    </button>
-                    <div
-                      style={{
-                        background: "#f5f2ec",
-                        border: "2px solid #ddd8cc",
-                        borderRadius: 8,
-                        padding: "10px 20px",
-                        textAlign: "center",
-                        flex: 1,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        gap: 4,
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: "'Courier New', monospace",
-                          fontWeight: 700,
-                          fontSize: "52px",
-                          color: TEAL,
-                          lineHeight: 1,
-                          display: "block",
-                        }}
-                      >
-                        {currentAge}
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: "'Raleway', sans-serif",
-                          fontSize: "16px",
-                          fontWeight: 600,
-                          color: "#4a5568",
-                          letterSpacing: "0.06em",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        yrs old
-                      </span>
-                    </div>
-                    <button
-                      onClick={() => setCurrentAge((a) => Math.min(105, a + 1))}
-                      style={{
-                        width: 52,
-                        height: 52,
-                        borderRadius: 8,
-                        fontSize: "32px",
-                        fontWeight: 700,
-                        color: "#1a2744",
-                        background: "#f5f2ec",
-                        border: "1px solid #ddd8cc",
-                        cursor: "pointer",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexShrink: 0,
-                      }}
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
+            {/* Card 1: Care type */}
+            <div style={card}>
+              <div style={sectionLabel(TEAL)} className="coc-section-title">
+                1. Select Type of Care
+                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
               </div>
-
-              {/* Care Type */}
-              <div style={card}>
-                <div style={sectionLabel(TEAL)} className="coc-section-title">
-                  Select Care Type
-                  <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
-                </div>
-                <div
-                  className="coc-toggle-grid"
-                  style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 8 }}
-                >
-                  {CARE_TYPES.map((c) => {
-                    const active = c.id === careTypeId;
-                    const color = CARE_TYPE_COLORS[c.id] ?? "#3f7690";
-                    return (
-                      <button
-                        key={c.id}
-                        onClick={() => setCareTypeId(c.id)}
-                        style={{
-                          padding: "14px 6px",
-                          borderRadius: 8,
-                          textAlign: "center",
-                          fontSize: "15px",
-                          fontWeight: 700,
-                          fontFamily: "'Raleway', sans-serif",
-                          lineHeight: 1.25,
-                          minHeight: 64,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          color: active ? "#ffffff" : "#1a2744",
-                          background: active ? color : "#f5f2ec",
-                          border: `1px solid ${active ? color : "#ddd8cc"}`,
-                          cursor: "pointer",
-                          transition: "all .15s ease",
-                        }}
-                      >
-                        {SHORT_CARE_LABELS[c.id] ?? c.label}
-                      </button>
-                    );
-                  })}
-                </div>
+              <div
+                className="coc-toggle-grid"
+                style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 8 }}
+              >
+                {CARE_TYPES.map((c) => {
+                  const active = c.id === careTypeId;
+                  const color = CARE_TYPE_COLORS[c.id] ?? "#3f7690";
+                  return (
+                    <button
+                      key={c.id}
+                      onClick={() => setCareTypeId(c.id)}
+                      style={{
+                        padding: "14px 6px",
+                        borderRadius: 8,
+                        textAlign: "center",
+                        fontSize: "15px",
+                        fontWeight: 700,
+                        fontFamily: "'Raleway', sans-serif",
+                        lineHeight: 1.25,
+                        minHeight: 64,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: active ? "#ffffff" : "#1a2744",
+                        background: active ? color : "#f5f2ec",
+                        border: `1px solid ${active ? color : "#ddd8cc"}`,
+                        cursor: "pointer",
+                        transition: "all .15s ease",
+                      }}
+                    >
+                      {SHORT_CARE_LABELS[c.id] ?? c.label}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
-            {/* Row 2: Care Timeline + Inflation Rate side by side */}
-            <div className="coc-row2" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14, marginTop: 14 }}>
-              {/* Care Timeline */}
-              <div style={card}>
-                <div style={sectionLabel(TEAL)} className="coc-section-title">
-                  Care Timeline
-                  <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
-                </div>
-                {/* Timeline inner — stacks on mobile via class */}
-                <div className="coc-timeline-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                  {/* Visual stepper */}
-                  <div>
-                    {[
-                      { label: "TODAY", sub: `Age ${currentAge}` },
-                      { label: "CARE BEGINS", sub: `Age ${ageAtCareStart} · ${currentYear + yearsOut}` },
-                      { label: "CARE ENDS", sub: `Age ${ageAtCareEnd}` },
-                    ].map((m, i) => (
-                      <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 16 }}>
-                          <div
-                            style={{
-                              width: 7,
-                              height: 14,
-                              borderRadius: "50%",
-                              flexShrink: 0,
-                              background: i === 1 ? TEAL : "#c8c0b0",
-                              border: "2px solid #f5f2ec",
-                            }}
-                          />
-                          {i < 2 && (
-                            <div
-                              style={{
-                                width: 3,
-                                flex: 1,
-                                minHeight: 28,
-                                background: i === 0 ? TEAL : "#e0d8c8",
-                                borderRadius: 2,
-                                margin: "3px 0",
-                              }}
-                            />
-                          )}
-                        </div>
-                        <div style={{ paddingBottom: i < 2 ? 14 : 0 }}>
-                          <div
-                            style={{
-                              fontSize: "15px !important" as any,
-                              fontWeight: 800,
-                              color: i === 1 ? TEAL : "#1a2744",
-                              fontFamily: "'Raleway', sans-serif",
-                              marginBottom: 2,
-                            }}
-                          >
-                            {m.label}
-                          </div>
-                          <div
-                            style={{
-                              fontSize: "17px",
-                              fontWeight: 600,
-                              color: "#374151",
-                              fontFamily: "'Raleway', sans-serif",
-                            }}
-                          >
-                            {m.sub}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  {/* Sliders */}
-                  <div>
-                    <label style={{ ...fieldLabel, marginBottom: 6 }}>When will care begin?</label>
-                    <div
-                      style={{
-                        background: "#f5f2ec",
-                        border: "1px solid #ddd8cc",
-                        borderRadius: 8,
-                        padding: "10px 14px",
-                        textAlign: "center",
-                        marginBottom: 10,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        gap: 2,
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: "'Courier New', monospace",
-                          fontWeight: 700,
-                          fontSize: "22px",
-                          color: TEAL,
-                          lineHeight: 1.2,
-                        }}
-                      >
-                        {yearsOut === 0 ? "TODAY" : `IN ${yearsOut} YRS`}
-                      </span>
-                      <span
-                        style={{
-                          fontSize: "17px",
-                          fontWeight: 600,
-                          color: "#374151",
-                          fontFamily: "'Raleway', sans-serif",
-                          lineHeight: 1.2,
-                        }}
-                      >
-                        Age {ageAtCareStart}
-                      </span>
-                    </div>
-                    <input
-                      type="range"
-                      className="coc-range"
-                      min={0}
-                      max={YEARS_OUT_OPTIONS.length - 1}
-                      step={1}
-                      value={yearsOutIndex}
-                      onChange={(e) => setYearsOut(YEARS_OUT_OPTIONS[Number(e.target.value)])}
-                      style={{ width: "100%", marginBottom: 4 }}
-                    />
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        fontSize: "16px",
-                        fontWeight: 600,
-                        color: "#374151",
-                        fontFamily: "'Raleway', sans-serif",
-                        marginBottom: 16,
-                      }}
-                    >
-                      <span>Today</span>
-                      <span>50 yrs</span>
-                    </div>
-                    <label style={{ ...fieldLabel, marginBottom: 6 }}>How long will care be needed?</label>
-                    <div
-                      style={{
-                        background: "#f5f2ec",
-                        border: "1px solid #ddd8cc",
-                        borderRadius: 8,
-                        padding: "10px 14px",
-                        textAlign: "center",
-                        marginBottom: 10,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        gap: 2,
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: "'Courier New', monospace",
-                          fontWeight: 700,
-                          fontSize: "26px",
-                          color: TEAL,
-                          lineHeight: 1.2,
-                        }}
-                      >
-                        {yearsOfCareNeeded} {yearsOfCareNeeded === 1 ? "YR" : "YRS"}
-                      </span>
-                      <span
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: 600,
-                          color: "#374151",
-                          fontFamily: "'Raleway', sans-serif",
-                          lineHeight: 1.2,
-                        }}
-                      >
-                        Through Age {ageAtCareEnd}
-                      </span>
-                    </div>
-                    <input
-                      type="range"
-                      className="coc-range"
-                      min={0}
-                      max={YEARS_OF_CARE_OPTIONS.length - 1}
-                      step={1}
-                      value={yearsOfCareIndex}
-                      onChange={(e) => setYearsOfCareNeeded(YEARS_OF_CARE_OPTIONS[Number(e.target.value)])}
-                      style={{ width: "100%", marginBottom: 4 }}
-                    />
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        fontSize: "16px",
-                        fontWeight: 600,
-                        color: "#374151",
-                        fontFamily: "'Raleway', sans-serif",
-                      }}
-                    >
-                      <span>1 yr</span>
-                      <span>10 yrs</span>
-                    </div>
-                  </div>
-                </div>
+            {/* Card 2: Your plan */}
+            <div style={card}>
+              <div style={sectionLabel(TEAL)} className="coc-section-title">
+                2. Your Care Plan
+                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
               </div>
 
-              {/* Inflation Rate */}
-              <div style={{ ...card, display: "flex", flexDirection: "column" }}>
-                <div style={sectionLabel(TEAL)} className="coc-section-title">
-                  Inflation Rate
-                  <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
-                </div>
-
-                {/* Actual CPI readout */}
-                <div
-                  style={{
-                    background: "#f5f2ec",
-                    border: `1px solid ${TEAL}50`,
-                    borderRadius: 8,
-                    padding: "10px 16px",
-                    textAlign: "center",
-                    marginBottom: 10,
-                  }}
-                >
+              <div style={{ marginBottom: 18 }}>
+                <label style={fieldLabel}>Current Age</label>
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <button
+                    onClick={() => setCurrentAge((a) => Math.max(18, a - 1))}
+                    style={stepperBtn}
+                    aria-label="Decrease age"
+                  >
+                    −
+                  </button>
                   <div
                     style={{
-                      fontFamily: "'Courier New', monospace",
-                      fontWeight: 700,
-                      fontSize: "48px !important" as any,
-                      lineHeight: 1.05,
-                      color: ELECTRIC_BLUE,
-                    }}
-                  >
-                    {ACTUAL_US_INFLATION_RATE.toFixed(1)}%
-                  </div>
-                  <div
-                    style={{
-                      fontSize: "16px",
-                      fontWeight: 600,
-                      color: "#374151",
-                      fontFamily: "'Raleway', sans-serif",
-                    }}
-                  >
-                    Actual U.S. CPI · {ACTUAL_INFLATION_AS_OF}
-                  </div>
-                </div>
-
-                <p
-                  style={{
-                    fontSize: "17px",
-                    fontWeight: 600,
-                    color: "#1a2744",
-                    fontFamily: "'Raleway', sans-serif",
-                    textAlign: "center",
-                    marginBottom: 20,
-                    lineHeight: 1.5,
-                  }}
-                >
-                  Use the knob or bars below to set your projection rate.
-                </p>
-
-                {/* Knob (left) + LED readout (right) — top-aligned */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    justifyContent: "center",
-                    gap: 28,
-                    marginBottom: 8,
-                    marginTop: 8,
-                  }}
-                >
-                  {/* Knob + +/- buttons below */}
-                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
-                    <div
-                      ref={knobRef}
-                      onPointerDown={handleKnobPointerDown}
-                      onPointerMove={handleKnobPointerMove}
-                      style={{
-                        width: 140,
-                        height: 140,
-                        borderRadius: "50%",
-                        position: "relative",
-                        flexShrink: 0,
-                        cursor: "grab",
-                        touchAction: "none",
-                        background: "radial-gradient(circle at 32% 28%, #e8e2d9, #c8c0b0 55%, #a8a099 80%)",
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.15), 0 0 0 3px #f5f2ec, 0 0 0 4px #ddd8cc",
-                      }}
-                    >
-                      <div
-                        style={{
-                          position: "absolute",
-                          inset: 6,
-                          borderRadius: "50%",
-                          background:
-                            "repeating-conic-gradient(from 0deg, rgba(255,255,255,0.15) 0deg 3deg, transparent 3deg 9deg)",
-                          pointerEvents: "none",
-                        }}
-                      />
-                      <div
-                        style={{
-                          position: "absolute",
-                          top: "50%",
-                          left: "50%",
-                          width: 3,
-                          height: "38%",
-                          background: "linear-gradient(180deg,#33bbff,#0099ee)",
-                          borderRadius: "3px 3px 0 0",
-                          transformOrigin: "50% 100%",
-                          transform: `translate(-50%, -100%) rotate(${KNOB_TICK_ANGLES[inflationIndex]}deg)`,
-                          pointerEvents: "none",
-                        }}
-                      />
-                      <div
-                        style={{
-                          position: "absolute",
-                          top: "50%",
-                          left: "50%",
-                          width: 10,
-                          height: 10,
-                          borderRadius: "50%",
-                          background: TEAL,
-                          transform: "translate(-50%, -50%)",
-                          pointerEvents: "none",
-                          zIndex: 2,
-                        }}
-                      />
-                    </div>
-                    {/* − / + buttons under knob */}
-                    <div style={{ display: "flex", gap: 12 }}>
-                      <button
-                        onClick={() =>
-                          setInflationRate((r) => {
-                            const i = INFLATION_OPTIONS.indexOf(r);
-                            return i > 0 ? INFLATION_OPTIONS[i - 1] : r;
-                          })
-                        }
-                        aria-label="Decrease inflation rate"
-                        style={{
-                          width: 52,
-                          height: 52,
-                          borderRadius: 8,
-                          fontSize: "28px",
-                          fontWeight: 700,
-                          color: "#1a2744",
-                          background: "#f5f2ec",
-                          border: "2px solid #ddd8cc",
-                          cursor: "pointer",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          lineHeight: 1,
-                          fontFamily: "system-ui, sans-serif",
-                        }}
-                      >
-                        −
-                      </button>
-                      <button
-                        onClick={() =>
-                          setInflationRate((r) => {
-                            const i = INFLATION_OPTIONS.indexOf(r);
-                            return i < INFLATION_OPTIONS.length - 1 ? INFLATION_OPTIONS[i + 1] : r;
-                          })
-                        }
-                        aria-label="Increase inflation rate"
-                        style={{
-                          width: 52,
-                          height: 52,
-                          borderRadius: 8,
-                          fontSize: "28px",
-                          fontWeight: 700,
-                          color: "#1a2744",
-                          background: "#f5f2ec",
-                          border: "2px solid #ddd8cc",
-                          cursor: "pointer",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          lineHeight: 1,
-                          fontFamily: "system-ui, sans-serif",
-                        }}
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* LED digital readout + % / YR */}
-                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
-                    <div
-                      style={{
-                        width: 220,
-                        height: 140,
-                        flexShrink: 0,
-                        background: "#050810",
-                        borderRadius: 12,
-                        border: "2px solid #0088dd",
-                        boxShadow: "0 0 12px #0088dd50, inset 0 0 20px rgba(0,0,0,0.8)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <div
-                        id="coc-led-number"
-                        style={{
-                          fontFamily: "'Courier New', monospace",
-                          fontWeight: 900,
-                          fontSize: "110px",
-                          color: "#0099ee",
-                          lineHeight: 1,
-                          textShadow: "0 0 3px #0099ee",
-                          letterSpacing: "-0.05em",
-                        }}
-                      >
-                        {inflationRate.toFixed(1)}
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: "'Courier New', monospace",
-                        fontSize: "42px",
-                        fontWeight: 900,
-                        color: "#00ccff",
-                        letterSpacing: "0.15em",
-                        textShadow: "0 0 8px #00ccff, 0 0 16px #00aaff",
-                      }}
-                    >
-                      % / YR
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bar graph — red fills from left as rate increases, no % labels */}
-                <div style={{ marginTop: 8 }}>
-                  <div
-                    style={{ display: "flex", alignItems: "flex-end", gap: 3, justifyContent: "center", height: 52 }}
-                  >
-                    {INFLATION_OPTIONS.map((rate, i) => {
-                      const barHeight = 10 + (i / (INFLATION_OPTIONS.length - 1)) * 38;
-                      const isLit = rate <= inflationRate;
-                      return (
-                        <button
-                          key={rate}
-                          onClick={() => setInflationRate(rate)}
-                          aria-label={`Set inflation rate to ${rate}%`}
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            background: "none",
-                            border: "none",
-                            cursor: "pointer",
-                            padding: 0,
-                          }}
-                        >
-                          <div
-                            style={{
-                              width: 7,
-                              height: barHeight,
-                              borderRadius: 3,
-                              background: isLit ? `linear-gradient(180deg, #ff6b6b, #dc2626)` : "#ddd8cc",
-                              boxShadow: isLit ? "0 0 6px rgba(220,38,38,0.5)" : "none",
-                              transition: "background 0.15s ease, box-shadow 0.15s ease",
-                            }}
-                          />
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Row 3: Cost Intensity Gauge + Results side by side */}
-            <div className="coc-row3" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14, marginTop: 14 }}>
-              {/* Cost Intensity Gauge */}
-              <div style={card}>
-                <div style={sectionLabel(ELECTRIC_BLUE)} className="coc-section-title">
-                  Cost Intensity Gauge
-                  <span
-                    style={{
+                      background: "#f5f2ec",
+                      border: "2px solid #ddd8cc",
+                      borderRadius: 8,
+                      padding: "10px 20px",
+                      textAlign: "center",
                       flex: 1,
-                      height: 1,
-                      background: `linear-gradient(90deg, rgba(${ELECTRIC_BLUE_RGB},0.3), transparent)`,
-                    }}
-                  />
-                </div>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <svg width="300" height="218" viewBox="0 0 260 185">
-                    {Array.from({ length: 48 }).map((_, i) => {
-                      const t0 = 180 - (i / 48) * 180;
-                      const t1 = 180 - ((i + 1) / 48) * 180;
-                      const rad0 = (t0 * Math.PI) / 180;
-                      const rad1 = (t1 * Math.PI) / 180;
-                      const x0 = 130 + 110 * Math.cos(rad0);
-                      const y0 = 140 - 110 * Math.sin(rad0);
-                      const x1 = 130 + 110 * Math.cos(rad1);
-                      const y1 = 140 - 110 * Math.sin(rad1);
-                      const progress = i / 47;
-                      const width = 5 + progress * 21;
-                      const filled = i / 48 < Math.max(0, Math.min(1, gaugePct));
-                      return (
-                        <path
-                          key={i}
-                          d={`M ${x0.toFixed(2)} ${y0.toFixed(2)} A 110 110 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}`}
-                          stroke={filled ? ELECTRIC_BLUE : "#e0d8c8"}
-                          strokeWidth={width}
-                          fill="none"
-                          strokeLinecap="round"
-                          style={{ transition: "stroke 0.4s ease" }}
-                        />
-                      );
-                    })}
-                    <g
-                      style={{ transition: "transform 0.6s ease" }}
-                      transform={`translate(130,140) rotate(${-90 + Math.max(0, Math.min(1, gaugePct)) * 180})`}
-                    >
-                      <polygon points="0,-86 4,0 -4,0" fill={ELECTRIC_BLUE} />
-                    </g>
-                    <circle cx={130} cy={140} r={9} fill="#f5f2ec" stroke="#ddd8cc" strokeWidth={2} />
-                    <text
-                      x={10}
-                      y={183}
-                      textAnchor="start"
-                      fill={ELECTRIC_BLUE}
-                      fontWeight={700}
-                      fontFamily="Raleway"
-                      style={{ fontSize: "16px" }}
-                    >
-                      LOW
-                    </text>
-                    <text
-                      x={250}
-                      y={183}
-                      textAnchor="end"
-                      fill={ELECTRIC_BLUE}
-                      fontWeight={700}
-                      fontFamily="Raleway"
-                      style={{ fontSize: "16px" }}
-                    >
-                      HIGH
-                    </text>
-                  </svg>
-                  <div
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: 700,
-                      color: "#1a2744",
-                      textAlign: "center",
-                      fontFamily: "'Raleway', sans-serif",
-                      marginTop: 24,
-                      lineHeight: 1.6,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: 4,
                     }}
                   >
-                    <div style={{ color: ELECTRIC_BLUE, fontWeight: 800 }}>{careType.label}</div>
-                    <div>{gaugeLabel.replace("washington", "Washington")}</div>
+                    <span
+                      style={{
+                        fontFamily: "'Courier New', monospace",
+                        fontWeight: 700,
+                        fontSize: "52px",
+                        color: TEAL,
+                        lineHeight: 1,
+                        display: "block",
+                      }}
+                    >
+                      {currentAge}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: "'Raleway', sans-serif",
+                        fontSize: "16px",
+                        fontWeight: 600,
+                        color: "#4a5568",
+                        letterSpacing: "0.06em",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      yrs old
+                    </span>
                   </div>
+                  <button
+                    onClick={() => setCurrentAge((a) => Math.min(105, a + 1))}
+                    style={stepperBtn}
+                    aria-label="Increase age"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
 
-              {/* Unit toggle + Results */}
-              <div style={card}>
-                <div
-                  style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 16 }}
-                >
-                  <span
-                    style={{
-                      fontSize: "15px !important" as any,
-                      color: unit === "monthly" ? TEAL : "#5a6a7a",
-                      fontWeight: 700,
-                      fontFamily: "'Raleway', sans-serif",
-                    }}
-                  >
-                    Monthly
-                  </span>
-                  <div
-                    onClick={() => setUnit(unit === "monthly" ? "annual" : "monthly")}
-                    style={{
-                      width: 72,
-                      height: 28,
-                      borderRadius: 14,
-                      position: "relative",
-                      cursor: "pointer",
-                      background: "#e0d8c8",
-                    }}
-                  >
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: 3,
-                        left: unit === "monthly" ? 3 : 38,
-                        width: 32,
-                        height: 22,
-                        borderRadius: 11,
-                        transition: "left .2s ease",
-                        background: TEAL,
-                      }}
-                    />
-                  </div>
-                  <span
-                    style={{
-                      fontSize: "15px !important" as any,
-                      color: unit === "annual" ? TEAL : "#5a6a7a",
-                      fontWeight: 700,
-                      fontFamily: "'Raleway', sans-serif",
-                    }}
-                  >
-                    Annual
-                  </span>
-                </div>
-                {/* WA vs National results — stacks to 1-col on mobile via class */}
-                <div
-                  className="coc-results-grid"
-                  style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 14 }}
-                >
-                  <div
-                    style={{
-                      borderRadius: 10,
-                      padding: "16px 12px",
-                      textAlign: "center",
-                      background: "#f5f2ec",
-                      border: `2px solid ${TEAL}50`,
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: "13px !important" as any,
-                        letterSpacing: "0.12em",
-                        textTransform: "uppercase" as const,
-                        fontWeight: 700,
-                        marginBottom: 6,
-                        color: "#1a2744",
-                        fontFamily: "'Raleway', sans-serif",
-                      }}
+              <div style={{ marginBottom: 18 }}>
+                <label style={fieldLabel}>When Might Care Begin?</label>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  {YEARS_OUT_OPTIONS.map((y) => (
+                    <button
+                      key={y}
+                      onClick={() => setYearsOut(y)}
+                      style={{ ...pillBtn(y === yearsOut, TEAL), flex: "1 1 80px" }}
                     >
-                      Washington
-                    </div>
-                    <div
+                      {y === 0 ? "Now" : `${y} yrs`}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label style={fieldLabel}>How Many Years of Care?</label>
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <button
+                    onClick={() => setYearsOfCareNeeded((y) => Math.max(1, y - 1))}
+                    style={stepperBtn}
+                    aria-label="Decrease years of care"
+                  >
+                    −
+                  </button>
+                  <div
+                    style={{
+                      background: "#f5f2ec",
+                      border: "2px solid #ddd8cc",
+                      borderRadius: 8,
+                      padding: "10px 20px",
+                      textAlign: "center",
+                      flex: 1,
+                    }}
+                  >
+                    <span
                       style={{
                         fontFamily: "'Courier New', monospace",
                         fontWeight: 700,
-                        fontSize: "clamp(18px,3vw,24px)",
+                        fontSize: "52px",
                         color: TEAL,
+                        lineHeight: 1,
                       }}
                     >
-                      <AnimatedValue
-                        value={unit === "monthly" ? projectedWaMonthly : projectedWaAnnual}
-                        formatter={formatCurrency}
-                      />
-                    </div>
-                    <div
+                      {yearsOfCareNeeded}
+                    </span>{" "}
+                    <span
                       style={{
+                        fontFamily: "'Raleway', sans-serif",
                         fontSize: "16px",
                         fontWeight: 600,
-                        color: "#374151",
-                        fontFamily: "'Raleway', sans-serif",
+                        color: "#4a5568",
+                        letterSpacing: "0.06em",
+                        textTransform: "uppercase",
                       }}
                     >
-                      per {unit === "monthly" ? "month" : "year"}
-                    </div>
+                      {yearsOfCareNeeded === 1 ? "year" : "years"}
+                    </span>
                   </div>
-                  <div
-                    style={{
-                      borderRadius: 10,
-                      padding: "16px 12px",
-                      textAlign: "center",
-                      background: "#f5f2ec",
-                      border: `2px solid ${TEAL}50`,
-                    }}
+                  <button
+                    onClick={() => setYearsOfCareNeeded((y) => Math.min(10, y + 1))}
+                    style={stepperBtn}
+                    aria-label="Increase years of care"
                   >
-                    <div
-                      style={{
-                        fontSize: "13px !important" as any,
-                        letterSpacing: "0.12em",
-                        textTransform: "uppercase" as const,
-                        fontWeight: 700,
-                        marginBottom: 6,
-                        color: "#1a2744",
-                        fontFamily: "'Raleway', sans-serif",
-                      }}
-                    >
-                      National Median
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: "'Courier New', monospace",
-                        fontWeight: 700,
-                        fontSize: "clamp(18px,3vw,24px)",
-                        color: "#1a2744",
-                      }}
-                    >
-                      <AnimatedValue
-                        value={unit === "monthly" ? projectedNationalMonthly : projectedNationalAnnual}
-                        formatter={formatCurrency}
-                      />
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "16px",
-                        fontWeight: 600,
-                        color: "#374151",
-                        fontFamily: "'Raleway', sans-serif",
-                      }}
-                    >
-                      per {unit === "monthly" ? "month" : "year"}
-                    </div>
-                  </div>
+                    +
+                  </button>
                 </div>
-                {/* Total cost banner */}
+              </div>
+            </div>
+
+            {/* Inflation assumption — automatic by default, adjustable if desired */}
+            <div style={{ ...card, background: "#f5f2ec" }}>
+              <p
+                style={{
+                  fontSize: "17px",
+                  fontFamily: "'Raleway', sans-serif",
+                  color: "#374151",
+                  margin: 0,
+                  lineHeight: 1.6,
+                }}
+              >
+                This estimate assumes long-term care costs rise about{" "}
+                <strong style={{ color: "#1a2744" }}>{inflationRate}% a year</strong>, in line with recent historical
+                trends.{" "}
+                <button
+                  onClick={() => setShowInflationAdjust((s) => !s)}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    padding: 0,
+                    color: TEAL,
+                    fontWeight: 700,
+                    fontFamily: "'Raleway', sans-serif",
+                    fontSize: "17px",
+                    textDecoration: "underline",
+                    cursor: "pointer",
+                  }}
+                >
+                  {showInflationAdjust ? "Hide options" : "Adjust this assumption"}
+                </button>
+              </p>
+              {showInflationAdjust && (
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14 }}>
+                  {INFLATION_PRESETS.map((p) => (
+                    <button
+                      key={p.id}
+                      onClick={() => setInflationId(p.id)}
+                      style={{ ...pillBtn(p.id === inflationId, TEAL), flex: "1 1 140px" }}
+                    >
+                      {p.label} ({p.value}%)
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Results */}
+            <div style={card}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+                <div style={sectionLabel(TEAL)} className="coc-section-title">
+                  3. Estimated Cost
+                </div>
+                <div style={{ display: "flex", gap: 6 }}>
+                  <button onClick={() => setUnit("monthly")} style={pillBtn(unit === "monthly", TEAL)}>
+                    Monthly
+                  </button>
+                  <button onClick={() => setUnit("annual")} style={pillBtn(unit === "annual", TEAL)}>
+                    Annual
+                  </button>
+                </div>
+              </div>
+
+              <div
+                className="coc-results-grid"
+                style={{ display: "grid", gridTemplateColumns: "1fr", gap: 12, marginBottom: 14 }}
+              >
                 <div
                   style={{
                     background: "#f5f2ec",
                     border: `2px solid ${TEAL}60`,
                     borderRadius: 10,
-                    padding: "14px",
+                    padding: "16px",
                     textAlign: "center",
                   }}
                 >
                   <div
                     style={{
-                      fontSize: "13px !important" as any,
+                      fontSize: "13px",
                       letterSpacing: "0.12em",
-                      textTransform: "uppercase" as const,
+                      textTransform: "uppercase",
                       color: "#1a2744",
                       fontWeight: 700,
                       fontFamily: "'Raleway', sans-serif",
                       marginBottom: 6,
                     }}
                   >
-                    Total · {planningPhrase} {yearsOfCareNeeded}-Year Plan
+                    Washington
                   </div>
                   <div
                     style={{
                       fontFamily: "'Courier New', monospace",
                       fontWeight: 700,
-                      fontSize: "clamp(22px,3.5vw,30px)",
+                      fontSize: "clamp(18px,3vw,24px)",
                       color: TEAL,
                     }}
                   >
-                    <AnimatedValue value={totalWaCost} formatter={formatCurrency} />
+                    <AnimatedValue
+                      value={unit === "monthly" ? projectedWaMonthly : projectedWaAnnual}
+                      formatter={formatCurrency}
+                    />
+                  </div>
+                  <div
+                    style={{ fontSize: "16px", fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif" }}
+                  >
+                    per {unit === "monthly" ? "month" : "year"}
+                  </div>
+                </div>
+                <div
+                  style={{
+                    background: "#f5f2ec",
+                    border: "1px solid #ddd8cc",
+                    borderRadius: 10,
+                    padding: "16px",
+                    textAlign: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "#1a2744",
+                      fontWeight: 700,
+                      fontFamily: "'Raleway', sans-serif",
+                      marginBottom: 6,
+                    }}
+                  >
+                    National Median
                   </div>
                   <div
                     style={{
-                      fontSize: "16px",
-                      fontWeight: 600,
-                      color: "#374151",
-                      fontFamily: "'Raleway', sans-serif",
-                      marginTop: 4,
+                      fontFamily: "'Courier New', monospace",
+                      fontWeight: 700,
+                      fontSize: "clamp(18px,3vw,24px)",
+                      color: "#1a2744",
                     }}
                   >
-                    in Washington · vs. <AnimatedValue value={totalNationalCost} formatter={formatCurrency} />{" "}
-                    nationally
+                    <AnimatedValue
+                      value={unit === "monthly" ? projectedNationalMonthly : projectedNationalAnnual}
+                      formatter={formatCurrency}
+                    />
+                  </div>
+                  <div
+                    style={{ fontSize: "16px", fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif" }}
+                  >
+                    per {unit === "monthly" ? "month" : "year"}
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Context note */}
-            <div
-              style={{
-                background: "#ffffff",
-                border: `1px solid ${TEAL}40`,
-                borderLeft: `4px solid ${TEAL}`,
-                borderRadius: 10,
-                padding: "14px 18px",
-                marginTop: 14,
-              }}
-            >
+              {/* Total cost banner */}
+              <div
+                style={{
+                  background: "#f5f2ec",
+                  border: `2px solid ${TEAL}60`,
+                  borderRadius: 10,
+                  padding: "14px",
+                  textAlign: "center",
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: "13px",
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: "#1a2744",
+                    fontWeight: 700,
+                    fontFamily: "'Raleway', sans-serif",
+                    marginBottom: 6,
+                  }}
+                >
+                  Total · {yearsOfCareNeeded}-Year Plan
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Courier New', monospace",
+                    fontWeight: 700,
+                    fontSize: "clamp(22px,3.5vw,30px)",
+                    color: TEAL,
+                  }}
+                >
+                  <AnimatedValue value={totalWaCost} formatter={formatCurrency} />
+                </div>
+                <div
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: 600,
+                    color: "#374151",
+                    fontFamily: "'Raleway', sans-serif",
+                    marginTop: 4,
+                  }}
+                >
+                  in Washington · vs. <AnimatedValue value={totalNationalCost} formatter={formatCurrency} /> nationally
+                </div>
+              </div>
+
+              {/* Context note */}
+              <div
+                style={{
+                  background: "#ffffff",
+                  border: `1px solid ${TEAL}40`,
+                  borderLeft: `4px solid ${TEAL}`,
+                  borderRadius: 10,
+                  padding: "14px 18px",
+                  marginTop: 14,
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: "16px",
+                    fontFamily: "'Raleway', sans-serif",
+                    color: "#1a2744",
+                    lineHeight: 1.65,
+                    margin: 0,
+                  }}
+                >
+                  <strong style={{ color: TEAL }}>{careType.label}</strong> in Washington currently runs about{" "}
+                  <strong>
+                    {percentAboveNational > 0
+                      ? `${percentAboveNational}% above`
+                      : `${Math.abs(percentAboveNational)}% below`}
+                  </strong>{" "}
+                  the national median. {careType.note}
+                </p>
+              </div>
+
               <p
                 style={{
-                  fontSize: "16px !important" as any,
+                  fontSize: "17px",
                   fontFamily: "'Raleway', sans-serif",
-                  color: "#1a2744",
-                  lineHeight: 1.65,
-                  margin: "0 0 10px",
+                  color: "#374151",
+                  lineHeight: 1.6,
+                  textAlign: "center",
+                  margin: "14px 0 0",
                 }}
               >
-                <strong style={{ color: TEAL }}>{careType.label}</strong> for {planningPhrase} care in Washington
-                currently runs about{" "}
-                <strong>
-                  {percentAboveNational > 0
-                    ? `${percentAboveNational}% above`
-                    : `${Math.abs(percentAboveNational)}% below`}
-                </strong>{" "}
-                the national median. {careType.note}
+                Figures based on the CareScout/Genworth Cost of Care Survey and related industry sources. Actual costs
+                vary by region, provider, and level of care.
               </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  fontFamily: "'Raleway', sans-serif",
-                  color: "#1a2744",
-                  lineHeight: 1.7,
-                  margin: 0,
-                  paddingTop: 10,
-                  borderTop: "1px solid #e0d8c8",
-                }}
-              >
-                {MARITAL_STATUS_NOTES[maritalStatus]}
-              </p>
-            </div>
 
-            <p
-              style={{
-                fontSize: "17px",
-                fontFamily: "'Raleway', sans-serif",
-                color: "#374151",
-                lineHeight: 1.6,
-                textAlign: "center",
-                margin: "14px 0 0",
-              }}
-            >
-              Figures based on the CareScout/Genworth Cost of Care Survey and related industry sources. Actual costs
-              vary by region, provider, and level of care.
-            </p>
-
-            {/* Print button */}
-            <div className="coc-no-print" style={{ textAlign: "center", marginTop: 20 }}>
-              <button
-                onClick={() => window.print()}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 10,
-                  padding: "11px 24px",
-                  borderRadius: 8,
-                  fontSize: "16px !important" as any,
-                  fontWeight: 700,
-                  fontFamily: "'Raleway', sans-serif",
-                  color: "#ffffff",
-                  background: TEAL,
-                  border: `1px solid ${TEAL}`,
-                  cursor: "pointer",
-                }}
-              >
-                <Printer size={18} />
-                Print or Save as PDF
-              </button>
+              {/* Print button */}
+              <div className="coc-no-print" style={{ textAlign: "center", marginTop: 20 }}>
+                <button
+                  onClick={() => window.print()}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 10,
+                    padding: "11px 24px",
+                    borderRadius: 8,
+                    fontSize: "16px",
+                    fontWeight: 700,
+                    fontFamily: "'Raleway', sans-serif",
+                    color: "#ffffff",
+                    background: TEAL,
+                    border: `1px solid ${TEAL}`,
+                    cursor: "pointer",
+                  }}
+                >
+                  <Printer size={18} />
+                  Print or Save as PDF
+                </button>
+              </div>
             </div>
           </div>
 
           <style>{`
-            /* ── Outer row grids: 1-col mobile → 2-col at 640px ── */
-            @media (min-width: 640px) {
-              .coc-row1 { grid-template-columns: 1fr 1fr !important; }
-              .coc-row2 { grid-template-columns: 1fr 1fr !important; }
-              .coc-row3 { grid-template-columns: 1fr 1fr !important; }
-            }
-
-            /* ── Care type toggle: 2-col at every size (wider tiles) ── */
             .coc-toggle-grid { grid-template-columns: repeat(2,1fr) !important; }
-
-            /* ── Planning Profile inner grid: 1-col mobile → 2-col at 520px ── */
-            .coc-profile-grid { grid-template-columns: 1fr !important; }
-            @media (min-width: 520px) {
-              .coc-profile-grid { grid-template-columns: 1fr 1fr !important; }
-            }
-
-            /* ── Care Timeline inner grid: 1-col mobile → 2-col at 520px ── */
-            .coc-timeline-grid { grid-template-columns: 1fr !important; }
-            @media (min-width: 520px) {
-              .coc-timeline-grid { grid-template-columns: 1fr 1fr !important; }
-            }
-
-            /* ── Results WA/National: 1-col mobile → 2-col at 400px ── */
             .coc-results-grid { grid-template-columns: 1fr !important; }
             @media (min-width: 400px) {
               .coc-results-grid { grid-template-columns: 1fr 1fr !important; }
             }
-
-            /* ── Print rules ── */
             .coc-print-summary { display: none; }
             @media print {
               header, footer, nav { display: none !important; }
               .coc-no-print { display: none !important; }
               .coc-print-summary { display: block !important; font-family: Arial, Helvetica, sans-serif; color: #111; background: #fff; }
             }
-
-            /* ── Range slider styling ── */
-            .coc-range { -webkit-appearance: none; appearance: none; height: 6px; border-radius: 4px; background: linear-gradient(90deg,${TEAL},${TEAL_LIGHT}); outline: none; }
-            .coc-range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #d9d9d9 30%, #8a8d92 70%); box-shadow: 0 2px 5px rgba(0,0,0,0.3), 0 0 0 2px ${TEAL}40; cursor: pointer; }
-            .coc-range::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #d9d9d9 30%, #8a8d92 70%); box-shadow: 0 2px 5px rgba(0,0,0,0.3); cursor: pointer; border: none; }
           `}</style>
         </section>
 
@@ -1445,20 +784,6 @@ const CostOfCareCalculator = () => {
             Prepared via realpropertyplanning.com on{" "}
             {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
           </p>
-          <h3
-            style={{
-              fontSize: "16px",
-              color: "#111",
-              margin: "16px 0 6px",
-              borderBottom: "1px solid #ccc",
-              paddingBottom: 4,
-            }}
-          >
-            Planning Profile
-          </h3>
-          <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>Planning for: {planningLabel}</p>
-          <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>Marital status: {maritalLabel}</p>
-          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>Current age: {currentAge}</p>
           <h3
             style={{
               fontSize: "16px",
@@ -1490,6 +815,18 @@ const CostOfCareCalculator = () => {
           <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
             Care ends: after {yearsOfCareNeeded} {yearsOfCareNeeded === 1 ? "year" : "years"} (age {ageAtCareEnd})
           </p>
+          <h3
+            style={{
+              fontSize: "16px",
+              color: "#111",
+              margin: "16px 0 6px",
+              borderBottom: "1px solid #ccc",
+              paddingBottom: 4,
+            }}
+          >
+            Cost Assumption
+          </h3>
+          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>Annual cost growth: {inflationRate}%</p>
           <h3
             style={{
               fontSize: "16px",
