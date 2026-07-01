@@ -279,12 +279,82 @@ const RPPHomeV3 = () => {
               <a
                 href="/afh-club"
                 className="group block transition-transform duration-200 hover:-translate-y-1"
-                style={{ textDecoration: "none", display: "block" }}
+                style={{
+                  textDecoration: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1.25rem",
+                  background: "#ffffff",
+                  border: "2px solid #1c9e90",
+                  borderRadius: 12,
+                  padding: "1.25rem 1.5rem",
+                  overflow: "hidden",
+                  position: "relative",
+                  minHeight: 190,
+                }}
               >
                 <img
-                  src="/afh-club-button.webp"
-                  alt="AFH Club — the ultimate resource network for buying, selling, managing and learning about Adult Family Homes."
-                  style={{ width: "100%", height: "auto", display: "block", borderRadius: 10 }}
+                  src="/afh-club-badge.webp"
+                  alt=""
+                  aria-hidden="true"
+                  style={{ width: 92, height: 92, flexShrink: 0, display: "block", position: "relative", zIndex: 2 }}
+                />
+                <div style={{ flex: 1, minWidth: 0, position: "relative", zIndex: 2 }}>
+                  <h3
+                    style={{
+                      fontFamily: "Georgia, serif",
+                      fontSize: "clamp(24px,3vw,32px)",
+                      fontWeight: 700,
+                      color: "#0a5648",
+                      margin: "0 0 8px",
+                    }}
+                  >
+                    AFH Club
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 16,
+                      color: "#1a2744",
+                      lineHeight: 1.5,
+                      margin: "0 0 14px",
+                      maxWidth: 320,
+                    }}
+                  >
+                    The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
+                  </p>
+                  <span
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      background: "#0a5648",
+                      color: "#ffffff",
+                      fontFamily: "'Raleway', sans-serif",
+                      fontWeight: 700,
+                      fontSize: 16,
+                      padding: "10px 20px",
+                      borderRadius: 8,
+                    }}
+                  >
+                    Explore AFH Club →
+                  </span>
+                </div>
+                <img
+                  src="/afh-club-house.webp"
+                  alt=""
+                  aria-hidden="true"
+                  className="hidden sm:block"
+                  style={{
+                    position: "absolute",
+                    right: 0,
+                    top: 0,
+                    height: "100%",
+                    width: "auto",
+                    maxWidth: "45%",
+                    objectFit: "cover",
+                    zIndex: 1,
+                  }}
                 />
               </a>
             </div>
