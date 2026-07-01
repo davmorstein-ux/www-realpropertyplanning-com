@@ -333,6 +333,8 @@ function NavItem({ item, pathname }: { item: (typeof TOP_LINKS)[0]; pathname: st
 const Header = () => {
   const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
   const { pathname } = useLocation();
+  const headerRef = useRef<HTMLElement>(null);
+
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 769);
