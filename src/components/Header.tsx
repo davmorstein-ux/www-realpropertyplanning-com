@@ -45,6 +45,7 @@ const TOP_LINKS = [
     href: "/guides-and-resources",
     items: [
       { label: "All Resources", href: "/guides-and-resources" },
+      { label: "Cost of Care Calculator", href: "/cost-of-care-calculator" },
       { label: "Financial Planners", href: "/for-financial-planners" },
       { label: "CPAs & Accountants", href: "/professionals/cpas" },
       { label: "Attorneys", href: "/for-attorneys" },
@@ -334,7 +335,6 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
   const { pathname } = useLocation();
   const headerRef = useRef<HTMLElement>(null);
-
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 769);
