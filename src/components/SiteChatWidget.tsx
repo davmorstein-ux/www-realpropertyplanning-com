@@ -21,12 +21,13 @@ const SiteChatWidget = () => {
   const [soundOn, setSoundOn] = useState(true);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const soundOnRef = useRef(soundOn);
-  useEffect(() => { soundOnRef.current = soundOn; }, [soundOn]);
+  useEffect(() => {
+    soundOnRef.current = soundOn;
+  }, [soundOn]);
 
   const playChime = () => {
     try {
-      const AC: typeof AudioContext | undefined =
-        (window as any).AudioContext || (window as any).webkitAudioContext;
+      const AC: typeof AudioContext | undefined = (window as any).AudioContext || (window as any).webkitAudioContext;
       if (!AC) return;
       const ctx = new AC();
       const o = ctx.createOscillator();
@@ -37,11 +38,14 @@ const SiteChatWidget = () => {
       g.gain.setValueAtTime(0.0001, ctx.currentTime);
       g.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + 0.02);
       g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.35);
-      o.connect(g); g.connect(ctx.destination);
+      o.connect(g);
+      g.connect(ctx.destination);
       o.start();
       o.stop(ctx.currentTime + 0.4);
       setTimeout(() => ctx.close(), 600);
-    } catch { /* ignore */ }
+    } catch {
+      /* ignore */
+    }
   };
 
   // Play notification chime when a new message (confirmation) appears
@@ -63,7 +67,11 @@ const SiteChatWidget = () => {
 
   const handlePrint = () => {
     setMenuOpen(false);
-    setTimeout(() => window.print(), 50);
+    document.body.classList.add("rpp-printing-chat");
+    setTimeout(() => {
+      window.print();
+      document.body.classList.remove("rpp-printing-chat");
+    }, 50);
   };
 
   // Button position (bottom-right by default). Stored as left/top in px.
@@ -378,9 +386,9 @@ const SiteChatWidget = () => {
         .rpp-cw-menu-item:hover { background: ${CREAM}; }
 
         @media print {
-          body * { visibility: hidden !important; }
-          .rpp-cw-panel, .rpp-cw-panel * { visibility: visible !important; }
-          .rpp-cw-panel {
+          body.rpp-printing-chat * { visibility: hidden !important; }
+          body.rpp-printing-chat .rpp-cw-panel, body.rpp-printing-chat .rpp-cw-panel * { visibility: visible !important; }
+          body.rpp-printing-chat .rpp-cw-panel {
             position: absolute !important;
             left: 0 !important;
             top: 0 !important;
@@ -388,8 +396,8 @@ const SiteChatWidget = () => {
             height: auto !important;
             box-shadow: none !important;
           }
-          .rpp-cw-input-bar, .rpp-cw-iconbtn, .rpp-cw-menu { display: none !important; }
-          .rpp-cw-btn { display: none !important; }
+          body.rpp-printing-chat .rpp-cw-input-bar, body.rpp-printing-chat .rpp-cw-iconbtn, body.rpp-printing-chat .rpp-cw-menu { display: none !important; }
+          body.rpp-printing-chat .rpp-cw-btn { display: none !important; }
         }
       `}</style>
 
@@ -431,19 +439,34 @@ const SiteChatWidget = () => {
                     role="menuitem"
                     onClick={() => setSoundOn((v) => !v)}
                   >
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
                       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
                       <path d="M10 21a2 2 0 0 0 4 0" />
                     </svg>
                     {soundOn ? "Sound On" : "Sound Off"}
                   </button>
-                  <button
-                    type="button"
-                    className="rpp-cw-menu-item"
-                    role="menuitem"
-                    onClick={handlePrint}
-                  >
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <button type="button" className="rpp-cw-menu-item" role="menuitem" onClick={handlePrint}>
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
                       <polyline points="6 9 6 2 18 2 18 9" />
                       <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
                       <rect x="6" y="14" width="12" height="8" />
@@ -482,16 +505,18 @@ const SiteChatWidget = () => {
             <>
               <div className="rpp-cw-messages">
                 <div className="rpp-cw-msg-row">
-                  <img className="rpp-cw-avatar" src={chatAvatar} alt="Real Property Planning representative" sizes="100vw" decoding="async" width={200} height={200} />
-                  <div className="rpp-cw-bubble welcome">
-                    How can we help you today?
-                  </div>
+                  <img
+                    className="rpp-cw-avatar"
+                    src={chatAvatar}
+                    alt="Real Property Planning representative"
+                    sizes="100vw"
+                    decoding="async"
+                    width={200}
+                    height={200}
+                  />
+                  <div className="rpp-cw-bubble welcome">How can we help you today?</div>
                 </div>
-                {confirmation && (
-                  <div className="rpp-cw-bubble confirm">
-                    Thank you! We'll be in touch shortly.
-                  </div>
-                )}
+                {confirmation && <div className="rpp-cw-bubble confirm">Thank you! We'll be in touch shortly.</div>}
               </div>
 
               <form className="rpp-cw-input-bar" onSubmit={handleSubmit}>
@@ -503,13 +528,17 @@ const SiteChatWidget = () => {
                   onChange={(e) => setInput(e.target.value)}
                   maxLength={500}
                 />
-                <button
-                  type="submit"
-                  className="rpp-cw-send"
-                  aria-label="Send message"
-                  disabled={!input.trim()}
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <button type="submit" className="rpp-cw-send" aria-label="Send message" disabled={!input.trim()}>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <line x1="22" y1="2" x2="11" y2="13"></line>
                     <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                   </svg>
@@ -528,7 +557,17 @@ const SiteChatWidget = () => {
         onPointerDown={startButtonDrag}
         onClick={handleButtonClick}
       >
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none"></path>
           <circle className="rpp-cw-dot d1" cx="8" cy="11" r="1.4" fill="#fff" stroke="none" />
           <circle className="rpp-cw-dot d2" cx="12" cy="11" r="1.4" fill="#fff" stroke="none" />
