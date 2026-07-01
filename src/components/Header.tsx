@@ -397,7 +397,9 @@ const Header = () => {
           right: 0,
           zIndex: 50,
           margin: 0,
-          padding: isMobile ? "0 16px 6px" : "0 32px 4px",
+          padding: isMobile
+            ? "calc(env(safe-area-inset-top, 0px) + 8px) 16px 6px"
+            : "calc(env(safe-area-inset-top, 0px) + 8px) 32px 4px",
           backgroundColor: "rgba(8, 13, 25, 0.92)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
