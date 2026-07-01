@@ -174,7 +174,20 @@ const RPPHomeV3 = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
               {tiles.map(({ imgSrc, imgAlt, title, href, bgColor }) => (
-                <Link key={title} to={href} className="group block" style={{ textDecoration: "none" }}>
+                <Link
+                  key={title}
+                  to={href}
+                  className="group block"
+                  style={{ textDecoration: "none" }}
+                  onClick={() => {
+                    if (typeof window !== "undefined" && (window as any).gtag) {
+                      (window as any).gtag("event", "homepage_tile_click", {
+                        tile_label: title,
+                        tile_destination: href,
+                      });
+                    }
+                  }}
+                >
                   <div
                     className="transition-transform duration-200 group-hover:-translate-y-1 group-active:scale-[0.98]"
                     style={{
