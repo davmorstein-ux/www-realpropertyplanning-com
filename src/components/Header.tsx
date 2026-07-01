@@ -388,10 +388,10 @@ const Header = () => {
         Skip to main content
       </a>
 
-      <<header
-  ref={headerRef}
-  data-nosnippet="true"
-  style={{
+      <header
+        ref={headerRef}
+        data-nosnippet="true"
+        style={{
           position: "fixed",
           top: 0,
           left: 0,
