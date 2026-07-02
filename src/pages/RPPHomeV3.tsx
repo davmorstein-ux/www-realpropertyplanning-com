@@ -278,7 +278,7 @@ const RPPHomeV3 = () => {
                   <h3
                     style={{
                       fontFamily: "Georgia, serif",
-                      fontSize: "clamp(22px,2.8vw,28px)",
+                      fontSize: "clamp(28px,3.4vw,38px)",
                       fontWeight: 700,
                       margin: "0 0 8px",
                       lineHeight: 1.15,
@@ -322,7 +322,7 @@ const RPPHomeV3 = () => {
                   src="/cost-of-care-calc-graphic.webp"
                   alt=""
                   aria-hidden="true"
-                  style={{ height: 130, width: "auto", flexShrink: 0, display: "block" }}
+                  style={{ height: 190, width: "auto", flexShrink: 0, display: "block" }}
                 />
               </a>
 
@@ -346,7 +346,7 @@ const RPPHomeV3 = () => {
                 <h3
                   style={{
                     fontFamily: "Georgia, serif",
-                    fontSize: "clamp(26px,3.2vw,34px)",
+                    fontSize: "clamp(28px,3.4vw,38px)",
                     fontWeight: 700,
                     color: "#0a5648",
                     margin: "0 0 10px",
