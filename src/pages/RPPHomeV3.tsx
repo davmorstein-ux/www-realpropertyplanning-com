@@ -255,6 +255,7 @@ const RPPHomeV3 = () => {
               .rpp-card-desc {
                 color: #1a2744 !important;
                 opacity: 1 !important;
+                font-weight: 600 !important;
               }
             `}</style>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
