@@ -251,6 +251,12 @@ const RPPHomeV3 = () => {
             </div>
 
             {/* ── Secondary cards: Cost of Care + AFH Club ─────────── */}
+            <style>{`
+              .rpp-card-desc {
+                color: #1a2744 !important;
+                opacity: 1 !important;
+              }
+            `}</style>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
               <a
                 href="/cost-of-care-calculator"
@@ -281,6 +287,7 @@ const RPPHomeV3 = () => {
                     <span style={{ color: "#2f5fd8" }}>Calculator</span>
                   </h3>
                   <div
+                    className="rpp-card-desc"
                     style={{
                       fontFamily: "'Raleway', sans-serif",
                       fontSize: 16,
@@ -349,6 +356,7 @@ const RPPHomeV3 = () => {
                 </h3>
                 <div style={{ width: 64, height: 2, background: "#c9c2b4", margin: "0 0 14px" }} />
                 <div
+                  className="rpp-card-desc"
                   style={{
                     fontFamily: "'Raleway', sans-serif",
                     fontSize: 16,
