@@ -174,20 +174,7 @@ const RPPHomeV3 = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
               {tiles.map(({ imgSrc, imgAlt, title, href, bgColor }) => (
-                <Link
-                  key={title}
-                  to={href}
-                  className="group block"
-                  style={{ textDecoration: "none" }}
-                  onClick={() => {
-                    if (typeof window !== "undefined" && (window as any).gtag) {
-                      (window as any).gtag("event", "homepage_tile_click", {
-                        tile_label: title,
-                        tile_destination: href,
-                      });
-                    }
-                  }}
-                >
+                <Link key={title} to={href} className="group block" style={{ textDecoration: "none" }}>
                   <div
                     className="transition-transform duration-200 group-hover:-translate-y-1 group-active:scale-[0.98]"
                     style={{
@@ -264,20 +251,9 @@ const RPPHomeV3 = () => {
             </div>
 
             {/* ── Secondary cards: Cost of Care + AFH Club ─────────── */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
               <a
                 href="/cost-of-care-calculator"
-                className="group block transition-transform duration-200 hover:-translate-y-1"
-                style={{ textDecoration: "none", display: "block" }}
-              >
-                <img
-                  src="/cost-of-care-button.webp"
-                  alt="Cost of Care Calculator — compare Home Care, Assisted Living, Memory Care, Adult Family Homes, Nursing Homes, and Adult Day Care costs. Plan Ahead With Confidence."
-                  style={{ width: "100%", height: "auto", display: "block", borderRadius: 10 }}
-                />
-              </a>
-              <a
-                href="/afh-club"
                 className="group block transition-transform duration-200 hover:-translate-y-1"
                 style={{
                   textDecoration: "none",
@@ -285,33 +261,32 @@ const RPPHomeV3 = () => {
                   alignItems: "center",
                   gap: "1.25rem",
                   background: "#ffffff",
-                  border: "2px solid #1c9e90",
+                  border: "2px solid #2f5fd8",
                   borderRadius: 12,
                   padding: "1.25rem 1.5rem",
-                  overflow: "hidden",
-                  position: "relative",
-                  minHeight: 190,
+                  minHeight: 220,
                 }}
               >
                 <img
-                  src="/afh-club-badge.webp"
+                  src="/cost-of-care-calc-graphic.webp"
                   alt=""
                   aria-hidden="true"
-                  style={{ width: 92, height: 92, flexShrink: 0, display: "block", position: "relative", zIndex: 2 }}
+                  style={{ height: 104, width: "auto", flexShrink: 0, display: "block" }}
                 />
-                <div style={{ flex: 1, minWidth: 0, position: "relative", zIndex: 2 }}>
+                <div style={{ flex: 1, minWidth: 0 }}>
                   <h3
                     style={{
                       fontFamily: "Georgia, serif",
-                      fontSize: "clamp(24px,3vw,32px)",
+                      fontSize: "clamp(22px,2.8vw,28px)",
                       fontWeight: 700,
-                      color: "#0a5648",
                       margin: "0 0 8px",
+                      lineHeight: 1.15,
                     }}
                   >
-                    AFH Club
+                    <span style={{ color: "#1a2744" }}>Cost of Care</span>{" "}
+                    <span style={{ color: "#2f5fd8" }}>Calculator</span>
                   </h3>
-                  <p
+                  <div
                     style={{
                       fontFamily: "'Raleway', sans-serif",
                       fontSize: 16,
@@ -321,14 +296,15 @@ const RPPHomeV3 = () => {
                       maxWidth: 320,
                     }}
                   >
-                    The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
-                  </p>
+                    Compare in-home care, assisted living, memory care, and more — in Washington versus national
+                    averages.
+                  </div>
                   <span
                     style={{
                       display: "inline-flex",
                       alignItems: "center",
                       gap: 8,
-                      background: "#0a5648",
+                      background: "#2f5fd8",
                       color: "#ffffff",
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
@@ -337,25 +313,69 @@ const RPPHomeV3 = () => {
                       borderRadius: 8,
                     }}
                   >
-                    Explore AFH Club →
+                    Calculate My Costs →
                   </span>
                 </div>
-                <img
-                  src="/afh-club-house.webp"
-                  alt=""
-                  aria-hidden="true"
-                  className="hidden sm:block"
+              </a>
+
+              <a
+                href="/afh-club"
+                className="group block transition-transform duration-200 hover:-translate-y-1"
+                style={{
+                  textDecoration: "none",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  textAlign: "center",
+                  background: "#ffffff",
+                  border: "2px solid #0a5648",
+                  borderRadius: 12,
+                  padding: "1.5rem",
+                  minHeight: 220,
+                }}
+              >
+                <h3
                   style={{
-                    position: "absolute",
-                    right: 0,
-                    top: 0,
-                    height: "100%",
-                    width: "auto",
-                    maxWidth: "45%",
-                    objectFit: "cover",
-                    zIndex: 1,
+                    fontFamily: "Georgia, serif",
+                    fontSize: "clamp(26px,3.2vw,34px)",
+                    fontWeight: 700,
+                    color: "#0a5648",
+                    margin: "0 0 10px",
+                    lineHeight: 1.15,
                   }}
-                />
+                >
+                  AFH Club
+                </h3>
+                <div style={{ width: 64, height: 2, background: "#c9c2b4", margin: "0 0 14px" }} />
+                <div
+                  style={{
+                    fontFamily: "'Raleway', sans-serif",
+                    fontSize: 16,
+                    color: "#1a2744",
+                    lineHeight: 1.5,
+                    margin: "0 0 16px",
+                    maxWidth: 360,
+                  }}
+                >
+                  The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
+                </div>
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    background: "#0a5648",
+                    color: "#ffffff",
+                    fontFamily: "'Raleway', sans-serif",
+                    fontWeight: 700,
+                    fontSize: 16,
+                    padding: "10px 20px",
+                    borderRadius: 8,
+                  }}
+                >
+                  Explore AFH Club →
+                </span>
               </a>
             </div>
           </div>
