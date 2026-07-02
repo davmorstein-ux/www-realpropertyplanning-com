@@ -267,12 +267,6 @@ const RPPHomeV3 = () => {
                   minHeight: 220,
                 }}
               >
-                <img
-                  src="/cost-of-care-calc-graphic.webp"
-                  alt=""
-                  aria-hidden="true"
-                  style={{ height: 104, width: "auto", flexShrink: 0, display: "block" }}
-                />
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <h3
                     style={{
@@ -316,6 +310,12 @@ const RPPHomeV3 = () => {
                     Calculate My Costs →
                   </span>
                 </div>
+                <img
+                  src="/cost-of-care-calc-graphic.webp"
+                  alt=""
+                  aria-hidden="true"
+                  style={{ height: 130, width: "auto", flexShrink: 0, display: "block" }}
+                />
               </a>
 
               <a
