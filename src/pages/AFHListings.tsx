@@ -132,6 +132,279 @@ const listings = [
     brokerage: "206 Realty LLC",
     mlsNum: "2336582",
   },
+  {
+    id: 9,
+    address: "5004 188th Street SW",
+    city: "Lynnwood",
+    state: "WA",
+    beds: 5,
+    bathDisplay: "2",
+    bathDetail: "2 full",
+    sqft: "1,248",
+    price: "$949,000",
+    photo: "/listing-photos/5004_188th_St_SW_Lynnwood.webp",
+    broker: "Irwan Ngadisastra",
+    brokerage: "Skyline Properties, Inc.",
+    mlsNum: "2546548",
+  },
+  {
+    id: 10,
+    address: "Address Upon Request",
+    city: "Lynnwood",
+    state: "WA",
+    beds: 8,
+    bathDisplay: "3.25",
+    bathDetail: "1 full · 3 three-quarter",
+    sqft: "3,080",
+    price: "$1,550,000",
+    photo: "/listing-photos/2547787_Lynnwood.webp",
+    broker: "Angie Holmstrom",
+    brokerage: "Windermere RE Greenwood",
+    mlsNum: "2547787",
+  },
+  {
+    id: 11,
+    address: "Address Upon Request",
+    city: "Marysville",
+    state: "WA",
+    beds: 5,
+    bathDisplay: "3",
+    bathDetail: "3 full",
+    sqft: "1,755",
+    price: "$750,000",
+    photo: "/listing-photos/2542893_Marysville.webp",
+    broker: "Hyun Rim",
+    brokerage: "Keller Williams South Sound",
+    mlsNum: "2542893",
+  },
+  {
+    id: 12,
+    address: "8816 NE 60th Dr NE",
+    city: "Marysville",
+    state: "WA",
+    beds: 6,
+    bathDisplay: "4.5",
+    bathDetail: "4 full · 1 half",
+    sqft: "2,512",
+    price: "$1,350,000",
+    photo: "/listing-photos/8816_NE_60th_Dr_NE_Marysville.webp",
+    broker: "Steve Knoblaugh",
+    brokerage: "COMPASS",
+    mlsNum: "2547573",
+  },
+  {
+    id: 13,
+    address: "9411 356th Street S",
+    city: "McKenna",
+    state: "WA",
+    beds: 5,
+    bathDisplay: "2.5",
+    bathDetail: "1 full · 2 three-quarter",
+    sqft: "2,560",
+    price: "$575,000",
+    photo: "/listing-photos/9411_356th_St_S_McKenna.webp",
+    broker: "John Graver",
+    brokerage: "Yelm Windermere",
+    mlsNum: "2543352",
+  },
+  {
+    // NOTE: potential AFH — currently a 4-bed home marketed as AFH-convertible
+    // ("BR Approved: 5", seller will build out to buyer's spec), not a turnkey
+    // licensed AFH like most others on this page. Confirm this fits before publishing.
+    id: 14,
+    address: "283 Division Avenue",
+    city: "Morton",
+    state: "WA",
+    beds: 4,
+    bathDisplay: "2.5",
+    bathDetail: "2 full · 1 half",
+    sqft: "3,523",
+    price: "$434,500",
+    photo: "/listing-photos/283_Division_Ave_Morton.webp",
+    broker: "Jenn Kaatz",
+    brokerage: "Keller Williams South Sound",
+    mlsNum: "2463643",
+  },
+  {
+    // NOTE: address marked "Undisclosed" on MLS, but a partial house number is
+    // visible in the photo (mailbox/porch area). Consider cropping before publishing.
+    id: 15,
+    address: "Address Upon Request",
+    city: "Mukilteo",
+    state: "WA",
+    beds: 9,
+    bathDisplay: "4.75",
+    bathDetail: "3 full · 1 three-quarter · 2 half",
+    sqft: "4,469",
+    price: "$3,350,000",
+    photo: "/listing-photos/2503566_Mukilteo.webp",
+    broker: "Alexandru Motroc",
+    brokerage: "Real Broker LLC",
+    mlsNum: "2503566",
+  },
+  {
+    id: 16,
+    address: "1001 8th Avenue NW",
+    city: "Puyallup",
+    state: "WA",
+    beds: 9,
+    bathDisplay: "3",
+    bathDetail: "3 full",
+    sqft: "2,800",
+    price: "$1,350,000",
+    photo: "/listing-photos/1001_8th_Ave_NW_Puyallup.webp",
+    broker: "Nova Miraflor",
+    brokerage: "Pellego, Inc.",
+    mlsNum: "2533607",
+  },
+  {
+    // NOTE: this is a 5-year LEASE opportunity for a future AFH operator, not a
+    // sale — priceLabel below overrides "Asking price" to avoid misleading visitors.
+    id: 17,
+    address: "17843 110th Avenue SE",
+    city: "Renton",
+    state: "WA",
+    beds: 7,
+    bathDisplay: "3",
+    bathDetail: "3 three-quarter",
+    sqft: "2,270",
+    price: "$7,500/mo",
+    priceLabel: "For Lease",
+    photo: "/listing-photos/17843_110th_Ave_SE_Renton.webp",
+    broker: "Angie Holmstrom",
+    brokerage: "Windermere RE Greenwood",
+    mlsNum: "2536169",
+  },
+  {
+    // NOTE: address marked "Undisclosed" on MLS, but a partial house number is
+    // faintly visible above the front door in the photo. Worth a second look.
+    id: 18,
+    address: "Address Upon Request",
+    city: "Seattle",
+    state: "WA",
+    beds: 8,
+    bathDisplay: "4",
+    bathDetail: "4 full",
+    sqft: "3,000",
+    price: "$2,800,000",
+    photo: "/listing-photos/2488822_Seattle.webp",
+    broker: "Hyun Rim",
+    brokerage: "Keller Williams South Sound",
+    mlsNum: "2488822",
+  },
+  {
+    id: 19,
+    address: "226 O Street SE",
+    city: "Auburn",
+    state: "WA",
+    beds: 6,
+    bathDisplay: "2",
+    bathDetail: "2 full",
+    sqft: "1,810",
+    price: "$879,300",
+    photo: "/listing-photos/226_O_St_SE_Auburn.webp",
+    broker: "Jason Singh",
+    brokerage: "Dulay Homes LLC",
+    mlsNum: "2541949",
+  },
+  {
+    id: 20,
+    address: "10702 SE 318th Place",
+    city: "Auburn",
+    state: "WA",
+    beds: 8,
+    bathDisplay: "3.5",
+    bathDetail: "3 full · 1 half",
+    sqft: "3,180",
+    price: "$1,595,000",
+    photo: "/listing-photos/10702_SE_318th_Pl_Auburn.webp",
+    broker: "Nova Miraflor",
+    brokerage: "Pellego, Inc.",
+    mlsNum: "2510524",
+  },
+  {
+    // NOTE: address marked "Undisclosed" on MLS, but a partial house number is
+    // visible on the brick driveway pillar in the photo. Worth a second look.
+    id: 21,
+    address: "Address Upon Request",
+    city: "Bellevue",
+    state: "WA",
+    beds: 8,
+    bathDisplay: "3.25",
+    bathDetail: "1 full · 3 three-quarter",
+    sqft: "2,940",
+    price: "$2,375,000",
+    photo: "/listing-photos/2482928_Bellevue.webp",
+    broker: "Vasi Nemes Jr",
+    brokerage: "206 Realty LLC",
+    mlsNum: "2482928",
+  },
+  {
+    // NOTE: "Though the business is no longer active" per listing remarks —
+    // previously-licensed/WABO-ready, not a currently operating AFH like most
+    // others on this page. Confirm this fits before publishing.
+    id: 22,
+    address: "9100 189th Avenue Court E",
+    city: "Bonney Lake",
+    state: "WA",
+    beds: 5,
+    bathDisplay: "2.5",
+    bathDetail: "2 full · 1 half",
+    sqft: "3,232",
+    price: "$995,000",
+    photo: "/listing-photos/9100_189th_Ave_Ct_E_BonneyLake.webp",
+    broker: "Kevin J Williams",
+    brokerage: "Synergy Mergers & Acquisitions LLC",
+    mlsNum: "2539328",
+  },
+  {
+    id: 23,
+    address: "Address Upon Request",
+    city: "Custer",
+    state: "WA",
+    beds: 6,
+    bathDisplay: "4",
+    bathDetail: "3 full · 2 half",
+    sqft: "2,530",
+    price: "$899,999",
+    photo: "/listing-photos/2520888_Custer.webp",
+    broker: "Douglas Linton",
+    brokerage: "John L. Scott, Inc.",
+    mlsNum: "2520888",
+  },
+  {
+    // NOTE: only 2bd/1ba/918sqft — much smaller than every other listing here.
+    // Broker remarks say "Value is in the land," suggesting this may be more of
+    // a redevelopment play than an ongoing AFH operation. Confirm this fits.
+    id: 24,
+    address: "3208 21st Street",
+    city: "Everett",
+    state: "WA",
+    beds: 2,
+    bathDisplay: "1",
+    bathDetail: "1 full",
+    sqft: "918",
+    price: "$483,000",
+    photo: "/listing-photos/3208_21st_St_Everett.webp",
+    broker: "Nikita Krivorak",
+    brokerage: "Pellego, Inc.",
+    mlsNum: "2535911",
+  },
+  {
+    id: 25,
+    address: "6425 Nyanza Park Drive SW",
+    city: "Lakewood",
+    state: "WA",
+    beds: 6,
+    bathDisplay: "2",
+    bathDetail: "2 full",
+    sqft: "2,650",
+    price: "$839,950",
+    photo: "/listing-photos/6425_Nyanza_Park_Dr_SW_Lakewood.webp",
+    broker: "Anthony Pere",
+    brokerage: "Skyline Properties, Inc.",
+    mlsNum: "2532876",
+  },
 ];
 
 const BackButton = () => (
@@ -171,6 +444,8 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
     style={{
       width: "220px",
       minWidth: "220px",
+      height: "165px",
+      alignSelf: "flex-start",
       position: "relative",
       overflow: "hidden",
       backgroundColor: "#e4ecec",
@@ -188,7 +463,7 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
           height: "100%",
           objectFit: "cover",
           display: "block",
-          minHeight: "180px",
+          minHeight: "165px",
         }}
       />
     ) : (
@@ -196,7 +471,7 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
         style={{
           width: "100%",
           height: "100%",
-          minHeight: "180px",
+          minHeight: "165px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -301,13 +576,39 @@ const AFHListings = () => {
               }}
             >
               <BackButton />
-              <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
-                <img
-                  src="/afh-club-badge.png"
-                  alt="AFH Club"
-                  style={{ height: "160px", width: "auto", display: "block" }}
-                />
-              </a>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "8px" }}>
+                <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
+                  <img
+                    src="/afh-club-badge.png"
+                    alt="AFH Club"
+                    style={{ height: "160px", width: "auto", display: "block" }}
+                  />
+                </a>
+                <div style={{ textAlign: "right" }}>
+                  <div
+                    style={{
+                      fontWeight: 700,
+                      fontSize: "16px",
+                      color: "#1a5fa8",
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    David Stein
+                  </div>
+                  <a
+                    href="tel:2069003015"
+                    style={{
+                      fontWeight: 700,
+                      fontSize: "16px",
+                      color: "#1a5fa8",
+                      textDecoration: "none",
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    (206) 900-3015
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Pill */}
@@ -365,8 +666,8 @@ const AFHListings = () => {
                 maxWidth: "560px",
               }}
             >
-              Licensed Adult Family Home properties currently available for sale in the Puget Sound region. Contact
-              David Stein for showings or additional information on any listing.
+              Licensed Adult Family Home properties currently available for sale in the Puget Sound region. Reach out
+              for showings or additional information on any listing.
             </p>
 
             {/* Stats bar */}
@@ -488,7 +789,7 @@ const AFHListings = () => {
                         {listing.price}
                       </div>
                       <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
-                        Asking price · MLS# {listing.mlsNum}
+                        {listing.priceLabel || "Asking price"} · MLS# {listing.mlsNum}
                       </div>
                     </div>
                   </div>
