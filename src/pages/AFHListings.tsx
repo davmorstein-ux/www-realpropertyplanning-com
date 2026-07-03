@@ -67,7 +67,7 @@ const listings = [
     bathDetail: "4 full",
     sqft: "2,948",
     price: "$1,600,000",
-    photo: null,
+    photo: "/listing-photos/2510101_Lynnwood.webp",
     broker: "Demba Baldeh",
     brokerage: "Skyline Properties, Inc.",
     mlsNum: "2510101",
@@ -576,7 +576,7 @@ const AFHListings = () => {
               }}
             >
               <BackButton />
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "8px" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
                 <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
                   <img
                     src="/afh-club-badge.png"
@@ -584,29 +584,27 @@ const AFHListings = () => {
                     style={{ height: "160px", width: "auto", display: "block" }}
                   />
                 </a>
-                <div style={{ textAlign: "right" }}>
+                <div style={{ textAlign: "center" }}>
                   <div
                     style={{
                       fontWeight: 700,
-                      fontSize: "16px",
+                      fontSize: "20px",
                       color: "#1a5fa8",
                       lineHeight: 1.3,
                     }}
                   >
                     David Stein
                   </div>
-                  <a
-                    href="tel:2069003015"
+                  <div
                     style={{
                       fontWeight: 700,
-                      fontSize: "16px",
+                      fontSize: "18px",
                       color: "#1a5fa8",
-                      textDecoration: "none",
                       lineHeight: 1.3,
                     }}
                   >
-                    (206) 900-3015
-                  </a>
+                    AFH Expert
+                  </div>
                 </div>
               </div>
             </div>
