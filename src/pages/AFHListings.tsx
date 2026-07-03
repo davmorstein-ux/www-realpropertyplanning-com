@@ -565,7 +565,7 @@ const AFHListings = () => {
             padding: "2rem 1.5rem",
           }}
         >
-          <div style={{ maxWidth: "920px", margin: "0 auto" }}>
+          <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
             {/* Top row: back button left, badge right */}
             <div
               style={{
@@ -709,7 +709,7 @@ const AFHListings = () => {
         {/* ── LISTINGS ── */}
         <div
           style={{
-            maxWidth: "920px",
+            maxWidth: "1160px",
             margin: "0 auto",
             padding: "2rem 1.5rem 1rem",
           }}
