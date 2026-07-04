@@ -1,135 +1,80 @@
-import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
-const SYSTEM_PROMPT = `You are a warm, patient, and friendly guide for Real Property Planning — a free educational resource hub for seniors, families, and professionals in Washington State.
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+};
 
-Your role is to help visitors understand their situation and point them to the right page on the site. Real Property Planning is a hub that connects people to professionals — it does not perform services directly.
+const TO_EMAIL = "info@realpropertyplanning.com";
 
-Always speak in plain, simple language. Be warm, calm, and never pushy. When someone describes their situation, identify the single most relevant page and provide a direct clickable link to it.
-
-IMPORTANT: Always provide the most specific page possible — not a general hub page — unless no specific page exists.
-
-Key pages and when to use them:
-
-ATTORNEYS & PROFESSIONALS looking for referrals or connections:
-→ /building-your-trusted-professional-team
-
-REAL ESTATE BROKER (probate/estate/senior specialist):
-→ /estate-probate-inherited-property/professional-team
-
-SENIOR MOVE MANAGERS:
-→ /senior-move-managers
-
-SENIOR PLACEMENT / SENIOR LIVING ADVISORS:
-→ /senior-placement
-
-PROBATE & ESTATE SALES (executors, heirs, inherited property):
-→ /probate-estate-sales
-
-HELPING AN AGING PARENT:
-→ /helping-an-aging-parent
-
-SENIOR TRANSITIONS (selling a senior's home):
-→ /senior-transitions
-
-PROPERTY VALUATION / APPRAISAL:
-→ /why-valuation-matters
-
-HOUSING & CARE OPTIONS (assisted living, memory care, adult family homes):
-→ /senior-placement or /understanding-housing-care-options
-
-PROBATE TERMINOLOGY / GLOSSARY:
-→ /terminology
-
-OUT-OF-STATE FAMILIES:
-→ /out-of-state-families
-
-CONTACT / START A CONVERSATION:
-→ /contact
-
-GENERAL PROFESSIONALS HUB:
-→ /building-your-trusted-professional-team
-
-Rules:
-- Keep responses to 2-3 sentences maximum
-- Always end with a specific page link
-- For attorneys looking for real estate agents → send to /estate-probate-inherited-property/professional-team
-- For families unsure where to start → ask one clarifying question: "Is this about a parent's housing, an inherited property, or something else?"
-- Never imply Real Property Planning performs any service directly
-- Use "you can find" or "this page connects you" rather than "we provide" or "our team"`;
-
-Deno.serve(async (req) => {
+serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders });
+    return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const ANTHROPIC_API_KEY = Deno.env.get("ANTHROPIC_API_KEY");
-    if (!ANTHROPIC_API_KEY) {
-      return new Response(
-        JSON.stringify({ error: "ANTHROPIC_API_KEY is not configured" }),
-        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-      );
+    const { name, email, phone, role, message, source_page } = await req.json();
+
+    if (!name || !email || !message) {
+      return new Response(JSON.stringify({ error: "Please fill in your name, email, and message." }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
-    const { messages } = await req.json();
-    if (!Array.isArray(messages)) {
-      return new Response(
-        JSON.stringify({ error: "messages array is required" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-      );
+    const apiKey = Deno.env.get("RESEND_API_KEY");
+    if (!apiKey) {
+      console.error("RESEND_API_KEY is not set");
+      return new Response(JSON.stringify({ error: "Server is not configured yet." }), {
+        status: 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
-    // Keep only the last 6 messages (3 exchanges) to limit input tokens.
-    const trimmed = messages.slice(-6).map((m: { role: string; content: string }) => ({
-      role: m.role === "assistant" ? "assistant" : "user",
-      content: String(m.content ?? ""),
-    }));
+    const html = `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
+      <p><strong>I am a:</strong> ${role || "Not specified"}</p>
+      <p><strong>Message:</strong></p>
+      <p>${String(message).replace(/\n/g, "<br>")}</p>
+      <hr>
+      <p style="color:#888;font-size:12px;">Submitted from: ${source_page || "realpropertyplanning.com/contact"}</p>
+    `;
 
-    const anthropicResponse = await fetch("https://api.anthropic.com/v1/messages", {
+    const emailResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
+        Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
-        "x-api-key": ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01",
-        "anthropic-beta": "prompt-caching-2024-07-31",
       },
       body: JSON.stringify({
-        model: "claude-haiku-4-5-20251001",
-        max_tokens: 200,
-        system: [
-          {
-            type: "text",
-            text: SYSTEM_PROMPT,
-            cache_control: { type: "ephemeral" },
-          },
-        ],
-        messages: trimmed,
+        from: "Real Property Planning <onboarding@resend.dev>",
+        to: [TO_EMAIL],
+        reply_to: email,
+        subject: `New Contact Form Message from ${name}`,
+        html,
       }),
     });
 
-    if (!anthropicResponse.ok) {
-      const errText = await anthropicResponse.text();
-      console.error("Anthropic API error:", anthropicResponse.status, errText);
-      return new Response(
-        JSON.stringify({ error: "Service temporarily unavailable. Please try again." }),
-        { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-      );
+    if (!emailResponse.ok) {
+      const errText = await emailResponse.text();
+      console.error("Resend API error:", errText);
+      return new Response(JSON.stringify({ error: "Message could not be sent. Please try again." }), {
+        status: 502,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
-    const data = await anthropicResponse.json();
-    const reply =
-      data?.content?.find?.((c: { type: string }) => c.type === "text")?.text ??
-      "Sorry, I didn't catch that — could you try again?";
-
-    return new Response(JSON.stringify({ reply }), {
-      status: 200,
+    return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (err) {
-    console.error("chat-assistant error:", err);
-    return new Response(
-      JSON.stringify({ error: "Service temporarily unavailable. Please try again." }),
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-    );
+    console.error("send-contact-email error:", err);
+    return new Response(JSON.stringify({ error: "Something went wrong. Please try again." }), {
+      status: 500,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
   }
 });
