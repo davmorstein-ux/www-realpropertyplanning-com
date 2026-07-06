@@ -10,14 +10,12 @@ import { articleSchema } from "@/lib/schema";
 const tiles = [
   {
     title: "First Steps After a Death",
-    description:
-      "Calm, practical actions to take in the early days — before any major decisions need to be made.",
+    description: "Calm, practical actions to take in the early days — before any major decisions need to be made.",
     href: "/estate-probate-inherited-property/first-steps",
   },
   {
     title: "Understanding Probate & Legal Authority",
-    description:
-      "Who has the authority to make decisions — and what probate actually means for your family.",
+    description: "Who has the authority to make decisions — and what probate actually means for your family.",
     href: "/estate-probate-inherited-property/probate-and-legal-authority",
   },
   {
@@ -28,20 +26,17 @@ const tiles = [
   },
   {
     title: "Deciding What to Do With the Property",
-    description:
-      "Sell, keep, rent, or transfer — how to think through the options carefully.",
+    description: "Sell, keep, rent, or transfer — how to think through the options carefully.",
     href: "/estate-probate-inherited-property/what-to-do-with-the-property",
   },
   {
     title: "Preparing the Property",
-    description:
-      "From cleanout to repairs — what to handle before the home goes to market.",
+    description: "From cleanout to repairs — what to handle before the home goes to market.",
     href: "/estate-probate-inherited-property/preparing-the-property",
   },
   {
     title: "Building Your Professional Team",
-    description:
-      "Who you need, when to engage them, and how a coordinated team protects everyone.",
+    description: "Who you need, when to engage them, and how a coordinated team protects everyone.",
     href: "/estate-probate-inherited-property/professional-team",
   },
 ];
@@ -65,7 +60,9 @@ const EstateProbateInheritedProperty = () => {
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema
-        items={[{ name: "Managing an Estate, Probate, or Inherited Property", url: "/estate-probate-inherited-property" }]}
+        items={[
+          { name: "Managing an Estate, Probate, or Inherited Property", url: "/estate-probate-inherited-property" },
+        ]}
       />
       <Header />
       <main id="main-content">
@@ -75,7 +72,12 @@ const EstateProbateInheritedProperty = () => {
             src={heroImage}
             alt="Managing an estate, probate, or inherited property in Washington State"
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async" width={1465} height={792} />
+            loading="eager"
+            sizes="100vw"
+            decoding="async"
+            width={1465}
+            height={792}
+          />
         </section>
 
         <HeroBandTitle>Estate, Probate & Inherited Property</HeroBandTitle>
@@ -94,7 +96,7 @@ const EstateProbateInheritedProperty = () => {
                 <Link
                   key={t.title}
                   to={t.href}
-                  className="interior-tile tile-white block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  className="interior-tile tile-white estate-tile-outline block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   aria-label={t.title}
                 >
                   <div className="tile-white__inner h-full relative">
@@ -103,15 +105,18 @@ const EstateProbateInheritedProperty = () => {
                         <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
                           {t.title}
                         </h3>
-                        <p className="text-foreground text-[15px] leading-relaxed">
-                          {t.description}
-                        </p>
+                        <p className="text-foreground text-[15px] leading-relaxed">{t.description}</p>
                       </div>
                     </div>
                   </div>
                 </Link>
               ))}
             </div>
+            <style>{`
+              .estate-tile-outline .tile-white__face {
+                border: 2px solid #5c6e9e !important;
+              }
+            `}</style>
           </div>
         </section>
       </main>
