@@ -15,8 +15,7 @@ const tiles = [
   },
   {
     title: "The Conversations Worth Having Now",
-    description:
-      "The questions families wish they'd asked sooner — about home, care, authority, and wishes.",
+    description: "The questions families wish they'd asked sooner — about home, care, authority, and wishes.",
     href: "/planning-before-a-crisis/conversations-to-have",
   },
   {
@@ -33,14 +32,12 @@ const tiles = [
   },
   {
     title: "When a Move Seems Like It's Coming",
-    description:
-      "Practical steps when months — not years — separate today from a likely housing transition.",
+    description: "Practical steps when months — not years — separate today from a likely housing transition.",
     href: "/planning-before-a-crisis/when-a-move-is-coming",
   },
   {
     title: "How Real Property Planning Can Help",
-    description:
-      "Calm, unhurried guidance coordinated across the professionals who matter most to your situation.",
+    description: "Calm, unhurried guidance coordinated across the professionals who matter most to your situation.",
     href: "/planning-before-a-crisis/how-we-can-help",
   },
 ];
@@ -62,7 +59,12 @@ const PlanningBeforeACrisis = () => {
             alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
             className="w-full block"
             style={{ objectFit: "contain", width: "100%", height: "auto" }}
-            loading="eager" sizes="100vw" decoding="async" width={1920} height={487} />
+            loading="eager"
+            sizes="100vw"
+            decoding="async"
+            width={1920}
+            height={487}
+          />
         </section>
 
         <HeroBandTitle>Planning Before a Crisis</HeroBandTitle>
@@ -84,7 +86,7 @@ const PlanningBeforeACrisis = () => {
                 <Link
                   key={t.title}
                   to={t.href}
-                  className="interior-tile tile-white block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  className="interior-tile tile-white crisis-tile-outline block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   aria-label={t.title}
                 >
                   <div className="tile-white__inner h-full relative">
@@ -93,15 +95,20 @@ const PlanningBeforeACrisis = () => {
                         <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
                           {t.title}
                         </h3>
-                        <p className="text-foreground text-[15px] leading-relaxed">
-                          {t.description}
-                        </p>
+                        <p className="text-foreground text-[15px] leading-relaxed">{t.description}</p>
                       </div>
                     </div>
                   </div>
                 </Link>
               ))}
             </div>
+            <style>{`
+              .crisis-tile-outline,
+              .crisis-tile-outline .tile-white__face,
+              .crisis-tile-outline .tile-white__inner {
+                border: 2px solid #8b2e2e !important;
+              }
+            `}</style>
           </div>
         </section>
       </main>
