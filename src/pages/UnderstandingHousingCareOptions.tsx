@@ -67,18 +67,37 @@ const pathways: Pathway[] = [
   {
     letter: "6",
     title: "Temporary or Transitional Care",
-    description:
-      "Short-term rehabilitation, recovery support, respite care, or transitional care situations.",
+    description: "Short-term rehabilitation, recovery support, respite care, or transitional care situations.",
     href: "/senior-living/nursing-and-skilled-care",
     icon: iconAssisted,
   },
 ];
 
 const continueJourney = [
-  { href: "/understanding-senior-transitions", title: "Understanding Senior Transitions", description: "An overview of the most common life-stage moves.", icon: iconHeartHands },
-  { href: "/aging-in-place-staying-home-safely", title: "Aging in Place & Staying at Home Safely", description: "Plan ahead for safety, support, and independence at home.", icon: iconHome },
-  { href: "/estate-planning-powers-of-attorney", title: "Estate Planning & Powers of Attorney", description: "Understand the legal documents most families need.", icon: iconDocument },
-  { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconExecutor },
+  {
+    href: "/understanding-senior-transitions",
+    title: "Understanding Senior Transitions",
+    description: "An overview of the most common life-stage moves.",
+    icon: iconHeartHands,
+  },
+  {
+    href: "/aging-in-place-staying-home-safely",
+    title: "Aging in Place & Staying at Home Safely",
+    description: "Plan ahead for safety, support, and independence at home.",
+    icon: iconHome,
+  },
+  {
+    href: "/estate-planning-powers-of-attorney",
+    title: "Estate Planning & Powers of Attorney",
+    description: "Understand the legal documents most families need.",
+    icon: iconDocument,
+  },
+  {
+    href: "/what-to-do-with-the-house",
+    title: "What To Do With the House",
+    description: "A guided decision roadmap for the home.",
+    icon: iconExecutor,
+  },
 ];
 
 const jsonLd = articleSchema({
@@ -99,7 +118,9 @@ const UnderstandingHousingCareOptions = () => {
         description="A calm guided roadmap for families and seniors exploring assisted living, adult family homes, memory care, independent living, and in-home care in Washington."
         jsonLd={jsonLd}
       />
-      <BreadcrumbSchema items={[{ name: "Understanding Housing & Care Options", url: "/understanding-housing-care-options" }]} />
+      <BreadcrumbSchema
+        items={[{ name: "Understanding Housing & Care Options", url: "/understanding-housing-care-options" }]}
+      />
       <Header />
       <main id="main-content">
         {/* HERO IMAGE */}
@@ -111,7 +132,9 @@ const UnderstandingHousingCareOptions = () => {
             width={1600}
             height={900}
             loading="eager"
-            fetchPriority="high" sizes="100vw"/>
+            fetchPriority="high"
+            sizes="100vw"
+          />
         </section>
         <HeroBandTitle>Understanding Housing and Care Options</HeroBandTitle>
 
@@ -122,9 +145,7 @@ const UnderstandingHousingCareOptions = () => {
               <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-4">
                 What Type of Support Are You Looking For?
               </h2>
-              <p className="text-lg md:text-xl text-foreground leading-relaxed">
-                {" "}
-              </p>
+              <p className="text-lg md:text-xl text-foreground leading-relaxed"> </p>
             </div>
           </div>
         </section>
@@ -133,15 +154,9 @@ const UnderstandingHousingCareOptions = () => {
         <section id="pathways" className="py-10 lg:py-14 bg-secondary scroll-mt-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto mb-7 text-center">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                {" "}
-              </p>
-              <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                {" "}
-              </h2>
-              <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                {" "}
-              </p>
+              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm"> </p>
+              <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3"> </h2>
+              <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto"> </p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
@@ -152,6 +167,7 @@ const UnderstandingHousingCareOptions = () => {
                   title={p.title}
                   description={p.description}
                   cta="Learn More"
+                  className="understanding-tile-outline"
                 />
               ))}
             </div>
@@ -163,16 +179,21 @@ const UnderstandingHousingCareOptions = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-7">
-                <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={512} height={512} />
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Keep Going
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Continue Your Journey
-                </h2>
+                <img
+                  src={iconArrow}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-12 h-12 object-contain mx-auto mb-4"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 90px, 90px"
+                  decoding="async"
+                  width={512}
+                  height={512}
+                />
+                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">Keep Going</p>
+                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">Continue Your Journey</h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Families exploring housing and care options often need help
-                  understanding these next steps.
+                  Families exploring housing and care options often need help understanding these next steps.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -183,12 +204,22 @@ const UnderstandingHousingCareOptions = () => {
                     title={c.title}
                     description={c.description}
                     cta="Continue"
+                    className="understanding-tile-outline"
                   />
                 ))}
               </div>
             </div>
           </div>
         </section>
+
+        <style>{`
+          .understanding-tile-outline .tile-white__face {
+            border: 2px solid #0d9488 !important;
+          }
+          .understanding-tile-outline h3 {
+            text-shadow: none !important;
+          }
+        `}</style>
 
         <DisclaimerSection />
       </main>
