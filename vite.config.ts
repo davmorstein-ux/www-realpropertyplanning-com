@@ -5,6 +5,7 @@ import path from "path";
 import { mkdir, readFile, writeFile, stat } from "node:fs/promises";
 import { componentTagger } from "lovable-tagger";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 
 // Skip optimization for images smaller than 10KB
 const MIN_OPTIMIZE_BYTES = 10 * 1024;
@@ -994,7 +995,7 @@ export default defineConfig({
       logStats: true,
     }),
     routeMetadataPlugin,
-
+    mcpPlugin(),
   ],
   resolve: {
     alias: {
