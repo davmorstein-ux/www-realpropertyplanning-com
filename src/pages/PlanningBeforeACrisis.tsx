@@ -86,7 +86,7 @@ const PlanningBeforeACrisis = () => {
                 <Link
                   key={t.title}
                   to={t.href}
-                  className="interior-tile tile-white crisis-tile-outline block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  className="interior-tile tile-white crisis-tile-outline block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   aria-label={t.title}
                 >
                   <div className="tile-white__inner h-full relative">
