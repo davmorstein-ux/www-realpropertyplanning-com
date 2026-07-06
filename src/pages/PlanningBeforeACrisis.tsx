@@ -103,9 +103,7 @@ const PlanningBeforeACrisis = () => {
               ))}
             </div>
             <style>{`
-              .crisis-tile-outline,
-              .crisis-tile-outline .tile-white__face,
-              .crisis-tile-outline .tile-white__inner {
+              .crisis-tile-outline .tile-white__face {
                 border: 2px solid #8b2e2e !important;
               }
             `}</style>
