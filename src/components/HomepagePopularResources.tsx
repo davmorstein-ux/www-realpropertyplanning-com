@@ -33,9 +33,9 @@ const HomepagePopularResources = () => (
     <style>{`
       .rpp-pr-eyebrow {
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 13px !important;
+        font-size: 18px !important;
         font-weight: 700 !important;
-        letter-spacing: 0.18em !important;
+        letter-spacing: 0.14em !important;
         text-transform: uppercase !important;
         color: #1a2744 !important;
         margin: 0 0 0.5rem 0 !important;
