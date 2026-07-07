@@ -12,6 +12,7 @@ const AdultFamilyHomes = () => (
       bestFor="Seniors who prefer a smaller, more intimate setting with more individualized attention than a larger facility can offer."
       typicalCosts="$3,500–$7,000/month in Washington State. Often more affordable than larger assisted living communities for comparable care levels."
       whatsIncluded="Room and board, personal care, meals, medication management, and 24-hour supervision."
+      calculatorCareId="adult-family-home"
     />
   </>
 );
