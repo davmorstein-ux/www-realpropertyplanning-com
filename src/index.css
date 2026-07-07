@@ -3321,3 +3321,13 @@ main #rpp-orientation div:last-of-type {
   font-style: italic !important;
   font-weight: 600 !important;
 }
+a[href="/afh-club"] h3.afh-club-heading {
+  font-size: 90px !important;
+  line-height: 1.05 !important;
+}
+
+@media (max-width: 640px) {
+  a[href="/afh-club"] h3.afh-club-heading {
+    font-size: 48px !important;
+  }
+}
