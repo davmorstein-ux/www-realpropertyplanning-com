@@ -1,4 +1,5 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
@@ -19,87 +20,102 @@ const faqs = [
   },
 ];
 
+const RED = "#7f1d1d";
+const NAVY = "#1a2744";
+
 const HomepageFAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <section style={{ padding: "4rem 0 5rem", background: "#f5f2ec" }}>
-      <style>{`
-        .faq-heading {
-          font-family: 'Cormorant Garamond', Georgia, serif !important;
-          font-size: clamp(34px, 3.5vw, 48px) !important;
-          font-weight: 700 !important;
-          color: #1a2744 !important;
-          text-align: center !important;
-          margin: 0 0 2.5rem !important;
-          line-height: 1.15 !important;
-        }
-        .faq-item {
-          background: #ffffff !important;
-          border: 2px solid #7f1d1d !important;
-          border-bottom: 2px solid #7f1d1d !important;
-          border-left: 6px solid #7f1d1d !important;
-          border-radius: 10px !important;
-          overflow: hidden !important;
-          box-shadow: none !important;
-          -webkit-box-shadow: none !important;
-          filter: none !important;
-          transition: border-color 0.2s ease !important;
-          margin-bottom: 1.1rem !important;
-        }
-        .faq-item:hover {
-          border-color: #5c1414 !important;
-          box-shadow: none !important;
-        }
-        .faq-item [data-state="open"] {
-          border-left-color: #1a2744 !important;
-        }
-        .faq-item:has([data-state="open"]) {
-          background: #f7e9e9 !important;
-          box-shadow: none !important;
-        }
-        .homepage-faq-trigger {
-          padding: 1.5rem 1.75rem !important;
-          min-height: 80px !important;
-          gap: 1.1rem !important;
-        }
-        .homepage-faq-trigger span.faq-q-text {
-          font-family: 'Cormorant Garamond', Georgia, serif !important;
-          font-size: 24px !important;
-          font-weight: 700 !important;
-          color: #1a2744 !important;
-          line-height: 1.35 !important;
-          text-align: left !important;
-        }
-        .homepage-faq-trigger [data-lucide], .homepage-faq-trigger svg {
-          width: 28px !important;
-          height: 28px !important;
-          color: #7f1d1d !important;
-          flex-shrink: 0 !important;
-        }
-        .homepage-faq-answer {
-          font-family: Inter, system-ui, sans-serif !important;
-          font-size: 20px !important;
-          color: #2d3a4a !important;
-          line-height: 1.75 !important;
-          padding: 0 1.75rem 1.75rem 1.75rem !important;
-          border-top: 1px solid #e8e0d0 !important;
-          padding-top: 1.25rem !important;
-        }
-      `}</style>
-
       <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
-        <h2 className="faq-heading">Common Questions</h2>
-        <Accordion type="single" collapsible>
-          {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="faq-item" style={{ border: "none" }}>
-              <AccordionTrigger className="homepage-faq-trigger">
-                <span className="faq-q-text">{faq.q}</span>
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="homepage-faq-answer">{faq.a}</div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <h2
+          style={{
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontSize: "clamp(34px, 3.5vw, 48px)",
+            fontWeight: 700,
+            color: NAVY,
+            textAlign: "center",
+            margin: "0 0 2.5rem",
+            lineHeight: 1.15,
+          }}
+        >
+          Common Questions
+        </h2>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
+          {faqs.map((faq, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <div
+                key={i}
+                style={{
+                  background: isOpen ? "#f7e9e9" : "#ffffff",
+                  border: `2px solid ${RED}`,
+                  borderLeft: `6px solid ${isOpen ? NAVY : RED}`,
+                  borderRadius: "10px",
+                  boxShadow: "none",
+                }}
+              >
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: "1rem",
+                    padding: "1.5rem 1.75rem",
+                    minHeight: "80px",
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    textAlign: "left",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontSize: "24px",
+                      fontWeight: 700,
+                      color: NAVY,
+                      lineHeight: 1.35,
+                    }}
+                  >
+                    {faq.q}
+                  </span>
+                  <ChevronDown
+                    size={26}
+                    color={RED}
+                    strokeWidth={2.25}
+                    style={{
+                      flexShrink: 0,
+                      transition: "transform 0.2s ease",
+                      transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
+                    aria-hidden="true"
+                  />
+                </button>
+                {isOpen && (
+                  <div
+                    style={{
+                      padding: "0 1.75rem 1.75rem",
+                      borderTop: "1px solid #e8e0d0",
+                      paddingTop: "1.25rem",
+                      fontFamily: "Inter, system-ui, sans-serif",
+                      fontSize: "20px",
+                      color: "#2d3a4a",
+                      lineHeight: 1.75,
+                    }}
+                  >
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
