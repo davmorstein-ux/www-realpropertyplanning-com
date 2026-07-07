@@ -70,7 +70,7 @@ const HomepageFAQ = () => {
                     justifyContent: "space-between",
                     gap: "1rem",
                     padding: "1.25rem 1.75rem",
-                    height: "128px",
+                    height: "148px",
                     background: "none",
                     border: "none",
                     cursor: "pointer",
@@ -80,7 +80,7 @@ const HomepageFAQ = () => {
                   <span
                     style={{
                       fontFamily: "'Cormorant Garamond', Georgia, serif",
-                      fontSize: "24px",
+                      fontSize: "28px",
                       fontWeight: 700,
                       color: NAVY,
                       lineHeight: 1.35,
@@ -107,7 +107,7 @@ const HomepageFAQ = () => {
                       borderTop: "1px solid #e8e0d0",
                       paddingTop: "1.25rem",
                       fontFamily: "Inter, system-ui, sans-serif",
-                      fontSize: "20px",
+                      fontSize: "22px",
                       color: "#2d3a4a",
                       lineHeight: 1.75,
                     }}
