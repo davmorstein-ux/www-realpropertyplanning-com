@@ -264,7 +264,7 @@ const RPPHomeV3 = () => {
                 style={{
                   textDecoration: "none",
                   display: "flex",
-                  alignItems: "center",
+                  alignItems: "stretch",
                   gap: "1.25rem",
                   background: "#ffffff",
                   border: "2px solid #2f5fd8",
@@ -287,10 +287,10 @@ const RPPHomeV3 = () => {
                     className="coc-heading"
                     style={{
                       fontFamily: "Georgia, serif",
-                      fontSize: "64px",
-                      fontWeight: 800,
-                      margin: "0 0 24px",
-                      lineHeight: 1.1,
+                      fontSize: "72px",
+                      fontWeight: 900,
+                      margin: "0 0 48px",
+                      lineHeight: 1.05,
                     }}
                   >
                     <span style={{ color: "#1a2744" }}>Cost of Care</span>{" "}
@@ -322,6 +322,7 @@ const RPPHomeV3 = () => {
                       fontSize: 16,
                       padding: "10px 20px",
                       borderRadius: 8,
+                      marginTop: "auto",
                     }}
                   >
                     Calculate My Costs →
@@ -331,7 +332,7 @@ const RPPHomeV3 = () => {
                   src="/cost-of-care-calc-graphic.webp"
                   alt=""
                   aria-hidden="true"
-                  style={{ height: 220, width: "auto", flexShrink: 0, display: "block" }}
+                  style={{ height: 220, width: "auto", flexShrink: 0, display: "block", alignSelf: "center" }}
                 />
               </a>
 
@@ -361,7 +362,7 @@ const RPPHomeV3 = () => {
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: "rgba(255,255,255,0.82)",
+                    background: "rgba(255,255,255,0.62)",
                   }}
                 />
 
@@ -370,9 +371,12 @@ const RPPHomeV3 = () => {
                   style={{
                     position: "relative",
                     zIndex: 1,
+                    height: "100%",
+                    width: "100%",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
+                    justifyContent: "flex-start",
                   }}
                 >
                   <h3
@@ -414,6 +418,7 @@ const RPPHomeV3 = () => {
                       fontSize: 16,
                       padding: "10px 20px",
                       borderRadius: 8,
+                      marginTop: "auto",
                     }}
                   >
                     Explore AFH Club →
