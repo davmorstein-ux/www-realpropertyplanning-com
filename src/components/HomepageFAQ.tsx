@@ -11,7 +11,7 @@ const faqs = [
     a: "Almost never. In Washington, once Letters Testamentary or Letters of Administration are issued, the personal representative typically has authority to list and sell — often within weeks of opening probate, not at the end of it. Preparation work (assessment, cleanout planning, market analysis) can happen during the waiting period so the property is ready the moment authority is granted.",
   },
   {
-    q: "We live out of state. Can you really handle the whole property without us flying out?",
+    q: "We live out of state. Can you really handle the whole property without us flying\u00A0out?",
     a: "Yes — this is one of the most common situations we handle. We assess the property in person, send photo and video updates, coordinate cleanout and repair vendors, manage the listing and showings, and walk you through every offer by phone or video.",
   },
   {
