@@ -3331,3 +3331,16 @@ a[href="/afh-club"] h3.afh-club-heading {
     font-size: 48px !important;
   }
 }
+a[href="/cost-of-care-calculator"] h3.coc-heading {
+  font-size: 72px !important;
+  font-weight: 900 !important;
+  line-height: 1.05 !important;
+  margin: 0 0 48px !important;
+}
+
+@media (max-width: 640px) {
+  a[href="/cost-of-care-calculator"] h3.coc-heading {
+    font-size: 40px !important;
+    margin: 0 0 28px !important;
+  }
+}
