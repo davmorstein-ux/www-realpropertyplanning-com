@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
+import CostOfCareEmbed from "@/components/CostOfCareEmbed";
 
 const NursingAndSkilledCare = () => (
   <>
@@ -18,10 +19,7 @@ const NursingAndSkilledCare = () => (
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
         { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
-        {
-          name: "Nursing & Skilled Care",
-          url: "https://realpropertyplanning.com/senior-living/nursing-and-skilled-care",
-        },
+        { name: "Nursing & Skilled Care", url: "https://realpropertyplanning.com/senior-living/nursing-and-skilled-care" },
       ]}
     />
     <Header />
@@ -30,12 +28,9 @@ const NursingAndSkilledCare = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">
-              Nursing & Skilled Care
-            </h1>
+            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">Nursing & Skilled Care</h1>
             <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Facilities that provide 24-hour medical support for seniors with more complex health needs or those
-              recovering from hospitalization.
+              Facilities that provide 24-hour medical support for seniors with more complex health needs or those recovering from hospitalization.
             </p>
           </div>
         </div>
@@ -46,27 +41,15 @@ const NursingAndSkilledCare = () => (
           <div className="max-w-3xl mx-auto">
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                This page is being developed with detailed information about nursing and skilled care facilities
-                throughout Washington State. Check back soon, or{" "}
-                <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">
-                  Contact us
-                </Link>{" "}
-                for guidance.
-              </p>
-              <p className="mt-4">
-                <Link
-                  to="/cost-of-care-calculator?care=nursing-semi"
-                  className="text-gold font-bold text-base hover:underline"
-                >
-                  See exact Washington vs. national nursing home costs →
-                </Link>
+                This page is being developed with detailed information about nursing and skilled care facilities throughout Washington State. Check back soon, or{" "}
+                <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for guidance.
               </p>
             </div>
+            <div className="mt-8">
+              <CostOfCareEmbed careTypeId="nursing-semi" />
+            </div>
             <div className="mt-8 text-center">
-              <Link
-                to="/senior-living-and-relocation"
-                className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium"
-              >
+              <Link to="/senior-living-and-relocation" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium">
                 ← Back to Senior Living & Relocation
               </Link>
             </div>
