@@ -289,7 +289,7 @@ const RPPHomeV3 = () => {
                       fontFamily: "Georgia, serif",
                       fontSize: "64px",
                       fontWeight: 800,
-                      margin: "0 0 8px",
+                      margin: "0 0 24px",
                       lineHeight: 1.1,
                     }}
                   >
