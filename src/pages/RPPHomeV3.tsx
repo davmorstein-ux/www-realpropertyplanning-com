@@ -366,9 +366,10 @@ const RPPHomeV3 = () => {
                   }}
                 >
                   <h3
+                    className="afh-club-heading"
                     style={{
                       fontFamily: "Georgia, serif",
-                      fontSize: "clamp(40px,5vw,54px)",
+                      fontSize: "56px",
                       fontWeight: 700,
                       color: "#0a5648",
                       margin: "0 0 10px",
@@ -379,10 +380,10 @@ const RPPHomeV3 = () => {
                   </h3>
                   <div style={{ width: 64, height: 2, background: "#c9c2b4", margin: "0 0 14px" }} />
                   <div
-                    className="rpp-card-desc"
+                    className="rpp-card-desc afh-club-desc"
                     style={{
                       fontFamily: "'Raleway', sans-serif",
-                      fontSize: 16,
+                      fontSize: 20,
                       color: "#1a2744",
                       lineHeight: 1.5,
                       margin: "0 0 16px",
