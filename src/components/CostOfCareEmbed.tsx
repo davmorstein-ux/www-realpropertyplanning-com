@@ -45,10 +45,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
   const [yearsOut, setYearsOut] = useState(0);
   const [yearsOfCareNeeded, setYearsOfCareNeeded] = useState(3);
 
-  const careType = useMemo(
-    () => CARE_TYPES.find((c) => c.id === careTypeId) ?? CARE_TYPES[0],
-    [careTypeId],
-  );
+  const careType = useMemo(() => CARE_TYPES.find((c) => c.id === careTypeId) ?? CARE_TYPES[0], [careTypeId]);
 
   const projectedWaMonthly = useMemo(
     () => careType.waMonthly * Math.pow(1 + DEFAULT_INFLATION / 100, yearsOut),
@@ -74,7 +71,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
     >
       <p
         style={{
-          fontSize: 13,
+          fontSize: 17,
           fontFamily: "'Raleway', sans-serif",
           fontWeight: 700,
           letterSpacing: "0.16em",
@@ -102,7 +99,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           <label
             style={{
               display: "block",
-              fontSize: 13,
+              fontSize: 17,
               fontWeight: 700,
               fontFamily: "'Raleway', sans-serif",
               letterSpacing: "0.06em",
@@ -114,7 +111,11 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             Current Age
           </label>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <button onClick={() => setCurrentAge((a) => Math.max(18, a - 1))} style={stepperBtn} aria-label="Decrease age">
+            <button
+              onClick={() => setCurrentAge((a) => Math.max(18, a - 1))}
+              style={stepperBtn}
+              aria-label="Decrease age"
+            >
               −
             </button>
             <div
@@ -131,7 +132,11 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
                 {currentAge}
               </span>
             </div>
-            <button onClick={() => setCurrentAge((a) => Math.min(105, a + 1))} style={stepperBtn} aria-label="Increase age">
+            <button
+              onClick={() => setCurrentAge((a) => Math.min(105, a + 1))}
+              style={stepperBtn}
+              aria-label="Increase age"
+            >
               +
             </button>
           </div>
@@ -141,7 +146,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           <label
             style={{
               display: "block",
-              fontSize: 13,
+              fontSize: 17,
               fontWeight: 700,
               fontFamily: "'Raleway', sans-serif",
               letterSpacing: "0.06em",
@@ -189,7 +194,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         <label
           style={{
             display: "block",
-            fontSize: 13,
+            fontSize: 17,
             fontWeight: 700,
             fontFamily: "'Raleway', sans-serif",
             letterSpacing: "0.06em",
@@ -209,49 +214,155 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         </div>
       </div>
 
-      <div className="coc-embed-results" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 14 }}>
-        <div style={{ background: "#f5f2ec", border: `2px solid ${COC_TEAL}60`, borderRadius: 10, padding: "12px", textAlign: "center" }}>
-          <div style={{ fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", color: NAVY, fontWeight: 700, fontFamily: "'Raleway', sans-serif", marginBottom: 4 }}>
+      <div
+        className="coc-embed-results"
+        style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 14 }}
+      >
+        <div
+          style={{
+            background: "#f5f2ec",
+            border: `2px solid ${COC_TEAL}60`,
+            borderRadius: 10,
+            padding: "12px",
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              fontSize: 15,
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              color: NAVY,
+              fontWeight: 700,
+              fontFamily: "'Raleway', sans-serif",
+              marginBottom: 4,
+            }}
+          >
             Washington
           </div>
-          <div style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(16px,2.6vw,20px)", color: COC_TEAL }}>
+          <div
+            style={{
+              fontFamily: "'Courier New', monospace",
+              fontWeight: 700,
+              fontSize: "clamp(16px,2.6vw,20px)",
+              color: COC_TEAL,
+            }}
+          >
             {formatCurrency(projectedWaMonthly)}
           </div>
-          <div style={{ fontSize: 13, fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif" }}>per month</div>
+          <div style={{ fontSize: 17, fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif" }}>
+            per month
+          </div>
         </div>
-        <div style={{ background: "#f5f2ec", border: "1px solid #ddd8cc", borderRadius: 10, padding: "12px", textAlign: "center" }}>
-          <div style={{ fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", color: NAVY, fontWeight: 700, fontFamily: "'Raleway', sans-serif", marginBottom: 4 }}>
+        <div
+          style={{
+            background: "#f5f2ec",
+            border: "1px solid #ddd8cc",
+            borderRadius: 10,
+            padding: "12px",
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              fontSize: 15,
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              color: NAVY,
+              fontWeight: 700,
+              fontFamily: "'Raleway', sans-serif",
+              marginBottom: 4,
+            }}
+          >
             National Median
           </div>
-          <div style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(16px,2.6vw,20px)", color: NAVY }}>
+          <div
+            style={{
+              fontFamily: "'Courier New', monospace",
+              fontWeight: 700,
+              fontSize: "clamp(16px,2.6vw,20px)",
+              color: NAVY,
+            }}
+          >
             {formatCurrency(projectedNationalMonthly)}
           </div>
-          <div style={{ fontSize: 13, fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif" }}>per month</div>
+          <div style={{ fontSize: 17, fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif" }}>
+            per month
+          </div>
         </div>
       </div>
 
-      <div style={{ background: "#f5f2ec", border: `2px solid ${COC_TEAL}60`, borderRadius: 10, padding: "12px", textAlign: "center", marginBottom: 16 }}>
-        <div style={{ fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", color: NAVY, fontWeight: 700, fontFamily: "'Raleway', sans-serif", marginBottom: 4 }}>
+      <div
+        style={{
+          background: "#f5f2ec",
+          border: `2px solid ${COC_TEAL}60`,
+          borderRadius: 10,
+          padding: "12px",
+          textAlign: "center",
+          marginBottom: 16,
+        }}
+      >
+        <div
+          style={{
+            fontSize: 15,
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            color: NAVY,
+            fontWeight: 700,
+            fontFamily: "'Raleway', sans-serif",
+            marginBottom: 4,
+          }}
+        >
           Total · {yearsOfCareNeeded}-Year Plan
         </div>
-        <div style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(20px,3vw,26px)", color: COC_TEAL }}>
+        <div
+          style={{
+            fontFamily: "'Courier New', monospace",
+            fontWeight: 700,
+            fontSize: "clamp(20px,3vw,26px)",
+            color: COC_TEAL,
+          }}
+        >
           {formatCurrency(totalWaCost)}
         </div>
-        <div style={{ fontSize: 13, fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif", marginTop: 2 }}>
+        <div
+          style={{ fontSize: 17, fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif", marginTop: 2 }}
+        >
           in Washington · vs. {formatCurrency(totalNationalCost)} nationally
         </div>
       </div>
 
-      <p style={{ fontSize: 13, fontFamily: "'Raleway', sans-serif", color: "#6b7280", margin: "0 0 12px", lineHeight: 1.5 }}>
+      <p
+        style={{
+          fontSize: 17,
+          fontFamily: "'Raleway', sans-serif",
+          color: "#374151",
+          margin: "0 0 16px",
+          lineHeight: 1.5,
+        }}
+      >
         Assumes {DEFAULT_INFLATION}% annual cost growth. {careType.note}
       </p>
 
       <div style={{ textAlign: "center" }}>
         <Link
           to={`/cost-of-care-calculator?care=${careTypeId}`}
-          style={{ fontSize: 14, fontWeight: 700, color: COC_TEAL, textDecoration: "underline" }}
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 8,
+            fontSize: 17,
+            fontWeight: 700,
+            fontFamily: "'Raleway', sans-serif",
+            color: COC_TEAL,
+            background: "#ffffff",
+            border: `2px solid ${COC_TEAL}`,
+            borderRadius: 8,
+            padding: "12px 20px",
+            textDecoration: "none",
+          }}
         >
-          Open the full calculator (adjust inflation, compare care types) →
+          Open Full Calculator (Adjust Inflation, Compare Care Types) →
         </Link>
       </div>
 
