@@ -5,6 +5,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
+import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -50,6 +52,16 @@ const SeniorTransitions = () => {
           />
           <HeroBandTitle as="h1">Selling A Senior's Home</HeroBandTitle>
         </section>
+
+        <DirectAnswerBlock
+          question="How do I sell a senior parent's home in Washington State?"
+          answer="Selling a longtime family home during a senior transition usually involves more than a standard listing — coordinating with care providers, out-of-state siblings, move managers, and sometimes an attorney or financial planner, all at a pace the family can manage. Real Property Planning connects families with the right professionals for each step and provides condition-based pricing guidance so the home sells for a fair, defensible value."
+          supportBullets={[
+            "Works at the family's own pace — no pressure to rush a decision",
+            "Connects you with move managers, living advisors, and estate liquidators as needed",
+            "Provides an honest, condition-based valuation rather than an automated estimate",
+          ]}
+        />
 
         {/* What Goes Into a Senior Transition */}
         <section className="py-20 lg:py-28 bg-background border-b border-border">
@@ -238,6 +250,39 @@ const SeniorTransitions = () => {
             </div>
           </div>
         </section>
+
+        <PageFAQ
+          id="senior-transitions"
+          eyebrow="Quick Answers"
+          heading="Senior Transition Questions"
+          faqs={[
+            {
+              question: "What's the first step in selling a senior's home in Washington?",
+              answer:
+                "Most families start by getting an honest sense of the home's value and condition, then deciding on next steps together — whether that's assisted living, a smaller home, or moving closer to family. Real Property Planning can help you figure out the right sequence of professionals before any decisions are made.",
+            },
+            {
+              question: "Do I need a Power of Attorney to sell my parent's house?",
+              answer:
+                "If your parent can no longer manage their own affairs, the person acting as their agent under a Durable Power of Attorney typically needs that document in hand before signing on their behalf — banks, title companies, and real estate transactions all require it. An elder law or estate attorney can confirm the POA covers real estate authority specifically.",
+            },
+            {
+              question: "How long does it typically take to sell a senior's home?",
+              answer:
+                "Timelines vary widely depending on the home's condition, family decision-making, and whether repairs or a full estate-sale cleanout are needed first. Because senior transitions often involve multiple family members and sometimes a move to care, the process is generally paced to the family's needs rather than rushed.",
+            },
+            {
+              question: "Who helps coordinate a senior's move alongside the home sale?",
+              answer:
+                "A senior move manager typically handles the physical side — sorting, packing, and setting up the new home — while a senior living advisor helps evaluate placement options. Real Property Planning connects families with both, alongside the real estate and valuation side of the transition.",
+            },
+            {
+              question: "Are there tax considerations when selling a longtime family home?",
+              answer:
+                "Yes — capital gains exclusions, stepped-up basis in a trust, and other tax factors can significantly affect the outcome. A CPA or financial planner should be part of the conversation before listing, and Real Property Planning can help connect your family with one.",
+            },
+          ]}
+        />
 
         <DisclaimerSection />
       </main>
