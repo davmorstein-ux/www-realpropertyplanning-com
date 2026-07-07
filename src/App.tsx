@@ -70,8 +70,6 @@ const HowTheProcessWorks = lazy(() => import("./pages/HowTheProcessWorks"));
 const WhyValuationMatters = lazy(() => import("./pages/WhyValuationMatters"));
 const Executors = lazy(() => import("./pages/Executors"));
 const ExecutorsGuide = lazy(() => import("./pages/executors/ExecutorsGuide"));
-const PowerOfAttorneyGuide = lazy(() => import("./pages/executors/PowerOfAttorneyGuide"));
-const TrusteesGuide = lazy(() => import("./pages/executors/TrusteesGuide"));
 const Trustees = lazy(() => import("./pages/Trustees"));
 const ForCPAs = lazy(() => import("./pages/ForCPAs"));
 const ForFinancialPlanners = lazy(() => import("./pages/ForFinancialPlanners"));
@@ -310,8 +308,11 @@ const App = () => (
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/executors" element={<Executors />} />
           <Route path="/executors/executors-guide" element={<ExecutorsGuide />} />
-          <Route path="/executors/power-of-attorney-guide" element={<PowerOfAttorneyGuide />} />
-          <Route path="/executors/trustees-guide" element={<TrusteesGuide />} />
+          <Route
+            path="/executors/power-of-attorney-guide"
+            element={<Navigate to="/senior-living/power-of-attorneys" replace />}
+          />
+          <Route path="/executors/trustees-guide" element={<Navigate to="/trustees" replace />} />
           <Route path="/trustees" element={<Trustees />} />
           <Route path="/estate-liquidation" element={<EstateLiquidation />} />
           <Route path="/estate-liquidation/learn-more" element={<EstateLiquidationLearnMore />} />
