@@ -12,6 +12,7 @@ const MemoryCare = () => (
       bestFor="Seniors with moderate to advanced cognitive impairment who need a safe, structured environment."
       typicalCosts="$5,000–$10,000/month in Washington State. Usually private pay."
       whatsIncluded="Secure setting, specialized programming, 24-hour supervision, personal care, and meals."
+      calculatorCareId="memory-care"
     />
   </>
 );
