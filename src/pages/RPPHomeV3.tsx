@@ -330,60 +330,84 @@ const RPPHomeV3 = () => {
                 className="group block transition-transform duration-200 hover:-translate-y-1"
                 style={{
                   textDecoration: "none",
+                  position: "relative",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
                   textAlign: "center",
-                  background: "#ffffff",
                   border: "2px solid #0a5648",
                   borderRadius: 12,
                   padding: "1.5rem",
                   minHeight: 220,
+                  overflow: "hidden",
+                  backgroundImage: "url(/afh-club-house-bg.webp)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}
               >
-                <h3
-                  style={{
-                    fontFamily: "Georgia, serif",
-                    fontSize: "clamp(32px,3.8vw,42px)",
-                    fontWeight: 700,
-                    color: "#0a5648",
-                    margin: "0 0 10px",
-                    lineHeight: 1.15,
-                  }}
-                >
-                  AFH Club
-                </h3>
-                <div style={{ width: 64, height: 2, background: "#c9c2b4", margin: "0 0 14px" }} />
+                {/* Readability overlay */}
                 <div
-                  className="rpp-card-desc"
                   style={{
-                    fontFamily: "'Raleway', sans-serif",
-                    fontSize: 16,
-                    color: "#1a2744",
-                    lineHeight: 1.5,
-                    margin: "0 0 16px",
-                    maxWidth: 360,
+                    position: "absolute",
+                    inset: 0,
+                    background: "rgba(255,255,255,0.82)",
                   }}
-                >
-                  The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
-                </div>
-                <span
+                />
+
+                {/* Content sits above the overlay */}
+                <div
                   style={{
-                    display: "inline-flex",
+                    position: "relative",
+                    zIndex: 1,
+                    display: "flex",
+                    flexDirection: "column",
                     alignItems: "center",
-                    gap: 8,
-                    background: "#0a5648",
-                    color: "#ffffff",
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 700,
-                    fontSize: 16,
-                    padding: "10px 20px",
-                    borderRadius: 8,
                   }}
                 >
-                  Explore AFH Club →
-                </span>
+                  <h3
+                    style={{
+                      fontFamily: "Georgia, serif",
+                      fontSize: "clamp(40px,5vw,54px)",
+                      fontWeight: 700,
+                      color: "#0a5648",
+                      margin: "0 0 10px",
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    AFH Club
+                  </h3>
+                  <div style={{ width: 64, height: 2, background: "#c9c2b4", margin: "0 0 14px" }} />
+                  <div
+                    className="rpp-card-desc"
+                    style={{
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 16,
+                      color: "#1a2744",
+                      lineHeight: 1.5,
+                      margin: "0 0 16px",
+                      maxWidth: 360,
+                    }}
+                  >
+                    The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
+                  </div>
+                  <span
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      background: "#0a5648",
+                      color: "#ffffff",
+                      fontFamily: "'Raleway', sans-serif",
+                      fontWeight: 700,
+                      fontSize: 16,
+                      padding: "10px 20px",
+                      borderRadius: 8,
+                    }}
+                  >
+                    Explore AFH Club →
+                  </span>
+                </div>
               </a>
             </div>
           </div>
