@@ -11,8 +11,8 @@ const HomepageReassurance = () => (
         margin: 0 0 20px 0 !important;
       }
       .rpp-reassurance-text {
-        font-size: 22px !important;
-        line-height: 1.8 !important;
+        font-size: 32px !important;
+        line-height: 1.6 !important;
         color: #1a2744 !important;
         font-weight: 500 !important;
         margin: 0 !important;
