@@ -35,20 +35,26 @@ const HomepageFAQ = () => {
         .faq-item {
           background: #ffffff !important;
           border: 2px solid #7f1d1d !important;
+          border-bottom: 2px solid #7f1d1d !important;
           border-left: 6px solid #7f1d1d !important;
           border-radius: 10px !important;
           overflow: hidden !important;
+          box-shadow: none !important;
+          -webkit-box-shadow: none !important;
+          filter: none !important;
           transition: border-color 0.2s ease !important;
           margin-bottom: 1.1rem !important;
         }
         .faq-item:hover {
           border-color: #5c1414 !important;
+          box-shadow: none !important;
         }
         .faq-item [data-state="open"] {
           border-left-color: #1a2744 !important;
         }
         .faq-item:has([data-state="open"]) {
           background: #f7e9e9 !important;
+          box-shadow: none !important;
         }
         .homepage-faq-trigger {
           padding: 1.5rem 1.75rem !important;
