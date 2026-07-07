@@ -263,56 +263,39 @@ const RPPHomeV3 = () => {
                 className="group block transition-transform duration-200 hover:-translate-y-1"
                 style={{
                   textDecoration: "none",
-                  position: "relative",
                   display: "flex",
-                  flexDirection: "column",
                   alignItems: "center",
-                  justifyContent: "center",
-                  textAlign: "center",
+                  gap: "1.25rem",
+                  background: "#ffffff",
                   border: "2px solid #2f5fd8",
                   borderRadius: 12,
-                  padding: "1.5rem",
+                  padding: "1.25rem 1.5rem",
                   minHeight: 220,
-                  overflow: "hidden",
-                  backgroundImage: "url(/cost-of-care-calc-graphic.webp)",
-                  backgroundSize: "220px auto",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
                 }}
               >
-                {/* Readability overlay */}
                 <div
                   style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: "rgba(255,255,255,0.88)",
-                  }}
-                />
-
-                {/* Content sits above the overlay */}
-                <div
-                  style={{
-                    position: "relative",
-                    zIndex: 1,
+                    flex: 1,
+                    minWidth: 0,
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
+                    textAlign: "center",
                   }}
                 >
                   <h3
                     className="coc-heading"
                     style={{
                       fontFamily: "Georgia, serif",
-                      fontSize: "90px",
+                      fontSize: "56px",
                       fontWeight: 700,
-                      margin: "0 0 10px",
-                      lineHeight: 1.05,
+                      margin: "0 0 8px",
+                      lineHeight: 1.1,
                     }}
                   >
                     <span style={{ color: "#1a2744" }}>Cost of Care</span>{" "}
                     <span style={{ color: "#2f5fd8" }}>Calculator</span>
                   </h3>
-                  <div style={{ width: 64, height: 2, background: "#c9c2b4", margin: "0 0 14px" }} />
                   <div
                     className="rpp-card-desc coc-desc"
                     style={{
@@ -320,8 +303,8 @@ const RPPHomeV3 = () => {
                       fontSize: 20,
                       color: "#1a2744",
                       lineHeight: 1.5,
-                      margin: "0 0 16px",
-                      maxWidth: 360,
+                      margin: "0 0 14px",
+                      maxWidth: 320,
                     }}
                   >
                     Compare in-home care, assisted living, memory care, and more — in Washington versus national
@@ -344,6 +327,12 @@ const RPPHomeV3 = () => {
                     Calculate My Costs →
                   </span>
                 </div>
+                <img
+                  src="/cost-of-care-calc-graphic.webp"
+                  alt=""
+                  aria-hidden="true"
+                  style={{ height: 220, width: "auto", flexShrink: 0, display: "block" }}
+                />
               </a>
 
               <a
