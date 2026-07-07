@@ -12,6 +12,7 @@ const IndependentLiving = () => (
       bestFor="Seniors who are healthy and independent but want community, amenities, and a simpler lifestyle."
       typicalCosts="$2,000–$5,000/month in Washington State, depending on location and amenities. Usually private pay."
       whatsIncluded="Apartment or cottage-style residence, meals, housekeeping, transportation, activities, and common areas."
+      calculatorCareId="independent-living"
     />
   </>
 );
