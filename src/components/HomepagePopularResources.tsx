@@ -1,10 +1,31 @@
 import { Link } from "react-router-dom";
+import { ClipboardCheck, Scale, HeartHandshake, KeyRound, ArrowRight } from "lucide-react";
 
 const resources = [
-  { title: "Washington Executor's 10-Step Checklist", href: "/resources/washington-executors-10-step-checklist" },
-  { title: "How Probate Real Estate Works", href: "/guides/how-probate-real-estate-works" },
-  { title: "Senior Housing & Care Options", href: "/understanding-housing-care-options" },
-  { title: "What to Do With an Inherited House", href: "/guides/inherited-house-washington" },
+  {
+    title: "Washington Executor's 10-Step Checklist",
+    href: "/resources/washington-executors-10-step-checklist",
+    icon: ClipboardCheck,
+    accent: "#8b2e2e",
+  },
+  {
+    title: "How Probate Real Estate Works",
+    href: "/guides/how-probate-real-estate-works",
+    icon: Scale,
+    accent: "#5c6e9e",
+  },
+  {
+    title: "Senior Housing & Care Options",
+    href: "/understanding-housing-care-options",
+    icon: HeartHandshake,
+    accent: "#c47c2b",
+  },
+  {
+    title: "What to Do With an Inherited House",
+    href: "/guides/inherited-house-washington",
+    icon: KeyRound,
+    accent: "#7a4f8a",
+  },
 ];
 
 const HomepagePopularResources = () => (
@@ -42,46 +63,58 @@ const HomepagePopularResources = () => (
       .rpp-pr-card {
         display: flex !important;
         flex-direction: column !important;
-        justify-content: space-between !important;
         align-items: center !important;
         text-align: center !important;
-        background-color: #f5f2ec !important;
+        background-color: #ffffff !important;
         border: 1px solid #e0dbd2 !important;
-        border-radius: 10px !important;
-        padding: 1.75rem 1.25rem 1.5rem !important;
-        min-height: 160px !important;
+        border-top: 4px solid var(--pr-accent, #1a2744) !important;
+        border-radius: 12px !important;
+        padding: 2rem 1.5rem 1.75rem !important;
+        min-height: 240px !important;
         width: 100% !important;
         text-decoration: none !important;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
-        transition: box-shadow 0.15s ease, transform 0.15s ease !important;
+        box-shadow: 0 3px 14px rgba(26,39,68,0.08) !important;
+        transition: box-shadow 0.2s ease, transform 0.2s ease !important;
       }
       .rpp-pr-card:hover {
-        box-shadow: 0 6px 20px rgba(26,39,68,0.12) !important;
-        transform: translateY(-2px) !important;
-        background-color: #faf8f4 !important;
+        box-shadow: 0 10px 28px rgba(26,39,68,0.16) !important;
+        transform: translateY(-3px) !important;
+      }
+      .rpp-pr-card-icon {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 52px !important;
+        height: 52px !important;
+        border-radius: 50% !important;
+        background-color: var(--pr-accent-soft, #f5f2ec) !important;
+        margin-bottom: 1.1rem !important;
+        flex-shrink: 0 !important;
       }
       .rpp-pr-card-text {
-        font-family: Inter, system-ui, sans-serif !important;
-        font-size: 18px !important;
-        font-weight: 600 !important;
+        font-family: Georgia, 'Cormorant Garamond', serif !important;
+        font-size: 20px !important;
+        font-weight: 700 !important;
         color: #1a2744 !important;
         line-height: 1.35 !important;
         flex: 1 !important;
-        margin-bottom: 1.25rem !important;
+        margin-bottom: 1.5rem !important;
         text-align: center !important;
       }
       .rpp-pr-card-cta {
         display: inline-flex !important;
         align-items: center !important;
-        gap: 6px !important;
+        gap: 8px !important;
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 13px !important;
+        font-size: 14px !important;
         font-weight: 700 !important;
-        letter-spacing: 0.1em !important;
+        letter-spacing: 0.08em !important;
         text-transform: uppercase !important;
-        color: #1a2744 !important;
-        text-decoration: underline !important;
-        text-underline-offset: 3px !important;
+        color: #ffffff !important;
+        background-color: var(--pr-accent, #1a2744) !important;
+        padding: 10px 18px !important;
+        border-radius: 8px !important;
+        text-decoration: none !important;
       }
       .rpp-pr-browse {
         display: inline-flex !important;
@@ -111,29 +144,27 @@ const HomepagePopularResources = () => (
 
       {/* Cards */}
       <ul className="rpp-pr-grid">
-        {resources.map((r) => (
-          <li key={r.href}>
-            <Link to={r.href} className="rpp-pr-card">
-              <span className="rpp-pr-card-text">{r.title}</span>
-              <span className="rpp-pr-card-cta">
-                Read guide
-                <svg
-                  viewBox="0 0 24 24"
-                  width="13"
-                  height="13"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </span>
-            </Link>
-          </li>
-        ))}
+        {resources.map((r) => {
+          const Icon = r.icon;
+          return (
+            <li key={r.href}>
+              <Link
+                to={r.href}
+                className="rpp-pr-card"
+                style={{ ["--pr-accent" as string]: r.accent, ["--pr-accent-soft" as string]: `${r.accent}1a` }}
+              >
+                <span className="rpp-pr-card-icon">
+                  <Icon size={26} color={r.accent} strokeWidth={2} aria-hidden="true" />
+                </span>
+                <span className="rpp-pr-card-text">{r.title}</span>
+                <span className="rpp-pr-card-cta">
+                  Read Guide
+                  <ArrowRight size={15} aria-hidden="true" />
+                </span>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
 
       {/* Browse all */}
