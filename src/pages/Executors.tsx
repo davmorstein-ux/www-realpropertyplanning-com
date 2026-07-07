@@ -4,6 +4,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
+import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
 import executorImg from "@/assets/executors/executor-tile.webp";
 import poaImg from "@/assets/executors/power-of-attorney-tile.webp";
@@ -76,6 +78,16 @@ const Executors = () => (
     <main id="main-content">
       <HeroBandTitle as="h1">Executors, Powers of Attorney &amp; Trustees</HeroBandTitle>
 
+      <DirectAnswerBlock
+        question="What does an executor need to know about handling real estate in Washington State?"
+        answer="In Washington, an executor — legally called a Personal Representative — must secure the property, obtain Letters Testamentary from the court, arrange a date-of-death appraisal, and manage the sale in a way that protects both the estate and the executor personally from later disputes. Because real estate is usually the estate's largest asset, getting the valuation, timing, and preparation right matters more than any other decision in the role."
+        supportSteps={[
+          { label: "Executor", desc: "Named in a will or appointed by the court to administer the estate." },
+          { label: "Power of Attorney", desc: "Acts on behalf of a living person, often before probate begins." },
+          { label: "Trustee", desc: "Administers trust-owned property outside of court supervision." },
+        ]}
+      />
+
       <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
@@ -116,7 +128,10 @@ const Executors = () => (
                       objectFit: "cover",
                       objectPosition: "center",
                       display: "block",
-                    }} sizes="100vw" decoding="async"/>
+                    }}
+                    sizes="100vw"
+                    decoding="async"
+                  />
                 </div>
 
                 {/* Title bar — fixed height so all 3 align */}
@@ -261,6 +276,39 @@ const Executors = () => (
           </div>
         </div>
       </section>
+
+      <PageFAQ
+        id="executors"
+        eyebrow="Quick Answers"
+        heading="Executor, POA & Trustee Questions"
+        faqs={[
+          {
+            question: "What is a Personal Representative in Washington State?",
+            answer:
+              "Personal Representative is Washington's legal term for what many people call an executor — the person named in a will, or appointed by the court, to administer a deceased person's estate. The role carries a fiduciary duty to act in the best interests of the estate and its beneficiaries, and it's governed by the Washington Probate Act (RCW Title 11).",
+          },
+          {
+            question: "Does an executor need court approval to sell a house in Washington?",
+            answer:
+              "Washington allows non-intervention powers, which let most executors act — including selling estate real estate — without seeking separate court approval for each transaction, once that authority has been formally granted by the court. Confirm your specific authority with a probate attorney, since not every estate qualifies.",
+          },
+          {
+            question: "What is a date-of-death appraisal, and why does an executor need one?",
+            answer:
+              "A date-of-death appraisal is a certified valuation of the property as of the date the person passed away. It establishes the estate's tax basis, supports the estate tax return if one is required, and gives the executor a defensible record if a beneficiary later questions the sale price.",
+          },
+          {
+            question: "What's the difference between an executor, a Power of Attorney, and a trustee?",
+            answer:
+              "An executor administers a deceased person's estate under court supervision. A Power of Attorney agent acts on behalf of a living person who can no longer manage their own affairs. A trustee manages assets already placed in a trust, generally outside of court oversight. Each role carries its own fiduciary duties and real estate responsibilities.",
+          },
+          {
+            question: "What's the biggest mistake executors make with estate real estate?",
+            answer:
+              "Skipping the date-of-death appraisal and relying on an online estimate instead. Without an independent, certified valuation, an executor has little defense if a beneficiary later claims the property was sold below market value — and that gap in documentation is one of the most common sources of executor liability.",
+          },
+        ]}
+      />
 
       <DisclaimerSection />
     </main>
