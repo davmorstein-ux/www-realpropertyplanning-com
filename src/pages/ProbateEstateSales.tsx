@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
+import PageFAQ from "@/components/PageFAQ";
 
 import { Link } from "react-router-dom";
 
@@ -97,6 +99,22 @@ const ProbateEstateSales = () => {
           </div>
           <HeroBandTitle as="h1">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
         </section>
+
+        <DirectAnswerBlock
+          question="How does selling a house through probate work in Washington State?"
+          answer="In Washington, an estate property typically cannot be sold until the court grants the executor formal legal authority — usually through Letters Testamentary. Once that authority is in place, the process follows familiar real estate steps — evaluation, preparation, listing, negotiation, and closing — but with added requirements: a defensible appraisal, coordination among multiple decision-makers, and pricing that reflects the property's true condition rather than an automated estimate. Real Property Planning is led by a dual-licensed real estate broker and certified appraiser, guiding families and executors through each stage."
+          supportSteps={[
+            {
+              label: "Before Authority",
+              desc: "Property is assessed and a plan is developed while legal authority is pending.",
+            },
+            { label: "During Probate", desc: "Preparation, pricing, and listing proceed alongside the court process." },
+            {
+              label: "After Probate",
+              desc: "The property moves to market with every repair decision evaluated for return.",
+            },
+          ]}
+        />
 
         {/* SECTION 2 — Probate vs. Inherited (two tiles, no accordions) */}
         <section className="py-16 lg:py-20 bg-background">
@@ -477,6 +495,39 @@ const ProbateEstateSales = () => {
             </div>
           </div>
         </section>
+
+        <PageFAQ
+          id="probate-estate-sales"
+          eyebrow="Quick Answers"
+          heading="Probate & Estate Sale Questions"
+          faqs={[
+            {
+              question: "What is the difference between probate property and inherited property in Washington?",
+              answer:
+                "Probate property is court-supervised — the estate must go through Washington's probate process, and legal authority (Letters Testamentary) is required before a sale can proceed. Inherited property that passes outside probate, such as through a living trust or joint tenancy with right of survivorship, generally has fewer legal hurdles but can still involve significant complexity around valuation, family agreement, and tax basis.",
+            },
+            {
+              question: "Can a house be sold before probate is finalized in Washington State?",
+              answer:
+                "Often, yes. Washington's non-intervention powers allow many executors to sell estate real estate once Letters Testamentary are granted, without needing separate court approval for the sale itself. The property can even be evaluated and a sale plan prepared before that authority is formally granted, so the estate is ready to move once the court process clears.",
+            },
+            {
+              question: "Who decides how an estate property is priced?",
+              answer:
+                "Pricing an estate property responsibly starts with an independent, defensible valuation — not an automated online estimate. Because these properties often reflect deferred maintenance or years of accumulated condition, an accurate current-condition assessment protects the executor from later disputes with beneficiaries and supports a fiduciarily sound sale.",
+            },
+            {
+              question: "Why do estate and probate sales take longer than typical home sales?",
+              answer:
+                "Multiple decision-makers must align, court timelines can affect when a sale can close, and property condition often requires more preparation — repairs, cleanout, or vendor coordination — before listing. Each of these adds time compared to a standard resale, but a clear plan and experienced guidance keep the process moving as efficiently as Washington law allows.",
+            },
+            {
+              question: "What qualifications should a broker have to handle a probate or estate sale?",
+              answer:
+                "Look for a broker with specific, hands-on experience in probate and estate transactions — someone who understands court requirements, fiduciary documentation, and condition-based pricing. Real Property Planning is led by a Washington State licensed real estate broker who is also a certified residential appraiser, combining both credentials in one point of contact.",
+            },
+          ]}
+        />
       </main>
       <Footer />
     </div>
