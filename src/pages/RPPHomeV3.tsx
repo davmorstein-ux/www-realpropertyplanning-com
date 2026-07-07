@@ -264,8 +264,7 @@ const RPPHomeV3 = () => {
                 style={{
                   textDecoration: "none",
                   display: "flex",
-                  alignItems: "stretch",
-                  gap: "1.25rem",
+                  flexDirection: "column",
                   background: "#ffffff",
                   border: "2px solid #2f5fd8",
                   borderRadius: 12,
@@ -273,67 +272,78 @@ const RPPHomeV3 = () => {
                   minHeight: 220,
                 }}
               >
+                <h3
+                  className="coc-heading"
+                  style={{
+                    fontFamily: "Georgia, serif",
+                    fontSize: "40px",
+                    fontWeight: 900,
+                    margin: "0 0 20px",
+                    lineHeight: 1.1,
+                    textAlign: "center",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <span style={{ color: "#1a2744" }}>Cost of Care</span>{" "}
+                  <span style={{ color: "#2f5fd8" }}>Calculator</span>
+                </h3>
                 <div
                   style={{
                     flex: 1,
-                    minWidth: 0,
                     display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    textAlign: "center",
+                    alignItems: "stretch",
+                    gap: "1.25rem",
                   }}
                 >
-                  <h3
-                    className="coc-heading"
-                    style={{
-                      fontFamily: "Georgia, serif",
-                      fontSize: "72px",
-                      fontWeight: 900,
-                      margin: "0 0 48px",
-                      lineHeight: 1.05,
-                    }}
-                  >
-                    <span style={{ color: "#1a2744" }}>Cost of Care</span>{" "}
-                    <span style={{ color: "#2f5fd8" }}>Calculator</span>
-                  </h3>
                   <div
-                    className="rpp-card-desc coc-desc"
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
-                      fontSize: 20,
-                      color: "#1a2744",
-                      lineHeight: 1.5,
-                      margin: "0 0 14px",
-                      maxWidth: 320,
-                    }}
-                  >
-                    Compare in-home care, assisted living, memory care, and more — in Washington versus national
-                    averages.
-                  </div>
-                  <span
-                    style={{
-                      display: "inline-flex",
+                      flex: 1,
+                      minWidth: 0,
+                      display: "flex",
+                      flexDirection: "column",
                       alignItems: "center",
-                      gap: 8,
-                      background: "#2f5fd8",
-                      color: "#ffffff",
-                      fontFamily: "'Raleway', sans-serif",
-                      fontWeight: 700,
-                      fontSize: 16,
-                      padding: "10px 20px",
-                      borderRadius: 8,
-                      marginTop: "auto",
+                      textAlign: "center",
                     }}
                   >
-                    Calculate My Costs →
-                  </span>
+                    <div
+                      className="rpp-card-desc coc-desc"
+                      style={{
+                        fontFamily: "'Raleway', sans-serif",
+                        fontSize: 20,
+                        color: "#1a2744",
+                        lineHeight: 1.5,
+                        margin: "0 0 14px",
+                        maxWidth: 320,
+                      }}
+                    >
+                      Compare in-home care, assisted living, memory care, and more — in Washington versus national
+                      averages.
+                    </div>
+                    <span
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 8,
+                        background: "#2f5fd8",
+                        color: "#ffffff",
+                        fontFamily: "'Raleway', sans-serif",
+                        fontWeight: 700,
+                        fontSize: 16,
+                        padding: "10px 20px",
+                        borderRadius: 8,
+                        marginTop: "auto",
+                      }}
+                    >
+                      Calculate My Costs →
+                    </span>
+                  </div>
+                  <img
+                    src="/cost-of-care-calc-graphic.webp"
+                    alt=""
+                    aria-hidden="true"
+                    style={{ height: 220, width: "auto", flexShrink: 0, display: "block", alignSelf: "center" }}
+                  />
                 </div>
-                <img
-                  src="/cost-of-care-calc-graphic.webp"
-                  alt=""
-                  aria-hidden="true"
-                  style={{ height: 220, width: "auto", flexShrink: 0, display: "block", alignSelf: "center" }}
-                />
               </a>
 
               <a
