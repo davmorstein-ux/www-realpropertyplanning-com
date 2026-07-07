@@ -33,26 +33,22 @@ const HomepageFAQ = () => {
           line-height: 1.15 !important;
         }
         .faq-item {
-          background: linear-gradient(180deg, #ffffff 0%, #fdfbf7 100%) !important;
+          background: #ffffff !important;
           border: 2px solid #7f1d1d !important;
           border-left: 6px solid #7f1d1d !important;
           border-radius: 10px !important;
           overflow: hidden !important;
-          box-shadow: 0 3px 14px rgba(26,39,68,0.09) !important;
-          transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease !important;
+          transition: border-color 0.2s ease !important;
           margin-bottom: 1.1rem !important;
         }
         .faq-item:hover {
-          box-shadow: 0 10px 28px rgba(26,39,68,0.16) !important;
           border-color: #5c1414 !important;
-          transform: translateY(-2px) !important;
         }
         .faq-item [data-state="open"] {
           border-left-color: #1a2744 !important;
         }
         .faq-item:has([data-state="open"]) {
-          background: linear-gradient(180deg, #ffffff 0%, #f7e9e9 100%) !important;
-          box-shadow: 0 10px 28px rgba(26,39,68,0.16) !important;
+          background: #f7e9e9 !important;
         }
         .homepage-faq-trigger {
           padding: 1.5rem 1.75rem !important;
