@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Printer } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -18,6 +18,14 @@ interface CareType {
 }
 
 const CARE_TYPES: CareType[] = [
+  {
+    id: "independent-living",
+    label: "Independent Living Community",
+    waMonthly: 3145,
+    nationalMonthly: 3145,
+    unit: "monthly fee",
+    note: "Washington-specific figures aren't available from this source — shown here is the national median. Independent living generally costs less than assisted living since it doesn't include personal care services.",
+  },
   {
     id: "in-home",
     label: "In-Home Care (Non-Medical)",
@@ -85,6 +93,7 @@ const CARE_TYPES: CareType[] = [
 ];
 
 const CARE_TYPE_COLORS: Record<string, string> = {
+  "independent-living": "#8a9a5b",
   "in-home": "#3f7690",
   "adult-day": "#4f8268",
   "adult-family-home": "#1c9e90",
@@ -96,6 +105,7 @@ const CARE_TYPE_COLORS: Record<string, string> = {
 };
 
 const SHORT_CARE_LABELS: Record<string, string> = {
+  "independent-living": "Independent Living",
   "in-home": "In-Home Care",
   "adult-day": "Adult Day Care",
   "adult-family-home": "Adult Family Home",
@@ -218,7 +228,11 @@ const pillBtn = (active: boolean, color: string): React.CSSProperties => ({
 });
 
 const CostOfCareCalculator = () => {
-  const [careTypeId, setCareTypeId] = useState("assisted-living");
+  const [searchParams] = useSearchParams();
+  const [careTypeId, setCareTypeId] = useState<string>(() => {
+    const requested = searchParams.get("care");
+    return requested && CARE_TYPES.some((c) => c.id === requested) ? requested : "assisted-living";
+  });
   const [currentAge, setCurrentAge] = useState(75);
   const [yearsOut, setYearsOut] = useState(0);
   const [yearsOfCareNeeded, setYearsOfCareNeeded] = useState(3);
@@ -710,11 +724,13 @@ const CostOfCareCalculator = () => {
                     margin: 0,
                   }}
                 >
-                  <strong style={{ color: TEAL }}>{careType.label}</strong> in Washington currently runs about{" "}
+                  <strong style={{ color: TEAL }}>{careType.label}</strong> in Washington currently runs{" "}
                   <strong>
-                    {percentAboveNational > 0
-                      ? `${percentAboveNational}% above`
-                      : `${Math.abs(percentAboveNational)}% below`}
+                    {percentAboveNational === 0
+                      ? "about the same as"
+                      : percentAboveNational > 0
+                        ? `about ${percentAboveNational}% above`
+                        : `about ${Math.abs(percentAboveNational)}% below`}
                   </strong>{" "}
                   the national median. {careType.note}
                 </p>
