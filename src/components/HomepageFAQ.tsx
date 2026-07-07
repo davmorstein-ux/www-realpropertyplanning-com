@@ -34,8 +34,8 @@ const HomepageFAQ = () => {
         }
         .faq-item {
           background: linear-gradient(180deg, #ffffff 0%, #fdfbf7 100%) !important;
-          border: 2px solid #c9a84c !important;
-          border-left: 6px solid #c9a84c !important;
+          border: 2px solid #7f1d1d !important;
+          border-left: 6px solid #7f1d1d !important;
           border-radius: 10px !important;
           overflow: hidden !important;
           box-shadow: 0 3px 14px rgba(26,39,68,0.09) !important;
@@ -44,34 +44,20 @@ const HomepageFAQ = () => {
         }
         .faq-item:hover {
           box-shadow: 0 10px 28px rgba(26,39,68,0.16) !important;
-          border-color: #b8963e !important;
+          border-color: #5c1414 !important;
           transform: translateY(-2px) !important;
         }
         .faq-item [data-state="open"] {
           border-left-color: #1a2744 !important;
         }
         .faq-item:has([data-state="open"]) {
-          background: linear-gradient(180deg, #ffffff 0%, #f8f0dc 100%) !important;
+          background: linear-gradient(180deg, #ffffff 0%, #f7e9e9 100%) !important;
           box-shadow: 0 10px 28px rgba(26,39,68,0.16) !important;
         }
         .homepage-faq-trigger {
           padding: 1.5rem 1.75rem !important;
           min-height: 80px !important;
           gap: 1.1rem !important;
-        }
-        .homepage-faq-badge {
-          display: flex !important;
-          align-items: center !important;
-          justify-content: center !important;
-          width: 40px !important;
-          height: 40px !important;
-          border-radius: 50% !important;
-          background: #1a2744 !important;
-          color: #ffffff !important;
-          font-family: 'Cormorant Garamond', Georgia, serif !important;
-          font-size: 19px !important;
-          font-weight: 700 !important;
-          flex-shrink: 0 !important;
         }
         .homepage-faq-trigger span.faq-q-text {
           font-family: 'Cormorant Garamond', Georgia, serif !important;
@@ -84,7 +70,7 @@ const HomepageFAQ = () => {
         .homepage-faq-trigger [data-lucide], .homepage-faq-trigger svg {
           width: 28px !important;
           height: 28px !important;
-          color: #b8963e !important;
+          color: #7f1d1d !important;
           flex-shrink: 0 !important;
         }
         .homepage-faq-answer {
@@ -92,7 +78,7 @@ const HomepageFAQ = () => {
           font-size: 20px !important;
           color: #2d3a4a !important;
           line-height: 1.75 !important;
-          padding: 0 1.75rem 1.75rem 5.75rem !important;
+          padding: 0 1.75rem 1.75rem 1.75rem !important;
           border-top: 1px solid #e8e0d0 !important;
           padding-top: 1.25rem !important;
         }
@@ -104,9 +90,6 @@ const HomepageFAQ = () => {
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`faq-${i}`} className="faq-item" style={{ border: "none" }}>
               <AccordionTrigger className="homepage-faq-trigger">
-                <span className="homepage-faq-badge" aria-hidden="true">
-                  {i + 1}
-                </span>
                 <span className="faq-q-text">{faq.q}</span>
               </AccordionTrigger>
               <AccordionContent>
