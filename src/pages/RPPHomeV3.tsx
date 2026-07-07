@@ -369,7 +369,7 @@ const RPPHomeV3 = () => {
                     className="afh-club-heading"
                     style={{
                       fontFamily: "Georgia, serif",
-                      fontSize: "56px",
+                      fontSize: "72px",
                       fontWeight: 700,
                       color: "#0a5648",
                       margin: "0 0 10px",
