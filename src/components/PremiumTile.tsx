@@ -33,31 +33,19 @@ const PremiumTile = ({
   minHeight = "min-h-[252px] sm:min-h-[280px]",
   className = "",
 }: PremiumTileProps) => (
-  <Link
-    to={to}
-    className={`interior-tile tile-white group block h-full ${minHeight} ${className}`}
-  >
+  <Link to={to} className={`interior-tile tile-white group block h-full no-underline ${minHeight} ${className}`}>
     <div className="tile-white__inner h-full">
       <div className="tile-white__face h-full">
         <div className="flex h-full flex-col justify-between px-6 pb-6 pt-8 sm:px-7 sm:pb-7 sm:pt-9">
           <div>
             {icon && <div className="mb-4">{icon}</div>}
             {badge && (
-              <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-gold mb-2">
-                {badge}
-              </span>
+              <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-gold mb-2">{badge}</span>
             )}
-            <h3
-              className="mb-3 font-serif text-xl sm:text-[1.38rem] font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent"
-              style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}
-            >
+            <h3 className="mb-3 font-serif text-xl sm:text-[1.38rem] font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent">
               {title}
             </h3>
-            {description && (
-              <p className="text-[15px] leading-relaxed text-muted-foreground">
-                {description}
-              </p>
-            )}
+            {description && <p className="text-[15px] leading-relaxed text-muted-foreground">{description}</p>}
           </div>
           <div className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-gold transition-colors duration-300 group-hover:text-[hsl(var(--gold-dark))]">
             <span>{cta}</span>
