@@ -7,6 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import housingOptionsHero from "@/assets/housing_options_hero.webp";
+import CostOfCareEmbed from "@/components/CostOfCareEmbed";
 
 export interface HousingOptionDetailProps {
   title: string;
@@ -23,7 +24,8 @@ export interface HousingOptionDetailProps {
 const Row = ({ label, children }: { label: string; children: React.ReactNode }) => (
   <div className="border-l-4 border-gold pl-5">
     <p className="text-foreground text-base md:text-lg leading-relaxed">
-      <span className="font-bold text-foreground">{label}:</span> <span className="text-foreground/85">{children}</span>
+      <span className="font-bold text-foreground">{label}:</span>{" "}
+      <span className="text-foreground/85">{children}</span>
     </p>
   </div>
 );
@@ -62,12 +64,7 @@ const HousingOptionDetail = ({
               src={housingOptionsHero}
               alt={`${title} — senior housing option in Washington State`}
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-              loading="eager"
-              sizes="100vw"
-              decoding="async"
-              width={1920}
-              height={595}
-            />
+              loading="eager" sizes="100vw" decoding="async" width={1920} height={595} />
             <HeroBandTitle>{title}</HeroBandTitle>
           </div>
         </section>
@@ -79,20 +76,18 @@ const HousingOptionDetail = ({
               <Row label="What it is">{whatItIs}</Row>
               <Row label="Best for">{bestFor}</Row>
               <Row label="Typical costs">{typicalCosts}</Row>
-              {calculatorCareId && (
-                <div className="pl-5">
-                  <Link
-                    to={`/cost-of-care-calculator?care=${calculatorCareId}`}
-                    className="inline-flex items-center gap-2 text-gold font-bold text-base hover:underline"
-                  >
-                    See exact Washington vs. national {title.toLowerCase()} costs →
-                  </Link>
-                </div>
-              )}
               <Row label="What's typically included">{whatsIncluded}</Row>
             </div>
           </div>
         </section>
+
+        {calculatorCareId && (
+          <section className="py-12 md:py-16 bg-secondary">
+            <div className="container px-6 lg:px-8">
+              <CostOfCareEmbed careTypeId={calculatorCareId} />
+            </div>
+          </section>
+        )}
 
         {/* Closing CTA */}
         <section className="py-12 md:py-16 bg-secondary">

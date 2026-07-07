@@ -26,6 +26,7 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
+import CostOfCareEmbed from "@/components/CostOfCareEmbed";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -40,7 +41,8 @@ const stages: Stage[] = [
   {
     letter: "A",
     title: "Understanding Care & Housing Options",
-    description: "Learn the differences between senior living options so the right fit becomes clear.",
+    description:
+      "Learn the differences between senior living options so the right fit becomes clear.",
     items: [
       { label: "Assisted Living", href: "/senior-living/assisted-living-communities", icon: iconAssisted },
       { label: "Adult Family Homes", href: "/senior-living/adult-family-homes", icon: iconAdultFamily },
@@ -51,7 +53,8 @@ const stages: Stage[] = [
   {
     letter: "B",
     title: "Preparing for a Transition",
-    description: "Practical help with downsizing, moving, sorting belongings, and clearing the home.",
+    description:
+      "Practical help with downsizing, moving, sorting belongings, and clearing the home.",
     items: [
       { label: "Downsizing & Move Management", href: "/senior-transitions", icon: iconMovers },
       { label: "Senior Move Managers", href: "/senior-move-managers", icon: iconPlacement },
@@ -62,7 +65,8 @@ const stages: Stage[] = [
   {
     letter: "C",
     title: "Financial & Legal Planning",
-    description: "Connect with the legal and financial professionals who help families plan ahead.",
+    description:
+      "Connect with the legal and financial professionals who help families plan ahead.",
     items: [
       { label: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys", icon: iconDocument },
       { label: "Power of Attorney", href: "/power-of-attorney", icon: iconPOA },
@@ -73,7 +77,8 @@ const stages: Stage[] = [
   {
     letter: "D",
     title: "Understanding Property Decisions",
-    description: "Clear, unbiased information about the most common options for the family home.",
+    description:
+      "Clear, unbiased information about the most common options for the family home.",
     items: [
       { label: "Selling the Home", href: "/probate-estate-sales", icon: iconHome },
       { label: "Funding Senior Living from a Sale", href: "/sell-house-fund-senior-living", icon: iconBriefcase },
@@ -84,7 +89,8 @@ const stages: Stage[] = [
   {
     letter: "E",
     title: "Building Your Trusted Team",
-    description: "A coordinated network of professionals who work together on behalf of your family.",
+    description:
+      "A coordinated network of professionals who work together on behalf of your family.",
     items: [
       { label: "Realtor", href: "/realtor", icon: iconHandshake },
       { label: "Appraiser", href: "/real-estate-appraiser", icon: iconAppraisal },
@@ -118,42 +124,11 @@ const resources = [
 ];
 
 const continueJourney = [
-  {
-    href: "/understanding-housing-care-options",
-    title: "Understanding Housing & Care Options",
-    description: "Compare assisted living, adult family homes, memory care, and more.",
-    icon: iconAssisted,
-  },
-  {
-    href: "/cost-of-care-calculator?care=in-home",
-    title: "See In-Home Care Costs",
-    description: "Compare in-home care costs in Washington versus the national median.",
-    icon: iconHeartHands,
-  },
-  {
-    href: "/understanding-senior-transitions",
-    title: "Understanding Senior Transitions",
-    description: "An overview of the most common life-stage moves.",
-    icon: iconHeartHands,
-  },
-  {
-    href: "/aging-in-place-staying-home-safely",
-    title: "Aging in Place & Staying at Home Safely",
-    description: "Plan ahead for safety, support, and independence at home.",
-    icon: iconIndependent,
-  },
-  {
-    href: "/what-to-do-with-the-house",
-    title: "What To Do With the House",
-    description: "A guided decision roadmap for the family home.",
-    icon: iconHome,
-  },
-  {
-    href: "/estate-planning-powers-of-attorney",
-    title: "Estate Planning & Powers of Attorney",
-    description: "Understand the legal documents most families need.",
-    icon: iconPOA,
-  },
+  { href: "/understanding-housing-care-options", title: "Understanding Housing & Care Options", description: "Compare assisted living, adult family homes, memory care, and more.", icon: iconAssisted },
+  { href: "/understanding-senior-transitions", title: "Understanding Senior Transitions", description: "An overview of the most common life-stage moves.", icon: iconHeartHands },
+  { href: "/aging-in-place-staying-home-safely", title: "Aging in Place & Staying at Home Safely", description: "Plan ahead for safety, support, and independence at home.", icon: iconIndependent },
+  { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the family home.", icon: iconHome },
+  { href: "/estate-planning-powers-of-attorney", title: "Estate Planning & Powers of Attorney", description: "Understand the legal documents most families need.", icon: iconPOA },
 ];
 
 const faqs = [
@@ -209,23 +184,31 @@ const HelpingAgingParents = () => {
         description="A calm, guided roadmap for Washington families navigating senior transitions, housing decisions, downsizing, legal planning, and important property decisions."
         jsonLd={jsonLd}
       />
-      <BreadcrumbSchema items={[{ name: "Helping an Aging Parent or Loved One", url: "/helping-aging-parents" }]} />
+      <BreadcrumbSchema
+        items={[{ name: "Helping an Aging Parent or Loved One", url: "/helping-aging-parents" }]}
+      />
       <Header />
       <main id="main-content">
         {/* HERO */}
         <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">Family Journey Hub</p>
+              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
+                Family Journey Hub
+              </p>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight mb-6">
                 Helping an Aging Parent or Loved One
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-8 max-w-2xl">
-                Guidance for families navigating senior transitions, housing decisions, caregiving concerns, downsizing,
-                and important property decisions.
+                Guidance for families navigating senior transitions, housing decisions,
+                caregiving concerns, downsizing, and important property decisions.
               </p>
               <a href="#roadmap">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
+                <Button
+                  variant="gold"
+                  size="lg"
+                  className="px-8 h-[56px] text-base rounded-lg"
+                >
                   <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
                   Start Here
                 </Button>
@@ -242,7 +225,7 @@ const HelpingAgingParents = () => {
             "A parent may need additional support at home",
             "You feel overwhelmed by the number of decisions",
             "You are unsure where to begin",
-            "You want to plan calmly — before a crisis",
+            "You want to plan calmly — before a crisis"
           ]}
         />
 
@@ -251,11 +234,14 @@ const HelpingAgingParents = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <Heart className="w-10 h-10 text-gold mx-auto mb-6" aria-hidden="true" />
-              <h2 className="font-serif text-2xl md:text-3xl text-navy font-semibold mb-5">You Are Not Alone</h2>
+              <h2 className="font-serif text-2xl md:text-3xl text-navy font-semibold mb-5">
+                You Are Not Alone
+              </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed">
-                Families across Washington face the same uncertainty you may be feeling right now. Decisions about care,
-                housing, and a longtime family home are rarely simple — and they don't have to be made all at once. This
-                page is organized to help you take one calm step at a time.
+                Families across Washington face the same uncertainty you may be feeling
+                right now. Decisions about care, housing, and a longtime family home are
+                rarely simple — and they don't have to be made all at once. This page is
+                organized to help you take one calm step at a time.
               </p>
             </div>
           </div>
@@ -265,13 +251,15 @@ const HelpingAgingParents = () => {
         <section id="roadmap" className="py-10 lg:py-14 bg-secondary scroll-mt-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto mb-8 text-center">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">Guided Roadmap</p>
+              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
+                Guided Roadmap
+              </p>
               <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-4">
                 Where Would You Like to Begin?
               </h2>
               <p className="text-navy/80 text-lg leading-relaxed max-w-2xl mx-auto">
-                Choose any stage of the journey. Each one is a checkpoint with the resources, options, and people who
-                can help.
+                Choose any stage of the journey. Each one is a checkpoint with the
+                resources, options, and people who can help.
               </p>
             </div>
 
@@ -297,7 +285,9 @@ const HelpingAgingParents = () => {
                       <h3 className="font-serif text-2xl md:text-[1.6rem] text-navy font-semibold mb-3">
                         {stage.title}
                       </h3>
-                      <p className="text-navy/80 text-base md:text-lg leading-relaxed mb-6">{stage.description}</p>
+                      <p className="text-navy/80 text-base md:text-lg leading-relaxed mb-6">
+                        {stage.description}
+                      </p>
                       <div className="grid sm:grid-cols-2 gap-3">
                         {stage.items.map((item) => (
                           <Link
@@ -310,10 +300,7 @@ const HelpingAgingParents = () => {
                               alt=""
                               aria-hidden="true"
                               className="w-9 h-9 object-contain shrink-0"
-                              loading="lazy"
-                              sizes="100vw"
-                              decoding="async"
-                            />
+                              loading="lazy" sizes="100vw" decoding="async"/>
                             <span className="font-semibold text-navy text-base flex-1 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                               {item.label}
                             </span>
@@ -330,15 +317,24 @@ const HelpingAgingParents = () => {
         </section>
 
         {/* FAQ */}
-        <PageFAQ faqs={faqs} heading="Common Questions Families Ask" eyebrow="Family FAQs" id="aging-parents" />
+        <PageFAQ
+          faqs={faqs}
+          heading="Common Questions Families Ask"
+          eyebrow="Family FAQs"
+          id="aging-parents"
+        />
 
         {/* HELPFUL RESOURCES */}
         <section className="py-10 lg:py-14 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">Education</p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">Helpful Resources</h2>
+                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
+                  Education
+                </p>
+                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">
+                  Helpful Resources
+                </h2>
               </div>
               <div className="grid sm:grid-cols-2 gap-5">
                 {resources.map((r) => (
@@ -350,7 +346,9 @@ const HelpingAgingParents = () => {
                     <h3 className="font-serif text-xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                       {r.title}
                     </h3>
-                    <p className="text-navy/75 text-base leading-relaxed mb-3">{r.description}</p>
+                    <p className="text-navy/75 text-base leading-relaxed mb-3">
+                      {r.description}
+                    </p>
                     <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">
                       Read more <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </span>
@@ -370,19 +368,15 @@ const HelpingAgingParents = () => {
                 alt=""
                 aria-hidden="true"
                 className="w-16 h-16 object-contain mx-auto mb-5"
-                loading="lazy"
-                sizes="(max-width: 768px) 90px, 90px"
-                decoding="async"
-                width={512}
-                height={512}
-              />
+                loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={512} height={512} />
               <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-5">
                 A Trusted Professional Network
               </h2>
               <p className="text-navy/85 text-lg leading-relaxed mb-8">
-                Real Property Planning works alongside attorneys, CPAs, financial planners, senior housing advisors,
-                move managers, and care professionals. You don't have to assemble the team alone — we help families
-                connect with the right people at the right moment.
+                Real Property Planning works alongside attorneys, CPAs, financial
+                planners, senior housing advisors, move managers, and care
+                professionals. You don't have to assemble the team alone — we help
+                families connect with the right people at the right moment.
               </p>
               <Link to="/professionals">
                 <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
@@ -399,19 +393,13 @@ const HelpingAgingParents = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <img
-                  src={iconHeartHands}
-                  alt=""
-                  aria-hidden="true"
-                  className="w-12 h-12 object-contain mx-auto mb-4"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 90px, 90px"
-                  decoding="async"
-                  width={512}
-                  height={512}
-                />
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">Keep Going</p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">Continue Your Journey</h2>
+                <img src={iconHeartHands} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={512} height={512} />
+                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
+                  Keep Going
+                </p>
+                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
+                  Continue Your Journey
+                </h2>
                 <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
                   Helpful next steps for families supporting an aging parent.
                 </p>
@@ -423,19 +411,13 @@ const HelpingAgingParents = () => {
                     to={c.href}
                     className="group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/50 hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all flex flex-col"
                   >
-                    <img
-                      src={c.icon}
-                      alt=""
-                      aria-hidden="true"
-                      className="w-12 h-12 object-contain mb-4"
-                      loading="lazy"
-                      sizes="(max-width: 768px) 90px, 90px"
-                      decoding="async"
-                    />
+                    <img src={c.icon} alt="" aria-hidden="true" className="w-12 h-12 object-contain mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                     <h3 className="font-serif text-xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                       {c.title}
                     </h3>
-                    <p className="text-navy text-base leading-relaxed mb-4 flex-1">{c.description}</p>
+                    <p className="text-navy text-base leading-relaxed mb-4 flex-1">
+                      {c.description}
+                    </p>
                     <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">
                       Continue <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </span>
@@ -451,8 +433,12 @@ const HelpingAgingParents = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-10">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">Simple Next Steps</p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">A Calm, Clear Action Plan</h2>
+                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
+                  Simple Next Steps
+                </p>
+                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">
+                  A Calm, Clear Action Plan
+                </h2>
               </div>
               <ol className="space-y-4">
                 {nextSteps.map((step, i) => (
@@ -463,11 +449,28 @@ const HelpingAgingParents = () => {
                     <span className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-gold to-[hsl(var(--gold-dark))] text-white font-serif text-2xl font-bold flex items-center justify-center">
                       {i + 1}
                     </span>
-                    <span className="text-navy font-semibold text-lg md:text-xl leading-snug">{step}</span>
+                    <span className="text-navy font-semibold text-lg md:text-xl leading-snug">
+                      {step}
+                    </span>
                   </li>
                 ))}
               </ol>
             </div>
+          </div>
+        </section>
+
+        {/* IN-HOME CARE COST ESTIMATE */}
+        <section className="py-10 lg:py-14 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-8">
+              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
+                Cost Estimate
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">
+                What Might In-Home Care Cost?
+              </h2>
+            </div>
+            <CostOfCareEmbed careTypeId="in-home" />
           </div>
         </section>
 
@@ -479,22 +482,12 @@ const HelpingAgingParents = () => {
                 Ready to talk it through?
               </h2>
               <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
-                Reach out for a calm, no-pressure conversation about where your family is in the journey — and where to
-                go next.
+                Reach out for a calm, no-pressure conversation about where your family is
+                in the journey — and where to go next.
               </p>
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <img
-                    src={iconPhone}
-                    alt=""
-                    aria-hidden="true"
-                    className="w-5 h-5 mr-2 object-contain"
-                    loading="lazy"
-                    sizes="100vw"
-                    decoding="async"
-                    width={1024}
-                    height={1536}
-                  />
+                  <img src={iconPhone} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                   Start the Conversation
                 </Button>
               </Link>
