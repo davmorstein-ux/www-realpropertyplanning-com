@@ -398,40 +398,49 @@ const CostOfCareCalculator = () => {
             <div style={{ ...card, background: "#f5f2ec" }}>
               <p
                 style={{
-                  fontSize: "17px",
+                  fontSize: "18px",
                   fontFamily: "'Raleway', sans-serif",
-                  color: "#374151",
-                  margin: 0,
+                  color: "#1a2744",
+                  margin: "0 0 16px",
                   lineHeight: 1.6,
+                  fontWeight: 600,
                 }}
               >
-                This estimate assumes long-term care costs rise about{" "}
-                <strong style={{ color: "#1a2744" }}>{inflationRate}% a year</strong>, in line with recent historical
-                trends.{" "}
-                <button
-                  onClick={() => setShowInflationAdjust((s) => !s)}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    padding: 0,
-                    color: TEAL,
-                    fontWeight: 700,
-                    fontFamily: "'Raleway', sans-serif",
-                    fontSize: "17px",
-                    textDecoration: "underline",
-                    cursor: "pointer",
-                  }}
-                >
-                  {showInflationAdjust ? "Hide options" : "Adjust this assumption"}
-                </button>
+                This estimate assumes long-term care costs rise about <strong>{inflationRate}% a year</strong>, in line
+                with recent historical trends.
               </p>
+              <button
+                onClick={() => setShowInflationAdjust((s) => !s)}
+                aria-expanded={showInflationAdjust}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 10,
+                  background: showInflationAdjust ? TEAL : "#ffffff",
+                  color: showInflationAdjust ? "#ffffff" : TEAL,
+                  border: `2px solid ${TEAL}`,
+                  borderRadius: 8,
+                  padding: "12px 22px",
+                  fontWeight: 700,
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: "18px",
+                  cursor: "pointer",
+                }}
+              >
+                {showInflationAdjust ? "Hide Growth Rate Options ▲" : "Change Growth Rate Assumption ▼"}
+              </button>
               {showInflationAdjust && (
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14 }}>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 16 }}>
                   {INFLATION_PRESETS.map((p) => (
                     <button
                       key={p.id}
                       onClick={() => setInflationId(p.id)}
-                      style={{ ...pillBtn(p.id === inflationId, TEAL), flex: "1 1 140px" }}
+                      style={{
+                        ...pillBtn(p.id === inflationId, TEAL),
+                        flex: "1 1 140px",
+                        fontSize: "17px",
+                        padding: "12px 14px",
+                      }}
                     >
                       {p.label} ({p.value}%)
                     </button>
