@@ -287,8 +287,8 @@ const RPPHomeV3 = () => {
                     className="coc-heading"
                     style={{
                       fontFamily: "Georgia, serif",
-                      fontSize: "56px",
-                      fontWeight: 700,
+                      fontSize: "64px",
+                      fontWeight: 800,
                       margin: "0 0 8px",
                       lineHeight: 1.1,
                     }}
