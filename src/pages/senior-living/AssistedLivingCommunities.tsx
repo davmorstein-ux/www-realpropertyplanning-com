@@ -18,7 +18,10 @@ const AssistedLivingCommunities = () => (
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
         { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
-        { name: "Assisted Living Communities", url: "https://realpropertyplanning.com/senior-living/assisted-living-communities" },
+        {
+          name: "Assisted Living Communities",
+          url: "https://realpropertyplanning.com/senior-living/assisted-living-communities",
+        },
       ]}
     />
     <Header />
@@ -27,9 +30,12 @@ const AssistedLivingCommunities = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">Assisted Living Communities</h1>
+            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">
+              Assisted Living Communities
+            </h1>
             <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Larger communities that offer varying levels of daily support, social activities, and on-site amenities while maintaining independence.
+              Larger communities that offer varying levels of daily support, social activities, and on-site amenities
+              while maintaining independence.
             </p>
           </div>
         </div>
@@ -40,12 +46,27 @@ const AssistedLivingCommunities = () => (
           <div className="max-w-3xl mx-auto">
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                This page is being developed with detailed information about assisted living communities throughout Washington State. Check back soon, or{" "}
-                <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for guidance.
+                This page is being developed with detailed information about assisted living communities throughout
+                Washington State. Check back soon, or{" "}
+                <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">
+                  Contact us
+                </Link>{" "}
+                for guidance.
+              </p>
+              <p className="mt-4">
+                <Link
+                  to="/cost-of-care-calculator?care=assisted-living"
+                  className="text-gold font-bold text-base hover:underline"
+                >
+                  See exact Washington vs. national assisted living costs →
+                </Link>
               </p>
             </div>
             <div className="mt-8 text-center">
-              <Link to="/senior-living-and-relocation" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium">
+              <Link
+                to="/senior-living-and-relocation"
+                className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium"
+              >
                 ← Back to Senior Living & Relocation
               </Link>
             </div>
