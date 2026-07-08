@@ -173,8 +173,8 @@ const Executors = () => (
                   <p
                     style={{
                       fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                      fontSize: 17,
-                      color: "#33404f",
+                      fontSize: 19,
+                      color: "#111827",
                       lineHeight: 1.6,
                       margin: 0,
                     }}
@@ -213,8 +213,8 @@ const Executors = () => (
                             alignItems: "flex-start",
                             gap: 9,
                             fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                            fontSize: 16,
-                            color: "#33404f",
+                            fontSize: 18,
+                            color: "#111827",
                             lineHeight: 1.5,
                           }}
                         >
