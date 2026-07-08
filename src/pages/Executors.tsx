@@ -131,8 +131,8 @@ const Executors = () => (
                     Fixed height so all 3 cards align regardless of subtitle length. */}
                 <div
                   style={{
-                    padding: "22px 20px",
-                    minHeight: 136,
+                    padding: "14px 20px",
+                    minHeight: 106,
                     background: "linear-gradient(180deg, #24406e 0%, #1B3A6B 100%)",
                     display: "flex",
                     flexDirection: "column",
@@ -172,7 +172,7 @@ const Executors = () => (
                 </div>
 
                 {/* Body */}
-                <div style={{ padding: "18px 20px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 16 }}>
+                <div style={{ padding: "18px 20px", flex: 1, display: "flex", flexDirection: "column", gap: 16 }}>
                   <p
                     style={{
                       fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
@@ -180,7 +180,7 @@ const Executors = () => (
                       color: "#111827",
                       lineHeight: 1.6,
                       margin: 0,
-                      minHeight: 152,
+                      minHeight: 190,
                     }}
                   >
                     {role.description}
