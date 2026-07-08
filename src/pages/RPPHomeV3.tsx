@@ -287,14 +287,7 @@ const RPPHomeV3 = () => {
                   <span style={{ color: "#1a2744" }}>Cost of Care</span>{" "}
                   <span style={{ color: "#2f5fd8" }}>Calculator</span>
                 </h3>
-                <div
-                  style={{
-                    flex: 1,
-                    display: "flex",
-                    alignItems: "stretch",
-                    gap: "1.25rem",
-                  }}
-                >
+                <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-5" style={{ flex: 1 }}>
                   <div
                     style={{
                       flex: 1,
@@ -341,7 +334,8 @@ const RPPHomeV3 = () => {
                     src="/cost-of-care-calc-graphic.webp"
                     alt=""
                     aria-hidden="true"
-                    style={{ height: 220, width: "auto", flexShrink: 0, display: "block", alignSelf: "center" }}
+                    className="h-[140px] sm:h-[220px] w-auto"
+                    style={{ flexShrink: 0, display: "block", alignSelf: "center" }}
                   />
                 </div>
               </a>
