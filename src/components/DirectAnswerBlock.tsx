@@ -77,7 +77,7 @@ const DirectAnswerBlock = ({
                     <span
                       style={{
                         fontFamily: "Georgia, serif",
-                        fontSize: "24px",
+                        fontSize: "32px",
                         fontWeight: 800,
                         color: "#1B3A6B",
                         display: "block",
