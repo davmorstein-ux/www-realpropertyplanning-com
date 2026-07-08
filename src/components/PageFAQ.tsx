@@ -50,11 +50,11 @@ const PageFAQ = ({
       <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
         <p
           style={{
-            color: "#b8963e",
+            color: "#1B3A6B",
             fontWeight: 700,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
-            fontSize: "14px",
+            fontSize: "15px",
             marginBottom: "0.75rem",
           }}
         >
@@ -109,7 +109,7 @@ const PageFAQ = ({
                     </span>
                     <ChevronDown
                       size={22}
-                      color="#b8963e"
+                      color="#1B3A6B"
                       strokeWidth={2.25}
                       style={{
                         flexShrink: 0,
