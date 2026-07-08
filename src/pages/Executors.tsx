@@ -190,9 +190,10 @@ const Executors = () => (
                       style={{
                         fontFamily: "'Raleway', sans-serif",
                         fontSize: 14,
-                        fontWeight: 700,
+                        fontWeight: 800,
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
+                        textAlign: "center",
                         color: "#1B3A6B",
                         marginBottom: 10,
                       }}
