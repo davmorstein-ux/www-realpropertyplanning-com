@@ -73,12 +73,15 @@ const DirectAnswerBlock = ({
             {supportSteps && supportSteps.length > 0 && (
               <div className="mt-6 pt-5 border-t border-border grid sm:grid-cols-3 gap-5 text-center">
                 {supportSteps.map((step, i) => (
-                  <div key={i}>
+                  <div
+                    key={i}
+                    className={i > 0 ? "sm:border-l sm:border-border sm:pl-5" : ""}
+                  >
                     <span
                       style={{
                         fontFamily: "Georgia, serif",
-                        fontSize: "32px",
-                        fontWeight: 800,
+                        fontSize: "40px",
+                        fontWeight: 900,
                         color: "#1B3A6B",
                         display: "block",
                         marginBottom: "4px",
