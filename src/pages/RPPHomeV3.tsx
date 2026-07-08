@@ -134,7 +134,7 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(18px, 2.4vw, 28px)",
                   fontWeight: 400,
                   fontStyle: "normal",
-                  color: "#1a2744",
+                  color: "#1a4fba",
                   margin: 0,
                   lineHeight: 1.5,
                   letterSpacing: "0.01em",
