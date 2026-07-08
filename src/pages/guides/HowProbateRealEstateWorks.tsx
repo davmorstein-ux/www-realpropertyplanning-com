@@ -131,7 +131,7 @@ const HowProbateRealEstateWorks = () => (
       </section>
 
       {/* FAQ */}
-      <PageFAQ faqs={faqs} heading="Probate Real Estate FAQs" />
+      <PageFAQ faqs={faqs} heading="Probate Real Estate FAQs" eyebrowClassName="text-5xl" />
 
       <BackToResources />
       <DisclaimerSection />
