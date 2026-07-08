@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { HelpCircle } from "lucide-react";
+import type { CSSProperties } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface FAQItem {
@@ -12,6 +13,7 @@ interface PageFAQProps {
   heading?: string;
   eyebrow?: string;
   eyebrowClassName?: string;
+  eyebrowStyle?: CSSProperties;
   id?: string;
   plain?: boolean;
 }
@@ -21,6 +23,7 @@ const PageFAQ = ({
   heading = "Frequently Asked Questions",
   eyebrow = "Common Questions",
   eyebrowClassName = "text-base",
+  eyebrowStyle,
   id = "default",
   plain = false,
 }: PageFAQProps) => {
@@ -77,7 +80,9 @@ const PageFAQ = ({
       `}</style>
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
-          <p className={`text-gold font-bold tracking-[0.2em] uppercase mb-3 ${eyebrowClassName}`}>{eyebrow}</p>
+          <p className={`text-gold font-bold tracking-[0.2em] uppercase mb-3 ${eyebrowClassName}`} style={eyebrowStyle}>
+            {eyebrow}
+          </p>
           <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">{heading}</h2>
           <Accordion type="single" collapsible className={plain ? "space-y-1" : "space-y-4"}>
             {faqs.map((faq, index) => (
