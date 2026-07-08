@@ -49,7 +49,7 @@ const RPPHomeV3 = () => {
         canonical="https://realpropertyplanning.com"
       />
       <Header />
-      
+
       <main id="main-content">
         {/* ── Hero ── shrinks gracefully on mobile ─────────────────── */}
         <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
@@ -57,7 +57,7 @@ const RPPHomeV3 = () => {
             src="/hero-v2.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
             className="block w-full object-cover object-center"
-            style={{ height: "clamp(260px, 46vw, 600px)" }}
+            style={{ height: "clamp(340px, 50vw, 600px)" }}
             loading="eager"
             decoding="async"
           />
@@ -70,7 +70,7 @@ const RPPHomeV3 = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              padding: "calc(var(--header-height, 96px) + clamp(8px, 1.5vw, 24px)) 8% clamp(16px, 3vw, 40px)",
+              padding: "calc(var(--header-height, 76px) + clamp(8px, 1.5vw, 24px)) 8% clamp(16px, 3vw, 40px)",
               boxSizing: "border-box",
               gap: "clamp(6px, 1vw, 12px)",
             }}
@@ -79,9 +79,9 @@ const RPPHomeV3 = () => {
               src="/rpp-logo-hero-padded.webp"
               alt="Real Property Planning"
               style={{
-                width: "clamp(180px, 42vw, 520px)",
+                width: "clamp(230px, 48vw, 600px)",
                 maxWidth: "100%",
-                maxHeight: "60%",
+                maxHeight: "62%",
                 height: "auto",
                 objectFit: "contain",
                 display: "block",
@@ -133,12 +133,12 @@ const RPPHomeV3 = () => {
                 id="rpp-descriptor"
                 style={{
                   fontFamily: "Georgia, 'Cormorant Garamond', serif",
-                  fontSize: "clamp(18px, 2.4vw, 28px)",
+                  fontSize: "clamp(17px, 2vw, 24px)",
                   fontWeight: 400,
                   fontStyle: "normal",
-                  color: "#1a4fba",
+                  color: "#3d5a99",
                   margin: 0,
-                  lineHeight: 1.5,
+                  lineHeight: 1.55,
                   letterSpacing: "0.01em",
                   textWrap: "balance" as any,
                 }}
