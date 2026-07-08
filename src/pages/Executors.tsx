@@ -172,7 +172,7 @@ const Executors = () => (
                 </div>
 
                 {/* Body */}
-                <div style={{ padding: "18px 20px", flex: 1, display: "flex", flexDirection: "column", gap: 16 }}>
+                <div style={{ padding: "18px 20px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 16 }}>
                   <p
                     style={{
                       fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
