@@ -74,7 +74,16 @@ const DirectAnswerBlock = ({
               <div className="mt-6 pt-5 border-t border-border grid sm:grid-cols-3 gap-5 text-center">
                 {supportSteps.map((step, i) => (
                   <div key={i}>
-                    <span className="font-serif text-xl font-bold" style={{ color: "#1B3A6B" }}>
+                    <span
+                      style={{
+                        fontFamily: "Georgia, serif",
+                        fontSize: "24px",
+                        fontWeight: 800,
+                        color: "#1B3A6B",
+                        display: "block",
+                        marginBottom: "4px",
+                      }}
+                    >
                       {step.label}
                     </span>
                     <p className="text-base mt-1 leading-relaxed" style={{ color: "#1f2937" }}>
