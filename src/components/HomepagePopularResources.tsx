@@ -3,7 +3,7 @@ import { ClipboardCheck, Scale, HeartHandshake, KeyRound, ArrowRight } from "luc
 
 const resources = [
   {
-    title: "Washington Executor's 10-Step Checklist",
+    title: "Executor's 10-Step Checklist",
     href: "/resources/washington-executors-10-step-checklist",
     icon: ClipboardCheck,
     accent: "#8b2e2e",
