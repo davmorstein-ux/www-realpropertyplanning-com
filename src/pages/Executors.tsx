@@ -188,14 +188,15 @@ const Executors = () => (
                   <div>
                     <div
                       style={{
-                        fontFamily: "'Raleway', sans-serif",
-                        fontSize: 14,
-                        fontWeight: 800,
+                        fontFamily: "Arial, Helvetica, sans-serif",
+                        fontSize: 15,
+                        fontWeight: 900,
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
                         textAlign: "center",
                         color: "#1B3A6B",
                         marginBottom: 10,
+                        lineHeight: 1.2,
                       }}
                     >
                       Key Responsibilities
