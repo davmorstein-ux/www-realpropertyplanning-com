@@ -80,8 +80,8 @@ const DirectAnswerBlock = ({
                     <span
                       style={{
                         fontFamily: "Georgia, serif",
-                        fontSize: "32px",
-                        fontWeight: 800,
+                        fontSize: "40px",
+                        fontWeight: 900,
                         color: "#1B3A6B",
                         display: "block",
                         marginBottom: "4px",
@@ -89,7 +89,7 @@ const DirectAnswerBlock = ({
                     >
                       {step.label}
                     </span>
-                    <p className="text-lg mt-1 leading-relaxed font-bold" style={{ color: "#1f2937" }}>
+                    <p className="text-base mt-1 leading-relaxed" style={{ color: "#1f2937" }}>
                       {step.desc}
                     </p>
                   </div>
