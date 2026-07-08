@@ -54,6 +54,7 @@ const RPPHomeV3 = () => {
         {/* ── Hero ── shrinks gracefully on mobile ─────────────────── */}
         <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
           <img
+            id="rpp-hero-image"
             src="/hero-v2.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
             className="block w-full object-cover object-center"
