@@ -1,0 +1,144 @@
+import { useState, useRef, useMemo, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Search } from "lucide-react";
+import { siteSearchIndex } from "@/lib/siteSearchIndex";
+
+/**
+ * Always-visible search bar — sits directly under the nav bar on every
+ * page. No click-to-open step: type, see matching pages appear right
+ * below, click one to go there. Built simple and direct on purpose,
+ * since this site's visitors skew older and shouldn't have to figure
+ * out a hidden search feature.
+ */
+const SiteSearchBar = () => {
+  const [query, setQuery] = useState("");
+  const [showResults, setShowResults] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+
+  const results = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return siteSearchIndex
+      .filter(
+        (entry) =>
+          entry.label.toLowerCase().includes(q) || entry.path.toLowerCase().includes(q)
+      )
+      .slice(0, 8);
+  }, [query]);
+
+  // Close results dropdown when clicking outside the search bar
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setShowResults(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
+  const goTo = (path: string) => {
+    setQuery("");
+    setShowResults(false);
+    navigate(path);
+  };
+
+  return (
+    <div ref={containerRef} style={{ position: "relative", width: "100%" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 10,
+          background: "#ffffff",
+          borderRadius: 8,
+          padding: "10px 16px",
+          width: "100%",
+          boxSizing: "border-box",
+        }}
+      >
+        <Search size={20} color="#1B3A6B" strokeWidth={2.25} style={{ flexShrink: 0 }} />
+        <input
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setShowResults(true);
+          }}
+          onFocus={() => setShowResults(true)}
+          placeholder="Search for a page…"
+          aria-label="Search this site"
+          style={{
+            flex: 1,
+            border: "none",
+            outline: "none",
+            fontSize: 17,
+            fontFamily: "'Raleway', sans-serif",
+            color: "#1a2744",
+            background: "transparent",
+            minWidth: 0,
+          }}
+        />
+      </div>
+
+      {showResults && query.trim() !== "" && (
+        <div
+          style={{
+            position: "absolute",
+            top: "calc(100% + 6px)",
+            left: 0,
+            right: 0,
+            background: "#ffffff",
+            borderRadius: 8,
+            boxShadow: "0 12px 32px rgba(0,0,0,0.25)",
+            overflow: "hidden",
+            zIndex: 100,
+          }}
+        >
+          {results.length === 0 && (
+            <div
+              style={{
+                padding: "18px 16px",
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: 16,
+                color: "#6b7280",
+              }}
+            >
+              No pages match "{query}"
+            </div>
+          )}
+          {results.map((entry) => (
+            <button
+              key={entry.path}
+              type="button"
+              onClick={() => goTo(entry.path)}
+              style={{
+                display: "block",
+                width: "100%",
+                textAlign: "left",
+                padding: "12px 16px",
+                background: "transparent",
+                border: "none",
+                borderBottom: "1px solid #f0ede4",
+                cursor: "pointer",
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: 16,
+                  fontWeight: 600,
+                  color: "#1a2744",
+                }}
+              >
+                {entry.label}
+              </div>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SiteSearchBar;
