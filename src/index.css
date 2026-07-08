@@ -3324,6 +3324,15 @@ a[href="/afh-club"] h3.afh-club-heading {
 }
 
 @media (max-width: 640px) {
+  /* Mobile hero crop is much narrower/taller than desktop, so a centered
+     crop lands almost entirely inside the photo's bright center glow.
+     Shift left to reveal more of the scenic content on the sides. */
+  #rpp-hero-image {
+    object-position: 34% center !important;
+  }
+}
+
+@media (max-width: 640px) {
   a[href="/afh-club"] h3.afh-club-heading {
     font-size: 48px !important;
   }
