@@ -49,7 +49,7 @@ const RPPHomeV3 = () => {
         canonical="https://realpropertyplanning.com"
       />
       <Header />
-      <div aria-hidden="true" style={{ height: "var(--header-height, 128px)" }} />
+      
       <main id="main-content">
         {/* ── Hero ── shrinks gracefully on mobile ─────────────────── */}
         <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
@@ -70,7 +70,7 @@ const RPPHomeV3 = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              padding: "clamp(16px, 3vw, 40px) 8%",
+              padding: "calc(var(--header-height, 96px) + clamp(8px, 1.5vw, 24px)) 8% clamp(16px, 3vw, 40px)",
               boxSizing: "border-box",
               gap: "clamp(6px, 1vw, 12px)",
             }}
