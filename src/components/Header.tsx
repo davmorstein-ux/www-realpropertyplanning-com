@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import WaterfallNav from "./WaterfallNav";
+import SiteSearchBar from "./SiteSearchBar";
 
 const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
 const GOLD = "#E8C97A";
@@ -500,6 +501,11 @@ const Header = () => {
             ))}
           </div>
         )}
+
+        {/* Always-visible site search — sits under the nav on every page */}
+        <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+          <SiteSearchBar />
+        </div>
       </header>
     </>
   );
