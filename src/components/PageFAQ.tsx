@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { ChevronDown } from "lucide-react";
 
@@ -11,7 +11,6 @@ interface PageFAQProps {
   faqs: FAQItem[];
   heading?: string;
   eyebrow?: string;
-  eyebrowStyle?: CSSProperties;
   id?: string;
   plain?: boolean;
 }
@@ -23,7 +22,6 @@ const PageFAQ = ({
   faqs,
   heading = "Frequently Asked Questions",
   eyebrow = "Common Questions",
-  eyebrowStyle,
   id = "default",
   plain = false,
 }: PageFAQProps) => {
@@ -58,7 +56,6 @@ const PageFAQ = ({
             textTransform: "uppercase",
             fontSize: "14px",
             marginBottom: "0.75rem",
-            ...eyebrowStyle,
           }}
         >
           {eyebrow}
@@ -102,7 +99,7 @@ const PageFAQ = ({
                   >
                     <span
                       style={{
-                        fontFamily: "'Cormorant Garamond', Georgia, serif",
+                        fontFamily: "Georgia, 'Cormorant Garamond', serif",
                         fontSize: "22px",
                         fontWeight: 700,
                         color: NAVY,
@@ -167,7 +164,7 @@ const PageFAQ = ({
                 >
                   <span
                     style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontFamily: "Georgia, 'Cormorant Garamond', serif",
                       fontSize: "24px",
                       fontWeight: 700,
                       color: NAVY,
