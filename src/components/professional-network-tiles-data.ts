@@ -34,9 +34,9 @@ export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
     tagline: "Professional guidance for tax questions, planning decisions, financing, and credible property value.",
     tiles: [
       { title: "CPAs", href: "/for-cpas", imageSrc: "/tiles/set1/certified-public-accountants.webp", altText: "CPAs supporting estate transitions in Washington State" },
-      { title: "Financial Planners", href: "/for-financial-planners", imageSrc: "/tiles/set1/financial-planners.webp", altText: "Financial planners for estate and senior transitions in Washington State" },
+      { title: "Financial Planners", href: "/for-financial-planners", imageSrc: "/tiles/set1/financial-planners.webp?v=20260708a", altText: "Financial planners for estate and senior transitions in Washington State" },
       { title: "Mortgage Lenders", href: "/lenders-and-financing-specialists", imageSrc: "/tiles/set1/mortgage-lenders.webp", altText: "Mortgage lenders and financing specialists Washington State" },
-      { title: "Real Estate Appraisers", href: "/real-estate-appraiser", imageSrc: "/tiles/set1/real-estate-appraisers.webp", altText: "Certified real estate appraisers Washington State" },
+      { title: "Real Estate Appraisers", href: "/real-estate-appraiser", imageSrc: "/tiles/set1/real-estate-appraisers.webp?v=20260708a", altText: "Certified real estate appraisers Washington State" },
       { title: "Home Values & Pricing", href: "/why-valuation-matters", imageSrc: "/tiles/set3/home-values-pricing.webp", altText: "Home values and pricing guidance Washington State" },
     ],
   },
@@ -44,7 +44,7 @@ export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
     label: "Senior Housing & Care Decisions",
     tagline: "Calm support for families comparing care options, living arrangements, and senior housing transitions.",
     tiles: [
-      { title: "Senior Living Advisors", href: "/senior-living-advisors", imageSrc: "/tiles/set1/senior-living-advisors.webp", altText: "Senior living advisors Washington State" },
+      { title: "Senior Living Advisors", href: "/senior-living-advisors", imageSrc: "/tiles/set1/senior-living-advisors.webp?v=20260708a", altText: "Senior living advisors Washington State" },
       { title: "Senior Living Options", href: "/understanding-housing-care-options", imageSrc: "/tiles/set3/senior-living-options.webp", altText: "Senior living options Washington State" },
       { title: "Medicare Providers", href: "/medicare-providers", imageSrc: "/tiles/set3/medicare-providers.webp", altText: "Medicare providers Washington State" },
       { title: "Paying for Senior Living", href: "/sell-house-fund-senior-living", imageSrc: "/tiles/set3/paying-for-senior-living.webp", altText: "Paying for senior living guidance Washington State" },
@@ -56,7 +56,7 @@ export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
     tagline: "Hands-on property support for preparing, valuing, selling, and coordinating the home side of a transition.",
     tiles: [
       { title: "Real Estate Brokers", href: "/realtor", imageSrc: "/tiles/set1/real-estate-brokers.webp?v=20260602b", altText: "Real estate brokers Washington State" },
-      { title: "Senior Move Managers", href: "/senior-move-managers", imageSrc: "/tiles/set1/senior-move-managers.webp", altText: "Senior move managers Washington State" },
+      { title: "Senior Move Managers", href: "/senior-move-managers", imageSrc: "/tiles/set1/senior-move-managers.webp?v=20260708a", altText: "Senior move managers Washington State" },
       { title: "Probate & Estate Sales", href: "/probate-estate-sales", imageSrc: "/tiles/set2/probate-estate-sales.webp?v=20260602b", altText: "Probate and estate sales Washington State" },
       { title: "Title & Escrow", href: "/title-and-escrow", imageSrc: "/tiles/set2/title-escrow.webp?v=20260602b", altText: "Title and escrow services Washington State" },
       { title: "Service Areas", href: "/counties", imageSrc: "/tiles/set3/service-areas.webp", altText: "Washington State service areas" },
