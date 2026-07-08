@@ -381,6 +381,28 @@ const Header = () => {
     document.head.appendChild(style);
   }, []);
 
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+
+    const setVar = () => {
+      document.documentElement.style.setProperty("--header-height", `${el.getBoundingClientRect().height}px`);
+    };
+
+    setVar();
+
+    const observer = new ResizeObserver(setVar);
+    observer.observe(el);
+    window.addEventListener("resize", setVar);
+    window.addEventListener("orientationchange", setVar);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", setVar);
+      window.removeEventListener("orientationchange", setVar);
+    };
+  }, [isMobile]);
+
   return (
     <>
       <a
