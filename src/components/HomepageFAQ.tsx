@@ -52,6 +52,7 @@ const HomepageFAQ = () => {
       </Helmet>
       <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
         <h2
+          className="rpp-common-questions-heading"
           style={{
             fontFamily: "'Cormorant Garamond', Georgia, serif",
             fontSize: "clamp(34px, 3.5vw, 48px)",
@@ -98,7 +99,7 @@ const HomepageFAQ = () => {
                 >
                   <span
                     style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontFamily: "Georgia, 'Cormorant Garamond', serif",
                       fontSize: "28px",
                       fontWeight: 700,
                       color: NAVY,
