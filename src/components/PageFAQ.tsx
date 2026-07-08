@@ -11,6 +11,7 @@ interface PageFAQProps {
   faqs: FAQItem[];
   heading?: string;
   eyebrow?: string;
+  eyebrowClassName?: string;
   id?: string;
   plain?: boolean;
 }
@@ -19,6 +20,7 @@ const PageFAQ = ({
   faqs,
   heading = "Frequently Asked Questions",
   eyebrow = "Common Questions",
+  eyebrowClassName = "text-base",
   id = "default",
   plain = false,
 }: PageFAQProps) => {
@@ -69,10 +71,13 @@ const PageFAQ = ({
           color: #b8963e !important;
           flex-shrink: 0 !important;
         }
+        main section .rpp-faq-eyebrow-large {
+          font-size: 42px !important;
+        }
       `}</style>
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-base">{eyebrow}</p>
+          <p className={`text-gold font-bold tracking-[0.2em] uppercase mb-3 ${eyebrowClassName}`}>{eyebrow}</p>
           <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">{heading}</h2>
           <Accordion type="single" collapsible className={plain ? "space-y-1" : "space-y-4"}>
             {faqs.map((faq, index) => (
