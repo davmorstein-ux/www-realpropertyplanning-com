@@ -92,8 +92,8 @@ const HomepagePopularResources = () => (
         flex-shrink: 0 !important;
       }
       .rpp-pr-card-text {
-        font-family: Georgia, 'Cormorant Garamond', serif !important;
-        font-size: 20px !important;
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: 22px !important;
         font-weight: 700 !important;
         color: #1a2744 !important;
         line-height: 1.35 !important;
