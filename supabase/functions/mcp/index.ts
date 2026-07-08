@@ -3,7 +3,7 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
 
 // src/lib/mcp/tools/echo.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
@@ -86,11 +86,16 @@ var list_service_areas_default = defineTool4({
 });
 
 // src/lib/mcp/index.ts
+var projectRef = "zgmoiivyxzppnrpksmfg";
 var mcp_default = defineMcp({
   name: "real-property-planning-mcp",
   title: "Real Property Planning MCP",
   version: "0.1.0",
   instructions: "Tools for Real Property Planning \u2014 a Washington State probate, estate, and senior-transition real estate resource. Use `get_contact_info` for business contact details, `list_services` to see offered services, `list_service_areas` for counties and cities served, and `echo` to verify connectivity.",
+  auth: auth.oauth.issuer({
+    issuer: `https://${projectRef}.supabase.co/auth/v1`,
+    acceptedAudiences: "authenticated"
+  }),
   tools: [echo_default, get_contact_info_default, list_services_default, list_service_areas_default]
 });
 
