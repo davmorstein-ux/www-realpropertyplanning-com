@@ -51,11 +51,12 @@ const HomepageFAQ = () => {
         </script>
       </Helmet>
       <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
-        <h2
-          className="rpp-common-questions-heading"
+        <div
+          role="heading"
+          aria-level={2}
           style={{
             fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontSize: "clamp(34px, 3.5vw, 48px)",
+            fontSize: "clamp(36px, 6vw, 64px)",
             fontWeight: 700,
             color: NAVY,
             textAlign: "center",
@@ -64,7 +65,7 @@ const HomepageFAQ = () => {
           }}
         >
           Common Questions
-        </h2>
+        </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
           {faqs.map((faq, i) => {
