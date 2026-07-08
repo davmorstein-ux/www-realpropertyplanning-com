@@ -1,7 +1,6 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { HelpCircle } from "lucide-react";
-import type { CSSProperties } from "react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ChevronDown } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -12,21 +11,22 @@ interface PageFAQProps {
   faqs: FAQItem[];
   heading?: string;
   eyebrow?: string;
-  eyebrowClassName?: string;
-  eyebrowStyle?: CSSProperties;
   id?: string;
   plain?: boolean;
 }
+
+const NAVY = "#1a2744";
+const ACCENTS = ["#7f1d1d", "#5c6e9e", "#c47c2b", "#7a4f8a"];
 
 const PageFAQ = ({
   faqs,
   heading = "Frequently Asked Questions",
   eyebrow = "Common Questions",
-  eyebrowClassName = "text-base",
-  eyebrowStyle,
   id = "default",
   plain = false,
 }: PageFAQProps) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -41,84 +41,168 @@ const PageFAQ = ({
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-secondary">
+    <section style={{ padding: "4rem 0 5rem", background: "#f5f2ec" }}>
       <Helmet>
         <script type="application/ld+json" data-page-faq-jsonld={id}>
           {JSON.stringify(faqJsonLd)}
         </script>
       </Helmet>
-      <style>{`
-        .rpp-faq-item {
-          background-color: #ffffff !important;
-          border: 1px solid #e0dbd2 !important;
-          border-left: 5px solid #b8963e !important;
-          border-radius: 14px !important;
-          box-shadow: 0 3px 14px rgba(26,39,68,0.07) !important;
-          transition: box-shadow 0.2s ease, border-left-color 0.2s ease !important;
-        }
-        .rpp-faq-item:hover {
-          box-shadow: 0 8px 24px rgba(26,39,68,0.13) !important;
-        }
-        .rpp-faq-item[data-state="open"] {
-          border-left-color: #7f1d1d !important;
-          box-shadow: 0 8px 24px rgba(26,39,68,0.13) !important;
-        }
-        .rpp-faq-badge {
-          display: flex !important;
-          align-items: center !important;
-          justify-content: center !important;
-          width: 34px !important;
-          height: 34px !important;
-          border-radius: 50% !important;
-          background-color: #f5f2ec !important;
-          color: #b8963e !important;
-          flex-shrink: 0 !important;
-        }
-        main section .rpp-faq-eyebrow-large {
-          font-size: 42px !important;
-        }
-      `}</style>
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-[900px] mx-auto">
-          <p className={`text-gold font-bold tracking-[0.2em] uppercase mb-3 ${eyebrowClassName}`} style={eyebrowStyle}>
-            {eyebrow}
-          </p>
-          <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">{heading}</h2>
-          <Accordion type="single" collapsible className={plain ? "space-y-1" : "space-y-4"}>
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`faq-${index}`}
-                className={plain ? "bg-transparent border-0 rounded-none shadow-none" : "rpp-faq-item overflow-hidden"}
-              >
-                <AccordionTrigger
-                  className={
-                    plain
-                      ? "text-left font-serif text-foreground hover:text-gold hover:no-underline bg-transparent border-0 rounded-none shadow-none"
-                      : "text-left font-serif text-foreground hover:text-gold hover:no-underline gap-4"
-                  }
-                  style={{ padding: "14px 20px", fontSize: "20px", fontWeight: "700" }}
-                >
-                  {plain ? (
-                    faq.question
-                  ) : (
-                    <span className="flex items-center gap-4">
-                      <span className="rpp-faq-badge">
-                        <HelpCircle size={18} strokeWidth={2.25} aria-hidden="true" />
-                      </span>
-                      <span>{faq.question}</span>
+      <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
+        <p
+          style={{
+            color: "#b8963e",
+            fontWeight: 700,
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            fontSize: "14px",
+            marginBottom: "0.75rem",
+          }}
+        >
+          {eyebrow}
+        </p>
+        <h2
+          style={{
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontSize: "clamp(30px, 3.2vw, 42px)",
+            fontWeight: 700,
+            color: NAVY,
+            margin: "0 0 2.5rem",
+            lineHeight: 1.15,
+          }}
+        >
+          {heading}
+        </h2>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: plain ? "0.5rem" : "1.1rem" }}>
+          {faqs.map((faq, i) => {
+            const isOpen = openIndex === i;
+            const accent = ACCENTS[i % ACCENTS.length];
+
+            if (plain) {
+              return (
+                <div key={i} style={{ borderBottom: "1px solid #e0dbd2" }}>
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : i)}
+                    aria-expanded={isOpen}
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      gap: "1rem",
+                      padding: "1rem 0",
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      textAlign: "left",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: "'Cormorant Garamond', Georgia, serif",
+                        fontSize: "22px",
+                        fontWeight: 700,
+                        color: NAVY,
+                      }}
+                    >
+                      {faq.question}
                     </span>
+                    <ChevronDown
+                      size={22}
+                      color="#b8963e"
+                      strokeWidth={2.25}
+                      style={{
+                        flexShrink: 0,
+                        transition: "transform 0.2s ease",
+                        transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                      }}
+                      aria-hidden="true"
+                    />
+                  </button>
+                  {isOpen && (
+                    <div
+                      style={{
+                        paddingBottom: "1rem",
+                        fontFamily: "Inter, system-ui, sans-serif",
+                        fontSize: "18px",
+                        color: "#2d3a4a",
+                        lineHeight: 1.7,
+                      }}
+                    >
+                      {faq.answer}
+                    </div>
                   )}
-                </AccordionTrigger>
-                <AccordionContent
-                  className="px-6 pb-6 pt-0 text-muted-foreground leading-relaxed"
-                  style={!plain ? { paddingLeft: "70px" } : undefined}
+                </div>
+              );
+            }
+
+            return (
+              <div
+                key={i}
+                style={{
+                  background: isOpen ? `${accent}14` : "#ffffff",
+                  border: `2px solid ${accent}`,
+                  borderLeft: `6px solid ${isOpen ? NAVY : accent}`,
+                  borderRadius: "10px",
+                }}
+              >
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: "1rem",
+                    padding: "1.1rem 1.5rem",
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    textAlign: "left",
+                  }}
                 >
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                  <span
+                    style={{
+                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontSize: "24px",
+                      fontWeight: 700,
+                      color: NAVY,
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    size={24}
+                    color={accent}
+                    strokeWidth={2.25}
+                    style={{
+                      flexShrink: 0,
+                      transition: "transform 0.2s ease",
+                      transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
+                    aria-hidden="true"
+                  />
+                </button>
+                {isOpen && (
+                  <div
+                    style={{
+                      padding: "0 1.5rem 1.4rem",
+                      borderTop: "1px solid #e8e0d0",
+                      paddingTop: "1rem",
+                      fontFamily: "Inter, system-ui, sans-serif",
+                      fontSize: "18px",
+                      color: "#2d3a4a",
+                      lineHeight: 1.7,
+                    }}
+                  >
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
