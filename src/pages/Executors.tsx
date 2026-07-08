@@ -187,6 +187,7 @@ const Executors = () => (
                   </p>
                   <div>
                     <div
+                      className="key-responsibilities-divider"
                       style={{
                         fontFamily: "Arial, Helvetica, sans-serif",
                         fontSize: 15,
