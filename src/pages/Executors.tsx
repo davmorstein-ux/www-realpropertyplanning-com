@@ -181,6 +181,7 @@ const Executors = () => (
                       lineHeight: 1.6,
                       margin: 0,
                       minHeight: 190,
+                      fontWeight: 600,
                     }}
                   >
                     {role.description}
@@ -223,6 +224,7 @@ const Executors = () => (
                             fontSize: 18,
                             color: "#8B0000",
                             lineHeight: 1.5,
+                            fontWeight: 600,
                           }}
                         >
                           <span style={{ color: "#8B0000", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>›</span>
