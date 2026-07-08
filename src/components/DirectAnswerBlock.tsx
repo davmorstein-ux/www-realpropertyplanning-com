@@ -81,7 +81,7 @@ const DirectAnswerBlock = ({
                       className="rpp-direct-answer-step-label"
                       style={{
                         fontFamily: "Georgia, serif",
-                        fontSize: "40px",
+                        fontSize: "32px",
                         fontWeight: 900,
                         color: "#1B3A6B",
                         display: "block",
