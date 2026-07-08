@@ -19,15 +19,12 @@ const roles = [
     image: executorImg,
     alt: "Executor reviewing estate documents at a desk",
     description:
-      "An executor is a person named in a will — or appointed by a court — to administer a deceased person's estate. In Washington State, this role is formally called a Personal Representative. The executor is responsible for identifying and securing assets, paying debts and taxes, communicating with beneficiaries, and ultimately distributing what remains according to the will or state law.",
+      "An executor — called a Personal Representative in Washington — is named in a will or appointed by the court to manage a deceased person's estate, including securing and eventually selling real property.",
     responsibilities: [
       "Secure and inventory estate assets, including real property",
-      "Obtain Letters Testamentary or Letters of Administration from the court",
-      "Arrange date-of-death valuations for tax and accounting purposes",
+      "Obtain court authority (Letters Testamentary)",
+      "Arrange a date-of-death property valuation",
       "Manage, prepare, and sell estate real estate",
-      "Pay valid debts, taxes, and estate expenses",
-      "Distribute remaining assets to beneficiaries",
-      "Maintain a defensible fiduciary record throughout",
     ],
   },
   {
@@ -37,14 +34,12 @@ const roles = [
     image: poaImg,
     alt: "Power of attorney document with pen and estate planning book",
     description:
-      "A Power of Attorney (POA) is a legal document that grants one person — the agent — the authority to act on behalf of another — the principal — while the principal is still alive. A Durable Power of Attorney remains in effect even if the principal becomes incapacitated. Agents under a POA often face real estate decisions when a senior can no longer manage their own affairs.",
+      "A Power of Attorney lets one person (the agent) make decisions — including real estate decisions — on behalf of another person (the principal) who can no longer manage their own affairs.",
     responsibilities: [
       "Make financial and legal decisions on the principal's behalf",
       "Manage, maintain, or sell the principal's real property",
-      "Pay bills, manage bank accounts, and file taxes",
-      "Coordinate with care providers and family members",
-      "Act strictly in the principal's best interest at all times",
-      "Keep detailed records of all decisions and transactions",
+      "Act strictly in the principal's best interest",
+      "Keep detailed records of all decisions",
     ],
   },
   {
@@ -54,13 +49,11 @@ const roles = [
     image: trusteeImg,
     alt: "Trustee meeting with beneficiaries outside a family home",
     description:
-      "A trustee is a person or institution appointed to manage assets held in a trust on behalf of the trust's beneficiaries. Unlike an executor, a trustee operates outside of court supervision — but carries an equally serious fiduciary duty. Trust-owned real estate must be managed and sold in accordance with the trust document and in the best interests of all beneficiaries.",
+      "A trustee manages assets held in a trust — including real property — on behalf of the trust's beneficiaries, outside of court supervision.",
     responsibilities: [
       "Administer trust assets according to the trust document",
       "Manage, maintain, and sell trust-owned real property",
-      "Distribute income and principal to beneficiaries as directed",
-      "Keep accurate records and provide accountings",
-      "Treat all beneficiaries impartially and act without self-interest",
+      "Treat all beneficiaries impartially",
       "Obtain independent valuations before selling trust property",
     ],
   },
@@ -137,8 +130,7 @@ const Executors = () => (
                 {/* Title bar — fixed height so all 3 align */}
                 <div
                   style={{
-                    height: 72,
-                    padding: "0 20px",
+                    padding: "18px 20px",
                     borderBottom: "1px solid rgba(0,0,0,0.06)",
                     display: "flex",
                     flexDirection: "column",
@@ -151,13 +143,12 @@ const Executors = () => (
                   <div
                     style={{
                       fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                      fontSize: 17,
+                      fontSize: 20,
                       fontWeight: 800,
-                      letterSpacing: "0.14em",
+                      letterSpacing: "0.08em",
                       textTransform: "uppercase",
                       color: "#1B3A6B",
-                      marginBottom: 4,
-                      whiteSpace: "nowrap",
+                      marginBottom: 6,
                     }}
                   >
                     {role.title}
@@ -165,8 +156,8 @@ const Executors = () => (
                   <div
                     style={{
                       fontFamily: "'Raleway', sans-serif",
-                      fontSize: 9,
-                      letterSpacing: "0.1em",
+                      fontSize: 14,
+                      letterSpacing: "0.04em",
                       textTransform: "uppercase",
                       color: "#8B0000",
                       fontWeight: 700,
@@ -178,13 +169,13 @@ const Executors = () => (
                 </div>
 
                 {/* Body */}
-                <div style={{ padding: "16px 20px", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
+                <div style={{ padding: "18px 20px", flex: 1, display: "flex", flexDirection: "column", gap: 16 }}>
                   <p
                     style={{
-                      fontFamily: "Georgia, serif",
-                      fontSize: 13,
-                      color: "#4a5568",
-                      lineHeight: 1.75,
+                      fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                      fontSize: 17,
+                      color: "#33404f",
+                      lineHeight: 1.6,
                       margin: 0,
                     }}
                   >
@@ -194,12 +185,12 @@ const Executors = () => (
                     <div
                       style={{
                         fontFamily: "'Raleway', sans-serif",
-                        fontSize: 9,
+                        fontSize: 14,
                         fontWeight: 700,
-                        letterSpacing: "0.18em",
+                        letterSpacing: "0.1em",
                         textTransform: "uppercase",
-                        color: "#8B6914",
-                        marginBottom: 8,
+                        color: "#1B3A6B",
+                        marginBottom: 10,
                       }}
                     >
                       Key Responsibilities
@@ -211,7 +202,7 @@ const Executors = () => (
                         margin: 0,
                         display: "flex",
                         flexDirection: "column",
-                        gap: 7,
+                        gap: 10,
                       }}
                     >
                       {role.responsibilities.map((r) => (
@@ -220,14 +211,14 @@ const Executors = () => (
                           style={{
                             display: "flex",
                             alignItems: "flex-start",
-                            gap: 8,
-                            fontFamily: "Georgia, serif",
-                            fontSize: 12,
-                            color: "#4a5568",
-                            lineHeight: 1.6,
+                            gap: 9,
+                            fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                            fontSize: 16,
+                            color: "#33404f",
+                            lineHeight: 1.5,
                           }}
                         >
-                          <span style={{ color: "#C9A84C", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>›</span>
+                          <span style={{ color: "#1B3A6B", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>›</span>
                           {r}
                         </li>
                       ))}
@@ -236,21 +227,22 @@ const Executors = () => (
                 </div>
 
                 {/* CTA */}
-                <div style={{ padding: "0 20px 20px", flexShrink: 0 }}>
+                <div style={{ padding: "0 20px 22px", flexShrink: 0 }}>
                   <Link
                     to={role.href}
                     style={{
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      gap: 6,
-                      background: "#C9A84C",
+                      gap: 8,
+                      background: "linear-gradient(180deg, #24406e 0%, #1B3A6B 55%, #142c52 100%)",
+                      boxShadow: "0 3px 0 0 #0f2140, 0 5px 12px rgba(27,58,107,0.35)",
                       borderRadius: 8,
-                      padding: "10px 16px",
+                      padding: "13px 16px",
                       fontFamily: "'Raleway', sans-serif",
-                      fontSize: 11,
+                      fontSize: 15,
                       fontWeight: 700,
-                      letterSpacing: "0.1em",
+                      letterSpacing: "0.06em",
                       textTransform: "uppercase",
                       color: "#fff",
                       textDecoration: "none",
@@ -259,8 +251,8 @@ const Executors = () => (
                     {role.title} Guide
                     <svg
                       viewBox="0 0 24 24"
-                      width="12"
-                      height="12"
+                      width="14"
+                      height="14"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2.5"
