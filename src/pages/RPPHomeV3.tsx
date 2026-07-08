@@ -79,9 +79,9 @@ const RPPHomeV3 = () => {
               src="/rpp-logo-hero-padded.webp"
               alt="Real Property Planning"
               style={{
-                width: "clamp(300px, 62vw, 780px)",
-                maxWidth: "100%",
-                maxHeight: "72%",
+                width: "clamp(320px, 70vw, 860px)",
+                maxWidth: "94vw",
+                maxHeight: "78%",
                 height: "auto",
                 objectFit: "contain",
                 display: "block",
