@@ -76,7 +76,7 @@ const RPPHomeV3 = () => {
             }}
           >
             <img
-              src="/rpp-logo-final.webp"
+              src="/rpp-logo-hero-padded.webp"
               alt="Real Property Planning"
               style={{
                 width: "clamp(180px, 42vw, 520px)",
