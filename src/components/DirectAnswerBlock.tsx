@@ -47,21 +47,23 @@ const DirectAnswerBlock = ({
         <div className="max-w-3xl mx-auto">
           {/* Card wrapper */}
           <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
-            <p className="text-gold font-bold tracking-[0.15em] uppercase text-xs mb-2">Quick Answer</p>
-            <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-3">
-              {question}
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+            <p className="font-bold tracking-[0.14em] uppercase mb-2" style={{ color: "#1B3A6B", fontSize: "15px" }}>
+              Quick Answer
+            </p>
+            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">{question}</h2>
+            <p className="text-foreground text-lg md:text-xl leading-relaxed" style={{ color: "#1f2937" }}>
               {answer}
             </p>
 
             {/* Support bullets */}
             {supportBullets && supportBullets.length > 0 && (
-              <ul className="mt-6 pt-5 border-t border-border space-y-2.5">
+              <ul className="mt-6 pt-5 border-t border-border space-y-3">
                 {supportBullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                    <span className="text-muted-foreground text-sm leading-relaxed">{bullet}</span>
+                    <span className="w-1.5 h-1.5 rounded-full mt-2.5 shrink-0" style={{ backgroundColor: "#1B3A6B" }} />
+                    <span className="text-lg leading-relaxed" style={{ color: "#1f2937" }}>
+                      {bullet}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -72,8 +74,12 @@ const DirectAnswerBlock = ({
               <div className="mt-6 pt-5 border-t border-border grid sm:grid-cols-3 gap-5 text-center">
                 {supportSteps.map((step, i) => (
                   <div key={i}>
-                    <span className="text-gold font-serif text-lg font-semibold">{step.label}</span>
-                    <p className="text-muted-foreground text-sm mt-1 leading-relaxed">{step.desc}</p>
+                    <span className="font-serif text-xl font-bold" style={{ color: "#1B3A6B" }}>
+                      {step.label}
+                    </span>
+                    <p className="text-base mt-1 leading-relaxed" style={{ color: "#1f2937" }}>
+                      {step.desc}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -84,8 +90,10 @@ const DirectAnswerBlock = ({
               <div className="mt-6 pt-5 border-t border-border grid sm:grid-cols-2 gap-4">
                 {supportFaqs.map((faq, i) => (
                   <div key={i} className="bg-secondary/50 rounded-xl p-4">
-                    <p className="text-foreground text-sm font-semibold mb-1.5">{faq.question}</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{faq.answer}</p>
+                    <p className="text-foreground text-base font-semibold mb-1.5">{faq.question}</p>
+                    <p className="text-base leading-relaxed" style={{ color: "#1f2937" }}>
+                      {faq.answer}
+                    </p>
                   </div>
                 ))}
               </div>
