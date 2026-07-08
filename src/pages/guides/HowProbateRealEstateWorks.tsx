@@ -131,7 +131,12 @@ const HowProbateRealEstateWorks = () => (
       </section>
 
       {/* FAQ */}
-      <PageFAQ faqs={faqs} heading="Probate Real Estate FAQs" eyebrowClassName="rpp-faq-eyebrow-large" />
+      <PageFAQ
+        faqs={faqs}
+        heading="Probate Real Estate FAQs"
+        eyebrowClassName="rpp-faq-eyebrow-large"
+        eyebrowStyle={{ fontSize: "42px", lineHeight: 1.15 }}
+      />
 
       <BackToResources />
       <DisclaimerSection />
