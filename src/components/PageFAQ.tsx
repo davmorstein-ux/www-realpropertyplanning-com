@@ -11,6 +11,7 @@ interface PageFAQProps {
   faqs: FAQItem[];
   heading?: string;
   eyebrow?: string;
+  eyebrowStyle?: CSSProperties;
   id?: string;
   plain?: boolean;
 }
@@ -22,6 +23,7 @@ const PageFAQ = ({
   faqs,
   heading = "Frequently Asked Questions",
   eyebrow = "Common Questions",
+  eyebrowStyle,
   id = "default",
   plain = false,
 }: PageFAQProps) => {
