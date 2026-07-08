@@ -127,10 +127,12 @@ const Executors = () => (
                   />
                 </div>
 
-                {/* Title bar — navy background makes it the clear focal point */}
+                {/* Title bar — navy background makes it the clear focal point.
+                    Fixed height so all 3 cards align regardless of subtitle length. */}
                 <div
                   style={{
                     padding: "22px 20px",
+                    minHeight: 128,
                     background: "linear-gradient(180deg, #24406e 0%, #1B3A6B 100%)",
                     display: "flex",
                     flexDirection: "column",
@@ -138,6 +140,7 @@ const Executors = () => (
                     justifyContent: "center",
                     textAlign: "center",
                     flexShrink: 0,
+                    boxSizing: "border-box",
                   }}
                 >
                   <div
@@ -159,7 +162,7 @@ const Executors = () => (
                       fontSize: 14,
                       letterSpacing: "0.03em",
                       textTransform: "uppercase",
-                      color: "#e8c97a",
+                      color: "#c9d4e8",
                       fontWeight: 700,
                       lineHeight: 1.4,
                     }}
