@@ -395,9 +395,15 @@ const RPPHomeV3 = () => {
                       fontFamily: "Georgia, serif",
                       fontSize: "72px",
                       fontWeight: 700,
-                      color: "#0a5648",
                       margin: "0 0 10px",
                       lineHeight: 1.1,
+                      backgroundImage: "linear-gradient(180deg, #2ba57c 0%, #0f6b52 45%, #0a5648 75%, #063e33 100%)",
+                      WebkitBackgroundClip: "text",
+                      backgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      color: "transparent",
+                      textShadow:
+                        "0px 1px 0 #0a5648, 0px 2px 0 #094e42, 0px 3px 0 #08453c, 0px 4px 0 #073c35, 0px 5px 0 #06332e, 0px 7px 10px rgba(0,0,0,0.35)",
                     }}
                   >
                     AFH Club
