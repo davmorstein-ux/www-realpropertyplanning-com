@@ -132,7 +132,7 @@ const Executors = () => (
                 <div
                   style={{
                     padding: "22px 20px",
-                    minHeight: 128,
+                    minHeight: 136,
                     background: "linear-gradient(180deg, #24406e 0%, #1B3A6B 100%)",
                     display: "flex",
                     flexDirection: "column",
@@ -146,7 +146,7 @@ const Executors = () => (
                   <div
                     style={{
                       fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                      fontSize: 26,
+                      fontSize: 34,
                       fontWeight: 800,
                       letterSpacing: "0.04em",
                       textTransform: "uppercase",
