@@ -71,13 +71,14 @@ const DirectAnswerBlock = ({
 
             {/* Support steps */}
             {supportSteps && supportSteps.length > 0 && (
-              <div className="mt-6 pt-5 border-t border-border grid sm:grid-cols-3 gap-5 text-center">
+              <div className="rpp-direct-answer-steps mt-6 pt-5 border-t border-border grid sm:grid-cols-3 gap-5 text-center">
                 {supportSteps.map((step, i) => (
                   <div
                     key={i}
-                    className={i > 0 ? "sm:border-l sm:border-border sm:pl-5" : ""}
+                    className={`rpp-direct-answer-step${i > 0 ? " sm:border-l sm:border-border sm:pl-5" : ""}`}
                   >
                     <span
+                      className="rpp-direct-answer-step-label"
                       style={{
                         fontFamily: "Georgia, serif",
                         fontSize: "40px",
