@@ -2807,6 +2807,11 @@ cite {
   font-weight: 600 !important;
 }
 
+main .key-responsibilities-divider {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
 /* 6. Footer text — 16px floor */
 footer,
 footer *,
