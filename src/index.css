@@ -239,7 +239,7 @@ main,
 #main-content > *:first-child > section:first-child,
 #main-content > section:first-child {
   margin-top: 0 !important;
-  padding-top: var(--header-height, 72px) !important;
+  padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
 
@@ -3331,8 +3331,6 @@ a[href="/afh-club"] h3.afh-club-heading {
     font-size: 48px !important;
   }
 }
-
-
 
 @media (max-width: 640px) {
   a[href="/cost-of-care-calculator"] h3.coc-heading {
