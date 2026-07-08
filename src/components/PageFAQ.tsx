@@ -58,6 +58,7 @@ const PageFAQ = ({
             textTransform: "uppercase",
             fontSize: "14px",
             marginBottom: "0.75rem",
+            ...eyebrowStyle,
           }}
         >
           {eyebrow}
