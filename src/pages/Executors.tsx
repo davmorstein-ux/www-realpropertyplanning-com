@@ -177,7 +177,7 @@ const Executors = () => (
                     style={{
                       fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
                       fontSize: 19,
-                      color: "#111827",
+                      color: "#8B0000",
                       lineHeight: 1.6,
                       margin: 0,
                       minHeight: 190,
@@ -221,11 +221,11 @@ const Executors = () => (
                             gap: 9,
                             fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
                             fontSize: 18,
-                            color: "#111827",
+                            color: "#8B0000",
                             lineHeight: 1.5,
                           }}
                         >
-                          <span style={{ color: "#1B3A6B", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>›</span>
+                          <span style={{ color: "#8B0000", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>›</span>
                           {r}
                         </li>
                       ))}
