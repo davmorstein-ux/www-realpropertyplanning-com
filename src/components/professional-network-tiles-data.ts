@@ -23,7 +23,7 @@ export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
       { title: "Attorneys", href: "/for-attorneys", imageSrc: "/tiles/set1/attorneys.webp", altText: "Attorneys supporting estate and property transitions in Washington State" },
       { title: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys", imageSrc: "/tiles/attorneys/estate-planning-attorneys.webp", altText: "Estate planning attorneys Washington State" },
       { title: "Probate Attorneys", href: "/for-probate-attorneys", imageSrc: "/tiles/attorneys/probate-attorneys.webp", altText: "Probate attorneys Washington State" },
-      { title: "Elder Law Attorneys", href: "/for-elder-law-attorneys", imageSrc: "/tiles/attorneys/elder-law-attorneys.webp", altText: "Elder law attorneys Washington State" },
+      { title: "Elder Law Attorneys", href: "/for-elder-law-attorneys", imageSrc: "/tiles/attorneys/elder-law-attorneys.webp?v=20260708b", altText: "Elder law attorneys Washington State" },
       { title: "Family Law Attorneys", href: "/for-family-law-attorneys", imageSrc: "/tiles/attorneys/family-law-attorneys.webp", altText: "Family law attorneys Washington State" },
       { title: "Divorce Attorneys", href: "/for-divorce-attorneys", imageSrc: "/tiles/attorneys/divorce-attorneys.webp", altText: "Divorce attorneys real estate Washington State" },
       { title: "Real Estate Attorneys", href: "/real-estate-attorneys", imageSrc: "/tiles/attorneys/real-estate-attorneys.webp", altText: "Real estate attorneys Washington State" },
