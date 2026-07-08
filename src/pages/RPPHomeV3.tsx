@@ -124,7 +124,7 @@ const RPPHomeV3 = () => {
         </div>
 
         {/* ── Descriptor ───────────────────────────────────────────── */}
-        <section id="rpp-orientation" className="py-5 md:py-7 bg-cream">
+        <section id="rpp-orientation" className="py-6 md:py-9 bg-cream">
           <div className="w-full px-5 md:px-8">
             <div className="max-w-[1000px] mx-auto text-center">
               <p
@@ -132,7 +132,7 @@ const RPPHomeV3 = () => {
                 style={{
                   fontFamily: "Georgia, 'Cormorant Garamond', serif",
                   fontSize: "clamp(18px, 2.4vw, 28px)",
-                  fontWeight: 600,
+                  fontWeight: 400,
                   fontStyle: "normal",
                   color: "#1a2744",
                   margin: 0,
@@ -149,7 +149,7 @@ const RPPHomeV3 = () => {
         </section>
 
         {/* ── Funnel Tiles ─────────────────────────────────────────── */}
-        <section style={{ backgroundColor: "#f5f2ec", padding: "0.5rem 0 4rem" }}>
+        <section style={{ backgroundColor: "#f5f2ec", padding: "2.5rem 0 4rem" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
               <h2
@@ -158,7 +158,7 @@ const RPPHomeV3 = () => {
                   fontFamily: "Georgia, 'Cormorant Garamond', serif",
                   fontSize: "3rem",
                   fontWeight: 600,
-                  color: "#b8963e",
+                  color: "#1a2744",
                   margin: 0,
                 }}
               >
