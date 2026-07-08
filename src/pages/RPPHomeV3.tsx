@@ -130,7 +130,7 @@ const RPPHomeV3 = () => {
               <p
                 id="rpp-descriptor"
                 style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontFamily: "Georgia, 'Cormorant Garamond', serif",
                   fontSize: "clamp(18px, 2.4vw, 28px)",
                   fontWeight: 600,
                   fontStyle: "normal",
@@ -155,7 +155,7 @@ const RPPHomeV3 = () => {
               <h2
                 className="rpp-funnel-heading"
                 style={{
-                  fontFamily: "Inter, system-ui, sans-serif",
+                  fontFamily: "Georgia, 'Cormorant Garamond', serif",
                   fontSize: "3rem",
                   fontWeight: 600,
                   color: "#b8963e",
