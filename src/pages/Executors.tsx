@@ -14,7 +14,7 @@ import trusteeImg from "@/assets/executors/trustee-tile.webp";
 const roles = [
   {
     title: "Executors",
-    subtitle: "Personal Representatives in Washington State",
+    subtitle: "Personal Representatives",
     href: "/executors/executors-guide",
     image: executorImg,
     alt: "Executor reviewing estate documents at a desk",
@@ -180,6 +180,7 @@ const Executors = () => (
                       color: "#111827",
                       lineHeight: 1.6,
                       margin: 0,
+                      minHeight: 152,
                     }}
                   >
                     {role.description}
