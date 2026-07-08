@@ -71,6 +71,9 @@ const PageFAQ = ({
           color: #b8963e !important;
           flex-shrink: 0 !important;
         }
+        main section .rpp-faq-eyebrow-large {
+          font-size: 42px !important;
+        }
       `}</style>
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
