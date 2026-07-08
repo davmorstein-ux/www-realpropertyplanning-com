@@ -126,7 +126,7 @@ const RPPHomeV3 = () => {
         {/* ── Descriptor ───────────────────────────────────────────── */}
         <section id="rpp-orientation" className="py-5 md:py-7 bg-cream">
           <div className="w-full px-5 md:px-8">
-            <div className="max-w-[860px] mx-auto text-center">
+            <div className="max-w-[1000px] mx-auto text-center">
               <p
                 id="rpp-descriptor"
                 style={{
@@ -138,11 +138,11 @@ const RPPHomeV3 = () => {
                   margin: 0,
                   lineHeight: 1.5,
                   letterSpacing: "0.01em",
+                  textWrap: "balance" as any,
                 }}
               >
-                Washington State's leading resource for senior transitions,
-                <br />
-                estate &amp; probate sales, and the Adult Family Home marketplace
+                Washington State's leading resource for senior transitions, estate &amp; probate sales, and the Adult
+                Family Home marketplace
               </p>
             </div>
           </div>
