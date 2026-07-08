@@ -180,6 +180,7 @@ const Executors = () => (
                       color: "#111827",
                       lineHeight: 1.6,
                       margin: 0,
+                      flex: 1,
                     }}
                   >
                     {role.description}
