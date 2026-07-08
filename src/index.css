@@ -3284,17 +3284,9 @@ main h3 {
   text-shadow: 0 0 3px #0099ee !important;
 }
 
-/* Homepage Orientation section */
+/* Homepage Orientation section — descriptor kept light, sized in RPPHomeV3.tsx */
 main #rpp-orientation p,
 main #rpp-orientation div {
-  font-size: 24px !important;
-  line-height: 1.5 !important;
-  margin-bottom: 2rem !important;
-}
-main #rpp-orientation p:last-of-type,
-main #rpp-orientation div:last-of-type {
-  font-size: 32px !important;
-  line-height: 1.6 !important;
   margin-bottom: 0 !important;
 }
 #rpp-tagline {
