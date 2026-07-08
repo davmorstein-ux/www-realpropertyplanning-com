@@ -73,7 +73,7 @@ const Executors = () => (
 
       <DirectAnswerBlock
         question="What does an executor need to know about handling real estate in Washington State?"
-        answer="In Washington, an executor — legally called a Personal Representative — must secure the property, obtain Letters Testamentary from the court, arrange a date-of-death appraisal, and manage the sale in a way that protects both the estate and the executor personally from later disputes. Because real estate is usually the estate's largest asset, getting the valuation, timing, and preparation right matters more than any other decision in the role."
+        answer="An executor — legally called a Personal Representative — must secure the property, obtain court authority, arrange a date-of-death appraisal, and manage the sale carefully to protect both the estate and themselves from later disputes."
         supportSteps={[
           { label: "Executor", desc: "Named in a will or appointed by the court to administer the estate." },
           { label: "Power of Attorney", desc: "Acts on behalf of a living person, often before probate begins." },
@@ -127,11 +127,11 @@ const Executors = () => (
                   />
                 </div>
 
-                {/* Title bar — fixed height so all 3 align */}
+                {/* Title bar — navy background makes it the clear focal point */}
                 <div
                   style={{
-                    padding: "18px 20px",
-                    borderBottom: "1px solid rgba(0,0,0,0.06)",
+                    padding: "22px 20px",
+                    background: "linear-gradient(180deg, #24406e 0%, #1B3A6B 100%)",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
@@ -143,11 +143,11 @@ const Executors = () => (
                   <div
                     style={{
                       fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
-                      fontSize: 20,
+                      fontSize: 26,
                       fontWeight: 800,
-                      letterSpacing: "0.08em",
+                      letterSpacing: "0.04em",
                       textTransform: "uppercase",
-                      color: "#1B3A6B",
+                      color: "#ffffff",
                       marginBottom: 6,
                     }}
                   >
@@ -157,9 +157,9 @@ const Executors = () => (
                     style={{
                       fontFamily: "'Raleway', sans-serif",
                       fontSize: 14,
-                      letterSpacing: "0.04em",
+                      letterSpacing: "0.03em",
                       textTransform: "uppercase",
-                      color: "#8B0000",
+                      color: "#e8c97a",
                       fontWeight: 700,
                       lineHeight: 1.4,
                     }}
