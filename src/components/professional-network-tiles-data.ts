@@ -34,7 +34,7 @@ export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
     tagline: "Professional guidance for tax questions, planning decisions, financing, and credible property value.",
     tiles: [
       { title: "CPAs", href: "/for-cpas", imageSrc: "/tiles/set1/certified-public-accountants.webp", altText: "CPAs supporting estate transitions in Washington State" },
-      { title: "Financial Planners", href: "/for-financial-planners", imageSrc: "/tiles/set1/financial-planners.webp", altText: "Financial planners for estate and senior transitions in Washington State" },
+      { title: "Financial Planners", href: "/for-financial-planners", imageSrc: "/tiles/set1/financial-planners.webp?v=20260708a", altText: "Financial planners for estate and senior transitions in Washington State" },
       { title: "Mortgage Lenders", href: "/lenders-and-financing-specialists", imageSrc: "/tiles/set1/mortgage-lenders.webp", altText: "Mortgage lenders and financing specialists Washington State" },
       { title: "Real Estate Appraisers", href: "/real-estate-appraiser", imageSrc: "/tiles/set1/real-estate-appraisers.webp?v=20260708a", altText: "Certified real estate appraisers Washington State" },
       { title: "Home Values & Pricing", href: "/why-valuation-matters", imageSrc: "/tiles/set3/home-values-pricing.webp", altText: "Home values and pricing guidance Washington State" },
