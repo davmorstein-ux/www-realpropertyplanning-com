@@ -49,6 +49,7 @@ const RPPHomeV3 = () => {
         canonical="https://realpropertyplanning.com"
       />
       <Header />
+      <div aria-hidden="true" style={{ height: "var(--header-height, 128px)" }} />
       <main id="main-content">
         {/* ── Hero ── shrinks gracefully on mobile ─────────────────── */}
         <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
