@@ -56,7 +56,7 @@ const RPPHomeV3 = () => {
             src="/hero-v2.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
             className="block w-full object-cover object-center"
-            style={{ height: "clamp(340px, 46vw, 600px)" }}
+            style={{ height: "clamp(260px, 46vw, 600px)" }}
             loading="eager"
             decoding="async"
           />
@@ -68,20 +68,21 @@ const RPPHomeV3 = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              justifyContent: "flex-end",
-              paddingBottom: "clamp(32px, 5vw, 72px)",
-              padding: "0 8% clamp(32px, 5vw, 72px)",
+              justifyContent: "center",
+              padding: "clamp(16px, 3vw, 40px) 8%",
               boxSizing: "border-box",
               gap: "clamp(6px, 1vw, 12px)",
             }}
           >
             <img
-              src="/rpp-logo-final.webp"
+              src="/rpp-logo-hero-padded.webp"
               alt="Real Property Planning"
               style={{
-                width: "clamp(200px, 55vw, 640px)",
+                width: "clamp(180px, 42vw, 520px)",
                 maxWidth: "100%",
+                maxHeight: "60%",
                 height: "auto",
+                objectFit: "contain",
                 display: "block",
               }}
             />
@@ -98,7 +99,7 @@ const RPPHomeV3 = () => {
                   lineHeight: 1,
                   letterSpacing: "0.01em",
                   textShadow: "0 1px 4px rgba(255,255,255,0.7)",
-                  marginTop: "clamp(24px, 4vw, 56px)",
+                  marginTop: "clamp(8px, 1.5vw, 20px)",
                 }}
               >
                 Guidance for real estate decisions
