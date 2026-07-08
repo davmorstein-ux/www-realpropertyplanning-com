@@ -73,7 +73,10 @@ const DirectAnswerBlock = ({
             {supportSteps && supportSteps.length > 0 && (
               <div className="mt-6 pt-5 border-t border-border grid sm:grid-cols-3 gap-5 text-center">
                 {supportSteps.map((step, i) => (
-                  <div key={i}>
+                  <div
+                    key={i}
+                    className={i > 0 ? "sm:border-l sm:border-border sm:pl-5" : ""}
+                  >
                     <span
                       style={{
                         fontFamily: "Georgia, serif",
@@ -86,7 +89,7 @@ const DirectAnswerBlock = ({
                     >
                       {step.label}
                     </span>
-                    <p className="text-base mt-1 leading-relaxed" style={{ color: "#1f2937" }}>
+                    <p className="text-lg mt-1 leading-relaxed font-bold" style={{ color: "#1f2937" }}>
                       {step.desc}
                     </p>
                   </div>
