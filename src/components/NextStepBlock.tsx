@@ -17,7 +17,7 @@ const NextStepBlock = ({ heading = "What to Read Next", steps, background = "bg-
     <div className="container px-6 lg:px-8">
       <div className="max-w-[1140px] mx-auto">
         <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-foreground">{heading}</h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4">
           {steps.map((step) => (
             <Link
               key={step.href}
