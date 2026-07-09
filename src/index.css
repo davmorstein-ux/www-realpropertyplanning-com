@@ -690,7 +690,7 @@ main,
   height: 2px !important;
   width: 100% !important;
   background: hsl(var(--gold)) !important;
-  transform: scaleX(0.32) !important;
+  transform: scaleX(0) !important;
   transform-origin: left !important;
   transition: transform 0.3s ease !important;
 }
@@ -737,7 +737,7 @@ a:hover .gold-cta::after,
   height: 2px;
   width: 100%;
   background: hsl(var(--gold));
-  transform: scaleX(0.32);
+  transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
@@ -1006,6 +1006,25 @@ a:hover .gold-cta::after,
 .pro-team-grid .interior-tile {
   max-width: 100% !important;
   padding: 16px 8px 12px !important;
+}
+
+/* Wide, left-aligned variant for guide/article link cards (Continue Learning, etc.)
+   Same card system, but not capped to the narrow headshot-tile width. */
+.interior-tile.interior-tile--guide {
+  max-width: 100% !important;
+  min-width: 0 !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  padding: 26px 28px 24px !important;
+}
+.interior-tile.interior-tile--guide h3 {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  font-size: 1.22rem !important;
+  line-height: 1.3 !important;
+}
+.interior-tile.interior-tile--guide p {
+  text-align: left !important;
 }
 
 /* ═══════════════════════════════════════════════
