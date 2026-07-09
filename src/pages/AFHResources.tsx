@@ -187,6 +187,7 @@ const AFHResources = () => (
             <Link
               key={topic.href}
               to={topic.href}
+              className="group"
               style={{
                 display: "flex",
                 gap: 24,
@@ -239,32 +240,11 @@ const AFHResources = () => (
                 >
                   {topic.description}
                 </p>
-                <span
-                  style={{
-                    fontSize: 14,
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 700,
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    color: "#b87333",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 6,
-                  }}
-                >
+                <span className="gold-cta">
                   Explore Topic
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
+                  <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
+                    →
+                  </span>
                 </span>
               </div>
             </Link>
