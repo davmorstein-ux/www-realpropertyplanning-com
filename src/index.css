@@ -661,7 +661,7 @@ main,
   align-items: center !important;
   justify-content: flex-start !important;
   gap: 6px !important;
-  padding: 0 !important;
+  padding: 0 0 5px 0 !important;
   margin: 0 !important;
   min-height: 0 !important;
   height: auto !important;
@@ -685,7 +685,7 @@ main,
   content: "" !important;
   position: absolute !important;
   left: 0 !important;
-  bottom: -3px !important;
+  bottom: 0 !important;
   height: 3px !important;
   width: 100% !important;
   background: #7f1d1d !important;
@@ -708,7 +708,7 @@ a:hover .gold-cta::after,
   align-items: center;
   justify-content: flex-start;
   gap: 6px;
-  padding: 0;
+  padding: 0 0 5px 0;
   border: none;
   border-radius: 0;
   box-sizing: border-box;
@@ -727,16 +727,13 @@ a:hover .gold-cta::after,
   content: "";
   position: absolute;
   left: 0;
-  bottom: -3px;
+  bottom: 0;
   height: 3px;
   width: 100%;
   background: #7f1d1d;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
-}
-.article-resource-btn:hover::after {
-  transform: scaleX(1);
 }
 .article-resource-btn:hover::after {
   transform: scaleX(1);
