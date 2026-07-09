@@ -47,9 +47,13 @@ const PremiumTile = ({
             </h3>
             {description && <p className="text-[15px] leading-relaxed text-muted-foreground">{description}</p>}
           </div>
-          <div className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-gold transition-colors duration-300 group-hover:text-[hsl(var(--gold-dark))]">
-            <span>{cta}</span>
-            <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+          <div className="mt-5 flex justify-start">
+            <span className="gold-cta">
+              {cta}
+              <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
+                →
+              </span>
+            </span>
           </div>
         </div>
       </div>
