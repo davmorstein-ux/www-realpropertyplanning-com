@@ -178,13 +178,18 @@ const RPPHomeV3 = () => {
               {tiles.map(({ imgSrc, imgAlt, title, href, bgColor }) => (
                 <Link key={title} to={href} className="group block" style={{ textDecoration: "none" }}>
                   <div
-                    className="transition-transform duration-200 group-hover:-translate-y-1 group-active:scale-[0.98]"
+                    className="relative group-active:scale-[0.98] transition-transform duration-150"
                     style={{
                       borderRadius: 10,
                       overflow: "hidden",
                       boxShadow: "0 2px 12px rgba(0,0,0,0.10)",
                     }}
                   >
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-[#7f1d1d] transition-transform duration-300 ease-out group-hover:scale-x-100"
+                      style={{ zIndex: 20 }}
+                    />
                     <div style={{ position: "relative" }}>
                       <img
                         src={imgSrc}
@@ -263,7 +268,7 @@ const RPPHomeV3 = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
               <a
                 href="/cost-of-care-calculator"
-                className="group block transition-transform duration-200 hover:-translate-y-1"
+                className="group relative block overflow-hidden"
                 style={{
                   textDecoration: "none",
                   display: "flex",
@@ -275,6 +280,11 @@ const RPPHomeV3 = () => {
                   minHeight: 220,
                 }}
               >
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-[#7f1d1d] transition-transform duration-300 ease-out group-hover:scale-x-100"
+                  style={{ zIndex: 20 }}
+                />
                 <h3
                   className="coc-heading"
                   style={{
@@ -345,7 +355,7 @@ const RPPHomeV3 = () => {
 
               <a
                 href="/afh-club"
-                className="group block transition-transform duration-200 hover:-translate-y-1"
+                className="group block"
                 style={{
                   textDecoration: "none",
                   position: "relative",
@@ -364,6 +374,11 @@ const RPPHomeV3 = () => {
                   backgroundPosition: "center",
                 }}
               >
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-[#7f1d1d] transition-transform duration-300 ease-out group-hover:scale-x-100"
+                  style={{ zIndex: 20 }}
+                />
                 {/* Readability overlay */}
                 <div
                   style={{
