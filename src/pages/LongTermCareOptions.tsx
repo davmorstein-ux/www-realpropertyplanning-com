@@ -16,13 +16,48 @@ import chooseCareImg from "@/assets/long-term-care/How_to_Choose_Between_Care_Se
 import hospitalDischargeImg from "@/assets/long-term-care/Planning_Your_Hospital_Discharge.webp.asset.json";
 
 const cards = [
-  { title: "Nursing Homes in Washington State", href: "/long-term-care/nursing-homes", img: nursingHomesImg.url, placeholder: "#2c3a48" },
-  { title: "Short-Term Nursing Home Stays", href: "/long-term-care/short-term-nursing-home-stays", img: shortTermImg.url, placeholder: "#2c3e4e" },
-  { title: "Nurse Delegation Program", href: "/long-term-care/nurse-delegation", img: nurseDelegationImg.url, placeholder: "#354555" },
-  { title: "Medicaid & Long-Term Care", href: "/long-term-care/medicaid-and-long-term-care", img: medicaidImg.url, placeholder: "#2e3d4d" },
-  { title: "WA Cares: Washington's Long-Term Care Insurance", href: "/long-term-care/wa-cares", img: waCaresImg.url, placeholder: "#384858" },
-  { title: "How to Choose Between Care Settings", href: "/long-term-care/how-to-choose-care-settings", img: chooseCareImg.url, placeholder: "#2a3a4a" },
-  { title: "Planning Your Hospital Discharge", href: "/long-term-care/hospital-discharge-planning", img: hospitalDischargeImg.url, placeholder: "#334353" },
+  {
+    title: "Nursing Homes in Washington State",
+    href: "/long-term-care/nursing-homes",
+    img: nursingHomesImg.url,
+    placeholder: "#2c3a48",
+  },
+  {
+    title: "Short-Term Nursing Home Stays",
+    href: "/long-term-care/short-term-nursing-home-stays",
+    img: shortTermImg.url,
+    placeholder: "#2c3e4e",
+  },
+  {
+    title: "Nurse Delegation Program",
+    href: "/long-term-care/nurse-delegation",
+    img: nurseDelegationImg.url,
+    placeholder: "#354555",
+  },
+  {
+    title: "Medicaid & Long-Term Care",
+    href: "/long-term-care/medicaid-and-long-term-care",
+    img: medicaidImg.url,
+    placeholder: "#2e3d4d",
+  },
+  {
+    title: "WA Cares: Washington's Long-Term Care Insurance",
+    href: "/long-term-care/wa-cares",
+    img: waCaresImg.url,
+    placeholder: "#384858",
+  },
+  {
+    title: "How to Choose Between Care Settings",
+    href: "/long-term-care/how-to-choose-care-settings",
+    img: chooseCareImg.url,
+    placeholder: "#2a3a4a",
+  },
+  {
+    title: "Planning Your Hospital Discharge",
+    href: "/long-term-care/hospital-discharge-planning",
+    img: hospitalDischargeImg.url,
+    placeholder: "#334353",
+  },
 ];
 
 const LongTermCareOptions = () => {
@@ -50,17 +85,59 @@ const LongTermCareOptions = () => {
 
         <section style={{ backgroundColor: "hsl(40 20% 98%)", padding: "48px 24px 32px" }}>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B6914", marginBottom: 12 }}>
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 13,
+                fontWeight: 700,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "#8B6914",
+                marginBottom: 12,
+              }}
+            >
               Long-Term Care · Washington State
             </p>
-            <h1 style={{ fontFamily: "'DM Sans', serif", fontSize: "clamp(28px, 5vw, 44px)", fontWeight: 800, lineHeight: 1.15, color: "hsl(220 40% 12%)", marginBottom: 20 }}>
+            <h1
+              style={{
+                fontFamily: "'DM Sans', serif",
+                fontSize: "clamp(28px, 5vw, 44px)",
+                fontWeight: 800,
+                lineHeight: 1.15,
+                color: "hsl(220 40% 12%)",
+                marginBottom: 20,
+              }}
+            >
               Understanding Long-Term Care in Washington
             </h1>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.75, color: "hsl(220 35% 18%)", marginBottom: 24, borderLeft: "4px solid #C9A84C", paddingLeft: 20 }}>
-              Long-term care decisions rarely arrive on a comfortable schedule. They often follow a hospital stay, a sudden change in health, or a quiet realization that the current setting is no longer working. This hub gathers the most important Washington State options in one place — so families can make informed, unhurried choices.
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 19,
+                fontWeight: 500,
+                lineHeight: 1.75,
+                color: "hsl(220 35% 18%)",
+                marginBottom: 24,
+                borderLeft: "4px solid #C9A84C",
+                paddingLeft: 20,
+              }}
+            >
+              Long-term care decisions rarely arrive on a comfortable schedule. They often follow a hospital stay, a
+              sudden change in health, or a quiet realization that the current setting is no longer working. This hub
+              gathers the most important Washington State options in one place — so families can make informed,
+              unhurried choices.
             </p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              Use the guides below to explore nursing homes, short-term stays, the Nurse Delegation Program, Medicaid coverage, WA Cares, hospital discharge planning, and tools for finding the right care setting.
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 18,
+                lineHeight: 1.8,
+                color: "hsl(220 25% 22%)",
+                marginBottom: 16,
+              }}
+            >
+              Use the guides below to explore nursing homes, short-term stays, the Nurse Delegation Program, Medicaid
+              coverage, WA Cares, hospital discharge planning, and tools for finding the right care setting.
             </p>
           </div>
         </section>
@@ -86,6 +163,7 @@ const LongTermCareOptions = () => {
               <Link
                 key={topic.href}
                 to={topic.href}
+                className="group"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -96,7 +174,9 @@ const LongTermCareOptions = () => {
                   textDecoration: "none",
                   transition: "background 0.2s ease",
                 }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(184,115,51,0.04)")}
+                onMouseEnter={(e) =>
+                  ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(184,115,51,0.04)")
+                }
                 onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "transparent")}
               >
                 <div
@@ -115,7 +195,13 @@ const LongTermCareOptions = () => {
                     alt={topic.title}
                     width={90}
                     height={120}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                      display: "block",
+                    }}
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}
@@ -135,39 +221,17 @@ const LongTermCareOptions = () => {
                   >
                     {topic.title}
                   </h3>
-                  <span
-                    style={{
-                      fontSize: 14,
-                      fontFamily: "'Raleway', sans-serif",
-                      fontWeight: 700,
-                      letterSpacing: "0.18em",
-                      textTransform: "uppercase",
-                      color: "#5a3200",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 5,
-                    }}
-                  >
-                    Read Article{" "}
-                    <svg
-                      width="11"
-                      height="11"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
+                  <span className="gold-cta">
+                    Read Article
+                    <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
+                      →
+                    </span>
                   </span>
                 </div>
               </Link>
             ))}
           </div>
         </section>
-
 
         <BackToResources />
         <DisclaimerSection />
