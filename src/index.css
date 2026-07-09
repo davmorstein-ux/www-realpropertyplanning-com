@@ -651,6 +651,49 @@ main,
 }
 
 /* ═══════════════════════════════════════════════
+   MARQUEE HOVER BORDER — traveling light effect
+   Replaces hover-lift on homepage tiles. Apply class="marquee-hover"
+   to any tile/card; border-radius is inherited from the host element.
+═══════════════════════════════════════════════ */
+.marquee-hover {
+  position: relative;
+  isolation: isolate;
+}
+.marquee-hover::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(from 0deg, transparent 0%, transparent 72%, #d4a843 82%, #7f1d1d 90%, transparent 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 30;
+  transition: opacity 0.25s ease;
+  animation: marquee-hover-spin 2.4s linear infinite;
+  animation-play-state: paused;
+}
+.marquee-hover:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+@keyframes marquee-hover-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-hover::before {
+    animation: none !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
    UNIFIED CTA LINK — homepage tile sections
    Modern minimal text-link treatment: no filled box,
    navy text, gold underline that expands on hover.
