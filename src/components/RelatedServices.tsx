@@ -576,21 +576,21 @@ const RelatedServices = ({
     <section data-nosnippet className="py-14 md:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[1140px] mx-auto">
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-2 text-sm">{heading}</p>
-          {intro && <p className="text-muted-foreground text-[15px] mb-8 max-w-2xl">{intro}</p>}
+          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-lg">{heading}</p>
+          {intro && <p className="text-muted-foreground text-xl mb-8 max-w-2xl">{intro}</p>}
           <div className="relative">
             <div ref={gridRef} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {links.map((link, index) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="interior-tile tile-white group block h-full no-underline"
+                  className="interior-tile interior-tile--guide tile-white group block h-full no-underline"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face h-full">
-                      <div className="flex h-full flex-col px-6 py-6 sm:px-7 sm:py-7">
+                      <div className="flex h-full flex-col">
                         <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]">
                           {link.label}
                         </h3>
