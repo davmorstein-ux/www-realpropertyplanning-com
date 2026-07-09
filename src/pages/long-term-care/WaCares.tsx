@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import BackToLongTermCare from "@/components/BackToLongTermCare";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import heroImage from "@/assets/articles-hero-banner.webp";
 import { Link } from "react-router-dom";
 
@@ -46,6 +47,10 @@ const WaCares = () => {
               Long-term care planning is about more than healthcare. For many families, the real question is simple:
               where will I live if I eventually need help?
             </p>
+
+            <div className="mb-6">
+              <ArticleAudioPlayer audioSrc="/audio/wa-cares.mp3" />
+            </div>
 
             <p className={pClass}>
               Some people hope to remain at home for as long as possible. Others may eventually need an Adult Family
