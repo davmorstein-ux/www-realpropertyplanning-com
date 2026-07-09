@@ -78,7 +78,6 @@ const HomepagePopularResources = () => (
       }
       .rpp-pr-card:hover {
         box-shadow: 0 10px 28px rgba(26,39,68,0.16) !important;
-        transform: translateY(-3px) !important;
       }
       .rpp-pr-card-icon {
         display: flex !important;
@@ -150,7 +149,7 @@ const HomepagePopularResources = () => (
             <li key={r.href}>
               <Link
                 to={r.href}
-                className="rpp-pr-card"
+                className="rpp-pr-card marquee-hover"
                 style={{ ["--pr-accent" as string]: r.accent, ["--pr-accent-soft" as string]: `${r.accent}1a` }}
               >
                 <span className="rpp-pr-card-icon">
