@@ -148,7 +148,12 @@ const GuidesAndResources = () => {
             src="/resources-hero.webp"
             alt="Seniors reading guides outside a resource center"
             style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
-            loading="eager" sizes="100vw" decoding="async" width={1920} height={640} />
+            loading="eager"
+            sizes="100vw"
+            decoding="async"
+            width={1920}
+            height={640}
+          />
         </div>
 
         {/* Blue band — matches site standard */}
@@ -183,6 +188,7 @@ const GuidesAndResources = () => {
                   <Link
                     key={article.href}
                     to={article.href}
+                    className="group"
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -215,35 +221,13 @@ const GuidesAndResources = () => {
                       {article.title}
                     </div>
 
-                    {/* Arrow */}
-                    <div
-                      style={{
-                        ...NAV_FONT,
-                        fontSize: 11,
-                        fontWeight: 700,
-                        letterSpacing: "0.14em",
-                        textTransform: "uppercase",
-                        color: GOLD,
-                        flexShrink: 0,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 4,
-                      }}
-                    >
+                    {/* CTA */}
+                    <span className="gold-cta">
                       Read
-                      <svg
-                        width="10"
-                        height="10"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
-                    </div>
+                      <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
+                        →
+                      </span>
+                    </span>
                   </Link>
                 ))}
               </div>
