@@ -17,12 +17,16 @@ const NextStepBlock = ({ heading = "What to Read Next", steps, background = "bg-
     <div className="container px-6 lg:px-8">
       <div className="max-w-[1140px] mx-auto">
         <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-foreground">{heading}</h2>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {steps.map((step) => (
-            <Link key={step.href} to={step.href} className="interior-tile tile-white group block h-full no-underline">
+            <Link
+              key={step.href}
+              to={step.href}
+              className="interior-tile interior-tile--guide tile-white group block h-full no-underline"
+            >
               <div className="tile-white__inner h-full">
                 <div className="tile-white__face h-full">
-                  <div className="flex h-full flex-col px-6 py-6 sm:px-7 sm:py-7">
+                  <div className="flex h-full flex-col">
                     <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]">
                       {step.title}
                     </h3>
