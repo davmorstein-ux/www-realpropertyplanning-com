@@ -145,25 +145,22 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 borderRadius: 4,
                 overflow: "hidden",
                 flexShrink: 0,
-                // WIDTH is always fixed — hover only affects height and transform
+                // WIDTH and HEIGHT are always fixed — hover only affects shadow and lift
                 width: `${CARD_W}px`,
                 minWidth: `${CARD_W}px`,
                 maxWidth: `${CARD_W}px`,
-                // Height grows downward on hover
-                height: hovered === i ? `${CARD_H + 80}px` : `${CARD_H}px`,
-                boxShadow: hovered === i ? "0 40px 100px rgba(10,22,40,0.45)" : "0 4px 20px rgba(10,22,40,0.10)",
-                // Card rises upward on hover
-                transform: hovered === i ? "translateY(-30px)" : "translateY(0)",
-                transition: "height 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease",
+                height: `${CARD_H}px`,
+                boxShadow: hovered === i ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
+                transform: hovered === i ? "translateY(-6px)" : "translateY(0)",
+                transition: "box-shadow 0.4s ease, transform 0.4s ease",
                 background: item.placeholder,
-                zIndex: hovered === i ? 10 : 1,
               }}
             >
               <img
                 src={item.img}
                 alt={item.title}
                 width={CARD_W}
-                height={CARD_H + 80}
+                height={CARD_H}
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = "none";
