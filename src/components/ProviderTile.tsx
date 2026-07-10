@@ -73,8 +73,7 @@ export default function ProviderTile({
       const el = wrapperRef.current;
       if (!el) return;
       const r = el.getBoundingClientRect();
-      const inside =
-        e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+      const inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
       if (!inside) handleLeave();
     };
     const onLeaveWindow = () => handleLeave();
@@ -93,6 +92,7 @@ export default function ProviderTile({
       ref={wrapperRef}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
+      className="marquee-hover"
       style={{
         position: "relative",
         background: "#fff",
@@ -586,36 +586,11 @@ export default function ProviderTile({
           target="_blank"
           rel="noopener noreferrer"
           onClick={(e) => e.stopPropagation()}
-          style={{
-            marginTop: 8,
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 6,
-            fontFamily: "'Raleway', sans-serif",
-            fontSize: 11,
-            fontWeight: 700,
-            letterSpacing: "0.16em",
-            textTransform: "uppercase",
-            color: "#8B6914",
-            textDecoration: "none",
-            border: "1.5px solid #C9A84C",
-            borderRadius: 4,
-            padding: "8px 16px",
-          }}
+          className="gold-cta"
+          style={{ marginTop: 8 }}
         >
           Learn More
-          <svg
-            viewBox="0 0 24 24"
-            width="12"
-            height="12"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
+          <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
         </a>
       </div>
     </div>
