@@ -87,7 +87,7 @@ const SeniorTransitions = () => {
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-10 text-center">
                 Who Helps With a Senior Transition?
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-stretch">
                 {[
                   {
                     image: "/tiles/set1/senior-move-managers-tile.webp",
@@ -166,34 +166,29 @@ const SeniorTransitions = () => {
                     key={s.href}
                     to={s.href}
                     aria-label={`${s.title} — ${s.description} — ${s.cta}`}
-                    className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                    className="interior-tile interior-tile--guide tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   >
-                    <div className="tile-white__inner h-full relative">
+                    <div className="tile-white__inner h-full relative w-full">
                       <div className="tile-white__face h-full">
-                        <div className="flex h-full flex-col">
+                        <div className="flex h-full flex-row items-start gap-5">
                           <div
-                            className="relative w-full overflow-hidden bg-transparent flex items-center justify-center"
-                            style={{ aspectRatio: "500 / 312" }}
+                            className="relative w-[120px] sm:w-[150px] flex-shrink-0 overflow-hidden rounded-md bg-transparent flex items-center justify-center"
+                            style={{ aspectRatio: "1 / 1" }}
                           >
                             <img
                               src={s.image}
                               alt={s.alt}
-                              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                               loading="lazy"
                               sizes="100vw"
                               decoding="async"
                             />
                           </div>
-                          <div
-                            className="relative flex flex-1 flex-col items-center text-center overflow-hidden"
-                            style={{ padding: "16px" }}
-                          >
-                            <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center">
+                          <div className="relative flex flex-1 flex-col items-start text-left overflow-hidden">
+                            <h3 className="font-serif text-[20px] md:text-[22px] font-semibold text-navy leading-snug mb-2">
                               {s.title}
                             </h3>
-                            <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center">
-                              {s.description}
-                            </p>
+                            <p className="text-foreground text-[15px] leading-relaxed mb-4">{s.description}</p>
                             <span className="gold-cta mt-auto">
                               {s.cta}
                               <svg
