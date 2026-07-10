@@ -664,7 +664,6 @@ const App = () => (
           <Route path="/realtor/learn-more" element={<Navigate to="/realtor" replace />} />
           <Route path="/real-estate-appraiser/learn-more" element={<Navigate to="/real-estate-appraiser" replace />} />
           <Route path="/senior-move-managers/learn-more" element={<Navigate to="/senior-transitions" replace />} />
-          <Route path="/estate-liquidation/learn-more" element={<Navigate to="/estate-liquidation" replace />} />
           <Route path="/estate-liquidators" element={<EstateLiquidators />} />
 
           {/* Redundant professional / referral pages → consolidated targets */}
