@@ -81,17 +81,17 @@ const PlanningBeforeACrisis = () => {
               </h2>
             </div>
 
-            <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-stretch">
               {tiles.map((t) => (
                 <Link
                   key={t.title}
                   to={t.href}
-                  className="interior-tile tile-white crisis-tile-outline block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  className="interior-tile interior-tile--guide tile-white crisis-tile-outline block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   aria-label={t.title}
                 >
                   <div className="tile-white__inner h-full relative">
                     <div className="tile-white__face h-full">
-                      <div className="flex h-full flex-col items-center text-center" style={{ padding: "28px 22px" }}>
+                      <div className="flex h-full flex-col items-start text-left">
                         <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
                           {t.title}
                         </h3>
