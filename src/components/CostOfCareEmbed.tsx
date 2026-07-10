@@ -347,6 +347,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       <div style={{ textAlign: "center" }}>
         <Link
           to={`/cost-of-care-calculator?care=${careTypeId}`}
+          className="marquee-hover"
           style={{
             display: "inline-flex",
             alignItems: "center",
