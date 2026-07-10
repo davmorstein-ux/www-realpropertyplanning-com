@@ -1008,6 +1008,8 @@ a:hover .gold-cta::after,
    INTERIOR TILE — standardized layout for all non-homepage tiles
 ═══════════════════════════════════════════════ */
 .interior-tile {
+  position: relative !important;
+  isolation: isolate;
   background: #fff !important;
   border-radius: 12px !important;
   box-shadow: none !important;
@@ -1021,6 +1023,51 @@ a:hover .gold-cta::after,
   flex: 1 1 0 !important;
   min-width: 180px !important;
   max-width: 260px !important;
+}
+/* Marquee marching-ants hover — baked directly into interior-tile so every
+   tile using this shared class gets it automatically, with no extra class
+   needed. Mirrors .marquee-hover; inset:0 keeps it inside the tile's own
+   box so overflow:hidden above never clips it. */
+.interior-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 3px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 30;
+  transition: opacity 0.2s ease;
+  background-image:
+    repeating-linear-gradient(90deg, #7f1d1d 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(180deg, #7f1d1d 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(90deg, #7f1d1d 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(180deg, #7f1d1d 0 10px, transparent 10px 20px);
+  background-position:
+    0 0,
+    0 0,
+    0 100%,
+    100% 0;
+  background-size:
+    20px 3px,
+    3px 20px,
+    20px 3px,
+    3px 20px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.interior-tile:hover::before {
+  opacity: 1;
+  animation: marquee-hover-march 0.6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .interior-tile::before {
+    animation: none !important;
+  }
 }
 /* Compact wide variant for multi-person provider tiles — only wide enough for side-by-side round headshots */
 .interior-tile.interior-tile--wide {
