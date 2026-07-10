@@ -53,16 +53,14 @@ const pathways: Pathway[] = [
   {
     letter: "D",
     title: "Trying to Decide What to Do With a Home",
-    description:
-      "Guidance for families deciding whether to keep, sell, rent, transfer, or prepare a property.",
+    description: "Guidance for families deciding whether to keep, sell, rent, transfer, or prepare a property.",
     href: "/guides/inherited-house-washington",
     icon: iconHome,
   },
   {
     letter: "E",
     title: "Looking for Trusted Professionals & Resources",
-    description:
-      "Connect with experienced professionals and educational guidance for important transition decisions.",
+    description: "Connect with experienced professionals and educational guidance for important transition decisions.",
     href: "/professionals",
     icon: iconHandshake,
   },
@@ -122,11 +120,36 @@ const understand = [
 ];
 
 const continueJourney = [
-  { href: "/helping-aging-parents", title: "Helping an Aging Parent", description: "A calm roadmap for senior transitions and family decisions.", icon: iconHeartHands },
-  { href: "/estate-probate-inherited-property", title: "Estate, Probate & Inherited Property", description: "A guided path for executors, trustees, and heirs.", icon: iconExecutor },
-  { href: "/understanding-housing-care-options", title: "Understanding Housing & Care Options", description: "Compare assisted living, adult family homes, memory care, and more.", icon: iconAssisted },
-  { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "Sell, keep, rent, or transfer — compare your options.", icon: iconHome },
-  { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconHandshake },
+  {
+    href: "/helping-aging-parents",
+    title: "Helping an Aging Parent",
+    description: "A calm roadmap for senior transitions and family decisions.",
+    icon: iconHeartHands,
+  },
+  {
+    href: "/estate-probate-inherited-property",
+    title: "Estate, Probate & Inherited Property",
+    description: "A guided path for executors, trustees, and heirs.",
+    icon: iconExecutor,
+  },
+  {
+    href: "/understanding-housing-care-options",
+    title: "Understanding Housing & Care Options",
+    description: "Compare assisted living, adult family homes, memory care, and more.",
+    icon: iconAssisted,
+  },
+  {
+    href: "/what-to-do-with-the-house",
+    title: "What To Do With the House",
+    description: "Sell, keep, rent, or transfer — compare your options.",
+    icon: iconHome,
+  },
+  {
+    href: "/building-your-trusted-professional-team",
+    title: "Building Your Trusted Professional Team",
+    description: "Meet the coordinated team supporting Washington families.",
+    icon: iconHandshake,
+  },
 ];
 
 const nextSteps = [
@@ -161,58 +184,61 @@ const WhatShouldWeDoFirst = () => {
         {/* HERO */}
         <section className="w-full overflow-hidden">
           {/* Watercolor image */}
-          <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
+          <div className="relative w-full" style={{ display: "block", lineHeight: 0 }}>
             <img
               src="/assets/start_hero_clean_v2.webp"
               alt="Begin your journey — Real Property Planning"
               className="w-full h-auto object-cover"
               loading="eager"
-              fetchPriority="high" sizes="100vw" width={1911} height={619} />
+              fetchPriority="high"
+              sizes="100vw"
+              width={1911}
+              height={619}
+            />
           </div>
-          <HeroBandTitle as="h1">
-            What Should We Do First?
-          </HeroBandTitle>
+          <HeroBandTitle as="h1">What Should We Do First?</HeroBandTitle>
         </section>
-
-
-
 
         {/* PATHWAYS */}
         <section id="pathways" className="py-10 lg:py-14 bg-secondary scroll-mt-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto mb-7 text-center">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                {"\u200B"}
-              </p>
+              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">{"\u200B"}</p>
               <h2 className="font-serif text-3xl text-navy font-semibold mb-3 md:text-2xl">
                 Choose the Topic That Best Describes Your Situation?
               </h2>
-              <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                {"\u200B"}
-              </p>
+              <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">{"\u200B"}</p>
             </div>
 
-            <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-stretch">
               {pathways.map((p) => (
                 <Link
                   key={p.href + p.letter}
                   to={p.href}
                   aria-label={`${p.title} — ${p.description} — Learn More`}
-                  className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  className="interior-tile interior-tile--guide tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                 >
                   <div className="tile-white__inner h-full relative">
                     <div className="tile-white__face h-full">
                       <div className="flex h-full flex-col">
-                        <div className="relative flex flex-1 flex-col items-center text-center" style={{ padding: "20px" }}>
+                        <div className="relative flex flex-1 flex-col items-start text-left">
                           <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
                             {p.title}
                           </h3>
-                          <p className="text-foreground mb-6 !text-[16px] !leading-[1.6]">
-                            {p.description}
-                          </p>
+                          <p className="text-foreground mb-6 !text-[16px] !leading-[1.6]">{p.description}</p>
                           <span className="gold-cta mt-auto">
                             Learn More
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <svg
+                              viewBox="0 0 24 24"
+                              width="14"
+                              height="14"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.4"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              aria-hidden="true"
+                            >
                               <polyline points="9 18 15 12 9 6" />
                             </svg>
                           </span>
@@ -227,7 +253,6 @@ const WhatShouldWeDoFirst = () => {
         </section>
         {/* Situation cards — full journey grid */}
         <SituationCards />
-
 
         {/* FAQ */}
         <PageFAQ
@@ -249,7 +274,17 @@ const WhatShouldWeDoFirst = () => {
               </p>
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <img src={iconPhone} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
+                  <img
+                    src={iconPhone}
+                    alt=""
+                    aria-hidden="true"
+                    className="w-5 h-5 mr-2 object-contain"
+                    loading="lazy"
+                    sizes="100vw"
+                    decoding="async"
+                    width={1024}
+                    height={1536}
+                  />
                   Start the Conversation
                 </Button>
               </Link>
