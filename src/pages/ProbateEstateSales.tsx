@@ -160,7 +160,7 @@ const ProbateEstateSales = () => {
                     key={s.href}
                     to={s.href}
                     aria-label={`${s.title} — ${s.description} — ${s.cta}`}
-                    className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                    className="interior-tile tile-white probate-wide-tile group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                     style={{ width: "380px" }}
                   >
                     <div className="tile-white__inner h-full relative">
@@ -284,7 +284,7 @@ const ProbateEstateSales = () => {
                     key={s.title}
                     to={s.href}
                     aria-label={`${s.title} — ${s.description} — ${s.cta}`}
-                    className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                    className="interior-tile tile-white probate-wide-tile group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                     style={{ width: "380px" }}
                   >
                     <div className="tile-white__inner h-full relative" style={{ minHeight: "unset" }}>
@@ -367,6 +367,13 @@ const ProbateEstateSales = () => {
             </div>
           </div>
         </section>
+
+        <style>{`
+          .probate-wide-tile {
+            max-width: 380px !important;
+            min-width: 320px !important;
+          }
+        `}</style>
 
         {/* SECTION 4 — 3-Step Timeline */}
         <section className="py-16 lg:py-20 bg-background">
