@@ -33,7 +33,10 @@ const PremiumTile = ({
   minHeight = "min-h-[252px] sm:min-h-[280px]",
   className = "",
 }: PremiumTileProps) => (
-  <Link to={to} className={`interior-tile tile-white group block h-full no-underline ${minHeight} ${className}`}>
+  <Link
+    to={to}
+    className={`interior-tile tile-white marquee-hover group block h-full no-underline ${minHeight} ${className}`}
+  >
     <div className="tile-white__inner h-full">
       <div className="tile-white__face h-full">
         <div className="flex h-full flex-col justify-between px-6 pb-6 pt-8 sm:px-7 sm:pb-7 sm:pt-9">
