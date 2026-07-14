@@ -105,14 +105,14 @@ const Articles = () => {
             style={{
               fontSize: "clamp(22px, 3vw, 32px)",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               marginBottom: 8,
               letterSpacing: "-0.01em",
             }}
           >
             All Articles
           </h2>
-          <div style={{ width: 48, height: 2, background: "#8B6914", marginBottom: 40, borderRadius: 1 }} />
+          <div style={{ width: 48, height: 2, background: "#7f2028", marginBottom: 40, borderRadius: 1 }} />
 
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {ARTICLES.map((article, i) => (
@@ -124,8 +124,8 @@ const Articles = () => {
                   alignItems: "center",
                   gap: 24,
                   padding: "20px 0",
-                  borderBottom: "1px solid #e0d8c8",
-                  borderTop: i === 0 ? "1px solid #e0d8c8" : "none",
+                  borderBottom: "1px solid #dfc9cb",
+                  borderTop: i === 0 ? "1px solid #dfc9cb" : "none",
                   textDecoration: "none",
                   transition: "background 0.2s ease",
                 }}
@@ -166,7 +166,7 @@ const Articles = () => {
                     style={{
                       fontSize: 18,
                       fontWeight: 700,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       margin: "0 0 8px",
                       lineHeight: 1.3,
                       fontFamily: "Georgia, serif",
@@ -177,7 +177,7 @@ const Articles = () => {
                   <p
                     style={{
                       fontSize: 14,
-                      color: "#4a5568",
+                      color: "#5e5954",
                       margin: "0 0 12px",
                       lineHeight: 1.6,
                       fontFamily: "Georgia, serif",
@@ -192,7 +192,7 @@ const Articles = () => {
                       fontWeight: 700,
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
-                      color: "#8B6914",
+                      color: "#7f2028",
                       display: "inline-flex",
                       alignItems: "center",
                       gap: 5,

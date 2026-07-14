@@ -3,8 +3,8 @@ import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const BLUE = "#1e6fbf";
-const BLUE_LIGHT = "#4da3e8";
+const BLUE = "#b62733";
+const BLUE_LIGHT = "#dc5964";
 
 const AFHROICalculator = () => {
   const calcRef = useRef<HTMLDivElement>(null);
@@ -43,18 +43,18 @@ const AFHROICalculator = () => {
       if (!pBtn || !dBtn) return;
       if (mode === "pct") {
         pBtn.style.cssText =
-          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#1e6fbf;color:#ffffff;outline:none;border-radius:6px 0 0 6px";
+          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#b62733;color:#ffffff;outline:none;border-radius:6px 0 0 6px";
         dBtn.style.cssText =
-          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#f5f2ec;color:#1a2744;outline:none;border-radius:0 6px 6px 0";
+          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#f5f2ec;color:#272421;outline:none;border-radius:0 6px 6px 0";
         if (inp) inp.placeholder = "25";
         if (hint) hint.textContent = "Enter percentage of purchase price";
         if (price > 0 && cur > 0 && inp) inp.value = String(Math.round((cur / price) * 100));
         else if (inp) inp.value = "";
       } else {
         dBtn.style.cssText =
-          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#1e6fbf;color:#ffffff;outline:none;border-radius:0 6px 6px 0";
+          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#b62733;color:#ffffff;outline:none;border-radius:0 6px 6px 0";
         pBtn.style.cssText =
-          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#f5f2ec;color:#1a2744;outline:none;border-radius:6px 0 0 6px";
+          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#f5f2ec;color:#272421;outline:none;border-radius:6px 0 0 6px";
         if (inp) inp.placeholder = "212500";
         if (hint) hint.textContent = "Enter dollar amount of down payment";
         if (price > 0 && cur > 0 && inp) inp.value = String(Math.round(price * (cur / 100)));
@@ -137,11 +137,11 @@ const AFHROICalculator = () => {
           .map(
             (b) =>
               `<div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
-            <span style="font-size:13px;color:#1a2744;width:150px;flex-shrink:0;font-weight:600">${b.label}</span>
-            <div style="flex:1;height:7px;background:#e0d8c8;border-radius:4px;overflow:hidden">
-              <div class="roi-bar-fill" data-pct="${Math.max(0, b.pct)}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#1e6fbf,#4da3e8);transition:width .9s ease"></div>
+            <span style="font-size:13px;color:#272421;width:150px;flex-shrink:0;font-weight:600">${b.label}</span>
+            <div style="flex:1;height:7px;background:#dfc9cb;border-radius:4px;overflow:hidden">
+              <div class="roi-bar-fill" data-pct="${Math.max(0, b.pct)}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#b62733,#dc5964);transition:width .9s ease"></div>
             </div>
-            <span style="font-size:13px;color:#1e6fbf;width:70px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
+            <span style="font-size:13px;color:#b62733;width:70px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
           </div>`,
           )
           .join("");
@@ -164,9 +164,9 @@ const AFHROICalculator = () => {
   const IS: React.CSSProperties = {
     width: "100%",
     background: "#ffffff",
-    border: `1.5px solid #c8d8e8`,
+    border: `1.5px solid #e8c8cb`,
     borderRadius: 6,
-    color: "#1a2744",
+    color: "#272421",
     fontSize: 15,
     padding: "10px 13px",
     fontFamily: "'Raleway',sans-serif",
@@ -183,7 +183,7 @@ const AFHROICalculator = () => {
     fontWeight: 700,
   };
   const PS: React.CSSProperties = {
-    border: `1px solid #c8d8e8`,
+    border: `1px solid #e8c8cb`,
     borderRadius: 10,
     padding: "1.25rem 1.4rem",
     marginBottom: 14,
@@ -226,7 +226,7 @@ const AFHROICalculator = () => {
                 fontWeight: 700,
                 letterSpacing: ".15em",
                 textTransform: "uppercase",
-                color: "#b8963e",
+                color: "#6f2a30",
                 marginBottom: 10,
                 fontFamily: "'Raleway',sans-serif",
               }}
@@ -238,7 +238,7 @@ const AFHROICalculator = () => {
                 fontSize: "clamp(28px,4vw,42px)",
                 fontFamily: "'Raleway',sans-serif",
                 fontWeight: 700,
-                color: "#1a2744",
+                color: "#272421",
                 marginBottom: 12,
                 lineHeight: 1.2,
               }}
@@ -249,7 +249,7 @@ const AFHROICalculator = () => {
               style={{
                 fontSize: 18,
                 fontFamily: "'Raleway',sans-serif",
-                color: "#1e2a38",
+                color: "#302b26",
                 lineHeight: 1.7,
                 maxWidth: 600,
                 margin: 0,
@@ -286,13 +286,13 @@ const AFHROICalculator = () => {
               >
                 Adult Family Home
               </div>
-              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#1a2744" }}>
+              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#272421" }}>
                 AFH <span style={{ color: BLUE }}>ROI</span> Calculator
               </h2>
               <div
                 style={{
                   fontSize: 13,
-                  color: "#5a6a7a",
+                  color: "#7a5a5d",
                   marginTop: 6,
                   letterSpacing: ".1em",
                   textTransform: "uppercase",
@@ -390,7 +390,7 @@ const AFHROICalculator = () => {
                         fontFamily: "Raleway,sans-serif",
                         border: "none",
                         background: "#f5f2ec",
-                        color: "#1a2744",
+                        color: "#272421",
                         outline: "none",
                         borderRadius: "0 6px 6px 0",
                       }}
@@ -415,7 +415,7 @@ const AFHROICalculator = () => {
                     = —
                   </span>
                 </div>
-                <div id="dp-hint" style={{ fontSize: 12, color: "#5a6a7a", marginTop: 6 }}>
+                <div id="dp-hint" style={{ fontSize: 12, color: "#7a5a5d", marginTop: 6 }}>
                   Enter percentage of purchase price
                 </div>
               </div>
@@ -484,8 +484,8 @@ const AFHROICalculator = () => {
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget;
-                el.style.background = "#1a2744";
-                el.style.borderColor = "#1a2744";
+                el.style.background = "#272421";
+                el.style.borderColor = "#272421";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget;
@@ -536,7 +536,7 @@ const AFHROICalculator = () => {
                 >
                   —
                 </div>
-                <div style={{ fontSize: 14, color: "#1a2744", marginTop: 8 }}>cash-on-cash return</div>
+                <div style={{ fontSize: 14, color: "#272421", marginTop: 8 }}>cash-on-cash return</div>
               </div>
               {/* Results metric tiles — 3-col desktop, 2-col mobile */}
               <div
@@ -573,7 +573,7 @@ const AFHROICalculator = () => {
                     >
                       {lbl}
                     </div>
-                    <div id={id} style={{ fontSize: 18, fontWeight: 700, color: "#1a2744", minHeight: 28 }}>
+                    <div id={id} style={{ fontSize: 18, fontWeight: 700, color: "#272421", minHeight: 28 }}>
                       —
                     </div>
                   </div>
@@ -590,7 +590,7 @@ const AFHROICalculator = () => {
               <div
                 style={{
                   fontSize: 12,
-                  color: "#5a6a7a",
+                  color: "#7a5a5d",
                   lineHeight: 1.8,
                   padding: "12px 16px",
                   border: `1px solid ${BLUE}20`,
@@ -620,7 +620,7 @@ const AFHROICalculator = () => {
                   <strong style={{ color: BLUE, fontSize: 15, display: "block" }}>
                     Ready to analyze a specific deal?
                   </strong>
-                  <p style={{ fontSize: 13, color: "#1a2744", marginTop: 3 }}>
+                  <p style={{ fontSize: 13, color: "#272421", marginTop: 3 }}>
                     David Stein — Licensed Broker &amp; Certified Appraiser · eXp Realty · 20+ years AFH experience
                   </p>
                 </div>
@@ -651,7 +651,7 @@ const AFHROICalculator = () => {
               style={{
                 textAlign: "center",
                 fontSize: 13,
-                color: "#5a6a7a",
+                color: "#7a5a5d",
                 letterSpacing: ".12em",
                 textTransform: "uppercase",
                 marginTop: "1.75rem",

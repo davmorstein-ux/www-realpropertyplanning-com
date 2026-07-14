@@ -10,7 +10,7 @@ const tiles = [
     imgAlt: "Older couple reviewing an estate plan together at home",
     title: "I Want to Plan Ahead",
     href: "/planning-before-a-crisis",
-    color: "#1a2744",
+    color: "#272421",
   },
   {
     imgSrc: tileHelping,
@@ -24,7 +24,7 @@ const tiles = [
     imgAlt: "Family reviewing an estate property plan with documents",
     title: "I'm Handling an Estate",
     href: "/estate-probate-inherited-property",
-    color: "#1a2744",
+    color: "#272421",
   },
   {
     imgSrc: tileProfessionals,
@@ -104,14 +104,14 @@ const HomepageFunnel = () => (
         font-weight: 700 !important;
         letter-spacing: 0.18em !important;
         text-transform: uppercase !important;
-        color: #b8963e !important;
+        color: #6f2a30 !important;
         margin: 0 0 0.75rem 0 !important;
       }
       .rpp-section-heading {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
         font-size: 2.25rem !important;
         font-weight: 600 !important;
-        color: #1a2744 !important;
+        color: #272421 !important;
         margin: 0 !important;
         line-height: 1.2 !important;
       }
@@ -156,7 +156,7 @@ const HomepageFunnel = () => (
                   width="22"
                   height="22"
                   fill="none"
-                  stroke="#d4a843"
+                  stroke="#cd4a55"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"

@@ -113,11 +113,11 @@ const REVIEWS = [
 const StarRating = () => (
   <div style={{ display: "flex", gap: 3, alignItems: "center", marginBottom: 8 }}>
     {[1, 2, 3, 4, 5].map((i) => (
-      <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#1a56db">
+      <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#ca2b38">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
       </svg>
     ))}
-    <span style={{ fontSize: 16, fontWeight: 700, color: "#1a56db", marginLeft: 6 }}>5.0</span>
+    <span style={{ fontSize: 16, fontWeight: 700, color: "#ca2b38", marginLeft: 6 }}>5.0</span>
   </div>
 );
 
@@ -138,14 +138,14 @@ const AFHRealEstateBroker = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
               fontSize: "clamp(18px, 2vw, 20px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               maxWidth: 680,
             }}
@@ -180,7 +180,7 @@ const AFHRealEstateBroker = () => (
                   fontWeight: 600,
                   letterSpacing: "0.22em",
                   textTransform: "uppercase",
-                  color: "#5a3200",
+                  color: "#481216",
                   margin: "0 0 14px",
                 }}
               >
@@ -191,14 +191,14 @@ const AFHRealEstateBroker = () => (
                   fontSize: "clamp(24px, 3.5vw, 36px)",
                   fontFamily: "Georgia, serif",
                   fontWeight: 700,
-                  color: "#0a1628",
+                  color: "#280a0c",
                   lineHeight: 1.2,
                   margin: "0 0 20px",
                 }}
               >
                 Real Property Planning
               </h2>
-              <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 36, borderRadius: 1 }} />
+              <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 36, borderRadius: 1 }} />
               <ProviderTile
                 name="David Stein"
                 title="President, Real Property Planning"
@@ -217,8 +217,8 @@ const AFHRealEstateBroker = () => (
                 style={{
                   marginTop: 16,
                   background: "#fff",
-                  border: "1px solid #e0d8c8",
-                  borderLeft: "4px solid #2c3a48",
+                  border: "1px solid #dfc9cb",
+                  borderLeft: "4px solid #3f3a35",
                   borderRadius: 6,
                   padding: "18px 22px",
                 }}
@@ -227,12 +227,12 @@ const AFHRealEstateBroker = () => (
                   style={{
                     fontSize: 16,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.8,
                     margin: 0,
                   }}
                 >
-                  WA Licensed Real Estate Broker · eXp Realty · License #113972
+                  WA Licensed Real Estate Broker · eXp Realty · License #6c171e
                   <br />
                   WA Certified Residential Appraiser · Stein Appraisal
                   <br />
@@ -250,7 +250,7 @@ const AFHRealEstateBroker = () => (
                   fontWeight: 600,
                   letterSpacing: "0.22em",
                   textTransform: "uppercase",
-                  color: "#5a3200",
+                  color: "#481216",
                   margin: "0 0 14px",
                 }}
               >
@@ -261,14 +261,14 @@ const AFHRealEstateBroker = () => (
                   fontSize: "clamp(22px, 2.5vw, 30px)",
                   fontFamily: "Georgia, serif",
                   fontWeight: 700,
-                  color: "#0a1628",
+                  color: "#280a0c",
                   lineHeight: 1.2,
                   margin: "0 0 20px",
                 }}
               >
                 Why You Need a Specialist
               </h3>
-              <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+              <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
               <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 {[
                   {
@@ -292,8 +292,8 @@ const AFHRealEstateBroker = () => (
                     key={i}
                     style={{
                       background: "#fff",
-                      border: "1px solid #e0d8c8",
-                      borderLeft: "4px solid #b87333",
+                      border: "1px solid #dfc9cb",
+                      borderLeft: "4px solid #b13a44",
                       borderRadius: 6,
                       padding: "20px 22px",
                     }}
@@ -303,7 +303,7 @@ const AFHRealEstateBroker = () => (
                         fontSize: 18,
                         fontFamily: "Georgia, serif",
                         fontWeight: 700,
-                        color: "#0a1628",
+                        color: "#280a0c",
                         margin: "0 0 8px",
                       }}
                     >
@@ -313,7 +313,7 @@ const AFHRealEstateBroker = () => (
                       style={{
                         fontSize: 16,
                         fontFamily: "'Raleway', sans-serif",
-                        color: "#1e2a38",
+                        color: "#302b26",
                         lineHeight: 1.8,
                         margin: 0,
                       }}
@@ -338,7 +338,7 @@ const AFHRealEstateBroker = () => (
                 fontWeight: 600,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "#8B6914",
+                color: "#7f2028",
                 margin: "0 0 14px",
               }}
             >
@@ -349,21 +349,21 @@ const AFHRealEstateBroker = () => (
                 fontSize: "clamp(28px, 3.5vw, 40px)",
                 fontFamily: "Georgia, serif",
                 fontWeight: 700,
-                color: "#0a1628",
+                color: "#280a0c",
                 margin: "0 0 16px",
                 lineHeight: 1.2,
               }}
             >
               What Clients Are Saying
             </h2>
-            <div style={{ width: 48, height: 3, background: "#8B6914", margin: "0 auto 20px", borderRadius: 1 }} />
+            <div style={{ width: 48, height: 3, background: "#7f2028", margin: "0 auto 20px", borderRadius: 1 }} />
             <div
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 12,
                 background: "#fff",
-                border: "1px solid #e0d8c8",
+                border: "1px solid #dfc9cb",
                 borderRadius: 8,
                 padding: "14px 28px",
                 flexWrap: "wrap",
@@ -372,13 +372,13 @@ const AFHRealEstateBroker = () => (
             >
               <div style={{ display: "flex", gap: 4 }}>
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <svg key={i} width="24" height="24" viewBox="0 0 24 24" fill="#1a56db">
+                  <svg key={i} width="24" height="24" viewBox="0 0 24 24" fill="#ca2b38">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ))}
               </div>
-              <span style={{ fontSize: 20, fontFamily: "Georgia, serif", fontWeight: 700, color: "#0a1628" }}>5.0</span>
-              <span style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#1e2a38" }}>
+              <span style={{ fontSize: 20, fontFamily: "Georgia, serif", fontWeight: 700, color: "#280a0c" }}>5.0</span>
+              <span style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#302b26" }}>
                 · 16 Reviews on Zillow
               </span>
             </div>
@@ -390,8 +390,8 @@ const AFHRealEstateBroker = () => (
                 key={i}
                 style={{
                   background: "#ffffff",
-                  border: "1px solid #e0d8c8",
-                  borderTop: "3px solid #1a56db",
+                  border: "1px solid #dfc9cb",
+                  borderTop: "3px solid #ca2b38",
                   borderRadius: 6,
                   padding: "24px 22px 26px",
                   display: "flex",
@@ -404,7 +404,7 @@ const AFHRealEstateBroker = () => (
                   style={{
                     fontSize: 14,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#4a5568",
+                    color: "#5e5954",
                     margin: 0,
                     fontWeight: 500,
                   }}
@@ -416,7 +416,7 @@ const AFHRealEstateBroker = () => (
                     fontSize: 17,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: 0,
                     lineHeight: 1.3,
                   }}
@@ -427,7 +427,7 @@ const AFHRealEstateBroker = () => (
                   style={{
                     fontSize: 16,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.8,
                     margin: 0,
                   }}
@@ -444,7 +444,7 @@ const AFHRealEstateBroker = () => (
                         fontWeight: 600,
                         letterSpacing: "0.08em",
                         background: "#edf2ff",
-                        color: "#1a56db",
+                        color: "#ca2b38",
                         padding: "3px 10px",
                         borderRadius: 20,
                       }}
@@ -472,7 +472,7 @@ const AFHRealEstateBroker = () => (
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
                 color: "#ffffff",
-                background: "#1a56db",
+                background: "#ca2b38",
                 padding: "14px 32px",
                 borderRadius: 4,
                 textDecoration: "none",

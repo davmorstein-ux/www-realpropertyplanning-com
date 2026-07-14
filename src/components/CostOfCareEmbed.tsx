@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { CARE_TYPES, formatCurrency, COC_TEAL } from "@/lib/careTypes";
 
-const NAVY = "#1a2744";
+const NAVY = "#272421";
 const DEFAULT_INFLATION = 3.5;
 const YEARS_OUT_OPTIONS = [0, 5, 10, 15, 20];
 const YEARS_OF_CARE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -20,7 +20,7 @@ const stepperBtn: React.CSSProperties = {
   fontWeight: 700,
   color: NAVY,
   background: "#f5f2ec",
-  border: "1px solid #ddd8cc",
+  border: "1px solid #dccdce",
   cursor: "pointer",
   display: "flex",
   alignItems: "center",
@@ -36,7 +36,7 @@ const pillBtn = (active: boolean): React.CSSProperties => ({
   fontFamily: "'Raleway', sans-serif",
   color: active ? "#ffffff" : NAVY,
   background: active ? COC_TEAL : "#f5f2ec",
-  border: `1px solid ${active ? COC_TEAL : "#ddd8cc"}`,
+  border: `1px solid ${active ? COC_TEAL : "#dccdce"}`,
   cursor: "pointer",
 });
 
@@ -62,7 +62,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
     <div
       style={{
         background: "#ffffff",
-        border: "2px solid #ddd8cc",
+        border: "2px solid #dccdce",
         borderRadius: 14,
         padding: "1.5rem",
         maxWidth: 640,
@@ -76,7 +76,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           fontWeight: 700,
           letterSpacing: "0.16em",
           textTransform: "uppercase",
-          color: "#b8963e",
+          color: "#6f2a30",
           margin: "0 0 6px",
         }}
       >
@@ -121,7 +121,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             <div
               style={{
                 background: "#f5f2ec",
-                border: "2px solid #ddd8cc",
+                border: "2px solid #dccdce",
                 borderRadius: 8,
                 padding: "6px 14px",
                 textAlign: "center",
@@ -168,7 +168,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             <div
               style={{
                 background: "#f5f2ec",
-                border: "2px solid #ddd8cc",
+                border: "2px solid #dccdce",
                 borderRadius: 8,
                 padding: "6px 14px",
                 textAlign: "center",
@@ -250,14 +250,14 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           >
             {formatCurrency(projectedWaMonthly)}
           </div>
-          <div style={{ fontSize: 17, fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif" }}>
+          <div style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif" }}>
             per month
           </div>
         </div>
         <div
           style={{
             background: "#f5f2ec",
-            border: "1px solid #ddd8cc",
+            border: "1px solid #dccdce",
             borderRadius: 10,
             padding: "12px",
             textAlign: "center",
@@ -286,7 +286,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           >
             {formatCurrency(projectedNationalMonthly)}
           </div>
-          <div style={{ fontSize: 17, fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif" }}>
+          <div style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif" }}>
             per month
           </div>
         </div>
@@ -326,7 +326,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           {formatCurrency(totalWaCost)}
         </div>
         <div
-          style={{ fontSize: 17, fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif", marginTop: 2 }}
+          style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif", marginTop: 2 }}
         >
           in Washington · vs. {formatCurrency(totalNationalCost)} nationally
         </div>
@@ -336,7 +336,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         style={{
           fontSize: 17,
           fontFamily: "'Raleway', sans-serif",
-          color: "#374151",
+          color: "#49443f",
           margin: "0 0 16px",
           lineHeight: 1.5,
         }}

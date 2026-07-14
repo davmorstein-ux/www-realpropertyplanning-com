@@ -29,7 +29,7 @@ const LeadMagnetBlock = () => {
             <div
               className="mx-auto mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full relative overflow-hidden"
               style={{
-                background: "linear-gradient(to bottom, #f5c842 0%, #c49a1a 100%)",
+                background: "linear-gradient(to bottom, #d7606a 0%, #b22c37 100%)",
                 border: "1px solid rgba(255,255,255,0.2)",
                 boxShadow: "0 8px 16px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.3), inset 0 -2px 4px rgba(0,0,0,0.3)",
               }}
@@ -72,7 +72,7 @@ const LeadMagnetBlock = () => {
                   aria-hidden="true"
                   className="relative flex h-7 w-7 items-center justify-center rounded-full overflow-hidden shrink-0"
                   style={{
-                    background: "linear-gradient(to bottom, #f5c842 0%, #c49a1a 100%)",
+                    background: "linear-gradient(to bottom, #d7606a 0%, #b22c37 100%)",
                     border: "1px solid rgba(255,255,255,0.2)",
                     boxShadow: "0 8px 16px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.3), inset 0 -2px 4px rgba(0,0,0,0.3)",
                   }}

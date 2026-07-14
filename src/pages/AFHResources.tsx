@@ -86,14 +86,14 @@ const AFHResources = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2e3e",
+              color: "#342e28",
               lineHeight: 1.85,
               margin: 0,
               maxWidth: 680,
@@ -114,49 +114,49 @@ const AFHResources = () => (
             title: "Getting Started",
             href: "/afh-club/getting-started",
             img: "/afh-getting-started.webp",
-            placeholder: "#2c3a48",
+            placeholder: "#3f3a35",
           },
           {
             title: "Licensing & Certification",
             href: "/afh-club/licensing-certification",
             img: "/afh-licensing-certification.webp",
-            placeholder: "#2c3e4e",
+            placeholder: "#433d37",
           },
           {
             title: "Training & Education",
             href: "/afh-club/training-education",
             img: "/afh-training-education.webp",
-            placeholder: "#354555",
+            placeholder: "#4b453f",
           },
           {
             title: "Building & Inspection",
             href: "/afh-club/building-inspection",
             img: "/afh-building-inspection.webp",
-            placeholder: "#2e3d4d",
+            placeholder: "#433d38",
           },
           {
             title: "Costs & Fees",
             href: "/afh-club/costs-fees",
             img: "/afh-costs-fees.webp",
-            placeholder: "#384858",
+            placeholder: "#4e4842",
           },
           {
             title: "Buying or Selling an AFH",
             href: "/afh-club/buying-selling",
             img: "/afh-buying-selling.webp",
-            placeholder: "#2a3a4a",
+            placeholder: "#403a34",
           },
           {
             title: "Regulations & Compliance",
             href: "/afh-club/regulations-compliance",
             img: "/afh-regulations-compliance.webp",
-            placeholder: "#334353",
+            placeholder: "#49433d",
           },
           {
             title: "Find a Professional",
             href: "/afh-club/find-a-professional",
             img: "/afh-find-professional.webp",
-            placeholder: "#3c4c5c",
+            placeholder: "#524c46",
           },
           {
             title: "AFH Ownership: Individual or LLC?",
@@ -174,14 +174,14 @@ const AFHResources = () => (
             fontSize: "clamp(24px, 3.5vw, 36px)",
             fontFamily: "Georgia, serif",
             fontWeight: 700,
-            color: "#0a1628",
+            color: "#280a0c",
             lineHeight: 1.2,
             margin: "0 0 16px",
           }}
         >
           All Topics
         </h2>
-        <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 40, borderRadius: 1 }} />
+        <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 40, borderRadius: 1 }} />
         <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
           {TOPICS.map((topic, i) => (
             <Link
@@ -205,7 +205,7 @@ const AFHResources = () => (
                   height: 120,
                   borderRadius: 4,
                   overflow: "hidden",
-                  background: "#2c3a48",
+                  background: "#3f3a35",
                 }}
               >
                 <img
@@ -223,7 +223,7 @@ const AFHResources = () => (
                     fontSize: 20,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: "0 0 8px",
                   }}
                 >

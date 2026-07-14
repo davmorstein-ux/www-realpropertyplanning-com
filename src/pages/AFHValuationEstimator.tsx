@@ -115,8 +115,8 @@ const AFHValuationEstimator = () => {
           .map(
             (b) =>
               `<div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
-            <span style="font-size:13px;color:#1a2744;width:160px;flex-shrink:0;font-weight:600">${b.label}</span>
-            <div style="flex:1;height:7px;background:#e0d8c8;border-radius:4px;overflow:hidden">
+            <span style="font-size:13px;color:#272421;width:160px;flex-shrink:0;font-weight:600">${b.label}</span>
+            <div style="flex:1;height:7px;background:#dfc9cb;border-radius:4px;overflow:hidden">
               <div class="val-bar-fill" data-pct="${b.pct}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#1a7a4a,#2ecc71);transition:width .9s ease"></div>
             </div>
             <span style="font-size:13px;color:#1a7a4a;width:80px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
@@ -156,7 +156,7 @@ const AFHValuationEstimator = () => {
     background: "#ffffff",
     border: `1.5px solid #b8d8c0`,
     borderRadius: 6,
-    color: "#1a2744",
+    color: "#272421",
     fontSize: 15,
     padding: "10px 13px",
     fontFamily: "'Raleway',sans-serif",
@@ -219,7 +219,7 @@ const AFHValuationEstimator = () => {
                 fontWeight: 700,
                 letterSpacing: ".15em",
                 textTransform: "uppercase",
-                color: "#b8963e",
+                color: "#6f2a30",
                 marginBottom: 10,
                 fontFamily: "'Raleway',sans-serif",
               }}
@@ -231,7 +231,7 @@ const AFHValuationEstimator = () => {
                 fontSize: "clamp(28px,4vw,42px)",
                 fontFamily: "'Raleway',sans-serif",
                 fontWeight: 700,
-                color: "#1a2744",
+                color: "#272421",
                 marginBottom: 12,
                 lineHeight: 1.2,
               }}
@@ -242,7 +242,7 @@ const AFHValuationEstimator = () => {
               style={{
                 fontSize: 18,
                 fontFamily: "'Raleway',sans-serif",
-                color: "#1e2a38",
+                color: "#302b26",
                 lineHeight: 1.7,
                 maxWidth: 600,
                 margin: 0,
@@ -280,13 +280,13 @@ const AFHValuationEstimator = () => {
               >
                 Adult Family Home
               </div>
-              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#1a2744" }}>
+              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#272421" }}>
                 AFH <span style={{ color: GREEN }}>Valuation</span> Estimator
               </h2>
               <div
                 style={{
                   fontSize: 13,
-                  color: "#5a6a7a",
+                  color: "#7a5a5d",
                   marginTop: 6,
                   letterSpacing: ".1em",
                   textTransform: "uppercase",
@@ -312,7 +312,7 @@ const AFHValuationEstimator = () => {
                 <div>
                   <label style={labelStyle}>Annual net income ($)</label>
                   <input type="number" id="v-net" placeholder="124000" style={inputStyle} />
-                  <div style={{ fontSize: 12, color: "#5a6a7a", marginTop: 5 }}>
+                  <div style={{ fontSize: 12, color: "#7a5a5d", marginTop: 5 }}>
                     After expenses, before owner salary
                   </div>
                 </div>
@@ -424,7 +424,7 @@ const AFHValuationEstimator = () => {
                   </select>
                 </div>
               </div>
-              <div style={{ fontSize: 12, color: "#5a6a7a" }}>Leave property value blank if selling business only.</div>
+              <div style={{ fontSize: 12, color: "#7a5a5d" }}>Leave property value blank if selling business only.</div>
             </div>
 
             {/* Calculate */}
@@ -448,8 +448,8 @@ const AFHValuationEstimator = () => {
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget;
-                el.style.background = "#1a2744";
-                el.style.borderColor = "#1a2744";
+                el.style.background = "#272421";
+                el.style.borderColor = "#272421";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget;
@@ -500,7 +500,7 @@ const AFHValuationEstimator = () => {
                 >
                   —
                 </div>
-                <div id="v-range" style={{ fontSize: 14, color: "#1a2744", marginTop: 8 }}>
+                <div id="v-range" style={{ fontSize: 14, color: "#272421", marginTop: 8 }}>
                   Range: — to —
                 </div>
               </div>
@@ -539,10 +539,10 @@ const AFHValuationEstimator = () => {
                     >
                       {lbl}
                     </div>
-                    <div id={id} style={{ fontSize: 18, fontWeight: 700, color: "#1a2744", minHeight: 28 }}>
+                    <div id={id} style={{ fontSize: 18, fontWeight: 700, color: "#272421", minHeight: 28 }}>
                       —
                     </div>
-                    {sub && <div style={{ fontSize: 11, color: "#5a6a7a", marginTop: 3 }}>{sub}</div>}
+                    {sub && <div style={{ fontSize: 11, color: "#7a5a5d", marginTop: 3 }}>{sub}</div>}
                   </div>
                 ))}
               </div>
@@ -563,14 +563,14 @@ const AFHValuationEstimator = () => {
                   padding: "1rem 1.25rem",
                   marginBottom: 12,
                   fontSize: 14,
-                  color: "#1a2744",
+                  color: "#272421",
                   lineHeight: 2,
                 }}
               />
               <div
                 style={{
                   fontSize: 12,
-                  color: "#5a6a7a",
+                  color: "#7a5a5d",
                   lineHeight: 1.8,
                   padding: "12px 16px",
                   border: `1px solid ${GREEN}18`,
@@ -600,7 +600,7 @@ const AFHValuationEstimator = () => {
                   <strong style={{ color: GREEN, fontSize: 15, display: "block" }}>
                     Get a certified professional valuation
                   </strong>
-                  <p style={{ fontSize: 13, color: "#1a2744", marginTop: 3 }}>
+                  <p style={{ fontSize: 13, color: "#272421", marginTop: 3 }}>
                     David Stein · Licensed Broker &amp; Certified Appraiser · eXp Realty · 20+ years AFH experience
                   </p>
                 </div>
@@ -631,7 +631,7 @@ const AFHValuationEstimator = () => {
               style={{
                 textAlign: "center",
                 fontSize: 13,
-                color: "#5a6a7a",
+                color: "#7a5a5d",
                 letterSpacing: ".12em",
                 textTransform: "uppercase",
                 marginTop: "1.75rem",

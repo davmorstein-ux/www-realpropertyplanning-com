@@ -105,7 +105,7 @@ const AFHBuildingInspection = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
           <p
@@ -115,7 +115,7 @@ const AFHBuildingInspection = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -126,20 +126,20 @@ const AFHBuildingInspection = () => (
               fontSize: "clamp(32px, 5vw, 50px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#1a2530",
+              color: "#292521",
               lineHeight: 1.15,
               margin: "0 0 20px",
             }}
           >
             AFH Building Requirements & Inspections
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2e3e",
+              color: "#342e28",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -163,7 +163,7 @@ const AFHBuildingInspection = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -174,19 +174,19 @@ const AFHBuildingInspection = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             What Is WABO?
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -199,7 +199,7 @@ const AFHBuildingInspection = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -213,7 +213,7 @@ const AFHBuildingInspection = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 28px",
             }}
@@ -233,9 +233,9 @@ const AFHBuildingInspection = () => (
                 fontWeight: 700,
                 letterSpacing: "0.14em",
                 textTransform: "uppercase",
-                color: "#5a3200",
+                color: "#481216",
                 textDecoration: "none",
-                borderBottom: "1px solid #b87333",
+                borderBottom: "1px solid #b13a44",
                 paddingBottom: 2,
               }}
             >
@@ -251,9 +251,9 @@ const AFHBuildingInspection = () => (
                 fontWeight: 700,
                 letterSpacing: "0.14em",
                 textTransform: "uppercase",
-                color: "#5a3200",
+                color: "#481216",
                 textDecoration: "none",
-                borderBottom: "1px solid #b87333",
+                borderBottom: "1px solid #b13a44",
                 paddingBottom: 2,
               }}
             >
@@ -273,7 +273,7 @@ const AFHBuildingInspection = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -284,19 +284,19 @@ const AFHBuildingInspection = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             New Build vs. Existing Home vs. Buy an AFH
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 16, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -310,8 +310,8 @@ const AFHBuildingInspection = () => (
                 key={item.title}
                 style={{
                   background: "#fff",
-                  border: "1px solid #ddd8cc",
-                  borderTop: "4px solid #2c3a48",
+                  border: "1px solid #dccdce",
+                  borderTop: "4px solid #3f3a35",
                   borderRadius: 6,
                   padding: "28px 24px",
                 }}
@@ -322,7 +322,7 @@ const AFHBuildingInspection = () => (
                     fontSize: 18,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: "0 0 12px",
                   }}
                 >
@@ -332,7 +332,7 @@ const AFHBuildingInspection = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.75,
                     margin: "0 0 16px",
                   }}
@@ -346,7 +346,7 @@ const AFHBuildingInspection = () => (
                     fontWeight: 700,
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: "#2c6e9e",
+                    color: "#9e2c35",
                     margin: "0 0 6px",
                   }}
                 >
@@ -358,7 +358,7 @@ const AFHBuildingInspection = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       margin: "0 0 3px",
                       paddingLeft: 10,
                     }}
@@ -385,7 +385,7 @@ const AFHBuildingInspection = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       margin: "0 0 3px",
                       paddingLeft: 10,
                     }}
@@ -409,7 +409,7 @@ const AFHBuildingInspection = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -420,19 +420,19 @@ const AFHBuildingInspection = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Common Building Modifications
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 16, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 28px",
             }}
@@ -446,8 +446,8 @@ const AFHBuildingInspection = () => (
                 key={i}
                 style={{
                   padding: "20px 0",
-                  borderBottom: "1px solid #ddd8cc",
-                  borderTop: i === 0 ? "1px solid #ddd8cc" : "none",
+                  borderBottom: "1px solid #dccdce",
+                  borderTop: i === 0 ? "1px solid #dccdce" : "none",
                   display: "flex",
                   gap: 20,
                   alignItems: "flex-start",
@@ -459,7 +459,7 @@ const AFHBuildingInspection = () => (
                     width: 8,
                     height: 8,
                     borderRadius: "50%",
-                    background: "#b87333",
+                    background: "#b13a44",
                     marginTop: 8,
                   }}
                 />
@@ -469,7 +469,7 @@ const AFHBuildingInspection = () => (
                       fontSize: 18,
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       margin: "0 0 4px",
                     }}
                   >
@@ -479,7 +479,7 @@ const AFHBuildingInspection = () => (
                     style={{
                       fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       lineHeight: 1.7,
                       margin: 0,
                     }}
@@ -494,8 +494,8 @@ const AFHBuildingInspection = () => (
             style={{
               marginTop: 28,
               background: "#fdf3e8",
-              border: "1px solid #b87333",
-              borderLeft: "4px solid #b87333",
+              border: "1px solid #b13a44",
+              borderLeft: "4px solid #b13a44",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -504,7 +504,7 @@ const AFHBuildingInspection = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1a2a3a",
+                color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
               }}
@@ -527,7 +527,7 @@ const AFHBuildingInspection = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -538,14 +538,14 @@ const AFHBuildingInspection = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             The Building Inspection Process
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           {[
             {
               step: "1",
@@ -590,7 +590,7 @@ const AFHBuildingInspection = () => (
                   width: 40,
                   height: 40,
                   borderRadius: "50%",
-                  background: "#2c3a48",
+                  background: "#3f3a35",
                   color: "#e8e2d9",
                   display: "flex",
                   alignItems: "center",
@@ -608,7 +608,7 @@ const AFHBuildingInspection = () => (
                     fontSize: 17,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: "0 0 6px",
                   }}
                 >
@@ -618,7 +618,7 @@ const AFHBuildingInspection = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.75,
                     margin: 0,
                   }}
@@ -637,7 +637,7 @@ const AFHBuildingInspection = () => (
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 600,
-                color: "#2c6e9e",
+                color: "#9e2c35",
                 textDecoration: "underline",
               }}
             >
@@ -651,7 +651,7 @@ const AFHBuildingInspection = () => (
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 600,
-                color: "#2c6e9e",
+                color: "#9e2c35",
                 textDecoration: "underline",
               }}
             >
@@ -665,7 +665,7 @@ const AFHBuildingInspection = () => (
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 600,
-                color: "#2c6e9e",
+                color: "#9e2c35",
                 textDecoration: "underline",
               }}
             >

@@ -60,7 +60,7 @@ const WillsTrustsOtherOptions = () => {
         <section style={{ backgroundColor: "hsl(40 20% 98%)", padding: "48px 24px 64px" }}>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
 
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B6914", marginBottom: 12 }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#7f2028", marginBottom: 12 }}>
               Estate Planning · Washington State
             </p>
 
@@ -72,7 +72,7 @@ const WillsTrustsOtherOptions = () => {
             </h2>
 
             <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.75, color: "hsl(220 35% 18%)", marginBottom: 32, borderLeft: "4px solid #C9A84C", paddingLeft: 20 }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.75, color: "hsl(220 35% 18%)", marginBottom: 32, borderLeft: "4px solid #c3525c", paddingLeft: 20 }}>
               A house is never just a house. It is memory, leverage, shelter, status, and, for many families, the largest piece of wealth they will ever hand down. So when the time comes to decide how that property should move to the next generation, the question is not only legal. It is emotional, financial, and surprisingly personal.
             </p>
 
@@ -165,7 +165,7 @@ const WillsTrustsOtherOptions = () => {
             </p>
 
             {/* Closing pull quote */}
-            <blockquote style={{ borderLeft: "4px solid #C9A84C", paddingLeft: 20, margin: "40px 0", fontStyle: "italic", fontSize: 20, lineHeight: 1.7, color: "hsl(220 35% 18%)", fontFamily: "'DM Sans', serif" }}>
+            <blockquote style={{ borderLeft: "4px solid #c3525c", paddingLeft: 20, margin: "40px 0", fontStyle: "italic", fontSize: 20, lineHeight: 1.7, color: "hsl(220 35% 18%)", fontFamily: "'DM Sans', serif" }}>
               "Good estate planning is not a final gesture. It is a well-made transition."
             </blockquote>
 
@@ -183,7 +183,7 @@ const WillsTrustsOtherOptions = () => {
                 <li key={r.href}>
                   <a
                     href={r.href}
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 17, fontWeight: 600, color: "#1d4ed8", textDecoration: "underline", textUnderlineOffset: 3 }}
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 17, fontWeight: 600, color: "#ca2b38", textDecoration: "underline", textUnderlineOffset: 3 }}
                   >
                     {r.label}
                   </a>

@@ -133,7 +133,7 @@ const Executors = () => (
                   style={{
                     padding: "14px 20px",
                     minHeight: 106,
-                    background: "linear-gradient(180deg, #24406e 0%, #1B3A6B 100%)",
+                    background: "linear-gradient(180deg, #524940 0%, #6b1b22 100%)",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
@@ -162,7 +162,7 @@ const Executors = () => (
                       fontSize: 14,
                       letterSpacing: "0.03em",
                       textTransform: "uppercase",
-                      color: "#c9d4e8",
+                      color: "#e8c9cc",
                       fontWeight: 700,
                       lineHeight: 1.4,
                     }}
@@ -196,7 +196,7 @@ const Executors = () => (
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
                         textAlign: "center",
-                        color: "#1B3A6B",
+                        color: "#6b1b22",
                         marginBottom: 10,
                         lineHeight: 1.2,
                       }}
@@ -244,8 +244,8 @@ const Executors = () => (
                       alignItems: "center",
                       justifyContent: "center",
                       gap: 8,
-                      background: "linear-gradient(180deg, #24406e 0%, #1B3A6B 55%, #142c52 100%)",
-                      boxShadow: "0 3px 0 0 #0f2140, 0 5px 12px rgba(27,58,107,0.35)",
+                      background: "linear-gradient(180deg, #524940 0%, #6b1b22 55%, #521419 100%)",
+                      boxShadow: "0 3px 0 0 #400f13, 0 5px 12px rgba(27,58,107,0.35)",
                       borderRadius: 8,
                       padding: "13px 16px",
                       fontFamily: "'Raleway', sans-serif",

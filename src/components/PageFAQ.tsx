@@ -15,8 +15,8 @@ interface PageFAQProps {
   plain?: boolean;
 }
 
-const NAVY = "#1a2744";
-const ACCENTS = ["#7f1d1d", "#5c6e9e", "#c47c2b", "#7a4f8a"];
+const NAVY = "#272421";
+const ACCENTS = ["#7f1d1d", "#9e5c61", "#bc333e", "#7a4f8a"];
 
 const PageFAQ = ({
   faqs,
@@ -50,7 +50,7 @@ const PageFAQ = ({
       <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
         <p
           style={{
-            color: "#1B3A6B",
+            color: "#6b1b22",
             fontWeight: 700,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
@@ -80,7 +80,7 @@ const PageFAQ = ({
 
             if (plain) {
               return (
-                <div key={i} style={{ borderBottom: "1px solid #e0dbd2" }}>
+                <div key={i} style={{ borderBottom: "1px solid #dfd3d4" }}>
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}
                     aria-expanded={isOpen}
@@ -109,7 +109,7 @@ const PageFAQ = ({
                     </span>
                     <ChevronDown
                       size={22}
-                      color="#1B3A6B"
+                      color="#6b1b22"
                       strokeWidth={2.25}
                       style={{
                         flexShrink: 0,
@@ -125,7 +125,7 @@ const PageFAQ = ({
                         paddingBottom: "1rem",
                         fontFamily: "Inter, system-ui, sans-serif",
                         fontSize: "18px",
-                        color: "#2d3a4a",
+                        color: "#413b36",
                         lineHeight: 1.7,
                       }}
                     >
@@ -189,11 +189,11 @@ const PageFAQ = ({
                   <div
                     style={{
                       padding: "0 1.5rem 1.4rem",
-                      borderTop: "1px solid #e8e0d0",
+                      borderTop: "1px solid #e7d1d3",
                       paddingTop: "1rem",
                       fontFamily: "Inter, system-ui, sans-serif",
                       fontSize: "18px",
-                      color: "#2d3a4a",
+                      color: "#413b36",
                       lineHeight: 1.7,
                     }}
                   >

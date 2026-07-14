@@ -280,19 +280,19 @@ main,
 
     --radius: 0.375rem;
 
-    /* Custom Estate Palette */
-    --gold: 42 55% 55%;
-    --gold-light: 42 45% 72%;
-    --gold-dark: 42 60% 40%;
-    --navy: 220 45% 18%;
-    --navy-dark: 220 50% 12%;
-    --navy-light: 220 35% 28%;
+    /* Custom Estate Palette — charcoal + burgundy (navy/gold retired July 2026) */
+    --gold: 355 45% 30%;
+    --gold-light: 355 35% 60%;
+    --gold-dark: 355 55% 20%;
+    --navy: 30 8% 14%;
+    --navy-dark: 30 10% 8%;
+    --navy-light: 30 6% 28%;
     --ivory: 40 30% 96%;
     --ivory-dark: 40 20% 92%;
     --cream: 38 40% 96%;
     --warm-bg: 35 25% 95%;
-    --slate: 210 30% 45%;
-    --slate-light: 210 25% 60%;
+    --slate: 30 6% 32%;
+    --slate-light: 30 5% 48%;
     --warm-gray: 30 8% 55%;
 
     --sidebar-background: 0 0% 98%;
@@ -450,7 +450,7 @@ main,
       font-weight: 800 !important;
       line-height: 1.1 !important;
       letter-spacing: 0.04em !important;
-      color: #1a2744 !important;
+      color: #272421 !important;
       font-family: "Raleway", "Gill Sans", sans-serif !important;
       margin: 0 !important;
       text-align: center !important;
@@ -595,7 +595,7 @@ main,
   background-color: rgba(201, 168, 76, 0.06) !important;
 }
 .homepage-faq-trigger {
-  color: #1e3a5f !important;
+  color: #463f37 !important;
   font-family: "DM Sans", sans-serif !important;
   font-size: 16px !important;
   font-weight: 700 !important;
@@ -635,10 +635,10 @@ main,
   font-weight: 700 !important;
   background-color: white !important;
   border-radius: 12px !important;
-  border: 1px solid #d4b896 !important;
+  border: 1px solid #d1999e !important;
   padding: 20px 24px !important;
   text-decoration: none !important;
-  color: #1e3a5f !important;
+  color: #463f37 !important;
 }
 .accordion-trigger-styled:hover {
   color: hsl(var(--gold-dark)) !important;
@@ -1740,9 +1740,9 @@ a:hover .gold-cta::after,
    SECURE WILL CTA BUTTON — 3D electric-blue
 ═══════════════════════════════════════════════ */
 .secure-will-cta {
-  background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 60%, #1e3a8a 100%);
+  background: linear-gradient(180deg, #d53b48 0%, #ca2b38 60%, #8a1e27 100%);
   box-shadow:
-    0 4px 0 0 #1e3a8a,
+    0 4px 0 0 #8a1e27,
     0 6px 16px rgba(30, 58, 138, 0.45),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   border: 2px solid hsl(42 55% 62% / 0.5);
@@ -1752,14 +1752,14 @@ a:hover .gold-cta::after,
 .secure-will-cta:hover {
   transform: translateY(2px);
   box-shadow:
-    0 2px 0 0 #1e3a8a,
+    0 2px 0 0 #8a1e27,
     0 3px 8px rgba(30, 58, 138, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 .secure-will-cta:active {
   transform: translateY(3px);
   box-shadow:
-    0 1px 0 0 #1e3a8a,
+    0 1px 0 0 #8a1e27,
     0 1px 4px rgba(30, 58, 138, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
@@ -1929,7 +1929,7 @@ body *:not(.tile-label):not([data-tile-id]) {
 
 /* 2. Body text contrast — kill faded muted-foreground on light backgrounds */
 .text-muted-foreground {
-  color: #374151 !important;
+  color: #49443f !important;
   opacity: 1 !important;
 }
 
@@ -1953,7 +1953,7 @@ q,
 em.italic,
 p.italic {
   font-size: max(1.125rem, 18px) !important;
-  color: #1f2937 !important;
+  color: #2f2b27 !important;
   opacity: 1 !important;
 }
 
@@ -1976,7 +1976,7 @@ h3 + .text-muted-foreground,
 h4 + .text-muted-foreground {
   font-size: max(1.0625rem, 17px) !important;
   line-height: 1.75 !important;
-  color: #4b5563 !important;
+  color: #5b5753 !important;
   opacity: 1 !important;
 }
 /* (Removed: overly broad uniform tile sizing block — it matched every class containing "card". */
@@ -2022,7 +2022,7 @@ h4 + .text-muted-foreground {
   ):not(.premium-tile):not(.premium-shell-tile)
   :where(p, li, span) {
   font-size: max(1rem, 16px) !important;
-  color: #1f2937 !important;
+  color: #2f2b27 !important;
   font-weight: 400 !important;
   opacity: 1 !important;
 }
@@ -3029,7 +3029,7 @@ main [class*="text-zinc-3"],
 main [class*="text-zinc-4"],
 main [class*="text-zinc-5"],
 footer .text-muted-foreground {
-  color: #374151 !important;
+  color: #49443f !important;
   opacity: 1 !important;
 }
 
@@ -3061,16 +3061,16 @@ main [style*="color: rgb(2"] {
   /* Most low-mid grays fall in this hex range — clamp to a passing tone */
 }
 /* Specific common low-contrast inline grays observed in codebase */
-main [style*="#6B7280"],
-main [style*="#6b7280"],
-main [style*="#9CA3AF"],
-main [style*="#9ca3af"],
-main [style*="#A0AEC0"],
-main [style*="#a0aec0"],
-main [style*="#94a3b8"],
-main [style*="#64748B"],
-main [style*="#64748b"] {
-  color: #374151 !important;
+main [style*="#806b6d"],
+main [style*="#806b6d"],
+main [style*="#af9c9e"],
+main [style*="#af9c9e"],
+main [style*="#c0a0a3"],
+main [style*="#c0a0a3"],
+main [style*="#b89497"],
+main [style*="#8b6467"],
+main [style*="#8b6467"] {
+  color: #49443f !important;
 }
 
 /* 11. Italic descriptive text — meet 4.5:1 */
@@ -3078,7 +3078,7 @@ main em,
 main i,
 main .italic,
 main [style*="italic"] {
-  color: #1f2937 !important;
+  color: #2f2b27 !important;
   opacity: 1 !important;
 }
 [class*="bg-navy"] em,
@@ -3090,26 +3090,26 @@ main [style*="italic"] {
 
 /* 12. SOURCE / citation labels — readable, darkened */
 main :where(span, p, small, cite):where([class*="source"], [data-source], .citation, .source-label) {
-  color: #374151 !important;
+  color: #49443f !important;
   font-size: max(0.875rem, 14px) !important;
   font-weight: 600 !important;
   opacity: 1 !important;
 }
 
-/* 13. Gold / copper text on LIGHT backgrounds → #7a4e1a (4.6:1 on white) */
+/* 13. Gold / copper text on LIGHT backgrounds → #751f26 (4.6:1 on white) */
 main .text-gold,
 main .text-gold-dark,
 main [class*="text-gold"],
 main [class*="text-amber-"],
 main [class*="text-yellow-5"],
 main [class*="text-yellow-6"],
-main [style*="#C9A84C"],
-main [style*="#c9a84c"],
-main [style*="#b87333"],
-main [style*="#B87333"],
-main [style*="#d4a574"],
-main [style*="#D4A574"] {
-  color: #7a4e1a !important;
+main [style*="#c3525c"],
+main [style*="#c3525c"],
+main [style*="#b13a44"],
+main [style*="#b13a44"],
+main [style*="#cf7980"],
+main [style*="#cf7980"] {
+  color: #751f26 !important;
 }
 /* But keep gold readable on dark surfaces */
 [class*="bg-navy"] .text-gold,
@@ -3118,15 +3118,15 @@ main [style*="#D4A574"] {
 .bg-navy .text-gold,
 [class*="bg-navy"] [class*="text-gold"],
 [class*="bg-primary"] [class*="text-gold"] {
-  color: #e6c068 !important;
+  color: #dc727b !important;
 }
 
 /* 14. Links — minimum contrast on light backgrounds */
 main a:not([class*="bg-"]):not(.btn):not([class*="button"]) {
-  color: #1d4ed8;
+  color: #ca2b38;
 }
 main a:not([class*="bg-"]):not(.btn):not([class*="button"]):hover {
-  color: #1e3a8a;
+  color: #8a1e27;
 }
 /* But don't override navy/primary/foreground branded links */
 main a.text-primary,
@@ -3143,7 +3143,7 @@ main a:where([aria-label*="Back"], [aria-label*="back"]),
 .back-link,
 [class*="back-to"],
 [class*="BackTo"] a {
-  color: #0a1628 !important;
+  color: #280a0c !important;
   font-weight: 600 !important;
   opacity: 1 !important;
 }
@@ -3153,7 +3153,7 @@ main a:where([aria-label*="Back"], [aria-label*="back"]),
 [class*="Disclaimer"],
 .disclaimer-section,
 .disclaimer-section * {
-  color: #1f2937 !important;
+  color: #2f2b27 !important;
   opacity: 1 !important;
 }
 [class*="disclaimer"] p,
@@ -3174,7 +3174,7 @@ main a:where([aria-label*="Back"], [aria-label*="back"]),
 [class*="ProviderTile"],
 [class*="provider-tile"],
 [data-provider-tile] {
-  color: #1f2937 !important;
+  color: #2f2b27 !important;
 }
 [class*="ProviderTile"] p,
 [class*="provider-tile"] p,
@@ -3182,7 +3182,7 @@ main a:where([aria-label*="Back"], [aria-label*="back"]),
 [class*="ProviderTile"] li,
 [class*="provider-tile"] li {
   font-size: max(1.0625rem, 17px) !important;
-  color: #1f2937 !important;
+  color: #2f2b27 !important;
   opacity: 1 !important;
 }
 
@@ -3274,7 +3274,7 @@ main .rpp-hero-band-text,
 }
 
 .calc-hero-eyebrow {
-  color: #c8b98a !important;
+  color: #c58d92 !important;
   opacity: 1 !important;
 }
 
@@ -3289,7 +3289,7 @@ main .rpp-hero-band-text,
 }
 
 .calc-page-hero .eyebrow-label {
-  color: #c8b98a !important;
+  color: #c58d92 !important;
 }
 /* ── Calculator fixes — do not remove ── */
 #r-occ,
@@ -3378,7 +3378,7 @@ main .rpp-hero-band-text,
   opacity: 1 !important;
 }
 .calc-page-hero .eyebrow-label {
-  color: #c8b98a !important;
+  color: #c58d92 !important;
 }
 
 #calc-roi-btn,
@@ -3400,7 +3400,7 @@ main .rpp-hero-band-text,
   opacity: 1 !important;
 }
 .calc-page-hero .eyebrow-label {
-  color: #c8b98a !important;
+  color: #c58d92 !important;
 }
 #v-prop,
 #v-dshs,
@@ -3442,8 +3442,8 @@ main h3 {
   line-height: 1 !important;
   letter-spacing: -0.05em !important;
   font-weight: 900 !important;
-  color: #0099ee !important;
-  text-shadow: 0 0 3px #0099ee !important;
+  color: #c42a37 !important;
+  text-shadow: 0 0 3px #c42a37 !important;
 }
 
 /* Homepage Orientation section — descriptor kept light, sized in RPPHomeV3.tsx */
@@ -3453,7 +3453,7 @@ main #rpp-orientation div {
 }
 #rpp-tagline {
   font-size: clamp(26px, 3.5vw, 42px) !important;
-  color: #b8963e !important;
+  color: #6f2a30 !important;
 }
 #rpp-tagline {
   font-size: clamp(26px, 3.5vw, 42px) !important;
@@ -3471,7 +3471,7 @@ main #rpp-orientation div {
 }
 
 .rpp-funnel-heading {
-  color: #1a2744 !important;
+  color: #272421 !important;
 }
 #rpp-tagline span {
   font-size: clamp(22px, 3vw, 42px) !important;
@@ -3523,7 +3523,7 @@ a[href="/cost-of-care-calculator"] h3.coc-heading {
 
 /* Direct Answer support labels — final override after sitewide accessibility rules */
 main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-label {
-  color: #1b3a6b !important;
+  color: #6b1b22 !important;
   display: block !important;
   font-family: Georgia, serif !important;
   font-size: 32px !important;
@@ -3534,7 +3534,7 @@ main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-la
 
 @media (min-width: 640px) {
   main .rpp-direct-answer-steps .rpp-direct-answer-step + .rpp-direct-answer-step {
-    border-left: 1px solid #d6cbb5 !important;
+    border-left: 1px solid #d4b7b9 !important;
     padding-left: 1.25rem !important;
   }
 }

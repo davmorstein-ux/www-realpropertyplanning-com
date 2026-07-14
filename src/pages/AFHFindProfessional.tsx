@@ -107,7 +107,7 @@ const AFHFindProfessional = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -116,7 +116,7 @@ const AFHFindProfessional = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -127,20 +127,20 @@ const AFHFindProfessional = () => (
               fontSize: "clamp(32px, 5vw, 50px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#1a2530",
+              color: "#292521",
               lineHeight: 1.15,
               margin: "0 0 20px",
             }}
           >
             Find an AFH Professional
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2e3e",
+              color: "#342e28",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -155,7 +155,7 @@ const AFHFindProfessional = () => (
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               maxWidth: 680,
             }}
@@ -182,8 +182,8 @@ const AFHFindProfessional = () => (
                 key={cat.title}
                 style={{
                   background: "#fff",
-                  border: "1px solid #ddd8cc",
-                  borderTop: "4px solid #2c3a48",
+                  border: "1px solid #dccdce",
+                  borderTop: "4px solid #3f3a35",
                   borderRadius: 6,
                   padding: "32px 28px",
                 }}
@@ -196,7 +196,7 @@ const AFHFindProfessional = () => (
                         fontSize: "clamp(20px, 2.5vw, 26px)",
                         fontFamily: "Georgia, serif",
                         fontWeight: 700,
-                        color: "#0a1628",
+                        color: "#280a0c",
                         margin: "0 0 14px",
                       }}
                     >
@@ -206,7 +206,7 @@ const AFHFindProfessional = () => (
                       style={{
                         fontSize: 18,
                         fontFamily: "'Raleway', sans-serif",
-                        color: "#1e2a38",
+                        color: "#302b26",
                         lineHeight: 1.8,
                         margin: "0 0 20px",
                       }}
@@ -220,7 +220,7 @@ const AFHFindProfessional = () => (
                         fontWeight: 700,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
-                        color: "#5a3200",
+                        color: "#481216",
                         margin: "0 0 10px",
                       }}
                     >
@@ -235,7 +235,7 @@ const AFHFindProfessional = () => (
                               width: 6,
                               height: 6,
                               borderRadius: "50%",
-                              background: "#b87333",
+                              background: "#b13a44",
                               marginTop: 8,
                             }}
                           />
@@ -243,7 +243,7 @@ const AFHFindProfessional = () => (
                             style={{
                               fontSize: 16,
                               fontFamily: "'Raleway', sans-serif",
-                              color: "#1e2a38",
+                              color: "#302b26",
                               lineHeight: 1.65,
                               margin: 0,
                             }}
@@ -263,9 +263,9 @@ const AFHFindProfessional = () => (
                             fontWeight: 700,
                             letterSpacing: "0.14em",
                             textTransform: "uppercase",
-                            color: "#5a3200",
+                            color: "#481216",
                             textDecoration: "none",
-                            borderBottom: "1px solid #b87333",
+                            borderBottom: "1px solid #b13a44",
                             paddingBottom: 2,
                           }}
                         >
@@ -282,9 +282,9 @@ const AFHFindProfessional = () => (
                             fontWeight: 700,
                             letterSpacing: "0.14em",
                             textTransform: "uppercase",
-                            color: "#5a3200",
+                            color: "#481216",
                             textDecoration: "none",
-                            borderBottom: "1px solid #b87333",
+                            borderBottom: "1px solid #b13a44",
                             paddingBottom: 2,
                           }}
                         >
@@ -309,7 +309,7 @@ const AFHFindProfessional = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 16px",
             }}
           >
@@ -320,19 +320,19 @@ const AFHFindProfessional = () => (
               fontSize: "clamp(22px, 3.5vw, 32px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Join the Real Property Planning Network
           </h2>
-          <div style={{ width: 40, height: 2, background: "#b87333", margin: "0 auto 24px", borderRadius: 1 }} />
+          <div style={{ width: 40, height: 2, background: "#b13a44", margin: "0 auto 24px", borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 28px",
             }}
@@ -351,7 +351,7 @@ const AFHFindProfessional = () => (
               letterSpacing: "0.16em",
               textTransform: "uppercase",
               color: "#fff",
-              background: "#2c3a48",
+              background: "#3f3a35",
               padding: "14px 28px",
               borderRadius: 4,
               textDecoration: "none",

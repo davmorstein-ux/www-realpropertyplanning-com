@@ -7,7 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
 
 const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
-const GOLD = "#8B6914";
+const GOLD = "#7f2028";
 
 const categories = [
   {
@@ -174,7 +174,7 @@ const GuidesAndResources = () => {
                     fontFamily: "Georgia, serif",
                     fontSize: "clamp(20px, 2.5vw, 28px)",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: 0,
                   }}
                 >
@@ -194,7 +194,7 @@ const GuidesAndResources = () => {
                       alignItems: "center",
                       gap: 16,
                       padding: "14px 12px",
-                      borderBottom: i < cat.articles.length - 1 ? "1px solid #e0d8c8" : "none",
+                      borderBottom: i < cat.articles.length - 1 ? "1px solid #dfc9cb" : "none",
                       textDecoration: "none",
                       transition: "background 0.2s",
                       borderRadius: 4,
@@ -214,7 +214,7 @@ const GuidesAndResources = () => {
                         fontFamily: "Georgia, serif",
                         fontSize: 16,
                         fontWeight: 700,
-                        color: "#0a1628",
+                        color: "#280a0c",
                         lineHeight: 1.4,
                       }}
                     >

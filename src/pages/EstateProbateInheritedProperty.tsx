@@ -114,7 +114,7 @@ const EstateProbateInheritedProperty = () => {
             </div>
             <style>{`
               .estate-tile-outline .tile-white__face {
-                border: 2px solid #5c6e9e !important;
+                border: 2px solid #9e5c61 !important;
               }
             `}</style>
           </div>

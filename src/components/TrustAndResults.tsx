@@ -6,7 +6,7 @@ import iconAppraiser3d from "@/assets/icons/real-estate-appraiser-3d-icon-washin
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 
 const credentials = [
-  "Licensed Real Estate Broker — WA #113972",
+  "Licensed Real Estate Broker — WA #6c171e",
   "Certified Residential Appraiser — WA #1702080",
   "20+ Years of Real Estate Experience",
   "Dual Expertise in Brokerage & Valuation",

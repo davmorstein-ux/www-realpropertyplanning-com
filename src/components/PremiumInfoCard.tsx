@@ -29,7 +29,7 @@ const PremiumInfoCard = ({
         {title}
       </h3>
       <p
-        className="text-[#374151] mb-6 flex-1"
+        className="text-[#49443f] mb-6 flex-1"
         style={{ fontSize: "16px", lineHeight: 1.6, textDecoration: "none" }}
       >
         {description}

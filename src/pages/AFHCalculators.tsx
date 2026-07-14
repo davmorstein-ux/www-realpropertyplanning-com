@@ -41,8 +41,8 @@ const TILES: Tile[] = [
 const accentMap = {
   blue: {
     pillBg: "#dbeafe",
-    pillText: "#1d4ed8",
-    link: "#1d4ed8",
+    pillText: "#ca2b38",
+    link: "#ca2b38",
     shadow: "0 24px 48px -16px rgba(29, 78, 216, 0.45)",
   },
   green: {
@@ -113,7 +113,7 @@ const AFHCalculators: React.FC = () => {
           </div>
         </section>
 
-        <section style={{ background: "#1B2B4B" }} className="py-8">
+        <section style={{ background: "#39332d" }} className="py-8">
           <div className="max-w-3xl mx-auto px-6">
             <p className="text-[15px] md:text-[16px] text-white leading-relaxed text-center">
               These calculators are for informational purposes only and do not constitute a certified appraisal, broker opinion of value, or financial advice.{" "}

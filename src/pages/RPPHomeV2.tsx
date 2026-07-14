@@ -24,14 +24,14 @@ const tiles = [
     imgAlt: "Adult daughter hugging her senior mother on a couch",
     title: "I'm Helping an Aging Parent",
     href: "/helping-aging-parents",
-    bgColor: "#c47c2b",
+    bgColor: "#bc333e",
   },
   {
     imgSrc: tileEstate,
     imgAlt: "Family reviewing an estate property plan with documents",
     title: "I'm Handling an Estate",
     href: "/estate-probate-inherited-property",
-    bgColor: "#5c6e9e",
+    bgColor: "#9e5c61",
   },
   {
     imgSrc: tileProfessionals,
@@ -97,7 +97,7 @@ const RPPHomeV2 = () => {
                 fontFamily: "'Raleway', 'Gill Sans', sans-serif",
                 fontSize: "clamp(28px, 3.6vw, 42px)",
                 fontWeight: 800,
-                color: "#1a2744",
+                color: "#272421",
                 letterSpacing: "0.04em",
                 textAlign: "center",
                 margin: "0",
@@ -137,7 +137,7 @@ const RPPHomeV2 = () => {
                   fontFamily: "Inter, system-ui, sans-serif",
                   fontSize: "3rem",
                   fontWeight: 600,
-                  color: "#b8963e",
+                  color: "#6f2a30",
                   margin: 0,
                 }}
               >
@@ -210,7 +210,7 @@ const RPPHomeV2 = () => {
                 href="/afh-club"
                 style={{
                   backgroundColor: "#f8fafa",
-                  border: "2px solid #1a2744",
+                  border: "2px solid #272421",
                   borderRadius: 10,
                   padding: "1rem 1.25rem",
                   display: "flex",
@@ -242,7 +242,7 @@ const RPPHomeV2 = () => {
                         fontFamily: "Inter, system-ui, sans-serif",
                         fontSize: 16,
                         fontWeight: 500,
-                        color: "#2c3e50",
+                        color: "#443e38",
                         margin: 0,
                       }}
                     >

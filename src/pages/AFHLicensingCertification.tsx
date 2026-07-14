@@ -83,7 +83,7 @@ const AFHLicensingCertification = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
           <p
@@ -93,7 +93,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -104,20 +104,20 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(32px, 5vw, 50px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#1a2530",
+              color: "#292521",
               lineHeight: 1.15,
               margin: "0 0 20px",
             }}
           >
             AFH Licensing & Certification in Washington State
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2e3e",
+              color: "#342e28",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -140,7 +140,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -151,19 +151,19 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Home Care Aide (HCA) Certification
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -176,7 +176,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 28px",
             }}
@@ -187,8 +187,8 @@ const AFHLicensingCertification = () => (
           <div
             style={{
               background: "#fff",
-              border: "1px solid #ddd8cc",
-              borderTop: "3px solid #b87333",
+              border: "1px solid #dccdce",
+              borderTop: "3px solid #b13a44",
               borderRadius: 6,
               padding: "24px",
             }}
@@ -198,7 +198,7 @@ const AFHLicensingCertification = () => (
                 fontSize: 17,
                 fontFamily: "Georgia, serif",
                 fontWeight: 700,
-                color: "#0a1628",
+                color: "#280a0c",
                 margin: "0 0 16px",
               }}
             >
@@ -208,7 +208,7 @@ const AFHLicensingCertification = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1e2a38",
+                color: "#302b26",
                 lineHeight: 1.75,
                 margin: "0 0 16px",
               }}
@@ -223,7 +223,7 @@ const AFHLicensingCertification = () => (
                     width: 7,
                     height: 7,
                     borderRadius: "50%",
-                    background: "#b87333",
+                    background: "#b13a44",
                     marginTop: 8,
                   }}
                 />
@@ -231,7 +231,7 @@ const AFHLicensingCertification = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.65,
                     margin: 0,
                   }}
@@ -244,7 +244,7 @@ const AFHLicensingCertification = () => (
               style={{
                 fontSize: 16,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1e2a38",
+                color: "#302b26",
                 lineHeight: 1.6,
                 margin: "16px 0 0",
                 fontStyle: "italic",
@@ -266,7 +266,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -277,19 +277,19 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             The DSHS License Application Process
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 16, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -316,7 +316,7 @@ const AFHLicensingCertification = () => (
                     width: 40,
                     height: 40,
                     borderRadius: "50%",
-                    background: "#2c3a48",
+                    background: "#3f3a35",
                     color: "#e8e2d9",
                     display: "flex",
                     alignItems: "center",
@@ -334,7 +334,7 @@ const AFHLicensingCertification = () => (
                       fontSize: 17,
                       fontFamily: "Georgia, serif",
                       fontWeight: 700,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       margin: "0 0 6px",
                     }}
                   >
@@ -344,7 +344,7 @@ const AFHLicensingCertification = () => (
                     style={{
                       fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       lineHeight: 1.75,
                       margin: 0,
                     }}
@@ -368,7 +368,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -379,19 +379,19 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Who Needs a Background Check?
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -403,7 +403,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -447,7 +447,7 @@ const AFHLicensingCertification = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -458,19 +458,19 @@ const AFHLicensingCertification = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Change of Ownership (CHOW)
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -483,7 +483,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -496,7 +496,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 24px",
             }}
@@ -515,9 +515,9 @@ const AFHLicensingCertification = () => (
               fontWeight: 700,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               textDecoration: "none",
-              borderBottom: "1px solid #b87333",
+              borderBottom: "1px solid #b13a44",
               paddingBottom: 2,
             }}
           >
@@ -530,11 +530,11 @@ const AFHLicensingCertification = () => (
       <section style={{ background: "#f7f4ef", padding: "56px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <h2
-            style={{ fontSize: 22, fontFamily: "Georgia, serif", fontWeight: 700, color: "#0a1628", margin: "0 0 8px" }}
+            style={{ fontSize: 22, fontFamily: "Georgia, serif", fontWeight: 700, color: "#280a0c", margin: "0 0 8px" }}
           >
             Key DSHS Resources
           </h2>
-          <div style={{ width: 36, height: 2, background: "#b87333", marginBottom: 24, borderRadius: 1 }} />
+          <div style={{ width: 36, height: 2, background: "#b13a44", marginBottom: 24, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
               { label: "DSHS Online License Application", url: "https://baau.dshs.wa.gov/" },
@@ -568,7 +568,7 @@ const AFHLicensingCertification = () => (
                   fontSize: 17,
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: 600,
-                  color: "#2c6e9e",
+                  color: "#9e2c35",
                   textDecoration: "underline",
                 }}
               >

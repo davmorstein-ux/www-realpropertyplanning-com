@@ -10,8 +10,8 @@ import SEOHead from "@/components/SEOHead";
 
 const tiles = [
   { imgSrc: tilePlanning, imgAlt: "Older couple reviewing an estate plan together at home", title: "I Want to Plan Ahead", href: "/planning-before-a-crisis", bgColor: "#8b2e2e" },
-  { imgSrc: tileHelping, imgAlt: "Adult daughter hugging her senior mother on a couch", title: "I'm Helping an Aging Parent", href: "/helping-aging-parents", bgColor: "#c47c2b" },
-  { imgSrc: tileEstate, imgAlt: "Family reviewing an estate property plan with documents", title: "I'm Handling an Estate", href: "/estate-probate-inherited-property", bgColor: "#5c6e9e" },
+  { imgSrc: tileHelping, imgAlt: "Adult daughter hugging her senior mother on a couch", title: "I'm Helping an Aging Parent", href: "/helping-aging-parents", bgColor: "#bc333e" },
+  { imgSrc: tileEstate, imgAlt: "Family reviewing an estate property plan with documents", title: "I'm Handling an Estate", href: "/estate-probate-inherited-property", bgColor: "#9e5c61" },
   { imgSrc: tileProfessionals, imgAlt: "Man at a laptop browsing trusted professional resources", title: "I Need a Professional", href: "/building-your-trusted-professional-team", bgColor: "#7a4f8a" },
 ];
 
@@ -57,7 +57,7 @@ const HomepageNew = () => (
               fontWeight: 700,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
-              color: "#b8963e",
+              color: "#6f2a30",
               margin: "0 0 1.25rem",
             }}
           >
@@ -68,7 +68,7 @@ const HomepageNew = () => (
               fontFamily: "Inter, system-ui, sans-serif",
               fontSize: "clamp(1.125rem, 2vw, 1.5rem)",
               fontWeight: 500,
-              color: "#1a2744",
+              color: "#272421",
               lineHeight: 1.55,
               margin: 0,
             }}
@@ -87,7 +87,7 @@ const HomepageNew = () => (
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
                 fontSize: "2.25rem",
                 fontWeight: 600,
-                color: "#b8963e",
+                color: "#6f2a30",
                 margin: 0,
                 lineHeight: 1.2,
               }}

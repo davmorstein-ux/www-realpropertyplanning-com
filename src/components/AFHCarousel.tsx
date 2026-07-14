@@ -6,50 +6,50 @@ const DEFAULT_TOPICS = [
     title: "Getting Started",
     href: "/afh-club/getting-started",
     img: "/afh-getting-started.webp",
-    placeholder: "#2c3a48",
+    placeholder: "#3f3a35",
   },
   {
     title: "Licensing & Certification",
     href: "/afh-club/licensing-certification",
     img: "/afh-licensing-certification.webp",
-    placeholder: "#2c3e4e",
+    placeholder: "#433d37",
   },
   {
     title: "Training & Education",
     href: "/afh-club/training-education",
     img: "/afh-training-education.webp",
-    placeholder: "#354555",
+    placeholder: "#4b453f",
   },
   {
     title: "Building & Inspection",
     href: "/afh-club/building-inspection",
     img: "/afh-building-inspection.webp",
-    placeholder: "#2e3d4d",
+    placeholder: "#433d38",
   },
-  { title: "Costs & Fees", href: "/afh-club/costs-fees", img: "/afh-costs-fees.webp", placeholder: "#384858" },
+  { title: "Costs & Fees", href: "/afh-club/costs-fees", img: "/afh-costs-fees.webp", placeholder: "#4e4842" },
   {
     title: "Buying or Selling an AFH",
     href: "/afh-club/buying-selling",
     img: "/afh-buying-selling.webp",
-    placeholder: "#2a3a4a",
+    placeholder: "#403a34",
   },
   {
     title: "Regulations & Compliance",
     href: "/afh-club/regulations-compliance",
     img: "/afh-regulations-compliance.webp",
-    placeholder: "#334353",
+    placeholder: "#49433d",
   },
   {
     title: "Find a Professional",
     href: "/afh-club/find-a-professional",
     img: "/afh-find-professional.webp",
-    placeholder: "#3c4c5c",
+    placeholder: "#524c46",
   },
   {
     title: "AFH Calculators",
     href: "/afh-club/calculators",
     img: "/__l5e/assets-v1/f6d8b31f-90b0-4639-a379-feeff961e81c/afh-cost-calculator-v2.webp",
-    placeholder: "#2c3e4e",
+    placeholder: "#433d37",
   },
 ];
 
@@ -225,7 +225,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           className="rpp-carousel-arrow"
           style={{
             background: "#fff",
-            border: "1.5px solid #c8b98a",
+            border: "1.5px solid #c58d92",
             borderRadius: "50%",
             width: 48,
             height: 48,
@@ -233,7 +233,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#5a3200",
+            color: "#481216",
             opacity: 1,
             transition: "transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
             boxShadow: "0 2px 8px rgba(10,22,40,0.08)",
@@ -241,17 +241,17 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           }}
           onMouseEnter={(e) => {
             const el = e.currentTarget;
-            el.style.background = "#b87333";
+            el.style.background = "#b13a44";
             el.style.color = "#fff";
-            el.style.borderColor = "#b87333";
+            el.style.borderColor = "#b13a44";
             el.style.transform = "scale(1.1)";
             el.style.boxShadow = "0 6px 18px rgba(184,115,51,0.35)";
           }}
           onMouseLeave={(e) => {
             const el = e.currentTarget;
             el.style.background = "#fff";
-            el.style.color = "#5a3200";
-            el.style.borderColor = "#c8b98a";
+            el.style.color = "#481216";
+            el.style.borderColor = "#c58d92";
             el.style.transform = "scale(1)";
             el.style.boxShadow = "0 2px 8px rgba(10,22,40,0.08)";
           }}
@@ -279,7 +279,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 onClick={() => slideTo(START + i)}
                 aria-label={`Slide ${i + 1}`}
                 style={{
-                  background: normalizedPos === i ? "#b87333" : "#d4c9b0",
+                  background: normalizedPos === i ? "#b13a44" : "#d2b2b4",
                   border: "none",
                   borderRadius: 2,
                   width: normalizedPos === i ? 24 : 8,
@@ -299,7 +299,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           className="rpp-carousel-arrow"
           style={{
             background: "#fff",
-            border: "1.5px solid #c8b98a",
+            border: "1.5px solid #c58d92",
             borderRadius: "50%",
             width: 48,
             height: 48,
@@ -307,7 +307,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#5a3200",
+            color: "#481216",
             opacity: 1,
             transition: "transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
             boxShadow: "0 2px 8px rgba(10,22,40,0.08)",
@@ -315,17 +315,17 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           }}
           onMouseEnter={(e) => {
             const el = e.currentTarget;
-            el.style.background = "#b87333";
+            el.style.background = "#b13a44";
             el.style.color = "#fff";
-            el.style.borderColor = "#b87333";
+            el.style.borderColor = "#b13a44";
             el.style.transform = "scale(1.1)";
             el.style.boxShadow = "0 6px 18px rgba(184,115,51,0.35)";
           }}
           onMouseLeave={(e) => {
             const el = e.currentTarget;
             el.style.background = "#fff";
-            el.style.color = "#5a3200";
-            el.style.borderColor = "#c8b98a";
+            el.style.color = "#481216";
+            el.style.borderColor = "#c58d92";
             el.style.transform = "scale(1)";
             el.style.boxShadow = "0 2px 8px rgba(10,22,40,0.08)";
           }}

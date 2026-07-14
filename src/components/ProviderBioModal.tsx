@@ -68,7 +68,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
             {/* Header */}
             <div
               style={{
-                background: "#0a1628",
+                background: "#280a0c",
                 padding: "20px 24px",
                 borderRadius: "8px 8px 0 0",
                 display: "flex",
@@ -85,7 +85,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     height: 64,
                     borderRadius: "50%",
                     objectFit: "cover",
-                    border: "2px solid #C9A84C",
+                    border: "2px solid #c3525c",
                     flexShrink: 0,
                   }} sizes="100vw" decoding="async"/>
               )}
@@ -106,7 +106,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     fontFamily: "'Raleway', sans-serif",
                     fontSize: 11,
                     letterSpacing: "0.12em",
-                    color: "#E8C97A",
+                    color: "#e0828a",
                     textTransform: "uppercase",
                   }}
                 >
@@ -137,7 +137,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 style={{
                   fontFamily: "Georgia, serif",
                   fontSize: 14,
-                  color: "#4a5568",
+                  color: "#5e5954",
                   lineHeight: 1.75,
                   marginBottom: 16,
                 }}
@@ -151,7 +151,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     marginBottom: 16,
                     padding: "12px 14px",
                     background: "#f7f4ef",
-                    borderLeft: "3px solid #8B6914",
+                    borderLeft: "3px solid #7f2028",
                     borderRadius: "0 4px 4px 0",
                   }}
                 >
@@ -162,13 +162,13 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                       fontWeight: 700,
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
-                      color: "#8B6914",
+                      color: "#7f2028",
                       marginBottom: 5,
                     }}
                   >
                     Specialties
                   </div>
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#4a5568", lineHeight: 1.6 }}>
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#5e5954", lineHeight: 1.6 }}>
                     {props.specialty}
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
 
               <div
                 style={{
-                  borderTop: "1px solid #e0d8c8",
+                  borderTop: "1px solid #dfc9cb",
                   paddingTop: 16,
                   display: "flex",
                   flexDirection: "column",
@@ -190,14 +190,14 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     fontWeight: 700,
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
-                    color: "#8B6914",
+                    color: "#7f2028",
                     marginBottom: 2,
                   }}
                 >
                   Contact
                 </div>
                 {props.address && (
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#4a5568" }}>📍 {props.address}</div>
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#5e5954" }}>📍 {props.address}</div>
                 )}
                 {props.phone && (
                   <a
@@ -205,7 +205,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     style={{
                       fontFamily: "Georgia, serif",
                       fontSize: 13,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       textDecoration: "none",
                       fontWeight: 700,
                     }}
@@ -216,7 +216,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 {props.email && (
                   <a
                     href={`mailto:${props.email}`}
-                    style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#8B6914", textDecoration: "none" }}
+                    style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#7f2028", textDecoration: "none" }}
                   >
                     ✉️ {props.email}
                   </a>
@@ -226,7 +226,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     href={props.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#8B6914", textDecoration: "none" }}
+                    style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#7f2028", textDecoration: "none" }}
                   >
                     🌐 {props.website.replace(/^https?:\/\//, "")}
                   </a>
@@ -256,7 +256,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               height: 112,
               borderRadius: "50%",
               objectFit: "cover",
-              border: open ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+              border: open ? "3px solid #c3525c" : "2px solid #dfc9cb",
               display: "block",
               transition: "border 0.2s ease",
             }} sizes="100vw" decoding="async"/>
@@ -266,8 +266,8 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               width: 112,
               height: 112,
               borderRadius: "50%",
-              background: "#0a1628",
-              border: "2px solid #e0d8c8",
+              background: "#280a0c",
+              border: "2px solid #dfc9cb",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -290,7 +290,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               position: "absolute",
               inset: -3,
               borderRadius: "50%",
-              border: "2px solid #C9A84C",
+              border: "2px solid #c3525c",
               pointerEvents: "none",
             }}
           />

@@ -14,35 +14,35 @@ const CATEGORIES = [
     href: "/afh-club/resources",
     img: "/afh-resources.webp",
     description: "Licensing, training, building requirements, costs, regulations, and more.",
-    placeholder: "#2c3a48",
+    placeholder: "#3f3a35",
   },
   {
     title: "AFH Listings",
     href: "/afh-club/listings",
     img: "/afh-listings.webp",
     description: "Adult Family Homes currently available for sale throughout Washington State.",
-    placeholder: "#2a3848",
+    placeholder: "#3e3934",
   },
   {
     title: "Management Companies",
     href: "/afh-club/management-companies",
     img: "/afh-management-companies.webp",
     description: "Professional AFH management companies serving Washington State owners.",
-    placeholder: "#283646",
+    placeholder: "#3c3732",
   },
   {
     title: "AFH Real Estate Broker",
     href: "/afh-club/real-estate-broker",
     img: "/afh-real-estate-broker.webp",
     description: "A licensed Washington State broker specializing in Adult Family Home transactions.",
-    placeholder: "#263444",
+    placeholder: "#3a3530",
   },
   {
     title: "AFH Calculators",
     href: "/afh-club/calculators",
     img: "/__l5e/assets-v1/f6d8b31f-90b0-4639-a379-feeff961e81c/afh-cost-calculator-v2.webp",
     description: "ROI calculator and valuation estimator for Adult Family Home buyers, sellers, and investors.",
-    placeholder: "#2c3e4e",
+    placeholder: "#433d37",
   },
 ];
 
@@ -67,7 +67,7 @@ const AFHClub = () => (
           background: "#edf0f3",
           padding: "48px 24px 40px",
           textAlign: "center",
-          borderBottom: "3px solid #b87333",
+          borderBottom: "3px solid #b13a44",
         }}
       >
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
@@ -97,7 +97,7 @@ const AFHClub = () => (
               fontWeight: 700,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 8px",
             }}
           >
@@ -109,7 +109,7 @@ const AFHClub = () => (
               fontSize: "clamp(52px, 7vw, 72px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#1a2530",
+              color: "#292521",
               lineHeight: 1.1,
               margin: "0 0 8px",
             }}
@@ -122,14 +122,14 @@ const AFHClub = () => (
               fontSize: "clamp(22px, 3vw, 28px)",
               fontFamily: "Georgia, serif",
               fontWeight: 400,
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 20px",
             }}
           >
             Washington State Adult Family Home Resource Network
           </p>
 
-          <div style={{ width: 56, height: 3, background: "#b87333", margin: "0 auto 20px", borderRadius: 1 }} />
+          <div style={{ width: 56, height: 3, background: "#b13a44", margin: "0 auto 20px", borderRadius: 1 }} />
 
           {/* Single description line — moved from carousel */}
           <p
@@ -137,7 +137,7 @@ const AFHClub = () => (
               fontSize: "clamp(22px, 2.4vw, 28px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 auto",
               maxWidth: 680,
@@ -156,16 +156,16 @@ const AFHClub = () => (
 
       <section style={{ background: "#fff", padding: "48px 24px" }}>
         <div style={{ maxWidth: 960, margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#b87333", marginBottom: 12 }}>Buy · Sell · Invest</p>
-          <h2 style={{ fontSize: "clamp(26px, 3vw, 36px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#1e2a38", marginBottom: 16 }}>AFH Marketplace</h2>
-          <p style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#4a5568", maxWidth: 600, margin: "0 auto 32px", lineHeight: 1.7 }}>
+          <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#b13a44", marginBottom: 12 }}>Buy · Sell · Invest</p>
+          <h2 style={{ fontSize: "clamp(26px, 3vw, 36px)", fontFamily: "'Raleway', sans-serif", fontWeight: 700, color: "#302b26", marginBottom: 16 }}>AFH Marketplace</h2>
+          <p style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#5e5954", maxWidth: 600, margin: "0 auto 32px", lineHeight: 1.7 }}>
             Washington's only dedicated marketplace for buying and selling Adult Family Homes — property, business, or both.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link to="/afh-marketplace" style={{ display: "inline-block", background: "#1e2a38", color: "#fff", fontFamily: "'Raleway', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.08em", padding: "14px 32px", borderRadius: 3, textDecoration: "none" }}>
+            <Link to="/afh-marketplace" style={{ display: "inline-block", background: "#302b26", color: "#fff", fontFamily: "'Raleway', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.08em", padding: "14px 32px", borderRadius: 3, textDecoration: "none" }}>
               Browse Listings
             </Link>
-            <Link to="/afh-submit" style={{ display: "inline-block", background: "transparent", color: "#1e2a38", fontFamily: "'Raleway', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.08em", padding: "14px 32px", borderRadius: 3, textDecoration: "none", border: "2px solid #1e2a38" }}>
+            <Link to="/afh-submit" style={{ display: "inline-block", background: "transparent", color: "#302b26", fontFamily: "'Raleway', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.08em", padding: "14px 32px", borderRadius: 3, textDecoration: "none", border: "2px solid #302b26" }}>
               Submit a Listing
             </Link>
           </div>
@@ -179,13 +179,13 @@ const AFHClub = () => (
             fontSize: "clamp(28px, 3vw, 38px)",
             fontFamily: "Georgia, serif",
             fontWeight: 700,
-            color: "#0a1628",
+            color: "#280a0c",
             marginBottom: 8,
           }}
         >
           Explore AFH Club
         </h2>
-        <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 40, borderRadius: 1 }} />
+        <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 40, borderRadius: 1 }} />
         <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
           {CATEGORIES.map((cat, i) => (
             <Link
@@ -196,8 +196,8 @@ const AFHClub = () => (
                 alignItems: "center",
                 gap: 24,
                 padding: "22px 0",
-                borderBottom: "1px solid #e0d8c8",
-                borderTop: i === 0 ? "1px solid #e0d8c8" : "none",
+                borderBottom: "1px solid #dfc9cb",
+                borderTop: i === 0 ? "1px solid #dfc9cb" : "none",
                 textDecoration: "none",
                 transition: "background 0.2s ease",
               }}
@@ -232,7 +232,7 @@ const AFHClub = () => (
                   style={{
                     fontSize: "clamp(20px, 2vw, 24px)",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: "0 0 8px",
                     lineHeight: 1.3,
                     fontFamily: "Georgia, serif",
@@ -243,7 +243,7 @@ const AFHClub = () => (
                 <p
                   style={{
                     fontSize: "clamp(18px, 1.8vw, 20px)",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     margin: "0 0 12px",
                     lineHeight: 1.65,
                     fontFamily: "'Raleway', sans-serif",
@@ -259,7 +259,7 @@ const AFHClub = () => (
                     fontWeight: 700,
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
-                    color: "#5a3200",
+                    color: "#481216",
                     display: "inline-flex",
                     alignItems: "center",
                     gap: 5,
@@ -295,7 +295,7 @@ const AFHClub = () => (
               fontWeight: 700,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 16px",
             }}
           >
@@ -306,20 +306,20 @@ const AFHClub = () => (
               fontSize: "clamp(30px, 3.5vw, 42px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             What Is an Adult Family Home?
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 32, borderRadius: 1 }} />
           <p
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 22px",
             }}
@@ -333,7 +333,7 @@ const AFHClub = () => (
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 22px",
             }}
@@ -346,7 +346,7 @@ const AFHClub = () => (
               fontSize: "clamp(19px, 2vw, 22px)",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: 0,
             }}

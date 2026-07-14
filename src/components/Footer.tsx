@@ -10,7 +10,7 @@ import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washingto
 
 const Footer = () => {
   return (
-    <footer data-nosnippet="true" style={{ backgroundColor: "#1c1f26", padding: "2.5rem 0 1.5rem" }}>
+    <footer data-nosnippet="true" style={{ backgroundColor: "#23211f", padding: "2.5rem 0 1.5rem" }}>
       <style>{`
         .rpp-footer-link {
           color: rgba(255,255,255,0.72) !important;
@@ -22,14 +22,14 @@ const Footer = () => {
           display: block !important;
           padding: 2px 0 !important;
         }
-        .rpp-footer-link:hover { color: #d4a843 !important; }
+        .rpp-footer-link:hover { color: #cd4a55 !important; }
         .rpp-footer-col-heading {
           font-family: Inter, system-ui, sans-serif !important;
           font-size: 11px !important;
           font-weight: 700 !important;
           letter-spacing: 0.14em !important;
           text-transform: uppercase !important;
-          color: #d4a843 !important;
+          color: #cd4a55 !important;
           margin: 0 0 0.6rem 0 !important;
           padding-bottom: 0.4rem !important;
           border-bottom: 1px solid rgba(255,255,255,0.1) !important;
@@ -58,7 +58,7 @@ const Footer = () => {
           text-decoration: none !important;
           transition: color 0.15s ease !important;
         }
-        .rpp-footer-nap:hover { color: #d4a843 !important; }
+        .rpp-footer-nap:hover { color: #cd4a55 !important; }
         .rpp-footer-disclaimer {
           font-family: Inter, system-ui, sans-serif !important;
           font-size: 11px !important;

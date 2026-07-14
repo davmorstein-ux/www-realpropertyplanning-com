@@ -53,7 +53,7 @@ const AnimatedValue = ({ value, formatter }: { value: number; formatter: (n: num
 // Shared style tokens
 const card: React.CSSProperties = {
   background: "#ffffff",
-  border: "1px solid #ddd8cc",
+  border: "1px solid #dccdce",
   borderRadius: 12,
   padding: "1.25rem 1.4rem",
   marginBottom: 14,
@@ -80,7 +80,7 @@ const fieldLabel: React.CSSProperties = {
   fontWeight: 900,
   letterSpacing: "0.08em",
   textTransform: "uppercase" as const,
-  color: "#1a2744",
+  color: "#272421",
   marginBottom: 8,
 };
 
@@ -90,9 +90,9 @@ const stepperBtn: React.CSSProperties = {
   borderRadius: 8,
   fontSize: "32px",
   fontWeight: 700,
-  color: "#1a2744",
+  color: "#272421",
   background: "#f5f2ec",
-  border: "1px solid #ddd8cc",
+  border: "1px solid #dccdce",
   cursor: "pointer",
   display: "flex",
   alignItems: "center",
@@ -106,9 +106,9 @@ const pillBtn = (active: boolean, color: string): React.CSSProperties => ({
   fontSize: "16px",
   fontWeight: 700,
   fontFamily: "'Raleway', sans-serif",
-  color: active ? "#ffffff" : "#1a2744",
+  color: active ? "#ffffff" : "#272421",
   background: active ? color : "#f5f2ec",
-  border: `1px solid ${active ? color : "#ddd8cc"}`,
+  border: `1px solid ${active ? color : "#dccdce"}`,
   cursor: "pointer",
   transition: "all .15s ease",
 });
@@ -165,7 +165,7 @@ const CostOfCareCalculator = () => {
       <Header />
       <main id="main-content">
         {/* Hero */}
-        <section style={{ background: "#f5f2ec", padding: "64px 24px 48px", borderBottom: "3px solid #b8963e" }}>
+        <section style={{ background: "#f5f2ec", padding: "64px 24px 48px", borderBottom: "3px solid #6f2a30" }}>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
             <p
               style={{
@@ -174,7 +174,7 @@ const CostOfCareCalculator = () => {
                 fontWeight: 700,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "#b8963e",
+                color: "#6f2a30",
                 margin: "0 0 12px",
               }}
             >
@@ -185,19 +185,19 @@ const CostOfCareCalculator = () => {
                 fontSize: "clamp(32px,5vw,50px)",
                 fontFamily: "Georgia, serif",
                 fontWeight: 700,
-                color: "#1a2744",
+                color: "#272421",
                 lineHeight: 1.15,
                 margin: "0 0 20px",
               }}
             >
               Cost of Care Calculator
             </h1>
-            <div style={{ width: 48, height: 3, background: "#b8963e", marginBottom: 24, borderRadius: 1 }} />
+            <div style={{ width: 48, height: 3, background: "#6f2a30", marginBottom: 24, borderRadius: 1 }} />
             <p
               style={{
                 fontSize: 18,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1e2e3e",
+                color: "#342e28",
                 lineHeight: 1.8,
                 margin: 0,
                 maxWidth: 680,
@@ -227,7 +227,7 @@ const CostOfCareCalculator = () => {
               >
                 {CARE_TYPES.map((c) => {
                   const active = c.id === careTypeId;
-                  const color = CARE_TYPE_COLORS[c.id] ?? "#3f7690";
+                  const color = CARE_TYPE_COLORS[c.id] ?? "#903f46";
                   return (
                     <button
                       key={c.id}
@@ -244,9 +244,9 @@ const CostOfCareCalculator = () => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        color: active ? "#ffffff" : "#1a2744",
+                        color: active ? "#ffffff" : "#272421",
                         background: active ? color : "#f5f2ec",
-                        border: `1px solid ${active ? color : "#ddd8cc"}`,
+                        border: `1px solid ${active ? color : "#dccdce"}`,
                         cursor: "pointer",
                         transition: "all .15s ease",
                       }}
@@ -278,7 +278,7 @@ const CostOfCareCalculator = () => {
                   <div
                     style={{
                       background: "#f5f2ec",
-                      border: "2px solid #ddd8cc",
+                      border: "2px solid #dccdce",
                       borderRadius: 8,
                       padding: "10px 20px",
                       textAlign: "center",
@@ -306,7 +306,7 @@ const CostOfCareCalculator = () => {
                         fontFamily: "'Raleway', sans-serif",
                         fontSize: "16px",
                         fontWeight: 600,
-                        color: "#4a5568",
+                        color: "#5e5954",
                         letterSpacing: "0.06em",
                         textTransform: "uppercase",
                       }}
@@ -352,7 +352,7 @@ const CostOfCareCalculator = () => {
                   <div
                     style={{
                       background: "#f5f2ec",
-                      border: "2px solid #ddd8cc",
+                      border: "2px solid #dccdce",
                       borderRadius: 8,
                       padding: "10px 20px",
                       textAlign: "center",
@@ -375,7 +375,7 @@ const CostOfCareCalculator = () => {
                         fontFamily: "'Raleway', sans-serif",
                         fontSize: "16px",
                         fontWeight: 600,
-                        color: "#4a5568",
+                        color: "#5e5954",
                         letterSpacing: "0.06em",
                         textTransform: "uppercase",
                       }}
@@ -400,7 +400,7 @@ const CostOfCareCalculator = () => {
                 style={{
                   fontSize: "18px",
                   fontFamily: "'Raleway', sans-serif",
-                  color: "#1a2744",
+                  color: "#272421",
                   margin: "0 0 16px",
                   lineHeight: 1.6,
                   fontWeight: 600,
@@ -483,7 +483,7 @@ const CostOfCareCalculator = () => {
                       fontSize: "13px",
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
-                      color: "#1a2744",
+                      color: "#272421",
                       fontWeight: 700,
                       fontFamily: "'Raleway', sans-serif",
                       marginBottom: 6,
@@ -505,7 +505,7 @@ const CostOfCareCalculator = () => {
                     />
                   </div>
                   <div
-                    style={{ fontSize: "16px", fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif" }}
+                    style={{ fontSize: "16px", fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif" }}
                   >
                     per {unit === "monthly" ? "month" : "year"}
                   </div>
@@ -513,7 +513,7 @@ const CostOfCareCalculator = () => {
                 <div
                   style={{
                     background: "#f5f2ec",
-                    border: "1px solid #ddd8cc",
+                    border: "1px solid #dccdce",
                     borderRadius: 10,
                     padding: "16px",
                     textAlign: "center",
@@ -524,7 +524,7 @@ const CostOfCareCalculator = () => {
                       fontSize: "13px",
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
-                      color: "#1a2744",
+                      color: "#272421",
                       fontWeight: 700,
                       fontFamily: "'Raleway', sans-serif",
                       marginBottom: 6,
@@ -537,7 +537,7 @@ const CostOfCareCalculator = () => {
                       fontFamily: "'Courier New', monospace",
                       fontWeight: 700,
                       fontSize: "clamp(18px,3vw,24px)",
-                      color: "#1a2744",
+                      color: "#272421",
                     }}
                   >
                     <AnimatedValue
@@ -546,7 +546,7 @@ const CostOfCareCalculator = () => {
                     />
                   </div>
                   <div
-                    style={{ fontSize: "16px", fontWeight: 600, color: "#374151", fontFamily: "'Raleway', sans-serif" }}
+                    style={{ fontSize: "16px", fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif" }}
                   >
                     per {unit === "monthly" ? "month" : "year"}
                   </div>
@@ -568,7 +568,7 @@ const CostOfCareCalculator = () => {
                     fontSize: "13px",
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: "#1a2744",
+                    color: "#272421",
                     fontWeight: 700,
                     fontFamily: "'Raleway', sans-serif",
                     marginBottom: 6,
@@ -590,7 +590,7 @@ const CostOfCareCalculator = () => {
                   style={{
                     fontSize: "16px",
                     fontWeight: 600,
-                    color: "#374151",
+                    color: "#49443f",
                     fontFamily: "'Raleway', sans-serif",
                     marginTop: 4,
                   }}
@@ -614,7 +614,7 @@ const CostOfCareCalculator = () => {
                   style={{
                     fontSize: "16px",
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1a2744",
+                    color: "#272421",
                     lineHeight: 1.65,
                     margin: 0,
                   }}
@@ -635,7 +635,7 @@ const CostOfCareCalculator = () => {
                 style={{
                   fontSize: "17px",
                   fontFamily: "'Raleway', sans-serif",
-                  color: "#374151",
+                  color: "#49443f",
                   lineHeight: 1.6,
                   textAlign: "center",
                   margin: "14px 0 0",
@@ -796,7 +796,7 @@ const CostOfCareCalculator = () => {
                 fontWeight: 700,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
-                color: "#b8963e",
+                color: "#6f2a30",
                 margin: "0 0 14px",
               }}
             >
@@ -807,7 +807,7 @@ const CostOfCareCalculator = () => {
                 fontSize: "clamp(24px,3.5vw,36px)",
                 fontFamily: "Georgia, serif",
                 fontWeight: 700,
-                color: "#1a2744",
+                color: "#272421",
                 lineHeight: 1.2,
                 margin: "0 0 20px",
               }}
@@ -818,7 +818,7 @@ const CostOfCareCalculator = () => {
               style={{
                 width: 40,
                 height: 3,
-                background: "#b8963e",
+                background: "#6f2a30",
                 marginBottom: 28,
                 marginTop: 16,
                 borderRadius: 1,
@@ -829,7 +829,7 @@ const CostOfCareCalculator = () => {
               style={{
                 fontSize: 18,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1a2744",
+                color: "#272421",
                 lineHeight: 1.85,
                 margin: "0 0 20px",
               }}
@@ -842,14 +842,14 @@ const CostOfCareCalculator = () => {
               style={{
                 fontSize: 18,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1e2a38",
+                color: "#302b26",
                 lineHeight: 1.85,
                 margin: 0,
               }}
             >
               An Adult Family Home is frequently a more affordable alternative to assisted living or nursing home care —
               worth exploring through our{" "}
-              <Link to="/afh-club" style={{ color: "#2c6e9e" }}>
+              <Link to="/afh-club" style={{ color: "#9e2c35" }}>
                 AFH Club
               </Link>
               .

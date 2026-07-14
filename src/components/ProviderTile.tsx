@@ -146,7 +146,7 @@ export default function ProviderTile({
             {/* Modal header */}
             <div
               style={{
-                background: "#0a1628",
+                background: "#280a0c",
                 padding: "20px 24px",
                 borderRadius: "8px 8px 0 0",
                 display: "flex",
@@ -166,7 +166,7 @@ export default function ProviderTile({
                         height: 64,
                         borderRadius: "50%",
                         objectFit: "cover",
-                        border: "2px solid #C9A84C",
+                        border: "2px solid #c3525c",
                       }}
                       sizes="100vw"
                       decoding="async"
@@ -190,7 +190,7 @@ export default function ProviderTile({
                         height: 64,
                         borderRadius: "50%",
                         objectFit: "cover",
-                        border: "2px solid #C9A84C",
+                        border: "2px solid #c3525c",
                       }}
                       sizes="100vw"
                       decoding="async"
@@ -233,7 +233,7 @@ export default function ProviderTile({
                     fontFamily: "'Raleway', sans-serif",
                     fontSize: 11,
                     letterSpacing: "0.12em",
-                    color: "#E8C97A",
+                    color: "#e0828a",
                     textTransform: "uppercase",
                   }}
                 >
@@ -268,7 +268,7 @@ export default function ProviderTile({
                 style={{
                   fontFamily: "Georgia, serif",
                   fontSize: 14,
-                  color: "#4a5568",
+                  color: "#5e5954",
                   lineHeight: 1.75,
                   marginBottom: specialty ? 16 : 0,
                 }}
@@ -280,7 +280,7 @@ export default function ProviderTile({
                   style={{
                     padding: "12px 14px",
                     background: "#f7f4ef",
-                    borderLeft: "3px solid #8B6914",
+                    borderLeft: "3px solid #7f2028",
                     borderRadius: "0 4px 4px 0",
                   }}
                 >
@@ -291,13 +291,13 @@ export default function ProviderTile({
                       fontWeight: 700,
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
-                      color: "#8B6914",
+                      color: "#7f2028",
                       marginBottom: 5,
                     }}
                   >
                     Specialties
                   </div>
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#4a5568", lineHeight: 1.6 }}>
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#5e5954", lineHeight: 1.6 }}>
                     {specialty}
                   </div>
                 </div>
@@ -353,7 +353,7 @@ export default function ProviderTile({
                     height: 100,
                     borderRadius: "50%",
                     objectFit: "cover",
-                    border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+                    border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
                     transform: hovered ? "scale(1.05)" : "scale(1)",
                     transition: "transform 0.3s ease, border-color 0.3s ease",
                   }}
@@ -361,7 +361,7 @@ export default function ProviderTile({
                   sizes="100vw"
                   decoding="async"
                 />
-                <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
+                <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
                   {name}
                 </div>
                 <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title}</div>
@@ -377,7 +377,7 @@ export default function ProviderTile({
                     height: 100,
                     borderRadius: "50%",
                     objectFit: "cover",
-                    border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+                    border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
                     transform: hovered ? "scale(1.05)" : "scale(1)",
                     transition: "transform 0.3s ease, border-color 0.3s ease",
                   }}
@@ -385,7 +385,7 @@ export default function ProviderTile({
                   sizes="100vw"
                   decoding="async"
                 />
-                <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#0a1628" }}>
+                <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
                   {name2}
                 </div>
                 <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title2}</div>
@@ -413,7 +413,7 @@ export default function ProviderTile({
                 height: 112,
                 borderRadius: "50%",
                 objectFit: "cover",
-                border: hovered ? "3px solid #C9A84C" : "2px solid #e0d8c8",
+                border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
                 transform: hovered ? "scale(1.05)" : "scale(1)",
                 transition: "transform 0.3s ease, border-color 0.3s ease",
               }}
@@ -439,14 +439,14 @@ export default function ProviderTile({
               width: "100%",
             }}
           >
-            <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#0a1628" }}>{name}</div>
+            <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#280a0c" }}>{name}</div>
             {name2 && (
               <div
                 style={{
                   fontFamily: "Georgia, serif",
                   fontSize: 18,
                   fontWeight: 700,
-                  color: "#0a1628",
+                  color: "#280a0c",
                   marginBottom: 4,
                 }}
               >
@@ -484,7 +484,7 @@ export default function ProviderTile({
             fontFamily: "'Raleway', sans-serif",
             fontSize: 11,
             fontWeight: 700,
-            color: "#0a1628",
+            color: "#280a0c",
           }}
         >
           {company}
@@ -506,7 +506,7 @@ export default function ProviderTile({
             style={{
               fontFamily: "Georgia, serif",
               fontSize: 13,
-              color: "#6b7280",
+              color: "#806b6d",
               fontStyle: "italic",
               lineHeight: 1.5,
             }}
@@ -528,7 +528,7 @@ export default function ProviderTile({
         style={{
           marginTop: "auto",
           paddingTop: 16,
-          borderTop: "1px solid #e0d8c8",
+          borderTop: "1px solid #dfc9cb",
           width: "100%",
           display: "flex",
           flexDirection: "column",
@@ -540,7 +540,7 @@ export default function ProviderTile({
           <a
             href={`tel:${phone.replace(/\D/g, "")}`}
             onClick={(e) => e.stopPropagation()}
-            style={{ fontSize: 13, color: "#1a5fa8", textDecoration: "none", fontWeight: 600 }}
+            style={{ fontSize: 13, color: "#a0222c", textDecoration: "none", fontWeight: 600 }}
           >
             {phone}
           </a>
@@ -549,7 +549,7 @@ export default function ProviderTile({
           <a
             href={`tel:${phone2.replace(/\D/g, "")}`}
             onClick={(e) => e.stopPropagation()}
-            style={{ fontSize: 13, color: "#1a5fa8", textDecoration: "none", fontWeight: 600 }}
+            style={{ fontSize: 13, color: "#a0222c", textDecoration: "none", fontWeight: 600 }}
           >
             {phone2}
           </a>
@@ -558,7 +558,7 @@ export default function ProviderTile({
           <a
             href={emailHref || `mailto:${email}`}
             onClick={(e) => e.stopPropagation()}
-            style={{ fontSize: 12, color: "#8B6914", textDecoration: "none" }}
+            style={{ fontSize: 12, color: "#7f2028", textDecoration: "none" }}
           >
             {email}
           </a>
@@ -567,7 +567,7 @@ export default function ProviderTile({
           <a
             href={`mailto:${email2}`}
             onClick={(e) => e.stopPropagation()}
-            style={{ fontSize: 12, color: "#8B6914", textDecoration: "none" }}
+            style={{ fontSize: 12, color: "#7f2028", textDecoration: "none" }}
           >
             {email2}
           </a>
@@ -577,7 +577,7 @@ export default function ProviderTile({
           target="_blank"
           rel="noopener noreferrer"
           onClick={(e) => e.stopPropagation()}
-          style={{ fontSize: 12, color: "#8B6914", textDecoration: "none" }}
+          style={{ fontSize: 12, color: "#7f2028", textDecoration: "none" }}
         >
           {website.replace(/^https?:\/\//, "")}
         </a>

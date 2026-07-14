@@ -110,27 +110,27 @@ const ForAttorneysHowItWorks = () => (
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-bold mb-3">
               What Happens After You Make the Referral
             </h2>
-            <p className="text-[#1B2B4B] text-lg md:text-xl leading-[1.8] mb-8">
+            <p className="text-[#39332d] text-lg md:text-xl leading-[1.8] mb-8">
               Five steps, in order. Each step ends with written confirmation back to your office.
             </p>
             <ol className="space-y-6">
               {STEPS.map(({ n, title, body }) => (
                 <li
                   key={n}
-                  className="flex gap-5 p-6 rounded-xl border border-[#E5DCC4] bg-[#FAF7EE]"
+                  className="flex gap-5 p-6 rounded-xl border border-[#e3c6c8] bg-[#FAF7EE]"
                 >
                   <div
                     aria-hidden="true"
-                    className="flex-none w-12 h-12 rounded-full bg-[#1B2B4B] text-[#C9A84C] font-serif font-bold text-xl flex items-center justify-center"
+                    className="flex-none w-12 h-12 rounded-full bg-[#39332d] text-[#c3525c] font-serif font-bold text-xl flex items-center justify-center"
                   >
                     {n}
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-xl md:text-2xl text-[#1B2B4B] font-bold mb-2 leading-snug">
+                    <h3 className="font-serif text-xl md:text-2xl text-[#39332d] font-bold mb-2 leading-snug">
                       <span className="sr-only">Step {n}: </span>
                       {title}
                     </h3>
-                    <p className="text-[#1B2B4B] text-lg leading-[1.7]">{body}</p>
+                    <p className="text-[#39332d] text-lg leading-[1.7]">{body}</p>
                   </div>
                 </li>
               ))}
@@ -146,18 +146,18 @@ const ForAttorneysHowItWorks = () => (
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-bold mb-3">
               What Real Property Planning Handles So You Don't Have To
             </h2>
-            <p className="text-[#1B2B4B] text-lg md:text-xl leading-[1.8] mb-6">
+            <p className="text-[#39332d] text-lg md:text-xl leading-[1.8] mb-6">
               You stay the legal lead. Real Property Planning owns the property workstream end-to-end and reports back in writing.
             </p>
             <ul className="space-y-4">
               {HANDLED.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-3 text-[#1B2B4B] text-lg md:text-xl leading-[1.7]"
+                  className="flex gap-3 text-[#39332d] text-lg md:text-xl leading-[1.7]"
                 >
                   <span
                     aria-hidden="true"
-                    className="flex-none mt-2 w-2.5 h-2.5 rounded-full bg-[#C9A84C]"
+                    className="flex-none mt-2 w-2.5 h-2.5 rounded-full bg-[#c3525c]"
                   />
                   <span>{item}</span>
                 </li>
@@ -174,11 +174,11 @@ const ForAttorneysHowItWorks = () => (
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-bold mb-3">
               What You Can Tell Your Client
             </h2>
-            <p className="text-[#1B2B4B] text-lg md:text-xl leading-[1.8] mb-6">
+            <p className="text-[#39332d] text-lg md:text-xl leading-[1.8] mb-6">
               Plain language you can use verbatim or adapt — written for elderly clients and grieving families.
             </p>
-            <blockquote className="p-6 md:p-8 rounded-xl border-l-4 border-[#C9A84C] bg-[#FAF7EE]">
-              <p className="text-[#1B2B4B] text-xl md:text-2xl leading-[1.8] font-serif italic">
+            <blockquote className="p-6 md:p-8 rounded-xl border-l-4 border-[#c3525c] bg-[#FAF7EE]">
+              <p className="text-[#39332d] text-xl md:text-2xl leading-[1.8] font-serif italic">
                 &ldquo;I work with a real estate firm called Real Property Planning that handles homes tied to estates, trusts, and family transitions across Washington State. They are calm, experienced, and used to working with families during difficult times. They will take care of the property side from start to finish — assessing the home, coordinating any preparation, pricing it appropriately, and managing the sale — and they will keep me informed along the way. You will have one steady point of contact. There is no pressure and no rush.&rdquo;
               </p>
             </blockquote>
@@ -193,30 +193,30 @@ const ForAttorneysHowItWorks = () => (
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-bold mb-3">
               How to Make a Referral
             </h2>
-            <p className="text-[#1B2B4B] text-lg md:text-xl leading-[1.8] mb-8">
+            <p className="text-[#39332d] text-lg md:text-xl leading-[1.8] mb-8">
               Send a brief overview by phone or email. Real Property Planning responds within one business day.
             </p>
 
             <div className="space-y-5 mb-8">
-              <p className="text-[#1B2B4B] text-xl md:text-2xl leading-relaxed">
-                <strong className="text-[#8B6914]">Direct Line</strong>
+              <p className="text-[#39332d] text-xl md:text-2xl leading-relaxed">
+                <strong className="text-[#7f2028]">Direct Line</strong>
                 <span> — </span>
-                <a href="tel:2069003015" className="underline underline-offset-4 hover:text-[#8B6914]">
+                <a href="tel:2069003015" className="underline underline-offset-4 hover:text-[#7f2028]">
                   (206) 900-3015
                 </a>
               </p>
-              <p className="text-[#1B2B4B] text-xl md:text-2xl leading-relaxed">
-                <strong className="text-[#8B6914]">Email</strong>
+              <p className="text-[#39332d] text-xl md:text-2xl leading-relaxed">
+                <strong className="text-[#7f2028]">Email</strong>
                 <span> — </span>
                 <a
                   href="mailto:info@realpropertyplanning.com"
-                  className="underline underline-offset-4 hover:text-[#8B6914] break-words"
+                  className="underline underline-offset-4 hover:text-[#7f2028] break-words"
                 >
                   info@realpropertyplanning.com
                 </a>
               </p>
-              <p className="text-[#1B2B4B] text-lg md:text-xl leading-[1.8]">
-                <strong className="text-[#8B6914]">What to include:</strong> client name, property address (or county), the legal posture of the matter (probate stage, trust, family law), and whether you need a sale, a valuation, or both. One paragraph is enough.
+              <p className="text-[#39332d] text-lg md:text-xl leading-[1.8]">
+                <strong className="text-[#7f2028]">What to include:</strong> client name, property address (or county), the legal posture of the matter (probate stage, trust, family law), and whether you need a sale, a valuation, or both. One paragraph is enough.
               </p>
             </div>
 

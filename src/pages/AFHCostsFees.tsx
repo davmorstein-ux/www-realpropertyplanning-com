@@ -113,7 +113,7 @@ const AFHCostsFees = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -122,7 +122,7 @@ const AFHCostsFees = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -133,20 +133,20 @@ const AFHCostsFees = () => (
               fontSize: "clamp(32px, 5vw, 50px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#1a2530",
+              color: "#292521",
               lineHeight: 1.15,
               margin: "0 0 20px",
             }}
           >
             AFH Costs & Fees in Washington State
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2e3e",
+              color: "#342e28",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -159,8 +159,8 @@ const AFHCostsFees = () => (
           <div
             style={{
               background: "#fdf3e8",
-              border: "1px solid #b87333",
-              borderLeft: "4px solid #b87333",
+              border: "1px solid #b13a44",
+              borderLeft: "4px solid #b13a44",
               borderRadius: 6,
               padding: "16px 20px",
               maxWidth: 680,
@@ -170,7 +170,7 @@ const AFHCostsFees = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1a2a3a",
+                color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
               }}
@@ -199,7 +199,7 @@ const AFHCostsFees = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -210,19 +210,19 @@ const AFHCostsFees = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Cost Breakdown
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 16, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 28px",
             }}
@@ -237,8 +237,8 @@ const AFHCostsFees = () => (
                 key={i}
                 style={{
                   padding: "20px 0",
-                  borderBottom: "1px solid #ddd8cc",
-                  borderTop: i === 0 ? "1px solid #ddd8cc" : "none",
+                  borderBottom: "1px solid #dccdce",
+                  borderTop: i === 0 ? "1px solid #dccdce" : "none",
                 }}
               >
                 <div
@@ -252,7 +252,7 @@ const AFHCostsFees = () => (
                   }}
                 >
                   <h3
-                    style={{ fontSize: 17, fontFamily: "Georgia, serif", fontWeight: 700, color: "#0a1628", margin: 0 }}
+                    style={{ fontSize: 17, fontFamily: "Georgia, serif", fontWeight: 700, color: "#280a0c", margin: 0 }}
                   >
                     {item.category}
                   </h3>
@@ -261,7 +261,7 @@ const AFHCostsFees = () => (
                       fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
-                      color: "#5a3200",
+                      color: "#481216",
                       whiteSpace: "nowrap",
                     }}
                   >
@@ -272,7 +272,7 @@ const AFHCostsFees = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.7,
                     margin: "0 0 4px",
                   }}
@@ -286,7 +286,7 @@ const AFHCostsFees = () => (
                     fontWeight: 600,
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     margin: 0,
                   }}
                 >
@@ -308,7 +308,7 @@ const AFHCostsFees = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -319,19 +319,19 @@ const AFHCostsFees = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Liability Insurance — Plan Ahead
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -344,7 +344,7 @@ const AFHCostsFees = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -390,7 +390,7 @@ const AFHCostsFees = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -401,19 +401,19 @@ const AFHCostsFees = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Understanding AFH Revenue
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 24px",
             }}
@@ -428,8 +428,8 @@ const AFHCostsFees = () => (
                 key={i}
                 style={{
                   background: "#fff",
-                  border: "1px solid #ddd8cc",
-                  borderLeft: "4px solid #2c3a48",
+                  border: "1px solid #dccdce",
+                  borderLeft: "4px solid #3f3a35",
                   borderRadius: 6,
                   padding: "18px 22px",
                   display: "flex",
@@ -445,7 +445,7 @@ const AFHCostsFees = () => (
                       fontSize: 18,
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       margin: "0 0 4px",
                     }}
                   >
@@ -455,7 +455,7 @@ const AFHCostsFees = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       lineHeight: 1.65,
                       margin: 0,
                     }}
@@ -468,7 +468,7 @@ const AFHCostsFees = () => (
                     fontSize: 18,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#5a3200",
+                    color: "#481216",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -481,7 +481,7 @@ const AFHCostsFees = () => (
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -493,8 +493,8 @@ const AFHCostsFees = () => (
           <div
             style={{
               background: "#e8f2f9",
-              border: "1px solid #2c6e9e",
-              borderLeft: "4px solid #2c6e9e",
+              border: "1px solid #9e2c35",
+              borderLeft: "4px solid #9e2c35",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -503,7 +503,7 @@ const AFHCostsFees = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1a2a3a",
+                color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
               }}
@@ -520,11 +520,11 @@ const AFHCostsFees = () => (
       <section style={{ background: "#edf0f3", padding: "56px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <h2
-            style={{ fontSize: 22, fontFamily: "Georgia, serif", fontWeight: 700, color: "#0a1628", margin: "0 0 8px" }}
+            style={{ fontSize: 22, fontFamily: "Georgia, serif", fontWeight: 700, color: "#280a0c", margin: "0 0 8px" }}
           >
             Key Resources
           </h2>
-          <div style={{ width: 36, height: 2, background: "#b87333", marginBottom: 24, borderRadius: 1 }} />
+          <div style={{ width: 36, height: 2, background: "#b13a44", marginBottom: 24, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
               {
@@ -554,7 +554,7 @@ const AFHCostsFees = () => (
                   fontSize: 17,
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: 600,
-                  color: "#2c6e9e",
+                  color: "#9e2c35",
                   textDecoration: "underline",
                 }}
               >

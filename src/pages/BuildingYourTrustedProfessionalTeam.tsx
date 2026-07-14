@@ -51,7 +51,7 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
 
     <div className="container px-6 lg:px-8">
 
-      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: "#1B3A6B" }}>
+      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: "#6b1b22" }}>
 
         {heading}
 
@@ -145,11 +145,11 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
 
               <div style={{ padding: "16px 20px 0", flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
                 <div style={{ minHeight: 72 }}>
-                  <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#1B3A6B", lineHeight: 1.3 }}>
+                  <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#6b1b22", lineHeight: 1.3 }}>
                     {s.title}
                   </h3>
                 </div>
-                <p style={{ fontSize: 14, color: "#6B7280", lineHeight: 1.6, flex: 1 }}>
+                <p style={{ fontSize: 14, color: "#806b6d", lineHeight: 1.6, flex: 1 }}>
                   {s.description}
                 </p>
               </div>
@@ -162,7 +162,7 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
 
                   style={{
 
-                    background: "#C9A84C",
+                    background: "#c3525c",
 
                     borderRadius: 8,
 
@@ -254,7 +254,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
 <div id="legal-professionals" className="scroll-mt-20 bg-background">
           <section className="py-10 lg:py-12 bg-background">
             <div className="container px-6 lg:px-8">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: "#1B3A6B" }}>
+              <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: "#6b1b22" }}>
                 Legal Professionals
               </h2>
               <div className="flex justify-center">
@@ -269,11 +269,11 @@ const BuildingYourTrustedProfessionalTeam = () => {
                           <img src={s.image} alt={s.alt} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} sizes="100vw" decoding="async"/>
                         </div>
                         <div style={{ padding: "16px 20px 0" }}>
-                          <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#1B3A6B", lineHeight: 1.3, marginBottom: 6 }}>{s.title}</h3>
-                          <p style={{ fontSize: 14, color: "#6B7280", lineHeight: 1.6 }}>{s.description}</p>
+                          <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#6b1b22", lineHeight: 1.3, marginBottom: 6 }}>{s.title}</h3>
+                          <p style={{ fontSize: 14, color: "#806b6d", lineHeight: 1.6 }}>{s.description}</p>
                         </div>
                         <div style={{ padding: "12px 20px 16px" }}>
-                          <div style={{ background: "#C9A84C", borderRadius: 8, padding: "10px 16px", display: "flex", alignItems: "center", justifyContent: "center", gap: 6, fontFamily: "'Raleway', sans-serif", fontSize: 13, fontWeight: 700, color: "#fff", letterSpacing: "0.04em" }}>
+                          <div style={{ background: "#c3525c", borderRadius: 8, padding: "10px 16px", display: "flex", alignItems: "center", justifyContent: "center", gap: 6, fontFamily: "'Raleway', sans-serif", fontSize: 13, fontWeight: 700, color: "#fff", letterSpacing: "0.04em" }}>
                             {s.cta}
                             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
                           </div>

@@ -23,14 +23,14 @@ const tiles = [
     imgAlt: "Adult daughter hugging her senior mother on a couch",
     title: "I'm Helping an Aging Parent",
     href: "/helping-aging-parents",
-    bgColor: "#c47c2b",
+    bgColor: "#bc333e",
   },
   {
     imgSrc: tileEstate,
     imgAlt: "Family reviewing an estate property plan with documents",
     title: "I'm Handling an Estate",
     href: "/estate-probate-inherited-property",
-    bgColor: "#5c6e9e",
+    bgColor: "#9e5c61",
   },
   {
     imgSrc: tileProfessionals,
@@ -136,7 +136,7 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(18px, 2.4vw, 28px)",
                   fontWeight: 600,
                   fontStyle: "normal",
-                  color: "#1a2744",
+                  color: "#272421",
                   margin: 0,
                   lineHeight: 1.5,
                   letterSpacing: "0.01em",
@@ -160,7 +160,7 @@ const RPPHomeV3 = () => {
                   fontFamily: "Inter, system-ui, sans-serif",
                   fontSize: "3rem",
                   fontWeight: 600,
-                  color: "#b8963e",
+                  color: "#6f2a30",
                   margin: 0,
                 }}
               >
@@ -195,7 +195,7 @@ const RPPHomeV3 = () => {
                         className="absolute top-3 right-3 sm:hidden"
                         style={{
                           backgroundColor: "rgba(255,255,255,0.88)",
-                          color: "#1a2744",
+                          color: "#272421",
                           fontSize: 11,
                           fontWeight: 700,
                           fontFamily: "Inter, system-ui, sans-serif",
@@ -262,7 +262,7 @@ const RPPHomeV3 = () => {
                   alignItems: "center",
                   gap: "1.25rem",
                   background: "#ffffff",
-                  border: "2px solid #d4a843",
+                  border: "2px solid #cd4a55",
                   borderRadius: 12,
                   padding: "1.25rem 1.5rem",
                   minHeight: 200,
@@ -280,7 +280,7 @@ const RPPHomeV3 = () => {
                       fontFamily: "Georgia, serif",
                       fontSize: "clamp(22px,2.8vw,28px)",
                       fontWeight: 700,
-                      color: "#1a2744",
+                      color: "#272421",
                       margin: "0 0 8px",
                       lineHeight: 1.15,
                     }}
@@ -291,7 +291,7 @@ const RPPHomeV3 = () => {
                     style={{
                       fontFamily: "'Raleway', sans-serif",
                       fontSize: 16,
-                      color: "#1a2744",
+                      color: "#272421",
                       lineHeight: 1.5,
                       margin: "0 0 14px",
                       maxWidth: 320,
@@ -305,7 +305,7 @@ const RPPHomeV3 = () => {
                       display: "inline-flex",
                       alignItems: "center",
                       gap: 8,
-                      background: "#1a2744",
+                      background: "#272421",
                       color: "#ffffff",
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
@@ -359,7 +359,7 @@ const RPPHomeV3 = () => {
                     style={{
                       fontFamily: "'Raleway', sans-serif",
                       fontSize: 16,
-                      color: "#1a2744",
+                      color: "#272421",
                       lineHeight: 1.5,
                       margin: "0 0 14px",
                       maxWidth: 280,

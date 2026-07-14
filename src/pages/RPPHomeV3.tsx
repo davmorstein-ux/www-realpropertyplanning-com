@@ -22,14 +22,14 @@ const tiles = [
     imgAlt: "Adult daughter hugging her senior mother on a couch",
     title: "I'm Helping an Aging Parent",
     href: "/helping-aging-parents",
-    bgColor: "#c47c2b",
+    bgColor: "#bc333e",
   },
   {
     imgSrc: tileEstate,
     imgAlt: "Family reviewing an estate property plan with documents",
     title: "I'm Handling an Estate",
     href: "/estate-probate-inherited-property",
-    bgColor: "#5c6e9e",
+    bgColor: "#9e5c61",
   },
   {
     imgSrc: tileProfessionals,
@@ -137,7 +137,7 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(17px, 2vw, 24px)",
                   fontWeight: 400,
                   fontStyle: "normal",
-                  color: "#3d5a99",
+                  color: "#993d45",
                   margin: 0,
                   lineHeight: 1.55,
                   letterSpacing: "0.01em",
@@ -161,7 +161,7 @@ const RPPHomeV3 = () => {
                   fontFamily: "Georgia, 'Cormorant Garamond', serif",
                   fontSize: "3rem",
                   fontWeight: 600,
-                  color: "#1a2744",
+                  color: "#272421",
                   margin: 0,
                 }}
               >
@@ -199,7 +199,7 @@ const RPPHomeV3 = () => {
                           className="absolute top-3 right-3 sm:hidden"
                           style={{
                             backgroundColor: "rgba(255,255,255,0.88)",
-                            color: "#1a2744",
+                            color: "#272421",
                             fontSize: 11,
                             fontWeight: 700,
                             fontFamily: "Inter, system-ui, sans-serif",
@@ -259,7 +259,7 @@ const RPPHomeV3 = () => {
             {/* ── Secondary cards: Cost of Care + AFH Club ─────────── */}
             <style>{`
               .rpp-card-desc {
-                color: #1a2744 !important;
+                color: #272421 !important;
                 opacity: 1 !important;
                 font-weight: 600 !important;
               }
@@ -273,7 +273,7 @@ const RPPHomeV3 = () => {
                   display: "flex",
                   flexDirection: "column",
                   background: "#ffffff",
-                  border: "2px solid #2f5fd8",
+                  border: "2px solid #d43341",
                   borderRadius: 12,
                   padding: "1.25rem 1.5rem",
                   minHeight: 220,
@@ -291,8 +291,8 @@ const RPPHomeV3 = () => {
                     whiteSpace: "nowrap",
                   }}
                 >
-                  <span style={{ color: "#1a2744" }}>Cost of Care</span>{" "}
-                  <span style={{ color: "#2f5fd8" }}>Calculator</span>
+                  <span style={{ color: "#272421" }}>Cost of Care</span>{" "}
+                  <span style={{ color: "#d43341" }}>Calculator</span>
                 </h3>
                 <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-5" style={{ flex: 1 }}>
                   <div
@@ -310,7 +310,7 @@ const RPPHomeV3 = () => {
                       style={{
                         fontFamily: "'Raleway', sans-serif",
                         fontSize: 20,
-                        color: "#1a2744",
+                        color: "#272421",
                         lineHeight: 1.5,
                         margin: "0 0 14px",
                         maxWidth: 320,
@@ -324,7 +324,7 @@ const RPPHomeV3 = () => {
                         display: "inline-flex",
                         alignItems: "center",
                         gap: 8,
-                        background: "#2f5fd8",
+                        background: "#d43341",
                         color: "#ffffff",
                         fontFamily: "'Raleway', sans-serif",
                         fontWeight: 700,
@@ -411,13 +411,13 @@ const RPPHomeV3 = () => {
                     >
                       AFH Club
                     </h3>
-                    <div style={{ width: 64, height: 2, background: "#c9c2b4", margin: "0 0 14px" }} />
+                    <div style={{ width: 64, height: 2, background: "#c8b5b7", margin: "0 0 14px" }} />
                     <div
                       className="rpp-card-desc afh-club-desc"
                       style={{
                         fontFamily: "'Raleway', sans-serif",
                         fontSize: 20,
-                        color: "#1a2744",
+                        color: "#272421",
                         lineHeight: 1.5,
                         margin: "0 0 16px",
                         maxWidth: 360,

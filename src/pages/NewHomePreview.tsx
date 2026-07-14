@@ -43,7 +43,7 @@ export default function NewHomePreview() {
   const fontHead = { fontFamily: "'DM Sans', 'DM Sans', sans-serif" };
 
   return (
-    <div style={{ ...fontBody, background: "#0b1220", color: "#fff", minHeight: "100vh" }}>
+    <div style={{ ...fontBody, background: "#181613", color: "#fff", minHeight: "100vh" }}>
       <SEOHead
         title="Homepage Preview | Real Property Planning"
         description="Internal homepage preview for Real Property Planning."
@@ -98,7 +98,7 @@ export default function NewHomePreview() {
               style={{
                 ...fontBody,
                 color: "#fff",
-                background: "#1a5fa8",
+                background: "#a0222c",
                 padding: "10px 18px",
                 borderRadius: 6,
                 fontWeight: 700,
@@ -208,7 +208,7 @@ export default function NewHomePreview() {
               to="/about"
               style={{
                 ...fontBody,
-                background: "#1a5fa8",
+                background: "#a0222c",
                 color: "#fff",
                 padding: "14px 28px",
                 borderRadius: 6,
@@ -242,7 +242,7 @@ export default function NewHomePreview() {
       </section>
 
       {/* ===== Trust Bar ===== */}
-      <section style={{ background: "#1a5fa8", padding: "32px 24px" }}>
+      <section style={{ background: "#a0222c", padding: "32px 24px" }}>
         <div
           style={{
             maxWidth: 1280,

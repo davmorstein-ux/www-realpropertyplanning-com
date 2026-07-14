@@ -228,7 +228,7 @@ const ProbateEstateSales = () => {
                               </h3>
                               <span
                                 className="inline-flex items-center gap-2 text-[15px] font-bold tracking-wide"
-                                style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
+                                style={{ color: "#c3525c", fontFamily: "'DM Sans', sans-serif" }}
                               >
                                 {s.cta}
                                 <svg
@@ -339,7 +339,7 @@ const ProbateEstateSales = () => {
                               </h3>
                               <span
                                 className="inline-flex items-center gap-2 text-[16px] font-bold tracking-wide"
-                                style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
+                                style={{ color: "#c3525c", fontFamily: "'DM Sans', sans-serif" }}
                               >
                                 {s.cta}
                                 <svg
@@ -421,12 +421,12 @@ const ProbateEstateSales = () => {
                           <radialGradient id={`clockFace${hour}`} cx="40%" cy="35%" r="70%">
                             <stop offset="0%" stopColor="#FFFFFF" />
                             <stop offset="70%" stopColor="#FAF6EC" />
-                            <stop offset="100%" stopColor="#EFE6CC" />
+                            <stop offset="100%" stopColor="#edced0" />
                           </radialGradient>
                           <linearGradient id={`clockRim${hour}`} x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stopColor="#E2C66A" />
-                            <stop offset="50%" stopColor="#C9A84C" />
-                            <stop offset="100%" stopColor="#8C7530" />
+                            <stop offset="0%" stopColor="#db7179" />
+                            <stop offset="50%" stopColor="#c3525c" />
+                            <stop offset="100%" stopColor="#87353b" />
                           </linearGradient>
                         </defs>
                         {/* Outer rim */}
@@ -437,7 +437,7 @@ const ProbateEstateSales = () => {
                           cy="32"
                           r="25"
                           fill={`url(#clockFace${hour})`}
-                          stroke="#1E3A5F"
+                          stroke="#463f37"
                           strokeWidth="0.5"
                         />
                         {/* Hour ticks */}
@@ -454,7 +454,7 @@ const ProbateEstateSales = () => {
                               y1={y1}
                               x2={x2}
                               y2={y2}
-                              stroke="#1E3A5F"
+                              stroke="#463f37"
                               strokeWidth={i % 3 === 0 ? 1.8 : 1}
                               strokeLinecap="round"
                             />
@@ -466,7 +466,7 @@ const ProbateEstateSales = () => {
                           y1="32"
                           x2="32"
                           y2="14"
-                          stroke="#C9A84C"
+                          stroke="#c3525c"
                           strokeWidth="2.5"
                           strokeLinecap="round"
                         />
@@ -476,12 +476,12 @@ const ProbateEstateSales = () => {
                           y1="32"
                           x2={hx}
                           y2={hy}
-                          stroke="#1E3A5F"
+                          stroke="#463f37"
                           strokeWidth="3.5"
                           strokeLinecap="round"
                         />
                         {/* Center cap */}
-                        <circle cx="32" cy="32" r="2.5" fill="#C9A84C" stroke="#8C7530" strokeWidth="0.5" />
+                        <circle cx="32" cy="32" r="2.5" fill="#c3525c" stroke="#87353b" strokeWidth="0.5" />
                       </svg>
                       <div>
                         <h3 className="font-serif text-lg text-foreground font-semibold mb-1">{title}</h3>

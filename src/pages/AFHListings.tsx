@@ -5,10 +5,10 @@ import Footer from "@/components/Footer";
 
 const TEAL = "#1a7a78";
 const TEAL_MID = "#2a9d9a";
-const SLATE = "#2c3e50";
+const SLATE = "#443e38";
 const GRAY_BG = "#f4f6f7";
 const GRAY_BORDER = "#dde3e8";
-const GRAY_TEXT = "#6b7a87";
+const GRAY_TEXT = "#876b6d";
 const WHITE = "#ffffff";
 
 const listings = [
@@ -589,7 +589,7 @@ const AFHListings = () => {
                     style={{
                       fontWeight: 700,
                       fontSize: "20px",
-                      color: "#1a5fa8",
+                      color: "#a0222c",
                       lineHeight: 1.3,
                     }}
                   >
@@ -599,7 +599,7 @@ const AFHListings = () => {
                     style={{
                       fontWeight: 700,
                       fontSize: "18px",
-                      color: "#1a5fa8",
+                      color: "#a0222c",
                       lineHeight: 1.3,
                     }}
                   >
@@ -886,7 +886,7 @@ const AFHListings = () => {
           >
             Listings sourced from NWMLS. Information deemed reliable but not guaranteed. Real Property Planning is an
             independent educational hub and does not represent buyers or sellers on these properties directly — contact
-            David Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #113972), for all inquiries,
+            David Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #6c171e), for all inquiries,
             showings, and full listing details.
           </div>
 

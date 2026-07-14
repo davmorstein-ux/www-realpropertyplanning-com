@@ -32,13 +32,13 @@ const HomepageTestimonials = () => (
             className="flex flex-col h-full bg-white rounded-2xl p-8 lg:p-10 shadow-[0_12px_32px_-18px_hsl(var(--navy)/0.45)] border-t-4 border-navy"
           >
             <blockquote
-              className="italic text-[#4B5563] flex-1"
+              className="italic text-[#5b5753] flex-1"
               style={{ fontSize: "18px", lineHeight: 1.7 }}
             >
               &ldquo;{quote}&rdquo;
             </blockquote>
             <figcaption className="mt-6 text-navy font-bold" style={{ fontSize: "16px" }}>
-              — {name}, <span className="font-medium text-[#374151]">{role}</span>
+              — {name}, <span className="font-medium text-[#49443f]">{role}</span>
             </figcaption>
           </figure>
         ))}

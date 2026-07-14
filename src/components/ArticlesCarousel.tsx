@@ -97,18 +97,18 @@ export default function ArticlesCarousel() {
             fontWeight: 400,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "#8B6914",
+            color: "#7f2028",
             marginBottom: 12,
           }}
         >
           Real Property Planning
         </span>
         <h2
-          style={{ fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 700, color: "#0a1628", margin: 0, lineHeight: 1.15 }}
+          style={{ fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 700, color: "#280a0c", margin: 0, lineHeight: 1.15 }}
         >
           Featured Articles
         </h2>
-        <div style={{ width: 48, height: 2, background: "#8B6914", margin: "16px auto 0", borderRadius: 1 }} />
+        <div style={{ width: 48, height: 2, background: "#7f2028", margin: "16px auto 0", borderRadius: 1 }} />
       </div>
 
       {/* Carousel viewport */}
@@ -221,7 +221,7 @@ export default function ArticlesCarousel() {
           aria-label="Previous"
           style={{
             background: "none",
-            border: "1px solid #c8b98a",
+            border: "1px solid #c58d92",
             borderRadius: "50%",
             width: 40,
             height: 40,
@@ -229,7 +229,7 @@ export default function ArticlesCarousel() {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#8B6914",
+            color: "#7f2028",
           }}
         >
           <svg
@@ -255,7 +255,7 @@ export default function ArticlesCarousel() {
                 onClick={() => slideTo(START + i)}
                 aria-label={`Slide ${i + 1}`}
                 style={{
-                  background: normalizedPos === i ? "#8B6914" : "#d4c9b0",
+                  background: normalizedPos === i ? "#7f2028" : "#d2b2b4",
                   border: "none",
                   borderRadius: 2,
                   width: normalizedPos === i ? 24 : 8,
@@ -274,7 +274,7 @@ export default function ArticlesCarousel() {
           aria-label="Next"
           style={{
             background: "none",
-            border: "1px solid #c8b98a",
+            border: "1px solid #c58d92",
             borderRadius: "50%",
             width: 40,
             height: 40,
@@ -282,7 +282,7 @@ export default function ArticlesCarousel() {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            color: "#8B6914",
+            color: "#7f2028",
           }}
         >
           <svg

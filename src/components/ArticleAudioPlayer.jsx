@@ -14,11 +14,11 @@ const COLORS = {
   bg: "#2C3E35", // deep forest slate-green
   bgLight: "#3A5046", // lighter green for hover/track
   ivory: "#F5F0E8", // warm ivory text
-  ivoryMuted: "#C8C0AE", // muted ivory for secondary text
-  brass: "#B8966E", // warm brass accent
-  brassDark: "#9A7A56", // darker brass for hover
+  ivoryMuted: "#c7afb1", // muted ivory for secondary text
+  brass: "#b47277", // warm brass accent
+  brassDark: "#97595e", // darker brass for hover
   track: "#1E2C26", // dark track background
-  progress: "#B8966E", // brass progress fill
+  progress: "#b47277", // brass progress fill
 };
 
 // Format seconds → m:ss

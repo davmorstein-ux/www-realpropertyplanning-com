@@ -17,14 +17,14 @@ const tiles = [
     imgAlt: "Adult daughter hugging her senior mother on a couch",
     title: "I'm Helping an Aging Parent",
     href: "/helping-aging-parents",
-    bgColor: "#c47c2b", // warm amber
+    bgColor: "#bc333e", // warm amber
   },
   {
     imgSrc: tileEstate,
     imgAlt: "Family reviewing an estate property plan with documents",
     title: "I'm Handling an Estate",
     href: "/estate-probate-inherited-property",
-    bgColor: "#5c6e9e", // soft periwinkle blue
+    bgColor: "#9e5c61", // soft periwinkle blue
   },
   {
     imgSrc: tileProfessionals,
@@ -72,7 +72,7 @@ const HomepageFunnel = () => (
         font-weight: 700 !important;
         letter-spacing: 0.18em !important;
         text-transform: uppercase !important;
-        color: #1a2744 !important;
+        color: #272421 !important;
         margin: 0 0 0.35rem 0 !important;
         display: block !important;
         opacity: 1 !important;
@@ -81,7 +81,7 @@ const HomepageFunnel = () => (
         font-family: Inter, system-ui, sans-serif !important;
         font-size: 2.25rem !important;
         font-weight: 600 !important;
-        color: #b8963e !important;
+        color: #6f2a30 !important;
         margin: 0 !important;
         line-height: 1.2 !important;
         opacity: 1 !important;
@@ -100,7 +100,7 @@ const HomepageFunnel = () => (
         font-family: Inter, system-ui, sans-serif !important;
         font-size: 16px !important;
         font-weight: 500 !important;
-        color: #2c3e50 !important;
+        color: #443e38 !important;
         line-height: 1.5 !important;
         margin: 0 !important;
         opacity: 1 !important;
@@ -125,7 +125,7 @@ const HomepageFunnel = () => (
       .rpp-afh-btn:hover { background-color: #134a46 !important; }
       .rpp-afh-tile {
         background-color: #f8fafa !important;
-        border: 2px solid #1a2744 !important;
+        border: 2px solid #272421 !important;
         border-radius: 10px !important;
         padding: 0.6rem 1.25rem 0.6rem 0.75rem !important;
         display: flex !important;

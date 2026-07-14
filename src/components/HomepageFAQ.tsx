@@ -11,12 +11,12 @@ const faqs = [
   {
     q: "Do we have to wait for probate to finish before we can sell the house?",
     a: "Almost never. In Washington, once Letters Testamentary or Letters of Administration are issued, the personal representative typically has authority to list and sell — often within weeks of opening probate, not at the end of it. Preparation work (assessment, cleanout planning, market analysis) can happen during the waiting period so the property is ready the moment authority is granted.",
-    accent: "#5c6e9e",
+    accent: "#9e5c61",
   },
   {
     q: "We live out of state. Can you really handle the whole property without us flying\u00A0out?",
     a: "Yes — this is one of the most common situations we handle. We assess the property in person, send photo and video updates, coordinate cleanout and repair vendors, manage the listing and showings, and walk you through every offer by phone or video.",
-    accent: "#c47c2b",
+    accent: "#bc333e",
   },
   {
     q: "My siblings and I disagree about whether to sell or what it's worth. How do you handle that?",
@@ -38,7 +38,7 @@ const faqJsonLd = {
   })),
 };
 
-const NAVY = "#1a2744";
+const NAVY = "#272421";
 
 const HomepageFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -125,11 +125,11 @@ const HomepageFAQ = () => {
                   <div
                     style={{
                       padding: "0 1.75rem 1.75rem",
-                      borderTop: "1px solid #e8e0d0",
+                      borderTop: "1px solid #e7d1d3",
                       paddingTop: "1.25rem",
                       fontFamily: "Inter, system-ui, sans-serif",
                       fontSize: "22px",
-                      color: "#2d3a4a",
+                      color: "#413b36",
                       lineHeight: 1.75,
                     }}
                   >

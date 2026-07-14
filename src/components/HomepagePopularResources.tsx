@@ -12,13 +12,13 @@ const resources = [
     title: "How Probate Real Estate Works",
     href: "/guides/how-probate-real-estate-works",
     icon: Scale,
-    accent: "#5c6e9e",
+    accent: "#9e5c61",
   },
   {
     title: "Senior Housing & Care Options",
     href: "/understanding-housing-care-options",
     icon: HeartHandshake,
-    accent: "#c47c2b",
+    accent: "#bc333e",
   },
   {
     title: "What to Do With an Inherited House",
@@ -37,7 +37,7 @@ const HomepagePopularResources = () => (
         font-weight: 700 !important;
         letter-spacing: 0.14em !important;
         text-transform: uppercase !important;
-        color: #1a2744 !important;
+        color: #272421 !important;
         margin: 0 0 0.5rem 0 !important;
         display: block !important;
       }
@@ -45,7 +45,7 @@ const HomepagePopularResources = () => (
         font-family: 'Cormorant Garamond', Georgia, serif !important;
         font-size: clamp(32px, 3vw, 48px) !important;
         font-weight: 700 !important;
-        color: #1a2744 !important;
+        color: #272421 !important;
         margin: 0 !important;
         line-height: 1.2 !important;
       }
@@ -66,8 +66,8 @@ const HomepagePopularResources = () => (
         align-items: center !important;
         text-align: center !important;
         background-color: #ffffff !important;
-        border: 1px solid #e0dbd2 !important;
-        border-top: 4px solid var(--pr-accent, #1a2744) !important;
+        border: 1px solid #dfd3d4 !important;
+        border-top: 4px solid var(--pr-accent, #272421) !important;
         border-radius: 12px !important;
         padding: 2rem 1.5rem 1.75rem !important;
         min-height: 240px !important;
@@ -94,7 +94,7 @@ const HomepagePopularResources = () => (
         font-family: Georgia, 'Cormorant Garamond', serif !important;
         font-size: 20px !important;
         font-weight: 700 !important;
-        color: #1a2744 !important;
+        color: #272421 !important;
         line-height: 1.35 !important;
         flex: 1 !important;
         margin-bottom: 1.5rem !important;
@@ -110,7 +110,7 @@ const HomepagePopularResources = () => (
         letter-spacing: 0.08em !important;
         text-transform: uppercase !important;
         color: #ffffff !important;
-        background-color: var(--pr-accent, #1a2744) !important;
+        background-color: var(--pr-accent, #272421) !important;
         padding: 10px 18px !important;
         border-radius: 8px !important;
         text-decoration: none !important;
@@ -122,7 +122,7 @@ const HomepagePopularResources = () => (
         font-family: Inter, system-ui, sans-serif !important;
         font-size: 18px !important;
         font-weight: 700 !important;
-        color: #1a2744 !important;
+        color: #272421 !important;
         text-decoration: none !important;
       }
       .rpp-pr-browse:hover { color: #7f1d1d !important; }

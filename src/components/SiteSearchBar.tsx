@@ -58,7 +58,7 @@ const SiteSearchBar = () => {
           boxSizing: "border-box",
         }}
       >
-        <Search size={20} color="#1B3A6B" strokeWidth={2.25} style={{ flexShrink: 0 }} />
+        <Search size={20} color="#6b1b22" strokeWidth={2.25} style={{ flexShrink: 0 }} />
         <input
           value={query}
           onChange={(e) => {
@@ -74,7 +74,7 @@ const SiteSearchBar = () => {
             outline: "none",
             fontSize: 17,
             fontFamily: "'Raleway', sans-serif",
-            color: "#1a2744",
+            color: "#272421",
             background: "transparent",
             minWidth: 0,
           }}
@@ -101,7 +101,7 @@ const SiteSearchBar = () => {
                 padding: "18px 16px",
                 fontFamily: "'Raleway', sans-serif",
                 fontSize: 16,
-                color: "#6b7280",
+                color: "#806b6d",
               }}
             >
               No pages match "{query}"
@@ -128,7 +128,7 @@ const SiteSearchBar = () => {
                   fontFamily: "'Raleway', sans-serif",
                   fontSize: 16,
                   fontWeight: 600,
-                  color: "#1a2744",
+                  color: "#272421",
                 }}
               >
                 {entry.label}

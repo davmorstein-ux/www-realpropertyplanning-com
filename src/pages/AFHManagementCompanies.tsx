@@ -50,7 +50,7 @@ const AFHManagementCompanies = () => (
               fontSize: "20px",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -64,7 +64,7 @@ const AFHManagementCompanies = () => (
               fontSize: "18px",
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               maxWidth: 680,
             }}
@@ -87,7 +87,7 @@ const AFHManagementCompanies = () => (
               fontWeight: 700,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -98,20 +98,20 @@ const AFHManagementCompanies = () => (
               fontSize: "clamp(32px, 4vw, 44px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 16px",
             }}
           >
             Aura Living Care
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 36, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 36, borderRadius: 1 }} />
 
           {/* Provider card */}
           <div
             style={{
               background: "#fff",
-              border: "1px solid #e0d8c8",
+              border: "1px solid #dfc9cb",
               borderRadius: 8,
               overflow: "hidden",
               marginBottom: 40,
@@ -144,7 +144,7 @@ const AFHManagementCompanies = () => (
                     borderRadius: "50%",
                     objectFit: "cover",
                     objectPosition: "top",
-                    border: "3px solid #b87333",
+                    border: "3px solid #b13a44",
                   }}
                   loading="lazy"
                 />
@@ -154,7 +154,7 @@ const AFHManagementCompanies = () => (
                       fontSize: "20px",
                       fontFamily: "Georgia, serif",
                       fontWeight: 700,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       margin: "0 0 6px",
                     }}
                   >
@@ -164,7 +164,7 @@ const AFHManagementCompanies = () => (
                     style={{
                       fontSize: "18px",
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       margin: "0 0 16px",
                     }}
                   >
@@ -188,7 +188,7 @@ const AFHManagementCompanies = () => (
                     fontSize: "clamp(22px, 2.5vw, 28px)",
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: "0 0 16px",
                   }}
                 >
@@ -198,7 +198,7 @@ const AFHManagementCompanies = () => (
                   style={{
                     fontSize: "19px",
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.8,
                     margin: "0 0 24px",
                   }}
@@ -243,7 +243,7 @@ const AFHManagementCompanies = () => (
                         fontSize: "20px",
                         fontFamily: "'Raleway', sans-serif",
                         fontWeight: 700,
-                        color: "#0a1628",
+                        color: "#280a0c",
                         textDecoration: "none",
                       }}
                     >
@@ -283,7 +283,7 @@ const AFHManagementCompanies = () => (
                         fontSize: "19px",
                         fontFamily: "'Raleway', sans-serif",
                         fontWeight: 600,
-                        color: "#0a1628",
+                        color: "#280a0c",
                         textDecoration: "none",
                       }}
                     >
@@ -317,7 +317,7 @@ const AFHManagementCompanies = () => (
                         <polyline points="12 6 12 12 16 14" />
                       </svg>
                     </div>
-                    <p style={{ fontSize: "19px", fontFamily: "'Raleway', sans-serif", color: "#1e2a38", margin: 0 }}>
+                    <p style={{ fontSize: "19px", fontFamily: "'Raleway', sans-serif", color: "#302b26", margin: 0 }}>
                       Mon–Sun: 9:00 AM – 6:00 PM
                     </p>
                   </div>
@@ -348,7 +348,7 @@ const AFHManagementCompanies = () => (
                         <circle cx="12" cy="10" r="3" />
                       </svg>
                     </div>
-                    <p style={{ fontSize: "19px", fontFamily: "'Raleway', sans-serif", color: "#1e2a38", margin: 0 }}>
+                    <p style={{ fontSize: "19px", fontFamily: "'Raleway', sans-serif", color: "#302b26", margin: 0 }}>
                       Seattle, WA
                     </p>
                   </div>
@@ -379,13 +379,13 @@ const AFHManagementCompanies = () => (
             </div>
 
             {/* Services grid */}
-            <div style={{ borderTop: "1px solid #e0d8c8", padding: "32px 32px 36px", background: "#fff" }}>
+            <div style={{ borderTop: "1px solid #dfc9cb", padding: "32px 32px 36px", background: "#fff" }}>
               <h3
                 style={{
                   fontSize: "clamp(22px, 2.5vw, 28px)",
                   fontFamily: "Georgia, serif",
                   fontWeight: 700,
-                  color: "#0a1628",
+                  color: "#280a0c",
                   margin: "0 0 24px",
                 }}
               >
@@ -410,7 +410,7 @@ const AFHManagementCompanies = () => (
                           fontSize: "18px",
                           fontFamily: "'Raleway', sans-serif",
                           fontWeight: 700,
-                          color: "#0a1628",
+                          color: "#280a0c",
                           margin: "0 0 4px",
                         }}
                       >
@@ -420,7 +420,7 @@ const AFHManagementCompanies = () => (
                         style={{
                           fontSize: "17px",
                           fontFamily: "'Raleway', sans-serif",
-                          color: "#1e2a38",
+                          color: "#302b26",
                           lineHeight: 1.65,
                           margin: 0,
                         }}
@@ -438,7 +438,7 @@ const AFHManagementCompanies = () => (
           <div
             style={{
               background: "#edf0f3",
-              border: "2px solid #b87333",
+              border: "2px solid #b13a44",
               borderRadius: 8,
               padding: "40px 32px",
               textAlign: "center",
@@ -451,7 +451,7 @@ const AFHManagementCompanies = () => (
                 fontWeight: 700,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
-                color: "#5a3200",
+                color: "#481216",
                 margin: "0 0 14px",
               }}
             >
@@ -462,7 +462,7 @@ const AFHManagementCompanies = () => (
                 fontSize: "clamp(24px, 3vw, 32px)",
                 fontFamily: "Georgia, serif",
                 fontWeight: 700,
-                color: "#0a1628",
+                color: "#280a0c",
                 margin: "0 0 16px",
               }}
             >
@@ -472,7 +472,7 @@ const AFHManagementCompanies = () => (
               style={{
                 fontSize: "19px",
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1e2a38",
+                color: "#302b26",
                 lineHeight: 1.8,
                 margin: "0 auto 28px",
                 maxWidth: 560,
@@ -493,11 +493,11 @@ const AFHManagementCompanies = () => (
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
                 color: "#fff",
-                background: "#2c3a48",
+                background: "#3f3a35",
                 padding: "14px 28px",
                 borderRadius: 4,
                 textDecoration: "none",
-                border: "2px solid #C9A84C",
+                border: "2px solid #c3525c",
               }}
             >
               Meet Our AFH Broker →

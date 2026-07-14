@@ -24,6 +24,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
   const { node, parent, trail } = entry;
   const hasChildren = !!node.children?.length;
   const isRoot = parent === null;
+  const activeStep = trail.length; // 1 = root, 2 = category, 3 = your guidance
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -35,9 +36,11 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
       <Header />
 
       <main id="main-content" className="flex-1">
-        <section className="pt-0 pb-10 lg:pt-0 lg:pb-16 bg-cream">
+        <section className="pt-8 pb-10 lg:pt-10 lg:pb-16 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
+              <RoadmapSteps activeStep={activeStep} />
+
               {/* Hero image — root page or any node with explicit heroImage */}
               {(isRoot || node.heroImage || node.heroBandTitle) && (
                 <>
@@ -88,6 +91,42 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
   );
 };
 
+const ROADMAP_LABELS = ["Where you are", "What you need", "Your guidance"];
+
+const RoadmapSteps = ({ activeStep }: { activeStep: number }) => (
+  <ol className="flex items-start justify-center gap-0 mb-10 max-w-xl mx-auto" aria-label="Your progress through this guide">
+    {ROADMAP_LABELS.map((label, i) => {
+      const stepNum = i + 1;
+      const isDone = stepNum < activeStep;
+      const isCurrent = stepNum === activeStep;
+      return (
+        <li key={label} className="flex-1 flex items-center">
+          <div className="flex flex-col items-center flex-1 text-center">
+            <span
+              aria-current={isCurrent ? "step" : undefined}
+              className={`w-11 h-11 rounded-full flex items-center justify-center font-serif font-bold text-lg border-2 ${
+                isDone
+                  ? "bg-navy border-navy text-white"
+                  : isCurrent
+                  ? "bg-white border-navy text-navy"
+                  : "bg-white border-navy/25 text-navy/50"
+              }`}
+            >
+              {stepNum}
+            </span>
+            <span className={`mt-2 text-base leading-snug ${isCurrent ? "text-navy font-semibold" : "text-navy/70"}`}>
+              {label}
+            </span>
+          </div>
+          {stepNum < ROADMAP_LABELS.length && (
+            <div className={`h-0.5 flex-1 mt-[-20px] ${isDone ? "bg-navy" : "bg-navy/20"}`} aria-hidden="true" />
+          )}
+        </li>
+      );
+    })}
+  </ol>
+);
+
 const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
   // Up to 5 cards: 1 col mobile, 2 cols tablet, 3 cols desktop so all 5 fit above the fold.
   return (
@@ -102,7 +141,7 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
           <li key={choice.path} className="h-full">
             <Link
               to={choice.path}
-              className="tile-white group block h-full min-h-[176px] sm:min-h-[192px] no-underline rounded-xl"
+              className="tile-white group block h-full min-h-[280px] sm:min-h-[300px] no-underline rounded-xl"
             >
               <div className="tile-white__inner h-full">
                 <div className="tile-white__face h-full">
@@ -127,7 +166,22 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
                         {choice.label}
                       </h3>
                     </div>
-                    <div className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-gold group-hover:text-[hsl(var(--gold-dark))] transition-colors">
+                    {choice.children?.length ? (
+                      <ul className="mt-4 space-y-1.5" aria-label={`Topics under ${choice.label}`}>
+                        {choice.children.slice(0, 4).map((child) => (
+                          <li key={child.path} className="text-base text-navy/75 leading-snug">
+                            {child.label}
+                          </li>
+                        ))}
+                        {choice.children.length > 4 && (
+                          <li className="text-base text-navy/60">
+                            +{choice.children.length - 4} more
+                          </li>
+                        )}
+                      </ul>
+                    ) : null}
+
+                    <div className="mt-5 flex items-center gap-1.5 text-base font-semibold text-gold group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                       <span>Learn more</span>
                       <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
                     </div>

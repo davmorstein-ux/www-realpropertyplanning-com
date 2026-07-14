@@ -305,7 +305,7 @@ const HeroNetworkBackground = ({
       lastT = t;
 
       // background
-      ctx.fillStyle = "#020810";
+      ctx.fillStyle = "#0f0304";
       ctx.fillRect(0, 0, width, height);
 
       // ---- Update signals ----
@@ -407,7 +407,7 @@ const HeroNetworkBackground = ({
         // appears half-clipped, reinforcing that the network continues outside.
         ctx.save();
         ctx.shadowBlur = 10;
-        ctx.shadowColor = "#6ab0ff";
+        ctx.shadowColor = "#e5848c";
         ctx.fillStyle = "rgba(220, 235, 255, 0.85)";
         ctx.beginPath();
         ctx.arc(ex, ey, ghost.r || 2.5, 0, Math.PI * 2);
@@ -439,7 +439,7 @@ const HeroNetworkBackground = ({
 
         ctx.save();
         ctx.shadowBlur = 6 * fade;
-        ctx.shadowColor = "#88ccff";
+        ctx.shadowColor = "#ea9da3";
         ctx.strokeStyle = `rgba(140, 210, 255, ${0.85 * fade})`;
         ctx.lineWidth = 1.4;
         ctx.beginPath();
@@ -457,8 +457,8 @@ const HeroNetworkBackground = ({
         const y = a.y + (b.y - a.y) * sig.progress;
         ctx.save();
         ctx.shadowBlur = 10;
-        ctx.shadowColor = "#aaddff";
-        ctx.fillStyle = "#aaddff";
+        ctx.shadowColor = "#f0b9bd";
+        ctx.fillStyle = "#f0b9bd";
         ctx.beginPath();
         ctx.arc(x, y, 3, 0, Math.PI * 2);
         ctx.fill();
@@ -472,7 +472,7 @@ const HeroNetworkBackground = ({
         if (n.flare > 0) n.flare = Math.max(0, n.flare - dt / 500);
         ctx.save();
         ctx.shadowBlur = 15 + 5 * n.flare; // 15 -> 20 at peak flare
-        ctx.shadowColor = n.flare > 0 ? "#aaddff" : "#6ab0ff";
+        ctx.shadowColor = n.flare > 0 ? "#f0b9bd" : "#e5848c";
         ctx.fillStyle = "rgba(220, 235, 255, 0.95)";
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r + n.flare * 0.6, 0, Math.PI * 2);
@@ -496,7 +496,7 @@ const HeroNetworkBackground = ({
       ref={canvasRef}
       aria-hidden="true"
       className={`absolute inset-0 w-full h-full block ${className}`}
-      style={{ backgroundColor: "#020810", transform: "scale(1.12)", transformOrigin: "center center" }}
+      style={{ backgroundColor: "#0f0304", transform: "scale(1.12)", transformOrigin: "center center" }}
     />
   );
 };

@@ -4,7 +4,7 @@ import WaterfallNav from "./WaterfallNav";
 import SiteSearchBar from "./SiteSearchBar";
 
 const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
-const GOLD = "#E8C97A";
+const GOLD = "#e0828a";
 
 const SENIOR_TRANSITION_ITEMS = [
   { label: "Senior Home Sales", href: "/senior-transitions" },
@@ -376,8 +376,8 @@ const Header = () => {
         display: inline-flex;
         align-items: center;
       }
-      .rpp-top-link:hover { color: #E8C97A; }
-      .rpp-top-link.is-active { border-bottom-color: #E8C97A; }
+      .rpp-top-link:hover { color: #e0828a; }
+      .rpp-top-link.is-active { border-bottom-color: #e0828a; }
     `;
     document.head.appendChild(style);
   }, []);
@@ -461,7 +461,7 @@ const Header = () => {
               style={{
                 ...NAV_FONT,
                 color: "#fff",
-                background: "#1a5fa8",
+                background: "#a0222c",
                 padding: isMobile ? "6px 10px" : "4px 14px",
                 borderRadius: 6,
                 fontWeight: 400,

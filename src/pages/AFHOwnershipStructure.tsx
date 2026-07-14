@@ -65,7 +65,7 @@ const AFHOwnershipStructure = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -74,7 +74,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -85,20 +85,20 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(32px, 5vw, 50px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#1a2530",
+              color: "#292521",
               lineHeight: 1.15,
               margin: "0 0 20px",
             }}
           >
             Should You Buy an Adult Family Home as an Individual or Through an LLC?
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2e3e",
+              color: "#342e28",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -128,7 +128,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -139,19 +139,19 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Why Ownership Structure Matters
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -165,7 +165,7 @@ const AFHOwnershipStructure = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 24px",
             }}
@@ -178,8 +178,8 @@ const AFHOwnershipStructure = () => (
           <div
             style={{
               background: "#e8f2f9",
-              border: "1px solid #2c6e9e",
-              borderLeft: "4px solid #2c6e9e",
+              border: "1px solid #9e2c35",
+              borderLeft: "4px solid #9e2c35",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -188,7 +188,7 @@ const AFHOwnershipStructure = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1a2a3a",
+                color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
               }}
@@ -210,7 +210,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -221,22 +221,22 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Individual Ownership or an LLC
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {CONSIDERATIONS.map((item) => (
               <div
                 key={item.title}
                 style={{
                   background: "#fff",
-                  border: "1px solid #ddd8cc",
-                  borderLeft: "4px solid #b87333",
+                  border: "1px solid #dccdce",
+                  borderLeft: "4px solid #b13a44",
                   borderRadius: 6,
                   padding: "22px",
                 }}
@@ -246,7 +246,7 @@ const AFHOwnershipStructure = () => (
                     fontSize: 17,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: "0 0 10px",
                   }}
                 >
@@ -256,7 +256,7 @@ const AFHOwnershipStructure = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.75,
                     margin: 0,
                   }}
@@ -279,7 +279,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -290,19 +290,19 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Financing Differences
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -325,7 +325,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -336,19 +336,19 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Washington State Considerations
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -371,7 +371,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -382,19 +382,19 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 16px",
             }}
           >
             How to Decide
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 16, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 28px",
             }}
@@ -422,7 +422,7 @@ const AFHOwnershipStructure = () => (
                     width: 40,
                     height: 40,
                     borderRadius: "50%",
-                    background: "#2c3a48",
+                    background: "#3f3a35",
                     color: "#e8e2d9",
                     display: "flex",
                     alignItems: "center",
@@ -440,7 +440,7 @@ const AFHOwnershipStructure = () => (
                       fontSize: 17,
                       fontFamily: "Georgia, serif",
                       fontWeight: 700,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       margin: "0 0 6px",
                     }}
                   >
@@ -450,7 +450,7 @@ const AFHOwnershipStructure = () => (
                     style={{
                       fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       lineHeight: 1.75,
                       margin: 0,
                     }}
@@ -474,7 +474,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -485,19 +485,19 @@ const AFHOwnershipStructure = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             There Is No Single Best Answer
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -511,7 +511,7 @@ const AFHOwnershipStructure = () => (
       </section>
 
       {/* Real Estate Broker CTA */}
-      <section style={{ background: "#2c3a48", padding: "64px 24px" }}>
+      <section style={{ background: "#3f3a35", padding: "64px 24px" }}>
         <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
           <p
             style={{
@@ -520,7 +520,7 @@ const AFHOwnershipStructure = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#b87333",
+              color: "#b13a44",
               margin: "0 0 16px",
             }}
           >
@@ -538,7 +538,7 @@ const AFHOwnershipStructure = () => (
           >
             Planning an AFH Purchase?
           </h2>
-          <div style={{ width: 40, height: 2, background: "#b87333", margin: "0 auto 24px", borderRadius: 1 }} />
+          <div style={{ width: 40, height: 2, background: "#b13a44", margin: "0 auto 24px", borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -563,7 +563,7 @@ const AFHOwnershipStructure = () => (
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
                 color: "#e8e2d9",
-                background: "#b87333",
+                background: "#b13a44",
                 padding: "14px 28px",
                 borderRadius: 4,
                 textDecoration: "none",
@@ -587,7 +587,7 @@ const AFHOwnershipStructure = () => (
                 padding: "14px 28px",
                 borderRadius: 4,
                 textDecoration: "none",
-                border: "1px solid #4a5a6a",
+                border: "1px solid #605a54",
               }}
             >
               Search AFH Locator

@@ -6,11 +6,11 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
 
-const navy = "#1B3A6B";
-const gold = "#C9A84C";
+const navy = "#6b1b22";
+const gold = "#c3525c";
 const crimson = "#8B0000";
 const cream = "#FAF8F4";
-const bodyGray = "#4a5568";
+const bodyGray = "#5e5954";
 const lightBorder = "rgba(0,0,0,0.08)";
 const raleway = "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif";
 const georgia = "Georgia, 'Times New Roman', serif";

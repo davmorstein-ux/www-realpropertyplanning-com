@@ -130,7 +130,7 @@ const InheritedHouseWashington = () => (
         </div>
         <style>{`
           .inherited-tile-outline .tile-white__face {
-            border: 2px solid #5c6e9e !important;
+            border: 2px solid #9e5c61 !important;
           }
           .inherited-tile-wide {
             max-width: none !important;

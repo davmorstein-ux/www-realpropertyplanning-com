@@ -47,11 +47,11 @@ const DirectAnswerBlock = ({
         <div className="max-w-3xl mx-auto">
           {/* Card wrapper */}
           <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
-            <p className="font-bold tracking-[0.14em] uppercase mb-2" style={{ color: "#1B3A6B", fontSize: "15px" }}>
+            <p className="font-bold tracking-[0.14em] uppercase mb-2" style={{ color: "#6b1b22", fontSize: "15px" }}>
               Quick Answer
             </p>
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">{question}</h2>
-            <p className="text-foreground text-lg md:text-xl leading-relaxed" style={{ color: "#1f2937" }}>
+            <p className="text-foreground text-lg md:text-xl leading-relaxed" style={{ color: "#2f2b27" }}>
               {answer}
             </p>
 
@@ -60,8 +60,8 @@ const DirectAnswerBlock = ({
               <ul className="mt-6 pt-5 border-t border-border space-y-3">
                 {supportBullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full mt-2.5 shrink-0" style={{ backgroundColor: "#1B3A6B" }} />
-                    <span className="text-lg leading-relaxed" style={{ color: "#1f2937" }}>
+                    <span className="w-1.5 h-1.5 rounded-full mt-2.5 shrink-0" style={{ backgroundColor: "#6b1b22" }} />
+                    <span className="text-lg leading-relaxed" style={{ color: "#2f2b27" }}>
                       {bullet}
                     </span>
                   </li>
@@ -83,14 +83,14 @@ const DirectAnswerBlock = ({
                         fontFamily: "Georgia, serif",
                         fontSize: "32px",
                         fontWeight: 900,
-                        color: "#1B3A6B",
+                        color: "#6b1b22",
                         display: "block",
                         marginBottom: "4px",
                       }}
                     >
                       {step.label}
                     </span>
-                    <p className="text-base mt-1 leading-relaxed" style={{ color: "#1f2937" }}>
+                    <p className="text-base mt-1 leading-relaxed" style={{ color: "#2f2b27" }}>
                       {step.desc}
                     </p>
                   </div>
@@ -104,7 +104,7 @@ const DirectAnswerBlock = ({
                 {supportFaqs.map((faq, i) => (
                   <div key={i} className="bg-secondary/50 rounded-xl p-4">
                     <p className="text-foreground text-base font-semibold mb-1.5">{faq.question}</p>
-                    <p className="text-base leading-relaxed" style={{ color: "#1f2937" }}>
+                    <p className="text-base leading-relaxed" style={{ color: "#2f2b27" }}>
                       {faq.answer}
                     </p>
                   </div>

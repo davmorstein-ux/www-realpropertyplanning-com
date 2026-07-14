@@ -77,7 +77,7 @@ const AFHGettingStarted = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -86,7 +86,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -97,14 +97,14 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(32px, 5vw, 50px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#1a2530",
+              color: "#292521",
               lineHeight: 1.15,
               margin: "0 0 20px",
             }}
           >
             Is an Adult Family Home Right for You?
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <div style={{ marginBottom: 24 }}>
             <ArticleAudioPlayer audioSrc={audioAsset.url} />
           </div>
@@ -113,7 +113,7 @@ const AFHGettingStarted = () => (
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2e3e",
+              color: "#342e28",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -128,7 +128,7 @@ const AFHGettingStarted = () => (
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               maxWidth: 680,
             }}
@@ -149,7 +149,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -160,19 +160,19 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             What Is an Adult Family Home?
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 32, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -186,7 +186,7 @@ const AFHGettingStarted = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -196,7 +196,7 @@ const AFHGettingStarted = () => (
             more complex care for residents with dementia, mental health needs, or developmental disabilities.
           </p>
           <p
-            style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#1e2a38", lineHeight: 1.85, margin: 0 }}
+            style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#302b26", lineHeight: 1.85, margin: 0 }}
           >
             AFHs are permitted in all single-family residential zoning districts throughout Washington State. The
             concept originated in Washington in the 1990s specifically to create a homelike alternative to larger
@@ -215,7 +215,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -226,19 +226,19 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Who Can Open an AFH?
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 16, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -288,8 +288,8 @@ const AFHGettingStarted = () => (
                   alignItems: "flex-start",
                   padding: "16px 20px",
                   background: "#fff",
-                  border: "1px solid #ddd8cc",
-                  borderLeft: "4px solid #b87333",
+                  border: "1px solid #dccdce",
+                  borderLeft: "4px solid #b13a44",
                   borderRadius: 6,
                 }}
               >
@@ -299,7 +299,7 @@ const AFHGettingStarted = () => (
                     width: 8,
                     height: 8,
                     borderRadius: "50%",
-                    background: "#b87333",
+                    background: "#b13a44",
                     marginTop: 8,
                   }}
                 />
@@ -309,7 +309,7 @@ const AFHGettingStarted = () => (
                       fontSize: 18,
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       margin: "0 0 4px",
                     }}
                   >
@@ -319,7 +319,7 @@ const AFHGettingStarted = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       lineHeight: 1.65,
                       margin: 0,
                     }}
@@ -334,8 +334,8 @@ const AFHGettingStarted = () => (
             style={{
               marginTop: 28,
               background: "#e8f2f9",
-              border: "1px solid #2c6e9e",
-              borderLeft: "4px solid #2c6e9e",
+              border: "1px solid #9e2c35",
+              borderLeft: "4px solid #9e2c35",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -344,7 +344,7 @@ const AFHGettingStarted = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1a2a3a",
+                color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
               }}
@@ -355,7 +355,7 @@ const AFHGettingStarted = () => (
                 href="https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/information/AFH%20Information%20Sheet%20-%20What%20You%20Need%20to%20Understand.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "#2c6e9e" }}
+                style={{ color: "#9e2c35" }}
               >
                 "What You Need to Understand Before Becoming a Licensed Adult Family Home Provider"
               </a>{" "}
@@ -375,7 +375,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -386,19 +386,19 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Six Questions to Ask Yourself First
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 16, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -412,8 +412,8 @@ const AFHGettingStarted = () => (
                 key={i}
                 style={{
                   background: "#fff",
-                  border: "1px solid #ddd8cc",
-                  borderTop: "3px solid #2c3a48",
+                  border: "1px solid #dccdce",
+                  borderTop: "3px solid #3f3a35",
                   borderRadius: 6,
                   padding: "24px",
                 }}
@@ -423,7 +423,7 @@ const AFHGettingStarted = () => (
                     fontSize: 17,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: "0 0 10px",
                   }}
                 >
@@ -433,7 +433,7 @@ const AFHGettingStarted = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.75,
                     margin: 0,
                   }}
@@ -456,7 +456,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -467,19 +467,19 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Individual Provider vs. Entity Provider
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 16, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -494,8 +494,8 @@ const AFHGettingStarted = () => (
                 key={item.type}
                 style={{
                   background: "#fff",
-                  border: "1px solid #ddd8cc",
-                  borderTop: "4px solid #2c3a48",
+                  border: "1px solid #dccdce",
+                  borderTop: "4px solid #3f3a35",
                   borderRadius: 6,
                   padding: "28px 24px",
                 }}
@@ -505,7 +505,7 @@ const AFHGettingStarted = () => (
                     fontSize: 19,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: "0 0 12px",
                   }}
                 >
@@ -515,7 +515,7 @@ const AFHGettingStarted = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.75,
                     margin: "0 0 20px",
                   }}
@@ -529,7 +529,7 @@ const AFHGettingStarted = () => (
                     fontWeight: 700,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "#5a3200",
+                    color: "#481216",
                     margin: "0 0 8px",
                   }}
                 >
@@ -541,7 +541,7 @@ const AFHGettingStarted = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       lineHeight: 1.65,
                       margin: "0 0 4px",
                       paddingLeft: 12,
@@ -557,7 +557,7 @@ const AFHGettingStarted = () => (
                     fontWeight: 700,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "#5a3200",
+                    color: "#481216",
                     margin: "16px 0 8px",
                   }}
                 >
@@ -569,7 +569,7 @@ const AFHGettingStarted = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       lineHeight: 1.65,
                       margin: "0 0 4px",
                       paddingLeft: 12,
@@ -585,8 +585,8 @@ const AFHGettingStarted = () => (
             style={{
               marginTop: 24,
               background: "#fff",
-              border: "1px solid #ddd8cc",
-              borderLeft: "4px solid #b87333",
+              border: "1px solid #dccdce",
+              borderLeft: "4px solid #b13a44",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -595,7 +595,7 @@ const AFHGettingStarted = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1e2a38",
+                color: "#302b26",
                 lineHeight: 1.75,
                 margin: 0,
               }}
@@ -618,7 +618,7 @@ const AFHGettingStarted = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -629,14 +629,14 @@ const AFHGettingStarted = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Your Path Forward
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 32, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 32, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {[
               {
@@ -676,8 +676,8 @@ const AFHGettingStarted = () => (
                   display: "flex",
                   gap: 20,
                   padding: "20px 0",
-                  borderBottom: "1px solid #ddd8cc",
-                  borderTop: i === 0 ? "1px solid #ddd8cc" : "none",
+                  borderBottom: "1px solid #dccdce",
+                  borderTop: i === 0 ? "1px solid #dccdce" : "none",
                   alignItems: "flex-start",
                 }}
               >
@@ -687,7 +687,7 @@ const AFHGettingStarted = () => (
                     width: 40,
                     height: 40,
                     borderRadius: "50%",
-                    background: "#2c3a48",
+                    background: "#3f3a35",
                     color: "#e8e2d9",
                     display: "flex",
                     alignItems: "center",
@@ -705,7 +705,7 @@ const AFHGettingStarted = () => (
                       fontSize: 17,
                       fontFamily: "Georgia, serif",
                       fontWeight: 700,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       margin: "0 0 6px",
                     }}
                   >
@@ -715,7 +715,7 @@ const AFHGettingStarted = () => (
                     style={{
                       fontSize: 17,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       lineHeight: 1.75,
                       margin: 0,
                     }}
@@ -752,7 +752,7 @@ const AFHGettingStarted = () => (
                   fontSize: 16,
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: 600,
-                  color: "#2c6e9e",
+                  color: "#9e2c35",
                   textDecoration: "underline",
                   lineHeight: 1.5,
                 }}

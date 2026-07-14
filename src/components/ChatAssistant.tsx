@@ -27,7 +27,7 @@ const linkify = (text: string) => {
       <a
         key={i}
         href={p}
-        className="text-[#1B3A6B] font-semibold underline hover:text-[#C9A84C]"
+        className="text-[#6b1b22] font-semibold underline hover:text-[#c3525c]"
       >
         {p}
       </a>
@@ -170,7 +170,7 @@ const ChatAssistant = () => {
           width: 22px;
           height: 22px;
           border-radius: 50%;
-          background: #C9A84C;
+          background: #c3525c;
           border: 2px solid #fff;
           animation: rpp-pulse 1.8s ease-in-out infinite;
         }
@@ -197,7 +197,7 @@ const ChatAssistant = () => {
         }
         .rpp-chat-header {
           position: relative;
-          background: #1B3A6B;
+          background: #6b1b22;
           color: #fff;
           padding: 14px 16px;
           display: flex;
@@ -214,7 +214,7 @@ const ChatAssistant = () => {
           height: 40px;
           border-radius: 50%;
           object-fit: cover;
-          border: 1.5px solid #C9A84C;
+          border: 1.5px solid #c3525c;
           flex-shrink: 0;
           z-index: 1;
         }
@@ -266,19 +266,19 @@ const ChatAssistant = () => {
         }
         .rpp-chat-bubble.assistant {
           background: #F5F1E8;
-          color: #1B2B4B;
+          color: #39332d;
           align-self: flex-start;
           border-bottom-left-radius: 4px;
         }
         .rpp-chat-bubble.user {
-          background: #1B3A6B;
+          background: #6b1b22;
           color: #fff;
           align-self: flex-end;
           border-bottom-right-radius: 4px;
         }
         .rpp-chat-typing {
           align-self: flex-start;
-          color: #1B2B4B;
+          color: #39332d;
           font-size: 13px;
           font-style: italic;
           padding: 4px 8px;
@@ -299,14 +299,14 @@ const ChatAssistant = () => {
           outline: none;
           font-family: inherit;
         }
-        .rpp-chat-input:focus { border-color: #C9A84C; }
+        .rpp-chat-input:focus { border-color: #c3525c; }
         .rpp-chat-input:disabled { background: #f5f5f5; cursor: not-allowed; }
         .rpp-chat-send {
           width: 40px;
           height: 40px;
           border-radius: 50%;
           border: none;
-          background: #C9A84C;
+          background: #c3525c;
           color: #fff;
           cursor: pointer;
           display: flex;
@@ -314,7 +314,7 @@ const ChatAssistant = () => {
           justify-content: center;
           flex-shrink: 0;
         }
-        .rpp-chat-send:hover:not(:disabled) { background: #b8962f; }
+        .rpp-chat-send:hover:not(:disabled) { background: #b13640; }
         .rpp-chat-send:disabled { opacity: 0.5; cursor: not-allowed; }
         @media (min-width: 640px) and (max-width: 1023px) {
           .rpp-chat-anchor { width: 115px; height: 115px; }

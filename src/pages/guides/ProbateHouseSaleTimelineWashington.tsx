@@ -181,8 +181,8 @@ const ProbateHouseSaleTimelineWashington = () => (
                 <li key={s.title} className="flex items-start gap-5">
                   <div
                     style={{
-                      background: "radial-gradient(circle at 38% 38%, #2a4a8b, #0a1d3d 70%)",
-                      border: "2px solid #c9a84c",
+                      background: "radial-gradient(circle at 38% 38%, #655a50, #3b0c10 70%)",
+                      border: "2px solid #c3525c",
                       borderRadius: "50%",
                       width: "52px",
                       height: "52px",
@@ -192,7 +192,7 @@ const ProbateHouseSaleTimelineWashington = () => (
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: "#c9a84c",
+                      color: "#c3525c",
                       fontSize: "20px",
                       fontWeight: 700,
                       textShadow: "1px 1px 2px rgba(0,0,0,0.8)",

@@ -310,7 +310,7 @@ const SiteChatWidget = () => {
         }
         .rpp-cw-bubble.confirm {
           background: #F1F4F9;
-          color: #1B2B4B;
+          color: #39332d;
           margin-left: 32px;
         }
 
@@ -327,14 +327,14 @@ const SiteChatWidget = () => {
         .rpp-cw-input {
           flex: 1;
           padding: 0 10px;
-          border: 1px solid #D1D5DB;
+          border: 1px solid #dbd1d2;
           border-radius: 4px;
           font-size: 0.75rem;
           height: 32px;
           outline: none;
           background: #fff;
           font-family: inherit;
-          color: #1B2B4B;
+          color: #39332d;
         }
         .rpp-cw-input:focus { border-color: ${TEAL}; }
         .rpp-cw-send {

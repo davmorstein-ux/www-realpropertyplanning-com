@@ -103,7 +103,7 @@ const Wills = () => {
                   className="absolute inset-0 rounded-[22px]"
                   style={{
                     background: 'linear-gradient(180deg, #ffffff 0%, #f5f2ec 60%, #e8e4dc 100%)',
-                    boxShadow: '0 8px 0 #d5d0c6, 0 10px 0 #c4bfb4, 0 14px 30px rgba(0,0,0,0.22), 0 4px 8px rgba(0,0,0,0.12)',
+                    boxShadow: '0 8px 0 #d4c7c8, 0 10px 0 #c4bfb4, 0 14px 30px rgba(0,0,0,0.22), 0 4px 8px rgba(0,0,0,0.12)',
                   }}
                 />
                 {/* Gold trim ring */}
@@ -303,7 +303,7 @@ const Wills = () => {
                     {/* White outer shell */}
                     <div className="absolute inset-0 rounded-[20px]" style={{
                       background: 'linear-gradient(180deg, #ffffff 0%, #f5f2ec 60%, #e8e4dc 100%)',
-                      boxShadow: '0 7px 0 #d5d0c6, 0 9px 0 #c4bfb4, 0 12px 26px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.1)',
+                      boxShadow: '0 7px 0 #d4c7c8, 0 9px 0 #c4bfb4, 0 12px 26px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.1)',
                     }} />
                     {/* Gold trim */}
                     <div className="absolute rounded-[16px]" style={{

@@ -17,14 +17,14 @@ export default function BackToAFHClub() {
           textTransform: "uppercase",
           color: "#ffffff",
           textDecoration: "none",
-          background: "#0a1628",
-          border: "2px solid #C9A84C",
+          background: "#280a0c",
+          border: "2px solid #c3525c",
           padding: "10px 24px",
           borderRadius: 2,
           boxShadow: "inset 0 0 0 1px rgba(201,168,76,0.3), 0 4px 24px rgba(10,22,40,0.18)",
         }}
-        onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#1a2a42")}
-        onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#0a1628")}
+        onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#342e28")}
+        onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#280a0c")}
       >
         ← Back to AFH Club
       </Link>

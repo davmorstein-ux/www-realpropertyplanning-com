@@ -80,7 +80,7 @@ const AFHTrainingEducation = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b87333" }}>
+      <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p
             style={{
@@ -89,7 +89,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -100,21 +100,21 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(32px, 5vw, 50px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#1a2530",
+              color: "#292521",
               lineHeight: 1.15,
               margin: "0 0 20px",
             }}
           >
             AFH Training & Education Requirements
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
               fontWeight: 400,
-              color: "#1e2e3e",
+              color: "#342e28",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -137,7 +137,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -148,19 +148,19 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Core Training Requirements
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 16, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -174,8 +174,8 @@ const AFHTrainingEducation = () => (
                 key={item.title}
                 style={{
                   background: "#fff",
-                  border: "1px solid #ddd8cc",
-                  borderLeft: "5px solid #2c3a48",
+                  border: "1px solid #dccdce",
+                  borderLeft: "5px solid #3f3a35",
                   borderRadius: 6,
                   padding: "24px",
                 }}
@@ -191,7 +191,7 @@ const AFHTrainingEducation = () => (
                   }}
                 >
                   <h3
-                    style={{ fontSize: 18, fontFamily: "Georgia, serif", fontWeight: 700, color: "#0a1628", margin: 0 }}
+                    style={{ fontSize: 18, fontFamily: "Georgia, serif", fontWeight: 700, color: "#280a0c", margin: 0 }}
                   >
                     {item.title}
                   </h3>
@@ -203,7 +203,7 @@ const AFHTrainingEducation = () => (
                         fontWeight: 700,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
-                        background: "#2c3a48",
+                        background: "#3f3a35",
                         color: "#e8e2d9",
                         padding: "3px 10px",
                         borderRadius: 3,
@@ -219,7 +219,7 @@ const AFHTrainingEducation = () => (
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
                         background: "#edf0f3",
-                        color: "#2c3a48",
+                        color: "#3f3a35",
                         padding: "3px 10px",
                         borderRadius: 3,
                       }}
@@ -232,7 +232,7 @@ const AFHTrainingEducation = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.75,
                     margin: "0 0 10px",
                   }}
@@ -246,7 +246,7 @@ const AFHTrainingEducation = () => (
                     fontWeight: 600,
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: "#5a3200",
+                    color: "#481216",
                     margin: 0,
                   }}
                 >
@@ -268,7 +268,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -279,19 +279,19 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             AFH Administrator Training — In Detail
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -304,7 +304,7 @@ const AFHTrainingEducation = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -318,7 +318,7 @@ const AFHTrainingEducation = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 28px",
             }}
@@ -331,8 +331,8 @@ const AFHTrainingEducation = () => (
           <div
             style={{
               background: "#e8f2f9",
-              border: "1px solid #2c6e9e",
-              borderLeft: "4px solid #2c6e9e",
+              border: "1px solid #9e2c35",
+              borderLeft: "4px solid #9e2c35",
               borderRadius: 6,
               padding: "18px 22px",
             }}
@@ -341,7 +341,7 @@ const AFHTrainingEducation = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'Raleway', sans-serif",
-                color: "#1a2a3a",
+                color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
               }}
@@ -364,7 +364,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -375,19 +375,19 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Specialty Trainings
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 16, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 28px",
             }}
@@ -402,8 +402,8 @@ const AFHTrainingEducation = () => (
                 key={item.name}
                 style={{
                   background: "#fff",
-                  border: "1px solid #ddd8cc",
-                  borderLeft: "4px solid #b87333",
+                  border: "1px solid #dccdce",
+                  borderLeft: "4px solid #b13a44",
                   borderRadius: 6,
                   padding: "18px 22px",
                   display: "flex",
@@ -417,7 +417,7 @@ const AFHTrainingEducation = () => (
                     width: 8,
                     height: 8,
                     borderRadius: "50%",
-                    background: "#b87333",
+                    background: "#b13a44",
                     marginTop: 7,
                   }}
                 />
@@ -427,7 +427,7 @@ const AFHTrainingEducation = () => (
                       fontSize: 18,
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       margin: "0 0 4px",
                     }}
                   >
@@ -437,7 +437,7 @@ const AFHTrainingEducation = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'Raleway', sans-serif",
-                      color: "#1e2a38",
+                      color: "#302b26",
                       lineHeight: 1.65,
                       margin: 0,
                     }}
@@ -460,9 +460,9 @@ const AFHTrainingEducation = () => (
               fontWeight: 700,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               textDecoration: "none",
-              borderBottom: "1px solid #b87333",
+              borderBottom: "1px solid #b13a44",
               paddingBottom: 2,
             }}
           >
@@ -481,7 +481,7 @@ const AFHTrainingEducation = () => (
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "#5a3200",
+              color: "#481216",
               margin: "0 0 14px",
             }}
           >
@@ -492,19 +492,19 @@ const AFHTrainingEducation = () => (
               fontSize: "clamp(24px, 3.5vw, 36px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               lineHeight: 1.2,
               margin: "0 0 20px",
             }}
           >
             Continuing Education & Optional Certifications
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b87333", marginBottom: 28, borderRadius: 1 }} />
+          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -517,7 +517,7 @@ const AFHTrainingEducation = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -531,7 +531,7 @@ const AFHTrainingEducation = () => (
             style={{
               fontSize: 18,
               fontFamily: "'Raleway', sans-serif",
-              color: "#1e2a38",
+              color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 28px",
             }}
@@ -565,7 +565,7 @@ const AFHTrainingEducation = () => (
                   fontSize: 17,
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: 600,
-                  color: "#2c6e9e",
+                  color: "#9e2c35",
                   textDecoration: "underline",
                 }}
               >

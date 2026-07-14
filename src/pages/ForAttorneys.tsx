@@ -45,9 +45,9 @@ const ForAttorneys = () => (
             ["Real Estate Attorneys", "Advise on title, contracts, disputes, ownership rights, and transaction-related legal risk."],
           ].map(([title, desc]) => (
             <p key={title} className="text-2xl md:text-[1.7rem] leading-relaxed">
-              <strong className="text-[#8B6914]">{title}</strong>
-              <span className="text-[#131F36]"> — </span>
-              <span className="text-[#131F36]">{desc}</span>
+              <strong className="text-[#7f2028]">{title}</strong>
+              <span className="text-[#292420]"> — </span>
+              <span className="text-[#292420]">{desc}</span>
             </p>
           ))}
         </div>
@@ -58,7 +58,7 @@ const ForAttorneys = () => (
     <section className="py-8 md:py-12 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[#1B2B4B] text-2xl md:text-[1.7rem] leading-[1.8]">
+          <p className="text-[#39332d] text-2xl md:text-[1.7rem] leading-[1.8]">
             Attorneys working in probate, estate planning, elder law, family law, and divorce regularly encounter real estate questions that fall outside the scope of legal counsel. When a client needs honest property valuation, coordinated sale management, or a professional who can hold a complex multi-party process together — that's where Real Property Planning fits in.
           </p>
         </div>
@@ -69,11 +69,11 @@ const ForAttorneys = () => (
     <section className="py-6 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <Link to="/for-attorneys/learn-more" className="text-[#8B6914] hover:text-[#6B4F0E] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
+          <Link to="/for-attorneys/learn-more" className="text-[#7f2028] hover:text-[#61181e] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
             ​
           </Link>
           <div className="mt-4">
-            <Link to="/for-attorneys/how-it-works" className="text-[#8B6914] hover:text-[#6B4F0E] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
+            <Link to="/for-attorneys/how-it-works" className="text-[#7f2028] hover:text-[#61181e] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
               ​
             </Link>
           </div>

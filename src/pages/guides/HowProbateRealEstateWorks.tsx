@@ -53,7 +53,7 @@ const jsonLd = articleSchema({
   ],
 });
 
-const GOLD = "#8B6914";
+const GOLD = "#7f2028";
 
 const HowProbateRealEstateWorks = () => (
   <div className="min-h-screen bg-background">
@@ -85,31 +85,31 @@ const HowProbateRealEstateWorks = () => (
       {/* Clean prose section */}
       <section style={{ padding: "56px 24px", background: "#fff" }}>
         <div style={{ maxWidth: 760, margin: "0 auto", fontFamily: "Georgia, serif" }}>
-          <div style={{ marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid #e0d8c8` }}>
-            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#0a1628", marginBottom: 12 }}>
+          <div style={{ marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid #dfc9cb` }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#280a0c", marginBottom: 12 }}>
               What Is Probate Real Estate?
             </h2>
-            <p style={{ fontSize: 17, color: "#4a5568", lineHeight: 1.8, margin: 0 }}>
+            <p style={{ fontSize: 17, color: "#5e5954", lineHeight: 1.8, margin: 0 }}>
               When someone passes away owning property, that property often must pass through probate before it can be
               sold. Probate is the court-supervised process of settling an estate — establishing legal authority,
               settling debts, and distributing assets to heirs.
             </p>
           </div>
 
-          <div style={{ marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid #e0d8c8` }}>
-            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#0a1628", marginBottom: 12 }}>
+          <div style={{ marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid #dfc9cb` }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#280a0c", marginBottom: 12 }}>
               Who Has Authority to Sell?
             </h2>
-            <p style={{ fontSize: 17, color: "#4a5568", lineHeight: 1.8, margin: 0 }}>
+            <p style={{ fontSize: 17, color: "#5e5954", lineHeight: 1.8, margin: 0 }}>
               The personal representative — also called the executor — named in the will, or appointed by the court,
               holds legal authority to sell estate property. This authority is documented through letters testamentary,
               which must be in place before a property can be listed or transferred.
             </p>
           </div>
 
-          <div style={{ marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid #e0d8c8` }}>
-            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#0a1628", marginBottom: 12 }}>Why Timing Matters</h2>
-            <p style={{ fontSize: 17, color: "#4a5568", lineHeight: 1.8, margin: 0 }}>
+          <div style={{ marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid #dfc9cb` }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#280a0c", marginBottom: 12 }}>Why Timing Matters</h2>
+            <p style={{ fontSize: 17, color: "#5e5954", lineHeight: 1.8, margin: 0 }}>
               Probate properties often sit vacant while legal authority is being established, accumulating carrying
               costs — utilities, insurance, maintenance, and property taxes. Coordinating the real estate timeline with
               the legal process from the start is critical to protecting the estate's value and minimizing unnecessary
@@ -118,10 +118,10 @@ const HowProbateRealEstateWorks = () => (
           </div>
 
           <div style={{ marginBottom: 0 }}>
-            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#0a1628", marginBottom: 12 }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: "#280a0c", marginBottom: 12 }}>
               Why Work With a Specialist?
             </h2>
-            <p style={{ fontSize: 17, color: "#4a5568", lineHeight: 1.8, margin: 0 }}>
+            <p style={{ fontSize: 17, color: "#5e5954", lineHeight: 1.8, margin: 0 }}>
               Probate sales require pricing expertise, court-defensible valuations, and close coordination with estate
               attorneys. A broker who specializes in probate and holds certified appraiser credentials handles all of
               this in one place — reducing the burden on executors and protecting the interests of every heir involved.

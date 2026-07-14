@@ -118,7 +118,7 @@ const CSS = `
     height: calc(100vh - 64px);
     background: #f7f4ef;
     z-index: 9999;
-    border-right: 1px solid #d4c9b0;
+    border-right: 1px solid #d2b2b4;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -145,13 +145,13 @@ const CSS = `
     align-items: center;
     justify-content: space-between;
     padding: 14px 18px 12px;
-    border-bottom: 1px solid #e0d8c8;
+    border-bottom: 1px solid #dfc9cb;
     flex-shrink: 0;
   }
   .wf-what-label {
     font-size: 13px;
     font-weight: 600;
-    color: #0a1628;
+    color: #280a0c;
     letter-spacing: 0.02em;
   }
   .wf-close-x {
@@ -176,15 +176,15 @@ const CSS = `
     overflow-x: hidden;
   }
   .wf-col { padding: 8px 0 16px; }
-  .wf-col:first-child { border-right: 1px solid #e0d8c8; }
+  .wf-col:first-child { border-right: 1px solid #dfc9cb; }
   .wf-columns::-webkit-scrollbar { width: 3px; }
-  .wf-columns::-webkit-scrollbar-thumb { background: #d4c9b0; border-radius: 2px; }
+  .wf-columns::-webkit-scrollbar-thumb { background: #d2b2b4; border-radius: 2px; }
 
   .wf-group { display: block; width: 100%; }
   .wf-group-divider {
     margin: 2px 14px;
     border: none;
-    border-top: 0.5px solid #e0d8c8;
+    border-top: 0.5px solid #dfc9cb;
   }
 
   .wf-group-btn {
@@ -195,7 +195,7 @@ const CSS = `
     padding: 11px 14px;
     font-size: 10px;
     font-weight: 700;
-    color: #8B6914;
+    color: #7f2028;
     letter-spacing: 0.13em;
     text-transform: uppercase;
     background: none;
@@ -207,11 +207,11 @@ const CSS = `
     border-radius: 4px;
   }
   .wf-group-btn:hover { background: rgba(139,105,20,0.08); }
-  .wf-group-btn.wf-open { color: #6B4F10; }
+  .wf-group-btn.wf-open { color: #62191f; }
 
   .wf-chevron {
     font-size: 11px;
-    color: #8B6914;
+    color: #7f2028;
     transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
     flex-shrink: 0;
     margin-left: 6px;
@@ -231,7 +231,7 @@ const CSS = `
     padding: 7px 14px 7px 22px;
     font-size: 12px;
     font-weight: 700;
-    color: #0a1628;
+    color: #280a0c;
     background: none;
     border: none;
     border-left: 2px solid transparent;
@@ -248,22 +248,22 @@ const CSS = `
     transform: translateY(0);
   }
   .wf-item:hover {
-    color: #0a1628;
-    border-left-color: #8B6914;
+    color: #280a0c;
+    border-left-color: #7f2028;
     background: rgba(139,105,20,0.08);
   }
 
   .wf-close-footer {
     flex-shrink: 0;
     padding: 10px 18px 14px;
-    border-top: 1px solid #e0d8c8;
+    border-top: 1px solid #dfc9cb;
     background: #f7f4ef;
   }
   .wf-close-btn {
     width: 100%;
     padding: 11px;
-    background: #0a1628;
-    color: #8B6914;
+    background: #280a0c;
+    color: #7f2028;
     border: none;
     border-radius: 6px;
     font-size: 13px;
@@ -274,7 +274,7 @@ const CSS = `
     font-family: inherit;
     transition: background 0.4s ease, color 0.4s ease;
   }
-  .wf-close-btn:hover { background: #8B6914; color: #0a1628; }
+  .wf-close-btn:hover { background: #7f2028; color: #280a0c; }
 
   @media (prefers-reduced-motion: reduce) {
     .wf-panel { animation: none !important; opacity: 1 !important; }
@@ -430,13 +430,13 @@ export default function WaterfallNav() {
             }}
           >
             <span
-              style={{ display: "block", height: "2px", background: "#E8C97A", borderRadius: "1px", width: "100%" }}
+              style={{ display: "block", height: "2px", background: "#e0828a", borderRadius: "1px", width: "100%" }}
             />
             <span
-              style={{ display: "block", height: "2px", background: "#E8C97A", borderRadius: "1px", width: "75%" }}
+              style={{ display: "block", height: "2px", background: "#e0828a", borderRadius: "1px", width: "75%" }}
             />
             <span
-              style={{ display: "block", height: "2px", background: "#E8C97A", borderRadius: "1px", width: "100%" }}
+              style={{ display: "block", height: "2px", background: "#e0828a", borderRadius: "1px", width: "100%" }}
             />
           </span>
         </button>

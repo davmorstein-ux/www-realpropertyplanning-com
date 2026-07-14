@@ -32,7 +32,7 @@ const Tile = ({ id }: { id: string }) => (
 
 export const Icon3DFamily = ({ className, size = 64 }: IconProps) => (
   <svg viewBox="0 0 64 64" width={size} height={size} className={className} aria-hidden="true">
-    <Defs id="fam" from="#3b82f6" to="#1e3a8a" />
+    <Defs id="fam" from="#db5661" to="#8a1e27" />
     <Tile id="fam" />
     {/* parent left */}
     <circle cx="22" cy="24" r="5" fill="#fff" />

@@ -20,43 +20,43 @@ const cards = [
     title: "Nursing Homes in Washington State",
     href: "/long-term-care/nursing-homes",
     img: nursingHomesImg.url,
-    placeholder: "#2c3a48",
+    placeholder: "#3f3a35",
   },
   {
     title: "Short-Term Nursing Home Stays",
     href: "/long-term-care/short-term-nursing-home-stays",
     img: shortTermImg.url,
-    placeholder: "#2c3e4e",
+    placeholder: "#433d37",
   },
   {
     title: "Nurse Delegation Program",
     href: "/long-term-care/nurse-delegation",
     img: nurseDelegationImg.url,
-    placeholder: "#354555",
+    placeholder: "#4b453f",
   },
   {
     title: "Medicaid & Long-Term Care",
     href: "/long-term-care/medicaid-and-long-term-care",
     img: medicaidImg.url,
-    placeholder: "#2e3d4d",
+    placeholder: "#433d38",
   },
   {
     title: "WA Cares: Washington's Long-Term Care Insurance",
     href: "/long-term-care/wa-cares",
     img: waCaresImg.url,
-    placeholder: "#384858",
+    placeholder: "#4e4842",
   },
   {
     title: "How to Choose Between Care Settings",
     href: "/long-term-care/how-to-choose-care-settings",
     img: chooseCareImg.url,
-    placeholder: "#2a3a4a",
+    placeholder: "#403a34",
   },
   {
     title: "Planning Your Hospital Discharge",
     href: "/long-term-care/hospital-discharge-planning",
     img: hospitalDischargeImg.url,
-    placeholder: "#334353",
+    placeholder: "#49433d",
   },
 ];
 
@@ -92,7 +92,7 @@ const LongTermCareOptions = () => {
                 fontWeight: 700,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
-                color: "#8B6914",
+                color: "#7f2028",
                 marginBottom: 12,
               }}
             >
@@ -118,7 +118,7 @@ const LongTermCareOptions = () => {
                 lineHeight: 1.75,
                 color: "hsl(220 35% 18%)",
                 marginBottom: 24,
-                borderLeft: "4px solid #C9A84C",
+                borderLeft: "4px solid #c3525c",
                 paddingLeft: 20,
               }}
             >
@@ -151,13 +151,13 @@ const LongTermCareOptions = () => {
               fontSize: "clamp(24px, 3vw, 34px)",
               fontFamily: "Georgia, serif",
               fontWeight: 700,
-              color: "#0a1628",
+              color: "#280a0c",
               marginBottom: 8,
             }}
           >
             All Articles
           </h2>
-          <div style={{ width: 48, height: 3, background: "#b87333", marginBottom: 40, borderRadius: 1 }} />
+          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 40, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {cards.map((topic, i) => (
               <Link
@@ -169,8 +169,8 @@ const LongTermCareOptions = () => {
                   alignItems: "center",
                   gap: 24,
                   padding: "22px 0",
-                  borderBottom: "1px solid #e0d8c8",
-                  borderTop: i === 0 ? "1px solid #e0d8c8" : "none",
+                  borderBottom: "1px solid #dfc9cb",
+                  borderTop: i === 0 ? "1px solid #dfc9cb" : "none",
                   textDecoration: "none",
                   transition: "background 0.2s ease",
                 }}
@@ -213,7 +213,7 @@ const LongTermCareOptions = () => {
                     style={{
                       fontSize: "clamp(18px, 2vw, 22px)",
                       fontWeight: 700,
-                      color: "#0a1628",
+                      color: "#280a0c",
                       margin: "0 0 12px",
                       lineHeight: 1.3,
                       fontFamily: "Georgia, serif",

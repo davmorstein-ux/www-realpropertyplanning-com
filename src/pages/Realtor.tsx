@@ -110,11 +110,11 @@ const REVIEWS = [
 const StarRating = () => (
   <div style={{ display: "flex", gap: 3, alignItems: "center", marginBottom: 8 }}>
     {[1, 2, 3, 4, 5].map((i) => (
-      <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#1a56db" xmlns="http://www.w3.org/2000/svg">
+      <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#ca2b38" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
       </svg>
     ))}
-    <span style={{ fontSize: 16, fontWeight: 700, color: "#1a56db", marginLeft: 6 }}>5.0</span>
+    <span style={{ fontSize: 16, fontWeight: 700, color: "#ca2b38", marginLeft: 6 }}>5.0</span>
   </div>
 );
 
@@ -173,7 +173,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 Realty
               </p>
               <p>Washington State Certified Residential Appraiser — Stein Appraisal</p>
-              <p>Real Estate License #113972</p>
+              <p>Real Estate License #6c171e</p>
             </div>
             <div>
               <p className="text-foreground font-semibold mb-2">Proud Member of the:</p>
@@ -200,7 +200,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 fontWeight: 600,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "#8B6914",
+                color: "#7f2028",
                 margin: "0 0 14px",
               }}
             >
@@ -211,14 +211,14 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 fontSize: "clamp(28px, 3.5vw, 40px)",
                 fontFamily: "Georgia, serif",
                 fontWeight: 700,
-                color: "#0a1628",
+                color: "#280a0c",
                 margin: "0 0 16px",
                 lineHeight: 1.2,
               }}
             >
               What Clients Are Saying
             </h2>
-            <div style={{ width: 48, height: 3, background: "#8B6914", margin: "0 auto 20px", borderRadius: 1 }} />
+            <div style={{ width: 48, height: 3, background: "#7f2028", margin: "0 auto 20px", borderRadius: 1 }} />
             {/* Overall rating */}
             <div
               style={{
@@ -226,7 +226,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 alignItems: "center",
                 gap: 12,
                 background: "#fff",
-                border: "1px solid #e0d8c8",
+                border: "1px solid #dfc9cb",
                 borderRadius: 8,
                 padding: "14px 28px",
                 flexWrap: "wrap",
@@ -235,13 +235,13 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
             >
               <div style={{ display: "flex", gap: 4 }}>
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <svg key={i} width="24" height="24" viewBox="0 0 24 24" fill="#1a56db">
+                  <svg key={i} width="24" height="24" viewBox="0 0 24 24" fill="#ca2b38">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ))}
               </div>
-              <span style={{ fontSize: 20, fontFamily: "Georgia, serif", fontWeight: 700, color: "#0a1628" }}>5.0</span>
-              <span style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#1e2a38" }}>
+              <span style={{ fontSize: 20, fontFamily: "Georgia, serif", fontWeight: 700, color: "#280a0c" }}>5.0</span>
+              <span style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#302b26" }}>
                 · 16 Reviews on Zillow
               </span>
             </div>
@@ -254,8 +254,8 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 key={i}
                 style={{
                   background: "#ffffff",
-                  border: "1px solid #e0d8c8",
-                  borderTop: "3px solid #1a56db",
+                  border: "1px solid #dfc9cb",
+                  borderTop: "3px solid #ca2b38",
                   borderRadius: 6,
                   padding: "24px 22px 26px",
                   display: "flex",
@@ -268,7 +268,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                   style={{
                     fontSize: 14,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#4a5568",
+                    color: "#5e5954",
                     margin: 0,
                     fontWeight: 500,
                   }}
@@ -280,7 +280,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                     fontSize: 17,
                     fontFamily: "Georgia, serif",
                     fontWeight: 700,
-                    color: "#0a1628",
+                    color: "#280a0c",
                     margin: 0,
                     lineHeight: 1.3,
                   }}
@@ -291,7 +291,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                   style={{
                     fontSize: 16,
                     fontFamily: "'Raleway', sans-serif",
-                    color: "#1e2a38",
+                    color: "#302b26",
                     lineHeight: 1.8,
                     margin: 0,
                   }}
@@ -309,7 +309,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                         fontWeight: 600,
                         letterSpacing: "0.08em",
                         background: "#edf2ff",
-                        color: "#1a56db",
+                        color: "#ca2b38",
                         padding: "3px 10px",
                         borderRadius: 20,
                       }}
@@ -338,7 +338,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
                 color: "#ffffff",
-                background: "#1a56db",
+                background: "#ca2b38",
                 padding: "14px 32px",
                 borderRadius: 4,
                 textDecoration: "none",

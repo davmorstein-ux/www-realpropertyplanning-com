@@ -403,7 +403,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
       <button onClick={handleSubmit} aria-label="Search"
         className="relative overflow-hidden flex-shrink-0 w-10 h-10 rounded-full text-primary-foreground flex items-center justify-center mr-1.5 transition-all duration-200 hover:-translate-y-[1px] active:translate-y-[1px]"
         style={{
-          background: "linear-gradient(180deg, #2e4a7a 0%, #1a3056 60%, #0f2040 100%)",
+          background: "linear-gradient(180deg, #5e544a 0%, #3f3831 60%, #400f13 100%)",
           border: "1px solid rgba(10,20,40,0.55)",
           boxShadow:
             "inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -2px 3px rgba(0,0,0,0.30), 0 2px 4px rgba(15,30,55,0.35), 0 6px 14px rgba(15,30,55,0.25)",
@@ -448,7 +448,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               key={prompt.label}
               type="button"
               onClick={() => handlePromptClick(prompt.label)}
-              className="homepage-cta-card group flex items-center justify-between gap-5 w-full text-left bg-white text-navy hover:bg-white hover:text-navy rounded-xl px-7 py-6 min-h-[88px] font-bold text-[19px] leading-snug border-[3px] border-navy hover:border-[#0f1d3a] shadow-[0_8px_20px_rgba(15,30,55,0.28),0_2px_4px_rgba(15,30,55,0.18)] hover:shadow-[0_12px_28px_rgba(15,30,55,0.35),0_4px_8px_rgba(15,30,55,0.20)] transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              className="homepage-cta-card group flex items-center justify-between gap-5 w-full text-left bg-white text-navy hover:bg-white hover:text-navy rounded-xl px-7 py-6 min-h-[88px] font-bold text-[19px] leading-snug border-[3px] border-navy hover:border-[#3a0f13] shadow-[0_8px_20px_rgba(15,30,55,0.28),0_2px_4px_rgba(15,30,55,0.18)] hover:shadow-[0_12px_28px_rgba(15,30,55,0.35),0_4px_8px_rgba(15,30,55,0.20)] transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
               <span
                 className="homepage-cta-card__label flex-1 !font-bold !text-[19px]"
