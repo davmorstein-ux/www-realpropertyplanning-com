@@ -146,7 +146,6 @@ const AFHOwnershipStructure = () => (
           >
             Why Ownership Structure Matters
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
@@ -228,7 +227,6 @@ const AFHOwnershipStructure = () => (
           >
             Individual Ownership or an LLC
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {CONSIDERATIONS.map((item) => (
               <div
@@ -297,7 +295,6 @@ const AFHOwnershipStructure = () => (
           >
             Financing Differences
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
@@ -343,7 +340,6 @@ const AFHOwnershipStructure = () => (
           >
             Washington State Considerations
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
@@ -389,7 +385,6 @@ const AFHOwnershipStructure = () => (
           >
             How to Decide
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -492,7 +487,6 @@ const AFHOwnershipStructure = () => (
           >
             There Is No Single Best Answer
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,

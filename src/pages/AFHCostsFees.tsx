@@ -217,7 +217,6 @@ const AFHCostsFees = () => (
           >
             Cost Breakdown
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -326,7 +325,6 @@ const AFHCostsFees = () => (
           >
             Liability Insurance — Plan Ahead
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
@@ -408,7 +406,6 @@ const AFHCostsFees = () => (
           >
             Understanding AFH Revenue
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,

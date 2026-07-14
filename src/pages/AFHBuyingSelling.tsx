@@ -158,7 +158,6 @@ const AFHBuyingSelling = () => (
           >
             What Is a CHOW?
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
@@ -260,7 +259,6 @@ const AFHBuyingSelling = () => (
           >
             The CHOW Process — Step by Step
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -362,7 +360,6 @@ const AFHBuyingSelling = () => (
           >
             What Sellers Need to Know
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {SELLER_CONSIDERATIONS.map((item) => (
               <div

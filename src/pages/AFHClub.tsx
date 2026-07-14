@@ -60,7 +60,7 @@ const AFHClub = () => (
       ]}
     />
     <Header />
-    <main id="main-content">
+    <main id="main-content" style={{ paddingTop: "var(--header-height, 100px)" }}>
       {/* Hero — badge, title, subtitle, one description line only */}
       <section
         style={{
@@ -313,7 +313,6 @@ const AFHClub = () => (
           >
             What Is an Adult Family Home?
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 32, borderRadius: 1 }} />
           <p
             style={{
               fontSize: "clamp(19px, 2vw, 22px)",

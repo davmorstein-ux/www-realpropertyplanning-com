@@ -181,7 +181,6 @@ const AFHBuildingInspection = () => (
           >
             What Is WABO?
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
@@ -291,7 +290,6 @@ const AFHBuildingInspection = () => (
           >
             New Build vs. Existing Home vs. Buy an AFH
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -427,7 +425,6 @@ const AFHBuildingInspection = () => (
           >
             Common Building Modifications
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -545,7 +542,6 @@ const AFHBuildingInspection = () => (
           >
             The Building Inspection Process
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           {[
             {
               step: "1",

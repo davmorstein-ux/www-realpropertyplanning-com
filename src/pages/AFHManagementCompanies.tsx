@@ -105,7 +105,6 @@ const AFHManagementCompanies = () => (
           >
             Aura Living Care
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 36, borderRadius: 1 }} />
 
           {/* Provider card */}
           <div

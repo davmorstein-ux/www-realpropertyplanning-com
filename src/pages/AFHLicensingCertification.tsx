@@ -158,7 +158,6 @@ const AFHLicensingCertification = () => (
           >
             Home Care Aide (HCA) Certification
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
@@ -284,7 +283,6 @@ const AFHLicensingCertification = () => (
           >
             The DSHS License Application Process
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -386,7 +384,6 @@ const AFHLicensingCertification = () => (
           >
             Who Needs a Background Check?
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
@@ -465,7 +462,6 @@ const AFHLicensingCertification = () => (
           >
             Change of Ownership (CHOW)
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,

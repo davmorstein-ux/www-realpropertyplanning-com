@@ -235,7 +235,6 @@ const AFHRegulationsCompliance = () => (
           >
             How DSHS Inspects Adult Family Homes
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 32, borderRadius: 1 }} />
 
           <p
             style={{
@@ -375,7 +374,6 @@ const AFHRegulationsCompliance = () => (
           >
             DSHS Enforcement Levels
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -480,7 +478,6 @@ const AFHRegulationsCompliance = () => (
           >
             Top AFH Violations in Washington
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -629,7 +626,6 @@ const AFHRegulationsCompliance = () => (
           >
             Look Up Any AFH in Washington
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 16, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 17,
@@ -770,7 +766,6 @@ const AFHRegulationsCompliance = () => (
           >
             What to Focus on When Reading Inspection Reports
           </h2>
-          <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 32, borderRadius: 1 }} />
 
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {[

@@ -198,7 +198,6 @@ const AFHRealEstateBroker = () => (
               >
                 Real Property Planning
               </h2>
-              <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 36, borderRadius: 1 }} />
               <ProviderTile
                 name="David Stein"
                 title="President, Real Property Planning"
@@ -268,7 +267,6 @@ const AFHRealEstateBroker = () => (
               >
                 Why You Need a Specialist
               </h3>
-              <div style={{ width: 40, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
               <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 {[
                   {
