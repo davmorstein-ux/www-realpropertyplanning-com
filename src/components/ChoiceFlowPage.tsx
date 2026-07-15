@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { useLocation, Link, Navigate } from "react-router-dom";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Header from "@/components/Header";
@@ -112,37 +113,30 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 const ROADMAP_LABELS = ["Where you are", "What you need", "Your guidance"];
 
 const RoadmapSteps = ({ activeStep }: { activeStep: number }) => (
-  <ol
-    className="flex items-start justify-center gap-0 mb-5 max-w-xl mx-auto"
-    aria-label="Your progress through this guide"
-  >
+  <ol className="flex items-start justify-center mb-5 max-w-md mx-auto" aria-label="Your progress through this guide">
     {ROADMAP_LABELS.map((label, i) => {
       const stepNum = i + 1;
       const isDone = stepNum < activeStep;
       const isCurrent = stepNum === activeStep;
       return (
-        <li key={label} className="flex-1 flex items-center">
-          <div className="flex flex-col items-center flex-1 text-center">
+        <Fragment key={label}>
+          <li className="flex flex-col items-center text-center" style={{ width: 100 }}>
             <span
               aria-current={isCurrent ? "step" : undefined}
-              className={`w-11 h-11 rounded-full flex items-center justify-center font-serif font-bold text-lg border-2 ${
-                isDone
-                  ? "bg-navy border-navy text-white"
-                  : isCurrent
-                    ? "bg-white border-navy text-navy"
-                    : "bg-white border-navy/25 text-navy/50"
+              className={`w-12 h-12 rounded-full flex items-center justify-center font-serif font-bold text-xl border-2 border-navy ${
+                isDone ? "bg-navy text-white" : "bg-white text-navy"
               }`}
             >
               {stepNum}
             </span>
-            <span className={`mt-2 text-base leading-snug ${isCurrent ? "text-navy font-semibold" : "text-navy/70"}`}>
+            <span className={`mt-2 text-base leading-snug text-navy ${isCurrent ? "font-bold" : "font-medium"}`}>
               {label}
             </span>
-          </div>
+          </li>
           {stepNum < ROADMAP_LABELS.length && (
-            <div className={`h-0.5 flex-1 mt-[-20px] ${isDone ? "bg-navy" : "bg-navy/20"}`} aria-hidden="true" />
+            <div className={`flex-1 h-0.5 mt-6 ${isDone ? "bg-navy" : "bg-navy/60"}`} aria-hidden="true" />
           )}
-        </li>
+        </Fragment>
       );
     })}
   </ol>
