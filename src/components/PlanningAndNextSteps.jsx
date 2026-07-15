@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
   .p3wrap * { box-sizing: border-box; margin: 0; padding: 0; }
   .p3section { font-family: 'DM Sans', sans-serif; padding: 0 40px 64px; }
   .p3grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
-  .p3tile { width: 100%; cursor: pointer; text-decoration: none; display: block; }
-  .p3card { width: 100%; height: 380px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease, transform .4s ease; overflow: hidden; }
-  .p3tile:hover .p3card { box-shadow: 0 4px 12px rgba(0,0,0,0.10); transform: translateY(-6px); }
+  .p3tile { width: 100%; cursor: pointer; text-decoration: none; display: block; border-radius: 5px; }
+  .p3card { width: 100%; height: 380px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; position: relative; overflow: hidden; }
   .p3corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
   .p3corner.tl { top: 8px; left: 8px; border-top: 1.5px solid #b35f66; border-left: 1.5px solid #b35f66; }
   .p3corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b35f66; border-right: 1.5px solid #b35f66; }
@@ -17,12 +16,9 @@ const styles = `
   .p3tile:hover .p3imgbox { transform: scale(1.03); }
   .p3img { display: block; width: 100%; height: 220px; object-fit: contain; object-position: top center; }
   .p3body { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
-  .p3pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b35f66; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .15s ease; }
-  .p3title { font-family: 'DM Sans', serif; font-weight: 700; font-size: 22px; color: #3f1216; line-height: 1.15; transition: opacity .15s ease; }
-  .p3tile:hover .p3pill, .p3tile:hover .p3title { opacity: 0; }
-  .p3hover { position: absolute; inset: 0; background: rgba(10,20,46,.97); display: flex; align-items: center; justify-content: center; padding: 14px; opacity: 0; transition: opacity .28s ease .1s; z-index: 30; }
-  .p3tile:hover .p3hover { opacity: 1; }
-  .p3tagline { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; color: #FFF; text-align: center; line-height: 1.5; }
+  .p3pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b35f66; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .p3title { font-family: 'DM Sans', serif; font-weight: 700; font-size: 22px; color: #3f1216; line-height: 1.15; margin-bottom: 4px; }
+  .p3tagline { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 14px; color: #6b5a5c; line-height: 1.5; }
   .p3footer { height: 52px; flex-shrink: 0; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; justify-content: space-between; }
   .p3label { font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #6b1a21; line-height: 1.4; flex: 1; }
   .p3arrow { margin-left: auto; width: 28px; height: 28px; border: 1.5px solid #6b1a21; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }
@@ -38,32 +34,32 @@ const styles = `
   .p3h2 { font-family: 'DM Sans', serif; font-size: 40px; font-weight: 700; color: #3f1216; line-height: 1.15; margin: 0; }
 `;
 
-
 const P3Tile = ({ pill, title, tagline, imgSrc, href }) => (
-  <a className="p3tile" href={href}>
+  <a className="p3tile marquee-hover" href={href}>
     <div className="p3card">
-      <div className="p3corner tl" /><div className="p3corner tr" />
-      <div className="p3corner bl" /><div className="p3corner br" />
+      <div className="p3corner tl" />
+      <div className="p3corner tr" />
+      <div className="p3corner bl" />
+      <div className="p3corner br" />
       <div className="p3imgbox">
         <img className="p3img" src={imgSrc} alt={title} loading="lazy" />
       </div>
       <div className="p3body">
         <span className="p3pill">{pill}</span>
         <div className="p3title">{title}</div>
-        <div className="p3hover">
-          <div className="p3tagline">{tagline}</div>
-        </div>
+        <div className="p3tagline">{tagline}</div>
       </div>
       <div className="p3footer">
         <span className="p3label">Information & Featured Providers</span>
         <div className="p3arrow">
-          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </div>
       </div>
     </div>
   </a>
 );
-
 
 const PlanningAndNextSteps = () => (
   <div className="p3wrap">
@@ -74,17 +70,67 @@ const PlanningAndNextSteps = () => (
         <h2 className="p3h2">Planning &amp; Next Steps</h2>
       </div>
       <div className="p3grid">
-        <P3Tile pill="Senior Living" title="Senior Living Options" tagline="Finding the Right Community for You" imgSrc="/tiles/set3/senior-living-options.webp" href="/senior-living-and-relocation" />
-        <P3Tile pill="Real Estate" title="Home Values & Pricing" tagline="Understanding What Your Property Is Worth" imgSrc="/tiles/set3/home-values-pricing.webp" href="/why-valuation-matters" />
-        <P3Tile pill="Real Estate" title="Senior Home Sales" tagline="Selling Your Home With Care & Confidence" imgSrc="/tiles/set3/senior-home-sales.webp" href="/sell-house-fund-senior-living" />
-        <P3Tile pill="Financial" title="Paying for Senior Living" tagline="Planning & Funding Your Next Chapter" imgSrc="/tiles/set3/paying-for-senior-living.webp" href="/for-financial-planners" />
-        <P3Tile pill="Washington State" title="Service Areas" tagline="Local Expertise Across Washington State" imgSrc="/tiles/set3/service-areas.webp" href="/counties" />
-        <P3Tile pill="Education" title="Guides & Resources" tagline="Practical Tools for Every Step of the Way" imgSrc="/tiles/set3/guides-resources.webp" href="/resources" />
-        <P3Tile pill="Life Transitions" title="Grey Divorce" tagline="Real Estate & Housing After Divorce" imgSrc="/tiles/set3/grey-divorce.webp" href="/grey-divorce" />
-        <P3Tile pill="Senior Planning" title="Medicare Providers" tagline="Coverage Guidance for Seniors & Families" imgSrc="/tiles/set3/medicare-providers.webp" href="/medicare-providers" />
+        <P3Tile
+          pill="Senior Living"
+          title="Senior Living Options"
+          tagline="Finding the Right Community for You"
+          imgSrc="/tiles/set3/senior-living-options.webp"
+          href="/senior-living-and-relocation"
+        />
+        <P3Tile
+          pill="Real Estate"
+          title="Home Values & Pricing"
+          tagline="Understanding What Your Property Is Worth"
+          imgSrc="/tiles/set3/home-values-pricing.webp"
+          href="/why-valuation-matters"
+        />
+        <P3Tile
+          pill="Real Estate"
+          title="Senior Home Sales"
+          tagline="Selling Your Home With Care & Confidence"
+          imgSrc="/tiles/set3/senior-home-sales.webp"
+          href="/sell-house-fund-senior-living"
+        />
+        <P3Tile
+          pill="Financial"
+          title="Paying for Senior Living"
+          tagline="Planning & Funding Your Next Chapter"
+          imgSrc="/tiles/set3/paying-for-senior-living.webp"
+          href="/for-financial-planners"
+        />
+        <P3Tile
+          pill="Washington State"
+          title="Service Areas"
+          tagline="Local Expertise Across Washington State"
+          imgSrc="/tiles/set3/service-areas.webp"
+          href="/counties"
+        />
+        <P3Tile
+          pill="Education"
+          title="Guides & Resources"
+          tagline="Practical Tools for Every Step of the Way"
+          imgSrc="/tiles/set3/guides-resources.webp"
+          href="/resources"
+        />
+        <P3Tile
+          pill="Life Transitions"
+          title="Grey Divorce"
+          tagline="Real Estate & Housing After Divorce"
+          imgSrc="/tiles/set3/grey-divorce.webp"
+          href="/grey-divorce"
+        />
+        <P3Tile
+          pill="Senior Planning"
+          title="Medicare Providers"
+          tagline="Coverage Guidance for Seniors & Families"
+          imgSrc="/tiles/set3/medicare-providers.webp"
+          href="/medicare-providers"
+        />
       </div>
       <div className="p3bar">
-        <div className="p3bar-text"><strong>Planning ahead?</strong> Connect with experienced professionals across Washington State.</div>
+        <div className="p3bar-text">
+          <strong>Planning ahead?</strong> Connect with experienced professionals across Washington State.
+        </div>
         <button className="p3bar-btn">Get Started →</button>
       </div>
     </div>
