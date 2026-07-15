@@ -49,7 +49,7 @@ const PathwayChooser = () => {
             <Link
               key={p.href}
               to={p.href}
-              className="group relative block rounded-2xl bg-white border-2 border-gold/30 shadow-[0_8px_24px_-12px_rgba(27,43,75,0.25)] hover:shadow-[0_18px_40px_-16px_rgba(27,43,75,0.45)] hover:-translate-y-1 hover:border-gold transition-all duration-300 overflow-hidden"
+              className="marquee-hover group relative block rounded-2xl bg-white border-2 border-gold/30 shadow-[0_8px_24px_-12px_rgba(27,43,75,0.25)] hover:shadow-[0_18px_40px_-16px_rgba(27,43,75,0.45)] hover:-translate-y-1 hover:border-gold transition-all duration-300 overflow-hidden"
             >
               <div className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-gold to-gold-dark" aria-hidden="true" />
               <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-5 sm:gap-6 p-6 sm:p-7 pl-7 sm:pl-9">

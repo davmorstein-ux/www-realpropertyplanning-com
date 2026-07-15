@@ -10,28 +10,28 @@ const tiles = [
     imgAlt: "Older couple reviewing an estate plan together at home",
     title: "I Want to Plan Ahead",
     href: "/planning-before-a-crisis",
-    bgColor: "#8b2e2e", // warm red
+    bgColor: "#721d24", // deep burgundy
   },
   {
     imgSrc: tileHelping,
     imgAlt: "Adult daughter hugging her senior mother on a couch",
     title: "I'm Helping an Aging Parent",
     href: "/helping-aging-parents",
-    bgColor: "#bc333e", // warm amber
+    bgColor: "#246044", // forest green
   },
   {
     imgSrc: tileEstate,
     imgAlt: "Family reviewing an estate property plan with documents",
     title: "I'm Handling an Estate",
     href: "/estate-probate-inherited-property",
-    bgColor: "#9e5c61", // soft periwinkle blue
+    bgColor: "#25597e", // steel blue
   },
   {
     imgSrc: tileProfessionals,
     imgAlt: "Man at a laptop browsing trusted professional resources",
     title: "I Need a Professional",
     href: "/building-your-trusted-professional-team",
-    bgColor: "#7a4f8a", // warm plum
+    bgColor: "#5d2f74", // plum
   },
 ];
 
@@ -48,13 +48,8 @@ const HomepageFunnel = () => (
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
         cursor: pointer;
         height: 100%;
-      }
-      .rpp-tile-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 28px rgba(0,0,0,0.16);
       }
       .rpp-tile-label {
         font-family: Inter, system-ui, sans-serif !important;
@@ -134,13 +129,8 @@ const HomepageFunnel = () => (
         gap: 1rem !important;
         flex-wrap: nowrap !important;
         box-shadow: 0 1px 6px rgba(0,0,0,0.06) !important;
-        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
         cursor: pointer !important;
         text-decoration: none !important;
-      }
-      .rpp-afh-tile:hover {
-        transform: translateY(-2px) !important;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.10) !important;
       }
     `}</style>
 
@@ -162,7 +152,7 @@ const HomepageFunnel = () => (
       >
         {tiles.map(({ imgSrc, imgAlt, title, href, bgColor }) => (
           <Link key={title} to={href} aria-label={title} style={{ textDecoration: "none", display: "block" }}>
-            <div className="rpp-tile-card">
+            <div className="rpp-tile-card marquee-hover">
               <img
                 src={imgSrc}
                 alt={imgAlt}
@@ -203,7 +193,7 @@ const HomepageFunnel = () => (
       </div>
 
       {/* AFH Club — full width feature tile */}
-      <a href="/afh-club" className="rpp-afh-tile">
+      <a href="/afh-club" className="rpp-afh-tile marquee-hover">
         <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "nowrap", flex: 1, minWidth: 0 }}>
           <img
             src="/afh-club-badge.png"

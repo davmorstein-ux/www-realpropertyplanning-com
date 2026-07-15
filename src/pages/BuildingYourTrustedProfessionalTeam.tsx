@@ -9,6 +9,7 @@ import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 import wtdwHeroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import RoadmapDropdown from "@/components/RoadmapDropdown";
 import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 
 type Card = {
@@ -45,7 +46,7 @@ const property: Card[] = [
   { title: "Probate & Estate Sales", description: "Specialized real estate guidance for court-supervised and estate property sales.", href: "/probate-estate-sales", image: "/tiles/set1/probate-estate-sales-tile.webp?v=20260602b", alt: "Probate and estate sales Washington State", cta: "Learn More" },
 ];
 
-const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; cards: Card[]; bg?: string }) => (
+const Section = ({ heading, cards, bg = "bg-background", color = "#c3525c" }: { heading: string; cards: Card[]; bg?: string; color?: string }) => (
 
   <section className={`py-10 lg:py-12 ${bg}`}>
 
@@ -74,43 +75,16 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
           >
 
             <div
-
+              className="marquee-hover"
               style={{
-
                 background: "#fff",
-
                 borderRadius: 16,
-
                 border: "1px solid rgba(0,0,0,0.08)",
-
                 overflow: "hidden",
-
                 height: "100%",
-
                 display: "flex",
-
                 flexDirection: "column",
-
-                transition: "box-shadow 0.2s ease, transform 0.2s ease",
-
               }}
-
-              onMouseEnter={(e) => {
-
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)";
-
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
-
-              }}
-
-              onMouseLeave={(e) => {
-
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
-
-              }}
-
             >
 
               {/* Photo */}
@@ -162,7 +136,7 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
 
                   style={{
 
-                    background: "#c3525c",
+                    background: color,
 
                     borderRadius: 8,
 
@@ -251,6 +225,19 @@ const BuildingYourTrustedProfessionalTeam = () => {
 
         <h1 className="sr-only">A Guide to Trusted, Independent Professionals</h1>
 
+        <div className="container px-6 lg:px-8 pt-8">
+          <RoadmapDropdown
+            topics={[
+              { title: "Legal Professionals", href: "#legal-professionals" },
+              { title: "Financial & Valuation Professionals", href: "#financial-professionals" },
+              { title: "Senior Housing & Care", href: "#senior-housing-care" },
+              { title: "Property & Transition Support", href: "#property-transition-support" },
+            ]}
+            itemLabel="categories of professionals"
+            accentColor="#721d24"
+          />
+        </div>
+
 <div id="legal-professionals" className="scroll-mt-20 bg-background">
           <section className="py-10 lg:py-12 bg-background">
             <div className="container px-6 lg:px-8">
@@ -261,9 +248,9 @@ const BuildingYourTrustedProfessionalTeam = () => {
                 <div style={{ width: "100%", maxWidth: 360 }}>
                   {legal.map((s) => (
                     <a key={s.title} href={s.href} style={{ textDecoration: "none", display: "block" }}>
-                      <div style={{ background: "#fff", borderRadius: 16, border: "1px solid rgba(0,0,0,0.08)", overflow: "hidden", transition: "box-shadow 0.2s ease, transform 0.2s ease" }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)"; }}
-                        onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}
+                      <div
+                        className="marquee-hover"
+                        style={{ background: "#fff", borderRadius: 16, border: "1px solid rgba(0,0,0,0.08)", overflow: "hidden" }}
                       >
                         <div style={{ width: "100%", height: 180, overflow: "hidden" }}>
                           <img src={s.image} alt={s.alt} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} sizes="100vw" decoding="async"/>
@@ -273,7 +260,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                           <p style={{ fontSize: 14, color: "#806b6d", lineHeight: 1.6 }}>{s.description}</p>
                         </div>
                         <div style={{ padding: "12px 20px 16px" }}>
-                          <div style={{ background: "#c3525c", borderRadius: 8, padding: "10px 16px", display: "flex", alignItems: "center", justifyContent: "center", gap: 6, fontFamily: "'Raleway', sans-serif", fontSize: 13, fontWeight: 700, color: "#fff", letterSpacing: "0.04em" }}>
+                          <div style={{ background: "#721d24", borderRadius: 8, padding: "10px 16px", display: "flex", alignItems: "center", justifyContent: "center", gap: 6, fontFamily: "'Raleway', sans-serif", fontSize: 13, fontWeight: 700, color: "#fff", letterSpacing: "0.04em" }}>
                             {s.cta}
                             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
                           </div>
@@ -286,14 +273,14 @@ const BuildingYourTrustedProfessionalTeam = () => {
             </div>
           </section>
         </div>
-        <div>
-          <Section heading="Financial & Valuation Professionals" cards={financial} bg="bg-secondary" />
+        <div id="financial-professionals" className="scroll-mt-20">
+          <Section heading="Financial & Valuation Professionals" cards={financial} bg="bg-secondary" color="#246044" />
         </div>
-        <div>
-          <Section heading="Senior Housing & Care" cards={housing} bg="bg-background" />
+        <div id="senior-housing-care" className="scroll-mt-20">
+          <Section heading="Senior Housing & Care" cards={housing} bg="bg-background" color="#25597e" />
         </div>
-        <div>
-          <Section heading="Property & Transition Support" cards={property} bg="bg-secondary" />
+        <div id="property-transition-support" className="scroll-mt-20">
+          <Section heading="Property & Transition Support" cards={property} bg="bg-secondary" color="#5d2f74" />
         </div>
 
         {/* Closing CTA */}

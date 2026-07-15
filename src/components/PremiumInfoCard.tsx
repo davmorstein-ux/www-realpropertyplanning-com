@@ -22,7 +22,7 @@ const PremiumInfoCard = ({
     <Link
       to={href}
       aria-label={title}
-      className="group flex h-full flex-col rounded-2xl bg-white border-2 border-gold p-6 shadow-[0_12px_32px_-18px_hsl(var(--navy)/0.55)] hover:border-gold hover:shadow-[0_22px_46px_-22px_hsl(var(--navy)/0.7)] hover:-translate-y-1 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 no-underline"
+      className="marquee-hover group flex h-full flex-col rounded-2xl bg-white border-2 border-gold p-6 shadow-[0_12px_32px_-18px_hsl(var(--navy)/0.55)] hover:border-gold hover:shadow-[0_22px_46px_-22px_hsl(var(--navy)/0.7)] hover:-translate-y-1 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 no-underline"
       style={{ textDecoration: "none" }}
     >
       <h3 className="font-serif text-xl text-navy font-bold mb-3 leading-tight group-hover:text-[hsl(var(--gold-dark))] transition-colors">

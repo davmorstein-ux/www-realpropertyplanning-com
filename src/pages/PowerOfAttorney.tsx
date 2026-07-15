@@ -261,7 +261,7 @@ const PowerOfAttorney = () => {
                   <Link
                     key={page.href}
                     to={page.href}
-                    className="bg-card rounded-xl border border-border p-6 hover:shadow-md transition-shadow group"
+                    className="marquee-hover bg-card rounded-xl border border-border p-6 hover:shadow-md transition-shadow group"
                   >
                     <span className="font-serif text-lg font-semibold text-foreground group-hover:text-gold transition-colors">
                       {page.title}

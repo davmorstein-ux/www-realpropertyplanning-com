@@ -277,7 +277,7 @@ const ProfessionPageTemplate = ({
                 <Link
                   key={rp.href}
                   to={rp.href}
-                  className="bg-card rounded-xl border border-border p-5 hover:border-gold/30 transition-colors"
+                  className="marquee-hover bg-card rounded-xl border border-border p-5 hover:border-gold/30 transition-colors"
                 >
                   <h3 className="font-semibold text-foreground text-lg group-hover:text-gold">
                     {rp.title}

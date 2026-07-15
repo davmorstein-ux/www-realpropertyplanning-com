@@ -58,7 +58,7 @@ const CalcTile: React.FC<{ tile: Tile }> = ({ tile }) => {
   return (
     <Link
       to={tile.to}
-      className="group block bg-white rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:-translate-y-1"
+      className="marquee-hover group block bg-white rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:-translate-y-1"
       style={{ ["--hover-shadow" as any]: a.shadow }}
       onMouseEnter={(e) => (e.currentTarget.style.boxShadow = a.shadow)}
       onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "")}

@@ -193,7 +193,7 @@ const GrayDivorce = () => {
             <div className="max-w-3xl mx-auto">
               <Link
                 to="/for-divorce-attorneys"
-                className="block bg-primary border-2 border-gold rounded-xl px-8 py-8 md:px-10 md:py-10 text-center shadow-md hover:shadow-lg transition-shadow duration-300 group"
+                className="marquee-hover block bg-primary border-2 border-gold rounded-xl px-8 py-8 md:px-10 md:py-10 text-center shadow-md hover:shadow-lg transition-shadow duration-300 group"
               >
                 <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
                   Featured Divorce Attorneys

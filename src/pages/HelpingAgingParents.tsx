@@ -293,7 +293,7 @@ const HelpingAgingParents = () => {
                           <Link
                             key={item.href + item.label}
                             to={item.href}
-                            className="group flex items-center gap-3 bg-cream hover:bg-white border border-gold/20 hover:border-gold/50 rounded-xl px-4 py-3 min-h-[60px] transition-all hover:-translate-y-0.5 hover:shadow-md"
+                            className="marquee-hover group flex items-center gap-3 bg-cream hover:bg-white border border-gold/20 hover:border-gold/50 rounded-xl px-4 py-3 min-h-[60px] transition-all hover:-translate-y-0.5 hover:shadow-md"
                           >
                             <img
                               src={item.icon}
@@ -341,7 +341,7 @@ const HelpingAgingParents = () => {
                   <Link
                     key={r.href}
                     to={r.href}
-                    className="group bg-white border-2 border-gold/20 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/50 hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all"
+                    className="marquee-hover group bg-white border-2 border-gold/20 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/50 hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all"
                   >
                     <h3 className="font-serif text-xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                       {r.title}
@@ -409,7 +409,7 @@ const HelpingAgingParents = () => {
                   <Link
                     key={c.href}
                     to={c.href}
-                    className="group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/50 hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all flex flex-col"
+                    className="marquee-hover group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/50 hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all flex flex-col"
                   >
                     <img src={c.icon} alt="" aria-hidden="true" className="w-12 h-12 object-contain mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
                     <h3 className="font-serif text-xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">

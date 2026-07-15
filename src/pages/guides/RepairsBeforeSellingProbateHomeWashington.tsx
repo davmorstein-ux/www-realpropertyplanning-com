@@ -127,7 +127,7 @@ type Card = { title: string; meta?: string; body: string };
 const CardGrid = ({ items, accent }: { items: Card[]; accent: "green" | "amber" | "red" }) => {
   const borderClass = {
     green: "border-t-4 border-t-[#15803d]",
-    amber: "border-t-4 border-t-[#b45309]",
+    amber: "border-t-4 border-t-[#97262f]",
     red: "border-t-4 border-t-[#b91c1c]",
   }[accent];
   return (
@@ -326,7 +326,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
                 <Link
                   key={c.href}
                   to={c.href}
-                  className="block rounded-xl border border-border bg-card p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-gold/40 hover:shadow-md"
+                  className="marquee-hover block rounded-xl border border-border bg-card p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-gold/40 hover:shadow-md"
                 >
                   <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{c.title}</h3>
                   <span className="text-gold font-medium text-base">Read more →</span>
