@@ -161,7 +161,6 @@ const AFHRealEstateBroker = () => (
       {/* Featured Broker + Why You Need a Specialist — side by side */}
       <section style={{ background: "#f7f4ef", padding: "72px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-
           {/* Two-column layout */}
           <div
             style={{
@@ -354,7 +353,6 @@ const AFHRealEstateBroker = () => (
             >
               What Clients Are Saying
             </h2>
-            <div style={{ width: 48, height: 3, background: "#7f2028", margin: "0 auto 20px", borderRadius: 1 }} />
             <div
               style={{
                 display: "inline-flex",
