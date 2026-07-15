@@ -5,12 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
 import newYorkLifeLogo from "@/assets/new-york-life-logo.webp";
@@ -55,7 +50,7 @@ const faqs = [
   },
   {
     q: 'What is a "stepped-up basis" and why does it matter?',
-    a: "When you inherit a home, its cost basis for tax purposes is \"stepped up\" to the market value at the time of the original owner's death — not what they originally paid. This often significantly reduces or eliminates capital gains tax if you sell the home shortly after inheriting it. A financial advisor or CPA can walk you through how this applies to your situation.",
+    a: 'When you inherit a home, its cost basis for tax purposes is "stepped up" to the market value at the time of the original owner\'s death — not what they originally paid. This often significantly reduces or eliminates capital gains tax if you sell the home shortly after inheriting it. A financial advisor or CPA can walk you through how this applies to your situation.',
   },
   {
     q: "What is Washington State's estate tax and who does it affect?",
@@ -97,7 +92,10 @@ const FinancialPlanners = () => {
         items={[
           { name: "Home", url: "https://realpropertyplanning.com" },
           { name: "Professionals", url: "https://realpropertyplanning.com/professionals" },
-          { name: "Financial Planners & Advisors", url: "https://realpropertyplanning.com/professionals/financial-planners" },
+          {
+            name: "Financial Planners & Advisors",
+            url: "https://realpropertyplanning.com/professionals/financial-planners",
+          },
         ]}
       />
       <Header />
@@ -111,7 +109,7 @@ const FinancialPlanners = () => {
               {providers.map((p) => (
                 <div
                   key={p.company}
-                  className="interior-tile interior-tile--wide tile-white block h-full"
+                  className="interior-tile interior-tile--wide interior-tile--static tile-white block h-full"
                 >
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face h-full">
@@ -120,7 +118,10 @@ const FinancialPlanners = () => {
                           src={p.logo}
                           alt={p.logoAlt}
                           className="h-[120px] md:h-[144px] w-auto object-contain mb-4"
-                          loading="lazy" sizes="100vw" decoding="async"/>
+                          loading="lazy"
+                          sizes="100vw"
+                          decoding="async"
+                        />
 
                         <div className="flex justify-center gap-5 mb-3">
                           {p.contacts.map((c) => (
@@ -129,11 +130,12 @@ const FinancialPlanners = () => {
                                 src={c.photo}
                                 alt={c.alt}
                                 className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] rounded-full object-cover border-2 border-border shadow-sm"
-                                loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
+                                loading="lazy"
+                                sizes="(max-width: 768px) 90px, 90px"
+                                decoding="async"
+                              />
                               <p className="text-foreground font-semibold text-sm mt-2">{c.name}</p>
-                              {c.role && (
-                                <p className="text-muted-foreground text-xs">{c.role}</p>
-                              )}
+                              {c.role && <p className="text-muted-foreground text-xs">{c.role}</p>}
                             </div>
                           ))}
                         </div>
@@ -142,9 +144,7 @@ const FinancialPlanners = () => {
                           {p.company}
                         </h2>
 
-                        <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">
-                          {p.specialty}
-                        </p>
+                        <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">{p.specialty}</p>
 
                         <div className="w-full space-y-1.5 text-sm mb-5">
                           {p.phones.map((ph) => (
@@ -178,7 +178,17 @@ const FinancialPlanners = () => {
                             className="gold-cta"
                           >
                             Learn More
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <svg
+                              viewBox="0 0 24 24"
+                              width="14"
+                              height="14"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.4"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              aria-hidden="true"
+                            >
                               <polyline points="9 18 15 12 9 6" />
                             </svg>
                           </a>
@@ -201,13 +211,21 @@ const FinancialPlanners = () => {
               </h2>
               <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
                 <p>
-                  A financial planner or advisor can be an important part of the support team during major life transitions. For older adults and their families, they help clarify financial decisions related to retirement income, long-term care, housing changes, estate planning, and the costs involved in downsizing or relocation.
+                  A financial planner or advisor can be an important part of the support team during major life
+                  transitions. For older adults and their families, they help clarify financial decisions related to
+                  retirement income, long-term care, housing changes, estate planning, and the costs involved in
+                  downsizing or relocation.
                 </p>
                 <p>
-                  Their role is to look at the bigger financial picture and help clients make informed choices that align with their goals, resources, and family circumstances. In situations involving a move, a change in living arrangement, or the administration of an estate, a financial planner or advisor can help bring structure and confidence to what may otherwise feel overwhelming.
+                  Their role is to look at the bigger financial picture and help clients make informed choices that
+                  align with their goals, resources, and family circumstances. In situations involving a move, a change
+                  in living arrangement, or the administration of an estate, a financial planner or advisor can help
+                  bring structure and confidence to what may otherwise feel overwhelming.
                 </p>
                 <p>
-                  What makes a good financial planner or advisor especially valuable is their ability to explain options clearly and help families move forward with practical, well-informed decisions. That kind of guidance can be especially reassuring when coordinating with real estate, legal, and estate professionals.
+                  What makes a good financial planner or advisor especially valuable is their ability to explain options
+                  clearly and help families move forward with practical, well-informed decisions. That kind of guidance
+                  can be especially reassuring when coordinating with real estate, legal, and estate professionals.
                 </p>
               </div>
             </div>
@@ -218,9 +236,7 @@ const FinancialPlanners = () => {
         <section className="py-12 md:py-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-[900px] mx-auto">
-              <h2 className="font-serif text-[1.75rem] text-foreground font-semibold mb-10">
-                Common Questions
-              </h2>
+              <h2 className="font-serif text-[1.75rem] text-foreground font-semibold mb-10">Common Questions</h2>
               <Accordion type="single" collapsible className="space-y-3">
                 {faqs.map((faq, i) => (
                   <AccordionItem
@@ -228,7 +244,10 @@ const FinancialPlanners = () => {
                     value={`faq-${i}`}
                     className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
                   >
-                    <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
+                    <AccordionTrigger
+                      className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5"
+                      style={{ fontSize: "20px", fontWeight: "700" }}
+                    >
                       {faq.q}
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground text-lg leading-relaxed">
