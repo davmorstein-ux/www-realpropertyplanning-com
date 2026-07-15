@@ -10,28 +10,28 @@ const tiles = [
     imgAlt: "Older couple reviewing an estate plan together at home",
     title: "I Want to Plan Ahead",
     href: "/planning-before-a-crisis",
-    bgColor: "#8b2e2e", // warm red
+    bgColor: "#721d24", // deep burgundy
   },
   {
     imgSrc: tileHelping,
     imgAlt: "Adult daughter hugging her senior mother on a couch",
     title: "I'm Helping an Aging Parent",
     href: "/helping-aging-parents",
-    bgColor: "#bc333e", // warm amber
+    bgColor: "#883f20", // rust
   },
   {
     imgSrc: tileEstate,
     imgAlt: "Family reviewing an estate property plan with documents",
     title: "I'm Handling an Estate",
     href: "/estate-probate-inherited-property",
-    bgColor: "#9e5c61", // soft periwinkle blue
+    bgColor: "#772245", // berry rose
   },
   {
     imgSrc: tileProfessionals,
     imgAlt: "Man at a laptop browsing trusted professional resources",
     title: "I Need a Professional",
     href: "/building-your-trusted-professional-team",
-    bgColor: "#7a4f8a", // warm plum
+    bgColor: "#5d2f74", // plum
   },
 ];
 
