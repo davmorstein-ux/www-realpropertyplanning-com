@@ -100,7 +100,10 @@ const AFHROICalculator = () => {
       }
       const mr = rate / 100 / 12,
         np = term * 12;
-      const mortgage = ((price - downAmt) * (mr * Math.pow(1 + mr, np))) / (Math.pow(1 + mr, np) - 1);
+      const mortgage =
+        mr === 0
+          ? (price - downAmt) / np
+          : ((price - downAmt) * (mr * Math.pow(1 + mr, np))) / (Math.pow(1 + mr, np) - 1);
       const annMort = mortgage * 12,
         adjRev = rev * (occ / 100),
         noi = adjRev - exp;
@@ -152,6 +155,8 @@ const AFHROICalculator = () => {
         }, 50);
       }, DUR + 200);
     };
+
+    updateDerived();
 
     document.getElementById("btn-pct")?.addEventListener("click", () => setMode("pct"));
     document.getElementById("btn-dollar")?.addEventListener("click", () => setMode("dollar"));
@@ -212,7 +217,7 @@ const AFHROICalculator = () => {
       <main>
         {/* Hero */}
         <div style={{ background: "#f5f2ec", padding: "48px 24px 40px", borderBottom: `3px solid ${BLUE}` }}>
-          <div style={{ maxWidth: 960, margin: "0 auto" }}>
+          <div style={{ maxWidth: 960, margin: "0 auto", paddingTop: "var(--header-height, 100px)" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
               <img
                 src="/back-to-calculators-blue.webp"
@@ -400,7 +405,13 @@ const AFHROICalculator = () => {
                   </div>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <input type="number" id="r-down" placeholder="25" style={{ ...IS, flex: 1, width: "auto" }} />
+                  <input
+                    type="number"
+                    id="r-down"
+                    placeholder="25"
+                    defaultValue="25"
+                    style={{ ...IS, flex: 1, width: "auto" }}
+                  />
                   <span
                     id="dp-derived"
                     style={{
