@@ -8,7 +8,7 @@ interface FAQItem {
 }
 
 interface PageFAQProps {
-  faqs: FAQItem[];
+  faqs?: FAQItem[];
   heading?: string;
   eyebrow?: string;
   id?: string;
@@ -26,6 +26,8 @@ const PageFAQ = ({
   plain = false,
 }: PageFAQProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  if (!faqs || faqs.length === 0) return null;
 
   const faqJsonLd = {
     "@context": "https://schema.org",
