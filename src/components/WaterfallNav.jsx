@@ -1,9 +1,17 @@
 import { useState, useRef, useEffect } from "react";
 
+function hexToRgba(hex, alpha) {
+  const h = hex.replace("#", "");
+  const r = parseInt(h.substring(0, 2), 16);
+  const g = parseInt(h.substring(2, 4), 16);
+  const b = parseInt(h.substring(4, 6), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
 const CATEGORIES = [
   {
     label: "Legal Professionals",
-    color: "#891a2d",
+    color: "#ac1515",
     items: [
       { name: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
       { name: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
@@ -15,7 +23,7 @@ const CATEGORIES = [
   },
   {
     label: "Real Estate & Professionals",
-    color: "#aa5518",
+    color: "#aa570e",
     items: [
       { name: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
       { name: "CPAs & Accountants", href: "/professionals/cpas" },
@@ -27,7 +35,7 @@ const CATEGORIES = [
   },
   {
     label: "Senior Housing",
-    color: "#21633d",
+    color: "#1d7239",
     items: [
       { name: "Senior Living Advisors", href: "/senior-living-advisors" },
       { name: "Senior Move Managers", href: "/senior-move-managers" },
@@ -37,7 +45,7 @@ const CATEGORIES = [
   },
   {
     label: "Senior Care",
-    color: "#1d6472",
+    color: "#117078",
     items: [
       { name: "Medicare & Benefits Advisors", href: "/medicare-providers" },
       { name: "Aging Life Care Managers", href: "/aging-life-care-managers" },
@@ -46,7 +54,7 @@ const CATEGORIES = [
   },
   {
     label: "Guides & Articles",
-    color: "#2947a3",
+    color: "#284dbd",
     items: [
       { name: "All Resources & Guides", href: "/guides-and-resources" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
@@ -60,7 +68,7 @@ const CATEGORIES = [
   },
   {
     label: "Long-Term Care",
-    color: "#5c3088",
+    color: "#6b30a6",
     items: [
       { name: "Long-Term Care Overview", href: "/long-term-care" },
       { name: "Nursing Homes", href: "/long-term-care/nursing-homes" },
@@ -72,7 +80,7 @@ const CATEGORIES = [
   },
   {
     label: "More",
-    color: "#892467",
+    color: "#a82466",
     items: [
       { name: "AFH Club", href: "/afh-club" },
       { name: "AFH Calculators", href: "/afh-club/calculators" },
@@ -200,9 +208,9 @@ const CSS = `
     font-weight: 800;
     color: #280a0c;
     letter-spacing: 0.04em;
-    background: none;
+    background: var(--cat-bg-rest, transparent);
     border: none;
-    border-left: 4px solid var(--cat-color, transparent);
+    border-left: 5px solid var(--cat-color, transparent);
     text-align: left;
     cursor: pointer;
     font-family: inherit;
@@ -220,9 +228,9 @@ const CSS = `
     background: var(--cat-color, #7f2028);
     flex-shrink: 0;
   }
-  .wf-rail-btn:hover { background: rgba(0,0,0,0.05); }
+  .wf-rail-btn:hover { background: var(--cat-bg-active, rgba(0,0,0,0.08)); }
   .wf-rail-btn.wf-active {
-    background: rgba(0,0,0,0.06);
+    background: var(--cat-bg-active, rgba(0,0,0,0.08));
     color: var(--cat-color, #7f2028);
   }
   .wf-rail-chevron {
@@ -322,7 +330,11 @@ function NavRail({ categories, activeIndex, onSelect }) {
         <button
           key={cat.label}
           className={`wf-rail-btn${activeIndex === i ? " wf-active" : ""}`}
-          style={{ "--cat-color": cat.color }}
+          style={{
+            "--cat-color": cat.color,
+            "--cat-bg-rest": hexToRgba(cat.color, 0.1),
+            "--cat-bg-active": hexToRgba(cat.color, 0.2),
+          }}
           aria-current={activeIndex === i}
           onMouseEnter={() => onSelect(i)}
           onClick={() => onSelect(i)}
