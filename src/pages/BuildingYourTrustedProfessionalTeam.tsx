@@ -21,62 +21,150 @@ type Card = {
 };
 
 const legal: Card[] = [
-  { title: "Attorneys", description: "Estate planning, probate, elder law, family law, divorce, and real estate attorneys throughout Washington State.", href: "/for-attorneys", image: attorneysTileImg, alt: "Attorneys Washington State", cta: "Meet the Attorneys" },
+  {
+    title: "Attorneys",
+    description:
+      "Estate planning, probate, elder law, family law, divorce, and real estate attorneys throughout Washington State.",
+    href: "/for-attorneys",
+    image: attorneysTileImg,
+    alt: "Attorneys Washington State",
+    cta: "Meet the Attorneys",
+  },
 ];
 
 const financial: Card[] = [
-  { title: "CPAs", description: "Tax guidance, estate coordination, and compliance for probate and inherited assets.", href: "/for-cpas", image: "/tiles/set1/cpas-tile.webp", alt: "CPAs Washington State", cta: "Learn More" },
-  { title: "Financial Planners", description: "Long-term financial planning, inherited asset guidance, and senior housing cost planning.", href: "/professionals/financial-planners", image: "/tiles/set1/financial-planners-tile.webp", alt: "Financial planners Washington State", cta: "Learn More" },
-  { title: "Mortgage Lenders", description: "Financing options for estate, inherited, and transitional properties.", href: "/mortgage-lenders", image: "/tiles/set1/mortgage-lenders-tile.webp", alt: "Mortgage lenders Washington State", cta: "Learn More" },
-  { title: "Certified Appraisers", description: "Independent property valuation for estate, probate, and trust purposes.", href: "/real-estate-appraiser", image: "/tiles/set1/real-estate-appraisers-tile.webp", alt: "Certified real estate appraisers Washington State", cta: "Learn More" },
+  {
+    title: "CPAs",
+    description: "Tax guidance, estate coordination, and compliance for probate and inherited assets.",
+    href: "/for-cpas",
+    image: "/tiles/set1/cpas-tile.webp",
+    alt: "CPAs Washington State",
+    cta: "Learn More",
+  },
+  {
+    title: "Financial Planners",
+    description: "Long-term financial planning, inherited asset guidance, and senior housing cost planning.",
+    href: "/professionals/financial-planners",
+    image: "/tiles/set1/financial-planners-tile.webp",
+    alt: "Financial planners Washington State",
+    cta: "Learn More",
+  },
+  {
+    title: "Mortgage Lenders",
+    description: "Financing options for estate, inherited, and transitional properties.",
+    href: "/mortgage-lenders",
+    image: "/tiles/set1/mortgage-lenders-tile.webp",
+    alt: "Mortgage lenders Washington State",
+    cta: "Learn More",
+  },
+  {
+    title: "Certified Appraisers",
+    description: "Independent property valuation for estate, probate, and trust purposes.",
+    href: "/real-estate-appraiser",
+    image: "/tiles/set1/real-estate-appraisers-tile.webp",
+    alt: "Certified real estate appraisers Washington State",
+    cta: "Learn More",
+  },
 ];
 
 const housing: Card[] = [
-  { title: "Senior Living Advisors", description: "Help evaluating assisted living, memory care, and housing options.", href: "/senior-living-advisors", image: "/tiles/set1/senior-living-advisors-tile.webp", alt: "Senior living advisors Washington State", cta: "Learn More" },
-  { title: "Medicare & Benefits Advisors", description: "Navigating Medicare, Medicaid, and care funding options.", href: "/medicare-providers", image: "/tiles/set1/medicare-providers-tile.webp", alt: "Medicare and benefits advisors Washington State", cta: "Learn More" },
-  { title: "Aging Life Care Managers", description: "Guides seniors and families through housing, care, and life transition decisions.", href: "/aging-life-care-managers", image: "/tiles/set1/aging-life-care-managers-tile.webp", alt: "Aging Life Care Managers Washington State", cta: "Learn More" },
-  { title: "Senior Move Managers", description: "Sorting, packing, and coordinating a senior's move with patience and care.", href: "/senior-move-managers", image: "/tiles/set1/senior-move-managers-tile.webp", alt: "Senior move managers Washington State", cta: "Learn More" },
+  {
+    title: "Senior Living Advisors",
+    description: "Help evaluating assisted living, memory care, and housing options.",
+    href: "/senior-living-advisors",
+    image: "/tiles/set1/senior-living-advisors-tile.webp",
+    alt: "Senior living advisors Washington State",
+    cta: "Learn More",
+  },
+  {
+    title: "Medicare & Benefits Advisors",
+    description: "Navigating Medicare, Medicaid, and care funding options.",
+    href: "/medicare-providers",
+    image: "/tiles/set1/medicare-providers-tile.webp",
+    alt: "Medicare and benefits advisors Washington State",
+    cta: "Learn More",
+  },
+  {
+    title: "Aging Life Care Managers",
+    description: "Guides seniors and families through housing, care, and life transition decisions.",
+    href: "/aging-life-care-managers",
+    image: "/tiles/set1/aging-life-care-managers-tile.webp",
+    alt: "Aging Life Care Managers Washington State",
+    cta: "Learn More",
+  },
+  {
+    title: "Senior Move Managers",
+    description: "Sorting, packing, and coordinating a senior's move with patience and care.",
+    href: "/senior-move-managers",
+    image: "/tiles/set1/senior-move-managers-tile.webp",
+    alt: "Senior move managers Washington State",
+    cta: "Learn More",
+  },
 ];
 
 const property: Card[] = [
-  { title: "Real Estate Brokers", description: "Probate, estate, and senior transition property sales throughout Washington State.", href: "/realtor", image: "/tiles/set1/real-estate-brokers-tile.webp?v=20260602b", alt: "Real estate brokers Washington State", cta: "Learn More" },
-  { title: "Estate Liquidators", description: "Companies that organize and conduct estate sales, residential clear outs, and personal property liquidation.", href: "/estate-liquidators", image: "/tiles/set1/estate-liquidators-tile.webp?v=20260602b", alt: "Estate liquidators Washington State — estate sales, appraisal, sorting, staging, marketing", cta: "Learn More" },
-  { title: "Title & Escrow", description: "Closing coordination for estate and inherited property transactions.", href: "/title-and-escrow", image: "/tiles/set1/title-escrow-tile.webp?v=20260602b", alt: "Title and escrow Washington State", cta: "Learn More" },
-  { title: "Probate & Estate Sales", description: "Specialized real estate guidance for court-supervised and estate property sales.", href: "/probate-estate-sales", image: "/tiles/set1/probate-estate-sales-tile.webp?v=20260602b", alt: "Probate and estate sales Washington State", cta: "Learn More" },
+  {
+    title: "Real Estate Brokers",
+    description: "Probate, estate, and senior transition property sales throughout Washington State.",
+    href: "/realtor",
+    image: "/tiles/set1/real-estate-brokers-tile.webp?v=20260602b",
+    alt: "Real estate brokers Washington State",
+    cta: "Learn More",
+  },
+  {
+    title: "Estate Liquidators",
+    description:
+      "Companies that organize and conduct estate sales, residential clear outs, and personal property liquidation.",
+    href: "/estate-liquidators",
+    image: "/tiles/set1/estate-liquidators-tile.webp?v=20260602b",
+    alt: "Estate liquidators Washington State — estate sales, appraisal, sorting, staging, marketing",
+    cta: "Learn More",
+  },
+  {
+    title: "Title & Escrow",
+    description: "Closing coordination for estate and inherited property transactions.",
+    href: "/title-and-escrow",
+    image: "/tiles/set1/title-escrow-tile.webp?v=20260602b",
+    alt: "Title and escrow Washington State",
+    cta: "Learn More",
+  },
+  {
+    title: "Probate & Estate Sales",
+    description: "Specialized real estate guidance for court-supervised and estate property sales.",
+    href: "/probate-estate-sales",
+    image: "/tiles/set1/probate-estate-sales-tile.webp?v=20260602b",
+    alt: "Probate and estate sales Washington State",
+    cta: "Learn More",
+  },
 ];
 
-const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; cards: Card[]; bg?: string }) => (
-
+const Section = ({
+  heading,
+  cards,
+  bg = "bg-background",
+  color = "#c3525c",
+}: {
+  heading: string;
+  cards: Card[];
+  bg?: string;
+  color?: string;
+}) => (
   <section className={`py-10 lg:py-12 ${bg}`}>
-
     <div className="container px-6 lg:px-8">
-
       <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: "#6b1b22" }}>
-
         {heading}
-
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-
         {cards.map((s) => (
-
           <Link
-
             key={s.title + s.href}
-
             to={s.href}
-
             aria-label={`${s.title} — ${s.description}`}
-
             style={{ textDecoration: "none" }}
-
           >
-
             <div
-
               style={{
-
                 background: "#fff",
 
                 borderRadius: 16,
@@ -92,41 +180,26 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
                 flexDirection: "column",
 
                 transition: "box-shadow 0.2s ease, transform 0.2s ease",
-
               }}
-
               onMouseEnter={(e) => {
-
                 (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)";
 
                 (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
-
               }}
-
               onMouseLeave={(e) => {
-
                 (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
 
                 (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
-
               }}
-
             >
-
               {/* Photo */}
 
               <div style={{ width: "100%", height: "180px", overflow: "hidden" }}>
-
                 <img
-
                   src={s.image}
-
                   alt={s.alt}
-
                   loading="lazy"
-
                   style={{
-
                     width: "100%",
 
                     height: "100%",
@@ -136,33 +209,37 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
                     objectPosition: "center",
 
                     display: "block",
-
-                  }} sizes="100vw" decoding="async"/>
-
+                  }}
+                  sizes="100vw"
+                  decoding="async"
+                />
               </div>
 
               {/* Card body */}
 
               <div style={{ padding: "16px 20px 0", flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
                 <div style={{ minHeight: 72 }}>
-                  <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#6b1b22", lineHeight: 1.3 }}>
+                  <h3
+                    style={{
+                      fontFamily: "Georgia, serif",
+                      fontSize: 18,
+                      fontWeight: 700,
+                      color: "#6b1b22",
+                      lineHeight: 1.3,
+                    }}
+                  >
                     {s.title}
                   </h3>
                 </div>
-                <p style={{ fontSize: 14, color: "#806b6d", lineHeight: 1.6, flex: 1 }}>
-                  {s.description}
-                </p>
+                <p style={{ fontSize: 14, color: "#806b6d", lineHeight: 1.6, flex: 1 }}>{s.description}</p>
               </div>
 
               {/* CTA bar */}
 
               <div style={{ padding: "12px 20px 16px" }}>
-
                 <div
-
                   style={{
-
-                    background: "#c3525c",
+                    background: color,
 
                     borderRadius: 8,
 
@@ -185,35 +262,30 @@ const Section = ({ heading, cards, bg = "bg-background" }: { heading: string; ca
                     color: "#fff",
 
                     letterSpacing: "0.04em",
-
                   }}
-
                 >
-
                   {s.cta}
 
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="13"
+                    height="13"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <polyline points="9 18 15 12 9 6" />
-
                   </svg>
-
                 </div>
-
               </div>
-
             </div>
-
           </Link>
-
         ))}
-
       </div>
-
     </div>
-
   </section>
-
 );
 
 const jsonLd = articleSchema({
@@ -234,7 +306,9 @@ const BuildingYourTrustedProfessionalTeam = () => {
         description="Connect with vetted legal, financial, senior housing, and property professionals throughout Washington State."
         jsonLd={jsonLd}
       />
-      <BreadcrumbSchema items={[{ name: "Building Your Trusted Professional Team", url: "/building-your-trusted-professional-team" }]} />
+      <BreadcrumbSchema
+        items={[{ name: "Building Your Trusted Professional Team", url: "/building-your-trusted-professional-team" }]}
+      />
       <Header />
       <main id="main-content">
         {/* Hero */}
@@ -244,38 +318,109 @@ const BuildingYourTrustedProfessionalTeam = () => {
               src={wtdwHeroImage}
               alt="Quiet Washington street with craftsman homes"
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager" sizes="100vw" decoding="async" width={1920} height={510} />
+              loading="eager"
+              sizes="100vw"
+              decoding="async"
+              width={1920}
+              height={510}
+            />
             <HeroBandTitle as="div">A Guide to Independent Professionals</HeroBandTitle>
           </div>
         </section>
 
         <h1 className="sr-only">A Guide to Trusted, Independent Professionals</h1>
 
-<div id="legal-professionals" className="scroll-mt-20 bg-background">
+        <div id="legal-professionals" className="scroll-mt-20 bg-background">
           <section className="py-10 lg:py-12 bg-background">
             <div className="container px-6 lg:px-8">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: "#6b1b22" }}>
+              <h2
+                className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center"
+                style={{ color: "#6b1b22" }}
+              >
                 Legal Professionals
               </h2>
               <div className="flex justify-center">
                 <div style={{ width: "100%", maxWidth: 360 }}>
                   {legal.map((s) => (
                     <a key={s.title} href={s.href} style={{ textDecoration: "none", display: "block" }}>
-                      <div style={{ background: "#fff", borderRadius: 16, border: "1px solid rgba(0,0,0,0.08)", overflow: "hidden", transition: "box-shadow 0.2s ease, transform 0.2s ease" }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)"; }}
-                        onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}
+                      <div
+                        style={{
+                          background: "#fff",
+                          borderRadius: 16,
+                          border: "1px solid rgba(0,0,0,0.08)",
+                          overflow: "hidden",
+                          transition: "box-shadow 0.2s ease, transform 0.2s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)";
+                          (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
+                        }}
+                        onMouseLeave={(e) => {
+                          (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+                          (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+                        }}
                       >
                         <div style={{ width: "100%", height: 180, overflow: "hidden" }}>
-                          <img src={s.image} alt={s.alt} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} sizes="100vw" decoding="async"/>
+                          <img
+                            src={s.image}
+                            alt={s.alt}
+                            loading="lazy"
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                              objectPosition: "center top",
+                              display: "block",
+                            }}
+                            sizes="100vw"
+                            decoding="async"
+                          />
                         </div>
                         <div style={{ padding: "16px 20px 0" }}>
-                          <h3 style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#6b1b22", lineHeight: 1.3, marginBottom: 6 }}>{s.title}</h3>
+                          <h3
+                            style={{
+                              fontFamily: "Georgia, serif",
+                              fontSize: 18,
+                              fontWeight: 700,
+                              color: "#6b1b22",
+                              lineHeight: 1.3,
+                              marginBottom: 6,
+                            }}
+                          >
+                            {s.title}
+                          </h3>
                           <p style={{ fontSize: 14, color: "#806b6d", lineHeight: 1.6 }}>{s.description}</p>
                         </div>
                         <div style={{ padding: "12px 20px 16px" }}>
-                          <div style={{ background: "#c3525c", borderRadius: 8, padding: "10px 16px", display: "flex", alignItems: "center", justifyContent: "center", gap: 6, fontFamily: "'Raleway', sans-serif", fontSize: 13, fontWeight: 700, color: "#fff", letterSpacing: "0.04em" }}>
+                          <div
+                            style={{
+                              background: "#721d24",
+                              borderRadius: 8,
+                              padding: "10px 16px",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              gap: 6,
+                              fontFamily: "'Raleway', sans-serif",
+                              fontSize: 13,
+                              fontWeight: 700,
+                              color: "#fff",
+                              letterSpacing: "0.04em",
+                            }}
+                          >
                             {s.cta}
-                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
+                            <svg
+                              viewBox="0 0 24 24"
+                              width="13"
+                              height="13"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polyline points="9 18 15 12 9 6" />
+                            </svg>
                           </div>
                         </div>
                       </div>
@@ -287,13 +432,13 @@ const BuildingYourTrustedProfessionalTeam = () => {
           </section>
         </div>
         <div>
-          <Section heading="Financial & Valuation Professionals" cards={financial} bg="bg-secondary" />
+          <Section heading="Financial & Valuation Professionals" cards={financial} bg="bg-secondary" color="#246044" />
         </div>
         <div>
-          <Section heading="Senior Housing & Care" cards={housing} bg="bg-background" />
+          <Section heading="Senior Housing & Care" cards={housing} bg="bg-background" color="#25597e" />
         </div>
         <div>
-          <Section heading="Property & Transition Support" cards={property} bg="bg-secondary" />
+          <Section heading="Property & Transition Support" cards={property} bg="bg-secondary" color="#5d2f74" />
         </div>
 
         {/* Closing CTA */}
@@ -304,7 +449,9 @@ const BuildingYourTrustedProfessionalTeam = () => {
                 Not Sure Who You Need?
               </h2>
               <p className="text-primary-foreground/85 text-lg leading-relaxed mb-7">
-                Real Property Planning can help point you toward the right kinds of independent professionals for your situation. It is an educational hub and connection point — the professionals referenced are independent and are not employees or affiliates of Real Property Planning.
+                Real Property Planning can help point you toward the right kinds of independent professionals for your
+                situation. It is an educational hub and connection point — the professionals referenced are independent
+                and are not employees or affiliates of Real Property Planning.
               </p>
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
