@@ -1,9 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 
-const LEFT_GROUPS = [
+const CATEGORIES = [
   {
     label: "Legal Professionals",
-    href: "/building-your-trusted-professional-team",
     items: [
       { name: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
       { name: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
@@ -14,8 +13,7 @@ const LEFT_GROUPS = [
     ],
   },
   {
-    label: "Real Estate & Valuation",
-    href: "/building-your-trusted-professional-team",
+    label: "Real Estate & Professionals",
     items: [
       { name: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
       { name: "CPAs & Accountants", href: "/professionals/cpas" },
@@ -26,21 +24,24 @@ const LEFT_GROUPS = [
     ],
   },
   {
-    label: "Senior Housing & Care",
-    href: "/building-your-trusted-professional-team",
+    label: "Senior Housing",
     items: [
       { name: "Senior Living Advisors", href: "/senior-living-advisors" },
-      { name: "Medicare & Benefits Advisors", href: "/medicare-providers" },
-      { name: "Aging Life Care Managers", href: "/aging-life-care-managers" },
       { name: "Senior Move Managers", href: "/senior-move-managers" },
+      { name: "Aging in Place", href: "/aging-in-place-staying-home-safely" },
+      { name: "Downsizing & Preparing for Transition", href: "/downsizing-preparing-for-transition" },
     ],
   },
-];
-
-const RIGHT_GROUPS = [
+  {
+    label: "Senior Care",
+    items: [
+      { name: "Medicare & Benefits Advisors", href: "/medicare-providers" },
+      { name: "Aging Life Care Managers", href: "/aging-life-care-managers" },
+      { name: "Understanding Housing & Care Options", href: "/understanding-housing-care-options" },
+    ],
+  },
   {
     label: "Guides & Articles",
-    href: "/guides-and-resources",
     items: [
       { name: "All Resources & Guides", href: "/guides-and-resources" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
@@ -54,7 +55,6 @@ const RIGHT_GROUPS = [
   },
   {
     label: "Long-Term Care",
-    href: "/long-term-care",
     items: [
       { name: "Long-Term Care Overview", href: "/long-term-care" },
       { name: "Nursing Homes", href: "/long-term-care/nursing-homes" },
@@ -66,7 +66,6 @@ const RIGHT_GROUPS = [
   },
   {
     label: "More",
-    href: "/resources",
     items: [
       { name: "AFH Club", href: "/afh-club" },
       { name: "AFH Calculators", href: "/afh-club/calculators" },
@@ -113,7 +112,7 @@ const CSS = `
     position: fixed;
     top: 64px;
     left: 0;
-    width: 500px;
+    width: 660px;
     max-width: 96vw;
     height: calc(100vh - 64px);
     background: #f7f4ef;
@@ -168,68 +167,78 @@ const CSS = `
   }
   .wf-close-x:hover { background: rgba(192,57,43,0.1); }
 
-  .wf-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .wf-body {
+    display: flex;
     flex: 1;
+    overflow: hidden;
+  }
+
+  .wf-rail {
+    width: 220px;
+    flex-shrink: 0;
+    border-right: 1px solid #dfc9cb;
     overflow-y: auto;
-    overflow-x: hidden;
+    padding: 8px 0;
   }
-  .wf-col { padding: 8px 0 16px; }
-  .wf-col:first-child { border-right: 1px solid #dfc9cb; }
-  .wf-columns::-webkit-scrollbar { width: 3px; }
-  .wf-columns::-webkit-scrollbar-thumb { background: #d2b2b4; border-radius: 2px; }
+  .wf-rail::-webkit-scrollbar { width: 3px; }
+  .wf-rail::-webkit-scrollbar-thumb { background: #d2b2b4; border-radius: 2px; }
 
-  .wf-group { display: block; width: 100%; }
-  .wf-group-divider {
-    margin: 2px 14px;
-    border: none;
-    border-top: 0.5px solid #dfc9cb;
-  }
-
-  .wf-group-btn {
+  .wf-rail-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 11px 14px;
-    font-size: 10px;
+    padding: 13px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #280a0c;
+    letter-spacing: 0.03em;
+    background: none;
+    border: none;
+    border-left: 3px solid transparent;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  }
+  .wf-rail-btn:hover { background: rgba(139,105,20,0.08); }
+  .wf-rail-btn.wf-active {
+    background: rgba(127,32,40,0.08);
+    border-left-color: #7f2028;
+    color: #7f2028;
+  }
+  .wf-rail-chevron {
+    font-size: 12px;
+    color: #7f2028;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+  .wf-rail-btn.wf-active .wf-rail-chevron { opacity: 1; }
+
+  .wf-flyout {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 0 16px;
+  }
+  .wf-flyout::-webkit-scrollbar { width: 3px; }
+  .wf-flyout::-webkit-scrollbar-thumb { background: #d2b2b4; border-radius: 2px; }
+
+  .wf-flyout-heading {
+    padding: 8px 20px 10px;
+    font-size: 11px;
     font-weight: 700;
     color: #7f2028;
     letter-spacing: 0.13em;
     text-transform: uppercase;
-    background: none;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    font-family: inherit;
-    transition: background 0.3s;
-    border-radius: 4px;
   }
-  .wf-group-btn:hover { background: rgba(139,105,20,0.08); }
-  .wf-group-btn.wf-open { color: #62191f; }
-
-  .wf-chevron {
-    font-size: 11px;
-    color: #7f2028;
-    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
-    flex-shrink: 0;
-    margin-left: 6px;
-  }
-  .wf-open .wf-chevron { transform: rotate(180deg); }
-
-  .wf-items {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 1.0s cubic-bezier(0.16,1,0.3,1);
-  }
-  .wf-items-open { max-height: 400px; }
 
   .wf-item {
     display: block;
     width: 100%;
-    padding: 7px 14px 7px 22px;
-    font-size: 12px;
+    padding: 9px 20px;
+    font-size: 14px;
     font-weight: 700;
     color: #280a0c;
     background: none;
@@ -238,14 +247,8 @@ const CSS = `
     text-align: left;
     cursor: pointer;
     font-family: inherit;
-    line-height: 1.35;
-    opacity: 0;
-    transform: translateY(-5px);
-    transition: color 0.3s, border-color 0.3s, background 0.3s, opacity 0.6s, transform 0.6s;
-  }
-  .wf-item-visible {
-    opacity: 1;
-    transform: translateY(0);
+    line-height: 1.4;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
   }
   .wf-item:hover {
     color: #280a0c;
@@ -276,70 +279,54 @@ const CSS = `
   }
   .wf-close-btn:hover { background: #7f2028; color: #280a0c; }
 
+  @media (max-width: 640px) {
+    .wf-panel { width: 100vw; max-width: 100vw; }
+    .wf-body { flex-direction: column; overflow-y: auto; }
+    .wf-rail {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #dfc9cb;
+      overflow-y: visible;
+      flex-shrink: 0;
+    }
+    .wf-flyout { overflow-y: visible; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .wf-panel { animation: none !important; opacity: 1 !important; }
-    .wf-item { opacity: 1 !important; transform: none !important; }
   }
 `;
 
-function AccordionGroup({ group, isOpen, onMouseEnter, onNavigate }) {
-  const itemRefs = useRef([]);
-
-  useEffect(() => {
-    if (isOpen) {
-      group.items.forEach((_, i) => {
-        setTimeout(() => {
-          if (itemRefs.current[i]) {
-            itemRefs.current[i].classList.add("wf-item-visible");
-          }
-        }, i * 150);
-      });
-    } else {
-      group.items.forEach((_, i) => {
-        if (itemRefs.current[i]) {
-          itemRefs.current[i].classList.remove("wf-item-visible");
-        }
-      });
-    }
-  }, [isOpen]);
-
+function NavRail({ categories, activeIndex, onSelect }) {
   return (
-    <div className="wf-group" onMouseEnter={onMouseEnter}>
-      <button className={`wf-group-btn${isOpen ? " wf-open" : ""}`} aria-expanded={isOpen} onClick={onMouseEnter}>
-        <span>{group.label}</span>
-        <span className="wf-chevron" aria-hidden="true">
-          ▾
-        </span>
-      </button>
-      <div className={`wf-items${isOpen ? " wf-items-open" : ""}`}>
-        {group.items.map((item, i) => (
-          <button
-            key={i}
-            ref={(el) => (itemRefs.current[i] = el)}
-            className="wf-item"
-            onClick={() => onNavigate(item.href)}
-          >
-            {item.name}
-          </button>
-        ))}
-      </div>
+    <div className="wf-rail">
+      {categories.map((cat, i) => (
+        <button
+          key={cat.label}
+          className={`wf-rail-btn${activeIndex === i ? " wf-active" : ""}`}
+          aria-current={activeIndex === i}
+          onMouseEnter={() => onSelect(i)}
+          onClick={() => onSelect(i)}
+        >
+          <span>{cat.label}</span>
+          <span className="wf-rail-chevron" aria-hidden="true">
+            &rarr;
+          </span>
+        </button>
+      ))}
     </div>
   );
 }
 
-function NavColumn({ groups, openIndex, onGroupEnter, onNavigate }) {
+function NavFlyout({ category, onNavigate }) {
+  if (!category) return <div className="wf-flyout" />;
   return (
-    <div className="wf-col">
-      {groups.map((group, i) => (
-        <div key={i}>
-          {i > 0 && <hr className="wf-group-divider" />}
-          <AccordionGroup
-            group={group}
-            isOpen={openIndex === i}
-            onMouseEnter={() => onGroupEnter(i)}
-            onNavigate={onNavigate}
-          />
-        </div>
+    <div className="wf-flyout">
+      <div className="wf-flyout-heading">{category.label}</div>
+      {category.items.map((item) => (
+        <button key={item.href} className="wf-item" onClick={() => onNavigate(item.href)}>
+          {item.name}
+        </button>
       ))}
     </div>
   );
@@ -348,8 +335,7 @@ function NavColumn({ groups, openIndex, onGroupEnter, onNavigate }) {
 export default function WaterfallNav() {
   const [open, setOpen] = useState(false);
   const [exiting, setExiting] = useState(false);
-  const [leftOpen, setLeftOpen] = useState(null);
-  const [rightOpen, setRightOpen] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const exitTimerRef = useRef(null);
   const hoverTimerRef = useRef(null);
 
@@ -366,8 +352,7 @@ export default function WaterfallNav() {
     exitTimerRef.current = setTimeout(() => {
       setOpen(false);
       setExiting(false);
-      setLeftOpen(null);
-      setRightOpen(null);
+      setActiveIndex(0);
     }, PANEL_FADE_MS);
   };
 
@@ -382,8 +367,7 @@ export default function WaterfallNav() {
   const handleNavigate = (href) => {
     setOpen(false);
     setExiting(false);
-    setLeftOpen(null);
-    setRightOpen(null);
+    setActiveIndex(0);
     if (exitTimerRef.current) clearTimeout(exitTimerRef.current);
     if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
     window.location.href = href;
@@ -459,19 +443,9 @@ export default function WaterfallNav() {
               </button>
             </div>
 
-            <div className="wf-columns">
-              <NavColumn
-                groups={LEFT_GROUPS}
-                openIndex={leftOpen}
-                onGroupEnter={(i) => setLeftOpen(i)}
-                onNavigate={handleNavigate}
-              />
-              <NavColumn
-                groups={RIGHT_GROUPS}
-                openIndex={rightOpen}
-                onGroupEnter={(i) => setRightOpen(i)}
-                onNavigate={handleNavigate}
-              />
+            <div className="wf-body">
+              <NavRail categories={CATEGORIES} activeIndex={activeIndex} onSelect={setActiveIndex} />
+              <NavFlyout category={CATEGORIES[activeIndex]} onNavigate={handleNavigate} />
             </div>
 
             <div className="wf-close-footer">
