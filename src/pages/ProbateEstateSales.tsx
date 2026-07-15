@@ -139,7 +139,7 @@ const ProbateEstateSales = () => {
               >
                 {[
                   {
-                    image: "/tiles/set2/the-probate-process.webp",
+                    image: "/tiles/set2/probate-property-real.webp",
                     alt: "Probate property real estate Washington State",
                     title: "Probate Property",
                     description: "Court-supervised. Legal authority required before the sale can proceed.",
@@ -147,7 +147,7 @@ const ProbateEstateSales = () => {
                     href: "/terminology",
                   },
                   {
-                    image: "/tiles/set2/wills.webp",
+                    image: "/tiles/set2/inherited-property-real.webp",
                     alt: "Inherited property non-probate Washington State",
                     title: "Inherited Property (Non-Probate)",
                     description:
