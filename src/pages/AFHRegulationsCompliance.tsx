@@ -168,7 +168,6 @@ const AFHRegulationsCompliance = () => (
           >
             Understanding DSHS Inspections & Compliance
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
