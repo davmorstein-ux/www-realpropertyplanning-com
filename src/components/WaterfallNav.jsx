@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 const CATEGORIES = [
   {
     label: "Legal Professionals",
-    color: "#721d24",
+    color: "#891a2d",
     items: [
       { name: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
       { name: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
@@ -15,7 +15,7 @@ const CATEGORIES = [
   },
   {
     label: "Real Estate & Professionals",
-    color: "#883f20",
+    color: "#aa5518",
     items: [
       { name: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
       { name: "CPAs & Accountants", href: "/professionals/cpas" },
@@ -27,7 +27,7 @@ const CATEGORIES = [
   },
   {
     label: "Senior Housing",
-    color: "#246044",
+    color: "#21633d",
     items: [
       { name: "Senior Living Advisors", href: "/senior-living-advisors" },
       { name: "Senior Move Managers", href: "/senior-move-managers" },
@@ -37,7 +37,7 @@ const CATEGORIES = [
   },
   {
     label: "Senior Care",
-    color: "#1f6b68",
+    color: "#1d6472",
     items: [
       { name: "Medicare & Benefits Advisors", href: "/medicare-providers" },
       { name: "Aging Life Care Managers", href: "/aging-life-care-managers" },
@@ -46,7 +46,7 @@ const CATEGORIES = [
   },
   {
     label: "Guides & Articles",
-    color: "#25597e",
+    color: "#2947a3",
     items: [
       { name: "All Resources & Guides", href: "/guides-and-resources" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
@@ -60,7 +60,7 @@ const CATEGORIES = [
   },
   {
     label: "Long-Term Care",
-    color: "#5d2f74",
+    color: "#5c3088",
     items: [
       { name: "Long-Term Care Overview", href: "/long-term-care" },
       { name: "Nursing Homes", href: "/long-term-care/nursing-homes" },
@@ -72,7 +72,7 @@ const CATEGORIES = [
   },
   {
     label: "More",
-    color: "#7e254a",
+    color: "#892467",
     items: [
       { name: "AFH Club", href: "/afh-club" },
       { name: "AFH Calculators", href: "/afh-club/calculators" },
@@ -196,26 +196,37 @@ const CSS = `
     justify-content: space-between;
     width: 100%;
     padding: 13px 16px;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 13.5px;
+    font-weight: 800;
     color: #280a0c;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     background: none;
     border: none;
-    border-left: 3px solid transparent;
+    border-left: 4px solid var(--cat-color, transparent);
     text-align: left;
     cursor: pointer;
     font-family: inherit;
-    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+  .wf-rail-btn-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .wf-rail-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--cat-color, #7f2028);
+    flex-shrink: 0;
   }
   .wf-rail-btn:hover { background: rgba(0,0,0,0.05); }
   .wf-rail-btn.wf-active {
-    background: rgba(0,0,0,0.05);
-    border-left-color: var(--cat-color, #7f2028);
+    background: rgba(0,0,0,0.06);
     color: var(--cat-color, #7f2028);
   }
   .wf-rail-chevron {
-    font-size: 12px;
+    font-size: 13px;
     color: currentColor;
     opacity: 0;
     transition: opacity 0.25s ease;
@@ -233,9 +244,9 @@ const CSS = `
   .wf-flyout::-webkit-scrollbar-thumb { background: #d2b2b4; border-radius: 2px; }
 
   .wf-flyout-heading {
-    padding: 8px 20px 10px;
-    font-size: 11px;
-    font-weight: 700;
+    padding: 8px 20px 12px;
+    font-size: 13px;
+    font-weight: 800;
     color: var(--cat-color, #7f2028);
     letter-spacing: 0.13em;
     text-transform: uppercase;
@@ -273,7 +284,7 @@ const CSS = `
     width: 100%;
     padding: 11px;
     background: #280a0c;
-    color: #7f2028;
+    color: #ffffff;
     border: none;
     border-radius: 6px;
     font-size: 13px;
@@ -282,9 +293,9 @@ const CSS = `
     text-transform: uppercase;
     cursor: pointer;
     font-family: inherit;
-    transition: background 0.4s ease, color 0.4s ease;
+    transition: background 0.4s ease;
   }
-  .wf-close-btn:hover { background: #7f2028; color: #280a0c; }
+  .wf-close-btn:hover { background: #7f2028; color: #ffffff; }
 
   @media (max-width: 640px) {
     .wf-panel { width: 100vw; max-width: 100vw; }
@@ -316,7 +327,10 @@ function NavRail({ categories, activeIndex, onSelect }) {
           onMouseEnter={() => onSelect(i)}
           onClick={() => onSelect(i)}
         >
-          <span>{cat.label}</span>
+          <span className="wf-rail-btn-inner">
+            <span className="wf-rail-dot" aria-hidden="true" />
+            <span>{cat.label}</span>
+          </span>
           <span className="wf-rail-chevron" aria-hidden="true">
             &rarr;
           </span>
