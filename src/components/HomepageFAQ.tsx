@@ -8,7 +8,7 @@ interface FAQItem {
 }
 
 interface PageFAQProps {
-  faqs: FAQItem[];
+  faqs?: FAQItem[];
   heading?: string;
   eyebrow?: string;
   id?: string;
