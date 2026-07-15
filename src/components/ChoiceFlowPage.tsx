@@ -35,7 +35,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
       <main id="main-content" className="flex-1">
         <section className="pt-8 pb-10 lg:pt-10 lg:pb-16 bg-cream">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto" style={{ paddingTop: "var(--header-height, 100px)" }}>
               <RoadmapSteps activeStep={activeStep} />
 
               {/* Hero image — root page or any node with explicit heroImage */}
