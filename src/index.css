@@ -1069,6 +1069,13 @@ a:hover .gold-cta::after,
     animation: none !important;
   }
 }
+/* Static variant — for tiles that reuse interior-tile's card layout/styling
+   but are NOT themselves a link (e.g. an info card, or a card whose only
+   link is a small nested "Learn More"). Disables the marching-ants hover
+   entirely, since that affordance implies the whole tile is clickable. */
+.interior-tile--static::before {
+  content: none !important;
+}
 /* Compact wide variant for multi-person provider tiles — only wide enough for side-by-side round headshots */
 .interior-tile.interior-tile--wide {
   max-width: 360px !important;
