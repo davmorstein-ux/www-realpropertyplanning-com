@@ -85,7 +85,9 @@ const AFHLicensingCertification = () => (
       {/* Hero */}
       <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+          <div className="mb-6">
+            <ArticleAudioPlayer audioSrc={audioAsset.url} />
+          </div>
           <p
             style={{
               fontSize: 15,
@@ -111,7 +113,6 @@ const AFHLicensingCertification = () => (
           >
             AFH Licensing & Certification in Washington State
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
