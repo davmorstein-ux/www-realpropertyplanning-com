@@ -6,25 +6,25 @@ const resources = [
     title: "Executor's 10-Step Checklist",
     href: "/resources/washington-executors-10-step-checklist",
     icon: ClipboardCheck,
-    accent: "#8b2e2e",
+    accent: "#721d24",
   },
   {
     title: "How Probate Real Estate Works",
     href: "/guides/how-probate-real-estate-works",
     icon: Scale,
-    accent: "#9e5c61",
+    accent: "#883f20",
   },
   {
     title: "Senior Housing & Care Options",
     href: "/understanding-housing-care-options",
     icon: HeartHandshake,
-    accent: "#bc333e",
+    accent: "#25597e",
   },
   {
     title: "What to Do With an Inherited House",
     href: "/guides/inherited-house-washington",
     icon: KeyRound,
-    accent: "#7a4f8a",
+    accent: "#5d2f74",
   },
 ];
 
