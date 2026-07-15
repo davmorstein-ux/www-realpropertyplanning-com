@@ -105,7 +105,6 @@ const AFHBuyingSelling = () => (
           >
             Buying or Selling an Adult Family Home
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
           <p
             style={{
               fontSize: 18,
