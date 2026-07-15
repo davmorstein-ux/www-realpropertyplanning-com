@@ -30,7 +30,8 @@ const situations = [
     image: "/tiles/journey/property-valuation.webp",
     alt: "Property valuation and appraisal Washington State",
     title: "I Need a Property Valuation",
-    description: "Understanding what a property is worth before making any decisions about selling, keeping, or transferring.",
+    description:
+      "Understanding what a property is worth before making any decisions about selling, keeping, or transferring.",
     cta: "Get a Valuation",
     href: "/why-valuation-matters",
   },
@@ -62,7 +63,8 @@ const situations = [
     image: "/tiles/journey/out-of-state-families.webp",
     alt: "Out-of-state families managing Washington State property remotely",
     title: "Out-of-State Families",
-    description: "Managing a Washington State property remotely — coordinating care, sale, and decisions from a distance.",
+    description:
+      "Managing a Washington State property remotely — coordinating care, sale, and decisions from a distance.",
     cta: "Learn More",
     href: "/out-of-state-families",
   },
@@ -72,7 +74,6 @@ const SituationCards = () => {
   return (
     <section className="pb-14 md:pb-20 bg-cream" style={{ paddingTop: "24px" }}>
       <div className="container px-5 md:px-8">
-
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch">
           {situations.map((s) => (
             <Link
@@ -84,52 +85,36 @@ const SituationCards = () => {
               <div className="tile-white__inner h-full relative">
                 <div className="tile-white__face h-full">
                   <div className="flex h-full flex-col">
-                    <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 312" }}>
+                    <div
+                      className="relative w-full overflow-hidden bg-transparent flex items-center justify-center"
+                      style={{ aspectRatio: "500 / 360" }}
+                    >
                       <img
                         src={s.image}
                         alt={s.alt}
-                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
-                        loading="lazy" sizes="100vw" decoding="async"/>
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        loading="lazy"
+                        sizes="100vw"
+                        decoding="async"
+                      />
                     </div>
-                    <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
-                      <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ minHeight: "6rem" }}>
+                    <div
+                      className="relative flex flex-1 flex-col items-center text-center overflow-hidden"
+                      style={{ padding: "16px" }}
+                    >
+                      <h3
+                        className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center"
+                        style={{ minHeight: "6rem" }}
+                      >
                         {s.title}
                       </h3>
-                      <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                      <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center">
                         {s.description}
                       </p>
-                      <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
+                      <span className="gold-cta mt-auto">
                         {s.cta}
                         <ArrowRight aria-hidden="true" />
                       </span>
-                      <div
-                        aria-hidden="true"
-                        className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100"
-                        style={{
-                          background: "rgba(10, 20, 46, 0.97)",
-                          zIndex: 10,
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          textAlign: "center",
-                          padding: "1.25rem 1.5rem",
-                          transition: "opacity 0.28s ease 0.1s",
-                        }}
-                      >
-                        <h3 className="font-serif text-white text-[24px] md:text-[26px] font-bold leading-snug mb-3">
-                          {s.title}
-                        </h3>
-                        <span
-                          className="inline-flex items-center gap-2 text-[16px] font-bold tracking-wide"
-                          style={{ color: "#c3525c", fontFamily: "'DM Sans', sans-serif" }}
-                        >
-                          {s.cta}
-                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                            <polyline points="9 18 15 12 9 6" />
-                          </svg>
-                        </span>
-                      </div>
                     </div>
                   </div>
                 </div>
