@@ -165,32 +165,15 @@ const Section = ({
             style={{ textDecoration: "none" }}
           >
             <div
+              className="marquee-hover"
               style={{
                 background: "#fff",
-
                 borderRadius: 16,
-
                 border: "1px solid rgba(0,0,0,0.08)",
-
                 overflow: "hidden",
-
                 height: "100%",
-
                 display: "flex",
-
                 flexDirection: "column",
-
-                transition: "box-shadow 0.2s ease, transform 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)";
-
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
               }}
             >
               {/* Photo */}
@@ -358,20 +341,12 @@ const BuildingYourTrustedProfessionalTeam = () => {
                   {legal.map((s) => (
                     <a key={s.title} href={s.href} style={{ textDecoration: "none", display: "block" }}>
                       <div
+                        className="marquee-hover"
                         style={{
                           background: "#fff",
                           borderRadius: 16,
                           border: "1px solid rgba(0,0,0,0.08)",
                           overflow: "hidden",
-                          transition: "box-shadow 0.2s ease, transform 0.2s ease",
-                        }}
-                        onMouseEnter={(e) => {
-                          (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)";
-                          (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
-                        }}
-                        onMouseLeave={(e) => {
-                          (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-                          (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
                         }}
                       >
                         <div style={{ width: "100%", height: 180, overflow: "hidden" }}>
