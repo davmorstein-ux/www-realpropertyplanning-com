@@ -99,16 +99,21 @@ const SeniorLivingAndRelocation = () => {
                   src={iconSeniorLiving}
                   alt="Senior Living & Relocation"
                   className="block w-full max-w-[15rem] h-auto object-contain"
-                 loading="lazy" sizes="100vw" decoding="async" width={512} height={349} />
+                  loading="lazy"
+                  sizes="100vw"
+                  decoding="async"
+                  width={512}
+                  height={349}
+                />
               </div>
-              <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Senior Living
-              </p>
+              <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Senior Living</p>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
                 Senior Living & Relocation
               </h1>
               <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                When a senior is moving out of their home, families face important decisions about where to go next — and what to do with the property they're leaving behind. I help families navigate both sides of that transition with clarity and care.
+                When a senior is moving out of their home, families face important decisions about where to go next —
+                and what to do with the property they're leaving behind. I help families navigate both sides of that
+                transition with clarity and care.
               </p>
             </div>
           </div>
@@ -121,7 +126,8 @@ const SeniorLivingAndRelocation = () => {
                 Understanding Senior Living Options
               </h2>
               <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10 leading-relaxed">
-                Every family's situation is different. Understanding the range of options available is an important first step in planning a thoughtful transition.
+                Every family's situation is different. Understanding the range of options available is an important
+                first step in planning a thoughtful transition.
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 justify-items-center">
@@ -148,22 +154,70 @@ const SeniorLivingAndRelocation = () => {
                           {/* Image area — fixed height */}
                           <div className="h-28 w-full flex items-center justify-center shrink-0 pt-2">
                             {option.title === "Adult Family Homes" ? (
-                              <img src={iconAfh3d} alt="Adult Family Homes" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async" width={512} height={429} />
+                              <img
+                                src={iconAfh3d}
+                                alt="Adult Family Homes"
+                                className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+                                loading="lazy"
+                                sizes="100vw"
+                                decoding="async"
+                                width={512}
+                                height={429}
+                              />
                             ) : option.title === "Assisted Living Communities" ? (
-                              <img src={iconAssistedLiving3d} alt="Assisted Living Communities" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
+                              <img
+                                src={iconAssistedLiving3d}
+                                alt="Assisted Living Communities"
+                                className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+                                loading="lazy"
+                                sizes="100vw"
+                                decoding="async"
+                                width={512}
+                                height={512}
+                              />
                             ) : option.title === "Memory Care" ? (
-                              <img src={iconMemoryCare3d} alt="Memory Care" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async" width={512} height={437} />
+                              <img
+                                src={iconMemoryCare3d}
+                                alt="Memory Care"
+                                className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+                                loading="lazy"
+                                sizes="100vw"
+                                decoding="async"
+                                width={512}
+                                height={437}
+                              />
                             ) : option.title === "Nursing & Skilled Care" ? (
-                              <img src={iconNursingCare3d} alt="Nursing & Skilled Care" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async" width={512} height={429} />
+                              <img
+                                src={iconNursingCare3d}
+                                alt="Nursing & Skilled Care"
+                                className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+                                loading="lazy"
+                                sizes="100vw"
+                                decoding="async"
+                                width={512}
+                                height={429}
+                              />
                             ) : option.title === "Independent Living" ? (
-                              <img src={iconIndependentLiving3d} alt="Independent Living" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
+                              <img
+                                src={iconIndependentLiving3d}
+                                alt="Independent Living"
+                                className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+                                loading="lazy"
+                                sizes="100vw"
+                                decoding="async"
+                                width={512}
+                                height={512}
+                              />
                             ) : (
                               <div className="w-14 h-14 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)]" />
                             )}
                           </div>
                           {/* Label area — fills remaining space */}
                           <div className="flex-1 w-full flex items-center justify-center text-center p-2">
-                            <h3 className="m-0 font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center" style={{ lineHeight: "1.2" }}>
+                            <h3
+                              className="m-0 font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
+                              style={{ lineHeight: "1.2" }}
+                            >
                               {forcedLabelLines ? (
                                 <>
                                   <span className="block">{forcedLabelLines[0]}</span>
@@ -191,25 +245,27 @@ const SeniorLivingAndRelocation = () => {
                 How Real Estate Connects to Relocation
               </h2>
               <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10 leading-relaxed">
-                The decision to move often raises questions about the family home. When should it be sold? How should it be prepared? How does the timing align with the move? I help families answer these questions.
+                The decision to move often raises questions about the family home. When should it be sold? How should it
+                be prepared? How does the timing align with the move? I help families answer these questions.
               </p>
 
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {supportItems.map((item) => (
                   <div
                     key={item.title}
-                    className="interior-tile tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
+                    className="interior-tile interior-tile--static tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
                   >
                     <div className="tile-white__inner h-full">
                       <div className="tile-white__face h-full">
                         <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
                           <div>
-                            <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
+                            <h3
+                              className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground sm:text-[1.38rem]"
+                              style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}
+                            >
                               {item.title}
                             </h3>
-                            <p className="text-sm leading-relaxed text-muted-foreground">
-                              {item.description}
-                            </p>
+                            <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
                           </div>
                         </div>
                       </div>
@@ -228,10 +284,13 @@ const SeniorLivingAndRelocation = () => {
                 A Guide, Not a Placement Agency
               </h2>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-                My role is not to recommend specific communities or make placement decisions. Instead, I help families understand how real estate timing and strategy connect to the larger transition — and I work alongside the professionals who specialize in senior placement and care coordination.
+                My role is not to recommend specific communities or make placement decisions. Instead, I help families
+                understand how real estate timing and strategy connect to the larger transition — and I work alongside
+                the professionals who specialize in senior placement and care coordination.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                Together, this resource can help ensure that housing decisions — both the home being left and the home being chosen — are handled thoughtfully and with the family's best interests in mind.
+                Together, this resource can help ensure that housing decisions — both the home being left and the home
+                being chosen — are handled thoughtfully and with the family's best interests in mind.
               </p>
             </div>
           </div>
