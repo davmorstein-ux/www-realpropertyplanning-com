@@ -27,6 +27,8 @@ const PageFAQ = ({
 }: PageFAQProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  if (!faqs || faqs.length === 0) return null;
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
