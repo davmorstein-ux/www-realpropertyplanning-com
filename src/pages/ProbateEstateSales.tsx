@@ -168,12 +168,12 @@ const ProbateEstateSales = () => {
                         <div className="flex h-full flex-col">
                           <div
                             className="relative w-full overflow-hidden bg-transparent flex items-center justify-center"
-                            style={{ aspectRatio: "500 / 360" }}
+                            style={{ aspectRatio: "500 / 420" }}
                           >
                             <img
                               src={s.image}
                               alt={s.alt}
-                              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                               loading="lazy"
                               sizes="100vw"
                               decoding="async"
@@ -181,18 +181,18 @@ const ProbateEstateSales = () => {
                           </div>
                           <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden p-5 md:p-6">
                             <h3
-                              className="font-serif text-[19px] md:text-[22px] font-semibold text-navy mb-2 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0"
+                              className="font-serif text-[19px] md:text-[22px] font-semibold text-navy mb-2 flex items-start justify-center"
                               style={{ lineHeight: 1.3 }}
                             >
                               {s.title}
                             </h3>
                             <p
-                              className="text-foreground text-[15px] md:text-[16px] mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0"
+                              className="text-foreground text-[15px] md:text-[16px] mb-3 flex items-start justify-center"
                               style={{ lineHeight: 1.5 }}
                             >
                               {s.description}
                             </p>
-                            <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
+                            <span className="gold-cta mt-auto">
                               {s.cta}
                               <svg
                                 viewBox="0 0 24 24"
@@ -208,44 +208,6 @@ const ProbateEstateSales = () => {
                                 <polyline points="9 18 15 12 9 6" />
                               </svg>
                             </span>
-                            <div
-                              aria-hidden="true"
-                              className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100"
-                              style={{
-                                background: "rgba(10, 20, 46, 0.97)",
-                                zIndex: 10,
-                                display: "flex",
-                                flexDirection: "column",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                textAlign: "center",
-                                padding: "1.5rem",
-                                transition: "opacity 0.28s ease 0.1s",
-                              }}
-                            >
-                              <h3 className="font-serif text-white text-[22px] md:text-[24px] font-bold leading-snug mb-3">
-                                {s.title}
-                              </h3>
-                              <span
-                                className="inline-flex items-center gap-2 text-[15px] font-bold tracking-wide"
-                                style={{ color: "#c3525c", fontFamily: "'DM Sans', sans-serif" }}
-                              >
-                                {s.cta}
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  width="14"
-                                  height="14"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="2.4"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  aria-hidden="true"
-                                >
-                                  <polyline points="9 18 15 12 9 6" />
-                                </svg>
-                              </span>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -295,15 +257,15 @@ const ProbateEstateSales = () => {
                             style={{ padding: "16px 16px 12px 16px", paddingTop: "20px" }}
                           >
                             <h3
-                              className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0"
+                              className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug flex items-start justify-center"
                               style={{ display: "flex", alignItems: "flex-start", marginBottom: "8px" }}
                             >
                               {s.title}
                             </h3>
-                            <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                            <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center">
                               {s.description}
                             </p>
-                            <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
+                            <span className="gold-cta mt-auto">
                               {s.cta}
                               <svg
                                 viewBox="0 0 24 24"
@@ -319,44 +281,6 @@ const ProbateEstateSales = () => {
                                 <polyline points="9 18 15 12 9 6" />
                               </svg>
                             </span>
-                            <div
-                              aria-hidden="true"
-                              className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                              style={{
-                                background: "rgba(10, 20, 46, 0.97)",
-                                zIndex: 10,
-                                display: "flex",
-                                flexDirection: "column",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                textAlign: "center",
-                                padding: "1.25rem 1.5rem",
-                                transition: "opacity 0.28s ease 0.1s",
-                              }}
-                            >
-                              <h3 className="font-serif text-white text-[24px] md:text-[26px] font-bold leading-snug mb-3">
-                                {s.title}
-                              </h3>
-                              <span
-                                className="inline-flex items-center gap-2 text-[16px] font-bold tracking-wide"
-                                style={{ color: "#c3525c", fontFamily: "'DM Sans', sans-serif" }}
-                              >
-                                {s.cta}
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  width="14"
-                                  height="14"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="2.4"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  aria-hidden="true"
-                                >
-                                  <polyline points="9 18 15 12 9 6" />
-                                </svg>
-                              </span>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -407,6 +331,11 @@ const ProbateEstateSales = () => {
                     len = 14;
                   const hx = cx + Math.cos(rad) * len;
                   const hy = cy + Math.sin(rad) * len;
+                  const rimColors = [
+                    { light: "#dd888f", mid: "#c24752", dark: "#86272f" }, // burgundy
+                    { light: "#88ddb2", mid: "#47c285", dark: "#278657" }, // forest green
+                    { light: "#88b2dd", mid: "#4785c2", dark: "#275786" }, // steel blue
+                  ][hour - 1];
                   return (
                     <div key={hour} className="flex gap-5 items-center">
                       <svg
@@ -424,9 +353,9 @@ const ProbateEstateSales = () => {
                             <stop offset="100%" stopColor="#edced0" />
                           </radialGradient>
                           <linearGradient id={`clockRim${hour}`} x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stopColor="#db7179" />
-                            <stop offset="50%" stopColor="#c3525c" />
-                            <stop offset="100%" stopColor="#87353b" />
+                            <stop offset="0%" stopColor={rimColors.light} />
+                            <stop offset="50%" stopColor={rimColors.mid} />
+                            <stop offset="100%" stopColor={rimColors.dark} />
                           </linearGradient>
                         </defs>
                         {/* Outer rim */}
@@ -466,7 +395,7 @@ const ProbateEstateSales = () => {
                           y1="32"
                           x2="32"
                           y2="14"
-                          stroke="#c3525c"
+                          stroke={rimColors.mid}
                           strokeWidth="2.5"
                           strokeLinecap="round"
                         />
