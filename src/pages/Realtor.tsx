@@ -218,7 +218,6 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
             >
               What Clients Are Saying
             </h2>
-            <div style={{ width: 48, height: 3, background: "#7f2028", margin: "0 auto 20px", borderRadius: 1 }} />
             {/* Overall rating */}
             <div
               style={{

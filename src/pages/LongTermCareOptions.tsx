@@ -157,7 +157,6 @@ const LongTermCareOptions = () => {
           >
             All Articles
           </h2>
-          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 40, borderRadius: 1 }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {cards.map((topic, i) => (
               <Link

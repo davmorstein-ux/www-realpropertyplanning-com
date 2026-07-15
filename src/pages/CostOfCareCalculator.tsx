@@ -192,7 +192,6 @@ const CostOfCareCalculator = () => {
             >
               Cost of Care Calculator
             </h1>
-            <div style={{ width: 48, height: 3, background: "#6f2a30", marginBottom: 24, borderRadius: 1 }} />
             <p
               style={{
                 fontSize: 18,

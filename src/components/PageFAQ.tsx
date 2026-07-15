@@ -16,7 +16,7 @@ interface PageFAQProps {
 }
 
 const NAVY = "#272421";
-const ACCENTS = ["#7f1d1d", "#9e5c61", "#bc333e", "#7a4f8a"];
+const ACCENTS = ["#7f1d1d", "#883f20", "#25597e", "#5d2f74"];
 
 const PageFAQ = ({
   faqs,

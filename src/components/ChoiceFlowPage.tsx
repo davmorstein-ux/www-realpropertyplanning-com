@@ -29,10 +29,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SEOHead
-        title={`${node.label} | Real Property Planning`}
-        description={node.subtext || node.label}
-      />
+      <SEOHead title={`${node.label} | Real Property Planning`} description={node.subtext || node.label} />
       <BreadcrumbSchema items={trail.slice(1).map((t) => ({ name: t.label, url: t.path }))} />
       <Header />
 
@@ -43,15 +40,28 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
               {/* Hero image — root page or any node with explicit heroImage */}
               {(isRoot || node.heroImage || node.heroBandTitle) && (
                 <>
-                  <div style={{ width: '100vw', position: 'relative', left: '50%', transform: 'translateX(-50%)', lineHeight: 0 }}>
+                  <div
+                    style={{
+                      width: "100vw",
+                      position: "relative",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      lineHeight: 0,
+                    }}
+                  >
                     <img
                       src={node.heroImage || agingParentHero}
                       alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
                       className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-                      loading="eager" sizes="100vw" decoding="async"/>
-                    <HeroBandTitle>{node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}</HeroBandTitle>
+                      loading="eager"
+                      sizes="100vw"
+                      decoding="async"
+                    />
+                    <HeroBandTitle>
+                      {node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}
+                    </HeroBandTitle>
                   </div>
-                  <div style={{ marginBottom: '40px' }} />
+                  <div style={{ marginBottom: "40px" }} />
                 </>
               )}
 
@@ -66,9 +76,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                   <h1 className="sr-only">{node.heroBandTitle || node.label}</h1>
                 )}
                 {node.subtext && (
-                  <p className="text-navy/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                    {node.subtext}
-                  </p>
+                  <p className="text-navy/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">{node.subtext}</p>
                 )}
               </header>
 
@@ -161,15 +169,19 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
                           aria-hidden="true"
                           loading="lazy"
                           style={{ width: 56, height: 56 }}
-                          className="shrink-0 object-contain" sizes="100vw" decoding="async"/>
+                          className="shrink-0 object-contain"
+                          sizes="100vw"
+                          decoding="async"
+                        />
                       ) : (
-                        <span style={{ width: 56, height: 56 }} className="shrink-0 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 text-gold flex items-center justify-center">
+                        <span
+                          style={{ width: 56, height: 56 }}
+                          className="shrink-0 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 text-gold flex items-center justify-center"
+                        >
                           <Icon className="w-7 h-7" aria-hidden="true" />
                         </span>
                       )}
-                      <h3
-                        className="font-serif text-[19px] sm:text-xl font-bold text-navy leading-snug flex-1 no-underline group-hover:text-accent transition-colors"
-                      >
+                      <h3 className="font-serif text-[19px] sm:text-xl font-bold text-navy leading-snug flex-1 no-underline group-hover:text-accent transition-colors">
                         {choice.label}
                       </h3>
                     </div>
@@ -181,16 +193,16 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
                           </li>
                         ))}
                         {choice.children.length > 4 && (
-                          <li className="text-base text-navy/60">
-                            +{choice.children.length - 4} more
-                          </li>
+                          <li className="text-base text-navy/60">+{choice.children.length - 4} more</li>
                         )}
                       </ul>
                     ) : null}
 
                     <div className="mt-5 flex items-center gap-1.5 text-base font-semibold text-gold group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                       <span>Learn more</span>
-                      <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+                      <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
+                        →
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -205,9 +217,7 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
 
 const ComingSoon = () => (
   <div className="bg-white border-2 border-gold/25 rounded-2xl p-8 md:p-10 text-center shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]">
-    <p className="text-navy text-lg md:text-xl leading-relaxed mb-2 font-semibold">
-      Content coming soon.
-    </p>
+    <p className="text-navy text-lg md:text-xl leading-relaxed mb-2 font-semibold">Content coming soon.</p>
     <p className="text-navy/70 text-base md:text-lg leading-relaxed">
       We're putting together clear, helpful guidance for this step. Check back shortly.
     </p>
@@ -225,7 +235,10 @@ const ContentBlock = ({ content }: { content: NonNullable<FlowNode["content"]> }
     ))}
     <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-8">
       <p className="text-navy/80 text-base leading-relaxed">{content.closing}</p>
-      <a href="/contact" className="inline-block mt-4 px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:bg-navy/90 transition-colors">
+      <a
+        href="/contact"
+        className="inline-block mt-4 px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:bg-navy/90 transition-colors"
+      >
         Connect With a Professional
       </a>
     </div>

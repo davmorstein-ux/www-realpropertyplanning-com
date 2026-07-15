@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import RoadmapDropdown from "@/components/RoadmapDropdown";
+
 import heroImage from "@/assets/estate-probate-inherited-property-hero-washington.webp";
 import { articleSchema } from "@/lib/schema";
 
@@ -91,6 +93,8 @@ const EstateProbateInheritedProperty = () => {
               </p>
             </div>
 
+            <RoadmapDropdown topics={tiles} accentColor="#721d24" />
+
             <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-stretch">
               {tiles.map((t) => (
                 <Link
@@ -114,7 +118,9 @@ const EstateProbateInheritedProperty = () => {
             </div>
             <style>{`
               .estate-tile-outline .tile-white__face {
-                border: 2px solid #9e5c61 !important;
+                border: 2px solid #721d24 !important;
+                padding: 22px 22px 20px !important;
+                box-sizing: border-box !important;
               }
             `}</style>
           </div>
