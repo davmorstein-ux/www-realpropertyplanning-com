@@ -9,6 +9,7 @@ import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 import wtdwHeroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import RoadmapDropdown from "@/components/RoadmapDropdown";
 import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 
 type Card = {
@@ -330,6 +331,19 @@ const BuildingYourTrustedProfessionalTeam = () => {
 
         <h1 className="sr-only">A Guide to Trusted, Independent Professionals</h1>
 
+        <div className="container px-6 lg:px-8 pt-8">
+          <RoadmapDropdown
+            topics={[
+              { title: "Legal Professionals", href: "#legal-professionals" },
+              { title: "Financial & Valuation Professionals", href: "#financial-professionals" },
+              { title: "Senior Housing & Care", href: "#senior-housing-care" },
+              { title: "Property & Transition Support", href: "#property-transition-support" },
+            ]}
+            itemLabel="categories of professionals"
+            accentColor="#721d24"
+          />
+        </div>
+
         <div id="legal-professionals" className="scroll-mt-20 bg-background">
           <section className="py-10 lg:py-12 bg-background">
             <div className="container px-6 lg:px-8">
@@ -431,13 +445,13 @@ const BuildingYourTrustedProfessionalTeam = () => {
             </div>
           </section>
         </div>
-        <div>
+        <div id="financial-professionals" className="scroll-mt-20">
           <Section heading="Financial & Valuation Professionals" cards={financial} bg="bg-secondary" color="#246044" />
         </div>
-        <div>
+        <div id="senior-housing-care" className="scroll-mt-20">
           <Section heading="Senior Housing & Care" cards={housing} bg="bg-background" color="#25597e" />
         </div>
-        <div>
+        <div id="property-transition-support" className="scroll-mt-20">
           <Section heading="Property & Transition Support" cards={property} bg="bg-secondary" color="#5d2f74" />
         </div>
 
