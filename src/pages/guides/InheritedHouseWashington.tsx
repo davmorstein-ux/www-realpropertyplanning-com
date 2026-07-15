@@ -129,8 +129,13 @@ const InheritedHouseWashington = () => (
           </div>
         </div>
         <style>{`
+          .interior-tile.inherited-tile-outline::before {
+            content: none !important;
+          }
           .inherited-tile-outline .tile-white__face {
-            border: 2px solid #9e5c61 !important;
+            border: 2px solid #721d24 !important;
+            padding: 22px 22px 20px !important;
+            box-sizing: border-box !important;
           }
           .inherited-tile-wide {
             max-width: none !important;
