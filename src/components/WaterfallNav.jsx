@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 const CATEGORIES = [
   {
     label: "Legal Professionals",
+    color: "#721d24",
     items: [
       { name: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
       { name: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
@@ -14,6 +15,7 @@ const CATEGORIES = [
   },
   {
     label: "Real Estate & Professionals",
+    color: "#883f20",
     items: [
       { name: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
       { name: "CPAs & Accountants", href: "/professionals/cpas" },
@@ -25,6 +27,7 @@ const CATEGORIES = [
   },
   {
     label: "Senior Housing",
+    color: "#246044",
     items: [
       { name: "Senior Living Advisors", href: "/senior-living-advisors" },
       { name: "Senior Move Managers", href: "/senior-move-managers" },
@@ -34,6 +37,7 @@ const CATEGORIES = [
   },
   {
     label: "Senior Care",
+    color: "#1f6b68",
     items: [
       { name: "Medicare & Benefits Advisors", href: "/medicare-providers" },
       { name: "Aging Life Care Managers", href: "/aging-life-care-managers" },
@@ -42,6 +46,7 @@ const CATEGORIES = [
   },
   {
     label: "Guides & Articles",
+    color: "#25597e",
     items: [
       { name: "All Resources & Guides", href: "/guides-and-resources" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
@@ -55,6 +60,7 @@ const CATEGORIES = [
   },
   {
     label: "Long-Term Care",
+    color: "#5d2f74",
     items: [
       { name: "Long-Term Care Overview", href: "/long-term-care" },
       { name: "Nursing Homes", href: "/long-term-care/nursing-homes" },
@@ -66,6 +72,7 @@ const CATEGORIES = [
   },
   {
     label: "More",
+    color: "#7e254a",
     items: [
       { name: "AFH Club", href: "/afh-club" },
       { name: "AFH Calculators", href: "/afh-club/calculators" },
@@ -201,15 +208,15 @@ const CSS = `
     font-family: inherit;
     transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
   }
-  .wf-rail-btn:hover { background: rgba(139,105,20,0.08); }
+  .wf-rail-btn:hover { background: rgba(0,0,0,0.05); }
   .wf-rail-btn.wf-active {
-    background: rgba(127,32,40,0.08);
-    border-left-color: #7f2028;
-    color: #7f2028;
+    background: rgba(0,0,0,0.05);
+    border-left-color: var(--cat-color, #7f2028);
+    color: var(--cat-color, #7f2028);
   }
   .wf-rail-chevron {
     font-size: 12px;
-    color: #7f2028;
+    color: currentColor;
     opacity: 0;
     transition: opacity 0.25s ease;
     flex-shrink: 0;
@@ -229,7 +236,7 @@ const CSS = `
     padding: 8px 20px 10px;
     font-size: 11px;
     font-weight: 700;
-    color: #7f2028;
+    color: var(--cat-color, #7f2028);
     letter-spacing: 0.13em;
     text-transform: uppercase;
   }
@@ -252,8 +259,8 @@ const CSS = `
   }
   .wf-item:hover {
     color: #280a0c;
-    border-left-color: #7f2028;
-    background: rgba(139,105,20,0.08);
+    border-left-color: var(--cat-color, #7f2028);
+    background: rgba(0,0,0,0.05);
   }
 
   .wf-close-footer {
@@ -304,6 +311,7 @@ function NavRail({ categories, activeIndex, onSelect }) {
         <button
           key={cat.label}
           className={`wf-rail-btn${activeIndex === i ? " wf-active" : ""}`}
+          style={{ "--cat-color": cat.color }}
           aria-current={activeIndex === i}
           onMouseEnter={() => onSelect(i)}
           onClick={() => onSelect(i)}
@@ -321,7 +329,7 @@ function NavRail({ categories, activeIndex, onSelect }) {
 function NavFlyout({ category, onNavigate }) {
   if (!category) return <div className="wf-flyout" />;
   return (
-    <div className="wf-flyout">
+    <div className="wf-flyout" style={{ "--cat-color": category.color }}>
       <div className="wf-flyout-heading">{category.label}</div>
       {category.items.map((item) => (
         <button key={item.href} className="wf-item" onClick={() => onNavigate(item.href)}>
