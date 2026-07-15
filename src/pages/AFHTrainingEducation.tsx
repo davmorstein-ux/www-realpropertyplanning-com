@@ -107,8 +107,9 @@ const AFHTrainingEducation = () => (
           >
             AFH Training & Education Requirements
           </h1>
-          <div style={{ width: 48, height: 3, background: "#b13a44", marginBottom: 28, borderRadius: 1 }} />
-          <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+          <div className="mb-6">
+            <ArticleAudioPlayer audioSrc={audioAsset.url} />
+          </div>
           <p
             style={{
               fontSize: 18,
