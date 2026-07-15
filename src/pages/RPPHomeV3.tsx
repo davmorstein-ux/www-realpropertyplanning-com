@@ -29,7 +29,7 @@ const tiles = [
     imgAlt: "Family reviewing an estate property plan with documents",
     title: "I'm Handling an Estate",
     href: "/estate-probate-inherited-property",
-    bgColor: "#772245",
+    bgColor: "#25597e",
   },
   {
     imgSrc: tileProfessionals,
