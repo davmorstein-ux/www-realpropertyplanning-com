@@ -26,13 +26,14 @@ const PageFAQ = ({
   plain = false,
 }: PageFAQProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const safeFaqs = Array.isArray(faqs) ? faqs : [];
 
-  if (!faqs || faqs.length === 0) return null;
+  if (safeFaqs.length === 0) return null;
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
+    mainEntity: safeFaqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
@@ -76,7 +77,7 @@ const PageFAQ = ({
         </h2>
 
         <div style={{ display: "flex", flexDirection: "column", gap: plain ? "0.5rem" : "1.1rem" }}>
-          {faqs.map((faq, i) => {
+          {safeFaqs.map((faq, i) => {
             const isOpen = openIndex === i;
             const accent = ACCENTS[i % ACCENTS.length];
 
