@@ -36,8 +36,6 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
         <section className="pt-8 pb-10 lg:pt-10 lg:pb-16 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto" style={{ paddingTop: "var(--header-height, 100px)" }}>
-              <RoadmapSteps activeStep={activeStep} />
-
               {/* Hero image — root page or any node with explicit heroImage */}
               {(isRoot || node.heroImage || node.heroBandTitle) && (
                 <>
@@ -83,9 +81,21 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 
               {/* Choice cards or placeholder */}
               {hasChildren ? (
-                <ChoiceGrid choices={node.children!} />
+                <>
+                  <RoadmapSteps activeStep={activeStep} />
+                  <p className="text-center text-navy/70 text-base mb-8">
+                    Pick the option below that best matches your situation to get started.
+                  </p>
+                  <ChoiceGrid choices={node.children!} />
+                </>
               ) : node.content ? (
-                <ContentBlock content={node.content} />
+                <>
+                  <RoadmapSteps activeStep={activeStep} />
+                  <p className="text-center text-navy/70 text-base mb-8">
+                    You've made it — here's the guidance for your situation.
+                  </p>
+                  <ContentBlock content={node.content} />
+                </>
               ) : (
                 <ComingSoon />
               )}
@@ -103,7 +113,7 @@ const ROADMAP_LABELS = ["Where you are", "What you need", "Your guidance"];
 
 const RoadmapSteps = ({ activeStep }: { activeStep: number }) => (
   <ol
-    className="flex items-start justify-center gap-0 mb-10 max-w-xl mx-auto"
+    className="flex items-start justify-center gap-0 mb-5 max-w-xl mx-auto"
     aria-label="Your progress through this guide"
   >
     {ROADMAP_LABELS.map((label, i) => {
