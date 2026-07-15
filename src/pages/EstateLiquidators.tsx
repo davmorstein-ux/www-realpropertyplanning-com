@@ -30,7 +30,7 @@ const EstateLiquidators = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             {/* Ginny's Girls tile */}
-            <div className="interior-tile interior-tile--wide tile-white block h-full">
+            <div className="interior-tile interior-tile--wide interior-tile--static tile-white block h-full">
               <div className="tile-white__inner h-full">
                 <div className="tile-white__face h-full">
                   <div className="flex h-full flex-col items-center text-center p-6">
@@ -38,7 +38,12 @@ const EstateLiquidators = () => (
                       src={ginnysGirlsLogo}
                       alt="Ginny's Girls Estate Services logo"
                       className="h-20 md:h-24 w-auto object-contain mb-4"
-                      loading="lazy" sizes="100vw" decoding="async" width={609} height={222} />
+                      loading="lazy"
+                      sizes="100vw"
+                      decoding="async"
+                      width={609}
+                      height={222}
+                    />
                     <h2 className="font-serif text-xl md:text-2xl text-navy font-semibold leading-snug mb-3">
                       Ginny's Girls Estate Services
                     </h2>
