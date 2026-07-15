@@ -12,7 +12,7 @@ const resources = [
     title: "How Probate Real Estate Works",
     href: "/guides/how-probate-real-estate-works",
     icon: Scale,
-    accent: "#883f20",
+    accent: "#246044",
   },
   {
     title: "Senior Housing & Care Options",
