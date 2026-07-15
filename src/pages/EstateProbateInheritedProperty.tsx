@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
+
 import heroImage from "@/assets/estate-probate-inherited-property-hero-washington.webp";
 import { articleSchema } from "@/lib/schema";
 
