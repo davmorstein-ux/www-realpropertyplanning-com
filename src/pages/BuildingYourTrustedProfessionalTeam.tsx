@@ -139,10 +139,6 @@ const property: Card[] = [
   },
 ];
 
-<<<<<<< HEAD
-const Section = ({ heading, cards, bg = "bg-background", color = "#c3525c" }: { heading: string; cards: Card[]; bg?: string; color?: string }) => (
-
-=======
 const Section = ({
   heading,
   cards,
@@ -154,7 +150,6 @@ const Section = ({
   bg?: string;
   color?: string;
 }) => (
->>>>>>> 246965edf7d3bcb8333b180ac22bf198c705c1b9
   <section className={`py-10 lg:py-12 ${bg}`}>
     <div className="container px-6 lg:px-8">
       <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: "#6b1b22" }}>
@@ -228,10 +223,6 @@ const Section = ({
               <div style={{ padding: "12px 20px 16px" }}>
                 <div
                   style={{
-<<<<<<< HEAD
-
-=======
->>>>>>> 246965edf7d3bcb8333b180ac22bf198c705c1b9
                     background: color,
 
                     borderRadius: 8,
@@ -336,11 +327,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
           />
         </div>
 
-<<<<<<< HEAD
-<div id="legal-professionals" className="scroll-mt-20 bg-background">
-=======
         <div id="legal-professionals" className="scroll-mt-20 bg-background">
->>>>>>> 246965edf7d3bcb8333b180ac22bf198c705c1b9
           <section className="py-10 lg:py-12 bg-background">
             <div className="container px-6 lg:px-8">
               <h2
@@ -355,16 +342,12 @@ const BuildingYourTrustedProfessionalTeam = () => {
                     <a key={s.title} href={s.href} style={{ textDecoration: "none", display: "block" }}>
                       <div
                         className="marquee-hover"
-<<<<<<< HEAD
-                        style={{ background: "#fff", borderRadius: 16, border: "1px solid rgba(0,0,0,0.08)", overflow: "hidden" }}
-=======
                         style={{
                           background: "#fff",
                           borderRadius: 16,
                           border: "1px solid rgba(0,0,0,0.08)",
                           overflow: "hidden",
                         }}
->>>>>>> 246965edf7d3bcb8333b180ac22bf198c705c1b9
                       >
                         <div style={{ width: "100%", height: 180, overflow: "hidden" }}>
                           <img
@@ -398,9 +381,6 @@ const BuildingYourTrustedProfessionalTeam = () => {
                           <p style={{ fontSize: 14, color: "#806b6d", lineHeight: 1.6 }}>{s.description}</p>
                         </div>
                         <div style={{ padding: "12px 20px 16px" }}>
-<<<<<<< HEAD
-                          <div style={{ background: "#721d24", borderRadius: 8, padding: "10px 16px", display: "flex", alignItems: "center", justifyContent: "center", gap: 6, fontFamily: "'Raleway', sans-serif", fontSize: 13, fontWeight: 700, color: "#fff", letterSpacing: "0.04em" }}>
-=======
                           <div
                             style={{
                               background: "#721d24",
@@ -417,7 +397,6 @@ const BuildingYourTrustedProfessionalTeam = () => {
                               letterSpacing: "0.04em",
                             }}
                           >
->>>>>>> 246965edf7d3bcb8333b180ac22bf198c705c1b9
                             {s.cta}
                             <svg
                               viewBox="0 0 24 24"
