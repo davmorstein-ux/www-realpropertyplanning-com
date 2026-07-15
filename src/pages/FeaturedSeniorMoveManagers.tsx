@@ -86,7 +86,7 @@ const FeaturedSeniorMoveManagers = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             {movers.map((m) => (
-              <div key={m.name} className="interior-tile tile-white block h-full">
+              <div key={m.name} className="interior-tile interior-tile--static tile-white block h-full">
                 <div className="tile-white__inner h-full">
                   <div className="tile-white__face h-full">
                     <div className="flex h-full flex-col items-center text-center p-6">
@@ -110,7 +110,10 @@ const FeaturedSeniorMoveManagers = () => (
                           src={m.photo}
                           alt={m.alt}
                           className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
-                          loading="lazy" sizes="100vw" decoding="async"/>
+                          loading="lazy"
+                          sizes="100vw"
+                          decoding="async"
+                        />
                       )}
 
                       <h2 className="font-serif text-xl text-navy font-semibold leading-snug mb-1 mt-3">{m.name}</h2>
