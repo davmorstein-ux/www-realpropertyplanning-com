@@ -3545,7 +3545,7 @@ main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-la
     padding-left: 1.25rem !important;
   }
 }
-//* FIX v2: don't rely on JS-measured --header-height (unreliable with
+/* FIX v2: don't rely on JS-measured --header-height (unreliable with
    this site's prerendering). Use fixed values matching the header's
    actual rendered height at each breakpoint instead. */
 #main-content {
