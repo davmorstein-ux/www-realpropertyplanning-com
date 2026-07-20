@@ -152,7 +152,7 @@ const Section = ({
 }) => (
   <section className={`py-10 lg:py-12 ${bg}`}>
     <div className="container px-6 lg:px-8">
-      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: "#6b1b22" }}>
+      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color }}>
         {heading}
       </h2>
 
@@ -332,7 +332,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
             <div className="container px-6 lg:px-8">
               <h2
                 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center"
-                style={{ color: "#6b1b22" }}
+                style={{ color: "#721d24" }}
               >
                 Legal Professionals
               </h2>
