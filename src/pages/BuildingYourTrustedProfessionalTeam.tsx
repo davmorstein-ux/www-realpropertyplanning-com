@@ -152,7 +152,7 @@ const Section = ({
 }) => (
   <section className={`py-10 lg:py-12 ${bg}`}>
     <div className="container px-6 lg:px-8">
-      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color }}>
+      <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-center" style={{ color: color }}>
         {heading}
       </h2>
 
@@ -208,7 +208,7 @@ const Section = ({
                       fontFamily: "Georgia, serif",
                       fontSize: 18,
                       fontWeight: 700,
-                      color: "#6b1b22",
+                      color: color,
                       lineHeight: 1.3,
                     }}
                   >
@@ -371,7 +371,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                               fontFamily: "Georgia, serif",
                               fontSize: 18,
                               fontWeight: 700,
-                              color: "#6b1b22",
+                              color: "#721d24",
                               lineHeight: 1.3,
                               marginBottom: 6,
                             }}
