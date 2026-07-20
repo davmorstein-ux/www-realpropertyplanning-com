@@ -3545,3 +3545,10 @@ main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-la
     padding-left: 1.25rem !important;
   }
 }
+/* FIX: #main-content was forced to padding-top: 0, letting the fixed
+   header (nav + search bar) overlap hero images, especially on mobile
+   where the header is taller relative to the hero. Push content down
+   by the header's live, dynamically-measured height instead. */
+#main-content {
+  padding-top: var(--header-height, 140px) !important;
+}
