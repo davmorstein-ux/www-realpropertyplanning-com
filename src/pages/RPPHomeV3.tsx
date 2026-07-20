@@ -134,10 +134,10 @@ const RPPHomeV3 = () => {
                 id="rpp-descriptor"
                 style={{
                   fontFamily: "Georgia, 'Cormorant Garamond', serif",
-                  fontSize: "clamp(17px, 2vw, 24px)",
+                  fontSize: "clamp(18px, 2.2vw, 26px)",
                   fontWeight: 400,
                   fontStyle: "normal",
-                  color: "#993d45",
+                  color: "#1B3A6B",
                   margin: 0,
                   lineHeight: 1.55,
                   letterSpacing: "0.01em",
