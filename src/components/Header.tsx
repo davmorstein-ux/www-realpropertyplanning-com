@@ -460,6 +460,7 @@ const Header = () => {
               href="tel:2069003015"
               style={{
                 ...NAV_FONT,
+                fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
                 color: "#fff",
                 background: "#1f6fb2",
                 padding: isMobile ? "6px 10px" : "4px 14px",
