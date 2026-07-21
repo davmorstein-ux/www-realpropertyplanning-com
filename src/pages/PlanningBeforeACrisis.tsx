@@ -82,7 +82,7 @@ const PlanningBeforeACrisis = () => {
               </h2>
             </div>
 
-            <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" />
+            <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" currentPath={tiles[0].href} />
 
             <div className="max-w-3xl mx-auto">
               {(() => {
@@ -103,7 +103,7 @@ const PlanningBeforeACrisis = () => {
                               width: 28,
                               height: 28,
                               borderRadius: "50%",
-                              background: "#721d24",
+                              background: "#1f6fb2",
                               color: "#ffffff",
                               fontSize: 14,
                               fontWeight: 700,
@@ -116,9 +116,13 @@ const PlanningBeforeACrisis = () => {
                           >
                             1
                           </span>
-                          <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
+                          <h3
+                            className="font-serif text-[22px] md:text-[24px] font-semibold leading-snug mb-3"
+                            style={{ color: "#1f6fb2" }}
+                          >
                             {t.title}
                           </h3>
+                          <p className="text-foreground text-[15px] leading-relaxed">{t.description}</p>
                         </div>
                       </div>
                     </div>
