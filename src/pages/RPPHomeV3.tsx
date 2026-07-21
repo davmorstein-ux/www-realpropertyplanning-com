@@ -71,7 +71,7 @@ const RPPHomeV3 = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              padding: "var(--header-height, 76px) 8% clamp(16px, 3vw, 40px)",
+              padding: "clamp(16px, 3vw, 40px) 8%",
               boxSizing: "border-box",
               gap: "clamp(6px, 1vw, 12px)",
             }}
