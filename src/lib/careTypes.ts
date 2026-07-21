@@ -122,4 +122,4 @@ export function formatCurrency(value: number) {
   return value.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 }
 
-export const COC_TEAL = "#0d9488";
+export const COC_TEAL = "#0d5c63";
