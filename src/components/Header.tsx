@@ -461,7 +461,7 @@ const Header = () => {
               style={{
                 ...NAV_FONT,
                 color: "#fff",
-                background: "#89681a",
+                background: "#1f6fb2",
                 padding: isMobile ? "6px 10px" : "4px 14px",
                 borderRadius: 6,
                 fontWeight: 400,
