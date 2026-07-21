@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import RoadmapDropdown from "@/components/RoadmapDropdown";
 import heroImage from "@/assets/panorama-road-scene.webp";
 
 const tiles = [
@@ -82,10 +81,8 @@ const PlanningBeforeACrisis = () => {
               </h2>
             </div>
 
-            <RoadmapDropdown topics={tiles} accentColor="#721d24" />
-
             <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-stretch">
-              {tiles.map((t) => (
+              {tiles.map((t, i) => (
                 <Link
                   key={t.title}
                   to={t.href}
@@ -95,6 +92,25 @@ const PlanningBeforeACrisis = () => {
                   <div className="tile-white__inner h-full relative">
                     <div className="tile-white__face h-full">
                       <div className="flex h-full flex-col items-start text-left">
+                        <span
+                          aria-hidden="true"
+                          style={{
+                            width: 28,
+                            height: 28,
+                            borderRadius: "50%",
+                            background: "#721d24",
+                            color: "#ffffff",
+                            fontSize: 14,
+                            fontWeight: 700,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexShrink: 0,
+                            marginBottom: 12,
+                          }}
+                        >
+                          {i + 1}
+                        </span>
                         <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
                           {t.title}
                         </h3>
