@@ -75,7 +75,7 @@ const PlanningSubPageLayout = ({
                 topics={planningBeforeACrisisTopics}
                 accentColor="#721d24"
                 currentPath={canonicalPath}
-                mode="current"
+                mode="list"
               />
             </div>
             <article className="max-w-3xl mx-auto text-foreground" style={{ fontSize: "18px", lineHeight: 1.75 }}>
