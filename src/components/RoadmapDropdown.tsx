@@ -10,24 +10,77 @@ interface RoadmapDropdownProps {
   topics: RoadmapTopic[];
   itemLabel?: string;
   accentColor?: string;
+  /** Current page's path (e.g. canonicalPath). Used to determine the active
+   *  topic for blue highlighting, and (in "current" mode) which single
+   *  topic to display. */
   currentPath?: string;
-  defaultOpen?: boolean;
+  /** "dropdown" (default) shows the full collapsible list of every topic.
+   *  "current" shows only the active topic as a static, non-expandable
+   *  indicator — no list, no toggle, nothing else to read. */
+  mode?: "dropdown" | "current";
 }
 
+const ACTIVE_COLOR = "#1f6fb2";
+
 /**
- * Shows an upfront count of how many topics/pages a guide covers, with an
- * expandable dropdown listing every topic as a direct jump-link. Lets people
- * see the full scope of a multi-page guide before committing to click
- * through it one page at a time.
+ * "dropdown" mode: shows an upfront count of how many topics/pages a guide
+ * covers, with an expandable list of every topic as a direct jump-link.
+ * "current" mode: shows just the active topic's number (in blue) and title,
+ * as a lightweight "you are here" indicator with no list to scan through.
  */
 const RoadmapDropdown = ({
   topics,
   itemLabel = "topics",
   accentColor = "#721d24",
   currentPath,
-  defaultOpen = false,
+  mode = "dropdown",
 }: RoadmapDropdownProps) => {
-  const [open, setOpen] = useState(defaultOpen);
+  const [open, setOpen] = useState(false);
+
+  if (mode === "current") {
+    const activeIndex = topics.findIndex((t) => t.href === currentPath);
+    if (activeIndex === -1) return null;
+    const activeTopic = topics[activeIndex];
+    return (
+      <div
+        style={{
+          maxWidth: 680,
+          margin: "0 auto 40px",
+          display: "flex",
+          alignItems: "center",
+          gap: 14,
+          background: "#ffffff",
+          border: `2px solid ${accentColor}`,
+          borderRadius: 12,
+          padding: "18px 22px",
+        }}
+      >
+        <span
+          aria-hidden="true"
+          style={{
+            width: 28,
+            height: 28,
+            borderRadius: "50%",
+            background: ACTIVE_COLOR,
+            color: "#ffffff",
+            fontSize: 14,
+            fontWeight: 700,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexShrink: 0,
+          }}
+        >
+          {activeIndex + 1}
+        </span>
+        <span
+          style={{ fontSize: 17, fontWeight: 700, color: "#280a0c", lineHeight: 1.4, fontFamily: "Georgia, serif" }}
+        >
+          {activeTopic.title}
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div style={{ maxWidth: 680, margin: "0 auto 40px" }}>
@@ -95,7 +148,7 @@ const RoadmapDropdown = ({
                   width: 28,
                   height: 28,
                   borderRadius: "50%",
-                  background: isActive ? "#1f6fb2" : accentColor,
+                  background: isActive ? ACTIVE_COLOR : accentColor,
                   color: "#ffffff",
                   fontSize: 14,
                   fontWeight: 700,
