@@ -10,6 +10,8 @@ interface RoadmapDropdownProps {
   topics: RoadmapTopic[];
   itemLabel?: string;
   accentColor?: string;
+  currentPath?: string;
+  defaultOpen?: boolean;
 }
 
 /**
@@ -18,8 +20,14 @@ interface RoadmapDropdownProps {
  * see the full scope of a multi-page guide before committing to click
  * through it one page at a time.
  */
-const RoadmapDropdown = ({ topics, itemLabel = "topics", accentColor = "#721d24" }: RoadmapDropdownProps) => {
-  const [open, setOpen] = useState(false);
+const RoadmapDropdown = ({
+  topics,
+  itemLabel = "topics",
+  accentColor = "#721d24",
+  currentPath,
+  defaultOpen = false,
+}: RoadmapDropdownProps) => {
+  const [open, setOpen] = useState(defaultOpen);
 
   return (
     <div style={{ maxWidth: 680, margin: "0 auto 40px" }}>
