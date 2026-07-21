@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { useLocation, Link, Navigate } from "react-router-dom";
+import { Check } from "lucide-react";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -123,18 +124,26 @@ const RoadmapSteps = ({ activeStep }: { activeStep: number }) => (
           <li className="flex flex-col items-center text-center" style={{ width: 100 }}>
             <span
               aria-current={isCurrent ? "step" : undefined}
-              className={`w-12 h-12 rounded-full flex items-center justify-center font-serif font-bold text-xl border-2 border-navy ${
-                isDone ? "bg-navy text-white" : "bg-white text-navy"
+              className={`w-12 h-12 rounded-full flex items-center justify-center font-serif font-bold text-xl border-2 ${
+                isCurrent
+                  ? "bg-gold border-gold text-navy shadow-[0_0_0_4px_rgba(184,150,62,0.25)]"
+                  : isDone
+                    ? "bg-navy border-navy text-white"
+                    : "bg-white border-navy/40 text-navy/40"
               }`}
             >
-              {stepNum}
+              {isDone ? <Check className="w-6 h-6" aria-hidden="true" /> : stepNum}
             </span>
-            <span className={`mt-2 text-base leading-snug text-navy ${isCurrent ? "font-bold" : "font-medium"}`}>
+            <span
+              className={`mt-2 text-base leading-snug ${
+                isCurrent ? "font-bold text-navy" : isDone ? "font-medium text-navy" : "font-medium text-navy/50"
+              }`}
+            >
               {label}
             </span>
           </li>
           {stepNum < ROADMAP_LABELS.length && (
-            <div className={`flex-1 h-0.5 mt-6 ${isDone ? "bg-navy" : "bg-navy/60"}`} aria-hidden="true" />
+            <div className={`flex-1 h-0.5 mt-6 ${isDone ? "bg-navy" : "bg-navy/25"}`} aria-hidden="true" />
           )}
         </Fragment>
       );
