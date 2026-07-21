@@ -16,20 +16,20 @@ const Footer = () => {
           color: rgba(255,255,255,0.72) !important;
           text-decoration: none !important;
           font-family: Inter, system-ui, sans-serif !important;
-          font-size: 14px !important;
+          font-size: 16px !important;
           line-height: 1.4 !important;
           transition: color 0.15s ease !important;
           display: block !important;
           padding: 2px 0 !important;
         }
-        .rpp-footer-link:hover { color: #cd4a55 !important; }
+        .rpp-footer-link:hover { color: #e0737d !important; }
         .rpp-footer-col-heading {
           font-family: Inter, system-ui, sans-serif !important;
-          font-size: 11px !important;
+          font-size: 15px !important;
           font-weight: 700 !important;
           letter-spacing: 0.14em !important;
           text-transform: uppercase !important;
-          color: #cd4a55 !important;
+          color: #e0737d !important;
           margin: 0 0 0.6rem 0 !important;
           padding-bottom: 0.4rem !important;
           border-bottom: 1px solid rgba(255,255,255,0.1) !important;
