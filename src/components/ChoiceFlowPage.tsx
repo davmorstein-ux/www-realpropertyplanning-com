@@ -84,7 +84,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
               {/* Choice cards or placeholder */}
               {hasChildren ? (
                 <>
-                  <RoadmapSteps activeStep={activeStep} />
+                  <RoadmapSteps activeStep={activeStep} trail={trail} />
                   <p className="text-center text-navy/70 text-base mb-8">
                     Pick the option below that best matches your situation to get started.
                   </p>
@@ -92,7 +92,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                 </>
               ) : node.content ? (
                 <>
-                  <RoadmapSteps activeStep={activeStep} />
+                  <RoadmapSteps activeStep={activeStep} trail={trail} />
                   <p className="text-center text-navy/70 text-base mb-8">
                     You've made it — here's the guidance for your situation.
                   </p>
@@ -112,35 +112,57 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 };
 
 const ROADMAP_LABELS = ["Where you are", "What you need", "Your guidance"];
+const CURRENT_COLOR = "#1f6fb2";
 
-const RoadmapSteps = ({ activeStep }: { activeStep: number }) => (
+const RoadmapSteps = ({ activeStep, trail }: { activeStep: number; trail: FlowNode[] }) => (
   <ol className="flex items-start justify-center mb-5 max-w-md mx-auto" aria-label="Your progress through this guide">
     {ROADMAP_LABELS.map((label, i) => {
       const stepNum = i + 1;
       const isDone = stepNum < activeStep;
       const isCurrent = stepNum === activeStep;
+      const stepPath = trail[i]?.path;
+
+      const circle = (
+        <span
+          aria-current={isCurrent ? "step" : undefined}
+          className={`w-12 h-12 rounded-full flex items-center justify-center font-serif font-bold text-xl border-2 transition-colors ${
+            isCurrent
+              ? "text-white shadow-[0_0_0_4px_rgba(31,111,178,0.25)]"
+              : isDone
+                ? "bg-navy border-navy text-white"
+                : "bg-white border-navy/40 text-navy/40"
+          }`}
+          style={isCurrent ? { background: CURRENT_COLOR, borderColor: CURRENT_COLOR } : undefined}
+        >
+          {isDone ? <Check className="w-6 h-6" aria-hidden="true" /> : stepNum}
+        </span>
+      );
+
       return (
         <Fragment key={label}>
           <li className="flex flex-col items-center text-center" style={{ width: 100 }}>
-            <span
-              aria-current={isCurrent ? "step" : undefined}
-              className={`w-12 h-12 rounded-full flex items-center justify-center font-serif font-bold text-xl border-2 ${
-                isCurrent
-                  ? "bg-gold border-gold text-navy shadow-[0_0_0_4px_rgba(184,150,62,0.25)]"
-                  : isDone
-                    ? "bg-navy border-navy text-white"
-                    : "bg-white border-navy/40 text-navy/40"
-              }`}
-            >
-              {isDone ? <Check className="w-6 h-6" aria-hidden="true" /> : stepNum}
-            </span>
-            <span
-              className={`mt-2 text-base leading-snug ${
-                isCurrent ? "font-bold text-navy" : isDone ? "font-medium text-navy" : "font-medium text-navy/50"
-              }`}
-            >
-              {label}
-            </span>
+            {isDone && stepPath ? (
+              <Link
+                to={stepPath}
+                className="flex flex-col items-center group"
+                aria-label={`Back to step ${stepNum}: ${label}`}
+              >
+                <span className="group-hover:opacity-80 transition-opacity">{circle}</span>
+                <span className="mt-2 text-base leading-snug font-medium text-navy underline underline-offset-2">
+                  {label}
+                </span>
+              </Link>
+            ) : (
+              <>
+                {circle}
+                <span
+                  className={`mt-2 text-base leading-snug ${isCurrent ? "font-bold" : "font-medium text-navy/50"}`}
+                  style={isCurrent ? { color: CURRENT_COLOR } : undefined}
+                >
+                  {label}
+                </span>
+              </>
+            )}
           </li>
           {stepNum < ROADMAP_LABELS.length && (
             <div className={`flex-1 h-0.5 mt-6 ${isDone ? "bg-navy" : "bg-navy/25"}`} aria-hidden="true" />
