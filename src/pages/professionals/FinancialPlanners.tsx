@@ -6,42 +6,9 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import TiffanyLaneCard from "@/components/TiffanyLaneCard";
 
-import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
-import newYorkLifeLogo from "@/assets/new-york-life-logo.webp";
-
-type Contact = { name: string; role?: string; photo: string; alt: string };
-
-type Provider = {
-  company: string;
-  website: string;
-  logo: string;
-  logoAlt: string;
-  contacts: Contact[];
-  specialty: string;
-  phones: { label: string; href: string }[];
-  email?: string;
-};
-
-const providers: Provider[] = [
-  {
-    company: "New York Life — Seattle General Office",
-    website: "https://www.newyorklife.com/agent/tcford",
-    logo: newYorkLifeLogo,
-    logoAlt: "New York Life logo",
-    contacts: [
-      {
-        name: "Tiffany Lane",
-        role: "Financial Professional",
-        photo: tiffanyPhoto,
-        alt: "Tiffany Lane — Financial Professional, New York Life Seattle General Office",
-      },
-    ],
-    specialty:
-      "Retirement planning, estate planning, downsizing, and legacy protection for seniors and their families.",
-    phones: [{ label: "(206) 999-2116", href: "tel:+12069992116" }],
-  },
-];
+// Provider data now lives in TiffanyLaneCard.tsx, reused as a shared component.
 
 const faqs = [
   {
@@ -103,104 +70,7 @@ const FinancialPlanners = () => {
         <HeroBandTitle as="h1">Financial Planners & Advisors</HeroBandTitle>
 
         {/* Featured providers */}
-        <section className="py-10 md:py-14 bg-secondary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
-              {providers.map((p) => (
-                <div
-                  key={p.company}
-                  className="interior-tile interior-tile--wide interior-tile--static tile-white block h-full"
-                >
-                  <div className="tile-white__inner h-full">
-                    <div className="tile-white__face h-full">
-                      <div className="flex h-full flex-col items-center text-center p-6">
-                        <img
-                          src={p.logo}
-                          alt={p.logoAlt}
-                          className="h-[120px] md:h-[144px] w-auto object-contain mb-4"
-                          loading="lazy"
-                          sizes="100vw"
-                          decoding="async"
-                        />
-
-                        <div className="flex justify-center gap-5 mb-3">
-                          {p.contacts.map((c) => (
-                            <div key={c.name} className="flex flex-col items-center">
-                              <img
-                                src={c.photo}
-                                alt={c.alt}
-                                className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] rounded-full object-cover border-2 border-border shadow-sm"
-                                loading="lazy"
-                                sizes="(max-width: 768px) 90px, 90px"
-                                decoding="async"
-                              />
-                              <p className="text-foreground font-semibold text-sm mt-2">{c.name}</p>
-                              {c.role && <p className="text-muted-foreground text-xs">{c.role}</p>}
-                            </div>
-                          ))}
-                        </div>
-
-                        <h2 className="font-serif text-lg md:text-xl text-navy font-semibold leading-snug mb-3">
-                          {p.company}
-                        </h2>
-
-                        <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">{p.specialty}</p>
-
-                        <div className="w-full space-y-1.5 text-sm mb-5">
-                          {p.phones.map((ph) => (
-                            <div key={ph.href} className="flex items-center gap-2 justify-center">
-                              <a
-                                href={ph.href}
-                                className="text-accent hover:text-gold underline-offset-4 hover:underline font-medium"
-                              >
-                                {ph.label}
-                              </a>
-                            </div>
-                          ))}
-                          {p.email && (
-                            <div className="flex items-center gap-2 justify-center">
-                              <a
-                                href={`mailto:${p.email}`}
-                                className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
-                              >
-                                {p.email}
-                              </a>
-                            </div>
-                          )}
-                        </div>
-
-                        <div className="mt-auto w-full pt-2">
-                          <a
-                            href={p.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Learn more about ${p.company} (opens in a new tab)`}
-                            className="gold-cta"
-                          >
-                            Learn More
-                            <svg
-                              viewBox="0 0 24 24"
-                              width="14"
-                              height="14"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2.4"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              aria-hidden="true"
-                            >
-                              <polyline points="9 18 15 12 9 6" />
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <TiffanyLaneCard />
 
         {/* Explanatory content */}
         <section className="py-10 md:py-14 bg-background">
