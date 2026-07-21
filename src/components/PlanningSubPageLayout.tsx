@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import RoadmapDropdown from "@/components/RoadmapDropdown";
+import { planningBeforeACrisisTopics } from "@/lib/planningBeforeACrisisTopics";
 import heroImage from "@/assets/planning-before-a-crisis-hero-washington.webp";
 
 interface PlanningSubPageLayoutProps {
@@ -63,6 +65,12 @@ const PlanningSubPageLayout = ({
         {/* BODY */}
         <section className="py-14 md:py-20 bg-cream">
           <div className="container px-5 md:px-8">
+            <RoadmapDropdown
+              topics={planningBeforeACrisisTopics}
+              accentColor="#721d24"
+              currentPath={canonicalPath}
+              defaultOpen={false}
+            />
             <article
               className="max-w-3xl mx-auto text-foreground"
               style={{ fontSize: "18px", lineHeight: 1.75 }}
