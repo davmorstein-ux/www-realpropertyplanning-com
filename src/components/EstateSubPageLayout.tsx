@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import RoadmapDropdown from "@/components/RoadmapDropdown";
+import { estateProbateTopics } from "@/lib/estateProbateTopics";
 import heroImage from "@/assets/managing-estate-probate-inherited-property-hero-washington.webp";
 
 interface EstateSubPageLayoutProps {
@@ -50,17 +52,25 @@ const EstateSubPageLayout = ({
             src={heroImageOverride ?? heroImage}
             alt={heroAltOverride ?? "Managing an estate, probate, or inherited property in Washington State"}
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async"/>
+            loading="eager"
+            sizes="100vw"
+            decoding="async"
+          />
         </section>
 
         <HeroBandTitle>{bandTitle}</HeroBandTitle>
 
         <section className="py-14 md:py-20 bg-cream">
           <div className="container px-5 md:px-8">
-            <article
-              className="max-w-3xl mx-auto text-foreground"
-              style={{ fontSize: "18px", lineHeight: 1.75 }}
-            >
+            <div className="max-w-3xl mx-auto mb-10 md:mb-14">
+              <RoadmapDropdown
+                topics={estateProbateTopics}
+                accentColor="#721d24"
+                currentPath={canonicalPath}
+                mode="list"
+              />
+            </div>
+            <article className="max-w-3xl mx-auto text-foreground" style={{ fontSize: "18px", lineHeight: 1.75 }}>
               {children}
             </article>
           </div>
@@ -86,11 +96,7 @@ const EstateSubPageLayout = ({
                   info@realpropertyplanning.com
                 </a>
               </p>
-              <Link
-                to="/contact"
-                className="gold-cta inline-flex items-center"
-                style={{ fontSize: "15px" }}
-              >
+              <Link to="/contact" className="gold-cta inline-flex items-center" style={{ fontSize: "15px" }}>
                 Get in Touch
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <polyline points="9 18 15 12 9 6" />
@@ -122,14 +128,10 @@ export const SubH2 = ({ children }: { children: ReactNode }) => (
 );
 
 export const SubH3 = ({ children }: { children: ReactNode }) => (
-  <h3 className="font-serif text-[20px] md:text-[23px] font-semibold text-navy leading-snug mt-7 mb-3">
-    {children}
-  </h3>
+  <h3 className="font-serif text-[20px] md:text-[23px] font-semibold text-navy leading-snug mt-7 mb-3">{children}</h3>
 );
 
-export const P = ({ children }: { children: ReactNode }) => (
-  <p className="mb-5">{children}</p>
-);
+export const P = ({ children }: { children: ReactNode }) => <p className="mb-5">{children}</p>;
 
 export const UL = ({ children }: { children: ReactNode }) => (
   <ul className="list-disc pl-6 mb-6 space-y-2">{children}</ul>
