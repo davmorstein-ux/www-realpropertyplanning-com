@@ -3545,3 +3545,11 @@ main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-la
     padding-left: 1.25rem !important;
   }
 }
+/* FIX: .gold-cta's underline animation was written to only trigger when
+   nested inside a separately-hovered <a> or .group (like the big tile
+   links elsewhere on the site). In ProviderTile, the Learn More button
+   IS the <a> itself, not nested inside one, so that rule never matched.
+   This adds a direct self-hover version so it animates on its own. */
+.gold-cta:hover::after {
+  transform: scaleX(1) !important;
+}
