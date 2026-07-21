@@ -90,13 +90,16 @@ const RoadmapDropdown = ({
           const isActive = currentPath === topic.href;
           const itemStyle: CSSProperties = {
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
-            gap: 14,
-            padding: "10px 0",
+            textAlign: "center",
+            gap: 8,
+            padding: "18px 12px",
             textDecoration: "none",
+            borderTop: i > 0 ? "1px solid #e5ddd0" : "none",
           };
           return (
-            <Link key={topic.href} to={topic.href} style={itemStyle}>
+            <Link key={topic.href} to={topic.href} style={itemStyle} className="rpp-roadmap-list-item">
               <span
                 aria-hidden="true"
                 style={{
@@ -115,10 +118,29 @@ const RoadmapDropdown = ({
               >
                 {i + 1}
               </span>
-              <span style={{ fontSize: 16, fontWeight: 600, color: "#280a0c", lineHeight: 1.4 }}>{topic.title}</span>
+              <span
+                style={{
+                  fontSize: 17,
+                  fontWeight: 700,
+                  color: isActive ? ACTIVE_COLOR : accentColor,
+                  lineHeight: 1.4,
+                  textDecoration: "underline",
+                  textUnderlineOffset: "3px",
+                }}
+              >
+                {topic.title}
+              </span>
             </Link>
           );
         })}
+        <style>{`
+          .rpp-roadmap-list-item:hover span:last-child {
+            text-decoration-thickness: 2px;
+          }
+          .rpp-roadmap-list-item:hover {
+            background: #faf7f2;
+          }
+        `}</style>
       </div>
     );
   }
