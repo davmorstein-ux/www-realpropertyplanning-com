@@ -121,7 +121,7 @@ const RPPHomeV3 = () => {
               >
                 and later life transitions
               </span>
-            </div>
+            </h1>
           </div>
         </div>
 
