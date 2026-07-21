@@ -273,22 +273,35 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           {ITEMS.map((_, i) => {
             const normalizedPos = (((pos - START) % ITEMS.length) + ITEMS.length) % ITEMS.length;
+            const isActive = normalizedPos === i;
             return (
               <button
                 key={i}
                 onClick={() => slideTo(START + i)}
                 aria-label={`Slide ${i + 1}`}
                 style={{
-                  background: normalizedPos === i ? "#b13a44" : "#d2b2b4",
+                  background: "transparent",
                   border: "none",
-                  borderRadius: 2,
-                  width: normalizedPos === i ? 24 : 8,
-                  height: 4,
+                  width: 24,
+                  height: 24,
                   cursor: "pointer",
                   padding: 0,
-                  transition: "width 0.3s ease, background 0.3s ease",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-              />
+              >
+                <span
+                  style={{
+                    display: "block",
+                    background: isActive ? "#b13a44" : "#d2b2b4",
+                    borderRadius: 2,
+                    width: isActive ? 24 : 8,
+                    height: 4,
+                    transition: "width 0.3s ease, background 0.3s ease",
+                  }}
+                />
+              </button>
             );
           })}
         </div>
