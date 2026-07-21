@@ -100,10 +100,6 @@ export default function ProviderTile({
 
   return (
     <div
-      ref={wrapperRef}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
-      className="marquee-hover"
       style={{
         position: "relative",
         background: "#fff",
@@ -115,7 +111,6 @@ export default function ProviderTile({
         alignItems: "center",
         textAlign: "center",
         padding: "24px 24px 20px",
-        cursor: bio ? "pointer" : "default",
         transition: "box-shadow 0.3s ease",
       }}
     >
@@ -319,224 +314,235 @@ export default function ProviderTile({
         </>
       )}
 
-      {/* Tile: logo */}
-      {logo && (
-        <div
-          style={{
-            minHeight: 80,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: 16,
-            width: "100%",
-          }}
-        >
-          <img
-            src={logo}
-            alt={logoAlt || company}
-            style={{ height: 88, width: "auto", objectFit: "contain" }}
-            loading="lazy"
-            sizes="100vw"
-            decoding="async"
-          />
-        </div>
-      )}
-
-      {/* Tile: photo(s) */}
-      {hasTwoPeople ? (
-        <div
-          style={{
-            minHeight: 200,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginBottom: 12,
-            width: "100%",
-          }}
-        >
-          <div style={{ display: "flex", justifyContent: "center", gap: 16 }}>
-            {photo && (
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-                <img
-                  src={photo}
-                  alt={photoAlt || name}
-                  style={{
-                    width: 100,
-                    height: 100,
-                    borderRadius: "50%",
-                    objectFit: "cover",
-                    border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
-                    transform: hovered ? "scale(1.05)" : "scale(1)",
-                    transition: "transform 0.3s ease, border-color 0.3s ease",
-                  }}
-                  loading="lazy"
-                  sizes="100vw"
-                  decoding="async"
-                />
-                <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
-                  {name}
-                </div>
-                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title}</div>
-              </div>
-            )}
-            {photo2 && (
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-                <img
-                  src={photo2}
-                  alt={photoAlt2 || name2}
-                  style={{
-                    width: 100,
-                    height: 100,
-                    borderRadius: "50%",
-                    objectFit: "cover",
-                    border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
-                    transform: hovered ? "scale(1.05)" : "scale(1)",
-                    transition: "transform 0.3s ease, border-color 0.3s ease",
-                  }}
-                  loading="lazy"
-                  sizes="100vw"
-                  decoding="async"
-                />
-                <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
-                  {name2}
-                </div>
-                <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title2}</div>
-              </div>
-            )}
-          </div>
-        </div>
-      ) : (
-        photo && (
+      {/* Top portion — hover trigger scoped to here only, not the contact section below */}
+      <div
+        ref={wrapperRef}
+        onMouseEnter={handleEnter}
+        onMouseLeave={handleLeave}
+        className="marquee-hover"
+        style={{
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+          cursor: bio ? "pointer" : "default",
+        }}
+      >
+        {/* Tile: logo */}
+        {logo && (
           <div
             style={{
-              height: 120,
+              minHeight: 80,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              marginBottom: 12,
+              marginBottom: 16,
               width: "100%",
             }}
           >
             <img
-              src={photo}
-              alt={photoAlt || name}
-              style={{
-                width: 112,
-                height: 112,
-                borderRadius: "50%",
-                objectFit: "cover",
-                border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
-                transform: hovered ? "scale(1.05)" : "scale(1)",
-                transition: "transform 0.3s ease, border-color 0.3s ease",
-              }}
+              src={logo}
+              alt={logoAlt || company}
+              style={{ height: 88, width: "auto", objectFit: "contain" }}
               loading="lazy"
               sizes="100vw"
               decoding="async"
             />
           </div>
-        )
-      )}
+        )}
 
-      {/* Tile: name/title/company — only shown for single-person tiles */}
-      {!hasTwoPeople && (
-        <>
+        {/* Tile: photo(s) */}
+        {hasTwoPeople ? (
           <div
             style={{
-              minHeight: 60,
+              minHeight: 200,
               display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
               justifyContent: "center",
-              marginBottom: 2,
+              alignItems: "center",
+              marginBottom: 12,
               width: "100%",
             }}
           >
-            <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#280a0c" }}>{name}</div>
-            {name2 && (
-              <div
+            <div style={{ display: "flex", justifyContent: "center", gap: 16 }}>
+              {photo && (
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+                  <img
+                    src={photo}
+                    alt={photoAlt || name}
+                    style={{
+                      width: 100,
+                      height: 100,
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
+                      transform: hovered ? "scale(1.05)" : "scale(1)",
+                      transition: "transform 0.3s ease, border-color 0.3s ease",
+                    }}
+                    loading="lazy"
+                    sizes="100vw"
+                    decoding="async"
+                  />
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
+                    {name}
+                  </div>
+                  <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title}</div>
+                </div>
+              )}
+              {photo2 && (
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+                  <img
+                    src={photo2}
+                    alt={photoAlt2 || name2}
+                    style={{
+                      width: 100,
+                      height: 100,
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
+                      transform: hovered ? "scale(1.05)" : "scale(1)",
+                      transition: "transform 0.3s ease, border-color 0.3s ease",
+                    }}
+                    loading="lazy"
+                    sizes="100vw"
+                    decoding="async"
+                  />
+                  <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
+                    {name2}
+                  </div>
+                  <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title2}</div>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          photo && (
+            <div
+              style={{
+                height: 120,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: 12,
+                width: "100%",
+              }}
+            >
+              <img
+                src={photo}
+                alt={photoAlt || name}
                 style={{
-                  fontFamily: "Georgia, serif",
-                  fontSize: 18,
-                  fontWeight: 700,
-                  color: "#280a0c",
-                  marginBottom: 4,
+                  width: 112,
+                  height: 112,
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
+                  transform: hovered ? "scale(1.05)" : "scale(1)",
+                  transition: "transform 0.3s ease, border-color 0.3s ease",
                 }}
-              >
-                {name2}
+                loading="lazy"
+                sizes="100vw"
+                decoding="async"
+              />
+            </div>
+          )
+        )}
+
+        {/* Tile: name/title/company — only shown for single-person tiles */}
+        {!hasTwoPeople && (
+          <>
+            <div
+              style={{
+                minHeight: 60,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: 2,
+                width: "100%",
+              }}
+            >
+              <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#280a0c" }}>
+                {name}
               </div>
-            )}
-          </div>
-          <div
-            style={{
-              minHeight: 48,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              marginBottom: 2,
-              width: "100%",
-            }}
-          >
-            <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666" }}>{title}</div>
-          </div>
-        </>
-      )}
+              {name2 && (
+                <div
+                  style={{
+                    fontFamily: "Georgia, serif",
+                    fontSize: 18,
+                    fontWeight: 700,
+                    color: "#280a0c",
+                    marginBottom: 4,
+                  }}
+                >
+                  {name2}
+                </div>
+              )}
+            </div>
+            <div
+              style={{
+                minHeight: 48,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: 2,
+                width: "100%",
+              }}
+            >
+              <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666" }}>{title}</div>
+            </div>
+          </>
+        )}
 
-      <div
-        style={{
-          minHeight: 32,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginBottom: 10,
-          width: "100%",
-        }}
-      >
         <div
           style={{
-            fontFamily: "'Raleway', sans-serif",
-            fontSize: 11,
-            fontWeight: 700,
-            color: "#280a0c",
-          }}
-        >
-          {company}
-        </div>
-      </div>
-
-      {specialty && (
-        <div
-          style={{
-            minHeight: 100,
+            minHeight: 32,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            marginBottom: 8,
+            marginBottom: 10,
             width: "100%",
           }}
         >
           <div
             style={{
-              fontFamily: "Georgia, serif",
-              fontSize: 13,
-              color: "#806b6d",
-              fontStyle: "italic",
-              lineHeight: 1.5,
+              fontFamily: "'Raleway', sans-serif",
+              fontSize: 11,
+              fontWeight: 700,
+              color: "#280a0c",
             }}
           >
-            {specialty}
+            {company}
           </div>
         </div>
-      )}
+
+        {specialty && (
+          <div
+            style={{
+              minHeight: 100,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: 8,
+              width: "100%",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "Georgia, serif",
+                fontSize: 13,
+                color: "#806b6d",
+                fontStyle: "italic",
+                lineHeight: 1.5,
+              }}
+            >
+              {specialty}
+            </div>
+          </div>
+        )}
+      </div>
 
       {/* Contact section */}
       <div
-        onClick={(e) => e.stopPropagation()}
-        onMouseEnter={(e) => {
-          e.stopPropagation();
-        }}
-        onMouseLeave={(e) => {
-          e.stopPropagation();
-        }}
         style={{
           marginTop: "auto",
           paddingTop: 16,
