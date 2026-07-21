@@ -71,7 +71,7 @@ const RPPHomeV3 = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              padding: "calc(var(--header-height, 76px) + clamp(8px, 1.5vw, 24px)) 8% clamp(16px, 3vw, 40px)",
+              padding: "var(--header-height, 76px) 8% clamp(16px, 3vw, 40px)",
               boxSizing: "border-box",
               gap: "clamp(6px, 1vw, 12px)",
             }}
@@ -86,6 +86,7 @@ const RPPHomeV3 = () => {
                 height: "auto",
                 objectFit: "contain",
                 display: "block",
+                margin: "0 auto",
               }}
             />
             {/* Tagline — two lines as separate spans */}
