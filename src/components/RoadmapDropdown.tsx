@@ -86,54 +86,67 @@ const RoadmapDropdown = ({
   if (mode === "list") {
     return (
       <div style={{ maxWidth: 680, margin: "0 auto 40px" }}>
-        {topics.map((topic, i) => {
-          const isActive = currentPath === topic.href;
-          const itemStyle: CSSProperties = {
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
-            gap: 8,
-            padding: "18px 12px",
-            textDecoration: "none",
-            borderTop: i > 0 ? "1px solid #e5ddd0" : "none",
-          };
-          return (
-            <Link key={topic.href} to={topic.href} style={itemStyle} className="rpp-roadmap-list-item">
-              <span
-                aria-hidden="true"
-                style={{
-                  width: 28,
-                  height: 28,
-                  borderRadius: "50%",
-                  background: isActive ? ACTIVE_COLOR : accentColor,
-                  color: "#ffffff",
-                  fontSize: 14,
-                  fontWeight: 700,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
-                }}
-              >
-                {i + 1}
-              </span>
-              <span
-                style={{
-                  fontSize: 17,
-                  fontWeight: 700,
-                  color: isActive ? ACTIVE_COLOR : accentColor,
-                  lineHeight: 1.4,
-                  textDecoration: "underline",
-                  textUnderlineOffset: "3px",
-                }}
-              >
-                {topic.title}
-              </span>
-            </Link>
-          );
-        })}
+        <div className="rpp-roadmap-list-grid">
+          {topics.map((topic, i) => {
+            const isActive = currentPath === topic.href;
+            const itemStyle: CSSProperties = {
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+              gap: 8,
+              padding: "16px 12px",
+              textDecoration: "none",
+              border: "1px solid #e5ddd0",
+              borderRadius: 10,
+            };
+            return (
+              <Link key={topic.href} to={topic.href} style={itemStyle} className="rpp-roadmap-list-item">
+                <span
+                  aria-hidden="true"
+                  style={{
+                    width: 28,
+                    height: 28,
+                    borderRadius: "50%",
+                    background: isActive ? ACTIVE_COLOR : accentColor,
+                    color: "#ffffff",
+                    fontSize: 14,
+                    fontWeight: 700,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}
+                >
+                  {i + 1}
+                </span>
+                <span
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 700,
+                    color: isActive ? ACTIVE_COLOR : accentColor,
+                    lineHeight: 1.4,
+                    textDecoration: "underline",
+                    textUnderlineOffset: "3px",
+                  }}
+                >
+                  {topic.title}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
         <style>{`
+          .rpp-roadmap-list-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+          }
+          @media (max-width: 560px) {
+            .rpp-roadmap-list-grid {
+              grid-template-columns: 1fr;
+            }
+          }
           .rpp-roadmap-list-item:hover span:last-child {
             text-decoration-thickness: 2px;
           }
