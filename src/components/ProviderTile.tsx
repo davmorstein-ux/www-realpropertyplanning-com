@@ -85,7 +85,18 @@ export default function ProviderTile({
         insideOverlay = e.clientX >= or.left && e.clientX <= or.right && e.clientY >= or.top && e.clientY <= or.bottom;
       }
 
-      if (!insideTile && !insideOverlay) handleLeave();
+      if (insideTile || insideOverlay) {
+        // Pointer is safely inside one of the two zones — cancel any close
+        // timer that was armed while briefly passing through the gap
+        // between them, so it doesn't fire late and close the panel out
+        // from under the user after they've already reached it.
+        if (closeTimer.current) {
+          clearTimeout(closeTimer.current);
+          closeTimer.current = null;
+        }
+      } else {
+        handleLeave();
+      }
     };
     const onLeaveWindow = () => handleLeave();
     window.addEventListener("mousemove", onMove);
