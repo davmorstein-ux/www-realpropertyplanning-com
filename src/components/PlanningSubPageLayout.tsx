@@ -56,7 +56,12 @@ const PlanningSubPageLayout = ({
             src={heroImage}
             alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async" width={1920} height={487} />
+            loading="eager"
+            sizes="100vw"
+            decoding="async"
+            width={1920}
+            height={487}
+          />
         </section>
 
         {/* BLUE BAND */}
@@ -65,16 +70,15 @@ const PlanningSubPageLayout = ({
         {/* BODY */}
         <section className="py-14 md:py-20 bg-cream">
           <div className="container px-5 md:px-8">
-            <RoadmapDropdown
-              topics={planningBeforeACrisisTopics}
-              accentColor="#721d24"
-              currentPath={canonicalPath}
-              defaultOpen={false}
-            />
-            <article
-              className="max-w-3xl mx-auto text-foreground"
-              style={{ fontSize: "18px", lineHeight: 1.75 }}
-            >
+            <div className="max-w-3xl mx-auto mb-10 md:mb-14">
+              <RoadmapDropdown
+                topics={planningBeforeACrisisTopics}
+                accentColor="#721d24"
+                currentPath={canonicalPath}
+                mode="current"
+              />
+            </div>
+            <article className="max-w-3xl mx-auto text-foreground" style={{ fontSize: "18px", lineHeight: 1.75 }}>
               {children}
             </article>
           </div>
@@ -101,11 +105,7 @@ const PlanningSubPageLayout = ({
                   info@realpropertyplanning.com
                 </a>
               </p>
-              <Link
-                to="/contact"
-                className="gold-cta inline-flex items-center"
-                style={{ fontSize: "15px" }}
-              >
+              <Link to="/contact" className="gold-cta inline-flex items-center" style={{ fontSize: "15px" }}>
                 Get in Touch
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <polyline points="9 18 15 12 9 6" />
@@ -141,14 +141,10 @@ export const SubH2 = ({ children }: { children: ReactNode }) => (
 );
 
 export const SubH3 = ({ children }: { children: ReactNode }) => (
-  <h3 className="font-serif text-[20px] md:text-[23px] font-semibold text-navy leading-snug mt-7 mb-3">
-    {children}
-  </h3>
+  <h3 className="font-serif text-[20px] md:text-[23px] font-semibold text-navy leading-snug mt-7 mb-3">{children}</h3>
 );
 
-export const P = ({ children }: { children: ReactNode }) => (
-  <p className="mb-5">{children}</p>
-);
+export const P = ({ children }: { children: ReactNode }) => <p className="mb-5">{children}</p>;
 
 export const UL = ({ children }: { children: ReactNode }) => (
   <ul className="list-disc pl-6 mb-6 space-y-2">{children}</ul>
