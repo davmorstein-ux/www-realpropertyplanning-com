@@ -3545,15 +3545,6 @@ main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-la
     padding-left: 1.25rem !important;
   }
 }
-/* FIX v2: don't rely on JS-measured --header-height (unreliable with
-   this site's prerendering). Use fixed values matching the header's
-   actual rendered height at each breakpoint instead. */
 #main-content {
-  padding-top: 132px !important;
-}
-
-@media (max-width: 768px) {
-  #main-content {
-    padding-top: 152px !important;
-  }
+  padding-top: var(--header-height, 0px) !important;
 }
