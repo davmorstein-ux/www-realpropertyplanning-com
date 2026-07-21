@@ -3545,6 +3545,3 @@ main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-la
     padding-left: 1.25rem !important;
   }
 }
-#main-content {
-  padding-top: var(--header-height, 0px) !important;
-}
