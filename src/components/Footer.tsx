@@ -49,7 +49,7 @@ const Footer = () => {
         }
         .rpp-footer-nap {
           font-family: Inter, system-ui, sans-serif !important;
-          font-size: 13px !important;
+          font-size: 16px !important;
           color: rgba(255,255,255,0.65) !important;
           display: flex !important;
           align-items: center !important;
@@ -58,7 +58,7 @@ const Footer = () => {
           text-decoration: none !important;
           transition: color 0.15s ease !important;
         }
-        .rpp-footer-nap:hover { color: #cd4a55 !important; }
+        .rpp-footer-nap:hover { color: #e0737d !important; }
         .rpp-footer-disclaimer {
           font-family: Inter, system-ui, sans-serif !important;
           font-size: 11px !important;
