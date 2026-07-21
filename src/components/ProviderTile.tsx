@@ -141,6 +141,7 @@ export default function ProviderTile({
           />
           <div
             ref={overlayRef}
+            className="rpp-provider-bio-scroll"
             style={{
               position: "fixed",
               top: "80px",
