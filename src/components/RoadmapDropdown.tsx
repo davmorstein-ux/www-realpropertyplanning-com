@@ -14,10 +14,11 @@ interface RoadmapDropdownProps {
    *  topic for blue highlighting, and (in "current" mode) which single
    *  topic to display. */
   currentPath?: string;
-  /** "dropdown" (default) shows the full collapsible list of every topic.
-   *  "current" shows only the active topic as a static, non-expandable
-   *  indicator — no list, no toggle, nothing else to read. */
-  mode?: "dropdown" | "current";
+  /** "dropdown" (default) shows a collapsible toggle box that expands to
+   *  list every topic. "current" shows only the active topic as a static
+   *  indicator. "list" shows every topic as a plain, always-visible list —
+   *  no box, no border, no toggle — with the current one highlighted blue. */
+  mode?: "dropdown" | "current" | "list";
 }
 
 const ACTIVE_COLOR = "#1f6fb2";
@@ -78,6 +79,46 @@ const RoadmapDropdown = ({
         >
           {activeTopic.title}
         </span>
+      </div>
+    );
+  }
+
+  if (mode === "list") {
+    return (
+      <div style={{ maxWidth: 680, margin: "0 auto 40px" }}>
+        {topics.map((topic, i) => {
+          const isActive = currentPath === topic.href;
+          const itemStyle: CSSProperties = {
+            display: "flex",
+            alignItems: "center",
+            gap: 14,
+            padding: "10px 0",
+            textDecoration: "none",
+          };
+          return (
+            <Link key={topic.href} to={topic.href} style={itemStyle}>
+              <span
+                aria-hidden="true"
+                style={{
+                  width: 28,
+                  height: 28,
+                  borderRadius: "50%",
+                  background: isActive ? ACTIVE_COLOR : accentColor,
+                  color: "#ffffff",
+                  fontSize: 14,
+                  fontWeight: 700,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexShrink: 0,
+                }}
+              >
+                {i + 1}
+              </span>
+              <span style={{ fontSize: 16, fontWeight: 600, color: "#280a0c", lineHeight: 1.4 }}>{topic.title}</span>
+            </Link>
+          );
+        })}
       </div>
     );
   }
