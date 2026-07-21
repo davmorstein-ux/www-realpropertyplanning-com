@@ -88,7 +88,7 @@ const RPPHomeV3 = () => {
               }}
             />
             {/* Tagline — two lines as separate spans; also the page's semantic H1 */}
-<h1 id="rpp-tagline" style={{ textAlign: "center", margin: 0, fontWeight: 600 }}>
+<h1 id="rpp-tagline" style={{ textAlign: "center", margin: 0, width: "100%", fontWeight: 600 }}>
               <span
                 style={{
                   display: "block",
