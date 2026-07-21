@@ -47,6 +47,7 @@ export default function ProviderTile({
   const [visible, setVisible] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const overlayRef = useRef<HTMLDivElement | null>(null);
 
   const handleEnter = () => {
     if (!bio) return;
@@ -64,17 +65,27 @@ export default function ProviderTile({
   };
 
   // Robust dismissal: while hovered, watch the document pointer and close
-  // as soon as it leaves the tile's bounding rect. Guards against missed
-  // mouseleave events caused by interior elements, fast pointer movement,
-  // or portaled overlays.
+  // as soon as it leaves BOTH the tile's bounding rect AND the overlay
+  // panel's own bounding rect. The panel is fixed-positioned elsewhere on
+  // screen (not nested inside the tile visually), so checking only the
+  // tile's rect closed the panel the moment the pointer moved toward the
+  // panel itself — e.g. to reach its internal scrollbar.
   useEffect(() => {
     if (!hovered || !bio) return;
     const onMove = (e: MouseEvent) => {
       const el = wrapperRef.current;
       if (!el) return;
       const r = el.getBoundingClientRect();
-      const inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
-      if (!inside) handleLeave();
+      const insideTile = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+
+      let insideOverlay = false;
+      const overlayEl = overlayRef.current;
+      if (overlayEl) {
+        const or = overlayEl.getBoundingClientRect();
+        insideOverlay = e.clientX >= or.left && e.clientX <= or.right && e.clientY >= or.top && e.clientY <= or.bottom;
+      }
+
+      if (!insideTile && !insideOverlay) handleLeave();
     };
     const onLeaveWindow = () => handleLeave();
     window.addEventListener("mousemove", onMove);
@@ -123,6 +134,7 @@ export default function ProviderTile({
             }}
           />
           <div
+            ref={overlayRef}
             style={{
               position: "fixed",
               top: "80px",
