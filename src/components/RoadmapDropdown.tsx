@@ -78,6 +78,7 @@ const RoadmapDropdown = ({
         >
           {topics.map((topic, i) => {
             const isAnchor = topic.href.startsWith("#");
+            const isActive = currentPath === topic.href;
             const itemStyle: CSSProperties = {
               display: "flex",
               alignItems: "center",
@@ -85,6 +86,7 @@ const RoadmapDropdown = ({
               padding: "14px 22px",
               textDecoration: "none",
               borderTop: i > 0 ? "1px solid #f0e8e5" : "none",
+              background: isActive ? "#eaf2fa" : "transparent",
             };
             const numberBadge = (
               <span
@@ -93,7 +95,7 @@ const RoadmapDropdown = ({
                   width: 28,
                   height: 28,
                   borderRadius: "50%",
-                  background: accentColor,
+                  background: isActive ? "#1f6fb2" : accentColor,
                   color: "#ffffff",
                   fontSize: 14,
                   fontWeight: 700,
