@@ -10,6 +10,8 @@ interface RoadmapDropdownProps {
   topics: RoadmapTopic[];
   itemLabel?: string;
   accentColor?: string;
+  currentPath?: string;
+  defaultOpen?: boolean;
 }
 
 /**
@@ -18,8 +20,14 @@ interface RoadmapDropdownProps {
  * see the full scope of a multi-page guide before committing to click
  * through it one page at a time.
  */
-const RoadmapDropdown = ({ topics, itemLabel = "topics", accentColor = "#721d24" }: RoadmapDropdownProps) => {
-  const [open, setOpen] = useState(false);
+const RoadmapDropdown = ({
+  topics,
+  itemLabel = "topics",
+  accentColor = "#721d24",
+  currentPath,
+  defaultOpen = false,
+}: RoadmapDropdownProps) => {
+  const [open, setOpen] = useState(defaultOpen);
 
   return (
     <div style={{ maxWidth: 680, margin: "0 auto 40px" }}>
@@ -70,6 +78,7 @@ const RoadmapDropdown = ({ topics, itemLabel = "topics", accentColor = "#721d24"
         >
           {topics.map((topic, i) => {
             const isAnchor = topic.href.startsWith("#");
+            const isActive = currentPath === topic.href;
             const itemStyle: CSSProperties = {
               display: "flex",
               alignItems: "center",
@@ -77,6 +86,7 @@ const RoadmapDropdown = ({ topics, itemLabel = "topics", accentColor = "#721d24"
               padding: "14px 22px",
               textDecoration: "none",
               borderTop: i > 0 ? "1px solid #f0e8e5" : "none",
+              background: isActive ? "#eaf2fa" : "transparent",
             };
             const numberBadge = (
               <span
@@ -85,7 +95,7 @@ const RoadmapDropdown = ({ topics, itemLabel = "topics", accentColor = "#721d24"
                   width: 28,
                   height: 28,
                   borderRadius: "50%",
-                  background: accentColor,
+                  background: isActive ? "#1f6fb2" : accentColor,
                   color: "#ffffff",
                   fontSize: 14,
                   fontWeight: 700,
