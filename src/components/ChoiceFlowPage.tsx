@@ -66,6 +66,17 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                 </>
               )}
 
+              {!isRoot && (
+                <div className="mb-6 text-center">
+                  <Link
+                    to="/helping-an-aging-parent"
+                    className="inline-flex items-center gap-2 text-navy font-semibold text-base hover:text-[#1f6fb2] transition-colors underline underline-offset-2"
+                  >
+                    ← Back to Start
+                  </Link>
+                </div>
+              )}
+
               {/* Heading */}
               <header className="mb-10 text-center">
                 {!isRoot && !node.heroImage && !node.heroBandTitle && (
