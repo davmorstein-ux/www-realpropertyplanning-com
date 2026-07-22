@@ -226,7 +226,7 @@ const Contact = () => {
                       <div className="space-y-2">
                         <Label htmlFor="role">I am a *</Label>
                         <Select value={role} onValueChange={setRole} required>
-                          <SelectTrigger>
+                          <SelectTrigger id="role">
                             <SelectValue placeholder="Select one" />
                           </SelectTrigger>
                           <SelectContent>
