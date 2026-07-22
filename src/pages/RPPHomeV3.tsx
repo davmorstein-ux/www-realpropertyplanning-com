@@ -282,12 +282,7 @@ const RPPHomeV3 = () => {
                   className="coc-heading"
                   style={{
                     fontFamily: "Georgia, serif",
-                    fontSize: "40px",
-                    fontWeight: 900,
-                    margin: "0 0 20px",
-                    lineHeight: 1.1,
                     textAlign: "center",
-                    whiteSpace: "nowrap",
                   }}
                 >
                   <span style={{ color: "#272421" }}>Cost of Care</span>{" "}
