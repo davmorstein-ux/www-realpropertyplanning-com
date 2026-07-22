@@ -63,7 +63,7 @@ header nav {
   height: 100% !important;
 }
 nav a,
-nav button,
+nav button:not([data-nav-button]),
 [class*="nav-item"],
 [class*="NavItem"] {
   display: inline-flex !important;
