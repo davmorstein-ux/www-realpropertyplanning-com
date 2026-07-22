@@ -82,7 +82,7 @@ const EstateProbateInheritedProperty = () => {
           />
         </section>
 
-        <HeroBandTitle>Estate, Probate & Inherited Property</HeroBandTitle>
+        <HeroBandTitle as="h1">Estate, Probate & Inherited Property</HeroBandTitle>
 
         {/* TOPICS TO EXPLORE */}
         <section className="py-14 md:py-20 bg-cream">
