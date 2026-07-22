@@ -77,7 +77,7 @@ const RPPHomeV3 = () => {
             }}
           >
             {/* Tagline — two lines as separate spans */}
-            <div id="rpp-tagline" style={{ textAlign: "center" }}>
+            <h1 id="rpp-tagline" style={{ textAlign: "center", margin: 0 }}>
               <span
                 style={{
                   display: "block",
@@ -85,7 +85,7 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(16px, 2.2vw, 32px)",
                   fontWeight: 600,
                   fontStyle: "italic",
-                  color: "#0000FF",
+                  color: "#7f1d1d",
                   lineHeight: 1,
                   letterSpacing: "0.01em",
                   textShadow: "0 1px 4px rgba(255,255,255,0.7)",
@@ -101,7 +101,7 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(16px, 2.2vw, 32px)",
                   fontWeight: 600,
                   fontStyle: "italic",
-                  color: "#0000FF",
+                  color: "#7f1d1d",
                   lineHeight: 1,
                   letterSpacing: "0.01em",
                   textShadow: "0 1px 4px rgba(255,255,255,0.7)",
@@ -110,7 +110,7 @@ const RPPHomeV3 = () => {
               >
                 and later life transitions
               </span>
-            </div>
+            </h1>
 
             <a
               href="#rpp-start-here"
