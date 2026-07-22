@@ -308,11 +308,9 @@ const BuildingYourTrustedProfessionalTeam = () => {
               width={1920}
               height={510}
             />
-            <HeroBandTitle as="div">A Guide to Independent Professionals</HeroBandTitle>
+            <HeroBandTitle as="h1">A Guide to Trusted, Independent Professionals</HeroBandTitle>
           </div>
         </section>
-
-        <h1 className="sr-only">A Guide to Trusted, Independent Professionals</h1>
 
         <div className="container px-6 lg:px-8 pt-8">
           <p className="max-w-3xl mx-auto text-center text-navy/70 text-base leading-relaxed mb-6">
