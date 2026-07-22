@@ -157,7 +157,7 @@ const GuidesAndResources = () => {
         </div>
 
         {/* Blue band — matches site standard */}
-        <HeroBandTitle>Guides & Resources</HeroBandTitle>
+        <HeroBandTitle as="h1">Guides & Resources</HeroBandTitle>
 
         {/* Category Sections */}
         {categories.map((cat, catIndex) => (

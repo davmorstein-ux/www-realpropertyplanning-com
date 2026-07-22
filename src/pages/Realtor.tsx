@@ -133,7 +133,7 @@ const Realtor = () => (
     />
     <Header />
     <main id="main-content">
-      <HeroBandTitle>Real Estate Broker</HeroBandTitle>
+      <HeroBandTitle as="h1">Real Estate Broker</HeroBandTitle>
 
       {/* Featured provider */}
       <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">

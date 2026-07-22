@@ -131,7 +131,7 @@ const Resources = () => {
       <Header />
 
       <main id="main-content">
-        <HeroBandTitle>Resources</HeroBandTitle>
+        <HeroBandTitle as="h1">Resources</HeroBandTitle>
 
         {/* Category Pills */}
         <section className="py-10 md:py-14">

@@ -31,7 +31,7 @@ const StubLayout = ({ title }: Props) => {
             height={521}
           />
         </div>
-        <HeroBandTitle>{title}</HeroBandTitle>
+        <HeroBandTitle as="h1">{title}</HeroBandTitle>
 
         <section style={{ backgroundColor: "hsl(40 20% 98%)", padding: "48px 24px 64px" }}>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>

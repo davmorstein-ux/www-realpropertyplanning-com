@@ -81,7 +81,7 @@ const MortgageLenders = () => (
     <BreadcrumbSchema items={[{ name: "Mortgage Lenders", url: "/mortgage-lenders" }]} />
     <Header />
     <main id="main-content">
-      <HeroBandTitle>Featured Mortgage Lenders</HeroBandTitle>
+      <HeroBandTitle as="h1">Featured Mortgage Lenders</HeroBandTitle>
 
       <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-secondary">
         <div className="container px-6 lg:px-8">

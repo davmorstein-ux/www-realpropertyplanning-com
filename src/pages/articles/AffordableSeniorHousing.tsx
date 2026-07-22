@@ -60,7 +60,7 @@ const AffordableSeniorHousing = () => {
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
               loading="eager" sizes="100vw" decoding="async" width={1904} height={521} />
           </div>
-          <HeroBandTitle>{"Affordable Senior Housing"}</HeroBandTitle>
+          <HeroBandTitle as="h1">{"Affordable Senior Housing"}</HeroBandTitle>
         </>
 
         {/* Article */}

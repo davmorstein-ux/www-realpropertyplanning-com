@@ -75,7 +75,7 @@ const AFHManagementCompanies = () => (
         </div>
       </section>
 
-      <HeroBandTitle>AFH Management Companies</HeroBandTitle>
+      <HeroBandTitle as="h1">AFH Management Companies</HeroBandTitle>
 
       {/* Aura Living Care */}
       <section style={{ background: "#f7f4ef", padding: "72px 24px" }}>

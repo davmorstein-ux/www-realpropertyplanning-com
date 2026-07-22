@@ -98,7 +98,7 @@ const AFHCalculators: React.FC = () => {
       <main id="main-content" className="min-h-screen" style={{ paddingTop: 80, background: "#f0f3f6" }}>
         <section className="bg-white border-b border-slate-200 py-10 md:py-14">
           <div className="max-w-3xl mx-auto px-6">
-            <HeroBandTitle>AFH Calculators</HeroBandTitle>
+            <HeroBandTitle as="h1">AFH Calculators</HeroBandTitle>
             <p className="text-[18px] md:text-[19px] text-slate-700 mt-4 leading-relaxed">
               Professional financial tools built exclusively for Washington State Adult Family Homes.
             </p>

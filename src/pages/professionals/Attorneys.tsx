@@ -71,7 +71,7 @@ const Attorneys = () => (
     <main id="main-content">
       <section className="w-full bg-secondary" style={{ marginTop: 0, paddingTop: 0 }}>
         <div className="container px-6 lg:px-8 py-10 md:py-14" />
-        <HeroBandTitle compact>Legal Professionals</HeroBandTitle>
+        <HeroBandTitle as="h1" compact>Legal Professionals</HeroBandTitle>
       </section>
 
       <section className="py-16 lg:py-24 bg-background">

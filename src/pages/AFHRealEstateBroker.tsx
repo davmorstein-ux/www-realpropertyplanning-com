@@ -157,7 +157,7 @@ const AFHRealEstateBroker = () => (
           </p>
         </div>
       </section>{" "}
-      <HeroBandTitle>AFH Real Estate Broker</HeroBandTitle>
+      <HeroBandTitle as="h1">AFH Real Estate Broker</HeroBandTitle>
       {/* Featured Broker + Why You Need a Specialist — side by side */}
       <section style={{ background: "#f7f4ef", padding: "72px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>

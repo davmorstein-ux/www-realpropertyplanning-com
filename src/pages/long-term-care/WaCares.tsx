@@ -36,7 +36,7 @@ const WaCares = () => {
             height={521}
           />
         </div>
-        <HeroBandTitle>
+        <HeroBandTitle as="h1">
           WA Cares Fund: How WA Cares Fits Into Long-Term Care Planning and Housing Decisions
         </HeroBandTitle>
 

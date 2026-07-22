@@ -105,7 +105,7 @@ const AFHResources = () => (
         </div>
       </section>
 
-      <HeroBandTitle>AFH Resource Library</HeroBandTitle>
+      <HeroBandTitle as="h1">AFH Resource Library</HeroBandTitle>
 
       {/* Featured Articles Carousel */}
       <AFHCarousel

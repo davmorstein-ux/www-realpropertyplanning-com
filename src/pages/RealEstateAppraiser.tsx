@@ -23,7 +23,7 @@ const RealEstateAppraiser = () => (
     />
     <Header />
     <main id="main-content">
-      <HeroBandTitle>Real Estate Appraisers</HeroBandTitle>
+      <HeroBandTitle as="h1">Real Estate Appraisers</HeroBandTitle>
 
       {/* Featured tile */}
       <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">

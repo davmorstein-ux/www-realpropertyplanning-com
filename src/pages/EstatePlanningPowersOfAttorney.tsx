@@ -28,7 +28,7 @@ const EstatePlanningPowersOfAttorney = () => (
             className="max-w-full h-auto max-h-[420px] object-contain"
             loading="eager" sizes="100vw" decoding="async" width={1254} height={1254} />
         </div>
-        <HeroBandTitle compact>Estate Planning Attorney</HeroBandTitle>
+        <HeroBandTitle as="h1" compact>Estate Planning Attorney</HeroBandTitle>
       </section>
 
       <FeaturedProviderPlaceholder

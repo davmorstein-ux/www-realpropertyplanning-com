@@ -62,7 +62,7 @@ const SeniorHousingOptions = () => {
               height={521}
             />
           </div>
-          <HeroBandTitle>{"Senior Housing Options"}</HeroBandTitle>
+          <HeroBandTitle as="h1">{"Senior Housing Options"}</HeroBandTitle>
         </>
 
         {/* Article */}

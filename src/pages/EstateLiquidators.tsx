@@ -24,7 +24,7 @@ const EstateLiquidators = () => (
     <BreadcrumbSchema items={[{ name: "Estate Liquidators", url: "/estate-liquidators" }]} />
     <Header />
     <main id="main-content">
-      <HeroBandTitle>Estate Liquidators</HeroBandTitle>
+      <HeroBandTitle as="h1">Estate Liquidators</HeroBandTitle>
 
       <section className="py-8 md:py-12 bg-secondary">
         <div className="container px-6 lg:px-8">

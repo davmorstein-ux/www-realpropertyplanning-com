@@ -37,7 +37,7 @@ const HospitalDischargePlanning = () => {
             height={521}
           />
         </div>
-        <HeroBandTitle>Planning Your Hospital Discharge: A Guide for Washington Families</HeroBandTitle>
+        <HeroBandTitle as="h1">Planning Your Hospital Discharge: A Guide for Washington Families</HeroBandTitle>
 
         <section className="bg-[hsl(40,20%,98%)] px-6 pt-12 pb-16">
           <div className="max-w-[760px] mx-auto">

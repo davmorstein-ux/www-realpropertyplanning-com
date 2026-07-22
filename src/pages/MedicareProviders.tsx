@@ -94,7 +94,7 @@ const MedicareProviders = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <HeroBandTitle>Medicare Providers in Washington State</HeroBandTitle>
+      <HeroBandTitle as="h1">Medicare Providers in Washington State</HeroBandTitle>
       <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">

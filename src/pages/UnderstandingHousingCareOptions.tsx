@@ -136,7 +136,7 @@ const UnderstandingHousingCareOptions = () => {
             sizes="100vw"
           />
         </section>
-        <HeroBandTitle>Understanding Housing and Care Options</HeroBandTitle>
+        <HeroBandTitle as="h1">Understanding Housing and Care Options</HeroBandTitle>
 
         {/* INTRO */}
         <section className="bg-background pt-10 pb-6 lg:pt-14 lg:pb-8">

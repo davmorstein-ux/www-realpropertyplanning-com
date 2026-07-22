@@ -116,7 +116,7 @@ const Sitemap = () => {
             loading="eager" sizes="100vw" decoding="async" width={1920} height={473} />
         </section>
 
-        <HeroBandTitle>Site Map</HeroBandTitle>
+        <HeroBandTitle as="h1">Site Map</HeroBandTitle>
 
 
         <section className="py-16 lg:py-20 bg-background">

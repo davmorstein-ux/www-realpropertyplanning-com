@@ -36,7 +36,7 @@ const MedicaidAndLongTermCare = () => {
             height={521}
           />
         </div>
-        <HeroBandTitle>Medicaid &amp; Long-Term Care in Washington State: What Families Need to Know</HeroBandTitle>
+        <HeroBandTitle as="h1">Medicaid &amp; Long-Term Care in Washington State: What Families Need to Know</HeroBandTitle>
 
         <section className="bg-[hsl(40,20%,98%)] px-6 pt-12 pb-16">
           <div className="max-w-[760px] mx-auto">

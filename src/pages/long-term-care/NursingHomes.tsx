@@ -36,7 +36,7 @@ const NursingHomes = () => {
             height={521}
           />
         </div>
-        <HeroBandTitle>Nursing Homes in Washington State: What Families Need to Know</HeroBandTitle>
+        <HeroBandTitle as="h1">Nursing Homes in Washington State: What Families Need to Know</HeroBandTitle>
 
         <section className="bg-[hsl(40,20%,98%)] px-6 pt-12 pb-16">
           <div className="max-w-[760px] mx-auto">

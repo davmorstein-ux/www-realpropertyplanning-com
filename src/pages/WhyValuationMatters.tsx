@@ -124,7 +124,7 @@ const WhyValuationMatters = () => {
           loading="eager"
           fetchPriority="high"
           style={{ display: 'block' }} sizes="100vw" width={1902} height={459} />
-        <HeroBandTitle>Pricing &amp; Valuation Expertise</HeroBandTitle>
+        <HeroBandTitle as="h1">Pricing &amp; Valuation Expertise</HeroBandTitle>
       </section>
 
       {/* Quick Answer accordion */}

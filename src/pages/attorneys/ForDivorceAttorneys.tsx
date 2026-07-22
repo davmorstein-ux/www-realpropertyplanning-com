@@ -58,7 +58,7 @@ const ForDivorceAttorneys = () => (
     <main id="main-content">
       {/* Hero */}
       <section className="w-full bg-secondary" style={{ marginTop: 0, paddingTop: 0 }}>
-        <HeroBandTitle compact>Divorce Attorney</HeroBandTitle>
+        <HeroBandTitle as="h1" compact>Divorce Attorney</HeroBandTitle>
       </section>
 
       {/* Featured Attorneys */}

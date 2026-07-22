@@ -77,7 +77,7 @@ const ExecutorResponsibilitiesFirstSteps = () => {
           />
         </section>
 
-        <HeroBandTitle>SERVING&nbsp; AS&nbsp; EXECUTOR&nbsp; &amp;&nbsp; TRUSTEE</HeroBandTitle>
+        <HeroBandTitle as="h1">SERVING&nbsp; AS&nbsp; EXECUTOR&nbsp; &amp;&nbsp; TRUSTEE</HeroBandTitle>
 
         {/* TOPICS TO EXPLORE */}
         <section className="py-14 md:py-20 bg-cream">

@@ -101,7 +101,7 @@ const InheritedHouseWashington = () => (
             width={1829}
             height={640}
           />
-          <HeroBandTitle as="div">Inherited Property</HeroBandTitle>
+          <HeroBandTitle as="h1">Inherited Property</HeroBandTitle>
         </div>
       </section>
 

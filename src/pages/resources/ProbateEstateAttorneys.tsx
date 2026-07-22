@@ -33,7 +33,7 @@ const ProbateEstateAttorneys = () => (
             className="max-w-full h-auto max-h-[420px] object-contain"
             loading="eager" sizes="100vw" decoding="async" width={1254} height={1254} />
         </div>
-        <HeroBandTitle compact>Probate Attorney</HeroBandTitle>
+        <HeroBandTitle as="h1" compact>Probate Attorney</HeroBandTitle>
       </section>
 
       <FeaturedProviderPlaceholder

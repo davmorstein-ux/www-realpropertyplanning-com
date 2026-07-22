@@ -91,7 +91,7 @@ const Contact = () => {
               width={1983}
               height={583}
             />
-            <HeroBandTitle>Get Connected</HeroBandTitle>
+            <HeroBandTitle as="h1">Get Connected</HeroBandTitle>
           </div>
         </section>
 
