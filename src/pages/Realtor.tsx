@@ -141,7 +141,7 @@ const Realtor = () => (
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             <ProviderTile
               name="David Stein"
-              title="President, Real Property Planning"
+              title="Washington State Licensed Real Estate Broker"
               company="eXp Realty"
               photo={davidSteinPhoto}
               photoAlt="Photo of David Stein"
@@ -160,6 +160,10 @@ As a broker with eXp Realty, he combines deep local knowledge with a powerful na
 Specialties: Adult Family Home sales · Probate, estate & trust properties · Executors, trustees & families navigating inherited real estate across Washington State."
             />
           </div>
+          <p className="max-w-3xl mx-auto text-center text-muted-foreground text-sm mt-6 leading-relaxed">
+            David Stein is Real Property Planning's founder and a member of its professional network. His real estate
+            brokerage services are provided independently through eXp Realty — not through Real Property Planning.
+          </p>
         </div>
       </section>
 
