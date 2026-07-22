@@ -114,7 +114,10 @@ const Header = () => {
           color: "#fff",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+        <nav
+          aria-label="Primary"
+          style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}
+        >
           {/* LEFT: WaterfallNav + logo */}
           <div style={{ display: "flex", alignItems: "center", gap: 14, flexShrink: 0 }}>
             <WaterfallNav />
@@ -162,7 +165,7 @@ const Header = () => {
               {isMobile ? "CALL" : "(206) 900-3015"}
             </a>
           </div>
-        </div>
+        </nav>
 
         {/* Always-visible site search — sits under the nav on every page */}
         <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
