@@ -20,10 +20,7 @@ const SiteSearchBar = () => {
     const q = query.trim().toLowerCase();
     if (!q) return [];
     return siteSearchIndex
-      .filter(
-        (entry) =>
-          entry.label.toLowerCase().includes(q) || entry.path.toLowerCase().includes(q)
-      )
+      .filter((entry) => entry.label.toLowerCase().includes(q) || entry.path.toLowerCase().includes(q))
       .slice(0, 8);
   }, [query]);
 
@@ -58,7 +55,7 @@ const SiteSearchBar = () => {
           boxSizing: "border-box",
         }}
       >
-        <Search size={20} color="#6b1b22" strokeWidth={2.25} style={{ flexShrink: 0 }} />
+        <Search size={20} color="#6b1b22" strokeWidth={2.25} style={{ flexShrink: 0 }} aria-hidden="true" />
         <input
           value={query}
           onChange={(e) => {
