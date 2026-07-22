@@ -3460,11 +3460,11 @@ main #rpp-orientation div {
 }
 #rpp-tagline {
   font-size: clamp(26px, 3.5vw, 42px) !important;
-  color: #0000FF !important;
+  color: #6f2a30 !important;
 }
 #rpp-tagline {
   font-size: clamp(26px, 3.5vw, 42px) !important;
-  color: #0000FF !important;
+  color: #7f1d1d !important;
 }
 
 /* Tagline + funnel heading — final overrides, must stay at bottom */
@@ -3473,7 +3473,7 @@ main #rpp-orientation div {
   font-family: "Cormorant Garamond", Georgia, serif !important;
   font-style: italic !important;
   font-weight: 600 !important;
-  color: #0000FF !important;
+  color: #7f1d1d !important;
   line-height: 1.4 !important;
 }
 
@@ -3482,7 +3482,7 @@ main #rpp-orientation div {
 }
 #rpp-tagline span {
   font-size: clamp(22px, 3vw, 42px) !important;
-  color: #0000FF !important;
+  color: #7f1d1d !important;
   font-family: "Cormorant Garamond", Georgia, serif !important;
   font-style: italic !important;
   font-weight: 600 !important;
@@ -3518,7 +3518,6 @@ a[href="/cost-of-care-calculator"] h3.coc-heading {
   font-weight: 900 !important;
   line-height: 1.1 !important;
   margin: 0 0 20px !important;
-  white-space: nowrap !important;
 }
 
 @media (max-width: 640px) {
