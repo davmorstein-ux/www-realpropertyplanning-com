@@ -82,61 +82,17 @@ const PlanningBeforeACrisis = () => {
               </h2>
             </div>
 
-            <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" currentPath={tiles[0].href} />
+            <p className="max-w-3xl mx-auto text-center text-navy/70 text-base leading-relaxed mb-8">
+              Not sure where to start?{" "}
+              <Link
+                to="/contact"
+                className="text-gold font-bold underline underline-offset-2 hover:text-[hsl(var(--gold-dark))]"
+              >
+                Reach out and we'll help you figure out the right first step.
+              </Link>
+            </p>
 
-            <div className="max-w-3xl mx-auto">
-              {(() => {
-                const t = tiles[0];
-                return (
-                  <Link
-                    key={t.title}
-                    to={t.href}
-                    className="interior-tile interior-tile--guide tile-white crisis-tile-outline block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-                    aria-label={t.title}
-                  >
-                    <div className="tile-white__inner h-full relative">
-                      <div className="tile-white__face h-full">
-                        <div className="flex h-full flex-col items-start text-left">
-                          <span
-                            aria-hidden="true"
-                            style={{
-                              width: 28,
-                              height: 28,
-                              borderRadius: "50%",
-                              background: "#1f6fb2",
-                              color: "#ffffff",
-                              fontSize: 14,
-                              fontWeight: 700,
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              flexShrink: 0,
-                              marginBottom: 12,
-                            }}
-                          >
-                            1
-                          </span>
-                          <h3
-                            className="font-serif text-[22px] md:text-[24px] font-semibold leading-snug mb-3"
-                            style={{ color: "#1f6fb2" }}
-                          >
-                            {t.title}
-                          </h3>
-                          <p className="text-foreground text-[15px] leading-relaxed">{t.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })()}
-            </div>
-            <style>{`
-              .crisis-tile-outline .tile-white__face {
-                border: 2px solid #8b2e2e !important;
-                padding: 22px 22px 20px !important;
-                box-sizing: border-box !important;
-              }
-            `}</style>
+            <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" currentPath={tiles[0].href} />
           </div>
         </section>
       </main>
