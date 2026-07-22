@@ -119,12 +119,13 @@ const RPPHomeV3 = () => {
                 alignItems: "center",
                 gap: 8,
                 marginTop: "clamp(14px, 2.2vw, 26px)",
-                background: "#7f1d1d",
-                color: "#ffffff",
+                background: "#ffffff",
+                border: "2px solid #7f1d1d",
+                color: "#7f1d1d",
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 700,
                 fontSize: "clamp(15px, 1.6vw, 18px)",
-                padding: "clamp(12px, 1.6vw, 16px) clamp(22px, 2.8vw, 32px)",
+                padding: "clamp(10px, 1.4vw, 14px) clamp(20px, 2.6vw, 30px)",
                 borderRadius: 8,
                 textDecoration: "none",
                 boxShadow: "0 4px 14px rgba(0,0,0,0.18)",
@@ -136,7 +137,7 @@ const RPPHomeV3 = () => {
                 width="18"
                 height="18"
                 fill="none"
-                stroke="#ffffff"
+                stroke="#7f1d1d"
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
