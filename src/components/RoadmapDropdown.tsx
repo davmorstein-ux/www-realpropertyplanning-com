@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 interface RoadmapTopic {
   title: string;
   href: string;
+  description?: string;
 }
 
 interface RoadmapDropdownProps {
@@ -92,10 +93,10 @@ const RoadmapDropdown = ({
             const itemStyle: CSSProperties = {
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
-              textAlign: "center",
+              alignItems: topic.description ? "flex-start" : "center",
+              textAlign: topic.description ? "left" : "center",
               gap: 8,
-              padding: "16px 12px",
+              padding: "16px 18px",
               textDecoration: "none",
               border: "1px solid #e5ddd0",
               borderRadius: 10,
@@ -132,6 +133,19 @@ const RoadmapDropdown = ({
                 >
                   {topic.title}
                 </span>
+                {topic.description && (
+                  <span
+                    style={{
+                      fontSize: 15,
+                      fontWeight: 400,
+                      color: "#3a3a3a",
+                      lineHeight: 1.5,
+                      textDecoration: "none",
+                    }}
+                  >
+                    {topic.description}
+                  </span>
+                )}
               </Link>
             );
           })}
@@ -139,7 +153,7 @@ const RoadmapDropdown = ({
         <style>{`
           .rpp-roadmap-list-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: ${topics.some((t) => t.description) ? "1fr" : "1fr 1fr"};
             gap: 14px;
           }
           @media (max-width: 560px) {
@@ -210,7 +224,7 @@ const RoadmapDropdown = ({
             const isActive = currentPath === topic.href;
             const itemStyle: CSSProperties = {
               display: "flex",
-              alignItems: "center",
+              alignItems: topic.description ? "flex-start" : "center",
               gap: 14,
               padding: "14px 22px",
               textDecoration: "none",
@@ -232,13 +246,21 @@ const RoadmapDropdown = ({
                   alignItems: "center",
                   justifyContent: "center",
                   flexShrink: 0,
+                  marginTop: topic.description ? 2 : 0,
                 }}
               >
                 {i + 1}
               </span>
             );
             const label = (
-              <span style={{ fontSize: 16, fontWeight: 600, color: "#280a0c", lineHeight: 1.4 }}>{topic.title}</span>
+              <span style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                <span style={{ fontSize: 16, fontWeight: 600, color: "#280a0c", lineHeight: 1.4 }}>{topic.title}</span>
+                {topic.description && (
+                  <span style={{ fontSize: 14, fontWeight: 400, color: "#5a5a5a", lineHeight: 1.5 }}>
+                    {topic.description}
+                  </span>
+                )}
+              </span>
             );
             return isAnchor ? (
               <a key={topic.href} href={topic.href} style={itemStyle} onClick={() => setOpen(false)}>
