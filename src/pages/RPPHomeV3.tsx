@@ -169,8 +169,8 @@ const RPPHomeV3 = () => {
             </div>
 
             {/* Tap hint — mobile only */}
-            <p className="block sm:hidden text-center text-[13px] text-navy/60 font-medium mb-4 tracking-wide">
-              Tap a card to get started
+            <p className="block sm:hidden text-center text-base text-navy font-medium mb-4 tracking-wide">
+              Select a topic to get started
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
