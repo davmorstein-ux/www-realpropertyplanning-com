@@ -315,12 +315,41 @@ const BuildingYourTrustedProfessionalTeam = () => {
         <h1 className="sr-only">A Guide to Trusted, Independent Professionals</h1>
 
         <div className="container px-6 lg:px-8 pt-8">
+          <p className="max-w-3xl mx-auto text-center text-navy/70 text-base leading-relaxed mb-6">
+            Not sure where to start?{" "}
+            <Link
+              to="/contact"
+              className="text-gold font-bold underline underline-offset-2 hover:text-[hsl(var(--gold-dark))]"
+            >
+              Reach out and we'll help you figure out the right first step.
+            </Link>
+          </p>
           <RoadmapDropdown
             topics={[
-              { title: "Legal Professionals", href: "#legal-professionals" },
-              { title: "Financial & Valuation Professionals", href: "#financial-professionals" },
-              { title: "Senior Housing & Care", href: "#senior-housing-care" },
-              { title: "Property & Transition Support", href: "#property-transition-support" },
+              {
+                title: "Legal Professionals",
+                href: "#legal-professionals",
+                description:
+                  "Attorneys covering estate planning, probate, elder law, family law, and real estate — matched to what your situation requires.",
+              },
+              {
+                title: "Financial & Valuation Professionals",
+                href: "#financial-professionals",
+                description:
+                  "CPAs, financial planners, mortgage lenders, and certified appraisers who help make sense of the numbers.",
+              },
+              {
+                title: "Senior Housing & Care",
+                href: "#senior-housing-care",
+                description:
+                  "Advisors and care managers who help evaluate housing options, benefits, and the details of a move.",
+              },
+              {
+                title: "Property & Transition Support",
+                href: "#property-transition-support",
+                description:
+                  "Brokers, liquidators, and closing professionals who handle the property itself, from listing to closing.",
+              },
             ]}
             itemLabel="categories of professionals"
             accentColor="#721d24"
