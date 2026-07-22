@@ -58,7 +58,7 @@ const RPPHomeV3 = () => {
             src="/hero-v2.webp"
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
             className="block w-full object-cover object-center"
-            style={{ height: "clamp(340px, 50vw, 600px)" }}
+            style={{ height: "clamp(240px, 34vw, 420px)" }}
             loading="eager"
             decoding="async"
           />
@@ -76,19 +76,6 @@ const RPPHomeV3 = () => {
               gap: "clamp(6px, 1vw, 12px)",
             }}
           >
-            <img
-              src="/rpp-logo-hero-padded.webp"
-              alt="Real Property Planning"
-              style={{
-                width: "clamp(320px, 70vw, 860px)",
-                maxWidth: "94vw",
-                maxHeight: "78%",
-                height: "auto",
-                objectFit: "contain",
-                display: "block",
-                margin: "0 auto",
-              }}
-            />
             {/* Tagline — two lines as separate spans */}
             <div id="rpp-tagline" style={{ textAlign: "center" }}>
               <span
@@ -124,36 +111,47 @@ const RPPHomeV3 = () => {
                 and later life transitions
               </span>
             </div>
+
+            <a
+              href="#rpp-start-here"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                marginTop: "clamp(14px, 2.2vw, 26px)",
+                background: "#7f1d1d",
+                color: "#ffffff",
+                fontFamily: "'Raleway', sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(15px, 1.6vw, 18px)",
+                padding: "clamp(12px, 1.6vw, 16px) clamp(22px, 2.8vw, 32px)",
+                borderRadius: 8,
+                textDecoration: "none",
+                boxShadow: "0 4px 14px rgba(0,0,0,0.18)",
+              }}
+            >
+              Find the Right Starting Point
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="#ffffff"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+                style={{ flexShrink: 0 }}
+              >
+                <polyline points="19 12 12 19 5 12" />
+                <line x1="12" y1="5" x2="12" y2="19" />
+              </svg>
+            </a>
           </div>
         </div>
 
-        {/* ── Descriptor ───────────────────────────────────────────── */}
-        <section id="rpp-orientation" className="py-6 md:py-9 bg-cream">
-          <div className="w-full px-5 md:px-8">
-            <div className="max-w-[1000px] mx-auto text-center">
-              <p
-                id="rpp-descriptor"
-                style={{
-                  fontFamily: "Georgia, 'Cormorant Garamond', serif",
-                  fontSize: "clamp(18px, 2.2vw, 26px)",
-                  fontWeight: 400,
-                  fontStyle: "normal",
-                  color: "#1B3A6B",
-                  margin: 0,
-                  lineHeight: 1.55,
-                  letterSpacing: "0.01em",
-                  textWrap: "balance" as any,
-                }}
-              >
-                Washington State's leading resource for senior transitions, estate &amp; probate sales, and the Adult
-                Family Home marketplace
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* ── Funnel Tiles ─────────────────────────────────────────── */}
-        <section style={{ backgroundColor: "#f5f2ec", padding: "2.5rem 0 4rem" }}>
+        <section id="rpp-start-here" style={{ backgroundColor: "#f5f2ec", padding: "2.5rem 0 4rem" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
               <h2
@@ -446,6 +444,31 @@ const RPPHomeV3 = () => {
                   </div>
                 </div>
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Descriptor ───────────────────────────────────────────── */}
+        <section id="rpp-orientation" className="py-6 md:py-9 bg-cream">
+          <div className="w-full px-5 md:px-8">
+            <div className="max-w-[1000px] mx-auto text-center">
+              <p
+                id="rpp-descriptor"
+                style={{
+                  fontFamily: "Georgia, 'Cormorant Garamond', serif",
+                  fontSize: "clamp(18px, 2.2vw, 26px)",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  color: "#1B3A6B",
+                  margin: 0,
+                  lineHeight: 1.55,
+                  letterSpacing: "0.01em",
+                  textWrap: "balance" as any,
+                }}
+              >
+                Washington State's leading resource for senior transitions, estate &amp; probate sales, and the Adult
+                Family Home marketplace
+              </p>
             </div>
           </div>
         </section>
