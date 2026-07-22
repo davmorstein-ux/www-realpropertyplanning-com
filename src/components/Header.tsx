@@ -5,81 +5,7 @@ import SiteSearchBar from "./SiteSearchBar";
 
 const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
 
-const TOP_LINKS = [
-  { label: "Home", href: "/" },
-  {
-    label: "Probate & Estate",
-    href: "/probate-estate-sales",
-    items: [
-      { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
-      { label: "For Executors", href: "/executors" },
-      { label: "Executors, POAs & Trustees", href: "/executors" },
-      { label: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
-      { label: "Probate Attorneys", href: "/professionals/probate-attorneys" },
-      { label: "Certified Appraisers", href: "/real-estate-appraiser" },
-      { label: "Estate Liquidators", href: "/estate-liquidators" },
-    ],
-  },
-  {
-    label: "Senior Transitions",
-    href: "/senior-transitions",
-    items: [
-      { label: "Senior Home Sales", href: "/senior-transitions" },
-      { label: "Senior Living Advisors", href: "/senior-living-advisors" },
-      { label: "Senior Move Managers", href: "/senior-move-managers" },
-      { label: "Aging Life Care Managers", href: "/aging-life-care-managers" },
-      { label: "Medicare & Benefits Advisors", href: "/medicare-providers" },
-      { label: "Long-Term Care Options", href: "/long-term-care" },
-    ],
-  },
-  {
-    label: "Resources",
-    href: "/guides-and-resources",
-    items: [
-      { label: "All Resources", href: "/guides-and-resources" },
-      { label: "Cost of Care Calculator", href: "/cost-of-care-calculator" },
-      { label: "Financial Planners", href: "/for-financial-planners" },
-      { label: "CPAs & Accountants", href: "/professionals/cpas" },
-      { label: "Attorneys", href: "/for-attorneys" },
-      { label: "Executors, POAs & Trustees", href: "/executors" },
-      { label: "Mortgage Lenders", href: "/mortgage-lenders" },
-      { label: "Real Estate Brokers", href: "/realtor" },
-      { label: "Certified Appraisers", href: "/real-estate-appraiser" },
-      { label: "Senior Transitions", href: "/senior-transitions", hasFlyout: true },
-    ],
-  },
-  {
-    label: "Articles",
-    href: "/articles",
-    items: [
-      { label: "The Silver Tsunami", href: "/articles/silver-tsunami" },
-      { label: "The Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { label: "Senior Housing Options", href: "/articles/senior-housing-options" },
-      { label: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
-      { label: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },
-      { label: "Independent Living Costs", href: "/articles/independent-living-costs" },
-      { label: "Memory Care Costs", href: "/articles/memory-care-costs" },
-      { label: "CCRC Costs", href: "/articles/ccrc-costs" },
-      { label: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
-      { label: "Aging in Place With Support", href: "/articles/aging-in-place" },
-      { label: "Wills, Trusts, and Other Options", href: "/articles/wills-trusts-other-options" },
-    ],
-  },
-  {
-    label: "AFH Club",
-    href: "/afh-club",
-    items: [
-      { label: "AFH Marketplace", href: "/afh-marketplace" },
-      { label: "AFH Resources", href: "/afh-club/resources" },
-      { label: "AFH Listings", href: "/afh-club/listings" },
-      { label: "Management Companies", href: "/afh-club/management-companies" },
-      { label: "AFH Calculators", href: "/afh-club/calculators" },
-    ],
-  },
-  { label: "Contact", href: "/contact" },
-];
-
-const CONTACT_LINK = TOP_LINKS[TOP_LINKS.length - 1];
+const CONTACT_LINK = { label: "Contact", href: "/contact" };
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
@@ -209,14 +135,13 @@ const Header = () => {
 
           {/* RIGHT: top links + CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0 }}>
-            {!isMobile && (
-              <Link
-                to={CONTACT_LINK.href}
-                className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
-              >
-                {CONTACT_LINK.label}
-              </Link>
-            )}
+            <Link
+              to={CONTACT_LINK.href}
+              className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
+              style={isMobile ? { padding: "10px 6px", fontSize: 12 } : undefined}
+            >
+              {CONTACT_LINK.label}
+            </Link>
             <a
               href="tel:2069003015"
               style={{
@@ -238,31 +163,6 @@ const Header = () => {
             </a>
           </div>
         </div>
-
-        {/* Mobile nav */}
-        {isMobile && (
-          <div
-            style={{
-              display: "flex",
-              gap: 14,
-              marginTop: 8,
-              paddingTop: 6,
-              borderTop: "1px solid rgba(255,255,255,0.08)",
-              overflowX: "auto",
-            }}
-          >
-            {TOP_LINKS.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className={`rpp-top-link${pathname === item.href ? " is-active" : ""}`}
-                style={{ fontSize: 11 }}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        )}
 
         {/* Always-visible site search — sits under the nav on every page */}
         <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
