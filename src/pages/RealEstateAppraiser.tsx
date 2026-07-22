@@ -44,6 +44,10 @@ const RealEstateAppraiser = () => (
               bio="David Stein is a Washington State Certified Residential Appraiser with over 20 years of experience providing independent property valuations for attorneys, executors, trustees, courts, and families across the Puget Sound region. Through Stein Appraisal, he specializes in the appraisal assignments that require precision, defensibility, and an appraiser who understands the legal and fiduciary context — including date-of-death valuations for estate tax returns and probate, retrospective appraisals for prior tax years, divorce and dissolution appraisals accepted by family law courts, and litigation support for disputed property values. His appraisal reports are prepared to meet IRS, court, and lender standards and are regularly relied upon by probate attorneys, CPAs, and estate planners throughout Western Washington. David also holds a Washington State real estate broker license, giving him an unusually complete understanding of both market value and the transaction process — a combination that is especially valuable when an estate or trust property must be both appraised and sold."
             />
           </div>
+          <p className="max-w-3xl mx-auto text-center text-muted-foreground text-sm mt-6 leading-relaxed">
+            David Stein is Real Property Planning's founder and a member of its professional network. His appraisal
+            services are provided independently through Stein Appraisal — not through Real Property Planning.
+          </p>
         </div>
       </section>
 
@@ -55,10 +59,14 @@ const RealEstateAppraiser = () => (
               What Real Estate Appraisers Do
             </h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-              A certified real estate appraiser provides an objective, defensible opinion of a property's value, backed by formal methodology and local market data. Their reports are accepted by courts, lenders, and the IRS — and are often required in probate, estate settlement, divorce, tax appeals, and senior housing decisions.
+              A certified real estate appraiser provides an objective, defensible opinion of a property's value, backed
+              by formal methodology and local market data. Their reports are accepted by courts, lenders, and the IRS —
+              and are often required in probate, estate settlement, divorce, tax appeals, and senior housing decisions.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Unlike a broker's price opinion, a certified appraisal is built on structured analysis and documented evidence. For families, executors, trustees, and attorneys, that difference can be what prevents a dispute, protects a fiduciary, or keeps a transaction on track.
+              Unlike a broker's price opinion, a certified appraisal is built on structured analysis and documented
+              evidence. For families, executors, trustees, and attorneys, that difference can be what prevents a
+              dispute, protects a fiduciary, or keeps a transaction on track.
             </p>
           </div>
         </div>
