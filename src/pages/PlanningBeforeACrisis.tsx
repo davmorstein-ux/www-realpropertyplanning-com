@@ -68,7 +68,7 @@ const PlanningBeforeACrisis = () => {
           />
         </section>
 
-        <HeroBandTitle>Planning Before a Crisis</HeroBandTitle>
+        <HeroBandTitle as="h1">Planning Before a Crisis</HeroBandTitle>
 
         {/* THINGS TO CONSIDER */}
         <section className="py-14 md:py-20 bg-cream">
