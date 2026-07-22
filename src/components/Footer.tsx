@@ -234,6 +234,7 @@ const Footer = () => {
               width={1185}
               height={819}
             />
+            <span className="sr-only"> (opens in a new window)</span>
           </a>
           <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
             <img
@@ -245,6 +246,7 @@ const Footer = () => {
               width={864}
               height={265}
             />
+            <span className="sr-only"> (opens in a new window)</span>
           </a>
           <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
             <img
@@ -256,6 +258,7 @@ const Footer = () => {
               width={423}
               height={512}
             />
+            <span className="sr-only"> (opens in a new window)</span>
           </a>
           <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer">
             <img
@@ -267,6 +270,7 @@ const Footer = () => {
               width={496}
               height={101}
             />
+            <span className="sr-only"> (opens in a new window)</span>
           </a>
         </div>
 
