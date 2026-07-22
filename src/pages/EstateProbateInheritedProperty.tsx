@@ -5,6 +5,8 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
+import PageFAQ from "@/components/PageFAQ";
+import DisclaimerSection from "@/components/DisclaimerSection";
 
 import heroImage from "@/assets/estate-probate-inherited-property-hero-washington.webp";
 import { articleSchema } from "@/lib/schema";
@@ -40,6 +42,39 @@ const tiles = [
     title: "Building Your Professional Team",
     description: "Who you need, when to engage them, and how a coordinated team protects everyone.",
     href: "/estate-probate-inherited-property/professional-team",
+  },
+];
+
+const faqs = [
+  {
+    question: "Does every estate in Washington have to go through probate?",
+    answer:
+      "Not necessarily. Whether probate is required depends on how property was titled, whether a living trust was in place, and the overall size of the estate. Washington also has a simplified process available for smaller estates. An estate or probate attorney can confirm what applies to your specific situation.",
+  },
+  {
+    question: "How is a property's value determined for estate purposes?",
+    answer:
+      "A date-of-death appraisal, completed by a certified appraiser, establishes the property's fair market value as of the date the owner passed away. This figure matters for tax reporting and for dividing the estate fairly among heirs.",
+  },
+  {
+    question: "Who actually has the authority to make decisions about the property?",
+    answer:
+      "Typically, the personal representative (sometimes called the executor) named in the will, or appointed by the court if there isn't a will, holds that authority. Until that authority is formally established, it's generally best to hold off on major decisions like listing the property for sale.",
+  },
+  {
+    question: "Can the home be sold before probate is fully finished?",
+    answer:
+      "In many cases, yes, once the personal representative's authority is established — but the specifics depend on the estate and Washington's probate rules. It's worth confirming timing with the estate attorney handling the probate before moving forward.",
+  },
+  {
+    question: "What if the heirs don't agree on selling versus keeping the property?",
+    answer:
+      "This comes up often. Starting from the same shared, objective information — an honest valuation and a clear picture of carrying costs — tends to make these conversations easier. In some cases a buyout between heirs, or bringing in a neutral third party, helps move things forward.",
+  },
+  {
+    question: "How long does probate and settling the property typically take?",
+    answer:
+      "It varies quite a bit depending on the estate's complexity, but Washington probate commonly takes several months to a year or more. The property itself can often be prepared and marketed in parallel, once authority to act has been established.",
   },
 ];
 
@@ -109,7 +144,15 @@ const EstateProbateInheritedProperty = () => {
             <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" currentPath={tiles[0].href} />
           </div>
         </section>
+
+        <PageFAQ
+          faqs={faqs}
+          heading="Estate, Probate & Inherited Property: Common Questions"
+          eyebrow="Frequently Asked Questions"
+          id="estate-probate-inherited-property"
+        />
       </main>
+      <DisclaimerSection />
       <Footer />
     </div>
   );
