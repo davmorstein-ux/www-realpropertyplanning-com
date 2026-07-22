@@ -410,6 +410,19 @@ const RPPHomeV3 = () => {
                     >
                       AFH Club
                     </h3>
+                    <p
+                      style={{
+                        fontFamily: "'Raleway', sans-serif",
+                        fontWeight: 700,
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        fontSize: 13,
+                        color: "#0a5648",
+                        margin: "0 0 12px",
+                      }}
+                    >
+                      For Adult Family Home Owners &amp; Buyers
+                    </p>
                     <div style={{ width: 64, height: 2, background: "#c8b5b7", margin: "0 0 14px" }} />
                     <div
                       className="rpp-card-desc afh-club-desc"
