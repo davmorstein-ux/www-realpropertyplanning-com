@@ -332,6 +332,7 @@ function NavRail({ categories, activeIndex, onSelect }) {
       {categories.map((cat, i) => (
         <button
           key={cat.label}
+          data-nav-button
           className={`wf-rail-btn${activeIndex === i ? " wf-active" : ""}`}
           style={{
             "--cat-color": cat.color,
@@ -361,7 +362,7 @@ function NavFlyout({ category, onNavigate }) {
     <div className="wf-flyout" style={{ "--cat-color": category.color }}>
       <div className="wf-flyout-heading">{category.label}</div>
       {category.items.map((item) => (
-        <button key={item.href} className="wf-item" onClick={() => onNavigate(item.href)}>
+        <button key={item.href} data-nav-button className="wf-item" onClick={() => onNavigate(item.href)}>
           {item.name}
         </button>
       ))}
@@ -475,7 +476,7 @@ export default function WaterfallNav() {
           >
             <div className="wf-panel-header">
               <span className="wf-what-label">What are you looking for?</span>
-              <button className="wf-close-x" onClick={closePanel} aria-label="Close menu">
+              <button className="wf-close-x" data-nav-button onClick={closePanel} aria-label="Close menu">
                 ✕
               </button>
             </div>
@@ -486,7 +487,7 @@ export default function WaterfallNav() {
             </div>
 
             <div className="wf-close-footer">
-              <button className="wf-close-btn" onClick={closePanel}>
+              <button className="wf-close-btn" data-nav-button onClick={closePanel}>
                 Close Menu
               </button>
             </div>
