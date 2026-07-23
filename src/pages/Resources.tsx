@@ -57,7 +57,7 @@ const groups = [
           "Companies that organize and conduct estate sales and residential clear outs.",
       },
       {
-        href: "/estate-liquidators",
+        href: "/resources/estate-sale-companies",
         title: "Estate Sale Companies",
         description:
           "Companies that organize, price, and conduct estate sales for personal property and household contents.",
@@ -105,7 +105,7 @@ const groups = [
           "Probate, estate, and senior transition property sales throughout Washington State.",
       },
       {
-        href: "/senior-living-advisors",
+        href: "/resources/senior-living-communities",
         title: "Senior Living Communities",
         description:
           "Assisted living, independent living, and memory care communities throughout Washington State.",
@@ -118,20 +118,30 @@ const Resources = () => {
   return (
     <>
       <SEOHead
-        title="Resources | Real Property Planning"
+        title="Find a Professional | Real Property Planning"
         description="Trusted professionals and service providers for probate, estate, and senior transition needs throughout Washington State."
         canonical="https://realpropertyplanning.com/resources"
       />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "https://realpropertyplanning.com" },
-          { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+          { name: "Find a Professional", url: "https://realpropertyplanning.com/resources" },
         ]}
       />
       <Header />
 
       <main id="main-content">
-        <HeroBandTitle as="h1">Resources</HeroBandTitle>
+        <HeroBandTitle as="h1">Find a Professional</HeroBandTitle>
+
+        {/* Looking for guides instead? CTA */}
+        <div className="py-6 text-center px-6">
+          <p className="font-serif text-[17px] text-foreground">
+            Looking for a guide or article instead of a professional?{" "}
+            <Link to="/guides-and-resources" className="text-gold font-bold underline">
+              Browse our Guides &amp; Articles →
+            </Link>
+          </p>
+        </div>
 
         {/* Category Pills */}
         <section className="py-10 md:py-14">

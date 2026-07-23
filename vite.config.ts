@@ -296,10 +296,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Many Tacoma estate homes were built before 1950 and carry decades of deferred maintenance — character-rich houses in the North End and Stadium District, mid-century ramblers in the South End, and post-war homes across Hilltop and Eastside. The right move is rarely \"fix everything\"; it's knowing which targeted repairs the Tacoma buyer pool will actually pay for, and which ones to skip.",
   },
   "/resources": {
-    title: "Resources | Real Property Planning",
+    title: "Find a Professional | Real Property Planning",
     description:
       "Trusted professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
-    h1: "Transition Resources and Professional Directory",
+    h1: "Find a Professional",
     intro:
       "Trusted professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
   },
@@ -404,12 +404,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Read what clients say about working with Real Property Planning for probate property sales, estate transitions, and senior moves throughout Washington State.",
   },
   "/guides-and-resources": {
-    title: "Guides & Resources | Probate, Estate & Senior Transition Guidance | Real Property Planning",
+    title: "Guides & Articles | Probate, Estate & Senior Transition Guidance | Real Property Planning",
     description:
-      "Clear, practical guides for families, executors, trustees, and professionals navigating probate, inherited property, senior transitions, pricing, and real estate decisions in Washington State.",
-    h1: "Guides & Resources",
+      "Clear, practical guides and articles for families, executors, trustees, and professionals navigating probate, inherited property, senior transitions, pricing, and real estate decisions in Washington State.",
+    h1: "Guides & Articles",
     intro:
-      "Practical answers to common questions about probate, inherited homes, senior transitions, pricing, and the professionals who help — written in plain language for families, executors, trustees, and professionals throughout Washington State.",
+      "Practical answers to common questions about probate, inherited homes, senior transitions, and pricing — written in plain language for families, executors, trustees, and professionals throughout Washington State.",
   },
 
   // ─── Counties (remaining 17) — H1 pattern: "{County}, WA" ──────────────

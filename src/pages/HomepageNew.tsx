@@ -29,7 +29,7 @@ const HomepageNew = () => (
         <img
           src={heroAsset.url}
           alt="Real Property Planning — Washington estate and senior transition resources"
-          style={{ display: "block", width: "100%", height: "auto", objectFit: "cover" }}
+          style={{ display: "block", width: "100%", height: "clamp(220px, 32vw, 380px)", objectFit: "cover" }}
           loading="eager"
           decoding="async"
         />

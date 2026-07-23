@@ -56,7 +56,7 @@ const CATEGORIES = [
     label: "Guides & Articles",
     color: "#284dbd",
     items: [
-      { name: "All Resources & Guides", href: "/guides-and-resources" },
+      { name: "All Guides & Articles", href: "/guides-and-resources" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
       { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
       { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
@@ -86,7 +86,7 @@ const CATEGORIES = [
       { name: "AFH Calculators", href: "/afh-club/calculators" },
       { name: "Selling Your AFH at Retirement", href: "/afh-club/selling-your-business-at-retirement" },
       { name: "Cost of Care Calculator", href: "/cost-of-care-calculator" },
-      { name: "Resources", href: "/resources" },
+      { name: "Find a Professional", href: "/resources" },
       { name: "About", href: "/about" },
       { name: "Contact", href: "/contact" },
     ],

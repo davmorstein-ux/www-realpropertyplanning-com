@@ -11,28 +11,6 @@ const GOLD = "#7f2028";
 
 const categories = [
   {
-    label: "Professionals & Service Providers",
-    id: "professionals",
-    articles: [
-      { title: "Aging Life Care Managers", href: "/aging-life-care-managers" },
-      { title: "Certified Appraisers", href: "/real-estate-appraiser" },
-      { title: "CPAs & Accountants", href: "/professionals/cpas" },
-      { title: "Divorce Attorneys", href: "/for-divorce-attorneys" },
-      { title: "Elder Law Attorneys", href: "/professionals/elder-law-attorneys" },
-      { title: "Estate Liquidators", href: "/estate-liquidators" },
-      { title: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
-      { title: "Family Law Attorneys", href: "/professionals/family-law-attorneys" },
-      { title: "Financial Planners & Advisors", href: "/for-financial-planners" },
-      { title: "Medicare & Benefits Advisors", href: "/medicare-providers" },
-      { title: "Mortgage Lenders", href: "/mortgage-lenders" },
-      { title: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
-      { title: "Real Estate Attorneys", href: "/professionals/real-estate-attorneys" },
-      { title: "Real Estate Brokers", href: "/realtor" },
-      { title: "Senior Living Advisors", href: "/senior-living-advisors" },
-      { title: "Senior Move Managers", href: "/senior-move-managers" },
-    ],
-  },
-  {
     label: "Probate & Inherited Property",
     id: "probate-inherited",
     articles: [
@@ -129,14 +107,14 @@ const GuidesAndResources = () => {
   return (
     <>
       <SEOHead
-        title="Guides & Resources | Probate, Estate & Senior Transition Guidance | Real Property Planning"
-        description="Clear, practical guides for families, executors, trustees, and professionals navigating probate, inherited property, senior transitions, pricing, and real estate decisions in Washington State."
+        title="Guides & Articles | Probate, Estate & Senior Transition Guidance | Real Property Planning"
+        description="Clear, practical guides and articles for families, executors, trustees, and professionals navigating probate, inherited property, senior transitions, pricing, and real estate decisions in Washington State."
         canonical="https://realpropertyplanning.com/guides-and-resources"
       />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "https://realpropertyplanning.com" },
-          { name: "Guides & Resources", url: "https://realpropertyplanning.com/guides-and-resources" },
+          { name: "Guides & Articles", url: "https://realpropertyplanning.com/guides-and-resources" },
         ]}
       />
       <Header />
@@ -147,7 +125,7 @@ const GuidesAndResources = () => {
           <img
             src="/resources-hero.webp"
             alt="Seniors reading guides outside a resource center"
-            style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
+            style={{ width: "100%", height: "clamp(220px, 32vw, 380px)", display: "block", objectFit: "cover" }}
             loading="eager"
             sizes="100vw"
             decoding="async"
@@ -157,7 +135,17 @@ const GuidesAndResources = () => {
         </div>
 
         {/* Blue band — matches site standard */}
-        <HeroBandTitle as="h1">Guides & Resources</HeroBandTitle>
+        <HeroBandTitle as="h1">Guides &amp; Articles</HeroBandTitle>
+
+        {/* Looking for a professional? CTA */}
+        <div style={{ background: "#f7f4ef", padding: "28px 24px", textAlign: "center" }}>
+          <p style={{ fontFamily: "Georgia, serif", fontSize: 17, color: "#280a0c", margin: 0 }}>
+            Looking for a professional instead of a guide?{" "}
+            <Link to="/resources" style={{ color: GOLD, fontWeight: 700, textDecoration: "underline" }}>
+              Browse our Find a Professional directory →
+            </Link>
+          </p>
+        </div>
 
         {/* Category Sections */}
         {categories.map((cat, catIndex) => (

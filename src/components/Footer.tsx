@@ -180,7 +180,7 @@ const Footer = () => {
               For Attorneys
             </Link>
             <Link to="/guides-and-resources" className="rpp-footer-link">
-              Guides &amp; Resources
+              Guides &amp; Articles
             </Link>
           </div>
 
