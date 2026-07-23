@@ -13,7 +13,8 @@ serve(async (req) => {
   }
 
   try {
-    const { name, email, phone, role, message, source_page, company_website, form_loaded_at } = await req.json();
+    const { name, email, phone, role, message, source_page, company_website, form_loaded_at, turnstile_token } =
+      await req.json();
 
     // Honeypot: real visitors never see or fill this field. Bots that
     // auto-fill every input on the form will trip it.
@@ -31,6 +32,42 @@ serve(async (req) => {
     if (loadedAt && Date.now() - loadedAt < 3000) {
       console.log("Blocked contact form submission: submitted too quickly to be human");
       return new Response(JSON.stringify({ success: true }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    // Cloudflare Turnstile verification — the primary bot defense. A
+    // request with no token, or an invalid one, is rejected outright.
+    // Any real submission from the actual site will always have a valid
+    // token, so this also catches bots that skip the frontend entirely
+    // and hit this endpoint directly.
+    const turnstileSecret = Deno.env.get("TURNSTILE_SECRET_KEY");
+    if (!turnstileSecret) {
+      console.error("TURNSTILE_SECRET_KEY is not set");
+      return new Response(JSON.stringify({ error: "Server is not configured yet." }), {
+        status: 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    if (!turnstile_token) {
+      return new Response(JSON.stringify({ error: "Verification required. Please try again." }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    const verifyResponse = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ secret: turnstileSecret, response: turnstile_token }),
+    });
+    const verifyResult = await verifyResponse.json();
+
+    if (!verifyResult.success) {
+      console.log("Blocked contact form submission: Turnstile verification failed", verifyResult["error-codes"]);
+      return new Response(JSON.stringify({ error: "Verification failed. Please refresh the page and try again." }), {
+        status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
