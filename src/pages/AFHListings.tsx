@@ -26,6 +26,30 @@ const BackButton = () => (
 );
 
 const AFHListings = () => {
+  const saleValues = afhListings
+    .filter((l) => !l.priceLabel || l.priceLabel === "Asking price")
+    .map((l) => Number(l.price.replace(/[^0-9.]/g, "")))
+    .filter((n) => !Number.isNaN(n) && n > 0);
+
+  const formatPrice = (n: number) =>
+    n >= 1_000_000 ? `$${(n / 1_000_000).toFixed(2)}M` : `$${Math.round(n).toLocaleString()}`;
+
+  const priceRangeLabel =
+    saleValues.length > 0
+      ? `${formatPrice(Math.min(...saleValues))} – ${formatPrice(Math.max(...saleValues))}`
+      : "Contact for pricing";
+
+  const cityCounts = afhListings.reduce<Record<string, number>>((acc, l) => {
+    acc[l.city] = (acc[l.city] || 0) + 1;
+    return acc;
+  }, {});
+  const uniqueCities = Object.keys(cityCounts);
+  const citiesByVolume = [...uniqueCities].sort((a, b) => cityCounts[b] - cityCounts[a]);
+  const locationsLabel =
+    citiesByVolume.length > 3
+      ? `${citiesByVolume.slice(0, 3).join(" · ")} + ${citiesByVolume.length - 3} more`
+      : citiesByVolume.join(" · ");
+
   return (
     <div
       style={{
@@ -160,10 +184,10 @@ const AFHListings = () => {
               }}
             >
               {[
-                { label: "Active listings", value: "8" },
-                { label: "Locations", value: "Edmonds · Kirkland · Lynnwood" },
-                { label: "Price range", value: "$1.45M – $2.43M" },
-                { label: "Updated", value: "June 2026" },
+                { label: "Active listings", value: String(afhListings.length) },
+                { label: "Locations", value: locationsLabel },
+                { label: "Price range", value: priceRangeLabel },
+                { label: "Cities covered", value: String(uniqueCities.length) },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div

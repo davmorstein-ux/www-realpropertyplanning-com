@@ -737,6 +737,64 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Aging in Place & Staying at Home Safely",
     intro: "What aging in place really means — how families evaluate safety, plan ahead, and weigh in-home support against future housing changes.",
   },
+
+  // ===== AFH city-specific for-sale pages (LLM/AI-search AEO pages) =====
+  "/afh-club/for-sale/seattle-wa": {
+    title: "Adult Family Homes For Sale in Seattle, WA | Real Property Planning",
+    description: "Adult Family Homes for sale in Seattle, WA — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
+    h1: "Adult Family Homes For Sale in Seattle, WA",
+    quickAnswerQ: "What Adult Family Homes are for sale in Seattle, WA?",
+    quickAnswerA: "Seattle's Adult Family Home inventory turns over regularly across neighborhoods from West Seattle to Northgate. Current listings — with photos, pricing, and licensing status — are available on this page and update as new properties come to market.",
+    intro: "Seattle's Adult Family Home market sits at the intersection of the city's aging population and its persistently tight housing supply, which together keep demand for licensed AFH care steady across nearly every neighborhood. Every AFH sale in Seattle runs on two parallel tracks: the real estate transaction itself, and the DSHS licensing process that determines who can legally operate the home.",
+  },
+  "/afh-club/for-sale/kirkland-wa": {
+    title: "Adult Family Homes For Sale in Kirkland, WA | Real Property Planning",
+    description: "Adult Family Homes for sale in Kirkland, WA — licensed businesses, properties, or both on the Eastside. Current listings and answers to common AFH buying questions.",
+    h1: "Adult Family Homes For Sale in Kirkland, WA",
+    quickAnswerQ: "What Adult Family Homes are for sale in Kirkland, WA?",
+    quickAnswerA: "Kirkland's Adult Family Home listings update as inventory changes — availability here tends to be limited given the Eastside's high land values, so available properties don't stay listed long. Current listings are shown on this page.",
+    intro: "Kirkland sits at a distinctive point in the Eastside AFH market — strong household incomes, an aging homeowner base, and land values that make new construction of care facilities financially difficult all combine to keep demand for existing licensed homes high.",
+  },
+  "/afh-club/for-sale/renton-wa": {
+    title: "Adult Family Homes For Sale in Renton, WA | Real Property Planning",
+    description: "Adult Family Homes for sale in Renton, WA — licensed businesses, properties, or both in South King County. Current listings and answers to common AFH buying questions.",
+    h1: "Adult Family Homes For Sale in Renton, WA",
+    quickAnswerQ: "What Adult Family Homes are for sale in Renton, WA?",
+    quickAnswerA: "Renton's current AFH listings are shown on this page. As a South King County hub with a diverse mix of housing stock, Renton tends to offer more accessible entry points into AFH ownership than areas closer to Seattle or the Eastside.",
+    intro: "Renton occupies a practical middle ground in the King County AFH market — close enough to Seattle and the Eastside to draw on the same employment base and senior population, while offering more approachable pricing than either.",
+  },
+  "/afh-club/for-sale/lynnwood-wa": {
+    title: "Adult Family Homes For Sale in Lynnwood, WA | Real Property Planning",
+    description: "Adult Family Homes for sale in Lynnwood, WA — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
+    h1: "Adult Family Homes For Sale in Lynnwood, WA",
+    quickAnswerQ: "What Adult Family Homes are for sale in Lynnwood, WA?",
+    quickAnswerA: "Lynnwood consistently has some of the strongest AFH listing activity in Snohomish County, and current listings are shown on this page. As a hub along the I-5 corridor with strong transit access, it draws steady interest from both buyers and operators.",
+    intro: "Lynnwood is one of the more active Adult Family Home markets in Snohomish County — its central location along the I-5 corridor, established residential neighborhoods, and proximity to major medical facilities all make it a natural fit for licensed care.",
+  },
+  "/afh-club/for-sale/edmonds-wa": {
+    title: "Adult Family Homes For Sale in Edmonds, WA | Real Property Planning",
+    description: "Adult Family Homes for sale in Edmonds, WA — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
+    h1: "Adult Family Homes For Sale in Edmonds, WA",
+    quickAnswerQ: "What Adult Family Homes are for sale in Edmonds, WA?",
+    quickAnswerA: "Edmonds has consistently strong AFH inventory, and current listings are shown on this page. As a well-established Puget Sound community with an older housing stock and a large senior population, Edmonds has long been one of Snohomish County's most active AFH markets.",
+    intro: "Edmonds has one of the deepest, most established Adult Family Home markets in Snohomish County. Its housing stock skews older and larger than much of the surrounding area, its senior population is significant, and its proximity to Swedish Edmonds hospital makes it an attractive location for licensed care.",
+  },
+  "/afh-club/for-sale/puyallup-wa": {
+    title: "Adult Family Homes For Sale in Puyallup, WA | Real Property Planning",
+    description: "Adult Family Homes for sale in Puyallup, WA — licensed businesses, properties, or both in Pierce County. Current listings and answers to common AFH buying questions.",
+    h1: "Adult Family Homes For Sale in Puyallup, WA",
+    quickAnswerQ: "What Adult Family Homes are for sale in Puyallup, WA?",
+    quickAnswerA: "Current Puyallup-area AFH listings are shown on this page. As one of Pierce County's fastest-growing communities, Puyallup has seen steady growth in AFH activity alongside its broader residential expansion.",
+    intro: "Puyallup has grown into one of Pierce County's more active residential markets, and its Adult Family Home inventory has grown alongside it — offering a genuinely more accessible entry point into AFH ownership for buyers priced out of King County or the Eastside.",
+  },
+  "/afh-club/selling-your-business-at-retirement": {
+    title: "Selling Your Adult Family Home Business at Retirement | Real Property Planning",
+    description: "Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, transfer your DSHS license, and value your AFH accurately.",
+    h1: "Selling Your AFH Business at Retirement",
+    quickAnswerQ: "I'm planning to retire from running my AFH — should I sell the business and the building together, or separately?",
+    quickAnswerA: "Most retiring owners sell both together, and most buyers prefer it that way — it lets them step directly into an operating home with residents, staff, and licensing already in place. Selling the business and building as a single transaction is usually simpler and often nets more than selling them apart, though separating them can make sense in specific situations, such as keeping the real estate as an investment.",
+    intro: "Running an Adult Family Home for years — sometimes decades — builds something genuinely difficult to walk away from: relationships with residents and families, a trained staff who trust your leadership, and a business with real value beyond the four walls it sits in. Selling an AFH at retirement runs on two tracks that have to work together: the real estate transaction, and the transfer of your DSHS operating license to a new, DSHS-approved owner.",
+  },
 };
 
 const DEFAULT_SHELL_META: RouteMeta = ROUTE_METADATA["/"] || {

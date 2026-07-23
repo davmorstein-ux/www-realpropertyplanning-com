@@ -310,14 +310,14 @@ const AFHValuationEstimator = () => {
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
               >
                 <div>
-                  <label style={labelStyle}>Annual net income ($)</label>
+                  <label style={labelStyle} htmlFor="v-net">Annual net income ($)</label>
                   <input type="number" id="v-net" placeholder="124000" style={inputStyle} />
                   <div style={{ fontSize: 12, color: "#7a5a5d", marginTop: 5 }}>
                     After expenses, before owner salary
                   </div>
                 </div>
                 <div>
-                  <label style={labelStyle}>Annual gross revenue ($)</label>
+                  <label style={labelStyle} htmlFor="v-rev">Annual gross revenue ($)</label>
                   <input type="number" id="v-rev" placeholder="288000" style={inputStyle} />
                 </div>
               </div>
@@ -327,7 +327,7 @@ const AFHValuationEstimator = () => {
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 16 }}
               >
                 <div>
-                  <label style={labelStyle}>Licensed capacity</label>
+                  <label style={labelStyle} htmlFor="v-cap">Licensed capacity</label>
                   <select id="v-cap" style={inputStyle}>
                     <option value="">Select...</option>
                     <option value="3">3 beds</option>
@@ -339,7 +339,7 @@ const AFHValuationEstimator = () => {
                   </select>
                 </div>
                 <div>
-                  <label style={labelStyle}>Occupancy</label>
+                  <label style={labelStyle} htmlFor="v-occ">Occupancy</label>
                   <select id="v-occ" style={inputStyle}>
                     <option value="100">100% full</option>
                     <option value="83">83% (5/6)</option>
@@ -349,7 +349,7 @@ const AFHValuationEstimator = () => {
                   </select>
                 </div>
                 <div>
-                  <label style={labelStyle}>Years operating</label>
+                  <label style={labelStyle} htmlFor="v-yrs">Years operating</label>
                   <select id="v-yrs" style={inputStyle}>
                     <option value="1">Under 2 yrs</option>
                     <option value="3">2–5 years</option>
@@ -363,7 +363,7 @@ const AFHValuationEstimator = () => {
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 0 }}
               >
                 <div>
-                  <label style={labelStyle}>Payer mix</label>
+                  <label style={labelStyle} htmlFor="v-payer">Payer mix</label>
                   <select id="v-payer" style={inputStyle}>
                     <option value="private">Primarily private pay</option>
                     <option value="mixed">Mixed private / Medicaid</option>
@@ -371,7 +371,7 @@ const AFHValuationEstimator = () => {
                   </select>
                 </div>
                 <div>
-                  <label style={labelStyle}>Staffing</label>
+                  <label style={labelStyle} htmlFor="v-staff">Staffing</label>
                   <select id="v-staff" style={inputStyle}>
                     <option value="full">Full staff in place</option>
                     <option value="partial">Partial staff available</option>
@@ -400,11 +400,11 @@ const AFHValuationEstimator = () => {
                 }}
               >
                 <div>
-                  <label style={labelStyle}>Property value est.</label>
+                  <label style={labelStyle} htmlFor="v-prop">Property value est.</label>
                   <input type="number" id="v-prop" placeholder="650000" style={inputStyle} />
                 </div>
                 <div>
-                  <label style={labelStyle}>DSHS license status</label>
+                  <label style={labelStyle} htmlFor="v-dshs">DSHS license status</label>
                   <select id="v-dshs" style={inputStyle}>
                     <option value="active">Active — good standing</option>
                     <option value="conditions">Active — with conditions</option>
@@ -413,7 +413,7 @@ const AFHValuationEstimator = () => {
                   </select>
                 </div>
                 <div>
-                  <label style={labelStyle}>County</label>
+                  <label style={labelStyle} htmlFor="v-county">County</label>
                   <select id="v-county" style={inputStyle}>
                     <option value="king">King</option>
                     <option value="snohomish">Snohomish</option>

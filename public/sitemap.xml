@@ -150,4 +150,13 @@
   <url><loc>https://realpropertyplanning.com/senior-placement</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://realpropertyplanning.com/sell-house-fund-senior-living</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://realpropertyplanning.com/estate-liquidation/learn-more</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+
+  <!-- AFH city-specific for-sale pages -->
+  <url><loc>https://realpropertyplanning.com/afh-club/for-sale/seattle-wa</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/for-sale/kirkland-wa</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/for-sale/renton-wa</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/for-sale/lynnwood-wa</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/for-sale/edmonds-wa</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/for-sale/puyallup-wa</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/selling-your-business-at-retirement</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 </urlset>

@@ -321,11 +321,11 @@ const AFHROICalculator = () => {
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
               >
                 <div>
-                  <label style={LS}>Purchase price ($)</label>
+                  <label style={LS} htmlFor="r-price">Purchase price ($)</label>
                   <input type="number" id="r-price" placeholder="850000" style={IS} />
                 </div>
                 <div>
-                  <label style={LS}>Interest rate (%)</label>
+                  <label style={LS} htmlFor="r-rate">Interest rate (%)</label>
                   <input type="number" id="r-rate" placeholder="7.25" step="0.01" style={IS} />
                 </div>
               </div>
@@ -335,7 +335,7 @@ const AFHROICalculator = () => {
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
               >
                 <div>
-                  <label style={LS}>Loan term (years)</label>
+                  <label style={LS} htmlFor="r-term">Loan term (years)</label>
                   <select id="r-term" style={IS}>
                     <option value="30">30 years</option>
                     <option value="25">25 years</option>
@@ -349,7 +349,8 @@ const AFHROICalculator = () => {
                 <div
                   style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}
                 >
-                  <span
+                  <label
+                    htmlFor="r-down"
                     style={{
                       fontSize: 12,
                       letterSpacing: ".1em",
@@ -359,7 +360,7 @@ const AFHROICalculator = () => {
                     }}
                   >
                     Down payment
-                  </span>
+                  </label>
                   <div
                     style={{
                       display: "inline-flex",
@@ -444,17 +445,17 @@ const AFHROICalculator = () => {
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
               >
                 <div>
-                  <label style={LS}>Annual gross revenue ($)</label>
+                  <label style={LS} htmlFor="r-rev">Annual gross revenue ($)</label>
                   <input type="number" id="r-rev" placeholder="288000" style={IS} />
                 </div>
                 <div>
-                  <label style={LS}>Annual operating expenses ($)</label>
+                  <label style={LS} htmlFor="r-exp">Annual operating expenses ($)</label>
                   <input type="number" id="r-exp" placeholder="164000" style={IS} />
                 </div>
               </div>
               <div className="roi-grid2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
                 <div>
-                  <label style={LS}>Licensed capacity</label>
+                  <label style={LS} htmlFor="r-cap">Licensed capacity</label>
                   <select id="r-cap" style={IS}>
                     <option value="1">1 bed</option>
                     <option value="2">2 beds</option>
@@ -467,7 +468,7 @@ const AFHROICalculator = () => {
                   </select>
                 </div>
                 <div>
-                  <label style={LS}>Current occupancy (%)</label>
+                  <label style={LS} htmlFor="r-occ">Current occupancy (%)</label>
                   <input type="number" id="r-occ" placeholder="83" style={IS} />
                 </div>
               </div>

@@ -8,7 +8,26 @@ interface HeroBandTitleProps {
   className?: string;
 }
 
-const KEEP_LOWER = new Set(["to", "a", "an"]);
+const KEEP_LOWER = new Set([
+  "to",
+  "a",
+  "an",
+  "of",
+  "the",
+  "and",
+  "or",
+  "nor",
+  "but",
+  "as",
+  "at",
+  "by",
+  "for",
+  "in",
+  "into",
+  "on",
+  "onto",
+  "with",
+]);
 const KEEP_UPPER = new Set(["CPA", "CPAS", "POA", "FAQ", "WA"]);
 
 const capitalizeWord = (part: string): string => {

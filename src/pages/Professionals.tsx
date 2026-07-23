@@ -111,8 +111,9 @@ const ProfessionalSignupForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
         {/* Full Name */}
         <div className="flex flex-col gap-2">
-          <label className="text-foreground font-medium text-[18px]">Full Name *</label>
+          <label htmlFor="prof-name" className="text-foreground font-medium text-[18px]">Full Name *</label>
           <input
+            id="prof-name"
             type="text"
             required
             className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
@@ -121,8 +122,9 @@ const ProfessionalSignupForm = () => {
 
         {/* Company */}
         <div className="flex flex-col gap-2">
-          <label className="text-foreground font-medium text-[18px]">Company / Business Name *</label>
+          <label htmlFor="prof-company" className="text-foreground font-medium text-[18px]">Company / Business Name *</label>
           <input
+            id="prof-company"
             type="text"
             required
             className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
@@ -131,8 +133,9 @@ const ProfessionalSignupForm = () => {
 
         {/* Profession */}
         <div className="flex flex-col gap-2">
-          <label className="text-foreground font-medium text-[18px]">Profession / Service Type *</label>
+          <label htmlFor="prof-type" className="text-foreground font-medium text-[18px]">Profession / Service Type *</label>
           <select
+            id="prof-type"
             required
             className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
             defaultValue=""
@@ -146,8 +149,9 @@ const ProfessionalSignupForm = () => {
 
         {/* Phone */}
         <div className="flex flex-col gap-2">
-          <label className="text-foreground font-medium text-[18px]">Phone Number *</label>
+          <label htmlFor="prof-phone" className="text-foreground font-medium text-[18px]">Phone Number *</label>
           <input
+            id="prof-phone"
             type="tel"
             required
             className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
@@ -156,8 +160,9 @@ const ProfessionalSignupForm = () => {
 
         {/* Email */}
         <div className="flex flex-col gap-2">
-          <label className="text-foreground font-medium text-[18px]">Email Address *</label>
+          <label htmlFor="prof-email" className="text-foreground font-medium text-[18px]">Email Address *</label>
           <input
+            id="prof-email"
             type="email"
             required
             className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
@@ -166,8 +171,9 @@ const ProfessionalSignupForm = () => {
 
         {/* Website */}
         <div className="flex flex-col gap-2">
-          <label className="text-foreground font-medium text-[18px]">Website URL</label>
+          <label htmlFor="prof-website" className="text-foreground font-medium text-[18px]">Website URL</label>
           <input
+            id="prof-website"
             type="url"
             className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="https://"
@@ -175,8 +181,8 @@ const ProfessionalSignupForm = () => {
         </div>
 
         {/* Counties - full width */}
-        <div className="flex flex-col gap-2 md:col-span-2">
-          <label className="text-foreground font-medium text-[18px]">Counties Served *</label>
+        <fieldset className="flex flex-col gap-2 md:col-span-2 border-0 p-0 m-0">
+          <legend className="text-foreground font-medium text-[18px] p-0 mb-2">Counties Served *</legend>
           <div className="flex flex-wrap gap-x-5 gap-y-3">
             {countyOptions.map((county) => (
               <label key={county} className="flex items-center gap-2 cursor-pointer text-foreground text-base">
@@ -190,12 +196,13 @@ const ProfessionalSignupForm = () => {
               </label>
             ))}
           </div>
-        </div>
+        </fieldset>
 
         {/* About - full width */}
         <div className="flex flex-col gap-2 md:col-span-2">
-          <label className="text-foreground font-medium text-[18px]">About You / Your Services *</label>
+          <label htmlFor="prof-about" className="text-foreground font-medium text-[18px]">About You / Your Services *</label>
           <textarea
+            id="prof-about"
             required
             rows={4}
             placeholder="Briefly describe your background, services, and why families and executors choose to work with you."
@@ -205,8 +212,9 @@ const ProfessionalSignupForm = () => {
 
         {/* Headshot */}
         <div className="flex flex-col gap-2">
-          <label className="text-foreground font-medium text-[18px]">Headshot</label>
+          <label htmlFor="prof-headshot" className="text-foreground font-medium text-[18px]">Headshot</label>
           <input
+            id="prof-headshot"
             type="file"
             accept="image/jpeg,image/png,image/webp"
             className="w-full text-foreground text-base file:mr-3 file:rounded-lg file:border-0 file:bg-secondary file:px-4 file:py-2 file:text-foreground file:font-medium file:cursor-pointer"
@@ -215,8 +223,9 @@ const ProfessionalSignupForm = () => {
 
         {/* Company Logo */}
         <div className="flex flex-col gap-2">
-          <label className="text-foreground font-medium text-[18px]">Company Logo</label>
+          <label htmlFor="prof-logo" className="text-foreground font-medium text-[18px]">Company Logo</label>
           <input
+            id="prof-logo"
             type="file"
             accept="image/jpeg,image/png,image/webp"
             className="w-full text-foreground text-base file:mr-3 file:rounded-lg file:border-0 file:bg-secondary file:px-4 file:py-2 file:text-foreground file:font-medium file:cursor-pointer"
@@ -225,8 +234,9 @@ const ProfessionalSignupForm = () => {
 
         {/* How did you hear */}
         <div className="flex flex-col gap-2 md:col-span-2">
-          <label className="text-foreground font-medium text-[18px]">How did you hear about Real Property Planning?</label>
+          <label htmlFor="prof-source" className="text-foreground font-medium text-[18px]">How did you hear about Real Property Planning?</label>
           <input
+            id="prof-source"
             type="text"
             className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
           />
