@@ -2106,8 +2106,10 @@ body {
   display: block !important;
 }
 
-h1 {
-  font-size: 26px !important;
+main h1,
+footer h1,
+header h1 {
+  font-size: 26px;
 }
 
 h2 {
@@ -3227,14 +3229,38 @@ main [class*="/90"] {
 }
 
 /* Hero blue band title — override global p/body/main * font-size rules */
-html body main .rpp-hero-band-text,
-html body .rpp-hero-band-text,
-main .rpp-hero-band-text,
-.rpp-hero-band-text {
+html body main div.rpp-hero-band-text,
+html body div.rpp-hero-band-text,
+main div.rpp-hero-band-text,
+html body main span.rpp-hero-band-text,
+html body span.rpp-hero-band-text,
+main span.rpp-hero-band-text,
+div.rpp-hero-band-text,
+span.rpp-hero-band-text {
   font-size: 18px !important;
   line-height: 1 !important;
   font-weight: 900 !important;
   letter-spacing: 0.18em !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  font-family: "Raleway", sans-serif !important;
+}
+
+/* Hero blue band title used as the page's actual H1 — needs to read as a
+   real heading, not a decorative label, so it gets proper heading scale
+   instead of the compact 18px band size above. */
+html body main h1.rpp-hero-band-text,
+html body h1.rpp-hero-band-text,
+main h1.rpp-hero-band-text,
+h1.rpp-hero-band-text {
+  font-size: clamp(30px, 4vw, 44px) !important;
+  line-height: 1.15 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.04em !important;
   color: #ffffff !important;
   text-transform: uppercase !important;
   text-align: center !important;
@@ -3567,4 +3593,15 @@ main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-la
 .rpp-provider-bio-scroll {
   scrollbar-width: auto;
   scrollbar-color: #a0222c #f0ede4;
+}
+
+/* Search page H1 — a separate global h1 accessibility-floor rule earlier
+   in this file was silently overriding this page's intended heading size
+   until it was changed to no longer use !important. This override is kept
+   for extra certainty on this specific page. */
+html body main h1.search-page-h1,
+main h1.search-page-h1,
+h1.search-page-h1 {
+  font-size: clamp(30px, 4vw, 44px) !important;
+  line-height: 1.15 !important;
 }
