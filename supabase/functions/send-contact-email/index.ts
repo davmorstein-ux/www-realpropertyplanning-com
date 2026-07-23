@@ -13,7 +13,27 @@ serve(async (req) => {
   }
 
   try {
-    const { name, email, phone, role, message, source_page } = await req.json();
+    const { name, email, phone, role, message, source_page, company_website, form_loaded_at } = await req.json();
+
+    // Honeypot: real visitors never see or fill this field. Bots that
+    // auto-fill every input on the form will trip it.
+    if (company_website) {
+      console.log("Blocked contact form submission: honeypot field was filled");
+      return new Response(JSON.stringify({ success: true }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    // Timing check: a real visitor needs at least a few seconds to read
+    // the form and type a message. Submissions faster than that are
+    // almost always scripted.
+    const loadedAt = Number(form_loaded_at);
+    if (loadedAt && Date.now() - loadedAt < 3000) {
+      console.log("Blocked contact form submission: submitted too quickly to be human");
+      return new Response(JSON.stringify({ success: true }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
 
     if (!name || !email || !message) {
       return new Response(JSON.stringify({ error: "Please fill in your name, email, and message." }), {
