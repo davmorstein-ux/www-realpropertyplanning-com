@@ -14,20 +14,86 @@ import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washingto
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import contactHero from "@/assets/contact-hero-soundview-coffee.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 const roleOptions = ["Family Member", "Elder Individual", "Professional", "Other"];
+
+const TURNSTILE_SITE_KEY = "0x4AAAAAAD8Pv43WG0GFRJob";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (
+        container: HTMLElement,
+        options: {
+          sitekey: string;
+          callback: (token: string) => void;
+          "expired-callback"?: () => void;
+          "error-callback"?: () => void;
+        },
+      ) => string;
+      reset: (widgetId?: string) => void;
+    };
+  }
+}
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [role, setRole] = useState("");
   const [formLoadedAt] = useState(() => Date.now());
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileContainerRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetIdRef = useRef<string | undefined>(undefined);
+
+  // Lazy-load the Turnstile script only on this page, then render the widget
+  // once it's ready.
+  useEffect(() => {
+    const renderWidget = () => {
+      if (!window.turnstile || !turnstileContainerRef.current || turnstileWidgetIdRef.current) return;
+      turnstileWidgetIdRef.current = window.turnstile.render(turnstileContainerRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        callback: (token) => setTurnstileToken(token),
+        "expired-callback": () => setTurnstileToken(""),
+        "error-callback": () => setTurnstileToken(""),
+      });
+    };
+
+    if (window.turnstile) {
+      renderWidget();
+      return;
+    }
+
+    const existingScript = document.querySelector('script[src*="turnstile"]');
+    if (existingScript) {
+      existingScript.addEventListener("load", renderWidget);
+      return () => existingScript.removeEventListener("load", renderWidget);
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+    script.async = true;
+    script.defer = true;
+    script.addEventListener("load", renderWidget);
+    document.body.appendChild(script);
+
+    return () => script.removeEventListener("load", renderWidget);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!turnstileToken) {
+      toast({
+        title: "Please complete the verification",
+        description: "Check the verification box above the Send button, then try again.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     const form = e.target as HTMLFormElement;
@@ -42,6 +108,7 @@ const Contact = () => {
       source_page: formData.get("source_page") as string,
       company_website: formData.get("company_website") as string,
       form_loaded_at: formData.get("form_loaded_at") as string,
+      turnstile_token: turnstileToken,
     };
 
     try {
@@ -68,6 +135,10 @@ const Contact = () => {
       });
     } finally {
       setIsSubmitting(false);
+      setTurnstileToken("");
+      if (window.turnstile && turnstileWidgetIdRef.current) {
+        window.turnstile.reset(turnstileWidgetIdRef.current);
+      }
     }
   };
 
@@ -264,7 +335,13 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" disabled={isSubmitting} className="w-full text-lg font-bold py-7">
+                    <div ref={turnstileContainerRef} />
+
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting || !turnstileToken}
+                      className="w-full text-lg font-bold py-7"
+                    >
                       {isSubmitting ? "Sending..." : "Send"}
                     </Button>
                   </form>
