@@ -6,6 +6,11 @@ import SiteSearchBar from "./SiteSearchBar";
 const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
 
 const CONTACT_LINK = { label: "Contact", href: "/contact" };
+const CURATED_LINKS = [
+  { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
+  { label: "Senior Transitions", href: "/senior-transitions" },
+  { label: "AFH Club", href: "/afh-club" },
+];
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
@@ -57,6 +62,10 @@ const Header = () => {
         outline: 2px solid #d1a847;
         outline-offset: 3px;
         border-radius: 3px;
+      }
+      .rpp-curated-link { display: inline-flex; }
+      @media (max-width: 1100px) {
+        .rpp-curated-link { display: none !important; }
       }
     `;
     document.head.appendChild(style);
@@ -136,8 +145,17 @@ const Header = () => {
 
           {/* Tagline removed */}
 
-          {/* RIGHT: top links + CTA */}
+          {/* RIGHT: curated links + Contact + CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0 }}>
+            {CURATED_LINKS.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={`rpp-top-link rpp-curated-link${pathname === item.href ? " is-active" : ""}`}
+              >
+                {item.label}
+              </Link>
+            ))}
             <Link
               to={CONTACT_LINK.href}
               className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
