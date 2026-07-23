@@ -653,10 +653,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
 
   // ===== Guided Journey Hub pages =====
-  "/helping-aging-parents": {
-    title: "Helping Aging Parents — A Calm Family Roadmap | Real Property Planning",
+  "/helping-an-aging-parent": {
+    title: "Helping an Aging Parent — A Calm Family Roadmap | Real Property Planning",
     description: "Guidance for adult children and families supporting aging parents — housing, caregiving, downsizing, and major life decisions across Washington State.",
-    h1: "Helping Aging Parents — A Calm Family Roadmap",
+    h1: "Helping an Aging Parent",
     intro: "A guided journey for families helping a parent or loved one through housing, care, and major life transitions — calm, practical, and free of pressure.",
   },
   "/estate-probate-inherited-property": {

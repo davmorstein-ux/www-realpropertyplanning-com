@@ -61,7 +61,7 @@ const pathways: Pathway[] = [
     title: "In-Home Care & Aging in Place",
     description:
       "Options for seniors who wish to remain at home while receiving caregiving, safety, and support services.",
-    href: "/helping-aging-parents",
+    href: "/helping-an-aging-parent",
     icon: iconHeartHands,
   },
   {

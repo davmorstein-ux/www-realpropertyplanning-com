@@ -11,7 +11,7 @@ const pathways = [
     description:
       "Guidance for senior transitions, housing options, downsizing, and care planning.",
     cta: "Start Here",
-    href: "/helping-aging-parents",
+    href: "/helping-an-aging-parent",
   },
   {
     icon: probateIcon,

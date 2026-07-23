@@ -173,7 +173,7 @@ const faqs = [
 const continueJourney = [
   { href: "/understanding-housing-care-options", title: "Understanding Housing & Care Options", description: "Explore senior living, in-home care, and housing transitions.", icon: iconAssisted },
   { href: "/understanding-senior-transitions", title: "Understanding Senior Transitions", description: "A guided overview of the senior transition process.", icon: iconIndependent },
-  { href: "/helping-aging-parents", title: "Helping an Aging Parent or Loved One", description: "Support for adult children navigating caregiving and family decisions.", icon: iconHeartHands },
+  { href: "/helping-an-aging-parent", title: "Helping an Aging Parent or Loved One", description: "Support for adult children navigating caregiving and family decisions.", icon: iconHeartHands },
   { href: "/estate-planning-powers-of-attorney", title: "Estate Planning & Powers of Attorney", description: "How legal and financial planning may help protect families.", icon: iconEstatePlanning },
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for property and housing choices.", icon: iconHome },
   { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconTeam },

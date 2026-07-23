@@ -31,7 +31,7 @@ const pathways: Pathway[] = [
     title: "Helping an Aging Parent or Loved One",
     description:
       "Guidance for senior transitions, care planning, downsizing, and important housing and property decisions.",
-    href: "/helping-aging-parents",
+    href: "/helping-an-aging-parent",
     icon: iconHeartHands,
   },
   {
@@ -121,7 +121,7 @@ const understand = [
 
 const continueJourney = [
   {
-    href: "/helping-aging-parents",
+    href: "/helping-an-aging-parent",
     title: "Helping an Aging Parent",
     description: "A calm roadmap for senior transitions and family decisions.",
     icon: iconHeartHands,

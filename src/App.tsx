@@ -257,7 +257,7 @@ const App = () => (
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
           <Route path="/client-stories" element={<ClientStories />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
-          <Route path="/helping-aging-parents" element={<ChoiceFlowPage />} />
+          <Route path="/helping-aging-parents" element={<Navigate to="/helping-an-aging-parent" replace />} />
           <Route path="/helping-an-aging-parent" element={<ChoiceFlowPage />} />
           <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />
           <Route path="/estate-probate-inherited-property" element={<EstateProbateInheritedProperty />} />

@@ -8,7 +8,7 @@ const situations = [
     title: "Helping an Aging Parent",
     description: "Worried about a parent's safety, care, or future housing decisions.",
     cta: "Explore Guidance",
-    href: "/helping-aging-parents",
+    href: "/helping-an-aging-parent",
   },
   {
     image: "/tiles/journey/loved-one-passed-away.webp",

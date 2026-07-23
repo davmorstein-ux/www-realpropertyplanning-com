@@ -16,7 +16,7 @@ const tiles = [
     imgSrc: tileHelping,
     imgAlt: "Adult daughter hugging her senior mother on a couch",
     title: "I'm Helping an Aging Parent",
-    href: "/helping-aging-parents",
+    href: "/helping-an-aging-parent",
     bgColor: "#246044", // forest green
   },
   {

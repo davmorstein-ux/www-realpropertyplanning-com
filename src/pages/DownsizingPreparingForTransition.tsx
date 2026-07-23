@@ -51,7 +51,7 @@ const pathways: Pathway[] = [
     title: "Helping a Parent or Loved One Downsize",
     description:
       "Support for adult children and caregivers navigating emotional conversations, resistance, family coordination, and transition planning.",
-    href: "/helping-aging-parents",
+    href: "/helping-an-aging-parent",
     icon: iconHeartHands,
   },
   {

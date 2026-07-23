@@ -144,7 +144,7 @@ const Footer = () => {
           {/* Guided Journeys */}
           <div>
             <span className="rpp-footer-col-heading">Guided Journeys</span>
-            <Link to="/helping-aging-parents" className="rpp-footer-link">
+            <Link to="/helping-an-aging-parent" className="rpp-footer-link">
               Helping an Aging Parent
             </Link>
             <Link to="/estate-probate-inherited-property" className="rpp-footer-link">

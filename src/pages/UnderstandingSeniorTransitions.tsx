@@ -31,7 +31,7 @@ const pathways: Pathway[] = [
     title: "Aging in Place",
     description:
       "Guidance for seniors wishing to remain at home while exploring support services, safety concerns, caregiving options, and future planning.",
-    href: "/helping-aging-parents",
+    href: "/helping-an-aging-parent",
     icon: iconHeartHands,
   },
   {
@@ -55,7 +55,7 @@ const pathways: Pathway[] = [
     title: "Caring for a Parent or Loved One",
     description:
       "Support for adult children and caregivers managing caregiving stress, difficult conversations, safety concerns, and planning responsibilities.",
-    href: "/helping-aging-parents",
+    href: "/helping-an-aging-parent",
     icon: iconHeartHands,
   },
   {
