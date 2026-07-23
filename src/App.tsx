@@ -215,6 +215,13 @@ const AFHManagementCompanies = lazy(() => import("./pages/AFHManagementCompanies
 const AFHRealEstateBroker = lazy(() => import("./pages/AFHRealEstateBroker"));
 const AFHMarketplace = lazy(() => import("./pages/AFHMarketplace"));
 const AFHSubmit = lazy(() => import("./pages/AFHSubmit"));
+const AFHForSaleSeattle = lazy(() => import("./pages/AFHForSaleSeattle"));
+const AFHForSaleKirkland = lazy(() => import("./pages/AFHForSaleKirkland"));
+const AFHForSaleRenton = lazy(() => import("./pages/AFHForSaleRenton"));
+const AFHForSaleLynnwood = lazy(() => import("./pages/AFHForSaleLynnwood"));
+const AFHForSaleEdmonds = lazy(() => import("./pages/AFHForSaleEdmonds"));
+const AFHForSalePuyallup = lazy(() => import("./pages/AFHForSalePuyallup"));
+const AFHSellingBusinessAtRetirement = lazy(() => import("./pages/AFHSellingBusinessAtRetirement"));
 const LongTermCareOptions = lazy(() => import("./pages/LongTermCareOptions"));
 const HomepageNew = lazy(() => import("./pages/HomepageNew"));
 const LTCNursingHomes = lazy(() => import("./pages/long-term-care/NursingHomes"));
@@ -712,6 +719,16 @@ const App = () => (
           <Route path="/afh-club/real-estate-broker" element={<AFHRealEstateBroker />} />
           <Route path="/afh-marketplace" element={<AFHMarketplace />} />
           <Route path="/afh-submit" element={<AFHSubmit />} />
+          <Route path="/afh-club/for-sale/seattle-wa" element={<AFHForSaleSeattle />} />
+          <Route path="/afh-club/for-sale/kirkland-wa" element={<AFHForSaleKirkland />} />
+          <Route path="/afh-club/for-sale/renton-wa" element={<AFHForSaleRenton />} />
+          <Route path="/afh-club/for-sale/lynnwood-wa" element={<AFHForSaleLynnwood />} />
+          <Route path="/afh-club/for-sale/edmonds-wa" element={<AFHForSaleEdmonds />} />
+          <Route path="/afh-club/for-sale/puyallup-wa" element={<AFHForSalePuyallup />} />
+          <Route
+            path="/afh-club/selling-your-business-at-retirement"
+            element={<AFHSellingBusinessAtRetirement />}
+          />
           <Route path="/long-term-care" element={<LongTermCareOptions />} />
           <Route path="/long-term-care/nursing-homes" element={<LTCNursingHomes />} />
           <Route path="/long-term-care/short-term-nursing-home-stays" element={<LTCShortTermNursingHomeStays />} />

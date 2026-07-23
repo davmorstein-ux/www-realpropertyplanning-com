@@ -84,6 +84,7 @@ const CATEGORIES = [
     items: [
       { name: "AFH Club", href: "/afh-club" },
       { name: "AFH Calculators", href: "/afh-club/calculators" },
+      { name: "Selling Your AFH at Retirement", href: "/afh-club/selling-your-business-at-retirement" },
       { name: "Cost of Care Calculator", href: "/cost-of-care-calculator" },
       { name: "Resources", href: "/resources" },
       { name: "About", href: "/about" },

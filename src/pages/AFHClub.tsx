@@ -231,6 +231,52 @@ const AFHClub = () => (
         </div>
       </section>
 
+      {/* Browse by city */}
+      <section style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px 56px" }}>
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: 13,
+            fontWeight: 700,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            color: "#5e5954",
+            marginBottom: 14,
+          }}
+        >
+          Browse Listings by City
+        </p>
+        <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
+          {[
+            { name: "Seattle", href: "/afh-club/for-sale/seattle-wa" },
+            { name: "Kirkland", href: "/afh-club/for-sale/kirkland-wa" },
+            { name: "Renton", href: "/afh-club/for-sale/renton-wa" },
+            { name: "Lynnwood", href: "/afh-club/for-sale/lynnwood-wa" },
+            { name: "Edmonds", href: "/afh-club/for-sale/edmonds-wa" },
+            { name: "Puyallup", href: "/afh-club/for-sale/puyallup-wa" },
+          ].map((c) => (
+            <Link
+              key={c.href}
+              to={c.href}
+              style={{
+                display: "inline-block",
+                background: "#f7f4ef",
+                color: "#302b26",
+                fontFamily: "'Raleway', sans-serif",
+                fontWeight: 600,
+                fontSize: 14,
+                padding: "8px 16px",
+                borderRadius: 20,
+                textDecoration: "none",
+                border: "1px solid #dfc9cb",
+              }}
+            >
+              {c.name}, WA
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Category list */}
       <section style={{ maxWidth: 900, margin: "0 auto", padding: "56px 24px 80px" }}>
         <h2

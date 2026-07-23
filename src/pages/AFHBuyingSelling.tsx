@@ -482,6 +482,19 @@ const AFHBuyingSelling = () => (
               Search AFH Locator
             </a>
           </div>
+          <p
+            style={{
+              fontSize: 15,
+              fontFamily: "'Raleway', sans-serif",
+              color: "#e8e2d9",
+              marginTop: 28,
+            }}
+          >
+            Retiring from operating your AFH?{" "}
+            <Link to="/afh-club/selling-your-business-at-retirement" style={{ color: "#e8e2d9", fontWeight: 700 }}>
+              Read our guide to selling the business and the building.
+            </Link>
+          </p>
         </div>
       </section>
 
