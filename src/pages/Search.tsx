@@ -13,9 +13,7 @@ const Search = () => {
     e.preventDefault();
     const q = query.trim();
     if (!q) return;
-    const url = `https://www.google.com/search?q=${encodeURIComponent(
-      `site:realpropertyplanning.com ${q}`
-    )}`;
+    const url = `https://www.google.com/search?q=${encodeURIComponent(`site:realpropertyplanning.com ${q}`)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
@@ -24,6 +22,7 @@ const Search = () => {
       <SEOHead
         title="Search | Real Property Planning"
         description="Search Real Property Planning for probate, estate sales, senior transitions, attorneys, CPAs, financial planners, and more."
+        noIndex
       />
       <Header />
       <main id="main-content">
@@ -34,7 +33,12 @@ const Search = () => {
               src={searchHero}
               alt="Senior couple driving a classic red convertible into Search City at night"
               className="w-full h-auto block"
-              loading="eager" sizes="100vw" decoding="async" width={1920} height={564} />
+              loading="eager"
+              sizes="100vw"
+              decoding="async"
+              width={1920}
+              height={564}
+            />
             <HeroBandTitle>Search Page</HeroBandTitle>
           </div>
         </section>
@@ -42,7 +46,7 @@ const Search = () => {
         <div className="container px-6 lg:px-8 pt-6 pb-20">
           <div className="max-w-[900px] mx-auto">
             <h1
-              className="text-center mb-10 md:mb-14"
+              className="text-center mb-10 md:mb-14 search-page-h1"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
@@ -54,12 +58,9 @@ const Search = () => {
             >
               Search Real Property Planning
             </h1>
-            <form
-              onSubmit={handleSearch}
-              role="search"
-              style={{ maxWidth: "700px", width: "100%", margin: "0 auto" }}
-            >
-              <div className="flex items-center gap-2 rounded-full border-2 border-border bg-card pl-5 pr-2 py-2 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20 transition-all"
+            <form onSubmit={handleSearch} role="search" style={{ maxWidth: "700px", width: "100%", margin: "0 auto" }}>
+              <div
+                className="flex items-center gap-2 rounded-full border-2 border-border bg-card pl-5 pr-2 py-2 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20 transition-all"
                 style={{ boxShadow: "0 4px 20px -4px hsl(220 35% 15% / 0.08)" }}
               >
                 <SearchIcon className="w-5 h-5 text-navy flex-shrink-0" strokeWidth={2.5} aria-hidden="true" />
