@@ -17,7 +17,7 @@ const categories = [
       { title: "Aging Life Care Managers", href: "/aging-life-care-managers" },
       { title: "Certified Appraisers", href: "/real-estate-appraiser" },
       { title: "CPAs & Accountants", href: "/professionals/cpas" },
-      { title: "Divorce Attorneys", href: "/professionals/probate-attorneys" },
+      { title: "Divorce Attorneys", href: "/for-divorce-attorneys" },
       { title: "Elder Law Attorneys", href: "/professionals/elder-law-attorneys" },
       { title: "Estate Liquidators", href: "/estate-liquidators" },
       { title: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },

@@ -738,6 +738,700 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "What aging in place really means — how families evaluate safety, plan ahead, and weigh in-home support against future housing changes.",
   },
 
+  // ===== Bulk-added SSG coverage (144 previously-uncovered routes) =====
+  "/afh-club": {
+    title: "AFH Club | Adult Family Home Resource Network | Real Property Planning",
+    description: "Washington State's premier resource network for Adult Family Home owners, prospective providers, buyers, and the professionals who serve them.",
+    h1: "AFH Club",
+  },
+  "/afh-club/building-inspection": {
+    title: "AFH Building & Inspection Requirements | AFH Club | Real Property Planning",
+    description: "Complete guide to Washington State AFH building requirements — WABO inspection process, what WABO is, common modifications, new build vs remodel vs existing home, and septic requirements.",
+    h1: "AFH Building Requirements & Inspections",
+  },
+  "/afh-club/buying-selling": {
+    title: "Buying or Selling an AFH | AFH Club | Real Property Planning",
+    description: "Complete guide to buying or selling an Adult Family Home in Washington State — CHOW process, what transfers, DSHS locator, specialty contracts, and real estate considerations.",
+    h1: "Buying or Selling an Adult Family Home",
+  },
+  "/afh-club/calculators": {
+    title: "AFH Calculators — ROI & Valuation Tools | Real Property Planning",
+    description: "Professional financial tools built exclusively for Washington State Adult Family Homes — ROI calculator and valuation estimator.",
+    h1: "AFH Calculators",
+  },
+  "/afh-club/costs-fees": {
+    title: "AFH Costs & Fees | AFH Club | Real Property Planning",
+    description: "Complete breakdown of Washington State Adult Family Home startup costs, annual licensing fees, liability insurance, building permits, and Medicaid rate information for 2025.",
+    h1: "AFH Costs & Fees in Washington State",
+  },
+  "/afh-club/find-a-professional": {
+    title: "Find an AFH Professional | AFH Club | Real Property Planning",
+    description: "Directory of professional categories serving Washington State Adult Family Homes — real estate brokers, appraisers, management companies, CPAs, attorneys, and compliance consultants.",
+    h1: "Find an AFH Professional",
+  },
+  "/afh-club/getting-started": {
+    title: "Getting Started with an Adult Family Home | AFH Club | Real Property Planning",
+    description: "Is an Adult Family Home right for you? A comprehensive guide to what AFHs are, who can open one, individual vs entity providers, and what to expect before applying.",
+    h1: "Is an Adult Family Home Right for You?",
+  },
+  "/afh-club/licensing-certification": {
+    title: "AFH Licensing & Certification | AFH Club | Real Property Planning",
+    description: "Complete guide to Washington State AFH licensing — DSHS application process, Home Care Aide certification, background checks, HCA exemptions, and CHOW requirements.",
+    h1: "AFH Licensing & Certification in Washington State",
+  },
+  "/afh-club/management-companies": {
+    title: "AFH Management Companies | AFH Club | Real Property Planning",
+    description: "Professional Adult Family Home management companies serving Washington State — Aura Living Care and other operators providing staffing, compliance, and care services.",
+    h1: "AFH Management Companies",
+  },
+  "/afh-club/ownership-structure": {
+    title: "AFH Ownership: Individual or LLC? | AFH Club | Real Property Planning",
+    description: "Should you buy an Adult Family Home as an individual or through an LLC? A guide to financing, liability, tax, and Washington State licensing considerations for AFH buyers.",
+    h1: "Should You Buy an Adult Family Home as an Individual or Through an LLC?",
+  },
+  "/afh-club/real-estate-broker": {
+    title: "AFH Real Estate Broker | AFH Club | Real Property Planning",
+    description: "Washington State licensed real estate broker specializing in Adult Family Home transactions — CHOW process, AFH valuations, and expert guidance for buyers and sellers.",
+    h1: "AFH Real Estate Broker",
+  },
+  "/afh-club/regulations-compliance": {
+    title: "AFH Regulations & Compliance | AFH Club | Real Property Planning",
+    description: "A plain-language guide to Washington State DSHS inspections, enforcement levels, top AFH violations, and public lookup tools for Adult Family Homes.",
+    h1: "Understanding DSHS Inspections & Compliance",
+  },
+  "/afh-club/resources": {
+    title: "AFH Resource Library | AFH Club | Real Property Planning",
+    description: "Everything you need to know about opening, operating, buying, or selling an Adult Family Home in Washington State — organized by topic.",
+    h1: "AFH Resource Library",
+  },
+  "/afh-club/training-education": {
+    title: "AFH Training & Education | AFH Club | Real Property Planning",
+    description: "Complete guide to Washington State AFH training requirements — 75-hour HCA training, AFH Administrator Training, specialty courses, continuing education, and where to enroll.",
+    h1: "AFH Training & Education Requirements",
+  },
+  "/afh-marketplace": {
+    title: "AFH Marketplace — Washington Adult Family Homes for Sale | Real Property Planning",
+    description: "Washington State Adult Family Homes for sale — property, business, or both. Filter by county, capacity, and price.",
+    h1: "AFH Marketplace",
+  },
+  "/afh-submit": {
+    title: "Sell Your AFH — Talk With David | Real Property Planning",
+    description: "Thinking of selling your Adult Family Home in Washington? Start with a conversation with David Stein.",
+    h1: "Thinking of Selling Your AFH?",
+  },
+  "/aging-life-care-managers": {
+    title: "Aging Life Care Managers in Washington State | Real Property Planning",
+    description: "Find certified aging life care managers and geriatric care professionals serving Washington State — helping families coordinate care, navigate transitions, and support older adults.",
+    h1: "Aging Life Care Managers",
+  },
+  "/articles": {
+    title: "Articles & Insights | Senior Housing, Probate & Estate Guidance — WA",
+    description: "Plain-English articles on senior housing options, probate timelines, inherited property decisions, and estate transitions across Washington State.",
+  },
+  "/articles/affordable-senior-housing": {
+    title: "Affordable Senior Housing for Older Adults: What to Expect",
+    description: "Understand affordable senior housing options, income-based rent, waitlists, and what is included. Learn how to compare and apply for low-cost senior housing.",
+    h1: "Affordable Senior Housing",
+  },
+  "/articles/aging-in-place": {
+    title: "Aging in Place With Support: What Older Adults Should Expect",
+    description: "Learn about aging in place with support, including costs, home care options, safety modifications, and how to compare staying home with senior housing.",
+    h1: "Aging in Place With Support",
+  },
+  "/articles/ccrc-costs": {
+    title: "Continuing Care Retirement Communities Costs: What to Expect",
+    description: "Understand CCRC costs, entrance fees, monthly fees, contract types, and what is included. Compare continuing care retirement communities before committing.",
+    h1: "Continuing Care Retirement Community Costs",
+  },
+  "/articles/how-to-choose-senior-housing": {
+    title: "How to Choose Senior Housing: A Step-by-Step Guide for Families",
+    description: "A practical step-by-step guide to help families choose senior housing by assessing needs, budget, options, visits, contracts, and moving.",
+    h1: "How to Choose Senior Housing",
+  },
+  "/articles/independent-living-costs": {
+    title: "Independent Living Costs for Older Adults: What to Expect",
+    description: "Understand independent living costs for seniors. Learn what is included, extra fees to watch for, and how to compare communities before making a move.",
+    h1: "Independent Living Costs",
+  },
+  "/articles/memory-care-costs": {
+    title: "Memory Care Costs for Families: What to Expect",
+    description: "Understand memory care costs for families. Learn what is included, extra fees to watch for, and how to compare communities before choosing memory care for a loved one.",
+    h1: "Memory Care Costs",
+  },
+  "/articles/senior-housing-costs": {
+    title: "Senior Housing Costs: What Older Adults and Families Should Expect",
+    description: "Understand senior housing costs including independent living, assisted living, memory care, CCRCs, affordable housing, and aging in place with support.",
+    h1: "Senior Housing Costs",
+  },
+  "/articles/senior-housing-guide": {
+    title: "The Senior Housing Guide for Older Adults and Families: A Complete Resource",
+    description: "A comprehensive senior housing guide covering independent living, assisted living, memory care, CCRCs, affordable housing, and aging in place with support.",
+    h1: "The Senior Housing Guide",
+  },
+  "/articles/senior-housing-options": {
+    title: "Senior Housing Options for Older Adults: Choosing the Right Next Home",
+    description: "Explore senior housing options including independent living, assisted living, memory care, CCRCs, affordable housing, and aging in place with support.",
+    h1: "Senior Housing Options",
+  },
+  "/articles/silver-tsunami": {
+    title: "The Silver Tsunami: Aging America's Housing & Care Shift",
+    description: "How the Silver Tsunami — millions of Baby Boomers turning 65 — is reshaping housing, retirement, caregiving, and senior support across America.",
+    h1: "The Silver Tsunami Is Here",
+  },
+  "/articles/wills-trusts-other-options": {
+    title: "How to Pass Real Estate to Your Children: Wills, Trusts, and Other Options | Real Property Planning",
+    description: "A plain-language guide to the most common ways Washington homeowners transfer real estate to the next generation — and the tradeoffs each method carries.",
+    h1: "How to Pass Real Estate to Your Children:",
+  },
+  "/attorneys/for-divorce-attorneys": {
+    title: "Divorce Attorneys in Washington State | Real Property Planning",
+    description: "A divorce attorney helps individuals and couples navigate the legal process of ending a marriage, including asset division and real property matters.",
+    h1: "Divorce Attorney",
+  },
+  "/attorneys/for-elder-law-attorneys": {
+    title: "Elder Law Attorneys in Washington State | Real Property Planning",
+    description: "An elder law attorney helps seniors and families with long-term care planning, Medicaid, guardianship, and incapacity planning in Washington State.",
+    h1: "Elder Law Attorney",
+  },
+  "/attorneys/for-family-law-attorneys": {
+    title: "Family Law Attorneys in Washington State | Real Property Planning",
+    description: "A family law attorney helps families with custody, parenting plans, guardianship, and spousal support — often intersecting with real estate decisions.",
+    h1: "Family Law Attorney",
+  },
+  "/attorneys/for-real-estate-attorney": {
+    title: "Real Estate Attorneys in Washington State | Real Property Planning",
+    description: "A real estate attorney handles the legal side of property transactions — contracts, title issues, closings, and ownership transfers in Washington State.",
+    h1: "Real Estate Attorney",
+  },
+  "/bellingham-probate-estate-real-estate": {
+    title: "Probate & Estate Real Estate in Bellingham, WA",
+    description: "Guidance for executors and families with inherited or estate property in Bellingham, WA. Out-of-area support and coordinated decisions.",
+    h1: "Helping Families Handle Inherited Property in Bellingham",
+  },
+  "/client-stories": {
+    title: "Real Situations. Real Outcomes. | Real Property Planning",
+    description: "See how Real Property Planning has helped executors, families, and trustees navigate real probate and estate property situations across Washington State.",
+    h1: "Real Situations. Real Outcomes.",
+  },
+  "/cost-of-care-calculator": {
+    title: "Cost of Care Calculator | Washington State Long-Term Care Costs",
+    description: "Compare the cost of in-home care, assisted living, memory care, and nursing homes in Washington State versus national averages, with future cost projections.",
+    h1: "Cost of Care Calculator",
+  },
+  "/counties/cowlitz": {
+    title: "Probate & Estate Real Estate in Cowlitz County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Cowlitz County, Washington. Serving Longview, Kelso, Castle Rock & surrounding communities.",
+    h1: "Cowlitz County, WA",
+  },
+  "/counties/grays-harbor": {
+    title: "Probate & Estate Real Estate in Grays Harbor County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Grays Harbor County, Washington. Serving Aberdeen, Hoquiam, Ocean Shores & surrounding communities.",
+    h1: "Grays Harbor County, WA",
+  },
+  "/counties/island": {
+    title: "Probate & Estate Real Estate in Island County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Island County, Washington. Serving Whidbey Island, Camano Island, Oak Harbor, Coupeville & surrounding communities.",
+    h1: "Island County, WA",
+  },
+  "/counties/jefferson": {
+    title: "Probate & Estate Real Estate in Jefferson County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Jefferson County, Washington. Serving Port Townsend, Sequim, Port Hadlock & surrounding communities.",
+    h1: "Jefferson County, WA",
+  },
+  "/counties/king": {
+    title: "Probate & Estate Real Estate in King County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout King County, Washington. Serving Seattle, Bellevue, Kirkland, Redmond & more.",
+    h1: "King County, WA",
+  },
+  "/counties/kitsap": {
+    title: "Probate & Estate Real Estate in Kitsap County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Kitsap County. Serving Bremerton, Silverdale, Poulsbo, Bainbridge Island & more.",
+    h1: "Kitsap County, WA",
+  },
+  "/counties/lewis": {
+    title: "Probate & Estate Real Estate in Lewis County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Lewis County, Washington. Serving Chehalis, Centralia, Morton & surrounding communities.",
+    h1: "Lewis County, WA",
+  },
+  "/counties/mason": {
+    title: "Probate & Estate Real Estate in Mason County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Mason County, Washington. Serving Shelton, Belfair, Union, Hoodsport & surrounding communities.",
+    h1: "Mason County, WA",
+  },
+  "/counties/pacific": {
+    title: "Probate & Estate Real Estate in Pacific County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Pacific County, Washington. Serving Long Beach, Raymond, South Bend, Ilwaco & surrounding communities.",
+    h1: "Pacific County, WA",
+  },
+  "/counties/pierce": {
+    title: "Probate & Estate Real Estate in Pierce County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Pierce County. Serving Tacoma, Puyallup, Gig Harbor, Lakewood & more.",
+    h1: "Inherited Homes in Tacoma, Gig Harbor, and Across Pierce County",
+  },
+  "/counties/san-juan": {
+    title: "Probate & Estate Real Estate in San Juan County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout San Juan County, Washington. Serving San Juan Island, Orcas Island, Lopez Island & surrounding communities.",
+    h1: "San Juan County, WA",
+  },
+  "/counties/skagit": {
+    title: "Skagit County Probate & Estate Real Estate | Real Property Planning",
+    description: "Probate, inherited property, and senior transitions across Skagit County — Mount Vernon, Burlington, Anacortes, La Conner, and more.",
+    h1: "Probate & Estate Real Estate in Skagit County, Washington",
+  },
+  "/counties/skamania": {
+    title: "Probate & Estate Real Estate in Skamania County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Skamania County, Washington. Serving Stevenson, North Bonneville, Carson & surrounding communities.",
+    h1: "Skamania County, WA",
+  },
+  "/counties/snohomish": {
+    title: "Probate & Estate Real Estate in Snohomish County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Snohomish County. Serving Everett, Edmonds, Lynnwood, Bothell, Woodinville & more.",
+    h1: "Snohomish County, WA",
+  },
+  "/counties/thurston": {
+    title: "Thurston County Probate & Estate Real Estate | Real Property Planning",
+    description: "Probate, inherited property, and senior transitions across Thurston County — Olympia, Lacey, Tumwater, Yelm, and surrounding communities.",
+    quickAnswerQ: "How do practical probate and estate sale strategies work in Thurston County?",
+    quickAnswerA: "Thurston County's government-employment-driven market creates a steady buyer pool that behaves differently from faster-growing metro areas. Real Property Planning provides practical estate sale strategy grounded in Thurston County's measured market dynamics — helping executors and families set realistic expectations and move forward with clear plans.",
+  },
+  "/counties/wahkiakum": {
+    title: "Probate & Estate Real Estate in Wahkiakum County, WA | Real Property Planning",
+    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Wahkiakum County, Washington. Serving Cathlamet, Skamokawa & surrounding communities.",
+    h1: "Wahkiakum County, WA",
+  },
+  "/disclaimer": {
+    title: "Disclaimer | Real Property Planning",
+    description: "Real Property Planning is an independent educational hub. We do not provide professional services; featured professionals are independent and not affiliates of Real Property Planning.",
+    h1: "Disclaimer",
+  },
+  "/estate-liquidation/learn-more": {
+    title: "Estate Liquidation & Estate Sales Explained — Washington State",
+    description: "A detailed guide to estate liquidation and estate sales: what they are, when families need them, how the process works, what can be sold, and how liquidators are paid.",
+    h1: "Estate Liquidation & Estate Sales Explained",
+  },
+  "/estate-liquidators": {
+    title: "Estate Liquidators | Real Property Planning",
+    description: "Featured Washington State estate liquidators helping families with estate sales, residential clear outs, and personal property liquidation.",
+    h1: "Estate Liquidators",
+  },
+  "/estate-probate-inherited-property/first-steps": {
+    title: "First Steps After a Death | Real Property Planning",
+    description: "The early days after a loved one passes are overwhelming. Here are the calm, practical first steps to take — before any major decisions need to be made.",
+  },
+  "/estate-probate-inherited-property/preparing-the-property": {
+    title: "Preparing the Property for Sale | Real Property Planning",
+    description: "From cleanout to repairs to occupancy concerns — what to handle before an estate home goes to market, and how to make smart decisions about what's worth doing.",
+  },
+  "/estate-probate-inherited-property/professional-team": {
+    title: "Building Your Professional Team | Real Property Planning",
+    description: "Estate administration requires the right professionals working together. Here's who you need, what each one does, and how to assemble the right team.",
+  },
+  "/estate-probate-inherited-property/property-value": {
+    title: "Understanding the Property's Value | Real Property Planning",
+    description: "Estate property valuation has unique requirements. Here's what a date-of-death appraisal is, why it matters, and how it differs from a standard market estimate.",
+  },
+  "/estate-probate-inherited-property/what-to-do-with-the-property": {
+    title: "Deciding What to Do With the Property | Real Property Planning",
+    description: "Sell, keep, rent, or transfer — there's no single right answer for estate property. Here's how to think through the options carefully.",
+  },
+  "/everett-probate-estate-real-estate": {
+    title: "Probate & Estate Real Estate in Everett, WA",
+    description: "Guidance for executors and families handling inherited homes in Everett, WA. Practical preparation help, realistic pricing, clear next steps.",
+    h1: "Helping Everett Families Navigate Inherited Homes",
+  },
+  "/executor-responsibilities-first-steps/common-mistakes": {
+    title: "Common Executor Mistakes — and How to Avoid Them | Real Property Planning",
+    description: "Most executor mistakes are avoidable. Here are the ones that trip people up most often — and what to do instead.",
+  },
+  "/executor-responsibilities-first-steps/first-30-days": {
+    title: "Your First 30 Days as Executor | Real Property Planning",
+    description: "The weeks immediately after a death are overwhelming. Here's a clear, prioritized list of what actually needs to happen first — and what can wait.",
+  },
+  "/executor-responsibilities-first-steps/legal-duties": {
+    title: "Understanding Your Legal Duties as Executor | Real Property Planning",
+    description: "What are you actually responsible for as an executor or trustee? A plain-language overview of the legal obligations Washington State executors need to understand.",
+  },
+  "/executor-responsibilities-first-steps/property-decisions": {
+    title: "What to Do With Real Estate in the Estate | Real Property Planning",
+    description: "The family home is often the largest and most complicated asset in an estate. Here's what executors need to know about real property decisions.",
+  },
+  "/executors/executors-guide": {
+    title: "Executor's Guide | Real Property Planning",
+    description: "A practical guide for Washington State executors and Personal Representatives managing real estate in an estate.",
+    h1: "Executor's Guide",
+  },
+  "/featured-senior-move-managers": {
+    title: "Featured Senior Move Managers | Real Property Planning",
+    description: "Featured Washington State senior move managers helping families with downsizing, relocation, and senior transitions.",
+    h1: "Featured Senior Move Managers",
+  },
+  "/for-attorneys/divorce-attorneys": {
+    title: "Divorce Attorneys in Washington State | Real Property Planning",
+    description: "A divorce attorney helps individuals and couples navigate the legal process of ending a marriage, including asset division and real property matters.",
+    h1: "Divorce Attorney",
+  },
+  "/for-attorneys/elder-law-attorneys": {
+    title: "Real Estate Support for Elder Law Attorneys in Washington State | Real Property Planning",
+    description: "Real Property Planning helps elder law attorneys and their clients navigate senior home sales, Medicaid planning property decisions, and estate transitions in Washington State.",
+    h1: "Elder Law Attorneys",
+  },
+  "/for-attorneys/estate-planning-attorneys": {
+    title: "Real Estate Support for Estate Planning Attorneys in Washington State | Real Property Planning",
+    description: "Real Property Planning helps estate planning attorneys and their clients navigate property valuation, sale timing, and real estate coordination throughout Washington State.",
+    h1: "Estate Planning Attorneys",
+  },
+  "/for-attorneys/family-law-attorneys": {
+    title: "Real Estate Support for Family Law Attorneys in Washington State | Real Property Planning",
+    description: "Real Property Planning provides neutral, experienced real estate support for family law attorneys and their clients navigating property decisions in Washington State.",
+    h1: "Family Law Attorneys",
+  },
+  "/for-attorneys/probate-attorneys": {
+    title: "Real Estate Support for Probate Attorneys in Washington State | Real Property Planning",
+    description: "Real Property Planning coordinates property assessment, valuation, preparation, and sale for probate attorneys and their clients throughout Washington State.",
+    h1: "Probate Attorneys",
+  },
+  "/for-attorneys/real-estate-attorneys": {
+    title: "Real Estate Brokerage Support for Real Estate Attorneys in Washington State | Real Property Planning",
+    description: "Real Property Planning works alongside real estate attorneys to provide market analysis, property coordination, and sale management when clients need both legal and real estate expertise.",
+    h1: "Real Estate Attorneys",
+  },
+  "/for-divorce-attorneys": {
+    title: "Divorce Attorneys in Washington State | Real Property Planning",
+    description: "A divorce attorney helps individuals and couples navigate the legal process of ending a marriage, including asset division and real property matters.",
+    h1: "Divorce Attorney",
+  },
+  "/for-elder-law-attorneys": {
+    title: "Real Estate Support for Elder Law Attorneys in Washington State | Real Property Planning",
+    description: "Real Property Planning helps elder law attorneys and their clients navigate senior home sales, Medicaid planning property decisions, and estate transitions in Washington State.",
+    h1: "Elder Law Attorneys",
+  },
+  "/for-estate-planning-attorneys": {
+    title: "Real Estate Support for Estate Planning Attorneys in Washington State | Real Property Planning",
+    description: "Real Property Planning helps estate planning attorneys and their clients navigate property valuation, sale timing, and real estate coordination throughout Washington State.",
+    h1: "Estate Planning Attorneys",
+  },
+  "/for-family-law-attorneys": {
+    title: "Real Estate Support for Family Law Attorneys in Washington State | Real Property Planning",
+    description: "Real Property Planning provides neutral, experienced real estate support for family law attorneys and their clients navigating property decisions in Washington State.",
+    h1: "Family Law Attorneys",
+  },
+  "/for-probate-attorneys": {
+    title: "Real Estate Support for Probate Attorneys in Washington State | Real Property Planning",
+    description: "Real Property Planning coordinates property assessment, valuation, preparation, and sale for probate attorneys and their clients throughout Washington State.",
+    h1: "Probate Attorneys",
+  },
+  "/gray-divorce": {
+    title: "Gray Divorce and the Family Home in Washington State | Real Property Planning",
+    description: "Guidance for Washington State couples over 50 navigating the family home during divorce. Calm, neutral real estate coordination from a Licensed Broker & Certified Appraiser.",
+    h1: "Gray Divorce and Your Home — What Washington Couples Need to Know",
+  },
+  "/grey-divorce": {
+    title: "Grey Divorce and the Grey Tsunami: Real Estate, Retirement and Family Planning After 50",
+    description: "Learn what grey divorce means, how it connects to the Grey Tsunami, and why real estate, retirement, estate planning, and senior housing decisions matter for adults divorcing after age 50.",
+    h1: "Grey Divorce and the Grey Tsunami",
+  },
+  "/guides/probate-vs-trust-sale-washington": {
+    title: "Probate vs Trust Sale in Washington State — What's the Difference? | Real Property Planning",
+    description: "Real Property Planning explains the key differences between probate sales and trust sales in Washington State. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties — (206) 900-3015.",
+    h1: "Probate vs Trust Sale in Washington State — What's the Difference?",
+  },
+  "/home-new": {
+    title: "Real Property Planning | Estate & Senior Resources",
+    description: "Washington resource hub for probate real estate, inherited property, senior transitions, and trusted professional guidance.",
+  },
+  "/join-the-network": {
+    title: "Join the Network | Real Property Planning Professional Referral Network | Washington State",
+    description: "We connect seniors, families, executors, and attorneys with trusted local professionals. If you serve this community, join the Real Property Planning referral network.",
+    h1: "Join the Real Property Planning Professional Network",
+  },
+  "/lenders-and-financing-specialists": {
+    title: "Lenders & Financing Specialists | Real Property Planning",
+    description: "Supporting clients with financing options and long-term planning. Connect with trusted lending professionals who help you explore reverse mortgage and retirement strategies.",
+    h1: "Supporting Clients with Financing Options and Long-Term Planning",
+  },
+  "/long-term-care": {
+    title: "Long-Term Care Options in Washington State | Real Property Planning",
+    description: "A hub for understanding long-term care options in Washington State — nursing homes, Medicaid, WA Cares, hospital discharge planning, and how to choose the right care setting.",
+    h1: "Understanding Long-Term Care in Washington",
+  },
+  "/long-term-care/finding-care-roomandcare": {
+    title: "Finding Care: RoomandCare.com",
+    description: "How Real Property Planning helps families evaluate RoomAndCare.com listings and other Adult Family Home options throughout Washington State.",
+  },
+  "/long-term-care/hospital-discharge-planning": {
+    title: "Planning Your Hospital Discharge: A Guide for Washington Families",
+    description: "A comprehensive guide to hospital discharge planning in Washington State — what questions to ask, understanding your options, and how to avoid readmission after a hospital stay.",
+    h1: "Planning Your Hospital Discharge: A Guide for Washington Families",
+  },
+  "/long-term-care/how-to-choose-care-settings": {
+    title: "How to Choose Between Care Settings: A Guide for Washington Families",
+    description: "A practical guide to choosing between aging in place, adult family homes, assisted living, memory care, and nursing homes in Washington State — matched to actual care needs and budget.",
+    h1: "How to Choose Between Care Settings: A Guide for Washington Families",
+  },
+  "/long-term-care/medicaid-and-long-term-care": {
+    title: "Medicaid & Long-Term Care in Washington State: What Families Need to Know",
+    description: "A comprehensive guide to Medicaid long-term care coverage in Washington State — eligibility, spend-down, adult family homes, assisted living, WA Cares, and why early planning matters.",
+    h1: "Medicaid &amp; Long-Term Care in Washington State: What Families Need to Know",
+  },
+  "/long-term-care/nurse-delegation": {
+    title: "The Nurse Delegation Program in Washington State: What Families Need to Know",
+    description: "Learn how Washington State's Nurse Delegation Program allows trained caregivers to perform nursing tasks in home care and adult family home settings — and how Medicaid covers the cost.",
+    h1: "The Nurse Delegation Program in Washington State: What Families Need to Know",
+  },
+  "/long-term-care/nursing-homes": {
+    title: "Nursing Homes in Washington State: What Families Need to Know",
+    description: "A comprehensive guide to nursing homes in Washington State — costs, staffing standards, how to research quality, Medicaid, WA Cares, and how to find the right fit for your family.",
+    h1: "Nursing Homes in Washington State: What Families Need to Know",
+  },
+  "/long-term-care/short-term-nursing-home-stays": {
+    title: "Short-Term Nursing Home Stays in Washington State: What Families Need to Know",
+    description: "Learn how short-term skilled nursing care works in Washington State — Medicare coverage, rehabilitation quality, discharge planning, and how to navigate the transition back home.",
+    h1: "Short-Term Nursing Home Stays in Washington State: What Families Need to Know",
+  },
+  "/long-term-care/wa-cares": {
+    title: "WA Cares Fund: How It Fits Into Long-Term Care Planning and Housing Decisions",
+    description: "A guide to Washington's WA Cares Fund — how it's funded, what it may pay for, who qualifies, and how it fits alongside home equity, Medicaid, and other long-term care planning strategies.",
+    h1: "WA Cares Fund: How WA Cares Fits Into Long-Term Care Planning and Housing Decisions",
+  },
+  "/medicare-providers": {
+    title: "Medicare Providers in Washington State | Real Property Planning",
+    description: "Connect with trusted Medicare specialists in Washington State. Learn about Medicare Parts A, B, C, and D, enrollment timing, and how Medicare planning fits into senior life transitions.",
+    h1: "Medicare Providers in Washington State",
+  },
+  "/mortgage-lenders": {
+    title: "Mortgage Lenders | Real Property Planning",
+    description: "Featured Washington State mortgage lenders supporting families with reverse mortgages, retirement financing, and home loans.",
+    h1: "Featured Mortgage Lenders",
+  },
+  "/olympia-probate-estate-real-estate": {
+    title: "Probate & Estate Real Estate in Olympia, WA",
+    description: "Guidance for families, executors, and seniors with estate or inherited property in Olympia, WA. Support for transitions, timing, and next steps.",
+    h1: "Helping Families Navigate Estate Property in Olympia",
+  },
+  "/planning": {
+    title: "Planning & Next Steps | Estate & Senior Transition Roadmap — WA",
+    description: "A practical roadmap for planning ahead — estate prep, property decisions, and senior housing transitions guided with care across Washington State.",
+  },
+  "/planning-before-a-crisis": {
+    title: "Planning Before a Crisis | Real Property Planning",
+    description: "Most families wait until a health emergency or a loved one's passing to sort out housing and property. Learn what you can do now — while there's still time to plan calmly.",
+    h1: "Planning Before a Crisis",
+  },
+  "/planning-before-a-crisis/conversations-to-have": {
+    title: "The Conversations Worth Having Now | Real Property Planning",
+    description: "Most families never ask an aging parent what they actually want. These are the questions worth asking — before circumstances force the answer.",
+  },
+  "/planning-before-a-crisis/how-we-can-help": {
+    title: "How This Resource Helps | Real Property Planning",
+    description: "Real Property Planning is an educational resource hub for seniors, families, executors, and professionals navigating housing transitions and estate property in Washington State.",
+  },
+  "/planning-before-a-crisis/legal-documents": {
+    title: "The Legal Documents That Matter Most | Real Property Planning",
+    description: "Four documents that protect your family's ability to act when it matters most — explained in plain language for Washington State families.",
+  },
+  "/planning-before-a-crisis/property-questions": {
+    title: "The Property Questions to Think Through | Real Property Planning",
+    description: "What is the home worth? What condition is it in? Who inherits it — and what happens if they disagree? The property questions families wish they'd thought through earlier.",
+  },
+  "/planning-before-a-crisis/when-a-move-is-coming": {
+    title: "When a Move Seems Like It's Coming | Real Property Planning",
+    description: "You can see the signs. A parent is struggling at home. A health event has changed things. Here's what to do when the question is no longer 'if' but 'when.'",
+  },
+  "/planning-before-a-crisis/why-planning-early": {
+    title: "Why Planning Early Makes Such a Difference | Real Property Planning",
+    description: "When housing and property decisions are made under pressure, families pay the price — financially and emotionally. Here's what's at stake when planning is left too late.",
+  },
+  "/professionals": {
+    title: "Find a Professional | Real Property Planning | Western Washington",
+    description: "A resource for families navigating estate settlement, inherited homes, and senior transitions — find trusted probate attorneys, senior housing advisors, financial planners, and more across the Puget Sound region.",
+    h1: "The Right Team Makes All the Difference",
+  },
+  "/professionals-services": {
+    title: "Professionals & Services | Estate, Probate & Senior Specialists — WA",
+    description: "Connect with vetted attorneys, CPAs, lenders, appraisers, and senior transition specialists serving families across Washington State.",
+    h1: "Professionals &amp; Services",
+  },
+  "/professionals/attorneys": {
+    title: "Legal Professionals | Attorneys Directory | Real Property Planning",
+    description: "Find experienced probate, estate planning, elder law, real estate, family law, and divorce attorneys serving Washington families.",
+    h1: "Legal Professionals",
+  },
+  "/professionals/care-managers": {
+    title: "Aging Life Care Managers & Social Workers | Puget Sound | Real Property Planning",
+    description: "Find certified aging life care managers and geriatric social workers serving Western Washington — helping families coordinate care, navigate elder care decisions, and support older adults through major life transitions.",
+  },
+  "/professionals/estate-sale": {
+    title: "Estate Sale & Personal Property Specialists | Puget Sound | Real Property Planning",
+    description: "Find trusted estate sale companies and personal property specialists serving Western Washington — helping families sort, value, and sell belongings from an estate or senior downsizing.",
+  },
+  "/professionals/financial-planners": {
+    title: "Financial Planners for Estate & Senior Transitions | Western Washington | Real Property Planning",
+    description: "Find financial advisors and planners in the Puget Sound region who specialize in inherited assets, estate tax planning, and financial decisions during senior transitions.",
+    h1: "Financial Planners & Advisors",
+  },
+  "/professionals/home-preparation": {
+    title: "Home Preparation & Staging for Estate Sales | Western Washington | Real Property Planning",
+    description: "Find contractors, cleaners, and staging professionals in the Puget Sound area who help prepare inherited homes and longtime family residences for a successful sale.",
+  },
+  "/professionals/probate-attorneys": {
+    title: "Probate Attorneys in Western Washington | Real Property Planning",
+    description: "Find experienced probate and estate attorneys serving King, Snohomish, Pierce, Skagit, and Kitsap Counties — helping families navigate estate settlement, inherited property, and probate court.",
+  },
+  "/professionals/senior-housing-advisors": {
+    title: "Senior Housing Advisors in Western Washington | Real Property Planning",
+    description: "Find trusted senior housing advisors and placement specialists serving the Puget Sound region — helping older adults and families choose assisted living, memory care, and independent living options.",
+  },
+  "/real-estate-attorneys": {
+    title: "Real Estate Brokerage Support for Real Estate Attorneys in Washington State | Real Property Planning",
+    description: "Real Property Planning works alongside real estate attorneys to provide market analysis, property coordination, and sale management when clients need both legal and real estate expertise.",
+    h1: "Real Estate Attorneys",
+  },
+  "/resources/washington-executors-10-step-checklist": {
+    title: "Washington Executor's 10-Step Checklist for Handling Real Estate | Real Property Planning",
+    description: "A practical free resource for Washington executors, trustees, and families handling estate real estate. Learn the 10 key steps to protect the property, understand value, and move forward with confidence.",
+    h1: "10 Steps Every Executor Should Know",
+  },
+  "/retirement-reverse-mortgage": {
+    title: "Retirement & Reverse Mortgage Guidance | Real Property Planning",
+    description: "Reverse mortgage and retirement financing guidance for Washington seniors and families. Trusted lending professionals supporting long-term housing and estate planning decisions.",
+    h1: "Supporting Clients with Financing Options and Long-Term Planning",
+  },
+  "/roles": {
+    title: "Roles & Responsibilities | Executors, Trustees & POA — Washington",
+    description: "Clear guidance on the roles that govern estates — executors, trustees, power of attorney, and the duties each carries in Washington State.",
+  },
+  "/search": {
+    title: "Search | Real Property Planning",
+    description: "Search Real Property Planning for probate, estate sales, senior transitions, attorneys, CPAs, financial planners, and more.",
+    h1: "Search Real Property Planning",
+  },
+  "/sell-house-fund-senior-living": {
+    title: "How to Sell a Parent's House to Pay for Senior Living in Washington State | Real Property Planning",
+    description: "Learn how Washington State families use home sale proceeds to pay for assisted living, memory care, and adult family home placement. Real Property Planning — Licensed Broker & Certified Appraiser — (206) 900-3015.",
+    h1: "How to Sell a Parent's House to Pay for Senior Living",
+  },
+  "/senior-living-advisors": {
+    title: "Senior Living Advisors in Washington State | Real Property Planning",
+    description: "Featured Senior Living Advisors helping older adults and families evaluate assisted living, memory care, adult family homes, and in-home care across Washington State.",
+    h1: "Senior Living Advisors",
+  },
+  "/senior-living-and-relocation": {
+    title: "Senior Living & Relocation | Real Property Planning",
+    description: "Helping families navigate housing transitions — from understanding senior living options to coordinating the sale of a family home.",
+    h1: "Senior Living & Relocation",
+  },
+  "/senior-living/adult-family-homes": {
+    title: "Adult Family Homes",
+    description: "Adult Family Homes in Washington State — licensed residential homes serving 2–6 residents with personal care in a home-like setting.",
+  },
+  "/senior-living/aging-in-place": {
+    title: "Aging in Place",
+    description: "Aging in Place in Washington State — remain in your own home with in-home caregivers, safety modifications, meal delivery, and medical alert services.",
+  },
+  "/senior-living/assisted-living": {
+    title: "Assisted Living",
+    description: "Assisted Living communities in Washington State — licensed residential care with help for daily activities, medication management, and 24-hour staff.",
+  },
+  "/senior-living/assisted-living-communities": {
+    title: "Assisted Living Communities | Senior Living | Real Property Planning",
+    description: "Learn about assisted living communities offering daily support, social activities, and on-site amenities for seniors throughout Washington State.",
+    h1: "Assisted Living Communities",
+  },
+  "/senior-living/independent-living": {
+    title: "Independent Living",
+    description: "Independent Living communities in Washington State for active, self-sufficient seniors who want convenience, social connection, and freedom from home maintenance.",
+  },
+  "/senior-living/memory-care": {
+    title: "Memory Care",
+    description: "Memory Care communities in Washington State for seniors with Alzheimer's, dementia, or cognitive decline — secure environments and specially trained staff.",
+  },
+  "/senior-living/nursing-and-skilled-care": {
+    title: "Nursing & Skilled Care | Senior Living | Real Property Planning",
+    description: "Learn about nursing and skilled care facilities providing 24-hour medical support for seniors throughout Washington State.",
+    h1: "Nursing & Skilled Care",
+  },
+  "/senior-living/power-of-attorneys": {
+    title: "Power of Attorney & Real Estate Decisions | Real Property Planning",
+    description: "Understanding how a power of attorney works in real estate — for families, executors, and professionals navigating property decisions in Washington State.",
+    h1: "Power of Attorney &amp; Real Estate Decisions",
+  },
+  "/senior-living/skilled-nursing": {
+    title: "Skilled Nursing Care",
+    description: "Skilled Nursing Care facilities in Washington State providing 24-hour medical care and rehabilitation, often after hospitalization or for long-term clinical needs.",
+  },
+  "/senior-move-managers": {
+    title: "Senior Move Managers in Washington State | Real Property Planning",
+    description: "Featured Senior Move Managers helping older adults and families plan, pack, and resettle during life's most significant transitions across Washington State.",
+    h1: "Senior Move Managers",
+  },
+  "/sitemap": {
+    title: "Site Map | Real Property Planning",
+    description: "Complete site map of Real Property Planning showing every page, its URL, and the internal links each page contains.",
+    h1: "Site Map",
+  },
+  "/spokane-probate-estate-real-estate": {
+    title: "Probate & Estate Real Estate in Spokane, WA",
+    description: "Guidance for executors and families with inherited property in Spokane, WA. Local on-the-ground coordination for out-of-area decision-makers.",
+    h1: "Helping Families Manage Inherited Property in Spokane",
+    quickAnswerQ: "How does Real Property Planning help families manage inherited property in Spokane?",
+    quickAnswerA: "Many Spokane estate properties are managed by families who live outside the area. Real Property Planning provides reliable, on-the-ground coordination — property assessment, preparation, pricing, and sale management — so out-of-area executors and trustees can make confident decisions without needing to be on-site.",
+  },
+  "/title-and-escrow": {
+    title: "Title & Escrow Services in Washington State | Real Property Planning",
+    description: "Learn how title and escrow services protect buyers, sellers, and families during probate and estate real estate transactions in Washington State.",
+    h1: "Title &amp; Escrow Services in Washington State",
+  },
+  "/vancouver-wa-probate-estate-real-estate": {
+    title: "Probate & Estate Real Estate in Vancouver, WA",
+    description: "Guidance for families, executors, and trustees with inherited property in Vancouver, WA. Relocation, timing, and coordinated transitions.",
+    h1: "Helping Families Navigate Property Transitions in Vancouver",
+  },
+  "/counties/benton": {
+    title: "Probate Real Estate & Inherited Property Sales in Benton County | Real Property Planning",
+    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Benton County, Washington State.",
+    h1: "Estate & Inherited Property Sales in Benton County",
+  },
+  "/counties/clark": {
+    title: "Probate Real Estate & Inherited Property Sales in Clark County | Real Property Planning",
+    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Clark County, Washington State.",
+    h1: "Estate & Inherited Property Sales in Clark County",
+  },
+  "/counties/franklin": {
+    title: "Probate Real Estate & Inherited Property Sales in Franklin County | Real Property Planning",
+    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Franklin County, Washington State.",
+    h1: "Estate & Inherited Property Sales in Franklin County",
+  },
+  "/counties/spokane": {
+    title: "Probate Real Estate & Inherited Property Sales in Spokane County | Real Property Planning",
+    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Spokane County, Washington State.",
+    h1: "Estate & Inherited Property Sales in Spokane County",
+  },
+  "/counties/whatcom": {
+    title: "Probate Real Estate & Inherited Property Sales in Whatcom County | Real Property Planning",
+    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Whatcom County, Washington State.",
+    h1: "Estate & Inherited Property Sales in Whatcom County",
+  },
+  "/counties/yakima": {
+    title: "Probate Real Estate & Inherited Property Sales in Yakima County | Real Property Planning",
+    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Yakima County, Washington State.",
+    h1: "Estate & Inherited Property Sales in Yakima County",
+  },
+  "/afh-club/afh-roi-calculator": {
+    title: "AFH ROI Calculator | Real Property Planning",
+    description: "Estimate return on investment for an Adult Family Home purchase in Washington State — purchase price, financing, revenue, and operating expenses.",
+    h1: "AFH ROI Calculator",
+  },
+  "/afh-club/afh-valuation-estimator": {
+    title: "AFH Valuation Estimator | Real Property Planning",
+    description: "Estimate the value of an operating Adult Family Home business in Washington State based on income, capacity, occupancy, and licensing status.",
+    h1: "AFH Valuation Estimator",
+  },
+  "/afh-club/listings": {
+    title: "Adult Family Homes For Sale | Real Property Planning",
+    description: "Current Adult Family Home listings for sale throughout Washington State — licensed businesses, properties, or both, with pricing and broker contact information.",
+    h1: "Adult Family Homes For Sale",
+  },
+
   // ===== AFH city-specific for-sale pages (LLM/AI-search AEO pages) =====
   "/afh-club/for-sale/seattle-wa": {
     title: "Adult Family Homes For Sale in Seattle, WA | Real Property Planning",
@@ -794,6 +1488,38 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerQ: "I'm planning to retire from running my AFH — should I sell the business and the building together, or separately?",
     quickAnswerA: "Most retiring owners sell both together, and most buyers prefer it that way — it lets them step directly into an operating home with residents, staff, and licensing already in place. Selling the business and building as a single transaction is usually simpler and often nets more than selling them apart, though separating them can make sense in specific situations, such as keeping the real estate as an investment.",
     intro: "Running an Adult Family Home for years — sometimes decades — builds something genuinely difficult to walk away from: relationships with residents and families, a trained staff who trust your leadership, and a business with real value beyond the four walls it sits in. Selling an AFH at retirement runs on two tracks that have to work together: the real estate transaction, and the transfer of your DSHS operating license to a new, DSHS-approved owner.",
+  },
+
+  // ===== Final coverage gap-fill (6 routes missed by the bulk pass) =====
+  "/estate-probate-inherited-property/probate-and-legal-authority": {
+    title: "Understanding Probate & Legal Authority | Real Property Planning",
+    description: "What is probate, and do you need it? Who has legal authority to make decisions about the estate? Plain-language answers for Washington State families.",
+    h1: "Understanding Probate & Legal Authority",
+  },
+  "/executor-responsibilities-first-steps/when-you-need-extra-help": {
+    title: "When Executors Need Extra Help | Real Property Planning",
+    description: "Guidance for executors who feel overwhelmed managing an estate — when and how to bring in professional support throughout Washington State.",
+    h1: "When You Need Extra Help",
+  },
+  "/executor-responsibilities-first-steps/working-with-professionals": {
+    title: "Executors Working With Professionals | Real Property Planning",
+    description: "How executors coordinate with attorneys, CPAs, appraisers, and other professionals during estate administration in Washington State.",
+    h1: "Working With Professionals",
+  },
+  "/guides/probate-house-sale-timeline-washington": {
+    title: "Probate House Sale Timeline in Washington State | Real Property Planning",
+    description: "Real Property Planning explains the realistic timeline for selling a probate property in Washington State — from death to distribution of proceeds. Licensed Broker & Certified Appraiser — (206) 900-3015.",
+    h1: "Probate House Sale Timeline in Washington State",
+  },
+  "/guides/repairs-before-selling-probate-home-washington": {
+    title: "What Repairs Should Be Made Before Selling a Probate Home in Washington? | Real Property Planning",
+    description: "Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip. Licensed Broker & Certified Appraiser — (206) 900-3015.",
+    h1: "What Repairs Should Be Made Before Selling a Probate Home?",
+  },
+  "/guides/who-has-authority-sell-probate-property-washington": {
+    title: "Who Has Authority to Sell Probate Property in Washington State? | Real Property Planning",
+    description: "Real Property Planning explains who has legal authority to sell estate property in Washington State — including personal representatives, trustees, and what Letters Testamentary mean for your sale. (206) 900-3015.",
+    h1: "Who Has Authority to Sell Probate Property?",
   },
 };
 
