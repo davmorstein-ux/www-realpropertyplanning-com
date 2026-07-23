@@ -24,6 +24,7 @@ const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [role, setRole] = useState("");
+  const [formLoadedAt] = useState(() => Date.now());
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -39,6 +40,8 @@ const Contact = () => {
       role,
       message: formData.get("message") as string,
       source_page: formData.get("source_page") as string,
+      company_website: formData.get("company_website") as string,
+      form_loaded_at: formData.get("form_loaded_at") as string,
     };
 
     try {
@@ -191,6 +194,15 @@ const Contact = () => {
                       name="source_page"
                       value={typeof window !== "undefined" ? window.location.pathname : ""}
                     />
+                    <input type="hidden" name="form_loaded_at" value={formLoadedAt} />
+                    {/* Honeypot — invisible to real visitors, bots that auto-fill every field trip it */}
+                    <div
+                      aria-hidden="true"
+                      style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }}
+                    >
+                      <label htmlFor="company_website">Company Website</label>
+                      <input type="text" id="company_website" name="company_website" tabIndex={-1} autoComplete="off" />
+                    </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
