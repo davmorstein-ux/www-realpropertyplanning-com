@@ -188,7 +188,8 @@ const WhatShouldWeDoFirst = () => {
             <img
               src="/assets/start_hero_clean_v2.webp"
               alt="Begin your journey — Real Property Planning"
-              className="w-full h-auto object-cover"
+              className="w-full object-cover"
+              style={{ height: "clamp(220px, 32vw, 380px)" }}
               loading="eager"
               fetchPriority="high"
               sizes="100vw"

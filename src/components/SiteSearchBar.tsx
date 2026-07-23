@@ -19,9 +19,30 @@ const SiteSearchBar = () => {
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return [];
+
+    const scoreEntry = (label: string, path: string): number => {
+      const l = label.toLowerCase();
+      if (l === q) return 100; // exact label match
+      if (l.startsWith(q)) return 80; // label starts with query
+      // whole-word match anywhere in the label
+      if (new RegExp(`\\b${q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`).test(l)) return 60;
+      if (l.includes(q)) return 40; // substring match in label
+      if (path.toLowerCase().includes(q)) return 20; // only the path matches
+      return 0;
+    };
+
     return siteSearchIndex
-      .filter((entry) => entry.label.toLowerCase().includes(q) || entry.path.toLowerCase().includes(q))
-      .slice(0, 8);
+      .map((entry) => ({ entry, score: scoreEntry(entry.label, entry.path) }))
+      .filter((r) => r.score > 0)
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        // Equal relevance: shorter, more canonical labels rank above longer,
+        // more specific ones (e.g. "Probate & Estate Sales" over
+        // "Bellevue Probate Estate Real Estate").
+        return a.entry.label.length - b.entry.label.length;
+      })
+      .slice(0, 8)
+      .map((r) => r.entry);
   }, [query]);
 
   // Close results dropdown when clicking outside the search bar

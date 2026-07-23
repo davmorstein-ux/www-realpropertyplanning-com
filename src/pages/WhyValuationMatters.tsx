@@ -120,10 +120,11 @@ const WhyValuationMatters = () => {
         <img
           src="/assets/valuation_hero_clean.webp"
           alt="Why Valuation Matters — Real Property Planning"
-          className="w-full h-auto object-cover"
+          className="w-full object-cover"
+          style={{ height: "clamp(220px, 32vw, 380px)", display: "block" }}
           loading="eager"
           fetchPriority="high"
-          style={{ display: 'block' }} sizes="100vw" width={1902} height={459} />
+          sizes="100vw" width={1902} height={459} />
         <HeroBandTitle as="h1">Pricing &amp; Valuation Expertise</HeroBandTitle>
       </section>
 

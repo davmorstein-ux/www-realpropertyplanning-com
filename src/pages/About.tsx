@@ -34,7 +34,8 @@ const About = () => {
           <img
             src={aboutHeroImage}
             alt="Real Property Planning — Senior Transitions"
-            className="w-full h-auto object-cover"
+            className="w-full object-cover"
+            style={{ height: "clamp(220px, 32vw, 380px)" }}
             loading="eager"
             fetchPriority="high" sizes="100vw" width={1885} height={591} />
           <h1 className="sr-only">About Real Property Planning</h1>

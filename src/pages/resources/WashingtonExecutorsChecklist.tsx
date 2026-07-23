@@ -95,7 +95,8 @@ const WashingtonExecutorsChecklist = () => {
             <img
               src={washingtonExecutorsHero}
               alt="Senior couple driving a red convertible toward a highway sign reading 10 Steps for Executors with Seattle skyline and Mount Rainier in the distance"
-              className="w-full h-auto object-cover object-center block"
+              className="w-full object-cover object-center block"
+              style={{ height: "clamp(220px, 32vw, 380px)" }}
               loading="eager" sizes="100vw" decoding="async" width={1920} height={441} />
             <HeroBandTitle as="h1">10 Steps Every Executor Should Know</HeroBandTitle>
           </div>

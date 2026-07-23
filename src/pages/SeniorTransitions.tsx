@@ -42,8 +42,8 @@ const SeniorTransitions = () => {
           <img
             src={seniorTransitionsHero}
             alt="Senior couple in front of their longtime Washington home with a Real Property Planning For Sale sign"
-            className="w-full h-auto object-cover"
-            style={{ display: "block" }}
+            className="w-full object-cover"
+            style={{ height: "clamp(220px, 32vw, 380px)", display: "block" }}
             loading="eager"
             fetchPriority="high"
             sizes="100vw"

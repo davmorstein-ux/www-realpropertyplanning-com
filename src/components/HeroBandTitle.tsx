@@ -54,19 +54,19 @@ const titleCase = (input: string): string => {
 const transformChildren = (children: ReactNode): ReactNode =>
   Children.map(children, (child) => (typeof child === "string" ? titleCase(child) : child));
 
-const textStyle = {
+const bandTextStyle = (isH1: boolean) => ({
   color: "#FFFFFF",
   fontFamily: "'Raleway', sans-serif",
   fontWeight: 900,
-  fontSize: "18px",
-  letterSpacing: "0.18em",
-  lineHeight: 1,
+  fontSize: isH1 ? "clamp(30px, 4vw, 44px)" : "18px",
+  letterSpacing: isH1 ? "0.04em" : "0.18em",
+  lineHeight: 1.15,
   opacity: 1,
   margin: 0,
   padding: 0,
   textTransform: "uppercase" as const,
   textAlign: "center" as const,
-};
+});
 
 const HeroBandTitle = ({
   children,
@@ -75,6 +75,8 @@ const HeroBandTitle = ({
   compact = false,
   className = "",
 }: HeroBandTitleProps) => {
+  const isH1 = Tag === "h1";
+  const textStyle = bandTextStyle(isH1);
   if (bare) {
     return (
       <Tag className="rpp-hero-band-text" style={textStyle}>
@@ -85,7 +87,16 @@ const HeroBandTitle = ({
   return (
     <>
       <div style={{ height: "3px", background: "#FFFFFF" }} />
-      <div style={{ background: "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)", padding: "4px 24px", display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 0 }}>
+      <div
+        style={{
+          background: "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)",
+          padding: isH1 ? "20px 24px" : "4px 24px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          lineHeight: 0,
+        }}
+      >
         <Tag className="rpp-hero-band-text" style={textStyle}>
           {transformChildren(children)}
         </Tag>

@@ -89,7 +89,8 @@ const ProbateEstateSales = () => {
             <img
               src="/assets/estate_probate_sales_hero_clean.webp"
               alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home"
-              className="w-full h-auto object-cover"
+              className="w-full object-cover"
+              style={{ height: "clamp(220px, 32vw, 380px)" }}
               loading="eager"
               fetchPriority="high"
               sizes="100vw"
