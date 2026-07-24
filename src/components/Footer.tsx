@@ -278,8 +278,10 @@ const Footer = () => {
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "1rem" }}>
           <p className="rpp-footer-disclaimer">
             Real Property Planning is an independent educational hub. It does not provide legal, financial, tax, real
-            estate brokerage, medical, or other professional services. Professionals referenced on this site are
-            independent and not affiliated with Real Property Planning.{" "}
+            estate brokerage, medical, or other professional services. Professional licensing credentials referenced on
+            this site belong to individual members of our professional network, who provide their respective services
+            independently, through their own separately licensed businesses — not through Real Property Planning.
+            Professionals referenced on this site are independent and not affiliated with Real Property Planning.{" "}
             <Link to="/disclaimer" style={{ color: "rgba(255,255,255,0.45)", textDecoration: "underline" }}>
               Full disclaimer
             </Link>
