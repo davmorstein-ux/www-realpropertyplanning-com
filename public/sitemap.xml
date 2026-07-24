@@ -146,7 +146,6 @@
 
   <!-- Additional routes -->
   <url><loc>https://realpropertyplanning.com/client-stories</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
-  <url><loc>https://realpropertyplanning.com/senior-placement</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://realpropertyplanning.com/sell-house-fund-senior-living</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://realpropertyplanning.com/estate-liquidation/learn-more</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
 
@@ -158,4 +157,108 @@
   <url><loc>https://realpropertyplanning.com/afh-club/for-sale/edmonds-wa</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://realpropertyplanning.com/afh-club/for-sale/puyallup-wa</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://realpropertyplanning.com/afh-club/selling-your-business-at-retirement</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/afh-roi-calculator</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/afh-valuation-estimator</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/building-inspection</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/buying-selling</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/calculators</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/costs-fees</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/find-a-professional</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/getting-started</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/licensing-certification</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/listings</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/management-companies</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/ownership-structure</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/real-estate-broker</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/regulations-compliance</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/resources</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-club/training-education</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-marketplace</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/afh-submit</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/aging-life-care-managers</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/affordable-senior-housing</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/aging-in-place</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/ccrc-costs</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/how-to-choose-senior-housing</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/independent-living-costs</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/memory-care-costs</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/senior-housing-costs</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/senior-housing-guide</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/senior-housing-options</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/silver-tsunami</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/articles/wills-trusts-other-options</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://realpropertyplanning.com/attorneys/for-elder-law-attorneys</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/attorneys/for-family-law-attorneys</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/attorneys/for-real-estate-attorney</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/cost-of-care-calculator</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/benton</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/clark</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/cowlitz</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/franklin</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/grays-harbor</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/island</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/jefferson</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/king</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/kitsap</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/lewis</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/mason</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/pacific</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/pierce</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/san-juan</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/skagit</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/skamania</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/snohomish</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/spokane</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/thurston</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/wahkiakum</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/whatcom</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/counties/yakima</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://realpropertyplanning.com/disclaimer</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://realpropertyplanning.com/estate-liquidators</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/executor-responsibilities-first-steps/common-mistakes</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/executor-responsibilities-first-steps/first-30-days</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/executor-responsibilities-first-steps/legal-duties</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/executor-responsibilities-first-steps/property-decisions</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/executor-responsibilities-first-steps/when-you-need-extra-help</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/executor-responsibilities-first-steps/working-with-professionals</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/executors/executors-guide</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/featured-senior-move-managers</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/for-attorneys/how-it-works</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/gray-divorce</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realpropertyplanning.com/grey-divorce</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://realpropertyplanning.com/guides/probate-house-sale-timeline-washington</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/guides/probate-vs-trust-sale-washington</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/guides/repairs-before-selling-probate-home-washington</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/guides/who-has-authority-sell-probate-property-washington</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/long-term-care</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/long-term-care/finding-care-roomandcare</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/long-term-care/hospital-discharge-planning</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/long-term-care/how-to-choose-care-settings</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/long-term-care/medicaid-and-long-term-care</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/long-term-care/nurse-delegation</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/long-term-care/nursing-homes</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/long-term-care/short-term-nursing-home-stays</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/long-term-care/wa-cares</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/medicare-providers</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/mortgage-lenders</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/planning</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/planning-before-a-crisis</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/planning-before-a-crisis/conversations-to-have</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/planning-before-a-crisis/how-we-can-help</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/planning-before-a-crisis/legal-documents</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/planning-before-a-crisis/property-questions</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/planning-before-a-crisis/when-a-move-is-coming</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/planning-before-a-crisis/why-planning-early</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/professionals-services</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/professionals/attorneys</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/roles</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/senior-living-advisors</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/senior-living/aging-in-place</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/senior-living/assisted-living</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/senior-living/skilled-nursing</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://realpropertyplanning.com/senior-move-managers</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://realpropertyplanning.com/sitemap</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://realpropertyplanning.com/title-and-escrow</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 </urlset>
