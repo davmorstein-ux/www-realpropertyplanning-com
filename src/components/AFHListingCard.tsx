@@ -29,7 +29,19 @@ const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; va
   </div>
 );
 
-const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: number; total: number }) => (
+const PhotoPanel = ({
+  photo,
+  index,
+  total,
+  address,
+  city,
+}: {
+  photo: string | null;
+  index: number;
+  total: number;
+  address: string;
+  city: string;
+}) => (
   <div
     style={{
       width: "220px",
@@ -47,7 +59,9 @@ const PhotoPanel = ({ photo, index, total }: { photo: string | null; index: numb
     {photo ? (
       <img
         src={photo}
-        alt={`Listing ${index + 1}`}
+        alt={`Adult Family Home property ${
+          address && address !== "Address Upon Request" ? `at ${address}, ${city}` : `for sale in ${city}`
+        }, Washington`}
         style={{
           width: "100%",
           height: "100%",
@@ -147,7 +161,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
       flexDirection: "row",
     }}
   >
-    <PhotoPanel photo={listing.photo} index={index} total={total} />
+    <PhotoPanel photo={listing.photo} index={index} total={total} address={listing.address} city={listing.city} />
 
     <div
       style={{
@@ -243,7 +257,11 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
           (206) 900-3015
         </a>
         <a
-          href="mailto:dave.stein@exprealty.com"
+          href={`mailto:dave.stein@exprealty.com?subject=${encodeURIComponent(
+            `AFH Property Inquiry — ${
+              listing.address && listing.address !== "Address Upon Request" ? listing.address : listing.city
+            }${listing.mlsNum ? ` — MLS ${listing.mlsNum}` : ""}`
+          )}`}
           style={{
             display: "inline-flex",
             alignItems: "center",

@@ -1393,9 +1393,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "AFH Valuation Estimator",
   },
   "/afh-club/listings": {
-    title: "Adult Family Homes For Sale | Real Property Planning",
-    description: "Current Adult Family Home listings for sale throughout Washington State — licensed businesses, properties, or both, with pricing and broker contact information.",
-    h1: "Adult Family Homes For Sale",
+    title: "Adult Family Homes for Sale in Washington | AFH Club",
+    description: "Browse Adult Family Home properties currently listed for sale or lease throughout Washington State, with pricing, property details and NWMLS attribution.",
+    h1: "Adult Family Homes for Sale in Washington",
   },
 
   // ===== AFH city-specific for-sale pages (LLM/AI-search AEO pages) =====

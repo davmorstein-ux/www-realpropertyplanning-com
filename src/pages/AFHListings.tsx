@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { afhListings } from "@/data/afhListings";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 
@@ -59,6 +61,17 @@ const AFHListings = () => {
         fontFamily: "Inter, system-ui, sans-serif",
       }}
     >
+      <SEOHead
+        title="Adult Family Homes for Sale in Washington | AFH Club"
+        description="Browse Adult Family Home properties currently listed for sale or lease throughout Washington State, with pricing, property details and NWMLS attribution."
+        canonical="https://realpropertyplanning.com/afh-club/listings"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "AFH Club", url: "https://realpropertyplanning.com/afh-club" },
+          { name: "Listings", url: "https://realpropertyplanning.com/afh-club/listings" },
+        ]}
+      />
       <Header />
       <main id="main-content" style={{ paddingTop: "80px" }}>
         {/* ── HEADER ── */}
@@ -148,7 +161,7 @@ const AFHListings = () => {
             {/* Heading */}
             <h1
               style={{
-                fontSize: "clamp(1.6rem, 3.5vw, 2.1rem)",
+                fontSize: "clamp(32px, 5vw, 50px)",
                 fontWeight: 700,
                 color: SLATE,
                 margin: "0 0 0.6rem",
@@ -169,8 +182,22 @@ const AFHListings = () => {
                 maxWidth: "560px",
               }}
             >
-              Licensed Adult Family Home properties currently available for sale in the Puget Sound region. Reach out
-              for showings or additional information on any listing.
+              Properties currently marketed or operated as Adult Family Homes for sale in the Puget Sound region.
+              Reach out for showings or additional information on any listing.
+            </p>
+            <p
+              style={{
+                fontSize: "14px",
+                color: GRAY_TEXT,
+                lineHeight: 1.7,
+                margin: "0 0 1.5rem",
+                maxWidth: "620px",
+                fontStyle: "italic",
+              }}
+            >
+              AFH licenses are issued to individual providers and do not automatically transfer with the real
+              estate. Buyers must independently satisfy all applicable DSHS licensing and Change of Ownership
+              requirements. Property and licensing information should be independently verified.
             </p>
 
             {/* Stats bar */}

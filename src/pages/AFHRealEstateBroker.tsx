@@ -232,9 +232,9 @@ const AFHRealEstateBroker = () => (
                 >
                   WA Licensed Real Estate Broker · eXp Realty · License #6c171e
                   <br />
-                  WA Certified Residential Appraiser · Stein Appraisal
+                  {" "}WA Certified Residential Appraiser · Stein Appraisal
                   <br />
-                  Member: ALCA · NAOSA · NAEPC · NAR
+                  {" "}Member: ALCA · NAOSA · NAEPC · NAR
                 </p>
               </div>
               <p

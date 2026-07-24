@@ -42,6 +42,12 @@ const titleCase = (input: string): string => {
   let firstWordSeen = false;
   return parts.map((part) => {
     if (!part || /^\s+$/.test(part)) return part;
+    const m = part.match(/^([^A-Za-z0-9]*)([A-Za-z0-9]*)([^A-Za-z0-9]*)$/);
+    const [, lead = "", core = "", trail = ""] = m || [];
+    if (core && KEEP_UPPER.has(core.toUpperCase())) {
+      firstWordSeen = true;
+      return lead + core.toUpperCase() + trail;
+    }
     const upper = part.toUpperCase();
     if (KEEP_UPPER.has(upper)) { firstWordSeen = true; return upper; }
     const lower = part.toLowerCase();

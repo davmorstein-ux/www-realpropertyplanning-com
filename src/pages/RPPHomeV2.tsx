@@ -106,7 +106,7 @@ const RPPHomeV2 = () => {
             >
               Estate & Probate Sales · Senior Transitions
               <br />
-              Adult Family Home Marketplace
+              {" "}Adult Family Home Marketplace
             </p>
           </div>
         </div>

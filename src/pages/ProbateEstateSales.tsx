@@ -126,7 +126,7 @@ const ProbateEstateSales = () => {
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4 font-sans text-center">
                 Probate Property vs. Inherited Property
                 <br />
-                What's the Difference?
+                {" "}What's the Difference?
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">​</p>
               <div
