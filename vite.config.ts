@@ -885,11 +885,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "A plain-language guide to the most common ways Washington homeowners transfer real estate to the next generation — and the tradeoffs each method carries.",
     h1: "How to Pass Real Estate to Your Children:",
   },
-  "/attorneys/for-divorce-attorneys": {
-    title: "Divorce Attorneys in Washington State | Real Property Planning",
-    description: "A divorce attorney helps individuals and couples navigate the legal process of ending a marriage, including asset division and real property matters.",
-    h1: "Divorce Attorney",
-  },
   "/attorneys/for-elder-law-attorneys": {
     title: "Elder Law Attorneys in Washington State | Real Property Planning",
     description: "An elder law attorney helps seniors and families with long-term care planning, Medicaid, guardianship, and incapacity planning in Washington State.",
@@ -1066,36 +1061,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Featured Senior Move Managers | Real Property Planning",
     description: "Featured Washington State senior move managers helping families with downsizing, relocation, and senior transitions.",
     h1: "Featured Senior Move Managers",
-  },
-  "/for-attorneys/divorce-attorneys": {
-    title: "Divorce Attorneys in Washington State | Real Property Planning",
-    description: "A divorce attorney helps individuals and couples navigate the legal process of ending a marriage, including asset division and real property matters.",
-    h1: "Divorce Attorney",
-  },
-  "/for-attorneys/elder-law-attorneys": {
-    title: "Real Estate Support for Elder Law Attorneys in Washington State | Real Property Planning",
-    description: "Real Property Planning helps elder law attorneys and their clients navigate senior home sales, Medicaid planning property decisions, and estate transitions in Washington State.",
-    h1: "Elder Law Attorneys",
-  },
-  "/for-attorneys/estate-planning-attorneys": {
-    title: "Real Estate Support for Estate Planning Attorneys in Washington State | Real Property Planning",
-    description: "Real Property Planning helps estate planning attorneys and their clients navigate property valuation, sale timing, and real estate coordination throughout Washington State.",
-    h1: "Estate Planning Attorneys",
-  },
-  "/for-attorneys/family-law-attorneys": {
-    title: "Real Estate Support for Family Law Attorneys in Washington State | Real Property Planning",
-    description: "Real Property Planning provides neutral, experienced real estate support for family law attorneys and their clients navigating property decisions in Washington State.",
-    h1: "Family Law Attorneys",
-  },
-  "/for-attorneys/probate-attorneys": {
-    title: "Real Estate Support for Probate Attorneys in Washington State | Real Property Planning",
-    description: "Real Property Planning coordinates property assessment, valuation, preparation, and sale for probate attorneys and their clients throughout Washington State.",
-    h1: "Probate Attorneys",
-  },
-  "/for-attorneys/real-estate-attorneys": {
-    title: "Real Estate Brokerage Support for Real Estate Attorneys in Washington State | Real Property Planning",
-    description: "Real Property Planning works alongside real estate attorneys to provide market analysis, property coordination, and sale management when clients need both legal and real estate expertise.",
-    h1: "Real Estate Attorneys",
   },
   "/for-divorce-attorneys": {
     title: "Divorce Attorneys in Washington State | Real Property Planning",

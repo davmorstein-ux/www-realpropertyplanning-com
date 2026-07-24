@@ -45,7 +45,7 @@ const groups = [
           "Tax guidance, estate coordination, and financial planning for inherited property.",
       },
       {
-        href: "/attorneys/for-divorce-attorneys",
+        href: "/for-divorce-attorneys",
         title: "Divorce Attorneys",
         description:
           "Collaborative divorce and family law with expertise in property division.",

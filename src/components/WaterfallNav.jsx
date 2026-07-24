@@ -18,7 +18,7 @@ const CATEGORIES = [
       { name: "Elder Law Attorneys", href: "/professionals/elder-law-attorneys" },
       { name: "Real Estate Attorneys", href: "/professionals/real-estate-attorneys" },
       { name: "Family Law Attorneys", href: "/professionals/family-law-attorneys" },
-      { name: "Divorce Attorneys", href: "/attorneys/for-divorce-attorneys" },
+      { name: "Divorce Attorneys", href: "/for-divorce-attorneys" },
     ],
   },
   {

@@ -15,7 +15,7 @@ const relatedResources = [
   { label: "Executors, POAs & Trustees", href: "/executors" },
   { label: "Probate Terminology", href: "/terminology" },
   { label: "Why Valuation Matters", href: "/why-valuation-matters" },
-  { label: "Elder Law Attorneys", href: "/for-attorneys/elder-law-attorneys" },
+  { label: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
 ];
 
 const jsonLd = articleSchema({

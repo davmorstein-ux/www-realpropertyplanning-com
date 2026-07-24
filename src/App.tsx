@@ -344,13 +344,25 @@ const App = () => (
           <Route path="/attorneys/for-elder-law-attorneys" element={<AttorneysForElderLawAttorneys />} />
           <Route path="/attorneys/for-real-estate-attorney" element={<AttorneysForRealEstateAttorney />} />
           <Route path="/attorneys/for-family-law-attorneys" element={<AttorneysForFamilyLawAttorneys />} />
-          <Route path="/attorneys/for-divorce-attorneys" element={<ForDivorceAttorneys />} />
-          <Route path="/for-attorneys/probate-attorneys" element={<ForProbateAttorneys />} />
-          <Route path="/for-attorneys/estate-planning-attorneys" element={<ForEstatePlanningAttorneys />} />
-          <Route path="/for-attorneys/elder-law-attorneys" element={<ForElderLawAttorneys />} />
-          <Route path="/for-attorneys/family-law-attorneys" element={<ForFamilyLawAttorneys />} />
-          <Route path="/for-attorneys/divorce-attorneys" element={<ForDivorceAttorneys />} />
-          <Route path="/for-attorneys/real-estate-attorneys" element={<ForRealEstateAttorneys />} />
+          <Route path="/attorneys/for-divorce-attorneys" element={<Navigate to="/for-divorce-attorneys" replace />} />
+          <Route path="/for-attorneys/probate-attorneys" element={<Navigate to="/for-probate-attorneys" replace />} />
+          <Route
+            path="/for-attorneys/estate-planning-attorneys"
+            element={<Navigate to="/for-estate-planning-attorneys" replace />}
+          />
+          <Route
+            path="/for-attorneys/elder-law-attorneys"
+            element={<Navigate to="/for-elder-law-attorneys" replace />}
+          />
+          <Route
+            path="/for-attorneys/family-law-attorneys"
+            element={<Navigate to="/for-family-law-attorneys" replace />}
+          />
+          <Route path="/for-attorneys/divorce-attorneys" element={<Navigate to="/for-divorce-attorneys" replace />} />
+          <Route
+            path="/for-attorneys/real-estate-attorneys"
+            element={<Navigate to="/real-estate-attorneys" replace />}
+          />
           <Route path="/for-cpas" element={<ForCPAs />} />
           <Route path="/professionals/cpas" element={<Navigate to="/for-cpas" replace />} />
           <Route path="/for-financial-planners" element={<ForFinancialPlanners />} />
