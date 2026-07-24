@@ -337,6 +337,11 @@ const Contact = () => {
 
                     <div ref={turnstileContainerRef} />
 
+                    <p className="text-sm text-muted-foreground text-center">
+                      🔒 Your information is used only to respond to your inquiry — never sold or shared for
+                      marketing.
+                    </p>
+
                     <Button
                       type="submit"
                       disabled={isSubmitting || !turnstileToken}

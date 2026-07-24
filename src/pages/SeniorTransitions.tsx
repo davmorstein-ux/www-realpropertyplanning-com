@@ -61,6 +61,8 @@ const SeniorTransitions = () => {
             "Connects you with move managers, living advisors, and estate liquidators as needed",
             "Provides an honest, condition-based valuation rather than an automated estimate",
           ]}
+          ctaLabel="Start the Conversation"
+          ctaHref="/contact"
         />
 
         {/* What Goes Into a Senior Transition */}

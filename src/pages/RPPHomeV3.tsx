@@ -483,6 +483,19 @@ const RPPHomeV3 = () => {
                 Washington State's leading resource for senior transitions, estate &amp; probate sales, and the Adult
                 Family Home marketplace
               </p>
+              <p
+                style={{
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: 14,
+                  fontWeight: 600,
+                  letterSpacing: "0.04em",
+                  color: "#5a5147",
+                  margin: "10px 0 0",
+                }}
+              >
+                Founded by David Stein — Washington State Licensed Real Estate Broker &amp; Certified Residential
+                Appraiser
+              </p>
             </div>
           </div>
         </section>

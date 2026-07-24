@@ -115,6 +115,8 @@ const ProbateEstateSales = () => {
               desc: "The property moves to market with every repair decision evaluated for return.",
             },
           ]}
+          ctaLabel="Request a Property Assessment"
+          ctaHref="/contact"
         />
 
         {/* SECTION 2 — Probate vs. Inherited (two tiles, no accordions) */}

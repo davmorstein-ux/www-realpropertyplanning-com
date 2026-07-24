@@ -4,6 +4,7 @@
  * Designed to be extractable by AI answer engines and featured snippets.
  * Supports optional scannable support content below the answer.
  */
+import { Link } from "react-router-dom";
 
 interface SupportStep {
   label: string;
@@ -28,6 +29,9 @@ interface DirectAnswerBlockProps {
   supportSteps?: SupportStep[];
   /** Optional 2 short FAQ cards */
   supportFaqs?: SupportFaq[];
+  /** Optional page-specific call to action, rendered at the bottom of the card */
+  ctaLabel?: string;
+  ctaHref?: string;
 }
 
 const DirectAnswerBlock = ({
@@ -37,6 +41,8 @@ const DirectAnswerBlock = ({
   supportBullets,
   supportSteps,
   supportFaqs,
+  ctaLabel,
+  ctaHref,
 }: DirectAnswerBlockProps) => {
   return (
     <section
@@ -109,6 +115,19 @@ const DirectAnswerBlock = ({
                     </p>
                   </div>
                 ))}
+              </div>
+            )}
+            {/* Optional page-specific CTA */}
+            {ctaLabel && ctaHref && (
+              <div className="mt-6 pt-5 border-t border-border">
+                <Link
+                  to={ctaHref}
+                  className="inline-flex items-center gap-2 rounded-lg font-bold text-white no-underline"
+                  style={{ background: "#6b1b22", padding: "13px 26px", fontSize: 17 }}
+                >
+                  {ctaLabel}
+                  <span aria-hidden="true">→</span>
+                </Link>
               </div>
             )}
           </div>
