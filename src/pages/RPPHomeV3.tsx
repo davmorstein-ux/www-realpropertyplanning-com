@@ -56,10 +56,15 @@ const RPPHomeV3 = () => {
           <img
             id="rpp-hero-image"
             src="/hero-v2.webp"
+            srcSet="/hero-v2-640w.webp 640w, /hero-v2-960w.webp 960w, /hero-v2-1280w.webp 1280w, /hero-v2-1691w.webp 1691w"
+            sizes="100vw"
+            width={1691}
+            height={756}
             alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
             className="block w-full object-cover object-center"
             style={{ height: "clamp(240px, 34vw, 420px)" }}
             loading="eager"
+            fetchPriority="high"
             decoding="async"
           />
           {/* Logo + tagline overlay */}
