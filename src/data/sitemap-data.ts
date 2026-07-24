@@ -67,7 +67,23 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     ]
   },
   {
+    "path": "/afh-club/for-sale/auburn-wa",
+    "links": []
+  },
+  {
+    "path": "/afh-club/for-sale/bellevue-wa",
+    "links": []
+  },
+  {
+    "path": "/afh-club/for-sale/bonney-lake-wa",
+    "links": []
+  },
+  {
     "path": "/afh-club/for-sale/edmonds-wa",
+    "links": []
+  },
+  {
+    "path": "/afh-club/for-sale/everett-wa",
     "links": []
   },
   {
@@ -75,7 +91,19 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     "links": []
   },
   {
+    "path": "/afh-club/for-sale/lakewood-wa",
+    "links": []
+  },
+  {
     "path": "/afh-club/for-sale/lynnwood-wa",
+    "links": []
+  },
+  {
+    "path": "/afh-club/for-sale/marysville-wa",
+    "links": []
+  },
+  {
+    "path": "/afh-club/for-sale/mukilteo-wa",
     "links": []
   },
   {

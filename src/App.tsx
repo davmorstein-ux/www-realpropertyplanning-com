@@ -221,6 +221,13 @@ const AFHForSaleRenton = lazy(() => import("./pages/AFHForSaleRenton"));
 const AFHForSaleLynnwood = lazy(() => import("./pages/AFHForSaleLynnwood"));
 const AFHForSaleEdmonds = lazy(() => import("./pages/AFHForSaleEdmonds"));
 const AFHForSalePuyallup = lazy(() => import("./pages/AFHForSalePuyallup"));
+const AFHForSaleMarysville = lazy(() => import("./pages/AFHForSaleMarysville"));
+const AFHForSaleAuburn = lazy(() => import("./pages/AFHForSaleAuburn"));
+const AFHForSaleEverett = lazy(() => import("./pages/AFHForSaleEverett"));
+const AFHForSaleBellevue = lazy(() => import("./pages/AFHForSaleBellevue"));
+const AFHForSaleLakewood = lazy(() => import("./pages/AFHForSaleLakewood"));
+const AFHForSaleBonneyLake = lazy(() => import("./pages/AFHForSaleBonneyLake"));
+const AFHForSaleMukilteo = lazy(() => import("./pages/AFHForSaleMukilteo"));
 const AFHSellingBusinessAtRetirement = lazy(() => import("./pages/AFHSellingBusinessAtRetirement"));
 const LongTermCareOptions = lazy(() => import("./pages/LongTermCareOptions"));
 const HomepageNew = lazy(() => import("./pages/HomepageNew"));
@@ -737,6 +744,13 @@ const App = () => (
           <Route path="/afh-club/for-sale/lynnwood-wa" element={<AFHForSaleLynnwood />} />
           <Route path="/afh-club/for-sale/edmonds-wa" element={<AFHForSaleEdmonds />} />
           <Route path="/afh-club/for-sale/puyallup-wa" element={<AFHForSalePuyallup />} />
+          <Route path="/afh-club/for-sale/marysville-wa" element={<AFHForSaleMarysville />} />
+          <Route path="/afh-club/for-sale/auburn-wa" element={<AFHForSaleAuburn />} />
+          <Route path="/afh-club/for-sale/everett-wa" element={<AFHForSaleEverett />} />
+          <Route path="/afh-club/for-sale/bellevue-wa" element={<AFHForSaleBellevue />} />
+          <Route path="/afh-club/for-sale/lakewood-wa" element={<AFHForSaleLakewood />} />
+          <Route path="/afh-club/for-sale/bonney-lake-wa" element={<AFHForSaleBonneyLake />} />
+          <Route path="/afh-club/for-sale/mukilteo-wa" element={<AFHForSaleMukilteo />} />
           <Route
             path="/afh-club/selling-your-business-at-retirement"
             element={<AFHSellingBusinessAtRetirement />}
