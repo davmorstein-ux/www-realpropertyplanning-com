@@ -480,7 +480,7 @@ const AFHClub = () => (
               lineHeight: 1.2,
             }}
           >
-            AFH Marketplace
+            Ready to Buy or Sell an AFH?
           </h2>
           <p
             style={{
