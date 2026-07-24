@@ -927,8 +927,8 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     "path": "/long-term-care/hospital-discharge-planning",
     "links": [
       "/aging-life-care-managers",
+      "/for-elder-law-attorneys",
       "/guides-and-resources",
-      "/professionals/elder-law-attorneys",
       "/professionals/financial-planners",
       "/senior-living-advisors"
     ]
@@ -945,7 +945,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   {
     "path": "/long-term-care/medicaid-and-long-term-care",
     "links": [
-      "/professionals/elder-law-attorneys",
+      "/for-elder-law-attorneys",
       "/professionals/financial-planners",
       "/senior-living-advisors"
     ]
@@ -975,7 +975,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     "path": "/long-term-care/wa-cares",
     "links": [
       "/afh-marketplace",
-      "/professionals/elder-law-attorneys",
+      "/for-elder-law-attorneys",
       "/professionals/financial-planners",
       "/senior-living-advisors"
     ]

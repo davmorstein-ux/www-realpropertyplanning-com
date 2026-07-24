@@ -229,7 +229,7 @@ const HospitalDischargePlanning = () => {
                 Aging Life Care Managers
               </Link>
               ,{" "}
-              <Link to="/professionals/elder-law-attorneys" className={inlineLink}>
+              <Link to="/for-elder-law-attorneys" className={inlineLink}>
                 elder law attorneys
               </Link>
               , and{" "}
