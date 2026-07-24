@@ -25,6 +25,8 @@ interface RouteMeta {
   cities?: string[];
   /** Set to true for pages that shouldn't be indexed (e.g. internal search) */
   noIndex?: boolean;
+  /** LCP hero image to preload for this specific route (avoids preloading it on every other page, since all routes share one index.html) */
+  heroImage?: string;
 }
 
 const ROUTE_METADATA: Record<string, RouteMeta> = {
@@ -33,6 +35,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "Calm, experienced guidance for probate, inherited property, and senior housing transitions across Washington State. Call (206) 900-3015.",
     h1: "Probate, Estate & Senior Transition Real Estate in Washington State",
+    heroImage: "/hero-v2.webp",
     intro:
       "Guiding seniors, families, and professionals through real estate and housing transitions across Washington State — downsizing, relocation, probate, inherited property, and senior living decisions — with calm guidance, practical coordination, and clear next steps.",
     sections: [],
@@ -1657,6 +1660,12 @@ const applyMetadata = (
     /<meta\s+property="og:url"\s+content="[\s\S]*?"\s*\/?>/i,
     `<meta property="og:url" content="${canonical}" />`
   );
+  if (meta.heroImage && out.includes("</head>")) {
+    out = out.replace(
+      "</head>",
+      `  <link rel="preload" as="image" href="${meta.heroImage}" fetchpriority="high" />\n  </head>`
+    );
+  }
 
   if (injectSsg) {
     const ssgContent = buildSsgContent(meta);
