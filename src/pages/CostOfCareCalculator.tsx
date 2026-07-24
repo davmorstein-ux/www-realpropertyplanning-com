@@ -231,6 +231,7 @@ const CostOfCareCalculator = () => {
                     <button
                       key={c.id}
                       onClick={() => setCareTypeId(c.id)}
+                      aria-pressed={active}
                       style={{
                         padding: "14px 6px",
                         borderRadius: 8,
@@ -330,6 +331,7 @@ const CostOfCareCalculator = () => {
                     <button
                       key={y}
                       onClick={() => setYearsOut(y)}
+                      aria-pressed={y === yearsOut}
                       style={{ ...pillBtn(y === yearsOut, TEAL), flex: "1 1 80px" }}
                     >
                       {y === 0 ? "Now" : `${y} yrs`}
@@ -434,6 +436,7 @@ const CostOfCareCalculator = () => {
                     <button
                       key={p.id}
                       onClick={() => setInflationId(p.id)}
+                      aria-pressed={p.id === inflationId}
                       style={{
                         ...pillBtn(p.id === inflationId, TEAL),
                         flex: "1 1 140px",
@@ -455,10 +458,18 @@ const CostOfCareCalculator = () => {
                   3. Estimated Cost
                 </div>
                 <div style={{ display: "flex", gap: 6 }}>
-                  <button onClick={() => setUnit("monthly")} style={pillBtn(unit === "monthly", TEAL)}>
+                  <button
+                    onClick={() => setUnit("monthly")}
+                    aria-pressed={unit === "monthly"}
+                    style={pillBtn(unit === "monthly", TEAL)}
+                  >
                     Monthly
                   </button>
-                  <button onClick={() => setUnit("annual")} style={pillBtn(unit === "annual", TEAL)}>
+                  <button
+                    onClick={() => setUnit("annual")}
+                    aria-pressed={unit === "annual"}
+                    style={pillBtn(unit === "annual", TEAL)}
+                  >
                     Annual
                   </button>
                 </div>
