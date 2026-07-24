@@ -198,18 +198,18 @@ const AFHRealEstateBroker = () => (
                 Real Property Planning
               </h2>
               <ProviderTile
-                name="our team"
-                title="President, Real Property Planning"
+                name="David Stein"
+                title="Washington State Licensed Real Estate Broker"
                 company="eXp Realty"
                 photo={davidSteinPhoto}
-                photoAlt="Photo of our team, AFH Real Estate Broker"
+                photoAlt="Photo of David Stein, AFH Real Estate Broker"
                 logo={expRealtyLogo}
                 logoAlt="eXp Realty logo"
                 phone="(206) 900-3015"
                 email="dave.stein@exprealty.com"
                 website="https://davestein.exprealty.com"
                 specialty="Adult Family Home transactions, probate, estate, and trust property sales across Washington State."
-                bio="We are a Washington State licensed real estate broker and Certified Residential Appraiser with over 20 years of experience in complex property transactions. He brings a rare combination of appraisal expertise and brokerage experience to AFH transactions — understanding both how to value a licensed care facility and how to navigate the CHOW process, DSHS timelines, and specialty contract considerations that define AFH real estate."
+                bio="David Stein is a Washington State licensed real estate broker and Certified Residential Appraiser with over 20 years of experience in complex property transactions. He brings a rare combination of appraisal expertise and brokerage experience to AFH transactions — understanding both how to value a licensed care facility and how to navigate the CHOW process, DSHS timelines, and specialty contract considerations that define AFH real estate."
               />
               <div
                 style={{
@@ -237,6 +237,19 @@ const AFHRealEstateBroker = () => (
                   Member: ALCA · NAOSA · NAEPC · NAR
                 </p>
               </div>
+              <p
+                style={{
+                  marginTop: 16,
+                  fontSize: 14,
+                  fontFamily: "'Raleway', sans-serif",
+                  color: "#5a5147",
+                  lineHeight: 1.7,
+                }}
+              >
+                David Stein is Real Property Planning's founder and a member of its professional network. His real
+                estate brokerage services are provided independently through eXp Realty — not through Real Property
+                Planning.
+              </p>
             </div>
 
             {/* Right — Why You Need a Specialist */}
