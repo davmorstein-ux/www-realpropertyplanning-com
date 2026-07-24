@@ -30,7 +30,7 @@ type Listing = {
 const listings: Listing[] = [
   { id: 1, title: "6-bed AFH — fully licensed & staffed", location: "Renton", county: "King", type: "Both", price: 1250000, capacity: 6, sqft: 3400, occupancy: 100, annualRev: 312000, annualNet: 148000, dshsLicensed: true, medicaidCertified: true, yearsOperating: 7, reasonForSale: "Retirement", newListing: true },
   { id: 2, title: "4-bed AFH property — turnkey condition", location: "Lynnwood", county: "Snohomish", type: "Property", price: 720000, capacity: 4, sqft: 2800, occupancy: null, annualRev: null, annualNet: null, dshsLicensed: false, medicaidCertified: false, yearsOperating: null, reasonForSale: null, newListing: false },
-  { id: 3, title: "AFH business & license — no property", location: "Tacoma", county: "Pierce", type: "Business", price: 185000, capacity: 4, sqft: null, occupancy: 75, annualRev: 168000, annualNet: 72000, dshsLicensed: true, medicaidCertified: true, yearsOperating: 4, reasonForSale: "Relocating", newListing: true },
+  { id: 3, title: "AFH operating business and assets — real estate not included; buyer must independently qualify for licensing", location: "Tacoma", county: "Pierce", type: "Business", price: 185000, capacity: 4, sqft: null, occupancy: 75, annualRev: 168000, annualNet: 72000, dshsLicensed: true, medicaidCertified: true, yearsOperating: 4, reasonForSale: "Relocating", newListing: true },
   { id: 4, title: "6-bed waterfront AFH — property + ops", location: "Gig Harbor", county: "Pierce", type: "Both", price: 1480000, capacity: 6, sqft: 4100, occupancy: 83, annualRev: 288000, annualNet: 124000, dshsLicensed: true, medicaidCertified: false, yearsOperating: 11, reasonForSale: "Estate sale", newListing: false },
   { id: 5, title: "2-bed AFH — ideal first-time buyer", location: "Olympia", county: "Thurston", type: "Both", price: 425000, capacity: 2, sqft: 1900, occupancy: 100, annualRev: 96000, annualNet: 38000, dshsLicensed: true, medicaidCertified: true, yearsOperating: 3, reasonForSale: "Health reasons", newListing: false },
   { id: 6, title: "4-bed AFH property — zoned & ADA ready", location: "Bremerton", county: "Kitsap", type: "Property", price: 540000, capacity: 4, sqft: 2500, occupancy: null, annualRev: null, annualNet: null, dshsLicensed: false, medicaidCertified: false, yearsOperating: null, reasonForSale: null, newListing: true },
@@ -107,6 +107,10 @@ const AFHMarketplace: React.FC = () => {
             <HeroBandTitle as="h1">AFH Marketplace</HeroBandTitle>
             <p className="text-[17px] md:text-[19px] text-slate-600 mt-3 max-w-3xl leading-relaxed">
               Washington State Adult Family Homes for sale — property, business, or both.
+            </p>
+            <p className="text-[14px] text-slate-500 mt-2 max-w-3xl leading-relaxed">
+              These are active listings shared with the seller's authorization. Financial figures reflect current
+              or recent operating data provided directly by each seller.
             </p>
           </div>
         </section>

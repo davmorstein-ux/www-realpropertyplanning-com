@@ -28,7 +28,7 @@ const KEEP_LOWER = new Set([
   "onto",
   "with",
 ]);
-const KEEP_UPPER = new Set(["CPA", "CPAS", "POA", "FAQ", "WA"]);
+const KEEP_UPPER = new Set(["CPA", "CPAS", "POA", "FAQ", "WA", "AFH", "AFHS"]);
 
 const capitalizeWord = (part: string): string => {
   const lowered = part.toLowerCase();

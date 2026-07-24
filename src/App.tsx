@@ -213,7 +213,6 @@ const AFHOwnershipStructure = lazy(() => import("./pages/AFHOwnershipStructure")
 const AFHListings = lazy(() => import("./pages/AFHListings"));
 const AFHManagementCompanies = lazy(() => import("./pages/AFHManagementCompanies"));
 const AFHRealEstateBroker = lazy(() => import("./pages/AFHRealEstateBroker"));
-const AFHMarketplace = lazy(() => import("./pages/AFHMarketplace"));
 const AFHSubmit = lazy(() => import("./pages/AFHSubmit"));
 const AFHForSaleSeattle = lazy(() => import("./pages/AFHForSaleSeattle"));
 const AFHForSaleKirkland = lazy(() => import("./pages/AFHForSaleKirkland"));
@@ -736,7 +735,7 @@ const App = () => (
           <Route path="/afh-club/listings" element={<AFHListings />} />
           <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />
           <Route path="/afh-club/real-estate-broker" element={<AFHRealEstateBroker />} />
-          <Route path="/afh-marketplace" element={<AFHMarketplace />} />
+          <Route path="/afh-marketplace" element={<Navigate to="/afh-club/listings" replace />} />
           <Route path="/afh-submit" element={<AFHSubmit />} />
           <Route path="/afh-club/for-sale/seattle-wa" element={<AFHForSaleSeattle />} />
           <Route path="/afh-club/for-sale/kirkland-wa" element={<AFHForSaleKirkland />} />

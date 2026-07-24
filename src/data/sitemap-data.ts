@@ -23,7 +23,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   {
     "path": "/afh-club",
     "links": [
-      "/afh-marketplace",
+      "/afh-club/listings",
       "/afh-submit"
     ]
   },
@@ -165,12 +165,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   {
     "path": "/afh-club/training-education",
     "links": []
-  },
-  {
-    "path": "/afh-marketplace",
-    "links": [
-      "/contact"
-    ]
   },
   {
     "path": "/afh-submit",
@@ -974,7 +968,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   {
     "path": "/long-term-care/wa-cares",
     "links": [
-      "/afh-marketplace",
+      "/afh-club/listings",
       "/for-elder-law-attorneys",
       "/professionals/financial-planners",
       "/senior-living-advisors"
@@ -1687,5 +1681,9 @@ export const SITEMAP_REDIRECTS: SitemapRedirect[] = [
   {
     "from": "/afh-club/afh-cost-calculator",
     "to": "/afh-club/calculators"
+  },
+  {
+    "from": "/afh-marketplace",
+    "to": "/afh-club/listings"
   }
 ];

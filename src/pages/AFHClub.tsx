@@ -188,12 +188,12 @@ const AFHClub = () => (
               lineHeight: 1.7,
             }}
           >
-            Washington's only dedicated marketplace for buying and selling Adult Family Homes — property, business, or
+            A dedicated Washington marketplace for buying and selling Adult Family Homes — property, business, or
             both.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
-              to="/afh-marketplace"
+              to="/afh-club/listings"
               style={{
                 display: "inline-block",
                 background: "#302b26",
@@ -435,8 +435,8 @@ const AFHClub = () => (
             }}
           >
             An Adult Family Home (AFH) is a private residence licensed by the Washington State Department of Social and
-            Health Services (DSHS) to provide personal care, room, and board for up to six adults who are unrelated to
-            the service provider.
+            Health Services (DSHS) to provide personal care, room, and board for two to six adults who are unrelated to
+            the service provider, although qualified homes may be approved by DSHS for up to eight residents.
           </p>
           <p
             style={{
@@ -498,12 +498,12 @@ const AFHClub = () => (
               color: "rgba(255,255,255,0.95)",
             }}
           >
-            Browse Adult Family Homes for sale — property, business, or both. Washington's only dedicated AFH buy/sell
+            Browse Adult Family Homes for sale — property, business, or both. A dedicated Washington AFH buy/sell
             marketplace.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
             <Link
-              to="/afh-marketplace"
+              to="/afh-club/listings"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

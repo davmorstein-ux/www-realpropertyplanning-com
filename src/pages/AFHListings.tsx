@@ -14,10 +14,11 @@ const WHITE = "#ffffff";
 
 
 const BackButton = () => (
-  <a href="/afh-club" style={{ display: "inline-block", textDecoration: "none" }}>
+  <a href="/afh-club" aria-label="Back to AFH Club" style={{ display: "inline-block", textDecoration: "none" }}>
     <img
       src="/listing-photos/back-to-afh-club.png"
-      alt="Back to AFH Club"
+      alt=""
+      aria-hidden="true"
       style={{ height: "70px", width: "auto", display: "block", mixBlendMode: "multiply" as const }}
       onMouseOver={(e) => (e.currentTarget.style.opacity = "0.8")}
       onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
@@ -80,10 +81,11 @@ const AFHListings = () => {
             >
               <BackButton />
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
-                <a href="/afh-club" style={{ textDecoration: "none", display: "inline-block" }}>
+                <a href="/afh-club" aria-label="AFH Club" style={{ textDecoration: "none", display: "inline-block" }}>
                   <img
                     src="/afh-club-badge.png"
-                    alt="AFH Club"
+                    alt=""
+                    aria-hidden="true"
                     style={{ height: "160px", width: "auto", display: "block" }}
                   />
                 </a>

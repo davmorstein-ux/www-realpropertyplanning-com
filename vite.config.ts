@@ -814,11 +814,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Complete guide to Washington State AFH training requirements — 75-hour HCA training, AFH Administrator Training, specialty courses, continuing education, and where to enroll.",
     h1: "AFH Training & Education Requirements",
   },
-  "/afh-marketplace": {
-    title: "AFH Marketplace — Washington Adult Family Homes for Sale | Real Property Planning",
-    description: "Washington State Adult Family Homes for sale — property, business, or both. Filter by county, capacity, and price.",
-    h1: "AFH Marketplace",
-  },
   "/afh-submit": {
     title: "Sell Your AFH — Talk With David | Real Property Planning",
     description: "Thinking of selling your Adult Family Home in Washington? Start with a conversation with David Stein.",
