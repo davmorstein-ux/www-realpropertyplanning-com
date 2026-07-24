@@ -222,7 +222,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               Every potential improvement to a probate property should be evaluated through one lens: will this investment return more than it costs at closing?
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in methodology — not guesswork. He evaluates each potential improvement based on comparable sales data, buyer behavior in the current market, and the property's specific condition.
+              A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in methodology — not guesswork. We evaluate each potential improvement based on comparable sales data, buyer behavior in the current market, and the property's specific condition.
             </p>
             <div className="rounded-lg bg-background border-l-4 border-gold p-6 shadow-sm">
               <p className="text-foreground text-base md:text-lg leading-relaxed">

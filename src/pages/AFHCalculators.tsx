@@ -117,7 +117,7 @@ const AFHCalculators: React.FC = () => {
           <div className="max-w-3xl mx-auto px-6">
             <p className="text-[15px] md:text-[16px] text-white leading-relaxed text-center">
               These calculators are for informational purposes only and do not constitute a certified appraisal, broker opinion of value, or financial advice.{" "}
-              <Link to="/contact" className="underline font-semibold">Contact David Stein</Link> for a professional analysis.
+              <Link to="/contact" className="underline font-semibold">Contact our team</Link> for a professional analysis.
             </p>
           </div>
         </section>

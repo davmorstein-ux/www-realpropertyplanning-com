@@ -471,7 +471,7 @@ const PowerOfAttorneys = () => {
                     families face this situation — and having the right guidance makes it less stressful.
                   </p>
                   <p className="text-muted-foreground text-[15px] leading-relaxed">
-                    I'll help you understand the process, coordinate with yDavid Stein, and take care of the property
+                    I'll help you understand the process, coordinate with your team, and take care of the property
                     details so you can focus on what matters most.
                   </p>
                 </div>

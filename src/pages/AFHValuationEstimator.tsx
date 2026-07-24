@@ -580,7 +580,7 @@ const AFHValuationEstimator = () => {
               >
                 This estimate uses income capitalization methodology and Washington AFH market data. It is for
                 informational purposes only and does not constitute a certified appraisal or broker opinion of value.
-                Contact David Stein for a professional certified valuation.
+                Contact our team for a professional certified valuation.
               </div>
               <div
                 style={{
@@ -601,7 +601,7 @@ const AFHValuationEstimator = () => {
                     Get a certified professional valuation
                   </strong>
                   <p style={{ fontSize: 13, color: "#272421", marginTop: 3 }}>
-                    David Stein · Licensed Broker &amp; Certified Appraiser · eXp Realty · 20+ years AFH experience
+                    our team · Licensed Broker &amp; Certified Appraiser · eXp Realty · 20+ years AFH experience
                   </p>
                 </div>
                 <button

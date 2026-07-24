@@ -66,7 +66,7 @@ const faqs = [
   {
     question: "Do I need a real estate broker who specializes in AFH transactions?",
     answer:
-      "It genuinely helps. An AFH sale involves real estate valuation, business valuation, DSHS licensing logistics, and resident-transition considerations all at once — a broker without specific AFH experience may handle the real estate side competently but miss the licensing and operational pieces that determine whether the transaction actually closes smoothly. David Stein, a Washington State licensed broker and certified appraiser with AFH-specific experience, can walk you through what a realistic sale looks like for your specific home.",
+      "It genuinely helps. An AFH sale involves real estate valuation, business valuation, DSHS licensing logistics, and resident-transition considerations all at once — a broker without specific AFH experience may handle the real estate side competently but miss the licensing and operational pieces that determine whether the transaction actually closes smoothly. our team, a Washington State licensed broker and certified appraiser with AFH-specific experience, can walk you through what a realistic sale looks like for your specific home.",
   },
 ];
 

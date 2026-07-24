@@ -69,7 +69,7 @@ const CPAsFinancialAdvisors = () => (
               </Link>{" "}
               that support tax and financial planning. Learn more about{" "}
               <Link to="/for-cpas" className="text-accent hover:text-gold underline underline-offset-4">
-                how David Stein works with CPAs
+                how We work with CPAs
               </Link>{" "}
               and{" "}
               <Link to="/for-financial-planners" className="text-accent hover:text-gold underline underline-offset-4">

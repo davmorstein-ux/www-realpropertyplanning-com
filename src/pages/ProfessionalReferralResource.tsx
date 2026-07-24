@@ -15,7 +15,7 @@ import iconResources from "@/assets/icons/probate-estate-resources-icon-washingt
 const whoIWorkWith = [
   {
     title: "Estate Planning and Probate Attorneys",
-    text: "Real Property Planning works with attorneys whose clients face real property decisions during probate, trust administration, guardianship, or conservatorship. He provides the property assessment, pricing guidance, and sale coordination that allow attorneys to focus on the legal matter — confident that the real estate side is handled with professionalism and discretion.",
+    text: "Real Property Planning works with attorneys whose clients face real property decisions during probate, trust administration, guardianship, or conservatorship. We provide the property assessment, pricing guidance, and sale coordination that allow attorneys to focus on the legal matter — confident that the real estate side is handled with professionalism and discretion.",
   },
   {
     title: "Personal Representatives and Executors",
@@ -31,7 +31,7 @@ const whoIWorkWith = [
   },
   {
     title: "Senior Move Managers and Transition Professionals",
-    text: "Real Property Planning works with senior move managers and care professionals who need a reliable real estate partner for clients transitioning out of longtime homes. He coordinates seamlessly with transition teams, handling property preparation and sale while the care side focuses on the client's wellbeing.",
+    text: "Real Property Planning works with senior move managers and care professionals who need a reliable real estate partner for clients transitioning out of longtime homes. We coordinate seamlessly with transition teams, handling property preparation and sale while the care side focuses on the client's wellbeing.",
   },
   {
     title: "Families Handling Inherited or Transition-Related Property",
@@ -50,19 +50,19 @@ const whyRefer = [
   },
   {
     title: "Clear Communication Throughout the Process",
-    text: "Referring professionals and their clients receive consistent updates at meaningful milestones — not just when problems arise. David Stein communicates in plain language, keeps all parties informed, and is available for questions between scheduled updates.",
+    text: "Referring professionals and their clients receive consistent updates at meaningful milestones — not just when problems arise. We communicate in plain language, keeps all parties informed, and is available for questions between scheduled updates.",
   },
   {
     title: "Help Coordinating Vendors, Cleanout, Repairs, and Preparation",
-    text: "Many estate and transition properties need significant work before they are ready for the market. David Stein coordinates the entire preparation process — scheduling vendors, overseeing cleanout, managing repairs, and evaluating which improvements are worth the investment.",
+    text: "Many estate and transition properties need significant work before they are ready for the market. We coordinate the entire preparation process — scheduling vendors, overseeing cleanout, managing repairs, and evaluating which improvements are worth the investment.",
   },
   {
     title: "Respect for Family Dynamics and Fiduciary Responsibilities",
-    text: "David Stein understands that estate and trust situations involve legal obligations, emotional complexity, and multiple stakeholders with different perspectives. He navigates these dynamics with care — presenting facts clearly, listening carefully, and never taking sides.",
+    text: "our team understands that estate and trust situations involve legal obligations, emotional complexity, and multiple stakeholders with different perspectives. We navigate these dynamics with care — presenting facts clearly, listening carefully, and never taking sides.",
   },
   {
     title: "Local Knowledge of Washington State Markets",
-    text: "David Stein serves clients throughout Washington State — with detailed knowledge of neighborhood-level pricing patterns, buyer expectations, and the practical realities of selling estate properties in each market.",
+    text: "We serve clients throughout Washington State — with detailed knowledge of neighborhood-level pricing patterns, buyer expectations, and the practical realities of selling estate properties in each market.",
   },
 ];
 
@@ -252,7 +252,7 @@ const ProfessionalReferralResource = () => {
               My Commitment to Referral Partners
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              When you refer a client to Real Property Planning, that referral reflects your professional judgment and your relationship with the client. David Stein treats every referral accordingly — with responsiveness, discretion, and the kind of thorough follow-through that reinforces your credibility.
+              When you refer a client to Real Property Planning, that referral reflects your professional judgment and your relationship with the client. our team treats every referral accordingly — with responsiveness, discretion, and the kind of thorough follow-through that reinforces your credibility.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed">
               The goal is straightforward: serve your client well, communicate clearly with everyone involved, handle the process responsibly, and make you confident in recommending this resource again. That means no surprises, no pressure tactics, and no shortcuts — just experienced, principled real estate guidance delivered with the professionalism your clients deserve.
@@ -288,7 +288,7 @@ const ProfessionalReferralResource = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-              Learn More About How David Stein Helps
+              Learn More About How our team Helps
             </h2>
             <p className="text-muted-foreground text-base leading-relaxed mb-8">
               Explore these pages for additional detail on specific situations and services.

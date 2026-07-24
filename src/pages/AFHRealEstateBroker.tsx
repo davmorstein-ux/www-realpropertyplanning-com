@@ -198,18 +198,18 @@ const AFHRealEstateBroker = () => (
                 Real Property Planning
               </h2>
               <ProviderTile
-                name="David Stein"
+                name="our team"
                 title="President, Real Property Planning"
                 company="eXp Realty"
                 photo={davidSteinPhoto}
-                photoAlt="Photo of David Stein, AFH Real Estate Broker"
+                photoAlt="Photo of our team, AFH Real Estate Broker"
                 logo={expRealtyLogo}
                 logoAlt="eXp Realty logo"
                 phone="(206) 900-3015"
                 email="dave.stein@exprealty.com"
                 website="https://davestein.exprealty.com"
                 specialty="Adult Family Home transactions, probate, estate, and trust property sales across Washington State."
-                bio="David Stein is a Washington State licensed real estate broker and Certified Residential Appraiser with over 20 years of experience in complex property transactions. He brings a rare combination of appraisal expertise and brokerage experience to AFH transactions — understanding both how to value a licensed care facility and how to navigate the CHOW process, DSHS timelines, and specialty contract considerations that define AFH real estate."
+                bio="We are a Washington State licensed real estate broker and Certified Residential Appraiser with over 20 years of experience in complex property transactions. He brings a rare combination of appraisal expertise and brokerage experience to AFH transactions — understanding both how to value a licensed care facility and how to navigate the CHOW process, DSHS timelines, and specialty contract considerations that define AFH real estate."
               />
               <div
                 style={{

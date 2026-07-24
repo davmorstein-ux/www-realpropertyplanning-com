@@ -611,7 +611,7 @@ const AFHROICalculator = () => {
                 }}
               >
                 Estimates are for informational purposes only. Actual returns depend on financing terms, occupancy,
-                staffing costs, regulatory changes, and market conditions. Consult David Stein for a professional
+                staffing costs, regulatory changes, and market conditions. Consult our team for a professional
                 investment analysis.
               </div>
               <div
@@ -633,7 +633,7 @@ const AFHROICalculator = () => {
                     Ready to analyze a specific deal?
                   </strong>
                   <p style={{ fontSize: 13, color: "#272421", marginTop: 3 }}>
-                    David Stein — Licensed Broker &amp; Certified Appraiser · eXp Realty · 20+ years AFH experience
+                    our team — Licensed Broker &amp; Certified Appraiser · eXp Realty · 20+ years AFH experience
                   </p>
                 </div>
                 <button

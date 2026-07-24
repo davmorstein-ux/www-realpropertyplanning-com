@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "How do I get notified about new AFH listings in Puyallup and Pierce County?",
     answer:
-      "Reach out directly — David Stein tracks AFH inventory across Pierce County and can notify you when a Puyallup-area property matching your criteria comes on the market.",
+      "Reach out directly — we track AFH inventory across Pierce County and can notify you when a Puyallup-area property matching your criteria comes on the market.",
   },
 ];
 

@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "How do I get notified about new AFH listings in Lynnwood?",
     answer:
-      "Reach out directly — David Stein tracks Lynnwood and broader Snohomish County AFH inventory closely and can notify you as soon as a matching property comes to market.",
+      "Reach out directly — we track Lynnwood and broader Snohomish County AFH inventory closely and can notify you as soon as a matching property comes to market.",
   },
 ];
 

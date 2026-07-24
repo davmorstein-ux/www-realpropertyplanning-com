@@ -96,7 +96,7 @@ const AFHListings = () => {
                       lineHeight: 1.3,
                     }}
                   >
-                    David Stein
+                    our team
                   </div>
                   <div
                     style={{

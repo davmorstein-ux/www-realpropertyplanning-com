@@ -38,22 +38,22 @@ const faqs = [
   {
     question: "Should I sell an inherited house as-is?",
     answer:
-      "It depends on the property's condition, your timeline, and the likely return on preparation investment. Some properties sell well as-is to investors or renovation buyers. Others benefit significantly from targeted preparation. David Stein evaluates each situation individually and recommends the approach most likely to protect value.",
+      "It depends on the property's condition, your timeline, and the likely return on preparation investment. Some properties sell well as-is to investors or renovation buyers. Others benefit significantly from targeted preparation. We evaluate each situation individually and recommends the approach most likely to protect value.",
   },
   {
     question: "How soon can I sell an inherited house in Washington?",
     answer:
-      "Once legal authority is established (through probate, trust administration, or other means), the property can be listed for sale. Pre-listing preparation — assessment, cleanout, repairs — can begin earlier. David Stein helps create a realistic timeline aligned with your specific circumstances.",
+      "Once legal authority is established (through probate, trust administration, or other means), the property can be listed for sale. Pre-listing preparation — assessment, cleanout, repairs — can begin earlier. We help create a realistic timeline aligned with your specific circumstances.",
   },
   {
     question: "What if there are multiple heirs who cannot agree?",
     answer:
-      "Disagreements among heirs are common. David Stein provides objective, data-driven market analysis that helps move conversations from opinion to evidence. For legal disputes, the estate attorney should be involved. David Stein's role is to provide clear real estate data and professional guidance.",
+      "Disagreements among heirs are common. We provide objective, data-driven market analysis that helps move conversations from opinion to evidence. For legal disputes, the estate attorney should be involved. Our role is to provide clear real estate data and professional guidance.",
   },
   {
     question: "Do I need to go through probate to sell an inherited house?",
     answer:
-      "Not always. Property held in a trust, joint tenancy, or with a transfer-on-death deed may pass outside of probate. The estate attorney can clarify the legal requirements. David Stein can begin property assessment and planning regardless of the legal pathway.",
+      "Not always. Property held in a trust, joint tenancy, or with a transfer-on-death deed may pass outside of probate. The estate attorney can clarify the legal requirements. our team can begin property assessment and planning regardless of the legal pathway.",
   },
 ];
 

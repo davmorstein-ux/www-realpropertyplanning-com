@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "How do I find out about new Edmonds AFH listings as they come available?",
     answer:
-      "Reach out directly — David Stein, a Washington State licensed broker and certified appraiser, tracks Edmonds and broader Snohomish County AFH inventory and can notify you when a matching listing comes to market.",
+      "Reach out directly — our team, led by a Washington State licensed broker and certified appraiser, tracks Edmonds and broader Snohomish County AFH inventory and can notify you when a matching listing comes to market.",
   },
 ];
 

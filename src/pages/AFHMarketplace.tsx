@@ -233,7 +233,7 @@ const AFHMarketplace: React.FC = () => {
                 Thinking of selling your AFH?
               </h3>
               <p className="text-[17px] text-white/90 mt-2 leading-relaxed">
-                Contact David Stein with eXp Realty first to discuss your goals, timeline, and options. A signed listing agreement is required before any property is marketed.
+                Contact our team with eXp Realty first to discuss your goals, timeline, and options. A signed listing agreement is required before any property is marketed.
               </p>
             </div>
             <Link

@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "How do I get notified about new AFH listings in Renton and South King County?",
     answer:
-      "Contact David Stein directly — he tracks AFH inventory across South King County and can reach out when a Renton-area property matching your criteria comes on the market.",
+      "Contact our team directly — he tracks AFH inventory across South King County and can reach out when a Renton-area property matching your criteria comes on the market.",
   },
 ];
 

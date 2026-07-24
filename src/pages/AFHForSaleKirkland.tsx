@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "How do I find out about new Kirkland AFH listings before they're widely marketed?",
     answer:
-      "Reach out directly — David Stein works with AFH buyers and sellers throughout the Eastside and can flag new Kirkland listings as they come available, often ahead of general market exposure.",
+      "Reach out directly — we work with AFH buyers and sellers throughout the Eastside and can flag new Kirkland listings as they come available, often ahead of general market exposure.",
   },
 ];
 

@@ -95,7 +95,7 @@ const AFHSubmit: React.FC = () => {
     <>
       <SEOHead
         title="Sell Your AFH — Talk With David | Real Property Planning"
-        description="Thinking of selling your Adult Family Home in Washington? Start with a conversation with David Stein."
+        description="Thinking of selling your Adult Family Home in Washington? Start with a conversation with our team."
         canonical="https://realpropertyplanning.com/afh-submit"
       />
       <Header />
@@ -104,7 +104,7 @@ const AFHSubmit: React.FC = () => {
           <div className="max-w-3xl mx-auto px-6">
             <HeroBandTitle as="h1">Thinking of Selling Your AFH?</HeroBandTitle>
             <p className="text-[18px] md:text-[19px] text-slate-700 mt-4 leading-relaxed">
-              Let's start with a conversation. David Stein of eXp Realty will meet with you to understand your goals, walk you through the process, and execute a listing agreement. Fill out the form below and David will follow up within 24 hours. David Stein has been a professional licensed real estate broker for over 20 years helping buyers and sellers throughout Washington State. eXp Realty is the largest cloud-based real estate company in North America.
+              Let's start with a conversation. our team of eXp Realty will meet with you to understand your goals, walk you through the process, and execute a listing agreement. Fill out the form below and David will follow up within 24 hours. our team has been a professional licensed real estate broker for over 20 years helping buyers and sellers throughout Washington State. eXp Realty is the largest cloud-based real estate company in North America.
             </p>
           </div>
         </section>

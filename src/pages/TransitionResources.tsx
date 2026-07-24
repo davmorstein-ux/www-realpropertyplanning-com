@@ -140,7 +140,7 @@ const helpfulGuides = [
   {
     href: "/how-the-process-works",
     title: "How the Process Works",
-    description: "A step-by-step overview of how David Stein guides clients from initial conversation through closing.",
+    description: "A step-by-step overview of how our team guides clients from initial conversation through closing.",
   },
 ];
 
