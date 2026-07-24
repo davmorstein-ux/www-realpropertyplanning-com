@@ -58,6 +58,9 @@ const AUTO_MS = 7000;
 const SLIDE_MS = 4400;
 const CARD_W = 304;
 const CARD_H = Math.round((CARD_W * 4) / 3);
+const VIEWPORT_W = 960;
+// How many cards are at least partially visible inside the viewport at once
+const VISIBLE_COUNT = Math.ceil(VIEWPORT_W / (CARD_W + CARD_GAP));
 
 interface Category {
   title: string;
@@ -131,89 +134,95 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
             alignItems: "flex-end",
           }}
         >
-          {TRACK.map((item, i) => (
-            <Link
-              key={i}
-              to={item.href}
-              className="afh-carousel-card afh-carousel-item"
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
-              style={{
-                display: "block",
-                textDecoration: "none",
-                position: "relative",
-                borderRadius: 4,
-                overflow: "hidden",
-                flexShrink: 0,
-                // WIDTH and HEIGHT are always fixed — hover only affects shadow and lift
-                width: `${CARD_W}px`,
-                minWidth: `${CARD_W}px`,
-                maxWidth: `${CARD_W}px`,
-                height: `${CARD_H}px`,
-                boxShadow: hovered === i ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
-                transform: hovered === i ? "translateY(-6px)" : "translateY(0)",
-                transition: "box-shadow 0.4s ease, transform 0.4s ease",
-                background: item.placeholder,
-              }}
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                width={CARD_W}
-                height={CARD_H}
-                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = "none";
-                }}
-              />
-
-              {/* Hover overlay */}
-              <div
+          {TRACK.map((item, i) => {
+            const relativeIndex = i - pos;
+            const isVisible = relativeIndex >= 0 && relativeIndex < VISIBLE_COUNT;
+            return (
+              <Link
+                key={i}
+                to={item.href}
+                className="afh-carousel-card afh-carousel-item"
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+                aria-hidden={isVisible ? undefined : true}
+                tabIndex={isVisible ? 0 : -1}
                 style={{
-                  position: "absolute",
-                  inset: 0,
-                  background: "rgba(10,22,40,0.18)",
-                  opacity: hovered === i ? 1 : 0,
-                  transition: "opacity 0.5s ease",
-                  display: "flex",
-                  alignItems: "flex-end",
-                  justifyContent: "center",
-                  paddingBottom: 28,
+                  display: "block",
+                  textDecoration: "none",
+                  position: "relative",
+                  borderRadius: 4,
+                  overflow: "hidden",
+                  flexShrink: 0,
+                  // WIDTH and HEIGHT are always fixed — hover only affects shadow and lift
+                  width: `${CARD_W}px`,
+                  minWidth: `${CARD_W}px`,
+                  maxWidth: `${CARD_W}px`,
+                  height: `${CARD_H}px`,
+                  boxShadow: hovered === i ? "0 20px 60px rgba(10,22,40,0.22)" : "0 4px 20px rgba(10,22,40,0.10)",
+                  transform: hovered === i ? "translateY(-6px)" : "translateY(0)",
+                  transition: "box-shadow 0.4s ease, transform 0.4s ease",
+                  background: item.placeholder,
                 }}
               >
-                <span
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  width={CARD_W}
+                  height={CARD_H}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+
+                {/* Hover overlay */}
+                <div
                   style={{
-                    fontSize: "14px",
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 700,
-                    letterSpacing: "0.2em",
-                    textTransform: "uppercase",
-                    color: "#fff",
-                    background: "rgba(184,115,51,0.95)",
-                    padding: "10px 22px",
-                    borderRadius: 2,
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 6,
+                    position: "absolute",
+                    inset: 0,
+                    background: "rgba(10,22,40,0.18)",
+                    opacity: hovered === i ? 1 : 0,
+                    transition: "opacity 0.5s ease",
+                    display: "flex",
+                    alignItems: "flex-end",
+                    justifyContent: "center",
+                    paddingBottom: 28,
                   }}
                 >
-                  Explore
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                  <span
+                    style={{
+                      fontSize: "14px",
+                      fontFamily: "'Raleway', sans-serif",
+                      fontWeight: 700,
+                      letterSpacing: "0.2em",
+                      textTransform: "uppercase",
+                      color: "#fff",
+                      background: "rgba(184,115,51,0.95)",
+                      padding: "10px 22px",
+                      borderRadius: 2,
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 6,
+                    }}
                   >
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </span>
-              </div>
-            </Link>
-          ))}
+                    Explore
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
 
