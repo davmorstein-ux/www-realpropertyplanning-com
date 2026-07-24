@@ -23,6 +23,8 @@ interface RouteMeta {
   quickAnswerA?: string;
   sections?: string[];
   cities?: string[];
+  /** Set to true for pages that shouldn't be indexed (e.g. internal search) */
+  noIndex?: boolean;
 }
 
 const ROUTE_METADATA: Record<string, RouteMeta> = {
@@ -1304,6 +1306,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Search | Real Property Planning",
     description: "Search Real Property Planning for probate, estate sales, senior transitions, attorneys, CPAs, financial planners, and more.",
     h1: "Search Real Property Planning",
+    noIndex: true,
   },
   "/sell-house-fund-senior-living": {
     title: "How to Sell a Parent's House to Pay for Senior Living in Washington State | Real Property Planning",
@@ -1586,7 +1589,10 @@ const buildSsgContent = (meta: RouteMeta) => {
 const buildRouteAwareShellScript = () => {
   // Build a compact JSON map of route -> {title, description, h1, intro, quickAnswerQ, quickAnswerA}
   // This is embedded inline so no XHR is needed (Lovable hosting returns root index.html for all paths)
-  const routeMap: Record<string, { t: string; d: string; h1?: string; intro?: string; qQ?: string; qA?: string }> = {};
+  const routeMap: Record<
+    string,
+    { t: string; d: string; h1?: string; intro?: string; qQ?: string; qA?: string; ni?: 1 }
+  > = {};
   for (const [route, meta] of Object.entries(ROUTE_METADATA)) {
     routeMap[route] = {
       t: meta.title,
@@ -1595,6 +1601,7 @@ const buildRouteAwareShellScript = () => {
       ...(meta.intro ? { intro: meta.intro } : {}),
       ...(meta.quickAnswerQ ? { qQ: meta.quickAnswerQ } : {}),
       ...(meta.quickAnswerA ? { qA: meta.quickAnswerA } : {}),
+      ...(meta.noIndex ? { ni: 1 } : {}),
     };
   }
   const mapJson = JSON.stringify(routeMap);
@@ -1608,6 +1615,7 @@ if(!m)return;
 if(m.t)document.title=m.t;
 var setMeta=function(sel,attr,val){var el=document.querySelector(sel);if(el)el.setAttribute(attr,val);else{el=document.createElement("meta");var parts=sel.match(/\\[([^=]+)="([^"]+)"\\]/);if(parts){el.setAttribute(parts[1],parts[2]);}el.setAttribute(attr,val);document.head.appendChild(el);}};
 setMeta('meta[name="description"]',"content",m.d);
+setMeta('meta[name="robots"]',"content",m.ni?"noindex,follow":"index,follow");
 setMeta('meta[property="og:title"]',"content",m.t);
 setMeta('meta[property="og:description"]',"content",m.d);
 setMeta('meta[name="twitter:title"]',"content",m.t);
@@ -1640,9 +1648,15 @@ const applyMetadata = (
   const { title, description } = meta;
   const { injectSsg = true } = options;
   const canonical = route === "/" ? SITE_URL : `${SITE_URL}${route}`;
+  const robotsContent = meta.noIndex ? "noindex,follow" : "index,follow";
 
   let out = html;
   out = out.replace(/<title>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
+  out = replaceTag(
+    out,
+    /<meta\s+name="robots"\s+content="[\s\S]*?"\s*\/?>/i,
+    `<meta name="robots" content="${robotsContent}" />`
+  );
   out = replaceTag(
     out,
     /<meta\s+name="description"\s+content="[\s\S]*?"\s*\/?>/i,
