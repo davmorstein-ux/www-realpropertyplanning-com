@@ -4,9 +4,6 @@ import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
 import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
 import naepcLogo from "@/assets/estate-planners-naepc-badge-washington.webp";
 import kccLogo from "@/assets/king-county-collaborative-law-logo.webp";
-import iconPhone3d from "@/assets/icons/real-estate-phone-handset-3d-icon-washington.webp";
-import iconEmail3d from "@/assets/footer-email-icon.webp";
-import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 
 const Footer = () => {
   return (
@@ -101,44 +98,12 @@ const Footer = () => {
               Probate, estate &amp; senior transition real estate — Washington State.
             </p>
             <a href="tel:2069003015" className="rpp-footer-nap">
-              <img
-                src={iconPhone3d}
-                alt=""
-                aria-hidden="true"
-                style={{ width: 20, height: 20, objectFit: "contain", flexShrink: 0 }}
-                loading="lazy"
-                decoding="async"
-                width={1024}
-                height={1536}
-              />
               (206) 900-3015
             </a>
             <a href="mailto:info@realpropertyplanning.com" className="rpp-footer-nap">
-              <img
-                src={iconEmail3d}
-                alt=""
-                aria-hidden="true"
-                style={{ width: 20, height: 20, objectFit: "contain", flexShrink: 0 }}
-                loading="lazy"
-                decoding="async"
-                width={128}
-                height={128}
-              />
               info@realpropertyplanning.com
             </a>
-            <div className="rpp-footer-nap">
-              <img
-                src={iconPin3d}
-                alt=""
-                aria-hidden="true"
-                style={{ width: 20, height: 20, objectFit: "contain", flexShrink: 0 }}
-                loading="lazy"
-                decoding="async"
-                width={512}
-                height={512}
-              />
-              PO Box 1462, Woodinville, WA 98072
-            </div>
+            <div className="rpp-footer-nap">PO Box 1462, Woodinville, WA 98072</div>
           </div>
 
           {/* Guided Journeys */}
