@@ -170,7 +170,7 @@ const Footer = () => {
             <Link to="/disclaimer" className="rpp-footer-link">
               Disclaimer
             </Link>
-            <Link to="/search" className="rpp-footer-link">
+            <Link to="/sitemap" className="rpp-footer-link">
               Site Map
             </Link>
           </div>
