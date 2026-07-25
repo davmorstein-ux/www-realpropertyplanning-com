@@ -3605,3 +3605,15 @@ h1.search-page-h1 {
   font-size: clamp(30px, 4vw, 44px) !important;
   line-height: 1.15 !important;
 }
+
+/* AFH Listings H1 — this heading has been reported as rendering far
+   smaller than intended despite a correct inline style. Rather than
+   continue relying on inline-style precedence (which has not reliably
+   held on this specific page), force it directly with a dedicated
+   class + !important, mirroring the search-page-h1 fix above. */
+html body main h1.afh-listings-h1,
+main h1.afh-listings-h1,
+h1.afh-listings-h1 {
+  font-size: clamp(32px, 5vw, 50px) !important;
+  line-height: 1.2 !important;
+}

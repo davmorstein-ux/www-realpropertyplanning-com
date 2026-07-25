@@ -160,6 +160,7 @@ const AFHListings = () => {
 
             {/* Heading */}
             <h1
+              className="afh-listings-h1"
               style={{
                 fontSize: "clamp(32px, 5vw, 50px)",
                 fontWeight: 700,

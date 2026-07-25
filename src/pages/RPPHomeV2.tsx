@@ -46,7 +46,7 @@ const RPPHomeV2 = () => {
   return (
     <>
       <SEOHead
-        title="Real Property Planning | Estate & Senior Resources"
+        title="Probate & Senior Real Estate Guidance | Washington State"
         description="Washington resource hub for probate real estate, inherited property, senior transitions, and trusted professional guidance."
         canonical="https://realpropertyplanning.com"
       />

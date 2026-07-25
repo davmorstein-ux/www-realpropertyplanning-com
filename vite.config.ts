@@ -1101,7 +1101,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Probate vs Trust Sale in Washington State — What's the Difference?",
   },
   "/home-new": {
-    title: "Real Property Planning | Estate & Senior Resources",
+    title: "Probate & Senior Real Estate Guidance | Washington State",
     description: "Washington resource hub for probate real estate, inherited property, senior transitions, and trusted professional guidance.",
   },
   "/join-the-network": {
