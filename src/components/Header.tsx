@@ -7,6 +7,7 @@ const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-s
 
 const CONTACT_LINK = { label: "Contact", href: "/contact" };
 const CURATED_LINKS = [
+  { label: "About", href: "/about" },
   { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
   { label: "Senior Transitions", href: "/senior-transitions" },
   { label: "AFH Club", href: "/afh-club" },
