@@ -761,6 +761,13 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerQ: "What is WABO and what is a WABO inspection for an Adult Family Home?",
     quickAnswerA: "WABO is the Washington Association of Building Officials, a nonprofit professional association — it is not the agency that licenses Adult Family Homes and generally does not inspect the property itself. A 'WABO inspection' is informal shorthand for the local building inspection performed by your city or county building department using the Adult Family Home Local Building Inspection Checklist, which WABO developed in cooperation with DSHS.",
   },
+  "/afh-club/wabo-technical-guide": {
+    title: "WABO Checklist & Technical Requirements | AFH Club | Real Property Planning",
+    description: "A technical guide to the WABO Adult Family Home Building Inspection Checklist in Washington State — what the checklist covers, common delays, and why passing does not mean licensed.",
+    h1: "What Is WABO? The Technical Guide for Washington Adult Family Homes",
+    quickAnswerQ: "What does the WABO Adult Family Home building inspection checklist cover?",
+    quickAnswerA: "The checklist addresses resident bedroom exits and classifications, emergency escape windows, smoke and carbon monoxide alarms, doors and hardware, ramps and landings, stairs and handrails, bathroom grab bars, shower dimensions, and fire access and water supply. A passed checklist confirms the building meets AFH code requirements, but it is not the same as a DSHS license — DSHS separately decides whether the provider and home qualify for licensing.",
+  },
   "/afh-club/buying-selling": {
     title: "Buying or Selling an AFH | AFH Club | Real Property Planning",
     description: "Complete guide to buying or selling an Adult Family Home in Washington State — CHOW process, what transfers, DSHS locator, specialty contracts, and real estate considerations.",

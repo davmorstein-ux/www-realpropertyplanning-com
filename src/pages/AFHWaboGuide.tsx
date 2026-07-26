@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import { Link } from "react-router-dom";
 
 const label = {
   fontSize: 15,
@@ -246,6 +247,12 @@ const AFHWaboGuide = () => (
           <p style={{ ...body, margin: 0 }}>
             The local city or county building official performs the inspection, and DSHS handles licensing. Knowing
             the difference can save time, money, and frustration.
+          </p>
+          <p style={{ fontSize: 16, fontFamily: "'Raleway', sans-serif", color: "#5a5147", margin: "20px 0 0" }}>
+            Ready for the technical details?{" "}
+            <Link to="/afh-club/wabo-technical-guide" style={{ color: "#9e2c35", fontWeight: 600, textDecoration: "underline" }}>
+              WABO Checklist & Technical Requirements →
+            </Link>
           </p>
         </div>
       </section>

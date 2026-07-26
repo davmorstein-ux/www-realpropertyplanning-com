@@ -42,6 +42,12 @@ const TOPICS = [
     description: "A simple overview of WABO and the WABO inspection process — what it is, who inspects the home, and why it matters before buying.",
   },
   {
+    title: "WABO Checklist & Technical Requirements",
+    href: "/afh-club/wabo-technical-guide",
+    img: "/wabo-technical-cover.webp",
+    description: "The technical deep-dive: what the WABO checklist covers, common delays, and why passing does not mean licensed.",
+  },
+  {
     title: "Costs & Fees",
     href: "/afh-club/costs-fees",
     img: "/afh-costs-fees.webp",
@@ -145,6 +151,12 @@ const AFHResources = () => (
             href: "/afh-club/wabo-inspection-guide",
             img: "/wabo-overview-cover.webp",
             placeholder: "#3d3833",
+          },
+          {
+            title: "WABO Checklist & Technical Requirements",
+            href: "/afh-club/wabo-technical-guide",
+            img: "/wabo-technical-cover.webp",
+            placeholder: "#39342f",
           },
           {
             title: "Costs & Fees",
