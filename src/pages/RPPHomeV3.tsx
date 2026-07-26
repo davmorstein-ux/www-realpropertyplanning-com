@@ -113,7 +113,8 @@ const RPPHomeV3 = () => {
                   marginTop: "0.2em",
                 }}
               >
-                {" "}and later life transitions
+                {" "}
+                and later life transitions
               </span>
             </h1>
 
@@ -480,8 +481,8 @@ const RPPHomeV3 = () => {
                   textWrap: "balance" as any,
                 }}
               >
-                Washington State's leading resource for senior transitions, estate &amp; probate sales, and the Adult
-                Family Home marketplace
+                Connecting Washington families with trusted guidance on senior housing, probate real estate, and the
+                specialists who help along the way
               </p>
             </div>
           </div>
