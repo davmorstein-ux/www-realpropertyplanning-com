@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import TrustStrip from "@/components/TrustStrip";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -168,8 +167,6 @@ const Contact = () => {
             <HeroBandTitle as="h1">Get Connected</HeroBandTitle>
           </div>
         </section>
-
-        <TrustStrip />
 
         {/* Contact Content */}
         <section className="py-16 lg:py-28 bg-background">
