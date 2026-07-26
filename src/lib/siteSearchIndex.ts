@@ -9,6 +9,7 @@ export interface SearchEntry {
 
 export const siteSearchIndex: SearchEntry[] = [
   { path: "/afh-club/building-inspection", label: "AFH Building Inspection" },
+  { path: "/afh-club/wabo-inspection-guide", label: "What Is WABO?" },
   { path: "/afh-club/buying-selling", label: "AFH Buying Selling" },
   { path: "/afh-club/calculators", label: "AFH Calculators" },
   { path: "/afh-club", label: "AFH Club" },

@@ -36,6 +36,12 @@ const TOPICS = [
     description: "WABO building requirements, fire safety standards, and what inspectors look for before licensing.",
   },
   {
+    title: "What Is WABO?",
+    href: "/afh-club/wabo-inspection-guide",
+    img: "/wabo-overview-cover.webp",
+    description: "A simple overview of WABO and the WABO inspection process — what it is, who inspects the home, and why it matters before buying.",
+  },
+  {
     title: "Costs & Fees",
     href: "/afh-club/costs-fees",
     img: "/afh-costs-fees.webp",
@@ -133,6 +139,12 @@ const AFHResources = () => (
             href: "/afh-club/building-inspection",
             img: "/afh-building-inspection.webp",
             placeholder: "#433d38",
+          },
+          {
+            title: "What Is WABO?",
+            href: "/afh-club/wabo-inspection-guide",
+            img: "/wabo-overview-cover.webp",
+            placeholder: "#3d3833",
           },
           {
             title: "Costs & Fees",

@@ -167,6 +167,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     "links": []
   },
   {
+    "path": "/afh-club/wabo-inspection-guide",
+    "links": []
+  },
+  {
     "path": "/afh-submit",
     "links": []
   },

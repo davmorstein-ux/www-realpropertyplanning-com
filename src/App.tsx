@@ -199,6 +199,7 @@ const AFHGettingStarted = lazy(() => import("./pages/AFHGettingStarted"));
 const AFHLicensingCertification = lazy(() => import("./pages/AFHLicensingCertification"));
 const AFHTrainingEducation = lazy(() => import("./pages/AFHTrainingEducation"));
 const AFHBuildingInspection = lazy(() => import("./pages/AFHBuildingInspection"));
+const AFHWaboGuide = lazy(() => import("./pages/AFHWaboGuide"));
 const AFHCostsFees = lazy(() => import("./pages/AFHCostsFees"));
 const AFHBuyingSelling = lazy(() => import("./pages/AFHBuyingSelling"));
 const AFHRegulationsCompliance = lazy(() => import("./pages/AFHRegulationsCompliance"));
@@ -722,6 +723,7 @@ const App = () => (
           <Route path="/afh-club/licensing-certification" element={<AFHLicensingCertification />} />
           <Route path="/afh-club/training-education" element={<AFHTrainingEducation />} />
           <Route path="/afh-club/building-inspection" element={<AFHBuildingInspection />} />
+          <Route path="/afh-club/wabo-inspection-guide" element={<AFHWaboGuide />} />
           <Route path="/afh-club/costs-fees" element={<AFHCostsFees />} />
           <Route path="/afh-club/buying-selling" element={<AFHBuyingSelling />} />
           <Route path="/afh-club/regulations-compliance" element={<AFHRegulationsCompliance />} />

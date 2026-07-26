@@ -754,6 +754,13 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Complete guide to Washington State AFH building requirements — WABO inspection process, what WABO is, common modifications, new build vs remodel vs existing home, and septic requirements.",
     h1: "AFH Building Requirements & Inspections",
   },
+  "/afh-club/wabo-inspection-guide": {
+    title: "What Is WABO? A Simple Overview | AFH Club | Real Property Planning",
+    description: "A simple overview of WABO and the WABO inspection process for Adult Family Homes in Washington State — what WABO is, who inspects the home, and why it matters before buying.",
+    h1: "What Is WABO? A Simple Overview for Washington Adult Family Homes",
+    quickAnswerQ: "What is WABO and what is a WABO inspection for an Adult Family Home?",
+    quickAnswerA: "WABO is the Washington Association of Building Officials, a nonprofit professional association — it is not the agency that licenses Adult Family Homes and generally does not inspect the property itself. A 'WABO inspection' is informal shorthand for the local building inspection performed by your city or county building department using the Adult Family Home Local Building Inspection Checklist, which WABO developed in cooperation with DSHS.",
+  },
   "/afh-club/buying-selling": {
     title: "Buying or Selling an AFH | AFH Club | Real Property Planning",
     description: "Complete guide to buying or selling an Adult Family Home in Washington State — CHOW process, what transfers, DSHS locator, specialty contracts, and real estate considerations.",
