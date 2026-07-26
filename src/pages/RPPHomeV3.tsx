@@ -414,12 +414,16 @@ const RPPHomeV3 = () => {
                     </h3>
                     <p
                       style={{
+                        display: "inline-block",
                         fontFamily: "'Raleway', sans-serif",
                         fontWeight: 700,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
                         fontSize: 13,
-                        color: "#0a5648",
+                        color: "#ffffff",
+                        background: "#0a5648",
+                        padding: "6px 16px",
+                        borderRadius: 999,
                         margin: "0 0 12px",
                       }}
                     >
