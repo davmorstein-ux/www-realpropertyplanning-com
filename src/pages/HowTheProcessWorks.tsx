@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
@@ -14,7 +13,6 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconTheProcess from "@/assets/icons/probate-sales-process-icon-washington.webp";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
-
 
 const steps = [
   {
@@ -136,8 +134,6 @@ const HowTheProcessWorks = () => {
           { label: "Sell", desc: "Marketing, negotiation, escrow, and closing — handled end to end" },
         ]}
       />
-
-      <TrustStrip />
 
       {/* Seven Steps */}
       <section className="py-20 lg:py-28 bg-background">

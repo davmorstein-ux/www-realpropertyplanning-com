@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import NextStepBlock from "@/components/NextStepBlock";
@@ -70,8 +69,6 @@ const SeniorTransitionDifferences = () => (
         </div>
       </div>
     </section>
-
-    <TrustStrip />
 
     <section className="py-16 lg:py-24 bg-background">
       <div className="container px-6 lg:px-8">

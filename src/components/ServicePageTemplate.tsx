@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import GoldCheck3D from "@/components/GoldCheck3D";
@@ -58,8 +57,6 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
           </div>
         </div>
       </section>
-
-      <TrustStrip />
 
       {/* Key Benefits — compact bullets */}
       <section className="py-14 lg:py-18 bg-secondary">

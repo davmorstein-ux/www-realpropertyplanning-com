@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
@@ -187,8 +186,6 @@ const Counties = () => {
           </div>
         </div>
       </section>
-
-      <TrustStrip />
 
       {/* County Cards */}
       <section className="py-20 lg:py-28 bg-background">

@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
@@ -245,8 +244,6 @@ const TransitionResources = () => {
           </div>
         </div>
       </section>
-
-      <TrustStrip />
 
       {/* When These Resources Become Important */}
       <section className="py-16 lg:py-24 bg-background">

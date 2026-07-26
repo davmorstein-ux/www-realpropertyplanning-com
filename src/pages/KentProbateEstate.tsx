@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
@@ -48,8 +47,6 @@ const KentProbateEstate = () => {
           </div>
         </div>
       </section>
-
-      <TrustStrip />
 
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">

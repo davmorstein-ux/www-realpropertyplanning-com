@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
@@ -127,8 +126,6 @@ const SpokaneProbateEstate = () => {
           "Full-service coordination from cleanout through closing with regular updates",
         ]}
       />
-
-      <TrustStrip />
 
       {/* Situations */}
       <section className="py-20 lg:py-28 bg-secondary">

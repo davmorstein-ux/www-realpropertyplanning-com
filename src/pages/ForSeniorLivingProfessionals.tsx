@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -135,8 +134,6 @@ const ForSeniorLivingProfessionals = () => {
           </div>
         </div>
       </section>
-
-      <TrustStrip />
 
       {/* How Real Property Planning Helps */}
       <section className="py-16 lg:py-24 bg-background">

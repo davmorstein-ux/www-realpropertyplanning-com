@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import TrustStrip from "@/components/TrustStrip";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -180,8 +179,6 @@ const FAQ = () => {
           </div>
         </div>
       </section>
-
-      <TrustStrip />
 
       {/* FAQ Accordion */}
       <section className="py-20 lg:py-28 bg-background">

@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
@@ -464,8 +463,6 @@ const CountyPageTemplate = ({
           { label: "Sell", desc: "Marketing, negotiation, and closing" },
         ] : undefined}
       />
-
-      <TrustStrip />
 
       {/* What we handle locally — narrative, not a duplicated services grid */}
       <section className="py-14 lg:py-18 bg-secondary">

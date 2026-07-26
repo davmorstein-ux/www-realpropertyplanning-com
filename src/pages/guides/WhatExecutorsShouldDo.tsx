@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import NextStepBlock from "@/components/NextStepBlock";
@@ -77,8 +76,6 @@ const WhatExecutorsShouldDo = () => (
         </div>
       </div>
     </section>
-
-    <TrustStrip />
 
     {/* Immediate Steps */}
     <section className="py-16 lg:py-24 bg-background">

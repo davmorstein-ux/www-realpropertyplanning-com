@@ -4,7 +4,6 @@ import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import { counties } from "@/lib/service-areas-data";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
@@ -117,8 +116,6 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
           { label: "Sell", desc: "Marketing, negotiation, closing" },
         ] : undefined}
       />
-
-      <TrustStrip />
 
       {/* What we handle locally — narrative replacing the duplicated services grid */}
       <section className="py-14 lg:py-18 bg-secondary">

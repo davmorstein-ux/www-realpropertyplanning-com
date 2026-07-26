@@ -4,7 +4,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import TrustStrip from "@/components/TrustStrip";
 import RelatedServices from "@/components/RelatedServices";
 import StatewideSupport from "@/components/StatewideSupport";
 import GoldCheck3D from "@/components/GoldCheck3D";
@@ -55,12 +54,10 @@ const About = () => {
               <p className="mt-4 font-serif text-4xl text-foreground font-bold leading-tight text-center">
                 David Stein
               </p>
-              <p className="text-muted-foreground text-sm mt-1 text-center">President, Real Property Planning</p>
+              <p className="text-muted-foreground text-sm mt-1 text-center">Founder, Real Property Planning</p>
             </div>
           </div>
         </section>
-
-        <TrustStrip />
 
         {/* About Real Property Planning */}
         <section className="pt-8 pb-12 bg-cream">

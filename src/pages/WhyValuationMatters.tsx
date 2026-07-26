@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import MidPageCTA from "@/components/MidPageCTA";
@@ -160,8 +159,6 @@ const WhyValuationMatters = () => {
           </div>
         </div>
       </section>
-
-      <TrustStrip />
 
       {/* Why Accurate Value Guidance Matters */}
       <section className="py-12 lg:py-16 bg-background">
