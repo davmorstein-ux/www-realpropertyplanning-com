@@ -447,5 +447,55 @@
       "paragraph2Before": "Nhà Chăm Sóc Gia Đình Người Lớn thường là một giải pháp thay thế phải chăng hơn cho sinh hoạt có hỗ trợ hoặc chăm sóc tại nhà dưỡng lão — đáng để tìm hiểu qua",
       "afhClubLink": "AFH Club"
     }
+  },
+  "contactPage": {
+    "seo": {
+      "title": "Liên Hệ | Real Property Planning — Trung Tâm Nguồn Lực Washington",
+      "description": "Liên hệ với Real Property Planning, một trung tâm nguồn lực miễn phí của Tiểu Bang Washington dành cho người cao niên, gia đình, và các chuyên gia. Đặt câu hỏi hoặc tham gia mạng lưới của chúng tôi."
+    },
+    "heroImageAlt": "Người cao niên thưởng thức cà phê tại một quán cà phê ven biển ở Tiểu Bang Washington — Trang liên hệ của Real Property Planning",
+    "heroTitle": "Kết Nối Với Chúng Tôi",
+    "intro": {
+      "paragraph1": "Real Property Planning là một trung tâm nguồn lực miễn phí kết nối người cao niên, gia đình họ, và các chuyên gia trên khắp Tiểu Bang Washington.",
+      "paragraph2": "Dù quý vị đang xử lý thủ tục thừa kế, một tài sản được thừa hưởng, một quá trình chuyển đổi nhà ở cho người cao niên, hay đơn giản là đang tìm kiếm các chuyên gia đáng tin cậy — chúng tôi ở đây để giúp quý vị tìm đúng hướng đi. Hãy sử dụng trang này để liên hệ với các câu hỏi, đề xuất một nguồn lực, hoặc hỏi về việc tham gia mạng lưới chuyên gia của chúng tôi."
+    },
+    "contactInfo": {
+      "phoneLabel": "Điện Thoại",
+      "emailLabel": "Email",
+      "serviceAreasLabel": "Khu Vực Phục Vụ",
+      "serviceAreasText": "Trên khắp Tiểu Bang Washington, tập trung mạnh vào khu vực Tây Washington và Puget Sound"
+    },
+    "form": {
+      "heading": "Gửi Tin Nhắn",
+      "subtitle": "Hãy cho chúng tôi biết một chút về cách chúng tôi có thể giúp đỡ.",
+      "companyWebsiteLabel": "Trang Web Công Ty",
+      "nameLabel": "Họ Tên *",
+      "namePlaceholder": "Họ tên đầy đủ của quý vị",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "your@email.com",
+      "phoneLabel": "Điện Thoại (tùy chọn)",
+      "phonePlaceholder": "(555) 123-4567",
+      "roleLabel": "Tôi là *",
+      "roleSelectPlaceholder": "Chọn một",
+      "messageLabel": "Tin Nhắn *",
+      "messagePlaceholder": "Chia sẻ câu hỏi của quý vị, đề xuất một nguồn lực, hoặc hỏi về việc tham gia mạng lưới chuyên gia của chúng tôi...",
+      "privacyNote": "🔒 Thông tin của quý vị chỉ được sử dụng để phản hồi yêu cầu của quý vị — không bao giờ được bán hoặc chia sẻ cho mục đích tiếp thị.",
+      "sendButton": "Gửi",
+      "sendingButton": "Đang Gửi..."
+    },
+    "roleOptions": {
+      "family-member": "Thành Viên Gia Đình",
+      "elder-individual": "Người Cao Niên",
+      "professional": "Chuyên Gia",
+      "other": "Khác"
+    },
+    "toasts": {
+      "verificationTitle": "Vui lòng hoàn tất xác minh",
+      "verificationDescription": "Đánh dấu vào ô xác minh phía trên nút Gửi, sau đó thử lại.",
+      "successTitle": "Cảm Ơn — Đã Nhận Được Tin Nhắn",
+      "successDescription": "Chúng tôi sẽ liên hệ với quý vị sớm. Cần nói chuyện sớm hơn? Hãy gọi (206) 900-3015.",
+      "errorTitle": "Đã Xảy Ra Sự Cố",
+      "errorDescription": "Tin nhắn của quý vị chưa được gửi. Vui lòng thử lại, hoặc gọi (206) 900-3015."
+    }
   }
 }

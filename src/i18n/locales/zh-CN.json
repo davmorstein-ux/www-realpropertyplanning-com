@@ -447,5 +447,55 @@
       "paragraph2Before": "成人家庭护理之家通常是比辅助生活或疗养院护理更经济实惠的替代方案——值得通过我们的",
       "afhClubLink": "AFH Club"
     }
+  },
+  "contactPage": {
+    "seo": {
+      "title": "联系我们｜Real Property Planning——华盛顿州资源中心",
+      "description": "联系 Real Property Planning，这是一个为华盛顿州长者、家庭及专业人士提供的免费资源中心。欢迎提问或加入我们的网络。"
+    },
+    "heroImageAlt": "长者在华盛顿州滨海咖啡馆享用咖啡——Real Property Planning 联系页面",
+    "heroTitle": "与我们联系",
+    "intro": {
+      "paragraph1": "Real Property Planning 是一个免费的资源中心，连接华盛顿州各地的长者、其家人及专业人士。",
+      "paragraph2": "无论您正在处理遗产继承、继承房产、长者住房转换，或只是寻找值得信赖的专业人士——我们都在此协助您找到正确的方向。欢迎通过此页面提出问题、推荐资源，或询问加入我们专业网络的方式。"
+    },
+    "contactInfo": {
+      "phoneLabel": "电话",
+      "emailLabel": "电子邮件",
+      "serviceAreasLabel": "服务地区",
+      "serviceAreasText": "服务华盛顿州全境，并特别侧重于华盛顿州西部及大西雅图地区"
+    },
+    "form": {
+      "heading": "发送消息",
+      "subtitle": "请简单告诉我们，我们可以如何协助您。",
+      "companyWebsiteLabel": "公司网站",
+      "nameLabel": "姓名 *",
+      "namePlaceholder": "您的全名",
+      "emailLabel": "电子邮件 *",
+      "emailPlaceholder": "your@email.com",
+      "phoneLabel": "电话（选填）",
+      "phonePlaceholder": "(555) 123-4567",
+      "roleLabel": "我的身份是 *",
+      "roleSelectPlaceholder": "请选择一项",
+      "messageLabel": "消息 *",
+      "messagePlaceholder": "请分享您的问题、推荐资源，或询问加入我们专业网络的方式……",
+      "privacyNote": "🔒 您的信息仅用于回复您的询问——绝不会出售或用于营销用途。",
+      "sendButton": "发送",
+      "sendingButton": "发送中……"
+    },
+    "roleOptions": {
+      "family-member": "家庭成员",
+      "elder-individual": "长者本人",
+      "professional": "专业人士",
+      "other": "其他"
+    },
+    "toasts": {
+      "verificationTitle": "请完成验证",
+      "verificationDescription": "请勾选“发送”按钮上方的验证方框，然后再试一次。",
+      "successTitle": "感谢您——消息已收到",
+      "successDescription": "我们将尽快与您联系。若需更快联系，请致电 (206) 900-3015。",
+      "errorTitle": "发生错误",
+      "errorDescription": "您的消息尚未成功发送。请再试一次，或致电 (206) 900-3015。"
+    }
   }
 }

@@ -16,8 +16,13 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import { useState, useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { useTranslation } from "react-i18next";
 
-const roleOptions = ["Family Member", "Elder Individual", "Professional", "Other"];
+// Value sent to the backend is always this fixed English slug,
+// regardless of display language, so the email function's expectations
+// never change based on which language a visitor filled the form in.
+// The display label is looked up via translation at render time.
+const ROLE_VALUES = ["family-member", "elder-individual", "professional", "other"] as const;
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAAD8Pv43WG0GFRJob";
 
@@ -39,6 +44,7 @@ declare global {
 }
 
 const Contact = () => {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [role, setRole] = useState("");
@@ -86,8 +92,8 @@ const Contact = () => {
 
     if (!turnstileToken) {
       toast({
-        title: "Please complete the verification",
-        description: "Check the verification box above the Send button, then try again.",
+        title: t("contactPage.toasts.verificationTitle"),
+        description: t("contactPage.toasts.verificationDescription"),
         variant: "destructive",
       });
       return;
@@ -120,16 +126,16 @@ const Contact = () => {
       }
 
       toast({
-        title: "Thanks — Message Received",
-        description: "We will reach out shortly. Need to talk sooner? Call (206) 900-3015.",
+        title: t("contactPage.toasts.successTitle"),
+        description: t("contactPage.toasts.successDescription"),
       });
       form.reset();
       setRole("");
     } catch (err) {
       console.error(err);
       toast({
-        title: "Something went wrong",
-        description: "Your message wasn't sent. Please try again, or call (206) 900-3015.",
+        title: t("contactPage.toasts.errorTitle"),
+        description: t("contactPage.toasts.errorDescription"),
         variant: "destructive",
       });
     } finally {
@@ -144,8 +150,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Contact | Real Property Planning — WA Resource Hub"
-        description="Reach Real Property Planning, a free Washington State resource hub for elderly individuals, families, and professionals. Ask a question or join our network."
+        title={t("contactPage.seo.title")}
+        description={t("contactPage.seo.description")}
         jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
@@ -156,7 +162,7 @@ const Contact = () => {
           <div style={{ lineHeight: 0 }}>
             <img
               src={contactHero}
-              alt="Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact"
+              alt={t("contactPage.heroImageAlt")}
               className="w-full h-auto block"
               loading="eager"
               sizes="100vw"
@@ -164,7 +170,7 @@ const Contact = () => {
               width={1983}
               height={583}
             />
-            <HeroBandTitle as="h1">Get Connected</HeroBandTitle>
+            <HeroBandTitle as="h1">{t("contactPage.heroTitle")}</HeroBandTitle>
           </div>
         </section>
 
@@ -175,19 +181,15 @@ const Contact = () => {
               {/* Contact Info */}
               <div>
                 <p className="font-serif text-2xl text-foreground mb-4 leading-snug">
-                  Real Property Planning is a free resource hub connecting elderly individuals, their families, and
-                  professionals across Washington State.
+                  {t("contactPage.intro.paragraph1")}
                 </p>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
-                  Whether you are navigating probate, an inherited property, a senior housing transition, or simply
-                  looking for trusted professionals — we are here to help point you in the right direction. Use this
-                  page to reach out with questions, suggest a resource, or inquire about joining our professional
-                  network.
+                  {t("contactPage.intro.paragraph2")}
                 </p>
 
                 <div className="space-y-5 mb-8">
                   <div>
-                    <p className="mb-1 font-medium text-foreground">Phone</p>
+                    <p className="mb-1 font-medium text-foreground">{t("contactPage.contactInfo.phoneLabel")}</p>
                     <a
                       href="tel:2069003015"
                       className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold"
@@ -208,7 +210,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <p className="mb-1 font-medium text-foreground">Email</p>
+                    <p className="mb-1 font-medium text-foreground">{t("contactPage.contactInfo.emailLabel")}</p>
                     <a
                       href="mailto:info@realpropertyplanning.com"
                       className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold"
@@ -229,7 +231,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <p className="mb-1 font-medium text-foreground">Service Areas</p>
+                    <p className="mb-1 font-medium text-foreground">{t("contactPage.contactInfo.serviceAreasLabel")}</p>
                     <p className="inline-flex items-center text-muted-foreground">
                       <img
                         src={mappin3d}
@@ -242,7 +244,7 @@ const Contact = () => {
                         width={1024}
                         height={1024}
                       />
-                      <span>Throughout Washington State, with a strong focus in Western WA &amp; Puget Sound</span>
+                      <span>{t("contactPage.contactInfo.serviceAreasText")}</span>
                     </p>
                   </div>
                 </div>
@@ -251,9 +253,9 @@ const Contact = () => {
               {/* Contact Form */}
               <div className="lg:col-span-2">
                 <div className="bg-card rounded-lg border border-border p-6 sm:p-8 lg:p-10">
-                  <h2 className="font-serif text-xl font-semibold text-foreground mb-2">Send a Message</h2>
+                  <h2 className="font-serif text-xl font-semibold text-foreground mb-2">{t("contactPage.form.heading")}</h2>
                   <p className="text-muted-foreground mb-6 text-[15px] leading-relaxed">
-                    Tell us a little about how we can help.
+                    {t("contactPage.form.subtitle")}
                   </p>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -268,24 +270,24 @@ const Contact = () => {
                       aria-hidden="true"
                       style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }}
                     >
-                      <label htmlFor="company_website">Company Website</label>
+                      <label htmlFor="company_website">{t("contactPage.form.companyWebsiteLabel")}</label>
                       <input type="text" id="company_website" name="company_website" tabIndex={-1} autoComplete="off" />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Name *</Label>
+                        <Label htmlFor="name">{t("contactPage.form.nameLabel")}</Label>
                         <Input
                           id="name"
                           name="name"
                           required
                           aria-required="true"
                           autoComplete="name"
-                          placeholder="Your full name"
+                          placeholder={t("contactPage.form.namePlaceholder")}
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
+                        <Label htmlFor="email">{t("contactPage.form.emailLabel")}</Label>
                         <Input
                           id="email"
                           name="email"
@@ -293,26 +295,26 @@ const Contact = () => {
                           required
                           aria-required="true"
                           autoComplete="email"
-                          placeholder="your@email.com"
+                          placeholder={t("contactPage.form.emailPlaceholder")}
                         />
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Phone (optional)</Label>
-                        <Input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="(555) 123-4567" />
+                        <Label htmlFor="phone">{t("contactPage.form.phoneLabel")}</Label>
+                        <Input id="phone" name="phone" type="tel" autoComplete="tel" placeholder={t("contactPage.form.phonePlaceholder")} />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="role">I am a *</Label>
+                        <Label htmlFor="role">{t("contactPage.form.roleLabel")}</Label>
                         <Select value={role} onValueChange={setRole} required>
-                          <SelectTrigger id="role" aria-label="I am a">
-                            <SelectValue placeholder="Select one" />
+                          <SelectTrigger id="role" aria-label={t("contactPage.form.roleLabel")}>
+                            <SelectValue placeholder={t("contactPage.form.roleSelectPlaceholder")} />
                           </SelectTrigger>
                           <SelectContent>
-                            {roleOptions.map((role) => (
-                              <SelectItem key={role} value={role.toLowerCase().replace(/\s+/g, "-")}>
-                                {role}
+                            {ROLE_VALUES.map((value) => (
+                              <SelectItem key={value} value={value}>
+                                {t(`contactPage.roleOptions.${value}`)}
                               </SelectItem>
                             ))}
                           </SelectContent>
@@ -321,21 +323,21 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message">{t("contactPage.form.messageLabel")}</Label>
                       <Textarea
                         id="message"
                         name="message"
                         rows={6}
                         required
                         aria-required="true"
-                        placeholder="Share your question, suggest a resource, or ask about joining our professional network..."
+                        placeholder={t("contactPage.form.messagePlaceholder")}
                       />
                     </div>
 
                     <div ref={turnstileContainerRef} />
 
                     <p className="text-sm text-muted-foreground text-center">
-                      🔒 Your information is used only to respond to your inquiry — never sold or shared for marketing.
+                      {t("contactPage.form.privacyNote")}
                     </p>
 
                     <Button
@@ -343,7 +345,7 @@ const Contact = () => {
                       disabled={isSubmitting || !turnstileToken}
                       className="w-full text-lg font-bold py-7"
                     >
-                      {isSubmitting ? "Sending..." : "Send"}
+                      {isSubmitting ? t("contactPage.form.sendingButton") : t("contactPage.form.sendButton")}
                     </Button>
                   </form>
                 </div>

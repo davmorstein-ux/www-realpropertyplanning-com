@@ -447,5 +447,55 @@
       "paragraph2Before": "An Adult Family Home is frequently a more affordable alternative to assisted living or nursing home care — worth exploring through our",
       "afhClubLink": "AFH Club"
     }
+  },
+  "contactPage": {
+    "seo": {
+      "title": "Contact | Real Property Planning — WA Resource Hub",
+      "description": "Reach Real Property Planning, a free Washington State resource hub for elderly individuals, families, and professionals. Ask a question or join our network."
+    },
+    "heroImageAlt": "Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact",
+    "heroTitle": "Get Connected",
+    "intro": {
+      "paragraph1": "Real Property Planning is a free resource hub connecting elderly individuals, their families, and professionals across Washington State.",
+      "paragraph2": "Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for trusted professionals — we are here to help point you in the right direction. Use this page to reach out with questions, suggest a resource, or inquire about joining our professional network."
+    },
+    "contactInfo": {
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "serviceAreasLabel": "Service Areas",
+      "serviceAreasText": "Throughout Washington State, with a strong focus in Western WA & Puget Sound"
+    },
+    "form": {
+      "heading": "Send a Message",
+      "subtitle": "Tell us a little about how we can help.",
+      "companyWebsiteLabel": "Company Website",
+      "nameLabel": "Name *",
+      "namePlaceholder": "Your full name",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "your@email.com",
+      "phoneLabel": "Phone (optional)",
+      "phonePlaceholder": "(555) 123-4567",
+      "roleLabel": "I am a *",
+      "roleSelectPlaceholder": "Select one",
+      "messageLabel": "Message *",
+      "messagePlaceholder": "Share your question, suggest a resource, or ask about joining our professional network...",
+      "privacyNote": "🔒 Your information is used only to respond to your inquiry — never sold or shared for marketing.",
+      "sendButton": "Send",
+      "sendingButton": "Sending..."
+    },
+    "roleOptions": {
+      "family-member": "Family Member",
+      "elder-individual": "Elder Individual",
+      "professional": "Professional",
+      "other": "Other"
+    },
+    "toasts": {
+      "verificationTitle": "Please complete the verification",
+      "verificationDescription": "Check the verification box above the Send button, then try again.",
+      "successTitle": "Thanks — Message Received",
+      "successDescription": "We will reach out shortly. Need to talk sooner? Call (206) 900-3015.",
+      "errorTitle": "Something went wrong",
+      "errorDescription": "Your message wasn't sent. Please try again, or call (206) 900-3015."
+    }
   }
 }

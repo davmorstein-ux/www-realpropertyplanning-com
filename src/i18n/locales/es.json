@@ -447,5 +447,55 @@
       "paragraph2Before": "Un Hogar Familiar para Adultos es frecuentemente una alternativa más asequible a la vida asistida o el cuidado en hogares de ancianos — vale la pena explorarlo a través de nuestro",
       "afhClubLink": "AFH Club"
     }
+  },
+  "contactPage": {
+    "seo": {
+      "title": "Contacto | Real Property Planning — Centro de Recursos de WA",
+      "description": "Comuníquese con Real Property Planning, un centro de recursos gratuito del Estado de Washington para personas mayores, familias y profesionales. Haga una pregunta o únase a nuestra red."
+    },
+    "heroImageAlt": "Personas mayores disfrutando de café en un café frente al mar en el Estado de Washington — Contacto de Real Property Planning",
+    "heroTitle": "Conéctese",
+    "intro": {
+      "paragraph1": "Real Property Planning es un centro de recursos gratuito que conecta a personas mayores, sus familias y profesionales en todo el Estado de Washington.",
+      "paragraph2": "Ya sea que esté navegando por una sucesión, una propiedad heredada, una transición de vivienda para personas mayores, o simplemente buscando profesionales de confianza — estamos aquí para ayudarlo a encontrar la dirección correcta. Use esta página para comunicarse con preguntas, sugerir un recurso, o preguntar sobre cómo unirse a nuestra red profesional."
+    },
+    "contactInfo": {
+      "phoneLabel": "Teléfono",
+      "emailLabel": "Correo Electrónico",
+      "serviceAreasLabel": "Áreas de Servicio",
+      "serviceAreasText": "En todo el Estado de Washington, con un fuerte enfoque en el oeste de WA y la región de Puget Sound"
+    },
+    "form": {
+      "heading": "Enviar un Mensaje",
+      "subtitle": "Cuéntenos un poco sobre cómo podemos ayudar.",
+      "companyWebsiteLabel": "Sitio Web de la Empresa",
+      "nameLabel": "Nombre *",
+      "namePlaceholder": "Su nombre completo",
+      "emailLabel": "Correo Electrónico *",
+      "emailPlaceholder": "su@correo.com",
+      "phoneLabel": "Teléfono (opcional)",
+      "phonePlaceholder": "(555) 123-4567",
+      "roleLabel": "Soy un/una *",
+      "roleSelectPlaceholder": "Seleccione uno",
+      "messageLabel": "Mensaje *",
+      "messagePlaceholder": "Comparta su pregunta, sugiera un recurso, o pregunte sobre cómo unirse a nuestra red profesional...",
+      "privacyNote": "🔒 Su información se usa únicamente para responder a su consulta — nunca se vende ni se comparte con fines de marketing.",
+      "sendButton": "Enviar",
+      "sendingButton": "Enviando..."
+    },
+    "roleOptions": {
+      "family-member": "Miembro de la Familia",
+      "elder-individual": "Persona Mayor",
+      "professional": "Profesional",
+      "other": "Otro"
+    },
+    "toasts": {
+      "verificationTitle": "Por favor complete la verificación",
+      "verificationDescription": "Marque la casilla de verificación arriba del botón Enviar, luego intente de nuevo.",
+      "successTitle": "Gracias — Mensaje Recibido",
+      "successDescription": "Nos pondremos en contacto pronto. ¿Necesita hablar antes? Llame al (206) 900-3015.",
+      "errorTitle": "Algo salió mal",
+      "errorDescription": "Su mensaje no fue enviado. Por favor intente de nuevo, o llame al (206) 900-3015."
+    }
   }
 }

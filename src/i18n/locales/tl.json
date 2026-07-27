@@ -447,5 +447,55 @@
       "paragraph2Before": "Ang Adult Family Home ay kadalasang isang mas abot-kayang alternatibo sa assisted living o nursing home care — sulit na tuklasin sa pamamagitan ng aming",
       "afhClubLink": "AFH Club"
     }
+  },
+  "contactPage": {
+    "seo": {
+      "title": "Makipag-ugnayan | Real Property Planning — WA Resource Hub",
+      "description": "Makipag-ugnayan sa Real Property Planning, isang libreng resource hub sa Washington State para sa mga nakatatanda, pamilya, at propesyonal. Magtanong o sumali sa aming network."
+    },
+    "heroImageAlt": "Mga nakatatanda na nag-eenjoy ng kape sa isang waterfront café sa Washington State — Real Property Planning contact",
+    "heroTitle": "Kumonekta",
+    "intro": {
+      "paragraph1": "Ang Real Property Planning ay isang libreng resource hub na nagkokonekta sa mga nakatatanda, kanilang mga pamilya, at mga propesyonal sa buong Washington State.",
+      "paragraph2": "Kung kayo man ay nag-navigate sa probate, isang minanang ari-arian, isang transisyon sa pabahay para sa nakatatanda, o naghahanap lang ng mapagkakatiwalaang mga propesyonal — narito kami upang tulungan kayong matukoy ang tamang direksyon. Gamitin ang page na ito upang makipag-ugnayan tungkol sa mga tanong, magmungkahi ng mapagkukunan, o magtanong tungkol sa pagsali sa aming propesyonal na network."
+    },
+    "contactInfo": {
+      "phoneLabel": "Telepono",
+      "emailLabel": "Email",
+      "serviceAreasLabel": "Mga Sinisilbihang Lugar",
+      "serviceAreasText": "Sa buong Washington State, na may malakas na pokus sa Western WA at Puget Sound"
+    },
+    "form": {
+      "heading": "Magpadala ng Mensahe",
+      "subtitle": "Sabihin sa amin kung paano namin kayo matutulungan.",
+      "companyWebsiteLabel": "Website ng Kompanya",
+      "nameLabel": "Pangalan *",
+      "namePlaceholder": "Ang inyong buong pangalan",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "your@email.com",
+      "phoneLabel": "Telepono (opsyonal)",
+      "phonePlaceholder": "(555) 123-4567",
+      "roleLabel": "Ako ay isang *",
+      "roleSelectPlaceholder": "Pumili ng isa",
+      "messageLabel": "Mensahe *",
+      "messagePlaceholder": "Ibahagi ang inyong tanong, magmungkahi ng mapagkukunan, o magtanong tungkol sa pagsali sa aming propesyonal na network...",
+      "privacyNote": "🔒 Ang inyong impormasyon ay gagamitin lamang upang tumugon sa inyong katanungan — hindi kailanman ibinebenta o ibinabahagi para sa marketing.",
+      "sendButton": "Ipadala",
+      "sendingButton": "Ipinapadala..."
+    },
+    "roleOptions": {
+      "family-member": "Miyembro ng Pamilya",
+      "elder-individual": "Nakatatandang Indibidwal",
+      "professional": "Propesyonal",
+      "other": "Iba Pa"
+    },
+    "toasts": {
+      "verificationTitle": "Pakikumpleto ang beripikasyon",
+      "verificationDescription": "Suriin ang kahon ng beripikasyon sa itaas ng button na Ipadala, pagkatapos ay subukan muli.",
+      "successTitle": "Salamat — Natanggap ang Mensahe",
+      "successDescription": "Makikipag-ugnayan kami sa lalong madaling panahon. Kailangan makipag-usap agad? Tumawag sa (206) 900-3015.",
+      "errorTitle": "May Nangyaring Mali",
+      "errorDescription": "Hindi naipadala ang inyong mensahe. Subukan muli, o tumawag sa (206) 900-3015."
+    }
   }
 }

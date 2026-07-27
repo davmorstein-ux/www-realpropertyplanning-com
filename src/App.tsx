@@ -538,7 +538,12 @@ const App = () => (
           {/* Legacy routes → redirect to /about */}
           <Route path="/about-david-stein" element={<Navigate to="/about" replace />} />
           <Route path="/about-platform" element={<Navigate to="/about" replace />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<LanguageRoute lang="en"><Contact /></LanguageRoute>} />
+          <Route path="/es/contact" element={<LanguageRoute lang="es"><Contact /></LanguageRoute>} />
+          <Route path="/zh-tw/contact" element={<LanguageRoute lang="zh-TW"><Contact /></LanguageRoute>} />
+          <Route path="/zh-cn/contact" element={<LanguageRoute lang="zh-CN"><Contact /></LanguageRoute>} />
+          <Route path="/tl/contact" element={<LanguageRoute lang="tl"><Contact /></LanguageRoute>} />
+          <Route path="/vi/contact" element={<LanguageRoute lang="vi"><Contact /></LanguageRoute>} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />
           <Route path="/testimonials" element={<Testimonials />} />

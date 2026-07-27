@@ -447,5 +447,55 @@
       "paragraph2Before": "成人家庭照護之家通常是比輔助生活或療養院照護更經濟實惠的替代方案——值得透過我們的",
       "afhClubLink": "AFH Club"
     }
+  },
+  "contactPage": {
+    "seo": {
+      "title": "聯絡我們｜Real Property Planning——華盛頓州資源中心",
+      "description": "聯繫 Real Property Planning，這是一個為華盛頓州長者、家庭及專業人士提供的免費資源中心。歡迎提問或加入我們的網絡。"
+    },
+    "heroImageAlt": "長者在華盛頓州濱海咖啡館享用咖啡——Real Property Planning 聯絡頁面",
+    "heroTitle": "與我們聯繫",
+    "intro": {
+      "paragraph1": "Real Property Planning 是一個免費的資源中心，連結華盛頓州各地的長者、其家人及專業人士。",
+      "paragraph2": "無論您正在處理遺產繼承、繼承房產、長者住房轉換，或只是尋找值得信賴的專業人士——我們都在此協助您找到正確的方向。歡迎透過此頁面提出問題、推薦資源，或詢問加入我們專業網絡的方式。"
+    },
+    "contactInfo": {
+      "phoneLabel": "電話",
+      "emailLabel": "電子郵件",
+      "serviceAreasLabel": "服務地區",
+      "serviceAreasText": "服務華盛頓州全境，並特別著重於華盛頓州西部及大西雅圖地區"
+    },
+    "form": {
+      "heading": "傳送訊息",
+      "subtitle": "請簡單告訴我們，我們可以如何協助您。",
+      "companyWebsiteLabel": "公司網站",
+      "nameLabel": "姓名 *",
+      "namePlaceholder": "您的全名",
+      "emailLabel": "電子郵件 *",
+      "emailPlaceholder": "your@email.com",
+      "phoneLabel": "電話（選填）",
+      "phonePlaceholder": "(555) 123-4567",
+      "roleLabel": "我的身分是 *",
+      "roleSelectPlaceholder": "請選擇一項",
+      "messageLabel": "訊息 *",
+      "messagePlaceholder": "請分享您的問題、推薦資源，或詢問加入我們專業網絡的方式……",
+      "privacyNote": "🔒 您的資料僅用於回覆您的詢問——絕不會出售或用於行銷用途。",
+      "sendButton": "傳送",
+      "sendingButton": "傳送中……"
+    },
+    "roleOptions": {
+      "family-member": "家庭成員",
+      "elder-individual": "長者本人",
+      "professional": "專業人士",
+      "other": "其他"
+    },
+    "toasts": {
+      "verificationTitle": "請完成驗證",
+      "verificationDescription": "請勾選「傳送」按鈕上方的驗證方塊，然後再試一次。",
+      "successTitle": "感謝您——訊息已收到",
+      "successDescription": "我們將盡快與您聯繫。若需更快聯絡，請致電 (206) 900-3015。",
+      "errorTitle": "發生錯誤",
+      "errorDescription": "您的訊息尚未成功傳送。請再試一次，或致電 (206) 900-3015。"
+    }
   }
 }
