@@ -185,6 +185,22 @@ const RPPHomeV3 = () => {
                 }}
               >
                 Connect with a Specialist in Our Network
+                <svg
+                  className="rpp-cta-arrow-right"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="#ffffff"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                  style={{ flexShrink: 0 }}
+                >
+                  <polyline points="12 5 19 12 12 19" />
+                  <line x1="19" y1="12" x2="5" y2="12" />
+                </svg>
               </a>
             </div>
           </div>
