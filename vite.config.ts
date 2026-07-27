@@ -1076,7 +1076,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/featured-professionals": {
     title: "Featured Professionals | Real Property Planning",
-    description: "Meet the independent professionals in Real Property Planning's network — aging life care managers, senior move managers, senior living advisors, elder law attorneys, financial planners, and CPAs serving Washington State families.",
+    description: "Meet the professionals in Real Property Planning's network — real estate, appraisal, aging life care management, senior move management, estate liquidation, senior living advisors, elder law, family law, financial planning, mortgage lending, Medicare guidance, and CPAs serving Washington State families.",
     h1: "Featured Professionals",
   },
   "/for-divorce-attorneys": {

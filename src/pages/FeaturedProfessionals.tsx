@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import contactHero from "@/assets/contact-hero-soundview-coffee.webp";
 
+import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
 import scottPhoto from "@/assets/providers/elder-law-scott-schill-mercer-island.webp";
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
 import lauraPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
@@ -16,8 +17,14 @@ import nicolePhotoAsset from "@/assets/providers/nicole-aging-wisdom.webp.asset.
 import ericPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
 import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
 import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
+import abigailPhoto from "@/assets/abigail-mckee-ginnys-girls-manager.webp";
 import abbyPhoto from "@/assets/abby-durr-silver-age-senior-living-advisor.webp";
 import purpleGroupPhoto from "@/assets/providers/cpa-purple-group-tenly-jessica-seattle.webp";
+import dominikPhoto from "@/assets/dominik-musafia-divorce-attorney-seattle.avif";
+import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-washington.webp";
+import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
+import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
+import heidiPhoto from "@/assets/heidi-bolton-medicare-advisor-spears-agency.webp";
 
 const jennipherPhoto = jennipherPhotoAsset.url;
 const nicolePhoto = nicolePhotoAsset.url;
@@ -37,6 +44,27 @@ interface CategoryGroup {
 }
 
 const groups: CategoryGroup[] = [
+  {
+    category: "Real Estate & Appraisal",
+    professionals: [
+      {
+        name: "David Stein",
+        role: "Washington State Licensed Real Estate Broker",
+        company: "eXp Realty",
+        specialty: "Probate, estate, and trust property sales throughout Washington State.",
+        photo: davidSteinPhoto,
+        href: "/realtor",
+      },
+      {
+        name: "David Stein",
+        role: "Certified Residential Appraiser",
+        company: "Stein Appraisal",
+        specialty: "Date-of-death valuations, estate appraisals, and residential appraisal services.",
+        photo: davidSteinPhoto,
+        href: "/real-estate-appraiser",
+      },
+    ],
+  },
   {
     category: "Aging Life Care Management",
     professionals: [
@@ -96,6 +124,27 @@ const groups: CategoryGroup[] = [
     ],
   },
   {
+    category: "Estate Liquidation Services",
+    professionals: [
+      {
+        name: "Meriann Roberts",
+        role: "Owner",
+        company: "Ginny's Girls Estate Services",
+        specialty: "Estate sales, senior move management, residential clear-outs, and ISA-certified personal property appraisals throughout North King and Snohomish Counties.",
+        photo: meriannPhoto,
+        href: "/estate-liquidators",
+      },
+      {
+        name: "Abigail McKee",
+        role: "Manager",
+        company: "Ginny's Girls Estate Services",
+        specialty: "Estate sales, senior move management, residential clear-outs, and ISA-certified personal property appraisals throughout North King and Snohomish Counties.",
+        photo: abigailPhoto,
+        href: "/estate-liquidators",
+      },
+    ],
+  },
+  {
     category: "Senior Living Advisors",
     professionals: [
       {
@@ -122,6 +171,19 @@ const groups: CategoryGroup[] = [
     ],
   },
   {
+    category: "Family Law & Divorce",
+    professionals: [
+      {
+        name: "Dominik Musafia",
+        role: "Divorce & Family Law Attorney",
+        company: "Seattle Divorce Options, PLLC",
+        specialty: "Collaborative divorce and family law, with additional expertise in business and real property matters.",
+        photo: dominikPhoto,
+        href: "/for-divorce-attorneys",
+      },
+    ],
+  },
+  {
     category: "Financial Planning",
     professionals: [
       {
@@ -131,6 +193,48 @@ const groups: CategoryGroup[] = [
         specialty: "Financial planning for families navigating major life and estate transitions.",
         photo: tiffanyPhoto,
         href: "/for-financial-planners",
+      },
+    ],
+  },
+  {
+    category: "Mortgage & Reverse Mortgage Lending",
+    professionals: [
+      {
+        name: "Daniel Bartel",
+        role: "Retirement Mortgage Specialist · Reverse Mortgage Lender",
+        company: "C2 Financial",
+        specialty: "Reverse mortgages and retirement planning for seniors.",
+        photo: danBartelPhoto,
+        href: "/mortgage-lenders",
+      },
+      {
+        name: "Jeff McGinnis",
+        role: "Senior Loan Officer",
+        company: "CrossCountry Mortgage",
+        specialty: "25+ years of mortgage lending experience.",
+        photo: jeffMcGinnisPhoto,
+        href: "/mortgage-lenders",
+      },
+      {
+        name: "Hans Westermark",
+        role: "President & Senior Loan Officer",
+        company: "Family First Mortgage",
+        specialty: "Home loans, refinancing, and real estate transitions.",
+        photo: hansWestermarkPhoto,
+        href: "/mortgage-lenders",
+      },
+    ],
+  },
+  {
+    category: "Medicare Guidance",
+    professionals: [
+      {
+        name: "Heidi Bolton",
+        role: "Medicare Advisor",
+        company: "Spears Agency",
+        specialty: "Medicare planning and coverage guidance for individuals turning 65, retiring, or reviewing existing coverage.",
+        photo: heidiPhoto,
+        href: "/medicare-providers",
       },
     ],
   },
@@ -155,7 +259,7 @@ const FeaturedProfessionals = () => (
   <>
     <SEOHead
       title="Featured Professionals | Real Property Planning"
-      description="Meet the independent professionals in Real Property Planning's network — aging life care managers, senior move managers, senior living advisors, elder law attorneys, financial planners, and CPAs serving Washington State families."
+      description="Meet the professionals in Real Property Planning's network — real estate, appraisal, aging life care management, senior move management, estate liquidation, senior living advisors, elder law, family law, financial planning, mortgage lending, Medicare guidance, and CPAs serving Washington State families."
       canonical="https://realpropertyplanning.com/featured-professionals"
     />
     <BreadcrumbSchema
@@ -227,9 +331,9 @@ const FeaturedProfessionals = () => (
                 gap: 24,
               }}
             >
-              {group.professionals.map((pro) => (
+              {group.professionals.map((pro, idx) => (
                 <Link
-                  key={pro.name}
+                  key={`${pro.name}-${idx}`}
                   to={pro.href}
                   className="marquee-hover"
                   style={{

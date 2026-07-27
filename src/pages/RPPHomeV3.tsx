@@ -446,6 +446,7 @@ const RPPHomeV3 = () => {
                       AFH Club
                     </h3>
                     <p
+                      className="afh-club-eyebrow"
                       style={{
                         fontFamily: "'Raleway', sans-serif",
                         fontWeight: 700,
