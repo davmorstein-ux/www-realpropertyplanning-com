@@ -18,7 +18,7 @@ const LANGUAGE_PATH_PREFIXES = SUPPORTED_LANGUAGES.filter((l) => l.pathPrefix).m
 /** Strips a known language prefix off the current path, returning the underlying English path. */
 function toEnglishPath(pathname: string): string {
   const segments = pathname.split("/").filter(Boolean);
-  if (segments.length > 0 && LANGUAGE_PATH_PREFIXES.includes(segments[0])) {
+  if (segments.length > 0 && LANGUAGE_PATH_PREFIXES.some((prefix) => prefix === segments[0])) {
     segments.shift();
   }
   return "/" + segments.join("/");

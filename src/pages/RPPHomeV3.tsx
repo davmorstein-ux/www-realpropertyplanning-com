@@ -29,8 +29,15 @@ const RPPHomeV3 = () => {
       <Header />
 
       <main id="main-content">
-        {/* ── Hero ── shrinks gracefully on mobile ─────────────────── */}
-        <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
+        {/* ── Hero ── scales to fit the enlarged tagline ───────────── */}
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            minHeight: "clamp(520px, 70vw, 980px)",
+            overflow: "hidden",
+          }}
+        >
           <img
             id="rpp-hero-image"
             src="/hero-v2.webp"
@@ -39,8 +46,7 @@ const RPPHomeV3 = () => {
             width={1691}
             height={756}
             alt={t("hero.imageAlt")}
-            className="block w-full object-cover object-center"
-            style={{ height: "clamp(240px, 34vw, 420px)" }}
+            className="absolute inset-0 w-full h-full object-cover object-center"
             loading="eager"
             fetchPriority="high"
             decoding="async"
@@ -66,7 +72,7 @@ const RPPHomeV3 = () => {
                 style={{
                   display: "block",
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "clamp(20px, 2.8vw, 40px)",
+                  fontSize: "clamp(100px, 14vw, 200px)",
                   fontWeight: 600,
                   fontStyle: "italic",
                   color: "#0000FF",
@@ -83,7 +89,7 @@ const RPPHomeV3 = () => {
                 style={{
                   display: "block",
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "clamp(20px, 2.8vw, 40px)",
+                  fontSize: "clamp(100px, 14vw, 200px)",
                   fontWeight: 600,
                   fontStyle: "italic",
                   color: "#0000FF",
