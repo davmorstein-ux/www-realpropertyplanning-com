@@ -40,7 +40,7 @@ const RPPHomeV3 = () => {
             height={756}
             alt={t("hero.imageAlt")}
             className="block w-full object-cover object-center"
-            style={{ height: "clamp(240px, 34vw, 420px)" }}
+            style={{ height: "clamp(340px, 50vw, 700px)" }}
             loading="eager"
             fetchPriority="high"
             decoding="async"
