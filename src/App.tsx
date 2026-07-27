@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import RPPHomeV2 from "./pages/RPPHomeV2";
 import SiteChatWidget from "./components/SiteChatWidget";
 import RPPHomeV3 from "./pages/RPPHomeV3";
+import LanguageRoute from "./components/LanguageRoute";
 import HeroTest from "./pages/HeroTest";
 import HomepageFinal from "./pages/HomepageFinal";
 
@@ -258,7 +259,12 @@ const App = () => (
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
-          <Route path="/" element={<RPPHomeV3 />} />
+          <Route path="/" element={<LanguageRoute lang="en"><RPPHomeV3 /></LanguageRoute>} />
+          <Route path="/es" element={<LanguageRoute lang="es"><RPPHomeV3 /></LanguageRoute>} />
+          <Route path="/zh-tw" element={<LanguageRoute lang="zh-TW"><RPPHomeV3 /></LanguageRoute>} />
+          <Route path="/zh-cn" element={<LanguageRoute lang="zh-CN"><RPPHomeV3 /></LanguageRoute>} />
+          <Route path="/tl" element={<LanguageRoute lang="tl"><RPPHomeV3 /></LanguageRoute>} />
+          <Route path="/vi" element={<LanguageRoute lang="vi"><RPPHomeV3 /></LanguageRoute>} />
           <Route path="/home-new" element={<HomepageNew />} />
           <Route path="/hero-test" element={<HeroTest />} />
 

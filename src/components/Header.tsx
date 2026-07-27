@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import WaterfallNav from "./WaterfallNav";
 import SiteSearchBar from "./SiteSearchBar";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
 
@@ -157,6 +158,7 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
+            <LanguageSwitcher />
             <Link
               to={CONTACT_LINK.href}
               className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}

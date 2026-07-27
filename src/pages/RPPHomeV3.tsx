@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import tilePlanning from "@/assets/tiles/tile-planning-ahead.webp";
 import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
 import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
@@ -9,43 +10,20 @@ import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageFAQ from "@/components/HomepageFAQ";
 
-const tiles = [
-  {
-    imgSrc: tilePlanning,
-    imgAlt: "Older couple reviewing an estate plan together at home",
-    title: "I Want to Plan Ahead",
-    href: "/planning-before-a-crisis",
-    bgColor: "#721d24",
-  },
-  {
-    imgSrc: tileHelping,
-    imgAlt: "Adult daughter hugging her senior mother on a couch",
-    title: "I'm Helping an Aging Parent",
-    href: "/helping-an-aging-parent",
-    bgColor: "#246044",
-  },
-  {
-    imgSrc: tileEstate,
-    imgAlt: "Family reviewing an estate property plan with documents",
-    title: "I'm Handling an Estate",
-    href: "/estate-probate-inherited-property",
-    bgColor: "#25597e",
-  },
-  {
-    imgSrc: tileProfessionals,
-    imgAlt: "Man at a laptop browsing trusted professional resources",
-    title: "I Need a Professional",
-    href: "/building-your-trusted-professional-team",
-    bgColor: "#5d2f74",
-  },
-];
+const tileMeta = [
+  { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#721d24", imgSrc: tilePlanning },
+  { key: "helpingParent", href: "/helping-an-aging-parent", bgColor: "#246044", imgSrc: tileHelping },
+  { key: "handlingEstate", href: "/estate-probate-inherited-property", bgColor: "#25597e", imgSrc: tileEstate },
+  { key: "needProfessional", href: "/building-your-trusted-professional-team", bgColor: "#5d2f74", imgSrc: tileProfessionals },
+] as const;
 
 const RPPHomeV3 = () => {
+  const { t } = useTranslation();
   return (
     <>
       <SEOHead
-        title="Probate & Senior Real Estate Guidance | Washington State"
-        description="Washington resource hub for probate real estate, inherited property, senior transitions, and trusted professional guidance."
+        title={t("seo.title")}
+        description={t("seo.description")}
         canonical="https://realpropertyplanning.com"
       />
       <Header />
@@ -60,7 +38,7 @@ const RPPHomeV3 = () => {
             sizes="100vw"
             width={1691}
             height={756}
-            alt="Real Property Planning — serving Washington families through senior transitions, probate, and estate sales"
+            alt={t("hero.imageAlt")}
             className="block w-full object-cover object-center"
             style={{ height: "clamp(240px, 34vw, 420px)" }}
             loading="eager"
@@ -98,7 +76,7 @@ const RPPHomeV3 = () => {
                   marginTop: "clamp(8px, 1.5vw, 20px)",
                 }}
               >
-                Guidance for real estate decisions
+                {t("hero.taglineLine1")}
               </span>
               <span
                 className="rpp-tagline-line-v2"
@@ -116,7 +94,7 @@ const RPPHomeV3 = () => {
                 }}
               >
                 {" "}
-                and later life transitions
+                {t("hero.taglineLine2")}
               </span>
             </h1>
 
@@ -148,7 +126,7 @@ const RPPHomeV3 = () => {
                   boxShadow: "0 4px 14px rgba(0,0,0,0.18)",
                 }}
               >
-                Find the Right Starting Point
+                {t("hero.ctaPrimary")}
                 <svg
                   className="rpp-cta-arrow"
                   viewBox="0 0 24 24"
@@ -186,7 +164,7 @@ const RPPHomeV3 = () => {
                   ["--marquee-color" as string]: "#ffffff",
                 }}
               >
-                Connect with a Specialist in Our Network
+                {t("hero.ctaSecondary")}
                 <svg
                   className="rpp-cta-arrow-right"
                   viewBox="0 0 24 24"
@@ -222,18 +200,21 @@ const RPPHomeV3 = () => {
                   margin: 0,
                 }}
               >
-                What brings you here today?
+                {t("funnel.heading")}
               </h2>
             </div>
 
             {/* Tap hint — mobile only */}
             <p className="block sm:hidden text-center text-base text-navy font-medium mb-4 tracking-wide">
-              Select a topic to get started
+              {t("funnel.mobileHint")}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
-              {tiles.map(({ imgSrc, imgAlt, title, href, bgColor }) => (
-                <Link key={title} to={href} className="group block" style={{ textDecoration: "none" }}>
+              {tileMeta.map(({ key, href, bgColor, imgSrc }) => {
+                const title = t(`funnel.tiles.${key}.title`);
+                const imgAlt = t(`funnel.tiles.${key}.imgAlt`);
+                return (
+                <Link key={key} to={href} className="group block" style={{ textDecoration: "none" }}>
                   <div
                     className="marquee-hover group-active:scale-[0.98] transition-transform duration-150"
                     style={{ borderRadius: 10 }}
@@ -266,7 +247,7 @@ const RPPHomeV3 = () => {
                             textTransform: "uppercase",
                           }}
                         >
-                          Explore →
+                          {t("funnel.exploreBadge")}
                         </span>
                       </div>
                       <div
@@ -310,7 +291,8 @@ const RPPHomeV3 = () => {
                     </div>
                   </div>
                 </Link>
-              ))}
+                );
+              })}
             </div>
 
             {/* ── Secondary cards: Cost of Care + AFH Club ─────────── */}
@@ -343,8 +325,8 @@ const RPPHomeV3 = () => {
                     textAlign: "center",
                   }}
                 >
-                  <span style={{ color: "#272421" }}>Cost of Care</span>{" "}
-                  <span style={{ color: "#d43341" }}>Calculator</span>
+                  <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
+                  <span style={{ color: "#d43341" }}>{t("costOfCare.headingPart2")}</span>
                 </h3>
                 <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-5" style={{ flex: 1 }}>
                   <div
@@ -368,8 +350,7 @@ const RPPHomeV3 = () => {
                         maxWidth: 320,
                       }}
                     >
-                      Compare in-home care, assisted living, memory care, and more — in Washington versus national
-                      averages.
+                      {t("costOfCare.description")}
                     </div>
                     <span
                       style={{
@@ -386,7 +367,7 @@ const RPPHomeV3 = () => {
                         marginTop: "auto",
                       }}
                     >
-                      Calculate My Costs →
+                      {t("costOfCare.cta")}
                     </span>
                   </div>
                   <img
@@ -461,7 +442,7 @@ const RPPHomeV3 = () => {
                           "0px 1px 0 #0a5648, 0px 2px 0 #094e42, 0px 3px 0 #08453c, 0px 4px 0 #073c35, 0px 5px 0 #06332e, 0px 7px 10px rgba(0,0,0,0.35)",
                       }}
                     >
-                      AFH Club
+                      {t("afhClub.heading")}
                     </h3>
                     <p
                       className="afh-eyebrow-label-v2"
@@ -477,7 +458,7 @@ const RPPHomeV3 = () => {
                         margin: "0 0 12px",
                       }}
                     >
-                      For Adult Family Home Owners &amp; Buyers
+                      {t("afhClub.eyebrow")}
                     </p>
                     <div style={{ width: 64, height: 2, background: "#c8b5b7", margin: "0 0 14px" }} />
                     <div
@@ -491,7 +472,7 @@ const RPPHomeV3 = () => {
                         maxWidth: 360,
                       }}
                     >
-                      The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
+                      {t("afhClub.description")}
                     </div>
                     <span
                       style={{
@@ -508,7 +489,7 @@ const RPPHomeV3 = () => {
                         marginTop: "auto",
                       }}
                     >
-                      Explore AFH Club →
+                      {t("afhClub.cta")}
                     </span>
                   </div>
                 </div>
@@ -535,8 +516,7 @@ const RPPHomeV3 = () => {
                   textWrap: "balance" as any,
                 }}
               >
-                Connecting Washington families with trusted guidance on senior housing, probate real estate, and the
-                specialists who help along the way
+                {t("descriptor")}
               </p>
             </div>
           </div>

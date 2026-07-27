@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "title": "Hướng Dẫn Về Thừa Kế và Bất Động Sản Cho Người Cao Niên | Tiểu Bang Washington",
+    "description": "Trung tâm nguồn lực của Washington về bất động sản thừa kế, tài sản thừa hưởng, chuyển đổi cho người cao niên, và hướng dẫn chuyên nghiệp đáng tin cậy."
+  },
+  "hero": {
+    "imageAlt": "Real Property Planning — phục vụ các gia đình Washington trong quá trình chuyển đổi cho người cao niên, thừa kế, và bán tài sản di sản",
+    "taglineLine1": "Hướng dẫn cho các quyết định bất động sản",
+    "taglineLine2": "và những chuyển đổi trong giai đoạn cuối đời",
+    "ctaPrimary": "Tìm Điểm Khởi Đầu Phù Hợp",
+    "ctaSecondary": "Kết Nối Với Chuyên Gia Trong Mạng Lưới Của Chúng Tôi"
+  },
+  "funnel": {
+    "heading": "Điều gì đưa quý vị đến đây hôm nay?",
+    "mobileHint": "Chọn một chủ đề để bắt đầu",
+    "exploreBadge": "Khám Phá →",
+    "tiles": {
+      "planAhead": {
+        "title": "Tôi Muốn Lập Kế Hoạch Trước",
+        "imgAlt": "Cặp vợ chồng lớn tuổi cùng nhau xem xét kế hoạch tài sản tại nhà"
+      },
+      "helpingParent": {
+        "title": "Tôi Đang Giúp Đỡ Cha Mẹ Cao Tuổi",
+        "imgAlt": "Con gái trưởng thành ôm mẹ già của mình trên ghế sofa"
+      },
+      "handlingEstate": {
+        "title": "Tôi Đang Xử Lý Di Sản",
+        "imgAlt": "Gia đình xem xét kế hoạch tài sản di sản cùng với các giấy tờ"
+      },
+      "needProfessional": {
+        "title": "Tôi Cần Một Chuyên Gia",
+        "imgAlt": "Người đàn ông dùng máy tính xách tay để tìm kiếm các nguồn lực chuyên nghiệp đáng tin cậy"
+      }
+    }
+  },
+  "costOfCare": {
+    "headingPart1": "Máy Tính Chi Phí",
+    "headingPart2": "Chăm Sóc",
+    "description": "So sánh chăm sóc tại nhà, sinh hoạt có hỗ trợ, chăm sóc trí nhớ, và nhiều hơn nữa — tại Washington so với mức trung bình toàn quốc.",
+    "cta": "Tính Chi Phí Của Tôi →"
+  },
+  "afhClub": {
+    "heading": "AFH Club",
+    "eyebrow": "Dành Cho Chủ Sở Hữu và Người Mua Adult Family Home",
+    "description": "Mạng lưới nguồn lực tối ưu để mua, bán, quản lý và tìm hiểu về Adult Family Home.",
+    "cta": "Khám Phá AFH Club →"
+  },
+  "descriptor": "Kết nối các gia đình Washington với hướng dẫn đáng tin cậy về nhà ở cho người cao niên, bất động sản thừa kế, và các chuyên gia hỗ trợ trên hành trình này"
+}

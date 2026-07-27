@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "title": "Probate & Senior Real Estate Guidance | Washington State",
+    "description": "Washington resource hub for probate real estate, inherited property, senior transitions, and trusted professional guidance."
+  },
+  "hero": {
+    "imageAlt": "Real Property Planning — serving Washington families through senior transitions, probate, and estate sales",
+    "taglineLine1": "Guidance for real estate decisions",
+    "taglineLine2": "and later life transitions",
+    "ctaPrimary": "Find the Right Starting Point",
+    "ctaSecondary": "Connect with a Specialist in Our Network"
+  },
+  "funnel": {
+    "heading": "What brings you here today?",
+    "mobileHint": "Select a topic to get started",
+    "exploreBadge": "Explore →",
+    "tiles": {
+      "planAhead": {
+        "title": "I Want to Plan Ahead",
+        "imgAlt": "Older couple reviewing an estate plan together at home"
+      },
+      "helpingParent": {
+        "title": "I'm Helping an Aging Parent",
+        "imgAlt": "Adult daughter hugging her senior mother on a couch"
+      },
+      "handlingEstate": {
+        "title": "I'm Handling an Estate",
+        "imgAlt": "Family reviewing an estate property plan with documents"
+      },
+      "needProfessional": {
+        "title": "I Need a Professional",
+        "imgAlt": "Man at a laptop browsing trusted professional resources"
+      }
+    }
+  },
+  "costOfCare": {
+    "headingPart1": "Cost of Care",
+    "headingPart2": "Calculator",
+    "description": "Compare in-home care, assisted living, memory care, and more — in Washington versus national averages.",
+    "cta": "Calculate My Costs →"
+  },
+  "afhClub": {
+    "heading": "AFH Club",
+    "eyebrow": "For Adult Family Home Owners & Buyers",
+    "description": "The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.",
+    "cta": "Explore AFH Club →"
+  },
+  "descriptor": "Connecting Washington families with trusted guidance on senior housing, probate real estate, and the specialists who help along the way"
+}

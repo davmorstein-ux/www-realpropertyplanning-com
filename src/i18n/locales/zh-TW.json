@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "title": "遺產繼承與長者不動產指引 | 華盛頓州",
+    "description": "華盛頓州資源中心，提供遺產繼承不動產、繼承房產、長者生活轉換及可信賴的專業指引。"
+  },
+  "hero": {
+    "imageAlt": "Real Property Planning — 為華盛頓州家庭提供長者生活轉換、遺產繼承與遺產房產出售服務",
+    "taglineLine1": "為您的不動產決策",
+    "taglineLine2": "與人生後期轉換提供指引",
+    "ctaPrimary": "找到適合您的起點",
+    "ctaSecondary": "聯繫我們網絡中的專業人士"
+  },
+  "funnel": {
+    "heading": "今天是什麼原因帶您來到這裡？",
+    "mobileHint": "選擇一個主題以開始",
+    "exploreBadge": "探索 →",
+    "tiles": {
+      "planAhead": {
+        "title": "我想提前做好規劃",
+        "imgAlt": "一對年長夫婦在家中一起檢視遺產規劃"
+      },
+      "helpingParent": {
+        "title": "我正在照顧年邁的父母",
+        "imgAlt": "成年女兒在沙發上擁抱她年邁的母親"
+      },
+      "handlingEstate": {
+        "title": "我正在處理遺產事務",
+        "imgAlt": "一家人正在查看遺產房產文件"
+      },
+      "needProfessional": {
+        "title": "我需要專業人士協助",
+        "imgAlt": "一名男子在筆記型電腦上瀏覽可信賴的專業資源"
+      }
+    }
+  },
+  "costOfCare": {
+    "headingPart1": "照護費用",
+    "headingPart2": "計算器",
+    "description": "比較居家照護、輔助生活、失智照護等服務——華盛頓州與全國平均水準的對比。",
+    "cta": "計算我的費用 →"
+  },
+  "afhClub": {
+    "heading": "AFH Club",
+    "eyebrow": "為成人家庭照護之家（AFH）業主與買家提供服務",
+    "description": "買賣、經營與了解成人家庭照護之家（Adult Family Home）的終極資源網絡。",
+    "cta": "探索 AFH Club →"
+  },
+  "descriptor": "為華盛頓州家庭提供長者住房、遺產繼承不動產及沿途協助的專業人士的可信賴指引"
+}

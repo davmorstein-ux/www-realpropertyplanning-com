@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "title": "Orientación sobre Sucesiones y Bienes Raíces para Personas Mayores | Estado de Washington",
+    "description": "Centro de recursos de Washington para bienes raíces en sucesiones, propiedades heredadas, transiciones de personas mayores y orientación profesional confiable."
+  },
+  "hero": {
+    "imageAlt": "Real Property Planning — sirviendo a familias de Washington en transiciones de personas mayores, sucesiones y ventas de bienes de sucesión",
+    "taglineLine1": "Orientación para decisiones inmobiliarias",
+    "taglineLine2": "y transiciones de la última etapa de la vida",
+    "ctaPrimary": "Encuentre el Punto de Partida Adecuado",
+    "ctaSecondary": "Conéctese con un Especialista de Nuestra Red"
+  },
+  "funnel": {
+    "heading": "¿Qué le trae aquí hoy?",
+    "mobileHint": "Seleccione un tema para comenzar",
+    "exploreBadge": "Explorar →",
+    "tiles": {
+      "planAhead": {
+        "title": "Quiero Planificar con Anticipación",
+        "imgAlt": "Pareja de adultos mayores revisando juntos un plan patrimonial en casa"
+      },
+      "helpingParent": {
+        "title": "Estoy Ayudando a un Padre o Madre Mayor",
+        "imgAlt": "Hija adulta abrazando a su madre mayor en un sofá"
+      },
+      "handlingEstate": {
+        "title": "Estoy Manejando una Sucesión",
+        "imgAlt": "Familia revisando un plan de propiedad de sucesión con documentos"
+      },
+      "needProfessional": {
+        "title": "Necesito un Profesional",
+        "imgAlt": "Hombre en una laptop buscando recursos profesionales de confianza"
+      }
+    }
+  },
+  "costOfCare": {
+    "headingPart1": "Calculadora de",
+    "headingPart2": "Costo de Cuidado",
+    "description": "Compare el cuidado en el hogar, la vida asistida, el cuidado de la memoria y más — en Washington frente a los promedios nacionales.",
+    "cta": "Calcular Mis Costos →"
+  },
+  "afhClub": {
+    "heading": "AFH Club",
+    "eyebrow": "Para Propietarios y Compradores de Hogares Familiares para Adultos",
+    "description": "La red de recursos definitiva para comprar, vender, administrar y aprender sobre los Hogares Familiares para Adultos (AFH).",
+    "cta": "Explorar AFH Club →"
+  },
+  "descriptor": "Conectando a las familias de Washington con orientación confiable sobre vivienda para personas mayores, bienes raíces en sucesiones y los especialistas que ayudan en el camino"
+}

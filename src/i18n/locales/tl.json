@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "title": "Gabay sa Probate at Real Estate para sa mga Nakatatanda | Washington State",
+    "description": "Sentro ng mapagkukunan sa Washington para sa probate real estate, minanang ari-arian, transisyon ng mga nakatatanda, at mapagkakatiwalaang gabay mula sa mga propesyonal."
+  },
+  "hero": {
+    "imageAlt": "Real Property Planning — naglilingkod sa mga pamilyang Washingtonian sa transisyon ng mga nakatatanda, probate, at pagbebenta ng ari-arian",
+    "taglineLine1": "Gabay para sa mga desisyon sa real estate",
+    "taglineLine2": "at mga transisyon sa huling bahagi ng buhay",
+    "ctaPrimary": "Hanapin ang Tamang Simula",
+    "ctaSecondary": "Makipag-ugnayan sa isang Espesyalista sa Aming Network"
+  },
+  "funnel": {
+    "heading": "Ano ang dahilan ng inyong pagpunta rito ngayon?",
+    "mobileHint": "Pumili ng paksa para magsimula",
+    "exploreBadge": "Tuklasin →",
+    "tiles": {
+      "planAhead": {
+        "title": "Gusto Kong Mag-plano nang Maaga",
+        "imgAlt": "Matandang mag-asawa na magkasamang sinusuri ang plano ng ari-arian sa bahay"
+      },
+      "helpingParent": {
+        "title": "Tinutulungan Ko ang Nakatatandang Magulang",
+        "imgAlt": "Anak na yumayakap sa kanyang nakatatandang ina sa sofa"
+      },
+      "handlingEstate": {
+        "title": "Hinahawakan Ko ang isang Ari-arian",
+        "imgAlt": "Pamilyang sinusuri ang plano ng ari-arian kasama ang mga dokumento"
+      },
+      "needProfessional": {
+        "title": "Kailangan Ko ng Propesyonal",
+        "imgAlt": "Lalaking gumagamit ng laptop habang naghahanap ng mapagkakatiwalaang mapagkukunang propesyonal"
+      }
+    }
+  },
+  "costOfCare": {
+    "headingPart1": "Calculator ng",
+    "headingPart2": "Gastos sa Pangangalaga",
+    "description": "Ihambing ang pangangalaga sa bahay, assisted living, memory care, at iba pa — sa Washington kumpara sa pambansang average.",
+    "cta": "Kalkulahin ang Aking Gastos →"
+  },
+  "afhClub": {
+    "heading": "AFH Club",
+    "eyebrow": "Para sa mga May-ari at Mamimili ng Adult Family Home",
+    "description": "Ang pinakamahusay na network ng mapagkukunan para sa pagbili, pagbebenta, pamamahala, at pag-aaral tungkol sa Adult Family Homes.",
+    "cta": "Tuklasin ang AFH Club →"
+  },
+  "descriptor": "Idinurugtong ang mga pamilyang Washingtonian sa mapagkakatiwalaang gabay sa pabahay para sa mga nakatatanda, probate real estate, at ang mga espesyalistang tumutulong sa daan"
+}
