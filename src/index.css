@@ -727,6 +727,23 @@ main,
   }
 }
 
+/* Right-pointing arrow variant — same pairing, but nudges rightward
+   instead of downward (e.g. the 'Connect with a Specialist' CTA). */
+.rpp-cta-arrow-right {
+  transition: transform 0.2s ease;
+}
+.marquee-hover:hover .rpp-cta-arrow-right {
+  transform: translateX(3px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .rpp-cta-arrow-right {
+    transition: none !important;
+  }
+  .marquee-hover:hover .rpp-cta-arrow-right {
+    transform: none !important;
+  }
+}
+
 /* ═══════════════════════════════════════════════
    UNIFIED CTA LINK — homepage tile sections
    Modern minimal text-link treatment: no filled box,
