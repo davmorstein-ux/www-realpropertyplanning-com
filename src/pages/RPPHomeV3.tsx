@@ -34,7 +34,7 @@ const RPPHomeV3 = () => {
           style={{
             position: "relative",
             width: "100%",
-            minHeight: "clamp(360px, 45vw, 620px)",
+            minHeight: "clamp(180px, 22.5vw, 310px)",
             overflow: "hidden",
           }}
         >
@@ -72,7 +72,7 @@ const RPPHomeV3 = () => {
                 style={{
                   display: "block",
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "clamp(50px, 7vw, 100px)",
+                  fontSize: "clamp(25px, 3.5vw, 50px)",
                   fontWeight: 600,
                   fontStyle: "italic",
                   color: "#0000FF",
@@ -89,7 +89,7 @@ const RPPHomeV3 = () => {
                 style={{
                   display: "block",
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "clamp(50px, 7vw, 100px)",
+                  fontSize: "clamp(25px, 3.5vw, 50px)",
                   fontWeight: 600,
                   fontStyle: "italic",
                   color: "#0000FF",
