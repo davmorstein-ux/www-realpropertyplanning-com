@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Globe, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { SUPPORTED_LANGUAGES, type SupportedLanguageCode } from "@/i18n/config";
+import { FLAG_COMPONENTS } from "@/components/FlagIcons";
 
 // Pages that currently have real, translated content. As more pages
 // get translated in future sessions, add their English path here —
@@ -77,7 +78,10 @@ const LanguageSwitcher = () => {
           cursor: "pointer",
         }}
       >
-        <Globe size={15} aria-hidden="true" />
+        {(() => {
+          const CurrentFlag = FLAG_COMPONENTS[currentLang];
+          return CurrentFlag ? <CurrentFlag size={18} /> : null;
+        })()}
         {SUPPORTED_LANGUAGES.find((l) => l.code === currentLang)?.nativeLabel}
       </button>
       {open && (
@@ -113,6 +117,7 @@ const LanguageSwitcher = () => {
           {SUPPORTED_LANGUAGES.map((l) => {
             const disabled = l.code !== "en" && !isTranslated;
             const selected = l.code === currentLang;
+            const Flag = FLAG_COMPONENTS[l.code];
             return (
               <button
                 key={l.code}
@@ -136,13 +141,17 @@ const LanguageSwitcher = () => {
                   fontWeight: selected ? 700 : 500,
                   color: disabled ? "#c2b9b1" : "#302b26",
                   cursor: disabled ? "not-allowed" : "pointer",
+                  opacity: disabled ? 0.6 : 1,
                 }}
               >
-                <span>
-                  {l.nativeLabel}
-                  {l.nativeLabel !== l.label && (
-                    <span style={{ color: "#9a8f89", fontWeight: 400 }}> · {l.label}</span>
-                  )}
+                <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  {Flag && <Flag size={20} />}
+                  <span>
+                    {l.nativeLabel}
+                    {l.nativeLabel !== l.label && (
+                      <span style={{ color: "#9a8f89", fontWeight: 400 }}> · {l.label}</span>
+                    )}
+                  </span>
                 </span>
                 {selected && <Check size={15} aria-hidden="true" />}
               </button>
