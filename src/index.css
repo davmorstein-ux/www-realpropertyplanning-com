@@ -3518,11 +3518,10 @@ main #rpp-orientation p,
 main #rpp-orientation div {
   margin-bottom: 0 !important;
 }
-/* Tagline — the actual visible text lives in child spans, which this
-   rule controls. The h1 itself has no direct text content, so styling
-   it directly (as earlier versions of this rule did) has no visible
-   effect — consolidated to just the rule that matters. */
-#rpp-tagline span {
+/* Tagline — fresh class + rule (previous #rpp-tagline span version
+   removed entirely, replaced under a new class name, as an attempt
+   to break a suspected stuck preview cache tied to the old selector). */
+.rpp-tagline-line-v2 {
   font-size: clamp(20px, 2.8vw, 40px) !important;
   color: #0000ff !important;
   font-family: "Cormorant Garamond", Georgia, serif !important;
@@ -3642,18 +3641,11 @@ h1.afh-listings-h1 {
   line-height: 1.2 !important;
 }
 
-/* AFH Club homepage tile eyebrow label — a broad "main p" accessibility
-   floor rule elsewhere in this file forces every paragraph inside
-   <main> to at least 18px with 1.7 line-height, which silently
-   overrode this small all-caps label's intended compact size. A THIRD
-   conflicting rule was also found (targeting any element with inline
-   text-transform:uppercase via an attribute selector) — rather than
-   keep relying on close specificity math between competing !important
-   rules, this uses a doubled-class selector to make the win
-   unambiguous regardless of what else may target this element. */
-html body main p.afh-club-eyebrow.afh-club-eyebrow,
-main p.afh-club-eyebrow.afh-club-eyebrow,
-p.afh-club-eyebrow.afh-club-eyebrow {
+/* AFH Club homepage tile eyebrow label — fresh class + rule (previous
+   .afh-club-eyebrow version removed entirely, replaced under a new
+   class name, as an attempt to break a suspected stuck preview cache
+   tied to the old selector). */
+.afh-eyebrow-label-v2 {
   font-size: 13px !important;
   line-height: 1.4 !important;
 }
