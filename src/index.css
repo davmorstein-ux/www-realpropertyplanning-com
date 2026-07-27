@@ -3645,11 +3645,15 @@ h1.afh-listings-h1 {
 /* AFH Club homepage tile eyebrow label — a broad "main p" accessibility
    floor rule elsewhere in this file forces every paragraph inside
    <main> to at least 18px with 1.7 line-height, which silently
-   overrode this small all-caps label's intended compact size. Same
-   fix pattern as afh-listings-h1 above: dedicated class + !important. */
-html body main p.afh-club-eyebrow,
-main p.afh-club-eyebrow,
-p.afh-club-eyebrow {
+   overrode this small all-caps label's intended compact size. A THIRD
+   conflicting rule was also found (targeting any element with inline
+   text-transform:uppercase via an attribute selector) — rather than
+   keep relying on close specificity math between competing !important
+   rules, this uses a doubled-class selector to make the win
+   unambiguous regardless of what else may target this element. */
+html body main p.afh-club-eyebrow.afh-club-eyebrow,
+main p.afh-club-eyebrow.afh-club-eyebrow,
+p.afh-club-eyebrow.afh-club-eyebrow {
   font-size: 13px !important;
   line-height: 1.4 !important;
 }
