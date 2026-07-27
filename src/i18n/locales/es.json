@@ -251,5 +251,62 @@
         "answer": "Sí — las exclusiones de ganancias de capital, la base incrementada en un fideicomiso, y otros factores fiscales pueden afectar significativamente el resultado. Un contador público certificado o planificador financiero debe formar parte de la conversación antes de publicar el listado, y Real Property Planning puede ayudar a conectar a su familia con uno."
       }
     }
+  },
+  "afhClubPage": {
+    "seo": {
+      "title": "AFH Club | Red de Recursos para Hogares Familiares para Adultos | Real Property Planning",
+      "description": "La red de recursos líder del Estado de Washington para propietarios de Hogares Familiares para Adultos, futuros proveedores, compradores y los profesionales que los atienden."
+    },
+    "hero": {
+      "badgeAlt": "AFH Club — Red de Recursos de Hogares Familiares para Adultos del Estado de Washington",
+      "subtitle": "Red de Recursos de Hogares Familiares para Adultos del Estado de Washington",
+      "description": "Un centro curado de recursos para propietarios de Hogares Familiares para Adultos que buscan vender, compradores y servicios de administración de AFH."
+    },
+    "welcomeBanner": "Bienvenido al AFH Club",
+    "categories": {
+      "resources": {
+        "title": "Recursos de AFH",
+        "description": "Licencias, capacitación, requisitos de construcción, costos, regulaciones y más."
+      },
+      "listings": {
+        "title": "Listados de AFH",
+        "description": "Hogares Familiares para Adultos actualmente disponibles para la venta en todo el Estado de Washington."
+      },
+      "management": {
+        "title": "Compañías de Administración",
+        "description": "Compañías profesionales de administración de AFH que sirven a propietarios del Estado de Washington."
+      },
+      "broker": {
+        "title": "Corredor de Bienes Raíces de AFH",
+        "description": "Un corredor con licencia del Estado de Washington especializado en transacciones de Hogares Familiares para Adultos."
+      },
+      "calculators": {
+        "title": "Calculadoras de AFH",
+        "description": "Calculadora de ROI y estimador de valoración para compradores, vendedores e inversionistas de Hogares Familiares para Adultos."
+      }
+    },
+    "marketplace": {
+      "eyebrow": "Comprar · Vender · Invertir",
+      "heading": "Mercado de AFH",
+      "description": "Un mercado dedicado de Washington para comprar y vender Hogares Familiares para Adultos — propiedad, negocio, o ambos.",
+      "browseListings": "Ver Listados",
+      "submitListing": "Enviar un Listado"
+    },
+    "browseByCity": "Ver Listados por Ciudad",
+    "exploreHeading": "Explorar AFH Club",
+    "exploreLabel": "Explorar",
+    "whatIsAfh": {
+      "eyebrow": "Antecedentes",
+      "heading": "¿Qué Es un Hogar Familiar para Adultos?",
+      "paragraph1": "Un Hogar Familiar para Adultos (AFH, por sus siglas en inglés) es una residencia privada con licencia del Departamento de Servicios Sociales y de Salud del Estado de Washington (DSHS) para proporcionar cuidado personal, habitación y comida a entre dos y seis adultos que no están relacionados con el proveedor de servicios, aunque los hogares calificados pueden ser aprobados por el DSHS para hasta ocho residentes.",
+      "paragraph2": "Los AFH están permitidos en todos los distritos de zonificación residencial unifamiliar en todo el Estado de Washington y están regulados bajo el WAC 388-76 y el RCW 70.128.",
+      "paragraph3": "Los licenciadores del DSHS realizan inspecciones no anunciadas en un ciclo regular. Los proveedores deben mantener el cumplimiento continuo de los estándares de licencia, capacitación, construcción y cuidado — que es precisamente por qué la información organizada y confiable es tan importante."
+    },
+    "readyToBuySell": {
+      "heading": "¿Listo para Comprar o Vender un AFH?",
+      "description": "Explore Hogares Familiares para Adultos en venta — propiedad, negocio, o ambos. Un mercado dedicado de compra y venta de AFH en Washington.",
+      "browseListings": "Ver listados",
+      "sellYourAfh": "Venda su AFH"
+    }
   }
 }

@@ -251,5 +251,62 @@
         "answer": "Có — các khoản miễn trừ lãi vốn, cơ sở tính thuế được điều chỉnh tăng trong một ủy thác, và các yếu tố thuế khác có thể ảnh hưởng đáng kể đến kết quả. Một kế toán viên công chứng hoặc nhà hoạch định tài chính nên là một phần của cuộc trò chuyện trước khi niêm yết, và Real Property Planning có thể giúp kết nối gia đình quý vị với một người như vậy."
       }
     }
+  },
+  "afhClubPage": {
+    "seo": {
+      "title": "AFH Club | Mạng Lưới Nguồn Lực Nhà Chăm Sóc Gia Đình Người Lớn | Real Property Planning",
+      "description": "Mạng lưới nguồn lực hàng đầu của Tiểu Bang Washington dành cho chủ sở hữu Nhà Chăm Sóc Gia Đình Người Lớn, những nhà cung cấp dịch vụ tiềm năng, người mua, và các chuyên gia phục vụ họ."
+    },
+    "hero": {
+      "badgeAlt": "AFH Club — Mạng Lưới Nguồn Lực Nhà Chăm Sóc Gia Đình Người Lớn tại Tiểu Bang Washington",
+      "subtitle": "Mạng Lưới Nguồn Lực Nhà Chăm Sóc Gia Đình Người Lớn tại Tiểu Bang Washington",
+      "description": "Một trung tâm nguồn lực được tuyển chọn kỹ lưỡng dành cho chủ sở hữu Nhà Chăm Sóc Gia Đình Người Lớn muốn bán, người mua, và các dịch vụ quản lý AFH."
+    },
+    "welcomeBanner": "Chào Mừng Đến Với AFH Club",
+    "categories": {
+      "resources": {
+        "title": "Nguồn Lực AFH",
+        "description": "Giấy phép, đào tạo, yêu cầu xây dựng, chi phí, quy định, và nhiều hơn nữa."
+      },
+      "listings": {
+        "title": "Danh Sách AFH",
+        "description": "Các Nhà Chăm Sóc Gia Đình Người Lớn hiện đang được rao bán trên khắp Tiểu Bang Washington."
+      },
+      "management": {
+        "title": "Các Công Ty Quản Lý",
+        "description": "Các công ty quản lý AFH chuyên nghiệp phục vụ chủ sở hữu tại Tiểu Bang Washington."
+      },
+      "broker": {
+        "title": "Môi Giới Bất Động Sản AFH",
+        "description": "Một môi giới được cấp phép tại Tiểu Bang Washington chuyên về các giao dịch Nhà Chăm Sóc Gia Đình Người Lớn."
+      },
+      "calculators": {
+        "title": "Công Cụ Tính Toán AFH",
+        "description": "Công cụ tính ROI và ước tính định giá dành cho người mua, người bán, và nhà đầu tư Nhà Chăm Sóc Gia Đình Người Lớn."
+      }
+    },
+    "marketplace": {
+      "eyebrow": "Mua · Bán · Đầu Tư",
+      "heading": "Chợ Giao Dịch AFH",
+      "description": "Một chợ giao dịch chuyên biệt của Washington dành cho việc mua và bán Nhà Chăm Sóc Gia Đình Người Lớn — bất động sản, doanh nghiệp, hoặc cả hai.",
+      "browseListings": "Xem Danh Sách",
+      "submitListing": "Gửi Danh Sách"
+    },
+    "browseByCity": "Xem Danh Sách Theo Thành Phố",
+    "exploreHeading": "Khám Phá AFH Club",
+    "exploreLabel": "Khám Phá",
+    "whatIsAfh": {
+      "eyebrow": "Bối Cảnh",
+      "heading": "Nhà Chăm Sóc Gia Đình Người Lớn Là Gì?",
+      "paragraph1": "Nhà Chăm Sóc Gia Đình Người Lớn (AFH) là một nơi cư trú tư nhân được Sở Dịch Vụ Xã Hội và Y Tế Tiểu Bang Washington (DSHS) cấp phép để cung cấp chăm sóc cá nhân, phòng ở, và ăn uống cho hai đến sáu người trưởng thành không có quan hệ họ hàng với người cung cấp dịch vụ, mặc dù các cơ sở đủ điều kiện có thể được DSHS phê duyệt cho tối đa tám cư dân.",
+      "paragraph2": "Các AFH được phép hoạt động tại tất cả các khu vực phân vùng nhà ở đơn lập trên khắp Tiểu Bang Washington và được quản lý theo WAC 388-76 và RCW 70.128.",
+      "paragraph3": "Các cơ quan cấp phép của DSHS tiến hành các cuộc thanh tra không báo trước theo chu kỳ định kỳ. Các nhà cung cấp dịch vụ phải duy trì việc tuân thủ liên tục các tiêu chuẩn về giấy phép, đào tạo, xây dựng, và chăm sóc — đây chính xác là lý do tại sao thông tin có tổ chức, đáng tin cậy lại quan trọng đến vậy."
+    },
+    "readyToBuySell": {
+      "heading": "Sẵn Sàng Mua hoặc Bán một AFH?",
+      "description": "Xem các Nhà Chăm Sóc Gia Đình Người Lớn đang được rao bán — bất động sản, doanh nghiệp, hoặc cả hai. Một chợ giao dịch mua/bán AFH chuyên biệt của Washington.",
+      "browseListings": "Xem danh sách",
+      "sellYourAfh": "Bán AFH Của Quý Vị"
+    }
   }
 }

@@ -7,50 +7,35 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import AFHCarousel from "@/components/AFHCarousel";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import { useTranslation } from "react-i18next";
 
-const CATEGORIES = [
+const CATEGORY_META = [
+  { key: "resources", href: "/afh-club/resources", img: "/afh-resources.webp", placeholder: "#3f3a35" },
+  { key: "listings", href: "/afh-club/listings", img: "/afh-listings.webp", placeholder: "#3e3934" },
+  { key: "management", href: "/afh-club/management-companies", img: "/afh-management-companies.webp", placeholder: "#3c3732" },
+  { key: "broker", href: "/afh-club/real-estate-broker", img: "/afh-real-estate-broker.webp", placeholder: "#3a3530" },
   {
-    title: "AFH Resources",
-    href: "/afh-club/resources",
-    img: "/afh-resources.webp",
-    description: "Licensing, training, building requirements, costs, regulations, and more.",
-    placeholder: "#3f3a35",
-  },
-  {
-    title: "AFH Listings",
-    href: "/afh-club/listings",
-    img: "/afh-listings.webp",
-    description: "Adult Family Homes currently available for sale throughout Washington State.",
-    placeholder: "#3e3934",
-  },
-  {
-    title: "Management Companies",
-    href: "/afh-club/management-companies",
-    img: "/afh-management-companies.webp",
-    description: "Professional AFH management companies serving Washington State owners.",
-    placeholder: "#3c3732",
-  },
-  {
-    title: "AFH Real Estate Broker",
-    href: "/afh-club/real-estate-broker",
-    img: "/afh-real-estate-broker.webp",
-    description: "A licensed Washington State broker specializing in Adult Family Home transactions.",
-    placeholder: "#3a3530",
-  },
-  {
-    title: "AFH Calculators",
+    key: "calculators",
     href: "/afh-club/calculators",
     img: "/__l5e/assets-v1/f6d8b31f-90b0-4639-a379-feeff961e81c/afh-cost-calculator-v2.webp",
-    description: "ROI calculator and valuation estimator for Adult Family Home buyers, sellers, and investors.",
     placeholder: "#433d37",
   },
-];
+] as const;
 
-const AFHClub = () => (
+const AFHClub = () => {
+  const { t } = useTranslation();
+  const categories = CATEGORY_META.map((c) => ({
+    title: t(`afhClubPage.categories.${c.key}.title`),
+    description: t(`afhClubPage.categories.${c.key}.description`),
+    href: c.href,
+    img: c.img,
+    placeholder: c.placeholder,
+  }));
+  return (
   <>
     <SEOHead
-      title="AFH Club | Adult Family Home Resource Network | Real Property Planning"
-      description="Washington State's premier resource network for Adult Family Home owners, prospective providers, buyers, and the professionals who serve them."
+      title={t("afhClubPage.seo.title")}
+      description={t("afhClubPage.seo.description")}
       canonical="https://realpropertyplanning.com/afh-club"
     />
     <BreadcrumbSchema
@@ -75,7 +60,7 @@ const AFHClub = () => (
           <div style={{ marginBottom: 8 }}>
             <img
               src="/afh-club-badge.png"
-              alt="AFH Club — Washington State Adult Family Home Resource Network"
+              alt={t("afhClubPage.hero.badgeAlt")}
               style={{
                 width: "100%",
                 maxWidth: 320,
@@ -126,7 +111,7 @@ const AFHClub = () => (
               margin: "0 0 20px",
             }}
           >
-            Washington State Adult Family Home Resource Network
+            {t("afhClubPage.hero.subtitle")}
           </p>
 
           {/* Single description line — moved from carousel */}
@@ -141,17 +126,16 @@ const AFHClub = () => (
               maxWidth: 680,
             }}
           >
-            A curated hub of resources for Adult Family Home owners looking to sell, buyers, and AFH management
-            services.
+            {t("afhClubPage.hero.description")}
           </p>
         </div>
       </section>
 
       {/* Welcome banner */}
-      <HeroBandTitle>Welcome to the AFH Club</HeroBandTitle>
+      <HeroBandTitle>{t("afhClubPage.welcomeBanner")}</HeroBandTitle>
 
       {/* Carousel — no text above it */}
-      <AFHCarousel categories={CATEGORIES} />
+      <AFHCarousel categories={categories} />
 
       <section style={{ background: "#fff", padding: "48px 24px" }}>
         <div style={{ maxWidth: 960, margin: "0 auto", textAlign: "center" }}>
@@ -165,7 +149,7 @@ const AFHClub = () => (
               marginBottom: 12,
             }}
           >
-            Buy · Sell · Invest
+            {t("afhClubPage.marketplace.eyebrow")}
           </p>
           <h2
             style={{
@@ -176,7 +160,7 @@ const AFHClub = () => (
               marginBottom: 16,
             }}
           >
-            AFH Marketplace
+            {t("afhClubPage.marketplace.heading")}
           </h2>
           <p
             style={{
@@ -188,8 +172,7 @@ const AFHClub = () => (
               lineHeight: 1.7,
             }}
           >
-            A dedicated Washington marketplace for buying and selling Adult Family Homes — property, business, or
-            both.
+            {t("afhClubPage.marketplace.description")}
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
@@ -207,7 +190,7 @@ const AFHClub = () => (
                 textDecoration: "none",
               }}
             >
-              Browse Listings
+              {t("afhClubPage.marketplace.browseListings")}
             </Link>
             <Link
               to="/afh-submit"
@@ -225,7 +208,7 @@ const AFHClub = () => (
                 border: "2px solid #302b26",
               }}
             >
-              Submit a Listing
+              {t("afhClubPage.marketplace.submitListing")}
             </Link>
           </div>
         </div>
@@ -244,7 +227,7 @@ const AFHClub = () => (
             marginBottom: 14,
           }}
         >
-          Browse Listings by City
+          {t("afhClubPage.browseByCity")}
         </p>
         <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
           {[
@@ -295,10 +278,10 @@ const AFHClub = () => (
             marginBottom: 48,
           }}
         >
-          Explore AFH Club
+          {t("afhClubPage.exploreHeading")}
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-          {CATEGORIES.map((cat, i) => (
+          {categories.map((cat, i) => (
             <Link
               key={cat.href}
               to={cat.href}
@@ -376,7 +359,7 @@ const AFHClub = () => (
                     gap: 5,
                   }}
                 >
-                  Explore
+                  {t("afhClubPage.exploreLabel")}
                   <svg
                     width="12"
                     height="12"
@@ -410,7 +393,7 @@ const AFHClub = () => (
               margin: "0 0 16px",
             }}
           >
-            Background
+            {t("afhClubPage.whatIsAfh.eyebrow")}
           </p>
           <h2
             style={{
@@ -422,7 +405,7 @@ const AFHClub = () => (
               margin: "0 0 20px",
             }}
           >
-            What Is an Adult Family Home?
+            {t("afhClubPage.whatIsAfh.heading")}
           </h2>
           <p
             style={{
@@ -434,9 +417,7 @@ const AFHClub = () => (
               margin: "0 0 22px",
             }}
           >
-            An Adult Family Home (AFH) is a private residence licensed by the Washington State Department of Social and
-            Health Services (DSHS) to provide personal care, room, and board for two to six adults who are unrelated to
-            the service provider, although qualified homes may be approved by DSHS for up to eight residents.
+            {t("afhClubPage.whatIsAfh.paragraph1")}
           </p>
           <p
             style={{
@@ -448,8 +429,7 @@ const AFHClub = () => (
               margin: "0 0 22px",
             }}
           >
-            AFHs are permitted in all single-family residential zoning districts throughout Washington State and are
-            regulated under WAC 388-76 and RCW 70.128.
+            {t("afhClubPage.whatIsAfh.paragraph2")}
           </p>
           <p
             style={{
@@ -461,9 +441,7 @@ const AFHClub = () => (
               margin: 0,
             }}
           >
-            DSHS licensors conduct unannounced inspections on a regular cycle. Providers must maintain continuous
-            compliance with licensing, training, building, and care standards — which is precisely why organized,
-            reliable information matters.
+            {t("afhClubPage.whatIsAfh.paragraph3")}
           </p>
         </div>
       </section>
@@ -487,7 +465,7 @@ const AFHClub = () => (
               lineHeight: 1.2,
             }}
           >
-            Ready to Buy or Sell an AFH?
+            {t("afhClubPage.readyToBuySell.heading")}
           </h2>
           <p
             style={{
@@ -498,8 +476,7 @@ const AFHClub = () => (
               color: "rgba(255,255,255,0.95)",
             }}
           >
-            Browse Adult Family Homes for sale — property, business, or both. A dedicated Washington AFH buy/sell
-            marketplace.
+            {t("afhClubPage.readyToBuySell.description")}
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
             <Link
@@ -519,7 +496,7 @@ const AFHClub = () => (
                 boxShadow: "0 4px 14px rgba(0,0,0,0.15)",
               }}
             >
-              Browse listings
+              {t("afhClubPage.readyToBuySell.browseListings")}
             </Link>
             <Link
               to="/afh-submit"
@@ -538,7 +515,7 @@ const AFHClub = () => (
                 border: "2px solid rgba(255,255,255,0.85)",
               }}
             >
-              Sell Your AFH
+              {t("afhClubPage.readyToBuySell.sellYourAfh")}
             </Link>
           </div>
         </div>
@@ -549,6 +526,7 @@ const AFHClub = () => (
     </main>
     <Footer />
   </>
-);
+  );
+};
 
 export default AFHClub;

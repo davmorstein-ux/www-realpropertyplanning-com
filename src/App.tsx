@@ -738,7 +738,12 @@ const App = () => (
           <Route path="/financial-planning" element={<Navigate to="/for-financial-planners" replace />} />
           <Route path="/senior-living" element={<Navigate to="/senior-living-and-relocation" replace />} />
           <Route path="/lenders-financing" element={<Navigate to="/lenders-and-financing-specialists" replace />} />
-          <Route path="/afh-club" element={<AFHClub />} />
+          <Route path="/afh-club" element={<LanguageRoute lang="en"><AFHClub /></LanguageRoute>} />
+          <Route path="/es/afh-club" element={<LanguageRoute lang="es"><AFHClub /></LanguageRoute>} />
+          <Route path="/zh-tw/afh-club" element={<LanguageRoute lang="zh-TW"><AFHClub /></LanguageRoute>} />
+          <Route path="/zh-cn/afh-club" element={<LanguageRoute lang="zh-CN"><AFHClub /></LanguageRoute>} />
+          <Route path="/tl/afh-club" element={<LanguageRoute lang="tl"><AFHClub /></LanguageRoute>} />
+          <Route path="/vi/afh-club" element={<LanguageRoute lang="vi"><AFHClub /></LanguageRoute>} />
           <Route path="/afh-club/getting-started" element={<AFHGettingStarted />} />
           <Route path="/afh-club/licensing-certification" element={<AFHLicensingCertification />} />
           <Route path="/afh-club/training-education" element={<AFHTrainingEducation />} />

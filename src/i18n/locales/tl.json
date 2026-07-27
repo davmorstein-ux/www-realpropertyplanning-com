@@ -251,5 +251,62 @@
         "answer": "Oo — ang mga capital gains exclusion, stepped-up basis sa isang trust, at iba pang mga salik sa buwis ay maaaring makaapekto nang malaki sa resulta. Dapat na bahagi ng usapan ang isang CPA o financial planner bago mag-lista, at matutulungan ka ng Real Property Planning na konektahin ang inyong pamilya sa isa."
       }
     }
+  },
+  "afhClubPage": {
+    "seo": {
+      "title": "AFH Club | Network ng Mapagkukunan para sa Adult Family Home | Real Property Planning",
+      "description": "Ang nangungunang network ng mapagkukunan sa Washington State para sa mga may-ari ng Adult Family Home, mga posibleng provider, mamimili, at ang mga propesyonal na naglilingkod sa kanila."
+    },
+    "hero": {
+      "badgeAlt": "AFH Club — Network ng Mapagkukunan para sa Adult Family Home sa Washington State",
+      "subtitle": "Network ng Mapagkukunan para sa Adult Family Home sa Washington State",
+      "description": "Isang pinili at organisadong sentro ng mapagkukunan para sa mga may-ari ng Adult Family Home na gustong magbenta, mga mamimili, at mga serbisyo sa pamamahala ng AFH."
+    },
+    "welcomeBanner": "Maligayang Pagdating sa AFH Club",
+    "categories": {
+      "resources": {
+        "title": "Mga Mapagkukunan ng AFH",
+        "description": "Lisensya, pagsasanay, mga kinakailangan sa gusali, gastos, regulasyon, at higit pa."
+      },
+      "listings": {
+        "title": "Mga Listing ng AFH",
+        "description": "Mga Adult Family Home na kasalukuyang available para sa pagbebenta sa buong Washington State."
+      },
+      "management": {
+        "title": "Mga Kompanya ng Pamamahala",
+        "description": "Mga propesyonal na kompanya ng pamamahala ng AFH na naglilingkod sa mga may-ari sa Washington State."
+      },
+      "broker": {
+        "title": "AFH Real Estate Broker",
+        "description": "Isang lisensyadong broker sa Washington State na dalubhasa sa mga transaksyon ng Adult Family Home."
+      },
+      "calculators": {
+        "title": "Mga Calculator ng AFH",
+        "description": "ROI calculator at valuation estimator para sa mga mamimili, nagbebenta, at investor ng Adult Family Home."
+      }
+    },
+    "marketplace": {
+      "eyebrow": "Bumili · Magbenta · Mamuhunan",
+      "heading": "AFH Marketplace",
+      "description": "Isang dedikadong marketplace sa Washington para sa pagbili at pagbebenta ng Adult Family Homes — ari-arian, negosyo, o pareho.",
+      "browseListings": "Tingnan ang mga Listing",
+      "submitListing": "Magsumite ng Listing"
+    },
+    "browseByCity": "Tingnan ang mga Listing ayon sa Lungsod",
+    "exploreHeading": "Tuklasin ang AFH Club",
+    "exploreLabel": "Tuklasin",
+    "whatIsAfh": {
+      "eyebrow": "Background",
+      "heading": "Ano ang Adult Family Home?",
+      "paragraph1": "Ang Adult Family Home (AFH) ay isang pribadong tirahan na lisensyado ng Washington State Department of Social and Health Services (DSHS) upang magbigay ng personal na pangangalaga, silid, at pagkain para sa dalawa hanggang anim na nasa hustong gulang na hindi kamag-anak ng service provider, bagama't ang mga kwalipikadong tahanan ay maaaring aprubahan ng DSHS para sa hanggang walong residente.",
+      "paragraph2": "Ang mga AFH ay pinapayagan sa lahat ng single-family residential zoning district sa buong Washington State at kinokontrol sa ilalim ng WAC 388-76 at RCW 70.128.",
+      "paragraph3": "Ang mga tagalisensya ng DSHS ay nagsasagawa ng mga hindi inaanunsyong inspeksyon sa regular na siklo. Dapat panatilihin ng mga provider ang tuluy-tuloy na pagsunod sa mga pamantayan sa lisensya, pagsasanay, gusali, at pangangalaga — kaya naman mahalaga ang organisado at maaasahang impormasyon."
+    },
+    "readyToBuySell": {
+      "heading": "Handa Nang Bumili o Magbenta ng AFH?",
+      "description": "Tingnan ang mga Adult Family Home na ibinebenta — ari-arian, negosyo, o pareho. Isang dedikadong marketplace ng pagbili/pagbebenta ng AFH sa Washington.",
+      "browseListings": "Tingnan ang mga listing",
+      "sellYourAfh": "Ibenta ang Inyong AFH"
+    }
   }
 }

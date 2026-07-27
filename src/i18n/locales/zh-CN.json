@@ -251,5 +251,62 @@
         "answer": "有——资本利得免税额、信托中的递增计税基础，以及其他税务因素都可能大幅影响最终结果。注册会计师或财务规划师应在上市前纳入讨论，Real Property Planning 可协助您的家庭与相关专业人士取得联系。"
       }
     }
+  },
+  "afhClubPage": {
+    "seo": {
+      "title": "AFH Club｜成人家庭护理之家资源网络｜Real Property Planning",
+      "description": "华盛顿州首屈一指的资源网络，服务成人家庭护理之家业主、有意成为业者者、买家，以及为他们提供服务的专业人士。"
+    },
+    "hero": {
+      "badgeAlt": "AFH Club——华盛顿州成人家庭护理之家资源网络",
+      "subtitle": "华盛顿州成人家庭护理之家资源网络",
+      "description": "为有意出售的成人家庭护理之家业主、买家，以及 AFH 管理服务精心策划的资源中心。"
+    },
+    "welcomeBanner": "欢迎来到 AFH Club",
+    "categories": {
+      "resources": {
+        "title": "AFH 资源",
+        "description": "执照、培训、建筑要求、费用、法规等相关信息。"
+      },
+      "listings": {
+        "title": "AFH 房源列表",
+        "description": "目前在华盛顿州各地出售的成人家庭护理之家。"
+      },
+      "management": {
+        "title": "管理公司",
+        "description": "为华盛顿州业主提供服务的专业 AFH 管理公司。"
+      },
+      "broker": {
+        "title": "AFH 不动产经纪人",
+        "description": "专精于成人家庭护理之家交易的华盛顿州持牌经纪人。"
+      },
+      "calculators": {
+        "title": "AFH 计算器",
+        "description": "为成人家庭护理之家买家、卖家及投资者提供的投报率计算器与估价工具。"
+      }
+    },
+    "marketplace": {
+      "eyebrow": "买入 · 卖出 · 投资",
+      "heading": "AFH 交易市场",
+      "description": "专属华盛顿州的成人家庭护理之家买卖交易市场——房产、业务，或两者皆可。",
+      "browseListings": "浏览房源",
+      "submitListing": "提交房源"
+    },
+    "browseByCity": "按城市浏览房源",
+    "exploreHeading": "探索 AFH Club",
+    "exploreLabel": "探索",
+    "whatIsAfh": {
+      "eyebrow": "背景介绍",
+      "heading": "什么是成人家庭护理之家？",
+      "paragraph1": "成人家庭护理之家（AFH）是一种经华盛顿州社会与健康服务部（DSHS）许可的私人住宅，可为二至六名与服务提供者无亲属关系的成人提供个人护理、住宿及膳食，符合条件的机构经 DSHS 核准后最多可安置八名住民。",
+      "paragraph2": "成人家庭护理之家在华盛顿州所有单一家庭住宅分区内皆获准设立，并受《华盛顿行政法规》第 388-76 章及《华盛顿修订法典》第 70.128 章规范。",
+      "paragraph3": "DSHS 核发执照单位会定期进行不预先通知的检查。业者必须持续符合执照、培训、建筑及护理标准的要求——这正是为何有条理、可靠的信息如此重要。"
+    },
+    "readyToBuySell": {
+      "heading": "准备好买卖 AFH 了吗？",
+      "description": "浏览出售中的成人家庭护理之家——房产、业务，或两者皆可。专属华盛顿州的 AFH 买卖交易市场。",
+      "browseListings": "浏览房源",
+      "sellYourAfh": "出售您的 AFH"
+    }
   }
 }

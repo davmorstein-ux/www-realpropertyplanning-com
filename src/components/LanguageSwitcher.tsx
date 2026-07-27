@@ -12,6 +12,7 @@ const TRANSLATED_PAGES: Record<string, true> = {
   "/": true,
   "/probate-estate-sales": true,
   "/senior-transitions": true,
+  "/afh-club": true,
 };
 
 const LANGUAGE_PATH_PREFIXES = SUPPORTED_LANGUAGES.filter((l) => l.pathPrefix).map((l) => l.pathPrefix);

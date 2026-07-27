@@ -251,5 +251,62 @@
         "answer": "Yes — capital gains exclusions, stepped-up basis in a trust, and other tax factors can significantly affect the outcome. A CPA or financial planner should be part of the conversation before listing, and Real Property Planning can help connect your family with one."
       }
     }
+  },
+  "afhClubPage": {
+    "seo": {
+      "title": "AFH Club | Adult Family Home Resource Network | Real Property Planning",
+      "description": "Washington State's premier resource network for Adult Family Home owners, prospective providers, buyers, and the professionals who serve them."
+    },
+    "hero": {
+      "badgeAlt": "AFH Club — Washington State Adult Family Home Resource Network",
+      "subtitle": "Washington State Adult Family Home Resource Network",
+      "description": "A curated hub of resources for Adult Family Home owners looking to sell, buyers, and AFH management services."
+    },
+    "welcomeBanner": "Welcome to the AFH Club",
+    "categories": {
+      "resources": {
+        "title": "AFH Resources",
+        "description": "Licensing, training, building requirements, costs, regulations, and more."
+      },
+      "listings": {
+        "title": "AFH Listings",
+        "description": "Adult Family Homes currently available for sale throughout Washington State."
+      },
+      "management": {
+        "title": "Management Companies",
+        "description": "Professional AFH management companies serving Washington State owners."
+      },
+      "broker": {
+        "title": "AFH Real Estate Broker",
+        "description": "A licensed Washington State broker specializing in Adult Family Home transactions."
+      },
+      "calculators": {
+        "title": "AFH Calculators",
+        "description": "ROI calculator and valuation estimator for Adult Family Home buyers, sellers, and investors."
+      }
+    },
+    "marketplace": {
+      "eyebrow": "Buy · Sell · Invest",
+      "heading": "AFH Marketplace",
+      "description": "A dedicated Washington marketplace for buying and selling Adult Family Homes — property, business, or both.",
+      "browseListings": "Browse Listings",
+      "submitListing": "Submit a Listing"
+    },
+    "browseByCity": "Browse Listings by City",
+    "exploreHeading": "Explore AFH Club",
+    "exploreLabel": "Explore",
+    "whatIsAfh": {
+      "eyebrow": "Background",
+      "heading": "What Is an Adult Family Home?",
+      "paragraph1": "An Adult Family Home (AFH) is a private residence licensed by the Washington State Department of Social and Health Services (DSHS) to provide personal care, room, and board for two to six adults who are unrelated to the service provider, although qualified homes may be approved by DSHS for up to eight residents.",
+      "paragraph2": "AFHs are permitted in all single-family residential zoning districts throughout Washington State and are regulated under WAC 388-76 and RCW 70.128.",
+      "paragraph3": "DSHS licensors conduct unannounced inspections on a regular cycle. Providers must maintain continuous compliance with licensing, training, building, and care standards — which is precisely why organized, reliable information matters."
+    },
+    "readyToBuySell": {
+      "heading": "Ready to Buy or Sell an AFH?",
+      "description": "Browse Adult Family Homes for sale — property, business, or both. A dedicated Washington AFH buy/sell marketplace.",
+      "browseListings": "Browse listings",
+      "sellYourAfh": "Sell Your AFH"
+    }
   }
 }
