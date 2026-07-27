@@ -118,42 +118,74 @@ const RPPHomeV3 = () => {
               </span>
             </h1>
 
-            <a
-              href="#rpp-start-here"
+            <div
               style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                gap: "clamp(10px, 1.4vw, 16px)",
                 marginTop: "clamp(14px, 2.2vw, 26px)",
-                background: "#ffffff",
-                border: "2px solid #7f1d1d",
-                color: "#7f1d1d",
-                fontFamily: "'Raleway', sans-serif",
-                fontWeight: 700,
-                fontSize: "clamp(15px, 1.6vw, 18px)",
-                padding: "clamp(10px, 1.4vw, 14px) clamp(20px, 2.6vw, 30px)",
-                borderRadius: 8,
-                textDecoration: "none",
-                boxShadow: "0 4px 14px rgba(0,0,0,0.18)",
               }}
             >
-              Find the Right Starting Point
-              <svg
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="#7f1d1d"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-                style={{ flexShrink: 0 }}
+              <a
+                href="#rpp-start-here"
+                className="marquee-hover"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  background: "#ffffff",
+                  border: "2px solid #7f1d1d",
+                  color: "#7f1d1d",
+                  fontFamily: "'Raleway', sans-serif",
+                  fontWeight: 700,
+                  fontSize: "clamp(15px, 1.6vw, 18px)",
+                  padding: "clamp(10px, 1.4vw, 14px) clamp(20px, 2.6vw, 30px)",
+                  borderRadius: 8,
+                  textDecoration: "none",
+                  boxShadow: "0 4px 14px rgba(0,0,0,0.18)",
+                }}
               >
-                <polyline points="19 12 12 19 5 12" />
-                <line x1="12" y1="5" x2="12" y2="19" />
-              </svg>
-            </a>
+                Find the Right Starting Point
+                <svg
+                  className="rpp-cta-arrow"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="#7f1d1d"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                  style={{ flexShrink: 0 }}
+                >
+                  <polyline points="19 12 12 19 5 12" />
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                </svg>
+              </a>
+              <a
+                href="/contact"
+                className="marquee-hover"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  background: "#7f1d1d",
+                  border: "2px solid #7f1d1d",
+                  color: "#ffffff",
+                  fontFamily: "'Raleway', sans-serif",
+                  fontWeight: 700,
+                  fontSize: "clamp(15px, 1.6vw, 18px)",
+                  padding: "clamp(10px, 1.4vw, 14px) clamp(20px, 2.6vw, 30px)",
+                  borderRadius: 8,
+                  textDecoration: "none",
+                  boxShadow: "0 4px 14px rgba(0,0,0,0.18)",
+                }}
+              >
+                Connect with a Specialist in Our Network
+              </a>
+            </div>
           </div>
         </div>
 
