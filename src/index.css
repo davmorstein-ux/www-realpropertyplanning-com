@@ -3522,7 +3522,7 @@ main #rpp-orientation div {
    removed entirely, replaced under a new class name, as an attempt
    to break a suspected stuck preview cache tied to the old selector). */
 .rpp-tagline-line-v2 {
-  font-size: clamp(20px, 2.8vw, 40px) !important;
+  font-size: clamp(100px, 14vw, 200px) !important;
   color: #0000ff !important;
   font-family: "Cormorant Garamond", Georgia, serif !important;
   font-style: italic !important;
