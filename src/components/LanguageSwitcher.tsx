@@ -74,16 +74,17 @@ const LanguageSwitcher = () => {
           padding: "6px 10px",
           fontFamily: "'Raleway', sans-serif",
           fontSize: 13,
-          fontWeight: 600,
+          fontWeight: 700,
+          letterSpacing: "0.06em",
           color: "#302b26",
           cursor: "pointer",
         }}
       >
         {(() => {
           const CurrentFlag = FLAG_COMPONENTS[currentLang];
-          return CurrentFlag ? <CurrentFlag size={18} /> : null;
+          return CurrentFlag ? <CurrentFlag size={16} /> : null;
         })()}
-        {SUPPORTED_LANGUAGES.find((l) => l.code === currentLang)?.nativeLabel}
+        LANGUAGE
       </button>
       {open && (
         <div
@@ -96,7 +97,7 @@ const LanguageSwitcher = () => {
             border: "1px solid #e7e0da",
             borderRadius: 8,
             boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
-            minWidth: 200,
+            minWidth: 260,
             zIndex: 200,
             padding: "6px 0",
           }}
@@ -131,22 +132,22 @@ const LanguageSwitcher = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  gap: 10,
+                  gap: 12,
                   width: "100%",
                   background: "transparent",
                   border: "none",
                   textAlign: "left",
-                  padding: "8px 14px",
+                  padding: "12px 16px",
                   fontFamily: "'Raleway', sans-serif",
-                  fontSize: 14,
+                  fontSize: 16,
                   fontWeight: selected ? 700 : 500,
                   color: disabled ? "#c2b9b1" : "#302b26",
                   cursor: disabled ? "not-allowed" : "pointer",
                   opacity: disabled ? 0.6 : 1,
                 }}
               >
-                <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  {Flag && <Flag size={20} />}
+                <span style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  {Flag && <Flag size={32} />}
                   <span>
                     {l.nativeLabel}
                     {l.nativeLabel !== l.label && (
@@ -154,7 +155,7 @@ const LanguageSwitcher = () => {
                     )}
                   </span>
                 </span>
-                {selected && <Check size={15} aria-hidden="true" />}
+                {selected && <Check size={17} aria-hidden="true" />}
               </button>
             );
           })}
