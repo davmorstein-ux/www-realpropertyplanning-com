@@ -710,6 +710,23 @@ main,
   }
 }
 
+/* Arrow nudge on hover — pairs with .marquee-hover on CTA buttons that
+   include an .rpp-cta-arrow icon (e.g. the homepage hero CTA). */
+.rpp-cta-arrow {
+  transition: transform 0.2s ease;
+}
+.marquee-hover:hover .rpp-cta-arrow {
+  transform: translateY(3px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .rpp-cta-arrow {
+    transition: none !important;
+  }
+  .marquee-hover:hover .rpp-cta-arrow {
+    transform: none !important;
+  }
+}
+
 /* ═══════════════════════════════════════════════
    UNIFIED CTA LINK — homepage tile sections
    Modern minimal text-link treatment: no filled box,
