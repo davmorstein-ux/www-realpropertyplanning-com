@@ -3524,7 +3524,7 @@ main #rpp-orientation div {
    The extra `main` and `#rpp-tagline` selectors raise specificity above
    the global `main [style*="letter-spacing"]` minimum-font-size rule. */
 main #rpp-tagline .rpp-tagline-line-v2 {
-  font-size: clamp(100px, 14vw, 200px) !important;
+  font-size: clamp(50px, 7vw, 100px) !important;
   color: #0000ff !important;
   font-family: "Cormorant Garamond", Georgia, serif !important;
   font-style: italic !important;
