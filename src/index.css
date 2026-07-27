@@ -670,10 +670,10 @@ main,
   z-index: 30;
   transition: opacity 0.2s ease;
   background-image:
-    repeating-linear-gradient(90deg, #7f1d1d 0 10px, transparent 10px 20px),
-    repeating-linear-gradient(180deg, #7f1d1d 0 10px, transparent 10px 20px),
-    repeating-linear-gradient(90deg, #7f1d1d 0 10px, transparent 10px 20px),
-    repeating-linear-gradient(180deg, #7f1d1d 0 10px, transparent 10px 20px);
+    repeating-linear-gradient(90deg, var(--marquee-color, #7f1d1d) 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(180deg, var(--marquee-color, #7f1d1d) 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(90deg, var(--marquee-color, #7f1d1d) 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(180deg, var(--marquee-color, #7f1d1d) 0 10px, transparent 10px 20px);
   background-position:
     0 0,
     0 0,
