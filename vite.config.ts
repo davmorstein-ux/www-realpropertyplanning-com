@@ -768,6 +768,13 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerQ: "What does the WABO Adult Family Home building inspection checklist cover?",
     quickAnswerA: "The checklist addresses resident bedroom exits and classifications, emergency escape windows, smoke and carbon monoxide alarms, doors and hardware, ramps and landings, stairs and handrails, bathroom grab bars, shower dimensions, and fire access and water supply. A passed checklist confirms the building meets AFH code requirements, but it is not the same as a DSHS license — DSHS separately decides whether the provider and home qualify for licensing.",
   },
+  "/afh-club/violation-history-lookup": {
+    title: "How to Look Up AFH Violations & Inspection Reports | AFH Club | Real Property Planning",
+    description: "A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State — how to search, read reports, spot red flags, and know what the records actually mean.",
+    h1: "How to Look Up Washington Adult Family Home Violations and Inspection Reports",
+    quickAnswerQ: "How do I look up violation and inspection history for a Washington Adult Family Home?",
+    quickAnswerA: "Go to the DSHS Adult Family Home Locator, search for the home, open the listing, and click 'View letters' under 'Reports and Inspection Letters.' There you'll find inspection letters, statements of deficiency, complaint investigations, correction plans, and enforcement actions. If it says 'This facility has none,' that only means no documents are currently displayed, not that the home has a perfect history.",
+  },
   "/afh-club/buying-selling": {
     title: "Buying or Selling an AFH | AFH Club | Real Property Planning",
     description: "Complete guide to buying or selling an Adult Family Home in Washington State — CHOW process, what transfers, DSHS locator, specialty contracts, and real estate considerations.",

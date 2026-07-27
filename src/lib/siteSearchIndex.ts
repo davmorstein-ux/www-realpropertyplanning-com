@@ -11,6 +11,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/afh-club/building-inspection", label: "AFH Building Inspection" },
   { path: "/afh-club/wabo-inspection-guide", label: "What Is WABO?" },
   { path: "/afh-club/wabo-technical-guide", label: "WABO Checklist & Technical Requirements" },
+  { path: "/afh-club/violation-history-lookup", label: "How to Check DSHS Violation History" },
   { path: "/afh-club/buying-selling", label: "AFH Buying Selling" },
   { path: "/afh-club/calculators", label: "AFH Calculators" },
   { path: "/afh-club", label: "AFH Club" },

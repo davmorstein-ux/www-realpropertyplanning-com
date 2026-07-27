@@ -11,11 +11,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   },
   {
     "path": "/",
-    "links": [
-      "/afh-club",
-      "/cost-of-care-calculator",
-      "/featured-professionals"
-    ]
+    "links": []
   },
   {
     "path": "/about",
@@ -165,6 +161,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   },
   {
     "path": "/afh-club/training-education",
+    "links": []
+  },
+  {
+    "path": "/afh-club/violation-history-lookup",
     "links": []
   },
   {
@@ -470,6 +470,14 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     "links": [
       "/contact"
     ]
+  },
+  {
+    "path": "/es",
+    "links": []
+  },
+  {
+    "path": "/es/probate-estate-sales",
+    "links": []
   },
   {
     "path": "/estate-liquidation",
@@ -1065,9 +1073,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   },
   {
     "path": "/probate-estate-sales",
-    "links": [
-      "/how-the-process-works"
-    ]
+    "links": []
   },
   {
     "path": "/professionals",
@@ -1331,6 +1337,14 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     ]
   },
   {
+    "path": "/tl",
+    "links": []
+  },
+  {
+    "path": "/tl/probate-estate-sales",
+    "links": []
+  },
+  {
     "path": "/trustees",
     "links": [
       "/contact",
@@ -1352,6 +1366,14 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     "links": [
       "/contact"
     ]
+  },
+  {
+    "path": "/vi",
+    "links": []
+  },
+  {
+    "path": "/vi/probate-estate-sales",
+    "links": []
   },
   {
     "path": "/wahkiakum-county",
@@ -1383,6 +1405,22 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   },
   {
     "path": "/yakima-county",
+    "links": []
+  },
+  {
+    "path": "/zh-cn",
+    "links": []
+  },
+  {
+    "path": "/zh-cn/probate-estate-sales",
+    "links": []
+  },
+  {
+    "path": "/zh-tw",
+    "links": []
+  },
+  {
+    "path": "/zh-tw/probate-estate-sales",
     "links": []
   }
 ];

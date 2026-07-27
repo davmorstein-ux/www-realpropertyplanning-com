@@ -48,6 +48,12 @@ const TOPICS = [
     description: "The technical deep-dive: what the WABO checklist covers, common delays, and why passing does not mean licensed.",
   },
   {
+    title: "How to Check DSHS Violation History",
+    href: "/afh-club/violation-history-lookup",
+    img: "/afh-violation-history-cover.webp",
+    description: "How to use the DSHS Adult Family Home Locator to check inspection reports, deficiencies, and enforcement history.",
+  },
+  {
     title: "Costs & Fees",
     href: "/afh-club/costs-fees",
     img: "/afh-costs-fees.webp",
@@ -157,6 +163,12 @@ const AFHResources = () => (
             href: "/afh-club/wabo-technical-guide",
             img: "/wabo-technical-cover.webp",
             placeholder: "#39342f",
+          },
+          {
+            title: "How to Check DSHS Violation History",
+            href: "/afh-club/violation-history-lookup",
+            img: "/afh-violation-history-cover.webp",
+            placeholder: "#352f2a",
           },
           {
             title: "Costs & Fees",
