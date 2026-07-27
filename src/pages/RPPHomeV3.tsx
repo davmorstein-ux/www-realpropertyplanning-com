@@ -83,7 +83,7 @@ const RPPHomeV3 = () => {
                 style={{
                   display: "block",
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "clamp(20px, 2.8vw, 40px)",
+                  fontSize: "clamp(100px, 14vw, 200px)",
                   fontWeight: 600,
                   fontStyle: "italic",
                   color: "#0000FF",
