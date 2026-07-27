@@ -3484,30 +3484,20 @@ main #rpp-orientation p,
 main #rpp-orientation div {
   margin-bottom: 0 !important;
 }
-#rpp-tagline {
-  font-size: clamp(26px, 3.5vw, 42px) !important;
+/* Tagline — the actual visible text lives in child spans, which this
+   rule controls. The h1 itself has no direct text content, so styling
+   it directly (as earlier versions of this rule did) has no visible
+   effect — consolidated to just the rule that matters. */
+#rpp-tagline span {
+  font-size: clamp(20px, 2.8vw, 40px) !important;
   color: #0000ff !important;
-}
-
-/* Tagline + funnel heading — final overrides, must stay at bottom */
-#rpp-tagline {
-  font-size: clamp(32px, 4.5vw, 52px) !important;
   font-family: "Cormorant Garamond", Georgia, serif !important;
   font-style: italic !important;
   font-weight: 600 !important;
-  color: #0000ff !important;
-  line-height: 1.4 !important;
 }
 
 .rpp-funnel-heading {
   color: #272421 !important;
-}
-#rpp-tagline span {
-  font-size: clamp(22px, 3vw, 42px) !important;
-  color: #0000ff !important;
-  font-family: "Cormorant Garamond", Georgia, serif !important;
-  font-style: italic !important;
-  font-weight: 600 !important;
 }
 a[href="/afh-club"] h3.afh-club-heading {
   font-size: 90px !important;
