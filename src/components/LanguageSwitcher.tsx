@@ -9,6 +9,7 @@ import { SUPPORTED_LANGUAGES, type SupportedLanguageCode } from "@/i18n/config";
 // translated content, falling back to English for everything else.
 const TRANSLATED_PAGES: Record<string, true> = {
   "/": true,
+  "/probate-estate-sales": true,
 };
 
 const LANGUAGE_PATH_PREFIXES = SUPPORTED_LANGUAGES.filter((l) => l.pathPrefix).map((l) => l.pathPrefix);

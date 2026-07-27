@@ -45,5 +45,109 @@
     "description": "Mạng lưới nguồn lực tối ưu để mua, bán, quản lý và tìm hiểu về Adult Family Home.",
     "cta": "Khám Phá AFH Club →"
   },
-  "descriptor": "Kết nối các gia đình Washington với hướng dẫn đáng tin cậy về nhà ở cho người cao niên, bất động sản thừa kế, và các chuyên gia hỗ trợ trên hành trình này"
+  "descriptor": "Kết nối các gia đình Washington với hướng dẫn đáng tin cậy về nhà ở cho người cao niên, bất động sản thừa kế, và các chuyên gia hỗ trợ trên hành trình này",
+  "probateEstateSales": {
+    "seo": {
+      "title": "Môi Giới Bất Động Sản Thừa Kế tại Tiểu Bang Washington | Real Property Planning",
+      "description": "Real Property Planning — Môi Giới Bất Động Sản Được Cấp Phép và Chuyên Viên Thẩm Định Được Chứng Nhận của Tiểu Bang Washington, chuyên về bán bất động sản thừa kế tại các Quận King, Snohomish, Pierce và Kitsap.",
+      "jsonLdHeadline": "Bán Bất Động Sản Thừa Kế tại Tiểu Bang Washington",
+      "jsonLdDescription": "Hướng dẫn dựa trên bằng chứng về bất động sản thừa kế dành cho người thi hành di chúc, luật sư và các gia đình trên khắp Tiểu Bang Washington. Phục vụ các Quận King, Snohomish, Pierce và Kitsap."
+    },
+    "heroImageAlt": "Cảnh bán tài sản thừa kế với một gia đình đang xem xét đồ đạc bên ngoài một ngôi nhà ở Washington",
+    "heroTitle": "BÁN TÀI SẢN THỪA KẾ VÀ DI SẢN",
+    "directAnswer": {
+      "question": "Việc bán nhà thông qua thủ tục thừa kế (probate) tại Tiểu Bang Washington diễn ra như thế nào?",
+      "answer": "Tại Washington, một tài sản di sản thường không thể được bán cho đến khi tòa án cấp cho người thi hành di chúc thẩm quyền pháp lý chính thức — thường thông qua Letters Testamentary (Giấy Chứng Nhận Thi Hành Di Chúc). Khi có thẩm quyền đó, quy trình sẽ theo các bước bất động sản quen thuộc — đánh giá, chuẩn bị, niêm yết, đàm phán và hoàn tất giao dịch — nhưng với các yêu cầu bổ sung: một bản thẩm định có thể bảo vệ được, sự phối hợp giữa nhiều người ra quyết định, và mức giá phản ánh đúng tình trạng thực tế của tài sản thay vì ước tính tự động. Real Property Planning được lãnh đạo bởi một chuyên gia có cả hai giấy phép môi giới bất động sản và thẩm định viên được chứng nhận, hướng dẫn các gia đình và người thi hành di chúc qua từng giai đoạn.",
+      "step1Label": "Trước Khi Có Thẩm Quyền",
+      "step1Desc": "Tài sản được đánh giá và một kế hoạch được xây dựng trong khi chờ thẩm quyền pháp lý.",
+      "step2Label": "Trong Quá Trình Thừa Kế",
+      "step2Desc": "Việc chuẩn bị, định giá và niêm yết được tiến hành song song với quy trình tòa án.",
+      "step3Label": "Sau Khi Hoàn Tất Thừa Kế",
+      "step3Desc": "Tài sản được đưa ra thị trường với mỗi quyết định sửa chữa được đánh giá về khả năng sinh lời.",
+      "ctaLabel": "Yêu Cầu Đánh Giá Tài Sản"
+    },
+    "comparison": {
+      "heading1": "Tài Sản Thừa Kế (Probate) so với Tài Sản Được Thừa Hưởng:",
+      "heading2": "Sự Khác Biệt Là Gì?",
+      "learnMore": "Tìm Hiểu Thêm",
+      "probate": {
+        "alt": "Bất động sản thừa kế (probate) tại Tiểu Bang Washington",
+        "title": "Tài Sản Thừa Kế (Probate)",
+        "description": "Do tòa án giám sát. Cần có thẩm quyền pháp lý trước khi việc bán có thể tiến hành."
+      },
+      "inherited": {
+        "alt": "Tài sản được thừa hưởng không qua thủ tục thừa kế tại Tiểu Bang Washington",
+        "title": "Tài Sản Được Thừa Hưởng (Không Qua Probate)",
+        "description": "Được chuyển giao ngoài thủ tục thừa kế thông qua ủy thác (trust) hoặc đồng sở hữu. Ít trở ngại pháp lý hơn, nhưng vẫn phức tạp."
+      }
+    },
+    "whatMakesDifferent": {
+      "heading": "Điều Gì Khiến Việc Bán Tài Sản Di Sản Khác Biệt",
+      "intro": "Việc bán tài sản di sản thực sự khác với các giao dịch bất động sản thông thường — và việc xem chúng như những giao dịch niêm yết bình thường là nơi các gia đình và người thi hành di chúc thường gặp rắc rối nhất.",
+      "legalAuthority": {
+        "alt": "Thẩm quyền pháp lý trong việc bán tài sản thừa kế",
+        "title": "Thẩm Quyền Pháp Lý",
+        "description": "Các yêu cầu của tòa án có thể quyết định khi nào và bằng cách nào việc bán có thể diễn ra."
+      },
+      "decisionMakers": {
+        "alt": "Nhiều người ra quyết định trong việc bán di sản",
+        "title": "Những Người Ra Quyết Định",
+        "description": "Nhiều bên phải đồng thuận về mọi quyết định."
+      },
+      "propertyCondition": {
+        "alt": "Đánh giá tình trạng tài sản di sản",
+        "title": "Tình Trạng Tài Sản",
+        "description": "Việc bảo trì bị trì hoãn, đồ đạc còn lại và tình trạng bỏ trống là phổ biến."
+      },
+      "honestPricing": {
+        "alt": "Định giá trung thực cho tài sản di sản",
+        "title": "Định Giá Trung Thực",
+        "description": "Giá trị phải phản ánh tình trạng thực tế — không phải ước tính tự động."
+      },
+      "emotionalComplexity": {
+        "alt": "Sự phức tạp về mặt cảm xúc trong các quyết định di sản gia đình",
+        "title": "Sự Phức Tạp Về Cảm Xúc",
+        "description": "Động lực gia đình có thể làm chậm việc giao tiếp và ra quyết định."
+      },
+      "preparationStrategy": {
+        "alt": "Chiến lược chuẩn bị cho việc bán tài sản di sản",
+        "title": "Chiến Lược Chuẩn Bị",
+        "description": "Việc bán nguyên trạng so với sửa chữa có tác động trực tiếp đến khả năng bảo vệ trách nhiệm ủy thác."
+      }
+    },
+    "timeline": {
+      "heading": "Thời Gian và Sự Phối Hợp Trong Việc Bán Tài Sản Thừa Kế",
+      "step1Title": "Trước Khi Thẩm Quyền Pháp Lý Được Cấp",
+      "step1Desc": "Một tài sản có thể được đánh giá và một kế hoạch được xây dựng trước khi thẩm quyền pháp lý được cấp chính thức — để các gia đình và người thi hành di chúc sẵn sàng khi thời điểm đến.",
+      "step2Title": "Trong Quá Trình Thừa Kế Đang Diễn Ra",
+      "step2Desc": "Khi thẩm quyền đã được thiết lập, việc chuẩn bị, định giá và niêm yết có thể tiến hành song song với thủ tục pháp lý — phối hợp với luật sư của di sản và các chuyên gia khác.",
+      "step3Title": "Sau Khi Hoàn Tất Thừa Kế hoặc Phân Chia Ủy Thác",
+      "step3Desc": "Sau khi thủ tục thừa kế kết thúc hoặc việc phân chia ủy thác được lên kế hoạch, tài sản có thể tiến tới giai đoạn chuẩn bị, tiếp thị và bán — với mỗi quyết định sửa chữa được đánh giá về lợi tức đầu tư.",
+      "seeFullProcess": "Xem toàn bộ quy trình hoạt động như thế nào →"
+    },
+    "faq": {
+      "eyebrow": "Câu Trả Lời Nhanh",
+      "heading": "Câu Hỏi Về Thừa Kế và Bán Tài Sản Di Sản",
+      "q1": {
+        "question": "Sự khác biệt giữa tài sản thừa kế (probate) và tài sản được thừa hưởng tại Washington là gì?",
+        "answer": "Tài sản thừa kế được tòa án giám sát — di sản phải trải qua thủ tục thừa kế của Washington, và cần có thẩm quyền pháp lý (Letters Testamentary) trước khi việc bán có thể tiến hành. Tài sản được thừa hưởng chuyển giao ngoài thủ tục thừa kế, chẳng hạn thông qua ủy thác còn hiệu lực (living trust) hoặc đồng sở hữu có quyền thừa kế khi một bên qua đời, thường có ít trở ngại pháp lý hơn nhưng vẫn có thể liên quan đến sự phức tạp đáng kể về định giá, thỏa thuận gia đình và cơ sở tính thuế."
+      },
+      "q2": {
+        "question": "Một ngôi nhà có thể được bán trước khi thủ tục thừa kế hoàn tất tại Tiểu Bang Washington không?",
+        "answer": "Thường thì có. Quyền không can thiệp (non-intervention powers) của Washington cho phép nhiều người thi hành di chúc bán bất động sản di sản sau khi Letters Testamentary được cấp, mà không cần sự phê duyệt riêng của tòa án cho chính việc bán. Tài sản thậm chí có thể được đánh giá và một kế hoạch bán được chuẩn bị trước khi thẩm quyền đó được cấp chính thức, để di sản sẵn sàng hành động ngay khi thủ tục tòa án hoàn tất."
+      },
+      "q3": {
+        "question": "Ai quyết định cách định giá một tài sản di sản?",
+        "answer": "Việc định giá một tài sản di sản một cách có trách nhiệm bắt đầu bằng một thẩm định độc lập, có thể bảo vệ được — không phải một ước tính tự động trực tuyến. Vì những tài sản này thường phản ánh việc bảo trì bị trì hoãn hoặc tình trạng tích lũy qua nhiều năm, một đánh giá chính xác về tình trạng hiện tại sẽ bảo vệ người thi hành di chúc khỏi những tranh chấp sau này với những người thụ hưởng và hỗ trợ một giao dịch bán hợp lý về mặt ủy thác."
+      },
+      "q4": {
+        "question": "Tại sao việc bán di sản và tài sản thừa kế thường mất nhiều thời gian hơn so với việc bán nhà thông thường?",
+        "answer": "Nhiều người ra quyết định phải đồng thuận, các mốc thời gian của tòa án có thể ảnh hưởng đến thời điểm việc bán có thể hoàn tất, và tình trạng tài sản thường đòi hỏi nhiều sự chuẩn bị hơn — sửa chữa, dọn dẹp hoặc phối hợp với nhà cung cấp — trước khi niêm yết. Mỗi yếu tố này đều làm tăng thêm thời gian so với việc bán lại tiêu chuẩn, nhưng một kế hoạch rõ ràng và sự hướng dẫn giàu kinh nghiệm sẽ giúp quy trình diễn ra hiệu quả nhất có thể trong phạm vi luật pháp Washington cho phép."
+      },
+      "q5": {
+        "question": "Một môi giới cần có những trình độ chuyên môn gì để xử lý việc bán tài sản thừa kế hoặc di sản?",
+        "answer": "Hãy tìm một môi giới có kinh nghiệm thực tế, cụ thể trong các giao dịch thừa kế và di sản — người hiểu rõ các yêu cầu của tòa án, hồ sơ ủy thác và cách định giá dựa trên tình trạng tài sản. Real Property Planning được lãnh đạo bởi một môi giới bất động sản được cấp phép tại Tiểu Bang Washington, đồng thời cũng là một chuyên viên thẩm định nhà ở được chứng nhận, kết hợp cả hai chứng chỉ chuyên môn trong một đầu mối liên hệ duy nhất."
+      }
+    }
+  }
 }

@@ -269,7 +269,12 @@ const App = () => (
           <Route path="/hero-test" element={<HeroTest />} />
 
           {/* ─── Core commercial pages ────────────────────────────── */}
-          <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
+          <Route path="/probate-estate-sales" element={<LanguageRoute lang="en"><ProbateEstateSales /></LanguageRoute>} />
+          <Route path="/es/probate-estate-sales" element={<LanguageRoute lang="es"><ProbateEstateSales /></LanguageRoute>} />
+          <Route path="/zh-tw/probate-estate-sales" element={<LanguageRoute lang="zh-TW"><ProbateEstateSales /></LanguageRoute>} />
+          <Route path="/zh-cn/probate-estate-sales" element={<LanguageRoute lang="zh-CN"><ProbateEstateSales /></LanguageRoute>} />
+          <Route path="/tl/probate-estate-sales" element={<LanguageRoute lang="tl"><ProbateEstateSales /></LanguageRoute>} />
+          <Route path="/vi/probate-estate-sales" element={<LanguageRoute lang="vi"><ProbateEstateSales /></LanguageRoute>} />
           <Route path="/client-stories" element={<ClientStories />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
           <Route path="/helping-aging-parents" element={<Navigate to="/helping-an-aging-parent" replace />} />

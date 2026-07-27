@@ -6,78 +6,41 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import PageFAQ from "@/components/PageFAQ";
+import { useTranslation } from "react-i18next";
 
 import { Link } from "react-router-dom";
 
-// ── Data ──
+// ── Data ── (images, hrefs — text pulled via t() in the component)
 
-const whatMakesDifferentTiles = [
-  {
-    image: "/tiles/set2/the-probate-process.webp",
-    alt: "Legal authority in probate property sales",
-    title: "Legal Authority",
-    description: "Court requirements may dictate when and how a sale can occur.",
-    cta: "Learn More",
-    href: "/terminology",
-  },
-  {
-    image: "/tiles/set2/executors.webp",
-    alt: "Multiple decision-makers in estate sales",
-    title: "Decision Makers",
-    description: "Multiple parties must align on every decision.",
-    cta: "Learn More",
-    href: "/executors",
-  },
-  {
-    image: "/tiles/set2/probate-estate-sales.webp?v=20260602b",
-    alt: "Estate property condition assessment",
-    title: "Property Condition",
-    description: "Deferred maintenance, belongings, and vacancy are common.",
-    cta: "Learn More",
-    href: "/how-the-process-works",
-  },
-  {
-    image: "/tiles/set1/real-estate-appraisers.webp",
-    alt: "Honest pricing for estate property",
-    title: "Honest Pricing",
-    description: "Value must reflect actual condition — not automated estimates.",
-    cta: "Learn More",
-    href: "/why-valuation-matters",
-  },
-  {
-    image: "/tiles/set2/trustees.webp",
-    alt: "Emotional complexity in family estate decisions",
-    title: "Emotional Complexity",
-    description: "Family dynamics can slow communication and decisions.",
-    cta: "Learn More",
-    href: "/client-stories",
-  },
-  {
-    image: "/tiles/set3/home-values-pricing.webp",
-    alt: "Preparation strategy for estate property sales",
-    title: "Preparation Strategy",
-    description: "As-is vs. repairs has a direct impact on fiduciary defensibility.",
-    cta: "Learn More",
-    href: "/how-the-process-works",
-  },
-];
+const whatMakesDifferentMeta = [
+  { key: "legalAuthority", image: "/tiles/set2/the-probate-process.webp", href: "/terminology" },
+  { key: "decisionMakers", image: "/tiles/set2/executors.webp", href: "/executors" },
+  { key: "propertyCondition", image: "/tiles/set2/probate-estate-sales.webp?v=20260602b", href: "/how-the-process-works" },
+  { key: "honestPricing", image: "/tiles/set1/real-estate-appraisers.webp", href: "/why-valuation-matters" },
+  { key: "emotionalComplexity", image: "/tiles/set2/trustees.webp", href: "/client-stories" },
+  { key: "preparationStrategy", image: "/tiles/set3/home-values-pricing.webp", href: "/how-the-process-works" },
+] as const;
 
-const jsonLd = articleSchema({
-  headline: "Probate Real Estate Sales in Washington State",
-  description:
-    "Evidence-based probate real estate guidance for executors, attorneys, and families throughout Washington State. Serving King, Snohomish, Pierce & Kitsap Counties.",
-  url: "/probate-estate-sales",
-  datePublished: "2025-01-15",
-  dateModified: "2026-05-05",
-  about: ["Probate real estate", "Estate sales", "Inherited property", "Court-supervised sales", "Fiduciary duties"],
-});
+const comparisonMeta = [
+  { key: "probate", image: "/tiles/set2/probate-property-real.webp", href: "/terminology" },
+  { key: "inherited", image: "/tiles/set2/inherited-property-real.webp", href: "/guides/inherited-house-washington" },
+] as const;
 
 const ProbateEstateSales = () => {
+  const { t } = useTranslation();
+  const jsonLd = articleSchema({
+    headline: t("probateEstateSales.seo.jsonLdHeadline"),
+    description: t("probateEstateSales.seo.jsonLdDescription"),
+    url: "/probate-estate-sales",
+    datePublished: "2025-01-15",
+    dateModified: "2026-05-05",
+    about: ["Probate real estate", "Estate sales", "Inherited property", "Court-supervised sales", "Fiduciary duties"],
+  });
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate Broker & Agent in Washington State | Real Property Planning"
-        description="Real Property Planning — Washington State Licensed Real Estate Broker & Certified Appraiser specializing in probate real estate sales in King, Snohomish, Pierce & Kitsap Counties. Real Property Planning."
+        title={t("probateEstateSales.seo.title")}
+        description={t("probateEstateSales.seo.description")}
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
@@ -88,7 +51,7 @@ const ProbateEstateSales = () => {
           <div className="relative w-full" style={{ display: "block", lineHeight: 0 }}>
             <img
               src="/assets/estate_probate_sales_hero_clean.webp"
-              alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home"
+              alt={t("probateEstateSales.heroImageAlt")}
               className="w-full object-cover"
               style={{ height: "clamp(220px, 32vw, 380px)" }}
               loading="eager"
@@ -98,24 +61,27 @@ const ProbateEstateSales = () => {
               height={814}
             />
           </div>
-          <HeroBandTitle as="h1">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
+          <HeroBandTitle as="h1">{t("probateEstateSales.heroTitle")}</HeroBandTitle>
         </section>
 
         <DirectAnswerBlock
-          question="How does selling a house through probate work in Washington State?"
-          answer="In Washington, an estate property typically cannot be sold until the court grants the executor formal legal authority — usually through Letters Testamentary. Once that authority is in place, the process follows familiar real estate steps — evaluation, preparation, listing, negotiation, and closing — but with added requirements: a defensible appraisal, coordination among multiple decision-makers, and pricing that reflects the property's true condition rather than an automated estimate. Real Property Planning is led by a dual-licensed real estate broker and certified appraiser, guiding families and executors through each stage."
+          question={t("probateEstateSales.directAnswer.question")}
+          answer={t("probateEstateSales.directAnswer.answer")}
           supportSteps={[
             {
-              label: "Before Authority",
-              desc: "Property is assessed and a plan is developed while legal authority is pending.",
+              label: t("probateEstateSales.directAnswer.step1Label"),
+              desc: t("probateEstateSales.directAnswer.step1Desc"),
             },
-            { label: "During Probate", desc: "Preparation, pricing, and listing proceed alongside the court process." },
             {
-              label: "After Probate",
-              desc: "The property moves to market with every repair decision evaluated for return.",
+              label: t("probateEstateSales.directAnswer.step2Label"),
+              desc: t("probateEstateSales.directAnswer.step2Desc"),
+            },
+            {
+              label: t("probateEstateSales.directAnswer.step3Label"),
+              desc: t("probateEstateSales.directAnswer.step3Desc"),
             },
           ]}
-          ctaLabel="Request a Property Assessment"
+          ctaLabel={t("probateEstateSales.directAnswer.ctaLabel")}
           ctaHref="/contact"
         />
 
@@ -124,8 +90,10 @@ const ProbateEstateSales = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4 font-sans text-center">
-                Probate Property vs. Inherited Property:
-                <br /> What's the Difference?
+                {t("probateEstateSales.comparison.heading1")}
+                <br />
+                {" "}
+                {t("probateEstateSales.comparison.heading2")}
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">​</p>
               <div
@@ -139,29 +107,16 @@ const ProbateEstateSales = () => {
                   alignItems: "stretch",
                 }}
               >
-                {[
-                  {
-                    image: "/tiles/set2/probate-property-real.webp",
-                    alt: "Probate property real estate Washington State",
-                    title: "Probate Property",
-                    description: "Court-supervised. Legal authority required before the sale can proceed.",
-                    cta: "Learn More",
-                    href: "/terminology",
-                  },
-                  {
-                    image: "/tiles/set2/inherited-property-real.webp",
-                    alt: "Inherited property non-probate Washington State",
-                    title: "Inherited Property (Non-Probate)",
-                    description:
-                      "Passes outside probate via trust or joint tenancy. Fewer legal hurdles, but still complex.",
-                    cta: "Learn More",
-                    href: "/guides/inherited-house-washington",
-                  },
-                ].map((s) => (
+                {comparisonMeta.map((s) => {
+                  const title = t(`probateEstateSales.comparison.${s.key}.title`);
+                  const description = t(`probateEstateSales.comparison.${s.key}.description`);
+                  const alt = t(`probateEstateSales.comparison.${s.key}.alt`);
+                  const cta = t("probateEstateSales.comparison.learnMore");
+                  return (
                   <Link
                     key={s.href}
                     to={s.href}
-                    aria-label={`${s.title} — ${s.description} — ${s.cta}`}
+                    aria-label={`${title} — ${description} — ${cta}`}
                     className="interior-tile tile-white probate-wide-tile group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                     style={{ width: "380px" }}
                   >
@@ -174,7 +129,7 @@ const ProbateEstateSales = () => {
                           >
                             <img
                               src={s.image}
-                              alt={s.alt}
+                              alt={alt}
                               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                               loading="lazy"
                               sizes="100vw"
@@ -186,16 +141,16 @@ const ProbateEstateSales = () => {
                               className="font-serif text-[19px] md:text-[22px] font-semibold text-navy mb-2 flex items-start justify-center"
                               style={{ lineHeight: 1.3 }}
                             >
-                              {s.title}
+                              {title}
                             </h3>
                             <p
                               className="text-foreground text-[15px] md:text-[16px] mb-3 flex items-start justify-center"
                               style={{ lineHeight: 1.5 }}
                             >
-                              {s.description}
+                              {description}
                             </p>
                             <span className="gold-cta mt-auto">
-                              {s.cta}
+                              {cta}
                               <svg
                                 viewBox="0 0 24 24"
                                 width="14"
@@ -215,7 +170,8 @@ const ProbateEstateSales = () => {
                       </div>
                     </div>
                   </Link>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -226,11 +182,10 @@ const ProbateEstateSales = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4 text-center font-sans">
-                What Makes Estate Property Sales Different
+                {t("probateEstateSales.whatMakesDifferent.heading")}
               </h2>
               <p className="text-muted-foreground text-[17px] leading-[1.85] mb-10">
-                Estate property sales are genuinely different from standard real estate transactions — and treating them
-                like ordinary listings is where families and executors most often run into trouble.
+                {t("probateEstateSales.whatMakesDifferent.intro")}
               </p>
               <div
                 style={{
@@ -243,11 +198,15 @@ const ProbateEstateSales = () => {
                   alignItems: "stretch",
                 }}
               >
-                {whatMakesDifferentTiles.map((s) => (
+                {whatMakesDifferentMeta.map((s) => {
+                  const title = t(`probateEstateSales.whatMakesDifferent.${s.key}.title`);
+                  const description = t(`probateEstateSales.whatMakesDifferent.${s.key}.description`);
+                  const cta = t("probateEstateSales.comparison.learnMore");
+                  return (
                   <Link
-                    key={s.title}
+                    key={s.key}
                     to={s.href}
-                    aria-label={`${s.title} — ${s.description} — ${s.cta}`}
+                    aria-label={`${title} — ${description} — ${cta}`}
                     className="interior-tile tile-white probate-wide-tile group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                     style={{ width: "380px" }}
                   >
@@ -262,13 +221,13 @@ const ProbateEstateSales = () => {
                               className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug flex items-start justify-center"
                               style={{ display: "flex", alignItems: "flex-start", marginBottom: "8px" }}
                             >
-                              {s.title}
+                              {title}
                             </h3>
                             <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center">
-                              {s.description}
+                              {description}
                             </p>
                             <span className="gold-cta mt-auto">
-                              {s.cta}
+                              {cta}
                               <svg
                                 viewBox="0 0 24 24"
                                 width="14"
@@ -288,7 +247,8 @@ const ProbateEstateSales = () => {
                       </div>
                     </div>
                   </Link>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -306,24 +266,24 @@ const ProbateEstateSales = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-8 text-center font-sans">
-                Timing and Coordination in Probate Sales
+                {t("probateEstateSales.timeline.heading")}
               </h2>
               <div className="space-y-5">
                 {[
                   {
                     hour: 1,
-                    title: "Before Legal Authority Is Granted",
-                    desc: "A property can be assessed and a plan developed before legal authority is formally granted — so families and executors are prepared when the time comes.",
+                    title: t("probateEstateSales.timeline.step1Title"),
+                    desc: t("probateEstateSales.timeline.step1Desc"),
                   },
                   {
                     hour: 2,
-                    title: "During Active Probate",
-                    desc: "Once authority is established, preparation, pricing, and listing can proceed in step with the legal proceedings — coordinated with the estate's attorney and other professionals.",
+                    title: t("probateEstateSales.timeline.step2Title"),
+                    desc: t("probateEstateSales.timeline.step2Desc"),
                   },
                   {
                     hour: 3,
-                    title: "Post-Probate or Trust Distribution",
-                    desc: "After probate closes or a trust distribution is planned, the property can move toward preparation, marketing, and sale — with every repair decision evaluated for return on investment.",
+                    title: t("probateEstateSales.timeline.step3Title"),
+                    desc: t("probateEstateSales.timeline.step3Desc"),
                   },
                 ].map(({ hour, title, desc }) => {
                   const angle = hour * 30; // degrees from 12
@@ -427,7 +387,7 @@ const ProbateEstateSales = () => {
                   to="/how-the-process-works"
                   className="text-accent hover:text-gold underline underline-offset-4 transition-colors"
                 >
-                  See how the full process works →
+                  {t("probateEstateSales.timeline.seeFullProcess")}
                 </Link>
               </p>
             </div>
@@ -436,33 +396,28 @@ const ProbateEstateSales = () => {
 
         <PageFAQ
           id="probate-estate-sales"
-          eyebrow="Quick Answers"
-          heading="Probate & Estate Sale Questions"
+          eyebrow={t("probateEstateSales.faq.eyebrow")}
+          heading={t("probateEstateSales.faq.heading")}
           faqs={[
             {
-              question: "What is the difference between probate property and inherited property in Washington?",
-              answer:
-                "Probate property is court-supervised — the estate must go through Washington's probate process, and legal authority (Letters Testamentary) is required before a sale can proceed. Inherited property that passes outside probate, such as through a living trust or joint tenancy with right of survivorship, generally has fewer legal hurdles but can still involve significant complexity around valuation, family agreement, and tax basis.",
+              question: t("probateEstateSales.faq.q1.question"),
+              answer: t("probateEstateSales.faq.q1.answer"),
             },
             {
-              question: "Can a house be sold before probate is finalized in Washington State?",
-              answer:
-                "Often, yes. Washington's non-intervention powers allow many executors to sell estate real estate once Letters Testamentary are granted, without needing separate court approval for the sale itself. The property can even be evaluated and a sale plan prepared before that authority is formally granted, so the estate is ready to move once the court process clears.",
+              question: t("probateEstateSales.faq.q2.question"),
+              answer: t("probateEstateSales.faq.q2.answer"),
             },
             {
-              question: "Who decides how an estate property is priced?",
-              answer:
-                "Pricing an estate property responsibly starts with an independent, defensible valuation — not an automated online estimate. Because these properties often reflect deferred maintenance or years of accumulated condition, an accurate current-condition assessment protects the executor from later disputes with beneficiaries and supports a fiduciarily sound sale.",
+              question: t("probateEstateSales.faq.q3.question"),
+              answer: t("probateEstateSales.faq.q3.answer"),
             },
             {
-              question: "Why do estate and probate sales take longer than typical home sales?",
-              answer:
-                "Multiple decision-makers must align, court timelines can affect when a sale can close, and property condition often requires more preparation — repairs, cleanout, or vendor coordination — before listing. Each of these adds time compared to a standard resale, but a clear plan and experienced guidance keep the process moving as efficiently as Washington law allows.",
+              question: t("probateEstateSales.faq.q4.question"),
+              answer: t("probateEstateSales.faq.q4.answer"),
             },
             {
-              question: "What qualifications should a broker have to handle a probate or estate sale?",
-              answer:
-                "Look for a broker with specific, hands-on experience in probate and estate transactions — someone who understands court requirements, fiduciary documentation, and condition-based pricing. Real Property Planning is led by a Washington State licensed real estate broker who is also a certified residential appraiser, combining both credentials in one point of contact.",
+              question: t("probateEstateSales.faq.q5.question"),
+              answer: t("probateEstateSales.faq.q5.answer"),
             },
           ]}
         />

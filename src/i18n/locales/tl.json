@@ -45,5 +45,109 @@
     "description": "Ang pinakamahusay na network ng mapagkukunan para sa pagbili, pagbebenta, pamamahala, at pag-aaral tungkol sa Adult Family Homes.",
     "cta": "Tuklasin ang AFH Club →"
   },
-  "descriptor": "Idinurugtong ang mga pamilyang Washingtonian sa mapagkakatiwalaang gabay sa pabahay para sa mga nakatatanda, probate real estate, at ang mga espesyalistang tumutulong sa daan"
+  "descriptor": "Idinurugtong ang mga pamilyang Washingtonian sa mapagkakatiwalaang gabay sa pabahay para sa mga nakatatanda, probate real estate, at ang mga espesyalistang tumutulong sa daan",
+  "probateEstateSales": {
+    "seo": {
+      "title": "Broker at Ahente ng Probate Real Estate sa Washington State | Real Property Planning",
+      "description": "Real Property Planning — Licensed Real Estate Broker at Certified Appraiser ng Washington State na dalubhasa sa pagbebenta ng probate real estate sa King, Snohomish, Pierce at Kitsap Counties.",
+      "jsonLdHeadline": "Pagbebenta ng Probate Real Estate sa Washington State",
+      "jsonLdDescription": "Gabay na batay sa ebidensya sa probate real estate para sa mga executor, abogado, at pamilya sa buong Washington State. Naglilingkod sa King, Snohomish, Pierce at Kitsap Counties."
+    },
+    "heroImageAlt": "Eksena ng pagbebenta ng probate at estate property kung saan sinusuri ng isang pamilya ang mga gamit sa labas ng isang bahay sa Washington",
+    "heroTitle": "PAGBEBENTA NG PROBATE AT ESTATE PROPERTY",
+    "directAnswer": {
+      "question": "Paano gumagana ang pagbebenta ng bahay sa pamamagitan ng probate sa Washington State?",
+      "answer": "Sa Washington, karaniwang hindi maaaring ibenta ang isang estate property hangga't hindi binibigyan ng hukuman ang executor ng pormal na legal na kapangyarihan — kadalasan sa pamamagitan ng Letters Testamentary. Kapag naitatag na ang kapangyarihang ito, susundin ng proseso ang pamilyar na mga hakbang sa real estate — pagtatasa, paghahanda, pag-lista, negosasyon, at pagsasara — ngunit may karagdagang mga kinakailangan: isang mapagtatanggol na appraisal, koordinasyon sa maraming taong nagdedesisyon, at pagpepresyo na sumasalamin sa tunay na kalagayan ng ari-arian sa halip na isang awtomatikong pagtatantya. Ang Real Property Planning ay pinamumunuan ng isang dual-licensed real estate broker at certified appraiser, na gumagabay sa mga pamilya at executor sa bawat yugto.",
+      "step1Label": "Bago ang Kapangyarihan",
+      "step1Desc": "Sinusuri ang ari-arian at binubuo ang isang plano habang naghihintay ang legal na kapangyarihan.",
+      "step2Label": "Habang Nagpo-probate",
+      "step2Desc": "Nagpapatuloy ang paghahanda, pagpepresyo, at pag-lista kasabay ng proseso sa hukuman.",
+      "step3Label": "Pagkatapos ng Probate",
+      "step3Desc": "Ipinaglalako ang ari-arian sa merkado habang sinusuri ang bawat desisyon sa pag-aayos para sa kita.",
+      "ctaLabel": "Humiling ng Pagtatasa ng Ari-arian"
+    },
+    "comparison": {
+      "heading1": "Probate Property kumpara sa Minanang Ari-arian:",
+      "heading2": "Ano ang Pagkakaiba?",
+      "learnMore": "Alamin Pa",
+      "probate": {
+        "alt": "Probate property real estate sa Washington State",
+        "title": "Probate Property",
+        "description": "Sinusubaybayan ng hukuman. Kailangan ang legal na kapangyarihan bago maaaring magpatuloy ang pagbebenta."
+      },
+      "inherited": {
+        "alt": "Minanang ari-arian na hindi dumaan sa probate sa Washington State",
+        "title": "Minanang Ari-arian (Hindi Probate)",
+        "description": "Dumadaan sa labas ng probate sa pamamagitan ng trust o joint tenancy. Mas kaunting legal na hadlang, ngunit kumplikado pa rin."
+      }
+    },
+    "whatMakesDifferent": {
+      "heading": "Ano ang Nagpapaiba sa Pagbebenta ng Estate Property",
+      "intro": "Ang pagbebenta ng estate property ay talagang naiiba sa karaniwang transaksyon sa real estate — at ang pagtrato dito na parang ordinaryong listing ay kadalasang pinagmumulan ng problema para sa mga pamilya at executor.",
+      "legalAuthority": {
+        "alt": "Legal na kapangyarihan sa pagbebenta ng probate property",
+        "title": "Legal na Kapangyarihan",
+        "description": "Maaaring itakda ng mga kinakailangan ng hukuman kung kailan at paano maaaring maganap ang isang pagbebenta."
+      },
+      "decisionMakers": {
+        "alt": "Maraming taong nagdedesisyon sa pagbebenta ng estate",
+        "title": "Mga Nagdedesisyon",
+        "description": "Dapat magkaisa ang maraming partido sa bawat desisyon."
+      },
+      "propertyCondition": {
+        "alt": "Pagtatasa ng kalagayan ng estate property",
+        "title": "Kalagayan ng Ari-arian",
+        "description": "Karaniwan ang naantalang pagpapanatili, mga gamit, at pagkabakante."
+      },
+      "honestPricing": {
+        "alt": "Tapat na pagpepresyo para sa estate property",
+        "title": "Tapat na Pagpepresyo",
+        "description": "Dapat sumalamin ang halaga sa tunay na kalagayan — hindi sa awtomatikong pagtatantya."
+      },
+      "emotionalComplexity": {
+        "alt": "Emosyonal na pagiging kumplikado sa mga desisyon ng pamilya tungkol sa estate",
+        "title": "Emosyonal na Pagiging Kumplikado",
+        "description": "Maaaring magpabagal ng komunikasyon at desisyon ang dinamika ng pamilya."
+      },
+      "preparationStrategy": {
+        "alt": "Estratehiya sa paghahanda para sa pagbebenta ng estate property",
+        "title": "Estratehiya sa Paghahanda",
+        "description": "May direktang epekto sa fiduciary defensibility ang pagpili sa pagitan ng as-is at pag-aayos."
+      }
+    },
+    "timeline": {
+      "heading": "Oras at Koordinasyon sa Pagbebenta ng Probate",
+      "step1Title": "Bago Maibigay ang Legal na Kapangyarihan",
+      "step1Desc": "Maaaring masuri ang isang ari-arian at makabuo ng plano bago pormal na maibigay ang legal na kapangyarihan — upang handa ang mga pamilya at executor pagdating ng tamang oras.",
+      "step2Title": "Habang Aktibong Nagpo-probate",
+      "step2Desc": "Kapag naitatag na ang kapangyarihan, maaaring magpatuloy ang paghahanda, pagpepresyo, at pag-lista kasabay ng legal na proseso — na naka-coordinate sa abogado ng estate at iba pang propesyonal.",
+      "step3Title": "Pagkatapos ng Probate o Pamamahagi ng Trust",
+      "step3Desc": "Pagkatapos magsara ang probate o pagkaplano ng pamamahagi ng trust, maaaring umusad ang ari-arian tungo sa paghahanda, marketing, at pagbebenta — na sinusuri ang bawat desisyon sa pag-aayos para sa return on investment.",
+      "seeFullProcess": "Tingnan kung paano gumagana ang buong proseso →"
+    },
+    "faq": {
+      "eyebrow": "Mabilisang Sagot",
+      "heading": "Mga Tanong Tungkol sa Probate at Estate Sale",
+      "q1": {
+        "question": "Ano ang pagkakaiba ng probate property at minanang ari-arian sa Washington?",
+        "answer": "Ang probate property ay sinusubaybayan ng hukuman — dapat dumaan ang estate sa proseso ng probate ng Washington, at kinakailangan ang legal na kapangyarihan (Letters Testamentary) bago makapagpatuloy ang isang pagbebenta. Ang minanang ari-arian na dumadaan sa labas ng probate, tulad ng sa pamamagitan ng living trust o joint tenancy na may right of survivorship, ay karaniwang may mas kaunting legal na hadlang ngunit maaari pa ring maging lubhang kumplikado pagdating sa valuation, kasunduan ng pamilya, at batayan sa buwis."
+      },
+      "q2": {
+        "question": "Maaari bang ibenta ang isang bahay bago tuluyang matapos ang probate sa Washington State?",
+        "answer": "Kadalasan, oo. Ang non-intervention powers ng Washington ay nagbibigay-daan sa maraming executor na ibenta ang estate real estate kapag naibigay na ang Letters Testamentary, nang hindi na kailangan ng hiwalay na aprubasyon ng hukuman para mismo sa pagbebenta. Maaari pa ngang masuri ang ari-arian at makapaghanda ng plano sa pagbebenta bago pormal na maibigay ang kapangyarihang iyon, para handang kumilos ang estate sa sandaling malinaw na ang proseso sa hukuman."
+      },
+      "q3": {
+        "question": "Sino ang nagpapasya kung paano pinepresyuhan ang isang estate property?",
+        "answer": "Ang responsableng pagpepresyo sa isang estate property ay nagsisimula sa isang independiyente at mapagtatanggol na valuation — hindi isang awtomatikong online na pagtatantya. Dahil ang mga ari-ariang ito ay kadalasang sumasalamin sa naantalang pagpapanatili o taon-taong naipong kalagayan, ang tumpak na pagtatasa ng kasalukuyang kalagayan ay nagpoprotekta sa executor mula sa mga hindi pagkakaunawaan sa hinaharap kasama ang mga benepisyaryo at sumusuporta sa isang matatag na fiduciary na pagbebenta."
+      },
+      "q4": {
+        "question": "Bakit mas matagal ang pagbebenta ng estate at probate kaysa sa karaniwang pagbebenta ng bahay?",
+        "answer": "Dapat magkaisa ang maraming taong nagdedesisyon, maaaring makaapekto ang mga takdang oras ng hukuman kung kailan maaaring magsara ang isang pagbebenta, at kadalasang nangangailangan ng mas maraming paghahanda ang kalagayan ng ari-arian — pag-aayos, paglilinis, o koordinasyon sa mga vendor — bago mag-lista. Ang bawat isa sa mga ito ay nagdaragdag ng oras kumpara sa isang karaniwang resale, ngunit ang malinaw na plano at may-karanasang gabay ay nagpapanatili sa proseso na umuusad nang kasing-episyente ng pinapayagan ng batas ng Washington."
+      },
+      "q5": {
+        "question": "Anong mga kwalipikasyon ang dapat mayroon ang isang broker para hawakan ang isang probate o estate sale?",
+        "answer": "Humanap ng broker na may partikular at praktikal na karanasan sa mga transaksyon ng probate at estate — isang taong nakakaunawa sa mga kinakailangan ng hukuman, dokumentasyong fiduciary, at pagpepresyo batay sa kalagayan. Ang Real Property Planning ay pinamumunuan ng isang licensed real estate broker ng Washington State na isa ring certified residential appraiser, na pinagsasama ang dalawang kredensyal sa iisang punto ng ugnayan."
+      }
+    }
+  }
 }

@@ -45,5 +45,109 @@
     "description": "La red de recursos definitiva para comprar, vender, administrar y aprender sobre los Hogares Familiares para Adultos (AFH).",
     "cta": "Explorar AFH Club →"
   },
-  "descriptor": "Conectando a las familias de Washington con orientación confiable sobre vivienda para personas mayores, bienes raíces en sucesiones y los especialistas que ayudan en el camino"
+  "descriptor": "Conectando a las familias de Washington con orientación confiable sobre vivienda para personas mayores, bienes raíces en sucesiones y los especialistas que ayudan en el camino",
+  "probateEstateSales": {
+    "seo": {
+      "title": "Agente y Corredor de Bienes Raíces de Sucesiones en Washington | Real Property Planning",
+      "description": "Real Property Planning — Corredor de Bienes Raíces con Licencia y Tasador Certificado del Estado de Washington especializado en ventas de bienes raíces de sucesiones en los condados de King, Snohomish, Pierce y Kitsap.",
+      "jsonLdHeadline": "Ventas de Bienes Raíces de Sucesiones en el Estado de Washington",
+      "jsonLdDescription": "Orientación basada en evidencia sobre bienes raíces de sucesiones para albaceas, abogados y familias en todo el Estado de Washington. Sirviendo a los condados de King, Snohomish, Pierce y Kitsap."
+    },
+    "heroImageAlt": "Escena de venta de propiedad de sucesión con una familia revisando pertenencias fuera de una casa en Washington",
+    "heroTitle": "VENTAS DE PROPIEDADES DE SUCESIÓN",
+    "directAnswer": {
+      "question": "¿Cómo funciona la venta de una casa a través de sucesión (probate) en el Estado de Washington?",
+      "answer": "En Washington, una propiedad de sucesión normalmente no se puede vender hasta que el tribunal otorgue al albacea autoridad legal formal — generalmente mediante Cartas Testamentarias. Una vez establecida esa autoridad, el proceso sigue los pasos habituales de bienes raíces — evaluación, preparación, publicación, negociación y cierre — pero con requisitos adicionales: una tasación defendible, coordinación entre múltiples tomadores de decisiones y un precio que refleje la condición real de la propiedad en lugar de una estimación automatizada. Real Property Planning está dirigido por un corredor de bienes raíces y tasador certificado con doble licencia, guiando a familias y albaceas en cada etapa.",
+      "step1Label": "Antes de la Autoridad",
+      "step1Desc": "Se evalúa la propiedad y se desarrolla un plan mientras la autoridad legal está pendiente.",
+      "step2Label": "Durante la Sucesión",
+      "step2Desc": "La preparación, fijación de precios y publicación avanzan junto con el proceso judicial.",
+      "step3Label": "Después de la Sucesión",
+      "step3Desc": "La propiedad sale al mercado con cada decisión de reparación evaluada por su retorno.",
+      "ctaLabel": "Solicitar una Evaluación de Propiedad"
+    },
+    "comparison": {
+      "heading1": "Propiedad de Sucesión vs. Propiedad Heredada:",
+      "heading2": "¿Cuál es la Diferencia?",
+      "learnMore": "Más Información",
+      "probate": {
+        "alt": "Propiedad de sucesión en bienes raíces del Estado de Washington",
+        "title": "Propiedad de Sucesión",
+        "description": "Supervisada por el tribunal. Se requiere autoridad legal antes de que pueda proceder la venta."
+      },
+      "inherited": {
+        "alt": "Propiedad heredada fuera de sucesión en el Estado de Washington",
+        "title": "Propiedad Heredada (Fuera de Sucesión)",
+        "description": "Pasa fuera del proceso de sucesión mediante fideicomiso o tenencia conjunta. Menos obstáculos legales, pero aún compleja."
+      }
+    },
+    "whatMakesDifferent": {
+      "heading": "Qué Hace Diferentes a las Ventas de Propiedades de Sucesión",
+      "intro": "Las ventas de propiedades de sucesión son genuinamente diferentes de las transacciones inmobiliarias estándar — y tratarlas como listados ordinarios es donde las familias y los albaceas suelen encontrar más problemas.",
+      "legalAuthority": {
+        "alt": "Autoridad legal en ventas de propiedades de sucesión",
+        "title": "Autoridad Legal",
+        "description": "Los requisitos del tribunal pueden dictar cuándo y cómo puede ocurrir una venta."
+      },
+      "decisionMakers": {
+        "alt": "Múltiples tomadores de decisiones en ventas de sucesión",
+        "title": "Tomadores de Decisiones",
+        "description": "Múltiples partes deben ponerse de acuerdo en cada decisión."
+      },
+      "propertyCondition": {
+        "alt": "Evaluación de la condición de la propiedad de sucesión",
+        "title": "Condición de la Propiedad",
+        "description": "El mantenimiento diferido, las pertenencias y la desocupación son comunes."
+      },
+      "honestPricing": {
+        "alt": "Precios honestos para propiedades de sucesión",
+        "title": "Precios Honestos",
+        "description": "El valor debe reflejar la condición real — no estimaciones automatizadas."
+      },
+      "emotionalComplexity": {
+        "alt": "Complejidad emocional en decisiones familiares de sucesión",
+        "title": "Complejidad Emocional",
+        "description": "La dinámica familiar puede ralentizar la comunicación y las decisiones."
+      },
+      "preparationStrategy": {
+        "alt": "Estrategia de preparación para ventas de propiedades de sucesión",
+        "title": "Estrategia de Preparación",
+        "description": "Vender \"tal cual\" frente a hacer reparaciones tiene un impacto directo en la defensibilidad fiduciaria."
+      }
+    },
+    "timeline": {
+      "heading": "Tiempos y Coordinación en las Ventas de Sucesión",
+      "step1Title": "Antes de que se Otorgue la Autoridad Legal",
+      "step1Desc": "Una propiedad puede ser evaluada y se puede desarrollar un plan antes de que la autoridad legal sea otorgada formalmente — para que las familias y los albaceas estén preparados cuando llegue el momento.",
+      "step2Title": "Durante la Sucesión Activa",
+      "step2Desc": "Una vez establecida la autoridad, la preparación, fijación de precios y publicación pueden avanzar junto con el proceso legal — coordinadas con el abogado de la sucesión y otros profesionales.",
+      "step3Title": "Después de la Sucesión o Distribución del Fideicomiso",
+      "step3Desc": "Después de que se cierra la sucesión o se planifica una distribución del fideicomiso, la propiedad puede avanzar hacia la preparación, comercialización y venta — con cada decisión de reparación evaluada por su retorno de inversión.",
+      "seeFullProcess": "Vea cómo funciona el proceso completo →"
+    },
+    "faq": {
+      "eyebrow": "Respuestas Rápidas",
+      "heading": "Preguntas sobre Ventas de Sucesión y Propiedades de Sucesión",
+      "q1": {
+        "question": "¿Cuál es la diferencia entre una propiedad de sucesión y una propiedad heredada en Washington?",
+        "answer": "La propiedad de sucesión está supervisada por el tribunal — la sucesión debe pasar por el proceso de sucesión de Washington, y se requiere autoridad legal (Cartas Testamentarias) antes de que pueda proceder una venta. Una propiedad heredada que pasa fuera del proceso de sucesión, como a través de un fideicomiso en vida o tenencia conjunta con derecho de supervivencia, generalmente tiene menos obstáculos legales, pero aún puede implicar una complejidad significativa en cuanto a valoración, acuerdo familiar y base impositiva."
+      },
+      "q2": {
+        "question": "¿Se puede vender una casa antes de que finalice la sucesión en el Estado de Washington?",
+        "answer": "A menudo, sí. Los poderes de no intervención de Washington permiten a muchos albaceas vender bienes raíces de la sucesión una vez que se otorgan las Cartas Testamentarias, sin necesidad de una aprobación judicial separada para la venta en sí. La propiedad incluso puede ser evaluada y se puede preparar un plan de venta antes de que esa autoridad sea otorgada formalmente, para que la sucesión esté lista para actuar tan pronto como el proceso judicial lo permita."
+      },
+      "q3": {
+        "question": "¿Quién decide cómo se fija el precio de una propiedad de sucesión?",
+        "answer": "Fijar el precio de una propiedad de sucesión de manera responsable comienza con una valoración independiente y defendible — no una estimación automatizada en línea. Debido a que estas propiedades a menudo reflejan mantenimiento diferido o años de condición acumulada, una evaluación precisa de la condición actual protege al albacea de disputas posteriores con los beneficiarios y respalda una venta fiduciariamente sólida."
+      },
+      "q4": {
+        "question": "¿Por qué las ventas de sucesión y propiedades de sucesión tardan más que las ventas de viviendas típicas?",
+        "answer": "Múltiples tomadores de decisiones deben ponerse de acuerdo, los plazos judiciales pueden afectar cuándo se puede cerrar una venta, y la condición de la propiedad a menudo requiere más preparación — reparaciones, limpieza o coordinación con proveedores — antes de la publicación. Cada uno de estos factores agrega tiempo en comparación con una reventa estándar, pero un plan claro y orientación experimentada mantienen el proceso avanzando de la manera más eficiente que permite la ley de Washington."
+      },
+      "q5": {
+        "question": "¿Qué calificaciones debe tener un corredor para manejar una venta de sucesión o propiedad de sucesión?",
+        "answer": "Busque un corredor con experiencia específica y práctica en transacciones de sucesión y propiedades de sucesión — alguien que entienda los requisitos judiciales, la documentación fiduciaria y la fijación de precios basada en la condición. Real Property Planning está dirigido por un corredor de bienes raíces con licencia del Estado de Washington que también es tasador residencial certificado, combinando ambas credenciales en un solo punto de contacto."
+      }
+    }
+  }
 }
