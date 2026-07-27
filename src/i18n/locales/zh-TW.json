@@ -308,5 +308,144 @@
       "browseListings": "瀏覽房源",
       "sellYourAfh": "出售您的 AFH"
     }
+  },
+  "costOfCarePage": {
+    "seo": {
+      "title": "照護費用計算器｜華盛頓州長期照護費用",
+      "description": "比較居家照護、輔助生活、失智照護及療養院在華盛頓州與全國平均水準的費用差異，並提供未來費用預測。"
+    },
+    "hero": {
+      "eyebrow": "長者生活轉換 · 照護費用",
+      "heading": "照護費用計算器",
+      "description": "比較華盛頓州長者照護費用與全國平均水準的差異，並查看這些費用未來可能如何增長。"
+    },
+    "careTypes": {
+      "independent-living": {
+        "label": "獨立生活社區",
+        "shortLabel": "獨立生活",
+        "unit": "每月費用",
+        "note": "此資料來源未提供華盛頓州特定數據——此處顯示為全國中位數。獨立生活的費用通常低於輔助生活，因為不包含個人照護服務。"
+      },
+      "in-home": {
+        "label": "居家照護（非醫療）",
+        "shortLabel": "居家照護",
+        "unit": "約每週44小時",
+        "note": "華盛頓州平均每小時45美元，而全國中位數約為每小時35美元。"
+      },
+      "adult-day": {
+        "label": "成人日間照護",
+        "shortLabel": "成人日間照護",
+        "unit": "每週5天",
+        "note": "最經濟實惠的長期照護選項，提供日間監督與活動安排。"
+      },
+      "adult-family-home": {
+        "label": "成人家庭照護之家",
+        "shortLabel": "成人家庭照護之家",
+        "unit": "每月費用",
+        "note": "通常是比輔助生活更經濟實惠、更具家庭氛圍的替代方案，提供全天候照護並整合為單一費率。"
+      },
+      "assisted-living": {
+        "label": "輔助生活社區",
+        "shortLabel": "輔助生活",
+        "unit": "每月費用",
+        "note": "華盛頓州費用約高於全國中位數23%。"
+      },
+      "memory-care": {
+        "label": "失智照護",
+        "shortLabel": "失智照護",
+        "unit": "每月費用",
+        "note": "通常比標準輔助生活費率高出約25%。"
+      },
+      "nursing-semi": {
+        "label": "療養院——半私人房",
+        "shortLabel": "療養院共用房",
+        "unit": "每月",
+        "note": "華盛頓州費用約高於全國中位數37%。"
+      },
+      "nursing-private": {
+        "label": "療養院——私人房",
+        "shortLabel": "療養院私人房",
+        "unit": "每月",
+        "note": "私人房費用高於半私人房。"
+      },
+      "ccrc": {
+        "label": "持續照護退休社區（CCRC）",
+        "shortLabel": "CCRC／終身照護計畫",
+        "unit": "每月服務費",
+        "note": "CCRC 通常還需要另外支付一次性入住費——全國常見金額為40萬美元或更高。"
+      }
+    },
+    "inflationPresets": {
+      "conservative": "保守",
+      "average": "平均",
+      "aggressive": "積極"
+    },
+    "card1": {
+      "sectionTitle": "1. 選擇照護類型"
+    },
+    "card2": {
+      "sectionTitle": "2. 您的照護計畫",
+      "currentAge": "目前年齡",
+      "yrsOld": "歲",
+      "decreaseAge": "減少年齡",
+      "increaseAge": "增加年齡",
+      "whenMightCareBegin": "照護可能何時開始？",
+      "now": "現在",
+      "yrs": "年後",
+      "howManyYears": "需要多少年的照護？",
+      "decreaseYears": "減少照護年數",
+      "increaseYears": "增加照護年數",
+      "year": "年",
+      "years": "年"
+    },
+    "inflationCard": {
+      "assumptionText": "此估算假設長期照護費用每年約增長 {{rate}}%，與近期歷史趨勢相符。",
+      "hideOptions": "隱藏增長率選項 ▲",
+      "changeOptions": "變更增長率假設 ▼"
+    },
+    "results": {
+      "sectionTitle": "3. 預估費用",
+      "monthly": "每月",
+      "annual": "每年",
+      "washington": "華盛頓州",
+      "nationalMedian": "全國中位數",
+      "perMonth": "每月",
+      "perYear": "每年",
+      "totalPlan": "總計 · {{years}} 年計畫",
+      "inWashingtonVs": "華盛頓州 · 相較全國 {{amount}}",
+      "aboutTheSameAs": "大致相同於",
+      "aboutAbove": "約高出 {{percent}}%",
+      "aboutBelow": "約低 {{percent}}%",
+      "theNationalMedian": "全國中位數。{{note}}",
+      "figuresBasedOn": "數據依據 CareScout／Genworth 照護費用調查及相關產業來源。實際費用因地區、服務提供者及照護等級而異。",
+      "printButton": "列印或另存為 PDF",
+      "currentlyRunsIn": "在華盛頓州目前的費用"
+    },
+    "printSummary": {
+      "title": "長者生活費用計算器——結果摘要",
+      "preparedVia": "透過 realpropertyplanning.com 於 {{date}} 製作",
+      "careType": "照護類型",
+      "careTimeline": "照護時程",
+      "today": "今天：{{age}} 歲",
+      "careBeginsToday": "照護開始：今天（{{age}} 歲，{{year}} 年）",
+      "careBeginsIn": "照護開始：{{years}} 年後（{{age}} 歲，{{year}} 年）",
+      "careEnds": "照護結束：{{years}} {{yearWord}}後（{{age}} 歲）",
+      "costAssumption": "費用假設",
+      "annualGrowth": "年度費用增長：{{rate}}%",
+      "projectedCost": "預估費用",
+      "colWashington": "華盛頓州",
+      "colNational": "全國",
+      "rowPerMonth": "每月",
+      "rowPerYear": "每年",
+      "rowTotal": "{{years}} 年計畫總計",
+      "footer": "數據依據 CareScout／Genworth 照護費用調查。實際費用因地區、服務提供者及照護等級而異。本工具僅供一般規劃用途使用。由 Real Property Planning 提供——realpropertyplanning.com。"
+    },
+    "whyCostsVary": {
+      "eyebrow": "重點概念",
+      "heading": "為何華盛頓州的費用高於全國平均水準",
+      "paragraph1": "華盛頓州在幾乎所有長者照護類別中，費用皆持續高於全國中位數。較高的地區勞動成本、競爭激烈的照護人力市場，以及都會區較高的生活成本，都是造成此差距的原因。",
+      "paragraph2Before": "成人家庭照護之家通常是比輔助生活或療養院照護更經濟實惠的替代方案——值得透過我們的",
+      "afhClubLink": "AFH Club"
+    }
   }
 }

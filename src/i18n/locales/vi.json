@@ -308,5 +308,144 @@
       "browseListings": "Xem danh sách",
       "sellYourAfh": "Bán AFH Của Quý Vị"
     }
+  },
+  "costOfCarePage": {
+    "seo": {
+      "title": "Máy Tính Chi Phí Chăm Sóc | Chi Phí Chăm Sóc Dài Hạn Tại Tiểu Bang Washington",
+      "description": "So sánh chi phí chăm sóc tại nhà, sinh hoạt có hỗ trợ, chăm sóc trí nhớ, và nhà dưỡng lão tại Tiểu Bang Washington so với mức trung bình toàn quốc, kèm theo dự báo chi phí trong tương lai."
+    },
+    "hero": {
+      "eyebrow": "Chuyển Đổi Cho Người Cao Niên · Chi Phí Chăm Sóc",
+      "heading": "Máy Tính Chi Phí Chăm Sóc",
+      "description": "So sánh chi phí chăm sóc người cao niên tại Tiểu Bang Washington so với mức trung bình toàn quốc, và xem các chi phí này có thể tăng như thế nào theo thời gian."
+    },
+    "careTypes": {
+      "independent-living": {
+        "label": "Cộng Đồng Sinh Hoạt Độc Lập",
+        "shortLabel": "Sinh Hoạt Độc Lập",
+        "unit": "phí hàng tháng",
+        "note": "Số liệu riêng cho Washington không có sẵn từ nguồn này — số liệu hiển thị ở đây là mức trung vị toàn quốc. Sinh hoạt độc lập thường có chi phí thấp hơn sinh hoạt có hỗ trợ vì không bao gồm các dịch vụ chăm sóc cá nhân."
+      },
+      "in-home": {
+        "label": "Chăm Sóc Tại Nhà (Không Y Tế)",
+        "shortLabel": "Chăm Sóc Tại Nhà",
+        "unit": "~44 giờ/tuần",
+        "note": "Washington trung bình $45/giờ so với mức trung vị toàn quốc khoảng $35/giờ."
+      },
+      "adult-day": {
+        "label": "Chăm Sóc Ban Ngày Cho Người Lớn",
+        "shortLabel": "Chăm Sóc Ban Ngày Cho Người Lớn",
+        "unit": "5 ngày/tuần",
+        "note": "Lựa chọn chăm sóc dài hạn phải chăng nhất, cung cấp giám sát và hoạt động ban ngày."
+      },
+      "adult-family-home": {
+        "label": "Nhà Chăm Sóc Gia Đình Người Lớn",
+        "shortLabel": "Nhà Chăm Sóc Gia Đình Người Lớn",
+        "unit": "phí hàng tháng",
+        "note": "Thường là một giải pháp thay thế phải chăng hơn, mang tính gia đình hơn so với sinh hoạt có hỗ trợ, với chăm sóc 24/7 được gộp vào một mức giá duy nhất."
+      },
+      "assisted-living": {
+        "label": "Cộng Đồng Sinh Hoạt Có Hỗ Trợ",
+        "shortLabel": "Sinh Hoạt Có Hỗ Trợ",
+        "unit": "phí hàng tháng",
+        "note": "Washington cao hơn khoảng 23% so với mức trung vị toàn quốc."
+      },
+      "memory-care": {
+        "label": "Chăm Sóc Trí Nhớ",
+        "shortLabel": "Chăm Sóc Trí Nhớ",
+        "unit": "phí hàng tháng",
+        "note": "Thường cao hơn khoảng 25% so với mức giá sinh hoạt có hỗ trợ tiêu chuẩn."
+      },
+      "nursing-semi": {
+        "label": "Nhà Dưỡng Lão — Phòng Bán Riêng",
+        "shortLabel": "Nhà Dưỡng Lão Phòng Chung",
+        "unit": "hàng tháng",
+        "note": "Washington cao hơn khoảng 37% so với mức trung vị toàn quốc."
+      },
+      "nursing-private": {
+        "label": "Nhà Dưỡng Lão — Phòng Riêng",
+        "shortLabel": "Nhà Dưỡng Lão Phòng Riêng",
+        "unit": "hàng tháng",
+        "note": "Phòng riêng có chi phí cao hơn so với chỗ ở bán riêng."
+      },
+      "ccrc": {
+        "label": "CCRC (Cộng Đồng Hưu Trí Chăm Sóc Liên Tục)",
+        "shortLabel": "CCRC / Kế Hoạch Trọn Đời",
+        "unit": "phí dịch vụ hàng tháng",
+        "note": "CCRC cũng yêu cầu một khoản phí nhập cư một lần riêng biệt — thường là $400,000 hoặc cao hơn trên toàn quốc."
+      }
+    },
+    "inflationPresets": {
+      "conservative": "Thận Trọng",
+      "average": "Trung Bình",
+      "aggressive": "Tích Cực"
+    },
+    "card1": {
+      "sectionTitle": "1. Chọn Loại Hình Chăm Sóc"
+    },
+    "card2": {
+      "sectionTitle": "2. Kế Hoạch Chăm Sóc Của Quý Vị",
+      "currentAge": "Tuổi Hiện Tại",
+      "yrsOld": "tuổi",
+      "decreaseAge": "Giảm tuổi",
+      "increaseAge": "Tăng tuổi",
+      "whenMightCareBegin": "Khi Nào Việc Chăm Sóc Có Thể Bắt Đầu?",
+      "now": "Bây Giờ",
+      "yrs": "năm",
+      "howManyYears": "Cần Bao Nhiêu Năm Chăm Sóc?",
+      "decreaseYears": "Giảm số năm chăm sóc",
+      "increaseYears": "Tăng số năm chăm sóc",
+      "year": "năm",
+      "years": "năm"
+    },
+    "inflationCard": {
+      "assumptionText": "Ước tính này giả định chi phí chăm sóc dài hạn tăng khoảng {{rate}}% mỗi năm, phù hợp với các xu hướng lịch sử gần đây.",
+      "hideOptions": "Ẩn Các Tùy Chọn Tỷ Lệ Tăng Trưởng ▲",
+      "changeOptions": "Thay Đổi Giả Định Tỷ Lệ Tăng Trưởng ▼"
+    },
+    "results": {
+      "sectionTitle": "3. Chi Phí Ước Tính",
+      "monthly": "Hàng Tháng",
+      "annual": "Hàng Năm",
+      "washington": "Washington",
+      "nationalMedian": "Trung Vị Toàn Quốc",
+      "perMonth": "mỗi tháng",
+      "perYear": "mỗi năm",
+      "totalPlan": "Tổng · Kế Hoạch {{years}} Năm",
+      "inWashingtonVs": "tại Washington · so với {{amount}} trên toàn quốc",
+      "aboutTheSameAs": "gần bằng với",
+      "aboutAbove": "cao hơn khoảng {{percent}}% so với",
+      "aboutBelow": "thấp hơn khoảng {{percent}}% so với",
+      "theNationalMedian": "mức trung vị toàn quốc. {{note}}",
+      "figuresBasedOn": "Số liệu dựa trên Khảo Sát Chi Phí Chăm Sóc CareScout/Genworth và các nguồn ngành liên quan. Chi phí thực tế thay đổi tùy theo khu vực, nhà cung cấp, và mức độ chăm sóc.",
+      "printButton": "In hoặc Lưu dưới dạng PDF",
+      "currentlyRunsIn": "tại Washington hiện có giá"
+    },
+    "printSummary": {
+      "title": "Máy Tính Chi Phí Sinh Hoạt Cho Người Cao Niên — Tóm Tắt Kết Quả",
+      "preparedVia": "Được chuẩn bị qua realpropertyplanning.com vào {{date}}",
+      "careType": "Loại Hình Chăm Sóc",
+      "careTimeline": "Dòng Thời Gian Chăm Sóc",
+      "today": "Hôm nay: {{age}} tuổi",
+      "careBeginsToday": "Chăm sóc bắt đầu: hôm nay ({{age}} tuổi, năm {{year}})",
+      "careBeginsIn": "Chăm sóc bắt đầu: trong {{years}} năm ({{age}} tuổi, năm {{year}})",
+      "careEnds": "Chăm sóc kết thúc: sau {{years}} {{yearWord}} ({{age}} tuổi)",
+      "costAssumption": "Giả Định Chi Phí",
+      "annualGrowth": "Tăng trưởng chi phí hàng năm: {{rate}}%",
+      "projectedCost": "Chi Phí Dự Kiến",
+      "colWashington": "Washington",
+      "colNational": "Toàn Quốc",
+      "rowPerMonth": "Mỗi tháng",
+      "rowPerYear": "Mỗi năm",
+      "rowTotal": "Tổng trong kế hoạch {{years}} năm",
+      "footer": "Số liệu dựa trên Khảo Sát Chi Phí Chăm Sóc CareScout/Genworth. Chi phí thực tế thay đổi tùy theo khu vực, nhà cung cấp, và mức độ chăm sóc. Công cụ này chỉ nhằm mục đích lập kế hoạch chung. Được cung cấp bởi Real Property Planning — realpropertyplanning.com."
+    },
+    "whyCostsVary": {
+      "eyebrow": "Khái Niệm Chính",
+      "heading": "Tại Sao Chi Phí Ở Washington Cao Hơn Mức Trung Bình Toàn Quốc",
+      "paragraph1": "Tiểu Bang Washington luôn xếp hạng cao hơn mức trung vị toàn quốc trong hầu hết mọi loại hình chăm sóc người cao niên. Chi phí lao động khu vực cao hơn, thị trường việc làm chăm sóc cạnh tranh, và chi phí sinh hoạt cao hơn tại các khu vực đô thị đều góp phần vào khoảng cách này.",
+      "paragraph2Before": "Nhà Chăm Sóc Gia Đình Người Lớn thường là một giải pháp thay thế phải chăng hơn cho sinh hoạt có hỗ trợ hoặc chăm sóc tại nhà dưỡng lão — đáng để tìm hiểu qua",
+      "afhClubLink": "AFH Club"
+    }
   }
 }

@@ -336,7 +336,12 @@ const App = () => (
           <Route path="/senior-living-advisors" element={<SeniorLivingAdvisors />} />
           <Route path="/senior-placement" element={<Navigate to="/senior-living-advisors" replace />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
-          <Route path="/cost-of-care-calculator" element={<CostOfCareCalculator />} />
+          <Route path="/cost-of-care-calculator" element={<LanguageRoute lang="en"><CostOfCareCalculator /></LanguageRoute>} />
+          <Route path="/es/cost-of-care-calculator" element={<LanguageRoute lang="es"><CostOfCareCalculator /></LanguageRoute>} />
+          <Route path="/zh-tw/cost-of-care-calculator" element={<LanguageRoute lang="zh-TW"><CostOfCareCalculator /></LanguageRoute>} />
+          <Route path="/zh-cn/cost-of-care-calculator" element={<LanguageRoute lang="zh-CN"><CostOfCareCalculator /></LanguageRoute>} />
+          <Route path="/tl/cost-of-care-calculator" element={<LanguageRoute lang="tl"><CostOfCareCalculator /></LanguageRoute>} />
+          <Route path="/vi/cost-of-care-calculator" element={<LanguageRoute lang="vi"><CostOfCareCalculator /></LanguageRoute>} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/executors" element={<Executors />} />

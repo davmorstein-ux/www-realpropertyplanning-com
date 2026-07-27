@@ -308,5 +308,144 @@
       "browseListings": "Tingnan ang mga listing",
       "sellYourAfh": "Ibenta ang Inyong AFH"
     }
+  },
+  "costOfCarePage": {
+    "seo": {
+      "title": "Calculator ng Gastos sa Pangangalaga | Mga Gastos sa Pangmatagalang Pangangalaga sa Washington State",
+      "description": "Ihambing ang gastos ng pangangalaga sa bahay, assisted living, memory care, at nursing home sa Washington State laban sa mga pambansang average, kasama ang mga projection ng gastos sa hinaharap."
+    },
+    "hero": {
+      "eyebrow": "Transisyon ng Nakatatanda · Gastos sa Pangangalaga",
+      "heading": "Calculator ng Gastos sa Pangangalaga",
+      "description": "Ihambing ang gastos ng pangangalaga sa nakatatanda sa Washington State laban sa mga pambansang average, at tingnan kung paano maaaring tumaas ang mga gastos na ito sa paglipas ng panahon."
+    },
+    "careTypes": {
+      "independent-living": {
+        "label": "Independent Living Community",
+        "shortLabel": "Independent Living",
+        "unit": "buwanang bayad",
+        "note": "Hindi available ang mga specific na figure para sa Washington mula sa source na ito — ang ipinapakita rito ay ang pambansang median. Karaniwang mas mababa ang gastos ng independent living kaysa sa assisted living dahil hindi ito kasama ang mga serbisyo ng personal na pangangalaga."
+      },
+      "in-home": {
+        "label": "Pangangalaga sa Bahay (Hindi Medikal)",
+        "shortLabel": "Pangangalaga sa Bahay",
+        "unit": "~44 oras/linggo",
+        "note": "Ang average sa Washington ay $45/oras kumpara sa pambansang median na humigit-kumulang $35/oras."
+      },
+      "adult-day": {
+        "label": "Adult Day Care",
+        "shortLabel": "Adult Day Care",
+        "unit": "5 araw/linggo",
+        "note": "Ang pinaka-abot-kayang opsyon sa pangmatagalang pangangalaga, na nagbibigay ng pangangasiwa at aktibidad sa maghapon."
+      },
+      "adult-family-home": {
+        "label": "Adult Family Home",
+        "shortLabel": "Adult Family Home",
+        "unit": "buwanang bayad",
+        "note": "Kadalasang isang mas abot-kayang, tulad-tahanang alternatibo sa assisted living, na may 24/7 na pangangalaga na kasama na sa iisang rate."
+      },
+      "assisted-living": {
+        "label": "Assisted Living Community",
+        "shortLabel": "Assisted Living",
+        "unit": "buwanang bayad",
+        "note": "Humigit-kumulang 23% na mas mataas ang Washington kaysa sa pambansang median."
+      },
+      "memory-care": {
+        "label": "Memory Care",
+        "shortLabel": "Memory Care",
+        "unit": "buwanang bayad",
+        "note": "Karaniwang humigit-kumulang 25% na mas mataas kaysa sa karaniwang rate ng assisted living."
+      },
+      "nursing-semi": {
+        "label": "Nursing Home — Semi-Private",
+        "shortLabel": "Nursing Home Shared Room",
+        "unit": "buwanang",
+        "note": "Humigit-kumulang 37% na mas mataas ang Washington kaysa sa pambansang median."
+      },
+      "nursing-private": {
+        "label": "Nursing Home — Private Room",
+        "shortLabel": "Nursing Home Private Room",
+        "unit": "buwanang",
+        "note": "Ang mga private room ay may karagdagang gastos kumpara sa semi-private na akomodasyon."
+      },
+      "ccrc": {
+        "label": "CCRC",
+        "shortLabel": "CCRC / Life Plan",
+        "unit": "buwanang serbisyo bayad",
+        "note": "Ang mga CCRC ay nangangailangan din ng hiwalay na isang-beses na entrance fee — karaniwang $400,000 o higit pa sa buong bansa."
+      }
+    },
+    "inflationPresets": {
+      "conservative": "Konserbatibo",
+      "average": "Karaniwan",
+      "aggressive": "Agresibo"
+    },
+    "card1": {
+      "sectionTitle": "1. Piliin ang Uri ng Pangangalaga"
+    },
+    "card2": {
+      "sectionTitle": "2. Ang Inyong Plano sa Pangangalaga",
+      "currentAge": "Kasalukuyang Edad",
+      "yrsOld": "taon gulang",
+      "decreaseAge": "Bawasan ang edad",
+      "increaseAge": "Dagdagan ang edad",
+      "whenMightCareBegin": "Kailan Maaaring Magsimula ang Pangangalaga?",
+      "now": "Ngayon",
+      "yrs": "taon",
+      "howManyYears": "Ilang Taon ng Pangangalaga?",
+      "decreaseYears": "Bawasan ang taon ng pangangalaga",
+      "increaseYears": "Dagdagan ang taon ng pangangalaga",
+      "year": "taon",
+      "years": "taon"
+    },
+    "inflationCard": {
+      "assumptionText": "Ipinapalagay ng pagtatantyang ito na tumataas ang gastos sa pangmatagalang pangangalaga nang humigit-kumulang {{rate}}% bawat taon, alinsunod sa kamakailang mga makasaysayang trend.",
+      "hideOptions": "Itago ang Mga Opsyon sa Growth Rate ▲",
+      "changeOptions": "Baguhin ang Palagay sa Growth Rate ▼"
+    },
+    "results": {
+      "sectionTitle": "3. Tinantyang Gastos",
+      "monthly": "Buwanang",
+      "annual": "Taunang",
+      "washington": "Washington",
+      "nationalMedian": "Pambansang Median",
+      "perMonth": "kada buwan",
+      "perYear": "kada taon",
+      "totalPlan": "Kabuuan · Planong {{years}}-Taon",
+      "inWashingtonVs": "sa Washington · kumpara sa {{amount}} sa buong bansa",
+      "aboutTheSameAs": "humigit-kumulang kapareho ng",
+      "aboutAbove": "humigit-kumulang {{percent}}% na mas mataas kaysa",
+      "aboutBelow": "humigit-kumulang {{percent}}% na mas mababa kaysa",
+      "theNationalMedian": "pambansang median. {{note}}",
+      "figuresBasedOn": "Ang mga figure ay batay sa CareScout/Genworth Cost of Care Survey at kaugnay na mga source sa industriya. Ang aktwal na gastos ay nag-iiba depende sa rehiyon, provider, at antas ng pangangalaga.",
+      "printButton": "I-print o I-save bilang PDF",
+      "currentlyRunsIn": "sa Washington ay kasalukuyang"
+    },
+    "printSummary": {
+      "title": "Calculator ng Gastos sa Senior Living — Buod ng mga Resulta",
+      "preparedVia": "Inihanda sa pamamagitan ng realpropertyplanning.com noong {{date}}",
+      "careType": "Uri ng Pangangalaga",
+      "careTimeline": "Timeline ng Pangangalaga",
+      "today": "Ngayon: edad {{age}}",
+      "careBeginsToday": "Magsisimula ang pangangalaga: ngayon (edad {{age}}, taong {{year}})",
+      "careBeginsIn": "Magsisimula ang pangangalaga: sa {{years}} taon (edad {{age}}, taong {{year}})",
+      "careEnds": "Magtatapos ang pangangalaga: pagkatapos ng {{years}} {{yearWord}} (edad {{age}})",
+      "costAssumption": "Palagay sa Gastos",
+      "annualGrowth": "Taunang paglago ng gastos: {{rate}}%",
+      "projectedCost": "Tinantyang Gastos",
+      "colWashington": "Washington",
+      "colNational": "Pambansa",
+      "rowPerMonth": "Kada buwan",
+      "rowPerYear": "Kada taon",
+      "rowTotal": "Kabuuan sa {{years}}-taong plano",
+      "footer": "Ang mga figure ay batay sa CareScout/Genworth Cost of Care Survey. Ang aktwal na gastos ay nag-iiba depende sa rehiyon, provider, at antas ng pangangalaga. Ang tool na ito ay para lamang sa pangkalahatang layunin ng pagpaplano. Kagandahang-loob ng Real Property Planning — realpropertyplanning.com."
+    },
+    "whyCostsVary": {
+      "eyebrow": "Mahalagang Konsepto",
+      "heading": "Bakit Mas Mataas ang Gastos sa Washington Kaysa sa Pambansang Average",
+      "paragraph1": "Ang Washington State ay palaging nasa itaas ng pambansang median sa halos lahat ng kategorya ng pangangalaga sa nakatatanda. Ang mas mataas na regional na gastos sa paggawa, isang mapagkumpitensyang job market para sa caregiving, at mas mataas na gastos sa pamumuhay sa mga metropolitan area ay lahat nag-aambag sa agwat na ito.",
+      "paragraph2Before": "Ang Adult Family Home ay kadalasang isang mas abot-kayang alternatibo sa assisted living o nursing home care — sulit na tuklasin sa pamamagitan ng aming",
+      "afhClubLink": "AFH Club"
+    }
   }
 }

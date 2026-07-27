@@ -308,5 +308,144 @@
       "browseListings": "浏览房源",
       "sellYourAfh": "出售您的 AFH"
     }
+  },
+  "costOfCarePage": {
+    "seo": {
+      "title": "护理费用计算器｜华盛顿州长期护理费用",
+      "description": "比较居家护理、辅助生活、失智护理及疗养院在华盛顿州与全国平均水平的费用差异，并提供未来费用预测。"
+    },
+    "hero": {
+      "eyebrow": "长者生活转换 · 护理费用",
+      "heading": "护理费用计算器",
+      "description": "比较华盛顿州长者护理费用与全国平均水平的差异，并查看这些费用未来可能如何增长。"
+    },
+    "careTypes": {
+      "independent-living": {
+        "label": "独立生活社区",
+        "shortLabel": "独立生活",
+        "unit": "每月费用",
+        "note": "此数据来源未提供华盛顿州特定数据——此处显示为全国中位数。独立生活的费用通常低于辅助生活，因为不包含个人护理服务。"
+      },
+      "in-home": {
+        "label": "居家护理（非医疗）",
+        "shortLabel": "居家护理",
+        "unit": "约每周44小时",
+        "note": "华盛顿州平均每小时45美元，而全国中位数约为每小时35美元。"
+      },
+      "adult-day": {
+        "label": "成人日间护理",
+        "shortLabel": "成人日间护理",
+        "unit": "每周5天",
+        "note": "最经济实惠的长期护理选项，提供日间监督与活动安排。"
+      },
+      "adult-family-home": {
+        "label": "成人家庭护理之家",
+        "shortLabel": "成人家庭护理之家",
+        "unit": "每月费用",
+        "note": "通常是比辅助生活更经济实惠、更具家庭氛围的替代方案，提供全天候护理并整合为单一费率。"
+      },
+      "assisted-living": {
+        "label": "辅助生活社区",
+        "shortLabel": "辅助生活",
+        "unit": "每月费用",
+        "note": "华盛顿州费用约高于全国中位数23%。"
+      },
+      "memory-care": {
+        "label": "失智护理",
+        "shortLabel": "失智护理",
+        "unit": "每月费用",
+        "note": "通常比标准辅助生活费率高出约25%。"
+      },
+      "nursing-semi": {
+        "label": "疗养院——半私人房",
+        "shortLabel": "疗养院共用房",
+        "unit": "每月",
+        "note": "华盛顿州费用约高于全国中位数37%。"
+      },
+      "nursing-private": {
+        "label": "疗养院——私人房",
+        "shortLabel": "疗养院私人房",
+        "unit": "每月",
+        "note": "私人房费用高于半私人房。"
+      },
+      "ccrc": {
+        "label": "持续护理退休社区（CCRC）",
+        "shortLabel": "CCRC／终身护理计划",
+        "unit": "每月服务费",
+        "note": "CCRC 通常还需要另外支付一次性入住费——全国常见金额为40万美元或更高。"
+      }
+    },
+    "inflationPresets": {
+      "conservative": "保守",
+      "average": "平均",
+      "aggressive": "积极"
+    },
+    "card1": {
+      "sectionTitle": "1. 选择护理类型"
+    },
+    "card2": {
+      "sectionTitle": "2. 您的护理计划",
+      "currentAge": "目前年龄",
+      "yrsOld": "岁",
+      "decreaseAge": "减少年龄",
+      "increaseAge": "增加年龄",
+      "whenMightCareBegin": "护理可能何时开始？",
+      "now": "现在",
+      "yrs": "年后",
+      "howManyYears": "需要多少年的护理？",
+      "decreaseYears": "减少护理年数",
+      "increaseYears": "增加护理年数",
+      "year": "年",
+      "years": "年"
+    },
+    "inflationCard": {
+      "assumptionText": "此估算假设长期护理费用每年约增长 {{rate}}%，与近期历史趋势相符。",
+      "hideOptions": "隐藏增长率选项 ▲",
+      "changeOptions": "更改增长率假设 ▼"
+    },
+    "results": {
+      "sectionTitle": "3. 预估费用",
+      "monthly": "每月",
+      "annual": "每年",
+      "washington": "华盛顿州",
+      "nationalMedian": "全国中位数",
+      "perMonth": "每月",
+      "perYear": "每年",
+      "totalPlan": "总计 · {{years}} 年计划",
+      "inWashingtonVs": "华盛顿州 · 相较全国 {{amount}}",
+      "aboutTheSameAs": "大致相同于",
+      "aboutAbove": "约高出 {{percent}}%",
+      "aboutBelow": "约低 {{percent}}%",
+      "theNationalMedian": "全国中位数。{{note}}",
+      "figuresBasedOn": "数据依据 CareScout／Genworth 护理费用调查及相关行业来源。实际费用因地区、服务提供者及护理等级而异。",
+      "printButton": "打印或另存为 PDF",
+      "currentlyRunsIn": "在华盛顿州目前的费用"
+    },
+    "printSummary": {
+      "title": "长者生活费用计算器——结果摘要",
+      "preparedVia": "通过 realpropertyplanning.com 于 {{date}} 制作",
+      "careType": "护理类型",
+      "careTimeline": "护理时间线",
+      "today": "今天：{{age}} 岁",
+      "careBeginsToday": "护理开始：今天（{{age}} 岁，{{year}} 年）",
+      "careBeginsIn": "护理开始：{{years}} 年后（{{age}} 岁，{{year}} 年）",
+      "careEnds": "护理结束：{{years}} {{yearWord}}后（{{age}} 岁）",
+      "costAssumption": "费用假设",
+      "annualGrowth": "年度费用增长：{{rate}}%",
+      "projectedCost": "预估费用",
+      "colWashington": "华盛顿州",
+      "colNational": "全国",
+      "rowPerMonth": "每月",
+      "rowPerYear": "每年",
+      "rowTotal": "{{years}} 年计划总计",
+      "footer": "数据依据 CareScout／Genworth 护理费用调查。实际费用因地区、服务提供者及护理等级而异。本工具仅供一般规划用途使用。由 Real Property Planning 提供——realpropertyplanning.com。"
+    },
+    "whyCostsVary": {
+      "eyebrow": "重点概念",
+      "heading": "为何华盛顿州的费用高于全国平均水平",
+      "paragraph1": "华盛顿州在几乎所有长者护理类别中，费用皆持续高于全国中位数。较高的地区劳动成本、竞争激烈的护理人力市场，以及都会区较高的生活成本，都是造成此差距的原因。",
+      "paragraph2Before": "成人家庭护理之家通常是比辅助生活或疗养院护理更经济实惠的替代方案——值得通过我们的",
+      "afhClubLink": "AFH Club"
+    }
   }
 }

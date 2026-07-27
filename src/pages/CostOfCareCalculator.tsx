@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Printer } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -10,7 +11,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import {
   CARE_TYPES,
   CARE_TYPE_COLORS,
-  SHORT_CARE_LABELS,
   INFLATION_PRESETS,
   YEARS_OUT_OPTIONS,
   YEARS_OF_CARE_OPTIONS,
@@ -114,6 +114,7 @@ const pillBtn = (active: boolean, color: string): React.CSSProperties => ({
 });
 
 const CostOfCareCalculator = () => {
+  const { t } = useTranslation();
   const [searchParams] = useSearchParams();
   const [careTypeId, setCareTypeId] = useState<string>(() => {
     const requested = searchParams.get("care");
@@ -152,8 +153,8 @@ const CostOfCareCalculator = () => {
   return (
     <>
       <SEOHead
-        title="Cost of Care Calculator | Washington State Long-Term Care Costs"
-        description="Compare the cost of in-home care, assisted living, memory care, and nursing homes in Washington State versus national averages, with future cost projections."
+        title={t("costOfCarePage.seo.title")}
+        description={t("costOfCarePage.seo.description")}
         canonical="https://realpropertyplanning.com/cost-of-care-calculator"
       />
       <BreadcrumbSchema
@@ -178,7 +179,7 @@ const CostOfCareCalculator = () => {
                 margin: "0 0 12px",
               }}
             >
-              Senior Transitions · Cost of Care
+              {t("costOfCarePage.hero.eyebrow")}
             </p>
             <h1
               style={{
@@ -190,7 +191,7 @@ const CostOfCareCalculator = () => {
                 margin: "0 0 20px",
               }}
             >
-              Cost of Care Calculator
+              {t("costOfCarePage.hero.heading")}
             </h1>
             <p
               style={{
@@ -202,8 +203,7 @@ const CostOfCareCalculator = () => {
                 maxWidth: 680,
               }}
             >
-              Compare the cost of senior care in Washington State against national averages, and see how those costs may
-              grow over time.
+              {t("costOfCarePage.hero.description")}
             </p>
           </div>
         </section>
@@ -217,7 +217,7 @@ const CostOfCareCalculator = () => {
             {/* Card 1: Care type */}
             <div style={card}>
               <div style={sectionLabel(TEAL)} className="coc-section-title">
-                1. Select Type of Care
+                {t("costOfCarePage.card1.sectionTitle")}
                 <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
               </div>
               <div
@@ -251,7 +251,7 @@ const CostOfCareCalculator = () => {
                         transition: "all .15s ease",
                       }}
                     >
-                      {SHORT_CARE_LABELS[c.id] ?? c.label}
+                      {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
                     </button>
                   );
                 })}
@@ -261,17 +261,17 @@ const CostOfCareCalculator = () => {
             {/* Card 2: Your plan */}
             <div style={card}>
               <div style={sectionLabel(TEAL)} className="coc-section-title">
-                2. Your Care Plan
+                {t("costOfCarePage.card2.sectionTitle")}
                 <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
               </div>
 
               <div style={{ marginBottom: 18 }}>
-                <label style={fieldLabel}>Current Age</label>
+                <label style={fieldLabel}>{t("costOfCarePage.card2.currentAge")}</label>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <button
                     onClick={() => setCurrentAge((a) => Math.max(18, a - 1))}
                     style={stepperBtn}
-                    aria-label="Decrease age"
+                    aria-label={t("costOfCarePage.card2.decreaseAge")}
                   >
                     −
                   </button>
@@ -311,13 +311,13 @@ const CostOfCareCalculator = () => {
                         textTransform: "uppercase",
                       }}
                     >
-                      yrs old
+                      {t("costOfCarePage.card2.yrsOld")}
                     </span>
                   </div>
                   <button
                     onClick={() => setCurrentAge((a) => Math.min(105, a + 1))}
                     style={stepperBtn}
-                    aria-label="Increase age"
+                    aria-label={t("costOfCarePage.card2.increaseAge")}
                   >
                     +
                   </button>
@@ -325,7 +325,7 @@ const CostOfCareCalculator = () => {
               </div>
 
               <div style={{ marginBottom: 18 }}>
-                <label style={fieldLabel}>When Might Care Begin?</label>
+                <label style={fieldLabel}>{t("costOfCarePage.card2.whenMightCareBegin")}</label>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {YEARS_OUT_OPTIONS.map((y) => (
                     <button
@@ -334,19 +334,19 @@ const CostOfCareCalculator = () => {
                       aria-pressed={y === yearsOut}
                       style={{ ...pillBtn(y === yearsOut, TEAL), flex: "1 1 80px" }}
                     >
-                      {y === 0 ? "Now" : `${y} yrs`}
+                      {y === 0 ? t("costOfCarePage.card2.now") : `${y} ${t("costOfCarePage.card2.yrs")}`}
                     </button>
                   ))}
                 </div>
               </div>
 
               <div>
-                <label style={fieldLabel}>How Many Years of Care?</label>
+                <label style={fieldLabel}>{t("costOfCarePage.card2.howManyYears")}</label>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <button
                     onClick={() => setYearsOfCareNeeded((y) => Math.max(1, y - 1))}
                     style={stepperBtn}
-                    aria-label="Decrease years of care"
+                    aria-label={t("costOfCarePage.card2.decreaseYears")}
                   >
                     −
                   </button>
@@ -381,13 +381,13 @@ const CostOfCareCalculator = () => {
                         textTransform: "uppercase",
                       }}
                     >
-                      {yearsOfCareNeeded === 1 ? "year" : "years"}
+                      {yearsOfCareNeeded === 1 ? t("costOfCarePage.card2.year") : t("costOfCarePage.card2.years")}
                     </span>
                   </div>
                   <button
                     onClick={() => setYearsOfCareNeeded((y) => Math.min(10, y + 1))}
                     style={stepperBtn}
-                    aria-label="Increase years of care"
+                    aria-label={t("costOfCarePage.card2.increaseYears")}
                   >
                     +
                   </button>
@@ -407,8 +407,7 @@ const CostOfCareCalculator = () => {
                   fontWeight: 600,
                 }}
               >
-                This estimate assumes long-term care costs rise about <strong>{inflationRate}% a year</strong>, in line
-                with recent historical trends.
+                {t("costOfCarePage.inflationCard.assumptionText", { rate: inflationRate })}
               </p>
               <button
                 onClick={() => setShowInflationAdjust((s) => !s)}
@@ -428,7 +427,9 @@ const CostOfCareCalculator = () => {
                   cursor: "pointer",
                 }}
               >
-                {showInflationAdjust ? "Hide Growth Rate Options ▲" : "Change Growth Rate Assumption ▼"}
+                {showInflationAdjust
+                  ? t("costOfCarePage.inflationCard.hideOptions")
+                  : t("costOfCarePage.inflationCard.changeOptions")}
               </button>
               {showInflationAdjust && (
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 16 }}>
@@ -444,7 +445,7 @@ const CostOfCareCalculator = () => {
                         padding: "12px 14px",
                       }}
                     >
-                      {p.label} ({p.value}%)
+                      {t(`costOfCarePage.inflationPresets.${p.id}`)} ({p.value}%)
                     </button>
                   ))}
                 </div>
@@ -455,7 +456,7 @@ const CostOfCareCalculator = () => {
             <div style={card}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
                 <div style={sectionLabel(TEAL)} className="coc-section-title">
-                  3. Estimated Cost
+                  {t("costOfCarePage.results.sectionTitle")}
                 </div>
                 <div style={{ display: "flex", gap: 6 }}>
                   <button
@@ -463,14 +464,14 @@ const CostOfCareCalculator = () => {
                     aria-pressed={unit === "monthly"}
                     style={pillBtn(unit === "monthly", TEAL)}
                   >
-                    Monthly
+                    {t("costOfCarePage.results.monthly")}
                   </button>
                   <button
                     onClick={() => setUnit("annual")}
                     aria-pressed={unit === "annual"}
                     style={pillBtn(unit === "annual", TEAL)}
                   >
-                    Annual
+                    {t("costOfCarePage.results.annual")}
                   </button>
                 </div>
               </div>
@@ -499,7 +500,7 @@ const CostOfCareCalculator = () => {
                       marginBottom: 6,
                     }}
                   >
-                    Washington
+                    {t("costOfCarePage.results.washington")}
                   </div>
                   <div
                     style={{
@@ -517,7 +518,7 @@ const CostOfCareCalculator = () => {
                   <div
                     style={{ fontSize: "16px", fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif" }}
                   >
-                    per {unit === "monthly" ? "month" : "year"}
+                    {unit === "monthly" ? t("costOfCarePage.results.perMonth") : t("costOfCarePage.results.perYear")}
                   </div>
                 </div>
                 <div
@@ -540,7 +541,7 @@ const CostOfCareCalculator = () => {
                       marginBottom: 6,
                     }}
                   >
-                    National Median
+                    {t("costOfCarePage.results.nationalMedian")}
                   </div>
                   <div
                     style={{
@@ -558,7 +559,7 @@ const CostOfCareCalculator = () => {
                   <div
                     style={{ fontSize: "16px", fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif" }}
                   >
-                    per {unit === "monthly" ? "month" : "year"}
+                    {unit === "monthly" ? t("costOfCarePage.results.perMonth") : t("costOfCarePage.results.perYear")}
                   </div>
                 </div>
               </div>
@@ -584,7 +585,7 @@ const CostOfCareCalculator = () => {
                     marginBottom: 6,
                   }}
                 >
-                  Total · {yearsOfCareNeeded}-Year Plan
+                  {t("costOfCarePage.results.totalPlan", { years: yearsOfCareNeeded })}
                 </div>
                 <div
                   style={{
@@ -605,7 +606,7 @@ const CostOfCareCalculator = () => {
                     marginTop: 4,
                   }}
                 >
-                  in Washington · vs. <AnimatedValue value={totalNationalCost} formatter={formatCurrency} /> nationally
+                  {t("costOfCarePage.results.inWashingtonVs", { amount: formatCurrency(totalNationalCost) })}
                 </div>
               </div>
 
@@ -629,15 +630,18 @@ const CostOfCareCalculator = () => {
                     margin: 0,
                   }}
                 >
-                  <strong style={{ color: TEAL }}>{careType.label}</strong> in Washington currently runs{" "}
+                  <strong style={{ color: TEAL }}>{t(`costOfCarePage.careTypes.${careType.id}.label`)}</strong>{" "}
+                  {t("costOfCarePage.results.currentlyRunsIn")}{" "}
                   <strong>
                     {percentAboveNational === 0
-                      ? "about the same as"
+                      ? t("costOfCarePage.results.aboutTheSameAs")
                       : percentAboveNational > 0
-                        ? `about ${percentAboveNational}% above`
-                        : `about ${Math.abs(percentAboveNational)}% below`}
+                        ? t("costOfCarePage.results.aboutAbove", { percent: percentAboveNational })
+                        : t("costOfCarePage.results.aboutBelow", { percent: Math.abs(percentAboveNational) })}
                   </strong>{" "}
-                  the national median. {careType.note}
+                  {t("costOfCarePage.results.theNationalMedian", {
+                    note: t(`costOfCarePage.careTypes.${careType.id}.note`),
+                  })}
                 </p>
               </div>
 
@@ -651,8 +655,7 @@ const CostOfCareCalculator = () => {
                   margin: "14px 0 0",
                 }}
               >
-                Figures based on the CareScout/Genworth Cost of Care Survey and related industry sources. Actual costs
-                vary by region, provider, and level of care.
+                {t("costOfCarePage.results.figuresBasedOn")}
               </p>
 
               {/* Print button */}
@@ -675,7 +678,7 @@ const CostOfCareCalculator = () => {
                   }}
                 >
                   <Printer size={18} />
-                  Print or Save as PDF
+                  {t("costOfCarePage.results.printButton")}
                 </button>
               </div>
             </div>
@@ -699,11 +702,12 @@ const CostOfCareCalculator = () => {
         {/* Print-only summary */}
         <div className="coc-print-summary" style={{ padding: "24px" }}>
           <h2 style={{ fontSize: "22px", margin: "0 0 4px", color: "#111" }}>
-            Senior Living Cost Calculator — Results Summary
+            {t("costOfCarePage.printSummary.title")}
           </h2>
           <p style={{ fontSize: "12px", color: "#555", margin: "0 0 18px" }}>
-            Prepared via realpropertyplanning.com on{" "}
-            {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+            {t("costOfCarePage.printSummary.preparedVia", {
+              date: new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
+            })}
           </p>
           <h3
             style={{
@@ -714,9 +718,9 @@ const CostOfCareCalculator = () => {
               paddingBottom: 4,
             }}
           >
-            Care Type
+            {t("costOfCarePage.printSummary.careType")}
           </h3>
-          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>{careType.label}</p>
+          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>{t(`costOfCarePage.careTypes.${careType.id}.label`)}</p>
           <h3
             style={{
               fontSize: "16px",
@@ -726,15 +730,30 @@ const CostOfCareCalculator = () => {
               paddingBottom: 4,
             }}
           >
-            Care Timeline
+            {t("costOfCarePage.printSummary.careTimeline")}
           </h3>
-          <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>Today: age {currentAge}</p>
           <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>
-            Care begins: {yearsOut === 0 ? "today" : `in ${yearsOut} years`} (age {ageAtCareStart}, year{" "}
-            {currentYear + yearsOut})
+            {t("costOfCarePage.printSummary.today", { age: currentAge })}
+          </p>
+          <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>
+            {yearsOut === 0
+              ? t("costOfCarePage.printSummary.careBeginsToday", {
+                  age: ageAtCareStart,
+                  year: currentYear + yearsOut,
+                })
+              : t("costOfCarePage.printSummary.careBeginsIn", {
+                  years: yearsOut,
+                  age: ageAtCareStart,
+                  year: currentYear + yearsOut,
+                })}
           </p>
           <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
-            Care ends: after {yearsOfCareNeeded} {yearsOfCareNeeded === 1 ? "year" : "years"} (age {ageAtCareEnd})
+            {t("costOfCarePage.printSummary.careEnds", {
+              years: yearsOfCareNeeded,
+              yearWord:
+                yearsOfCareNeeded === 1 ? t("costOfCarePage.card2.year") : t("costOfCarePage.card2.years"),
+              age: ageAtCareEnd,
+            })}
           </p>
           <h3
             style={{
@@ -745,9 +764,11 @@ const CostOfCareCalculator = () => {
               paddingBottom: 4,
             }}
           >
-            Cost Assumption
+            {t("costOfCarePage.printSummary.costAssumption")}
           </h3>
-          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>Annual cost growth: {inflationRate}%</p>
+          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
+            {t("costOfCarePage.printSummary.annualGrowth", { rate: inflationRate })}
+          </p>
           <h3
             style={{
               fontSize: "16px",
@@ -757,7 +778,7 @@ const CostOfCareCalculator = () => {
               paddingBottom: 4,
             }}
           >
-            Projected Cost
+            {t("costOfCarePage.printSummary.projectedCost")}
           </h3>
           <table
             style={{ width: "100%", fontSize: "14px", color: "#222", borderCollapse: "collapse", marginBottom: 8 }}
@@ -765,23 +786,29 @@ const CostOfCareCalculator = () => {
             <thead>
               <tr>
                 <th style={{ textAlign: "left", borderBottom: "1px solid #999", paddingBottom: 4 }}></th>
-                <th style={{ textAlign: "right", borderBottom: "1px solid #999", paddingBottom: 4 }}>Washington</th>
-                <th style={{ textAlign: "right", borderBottom: "1px solid #999", paddingBottom: 4 }}>National</th>
+                <th style={{ textAlign: "right", borderBottom: "1px solid #999", paddingBottom: 4 }}>
+                  {t("costOfCarePage.printSummary.colWashington")}
+                </th>
+                <th style={{ textAlign: "right", borderBottom: "1px solid #999", paddingBottom: 4 }}>
+                  {t("costOfCarePage.printSummary.colNational")}
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style={{ padding: "4px 0" }}>Per month</td>
+                <td style={{ padding: "4px 0" }}>{t("costOfCarePage.printSummary.rowPerMonth")}</td>
                 <td style={{ textAlign: "right" }}>{formatCurrency(projectedWaMonthly)}</td>
                 <td style={{ textAlign: "right" }}>{formatCurrency(projectedNationalMonthly)}</td>
               </tr>
               <tr>
-                <td style={{ padding: "4px 0" }}>Per year</td>
+                <td style={{ padding: "4px 0" }}>{t("costOfCarePage.printSummary.rowPerYear")}</td>
                 <td style={{ textAlign: "right" }}>{formatCurrency(projectedWaAnnual)}</td>
                 <td style={{ textAlign: "right" }}>{formatCurrency(projectedNationalAnnual)}</td>
               </tr>
               <tr>
-                <td style={{ padding: "4px 0", fontWeight: 700 }}>Total over {yearsOfCareNeeded}-year plan</td>
+                <td style={{ padding: "4px 0", fontWeight: 700 }}>
+                  {t("costOfCarePage.printSummary.rowTotal", { years: yearsOfCareNeeded })}
+                </td>
                 <td style={{ textAlign: "right", fontWeight: 700 }}>{formatCurrency(totalWaCost)}</td>
                 <td style={{ textAlign: "right", fontWeight: 700 }}>{formatCurrency(totalNationalCost)}</td>
               </tr>
@@ -790,9 +817,7 @@ const CostOfCareCalculator = () => {
           <p
             style={{ fontSize: "11px", color: "#777", margin: "20px 0 0", borderTop: "1px solid #ccc", paddingTop: 8 }}
           >
-            Figures based on the CareScout/Genworth Cost of Care Survey. Actual costs vary by region, provider, and
-            level of care. This tool is for general planning purposes only. Courtesy of Real Property Planning —
-            realpropertyplanning.com.
+            {t("costOfCarePage.printSummary.footer")}
           </p>
         </div>
 
@@ -810,7 +835,7 @@ const CostOfCareCalculator = () => {
                 margin: "0 0 14px",
               }}
             >
-              Key Concept
+              {t("costOfCarePage.whyCostsVary.eyebrow")}
             </p>
             <h2
               style={{
@@ -822,7 +847,7 @@ const CostOfCareCalculator = () => {
                 margin: "0 0 20px",
               }}
             >
-              Why Washington Costs More Than the National Average
+              {t("costOfCarePage.whyCostsVary.heading")}
             </h2>
             <div
               style={{
@@ -844,9 +869,7 @@ const CostOfCareCalculator = () => {
                 margin: "0 0 20px",
               }}
             >
-              Washington State consistently ranks above the national median across nearly every category of senior care.
-              Higher regional labor costs, a competitive caregiving job market, and higher costs of living in
-              metropolitan areas all contribute to this gap.
+              {t("costOfCarePage.whyCostsVary.paragraph1")}
             </p>
             <p
               style={{
@@ -857,10 +880,9 @@ const CostOfCareCalculator = () => {
                 margin: 0,
               }}
             >
-              An Adult Family Home is frequently a more affordable alternative to assisted living or nursing home care —
-              worth exploring through our{" "}
+              {t("costOfCarePage.whyCostsVary.paragraph2Before")}{" "}
               <Link to="/afh-club" style={{ color: "#9e2c35" }}>
-                AFH Club
+                {t("costOfCarePage.whyCostsVary.afhClubLink")}
               </Link>
               .
             </p>

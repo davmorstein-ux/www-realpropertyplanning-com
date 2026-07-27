@@ -308,5 +308,144 @@
       "browseListings": "Browse listings",
       "sellYourAfh": "Sell Your AFH"
     }
+  },
+  "costOfCarePage": {
+    "seo": {
+      "title": "Cost of Care Calculator | Washington State Long-Term Care Costs",
+      "description": "Compare the cost of in-home care, assisted living, memory care, and nursing homes in Washington State versus national averages, with future cost projections."
+    },
+    "hero": {
+      "eyebrow": "Senior Transitions · Cost of Care",
+      "heading": "Cost of Care Calculator",
+      "description": "Compare the cost of senior care in Washington State against national averages, and see how those costs may grow over time."
+    },
+    "careTypes": {
+      "independent-living": {
+        "label": "Independent Living Community",
+        "shortLabel": "Independent Living",
+        "unit": "monthly fee",
+        "note": "Washington-specific figures aren't available from this source — shown here is the national median. Independent living generally costs less than assisted living since it doesn't include personal care services."
+      },
+      "in-home": {
+        "label": "In-Home Care (Non-Medical)",
+        "shortLabel": "In-Home Care",
+        "unit": "~44 hrs/week",
+        "note": "Washington averages $45/hour versus the national median of about $35/hour."
+      },
+      "adult-day": {
+        "label": "Adult Day Care",
+        "shortLabel": "Adult Day Care",
+        "unit": "5 days/week",
+        "note": "The most affordable long-term care option, providing daytime supervision and activities."
+      },
+      "adult-family-home": {
+        "label": "Adult Family Home",
+        "shortLabel": "Adult Family Home",
+        "unit": "monthly fee",
+        "note": "Often a more affordable, home-like alternative to assisted living, with 24/7 care bundled into one rate."
+      },
+      "assisted-living": {
+        "label": "Assisted Living Community",
+        "shortLabel": "Assisted Living",
+        "unit": "monthly fee",
+        "note": "Washington runs about 23% above the national median."
+      },
+      "memory-care": {
+        "label": "Memory Care",
+        "shortLabel": "Memory Care",
+        "unit": "monthly fee",
+        "note": "Typically runs about 25% above standard assisted living rates."
+      },
+      "nursing-semi": {
+        "label": "Nursing Home — Semi-Private",
+        "shortLabel": "Nursing Home Shared Room",
+        "unit": "monthly",
+        "note": "Washington runs about 37% above the national median."
+      },
+      "nursing-private": {
+        "label": "Nursing Home — Private Room",
+        "shortLabel": "Nursing Home Private Room",
+        "unit": "monthly",
+        "note": "Private rooms carry a premium over semi-private accommodations."
+      },
+      "ccrc": {
+        "label": "CCRC",
+        "shortLabel": "CCRC / Life Plan",
+        "unit": "monthly service fee",
+        "note": "CCRCs also require a separate one-time entrance fee — commonly $400,000 or more nationally."
+      }
+    },
+    "inflationPresets": {
+      "conservative": "Conservative",
+      "average": "Average",
+      "aggressive": "Aggressive"
+    },
+    "card1": {
+      "sectionTitle": "1. Select Type of Care"
+    },
+    "card2": {
+      "sectionTitle": "2. Your Care Plan",
+      "currentAge": "Current Age",
+      "yrsOld": "yrs old",
+      "decreaseAge": "Decrease age",
+      "increaseAge": "Increase age",
+      "whenMightCareBegin": "When Might Care Begin?",
+      "now": "Now",
+      "yrs": "yrs",
+      "howManyYears": "How Many Years of Care?",
+      "decreaseYears": "Decrease years of care",
+      "increaseYears": "Increase years of care",
+      "year": "year",
+      "years": "years"
+    },
+    "inflationCard": {
+      "assumptionText": "This estimate assumes long-term care costs rise about {{rate}}% a year, in line with recent historical trends.",
+      "hideOptions": "Hide Growth Rate Options ▲",
+      "changeOptions": "Change Growth Rate Assumption ▼"
+    },
+    "results": {
+      "sectionTitle": "3. Estimated Cost",
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "washington": "Washington",
+      "nationalMedian": "National Median",
+      "perMonth": "per month",
+      "perYear": "per year",
+      "totalPlan": "Total · {{years}}-Year Plan",
+      "inWashingtonVs": "in Washington · vs. {{amount}} nationally",
+      "aboutTheSameAs": "about the same as",
+      "aboutAbove": "about {{percent}}% above",
+      "aboutBelow": "about {{percent}}% below",
+      "theNationalMedian": "the national median. {{note}}",
+      "figuresBasedOn": "Figures based on the CareScout/Genworth Cost of Care Survey and related industry sources. Actual costs vary by region, provider, and level of care.",
+      "printButton": "Print or Save as PDF",
+      "currentlyRunsIn": "in Washington currently runs"
+    },
+    "printSummary": {
+      "title": "Senior Living Cost Calculator — Results Summary",
+      "preparedVia": "Prepared via realpropertyplanning.com on {{date}}",
+      "careType": "Care Type",
+      "careTimeline": "Care Timeline",
+      "today": "Today: age {{age}}",
+      "careBeginsToday": "Care begins: today (age {{age}}, year {{year}})",
+      "careBeginsIn": "Care begins: in {{years}} years (age {{age}}, year {{year}})",
+      "careEnds": "Care ends: after {{years}} {{yearWord}} (age {{age}})",
+      "costAssumption": "Cost Assumption",
+      "annualGrowth": "Annual cost growth: {{rate}}%",
+      "projectedCost": "Projected Cost",
+      "colWashington": "Washington",
+      "colNational": "National",
+      "rowPerMonth": "Per month",
+      "rowPerYear": "Per year",
+      "rowTotal": "Total over {{years}}-year plan",
+      "footer": "Figures based on the CareScout/Genworth Cost of Care Survey. Actual costs vary by region, provider, and level of care. This tool is for general planning purposes only. Courtesy of Real Property Planning — realpropertyplanning.com."
+    },
+    "whyCostsVary": {
+      "eyebrow": "Key Concept",
+      "heading": "Why Washington Costs More Than the National Average",
+      "paragraph1": "Washington State consistently ranks above the national median across nearly every category of senior care. Higher regional labor costs, a competitive caregiving job market, and higher costs of living in metropolitan areas all contribute to this gap.",
+      "paragraph2Before": "An Adult Family Home is frequently a more affordable alternative to assisted living or nursing home care — worth exploring through our",
+      "afhClubLink": "AFH Club"
+    }
   }
 }

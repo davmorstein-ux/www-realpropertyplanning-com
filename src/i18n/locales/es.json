@@ -308,5 +308,144 @@
       "browseListings": "Ver listados",
       "sellYourAfh": "Venda su AFH"
     }
+  },
+  "costOfCarePage": {
+    "seo": {
+      "title": "Calculadora de Costo de Cuidado | Costos de Cuidado a Largo Plazo en Washington",
+      "description": "Compare el costo del cuidado en el hogar, la vida asistida, el cuidado de la memoria y los hogares de ancianos en el Estado de Washington frente a los promedios nacionales, con proyecciones de costos futuros."
+    },
+    "hero": {
+      "eyebrow": "Transiciones de Personas Mayores · Costo del Cuidado",
+      "heading": "Calculadora de Costo de Cuidado",
+      "description": "Compare el costo del cuidado de personas mayores en el Estado de Washington frente a los promedios nacionales, y vea cómo esos costos pueden aumentar con el tiempo."
+    },
+    "careTypes": {
+      "independent-living": {
+        "label": "Comunidad de Vida Independiente",
+        "shortLabel": "Vida Independiente",
+        "unit": "tarifa mensual",
+        "note": "No hay cifras específicas de Washington disponibles de esta fuente — se muestra aquí la mediana nacional. La vida independiente generalmente cuesta menos que la vida asistida ya que no incluye servicios de cuidado personal."
+      },
+      "in-home": {
+        "label": "Cuidado en el Hogar (No Médico)",
+        "shortLabel": "Cuidado en el Hogar",
+        "unit": "~44 hrs/semana",
+        "note": "Washington promedia $45/hora frente a la mediana nacional de aproximadamente $35/hora."
+      },
+      "adult-day": {
+        "label": "Cuidado Diurno para Adultos",
+        "shortLabel": "Cuidado Diurno para Adultos",
+        "unit": "5 días/semana",
+        "note": "La opción de cuidado a largo plazo más asequible, que proporciona supervisión diurna y actividades."
+      },
+      "adult-family-home": {
+        "label": "Hogar Familiar para Adultos",
+        "shortLabel": "Hogar Familiar para Adultos",
+        "unit": "tarifa mensual",
+        "note": "A menudo una alternativa más asequible y hogareña a la vida asistida, con cuidado las 24 horas incluido en una sola tarifa."
+      },
+      "assisted-living": {
+        "label": "Comunidad de Vida Asistida",
+        "shortLabel": "Vida Asistida",
+        "unit": "tarifa mensual",
+        "note": "Washington está aproximadamente un 23% por encima de la mediana nacional."
+      },
+      "memory-care": {
+        "label": "Cuidado de la Memoria",
+        "shortLabel": "Cuidado de la Memoria",
+        "unit": "tarifa mensual",
+        "note": "Generalmente cuesta alrededor de un 25% más que las tarifas estándar de vida asistida."
+      },
+      "nursing-semi": {
+        "label": "Hogar de Ancianos — Habitación Semi-Privada",
+        "shortLabel": "Hogar de Ancianos Habitación Compartida",
+        "unit": "mensual",
+        "note": "Washington está aproximadamente un 37% por encima de la mediana nacional."
+      },
+      "nursing-private": {
+        "label": "Hogar de Ancianos — Habitación Privada",
+        "shortLabel": "Hogar de Ancianos Habitación Privada",
+        "unit": "mensual",
+        "note": "Las habitaciones privadas tienen un costo adicional en comparación con las habitaciones semi-privadas."
+      },
+      "ccrc": {
+        "label": "CCRC",
+        "shortLabel": "CCRC / Plan de Vida",
+        "unit": "tarifa de servicio mensual",
+        "note": "Los CCRC también requieren una tarifa de entrada única separada — comúnmente $400,000 o más a nivel nacional."
+      }
+    },
+    "inflationPresets": {
+      "conservative": "Conservador",
+      "average": "Promedio",
+      "aggressive": "Agresivo"
+    },
+    "card1": {
+      "sectionTitle": "1. Seleccione el Tipo de Cuidado"
+    },
+    "card2": {
+      "sectionTitle": "2. Su Plan de Cuidado",
+      "currentAge": "Edad Actual",
+      "yrsOld": "años",
+      "decreaseAge": "Disminuir edad",
+      "increaseAge": "Aumentar edad",
+      "whenMightCareBegin": "¿Cuándo Podría Comenzar el Cuidado?",
+      "now": "Ahora",
+      "yrs": "años",
+      "howManyYears": "¿Cuántos Años de Cuidado?",
+      "decreaseYears": "Disminuir años de cuidado",
+      "increaseYears": "Aumentar años de cuidado",
+      "year": "año",
+      "years": "años"
+    },
+    "inflationCard": {
+      "assumptionText": "Esta estimación asume que los costos de cuidado a largo plazo aumentan aproximadamente un {{rate}}% al año, en línea con las tendencias históricas recientes.",
+      "hideOptions": "Ocultar Opciones de Tasa de Crecimiento ▲",
+      "changeOptions": "Cambiar Suposición de Tasa de Crecimiento ▼"
+    },
+    "results": {
+      "sectionTitle": "3. Costo Estimado",
+      "monthly": "Mensual",
+      "annual": "Anual",
+      "washington": "Washington",
+      "nationalMedian": "Mediana Nacional",
+      "perMonth": "por mes",
+      "perYear": "por año",
+      "totalPlan": "Total · Plan de {{years}} Años",
+      "inWashingtonVs": "en Washington · vs. {{amount}} a nivel nacional",
+      "aboutTheSameAs": "aproximadamente igual a",
+      "aboutAbove": "aproximadamente {{percent}}% por encima de",
+      "aboutBelow": "aproximadamente {{percent}}% por debajo de",
+      "theNationalMedian": "la mediana nacional. {{note}}",
+      "figuresBasedOn": "Cifras basadas en la Encuesta de Costo de Cuidado de CareScout/Genworth y fuentes relacionadas de la industria. Los costos reales varían según la región, el proveedor y el nivel de cuidado.",
+      "printButton": "Imprimir o Guardar como PDF",
+      "currentlyRunsIn": "en Washington actualmente cuesta"
+    },
+    "printSummary": {
+      "title": "Calculadora de Costo de Vivienda para Personas Mayores — Resumen de Resultados",
+      "preparedVia": "Preparado a través de realpropertyplanning.com el {{date}}",
+      "careType": "Tipo de Cuidado",
+      "careTimeline": "Cronología del Cuidado",
+      "today": "Hoy: edad {{age}}",
+      "careBeginsToday": "El cuidado comienza: hoy (edad {{age}}, año {{year}})",
+      "careBeginsIn": "El cuidado comienza: en {{years}} años (edad {{age}}, año {{year}})",
+      "careEnds": "El cuidado termina: después de {{years}} {{yearWord}} (edad {{age}})",
+      "costAssumption": "Suposición de Costo",
+      "annualGrowth": "Crecimiento anual del costo: {{rate}}%",
+      "projectedCost": "Costo Proyectado",
+      "colWashington": "Washington",
+      "colNational": "Nacional",
+      "rowPerMonth": "Por mes",
+      "rowPerYear": "Por año",
+      "rowTotal": "Total durante el plan de {{years}} años",
+      "footer": "Cifras basadas en la Encuesta de Costo de Cuidado de CareScout/Genworth. Los costos reales varían según la región, el proveedor y el nivel de cuidado. Esta herramienta es solo para fines de planificación general. Cortesía de Real Property Planning — realpropertyplanning.com."
+    },
+    "whyCostsVary": {
+      "eyebrow": "Concepto Clave",
+      "heading": "Por Qué Washington Cuesta Más que el Promedio Nacional",
+      "paragraph1": "El Estado de Washington consistentemente se clasifica por encima de la mediana nacional en casi todas las categorías de cuidado de personas mayores. Los costos laborales regionales más altos, un mercado laboral de cuidado competitivo y los costos de vida más altos en áreas metropolitanas contribuyen a esta brecha.",
+      "paragraph2Before": "Un Hogar Familiar para Adultos es frecuentemente una alternativa más asequible a la vida asistida o el cuidado en hogares de ancianos — vale la pena explorarlo a través de nuestro",
+      "afhClubLink": "AFH Club"
+    }
   }
 }
