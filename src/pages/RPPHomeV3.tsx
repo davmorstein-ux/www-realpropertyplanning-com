@@ -181,6 +181,7 @@ const RPPHomeV3 = () => {
                   borderRadius: 8,
                   textDecoration: "none",
                   boxShadow: "0 4px 14px rgba(0,0,0,0.18)",
+                  ["--marquee-color" as string]: "#ffffff",
                 }}
               >
                 Connect with a Specialist in Our Network
