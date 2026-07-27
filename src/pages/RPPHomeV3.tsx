@@ -11,7 +11,7 @@ import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageFAQ from "@/components/HomepageFAQ";
 
 const tileMeta = [
-  { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#EF820D", imgSrc: tilePlanning },
+  { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#D97706", imgSrc: tilePlanning },
   { key: "helpingParent", href: "/helping-an-aging-parent", bgColor: "#246044", imgSrc: tileHelping },
   { key: "handlingEstate", href: "/estate-probate-inherited-property", bgColor: "#25597e", imgSrc: tileEstate },
   {

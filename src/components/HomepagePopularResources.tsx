@@ -6,7 +6,7 @@ const resources = [
     title: "Executor's 10-Step Checklist",
     href: "/resources/washington-executors-10-step-checklist",
     icon: ClipboardCheck,
-    accent: "#EF820D",
+    accent: "#D97706",
   },
   {
     title: "How Probate Real Estate Works",
