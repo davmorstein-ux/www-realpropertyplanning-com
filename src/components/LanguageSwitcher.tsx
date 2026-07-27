@@ -67,16 +67,16 @@ const LanguageSwitcher = () => {
         style={{
           display: "inline-flex",
           alignItems: "center",
-          gap: 6,
+          gap: 8,
           background: "transparent",
-          border: "1px solid rgba(0,0,0,0.15)",
+          border: "1px solid rgba(255,255,255,0.35)",
           borderRadius: 6,
           padding: "6px 10px",
           fontFamily: "'Raleway', sans-serif",
           fontSize: 13,
           fontWeight: 700,
           letterSpacing: "0.06em",
-          color: "#302b26",
+          color: "#ffffff",
           cursor: "pointer",
         }}
       >
@@ -132,12 +132,13 @@ const LanguageSwitcher = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  gap: 12,
+                  gap: 16,
                   width: "100%",
                   background: "transparent",
                   border: "none",
+                  borderBottom: "1px solid #f2ede8",
                   textAlign: "left",
-                  padding: "12px 16px",
+                  padding: "14px 18px",
                   fontFamily: "'Raleway', sans-serif",
                   fontSize: 16,
                   fontWeight: selected ? 700 : 500,
@@ -146,12 +147,15 @@ const LanguageSwitcher = () => {
                   opacity: disabled ? 0.6 : 1,
                 }}
               >
-                <span style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <span style={{ display: "flex", alignItems: "center", gap: 16 }}>
                   {Flag && <Flag size={32} />}
-                  <span>
+                  <span style={{ lineHeight: 1.4 }}>
                     {l.nativeLabel}
                     {l.nativeLabel !== l.label && (
-                      <span style={{ color: "#9a8f89", fontWeight: 400 }}> · {l.label}</span>
+                      <>
+                        <br />
+                        <span style={{ color: "#9a8f89", fontWeight: 400, fontSize: 13 }}>{l.label}</span>
+                      </>
                     )}
                   </span>
                 </span>
