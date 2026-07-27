@@ -3520,8 +3520,10 @@ main #rpp-orientation div {
 }
 /* Tagline — fresh class + rule (previous #rpp-tagline span version
    removed entirely, replaced under a new class name, as an attempt
-   to break a suspected stuck preview cache tied to the old selector). */
-.rpp-tagline-line-v2 {
+   to break a suspected stuck preview cache tied to the old selector).
+   The extra `main` and `#rpp-tagline` selectors raise specificity above
+   the global `main [style*="letter-spacing"]` minimum-font-size rule. */
+main #rpp-tagline .rpp-tagline-line-v2 {
   font-size: clamp(100px, 14vw, 200px) !important;
   color: #0000ff !important;
   font-family: "Cormorant Garamond", Georgia, serif !important;
