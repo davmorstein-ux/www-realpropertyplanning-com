@@ -13,7 +13,8 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     "path": "/",
     "links": [
       "/afh-club",
-      "/cost-of-care-calculator"
+      "/cost-of-care-calculator",
+      "/featured-professionals"
     ]
   },
   {
@@ -580,6 +581,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
       "/guides/senior-transition-differences",
       "/guides/what-executors-should-do"
     ]
+  },
+  {
+    "path": "/featured-professionals",
+    "links": []
   },
   {
     "path": "/featured-senior-move-managers",

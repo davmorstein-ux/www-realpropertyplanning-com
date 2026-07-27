@@ -113,6 +113,7 @@ const WashingtonExecutorsChecklist = lazy(() => import("./pages/resources/Washin
 const LendersFinancingSpecialists = lazy(() => import("./pages/LendersFinancingSpecialists"));
 const MortgageLenders = lazy(() => import("./pages/MortgageLenders"));
 const FeaturedSeniorMoveManagers = lazy(() => import("./pages/FeaturedSeniorMoveManagers"));
+const FeaturedProfessionals = lazy(() => import("./pages/FeaturedProfessionals"));
 const RetirementReverseMortgage = lazy(() => import("./pages/RetirementReverseMortgage"));
 const SeniorLivingAndRelocation = lazy(() => import("./pages/SeniorLivingAndRelocation"));
 const AdultFamilyHomes = lazy(() => import("./pages/senior-living/AdultFamilyHomes"));
@@ -711,6 +712,7 @@ const App = () => (
           <Route path="/senior-estate-services" element={<Navigate to="/senior-transitions" replace />} />
           <Route path="/senior-move-managers" element={<SeniorMoveManagersFull />} />
           <Route path="/featured-senior-move-managers" element={<FeaturedSeniorMoveManagers />} />
+          <Route path="/featured-professionals" element={<FeaturedProfessionals />} />
           <Route path="/transition-resources" element={<Navigate to="/senior-transitions" replace />} />
 
           {/* Misc legacy */}

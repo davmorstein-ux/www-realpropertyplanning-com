@@ -165,7 +165,7 @@ const RPPHomeV3 = () => {
                 </svg>
               </a>
               <a
-                href="/contact"
+                href="/featured-professionals"
                 className="marquee-hover"
                 style={{
                   display: "inline-flex",

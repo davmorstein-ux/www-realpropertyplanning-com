@@ -1074,6 +1074,11 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Featured Washington State senior move managers helping families with downsizing, relocation, and senior transitions.",
     h1: "Featured Senior Move Managers",
   },
+  "/featured-professionals": {
+    title: "Featured Professionals | Real Property Planning",
+    description: "Meet the independent professionals in Real Property Planning's network — aging life care managers, senior move managers, senior living advisors, elder law attorneys, financial planners, and CPAs serving Washington State families.",
+    h1: "Featured Professionals",
+  },
   "/for-divorce-attorneys": {
     title: "Divorce Attorneys in Washington State | Real Property Planning",
     description: "A divorce attorney helps individuals and couples navigate the legal process of ending a marriage, including asset division and real property matters.",

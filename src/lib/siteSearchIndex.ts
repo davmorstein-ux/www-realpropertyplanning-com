@@ -109,6 +109,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/executors/executors-guide", label: "Executors Guide" },
   { path: "/faq", label: "FAQ" },
   { path: "/featured-senior-move-managers", label: "Featured Senior Move Managers" },
+  { path: "/featured-professionals", label: "Featured Professionals" },
   { path: "/professionals/financial-planners", label: "Financial Planners" },
   { path: "/for-attorneys", label: "For Attorneys" },
   { path: "/for-attorneys/how-it-works", label: "For Attorneys How It Works" },
