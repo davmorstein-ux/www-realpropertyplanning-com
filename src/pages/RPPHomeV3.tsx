@@ -460,7 +460,7 @@ const RPPHomeV3 = () => {
                         fontWeight: 700,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
-                        fontSize: 13,
+                        fontSize: 16,
                         color: "#063e33",
                         textShadow:
                           "0 0 6px rgba(255,255,255,0.9), 0 0 3px rgba(255,255,255,0.9), 0 1px 2px rgba(255,255,255,0.9)",
