@@ -149,5 +149,107 @@
         "answer": "Busque un corredor con experiencia específica y práctica en transacciones de sucesión y propiedades de sucesión — alguien que entienda los requisitos judiciales, la documentación fiduciaria y la fijación de precios basada en la condición. Real Property Planning está dirigido por un corredor de bienes raíces con licencia del Estado de Washington que también es tasador residencial certificado, combinando ambas credenciales en un solo punto de contacto."
       }
     }
+  },
+  "seniorTransitions": {
+    "seo": {
+      "title": "Venta de Casas de Personas Mayores y Reducción de Tamaño en Washington | Orientación al Ritmo de la Familia",
+      "description": "Ayuda para familias de Washington que venden una casa de muchos años durante una mudanza a vida asistida, cuidado de la memoria, o reducción de tamaño. Coordinado con equipos de cuidado, abogados y hermanos fuera del estado.",
+      "jsonLdHeadline": "Transiciones de Vivienda para Personas Mayores en el Estado de Washington",
+      "jsonLdDescription": "Orientación paciente y experimentada para familias que ayudan a una persona mayor a vender su casa en el Estado de Washington. Sirviendo a los condados de King, Snohomish, Pierce y Kitsap."
+    },
+    "heroImageAlt": "Pareja de adultos mayores frente a su casa de toda la vida en Washington con un letrero de Se Vende de Real Property Planning",
+    "heroTitle": "Vendiendo la Casa de una Persona Mayor",
+    "directAnswer": {
+      "question": "¿Cómo vendo la casa de un padre o madre mayor en el Estado de Washington?",
+      "answer": "Vender una casa familiar de toda la vida durante una transición de una persona mayor generalmente implica más que un listado estándar — coordinar con proveedores de cuidado, hermanos fuera del estado, gerentes de mudanza, y a veces un abogado o planificador financiero, todo a un ritmo que la familia pueda manejar. Real Property Planning conecta a las familias con los profesionales adecuados para cada paso y proporciona orientación de precios basada en la condición para que la casa se venda a un valor justo y defendible.",
+      "bullet1": "Trabaja al propio ritmo de la familia — sin presión para apresurar una decisión",
+      "bullet2": "Le conecta con gerentes de mudanza, asesores de vivienda y liquidadores de sucesiones según sea necesario",
+      "bullet3": "Proporciona una valoración honesta basada en la condición en lugar de una estimación automatizada",
+      "ctaLabel": "Iniciar la Conversación"
+    },
+    "whatGoesInto": {
+      "heading": "¿Qué Implica una Transición de una Persona Mayor?",
+      "body": "Cuando una persona mayor deja una casa de toda la vida — ya sea mudándose a vida asistida, una comunidad de cuidado de la memoria, una residencia más pequeña, o más cerca de la familia — rara vez se trata solo de bienes raíces. Es un proceso coordinado que toca casi todos los aspectos de la vida de una familia. Real Property Planning conecta a las familias y profesionales con las personas adecuadas para cada paso."
+    },
+    "whoHelps": {
+      "heading": "¿Quién Ayuda con una Transición de una Persona Mayor?",
+      "moveManagers": {
+        "alt": "Gerentes de mudanza para personas mayores — especialistas en transiciones de personas mayores del Estado de Washington",
+        "title": "Gerentes de Mudanza para Personas Mayores",
+        "description": "Especialistas que se encargan del aspecto físico de una mudanza — clasificar, empacar, coordinar a los transportistas y preparar la nueva casa. Trabajan al ritmo de la familia y están capacitados para manejar el peso emocional de dejar una residencia de toda la vida.",
+        "cta": "Encontrar un Gerente de Mudanza"
+      },
+      "livingAdvisors": {
+        "alt": "Asesores de vivienda para personas mayores — especialistas en colocación del Estado de Washington",
+        "title": "Asesores de Vivienda para Personas Mayores",
+        "description": "Profesionales que ayudan a las familias a evaluar y elegir la próxima casa adecuada — ya sea vida independiente, vida asistida, cuidado de la memoria, o apoyo en el hogar. Conocen las comunidades locales, la disponibilidad y los costos.",
+        "cta": "Encontrar un Asesor de Vivienda"
+      },
+      "estateSale": {
+        "alt": "Servicios de venta y liquidación de sucesiones en el Estado de Washington",
+        "title": "Venta y Liquidación de Sucesiones",
+        "description": "Cuando una casa contiene décadas de pertenencias, los profesionales de venta de sucesiones ayudan a las familias a clasificar, valorar y vender o donar artículos — despejando la casa de manera eficiente y respetuosa antes de que salga al mercado.",
+        "cta": "Más Información"
+      },
+      "broker": {
+        "alt": "Corredores de bienes raíces con experiencia en transiciones de personas mayores en el Estado de Washington",
+        "title": "Corredor de Bienes Raíces",
+        "description": "Un corredor con experiencia en transiciones de personas mayores comprende los precios basados en la condición, la dinámica familiar y la necesidad de paciencia. Real Property Planning conecta a las familias con corredores que se especializan en este trabajo en todo el Estado de Washington.",
+        "cta": "Más Información"
+      },
+      "appraiser": {
+        "alt": "Tasadores de bienes raíces certificados del Estado de Washington",
+        "title": "Tasador Certificado",
+        "description": "Una tasación independiente le da a las familias un valor honesto y defendible para la casa — útil para la planificación patrimonial, la administración de fideicomisos, o simplemente para saber dónde se encuentra antes de tomar decisiones.",
+        "cta": "Más Información"
+      },
+      "attorneys": {
+        "alt": "Abogados de sucesiones del Estado de Washington",
+        "title": "Abogados de Sucesiones",
+        "description": "Muchas transiciones de personas mayores se cruzan con la administración de fideicomisos, el poder notarial, o la planificación patrimonial. Un abogado asegura que el aspecto legal de la transición se maneje adecuadamente junto con el proceso de bienes raíces.",
+        "cta": "Más Información"
+      },
+      "medicare": {
+        "alt": "Asesores de Medicare y beneficios del Estado de Washington",
+        "title": "Asesores de Medicare y Beneficios",
+        "description": "Comprender Medicare, Medicaid y otros beneficios para personas mayores es fundamental cuando una transición de vivienda afecta el financiamiento del cuidado. Un asesor de beneficios ayuda a las familias a navegar las opciones de cobertura, las reglas de elegibilidad y el impacto financiero de una mudanza en los beneficios existentes o pendientes.",
+        "cta": "Encontrar un Asesor de Beneficios"
+      },
+      "financial": {
+        "alt": "Asesores financieros y contadores públicos certificados del Estado de Washington",
+        "title": "Asesores Financieros y Contadores Públicos Certificados",
+        "description": "Vender una casa de toda la vida tiene implicaciones fiscales — ganancias de capital, base incrementada, distribuciones de fideicomisos. Un planificador financiero o contador público certificado ayuda a las familias a comprender el panorama financiero antes y después de la venta.",
+        "cta": "Más Información"
+      }
+    },
+    "notSure": {
+      "heading": "¿No Está Seguro por Dónde Empezar?",
+      "body": "La mayoría de las familias no saben qué profesional necesitan primero. Está bien. Real Property Planning le ayuda a determinar la secuencia correcta y le conecta con profesionales de confianza en toda la región de Puget Sound.",
+      "button": "Iniciar una Conversación"
+    },
+    "faq": {
+      "eyebrow": "Respuestas Rápidas",
+      "heading": "Preguntas sobre Transiciones de Personas Mayores",
+      "q1": {
+        "question": "¿Cuál es el primer paso para vender la casa de una persona mayor en Washington?",
+        "answer": "La mayoría de las familias comienzan obteniendo una idea honesta del valor y la condición de la casa, y luego decidiendo juntos los próximos pasos — ya sea vida asistida, una casa más pequeña, o mudarse más cerca de la familia. Real Property Planning puede ayudarle a determinar la secuencia correcta de profesionales antes de tomar cualquier decisión."
+      },
+      "q2": {
+        "question": "¿Necesito un Poder Notarial para vender la casa de mi padre o madre?",
+        "answer": "Si su padre o madre ya no puede manejar sus propios asuntos, la persona que actúa como su agente bajo un Poder Notarial Duradero generalmente necesita tener ese documento en mano antes de firmar en su nombre — los bancos, las compañías de títulos y las transacciones de bienes raíces lo requieren. Un abogado de derecho de personas mayores o de sucesiones puede confirmar que el poder notarial cubre específicamente la autoridad sobre bienes raíces."
+      },
+      "q3": {
+        "question": "¿Cuánto tiempo suele tomar vender la casa de una persona mayor?",
+        "answer": "Los plazos varían ampliamente dependiendo de la condición de la casa, la toma de decisiones familiares, y si se necesitan reparaciones o una limpieza completa de venta de sucesión primero. Debido a que las transiciones de personas mayores a menudo involucran a múltiples miembros de la familia y a veces una mudanza a un centro de cuidado, el proceso generalmente se ajusta al ritmo de las necesidades de la familia en lugar de apresurarse."
+      },
+      "q4": {
+        "question": "¿Quién ayuda a coordinar la mudanza de una persona mayor junto con la venta de la casa?",
+        "answer": "Un gerente de mudanza para personas mayores generalmente se encarga del aspecto físico — clasificar, empacar y preparar la nueva casa — mientras que un asesor de vivienda para personas mayores ayuda a evaluar las opciones de colocación. Real Property Planning conecta a las familias con ambos, junto con el aspecto de bienes raíces y valoración de la transición."
+      },
+      "q5": {
+        "question": "¿Hay consideraciones fiscales al vender una casa familiar de toda la vida?",
+        "answer": "Sí — las exclusiones de ganancias de capital, la base incrementada en un fideicomiso, y otros factores fiscales pueden afectar significativamente el resultado. Un contador público certificado o planificador financiero debe formar parte de la conversación antes de publicar el listado, y Real Property Planning puede ayudar a conectar a su familia con uno."
+      }
+    }
   }
 }

@@ -277,7 +277,12 @@ const App = () => (
           <Route path="/tl/probate-estate-sales" element={<LanguageRoute lang="tl"><ProbateEstateSales /></LanguageRoute>} />
           <Route path="/vi/probate-estate-sales" element={<LanguageRoute lang="vi"><ProbateEstateSales /></LanguageRoute>} />
           <Route path="/client-stories" element={<ClientStories />} />
-          <Route path="/senior-transitions" element={<SeniorTransitions />} />
+          <Route path="/senior-transitions" element={<LanguageRoute lang="en"><SeniorTransitions /></LanguageRoute>} />
+          <Route path="/es/senior-transitions" element={<LanguageRoute lang="es"><SeniorTransitions /></LanguageRoute>} />
+          <Route path="/zh-tw/senior-transitions" element={<LanguageRoute lang="zh-TW"><SeniorTransitions /></LanguageRoute>} />
+          <Route path="/zh-cn/senior-transitions" element={<LanguageRoute lang="zh-CN"><SeniorTransitions /></LanguageRoute>} />
+          <Route path="/tl/senior-transitions" element={<LanguageRoute lang="tl"><SeniorTransitions /></LanguageRoute>} />
+          <Route path="/vi/senior-transitions" element={<LanguageRoute lang="vi"><SeniorTransitions /></LanguageRoute>} />
           <Route path="/helping-aging-parents" element={<Navigate to="/helping-an-aging-parent" replace />} />
           <Route path="/helping-an-aging-parent" element={<ChoiceFlowPage />} />
           <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />

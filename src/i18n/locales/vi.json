@@ -149,5 +149,107 @@
         "answer": "Hãy tìm một môi giới có kinh nghiệm thực tế, cụ thể trong các giao dịch thừa kế và di sản — người hiểu rõ các yêu cầu của tòa án, hồ sơ ủy thác và cách định giá dựa trên tình trạng tài sản. Real Property Planning được lãnh đạo bởi một môi giới bất động sản được cấp phép tại Tiểu Bang Washington, đồng thời cũng là một chuyên viên thẩm định nhà ở được chứng nhận, kết hợp cả hai chứng chỉ chuyên môn trong một đầu mối liên hệ duy nhất."
       }
     }
+  },
+  "seniorTransitions": {
+    "seo": {
+      "title": "Bán Nhà Người Cao Niên và Thu Nhỏ Nơi Ở tại Washington | Hướng Dẫn Theo Nhịp Độ Gia Đình",
+      "description": "Hỗ trợ các gia đình Washington bán ngôi nhà lâu năm trong quá trình chuyển đến sinh hoạt có hỗ trợ, chăm sóc trí nhớ, hoặc thu nhỏ nơi ở. Phối hợp với các đội chăm sóc, luật sư và anh chị em ở tiểu bang khác.",
+      "jsonLdHeadline": "Chuyển Đổi Nhà Ở Cho Người Cao Niên tại Tiểu Bang Washington",
+      "jsonLdDescription": "Hướng dẫn kiên nhẫn, giàu kinh nghiệm dành cho các gia đình giúp người cao niên bán nhà tại Tiểu Bang Washington. Phục vụ các Quận King, Snohomish, Pierce và Kitsap."
+    },
+    "heroImageAlt": "Cặp vợ chồng lớn tuổi đứng trước ngôi nhà lâu năm của họ ở Washington với bảng hiệu Rao Bán của Real Property Planning",
+    "heroTitle": "Bán Nhà Của Người Cao Niên",
+    "directAnswer": {
+      "question": "Làm thế nào để tôi bán nhà của cha mẹ lớn tuổi tại Tiểu Bang Washington?",
+      "answer": "Việc bán một ngôi nhà gia đình lâu năm trong quá trình chuyển đổi cho người cao niên thường liên quan đến nhiều điều hơn là một giao dịch niêm yết thông thường — phối hợp với các nhà cung cấp dịch vụ chăm sóc, anh chị em ở tiểu bang khác, người quản lý di chuyển, và đôi khi là luật sư hoặc nhà hoạch định tài chính, tất cả theo nhịp độ mà gia đình có thể quản lý được. Real Property Planning kết nối các gia đình với đúng chuyên gia cho từng bước và cung cấp hướng dẫn định giá dựa trên tình trạng để ngôi nhà được bán với giá trị công bằng, có thể bảo vệ được.",
+      "bullet1": "Hoạt động theo nhịp độ riêng của gia đình — không có áp lực phải vội vàng quyết định",
+      "bullet2": "Kết nối quý vị với người quản lý di chuyển, cố vấn nơi ở, và chuyên gia thanh lý tài sản khi cần thiết",
+      "bullet3": "Cung cấp định giá trung thực dựa trên tình trạng thay vì ước tính tự động",
+      "ctaLabel": "Bắt Đầu Cuộc Trò Chuyện"
+    },
+    "whatGoesInto": {
+      "heading": "Quá Trình Chuyển Đổi Cho Người Cao Niên Bao Gồm Những Gì?",
+      "body": "Khi một người cao niên rời khỏi ngôi nhà lâu năm — dù là chuyển đến sinh hoạt có hỗ trợ, cộng đồng chăm sóc trí nhớ, một nơi ở nhỏ hơn, hoặc gần gia đình hơn — điều này hiếm khi chỉ liên quan đến bất động sản. Đó là một quá trình phối hợp chạm đến hầu như mọi khía cạnh trong cuộc sống của một gia đình. Real Property Planning kết nối các gia đình và chuyên gia với đúng người cho từng bước."
+    },
+    "whoHelps": {
+      "heading": "Ai Giúp Đỡ Trong Quá Trình Chuyển Đổi Cho Người Cao Niên?",
+      "moveManagers": {
+        "alt": "Người quản lý di chuyển cho người cao niên — chuyên gia chuyển đổi người cao niên tại Tiểu Bang Washington",
+        "title": "Người Quản Lý Di Chuyển Cho Người Cao Niên",
+        "description": "Các chuyên gia xử lý khía cạnh vật lý của việc di chuyển — sắp xếp, đóng gói, phối hợp với đơn vị vận chuyển, và chuẩn bị ngôi nhà mới. Họ làm việc theo nhịp độ của gia đình và được đào tạo để xử lý gánh nặng cảm xúc khi rời khỏi nơi cư trú lâu năm.",
+        "cta": "Tìm Người Quản Lý Di Chuyển"
+      },
+      "livingAdvisors": {
+        "alt": "Cố vấn nơi ở cho người cao niên — chuyên gia sắp xếp chỗ ở tại Tiểu Bang Washington",
+        "title": "Cố Vấn Nơi Ở Cho Người Cao Niên",
+        "description": "Các chuyên gia giúp gia đình đánh giá và lựa chọn nơi ở tiếp theo phù hợp — dù đó là sinh hoạt độc lập, sinh hoạt có hỗ trợ, chăm sóc trí nhớ, hoặc hỗ trợ tại nhà. Họ am hiểu các cộng đồng địa phương, tình trạng còn chỗ, và chi phí.",
+        "cta": "Tìm Cố Vấn Nơi Ở"
+      },
+      "estateSale": {
+        "alt": "Dịch vụ bán và thanh lý tài sản di sản tại Tiểu Bang Washington",
+        "title": "Bán và Thanh Lý Tài Sản Di Sản",
+        "description": "Khi một ngôi nhà chứa đựng đồ đạc tích lũy qua nhiều thập kỷ, các chuyên gia bán tài sản di sản giúp gia đình sắp xếp, định giá, và bán hoặc quyên góp các món đồ — dọn dẹp ngôi nhà một cách hiệu quả và tôn trọng trước khi đưa ra thị trường.",
+        "cta": "Tìm Hiểu Thêm"
+      },
+      "broker": {
+        "alt": "Môi giới bất động sản có kinh nghiệm trong chuyển đổi người cao niên tại Tiểu Bang Washington",
+        "title": "Môi Giới Bất Động Sản",
+        "description": "Một môi giới có kinh nghiệm trong chuyển đổi người cao niên hiểu rõ việc định giá dựa trên tình trạng, động lực gia đình, và sự cần thiết của lòng kiên nhẫn. Real Property Planning kết nối các gia đình với những môi giới chuyên về công việc này trên khắp Tiểu Bang Washington.",
+        "cta": "Tìm Hiểu Thêm"
+      },
+      "appraiser": {
+        "alt": "Chuyên viên thẩm định bất động sản được chứng nhận tại Tiểu Bang Washington",
+        "title": "Chuyên Viên Thẩm Định Được Chứng Nhận",
+        "description": "Một cuộc thẩm định độc lập mang lại cho gia đình giá trị trung thực, có thể bảo vệ được cho ngôi nhà — hữu ích cho việc lập kế hoạch di sản, quản lý ủy thác, hoặc đơn giản là biết được vị trí của mình trước khi đưa ra quyết định.",
+        "cta": "Tìm Hiểu Thêm"
+      },
+      "attorneys": {
+        "alt": "Luật sư di sản tại Tiểu Bang Washington",
+        "title": "Luật Sư Di Sản",
+        "description": "Nhiều quá trình chuyển đổi cho người cao niên giao thoa với việc quản lý ủy thác, giấy ủy quyền, hoặc lập kế hoạch di sản. Một luật sư đảm bảo khía cạnh pháp lý của quá trình chuyển đổi được xử lý đúng đắn song song với quy trình bất động sản.",
+        "cta": "Tìm Hiểu Thêm"
+      },
+      "medicare": {
+        "alt": "Cố vấn Medicare và phúc lợi tại Tiểu Bang Washington",
+        "title": "Cố Vấn Medicare và Phúc Lợi",
+        "description": "Việc hiểu rõ Medicare, Medicaid, và các phúc lợi khác cho người cao niên là rất quan trọng khi việc chuyển đổi nơi ở ảnh hưởng đến nguồn tài trợ chăm sóc. Một cố vấn phúc lợi giúp gia đình tìm hiểu các lựa chọn bảo hiểm, quy định về điều kiện đủ tiêu chuẩn, và tác động tài chính của việc di chuyển đối với các phúc lợi hiện có hoặc đang chờ xử lý.",
+        "cta": "Tìm Cố Vấn Phúc Lợi"
+      },
+      "financial": {
+        "alt": "Cố vấn tài chính và kế toán viên công chứng tại Tiểu Bang Washington",
+        "title": "Cố Vấn Tài Chính và Kế Toán Viên Công Chứng",
+        "description": "Việc bán một ngôi nhà lâu năm có những tác động về thuế — lãi vốn, cơ sở tính thuế được điều chỉnh tăng, phân phối ủy thác. Một nhà hoạch định tài chính hoặc kế toán viên công chứng giúp gia đình hiểu rõ bức tranh tài chính trước và sau khi bán.",
+        "cta": "Tìm Hiểu Thêm"
+      }
+    },
+    "notSure": {
+      "heading": "Không Chắc Nên Bắt Đầu Từ Đâu?",
+      "body": "Hầu hết các gia đình không biết chuyên gia nào họ cần trước tiên. Điều đó không sao cả. Real Property Planning giúp quý vị tìm ra trình tự đúng đắn và kết nối quý vị với các chuyên gia đáng tin cậy trên khắp khu vực Puget Sound.",
+      "button": "Bắt Đầu Cuộc Trò Chuyện"
+    },
+    "faq": {
+      "eyebrow": "Câu Trả Lời Nhanh",
+      "heading": "Câu Hỏi Về Chuyển Đổi Cho Người Cao Niên",
+      "q1": {
+        "question": "Bước đầu tiên trong việc bán nhà của người cao niên tại Washington là gì?",
+        "answer": "Hầu hết các gia đình bắt đầu bằng cách có được cảm nhận trung thực về giá trị và tình trạng của ngôi nhà, sau đó cùng nhau quyết định các bước tiếp theo — dù đó là sinh hoạt có hỗ trợ, một ngôi nhà nhỏ hơn, hoặc chuyển đến gần gia đình hơn. Real Property Planning có thể giúp quý vị tìm ra trình tự đúng đắn của các chuyên gia trước khi đưa ra bất kỳ quyết định nào."
+      },
+      "q2": {
+        "question": "Tôi có cần Giấy Ủy Quyền để bán nhà của cha mẹ tôi không?",
+        "answer": "Nếu cha mẹ quý vị không còn có thể tự quản lý công việc của mình, người đóng vai trò đại diện theo Giấy Ủy Quyền Lâu Dài thường cần có văn bản đó trong tay trước khi ký thay mặt họ — các ngân hàng, công ty quyền sở hữu, và các giao dịch bất động sản đều yêu cầu điều này. Một luật sư luật người cao niên hoặc luật sư di sản có thể xác nhận liệu Giấy Ủy Quyền có bao gồm cụ thể thẩm quyền về bất động sản hay không."
+      },
+      "q3": {
+        "question": "Thông thường mất bao lâu để bán nhà của một người cao niên?",
+        "answer": "Thời gian thay đổi rất nhiều tùy thuộc vào tình trạng ngôi nhà, việc ra quyết định của gia đình, và liệu có cần sửa chữa hoặc dọn dẹp toàn bộ để bán tài sản di sản trước hay không. Vì các quá trình chuyển đổi cho người cao niên thường liên quan đến nhiều thành viên gia đình và đôi khi là việc chuyển đến nơi chăm sóc, quy trình này thường được điều chỉnh theo nhu cầu của gia đình thay vì bị thúc ép."
+      },
+      "q4": {
+        "question": "Ai giúp phối hợp việc di chuyển của người cao niên cùng với việc bán nhà?",
+        "answer": "Một người quản lý di chuyển cho người cao niên thường xử lý khía cạnh vật lý — sắp xếp, đóng gói, và chuẩn bị ngôi nhà mới — trong khi một cố vấn nơi ở cho người cao niên giúp đánh giá các lựa chọn sắp xếp chỗ ở. Real Property Planning kết nối các gia đình với cả hai, cùng với khía cạnh bất động sản và định giá của quá trình chuyển đổi."
+      },
+      "q5": {
+        "question": "Có những cân nhắc về thuế khi bán một ngôi nhà gia đình lâu năm không?",
+        "answer": "Có — các khoản miễn trừ lãi vốn, cơ sở tính thuế được điều chỉnh tăng trong một ủy thác, và các yếu tố thuế khác có thể ảnh hưởng đáng kể đến kết quả. Một kế toán viên công chứng hoặc nhà hoạch định tài chính nên là một phần của cuộc trò chuyện trước khi niêm yết, và Real Property Planning có thể giúp kết nối gia đình quý vị với một người như vậy."
+      }
+    }
   }
 }

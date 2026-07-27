@@ -149,5 +149,107 @@
         "answer": "Look for a broker with specific, hands-on experience in probate and estate transactions — someone who understands court requirements, fiduciary documentation, and condition-based pricing. Real Property Planning is led by a Washington State licensed real estate broker who is also a certified residential appraiser, combining both credentials in one point of contact."
       }
     }
+  },
+  "seniorTransitions": {
+    "seo": {
+      "title": "Senior Home Sales & Downsizing in Washington | Family-Paced Guidance",
+      "description": "Help for Washington families selling a longtime home during a move to assisted living, memory care, or downsizing. Coordinated with care teams, attorneys, and out-of-state siblings.",
+      "jsonLdHeadline": "Senior Housing Transitions in Washington State",
+      "jsonLdDescription": "Patient, experienced guidance for families helping a senior sell their home in Washington State. Serving King, Snohomish, Pierce & Kitsap Counties."
+    },
+    "heroImageAlt": "Senior couple in front of their longtime Washington home with a Real Property Planning For Sale sign",
+    "heroTitle": "Selling A Senior's Home",
+    "directAnswer": {
+      "question": "How do I sell a senior parent's home in Washington State?",
+      "answer": "Selling a longtime family home during a senior transition usually involves more than a standard listing — coordinating with care providers, out-of-state siblings, move managers, and sometimes an attorney or financial planner, all at a pace the family can manage. Real Property Planning connects families with the right professionals for each step and provides condition-based pricing guidance so the home sells for a fair, defensible value.",
+      "bullet1": "Works at the family's own pace — no pressure to rush a decision",
+      "bullet2": "Connects you with move managers, living advisors, and estate liquidators as needed",
+      "bullet3": "Provides an honest, condition-based valuation rather than an automated estimate",
+      "ctaLabel": "Start the Conversation"
+    },
+    "whatGoesInto": {
+      "heading": "What Goes Into a Senior Transition?",
+      "body": "When a senior leaves a longtime home — whether moving to assisted living, a memory care community, a smaller residence, or closer to family — it rarely involves just real estate. It's a coordinated process that touches nearly every part of a family's life. Real Property Planning connects families and professionals to the right people for each step."
+    },
+    "whoHelps": {
+      "heading": "Who Helps With a Senior Transition?",
+      "moveManagers": {
+        "alt": "Senior move managers — Washington State senior transition specialists",
+        "title": "Senior Move Managers",
+        "description": "Specialists who handle the physical side of a move — sorting, packing, coordinating movers, and setting up the new home. They work at the family's pace and are trained to handle the emotional weight of leaving a longtime residence.",
+        "cta": "Find a Move Manager"
+      },
+      "livingAdvisors": {
+        "alt": "Senior living advisors — Washington State placement specialists",
+        "title": "Senior Living Advisors",
+        "description": "Professionals who help families evaluate and choose the right next home — whether that's independent living, assisted living, memory care, or in-home support. They know local communities, availability, and costs.",
+        "cta": "Find a Living Advisor"
+      },
+      "estateSale": {
+        "alt": "Estate sale and liquidation services Washington State",
+        "title": "Estate Sale & Liquidation",
+        "description": "When a home contains decades of belongings, estate sale professionals help families sort, value, and sell or donate items — clearing the home efficiently and respectfully before it goes on the market.",
+        "cta": "Learn More"
+      },
+      "broker": {
+        "alt": "Real estate brokers experienced in senior transitions Washington State",
+        "title": "Real Estate Broker",
+        "description": "A broker experienced in senior transitions understands condition-based pricing, family dynamics, and the need for patience. Real Property Planning connects families with brokers who specialize in this work throughout Washington State.",
+        "cta": "Learn More"
+      },
+      "appraiser": {
+        "alt": "Certified real estate appraisers Washington State",
+        "title": "Certified Appraiser",
+        "description": "An independent appraisal gives families an honest, defensible value for the home — useful for estate planning, trust administration, or simply knowing where you stand before making decisions.",
+        "cta": "Learn More"
+      },
+      "attorneys": {
+        "alt": "Estate attorneys Washington State",
+        "title": "Estate Attorneys",
+        "description": "Many senior transitions intersect with trust administration, power of attorney, or estate planning. An attorney ensures the legal side of the transition is handled properly alongside the real estate process.",
+        "cta": "Learn More"
+      },
+      "medicare": {
+        "alt": "Medicare and benefits advisors Washington State",
+        "title": "Medicare & Benefits Advisors",
+        "description": "Understanding Medicare, Medicaid, and other senior benefits is critical when a housing transition affects care funding. A benefits advisor helps families navigate coverage options, eligibility rules, and the financial impact of a move on existing or pending benefits.",
+        "cta": "Find a Benefits Advisor"
+      },
+      "financial": {
+        "alt": "Financial advisors and CPAs Washington State",
+        "title": "Financial Advisors & CPAs",
+        "description": "Selling a longtime home has tax implications — capital gains, stepped-up basis, trust distributions. A financial planner or CPA helps families understand the financial picture before and after the sale.",
+        "cta": "Learn More"
+      }
+    },
+    "notSure": {
+      "heading": "Not Sure Where to Start?",
+      "body": "Most families don't know which professional they need first. That's okay. Real Property Planning helps you figure out the right sequence and connects you with trusted professionals throughout the Puget Sound area.",
+      "button": "Start a Conversation"
+    },
+    "faq": {
+      "eyebrow": "Quick Answers",
+      "heading": "Senior Transition Questions",
+      "q1": {
+        "question": "What's the first step in selling a senior's home in Washington?",
+        "answer": "Most families start by getting an honest sense of the home's value and condition, then deciding on next steps together — whether that's assisted living, a smaller home, or moving closer to family. Real Property Planning can help you figure out the right sequence of professionals before any decisions are made."
+      },
+      "q2": {
+        "question": "Do I need a Power of Attorney to sell my parent's house?",
+        "answer": "If your parent can no longer manage their own affairs, the person acting as their agent under a Durable Power of Attorney typically needs that document in hand before signing on their behalf — banks, title companies, and real estate transactions all require it. An elder law or estate attorney can confirm the POA covers real estate authority specifically."
+      },
+      "q3": {
+        "question": "How long does it typically take to sell a senior's home?",
+        "answer": "Timelines vary widely depending on the home's condition, family decision-making, and whether repairs or a full estate-sale cleanout are needed first. Because senior transitions often involve multiple family members and sometimes a move to care, the process is generally paced to the family's needs rather than rushed."
+      },
+      "q4": {
+        "question": "Who helps coordinate a senior's move alongside the home sale?",
+        "answer": "A senior move manager typically handles the physical side — sorting, packing, and setting up the new home — while a senior living advisor helps evaluate placement options. Real Property Planning connects families with both, alongside the real estate and valuation side of the transition."
+      },
+      "q5": {
+        "question": "Are there tax considerations when selling a longtime family home?",
+        "answer": "Yes — capital gains exclusions, stepped-up basis in a trust, and other tax factors can significantly affect the outcome. A CPA or financial planner should be part of the conversation before listing, and Real Property Planning can help connect your family with one."
+      }
+    }
   }
 }

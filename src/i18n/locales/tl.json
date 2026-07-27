@@ -149,5 +149,107 @@
         "answer": "Humanap ng broker na may partikular at praktikal na karanasan sa mga transaksyon ng probate at estate — isang taong nakakaunawa sa mga kinakailangan ng hukuman, dokumentasyong fiduciary, at pagpepresyo batay sa kalagayan. Ang Real Property Planning ay pinamumunuan ng isang licensed real estate broker ng Washington State na isa ring certified residential appraiser, na pinagsasama ang dalawang kredensyal sa iisang punto ng ugnayan."
       }
     }
+  },
+  "seniorTransitions": {
+    "seo": {
+      "title": "Pagbebenta ng Bahay ng Nakatatanda at Downsizing sa Washington | Gabay na Naka-angkla sa Bilis ng Pamilya",
+      "description": "Tulong para sa mga pamilyang Washingtonian na nagbebenta ng matagal nang tahanan habang lumilipat sa assisted living, memory care, o downsizing. Naka-coordinate sa mga care team, abogado, at mga kapatid na nasa ibang estado.",
+      "jsonLdHeadline": "Mga Transisyon sa Pabahay para sa mga Nakatatanda sa Washington State",
+      "jsonLdDescription": "Matiyaga at may karanasang gabay para sa mga pamilyang tumutulong sa isang nakatatanda na ibenta ang kanilang tahanan sa Washington State. Naglilingkod sa King, Snohomish, Pierce at Kitsap Counties."
+    },
+    "heroImageAlt": "Matandang mag-asawa sa harap ng kanilang matagal nang tahanan sa Washington na may karatulang For Sale mula sa Real Property Planning",
+    "heroTitle": "Pagbebenta ng Tahanan ng Isang Nakatatanda",
+    "directAnswer": {
+      "question": "Paano ko ibebenta ang bahay ng aking nakatatandang magulang sa Washington State?",
+      "answer": "Ang pagbebenta ng matagal nang tahanan ng pamilya sa panahon ng transisyon ng isang nakatatanda ay karaniwang nangangailangan ng higit pa sa karaniwang pag-lista — pakikipag-coordinate sa mga tagapagbigay ng pangangalaga, mga kapatid na nasa ibang estado, mga move manager, at kung minsan ay isang abogado o financial planner, lahat sa bilis na kayang tugunan ng pamilya. Ikinokonekta ng Real Property Planning ang mga pamilya sa tamang mga propesyonal para sa bawat hakbang at nagbibigay ng gabay sa pagpepresyo batay sa kalagayan upang maibenta ang tahanan sa isang patas at mapagtatanggol na halaga.",
+      "bullet1": "Gumagana sa sariling bilis ng pamilya — walang presyon na magmadali sa desisyon",
+      "bullet2": "Ikinokonekta kayo sa mga move manager, living advisor, at estate liquidator ayon sa pangangailangan",
+      "bullet3": "Nagbibigay ng tapat na valuation batay sa kalagayan sa halip na isang awtomatikong pagtatantya",
+      "ctaLabel": "Simulan ang Usapan"
+    },
+    "whatGoesInto": {
+      "heading": "Ano ang Kinapapalooban ng Transisyon ng Isang Nakatatanda?",
+      "body": "Kapag umalis ang isang nakatatanda sa matagal nang tahanan — lumilipat man sa assisted living, isang memory care community, isang mas maliit na tirahan, o mas malapit sa pamilya — bihira itong tungkol lamang sa real estate. Ito ay isang naka-coordinate na proseso na humihipo sa halos lahat ng bahagi ng buhay ng isang pamilya. Ikinokonekta ng Real Property Planning ang mga pamilya at propesyonal sa tamang mga tao para sa bawat hakbang."
+    },
+    "whoHelps": {
+      "heading": "Sino ang Tumutulong sa Transisyon ng Isang Nakatatanda?",
+      "moveManagers": {
+        "alt": "Mga senior move manager — mga dalubhasa sa transisyon ng nakatatanda sa Washington State",
+        "title": "Mga Senior Move Manager",
+        "description": "Mga dalubhasa na humahawak sa pisikal na bahagi ng paglipat — pag-aayos, pagbabalot, pag-coordinate ng mga tagalipat, at pag-set up ng bagong tahanan. Gumagana sila sa bilis ng pamilya at sinanay upang hawakan ang emosyonal na bigat ng pag-alis sa matagal nang tirahan.",
+        "cta": "Humanap ng Move Manager"
+      },
+      "livingAdvisors": {
+        "alt": "Mga senior living advisor — mga dalubhasa sa placement sa Washington State",
+        "title": "Mga Senior Living Advisor",
+        "description": "Mga propesyonal na tumutulong sa mga pamilya na suriin at piliin ang tamang susunod na tahanan — maging ito ay independent living, assisted living, memory care, o suportang sa bahay. Alam nila ang mga lokal na komunidad, availability, at gastos.",
+        "cta": "Humanap ng Living Advisor"
+      },
+      "estateSale": {
+        "alt": "Mga serbisyo ng estate sale at liquidation sa Washington State",
+        "title": "Estate Sale at Liquidation",
+        "description": "Kapag ang isang tahanan ay may dekada-dekadang mga gamit, tinutulungan ng mga propesyonal sa estate sale ang mga pamilya na mag-uri-uri, magtantya ng halaga, at magbenta o mag-donate ng mga bagay — pinaglilinis nang episyente at may paggalang ang tahanan bago ito ilagay sa merkado.",
+        "cta": "Alamin Pa"
+      },
+      "broker": {
+        "alt": "Mga real estate broker na may karanasan sa mga transisyon ng nakatatanda sa Washington State",
+        "title": "Real Estate Broker",
+        "description": "Ang isang broker na may karanasan sa mga transisyon ng nakatatanda ay nakakaunawa sa pagpepresyo batay sa kalagayan, dinamika ng pamilya, at pangangailangan ng pasensya. Ikinokonekta ng Real Property Planning ang mga pamilya sa mga broker na dalubhasa sa gawaing ito sa buong Washington State.",
+        "cta": "Alamin Pa"
+      },
+      "appraiser": {
+        "alt": "Mga certified real estate appraiser sa Washington State",
+        "title": "Certified Appraiser",
+        "description": "Ang isang independiyenteng appraisal ay nagbibigay sa mga pamilya ng tapat at mapagtatanggol na halaga para sa tahanan — kapaki-pakinabang para sa estate planning, pamamahala ng trust, o basta pag-alam kung saan kayo nakatayo bago gumawa ng mga desisyon.",
+        "cta": "Alamin Pa"
+      },
+      "attorneys": {
+        "alt": "Mga estate attorney sa Washington State",
+        "title": "Mga Estate Attorney",
+        "description": "Maraming transisyon ng nakatatanda ang nagsasalubong sa pamamahala ng trust, power of attorney, o estate planning. Sinisiguro ng isang abogado na ang legal na bahagi ng transisyon ay maayos na hinahawakan kasabay ng proseso ng real estate.",
+        "cta": "Alamin Pa"
+      },
+      "medicare": {
+        "alt": "Mga tagapayo sa Medicare at benepisyo sa Washington State",
+        "title": "Mga Tagapayo sa Medicare at Benepisyo",
+        "description": "Ang pag-unawa sa Medicare, Medicaid, at iba pang benepisyo ng nakatatanda ay kritikal kapag naaapektuhan ng isang transisyon sa pabahay ang pagpopondo ng pangangalaga. Tinutulungan ng isang tagapayo sa benepisyo ang mga pamilya na mag-navigate sa mga opsyon sa coverage, mga alituntunin sa pagiging kwalipikado, at ang epekto sa pananalapi ng isang paglipat sa mga umiiral o nakabinbing benepisyo.",
+        "cta": "Humanap ng Tagapayo sa Benepisyo"
+      },
+      "financial": {
+        "alt": "Mga financial advisor at CPA sa Washington State",
+        "title": "Mga Financial Advisor at CPA",
+        "description": "Ang pagbebenta ng matagal nang tahanan ay may mga implikasyon sa buwis — capital gains, stepped-up basis, mga distribusyon ng trust. Tinutulungan ng isang financial planner o CPA ang mga pamilya na maunawaan ang larawan ng pananalapi bago at pagkatapos ng pagbebenta.",
+        "cta": "Alamin Pa"
+      }
+    },
+    "notSure": {
+      "heading": "Hindi Sigurado Kung Saan Magsisimula?",
+      "body": "Karamihan sa mga pamilya ay hindi alam kung aling propesyonal ang kailangan nila muna. Okay lang iyon. Tinutulungan ka ng Real Property Planning na alamin ang tamang pagkakasunod-sunod at ikinokonekta ka sa mga mapagkakatiwalaang propesyonal sa buong lugar ng Puget Sound.",
+      "button": "Simulan ang Usapan"
+    },
+    "faq": {
+      "eyebrow": "Mabilisang Sagot",
+      "heading": "Mga Tanong Tungkol sa Transisyon ng Nakatatanda",
+      "q1": {
+        "question": "Ano ang unang hakbang sa pagbebenta ng tahanan ng isang nakatatanda sa Washington?",
+        "answer": "Karamihan sa mga pamilya ay nagsisimula sa pagkuha ng tapat na kahulugan ng halaga at kalagayan ng tahanan, at pagkatapos ay magkasamang nagpapasya sa mga susunod na hakbang — maging ito ay assisted living, isang mas maliit na tahanan, o paglipat na mas malapit sa pamilya. Matutulungan ka ng Real Property Planning na alamin ang tamang pagkakasunod-sunod ng mga propesyonal bago gumawa ng anumang desisyon."
+      },
+      "q2": {
+        "question": "Kailangan ko ba ng Power of Attorney para ibenta ang bahay ng aking magulang?",
+        "answer": "Kung hindi na kayang pangasiwaan ng inyong magulang ang kanilang sariling mga gawain, ang taong kumikilos bilang kanilang ahente sa ilalim ng isang Durable Power of Attorney ay karaniwang kailangang hawak ang dokumentong iyon bago pumirma sa kanilang ngalan — kinakailangan ito ng mga bangko, title company, at mga transaksyon sa real estate. Maaaring kumpirmahin ng isang abogado sa elder law o estate kung sinasaklaw ng POA ang partikular na awtoridad sa real estate."
+      },
+      "q3": {
+        "question": "Gaano karaniwang katagal bago maibenta ang tahanan ng isang nakatatanda?",
+        "answer": "Malawak na nag-iiba ang timeline depende sa kalagayan ng tahanan, pagpapasya ng pamilya, at kung kailangan muna ng mga pag-aayos o isang kumpletong estate-sale cleanout. Dahil ang mga transisyon ng nakatatanda ay kadalasang sumasangkot ng maraming miyembro ng pamilya at kung minsan ay isang paglipat sa pangangalaga, ang proseso ay karaniwang inaayon sa bilis ng mga pangangailangan ng pamilya sa halip na pinapabilis."
+      },
+      "q4": {
+        "question": "Sino ang tumutulong mag-coordinate ng paglipat ng isang nakatatanda kasabay ng pagbebenta ng tahanan?",
+        "answer": "Karaniwang hinahawakan ng isang senior move manager ang pisikal na bahagi — pag-aayos, pagbabalot, at pag-set up ng bagong tahanan — habang tinutulungan ng isang senior living advisor na suriin ang mga opsyon sa placement. Ikinokonekta ng Real Property Planning ang mga pamilya sa pareho, kasabay ng bahagi ng real estate at valuation ng transisyon."
+      },
+      "q5": {
+        "question": "May mga konsiderasyon ba sa buwis kapag nagbebenta ng matagal nang tahanan ng pamilya?",
+        "answer": "Oo — ang mga capital gains exclusion, stepped-up basis sa isang trust, at iba pang mga salik sa buwis ay maaaring makaapekto nang malaki sa resulta. Dapat na bahagi ng usapan ang isang CPA o financial planner bago mag-lista, at matutulungan ka ng Real Property Planning na konektahin ang inyong pamilya sa isa."
+      }
+    }
   }
 }
