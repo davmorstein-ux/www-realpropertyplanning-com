@@ -84,6 +84,7 @@ const RPPHomeV3 = () => {
             {/* Tagline — two lines as separate spans */}
             <h1 id="rpp-tagline" style={{ textAlign: "center", margin: 0 }}>
               <span
+                className="rpp-tagline-line-v2"
                 style={{
                   display: "block",
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
@@ -100,6 +101,7 @@ const RPPHomeV3 = () => {
                 Guidance for real estate decisions
               </span>
               <span
+                className="rpp-tagline-line-v2"
                 style={{
                   display: "block",
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
@@ -462,7 +464,7 @@ const RPPHomeV3 = () => {
                       AFH Club
                     </h3>
                     <p
-                      className="afh-club-eyebrow"
+                      className="afh-eyebrow-label-v2"
                       style={{
                         fontFamily: "'Raleway', sans-serif",
                         fontWeight: 700,
