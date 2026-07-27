@@ -14,18 +14,19 @@ const tileMeta = [
   { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#721d24", imgSrc: tilePlanning },
   { key: "helpingParent", href: "/helping-an-aging-parent", bgColor: "#246044", imgSrc: tileHelping },
   { key: "handlingEstate", href: "/estate-probate-inherited-property", bgColor: "#25597e", imgSrc: tileEstate },
-  { key: "needProfessional", href: "/building-your-trusted-professional-team", bgColor: "#5d2f74", imgSrc: tileProfessionals },
+  {
+    key: "needProfessional",
+    href: "/building-your-trusted-professional-team",
+    bgColor: "#5d2f74",
+    imgSrc: tileProfessionals,
+  },
 ] as const;
 
 const RPPHomeV3 = () => {
   const { t } = useTranslation();
   return (
     <>
-      <SEOHead
-        title={t("seo.title")}
-        description={t("seo.description")}
-        canonical="https://realpropertyplanning.com"
-      />
+      <SEOHead title={t("seo.title")} description={t("seo.description")} canonical="https://realpropertyplanning.com" />
       <Header />
 
       <main id="main-content">
@@ -158,7 +159,7 @@ const RPPHomeV3 = () => {
                   alignItems: "center",
                   gap: 8,
                   background: "#7f1d1d",
-                  border: "2px solid #7f1d1d",
+                  border: "1px solid rgba(255,255,255,0.7)",
                   color: "#ffffff",
                   fontFamily: "'Raleway', sans-serif",
                   fontWeight: 700,
@@ -220,83 +221,83 @@ const RPPHomeV3 = () => {
                 const title = t(`funnel.tiles.${key}.title`);
                 const imgAlt = t(`funnel.tiles.${key}.imgAlt`);
                 return (
-                <Link key={key} to={href} className="group block" style={{ textDecoration: "none" }}>
-                  <div
-                    className="marquee-hover group-active:scale-[0.98] transition-transform duration-150"
-                    style={{ borderRadius: 10 }}
-                  >
+                  <Link key={key} to={href} className="group block" style={{ textDecoration: "none" }}>
                     <div
-                      style={{
-                        borderRadius: 10,
-                        overflow: "hidden",
-                        boxShadow: "0 2px 12px rgba(0,0,0,0.10)",
-                      }}
+                      className="marquee-hover group-active:scale-[0.98] transition-transform duration-150"
+                      style={{ borderRadius: 10 }}
                     >
-                      <div style={{ position: "relative" }}>
-                        <img
-                          src={imgSrc}
-                          alt={imgAlt}
-                          loading="lazy"
-                          style={{ display: "block", width: "100%", height: "190px", objectFit: "cover" }}
-                        />
-                        <span
-                          className="absolute top-3 right-3 sm:hidden"
-                          style={{
-                            backgroundColor: "rgba(255,255,255,0.88)",
-                            color: "#272421",
-                            fontSize: 11,
-                            fontWeight: 700,
-                            fontFamily: "Inter, system-ui, sans-serif",
-                            padding: "3px 8px",
-                            borderRadius: 20,
-                            letterSpacing: "0.04em",
-                            textTransform: "uppercase",
-                          }}
-                        >
-                          {t("funnel.exploreBadge")}
-                        </span>
-                      </div>
                       <div
                         style={{
-                          backgroundColor: bgColor,
-                          padding: "1.1rem 1.25rem",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          gap: "0.75rem",
-                          minHeight: "70px",
+                          borderRadius: 10,
+                          overflow: "hidden",
+                          boxShadow: "0 2px 12px rgba(0,0,0,0.10)",
                         }}
                       >
-                        <span
+                        <div style={{ position: "relative" }}>
+                          <img
+                            src={imgSrc}
+                            alt={imgAlt}
+                            loading="lazy"
+                            style={{ display: "block", width: "100%", height: "190px", objectFit: "cover" }}
+                          />
+                          <span
+                            className="absolute top-3 right-3 sm:hidden"
+                            style={{
+                              backgroundColor: "rgba(255,255,255,0.88)",
+                              color: "#272421",
+                              fontSize: 11,
+                              fontWeight: 700,
+                              fontFamily: "Inter, system-ui, sans-serif",
+                              padding: "3px 8px",
+                              borderRadius: 20,
+                              letterSpacing: "0.04em",
+                              textTransform: "uppercase",
+                            }}
+                          >
+                            {t("funnel.exploreBadge")}
+                          </span>
+                        </div>
+                        <div
                           style={{
-                            fontFamily: "Inter, system-ui, sans-serif",
-                            fontSize: 20,
-                            fontWeight: 700,
-                            color: "#ffffff",
-                            lineHeight: 1.25,
-                            margin: 0,
+                            backgroundColor: bgColor,
+                            padding: "1.1rem 1.25rem",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            gap: "0.75rem",
+                            minHeight: "70px",
                           }}
                         >
-                          {title}
-                        </span>
-                        <svg
-                          viewBox="0 0 24 24"
-                          width="20"
-                          height="20"
-                          fill="none"
-                          stroke="#ffffff"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          aria-hidden="true"
-                          style={{ flexShrink: 0, opacity: 0.8 }}
-                        >
-                          <polyline points="9 18 15 12 9 6" />
-                        </svg>
+                          <span
+                            style={{
+                              fontFamily: "Inter, system-ui, sans-serif",
+                              fontSize: 20,
+                              fontWeight: 700,
+                              color: "#ffffff",
+                              lineHeight: 1.25,
+                              margin: 0,
+                            }}
+                          >
+                            {title}
+                          </span>
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            fill="none"
+                            stroke="#ffffff"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden="true"
+                            style={{ flexShrink: 0, opacity: 0.8 }}
+                          >
+                            <polyline points="9 18 15 12 9 6" />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
                 );
               })}
             </div>
