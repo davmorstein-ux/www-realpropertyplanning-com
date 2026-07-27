@@ -29,8 +29,15 @@ const RPPHomeV3 = () => {
       <Header />
 
       <main id="main-content">
-        {/* ── Hero ── shrinks gracefully on mobile ─────────────────── */}
-        <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
+        {/* ── Hero ── scales to fit the enlarged tagline ───────────── */}
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            minHeight: "clamp(520px, 70vw, 980px)",
+            overflow: "hidden",
+          }}
+        >
           <img
             id="rpp-hero-image"
             src="/hero-v2.webp"
@@ -39,8 +46,7 @@ const RPPHomeV3 = () => {
             width={1691}
             height={756}
             alt={t("hero.imageAlt")}
-            className="block w-full object-cover object-center"
-            style={{ height: "clamp(340px, 50vw, 700px)" }}
+            className="absolute inset-0 w-full h-full object-cover object-center"
             loading="eager"
             fetchPriority="high"
             decoding="async"
