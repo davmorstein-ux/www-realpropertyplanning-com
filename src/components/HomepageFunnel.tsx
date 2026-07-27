@@ -10,7 +10,7 @@ const tiles = [
     imgAlt: "Older couple reviewing an estate plan together at home",
     title: "I Want to Plan Ahead",
     href: "/planning-before-a-crisis",
-    bgColor: "#721d24", // deep burgundy
+    bgColor: "#EF820D", // dark orange
   },
   {
     imgSrc: tileHelping,
