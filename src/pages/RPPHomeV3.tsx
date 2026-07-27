@@ -30,12 +30,11 @@ const RPPHomeV3 = () => {
       <Header />
 
       <main id="main-content">
-        {/* ── Hero ── scales to fit the enlarged tagline ───────────── */}
+        {/* ── Hero ── height driven by content, image is a background layer ── */}
         <div
           style={{
             position: "relative",
             width: "100%",
-            minHeight: "clamp(180px, 22.5vw, 310px)",
             overflow: "hidden",
           }}
         >
@@ -52,16 +51,18 @@ const RPPHomeV3 = () => {
             fetchPriority="high"
             decoding="async"
           />
-          {/* Logo + tagline overlay */}
+          {/* Logo + tagline overlay — normal flow, so this content's own
+              height determines the hero's height on every screen size,
+              rather than being absolutely positioned over a fixed-height
+              container where it could get clipped on narrow viewports. */}
           <div
             style={{
-              position: "absolute",
-              inset: 0,
+              position: "relative",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              padding: "clamp(16px, 3vw, 40px) 8%",
+              padding: "clamp(24px, 3vw, 40px) 8%",
               boxSizing: "border-box",
               gap: "clamp(6px, 1vw, 12px)",
             }}
