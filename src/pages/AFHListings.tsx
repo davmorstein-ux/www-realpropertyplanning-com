@@ -87,7 +87,7 @@ const AFHListings = () => {
           style={{
             backgroundColor: WHITE,
             borderBottom: `1px solid ${GRAY_BORDER}`,
-            padding: "1.25rem 1.5rem 2rem",
+            padding: "2.25rem 1.5rem 2rem",
           }}
         >
           <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
