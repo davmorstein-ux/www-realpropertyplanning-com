@@ -6,6 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { afhListings } from "@/data/afhListings";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
+import expRealtyLogo from "@/assets/providers/exp-realty-brokerage-large-logo-washington.webp";
 
 const TEAL = "#1a7a78";
 const TEAL_MID = "#2a9d9a";
@@ -113,27 +114,22 @@ const AFHListings = () => {
                     style={{
                       fontWeight: 700,
                       fontSize: "20px",
-                      color: "#a0222c",
+                      color: "#1f6fb2",
                       lineHeight: 1.3,
                     }}
                   >
                     David Stein
                   </div>
-                  <div
-                    style={{
-                      fontWeight: 600,
-                      fontSize: "16px",
-                      color: "#a0222c",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    eXp Realty
-                  </div>
+                  <img
+                    src={expRealtyLogo}
+                    alt="eXp Realty"
+                    style={{ height: "22px", width: "auto", display: "block", margin: "4px auto" }}
+                  />
                   <div
                     style={{
                       fontWeight: 700,
                       fontSize: "18px",
-                      color: "#a0222c",
+                      color: "#0a5648",
                       lineHeight: 1.3,
                     }}
                   >
@@ -145,7 +141,7 @@ const AFHListings = () => {
                       display: "block",
                       fontWeight: 600,
                       fontSize: "16px",
-                      color: "#a0222c",
+                      color: "#1f6fb2",
                       lineHeight: 1.3,
                       textDecoration: "none",
                     }}
