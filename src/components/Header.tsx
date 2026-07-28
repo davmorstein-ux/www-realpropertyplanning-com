@@ -115,7 +115,7 @@ const Header = () => {
           zIndex: 50,
           margin: 0,
           padding: isMobile
-            ? "calc(env(safe-area-inset-top, 0px) + 8px) 16px 6px"
+            ? "calc(env(safe-area-inset-top, 0px) + 8px) 12px 6px"
             : "calc(env(safe-area-inset-top, 0px) + 8px) 32px 4px",
           backgroundColor: "rgba(8, 13, 25, 0.92)",
           backdropFilter: "blur(10px)",
@@ -127,16 +127,28 @@ const Header = () => {
       >
         <nav
           aria-label="Primary"
-          style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 12,
+            minWidth: 0,
+          }}
         >
           {/* LEFT: WaterfallNav + logo */}
-          <div style={{ display: "flex", alignItems: "center", gap: 14, flexShrink: 0 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 14, minWidth: 0, flexShrink: 1 }}>
             <WaterfallNav />
             <Link to="/" style={{ display: "flex", alignItems: "center" }}>
               <img
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
-                style={{ height: isMobile ? 52 : 60, width: "auto", display: "block", objectFit: "contain" }}
+                style={{
+                  height: isMobile ? 44 : 60,
+                  width: "auto",
+                  maxWidth: "100%",
+                  display: "block",
+                  objectFit: "contain",
+                }}
                 sizes="100vw"
                 decoding="async"
                 width={946}
@@ -158,14 +170,18 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
-            <LanguageSwitcher />
-            <Link
-              to={CONTACT_LINK.href}
-              className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
-              style={isMobile ? { padding: "10px 6px", fontSize: 12 } : undefined}
-            >
-              {CONTACT_LINK.label}
-            </Link>
+            <LanguageSwitcher compact={isMobile} />
+            {/* Contact is hidden on mobile — it was the item being clipped at the
+                right edge. It now lives in the WaterfallNav quick-links strip,
+                and the CALL button below covers urgent contact. */}
+            {!isMobile && (
+              <Link
+                to={CONTACT_LINK.href}
+                className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
+              >
+                {CONTACT_LINK.label}
+              </Link>
+            )}
             <a
               href="tel:2069003015"
               style={{
