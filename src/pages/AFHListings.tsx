@@ -88,16 +88,15 @@ const AFHListings = () => {
           }}
         >
           <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
-            {/* Top row: back button left, badge right */}
+            {/* Top row: headshot + text, shifted left of the right edge */}
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between",
-                marginBottom: "1.5rem",
+                justifyContent: "flex-end",
+                marginBottom: "0.75rem",
               }}
             >
-              <BackButton />
               <div
                 style={{
                   display: "flex",
@@ -105,7 +104,7 @@ const AFHListings = () => {
                   alignItems: "center",
                   gap: "8px",
                   marginTop: "28px",
-                  marginRight: "160px",
+                  marginRight: "260px",
                 }}
               >
                 <a href="/realtor" aria-label="David Stein" style={{ textDecoration: "none", display: "inline-block" }}>
@@ -200,7 +199,7 @@ const AFHListings = () => {
             <h1
               className="afh-listings-h1"
               style={{
-                fontSize: "clamp(32px, 5vw, 50px)",
+                fontSize: "clamp(28px, 4.5vw, 44px)",
                 fontWeight: 700,
                 color: SLATE,
                 margin: "0 0 0.6rem",
