@@ -105,7 +105,7 @@ const AFHListings = () => {
                       borderRadius: "50%",
                       objectFit: "cover",
                       display: "block",
-                      border: "3px solid #a0222c",
+                      border: "3px solid #272421",
                     }}
                   />
                 </a>
@@ -114,7 +114,7 @@ const AFHListings = () => {
                     style={{
                       fontWeight: 700,
                       fontSize: "20px",
-                      color: "#1f6fb2",
+                      color: "#1247b4",
                       lineHeight: 1.3,
                     }}
                   >
@@ -129,7 +129,7 @@ const AFHListings = () => {
                     style={{
                       fontWeight: 700,
                       fontSize: "18px",
-                      color: "#0a5648",
+                      color: "#272421",
                       lineHeight: 1.3,
                     }}
                   >
@@ -141,7 +141,7 @@ const AFHListings = () => {
                       display: "block",
                       fontWeight: 600,
                       fontSize: "16px",
-                      color: "#1f6fb2",
+                      color: "#1247b4",
                       lineHeight: 1.3,
                       textDecoration: "none",
                     }}
