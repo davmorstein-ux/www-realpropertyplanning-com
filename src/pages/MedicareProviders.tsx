@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import heidiPhoto from "@/assets/heidi-bolton-medicare-advisor-spears-agency.webp";
+import jrGillespiePhoto from "@/assets/jr-gillespie-medicare-advisor-allstar-financial.webp";
 import spearsLogo from "@/assets/spears-agency-logo-medicare.webp";
 
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -43,6 +44,18 @@ const providers: Provider[] = [
     specialty: "Medicare planning and coverage guidance for individuals turning 65, retiring, or reviewing existing coverage",
     logo: spearsLogo,
     logoAlt: "Spears Agency logo",
+  },
+  {
+    name: "J. R. Gillespie",
+    title: "Primary Associate",
+    company: "ALLSTAR Financial Insurance",
+    photo: jrGillespiePhoto,
+    alt: "Photo of J. R. Gillespie, Primary Associate at ALLSTAR Financial Insurance",
+    href: "https://allstarfinancialinsurance.com",
+    phone: "(425) 814-6378",
+    email: "jr@AllStarFinancialInsurance.com",
+    specialty:
+      "Medicare, health, life, and long-term care insurance guidance, along with retirement solutions for individuals, families, and small businesses across the Puget Sound region",
   },
 ];
 

@@ -25,6 +25,7 @@ import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-wa
 import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
 import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
 import heidiPhoto from "@/assets/heidi-bolton-medicare-advisor-spears-agency.webp";
+import jrGillespiePhoto from "@/assets/jr-gillespie-medicare-advisor-allstar-financial.webp";
 
 const jennipherPhoto = jennipherPhotoAsset.url;
 const nicolePhoto = nicolePhotoAsset.url;
@@ -234,6 +235,14 @@ const groups: CategoryGroup[] = [
         company: "Spears Agency",
         specialty: "Medicare planning and coverage guidance for individuals turning 65, retiring, or reviewing existing coverage.",
         photo: heidiPhoto,
+        href: "/medicare-providers",
+      },
+      {
+        name: "J. R. Gillespie",
+        role: "Primary Associate",
+        company: "ALLSTAR Financial Insurance",
+        specialty: "Medicare guidance for individuals, families, and small businesses across the Puget Sound region.",
+        photo: jrGillespiePhoto,
         href: "/medicare-providers",
       },
     ],
