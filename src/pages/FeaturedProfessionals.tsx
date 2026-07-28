@@ -380,10 +380,21 @@ const FeaturedProfessionals = () => (
                       photo down relative to neighbouring cards. minHeight
                       reserves room for the longest name/role combination so the
                       company line below starts at the same height across a row. */}
-                  <div style={{ display: "flex", gap: 16, alignItems: "flex-start", minHeight: 104, marginBottom: 14 }}>
-                    {/* Photo group — renders two headshots side by side when a
-                        tile covers two people from the same firm. */}
-                    <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
+                  {/* Each person is a self-contained [photo][name/role] pair.
+                      Two pairs sit side by side for firms represented by two
+                      people; flexWrap lets the second pair drop to its own row
+                      if the card is too narrow to hold both. */}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: 20,
+                      alignItems: "flex-start",
+                      minHeight: 104,
+                      marginBottom: 14,
+                    }}
+                  >
+                    <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
                       <img
                         src={pro.photo}
                         alt={`Photo of ${pro.name}`}
@@ -391,40 +402,43 @@ const FeaturedProfessionals = () => (
                         loading="lazy"
                         decoding="async"
                       />
-                      {pro.photo2 && (
-                        <img
-                          src={pro.photo2}
-                          alt={`Photo of ${pro.name2 ?? ""}`}
-                          style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      )}
+                      <div style={{ minWidth: 0 }}>
+                        <p
+                          style={{
+                            fontFamily: "'Raleway', sans-serif",
+                            fontWeight: 700,
+                            fontSize: 16,
+                            color: "#292521",
+                            margin: "0 0 2px",
+                          }}
+                        >
+                          {pro.name}
+                        </p>
+                        <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
+                          {pro.role}
+                        </p>
+                      </div>
                     </div>
-                    <div style={{ minWidth: 0 }}>
-                      <p
-                        style={{
-                          fontFamily: "'Raleway', sans-serif",
-                          fontWeight: 700,
-                          fontSize: 16,
-                          color: "#292521",
-                          margin: "0 0 2px",
-                        }}
-                      >
-                        {pro.name}
-                      </p>
-                      <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
-                        {pro.role}
-                      </p>
-                      {pro.name2 && (
-                        <>
+
+                    {pro.name2 && (
+                      <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
+                        {pro.photo2 && (
+                          <img
+                            src={pro.photo2}
+                            alt={`Photo of ${pro.name2}`}
+                            style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        )}
+                        <div style={{ minWidth: 0 }}>
                           <p
                             style={{
                               fontFamily: "'Raleway', sans-serif",
                               fontWeight: 700,
                               fontSize: 16,
                               color: "#292521",
-                              margin: "8px 0 2px",
+                              margin: "0 0 2px",
                             }}
                           >
                             {pro.name2}
@@ -432,9 +446,9 @@ const FeaturedProfessionals = () => (
                           <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
                             {pro.role2}
                           </p>
-                        </>
-                      )}
-                    </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <p
                     style={{
