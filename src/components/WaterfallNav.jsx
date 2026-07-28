@@ -93,6 +93,20 @@ const CATEGORIES = [
   },
 ];
 
+/* Primary top-level pages. On viewports at or below 1100px these links are
+   removed from the header bar by the .rpp-curated-link media query in
+   Header.tsx, which left them reachable only two taps deep inside the "More"
+   category (and left Senior Transitions unreachable entirely). This strip
+   restores them to a single tap at the top of the drawer. It is hidden above
+   1100px, where the header bar shows the same links. */
+const QUICK_LINKS = [
+  { name: "About", href: "/about" },
+  { name: "Probate & Estate Sales", href: "/probate-estate-sales" },
+  { name: "Senior Transitions", href: "/senior-transitions" },
+  { name: "AFH Club", href: "/afh-club" },
+  { name: "Contact", href: "/contact" },
+];
+
 const PANEL_FADE_MS = 1400;
 const PANEL_HOVER_CLOSE_DELAY = 1500;
 
@@ -309,6 +323,55 @@ const CSS = `
   }
   .wf-close-btn:hover { background: #7f2028; color: #ffffff; }
 
+  /* Quick-links strip — mobile/tablet only, mirrors the header bar links
+     that the 1100px media query hides. */
+  .wf-quick {
+    display: none;
+    flex-shrink: 0;
+    padding: 12px 14px 14px;
+    border-bottom: 1px solid #dfc9cb;
+    background: #efe9e1;
+  }
+  .wf-quick-label {
+    font-size: 12px;
+    font-weight: 800;
+    color: #7f2028;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    margin: 0 0 10px 2px;
+  }
+  .wf-quick-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .wf-quick-btn {
+    flex: 1 1 44%;
+    min-width: 140px;
+    min-height: 44px;
+    padding: 11px 12px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #280a0c;
+    background: #ffffff;
+    border: 1px solid #d2b2b4;
+    border-left: 4px solid #7f2028;
+    border-radius: 6px;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.3;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .wf-quick-btn:hover { background: #f7f4ef; }
+  .wf-quick-btn:focus-visible {
+    outline: 2px solid #7f2028;
+    outline-offset: 2px;
+  }
+  @media (max-width: 1100px) {
+    .wf-quick { display: block; }
+  }
+
   @media (max-width: 640px) {
     .wf-panel { width: 100vw; max-width: 100vw; }
     .wf-body { flex-direction: column; overflow-y: auto; }
@@ -326,6 +389,21 @@ const CSS = `
     .wf-panel { animation: none !important; opacity: 1 !important; }
   }
 `;
+
+function QuickLinks({ onNavigate }) {
+  return (
+    <div className="wf-quick">
+      <p className="wf-quick-label">Main Pages</p>
+      <div className="wf-quick-grid">
+        {QUICK_LINKS.map((item) => (
+          <button key={item.href} data-nav-button className="wf-quick-btn" onClick={() => onNavigate(item.href)}>
+            {item.name}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function NavRail({ categories, activeIndex, onSelect }) {
   return (
@@ -481,6 +559,8 @@ export default function WaterfallNav() {
                 ✕
               </button>
             </div>
+
+            <QuickLinks onNavigate={handleNavigate} />
 
             <div className="wf-body">
               <NavRail categories={CATEGORIES} activeIndex={activeIndex} onSelect={setActiveIndex} />
