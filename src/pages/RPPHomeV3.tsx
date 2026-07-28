@@ -457,8 +457,8 @@ const RPPHomeV3 = () => {
                     <p
                       className="afh-eyebrow-label-v2"
                       style={{
-                        fontFamily: "'Raleway', sans-serif",
-                        fontWeight: 900,
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontWeight: 700,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
                         fontSize: 16,
