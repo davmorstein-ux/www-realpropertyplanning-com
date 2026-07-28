@@ -120,11 +120,6 @@ const AFHListings = () => {
                   >
                     David Stein
                   </div>
-                  <img
-                    src={expRealtyLogo}
-                    alt="eXp Realty"
-                    style={{ height: "44px", width: "auto", display: "block", margin: "4px auto" }}
-                  />
                   <div
                     style={{
                       fontWeight: 700,
@@ -135,6 +130,11 @@ const AFHListings = () => {
                   >
                     AFH Expert
                   </div>
+                  <img
+                    src={expRealtyLogo}
+                    alt="eXp Realty"
+                    style={{ height: "44px", width: "auto", display: "block", margin: "4px auto" }}
+                  />
                   <a
                     href="tel:2069003015"
                     style={{
