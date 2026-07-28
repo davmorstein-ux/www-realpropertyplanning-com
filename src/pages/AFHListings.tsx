@@ -78,33 +78,122 @@ const AFHListings = () => {
         ]}
       />
       <Header />
-      <main id="main-content" style={{ paddingTop: "80px" }}>
+      {/* The site header is position:sticky, so it already occupies space in the
+          document flow. No compensating top padding is needed here — adding it
+          produced a large empty band above the page heading. */}
+      <main id="main-content" style={{ paddingTop: "0" }}>
         {/* ── HEADER ── */}
         <div
           style={{
             backgroundColor: WHITE,
             borderBottom: `1px solid ${GRAY_BORDER}`,
-            padding: "2rem 1.5rem",
+            padding: "1.25rem 1.5rem 2rem",
           }}
         >
           <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
-            {/* Top row: headshot + text, shifted left of the right edge */}
+            {/* Two-column intro row: heading/copy on the left, contact card on the
+                right. Previously the contact card sat in its own full-width row
+                above the heading, which pushed the H1 far down the page. Wraps to
+                a single stacked column on narrow viewports. */}
             <div
               style={{
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-end",
-                marginBottom: "0.75rem",
+                alignItems: "flex-start",
+                justifyContent: "space-between",
+                gap: "2rem",
+                flexWrap: "wrap",
               }}
             >
+              {/* LEFT: pill + heading + copy */}
+              {/* LEFT: pill + heading + copy */}
+              <div style={{ flex: "1 1 520px", minWidth: 0 }}>
+                {/* Pill */}
+                <div style={{ marginBottom: "0.75rem" }}>
+                  <span
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
+                      backgroundColor: "#f0f0f0",
+                      color: "#8b1a1a",
+                      fontSize: "11px",
+                      fontWeight: 700,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      padding: "4px 12px",
+                      borderRadius: "100px",
+                      border: "1px solid #d0c0c0",
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: "6px",
+                        height: "6px",
+                        borderRadius: "50%",
+                        backgroundColor: "#8b1a1a",
+                        display: "inline-block",
+                      }}
+                    />
+                    AFH Club · Active Listings
+                  </span>
+                </div>
+
+                {/* Heading — stepped down one size from clamp(28px, 4.5vw, 44px).
+                    NOTE: the effective size is enforced by the
+                    html body main h1.afh-listings-h1 rule in index.css, which
+                    carries !important; that rule must match this value. */}
+                <h1
+                  className="afh-listings-h1"
+                  style={{
+                    fontSize: "clamp(25px, 3.8vw, 36px)",
+                    fontWeight: 700,
+                    color: SLATE,
+                    margin: "0 0 0.6rem",
+                    letterSpacing: "-0.02em",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  Adult Family Home Properties
+                </h1>
+
+                {/* Subtext */}
+                <p
+                  style={{
+                    fontSize: "15px",
+                    color: GRAY_TEXT,
+                    lineHeight: 1.7,
+                    margin: "0 0 1.5rem",
+                    maxWidth: "560px",
+                  }}
+                >
+                  Properties currently marketed or operated as Adult Family Homes for sale in the Puget Sound region.
+                  Reach out for showings or additional information on any listing.
+                </p>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    color: GRAY_TEXT,
+                    lineHeight: 1.7,
+                    margin: "0 0 1.5rem",
+                    maxWidth: "620px",
+                    fontStyle: "italic",
+                  }}
+                >
+                  AFH licenses are issued to individual providers and do not automatically transfer with the real
+                  estate. Buyers must independently satisfy all applicable DSHS licensing and Change of Ownership
+                  requirements. Property and licensing information should be independently verified.
+                </p>
+              </div>
+
+              {/* RIGHT: contact card */}
               <div
                 style={{
+                  flex: "0 0 auto",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   gap: "8px",
-                  marginTop: "28px",
-                  marginRight: "260px",
+                  width: "200px",
                 }}
               >
                 <a href="/realtor" aria-label="David Stein" style={{ textDecoration: "none", display: "inline-block" }}>
@@ -156,6 +245,7 @@ const AFHListings = () => {
                       color: "#1247b4",
                       lineHeight: 1.3,
                       textDecoration: "none",
+                      minHeight: "24px",
                     }}
                   >
                     (206) 900-3015
@@ -163,80 +253,6 @@ const AFHListings = () => {
                 </div>
               </div>
             </div>
-
-            {/* Pill */}
-            <div style={{ marginBottom: "0.75rem" }}>
-              <span
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "6px",
-                  backgroundColor: "#f0f0f0",
-                  color: "#8b1a1a",
-                  fontSize: "11px",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  padding: "4px 12px",
-                  borderRadius: "100px",
-                  border: "1px solid #d0c0c0",
-                }}
-              >
-                <span
-                  style={{
-                    width: "6px",
-                    height: "6px",
-                    borderRadius: "50%",
-                    backgroundColor: "#8b1a1a",
-                    display: "inline-block",
-                  }}
-                />
-                AFH Club · Active Listings
-              </span>
-            </div>
-
-            {/* Heading */}
-            <h1
-              className="afh-listings-h1"
-              style={{
-                fontSize: "clamp(28px, 4.5vw, 44px)",
-                fontWeight: 700,
-                color: SLATE,
-                margin: "0 0 0.6rem",
-                letterSpacing: "-0.02em",
-                lineHeight: 1.2,
-              }}
-            >
-              Adult Family Home Properties
-            </h1>
-
-            {/* Subtext */}
-            <p
-              style={{
-                fontSize: "15px",
-                color: GRAY_TEXT,
-                lineHeight: 1.7,
-                margin: "0 0 1.5rem",
-                maxWidth: "560px",
-              }}
-            >
-              Properties currently marketed or operated as Adult Family Homes for sale in the Puget Sound region. Reach
-              out for showings or additional information on any listing.
-            </p>
-            <p
-              style={{
-                fontSize: "14px",
-                color: GRAY_TEXT,
-                lineHeight: 1.7,
-                margin: "0 0 1.5rem",
-                maxWidth: "620px",
-                fontStyle: "italic",
-              }}
-            >
-              AFH licenses are issued to individual providers and do not automatically transfer with the real estate.
-              Buyers must independently satisfy all applicable DSHS licensing and Change of Ownership requirements.
-              Property and licensing information should be independently verified.
-            </p>
 
             {/* Stats bar */}
             <div
