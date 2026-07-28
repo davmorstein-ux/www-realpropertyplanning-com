@@ -123,7 +123,7 @@ const AFHListings = () => {
                   <img
                     src={expRealtyLogo}
                     alt="eXp Realty"
-                    style={{ height: "22px", width: "auto", display: "block", margin: "4px auto" }}
+                    style={{ height: "44px", width: "auto", display: "block", margin: "4px auto" }}
                   />
                   <div
                     style={{
