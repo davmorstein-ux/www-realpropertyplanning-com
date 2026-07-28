@@ -94,7 +94,16 @@ const AFHListings = () => {
               }}
             >
               <BackButton />
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "8px",
+                  marginTop: "28px",
+                  marginRight: "160px",
+                }}
+              >
                 <a href="/realtor" aria-label="David Stein" style={{ textDecoration: "none", display: "inline-block" }}>
                   <img
                     src={davidSteinPhoto}
