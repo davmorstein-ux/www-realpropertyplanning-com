@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { afhListings } from "@/data/afhListings";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
+import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
 
 const TEAL = "#1a7a78";
 const TEAL_MID = "#2a9d9a";
@@ -13,7 +14,6 @@ const GRAY_BG = "#f4f6f7";
 const GRAY_BORDER = "#dde3e8";
 const GRAY_TEXT = "#876b6d";
 const WHITE = "#ffffff";
-
 
 const BackButton = () => (
   <a href="/afh-club" aria-label="Back to AFH Club" style={{ display: "inline-block", textDecoration: "none" }}>
@@ -94,12 +94,18 @@ const AFHListings = () => {
             >
               <BackButton />
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
-                <a href="/afh-club" aria-label="AFH Club" style={{ textDecoration: "none", display: "inline-block" }}>
+                <a href="/realtor" aria-label="David Stein" style={{ textDecoration: "none", display: "inline-block" }}>
                   <img
-                    src="/afh-club-badge.png"
-                    alt=""
-                    aria-hidden="true"
-                    style={{ height: "160px", width: "auto", display: "block" }}
+                    src={davidSteinPhoto}
+                    alt="David Stein"
+                    style={{
+                      height: "120px",
+                      width: "120px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      display: "block",
+                      border: "3px solid #a0222c",
+                    }}
                   />
                 </a>
                 <div style={{ textAlign: "center" }}>
@@ -111,7 +117,17 @@ const AFHListings = () => {
                       lineHeight: 1.3,
                     }}
                   >
-                    our team
+                    David Stein
+                  </div>
+                  <div
+                    style={{
+                      fontWeight: 600,
+                      fontSize: "16px",
+                      color: "#a0222c",
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    eXp Realty
                   </div>
                   <div
                     style={{
@@ -123,6 +139,19 @@ const AFHListings = () => {
                   >
                     AFH Expert
                   </div>
+                  <a
+                    href="tel:2069003015"
+                    style={{
+                      display: "block",
+                      fontWeight: 600,
+                      fontSize: "16px",
+                      color: "#a0222c",
+                      lineHeight: 1.3,
+                      textDecoration: "none",
+                    }}
+                  >
+                    (206) 900-3015
+                  </a>
                 </div>
               </div>
             </div>
@@ -183,8 +212,8 @@ const AFHListings = () => {
                 maxWidth: "560px",
               }}
             >
-              Properties currently marketed or operated as Adult Family Homes for sale in the Puget Sound region.
-              Reach out for showings or additional information on any listing.
+              Properties currently marketed or operated as Adult Family Homes for sale in the Puget Sound region. Reach
+              out for showings or additional information on any listing.
             </p>
             <p
               style={{
@@ -196,9 +225,9 @@ const AFHListings = () => {
                 fontStyle: "italic",
               }}
             >
-              AFH licenses are issued to individual providers and do not automatically transfer with the real
-              estate. Buyers must independently satisfy all applicable DSHS licensing and Change of Ownership
-              requirements. Property and licensing information should be independently verified.
+              AFH licenses are issued to individual providers and do not automatically transfer with the real estate.
+              Buyers must independently satisfy all applicable DSHS licensing and Change of Ownership requirements.
+              Property and licensing information should be independently verified.
             </p>
 
             {/* Stats bar */}
