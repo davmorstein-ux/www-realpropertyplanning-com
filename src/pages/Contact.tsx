@@ -54,8 +54,15 @@ const Contact = () => {
   const turnstileWidgetIdRef = useRef<string | undefined>(undefined);
 
   // Lazy-load the Turnstile script only on this page, then render the widget
-  // once it's ready.
+  // once it's ready. Uses polling rather than relying solely on the
+  // script's "load" event — that event fires exactly once, ever, so if
+  // a visitor had already loaded /contact earlier in the same browsing
+  // session, the script tag (and its one-time "load" event) already
+  // exists, and a fresh listener attached on a later visit would never
+  // fire — silently leaving the widget unrendered and the form stuck.
   useEffect(() => {
+    let cancelled = false;
+
     const renderWidget = () => {
       if (!window.turnstile || !turnstileContainerRef.current || turnstileWidgetIdRef.current) return;
       turnstileWidgetIdRef.current = window.turnstile.render(turnstileContainerRef.current, {
@@ -71,20 +78,34 @@ const Contact = () => {
       return;
     }
 
-    const existingScript = document.querySelector('script[src*="turnstile"]');
-    if (existingScript) {
-      existingScript.addEventListener("load", renderWidget);
-      return () => existingScript.removeEventListener("load", renderWidget);
+    if (!document.querySelector('script[src*="turnstile"]')) {
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
     }
 
-    const script = document.createElement("script");
-    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
-    script.async = true;
-    script.defer = true;
-    script.addEventListener("load", renderWidget);
-    document.body.appendChild(script);
+    // Poll for window.turnstile becoming available — reliable regardless
+    // of whether the script was just added or already existed from an
+    // earlier visit.
+    const pollInterval = window.setInterval(() => {
+      if (cancelled) return;
+      if (window.turnstile) {
+        window.clearInterval(pollInterval);
+        renderWidget();
+      }
+    }, 150);
 
-    return () => script.removeEventListener("load", renderWidget);
+    // Safety net: stop polling after 20s so a genuinely blocked/failed
+    // script load doesn't poll forever.
+    const timeoutId = window.setTimeout(() => window.clearInterval(pollInterval), 20000);
+
+    return () => {
+      cancelled = true;
+      window.clearInterval(pollInterval);
+      window.clearTimeout(timeoutId);
+    };
   }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
