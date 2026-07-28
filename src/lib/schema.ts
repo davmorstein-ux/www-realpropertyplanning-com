@@ -541,3 +541,100 @@ export const homepageFaqSchema = {
     },
   ],
 };
+
+/**
+ * Structured data for a single Adult Family Home listing, using Google's
+ * documented RealEstateListing type so individual AFH properties are
+ * eligible for real-estate-specific rich results, not just generic
+ * webpage results.
+ *
+ * Listings with an undisclosed street address ("Address Upon Request")
+ * omit the streetAddress field rather than emitting a literal,
+ * non-address string as structured data — city/state/price/etc. are
+ * still included.
+ */
+export function realEstateListingSchema(listing: {
+  address: string;
+  city: string;
+  state: string;
+  beds: number;
+  sqft: string;
+  price: string;
+  photo: string | null;
+  broker: string;
+  brokerage: string;
+  mlsNum: string;
+}) {
+  const priceNumber = Number(listing.price.replace(/[^0-9.]/g, ""));
+  const sqftNumber = Number(listing.sqft.replace(/[^0-9.]/g, ""));
+  const hasDisclosedAddress = listing.address !== "Address Upon Request";
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    "@id": `${SITE_URL}/afh-club/listings#mls-${listing.mlsNum}`,
+    name: hasDisclosedAddress
+      ? `Adult Family Home for Sale — ${listing.address}, ${listing.city}, WA`
+      : `Adult Family Home for Sale — ${listing.city}, WA (Address Upon Request)`,
+    description: `${listing.beds}-bedroom Adult Family Home for sale in ${listing.city}, Washington — ${listing.sqft} sq ft. Listed by ${listing.broker}, ${listing.brokerage}. NWMLS #${listing.mlsNum}.`,
+    url: `${SITE_URL}/afh-club/listings`,
+    ...(listing.photo ? { image: `${SITE_URL}${listing.photo}` } : {}),
+    address: {
+      "@type": "PostalAddress",
+      ...(hasDisclosedAddress ? { streetAddress: listing.address } : {}),
+      addressLocality: listing.city,
+      addressRegion: listing.state,
+      addressCountry: "US",
+    },
+    numberOfRooms: listing.beds,
+    floorSize: {
+      "@type": "QuantitativeValue",
+      value: sqftNumber,
+      unitCode: "FTK",
+    },
+    offers: {
+      "@type": "Offer",
+      price: priceNumber,
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: `${SITE_URL}/afh-club/listings`,
+      seller: {
+        "@type": "RealEstateAgent",
+        name: listing.broker,
+        affiliation: listing.brokerage,
+      },
+    },
+  };
+}
+
+/**
+ * Wraps every current listing into an ItemList, so the /afh-club/listings
+ * directory page itself is marked up as a page containing a set of
+ * distinct real estate listings, not just a generic collection of text.
+ */
+export function realEstateListingsPageSchema(
+  listings: {
+    address: string;
+    city: string;
+    state: string;
+    beds: number;
+    sqft: string;
+    price: string;
+    photo: string | null;
+    broker: string;
+    brokerage: string;
+    mlsNum: string;
+  }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Adult Family Homes for Sale — Washington State",
+    numberOfItems: listings.length,
+    itemListElement: listings.map((listing, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: realEstateListingSchema(listing),
+    })),
+  };
+}

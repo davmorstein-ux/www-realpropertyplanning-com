@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { afhListings } from "@/data/afhListings";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
+import { realEstateListingsPageSchema } from "@/lib/schema";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
 import expRealtyLogo from "@/assets/providers/exp-realty-brokerage-large-logo-washington.webp";
 
@@ -54,6 +55,8 @@ const AFHListings = () => {
       ? `${citiesByVolume.slice(0, 3).join(" · ")} + ${citiesByVolume.length - 3} more`
       : citiesByVolume.join(" · ");
 
+  const listingsJsonLd = realEstateListingsPageSchema(afhListings);
+
   return (
     <div
       style={{
@@ -66,6 +69,7 @@ const AFHListings = () => {
         title="Adult Family Homes for Sale in Washington | AFH Club"
         description="Browse Adult Family Home properties currently listed for sale or lease throughout Washington State, with pricing, property details and NWMLS attribution."
         canonical="https://realpropertyplanning.com/afh-club/listings"
+        jsonLd={listingsJsonLd}
       />
       <BreadcrumbSchema
         items={[
