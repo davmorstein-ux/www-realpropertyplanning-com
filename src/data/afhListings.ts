@@ -321,24 +321,6 @@ export const afhListings: AFHListing[] = [
     mlsNum: "2520888",
   },
   {
-    // NOTE: only 2bd/1ba/918sqft — much smaller than every other listing here.
-    // Broker remarks say "Value is in the land," suggesting this may be more of
-    // a redevelopment play than an ongoing AFH operation. Confirm this fits.
-    id: 24,
-    address: "3208 21st Street",
-    city: "Everett",
-    state: "WA",
-    beds: 2,
-    bathDisplay: "1",
-    bathDetail: "1 full",
-    sqft: "918",
-    price: "$483,000",
-    photo: "/listing-photos/3208_21st_St_Everett.webp",
-    broker: "Nikita Krivorak",
-    brokerage: "Pellego, Inc.",
-    mlsNum: "2535911",
-  },
-  {
     id: 25,
     address: "6425 Nyanza Park Drive SW",
     city: "Lakewood",
