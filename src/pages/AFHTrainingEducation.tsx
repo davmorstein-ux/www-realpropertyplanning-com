@@ -63,12 +63,47 @@ const SPECIALTY_TRAININGS = [
   { name: "Nurse Delegation — Insulin", trigger: "Required if administering insulin through delegation" },
 ];
 
+/* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
+   Google had no signal that these are editorial guides rather than agent
+   pages. Author/publisher is the Organization — publishing reference material
+   is a hub function and makes no claim that RPP provides services. */
+const afhArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "AFH Training & Education",
+  description: "Complete guide to Washington State AFH training requirements — 75-hour HCA training, AFH Administrator Training, specialty courses, continuing education, and where to enroll.",
+  url: "https://realpropertyplanning.com/afh-club/training-education",
+  datePublished: "2026-07-24",
+  dateModified: "2026-07-24",
+  author: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://realpropertyplanning.com/logo.webp",
+    },
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+};
+
 const AFHTrainingEducation = () => (
   <>
     <SEOHead
       title="AFH Training & Education | AFH Club | Real Property Planning"
       description="Complete guide to Washington State AFH training requirements — 75-hour HCA training, AFH Administrator Training, specialty courses, continuing education, and where to enroll."
       canonical="https://realpropertyplanning.com/afh-club/training-education"
+      ogType="article"
+      schemaJson={afhArticleSchema}
     />
     <BreadcrumbSchema
       items={[

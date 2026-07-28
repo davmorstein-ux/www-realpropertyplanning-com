@@ -118,12 +118,47 @@ const LOOKUP_TOOLS = [
   },
 ];
 
+/* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
+   Google had no signal that these are editorial guides rather than agent
+   pages. Author/publisher is the Organization — publishing reference material
+   is a hub function and makes no claim that RPP provides services. */
+const afhArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "AFH Regulations & Compliance",
+  description: "A plain-language guide to Washington State DSHS inspections, enforcement levels, top AFH violations, and public lookup tools for Adult Family Homes.",
+  url: "https://realpropertyplanning.com/afh-club/regulations-compliance",
+  datePublished: "2026-07-24",
+  dateModified: "2026-07-24",
+  author: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://realpropertyplanning.com/logo.webp",
+    },
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+};
+
 const AFHRegulationsCompliance = () => (
   <>
     <SEOHead
       title="AFH Regulations & Compliance | AFH Club | Real Property Planning"
       description="A plain-language guide to Washington State DSHS inspections, enforcement levels, top AFH violations, and public lookup tools for Adult Family Homes."
       canonical="https://realpropertyplanning.com/afh-club/regulations-compliance"
+      ogType="article"
+      schemaJson={afhArticleSchema}
     />
     <BreadcrumbSchema
       items={[

@@ -1,0 +1,16 @@
+vite.config.ts — two edits
+
+EDIT 1 — line ~1534
+FIND:
+description: "Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, transfer your DSHS license, and value your AFH accurately.",
+
+REPLACE WITH:
+description: "Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, navigate the DSHS Change of Ownership process, and value your AFH accurately.",
+
+
+EDIT 2 — line ~1538 (end of the intro string)
+FIND:
+and the transfer of your DSHS operating license to a new, DSHS-approved owner."
+
+REPLACE WITH:
+and the DSHS Change of Ownership process. Washington AFH licenses are not transferable — the buyer must qualify for a new license of their own."

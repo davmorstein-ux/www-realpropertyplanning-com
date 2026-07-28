@@ -66,12 +66,47 @@ const HCA_EXEMPTIONS = [
   "Long-term care workers employed between January 1, 2011 and January 6, 2012 who completed training requirements then in effect (must have proof of employment per DOH WAC 246-980-070)",
 ];
 
+/* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
+   Google had no signal that these are editorial guides rather than agent
+   pages. Author/publisher is the Organization — publishing reference material
+   is a hub function and makes no claim that RPP provides services. */
+const afhArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "AFH Licensing & Certification",
+  description: "Complete guide to Washington State AFH licensing — DSHS application process, Home Care Aide certification, background checks, HCA exemptions, and CHOW requirements.",
+  url: "https://realpropertyplanning.com/afh-club/licensing-certification",
+  datePublished: "2026-07-24",
+  dateModified: "2026-07-24",
+  author: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://realpropertyplanning.com/logo.webp",
+    },
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+};
+
 const AFHLicensingCertification = () => (
   <>
     <SEOHead
       title="AFH Licensing & Certification | AFH Club | Real Property Planning"
       description="Complete guide to Washington State AFH licensing — DSHS application process, Home Care Aide certification, background checks, HCA exemptions, and CHOW requirements."
       canonical="https://realpropertyplanning.com/afh-club/licensing-certification"
+      ogType="article"
+      schemaJson={afhArticleSchema}
     />
     <BreadcrumbSchema
       items={[

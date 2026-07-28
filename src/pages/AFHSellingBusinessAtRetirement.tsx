@@ -26,25 +26,21 @@ const topics = [
   },
   {
     title: "Protecting Your Residents Through the Transition",
-    description:
-      "Washington State requirements around resident notice and continuity of care during a change of ownership.",
+    description: "Washington State requirements around resident notice and continuity of care during a change of ownership.",
   },
   {
     title: "Timing Your Exit",
-    description:
-      "Why AFH sales often take longer than a typical home sale — and how to plan your retirement timeline around it.",
+    description: "Why AFH sales often take longer than a typical home sale — and how to plan your retirement timeline around it.",
   },
   {
     title: "Getting an Accurate Valuation",
-    description:
-      "Why a residential appraisal alone usually understates what an operating AFH business is actually worth.",
+    description: "Why a residential appraisal alone usually understates what an operating AFH business is actually worth.",
   },
 ];
 
 const faqs = [
   {
-    question:
-      "I'm planning to retire from running my AFH — should I sell the business and the building together, or separately?",
+    question: "I'm planning to retire from running my AFH — should I sell the business and the building together, or separately?",
     answer:
       "Most retiring owners sell both together, and most buyers prefer it that way — it lets them step directly into an operating home with residents, staff, and licensing already in place, rather than assembling those pieces separately. Selling the business and building as a single transaction is usually simpler and often nets more than selling them apart, though there are situations (like keeping the real estate as an investment while transferring just the operations) where separating them makes sense. It depends on your specific goals for retirement.",
   },
@@ -75,12 +71,47 @@ const faqs = [
   },
 ];
 
+/* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
+   Google had no signal that these are editorial guides rather than agent
+   pages. Author/publisher is the Organization — publishing reference material
+   is a hub function and makes no claim that RPP provides services. */
+const afhArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Selling Your Adult Family Home Business at Retirement",
+  description: "Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, navigate the DSHS Change of Ownership process, and value your AFH accurately.",
+  url: "https://realpropertyplanning.com/afh-club/selling-your-business-at-retirement",
+  datePublished: "2026-07-22",
+  dateModified: "2026-07-22",
+  author: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://realpropertyplanning.com/logo.webp",
+    },
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+};
+
 const AFHSellingBusinessAtRetirement = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Selling Your Adult Family Home Business at Retirement | Real Property Planning"
       description="Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, navigate the DSHS Change of Ownership process, and value your AFH accurately."
       canonical="https://realpropertyplanning.com/afh-club/selling-your-business-at-retirement"
+      ogType="article"
+      schemaJson={afhArticleSchema}
     />
     <BreadcrumbSchema
       items={[
@@ -100,19 +131,19 @@ const AFHSellingBusinessAtRetirement = () => (
         <div className="container px-5 md:px-8">
           <div className="max-w-3xl mx-auto text-foreground text-[17px] md:text-[18px] leading-relaxed space-y-4">
             <p>
-              Running an Adult Family Home for years — sometimes decades — builds something that's genuinely difficult
-              to walk away from: relationships with residents and their families, a trained staff who trust your
-              leadership, and a business that, done well, has real value beyond the four walls it sits in. When
-              retirement starts to feel real, the question isn't just "what's my house worth" — it's how to responsibly
-              transition everything you've built to someone who can carry it forward.
+              Running an Adult Family Home for years — sometimes decades — builds something that's genuinely
+              difficult to walk away from: relationships with residents and their families, a trained staff who
+              trust your leadership, and a business that, done well, has real value beyond the four walls it sits
+              in. When retirement starts to feel real, the question isn't just "what's my house worth" — it's how to
+              responsibly transition everything you've built to someone who can carry it forward.
             </p>
             <p>
               Selling an AFH at retirement is meaningfully different from selling a typical home, or even a typical
               small business. It runs on two tracks that have to work together: the real estate transaction, and the
               DSHS Change of Ownership process. Your license does not transfer with the business or the real estate —
-              the buyer must complete the Change of Ownership process and qualify for a new Adult Family Home license of
-              their own. Getting both tracks right — and valued accurately — is what separates a well-planned exit from
-              a rushed one.
+              the buyer must complete the Change of Ownership process and qualify for a new Adult Family Home license
+              of their own. Getting both tracks right — and valued accurately — is what separates a well-planned exit
+              from a rushed one.
             </p>
           </div>
         </div>

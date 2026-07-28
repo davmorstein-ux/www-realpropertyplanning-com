@@ -96,12 +96,47 @@ const REVENUE_CONTEXT = [
   },
 ];
 
+/* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
+   Google had no signal that these are editorial guides rather than agent
+   pages. Author/publisher is the Organization — publishing reference material
+   is a hub function and makes no claim that RPP provides services. */
+const afhArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "AFH Costs & Fees",
+  description: "Complete breakdown of Washington State Adult Family Home startup costs, annual licensing fees, liability insurance, building permits, and Medicaid rate information for 2025.",
+  url: "https://realpropertyplanning.com/afh-club/costs-fees",
+  datePublished: "2026-07-24",
+  dateModified: "2026-07-24",
+  author: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://realpropertyplanning.com/logo.webp",
+    },
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+};
+
 const AFHCostsFees = () => (
   <>
     <SEOHead
       title="AFH Costs & Fees | AFH Club | Real Property Planning"
       description="Complete breakdown of Washington State Adult Family Home startup costs, annual licensing fees, liability insurance, building permits, and Medicaid rate information for 2025."
       canonical="https://realpropertyplanning.com/afh-club/costs-fees"
+      ogType="article"
+      schemaJson={afhArticleSchema}
     />
     <BreadcrumbSchema
       items={[

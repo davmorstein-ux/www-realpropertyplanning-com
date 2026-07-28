@@ -60,12 +60,47 @@ const PROVIDER_TYPES = [
   },
 ];
 
+/* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
+   Google had no signal that these are editorial guides rather than agent
+   pages. Author/publisher is the Organization — publishing reference material
+   is a hub function and makes no claim that RPP provides services. */
+const afhArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Getting Started with an Adult Family Home",
+  description: "Is an Adult Family Home right for you? A comprehensive guide to what AFHs are, who can open one, individual vs entity providers, and what to expect before applying.",
+  url: "https://realpropertyplanning.com/afh-club/getting-started",
+  datePublished: "2026-07-24",
+  dateModified: "2026-07-24",
+  author: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://realpropertyplanning.com/logo.webp",
+    },
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+};
+
 const AFHGettingStarted = () => (
   <>
     <SEOHead
       title="Getting Started with an Adult Family Home | AFH Club | Real Property Planning"
       description="Is an Adult Family Home right for you? A comprehensive guide to what AFHs are, who can open one, individual vs entity providers, and what to expect before applying."
       canonical="https://realpropertyplanning.com/afh-club/getting-started"
+      ogType="article"
+      schemaJson={afhArticleSchema}
     />
     <BreadcrumbSchema
       items={[

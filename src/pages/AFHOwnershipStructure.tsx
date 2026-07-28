@@ -45,12 +45,47 @@ const CONSIDERATIONS = [
   },
 ];
 
+/* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
+   Google had no signal that these are editorial guides rather than agent
+   pages. Author/publisher is the Organization — publishing reference material
+   is a hub function and makes no claim that RPP provides services. */
+const afhArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "AFH Ownership: Individual or LLC?",
+  description: "Should you buy an Adult Family Home as an individual or through an LLC? A guide to financing, liability, tax, and Washington State licensing considerations for AFH buyers.",
+  url: "https://realpropertyplanning.com/afh-club/ownership-structure",
+  datePublished: "2026-07-24",
+  dateModified: "2026-07-24",
+  author: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://realpropertyplanning.com/logo.webp",
+    },
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+};
+
 const AFHOwnershipStructure = () => (
   <>
     <SEOHead
       title="AFH Ownership: Individual or LLC? | AFH Club | Real Property Planning"
       description="Should you buy an Adult Family Home as an individual or through an LLC? A guide to financing, liability, tax, and Washington State licensing considerations for AFH buyers."
       canonical="https://realpropertyplanning.com/afh-club/ownership-structure"
+      ogType="article"
+      schemaJson={afhArticleSchema}
     />
     <BreadcrumbSchema
       items={[

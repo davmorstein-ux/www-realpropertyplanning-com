@@ -88,12 +88,47 @@ const COMMON_MODIFICATIONS = [
   },
 ];
 
+/* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
+   Google had no signal that these are editorial guides rather than agent
+   pages. Author/publisher is the Organization — publishing reference material
+   is a hub function and makes no claim that RPP provides services. */
+const afhArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "AFH Building & Inspection Requirements",
+  description: "Complete guide to Washington State AFH building requirements — WABO inspection process, what WABO is, common modifications, new build vs remodel vs existing home, and septic requirements.",
+  url: "https://realpropertyplanning.com/afh-club/building-inspection",
+  datePublished: "2026-07-24",
+  dateModified: "2026-07-24",
+  author: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://realpropertyplanning.com/logo.webp",
+    },
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+};
+
 const AFHBuildingInspection = () => (
   <>
     <SEOHead
       title="AFH Building & Inspection Requirements | AFH Club | Real Property Planning"
       description="Complete guide to Washington State AFH building requirements — WABO inspection process, what WABO is, common modifications, new build vs remodel vs existing home, and septic requirements."
       canonical="https://realpropertyplanning.com/afh-club/building-inspection"
+      ogType="article"
+      schemaJson={afhArticleSchema}
     />
     <BreadcrumbSchema
       items={[

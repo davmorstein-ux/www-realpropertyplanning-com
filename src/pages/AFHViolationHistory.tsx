@@ -55,12 +55,47 @@ const sectionLight = { background: "#f7f4ef", padding: "64px 24px" };
 const sectionWhite = { background: "#ffffff", padding: "64px 24px" };
 const wrap = { maxWidth: 760, margin: "0 auto" };
 
+/* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
+   Google had no signal that these are editorial guides rather than agent
+   pages. Author/publisher is the Organization — publishing reference material
+   is a hub function and makes no claim that RPP provides services. */
+const afhArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How to Look Up AFH Violations & Inspection Reports",
+  description: "A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State — how to search, read reports, spot red flags, and know what the records actually mean.",
+  url: "https://realpropertyplanning.com/afh-club/violation-history-lookup",
+  datePublished: "2026-07-27",
+  dateModified: "2026-07-27",
+  author: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://realpropertyplanning.com/logo.webp",
+    },
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+};
+
 const AFHViolationHistory = () => (
   <>
     <SEOHead
       title="How to Look Up AFH Violations & Inspection Reports | AFH Club | Real Property Planning"
       description="A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State — how to search, read reports, spot red flags, and know what the records actually mean."
       canonical="https://realpropertyplanning.com/afh-club/violation-history-lookup"
+      ogType="article"
+      schemaJson={afhArticleSchema}
     />
     <BreadcrumbSchema
       items={[

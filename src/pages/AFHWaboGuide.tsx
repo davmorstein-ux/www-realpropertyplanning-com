@@ -47,12 +47,47 @@ const sectionLight = { background: "#f7f4ef", padding: "64px 24px" };
 const sectionWhite = { background: "#ffffff", padding: "64px 24px" };
 const wrap = { maxWidth: 760, margin: "0 auto" };
 
+/* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
+   Google had no signal that these are editorial guides rather than agent
+   pages. Author/publisher is the Organization — publishing reference material
+   is a hub function and makes no claim that RPP provides services. */
+const afhArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "What Is WABO? A Simple Overview",
+  description: "A simple overview of WABO and the WABO inspection process for Adult Family Homes in Washington State — what WABO is, who inspects the home, and why it matters before buying.",
+  url: "https://realpropertyplanning.com/afh-club/wabo-inspection-guide",
+  datePublished: "2026-07-26",
+  dateModified: "2026-07-26",
+  author: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://realpropertyplanning.com/logo.webp",
+    },
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Real Property Planning",
+    url: "https://realpropertyplanning.com",
+  },
+};
+
 const AFHWaboGuide = () => (
   <>
     <SEOHead
       title="What Is WABO? A Simple Overview | AFH Club | Real Property Planning"
       description="A simple overview of WABO and the WABO inspection process for Adult Family Homes in Washington State — what WABO is, who inspects the home, and why it matters before buying."
       canonical="https://realpropertyplanning.com/afh-club/wabo-inspection-guide"
+      ogType="article"
+      schemaJson={afhArticleSchema}
     />
     <BreadcrumbSchema
       items={[
