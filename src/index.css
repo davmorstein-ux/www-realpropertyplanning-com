@@ -3647,7 +3647,10 @@ h1.afh-listings-h1 {
    .afh-club-eyebrow version removed entirely, replaced under a new
    class name, as an attempt to break a suspected stuck preview cache
    tied to the old selector). */
-.afh-eyebrow-label-v2 {
+html body main p.afh-eyebrow-label-v2.afh-eyebrow-label-v2,
+main p.afh-eyebrow-label-v2.afh-eyebrow-label-v2,
+p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
   font-size: 16px !important;
+  font-weight: 900 !important;
   line-height: 1.4 !important;
 }
