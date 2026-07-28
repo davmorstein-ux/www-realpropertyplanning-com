@@ -131,7 +131,8 @@ const groups: CategoryGroup[] = [
         name: "Meriann Roberts",
         role: "Owner",
         company: "Ginny's Girls Estate Services",
-        specialty: "Estate sales, senior move management, residential clear-outs, and ISA-certified personal property appraisals throughout North King and Snohomish Counties.",
+        specialty:
+          "Estate sales, senior move management, residential clear-outs, and ISA-certified personal property appraisals throughout North King and Snohomish Counties.",
         photo: meriannPhoto,
         href: "/estate-liquidators",
       },
@@ -139,7 +140,8 @@ const groups: CategoryGroup[] = [
         name: "Abigail McKee",
         role: "Manager",
         company: "Ginny's Girls Estate Services",
-        specialty: "Estate sales, senior move management, residential clear-outs, and ISA-certified personal property appraisals throughout North King and Snohomish Counties.",
+        specialty:
+          "Estate sales, senior move management, residential clear-outs, and ISA-certified personal property appraisals throughout North King and Snohomish Counties.",
         photo: abigailPhoto,
         href: "/estate-liquidators",
       },
@@ -178,7 +180,8 @@ const groups: CategoryGroup[] = [
         name: "Dominik Musafia",
         role: "Divorce & Family Law Attorney",
         company: "Seattle Divorce Options, PLLC",
-        specialty: "Collaborative divorce and family law, with additional expertise in business and real property matters.",
+        specialty:
+          "Collaborative divorce and family law, with additional expertise in business and real property matters.",
         photo: dominikPhoto,
         href: "/for-divorce-attorneys",
       },
@@ -233,13 +236,14 @@ const groups: CategoryGroup[] = [
         name: "Heidi Bolton",
         role: "Medicare Advisor",
         company: "Spears Agency",
-        specialty: "Medicare planning and coverage guidance for individuals turning 65, retiring, or reviewing existing coverage.",
+        specialty:
+          "Medicare planning and coverage guidance for individuals turning 65, retiring, or reviewing existing coverage.",
         photo: heidiPhoto,
         href: "/medicare-providers",
       },
       {
         name: "J. R. Gillespie",
-        role: "Primary Associate",
+        role: "Medicare Advisor",
         company: "ALLSTAR Financial Insurance",
         specialty: "Medicare guidance for individuals, families, and small businesses across the Puget Sound region.",
         photo: jrGillespiePhoto,
@@ -310,10 +314,19 @@ const FeaturedProfessionals = () => (
           >
             Our Professional Network
           </p>
-          <p style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#302b26", lineHeight: 1.85, margin: 0, maxWidth: 680 }}>
-            Real Property Planning connects families with independent, trusted specialists across Washington State.
-            Each professional below is featured elsewhere on this site — click through to learn more and see their
-            full profile.
+          <p
+            style={{
+              fontSize: 18,
+              fontFamily: "'Raleway', sans-serif",
+              color: "#302b26",
+              lineHeight: 1.85,
+              margin: 0,
+              maxWidth: 680,
+            }}
+          >
+            Real Property Planning connects families with independent, trusted specialists across Washington State. Each
+            professional below is featured elsewhere on this site — click through to learn more and see their full
+            profile.
           </p>
         </div>
       </section>
@@ -364,19 +377,53 @@ const FeaturedProfessionals = () => (
                       decoding="async"
                     />
                     <div>
-                      <p style={{ fontFamily: "'Raleway', sans-serif", fontWeight: 700, fontSize: 16, color: "#292521", margin: "0 0 2px" }}>
+                      <p
+                        style={{
+                          fontFamily: "'Raleway', sans-serif",
+                          fontWeight: 700,
+                          fontSize: 16,
+                          color: "#292521",
+                          margin: "0 0 2px",
+                        }}
+                      >
                         {pro.name}
                       </p>
-                      <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>{pro.role}</p>
+                      <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
+                        {pro.role}
+                      </p>
                     </div>
                   </div>
-                  <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, fontWeight: 600, color: "#5a5147", margin: "0 0 10px" }}>
+                  <p
+                    style={{
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 14,
+                      fontWeight: 600,
+                      color: "#5a5147",
+                      margin: "0 0 10px",
+                    }}
+                  >
                     {pro.company}
                   </p>
-                  <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, color: "#5a5147", lineHeight: 1.6, margin: 0 }}>
+                  <p
+                    style={{
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 14,
+                      color: "#5a5147",
+                      lineHeight: 1.6,
+                      margin: 0,
+                    }}
+                  >
                     {pro.specialty}
                   </p>
-                  <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, fontWeight: 700, color: "#7f1d1d", margin: "14px 0 0" }}>
+                  <p
+                    style={{
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 14,
+                      fontWeight: 700,
+                      color: "#7f1d1d",
+                      margin: "14px 0 0",
+                    }}
+                  >
                     View Full Profile →
                   </p>
                 </Link>
