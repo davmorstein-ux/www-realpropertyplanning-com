@@ -37,6 +37,10 @@ interface Professional {
   specialty: string;
   photo: string;
   href: string;
+  /** Optional second person, for tiles covering two people at the same firm. */
+  name2?: string;
+  role2?: string;
+  photo2?: string;
 }
 
 interface CategoryGroup {
@@ -128,21 +132,17 @@ const groups: CategoryGroup[] = [
     category: "Estate Liquidation Services",
     professionals: [
       {
+        // Meriann and Abigail are the same firm with identical specialty copy,
+        // so they share one tile rather than rendering two duplicate cards.
         name: "Meriann Roberts",
         role: "Owner",
+        name2: "Abigail McKee",
+        role2: "Manager",
         company: "Ginny's Girls Estate Services",
         specialty:
           "Estate sales, senior move management, residential clear-outs, and ISA-certified personal property appraisals throughout North King and Snohomish Counties.",
         photo: meriannPhoto,
-        href: "/estate-liquidators",
-      },
-      {
-        name: "Abigail McKee",
-        role: "Manager",
-        company: "Ginny's Girls Estate Services",
-        specialty:
-          "Estate sales, senior move management, residential clear-outs, and ISA-certified personal property appraisals throughout North King and Snohomish Counties.",
-        photo: abigailPhoto,
+        photo2: abigailPhoto,
         href: "/estate-liquidators",
       },
     ],
@@ -350,6 +350,7 @@ const FeaturedProfessionals = () => (
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                alignItems: "stretch",
                 gap: 24,
               }}
             >
@@ -359,7 +360,13 @@ const FeaturedProfessionals = () => (
                   to={pro.href}
                   className="marquee-hover"
                   style={{
-                    display: "block",
+                    /* Flex column + height 100% lets the "View Full Profile"
+                       link pin to the card bottom via marginTop:auto, so every
+                       card in a row ends at the same baseline regardless of how
+                       much specialty text it carries. */
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "100%",
                     background: "#ffffff",
                     border: "1px solid #e7e0da",
                     borderRadius: 10,
@@ -368,15 +375,33 @@ const FeaturedProfessionals = () => (
                     color: "inherit",
                   }}
                 >
-                  <div style={{ display: "flex", gap: 16, alignItems: "center", marginBottom: 14 }}>
-                    <img
-                      src={pro.photo}
-                      alt={`Photo of ${pro.name}`}
-                      style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div>
+                  {/* flex-start (not center) keeps every headshot at the same
+                      vertical offset — with center, a two-line name pushed its
+                      photo down relative to neighbouring cards. minHeight
+                      reserves room for the longest name/role combination so the
+                      company line below starts at the same height across a row. */}
+                  <div style={{ display: "flex", gap: 16, alignItems: "flex-start", minHeight: 104, marginBottom: 14 }}>
+                    {/* Photo group — renders two headshots side by side when a
+                        tile covers two people from the same firm. */}
+                    <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
+                      <img
+                        src={pro.photo}
+                        alt={`Photo of ${pro.name}`}
+                        style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      {pro.photo2 && (
+                        <img
+                          src={pro.photo2}
+                          alt={`Photo of ${pro.name2 ?? ""}`}
+                          style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      )}
+                    </div>
+                    <div style={{ minWidth: 0 }}>
                       <p
                         style={{
                           fontFamily: "'Raleway', sans-serif",
@@ -391,6 +416,24 @@ const FeaturedProfessionals = () => (
                       <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
                         {pro.role}
                       </p>
+                      {pro.name2 && (
+                        <>
+                          <p
+                            style={{
+                              fontFamily: "'Raleway', sans-serif",
+                              fontWeight: 700,
+                              fontSize: 16,
+                              color: "#292521",
+                              margin: "8px 0 2px",
+                            }}
+                          >
+                            {pro.name2}
+                          </p>
+                          <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
+                            {pro.role2}
+                          </p>
+                        </>
+                      )}
                     </div>
                   </div>
                   <p
@@ -422,6 +465,8 @@ const FeaturedProfessionals = () => (
                       fontWeight: 700,
                       color: "#7f1d1d",
                       margin: "14px 0 0",
+                      marginTop: "auto",
+                      paddingTop: 14,
                     }}
                   >
                     View Full Profile →
