@@ -26,7 +26,7 @@ const Footer = () => {
           font-weight: 700 !important;
           letter-spacing: 0.14em !important;
           text-transform: uppercase !important;
-          color: #0000e0 !important;
+          color: #5757ff !important;
           margin: 0 0 0.6rem 0 !important;
           padding-bottom: 0.4rem !important;
           border-bottom: 1px solid rgba(255,255,255,0.1) !important;
