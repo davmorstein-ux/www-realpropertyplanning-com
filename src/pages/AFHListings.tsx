@@ -83,14 +83,19 @@ const AFHListings = () => {
           produced a large empty band above the page heading. */}
       <main id="main-content" style={{ paddingTop: "0" }}>
         {/* ── HEADER ── */}
+        {/* NOTE: this div is #main-content > *:first-child, which index.css
+            forces to padding-top: 0 / padding-bottom: 0 with !important.
+            Vertical padding MUST live on the inner wrapper below, not here —
+            anything set here is silently discarded. Horizontal padding is
+            unaffected and stays. */}
         <div
           style={{
             backgroundColor: WHITE,
             borderBottom: `1px solid ${GRAY_BORDER}`,
-            padding: "2.25rem 1.5rem 2rem",
+            padding: "0 1.5rem",
           }}
         >
-          <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
+          <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "2.25rem 0 2rem" }}>
             {/* Two-column intro row: heading/copy on the left, contact card on the
                 right. Previously the contact card sat in its own full-width row
                 above the heading, which pushed the H1 far down the page. Wraps to
