@@ -10,6 +10,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderContact from "@/components/ProviderContact";
+import ProviderHoverPanel from "@/components/ProviderHoverPanel";
 import CTASection from "@/components/CTASection";
 import {
   Accordion,
@@ -30,6 +31,7 @@ interface Provider {
   email?: string;
   logo?: string;
   logoAlt?: string;
+  bio?: string;
 }
 
 const providers: Provider[] = [
@@ -56,6 +58,7 @@ const providers: Provider[] = [
     email: "jr@AllStarFinancialInsurance.com",
     specialty:
       "Medicare, health, life, and long-term care insurance guidance, along with retirement solutions for individuals, families, and small businesses across the Puget Sound region",
+    bio: "J. R. Gillespie is the Primary Associate at ALLSTAR Financial Insurance, which has served individuals, families and businesses throughout the Puget Sound region since 1993. He helps clients understand and select insurance solutions designed to protect their health, financial security and loved ones.\n\nHaving personally experienced significant health challenges, J. R. understands that an unexpected illness or injury can create expenses extending well beyond medical bills. Lost income, deductibles, copayments and the cost of additional assistance can place considerable pressure on an individual or family.\n\nJ. R. provides personalized guidance regarding individual and family health insurance, Medicare Advantage, Medicare Supplement and prescription drug plans, as well as life, disability, supplemental and long-term-care insurance. His approach focuses on clearly explaining available options and helping clients identify practical coverage that fits their circumstances, priorities and budget. Through knowledgeable and attentive service, J. R. helps clients make informed insurance decisions with greater clarity and confidence.",
   },
 ];
 
@@ -135,16 +138,32 @@ const MedicareProviders = () => (
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face h-full">
                       <div className="flex h-full flex-col items-center text-center p-6">
-                        <img
-                          src={p.photo}
-                          alt={p.alt}
-                          className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
-                          loading="lazy" sizes="100vw" decoding="async"/>
-                        <h2 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">
-                          {p.name}
-                        </h2>
-                        <p className="text-foreground text-sm mb-1">{p.title}</p>
-                        <p className="text-foreground text-sm font-semibold mb-3">{p.company}</p>
+                        {/* Hover trigger covers photo/name/title/company only —
+                            deliberately NOT the contact links below, so reaching
+                            for a phone number does not open the bio panel. */}
+                        <ProviderHoverPanel
+                          name={p.name}
+                          title={p.title}
+                          company={p.company}
+                          photo={p.photo}
+                          photoAlt={p.alt}
+                          logo={p.logo}
+                          logoAlt={p.logoAlt}
+                          bio={p.bio}
+                          specialty={p.specialty}
+                          style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+                        >
+                          <img
+                            src={p.photo}
+                            alt={p.alt}
+                            className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
+                            loading="lazy" sizes="100vw" decoding="async"/>
+                          <h2 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">
+                            {p.name}
+                          </h2>
+                          <p className="text-foreground text-sm mb-1">{p.title}</p>
+                          <p className="text-foreground text-sm font-semibold mb-3">{p.company}</p>
+                        </ProviderHoverPanel>
                         <ProviderContact phone={p.phone} email={p.email} />
                         {p.logo && (
                           <img
