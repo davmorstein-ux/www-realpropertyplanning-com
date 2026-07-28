@@ -266,6 +266,8 @@ const App = () => (
           <Route path="/zh-cn" element={<LanguageRoute lang="zh-CN"><RPPHomeV3 /></LanguageRoute>} />
           <Route path="/tl" element={<LanguageRoute lang="tl"><RPPHomeV3 /></LanguageRoute>} />
           <Route path="/vi" element={<LanguageRoute lang="vi"><RPPHomeV3 /></LanguageRoute>} />
+          <Route path="/ro" element={<LanguageRoute lang="ro"><RPPHomeV3 /></LanguageRoute>} />
+          <Route path="/ti" element={<LanguageRoute lang="ti"><RPPHomeV3 /></LanguageRoute>} />
           <Route path="/home-new" element={<HomepageNew />} />
           <Route path="/hero-test" element={<HeroTest />} />
 
@@ -276,6 +278,8 @@ const App = () => (
           <Route path="/zh-cn/probate-estate-sales" element={<LanguageRoute lang="zh-CN"><ProbateEstateSales /></LanguageRoute>} />
           <Route path="/tl/probate-estate-sales" element={<LanguageRoute lang="tl"><ProbateEstateSales /></LanguageRoute>} />
           <Route path="/vi/probate-estate-sales" element={<LanguageRoute lang="vi"><ProbateEstateSales /></LanguageRoute>} />
+          <Route path="/ro/probate-estate-sales" element={<LanguageRoute lang="ro"><ProbateEstateSales /></LanguageRoute>} />
+          <Route path="/ti/probate-estate-sales" element={<LanguageRoute lang="ti"><ProbateEstateSales /></LanguageRoute>} />
           <Route path="/client-stories" element={<ClientStories />} />
           <Route path="/senior-transitions" element={<LanguageRoute lang="en"><SeniorTransitions /></LanguageRoute>} />
           <Route path="/es/senior-transitions" element={<LanguageRoute lang="es"><SeniorTransitions /></LanguageRoute>} />
@@ -283,6 +287,8 @@ const App = () => (
           <Route path="/zh-cn/senior-transitions" element={<LanguageRoute lang="zh-CN"><SeniorTransitions /></LanguageRoute>} />
           <Route path="/tl/senior-transitions" element={<LanguageRoute lang="tl"><SeniorTransitions /></LanguageRoute>} />
           <Route path="/vi/senior-transitions" element={<LanguageRoute lang="vi"><SeniorTransitions /></LanguageRoute>} />
+          <Route path="/ro/senior-transitions" element={<LanguageRoute lang="ro"><SeniorTransitions /></LanguageRoute>} />
+          <Route path="/ti/senior-transitions" element={<LanguageRoute lang="ti"><SeniorTransitions /></LanguageRoute>} />
           <Route path="/helping-aging-parents" element={<Navigate to="/helping-an-aging-parent" replace />} />
           <Route path="/helping-an-aging-parent" element={<ChoiceFlowPage />} />
           <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />
@@ -342,6 +348,8 @@ const App = () => (
           <Route path="/zh-cn/cost-of-care-calculator" element={<LanguageRoute lang="zh-CN"><CostOfCareCalculator /></LanguageRoute>} />
           <Route path="/tl/cost-of-care-calculator" element={<LanguageRoute lang="tl"><CostOfCareCalculator /></LanguageRoute>} />
           <Route path="/vi/cost-of-care-calculator" element={<LanguageRoute lang="vi"><CostOfCareCalculator /></LanguageRoute>} />
+          <Route path="/ro/cost-of-care-calculator" element={<LanguageRoute lang="ro"><CostOfCareCalculator /></LanguageRoute>} />
+          <Route path="/ti/cost-of-care-calculator" element={<LanguageRoute lang="ti"><CostOfCareCalculator /></LanguageRoute>} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/executors" element={<Executors />} />
@@ -544,6 +552,8 @@ const App = () => (
           <Route path="/zh-cn/contact" element={<LanguageRoute lang="zh-CN"><Contact /></LanguageRoute>} />
           <Route path="/tl/contact" element={<LanguageRoute lang="tl"><Contact /></LanguageRoute>} />
           <Route path="/vi/contact" element={<LanguageRoute lang="vi"><Contact /></LanguageRoute>} />
+          <Route path="/ro/contact" element={<LanguageRoute lang="ro"><Contact /></LanguageRoute>} />
+          <Route path="/ti/contact" element={<LanguageRoute lang="ti"><Contact /></LanguageRoute>} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />
           <Route path="/testimonials" element={<Testimonials />} />
@@ -754,6 +764,8 @@ const App = () => (
           <Route path="/zh-cn/afh-club" element={<LanguageRoute lang="zh-CN"><AFHClub /></LanguageRoute>} />
           <Route path="/tl/afh-club" element={<LanguageRoute lang="tl"><AFHClub /></LanguageRoute>} />
           <Route path="/vi/afh-club" element={<LanguageRoute lang="vi"><AFHClub /></LanguageRoute>} />
+          <Route path="/ro/afh-club" element={<LanguageRoute lang="ro"><AFHClub /></LanguageRoute>} />
+          <Route path="/ti/afh-club" element={<LanguageRoute lang="ti"><AFHClub /></LanguageRoute>} />
           <Route path="/afh-club/getting-started" element={<AFHGettingStarted />} />
           <Route path="/afh-club/licensing-certification" element={<AFHLicensingCertification />} />
           <Route path="/afh-club/training-education" element={<AFHTrainingEducation />} />

@@ -8,6 +8,8 @@ import zhTW from "./locales/zh-TW.json";
 import zhCN from "./locales/zh-CN.json";
 import tl from "./locales/tl.json";
 import vi from "./locales/vi.json";
+import ro from "./locales/ro.json";
+import ti from "./locales/ti.json";
 
 // Supported languages, keyed by the URL path prefix used for each
 // (e.g. realpropertyplanning.com/es/probate-estate-sales).
@@ -19,6 +21,8 @@ export const SUPPORTED_LANGUAGES = [
   { code: "zh-CN", pathPrefix: "zh-cn", label: "Chinese (Simplified)", nativeLabel: "简体中文" },
   { code: "tl", pathPrefix: "tl", label: "Tagalog", nativeLabel: "Tagalog" },
   { code: "vi", pathPrefix: "vi", label: "Vietnamese", nativeLabel: "Tiếng Việt" },
+  { code: "ro", pathPrefix: "ro", label: "Romanian", nativeLabel: "Română" },
+  { code: "ti", pathPrefix: "ti", label: "Tigrinya", nativeLabel: "ትግርኛ" },
 ] as const;
 
 export type SupportedLanguageCode = (typeof SUPPORTED_LANGUAGES)[number]["code"];
@@ -34,6 +38,8 @@ i18n
       "zh-CN": { translation: zhCN },
       tl: { translation: tl },
       vi: { translation: vi },
+      ro: { translation: ro },
+      ti: { translation: ti },
     },
     lng: "en",
     fallbackLng: "en",

@@ -1,0 +1,501 @@
+{
+  "seo": {
+    "title": "Îndrumare pentru Succesiuni și Imobiliare pentru Vârstnici | Statul Washington",
+    "description": "Centru de resurse din Washington pentru imobiliare succesorale, proprietăți moștenite, tranziții pentru vârstnici și îndrumare profesională de încredere."
+  },
+  "hero": {
+    "imageAlt": "Real Property Planning — deservind familiile din Washington în tranzițiile pentru vârstnici, succesiuni și vânzări de proprietăți succesorale",
+    "taglineLine1": "Îndrumare pentru deciziile imobiliare",
+    "taglineLine2": "și tranzițiile din ultima etapă a vieții",
+    "ctaPrimary": "Găsiți Punctul de Plecare Potrivit",
+    "ctaSecondary": "Conectați-vă cu un Specialist"
+  },
+  "funnel": {
+    "heading": "Ce vă aduce aici astăzi?",
+    "mobileHint": "Selectați un subiect pentru a începe",
+    "exploreBadge": "Explorați →",
+    "tiles": {
+      "planAhead": {
+        "title": "Vreau să Planific din Timp",
+        "imgAlt": "Cuplu de vârstnici revizuind împreună un plan succesoral acasă"
+      },
+      "helpingParent": {
+        "title": "Ajut un Părinte Vârstnic",
+        "imgAlt": "Fiică adultă îmbrățișându-și mama vârstnică pe canapea"
+      },
+      "handlingEstate": {
+        "title": "Gestionez o Succesiune",
+        "imgAlt": "Familie revizuind un plan de proprietate succesorală cu documente"
+      },
+      "needProfessional": {
+        "title": "Am Nevoie de un Profesionist",
+        "imgAlt": "Bărbat la un laptop căutând resurse profesionale de încredere"
+      }
+    }
+  },
+  "costOfCare": {
+    "headingPart1": "Calculator al",
+    "headingPart2": "Costului Îngrijirii",
+    "description": "Comparați îngrijirea la domiciliu, viața asistată, îngrijirea memoriei și multe altele — în Washington față de mediile naționale.",
+    "cta": "Calculați Costurile Mele →"
+  },
+  "afhClub": {
+    "heading": "AFH Club",
+    "eyebrow": "Pentru Proprietarii și Cumpărătorii de Case Familiale pentru Adulți",
+    "description": "Rețeaua de resurse definitivă pentru cumpărarea, vânzarea, administrarea și învățarea despre Casele Familiale pentru Adulți.",
+    "cta": "Explorați AFH Club →"
+  },
+  "descriptor": "Conectând familiile din Washington cu îndrumare de încredere privind locuințele pentru vârstnici, imobiliarele succesorale și specialiștii care ajută pe parcurs",
+  "probateEstateSales": {
+    "seo": {
+      "title": "Agent Imobiliar pentru Succesiuni în Statul Washington | Real Property Planning",
+      "description": "Real Property Planning — Agent Imobiliar Licențiat și Evaluator Certificat al Statului Washington specializat în vânzări de imobiliare succesorale în comitatele King, Snohomish, Pierce și Kitsap.",
+      "jsonLdHeadline": "Vânzări de Imobiliare Succesorale în Statul Washington",
+      "jsonLdDescription": "Îndrumare bazată pe dovezi privind imobiliarele succesorale pentru executori, avocați și familii din tot Statul Washington. Deservind comitatele King, Snohomish, Pierce și Kitsap."
+    },
+    "heroImageAlt": "Scenă de vânzare a unei proprietăți succesorale cu o familie examinând bunuri în fața unei case din Washington",
+    "heroTitle": "VÂNZĂRI DE PROPRIETĂȚI SUCCESORALE",
+    "directAnswer": {
+      "question": "Cum funcționează vânzarea unei case prin succesiune în Statul Washington?",
+      "answer": "În Washington, o proprietate succesorală de obicei nu poate fi vândută până când instanța nu acordă executorului autoritate legală formală — de obicei prin Certificate Testamentare. Odată ce această autoritate este stabilită, procesul urmează pașii familiari imobiliari — evaluare, pregătire, listare, negociere și încheiere — dar cu cerințe suplimentare: o evaluare defendabilă, coordonare între mai mulți factori de decizie și un preț care reflectă starea reală a proprietății, nu o estimare automatizată. Real Property Planning este condus de un agent imobiliar și evaluator certificat cu dublă licență, ghidând familiile și executorii prin fiecare etapă.",
+      "step1Label": "Înainte de Autoritate",
+      "step1Desc": "Proprietatea este evaluată și se dezvoltă un plan în timp ce autoritatea legală este în așteptare.",
+      "step2Label": "În Timpul Succesiunii",
+      "step2Desc": "Pregătirea, prețul și listarea continuă alături de procesul judiciar.",
+      "step3Label": "După Succesiune",
+      "step3Desc": "Proprietatea ajunge pe piață cu fiecare decizie de reparație evaluată pentru randament.",
+      "ctaLabel": "Solicitați o Evaluare a Proprietății"
+    },
+    "comparison": {
+      "heading1": "Proprietate Succesorală vs. Proprietate Moștenită:",
+      "heading2": "Care Este Diferența?",
+      "learnMore": "Aflați Mai Multe",
+      "probate": {
+        "alt": "Proprietate succesorală imobiliară în Statul Washington",
+        "title": "Proprietate Succesorală",
+        "description": "Supravegheată de instanță. Este necesară autoritate legală înainte ca vânzarea să poată continua."
+      },
+      "inherited": {
+        "alt": "Proprietate moștenită în afara succesiunii în Statul Washington",
+        "title": "Proprietate Moștenită (Fără Succesiune)",
+        "description": "Trece în afara succesiunii prin fideicomis sau coproprietate. Mai puține obstacole legale, dar totuși complexă."
+      }
+    },
+    "whatMakesDifferent": {
+      "heading": "Ce Face Diferite Vânzările de Proprietăți Succesorale",
+      "intro": "Vânzările de proprietăți succesorale sunt cu adevărat diferite de tranzacțiile imobiliare standard — iar tratarea lor ca listări obișnuite este locul unde familiile și executorii întâmpină cel mai adesea probleme.",
+      "legalAuthority": {
+        "alt": "Autoritate legală în vânzările de proprietăți succesorale",
+        "title": "Autoritate Legală",
+        "description": "Cerințele instanței pot dicta când și cum poate avea loc o vânzare."
+      },
+      "decisionMakers": {
+        "alt": "Mai mulți factori de decizie în vânzările succesorale",
+        "title": "Factori de Decizie",
+        "description": "Mai multe părți trebuie să fie de acord asupra fiecărei decizii."
+      },
+      "propertyCondition": {
+        "alt": "Evaluarea stării proprietății succesorale",
+        "title": "Starea Proprietății",
+        "description": "Întreținerea amânată, bunurile personale și vacanța sunt comune."
+      },
+      "honestPricing": {
+        "alt": "Prețuri corecte pentru proprietatea succesorală",
+        "title": "Prețuri Corecte",
+        "description": "Valoarea trebuie să reflecte starea reală — nu estimări automatizate."
+      },
+      "emotionalComplexity": {
+        "alt": "Complexitate emoțională în deciziile familiale succesorale",
+        "title": "Complexitate Emoțională",
+        "description": "Dinamica familială poate încetini comunicarea și deciziile."
+      },
+      "preparationStrategy": {
+        "alt": "Strategie de pregătire pentru vânzările de proprietăți succesorale",
+        "title": "Strategie de Pregătire",
+        "description": "Vânzarea „ca atare” față de reparații are un impact direct asupra apărabilității fiduciare."
+      }
+    },
+    "timeline": {
+      "heading": "Sincronizarea și Coordonarea în Vânzările Succesorale",
+      "step1Title": "Înainte de Acordarea Autorității Legale",
+      "step1Desc": "O proprietate poate fi evaluată și se poate dezvolta un plan înainte ca autoritatea legală să fie acordată oficial — astfel încât familiile și executorii să fie pregătiți când vine momentul.",
+      "step2Title": "În Timpul Succesiunii Active",
+      "step2Desc": "Odată ce autoritatea este stabilită, pregătirea, prețul și listarea pot continua în pas cu procedurile legale — coordonate cu avocatul succesiunii și alți profesioniști.",
+      "step3Title": "Post-Succesiune sau Distribuție a Fideicomisului",
+      "step3Desc": "După ce succesiunea se închide sau este planificată o distribuție a fideicomisului, proprietatea poate avansa spre pregătire, marketing și vânzare — cu fiecare decizie de reparație evaluată pentru randamentul investiției.",
+      "seeFullProcess": "Vedeți cum funcționează procesul complet →"
+    },
+    "faq": {
+      "eyebrow": "Răspunsuri Rapide",
+      "heading": "Întrebări despre Succesiune și Vânzări Succesorale",
+      "q1": {
+        "question": "Care este diferența dintre proprietatea succesorală și proprietatea moștenită în Washington?",
+        "answer": "Proprietatea succesorală este supravegheată de instanță — succesiunea trebuie să treacă prin procesul de succesiune din Washington, iar autoritatea legală (Certificate Testamentare) este necesară înainte ca o vânzare să poată continua. Proprietatea moștenită care trece în afara succesiunii, cum ar fi printr-un fideicomis viager sau coproprietate cu drept de supraviețuire, are în general mai puține obstacole legale, dar poate implica totuși complexitate semnificativă privind evaluarea, acordul familial și baza fiscală."
+      },
+      "q2": {
+        "question": "Poate fi vândută o casă înainte ca succesiunea să fie finalizată în Statul Washington?",
+        "answer": "Adesea, da. Puterile de neintervenție din Washington permit multor executori să vândă imobiliarele succesorale odată ce Certificatele Testamentare sunt acordate, fără a avea nevoie de o aprobare separată a instanței pentru vânzarea în sine. Proprietatea poate fi chiar evaluată și un plan de vânzare pregătit înainte ca acea autoritate să fie acordată oficial, astfel încât succesiunea să fie pregătită să acționeze odată ce procesul judiciar se clarifică."
+      },
+      "q3": {
+        "question": "Cine decide cum este stabilit prețul unei proprietăți succesorale?",
+        "answer": "Stabilirea responsabilă a prețului unei proprietăți succesorale începe cu o evaluare independentă și defendabilă — nu o estimare automatizată online. Deoarece aceste proprietăți reflectă adesea întreținere amânată sau ani de condiție acumulată, o evaluare precisă a stării actuale protejează executorul de dispute ulterioare cu beneficiarii și susține o vânzare solidă din punct de vedere fiduciar."
+      },
+      "q4": {
+        "question": "De ce vânzările succesorale durează mai mult decât vânzările tipice de locuințe?",
+        "answer": "Mai mulți factori de decizie trebuie să fie de acord, termenele judiciare pot afecta momentul în care o vânzare se poate încheia, iar starea proprietății necesită adesea mai multă pregătire — reparații, curățare sau coordonare cu furnizorii — înainte de listare. Fiecare dintre acestea adaugă timp în comparație cu o revânzare standard, dar un plan clar și îndrumare experimentată mențin procesul avansând cât mai eficient permite legea din Washington."
+      },
+      "q5": {
+        "question": "Ce calificări ar trebui să aibă un agent pentru a gestiona o vânzare succesorală?",
+        "answer": "Căutați un agent cu experiență specifică și practică în tranzacții succesorale — cineva care înțelege cerințele instanței, documentația fiduciară și prețurile bazate pe stare. Real Property Planning este condus de un agent imobiliar licențiat al Statului Washington care este de asemenea evaluator rezidențial certificat, combinând ambele calificări într-un singur punct de contact."
+      }
+    }
+  },
+  "seniorTransitions": {
+    "seo": {
+      "title": "Vânzarea Casei Vârstnicilor și Reducerea Locuinței în Washington | Îndrumare în Ritmul Familiei",
+      "description": "Ajutor pentru familiile din Washington care vând o casă îndelungată în timpul mutării la viață asistată, îngrijirea memoriei sau reducerea locuinței. Coordonat cu echipele de îngrijire, avocați și frați aflați în alte state.",
+      "jsonLdHeadline": "Tranziții de Locuință pentru Vârstnici în Statul Washington",
+      "jsonLdDescription": "Îndrumare răbdătoare și experimentată pentru familiile care ajută un vârstnic să-și vândă casa în Statul Washington. Deservind comitatele King, Snohomish, Pierce și Kitsap."
+    },
+    "heroImageAlt": "Cuplu de vârstnici în fața casei lor îndelungate din Washington cu un panou De Vânzare Real Property Planning",
+    "heroTitle": "Vânzarea Casei unui Vârstnic",
+    "directAnswer": {
+      "question": "Cum vând casa unui părinte vârstnic în Statul Washington?",
+      "answer": "Vânzarea unei case familiale îndelungate în timpul unei tranziții pentru vârstnici implică de obicei mai mult decât o listare standard — coordonare cu furnizorii de îngrijire, frați aflați în alte state, manageri de mutare și uneori un avocat sau planificator financiar, totul în ritmul pe care familia îl poate gestiona. Real Property Planning conectează familiile cu profesioniștii potriviți pentru fiecare pas și oferă îndrumare de preț bazată pe stare, astfel încât casa să se vândă la o valoare corectă și defendabilă.",
+      "bullet1": "Funcționează în ritmul propriu al familiei — fără presiune de a grăbi o decizie",
+      "bullet2": "Vă conectează cu manageri de mutare, consilieri de locuință și lichidatori succesorali după necesitate",
+      "bullet3": "Oferă o evaluare onestă bazată pe stare, nu o estimare automatizată",
+      "ctaLabel": "Începeți Conversația"
+    },
+    "whatGoesInto": {
+      "heading": "Ce Implică o Tranziție pentru Vârstnici?",
+      "body": "Când un vârstnic părăsește o casă îndelungată — fie mutându-se la viață asistată, o comunitate de îngrijire a memoriei, o reședință mai mică sau mai aproape de familie — rareori implică doar imobiliare. Este un proces coordonat care atinge aproape fiecare parte a vieții unei familii. Real Property Planning conectează familiile și profesioniștii cu persoanele potrivite pentru fiecare pas."
+    },
+    "whoHelps": {
+      "heading": "Cine Ajută la o Tranziție pentru Vârstnici?",
+      "moveManagers": {
+        "alt": "Manageri de mutare pentru vârstnici — specialiști în tranziții pentru vârstnici din Statul Washington",
+        "title": "Manageri de Mutare pentru Vârstnici",
+        "description": "Specialiști care gestionează aspectul fizic al unei mutări — sortare, împachetare, coordonarea transportatorilor și amenajarea noii case. Lucrează în ritmul familiei și sunt instruiți să gestioneze greutatea emoțională a părăsirii unei reședințe îndelungate.",
+        "cta": "Găsiți un Manager de Mutare"
+      },
+      "livingAdvisors": {
+        "alt": "Consilieri de locuință pentru vârstnici — specialiști în plasare din Statul Washington",
+        "title": "Consilieri de Locuință pentru Vârstnici",
+        "description": "Profesioniști care ajută familiile să evalueze și să aleagă următoarea casă potrivită — fie că este viață independentă, viață asistată, îngrijirea memoriei sau sprijin la domiciliu. Cunosc comunitățile locale, disponibilitatea și costurile.",
+        "cta": "Găsiți un Consilier de Locuință"
+      },
+      "estateSale": {
+        "alt": "Servicii de vânzare și lichidare succesorală în Statul Washington",
+        "title": "Vânzare și Lichidare Succesorală",
+        "description": "Când o casă conține decenii de bunuri, profesioniștii în vânzări succesorale ajută familiile să sorteze, să evalueze și să vândă sau doneze articole — curățând casa eficient și cu respect înainte de a intra pe piață.",
+        "cta": "Aflați Mai Multe"
+      },
+      "broker": {
+        "alt": "Agenți imobiliari cu experiență în tranziții pentru vârstnici în Statul Washington",
+        "title": "Agent Imobiliar",
+        "description": "Un agent cu experiență în tranziții pentru vârstnici înțelege prețurile bazate pe stare, dinamica familială și nevoia de răbdare. Real Property Planning conectează familiile cu agenți specializați în această activitate pe tot cuprinsul Statului Washington.",
+        "cta": "Aflați Mai Multe"
+      },
+      "appraiser": {
+        "alt": "Evaluatori imobiliari certificați din Statul Washington",
+        "title": "Evaluator Certificat",
+        "description": "O evaluare independentă oferă familiilor o valoare onestă și defendabilă pentru casă — utilă pentru planificarea succesorală, administrarea fideicomisului sau pur și simplu pentru a ști unde vă aflați înainte de a lua decizii.",
+        "cta": "Aflați Mai Multe"
+      },
+      "attorneys": {
+        "alt": "Avocați succesorali din Statul Washington",
+        "title": "Avocați Succesorali",
+        "description": "Multe tranziții pentru vârstnici se intersectează cu administrarea fideicomisului, procura sau planificarea succesorală. Un avocat asigură că aspectul legal al tranziției este gestionat corespunzător alături de procesul imobiliar.",
+        "cta": "Aflați Mai Multe"
+      },
+      "medicare": {
+        "alt": "Consilieri Medicare și beneficii din Statul Washington",
+        "title": "Consilieri Medicare și Beneficii",
+        "description": "Înțelegerea Medicare, Medicaid și altor beneficii pentru vârstnici este esențială atunci când o tranziție de locuință afectează finanțarea îngrijirii. Un consilier de beneficii ajută familiile să navigheze opțiunile de acoperire, regulile de eligibilitate și impactul financiar al unei mutări asupra beneficiilor existente sau în așteptare.",
+        "cta": "Găsiți un Consilier de Beneficii"
+      },
+      "financial": {
+        "alt": "Consilieri financiari și contabili din Statul Washington",
+        "title": "Consilieri Financiari și Contabili",
+        "description": "Vânzarea unei case îndelungate are implicații fiscale — câștiguri de capital, bază majorată, distribuții din fideicomis. Un planificator financiar sau contabil ajută familiile să înțeleagă imaginea financiară înainte și după vânzare.",
+        "cta": "Aflați Mai Multe"
+      }
+    },
+    "notSure": {
+      "heading": "Nu Sunteți Sigur de Unde Să Începeți?",
+      "body": "Majoritatea familiilor nu știu de care profesionist au nevoie mai întâi. E în regulă. Real Property Planning vă ajută să determinați secvența corectă și vă conectează cu profesioniști de încredere din întreaga zonă Puget Sound.",
+      "button": "Începeți o Conversație"
+    },
+    "faq": {
+      "eyebrow": "Răspunsuri Rapide",
+      "heading": "Întrebări despre Tranziții pentru Vârstnici",
+      "q1": {
+        "question": "Care este primul pas în vânzarea casei unui vârstnic în Washington?",
+        "answer": "Majoritatea familiilor încep prin a obține o percepție onestă a valorii și stării casei, apoi decid împreună pașii următori — fie viață asistată, o casă mai mică sau mutarea mai aproape de familie. Real Property Planning vă poate ajuta să determinați secvența corectă de profesioniști înainte de a lua orice decizie."
+      },
+      "q2": {
+        "question": "Am nevoie de o Procură pentru a vinde casa părintelui meu?",
+        "answer": "Dacă părintele dvs. nu-și mai poate gestiona propriile afaceri, persoana care acționează ca agent al său sub o Procură Durabilă are de obicei nevoie de acel document în mână înainte de a semna în numele său — băncile, companiile de titluri și tranzacțiile imobiliare le solicită pe toate. Un avocat de drept al vârstnicilor sau succesoral poate confirma dacă procura acoperă în mod specific autoritatea imobiliară."
+      },
+      "q3": {
+        "question": "Cât durează de obicei vânzarea casei unui vârstnic?",
+        "answer": "Termenele variază foarte mult în funcție de starea casei, procesul decizional familial și dacă sunt necesare mai întâi reparații sau o curățare completă de vânzare succesorală. Deoarece tranzițiile pentru vârstnici implică adesea mai mulți membri ai familiei și uneori o mutare la îngrijire, procesul este în general adaptat la nevoile familiei mai degrabă decât grăbit."
+      },
+      "q4": {
+        "question": "Cine ajută la coordonarea mutării unui vârstnic alături de vânzarea casei?",
+        "answer": "Un manager de mutare pentru vârstnici gestionează de obicei aspectul fizic — sortare, împachetare și amenajarea noii case — în timp ce un consilier de locuință pentru vârstnici ajută la evaluarea opțiunilor de plasare. Real Property Planning conectează familiile cu ambii, alături de aspectul imobiliar și de evaluare al tranziției."
+      },
+      "q5": {
+        "question": "Există considerații fiscale la vânzarea unei case familiale îndelungate?",
+        "answer": "Da — excluderile de câștiguri de capital, baza majorată într-un fideicomis și alți factori fiscali pot afecta semnificativ rezultatul. Un contabil sau planificator financiar ar trebui să facă parte din conversație înainte de listare, iar Real Property Planning vă poate ajuta să conectați familia dvs. cu unul."
+      }
+    }
+  },
+  "afhClubPage": {
+    "seo": {
+      "title": "AFH Club | Rețeaua de Resurse pentru Case Familiale pentru Adulți | Real Property Planning",
+      "description": "Rețeaua principală de resurse a Statului Washington pentru proprietarii de Case Familiale pentru Adulți, viitorii furnizori, cumpărători și profesioniștii care îi deservesc."
+    },
+    "hero": {
+      "badgeAlt": "AFH Club — Rețeaua de Resurse pentru Case Familiale pentru Adulți din Statul Washington",
+      "subtitle": "Rețeaua de Resurse pentru Case Familiale pentru Adulți din Statul Washington",
+      "description": "Un centru de resurse selectate pentru proprietarii de Case Familiale pentru Adulți care doresc să vândă, cumpărători și servicii de administrare AFH."
+    },
+    "welcomeBanner": "Bine ați venit la AFH Club",
+    "categories": {
+      "resources": {
+        "title": "Resurse AFH",
+        "description": "Licențiere, instruire, cerințe de construcție, costuri, reglementări și multe altele."
+      },
+      "listings": {
+        "title": "Listări AFH",
+        "description": "Case Familiale pentru Adulți disponibile în prezent pentru vânzare în tot Statul Washington."
+      },
+      "management": {
+        "title": "Companii de Administrare",
+        "description": "Companii profesionale de administrare AFH care deservesc proprietarii din Statul Washington."
+      },
+      "broker": {
+        "title": "Agent Imobiliar AFH",
+        "description": "Un agent licențiat al Statului Washington specializat în tranzacții de Case Familiale pentru Adulți."
+      },
+      "calculators": {
+        "title": "Calculatoare AFH",
+        "description": "Calculator ROI și estimator de evaluare pentru cumpărători, vânzători și investitori de Case Familiale pentru Adulți."
+      }
+    },
+    "marketplace": {
+      "eyebrow": "Cumpărați · Vindeți · Investiți",
+      "heading": "AFH Marketplace",
+      "description": "O piață dedicată din Washington pentru cumpărarea și vânzarea de Case Familiale pentru Adulți — proprietate, afacere sau ambele.",
+      "browseListings": "Răsfoiți Listările",
+      "submitListing": "Trimiteți o Listare"
+    },
+    "browseByCity": "Răsfoiți Listările după Oraș",
+    "exploreHeading": "Explorați AFH Club",
+    "exploreLabel": "Explorați",
+    "whatIsAfh": {
+      "eyebrow": "Context",
+      "heading": "Ce Este o Casă Familială pentru Adulți?",
+      "paragraph1": "O Casă Familială pentru Adulți (AFH) este o reședință privată licențiată de Departamentul de Servicii Sociale și de Sănătate al Statului Washington (DSHS) pentru a oferi îngrijire personală, cameră și masă pentru doi până la șase adulți care nu au legătură de rudenie cu furnizorul de servicii, deși casele calificate pot fi aprobate de DSHS pentru până la opt rezidenți.",
+      "paragraph2": "AFH-urile sunt permise în toate districtele de zonare rezidențială unifamilială din tot Statul Washington și sunt reglementate conform WAC 388-76 și RCW 70.128.",
+      "paragraph3": "Autoritățile de licențiere DSHS efectuează inspecții neanunțate într-un ciclu regulat. Furnizorii trebuie să mențină conformitatea continuă cu standardele de licențiere, instruire, construcție și îngrijire — motiv pentru care informațiile organizate și de încredere contează atât de mult."
+    },
+    "readyToBuySell": {
+      "heading": "Sunteți Gata Să Cumpărați sau Vindeți o AFH?",
+      "description": "Răsfoiți Casele Familiale pentru Adulți de vânzare — proprietate, afacere sau ambele. O piață dedicată de cumpărare/vânzare AFH din Washington.",
+      "browseListings": "Răsfoiți listările",
+      "sellYourAfh": "Vindeți-vă AFH-ul"
+    }
+  },
+  "costOfCarePage": {
+    "seo": {
+      "title": "Calculator al Costului Îngrijirii | Costurile Îngrijirii pe Termen Lung în Statul Washington",
+      "description": "Comparați costul îngrijirii la domiciliu, vieții asistate, îngrijirii memoriei și căminelor de bătrâni din Statul Washington cu mediile naționale, cu proiecții ale costurilor viitoare."
+    },
+    "hero": {
+      "eyebrow": "Tranziții pentru Vârstnici · Costul Îngrijirii",
+      "heading": "Calculator al Costului Îngrijirii",
+      "description": "Comparați costul îngrijirii vârstnicilor în Statul Washington cu mediile naționale și vedeți cum ar putea crește aceste costuri în timp."
+    },
+    "careTypes": {
+      "independent-living": {
+        "label": "Comunitate de Viață Independentă",
+        "shortLabel": "Viață Independentă",
+        "unit": "taxă lunară",
+        "note": "Cifrele specifice Washingtonului nu sunt disponibile din această sursă — este afișată mediana națională. Viața independentă costă în general mai puțin decât viața asistată deoarece nu include servicii de îngrijire personală."
+      },
+      "in-home": {
+        "label": "Îngrijire la Domiciliu (Non-Medicală)",
+        "shortLabel": "Îngrijire la Domiciliu",
+        "unit": "~44 ore/săptămână",
+        "note": "Washington are o medie de 45 USD/oră față de mediana națională de aproximativ 35 USD/oră."
+      },
+      "adult-day": {
+        "label": "Îngrijire de Zi pentru Adulți",
+        "shortLabel": "Îngrijire de Zi pentru Adulți",
+        "unit": "5 zile/săptămână",
+        "note": "Cea mai accesibilă opțiune de îngrijire pe termen lung, oferind supraveghere și activități în timpul zilei."
+      },
+      "adult-family-home": {
+        "label": "Casă Familială pentru Adulți",
+        "shortLabel": "Casă Familială pentru Adulți",
+        "unit": "taxă lunară",
+        "note": "Adesea o alternativă mai accesibilă, asemănătoare unei case, față de viața asistată, cu îngrijire non-stop inclusă într-o singură tarifă."
+      },
+      "assisted-living": {
+        "label": "Comunitate de Viață Asistată",
+        "shortLabel": "Viață Asistată",
+        "unit": "taxă lunară",
+        "note": "Washington are aproximativ 23% peste mediana națională."
+      },
+      "memory-care": {
+        "label": "Îngrijirea Memoriei",
+        "shortLabel": "Îngrijirea Memoriei",
+        "unit": "taxă lunară",
+        "note": "De obicei costă cu aproximativ 25% mai mult decât tarifele standard de viață asistată."
+      },
+      "nursing-semi": {
+        "label": "Cămin de Bătrâni — Cameră Semi-Privată",
+        "shortLabel": "Cămin de Bătrâni Cameră Comună",
+        "unit": "lunar",
+        "note": "Washington are aproximativ 37% peste mediana națională."
+      },
+      "nursing-private": {
+        "label": "Cămin de Bătrâni — Cameră Privată",
+        "shortLabel": "Cămin de Bătrâni Cameră Privată",
+        "unit": "lunar",
+        "note": "Camerele private au un cost suplimentar față de cazarea semi-privată."
+      },
+      "ccrc": {
+        "label": "CCRC",
+        "shortLabel": "CCRC / Plan de Viață",
+        "unit": "taxă lunară de serviciu",
+        "note": "CCRC-urile necesită de asemenea o taxă separată de intrare unică — de obicei 400.000 USD sau mai mult la nivel național."
+      }
+    },
+    "inflationPresets": {
+      "conservative": "Conservator",
+      "average": "Mediu",
+      "aggressive": "Agresiv"
+    },
+    "card1": {
+      "sectionTitle": "1. Selectați Tipul de Îngrijire"
+    },
+    "card2": {
+      "sectionTitle": "2. Planul Dvs. de Îngrijire",
+      "currentAge": "Vârsta Actuală",
+      "yrsOld": "ani",
+      "decreaseAge": "Scădeți vârsta",
+      "increaseAge": "Creșteți vârsta",
+      "whenMightCareBegin": "Când Ar Putea Începe Îngrijirea?",
+      "now": "Acum",
+      "yrs": "ani",
+      "howManyYears": "Câți Ani de Îngrijire?",
+      "decreaseYears": "Scădeți anii de îngrijire",
+      "increaseYears": "Creșteți anii de îngrijire",
+      "year": "an",
+      "years": "ani"
+    },
+    "inflationCard": {
+      "assumptionText": "Această estimare presupune că costurile îngrijirii pe termen lung cresc cu aproximativ {{rate}}% pe an, în concordanță cu tendințele istorice recente.",
+      "hideOptions": "Ascundeți Opțiunile Ratei de Creștere ▲",
+      "changeOptions": "Schimbați Presupunerea Ratei de Creștere ▼"
+    },
+    "results": {
+      "sectionTitle": "3. Cost Estimat",
+      "monthly": "Lunar",
+      "annual": "Anual",
+      "washington": "Washington",
+      "nationalMedian": "Mediana Națională",
+      "perMonth": "pe lună",
+      "perYear": "pe an",
+      "totalPlan": "Total · Plan de {{years}} Ani",
+      "inWashingtonVs": "în Washington · vs. {{amount}} la nivel național",
+      "currentlyRunsIn": "în Washington costă în prezent",
+      "aboutTheSameAs": "aproximativ la fel ca",
+      "aboutAbove": "cu aproximativ {{percent}}% peste",
+      "aboutBelow": "cu aproximativ {{percent}}% sub",
+      "theNationalMedian": "mediana națională. {{note}}",
+      "figuresBasedOn": "Cifrele se bazează pe Studiul CareScout/Genworth privind Costul Îngrijirii și surse conexe din industrie. Costurile reale variază în funcție de regiune, furnizor și nivelul de îngrijire.",
+      "printButton": "Imprimați sau Salvați ca PDF"
+    },
+    "printSummary": {
+      "title": "Calculator al Costului Locuinței pentru Vârstnici — Rezumatul Rezultatelor",
+      "preparedVia": "Pregătit prin realpropertyplanning.com la {{date}}",
+      "careType": "Tip de Îngrijire",
+      "careTimeline": "Cronologia Îngrijirii",
+      "today": "Astăzi: vârsta {{age}}",
+      "careBeginsToday": "Îngrijirea începe: astăzi (vârsta {{age}}, anul {{year}})",
+      "careBeginsIn": "Îngrijirea începe: în {{years}} ani (vârsta {{age}}, anul {{year}})",
+      "careEnds": "Îngrijirea se termină: după {{years}} {{yearWord}} (vârsta {{age}})",
+      "costAssumption": "Presupunerea Costului",
+      "annualGrowth": "Creșterea anuală a costului: {{rate}}%",
+      "projectedCost": "Cost Proiectat",
+      "colWashington": "Washington",
+      "colNational": "Național",
+      "rowPerMonth": "Pe lună",
+      "rowPerYear": "Pe an",
+      "rowTotal": "Total pentru planul de {{years}} ani",
+      "footer": "Cifrele se bazează pe Studiul CareScout/Genworth privind Costul Îngrijirii. Costurile reale variază în funcție de regiune, furnizor și nivelul de îngrijire. Acest instrument este doar pentru scopuri generale de planificare. Prin amabilitatea Real Property Planning — realpropertyplanning.com."
+    },
+    "whyCostsVary": {
+      "eyebrow": "Concept Cheie",
+      "heading": "De Ce Washington Costă Mai Mult Decât Media Națională",
+      "paragraph1": "Statul Washington se clasează în mod constant peste mediana națională în aproape fiecare categorie de îngrijire a vârstnicilor. Costurile mai mari ale forței de muncă regionale, o piață competitivă a locurilor de muncă în îngrijire și costurile mai mari de trai în zonele metropolitane contribuie toate la acest decalaj.",
+      "paragraph2Before": "O Casă Familială pentru Adulți este adesea o alternativă mai accesibilă la viața asistată sau îngrijirea în cămine de bătrâni — merită explorată prin",
+      "afhClubLink": "AFH Club"
+    }
+  },
+  "contactPage": {
+    "seo": {
+      "title": "Contact | Real Property Planning — Centrul de Resurse din WA",
+      "description": "Contactați Real Property Planning, un centru de resurse gratuit al Statului Washington pentru persoane vârstnice, familii și profesioniști. Puneți o întrebare sau alăturați-vă rețelei noastre."
+    },
+    "heroImageAlt": "Vârstnici bucurându-se de cafea într-o cafenea de pe malul apei din Statul Washington — Contact Real Property Planning",
+    "heroTitle": "Conectați-vă",
+    "intro": {
+      "paragraph1": "Real Property Planning este un centru de resurse gratuit care conectează persoane vârstnice, familiile lor și profesioniști din tot Statul Washington.",
+      "paragraph2": "Indiferent dacă navigați o succesiune, o proprietate moștenită, o tranziție de locuință pentru vârstnici sau pur și simplu căutați profesioniști de încredere — suntem aici pentru a vă ajuta să găsiți direcția corectă. Folosiți această pagină pentru a ne contacta cu întrebări, a sugera o resursă sau a întreba despre alăturarea la rețeaua noastră profesională."
+    },
+    "contactInfo": {
+      "phoneLabel": "Telefon",
+      "emailLabel": "Email",
+      "serviceAreasLabel": "Zone de Servicii",
+      "serviceAreasText": "În tot Statul Washington, cu un accent puternic în Washington de Vest și Puget Sound"
+    },
+    "form": {
+      "heading": "Trimiteți un Mesaj",
+      "subtitle": "Spuneți-ne puțin despre cum vă putem ajuta.",
+      "companyWebsiteLabel": "Site-ul Companiei",
+      "nameLabel": "Nume *",
+      "namePlaceholder": "Numele dvs. complet",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "your@email.com",
+      "phoneLabel": "Telefon (opțional)",
+      "phonePlaceholder": "(555) 123-4567",
+      "roleLabel": "Sunt un/o *",
+      "roleSelectPlaceholder": "Selectați unul",
+      "messageLabel": "Mesaj *",
+      "messagePlaceholder": "Împărtășiți întrebarea dvs., sugerați o resursă sau întrebați despre alăturarea la rețeaua noastră profesională...",
+      "privacyNote": "🔒 Informațiile dvs. sunt folosite doar pentru a răspunde solicitării dvs. — niciodată vândute sau partajate pentru marketing.",
+      "sendButton": "Trimiteți",
+      "sendingButton": "Se trimite..."
+    },
+    "roleOptions": {
+      "family-member": "Membru al Familiei",
+      "elder-individual": "Persoană Vârstnică",
+      "professional": "Profesionist",
+      "other": "Altul"
+    },
+    "toasts": {
+      "verificationTitle": "Vă rugăm să finalizați verificarea",
+      "verificationDescription": "Bifați caseta de verificare de deasupra butonului Trimiteți, apoi încercați din nou.",
+      "successTitle": "Mulțumim — Mesaj Primit",
+      "successDescription": "Vă vom contacta în curând. Trebuie să vorbiți mai devreme? Sunați la (206) 900-3015.",
+      "errorTitle": "Ceva nu a mers bine",
+      "errorDescription": "Mesajul dvs. nu a fost trimis. Vă rugăm să încercați din nou, sau sunați la (206) 900-3015."
+    }
+  }
+}

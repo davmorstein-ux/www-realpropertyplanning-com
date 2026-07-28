@@ -80,6 +80,24 @@ export const FlagVN = ({ size }: FlagProps) => (
   </FlagWrapper>
 );
 
+export const FlagRO = ({ size }: FlagProps) => (
+  <FlagWrapper id="ro" size={size}>
+    <rect width="8" height="18" fill="#002B7F" />
+    <rect x="8" width="8" height="18" fill="#FCD116" />
+    <rect x="16" width="8" height="18" fill="#CE1126" />
+  </FlagWrapper>
+);
+
+export const FlagER = ({ size }: FlagProps) => (
+  <FlagWrapper id="er" size={size}>
+    <polygon points="0,0 24,0 0,9" fill="#12AD2B" />
+    <polygon points="0,18 24,18 0,9" fill="#3E8EDE" />
+    <polygon points="0,0 0,18 13,9" fill="#EA0437" />
+    <circle cx="7" cy="9" r="2.6" fill="none" stroke="#FCD116" strokeWidth="0.6" />
+    <line x1="7" y1="6.6" x2="7" y2="11.4" stroke="#FCD116" strokeWidth="0.5" />
+  </FlagWrapper>
+);
+
 export const FLAG_COMPONENTS: Record<string, React.FC<FlagProps>> = {
   en: FlagUS,
   es: FlagMX,
@@ -87,4 +105,6 @@ export const FLAG_COMPONENTS: Record<string, React.FC<FlagProps>> = {
   "zh-CN": FlagCN,
   tl: FlagPH,
   vi: FlagVN,
+  ro: FlagRO,
+  ti: FlagER,
 };
