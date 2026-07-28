@@ -16,8 +16,9 @@ const topics = [
       "Why most retiring AFH owners sell both as a single transaction — and what buyers are actually paying for in each piece.",
   },
   {
-    title: "Transferring Your DSHS License",
-    description: "What happens to your license when you sell, and what the new owner needs to have approved.",
+    title: "DSHS Change of Ownership",
+    description:
+      "Washington AFH licenses do not transfer. What the buyer must do to qualify for their own license, and what that means for your timeline.",
   },
   {
     title: "Valuing the Business Separately From the Real Estate",
@@ -25,28 +26,32 @@ const topics = [
   },
   {
     title: "Protecting Your Residents Through the Transition",
-    description: "Washington State requirements around resident notice and continuity of care during a change of ownership.",
+    description:
+      "Washington State requirements around resident notice and continuity of care during a change of ownership.",
   },
   {
     title: "Timing Your Exit",
-    description: "Why AFH sales often take longer than a typical home sale — and how to plan your retirement timeline around it.",
+    description:
+      "Why AFH sales often take longer than a typical home sale — and how to plan your retirement timeline around it.",
   },
   {
     title: "Getting an Accurate Valuation",
-    description: "Why a residential appraisal alone usually understates what an operating AFH business is actually worth.",
+    description:
+      "Why a residential appraisal alone usually understates what an operating AFH business is actually worth.",
   },
 ];
 
 const faqs = [
   {
-    question: "I'm planning to retire from running my AFH — should I sell the business and the building together, or separately?",
+    question:
+      "I'm planning to retire from running my AFH — should I sell the business and the building together, or separately?",
     answer:
       "Most retiring owners sell both together, and most buyers prefer it that way — it lets them step directly into an operating home with residents, staff, and licensing already in place, rather than assembling those pieces separately. Selling the business and building as a single transaction is usually simpler and often nets more than selling them apart, though there are situations (like keeping the real estate as an investment while transferring just the operations) where separating them makes sense. It depends on your specific goals for retirement.",
   },
   {
     question: "What happens to my DSHS license when I sell my Adult Family Home?",
     answer:
-      "Your DSHS license doesn't automatically transfer to a new owner — the buyer must go through their own licensee approval process, including background checks, training, and a home study, before they can legally operate the home. This is one of the biggest differences between selling an AFH and selling a typical small business, and it's worth planning for early, since it affects your closing timeline.",
+      "Washington Adult Family Home licenses are not transferable. Your license does not pass to the buyer with the business or the real estate — the buyer must complete the DSHS Change of Ownership process and qualify for a new license of their own, including background checks, training, and a home study, before they can legally operate the home. This is one of the biggest differences between selling an AFH and selling a typical small business, and it's worth planning for early, since it affects your closing timeline.",
   },
   {
     question: "How do I value my AFH business separately from the real estate?",
@@ -61,7 +66,7 @@ const faqs = [
   {
     question: "How long does it typically take to sell an AFH business and building?",
     answer:
-      "AFH sales generally take longer than a typical residential sale, largely because of the DSHS licensee approval timeline for the buyer. Depending on how prepared your buyer is and how quickly DSHS processes their application, the full process — from accepted offer to closing and the buyer's license transfer — can take several months. Building that timeline into your retirement planning, rather than assuming it'll move at typical real estate speed, avoids unwelcome surprises.",
+      "AFH sales generally take longer than a typical residential sale, largely because of the DSHS licensee approval timeline for the buyer. Depending on how prepared your buyer is and how quickly DSHS processes their application, the full process — from accepted offer to closing and the buyer's license approval — can take several months. Note that the buyer is applying for their own license through the Change of Ownership process rather than receiving yours — your license is not transferable. Building that timeline into your retirement planning, rather than assuming it'll move at typical real estate speed, avoids unwelcome surprises.",
   },
   {
     question: "Do I need a real estate broker who specializes in AFH transactions?",
@@ -74,7 +79,7 @@ const AFHSellingBusinessAtRetirement = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Selling Your Adult Family Home Business at Retirement | Real Property Planning"
-      description="Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, transfer your DSHS license, and value your AFH accurately."
+      description="Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, navigate the DSHS Change of Ownership process, and value your AFH accurately."
       canonical="https://realpropertyplanning.com/afh-club/selling-your-business-at-retirement"
     />
     <BreadcrumbSchema
@@ -95,17 +100,19 @@ const AFHSellingBusinessAtRetirement = () => (
         <div className="container px-5 md:px-8">
           <div className="max-w-3xl mx-auto text-foreground text-[17px] md:text-[18px] leading-relaxed space-y-4">
             <p>
-              Running an Adult Family Home for years — sometimes decades — builds something that's genuinely
-              difficult to walk away from: relationships with residents and their families, a trained staff who
-              trust your leadership, and a business that, done well, has real value beyond the four walls it sits
-              in. When retirement starts to feel real, the question isn't just "what's my house worth" — it's how to
-              responsibly transition everything you've built to someone who can carry it forward.
+              Running an Adult Family Home for years — sometimes decades — builds something that's genuinely difficult
+              to walk away from: relationships with residents and their families, a trained staff who trust your
+              leadership, and a business that, done well, has real value beyond the four walls it sits in. When
+              retirement starts to feel real, the question isn't just "what's my house worth" — it's how to responsibly
+              transition everything you've built to someone who can carry it forward.
             </p>
             <p>
               Selling an AFH at retirement is meaningfully different from selling a typical home, or even a typical
               small business. It runs on two tracks that have to work together: the real estate transaction, and the
-              transfer of your DSHS operating license to a new, DSHS-approved owner. Getting both right — and valued
-              accurately — is what separates a well-planned exit from a rushed one.
+              DSHS Change of Ownership process. Your license does not transfer with the business or the real estate —
+              the buyer must complete the Change of Ownership process and qualify for a new Adult Family Home license of
+              their own. Getting both tracks right — and valued accurately — is what separates a well-planned exit from
+              a rushed one.
             </p>
           </div>
         </div>
