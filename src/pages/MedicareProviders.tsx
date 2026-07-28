@@ -50,7 +50,7 @@ const providers: Provider[] = [
   },
   {
     name: "J. R. Gillespie",
-    title: "Primary Associate",
+    title: "Medicare Advisor",
     company: "ALLSTAR Financial Insurance",
     photo: jrGillespiePhoto,
     alt: "Photo of J. R. Gillespie, Primary Associate at ALLSTAR Financial Insurance",
