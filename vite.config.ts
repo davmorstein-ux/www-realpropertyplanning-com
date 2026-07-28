@@ -1531,11 +1531,11 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/afh-club/selling-your-business-at-retirement": {
     title: "Selling Your Adult Family Home Business at Retirement | Real Property Planning",
-    description: "Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, transfer your DSHS license, and value your AFH accurately.",
+    description: "Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, navigate the DSHS Change of Ownership process, and value your AFH accurately.",
     h1: "Selling Your AFH Business at Retirement",
     quickAnswerQ: "I'm planning to retire from running my AFH — should I sell the business and the building together, or separately?",
     quickAnswerA: "Most retiring owners sell both together, and most buyers prefer it that way — it lets them step directly into an operating home with residents, staff, and licensing already in place. Selling the business and building as a single transaction is usually simpler and often nets more than selling them apart, though separating them can make sense in specific situations, such as keeping the real estate as an investment.",
-    intro: "Running an Adult Family Home for years — sometimes decades — builds something genuinely difficult to walk away from: relationships with residents and families, a trained staff who trust your leadership, and a business with real value beyond the four walls it sits in. Selling an AFH at retirement runs on two tracks that have to work together: the real estate transaction, and the transfer of your DSHS operating license to a new, DSHS-approved owner.",
+    intro: "Running an Adult Family Home for years — sometimes decades — builds something genuinely difficult to walk away from: relationships with residents and families, a trained staff who trust your leadership, and a business with real value beyond the four walls it sits in. Selling an AFH at retirement runs on two tracks that have to work together: the real estate transaction, and the DSHS Change of Ownership process. Washington AFH licenses are not transferable — the buyer must qualify for a new license of their own.",
   },
 
   // ===== Final coverage gap-fill (6 routes missed by the bulk pass) =====
