@@ -28,7 +28,17 @@ function toEnglishPath(pathname: string): string {
   return "/" + segments.join("/");
 }
 
-const LanguageSwitcher = () => {
+type LanguageSwitcherProps = {
+  /**
+   * Compact mode renders the flag only, dropping the "LANGUAGE" text label.
+   * Used in the mobile header, where the full label costs ~68px of horizontal
+   * space and pushed the CALL button off the right edge of the screen.
+   * The button keeps its aria-label, so it stays accessible without the text.
+   */
+  compact?: boolean;
+};
+
+const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -38,8 +48,7 @@ const LanguageSwitcher = () => {
   const isTranslated = !!TRANSLATED_PAGES[englishPath];
 
   const currentSegment = location.pathname.split("/").filter(Boolean)[0] || "";
-  const currentLang =
-    SUPPORTED_LANGUAGES.find((l) => l.pathPrefix === currentSegment)?.code ?? "en";
+  const currentLang = SUPPORTED_LANGUAGES.find((l) => l.pathPrefix === currentSegment)?.code ?? "en";
 
   useEffect(() => {
     if (!open) return;
@@ -69,11 +78,14 @@ const LanguageSwitcher = () => {
         style={{
           display: "inline-flex",
           alignItems: "center",
-          gap: 8,
+          justifyContent: "center",
+          gap: compact ? 0 : 8,
           background: "transparent",
           border: "1px solid rgba(255,255,255,0.35)",
           borderRadius: 6,
-          padding: "6px 10px",
+          padding: compact ? "0" : "6px 10px",
+          minWidth: compact ? 44 : undefined,
+          minHeight: compact ? 44 : undefined,
           fontFamily: "'Raleway', sans-serif",
           fontSize: 13,
           fontWeight: 700,
@@ -84,9 +96,9 @@ const LanguageSwitcher = () => {
       >
         {(() => {
           const CurrentFlag = FLAG_COMPONENTS[currentLang];
-          return CurrentFlag ? <CurrentFlag size={16} /> : null;
+          return CurrentFlag ? <CurrentFlag size={compact ? 20 : 16} /> : null;
         })()}
-        LANGUAGE
+        {!compact && "LANGUAGE"}
       </button>
       {open && (
         <div
