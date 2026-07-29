@@ -111,8 +111,17 @@ const RPPHomeV3 = () => {
                 display: "flex",
                 flexWrap: "wrap",
                 justifyContent: "center",
+                /* stretch keeps both buttons the same HEIGHT when one label
+                   wraps to two lines (happens in Spanish and Tagalog). */
+                alignItems: "stretch",
                 gap: "clamp(10px, 1.4vw, 16px)",
-                marginTop: "clamp(14px, 2.2vw, 26px)",
+                /* Equal WIDTH comes from flex:1 1 0 on each button plus this
+                   cap on the row. Do NOT try to equalise these by matching
+                   label lengths — the CTA strings are translated and the
+                   longer/shorter relationship reverses between locales (in
+                   Tagalog the second label is the longer one). */
+                maxWidth: "min(680px, 100%)",
+                margin: "clamp(14px, 2.2vw, 26px) auto 0",
               }}
             >
               <a
@@ -121,6 +130,10 @@ const RPPHomeV3 = () => {
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
+                  justifyContent: "center",
+                  textAlign: "center",
+                  flex: "1 1 0",
+                  minWidth: 240,
                   gap: 8,
                   background: "#ffffff",
                   border: "2px solid #7f1d1d",
@@ -158,6 +171,10 @@ const RPPHomeV3 = () => {
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
+                  justifyContent: "center",
+                  textAlign: "center",
+                  flex: "1 1 0",
+                  minWidth: 240,
                   gap: 8,
                   background: "#7f1d1d",
                   border: "2px solid #7f1d1d",
