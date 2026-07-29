@@ -276,6 +276,21 @@ const Header = () => {
                       {CONTACT_LINK.label}
                     </Link>
                   )}
+                </div>
+              </nav>
+
+              {/* Divider now spans only this column, so it separates nav from
+                  search rather than bisecting the whole header. */}
+              {/* Search row: the search field flexes and the phone CTA sits in
+                  the bottom-right corner, so both rows finish flush against the
+                  same right edge. alignItems:"stretch" makes the button match
+                  the search field's height, which also gives it a far larger
+                  tap target than it had inline in the nav row. */}
+              <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+                <div style={{ display: "flex", alignItems: "stretch", gap: 12, minWidth: 0 }}>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <SiteSearchBar />
+                  </div>
                   <a
                     href="tel:2069003015"
                     style={{
@@ -283,25 +298,22 @@ const Header = () => {
                       fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
                       color: "#fff",
                       background: "#1f6fb2",
-                      padding: isMobile ? "6px 10px" : "4px 14px",
-                      borderRadius: 6,
+                      padding: "0 22px",
+                      borderRadius: 8,
                       fontWeight: 700,
-                      fontSize: isMobile ? 15 : 16,
+                      fontSize: 18,
                       letterSpacing: "0.02em",
                       textTransform: "uppercase",
                       textDecoration: "none",
                       whiteSpace: "nowrap",
+                      display: "flex",
+                      alignItems: "center",
+                      flexShrink: 0,
                     }}
                   >
-                    {isMobile ? "CALL" : "(206) 900-3015"}
+                    (206) 900-3015
                   </a>
                 </div>
-              </nav>
-
-              {/* Divider now spans only this column, so it separates nav from
-                  search rather than bisecting the whole header. */}
-              <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-                <SiteSearchBar />
               </div>
             </div>
           </div>
