@@ -42,6 +42,10 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  /* Hover colour is handled in state rather than by the .rpp-top-link CSS
+     rule, because the inline styles below would otherwise win the specificity
+     contest and the gold hover would never fire. */
+  const [hovered, setHovered] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const englishPath = toEnglishPath(location.pathname);
@@ -75,24 +79,34 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label="Choose language"
+        className={compact ? undefined : "rpp-top-link"}
         style={{
           display: "inline-flex",
           alignItems: "center",
           justifyContent: "center",
           gap: compact ? 0 : 8,
           background: "transparent",
-          border: "1px solid rgba(255,255,255,0.35)",
-          borderRadius: 6,
-          padding: compact ? "0" : "6px 10px",
+          /* On desktop this now matches the plain uppercase nav links either
+             side of it. The outlined pill made it read as a component from a
+             different design system and broke the rhythm of the link row.
+             Compact (mobile) keeps the bordered box, where it genuinely is a
+             standalone icon button. */
+          border: compact ? "1px solid rgba(255,255,255,0.35)" : "none",
+          borderRadius: compact ? 6 : 0,
+          padding: compact ? "0" : "6px 4px",
           minWidth: compact ? 44 : undefined,
           minHeight: compact ? 44 : undefined,
-          fontFamily: "'Raleway', sans-serif",
+          fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
           fontSize: 13,
-          fontWeight: 700,
-          letterSpacing: "0.06em",
-          color: "#ffffff",
+          fontWeight: 600,
+          letterSpacing: compact ? "0.06em" : "0.08em",
+          textTransform: "uppercase",
+          color: compact ? "#ffffff" : hovered ? "#d1a847" : "rgba(255,255,255,0.92)",
+          transition: "color 0.18s ease",
           cursor: "pointer",
         }}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
       >
         {(() => {
           const CurrentFlag = FLAG_COMPONENTS[currentLang];
