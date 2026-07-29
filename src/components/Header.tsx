@@ -81,6 +81,9 @@ const Header = () => {
         border-radius: 3px;
       }
       .rpp-curated-link { display: inline-flex; }
+      @media (min-width: 769px) {
+        .rpp-header-phone { font-size: 22px !important; }
+      }
       /* Breakpoint lowered from 1100px. Reducing letter-spacing from 0.18em
          to 0.08em recovered roughly 90px across the five links, which is
          enough to keep the full desktop nav on tablets and small laptops
@@ -200,6 +203,7 @@ const Header = () => {
                 )}
                 <a
                   href="tel:2069003015"
+                  className="rpp-header-phone"
                   style={{
                     ...NAV_FONT,
                     fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
@@ -327,6 +331,7 @@ const Header = () => {
 
                   <a
                     href="tel:2069003015"
+                    className="rpp-header-phone"
                     style={{
                       ...NAV_FONT,
                       fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
@@ -334,7 +339,7 @@ const Header = () => {
                       background: "#1f6fb2",
                       borderRadius: 8,
                       fontWeight: 700,
-                      fontSize: 21,
+                      fontSize: 22,
                       letterSpacing: "0.02em",
                       textTransform: "uppercase",
                       textDecoration: "none",
