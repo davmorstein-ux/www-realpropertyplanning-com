@@ -51,8 +51,10 @@ export const areaServed = [
 export const davidSteinPerson = {
   "@type": "Person",
   "@id": `${SITE_URL}/#david-stein`,
-  name: "Real Property Planning",
-  jobTitle: "President, Real Property Planning",
+  // Was "Real Property Planning" — a Person entity carrying the company name.
+  // Search engines had no correctly-named person for the licensed work.
+  name: "David Stein",
+  jobTitle: "Designated Broker & Certified Residential Appraiser",
   url: `${SITE_URL}/about`,
   worksFor: {
     "@type": "Organization",
@@ -97,7 +99,11 @@ export const davidSteinPerson = {
     },
   ],
   memberOf: [
-    { "@type": "Organization", name: "Aging Life Care Association (Corporate Partner)", url: "https://www.aginglifecare.org" },
+    {
+      "@type": "Organization",
+      name: "Aging Life Care Association (Corporate Partner)",
+      url: "https://www.aginglifecare.org",
+    },
     { "@type": "Organization", name: "National Association of Senior Advocates", url: "https://www.naosa.org" },
     {
       "@type": "Organization",
@@ -139,7 +145,7 @@ export const serviceSchemas = [
     name: "Probate Real Estate Sales",
     description:
       "Full-service real estate guidance for executors, trustees, and families selling estate property during probate in Washington State. Includes property assessment, condition-based pricing, preparation coordination, listing, and sale management.",
-    provider: { "@id": `${SITE_URL}/#organization` },
+    provider: { "@id": `${SITE_URL}/#david-stein` },
     areaServed: areaServed,
     url: `${SITE_URL}/probate-estate-sales`,
     serviceType: "Probate Real Estate",
@@ -150,7 +156,7 @@ export const serviceSchemas = [
     name: "Estate & Probate Appraisals",
     description:
       "Washington State Certified Residential Appraiser providing defensible valuations for probate, trust administration, estate settlements, date of death valuations, and financial planning purposes throughout the Puget Sound region.",
-    provider: { "@id": `${SITE_URL}/#organization` },
+    provider: { "@id": `${SITE_URL}/#david-stein` },
     areaServed: areaServed,
     url: `${SITE_URL}/real-estate-appraiser`,
     serviceType: "Real Estate Appraisal",
@@ -161,7 +167,7 @@ export const serviceSchemas = [
     name: "Senior Housing Transitions",
     description:
       "Patient, coordinated real estate guidance for seniors and families navigating the sale of a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. Includes coordination with senior move managers, care teams, and advisors throughout Washington State.",
-    provider: { "@id": `${SITE_URL}/#organization` },
+    provider: { "@id": `${SITE_URL}/#david-stein` },
     areaServed: areaServed,
     url: `${SITE_URL}/senior-move-managers`,
     serviceType: "Senior Real Estate Transition",
@@ -172,21 +178,10 @@ export const serviceSchemas = [
     name: "Inherited Home Sales",
     description:
       "Comprehensive real estate guidance for families and executors selling inherited property in Washington State. Includes honest condition assessment, condition-based pricing, cleanout coordination, and full sale management.",
-    provider: { "@id": `${SITE_URL}/#organization` },
+    provider: { "@id": `${SITE_URL}/#david-stein` },
     areaServed: areaServed,
     url: `${SITE_URL}/executors`,
     serviceType: "Inherited Property Sales",
-  },
-  {
-    "@type": "Service",
-    "@id": `${SITE_URL}/#service-professional-network`,
-    name: "Professional Resource Network",
-    description:
-      "Real Property Planning connects families, executors, attorneys, CPAs, and financial planners with trusted professionals throughout Washington State — including senior move managers, adult family home operators, estate liquidators, and more.",
-    provider: { "@id": `${SITE_URL}/#organization` },
-    areaServed: areaServed,
-    url: `${SITE_URL}/about`,
-    serviceType: "Professional Referral Network",
   },
 ];
 
@@ -235,7 +230,11 @@ export const realEstateAgentSchema = {
       areaServed: areaServed,
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Real Property Planning Services",
+        // Was "Real Property Planning Services", which declared to search
+        // engines that the hub itself sells a catalogue of services. The four
+        // entries are genuine licensed brokerage and appraisal work, so they
+        // stay — but they belong to the licensed practice, not to the hub.
+        name: "Brokerage & Appraisal Services — David Stein (eXp Realty / Stein Appraisal)",
         itemListElement: serviceSchemas,
       },
       openingHoursSpecification: [
@@ -313,7 +312,7 @@ export const organizationSchema = {
   name: BUSINESS_NAME,
   alternateName: "Real Property Planning Resource Hub",
   description:
-    "Real Property Planning is Washington State's resource hub and professional ecosystem for probate real estate, inherited home sales, senior transitions, and estate guidance — connecting families, executors, attorneys, CPAs, financial planners, and other professionals with trusted expertise across the state.",
+    "Real Property Planning is Washington State's independent resource hub for probate real estate, inherited home sales, senior transitions, and estate guidance. It publishes reference material and maintains a directory of independent professionals; it does not itself provide legal, tax, financial, or care services.",
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
@@ -624,7 +623,7 @@ export function realEstateListingsPageSchema(
     broker: string;
     brokerage: string;
     mlsNum: string;
-  }[]
+  }[],
 ) {
   return {
     "@context": "https://schema.org",
