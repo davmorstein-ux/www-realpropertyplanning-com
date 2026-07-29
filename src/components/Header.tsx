@@ -7,6 +7,13 @@ import LanguageSwitcher from "./LanguageSwitcher";
 const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
 
 const CONTACT_LINK = { label: "Contact", href: "/contact" };
+/* Desktop logo height. The logo now occupies its own column spanning both the
+   nav row and the search row, so it can be far larger without making the
+   header taller — the two-column layout is actually SHORTER than the previous
+   stacked one (~112px vs ~140px) while the mark nearly doubles. Adjust this
+   single value to taste. */
+const DESKTOP_LOGO_HEIGHT = 104;
+
 const CURATED_LINKS = [
   { label: "About", href: "/about" },
   { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
@@ -49,7 +56,7 @@ const Header = () => {
         font-family: 'Raleway', 'Gill Sans', 'Century Gothic', sans-serif;
         font-size: 13px;
         font-weight: 600;
-        letter-spacing: 0.18em;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
         padding: 6px 4px;
         border-bottom: 1px solid transparent;
@@ -66,7 +73,11 @@ const Header = () => {
         border-radius: 3px;
       }
       .rpp-curated-link { display: inline-flex; }
-      @media (max-width: 1100px) {
+      /* Breakpoint lowered from 1100px. Reducing letter-spacing from 0.18em
+         to 0.08em recovered roughly 90px across the five links, which is
+         enough to keep the full desktop nav on tablets and small laptops
+         instead of dropping them to the hamburger-only layout. */
+      @media (max-width: 950px) {
         .rpp-curated-link { display: none !important; }
       }
     `;
@@ -125,89 +136,176 @@ const Header = () => {
           color: "#fff",
         }}
       >
-        <nav
-          aria-label="Primary"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: 12,
-            minWidth: 0,
-          }}
-        >
-          {/* LEFT: WaterfallNav + logo */}
-          <div style={{ display: "flex", alignItems: "center", gap: 14, minWidth: 0, flexShrink: 1 }}>
-            <WaterfallNav />
-            <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-              <img
-                src="/rpp-logo-v4.webp"
-                alt="Real Property Planning"
-                style={{
-                  height: isMobile ? 44 : 60,
-                  width: "auto",
-                  maxWidth: "100%",
-                  display: "block",
-                  objectFit: "contain",
-                }}
-                sizes="100vw"
-                decoding="async"
-                width={946}
-                height={449}
-              />
-            </Link>
-          </div>
-
-          {/* Tagline removed */}
-
-          {/* RIGHT: curated links + Contact + CTA */}
-          <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0 }}>
-            {CURATED_LINKS.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className={`rpp-top-link rpp-curated-link${pathname === item.href ? " is-active" : ""}`}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <LanguageSwitcher compact={isMobile} />
-            {/* Contact is hidden on mobile — it was the item being clipped at the
-                right edge. It now lives in the WaterfallNav quick-links strip,
-                and the CALL button below covers urgent contact. */}
-            {!isMobile && (
-              <Link
-                to={CONTACT_LINK.href}
-                className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
-              >
-                {CONTACT_LINK.label}
-              </Link>
-            )}
-            <a
-              href="tel:2069003015"
+        {/* Two-column desktop header: the logo occupies a full-height left
+            column while the nav links and search stack in the right column.
+            This lets the logo be ~104px instead of 60px WITHOUT making the
+            header taller — it is in fact shorter than the previous stacked
+            layout. Mobile keeps the original stacked structure untouched. */}
+        {isMobile ? (
+          <>
+            <nav
+              aria-label="Primary"
               style={{
-                ...NAV_FONT,
-                fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
-                color: "#fff",
-                background: "#1f6fb2",
-                padding: isMobile ? "6px 10px" : "4px 14px",
-                borderRadius: 6,
-                fontWeight: 700,
-                fontSize: isMobile ? 15 : 16,
-                letterSpacing: "0.02em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-                whiteSpace: "nowrap",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 12,
+                minWidth: 0,
               }}
             >
-              {isMobile ? "CALL" : "(206) 900-3015"}
-            </a>
-          </div>
-        </nav>
+              <div style={{ display: "flex", alignItems: "center", gap: 14, minWidth: 0, flexShrink: 1 }}>
+                <WaterfallNav />
+                <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    src="/rpp-logo-v4.webp"
+                    alt="Real Property Planning"
+                    style={{ height: 44, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
+                    sizes="100vw"
+                    decoding="async"
+                    width={946}
+                    height={449}
+                  />
+                </Link>
+              </div>
 
-        {/* Always-visible site search — sits under the nav on every page */}
-        <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-          <SiteSearchBar />
-        </div>
+              <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0 }}>
+                {CURATED_LINKS.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className={`rpp-top-link rpp-curated-link${pathname === item.href ? " is-active" : ""}`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <LanguageSwitcher compact={isMobile} />
+                {/* Contact is hidden on mobile — it was the item being clipped at the
+                right edge. It now lives in the WaterfallNav quick-links strip,
+                and the CALL button below covers urgent contact. */}
+                {!isMobile && (
+                  <Link
+                    to={CONTACT_LINK.href}
+                    className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
+                  >
+                    {CONTACT_LINK.label}
+                  </Link>
+                )}
+                <a
+                  href="tel:2069003015"
+                  style={{
+                    ...NAV_FONT,
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
+                    color: "#fff",
+                    background: "#1f6fb2",
+                    padding: isMobile ? "6px 10px" : "4px 14px",
+                    borderRadius: 6,
+                    fontWeight: 700,
+                    fontSize: isMobile ? 15 : 16,
+                    letterSpacing: "0.02em",
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {isMobile ? "CALL" : "(206) 900-3015"}
+                </a>
+              </div>
+            </nav>
+
+            <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+              <SiteSearchBar />
+            </div>
+          </>
+        ) : (
+          <div style={{ display: "flex", alignItems: "stretch", gap: 24, minWidth: 0 }}>
+            {/* LEFT COLUMN — hamburger + full-height logo */}
+            <div style={{ display: "flex", alignItems: "center", gap: 14, flexShrink: 0 }}>
+              <WaterfallNav />
+              <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+                <img
+                  src="/rpp-logo-v4.webp"
+                  alt="Real Property Planning"
+                  style={{
+                    height: DESKTOP_LOGO_HEIGHT,
+                    width: "auto",
+                    display: "block",
+                    objectFit: "contain",
+                  }}
+                  sizes="100vw"
+                  decoding="async"
+                  width={946}
+                  height={449}
+                />
+              </Link>
+            </div>
+
+            {/* RIGHT COLUMN — nav links above, search below */}
+            <div
+              style={{
+                flex: 1,
+                minWidth: 0,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                gap: 0,
+              }}
+            >
+              <nav
+                aria-label="Primary"
+                style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 12, minWidth: 0 }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0 }}>
+                  {CURATED_LINKS.map((item) => (
+                    <Link
+                      key={item.href}
+                      to={item.href}
+                      className={`rpp-top-link rpp-curated-link${pathname === item.href ? " is-active" : ""}`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  <LanguageSwitcher compact={isMobile} />
+                  {/* Contact is hidden on mobile — it was the item being clipped at the
+                right edge. It now lives in the WaterfallNav quick-links strip,
+                and the CALL button below covers urgent contact. */}
+                  {!isMobile && (
+                    <Link
+                      to={CONTACT_LINK.href}
+                      className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
+                    >
+                      {CONTACT_LINK.label}
+                    </Link>
+                  )}
+                  <a
+                    href="tel:2069003015"
+                    style={{
+                      ...NAV_FONT,
+                      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
+                      color: "#fff",
+                      background: "#1f6fb2",
+                      padding: isMobile ? "6px 10px" : "4px 14px",
+                      borderRadius: 6,
+                      fontWeight: 700,
+                      fontSize: isMobile ? 15 : 16,
+                      letterSpacing: "0.02em",
+                      textTransform: "uppercase",
+                      textDecoration: "none",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {isMobile ? "CALL" : "(206) 900-3015"}
+                  </a>
+                </div>
+              </nav>
+
+              {/* Divider now spans only this column, so it separates nav from
+                  search rather than bisecting the whole header. */}
+              <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+                <SiteSearchBar />
+              </div>
+            </div>
+          </div>
+        )}
       </header>
     </>
   );
