@@ -29,6 +29,37 @@ const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; va
   </div>
 );
 
+/* Responsive layout for the listing card.
+   Injected here rather than added to index.css so this component stays
+   self-contained, matching the pattern already used in Header.tsx.
+
+   The card was previously a hard-coded flex row with a 220px non-shrinking
+   photo. On phones that left ~120px for the details column, which then
+   overflowed and was clipped off the right edge of the screen. Below 720px
+   the card now stacks, with the photo going full width. */
+const AFH_CARD_STYLES = `
+  .afh-card {
+    display: flex;
+    flex-direction: row;
+  }
+  .afh-card__photo {
+    width: 220px;
+    min-width: 220px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 720px) {
+    .afh-card {
+      flex-direction: column;
+    }
+    .afh-card__photo {
+      width: 100%;
+      min-width: 0;
+      height: 200px;
+      align-self: stretch;
+    }
+  }
+`;
+
 const PhotoPanel = ({
   photo,
   index,
@@ -43,9 +74,8 @@ const PhotoPanel = ({
   city: string;
 }) => (
   <div
+    className="afh-card__photo"
     style={{
-      width: "220px",
-      minWidth: "220px",
       height: "165px",
       alignSelf: "flex-start",
       position: "relative",
@@ -53,7 +83,6 @@ const PhotoPanel = ({
       backgroundColor: "#e4ecec",
       border: "3px solid #111111",
       borderRadius: "4px",
-      flexShrink: 0,
     }}
   >
     {photo ? (
@@ -152,20 +181,25 @@ const PhotoPanel = ({
 
 export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing; index: number; total: number }) => (
   <div
+    className="afh-card"
     style={{
       backgroundColor: WHITE,
       borderRadius: "10px",
       border: `1px solid ${GRAY_BORDER}`,
       overflow: "visible",
-      display: "flex",
-      flexDirection: "row",
     }}
   >
+    <style>{AFH_CARD_STYLES}</style>
     <PhotoPanel photo={listing.photo} index={index} total={total} address={listing.address} city={listing.city} />
 
     <div
       style={{
         flex: 1,
+        /* minWidth:0 is essential. Without it this flex item cannot shrink
+           below its content's intrinsic width, so on narrow screens the
+           address, price, specs and buttons overflowed the card and were
+           clipped off the right edge of the viewport. */
+        minWidth: 0,
         padding: "1.25rem 1.5rem",
         display: "flex",
         flexDirection: "column",
@@ -260,7 +294,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
           href={`mailto:dave.stein@exprealty.com?subject=${encodeURIComponent(
             `AFH Property Inquiry — ${
               listing.address && listing.address !== "Address Upon Request" ? listing.address : listing.city
-            }${listing.mlsNum ? ` — MLS ${listing.mlsNum}` : ""}`
+            }${listing.mlsNum ? ` — MLS ${listing.mlsNum}` : ""}`,
           )}`}
           style={{
             display: "inline-flex",
@@ -318,8 +352,8 @@ export const AFHListingsDisclaimer = () => (
     }}
   >
     Listings sourced from NWMLS. Information deemed reliable but not guaranteed. Real Property Planning is an
-    independent educational hub and does not represent buyers or sellers on these properties directly — contact
-    David Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #6c171e), for all inquiries,
-    showings, and full listing details.
+    independent educational hub and does not represent buyers or sellers on these properties directly — contact David
+    Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #6c171e), for all inquiries, showings, and
+    full listing details.
   </div>
 );
