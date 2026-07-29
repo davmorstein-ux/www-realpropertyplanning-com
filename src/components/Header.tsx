@@ -334,7 +334,7 @@ const Header = () => {
                       background: "#1f6fb2",
                       borderRadius: 8,
                       fontWeight: 700,
-                      fontSize: 21,
+                      fontSize: 22,
                       letterSpacing: "0.02em",
                       textTransform: "uppercase",
                       textDecoration: "none",
