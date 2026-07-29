@@ -122,8 +122,8 @@ const CSS = `
     border: none;
     cursor: pointer;
     padding: 0;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 48px;
+    min-height: 48px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -524,20 +524,20 @@ export default function WaterfallNav() {
               display: "inline-flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              width: "26px",
-              height: "20px",
+              width: "34px",
+              height: "26px",
               padding: 0,
               flexShrink: 0,
             }}
           >
             <span
-              style={{ display: "block", height: "2.5px", background: "#FFEF00", borderRadius: "1px", width: "100%" }}
+              style={{ display: "block", height: "3px", background: "#FFEF00", borderRadius: "1.5px", width: "100%" }}
             />
             <span
               style={{ display: "block", height: "2.5px", background: "#FFEF00", borderRadius: "1px", width: "75%" }}
             />
             <span
-              style={{ display: "block", height: "2.5px", background: "#FFEF00", borderRadius: "1px", width: "100%" }}
+              style={{ display: "block", height: "3px", background: "#FFEF00", borderRadius: "1.5px", width: "100%" }}
             />
           </span>
         </button>
