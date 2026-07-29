@@ -81,6 +81,7 @@ const Header = () => {
         border-radius: 3px;
       }
       .rpp-curated-link { display: inline-flex; }
+      .rpp-header-phone { font-size: 22px !important; }
       /* Breakpoint lowered from 1100px. Reducing letter-spacing from 0.18em
          to 0.08em recovered roughly 90px across the five links, which is
          enough to keep the full desktop nav on tablets and small laptops
