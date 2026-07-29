@@ -132,6 +132,31 @@ const CSS = `
     transition: background 0.3s ease;
   }
   .wf-trigger:hover { background: rgba(232,201,122,0.12); }
+  /* On desktop the trigger sits in the search row, so it fills that row's
+     height and picks up the same 8px radius as the phone CTA — reading as
+     part of the row's control set rather than a floating icon. The glyph
+     itself stays tight; spreading three bars over a 64px field would stop
+     looking like a menu icon. */
+  @media (min-width: 951px) {
+    /* .wf-wrap is inline-block by default, which would swallow the parent's
+       stretch and leave the button at its intrinsic height. */
+    .wf-wrap {
+      display: flex;
+      align-self: stretch;
+      width: 100%;
+    }
+    .wf-trigger {
+      height: 100%;
+      width: 100%;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+    .wf-trigger:hover {
+      background: rgba(232,201,122,0.16);
+      border-color: rgba(232,201,122,0.45);
+    }
+  }
 
   .wf-overlay {
     position: fixed;
@@ -524,20 +549,20 @@ export default function WaterfallNav() {
               display: "inline-flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              width: "34px",
-              height: "26px",
+              width: "32px",
+              height: "24px",
               padding: 0,
               flexShrink: 0,
             }}
           >
             <span
-              style={{ display: "block", height: "3px", background: "#FFEF00", borderRadius: "1.5px", width: "100%" }}
+              style={{ display: "block", height: "4px", background: "#FFEF00", borderRadius: "2px", width: "100%" }}
             />
             <span
-              style={{ display: "block", height: "2.5px", background: "#FFEF00", borderRadius: "1px", width: "75%" }}
+              style={{ display: "block", height: "4px", background: "#FFEF00", borderRadius: "2px", width: "100%" }}
             />
             <span
-              style={{ display: "block", height: "3px", background: "#FFEF00", borderRadius: "1.5px", width: "100%" }}
+              style={{ display: "block", height: "4px", background: "#FFEF00", borderRadius: "2px", width: "100%" }}
             />
           </span>
         </button>
