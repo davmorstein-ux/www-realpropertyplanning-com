@@ -20,7 +20,7 @@ const DESKTOP_LOGO_HEIGHT = 104;
    that puts CONTACT directly above the phone button. */
 const HAMBURGER_SLOT = 48; // matches .wf-trigger min-width
 const COLUMN_GAP = 12;
-const CTA_SLOT = 200; // width of the phone button / CONTACT slot above it
+const CTA_SLOT = 215; // width of the phone button / CONTACT slot above it
 
 const CURATED_LINKS = [
   { label: "About", href: "/about" },
@@ -333,7 +333,7 @@ const Header = () => {
                       background: "#1f6fb2",
                       borderRadius: 8,
                       fontWeight: 700,
-                      fontSize: 18,
+                      fontSize: 21,
                       letterSpacing: "0.02em",
                       textTransform: "uppercase",
                       textDecoration: "none",
