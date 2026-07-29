@@ -18,7 +18,7 @@ const DESKTOP_LOGO_HEIGHT = 104;
    row are laid out on identical tracks so every element lines up vertically:
    a hamburger-width leading slot, a flexible middle, and a fixed trailing slot
    that puts CONTACT directly above the phone button. */
-const HAMBURGER_SLOT = 48; // matches .wf-trigger min-width
+const HAMBURGER_SLOT = 56; // bordered trigger button in the search row
 const COLUMN_GAP = 12;
 const CTA_SLOT = 215; // width of the phone button / CONTACT slot above it
 
@@ -313,7 +313,8 @@ const Header = () => {
                       width: HAMBURGER_SLOT,
                       flexShrink: 0,
                       display: "flex",
-                      alignItems: "center",
+                      /* stretch so the trigger fills the search row's height */
+                      alignItems: "stretch",
                       justifyContent: "center",
                     }}
                   >
