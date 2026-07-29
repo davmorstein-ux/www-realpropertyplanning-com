@@ -14,6 +14,14 @@ const CONTACT_LINK = { label: "Contact", href: "/contact" };
    single value to taste. */
 const DESKTOP_LOGO_HEIGHT = 104;
 
+/* Shared column geometry for the desktop header. The nav row and the search
+   row are laid out on identical tracks so every element lines up vertically:
+   a hamburger-width leading slot, a flexible middle, and a fixed trailing slot
+   that puts CONTACT directly above the phone button. */
+const HAMBURGER_SLOT = 48; // matches .wf-trigger min-width
+const COLUMN_GAP = 12;
+const CTA_SLOT = 200; // width of the phone button / CONTACT slot above it
+
 const CURATED_LINKS = [
   { label: "About", href: "/about" },
   { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
@@ -127,7 +135,7 @@ const Header = () => {
           margin: 0,
           padding: isMobile
             ? "calc(env(safe-area-inset-top, 0px) + 8px) 12px 6px"
-            : "calc(env(safe-area-inset-top, 0px) + 8px) 32px 4px",
+            : "calc(env(safe-area-inset-top, 0px) + 8px) 24px 4px",
           backgroundColor: "rgba(8, 13, 25, 0.92)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
@@ -218,9 +226,9 @@ const Header = () => {
           </>
         ) : (
           <div style={{ display: "flex", alignItems: "stretch", gap: 24, minWidth: 0 }}>
-            {/* LEFT COLUMN — hamburger + full-height logo */}
-            <div style={{ display: "flex", alignItems: "center", gap: 14, flexShrink: 0 }}>
-              <WaterfallNav />
+            {/* LEFT COLUMN — logo only. The hamburger moved into the search
+                row so the mark can sit flush against the left edge. */}
+            <div style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <Link to="/" style={{ display: "flex", alignItems: "center" }}>
                 <img
                   src="/rpp-logo-v4.webp"
@@ -239,7 +247,7 @@ const Header = () => {
               </Link>
             </div>
 
-            {/* RIGHT COLUMN — nav links above, search below */}
+            {/* RIGHT COLUMN — nav row above, search row below, on shared tracks */}
             <div
               style={{
                 flex: 1,
@@ -250,11 +258,21 @@ const Header = () => {
                 gap: 0,
               }}
             >
-              <nav
-                aria-label="Primary"
-                style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 12, minWidth: 0 }}
-              >
-                <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0 }}>
+              <nav aria-label="Primary" style={{ display: "flex", alignItems: "center", gap: COLUMN_GAP, minWidth: 0 }}>
+                {/* Leading spacer matches the hamburger slot in the row below,
+                    so the first nav link starts exactly above the search field. */}
+                <div style={{ width: HAMBURGER_SLOT, flexShrink: 0 }} aria-hidden="true" />
+
+                {/* Links spread evenly across the same width the search bar occupies. */}
+                <div
+                  style={{
+                    flex: 1,
+                    minWidth: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
                   {CURATED_LINKS.map((item) => (
                     <Link
                       key={item.href}
@@ -264,33 +282,48 @@ const Header = () => {
                       {item.label}
                     </Link>
                   ))}
-                  <LanguageSwitcher compact={isMobile} />
-                  {/* Contact is hidden on mobile — it was the item being clipped at the
-                right edge. It now lives in the WaterfallNav quick-links strip,
-                and the CALL button below covers urgent contact. */}
-                  {!isMobile && (
-                    <Link
-                      to={CONTACT_LINK.href}
-                      className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
-                    >
-                      {CONTACT_LINK.label}
-                    </Link>
-                  )}
+                  <LanguageSwitcher />
+                </div>
+
+                {/* CONTACT sits centred in a slot the same width as the phone
+                    button below it, so the two are vertically centred on each other. */}
+                <div
+                  style={{
+                    width: CTA_SLOT,
+                    flexShrink: 0,
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Link
+                    to={CONTACT_LINK.href}
+                    className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
+                  >
+                    {CONTACT_LINK.label}
+                  </Link>
                 </div>
               </nav>
 
-              {/* Divider now spans only this column, so it separates nav from
-                  search rather than bisecting the whole header. */}
-              {/* Search row: the search field flexes and the phone CTA sits in
-                  the bottom-right corner, so both rows finish flush against the
-                  same right edge. alignItems:"stretch" makes the button match
-                  the search field's height, which also gives it a far larger
-                  tap target than it had inline in the nav row. */}
               <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-                <div style={{ display: "flex", alignItems: "stretch", gap: 12, minWidth: 0 }}>
+                <div style={{ display: "flex", alignItems: "stretch", gap: COLUMN_GAP, minWidth: 0 }}>
+                  {/* Hamburger moved down here so it is horizontally aligned
+                      with the search field, freeing the logo to sit flush left. */}
+                  <div
+                    style={{
+                      width: HAMBURGER_SLOT,
+                      flexShrink: 0,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <WaterfallNav />
+                  </div>
+
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <SiteSearchBar />
                   </div>
+
                   <a
                     href="tel:2069003015"
                     style={{
@@ -298,7 +331,6 @@ const Header = () => {
                       fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
                       color: "#fff",
                       background: "#1f6fb2",
-                      padding: "0 22px",
                       borderRadius: 8,
                       fontWeight: 700,
                       fontSize: 18,
@@ -306,9 +338,11 @@ const Header = () => {
                       textTransform: "uppercase",
                       textDecoration: "none",
                       whiteSpace: "nowrap",
+                      width: CTA_SLOT,
+                      flexShrink: 0,
                       display: "flex",
                       alignItems: "center",
-                      flexShrink: 0,
+                      justifyContent: "center",
                     }}
                   >
                     (206) 900-3015
