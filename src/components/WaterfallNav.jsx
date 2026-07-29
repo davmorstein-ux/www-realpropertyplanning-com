@@ -556,13 +556,13 @@ export default function WaterfallNav() {
             }}
           >
             <span
-              style={{ display: "block", height: "4px", background: "#FFEF00", borderRadius: "2px", width: "100%" }}
+              style={{ display: "block", height: "4px", background: "#E8C97A", borderRadius: "2px", width: "100%" }}
             />
             <span
-              style={{ display: "block", height: "4px", background: "#FFEF00", borderRadius: "2px", width: "100%" }}
+              style={{ display: "block", height: "4px", background: "#E8C97A", borderRadius: "2px", width: "100%" }}
             />
             <span
-              style={{ display: "block", height: "4px", background: "#FFEF00", borderRadius: "2px", width: "100%" }}
+              style={{ display: "block", height: "4px", background: "#E8C97A", borderRadius: "2px", width: "100%" }}
             />
           </span>
         </button>
