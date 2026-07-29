@@ -200,6 +200,7 @@ const Header = () => {
                 )}
                 <a
                   href="tel:2069003015"
+                  className="rpp-header-phone"
                   style={{
                     ...NAV_FONT,
                     fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
