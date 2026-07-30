@@ -471,3 +471,66 @@ export const afhListings: AFHListing[] = [
     mlsNum: "2520888",
   },
 ];
+
+/* ---------------------------------------------------------------------------
+   Integrity guard.
+
+   Five duplicate listings once shipped to production because a price change was
+   added as a NEW record instead of updating the existing one. Two of those pairs
+   showed the same MLS number at two different prices on the live page.
+
+   This runs once at import time. In development it throws, so the problem
+   surfaces the moment the file is saved. In production it only logs — a data
+   mistake should never take the site down for a visitor.
+
+   When updating a listing, EDIT the existing record. Only add a new one for a
+   genuinely new MLS number.
+--------------------------------------------------------------------------- */
+function validateAFHListings(listings: AFHListing[]): string[] {
+  const problems: string[] = [];
+
+  const seen = <T,>(values: T[]) => {
+    const counts = new Map<T, number>();
+    values.forEach((v) => counts.set(v, (counts.get(v) ?? 0) + 1));
+    return [...counts.entries()].filter(([, n]) => n > 1).map(([v]) => v);
+  };
+
+  seen(listings.map((l) => l.mlsNum)).forEach((mls) => {
+    const dupes = listings.filter((l) => l.mlsNum === mls);
+    problems.push(
+      `Duplicate MLS# ${mls} on listing ids [${dupes.map((d) => d.id).join(", ")}] ` +
+        `with prices [${dupes.map((d) => d.price).join(", ")}]. Update the existing record instead of adding a new one.`,
+    );
+  });
+
+  seen(listings.map((l) => l.id)).forEach((id) => {
+    problems.push(`Duplicate listing id ${id}. Each listing needs a unique id.`);
+  });
+
+  listings.forEach((l) => {
+    if (!l.mlsNum?.trim()) problems.push(`Listing id ${l.id} is missing an MLS number.`);
+    if (!l.city?.trim()) problems.push(`Listing id ${l.id} is missing a city.`);
+    // Sale prices must be plain currency. Listings carrying a priceLabel are
+    // lease or other non-sale opportunities (e.g. "$7,500/mo"), so they only
+    // need to start with a currency amount.
+    const pricePattern = l.priceLabel ? /^\$[\d,]+/ : /^\$[\d,]+$/;
+    if (!pricePattern.test(l.price)) {
+      problems.push(`Listing id ${l.id} has a malformed price: "${l.price}". Expected e.g. "$1,449,000".`);
+    }
+  });
+
+  return problems;
+}
+
+const afhListingProblems = validateAFHListings(afhListings);
+
+if (afhListingProblems.length > 0) {
+  const message = `afhListings.ts data problems:\n  - ${afhListingProblems.join("\n  - ")}`;
+  // import.meta.env only exists under Vite. Access it defensively so that scripts,
+  // tests, or any non-Vite consumer importing this file don't crash on the guard.
+  const isDev = (import.meta as ImportMeta & { env?: { DEV?: boolean } }).env?.DEV === true;
+  if (isDev) {
+    throw new Error(message);
+  }
+  console.error(message);
+}
