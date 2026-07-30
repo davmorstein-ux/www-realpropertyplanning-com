@@ -233,6 +233,7 @@ const AFHForSaleLakewood = lazy(() => import("./pages/AFHForSaleLakewood"));
 const AFHForSaleBonneyLake = lazy(() => import("./pages/AFHForSaleBonneyLake"));
 const AFHForSaleMukilteo = lazy(() => import("./pages/AFHForSaleMukilteo"));
 const AFHSellingBusinessAtRetirement = lazy(() => import("./pages/AFHSellingBusinessAtRetirement"));
+const KirklandNE140thStreet = lazy(() => import("./pages/afh-club/homes/KirklandNE140thStreet"));
 const LongTermCareOptions = lazy(() => import("./pages/LongTermCareOptions"));
 const HomepageNew = lazy(() => import("./pages/HomepageNew"));
 const LTCNursingHomes = lazy(() => import("./pages/long-term-care/NursingHomes"));
@@ -784,6 +785,7 @@ const App = () => (
           <Route path="/afh-club/resources" element={<AFHResources />} />
           <Route path="/afh-club/ownership-structure" element={<AFHOwnershipStructure />} />
           <Route path="/afh-club/listings" element={<AFHListings />} />
+          <Route path="/afh-club/homes/kirkland-ne-140th-street" element={<KirklandNE140thStreet />} />
           <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />
           <Route path="/afh-club/real-estate-broker" element={<AFHRealEstateBroker />} />
           <Route path="/afh-marketplace" element={<Navigate to="/afh-club/listings" replace />} />
