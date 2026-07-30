@@ -38,24 +38,28 @@ const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; va
    overflowed and was clipped off the right edge of the screen. Below 720px
    the card now stacks, with the photo going full width. */
 const AFH_CARD_STYLES = `
-  .afh-card {
-    display: flex;
-    flex-direction: row;
+  .afh-listing-row.afh-listing-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    overflow: visible !important;
   }
-  .afh-card__photo {
-    width: 220px;
-    min-width: 220px;
-    flex-shrink: 0;
+  .afh-listing-photo.afh-listing-photo {
+    width: 220px !important;
+    min-width: 220px !important;
+    flex-shrink: 0 !important;
+    height: 165px !important;
+    align-self: flex-start !important;
   }
   @media (max-width: 720px) {
-    .afh-card {
-      flex-direction: column;
+    .afh-listing-row.afh-listing-row {
+      flex-direction: column !important;
     }
-    .afh-card__photo {
-      width: 100%;
-      min-width: 0;
-      height: 200px;
-      align-self: stretch;
+    .afh-listing-photo.afh-listing-photo {
+      width: 100% !important;
+      min-width: 0 !important;
+      height: 200px !important;
+      align-self: stretch !important;
     }
   }
 `;
@@ -74,10 +78,8 @@ const PhotoPanel = ({
   city: string;
 }) => (
   <div
-    className="afh-card__photo"
+    className="afh-listing-photo"
     style={{
-      height: "165px",
-      alignSelf: "flex-start",
       position: "relative",
       overflow: "hidden",
       backgroundColor: "#e4ecec",
@@ -181,7 +183,7 @@ const PhotoPanel = ({
 
 export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing; index: number; total: number }) => (
   <div
-    className="afh-card"
+    className="afh-listing-row"
     style={{
       backgroundColor: WHITE,
       borderRadius: "10px",
