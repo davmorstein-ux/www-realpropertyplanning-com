@@ -233,6 +233,7 @@ const AFHForSaleLakewood = lazy(() => import("./pages/AFHForSaleLakewood"));
 const AFHForSaleBonneyLake = lazy(() => import("./pages/AFHForSaleBonneyLake"));
 const AFHForSaleMukilteo = lazy(() => import("./pages/AFHForSaleMukilteo"));
 const AFHSellingBusinessAtRetirement = lazy(() => import("./pages/AFHSellingBusinessAtRetirement"));
+const KirklandNE140thStreet = lazy(() => import("./pages/afh-club/homes/KirklandNE140thStreet"));
 const LongTermCareOptions = lazy(() => import("./pages/LongTermCareOptions"));
 const HomepageNew = lazy(() => import("./pages/HomepageNew"));
 const LTCNursingHomes = lazy(() => import("./pages/long-term-care/NursingHomes"));
