@@ -6,21 +6,22 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
+import { getCountySummary } from "@/data/afh/directory";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 
 const COUNTY_ORDER = [
-  { slug: "king-county",      path: "/king-county",      name: "King County" },
+  { slug: "king-county", path: "/king-county", name: "King County" },
   { slug: "snohomish-county", path: "/snohomish-county", name: "Snohomish County" },
-  { slug: "pierce-county",    path: "/pierce-county",    name: "Pierce County" },
-  { slug: "kitsap-county",    path: "/kitsap-county",    name: "Kitsap County" },
-  { slug: "skagit-county",    path: "/skagit-county",    name: "Skagit County" },
-  { slug: "whatcom-county",   path: "/whatcom-county",   name: "Whatcom County" },
-  { slug: "thurston-county",  path: "/thurston-county",  name: "Thurston County" },
-  { slug: "clark-county",     path: "/clark-county",     name: "Clark County" },
-  { slug: "spokane-county",   path: "/spokane-county",   name: "Spokane County" },
-  { slug: "benton-county",    path: "/benton-county",    name: "Benton County" },
+  { slug: "pierce-county", path: "/pierce-county", name: "Pierce County" },
+  { slug: "kitsap-county", path: "/kitsap-county", name: "Kitsap County" },
+  { slug: "skagit-county", path: "/skagit-county", name: "Skagit County" },
+  { slug: "whatcom-county", path: "/whatcom-county", name: "Whatcom County" },
+  { slug: "thurston-county", path: "/thurston-county", name: "Thurston County" },
+  { slug: "clark-county", path: "/clark-county", name: "Clark County" },
+  { slug: "spokane-county", path: "/spokane-county", name: "Spokane County" },
+  { slug: "benton-county", path: "/benton-county", name: "Benton County" },
 ];
 
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
@@ -57,26 +58,26 @@ type CountyVideo = {
 const SITE_URL = "https://realpropertyplanning.com";
 
 const COUNTY_WEBSITES: Record<string, string> = {
-  "benton-county":    "https://www.co.benton.wa.us",
-  "clark-county":     "https://www.clark.wa.gov",
-  "king-county":      "https://kingcounty.gov",
-  "kitsap-county":    "https://www.kitsapgov.com",
-  "pierce-county":    "https://www.piercecountywa.gov",
-  "skagit-county":    "https://www.skagitcounty.net",
+  "benton-county": "https://www.co.benton.wa.us",
+  "clark-county": "https://www.clark.wa.gov",
+  "king-county": "https://kingcounty.gov",
+  "kitsap-county": "https://www.kitsapgov.com",
+  "pierce-county": "https://www.piercecountywa.gov",
+  "skagit-county": "https://www.skagitcounty.net",
   "snohomish-county": "https://snohomishcountywa.gov",
-  "spokane-county":   "https://www.spokanecounty.org",
-  "thurston-county":  "https://www.thurstoncountywa.gov",
-  "whatcom-county":   "https://www.whatcomcounty.us",
-  "cowlitz-county":      "https://www.co.cowlitz.wa.us",
+  "spokane-county": "https://www.spokanecounty.org",
+  "thurston-county": "https://www.thurstoncountywa.gov",
+  "whatcom-county": "https://www.whatcomcounty.us",
+  "cowlitz-county": "https://www.co.cowlitz.wa.us",
   "grays-harbor-county": "https://www.graysharborcounty.net",
-  "island-county":       "https://www.islandcountywa.gov",
-  "jefferson-county":    "https://www.jeffersoncountywa.gov",
-  "lewis-county":        "https://www.lewiscountywa.gov",
-  "mason-county":        "https://www.masoncountywa.gov",
-  "pacific-county":      "https://www.pacificcounty.org",
-  "san-juan-county":     "https://www.sanjuanco.com",
-  "skamania-county":     "https://www.skamaniacounty.org",
-  "wahkiakum-county":    "https://www.wahkiakumcounty.org",
+  "island-county": "https://www.islandcountywa.gov",
+  "jefferson-county": "https://www.jeffersoncountywa.gov",
+  "lewis-county": "https://www.lewiscountywa.gov",
+  "mason-county": "https://www.masoncountywa.gov",
+  "pacific-county": "https://www.pacificcounty.org",
+  "san-juan-county": "https://www.sanjuanco.com",
+  "skamania-county": "https://www.skamaniacounty.org",
+  "wahkiakum-county": "https://www.wahkiakumcounty.org",
 };
 
 const COUNTY_VIDEOS: Record<string, CountyVideo> = {
@@ -135,16 +136,16 @@ const COUNTY_LOGOS: Record<string, string> = {
   "spokane-county": spokaneLogo,
   "thurston-county": thurstonLogo,
   "whatcom-county": whatcomLogo,
-  "cowlitz-county":     cowlitzLogo,
+  "cowlitz-county": cowlitzLogo,
   "grays-harbor-county": graysHarborLogo,
-  "island-county":      islandLogo,
-  "jefferson-county":   jeffersonLogo,
-  "lewis-county":       lewisLogo,
-  "mason-county":       masonLogo,
-  "pacific-county":     pacificLogo,
-  "san-juan-county":    sanJuanLogo,
-  "skamania-county":    skamaniаLogo,
-  "wahkiakum-county":   wahkiakumLogo,
+  "island-county": islandLogo,
+  "jefferson-county": jeffersonLogo,
+  "lewis-county": lewisLogo,
+  "mason-county": masonLogo,
+  "pacific-county": pacificLogo,
+  "san-juan-county": sanJuanLogo,
+  "skamania-county": skamaniаLogo,
+  "wahkiakum-county": wahkiakumLogo,
 };
 
 /** Neighboring-county relationships for inter-county SEO link equity */
@@ -181,15 +182,9 @@ const NEIGHBORING_COUNTIES: Record<string, { slug: string; name: string }[]> = {
     { slug: "pierce-county", name: "Pierce County" },
     { slug: "kitsap-county", name: "Kitsap County" },
   ],
-  "clark-county": [
-    { slug: "thurston-county", name: "Thurston County" },
-  ],
-  "spokane-county": [
-    { slug: "benton-county", name: "Benton County" },
-  ],
-  "benton-county": [
-    { slug: "spokane-county", name: "Spokane County" },
-  ],
+  "clark-county": [{ slug: "thurston-county", name: "Thurston County" }],
+  "spokane-county": [{ slug: "benton-county", name: "Benton County" }],
+  "benton-county": [{ slug: "spokane-county", name: "Spokane County" }],
   "cowlitz-county": [
     { slug: "clark-county", name: "Clark County" },
     { slug: "wahkiakum-county", name: "Wahkiakum County" },
@@ -270,11 +265,24 @@ interface CountyPageProps {
 }
 
 const CountyPageTemplate = ({
-  countyName, countyPath, countySlug, cities,
-  localInsight, countySpecificFaqs,
-  aeoQuestion, aeoAnswer, aeoSupportBullets, aeoSupportFaqs,
-  heroH1, heroSubheading, seoTitle, seoDescription,
-  localExpertiseHeading, localExpertiseBody, communitiesIntro, closingCtaBody,
+  countyName,
+  countyPath,
+  countySlug,
+  cities,
+  localInsight,
+  countySpecificFaqs,
+  aeoQuestion,
+  aeoAnswer,
+  aeoSupportBullets,
+  aeoSupportFaqs,
+  heroH1,
+  heroSubheading,
+  seoTitle,
+  seoDescription,
+  localExpertiseHeading,
+  localExpertiseBody,
+  communitiesIntro,
+  closingCtaBody,
   belowHeroHeading,
 }: CountyPageProps) => {
   const countyData = counties.find((c) => c.slug === countySlug);
@@ -300,6 +308,11 @@ const CountyPageTemplate = ({
 
   const faqs = countySpecificFaqs || defaultCountyFaqs;
 
+  // Renders only for counties we hold DSHS adult family home data for. Others
+  // get nothing rather than an empty section, and light up automatically when
+  // their county data is added.
+  const afh = getCountySummary(countyName);
+
   const video = COUNTY_VIDEOS[countySlug];
   const videoSchema = video
     ? {
@@ -316,12 +329,9 @@ const CountyPageTemplate = ({
   const navigate = useNavigate();
   const touchStartX = useRef<number | null>(null);
   const currentIndex = COUNTY_ORDER.findIndex((c) => c.slug === countySlug);
-  const prevCounty = currentIndex >= 0
-    ? COUNTY_ORDER[(currentIndex - 1 + COUNTY_ORDER.length) % COUNTY_ORDER.length]
-    : null;
-  const nextCounty = currentIndex >= 0
-    ? COUNTY_ORDER[(currentIndex + 1) % COUNTY_ORDER.length]
-    : null;
+  const prevCounty =
+    currentIndex >= 0 ? COUNTY_ORDER[(currentIndex - 1 + COUNTY_ORDER.length) % COUNTY_ORDER.length] : null;
+  const nextCounty = currentIndex >= 0 ? COUNTY_ORDER[(currentIndex + 1) % COUNTY_ORDER.length] : null;
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (window.innerWidth >= 768) return;
@@ -338,311 +348,431 @@ const CountyPageTemplate = ({
   };
 
   return (
-    <div
-      className="min-h-screen bg-background"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
+    <div className="min-h-screen bg-background" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
       <SEOHead
         title={seoTitle || `Probate Real Estate & Inherited Property Sales in ${countyName} | Real Property Planning`}
-        description={seoDescription || `Probate real estate and inherited property sales guidance for executors, attorneys, and families in ${countyName}, Washington State.`}
+        description={
+          seoDescription ||
+          `Probate real estate and inherited property sales guidance for executors, attorneys, and families in ${countyName}, Washington State.`
+        }
         schemaJson={videoSchema}
       />
-      <BreadcrumbSchema items={[
-        { name: "Counties", url: "/counties" },
-        { name: countyName, url: countyPath },
-      ]} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Counties", url: "/counties" },
+          { name: countyName, url: countyPath },
+        ]}
+      />
       <Header />
       <main id="main-content">
-
-      {/* Hero — concise */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14 [&:has(>_.county-hero-video)]:pb-0">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex justify-center mb-4 md:mb-5">
-              {COUNTY_LOGOS[countySlug] ? (
-                COUNTY_WEBSITES[countySlug] ? (
-                  <a
-                    href={COUNTY_WEBSITES[countySlug]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit the official ${countyName}, Washington website`}
-                    className="flex items-center justify-center rounded-full bg-[#F7F5F0] w-[120px] h-[120px] md:w-[180px] md:h-[180px] p-4 transition-transform duration-200 hover:scale-105"
-                    style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
-                  >
-                    <img
-                      src={COUNTY_LOGOS[countySlug]}
-                      alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
-                      className="w-full h-full object-contain"
-                      loading="eager" sizes="100vw" decoding="async"/>
-                  </a>
+        {/* Hero — concise */}
+        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14 [&:has(>_.county-hero-video)]:pb-0">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <div className="flex justify-center mb-4 md:mb-5">
+                {COUNTY_LOGOS[countySlug] ? (
+                  COUNTY_WEBSITES[countySlug] ? (
+                    <a
+                      href={COUNTY_WEBSITES[countySlug]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit the official ${countyName}, Washington website`}
+                      className="flex items-center justify-center rounded-full bg-[#F7F5F0] w-[120px] h-[120px] md:w-[180px] md:h-[180px] p-4 transition-transform duration-200 hover:scale-105"
+                      style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
+                    >
+                      <img
+                        src={COUNTY_LOGOS[countySlug]}
+                        alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
+                        className="w-full h-full object-contain"
+                        loading="eager"
+                        sizes="100vw"
+                        decoding="async"
+                      />
+                    </a>
+                  ) : (
+                    <div
+                      className="flex items-center justify-center rounded-full bg-[#F7F5F0] w-[120px] h-[120px] md:w-[180px] md:h-[180px] p-4"
+                      style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
+                    >
+                      <img
+                        src={COUNTY_LOGOS[countySlug]}
+                        alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
+                        className="w-full h-full object-contain"
+                        loading="eager"
+                        sizes="100vw"
+                        decoding="async"
+                      />
+                    </div>
+                  )
                 ) : (
-                  <div
-                    className="flex items-center justify-center rounded-full bg-[#F7F5F0] w-[120px] h-[120px] md:w-[180px] md:h-[180px] p-4"
-                    style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
-                  >
-                    <img
-                      src={COUNTY_LOGOS[countySlug]}
-                      alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
-                      className="w-full h-full object-contain"
-                      loading="eager" sizes="100vw" decoding="async"/>
-                  </div>
-                )
-              ) : (
-                <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
+                  <img
+                    src={heroIcon}
+                    alt=""
+                    aria-hidden="true"
+                    className="block w-full max-w-[15rem] h-auto object-contain"
+                    loading="lazy"
+                    sizes="100vw"
+                    decoding="async"
+                    width={512}
+                    height={512}
+                  />
+                )}
+              </div>
+              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">{countyName}</p>
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold leading-tight mb-4">
+                {heroH1 || `Estate & Inherited Property Sales in ${countyName}`}
+              </h1>
+              {heroSubheading && (
+                <p className="text-xl text-primary-foreground/85 leading-relaxed font-serif italic">{heroSubheading}</p>
               )}
             </div>
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-              {countyName}
-            </p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold leading-tight mb-4">
-              {heroH1 || `Estate & Inherited Property Sales in ${countyName}`}
-            </h1>
-            {heroSubheading && (
-              <p className="text-xl text-primary-foreground/85 leading-relaxed font-serif italic">
-                {heroSubheading}
-              </p>
-            )}
           </div>
-        </div>
 
-        {COUNTY_VIDEOS[countySlug] && (
-          <div className="county-hero-video w-full mt-8">
-            <div className="relative w-full overflow-hidden" style={{ aspectRatio: "1920 / 244" }}>
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                poster={COUNTY_VIDEOS[countySlug].poster}
-                aria-label={`Aerial video showcasing ${countyName}, Washington`}
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{
-                  willChange: "transform",
-                  transform: "translateZ(0)",
-                  backfaceVisibility: "hidden",
-                  WebkitBackfaceVisibility: "hidden",
-                }}
-              >
-                {COUNTY_VIDEOS[countySlug].webm && (
-                  <source src={COUNTY_VIDEOS[countySlug].webm} type="video/webm" />
-                )}
-                {COUNTY_VIDEOS[countySlug].mp4 && (
-                  <source src={COUNTY_VIDEOS[countySlug].mp4} type="video/mp4" />
-                )}
-              </video>
+          {COUNTY_VIDEOS[countySlug] && (
+            <div className="county-hero-video w-full mt-8">
+              <div className="relative w-full overflow-hidden" style={{ aspectRatio: "1920 / 244" }}>
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  poster={COUNTY_VIDEOS[countySlug].poster}
+                  aria-label={`Aerial video showcasing ${countyName}, Washington`}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  style={{
+                    willChange: "transform",
+                    transform: "translateZ(0)",
+                    backfaceVisibility: "hidden",
+                    WebkitBackfaceVisibility: "hidden",
+                  }}
+                >
+                  {COUNTY_VIDEOS[countySlug].webm && <source src={COUNTY_VIDEOS[countySlug].webm} type="video/webm" />}
+                  {COUNTY_VIDEOS[countySlug].mp4 && <source src={COUNTY_VIDEOS[countySlug].mp4} type="video/mp4" />}
+                </video>
+              </div>
             </div>
-          </div>
-        )}
-      </section>
-
-      {localInsight && (
-        <section className="py-14 lg:py-18 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
-                {belowHeroHeading || `Serving Every Corner of ${countyName}`}
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                {localInsight}
-              </p>
-            </div>
-          </div>
+          )}
         </section>
-      )}
 
-      <DirectAnswerBlock
-        question={aeoQuestion || `How do probate and estate property sales work in ${countyName}?`}
-        answer={aeoAnswer || `Real Property Planning provides experienced guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}. Each property is carefully evaluated, and defensible pricing is provided based on licensed broker and certified appraiser expertise.`}
-        supportBullets={aeoSupportBullets}
-        supportFaqs={aeoSupportFaqs}
-        supportSteps={!aeoSupportBullets && !aeoSupportFaqs ? [
-          { label: "Evaluate", desc: "On-site property review and pricing analysis" },
-          { label: "Prepare", desc: "Cleanout, repairs, and vendor coordination" },
-          { label: "Sell", desc: "Marketing, negotiation, and closing" },
-        ] : undefined}
-      />
-
-      {/* What we handle locally — narrative, not a duplicated services grid */}
-      <section className="py-14 lg:py-18 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl text-foreground font-semibold mb-4">
-              How a {countyName} Estate Sale Actually Runs
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              In {countyName}, most calls start one of three ways: a personal representative who has just received Letters and needs to know what to do with the house first, an attorney whose client is stuck on the property piece of the file, or an out-of-state heir who has not been inside the home in years. The first conversation is short and concrete — what the property is, who has authority, and what's already been touched.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              From there, the work usually includes a date-of-death walk-through with{" "}
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">appraisal-grade pricing analysis</Link>, securing the home and coordinating cleanout, a written prep plan that matches what {countyName} buyers actually expect on this kind of property, and a clean handoff into listing,{" "}
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">offer review</Link>, and closing. If you're earlier than that — still figuring out what you've inherited — start with the{" "}
-              <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold underline underline-offset-4">inherited house guide</Link>.
-            </p>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              {services.slice(0, 6).map((service) => (
-                <Link key={service.slug} to={`/services/${service.slug}`} className="text-accent hover:text-gold underline underline-offset-4">
-                  {service.shortName}
-                </Link>
-              ))}
+        {localInsight && (
+          <section className="py-14 lg:py-18 bg-background">
+            <div className="container px-6 lg:px-8">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
+                  {belowHeroHeading || `Serving Every Corner of ${countyName}`}
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed">{localInsight}</p>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        )}
 
-      {/* Local Expertise — optional */}
-      {localExpertiseHeading && localExpertiseBody && (
-        <section className="py-14 lg:py-18 bg-cream">
+        <DirectAnswerBlock
+          question={aeoQuestion || `How do probate and estate property sales work in ${countyName}?`}
+          answer={
+            aeoAnswer ||
+            `Real Property Planning provides experienced guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}. Each property is carefully evaluated, and defensible pricing is provided based on licensed broker and certified appraiser expertise.`
+          }
+          supportBullets={aeoSupportBullets}
+          supportFaqs={aeoSupportFaqs}
+          supportSteps={
+            !aeoSupportBullets && !aeoSupportFaqs
+              ? [
+                  { label: "Evaluate", desc: "On-site property review and pricing analysis" },
+                  { label: "Prepare", desc: "Cleanout, repairs, and vendor coordination" },
+                  { label: "Sell", desc: "Marketing, negotiation, and closing" },
+                ]
+              : undefined
+          }
+        />
+
+        {/* What we handle locally — narrative, not a duplicated services grid */}
+        <section className="py-14 lg:py-18 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
-                {localExpertiseHeading}
+              <h2 className="font-serif text-2xl text-foreground font-semibold mb-4">
+                How a {countyName} Estate Sale Actually Runs
               </h2>
-              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
-                {localExpertiseBody.map((p, i) => (
-                  <p key={i}>{p}</p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                In {countyName}, most calls start one of three ways: a personal representative who has just received
+                Letters and needs to know what to do with the house first, an attorney whose client is stuck on the
+                property piece of the file, or an out-of-state heir who has not been inside the home in years. The first
+                conversation is short and concrete — what the property is, who has authority, and what's already been
+                touched.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+                From there, the work usually includes a date-of-death walk-through with{" "}
+                <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">
+                  appraisal-grade pricing analysis
+                </Link>
+                , securing the home and coordinating cleanout, a written prep plan that matches what {countyName} buyers
+                actually expect on this kind of property, and a clean handoff into listing,{" "}
+                <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">
+                  offer review
+                </Link>
+                , and closing. If you're earlier than that — still figuring out what you've inherited — start with the{" "}
+                <Link
+                  to="/guides/inherited-house-washington"
+                  className="text-accent hover:text-gold underline underline-offset-4"
+                >
+                  inherited house guide
+                </Link>
+                .
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                {services.slice(0, 6).map((service) => (
+                  <Link
+                    key={service.slug}
+                    to={`/services/${service.slug}`}
+                    className="text-accent hover:text-gold underline underline-offset-4"
+                  >
+                    {service.shortName}
+                  </Link>
                 ))}
               </div>
             </div>
           </div>
         </section>
-      )}
 
-      {/* Communities Served */}
-      <section className="py-14 lg:py-18 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
-              Communities in {countyName}
-            </h2>
-            {communitiesIntro && (
-              <p className="text-muted-foreground text-lg leading-relaxed mb-5">{communitiesIntro}</p>
-            )}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2.5">
-              {cities.map((cityName) => {
-                const cityData = countyData?.cities.find((c) => c.name === cityName);
-                if (cityData) {
+        {/* Local Expertise — optional */}
+        {localExpertiseHeading && localExpertiseBody && (
+          <section className="py-14 lg:py-18 bg-cream">
+            <div className="container px-6 lg:px-8">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">{localExpertiseHeading}</h2>
+                <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
+                  {localExpertiseBody.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Communities Served */}
+        {afh && (
+          <section className="py-14 lg:py-18 bg-cream">
+            <div className="container px-6 lg:px-8">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
+                  Adult Family Homes in {countyName}
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                  {countyName} has{" "}
+                  <strong className="text-foreground">
+                    {afh.facilityCount.toLocaleString()} licensed adult family homes
+                  </strong>{" "}
+                  across {afh.cityCount} cities, with {afh.totalBeds.toLocaleString()} licensed beds. For families
+                  weighing care options for a parent, these are often the least visible part of the senior housing
+                  market — six residents in an ordinary house, licensed and inspected by DSHS, and rarely listed
+                  anywhere families can compare them.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+                  We publish the full DSHS licensing record for every one of them: capacity, specialty designations,
+                  Medicaid status, and inspection history.
+                </p>
+                <p className="text-lg">
+                  <Link
+                    to="/afh-club/homes"
+                    className="text-accent underline underline-offset-4 hover:text-gold transition-colors font-semibold"
+                  >
+                    Browse licensed adult family homes in {countyName} by city →
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section className="py-14 lg:py-18 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">Communities in {countyName}</h2>
+              {communitiesIntro && (
+                <p className="text-muted-foreground text-lg leading-relaxed mb-5">{communitiesIntro}</p>
+              )}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2.5">
+                {cities.map((cityName) => {
+                  const cityData = countyData?.cities.find((c) => c.name === cityName);
+                  if (cityData) {
+                    return (
+                      <Link
+                        key={cityName}
+                        to={`/cities/${cityData.slug}`}
+                        className="flex items-center gap-2 hover:text-gold transition-colors"
+                      >
+                        <img
+                          src={mappin3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-4 h-4 object-contain shrink-0"
+                          loading="lazy"
+                          sizes="100vw"
+                          decoding="async"
+                          width={1024}
+                          height={1024}
+                        />
+                        <span className="text-foreground hover:text-gold transition-colors text-sm">{cityName}</span>
+                      </Link>
+                    );
+                  }
                   return (
-                    <Link key={cityName} to={`/cities/${cityData.slug}`} className="flex items-center gap-2 hover:text-gold transition-colors">
-                      <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1024} />
-                      <span className="text-foreground hover:text-gold transition-colors text-sm">{cityName}</span>
-                    </Link>
+                    <div key={cityName} className="flex items-center gap-2">
+                      <img
+                        src={mappin3d}
+                        alt=""
+                        aria-hidden="true"
+                        className="w-4 h-4 object-contain shrink-0"
+                        loading="lazy"
+                        sizes="100vw"
+                        decoding="async"
+                        width={1024}
+                        height={1024}
+                      />
+                      <span className="text-muted-foreground text-sm">{cityName}</span>
+                    </div>
                   );
-                }
-                return (
-                  <div key={cityName} className="flex items-center gap-2">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1024} />
-                    <span className="text-muted-foreground text-sm">{cityName}</span>
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ — short */}
+        <PageFAQ faqs={faqs} heading={`${countyName} FAQ`} />
+
+        {/* CTA */}
+        <section className="py-16 lg:py-20 bg-primary">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="font-serif text-3xl text-primary-foreground font-semibold mb-4">
+                Ready to Talk About a {countyName} Property?
+              </h2>
+              {closingCtaBody ? (
+                closingCtaBody.map((p, i) => (
+                  <p key={i} className="text-primary-foreground/70 text-lg mb-4 leading-relaxed">
+                    {p}
+                  </p>
+                ))
+              ) : (
+                <p className="text-primary-foreground/70 text-lg mb-6">
+                  The professionals in this network can walk you through your situation and help you see what makes
+                  sense.
+                </p>
+              )}
+              <Link to="/contact">
+                <Button variant="gold" size="lg">
+                  Start a Conversation
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Links */}
+        <section className="py-10 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto space-y-4">
+              {countyData && countyData.cities.length > 0 && (
+                <div>
+                  <p className="text-sm font-semibold text-muted-foreground mb-2">{countyName} Cities</p>
+                  <div className="flex flex-wrap gap-2">
+                    {countyData.cities.map((c, i) => (
+                      <span key={c.slug}>
+                        {i > 0 && <span className="text-muted-foreground/40 mr-2">·</span>}
+                        <Link
+                          to={`/cities/${c.slug}`}
+                          className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
+                        >
+                          {c.name}
+                        </Link>
+                      </span>
+                    ))}
                   </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ — short */}
-      <PageFAQ faqs={faqs} heading={`${countyName} FAQ`} />
-
-      {/* CTA */}
-      <section className="py-16 lg:py-20 bg-primary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl text-primary-foreground font-semibold mb-4">
-              Ready to Talk About a {countyName} Property?
-            </h2>
-            {closingCtaBody ? (
-              closingCtaBody.map((p, i) => (
-                <p key={i} className="text-primary-foreground/70 text-lg mb-4 leading-relaxed">{p}</p>
-              ))
-            ) : (
-              <p className="text-primary-foreground/70 text-lg mb-6">
-                The professionals in this network can walk you through your situation and help you see what makes sense.
-              </p>
-            )}
-            <Link to="/contact">
-              <Button variant="gold" size="lg">Start a Conversation</Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Links */}
-      <section className="py-10 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto space-y-4">
-            {countyData && countyData.cities.length > 0 && (
-              <div>
-                <p className="text-sm font-semibold text-muted-foreground mb-2">{countyName} Cities</p>
-                <div className="flex flex-wrap gap-2">
-                  {countyData.cities.map((c, i) => (
-                    <span key={c.slug}>
-                      {i > 0 && <span className="text-muted-foreground/40 mr-2">·</span>}
-                      <Link to={`/cities/${c.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{c.name}</Link>
-                    </span>
-                  ))}
                 </div>
-              </div>
-            )}
-            <div>
-              <p className="text-sm font-semibold text-muted-foreground mb-2">Guides</p>
-              <div className="flex flex-wrap gap-2">
-                <Link to="/guides/how-probate-real-estate-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How Probate Works</Link>
-                <span className="text-muted-foreground/40">·</span>
-                <Link to="/guides/what-executors-should-do" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">First Steps for Executors</Link>
-                <span className="text-muted-foreground/40">·</span>
-                <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Inherited House Guide</Link>
-              </div>
-            </div>
-            {NEIGHBORING_COUNTIES[countySlug] && NEIGHBORING_COUNTIES[countySlug].length > 0 && (
+              )}
               <div>
-                <p className="text-sm font-semibold text-muted-foreground mb-2">Neighboring Counties</p>
+                <p className="text-sm font-semibold text-muted-foreground mb-2">Guides</p>
                 <div className="flex flex-wrap gap-2">
-                  {NEIGHBORING_COUNTIES[countySlug].map((c, i) => (
-                    <span key={c.slug}>
-                      {i > 0 && <span className="text-muted-foreground/40 mr-2">·</span>}
-                      <Link to={`/${c.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{c.name}</Link>
-                    </span>
-                  ))}
+                  <Link
+                    to="/guides/how-probate-real-estate-works"
+                    className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
+                  >
+                    How Probate Works
+                  </Link>
                   <span className="text-muted-foreground/40">·</span>
-                  <Link to="/counties" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">All Washington counties</Link>
+                  <Link
+                    to="/guides/what-executors-should-do"
+                    className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
+                  >
+                    First Steps for Executors
+                  </Link>
+                  <span className="text-muted-foreground/40">·</span>
+                  <Link
+                    to="/guides/inherited-house-washington"
+                    className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
+                  >
+                    Inherited House Guide
+                  </Link>
                 </div>
               </div>
-            )}
+              {NEIGHBORING_COUNTIES[countySlug] && NEIGHBORING_COUNTIES[countySlug].length > 0 && (
+                <div>
+                  <p className="text-sm font-semibold text-muted-foreground mb-2">Neighboring Counties</p>
+                  <div className="flex flex-wrap gap-2">
+                    {NEIGHBORING_COUNTIES[countySlug].map((c, i) => (
+                      <span key={c.slug}>
+                        {i > 0 && <span className="text-muted-foreground/40 mr-2">·</span>}
+                        <Link
+                          to={`/${c.slug}`}
+                          className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
+                        >
+                          {c.name}
+                        </Link>
+                      </span>
+                    ))}
+                    <span className="text-muted-foreground/40">·</span>
+                    <Link
+                      to="/counties"
+                      className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
+                    >
+                      All Washington counties
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {prevCounty && nextCounty && (
-        <nav
-          aria-label="County navigation"
-          className="md:hidden border-t border-border bg-background px-6 py-5"
-        >
-          <p className="text-xs text-muted-foreground/80 text-center mb-3 italic">
-            Swipe left or right to explore nearby counties
-          </p>
-          <div className="flex items-center justify-between gap-4">
-            <Link
-              to={prevCounty.path}
-              className="flex items-center gap-1 text-accent hover:text-gold transition-colors text-sm font-medium"
-            >
-              <span aria-hidden="true">←</span>
-              <span>{prevCounty.name}</span>
-            </Link>
-            <Link
-              to={nextCounty.path}
-              className="flex items-center gap-1 text-accent hover:text-gold transition-colors text-sm font-medium"
-            >
-              <span>{nextCounty.name}</span>
-              <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </nav>
-      )}
+        {prevCounty && nextCounty && (
+          <nav aria-label="County navigation" className="md:hidden border-t border-border bg-background px-6 py-5">
+            <p className="text-xs text-muted-foreground/80 text-center mb-3 italic">
+              Swipe left or right to explore nearby counties
+            </p>
+            <div className="flex items-center justify-between gap-4">
+              <Link
+                to={prevCounty.path}
+                className="flex items-center gap-1 text-accent hover:text-gold transition-colors text-sm font-medium"
+              >
+                <span aria-hidden="true">←</span>
+                <span>{prevCounty.name}</span>
+              </Link>
+              <Link
+                to={nextCounty.path}
+                className="flex items-center gap-1 text-accent hover:text-gold transition-colors text-sm font-medium"
+              >
+                <span>{nextCounty.name}</span>
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </nav>
+        )}
 
-      <RelatedServices currentPath={countyPath} />
-      <DisclaimerSection />
+        <RelatedServices currentPath={countyPath} />
+        <DisclaimerSection />
       </main>
       <Footer />
     </div>
