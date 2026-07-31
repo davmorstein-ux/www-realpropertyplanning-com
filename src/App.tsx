@@ -233,7 +233,6 @@ const AFHForSaleLakewood = lazy(() => import("./pages/AFHForSaleLakewood"));
 const AFHForSaleBonneyLake = lazy(() => import("./pages/AFHForSaleBonneyLake"));
 const AFHForSaleMukilteo = lazy(() => import("./pages/AFHForSaleMukilteo"));
 const AFHSellingBusinessAtRetirement = lazy(() => import("./pages/AFHSellingBusinessAtRetirement"));
-const KirklandNE140thStreet = lazy(() => import("./pages/afh-club/homes/KirklandNE140thStreet"));
 const AFHCountyDirectory = lazy(() => import("./pages/afh-club/homes/CountyDirectory"));
 const AFHCityDirectory = lazy(() => import("./pages/afh-club/homes/CityDirectory"));
 const AFHCitySegment = lazy(() => import("./pages/afh-club/homes/CitySegment"));
@@ -264,35 +263,203 @@ const App = () => (
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
-          <Route path="/" element={<LanguageRoute lang="en"><RPPHomeV3 /></LanguageRoute>} />
-          <Route path="/es" element={<LanguageRoute lang="es"><RPPHomeV3 /></LanguageRoute>} />
-          <Route path="/zh-tw" element={<LanguageRoute lang="zh-TW"><RPPHomeV3 /></LanguageRoute>} />
-          <Route path="/zh-cn" element={<LanguageRoute lang="zh-CN"><RPPHomeV3 /></LanguageRoute>} />
-          <Route path="/tl" element={<LanguageRoute lang="tl"><RPPHomeV3 /></LanguageRoute>} />
-          <Route path="/vi" element={<LanguageRoute lang="vi"><RPPHomeV3 /></LanguageRoute>} />
-          <Route path="/ro" element={<LanguageRoute lang="ro"><RPPHomeV3 /></LanguageRoute>} />
-          <Route path="/ti" element={<LanguageRoute lang="ti"><RPPHomeV3 /></LanguageRoute>} />
+          <Route
+            path="/"
+            element={
+              <LanguageRoute lang="en">
+                <RPPHomeV3 />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/es"
+            element={
+              <LanguageRoute lang="es">
+                <RPPHomeV3 />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-tw"
+            element={
+              <LanguageRoute lang="zh-TW">
+                <RPPHomeV3 />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-cn"
+            element={
+              <LanguageRoute lang="zh-CN">
+                <RPPHomeV3 />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/tl"
+            element={
+              <LanguageRoute lang="tl">
+                <RPPHomeV3 />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/vi"
+            element={
+              <LanguageRoute lang="vi">
+                <RPPHomeV3 />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ro"
+            element={
+              <LanguageRoute lang="ro">
+                <RPPHomeV3 />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ti"
+            element={
+              <LanguageRoute lang="ti">
+                <RPPHomeV3 />
+              </LanguageRoute>
+            }
+          />
           <Route path="/home-new" element={<HomepageNew />} />
           <Route path="/hero-test" element={<HeroTest />} />
 
           {/* ─── Core commercial pages ────────────────────────────── */}
-          <Route path="/probate-estate-sales" element={<LanguageRoute lang="en"><ProbateEstateSales /></LanguageRoute>} />
-          <Route path="/es/probate-estate-sales" element={<LanguageRoute lang="es"><ProbateEstateSales /></LanguageRoute>} />
-          <Route path="/zh-tw/probate-estate-sales" element={<LanguageRoute lang="zh-TW"><ProbateEstateSales /></LanguageRoute>} />
-          <Route path="/zh-cn/probate-estate-sales" element={<LanguageRoute lang="zh-CN"><ProbateEstateSales /></LanguageRoute>} />
-          <Route path="/tl/probate-estate-sales" element={<LanguageRoute lang="tl"><ProbateEstateSales /></LanguageRoute>} />
-          <Route path="/vi/probate-estate-sales" element={<LanguageRoute lang="vi"><ProbateEstateSales /></LanguageRoute>} />
-          <Route path="/ro/probate-estate-sales" element={<LanguageRoute lang="ro"><ProbateEstateSales /></LanguageRoute>} />
-          <Route path="/ti/probate-estate-sales" element={<LanguageRoute lang="ti"><ProbateEstateSales /></LanguageRoute>} />
+          <Route
+            path="/probate-estate-sales"
+            element={
+              <LanguageRoute lang="en">
+                <ProbateEstateSales />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/es/probate-estate-sales"
+            element={
+              <LanguageRoute lang="es">
+                <ProbateEstateSales />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-tw/probate-estate-sales"
+            element={
+              <LanguageRoute lang="zh-TW">
+                <ProbateEstateSales />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-cn/probate-estate-sales"
+            element={
+              <LanguageRoute lang="zh-CN">
+                <ProbateEstateSales />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/tl/probate-estate-sales"
+            element={
+              <LanguageRoute lang="tl">
+                <ProbateEstateSales />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/vi/probate-estate-sales"
+            element={
+              <LanguageRoute lang="vi">
+                <ProbateEstateSales />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ro/probate-estate-sales"
+            element={
+              <LanguageRoute lang="ro">
+                <ProbateEstateSales />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ti/probate-estate-sales"
+            element={
+              <LanguageRoute lang="ti">
+                <ProbateEstateSales />
+              </LanguageRoute>
+            }
+          />
           <Route path="/client-stories" element={<ClientStories />} />
-          <Route path="/senior-transitions" element={<LanguageRoute lang="en"><SeniorTransitions /></LanguageRoute>} />
-          <Route path="/es/senior-transitions" element={<LanguageRoute lang="es"><SeniorTransitions /></LanguageRoute>} />
-          <Route path="/zh-tw/senior-transitions" element={<LanguageRoute lang="zh-TW"><SeniorTransitions /></LanguageRoute>} />
-          <Route path="/zh-cn/senior-transitions" element={<LanguageRoute lang="zh-CN"><SeniorTransitions /></LanguageRoute>} />
-          <Route path="/tl/senior-transitions" element={<LanguageRoute lang="tl"><SeniorTransitions /></LanguageRoute>} />
-          <Route path="/vi/senior-transitions" element={<LanguageRoute lang="vi"><SeniorTransitions /></LanguageRoute>} />
-          <Route path="/ro/senior-transitions" element={<LanguageRoute lang="ro"><SeniorTransitions /></LanguageRoute>} />
-          <Route path="/ti/senior-transitions" element={<LanguageRoute lang="ti"><SeniorTransitions /></LanguageRoute>} />
+          <Route
+            path="/senior-transitions"
+            element={
+              <LanguageRoute lang="en">
+                <SeniorTransitions />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/es/senior-transitions"
+            element={
+              <LanguageRoute lang="es">
+                <SeniorTransitions />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-tw/senior-transitions"
+            element={
+              <LanguageRoute lang="zh-TW">
+                <SeniorTransitions />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-cn/senior-transitions"
+            element={
+              <LanguageRoute lang="zh-CN">
+                <SeniorTransitions />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/tl/senior-transitions"
+            element={
+              <LanguageRoute lang="tl">
+                <SeniorTransitions />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/vi/senior-transitions"
+            element={
+              <LanguageRoute lang="vi">
+                <SeniorTransitions />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ro/senior-transitions"
+            element={
+              <LanguageRoute lang="ro">
+                <SeniorTransitions />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ti/senior-transitions"
+            element={
+              <LanguageRoute lang="ti">
+                <SeniorTransitions />
+              </LanguageRoute>
+            }
+          />
           <Route path="/helping-aging-parents" element={<Navigate to="/helping-an-aging-parent" replace />} />
           <Route path="/helping-an-aging-parent" element={<ChoiceFlowPage />} />
           <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />
@@ -346,14 +513,70 @@ const App = () => (
           <Route path="/senior-living-advisors" element={<SeniorLivingAdvisors />} />
           <Route path="/senior-placement" element={<Navigate to="/senior-living-advisors" replace />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
-          <Route path="/cost-of-care-calculator" element={<LanguageRoute lang="en"><CostOfCareCalculator /></LanguageRoute>} />
-          <Route path="/es/cost-of-care-calculator" element={<LanguageRoute lang="es"><CostOfCareCalculator /></LanguageRoute>} />
-          <Route path="/zh-tw/cost-of-care-calculator" element={<LanguageRoute lang="zh-TW"><CostOfCareCalculator /></LanguageRoute>} />
-          <Route path="/zh-cn/cost-of-care-calculator" element={<LanguageRoute lang="zh-CN"><CostOfCareCalculator /></LanguageRoute>} />
-          <Route path="/tl/cost-of-care-calculator" element={<LanguageRoute lang="tl"><CostOfCareCalculator /></LanguageRoute>} />
-          <Route path="/vi/cost-of-care-calculator" element={<LanguageRoute lang="vi"><CostOfCareCalculator /></LanguageRoute>} />
-          <Route path="/ro/cost-of-care-calculator" element={<LanguageRoute lang="ro"><CostOfCareCalculator /></LanguageRoute>} />
-          <Route path="/ti/cost-of-care-calculator" element={<LanguageRoute lang="ti"><CostOfCareCalculator /></LanguageRoute>} />
+          <Route
+            path="/cost-of-care-calculator"
+            element={
+              <LanguageRoute lang="en">
+                <CostOfCareCalculator />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/es/cost-of-care-calculator"
+            element={
+              <LanguageRoute lang="es">
+                <CostOfCareCalculator />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-tw/cost-of-care-calculator"
+            element={
+              <LanguageRoute lang="zh-TW">
+                <CostOfCareCalculator />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-cn/cost-of-care-calculator"
+            element={
+              <LanguageRoute lang="zh-CN">
+                <CostOfCareCalculator />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/tl/cost-of-care-calculator"
+            element={
+              <LanguageRoute lang="tl">
+                <CostOfCareCalculator />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/vi/cost-of-care-calculator"
+            element={
+              <LanguageRoute lang="vi">
+                <CostOfCareCalculator />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ro/cost-of-care-calculator"
+            element={
+              <LanguageRoute lang="ro">
+                <CostOfCareCalculator />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ti/cost-of-care-calculator"
+            element={
+              <LanguageRoute lang="ti">
+                <CostOfCareCalculator />
+              </LanguageRoute>
+            }
+          />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/executors" element={<Executors />} />
@@ -550,14 +773,70 @@ const App = () => (
           {/* Legacy routes → redirect to /about */}
           <Route path="/about-david-stein" element={<Navigate to="/about" replace />} />
           <Route path="/about-platform" element={<Navigate to="/about" replace />} />
-          <Route path="/contact" element={<LanguageRoute lang="en"><Contact /></LanguageRoute>} />
-          <Route path="/es/contact" element={<LanguageRoute lang="es"><Contact /></LanguageRoute>} />
-          <Route path="/zh-tw/contact" element={<LanguageRoute lang="zh-TW"><Contact /></LanguageRoute>} />
-          <Route path="/zh-cn/contact" element={<LanguageRoute lang="zh-CN"><Contact /></LanguageRoute>} />
-          <Route path="/tl/contact" element={<LanguageRoute lang="tl"><Contact /></LanguageRoute>} />
-          <Route path="/vi/contact" element={<LanguageRoute lang="vi"><Contact /></LanguageRoute>} />
-          <Route path="/ro/contact" element={<LanguageRoute lang="ro"><Contact /></LanguageRoute>} />
-          <Route path="/ti/contact" element={<LanguageRoute lang="ti"><Contact /></LanguageRoute>} />
+          <Route
+            path="/contact"
+            element={
+              <LanguageRoute lang="en">
+                <Contact />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/es/contact"
+            element={
+              <LanguageRoute lang="es">
+                <Contact />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-tw/contact"
+            element={
+              <LanguageRoute lang="zh-TW">
+                <Contact />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-cn/contact"
+            element={
+              <LanguageRoute lang="zh-CN">
+                <Contact />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/tl/contact"
+            element={
+              <LanguageRoute lang="tl">
+                <Contact />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/vi/contact"
+            element={
+              <LanguageRoute lang="vi">
+                <Contact />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ro/contact"
+            element={
+              <LanguageRoute lang="ro">
+                <Contact />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ti/contact"
+            element={
+              <LanguageRoute lang="ti">
+                <Contact />
+              </LanguageRoute>
+            }
+          />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />
           <Route path="/testimonials" element={<Testimonials />} />
@@ -762,14 +1041,70 @@ const App = () => (
           <Route path="/financial-planning" element={<Navigate to="/for-financial-planners" replace />} />
           <Route path="/senior-living" element={<Navigate to="/senior-living-and-relocation" replace />} />
           <Route path="/lenders-financing" element={<Navigate to="/lenders-and-financing-specialists" replace />} />
-          <Route path="/afh-club" element={<LanguageRoute lang="en"><AFHClub /></LanguageRoute>} />
-          <Route path="/es/afh-club" element={<LanguageRoute lang="es"><AFHClub /></LanguageRoute>} />
-          <Route path="/zh-tw/afh-club" element={<LanguageRoute lang="zh-TW"><AFHClub /></LanguageRoute>} />
-          <Route path="/zh-cn/afh-club" element={<LanguageRoute lang="zh-CN"><AFHClub /></LanguageRoute>} />
-          <Route path="/tl/afh-club" element={<LanguageRoute lang="tl"><AFHClub /></LanguageRoute>} />
-          <Route path="/vi/afh-club" element={<LanguageRoute lang="vi"><AFHClub /></LanguageRoute>} />
-          <Route path="/ro/afh-club" element={<LanguageRoute lang="ro"><AFHClub /></LanguageRoute>} />
-          <Route path="/ti/afh-club" element={<LanguageRoute lang="ti"><AFHClub /></LanguageRoute>} />
+          <Route
+            path="/afh-club"
+            element={
+              <LanguageRoute lang="en">
+                <AFHClub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/es/afh-club"
+            element={
+              <LanguageRoute lang="es">
+                <AFHClub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-tw/afh-club"
+            element={
+              <LanguageRoute lang="zh-TW">
+                <AFHClub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-cn/afh-club"
+            element={
+              <LanguageRoute lang="zh-CN">
+                <AFHClub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/tl/afh-club"
+            element={
+              <LanguageRoute lang="tl">
+                <AFHClub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/vi/afh-club"
+            element={
+              <LanguageRoute lang="vi">
+                <AFHClub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ro/afh-club"
+            element={
+              <LanguageRoute lang="ro">
+                <AFHClub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ti/afh-club"
+            element={
+              <LanguageRoute lang="ti">
+                <AFHClub />
+              </LanguageRoute>
+            }
+          />
           <Route path="/afh-club/getting-started" element={<AFHGettingStarted />} />
           <Route path="/afh-club/licensing-certification" element={<AFHLicensingCertification />} />
           <Route path="/afh-club/training-education" element={<AFHTrainingEducation />} />
@@ -788,7 +1123,6 @@ const App = () => (
           <Route path="/afh-club/resources" element={<AFHResources />} />
           <Route path="/afh-club/ownership-structure" element={<AFHOwnershipStructure />} />
           <Route path="/afh-club/listings" element={<AFHListings />} />
-          <Route path="/afh-club/homes/kirkland-ne-140th-street" element={<KirklandNE140thStreet />} />
           {/* Adult family home directory. The :segment route resolves to either a
               filter view or a facility page — facility slugs end in the DSHS
               license number, filter slugs never do. */}
@@ -812,10 +1146,7 @@ const App = () => (
           <Route path="/afh-club/for-sale/lakewood-wa" element={<AFHForSaleLakewood />} />
           <Route path="/afh-club/for-sale/bonney-lake-wa" element={<AFHForSaleBonneyLake />} />
           <Route path="/afh-club/for-sale/mukilteo-wa" element={<AFHForSaleMukilteo />} />
-          <Route
-            path="/afh-club/selling-your-business-at-retirement"
-            element={<AFHSellingBusinessAtRetirement />}
-          />
+          <Route path="/afh-club/selling-your-business-at-retirement" element={<AFHSellingBusinessAtRetirement />} />
           <Route path="/long-term-care" element={<LongTermCareOptions />} />
           <Route path="/long-term-care/nursing-homes" element={<LTCNursingHomes />} />
           <Route path="/long-term-care/short-term-nursing-home-stays" element={<LTCShortTermNursingHomeStays />} />
