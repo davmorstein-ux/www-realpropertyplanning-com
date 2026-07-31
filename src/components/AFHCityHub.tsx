@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { afhListings } from "@/data/afhListings";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import { Link } from "react-router-dom";
+import { cityExists, getCityIndexEntry } from "@/data/afh/directory";
 
 const GREEN = "#0a5648";
 
@@ -23,6 +24,14 @@ interface AFHCityHubProps {
 
 const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCityHubProps) => {
   const cityListings = afhListings.filter((l) => l.city.toLowerCase() === city.toLowerCase());
+
+  // Cities outside the counties we hold DSHS data for have no directory page yet,
+  // so the cross-link only renders where it actually resolves.
+  const directorySlug = city
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  const directoryEntry = cityExists(directorySlug) ? getCityIndexEntry(directorySlug) : null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -72,9 +81,8 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
               <div className="max-w-2xl mx-auto text-center text-foreground/80 text-[17px] leading-relaxed">
                 <p className="mb-6">
                   Inventory in {city} changes regularly — a specific address isn't always on the market at any given
-                  moment. The fastest way to see what's currently available across {county} County, or to get
-                  notified the moment a {city} property lists, is to browse the full marketplace or reach out
-                  directly.
+                  moment. The fastest way to see what's currently available across {county} County, or to get notified
+                  the moment a {city} property lists, is to browse the full marketplace or reach out directly.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
@@ -94,6 +102,35 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
             )}
           </div>
         </section>
+
+        {directoryEntry && (
+          <section className="py-10 md:py-14 bg-cream">
+            <div className="container px-5 md:px-8">
+              <div className="max-w-3xl mx-auto">
+                <p className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-3">
+                  Every licensed home in {city}
+                </p>
+                <h2 className="font-serif text-[24px] md:text-[30px] font-semibold text-navy leading-tight mb-4">
+                  Not every {city} adult family home is for sale
+                </h2>
+                <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mb-4">
+                  {city} has {directoryEntry.facilityCount} licensed adult family homes with {directoryEntry.totalBeds}{" "}
+                  licensed beds. Whether you are looking for placement for a family member or researching the market
+                  before buying, the full DSHS licensing record for every one of them — capacity, specialty
+                  designations, and Medicaid status — is available.
+                </p>
+                <p className="text-[18px]">
+                  <Link
+                    to={`/afh-club/homes/${directorySlug}`}
+                    className="text-accent underline underline-offset-4 hover:text-gold transition-colors font-semibold"
+                  >
+                    All {directoryEntry.facilityCount} licensed adult family homes in {city} →
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
 
         <PageFAQ
           faqs={faqs}
