@@ -1126,6 +1126,14 @@ const App = () => (
           {/* Adult family home directory. The :segment route resolves to either a
               filter view or a facility page — facility slugs end in the DSHS
               license number, filter slugs never do. */}
+          {/* Retired hand-built facility page. The home it covered is now in the
+              directory under DSHS license 755603. Redirect rather than fall through
+              to the city route, which would render a soft 404. Must precede
+              the :citySlug route. */}
+          <Route
+            path="/afh-club/homes/kirkland-ne-140th-street"
+            element={<Navigate to="/afh-club/homes/kirkland" replace />}
+          />
           <Route path="/afh-club/homes" element={<AFHCountyDirectory />} />
           <Route path="/afh-club/homes/:citySlug" element={<AFHCityDirectory />} />
           <Route path="/afh-club/homes/:citySlug/:segment" element={<AFHCitySegment />} />
