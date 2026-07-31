@@ -234,6 +234,9 @@ const AFHForSaleBonneyLake = lazy(() => import("./pages/AFHForSaleBonneyLake"));
 const AFHForSaleMukilteo = lazy(() => import("./pages/AFHForSaleMukilteo"));
 const AFHSellingBusinessAtRetirement = lazy(() => import("./pages/AFHSellingBusinessAtRetirement"));
 const KirklandNE140thStreet = lazy(() => import("./pages/afh-club/homes/KirklandNE140thStreet"));
+const AFHCountyDirectory = lazy(() => import("./pages/afh-club/homes/CountyDirectory"));
+const AFHCityDirectory = lazy(() => import("./pages/afh-club/homes/CityDirectory"));
+const AFHCitySegment = lazy(() => import("./pages/afh-club/homes/CitySegment"));
 const LongTermCareOptions = lazy(() => import("./pages/LongTermCareOptions"));
 const HomepageNew = lazy(() => import("./pages/HomepageNew"));
 const LTCNursingHomes = lazy(() => import("./pages/long-term-care/NursingHomes"));
@@ -786,6 +789,12 @@ const App = () => (
           <Route path="/afh-club/ownership-structure" element={<AFHOwnershipStructure />} />
           <Route path="/afh-club/listings" element={<AFHListings />} />
           <Route path="/afh-club/homes/kirkland-ne-140th-street" element={<KirklandNE140thStreet />} />
+          {/* Adult family home directory. The :segment route resolves to either a
+              filter view or a facility page — facility slugs end in the DSHS
+              license number, filter slugs never do. */}
+          <Route path="/afh-club/homes" element={<AFHCountyDirectory />} />
+          <Route path="/afh-club/homes/:citySlug" element={<AFHCityDirectory />} />
+          <Route path="/afh-club/homes/:citySlug/:segment" element={<AFHCitySegment />} />
           <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />
           <Route path="/afh-club/real-estate-broker" element={<AFHRealEstateBroker />} />
           <Route path="/afh-marketplace" element={<Navigate to="/afh-club/listings" replace />} />
