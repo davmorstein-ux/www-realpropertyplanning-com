@@ -221,7 +221,7 @@ const RPPHomeV2 = () => {
               >
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "1.25rem", marginBottom: "1rem" }}>
                   <img
-                    src="/afh-club-badge.png"
+                    src="/afh-club-badge-logo.webp"
                     alt="AFH Club"
                     style={{ height: 240, width: "auto", mixBlendMode: "multiply", flexShrink: 0, marginTop: "-0.5rem" }}
                   />

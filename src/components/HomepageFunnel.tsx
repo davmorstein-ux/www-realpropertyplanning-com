@@ -196,7 +196,7 @@ const HomepageFunnel = () => (
       <a href="/afh-club" className="rpp-afh-tile marquee-hover">
         <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "nowrap", flex: 1, minWidth: 0 }}>
           <img
-            src="/afh-club-badge.png"
+            src="/afh-club-badge-logo.webp"
             alt="AFH Club"
             style={{
               height: "80px",

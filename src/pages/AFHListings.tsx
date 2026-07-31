@@ -20,7 +20,7 @@ const WHITE = "#ffffff";
 const BackButton = () => (
   <a href="/afh-club" aria-label="Back to AFH Club" style={{ display: "inline-block", textDecoration: "none" }}>
     <img
-      src="/listing-photos/back-to-afh-club.png"
+      src="/listing-photos/back-to-afh-club.webp"
       alt=""
       aria-hidden="true"
       style={{ height: "70px", width: "auto", display: "block", mixBlendMode: "multiply" as const }}

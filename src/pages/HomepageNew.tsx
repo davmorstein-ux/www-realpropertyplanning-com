@@ -200,7 +200,7 @@ const HomepageNew = () => (
             >
               <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" }}>
                 <img
-                  src="/afh-club-badge.png"
+                  src="/afh-club-badge-logo.webp"
                   alt="AFH Club"
                   style={{ height: "80px", width: "auto", display: "block", flexShrink: 0 }}
                 />

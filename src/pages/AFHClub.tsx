@@ -64,7 +64,7 @@ const AFHClub = () => {
             {/* Badge — tight */}
             <div style={{ marginBottom: 8 }}>
               <img
-                src="/afh-club-badge.png"
+                src="/afh-club-badge-logo.webp"
                 alt={t("afhClubPage.hero.badgeAlt")}
                 style={{
                   width: "100%",
