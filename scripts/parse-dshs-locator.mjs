@@ -33,6 +33,16 @@ const CONTRACT_MAP = {
   "afh respite": "afhRespite",
   "wa cares fund adult family home": "waCaresFund",
   "wa cares fund adult family home respite": "waCaresFundRespite",
+  "wcf private duty nursing": "wcfPrivateDutyNursing",
+  "dda specialty afh pilot": "ddaSpecialtyPilot",
+};
+
+/**
+ * DSHS records contain occasional data-entry errors in the city field. Correcting
+ * them here keeps a city from splitting into two directory pages over a typo.
+ */
+const CITY_CORRECTIONS = {
+  "federal wa": "Federal Way",
 };
 
 /** Strip the #, *, and space prefixes operators use to sort first in results. */
@@ -124,7 +134,8 @@ export function parseLocator(text, county) {
       return hit ? hit.trim().replace(re, "").trim() : null;
     };
 
-    const contactName = find(/^Contact:\s*/);
+    const contactNameRaw = find(/^Contact:\s*/);
+    const contactName = contactNameRaw ? contactNameRaw : null;
     const regionUnit = find(/^Region\/Unit:\s*/);
     const specialties = parseSpecialties(find(/^Specialties:\s*/));
     const contracts = parseContracts(find(/^Contract\(s\):\s*/), warn);
@@ -156,6 +167,12 @@ export function parseLocator(text, county) {
       } else {
         street = `${street} ${line}`;
       }
+    }
+
+    const corrected = CITY_CORRECTIONS[city?.toLowerCase() ?? ""];
+    if (corrected) {
+      warn(`corrected city "${city}" to "${corrected}"`);
+      city = corrected;
     }
 
     if (!city || !zip) {
