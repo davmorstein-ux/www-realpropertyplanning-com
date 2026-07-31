@@ -48,81 +48,22 @@ import wahkiakumLogo from "@/assets/counties/wahkiakum-county-logo.webp";
 import graysHarborLogo from "@/assets/counties/grays-harbor-county-logo.webp";
 import { services, counties } from "@/lib/service-areas-data";
 
-type CountyVideo = {
-  webm?: string;
-  mp4?: string;
-  poster?: string;
-  uploadDate?: string;
-};
-
-const SITE_URL = "https://realpropertyplanning.com";
-
-const COUNTY_WEBSITES: Record<string, string> = {
-  "benton-county": "https://www.co.benton.wa.us",
-  "clark-county": "https://www.clark.wa.gov",
-  "king-county": "https://kingcounty.gov",
-  "kitsap-county": "https://www.kitsapgov.com",
-  "pierce-county": "https://www.piercecountywa.gov",
-  "skagit-county": "https://www.skagitcounty.net",
-  "snohomish-county": "https://snohomishcountywa.gov",
-  "spokane-county": "https://www.spokanecounty.org",
-  "thurston-county": "https://www.thurstoncountywa.gov",
-  "whatcom-county": "https://www.whatcomcounty.us",
-  "cowlitz-county": "https://www.co.cowlitz.wa.us",
-  "grays-harbor-county": "https://www.graysharborcounty.net",
-  "island-county": "https://www.islandcountywa.gov",
-  "jefferson-county": "https://www.jeffersoncountywa.gov",
-  "lewis-county": "https://www.lewiscountywa.gov",
-  "mason-county": "https://www.masoncountywa.gov",
-  "pacific-county": "https://www.pacificcounty.org",
-  "san-juan-county": "https://www.sanjuanco.com",
-  "skamania-county": "https://www.skamaniacounty.org",
-  "wahkiakum-county": "https://www.wahkiakumcounty.org",
-};
-
-const COUNTY_VIDEOS: Record<string, CountyVideo> = {
-  "snohomish-county": {
-    webm: "/county-videos/snohomish-hero.webm?v=3",
-    mp4: "/county-videos/snohomish-hero.mp4?v=3",
-    poster: "/county-videos/snohomish-hero-poster.webp?v=3",
-    uploadDate: "2025-04-10",
-  },
-  "king-county": {
-    webm: "/county-videos/king-hero.webm?v=2",
-    mp4: "/county-videos/king-hero.mp4?v=2",
-    poster: "/county-videos/king-hero-poster.webp?v=2",
-    uploadDate: "2026-04-18",
-  },
-  "kitsap-county": {
-    webm: "/county-videos/kitsap-hero.webm?v=1",
-    mp4: "/county-videos/kitsap-hero.mp4?v=1",
-    poster: "/county-videos/kitsap-hero-poster.webp?v=1",
-    uploadDate: "2025-04-15",
-  },
-  "island-county": {
-    webm: "/county-videos/island-hero.webm?v=2",
-    mp4: "/county-videos/island-hero.mp4?v=2",
-    poster: "/county-videos/island-hero-poster.webp?v=2",
-    uploadDate: "2026-04-18",
-  },
-  "skagit-county": {
-    webm: "/county-videos/skagit-hero.webm?v=1",
-    mp4: "/county-videos/skagit-hero.mp4?v=1",
-    poster: "/county-videos/skagit-hero-poster.webp?v=1",
-    uploadDate: "2026-04-18",
-  },
-  "whatcom-county": {
-    webm: "/county-videos/whatcom-hero.webm?v=3",
-    mp4: "/county-videos/whatcom-hero.mp4?v=3",
-    poster: "/county-videos/whatcom-hero-poster.webp?v=3",
-    uploadDate: "2026-04-18",
-  },
-  "pierce-county": {
-    webm: "/county-videos/pierce-hero.webm?v=2",
-    mp4: "/county-videos/pierce-hero.mp4?v=2",
-    poster: "/county-videos/pierce-hero-poster.webp?v=2",
-    uploadDate: "2025-04-17",
-  },
+/**
+ * Poster frame shown as a thin banner on county hero sections.
+ *
+ * These were previously autoplaying <video> elements. Removed because the video
+ * cost 17 MB of assets across seven counties while three of them (King, Island,
+ * Skagit) had no video files at all and were 404ing, and Whatcom shipped a
+ * 7.3 MB webm with no mp4 fallback that Safari and iOS could not play.
+ */
+const COUNTY_HERO_IMAGES: Record<string, string> = {
+  "snohomish-county": "/county-videos/snohomish-hero-poster.webp",
+  "king-county": "/county-videos/king-hero-poster.webp",
+  "kitsap-county": "/county-videos/kitsap-hero-poster.webp",
+  "island-county": "/county-videos/island-hero-poster.webp",
+  "skagit-county": "/county-videos/skagit-hero-poster.webp",
+  "whatcom-county": "/county-videos/whatcom-hero-poster.webp",
+  "pierce-county": "/county-videos/pierce-hero-poster.webp",
 };
 
 const COUNTY_LOGOS: Record<string, string> = {
@@ -313,18 +254,12 @@ const CountyPageTemplate = ({
   // their county data is added.
   const afh = getCountySummary(countyName);
 
-  const video = COUNTY_VIDEOS[countySlug];
-  const videoSchema = video
-    ? {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        name: `Aerial View of ${countyName}, Washington`,
-        description: `Scenic aerial footage of ${countyName}, Washington — context for probate, estate, and senior transition real estate services provided by Real Property Planning.`,
-        thumbnailUrl: [`${SITE_URL}${(video.poster || "").split("?")[0]}`],
-        contentUrl: `${SITE_URL}${(video.mp4 || video.webm || "").split("?")[0]}`,
-        uploadDate: video.uploadDate || "2025-04-01",
-      }
-    : undefined;
+  // County hero imagery. Formerly autoplaying video; now the poster frame only.
+  // Three counties (King, Island, Skagit) were configured with video sources
+  // that had no files behind them, so those pages were firing 404s and carrying
+  // VideoObject schema pointing at nothing. Whatcom shipped a 7.3 MB webm with
+  // no mp4 fallback, which Safari and iOS could not play at all.
+  const heroImage = COUNTY_HERO_IMAGES[countySlug];
 
   const navigate = useNavigate();
   const touchStartX = useRef<number | null>(null);
@@ -355,7 +290,6 @@ const CountyPageTemplate = ({
           seoDescription ||
           `Probate real estate and inherited property sales guidance for executors, attorneys, and families in ${countyName}, Washington State.`
         }
-        schemaJson={videoSchema}
       />
       <BreadcrumbSchema
         items={[
@@ -428,28 +362,16 @@ const CountyPageTemplate = ({
             </div>
           </div>
 
-          {COUNTY_VIDEOS[countySlug] && (
+          {heroImage && (
             <div className="county-hero-video w-full mt-8">
               <div className="relative w-full overflow-hidden" style={{ aspectRatio: "1920 / 244" }}>
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  poster={COUNTY_VIDEOS[countySlug].poster}
-                  aria-label={`Aerial video showcasing ${countyName}, Washington`}
+                <img
+                  src={heroImage}
+                  alt={`Aerial view of ${countyName}, Washington`}
                   className="absolute inset-0 w-full h-full object-cover"
-                  style={{
-                    willChange: "transform",
-                    transform: "translateZ(0)",
-                    backfaceVisibility: "hidden",
-                    WebkitBackfaceVisibility: "hidden",
-                  }}
-                >
-                  {COUNTY_VIDEOS[countySlug].webm && <source src={COUNTY_VIDEOS[countySlug].webm} type="video/webm" />}
-                  {COUNTY_VIDEOS[countySlug].mp4 && <source src={COUNTY_VIDEOS[countySlug].mp4} type="video/mp4" />}
-                </video>
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           )}
