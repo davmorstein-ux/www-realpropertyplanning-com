@@ -290,7 +290,8 @@
       "heading": "AFH Marketplace",
       "description": "A dedicated Washington marketplace for buying and selling Adult Family Homes — property, business, or both.",
       "browseListings": "Browse Listings",
-      "submitListing": "Submit a Listing"
+      "submitListing": "Submit a Listing",
+      "browseDirectory": "Or browse every licensed adult family home in Washington by city →"
     },
     "browseByCity": "Browse Listings by City",
     "exploreHeading": "Explore AFH Club",
