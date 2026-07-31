@@ -69,14 +69,9 @@ const ForAttorneys = () => (
     <section className="py-6 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <Link to="/for-attorneys/learn-more" className="text-[#7f2028] hover:text-[#61181e] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
-            ​
+          <Link to="/for-attorneys/how-it-works" className="text-[#7f2028] hover:text-[#61181e] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
+            How the process works for attorneys →
           </Link>
-          <div className="mt-4">
-            <Link to="/for-attorneys/how-it-works" className="text-[#7f2028] hover:text-[#61181e] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
-              ​
-            </Link>
-          </div>
         </div>
       </div>
     </section>

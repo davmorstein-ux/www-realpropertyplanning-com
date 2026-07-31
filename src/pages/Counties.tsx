@@ -181,7 +181,7 @@ const Counties = () => {
               As a licensed broker and state-certified residential appraiser with over 20 years of experience, Real Property Planning evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to learn more about service in that area.
             </p>
             <p className="text-base text-primary-foreground/60 leading-relaxed">
-              Looking for a specific city? <Link to="/cities-we-serve" className="underline hover:text-gold transition-colors">Browse all cities we serve</Link>.
+              Select a county above to see the cities served in that area.
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -201,6 +202,21 @@ const AFHValuationEstimator = () => {
 
   return (
     <>
+      <SEOHead
+        title="Adult Family Home Valuation Estimator | Washington State | Real Property Planning"
+        description="Free valuation estimator for Washington adult family homes. Estimate what an AFH business and property may be worth based on licensed capacity, occupancy, revenue, and operating expenses."
+        schemaJson={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: "Adult Family Home Valuation Estimator",
+          applicationCategory: "FinanceApplication",
+          operatingSystem: "All",
+          url: "https://realpropertyplanning.com/afh-club/afh-valuation-estimator",
+          description:
+            "Estimate the value of a Washington State adult family home business and property.",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
       <Header />
       <main>
         {/* Hero */}

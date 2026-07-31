@@ -57,17 +57,6 @@ const Trustees = () => (
       </div>
     </section>
 
-    {/* More information link */}
-    <section className="py-6 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <Link to="/trustees/learn-more" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
-            More information about Trustees →
-          </Link>
-        </div>
-      </div>
-    </section>
-
     <PageFAQ
       faqs={[
         {

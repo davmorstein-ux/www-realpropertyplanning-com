@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -213,6 +214,21 @@ const AFHROICalculator = () => {
 
   return (
     <>
+      <SEOHead
+        title="Adult Family Home ROI Calculator | Washington State | Real Property Planning"
+        description="Free ROI calculator for Washington adult family homes. Estimate cash flow, cap rate, and return on an AFH purchase using resident capacity, private-pay and Medicaid rates, staffing, and financing costs."
+        schemaJson={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: "Adult Family Home ROI Calculator",
+          applicationCategory: "FinanceApplication",
+          operatingSystem: "All",
+          url: "https://realpropertyplanning.com/afh-club/afh-roi-calculator",
+          description:
+            "Estimate cash flow, cap rate, and return on investment for a Washington State adult family home purchase.",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
       <Header />
       <main>
         {/* Hero */}
