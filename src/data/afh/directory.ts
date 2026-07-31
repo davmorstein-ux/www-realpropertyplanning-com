@@ -91,7 +91,7 @@ export const AFH_FILTERS: AFHFilter[] = [
 const FILTER_BY_SLUG = new Map(AFH_FILTERS.map((f) => [f.slug, f]));
 
 export const getFilter = (slug: string | undefined): AFHFilter | null =>
-  slug ? FILTER_BY_SLUG.get(slug) ?? null : null;
+  slug ? (FILTER_BY_SLUG.get(slug) ?? null) : null;
 
 /**
  * Resolve the second URL segment under /afh-club/homes/:citySlug/.
@@ -109,8 +109,50 @@ export const isFilterSlug = (slug: string): boolean => FILTER_BY_SLUG.has(slug);
 const cityLoaders = import.meta.glob<{ default: AFHFacility[] }>("./cities/*.json");
 const cache = new Map<string, AFHFacility[]>();
 
-export const cityExists = (citySlug: string): boolean =>
-  countyIndex.some((c) => c.citySlug === citySlug);
+/**
+ * Roll the city index up to county level.
+ *
+ * Accepts either "King" or "King County" so the existing county pages can pass
+ * their countyName prop straight through without transformation.
+ */
+export interface AFHCountySummary {
+  county: string;
+  cityCount: number;
+  facilityCount: number;
+  totalBeds: number;
+  behaviorSupport: number;
+  developmentalDisabilities: number;
+  privatePay: number;
+  cities: AFHCityIndexEntry[];
+}
+
+export function getCountySummary(countyName: string): AFHCountySummary | null {
+  const target = countyName
+    .replace(/\s+county$/i, "")
+    .trim()
+    .toLowerCase();
+  const cities = countyIndex.filter((c) => c.county.toLowerCase() === target);
+  if (cities.length === 0) return null;
+
+  return {
+    county: cities[0].county,
+    cityCount: cities.length,
+    facilityCount: cities.reduce((s, c) => s + c.facilityCount, 0),
+    totalBeds: cities.reduce((s, c) => s + c.totalBeds, 0),
+    behaviorSupport: cities.reduce((s, c) => s + c.behaviorSupport, 0),
+    developmentalDisabilities: cities.reduce((s, c) => s + c.developmentalDisabilities, 0),
+    privatePay: cities.reduce((s, c) => s + c.privatePay, 0),
+    cities,
+  };
+}
+
+/** Counties represented in the data, largest first. */
+export const counties = (): AFHCountySummary[] =>
+  [...new Set(countyIndex.map((c) => c.county))]
+    .map((n) => getCountySummary(n)!)
+    .sort((a, b) => b.facilityCount - a.facilityCount);
+
+export const cityExists = (citySlug: string): boolean => countyIndex.some((c) => c.citySlug === citySlug);
 
 export const getCityIndexEntry = (citySlug: string): AFHCityIndexEntry | null =>
   countyIndex.find((c) => c.citySlug === citySlug) ?? null;
@@ -133,10 +175,7 @@ export async function loadCity(citySlug: string): Promise<AFHFacility[]> {
 }
 
 /** Find one facility by its slug within a city. */
-export async function loadFacility(
-  citySlug: string,
-  facilitySlug: string,
-): Promise<AFHFacility | null> {
+export async function loadFacility(citySlug: string, facilitySlug: string): Promise<AFHFacility | null> {
   const list = await loadCity(citySlug);
   return list.find((f) => f.slug === facilitySlug) ?? null;
 }
