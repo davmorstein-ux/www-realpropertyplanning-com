@@ -37,6 +37,7 @@ const CATEGORIES = [
     label: "Senior Housing",
     color: "#1d7239",
     items: [
+      { name: "Adult Family Home Directory", href: "/afh-club/homes" },
       { name: "Senior Living Advisors", href: "/senior-living-advisors" },
       { name: "Senior Move Managers", href: "/senior-move-managers" },
       { name: "Aging in Place", href: "/aging-in-place-staying-home-safely" },
@@ -83,6 +84,7 @@ const CATEGORIES = [
     color: "#a82466",
     items: [
       { name: "AFH Club", href: "/afh-club" },
+      { name: "Licensed AFH Directory", href: "/afh-club/homes" },
       { name: "AFH Calculators", href: "/afh-club/calculators" },
       { name: "Selling Your AFH at Retirement", href: "/afh-club/selling-your-business-at-retirement" },
       { name: "Cost of Care Calculator", href: "/cost-of-care-calculator" },
