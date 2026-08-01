@@ -48,6 +48,29 @@ import wahkiakumLogo from "@/assets/counties/wahkiakum-county-logo.webp";
 import graysHarborLogo from "@/assets/counties/grays-harbor-county-logo.webp";
 import { services, counties } from "@/lib/service-areas-data";
 
+const COUNTY_WEBSITES: Record<string, string> = {
+  "benton-county": "https://www.co.benton.wa.us",
+  "clark-county": "https://www.clark.wa.gov",
+  "king-county": "https://kingcounty.gov",
+  "kitsap-county": "https://www.kitsapgov.com",
+  "pierce-county": "https://www.piercecountywa.gov",
+  "skagit-county": "https://www.skagitcounty.net",
+  "snohomish-county": "https://snohomishcountywa.gov",
+  "spokane-county": "https://www.spokanecounty.org",
+  "thurston-county": "https://www.thurstoncountywa.gov",
+  "whatcom-county": "https://www.whatcomcounty.us",
+  "cowlitz-county": "https://www.co.cowlitz.wa.us",
+  "grays-harbor-county": "https://www.graysharborcounty.net",
+  "island-county": "https://www.islandcountywa.gov",
+  "jefferson-county": "https://www.jeffersoncountywa.gov",
+  "lewis-county": "https://www.lewiscountywa.gov",
+  "mason-county": "https://www.masoncountywa.gov",
+  "pacific-county": "https://www.pacificcounty.org",
+  "san-juan-county": "https://www.sanjuanco.com",
+  "skamania-county": "https://www.skamaniacounty.org",
+  "wahkiakum-county": "https://www.wahkiakumcounty.org",
+};
+
 /**
  * Poster frame shown as a thin banner on county hero sections.
  *
