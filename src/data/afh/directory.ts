@@ -18,7 +18,10 @@ import type { AFHFacility } from "./types";
 export interface AFHCityIndexEntry {
   city: string;
   citySlug: string;
+  /** Primary county — the one containing most of the city's homes. */
   county: string;
+  /** All counties this city spans. Four WA cities straddle a county line. */
+  counties?: string[];
   facilityCount: number;
   totalBeds: number;
   behaviorSupport: number;
@@ -131,7 +134,11 @@ export function getCountySummary(countyName: string): AFHCountySummary | null {
     .replace(/\s+county$/i, "")
     .trim()
     .toLowerCase();
-  const cities = countyIndex.filter((c) => c.county.toLowerCase() === target);
+  // Match on the full county list so a split city (Bothell, Auburn, Woodinville,
+  // Milton) appears under both counties it belongs to.
+  const cities = countyIndex.filter((c) =>
+    (c.counties ?? [c.county]).some((n) => n.toLowerCase() === target),
+  );
   if (cities.length === 0) return null;
 
   return {
