@@ -3,9 +3,7 @@
     "city": "Tacoma",
     "citySlug": "tacoma",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 375,
     "totalBeds": 2168,
     "behaviorSupport": 94,
@@ -17,9 +15,7 @@
     "city": "Lynnwood",
     "citySlug": "lynnwood",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 311,
     "totalBeds": 1791,
     "behaviorSupport": 82,
@@ -31,13 +27,11 @@
     "city": "Everett",
     "citySlug": "everett",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
-    "facilityCount": 305,
-    "totalBeds": 1756,
-    "behaviorSupport": 70,
-    "developmentalDisabilities": 182,
+    "counties": ["Snohomish"],
+    "facilityCount": 306,
+    "totalBeds": 1762,
+    "behaviorSupport": 71,
+    "developmentalDisabilities": 183,
     "privatePay": 8,
     "withReports": 127
   },
@@ -45,9 +39,7 @@
     "city": "Kent",
     "citySlug": "kent",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 285,
     "totalBeds": 1637,
     "behaviorSupport": 50,
@@ -59,9 +51,7 @@
     "city": "Federal Way",
     "citySlug": "federal-way",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 275,
     "totalBeds": 1603,
     "behaviorSupport": 56,
@@ -73,9 +63,7 @@
     "city": "Lakewood",
     "citySlug": "lakewood",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 270,
     "totalBeds": 1601,
     "behaviorSupport": 110,
@@ -87,9 +75,7 @@
     "city": "Renton",
     "citySlug": "renton",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 200,
     "totalBeds": 1177,
     "behaviorSupport": 40,
@@ -101,10 +87,7 @@
     "city": "Auburn",
     "citySlug": "auburn",
     "county": "King",
-    "counties": [
-      "King",
-      "Pierce"
-    ],
+    "counties": ["King", "Pierce"],
     "facilityCount": 190,
     "totalBeds": 1102,
     "behaviorSupport": 55,
@@ -116,9 +99,7 @@
     "city": "Marysville",
     "citySlug": "marysville",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 188,
     "totalBeds": 1085,
     "behaviorSupport": 26,
@@ -130,9 +111,7 @@
     "city": "Puyallup",
     "citySlug": "puyallup",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 181,
     "totalBeds": 1068,
     "behaviorSupport": 34,
@@ -144,9 +123,7 @@
     "city": "Seattle",
     "citySlug": "seattle",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 153,
     "totalBeds": 890,
     "behaviorSupport": 25,
@@ -158,9 +135,7 @@
     "city": "Bellevue",
     "citySlug": "bellevue",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 135,
     "totalBeds": 808,
     "behaviorSupport": 4,
@@ -172,9 +147,7 @@
     "city": "Edmonds",
     "citySlug": "edmonds",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 124,
     "totalBeds": 713,
     "behaviorSupport": 25,
@@ -186,9 +159,7 @@
     "city": "Shoreline",
     "citySlug": "shoreline",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 122,
     "totalBeds": 699,
     "behaviorSupport": 21,
@@ -200,10 +171,7 @@
     "city": "Bothell",
     "citySlug": "bothell",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish",
-      "King"
-    ],
+    "counties": ["Snohomish", "King"],
     "facilityCount": 96,
     "totalBeds": 570,
     "behaviorSupport": 13,
@@ -215,9 +183,7 @@
     "city": "Des Moines",
     "citySlug": "des-moines",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 80,
     "totalBeds": 455,
     "behaviorSupport": 14,
@@ -229,9 +195,7 @@
     "city": "Seatac",
     "citySlug": "seatac",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 67,
     "totalBeds": 392,
     "behaviorSupport": 5,
@@ -243,9 +207,7 @@
     "city": "Kirkland",
     "citySlug": "kirkland",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 55,
     "totalBeds": 348,
     "behaviorSupport": 7,
@@ -257,9 +219,7 @@
     "city": "Mountlake Terrace",
     "citySlug": "mountlake-terrace",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 54,
     "totalBeds": 313,
     "behaviorSupport": 14,
@@ -271,9 +231,7 @@
     "city": "Spanaway",
     "citySlug": "spanaway",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 46,
     "totalBeds": 269,
     "behaviorSupport": 14,
@@ -285,9 +243,7 @@
     "city": "University Place",
     "citySlug": "university-place",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 42,
     "totalBeds": 244,
     "behaviorSupport": 7,
@@ -299,9 +255,7 @@
     "city": "Burien",
     "citySlug": "burien",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 30,
     "totalBeds": 180,
     "behaviorSupport": 1,
@@ -313,9 +267,7 @@
     "city": "Kenmore",
     "citySlug": "kenmore",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 29,
     "totalBeds": 172,
     "behaviorSupport": 3,
@@ -327,9 +279,7 @@
     "city": "Lake Stevens",
     "citySlug": "lake-stevens",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 29,
     "totalBeds": 172,
     "behaviorSupport": 7,
@@ -341,9 +291,7 @@
     "city": "Bonney Lake",
     "citySlug": "bonney-lake",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 28,
     "totalBeds": 161,
     "behaviorSupport": 7,
@@ -355,9 +303,7 @@
     "city": "Redmond",
     "citySlug": "redmond",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 25,
     "totalBeds": 151,
     "behaviorSupport": 3,
@@ -369,9 +315,7 @@
     "city": "Gig Harbor",
     "citySlug": "gig-harbor",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 24,
     "totalBeds": 145,
     "behaviorSupport": 5,
@@ -383,9 +327,7 @@
     "city": "Mill Creek",
     "citySlug": "mill-creek",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 18,
     "totalBeds": 105,
     "behaviorSupport": 4,
@@ -397,10 +339,7 @@
     "city": "Milton",
     "citySlug": "milton",
     "county": "Pierce",
-    "counties": [
-      "Pierce",
-      "King"
-    ],
+    "counties": ["Pierce", "King"],
     "facilityCount": 18,
     "totalBeds": 102,
     "behaviorSupport": 2,
@@ -412,9 +351,7 @@
     "city": "Mukilteo",
     "citySlug": "mukilteo",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 18,
     "totalBeds": 112,
     "behaviorSupport": 10,
@@ -426,9 +363,7 @@
     "city": "Tukwila",
     "citySlug": "tukwila",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 18,
     "totalBeds": 101,
     "behaviorSupport": 1,
@@ -440,9 +375,7 @@
     "city": "Sumner",
     "citySlug": "sumner",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 16,
     "totalBeds": 93,
     "behaviorSupport": 2,
@@ -454,9 +387,7 @@
     "city": "Covington",
     "citySlug": "covington",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 15,
     "totalBeds": 85,
     "behaviorSupport": 2,
@@ -468,9 +399,7 @@
     "city": "Issaquah",
     "citySlug": "issaquah",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 14,
     "totalBeds": 78,
     "behaviorSupport": 0,
@@ -482,9 +411,7 @@
     "city": "Snohomish",
     "citySlug": "snohomish",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 14,
     "totalBeds": 86,
     "behaviorSupport": 1,
@@ -496,9 +423,7 @@
     "city": "Stanwood",
     "citySlug": "stanwood",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 14,
     "totalBeds": 78,
     "behaviorSupport": 0,
@@ -510,10 +435,7 @@
     "city": "Woodinville",
     "citySlug": "woodinville",
     "county": "King",
-    "counties": [
-      "King",
-      "Snohomish"
-    ],
+    "counties": ["King", "Snohomish"],
     "facilityCount": 12,
     "totalBeds": 68,
     "behaviorSupport": 0,
@@ -525,9 +447,7 @@
     "city": "Arlington",
     "citySlug": "arlington",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 11,
     "totalBeds": 62,
     "behaviorSupport": 2,
@@ -539,9 +459,7 @@
     "city": "Graham",
     "citySlug": "graham",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 11,
     "totalBeds": 64,
     "behaviorSupport": 4,
@@ -553,9 +471,7 @@
     "city": "Newcastle",
     "citySlug": "newcastle",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 11,
     "totalBeds": 68,
     "behaviorSupport": 1,
@@ -567,9 +483,7 @@
     "city": "Sammamish",
     "citySlug": "sammamish",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 11,
     "totalBeds": 67,
     "behaviorSupport": 0,
@@ -581,9 +495,7 @@
     "city": "Fife",
     "citySlug": "fife",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 10,
     "totalBeds": 60,
     "behaviorSupport": 5,
@@ -595,9 +507,7 @@
     "city": "Pacific",
     "citySlug": "pacific",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 9,
     "totalBeds": 53,
     "behaviorSupport": 2,
@@ -609,9 +519,7 @@
     "city": "Lake Forest Park",
     "citySlug": "lake-forest-park",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 8,
     "totalBeds": 54,
     "behaviorSupport": 0,
@@ -623,9 +531,7 @@
     "city": "Orting",
     "citySlug": "orting",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 8,
     "totalBeds": 44,
     "behaviorSupport": 1,
@@ -637,9 +543,7 @@
     "city": "Maple Valley",
     "citySlug": "maple-valley",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 7,
     "totalBeds": 40,
     "behaviorSupport": 0,
@@ -651,9 +555,7 @@
     "city": "Monroe",
     "citySlug": "monroe",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 7,
     "totalBeds": 41,
     "behaviorSupport": 0,
@@ -665,9 +567,7 @@
     "city": "Steilacoom",
     "citySlug": "steilacoom",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 7,
     "totalBeds": 41,
     "behaviorSupport": 2,
@@ -679,9 +579,7 @@
     "city": "Algona",
     "citySlug": "algona",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 6,
     "totalBeds": 35,
     "behaviorSupport": 3,
@@ -693,9 +591,7 @@
     "city": "Brier",
     "citySlug": "brier",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 6,
     "totalBeds": 36,
     "behaviorSupport": 1,
@@ -707,9 +603,7 @@
     "city": "Buckley",
     "citySlug": "buckley",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 6,
     "totalBeds": 36,
     "behaviorSupport": 1,
@@ -721,9 +615,7 @@
     "city": "Enumclaw",
     "citySlug": "enumclaw",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 6,
     "totalBeds": 33,
     "behaviorSupport": 1,
@@ -735,9 +627,7 @@
     "city": "Fircrest",
     "citySlug": "fircrest",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 6,
     "totalBeds": 34,
     "behaviorSupport": 1,
@@ -749,9 +639,7 @@
     "city": "Mercer Island",
     "citySlug": "mercer-island",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 6,
     "totalBeds": 32,
     "behaviorSupport": 0,
@@ -763,9 +651,7 @@
     "city": "Normandy Park",
     "citySlug": "normandy-park",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 6,
     "totalBeds": 34,
     "behaviorSupport": 0,
@@ -777,9 +663,7 @@
     "city": "Tulalip",
     "citySlug": "tulalip",
     "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
+    "counties": ["Snohomish"],
     "facilityCount": 6,
     "totalBeds": 36,
     "behaviorSupport": 2,
@@ -791,9 +675,7 @@
     "city": "North Bend",
     "citySlug": "north-bend",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 5,
     "totalBeds": 32,
     "behaviorSupport": 0,
@@ -805,9 +687,7 @@
     "city": "Duvall",
     "citySlug": "duvall",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 2,
     "totalBeds": 12,
     "behaviorSupport": 0,
@@ -819,9 +699,7 @@
     "city": "Eatonville",
     "citySlug": "eatonville",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 2,
     "totalBeds": 12,
     "behaviorSupport": 0,
@@ -833,9 +711,7 @@
     "city": "Edgewood",
     "citySlug": "edgewood",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 2,
     "totalBeds": 12,
     "behaviorSupport": 0,
@@ -847,9 +723,7 @@
     "city": "Parkland",
     "citySlug": "parkland",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 2,
     "totalBeds": 12,
     "behaviorSupport": 0,
@@ -861,9 +735,7 @@
     "city": "Roy",
     "citySlug": "roy",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 2,
     "totalBeds": 12,
     "behaviorSupport": 0,
@@ -875,9 +747,7 @@
     "city": "Vashon",
     "citySlug": "vashon",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 2,
     "totalBeds": 12,
     "behaviorSupport": 0,
@@ -889,9 +759,7 @@
     "city": "Lake Tapps",
     "citySlug": "lake-tapps",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 1,
     "totalBeds": 4,
     "behaviorSupport": 0,
@@ -903,9 +771,7 @@
     "city": "Lakebay",
     "citySlug": "lakebay",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 1,
     "totalBeds": 6,
     "behaviorSupport": 0,
@@ -917,9 +783,7 @@
     "city": "Snoqualmie",
     "citySlug": "snoqualmie",
     "county": "King",
-    "counties": [
-      "King"
-    ],
+    "counties": ["King"],
     "facilityCount": 1,
     "totalBeds": 6,
     "behaviorSupport": 0,
@@ -931,9 +795,7 @@
     "city": "Yelm",
     "citySlug": "yelm",
     "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
+    "counties": ["Pierce"],
     "facilityCount": 1,
     "totalBeds": 6,
     "behaviorSupport": 0,
