@@ -147,6 +147,9 @@ const Footer = () => {
             <Link to="/guides-and-resources" className="rpp-footer-link">
               Guides &amp; Articles
             </Link>
+            <Link to="/afh-club/homes" className="rpp-footer-link">
+              Adult Family Home Directory
+            </Link>
           </div>
 
           {/* About */}
