@@ -31,6 +31,16 @@ const AnimatedValue = ({ value, formatter }: { value: number; formatter: (n: num
       prevValue.current = end;
       return;
     }
+    // Respect a reduced-motion preference: jump straight to the value.
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) {
+      setDisplay(end);
+      prevValue.current = end;
+      return;
+    }
     const startTime = performance.now();
     const duration = 500;
     let raf: number;
@@ -55,40 +65,15 @@ const card: React.CSSProperties = {
   background: "#ffffff",
   border: "1px solid #dccdce",
   borderRadius: 12,
-  padding: "1.25rem 1.4rem",
-  marginBottom: 14,
-};
-
-const sectionLabel = (color: string): React.CSSProperties => ({
-  fontSize: "18px",
-  letterSpacing: "0.12em",
-  textTransform: "uppercase" as const,
-  color,
-  fontWeight: 900,
-  fontFamily: "'Raleway', sans-serif",
+  padding: "1.1rem 1.25rem",
   marginBottom: 12,
-  display: "flex",
-  alignItems: "center",
-  gap: 8,
-  textShadow: "0 1px 0 rgba(255,255,255,0.8)",
-});
-
-const fieldLabel: React.CSSProperties = {
-  display: "block",
-  fontSize: "17px",
-  fontFamily: "'Raleway', sans-serif",
-  fontWeight: 900,
-  letterSpacing: "0.08em",
-  textTransform: "uppercase" as const,
-  color: "#272421",
-  marginBottom: 8,
 };
 
 const stepperBtn: React.CSSProperties = {
-  width: 52,
-  height: 52,
+  width: 48,
+  height: 48,
   borderRadius: 8,
-  fontSize: "32px",
+  fontSize: "28px",
   fontWeight: 700,
   color: "#272421",
   background: "#f5f2ec",
@@ -165,65 +150,40 @@ const CostOfCareCalculator = () => {
       />
       <Header />
       <main id="main-content">
-        {/* Hero */}
-        <section style={{ background: "#f5f2ec", padding: "64px 24px 48px", borderBottom: "3px solid #6f2a30" }}>
-          <div style={{ maxWidth: 760, margin: "0 auto" }}>
-            <p
-              style={{
-                fontSize: 13,
-                fontFamily: "'Raleway', sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                color: "#6f2a30",
-                margin: "0 0 12px",
-              }}
-            >
-              {t("costOfCarePage.hero.eyebrow")}
-            </p>
+        {/* Hero — trimmed so the calculator itself is nearer the fold */}
+        <section style={{ background: "#f5f2ec", padding: "36px 24px 28px", borderBottom: "3px solid #6f2a30" }}>
+          <div style={{ maxWidth: 900, margin: "0 auto" }}>
+            <p className="coc-eyebrow">{t("costOfCarePage.hero.eyebrow")}</p>
             <h1
               style={{
-                fontSize: "clamp(32px,5vw,50px)",
+                fontSize: "clamp(28px,4vw,42px)",
                 fontFamily: "Georgia, serif",
                 fontWeight: 700,
                 color: "#272421",
                 lineHeight: 1.15,
-                margin: "0 0 20px",
+                margin: "0 0 12px",
               }}
             >
               {t("costOfCarePage.hero.heading")}
             </h1>
-            <p
-              style={{
-                fontSize: 18,
-                fontFamily: "'Raleway', sans-serif",
-                color: "#342e28",
-                lineHeight: 1.8,
-                margin: 0,
-                maxWidth: 680,
-              }}
-            >
-              {t("costOfCarePage.hero.description")}
-            </p>
+            <p className="coc-hero-desc">{t("costOfCarePage.hero.description")}</p>
           </div>
         </section>
 
         {/* Calculator */}
         <section
           className="coc-no-print"
-          style={{ background: "#f5f2ec", padding: "40px 24px 72px", width: "100%", boxSizing: "border-box" }}
+          style={{ background: "#f5f2ec", padding: "28px 24px 48px", width: "100%", boxSizing: "border-box" }}
         >
           <div style={{ maxWidth: 900, margin: "0 auto", width: "100%", boxSizing: "border-box" }}>
-            {/* Card 1: Care type */}
+            {/* Card 1: Care type — 2 columns on phones, 4 on wider screens,
+                which turns four stacked rows into two. */}
             <div style={card}>
-              <div style={sectionLabel(TEAL)} className="coc-section-title">
+              <div className="coc-section-title coc-section-label">
                 {t("costOfCarePage.card1.sectionTitle")}
                 <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
               </div>
-              <div
-                className="coc-toggle-grid"
-                style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 8 }}
-              >
+              <div className="coc-toggle-grid">
                 {CARE_TYPES.map((c) => {
                   const active = c.id === careTypeId;
                   const color = CARE_TYPE_COLORS[c.id] ?? "#903f46";
@@ -233,14 +193,14 @@ const CostOfCareCalculator = () => {
                       onClick={() => setCareTypeId(c.id)}
                       aria-pressed={active}
                       style={{
-                        padding: "14px 6px",
+                        padding: "12px 6px",
                         borderRadius: 8,
                         textAlign: "center",
                         fontSize: "15px",
                         fontWeight: 700,
                         fontFamily: "'Raleway', sans-serif",
                         lineHeight: 1.25,
-                        minHeight: 64,
+                        minHeight: 56,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -258,74 +218,95 @@ const CostOfCareCalculator = () => {
               </div>
             </div>
 
-            {/* Card 2: Your plan */}
+            {/* Card 2: Your plan — the two steppers sit side by side on
+                wider screens, and the inflation control is folded in here
+                rather than occupying a card of its own. */}
             <div style={card}>
-              <div style={sectionLabel(TEAL)} className="coc-section-title">
+              <div className="coc-section-title coc-section-label">
                 {t("costOfCarePage.card2.sectionTitle")}
                 <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
               </div>
 
-              <div style={{ marginBottom: 18 }}>
-                <label style={fieldLabel}>{t("costOfCarePage.card2.currentAge")}</label>
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <button
-                    onClick={() => setCurrentAge((a) => Math.max(18, a - 1))}
-                    style={stepperBtn}
-                    aria-label={t("costOfCarePage.card2.decreaseAge")}
-                  >
-                    −
-                  </button>
-                  <div
-                    style={{
-                      background: "#f5f2ec",
-                      border: "2px solid #dccdce",
-                      borderRadius: 8,
-                      padding: "10px 20px",
-                      textAlign: "center",
-                      flex: 1,
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      gap: 4,
-                    }}
-                  >
-                    <span
+              <div className="coc-plan-grid">
+                <div>
+                  <label className="coc-field-label">{t("costOfCarePage.card2.currentAge")}</label>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <button
+                      onClick={() => setCurrentAge((a) => Math.max(18, a - 1))}
+                      style={stepperBtn}
+                      aria-label={t("costOfCarePage.card2.decreaseAge")}
+                    >
+                      −
+                    </button>
+                    <div
                       style={{
-                        fontFamily: "'Courier New', monospace",
-                        fontWeight: 700,
-                        fontSize: "52px",
-                        color: TEAL,
-                        lineHeight: 1,
-                        display: "block",
+                        background: "#f5f2ec",
+                        border: "2px solid #dccdce",
+                        borderRadius: 8,
+                        padding: "8px 14px",
+                        textAlign: "center",
+                        flex: 1,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: 2,
                       }}
                     >
-                      {currentAge}
-                    </span>
-                    <span
-                      style={{
-                        fontFamily: "'Raleway', sans-serif",
-                        fontSize: "16px",
-                        fontWeight: 600,
-                        color: "#5e5954",
-                        letterSpacing: "0.06em",
-                        textTransform: "uppercase",
-                      }}
+                      <span className="coc-stepper-number">{currentAge}</span>
+                      <span className="coc-stepper-unit">{t("costOfCarePage.card2.yrsOld")}</span>
+                    </div>
+                    <button
+                      onClick={() => setCurrentAge((a) => Math.min(105, a + 1))}
+                      style={stepperBtn}
+                      aria-label={t("costOfCarePage.card2.increaseAge")}
                     >
-                      {t("costOfCarePage.card2.yrsOld")}
-                    </span>
+                      +
+                    </button>
                   </div>
-                  <button
-                    onClick={() => setCurrentAge((a) => Math.min(105, a + 1))}
-                    style={stepperBtn}
-                    aria-label={t("costOfCarePage.card2.increaseAge")}
-                  >
-                    +
-                  </button>
+                </div>
+
+                <div>
+                  <label className="coc-field-label">{t("costOfCarePage.card2.howManyYears")}</label>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <button
+                      onClick={() => setYearsOfCareNeeded((y) => Math.max(1, y - 1))}
+                      style={stepperBtn}
+                      aria-label={t("costOfCarePage.card2.decreaseYears")}
+                    >
+                      −
+                    </button>
+                    <div
+                      style={{
+                        background: "#f5f2ec",
+                        border: "2px solid #dccdce",
+                        borderRadius: 8,
+                        padding: "8px 14px",
+                        textAlign: "center",
+                        flex: 1,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: 2,
+                      }}
+                    >
+                      <span className="coc-stepper-number">{yearsOfCareNeeded}</span>
+                      <span className="coc-stepper-unit">
+                        {yearsOfCareNeeded === 1 ? t("costOfCarePage.card2.year") : t("costOfCarePage.card2.years")}
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => setYearsOfCareNeeded((y) => Math.min(10, y + 1))}
+                      style={stepperBtn}
+                      aria-label={t("costOfCarePage.card2.increaseYears")}
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              <div style={{ marginBottom: 18 }}>
-                <label style={fieldLabel}>{t("costOfCarePage.card2.whenMightCareBegin")}</label>
+              <div style={{ marginTop: 16 }}>
+                <label className="coc-field-label">{t("costOfCarePage.card2.whenMightCareBegin")}</label>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {YEARS_OUT_OPTIONS.map((y) => (
                     <button
@@ -340,99 +321,47 @@ const CostOfCareCalculator = () => {
                 </div>
               </div>
 
-              <div>
-                <label style={fieldLabel}>{t("costOfCarePage.card2.howManyYears")}</label>
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <button
-                    onClick={() => setYearsOfCareNeeded((y) => Math.max(1, y - 1))}
-                    style={stepperBtn}
-                    aria-label={t("costOfCarePage.card2.decreaseYears")}
-                  >
-                    −
-                  </button>
-                  <div
-                    style={{
-                      background: "#f5f2ec",
-                      border: "2px solid #dccdce",
-                      borderRadius: 8,
-                      padding: "10px 20px",
-                      textAlign: "center",
-                      flex: 1,
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontFamily: "'Courier New', monospace",
-                        fontWeight: 700,
-                        fontSize: "52px",
-                        color: TEAL,
-                        lineHeight: 1,
-                      }}
-                    >
-                      {yearsOfCareNeeded}
-                    </span>{" "}
-                    <span
-                      style={{
-                        fontFamily: "'Raleway', sans-serif",
-                        fontSize: "16px",
-                        fontWeight: 600,
-                        color: "#5e5954",
-                        letterSpacing: "0.06em",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      {yearsOfCareNeeded === 1 ? t("costOfCarePage.card2.year") : t("costOfCarePage.card2.years")}
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => setYearsOfCareNeeded((y) => Math.min(10, y + 1))}
-                    style={stepperBtn}
-                    aria-label={t("costOfCarePage.card2.increaseYears")}
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Inflation assumption — automatic by default, adjustable if desired */}
-            <div style={{ ...card, background: "#f5f2ec" }}>
-              <p
+              {/* Inflation assumption — automatic by default, adjustable */}
+              <div
                 style={{
-                  fontSize: "18px",
-                  fontFamily: "'Raleway', sans-serif",
-                  color: "#272421",
-                  margin: "0 0 16px",
-                  lineHeight: 1.6,
-                  fontWeight: 600,
-                }}
-              >
-                {t("costOfCarePage.inflationCard.assumptionText", { rate: inflationRate })}
-              </p>
-              <button
-                onClick={() => setShowInflationAdjust((s) => !s)}
-                aria-expanded={showInflationAdjust}
-                style={{
-                  display: "inline-flex",
+                  marginTop: 16,
+                  paddingTop: 14,
+                  borderTop: "1px solid #ece4e5",
+                  display: "flex",
+                  flexWrap: "wrap",
                   alignItems: "center",
-                  gap: 10,
-                  background: showInflationAdjust ? TEAL : "#ffffff",
-                  color: showInflationAdjust ? "#ffffff" : TEAL,
-                  border: `2px solid ${TEAL}`,
-                  borderRadius: 8,
-                  padding: "12px 22px",
-                  fontWeight: 700,
-                  fontFamily: "'Raleway', sans-serif",
-                  fontSize: "18px",
-                  cursor: "pointer",
+                  gap: 12,
                 }}
               >
-                {showInflationAdjust
-                  ? t("costOfCarePage.inflationCard.hideOptions")
-                  : t("costOfCarePage.inflationCard.changeOptions")}
-              </button>
+                <p className="coc-inflation-text">
+                  {t("costOfCarePage.inflationCard.assumptionText", { rate: inflationRate })}
+                </p>
+                <button
+                  onClick={() => setShowInflationAdjust((s) => !s)}
+                  aria-expanded={showInflationAdjust}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    background: showInflationAdjust ? TEAL : "#ffffff",
+                    color: showInflationAdjust ? "#ffffff" : TEAL,
+                    border: `2px solid ${TEAL}`,
+                    borderRadius: 8,
+                    padding: "10px 18px",
+                    fontWeight: 700,
+                    fontFamily: "'Raleway', sans-serif",
+                    fontSize: "17px",
+                    cursor: "pointer",
+                    flexShrink: 0,
+                  }}
+                >
+                  {showInflationAdjust
+                    ? t("costOfCarePage.inflationCard.hideOptions")
+                    : t("costOfCarePage.inflationCard.changeOptions")}
+                </button>
+              </div>
               {showInflationAdjust && (
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 16 }}>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 12 }}>
                   {INFLATION_PRESETS.map((p) => (
                     <button
                       key={p.id}
@@ -442,7 +371,7 @@ const CostOfCareCalculator = () => {
                         ...pillBtn(p.id === inflationId, TEAL),
                         flex: "1 1 140px",
                         fontSize: "17px",
-                        padding: "12px 14px",
+                        padding: "11px 14px",
                       }}
                     >
                       {t(`costOfCarePage.inflationPresets.${p.id}`)} ({p.value}%)
@@ -452,13 +381,14 @@ const CostOfCareCalculator = () => {
               )}
             </div>
 
-            {/* Results */}
+            {/* Results — the three figures run across one row on wider
+                screens instead of stacking. */}
             <div style={card}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
-                <div style={sectionLabel(TEAL)} className="coc-section-title">
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+                <div className="coc-section-title coc-section-label" style={{ marginBottom: 0 }}>
                   {t("costOfCarePage.results.sectionTitle")}
                 </div>
-                <div style={{ display: "flex", gap: 6 }}>
+                <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>
                   <button
                     onClick={() => setUnit("monthly")}
                     aria-pressed={unit === "monthly"}
@@ -476,32 +406,17 @@ const CostOfCareCalculator = () => {
                 </div>
               </div>
 
-              <div
-                className="coc-results-grid"
-                style={{ display: "grid", gridTemplateColumns: "1fr", gap: 12, marginBottom: 14 }}
-              >
+              <div className="coc-results-grid">
                 <div
                   style={{
                     background: "#f5f2ec",
                     border: `2px solid ${TEAL}60`,
                     borderRadius: 10,
-                    padding: "16px",
+                    padding: "12px",
                     textAlign: "center",
                   }}
                 >
-                  <div
-                    style={{
-                      fontSize: "13px",
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase",
-                      color: "#272421",
-                      fontWeight: 700,
-                      fontFamily: "'Raleway', sans-serif",
-                      marginBottom: 6,
-                    }}
-                  >
-                    {t("costOfCarePage.results.washington")}
-                  </div>
+                  <div className="coc-result-label">{t("costOfCarePage.results.washington")}</div>
                   <div
                     style={{
                       fontFamily: "'Courier New', monospace",
@@ -515,34 +430,21 @@ const CostOfCareCalculator = () => {
                       formatter={formatCurrency}
                     />
                   </div>
-                  <div
-                    style={{ fontSize: "16px", fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif" }}
-                  >
+                  <div className="coc-result-unit">
                     {unit === "monthly" ? t("costOfCarePage.results.perMonth") : t("costOfCarePage.results.perYear")}
                   </div>
                 </div>
+
                 <div
                   style={{
                     background: "#f5f2ec",
                     border: "1px solid #dccdce",
                     borderRadius: 10,
-                    padding: "16px",
+                    padding: "12px",
                     textAlign: "center",
                   }}
                 >
-                  <div
-                    style={{
-                      fontSize: "13px",
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase",
-                      color: "#272421",
-                      fontWeight: 700,
-                      fontFamily: "'Raleway', sans-serif",
-                      marginBottom: 6,
-                    }}
-                  >
-                    {t("costOfCarePage.results.nationalMedian")}
-                  </div>
+                  <div className="coc-result-label">{t("costOfCarePage.results.nationalMedian")}</div>
                   <div
                     style={{
                       fontFamily: "'Courier New', monospace",
@@ -556,57 +458,37 @@ const CostOfCareCalculator = () => {
                       formatter={formatCurrency}
                     />
                   </div>
-                  <div
-                    style={{ fontSize: "16px", fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif" }}
-                  >
+                  <div className="coc-result-unit">
                     {unit === "monthly" ? t("costOfCarePage.results.perMonth") : t("costOfCarePage.results.perYear")}
                   </div>
                 </div>
-              </div>
 
-              {/* Total cost banner */}
-              <div
-                style={{
-                  background: "#f5f2ec",
-                  border: `2px solid ${TEAL}60`,
-                  borderRadius: 10,
-                  padding: "14px",
-                  textAlign: "center",
-                }}
-              >
                 <div
+                  className="coc-total-cell"
                   style={{
-                    fontSize: "13px",
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "#272421",
-                    fontWeight: 700,
-                    fontFamily: "'Raleway', sans-serif",
-                    marginBottom: 6,
+                    background: "#f5f2ec",
+                    border: `2px solid ${TEAL}60`,
+                    borderRadius: 10,
+                    padding: "12px",
+                    textAlign: "center",
                   }}
                 >
-                  {t("costOfCarePage.results.totalPlan", { years: yearsOfCareNeeded })}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'Courier New', monospace",
-                    fontWeight: 700,
-                    fontSize: "clamp(22px,3.5vw,30px)",
-                    color: TEAL,
-                  }}
-                >
-                  <AnimatedValue value={totalWaCost} formatter={formatCurrency} />
-                </div>
-                <div
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: 600,
-                    color: "#49443f",
-                    fontFamily: "'Raleway', sans-serif",
-                    marginTop: 4,
-                  }}
-                >
-                  {t("costOfCarePage.results.inWashingtonVs", { amount: formatCurrency(totalNationalCost) })}
+                  <div className="coc-result-label">
+                    {t("costOfCarePage.results.totalPlan", { years: yearsOfCareNeeded })}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "'Courier New', monospace",
+                      fontWeight: 700,
+                      fontSize: "clamp(20px,3.2vw,28px)",
+                      color: TEAL,
+                    }}
+                  >
+                    <AnimatedValue value={totalWaCost} formatter={formatCurrency} />
+                  </div>
+                  <div className="coc-result-unit">
+                    {t("costOfCarePage.results.inWashingtonVs", { amount: formatCurrency(totalNationalCost) })}
+                  </div>
                 </div>
               </div>
 
@@ -616,20 +498,12 @@ const CostOfCareCalculator = () => {
                   background: "#ffffff",
                   border: `1px solid ${TEAL}40`,
                   borderLeft: `4px solid ${TEAL}`,
-                  borderRadius: 10,
-                  padding: "14px 18px",
-                  marginTop: 14,
+                  borderRadius: 0,
+                  padding: "12px 16px",
+                  marginTop: 12,
                 }}
               >
-                <p
-                  style={{
-                    fontSize: "16px",
-                    fontFamily: "'Raleway', sans-serif",
-                    color: "#272421",
-                    lineHeight: 1.65,
-                    margin: 0,
-                  }}
-                >
+                <p className="coc-context-note">
                   <strong style={{ color: TEAL }}>{t(`costOfCarePage.careTypes.${careType.id}.label`)}</strong>{" "}
                   {t("costOfCarePage.results.currentlyRunsIn")}{" "}
                   <strong>
@@ -645,28 +519,25 @@ const CostOfCareCalculator = () => {
                 </p>
               </div>
 
-              <p
+              <div
+                className="coc-no-print"
                 style={{
-                  fontSize: "17px",
-                  fontFamily: "'Raleway', sans-serif",
-                  color: "#49443f",
-                  lineHeight: 1.6,
-                  textAlign: "center",
-                  margin: "14px 0 0",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: 12,
+                  marginTop: 14,
                 }}
               >
-                {t("costOfCarePage.results.figuresBasedOn")}
-              </p>
-
-              {/* Print button */}
-              <div className="coc-no-print" style={{ textAlign: "center", marginTop: 20 }}>
+                <p className="coc-source-note">{t("costOfCarePage.results.figuresBasedOn")}</p>
                 <button
                   onClick={() => window.print()}
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
                     gap: 10,
-                    padding: "11px 24px",
+                    padding: "11px 22px",
                     borderRadius: 8,
                     fontSize: "16px",
                     fontWeight: 700,
@@ -675,6 +546,7 @@ const CostOfCareCalculator = () => {
                     background: TEAL,
                     border: `1px solid ${TEAL}`,
                     cursor: "pointer",
+                    flexShrink: 0,
                   }}
                 >
                   <Printer size={18} />
@@ -684,12 +556,142 @@ const CostOfCareCalculator = () => {
             </div>
           </div>
 
+          {/* Scoped styles. Doubled class names plus !important are needed to
+              beat two global rules in index.css: `main p { font-size: ... }`
+              and the `[style*="text-transform: uppercase"]` attribute
+              selector that forces font-weight 600 on inline declarations —
+              which is why every uppercase label here is a class, not an
+              inline style. */}
           <style>{`
-            .coc-toggle-grid { grid-template-columns: repeat(2,1fr) !important; }
-            .coc-results-grid { grid-template-columns: 1fr !important; }
-            @media (min-width: 400px) {
-              .coc-results-grid { grid-template-columns: 1fr 1fr !important; }
+            .coc-toggle-grid {
+              display: grid;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              gap: 8px;
             }
+            @media (min-width: 720px) {
+              .coc-toggle-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            }
+
+            .coc-plan-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 16px;
+            }
+            @media (min-width: 720px) {
+              .coc-plan-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+            }
+
+            .coc-results-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 10px;
+            }
+            @media (min-width: 480px) {
+              .coc-results-grid { grid-template-columns: 1fr 1fr; }
+              .coc-total-cell { grid-column: 1 / -1; }
+            }
+            @media (min-width: 800px) {
+              .coc-results-grid { grid-template-columns: 1fr 1fr 1.2fr; }
+              .coc-total-cell { grid-column: auto; }
+            }
+
+            .coc-section-label.coc-section-label {
+              font-size: 18px;
+              letter-spacing: 0.12em;
+              text-transform: uppercase;
+              color: ${TEAL};
+              font-weight: 900;
+              font-family: 'Raleway', sans-serif;
+              margin-bottom: 10px;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+            }
+            .coc-field-label.coc-field-label {
+              display: block;
+              font-size: 17px;
+              font-family: 'Raleway', sans-serif;
+              font-weight: 900;
+              letter-spacing: 0.08em;
+              text-transform: uppercase;
+              color: #272421;
+              margin-bottom: 8px;
+            }
+            .coc-eyebrow.coc-eyebrow {
+              font-size: 14px !important;
+              font-family: 'Raleway', sans-serif;
+              font-weight: 700 !important;
+              letter-spacing: 0.22em;
+              text-transform: uppercase;
+              color: #6f2a30 !important;
+              margin: 0 0 10px !important;
+            }
+            .coc-hero-desc.coc-hero-desc {
+              font-size: 18px !important;
+              font-family: 'Raleway', sans-serif;
+              color: #342e28 !important;
+              line-height: 1.65 !important;
+              margin: 0 !important;
+              max-width: 720px;
+            }
+            .coc-stepper-number {
+              font-family: 'Courier New', monospace;
+              font-weight: 700;
+              font-size: 40px;
+              color: ${TEAL};
+              line-height: 1;
+              display: block;
+            }
+            .coc-stepper-unit.coc-stepper-unit {
+              font-family: 'Raleway', sans-serif;
+              font-size: 15px;
+              font-weight: 600;
+              color: #5e5954;
+              letter-spacing: 0.06em;
+              text-transform: uppercase;
+            }
+            .coc-inflation-text.coc-inflation-text {
+              flex: 1 1 260px;
+              font-size: 17px !important;
+              font-family: 'Raleway', sans-serif;
+              color: #272421 !important;
+              margin: 0 !important;
+              line-height: 1.5 !important;
+              font-weight: 600 !important;
+            }
+            .coc-result-label.coc-result-label {
+              font-size: 13px;
+              letter-spacing: 0.12em;
+              text-transform: uppercase;
+              color: #272421;
+              font-weight: 700;
+              font-family: 'Raleway', sans-serif;
+              margin-bottom: 4px;
+            }
+            .coc-result-unit.coc-result-unit {
+              font-size: 15px;
+              font-weight: 600;
+              color: #49443f;
+              font-family: 'Raleway', sans-serif;
+              margin-top: 2px;
+            }
+            .coc-context-note.coc-context-note {
+              font-size: 16px !important;
+              font-family: 'Raleway', sans-serif;
+              color: #272421 !important;
+              line-height: 1.6 !important;
+              margin: 0 !important;
+            }
+            .coc-source-note.coc-source-note {
+              flex: 1 1 240px;
+              font-size: 15px !important;
+              font-family: 'Raleway', sans-serif;
+              color: #49443f !important;
+              line-height: 1.5 !important;
+              margin: 0 !important;
+            }
+
             .coc-print-summary { display: none; }
             @media print {
               header, footer, nav { display: none !important; }
@@ -720,7 +722,9 @@ const CostOfCareCalculator = () => {
           >
             {t("costOfCarePage.printSummary.careType")}
           </h3>
-          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>{t(`costOfCarePage.careTypes.${careType.id}.label`)}</p>
+          <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
+            {t(`costOfCarePage.careTypes.${careType.id}.label`)}
+          </p>
           <h3
             style={{
               fontSize: "16px",
@@ -750,8 +754,7 @@ const CostOfCareCalculator = () => {
           <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
             {t("costOfCarePage.printSummary.careEnds", {
               years: yearsOfCareNeeded,
-              yearWord:
-                yearsOfCareNeeded === 1 ? t("costOfCarePage.card2.year") : t("costOfCarePage.card2.years"),
+              yearWord: yearsOfCareNeeded === 1 ? t("costOfCarePage.card2.year") : t("costOfCarePage.card2.years"),
               age: ageAtCareEnd,
             })}
           </p>
@@ -822,29 +825,17 @@ const CostOfCareCalculator = () => {
         </div>
 
         {/* Why costs vary */}
-        <section style={{ background: "#f5f2ec", padding: "72px 24px" }}>
+        <section style={{ background: "#f5f2ec", padding: "48px 24px" }}>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
-            <p
-              style={{
-                fontSize: 16,
-                fontFamily: "'Raleway', sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "#6f2a30",
-                margin: "0 0 14px",
-              }}
-            >
-              {t("costOfCarePage.whyCostsVary.eyebrow")}
-            </p>
+            <p className="coc-eyebrow">{t("costOfCarePage.whyCostsVary.eyebrow")}</p>
             <h2
               style={{
-                fontSize: "clamp(24px,3.5vw,36px)",
+                fontSize: "clamp(24px,3.5vw,34px)",
                 fontFamily: "Georgia, serif",
                 fontWeight: 700,
                 color: "#272421",
                 lineHeight: 1.2,
-                margin: "0 0 20px",
+                margin: "0 0 16px",
               }}
             >
               {t("costOfCarePage.whyCostsVary.heading")}
@@ -854,32 +845,15 @@ const CostOfCareCalculator = () => {
                 width: 40,
                 height: 3,
                 background: "#6f2a30",
-                marginBottom: 28,
-                marginTop: 16,
+                marginBottom: 20,
                 borderRadius: 1,
                 display: "block",
               }}
             />
-            <p
-              style={{
-                fontSize: 18,
-                fontFamily: "'Raleway', sans-serif",
-                color: "#272421",
-                lineHeight: 1.85,
-                margin: "0 0 20px",
-              }}
-            >
+            <p className="coc-hero-desc" style={{ marginBottom: "16px" }}>
               {t("costOfCarePage.whyCostsVary.paragraph1")}
             </p>
-            <p
-              style={{
-                fontSize: 18,
-                fontFamily: "'Raleway', sans-serif",
-                color: "#302b26",
-                lineHeight: 1.85,
-                margin: 0,
-              }}
-            >
+            <p className="coc-hero-desc">
               {t("costOfCarePage.whyCostsVary.paragraph2Before")}{" "}
               <Link to="/afh-club" style={{ color: "#9e2c35" }}>
                 {t("costOfCarePage.whyCostsVary.afhClubLink")}
