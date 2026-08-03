@@ -83,15 +83,15 @@ export const CARE_TYPES: CareType[] = [
 ];
 
 export const CARE_TYPE_COLORS: Record<string, string> = {
-  "independent-living": "#8a9a5b",
-  "in-home": "#903f46",
-  "adult-day": "#4f8268",
-  "adult-family-home": "#1c9e90",
-  "assisted-living": "#8c5358",
-  "memory-care": "#73567a",
-  "nursing-semi": "#64605c",
-  "nursing-private": "#723a48",
-  ccrc: "#794347",
+  "independent-living": "#2E7D32",
+  "in-home": "#1565C0",
+  "adult-day": "#00838F",
+  "adult-family-home": "#00695C",
+  "assisted-living": "#AD1457",
+  "memory-care": "#6A1B9A",
+  "nursing-semi": "#5D4037",
+  "nursing-private": "#C62828",
+  ccrc: "#EF6C00",
 };
 
 export const SHORT_CARE_LABELS: Record<string, string> = {
