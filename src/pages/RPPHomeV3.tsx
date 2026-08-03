@@ -249,9 +249,10 @@ const RPPHomeV3 = () => {
 
               /* Cost of Care tile — three columns on desktop: heading+CTA on
                  the left, preview figures in the middle, and the remaining
-                 care types on the right. Only the middle column carries
-                 color: those three figures are the reason to click, and the
-                 overflow list is a quiet "plus six more". */
+                 care types on the right. Secondary text throughout uses
+                 a single dark blue (#25597e, 7.48:1 on white) so the tile
+                 has one supporting color rather than two; the three
+                 care-type figures stay the only accent colors. */
               .rpp-coc-card.rpp-coc-card {
                 display: block;
                 background: #ffffff;
@@ -300,13 +301,13 @@ const RPPHomeV3 = () => {
                 border-left: 1px solid #f0ece5;
                 list-style: none;
                 font-family: 'Raleway', system-ui, sans-serif;
-                font-size: 15px !important;
+                font-size: 16px !important;
                 font-weight: 500 !important;
                 line-height: 1.45 !important;
-                color: #8a847d !important;
+                color: #25597e !important;
               }
               .rpp-coc-more li {
-                color: #8a847d;
+                color: #25597e;
               }
               @media (max-width: 768px) {
                 .rpp-coc-layout.rpp-coc-layout {
@@ -436,9 +437,9 @@ const RPPHomeV3 = () => {
                       <div
                         style={{
                           fontFamily: "'Raleway', sans-serif",
-                          fontSize: 15,
+                          fontSize: 16,
                           fontWeight: 600,
-                          color: "#5e5954",
+                          color: "#25597e",
                           lineHeight: 1.3,
                           marginBottom: 3,
                         }}
