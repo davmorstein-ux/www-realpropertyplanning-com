@@ -9,6 +9,7 @@ import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
 import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageFAQ from "@/components/HomepageFAQ";
+import { CARE_TYPES, CARE_TYPE_COLORS, formatCurrency } from "@/lib/careTypes";
 
 const tileMeta = [
   { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#D97706", imgSrc: tilePlanning },
@@ -22,8 +23,27 @@ const tileMeta = [
   },
 ] as const;
 
+/* The three care types previewed on the homepage tile. Adult family home is
+   the option most families have never heard of, assisted living is the
+   familiar baseline, and memory care is the figure that surprises people —
+   that spread is what makes someone want to see the rest.
+
+   Figures and labels are read from the same CARE_TYPES constant the
+   calculator itself uses, so the tile and the tool can never disagree.
+   Unresolved ids are filtered out rather than throwing, so a renamed id
+   degrades to fewer rows instead of a blank homepage. */
+const PREVIEW_CARE_IDS = ["adult-family-home", "assisted-living", "memory-care"] as const;
+
 const RPPHomeV3 = () => {
   const { t } = useTranslation();
+
+  const previewCareTypes = PREVIEW_CARE_IDS.map((id) => CARE_TYPES.find((c) => c.id === id)).filter(
+    (c): c is (typeof CARE_TYPES)[number] => Boolean(c),
+  );
+  const remainingCareTypes = CARE_TYPES.filter(
+    (c) => !PREVIEW_CARE_IDS.includes(c.id as (typeof PREVIEW_CARE_IDS)[number]),
+  );
+
   return (
     <>
       <SEOHead title={t("seo.title")} description={t("seo.description")} canonical="https://realpropertyplanning.com" />
@@ -52,15 +72,13 @@ const RPPHomeV3 = () => {
             decoding="async"
           />
           {/* Logo + tagline overlay — normal flow, so this content's own
-              height determines the hero's height on every screen size,
-              rather than being absolutely positioned over a fixed-height
-              container where it could get clipped on narrow viewports.
+              height determines the hero's height on every screen size.
 
-              The two hero CTA buttons that used to sit below the tagline were
-              removed: "Find the Right Starting Point" only scrolled to tiles
-              already visible in the same viewport, and "Connect with a
-              Specialist" duplicated the "I Need a Professional" funnel tile.
-              The funnel tiles themselves are the call to action. */}
+              The two hero CTA buttons were removed: "Find the Right Starting
+              Point" only scrolled to tiles already visible in the same
+              viewport, and "Connect with a Specialist" duplicated the
+              "I Need a Professional" funnel tile below. The tiles are the
+              call to action. */}
           <div
             style={{
               position: "relative",
@@ -73,7 +91,6 @@ const RPPHomeV3 = () => {
               gap: "clamp(6px, 1vw, 12px)",
             }}
           >
-            {/* Tagline — two lines as separate spans */}
             <h1 id="rpp-tagline" style={{ textAlign: "center", margin: 0 }}>
               <span
                 className="rpp-tagline-line-v2"
@@ -132,7 +149,6 @@ const RPPHomeV3 = () => {
               </h2>
             </div>
 
-            {/* Tap hint — mobile only */}
             <p className="block sm:hidden text-center text-base text-navy font-medium mb-4 tracking-wide">
               {t("funnel.mobileHint")}
             </p>
@@ -222,12 +238,11 @@ const RPPHomeV3 = () => {
               })}
             </div>
 
-            {/* ── Scoped styles for this section ───────────────────────
-                Text-transform lives in these classes rather than inline
-                styles: a global [style*="text-transform: uppercase"]
-                attribute selector in index.css forces font-weight 600 on
-                any element that declares it inline. Doubled class names
-                give the specificity needed to beat the global
+            {/* ── Scoped styles ───────────────────────────────────────
+                text-transform lives in classes rather than inline styles:
+                a global [style*="text-transform: uppercase"] selector in
+                index.css forces font-weight 600 on anything declaring it
+                inline. Doubled class names beat the global
                 `main p { font-size: ... !important }` rule. */}
             <style>{`
               .rpp-card-desc {
@@ -238,10 +253,10 @@ const RPPHomeV3 = () => {
               .rpp-explore-badge.rpp-explore-badge {
                 text-transform: uppercase;
               }
-
-              /* AFH Club strip — a quiet, explicitly labeled door for the
-                 owner/operator/investor audience. Deliberately lower in the
-                 visual hierarchy than the funnel tiles and the calculator. */
+              .rpp-coc-eyebrow.rpp-coc-eyebrow {
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+              }
               .rpp-afh-strip.rpp-afh-strip {
                 display: flex;
                 flex-wrap: wrap;
@@ -299,10 +314,7 @@ const RPPHomeV3 = () => {
               }
             `}</style>
 
-            {/* ── Cost of Care Calculator — full width ───────────────
-                Promoted from a half-width card. It is the site's
-                highest-demand original tool and speaks to the same
-                family audience as the funnel tiles above. */}
+            {/* ── Cost of Care Calculator — full width, data-driven ──── */}
             <a
               href="/cost-of-care-calculator"
               className="group marquee-hover block"
@@ -312,10 +324,11 @@ const RPPHomeV3 = () => {
                 background: "#ffffff",
                 border: "2px solid #d43341",
                 borderRadius: 12,
-                padding: "1.75rem 2rem",
+                padding: "1.6rem 1.9rem",
               }}
             >
               <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+                {/* Left: heading, description, CTA */}
                 <div className="flex-1 min-w-0 flex flex-col items-center md:items-start text-center md:text-left">
                   <h3
                     className="coc-heading"
@@ -331,11 +344,11 @@ const RPPHomeV3 = () => {
                     className="rpp-card-desc coc-desc"
                     style={{
                       fontFamily: "'Raleway', sans-serif",
-                      fontSize: 21,
+                      fontSize: 20,
                       color: "#272421",
                       lineHeight: 1.55,
                       margin: "0 0 18px",
-                      maxWidth: 560,
+                      maxWidth: 460,
                     }}
                   >
                     {t("costOfCare.description")}
@@ -358,16 +371,79 @@ const RPPHomeV3 = () => {
                   </span>
                 </div>
 
-                {/* Image slot — sized so a watercolor replacement can be
-                    dropped in without touching the layout. Swap the src
-                    and the container holds its shape. */}
-                <img
-                  src="/cost-of-care-calc-graphic.webp"
-                  alt=""
-                  aria-hidden="true"
-                  className="h-[150px] md:h-[210px] w-auto"
-                  style={{ flexShrink: 0, display: "block", alignSelf: "center", maxWidth: "100%" }}
-                />
+                {/* Right: live figures pulled from CARE_TYPES */}
+                <div
+                  className="w-full md:w-auto md:flex-1 min-w-0 md:border-l md:pl-9"
+                  style={{ borderColor: "#e2ddd5" }}
+                >
+                  <div
+                    className="rpp-coc-eyebrow"
+                    style={{
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 14,
+                      fontWeight: 700,
+                      color: "#5e5954",
+                      marginBottom: "0.85rem",
+                    }}
+                  >
+                    {t("costOfCarePage.results.washington")} · {t("costOfCarePage.results.monthly")}
+                  </div>
+
+                  {previewCareTypes.map((c, i) => (
+                    <div
+                      key={c.id}
+                      style={{
+                        display: "flex",
+                        alignItems: "baseline",
+                        justifyContent: "space-between",
+                        gap: 14,
+                        paddingBottom: 10,
+                        marginBottom: 10,
+                        borderBottom: i === previewCareTypes.length - 1 ? "none" : "1px solid #f0ece5",
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontFamily: "'Raleway', sans-serif",
+                          fontSize: 17,
+                          fontWeight: 600,
+                          color: "#272421",
+                          lineHeight: 1.3,
+                        }}
+                      >
+                        {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
+                      </span>
+                      <span
+                        style={{
+                          fontFamily: "Georgia, serif",
+                          fontSize: 23,
+                          fontWeight: 700,
+                          color: CARE_TYPE_COLORS[c.id] ?? "#903f46",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        {formatCurrency(c.waMonthly)}
+                      </span>
+                    </div>
+                  ))}
+
+                  {remainingCareTypes.length > 0 && (
+                    <div
+                      style={{
+                        fontFamily: "'Raleway', sans-serif",
+                        fontSize: 15,
+                        fontWeight: 600,
+                        color: "#5e5954",
+                        lineHeight: 1.45,
+                        marginTop: 12,
+                        paddingTop: 12,
+                        borderTop: "1px solid #f0ece5",
+                      }}
+                    >
+                      {remainingCareTypes.map((c) => t(`costOfCarePage.careTypes.${c.id}.shortLabel`)).join(" · ")}
+                    </div>
+                  )}
+                </div>
               </div>
             </a>
 
