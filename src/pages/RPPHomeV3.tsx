@@ -389,81 +389,86 @@ const RPPHomeV3 = () => {
               }
             `}</style>
 
-            {/* ── Cost of Care Calculator — condensed, data-driven ─────
-                Heading and button share the top row; the three figures sit
-                below in equal columns. The prose description was dropped —
-                the figures say what the tool does more directly than a
-                sentence listing the same care types. */}
+            {/* ── Cost of Care Calculator — three-column layout ───────
+                Title + CTA on the left, three preview figures stacked in
+                the middle, and the remaining care types as a colored list
+                on the right. */}
             <a href="/cost-of-care-calculator" className="rpp-coc-card group marquee-hover">
-              <div className="rpp-coc-top">
-                <h3
-                  className="coc-heading"
-                  style={{
-                    fontFamily: "Georgia, serif",
-                    margin: 0,
-                    lineHeight: 1.1,
-                  }}
-                >
-                  <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
-                  <span style={{ color: "#d43341" }}>{t("costOfCare.headingPart2")}</span>
-                </h3>
+              <div className="rpp-coc-layout">
+                <div className="rpp-coc-left">
+                  <h3
+                    className="coc-heading"
+                    style={{
+                      fontFamily: "Georgia, serif",
+                      margin: 0,
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
+                    <span style={{ color: "#d43341" }}>{t("costOfCare.headingPart2")}</span>
+                  </h3>
 
-                <span
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                    background: "#d43341",
-                    color: "#ffffff",
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 700,
-                    fontSize: 16,
-                    padding: "11px 22px",
-                    borderRadius: 8,
-                    whiteSpace: "nowrap",
-                    flex: "0 0 auto",
-                  }}
-                >
-                  {t("costOfCare.cta")}
-                </span>
-              </div>
-
-              <div className="rpp-coc-figures">
-                {previewCareTypes.map((c) => (
-                  <div key={c.id} className="rpp-coc-cell">
-                    <div
-                      style={{
-                        fontFamily: "'Raleway', sans-serif",
-                        fontSize: 15,
-                        fontWeight: 600,
-                        color: "#5e5954",
-                        lineHeight: 1.3,
-                        marginBottom: 3,
-                      }}
-                    >
-                      {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: "Georgia, serif",
-                        fontSize: 25,
-                        fontWeight: 700,
-                        color: CARE_TYPE_COLORS[c.id] ?? "#903f46",
-                        lineHeight: 1.15,
-                        whiteSpace: "nowrap",
-                      }}
-                    >
-                      {formatCurrency(c.waMonthly)}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {remainingCareTypes.length > 0 && (
-                <div className="rpp-coc-more">
-                  {remainingCareTypes.map((c) => t(`costOfCarePage.careTypes.${c.id}.shortLabel`)).join(" · ")}
+                  <span
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      background: "#d43341",
+                      color: "#ffffff",
+                      fontFamily: "'Raleway', sans-serif",
+                      fontWeight: 700,
+                      fontSize: 16,
+                      padding: "11px 22px",
+                      borderRadius: 8,
+                      whiteSpace: "nowrap",
+                      flex: "0 0 auto",
+                    }}
+                  >
+                    {t("costOfCare.cta")}
+                  </span>
                 </div>
-              )}
+
+                <div className="rpp-coc-figures">
+                  {previewCareTypes.map((c) => (
+                    <div key={c.id} className="rpp-coc-cell">
+                      <div
+                        style={{
+                          fontFamily: "'Raleway', sans-serif",
+                          fontSize: 15,
+                          fontWeight: 600,
+                          color: "#5e5954",
+                          lineHeight: 1.3,
+                          marginBottom: 3,
+                        }}
+                      >
+                        {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
+                      </div>
+                      <div
+                        style={{
+                          fontFamily: "Georgia, serif",
+                          fontSize: 25,
+                          fontWeight: 700,
+                          color: CARE_TYPE_COLORS[c.id] ?? "#903f46",
+                          lineHeight: 1.15,
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        {formatCurrency(c.waMonthly)}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {remainingCareTypes.length > 0 && (
+                  <ul className="rpp-coc-more">
+                    {remainingCareTypes.map((c) => (
+                      <li key={c.id} style={{ color: CARE_TYPE_COLORS[c.id] ?? "#903f46" }}>
+                        {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </a>
 
             {/* ── AFH Club — labeled entrance, not a co-equal section ── */}
