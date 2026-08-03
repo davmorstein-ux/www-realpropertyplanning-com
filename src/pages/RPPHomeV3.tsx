@@ -302,12 +302,13 @@ const RPPHomeV3 = () => {
                 list-style: none;
                 font-family: 'Raleway', system-ui, sans-serif;
                 font-size: 16px !important;
-                font-weight: 500 !important;
+                font-weight: 700 !important;
                 line-height: 1.45 !important;
                 color: #25597e !important;
               }
               .rpp-coc-more li {
                 color: #25597e;
+                font-weight: 700;
               }
               @media (max-width: 768px) {
                 .rpp-coc-layout.rpp-coc-layout {
@@ -438,7 +439,7 @@ const RPPHomeV3 = () => {
                         style={{
                           fontFamily: "'Raleway', sans-serif",
                           fontSize: 16,
-                          fontWeight: 600,
+                          fontWeight: 700,
                           color: "#25597e",
                           lineHeight: 1.3,
                           marginBottom: 3,
