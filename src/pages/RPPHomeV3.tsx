@@ -23,15 +23,14 @@ const tileMeta = [
   },
 ] as const;
 
-/* The three care types previewed on the homepage tile. Adult family home is
-   the option most families have never heard of, assisted living is the
-   familiar baseline, and memory care is the figure that surprises people —
-   that spread is what makes someone want to see the rest.
+/* Three care types previewed on the homepage tile. Adult family home is the
+   option most families have never heard of, assisted living is the familiar
+   baseline, and memory care is the figure that surprises people.
 
-   Figures and labels are read from the same CARE_TYPES constant the
-   calculator itself uses, so the tile and the tool can never disagree.
-   Unresolved ids are filtered out rather than throwing, so a renamed id
-   degrades to fewer rows instead of a blank homepage. */
+   Figures and labels come from the same CARE_TYPES constant the calculator
+   reads, so the tile and the tool cannot disagree. Unresolved ids are
+   filtered out rather than throwing — a renamed id degrades to fewer
+   columns instead of a blank homepage. */
 const PREVIEW_CARE_IDS = ["adult-family-home", "assisted-living", "memory-care"] as const;
 
 const RPPHomeV3 = () => {
@@ -77,8 +76,7 @@ const RPPHomeV3 = () => {
               The two hero CTA buttons were removed: "Find the Right Starting
               Point" only scrolled to tiles already visible in the same
               viewport, and "Connect with a Specialist" duplicated the
-              "I Need a Professional" funnel tile below. The tiles are the
-              call to action. */}
+              "I Need a Professional" funnel tile below. */}
           <div
             style={{
               position: "relative",
@@ -245,18 +243,73 @@ const RPPHomeV3 = () => {
                 inline. Doubled class names beat the global
                 `main p { font-size: ... !important }` rule. */}
             <style>{`
-              .rpp-card-desc {
-                color: #272421 !important;
-                opacity: 1 !important;
-                font-weight: 600 !important;
-              }
               .rpp-explore-badge.rpp-explore-badge {
                 text-transform: uppercase;
               }
-              .rpp-coc-eyebrow.rpp-coc-eyebrow {
-                text-transform: uppercase;
-                letter-spacing: 0.08em;
+
+              /* Cost of Care tile — figures run horizontally so the card
+                 stays short. Four columns on desktop, two on mobile. */
+              .rpp-coc-card.rpp-coc-card {
+                display: block;
+                background: #ffffff;
+                border: 2px solid #d43341;
+                border-radius: 12px;
+                padding: 1.35rem 1.6rem;
+                text-decoration: none;
               }
+              .rpp-coc-top.rpp-coc-top {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 0.9rem 1.5rem;
+                margin-bottom: 1.05rem;
+              }
+              .rpp-coc-blurb.rpp-coc-blurb {
+                flex: 1 1 220px;
+                min-width: 0;
+                font-family: 'Raleway', system-ui, sans-serif;
+                font-size: 17px !important;
+                font-weight: 600 !important;
+                color: #4a453f !important;
+                opacity: 1 !important;
+                line-height: 1.45;
+                margin: 0;
+              }
+              .rpp-coc-figures.rpp-coc-figures {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                border-top: 1px solid #f0ece5;
+                padding-top: 0.9rem;
+              }
+              .rpp-coc-cell.rpp-coc-cell {
+                padding: 0 1rem;
+                border-left: 1px solid #f0ece5;
+                min-width: 0;
+              }
+              .rpp-coc-figures .rpp-coc-cell:nth-child(4n + 1) {
+                border-left: none;
+                padding-left: 0;
+              }
+              @media (max-width: 767px) {
+                .rpp-coc-card.rpp-coc-card {
+                  padding: 1.2rem 1.25rem;
+                }
+                .rpp-coc-figures.rpp-coc-figures {
+                  grid-template-columns: repeat(2, minmax(0, 1fr));
+                  gap: 0.9rem 0;
+                }
+                .rpp-coc-figures .rpp-coc-cell:nth-child(4n + 1) {
+                  border-left: 1px solid #f0ece5;
+                  padding-left: 1rem;
+                }
+                .rpp-coc-figures .rpp-coc-cell:nth-child(2n + 1) {
+                  border-left: none;
+                  padding-left: 0;
+                }
+              }
+
+              /* AFH Club — a quiet, explicitly labeled door for the
+                 owner/operator/investor audience. */
               .rpp-afh-strip.rpp-afh-strip {
                 display: flex;
                 flex-wrap: wrap;
@@ -265,8 +318,8 @@ const RPPHomeV3 = () => {
                 gap: 0.5rem 1.25rem;
                 width: 100%;
                 min-height: 56px;
-                margin-top: 1.25rem;
-                padding: 0.9rem 1.5rem;
+                margin-top: 1.1rem;
+                padding: 0.85rem 1.5rem;
                 background: #ffffff;
                 border: 1px solid #cfd8d4;
                 border-left: 5px solid #0a5648;
@@ -314,136 +367,89 @@ const RPPHomeV3 = () => {
               }
             `}</style>
 
-            {/* ── Cost of Care Calculator — full width, data-driven ──── */}
-            <a
-              href="/cost-of-care-calculator"
-              className="group marquee-hover block"
-              style={{
-                textDecoration: "none",
-                display: "block",
-                background: "#ffffff",
-                border: "2px solid #d43341",
-                borderRadius: 12,
-                padding: "1.6rem 1.9rem",
-              }}
-            >
-              <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-                {/* Left: heading, description, CTA */}
-                <div className="flex-1 min-w-0 flex flex-col items-center md:items-start text-center md:text-left">
-                  <h3
-                    className="coc-heading"
-                    style={{
-                      fontFamily: "Georgia, serif",
-                      margin: "0 0 0.6rem",
-                    }}
-                  >
-                    <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
-                    <span style={{ color: "#d43341" }}>{t("costOfCare.headingPart2")}</span>
-                  </h3>
-                  <div
-                    className="rpp-card-desc coc-desc"
-                    style={{
-                      fontFamily: "'Raleway', sans-serif",
-                      fontSize: 20,
-                      color: "#272421",
-                      lineHeight: 1.55,
-                      margin: "0 0 18px",
-                      maxWidth: 460,
-                    }}
-                  >
-                    {t("costOfCare.description")}
-                  </div>
-                  <span
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 8,
-                      background: "#d43341",
-                      color: "#ffffff",
-                      fontFamily: "'Raleway', sans-serif",
-                      fontWeight: 700,
-                      fontSize: 17,
-                      padding: "12px 24px",
-                      borderRadius: 8,
-                    }}
-                  >
-                    {t("costOfCare.cta")}
-                  </span>
-                </div>
-
-                {/* Right: live figures pulled from CARE_TYPES */}
-                <div
-                  className="w-full md:w-auto md:flex-1 min-w-0 md:border-l md:pl-9"
-                  style={{ borderColor: "#e2ddd5" }}
+            {/* ── Cost of Care Calculator — condensed, data-driven ───── */}
+            <a href="/cost-of-care-calculator" className="rpp-coc-card group marquee-hover">
+              <div className="rpp-coc-top">
+                <h3
+                  className="coc-heading"
+                  style={{
+                    fontFamily: "Georgia, serif",
+                    margin: 0,
+                    lineHeight: 1.1,
+                    flex: "0 0 auto",
+                  }}
                 >
-                  <div
-                    className="rpp-coc-eyebrow"
-                    style={{
-                      fontFamily: "'Raleway', sans-serif",
-                      fontSize: 14,
-                      fontWeight: 700,
-                      color: "#5e5954",
-                      marginBottom: "0.85rem",
-                    }}
-                  >
-                    {t("costOfCarePage.results.washington")} · {t("costOfCarePage.results.monthly")}
-                  </div>
+                  <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
+                  <span style={{ color: "#d43341" }}>{t("costOfCare.headingPart2")}</span>
+                </h3>
 
-                  {previewCareTypes.map((c, i) => (
-                    <div
-                      key={c.id}
-                      style={{
-                        display: "flex",
-                        alignItems: "baseline",
-                        justifyContent: "space-between",
-                        gap: 14,
-                        paddingBottom: 10,
-                        marginBottom: 10,
-                        borderBottom: i === previewCareTypes.length - 1 ? "none" : "1px solid #f0ece5",
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: "'Raleway', sans-serif",
-                          fontSize: 17,
-                          fontWeight: 600,
-                          color: "#272421",
-                          lineHeight: 1.3,
-                        }}
-                      >
-                        {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: "Georgia, serif",
-                          fontSize: 23,
-                          fontWeight: 700,
-                          color: CARE_TYPE_COLORS[c.id] ?? "#903f46",
-                          whiteSpace: "nowrap",
-                        }}
-                      >
-                        {formatCurrency(c.waMonthly)}
-                      </span>
-                    </div>
-                  ))}
+                <div className="rpp-coc-blurb">{t("costOfCare.description")}</div>
 
-                  {remainingCareTypes.length > 0 && (
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    background: "#d43341",
+                    color: "#ffffff",
+                    fontFamily: "'Raleway', sans-serif",
+                    fontWeight: 700,
+                    fontSize: 16,
+                    padding: "11px 22px",
+                    borderRadius: 8,
+                    whiteSpace: "nowrap",
+                    flex: "0 0 auto",
+                  }}
+                >
+                  {t("costOfCare.cta")}
+                </span>
+              </div>
+
+              <div className="rpp-coc-figures">
+                {previewCareTypes.map((c) => (
+                  <div key={c.id} className="rpp-coc-cell">
                     <div
                       style={{
                         fontFamily: "'Raleway', sans-serif",
                         fontSize: 15,
                         fontWeight: 600,
                         color: "#5e5954",
-                        lineHeight: 1.45,
-                        marginTop: 12,
-                        paddingTop: 12,
-                        borderTop: "1px solid #f0ece5",
+                        lineHeight: 1.3,
+                        marginBottom: 3,
+                      }}
+                    >
+                      {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "Georgia, serif",
+                        fontSize: 25,
+                        fontWeight: 700,
+                        color: CARE_TYPE_COLORS[c.id] ?? "#903f46",
+                        lineHeight: 1.15,
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {formatCurrency(c.waMonthly)}
+                    </div>
+                  </div>
+                ))}
+
+                {remainingCareTypes.length > 0 && (
+                  <div className="rpp-coc-cell" style={{ display: "flex", alignItems: "center" }}>
+                    <div
+                      style={{
+                        fontFamily: "'Raleway', sans-serif",
+                        fontSize: 15,
+                        fontWeight: 600,
+                        color: "#7a746e",
+                        lineHeight: 1.4,
                       }}
                     >
                       {remainingCareTypes.map((c) => t(`costOfCarePage.careTypes.${c.id}.shortLabel`)).join(" · ")}
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </a>
 
