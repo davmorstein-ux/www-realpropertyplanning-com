@@ -54,7 +54,13 @@ const RPPHomeV3 = () => {
           {/* Logo + tagline overlay — normal flow, so this content's own
               height determines the hero's height on every screen size,
               rather than being absolutely positioned over a fixed-height
-              container where it could get clipped on narrow viewports. */}
+              container where it could get clipped on narrow viewports.
+
+              The two hero CTA buttons that used to sit below the tagline were
+              removed: "Find the Right Starting Point" only scrolled to tiles
+              already visible in the same viewport, and "Connect with a
+              Specialist" duplicated the "I Need a Professional" funnel tile.
+              The funnel tiles themselves are the call to action. */}
           <div
             style={{
               position: "relative",
@@ -105,104 +111,6 @@ const RPPHomeV3 = () => {
                 {t("hero.taglineLine2")}
               </span>
             </h1>
-
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                alignItems: "stretch",
-                gap: "clamp(10px, 1.4vw, 16px)",
-                maxWidth: "min(760px, 100%)",
-                margin: "clamp(14px, 2.2vw, 26px) auto 0",
-              }}
-            >
-              <a
-                href="#rpp-start-here"
-                className="marquee-hover"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  textAlign: "center",
-                  flex: "0 0 auto",
-                  gap: 8,
-                  background: "#ffffff",
-                  border: "2px solid #7f1d1d",
-                  color: "#7f1d1d",
-                  fontFamily: "'Raleway', sans-serif",
-                  fontWeight: 700,
-                  fontSize: "clamp(15px, 1.6vw, 18px)",
-                  padding: "clamp(10px, 1.4vw, 14px) clamp(20px, 2.6vw, 30px)",
-                  borderRadius: 8,
-                  textDecoration: "none",
-                  boxShadow: "0 4px 14px rgba(0,0,0,0.18)",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {t("hero.ctaPrimary")}
-                <svg
-                  className="rpp-cta-arrow"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="none"
-                  stroke="#7f1d1d"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                  style={{ flexShrink: 0 }}
-                >
-                  <polyline points="19 12 12 19 5 12" />
-                  <line x1="12" y1="5" x2="12" y2="19" />
-                </svg>
-              </a>
-              <a
-                href="/featured-professionals"
-                className="marquee-hover"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  textAlign: "center",
-                  flex: "0 0 auto",
-                  gap: 8,
-                  background: "#7f1d1d",
-                  border: "2px solid #7f1d1d",
-                  outline: "2px solid #ffffff",
-                  outlineOffset: "-6px",
-                  color: "#ffffff",
-                  fontFamily: "'Raleway', sans-serif",
-                  fontWeight: 700,
-                  fontSize: "clamp(15px, 1.6vw, 18px)",
-                  padding: "clamp(10px, 1.4vw, 14px) clamp(20px, 2.6vw, 30px)",
-                  borderRadius: 8,
-                  textDecoration: "none",
-                  boxShadow: "0 4px 14px rgba(0,0,0,0.18)",
-                  whiteSpace: "nowrap",
-                  ["--marquee-color" as string]: "#ffffff",
-                }}
-              >
-                {t("hero.ctaSecondary")}
-                <svg
-                  className="rpp-cta-arrow-right"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="none"
-                  stroke="#ffffff"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                  style={{ flexShrink: 0 }}
-                >
-                  <polyline points="12 5 19 12 12 19" />
-                  <line x1="19" y1="12" x2="5" y2="12" />
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
 
@@ -254,7 +162,7 @@ const RPPHomeV3 = () => {
                             style={{ display: "block", width: "100%", height: "190px", objectFit: "cover" }}
                           />
                           <span
-                            className="absolute top-3 right-3 sm:hidden"
+                            className="absolute top-3 right-3 sm:hidden rpp-explore-badge"
                             style={{
                               backgroundColor: "rgba(255,255,255,0.88)",
                               color: "#272421",
@@ -264,7 +172,6 @@ const RPPHomeV3 = () => {
                               padding: "3px 8px",
                               borderRadius: 20,
                               letterSpacing: "0.04em",
-                              textTransform: "uppercase",
                             }}
                           >
                             {t("funnel.exploreBadge")}
@@ -315,206 +222,177 @@ const RPPHomeV3 = () => {
               })}
             </div>
 
-            {/* ── Secondary cards: Cost of Care + AFH Club ─────────── */}
+            {/* ── Scoped styles for this section ───────────────────────
+                Text-transform lives in these classes rather than inline
+                styles: a global [style*="text-transform: uppercase"]
+                attribute selector in index.css forces font-weight 600 on
+                any element that declares it inline. Doubled class names
+                give the specificity needed to beat the global
+                `main p { font-size: ... !important }` rule. */}
             <style>{`
               .rpp-card-desc {
                 color: #272421 !important;
                 opacity: 1 !important;
                 font-weight: 600 !important;
               }
+              .rpp-explore-badge.rpp-explore-badge {
+                text-transform: uppercase;
+              }
+
+              /* AFH Club strip — a quiet, explicitly labeled door for the
+                 owner/operator/investor audience. Deliberately lower in the
+                 visual hierarchy than the funnel tiles and the calculator. */
+              .rpp-afh-strip.rpp-afh-strip {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem 1.25rem;
+                width: 100%;
+                min-height: 56px;
+                margin-top: 1.25rem;
+                padding: 0.9rem 1.5rem;
+                background: #ffffff;
+                border: 1px solid #cfd8d4;
+                border-left: 5px solid #0a5648;
+                border-radius: 10px;
+                text-decoration: none;
+                text-align: center;
+                transition: background-color 150ms ease, border-color 150ms ease;
+              }
+              .rpp-afh-strip:hover,
+              .rpp-afh-strip:focus-visible {
+                background: #f4f8f6;
+                border-color: #0a5648;
+              }
+              .rpp-afh-strip-label.rpp-afh-strip-label {
+                font-family: 'DM Sans', 'Raleway', system-ui, sans-serif;
+                font-size: 17px;
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: #063e33;
+                margin: 0;
+              }
+              .rpp-afh-strip-cta.rpp-afh-strip-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-family: 'Raleway', system-ui, sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+                color: #0a5648;
+                text-decoration: underline;
+                text-underline-offset: 4px;
+                margin: 0;
+              }
+              @media (max-width: 640px) {
+                .rpp-afh-strip.rpp-afh-strip {
+                  flex-direction: column;
+                  gap: 0.6rem;
+                  padding: 1rem 1.25rem;
+                }
+                .rpp-afh-strip-label.rpp-afh-strip-label {
+                  font-size: 15px;
+                  letter-spacing: 0.05em;
+                }
+              }
             `}</style>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
-              <a
-                href="/cost-of-care-calculator"
-                className="group marquee-hover block"
-                style={{
-                  textDecoration: "none",
-                  display: "flex",
-                  flexDirection: "column",
-                  background: "#ffffff",
-                  border: "2px solid #d43341",
-                  borderRadius: 12,
-                  padding: "1.25rem 1.5rem",
-                  minHeight: 220,
-                }}
-              >
-                <h3
-                  className="coc-heading"
-                  style={{
-                    fontFamily: "Georgia, serif",
-                    textAlign: "center",
-                  }}
-                >
-                  <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
-                  <span style={{ color: "#d43341" }}>{t("costOfCare.headingPart2")}</span>
-                </h3>
-                <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-5" style={{ flex: 1 }}>
-                  <div
+
+            {/* ── Cost of Care Calculator — full width ───────────────
+                Promoted from a half-width card. It is the site's
+                highest-demand original tool and speaks to the same
+                family audience as the funnel tiles above. */}
+            <a
+              href="/cost-of-care-calculator"
+              className="group marquee-hover block"
+              style={{
+                textDecoration: "none",
+                display: "block",
+                background: "#ffffff",
+                border: "2px solid #d43341",
+                borderRadius: 12,
+                padding: "1.75rem 2rem",
+              }}
+            >
+              <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+                <div className="flex-1 min-w-0 flex flex-col items-center md:items-start text-center md:text-left">
+                  <h3
+                    className="coc-heading"
                     style={{
-                      flex: 1,
-                      minWidth: 0,
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      textAlign: "center",
+                      fontFamily: "Georgia, serif",
+                      margin: "0 0 0.6rem",
                     }}
                   >
-                    <div
-                      className="rpp-card-desc coc-desc"
-                      style={{
-                        fontFamily: "'Raleway', sans-serif",
-                        fontSize: 20,
-                        color: "#272421",
-                        lineHeight: 1.5,
-                        margin: "0 0 14px",
-                        maxWidth: 320,
-                      }}
-                    >
-                      {t("costOfCare.description")}
-                    </div>
-                    <span
-                      style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: 8,
-                        background: "#d43341",
-                        color: "#ffffff",
-                        fontFamily: "'Raleway', sans-serif",
-                        fontWeight: 700,
-                        fontSize: 16,
-                        padding: "10px 20px",
-                        borderRadius: 8,
-                        marginTop: "auto",
-                      }}
-                    >
-                      {t("costOfCare.cta")}
-                    </span>
-                  </div>
-                  <img
-                    src="/cost-of-care-calc-graphic.webp"
-                    alt=""
-                    aria-hidden="true"
-                    className="h-[140px] sm:h-[220px] w-auto"
-                    style={{ flexShrink: 0, display: "block", alignSelf: "center" }}
-                  />
-                </div>
-              </a>
-
-              <a
-                href="/afh-club"
-                className="group marquee-hover block"
-                style={{ textDecoration: "none", borderRadius: 12 }}
-              >
-                <div
-                  style={{
-                    position: "relative",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    textAlign: "center",
-                    border: "2px solid #0a5648",
-                    borderRadius: 12,
-                    padding: "1.5rem",
-                    minHeight: 220,
-                    overflow: "hidden",
-                    backgroundImage: "url(/afh-club-house-bg.webp)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  {/* Readability overlay */}
+                    <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
+                    <span style={{ color: "#d43341" }}>{t("costOfCare.headingPart2")}</span>
+                  </h3>
                   <div
+                    className="rpp-card-desc coc-desc"
                     style={{
-                      position: "absolute",
-                      inset: 0,
-                      background: "rgba(255,255,255,0.62)",
-                    }}
-                  />
-
-                  {/* Content sits above the overlay */}
-                  <div
-                    style={{
-                      position: "relative",
-                      zIndex: 1,
-                      height: "100%",
-                      width: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "flex-start",
+                      fontFamily: "'Raleway', sans-serif",
+                      fontSize: 21,
+                      color: "#272421",
+                      lineHeight: 1.55,
+                      margin: "0 0 18px",
+                      maxWidth: 560,
                     }}
                   >
-                    <h3
-                      className="afh-club-heading"
-                      style={{
-                        fontFamily: "Georgia, serif",
-                        fontSize: "72px",
-                        fontWeight: 700,
-                        margin: "0 0 10px",
-                        lineHeight: 1.1,
-                        backgroundImage: "linear-gradient(180deg, #2ba57c 0%, #0f6b52 45%, #0a5648 75%, #063e33 100%)",
-                        WebkitBackgroundClip: "text",
-                        backgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        color: "transparent",
-                        textShadow:
-                          "0px 1px 0 #0a5648, 0px 2px 0 #094e42, 0px 3px 0 #08453c, 0px 4px 0 #073c35, 0px 5px 0 #06332e, 0px 7px 10px rgba(0,0,0,0.35)",
-                      }}
-                    >
-                      {t("afhClub.heading")}
-                    </h3>
-                    <p
-                      className="afh-eyebrow-label-v2"
-                      style={{
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontWeight: 700,
-                        letterSpacing: "0.12em",
-                        textTransform: "uppercase",
-                        fontSize: 16,
-                        color: "#063e33",
-                        textShadow:
-                          "0 0 6px rgba(255,255,255,0.9), 0 0 3px rgba(255,255,255,0.9), 0 1px 2px rgba(255,255,255,0.9)",
-                        margin: "0 0 12px",
-                      }}
-                    >
-                      {t("afhClub.eyebrow")}
-                    </p>
-                    <div style={{ width: 64, height: 2, background: "#c8b5b7", margin: "0 0 14px" }} />
-                    <div
-                      className="rpp-card-desc afh-club-desc"
-                      style={{
-                        fontFamily: "'Raleway', sans-serif",
-                        fontSize: 20,
-                        color: "#272421",
-                        lineHeight: 1.5,
-                        margin: "0 0 16px",
-                        maxWidth: 360,
-                      }}
-                    >
-                      {t("afhClub.description")}
-                    </div>
-                    <span
-                      style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: 8,
-                        background: "#0a5648",
-                        color: "#ffffff",
-                        fontFamily: "'Raleway', sans-serif",
-                        fontWeight: 700,
-                        fontSize: 16,
-                        padding: "10px 20px",
-                        borderRadius: 8,
-                        marginTop: "auto",
-                      }}
-                    >
-                      {t("afhClub.cta")}
-                    </span>
+                    {t("costOfCare.description")}
                   </div>
+                  <span
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      background: "#d43341",
+                      color: "#ffffff",
+                      fontFamily: "'Raleway', sans-serif",
+                      fontWeight: 700,
+                      fontSize: 17,
+                      padding: "12px 24px",
+                      borderRadius: 8,
+                    }}
+                  >
+                    {t("costOfCare.cta")}
+                  </span>
                 </div>
-              </a>
-            </div>
+
+                {/* Image slot — sized so a watercolor replacement can be
+                    dropped in without touching the layout. Swap the src
+                    and the container holds its shape. */}
+                <img
+                  src="/cost-of-care-calc-graphic.webp"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-[150px] md:h-[210px] w-auto"
+                  style={{ flexShrink: 0, display: "block", alignSelf: "center", maxWidth: "100%" }}
+                />
+              </div>
+            </a>
+
+            {/* ── AFH Club — labeled entrance, not a co-equal section ── */}
+            <a href="/afh-club" className="rpp-afh-strip marquee-hover">
+              <span className="rpp-afh-strip-label">{t("afhClub.eyebrow")}</span>
+              <span className="rpp-afh-strip-cta">
+                {t("afhClub.cta")}
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="#0a5648"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                  style={{ flexShrink: 0 }}
+                >
+                  <polyline points="12 5 19 12 12 19" />
+                  <line x1="19" y1="12" x2="5" y2="12" />
+                </svg>
+              </span>
+            </a>
           </div>
         </section>
 
