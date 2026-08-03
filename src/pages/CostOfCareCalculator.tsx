@@ -112,6 +112,11 @@ const CostOfCareCalculator = () => {
   const [inflationId, setInflationId] = useState<(typeof INFLATION_PRESETS)[number]["id"]>("average");
   const [showInflationAdjust, setShowInflationAdjust] = useState(false);
 
+  // The whole calculator adopts the selected care type's color, so the
+  // results visibly belong to the choice made above. Falls back to the
+  // house teal if an id has no assigned color.
+  const accent = CARE_TYPE_COLORS[careTypeId] ?? TEAL;
+
   const careType = useMemo(() => CARE_TYPES.find((c) => c.id === careTypeId) ?? CARE_TYPES[0], [careTypeId]);
   const inflationRate = INFLATION_PRESETS.find((p) => p.id === inflationId)?.value ?? 3.5;
 
@@ -181,7 +186,7 @@ const CostOfCareCalculator = () => {
             <div style={card}>
               <div className="coc-section-title coc-section-label">
                 {t("costOfCarePage.card1.sectionTitle")}
-                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
+                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${accent}40, transparent)` }} />
               </div>
               <div className="coc-toggle-grid">
                 {CARE_TYPES.map((c) => {
@@ -224,7 +229,7 @@ const CostOfCareCalculator = () => {
             <div style={card}>
               <div className="coc-section-title coc-section-label">
                 {t("costOfCarePage.card2.sectionTitle")}
-                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${TEAL}40, transparent)` }} />
+                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg, ${accent}40, transparent)` }} />
               </div>
 
               <div className="coc-plan-grid">
@@ -313,7 +318,7 @@ const CostOfCareCalculator = () => {
                       key={y}
                       onClick={() => setYearsOut(y)}
                       aria-pressed={y === yearsOut}
-                      style={{ ...pillBtn(y === yearsOut, TEAL), flex: "1 1 80px" }}
+                      style={{ ...pillBtn(y === yearsOut, accent), flex: "1 1 80px" }}
                     >
                       {y === 0 ? t("costOfCarePage.card2.now") : `${y} ${t("costOfCarePage.card2.yrs")}`}
                     </button>
@@ -343,9 +348,9 @@ const CostOfCareCalculator = () => {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: 8,
-                    background: showInflationAdjust ? TEAL : "#ffffff",
-                    color: showInflationAdjust ? "#ffffff" : TEAL,
-                    border: `2px solid ${TEAL}`,
+                    background: showInflationAdjust ? accent : "#ffffff",
+                    color: showInflationAdjust ? "#ffffff" : accent,
+                    border: `2px solid ${accent}`,
                     borderRadius: 8,
                     padding: "10px 18px",
                     fontWeight: 700,
@@ -368,7 +373,7 @@ const CostOfCareCalculator = () => {
                       onClick={() => setInflationId(p.id)}
                       aria-pressed={p.id === inflationId}
                       style={{
-                        ...pillBtn(p.id === inflationId, TEAL),
+                        ...pillBtn(p.id === inflationId, accent),
                         flex: "1 1 140px",
                         fontSize: "17px",
                         padding: "11px 14px",
@@ -392,14 +397,14 @@ const CostOfCareCalculator = () => {
                   <button
                     onClick={() => setUnit("monthly")}
                     aria-pressed={unit === "monthly"}
-                    style={pillBtn(unit === "monthly", TEAL)}
+                    style={pillBtn(unit === "monthly", accent)}
                   >
                     {t("costOfCarePage.results.monthly")}
                   </button>
                   <button
                     onClick={() => setUnit("annual")}
                     aria-pressed={unit === "annual"}
-                    style={pillBtn(unit === "annual", TEAL)}
+                    style={pillBtn(unit === "annual", accent)}
                   >
                     {t("costOfCarePage.results.annual")}
                   </button>
@@ -410,7 +415,7 @@ const CostOfCareCalculator = () => {
                 <div
                   style={{
                     background: "#f5f2ec",
-                    border: `2px solid ${TEAL}60`,
+                    border: `2px solid ${accent}60`,
                     borderRadius: 10,
                     padding: "12px",
                     textAlign: "center",
@@ -422,7 +427,7 @@ const CostOfCareCalculator = () => {
                       fontFamily: "'Courier New', monospace",
                       fontWeight: 700,
                       fontSize: "clamp(18px,3vw,24px)",
-                      color: TEAL,
+                      color: accent,
                     }}
                   >
                     <AnimatedValue
@@ -467,7 +472,7 @@ const CostOfCareCalculator = () => {
                   className="coc-total-cell"
                   style={{
                     background: "#f5f2ec",
-                    border: `2px solid ${TEAL}60`,
+                    border: `2px solid ${accent}60`,
                     borderRadius: 10,
                     padding: "12px",
                     textAlign: "center",
@@ -481,7 +486,7 @@ const CostOfCareCalculator = () => {
                       fontFamily: "'Courier New', monospace",
                       fontWeight: 700,
                       fontSize: "clamp(20px,3.2vw,28px)",
-                      color: TEAL,
+                      color: accent,
                     }}
                   >
                     <AnimatedValue value={totalWaCost} formatter={formatCurrency} />
@@ -496,15 +501,15 @@ const CostOfCareCalculator = () => {
               <div
                 style={{
                   background: "#ffffff",
-                  border: `1px solid ${TEAL}40`,
-                  borderLeft: `4px solid ${TEAL}`,
+                  border: `1px solid ${accent}40`,
+                  borderLeft: `4px solid ${accent}`,
                   borderRadius: 0,
                   padding: "12px 16px",
                   marginTop: 12,
                 }}
               >
                 <p className="coc-context-note">
-                  <strong style={{ color: TEAL }}>{t(`costOfCarePage.careTypes.${careType.id}.label`)}</strong>{" "}
+                  <strong style={{ color: accent }}>{t(`costOfCarePage.careTypes.${careType.id}.label`)}</strong>{" "}
                   {t("costOfCarePage.results.currentlyRunsIn")}{" "}
                   <strong>
                     {percentAboveNational === 0
@@ -543,8 +548,8 @@ const CostOfCareCalculator = () => {
                     fontWeight: 700,
                     fontFamily: "'Raleway', sans-serif",
                     color: "#ffffff",
-                    background: TEAL,
-                    border: `1px solid ${TEAL}`,
+                    background: accent,
+                    border: `1px solid ${accent}`,
                     cursor: "pointer",
                     flexShrink: 0,
                   }}
@@ -567,6 +572,21 @@ const CostOfCareCalculator = () => {
               display: grid;
               grid-template-columns: repeat(2, minmax(0, 1fr));
               gap: 8px;
+            }
+
+            /* Switching care type recolors the page; ease it rather than
+               snapping, and skip it for reduced-motion users. */
+            .coc-results-grid > div,
+            .coc-section-label.coc-section-label,
+            .coc-stepper-number {
+              transition: color 220ms ease, border-color 220ms ease, background-color 220ms ease;
+            }
+            @media (prefers-reduced-motion: reduce) {
+              .coc-results-grid > div,
+              .coc-section-label.coc-section-label,
+              .coc-stepper-number {
+                transition: none;
+              }
             }
             @media (min-width: 720px) {
               .coc-toggle-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -599,7 +619,7 @@ const CostOfCareCalculator = () => {
               font-size: 18px;
               letter-spacing: 0.12em;
               text-transform: uppercase;
-              color: ${TEAL};
+              color: ${accent};
               font-weight: 900;
               font-family: 'Raleway', sans-serif;
               margin-bottom: 10px;
@@ -639,7 +659,7 @@ const CostOfCareCalculator = () => {
               font-family: 'Courier New', monospace;
               font-weight: 700;
               font-size: 40px;
-              color: ${TEAL};
+              color: ${accent};
               line-height: 1;
               display: block;
             }
