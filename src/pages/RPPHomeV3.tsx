@@ -30,7 +30,7 @@ const tileMeta = [
    Figures and labels come from the same CARE_TYPES constant the calculator
    reads, so the tile and the tool cannot disagree. Unresolved ids are
    filtered out rather than throwing — a renamed id degrades to fewer
-   columns instead of a blank homepage. */
+   rows instead of a blank homepage. */
 const PREVIEW_CARE_IDS = ["adult-family-home", "assisted-living", "memory-care"] as const;
 
 const RPPHomeV3 = () => {
@@ -248,8 +248,10 @@ const RPPHomeV3 = () => {
               }
 
               /* Cost of Care tile — three columns on desktop: heading+CTA on
-                 the left, preview figures stacked in the middle, and the
-                 remaining care types as a colored list on the right. */
+                 the left, preview figures in the middle, and the remaining
+                 care types on the right. Only the middle column carries
+                 color: those three figures are the reason to click, and the
+                 overflow list is a quiet "plus six more". */
               .rpp-coc-card.rpp-coc-card {
                 display: block;
                 background: #ffffff;
@@ -265,15 +267,16 @@ const RPPHomeV3 = () => {
               }
               .rpp-coc-layout.rpp-coc-layout {
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1.15fr 1fr 1fr;
                 gap: 1.5rem;
-                align-items: start;
+                align-items: center;
               }
               .rpp-coc-left.rpp-coc-left {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 1rem;
+                justify-content: center;
+                gap: 1.1rem;
               }
               .rpp-coc-figures.rpp-coc-figures {
                 display: flex;
@@ -298,16 +301,18 @@ const RPPHomeV3 = () => {
                 list-style: none;
                 font-family: 'Raleway', system-ui, sans-serif;
                 font-size: 15px !important;
-                font-weight: 600 !important;
-                line-height: 1.5 !important;
+                font-weight: 500 !important;
+                line-height: 1.45 !important;
+                color: #8a847d !important;
               }
               .rpp-coc-more li {
-                white-space: nowrap;
+                color: #8a847d;
               }
               @media (max-width: 768px) {
                 .rpp-coc-layout.rpp-coc-layout {
                   grid-template-columns: 1fr;
                   gap: 1rem;
+                  align-items: stretch;
                 }
                 .rpp-coc-figures.rpp-coc-figures {
                   border-left: none;
@@ -389,10 +394,7 @@ const RPPHomeV3 = () => {
               }
             `}</style>
 
-            {/* ── Cost of Care Calculator — three-column layout ───────
-                Title + CTA on the left, three preview figures stacked in
-                the middle, and the remaining care types as a colored list
-                on the right. */}
+            {/* ── Cost of Care Calculator — three-column layout ─────── */}
             <a href="/cost-of-care-calculator" className="rpp-coc-card group marquee-hover">
               <div className="rpp-coc-layout">
                 <div className="rpp-coc-left">
@@ -462,9 +464,7 @@ const RPPHomeV3 = () => {
                 {remainingCareTypes.length > 0 && (
                   <ul className="rpp-coc-more">
                     {remainingCareTypes.map((c) => (
-                      <li key={c.id} style={{ color: CARE_TYPE_COLORS[c.id] ?? "#903f46" }}>
-                        {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
-                      </li>
+                      <li key={c.id}>{t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}</li>
                     ))}
                   </ul>
                 )}
