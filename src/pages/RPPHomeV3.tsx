@@ -255,56 +255,62 @@ const RPPHomeV3 = () => {
                 border: 2px solid #d43341;
                 border-radius: 12px;
                 padding: 1.35rem 1.6rem;
-                text-decoration: none;
+              }
+              /* The whole card is a link, so a global anchor rule underlines
+                 every descendant. Strip it explicitly, everywhere. */
+              .rpp-coc-card.rpp-coc-card,
+              .rpp-coc-card.rpp-coc-card * {
+                text-decoration: none !important;
               }
               .rpp-coc-top.rpp-coc-top {
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
                 flex-wrap: wrap;
-                gap: 0.9rem 1.5rem;
-                margin-bottom: 1.05rem;
-              }
-              .rpp-coc-blurb.rpp-coc-blurb {
-                flex: 1 1 220px;
-                min-width: 0;
-                font-family: 'Raleway', system-ui, sans-serif;
-                font-size: 17px !important;
-                font-weight: 600 !important;
-                color: #4a453f !important;
-                opacity: 1 !important;
-                line-height: 1.45;
-                margin: 0;
+                gap: 0.85rem 1.5rem;
+                margin-bottom: 1rem;
               }
               .rpp-coc-figures.rpp-coc-figures {
                 display: grid;
-                grid-template-columns: repeat(4, minmax(0, 1fr));
+                grid-template-columns: repeat(3, minmax(0, 1fr));
                 border-top: 1px solid #f0ece5;
                 padding-top: 0.9rem;
               }
               .rpp-coc-cell.rpp-coc-cell {
-                padding: 0 1rem;
+                padding: 0 1.25rem;
                 border-left: 1px solid #f0ece5;
                 min-width: 0;
               }
-              .rpp-coc-figures .rpp-coc-cell:nth-child(4n + 1) {
+              .rpp-coc-figures .rpp-coc-cell:first-child {
                 border-left: none;
                 padding-left: 0;
               }
-              @media (max-width: 767px) {
+              .rpp-coc-more.rpp-coc-more {
+                margin-top: 0.85rem;
+                padding-top: 0.75rem;
+                border-top: 1px solid #f0ece5;
+                font-family: 'Raleway', system-ui, sans-serif;
+                font-size: 15px !important;
+                font-weight: 500 !important;
+                color: #8a847d !important;
+                line-height: 1.5 !important;
+                margin-bottom: 0;
+              }
+              @media (max-width: 640px) {
                 .rpp-coc-card.rpp-coc-card {
                   padding: 1.2rem 1.25rem;
                 }
                 .rpp-coc-figures.rpp-coc-figures {
-                  grid-template-columns: repeat(2, minmax(0, 1fr));
-                  gap: 0.9rem 0;
+                  grid-template-columns: 1fr;
+                  gap: 0.7rem;
                 }
-                .rpp-coc-figures .rpp-coc-cell:nth-child(4n + 1) {
-                  border-left: 1px solid #f0ece5;
-                  padding-left: 1rem;
-                }
-                .rpp-coc-figures .rpp-coc-cell:nth-child(2n + 1) {
+                .rpp-coc-cell.rpp-coc-cell {
+                  padding: 0;
                   border-left: none;
-                  padding-left: 0;
+                  display: flex;
+                  align-items: baseline;
+                  justify-content: space-between;
+                  gap: 12px;
                 }
               }
 
@@ -367,7 +373,11 @@ const RPPHomeV3 = () => {
               }
             `}</style>
 
-            {/* ── Cost of Care Calculator — condensed, data-driven ───── */}
+            {/* ── Cost of Care Calculator — condensed, data-driven ─────
+                Heading and button share the top row; the three figures sit
+                below in equal columns. The prose description was dropped —
+                the figures say what the tool does more directly than a
+                sentence listing the same care types. */}
             <a href="/cost-of-care-calculator" className="rpp-coc-card group marquee-hover">
               <div className="rpp-coc-top">
                 <h3
@@ -376,14 +386,11 @@ const RPPHomeV3 = () => {
                     fontFamily: "Georgia, serif",
                     margin: 0,
                     lineHeight: 1.1,
-                    flex: "0 0 auto",
                   }}
                 >
                   <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
                   <span style={{ color: "#d43341" }}>{t("costOfCare.headingPart2")}</span>
                 </h3>
-
-                <div className="rpp-coc-blurb">{t("costOfCare.description")}</div>
 
                 <span
                   style={{
@@ -434,23 +441,13 @@ const RPPHomeV3 = () => {
                     </div>
                   </div>
                 ))}
-
-                {remainingCareTypes.length > 0 && (
-                  <div className="rpp-coc-cell" style={{ display: "flex", alignItems: "center" }}>
-                    <div
-                      style={{
-                        fontFamily: "'Raleway', sans-serif",
-                        fontSize: 15,
-                        fontWeight: 600,
-                        color: "#7a746e",
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {remainingCareTypes.map((c) => t(`costOfCarePage.careTypes.${c.id}.shortLabel`)).join(" · ")}
-                    </div>
-                  </div>
-                )}
               </div>
+
+              {remainingCareTypes.length > 0 && (
+                <div className="rpp-coc-more">
+                  {remainingCareTypes.map((c) => t(`costOfCarePage.careTypes.${c.id}.shortLabel`)).join(" · ")}
+                </div>
+              )}
             </a>
 
             {/* ── AFH Club — labeled entrance, not a co-equal section ── */}
