@@ -261,9 +261,12 @@ const RPPHomeV3 = () => {
               .rpp-coc-card.rpp-coc-card {
                 display: block;
                 background: #ffffff;
-                border: 2px solid #7f1d1d;
+                border: 3px solid #7f1d1d;
                 border-radius: 12px;
                 padding: 1.35rem 1.6rem;
+                /* Same lift as the funnel tiles above, so this card belongs
+                   to the same visual system instead of sitting flat. */
+                box-shadow: 0 2px 12px rgba(0,0,0,0.10);
               }
               /* The whole card is a link, so a global anchor rule underlines
                  every descendant. Strip it explicitly, everywhere. */
@@ -322,7 +325,7 @@ const RPPHomeV3 = () => {
                 gap: 0.55rem;
               }
               /* The descriptor's inline clamp() was being overridden by the
-                 global "main p" font-size !important rule, so it
+                 global "main p { font-size: ... !important }" rule, so it
                  rendered at a flat 18px. Doubled class + !important wins. */
               .rpp-descriptor-text.rpp-descriptor-text {
                 font-size: clamp(21px, 2.6vw, 31px) !important;
