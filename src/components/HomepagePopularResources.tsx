@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ClipboardCheck, Scale, HeartHandshake, KeyRound, ArrowRight } from "lucide-react";
@@ -128,7 +127,7 @@ const HomepagePopularResources = () => {
         align-items: center !important;
         gap: 10px !important;
         font-family: 'DM Sans', system-ui, sans-serif !important;
-        font-size: 18px !important;
+        font-size: 16px !important;
         font-weight: 700 !important;
         color: #ffffff !important;
         background-color: #3d3833 !important;
@@ -258,11 +257,7 @@ const HomepagePopularResources = () => {
 
         {/* Browse all — primary next step */}
         <div style={{ textAlign: "center", marginTop: "2.25rem" }}>
-          <Link
-            to="/resources"
-            className="rpp-pr-browse"
-            style={{ padding: "11px 22px", minHeight: 44 }}
-          >
+          <Link to="/resources" className="rpp-pr-browse" style={{ padding: "11px 22px", minHeight: 44 }}>
             Browse all resources
             <svg
               viewBox="0 0 24 24"
