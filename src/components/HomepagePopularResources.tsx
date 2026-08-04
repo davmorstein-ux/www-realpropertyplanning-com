@@ -132,9 +132,12 @@ const HomepagePopularResources = () => {
         color: #ffffff !important;
         background-color: #3d3833 !important;
         border: 2px solid #3d3833 !important;
-        padding: 14px 30px !important;
+        padding: 11px 22px !important;
         border-radius: 8px !important;
-        min-height: 52px !important;
+        /* 44px floor: the WCAG 2.2 AAA tap-target size, and the standard
+           this site holds elsewhere for its older visitors. Don't trim
+           the vertical padding further. */
+        min-height: 44px !important;
         box-shadow: 0 3px 12px rgba(26,39,68,0.14) !important;
         transition: background-color 150ms ease, border-color 150ms ease !important;
       }
