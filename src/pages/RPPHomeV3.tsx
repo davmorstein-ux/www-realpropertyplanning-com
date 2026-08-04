@@ -342,71 +342,6 @@ const RPPHomeV3 = () => {
                 }
               }
 
-              /* AFH Club — a quiet, explicitly labeled door for the
-                 owner/operator/investor audience. */
-              .rpp-afh-strip.rpp-afh-strip {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                gap: 0.5rem 1.25rem;
-                width: 100%;
-                min-height: 56px;
-                margin-top: 1.1rem;
-                padding: 0.85rem 1.5rem;
-                background: #ffffff;
-                border: 1px solid #cfd8d4;
-                border-left: 5px solid #0a5648;
-                border-radius: 10px;
-                text-decoration: none;
-                text-align: center;
-                transition: background-color 150ms ease, border-color 150ms ease;
-              }
-              /* Same global anchor rule that underlined the calculator
-                 tile hits this strip too — strip it from every descendant,
-                 then draw the CTA's underline with a border instead so it
-                 stays green and stays on the CTA only. */
-              .rpp-afh-strip.rpp-afh-strip,
-              .rpp-afh-strip.rpp-afh-strip * {
-                text-decoration: none !important;
-              }
-              .rpp-afh-strip:hover,
-              .rpp-afh-strip:focus-visible {
-                background: #f4f8f6;
-                border-color: #0a5648;
-              }
-              .rpp-afh-strip-label.rpp-afh-strip-label {
-                font-family: 'DM Sans', 'Raleway', system-ui, sans-serif;
-                font-size: 17px;
-                font-weight: 700;
-                letter-spacing: 0.06em;
-                text-transform: uppercase;
-                color: #063e33;
-                margin: 0;
-              }
-              .rpp-afh-strip-cta.rpp-afh-strip-cta {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                font-family: 'Raleway', system-ui, sans-serif;
-                font-size: 18px;
-                font-weight: 700;
-                color: #0a5648;
-                border-bottom: 2px solid #0a5648;
-                padding-bottom: 2px;
-                margin: 0;
-              }
-              @media (max-width: 640px) {
-                .rpp-afh-strip.rpp-afh-strip {
-                  flex-direction: column;
-                  gap: 0.6rem;
-                  padding: 1rem 1.25rem;
-                }
-                .rpp-afh-strip-label.rpp-afh-strip-label {
-                  font-size: 15px;
-                  letter-spacing: 0.05em;
-                }
-              }
             `}</style>
 
             {/* ── Cost of Care Calculator — three-column layout ─────── */}
@@ -484,14 +419,6 @@ const RPPHomeV3 = () => {
                   </ul>
                 )}
               </div>
-            </a>
-
-            {/* ── AFH Club — labeled entrance, not a co-equal section ── */}
-            <a href="/afh-club" className="rpp-afh-strip marquee-hover">
-              <span className="rpp-afh-strip-label">{t("afhClub.eyebrow")}</span>
-              {/* No SVG arrow here: the afhClub.cta string already ends
-                  in an arrow character in every locale. */}
-              <span className="rpp-afh-strip-cta">{t("afhClub.cta")}</span>
             </a>
           </div>
         </section>
