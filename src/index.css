@@ -3279,7 +3279,7 @@ span.rpp-hero-band-text {
   margin: 0 !important;
   padding: 0 !important;
   opacity: 1 !important;
-  font-family: "Raleway", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 /* Hero blue band title used as the page's actual H1 — needs to read as a
@@ -3299,7 +3299,7 @@ h1.rpp-hero-band-text {
   margin: 0 !important;
   padding: 0 !important;
   opacity: 1 !important;
-  font-family: "Raleway", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 /* AFH carousel — mobile centering */
@@ -3328,7 +3328,7 @@ h1.rpp-hero-band-text {
 .calc-hero-text {
   color: #ffffff !important;
   opacity: 1 !important;
-  font-family: "Raleway", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 .calc-hero-subtitle {
