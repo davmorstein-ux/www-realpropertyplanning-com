@@ -37,7 +37,7 @@ const HomepagePopularResources = () => {
       <style>{`
       .rpp-pr-eyebrow {
         font-family: Inter, system-ui, sans-serif !important;
-        font-size: 18px !important;
+        font-size: 21px !important;
         font-weight: 700 !important;
         letter-spacing: 0.14em !important;
         text-transform: uppercase !important;
@@ -130,8 +130,8 @@ const HomepagePopularResources = () => {
         font-size: 18px !important;
         font-weight: 700 !important;
         color: #ffffff !important;
-        background-color: #272421 !important;
-        border: 2px solid #272421 !important;
+        background-color: #3d3833 !important;
+        border: 2px solid #3d3833 !important;
         padding: 14px 30px !important;
         border-radius: 8px !important;
         min-height: 52px !important;
