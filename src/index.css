@@ -19,7 +19,7 @@ p,
 li,
 td,
 span {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "DM Sans", system-ui, sans-serif;
   font-weight: 400;
 }
 body {
@@ -32,14 +32,14 @@ p {
 button,
 .btn,
 a[class*="btn"] {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "DM Sans", system-ui, sans-serif;
   font-weight: 600;
 }
 label,
 .label,
 .caption,
 small {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "DM Sans", system-ui, sans-serif;
   font-weight: 500;
 }
 
