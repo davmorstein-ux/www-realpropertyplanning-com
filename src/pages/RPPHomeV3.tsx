@@ -89,6 +89,11 @@ const RPPHomeV3 = () => {
               gap: "clamp(6px, 1vw, 12px)",
             }}
           >
+            {/* Tagline in #1B3A6B — the same navy used by the homepage
+                descriptor and the calculator tile's secondary text. It
+                replaces #0000FF, which was the browser default link blue
+                and needed a heavy white glow to stay legible over the
+                hero photo. */}
             <h1 id="rpp-tagline" style={{ textAlign: "center", margin: 0 }}>
               <span
                 className="rpp-tagline-line-v2"
@@ -98,10 +103,10 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(25px, 3.5vw, 50px)",
                   fontWeight: 600,
                   fontStyle: "italic",
-                  color: "#0000FF",
+                  color: "#1B3A6B",
                   lineHeight: 1,
                   letterSpacing: "0.01em",
-                  textShadow: "0 1px 4px rgba(255,255,255,0.7)",
+                  textShadow: "0 1px 3px rgba(255,255,255,0.85)",
                   marginTop: "clamp(8px, 1.5vw, 20px)",
                 }}
               >
@@ -115,10 +120,10 @@ const RPPHomeV3 = () => {
                   fontSize: "clamp(25px, 3.5vw, 50px)",
                   fontWeight: 600,
                   fontStyle: "italic",
-                  color: "#0000FF",
+                  color: "#1B3A6B",
                   lineHeight: 1,
                   letterSpacing: "0.01em",
-                  textShadow: "0 1px 4px rgba(255,255,255,0.7)",
+                  textShadow: "0 1px 3px rgba(255,255,255,0.85)",
                   marginTop: "0.2em",
                 }}
               >
