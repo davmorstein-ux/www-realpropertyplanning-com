@@ -322,7 +322,7 @@ const RPPHomeV3 = () => {
                 gap: 0.55rem;
               }
               /* The descriptor's inline clamp() was being overridden by the
-                 global `main p { font-size: ... !important }` rule, so it
+                 global "main p" font-size !important rule, so it
                  rendered at a flat 18px. Doubled class + !important wins. */
               .rpp-descriptor-text.rpp-descriptor-text {
                 font-size: clamp(21px, 2.6vw, 31px) !important;
