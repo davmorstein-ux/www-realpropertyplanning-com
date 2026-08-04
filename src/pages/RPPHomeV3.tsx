@@ -452,27 +452,6 @@ const RPPHomeV3 = () => {
           </div>
         </section>
 
-        {/* ── Descriptor ───────────────────────────────────────────── */}
-        <section id="rpp-orientation" className="py-6 md:py-9 bg-cream">
-          <div className="w-full px-5 md:px-8">
-            <div className="max-w-[1000px] mx-auto text-center">
-              <p
-                id="rpp-descriptor"
-                className="rpp-descriptor-text"
-                style={{
-                  fontFamily: "Georgia, 'Cormorant Garamond', serif",
-                  fontStyle: "normal",
-                  margin: 0,
-                  letterSpacing: "0.01em",
-                  textWrap: "balance" as any,
-                }}
-              >
-                {t("descriptor")}
-              </p>
-            </div>
-          </div>
-        </section>
-
         <HomepagePopularResources />
         <HomepageFAQ />
       </main>
