@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ClipboardCheck, Scale, HeartHandshake, KeyRound, ArrowRight } from "lucide-react";
@@ -132,12 +133,12 @@ const HomepagePopularResources = () => {
         color: #ffffff !important;
         background-color: #3d3833 !important;
         border: 2px solid #3d3833 !important;
-        padding: 11px 22px !important;
         border-radius: 8px !important;
-        /* 44px floor: the WCAG 2.2 AAA tap-target size, and the standard
-           this site holds elsewhere for its older visitors. Don't trim
-           the vertical padding further. */
-        min-height: 44px !important;
+        /* Padding and min-height are set inline on the <Link> instead of
+           here: Lovable's preview serves stale CSS from <style> blocks
+           while .tsx markup updates reliably, so sizing that needs to
+           land goes in the markup. 44px is the WCAG 2.2 AAA tap-target
+           floor — don't trim below it. */
         box-shadow: 0 3px 12px rgba(26,39,68,0.14) !important;
         transition: background-color 150ms ease, border-color 150ms ease !important;
       }
@@ -257,7 +258,11 @@ const HomepagePopularResources = () => {
 
         {/* Browse all — primary next step */}
         <div style={{ textAlign: "center", marginTop: "2.25rem" }}>
-          <Link to="/resources" className="rpp-pr-browse">
+          <Link
+            to="/resources"
+            className="rpp-pr-browse"
+            style={{ padding: "11px 22px", minHeight: 44 }}
+          >
             Browse all resources
             <svg
               viewBox="0 0 24 24"
