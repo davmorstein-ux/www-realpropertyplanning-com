@@ -362,6 +362,14 @@ const RPPHomeV3 = () => {
                 text-align: center;
                 transition: background-color 150ms ease, border-color 150ms ease;
               }
+              /* Same global anchor rule that underlined the calculator
+                 tile hits this strip too — strip it from every descendant,
+                 then draw the CTA's underline with a border instead so it
+                 stays green and stays on the CTA only. */
+              .rpp-afh-strip.rpp-afh-strip,
+              .rpp-afh-strip.rpp-afh-strip * {
+                text-decoration: none !important;
+              }
               .rpp-afh-strip:hover,
               .rpp-afh-strip:focus-visible {
                 background: #f4f8f6;
@@ -384,8 +392,8 @@ const RPPHomeV3 = () => {
                 font-size: 18px;
                 font-weight: 700;
                 color: #0a5648;
-                text-decoration: underline;
-                text-underline-offset: 4px;
+                border-bottom: 2px solid #0a5648;
+                padding-bottom: 2px;
                 margin: 0;
               }
               @media (max-width: 640px) {
@@ -481,24 +489,9 @@ const RPPHomeV3 = () => {
             {/* ── AFH Club — labeled entrance, not a co-equal section ── */}
             <a href="/afh-club" className="rpp-afh-strip marquee-hover">
               <span className="rpp-afh-strip-label">{t("afhClub.eyebrow")}</span>
-              <span className="rpp-afh-strip-cta">
-                {t("afhClub.cta")}
-                <svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="none"
-                  stroke="#0a5648"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                  style={{ flexShrink: 0 }}
-                >
-                  <polyline points="12 5 19 12 12 19" />
-                  <line x1="19" y1="12" x2="5" y2="12" />
-                </svg>
-              </span>
+              {/* No SVG arrow here: the afhClub.cta string already ends
+                  in an arrow character in every locale. */}
+              <span className="rpp-afh-strip-cta">{t("afhClub.cta")}</span>
             </a>
           </div>
         </section>
