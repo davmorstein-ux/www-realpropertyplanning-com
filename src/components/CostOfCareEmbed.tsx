@@ -33,7 +33,7 @@ const pillBtn = (active: boolean): React.CSSProperties => ({
   borderRadius: 8,
   fontSize: "15px",
   fontWeight: 700,
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   color: active ? "#ffffff" : NAVY,
   background: active ? COC_TEAL : "#f5f2ec",
   border: `1px solid ${active ? COC_TEAL : "#dccdce"}`,
@@ -72,7 +72,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       <p
         style={{
           fontSize: 17,
-          fontFamily: "'Raleway', sans-serif",
+          fontFamily: "'DM Sans', sans-serif",
           fontWeight: 700,
           letterSpacing: "0.16em",
           textTransform: "uppercase",
@@ -101,7 +101,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               display: "block",
               fontSize: 17,
               fontWeight: 700,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               letterSpacing: "0.06em",
               textTransform: "uppercase",
               color: NAVY,
@@ -148,7 +148,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               display: "block",
               fontSize: 17,
               fontWeight: 700,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               letterSpacing: "0.06em",
               textTransform: "uppercase",
               color: NAVY,
@@ -196,7 +196,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             display: "block",
             fontSize: 17,
             fontWeight: 700,
-            fontFamily: "'Raleway', sans-serif",
+            fontFamily: "'DM Sans', sans-serif",
             letterSpacing: "0.06em",
             textTransform: "uppercase",
             color: NAVY,
@@ -234,7 +234,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               textTransform: "uppercase",
               color: NAVY,
               fontWeight: 700,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               marginBottom: 4,
             }}
           >
@@ -250,7 +250,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           >
             {formatCurrency(projectedWaMonthly)}
           </div>
-          <div style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif" }}>
+          <div style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif" }}>
             per month
           </div>
         </div>
@@ -270,7 +270,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               textTransform: "uppercase",
               color: NAVY,
               fontWeight: 700,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               marginBottom: 4,
             }}
           >
@@ -286,7 +286,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           >
             {formatCurrency(projectedNationalMonthly)}
           </div>
-          <div style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif" }}>
+          <div style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif" }}>
             per month
           </div>
         </div>
@@ -309,7 +309,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             textTransform: "uppercase",
             color: NAVY,
             fontWeight: 700,
-            fontFamily: "'Raleway', sans-serif",
+            fontFamily: "'DM Sans', sans-serif",
             marginBottom: 4,
           }}
         >
@@ -326,7 +326,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           {formatCurrency(totalWaCost)}
         </div>
         <div
-          style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'Raleway', sans-serif", marginTop: 2 }}
+          style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif", marginTop: 2 }}
         >
           in Washington · vs. {formatCurrency(totalNationalCost)} nationally
         </div>
@@ -335,7 +335,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       <p
         style={{
           fontSize: 17,
-          fontFamily: "'Raleway', sans-serif",
+          fontFamily: "'DM Sans', sans-serif",
           color: "#49443f",
           margin: "0 0 16px",
           lineHeight: 1.5,
@@ -354,7 +354,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             gap: 8,
             fontSize: 17,
             fontWeight: 700,
-            fontFamily: "'Raleway', sans-serif",
+            fontFamily: "'DM Sans', sans-serif",
             color: COC_TEAL,
             background: "#ffffff",
             border: `2px solid ${COC_TEAL}`,

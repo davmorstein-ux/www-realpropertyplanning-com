@@ -112,7 +112,7 @@ const AFHFindProfessional = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -137,7 +137,7 @@ const AFHFindProfessional = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
               color: "#342e28",
               lineHeight: 1.85,
@@ -152,7 +152,7 @@ const AFHFindProfessional = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
               color: "#302b26",
               lineHeight: 1.8,
@@ -204,7 +204,7 @@ const AFHFindProfessional = () => (
                     <p
                       style={{
                         fontSize: 18,
-                        fontFamily: "'Raleway', sans-serif",
+                        fontFamily: "'DM Sans', sans-serif",
                         color: "#302b26",
                         lineHeight: 1.8,
                         margin: "0 0 20px",
@@ -215,7 +215,7 @@ const AFHFindProfessional = () => (
                     <p
                       style={{
                         fontSize: 15,
-                        fontFamily: "'Raleway', sans-serif",
+                        fontFamily: "'DM Sans', sans-serif",
                         fontWeight: 700,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
@@ -241,7 +241,7 @@ const AFHFindProfessional = () => (
                           <p
                             style={{
                               fontSize: 16,
-                              fontFamily: "'Raleway', sans-serif",
+                              fontFamily: "'DM Sans', sans-serif",
                               color: "#302b26",
                               lineHeight: 1.65,
                               margin: 0,
@@ -258,7 +258,7 @@ const AFHFindProfessional = () => (
                           to={cat.link.href}
                           style={{
                             fontSize: 16,
-                            fontFamily: "'Raleway', sans-serif",
+                            fontFamily: "'DM Sans', sans-serif",
                             fontWeight: 700,
                             letterSpacing: "0.14em",
                             textTransform: "uppercase",
@@ -277,7 +277,7 @@ const AFHFindProfessional = () => (
                           rel="noopener noreferrer"
                           style={{
                             fontSize: 16,
-                            fontFamily: "'Raleway', sans-serif",
+                            fontFamily: "'DM Sans', sans-serif",
                             fontWeight: 700,
                             letterSpacing: "0.14em",
                             textTransform: "uppercase",
@@ -304,7 +304,7 @@ const AFHFindProfessional = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -330,7 +330,7 @@ const AFHFindProfessional = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 28px",
@@ -345,7 +345,7 @@ const AFHFindProfessional = () => (
             style={{
               display: "inline-block",
               fontSize: 16,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 700,
               letterSpacing: "0.16em",
               textTransform: "uppercase",

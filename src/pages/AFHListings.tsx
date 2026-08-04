@@ -62,7 +62,7 @@ const AFHListings = () => {
       style={{
         minHeight: "100vh",
         backgroundColor: GRAY_BG,
-        fontFamily: "Inter, system-ui, sans-serif",
+        fontFamily: "'DM Sans', system-ui, sans-serif",
       }}
     >
       <SEOHead

@@ -126,7 +126,7 @@ const PageFAQ = ({
                     <div
                       style={{
                         paddingBottom: "1rem",
-                        fontFamily: "Inter, system-ui, sans-serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         fontSize: "18px",
                         color: "#413b36",
                         lineHeight: 1.7,
@@ -194,7 +194,7 @@ const PageFAQ = ({
                       padding: "0 1.5rem 1.4rem",
                       borderTop: "1px solid #e7d1d3",
                       paddingTop: "1rem",
-                      fontFamily: "Inter, system-ui, sans-serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: "18px",
                       color: "#413b36",
                       lineHeight: 1.7,

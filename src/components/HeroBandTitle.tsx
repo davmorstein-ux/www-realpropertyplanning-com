@@ -62,7 +62,7 @@ const transformChildren = (children: ReactNode): ReactNode =>
 
 const bandTextStyle = (isH1: boolean) => ({
   color: "#FFFFFF",
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   fontWeight: 900,
   fontSize: isH1 ? "clamp(30px, 4vw, 44px)" : "18px",
   letterSpacing: isH1 ? "0.04em" : "0.18em",

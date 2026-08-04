@@ -181,7 +181,7 @@ export default function ArticlesCarousel() {
                 <span
                   style={{
                     fontSize: 11,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 600,
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",

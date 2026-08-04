@@ -158,7 +158,7 @@ const Executors = () => (
                   </div>
                   <div
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 14,
                       letterSpacing: "0.03em",
                       textTransform: "uppercase",
@@ -248,7 +248,7 @@ const Executors = () => (
                       boxShadow: "0 3px 0 0 #400f13, 0 5px 12px rgba(27,58,107,0.35)",
                       borderRadius: 8,
                       padding: "13px 16px",
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 15,
                       fontWeight: 700,
                       letterSpacing: "0.06em",

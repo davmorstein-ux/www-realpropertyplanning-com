@@ -48,7 +48,7 @@ const AFHManagementCompanies = () => (
           <p
             style={{
               fontSize: "20px",
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
               color: "#302b26",
               lineHeight: 1.85,
@@ -62,7 +62,7 @@ const AFHManagementCompanies = () => (
           <p
             style={{
               fontSize: "18px",
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
               color: "#302b26",
               lineHeight: 1.8,
@@ -83,7 +83,7 @@ const AFHManagementCompanies = () => (
           <p
             style={{
               fontSize: "18px",
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 700,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
@@ -162,7 +162,7 @@ const AFHManagementCompanies = () => (
                   <p
                     style={{
                       fontSize: "18px",
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       color: "#302b26",
                       margin: "0 0 16px",
                     }}
@@ -196,7 +196,7 @@ const AFHManagementCompanies = () => (
                 <p
                   style={{
                     fontSize: "19px",
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     color: "#302b26",
                     lineHeight: 1.8,
                     margin: "0 0 24px",
@@ -240,7 +240,7 @@ const AFHManagementCompanies = () => (
                       href="tel:2142054091"
                       style={{
                         fontSize: "20px",
-                        fontFamily: "'Raleway', sans-serif",
+                        fontFamily: "'DM Sans', sans-serif",
                         fontWeight: 700,
                         color: "#280a0c",
                         textDecoration: "none",
@@ -280,7 +280,7 @@ const AFHManagementCompanies = () => (
                       href="mailto:aura@auralivingcare.com"
                       style={{
                         fontSize: "19px",
-                        fontFamily: "'Raleway', sans-serif",
+                        fontFamily: "'DM Sans', sans-serif",
                         fontWeight: 600,
                         color: "#280a0c",
                         textDecoration: "none",
@@ -316,7 +316,7 @@ const AFHManagementCompanies = () => (
                         <polyline points="12 6 12 12 16 14" />
                       </svg>
                     </div>
-                    <p style={{ fontSize: "19px", fontFamily: "'Raleway', sans-serif", color: "#302b26", margin: 0 }}>
+                    <p style={{ fontSize: "19px", fontFamily: "'DM Sans', sans-serif", color: "#302b26", margin: 0 }}>
                       Mon–Sun: 9:00 AM – 6:00 PM
                     </p>
                   </div>
@@ -347,7 +347,7 @@ const AFHManagementCompanies = () => (
                         <circle cx="12" cy="10" r="3" />
                       </svg>
                     </div>
-                    <p style={{ fontSize: "19px", fontFamily: "'Raleway', sans-serif", color: "#302b26", margin: 0 }}>
+                    <p style={{ fontSize: "19px", fontFamily: "'DM Sans', sans-serif", color: "#302b26", margin: 0 }}>
                       Seattle, WA
                     </p>
                   </div>
@@ -358,7 +358,7 @@ const AFHManagementCompanies = () => (
                       rel="noopener noreferrer"
                       style={{
                         fontSize: "17px",
-                        fontFamily: "'Raleway', sans-serif",
+                        fontFamily: "'DM Sans', sans-serif",
                         fontWeight: 700,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
@@ -407,7 +407,7 @@ const AFHManagementCompanies = () => (
                       <p
                         style={{
                           fontSize: "18px",
-                          fontFamily: "'Raleway', sans-serif",
+                          fontFamily: "'DM Sans', sans-serif",
                           fontWeight: 700,
                           color: "#280a0c",
                           margin: "0 0 4px",
@@ -418,7 +418,7 @@ const AFHManagementCompanies = () => (
                       <p
                         style={{
                           fontSize: "17px",
-                          fontFamily: "'Raleway', sans-serif",
+                          fontFamily: "'DM Sans', sans-serif",
                           color: "#302b26",
                           lineHeight: 1.65,
                           margin: 0,
@@ -446,7 +446,7 @@ const AFHManagementCompanies = () => (
             <p
               style={{
                 fontSize: "18px",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
@@ -470,7 +470,7 @@ const AFHManagementCompanies = () => (
             <p
               style={{
                 fontSize: "19px",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#302b26",
                 lineHeight: 1.8,
                 margin: "0 auto 28px",
@@ -487,7 +487,7 @@ const AFHManagementCompanies = () => (
                 alignItems: "center",
                 gap: 8,
                 fontSize: "17px",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",

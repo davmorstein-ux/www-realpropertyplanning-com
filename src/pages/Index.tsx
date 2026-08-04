@@ -157,7 +157,7 @@ const RPPHomeV3 = () => {
               <h2
                 className="rpp-funnel-heading"
                 style={{
-                  fontFamily: "Inter, system-ui, sans-serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "3rem",
                   fontWeight: 600,
                   color: "#6f2a30",
@@ -198,7 +198,7 @@ const RPPHomeV3 = () => {
                           color: "#272421",
                           fontSize: 11,
                           fontWeight: 700,
-                          fontFamily: "Inter, system-ui, sans-serif",
+                          fontFamily: "'DM Sans', system-ui, sans-serif",
                           padding: "3px 8px",
                           borderRadius: 20,
                           letterSpacing: "0.04em",
@@ -221,7 +221,7 @@ const RPPHomeV3 = () => {
                     >
                       <span
                         style={{
-                          fontFamily: "Inter, system-ui, sans-serif",
+                          fontFamily: "'DM Sans', system-ui, sans-serif",
                           fontSize: 20,
                           fontWeight: 700,
                           color: "#ffffff",
@@ -289,7 +289,7 @@ const RPPHomeV3 = () => {
                   </h3>
                   <p
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 16,
                       color: "#272421",
                       lineHeight: 1.5,
@@ -307,7 +307,7 @@ const RPPHomeV3 = () => {
                       gap: 8,
                       background: "#272421",
                       color: "#ffffff",
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 700,
                       fontSize: 16,
                       padding: "10px 20px",
@@ -357,7 +357,7 @@ const RPPHomeV3 = () => {
                   </h3>
                   <p
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 16,
                       color: "#272421",
                       lineHeight: 1.5,
@@ -374,7 +374,7 @@ const RPPHomeV3 = () => {
                       gap: 8,
                       background: "#0a5648",
                       color: "#ffffff",
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 700,
                       fontSize: 16,
                       padding: "10px 20px",

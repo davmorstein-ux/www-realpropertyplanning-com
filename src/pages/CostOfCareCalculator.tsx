@@ -90,7 +90,7 @@ const pillBtn = (active: boolean, color: string): React.CSSProperties => ({
   borderRadius: 8,
   fontSize: "16px",
   fontWeight: 700,
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   color: active ? "#ffffff" : "#272421",
   background: active ? color : "#f5f2ec",
   border: `1px solid ${active ? color : "#dccdce"}`,
@@ -203,7 +203,7 @@ const CostOfCareCalculator = () => {
                         textAlign: "center",
                         fontSize: "15px",
                         fontWeight: 700,
-                        fontFamily: "'Raleway', sans-serif",
+                        fontFamily: "'DM Sans', sans-serif",
                         lineHeight: 1.25,
                         minHeight: 56,
                         display: "flex",
@@ -354,7 +354,7 @@ const CostOfCareCalculator = () => {
                     borderRadius: 8,
                     padding: "10px 18px",
                     fontWeight: 700,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontSize: "17px",
                     cursor: "pointer",
                     flexShrink: 0,
@@ -546,7 +546,7 @@ const CostOfCareCalculator = () => {
                     borderRadius: 8,
                     fontSize: "16px",
                     fontWeight: 700,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     color: "#ffffff",
                     background: accent,
                     border: `1px solid ${accent}`,
@@ -621,7 +621,7 @@ const CostOfCareCalculator = () => {
               text-transform: uppercase;
               color: ${accent};
               font-weight: 900;
-              font-family: 'Raleway', sans-serif;
+              font-family: 'DM Sans', sans-serif;
               margin-bottom: 10px;
               display: flex;
               align-items: center;
@@ -631,7 +631,7 @@ const CostOfCareCalculator = () => {
             .coc-field-label.coc-field-label {
               display: block;
               font-size: 17px;
-              font-family: 'Raleway', sans-serif;
+              font-family: 'DM Sans', sans-serif;
               font-weight: 900;
               letter-spacing: 0.08em;
               text-transform: uppercase;
@@ -640,7 +640,7 @@ const CostOfCareCalculator = () => {
             }
             .coc-eyebrow.coc-eyebrow {
               font-size: 14px !important;
-              font-family: 'Raleway', sans-serif;
+              font-family: 'DM Sans', sans-serif;
               font-weight: 700 !important;
               letter-spacing: 0.22em;
               text-transform: uppercase;
@@ -649,7 +649,7 @@ const CostOfCareCalculator = () => {
             }
             .coc-hero-desc.coc-hero-desc {
               font-size: 18px !important;
-              font-family: 'Raleway', sans-serif;
+              font-family: 'DM Sans', sans-serif;
               color: #342e28 !important;
               line-height: 1.65 !important;
               margin: 0 !important;
@@ -664,7 +664,7 @@ const CostOfCareCalculator = () => {
               display: block;
             }
             .coc-stepper-unit.coc-stepper-unit {
-              font-family: 'Raleway', sans-serif;
+              font-family: 'DM Sans', sans-serif;
               font-size: 15px;
               font-weight: 600;
               color: #5e5954;
@@ -674,7 +674,7 @@ const CostOfCareCalculator = () => {
             .coc-inflation-text.coc-inflation-text {
               flex: 1 1 260px;
               font-size: 17px !important;
-              font-family: 'Raleway', sans-serif;
+              font-family: 'DM Sans', sans-serif;
               color: #272421 !important;
               margin: 0 !important;
               line-height: 1.5 !important;
@@ -686,19 +686,19 @@ const CostOfCareCalculator = () => {
               text-transform: uppercase;
               color: #272421;
               font-weight: 700;
-              font-family: 'Raleway', sans-serif;
+              font-family: 'DM Sans', sans-serif;
               margin-bottom: 4px;
             }
             .coc-result-unit.coc-result-unit {
               font-size: 15px;
               font-weight: 600;
               color: #49443f;
-              font-family: 'Raleway', sans-serif;
+              font-family: 'DM Sans', sans-serif;
               margin-top: 2px;
             }
             .coc-context-note.coc-context-note {
               font-size: 16px !important;
-              font-family: 'Raleway', sans-serif;
+              font-family: 'DM Sans', sans-serif;
               color: #272421 !important;
               line-height: 1.6 !important;
               margin: 0 !important;
@@ -706,7 +706,7 @@ const CostOfCareCalculator = () => {
             .coc-source-note.coc-source-note {
               flex: 1 1 240px;
               font-size: 15px !important;
-              font-family: 'Raleway', sans-serif;
+              font-family: 'DM Sans', sans-serif;
               color: #49443f !important;
               line-height: 1.5 !important;
               margin: 0 !important;

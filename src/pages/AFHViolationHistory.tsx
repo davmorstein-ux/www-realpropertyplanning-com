@@ -9,7 +9,7 @@ import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 
 const label = {
   fontSize: 15,
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
@@ -37,7 +37,7 @@ const h3 = {
 
 const body = {
   fontSize: 18,
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   color: "#302b26",
   lineHeight: 1.85,
   margin: "0 0 20px",
@@ -45,7 +45,7 @@ const body = {
 
 const li = {
   fontSize: 18,
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   color: "#302b26",
   lineHeight: 1.75,
   marginBottom: 10,
@@ -388,7 +388,7 @@ const AFHViolationHistory = () => (
           <p style={{ ...body, margin: 0, fontWeight: 600 }}>
             Use records to guide better questions, not as a standalone decision tool.
           </p>
-          <p style={{ fontSize: 14, fontFamily: "'Raleway', sans-serif", color: "#7a6a6c", lineHeight: 1.7, fontStyle: "italic", margin: "24px 0 0" }}>
+          <p style={{ fontSize: 14, fontFamily: "'DM Sans', sans-serif", color: "#7a6a6c", lineHeight: 1.7, fontStyle: "italic", margin: "24px 0 0" }}>
             This article is for general educational purposes and is not legal, medical, licensing, or real estate
             advice.
           </p>

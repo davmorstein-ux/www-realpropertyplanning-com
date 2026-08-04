@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const label = {
   fontSize: 15,
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
@@ -38,7 +38,7 @@ const h3 = {
 
 const body = {
   fontSize: 18,
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   color: "#302b26",
   lineHeight: 1.85,
   margin: "0 0 20px",
@@ -124,7 +124,7 @@ const AFHWaboTechnicalGuide = () => (
             technical side of the process — what the checklist covers, who performs the inspection, what usually
             causes delays, and why passing the checklist is only one part of the larger licensing process.
           </p>
-          <p style={{ fontSize: 16, fontFamily: "'Raleway', sans-serif", color: "#5a5147", margin: 0 }}>
+          <p style={{ fontSize: 16, fontFamily: "'DM Sans', sans-serif", color: "#5a5147", margin: 0 }}>
             New to WABO? Start with{" "}
             <Link to="/afh-club/wabo-inspection-guide" style={{ color: "#9e2c35", fontWeight: 600, textDecoration: "underline" }}>
               What Is WABO? A Simple Overview →

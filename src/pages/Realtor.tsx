@@ -200,7 +200,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
             <p
               style={{
                 fontSize: 14,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 600,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
@@ -244,7 +244,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 ))}
               </div>
               <span style={{ fontSize: 20, fontFamily: "Georgia, serif", fontWeight: 700, color: "#280a0c" }}>5.0</span>
-              <span style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#302b26" }}>
+              <span style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#302b26" }}>
                 · 16 Reviews on Zillow
               </span>
             </div>
@@ -270,7 +270,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 <p
                   style={{
                     fontSize: 14,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     color: "#5e5954",
                     margin: 0,
                     fontWeight: 500,
@@ -293,7 +293,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 <p
                   style={{
                     fontSize: 16,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     color: "#302b26",
                     lineHeight: 1.8,
                     margin: 0,
@@ -308,7 +308,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                       key={badge}
                       style={{
                         fontSize: 11,
-                        fontFamily: "'Raleway', sans-serif",
+                        fontFamily: "'DM Sans', sans-serif",
                         fontWeight: 600,
                         letterSpacing: "0.08em",
                         background: "#edf2ff",
@@ -336,7 +336,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 alignItems: "center",
                 gap: 10,
                 fontSize: 13,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",

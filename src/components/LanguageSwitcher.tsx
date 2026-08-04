@@ -133,7 +133,7 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
           {!isTranslated && (
             <p
               style={{
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontSize: 12,
                 color: "#7a6a6c",
                 margin: 0,
@@ -167,7 +167,7 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
                   borderBottom: "1px solid #f2ede8",
                   textAlign: "left",
                   padding: "14px 18px",
-                  fontFamily: "'Raleway', sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontSize: 16,
                   fontWeight: selected ? 700 : 500,
                   color: disabled ? "#c2b9b1" : "#302b26",

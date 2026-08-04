@@ -201,7 +201,7 @@ export default function ProviderHoverPanel({
                     />
                     {hasTwoPeople && (
                       <span
-                        style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
+                        style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
                       >
                         {name}
                       </span>
@@ -222,7 +222,7 @@ export default function ProviderHoverPanel({
                       }}
                       decoding="async"
                     />
-                    <span style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}>
+                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}>
                       {name2}
                     </span>
                   </div>
@@ -243,7 +243,7 @@ export default function ProviderHoverPanel({
                 {title && (
                   <div
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 11,
                       letterSpacing: "0.12em",
                       color: "#e0828a",
@@ -256,7 +256,7 @@ export default function ProviderHoverPanel({
                 {company && (
                   <div
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 11,
                       color: "rgba(255,255,255,0.65)",
                       marginTop: 2,
@@ -302,7 +302,7 @@ export default function ProviderHoverPanel({
                 >
                   <div
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 10,
                       fontWeight: 700,
                       letterSpacing: "0.18em",

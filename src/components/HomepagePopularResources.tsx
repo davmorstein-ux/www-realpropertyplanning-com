@@ -37,7 +37,7 @@ const HomepagePopularResources = () => {
     <section style={{ backgroundColor: "#ffffff", padding: "3.5rem 0 4rem" }}>
       <style>{`
       .rpp-pr-eyebrow {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 21px !important;
         font-weight: 700 !important;
         letter-spacing: 0.14em !important;
@@ -109,7 +109,7 @@ const HomepagePopularResources = () => {
         display: inline-flex !important;
         align-items: center !important;
         gap: 8px !important;
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 14px !important;
         font-weight: 700 !important;
         letter-spacing: 0.08em !important;
@@ -127,7 +127,7 @@ const HomepagePopularResources = () => {
         display: inline-flex !important;
         align-items: center !important;
         gap: 10px !important;
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 18px !important;
         font-weight: 700 !important;
         color: #ffffff !important;

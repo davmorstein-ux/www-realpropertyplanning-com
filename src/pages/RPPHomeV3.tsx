@@ -187,7 +187,7 @@ const RPPHomeV3 = () => {
                               color: "#272421",
                               fontSize: 11,
                               fontWeight: 700,
-                              fontFamily: "Inter, system-ui, sans-serif",
+                              fontFamily: "'DM Sans', system-ui, sans-serif",
                               padding: "3px 8px",
                               borderRadius: 20,
                               letterSpacing: "0.04em",
@@ -209,7 +209,7 @@ const RPPHomeV3 = () => {
                         >
                           <span
                             style={{
-                              fontFamily: "Inter, system-ui, sans-serif",
+                              fontFamily: "'DM Sans', system-ui, sans-serif",
                               fontSize: 20,
                               fontWeight: 700,
                               color: "#ffffff",
@@ -394,7 +394,7 @@ const RPPHomeV3 = () => {
                       gap: 8,
                       background: "#7f1d1d",
                       color: "#ffffff",
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 700,
                       fontSize: 16,
                       padding: "11px 22px",
@@ -412,7 +412,7 @@ const RPPHomeV3 = () => {
                     <div key={c.id} className="rpp-coc-cell">
                       <div
                         style={{
-                          fontFamily: "'Raleway', sans-serif",
+                          fontFamily: "'DM Sans', sans-serif",
                           fontSize: 16,
                           fontWeight: 700,
                           color: "#25597e",

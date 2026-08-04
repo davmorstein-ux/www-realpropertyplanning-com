@@ -52,7 +52,7 @@ const HomepageNew = () => (
           </h2>
           <p
             style={{
-              fontFamily: "Inter, system-ui, sans-serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontSize: "0.75rem",
               fontWeight: 700,
               letterSpacing: "0.18em",
@@ -65,7 +65,7 @@ const HomepageNew = () => (
           </p>
           <p
             style={{
-              fontFamily: "Inter, system-ui, sans-serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontSize: "clamp(1.125rem, 2vw, 1.5rem)",
               fontWeight: 500,
               color: "#272421",
@@ -144,7 +144,7 @@ const HomepageNew = () => (
                   >
                     <span
                       style={{
-                        fontFamily: "Inter, system-ui, sans-serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         fontSize: "20px",
                         fontWeight: 700,
                         color: "#ffffff",
@@ -207,7 +207,7 @@ const HomepageNew = () => (
                 <div>
                   <p
                     style={{
-                      fontFamily: "Inter, system-ui, sans-serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: "26px",
                       fontWeight: 800,
                       color: "#ffffff",
@@ -219,7 +219,7 @@ const HomepageNew = () => (
                   </p>
                   <p
                     style={{
-                      fontFamily: "Inter, system-ui, sans-serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: "18px",
                       fontWeight: 500,
                       color: "#d4f0ee",
@@ -234,7 +234,7 @@ const HomepageNew = () => (
 
               <span
                 style={{
-                  fontFamily: "Inter, system-ui, sans-serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "17px",
                   fontWeight: 700,
                   color: "#1a7a78",

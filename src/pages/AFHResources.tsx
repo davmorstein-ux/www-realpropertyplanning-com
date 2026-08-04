@@ -109,7 +109,7 @@ const AFHResources = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
               color: "#342e28",
               lineHeight: 1.85,
@@ -267,7 +267,7 @@ const AFHResources = () => (
                 <p
                   style={{
                     fontSize: 16,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     color: "#5a5a5a",
                     lineHeight: 1.6,
                     margin: "0 0 10px",

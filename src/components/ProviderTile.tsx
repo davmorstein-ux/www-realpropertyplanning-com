@@ -192,7 +192,7 @@ export default function ProviderTile({
                     />
                     {hasTwoPeople && (
                       <span
-                        style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
+                        style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}
                       >
                         {name}
                       </span>
@@ -214,7 +214,7 @@ export default function ProviderTile({
                       sizes="100vw"
                       decoding="async"
                     />
-                    <span style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}>
+                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.7)" }}>
                       {name2}
                     </span>
                   </div>
@@ -249,7 +249,7 @@ export default function ProviderTile({
                 )}
                 <div
                   style={{
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontSize: 11,
                     letterSpacing: "0.12em",
                     color: "#e0828a",
@@ -260,7 +260,7 @@ export default function ProviderTile({
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontSize: 11,
                     color: "rgba(255,255,255,0.65)",
                     marginTop: 2,
@@ -305,7 +305,7 @@ export default function ProviderTile({
                 >
                   <div
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 10,
                       fontWeight: 700,
                       letterSpacing: "0.18em",
@@ -398,7 +398,7 @@ export default function ProviderTile({
                   <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
                     {name}
                   </div>
-                  <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title}</div>
+                  <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "#666" }}>{title}</div>
                 </div>
               )}
               {photo2 && (
@@ -422,7 +422,7 @@ export default function ProviderTile({
                   <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
                     {name2}
                   </div>
-                  <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 10, color: "#666" }}>{title2}</div>
+                  <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "#666" }}>{title2}</div>
                 </div>
               )}
             </div>
@@ -500,7 +500,7 @@ export default function ProviderTile({
                 width: "100%",
               }}
             >
-              <div style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, color: "#666" }}>{title}</div>
+              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "#666" }}>{title}</div>
             </div>
           </>
         )}
@@ -517,7 +517,7 @@ export default function ProviderTile({
         >
           <div
             style={{
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontSize: 11,
               fontWeight: 700,
               color: "#280a0c",

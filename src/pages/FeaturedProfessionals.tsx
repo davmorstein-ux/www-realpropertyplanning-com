@@ -304,7 +304,7 @@ const FeaturedProfessionals = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -317,7 +317,7 @@ const FeaturedProfessionals = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: 0,
@@ -405,7 +405,7 @@ const FeaturedProfessionals = () => (
                       <div style={{ minWidth: 0 }}>
                         <p
                           style={{
-                            fontFamily: "'Raleway', sans-serif",
+                            fontFamily: "'DM Sans', sans-serif",
                             fontWeight: 700,
                             fontSize: 16,
                             color: "#292521",
@@ -414,7 +414,7 @@ const FeaturedProfessionals = () => (
                         >
                           {pro.name}
                         </p>
-                        <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
+                        <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
                           {pro.role}
                         </p>
                       </div>
@@ -434,7 +434,7 @@ const FeaturedProfessionals = () => (
                         <div style={{ minWidth: 0 }}>
                           <p
                             style={{
-                              fontFamily: "'Raleway', sans-serif",
+                              fontFamily: "'DM Sans', sans-serif",
                               fontWeight: 700,
                               fontSize: 16,
                               color: "#292521",
@@ -443,7 +443,7 @@ const FeaturedProfessionals = () => (
                           >
                             {pro.name2}
                           </p>
-                          <p style={{ fontFamily: "'Raleway', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
+                          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: "#7f1d1d", margin: 0 }}>
                             {pro.role2}
                           </p>
                         </div>
@@ -452,7 +452,7 @@ const FeaturedProfessionals = () => (
                   </div>
                   <p
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 14,
                       fontWeight: 600,
                       color: "#5a5147",
@@ -463,7 +463,7 @@ const FeaturedProfessionals = () => (
                   </p>
                   <p
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 14,
                       color: "#5a5147",
                       lineHeight: 1.6,
@@ -474,7 +474,7 @@ const FeaturedProfessionals = () => (
                   </p>
                   <p
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 14,
                       fontWeight: 700,
                       color: "#7f1d1d",

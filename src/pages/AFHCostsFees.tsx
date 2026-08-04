@@ -153,7 +153,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -178,7 +178,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
               color: "#342e28",
               lineHeight: 1.85,
@@ -203,7 +203,7 @@ const AFHCostsFees = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
@@ -229,7 +229,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -254,7 +254,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 28px",
@@ -292,7 +292,7 @@ const AFHCostsFees = () => (
                   <span
                     style={{
                       fontSize: 17,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 700,
                       color: "#481216",
                       whiteSpace: "nowrap",
@@ -304,7 +304,7 @@ const AFHCostsFees = () => (
                 <p
                   style={{
                     fontSize: 17,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     color: "#302b26",
                     lineHeight: 1.7,
                     margin: "0 0 4px",
@@ -315,7 +315,7 @@ const AFHCostsFees = () => (
                 <p
                   style={{
                     fontSize: 15,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 600,
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
@@ -337,7 +337,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -362,7 +362,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -375,7 +375,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -398,7 +398,7 @@ const AFHCostsFees = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#1a0a0a",
                 lineHeight: 1.75,
                 margin: 0,
@@ -418,7 +418,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -443,7 +443,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 24px",
@@ -474,7 +474,7 @@ const AFHCostsFees = () => (
                   <p
                     style={{
                       fontSize: 18,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 700,
                       color: "#280a0c",
                       margin: "0 0 4px",
@@ -485,7 +485,7 @@ const AFHCostsFees = () => (
                   <p
                     style={{
                       fontSize: 16,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       color: "#302b26",
                       lineHeight: 1.65,
                       margin: 0,
@@ -511,7 +511,7 @@ const AFHCostsFees = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -533,7 +533,7 @@ const AFHCostsFees = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
@@ -583,7 +583,7 @@ const AFHCostsFees = () => (
                 rel="noopener noreferrer"
                 style={{
                   fontSize: 17,
-                  fontFamily: "'Raleway', sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 600,
                   color: "#9e2c35",
                   textDecoration: "underline",

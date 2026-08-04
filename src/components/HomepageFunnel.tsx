@@ -52,7 +52,7 @@ const HomepageFunnel = () => (
         height: 100%;
       }
       .rpp-tile-label {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 20px !important;
         font-weight: 700 !important;
         color: #ffffff !important;
@@ -62,7 +62,7 @@ const HomepageFunnel = () => (
         opacity: 1 !important;
       }
       .rpp-eyebrow {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 18px !important;
         font-weight: 700 !important;
         letter-spacing: 0.18em !important;
@@ -73,7 +73,7 @@ const HomepageFunnel = () => (
         opacity: 1 !important;
       }
       .rpp-heading {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 2.25rem !important;
         font-weight: 600 !important;
         color: #6f2a30 !important;
@@ -82,7 +82,7 @@ const HomepageFunnel = () => (
         opacity: 1 !important;
       }
       .rpp-afh-title {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 24px !important;
         font-weight: 800 !important;
         color: #1a5c58 !important;
@@ -92,7 +92,7 @@ const HomepageFunnel = () => (
         text-shadow: none !important;
       }
       .rpp-afh-sub {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 16px !important;
         font-weight: 500 !important;
         color: #443e38 !important;
@@ -102,7 +102,7 @@ const HomepageFunnel = () => (
         text-shadow: none !important;
       }
       .rpp-afh-btn {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 15px !important;
         font-weight: 700 !important;
         color: #ffffff !important;

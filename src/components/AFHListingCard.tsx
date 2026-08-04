@@ -19,7 +19,7 @@ const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; va
       border: `1px solid ${GRAY_BORDER}`,
       borderRadius: "6px",
       padding: "6px 12px",
-      fontFamily: "Inter, system-ui, sans-serif",
+      fontFamily: "'DM Sans', system-ui, sans-serif",
       fontSize: "13px",
     }}
   >

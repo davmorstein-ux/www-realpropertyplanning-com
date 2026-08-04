@@ -237,7 +237,7 @@ const Section = ({
 
                     gap: 6,
 
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
 
                     fontSize: 13,
 
@@ -417,7 +417,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                               alignItems: "center",
                               justifyContent: "center",
                               gap: 6,
-                              fontFamily: "'Raleway', sans-serif",
+                              fontFamily: "'DM Sans', sans-serif",
                               fontSize: 13,
                               fontWeight: 700,
                               color: "#fff",

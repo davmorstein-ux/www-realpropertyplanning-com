@@ -126,7 +126,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -151,7 +151,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
               color: "#342e28",
               lineHeight: 1.85,
@@ -172,7 +172,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -197,7 +197,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -210,7 +210,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 28px",
@@ -242,7 +242,7 @@ const AFHLicensingCertification = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#302b26",
                 lineHeight: 1.75,
                 margin: "0 0 16px",
@@ -265,7 +265,7 @@ const AFHLicensingCertification = () => (
                 <p
                   style={{
                     fontSize: 17,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     color: "#302b26",
                     lineHeight: 1.65,
                     margin: 0,
@@ -278,7 +278,7 @@ const AFHLicensingCertification = () => (
             <p
               style={{
                 fontSize: 16,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#302b26",
                 lineHeight: 1.6,
                 margin: "16px 0 0",
@@ -297,7 +297,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -322,7 +322,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 32px",
@@ -377,7 +377,7 @@ const AFHLicensingCertification = () => (
                   <p
                     style={{
                       fontSize: 17,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       color: "#302b26",
                       lineHeight: 1.75,
                       margin: 0,
@@ -398,7 +398,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -423,7 +423,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -435,7 +435,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -457,7 +457,7 @@ const AFHLicensingCertification = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#1a0a0a",
                 lineHeight: 1.75,
                 margin: 0,
@@ -476,7 +476,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -501,7 +501,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -514,7 +514,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -527,7 +527,7 @@ const AFHLicensingCertification = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 24px",
@@ -543,7 +543,7 @@ const AFHLicensingCertification = () => (
             rel="noopener noreferrer"
             style={{
               fontSize: 16,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 700,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
@@ -598,7 +598,7 @@ const AFHLicensingCertification = () => (
                 rel="noopener noreferrer"
                 style={{
                   fontSize: 17,
-                  fontFamily: "'Raleway', sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 600,
                   color: "#9e2c35",
                   textDecoration: "underline",

@@ -192,7 +192,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                   <span
                     style={{
                       fontSize: "14px",
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 700,
                       letterSpacing: "0.2em",
                       textTransform: "uppercase",

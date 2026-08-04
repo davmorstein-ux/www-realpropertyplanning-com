@@ -91,7 +91,7 @@ const SiteSearchBar = () => {
             border: "none",
             outline: "none",
             fontSize: 17,
-            fontFamily: "'Raleway', sans-serif",
+            fontFamily: "'DM Sans', sans-serif",
             color: "#272421",
             background: "transparent",
             minWidth: 0,
@@ -117,7 +117,7 @@ const SiteSearchBar = () => {
             <div
               style={{
                 padding: "18px 16px",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontSize: 16,
                 color: "#806b6d",
               }}
@@ -143,7 +143,7 @@ const SiteSearchBar = () => {
             >
               <div
                 style={{
-                  fontFamily: "'Raleway', sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontSize: 16,
                   fontWeight: 600,
                   color: "#272421",

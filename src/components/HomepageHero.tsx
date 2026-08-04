@@ -57,14 +57,14 @@ const HomepageFunnel = () => (
         box-shadow: 0 10px 28px rgba(0,0,0,0.16);
       }
       .rpp-tile-label {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 20px !important;
         font-weight: 700 !important;
         color: #ffffff !important;
         line-height: 1.25 !important;
       }
       .rpp-afh-title {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 26px !important;
         font-weight: 800 !important;
         color: #ffffff !important;
@@ -72,7 +72,7 @@ const HomepageFunnel = () => (
         margin: 0 0 0.4rem 0 !important;
       }
       .rpp-afh-sub {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 18px !important;
         font-weight: 500 !important;
         color: #d4f0ee !important;
@@ -80,7 +80,7 @@ const HomepageFunnel = () => (
         margin: 0 !important;
       }
       .rpp-afh-cta {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 17px !important;
         font-weight: 700 !important;
         color: #1a7a78 !important;
@@ -99,7 +99,7 @@ const HomepageFunnel = () => (
         background-color: #e8f5f5 !important;
       }
       .rpp-section-eyebrow {
-        font-family: Inter, system-ui, sans-serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 14px !important;
         font-weight: 700 !important;
         letter-spacing: 0.18em !important;

@@ -12,7 +12,7 @@ const Footer = () => {
         .rpp-footer-link {
           color: rgba(255,255,255,0.72) !important;
           text-decoration: none !important;
-          font-family: Inter, system-ui, sans-serif !important;
+          font-family: 'DM Sans', system-ui, sans-serif !important;
           font-size: 16px !important;
           line-height: 1.4 !important;
           transition: color 0.15s ease !important;
@@ -21,7 +21,7 @@ const Footer = () => {
         }
         .rpp-footer-link:hover { color: #e0737d !important; }
         .rpp-footer-col-heading {
-          font-family: Inter, system-ui, sans-serif !important;
+          font-family: 'DM Sans', system-ui, sans-serif !important;
           font-size: 15px !important;
           font-weight: 700 !important;
           letter-spacing: 0.14em !important;
@@ -45,7 +45,7 @@ const Footer = () => {
           .rpp-footer-grid { grid-template-columns: 1fr !important; }
         }
         .rpp-footer-nap {
-          font-family: Inter, system-ui, sans-serif !important;
+          font-family: 'DM Sans', system-ui, sans-serif !important;
           font-size: 16px !important;
           color: rgba(255,255,255,0.65) !important;
           display: flex !important;
@@ -57,7 +57,7 @@ const Footer = () => {
         }
         .rpp-footer-nap:hover { color: #e0737d !important; }
         .rpp-footer-disclaimer {
-          font-family: Inter, system-ui, sans-serif !important;
+          font-family: 'DM Sans', system-ui, sans-serif !important;
           font-size: 11px !important;
           color: rgba(255,255,255,0.38) !important;
           line-height: 1.6 !important;
@@ -87,7 +87,7 @@ const Footer = () => {
             </Link>
             <p
               style={{
-                fontFamily: "Inter, system-ui, sans-serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontSize: "13px",
                 color: "rgba(255,255,255,0.55)",
                 lineHeight: 1.5,

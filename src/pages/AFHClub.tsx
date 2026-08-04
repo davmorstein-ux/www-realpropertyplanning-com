@@ -83,7 +83,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "20px",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
@@ -123,7 +123,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "clamp(22px, 2.4vw, 28px)",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 400,
                 color: "#302b26",
                 lineHeight: 1.8,
@@ -159,7 +159,7 @@ const AFHClub = () => {
             <h2
               style={{
                 fontSize: "clamp(26px, 3vw, 36px)",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
                 color: "#302b26",
                 marginBottom: 16,
@@ -170,7 +170,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: 18,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#5e5954",
                 maxWidth: 600,
                 margin: "0 auto 32px",
@@ -186,7 +186,7 @@ const AFHClub = () => {
                   display: "inline-block",
                   background: "#302b26",
                   color: "#fff",
-                  fontFamily: "'Raleway', sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 700,
                   fontSize: 15,
                   letterSpacing: "0.08em",
@@ -203,7 +203,7 @@ const AFHClub = () => {
                   display: "inline-block",
                   background: "transparent",
                   color: "#302b26",
-                  fontFamily: "'Raleway', sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 700,
                   fontSize: 15,
                   letterSpacing: "0.08em",
@@ -271,7 +271,7 @@ const AFHClub = () => {
                   display: "inline-block",
                   background: "#f7f4ef",
                   color: "#302b26",
-                  fontFamily: "'Raleway', sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 600,
                   fontSize: 14,
                   padding: "8px 16px",
@@ -361,7 +361,7 @@ const AFHClub = () => {
                       color: "#302b26",
                       margin: "0 0 12px",
                       lineHeight: 1.65,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 400,
                     }}
                   >
@@ -370,7 +370,7 @@ const AFHClub = () => {
                   <span
                     style={{
                       fontSize: "16px",
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 700,
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
@@ -406,7 +406,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "20px",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
@@ -431,7 +431,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "clamp(19px, 2vw, 22px)",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 400,
                 color: "#302b26",
                 lineHeight: 1.85,
@@ -443,7 +443,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "clamp(19px, 2vw, 22px)",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 400,
                 color: "#302b26",
                 lineHeight: 1.85,
@@ -455,7 +455,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "clamp(19px, 2vw, 22px)",
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 400,
                 color: "#302b26",
                 lineHeight: 1.85,

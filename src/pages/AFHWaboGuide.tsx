@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const label = {
   fontSize: 15,
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   fontWeight: 600,
   letterSpacing: "0.22em",
   textTransform: "uppercase" as const,
@@ -29,7 +29,7 @@ const h2 = {
 
 const body = {
   fontSize: 18,
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   color: "#302b26",
   lineHeight: 1.85,
   margin: "0 0 20px",
@@ -37,7 +37,7 @@ const body = {
 
 const li = {
   fontSize: 18,
-  fontFamily: "'Raleway', sans-serif",
+  fontFamily: "'DM Sans', sans-serif",
   color: "#302b26",
   lineHeight: 1.75,
   marginBottom: 10,
@@ -283,7 +283,7 @@ const AFHWaboGuide = () => (
             The local city or county building official performs the inspection, and DSHS handles licensing. Knowing
             the difference can save time, money, and frustration.
           </p>
-          <p style={{ fontSize: 16, fontFamily: "'Raleway', sans-serif", color: "#5a5147", margin: "20px 0 0" }}>
+          <p style={{ fontSize: 16, fontFamily: "'DM Sans', sans-serif", color: "#5a5147", margin: "20px 0 0" }}>
             Ready for the technical details?{" "}
             <Link to="/afh-club/wabo-technical-guide" style={{ color: "#9e2c35", fontWeight: 600, textDecoration: "underline" }}>
               WABO Checklist & Technical Requirements →

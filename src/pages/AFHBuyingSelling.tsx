@@ -118,7 +118,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -143,7 +143,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
               color: "#342e28",
               lineHeight: 1.85,
@@ -170,7 +170,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -195,7 +195,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -208,7 +208,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -221,7 +221,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 24px",
@@ -243,7 +243,7 @@ const AFHBuyingSelling = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
@@ -271,7 +271,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -296,7 +296,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 28px",
@@ -351,7 +351,7 @@ const AFHBuyingSelling = () => (
                   <p
                     style={{
                       fontSize: 17,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       color: "#302b26",
                       lineHeight: 1.75,
                       margin: 0,
@@ -372,7 +372,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -420,7 +420,7 @@ const AFHBuyingSelling = () => (
                 <p
                   style={{
                     fontSize: 17,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     color: "#302b26",
                     lineHeight: 1.75,
                     margin: 0,
@@ -440,7 +440,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -466,7 +466,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#e8e2d9",
               lineHeight: 1.85,
               margin: "0 0 32px",
@@ -482,7 +482,7 @@ const AFHBuyingSelling = () => (
               style={{
                 display: "inline-block",
                 fontSize: 16,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
@@ -502,7 +502,7 @@ const AFHBuyingSelling = () => (
               style={{
                 display: "inline-block",
                 fontSize: 16,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
@@ -520,7 +520,7 @@ const AFHBuyingSelling = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#e8e2d9",
               marginTop: 28,
             }}

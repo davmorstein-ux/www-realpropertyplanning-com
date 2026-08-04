@@ -135,7 +135,7 @@ const RPPHome = () => {
             <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
               <h2
                 style={{
-                  fontFamily: "Inter, system-ui, sans-serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "4rem",
                   fontWeight: 600,
                   color: "#6f2a30",
@@ -175,7 +175,7 @@ const RPPHome = () => {
                     >
                       <span
                         style={{
-                          fontFamily: "Inter, system-ui, sans-serif",
+                          fontFamily: "'DM Sans', system-ui, sans-serif",
                           fontSize: 20,
                           fontWeight: 700,
                           color: "#ffffff",
@@ -228,7 +228,7 @@ const RPPHome = () => {
                   <div>
                     <p
                       style={{
-                        fontFamily: "Inter, system-ui, sans-serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         fontSize: 24,
                         fontWeight: 800,
                         color: "#1a5c58",
@@ -239,7 +239,7 @@ const RPPHome = () => {
                     </p>
                     <p
                       style={{
-                        fontFamily: "Inter, system-ui, sans-serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         fontSize: 16,
                         fontWeight: 500,
                         color: "#443e38",
@@ -252,7 +252,7 @@ const RPPHome = () => {
                 </div>
                 <span
                   style={{
-                    fontFamily: "Inter, system-ui, sans-serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontSize: 15,
                     fontWeight: 700,
                     color: "#ffffff",

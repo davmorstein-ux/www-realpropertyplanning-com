@@ -103,7 +103,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontSize: 11,
                     letterSpacing: "0.12em",
                     color: "#e0828a",
@@ -114,7 +114,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontSize: 11,
                     color: "rgba(255,255,255,0.65)",
                     marginTop: 2,
@@ -157,7 +157,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 >
                   <div
                     style={{
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontSize: 10,
                       fontWeight: 700,
                       letterSpacing: "0.18em",
@@ -185,7 +185,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               >
                 <div
                   style={{
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontSize: 10,
                     fontWeight: 700,
                     letterSpacing: "0.18em",

@@ -117,7 +117,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -145,7 +145,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
               color: "#342e28",
               lineHeight: 1.85,
@@ -160,7 +160,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
               color: "#302b26",
               lineHeight: 1.8,
@@ -179,7 +179,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -204,7 +204,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -218,7 +218,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 18,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.85,
               margin: "0 0 20px",
@@ -229,7 +229,7 @@ const AFHGettingStarted = () => (
             more complex care for residents with dementia, mental health needs, or developmental disabilities.
           </p>
           <p
-            style={{ fontSize: 18, fontFamily: "'Raleway', sans-serif", color: "#302b26", lineHeight: 1.85, margin: 0 }}
+            style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#302b26", lineHeight: 1.85, margin: 0 }}
           >
             AFHs are permitted in all single-family residential zoning districts throughout Washington State. The
             concept originated in Washington in the 1990s specifically to create a homelike alternative to larger
@@ -244,7 +244,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -269,7 +269,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 32px",
@@ -339,7 +339,7 @@ const AFHGettingStarted = () => (
                   <p
                     style={{
                       fontSize: 18,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 700,
                       color: "#280a0c",
                       margin: "0 0 4px",
@@ -350,7 +350,7 @@ const AFHGettingStarted = () => (
                   <p
                     style={{
                       fontSize: 16,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       color: "#302b26",
                       lineHeight: 1.65,
                       margin: 0,
@@ -375,7 +375,7 @@ const AFHGettingStarted = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#2f2a25",
                 lineHeight: 1.75,
                 margin: 0,
@@ -403,7 +403,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -428,7 +428,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 32px",
@@ -463,7 +463,7 @@ const AFHGettingStarted = () => (
                 <p
                   style={{
                     fontSize: 17,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     color: "#302b26",
                     lineHeight: 1.75,
                     margin: 0,
@@ -483,7 +483,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -508,7 +508,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 17,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               color: "#302b26",
               lineHeight: 1.8,
               margin: "0 0 32px",
@@ -544,7 +544,7 @@ const AFHGettingStarted = () => (
                 <p
                   style={{
                     fontSize: 17,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     color: "#302b26",
                     lineHeight: 1.75,
                     margin: "0 0 20px",
@@ -555,7 +555,7 @@ const AFHGettingStarted = () => (
                 <p
                   style={{
                     fontSize: 15,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
@@ -570,7 +570,7 @@ const AFHGettingStarted = () => (
                     key={i}
                     style={{
                       fontSize: 16,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       color: "#302b26",
                       lineHeight: 1.65,
                       margin: "0 0 4px",
@@ -583,7 +583,7 @@ const AFHGettingStarted = () => (
                 <p
                   style={{
                     fontSize: 15,
-                    fontFamily: "'Raleway', sans-serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 700,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
@@ -598,7 +598,7 @@ const AFHGettingStarted = () => (
                     key={i}
                     style={{
                       fontSize: 16,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       color: "#302b26",
                       lineHeight: 1.65,
                       margin: "0 0 4px",
@@ -624,7 +624,7 @@ const AFHGettingStarted = () => (
             <p
               style={{
                 fontSize: 17,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 color: "#302b26",
                 lineHeight: 1.75,
                 margin: 0,
@@ -644,7 +644,7 @@ const AFHGettingStarted = () => (
           <p
             style={{
               fontSize: 15,
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -743,7 +743,7 @@ const AFHGettingStarted = () => (
                   <p
                     style={{
                       fontSize: 17,
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'DM Sans', sans-serif",
                       color: "#302b26",
                       lineHeight: 1.75,
                       margin: 0,
@@ -779,7 +779,7 @@ const AFHGettingStarted = () => (
                 rel="noopener noreferrer"
                 style={{
                   fontSize: 16,
-                  fontFamily: "'Raleway', sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 600,
                   color: "#9e2c35",
                   textDecoration: "underline",
