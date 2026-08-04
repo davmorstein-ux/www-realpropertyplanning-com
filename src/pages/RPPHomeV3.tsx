@@ -108,7 +108,7 @@ const RPPHomeV3 = () => {
                   color: "#1B3A6B",
                   lineHeight: 1,
                   letterSpacing: "0.01em",
-                  textShadow: "0 1px 3px rgba(255,255,255,0.85)",
+
                   marginTop: "clamp(8px, 1.5vw, 20px)",
                 }}
               >
