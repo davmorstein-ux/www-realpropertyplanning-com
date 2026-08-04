@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ClipboardCheck, Scale, HeartHandshake, KeyRound, ArrowRight } from "lucide-react";
 
 const resources = [
@@ -28,9 +29,12 @@ const resources = [
   },
 ];
 
-const HomepagePopularResources = () => (
-  <section style={{ backgroundColor: "#ffffff", padding: "3.5rem 0 4rem" }}>
-    <style>{`
+const HomepagePopularResources = () => {
+  const { t } = useTranslation();
+
+  return (
+    <section style={{ backgroundColor: "#ffffff", padding: "3.5rem 0 4rem" }}>
+      <style>{`
       .rpp-pr-eyebrow {
         font-family: Inter, system-ui, sans-serif !important;
         font-size: 18px !important;
@@ -115,78 +119,169 @@ const HomepagePopularResources = () => (
         border-radius: 8px !important;
         text-decoration: none !important;
       }
-      .rpp-pr-browse {
+
+      /* Browse all — a solid button, so it reads as the primary next step
+         rather than another text link among many. */
+      .rpp-pr-browse.rpp-pr-browse {
         display: inline-flex !important;
         align-items: center !important;
-        gap: 8px !important;
+        gap: 10px !important;
         font-family: Inter, system-ui, sans-serif !important;
         font-size: 18px !important;
         font-weight: 700 !important;
-        color: #272421 !important;
+        color: #ffffff !important;
+        background-color: #272421 !important;
+        border: 2px solid #272421 !important;
+        padding: 14px 30px !important;
+        border-radius: 8px !important;
+        min-height: 52px !important;
+        box-shadow: 0 3px 12px rgba(26,39,68,0.14) !important;
+        transition: background-color 150ms ease, border-color 150ms ease !important;
+      }
+      .rpp-pr-browse.rpp-pr-browse,
+      .rpp-pr-browse.rpp-pr-browse * {
         text-decoration: none !important;
       }
-      .rpp-pr-browse:hover { color: #7f1d1d !important; }
+      .rpp-pr-browse:hover,
+      .rpp-pr-browse:focus-visible {
+        background-color: #7f1d1d !important;
+        border-color: #7f1d1d !important;
+      }
+
+      /* AFH Club — a quiet, explicitly labeled door for the owner /
+         operator / investor audience. Deliberately a different shape from
+         the browse button above it: outlined strip, green left rule, and
+         the audience named up front, so the two never compete. */
+      .rpp-afh-strip.rpp-afh-strip {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem 1.25rem;
+        width: 100%;
+        max-width: 720px;
+        min-height: 56px;
+        margin: 1.75rem auto 0;
+        padding: 0.85rem 1.5rem;
+        background: #ffffff;
+        border: 1px solid #cfd8d4;
+        border-left: 5px solid #0a5648;
+        border-radius: 10px;
+        text-align: center;
+        transition: background-color 150ms ease, border-color 150ms ease;
+      }
+      .rpp-afh-strip.rpp-afh-strip,
+      .rpp-afh-strip.rpp-afh-strip * {
+        text-decoration: none !important;
+      }
+      .rpp-afh-strip:hover,
+      .rpp-afh-strip:focus-visible {
+        background: #f4f8f6;
+        border-color: #0a5648;
+      }
+      .rpp-afh-strip-label.rpp-afh-strip-label {
+        font-family: 'DM Sans', 'Raleway', system-ui, sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #063e33;
+        margin: 0;
+      }
+      .rpp-afh-strip-cta.rpp-afh-strip-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Raleway', system-ui, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #0a5648;
+        border-bottom: 2px solid #0a5648;
+        padding-bottom: 2px;
+        margin: 0;
+      }
+
       @media (max-width: 900px) {
         .rpp-pr-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      }
+      @media (max-width: 640px) {
+        .rpp-afh-strip.rpp-afh-strip {
+          flex-direction: column;
+          gap: 0.6rem;
+          padding: 1rem 1.25rem;
+        }
+        .rpp-afh-strip-label.rpp-afh-strip-label {
+          font-size: 15px;
+          letter-spacing: 0.05em;
+        }
       }
       @media (max-width: 520px) {
         .rpp-pr-grid { grid-template-columns: 1fr !important; }
       }
     `}</style>
 
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
-      {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: "2.25rem" }}>
-        <span className="rpp-pr-eyebrow">Popular Resources</span>
-        <h2 className="rpp-pr-heading">The guides people open most</h2>
-      </div>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: "2.25rem" }}>
+          <span className="rpp-pr-eyebrow">Popular Resources</span>
+          <h2 className="rpp-pr-heading">The guides people open most</h2>
+        </div>
 
-      {/* Cards */}
-      <ul className="rpp-pr-grid">
-        {resources.map((r) => {
-          const Icon = r.icon;
-          return (
-            <li key={r.href}>
-              <Link
-                to={r.href}
-                className="rpp-pr-card marquee-hover"
-                style={{ ["--pr-accent" as string]: r.accent, ["--pr-accent-soft" as string]: `${r.accent}1a` }}
-              >
-                <span className="rpp-pr-card-icon">
-                  <Icon size={26} color={r.accent} strokeWidth={2} aria-hidden="true" />
-                </span>
-                <span className="rpp-pr-card-text">{r.title}</span>
-                <span className="rpp-pr-card-cta">
-                  Read Guide
-                  <ArrowRight size={15} aria-hidden="true" />
-                </span>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+        {/* Cards */}
+        <ul className="rpp-pr-grid">
+          {resources.map((r) => {
+            const Icon = r.icon;
+            return (
+              <li key={r.href}>
+                <Link
+                  to={r.href}
+                  className="rpp-pr-card marquee-hover"
+                  style={{ ["--pr-accent" as string]: r.accent, ["--pr-accent-soft" as string]: `${r.accent}1a` }}
+                >
+                  <span className="rpp-pr-card-icon">
+                    <Icon size={26} color={r.accent} strokeWidth={2} aria-hidden="true" />
+                  </span>
+                  <span className="rpp-pr-card-text">{r.title}</span>
+                  <span className="rpp-pr-card-cta">
+                    Read Guide
+                    <ArrowRight size={15} aria-hidden="true" />
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
 
-      {/* Browse all */}
-      <div style={{ textAlign: "center", marginTop: "2.25rem" }}>
-        <Link to="/resources" className="rpp-pr-browse">
-          Browse all resources
-          <svg
-            viewBox="0 0 24 24"
-            width="18"
-            height="18"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
+        {/* Browse all — primary next step */}
+        <div style={{ textAlign: "center", marginTop: "2.25rem" }}>
+          <Link to="/resources" className="rpp-pr-browse">
+            Browse all resources
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* AFH Club — relocated from the funnel section so the top of the
+            homepage speaks only to families. No SVG arrow here: the
+            afhClub.cta string already ends in an arrow in every locale. */}
+        <Link to="/afh-club" className="rpp-afh-strip marquee-hover">
+          <span className="rpp-afh-strip-label">{t("afhClub.eyebrow")}</span>
+          <span className="rpp-afh-strip-cta">{t("afhClub.cta")}</span>
         </Link>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default HomepagePopularResources;
