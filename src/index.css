@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&display=swap");
-
 /* Fonts loaded non-blocking from index.html (DM Sans + DM Sans) */
 .hero-text-white {
   color: #ffffff !important;
@@ -451,7 +449,7 @@ main,
       line-height: 1.1 !important;
       letter-spacing: 0.04em !important;
       color: #272421 !important;
-      font-family: "Raleway", "Gill Sans", sans-serif !important;
+      font-family: "DM Sans", "Gill Sans", sans-serif !important;
       margin: 0 !important;
       text-align: center !important;
       text-shadow:
@@ -3525,7 +3523,7 @@ main #rpp-orientation div {
    the global `main [style*="letter-spacing"]` minimum-font-size rule. */
 main #rpp-tagline .rpp-tagline-line-v2 {
   font-size: clamp(25px, 3.5vw, 50px) !important;
-  color: #0000ff !important;
+  color: #1b3a6b !important;
   font-family: "Cormorant Garamond", Georgia, serif !important;
   font-style: italic !important;
   font-weight: 600 !important;
