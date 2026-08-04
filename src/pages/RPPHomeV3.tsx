@@ -311,9 +311,24 @@ const RPPHomeV3 = () => {
                 line-height: 1.45 !important;
                 color: #25597e !important;
               }
+              /* Bullets are drawn with ::before rather than list-style,
+                 because the <ul> is display:flex and native markers render
+                 inconsistently on flex children. */
               .rpp-coc-more li {
                 color: #25597e;
                 font-weight: 700;
+                display: flex;
+                align-items: baseline;
+                gap: 0.55rem;
+              }
+              .rpp-coc-more li::before {
+                content: "";
+                flex: 0 0 auto;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #25597e;
+                transform: translateY(-0.2em);
               }
               @media (max-width: 768px) {
                 .rpp-coc-layout.rpp-coc-layout {
