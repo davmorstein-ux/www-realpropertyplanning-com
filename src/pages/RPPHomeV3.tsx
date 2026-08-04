@@ -261,7 +261,7 @@ const RPPHomeV3 = () => {
               .rpp-coc-card.rpp-coc-card {
                 display: block;
                 background: #ffffff;
-                border: 2px solid #d43341;
+                border: 2px solid #7f1d1d;
                 border-radius: 12px;
                 padding: 1.35rem 1.6rem;
               }
@@ -321,6 +321,15 @@ const RPPHomeV3 = () => {
                 align-items: baseline;
                 gap: 0.55rem;
               }
+              /* The descriptor's inline clamp() was being overridden by the
+                 global `main p { font-size: ... !important }` rule, so it
+                 rendered at a flat 18px. Doubled class + !important wins. */
+              .rpp-descriptor-text.rpp-descriptor-text {
+                font-size: clamp(21px, 2.6vw, 31px) !important;
+                line-height: 1.5 !important;
+                font-weight: 400 !important;
+                color: #1B3A6B !important;
+              }
               .rpp-coc-more li::before {
                 content: "";
                 flex: 0 0 auto;
@@ -372,7 +381,7 @@ const RPPHomeV3 = () => {
                     }}
                   >
                     <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
-                    <span style={{ color: "#d43341" }}>{t("costOfCare.headingPart2")}</span>
+                    <span style={{ color: "#7f1d1d" }}>{t("costOfCare.headingPart2")}</span>
                   </h3>
 
                   <span
@@ -380,7 +389,7 @@ const RPPHomeV3 = () => {
                       display: "inline-flex",
                       alignItems: "center",
                       gap: 8,
-                      background: "#d43341",
+                      background: "#7f1d1d",
                       color: "#ffffff",
                       fontFamily: "'Raleway', sans-serif",
                       fontWeight: 700,
@@ -444,14 +453,11 @@ const RPPHomeV3 = () => {
             <div className="max-w-[1000px] mx-auto text-center">
               <p
                 id="rpp-descriptor"
+                className="rpp-descriptor-text"
                 style={{
                   fontFamily: "Georgia, 'Cormorant Garamond', serif",
-                  fontSize: "clamp(18px, 2.2vw, 26px)",
-                  fontWeight: 400,
                   fontStyle: "normal",
-                  color: "#1B3A6B",
                   margin: 0,
-                  lineHeight: 1.55,
                   letterSpacing: "0.01em",
                   textWrap: "balance" as any,
                 }}
