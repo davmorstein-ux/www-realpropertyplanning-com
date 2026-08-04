@@ -86,6 +86,8 @@ const RPPHomeV3 = () => {
               justifyContent: "center",
               padding: "clamp(24px, 3vw, 40px) 8%",
               boxSizing: "border-box",
+              background:
+                "linear-gradient(to bottom, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.55) 55%, rgba(255,255,255,0) 100%)",
               gap: "clamp(6px, 1vw, 12px)",
             }}
           >
