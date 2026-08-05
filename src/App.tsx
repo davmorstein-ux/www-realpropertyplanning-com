@@ -177,6 +177,7 @@ const EstateSale = lazy(() => import("./pages/professionals/EstateSale"));
 const HomePreparation = lazy(() => import("./pages/professionals/HomePreparation"));
 const CareManagers = lazy(() => import("./pages/professionals/CareManagers"));
 const Testimonials = lazy(() => import("./pages/Testimonials"));
+const ShareYourExperience = lazy(() => import("./pages/ShareYourExperience"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Roles = lazy(() => import("./pages/Roles"));
 const Planning = lazy(() => import("./pages/Planning"));
