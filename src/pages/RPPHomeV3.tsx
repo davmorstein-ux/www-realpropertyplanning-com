@@ -145,7 +145,7 @@ const RPPHomeV3 = () => {
                 className="rpp-funnel-heading"
                 style={{
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "3rem",
+                  fontSize: "2.25rem",
                   fontWeight: 500,
                   color: "#272421",
                   margin: 0,
