@@ -454,7 +454,7 @@ const RPPHomeV3 = () => {
         </section>
 
         <HomepagePopularResources />
-        <HomepageTestimonials />
+        {/* <HomepageTestimonials /> — hidden until real testimonials are collected */}
         <HomepageFAQ />
       </main>
       <Footer />
