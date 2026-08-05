@@ -408,6 +408,14 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro:
       "Read what clients say about working with Real Property Planning for probate property sales, estate transitions, and senior moves throughout Washington State.",
   },
+  "/share-your-experience": {
+    title: "Share Your Experience | Real Property Planning",
+    description:
+      "Tell us how Real Property Planning helped. Your words may be published on our testimonials page, only with your permission and only as you asked to be credited.",
+    h1: "Share Your Experience",
+    intro:
+      "If a guide, a calculator, or an introduction to the right professional helped you, we'd be glad to hear about it. Nothing is published automatically.",
+  },
   "/guides-and-resources": {
     title: "Guides & Articles | Probate, Estate & Senior Transition Guidance | Real Property Planning",
     description:
