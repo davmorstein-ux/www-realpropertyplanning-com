@@ -8,6 +8,7 @@ import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
 import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
 import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
+import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import { CARE_TYPES, CARE_TYPE_COLORS, formatCurrency } from "@/lib/careTypes";
 
@@ -453,6 +454,7 @@ const RPPHomeV3 = () => {
         </section>
 
         <HomepagePopularResources />
+        <HomepageTestimonials />
         <HomepageFAQ />
       </main>
       <Footer />

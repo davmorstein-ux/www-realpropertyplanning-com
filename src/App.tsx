@@ -396,7 +396,7 @@ const App = () => (
               </LanguageRoute>
             }
           />
-          <Route path="/client-stories" element={<ClientStories />} />
+          <Route path="/client-stories" element={<Navigate to="/testimonials" replace />} />
           <Route
             path="/senior-transitions"
             element={
@@ -841,6 +841,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/share-your-experience" element={<ShareYourExperience />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/search" element={<Search />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
