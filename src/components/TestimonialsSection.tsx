@@ -60,12 +60,7 @@ const TestimonialsSection = () => {
             <Link to="/share-your-experience">Share your experience</Link>
           </Button>
 
-          <Button asChild variant="outline" className="px-8 py-6">
-            <a href="https://www.zillow.com/profile/dstein2112#reviews" target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="w-4 h-4 mr-2" aria-hidden="true" />
-              More reviews on Zillow
-            </a>
-          </Button>
+          
         </div>
       </div>
     </section>
