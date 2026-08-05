@@ -21,7 +21,7 @@ const Testimonials = () => {
       />
       <Header />
       <main id="main-content">
-        {/* <TestimonialsSection /> — hidden until real testimonials are collected */}
+        <TestimonialsSection />
       </main>
       <DisclaimerSection />
       <Footer />
