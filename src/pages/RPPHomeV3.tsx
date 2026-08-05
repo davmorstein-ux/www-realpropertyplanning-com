@@ -251,9 +251,14 @@ const RPPHomeV3 = () => {
                 inline. Doubled class names beat the global
                 `main p { font-size: ... !important }` rule. */}
             <style>{`
-              .rpp-explore-badge.rpp-explore-badge {
-                text-transform: uppercase;
-              }
+             <style>{`
+  .rpp-explore-badge.rpp-explore-badge {
+    text-transform: uppercase;
+  }
+
+  .rpp-funnel-heading.rpp-funnel-heading {
+    font-size: 2.25rem !important;
+  }
 
               /* Cost of Care tile — three columns on desktop: heading+CTA on
                  the left, preview figures in the middle, and the remaining
