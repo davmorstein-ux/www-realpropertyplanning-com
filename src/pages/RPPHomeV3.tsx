@@ -249,9 +249,8 @@ const RPPHomeV3 = () => {
                 a global [style*="text-transform: uppercase"] selector in
                 index.css forces font-weight 600 on anything declaring it
                 inline. Doubled class names beat the global
-                `main p { font-size: ... !important }` rule. */}
+                "main p font-size !important" rule. */}
             <style>{`
-             <style>{`
   .rpp-explore-badge.rpp-explore-badge {
     text-transform: uppercase;
   }
