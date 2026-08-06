@@ -100,7 +100,7 @@ const RPPHomeV3 = () => {
                on a DOM element and drops it with a console warning, so the
                hero never actually received high priority. Lowercase is the
                attribute the browser reads. */
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
           />
           {/* Logo + tagline overlay — normal flow, so this content's own
