@@ -261,12 +261,18 @@ const Footer = () => {
 
         {/* Disclaimer — compact */}
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "1rem" }}>
+          {/* CONDENSED to match the body DisclaimerSection. The full text is
+              one click away at /disclaimer, and the body version — which has
+              no data-nosnippet — is the one search engines and AI answer
+              engines can extract.
+
+              Kept here rather than removed because this footer is the only
+              disclosure that appears on EVERY page. DisclaimerSection is
+              added per page and can be missed; the footer cannot. */}
           <p className="rpp-footer-disclaimer">
             Real Property Planning is an independent educational hub. It does not provide legal, financial, tax, real
-            estate brokerage, medical, or other professional services. Professional licensing credentials referenced on
-            this site belong to individual members of our professional network, who provide their respective services
-            independently, through their own separately licensed businesses — not through Real Property Planning.
-            Professionals referenced on this site are independent and not affiliated with Real Property Planning.{" "}
+            estate brokerage, medical, or other professional services. Professionals referenced on this site are
+            independently licensed and operate through their own separate businesses.{" "}
             <Link to="/disclaimer">Full disclaimer</Link>.
           </p>
           <p className="rpp-footer-disclaimer">
