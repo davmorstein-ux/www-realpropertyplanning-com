@@ -53,7 +53,6 @@ const providers: Provider[] = [
     alt: "Photo of J. R. Gillespie, Medicare Advisor at ALLSTAR Financial Insurance",
     href: "https://allstarfinancialinsurance.com",
     phone: "(425) 814-6378",
-    email: "jr@AllStarFinancialInsurance.com",
     logo: allstarLogo,
     logoAlt: "ALLSTAR Financial Insurance logo",
     specialty:
