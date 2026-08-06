@@ -3652,3 +3652,106 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
   line-height: 1.4 !important;
 }
 
+/* ============================================================
+   Real Property Planning — page width, final
+   REPLACES sections 2 and 3 of rpp-ultrawide-layout.css.
+   Keep section 1 (the max-w scale bug) and section 4 (prose cap)
+   from that file — they are still correct.
+
+   Measured: ultrawide viewport = 3440px.
+   At the current 1088px content width that is 32% of the screen,
+   which is why it reads as half-empty. On a 15" at ~1440 the same
+   column is 76%, which should look fine — so if it looks wrong
+   there too, send me that window.innerWidth and I will adjust.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. PAGE SHELL — only bites on very wide screens
+
+   No effect below 1600px. Above it, the whole page (header, hero,
+   content, footer) shares one edge instead of the bars running to
+   3440 while content sits at 1088.
+   ------------------------------------------------------------ */
+
+@media (min-width: 1600px) {
+  #root {
+    max-width: 2100px;
+    margin-inline: auto;
+  }
+
+  /* Fixed and sticky elements are positioned against the viewport,
+     not #root, so they ignore the cap above unless pulled in. */
+  header[class*="fixed"],
+  header[class*="sticky"],
+  [class*="SiteBottomNav"],
+  [class*="site-bottom-nav"] {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 2100px !important;
+  }
+}
+
+
+/* ------------------------------------------------------------
+   2. SECTIONS SCALE WITH THE VIEWPORT
+
+   The core change. Content columns stop parking at a fixed 1088px
+   and instead take 90% of the available width up to a 1600px cap.
+
+        viewport 1440  ->  1296px  (was 1088)
+        viewport 1512  ->  1360px  (was 1088)
+        viewport 1920  ->  1600px  (was 1088)
+        viewport 3440  ->  1600px inside a 2100px shell
+
+   This is why a single fixed breakpoint could not fix both
+   monitors: the problem is proportional, so the answer has to be
+   proportional too.
+   ------------------------------------------------------------ */
+
+@media (min-width: 1280px) {
+  main > section > .container,
+  main .max-w-2xl,
+  main .max-w-3xl,
+  main .max-w-4xl,
+  main .max-w-5xl,
+  main .max-w-6xl {
+    max-width: min(1600px, 90vw) !important;
+  }
+}
+
+
+/* ------------------------------------------------------------
+   3. PROSE STAYS READABLE
+
+   Sections get wider; running text does not. 75ch at 18px DM Sans
+   is roughly 780px. Without this, widening the page would push
+   paragraphs past 130 characters per line — worse to read than
+   what you have now, and worst for the readers this site is for.
+
+   Grids, tiles, and cards are exempt: they are scanned, not read.
+   ------------------------------------------------------------ */
+
+@media (min-width: 1280px) {
+  main p,
+  main li {
+    max-width: 75ch;
+  }
+
+  main [class*="text-center"] p,
+  main p[class*="text-center"] {
+    max-width: 68ch;
+    margin-inline: auto;
+  }
+
+  [class*="tile"] p,
+  [class*="tile"] li,
+  [class*="card"] p,
+  [class*="card"] li,
+  [class*="Card"] p,
+  td p,
+  th p {
+    max-width: none;
+  }
+}
