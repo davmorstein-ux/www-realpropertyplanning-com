@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 interface BackToResourcesProps {
@@ -12,88 +12,108 @@ interface BackToResourcesProps {
 }
 
 /**
- * WHY THIS IS NO LONGER AN IMAGE
+ * WHY THIS IS NOT AN IMAGE
  *
- * This component previously rendered /back-to-resources.webp — a picture of
- * the words "← Back to Resources". Three problems came with that:
+ * Previously rendered /back-to-resources.webp — a picture of the words
+ * "← Back to Resources". That could not be translated by i18next across the
+ * site's seven languages, blurred for anyone zooming in, ignored browser
+ * font-size settings, and failed WCAG 1.4.5 (Images of Text, AA).
  *
- * 1. TRANSLATION. The site runs i18next across seven languages. An image
- *    cannot be translated, so every non-English visitor saw English text on
- *    this button.
+ * WHY THE COLOURS LIVE IN A CLASS, NOT INLINE
  *
- * 2. ZOOM AND CONTRAST. A reader at 200% zoom got blurred pixels instead of
- *    larger crisp text, and browser font-size preferences were ignored.
- *    WCAG 1.4.5 (Images of Text, AA) exists for this reason, and it matters
- *    more than usual for this site's audience.
+ * index.css contains attribute-matching rules such as
+ *     main [style*="rgb(15"] { color: #3D3833 !important; }
+ * intended to catch light grey inline TEXT colours. But [style*=...] tests
+ * the whole style attribute, so a navy background containing rgb(15, 37, 71)
+ * matched, and the label was forced to dark grey on a dark plate.
  *
- * 3. WORDING. Changing the label meant commissioning a new graphic and
- *    keeping the alt text in sync with it.
- *
- * The styling below reproduces the navy-and-gold plate from the original
- * image using real text, so it scales, translates, and recolours normally.
+ * Keeping colours in a stylesheet class instead of the style attribute means
+ * those selectors cannot match this component at all. Layout values stay
+ * inline; anything colour-related lives in the class below.
  */
+
+const STYLE_ID = "rpp-back-to-resources-v2";
+
+const CSS = `
+  .rpp-btr {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    max-width: 480px;
+    width: 100%;
+    min-height: 56px;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #16335a 0%, #0f2547 55%, #0b1c35 100%);
+    border: 3px solid #c9a84c;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #8a7233, 0 3px 10px rgba(0,0,0,0.22),
+                inset 0 0 0 1px rgba(201,168,76,0.4);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.25;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  }
+  /* Doubled class beats the global inline-attribute and link-colour rules. */
+  .rpp-btr.rpp-btr,
+  .rpp-btr.rpp-btr .rpp-btr-label {
+    color: #ffffff !important;
+  }
+  .rpp-btr.rpp-btr .rpp-btr-arrow {
+    color: #d1a847 !important;
+    font-size: 24px;
+    line-height: 1;
+    transition: transform 0.25s ease;
+  }
+  .rpp-btr:hover,
+  .rpp-btr:focus-visible {
+    background: linear-gradient(180deg, #1a3a63 0%, #12294a 55%, #0d1f3a 100%);
+    box-shadow: 0 0 0 1px #8a7233, 0 6px 18px rgba(0,0,0,0.28),
+                inset 0 0 0 1px rgba(201,168,76,0.55);
+    transform: translateY(-2px);
+  }
+  .rpp-btr:hover .rpp-btr-arrow,
+  .rpp-btr:focus-visible .rpp-btr-arrow {
+    transform: translateX(4px);
+  }
+  .rpp-btr:focus-visible {
+    outline: 3px solid #d1a847;
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rpp-btr, .rpp-btr .rpp-btr-arrow { transition: none !important; }
+    .rpp-btr:hover { transform: none !important; }
+  }
+`;
+
 export default function BackToResources({
   label = "Explore More Guides",
   href = "/guides-and-resources",
 }: BackToResourcesProps) {
-  const [hover, setHover] = useState(false);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    if (!document.getElementById(STYLE_ID)) {
+      const style = document.createElement("style");
+      style.id = STYLE_ID;
+      style.innerHTML = CSS;
+      document.head.appendChild(style);
+    }
+    setReady(true);
+  }, []);
 
   return (
     <div style={{ textAlign: "center", padding: "48px 24px 64px" }}>
-      <Link
-        to={href}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        onFocus={() => setHover(true)}
-        onBlur={() => setHover(false)}
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 14,
-          maxWidth: 480,
-          width: "100%",
-          minHeight: 56,
-          padding: "16px 32px",
-          boxSizing: "border-box",
-
-          /* Navy plate with the gold double-rule from the original artwork */
-          background: hover
-            ? "linear-gradient(180deg, #1a3a63 0%, #12294a 55%, #0d1f3a 100%)"
-            : "linear-gradient(180deg, #16335a 0%, #0f2547 55%, #0b1c35 100%)",
-          border: "3px solid #c9a84c",
-          borderRadius: 4,
-          boxShadow: hover
-            ? "0 0 0 1px #8a7233, 0 6px 18px rgba(0,0,0,0.28), inset 0 0 0 1px rgba(201,168,76,0.55)"
-            : "0 0 0 1px #8a7233, 0 3px 10px rgba(0,0,0,0.22), inset 0 0 0 1px rgba(201,168,76,0.4)",
-
-          /* Real text — scales with zoom, translates, inherits user settings */
-          fontFamily: "Georgia, 'Times New Roman', serif",
-          fontSize: 21,
-          fontWeight: 700,
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-          color: "#ffffff",
-          textDecoration: "none",
-          textAlign: "center",
-          lineHeight: 1.25,
-
-          transform: hover ? "translateY(-2px)" : "translateY(0)",
-          transition: "transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease",
-        }}
-      >
-        <span>{label}</span>
-        <span
-          aria-hidden="true"
-          style={{
-            color: "#d1a847",
-            fontSize: 24,
-            lineHeight: 1,
-            transform: hover ? "translateX(4px)" : "translateX(0)",
-            transition: "transform 0.25s ease",
-          }}
-        >
-          →
+      <Link to={href} className="rpp-btr" data-ready={ready ? "1" : "0"}>
+        <span className="rpp-btr-label">{label}</span>
+        <span className="rpp-btr-arrow" aria-hidden="true">
+          &#8594;
         </span>
       </Link>
     </div>
