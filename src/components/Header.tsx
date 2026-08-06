@@ -53,7 +53,10 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const id = "rpp-toplink-styles-v5";
+    /* Version bumped v5 -> v6. The guard below skips injection when a style
+       tag with this id already exists, so the id must change whenever the
+       CSS changes or returning visitors keep the old rules. */
+    const id = "rpp-toplink-styles-v6";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
     style.id = id;
@@ -66,7 +69,24 @@ const Header = () => {
         font-weight: 600;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        padding: 6px 4px;
+        /* HOVER AREA FIX — was padding: 6px 4px with no height control.
+           index.css contains:
+               nav a { height: 100% !important; padding-top: 0 !important;
+                       padding-bottom: 0 !important; }
+           which stretched every nav link to the full height of the nav row.
+           Combined with justify-content: space-between spreading the links
+           across the whole width, that produced a tall wide band per link,
+           so the hover state fired well away from the text.
+
+           .rpp-top-link is a class (0,1,0) and beats `nav a` (0,0,2), so
+           these !important flags hold. Height now hugs the label.
+
+           8px horizontal keeps the click target comfortable — narrower is
+           possible but harder to hit for older users with less steady
+           pointer control, which is the wrong trade on this site. */
+        padding: 5px 8px !important;
+        height: auto !important;
+        align-self: center !important;
         border-bottom: 1px solid transparent;
         transition: color 0.18s ease, border-color 0.18s ease;
         white-space: nowrap;
@@ -267,7 +287,10 @@ const Header = () => {
                     so the first nav link starts exactly above the search field. */}
                 <div style={{ width: HAMBURGER_SLOT, flexShrink: 0 }} aria-hidden="true" />
 
-                {/* Links spread evenly across the same width the search bar occupies. */}
+                {/* Links spread evenly across the same width the search bar occupies.
+                    alignItems: center keeps each link at its own natural height
+                    rather than stretching to the row, which reinforces the
+                    padding fix in the injected stylesheet above. */}
                 <div
                   style={{
                     flex: 1,
@@ -296,6 +319,7 @@ const Header = () => {
                     width: CTA_SLOT,
                     flexShrink: 0,
                     display: "flex",
+                    alignItems: "center",
                     justifyContent: "center",
                   }}
                 >
