@@ -206,7 +206,7 @@ export default function ProviderHoverPanel({
                 borderRadius: 8,
                 maxWidth: 1000,
                 width: "92vw",
-                maxHeight: "42vh",
+                maxHeight: "calc(100vh - 160px)",
                 overflowY: "auto",
                 boxShadow: "0 24px 80px rgba(10,22,40,0.5)",
                 opacity: visible ? 1 : 0,
@@ -364,18 +364,36 @@ export default function ProviderHoverPanel({
 
               {/* Panel body */}
               <div style={{ padding: "20px 24px" }}>
-                <p
-                  style={{
-                    fontFamily: "Georgia, serif",
-                    fontSize: 14,
-                    color: "#5e5954",
-                    lineHeight: 1.75,
-                    marginBottom: specialty || videoUrl ? 16 : 0,
-                    whiteSpace: "pre-line",
-                  }}
-                >
-                  {bio}
-                </p>
+                {/*
+                Bios are authored with blank lines between paragraphs. Rendering
+                them with whiteSpace: "pre-line" turned each blank line into a
+                full empty line box (~25px at this line-height) that could not be
+                tuned. Splitting into real <p> elements gives exact control over
+                the gap and lets assistive technology announce paragraph
+                boundaries instead of one undifferentiated block of text.
+              */}
+                <div style={{ marginBottom: specialty || videoUrl ? 16 : 0 }}>
+                  {bio
+                    .split(/\n\s*\n/)
+                    .map((para) => para.trim())
+                    .filter(Boolean)
+                    .map((para, i, arr) => (
+                      <p
+                        key={i}
+                        style={{
+                          fontFamily: "Georgia, serif",
+                          fontSize: 14,
+                          color: "#5e5954",
+                          lineHeight: 1.6,
+                          margin: 0,
+                          marginBottom: i === arr.length - 1 ? 0 : 10,
+                          whiteSpace: "pre-line",
+                        }}
+                      >
+                        {para}
+                      </p>
+                    ))}
+                </div>
                 {specialty && (
                   <div
                     style={{
