@@ -40,21 +40,51 @@
 
 .provider-video-trigger__icon {
   flex-shrink: 0 !important;
-  animation: provider-video-nudge 1.8s ease-in-out infinite !important;
+  animation: provider-video-nudge 1.4s ease-in-out infinite !important;
 }
 
-/* Arrow drifts toward the label, then settles. Slow and small on purpose:
-   a fast or wide movement reads as an error state and is hard to track
-   for readers with vestibular sensitivity or low vision. */
+/* Arrow sweeps toward the label and fades back. Travel and scale are both
+   animated so the motion reads clearly at a glance without flashing —
+   one cycle every 1.4s stays far below the 3Hz photosensitivity threshold. */
 @keyframes provider-video-nudge {
-  0%,
-  60%,
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 0.75;
+  }
+  45% {
+    transform: translateX(14px) scale(1.25);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(14px) scale(1.25);
+    opacity: 1;
+  }
   100% {
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
+    opacity: 0.75;
   }
-  30% {
-    transform: translateX(6px);
+}
+
+/* Soft ring breathing around the whole button, so the target itself draws
+   the eye rather than just the icon inside it. */
+.provider-video-trigger.provider-video-trigger {
+  animation: provider-video-pulse 1.4s ease-in-out infinite !important;
+}
+
+@keyframes provider-video-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(127, 32, 40, 0.55);
   }
+  50% {
+    box-shadow: 0 0 0 10px rgba(127, 32, 40, 0);
+  }
+}
+
+.provider-video-trigger.provider-video-trigger:hover,
+.provider-video-trigger.provider-video-trigger:focus-visible {
+  animation-play-state: paused !important;
+  box-shadow: none !important;
 }
 
 .provider-video-trigger.provider-video-trigger:hover .provider-video-trigger__icon,
@@ -229,10 +259,13 @@
 @media (prefers-reduced-motion: reduce) {
   .provider-video-trigger.provider-video-trigger {
     transition: none !important;
+    animation: none !important;
+    box-shadow: none !important;
   }
 
   .provider-video-trigger__icon {
     animation: none !important;
     transform: none !important;
+    opacity: 1 !important;
   }
 }
