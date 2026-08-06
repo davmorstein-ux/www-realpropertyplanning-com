@@ -20,18 +20,28 @@ const Footer = () => {
           padding: 2px 0 !important;
         }
         .rpp-footer-link:hover { color: #e0737d !important; }
+
+        /* HEADING COLOUR CHANGED — was #5757ff, which measures about 3.0:1
+           against the #23211f footer background. AA needs 4.5:1 for text
+           this size (15px bold does not qualify as "large text", which
+           starts at 18.66px bold). #9a9aff keeps the periwinkle character
+           at roughly 5.9:1. Applied to all four headings so the columns and
+           the contact block stay identical. */
         .rpp-footer-col-heading {
           font-family: 'DM Sans', system-ui, sans-serif !important;
           font-size: 15px !important;
           font-weight: 700 !important;
           letter-spacing: 0.14em !important;
           text-transform: uppercase !important;
-          color: #5757ff !important;
+          color: #9a9aff !important;
           margin: 0 0 0.6rem 0 !important;
           padding-bottom: 0.4rem !important;
           border-bottom: 1px solid rgba(255,255,255,0.1) !important;
           display: block !important;
+          text-decoration: none !important;
         }
+        a.rpp-footer-col-heading:hover { color: #b8b8ff !important; }
+
         .rpp-footer-grid {
           display: grid !important;
           grid-template-columns: 2fr 2fr 1.5fr 1fr !important;
@@ -44,57 +54,64 @@ const Footer = () => {
         @media (max-width: 520px) {
           .rpp-footer-grid { grid-template-columns: 1fr !important; }
         }
+
+        /* NAP items now carry the same typography as .rpp-footer-link.
+           WAS: 16px at 0.65 opacity, display:flex with an 8px gap left over
+           from an icon treatment that is no longer used — the flex layout
+           was also why these sat on a different vertical rhythm to the
+           link columns. */
         .rpp-footer-nap {
           font-family: 'DM Sans', system-ui, sans-serif !important;
           font-size: 16px !important;
-          color: rgba(255,255,255,0.65) !important;
-          display: flex !important;
-          align-items: center !important;
-          gap: 8px !important;
-          padding: 3px 0 !important;
+          line-height: 1.4 !important;
+          color: rgba(255,255,255,0.72) !important;
+          display: block !important;
+          padding: 2px 0 !important;
           text-decoration: none !important;
           transition: color 0.15s ease !important;
         }
-        .rpp-footer-nap:hover { color: #e0737d !important; }
+        a.rpp-footer-nap:hover { color: #e0737d !important; }
+
+        /* Tagline. WAS 13px at 0.55 opacity in a separate treatment — the
+           smallest and faintest text in the block. Now matches the links,
+           held slightly back by opacity rather than by size. */
+        .rpp-footer-tagline {
+          font-family: 'DM Sans', system-ui, sans-serif !important;
+          font-size: 16px !important;
+          line-height: 1.4 !important;
+          color: rgba(255,255,255,0.72) !important;
+          margin: 0 0 0.75rem 0 !important;
+          max-width: 260px !important;
+        }
+
+        /* WAS 11px at 0.38 opacity — roughly 2.6:1, well under AA, and below
+           any reasonable minimum size. 13px at 0.62 reaches about 4.6:1 and
+           still reads as fine print. */
         .rpp-footer-disclaimer {
           font-family: 'DM Sans', system-ui, sans-serif !important;
-          font-size: 11px !important;
-          color: rgba(255,255,255,0.38) !important;
+          font-size: 13px !important;
+          color: rgba(255,255,255,0.62) !important;
           line-height: 1.6 !important;
           text-align: center !important;
           max-width: 820px !important;
-          margin: 0 auto 0.4rem auto !important;
+          margin: 0 auto 0.5rem auto !important;
+        }
+        .rpp-footer-disclaimer a {
+          color: rgba(255,255,255,0.72) !important;
+          text-decoration: underline !important;
         }
       `}</style>
 
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
         {/* Main columns */}
         <div className="rpp-footer-grid">
-          {/* Brand & NAP */}
+          {/* Brand & NAP — same heading class and link typography as the
+              three columns to its right, so the four read as one system. */}
           <div>
-            <Link to="/" style={{ display: "block", marginBottom: "0.5rem" }}>
-              <span
-                style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "18px",
-                  fontWeight: 700,
-                  color: "#ffffff",
-                  letterSpacing: "0.02em",
-                }}
-              >
-                Real Property Planning
-              </span>
+            <Link to="/" className="rpp-footer-col-heading">
+              Real Property Planning
             </Link>
-            <p
-              style={{
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontSize: "13px",
-                color: "rgba(255,255,255,0.55)",
-                lineHeight: 1.5,
-                margin: "0 0 0.75rem",
-                maxWidth: "260px",
-              }}
-            >
+            <p className="rpp-footer-tagline">
               Probate, estate &amp; senior transition real estate — Washington State.
             </p>
             <a href="tel:2069003015" className="rpp-footer-nap">
@@ -250,19 +267,10 @@ const Footer = () => {
             this site belong to individual members of our professional network, who provide their respective services
             independently, through their own separately licensed businesses — not through Real Property Planning.
             Professionals referenced on this site are independent and not affiliated with Real Property Planning.{" "}
-            <Link to="/disclaimer" style={{ color: "rgba(255,255,255,0.45)", textDecoration: "underline" }}>
-              Full disclaimer
-            </Link>
-            .
+            <Link to="/disclaimer">Full disclaimer</Link>.
           </p>
           <p className="rpp-footer-disclaimer">
-            Accessibility:{" "}
-            <a
-              href="mailto:info@realpropertyplanning.com"
-              style={{ color: "rgba(255,255,255,0.38)", textDecoration: "underline" }}
-            >
-              info@realpropertyplanning.com
-            </a>
+            Accessibility: <a href="mailto:info@realpropertyplanning.com">info@realpropertyplanning.com</a>
             &nbsp;·&nbsp; © {new Date().getFullYear()} Real Property Planning
           </p>
         </div>
