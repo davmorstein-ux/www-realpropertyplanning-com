@@ -58,7 +58,7 @@ const providers: Provider[] = [
     logoAlt: "ALLSTAR Financial Insurance logo",
     specialty:
       "Medicare, health, life, and long-term care insurance guidance, along with retirement solutions for individuals, families, and small businesses across the Puget Sound region",
-    bio: "J. R. Gillespie is the Primary Associate at ALLSTAR Financial Insurance, which has served individuals, families and businesses throughout the Puget Sound region since 1993. He helps clients understand and select insurance solutions designed to protect their health, financial security and loved ones.\n\nHaving personally experienced significant health challenges, J. R. understands that an unexpected illness or injury can create expenses extending well beyond medical bills. Lost income, deductibles, copayments and the cost of additional assistance can place considerable pressure on an individual or family.\n\nJ. R. provides personalized guidance regarding individual and family health insurance, Medicare Advantage, Medicare Supplement and prescription drug plans, as well as life, disability, supplemental and long-term-care insurance. His approach focuses on clearly explaining available options and helping clients identify practical coverage that fits their circumstances, priorities and budget. Through knowledgeable and attentive service, J. R. helps clients make informed insurance decisions with greater clarity and confidence.",
+    bio: "J. R. Gillespie is the Primary Associate at ALLSTAR Financial Insurance, serving individuals, families and businesses throughout the Puget Sound region since 1993. He helps clients select insurance solutions that protect their health, financial security and loved ones.\n\nHaving experienced significant health challenges personally, J. R. understands how unexpected illness or injury can create expenses beyond medical bills, including lost income, deductibles, copayments and additional care.\n\nJ. R. provides personalized guidance on individual and family health insurance, Medicare Advantage, Medicare Supplement and prescription drug plans, along with life, disability, supplemental and long-term-care insurance. He explains available options clearly and helps clients identify practical coverage aligned with their circumstances, priorities and budget. Through knowledgeable, attentive service, J. R. helps clients make informed insurance decisions with greater confidence.",
     videoUrl: "https://www.youtube.com/watch?v=8i4vW8bbYQk",
   },
 ];
@@ -181,11 +181,11 @@ const MedicareProviders = () => (
                           Learn More
                           <svg
                             viewBox="0 0 24 24"
-                            width="14"
-                            height="14"
+                            width="18"
+                            height="18"
                             fill="none"
                             stroke="currentColor"
-                            strokeWidth="2.4"
+                            strokeWidth="3"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             aria-hidden="true"
