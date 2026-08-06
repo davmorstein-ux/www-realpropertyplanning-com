@@ -117,16 +117,33 @@ const DirectAnswerBlock = ({
                 ))}
               </div>
             )}
-            {/* Optional page-specific CTA */}
+
+            {/* Optional page-specific CTA
+                CONTRAST FIX — three layers of defence against the global rule
+                  main a:not([class*="bg-"]):not(.btn):not([class*="button"]) { color: #ca2b38 }
+                which was repainting this label dark red on burgundy:
+                  1. `btn` class            -> matches the rule's :not(.btn) exclusion
+                  2. `bg-[#6b1b22]` class   -> matches the :not([class*="bg-"]) exclusion
+                  3. inline color           -> inline styles beat any non-!important rule
+                Any one of these is sufficient; all three make it robust against
+                future edits to the global stylesheet. */}
             {ctaLabel && ctaHref && (
               <div className="mt-6 pt-5 border-t border-border">
                 <Link
                   to={ctaHref}
-                  className="inline-flex items-center gap-2 rounded-lg font-bold text-white no-underline"
-                  style={{ background: "#6b1b22", padding: "13px 26px", fontSize: 17 }}
+                  className="rpp-answer-cta btn bg-[#6b1b22] inline-flex items-center gap-2 rounded-lg font-bold text-white no-underline"
+                  style={{
+                    background: "#6b1b22",
+                    color: "#ffffff",
+                    padding: "13px 26px",
+                    fontSize: 17,
+                    minHeight: 44,
+                  }}
                 >
-                  {ctaLabel}
-                  <span aria-hidden="true">→</span>
+                  <span style={{ color: "#ffffff" }}>{ctaLabel}</span>
+                  <span aria-hidden="true" style={{ color: "#ffffff" }}>
+                    →
+                  </span>
                 </Link>
               </div>
             )}
