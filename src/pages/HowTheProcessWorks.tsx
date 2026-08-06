@@ -7,7 +7,6 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 /* HERO IMAGE.
@@ -173,14 +172,14 @@ const HowTheProcessWorks = () => {
                   >
                     {/* WAS text-muted-foreground/30 — a 30% opacity step number,
                       effectively invisible. Now a solid muted tone. */}
-                    <span className="text-muted-foreground font-serif text-3xl md:text-4xl font-semibold leading-none pt-1 select-none shrink-0">
+                    <span className="text-foreground/70 font-serif text-3xl md:text-4xl font-semibold leading-none pt-1 select-none shrink-0">
                       {step.number}
                     </span>
                     <div>
                       <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-2">
                         {step.title}
                       </h3>
-                      <p className="text-muted-foreground leading-[1.75] m-0">{step.text}</p>
+                      <p className="text-foreground leading-[1.75] m-0">{step.text}</p>
                     </div>
                   </div>
                 ))}
@@ -196,7 +195,7 @@ const HowTheProcessWorks = () => {
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
                 How Is Selling Estate Property Different From a Standard Home Sale?
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              <p className="text-foreground text-lg leading-relaxed mb-6">
                 Estate, probate, and senior transition sales are fundamentally different from conventional transactions.
                 Here's why:
               </p>
@@ -229,7 +228,7 @@ const HowTheProcessWorks = () => {
                     >
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
+                    <AccordionContent className="px-6 pb-5 pt-0 text-foreground leading-relaxed">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -252,7 +251,7 @@ const HowTheProcessWorks = () => {
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
                 The Real Estate Side of Estate Administration
               </h2>
-              <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <div className="space-y-5 text-foreground leading-relaxed">
                 <p>
                   Selling estate property is rarely as simple as putting a sign in the yard. These homes often sit
                   vacant for months while legal authority is established, insurance and utility issues need to be
@@ -313,7 +312,7 @@ const HowTheProcessWorks = () => {
         <section className="py-12 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <p className="text-base font-semibold text-muted-foreground mb-3">Related Resources</p>
+              <p className="text-base font-semibold text-foreground mb-3">Related Resources</p>
               <div className="flex flex-wrap gap-3">
                 <Link
                   to="/probate-estate-sales"
@@ -321,35 +320,45 @@ const HowTheProcessWorks = () => {
                 >
                   Probate &amp; Estate Sales
                 </Link>
-                <span className="text-muted-foreground">·</span>
+                <span className="text-foreground" aria-hidden="true">
+                  ·
+                </span>
                 <Link
                   to="/executors"
                   className="text-accent hover:text-gold transition-colors underline underline-offset-4"
                 >
                   For Executors
                 </Link>
-                <span className="text-muted-foreground">·</span>
+                <span className="text-foreground" aria-hidden="true">
+                  ·
+                </span>
                 <Link
                   to="/for-attorneys"
                   className="text-accent hover:text-gold transition-colors underline underline-offset-4"
                 >
                   For Attorneys
                 </Link>
-                <span className="text-muted-foreground">·</span>
+                <span className="text-foreground" aria-hidden="true">
+                  ·
+                </span>
                 <Link
                   to="/why-valuation-matters"
                   className="text-accent hover:text-gold transition-colors underline underline-offset-4"
                 >
                   Why Valuation Matters
                 </Link>
-                <span className="text-muted-foreground">·</span>
+                <span className="text-foreground" aria-hidden="true">
+                  ·
+                </span>
                 <Link
                   to="/senior-transitions"
                   className="text-accent hover:text-gold transition-colors underline underline-offset-4"
                 >
                   Senior Transitions
                 </Link>
-                <span className="text-muted-foreground">·</span>
+                <span className="text-foreground" aria-hidden="true">
+                  ·
+                </span>
                 <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4">
                   All FAQs
                 </Link>
@@ -360,29 +369,11 @@ const HowTheProcessWorks = () => {
 
         <RelatedServices currentPath="/how-the-process-works" />
 
-        {/* Bottom CTA */}
-        <section className="py-20 lg:py-28 bg-primary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-                Want to talk through your situation and next steps?
-              </h2>
-              <p className="text-primary-foreground text-lg leading-relaxed mb-8">
-                Whether you are an executor, trustee, attorney, or family member — we are available for a no-obligation
-                conversation about your situation.
-              </p>
-              <div className="flex justify-center">
-                <Link to="/contact">
-                  {/* WAS className="hover:-light" — not a valid Tailwind class.
-                    It compiled to nothing and did nothing. Removed. */}
-                  <Button variant="gold" size="lg">
-                    Schedule a Consultation
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Bottom CTA removed — the navy "Want to talk through your situation
+          and next steps?" band with its "Schedule a Consultation" button.
+          The page is now informational end to end. Onward paths remain via
+          the Related Resources links and RelatedServices cards above, and
+          Contact is in both the header and the footer on every page. */}
 
         <DisclaimerSection />
       </main>
