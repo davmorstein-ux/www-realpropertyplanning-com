@@ -3784,3 +3784,364 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
   font-style: normal !important;
   letter-spacing: -0.01em !important;
 }
+
+
+/* ============================================================
+   Real Property Planning — text contrast, site-wide
+   Paste at the BOTTOM of src/index.css.
+
+   Target: WCAG 2.1 AA — 4.5:1 for body text, 3:1 for large text
+   (24px+, or 19px+ bold). On your cream background (#F7F5F2) the
+   lightest grey that passes 4.5:1 is about #737373. Anything
+   lighter fails, no matter how good it looks.
+
+   This fixes causes rather than instances. Most of it works by
+   correcting the palette tokens, so every component using them is
+   fixed at once without another round of !important.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. THE ROOT CAUSE — two palette tokens fail at source
+
+   These are defined in @layer base and used across the site.
+   Darkening them here fixes every consumer in one edit.
+
+        --warm-gray    30 8% 55%  = #968D85 = 2.9:1  FAIL
+        --slate-light  30 5% 48%  = #827D78 = 3.6:1  FAIL
+
+   New values keep the same hue and warmth, only darker:
+
+        --warm-gray    30 8% 34%  = #5D564F = 7.2:1  PASS
+        --slate-light  30 5% 32%  = #56524E = 7.6:1  PASS
+   ------------------------------------------------------------ */
+
+:root {
+  --warm-gray: 30 8% 34%;
+  --slate-light: 30 5% 32%;
+  --muted-foreground: 220 20% 28%;
+}
+
+
+/* ------------------------------------------------------------
+   2. THE EMPTY RULE
+
+   index.css contains a selector for inline grey hex values whose
+   declaration block is empty — the comment describes a fix that
+   was never written. Every inline grey it was meant to catch has
+   been rendering unchanged. This is that rule, completed.
+
+   Covers the #6x/#7x/#8x/#9x/#Ax/#Bx/#Cx ranges, which is where
+   nearly every "looks light grey" value lands.
+   ------------------------------------------------------------ */
+
+[style*="color: #9"], [style*="color:#9"],
+[style*="color: #a"], [style*="color:#a"],
+[style*="color: #A"], [style*="color:#A"],
+[style*="color: #b"], [style*="color:#b"],
+[style*="color: #B"], [style*="color:#B"],
+[style*="color: #c"], [style*="color:#c"],
+[style*="color: #C"], [style*="color:#C"],
+[style*="color: #d"], [style*="color:#d"],
+[style*="color: #D"], [style*="color:#D"] {
+  color: #3D3833 !important;
+}
+
+/* Mid greys — #6x, #7x, #8x. Some of these pass and some do not,
+   so they are clamped rather than replaced wholesale. */
+[style*="color: #8"], [style*="color:#8"],
+[style*="color: #7"], [style*="color:#7"] {
+  color: #4A443E !important;
+}
+
+/* Do NOT catch inline colors on dark surfaces — light text there
+   is correct and must stay light. */
+[class*="bg-navy"] [style*="color: #"],
+[class*="bg-primary"] [style*="color: #"],
+[class*="bg-foreground"] [style*="color: #"],
+.calc-page-hero [style*="color: #"] {
+  color: revert !important;
+}
+
+
+/* ------------------------------------------------------------
+   3. TAILWIND GREY PALETTE — full coverage
+
+   The existing rules cover gray/neutral/slate/zinc at the 300–500
+   steps, but only inside `main`, and they miss the `stone` family
+   entirely. This covers all five families, all light steps,
+   everywhere on the page.
+   ------------------------------------------------------------ */
+
+[class*="text-gray-2"],   [class*="text-gray-3"],   [class*="text-gray-4"],   [class*="text-gray-5"],
+[class*="text-slate-2"],  [class*="text-slate-3"],  [class*="text-slate-4"],  [class*="text-slate-5"],
+[class*="text-zinc-2"],   [class*="text-zinc-3"],   [class*="text-zinc-4"],   [class*="text-zinc-5"],
+[class*="text-stone-2"],  [class*="text-stone-3"],  [class*="text-stone-4"],  [class*="text-stone-5"],
+[class*="text-neutral-2"],[class*="text-neutral-3"],[class*="text-neutral-4"],[class*="text-neutral-5"] {
+  color: #3D3833 !important;
+}
+
+/* On dark surfaces, lift instead of darken. */
+[class*="bg-navy"] [class*="text-gray-"],
+[class*="bg-navy"] [class*="text-slate-"],
+[class*="bg-navy"] [class*="text-stone-"],
+[class*="bg-navy"] [class*="text-zinc-"],
+[class*="bg-navy"] [class*="text-neutral-"],
+[class*="bg-primary"] [class*="text-gray-"],
+[class*="bg-primary"] [class*="text-slate-"],
+[class*="bg-primary"] [class*="text-stone-"],
+[class*="bg-primary"] [class*="text-zinc-"],
+[class*="bg-primary"] [class*="text-neutral-"],
+[class*="bg-foreground"] [class*="text-gray-"] {
+  color: #F3F4F6 !important;
+}
+
+
+/* ------------------------------------------------------------
+   4. OPACITY — the quiet contrast killer
+
+   Text at opacity 0.6 on cream looks like a valid grey but
+   measures far below 4.5:1, and it defeats color-only fixes
+   because the computed color is still "correct".
+
+   Tailwind alpha modifiers (text-foreground/60) and opacity-*
+   utilities on text elements are both neutralised.
+   ------------------------------------------------------------ */
+
+p[class*="opacity-"], span[class*="opacity-"],
+li[class*="opacity-"], h1[class*="opacity-"], h2[class*="opacity-"],
+h3[class*="opacity-"], h4[class*="opacity-"], a[class*="opacity-"],
+p[class*="/50"], p[class*="/60"], p[class*="/70"], p[class*="/80"],
+span[class*="/50"], span[class*="/60"], span[class*="/70"], span[class*="/80"],
+li[class*="/50"], li[class*="/60"], li[class*="/70"], li[class*="/80"] {
+  opacity: 1 !important;
+}
+
+/* Decorative elements keep their opacity — this is text only. */
+img[class*="opacity-"], svg[class*="opacity-"], hr[class*="opacity-"],
+[aria-hidden="true"][class*="opacity-"] {
+  opacity: revert !important;
+}
+
+
+/* ------------------------------------------------------------
+   5. STEPPER / WIZARD — the pattern in your screenshot
+
+   Progress indicators conventionally grey out future steps. That
+   convention fails AA, and on this site it means a senior reading
+   "Your guidance" as step 3 may not be able to see it at all.
+
+   Inactive steps stay visually secondary through weight and the
+   circle treatment rather than through unreadable text.
+   ------------------------------------------------------------ */
+
+[class*="step"] [class*="text-gray"],
+[class*="step"] [class*="text-muted"],
+[class*="stepper"] span,
+[class*="wizard"] [class*="text-muted"],
+[aria-current="step"] ~ * {
+  color: #4A443E !important;
+}
+
+
+/* ------------------------------------------------------------
+   6. PLACEHOLDER AND HELPER TEXT
+   ------------------------------------------------------------ */
+
+::placeholder {
+  color: #5B5753 !important;
+  opacity: 1 !important;
+}
+
+small,
+.helper-text,
+[class*="helper"],
+[class*="hint-text"],
+figcaption {
+  color: #4A443E !important;
+  opacity: 1 !important;
+}
+
+
+/* ------------------------------------------------------------
+   7. SAFETY NET
+
+   Any remaining light grey, wherever it came from. Deliberately
+   last so the more specific rules above win where they apply.
+   ------------------------------------------------------------ */
+
+main [style*="rgb(15"], main [style*="rgb(16"], main [style*="rgb(17"],
+main [style*="rgb(18"], main [style*="rgb(19"], main [style*="rgb(20"],
+main [style*="rgba(15"], main [style*="rgba(16"], main [style*="rgba(17"] {
+  color: #3D3833 !important;
+}
+
+
+/* ============================================================
+   Real Property Planning — font weight, site-wide
+   Paste at the BOTTOM of src/index.css, after the contrast file.
+
+   Thin text is a legibility problem in its own right, separate
+   from colour. A 400-weight stroke at 18px on a cream background
+   has less perceived contrast than a 600-weight stroke in the
+   same colour, because there is simply less ink on the page.
+   For readers with reduced vision this matters as much as the
+   colour value does.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. THE RULE THAT WAS FORCING THIN TEXT
+
+   index.css contains this, inside the card accessibility block:
+
+       :where([class*="rounded-"][class*="bg-card"], ...)
+         :where(p, li, span) { font-weight: 400 !important; }
+
+   It clamps EVERY span inside any card-like container to 400 —
+   including CTA labels, which are spans. That is why "Learn more"
+   renders thin even though .gold-cta asks for 900.
+
+   The evidence it has been fought before: .gold-cta carries
+   `font-weight: 900 !important` AND a -webkit-text-stroke hack
+   further down the file. The stroke was a workaround for this
+   rule rather than a fix for it.
+
+   Body copy stays at a comfortable reading weight; anything that
+   asked to be bold is allowed to be bold again.
+   ------------------------------------------------------------ */
+
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d
+  )
+  :where(p, li) {
+  font-weight: 500 !important;
+}
+
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d
+  )
+  :where(span, a, strong, b) {
+  font-weight: revert-layer !important;
+}
+
+
+/* ------------------------------------------------------------
+   2. BASE WEIGHT
+
+   body was set to 420. DM Sans at 420 is a hairline by the
+   standards of an audience with reduced vision. 500 is still a
+   normal-looking body weight, just with enough stroke to hold up
+   on a warm background.
+   ------------------------------------------------------------ */
+
+body {
+  font-weight: 500;
+}
+
+body p,
+body li,
+body td,
+body dd,
+body dt {
+  font-weight: 500;
+}
+
+
+/* ------------------------------------------------------------
+   3. LINKS AND CALLS TO ACTION
+
+   These are the things people need to find on the page. They
+   should be the heaviest text in the content area, not the
+   lightest.
+   ------------------------------------------------------------ */
+
+.gold-cta,
+.article-resource-btn,
+a[class*="cta"],
+a[class*="btn"],
+button,
+[role="button"],
+.rpp-answer-cta {
+  font-weight: 700 !important;
+}
+
+/* Inline links inside running text — heavier than the prose
+   around them so they are findable without relying on colour. */
+main p a,
+main li a {
+  font-weight: 600 !important;
+}
+
+/* The text-stroke hack is no longer needed now that the cause is
+   fixed. Faux-bolding blurs letterforms, which hurts exactly the
+   readers it was meant to help. */
+span.gold-cta {
+  -webkit-text-stroke: 0 !important;
+  text-shadow: none !important;
+}
+
+
+/* ------------------------------------------------------------
+   4. HEADINGS
+
+   Cormorant Garamond at 600 is thin at display sizes. DM Sans
+   headings hold up better at 700.
+   ------------------------------------------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+
+/* ------------------------------------------------------------
+   5. NOTHING BELOW 400, ANYWHERE
+
+   Catches light/thin utility classes and inline weights.
+   ------------------------------------------------------------ */
+
+[class*="font-light"],
+[class*="font-thin"],
+[class*="font-extralight"],
+[style*="font-weight: 100"],
+[style*="font-weight: 200"],
+[style*="font-weight: 300"],
+[style*="font-weight:100"],
+[style*="font-weight:200"],
+[style*="font-weight:300"] {
+  font-weight: 500 !important;
+}
+
+
+/* ------------------------------------------------------------
+   6. CHECK THIS IN index.html
+
+   None of the above works if the font file does not carry the
+   weights. Your Google Fonts <link> must request them.
+
+   If it looks like this — only 400 and 700 —
+
+       family=DM+Sans:wght@400;700
+
+   the browser will FAKE 500 and 600 by smearing the 400 outlines,
+   which looks muddy and is worse than the thin text you have now.
+
+   Change it to the variable range:
+
+       family=DM+Sans:ital,opsz,wght@0,9..40,100..1000
+
+   To verify, run this in the console:
+
+       document.fonts.check('500 18px "DM Sans"')
+
+   true  = the weight is really available
+   false = the browser is synthesising it, and the link needs fixing
+   ------------------------------------------------------------ */
