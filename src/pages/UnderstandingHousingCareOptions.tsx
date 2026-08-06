@@ -138,27 +138,29 @@ const UnderstandingHousingCareOptions = () => {
         </section>
         <HeroBandTitle as="h1">Understanding Housing and Care Options</HeroBandTitle>
 
-        {/* INTRO */}
+        {/* INTRO
+            Removed a <p> containing only a space. It rendered an empty
+            paragraph that still received the 18px line-height and margin
+            from the global rules, adding dead vertical space below the
+            heading for no reason. */}
         <section className="bg-background pt-10 pb-6 lg:pt-14 lg:pb-8">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-4">
                 What Type of Support Are You Looking For?
               </h2>
-              <p className="text-lg md:text-xl text-foreground leading-relaxed"> </p>
             </div>
           </div>
         </section>
 
-        {/* PATHWAYS */}
+        {/* PATHWAYS
+            Removed a header block of three empty elements — an eyebrow <p>,
+            an <h2>, and a <p>, each containing only a space. The empty <h2>
+            was the worst of them: it put a blank heading into the document
+            outline, so a screen reader announced a heading with no text, and
+            search engines saw a second empty H2 on the page. */}
         <section id="pathways" className="py-10 lg:py-14 bg-secondary scroll-mt-20">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto mb-7 text-center">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm"> </p>
-              <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3"> </h2>
-              <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto"> </p>
-            </div>
-
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {pathways.map((p) => (
                 <PremiumTile
@@ -174,10 +176,13 @@ const UnderstandingHousingCareOptions = () => {
           </div>
         </section>
 
-        {/* CONTINUE YOUR JOURNEY */}
+        {/* CONTINUE YOUR JOURNEY
+            Grid changed from 3 columns to 2. There are four cards here, so a
+            3-column layout left a single orphaned tile alone on a second row.
+            Two columns gives a balanced 2x2 and lets each card run wider. */}
         <section className="py-10 lg:py-14 bg-secondary">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <div className="text-center mb-7">
                 <img
                   src={iconArrow}
@@ -185,7 +190,7 @@ const UnderstandingHousingCareOptions = () => {
                   aria-hidden="true"
                   className="w-12 h-12 object-contain mx-auto mb-4"
                   loading="lazy"
-                  sizes="(max-width: 768px) 90px, 90px"
+                  sizes="48px"
                   decoding="async"
                   width={512}
                   height={512}
@@ -196,7 +201,7 @@ const UnderstandingHousingCareOptions = () => {
                   Families exploring housing and care options often need help understanding these next steps.
                 </p>
               </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid sm:grid-cols-2 gap-5">
                 {continueJourney.map((c) => (
                   <PremiumTile
                     key={c.href + c.title}
@@ -213,11 +218,52 @@ const UnderstandingHousingCareOptions = () => {
         </section>
 
         <style>{`
+          /* ---- Existing teal outline ---- */
           .understanding-tile-outline .tile-white__face {
             border: 2px solid #0d9488 !important;
           }
           .understanding-tile-outline h3 {
             text-shadow: none !important;
+          }
+
+          /* ---- TILE SHAPE FIX ----
+             PremiumTile carries .interior-tile, which index.css caps at
+             max-width: 260px with centred text. That cap was written for
+             the round-headshot provider tiles, not for text cards.
+
+             Each grid cell here is roughly 330px, so a 260px tile left
+             about 70px of dead space inside every cell — which is why the
+             tiles looked thin AND why the spacing looked too wide. One
+             cause, both symptoms.
+
+             Centred text in a 260px column also produced six-word ragged
+             lines, which is the hard-to-read part.
+
+             Scoped to this page's class so nothing else on the site moves.
+             The equivalent global fix already exists as
+             .interior-tile--guide, used on /senior-transitions. */
+          .understanding-tile-outline.understanding-tile-outline {
+            max-width: 100% !important;
+            min-width: 0 !important;
+            width: 100% !important;
+            align-items: flex-start !important;
+            text-align: left !important;
+            padding: 24px 26px 22px !important;
+          }
+          .understanding-tile-outline.understanding-tile-outline h3 {
+            text-align: left !important;
+            justify-content: flex-start !important;
+            font-size: 1.22rem !important;
+            line-height: 1.3 !important;
+            min-height: 0 !important;
+          }
+          .understanding-tile-outline.understanding-tile-outline p {
+            text-align: left !important;
+            line-height: 1.55 !important;
+          }
+          .understanding-tile-outline.understanding-tile-outline .tile-white__inner,
+          .understanding-tile-outline.understanding-tile-outline .tile-white__face {
+            width: 100% !important;
           }
         `}</style>
 
