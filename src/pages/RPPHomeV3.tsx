@@ -11,6 +11,7 @@ import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import { CARE_TYPES, CARE_TYPE_COLORS, formatCurrency } from "@/lib/careTypes";
+import { useCostRotation, FADE_MS } from "@/hooks/useCostRotation";
 
 const tileMeta = [
   { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#D97706", imgSrc: tilePlanning },
@@ -24,25 +25,24 @@ const tileMeta = [
   },
 ] as const;
 
-/* Three care types previewed on the homepage tile. Adult family home is the
-   option most families have never heard of, assisted living is the familiar
-   baseline, and memory care is the figure that surprises people.
+/* The figures column now rotates through EVERY care type three at a time
+   rather than showing a fixed preview of three. Adult family home leads
+   because it is the option most families have never heard of.
 
-   Figures and labels come from the same CARE_TYPES constant the calculator
-   reads, so the tile and the tool cannot disagree. Unresolved ids are
-   filtered out rather than throwing — a renamed id degrades to fewer
-   rows instead of a blank homepage. */
-const PREVIEW_CARE_IDS = ["adult-family-home", "assisted-living", "memory-care"] as const;
+   Figures and labels still come from the same CARE_TYPES constant the
+   calculator reads, so the tile and the tool cannot disagree. */
+const LEAD_CARE_IDS = ["adult-family-home", "assisted-living", "memory-care"] as const;
 
 const RPPHomeV3 = () => {
   const { t } = useTranslation();
 
-  const previewCareTypes = PREVIEW_CARE_IDS.map((id) => CARE_TYPES.find((c) => c.id === id)).filter(
+  const leadCareTypes = LEAD_CARE_IDS.map((id) => CARE_TYPES.find((c) => c.id === id)).filter(
     (c): c is (typeof CARE_TYPES)[number] => Boolean(c),
   );
-  const remainingCareTypes = CARE_TYPES.filter(
-    (c) => !PREVIEW_CARE_IDS.includes(c.id as (typeof PREVIEW_CARE_IDS)[number]),
-  );
+  const otherCareTypes = CARE_TYPES.filter((c) => !LEAD_CARE_IDS.includes(c.id as (typeof LEAD_CARE_IDS)[number]));
+  const rotatingCareTypes = [...leadCareTypes, ...otherCareTypes];
+
+  const rotation = useCostRotation(rotatingCareTypes);
 
   return (
     <>
@@ -68,7 +68,11 @@ const RPPHomeV3 = () => {
             alt={t("hero.imageAlt")}
             className="absolute inset-0 w-full h-full object-cover object-center"
             loading="eager"
-            fetchPriority="high"
+            /* WAS fetchPriority — React does not recognise the camelCase form
+               on a DOM element and drops it with a console warning, so the
+               hero never actually received high priority. Lowercase is the
+               attribute the browser reads. */
+            fetchpriority="high"
             decoding="async"
           />
           {/* Logo + tagline overlay — normal flow, so this content's own
@@ -93,10 +97,7 @@ const RPPHomeV3 = () => {
             }}
           >
             {/* Tagline in #1B3A6B — the same navy used by the homepage
-                descriptor and the calculator tile's secondary text. It
-                replaces #0000FF, which was the browser default link blue
-                and needed a heavy white glow to stay legible over the
-                hero photo. */}
+                descriptor and the calculator tile's secondary text. */}
             <h1 id="rpp-tagline" style={{ textAlign: "center", margin: 0 }}>
               <span
                 className="rpp-tagline-line-v2"
@@ -260,11 +261,11 @@ const RPPHomeV3 = () => {
   }
 
               /* Cost of Care tile — three columns on desktop: heading+CTA on
-                 the left, preview figures in the middle, and the remaining
-                 care types on the right. Secondary text throughout uses
+                 the left, rotating figures in the middle, and the full list
+                 of care types on the right. Secondary text throughout uses
                  a single dark blue (#25597e, 7.48:1 on white) so the tile
-                 has one supporting color rather than two; the three
-                 care-type figures stay the only accent colors. */
+                 has one supporting color rather than two; the care-type
+                 figures stay the only accent colors. */
               .rpp-coc-card.rpp-coc-card {
                 display: block;
                 background: #ffffff;
@@ -301,6 +302,11 @@ const RPPHomeV3 = () => {
                 border-left: 1px solid #f0ece5;
                 border-top: none;
                 padding: 0 0 0 1.5rem;
+                /* Fixed height so the card does not resize as the rotation
+                   moves between sets with different label lengths. Three
+                   rows at their natural height. */
+                min-height: 168px;
+                justify-content: center;
               }
               .rpp-coc-cell.rpp-coc-cell {
                 padding: 0;
@@ -349,6 +355,46 @@ const RPPHomeV3 = () => {
                 background: #25597e;
                 transform: translateY(-0.2em);
               }
+
+              /* Rotation controls sit OUTSIDE the card's anchor — a button
+                 inside an <a> is invalid markup and would navigate on click
+                 instead of pausing. */
+              .rpp-coc-controls {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 12px;
+                margin-top: 10px;
+              }
+              .rpp-coc-pause {
+                min-height: 44px;
+                padding: 6px 16px;
+                font-family: 'DM Sans', system-ui, sans-serif;
+                font-size: 15px !important;
+                font-weight: 700;
+                color: #7f1d1d;
+                background: transparent;
+                border: 2px solid #7f1d1d;
+                border-radius: 6px;
+                cursor: pointer;
+              }
+              .rpp-coc-pause:hover { background: rgba(127,29,29,0.06); }
+              .rpp-coc-pause:focus-visible { outline: 3px solid #d1a847; outline-offset: 2px; }
+              .rpp-coc-dots { display: inline-flex; gap: 7px; }
+              .rpp-coc-dot {
+                width: 11px; height: 11px; padding: 0;
+                border-radius: 50%;
+                border: 1px solid #7f1d1d;
+                background: transparent;
+                cursor: pointer;
+              }
+              .rpp-coc-dot.is-current { background: #7f1d1d; }
+              .rpp-sr-only {
+                position: absolute; width: 1px; height: 1px;
+                padding: 0; margin: -1px; overflow: hidden;
+                clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+              }
+
               @media (max-width: 768px) {
                 .rpp-coc-layout.rpp-coc-layout {
                   grid-template-columns: 1fr;
@@ -359,6 +405,7 @@ const RPPHomeV3 = () => {
                   border-left: none;
                   border-top: 1px solid #f0ece5;
                   padding: 0.9rem 0 0 0;
+                  min-height: 0;
                 }
                 .rpp-coc-more.rpp-coc-more {
                   border-left: none;
@@ -379,81 +426,134 @@ const RPPHomeV3 = () => {
             `}</style>
 
             {/* ── Cost of Care Calculator — three-column layout ─────── */}
-            <a href="/cost-of-care-calculator" className="rpp-coc-card group marquee-hover">
-              <div className="rpp-coc-layout">
-                <div className="rpp-coc-left">
-                  <h3
-                    className="coc-heading"
+            <div
+              onMouseEnter={() => rotation.setPaused(true)}
+              onMouseLeave={() => rotation.setPaused(false)}
+              onFocusCapture={() => rotation.setPaused(true)}
+              onBlurCapture={() => rotation.setPaused(false)}
+            >
+              <a href="/cost-of-care-calculator" className="rpp-coc-card group marquee-hover">
+                <div className="rpp-coc-layout">
+                  <div className="rpp-coc-left">
+                    <h3
+                      className="coc-heading"
+                      style={{
+                        fontFamily: "Georgia, serif",
+                        margin: 0,
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
+                      <span style={{ color: "#7f1d1d" }}>{t("costOfCare.headingPart2")}</span>
+                    </h3>
+
+                    <span
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 8,
+                        background: "#7f1d1d",
+                        color: "#ffffff",
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontWeight: 700,
+                        fontSize: 16,
+                        padding: "11px 22px",
+                        borderRadius: 8,
+                        whiteSpace: "nowrap",
+                        flex: "0 0 auto",
+                      }}
+                    >
+                      {t("costOfCare.cta")}
+                    </span>
+                  </div>
+
+                  {/* Rotating figures. aria-hidden so nothing is announced
+                      mid-change; the complete list follows for screen readers. */}
+                  <div
+                    className="rpp-coc-figures"
+                    aria-hidden="true"
                     style={{
-                      fontFamily: "Georgia, serif",
-                      margin: 0,
-                      lineHeight: 1.1,
+                      opacity: rotation.reduced ? 1 : rotation.visible ? 1 : 0,
+                      transition: rotation.reduced ? "none" : `opacity ${FADE_MS}ms cubic-bezier(0.4, 0, 0.2, 1)`,
                     }}
                   >
-                    <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
-                    <span style={{ color: "#7f1d1d" }}>{t("costOfCare.headingPart2")}</span>
-                  </h3>
-
-                  <span
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 8,
-                      background: "#7f1d1d",
-                      color: "#ffffff",
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontWeight: 700,
-                      fontSize: 16,
-                      padding: "11px 22px",
-                      borderRadius: 8,
-                      whiteSpace: "nowrap",
-                      flex: "0 0 auto",
-                    }}
-                  >
-                    {t("costOfCare.cta")}
-                  </span>
-                </div>
-
-                <div className="rpp-coc-figures">
-                  {previewCareTypes.map((c) => (
-                    <div key={c.id} className="rpp-coc-cell">
-                      <div
-                        style={{
-                          fontFamily: "'DM Sans', sans-serif",
-                          fontSize: 16,
-                          fontWeight: 700,
-                          color: "#25597e",
-                          lineHeight: 1.3,
-                          marginBottom: 3,
-                        }}
-                      >
-                        {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
+                    {rotation.current.map((c) => (
+                      <div key={c.id} className="rpp-coc-cell">
+                        <div
+                          style={{
+                            fontFamily: "'DM Sans', sans-serif",
+                            fontSize: 16,
+                            fontWeight: 700,
+                            color: "#25597e",
+                            lineHeight: 1.3,
+                            marginBottom: 3,
+                          }}
+                        >
+                          {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
+                        </div>
+                        <div
+                          style={{
+                            fontFamily: "Georgia, serif",
+                            fontSize: 25,
+                            fontWeight: 700,
+                            color: CARE_TYPE_COLORS[c.id] ?? "#903f46",
+                            lineHeight: 1.15,
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          {formatCurrency(c.waMonthly)}
+                        </div>
                       </div>
-                      <div
-                        style={{
-                          fontFamily: "Georgia, serif",
-                          fontSize: 25,
-                          fontWeight: 700,
-                          color: CARE_TYPE_COLORS[c.id] ?? "#903f46",
-                          lineHeight: 1.15,
-                          whiteSpace: "nowrap",
-                        }}
-                      >
-                        {formatCurrency(c.waMonthly)}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
 
-                {remainingCareTypes.length > 0 && (
-                  <ul className="rpp-coc-more">
-                    {remainingCareTypes.map((c) => (
-                      <li key={c.id}>{t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}</li>
+                  {/* Every figure, always available to assistive tech. */}
+                  <ul className="rpp-sr-only">
+                    {rotatingCareTypes.map((c) => (
+                      <li key={c.id}>
+                        {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}: {formatCurrency(c.waMonthly)} per month in
+                        Washington
+                      </li>
                     ))}
                   </ul>
-                )}
-              </div>
-            </a>
+
+                  {otherCareTypes.length > 0 && (
+                    <ul className="rpp-coc-more">
+                      {otherCareTypes.map((c) => (
+                        <li key={c.id}>{t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </a>
+
+              {/* WCAG 2.2.2 — content that auto-updates for more than five
+                  seconds alongside other content needs a pause mechanism.
+                  Outside the anchor so it does not navigate. */}
+              {!rotation.reduced && rotation.pageCount > 1 && (
+                <div className="rpp-coc-controls">
+                  <button
+                    type="button"
+                    onClick={() => rotation.setPaused((p) => !p)}
+                    aria-pressed={rotation.paused}
+                    className="rpp-coc-pause"
+                  >
+                    {rotation.paused ? "Resume figures" : "Pause figures"}
+                  </button>
+                  <span className="rpp-coc-dots" aria-hidden="true">
+                    {Array.from({ length: rotation.pageCount }).map((_, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        onClick={() => rotation.goTo(i)}
+                        className={`rpp-coc-dot${i === rotation.pageIndex ? " is-current" : ""}`}
+                        tabIndex={-1}
+                      />
+                    ))}
+                  </span>
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
