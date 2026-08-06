@@ -1,0 +1,212 @@
+/* ============================================================
+   Provider video modal + trigger + logo chip
+   Imported by ProviderVideoTrigger.tsx — do not import twice.
+   Doubled class selectors + !important to beat the global
+   `main p`, `h2`, `h3` and uppercase-attribute rules in index.css.
+   ============================================================ */
+
+/* ---------- Trigger button ---------- */
+
+.provider-video-trigger.provider-video-trigger {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  min-height: 56px !important;
+  padding: 14px 22px !important;
+  margin-top: 16px !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  background-color: #7f1d1d !important;
+  border: 2px solid transparent !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: background-color 0.15s ease !important;
+}
+
+.provider-video-trigger.provider-video-trigger:hover {
+  background-color: #991b1b !important;
+}
+
+.provider-video-trigger.provider-video-trigger:focus-visible {
+  outline: 3px solid #1B3A6B !important;
+  outline-offset: 3px !important;
+}
+
+.provider-video-trigger__icon {
+  flex-shrink: 0 !important;
+}
+
+/* ---------- Overlay + dialog ---------- */
+
+.provider-video-overlay.provider-video-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+  background-color: rgba(27, 24, 21, 0.85) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px !important;
+}
+
+.provider-video-dialog.provider-video-dialog {
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  max-height: 92vh !important;
+  overflow: auto !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45) !important;
+}
+
+.provider-video-dialog__bar.provider-video-dialog__bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  background-color: #3d3833 !important;
+  padding: 16px 20px !important;
+}
+
+.provider-video-dialog__titles {
+  min-width: 0 !important;
+}
+
+.provider-video-dialog__title.provider-video-dialog__title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+}
+
+.provider-video-dialog__role.provider-video-dialog__role {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  color: #e8e2da !important;
+  margin: 4px 0 0 0 !important;
+}
+
+.provider-video-dialog__close.provider-video-dialog__close {
+  flex-shrink: 0 !important;
+  width: 48px !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background-color: #7f1d1d !important;
+  color: #ffffff !important;
+  border: 2px solid transparent !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+}
+
+.provider-video-dialog__close.provider-video-dialog__close:hover {
+  background-color: #991b1b !important;
+}
+
+.provider-video-dialog__close.provider-video-dialog__close:focus-visible {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
+
+.provider-video-dialog__frame.provider-video-dialog__frame {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  background-color: #000000 !important;
+}
+
+.provider-video-dialog__frame iframe {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
+
+.provider-video-dialog__note.provider-video-dialog__note {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+  color: #3d3833 !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 14px 20px !important;
+}
+
+.provider-video-dialog__note kbd {
+  font-family: inherit !important;
+  font-size: 16px !important;
+  padding: 2px 8px !important;
+  border: 1px solid #b8b0a6 !important;
+  border-radius: 4px !important;
+  background-color: #f5f2ee !important;
+}
+
+/* ---------- Logo chip (fixes the unreadable dark-on-dark logo) ----------
+   Requires wrapping the logo <img> in:
+   <div className="provider-logo-chip"> ... </div>
+   and giving the <img> className="provider-logo-chip__img"
+   ---------------------------------------------------------------------- */
+
+.provider-logo-chip.provider-logo-chip {
+  background-color: #ffffff !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 72px !important;
+  max-width: 220px !important;
+  flex-shrink: 0 !important;
+}
+
+.provider-logo-chip__img.provider-logo-chip__img {
+  max-height: 56px !important;
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .provider-video-overlay.provider-video-overlay {
+    padding: 12px !important;
+  }
+
+  .provider-video-dialog__title.provider-video-dialog__title {
+    font-size: 22px !important;
+  }
+
+  .provider-video-dialog__role.provider-video-dialog__role {
+    font-size: 16px !important;
+  }
+
+  .provider-logo-chip.provider-logo-chip {
+    max-width: 160px !important;
+    min-height: 60px !important;
+    padding: 10px 12px !important;
+  }
+
+  .provider-logo-chip__img.provider-logo-chip__img {
+    max-height: 44px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .provider-video-trigger.provider-video-trigger {
+    transition: none !important;
+  }
+}
