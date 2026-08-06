@@ -125,7 +125,7 @@ const HowTheProcessWorks = () => {
             className="w-full object-cover object-center block"
             style={{ height: "clamp(220px, 30vw, 440px)" }}
             loading="eager"
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
             sizes="100vw"
             width={1920}

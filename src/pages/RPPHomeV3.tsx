@@ -68,11 +68,7 @@ const RPPHomeV3 = () => {
             alt={t("hero.imageAlt")}
             className="absolute inset-0 w-full h-full object-cover object-center"
             loading="eager"
-            /* WAS fetchPriority — React does not recognise the camelCase form
-               on a DOM element and drops it with a console warning, so the
-               hero never actually received high priority. Lowercase is the
-               attribute the browser reads. */
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
           />
           {/* Logo + tagline overlay — normal flow, so this content's own
