@@ -3032,27 +3032,20 @@ footer .eyebrow {
   font-weight: 600 !important;
 }
 
-/* 7. Headings preserved at their author-defined sizes */
-main h1,
-main h2,
-main h3,
-main h4,
-main h5,
-main h6,
-footer h1,
-footer h2,
-footer h3,
-footer h4,
-footer h5,
-footer h6,
-header h1,
-header h2,
-header h3,
-header h4,
-header h5,
-header h6 {
-  font-size: revert !important;
-}
+/* 7. Headings.
+   WAS: font-size: revert !important — which rolls back to the BROWSER
+   default (h2 = 1.5em, h3 = 1.17em), not to the author sizes the comment
+   claimed to preserve. Because this block sits later in the file and has
+   higher specificity than the bare `h2 { font-size: 36px !important }`
+   rule above, it silently cancelled it. That is why headings rendered
+   around 24px and 19px instead of 36px and 28px.
+   NOW: the intended sizes, stated explicitly. */
+main h1, footer h1, header h1 { font-size: 26px !important; }
+main h2, footer h2, header h2 { font-size: 36px !important; }
+main h3, footer h3, header h3 { font-size: 28px !important; }
+main h4, footer h4, header h4 { font-size: 22px !important; }
+main h5, footer h5, header h5 { font-size: 20px !important; }
+main h6, footer h6, header h6 { font-size: 18px !important; }
 
 /* 8. Color contrast — global muted/gray text darken (4.5:1 on white) */
 main .text-muted-foreground,
@@ -3163,10 +3156,16 @@ main [style*="#cf7980"] {
 }
 
 /* 14. Links — minimum contrast on light backgrounds */
-main a:not([class*="bg-"]):not(.btn):not([class*="button"]) {
+/* Inline text links only. The added :not([style*="background"]) exclusion
+   is the fix for the unreadable CTA: buttons that set their fill with an
+   inline style carry no `bg-` class, so they fell through the old
+   exclusion list and had their label repainted #ca2b38 on burgundy.
+   Specificity here is (0,3,2), which beats Tailwind's .text-white at
+   (0,1,0) — the button had no way to win. */
+main a:not([class*="bg-"]):not(.btn):not([class*="button"]):not([style*="background"]) {
   color: #ca2b38;
 }
-main a:not([class*="bg-"]):not(.btn):not([class*="button"]):hover {
+main a:not([class*="bg-"]):not(.btn):not([class*="button"]):not([style*="background"]):hover {
   color: #8a1e27;
 }
 /* But don't override navy/primary/foreground branded links */
@@ -3653,119 +3652,3 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
   line-height: 1.4 !important;
 }
 
-/* ============================================================
-   Real Property Planning — readability fixes, revision 2
-
-   CHANGED FROM REVISION 1: nothing here is scoped to `main`.
-   If a page renders its content outside a <main> element, every
-   existing global floor in index.css silently stops applying to
-   it. That is the most likely reason this page shows small pale
-   body copy and undersized headings while other pages look right.
-
-   Paste at the BOTTOM of src/index.css.
-   ============================================================ */
-
-
-/* ------------------------------------------------------------
-   0. FIRST, CHECK THE REAL CAUSE
-
-   In the browser console on the affected page:
-
-       document.querySelectorAll('main').length
-
-   Returns 0  -> the page is missing <main>. Wrap the page body in
-                 <main> in the page component. That single change
-                 restores every existing global rule and most of
-                 this file becomes unnecessary.
-   Returns 1  -> <main> exists, so the rules below are the fix.
-   ------------------------------------------------------------ */
-
-
-/* ------------------------------------------------------------
-   1. BODY TEXT — SIZE AND CONTRAST
-
-   Applies the 18px floor and a readable charcoal regardless of
-   whether <main> is present. Navigation, header, and footer are
-   excluded so their compact type is left alone.
-   ------------------------------------------------------------ */
-
-body p,
-body li,
-body dd,
-body dt,
-body blockquote,
-body figcaption {
-  font-size: max(1.125rem, 18px) !important;
-  line-height: 1.65 !important;
-}
-
-body p:not(nav *):not(header *):not(footer *),
-body li:not(nav *):not(header *):not(footer *),
-body dd:not(nav *):not(header *):not(footer *),
-body dt:not(nav *):not(header *):not(footer *) {
-  color: #3d3833 !important;
-}
-
-/* Undo the floor inside chrome, where compact type is correct. */
-nav p, nav li, nav a,
-header p, header li,
-footer p, footer li, footer a {
-  font-size: 1rem !important;
-  line-height: 1.5 !important;
-}
-
-
-/* ------------------------------------------------------------
-   2. HEADINGS
-
-   Real heading elements get their existing sizes back. The
-   subheads on this page look like they may not be h2/h3 at all —
-   if they are divs or h4, fix that in the component, because a
-   sighted size fix will not help a screen reader.
-   ------------------------------------------------------------ */
-
-body h2 { font-size: 36px !important; line-height: 1.2 !important; }
-body h3 { font-size: 28px !important; line-height: 1.25 !important; }
-body h4 { font-size: 22px !important; line-height: 1.3 !important; }
-body h2, body h3, body h4 { color: #1B3A6B !important; }
-
-
-/* ------------------------------------------------------------
-   3. CTA BUTTON CONTRAST
-   Dark red label on a burgundy fill. Forces white on the button
-   and everything inside it, including the arrow glyph.
-   ------------------------------------------------------------ */
-
-[class*="bg-[#7f1d1d]"], [class*="bg-[#7F1D1D]"],
-[class*="bg-[#1B3A6B]"], [class*="bg-[#1b3a6b]"],
-[class*="bg-[#3d3833]"], [class*="bg-[#3D3833]"],
-a[class*="bg-burgundy"], button[class*="bg-burgundy"] {
-  color: #ffffff !important;
-}
-
-[class*="bg-[#7f1d1d]"] *, [class*="bg-[#7F1D1D]"] *,
-[class*="bg-[#1B3A6B]"] *, [class*="bg-[#1b3a6b]"] *,
-[class*="bg-[#3d3833]"] *, [class*="bg-[#3D3833]"] *,
-a[class*="bg-burgundy"] *, button[class*="bg-burgundy"] * {
-  color: #ffffff !important;
-  fill: currentColor !important;
-}
-
-
-/* ------------------------------------------------------------
-   4. CARD CAPTION LINKS
-   The captions under the six professional photos are underlined
-   burgundy on white. Readable, but undersized next to body copy.
-   ------------------------------------------------------------ */
-
-a[class*="underline"]:not(nav *):not(footer *) {
-  font-size: max(1.0625rem, 17px) !important;
-  text-underline-offset: 3px;
-}
-
-
-/* ------------------------------------------------------------
-   5. TAP TARGETS
-   ------------------------------------------------------------ */
-
-a[class*="bg-"], button { min-height: 44px; }
