@@ -3040,12 +3040,36 @@ footer .eyebrow {
    rule above, it silently cancelled it. That is why headings rendered
    around 24px and 19px instead of 36px and 28px.
    NOW: the intended sizes, stated explicitly. */
-main h1, footer h1, header h1 { font-size: 26px !important; }
-main h2, footer h2, header h2 { font-size: 36px !important; }
-main h3, footer h3, header h3 { font-size: 28px !important; }
-main h4, footer h4, header h4 { font-size: 22px !important; }
-main h5, footer h5, header h5 { font-size: 20px !important; }
-main h6, footer h6, header h6 { font-size: 18px !important; }
+main h1,
+footer h1,
+header h1 {
+  font-size: 26px !important;
+}
+main h2,
+footer h2,
+header h2 {
+  font-size: 36px !important;
+}
+main h3,
+footer h3,
+header h3 {
+  font-size: 28px !important;
+}
+main h4,
+footer h4,
+header h4 {
+  font-size: 22px !important;
+}
+main h5,
+footer h5,
+header h5 {
+  font-size: 20px !important;
+}
+main h6,
+footer h6,
+header h6 {
+  font-size: 18px !important;
+}
 
 /* 8. Color contrast — global muted/gray text darken (4.5:1 on white) */
 main .text-muted-foreground,
@@ -3665,7 +3689,6 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
    there too, send me that window.innerWidth and I will adjust.
    ============================================================ */
 
-
 /* ------------------------------------------------------------
    1. PAGE SHELL — only bites on very wide screens
 
@@ -3693,7 +3716,6 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
   }
 }
 
-
 /* ------------------------------------------------------------
    2. SECTIONS SCALE WITH THE VIEWPORT
 
@@ -3720,7 +3742,6 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
     max-width: min(1600px, 90vw) !important;
   }
 }
-
 
 /* ------------------------------------------------------------
    3. PROSE STAYS READABLE
@@ -3754,4 +3775,12 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
   th p {
     max-width: none;
   }
+}
+/* Funnel heading — match the DM Sans used on the four choice tiles
+   instead of inheriting the serif heading stack. */
+.rpp-funnel-heading.rpp-funnel-heading {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  letter-spacing: -0.01em !important;
 }
