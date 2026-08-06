@@ -149,6 +149,7 @@ const MedicareProviders = () => (
                           logoAlt={p.logoAlt}
                           bio={p.bio}
                           specialty={p.specialty}
+                          videoUrl={p.videoUrl}
                           style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
                         >
                           <img
