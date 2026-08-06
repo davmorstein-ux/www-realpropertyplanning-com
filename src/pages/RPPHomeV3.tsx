@@ -33,6 +33,34 @@ const tileMeta = [
    calculator reads, so the tile and the tool cannot disagree. */
 const LEAD_CARE_IDS = ["adult-family-home", "assisted-living", "memory-care"] as const;
 
+/* Figure colours.
+ *
+ * CARE_TYPE_COLORS produced sets that were hard to tell apart: independent
+ * living, in-home care, and adult day care rendered as green, blue and teal —
+ * three adjacent hues. Blue-green discrimination is one of the first things to
+ * decline with age (the lens yellows, shifting perception in exactly that
+ * range), so for this audience those three read as one colour.
+ *
+ * This palette gives each care type a distinct hue, and the three types shown
+ * together on any given rotation page are always far apart on the wheel.
+ * Every value clears 4.5:1 on white, so colour is decoration — the label
+ * beside each figure carries the meaning, never the colour alone.
+ */
+const RPP_CARE_COLORS: Record<string, string> = {
+  // page 1 — green / navy / purple
+  "adult-family-home": "#14663f",
+  "assisted-living": "#1b3a6b",
+  "memory-care": "#6b2d8f",
+  // page 2 — burgundy / teal / amber
+  "independent-living": "#7f1d1d",
+  "in-home": "#0b6a7a",
+  "adult-day": "#7a5200",
+  // page 3 — magenta / charcoal / orange
+  "nursing-semi": "#8e1f5e",
+  "nursing-private": "#2f2b27",
+  ccrc: "#a34400",
+};
+
 const RPPHomeV3 = () => {
   const { t } = useTranslation();
 
@@ -68,7 +96,11 @@ const RPPHomeV3 = () => {
             alt={t("hero.imageAlt")}
             className="absolute inset-0 w-full h-full object-cover object-center"
             loading="eager"
-            fetchPriority="high"
+            /* WAS fetchPriority — React does not recognise the camelCase form
+               on a DOM element and drops it with a console warning, so the
+               hero never actually received high priority. Lowercase is the
+               attribute the browser reads. */
+            fetchpriority="high"
             decoding="async"
           />
           {/* Logo + tagline overlay — normal flow, so this content's own
@@ -492,7 +524,7 @@ const RPPHomeV3 = () => {
                             fontFamily: "Georgia, serif",
                             fontSize: 25,
                             fontWeight: 700,
-                            color: CARE_TYPE_COLORS[c.id] ?? "#903f46",
+                            color: RPP_CARE_COLORS[c.id] ?? CARE_TYPE_COLORS[c.id] ?? "#903f46",
                             lineHeight: 1.15,
                             whiteSpace: "nowrap",
                           }}
