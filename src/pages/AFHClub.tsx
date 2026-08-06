@@ -467,14 +467,48 @@ const AFHClub = () => {
           </div>
         </section>
 
-        {/* Featured: AFH Marketplace */}
+        {/* Featured: AFH Marketplace
+            The class carries the scoped stylesheet below. The section already
+            set color: #ffffff, but that only applies by inheritance, and an
+            inherited value loses to ANY rule that targets the element
+            directly — including the two in index.css that were repainting
+            this band:
+              body p:not(nav *)... { color: #3d3833 !important }
+              body h2, body h3, body h4 { color: #1B3A6B !important }
+            Those produced the brown paragraph and near-black heading on
+            teal. Deleting that block from index.css is the real fix; the
+            styles here make this section correct regardless. */}
         <section
+          className="rpp-afh-marketplace"
           style={{
             background: "linear-gradient(135deg, #1a7a78 0%, #155f5d 100%)",
             padding: "56px 24px",
             color: "#ffffff",
           }}
         >
+          <style>{`
+            .rpp-afh-marketplace h2,
+            .rpp-afh-marketplace p,
+            .rpp-afh-marketplace h2 span,
+            .rpp-afh-marketplace p span {
+              color: #ffffff !important;
+              opacity: 1 !important;
+            }
+            /* The two buttons sit ON the dark band, so they must NOT be
+               swept white by the rule above — the solid one would become
+               white on white. */
+            .rpp-afh-marketplace .rpp-afh-btn-solid,
+            .rpp-afh-marketplace .rpp-afh-btn-solid span {
+              color: #12615f !important;
+            }
+            .rpp-afh-marketplace .rpp-afh-btn-outline,
+            .rpp-afh-marketplace .rpp-afh-btn-outline span {
+              color: #ffffff !important;
+            }
+            .rpp-afh-marketplace a {
+              text-decoration: none !important;
+            }
+          `}</style>
           <div style={{ maxWidth: 920, margin: "0 auto", textAlign: "center" }}>
             <h2
               style={{
@@ -502,12 +536,13 @@ const AFHClub = () => {
             <div style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
               <Link
                 to="/afh-club/listings"
+                className="rpp-afh-btn-solid"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 8,
                   background: "#ffffff",
-                  color: "#1a7a78",
+                  color: "#12615f",
                   fontSize: 16,
                   fontWeight: 700,
                   padding: "14px 28px",
@@ -521,6 +556,7 @@ const AFHClub = () => {
               </Link>
               <Link
                 to="/afh-submit"
+                className="rpp-afh-btn-outline"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
