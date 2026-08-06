@@ -28,6 +28,7 @@ interface Provider {
   logo?: string;
   logoAlt?: string;
   bio?: string;
+  videoUrl?: string;
 }
 
 const providers: Provider[] = [
