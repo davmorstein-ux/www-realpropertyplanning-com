@@ -1,9 +1,7 @@
-import Header from "@/components/Header";
 import HousingOptionDetail from "@/components/HousingOptionDetail";
 
 const SkilledNursing = () => (
   <>
-    <Header />
     <HousingOptionDetail
       title="Skilled Nursing Care"
       slug="skilled-nursing"
