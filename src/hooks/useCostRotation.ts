@@ -4,8 +4,10 @@ import { useEffect, useRef, useState } from "react";
  * Rotation timing for the homepage Cost of Care figures.
  *
  *   HOLD_MS  3000   figures sit still and fully opaque
- *   FADE_MS  1250   out, then the same again in — 2500ms per changeover
- *   Full cycle: 5.5s per set of three.
+ *   FADE_MS  2000   out, then the same again in — 4000ms per changeover
+ *   Full cycle: 7s per set of three.
+ *
+ * Both are exported constants — adjust here and the page picks it up.
  *
  * A true fade-out-then-fade-in, not a fade-in over a hard swap: the figures
  * dim to zero, the numbers change while nothing is visible, then the new set
@@ -21,7 +23,7 @@ import { useEffect, useRef, useState } from "react";
  */
 
 export const HOLD_MS = 3000;
-export const FADE_MS = 1250;
+export const FADE_MS = 2000;
 export const PER_PAGE = 3;
 
 export function useCostRotation<T>(items: T[], perPage: number = PER_PAGE) {
@@ -65,9 +67,9 @@ export function useCostRotation<T>(items: T[], perPage: number = PER_PAGE) {
               setPageIndex((p) => (p + 1) % pages.length);
               setVisible(true);
               timers.current.push(window.setTimeout(cycle, FADE_MS));
-            }, FADE_MS)
+            }, FADE_MS),
           );
-        }, HOLD_MS)
+        }, HOLD_MS),
       );
     };
 
