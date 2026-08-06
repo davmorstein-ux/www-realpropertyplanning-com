@@ -4145,3 +4145,131 @@ h1, h2, h3, h4, h5, h6 {
    true  = the weight is really available
    false = the browser is synthesising it, and the link needs fixing
    ------------------------------------------------------------ */
+
+/* ============================================================
+   Real Property Planning — dark surface exemption
+   Paste at the BOTTOM of src/index.css, AFTER the contrast block.
+
+   THE STRUCTURAL PROBLEM
+
+   Every contrast rule in this codebase — mine included — forces dark
+   text on the assumption of a light background, then hand-lists the
+   exceptions:
+
+       [class*="bg-navy"] .text-muted-foreground { color: #f3f4f6 }
+       [class*="bg-primary"] em { color: #f3f4f6 }
+       ...
+
+   That list has to be extended by hand for every dark surface on the
+   site. The teal AFH band is not navy or primary, so none of the
+   exceptions matched it: the heading was forced dark and the body
+   copy to a muted red, both on dark green.
+
+   The fix is to stop enumerating. Section 1 adds one class that any
+   dark section can carry. Section 2 covers the teal band today, so
+   the page is correct before the components are updated.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. THE GENERAL FIX
+
+   Add className="rpp-dark-surface" to any section with a dark
+   background. Everything inside it becomes light, and no future
+   contrast rule needs to know the colour exists.
+   ------------------------------------------------------------ */
+
+.rpp-dark-surface,
+.rpp-dark-surface p,
+.rpp-dark-surface li,
+.rpp-dark-surface span,
+.rpp-dark-surface h1,
+.rpp-dark-surface h2,
+.rpp-dark-surface h3,
+.rpp-dark-surface h4,
+.rpp-dark-surface h5,
+.rpp-dark-surface h6,
+.rpp-dark-surface em,
+.rpp-dark-surface strong,
+.rpp-dark-surface blockquote,
+.rpp-dark-surface dd,
+.rpp-dark-surface dt,
+.rpp-dark-surface [class*="text-muted"],
+.rpp-dark-surface [class*="text-gray"],
+.rpp-dark-surface [class*="text-slate"],
+.rpp-dark-surface [class*="text-stone"],
+.rpp-dark-surface [class*="text-gold"] {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Secondary copy inside a dark surface — held back without dropping
+   below AA on the darker greens and navies used on this site. */
+.rpp-dark-surface .rpp-dark-muted,
+.rpp-dark-surface [class*="text-muted-foreground"] {
+  color: #e2e8e7 !important;
+}
+
+/* Links keep a light tone rather than inheriting the burgundy set by
+   `main a:not(...) { color: #ca2b38 }`, which is unreadable on dark. */
+.rpp-dark-surface a:not([class*="bg-"]) {
+  color: #ffffff !important;
+  text-decoration-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Buttons sitting ON a dark surface keep their own colours — these are
+   the white and outlined pills in the AFH band, which already read
+   correctly and must not be turned white-on-white. */
+.rpp-dark-surface [class*="bg-white"],
+.rpp-dark-surface [class*="bg-background"],
+.rpp-dark-surface button[class*="bg-"],
+.rpp-dark-surface a[class*="bg-"] {
+  color: revert !important;
+}
+.rpp-dark-surface [class*="bg-white"] *,
+.rpp-dark-surface [class*="bg-background"] * {
+  color: revert !important;
+}
+
+
+/* ------------------------------------------------------------
+   2. TEAL BANDS — covers the live page before components change
+
+   Matches the teal values already used in this codebase, including
+   the #0d9488 tile outline on the housing options page and the
+   #0f4c4a used elsewhere. Remove this section once the sections
+   themselves carry .rpp-dark-surface.
+   ------------------------------------------------------------ */
+
+[class*="bg-teal"],
+[class*="bg-[#0d9488]"],
+[class*="bg-[#0f4c4a]"],
+[class*="bg-[#14524f]"],
+[class*="bg-[#116"],
+[style*="background: #0d9488"],
+[style*="background-color: #0d9488"] {
+  --rpp-on-dark: 1;
+}
+
+[class*="bg-teal"] p, [class*="bg-teal"] h1, [class*="bg-teal"] h2,
+[class*="bg-teal"] h3, [class*="bg-teal"] h4, [class*="bg-teal"] li,
+[class*="bg-teal"] span:not([class*="bg-"]),
+[class*="bg-[#0d9488]"] p, [class*="bg-[#0d9488]"] h1, [class*="bg-[#0d9488]"] h2,
+[class*="bg-[#0d9488]"] h3, [class*="bg-[#0d9488]"] h4, [class*="bg-[#0d9488]"] li,
+[class*="bg-[#0d9488]"] span:not([class*="bg-"]),
+[class*="bg-[#0f4c4a]"] p, [class*="bg-[#0f4c4a]"] h1, [class*="bg-[#0f4c4a]"] h2,
+[class*="bg-[#0f4c4a]"] h3, [class*="bg-[#0f4c4a]"] h4, [class*="bg-[#0f4c4a]"] li,
+[class*="bg-[#0f4c4a]"] span:not([class*="bg-"]) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Protect the white and outlined buttons that sit on those bands. */
+[class*="bg-teal"] [class*="bg-white"],
+[class*="bg-teal"] [class*="bg-white"] *,
+[class*="bg-[#0d9488]"] [class*="bg-white"],
+[class*="bg-[#0d9488]"] [class*="bg-white"] *,
+[class*="bg-[#0f4c4a]"] [class*="bg-white"],
+[class*="bg-[#0f4c4a]"] [class*="bg-white"] * {
+  color: revert !important;
+}
