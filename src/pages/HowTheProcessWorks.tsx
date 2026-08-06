@@ -7,7 +7,6 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
-import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -26,50 +25,36 @@ const steps = [
     number: "01",
     title: "Initial Consultation",
     text: "Every engagement begins with a conversation about the property, the people involved, and the circumstances driving the decision. A licensed broker listens to understand the full picture — legal authority, family dynamics, timeline pressures, and financial goals. Whether you are an executor managing your first estate, an attorney referring a client, or a family navigating a senior transition, this conversation establishes the foundation for everything that follows.",
-    details:
-      "There is no cost or obligation for this initial discussion. The goal is to determine whether a referral is the right fit and to outline a practical path forward.",
   },
   {
     number: "02",
     title: "Property Review and Pricing Discussion",
     text: "A licensed broker visits the property to assess its condition, identify features that affect value, and evaluate what the market is likely to see. The assessment draws on certified appraisal experience — giving you a realistic pricing perspective that accounts for deferred maintenance, outdated systems, unusual layouts, and condition-related factors that automated tools consistently miss.",
-    details:
-      "This step often includes a candid conversation about what the property is worth in its current condition versus what it could be worth with targeted preparation — helping you make informed decisions about where to invest time and money.",
   },
   {
     number: "03",
     title: "Coordination of Cleanout, Repairs, and Vendor Management",
     text: "Many estate and inherited homes need significant work before they are ready for the market. Personal belongings need to be sorted and removed. Deferred repairs need to be addressed. Landscaping, cleaning, and sometimes light staging are needed to present the property effectively. A broker experienced in estate property coordinates this process — scheduling vendors, managing timelines, and overseeing the work so you do not have to be on-site or manage contractors yourself.",
-    details:
-      "Real Property Planning can connect you with local professionals including move managers, estate sale companies, cleanout crews, handymen, and staging teams. A good broker evaluates which improvements offer meaningful return on investment and will advise against spending money on work that will not meaningfully affect the sale price.",
   },
   {
     number: "04",
     title: "Listing Preparation and Marketing Strategy",
     text: "Once the property is ready, your listing broker develops a marketing plan tailored to the home's specific strengths, target buyer profile, and local market conditions. This includes professional photography, compelling listing descriptions, strategic pricing, and targeted exposure through MLS, online platforms, and agent networks.",
-    details:
-      "The marketing approach varies based on property type and buyer pool. A waterfront home on Bainbridge Island requires a different strategy than a mid-century rambler in Everett or a condominium in downtown Bellevue. The approach adjusts based on what will generate the strongest buyer interest for each specific property.",
   },
   {
     number: "05",
     title: "Offer Review, Negotiation, and Contract Management",
     text: "When offers arrive, your broker reviews each one thoroughly — evaluating not just the price, but the terms, contingencies, financing strength, and closing timeline. The options are presented clearly, and your broker negotiates on your behalf to protect the estate's interests. In multi-offer situations, a broker helps you navigate competing bids with a strategy focused on certainty of closing and net proceeds.",
-    details:
-      "For probate and trust transactions, an experienced broker pays particular attention to terms that affect fiduciary obligations — ensuring that the transaction structure supports the legal requirements of the sale.",
   },
   {
     number: "06",
     title: "Escrow and Closing Coordination",
     text: "From accepted offer to closing day, your broker manages the transaction details — inspection responses, appraisal coordination, title issues, repair negotiations, and communication with all parties including the buyer's agent, escrow officer, and your attorney if applicable. A broker tracks deadlines, anticipates problems, and keeps the transaction moving toward a successful close.",
-    details:
-      "You should expect regular status updates so you always know where things stand. If complications arise — and in estate transactions, they sometimes do — they are addressed promptly, with solutions communicated rather than just problems.",
   },
   {
     number: "07",
     title: "Post-Sale Support",
     text: "After closing, a good broker remains available for questions about final documentation, tax-related inquiries you may want to discuss with your CPA, or any loose ends related to the property. For families managing ongoing estate matters or additional properties, that continuity and single point of contact matters for future real estate needs.",
-    details:
-      "Families often return to the same broker for additional properties, and attorneys frequently refer clients based on the experience of a previous matter.",
   },
 ];
 
@@ -195,10 +180,7 @@ const HowTheProcessWorks = () => {
                       <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-2">
                         {step.title}
                       </h3>
-                      <p className="text-muted-foreground leading-[1.75] mb-3">{step.text}</p>
-                      {/* WAS text-muted-foreground/80 at 15px italic — the
-                        smallest, faintest text on the page. */}
-                      <p className="text-muted-foreground text-base leading-relaxed italic">{step.details}</p>
+                      <p className="text-muted-foreground leading-[1.75] m-0">{step.text}</p>
                     </div>
                   </div>
                 ))}
@@ -257,12 +239,9 @@ const HowTheProcessWorks = () => {
           </div>
         </section>
 
-        <MidPageCTA
-          heading="Ready to Get Started?"
-          body="Whether you are an executor, attorney, trustee, or family member — we can walk you through the process and help you find the right professionals."
-          buttonText="Schedule a Consultation"
-          microcopy="No pressure. Just practical guidance for your situation."
-        />
+        {/* MidPageCTA removed. Its "Schedule a Consultation" button implied the
+          hub books consultations directly — the same attribution problem
+          cleaned up elsewhere on this page. */}
 
         <PageFAQ faqs={faqs} heading="Process FAQs" />
 
