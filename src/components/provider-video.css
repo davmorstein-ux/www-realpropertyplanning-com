@@ -40,6 +40,27 @@
 
 .provider-video-trigger__icon {
   flex-shrink: 0 !important;
+  animation: provider-video-nudge 1.8s ease-in-out infinite !important;
+}
+
+/* Arrow drifts toward the label, then settles. Slow and small on purpose:
+   a fast or wide movement reads as an error state and is hard to track
+   for readers with vestibular sensitivity or low vision. */
+@keyframes provider-video-nudge {
+  0%,
+  60%,
+  100% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(6px);
+  }
+}
+
+.provider-video-trigger.provider-video-trigger:hover .provider-video-trigger__icon,
+.provider-video-trigger.provider-video-trigger:focus-visible .provider-video-trigger__icon {
+  /* Once the pointer or keyboard has found it, the hint has done its job. */
+  animation-play-state: paused !important;
 }
 
 /* ---------- Overlay + dialog ---------- */
@@ -208,5 +229,10 @@
 @media (prefers-reduced-motion: reduce) {
   .provider-video-trigger.provider-video-trigger {
     transition: none !important;
+  }
+
+  .provider-video-trigger__icon {
+    animation: none !important;
+    transform: none !important;
   }
 }
