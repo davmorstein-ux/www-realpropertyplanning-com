@@ -9,6 +9,78 @@ import AFHCarousel from "@/components/AFHCarousel";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { useTranslation } from "react-i18next";
 
+/**
+ * PAGE-SCOPED STYLES
+ *
+ * Two rules in index.css were breaking this page:
+ *
+ * 1. TINY TEXT
+ *      main [style*="letter-spacing"],
+ *      main [class*="uppercase"] { font-size: max(0.875rem, 14px) !important; }
+ *    0.875rem IS 14px, so max() always returns 14px — the rule reads like a
+ *    floor but behaves as a fixed size. Any element carrying letterSpacing or
+ *    textTransform in its inline style was flattened to 14px, including the
+ *    teal band's h2 and the hero eyebrow.
+ *    Fixed here by moving those declarations OUT of the inline style objects
+ *    and into the classes below, so the selectors no longer match.
+ *
+ * 2. DARK TEXT ON THE TEAL BAND
+ *      body p:not(nav *)...   { color: #3d3833 !important }
+ *      body h2, body h3, body h4 { color: #1B3A6B !important }
+ *    The section sets color: #ffffff, but that reaches children only by
+ *    inheritance, and inheritance loses to any rule targeting the element
+ *    directly. Hence brown paragraphs and a near-black heading on teal.
+ *
+ * Deleting the revision-2 block from index.css is the real fix for #2. These
+ * styles make the page correct either way.
+ */
+const PAGE_CSS = `
+  .rpp-afh-eyebrow.rpp-afh-eyebrow {
+    font-size: 20px !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.22em !important;
+    text-transform: uppercase !important;
+    color: #481216 !important;
+  }
+  .rpp-afh-kicker.rpp-afh-kicker {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+  }
+  .rpp-afh-marketplace h2,
+  .rpp-afh-marketplace p,
+  .rpp-afh-marketplace h2 span,
+  .rpp-afh-marketplace p span {
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+  .rpp-afh-marketplace h2.rpp-afh-marketplace-heading {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(28px, 4vw, 40px) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
+    line-height: 1.2 !important;
+    margin: 0 0 12px !important;
+  }
+  .rpp-afh-marketplace p {
+    font-size: 19px !important;
+    line-height: 1.7 !important;
+  }
+  /* Buttons sit ON the dark band and must not be swept white by the rule
+     above — the solid one would become white on white. */
+  .rpp-afh-marketplace .rpp-afh-btn-solid,
+  .rpp-afh-marketplace .rpp-afh-btn-solid span {
+    color: #12615f !important;
+  }
+  .rpp-afh-marketplace .rpp-afh-btn-outline,
+  .rpp-afh-marketplace .rpp-afh-btn-outline span {
+    color: #ffffff !important;
+  }
+  .rpp-afh-marketplace a { text-decoration: none !important; }
+`;
+
 const CATEGORY_META = [
   { key: "resources", href: "/afh-club/resources", img: "/afh-resources.webp", placeholder: "#3f3a35" },
   { key: "listings", href: "/afh-club/listings", img: "/afh-listings.webp", placeholder: "#3e3934" },
@@ -50,6 +122,7 @@ const AFHClub = () => {
         ]}
       />
       <Header />
+      <style>{PAGE_CSS}</style>
       <main id="main-content">
         {/* Hero — badge, title, subtitle, one description line only */}
         <section
@@ -79,18 +152,10 @@ const AFHClub = () => {
               />
             </div>
 
-            {/* Eyebrow — tight below badge */}
-            <p
-              style={{
-                fontSize: "20px",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                color: "#481216",
-                margin: "0 0 8px",
-              }}
-            >
+            {/* Eyebrow. Type moved into .rpp-afh-eyebrow — leaving
+                letterSpacing and textTransform inline made this match the
+                global 14px rule and shrink from 20px. */}
+            <p className="rpp-afh-eyebrow" style={{ margin: "0 0 8px" }}>
               Real Property Planning
             </p>
 
@@ -144,16 +209,7 @@ const AFHClub = () => {
 
         <section style={{ background: "#fff", padding: "48px 24px" }}>
           <div style={{ maxWidth: 960, margin: "0 auto", textAlign: "center" }}>
-            <p
-              style={{
-                fontSize: 13,
-                fontWeight: 700,
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                color: "#b13a44",
-                marginBottom: 12,
-              }}
-            >
+            <p className="rpp-afh-kicker" style={{ color: "#b13a44", marginBottom: 12 }}>
               {t("afhClubPage.marketplace.eyebrow")}
             </p>
             <h2
@@ -171,7 +227,7 @@ const AFHClub = () => {
               style={{
                 fontSize: 18,
                 fontFamily: "'DM Sans', sans-serif",
-                color: "#5e5954",
+                color: "#4a453f",
                 maxWidth: 600,
                 margin: "0 auto 32px",
                 lineHeight: 1.7,
@@ -235,17 +291,7 @@ const AFHClub = () => {
 
         {/* Browse by city */}
         <section style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px 56px" }}>
-          <p
-            style={{
-              textAlign: "center",
-              fontSize: 13,
-              fontWeight: 700,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              color: "#5e5954",
-              marginBottom: 14,
-            }}
-          >
+          <p className="rpp-afh-kicker" style={{ textAlign: "center", color: "#4a453f", marginBottom: 14 }}>
             {t("afhClubPage.browseByCity")}
           </p>
           <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
@@ -273,7 +319,7 @@ const AFHClub = () => {
                   color: "#302b26",
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 600,
-                  fontSize: 14,
+                  fontSize: 15,
                   padding: "8px 16px",
                   borderRadius: 20,
                   textDecoration: "none",
@@ -368,17 +414,8 @@ const AFHClub = () => {
                     {cat.description}
                   </p>
                   <span
-                    style={{
-                      fontSize: "16px",
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontWeight: 700,
-                      letterSpacing: "0.18em",
-                      textTransform: "uppercase",
-                      color: "#481216",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 5,
-                    }}
+                    className="rpp-afh-kicker"
+                    style={{ color: "#481216", display: "inline-flex", alignItems: "center", gap: 5 }}
                   >
                     {t("afhClubPage.exploreLabel")}
                     <svg
@@ -403,17 +440,7 @@ const AFHClub = () => {
         {/* What is an AFH */}
         <section style={{ background: "#f7f4ef", padding: "80px 24px" }}>
           <div style={{ maxWidth: 720, margin: "0 auto" }}>
-            <p
-              style={{
-                fontSize: "20px",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                color: "#481216",
-                margin: "0 0 16px",
-              }}
-            >
+            <p className="rpp-afh-eyebrow" style={{ margin: "0 0 16px" }}>
               {t("afhClubPage.whatIsAfh.eyebrow")}
             </p>
             <h2
@@ -467,17 +494,7 @@ const AFHClub = () => {
           </div>
         </section>
 
-        {/* Featured: AFH Marketplace
-            The class carries the scoped stylesheet below. The section already
-            set color: #ffffff, but that only applies by inheritance, and an
-            inherited value loses to ANY rule that targets the element
-            directly — including the two in index.css that were repainting
-            this band:
-              body p:not(nav *)... { color: #3d3833 !important }
-              body h2, body h3, body h4 { color: #1B3A6B !important }
-            Those produced the brown paragraph and near-black heading on
-            teal. Deleting that block from index.css is the real fix; the
-            styles here make this section correct regardless. */}
+        {/* Featured: AFH Marketplace */}
         <section
           className="rpp-afh-marketplace"
           style={{
@@ -486,53 +503,13 @@ const AFHClub = () => {
             color: "#ffffff",
           }}
         >
-          <style>{`
-            .rpp-afh-marketplace h2,
-            .rpp-afh-marketplace p,
-            .rpp-afh-marketplace h2 span,
-            .rpp-afh-marketplace p span {
-              color: #ffffff !important;
-              opacity: 1 !important;
-            }
-            /* The two buttons sit ON the dark band, so they must NOT be
-               swept white by the rule above — the solid one would become
-               white on white. */
-            .rpp-afh-marketplace .rpp-afh-btn-solid,
-            .rpp-afh-marketplace .rpp-afh-btn-solid span {
-              color: #12615f !important;
-            }
-            .rpp-afh-marketplace .rpp-afh-btn-outline,
-            .rpp-afh-marketplace .rpp-afh-btn-outline span {
-              color: #ffffff !important;
-            }
-            .rpp-afh-marketplace a {
-              text-decoration: none !important;
-            }
-          `}</style>
           <div style={{ maxWidth: 920, margin: "0 auto", textAlign: "center" }}>
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: "clamp(28px, 4vw, 40px)",
-                fontWeight: 600,
-                margin: "0 0 12px",
-                letterSpacing: "-0.01em",
-                lineHeight: 1.2,
-              }}
-            >
-              {t("afhClubPage.readyToBuySell.heading")}
-            </h2>
-            <p
-              style={{
-                fontSize: 19,
-                lineHeight: 1.7,
-                margin: "0 auto 28px",
-                maxWidth: 640,
-                color: "rgba(255,255,255,0.95)",
-              }}
-            >
-              {t("afhClubPage.readyToBuySell.description")}
-            </p>
+            {/* Size, weight and letter-spacing now live in the class. Keeping
+                letterSpacing inline made this h2 match
+                  main [style*="letter-spacing"] { font-size: 14px !important }
+                and collapse from clamp(28px, 4vw, 40px) to 14px. */}
+            <h2 className="rpp-afh-marketplace-heading">{t("afhClubPage.readyToBuySell.heading")}</h2>
+            <p style={{ margin: "0 auto 28px", maxWidth: 640 }}>{t("afhClubPage.readyToBuySell.description")}</p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
               <Link
                 to="/afh-club/listings"
@@ -542,7 +519,6 @@ const AFHClub = () => {
                   alignItems: "center",
                   gap: 8,
                   background: "#ffffff",
-                  color: "#12615f",
                   fontSize: 16,
                   fontWeight: 700,
                   padding: "14px 28px",
@@ -562,7 +538,6 @@ const AFHClub = () => {
                   alignItems: "center",
                   gap: 8,
                   background: "transparent",
-                  color: "#ffffff",
                   fontSize: 16,
                   fontWeight: 700,
                   padding: "14px 28px",
