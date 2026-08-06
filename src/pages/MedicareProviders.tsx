@@ -59,6 +59,7 @@ const providers: Provider[] = [
     specialty:
       "Medicare, health, life, and long-term care insurance guidance, along with retirement solutions for individuals, families, and small businesses across the Puget Sound region",
     bio: "J. R. Gillespie is the Primary Associate at ALLSTAR Financial Insurance, which has served individuals, families and businesses throughout the Puget Sound region since 1993. He helps clients understand and select insurance solutions designed to protect their health, financial security and loved ones.\n\nHaving personally experienced significant health challenges, J. R. understands that an unexpected illness or injury can create expenses extending well beyond medical bills. Lost income, deductibles, copayments and the cost of additional assistance can place considerable pressure on an individual or family.\n\nJ. R. provides personalized guidance regarding individual and family health insurance, Medicare Advantage, Medicare Supplement and prescription drug plans, as well as life, disability, supplemental and long-term-care insurance. His approach focuses on clearly explaining available options and helping clients identify practical coverage that fits their circumstances, priorities and budget. Through knowledgeable and attentive service, J. R. helps clients make informed insurance decisions with greater clarity and confidence.",
+    videoUrl: "https://www.youtube.com/watch?v=8i4vW8bbYQk",
   },
 ];
 
