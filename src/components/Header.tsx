@@ -78,7 +78,7 @@ const Header = () => {
            across the whole width, that produced a tall wide band per link,
            so the hover state fired well away from the text.
 
-           .rpp-top-link is a class (0,1,0) and beats `nav a` (0,0,2), so
+           .rpp-top-link is a class (0,1,0) and beats "nav a" (0,0,2), so
            these !important flags hold. Height now hugs the label.
 
            8px horizontal keeps the click target comfortable — narrower is
