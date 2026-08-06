@@ -1,9 +1,7 @@
-import Header from "@/components/Header";
 import HousingOptionDetail from "@/components/HousingOptionDetail";
 
 const IndependentLiving = () => (
   <>
-    <Header />
     <HousingOptionDetail
       title="Independent Living"
       slug="independent-living"

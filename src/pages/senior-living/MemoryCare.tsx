@@ -1,9 +1,7 @@
-import Header from "@/components/Header";
 import HousingOptionDetail from "@/components/HousingOptionDetail";
 
 const MemoryCare = () => (
   <>
-    <Header />
     <HousingOptionDetail
       title="Memory Care"
       slug="memory-care"
