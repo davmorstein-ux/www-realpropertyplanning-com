@@ -94,7 +94,13 @@ const PlanningBeforeACrisis = () => {
             src={heroImage}
             alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
             className="w-full block"
-            style={{ objectFit: "contain", width: "100%", height: "auto" }}
+            style={{
+              width: "100%",
+              height: "clamp(150px, 19vw, 340px)",
+              objectFit: "cover",
+              objectPosition: "center center",
+              display: "block",
+            }}
             loading="eager"
             sizes="100vw"
             decoding="async"
