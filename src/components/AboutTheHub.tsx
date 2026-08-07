@@ -22,10 +22,10 @@ const AboutTheHub = () => {
           </h2>
 
           <p className="font-serif text-navy text-[19px] md:text-[21px] leading-[1.75]">
-            Real Property Planning is a free, independent educational resource for Washington families
-            navigating a home decision during aging, illness, probate, or the settlement of an estate. We
-            explain the real estate, housing, and planning issues involved in plain language, and connect you
-            with the attorneys, fiduciaries, and care professionals who work in this area.
+            Real Property Planning is a free, independent educational resource for Washington families navigating a home
+            decision during aging, illness, probate, or the settlement of an estate. We explain the real estate,
+            housing, and planning issues involved in plain language, and connect you with the attorneys, fiduciaries,
+            and care professionals who work in this area.
           </p>
         </div>
       </div>
