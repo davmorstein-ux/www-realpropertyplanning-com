@@ -7,7 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import heroImage from "@/assets/panorama-road-scene.webp";
+import PanoramaHero from "@/components/PanoramaHero";
 
 const tiles = [
   {
@@ -89,25 +89,7 @@ const PlanningBeforeACrisis = () => {
       <BreadcrumbSchema items={[{ name: "Planning Before a Crisis", url: "/planning-before-a-crisis" }]} />
       <Header />
       <main id="main-content">
-        <section className="bg-white w-full overflow-hidden">
-          <img
-            src={heroImage}
-            alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
-            className="w-full block"
-            style={{
-              width: "100%",
-              height: "clamp(150px, 19vw, 340px)",
-              objectFit: "cover",
-              objectPosition: "center center",
-              display: "block",
-            }}
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-            width={1920}
-            height={487}
-          />
-        </section>
+        <PanoramaHero alt="Planning before a crisis — thoughtful estate and property planning in Washington State" />
 
         <HeroBandTitle as="h1">Planning Before a Crisis</HeroBandTitle>
 
