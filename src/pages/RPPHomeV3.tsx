@@ -10,6 +10,7 @@ import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
+import AboutTheHub from "@/components/AboutTheHub";
 import { CARE_TYPES, CARE_TYPE_COLORS, formatCurrency } from "@/lib/careTypes";
 import { useCostRotation, FADE_MS } from "@/hooks/useCostRotation";
 
@@ -452,6 +453,9 @@ const RPPHomeV3 = () => {
               }
 
             `}</style>
+
+            {/* ── What is Real Property Planning? ──────────────────── */}
+            <AboutTheHub />
 
             {/* ── Cost of Care Calculator — three-column layout ─────── */}
             <div
