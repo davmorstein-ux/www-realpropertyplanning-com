@@ -5,59 +5,64 @@
  * and who it serves. Sits below the "What brings you here today?" funnel tiles
  * and above the Cost of Care Calculator band.
  *
- * Card treatment matches the Cost of Care / AFH Club cards below it, but with a
- * quieter border since this is a statement rather than a call to action.
+ * Sized and styled to match the surrounding cards: full container width, 12px
+ * radius, and the same box-shadow lift used by the funnel tiles and the Cost of
+ * Care card, so it belongs to the same visual system.
  *
- * No heading — the first sentence names the site, so a heading above it would
- * only repeat the subject and compete with "What brings you here today?".
+ * The border is a quieter stone rather than the burgundy used on the Cost of
+ * Care card — that card is clickable and this one is not, so a matching border
+ * would imply an action that doesn't exist.
  *
- * Text is left-aligned and the card is capped at 900px so lines land in the
- * 60-75 character range. Centered prose at this length produced a ragged left
- * edge that made the block hard to scan.
+ * No heading: the first sentence names the site, so a heading above it would
+ * repeat the subject and compete with "What brings you here today?".
  *
- * The scoped <style> with doubled class names follows the pattern the homepage
- * already uses to defeat the global "main p font-size !important" rule in
- * index.css.
+ * Font steps up slightly from the earlier narrow version because the card is
+ * now full width — at 1200px a smaller size would push lines past 95 characters.
+ *
+ * Doubled class names follow the pattern this page already uses to defeat the
+ * global "main p font-size !important" rule in index.css.
  *
  * Copy is hardcoded English for now — the rest of this page uses i18next keys,
  * so this block still needs keys added to translate with the other 7 locales.
  */
 const AboutTheHub = () => {
   return (
-    <div
-      style={{
-        maxWidth: 900,
-        margin: "2.25rem auto 2.5rem",
-      }}
-    >
+    <div style={{ margin: "2.25rem 0 2.5rem" }}>
       <style>{`
+        .rpp-abouthub-card.rpp-abouthub-card {
+          display: block;
+          background: #ffffff;
+          border: 3px solid #d6cdbf;
+          border-radius: 12px;
+          padding: 1.35rem 1.6rem;
+          box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+        }
         .rpp-abouthub-copy.rpp-abouthub-copy {
           font-family: Georgia, serif;
-          font-size: clamp(17px, 1.6vw, 19px) !important;
+          font-size: clamp(17px, 1.35vw, 20px) !important;
           font-weight: 400;
           color: #272421;
-          margin: 0;
+          margin: 0 auto;
+          max-width: 68em;
           line-height: 1.75;
           text-align: left;
         }
         .rpp-abouthub-lead.rpp-abouthub-lead {
           font-weight: 700;
         }
+        @media (max-width: 640px) {
+          .rpp-abouthub-card.rpp-abouthub-card {
+            padding: 1.2rem 1.25rem;
+          }
+        }
       `}</style>
 
-      <div
-        style={{
-          background: "#ffffff",
-          border: "2px solid #d6cdbf",
-          borderRadius: 12,
-          padding: "1.5rem 1.75rem",
-        }}
-      >
+      <div className="rpp-abouthub-card rpp-abouthub-card">
         <p className="rpp-abouthub-copy rpp-abouthub-copy">
           <span className="rpp-abouthub-lead rpp-abouthub-lead">Real Property Planning</span> is a free,
           independent educational resource for Washington families navigating a home decision during aging,
-          illness, probate, or the settlement of an estate. We explain the real estate, housing, and planning
-          issues involved in plain language, and connect you with the attorneys, fiduciaries, and care
+          illness, probate, or the settlement of an estate. It explains the real estate, housing, and planning
+          issues involved in plain language, and connects you with the attorneys, fiduciaries, and care
           professionals who work in this area.
         </p>
       </div>
