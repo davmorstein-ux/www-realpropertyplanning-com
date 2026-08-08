@@ -31,14 +31,20 @@ const CTA_SLOT = 215; // width of the phone button / empty slot above it
    the right edge. Adjust this single value to taste. */
 const SEARCH_MAX_WIDTH = 520;
 
-/* Labels are allowed to wrap to two lines (see .rpp-top-link CSS below), which
-   is what keeps the longer category names from blowing out the nav width. */
+/* Each label is an explicit list of lines rather than one string left to wrap
+   on its own. Relying on max-width meant the browser chose the break points,
+   and the two longest labels wrapped to three lines. Listing the lines makes
+   the shape fixed: nothing here is ever more than two lines.
+
+   Keep every entry to one or two lines. The `lines` are rendered as separate
+   nowrap blocks, so a line that is too long widens the nav rather than
+   wrapping — check the header after editing any label. */
 const CURATED_LINKS = [
-  { label: "About", href: "/about" },
-  { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
-  { label: "Senior Housing & Transitions", href: "/senior-transitions" },
-  { label: "Articles & Guides", href: "/guides-and-resources" },
-  { label: "Real Estate & Legal Professionals", href: "/for-attorneys" },
+  { lines: ["About"], href: "/about" },
+  { lines: ["Probate &", "Estate Sales"], href: "/probate-estate-sales" },
+  { lines: ["Senior Housing &", "Transitions"], href: "/senior-transitions" },
+  { lines: ["Articles & Guides"], href: "/guides-and-resources" },
+  { lines: ["Real Estate &", "Legal Professionals"], href: "/for-attorneys" },
 ];
 
 const Header = () => {
@@ -109,12 +115,16 @@ const Header = () => {
            better trade. max-width caps each label so one long word cannot
            stretch a column; text-align centres the two lines against each
            other. */
-        white-space: normal;
-        max-width: 15ch;
-        text-align: center;
-        line-height: 1.25;
+      text-align: center;
+        line-height: 1.2;
         display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+      }
+      .rpp-top-link-line {
+        display: block;
+        white-space: nowrap;
       }
       .rpp-top-link:hover { color: #d1a847; }
       .rpp-top-link.is-active { border-bottom-color: #d1a847; }
@@ -229,9 +239,11 @@ const Header = () => {
                     to={item.href}
                     className={`rpp-top-link rpp-curated-link${pathname === item.href ? " is-active" : ""}`}
                   >
-                    {item.label}
-                  </Link>
-                ))}
+                   {item.lines.map((line) => (
+                      <span key={line} className="rpp-top-link-line">
+                        {line}
+                      </span>
+                    ))}
                 <LanguageSwitcher compact={isMobile} />
                 
                   <a href="tel:2069003015"
@@ -318,9 +330,11 @@ const Header = () => {
                       to={item.href}
                       className={`rpp-top-link rpp-curated-link${pathname === item.href ? " is-active" : ""}`}
                     >
-                      {item.label}
-                    </Link>
-                  ))}
+                      {item.lines.map((line) => (
+                      <span key={line} className="rpp-top-link-line">
+                        {line}
+                      </span>
+                    ))}
                 </div>
 
                 {/* Contact used to sit here, centred above the phone button. It has
