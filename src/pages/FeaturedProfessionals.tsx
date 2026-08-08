@@ -26,6 +26,7 @@ import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcgin
 import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
 import heidiPhoto from "@/assets/heidi-bolton-medicare-advisor-spears-agency.webp";
 import jrGillespiePhoto from "@/assets/jr-gillespie-medicare-advisor-allstar-financial.webp";
+import anthonyUpchurchPhoto from "@/assets/providers/anthony-upchurch-legal-plans-legalshield.webp";
 
 const jennipherPhoto = jennipherPhotoAsset.url;
 const nicolePhoto = nicolePhotoAsset.url;
@@ -188,6 +189,32 @@ const groups: CategoryGroup[] = [
     ],
   },
   {
+    /*
+      Deliberately a separate category from Elder Law and Family Law & Divorce,
+      and deliberately not filed under Estate Planning Attorneys.
+
+      A legal service plan representative is not an attorney, and the plan
+      provider is not a law firm — legal work under a plan is performed by
+      independent provider law firms. Grouping a plan associate with licensed
+      attorneys would tell an older visitor that a plan membership is
+      equivalent to retaining counsel for an estate matter, which it is not.
+      The role and specialty copy below both state the distinction, and the
+      destination page repeats it above the fold.
+    */
+    category: "Legal Plans & Identity Protection",
+    professionals: [
+      {
+        name: "Anthony Upchurch",
+        role: "Legal and Privacy Manager (not an attorney)",
+        company: "LegalShield",
+        specialty:
+          "Legal service plans covering attorney-prepared wills, will reviews and updates, document review, and identity theft monitoring. Wills are prepared by attorneys at LegalShield's provider law firms; LegalShield is a plan provider, not a law firm.",
+        photo: anthonyUpchurchPhoto,
+        href: "/legal-plans-identity-protection",
+      },
+    ],
+  },
+  {
     category: "Financial Planning",
     professionals: [
       {
@@ -272,7 +299,7 @@ const FeaturedProfessionals = () => (
   <>
     <SEOHead
       title="Featured Professionals | Real Property Planning"
-      description="Meet the professionals in Real Property Planning's network — real estate, appraisal, aging life care management, senior move management, estate liquidation, senior living advisors, elder law, family law, financial planning, mortgage lending, Medicare guidance, and CPAs serving Washington State families."
+      description="Meet the professionals in Real Property Planning's network — real estate, appraisal, aging life care management, senior move management, estate liquidation, senior living advisors, elder law, family law, legal plans and identity protection, financial planning, mortgage lending, Medicare guidance, and CPAs serving Washington State families."
       canonical="https://realpropertyplanning.com/featured-professionals"
     />
     <BreadcrumbSchema
