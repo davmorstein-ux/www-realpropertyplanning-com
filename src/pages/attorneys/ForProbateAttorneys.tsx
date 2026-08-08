@@ -12,6 +12,21 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
+/*
+  ATTRIBUTION NOTE — do not reintroduce "our team" / "we" / "Real Property Planning"
+  as the actor on this page.
+
+  Real Property Planning is a neutral educational hub. It does not provide
+  brokerage, appraisal, legal, tax, or advisory services, and it has no team.
+  The real estate and appraisal work described on this page is performed by
+  David Stein personally — as a Washington State licensed real estate broker
+  with eXp Realty, and as a certified residential appraiser through Stein
+  Appraisal — both of which are separate businesses from this site.
+
+  Note: the client-perspective questions in `intersections` below legitimately
+  use "we" — that is the family speaking, not the site. Leave them alone.
+*/
+
 const intersections = [
   "What is the property actually worth in its current condition — not what an automated tool says, but a defensible, condition-adjusted market value?",
   "Should the property be sold as-is, or are there targeted improvements that would meaningfully improve the outcome?",
@@ -25,25 +40,25 @@ const services = [
     title: "Accurate, Defensible Valuation",
     description: (
       <>
-        As a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>, we provide condition-adjusted market analysis that goes beyond a standard comparative market analysis. The result is a pricing position that holds up to scrutiny — from co-heirs, from the court, and from the estate attorney reviewing the documentation.
+        As a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>, David provides condition-adjusted market analysis that goes beyond a standard comparative market analysis. The result is a pricing position that holds up to scrutiny — from co-heirs, from the court, and from the estate attorney reviewing the documentation.
       </>
     ),
   },
   {
     title: "Strategic Sale Guidance",
-    description: "our team advises on timing, pricing, and preparation strategy with fiduciary defensibility in mind. Every repair recommendation is evaluated for return on investment. Every pricing decision is documented with comparable sales support.",
+    description: "David advises on timing, pricing, and preparation strategy with fiduciary defensibility in mind. Every repair recommendation is evaluated for return on investment. Every pricing decision is documented with comparable sales support.",
   },
   {
     title: "Property Preparation Coordination",
-    description: "From professional cleanout to targeted repairs to staging, we coordinate the full preparation process through trusted local vendors — so the executor doesn't have to manage it and you don't have to track it down.",
+    description: "From professional cleanout to targeted repairs to staging, David coordinates the full preparation process through trusted local vendors — so the executor doesn't have to manage it and you don't have to track it down.",
   },
   {
     title: "Communication With All Parties",
-    description: "We serve as the single real estate point of contact — keeping executors, co-heirs, and the legal team informed with consistent, clear updates throughout the process.",
+    description: "David serves as the single real estate point of contact — keeping executors, co-heirs, and the legal team informed with consistent, clear updates throughout the process.",
   },
   {
     title: "Hands-On Local Support",
-    description: "For executors managing Washington State property from out of state, we handle the property locally — with photo updates, digital documentation, and remote coordination that makes the process manageable from anywhere.",
+    description: "For executors managing Washington State property from out of state, David handles the property locally — with photo updates, digital documentation, and remote coordination that makes the process manageable from anywhere.",
   },
 ];
 
@@ -58,20 +73,20 @@ const situations = [
 
 const faqs = [
   {
-    question: "How does Real Property Planning support probate attorneys during property sales?",
-    answer: "We handle the real estate side completely — property assessment, condition-based pricing, preparation coordination, listing, and sale management — while keeping the attorney informed throughout. Attorneys receive consistent updates and have a single point of contact for all property-related questions. The goal is to make the real estate side of probate administration as straightforward as possible so you can focus on the legal work.",
+    question: "How does David Stein support probate attorneys during property sales?",
+    answer: "David handles the real estate side completely — property assessment, condition-based pricing, preparation coordination, listing, and sale management — while keeping the attorney informed throughout. Attorneys receive consistent updates and have a single point of contact for all property-related questions. The goal is to make the real estate side of probate administration as straightforward as possible so you can focus on the legal work.",
   },
   {
-    question: "What is the difference between a CMA and the valuation analysis We provide?",
-    answer: "A standard comparative market analysis (CMA) is produced by most listing agents and reflects a general price range based on nearby sales. It is not a formal appraisal, and it typically does not account for condition in a documented, methodology-based way. Our condition-based pricing combines our certified appraisal training with current market data — producing a condition-adjusted, comparable-supported price opinion that is more defensible for fiduciary purposes than a standard CMA. For situations requiring a formal appraisal (date-of-death valuations, for example), our team can discuss appropriate referral resources.",
+    question: "What is the difference between a CMA and the valuation analysis David provides?",
+    answer: "A standard comparative market analysis (CMA) is produced by most listing agents and reflects a general price range based on nearby sales. It is not a formal appraisal, and it typically does not account for condition in a documented, methodology-based way. David's condition-based pricing combines his certified appraisal training with current market data — producing a condition-adjusted, comparable-supported price opinion that is more defensible for fiduciary purposes than a standard CMA. For situations requiring a formal appraisal (date-of-death valuations, for example), David can discuss appropriate referral resources.",
   },
   {
     question: "Can you help when heirs disagree about value or timing?",
-    answer: "Yes — and this is one of the most common situations We work with. When heirs have received conflicting price opinions or have different views on what the property is worth, a clear, documented evidence-based analysis often resolves the disagreement faster than continued negotiation. our team can present the analysis to all parties — together or separately — and walk through the comparable data in plain language.",
+    answer: "Yes — and this is one of the most common situations David works with. When heirs have received conflicting price opinions or have different views on what the property is worth, a clear, documented evidence-based analysis often resolves the disagreement faster than continued negotiation. David can present the analysis to all parties — together or separately — and walk through the comparable data in plain language.",
   },
   {
     question: "Do you work with probate attorneys outside of Western Washington?",
-    answer: "Our primary service area is Western Washington and the Puget Sound region — King, Snohomish, Pierce, and Kitsap Counties, with additional coverage in Skagit County and surrounding areas. For attorneys with clients in other parts of Washington State, our team can discuss appropriate referral connections. For clients outside Washington, Real Property Planning can connect attorneys and clients with a trusted broker anywhere in the country through our eXp Realty network.",
+    answer: "David's primary service area is Western Washington and the Puget Sound region — King, Snohomish, Pierce, and Kitsap Counties, with additional coverage in Skagit County and surrounding areas. For attorneys with clients in other parts of Washington State, David can discuss appropriate referral connections. For clients outside Washington, David can connect attorneys and clients with a trusted broker anywhere in the country through his eXp Realty network.",
   },
 ];
 
@@ -79,7 +94,7 @@ const ForProbateAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Probate Attorneys in Washington State | Real Property Planning"
-      description="Real Property Planning coordinates property assessment, valuation, preparation, and sale for probate attorneys and their clients throughout Washington State."
+      description="David Stein — a Washington State licensed real estate broker and certified residential appraiser — provides property assessment, valuation, preparation, and sale coordination for probate attorneys and their clients throughout Washington State."
     />
     <BreadcrumbSchema
       items={[
@@ -111,7 +126,7 @@ const ForProbateAttorneys = () => (
             and family are faced with questions about value, condition, timing, and coordination that most attorneys reasonably prefer to hand off to a trusted real estate professional.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Real Property Planning works alongside probate attorneys throughout Washington State to provide defensible valuation, coordinated preparation, and a steady, professional presence through every step of the property sale.
+            David Stein works alongside probate attorneys throughout Washington State to provide defensible valuation, coordinated preparation, and a steady, professional presence through every step of the property sale.
           </p>
         </div>
       </div>
@@ -144,12 +159,12 @@ const ForProbateAttorneys = () => (
 
     <JamesJacksonCard />
 
-    {/* How We Support Your Clients */}
+    {/* How David Stein Supports Your Clients */}
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-10">
-            How We Support Your Clients
+            How David Stein Supports Your Clients
           </h2>
           <div className="grid gap-5">
             {services.map((s, i) => (
@@ -161,6 +176,11 @@ const ForProbateAttorneys = () => (
               </div>
             ))}
           </div>
+          <p className="text-muted-foreground text-sm leading-relaxed mt-8">
+            Real estate brokerage services are provided by David Stein through eXp Realty. Appraisal services are
+            provided through Stein Appraisal. Real Property Planning is an educational hub and does not provide
+            brokerage, appraisal, legal, or tax services.
+          </p>
         </div>
       </div>
     </section>
@@ -173,7 +193,7 @@ const ForProbateAttorneys = () => (
             Common Situations
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            Probate attorneys refer clients to Real Property Planning in situations including:
+            Probate attorneys refer clients to David Stein in situations including:
           </p>
           <ul className="space-y-4">
             {situations.map((item, i) => (
@@ -199,10 +219,10 @@ const ForProbateAttorneys = () => (
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
             If you have a client navigating a{" "}
             <Link to="/probate-estate-sales" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">probate</Link>{" "}
-            property situation in Washington State, a brief conversation is usually the fastest way to determine how Real Property Planning can support the case.
+            property situation in Washington State, a brief conversation is usually the fastest way to determine how David can support the case.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            We work collaboratively with probate attorneys throughout the Puget Sound area and across Washington State — and is available for direct attorney consultations at your convenience.
+            David works collaboratively with probate attorneys throughout the Puget Sound area and across Washington State, and is available for direct attorney consultations at your convenience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+12069003015">
