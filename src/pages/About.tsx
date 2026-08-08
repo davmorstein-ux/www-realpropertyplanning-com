@@ -4,14 +4,11 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import RelatedServices from "@/components/RelatedServices";
-import StatewideSupport from "@/components/StatewideSupport";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
-import aboutHeroImage from "@/assets/about_hero_downtown_clean_v2.webp";
 
 
 const About = () => {
@@ -28,44 +25,16 @@ const About = () => {
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
       <Header />
       <main id="main-content">
-        {/* Hero */}
-        <section className="relative overflow-hidden w-full" style={{ backgroundColor: "#f5f0e8" }}>
-          <img
-            src={aboutHeroImage}
-            alt="Real Property Planning — Senior Transitions"
-            className="w-full object-cover"
-            style={{ height: "clamp(220px, 32vw, 380px)" }}
-            loading="eager"
-            fetchPriority="high" sizes="100vw" width={1885} height={591} />
-          <h1 className="sr-only">About Real Property Planning</h1>
-        </section>
-
-        {/* Headshot — moved here, above Vision & Mission */}
-        <section className="pt-12 pb-4 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="flex flex-col items-center">
-              <div className="w-[160px] h-[200px] rounded-2xl overflow-hidden border-2 border-gold/20 shadow-md">
-                <img
-                  src={daveHeadshot}
-                  alt="David Stein licensed real estate broker and certified appraiser Kirkland Washington"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy" sizes="100vw" decoding="async" width={720} height={940} />
-              </div>
-              <p className="mt-4 font-serif text-4xl text-foreground font-bold leading-tight text-center">
-                David Stein
-              </p>
-              <p className="text-muted-foreground text-sm mt-1 text-center">Founder, Real Property Planning</p>
-            </div>
-          </div>
-        </section>
-
-        {/* About Real Property Planning */}
-        <section className="pt-8 pb-12 bg-cream">
+        {/* About Real Property Planning — now the first thing on the page.
+            The decorative hero image was removed, so this heading is promoted
+            from h2 to the page's real h1 (it was previously an sr-only h1
+            inside the hero). Every page still needs exactly one h1. */}
+        <section className="pt-10 pb-12 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8 leading-tight">
+              <h1 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8 leading-tight">
                 About Real Property Planning
-              </h2>
+              </h1>
               <div className="space-y-6 text-foreground/85 leading-relaxed text-lg">
                 <p>
                   An independent educational hub for seniors, families, and the professionals who serve them.
@@ -162,6 +131,26 @@ const About = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">About the Founder</h2>
+
+              {/* Headshot floats so the biography text wraps around it, sitting
+                  directly beneath the heading. It is a sibling of (not inside)
+                  the prose block: a float preceding a block-level container
+                  still shortens that container's line boxes, which is what
+                  produces the inset-and-wrap effect. */}
+              <div className="float-left mr-6 mb-4 w-[150px] sm:w-[180px]">
+                <div className="rounded-2xl overflow-hidden border-2 border-gold/20 shadow-md">
+                  <img
+                    src={daveHeadshot}
+                    alt="David Stein licensed real estate broker and certified appraiser Kirkland Washington"
+                    className="w-full h-auto object-cover object-top"
+                    loading="lazy" sizes="(max-width: 640px) 150px, 180px" decoding="async" width={720} height={940} />
+                </div>
+                <p className="mt-3 font-serif text-xl text-foreground font-bold leading-tight text-center">
+                  David Stein
+                </p>
+                <p className="text-muted-foreground text-sm mt-1 text-center">Founder, Real Property Planning</p>
+              </div>
+
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
                   Real Property Planning was founded by David Stein, a Washington State Licensed Real Estate Broker and Washington State Certified Residential Appraiser with over 20 years of experience in both disciplines.
@@ -182,6 +171,9 @@ const About = () => {
                   David Stein's real estate brokerage and appraisal services are offered separately through his own practice — not through Real Property Planning.
                 </p>
               </div>
+              {/* Clears the floated headshot. Without this, a short viewport can
+                  let the following section wrap up alongside the image. */}
+              <div className="clear-both" />
             </div>
           </div>
         </section>
@@ -203,9 +195,6 @@ const About = () => {
           </div>
         </section>
 
-        <RelatedServices currentPath="/about" />
-
-        <StatewideSupport background="bg-secondary" />
         <DisclaimerSection />
       </main>
       <Footer />
