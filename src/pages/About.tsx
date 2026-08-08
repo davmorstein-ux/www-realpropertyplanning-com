@@ -167,7 +167,7 @@ const About = () => {
                 <p className="mt-3 font-serif text-xl text-foreground font-bold leading-tight text-center">
                   David Stein
                 </p>
-                <p className="text-muted-foreground text-sm mt-1 text-center">Founder, Real Property Planning</p>
+               <p className="text-foreground text-sm font-semibold leading-tight mt-0.5 text-center">Founder</p>
               </div>
 
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
