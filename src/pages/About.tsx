@@ -6,10 +6,30 @@ import { realEstateAgentSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
 
+
+/* Mirrors the homepage funnel tiles (tileMeta in RPPHomeV3.tsx) minus the
+   photography. Colours and destinations are copied from there deliberately —
+   if the homepage tiles change, change these to match.
+
+   ACCESSIBILITY: white on the orange (#D97706) measures 3.19:1. That passes
+   WCAG AA only under the LARGE-text threshold (3:1), not the normal-text one
+   (4.5:1). The labels must therefore stay bold at text-xl or larger. Do not
+   reduce the label size without darkening the orange.
+
+   Labels are hardcoded English; the homepage equivalents run through i18next,
+   so these need translation keys before the non-English locales are correct. */
+const nextSteps = [
+  { label: "I Want to Plan Ahead", href: "/planning-before-a-crisis", bgColor: "#D97706" },
+  { label: "I'm Helping an Aging Parent", href: "/helping-an-aging-parent", bgColor: "#246044" },
+  { label: "I'm Handling an Estate", href: "/estate-probate-inherited-property", bgColor: "#25597e" },
+  { label: "I Need a Professional", href: "/building-your-trusted-professional-team", bgColor: "#5d2f74" },
+];
 
 const About = () => {
   const reducedMotion = useReducedMotion();
@@ -178,6 +198,65 @@ const About = () => {
           </div>
         </section>
 
+        {/* Contact — this section exists because Contact was removed from the
+            top navigation. It is the only place in the header-level structure
+            where contact details now live, so do not delete it without first
+            restoring the nav link. Details match the footer exactly. */}
+        <section className="py-12 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Contact</h2>
+              <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
+                <p>
+                  Questions about the site, a correction, or a professional who would like to be considered for the directory — all reach the same place.
+                </p>
+              </div>
+
+              <div className="mt-8 bg-card border border-border rounded-xl px-7 py-7">
+                <dl className="space-y-5">
+                  <div>
+                    <dt className="text-foreground font-semibold text-lg mb-1">Phone</dt>
+                    <dd>
+                      <a href="tel:2069003015" className="text-accent text-xl font-semibold underline underline-offset-4">
+                        (206) 900-3015
+                      </a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-foreground font-semibold text-lg mb-1">Email</dt>
+                    <dd>
+                      
+                        href="mailto:info@realpropertyplanning.com"
+                        className="text-accent text-xl font-semibold underline underline-offset-4 break-words"
+                      >
+                        info@realpropertyplanning.com
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <a href="tel:2069003015">
+                    <Button variant="gold" size="lg" className="px-8 py-4 h-auto w-full sm:w-auto">
+                      Call (206) 900-3015
+                    </Button>
+                  </a>
+                  <Link to="/contact">
+                    <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto w-full sm:w-auto !border-2 !border-gold">
+                      Send a Message
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              <p className="text-muted-foreground text-sm leading-relaxed mt-6">
+                Real Property Planning is an educational hub and does not provide brokerage, appraisal, legal, or tax
+                services. Messages about those services are handled by David Stein personally through his own practice.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* A Note on Independence */}
         <section className="py-12 bg-background">
           <div className="container px-6 lg:px-8">
@@ -190,6 +269,52 @@ const About = () => {
                 <p>
                   Nothing on this site constitutes legal, financial, real estate, or any other professional advice. Always consult a qualified, licensed professional for guidance specific to your situation.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Here Is What You Do Next */}
+        <section className="py-12 bg-cream">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              {/* index.css carries global !important rules on links (underline)
+                  and font sizes that silently defeat Tailwind classes and inline
+                  styles. Doubled class selectors raise specificity enough to win.
+                  The bg-transparent token in the className below is also load-
+                  bearing: it satisfies main a:not([class*="bg-"]), which would
+                  otherwise repaint the label text. */}
+              <style>{`
+                .rpp-next-step.rpp-next-step {
+                  text-decoration: none !important;
+                }
+                .rpp-next-step.rpp-next-step span {
+                  color: #ffffff !important;
+                }
+                .rpp-next-step.rpp-next-step .rpp-next-step-label {
+                  font-size: 1.25rem !important;
+                  line-height: 1.375 !important;
+                }
+              `}</style>
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
+                Here Is What You Do Next
+              </h2>
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                {nextSteps.map((step) => (
+                  <Link
+                    key={step.href}
+                    to={step.href}
+                    className="rpp-next-step bg-transparent group flex items-center justify-between gap-3 rounded-xl px-6 py-6 no-underline transition-transform duration-150 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+                    style={{ backgroundColor: step.bgColor }}
+                  >
+                    <span className="rpp-next-step-label text-white font-bold text-xl leading-snug">
+                      {step.label}
+                    </span>
+                    <span aria-hidden="true" className="text-white text-2xl shrink-0">
+                      &#8250;
+                    </span>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
