@@ -23,15 +23,15 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
   with eXp Realty, and as a certified residential appraiser through Stein
   Appraisal — both of which are separate businesses from this site.
 
-  Note: the client-perspective questions in `intersections` below legitimately
-  use "we" — that is the family speaking, not the site. Leave them alone.
+  No first-person plural anywhere on this page — not even in client-voice
+  questions. "We" reads as the site speaking regardless of who is meant.
 */
 
 const intersections = [
   "What is the property actually worth in its current condition — not what an automated tool says, but a defensible, condition-adjusted market value?",
   "Should the property be sold as-is, or are there targeted improvements that would meaningfully improve the outcome?",
-  "How do we manage a property that's been vacant for months — insurance, utilities, security, maintenance?",
-  "How do we coordinate when heirs live in different states or have different opinions about timing and price?",
+  "How does an executor manage a property that's been vacant for months — insurance, utilities, security, maintenance?",
+  "How do heirs coordinate when they live in different states or have different opinions about timing and price?",
   "What does the sale timeline look like relative to the probate proceedings?",
 ];
 
