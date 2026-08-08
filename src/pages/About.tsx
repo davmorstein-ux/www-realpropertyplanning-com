@@ -226,7 +226,7 @@ const About = () => {
                     <dt className="text-foreground font-semibold text-lg mb-1">Email</dt>
                     <dd>
                       
-                        href="mailto:info@realpropertyplanning.com"
+                        <a href="mailto:info@realpropertyplanning.com"
                         className="text-accent text-xl font-semibold underline underline-offset-4 break-words"
                       >
                         info@realpropertyplanning.com
