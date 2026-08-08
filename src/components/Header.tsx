@@ -243,7 +243,9 @@ const Header = () => {
                       <span key={line} className="rpp-top-link-line">
                         {line}
                       </span>
-                    ))}
+                   ))}
+                  </Link>
+                ))}
                 <LanguageSwitcher compact={isMobile} />
                 
                   <a href="tel:2069003015"
@@ -334,9 +336,10 @@ const Header = () => {
                       <span key={line} className="rpp-top-link-line">
                         {line}
                       </span>
-                    ))}
+                   ))}
+                    </Link>
+                  ))}
                 </div>
-
                 {/* Contact used to sit here, centred above the phone button. It has
                     been removed from the nav (it now lives on the About page), but
                     the empty slot is deliberately kept: it holds the nav row and the
