@@ -75,7 +75,7 @@ const Header = () => {
        tag with this id already exists, so the id must change whenever the
        CSS changes or returning visitors keep the old rules. v7 allows the
        curated links to wrap to two lines. */
-    const id = "rpp-toplink-styles-v7";
+    const id = "rpp-toplink-styles-v8";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
     style.id = id;
