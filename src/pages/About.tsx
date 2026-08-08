@@ -235,16 +235,51 @@ const About = () => {
                   </div>
                 </dl>
 
+               <style>{`
+                  .rpp-contact-btn.rpp-contact-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 52px;
+                    padding: 0.85rem 1.75rem;
+                    border-radius: 8px;
+                    font-family: 'DM Sans', system-ui, sans-serif;
+                    font-size: 18px !important;
+                    font-weight: 700;
+                    text-decoration: none !important;
+                    text-transform: none !important;
+                    line-height: 1.2;
+                    transition: background-color 0.15s ease, color 0.15s ease;
+                  }
+                  .rpp-contact-btn--solid.rpp-contact-btn--solid {
+                    background: #1B3A6B;
+                    color: #ffffff !important;
+                    border: 2px solid #1B3A6B;
+                  }
+                  .rpp-contact-btn--solid.rpp-contact-btn--solid:hover {
+                    background: #142d54;
+                    border-color: #142d54;
+                  }
+                  .rpp-contact-btn--outline.rpp-contact-btn--outline {
+                    background: #ffffff;
+                    color: #1B3A6B !important;
+                    border: 2px solid #1B3A6B;
+                  }
+                  .rpp-contact-btn--outline.rpp-contact-btn--outline:hover {
+                    background: #1B3A6B;
+                    color: #ffffff !important;
+                  }
+                  .rpp-contact-btn.rpp-contact-btn:focus-visible {
+                    outline: 3px solid #1B3A6B;
+                    outline-offset: 3px;
+                  }
+                `}</style>
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <a href="tel:2069003015">
-                    <Button variant="gold" size="lg" className="px-8 py-4 h-auto w-full sm:w-auto">
-                      Call (206) 900-3015
-                    </Button>
+                  <a href="tel:2069003015" className="rpp-contact-btn rpp-contact-btn rpp-contact-btn--solid rpp-contact-btn--solid bg-transparent w-full sm:w-auto">
+                    Call (206) 900-3015
                   </a>
-                  <Link to="/contact">
-                    <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto w-full sm:w-auto !border-2 !border-gold">
-                      Send a Message
-                    </Button>
+                  <Link to="/contact" className="rpp-contact-btn rpp-contact-btn rpp-contact-btn--outline rpp-contact-btn--outline bg-transparent w-full sm:w-auto">
+                    Send a Message
                   </Link>
                 </div>
               </div>
