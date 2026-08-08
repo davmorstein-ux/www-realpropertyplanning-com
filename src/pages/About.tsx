@@ -6,7 +6,6 @@ import { realEstateAgentSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 
