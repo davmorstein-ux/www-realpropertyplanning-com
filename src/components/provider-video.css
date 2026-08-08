@@ -263,15 +263,15 @@
     box-shadow: none !important;
   }
 
-  .provider-video-trigger__icon {
+ .provider-video-trigger__icon {
     animation: none !important;
     transform: none !important;
     opacity: 1 !important;
   }
+}
 
-   /* External (non-YouTube) trigger renders as an <a>. index.css forces link
+/* External (non-YouTube) trigger renders as an <a>. index.css forces link
    underlines with !important, so the doubled selector is required to win. */
 .provider-video-trigger--external.provider-video-trigger--external {
   text-decoration: none !important;
-}
 }
