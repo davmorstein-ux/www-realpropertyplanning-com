@@ -163,7 +163,7 @@ const Header = () => {
   return (
     <>
       
-        href="#main-content"
+        <a href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md focus:text-base"
       >
         Skip to main content
@@ -234,7 +234,7 @@ const Header = () => {
                 ))}
                 <LanguageSwitcher compact={isMobile} />
                 
-                  href="tel:2069003015"
+                  <a href="tel:2069003015"
                   className="rpp-header-phone"
                   style={{
                     ...NAV_FONT,
@@ -371,7 +371,7 @@ const Header = () => {
                   </div>
 
                   
-                    href="tel:2069003015"
+                    <a href="tel:2069003015"
                     className="rpp-header-phone"
                     style={{
                       ...NAV_FONT,
