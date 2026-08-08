@@ -19,6 +19,7 @@ const CATEGORIES = [
       { name: "Real Estate Attorneys", href: "/professionals/real-estate-attorneys" },
       { name: "Family Law Attorneys", href: "/professionals/family-law-attorneys" },
       { name: "Divorce Attorneys", href: "/for-divorce-attorneys" },
+      { name: "Legal Plans & Identity Protection", href: "/legal-plans-identity-protection" },
     ],
   },
   {
