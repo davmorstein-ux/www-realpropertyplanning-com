@@ -38,6 +38,14 @@
   outline-offset: 3px !important;
 }
 
+/* External (non-YouTube) trigger renders as an <a> rather than a <button>.
+   index.css forces link underlines with !important, so the doubled selector
+   is required to win on specificity. Kept at top level — nesting this inside
+   a media query would limit it to that query's conditions only. */
+.provider-video-trigger--external.provider-video-trigger--external {
+  text-decoration: none !important;
+}
+
 .provider-video-trigger__icon {
   flex-shrink: 0 !important;
   animation: provider-video-nudge 1.4s ease-in-out infinite !important;
@@ -263,15 +271,9 @@
     box-shadow: none !important;
   }
 
- .provider-video-trigger__icon {
+  .provider-video-trigger__icon {
     animation: none !important;
     transform: none !important;
     opacity: 1 !important;
   }
-}
-
-/* External (non-YouTube) trigger renders as an <a>. index.css forces link
-   underlines with !important, so the doubled selector is required to win. */
-.provider-video-trigger--external.provider-video-trigger--external {
-  text-decoration: none !important;
 }
