@@ -6,7 +6,9 @@ import LanguageSwitcher from "./LanguageSwitcher";
 
 const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
 
-const CONTACT_LINK = { label: "Contact", href: "/contact" };
+/* Contact was removed from the top nav — it now lives on the About page and in
+   the WaterfallNav quick-links strip. The CALL button covers urgent contact.
+   AFH Club was also removed; it is reachable from the homepage body. */
 /* Desktop logo height. The logo now occupies its own column spanning both the
    nav row and the search row, so it can be far larger without making the
    header taller — the two-column layout is actually SHORTER than the previous
@@ -17,16 +19,26 @@ const DESKTOP_LOGO_HEIGHT = 104;
 /* Shared column geometry for the desktop header. The nav row and the search
    row are laid out on identical tracks so every element lines up vertically:
    a hamburger-width leading slot, a flexible middle, and a fixed trailing slot
-   that puts CONTACT directly above the phone button. */
+   that puts the phone button at the right edge. */
 const HAMBURGER_SLOT = 56; // bordered trigger button in the search row
 const COLUMN_GAP = 12;
-const CTA_SLOT = 215; // width of the phone button / CONTACT slot above it
+const CTA_SLOT = 215; // width of the phone button / empty slot above it
 
+/* Search field width. It used to be flex:1 and swallowed the whole middle of
+   the search row, which read as oversized next to the rest of the header.
+   It is now a fixed basis that may shrink but not grow; a flexible spacer to
+   its right absorbs the leftover space and keeps the phone button flush with
+   the right edge. Adjust this single value to taste. */
+const SEARCH_MAX_WIDTH = 520;
+
+/* Labels are allowed to wrap to two lines (see .rpp-top-link CSS below), which
+   is what keeps the longer category names from blowing out the nav width. */
 const CURATED_LINKS = [
   { label: "About", href: "/about" },
   { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
-  { label: "Senior Transitions", href: "/senior-transitions" },
-  { label: "AFH Club", href: "/afh-club" },
+  { label: "Senior Housing & Transitions", href: "/senior-transitions" },
+  { label: "Articles & Guides", href: "/guides-and-resources" },
+  { label: "Real Estate & Legal Professionals", href: "/for-attorneys" },
 ];
 
 const Header = () => {
@@ -53,10 +65,11 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    /* Version bumped v5 -> v6. The guard below skips injection when a style
+    /* Version bumped v6 -> v7. The guard below skips injection when a style
        tag with this id already exists, so the id must change whenever the
-       CSS changes or returning visitors keep the old rules. */
-    const id = "rpp-toplink-styles-v6";
+       CSS changes or returning visitors keep the old rules. v7 allows the
+       curated links to wrap to two lines. */
+    const id = "rpp-toplink-styles-v7";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
     style.id = id;
@@ -89,7 +102,17 @@ const Header = () => {
         align-self: center !important;
         border-bottom: 1px solid transparent;
         transition: color 0.18s ease, border-color 0.18s ease;
-        white-space: nowrap;
+        /* Two-line labels. The longer category names ("Real Estate & Legal
+           Professionals") will not fit on one line at this font size without
+           either shrinking the text below the site's accessibility floor or
+           pushing the nav into the hamburger breakpoint early. Wrapping is the
+           better trade. max-width caps each label so one long word cannot
+           stretch a column; text-align centres the two lines against each
+           other. */
+        white-space: normal;
+        max-width: 15ch;
+        text-align: center;
+        line-height: 1.25;
         display: inline-flex;
         align-items: center;
       }
@@ -139,7 +162,7 @@ const Header = () => {
 
   return (
     <>
-      <a
+      
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md focus:text-base"
       >
@@ -210,18 +233,7 @@ const Header = () => {
                   </Link>
                 ))}
                 <LanguageSwitcher compact={isMobile} />
-                {/* Contact is hidden on mobile — it was the item being clipped at the
-                right edge. It now lives in the WaterfallNav quick-links strip,
-                and the CALL button below covers urgent contact. */}
-                {!isMobile && (
-                  <Link
-                    to={CONTACT_LINK.href}
-                    className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
-                  >
-                    {CONTACT_LINK.label}
-                  </Link>
-                )}
-                <a
+                
                   href="tel:2069003015"
                   className="rpp-header-phone"
                   style={{
@@ -309,27 +321,14 @@ const Header = () => {
                       {item.label}
                     </Link>
                   ))}
-                  <LanguageSwitcher />
                 </div>
 
-                {/* CONTACT sits centred in a slot the same width as the phone
-                    button below it, so the two are vertically centred on each other. */}
-                <div
-                  style={{
-                    width: CTA_SLOT,
-                    flexShrink: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Link
-                    to={CONTACT_LINK.href}
-                    className={`rpp-top-link${pathname === CONTACT_LINK.href ? " is-active" : ""}`}
-                  >
-                    {CONTACT_LINK.label}
-                  </Link>
-                </div>
+                {/* Contact used to sit here, centred above the phone button. It has
+                    been removed from the nav (it now lives on the About page), but
+                    the empty slot is deliberately kept: it holds the nav row and the
+                    search row on the same column tracks, so the logo and phone
+                    button below stay aligned. Do not delete it. */}
+                <div style={{ width: CTA_SLOT, flexShrink: 0 }} aria-hidden="true" />
               </nav>
 
               <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
@@ -349,11 +348,29 @@ const Header = () => {
                     <WaterfallNav />
                   </div>
 
-                  <div style={{ flex: 1, minWidth: 0 }}>
+                  <div
+                    style={{
+                      flexGrow: 0,
+                      flexShrink: 1,
+                      flexBasis: SEARCH_MAX_WIDTH,
+                      minWidth: 0,
+                    }}
+                  >
                     <SiteSearchBar />
                   </div>
 
-                  <a
+                  {/* Flexible spacer. Without it the shortened search field would
+                      leave slack at the END of the row, pushing the phone button
+                      off the right edge and out of alignment with the empty slot
+                      above it in the nav row. */}
+                  <div style={{ flex: 1, minWidth: 0 }} aria-hidden="true" />
+
+                  {/* Language sits immediately left of the phone button. */}
+                  <div style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+                    <LanguageSwitcher />
+                  </div>
+
+                  
                     href="tel:2069003015"
                     className="rpp-header-phone"
                     style={{
