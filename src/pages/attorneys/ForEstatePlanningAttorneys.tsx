@@ -11,6 +11,22 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
+/*
+  ATTRIBUTION NOTE — do not reintroduce "our team" / "we" here.
+
+  Real Property Planning is a neutral educational hub. It does not provide
+  brokerage, appraisal, legal, tax, or advisory services, and it has no team.
+  The real estate and appraisal work described on this page is performed by
+  David Stein personally — as a Washington State licensed real estate broker
+  with eXp Realty, and as a certified residential appraiser through Stein
+  Appraisal — both of which are separate businesses from this site.
+
+  A prior find-and-replace substituted "our team" and "we" for "David" without
+  fixing the surrounding grammar, which is why two of the service descriptions
+  below previously read "our team advises" mid-sentence and "we coordinate
+  vendors, manages the process." Both are corrected here.
+*/
+
 const questions = [
   "The client wants to understand the current market value of a property held in trust",
   "A life transition — health change, move to senior living, death of a spouse — triggers a planned or unplanned property sale",
@@ -24,21 +40,33 @@ const services = [
     title: "Clear, Defensible Valuation",
     description: (
       <>
-        Our background as a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> means clients receive a condition-adjusted, methodology-based market assessment — not just a listing agent's price opinion. This is especially valuable when valuation needs to support trust decisions, beneficiary conversations, or planning-related financial analysis.
+        David's work as a{" "}
+        <Link
+          to="/real-estate-appraiser"
+          className="text-accent hover:text-gold underline underline-offset-4"
+        >
+          Washington State Certified Residential Appraiser
+        </Link>{" "}
+        means clients can receive a condition-adjusted, methodology-based market assessment — not just a listing
+        agent's price opinion. This is especially valuable when valuation needs to support trust decisions,
+        beneficiary conversations, or planning-related financial analysis.
       </>
     ),
   },
   {
     title: "Strategic Sale Planning",
-    description: "our team advises on timing, preparation, and market positioning — always in alignment with the broader estate plan and the client's specific situation. Decisions about what to repair, when to list, and how to price are made with both market knowledge and fiduciary awareness.",
+    description:
+      "David advises on timing, preparation, and market positioning — always in alignment with the broader estate plan and the client's specific situation. Decisions about what to repair, when to list, and how to price are made with both market knowledge and fiduciary awareness.",
   },
   {
     title: "Coordination With Advisors",
-    description: "We work collaboratively with attorneys, CPAs, and financial planners — ensuring that everyone involved in the client's plan is working from the same real estate information. One consistent point of contact. Regular updates. No gaps in communication.",
+    description:
+      "David works collaboratively with attorneys, CPAs, and financial planners, so that everyone involved in the client's plan is working from the same real estate information. One consistent point of contact. Regular updates. No gaps in communication.",
   },
   {
     title: "Property Preparation Oversight",
-    description: "When preparation is needed before a sale, we coordinate vendors, manages the process, and keeps the client and their advisors informed — without adding to their administrative burden.",
+    description:
+      "When preparation is needed before a sale, David coordinates vendors, manages the process, and keeps the client and their advisors informed — without adding to their administrative burden.",
   },
 ];
 
@@ -46,7 +74,7 @@ const ForEstatePlanningAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Estate Planning Attorneys in Washington State | Real Property Planning"
-      description="Real Property Planning helps estate planning attorneys and their clients navigate property valuation, sale timing, and real estate coordination throughout Washington State."
+      description="David Stein, a Washington State licensed real estate broker and certified residential appraiser, works with estate planning attorneys and their clients on property valuation, sale timing, and real estate coordination throughout Washington State."
     />
     <BreadcrumbSchema
       items={[
@@ -56,109 +84,131 @@ const ForEstatePlanningAttorneys = () => (
     />
     <Header />
     <main id="main-content">
-
-    {/* Hero */}
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
-            Estate Planning Attorneys
-          </h1>
-        </div>
-      </div>
-    </section>
-
-    {/* Opening */}
-    <section className="py-16 lg:py-20 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Estate planning is about clarity, protection, and long-term intent. But even the most carefully structured plan can become complicated when real property is involved and it's time to act. The client who understood their trust during the planning conversation may feel uncertain when the property actually needs to be sold. The family member who agreed on paper may resist when it becomes real.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            Real Property Planning works alongside estate planning attorneys to help clients move from strategy to execution — providing clear valuation insight, coordinated sale planning, and a calm, professional presence during transitions that matter.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* Where Real Estate and Estate Planning Intersect */}
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-[900px] mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-            Where Real Estate and Estate Planning Intersect
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            Many of your clients have a plan in place — but the real estate questions arise at the point of execution, often years after the plan was drafted. The most common situations:
-          </p>
-          <div className="grid gap-4">
-            {questions.map((q, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <GoldCheck3D size={20} className="mt-0.5 shrink-0" />
-                <span className="text-foreground leading-relaxed">{q}</span>
-              </div>
-            ))}
+      {/* Hero */}
+      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
+              Estate Planning Attorneys
+            </h1>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <JamesJacksonCard />
-
-    {/* How We Support Your Clients */}
-    <section className="py-16 lg:py-24 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-[900px] mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-10">
-            How We Support Your Clients
-          </h2>
-          <div className="grid gap-5">
-            {services.map((s, i) => (
-              <div key={i} className="bg-card border border-border rounded-xl px-7 py-6">
-                <h3 className="font-serif text-xl text-foreground font-semibold mb-2">
-                  {s.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">{s.description}</p>
-              </div>
-            ))}
+      {/* Opening */}
+      <section className="py-16 lg:py-20 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Estate planning is about clarity, protection, and long-term intent. But even the most carefully
+              structured plan can become complicated when real property is involved and it's time to act. The client
+              who understood their trust during the planning conversation may feel uncertain when the property
+              actually needs to be sold. The family member who agreed on paper may resist when it becomes real.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              David Stein — a Washington State licensed real estate broker and certified residential appraiser — works
+              alongside estate planning attorneys to help clients move from strategy to execution, providing clear
+              valuation insight, coordinated sale planning, and a calm, professional presence during transitions that
+              matter.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* CTA */}
-    <section className="py-20 lg:py-28 bg-primary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
-            Discuss a Client Situation
-          </h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-            If you work with clients who hold real property as part of their estate plan — and who will eventually need to sell, transfer, or make decisions about that property — our team welcomes the opportunity to be a resource for your practice.
-          </p>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            A brief conversation is the most efficient way to discuss how Real Property Planning can support your clients in Washington State.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+12069003015">
-              <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-                Call (206) 900-3015
-              </Button>
-            </a>
-            <Link to="/contact">
-              <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold">
-                Send a Message
-              </Button>
-            </Link>
+      {/* Where Real Estate and Estate Planning Intersect */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[900px] mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Where Real Estate and Estate Planning Intersect
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+              Many of your clients have a plan in place — but the real estate questions arise at the point of
+              execution, often years after the plan was drafted. The most common situations:
+            </p>
+            <div className="grid gap-4">
+              {questions.map((q, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <GoldCheck3D size={20} className="mt-0.5 shrink-0" />
+                  <span className="text-foreground leading-relaxed">{q}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <RelatedServices currentPath="/for-estate-planning-attorneys" />
-    <DisclaimerSection />
+      <JamesJacksonCard />
+
+      {/* How David Supports Your Clients */}
+      <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[900px] mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-10">
+              How David Stein Supports Your Clients
+            </h2>
+            <div className="grid gap-5">
+              {services.map((s, i) => (
+                <div key={i} className="bg-card border border-border rounded-xl px-7 py-6">
+                  <h3 className="font-serif text-xl text-foreground font-semibold mb-2">{s.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{s.description}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed mt-8">
+              Real estate brokerage services are provided by David Stein through eXp Realty. Appraisal services are
+              provided through Stein Appraisal. Real Property Planning is an educational hub and does not provide
+              brokerage, appraisal, legal, or tax services.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 lg:py-28 bg-primary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
+              Discuss a Client Situation
+            </h2>
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
+              If you work with clients who hold real property as part of their estate plan — and who will eventually
+              need to sell, transfer, or make decisions about that property — David Stein welcomes the opportunity to
+              be a resource for your practice.
+            </p>
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              A brief conversation is the most efficient way to discuss how David can support your clients in
+              Washington State.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:+12069003015">
+                <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
+                  <img
+                    src={iconPhone3d}
+                    alt=""
+                    aria-hidden="true"
+                    className="w-5 h-5 mr-2 object-contain shrink-0"
+                    loading="lazy"
+                    sizes="100vw"
+                    decoding="async"
+                    width={1024}
+                    height={1536}
+                  />
+                  Call (206) 900-3015
+                </Button>
+              </a>
+              <Link to="/contact">
+                <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold">
+                  Send a Message
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <RelatedServices currentPath="/for-estate-planning-attorneys" />
+      <DisclaimerSection />
       <BackToProfessionals />
     </main>
     <Footer />
