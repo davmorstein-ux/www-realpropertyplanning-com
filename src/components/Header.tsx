@@ -197,13 +197,13 @@ const Header = () => {
                 <WaterfallNav />
                 <Link to="/" style={{ display: "flex", alignItems: "center" }}>
                   <img
-                    src="/rpp-logo-v8.webp"
+                    src="/rpp-logo-v9.webp"
                     alt="Real Property Planning"
                     style={{ height: 38, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
                     sizes="100vw"
                     decoding="async"
-                    width={1607}
-                    height={332}
+                    width={1608}
+                    height={331}
                   />
                 </Link>
               </div>
