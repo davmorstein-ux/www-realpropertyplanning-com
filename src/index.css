@@ -4289,18 +4289,24 @@ h1, h2, h3, h4, h5, h6 {
    Being last in the file, and matching the same !important, these
    rules win on source order.
 
-   SCOPE: filled CTA buttons only — anchors and buttons carrying a
-   btn/cta class. Outlined and white-on-dark buttons are excluded
-   below, because forcing white on those would make them invisible.
+   TWO TREATMENTS, DELIBERATELY:
+
+     Filled burgundy + white  — real calls to action. This is the
+                                thing you want the reader to do.
+
+     Dark red text + arrow    — .gold-cta and .article-resource-btn,
+                                which sit at the foot of cards whose
+                                whole surface is already a link. If
+                                every card carries a filled button,
+                                none of them reads as more important
+                                than the others.
    ============================================================ */
 
 main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
 main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
 main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
 main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
-main .rpp-answer-cta,
-main .gold-cta,
-main .article-resource-btn {
+main .rpp-answer-cta {
   background-color: #6b1b22 !important;
   color: #ffffff !important;
   font-weight: 700 !important;
@@ -4314,9 +4320,7 @@ main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :wh
 main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
 main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
 main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
-main .rpp-answer-cta :where(span, p, li, strong, em),
-main .gold-cta :where(span, p, li, strong, em),
-main .article-resource-btn :where(span, p, li, strong, em) {
+main .rpp-answer-cta :where(span, p, li, strong, em) {
   color: #ffffff !important;
   font-weight: 700 !important;
   opacity: 1 !important;
@@ -4329,3 +4333,43 @@ main button[class*="cta"]:not([class*="bg-white"]):hover,
 main .rpp-answer-cta:hover {
   background-color: #501419 !important;
 }
+
+
+/* ------------------------------------------------------------
+   IN-CARD LINKS — .gold-cta and .article-resource-btn
+
+   These are not buttons. They sit at the foot of cards whose whole
+   surface is already a link ("Learn More", "Find a Move Manager").
+   Filling them made every card shout equally, which is the same as
+   none of them shouting.
+
+   Dark red carries 10.9:1 on white. The arrow and the underline on
+   hover both signal "link" without relying on colour, which colour
+   alone would fail.
+   ------------------------------------------------------------ */
+
+main .gold-cta,
+main .gold-cta *,
+main .article-resource-btn,
+main .article-resource-btn * {
+  background: none !important;
+  background-color: transparent !important;
+  color: #6b1b22 !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  min-height: 0 !important;
+  text-decoration: none !important;
+  align-items: center;
+  gap: 5px;
+}
+
+main a:hover .gold-cta,
+main .gold-cta:hover,
+main .article-resource-btn:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
