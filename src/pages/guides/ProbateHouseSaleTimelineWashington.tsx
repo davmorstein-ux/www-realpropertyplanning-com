@@ -130,31 +130,18 @@ const ProbateHouseSaleTimelineWashington = () => (
     />
     <Header />
     <main id="main-content">
-      {/* Hero */}
+     {/* Hero — title only. The eyebrow, subtitle, credential line and CTA
+          buttons were removed; the subtitle now sits in the section below.
+          The credential line read "Real Property Planning — Licensed Real
+          Estate Broker & Certified Residential Appraiser", which attributed
+          licensure to the hub rather than to David Stein personally. Do not
+          reinstate it in that form. */}
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-16">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-5">
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
               Probate House Sale Timeline in Washington State
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-6">
-              A realistic, step-by-step guide to how long a probate property sale actually takes — and what affects the timeline.
-            </p>
-            <p className="text-lg text-gold font-bold leading-relaxed mb-6">
-              Real Property Planning — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="rounded-lg">Contact</Button>
-              </Link>
-              <a href="tel:2069003015">
-                <Button variant="outline" size="lg" className="rounded-lg bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-                  Call (206) 900-3015
-                </Button>
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -163,6 +150,9 @@ const ProbateHouseSaleTimelineWashington = () => (
       <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
+              A realistic, step-by-step guide to how long a probate property sale actually takes — and what affects the timeline.
+            </p>
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">Why the Timeline Matters</h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Carrying costs on a vacant estate property add up fast — property taxes, insurance, utilities, and maintenance accumulate every week the home sits unsold. Understanding the realistic timeline helps executors, attorneys, and families plan effectively and avoid costly delays.
