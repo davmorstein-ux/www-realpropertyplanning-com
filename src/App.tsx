@@ -248,6 +248,8 @@ const LTCWaCares = lazy(() => import("./pages/long-term-care/WaCares"));
 const LTCHowToChooseCareSettings = lazy(() => import("./pages/long-term-care/HowToChooseCareSettings"));
 const LTCHospitalDischargePlanning = lazy(() => import("./pages/long-term-care/HospitalDischargePlanning"));
 const CostOfCareCalculator = lazy(() => import("./pages/CostOfCareCalculator"));
+const CostOfCareHub = lazy(() => import("./pages/CostOfCareHub"));
+const CostOfCareDetail = lazy(() => import("./pages/CostOfCareDetail"));
 const LTCFindingCareRoomAndCare = lazy(() => import("./pages/long-term-care/FindingCareRoomAndCare"));
 // Minimal full-viewport fallback in brand cream — no spinner, no layout shift,
 // matches the page background so navigation feels instant on fast chunks.
@@ -516,18 +518,28 @@ const App = () => (
           <Route path="/senior-placement" element={<Navigate to="/senior-living-advisors" replace />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
           <Route
-            path="/cost-of-care-calculator"
+           : path="/cost-of-care-calculator" → path="/es/cost-of-care-calculator"
             element={
               <LanguageRoute lang="en">
-                <CostOfCareCalculator />
+                <LanguageRoute lang="en"> → <LanguageRoute lang="es">
               </LanguageRoute>
             }
           />
-          <Route
-            path="/es/cost-of-care-calculator"
+         <Route
+            path="/cost-of-care-calculator"
             element={
-              <LanguageRoute lang="es">
-                <CostOfCareCalculator />
+              <LanguageRoute lang="en">
+                <CostOfCareHub />
+              </LanguageRoute>
+            }
+          />
+          {/* One route serves all six housing options; the slug picks the care
+              type. An unknown slug redirects to the hub from inside the page. */}
+          <Route
+            path="/cost-of-care-calculator/:careSlug"
+            element={
+              <LanguageRoute lang="en">
+                <CostOfCareDetail />
               </LanguageRoute>
             }
           />
