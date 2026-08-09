@@ -115,19 +115,22 @@ const PrimaryNav = () => {
           font-weight: 600;
           letter-spacing: 0.08em;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.92);
+          /* Dark on the cream header. These were white when the header was
+             near-black; if the header ever goes dark again, these flip back. */
+          color: #272421;
           text-align: center;
           line-height: 1.2;
           cursor: pointer;
           text-decoration: none !important;
         }
-        .rpp-pn-trigger.rpp-pn-trigger:hover { color: #ffffff; }
+        .rpp-pn-trigger.rpp-pn-trigger:hover { color: #7f1d1d; }
         .rpp-pn-trigger.rpp-pn-trigger[aria-expanded="true"],
         .rpp-pn-trigger.rpp-pn-trigger.is-active {
-          border-bottom-color: #ffffff;
+          border-bottom-color: #7f1d1d;
+          color: #7f1d1d;
         }
         .rpp-pn-trigger.rpp-pn-trigger:focus-visible {
-          outline: 2px solid #ffffff;
+          outline: 2px solid #7f1d1d;
           outline-offset: 3px;
           border-radius: 3px;
         }
@@ -157,7 +160,7 @@ const PrimaryNav = () => {
           max-width: 420px;
           width: max-content;
           background: #ffffff;
-          border: 1px solid #d2c9bb;
+          border: 1px solid #c3b8a6;
           border-top: 4px solid var(--pn-color, #25597e);
           border-radius: 8px;
           box-shadow: 0 12px 30px rgba(0,0,0,0.22);
