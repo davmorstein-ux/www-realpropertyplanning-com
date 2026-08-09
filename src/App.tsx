@@ -517,11 +517,11 @@ const App = () => (
           <Route path="/senior-living-advisors" element={<SeniorLivingAdvisors />} />
           <Route path="/senior-placement" element={<Navigate to="/senior-living-advisors" replace />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
-          <Route
-           : path="/cost-of-care-calculator" → path="/es/cost-of-care-calculator"
+         <Route
+            path="/es/cost-of-care-calculator"
             element={
-              <LanguageRoute lang="en">
-                <LanguageRoute lang="en"> → <LanguageRoute lang="es">
+              <LanguageRoute lang="es">
+                <CostOfCareCalculator />
               </LanguageRoute>
             }
           />
