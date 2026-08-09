@@ -11,7 +11,7 @@ import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import AboutTheHub from "@/components/AboutTheHub";
-import { CARE_TYPES, CARE_TYPE_COLORS, formatCurrency } from "@/lib/careTypes";
+import { formatCurrency } from "@/lib/careTypes";
 import { CARE_CALCULATORS, careTypeFor } from "@/lib/careCalculators";
 
 const tileMeta = [
@@ -26,51 +26,17 @@ const tileMeta = [
   },
 ] as const;
 
-/* The figures column now rotates through EVERY care type three at a time
-   rather than showing a fixed preview of three. Adult family home leads
-   because it is the option most families have never heard of.
 
-   Figures and labels still come from the same CARE_TYPES constant the
-   calculator reads, so the tile and the tool cannot disagree. */
-const LEAD_CARE_IDS = ["adult-family-home", "assisted-living", "memory-care"] as const;
-
-/* Figure colours.
- *
- * CARE_TYPE_COLORS produced sets that were hard to tell apart: independent
- * living, in-home care, and adult day care rendered as green, blue and teal —
- * three adjacent hues. Blue-green discrimination is one of the first things to
- * decline with age (the lens yellows, shifting perception in exactly that
- * range), so for this audience those three read as one colour.
- *
- * This palette gives each care type a distinct hue, and the three types shown
- * together on any given rotation page are always far apart on the wheel.
- * Every value clears 4.5:1 on white, so colour is decoration — the label
- * beside each figure carries the meaning, never the colour alone.
- */
-const RPP_CARE_COLORS: Record<string, string> = {
-  // page 1 — green / navy / purple
-  "adult-family-home": "#14663f",
-  "assisted-living": "#1b3a6b",
-  "memory-care": "#6b2d8f",
-  // page 2 — burgundy / teal / amber
-  "independent-living": "#7f1d1d",
-  "in-home": "#0b6a7a",
-  "adult-day": "#7a5200",
-  // page 3 — magenta / charcoal / orange
-  "nursing-semi": "#8e1f5e",
-  "nursing-private": "#2f2b27",
-  ccrc: "#a34400",
-};
 
 const RPPHomeV3 = () => {
   const { t } = useTranslation();
 
-  const leadCareTypes = LEAD_CARE_IDS.map((id) => CARE_TYPES.find((c) => c.id === id)).filter(
-    (c): c is (typeof CARE_TYPES)[number] => Boolean(c),
-  );
-  const otherCareTypes = CARE_TYPES.filter((c) => !LEAD_CARE_IDS.includes(c.id as (typeof LEAD_CARE_IDS)[number]));
-  const rotatingCareTypes = [...leadCareTypes, ...otherCareTypes];
-
+  /* Every value on this tile derives from CARE_CALCULATORS — the same list the
+     calculator hub and the switcher strip read. The list shown here used to be
+     "care types not currently rotating", which after the rotation was removed
+     left an arbitrary subset: it omitted adult family homes, assisted living
+     and memory care while advertising options the hub does not cover. */
+  const careOptions = CARE_CALCULATORS.map((o) => ({ option: o, care: careTypeFor(o) }));
   const careMonthlyFigures = CARE_CALCULATORS.map((o) => careTypeFor(o).waMonthly);
   const careMonthlyLow = Math.min(...careMonthlyFigures);
   const careMonthlyHigh = Math.max(...careMonthlyFigures);
@@ -313,11 +279,67 @@ const RPPHomeV3 = () => {
               .rpp-coc-card.rpp-coc-card * {
                 text-decoration: none !important;
               }
+              /* Two columns now, not three. The middle column held rotating
+                 figures; with those gone it left a gap, so the range moved in
+                 beside the heading and the options list takes the right. */
               .rpp-coc-layout.rpp-coc-layout {
                 display: grid;
-                grid-template-columns: 1.15fr 1fr 1fr;
-                gap: 1.5rem;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
                 align-items: center;
+              }
+              .rpp-coc-rangelabel {
+                font-family: 'DM Sans', system-ui, sans-serif;
+                font-size: 16px !important;
+                font-weight: 700;
+                color: #25597e;
+                line-height: 1.3;
+                margin-bottom: 2px;
+              }
+              .rpp-coc-range {
+                font-family: Georgia, serif;
+                font-size: 30px;
+                font-weight: 700;
+                color: #7f1d1d;
+                line-height: 1.15;
+                white-space: nowrap;
+              }
+              .rpp-coc-rangeper {
+                font-family: 'DM Sans', system-ui, sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+              }
+              /* Name left, figure right, on one row per option — the figures
+                 line up in a column so they can be compared at a glance. */
+              .rpp-coc-options.rpp-coc-options {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                margin: 0;
+                padding: 0 0 0 2rem;
+                border-left: 1px solid #f0ece5;
+                list-style: none;
+              }
+              .rpp-coc-options.rpp-coc-options li {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                gap: 1rem;
+              }
+              .rpp-coc-opt-name {
+                font-family: 'DM Sans', system-ui, sans-serif;
+                font-size: 17px !important;
+                font-weight: 700;
+                color: #25597e;
+                line-height: 1.35;
+              }
+              .rpp-coc-opt-figure {
+                font-family: Georgia, serif;
+                font-size: 18px !important;
+                font-weight: 700;
+                color: #272421;
+                line-height: 1.35;
+                white-space: nowrap;
               }
               .rpp-coc-left.rpp-coc-left {
                 display: flex;
@@ -326,48 +348,9 @@ const RPPHomeV3 = () => {
                 justify-content: center;
                 gap: 1.1rem;
               }
-              .rpp-coc-figures.rpp-coc-figures {
-                display: flex;
-                flex-direction: column;
-                gap: 0.75rem;
-                border-left: 1px solid #f0ece5;
-                border-top: none;
-                padding: 0 0 0 1.5rem;
-                /* Fixed height so the card does not resize as the rotation
-                   moves between sets with different label lengths. Three
-                   rows at their natural height. */
-                min-height: 168px;
-                justify-content: center;
-              }
-              .rpp-coc-cell.rpp-coc-cell {
-                padding: 0;
-                border-left: none;
-                min-width: 0;
-              }
-              .rpp-coc-more.rpp-coc-more {
-                display: flex;
-                flex-direction: column;
-                gap: 0.35rem;
-                margin: 0;
-                padding: 0 0 0 1.5rem;
-                border-left: 1px solid #f0ece5;
-                list-style: none;
-                font-family: 'Raleway', system-ui, sans-serif;
-                font-size: 16px !important;
-                font-weight: 700 !important;
-                line-height: 1.45 !important;
-                color: #25597e !important;
-              }
               /* Bullets are drawn with ::before rather than list-style,
                  because the <ul> is display:flex and native markers render
                  inconsistently on flex children. */
-              .rpp-coc-more li {
-                color: #25597e;
-                font-weight: 700;
-                display: flex;
-                align-items: baseline;
-                gap: 0.55rem;
-              }
               /* The descriptor's inline clamp() was being overridden by the
                  global "main p { font-size: ... !important }" rule, so it
                  rendered at a flat 18px. Doubled class + !important wins. */
@@ -376,15 +359,6 @@ const RPPHomeV3 = () => {
                 line-height: 1.5 !important;
                 font-weight: 400 !important;
                 color: #1B3A6B !important;
-              }
-              .rpp-coc-more li::before {
-                content: "";
-                flex: 0 0 auto;
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                background: #25597e;
-                transform: translateY(-0.2em);
               }
 
               /* Rotation controls sit OUTSIDE the card's anchor — a button
@@ -420,11 +394,6 @@ const RPPHomeV3 = () => {
                 cursor: pointer;
               }
               .rpp-coc-dot.is-current { background: #7f1d1d; }
-              .rpp-sr-only {
-                position: absolute; width: 1px; height: 1px;
-                padding: 0; margin: -1px; overflow: hidden;
-                clip: rect(0 0 0 0); white-space: nowrap; border: 0;
-              }
 
               @media (max-width: 768px) {
                 .rpp-coc-layout.rpp-coc-layout {
@@ -432,25 +401,13 @@ const RPPHomeV3 = () => {
                   gap: 1rem;
                   align-items: stretch;
                 }
-                .rpp-coc-figures.rpp-coc-figures {
-                  border-left: none;
-                  border-top: 1px solid #f0ece5;
-                  padding: 0.9rem 0 0 0;
-                  min-height: 0;
-                }
-                .rpp-coc-more.rpp-coc-more {
+                .rpp-coc-options.rpp-coc-options {
                   border-left: none;
                   border-top: 1px solid #f0ece5;
                   padding: 0.9rem 0 0 0;
                 }
                 .rpp-coc-card.rpp-coc-card {
                   padding: 1.2rem 1.25rem;
-                }
-                .rpp-coc-cell.rpp-coc-cell {
-                  display: flex;
-                  align-items: baseline;
-                  justify-content: space-between;
-                  gap: 12px;
                 }
               }
 
@@ -459,13 +416,8 @@ const RPPHomeV3 = () => {
             {/* ── What is Real Property Planning? ──────────────────── */}
             <AboutTheHub />
 
-            {/* ── Cost of Care Calculator — three-column layout ─────── */}
-            <div
-              
-              
-             
-              
-            >
+            {/* ── Cost of Care Calculator — two columns ──────────────── */}
+            <div>
               <a href="/cost-of-care-calculator" className="rpp-coc-card group marquee-hover">
                 <div className="rpp-coc-layout">
                   <div className="rpp-coc-left">
@@ -480,6 +432,16 @@ const RPPHomeV3 = () => {
                       <span style={{ color: "#272421" }}>{t("costOfCare.headingPart1")}</span>{" "}
                       <span style={{ color: "#7f1d1d" }}>{t("costOfCare.headingPart2")}</span>
                     </h3>
+
+                    {/* The range sits with the heading rather than in its own
+                        column: alone in the middle it read as a stray figure. */}
+                    <div>
+                      <div className="rpp-coc-rangelabel">Monthly cost in Washington</div>
+                      <div className="rpp-coc-range">
+                        {formatCurrency(careMonthlyLow)} &ndash; {formatCurrency(careMonthlyHigh)}
+                        <span className="rpp-coc-rangeper"> / month</span>
+                      </div>
+                    </div>
 
                     <span
                       style={{
@@ -501,61 +463,19 @@ const RPPHomeV3 = () => {
                     </span>
                   </div>
 
-                 {/* Static range across the six housing options the calculator
-                      hub covers. These figures used to rotate three at a time;
-                      the hub now lists every option with its own figure, so the
-                      tile only needs to convey the span. minHeight overrides the
-                      168px the CSS reserves for three rotating rows.
-                      The label is hardcoded English and needs an i18next key. */}
-                  <div className="rpp-coc-figures" style={{ minHeight: 0 }}>
-                    <div className="rpp-coc-cell">
-                      <div
-                        style={{
-                          fontFamily: "'DM Sans', sans-serif",
-                          fontSize: 16,
-                          fontWeight: 700,
-                          color: "#25597e",
-                          lineHeight: 1.3,
-                          marginBottom: 3,
-                        }}
-                      >
-                        Monthly cost in Washington
-                      </div>
-                      <div
-                        style={{
-                          fontFamily: "Georgia, serif",
-                          fontSize: 24,
-                          fontWeight: 700,
-                          color: "#7f1d1d",
-                          lineHeight: 1.2,
-                        }}
-                      >
-                        {formatCurrency(careMonthlyLow)} &ndash; {formatCurrency(careMonthlyHigh)}
-                        <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 600 }}>
-                          {" "}
-                          / month
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                       
-                  {/* Every figure, always available to assistive tech. */}
-                  <ul className="rpp-sr-only">
-                    {rotatingCareTypes.map((c) => (
-                      <li key={c.id}>
-                        {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}: {formatCurrency(c.waMonthly)} per month in
-                        Washington
+                  {/* Right column: the six options the hub actually covers,
+                      each with its figure. Drawn from CARE_CALCULATORS so the
+                      tile and the hub can never disagree. This replaces both
+                      the rotating figures and the old "other care types" list,
+                      which showed an arbitrary subset. */}
+                  <ul className="rpp-coc-options">
+                    {careOptions.map(({ option, care }) => (
+                      <li key={option.slug}>
+                        <span className="rpp-coc-opt-name">{option.shortLabel}</span>
+                        <span className="rpp-coc-opt-figure">{formatCurrency(care.waMonthly)}</span>
                       </li>
                     ))}
                   </ul>
-
-                  {otherCareTypes.length > 0 && (
-                    <ul className="rpp-coc-more">
-                      {otherCareTypes.map((c) => (
-                        <li key={c.id}>{t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}</li>
-                      ))}
-                    </ul>
-                  )}
                 </div>
               </a>
 
