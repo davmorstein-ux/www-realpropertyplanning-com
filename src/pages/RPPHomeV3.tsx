@@ -355,7 +355,7 @@ const RPPHomeV3 = () => {
                 background: none !important;
                 color: #6b1b22 !important;
                 font-family: 'DM Sans', system-ui, sans-serif;
-                font-size: 17px !important;
+                font-size: 20px !important;
                 font-weight: 700 !important;
                 padding: 0 !important;
                 border: 0 !important;
@@ -471,22 +471,10 @@ const RPPHomeV3 = () => {
                         already a link, so a button inside it was a second
                         affordance for the same action — the same reason the
                         in-card links elsewhere were unfilled. */}
-                    <span className="rpp-coc-cta">
-                      {t("costOfCare.cta")}
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="15"
-                        height="15"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.6"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                      >
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
-                    </span>
+                    {/* No icon here: the arrow is already part of the
+                        translated string ("Calculate My Costs →"), so an SVG
+                        chevron produced two arrows side by side. */}
+                    <span className="rpp-coc-cta">{t("costOfCare.cta")}</span>
                   </div>
 
                   {/* Right column: the six options the hub actually covers,
