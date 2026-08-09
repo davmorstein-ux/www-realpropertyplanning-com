@@ -337,13 +337,33 @@ const RPPHomeV3 = () => {
                 color: var(--opt-color, #25597e) !important;
                 line-height: 1.35;
               }
+              /* Figure carries the option's colour too, so name and number
+                 read as one row. They were charcoal so the figures formed a
+                 comparable column; matching them was the explicit choice. */
               .rpp-coc-opt-figure {
                 font-family: Georgia, serif;
                 font-size: 18px !important;
                 font-weight: 700;
-                color: #272421;
+                color: var(--opt-color, #272421) !important;
                 line-height: 1.35;
                 white-space: nowrap;
+              }
+              .rpp-coc-cta.rpp-coc-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: none !important;
+                color: #6b1b22 !important;
+                font-family: 'DM Sans', system-ui, sans-serif;
+                font-size: 17px !important;
+                font-weight: 700 !important;
+                padding: 0 !important;
+                border: 0 !important;
+                white-space: nowrap;
+              }
+              .rpp-coc-card:hover .rpp-coc-cta.rpp-coc-cta {
+                text-decoration: underline !important;
+                text-underline-offset: 3px !important;
               }
               .rpp-coc-left.rpp-coc-left {
                 display: flex;
@@ -447,23 +467,25 @@ const RPPHomeV3 = () => {
                       </div>
                     </div>
 
-                    <span
-                      style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: 8,
-                        background: "#7f1d1d",
-                        color: "#ffffff",
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontWeight: 700,
-                        fontSize: 16,
-                        padding: "11px 22px",
-                        borderRadius: 8,
-                        whiteSpace: "nowrap",
-                        flex: "0 0 auto",
-                      }}
-                    >
+                    {/* Text and arrow, not a filled box. The whole card is
+                        already a link, so a button inside it was a second
+                        affordance for the same action — the same reason the
+                        in-card links elsewhere were unfilled. */}
+                    <span className="rpp-coc-cta">
                       {t("costOfCare.cta")}
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="15"
+                        height="15"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
                     </span>
                   </div>
 
@@ -481,7 +503,12 @@ const RPPHomeV3 = () => {
                         >
                           {option.shortLabel}
                         </span>
-                        <span className="rpp-coc-opt-figure">{formatCurrency(care.waMonthly)}</span>
+                        <span
+                          className="rpp-coc-opt-figure"
+                          style={{ ["--opt-color" as string]: option.color }}
+                        >
+                          {formatCurrency(care.waMonthly)}
+                        </span>
                       </li>
                     ))}
                   </ul>
