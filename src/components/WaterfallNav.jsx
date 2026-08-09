@@ -134,7 +134,7 @@ const CSS = `
     border-radius: 6px;
     transition: background 0.3s ease;
   }
-  .wf-trigger:hover { background: rgba(232,201,122,0.12); }
+  .wf-trigger:hover { background: rgba(127,29,29,0.12); }
   /* On desktop the trigger sits in the search row, so it fills that row's
      height and picks up the same 8px radius as the phone CTA — reading as
      part of the row's control set rather than a floating icon. The glyph
@@ -152,12 +152,12 @@ const CSS = `
       height: 100%;
       width: 100%;
       border-radius: 8px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(39,36,33,0.05);
+        border: 1px solid rgba(39,36,33,0.18);
     }
     .wf-trigger:hover {
-      background: rgba(232,201,122,0.16);
-      border-color: rgba(232,201,122,0.45);
+      background: rgba(127,29,29,0.16);
+      border-color: rgba(127,29,29,0.45);
     }
   }
 
@@ -559,13 +559,13 @@ export default function WaterfallNav() {
             }}
           >
             <span
-              style={{ display: "block", height: "4px", background: "#E8C97A", borderRadius: "2px", width: "100%" }}
+              style={{ display: "block", height: "4px", background: "#7f1d1d", borderRadius: "2px", width: "100%" }}
             />
             <span
-              style={{ display: "block", height: "4px", background: "#E8C97A", borderRadius: "2px", width: "100%" }}
+              style={{ display: "block", height: "4px", background: "#7f1d1d", borderRadius: "2px", width: "100%" }}
             />
             <span
-              style={{ display: "block", height: "4px", background: "#E8C97A", borderRadius: "2px", width: "100%" }}
+              style={{ display: "block", height: "4px", background: "#7f1d1d", borderRadius: "2px", width: "100%" }}
             />
           </span>
         </button>
