@@ -475,7 +475,12 @@ const RPPHomeV3 = () => {
                   <ul className="rpp-coc-options">
                     {careOptions.map(({ option, care }) => (
                       <li key={option.slug}>
-                        <span className="rpp-coc-opt-name">{option.shortLabel}</span>
+                        <span
+                          className="rpp-coc-opt-name"
+                          style={{ ["--opt-color" as string]: option.color }}
+                        >
+                          {option.shortLabel}
+                        </span>
                         <span className="rpp-coc-opt-figure">{formatCurrency(care.waMonthly)}</span>
                       </li>
                     ))}
