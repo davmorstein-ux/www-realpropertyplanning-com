@@ -4273,3 +4273,59 @@ h1, h2, h3, h4, h5, h6 {
 [class*="bg-[#0f4c4a]"] [class*="bg-white"] * {
   color: revert !important;
 }
+
+/* ============================================================
+   CTA BUTTONS — one appearance, everywhere
+   ============================================================
+
+   ROOT CAUSE THIS FIXES
+   The card-contrast block above forces `color: #2f2b27 !important`
+   on every p/li/span inside a rounded card. Button labels are
+   spans, and most buttons sit inside cards, so their labels were
+   being repainted dark — on a dark fill. Inline styles cannot win
+   against !important, which is why buttons that explicitly set
+   white still rendered unreadable.
+
+   Being last in the file, and matching the same !important, these
+   rules win on source order.
+
+   SCOPE: filled CTA buttons only — anchors and buttons carrying a
+   btn/cta class. Outlined and white-on-dark buttons are excluded
+   below, because forcing white on those would make them invisible.
+   ============================================================ */
+
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main .rpp-answer-cta,
+main .gold-cta,
+main .article-resource-btn {
+  background-color: #6b1b22 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+/* Labels and arrows inside those buttons — this is the declaration
+   the card rule was overriding. */
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
+main .rpp-answer-cta :where(span, p, li, strong, em),
+main .gold-cta :where(span, p, li, strong, em),
+main .article-resource-btn :where(span, p, li, strong, em) {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+main a[class*="btn"]:not([class*="bg-white"]):hover,
+main a[class*="cta"]:not([class*="bg-white"]):hover,
+main button[class*="btn"]:not([class*="bg-white"]):hover,
+main button[class*="cta"]:not([class*="bg-white"]):hover,
+main .rpp-answer-cta:hover {
+  background-color: #501419 !important;
+}
