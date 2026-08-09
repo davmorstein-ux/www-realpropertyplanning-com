@@ -181,12 +181,12 @@ const PrimaryNav = () => {
              main a, which put two short items side by side on one line. */
           display: block !important;
           width: 100%;
-          padding: 13px 18px;
+          padding: 13px 18px !important;
           font-family: 'DM Sans', system-ui, sans-serif;
           font-size: 16px !important;
           font-weight: 600;
           color: #272421 !important;
-          line-height: 1.45;
+          line-height: 1.45 !important;
           /* One line per item. The menu sizes itself to the longest label
              rather than wrapping the long ones onto a second line. */
           white-space: nowrap;
