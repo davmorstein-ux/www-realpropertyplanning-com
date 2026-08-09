@@ -326,11 +326,15 @@ const RPPHomeV3 = () => {
                 justify-content: space-between;
                 gap: 1rem;
               }
+             /* Each option takes its own colour, matching the calculator
+                 pages and the switcher cards. Six distinct hues, all clearing
+                 4.5:1 on white — the label always sits beside the figure, so
+                 colour reinforces rather than carries the meaning. */
               .rpp-coc-opt-name {
                 font-family: 'DM Sans', system-ui, sans-serif;
                 font-size: 17px !important;
                 font-weight: 700;
-                color: #25597e;
+                color: var(--opt-color, #25597e) !important;
                 line-height: 1.35;
               }
               .rpp-coc-opt-figure {
