@@ -16,7 +16,7 @@ const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-s
    header taller — the two-column layout is actually SHORTER than the previous
    stacked one (~112px vs ~140px) while the mark nearly doubles. Adjust this
    single value to taste. */
-const DESKTOP_LOGO_HEIGHT = 104;
+const DESKTOP_LOGO_HEIGHT = 66;
 
 /* Shared column geometry for the desktop header. The nav row and the search
    row are laid out on identical tracks so every element lines up vertically:
@@ -66,13 +66,13 @@ const Header = () => {
        exists, so the id must change whenever the CSS changes or returning
        visitors keep the old rules. These rules now only style the compact
        layout's links — the desktop nav carries its own styles in PrimaryNav. */
-    const id = "rpp-toplink-styles-v8";
+    const id = "rpp-toplink-styles-v9";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
     style.id = id;
     style.innerHTML = `
       .rpp-top-link {
-        color: rgba(255,255,255,0.92);
+        color: #272421;
         text-decoration: none;
         font-family: 'Raleway', 'Gill Sans', 'Century Gothic', sans-serif;
         font-size: 13px;
@@ -104,10 +104,10 @@ const Header = () => {
         display: block;
         white-space: nowrap;
       }
-      .rpp-top-link:hover { color: #d1a847; }
-      .rpp-top-link.is-active { border-bottom-color: #d1a847; }
+      .rpp-top-link:hover { color: #7f1d1d; }
+      .rpp-top-link.is-active { border-bottom-color: #7f1d1d; }
       .rpp-top-link:focus-visible {
-        outline: 2px solid #d1a847;
+        outline: 2px solid #7f1d1d;
         outline-offset: 3px;
         border-radius: 3px;
       }
@@ -165,12 +165,17 @@ const Header = () => {
           padding: isMobile
             ? "calc(env(safe-area-inset-top, 0px) + 8px) 12px 6px"
             : "calc(env(safe-area-inset-top, 0px) + 8px) 24px 4px",
-          backgroundColor: "rgba(8, 13, 25, 0.92)",
+          /* Cream, matching the page background, so the header reads as part
+             of the page rather than a bar sitting on top of it. Everything
+             inside had to flip from light to dark when this changed — nav
+             labels, carets, underlines, the divider and the hamburger. If this
+             ever goes back to a dark colour, all of those flip back too. */
+          backgroundColor: "rgba(245, 240, 232, 0.96)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          borderBottom: "1px solid rgba(39,36,33,0.14)",
           ...NAV_FONT,
-          color: "#fff",
+          color: "#272421",
         }}
       >
         {/* Two-column desktop header: the logo occupies a full-height left
@@ -192,13 +197,13 @@ const Header = () => {
                 <WaterfallNav />
                 <Link to="/" style={{ display: "flex", alignItems: "center" }}>
                   <img
-                    src="/rpp-logo-v5.webp"
+                    src="/rpp-logo-v8.webp"
                     alt="Real Property Planning"
-                    style={{ height: 44, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
+                    style={{ height: 38, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
                     sizes="100vw"
                     decoding="async"
-                    width={1700}
-                    height={345}
+                    width={1607}
+                    height={332}
                   />
                 </Link>
               </div>
@@ -240,7 +245,7 @@ const Header = () => {
               </div>
             </nav>
 
-            <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+            <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(39,36,33,0.12)" }}>
               <SiteSearchBar />
             </div>
           </>
@@ -251,7 +256,7 @@ const Header = () => {
             <div style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <Link to="/" style={{ display: "flex", alignItems: "center" }}>
                 <img
-                  src="/rpp-logo-v5.webp"
+                  src="/rpp-logo-v8.webp"
                   alt="Real Property Planning"
                   style={{
                     height: DESKTOP_LOGO_HEIGHT,
@@ -261,8 +266,8 @@ const Header = () => {
                   }}
                   sizes="100vw"
                   decoding="async"
-                  width={1700}
-                  height={345}
+                  width={1607}
+                  height={332}
                 />
               </Link>
             </div>
@@ -296,7 +301,7 @@ const Header = () => {
                 <div style={{ width: CTA_SLOT, flexShrink: 0 }} aria-hidden="true" />
               </nav>
 
-              <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+              <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(39,36,33,0.12)" }}>
                 <div style={{ display: "flex", alignItems: "stretch", gap: COLUMN_GAP, minWidth: 0 }}>
                   {/* Hamburger moved down here so it is horizontally aligned
                       with the search field, freeing the logo to sit flush left. */}
