@@ -98,7 +98,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "Real Estate Attorneys", href: "/real-estate-attorneys" },
       { name: "Family Law Attorneys", href: "/for-family-law-attorneys" },
       { name: "Divorce Attorneys", href: "/for-divorce-attorneys" },
-      { name: "Legal Plans & Identity Protection", href: "/legal-plans-identity-protection" },
+      { name: "Legal Plans & ID Protection", href: "/legal-plans-identity-protection" },
       { name: "Certified Appraisers", href: "/real-estate-appraiser" },
       { name: "Real Estate Brokers", href: "/realtor" },
       { name: "CPAs & Accountants", href: "/for-cpas" },
