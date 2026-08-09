@@ -12,7 +12,7 @@ import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import AboutTheHub from "@/components/AboutTheHub";
 import { CARE_TYPES, CARE_TYPE_COLORS, formatCurrency } from "@/lib/careTypes";
-import { useCostRotation, FADE_MS } from "@/hooks/useCostRotation";
+import { CARE_CALCULATORS, careTypeFor } from "@/lib/careCalculators";
 
 const tileMeta = [
   { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#D97706", imgSrc: tilePlanning },
@@ -71,7 +71,9 @@ const RPPHomeV3 = () => {
   const otherCareTypes = CARE_TYPES.filter((c) => !LEAD_CARE_IDS.includes(c.id as (typeof LEAD_CARE_IDS)[number]));
   const rotatingCareTypes = [...leadCareTypes, ...otherCareTypes];
 
-  const rotation = useCostRotation(rotatingCareTypes);
+  const careMonthlyFigures = CARE_CALCULATORS.map((o) => careTypeFor(o).waMonthly);
+  const careMonthlyLow = Math.min(...careMonthlyFigures);
+  const careMonthlyHigh = Math.max(...careMonthlyFigures);
 
   return (
     <>
@@ -459,10 +461,10 @@ const RPPHomeV3 = () => {
 
             {/* ── Cost of Care Calculator — three-column layout ─────── */}
             <div
-              onMouseEnter={() => rotation.setPaused(true)}
-              onMouseLeave={() => rotation.setPaused(false)}
-              onFocusCapture={() => rotation.setPaused(true)}
-              onBlurCapture={() => rotation.setPaused(false)}
+              
+              
+             
+              
             >
               <a href="/cost-of-care-calculator" className="rpp-coc-card group marquee-hover">
                 <div className="rpp-coc-layout">
@@ -499,46 +501,44 @@ const RPPHomeV3 = () => {
                     </span>
                   </div>
 
-                  {/* Rotating figures. aria-hidden so nothing is announced
-                      mid-change; the complete list follows for screen readers. */}
-                  <div
-                    className="rpp-coc-figures"
-                    aria-hidden="true"
-                    style={{
-                      opacity: rotation.reduced ? 1 : rotation.visible ? 1 : 0,
-                      transition: rotation.reduced ? "none" : `opacity ${FADE_MS}ms cubic-bezier(0.4, 0, 0.2, 1)`,
-                    }}
-                  >
-                    {rotation.current.map((c) => (
-                      <div key={c.id} className="rpp-coc-cell">
-                        <div
-                          style={{
-                            fontFamily: "'DM Sans', sans-serif",
-                            fontSize: 16,
-                            fontWeight: 700,
-                            color: "#25597e",
-                            lineHeight: 1.3,
-                            marginBottom: 3,
-                          }}
-                        >
-                          {t(`costOfCarePage.careTypes.${c.id}.shortLabel`)}
-                        </div>
-                        <div
-                          style={{
-                            fontFamily: "Georgia, serif",
-                            fontSize: 25,
-                            fontWeight: 700,
-                            color: RPP_CARE_COLORS[c.id] ?? CARE_TYPE_COLORS[c.id] ?? "#903f46",
-                            lineHeight: 1.15,
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          {formatCurrency(c.waMonthly)}
-                        </div>
+                 {/* Static range across the six housing options the calculator
+                      hub covers. These figures used to rotate three at a time;
+                      the hub now lists every option with its own figure, so the
+                      tile only needs to convey the span. minHeight overrides the
+                      168px the CSS reserves for three rotating rows.
+                      The label is hardcoded English and needs an i18next key. */}
+                  <div className="rpp-coc-figures" style={{ minHeight: 0 }}>
+                    <div className="rpp-coc-cell">
+                      <div
+                        style={{
+                          fontFamily: "'DM Sans', sans-serif",
+                          fontSize: 16,
+                          fontWeight: 700,
+                          color: "#25597e",
+                          lineHeight: 1.3,
+                          marginBottom: 3,
+                        }}
+                      >
+                        Monthly cost in Washington
                       </div>
-                    ))}
+                      <div
+                        style={{
+                          fontFamily: "Georgia, serif",
+                          fontSize: 24,
+                          fontWeight: 700,
+                          color: "#7f1d1d",
+                          lineHeight: 1.2,
+                        }}
+                      >
+                        {formatCurrency(careMonthlyLow)} &ndash; {formatCurrency(careMonthlyHigh)}
+                        <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 600 }}>
+                          {" "}
+                          / month
+                        </span>
+                      </div>
+                    </div>
                   </div>
-
+                       
                   {/* Every figure, always available to assistive tech. */}
                   <ul className="rpp-sr-only">
                     {rotatingCareTypes.map((c) => (
@@ -559,33 +559,7 @@ const RPPHomeV3 = () => {
                 </div>
               </a>
 
-              {/* WCAG 2.2.2 — content that auto-updates for more than five
-                  seconds alongside other content needs a pause mechanism.
-                  Outside the anchor so it does not navigate. */}
-              {!rotation.reduced && rotation.pageCount > 1 && (
-                <div className="rpp-coc-controls">
-                  <button
-                    type="button"
-                    onClick={() => rotation.setPaused((p) => !p)}
-                    aria-pressed={rotation.paused}
-                    className="rpp-coc-pause"
-                  >
-                    {rotation.paused ? "Resume figures" : "Pause figures"}
-                  </button>
-                  <span className="rpp-coc-dots" aria-hidden="true">
-                    {Array.from({ length: rotation.pageCount }).map((_, i) => (
-                      <button
-                        key={i}
-                        type="button"
-                        onClick={() => rotation.goTo(i)}
-                        className={`rpp-coc-dot${i === rotation.pageIndex ? " is-current" : ""}`}
-                        tabIndex={-1}
-                      />
-                    ))}
-                  </span>
-                </div>
-              )}
-            </div>
+             </div>
           </div>
         </section>
 
