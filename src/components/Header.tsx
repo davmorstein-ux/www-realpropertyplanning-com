@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import WaterfallNav from "./WaterfallNav";
 import SiteSearchBar from "./SiteSearchBar";
 import LanguageSwitcher from "./LanguageSwitcher";
+import PrimaryNav from "./PrimaryNav";
+import { PRIMARY_NAV } from "@/lib/primaryNav";
 
 const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
 
@@ -31,21 +33,10 @@ const CTA_SLOT = 215; // width of the phone button / empty slot above it
    the right edge. Adjust this single value to taste. */
 const SEARCH_MAX_WIDTH = 520;
 
-/* Each label is an explicit list of lines rather than one string left to wrap
-   on its own. Relying on max-width meant the browser chose the break points,
-   and the two longest labels wrapped to three lines. Listing the lines makes
-   the shape fixed: nothing here is ever more than two lines.
-
-   Keep every entry to one or two lines. The `lines` are rendered as separate
-   nowrap blocks, so a line that is too long widens the nav rather than
-   wrapping — check the header after editing any label. */
-const CURATED_LINKS = [
-  { lines: ["About"], href: "/about" },
-  { lines: ["Probate &", "Estate Sales"], href: "/probate-estate-sales" },
-  { lines: ["Senior Housing &", "Transitions"], href: "/senior-transitions" },
-  { lines: ["Articles & Guides"], href: "/guides-and-resources" },
-  { lines: ["Real Estate &", "Legal Professionals"], href: "/for-attorneys" },
-];
+/* The compact (mobile) header still renders plain links. The desktop header
+   uses PrimaryNav, which adds the dropdown menus. Both read PRIMARY_NAV so
+   the label set cannot diverge between the two layouts. */
+const CURATED_LINKS = PRIMARY_NAV;
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
@@ -71,10 +62,10 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    /* Version bumped v6 -> v7. The guard below skips injection when a style
-       tag with this id already exists, so the id must change whenever the
-       CSS changes or returning visitors keep the old rules. v7 allows the
-       curated links to wrap to two lines. */
+    /* The guard below skips injection when a style tag with this id already
+       exists, so the id must change whenever the CSS changes or returning
+       visitors keep the old rules. These rules now only style the compact
+       layout's links — the desktop nav carries its own styles in PrimaryNav. */
     const id = "rpp-toplink-styles-v8";
     if (document.getElementById(id)) return;
     const style = document.createElement("style");
@@ -92,30 +83,17 @@ const Header = () => {
            index.css contains:
                nav a { height: 100% !important; padding-top: 0 !important;
                        padding-bottom: 0 !important; }
-           which stretched every nav link to the full height of the nav row.
-           Combined with justify-content: space-between spreading the links
-           across the whole width, that produced a tall wide band per link,
+           which stretched every nav link to the full height of the nav row,
            so the hover state fired well away from the text.
 
            .rpp-top-link is a class (0,1,0) and beats "nav a" (0,0,2), so
-           these !important flags hold. Height now hugs the label.
-
-           8px horizontal keeps the click target comfortable — narrower is
-           possible but harder to hit for older users with less steady
-           pointer control, which is the wrong trade on this site. */
+           these !important flags hold. Height now hugs the label. */
         padding: 5px 8px !important;
         height: auto !important;
         align-self: center !important;
         border-bottom: 1px solid transparent;
         transition: color 0.18s ease, border-color 0.18s ease;
-        /* Two-line labels. The longer category names ("Real Estate & Legal
-           Professionals") will not fit on one line at this font size without
-           either shrinking the text below the site's accessibility floor or
-           pushing the nav into the hamburger breakpoint early. Wrapping is the
-           better trade. max-width caps each label so one long word cannot
-           stretch a column; text-align centres the two lines against each
-           other. */
-      text-align: center;
+        text-align: center;
         line-height: 1.2;
         display: inline-flex;
         flex-direction: column;
@@ -137,10 +115,6 @@ const Header = () => {
       @media (min-width: 769px) {
         .rpp-header-phone { font-size: 22px !important; }
       }
-      /* Breakpoint lowered from 1100px. Reducing letter-spacing from 0.18em
-         to 0.08em recovered roughly 90px across the five links, which is
-         enough to keep the full desktop nav on tablets and small laptops
-         instead of dropping them to the hamburger-only layout. */
       @media (max-width: 950px) {
         .rpp-curated-link { display: none !important; }
       }
@@ -172,8 +146,7 @@ const Header = () => {
 
   return (
     <>
-      
-        <a href="#main-content"
+      <a href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md focus:text-base"
       >
         Skip to main content
@@ -202,9 +175,7 @@ const Header = () => {
       >
         {/* Two-column desktop header: the logo occupies a full-height left
             column while the nav links and search stack in the right column.
-            This lets the logo be ~104px instead of 60px WITHOUT making the
-            header taller — it is in fact shorter than the previous stacked
-            layout. Mobile keeps the original stacked structure untouched. */}
+            Mobile keeps the original stacked structure untouched. */}
         {isMobile ? (
           <>
             <nav
@@ -239,16 +210,15 @@ const Header = () => {
                     to={item.href}
                     className={`rpp-top-link rpp-curated-link${pathname === item.href ? " is-active" : ""}`}
                   >
-                   {item.lines.map((line) => (
+                    {item.lines.map((line) => (
                       <span key={line} className="rpp-top-link-line">
                         {line}
                       </span>
-                   ))}
+                    ))}
                   </Link>
                 ))}
                 <LanguageSwitcher compact={isMobile} />
-                
-                  <a href="tel:2069003015"
+                <a href="tel:2069003015"
                   className="rpp-header-phone"
                   style={{
                     ...NAV_FONT,
@@ -313,33 +283,11 @@ const Header = () => {
                     so the first nav link starts exactly above the search field. */}
                 <div style={{ width: HAMBURGER_SLOT, flexShrink: 0 }} aria-hidden="true" />
 
-                {/* Links spread evenly across the same width the search bar occupies.
-                    alignItems: center keeps each link at its own natural height
-                    rather than stretching to the row, which reinforces the
-                    padding fix in the injected stylesheet above. */}
-                <div
-                  style={{
-                    flex: 1,
-                    minWidth: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  {CURATED_LINKS.map((item) => (
-                    <Link
-                      key={item.href}
-                      to={item.href}
-                      className={`rpp-top-link rpp-curated-link${pathname === item.href ? " is-active" : ""}`}
-                    >
-                      {item.lines.map((line) => (
-                      <span key={line} className="rpp-top-link-line">
-                        {line}
-                      </span>
-                   ))}
-                    </Link>
-                  ))}
-                </div>
+                {/* Desktop primary nav with dropdown menus. The compact layout
+                    above still renders plain links; PrimaryNav hides itself
+                    below 950px so the two never show at once. */}
+                <PrimaryNav />
+
                 {/* Contact used to sit here, centred above the phone button. It has
                     been removed from the nav (it now lives on the About page), but
                     the empty slot is deliberately kept: it holds the nav row and the
@@ -387,8 +335,7 @@ const Header = () => {
                     <LanguageSwitcher />
                   </div>
 
-                  
-                    <a href="tel:2069003015"
+                  <a href="tel:2069003015"
                     className="rpp-header-phone"
                     style={{
                       ...NAV_FONT,
