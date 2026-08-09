@@ -1,4 +1,3 @@
-
 import { CARE_TYPES, type CareType } from "@/lib/careTypes";
 
 /**
@@ -28,6 +27,19 @@ export interface CareCalculatorOption {
   shortLabel: string;
   /** One line on who this option suits, shown on the hub tiles. */
   blurb: string;
+  /**
+   * The option's own colour, used for its card marker, its page hero accent
+   * and its heading. Six distinct hues rather than six shades of one: no two
+   * neighbouring entries sit close together on the wheel, and the blue and
+   * green are kept far apart because blue-green discrimination is among the
+   * first things to decline with age — the lens yellows and shifts perception
+   * in exactly that range.
+   *
+   * Every value clears 4.5:1 on white (10.02, 6.26, 7.00, 11.27, 8.76, 8.37),
+   * so each is legible as text and not merely decorative. Colour never carries
+   * meaning on its own here; the label always sits beside it.
+   */
+  color: string;
 }
 
 export const CARE_CALCULATORS: CareCalculatorOption[] = [
@@ -36,36 +48,42 @@ export const CARE_CALCULATORS: CareCalculatorOption[] = [
     careTypeId: "independent-living",
     shortLabel: "Independent Living",
     blurb: "Own apartment, community amenities, no personal care included.",
+    color: "#7f1d1d",
   },
   {
     slug: "in-home-care",
     careTypeId: "in-home",
     shortLabel: "In-Home Care",
     blurb: "Staying in the current home with non-medical help brought in.",
+    color: "#0b6a7a",
   },
   {
     slug: "adult-family-home",
     careTypeId: "adult-family-home",
     shortLabel: "Adult Family Home",
     blurb: "A licensed residential home, usually six residents or fewer.",
+    color: "#14663f",
   },
   {
     slug: "assisted-living",
     careTypeId: "assisted-living",
     shortLabel: "Assisted Living",
     blurb: "A larger community with daily support and on-site staff.",
+    color: "#1b3a6b",
   },
   {
     slug: "memory-care",
     careTypeId: "memory-care",
     shortLabel: "Memory Care",
     blurb: "Secured setting with staff trained in dementia care.",
+    color: "#6b2d8f",
   },
   {
     slug: "nursing-home",
     careTypeId: "nursing-semi",
     shortLabel: "Nursing Home",
     blurb: "Skilled nursing with medical care available around the clock.",
+    color: "#8e1f5e",
   },
 ];
 
