@@ -192,13 +192,13 @@ const Header = () => {
                 <WaterfallNav />
                 <Link to="/" style={{ display: "flex", alignItems: "center" }}>
                   <img
-                    src="/rpp-logo-v4.webp"
+                    src="/rpp-logo-v5.webp"
                     alt="Real Property Planning"
                     style={{ height: 44, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
                     sizes="100vw"
                     decoding="async"
-                    width={946}
-                    height={449}
+                    width={1700}
+                    height={345}
                   />
                 </Link>
               </div>
@@ -251,7 +251,7 @@ const Header = () => {
             <div style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <Link to="/" style={{ display: "flex", alignItems: "center" }}>
                 <img
-                  src="/rpp-logo-v4.webp"
+                  src="/rpp-logo-v5.webp"
                   alt="Real Property Planning"
                   style={{
                     height: DESKTOP_LOGO_HEIGHT,
@@ -261,8 +261,8 @@ const Header = () => {
                   }}
                   sizes="100vw"
                   decoding="async"
-                  width={946}
-                  height={449}
+                  width={1700}
+                  height={345}
                 />
               </Link>
             </div>
