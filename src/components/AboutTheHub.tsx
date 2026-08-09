@@ -140,9 +140,9 @@ const AboutTheHub = () => {
           padding-top: 1.15rem;
           border-top: 1px solid #e4ddd1;
           font-family: 'DM Sans', system-ui, sans-serif;
-          font-size: 16px !important;
-          font-weight: 500;
-          color: #4a4540;
+          font-size: clamp(17px, 1.3vw, 20px) !important;
+          font-weight: 600;
+          color: #272421;
           line-height: 1.4;
         }
         .rpp-abouthub-stats.rpp-abouthub-stats strong {
