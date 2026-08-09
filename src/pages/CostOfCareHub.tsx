@@ -1,1 +1,89 @@
 
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import DisclaimerSection from "@/components/DisclaimerSection";
+import CareCalculatorSwitcher from "@/components/CareCalculatorSwitcher";
+import { Link } from "react-router-dom";
+
+/**
+ * Cost of Care calculator hub — the landing page at /cost-of-care-calculator.
+ *
+ * Replaces what used to sit on this route: a bare figures component with no
+ * header, footer or calculator, which rendered as a fragment on a blank page.
+ *
+ * The job of this page is to get someone into the right calculator in one
+ * click. The six tiles carry the monthly figure so a reader can often answer
+ * their question here without going any further — and if they do go further,
+ * they land on a calculator with the care type already chosen, which is one
+ * fewer decision than the old single calculator asked for.
+ *
+ * The tiles are rendered by CareCalculatorSwitcher, the same component used at
+ * the foot of each calculator page, so the two lists cannot disagree.
+ */
+const CostOfCareHub = () => (
+  <div className="min-h-screen bg-background">
+    <SEOHead
+      title="Cost of Care Calculators for Washington State | Real Property Planning"
+      description="Compare the monthly cost of independent living, in-home care, adult family homes, assisted living, memory care, and nursing homes in Washington State."
+      canonical="https://realpropertyplanning.com/cost-of-care-calculator"
+    />
+    <BreadcrumbSchema
+      items={[
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Cost of Care Calculator", url: "https://realpropertyplanning.com/cost-of-care-calculator" },
+      ]}
+    />
+    <Header />
+    <main id="main-content">
+      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">
+              Cost of Care Calculators
+            </h1>
+            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+              Washington State costs more than the national average for nearly every kind of care. Choose the
+              option you are weighing up and see what it runs today, and what it is likely to run later.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 md:py-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <CareCalculatorSwitcher heading="Choose a housing option" />
+
+            <p className="text-muted-foreground text-base leading-relaxed mt-8">
+              Figures are Washington State monthly medians. Every calculator lets you adjust the age, how far
+              out the move is, and how many years of care to plan for.
+            </p>
+
+            <div className="mt-10 bg-secondary border border-border rounded-xl px-6 py-7 md:px-8">
+              <h2 className="font-serif text-2xl text-foreground font-semibold mb-3">
+                Running an adult family home?
+              </h2>
+              <p className="text-muted-foreground text-base leading-relaxed mb-4">
+                Two more calculators cover the operator side rather than the family side — return on investment
+                and a valuation estimate for an adult family home business.
+              </p>
+              <Link
+                to="/afh-club/calculators"
+                className="text-accent font-semibold underline underline-offset-4"
+              >
+                Adult Family Home calculators
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <DisclaimerSection />
+    </main>
+    <Footer />
+  </div>
+);
+
+export default CostOfCareHub;
