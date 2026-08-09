@@ -5,7 +5,6 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CareCalculatorSwitcher from "@/components/CareCalculatorSwitcher";
-import { Link } from "react-router-dom";
 
 /**
  * Cost of Care calculator hub — the landing page at /cost-of-care-calculator.
@@ -61,21 +60,7 @@ const CostOfCareHub = () => (
               out the move is, and how many years of care to plan for.
             </p>
 
-            <div className="mt-10 bg-secondary border border-border rounded-xl px-6 py-7 md:px-8">
-              <h2 className="font-serif text-2xl text-foreground font-semibold mb-3">
-                Running an adult family home?
-              </h2>
-              <p className="text-muted-foreground text-base leading-relaxed mb-4">
-                Two more calculators cover the operator side rather than the family side — return on investment
-                and a valuation estimate for an adult family home business.
-              </p>
-              <Link
-                to="/afh-club/calculators"
-                className="text-accent font-semibold underline underline-offset-4"
-              >
-                Adult Family Home calculators
-              </Link>
-            </div>
+           
           </div>
         </div>
       </section>
