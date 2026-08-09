@@ -256,7 +256,7 @@ const Header = () => {
             <div style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <Link to="/" style={{ display: "flex", alignItems: "center" }}>
                 <img
-                  src="/rpp-logo-v8.webp"
+                  src="/rpp-logo-v9.webp"
                   alt="Real Property Planning"
                   style={{
                     height: DESKTOP_LOGO_HEIGHT,
@@ -266,8 +266,8 @@ const Header = () => {
                   }}
                   sizes="100vw"
                   decoding="async"
-                  width={1607}
-                  height={332}
+                  width={1608}
+                  height={331}
                 />
               </Link>
             </div>
