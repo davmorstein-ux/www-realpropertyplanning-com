@@ -1,13 +1,18 @@
 import { CARE_TYPES, type CareType } from "@/lib/careTypes";
 
 /**
- * The six housing options shown on the Cost of Care calculator hub and in the
- * switcher strip at the foot of each calculator page.
+ * The six housing options shown on the Cost of Care calculator hub, the
+ * homepage tile, and the switcher rail beside each calculator.
  *
- * SINGLE SOURCE OF TRUTH. The hub grid and the switcher both read this list,
- * so adding or removing an option updates both. Do not hand-build either list
- * separately — they drifted apart in an earlier version of the site and the
- * result was a nav strip offering pages that no longer existed.
+ * SINGLE SOURCE OF TRUTH — all three read this list, so the order and the
+ * colours below apply everywhere at once.
+ *
+ * ORDER IS DELIBERATE. The six are sequenced so no two adjacent entries sit
+ * close together on the colour wheel: purple, burgundy, teal, magenta, navy,
+ * green. Sorting them by cost or alphabetically put the two reds and the
+ * blue-greens next to each other, which is exactly the pairing hardest to
+ * separate for readers whose colour discrimination has declined. Do not
+ * re-sort this list without re-checking the adjacencies.
  *
  * WHY SIX and not the nine entries in CARE_TYPES:
  *   - Adult Day Care and CCRC are omitted. Both are real options, but they sit
@@ -28,21 +33,23 @@ export interface CareCalculatorOption {
   /** One line on who this option suits, shown on the hub tiles. */
   blurb: string;
   /**
-   * The option's own colour, used for its card marker, its page hero accent
-   * and its heading. Six distinct hues rather than six shades of one: no two
-   * neighbouring entries sit close together on the wheel, and the blue and
-   * green are kept far apart because blue-green discrimination is among the
-   * first things to decline with age — the lens yellows and shifts perception
-   * in exactly that range.
-   *
-   * Every value clears 4.5:1 on white (10.02, 6.26, 7.00, 11.27, 8.76, 8.37),
-   * so each is legible as text and not merely decorative. Colour never carries
-   * meaning on its own here; the label always sits beside it.
+   * The option's own colour, used for its card marker, its page hero accent,
+   * its label and its figure. Every value clears 4.5:1 on white (8.76, 10.02,
+   * 6.26, 8.37, 11.27, 7.00), so each is legible as text and not merely
+   * decorative. Colour never carries meaning on its own here; the label always
+   * sits beside it.
    */
   color: string;
 }
 
 export const CARE_CALCULATORS: CareCalculatorOption[] = [
+  {
+    slug: "memory-care",
+    careTypeId: "memory-care",
+    shortLabel: "Memory Care",
+    blurb: "Secured setting with staff trained in dementia care.",
+    color: "#6b2d8f",
+  },
   {
     slug: "independent-living",
     careTypeId: "independent-living",
@@ -58,11 +65,11 @@ export const CARE_CALCULATORS: CareCalculatorOption[] = [
     color: "#0b6a7a",
   },
   {
-    slug: "adult-family-home",
-    careTypeId: "adult-family-home",
-    shortLabel: "Adult Family Home",
-    blurb: "A licensed residential home, usually six residents or fewer.",
-    color: "#14663f",
+    slug: "nursing-home",
+    careTypeId: "nursing-semi",
+    shortLabel: "Nursing Home",
+    blurb: "Skilled nursing with medical care available around the clock.",
+    color: "#8e1f5e",
   },
   {
     slug: "assisted-living",
@@ -72,18 +79,11 @@ export const CARE_CALCULATORS: CareCalculatorOption[] = [
     color: "#1b3a6b",
   },
   {
-    slug: "memory-care",
-    careTypeId: "memory-care",
-    shortLabel: "Memory Care",
-    blurb: "Secured setting with staff trained in dementia care.",
-    color: "#6b2d8f",
-  },
-  {
-    slug: "nursing-home",
-    careTypeId: "nursing-semi",
-    shortLabel: "Nursing Home",
-    blurb: "Skilled nursing with medical care available around the clock.",
-    color: "#8e1f5e",
+    slug: "adult-family-home",
+    careTypeId: "adult-family-home",
+    shortLabel: "Adult Family Home",
+    blurb: "A licensed residential home, usually six residents or fewer.",
+    color: "#14663f",
   },
 ];
 
