@@ -89,7 +89,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
   {
     lines: ["Real Estate &", "Legal Professionals"],
     href: "/for-attorneys",
-    color: "#aa570e",
+    color: "9c5000",
     items: [
       { name: "Find a Professional", href: "/featured-professionals" },
       { name: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
