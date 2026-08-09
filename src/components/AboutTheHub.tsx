@@ -40,6 +40,10 @@
  * Doubled class names follow the pattern this page already uses to defeat the
  * global "main p font-size !important" rule in index.css.
  *
+ * The scale line under the list is hardcoded English too, and its figures are
+ * counts of real pages — do not inflate them. An unverifiable claim on the
+ * homepage is the kind of thing a journalist checks first.
+ *
  * Copy is hardcoded English for now — the rest of this page uses i18next keys,
  * so this block still needs keys added to translate with the other 7 locales.
  */
@@ -115,6 +119,37 @@ const AboutTheHub = () => {
           transform: rotate(45deg);
         }
 
+        /* Scale line. Sits under the list, separated by a hairline so it reads
+           as a footing rather than a fourth bullet. Figures verified against
+           the repo: 67 editorial pages across guides, articles, long-term
+           care, senior living, planning-before-a-crisis, executor
+           responsibilities and estate/probate; 6 housing calculators plus 2
+           AFH operator calculators; 4,046 licensed homes in the DSHS data for
+           King, Snohomish and Pierce. "Over 4,000" is deliberate — the
+           directory is a snapshot and homes open and close, so a precise
+           figure would go stale. Re-check before changing any of these.
+
+           Hardcoded rather than derived: counting the directory at runtime
+           would mean importing 4,000+ records into the homepage bundle for
+           the sake of one number. */
+        .rpp-abouthub-stats.rpp-abouthub-stats {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.4rem 2.25rem;
+          margin: 1.35rem 0 0;
+          padding-top: 1.15rem;
+          border-top: 1px solid #e4ddd1;
+          font-family: 'DM Sans', system-ui, sans-serif;
+          font-size: 16px !important;
+          font-weight: 500;
+          color: #4a4540;
+          line-height: 1.4;
+        }
+        .rpp-abouthub-stats.rpp-abouthub-stats strong {
+          font-weight: 700;
+          color: #1B3A6B;
+        }
+
         @media (max-width: 640px) {
           .rpp-abouthub-card.rpp-abouthub-card {
             padding: 1.3rem 1.25rem 1.25rem;
@@ -138,6 +173,18 @@ const AboutTheHub = () => {
           <li>Plain-language answers on real estate, housing, and planning</li>
           <li>A directory of attorneys, fiduciaries, and care professionals</li>
         </ul>
+
+        <p className="rpp-abouthub-stats rpp-abouthub-stats">
+          <span>
+            <strong>67</strong> guides &amp; articles
+          </span>
+          <span>
+            <strong>8</strong> calculators
+          </span>
+          <span>
+            Directory of over <strong>4,000</strong> licensed adult family homes
+          </span>
+        </p>
       </div>
     </div>
   );
