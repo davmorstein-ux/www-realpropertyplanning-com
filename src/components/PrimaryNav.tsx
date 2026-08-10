@@ -101,7 +101,11 @@ const PrimaryNav = () => {
           /* space-around rather than flex-end: the nav now owns a full-width
              tier of its own, so the five labels spread evenly across it with
              breathing room on both sides instead of bunching at one end. */
-          justify-content: space-around;
+          /* space-between, not space-around: space-around adds half-gaps at
+             the ends, which indented the first and last labels away from the
+             page edges. The nav now starts flush with the hamburger on the
+             left and ends flush with the phone on the right. */
+          justify-content: space-between;
           gap: 12px;
           flex: 1;
           min-width: 0;

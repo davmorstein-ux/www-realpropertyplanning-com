@@ -272,40 +272,44 @@ const Header = () => {
                 own tier below costs roughly 40px of header height and buys it
                 the full page width. */}
             <div style={{ display: "flex", alignItems: "center", gap: 28, minWidth: 0 }}>
-              {/* Hamburger sits beside a stacked column holding the logo over
-                  the search field. The column is exactly LOGO_WIDTH, so the
-                  field and the wordmark share an edge on both sides. */}
-              <div style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
-                <div
-                  style={{
-                    width: HAMBURGER_SLOT,
-                    flexShrink: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <WaterfallNav />
-                </div>
+              {/* Brand block: logo on top, hamburger and search side by side
+                  beneath it. The hamburger was previously to the LEFT of the
+                  logo, which pushed the whole brand block inward and left the
+                  menu button orphaned in the margin. Both rows are exactly
+                  LOGO_WIDTH, so the block has one clean left and right edge. */}
+              <div style={{ width: LOGO_WIDTH, flexShrink: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                <Link to="/" style={{ display: "block" }}>
+                  <img
+                    src="/rpp-logo-v9.webp"
+                    alt="Real Property Planning"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      display: "block",
+                      objectFit: "contain",
+                    }}
+                    sizes="100vw"
+                    decoding="async"
+                    width={1608}
+                    height={331}
+                  />
+                </Link>
 
-                <div style={{ width: LOGO_WIDTH, display: "flex", flexDirection: "column", gap: 8 }}>
-                  <Link to="/" style={{ display: "block" }}>
-                    <img
-                      src="/rpp-logo-v9.webp"
-                      alt="Real Property Planning"
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        display: "block",
-                        objectFit: "contain",
-                      }}
-                      sizes="100vw"
-                      decoding="async"
-                      width={1608}
-                      height={331}
-                    />
-                  </Link>
-                  <SiteSearchBar />
+                <div style={{ display: "flex", alignItems: "stretch", gap: 8, minWidth: 0 }}>
+                  <div
+                    style={{
+                      width: HAMBURGER_SLOT,
+                      flexShrink: 0,
+                      display: "flex",
+                      alignItems: "stretch",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <WaterfallNav />
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <SiteSearchBar />
+                  </div>
                 </div>
               </div>
 
