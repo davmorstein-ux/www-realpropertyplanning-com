@@ -16,8 +16,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
-import HeroBandTitle from "@/components/HeroBandTitle";
 
 const faqs = [
   {
@@ -94,45 +92,31 @@ const WhoHasAuthoritySellProbateProperty = () => (
     />
     <Header />
     <main id="main-content">
-        {/* WTDW Shared Hero */}
-        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
-          <div style={{ lineHeight: 0 }}>
-            <img
-              src={wtdwHeroImage}
-              alt="Quiet Washington street with craftsman homes"
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager" sizes="100vw" decoding="async" width={1829} height={640} />
-            <HeroBandTitle as="div">Transfer Ownership</HeroBandTitle>
-          </div>
-        </section>
       {/* Hero */}
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-16">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-5">
               Who Has Authority to Sell Probate Property in Washington State?
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-6">
-              For executors, trustees, attorneys, and families who need to understand legal authority before any real estate action can be taken.
-            </p>
-            <p className="text-lg text-gold font-bold leading-relaxed mb-6">
-              Real Property Planning — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="rounded-lg">Contact</Button>
-              </Link>
-              <a href="tel:2069003015">
-                <Button variant="outline" size="lg" className="rounded-lg bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-                  Call (206) 900-3015
-                </Button>
-              </a>
-            </div>
           </div>
         </div>
       </section>
+
+        {/* Intro — moved out of the blue band so the band carries only the
+            title. A full-width photo hero used to sit ABOVE this one, with a
+            band reading "Transfer Ownership" — a heading that did not match
+            this page. Both are gone; do not reinstate the shared WTDW hero
+            here. */}
+        <section className="py-10 md:py-12 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              For executors, trustees, attorneys, and families who need to understand legal authority before any real estate action can be taken.
+            </p>
+            </div>
+          </div>
+        </section>
 
       {/* Section 1 */}
       <section className="py-14 md:py-20 bg-background">
