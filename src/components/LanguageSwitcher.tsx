@@ -101,7 +101,7 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
           fontWeight: 600,
           letterSpacing: compact ? "0.06em" : "0.08em",
           textTransform: "uppercase",
-          color: compact ? "#ffffff" : hovered ? "#d1a847" : "rgba(255,255,255,0.92)",
+         color: compact ? "#272421" : hovered ? "#7f1d1d" : "#272421",
           transition: "color 0.18s ease",
           cursor: "pointer",
         }}
