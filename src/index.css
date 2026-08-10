@@ -4373,3 +4373,13 @@ main .article-resource-btn:hover {
   text-underline-offset: 3px !important;
 }
 
+  /* The toast container renders as <section aria-label="Notifications"> as the
+   first child of #root. The global `section { padding: 32px }` rule above
+   gives it 64px of vertical padding even when empty, which pushed the sticky
+   header down the page on every route. It has no visual content of its own,
+   so it should occupy nothing until a toast appears. */
+section[aria-label="Notifications"] {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
