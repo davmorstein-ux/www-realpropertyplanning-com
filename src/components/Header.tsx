@@ -32,6 +32,11 @@ const DESKTOP_LOGO_HEIGHT = 60;
 const LOGO_ASPECT = 1608 / 331;
 const LOGO_WIDTH = Math.round(DESKTOP_LOGO_HEIGHT * LOGO_ASPECT);
 
+/* Search field width. It shares the nav tier now rather than sitting beneath
+   the logo, so it is no longer tied to the logo's width and can be sized for
+   its own placeholder. */
+const SEARCH_WIDTH = 250;
+
 /* Shared column geometry for the desktop header. The nav row and the search
    row are laid out on identical tracks so every element lines up vertically:
    a hamburger-width leading slot, a flexible middle, and a fixed trailing slot
@@ -280,7 +285,10 @@ const Header = () => {
                   logo, which pushed the whole brand block inward and left the
                   menu button orphaned in the margin. Both rows are exactly
                   LOGO_WIDTH, so the block has one clean left and right edge. */}
-              <div style={{ width: LOGO_WIDTH, flexShrink: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+              {/* Logo alone. The search moved down to the nav tier: stacking it
+                  under the logo made the left column ~112px tall on its own and
+                  pushed the whole header to ~190px. */}
+              <div style={{ width: LOGO_WIDTH, flexShrink: 0 }}>
                 <Link to="/" style={{ display: "block" }}>
                   <img
                     src="/rpp-logo-v9.webp"
@@ -297,23 +305,6 @@ const Header = () => {
                     height={331}
                   />
                 </Link>
-
-                <div style={{ display: "flex", alignItems: "stretch", gap: 8, minWidth: 0 }}>
-                  <div
-                    style={{
-                      width: HAMBURGER_SLOT,
-                      flexShrink: 0,
-                      display: "flex",
-                      alignItems: "stretch",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <WaterfallNav />
-                  </div>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <SiteSearchBar />
-                  </div>
-                </div>
               </div>
 
               <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "stretch", gap: 14 }}>
@@ -354,9 +345,28 @@ const Header = () => {
                 /* Keeps the last label clear of the phone button sitting in the
                    tier above it. Without this the right-hand category sat
                    directly beneath the phone. */
-                paddingRight: 270,
               }}
             >
+              {/* Menu and search lead the row; the nav takes everything left.
+                  NOTE: there is not enough width at 1280px to also reserve room
+                  so the last label clears the phone button above it. Reserving
+                  270px would leave ~640px for labels that need ~655px. If that
+                  overlap matters more than the search being on this row, the
+                  labels have to get shorter. */}
+              <div
+                style={{
+                  width: HAMBURGER_SLOT,
+                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "stretch",
+                  justifyContent: "center",
+                }}
+              >
+                <WaterfallNav />
+              </div>
+              <div style={{ width: SEARCH_WIDTH, flexShrink: 0, marginLeft: 8, marginRight: 20 }}>
+                <SiteSearchBar />
+              </div>
               <PrimaryNav />
             </div>
           </>
