@@ -120,20 +120,7 @@ const GuidesAndResources = () => {
       <Header />
 
       <main id="main-content">
-        {/* Hero Image */}
-        <div style={{ width: "100%", marginTop: 64, lineHeight: 0 }}>
-          <img
-            src="/resources-hero.webp"
-            alt="Seniors reading guides outside a resource center"
-            style={{ width: "100%", height: "clamp(220px, 32vw, 380px)", display: "block", objectFit: "cover" }}
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-            width={1920}
-            height={640}
-          />
-        </div>
-
+      
         {/* Blue band — matches site standard */}
         <HeroBandTitle as="h1">Guides &amp; Articles</HeroBandTitle>
 
