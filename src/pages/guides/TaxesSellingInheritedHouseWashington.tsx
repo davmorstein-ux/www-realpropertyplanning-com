@@ -11,7 +11,6 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 
 const faqs = [
   { question: "Do you pay capital gains tax on an inherited house in Washington?", answer: "You may owe federal capital gains tax on any appreciation above the stepped-up basis — meaning the property's fair market value at the date of the decedent's death. If you sell shortly after inheriting, there is often little or no gain. Washington State does not have a state capital gains tax on real estate sales of primary residences, but a 7% tax may apply to long-term capital gains above $250,000. Consult a tax professional for your specific situation." },
@@ -47,23 +46,29 @@ const TaxesSellingInheritedHouseWashington = () => (
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-            </div>
-
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             What Taxes Do You Pay When Selling an Inherited House in Washington?
           </h1>
-          <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Written for heirs and families who need a plain-English overview of the federal and Washington State tax considerations involved in selling an inherited home. The short answer: it depends on timing, the property's value at the date of death, and how long you hold the property before selling. In many cases, the tax impact is smaller than people expect — thanks to what is called a "stepped-up basis."
-          </p>
-          <p className="text-lg text-primary-foreground/70 leading-relaxed">
-            This guide explains the key tax concepts in plain language. It is not tax advice — always work with a qualified CPA or tax attorney for your specific situation.
-          </p>
         </div>
       </div>
     </section>
+
+        {/* Intro — moved out of the blue band so the band carries only the
+            title. The text is the page's answer-style summary and is what
+            search and answer engines quote, so it was relocated rather than
+            deleted. */}
+        <section className="py-10 md:py-12 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Written for heirs and families who need a plain-English overview of the federal and Washington State tax considerations involved in selling an inherited home. The short answer: it depends on timing, the property's value at the date of death, and how long you hold the property before selling. In many cases, the tax impact is smaller than people expect — thanks to what is called a "stepped-up basis."
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              This guide explains the key tax concepts in plain language. It is not tax advice — always work with a qualified CPA or tax attorney for your specific situation.
+            </p>
+            </div>
+          </div>
+        </section>
 
     {/* What This Means in Practice */}
     <section className="py-16 lg:py-24 bg-background">

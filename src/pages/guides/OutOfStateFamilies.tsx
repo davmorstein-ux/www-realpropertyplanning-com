@@ -7,7 +7,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PremiumTile from "@/components/PremiumTile";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 
 const needs = [
   "Someone local to visit the property, document its condition, and provide an honest assessment",
@@ -77,18 +76,26 @@ const OutOfStateFamilies = () => (
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-            </div>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
               Out-of-State Families
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed">
-              Connecting families managing Washington State property from a distance with the right local professionals.
-            </p>
           </div>
         </div>
       </section>
+
+        {/* Intro — moved out of the blue band so the band carries only the
+            title. The text is the page's answer-style summary and is what
+            search and answer engines quote, so it was relocated rather than
+            deleted. */}
+        <section className="py-10 md:py-12 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Connecting families managing Washington State property from a distance with the right local professionals.
+            </p>
+            </div>
+          </div>
+        </section>
 
       {/* Intro */}
       <section className="py-16 lg:py-20 bg-background">

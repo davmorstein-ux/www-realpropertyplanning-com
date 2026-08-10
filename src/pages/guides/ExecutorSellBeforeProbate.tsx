@@ -11,7 +11,6 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 
 const faqs = [
   { question: "Can an executor list a house before probate is complete?", answer: "In most cases, no. The executor generally needs letters testamentary or letters of administration — issued by the court — before they have legal authority to sell. However, you can begin planning, assessing the property, and coordinating with professionals while probate is pending." },
@@ -47,23 +46,29 @@ const ExecutorSellBeforeProbate = () => (
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-            </div>
-
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             Can an Executor Sell a House Before Probate in Washington?
           </h1>
-          <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Written for executors and personal representatives in Washington State who need to know whether they can list an estate property before probate is granted. Generally, no. In Washington State, an executor typically needs court-issued letters testamentary before they have legal authority to sell real property. However, there is a great deal you can — and should — do to prepare while probate is pending.
-          </p>
-          <p className="text-lg text-primary-foreground/70 leading-relaxed">
-            This guide explains what authority is required, what exceptions may apply, and how to use the waiting period productively.
-          </p>
         </div>
       </div>
     </section>
+
+        {/* Intro — moved out of the blue band so the band carries only the
+            title. The text is the page's answer-style summary and is what
+            search and answer engines quote, so it was relocated rather than
+            deleted. */}
+        <section className="py-10 md:py-12 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Written for executors and personal representatives in Washington State who need to know whether they can list an estate property before probate is granted. Generally, no. In Washington State, an executor typically needs court-issued letters testamentary before they have legal authority to sell real property. However, there is a great deal you can — and should — do to prepare while probate is pending.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              This guide explains what authority is required, what exceptions may apply, and how to use the waiting period productively.
+            </p>
+            </div>
+          </div>
+        </section>
 
     {/* What This Means in Practice */}
     <section className="py-16 lg:py-24 bg-background">

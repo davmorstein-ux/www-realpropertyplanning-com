@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import ListenButton from "@/components/ListenButton";
-import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 
 const immediateSteps = [
   { title: "Secure the Property", text: "Change locks if needed, verify insurance coverage, and make sure utilities remain active. A vacant home is vulnerable to weather damage, vandalism, and liability issues." },
@@ -59,23 +58,29 @@ const WhatExecutorsShouldDo = () => (
           <div className="mb-5">
             <ListenButton targetId="executors-guide-hero" />
           </div>
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-            </div>
-
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             What Executors Should Do Before Selling an Inherited Home
           </h1>
-          <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Written for newly-appointed executors and personal representatives in Washington State preparing to manage and eventually sell an inherited home. If you have been named executor or personal representative and the estate includes real property, there are several important steps to take before the home can be listed for sale. Taking these steps in the right order protects the estate, prevents costly mistakes, and sets the stage for a smoother sale process.
-          </p>
-          <p className="text-lg text-primary-foreground/70 leading-relaxed">
-            This guide covers the practical first steps — from securing the property through getting a professional assessment — so you know what to do, when to do it, and who to involve.
-          </p>
         </div>
       </div>
     </section>
+
+        {/* Intro — moved out of the blue band so the band carries only the
+            title. The text is the page's answer-style summary and is what
+            search and answer engines quote, so it was relocated rather than
+            deleted. */}
+        <section className="py-10 md:py-12 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Written for newly-appointed executors and personal representatives in Washington State preparing to manage and eventually sell an inherited home. If you have been named executor or personal representative and the estate includes real property, there are several important steps to take before the home can be listed for sale. Taking these steps in the right order protects the estate, prevents costly mistakes, and sets the stage for a smoother sale process.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              This guide covers the practical first steps — from securing the property through getting a professional assessment — so you know what to do, when to do it, and who to involve.
+            </p>
+            </div>
+          </div>
+        </section>
 
     {/* Immediate Steps */}
     <section className="py-16 lg:py-24 bg-background">

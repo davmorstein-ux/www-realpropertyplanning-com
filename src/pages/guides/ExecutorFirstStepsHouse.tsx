@@ -11,7 +11,6 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 
 const faqs = [
   { question: "Should I change the locks on the estate property?", answer: "Yes, this is generally one of the first things to do. You want to control access to the property and protect it from unauthorized entry. Change the locks and keep a record of who has keys." },
@@ -47,23 +46,29 @@ const ExecutorFirstStepsHouse = () => (
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-            </div>
-
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             What Should an Executor Do First With a House?
           </h1>
-          <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Written for newly-appointed executors and personal representatives in Washington State who have just taken responsibility for an estate home. Secure the property, confirm insurance, and begin documenting its condition. These three steps protect the estate and give you a foundation for every decision that follows.
-          </p>
-          <p className="text-lg text-primary-foreground/70 leading-relaxed">
-            Being named executor often comes with immediate pressure to make decisions about the house. This guide walks through what to do first — and what can wait.
-          </p>
         </div>
       </div>
     </section>
+
+        {/* Intro — moved out of the blue band so the band carries only the
+            title. The text is the page's answer-style summary and is what
+            search and answer engines quote, so it was relocated rather than
+            deleted. */}
+        <section className="py-10 md:py-12 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Written for newly-appointed executors and personal representatives in Washington State who have just taken responsibility for an estate home. Secure the property, confirm insurance, and begin documenting its condition. These three steps protect the estate and give you a foundation for every decision that follows.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Being named executor often comes with immediate pressure to make decisions about the house. This guide walks through what to do first — and what can wait.
+            </p>
+            </div>
+          </div>
+        </section>
 
     {/* What This Means in Practice */}
     <section className="py-16 lg:py-24 bg-background">
