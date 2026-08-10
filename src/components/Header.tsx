@@ -38,7 +38,10 @@ const HAMBURGER_SLOT = 56; // bordered trigger button in the search row
    matters more here than the space an icon would save. */
 /* Search width in the utility row. It shares that row with the language
    switcher and the phone button and may shrink below this on narrow screens. */
-const SEARCH_MAX_WIDTH = 260;
+/* Search field width. It now sits centred beneath the logo, so this caps how
+   wide that left column gets — the logo itself is about 250px at the height
+   below. Keep the two roughly matched or the column looks lopsided. */
+const SEARCH_MAX_WIDTH = 300;
 
 /* The compact (mobile) header still renders plain links. The desktop header
    uses PrimaryNav, which adds the dropdown menus. Both read PRIMARY_NAV so
@@ -257,89 +260,92 @@ const Header = () => {
             </div>
           </>
         ) : (
-          <>
-            {/* UTILITY ROW — search, language, phone. Everything that is not
-                navigation lives here, so the row below carries only the logo
-                and the five categories. Putting the search field beside the
-                phone button was what made the right-hand corner feel stacked
-                and busy: four controls were competing for one corner. */}
+          <div style={{ display: "flex", alignItems: "flex-start", gap: 28, minWidth: 0 }}>
+            {/* LEFT COLUMN — logo with the search field centred beneath it.
+                The search used to sit in the right-hand corner alongside the
+                language switcher and phone, which made four controls compete
+                for one corner. Here it has its own space and reads as part of
+                the brand block rather than another control in a cluster. */}
             <div
               style={{
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "flex-end",
-                gap: 16,
-                paddingBottom: 6,
-                marginBottom: 6,
-                borderBottom: "1px solid rgba(39,36,33,0.10)",
+                gap: 8,
+                flexShrink: 0,
               }}
             >
-              <div style={{ width: SEARCH_MAX_WIDTH, flexShrink: 1, minWidth: 0 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <div
+                  style={{
+                    width: HAMBURGER_SLOT,
+                    flexShrink: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <WaterfallNav />
+                </div>
+                <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    src="/rpp-logo-v9.webp"
+                    alt="Real Property Planning"
+                    style={{
+                      height: DESKTOP_LOGO_HEIGHT,
+                      width: "auto",
+                      display: "block",
+                      objectFit: "contain",
+                    }}
+                    sizes="100vw"
+                    decoding="async"
+                    width={1608}
+                    height={331}
+                  />
+                </Link>
+              </div>
+
+              <div style={{ width: "100%", maxWidth: SEARCH_MAX_WIDTH }}>
                 <SiteSearchBar />
               </div>
-              <LanguageSwitcher />
-              <a href="tel:2069003015"
-                className="rpp-header-phone"
-                style={{
-                  fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
-                  color: "#fff",
-                  background: "#1f6fb2",
-                  borderRadius: 6,
-                  fontWeight: 700,
-                  letterSpacing: "0.02em",
-                  textDecoration: "none",
-                  whiteSpace: "nowrap",
-                  padding: "6px 16px",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  flexShrink: 0,
-                }}
-              >
-                (206) 900-3015
-              </a>
             </div>
 
-            {/* MAIN ROW — menu, logo, navigation. The hamburger leads on the
-                left because that is where a menu control is looked for, and
-                moving it out of the right corner leaves the nav the entire
-                middle of the row. */}
-            <div style={{ display: "flex", alignItems: "center", gap: 20, minWidth: 0 }}>
-              <div
-                style={{
-                  width: HAMBURGER_SLOT,
-                  flexShrink: 0,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <WaterfallNav />
+            {/* RIGHT COLUMN — phone above, navigation below. */}
+            <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                <a href="tel:2069003015"
+                  className="rpp-header-phone"
+                  style={{
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
+                    color: "#fff",
+                    background: "#1f6fb2",
+                    borderRadius: 6,
+                    fontWeight: 700,
+                    letterSpacing: "0.02em",
+                    textDecoration: "none",
+                    whiteSpace: "nowrap",
+                    padding: "6px 18px",
+                    display: "inline-flex",
+                    alignItems: "center",
+                  }}
+                >
+                  (206) 900-3015
+                </a>
               </div>
 
-              <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-                <img
-                  src="/rpp-logo-v9.webp"
-                  alt="Real Property Planning"
-                  style={{
-                    height: DESKTOP_LOGO_HEIGHT,
-                    width: "auto",
-                    display: "block",
-                    objectFit: "contain",
-                  }}
-                  sizes="100vw"
-                  decoding="async"
-                  width={1608}
-                  height={331}
-                />
-              </Link>
-
-              {/* Gap between the logo and the first label. Without it "ABOUT"
-                  sits flush against the wordmark and reads as part of it. */}
-              <div style={{ width: 24, flexShrink: 0 }} aria-hidden="true" />
-
-              <PrimaryNav />
+              {/* Nav and the language control share one line. The switcher is
+                  in compact mode — flag only. An abbreviation like "LNG" was
+                  considered and rejected: the people most likely to need this
+                  control are the ones least able to read an English
+                  abbreviation, whereas a flag needs no language at all. */}
+              <div style={{ display: "flex", alignItems: "center", gap: 14, minWidth: 0 }}>
+                <PrimaryNav />
+                <div style={{ flexShrink: 0, display: "flex", alignItems: "center" }}>
+                  <LanguageSwitcher compact />
+                </div>
+              </div>
             </div>
-          </>
+          </div>
         )}
       </header>
     </>

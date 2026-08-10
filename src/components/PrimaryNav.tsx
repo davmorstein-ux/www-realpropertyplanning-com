@@ -91,10 +91,15 @@ const PrimaryNav = () => {
   return (
     <div className="rpp-primarynav" ref={navRef}>
       <style>{`
+        /* justify-content was space-between, which spread the five labels
+           across the full width and left large gaps between them. flex-end
+           with a fixed gap groups them together as a single navigation unit,
+           which is easier to scan than five widely separated items. */
         .rpp-primarynav {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-end;
+          gap: 26px;
           flex: 1;
           min-width: 0;
         }
