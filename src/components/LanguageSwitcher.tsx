@@ -94,8 +94,13 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
           border: compact ? "1px solid rgba(39,36,33,0.35)" : "none",
           borderRadius: compact ? 6 : 0,
           padding: compact ? "0" : "6px 4px",
-          minWidth: compact ? 44 : undefined,
-          minHeight: compact ? 44 : undefined,
+          /* Sized to sit level with the phone button beside it in the header:
+             22px type plus 8px padding top and bottom puts that button at
+             roughly 42px, so this matches. 44 was the accessibility minimum
+             rather than a visual match, and left the flag looking undersized
+             next to a much larger control. */
+          minWidth: compact ? 52 : undefined,
+          minHeight: compact ? 42 : undefined,
           fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
           fontSize: 13,
           fontWeight: 600,
@@ -110,7 +115,7 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
       >
         {(() => {
           const CurrentFlag = FLAG_COMPONENTS[currentLang];
-          return CurrentFlag ? <CurrentFlag size={compact ? 20 : 16} /> : null;
+          return CurrentFlag ? <CurrentFlag size={compact ? 26 : 16} /> : null;
         })()}
         {!compact && "LANGUAGE"}
       </button>
