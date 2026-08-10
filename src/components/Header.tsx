@@ -35,7 +35,10 @@ const LOGO_WIDTH = Math.round(DESKTOP_LOGO_HEIGHT * LOGO_ASPECT);
 /* Search field width. It shares the nav tier now rather than sitting beneath
    the logo, so it is no longer tied to the logo's width and can be sized for
    its own placeholder. */
-const SEARCH_WIDTH = 250;
+/* Search field width — 25% longer than the previous 250px, and scaling with
+   the window so it stays generous on a wide screen without crowding the nav
+   labels on a laptop. */
+const SEARCH_WIDTH = "clamp(262px, 26vw, 412px)";
 
 /* Shared column geometry for the desktop header. The nav row and the search
    row are laid out on identical tracks so every element lines up vertically:
@@ -364,7 +367,7 @@ const Header = () => {
               >
                 <WaterfallNav />
               </div>
-              <div style={{ width: SEARCH_WIDTH, flexShrink: 0, marginLeft: 8, marginRight: 20 }}>
+              <div style={{ width: SEARCH_WIDTH, flexShrink: 1, minWidth: 0, marginLeft: 8, marginRight: "clamp(44px, 5vw, 84px)" }}>
                 <SiteSearchBar />
               </div>
               <PrimaryNav />

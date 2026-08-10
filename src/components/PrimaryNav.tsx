@@ -37,6 +37,12 @@ import { PRIMARY_NAV } from "@/lib/primaryNav";
    feel twitchy for anyone whose pointer control is not steady. */
 const HOVER_CLOSE_DELAY = 500;
 
+/* Width of the phone button in the tier above. The final entry is centred in a
+   slot this wide at the right-hand end, so it sits under the phone. Measured
+   from "(206) 900-3015" at 22px bold plus 20px padding each side — if the
+   phone's type size or padding changes, change this too. */
+const PHONE_SLOT = 215;
+
 const PrimaryNav = () => {
   const { pathname } = useLocation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -89,26 +95,60 @@ const PrimaryNav = () => {
   }, [openIndex]);
 
   return (
-    <div className="rpp-primarynav" ref={navRef}>
+    <div className="rpp-primarynav" ref={navRef} style={{ ["--pn-phone-slot" as string]: `${PHONE_SLOT}px` }}>
       <style>{`
-        /* space-between distributes the leftover width equally between the
-           five entries, so every gap is the same regardless of how wide each
-           label is. */
         .rpp-primarynav {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          /* The first four sit together at one even gap; the last is pushed
+             into a fixed slot at the right so it lands under the phone. */
+          justify-content: flex-start;
           /* Scales with the window. At 1280px the four labels plus a fixed
              40px gap overflow the space left by the search field and the
              phone-width slot; at 1440px and up they fit comfortably. The clamp
              keeps the spacing generous on wide screens and lets it tighten
              rather than wrap on a laptop. Shorter labels are the only way to
              have both. */
-          gap: clamp(14px, 2.2vw, 40px);
+          --pn-gap: clamp(16px, 1.8vw, 30px);
+          gap: var(--pn-gap);
           flex: 1;
           min-width: 0;
         }
         .rpp-pn-slot { position: relative; }
+        .rpp-pn-slot--last {
+          margin-left: auto;
+          width: var(--pn-phone-slot, 215px);
+          display: flex;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        /* Divider between the grouped entries, drawn in CSS rather than added
+           to the markup — no JSX changes, and it cannot get out of step with
+           the number of items.
+
+           A drawn rule rather than a "|" character: two of these labels wrap to
+           two lines, and a pipe glyph spans only one line's height, so it would
+           float beside the first line instead of dividing the whole item.
+
+           Sits in the middle of the gap, so it stays centred as the gap scales
+           with the window. Deliberately faint: the job is to separate, not to
+           decorate.
+
+           Suppressed before the last entry, which sits apart in its own slot
+           under the phone — a divider there would imply it belongs to the
+           rhythm of the other four. */
+        .rpp-pn-slot + .rpp-pn-slot::before {
+          content: "";
+          position: absolute;
+          left: calc(var(--pn-gap, 24px) / -2);
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 30px;
+          background: rgba(39, 36, 33, 0.22);
+        }
+        .rpp-pn-slot--last::before { content: none; }
 
         .rpp-pn-trigger.rpp-pn-trigger {
           display: inline-flex;
@@ -242,10 +282,11 @@ const PrimaryNav = () => {
 
       {PRIMARY_NAV.map((entry, i) => {
         const isOpen = openIndex === i;
+        const slotClass = `rpp-pn-slot${i === PRIMARY_NAV.length - 1 ? " rpp-pn-slot--last" : ""}`;
 
         if (!entry.items) {
           return (
-            <div className="rpp-pn-slot" key={entry.href}>
+            <div className={slotClass} key={entry.href}>
               <Link
                 to={entry.href}
                 className={`rpp-pn-trigger rpp-pn-trigger bg-transparent${pathname === entry.href ? " is-active" : ""}`}
@@ -268,7 +309,7 @@ const PrimaryNav = () => {
 
         return (
           <div
-            className="rpp-pn-slot"
+            className={slotClass}
             key={entry.href}
             onMouseEnter={() => {
               cancelClose();
