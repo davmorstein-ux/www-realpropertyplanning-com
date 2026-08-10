@@ -38,8 +38,19 @@ export interface PrimaryNavEntry {
 
 export const PRIMARY_NAV: PrimaryNavEntry[] = [
   {
-    lines: ["About"],
-    href: "/about",
+    lines: ["Articles & Guides"],
+    href: "/guides-and-resources",
+    color: "#6b30a6",
+    items: [
+      { name: "All Guides & Articles", href: "/guides-and-resources" },
+      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
+      { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
+      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
+      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
+      { name: "Aging in Place", href: "/articles/aging-in-place" },
+      { name: "Wills, Trusts & Other Options", href: "/articles/wills-trusts-other-options" },
+      { name: "Terminology", href: "/terminology" },
+    ],
   },
   {
     lines: ["Probate &", "Estate Sales"],
@@ -72,21 +83,6 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     ],
   },
   {
-    lines: ["Articles & Guides"],
-    href: "/guides-and-resources",
-    color: "#6b30a6",
-    items: [
-      { name: "All Guides & Articles", href: "/guides-and-resources" },
-      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
-      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
-      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
-      { name: "Aging in Place", href: "/articles/aging-in-place" },
-      { name: "Wills, Trusts & Other Options", href: "/articles/wills-trusts-other-options" },
-      { name: "Terminology", href: "/terminology" },
-    ],
-  },
-  {
     lines: ["Real Estate &", "Legal Professionals"],
     href: "/for-attorneys",
     color: "#9c5000",
@@ -107,4 +103,9 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "Estate Liquidators", href: "/estate-liquidators" },
     ],
   },
+  {
+    lines: ["About"],
+    href: "/about",
+  },
+
 ];
