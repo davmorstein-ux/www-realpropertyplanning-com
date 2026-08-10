@@ -72,7 +72,7 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
   };
 
   return (
-    <div ref={menuRef} style={{ position: "relative", display: "inline-block" }}>
+    <div ref={menuRef} style={{ position: "relative", display: compact ? "flex" : "inline-block", alignSelf: compact ? "stretch" : undefined }}>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -99,8 +99,15 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
              roughly 42px, so this matches. 44 was the accessibility minimum
              rather than a visual match, and left the flag looking undersized
              next to a much larger control. */
-          minWidth: compact ? 52 : undefined,
-          minHeight: compact ? 42 : undefined,
+          /* Height comes from the row rather than a number: the parent in
+             Header.tsx stretches its children, so this matches the phone
+             button exactly and keeps matching if the phone's padding or type
+             size ever changes. A fixed minHeight was guesswork and never quite
+             lined up. */
+          minWidth: compact ? 56 : undefined,
+          minHeight: compact ? 44 : undefined,
+          height: compact ? "100%" : undefined,
+          alignSelf: compact ? "stretch" : undefined,
           fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
           fontSize: 13,
           fontWeight: 600,

@@ -20,7 +20,10 @@ const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-s
    and hamburger — so this value directly controls how much room the nav has.
    At 52px the logo is ~252px wide; every pixel added here is a pixel taken
    from the five nav labels. Lower it before shortening the labels. */
-const DESKTOP_LOGO_HEIGHT = 52;
+/* Raised from 52. The brand column is exactly the logo's width, and the search
+   field lives inside it beneath the hamburger — at 52 the field was too narrow
+   and clipped its own placeholder. Every point here widens the search. */
+const DESKTOP_LOGO_HEIGHT = 60;
 
 /* The logo file is 1608x331. Deriving its rendered width from the height above
    means the search field beneath it can be given exactly the same width — and
@@ -33,7 +36,7 @@ const LOGO_WIDTH = Math.round(DESKTOP_LOGO_HEIGHT * LOGO_ASPECT);
    row are laid out on identical tracks so every element lines up vertically:
    a hamburger-width leading slot, a flexible middle, and a fixed trailing slot
    that puts the phone button at the right edge. */
-const HAMBURGER_SLOT = 56; // bordered trigger button in the search row
+const HAMBURGER_SLOT = 48; // narrower so more of the brand column goes to the search field // bordered trigger button in the search row
 
 /* Search field width. It used to be flex:1 and swallowed the whole middle of
    the search row, which read as oversized next to the rest of the header.
@@ -313,7 +316,7 @@ const Header = () => {
                 </div>
               </div>
 
-              <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "center", gap: 14 }}>
+              <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "stretch", gap: 14 }}>
                 <LanguageSwitcher compact />
                 <a href="tel:2069003015"
                   className="rpp-header-phone"
@@ -343,10 +346,15 @@ const Header = () => {
               style={{
                 marginTop: 8,
                 paddingTop: 8,
+                paddingBottom: 8,
                 borderTop: "1px solid rgba(39,36,33,0.10)",
                 display: "flex",
                 alignItems: "center",
                 minWidth: 0,
+                /* Keeps the last label clear of the phone button sitting in the
+                   tier above it. Without this the right-hand category sat
+                   directly beneath the phone. */
+                paddingRight: 270,
               }}
             >
               <PrimaryNav />

@@ -251,6 +251,12 @@ const PrimaryNav = () => {
                     {line}
                   </span>
                 ))}
+                {/* Reserves the caret's height so a link without a menu sits on
+                    the same baseline as the ones with menus. Without it the
+                    caret-less entry floated lower than its neighbours. */}
+                <span className="rpp-pn-caret" aria-hidden="true" style={{ visibility: "hidden" }}>
+                  &#9660;
+                </span>
               </Link>
             </div>
           );
