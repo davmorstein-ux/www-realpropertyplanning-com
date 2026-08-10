@@ -91,22 +91,17 @@ const PrimaryNav = () => {
   return (
     <div className="rpp-primarynav" ref={navRef}>
       <style>{`
-        /* justify-content was space-between, which spread the five labels
-           across the full width and left large gaps between them. flex-end
-           with a fixed gap groups them together as a single navigation unit,
-           which is easier to scan than five widely separated items. */
-        .rpp-primarynav {
-          display: flex;
-          align-items: center;
-          /* space-around rather than flex-end: the nav now owns a full-width
-             tier of its own, so the five labels spread evenly across it with
-             breathing room on both sides instead of bunching at one end. */
-          /* space-between, not space-around: space-around adds half-gaps at
-             the ends, which indented the first and last labels away from the
-             page edges. The nav now starts flush with the hamburger on the
-             left and ends flush with the phone on the right. */
+        /* space-between distributes the leftover width equally between the
+           five entries, so every gap is the same regardless of how wide each
+           label is. */
           justify-content: space-between;
-          gap: 12px;
+          /* Scales with the window. At 1280px the four labels plus a fixed
+             40px gap overflow the space left by the search field and the
+             phone-width slot; at 1440px and up they fit comfortably. The clamp
+             keeps the spacing generous on wide screens and lets it tighten
+             rather than wrap on a laptop. Shorter labels are the only way to
+             have both. */
+          gap: clamp(14px, 2.2vw, 40px);
           flex: 1;
           min-width: 0;
         }
@@ -128,7 +123,13 @@ const PrimaryNav = () => {
              menu button. This recovers roughly 60px across the row, which is
              what keeps "Real Estate & Legal Professionals" on two lines rather
              than forcing the nav to wrap. */
-          font-size: 13px;
+          /* !important because index.css sizes the two element types this
+             component renders differently: the four entries with menus are
+             <button> and pick up "button { font-size: 18px !important }",
+             while the entry without one is an <a> and picks up
+             "header a { font-size: max(1rem, 16px) !important }". That is why
+             ABOUT rendered smaller than its neighbours. */
+          font-size: 13px !important;
           font-weight: 600;
           letter-spacing: 0.07em;
           text-transform: uppercase;
