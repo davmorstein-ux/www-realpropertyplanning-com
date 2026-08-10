@@ -94,6 +94,9 @@ const PrimaryNav = () => {
         /* space-between distributes the leftover width equally between the
            five entries, so every gap is the same regardless of how wide each
            label is. */
+        .rpp-primarynav {
+          display: flex;
+          align-items: center;
           justify-content: space-between;
           /* Scales with the window. At 1280px the four labels plus a fixed
              40px gap overflow the space left by the search field and the
