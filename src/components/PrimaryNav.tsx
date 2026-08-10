@@ -106,14 +106,19 @@ const PrimaryNav = () => {
           align-items: center;
           justify-content: center;
           gap: 0;
-          padding: 5px 8px;
+          padding: 5px 6px;
           background: none;
           border: none;
           border-bottom: 1px solid transparent;
           font-family: 'Raleway', 'Gill Sans', 'Century Gothic', sans-serif;
-          font-size: 13px;
+          /* Tightened from 13px/0.08em. The header is now a single row, so the
+             five labels share the space left by the logo, search field and
+             menu button. This recovers roughly 60px across the row, which is
+             what keeps "Real Estate & Legal Professionals" on two lines rather
+             than forcing the nav to wrap. */
+          font-size: 12.5px;
           font-weight: 600;
-          letter-spacing: 0.08em;
+          letter-spacing: 0.04em;
           text-transform: uppercase;
           /* Dark on the cream header. These were white when the header was
              near-black; if the header ever goes dark again, these flip back. */

@@ -16,22 +16,27 @@ const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-s
    header taller — the two-column layout is actually SHORTER than the previous
    stacked one (~112px vs ~140px) while the mark nearly doubles. Adjust this
    single value to taste. */
-const DESKTOP_LOGO_HEIGHT = 66;
+/* Logo height. The whole desktop header is now ONE row — logo, nav, search
+   and hamburger — so this value directly controls how much room the nav has.
+   At 52px the logo is ~252px wide; every pixel added here is a pixel taken
+   from the five nav labels. Lower it before shortening the labels. */
+const DESKTOP_LOGO_HEIGHT = 52;
 
 /* Shared column geometry for the desktop header. The nav row and the search
    row are laid out on identical tracks so every element lines up vertically:
    a hamburger-width leading slot, a flexible middle, and a fixed trailing slot
    that puts the phone button at the right edge. */
 const HAMBURGER_SLOT = 56; // bordered trigger button in the search row
-const COLUMN_GAP = 12;
-const CTA_SLOT = 215; // width of the phone button / empty slot above it
 
 /* Search field width. It used to be flex:1 and swallowed the whole middle of
    the search row, which read as oversized next to the rest of the header.
    It is now a fixed basis that may shrink but not grow; a flexible spacer to
    its right absorbs the leftover space and keeps the phone button flush with
    the right edge. Adjust this single value to taste. */
-const SEARCH_MAX_WIDTH = 520;
+/* Search width on the single-row header. Kept as a visible field rather than
+   an icon that expands: an always-present field is easier to find, which
+   matters more here than the space an icon would save. */
+const SEARCH_MAX_WIDTH = 210;
 
 /* The compact (mobile) header still renders plain links. The desktop header
    uses PrimaryNav, which adds the dropdown menus. Both read PRIMARY_NAV so
@@ -250,11 +255,47 @@ const Header = () => {
             </div>
           </>
         ) : (
-          <div style={{ display: "flex", alignItems: "stretch", gap: 24, minWidth: 0 }}>
-            {/* LEFT COLUMN — logo only. The hamburger moved into the search
-                row so the mark can sit flush against the left edge. */}
-            <div style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-              <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+          <>
+            {/* UTILITY ROW — language and phone only. These are secondary and
+                were previously sharing a row with navigation, which is what
+                made the header feel crowded and caused LANGUAGE to collide
+                with the search field. */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                gap: 18,
+                paddingBottom: 6,
+                marginBottom: 6,
+                borderBottom: "1px solid rgba(39,36,33,0.10)",
+              }}
+            >
+              <LanguageSwitcher />
+              <a href="tel:2069003015"
+                className="rpp-header-phone"
+                style={{
+                  fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
+                  color: "#fff",
+                  background: "#1f6fb2",
+                  borderRadius: 6,
+                  fontWeight: 700,
+                  letterSpacing: "0.02em",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                  padding: "6px 16px",
+                  display: "inline-flex",
+                  alignItems: "center",
+                }}
+              >
+                (206) 900-3015
+              </a>
+            </div>
+
+            {/* MAIN ROW — logo, navigation, search, menu. One row, so nothing
+                stacks and the eye travels left to right once. */}
+            <div style={{ display: "flex", alignItems: "center", gap: 18, minWidth: 0 }}>
+              <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
                 <img
                   src="/rpp-logo-v9.webp"
                   alt="Real Property Planning"
@@ -270,103 +311,32 @@ const Header = () => {
                   height={331}
                 />
               </Link>
-            </div>
 
-            {/* RIGHT COLUMN — nav row above, search row below, on shared tracks */}
-            <div
-              style={{
-                flex: 1,
-                minWidth: 0,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                gap: 0,
-              }}
-            >
-              <nav aria-label="Primary" style={{ display: "flex", alignItems: "center", gap: COLUMN_GAP, minWidth: 0 }}>
-                {/* Leading spacer matches the hamburger slot in the row below,
-                    so the first nav link starts exactly above the search field. */}
-                <div style={{ width: HAMBURGER_SLOT, flexShrink: 0 }} aria-hidden="true" />
+              <PrimaryNav />
 
-                {/* Desktop primary nav with dropdown menus. The compact layout
-                    above still renders plain links; PrimaryNav hides itself
-                    below 950px so the two never show at once. */}
-                <PrimaryNav />
+              <div
+                style={{
+                  flexShrink: 0,
+                  width: SEARCH_MAX_WIDTH,
+                  minWidth: 0,
+                }}
+              >
+                <SiteSearchBar />
+              </div>
 
-                {/* Contact used to sit here, centred above the phone button. It has
-                    been removed from the nav (it now lives on the About page), but
-                    the empty slot is deliberately kept: it holds the nav row and the
-                    search row on the same column tracks, so the logo and phone
-                    button below stay aligned. Do not delete it. */}
-                <div style={{ width: CTA_SLOT, flexShrink: 0 }} aria-hidden="true" />
-              </nav>
-
-              <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(39,36,33,0.12)" }}>
-                <div style={{ display: "flex", alignItems: "stretch", gap: COLUMN_GAP, minWidth: 0 }}>
-                  {/* Hamburger moved down here so it is horizontally aligned
-                      with the search field, freeing the logo to sit flush left. */}
-                  <div
-                    style={{
-                      width: HAMBURGER_SLOT,
-                      flexShrink: 0,
-                      display: "flex",
-                      /* stretch so the trigger fills the search row's height */
-                      alignItems: "stretch",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <WaterfallNav />
-                  </div>
-
-                  <div
-                    style={{
-                      flexGrow: 0,
-                      flexShrink: 1,
-                      flexBasis: SEARCH_MAX_WIDTH,
-                      minWidth: 0,
-                    }}
-                  >
-                    <SiteSearchBar />
-                  </div>
-
-                  {/* Flexible spacer. Without it the shortened search field would
-                      leave slack at the END of the row, pushing the phone button
-                      off the right edge and out of alignment with the empty slot
-                      above it in the nav row. */}
-                  <div style={{ flex: 1, minWidth: 0 }} aria-hidden="true" />
-
-                  {/* Language sits immediately left of the phone button. */}
-                  <div style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-                    <LanguageSwitcher />
-                  </div>
-
-                  <a href="tel:2069003015"
-                    className="rpp-header-phone"
-                    style={{
-                      ...NAV_FONT,
-                      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
-                      color: "#fff",
-                      background: "#1f6fb2",
-                      borderRadius: 8,
-                      fontWeight: 700,
-                      fontSize: 22,
-                      letterSpacing: "0.02em",
-                      textTransform: "uppercase",
-                      textDecoration: "none",
-                      whiteSpace: "nowrap",
-                      width: CTA_SLOT,
-                      flexShrink: 0,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    (206) 900-3015
-                  </a>
-                </div>
+              <div
+                style={{
+                  width: HAMBURGER_SLOT,
+                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <WaterfallNav />
               </div>
             </div>
-          </div>
+          </>
         )}
       </header>
     </>
