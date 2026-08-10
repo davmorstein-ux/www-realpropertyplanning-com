@@ -22,6 +22,13 @@ const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-s
    from the five nav labels. Lower it before shortening the labels. */
 const DESKTOP_LOGO_HEIGHT = 52;
 
+/* The logo file is 1608x331. Deriving its rendered width from the height above
+   means the search field beneath it can be given exactly the same width — and
+   stays matched if the logo height is ever changed. Hardcoding a pixel value
+   here would silently break that alignment. */
+const LOGO_ASPECT = 1608 / 331;
+const LOGO_WIDTH = Math.round(DESKTOP_LOGO_HEIGHT * LOGO_ASPECT);
+
 /* Shared column geometry for the desktop header. The nav row and the search
    row are laid out on identical tracks so every element lines up vertically:
    a hamburger-width leading slot, a flexible middle, and a fixed trailing slot
@@ -38,10 +45,6 @@ const HAMBURGER_SLOT = 56; // bordered trigger button in the search row
    matters more here than the space an icon would save. */
 /* Search width in the utility row. It shares that row with the language
    switcher and the phone button and may shrink below this on narrow screens. */
-/* Search field width. It now sits centred beneath the logo, so this caps how
-   wide that left column gets — the logo itself is about 250px at the height
-   below. Keep the two roughly matched or the column looks lopsided. */
-const SEARCH_MAX_WIDTH = 300;
 
 /* The compact (mobile) header still renders plain links. The desktop header
    uses PrimaryNav, which adds the dropdown menus. Both read PRIMARY_NAV so
@@ -260,22 +263,19 @@ const Header = () => {
             </div>
           </>
         ) : (
-          <div style={{ display: "flex", alignItems: "flex-start", gap: 28, minWidth: 0 }}>
-            {/* LEFT COLUMN — logo with the search field centred beneath it.
-                The search used to sit in the right-hand corner alongside the
-                language switcher and phone, which made four controls compete
-                for one corner. Here it has its own space and reads as part of
-                the brand block rather than another control in a cluster. */}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: 8,
-                flexShrink: 0,
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <>
+            {/* TIER 1 — brand block on the left, phone on the right.
+                The nav is NOT here. Sharing this row with the phone meant the
+                right-hand labels sat directly beneath the phone button, and
+                reserving space to clear it left about 60px for four gaps —
+                less separation between labels, not more. Giving the nav its
+                own tier below costs roughly 40px of header height and buys it
+                the full page width. */}
+            <div style={{ display: "flex", alignItems: "center", gap: 28, minWidth: 0 }}>
+              {/* Hamburger sits beside a stacked column holding the logo over
+                  the search field. The column is exactly LOGO_WIDTH, so the
+                  field and the wordmark share an edge on both sides. */}
+              <div style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
                 <div
                   style={{
                     width: HAMBURGER_SLOT,
@@ -287,32 +287,30 @@ const Header = () => {
                 >
                   <WaterfallNav />
                 </div>
-                <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-                  <img
-                    src="/rpp-logo-v9.webp"
-                    alt="Real Property Planning"
-                    style={{
-                      height: DESKTOP_LOGO_HEIGHT,
-                      width: "auto",
-                      display: "block",
-                      objectFit: "contain",
-                    }}
-                    sizes="100vw"
-                    decoding="async"
-                    width={1608}
-                    height={331}
-                  />
-                </Link>
+
+                <div style={{ width: LOGO_WIDTH, display: "flex", flexDirection: "column", gap: 8 }}>
+                  <Link to="/" style={{ display: "block" }}>
+                    <img
+                      src="/rpp-logo-v9.webp"
+                      alt="Real Property Planning"
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        display: "block",
+                        objectFit: "contain",
+                      }}
+                      sizes="100vw"
+                      decoding="async"
+                      width={1608}
+                      height={331}
+                    />
+                  </Link>
+                  <SiteSearchBar />
+                </div>
               </div>
 
-              <div style={{ width: "100%", maxWidth: SEARCH_MAX_WIDTH }}>
-                <SiteSearchBar />
-              </div>
-            </div>
-
-            {/* RIGHT COLUMN — phone above, navigation below. */}
-            <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", gap: 10 }}>
-              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "center", gap: 14 }}>
+                <LanguageSwitcher compact />
                 <a href="tel:2069003015"
                   className="rpp-header-phone"
                   style={{
@@ -324,7 +322,7 @@ const Header = () => {
                     letterSpacing: "0.02em",
                     textDecoration: "none",
                     whiteSpace: "nowrap",
-                    padding: "6px 18px",
+                    padding: "8px 20px",
                     display: "inline-flex",
                     alignItems: "center",
                   }}
@@ -332,20 +330,24 @@ const Header = () => {
                   (206) 900-3015
                 </a>
               </div>
-
-              {/* Nav and the language control share one line. The switcher is
-                  in compact mode — flag only. An abbreviation like "LNG" was
-                  considered and rejected: the people most likely to need this
-                  control are the ones least able to read an English
-                  abbreviation, whereas a flag needs no language at all. */}
-              <div style={{ display: "flex", alignItems: "center", gap: 14, minWidth: 0 }}>
-                <PrimaryNav />
-                <div style={{ flexShrink: 0, display: "flex", alignItems: "center" }}>
-                  <LanguageSwitcher compact />
-                </div>
-              </div>
             </div>
-          </div>
+
+            {/* TIER 2 — navigation across the full width, on its own rule.
+                Nothing sits above or below any label, so the five categories
+                read as one row of equals. */}
+            <div
+              style={{
+                marginTop: 8,
+                paddingTop: 8,
+                borderTop: "1px solid rgba(39,36,33,0.10)",
+                display: "flex",
+                alignItems: "center",
+                minWidth: 0,
+              }}
+            >
+              <PrimaryNav />
+            </div>
+          </>
         )}
       </header>
     </>

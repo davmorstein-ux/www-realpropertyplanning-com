@@ -98,8 +98,11 @@ const PrimaryNav = () => {
         .rpp-primarynav {
           display: flex;
           align-items: center;
-          justify-content: flex-end;
-          gap: 26px;
+          /* space-around rather than flex-end: the nav now owns a full-width
+             tier of its own, so the five labels spread evenly across it with
+             breathing room on both sides instead of bunching at one end. */
+          justify-content: space-around;
+          gap: 12px;
           flex: 1;
           min-width: 0;
         }
