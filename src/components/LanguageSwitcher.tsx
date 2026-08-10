@@ -91,7 +91,7 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
              different design system and broke the rhythm of the link row.
              Compact (mobile) keeps the bordered box, where it genuinely is a
              standalone icon button. */
-          border: compact ? "1px solid rgba(255,255,255,0.35)" : "none",
+          border: compact ? "1px solid rgba(39,36,33,0.35)" : "none",
           borderRadius: compact ? 6 : 0,
           padding: compact ? "0" : "6px 4px",
           minWidth: compact ? 44 : undefined,
