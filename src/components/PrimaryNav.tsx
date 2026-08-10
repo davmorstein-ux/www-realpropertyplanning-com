@@ -106,7 +106,7 @@ const PrimaryNav = () => {
           align-items: center;
           justify-content: center;
           gap: 0;
-          padding: 5px 6px;
+          padding: 5px 8px;
           background: none;
           border: none;
           border-bottom: 1px solid transparent;
@@ -116,9 +116,9 @@ const PrimaryNav = () => {
              menu button. This recovers roughly 60px across the row, which is
              what keeps "Real Estate & Legal Professionals" on two lines rather
              than forcing the nav to wrap. */
-          font-size: 12.5px;
+          font-size: 13px;
           font-weight: 600;
-          letter-spacing: 0.04em;
+          letter-spacing: 0.07em;
           text-transform: uppercase;
           /* Dark on the cream header. These were white when the header was
              near-black; if the header ever goes dark again, these flip back. */

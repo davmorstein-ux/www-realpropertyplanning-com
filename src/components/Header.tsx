@@ -36,7 +36,9 @@ const HAMBURGER_SLOT = 56; // bordered trigger button in the search row
 /* Search width on the single-row header. Kept as a visible field rather than
    an icon that expands: an always-present field is easier to find, which
    matters more here than the space an icon would save. */
-const SEARCH_MAX_WIDTH = 210;
+/* Search width in the utility row. It shares that row with the language
+   switcher and the phone button and may shrink below this on narrow screens. */
+const SEARCH_MAX_WIDTH = 260;
 
 /* The compact (mobile) header still renders plain links. The desktop header
    uses PrimaryNav, which adds the dropdown menus. Both read PRIMARY_NAV so
@@ -256,21 +258,25 @@ const Header = () => {
           </>
         ) : (
           <>
-            {/* UTILITY ROW — language and phone only. These are secondary and
-                were previously sharing a row with navigation, which is what
-                made the header feel crowded and caused LANGUAGE to collide
-                with the search field. */}
+            {/* UTILITY ROW — search, language, phone. Everything that is not
+                navigation lives here, so the row below carries only the logo
+                and the five categories. Putting the search field beside the
+                phone button was what made the right-hand corner feel stacked
+                and busy: four controls were competing for one corner. */}
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "flex-end",
-                gap: 18,
+                gap: 16,
                 paddingBottom: 6,
                 marginBottom: 6,
                 borderBottom: "1px solid rgba(39,36,33,0.10)",
               }}
             >
+              <div style={{ width: SEARCH_MAX_WIDTH, flexShrink: 1, minWidth: 0 }}>
+                <SiteSearchBar />
+              </div>
               <LanguageSwitcher />
               <a href="tel:2069003015"
                 className="rpp-header-phone"
@@ -286,15 +292,30 @@ const Header = () => {
                   padding: "6px 16px",
                   display: "inline-flex",
                   alignItems: "center",
+                  flexShrink: 0,
                 }}
               >
                 (206) 900-3015
               </a>
             </div>
 
-            {/* MAIN ROW — logo, navigation, search, menu. One row, so nothing
-                stacks and the eye travels left to right once. */}
-            <div style={{ display: "flex", alignItems: "center", gap: 18, minWidth: 0 }}>
+            {/* MAIN ROW — menu, logo, navigation. The hamburger leads on the
+                left because that is where a menu control is looked for, and
+                moving it out of the right corner leaves the nav the entire
+                middle of the row. */}
+            <div style={{ display: "flex", alignItems: "center", gap: 20, minWidth: 0 }}>
+              <div
+                style={{
+                  width: HAMBURGER_SLOT,
+                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <WaterfallNav />
+              </div>
+
               <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
                 <img
                   src="/rpp-logo-v9.webp"
@@ -312,29 +333,11 @@ const Header = () => {
                 />
               </Link>
 
+              {/* Gap between the logo and the first label. Without it "ABOUT"
+                  sits flush against the wordmark and reads as part of it. */}
+              <div style={{ width: 24, flexShrink: 0 }} aria-hidden="true" />
+
               <PrimaryNav />
-
-              <div
-                style={{
-                  flexShrink: 0,
-                  width: SEARCH_MAX_WIDTH,
-                  minWidth: 0,
-                }}
-              >
-                <SiteSearchBar />
-              </div>
-
-              <div
-                style={{
-                  width: HAMBURGER_SLOT,
-                  flexShrink: 0,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <WaterfallNav />
-              </div>
             </div>
           </>
         )}
