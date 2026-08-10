@@ -37,12 +37,6 @@ import { PRIMARY_NAV } from "@/lib/primaryNav";
    feel twitchy for anyone whose pointer control is not steady. */
 const HOVER_CLOSE_DELAY = 500;
 
-/* Width of the phone button in the tier above. The final entry is centred in a
-   slot this wide at the right-hand end, so it sits under the phone. Measured
-   from "(206) 900-3015" at 22px bold plus 20px padding each side — if the
-   phone's type size or padding changes, change this too. */
-const PHONE_SLOT = 215;
-
 const PrimaryNav = () => {
   const { pathname } = useLocation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -95,7 +89,7 @@ const PrimaryNav = () => {
   }, [openIndex]);
 
   return (
-    <div className="rpp-primarynav" ref={navRef} style={{ ["--pn-phone-slot" as string]: `${PHONE_SLOT}px` }}>
+    <div className="rpp-primarynav" ref={navRef}>
       <style>{`
         .rpp-primarynav {
           display: flex;
@@ -109,7 +103,11 @@ const PrimaryNav = () => {
              keeps the spacing generous on wide screens and lets it tighten
              rather than wrap on a laptop. Shorter labels are the only way to
              have both. */
-          --pn-gap: clamp(16px, 1.8vw, 30px);
+          /* Raised from 16px minimum. On a narrow screen the widest label —
+             "Real Estate & Legal Professionals" — sat close to its divider
+             while the shorter ones had room to spare. The extra gap plus the
+             wider trigger padding above evens that out. */
+          --pn-gap: clamp(24px, 2vw, 34px);
           gap: var(--pn-gap);
           flex: 1;
           min-width: 0;
@@ -117,6 +115,9 @@ const PrimaryNav = () => {
         .rpp-pn-slot { position: relative; }
         .rpp-pn-slot--last {
           margin-left: auto;
+          /* Set by Header.tsx from the phone button's measured width, so this
+             slot always matches it. The fallback only applies before the first
+             measurement. */
           width: var(--pn-phone-slot, 215px);
           display: flex;
           justify-content: center;
@@ -156,7 +157,7 @@ const PrimaryNav = () => {
           align-items: center;
           justify-content: center;
           gap: 0;
-          padding: 5px 8px;
+          padding: 5px 14px;
           background: none;
           border: none;
           border-bottom: 1px solid transparent;

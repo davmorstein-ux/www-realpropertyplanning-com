@@ -67,6 +67,24 @@ const Header = () => {
   const { pathname } = useLocation();
   const headerRef = useRef<HTMLElement>(null);
 
+  /* The final nav entry is centred beneath the phone button, which means it
+     needs the phone's width. That was a hardcoded estimate and it kept drifting
+     out of alignment whenever the button's padding or type size changed. This
+     measures the real element and publishes it as a CSS variable the nav reads,
+     so the two stay locked together. */
+  const phoneRef = useRef<HTMLAnchorElement>(null);
+  const [phoneWidth, setPhoneWidth] = useState(215);
+
+  useEffect(() => {
+    const el = phoneRef.current;
+    if (!el) return;
+    const measure = () => setPhoneWidth(Math.round(el.getBoundingClientRect().width));
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [isMobile]);
+
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 769);
     check();
@@ -313,6 +331,7 @@ const Header = () => {
               <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "stretch", gap: 14 }}>
                 <LanguageSwitcher compact />
                 <a href="tel:2069003015"
+                  ref={phoneRef}
                   className="rpp-header-phone"
                   style={{
                     fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
@@ -342,6 +361,7 @@ const Header = () => {
                 paddingTop: 8,
                 paddingBottom: 8,
                 borderTop: "1px solid rgba(39,36,33,0.10)",
+                ["--pn-phone-slot" as string]: `${phoneWidth}px`,
                 display: "flex",
                 alignItems: "center",
                 minWidth: 0,
