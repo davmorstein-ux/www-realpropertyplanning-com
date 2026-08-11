@@ -42,9 +42,9 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     href: "/guides-and-resources",
     color: "#6b30a6",
     items: [
-      { name: "All Guides & Articles", href: "/guides-and-resources" },
+     { name: "All Guides & Articles", href: "/guides-and-resources" },
+      { name: "Articles Library", href: "/articles" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
       { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
       { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
       { name: "Aging in Place", href: "/articles/aging-in-place" },
