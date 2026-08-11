@@ -100,9 +100,12 @@ const RPPHomeV3 = () => {
                 className="rpp-tagline-line-v2"
                 style={{
                   display: "block",
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  /* Source Serif 4 600 per the typography review — the tagline
+                     was the last Cormorant Garamond on the homepage, a third
+                     family doing a job the display serif now owns. */
+                  fontFamily: "'Source Serif 4', Georgia, serif",
                   fontSize: "clamp(28px, 4.4vw, 62px)",
-                  fontWeight: 700,
+                  fontWeight: 600,
                   fontStyle: "normal",
                   color: "#1B3A6B",
                   lineHeight: 1,
@@ -117,9 +120,12 @@ const RPPHomeV3 = () => {
                 className="rpp-tagline-line-v2"
                 style={{
                   display: "block",
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  /* Source Serif 4 600 per the typography review — the tagline
+                     was the last Cormorant Garamond on the homepage, a third
+                     family doing a job the display serif now owns. */
+                  fontFamily: "'Source Serif 4', Georgia, serif",
                   fontSize: "clamp(28px, 4.4vw, 62px)",
-                  fontWeight: 700,
+                  fontWeight: 600,
                   fontStyle: "normal",
                   color: "#1B3A6B",
                   lineHeight: 1,

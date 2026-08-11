@@ -160,11 +160,11 @@ const AFHValuationEstimator = () => {
     color: "#272421",
     fontSize: 15,
     padding: "10px 13px",
-    fontFamily: "'Raleway',sans-serif",
+    fontFamily: "'DM Sans', system-ui, sans-serif",
     boxSizing: "border-box",
   };
   const labelStyle: React.CSSProperties = {
-    fontFamily: "'Raleway',sans-serif",
+    fontFamily: "'DM Sans', system-ui, sans-serif",
     fontSize: 12,
     letterSpacing: ".1em",
     textTransform: "uppercase",
@@ -237,7 +237,7 @@ const AFHValuationEstimator = () => {
                 textTransform: "uppercase",
                 color: "#6f2a30",
                 marginBottom: 10,
-                fontFamily: "'Raleway',sans-serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
               }}
             >
               For sellers
@@ -245,7 +245,7 @@ const AFHValuationEstimator = () => {
             <h1
               style={{
                 fontSize: "clamp(28px,4vw,42px)",
-                fontFamily: "'Raleway',sans-serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#272421",
                 marginBottom: 12,
@@ -257,7 +257,7 @@ const AFHValuationEstimator = () => {
             <p
               style={{
                 fontSize: 18,
-                fontFamily: "'Raleway',sans-serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 color: "#302b26",
                 lineHeight: 1.7,
                 maxWidth: 600,
@@ -459,7 +459,7 @@ const AFHValuationEstimator = () => {
                 textTransform: "uppercase",
                 cursor: "pointer",
                 marginTop: 4,
-                fontFamily: "'Raleway',sans-serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 transition: "all 0.2s",
               }}
               onMouseEnter={(e) => {
@@ -632,7 +632,7 @@ const AFHValuationEstimator = () => {
                     cursor: "pointer",
                     letterSpacing: ".12em",
                     textTransform: "uppercase",
-                    fontFamily: "'Raleway',sans-serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontWeight: 700,
                     whiteSpace: "nowrap",
                     transition: "all 0.2s",

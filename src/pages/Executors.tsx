@@ -145,7 +145,7 @@ const Executors = () => (
                 >
                   <div
                     style={{
-                      fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: 34,
                       fontWeight: 800,
                       letterSpacing: "0.04em",
@@ -175,7 +175,7 @@ const Executors = () => (
                 <div style={{ padding: "18px 20px", flex: 1, display: "flex", flexDirection: "column", gap: 16 }}>
                   <p
                     style={{
-                      fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: 19,
                       color: "#8B0000",
                       lineHeight: 1.6,
@@ -220,7 +220,7 @@ const Executors = () => (
                             display: "flex",
                             alignItems: "flex-start",
                             gap: 9,
-                            fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+                            fontFamily: "'DM Sans', system-ui, sans-serif",
                             fontSize: 18,
                             color: "#8B0000",
                             lineHeight: 1.5,

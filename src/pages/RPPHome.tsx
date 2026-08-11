@@ -95,7 +95,7 @@ const RPPHome = () => {
             <p
               className="hero-tagline-override"
               style={{
-                fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontSize: "clamp(28px, 3.6vw, 42px)",
                 fontWeight: 800,
                 color: "#272421",

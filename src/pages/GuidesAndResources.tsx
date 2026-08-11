@@ -6,7 +6,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
 
-const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
+const NAV_FONT = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 const GOLD = "#7f2028";
 
 const categories = [

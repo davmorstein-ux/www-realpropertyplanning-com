@@ -44,18 +44,18 @@ const AFHROICalculator = () => {
       if (!pBtn || !dBtn) return;
       if (mode === "pct") {
         pBtn.style.cssText =
-          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#b62733;color:#ffffff;outline:none;border-radius:6px 0 0 6px";
+          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#b62733;color:#ffffff;outline:none;border-radius:6px 0 0 6px";
         dBtn.style.cssText =
-          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#f5f2ec;color:#272421;outline:none;border-radius:0 6px 6px 0";
+          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#f5f2ec;color:#272421;outline:none;border-radius:0 6px 6px 0";
         if (inp) inp.placeholder = "25";
         if (hint) hint.textContent = "Enter percentage of purchase price";
         if (price > 0 && cur > 0 && inp) inp.value = String(Math.round((cur / price) * 100));
         else if (inp) inp.value = "";
       } else {
         dBtn.style.cssText =
-          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#b62733;color:#ffffff;outline:none;border-radius:0 6px 6px 0";
+          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#b62733;color:#ffffff;outline:none;border-radius:0 6px 6px 0";
         pBtn.style.cssText =
-          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:Raleway,sans-serif;border:none;background:#f5f2ec;color:#272421;outline:none;border-radius:6px 0 0 6px";
+          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#f5f2ec;color:#272421;outline:none;border-radius:6px 0 0 6px";
         if (inp) inp.placeholder = "212500";
         if (hint) hint.textContent = "Enter dollar amount of down payment";
         if (price > 0 && cur > 0 && inp) inp.value = String(Math.round(price * (cur / 100)));
@@ -175,7 +175,7 @@ const AFHROICalculator = () => {
     color: "#272421",
     fontSize: 15,
     padding: "10px 13px",
-    fontFamily: "'Raleway',sans-serif",
+    fontFamily: "'DM Sans', system-ui, sans-serif",
     boxSizing: "border-box",
     display: "block",
   };
@@ -249,7 +249,7 @@ const AFHROICalculator = () => {
                 textTransform: "uppercase",
                 color: "#6f2a30",
                 marginBottom: 10,
-                fontFamily: "'Raleway',sans-serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
               }}
             >
               For buyers &amp; investors
@@ -257,7 +257,7 @@ const AFHROICalculator = () => {
             <h1
               style={{
                 fontSize: "clamp(28px,4vw,42px)",
-                fontFamily: "'Raleway',sans-serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#272421",
                 marginBottom: 12,
@@ -269,7 +269,7 @@ const AFHROICalculator = () => {
             <p
               style={{
                 fontSize: 18,
-                fontFamily: "'Raleway',sans-serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 color: "#302b26",
                 lineHeight: 1.7,
                 maxWidth: 600,
@@ -392,7 +392,7 @@ const AFHROICalculator = () => {
                         fontSize: 18,
                         fontWeight: 700,
                         cursor: "pointer",
-                        fontFamily: "Raleway,sans-serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         border: "none",
                         background: BLUE,
                         color: "#ffffff",
@@ -409,7 +409,7 @@ const AFHROICalculator = () => {
                         fontSize: 15,
                         fontWeight: 700,
                         cursor: "pointer",
-                        fontFamily: "Raleway,sans-serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         border: "none",
                         background: "#f5f2ec",
                         color: "#272421",
@@ -506,7 +506,7 @@ const AFHROICalculator = () => {
                 textTransform: "uppercase",
                 cursor: "pointer",
                 marginTop: 4,
-                fontFamily: "'Raleway',sans-serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 transition: "all 0.2s",
                 display: "block",
               }}
@@ -664,7 +664,7 @@ const AFHROICalculator = () => {
                     cursor: "pointer",
                     letterSpacing: ".12em",
                     textTransform: "uppercase",
-                    fontFamily: "'Raleway',sans-serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontWeight: 700,
                     whiteSpace: "nowrap",
                     transition: "all 0.2s",

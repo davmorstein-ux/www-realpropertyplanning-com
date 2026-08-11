@@ -188,7 +188,7 @@ const Articles = () => {
                   <span
                     style={{
                       fontSize: 11,
-                      fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontWeight: 700,
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
