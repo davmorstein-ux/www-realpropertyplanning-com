@@ -5,28 +5,37 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
+/* `minutes` is a measured read time, not a guess: word count of each article
+   page's rendered text divided by 200 wpm, rounded. If an article is
+   substantially rewritten, re-measure rather than eyeballing — a stated read
+   time that's wrong is worse than none. The audio narrations announce their
+   own duration in the player, so no separate listen time is shown. */
 const ARTICLES = [
   {
     title: "The Silver Tsunami",
     href: "/articles/silver-tsunami",
+    minutes: 5,
     img: "/The_Silver_Tsunami.webp",
     description: "The surge of seniors is reshaping housing, care, and the future of our communities — ready or not.",
   },
   {
     title: "The Senior Housing Guide",
     href: "/articles/senior-housing-guide",
+    minutes: 6,
     img: "/The_Senior_Housing_Guide.webp",
     description: "A clear, honest roadmap for one of the most important decisions a family will ever make.",
   },
   {
     title: "Senior Housing Options",
     href: "/articles/senior-housing-options",
+    minutes: 7,
     img: "/Senior_Housing_Options.webp",
     description: "A roadmap to informed decisions — before urgency makes the choice for you.",
   },
   {
     title: "Senior Housing Costs",
     href: "/articles/senior-housing-costs",
+    minutes: 5,
     img: "/Senior_Housing_Costs.webp",
     description:
       "What families need to know before they start comparing options — and what the brochure won't tell you.",
@@ -34,30 +43,35 @@ const ARTICLES = [
   {
     title: "How to Choose Senior Housing",
     href: "/articles/how-to-choose-senior-housing",
+    minutes: 6,
     img: "/How_to_Choose_Senior_Housing.webp",
     description: "A step-by-step guide for families navigating one of life's most important decisions.",
   },
   {
     title: "Independent Living Costs",
     href: "/articles/independent-living-costs",
+    minutes: 6,
     img: "/Independent_Living_Costs.webp",
     description: "What the monthly fee actually covers — and what the number on the brochure doesn't tell you.",
   },
   {
     title: "Memory Care Costs",
     href: "/articles/memory-care-costs",
+    minutes: 6,
     img: "/Memory_Care_Costs.webp",
     description: "What families need to know — and what no brochure will tell you about making this decision.",
   },
   {
     title: "CCRC Costs",
     href: "/articles/ccrc-costs",
+    minutes: 7,
     img: "/CCRC_Costs.webp",
     description: "Continuing care retirement communities are expensive. Here's what you're really buying.",
   },
   {
     title: "Affordable Senior Housing",
     href: "/articles/affordable-senior-housing",
+    minutes: 6,
     img: "/Affordable_Senior_Housing.webp",
     description:
       "For older adults on fixed incomes, the right housing isn't just about comfort — it's about financial survival.",
@@ -65,6 +79,7 @@ const ARTICLES = [
   {
     title: "Aging in Place With Support",
     href: "/articles/aging-in-place",
+    minutes: 6,
     img: "/Aging_in_Place_With_Support.webp",
     description:
       "Most older adults want to stay home. Here's what that actually takes — and how to know when it's still the right answer.",
@@ -72,6 +87,7 @@ const ARTICLES = [
   {
     title: "Wills, Trusts, and Other Options",
     href: "/articles/wills-trusts-other-options",
+    minutes: 5,
     img: "/Wills_Trusts_Other_Options.webp",
     description: "How to pass real estate to your children — and the tradeoffs each method carries.",
   },
@@ -167,13 +183,28 @@ const Articles = () => {
                       fontSize: 18,
                       fontWeight: 700,
                       color: "#280a0c",
-                      margin: "0 0 8px",
+                      margin: "0 0 4px",
                       lineHeight: 1.3,
                       fontFamily: "Georgia, serif",
                     }}
                   >
                     {article.title}
                   </h3>
+                  {/* Measured read time — see the note on ARTICLES. Sits between
+                      title and description so a scanner sees the commitment
+                      before the pitch. Plain text, not a pill: eleven small
+                      badges on one page would be noise. */}
+                  <p
+                    style={{
+                      fontSize: 13,
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontWeight: 600,
+                      color: "#6d6762",
+                      margin: "0 0 8px",
+                    }}
+                  >
+                    {article.minutes} min read
+                  </p>
                   <p
                     style={{
                       fontSize: 14,
