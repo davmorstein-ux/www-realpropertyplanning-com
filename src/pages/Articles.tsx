@@ -6,7 +6,10 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 /* `minutes` is a measured read time, not a guess: word count of each article
-   page's rendered text divided by 200 wpm, rounded. If an article is
+   page's rendered text divided by 200 wpm, rounded. `listenMinutes` is the
+   narration MP3's actual duration, read from file metadata in the browser
+   (2026-08) and rounded to the nearest minute — the narrations are abridged,
+   so listen and read times legitimately differ. If an article is
    substantially rewritten, re-measure rather than eyeballing — a stated read
    time that's wrong is worse than none. The audio narrations announce their
    own duration in the player, so no separate listen time is shown. */
@@ -15,6 +18,7 @@ const ARTICLES = [
     title: "The Silver Tsunami",
     href: "/articles/silver-tsunami",
     minutes: 5,
+    listenMinutes: 7,
     img: "/The_Silver_Tsunami.webp",
     description: "The surge of seniors is reshaping housing, care, and the future of our communities — ready or not.",
   },
@@ -22,6 +26,7 @@ const ARTICLES = [
     title: "The Senior Housing Guide",
     href: "/articles/senior-housing-guide",
     minutes: 6,
+    listenMinutes: 8,
     img: "/The_Senior_Housing_Guide.webp",
     description: "A clear, honest roadmap for one of the most important decisions a family will ever make.",
   },
@@ -29,6 +34,7 @@ const ARTICLES = [
     title: "Senior Housing Options",
     href: "/articles/senior-housing-options",
     minutes: 7,
+    listenMinutes: 5,
     img: "/Senior_Housing_Options.webp",
     description: "A roadmap to informed decisions — before urgency makes the choice for you.",
   },
@@ -36,6 +42,7 @@ const ARTICLES = [
     title: "Senior Housing Costs",
     href: "/articles/senior-housing-costs",
     minutes: 5,
+    listenMinutes: 4,
     img: "/Senior_Housing_Costs.webp",
     description:
       "What families need to know before they start comparing options — and what the brochure won't tell you.",
@@ -44,6 +51,7 @@ const ARTICLES = [
     title: "How to Choose Senior Housing",
     href: "/articles/how-to-choose-senior-housing",
     minutes: 6,
+    listenMinutes: 5,
     img: "/How_to_Choose_Senior_Housing.webp",
     description: "A step-by-step guide for families navigating one of life's most important decisions.",
   },
@@ -51,6 +59,7 @@ const ARTICLES = [
     title: "Independent Living Costs",
     href: "/articles/independent-living-costs",
     minutes: 6,
+    listenMinutes: 5,
     img: "/Independent_Living_Costs.webp",
     description: "What the monthly fee actually covers — and what the number on the brochure doesn't tell you.",
   },
@@ -58,6 +67,7 @@ const ARTICLES = [
     title: "Memory Care Costs",
     href: "/articles/memory-care-costs",
     minutes: 6,
+    listenMinutes: 6,
     img: "/Memory_Care_Costs.webp",
     description: "What families need to know — and what no brochure will tell you about making this decision.",
   },
@@ -65,6 +75,7 @@ const ARTICLES = [
     title: "CCRC Costs",
     href: "/articles/ccrc-costs",
     minutes: 7,
+    listenMinutes: 5,
     img: "/CCRC_Costs.webp",
     description: "Continuing care retirement communities are expensive. Here's what you're really buying.",
   },
@@ -72,6 +83,7 @@ const ARTICLES = [
     title: "Affordable Senior Housing",
     href: "/articles/affordable-senior-housing",
     minutes: 6,
+    listenMinutes: 5,
     img: "/Affordable_Senior_Housing.webp",
     description:
       "For older adults on fixed incomes, the right housing isn't just about comfort — it's about financial survival.",
@@ -80,6 +92,7 @@ const ARTICLES = [
     title: "Aging in Place With Support",
     href: "/articles/aging-in-place",
     minutes: 6,
+    listenMinutes: 4,
     img: "/Aging_in_Place_With_Support.webp",
     description:
       "Most older adults want to stay home. Here's what that actually takes — and how to know when it's still the right answer.",
@@ -88,6 +101,7 @@ const ARTICLES = [
     title: "Wills, Trusts, and Other Options",
     href: "/articles/wills-trusts-other-options",
     minutes: 5,
+    listenMinutes: 4,
     img: "/Wills_Trusts_Other_Options.webp",
     description: "How to pass real estate to your children — and the tradeoffs each method carries.",
   },
@@ -203,7 +217,7 @@ const Articles = () => {
                       margin: "0 0 8px",
                     }}
                   >
-                    {article.minutes} min read
+                    {article.minutes} min read &middot; {article.listenMinutes} min listen
                   </p>
                   <p
                     style={{
