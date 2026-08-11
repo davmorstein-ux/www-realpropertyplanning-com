@@ -348,22 +348,46 @@ const RPPHomeV3 = () => {
                 line-height: 1.35;
                 white-space: nowrap;
               }
+              /* A filled button, not a text link. It was text-with-an-arrow on
+                 the reasoning that the whole card is already clickable, so a
+                 button inside it duplicated the affordance. Testing showed the
+                 opposite: a reader scanning the homepage did not register the
+                 card as clickable at all. The card above it is the same white
+                 rounded panel and is NOT clickable, which teaches the eye that
+                 this shape is an information panel.
+
+                 A filled shape is the strongest signal available and costs one
+                 element. Keep it filled.
+
+                 White on #6b1b22 measures 11.63:1, and 14.43:1 on hover — the
+                 label has to survive the global card rule that repaints spans
+                 inside rounded cards, hence the !important on colour. */
               .rpp-coc-cta.rpp-coc-cta {
                 display: inline-flex;
                 align-items: center;
-                gap: 6px;
-                background: none !important;
-                color: #6b1b22 !important;
+                justify-content: center;
+                gap: 8px;
+                background: #6b1b22 !important;
+                color: #ffffff !important;
                 font-family: 'DM Sans', system-ui, sans-serif;
-                font-size: 20px !important;
+                font-size: 19px !important;
                 font-weight: 700 !important;
-                padding: 0 !important;
+                letter-spacing: 0.01em;
+                padding: 14px 30px !important;
+                min-height: 52px;
                 border: 0 !important;
+                border-radius: 8px;
                 white-space: nowrap;
+                text-decoration: none !important;
+                /* Slight lift and a shadow so it reads as a raised control
+                   rather than a coloured rectangle. */
+                box-shadow: 0 2px 6px rgba(107, 27, 34, 0.35);
+                transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
               }
               .rpp-coc-card:hover .rpp-coc-cta.rpp-coc-cta {
-                text-decoration: underline !important;
-                text-underline-offset: 3px !important;
+                background: #501419 !important;
+                box-shadow: 0 4px 12px rgba(107, 27, 34, 0.45);
+                transform: translateY(-1px);
               }
               .rpp-coc-left.rpp-coc-left {
                 display: flex;
