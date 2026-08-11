@@ -247,7 +247,6 @@ const LTCMedicaidAndLongTermCare = lazy(() => import("./pages/long-term-care/Med
 const LTCWaCares = lazy(() => import("./pages/long-term-care/WaCares"));
 const LTCHowToChooseCareSettings = lazy(() => import("./pages/long-term-care/HowToChooseCareSettings"));
 const LTCHospitalDischargePlanning = lazy(() => import("./pages/long-term-care/HospitalDischargePlanning"));
-const CostOfCareCalculator = lazy(() => import("./pages/CostOfCareCalculator"));
 const CostOfCareHub = lazy(() => import("./pages/CostOfCareHub"));
 const CostOfCareDetail = lazy(() => import("./pages/CostOfCareDetail"));
 const LTCFindingCareRoomAndCare = lazy(() => import("./pages/long-term-care/FindingCareRoomAndCare"));
@@ -521,7 +520,15 @@ const App = () => (
             path="/es/cost-of-care-calculator"
             element={
               <LanguageRoute lang="es">
-                <CostOfCareCalculator />
+                <CostOfCareHub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/es/cost-of-care-calculator/:careSlug"
+            element={
+              <LanguageRoute lang="es">
+                <CostOfCareDetail />
               </LanguageRoute>
             }
           />
@@ -534,7 +541,11 @@ const App = () => (
             }
           />
           {/* One route serves all six housing options; the slug picks the care
-              type. An unknown slug redirects to the hub from inside the page. */}
+              type. An unknown slug redirects to the hub from inside the page.
+              The seven locale paths above mirror this pair exactly. They spent
+              months pointing at a bare figures fragment with no header or
+              footer; content is still English until i18n keys exist, but a
+              working English page beats a broken one. */}
           <Route
             path="/cost-of-care-calculator/:careSlug"
             element={
@@ -547,7 +558,15 @@ const App = () => (
             path="/zh-tw/cost-of-care-calculator"
             element={
               <LanguageRoute lang="zh-TW">
-                <CostOfCareCalculator />
+                <CostOfCareHub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-tw/cost-of-care-calculator/:careSlug"
+            element={
+              <LanguageRoute lang="zh-TW">
+                <CostOfCareDetail />
               </LanguageRoute>
             }
           />
@@ -555,7 +574,15 @@ const App = () => (
             path="/zh-cn/cost-of-care-calculator"
             element={
               <LanguageRoute lang="zh-CN">
-                <CostOfCareCalculator />
+                <CostOfCareHub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/zh-cn/cost-of-care-calculator/:careSlug"
+            element={
+              <LanguageRoute lang="zh-CN">
+                <CostOfCareDetail />
               </LanguageRoute>
             }
           />
@@ -563,7 +590,15 @@ const App = () => (
             path="/tl/cost-of-care-calculator"
             element={
               <LanguageRoute lang="tl">
-                <CostOfCareCalculator />
+                <CostOfCareHub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/tl/cost-of-care-calculator/:careSlug"
+            element={
+              <LanguageRoute lang="tl">
+                <CostOfCareDetail />
               </LanguageRoute>
             }
           />
@@ -571,7 +606,15 @@ const App = () => (
             path="/vi/cost-of-care-calculator"
             element={
               <LanguageRoute lang="vi">
-                <CostOfCareCalculator />
+                <CostOfCareHub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/vi/cost-of-care-calculator/:careSlug"
+            element={
+              <LanguageRoute lang="vi">
+                <CostOfCareDetail />
               </LanguageRoute>
             }
           />
@@ -579,7 +622,15 @@ const App = () => (
             path="/ro/cost-of-care-calculator"
             element={
               <LanguageRoute lang="ro">
-                <CostOfCareCalculator />
+                <CostOfCareHub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ro/cost-of-care-calculator/:careSlug"
+            element={
+              <LanguageRoute lang="ro">
+                <CostOfCareDetail />
               </LanguageRoute>
             }
           />
@@ -587,7 +638,15 @@ const App = () => (
             path="/ti/cost-of-care-calculator"
             element={
               <LanguageRoute lang="ti">
-                <CostOfCareCalculator />
+                <CostOfCareHub />
+              </LanguageRoute>
+            }
+          />
+          <Route
+            path="/ti/cost-of-care-calculator/:careSlug"
+            element={
+              <LanguageRoute lang="ti">
+                <CostOfCareDetail />
               </LanguageRoute>
             }
           />
