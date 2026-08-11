@@ -45,8 +45,8 @@ const KitsapCounty = () => (
         answer: "Yes. Waterfront and water-view properties require assessments that account for shoreline type, view corridors, bulkhead condition, and access — factors that automated valuation tools consistently miss. Our certified appraiser credentials give us the training and experience to evaluate these features accurately, helping executors and trustees set prices that reflect actual market value.",
       },
       {
-        question: "Can we team manage a Kitsap County sale if I live in Seattle or out of state?",
-        answer: "Absolutely. The ferry-separated geography of Kitsap County makes remote management common. We handle property access, vendor coordination, preparation, showings, and the full sale process — providing consistent updates so you can manage your executor or trustee responsibilities from wherever you are.",
+        question: "Can a Kitsap County sale be managed if I live in Seattle or out of state?",
+        answer: "Absolutely. The ferry-separated geography of Kitsap County makes remote management common. David Stein handles property access, vendor coordination, preparation, showings, and the full sale process — providing consistent updates so you can manage your executor or trustee responsibilities from wherever you are.",
       },
       {
         question: "What makes selling a home in Poulsbo or Kingston different from other Kitsap communities?",

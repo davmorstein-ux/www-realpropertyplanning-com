@@ -48,8 +48,8 @@ const PierceCounty = () => (
         answer: "Heir disagreements about preparation strategy are common in Pierce County estates. We provide objective, condition-based analysis showing what specific improvements are likely to return and what the as-is value looks like — giving all parties the data they need to make an informed decision rather than arguing based on assumptions.",
       },
       {
-        question: "Can we team manage a Pierce County estate sale if I live out of state?",
-        answer: "Yes. our team regularly coordinates Pierce County estate sales for executors and trustees who live in Seattle, Portland, California, and beyond. We manage property access, vendor coordination, cleanout supervision, and the full sale process — providing consistent updates so you can fulfill your fiduciary role without repeated travel to the area.",
+        question: "Can a Pierce County estate sale be managed if I live out of state?",
+        answer: "Yes. David Stein regularly coordinates Pierce County estate sales for executors and trustees who live in Seattle, Portland, California, and beyond — managing property access, vendor coordination, cleanout supervision, and the full sale process, with consistent updates so you can fulfill your fiduciary role without repeated travel to the area.",
       },
       {
         question: "How long does it typically take to sell an inherited home in Pierce County?",

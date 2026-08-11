@@ -43,8 +43,8 @@ const KingCounty = () => (
         answer: "King County's real estate market is active and competitive — but estate and probate properties don't always benefit from that competitiveness automatically. Homes with deferred maintenance, extended vacancy, or condition issues can sit if they're priced or presented incorrectly. Our approach starts with an honest, condition-adjusted valuation — not a number designed to win a listing — followed by a preparation strategy that's calibrated to the property's specific situation and neighborhood.",
       },
       {
-        question: "Can we team coordinate an estate sale if multiple heirs live in different states?",
-        answer: "Yes — this is one of the most common situations Real Property Planning handles. We manage the full process locally, provides regular written and photo updates, handles all vendor coordination, and communicate with each heir consistently. Digital document signing means heirs rarely need to be physically present for any step of the process.",
+        question: "Can an estate sale be coordinated if multiple heirs live in different states?",
+        answer: "Yes — this is one of the most common situations David Stein handles. He manages the full process locally, provides regular written and photo updates, handles all vendor coordination, and communicates with each heir consistently. Digital document signing means heirs rarely need to be physically present for any step of the process.",
       },
       {
         question: "Should I get a formal appraisal before selling an inherited King County home?",
