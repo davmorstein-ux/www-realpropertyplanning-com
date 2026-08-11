@@ -24,7 +24,7 @@ const keyDifferences = [
 
 const faqs = [
   { question: "How early should we start planning a senior home sale?", answer: "As early as possible. Even if a move is months away, early planning allows time for a property assessment, conversations about preparation, and realistic expectation-setting. Starting early reduces pressure and gives the family more control over timing." },
-  { question: "Can we team work with our senior move manager or care coordinator?", answer: "Absolutely. our team regularly collaborates with senior move managers, care coordinators, social workers, and placement specialists to ensure the real estate timeline supports the broader transition plan." },
+  { question: "Can David Stein work with a senior move manager or care coordinator?", answer: "Absolutely. David Stein regularly collaborates with senior move managers, care coordinators, social workers, and placement specialists to ensure the real estate timeline supports the broader transition plan." },
   { question: "What if the senior is resistant to selling?", answer: "This is common and understandable. our team does not pressure anyone. We provide information, answers questions, and help families understand their options — so the senior can participate in the decision at their own pace." },
   { question: "How does the home's condition affect the sale approach?", answer: "We evaluate the property's condition and recommends a preparation strategy that balances cost, timeline, and likely return. Some homes benefit from targeted updates; others are better sold in their current condition to specific buyer pools." },
 ];
