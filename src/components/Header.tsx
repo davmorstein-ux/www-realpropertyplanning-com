@@ -6,7 +6,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import PrimaryNav from "./PrimaryNav";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
 
-const NAV_FONT = { fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif" };
+const NAV_FONT = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 
 /* Contact was removed from the top nav — it now lives on the About page and in
    the WaterfallNav quick-links strip. The CALL button covers urgent contact.
@@ -93,17 +93,6 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const id = "rpp-raleway-font";
-    if (!document.getElementById(id)) {
-      const link = document.createElement("link");
-      link.id = id;
-      link.rel = "stylesheet";
-      link.href = "https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600&display=swap";
-      document.head.appendChild(link);
-    }
-  }, []);
-
-  useEffect(() => {
     /* The guard below skips injection when a style tag with this id already
        exists, so the id must change whenever the CSS changes or returning
        visitors keep the old rules. These rules now only style the compact
@@ -116,7 +105,7 @@ const Header = () => {
       .rpp-top-link {
         color: #272421;
         text-decoration: none;
-        font-family: 'Raleway', 'Gill Sans', 'Century Gothic', sans-serif;
+        font-family: 'DM Sans', system-ui, sans-serif;
         font-size: 13px;
         font-weight: 600;
         letter-spacing: 0.08em;

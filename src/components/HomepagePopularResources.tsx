@@ -183,7 +183,7 @@ const HomepagePopularResources = () => {
         border-color: #0a5648;
       }
       .rpp-afh-strip-label.rpp-afh-strip-label {
-        font-family: 'DM Sans', 'Raleway', system-ui, sans-serif;
+        font-family: 'DM Sans', system-ui, sans-serif;
         font-size: 17px;
         font-weight: 700;
         letter-spacing: 0.06em;
@@ -195,7 +195,7 @@ const HomepagePopularResources = () => {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        font-family: 'Raleway', system-ui, sans-serif;
+        font-family: 'DM Sans', system-ui, sans-serif;
         font-size: 18px;
         font-weight: 700;
         color: #0a5648;

@@ -114,7 +114,6 @@ const PANEL_FADE_MS = 1400;
 const PANEL_HOVER_CLOSE_DELAY = 1500;
 
 const CSS = `
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
   .wf-wrap {
     position: relative;
     display: inline-block;

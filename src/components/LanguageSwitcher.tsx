@@ -108,7 +108,7 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
           minHeight: compact ? 44 : undefined,
           height: compact ? "100%" : undefined,
           alignSelf: compact ? "stretch" : undefined,
-          fontFamily: "'Raleway', 'Gill Sans', 'Century Gothic', sans-serif",
+          fontFamily: "'DM Sans', system-ui, sans-serif",
           fontSize: 13,
           fontWeight: 600,
           letterSpacing: compact ? "0.06em" : "0.08em",

@@ -93,7 +93,7 @@ export default function ArticlesCarousel() {
           style={{
             display: "block",
             fontSize: 11,
-            fontFamily: "'Raleway', 'Gill Sans', sans-serif",
+            fontFamily: "'DM Sans', system-ui, sans-serif",
             fontWeight: 400,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
