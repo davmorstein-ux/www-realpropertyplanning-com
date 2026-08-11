@@ -81,7 +81,12 @@ export default {
         },
       },
       fontFamily: {
-        serif: ["DM Sans", "DM Sans", "Georgia", "serif"],
+        /* THE single highest-leverage typography line on the site: 209 files
+           use the `font-serif` class for headings, and until now it resolved
+           to DM Sans — the "serif" headings were never serif. Pointing it at
+           Source Serif 4 retypes every editorial heading at once.
+           Weights loaded in index.html: 500/600/700 + italic 500. */
+        serif: ["Source Serif 4", "Georgia", "serif"],
         sans: ["DM Sans", "system-ui", "-apple-system", "sans-serif"],
       },
       borderRadius: {
