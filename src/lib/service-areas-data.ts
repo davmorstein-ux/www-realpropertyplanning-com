@@ -266,7 +266,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoAnswer: "Mercer Island's premium market demands valuation expertise that reflects the island's unique buyer pool and property characteristics. Real Property Planning's dual credentials as a broker and certified appraiser provide the defensible, condition-based pricing that executors, trustees, and families need when significant value is at stake.",
     aeoSupportFaqs: [
       { "question": "Why does valuation expertise matter on Mercer Island?", "answer": "The island's premium pricing and distinctive properties mean automated tools often miss the condition and lot factors that drive buyer decisions and appraised value." },
-      { "question": "Can we team manage a Mercer Island estate sale remotely?", "answer": "Yes. Our team handles property assessment, preparation coordination, marketing, and closing — keeping out-of-state families informed throughout." },
+      { "question": "Can a Mercer Island estate sale be managed remotely?", "answer": "Yes. David Stein handles property assessment, preparation coordination, marketing, and closing — keeping out-of-state families informed throughout." },
     ],
   },
   newcastle: {
@@ -624,7 +624,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoAnswer: "Edmonds' walkable downtown, waterfront character, and strong buyer demand create specific expectations for estate properties. Real Property Planning's dual credentials as a broker and certified appraiser help families price inherited homes accurately — accounting for the condition gaps between estate properties and the updated homes Edmonds buyers typically expect.",
     aeoSupportFaqs: [
       { "question": "How does waterfront proximity affect estate property values in Edmonds?", "answer": "Significantly — and the premium varies depending on whether the property has water views, is within walking distance of the waterfront, or simply benefits from the Edmonds zip code. Our team's appraisal-grounded analysis accounts for these distinctions precisely, rather than applying a blanket waterfront premium that may not reflect the property's specific situation." },
-      { "question": "Can we team coordinate an Edmonds estate sale remotely?", "answer": "Yes. Our team manages the full process locally — property assessment, preparation, listing, and closing — with regular updates for out-of-area families." },
+      { "question": "Can an Edmonds estate sale be coordinated remotely?", "answer": "Yes. David Stein manages the full process locally — property assessment, preparation, listing, and closing — with regular updates for out-of-area families." },
     ],
   },
   "mountlake-terrace": {
@@ -732,7 +732,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoAnswer: "Snohomish's small-town character and rural-adjacent properties create valuation challenges that automated tools handle poorly. Real Property Planning's certified appraisal credentials allow us to evaluate acreage, outbuildings, and non-standard features with the accuracy that estate and trust sales demand.",
     aeoSupportFaqs: [
       { "question": "Why is valuation expertise important for Snohomish properties?", "answer": "Acreage, outbuildings, and rural-adjacent lots require hands-on evaluation that automated tools consistently miss." },
-      { "question": "Can we team help with a Snohomish property I inherited from out of state?", "answer": "Yes. Our team coordinates the full process locally — assessment, cleanout, preparation, and sale — with regular updates so you can manage from a distance." },
+      { "question": "Can I get help with a Snohomish property I inherited from out of state?", "answer": "Yes. David Stein coordinates the full process locally — assessment, cleanout, preparation, and sale — with regular updates so you can manage from a distance." },
     ],
   },
   "lake-stevens": {
@@ -922,7 +922,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoAnswer: "Gig Harbor's waterfront character, premium neighborhoods, and distinctive properties require thoughtful strategy for estate and trust sales. Real Property Planning's dual credentials as a broker and certified appraiser provide the valuation depth needed to price these properties accurately and guide families through the process with care.",
     aeoSupportFaqs: [
       { "question": "Why does Gig Harbor require specialized pricing?", "answer": "Waterfront proximity, view premiums, and community character create pricing nuances that automated tools and standard market analysis often miss." },
-      { "question": "Can we team coordinate a Gig Harbor estate sale from a distance?", "answer": "Yes. Our team manages property assessment, preparation, marketing, and closing — providing regular updates to families and fiduciaries who aren't local." },
+      { "question": "Can a Gig Harbor estate sale be coordinated from a distance?", "answer": "Yes. David Stein manages property assessment, preparation, marketing, and closing — providing regular updates to families and fiduciaries who aren't local." },
     ],
   },
   fircrest: {
@@ -1119,7 +1119,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoAnswer: "Bainbridge Island's premium market, distinctive architecture, and island logistics demand thoughtful strategy for estate and trust property sales. Real Property Planning's dual credentials as a broker and certified appraiser provide the valuation depth needed for properties where unique character, waterfront access, and community context all affect value.",
     aeoSupportFaqs: [
       { "question": "Why do Bainbridge Island properties need specialized pricing?", "answer": "The island's distinctive architecture, waterfront premiums, and small-market dynamics mean standard comparisons often don't capture what drives actual buyer behavior." },
-      { "question": "Can we team manage the full sale process on Bainbridge Island?", "answer": "Yes. Our team coordinates property assessment, preparation, marketing, and closing — handling ferry logistics and local vendor coordination for families who aren't on-island." },
+      { "question": "Can the full sale process be managed on Bainbridge Island?", "answer": "Yes. David Stein coordinates property assessment, preparation, marketing, and closing — handling ferry logistics and local vendor coordination for families who aren't on-island." },
     ],
   },
   "port-orchard": {
