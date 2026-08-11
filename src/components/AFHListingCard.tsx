@@ -355,7 +355,7 @@ export const AFHListingsDisclaimer = () => (
   >
     Listings sourced from NWMLS. Information deemed reliable but not guaranteed. Real Property Planning is an
     independent educational hub and does not represent buyers or sellers on these properties directly — contact David
-    Stein, Washington State Licensed Real Estate Broker (eXp Realty · License 133972), for all inquiries, showings, and
+    Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #133972), for all inquiries, showings, and
     full listing details.
   </div>
 );
