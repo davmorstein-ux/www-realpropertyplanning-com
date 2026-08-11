@@ -177,7 +177,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 Realty
               </p>
               <p>Washington State Certified Residential Appraiser — Stein Appraisal</p>
-              <p>Real Estate License #6c171e</p>
+              <p>Real Estate License 133972</p>
             </div>
             <div>
               <p className="text-foreground font-semibold mb-2">Proud Member of the:</p>
