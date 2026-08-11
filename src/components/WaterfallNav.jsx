@@ -59,6 +59,7 @@ const CATEGORIES = [
     color: "#284dbd",
     items: [
       { name: "All Guides & Articles", href: "/guides-and-resources" },
+      { name: "Articles Library", href: "/articles" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
       { name: "Senior Housing Costs", href: "/articles/senior-housing-costs" },
       { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
