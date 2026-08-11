@@ -230,7 +230,7 @@ const AFHRealEstateBroker = () => (
                     margin: 0,
                   }}
                 >
-                  WA Licensed Real Estate Broker · eXp Realty · License 133972
+                  WA Licensed Real Estate Broker · eXp Realty · License #133972
                   <br />
                   {" "}WA Certified Residential Appraiser · Stein Appraisal
                   <br />
