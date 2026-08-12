@@ -60,17 +60,27 @@ const titleCase = (input: string): string => {
 const transformChildren = (children: ReactNode): ReactNode =>
   Children.map(children, (child) => (typeof child === "string" ? titleCase(child) : child));
 
+/* THE canonical band text. Two tiers only:
+   - H1: Source Serif 4 semibold, Title Case (via the transform below), sized
+     to one clamp. All-caps at heading length was dropped on the typography
+     review's explicit rule — sentence-length capitals are measurably harder
+     for older readers, who are this site's audience.
+   - Non-H1 (compact eyebrow labels): small uppercase DM Sans, the one place
+     the review permits caps.
+   index.css carries matching !important overrides near the end of the file
+   (search "CANONICAL HERO BAND") because global rules there would otherwise
+   repaint this; change BOTH places or neither. */
 const bandTextStyle = (isH1: boolean) => ({
   color: "#FFFFFF",
-  fontFamily: "'DM Sans', sans-serif",
-  fontWeight: 900,
-  fontSize: isH1 ? "clamp(30px, 4vw, 44px)" : "18px",
-  letterSpacing: isH1 ? "0.04em" : "0.18em",
-  lineHeight: 1.15,
+  fontFamily: isH1 ? "'Source Serif 4', Georgia, serif" : "'DM Sans', system-ui, sans-serif",
+  fontWeight: isH1 ? 600 : 700,
+  fontSize: isH1 ? "clamp(32px, 4.5vw, 46px)" : "15px",
+  letterSpacing: isH1 ? "0.01em" : "0.16em",
+  lineHeight: isH1 ? 1.12 : 1.2,
   opacity: 1,
   margin: 0,
   padding: 0,
-  textTransform: "uppercase" as const,
+  textTransform: isH1 ? ("none" as const) : ("uppercase" as const),
   textAlign: "center" as const,
 });
 
@@ -92,11 +102,13 @@ const HeroBandTitle = ({
   }
   return (
     <>
-      <div style={{ height: "3px", background: "#FFFFFF" }} />
+      {/* Solid navy, not the old white-edged gradient: the gradient made the
+          band's apparent width vary with screen size, which read as different
+          bands on different pages. One colour, one height, everywhere. */}
       <div
         style={{
-          background: "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)",
-          padding: isH1 ? "20px 24px" : "4px 24px",
+          background: "#1B3A6B",
+          padding: isH1 ? "26px 24px 28px" : "6px 24px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
