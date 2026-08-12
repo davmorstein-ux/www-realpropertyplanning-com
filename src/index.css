@@ -4417,3 +4417,134 @@ span.rpp-hero-band-text.rpp-hero-band-text {
   line-height: 1.2 !important;
   letter-spacing: 0.16em !important;
 }
+
+
+/* ============================================================
+   MARCHING ANTS — one weight, every button
+   ============================================================
+
+   Two things at once:
+
+   1. THINNER DASHES. The original ants (.marquee-hover around line
+      652 and .interior-tile around line 1059) draw a 3px-thick ring
+      with 10px dashes. These overrides thin every instance to a
+      1.5px ring with 8px dashes — same idea, half the weight.
+
+   2. EVERY CANONICAL BUTTON GETS THE EFFECT. The ants previously
+      existed only where a tile's class opted in, so some clickable
+      things marched and most didn't. The button rules below attach
+      the same ring to the canonical CTA set (anchors and buttons
+      carrying a btn/cta class, .rpp-answer-cta, .rpp-coc-cta), so
+      hovering ANY standard button marches.
+
+      On filled burgundy buttons the ring is WHITE — a burgundy ring
+      on a burgundy fill would be invisible, which is why the colour
+      is overridden per group rather than inherited.
+
+   The dash pattern is 8px on / 8px off = a 16px period, and the
+   keyframes below shift by exactly 16px so the loop is seamless.
+   The original keyframes shift 20px and would stutter against this
+   pattern — that is why the hover rules here name the new animation
+   explicitly. If the dash sizes ever change, change the keyframe
+   offsets to match the new period or the march will jitter.
+   ============================================================ */
+
+/* --- 1. Thin the two existing implementations --- */
+.marquee-hover.marquee-hover::before,
+.interior-tile.interior-tile::before {
+  padding: 1.5px;
+  background-image:
+    repeating-linear-gradient(90deg, var(--marquee-color, #7f1d1d) 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, var(--marquee-color, #7f1d1d) 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(90deg, var(--marquee-color, #7f1d1d) 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, var(--marquee-color, #7f1d1d) 0 8px, transparent 8px 16px);
+  background-size:
+    16px 1.5px,
+    1.5px 16px,
+    16px 1.5px,
+    1.5px 16px;
+}
+.marquee-hover.marquee-hover:hover::before,
+.interior-tile.interior-tile:hover::before {
+  animation: rpp-ants-fine 0.55s linear infinite;
+}
+
+/* --- 2. The canonical button set --- */
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main .rpp-answer-cta,
+main .rpp-coc-cta {
+  position: relative;
+  isolation: isolate;
+}
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"])::before,
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])::before,
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"])::before,
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])::before,
+main .rpp-answer-cta::before,
+main .rpp-coc-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 30;
+  transition: opacity 0.2s ease;
+  background-image:
+    repeating-linear-gradient(90deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(90deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, #ffffff 0 8px, transparent 8px 16px);
+  background-position:
+    0 0,
+    0 0,
+    0 100%,
+    100% 0;
+  background-size:
+    16px 1.5px,
+    1.5px 16px,
+    16px 1.5px,
+    1.5px 16px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::before,
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::before,
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::before,
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::before,
+main .rpp-answer-cta:hover::before,
+main .rpp-coc-cta:hover::before {
+  opacity: 1;
+  animation: rpp-ants-fine 0.55s linear infinite;
+}
+
+@keyframes rpp-ants-fine {
+  to {
+    background-position:
+      16px 0,
+      0 16px,
+      -16px 100%,
+      100% -16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main a[class*="btn"]::before,
+  main a[class*="cta"]::before,
+  main button[class*="btn"]::before,
+  main button[class*="cta"]::before,
+  main .rpp-answer-cta::before,
+  main .rpp-coc-cta::before,
+  .marquee-hover.marquee-hover::before,
+  .interior-tile.interior-tile::before {
+    animation: none !important;
+  }
+}
