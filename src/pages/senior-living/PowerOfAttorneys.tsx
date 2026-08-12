@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -132,24 +133,19 @@ const PowerOfAttorneys = () => {
       <Header />
       <main id="main-content">
         {/* Hero */}
-        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+        <HeroBandTitle as="h1">Power of Attorney & Real Estate Decisions</HeroBandTitle>
+
+        {/* Intro — relocated out of the title band. The band carries the
+            page title and nothing else, sitewide. */}
+        <section className="py-10 md:py-12 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Guidance for Families & Professionals
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-5">
-                Power of Attorney &amp; Real Estate Decisions
-              </h1>
-              <p className="text-primary-foreground/85 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-4">
-                When someone needs help managing property, a properly structured power of attorney can make all the
-                difference.
-              </p>
-              <p className="text-primary-foreground/70 text-base leading-relaxed max-w-2xl mx-auto">
-                Whether you're planning ahead or stepping in to help a loved one, understanding how a power of attorney
-                works in real estate is critical. This page explains what you need to know — and how to move forward
-                with confidence.
-              </p>
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              When someone needs help managing property, a properly structured power of attorney can make all the difference.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Whether you're planning ahead or stepping in to help a loved one, understanding how a power of attorney works in real estate is critical. This page explains what you need to know — and how to move forward with confidence.
+            </p>
             </div>
           </div>
         </section>
