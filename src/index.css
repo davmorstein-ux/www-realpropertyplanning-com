@@ -4780,3 +4780,42 @@ main section:has(> h1.rpp-hero-band-text) {
   margin: 0 !important;
 }
   
+
+/* ============================================================
+   HERO BAND — COMPACT VARIANT
+   ============================================================
+
+   The attorney family (seven pages) passes `compact` to
+   HeroBandTitle. That prop was destructured and never used, so
+   those bands rendered at the full H1 height — which is why that
+   family read as taller than the rest of the site. The prop is
+   wired now; these rules enforce it.
+
+   Placement is load-bearing. Both rules must stay AFTER:
+     - h1.rpp-hero-band-text.rpp-hero-band-text  (~line 4403)
+     - .rpp-hero-band.rpp-hero-band              (~line 4774)
+   They carry identical specificity to those, so later-in-file is
+   the only reason they win. Move them up and the full-size rules
+   take back over silently.
+
+   Values mirror HeroBandTitle.tsx exactly. Change BOTH or they
+   fight. Computed band height: 28px x 1.1 + 6 + 8 = ~45px at
+   desktop, ~40px once the clamp floors at 24px on narrow screens.
+
+   Compact is H1-only by design. The non-H1 bands in
+   AttorneyEducationalPage.tsx also pass `compact`, but they are
+   already 15px eyebrows and the component does not tag them, so
+   these selectors never reach them.
+   ============================================================ */
+.rpp-hero-band--compact.rpp-hero-band--compact {
+  padding: 6px 24px 8px !important;
+}
+
+h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-size: clamp(24px, 3vw, 28px) !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+}
