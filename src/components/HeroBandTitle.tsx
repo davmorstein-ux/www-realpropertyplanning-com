@@ -106,9 +106,17 @@ const HeroBandTitle = ({
           band's apparent width vary with screen size, which read as different
           bands on different pages. One colour, one height, everywhere. */}
       <div
+        className="rpp-hero-band"
         style={{
+          /* Slimmed from 26/28 after side-by-side review: the thinner band
+             reads cleaner and was preferred. The class above exists so the
+             matching !important rule at the end of index.css can ENFORCE this
+             height — bands were rendering at visibly different heights on
+             different pages and the interfering rules were never fully traced,
+             so the height is now pinned rather than inherited. Change it in
+             BOTH places or the enforcement fights this inline value. */
           background: "#1B3A6B",
-          padding: isH1 ? "26px 24px 28px" : "6px 24px",
+          padding: isH1 ? "12px 24px 14px" : "6px 24px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
