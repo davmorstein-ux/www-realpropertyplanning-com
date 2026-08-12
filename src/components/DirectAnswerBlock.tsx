@@ -140,10 +140,11 @@ const DirectAnswerBlock = ({
                     minHeight: 44,
                   }}
                 >
+                  {/* Label only. The arrow is the sitewide CSS ::after (CTA
+                      ARROW block at the end of index.css) — the hand-placed
+                      "→" span this replaces stood still next to the animated
+                      one, producing two arrows on every Quick Answer CTA. */}
                   <span style={{ color: "#ffffff" }}>{ctaLabel}</span>
-                  <span aria-hidden="true" style={{ color: "#ffffff" }}>
-                    →
-                  </span>
                 </Link>
               </div>
             )}
