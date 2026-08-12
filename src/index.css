@@ -4747,3 +4747,36 @@ main .rpp-coc-cta:hover::after {
     transition: none !important;
   }
 }
+
+/* ============================================================
+   HERO BAND HEIGHT — enforced
+   ============================================================
+
+   Bands were rendering at visibly different heights on different
+   pages despite identical component calls, and the interfering
+   rules were never fully traced. Rather than keep hunting, the
+   band wrapper now carries the rpp-hero-band class and its height
+   is PINNED here with !important — nothing page-side can vary it.
+
+   The values match the component's inline padding (12px / 14px,
+   the slim profile chosen in review). Change them in BOTH places
+   — HeroBandTitle.tsx and here — or they fight.
+
+   Section wrappers around bands on a few older pages (a bare
+   <section class="w-full overflow-hidden"> directly around the
+   band) were picking up the global 32px section padding, adding
+   invisible height outside the band itself. The :has() rule
+   zeroes exactly that pattern: a section whose DIRECT child is
+   the band. Deeper nestings (like the choice-flow container,
+   which needs its own padding) are untouched because the band is
+   not their direct child.
+   ============================================================ */
+.rpp-hero-band.rpp-hero-band {
+  padding: 12px 24px 14px !important;
+}
+main section:has(> .rpp-hero-band),
+main section:has(> h1.rpp-hero-band-text) {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+  
