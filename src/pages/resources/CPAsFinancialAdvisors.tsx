@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -28,25 +29,7 @@ const CPAsFinancialAdvisors = () => (
     />
     <Header />
     <main id="main-content">
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img
-                src={heroIcon}
-                alt=""
-                aria-hidden="true"
-                className="block w-full max-w-[15rem] h-auto object-contain"
-                loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-            </div>
-
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Resources</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">
-              CPAs & Financial Advisors
-            </h1>
-          </div>
-        </div>
-      </section>
+      <HeroBandTitle as="h1">CPAs & Financial Advisors</HeroBandTitle>
 
       <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
