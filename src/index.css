@@ -4699,3 +4699,51 @@ main .rpp-coc-cta:hover::after {
   }
 }
 
+
+
+/* ============================================================
+   COMPONENT ARROWS — layout-stable variant
+   ============================================================
+
+   Overrides the component-arrow block above. The width animation
+   (13px -> 23px) works on standalone buttons, but inside the
+   fixed-width tile footers it CHANGED THE LAYOUT on hover: the
+   arrow widened the title span, the title wrapped to a second
+   line, the footer grew, and the whole tile changed size. That is
+   exactly the effect the site should never have.
+
+   Here the arrow's box is a CONSTANT 23px in both states, so
+   hovering can never reflow anything. The arrow itself animates by
+   mask-size — small at rest, full-size on hover — growing in place
+   within its reserved box. Same gesture, zero layout shift.
+
+   The canonical BUTTON arrows keep the width animation: a
+   standalone button widening by 10px absorbs its own growth. If a
+   button is ever placed somewhere its growth wraps text, move its
+   class into this block instead.
+   ============================================================ */
+.rpp-funnel-cta::after,
+.rpp-pr-card-cta.rpp-pr-card-cta::after,
+.rpp-pr-browse.rpp-pr-browse::after,
+.rpp-afh-strip-cta.rpp-afh-strip-cta::after {
+  width: 23px;
+  -webkit-mask-size: 16px 10px;
+  mask-size: 16px 10px;
+  transition: -webkit-mask-size 0.22s ease, mask-size 0.22s ease;
+}
+.marquee-hover:hover .rpp-funnel-cta::after,
+.rpp-pr-card:hover .rpp-pr-card-cta.rpp-pr-card-cta::after,
+.rpp-pr-browse.rpp-pr-browse:hover::after,
+.rpp-afh-strip:hover .rpp-afh-strip-cta.rpp-afh-strip-cta::after {
+  width: 23px;
+  -webkit-mask-size: 24px 15px;
+  mask-size: 24px 15px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rpp-funnel-cta::after,
+  .rpp-pr-card-cta::after,
+  .rpp-pr-browse::after,
+  .rpp-afh-strip-cta::after {
+    transition: none !important;
+  }
+}
