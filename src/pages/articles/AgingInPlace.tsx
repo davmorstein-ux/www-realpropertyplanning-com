@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import BackToArticles from "@/components/BackToArticles";
-import heroImage from "@/assets/articles-hero-banner.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import BackToResources from "@/components/BackToResources";
@@ -53,16 +52,7 @@ const AgingInPlace = () => {
       />
       <Header />
       <main id="main-content">
-        <>
-          <div className="bg-white">
-            <img
-              src={heroImage}
-              alt="Older couple on a bench overlooking a scenic river valley with a vintage car nearby — senior housing and life-transition resources"
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-              loading="eager" sizes="100vw" decoding="async" width={1904} height={521} />
-          </div>
-          <HeroBandTitle as="h1">{"Aging in Place With Support"}</HeroBandTitle>
-        </>
+        <HeroBandTitle as="h1">{"Aging in Place With Support"}</HeroBandTitle>
 
         {/* Article */}
         <section className={sectionBase + " bg-background"}>

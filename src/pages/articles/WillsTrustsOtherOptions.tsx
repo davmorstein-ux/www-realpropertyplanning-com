@@ -6,7 +6,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import heroImage from "@/assets/articles-hero-banner.webp";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/how-to-pass-real-estate-to-your-children.mp3.asset.json";
 
@@ -45,16 +44,7 @@ const WillsTrustsOtherOptions = () => {
       />
       <Header />
       <main id="main-content">
-        {/* Hero image */}
-        <div className="bg-white">
-          <img
-            src={heroImage}
-            alt="How to Pass Real Estate to Your Children: Wills, Trusts, and Other Options"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async" width={1904} height={521}
-          />
-        </div>
-        <HeroBandTitle>{"Wills, Trusts & Other Options"}</HeroBandTitle>
+        <HeroBandTitle as="h1">{"Wills, Trusts & Other Options"}</HeroBandTitle>
 
         {/* Article body */}
         <section style={{ backgroundColor: "hsl(40 20% 98%)", padding: "48px 24px 64px" }}>
