@@ -1,0 +1,71 @@
+import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
+import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import CTASection from "@/components/CTASection";
+import RelatedServices from "@/components/RelatedServices";
+import DisclaimerSection from "@/components/DisclaimerSection";
+import { Link } from "react-router-dom";
+import CostOfCareEmbed from "@/components/CostOfCareEmbed";
+
+const NursingAndSkilledCare = () => (
+  <>
+    <SEOHead
+      title="Nursing & Skilled Care | Senior Living | Real Property Planning"
+      description="Learn about nursing and skilled care facilities providing 24-hour medical support for seniors throughout Washington State."
+      canonical="https://realpropertyplanning.com/senior-living/nursing-and-skilled-care"
+    />
+    <BreadcrumbSchema
+      items={[
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
+        { name: "Nursing & Skilled Care", url: "https://realpropertyplanning.com/senior-living/nursing-and-skilled-care" },
+      ]}
+    />
+    <Header />
+    <main id="main-content">
+      <HeroBandTitle as="h1">Nursing & Skilled Care</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Facilities that provide 24-hour medical support for seniors with more complex health needs or those recovering from hospitalization.
+          </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 md:py-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
+              <p className="text-muted-foreground text-base leading-relaxed">
+                This page is being developed with detailed information about nursing and skilled care facilities throughout Washington State. Check back soon, or{" "}
+                <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for guidance.
+              </p>
+            </div>
+            <div className="mt-8">
+              <CostOfCareEmbed careTypeId="nursing-semi" />
+            </div>
+            <div className="mt-8 text-center">
+              <Link to="/senior-living-and-relocation" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium">
+                ← Back to Senior Living & Relocation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTASection />
+      <RelatedServices currentPath="/senior-living/nursing-and-skilled-care" />
+      <DisclaimerSection />
+    </main>
+    <Footer />
+  </>
+);
+
+export default NursingAndSkilledCare;
