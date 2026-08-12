@@ -7,7 +7,6 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import PanoramaHero from "@/components/PanoramaHero";
 
 const tiles = [
   {
@@ -89,9 +88,12 @@ const PlanningBeforeACrisis = () => {
       <BreadcrumbSchema items={[{ name: "Planning Before a Crisis", url: "/planning-before-a-crisis" }]} />
       <Header />
       <main id="main-content">
-        <PanoramaHero alt="Planning before a crisis — thoughtful estate and property planning in Washington State" />
-
-        <HeroBandTitle as="h1">Planning Before a Crisis</HeroBandTitle>
+        {/* PanoramaHero was removed here. This page was the last one in the
+            codebase still rendering it — every other page dropped its hero in
+            the sweep that left only the homepage with one, and this file was
+            missed. The import went with it; PanoramaHero.tsx is now unused by
+            any page. */}
+        <HeroBandTitle as="h1" compact>Planning Before a Crisis</HeroBandTitle>
 
         {/* THINGS TO CONSIDER */}
         <section className="py-14 md:py-20 bg-cream">
