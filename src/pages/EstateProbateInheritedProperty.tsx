@@ -102,10 +102,6 @@ const EstateProbateInheritedProperty = () => {
       />
       <Header />
       <main id="main-content">
-        {/* HERO IMAGE */}
-        <section className="bg-white">
-</section>
-
         <HeroBandTitle as="h1">Estate, Probate & Inherited Property</HeroBandTitle>
 
         {/* TOPICS TO EXPLORE */}

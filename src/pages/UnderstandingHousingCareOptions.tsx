@@ -122,9 +122,6 @@ const UnderstandingHousingCareOptions = () => {
       />
       <Header />
       <main id="main-content">
-        {/* HERO IMAGE */}
-        <section className="w-full overflow-hidden">
-</section>
         <HeroBandTitle as="h1">Understanding Housing and Care Options</HeroBandTitle>
 
         {/* INTRO

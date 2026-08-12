@@ -108,9 +108,6 @@ const Sitemap = () => {
       />
       <Header />
       <main id="main-content">
-        <section className="bg-white">
-</section>
-
         <HeroBandTitle as="h1">Site Map</HeroBandTitle>
 
 

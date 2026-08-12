@@ -111,16 +111,6 @@ const HowTheProcessWorks = () => {
       <BreadcrumbSchema items={[{ name: "How the Process Works", url: "/how-the-process-works" }]} />
       <Header />
       <main id="main-content">
-        {/* Hero.
-          The red "Schedule a Consultation" button has been removed from here.
-          The page still offers that action twice below — in MidPageCTA and in
-          the closing section — so no conversion path is lost.
-
-          The image below was previously loading="lazy". It sits above the fold,
-          so lazy loading delayed the first thing a visitor sees. Now eager. */}
-        <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
-</section>
-
         <HeroBandTitle as="h1">How the Process Works</HeroBandTitle>
 
         {/* DirectAnswerBlock removed.

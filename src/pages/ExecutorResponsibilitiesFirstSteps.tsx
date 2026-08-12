@@ -62,10 +62,6 @@ const ExecutorResponsibilitiesFirstSteps = () => {
       />
       <Header />
       <main id="main-content">
-        {/* HERO IMAGE */}
-        <section className="bg-white">
-</section>
-
         <HeroBandTitle as="h1">SERVING&nbsp; AS&nbsp; EXECUTOR&nbsp; &amp;&nbsp; TRUSTEE</HeroBandTitle>
 
         {/* TOPICS TO EXPLORE */}
