@@ -114,7 +114,7 @@ const ExecutorFirstStepsHouse = () => (
       heading="Just Named as Executor?"
       body="The first few weeks can feel overwhelming. A short conversation with our team can help you prioritize what matters most and understand the process ahead."
       buttonText="Schedule a Conversation"
-      microcopy="No pressure. Just practical guidance for your situation."
+      microcopy="No pressure. Just practical guidance on the property questions."
     />
 
     {/* What Can Wait */}

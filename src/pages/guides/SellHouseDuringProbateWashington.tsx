@@ -230,7 +230,7 @@ const SellHouseDuringProbateWashington = () => (
       heading="Dealing With a Probate Property?"
       body="A short conversation with our team can help you understand where you are in the process and what steps make sense next."
       buttonText="Schedule a Conversation"
-      microcopy="No pressure. Just practical guidance for your situation."
+      microcopy="No pressure. Just practical guidance on the property questions."
     />
 
     {/* Related Resources */}

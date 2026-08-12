@@ -108,7 +108,7 @@ const SellInheritedHouseAsIsOrFix = () => (
       heading="Not Sure What Makes Sense?"
       body="A professional property assessment can show you the numbers — estimated repair costs, projected returns, and realistic market value in current and improved condition."
       buttonText="Schedule a Conversation"
-      microcopy="No pressure. Just practical guidance for your situation."
+      microcopy="No pressure. Just practical guidance on the property questions."
     />
 
     {/* The Middle Path */}

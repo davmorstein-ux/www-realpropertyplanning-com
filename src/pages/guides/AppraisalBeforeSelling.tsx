@@ -129,7 +129,7 @@ const AppraisalBeforeSelling = () => (
       heading="Not Sure Which You Need?"
       body="our team can help you determine whether a formal appraisal or a professional market assessment is the right approach for your situation — and explain the practical difference."
       buttonText="Schedule a Conversation"
-      microcopy="No pressure. Just practical guidance for your situation."
+      microcopy="No pressure. Just practical guidance on the property questions."
     />
 
     {/* Where Mistakes Happen */}

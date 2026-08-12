@@ -131,7 +131,7 @@ const WhatExecutorsShouldDo = () => (
       heading="Not Sure Where to Start?"
       body="Most executors are doing this for the first time. A short conversation with our team can help you understand your options, assess the property, and plan practical next steps."
       buttonText="Schedule a Conversation"
-      microcopy="No pressure. Just practical guidance for your situation."
+      microcopy="No pressure. Just practical guidance on the property questions."
     />
 
     {/* Preparation and Vendors */}

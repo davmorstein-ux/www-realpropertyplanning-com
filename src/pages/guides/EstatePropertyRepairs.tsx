@@ -135,7 +135,7 @@ const EstatePropertyRepairs = () => (
 
     <MidPageCTA
       heading="Not Sure What's Worth Fixing?"
-      body="We evaluate each potential improvement through a return-on-investment lens, informed by our appraisal background. A short conversation can help you decide where estate funds are best spent."
+      body="David Stein evaluates each potential improvement through a return-on-investment lens, informed by his appraisal background. A short conversation can help you decide where estate funds are best spent."
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

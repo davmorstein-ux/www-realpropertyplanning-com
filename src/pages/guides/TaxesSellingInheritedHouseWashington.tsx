@@ -127,7 +127,7 @@ const TaxesSellingInheritedHouseWashington = () => (
       heading="Need Help Understanding Your Property's Value?"
       body="An accurate valuation is the foundation for sound tax planning. our team can help you understand the property's current and historical value so you and your CPA can make informed decisions."
       buttonText="Schedule a Conversation"
-      microcopy="No pressure. Just practical guidance for your situation."
+      microcopy="No pressure. Just practical guidance on the property questions."
     />
 
     {/* Common Mistakes to Avoid */}

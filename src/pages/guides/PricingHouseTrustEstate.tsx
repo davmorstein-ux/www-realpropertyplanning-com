@@ -134,7 +134,7 @@ const PricingHouseTrustEstate = () => (
       heading="Need Help Pricing an Estate Property?"
       body="Our dual credentials as a broker and certified appraiser provide the pricing discipline that estate and trust property requires. A short conversation can help you understand your property's realistic market position."
       buttonText="Schedule a Conversation"
-      microcopy="No pressure. Just practical guidance for your situation."
+      microcopy="No pressure. Just practical guidance on the property questions."
     />
 
     {/* Where Mistakes Happen */}

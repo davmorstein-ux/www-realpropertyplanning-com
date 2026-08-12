@@ -102,7 +102,7 @@ const SeniorTransitionDifferences = () => (
 
     <MidPageCTA
       heading="Planning a Senior Housing Transition?"
-      body="We work at the family's pace — with patience, clear communication, and experienced coordination throughout Washington State."
+      body="David Stein works at the family's pace — with patience, clear communication, and experienced coordination throughout Washington State."
       buttonText="Schedule a Consultation"
       microcopy="No pressure. Just practical guidance for your family's situation."
     />
