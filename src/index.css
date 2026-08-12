@@ -4383,3 +4383,37 @@ section[aria-label="Notifications"] {
   padding-bottom: 0 !important;
 }
 
+
+
+/* ============================================================
+   CANONICAL HERO BAND — overrides the two .rpp-hero-band-text
+   blocks around line 3280, which force uppercase DM Sans 900 with
+   !important and would repaint the component's new styles. Being
+   later in the file at equal specificity-with-!important, these
+   win. If the band design changes again, change HeroBandTitle.tsx
+   AND this block, or the two will disagree exactly the way the
+   site's bands disagreed before this existed.
+
+   H1 bands: Source Serif 4 semibold, Title Case — all-caps at
+   heading length was dropped per the typography review; capitals
+   across a full sentence are measurably harder for older readers.
+   Compact non-H1 bands stay small-caps DM Sans, the one place the
+   review permits caps.
+   ============================================================ */
+h1.rpp-hero-band-text.rpp-hero-band-text {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-size: clamp(32px, 4.5vw, 46px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+}
+
+div.rpp-hero-band-text.rpp-hero-band-text,
+span.rpp-hero-band-text.rpp-hero-band-text {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.16em !important;
+}
