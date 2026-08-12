@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ClipboardCheck, Scale, HeartHandshake, KeyRound, ArrowRight } from "lucide-react";
+import { ClipboardCheck, Scale, HeartHandshake, KeyRound } from "lucide-react";
 
 const resources = [
   {
@@ -245,9 +245,10 @@ const HomepagePopularResources = () => {
                     <Icon size={26} color={r.accent} strokeWidth={2} aria-hidden="true" />
                   </span>
                   <span className="rpp-pr-card-text">{r.title}</span>
+                  {/* Arrow comes from the sitewide CSS ::after — see the CTA
+                      ARROW block in index.css. */}
                   <span className="rpp-pr-card-cta">
                     Read Guide
-                    <ArrowRight size={15} aria-hidden="true" />
                   </span>
                 </Link>
               </li>
@@ -259,19 +260,6 @@ const HomepagePopularResources = () => {
         <div style={{ textAlign: "center", marginTop: "2.25rem" }}>
           <Link to="/resources" className="rpp-pr-browse" style={{ padding: "11px 22px", minHeight: 44 }}>
             Browse all resources
-            <svg
-              viewBox="0 0 24 24"
-              width="18"
-              height="18"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
           </Link>
         </div>
 
