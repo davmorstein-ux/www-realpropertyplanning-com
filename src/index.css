@@ -4609,3 +4609,93 @@ main .rpp-coc-cta:hover::after {
     transition: none !important;
   }
 }
+/* ============================================================
+   CTA ARROW + ANTS — homepage components, enrolled by name
+   ============================================================
+
+   The funnel tiles, the "Read Guide" pills, the "Browse all
+   resources" button and the AFH Club strip are hand-built with
+   their own classes and deliberate category colours, so they can
+   NOT be enrolled by adding btn/cta to their class names — the
+   canonical block would repaint them burgundy. Instead their
+   classes are named here and given the same ::after arrow (and,
+   for the browse button, the same ::before ants).
+
+   Their hand-placed chevrons and "→" glyphs were removed from the
+   markup and locale strings in the same change — re-adding any of
+   those doubles the arrow.
+
+   Hover triggers differ per component because the arrow sits on a
+   child span while the hover target is the whole tile: the
+   ancestor's :hover drives the child's ::after.
+   ============================================================ */
+.rpp-funnel-cta::after,
+.rpp-pr-card-cta.rpp-pr-card-cta::after,
+.rpp-pr-browse.rpp-pr-browse::after,
+.rpp-afh-strip-cta.rpp-afh-strip-cta::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 15px;
+  margin-left: 9px;
+  flex: none;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
+  transition: width 0.22s ease;
+}
+.marquee-hover:hover .rpp-funnel-cta::after,
+.rpp-pr-card:hover .rpp-pr-card-cta.rpp-pr-card-cta::after,
+.rpp-pr-browse.rpp-pr-browse:hover::after,
+.rpp-afh-strip:hover .rpp-afh-strip-cta.rpp-afh-strip-cta::after {
+  width: 23px;
+}
+
+/* Browse-all also joins the ants: it is a solid dark pill with no
+   marquee class of its own. White ring, same fine pattern. */
+.rpp-pr-browse.rpp-pr-browse {
+  position: relative;
+  isolation: isolate;
+}
+.rpp-pr-browse.rpp-pr-browse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 30;
+  transition: opacity 0.2s ease;
+  background-image:
+    repeating-linear-gradient(90deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(90deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, #ffffff 0 8px, transparent 8px 16px);
+  background-position: 0 0, 0 0, 0 100%, 100% 0;
+  background-size: 16px 1.5px, 1.5px 16px, 16px 1.5px, 1.5px 16px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.rpp-pr-browse.rpp-pr-browse:hover::before {
+  opacity: 1;
+  animation: rpp-ants-fine 0.55s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rpp-funnel-cta::after,
+  .rpp-pr-card-cta::after,
+  .rpp-pr-browse::after,
+  .rpp-afh-strip-cta::after {
+    transition: none !important;
+  }
+  .rpp-pr-browse::before {
+    animation: none !important;
+  }
+}
+
