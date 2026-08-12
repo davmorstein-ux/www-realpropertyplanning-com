@@ -52,7 +52,7 @@ const ForAttorneysHowItWorks = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="How Real Property Planning Works With Attorneys | Referral Process"
-      description="A clear, document-style walkthrough of how Real Property Planning supports Washington estate, probate, and family law attorneys from referral through closing — including what we handle and how to make a referral."
+      description="A clear, document-style walkthrough of how Real Property Planning supports Washington estate, probate, and family law attorneys from referral through closing — including what a licensed broker handles and how to make a referral."
       canonical="https://realpropertyplanning.com/for-attorneys/how-it-works"
     />
     <BreadcrumbSchema
@@ -115,12 +115,15 @@ const ForAttorneysHowItWorks = () => (
         </div>
       </section>
 
-      {/* Section 2 — What We Handle */}
+      {/* Section 2 — What a licensed broker handles.
+          NOT "what we handle": RPP is a neutral hub and does not perform
+          brokerage work. Attribution goes to David Stein through eXp Realty,
+          never to the hub. */}
       <section className="py-12 md:py-16 bg-[#FAF7EE]">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-bold mb-3">
-              What Real Property Planning Handles So You Don't Have To
+              What a Licensed Broker Handles So You Don't Have To
             </h2>
             <p className="text-[#39332d] text-lg md:text-xl leading-[1.8] mb-6">
               You stay the legal lead. Real Property Planning owns the property workstream end-to-end and reports back in writing.
