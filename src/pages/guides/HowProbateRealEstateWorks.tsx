@@ -7,7 +7,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
 import BackToResources from "@/components/BackToResources";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import probateRealEstateHero from "@/assets/probate-real-estate-hero.webp";
 
 const faqs = [
   {
@@ -70,16 +69,10 @@ const HowProbateRealEstateWorks = () => (
     />
     <Header />
     <main id="main-content">
-      {/* Hero */}
+      
       <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
         <div style={{ lineHeight: 0 }}>
-          <img
-            src={probateRealEstateHero}
-            alt="Probate real estate guidance for Washington families"
-            className="w-full object-cover object-center block"
-            style={{ height: "clamp(220px, 32vw, 380px)" }}
-            loading="eager" sizes="100vw" decoding="async" width={1782} height={509} />
-          <HeroBandTitle as="h1">How Probate Real Estate Works</HeroBandTitle>
+<HeroBandTitle as="h1">How Probate Real Estate Works</HeroBandTitle>
         </div>
       </section>
 

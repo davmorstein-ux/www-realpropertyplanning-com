@@ -7,7 +7,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import NextStepBlock from "@/components/NextStepBlock";
-import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
 const tiles = [
@@ -91,17 +90,7 @@ const InheritedHouseWashington = () => (
       {/* WTDW Shared Hero */}
       <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
         <div style={{ lineHeight: 0 }}>
-          <img
-            src={wtdwHeroImage}
-            alt="Quiet Washington street with craftsman homes"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-            width={1829}
-            height={640}
-          />
-          <HeroBandTitle as="h1">Inherited Property</HeroBandTitle>
+<HeroBandTitle as="h1">Inherited Property</HeroBandTitle>
         </div>
       </section>
 
