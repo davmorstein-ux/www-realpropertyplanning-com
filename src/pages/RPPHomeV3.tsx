@@ -168,7 +168,7 @@ const RPPHomeV3 = () => {
                 const title = t(`funnel.tiles.${key}.title`);
                 const imgAlt = t(`funnel.tiles.${key}.imgAlt`);
                 return (
-                  <Link key={key} to={href} className="group block" style={{ textDecoration: "none" }}>
+                  <Link key={key} to={href} className="group block marquee-hover" style={{ textDecoration: "none" }}>
                     <div
                       className="marquee-hover group-active:scale-[0.98] transition-transform duration-150"
                       style={{ borderRadius: 10 }}
@@ -215,6 +215,7 @@ const RPPHomeV3 = () => {
                           }}
                         >
                           <span
+                            className="rpp-funnel-cta"
                             style={{
                               fontFamily: "'DM Sans', system-ui, sans-serif",
                               fontSize: 20,
@@ -222,24 +223,17 @@ const RPPHomeV3 = () => {
                               color: "#ffffff",
                               lineHeight: 1.25,
                               margin: 0,
+                              display: "inline-flex",
+                              alignItems: "center",
                             }}
                           >
                             {title}
                           </span>
-                          <svg
-                            viewBox="0 0 24 24"
-                            width="20"
-                            height="20"
-                            fill="none"
-                            stroke="#ffffff"
-                            strokeWidth="2.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            aria-hidden="true"
-                            style={{ flexShrink: 0, opacity: 0.8 }}
-                          >
-                            <polyline points="9 18 15 12 9 6" />
-                          </svg>
+                          {/* Arrow is the sitewide CSS ::after (CTA ARROW block
+                              in index.css) via the rpp-funnel-cta class on the
+                              span above — the hand-placed chevron this replaces
+                              was one of the reasons arrows behaved differently
+                              from button to button. */}
                         </div>
                       </div>
                     </div>
