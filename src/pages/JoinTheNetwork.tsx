@@ -1,4 +1,5 @@
 import { useState } from "react";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -268,18 +269,16 @@ const JoinTheNetwork = () => {
       <Header />
       <main id="main-content">
         {/* Hero */}
-        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+        <HeroBandTitle as="h1">Join the Real Property Planning Professional Network</HeroBandTitle>
+
+        {/* Intro — relocated out of the title band. The band carries the
+            page title and nothing else, sitewide. */}
+        <section className="py-10 md:py-12 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-                Professional Network
-              </p>
-              <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
-                Join the Real Property Planning Professional Network
-              </h1>
-              <p className="text-lg text-primary-foreground leading-relaxed mt-4">
-                We connect seniors, families, executors, and attorneys with trusted local professionals. If you serve this community, we want to know you.
-              </p>
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              We connect seniors, families, executors, and attorneys with trusted local professionals. If you serve this community, we want to know you.
+            </p>
             </div>
           </div>
         </section>

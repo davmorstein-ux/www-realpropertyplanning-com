@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -38,12 +39,16 @@ const KentProbateEstate = () => {
       <Header />
       <main id="main-content">
 
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">Straightforward Guidance for Inherited Property in Kent</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Kent, King County</p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">Straightforward Guidance for Inherited Property in Kent</h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">Inherited homes in Kent are usually family homes — lived in for years, sometimes decades. When it's time to figure out what comes next, having someone who can give you straight answers about condition, value, and options makes a real difference.</p>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Inherited homes in Kent are usually family homes — lived in for years, sometimes decades. When it's time to figure out what comes next, having someone who can give you straight answers about condition, value, and options makes a real difference.
+          </p>
           </div>
         </div>
       </section>

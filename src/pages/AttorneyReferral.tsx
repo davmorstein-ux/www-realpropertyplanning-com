@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -105,42 +106,19 @@ const AttorneyReferral = () => {
       <main id="main-content">
 
       {/* Section 1: Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">A Real Estate and Valuation Resource for Probate, Trust, and Estate Property Transitions</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Attorney and Professional Referral Resource
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              A Real Estate and Valuation Resource for Probate, Trust, and Estate Property Transitions
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with over 20 years of experience helping clients make informed decisions about important property transitions throughout Washington State.
-            </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              Our work is focused on inherited homes, probate property, trust-owned real estate, estate-related sales, and situations where valuation insight, local market knowledge, communication, and practical coordination matter. We work alongside attorneys and related professionals as a real estate resource to help clients move forward with greater clarity, stronger preparation, and a more organized sale strategy.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link to="/contact">
-                <Button variant="gold"
-                  size="lg"
- className="hover:-light px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
-                >
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-                  Request a Confidential Consultation
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button
-                  size="lg"
-                  variant="outline3d"
-                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
-                >
-                  <MessageSquare className="w-4 h-4 mr-2" />
-                  Discuss a Referral Opportunity
-                </Button>
-              </Link>
-            </div>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with over 20 years of experience helping clients make informed decisions about important property transitions throughout Washington State.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Our work is focused on inherited homes, probate property, trust-owned real estate, estate-related sales, and situations where valuation insight, local market knowledge, communication, and practical coordination matter. We work alongside attorneys and related professionals as a real estate resource to help clients move forward with greater clarity, stronger preparation, and a more organized sale strategy.
+          </p>
           </div>
         </div>
       </section>

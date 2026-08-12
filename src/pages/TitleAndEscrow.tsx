@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -58,24 +59,16 @@ const TitleAndEscrow = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">Title & Escrow Services in Washington State</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Real Estate Closings</p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-              Title &amp; Escrow Services in Washington State
-            </h1>
-            <p className="text-primary-foreground font-semibold text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3">
-              Title and escrow professionals are essential partners in every real estate closing. For probate, estate,
-              and senior transition sales, their role is even more critical — ensuring clean title transfer, protecting
-              all parties, and coordinating the details that bring a transaction to a successful close.
-            </p>
-            <Link to="/contact">
-              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" className="w-6 h-6 mr-2" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-                Get Connected
-              </Button>
-            </Link>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Title and escrow professionals are essential partners in every real estate closing. For probate, estate, and senior transition sales, their role is even more critical — ensuring clean title transfer, protecting all parties, and coordinating the details that bring a transaction to a successful close.
+          </p>
           </div>
         </div>
       </section>

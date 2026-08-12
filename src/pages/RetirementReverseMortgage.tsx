@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -32,18 +33,16 @@ const RetirementReverseMortgage = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+    <HeroBandTitle as="h1">Supporting Clients with Financing Options and Long-Term Planning</HeroBandTitle>
+
+    {/* Intro — relocated out of the title band. The band carries the
+        page title and nothing else, sitewide. */}
+    <section className="py-10 md:py-12 bg-background">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-            Lenders & Financing Specialists
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-            Supporting Clients with Financing Options and Long-Term Planning
-          </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-            Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
-          </p>
+        <div className="max-w-3xl mx-auto">
+        <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+          Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
+        </p>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -37,29 +38,16 @@ const LendersFinancingSpecialists = () => (
     <main id="main-content">
 
     {/* Hero — Icon + faded intro */}
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+    <HeroBandTitle as="h1">Supporting Clients with Financing Options and Long-Term Planning</HeroBandTitle>
+
+    {/* Intro — relocated out of the title band. The band carries the
+        page title and nothing else, sitewide. */}
+    <section className="py-10 md:py-12 bg-background">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <img
-            src={lendersIcon}
-            alt="Lenders & Financing"
-            className="block w-full max-w-[15rem] h-auto mx-auto mb-3 md:mb-4"
-           loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-          <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-            
-          </p>
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-5">
-            Supporting Clients with Financing Options and Long-Term Planning
-          </h1>
-          <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3" style={{ color: '#e5e7eb', opacity: 1 }}>
-            Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
-          </p>
-          <Link to="/contact">
-            <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-              Schedule a Conversation
-            </Button>
-          </Link>
+        <div className="max-w-3xl mx-auto">
+        <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+          Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
+        </p>
         </div>
       </div>
     </section>

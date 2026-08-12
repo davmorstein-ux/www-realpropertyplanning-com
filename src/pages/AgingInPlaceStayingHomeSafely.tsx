@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -209,26 +210,16 @@ const AgingInPlaceStayingHomeSafely = () => {
       <Header />
       <main id="main-content">
         {/* HERO */}
-        <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
+        <HeroBandTitle as="h1">Aging in Place & Staying at Home Safely</HeroBandTitle>
+
+        {/* Intro — relocated out of the title band. The band carries the
+            page title and nothing else, sitewide. */}
+        <section className="py-10 md:py-12 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
-                Guided Roadmap
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight mb-5">
-                Aging in Place & Staying at Home Safely
-              </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-7 max-w-2xl">
-                A guided roadmap for seniors and families exploring safety, caregiving support,
-                housing planning, home modifications, future transitions, and staying at home
-                as long as possible.
-              </p>
-              <a href="#pathways">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
-                  Start Here
-                </Button>
-              </a>
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              A guided roadmap for seniors and families exploring safety, caregiving support, housing planning, home modifications, future transitions, and staying at home as long as possible.
+            </p>
             </div>
           </div>
         </section>

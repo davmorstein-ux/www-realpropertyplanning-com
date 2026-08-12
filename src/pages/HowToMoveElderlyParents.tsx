@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -56,18 +57,16 @@ const HowToMoveElderlyParents = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">How to Move Elderly Parents Out of Their Home in Washington State</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-              Informational Guide
-            </p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-              How to Move Elderly Parents Out of Their Home in Washington State
-            </h1>
-            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              A step-by-step guide for families navigating senior housing transitions — with practical advice on conversations, downsizing, selling the home, and finding the right support along the way.
-            </p>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            A step-by-step guide for families navigating senior housing transitions — with practical advice on conversations, downsizing, selling the home, and finding the right support along the way.
+          </p>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -100,18 +101,16 @@ const YakimaProbateEstate = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">Practical Guidance for Inherited Property in Yakima</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Yakima, Yakima County
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Practical Guidance for Inherited Property in Yakima
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Inherited homes in Yakima often come with practical questions — about condition, pricing, and what to do next. Having straightforward guidance from someone who understands the property and the process can make a real difference.
-            </p>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Inherited homes in Yakima often come with practical questions — about condition, pricing, and what to do next. Having straightforward guidance from someone who understands the property and the process can make a real difference.
+          </p>
           </div>
         </div>
       </section>

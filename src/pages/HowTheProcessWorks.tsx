@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -133,21 +134,7 @@ const HowTheProcessWorks = () => {
           />
         </section>
 
-        <section className="bg-primary pt-10 pb-10 md:pt-[48px] md:pb-[48px] lg:pt-[60px] lg:pb-[60px]">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              {/* Band reduced to the page title only.
-                Removed: the "A Clear and Organized Approach" eyebrow, and the
-                subheading beginning "Real Property Planning follows a clear,
-                seven-step process..." — which described Real Property Planning
-                as performing brokerage work, contradicting the site disclaimer
-                that it does not provide real estate brokerage services. */}
-              <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight m-0">
-                How the Process Works
-              </h1>
-            </div>
-          </div>
-        </section>
+        <HeroBandTitle as="h1">How the Process Works</HeroBandTitle>
 
         {/* DirectAnswerBlock removed.
           Its answer read "Real Property Planning follows a clear seven-step

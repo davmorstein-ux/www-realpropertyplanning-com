@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -55,18 +56,16 @@ const Services = () => {
       <Header />
       <main id="main-content">
         {/* Hero */}
-        <section className="pt-3 md:pt-4 pb-12 md:pb-14 bg-primary">
+        <HeroBandTitle as="h1">Real Estate Services for Estate, Probate & Senior Transitions</HeroBandTitle>
+
+        {/* Intro — relocated out of the title band. The band carries the
+            page title and nothing else, sitewide. */}
+        <section className="py-10 md:py-12 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Services
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6">
-                Real Estate Services for Estate, Probate &amp; Senior Transitions
-              </h1>
-              <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">
-                Every situation is different. These are the areas where Real Property Planning's experience as a licensed brokerage with certified appraisal expertise makes the biggest difference.
-              </p>
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Every situation is different. These are the areas where Real Property Planning's experience as a licensed brokerage with certified appraisal expertise makes the biggest difference.
+            </p>
             </div>
           </div>
         </section>

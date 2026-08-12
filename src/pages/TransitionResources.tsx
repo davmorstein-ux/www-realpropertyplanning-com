@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -206,41 +207,16 @@ const TransitionResources = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-12 lg:pt-28 lg:pb-24">
+      <HeroBandTitle as="h1">Transition Resources for Families and Professionals</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-sm">
-              Resource Hub
-            </p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-semibold leading-tight mb-6">
-              Transition Resources for Families and Professionals
-            </h1>
-            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8 max-w-2xl">
-              A curated starting point for families, attorneys, senior living
-              professionals, and others navigating probate, downsizing, inherited
-              property, senior moves, and other major housing transitions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#resource-categories">
-                <Button variant="gold"
-                  size="lg"
- className="hover:-light px-8 h-[52px] text-base rounded-lg w-full sm:w-auto"
-                >
-                  <img src={iconBookOpen3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-                  Explore Resources
-                </Button>
-              </a>
-              <Link to="/contact">
-                <Button
-                  size="lg"
-                  variant="outline3d"
-                  className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto px-8 h-[52px] text-base rounded-lg"
-                >
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-                  Contact Real Property Planning
-                </Button>
-              </Link>
-            </div>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            A curated starting point for families, attorneys, senior living professionals, and others navigating probate, downsizing, inherited property, senior moves, and other major housing transitions.
+          </p>
           </div>
         </div>
       </section>

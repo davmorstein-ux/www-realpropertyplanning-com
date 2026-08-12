@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -199,18 +200,16 @@ const Insights = () => {
 
       <main id="main-content">
         {/* Hero */}
-        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+        <HeroBandTitle as="h1">Guidance for Probate, Inherited Property, and Real Estate Decisions</HeroBandTitle>
+
+        {/* Intro — relocated out of the title band. The band carries the
+            page title and nothing else, sitewide. */}
+        <section className="py-10 md:py-12 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Insights & Guidance
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-                Guidance for Probate, Inherited Property, and Real Estate Decisions
-              </h1>
-              <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Clear, practical information to help families, executors, and professionals navigate complex property situations.
-              </p>
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Clear, practical information to help families, executors, and professionals navigate complex property situations.
+            </p>
             </div>
           </div>
         </section>

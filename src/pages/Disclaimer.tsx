@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -13,18 +14,16 @@ const Disclaimer = () => {
       <BreadcrumbSchema items={[{ name: "Disclaimer", url: "/disclaimer" }]} />
       <Header />
       <main id="main-content">
-        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+        <HeroBandTitle as="h1">Disclaimer</HeroBandTitle>
+
+        {/* Intro — relocated out of the title band. The band carries the
+            page title and nothing else, sitewide. */}
+        <section className="py-10 md:py-12 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
-                Legal
-              </p>
-              <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-                Disclaimer
-              </h1>
-              <p className="text-xl text-primary-foreground/80 leading-relaxed">
-                Real Property Planning is an educational resource only.
-              </p>
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Real Property Planning is an educational resource only.
+            </p>
             </div>
           </div>
         </section>

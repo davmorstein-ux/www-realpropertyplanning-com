@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -96,31 +97,19 @@ const SellHouseFundSeniorLiving = () => {
       <Header />
       <main id="main-content">
         {/* Hero */}
-        <section className="pt-3 md:pt-4 pb-14 md:pb-16 bg-primary">
+        <HeroBandTitle as="h1">How to Sell a Parent's House to Pay for Senior Living</HeroBandTitle>
+
+        {/* Intro — relocated out of the title band. The band carries the
+            page title and nothing else, sitewide. */}
+        <section className="py-10 md:py-12 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <img src={fundSeniorLivingIcon} alt="" aria-hidden="true" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4" loading="lazy" style={{ opacity: 1, filter: 'none', mixBlendMode: 'normal', background: 'transparent' }} sizes="100vw" decoding="async" width={512} height={512} />
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6 leading-tight">
-                How to Sell a Parent's House to Pay for Senior Living
-              </h1>
-              <p className="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
-                For most Washington State families, the home is the key to affording the care their parent needs.
-              </p>
-              <p className="text-primary-foreground text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-                Real Property Planning coordinates the home sale with the care plan — so the timing and the proceeds work together.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
-                  <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold w-full sm:w-auto">
-                    Contact
-                  </Button>
-                </Link>
-                <a href="tel:2069003015">
-                  <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold w-full sm:w-auto">
-                    Call (206) 900-3015
-                  </Button>
-                </a>
-              </div>
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              For most Washington State families, the home is the key to affording the care their parent needs.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              Real Property Planning coordinates the home sale with the care plan — so the timing and the proceeds work together.
+            </p>
             </div>
           </div>
         </section>

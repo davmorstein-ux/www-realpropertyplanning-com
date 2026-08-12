@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -164,25 +165,22 @@ const Counties = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">Probate & Estate Real Estate Guidance by County</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <img src={iconServiceAreas} alt="Service areas map illustration" width="240" height="240" className="mx-auto w-full max-w-[15rem] aspect-square h-auto object-contain mb-1.5" loading="lazy" sizes="100vw" decoding="async"/>
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Service Areas
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Probate &amp; Estate Real Estate Guidance by County
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. Real Property Planning provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits. Real Property Planning now serves families, executors, attorneys, and professionals across more than 20 Washington counties — from the urban Puget Sound region to the Olympic Peninsula, the Columbia River Gorge, and beyond.
-            </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-5">
-              As a licensed broker and state-certified residential appraiser with over 20 years of experience, Real Property Planning evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to learn more about service in that area.
-            </p>
-            <p className="text-base text-primary-foreground/60 leading-relaxed">
-              Select a county above to see the cities served in that area.
-            </p>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. Real Property Planning provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits. Real Property Planning now serves families, executors, attorneys, and professionals across more than 20 Washington counties — from the urban Puget Sound region to the Olympic Peninsula, the Columbia River Gorge, and beyond.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            As a licensed broker and state-certified residential appraiser with over 20 years of experience, Real Property Planning evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to learn more about service in that area.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Select a county above to see the cities served in that area.
+          </p>
           </div>
         </div>
       </section>

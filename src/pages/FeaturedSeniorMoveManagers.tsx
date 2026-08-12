@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -67,17 +68,16 @@ const FeaturedSeniorMoveManagers = () => (
     <BreadcrumbSchema items={[{ name: "Featured Senior Move Managers", url: "/featured-senior-move-managers" }]} />
     <Header />
     <main id="main-content">
-      <section className="bg-primary py-12 md:py-16">
+      <HeroBandTitle as="h1">Featured Senior Move Managers</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">Senior Move Management</p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-5">
-              Featured Senior Move Managers
-            </h1>
-            <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "#e5e7eb" }}>
-              Trusted senior move managers supporting Washington families with downsizing, relocation, and compassionate
-              transitions.
-            </p>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Trusted senior move managers supporting Washington families with downsizing, relocation, and compassionate transitions.
+          </p>
           </div>
         </div>
       </section>

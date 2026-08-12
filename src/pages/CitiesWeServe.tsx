@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -77,35 +78,19 @@ const CitiesWeServe = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">Cities We Serve Throughout Washington State</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Local Cities and Communities
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Cities We Serve Throughout Washington State
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Real Property Planning helps clients and referring professionals navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions across a wide range of communities throughout Washington State. Our work combines over 20 years of real estate experience with Washington state certified appraisal expertise to help clients make more informed decisions about value, preparation, timing, and sale strategy.
-            </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              Click on any city below to explore local guidance and available services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-                  Request a Confidential Consultation
-                </Button>
-              </Link>
-              <Link to="/counties">
-                <Button size="lg" variant="navy3d" className="!border-2 !border-gold font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <MessageSquare className="w-4 h-4 mr-2" />
-                  Explore County Pages
-                </Button>
-              </Link>
-            </div>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Real Property Planning helps clients and referring professionals navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions across a wide range of communities throughout Washington State. Our work combines over 20 years of real estate experience with Washington state certified appraisal expertise to help clients make more informed decisions about value, preparation, timing, and sale strategy.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Click on any city below to explore local guidance and available services.
+          </p>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -116,33 +117,19 @@ const ProfessionalReferralResource = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">A Professional Real Estate Resource for Important Property Transitions</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <img src={iconResources} alt="" aria-hidden="true" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-semibold leading-tight mb-6">
-              A Professional Real Estate Resource for Important Property Transitions
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Real estate guidance for attorneys, fiduciaries, executors, trustees, seniors, and families navigating probate, estate property sales, inherited homes, and major housing transitions throughout Washington State.
-            </p>
-            <p className="text-base text-primary-foreground/70 leading-relaxed mb-3">
-              Real Property Planning is an educational and connection hub that helps clients make informed property decisions during complex and often emotional transitions, and connects them with appropriately licensed professionals when needed. We work closely with professional referral partners who want their clients served with care, discretion, responsiveness, and practical follow-through.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-                  Schedule a Confidential Conversation
-                </Button>
-              </Link>
-              <Link to="/services">
-                <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  View Services
-                </Button>
-              </Link>
-            </div>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Real estate guidance for attorneys, fiduciaries, executors, trustees, seniors, and families navigating probate, estate property sales, inherited homes, and major housing transitions throughout Washington State.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Real Property Planning is an educational and connection hub that helps clients make informed property decisions during complex and often emotional transitions, and connects them with appropriately licensed professionals when needed. We work closely with professional referral partners who want their clients served with care, discretion, responsiveness, and practical follow-through.
+          </p>
           </div>
         </div>
       </section>

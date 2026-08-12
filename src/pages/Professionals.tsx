@@ -1,4 +1,5 @@
 import { useState } from "react";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -264,18 +265,19 @@ const Professionals = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-12 md:pt-16 pb-14 md:pb-20">
+      <HeroBandTitle as="h1">The Right Team Makes All the Difference</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[700px] mx-auto text-center">
-            <h1 className="font-serif text-[2.5rem] text-primary-foreground font-semibold leading-tight mb-6">
-              The Right Team Makes All the Difference
-            </h1>
-            <p className="text-xl text-primary-foreground leading-relaxed">
-              Navigating a probate sale, inherited home, or senior housing transition often means working with several professionals at once. This page highlights experienced specialists across Western Washington who families trust during these transitions.
-            </p>
-            <p className="text-xl text-primary-foreground leading-relaxed mt-4">
-              Each professional listed here works in areas that commonly intersect with real estate — so families can find the right help in one place.
-            </p>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Navigating a probate sale, inherited home, or senior housing transition often means working with several professionals at once. This page highlights experienced specialists across Western Washington who families trust during these transitions.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Each professional listed here works in areas that commonly intersect with real estate — so families can find the right help in one place.
+          </p>
           </div>
         </div>
       </section>

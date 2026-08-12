@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -86,26 +87,19 @@ const PowerOfAttorney = () => {
       <main id="main-content">
 
         {/* Hero */}
-        <section className="pt-3 md:pt-4 pb-12 md:pb-14 bg-primary">
-          <div className={contentWrap}>
-            <div className={proseWrap + " text-center"}>
-              <div className="flex justify-center mb-1.5 md:mb-2">
-                <img src={poaIcon} alt="Power of Attorney real estate guidance in Washington State" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-              </div>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.5rem] font-semibold text-primary-foreground leading-tight mb-6">
-                Helping Those Who Hold Power of Attorney Navigate Real Estate in Washington State
-              </h1>
-              <p className={pClass}>
-                If you have been granted Power of Attorney for an aging parent, spouse, or loved one, you may find yourself responsible for making real estate decisions on their behalf.
-              </p>
-              <p className={pClass}>
-                That is a significant responsibility — and one that Real Property Planning is uniquely equipped to help you navigate with confidence, care, and the right professional expertise.
-              </p>
-              <Link to="/contact" className="inline-block mt-6">
-                <button className="bg-gold hover:bg-gold/90 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors">
-                  Talk to Us About Your Situation
-                </button>
-              </Link>
+        <HeroBandTitle as="h1">Helping Those Who Hold Power of Attorney Navigate Real Estate in Washington State</HeroBandTitle>
+
+        {/* Intro — relocated out of the title band. The band carries the
+            page title and nothing else, sitewide. */}
+        <section className="py-10 md:py-12 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              If you have been granted Power of Attorney for an aging parent, spouse, or loved one, you may find yourself responsible for making real estate decisions on their behalf.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              That is a significant responsibility — and one that Real Property Planning is uniquely equipped to help you navigate with confidence, care, and the right professional expertise.
+            </p>
             </div>
           </div>
         </section>

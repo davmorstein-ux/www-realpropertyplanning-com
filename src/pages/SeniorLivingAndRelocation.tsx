@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -91,30 +92,16 @@ const SeniorLivingAndRelocation = () => {
       <Header />
 
       <main id="main-content">
-        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+        <HeroBandTitle as="h1">Senior Living & Relocation</HeroBandTitle>
+
+        {/* Intro — relocated out of the title band. The band carries the
+            page title and nothing else, sitewide. */}
+        <section className="py-10 md:py-12 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="flex justify-center mb-1.5 md:mb-2">
-                <img
-                  src={iconSeniorLiving}
-                  alt="Senior Living & Relocation"
-                  className="block w-full max-w-[15rem] h-auto object-contain"
-                  loading="lazy"
-                  sizes="100vw"
-                  decoding="async"
-                  width={512}
-                  height={349}
-                />
-              </div>
-              <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Senior Living</p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-                Senior Living & Relocation
-              </h1>
-              <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                When a senior is moving out of their home, families face important decisions about where to go next —
-                and what to do with the property they're leaving behind. I help families navigate both sides of that
-                transition with clarity and care.
-              </p>
+            <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+              When a senior is moving out of their home, families face important decisions about where to go next — and what to do with the property they're leaving behind. I help families navigate both sides of that transition with clarity and care.
+            </p>
             </div>
           </div>
         </section>

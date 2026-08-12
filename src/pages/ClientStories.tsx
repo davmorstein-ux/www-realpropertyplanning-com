@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -57,15 +58,16 @@ const ClientStories = () => (
     <BreadcrumbSchema items={[{ name: "Client Stories", url: "/client-stories" }]} />
     <Header />
     <main id="main-content">
-      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px]">
+      <HeroBandTitle as="h1">Real Situations. Real Outcomes.</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-5">
-              Real Situations. Real Outcomes.
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Every estate property situation is different. Here are a few examples of how we've helped.
-            </p>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Every estate property situation is different. Here are a few examples of how we've helped.
+          </p>
           </div>
         </div>
       </section>

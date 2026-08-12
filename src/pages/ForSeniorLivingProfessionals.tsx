@@ -1,4 +1,5 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -113,24 +114,19 @@ const ForSeniorLivingProfessionals = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-12 lg:pt-28 lg:pb-24">
+      <HeroBandTitle as="h1">Real Estate Guidance for Senior Living and Transition Professionals</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-sm">
-              For Senior Living &amp; Transition Professionals
-            </p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-semibold leading-tight mb-6">
-              Real Estate Guidance for Senior Living and Transition Professionals
-            </h1>
-            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8 max-w-2xl">
-              Real Property Planning works with senior living communities, move managers, downsizing specialists, estate sale companies, and related professionals when a home is part of a major life transition. With dual credentials as a licensed broker and certified appraiser, Real Property Planning brings the market knowledge and professional sensitivity these situations require.
-            </p>
-            <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light px-8 h-[52px] text-base rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-                Connect About a Client Situation
-              </Button>
-            </Link>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            For Senior Living &amp; Transition Professionals
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Real Property Planning works with senior living communities, move managers, downsizing specialists, estate sale companies, and related professionals when a home is part of a major life transition. With dual credentials as a licensed broker and certified appraiser, Real Property Planning brings the market knowledge and professional sensitivity these situations require.
+          </p>
           </div>
         </div>
       </section>

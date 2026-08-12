@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -82,16 +83,16 @@ const PascoProbateEstate = () => {
       <Header />
       <main id="main-content">
 
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">Clear Guidance for Inherited Property in Pasco</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Pasco, Franklin County</p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Clear Guidance for Inherited Property in Pasco
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Inherited properties in Pasco come in all conditions — from newer construction to older homes that need significant attention. Whatever the situation, clear guidance and honest assessment can help families make confident decisions about what comes next.
-            </p>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Inherited properties in Pasco come in all conditions — from newer construction to older homes that need significant attention. Whatever the situation, clear guidance and honest assessment can help families make confident decisions about what comes next.
+          </p>
           </div>
         </div>
       </section>

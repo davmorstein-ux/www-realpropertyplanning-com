@@ -1,4 +1,5 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -28,15 +29,16 @@ const SeniorEstateServices = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">Senior & Estate Real Estate Services in Washington State</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1100px] mx-auto">
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Senior &amp; Estate Real Estate Services in Washington State
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-3xl">
-              Real Property Planning specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties. Whether you are a senior planning a move, an adult child helping a parent, an executor settling an estate, or an attorney advising a client, Real Property Planning coordinates the real estate side so you can focus on the decisions that matter — not the logistics. Every engagement begins with a clear plan, honest communication, and a calm, professional approach.
-            </p>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Real Property Planning specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties. Whether you are a senior planning a move, an adult child helping a parent, an executor settling an estate, or an attorney advising a client, Real Property Planning coordinates the real estate side so you can focus on the decisions that matter — not the logistics. Every engagement begins with a clear plan, honest communication, and a calm, professional approach.
+          </p>
           </div>
         </div>
       </section>

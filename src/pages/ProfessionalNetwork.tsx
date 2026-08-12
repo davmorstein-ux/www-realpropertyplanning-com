@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -84,21 +85,19 @@ const ProfessionalNetwork = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">Independent Professionals & Trusted Resources</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
-              Independent Professionals
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Independent Professionals & Trusted Resources
-            </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed">
-              Real Property Planning is an independent educational hub that helps Washington families and the professionals who serve them learn about probate, estate transitions, senior housing, and related topics — and find independent professionals who may help.
-            </p>
-            <p className="text-base text-primary-foreground/70 leading-relaxed mt-4">
-              The professionals referenced here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
-            </p>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            Real Property Planning is an independent educational hub that helps Washington families and the professionals who serve them learn about probate, estate transitions, senior housing, and related topics — and find independent professionals who may help.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            The professionals referenced here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
+          </p>
           </div>
         </div>
       </section>
