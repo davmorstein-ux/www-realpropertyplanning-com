@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { AGING_PARENT_LOOKUP, type FlowNode } from "@/lib/aging-parent-flow";
-import agingParentHero from "@/assets/aging_parent_hero_clean.webp";
 
 /**
  * Renders a single page in the guided choice flow based on the current pathname.
@@ -37,8 +36,18 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
       <main id="main-content" className="flex-1">
         <section className="pt-8 pb-10 lg:pt-10 lg:pb-16 bg-cream">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto" style={{ paddingTop: "var(--header-height, 100px)" }}>
-              {/* Hero image — root page or any node with explicit heroImage */}
+            {/* No header-height padding: that offset dated from a FIXED
+                header that floated over content. The header is sticky now and
+                occupies its own space, so the old padding just inserted ~100px
+                of dead cream above the band on every flow view. */}
+            <div className="max-w-4xl mx-auto">
+              {/* Title band only — the illustrated hero was removed under the
+                  sitewide rule (one hero, and it is the homepage). The 100vw
+                  wrapper stays so the band runs full-bleed like every other
+                  page's band instead of being inset by this container.
+                  as="h1": this IS the page heading — without it the band
+                  rendered the compact 15px eyebrow variant, which is why this
+                  band was visibly thinner than every other page's. */}
               {(isRoot || node.heroImage || node.heroBandTitle) && (
                 <>
                   <div
@@ -47,18 +56,9 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                       position: "relative",
                       left: "50%",
                       transform: "translateX(-50%)",
-                      lineHeight: 0,
                     }}
                   >
-                    <img
-                      src={node.heroImage || agingParentHero}
-                      alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
-                      className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-                      loading="eager"
-                      sizes="100vw"
-                      decoding="async"
-                    />
-                    <HeroBandTitle>
+                    <HeroBandTitle as="h1">
                       {node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}
                     </HeroBandTitle>
                   </div>
@@ -83,9 +83,6 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                   <h1 className="font-serif text-3xl md:text-5xl text-navy font-semibold leading-tight mb-4">
                     {node.label}
                   </h1>
-                )}
-                {(isRoot || node.heroImage || node.heroBandTitle) && (
-                  <h1 className="sr-only">{node.heroBandTitle || node.label}</h1>
                 )}
                 {node.subtext && (
                   <p className="text-navy/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">{node.subtext}</p>
