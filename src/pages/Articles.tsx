@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import type { CSSProperties } from "react";
 import ArticlesCarousel from "@/components/ArticlesCarousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -13,6 +14,21 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
    substantially rewritten, re-measure rather than eyeballing — a stated read
    time that's wrong is worse than none. The audio narrations announce their
    own duration in the player, so no separate listen time is shown. */
+/* Shared style for the Read / Listen links at the foot of each card. */
+const actionLinkStyle: CSSProperties = {
+  fontSize: 12,
+  fontFamily: "'DM Sans', system-ui, sans-serif",
+  fontWeight: 700,
+  letterSpacing: "0.14em",
+  textTransform: "uppercase" as const,
+  color: "#7f2028",
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 7,
+  textDecoration: "none",
+  minHeight: 44,
+};
+
 const ARTICLES = [
   {
     title: "The Silver Tsunami",
@@ -146,9 +162,12 @@ const Articles = () => {
 
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {ARTICLES.map((article, i) => (
-              <Link
+              /* A div, not a Link. The card used to be one whole-card anchor,
+                 which ruled out separate Read and Listen destinations — nested
+                 anchors are invalid HTML. The cover, the title and the two
+                 action links below are the anchors now, all generous targets. */
+              <div
                 key={article.href}
-                to={article.href}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -156,16 +175,18 @@ const Articles = () => {
                   padding: "20px 0",
                   borderBottom: "1px solid #dfc9cb",
                   borderTop: i === 0 ? "1px solid #dfc9cb" : "none",
-                  textDecoration: "none",
                   transition: "background 0.2s ease",
                 }}
                 onMouseEnter={(e) =>
-                  ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(139,105,20,0.04)")
+                  ((e.currentTarget as HTMLDivElement).style.background = "rgba(139,105,20,0.04)")
                 }
-                onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "transparent")}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLDivElement).style.background = "transparent")}
               >
-                {/* Thumbnail */}
-                <div
+                {/* Thumbnail — links to the article like the title does */}
+                <Link
+                  to={article.href}
+                  aria-hidden="true"
+                  tabIndex={-1}
                   style={{
                     flexShrink: 0,
                     width: 90,
@@ -173,6 +194,7 @@ const Articles = () => {
                     borderRadius: 4,
                     overflow: "hidden",
                     boxShadow: "0 2px 12px rgba(10,22,40,0.12)",
+                    display: "block",
                   }}
                 >
                   <img
@@ -188,7 +210,7 @@ const Articles = () => {
                     sizes="100vw"
                     decoding="async"
                   />
-                </div>
+                </Link>
 
                 {/* Text */}
                 <div style={{ flex: 1, minWidth: 0 }}>
@@ -202,23 +224,10 @@ const Articles = () => {
                       fontFamily: "Georgia, serif",
                     }}
                   >
-                    {article.title}
+                    <Link to={article.href} style={{ color: "inherit", textDecoration: "none" }}>
+                      {article.title}
+                    </Link>
                   </h3>
-                  {/* Measured read time — see the note on ARTICLES. Sits between
-                      title and description so a scanner sees the commitment
-                      before the pitch. Plain text, not a pill: eleven small
-                      badges on one page would be noise. */}
-                  <p
-                    style={{
-                      fontSize: 13,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
-                      fontWeight: 600,
-                      color: "#6d6762",
-                      margin: "0 0 8px",
-                    }}
-                  >
-                    {article.minutes} min read &middot; {article.listenMinutes} min listen
-                  </p>
                   <p
                     style={{
                       fontSize: 14,
@@ -230,35 +239,30 @@ const Articles = () => {
                   >
                     {article.description}
                   </p>
-                  <span
-                    style={{
-                      fontSize: 11,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
-                      fontWeight: 700,
-                      letterSpacing: "0.18em",
-                      textTransform: "uppercase",
-                      color: "#7f2028",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 5,
-                    }}
-                  >
-                    Read Article
-                    <svg
-                      width="11"
-                      height="11"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </span>
+                  {/* Two real destinations, one row. Read opens the article;
+                      Listen opens it with ?listen=1, which the audio player
+                      reads to expand, scroll into view and start playback —
+                      so choosing Listen here is one click, not a click plus a
+                      hunt for the player. Each link carries its measured time,
+                      which replaced the separate times line above: same
+                      information, fewer elements. */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 22, flexWrap: "wrap" }}>
+                    <Link to={article.href} style={{ ...actionLinkStyle }}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                      </svg>
+                      Read &middot; {article.minutes} min
+                    </Link>
+                    <Link to={`${article.href}?listen=1`} style={{ ...actionLinkStyle }}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
+                      </svg>
+                      Listen &middot; {article.listenMinutes} min
+                    </Link>
+                  </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </section>
