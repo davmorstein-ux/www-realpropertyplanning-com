@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -44,23 +45,19 @@ const PricingHouseTrustEstate = () => (
     <Header />
     <main id="main-content">
 
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-            </div>
+    <HeroBandTitle as="h1">How Do You Price a House in a Trust or Estate?</HeroBandTitle>
 
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-            How Do You Price a House in a Trust or Estate?
-          </h1>
-          <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Written for executors, trustees, and attorneys who need a defensible pricing approach for a home held in a trust or estate. Pricing estate and trust property requires a different approach than pricing a typical home sale. The property is usually in non-standard condition, the decision-makers often have competing interests, and the executor or trustee has a fiduciary obligation to act in the estate's best interest. Getting the price right protects everyone involved.
-          </p>
-          <p className="text-lg text-primary-foreground/70 leading-relaxed">
-            This guide explains why standard pricing methods fall short and what a valuation-informed approach looks like in practice.
-          </p>
+    {/* Intro — relocated out of the title band. The band carries the
+        page title and nothing else, sitewide. */}
+    <section className="py-10 md:py-12 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+        <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+          Written for executors, trustees, and attorneys who need a defensible pricing approach for a home held in a trust or estate. Pricing estate and trust property requires a different approach than pricing a typical home sale. The property is usually in non-standard condition, the decision-makers often have competing interests, and the executor or trustee has a fiduciary obligation to act in the estate's best interest. Getting the price right protects everyone involved.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+          This guide explains why standard pricing methods fall short and what a valuation-informed approach looks like in practice.
+        </p>
         </div>
       </div>
     </section>

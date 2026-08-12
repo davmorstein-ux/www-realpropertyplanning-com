@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import BackToResources from "@/components/BackToResources";
 import SEOHead from "@/components/SEOHead";
@@ -136,15 +137,7 @@ const ProbateHouseSaleTimelineWashington = () => (
           Estate Broker & Certified Residential Appraiser", which attributed
           licensure to the hub rather than to David Stein personally. Do not
           reinstate it in that form. */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-16">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
-              Probate House Sale Timeline in Washington State
-            </h1>
-          </div>
-        </div>
-      </section>
+      <HeroBandTitle as="h1">Probate House Sale Timeline in Washington State</HeroBandTitle>
 
       {/* Section 1: Why the Timeline Matters */}
       <section className="py-14 md:py-20 bg-background">

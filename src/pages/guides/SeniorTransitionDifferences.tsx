@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -52,20 +53,16 @@ const SeniorTransitionDifferences = () => (
     <Header />
     <main id="main-content">
 
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-            </div>
+    <HeroBandTitle as="h1">How Senior Transition Sales Differ From Ordinary Home Sales</HeroBandTitle>
 
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-            How Senior Transition Sales Differ From Ordinary Home Sales
-          </h1>
-          <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Written for adult children and families helping a senior parent sell a longtime family home as part of a move into assisted living, downsizing, or relocating closer to family. When a senior is moving out of a longtime family home — whether to assisted living, a smaller residence, or closer to family — the sale process looks and feels fundamentally different from a conventional home transaction. Understanding these differences helps families plan realistically and choose the right professional support.
-          </p>
+    {/* Intro — relocated out of the title band. The band carries the
+        page title and nothing else, sitewide. */}
+    <section className="py-10 md:py-12 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+        <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+          Written for adult children and families helping a senior parent sell a longtime family home as part of a move into assisted living, downsizing, or relocating closer to family. When a senior is moving out of a longtime family home — whether to assisted living, a smaller residence, or closer to family — the sale process looks and feels fundamentally different from a conventional home transaction. Understanding these differences helps families plan realistically and choose the right professional support.
+        </p>
         </div>
       </div>
     </section>

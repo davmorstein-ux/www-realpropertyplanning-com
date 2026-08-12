@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -92,15 +93,7 @@ const SellHouseDuringProbateWashington = () => (
     <main id="main-content">
 
     {/* Hero — simplified */}
-    <section className="bg-primary pt-6 md:pt-10 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="font-serif text-primary-foreground font-semibold leading-tight mb-5" style={{ fontSize: "clamp(36px, 5vw, 46px)" }}>
-            Can You Sell a House During Probate in Washington State?
-          </h1>
-        </div>
-      </div>
-    </section>
+    <HeroBandTitle as="h1">Can You Sell a House During Probate in Washington State?</HeroBandTitle>
 
     {/* Accordion tiles */}
     <section className="py-12 lg:py-16 bg-background">

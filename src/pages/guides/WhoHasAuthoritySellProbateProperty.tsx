@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import BackToResources from "@/components/BackToResources";
 import SEOHead from "@/components/SEOHead";
@@ -93,15 +94,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-16">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-5">
-              Who Has Authority to Sell Probate Property in Washington State?
-            </h1>
-          </div>
-        </div>
-      </section>
+      <HeroBandTitle as="h1">Who Has Authority to Sell Probate Property in Washington State?</HeroBandTitle>
 
         {/* Intro — moved out of the blue band so the band carries only the
             title. A full-width photo hero used to sit ABOVE this one, with a
