@@ -4,7 +4,6 @@ import SEOHead from "@/components/SEOHead";
 import BackToLongTermCare from "@/components/BackToLongTermCare";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import heroImage from "@/assets/articles-hero-banner.webp";
 
 interface Props {
   title: string;
@@ -19,19 +18,7 @@ const StubLayout = ({ title }: Props) => {
       />
       <Header />
       <main id="main-content">
-        <div className="bg-white">
-          <img
-            src={heroImage}
-            alt={title}
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-            width={1904}
-            height={521}
-          />
-        </div>
-        <HeroBandTitle as="h1">{title}</HeroBandTitle>
+<HeroBandTitle as="h1">{title}</HeroBandTitle>
 
         <section style={{ backgroundColor: "hsl(40 20% 98%)", padding: "48px 24px 64px" }}>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>

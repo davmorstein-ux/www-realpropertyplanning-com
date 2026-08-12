@@ -4,7 +4,6 @@ import SEOHead from "@/components/SEOHead";
 import BackToLongTermCare from "@/components/BackToLongTermCare";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import heroImage from "@/assets/articles-hero-banner.webp";
 import { Link } from "react-router-dom";
 
 const h2Class = "font-serif text-[28px] font-semibold text-[hsl(215,45%,18%)] mt-10 mb-4";
@@ -22,19 +21,7 @@ const ShortTermNursingHomeStays = () => {
       />
       <Header />
       <main id="main-content">
-        <div className="bg-white">
-          <img
-            src={heroImage}
-            alt="Short-Term Nursing Home Stays in Washington State"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-            width={1904}
-            height={521}
-          />
-        </div>
-        <HeroBandTitle as="h1">Short-Term Nursing Home Stays in Washington State: What Families Need to Know</HeroBandTitle>
+<HeroBandTitle as="h1">Short-Term Nursing Home Stays in Washington State: What Families Need to Know</HeroBandTitle>
 
         <section className="bg-[hsl(40,20%,98%)] px-6 pt-12 pb-16">
           <div className="max-w-[760px] mx-auto">
