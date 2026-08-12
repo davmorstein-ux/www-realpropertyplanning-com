@@ -4548,3 +4548,64 @@ main .rpp-coc-cta:hover::before {
     animation: none !important;
   }
 }
+
+
+/* ============================================================
+   CTA ARROW — one arrow, every button, drawn by CSS
+   ============================================================
+
+   Every canonical button gets a right-pointing arrow whose shaft
+   LENGTHENS on hover. The arrow is a masked ::after painted in
+   currentColor, so it needs no markup, no SVG in any component,
+   and no per-page wiring — which is why some buttons had arrows
+   and most didn't: the old arrows were hand-placed markup.
+
+   Mechanism: the ::after carries a fixed 24x16 arrow image as a
+   MASK anchored to its RIGHT edge. At rest the element is 13px
+   wide, showing the head and a short shaft; on hover it widens to
+   23px, revealing shaft — the head advances and the tail extends.
+   The ants effect owns ::before on these same elements; this owns
+   ::after. Both pseudo slots are now spoken for on canonical
+   buttons — any future decoration needs a real element.
+
+   The "Calculate My Costs" string used to END with a "→" glyph in
+   all eight locale files; those were stripped in the same change,
+   or this arrow would have doubled it. Do not re-add glyph arrows
+   to button strings — the CSS supplies the arrow now.
+   ============================================================ */
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"])::after,
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])::after,
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"])::after,
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])::after,
+main .rpp-answer-cta::after,
+main .rpp-coc-cta::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 15px;
+  margin-left: 9px;
+  flex: none;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
+  transition: width 0.22s ease;
+}
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::after,
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::after,
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::after,
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::after,
+main .rpp-answer-cta:hover::after,
+main .rpp-coc-cta:hover::after {
+  width: 23px;
+}
+@media (prefers-reduced-motion: reduce) {
+  main a[class*="btn"]::after,
+  main a[class*="cta"]::after,
+  main button[class*="btn"]::after,
+  main button[class*="cta"]::after,
+  main .rpp-answer-cta::after,
+  main .rpp-coc-cta::after {
+    transition: none !important;
+  }
+}
