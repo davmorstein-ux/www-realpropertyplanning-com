@@ -94,9 +94,13 @@ const PrimaryNav = () => {
         .rpp-primarynav {
           display: flex;
           align-items: center;
-          /* The first four sit together at one even gap; the last is pushed
-             into a fixed slot at the right so it lands under the phone. */
-          justify-content: flex-start;
+          /* All five sit together at one even gap, right-aligned so the row
+             ends flush with the phone button's right edge in the tier above.
+             About used to be pushed into a fixed slot of its own beneath the
+             phone; grouping it reads as five equals instead of four-plus-one,
+             and it frees the ~215px that slot was reserving — which also
+             relieves the 1280px crowding noted below. */
+          justify-content: flex-end;
           /* Scales with the window. At 1280px the four labels plus a fixed
              40px gap overflow the space left by the search field and the
              phone-width slot; at 1440px and up they fit comfortably. The clamp
@@ -113,16 +117,18 @@ const PrimaryNav = () => {
           min-width: 0;
         }
         .rpp-pn-slot { position: relative; }
-        .rpp-pn-slot--last {
-          margin-left: auto;
-          /* Set by Header.tsx from the phone button's measured width, so this
-             slot always matches it. The fallback only applies before the first
-             measurement. */
-          width: var(--pn-phone-slot, 215px);
-          display: flex;
-          justify-content: center;
-          flex-shrink: 0;
-        }
+        /* .rpp-pn-slot--last is still applied in the JSX but no longer
+           repositions anything. It previously carried margin-left:auto and
+           width:var(--pn-phone-slot) to park About under the phone button.
+           (No backticks in this block — it lives inside a template literal.)
+           The class is kept as a hook — the menu-alignment rule further down
+           still needs a way to name the final entry — but it must not reintroduce
+           spacing, or About separates from the group again.
+
+           Header.tsx still measures the phone button and sets --pn-phone-slot.
+           That variable is now unused here; harmless, and left in place in case
+           the isolated layout is ever wanted back. */
+        .rpp-pn-slot--last { flex-shrink: 0; }
 
         /* Divider between the grouped entries, drawn in CSS rather than added
            to the markup — no JSX changes, and it cannot get out of step with
@@ -136,9 +142,10 @@ const PrimaryNav = () => {
            with the window. Deliberately faint: the job is to separate, not to
            decorate.
 
-           Suppressed before the last entry, which sits apart in its own slot
-           under the phone — a divider there would imply it belongs to the
-           rhythm of the other four. */
+           Every entry after the first now gets one, About included. The
+           suppression that used to sit here existed only because About stood
+           apart in its own slot, where a divider would have implied it belonged
+           to a rhythm it wasn't part of. It is part of that rhythm now. */
         .rpp-pn-slot + .rpp-pn-slot::before {
           content: "";
           position: absolute;
@@ -149,7 +156,6 @@ const PrimaryNav = () => {
           height: 30px;
           background: rgba(39, 36, 33, 0.22);
         }
-        .rpp-pn-slot--last::before { content: none; }
 
         .rpp-pn-trigger.rpp-pn-trigger {
           display: inline-flex;
