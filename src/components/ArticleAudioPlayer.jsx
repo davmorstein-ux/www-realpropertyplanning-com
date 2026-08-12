@@ -98,6 +98,31 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
   const [duration, setDuration] = useState(0);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [isExpanded, setIsExpanded] = useState(false);
+  const containerRef = useRef(null);
+
+  /* Deep-link from the articles index: a card's "Listen" link appends
+     ?listen=1, and this honours it — expand, scroll the player into view, and
+     attempt playback. The attempt can be refused: browsers block audio
+     autoplay until the user has interacted with the site, and whether the
+     click on the previous page counts varies. When refused, the catch leaves
+     the player expanded, in view, one tap from playing — still fewer steps
+     than finding it by hand. Runs once; the parameter is not re-read on
+     navigation within the page. */
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!new URLSearchParams(window.location.search).has("listen")) return;
+    setIsExpanded(true);
+    const el = containerRef.current;
+    if (el) {
+      window.setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "center" }), 150);
+    }
+    const audio = audioRef.current;
+    if (audio) {
+      const tryPlay = () => audio.play().then(() => setIsPlaying(true)).catch(() => {});
+      if (audio.readyState >= 1) tryPlay();
+      else audio.addEventListener("loadedmetadata", tryPlay, { once: true });
+    }
+  }, []);
   const [isDragging, setIsDragging] = useState(false);
 
   // Sync audio events
@@ -343,7 +368,7 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
   };
 
   return (
-    <div style={{ marginBottom: isExpanded ? 0 : "12px" }}>
+    <div ref={containerRef} style={{ marginBottom: isExpanded ? 0 : "12px" }}>
       <audio ref={audioRef} src={audioSrc} preload="metadata" />
 
       {/* ── Collapsed pill ─────────────────────────────── */}
