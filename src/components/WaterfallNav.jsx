@@ -173,7 +173,22 @@ const CSS = `
     position: fixed;
     top: 64px;
     left: 0;
-    width: 660px;
+    /* Was 660px, which left ~90px of dead cream to the right of even the
+       longest link. This value is not arbitrary and should not be nudged by
+       eye: it is 220px rail + 1px divider + ~349px flyout, where the flyout
+       is sized to the longest label in the ENTIRE nav data set —
+       "Downsizing & Preparing for Transition" (37 chars, 14px/700) — plus
+       its 20px side padding and the 3px scrollbar gutter.
+
+       The width is deliberately FIXED rather than content-driven. Sizing to
+       max-content would make the panel jump wider and narrower as the reader
+       moves down the rail, since each category has a different longest link.
+       For an audience that includes people with tremor or low vision, a menu
+       that changes size under the cursor is worse than one with some slack.
+
+       If a longer link is ever added, this number has to grow with it, or
+       that link wraps to two lines. Check the longest label before editing. */
+    width: 570px;
     max-width: 96vw;
     height: calc(100vh - 64px);
     background: #f7f4ef;
