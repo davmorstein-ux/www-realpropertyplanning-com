@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -11,7 +12,6 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconWills from "@/assets/icons/estate-wills-planning-icon-washington.webp";
 
 const willsFaqs = [
   {
@@ -74,66 +74,35 @@ const Wills = () => {
       <div className="min-h-screen flex flex-col" data-nosnippet>
         <Header />
         <main id="main-content" className="flex-1">
-          {/* Hero */}
-          <section className="pt-3 md:pt-4 pb-10 sm:pb-14 bg-gradient-to-b from-primary to-primary">
-            <div className="mx-auto max-w-3xl px-6 text-center">
-              <img src={iconWills} alt="Wills and real estate guidance for Washington State families" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy" sizes="100vw" decoding="async" width={341} height={512} />
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                Wills &amp; Real Estate
-              </h1>
-              <p className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed mb-3">
-                A will is one of the most important documents in estate planning — and when real
-                property is involved, the decisions it guides can shape a family's financial future
-                for years to come.
-              </p>
-              <button
-                onClick={() => {
-                  const target = document.getElementById("secure-will-section");
-                  if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top + window.scrollY;
-                    window.scrollTo({ top: elementPosition - headerOffset, behavior: "smooth" });
-                  }
-                }}
-                className="group relative inline-flex flex-col items-center justify-center cursor-pointer transition-all duration-200 hover:-translate-y-1 active:translate-y-[2px]"
-                style={{ padding: 0 }}
-              >
-                {/* Outer white body/shell — premium keycap base */}
-                <div
-                  className="absolute inset-0 rounded-[22px]"
-                  style={{
-                    background: 'linear-gradient(180deg, #ffffff 0%, #f5f2ec 60%, #e8e4dc 100%)',
-                    boxShadow: '0 8px 0 #d4c7c8, 0 10px 0 #c4bfb4, 0 14px 30px rgba(0,0,0,0.22), 0 4px 8px rgba(0,0,0,0.12)',
+          <HeroBandTitle as="h1">Wills &amp; Real Estate</HeroBandTitle>
+
+          {/* Intro — relocated out of the title band. The band carries the
+              page title and nothing else, sitewide. The ornate scroll button
+              that lived in the old hero is now the plain link below; the
+              secure-storage section it points at is unchanged. */}
+          <section className="py-10 md:py-12 bg-background">
+            <div className="container px-6 lg:px-8">
+              <div className="max-w-3xl mx-auto">
+                <p className="text-muted-foreground leading-relaxed mb-4" style={{ fontSize: "18px" }}>
+                  A will is one of the most important documents in estate planning — and when real
+                  property is involved, the decisions it guides can shape a family's financial future
+                  for years to come.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const target = document.getElementById("secure-will-section");
+                    if (target) {
+                      const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+                      window.scrollTo({ top: elementPosition - 80, behavior: "smooth" });
+                    }
                   }}
-                />
-                {/* Gold trim ring */}
-                <div
-                  className="absolute rounded-[17px]"
-                  style={{
-                    inset: '5px',
-                    border: '2px solid hsl(42 55% 62% / 0.5)',
-                    boxShadow: 'inset 0 0 4px rgba(201,168,76,0.12), 0 0 3px rgba(201,168,76,0.1)',
-                  }}
-                />
-                {/* Teal inner face */}
-                <div
-                  className="relative rounded-[13px] px-12 py-7 flex flex-col items-center justify-center"
-                  style={{
-                    margin: '8px 8px 14px 8px',
-                    background: 'linear-gradient(180deg, #28918f 0%, #1d7372 30%, #166060 70%, #134e4d 100%)',
-                    boxShadow: `
-                      inset 0 2px 2px rgba(255,255,255,0.25),
-                      inset 0 -2px 4px rgba(0,0,0,0.15),
-                      inset 1px 0 2px rgba(255,255,255,0.08),
-                      inset -1px 0 2px rgba(255,255,255,0.08)
-                    `,
-                    borderTop: '1px solid rgba(255,255,255,0.3)',
-                  }}
+                  className="gold-cta bg-transparent"
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, border: 0, cursor: "pointer" }}
                 >
-                  <span className="font-bold text-lg sm:text-xl leading-snug text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Do you know where your will is?</span>
-                  <span className="text-base sm:text-lg font-semibold leading-snug mt-1.5 text-white/95" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Save a secure copy here.</span>
-                </div>
-              </button>
+                  Do you know where your will is? Save a secure copy &rarr;
+                </button>
+              </div>
             </div>
           </section>
 
