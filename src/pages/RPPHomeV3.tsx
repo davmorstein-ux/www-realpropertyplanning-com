@@ -501,9 +501,11 @@ const RPPHomeV3 = () => {
                         already a link, so a button inside it was a second
                         affordance for the same action — the same reason the
                         in-card links elsewhere were unfilled. */}
-                    {/* No icon here: the arrow is already part of the
-                        translated string ("Calculate My Costs →"), so an SVG
-                        chevron produced two arrows side by side. */}
+                    {/* No icon and no glyph: the sitewide CTA arrow is drawn
+                        by CSS (see the CTA ARROW block at the end of
+                        index.css). The translated strings used to end with a
+                        "→" glyph; those were stripped when the CSS arrow
+                        shipped, or every locale would show two arrows. */}
                     <span className="rpp-coc-cta">{t("costOfCare.cta")}</span>
                   </div>
 
