@@ -94,13 +94,17 @@ const PrimaryNav = () => {
         .rpp-primarynav {
           display: flex;
           align-items: center;
-          /* All five sit together at one even gap, right-aligned so the row
-             ends flush with the phone button's right edge in the tier above.
-             About used to be pushed into a fixed slot of its own beneath the
-             phone; grouping it reads as five equals instead of four-plus-one,
-             and it frees the ~215px that slot was reserving — which also
-             relieves the 1280px crowding noted below. */
-          justify-content: flex-end;
+          /* All five sit together at one even gap, LEFT-aligned — the group
+             begins right after the search field's trailing margin, exactly
+             where the first four have always begun. About used to be pushed
+             away from them by margin-left:auto into a fixed slot beneath the
+             phone button; removing that lets it fall in beside Real Estate &
+             Legal Professionals without disturbing the other four.
+
+             Do not change this to flex-end. That right-aligns the whole row,
+             which slides all five toward the phone button and moves the four
+             that were already correctly placed. */
+          justify-content: flex-start;
           /* Scales with the window. At 1280px the four labels plus a fixed
              40px gap overflow the space left by the search field and the
              phone-width slot; at 1440px and up they fit comfortably. The clamp
