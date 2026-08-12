@@ -60,23 +60,30 @@ const titleCase = (input: string): string => {
 const transformChildren = (children: ReactNode): ReactNode =>
   Children.map(children, (child) => (typeof child === "string" ? titleCase(child) : child));
 
-/* THE canonical band text. Two tiers only:
+/* THE canonical band text. Two tiers, plus one modifier:
    - H1: Source Serif 4 semibold, Title Case (via the transform below), sized
      to one clamp. All-caps at heading length was dropped on the typography
      review's explicit rule — sentence-length capitals are measurably harder
      for older readers, who are this site's audience.
    - Non-H1 (compact eyebrow labels): small uppercase DM Sans, the one place
      the review permits caps.
+   - compact + H1: the slim attorney-family variant. Same face and case, one
+     step down in size and padding. `compact` was accepted and IGNORED for a
+     long stretch — seven attorney pages passed it and rendered at full H1
+     height, which is why that family read as taller than intended. It is
+     wired now. `compact` on a NON-H1 band is deliberately a no-op: those are
+     already 15px eyebrows (AttorneyEducationalPage passes it that way) and
+     shrinking them further would break them.
    index.css carries matching !important overrides near the end of the file
-   (search "CANONICAL HERO BAND") because global rules there would otherwise
-   repaint this; change BOTH places or neither. */
-const bandTextStyle = (isH1: boolean) => ({
+   (search "CANONICAL HERO BAND" and "HERO BAND HEIGHT") because global rules
+   there would otherwise repaint this; change BOTH places or neither. */
+const bandTextStyle = (isH1: boolean, isCompactH1: boolean) => ({
   color: "#FFFFFF",
   fontFamily: isH1 ? "'Source Serif 4', Georgia, serif" : "'DM Sans', system-ui, sans-serif",
   fontWeight: isH1 ? 600 : 700,
-  fontSize: isH1 ? "clamp(32px, 4.5vw, 46px)" : "15px",
+  fontSize: isCompactH1 ? "clamp(24px, 3vw, 28px)" : isH1 ? "clamp(32px, 4.5vw, 46px)" : "15px",
   letterSpacing: isH1 ? "0.01em" : "0.16em",
-  lineHeight: isH1 ? 1.12 : 1.2,
+  lineHeight: isCompactH1 ? 1.1 : isH1 ? 1.12 : 1.2,
   opacity: 1,
   margin: 0,
   padding: 0,
@@ -92,10 +99,19 @@ const HeroBandTitle = ({
   className = "",
 }: HeroBandTitleProps) => {
   const isH1 = Tag === "h1";
-  const textStyle = bandTextStyle(isH1);
+  const isCompactH1 = isH1 && compact;
+  const textStyle = bandTextStyle(isH1, isCompactH1);
+  /* className was also destructured-and-dropped before; it now reaches the
+     text element so a page can add a hook without forking the component. */
+  const textClass = [
+    "rpp-hero-band-text",
+    isCompactH1 ? "rpp-hero-band-text--compact" : "",
+    className,
+  ].filter(Boolean).join(" ");
+
   if (bare) {
     return (
-      <Tag className="rpp-hero-band-text" style={textStyle}>
+      <Tag className={textClass} style={textStyle}>
         {transformChildren(children)}
       </Tag>
     );
@@ -106,7 +122,7 @@ const HeroBandTitle = ({
           band's apparent width vary with screen size, which read as different
           bands on different pages. One colour, one height, everywhere. */}
       <div
-        className="rpp-hero-band"
+        className={`rpp-hero-band${isCompactH1 ? " rpp-hero-band--compact" : ""}`}
         style={{
           /* Slimmed from 26/28 after side-by-side review: the thinner band
              reads cleaner and was preferred. The class above exists so the
@@ -116,14 +132,14 @@ const HeroBandTitle = ({
              so the height is now pinned rather than inherited. Change it in
              BOTH places or the enforcement fights this inline value. */
           background: "#1B3A6B",
-          padding: isH1 ? "12px 24px 14px" : "6px 24px",
+          padding: isCompactH1 ? "6px 24px 8px" : isH1 ? "12px 24px 14px" : "6px 24px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           lineHeight: 0,
         }}
       >
-        <Tag className="rpp-hero-band-text" style={textStyle}>
+        <Tag className={textClass} style={textStyle}>
           {transformChildren(children)}
         </Tag>
       </div>
