@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 interface MidPageCTAProps {
   heading?: string;
@@ -11,10 +9,17 @@ interface MidPageCTAProps {
 }
 
 const MidPageCTA = ({
-  heading = "Ready to Talk Through Your Situation?",
-  body = "A brief conversation is usually the best place to start.",
+  /* Copy is deliberately scoped to the PROPERTY side and attributed to David
+     Stein personally. The previous default — "Ready to Talk Through Your
+     Situation?" / "Schedule a Conversation" — invited visitors to bring legal,
+     care and family questions to RPP, and RPP is a neutral hub that provides
+     no services and gives no advice. Real-estate conversations belong to
+     David Stein as a licensed broker; everything else belongs to the licensed
+     professionals in the directory. Keep any future copy inside that line. */
+  heading = "Questions About the Real Estate Side?",
+  body = "David Stein, a licensed real estate broker, can walk you through how the property side of the process works.",
   microcopy,
-  buttonText = "Schedule a Conversation",
+  buttonText = "Schedule a Conversation About the Property",
   variant = "light",
 }: MidPageCTAProps) => {
   const isDark = variant === "dark";
@@ -42,16 +47,11 @@ const MidPageCTA = ({
           >
             {body}
           </p>
-          <Link to="/contact">
-            <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
-              <img
-                src={iconPhone3d}
-                alt=""
-                aria-hidden="true"
-                className="w-5 h-5 mr-2 object-contain shrink-0"
-               loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-              {buttonText}
-            </Button>
+          {/* Canonical flat burgundy CTA (styled by the CTA block at the end
+              of index.css) — the glossy 3D gold button and phone icon it
+              replaces predated the CTA standard and rendered badly. */}
+          <Link to="/contact" className="rpp-answer-cta" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "14px 30px", borderRadius: 8 }}>
+            {buttonText}
           </Link>
           {microcopy && (
             <p
