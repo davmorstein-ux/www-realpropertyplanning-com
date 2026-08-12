@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -64,41 +65,16 @@ const ForAttorneysHowItWorks = () => (
     <main id="main-content">
 
       {/* Hero — clean, no video ribbon */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle as="h1">How Real Property Planning Works With Attorneys</HeroBandTitle>
+
+      {/* Intro — relocated out of the title band. The band carries the
+          page title and nothing else, sitewide. */}
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img
-                src={iconAttorneys}
-                alt="Referral process for Washington estate and probate attorneys"
-                className="block w-full max-w-[15rem] h-auto object-contain"
-                loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-            </div>
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-              For Attorneys — Referral Process
-            </p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-              How Real Property Planning Works With Attorneys
-            </h1>
-            <p className="text-primary-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6">
-              This page is for Washington State estate and probate attorneys who refer clients for real estate services. It walks through exactly what happens after the referral, what Real Property Planning handles on your behalf, and how to send a file over.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
-                  Make a Referral
-                </Button>
-              </Link>
-              <Link to="/for-attorneys">
-                <Button
-                  size="lg"
-                  className="px-7 py-4 h-auto rounded-lg bg-[hsl(215,60%,38%)] text-white hover:bg-[hsl(215,60%,32%)]"
-                >
-                  ← Back to For Attorneys
-                </Button>
-              </Link>
-            </div>
+          <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
+            This page is for Washington State estate and probate attorneys who refer clients for real estate services. It walks through exactly what happens after the referral, what Real Property Planning handles on your behalf, and how to send a file over.
+          </p>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import BackToProfessionals from "@/components/BackToProfessionals";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -93,15 +94,7 @@ const ForFamilyLawAttorneys = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
-            Family Law Attorneys
-          </h1>
-        </div>
-      </div>
-    </section>
+    <HeroBandTitle as="h1">Family Law Attorneys</HeroBandTitle>
 
     {/* Opening */}
     <section className="py-16 lg:py-20 bg-secondary">
