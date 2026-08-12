@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, AlertCircle } from "lucide-react";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import washingtonExecutorsHero from "@/assets/washington-executors-hero.webp";
 
 const steps = [
   {
@@ -92,13 +91,7 @@ const WashingtonExecutorsChecklist = () => {
         {/* Shared Hero (image + navy band) */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <img
-              src={washingtonExecutorsHero}
-              alt="Senior couple driving a red convertible toward a highway sign reading 10 Steps for Executors with Seattle skyline and Mount Rainier in the distance"
-              className="w-full object-cover object-center block"
-              style={{ height: "clamp(220px, 32vw, 380px)" }}
-              loading="eager" sizes="100vw" decoding="async" width={1920} height={441} />
-            <HeroBandTitle as="h1">10 Steps Every Executor Should Know</HeroBandTitle>
+<HeroBandTitle as="h1">10 Steps Every Executor Should Know</HeroBandTitle>
           </div>
         </section>
 
