@@ -226,10 +226,16 @@ const Header = () => {
             >
               <div style={{ display: "flex", alignItems: "center", gap: 14, minWidth: 0, flexShrink: 1 }}>
                 <WaterfallNav />
-                <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+                <Link
+                  to="/"
+                  className="rpp-logo-home"
+                  aria-label="Real Property Planning — go to the homepage"
+                  title="Go to the homepage"
+                  style={{ display: "flex", alignItems: "center", position: "relative" }}
+                >
                   <img
                     src="/rpp-logo-v9.webp"
-                    alt="Real Property Planning"
+                    alt=""
                     style={{ height: 38, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
                     sizes="100vw"
                     decoding="async"
@@ -299,10 +305,24 @@ const Header = () => {
                   under the logo made the left column ~112px tall on its own and
                   pushed the whole header to ~190px. */}
               <div style={{ width: LOGO_WIDTH, flexShrink: 0 }}>
-                <Link to="/" style={{ display: "block" }}>
+                {/* The logo is the site's home button, but nothing said so:
+                    no label, no tooltip, no hover state. The accessible name
+                    and title below carry that meaning to screen readers and
+                    mouse users; .rpp-logo-home in index.css carries the
+                    visual treatment. The img alt is now empty ON PURPOSE —
+                    the Link owns the accessible name, and leaving alt text
+                    on the image made screen readers announce the brand twice
+                    without ever saying "home". */}
+                <Link
+                  to="/"
+                  className="rpp-logo-home"
+                  aria-label="Real Property Planning — go to the homepage"
+                  title="Go to the homepage"
+                  style={{ display: "block", position: "relative" }}
+                >
                   <img
                     src="/rpp-logo-v9.webp"
-                    alt="Real Property Planning"
+                    alt=""
                     style={{
                       width: "100%",
                       height: "auto",
