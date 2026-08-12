@@ -168,7 +168,11 @@ const RPPHomeV3 = () => {
                 const title = t(`funnel.tiles.${key}.title`);
                 const imgAlt = t(`funnel.tiles.${key}.imgAlt`);
                 return (
-                  <Link key={key} to={href} className="group block marquee-hover" style={{ textDecoration: "none" }}>
+                  <Link key={key} to={href} className="group block" style={{ textDecoration: "none" }}>
+                    {/* marquee-hover lives HERE, on the rounded div, and only
+                        here. A second copy on the Link above drew a second,
+                        SQUARE ring around the whole tile — the Link has no
+                        border radius for the ring to inherit. */}
                     <div
                       className="marquee-hover group-active:scale-[0.98] transition-transform duration-150"
                       style={{ borderRadius: 10 }}
