@@ -109,12 +109,7 @@ const Sitemap = () => {
       <Header />
       <main id="main-content">
         <section className="bg-white">
-          <img
-            src="/Probate-inherited_property_carride_cropped.webp"
-            alt="Site map — Real Property Planning"
-            className="w-full h-auto block"
-            loading="eager" sizes="100vw" decoding="async" width={1920} height={473} />
-        </section>
+</section>
 
         <HeroBandTitle as="h1">Site Map</HeroBandTitle>
 

@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import heroImage from "@/assets/executor-trustee-hero-washington.webp";
 import { articleSchema } from "@/lib/schema";
 
 const tiles = [
@@ -65,17 +64,7 @@ const ExecutorResponsibilitiesFirstSteps = () => {
       <main id="main-content">
         {/* HERO IMAGE */}
         <section className="bg-white">
-          <img
-            src={heroImage}
-            alt="Serving as executor and trustee — guidance for Washington families"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-            width={1806}
-            height={820}
-          />
-        </section>
+</section>
 
         <HeroBandTitle as="h1">SERVING&nbsp; AS&nbsp; EXECUTOR&nbsp; &amp;&nbsp; TRUSTEE</HeroBandTitle>
 

@@ -6,7 +6,6 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import contactHero from "@/assets/contact-hero-soundview-coffee.webp";
 
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
 import scottPhoto from "@/assets/providers/elder-law-scott-schill-mercer-island.webp";
@@ -310,20 +309,10 @@ const FeaturedProfessionals = () => (
     />
     <Header />
     <main id="main-content">
-      {/* Hero */}
+      
       <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
         <div style={{ lineHeight: 0 }}>
-          <img
-            src={contactHero}
-            alt="Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning's professional network"
-            className="w-full h-auto block"
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-            width={1983}
-            height={583}
-          />
-          <HeroBandTitle as="h1">Featured Professionals</HeroBandTitle>
+<HeroBandTitle as="h1">Featured Professionals</HeroBandTitle>
         </div>
       </section>
       <section style={{ background: "#edf0f3", padding: "40px 24px 56px", borderBottom: "3px solid #7f1d1d" }}>

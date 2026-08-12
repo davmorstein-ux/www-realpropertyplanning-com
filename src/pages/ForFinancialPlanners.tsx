@@ -7,7 +7,6 @@ import BackToProfessionals from "@/components/BackToProfessionals";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderTile from "@/components/ProviderTile";
 import { articleSchema } from "@/lib/schema";
-import heroImage from "@/assets/financial-planners-hero-washington.webp";
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
 import nyLifeLogo from "@/assets/new-york-life-logo.webp";
 
@@ -36,12 +35,7 @@ const ForFinancialPlanners = () => {
       <main id="main-content">
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <img
-              src={heroImage}
-              alt="Financial planners guidance — estate and senior transition real estate in Washington State"
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager" sizes="100vw" decoding="async" width={1920} height={459} />
-            <HeroBandTitle as="h1">Guidance for Financial Planning</HeroBandTitle>
+<HeroBandTitle as="h1">Guidance for Financial Planning</HeroBandTitle>
           </div>
         </section>
 

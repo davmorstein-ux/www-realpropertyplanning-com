@@ -18,7 +18,6 @@ import { Link } from "react-router-dom";
    senior-living pages.
 
    The phone icon import was removed along with the hero button that used it. */
-import processHero from "@/assets/how-the-process-works-hero-washington.webp";
 
 const steps = [
   {
@@ -120,19 +119,7 @@ const HowTheProcessWorks = () => {
           The image below was previously loading="lazy". It sits above the fold,
           so lazy loading delayed the first thing a visitor sees. Now eager. */}
         <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
-          <img
-            src={processHero}
-            alt="Older couple driving a country road past signposts marking each stage of an estate property sale in Washington State"
-            className="w-full object-cover object-center block"
-            style={{ height: "clamp(220px, 30vw, 440px)" }}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            sizes="100vw"
-            width={1920}
-            height={786}
-          />
-        </section>
+</section>
 
         <HeroBandTitle as="h1">How the Process Works</HeroBandTitle>
 

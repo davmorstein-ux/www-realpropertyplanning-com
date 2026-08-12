@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import seniorTransitionsHero from "@/assets/senior-transitions-hero.webp";
 import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 
 import HeroBandTitle from "@/components/HeroBandTitle";
@@ -48,21 +47,7 @@ const SeniorTransitions = () => {
       <BreadcrumbSchema items={[{ name: "Senior Transitions", url: "/senior-transitions" }]} />
       <Header />
       <main id="main-content">
-        {/* Hero image + brand band — matches site-wide HeroBandTitle pattern */}
-        <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
-          <img
-            src={seniorTransitionsHero}
-            alt={t("seniorTransitions.heroImageAlt")}
-            className="w-full object-cover"
-            style={{ height: "clamp(220px, 32vw, 380px)", display: "block" }}
-            loading="eager"
-            fetchPriority="high"
-            sizes="100vw"
-            width={1920}
-            height={763}
-          />
-          <HeroBandTitle as="h1">{t("seniorTransitions.heroTitle")}</HeroBandTitle>
-        </section>
+        <HeroBandTitle as="h1">{t("seniorTransitions.heroTitle")}</HeroBandTitle>
 
         <DirectAnswerBlock
           question={t("seniorTransitions.directAnswer.question")}

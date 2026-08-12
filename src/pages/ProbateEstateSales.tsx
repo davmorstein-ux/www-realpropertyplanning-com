@@ -48,20 +48,7 @@ const ProbateEstateSales = () => {
       <main id="main-content">
         {/* SECTION 1 — Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
-          <div className="relative w-full" style={{ display: "block", lineHeight: 0 }}>
-            <img
-              src="/assets/estate_probate_sales_hero_clean.webp"
-              alt={t("probateEstateSales.heroImageAlt")}
-              className="w-full object-cover"
-              style={{ height: "clamp(220px, 32vw, 380px)" }}
-              loading="eager"
-              fetchPriority="high"
-              sizes="100vw"
-              width={1920}
-              height={814}
-            />
-          </div>
-          <HeroBandTitle as="h1">{t("probateEstateSales.heroTitle")}</HeroBandTitle>
+<HeroBandTitle as="h1">{t("probateEstateSales.heroTitle")}</HeroBandTitle>
         </section>
 
         <DirectAnswerBlock

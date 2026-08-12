@@ -184,20 +184,7 @@ const WhatShouldWeDoFirst = () => {
         {/* HERO */}
         <section className="w-full overflow-hidden">
           {/* Watercolor image */}
-          <div className="relative w-full" style={{ display: "block", lineHeight: 0 }}>
-            <img
-              src="/assets/start_hero_clean_v2.webp"
-              alt="Begin your journey — Real Property Planning"
-              className="w-full object-cover"
-              style={{ height: "clamp(220px, 32vw, 380px)" }}
-              loading="eager"
-              fetchPriority="high"
-              sizes="100vw"
-              width={1911}
-              height={619}
-            />
-          </div>
-          <HeroBandTitle as="h1">What Should We Do First?</HeroBandTitle>
+<HeroBandTitle as="h1">What Should We Do First?</HeroBandTitle>
         </section>
 
         {/* PATHWAYS */}

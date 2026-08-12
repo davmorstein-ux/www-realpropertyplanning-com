@@ -11,7 +11,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
-import contactHero from "@/assets/contact-hero-soundview-coffee.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { useState, useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -178,20 +177,9 @@ const Contact = () => {
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
       <Header />
       <main id="main-content">
-        {/* Hero image + navy band */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <img
-              src={contactHero}
-              alt={t("contactPage.heroImageAlt")}
-              className="w-full h-auto block"
-              loading="eager"
-              sizes="100vw"
-              decoding="async"
-              width={1983}
-              height={583}
-            />
-            <HeroBandTitle as="h1">{t("contactPage.heroTitle")}</HeroBandTitle>
+<HeroBandTitle as="h1">{t("contactPage.heroTitle")}</HeroBandTitle>
           </div>
         </section>
 

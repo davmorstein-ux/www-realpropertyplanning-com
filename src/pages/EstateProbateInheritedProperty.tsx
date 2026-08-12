@@ -8,7 +8,6 @@ import RoadmapDropdown from "@/components/RoadmapDropdown";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 
-import heroImage from "@/assets/estate-probate-inherited-property-hero-washington.webp";
 import { articleSchema } from "@/lib/schema";
 
 const tiles = [
@@ -105,17 +104,7 @@ const EstateProbateInheritedProperty = () => {
       <main id="main-content">
         {/* HERO IMAGE */}
         <section className="bg-white">
-          <img
-            src={heroImage}
-            alt="Managing an estate, probate, or inherited property in Washington State"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-            width={1465}
-            height={792}
-          />
-        </section>
+</section>
 
         <HeroBandTitle as="h1">Estate, Probate & Inherited Property</HeroBandTitle>
 

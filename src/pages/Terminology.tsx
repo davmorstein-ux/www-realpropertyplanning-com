@@ -11,7 +11,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import terminologyHero from "@/assets/terminology-hero.webp";
 
 interface GlossaryTerm {
   term: string;
@@ -134,12 +133,7 @@ const Terminology = () => {
       <Header />
       <main id="main-content">
         <section className="bg-transparent" style={{ lineHeight: 0 }}>
-          <img
-            src={terminologyHero}
-            alt="Probate and estate terminology guide for Washington State"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager" sizes="100vw" decoding="async" width={1919} height={711} />
-          <HeroBandTitle as="h1">Probate &amp; Estate Terminology</HeroBandTitle>
+<HeroBandTitle as="h1">Probate &amp; Estate Terminology</HeroBandTitle>
         </section>
 
 

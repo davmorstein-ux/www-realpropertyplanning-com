@@ -115,17 +115,7 @@ const WhyValuationMatters = () => {
       `}</style>
 
       {/* HERO */}
-      <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
-        <img
-          src="/assets/valuation_hero_clean.webp"
-          alt="Why Valuation Matters — Real Property Planning"
-          className="w-full object-cover"
-          style={{ height: "clamp(220px, 32vw, 380px)", display: "block" }}
-          loading="eager"
-          fetchPriority="high"
-          sizes="100vw" width={1902} height={459} />
-        <HeroBandTitle as="h1">Pricing &amp; Valuation Expertise</HeroBandTitle>
-      </section>
+      <HeroBandTitle as="h1">Pricing &amp; Valuation Expertise</HeroBandTitle>
 
       {/* Quick Answer accordion */}
       <section className="py-10 lg:py-14 bg-background">

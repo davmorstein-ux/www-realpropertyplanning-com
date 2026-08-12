@@ -6,7 +6,6 @@ import BackToResources from "@/components/BackToResources";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import AFHCarousel from "@/components/AFHCarousel";
-import heroImage from "@/assets/articles-hero-banner.webp";
 import nursingHomesImg from "@/assets/long-term-care/Nursing_Homes_in_Washington_State.webp.asset.json";
 import shortTermImg from "@/assets/long-term-care/Short_Term_Nursing_Homes.webp.asset.json";
 import nurseDelegationImg from "@/assets/long-term-care/Nurse_Delegation_Program.webp.asset.json";
@@ -69,19 +68,7 @@ const LongTermCareOptions = () => {
       />
       <Header />
       <main id="main-content">
-        <div className="bg-white">
-          <img
-            src={heroImage}
-            alt="Long-Term Care Options in Washington State"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-            loading="eager"
-            sizes="100vw"
-            decoding="async"
-            width={1904}
-            height={521}
-          />
-        </div>
-        <HeroBandTitle>{"Long-Term Care Options in Washington State"}</HeroBandTitle>
+<HeroBandTitle>{"Long-Term Care Options in Washington State"}</HeroBandTitle>
 
         <section style={{ backgroundColor: "hsl(40 20% 98%)", padding: "48px 24px 32px" }}>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>

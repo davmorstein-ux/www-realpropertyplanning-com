@@ -18,7 +18,6 @@ import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
-import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
 interface Pathway {
@@ -211,12 +210,7 @@ const SellingAnInheritedHome = () => {
         {/* WTDW Shared Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <img
-              src={wtdwHeroImage}
-              alt="Quiet Washington street with craftsman homes"
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager" sizes="100vw" decoding="async" width={1829} height={640} />
-            <HeroBandTitle as="div">Selling Inherited Home</HeroBandTitle>
+<HeroBandTitle as="div">Selling Inherited Home</HeroBandTitle>
           </div>
         </section>
         {/* HERO */}

@@ -15,7 +15,6 @@ import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
 import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
-import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
 interface Pathway {
@@ -194,12 +193,7 @@ const DateOfDeathValuationPropertyAppraisals = () => {
         {/* WTDW Shared Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-            <img
-              src={wtdwHeroImage}
-              alt="Quiet Washington street with craftsman homes"
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager" sizes="100vw" decoding="async" width={1829} height={640} />
-            <HeroBandTitle as="h1">Date Of Death Valuation</HeroBandTitle>
+<HeroBandTitle as="h1">Date Of Death Valuation</HeroBandTitle>
           </div>
         </section>
 
