@@ -169,9 +169,9 @@ const SeattleProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Seattle?"
-        body="We provide confidential consultations for executors, attorneys, trustees, and families dealing with inherited or estate property in Seattle and throughout King County."
+        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, attorneys, trustees, and families dealing with inherited or estate property in Seattle and throughout King County."
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="No pressure. Just practical guidance on the property questions."
       />
 
       {/* Out-of-State */}

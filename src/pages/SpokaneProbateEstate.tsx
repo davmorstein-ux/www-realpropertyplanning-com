@@ -177,9 +177,9 @@ const SpokaneProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Managing a Spokane Property From a Distance?"
-        body="We provide confidential consultations for executors, trustees, and families dealing with inherited or estate property in Spokane — even when you're managing from outside the area."
+        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families dealing with inherited or estate property in Spokane — even when you're managing from outside the area."
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="No pressure. Just practical guidance on the property questions."
       />
 
       {/* Out-of-State / Coordination */}

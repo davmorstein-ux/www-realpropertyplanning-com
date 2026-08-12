@@ -167,9 +167,9 @@ const OlympiaProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Olympia?"
-        body="We provide confidential consultations for families, executors, and professionals handling estate or inherited property in Olympia and throughout Thurston County."
+        body="David Stein, a licensed real estate broker, offers confidential property consultations for families, executors, and professionals handling estate or inherited property in Olympia and throughout Thurston County."
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="No pressure. Just practical guidance on the property questions."
       />
 
       {/* Transition Section */}

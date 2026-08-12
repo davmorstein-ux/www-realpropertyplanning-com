@@ -166,9 +166,9 @@ const VancouverWaProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Navigating a Property Transition in Vancouver?"
-        body="We provide confidential consultations for executors, trustees, and families managing inherited property, estate sales, or transition-related decisions in Vancouver and Clark County."
+        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families managing inherited property, estate sales, or transition-related decisions in Vancouver and Clark County."
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="No pressure. Just practical guidance on the property questions."
       />
 
       {/* Coordination */}

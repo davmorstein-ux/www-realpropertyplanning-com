@@ -167,9 +167,9 @@ const KirklandProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Kirkland?"
-        body="We provide confidential consultations for executors, attorneys, trustees, and families handling inherited or estate property in Kirkland and throughout King County."
+        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, attorneys, trustees, and families handling inherited or estate property in Kirkland and throughout King County."
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="No pressure. Just practical guidance on the property questions."
       />
 
       {/* Transition Section */}

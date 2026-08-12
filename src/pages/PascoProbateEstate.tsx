@@ -138,7 +138,7 @@ const PascoProbateEstate = () => {
         </div>
       </section>
 
-      <MidPageCTA heading="Have Questions About a Pasco Property?" body="We provide confidential consultations for executors, trustees, and families handling inherited or estate property in Pasco and the Tri-Cities region. A short conversation can help clarify your options." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
+      <MidPageCTA heading="Have Questions About a Pasco Property?" body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families handling inherited or estate property in Pasco and the Tri-Cities region. A short conversation can help clarify your options." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">

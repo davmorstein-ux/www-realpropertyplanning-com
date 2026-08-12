@@ -78,7 +78,7 @@ const FederalWayProbateEstate = () => {
         </div>
       </section>
 
-      <MidPageCTA heading="Facing a Timing Decision in Federal Way?" body="We provide confidential consultations for executors, trustees, and families managing inherited or transition-related property decisions in Federal Way and South King County." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
+      <MidPageCTA heading="Facing a Timing Decision in Federal Way?" body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families managing inherited or transition-related property decisions in Federal Way and South King County." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">

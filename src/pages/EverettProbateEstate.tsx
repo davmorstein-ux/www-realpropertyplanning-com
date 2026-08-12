@@ -167,9 +167,9 @@ const EverettProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Dealing With an Inherited Home in Everett?"
-        body="We provide confidential consultations for executors, trustees, and families handling inherited or estate property in Everett and throughout Snohomish County."
+        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families handling inherited or estate property in Everett and throughout Snohomish County."
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="No pressure. Just practical guidance on the property questions."
       />
 
       {/* Family Decision-Making */}

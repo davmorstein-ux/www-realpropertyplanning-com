@@ -175,7 +175,7 @@ const SeniorEstateServices = () => {
         heading="Have Questions About a Senior or Estate Property?"
         body="Whether you are a senior planning a move, a family member coordinating a sale, or an attorney advising a client — Real Property Planning welcomes a confidential conversation."
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="No pressure. Just practical guidance on the property questions."
       />
 
       {/* Home Value and Market Analysis */}

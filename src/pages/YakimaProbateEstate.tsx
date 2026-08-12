@@ -166,9 +166,9 @@ const YakimaProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have Questions About a Yakima Property?"
-        body="We provide confidential consultations for executors, trustees, and families dealing with inherited or estate property in Yakima and surrounding areas. Whether you're local or managing from out of the area, a short conversation can help clarify your options."
+        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families dealing with inherited or estate property in Yakima and surrounding areas. Whether you're local or managing from out of the area, a short conversation can help clarify your options."
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="No pressure. Just practical guidance on the property questions."
       />
 
       {/* Family Coordination */}

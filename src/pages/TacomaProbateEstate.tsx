@@ -167,9 +167,9 @@ const TacomaProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Tacoma?"
-        body="We provide confidential consultations for executors, trustees, and families dealing with inherited or estate property in Tacoma and throughout Pierce County."
+        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families dealing with inherited or estate property in Tacoma and throughout Pierce County."
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="No pressure. Just practical guidance on the property questions."
       />
 
       {/* Out-of-State / Coordination */}

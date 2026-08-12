@@ -138,7 +138,7 @@ const RichlandProbateEstate = () => {
         </div>
       </section>
 
-      <MidPageCTA heading="Handling an Estate Property in Richland?" body="We provide confidential consultations for executors, trustees, and families managing inherited or estate property in Richland and the Tri-Cities area." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
+      <MidPageCTA heading="Handling an Estate Property in Richland?" body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families managing inherited or estate property in Richland and the Tri-Cities area." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">

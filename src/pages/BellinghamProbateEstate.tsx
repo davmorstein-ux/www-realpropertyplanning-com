@@ -166,9 +166,9 @@ const BellinghamProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Handling a Bellingham Property From a Distance?"
-        body="We provide confidential consultations for executors, trustees, and families dealing with inherited or estate property in Bellingham and Whatcom County — whether you're local or managing from out of the area."
+        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families dealing with inherited or estate property in Bellingham and Whatcom County — whether you're local or managing from out of the area."
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="No pressure. Just practical guidance on the property questions."
       />
 
       {/* Coordination */}
