@@ -80,42 +80,8 @@ const pathways: Pathway[] = [
   },
 ];
 
-const challenges = [
-  { title: "Emotional attachment to the home", body: "Memories live in the walls. Honoring that attachment is part of moving forward." },
-  { title: "Family disagreements", body: "Shared expectations and a clear written plan typically reduce friction." },
-  { title: "Uncertainty about legal authority", body: "Knowing who can make decisions — and when — usually clarifies the path." },
-  { title: "Occupancy concerns", body: "When someone still lives in the home, planning respects both the resident and the property." },
-  { title: "Feeling overwhelmed", body: "One decision at a time, in a clear order, usually replaces overwhelm with progress." },
-  { title: "Deciding whether repairs are worthwhile", body: "Not every repair adds value. A professional opinion clarifies what truly matters." },
-  { title: "Organizing belongings", body: "Working room by room, in small sessions, usually feels more manageable." },
-  { title: "Time pressure", body: "Most timelines are more flexible than they first appear. A short pause to plan often saves months." },
-  { title: "Property maintenance and security", body: "Vacant homes need active care, insurance review, and a clear monitoring plan." },
-  { title: "Fear of making expensive mistakes", body: "Most costly mistakes are avoidable with one good conversation early." },
-];
 
-const considerations = [
-  "Legal authority",
-  "Probate coordination",
-  "Property valuation",
-  "Repairs and preparation",
-  "Occupancy concerns",
-  "Family communication",
-  "Timing and market conditions",
-  "Tax and estate considerations",
-  "Downsizing and cleanout",
-  "Building a trusted support team",
-];
 
-const mistakes = [
-  { title: "Making rushed property decisions", body: "Quick decisions made under stress often cost more than a short pause to plan." },
-  { title: "Guessing the home's value", body: "A certified appraisal usually replaces guesswork with defensible clarity." },
-  { title: "Ignoring probate or legal coordination", body: "Authority and process steps usually need to be clear before listing." },
-  { title: "Spending too much on unnecessary repairs", body: "Many updates do not return their cost. Prioritization is essential." },
-  { title: "Delaying communication between heirs", body: "Silence often becomes the source of the conflict families most want to avoid." },
-  { title: "Ignoring insurance and maintenance issues", body: "Vacant property coverage, security, and basic upkeep protect the eventual sale." },
-  { title: "Waiting too long to seek guidance", body: "A short conversation early usually prevents bigger problems later." },
-  { title: "Trying to handle everything alone", body: "A small, coordinated team typically reduces stress and protects the outcome." },
-];
 
 const faqs = [
   {
@@ -334,107 +300,25 @@ const SellingAnInheritedHome = () => {
           </div>
         </section>
 
-        {/* CHALLENGES */}
-        <section className="py-10 lg:py-14 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-7">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  You Are Not Alone
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Common Challenges Families Face
-                </h2>
-                <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Naming what's hard often makes it easier to move forward.
-                </p>
-              </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {challenges.map((c) => (
-                  <div
-                    key={c.title}
-                    className="bg-white border-2 border-gold/25 rounded-2xl p-5 md:p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]"
-                  >
-                    <h3 className="font-serif text-lg md:text-xl text-navy font-semibold mb-2">
-                      {c.title}
-                    </h3>
-                    <p className="text-navy text-base leading-relaxed">{c.body}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Four sections were removed here and the page is better for it.
 
-        {/* WHAT TO CONSIDER */}
-        <section className="py-10 lg:py-14 bg-secondary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-7">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Educational Compass
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Many People Don't Know What Questions to Ask
-                </h2>
-                <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Most families are unsure how probate affects timing, when valuation
-                  matters, or how preparation decisions connect to value.
-                </p>
-              </div>
-              <div className="bg-white border-2 border-gold/25 rounded-2xl p-6 md:p-8 shadow-[0_2px_8px_-4px_rgba(27,43,75,0.10)]">
-                <p className="text-navy font-serif text-xl md:text-2xl font-semibold mb-5">
-                  Families Often Need to Consider:
-                </p>
-                <ul className="grid sm:grid-cols-2 gap-3">
-                  {considerations.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 bg-cream border border-gold/20 rounded-xl px-4 py-3 min-h-[60px]"
-                    >
-                      <CheckCircle2 className="w-6 h-6 text-gold shrink-0" aria-hidden="true" />
-                      <span className="text-navy font-semibold text-base md:text-lg">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+            CHALLENGES and COMMON MISTAKES were relocated, item by item, to the
+            six sub-pages they actually concern — see
+            src/lib/inheritedPropertyGuidance.ts and GuidanceGrid.tsx. They
+            were moved rather than deleted because the text is indexed and
+            carries real search value.
 
-        {/* COMMON MISTAKES */}
-        <section className="py-10 lg:py-14 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-7">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Avoid These Pitfalls
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Common Mistakes to Avoid
-                </h2>
-                <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Naming what often goes wrong makes it easier to plan well.
-                </p>
-              </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {mistakes.map((m) => (
-                  <div
-                    key={m.title}
-                    className="bg-white border-2 border-gold/25 rounded-2xl p-5 md:p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]"
-                  >
-                    <h3 className="font-serif text-lg md:text-xl text-navy font-semibold mb-2">
-                      {m.title}
-                    </h3>
-                    <p className="text-navy text-base leading-relaxed">{m.body}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+            "EDUCATIONAL COMPASS" and "SIMPLE NEXT STEPS" were deleted outright:
+            both were lists restating the six pathways in different words, so
+            the page said the same thing three times.
+
+            "CONTINUE YOUR JOURNEY" was also deleted — it linked to THE SAME SIX
+            PAGES as the pathway cards above, so every visitor met the identical
+            set of links twice on one page.
+
+            This is a hub. Its job is the six titles, not the content behind
+            them. Resist adding explanatory sections here; they belong on the
+            page for that step. */}
 
         {/* FAQ */}
         <PageFAQ
@@ -443,77 +327,6 @@ const SellingAnInheritedHome = () => {
           eyebrow="Common Questions"
           id="selling-an-inherited-home"
         />
-
-        {/* CONTINUE YOUR JOURNEY */}
-        <section className="py-10 lg:py-14 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-7">
-                <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={512} height={512} />
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Keep Going
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Continue Your Journey
-                </h2>
-                <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Families selling inherited property often continue exploring these next steps.
-                </p>
-              </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {continueJourney.map((c) => (
-                  <Link
-                    key={c.href + c.title}
-                    to={c.href}
-                    className="marquee-hover group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/55 hover:-translate-y-1 hover:shadow-[0_4px_12px_-4px_rgba(27,43,75,0.14)] transition-all flex flex-col"
-                  >
-                    <img src={c.icon} alt="" aria-hidden="true" className="w-12 h-12 object-contain mb-4" loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
-                    <h3 className="font-serif text-xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
-                      {c.title}
-                    </h3>
-                    <p className="text-navy text-base leading-relaxed mb-4 flex-1">
-                      {c.description}
-                    </p>
-                    <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">
-                      Continue <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SIMPLE NEXT STEPS */}
-        <section className="py-10 lg:py-14 bg-cream">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-7">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Simple Next Steps
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">
-                  A Calm, Clear Action Plan
-                </h2>
-              </div>
-              <ol className="space-y-4">
-                {nextSteps.map((step, i) => (
-                  <li
-                    key={step}
-                    className="flex items-center gap-5 bg-white border border-gold/25 rounded-2xl p-5 shadow-[0_4px_14px_-8px_rgba(27,43,75,0.2)]"
-                  >
-                    <span className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-gold to-[hsl(var(--gold-dark))] text-white font-serif text-2xl font-bold flex items-center justify-center">
-                      {i + 1}
-                    </span>
-                    <span className="text-navy font-semibold text-lg md:text-xl leading-snug">
-                      {step}
-                    </span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-        </section>
 
         {/* CTA */}
         <section className="py-10 lg:py-14 bg-primary">
