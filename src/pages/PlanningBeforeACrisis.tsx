@@ -93,7 +93,11 @@ const PlanningBeforeACrisis = () => {
             the sweep that left only the homepage with one, and this file was
             missed. The import went with it; PanoramaHero.tsx is now unused by
             any page. */}
-        <HeroBandTitle as="h1" compact>Planning Before a Crisis</HeroBandTitle>
+        {/* Standard full-size band — matches every non-attorney page.
+            Do not add `compact` here. It was added briefly and made this the
+            only slim band outside the attorney family, which read as a
+            mismatch against Featured Professionals and the rest of the site. */}
+        <HeroBandTitle as="h1">Planning Before a Crisis</HeroBandTitle>
 
         {/* THINGS TO CONSIDER */}
         <section className="py-14 md:py-20 bg-cream">
