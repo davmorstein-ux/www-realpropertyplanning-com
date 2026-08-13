@@ -16,6 +16,7 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import GuidanceGrid from "@/components/GuidanceGrid";
 
 interface Pathway {
   letter: string;
@@ -302,6 +303,12 @@ const DateOfDeathValuationPropertyAppraisals = () => {
           </div>
         </section>
 
+
+        {/* Guidance relocated here from /selling-an-inherited-home, which had
+            grown into a single page answering what its six sub-pages exist to
+            answer. Items live in src/lib/inheritedPropertyGuidance.ts and are
+            filtered by this slug — do not paste them inline. */}
+        <GuidanceGrid page="date-of-death-valuation-property-appraisals" />
 
         <DisclaimerSection />
         <BackToProfessionals />
