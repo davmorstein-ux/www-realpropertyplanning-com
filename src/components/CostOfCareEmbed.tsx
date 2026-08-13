@@ -47,6 +47,43 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
 
   const careType = useMemo(() => CARE_TYPES.find((c) => c.id === careTypeId) ?? CARE_TYPES[0], [careTypeId]);
 
+  /* This CTA used to point at /cost-of-care-calculator?care=<id>. That route
+     takes a PATH segment (/cost-of-care-calculator/:careSlug), not a query
+     string, so the param was ignored, the bare path matched, and every reader
+     who clicked "Open Full Calculator" was dumped back on the six-option hub.
+
+     Correcting the URL shape alone would not have been enough. Two separate
+     vocabularies are in play and they do not line up:
+
+       careTypes.ts     — 9 ids, drives this embed
+       careCalculators.ts — 6 slugs, all the :careSlug route will accept
+
+     Four ids happen to equal their slug. The rest need translating, and two
+     care types have no calculator at all. Mapping by string manipulation
+     would silently break again the moment either list changes, so the pairs
+     are written out.
+
+     If a calculator is ever built for adult day services or CCRCs, add the
+     slug here as well as in careCalculators.ts, or the link stays on the hub. */
+  const calculatorSlug = useMemo(() => {
+    const ID_TO_SLUG: Record<string, string> = {
+      "independent-living": "independent-living",
+      "adult-family-home": "adult-family-home",
+      "assisted-living": "assisted-living",
+      "memory-care": "memory-care",
+      /* Named differently in the two files. */
+      "in-home": "in-home-care",
+      /* Both nursing tiers share one calculator; it covers semi-private and
+         private rooms internally. */
+      "nursing-semi": "nursing-home",
+      "nursing-private": "nursing-home",
+      /* "adult-day" and "ccrc" are deliberately absent — no calculator exists
+         for either. They fall through to the hub, which is the honest
+         destination, and the CTA label changes to match. */
+    };
+    return ID_TO_SLUG[careType.id];
+  }, [careType.id]);
+
   const projectedWaMonthly = useMemo(
     () => careType.waMonthly * Math.pow(1 + DEFAULT_INFLATION / 100, yearsOut),
     [careType, yearsOut],
@@ -346,7 +383,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
 
       <div style={{ textAlign: "center" }}>
         <Link
-          to={`/cost-of-care-calculator?care=${careTypeId}`}
+          to={calculatorSlug ? `/cost-of-care-calculator/${calculatorSlug}` : "/cost-of-care-calculator"}
           className="marquee-hover"
           style={{
             display: "inline-flex",
@@ -363,7 +400,9 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             textDecoration: "none",
           }}
         >
-          Open Full Calculator (Adjust Inflation, Compare Care Types) →
+          {calculatorSlug
+            ? "Open Full Calculator (Adjust Inflation, Compare Care Types) →"
+            : "Compare Care Costs →"}
         </Link>
       </div>
 
