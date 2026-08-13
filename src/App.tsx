@@ -9,6 +9,7 @@ import RPPHomeV2 from "./pages/RPPHomeV2";
 import SiteChatWidget from "./components/SiteChatWidget";
 import RPPHomeV3 from "./pages/RPPHomeV3";
 import LanguageRoute from "./components/LanguageRoute";
+import Privacy from "./pages/Privacy";
 import HeroTest from "./pages/HeroTest";
 import HomepageFinal from "./pages/HomepageFinal";
 
@@ -516,6 +517,7 @@ const App = () => (
           <Route path="/senior-living-advisors" element={<SeniorLivingAdvisors />} />
           <Route path="/senior-placement" element={<Navigate to="/senior-living-advisors" replace />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
+          <Route path="/privacy" element={<Privacy />} />
          <Route
             path="/es/cost-of-care-calculator"
             element={
