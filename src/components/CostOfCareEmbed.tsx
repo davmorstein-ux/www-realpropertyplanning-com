@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { CARE_TYPES, formatCurrency, COC_TEAL } from "@/lib/careTypes";
 
 const NAVY = "#272421";
@@ -70,6 +71,13 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
      article pages render this component, and a prop would mean six chances to
      forget it. The check is locale-agnostic — /es/cost-of-care-calculator/...
      and the other six translated paths all contain the same segment. */
+  /* i18n rewired 2026-08-12. The costOfCarePage namespace holds 99 keys,
+     translated into all eight locales — and after the Aug 6 rewrite of
+     CostOfCareCalculator.tsx (commit 0274a1aa) not one of them was referenced
+     by any code. Six calculator pages and seven translated locale routes were
+     rendering hardcoded English on top of translations that already existed.
+     Use these keys; do not reintroduce literal strings here. */
+  const { t } = useTranslation();
   const { pathname } = useLocation();
   const onCalculatorPage = pathname.includes("/cost-of-care-calculator");
 
@@ -153,13 +161,13 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               marginBottom: 8,
             }}
           >
-            Current Age
+            {t("costOfCarePage.card2.currentAge")}
           </label>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <button
               onClick={() => setCurrentAge((a) => Math.max(18, a - 1))}
               style={stepperBtn}
-              aria-label="Decrease age"
+              aria-label={t("costOfCarePage.card2.decreaseAge")}
             >
               −
             </button>
@@ -180,7 +188,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             <button
               onClick={() => setCurrentAge((a) => Math.min(105, a + 1))}
               style={stepperBtn}
-              aria-label="Increase age"
+              aria-label={t("costOfCarePage.card2.increaseAge")}
             >
               +
             </button>
@@ -200,13 +208,13 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               marginBottom: 8,
             }}
           >
-            Years of Care Needed
+            {t("costOfCarePage.card2.howManyYears")}
           </label>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <button
               onClick={() => setYearsOfCareNeeded((y) => Math.max(1, y - 1))}
               style={stepperBtn}
-              aria-label="Decrease years of care"
+              aria-label={t("costOfCarePage.card2.decreaseYears")}
             >
               −
             </button>
@@ -227,7 +235,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             <button
               onClick={() => setYearsOfCareNeeded((y) => Math.min(10, y + 1))}
               style={stepperBtn}
-              aria-label="Increase years of care"
+              aria-label={t("costOfCarePage.card2.increaseYears")}
             >
               +
             </button>
@@ -283,7 +291,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               marginBottom: 4,
             }}
           >
-            Washington
+            {t("costOfCarePage.results.washington")}
           </div>
           <div
             style={{
@@ -296,7 +304,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             {formatCurrency(projectedWaMonthly)}
           </div>
           <div style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif" }}>
-            per month
+            {t("costOfCarePage.results.perMonth")}
           </div>
         </div>
         <div
@@ -319,7 +327,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               marginBottom: 4,
             }}
           >
-            National Median
+            {t("costOfCarePage.results.nationalMedian")}
           </div>
           <div
             style={{
@@ -332,7 +340,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             {formatCurrency(projectedNationalMonthly)}
           </div>
           <div style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif" }}>
-            per month
+            {t("costOfCarePage.results.perMonth")}
           </div>
         </div>
       </div>
@@ -358,7 +366,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             marginBottom: 4,
           }}
         >
-          Total · {yearsOfCareNeeded}-Year Plan
+          {t("costOfCarePage.results.totalPlan", { years: yearsOfCareNeeded })}
         </div>
         <div
           style={{
@@ -373,7 +381,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         <div
           style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif", marginTop: 2 }}
         >
-          in Washington · vs. {formatCurrency(totalNationalCost)} nationally
+          {t("costOfCarePage.results.inWashingtonVs", { amount: formatCurrency(totalNationalCost) })}
         </div>
       </div>
 
