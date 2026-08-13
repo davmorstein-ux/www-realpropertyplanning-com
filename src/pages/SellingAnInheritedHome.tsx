@@ -208,23 +208,29 @@ const SellingAnInheritedHome = () => {
       <BreadcrumbSchema items={[{ name: "Selling an Inherited Home", url: "/selling-an-inherited-home" }]} />
       <Header />
       <main id="main-content">
-        {/* WTDW Shared Hero */}
-        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
-          <div style={{ lineHeight: 0 }}>
-<HeroBandTitle as="div">Selling Inherited Home</HeroBandTitle>
-          </div>
+        {/* HERO — brought into line with the rest of the site.
+            This page kept the old two-part pattern long after everything else
+            moved on: an eyebrow-sized band (HeroBandTitle as="div" renders the
+            15px uppercase variant, NOT the title band) stacked above a second
+            navy hero carrying its own h1. Two banners, two titles, and the
+            band read as the wrong element entirely.
+
+            Now one canonical h1 band, matching every other page, with the
+            intro and CTA on the cream body below it. The old block also said
+            "Selling Inherited Home" in the band and "Selling an Inherited
+            Home" in the h1 — the same page announcing itself twice, slightly
+            differently. */}
+        <section className="w-full bg-secondary" style={{ marginTop: 0, paddingTop: 0 }}>
+          <HeroBandTitle as="h1">Selling an Inherited Home</HeroBandTitle>
         </section>
-        {/* HERO */}
-        <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
+
+        <section className="bg-secondary pt-6 md:pt-8 pb-8">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
                 Guided Roadmap
               </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight mb-5">
-                Selling an Inherited Home
-              </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-7 max-w-2xl">
+              <p className="text-lg md:text-xl leading-relaxed mb-7 max-w-2xl" style={{ color: "#3f3a35" }}>
                 A guided roadmap for heirs, executors, trustees, and families
                 navigating inherited property decisions, probate questions, valuation
                 concerns, property preparation, and major life transitions.
