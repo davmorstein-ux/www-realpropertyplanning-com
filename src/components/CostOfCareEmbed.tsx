@@ -1,10 +1,28 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useId } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { CARE_TYPES, formatCurrency, COC_TEAL } from "@/lib/careTypes";
+import {
+  CARE_INFLATION_RATE,
+  CARE_INFLATION_VERIFIED,
+  CARE_INFLATION_FIRST_YEAR,
+  CARE_INFLATION_LAST_YEAR,
+} from "@/lib/careInflation";
 
 const NAVY = "#272421";
-const DEFAULT_INFLATION = 3.5;
+/* The default growth rate now comes from src/lib/careInflation.ts, which
+   scripts/fetch-care-inflation.mjs writes from the BLS Consumer Price Index.
+   Until that script has run, the module ships a 3.5% seed with
+   CARE_INFLATION_VERIFIED = false, and the caption below must not cite BLS —
+   3.5% is the figure this calculator always assumed, not a sourced one.
+
+   Bounds exist because arrows without them let someone hold a key down and
+   land on 47%, producing a total that destroys the page's credibility. 8% is
+   already far above any sustained historical run. */
+const DEFAULT_INFLATION = CARE_INFLATION_RATE;
+const INFLATION_MIN = 1;
+const INFLATION_MAX = 8;
+const INFLATION_STEP = 0.1;
 const YEARS_OUT_OPTIONS = [0, 5, 10, 15, 20];
 const YEARS_OF_CARE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -79,6 +97,20 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
      Use these keys; do not reintroduce literal strings here. */
   const { t } = useTranslation();
   const { pathname } = useLocation();
+
+  /* Reader-adjustable growth rate. Starts at the sourced default; the caption
+     stops citing BLS the moment it moves, because past that point the number
+     is the reader's assumption and not the Bureau's. Rounded on every change:
+     floating point turns 3.5 + 0.1 into 3.6000000000000005, which would render
+     literally. */
+  const inflLabelId = useId();
+  const [inflation, setInflation] = useState<number>(DEFAULT_INFLATION);
+  const atDefault = Math.abs(inflation - DEFAULT_INFLATION) < 0.001;
+  const nudge = (delta: number) =>
+    setInflation((r) => {
+      const next = Math.round((r + delta) * 10) / 10;
+      return Math.min(INFLATION_MAX, Math.max(INFLATION_MIN, next));
+    });
   const onCalculatorPage = pathname.includes("/cost-of-care-calculator");
 
   const calculatorSlug = useMemo(() => {
@@ -101,12 +133,12 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
   }, [careType.id]);
 
   const projectedWaMonthly = useMemo(
-    () => careType.waMonthly * Math.pow(1 + DEFAULT_INFLATION / 100, yearsOut),
-    [careType, yearsOut],
+    () => careType.waMonthly * Math.pow(1 + inflation / 100, yearsOut),
+    [careType, yearsOut, inflation],
   );
   const projectedNationalMonthly = useMemo(
-    () => careType.nationalMonthly * Math.pow(1 + DEFAULT_INFLATION / 100, yearsOut),
-    [careType, yearsOut],
+    () => careType.nationalMonthly * Math.pow(1 + inflation / 100, yearsOut),
+    [careType, yearsOut, inflation],
   );
   const totalWaCost = projectedWaMonthly * 12 * yearsOfCareNeeded;
   const totalNationalCost = projectedNationalMonthly * 12 * yearsOfCareNeeded;
@@ -385,6 +417,112 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         </div>
       </div>
 
+      {/* GROWTH RATE — arrows, with the bars as a readout only.
+          The bars are deliberately NOT clickable. Two ways to set one value is
+          exactly the confusion this control exists to avoid, and a drag target
+          is the worst interaction for hands with tremor or arthritis: press,
+          hold, move precisely, release, and any slip resets you. The arrows
+          match the age and years steppers above, so this card has one
+          interaction pattern rather than two.
+
+          The marked bar pins the sourced default, so moving away from it reads
+          as departing from the data rather than as an abstract number change. */}
+      <div className="coc-infl" role="group" aria-labelledby={inflLabelId}>
+        <div id={inflLabelId} className="coc-infl-label">
+          {t("costOfCarePage.card2.growthRate", { defaultValue: "Annual Cost Growth" })}
+        </div>
+
+        <div className="coc-infl-row">
+          <button
+            type="button"
+            className="coc-infl-btn"
+            onClick={() => nudge(-INFLATION_STEP)}
+            disabled={inflation <= INFLATION_MIN}
+            aria-label={t("costOfCarePage.card2.decreaseRate", { defaultValue: "Decrease growth rate" })}
+          >
+            −
+          </button>
+
+          {/* role=spinbutton with aria-valuetext so a screen reader hears what
+              the bars show sighted readers: the number AND whether it is still
+              the sourced figure. */}
+          <div
+            className="coc-infl-value"
+            role="spinbutton"
+            tabIndex={0}
+            aria-valuenow={inflation}
+            aria-valuemin={INFLATION_MIN}
+            aria-valuemax={INFLATION_MAX}
+            aria-valuetext={`${inflation.toFixed(1)}% ${
+              atDefault
+                ? t("costOfCarePage.card2.rateAtDefault", { defaultValue: "historical average" })
+                : t("costOfCarePage.card2.rateAdjusted", { defaultValue: "your own assumption" })
+            }`}
+            onKeyDown={(e) => {
+              if (e.key === "ArrowUp" || e.key === "ArrowRight") { e.preventDefault(); nudge(INFLATION_STEP); }
+              if (e.key === "ArrowDown" || e.key === "ArrowLeft") { e.preventDefault(); nudge(-INFLATION_STEP); }
+              if (e.key === "Home") { e.preventDefault(); setInflation(INFLATION_MIN); }
+              if (e.key === "End") { e.preventDefault(); setInflation(INFLATION_MAX); }
+            }}
+          >
+            {inflation.toFixed(1)}%
+          </div>
+
+          <button
+            type="button"
+            className="coc-infl-btn"
+            onClick={() => nudge(INFLATION_STEP)}
+            disabled={inflation >= INFLATION_MAX}
+            aria-label={t("costOfCarePage.card2.increaseRate", { defaultValue: "Increase growth rate" })}
+          >
+            +
+          </button>
+        </div>
+
+        {/* Decorative: the value and its meaning are both already announced by
+            the spinbutton, so exposing 36 bars would be noise. */}
+        <div className="coc-infl-bars" aria-hidden="true">
+          {Array.from({ length: 36 }, (_, i) => {
+            const barValue = INFLATION_MIN + i * ((INFLATION_MAX - INFLATION_MIN) / 35);
+            const filled = barValue <= inflation + 0.0001;
+            const isAnchor =
+              Math.abs(barValue - DEFAULT_INFLATION) < (INFLATION_MAX - INFLATION_MIN) / 70;
+            return (
+              <span
+                key={i}
+                className={`coc-infl-bar${filled ? " is-filled" : ""}${isAnchor ? " is-anchor" : ""}`}
+              />
+            );
+          })}
+        </div>
+
+        <div className="coc-infl-scale" aria-hidden="true">
+          <span>{t("costOfCarePage.card2.rateSlower", { defaultValue: "Slower growth" })}</span>
+          <span>{t("costOfCarePage.card2.rateFaster", { defaultValue: "Faster growth" })}</span>
+        </div>
+
+        {/* THE HONESTY LINE. Three states, and they must stay distinct:
+              moved off default -> the reader's own assumption, cite nothing
+              verified          -> name BLS and the years covered
+              seed              -> an assumption, and it says so
+            Never cite BLS for a number BLS did not produce. CARE_INFLATION_VERIFIED
+            is false until scripts/fetch-care-inflation.mjs has actually run. */}
+        <p className="coc-infl-source">
+          {!atDefault
+            ? t("costOfCarePage.card2.rateCustomNote", {
+                defaultValue: "Your own assumption — not based on published data.",
+              })
+            : CARE_INFLATION_VERIFIED
+            ? t("costOfCarePage.card2.rateSourceNote", {
+                defaultValue: `Based on U.S. Bureau of Labor Statistics long-term care price data, ${CARE_INFLATION_FIRST_YEAR}–${CARE_INFLATION_LAST_YEAR}. Projections are estimates; actual costs vary.`,
+              })
+            : t("costOfCarePage.card2.rateAssumedNote", {
+                defaultValue:
+                  "A working assumption, not a published figure. Projections are estimates; actual costs vary.",
+              })}
+        </p>
+      </div>
+
       <p
         style={{
           fontSize: 17,
@@ -398,7 +536,6 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             sentence exists translated under costOfCarePage.careTypes.<id>.note
             in all eight locales, so read it from there and fall back to the
             hardcoded copy only if a key is ever missing. */}
-        Assumes {DEFAULT_INFLATION}% annual cost growth.{" "}
         {t(`costOfCarePage.careTypes.${careType.id}.note`, { defaultValue: careType.note })}
       </p>
 
@@ -442,6 +579,98 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       <style>{`
         @media (max-width: 420px) {
           .coc-embed-results { grid-template-columns: 1fr !important; }
+        }
+
+        /* GROWTH RATE CONTROL.
+           Doubled selectors: index.css sets font-size and colour on bare
+           div/span/p/button with !important. */
+        .coc-infl.coc-infl {
+          margin: 4px 0 18px;
+          padding: 14px 16px;
+          background: #f9f7f3;
+          border: 1px solid #e2d8cd;
+          border-radius: 10px;
+        }
+        .coc-infl-label.coc-infl-label {
+          font-family: "DM Sans", sans-serif !important;
+          font-size: 13px !important;
+          font-weight: 700 !important;
+          letter-spacing: 0.08em !important;
+          text-transform: uppercase !important;
+          color: #1B3A6B !important;
+          margin-bottom: 8px !important;
+        }
+        .coc-infl-row { display: flex; align-items: center; gap: 8px; }
+        /* 44px minimum: these sit under the same standard as every other tap
+           target on the site, and this control is used by people with arthritis. */
+        .coc-infl-btn.coc-infl-btn {
+          min-width: 44px;
+          min-height: 44px;
+          font-size: 22px !important;
+          font-weight: 700 !important;
+          line-height: 1 !important;
+          color: #1B3A6B !important;
+          background: #ffffff !important;
+          border: 2px solid #dccdce !important;
+          border-radius: 8px !important;
+          cursor: pointer !important;
+        }
+        .coc-infl-btn.coc-infl-btn:hover:not(:disabled) { background: #f2ece4 !important; }
+        .coc-infl-btn.coc-infl-btn:disabled { opacity: 0.4; cursor: default !important; }
+        .coc-infl-btn.coc-infl-btn:focus-visible,
+        .coc-infl-value.coc-infl-value:focus-visible {
+          outline: 3px solid #1B3A6B !important;
+          outline-offset: 2px !important;
+        }
+        .coc-infl-value.coc-infl-value {
+          font-family: "Courier New", monospace !important;
+          font-weight: 700 !important;
+          font-size: 24px !important;
+          color: #14655f !important;
+          background: #f5f2ec !important;
+          border: 2px solid #dccdce !important;
+          border-radius: 8px !important;
+          padding: 6px 14px !important;
+          min-width: 84px;
+          text-align: center;
+        }
+        .coc-infl-bars {
+          display: flex;
+          align-items: flex-end;
+          gap: 3px;
+          height: 26px;
+          margin: 12px 0 4px;
+        }
+        .coc-infl-bar {
+          flex: 1;
+          height: 60%;
+          border-radius: 2px;
+          background: #ded5c9;
+          transition: background 140ms ease, height 140ms ease;
+        }
+        .coc-infl-bar.is-filled { background: #14655f; height: 100%; }
+        /* The anchor bar marks the sourced default. Height and colour BOTH
+           change, so it is not signalled by colour alone. */
+        .coc-infl-bar.is-anchor {
+          background: #6b1b22;
+          height: 100%;
+        }
+        .coc-infl-scale {
+          display: flex;
+          justify-content: space-between;
+          font-family: "DM Sans", sans-serif;
+          font-size: 13px;
+          color: #6b635b;
+        }
+        .coc-infl-source.coc-infl-source {
+          font-family: "DM Sans", sans-serif !important;
+          font-size: 14px !important;
+          line-height: 1.5 !important;
+          color: #6b635b !important;
+          margin: 10px 0 0 !important;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .coc-infl-bar { transition: none !important; }
         }
       `}</style>
     </div>
