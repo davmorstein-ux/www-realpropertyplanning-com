@@ -17,6 +17,18 @@ const TRANSLATED_PAGES: Record<string, true> = {
   "/contact": true,
 };
 
+/* Some translated pages take a path parameter, so an exact-match lookup misses
+   them. /cost-of-care-calculator is listed above, but the six real pages are
+   /cost-of-care-calculator/<careSlug> — and every one of those matched nothing,
+   so the switcher greyed out all seven languages and told the reader the page
+   was English-only. The locale routes existed and worked the whole time; there
+   was simply no way to reach them from the flag menu.
+
+   Prefixes are listed separately rather than making the whole table a prefix
+   match, because "/" is in the table and would then match every page on the
+   site. Add a parent path here when its children are translated. */
+const TRANSLATED_PAGE_PREFIXES: string[] = ["/cost-of-care-calculator/"];
+
 const LANGUAGE_PATH_PREFIXES = SUPPORTED_LANGUAGES.filter((l) => l.pathPrefix).map((l) => l.pathPrefix);
 
 /** Strips a known language prefix off the current path, returning the underlying English path. */
@@ -49,7 +61,9 @@ const LanguageSwitcher = ({ compact = false }: LanguageSwitcherProps) => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const englishPath = toEnglishPath(location.pathname);
-  const isTranslated = !!TRANSLATED_PAGES[englishPath];
+  const isTranslated =
+    !!TRANSLATED_PAGES[englishPath] ||
+    TRANSLATED_PAGE_PREFIXES.some((prefix) => englishPath.startsWith(prefix));
 
   const currentSegment = location.pathname.split("/").filter(Boolean)[0] || "";
   const currentLang = SUPPORTED_LANGUAGES.find((l) => l.pathPrefix === currentSegment)?.code ?? "en";
