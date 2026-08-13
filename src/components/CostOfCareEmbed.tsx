@@ -140,6 +140,15 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
     () => careType.nationalMonthly * Math.pow(1 + inflation / 100, yearsOut),
     [careType, yearsOut, inflation],
   );
+  /* Derived values for the print summary. Restored alongside it from
+     0274a1aa^ — the Aug 6 Lovable rewrite deleted the summary and these with
+     it, while leaving 20-odd translated printSummary keys orphaned in all
+     eight locales. */
+  const currentYear = new Date().getFullYear();
+  const ageAtCareStart = currentAge + yearsOut;
+  const ageAtCareEnd = ageAtCareStart + yearsOfCareNeeded;
+  const projectedWaAnnual = projectedWaMonthly * 12;
+  const projectedNationalAnnual = projectedNationalMonthly * 12;
   const totalWaCost = projectedWaMonthly * 12 * yearsOfCareNeeded;
   const totalNationalCost = projectedNationalMonthly * 12 * yearsOfCareNeeded;
 
@@ -576,6 +585,155 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         </div>
       )}
 
+      {/* Print button. coc-no-print hides it from the printout itself —
+          a button rendered on paper is noise. */}
+      <div className="coc-no-print" style={{ textAlign: "center", marginBottom: 18 }}>
+        <button
+          type="button"
+          className="coc-print-btn"
+          onClick={() => window.print()}
+        >
+          {t("costOfCarePage.printSummary.printButton", { defaultValue: "Print this summary" })}
+        </button>
+      </div>
+
+      {/* PRINT SUMMARY — restored from 0274a1aa^ (the Aug 6 Lovable rewrite
+          that cut CostOfCareCalculator.tsx from 1,110 lines to 233 and took
+          this with it). Its ~20 translation keys survived that deletion intact
+          in all eight locales, so this is a restore rather than a rebuild.
+
+          It lives here, in the embed, rather than on the page: this component
+          owns every number the summary reports, and putting it here means all
+          six calculator pages get it without six copies to keep in sync.
+
+          Hidden on screen, shown only by the @media print block below. The
+          growth rate printed is whatever the reader set, not the default —
+          if they adjusted it, the printout must say what they actually used.
+
+          NOTE: dates render with toLocaleDateString("en-US") even in other
+          locales. Worth revisiting, but a wrong-format date beats a crash. */}
+      <div className="coc-print-summary" style={{ padding: "24px" }}>
+        <h2 style={{ fontSize: "22px", margin: "0 0 4px", color: "#111" }}>
+          {t("costOfCarePage.printSummary.title")}
+        </h2>
+        <p style={{ fontSize: "12px", color: "#555", margin: "0 0 18px" }}>
+          {t("costOfCarePage.printSummary.preparedVia", {
+            date: new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
+          })}
+        </p>
+        <h3
+          style={{
+            fontSize: "16px",
+            color: "#111",
+            margin: "16px 0 6px",
+            borderBottom: "1px solid #ccc",
+            paddingBottom: 4,
+          }}
+        >
+          {t("costOfCarePage.printSummary.careType")}
+        </h3>
+        <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
+          {t(`costOfCarePage.careTypes.${careType.id}.label`)}
+        </p>
+        <h3
+          style={{
+            fontSize: "16px",
+            color: "#111",
+            margin: "16px 0 6px",
+            borderBottom: "1px solid #ccc",
+            paddingBottom: 4,
+          }}
+        >
+          {t("costOfCarePage.printSummary.careTimeline")}
+        </h3>
+        <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>
+          {t("costOfCarePage.printSummary.today", { age: currentAge })}
+        </p>
+        <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>
+          {yearsOut === 0
+            ? t("costOfCarePage.printSummary.careBeginsToday", {
+                age: ageAtCareStart,
+                year: currentYear + yearsOut,
+              })
+            : t("costOfCarePage.printSummary.careBeginsIn", {
+                years: yearsOut,
+                age: ageAtCareStart,
+                year: currentYear + yearsOut,
+              })}
+        </p>
+        <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
+          {t("costOfCarePage.printSummary.careEnds", {
+            years: yearsOfCareNeeded,
+            yearWord: yearsOfCareNeeded === 1 ? t("costOfCarePage.card2.year") : t("costOfCarePage.card2.years"),
+            age: ageAtCareEnd,
+          })}
+        </p>
+        <h3
+          style={{
+            fontSize: "16px",
+            color: "#111",
+            margin: "16px 0 6px",
+            borderBottom: "1px solid #ccc",
+            paddingBottom: 4,
+          }}
+        >
+          {t("costOfCarePage.printSummary.costAssumption")}
+        </h3>
+        <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
+          {t("costOfCarePage.printSummary.annualGrowth", { rate: inflation })}
+        </p>
+        <h3
+          style={{
+            fontSize: "16px",
+            color: "#111",
+            margin: "16px 0 6px",
+            borderBottom: "1px solid #ccc",
+            paddingBottom: 4,
+          }}
+        >
+          {t("costOfCarePage.printSummary.projectedCost")}
+        </h3>
+        <table
+          style={{ width: "100%", fontSize: "14px", color: "#222", borderCollapse: "collapse", marginBottom: 8 }}
+        >
+          <thead>
+            <tr>
+              <th style={{ textAlign: "left", borderBottom: "1px solid #999", paddingBottom: 4 }}></th>
+              <th style={{ textAlign: "right", borderBottom: "1px solid #999", paddingBottom: 4 }}>
+                {t("costOfCarePage.printSummary.colWashington")}
+              </th>
+              <th style={{ textAlign: "right", borderBottom: "1px solid #999", paddingBottom: 4 }}>
+                {t("costOfCarePage.printSummary.colNational")}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={{ padding: "4px 0" }}>{t("costOfCarePage.printSummary.rowPerMonth")}</td>
+              <td style={{ textAlign: "right" }}>{formatCurrency(projectedWaMonthly)}</td>
+              <td style={{ textAlign: "right" }}>{formatCurrency(projectedNationalMonthly)}</td>
+            </tr>
+            <tr>
+              <td style={{ padding: "4px 0" }}>{t("costOfCarePage.printSummary.rowPerYear")}</td>
+              <td style={{ textAlign: "right" }}>{formatCurrency(projectedWaAnnual)}</td>
+              <td style={{ textAlign: "right" }}>{formatCurrency(projectedNationalAnnual)}</td>
+            </tr>
+            <tr>
+              <td style={{ padding: "4px 0", fontWeight: 700 }}>
+                {t("costOfCarePage.printSummary.rowTotal", { years: yearsOfCareNeeded })}
+              </td>
+              <td style={{ textAlign: "right", fontWeight: 700 }}>{formatCurrency(totalWaCost)}</td>
+              <td style={{ textAlign: "right", fontWeight: 700 }}>{formatCurrency(totalNationalCost)}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p
+          style={{ fontSize: "11px", color: "#777", margin: "20px 0 0", borderTop: "1px solid #ccc", paddingTop: 8 }}
+        >
+          {t("costOfCarePage.printSummary.footer")}
+        </p>
+      </div>
+
       <style>{`
         @media (max-width: 420px) {
           .coc-embed-results { grid-template-columns: 1fr !important; }
@@ -671,6 +829,37 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         }
         @media (prefers-reduced-motion: reduce) {
           .coc-infl-bar { transition: none !important; }
+        }
+
+        /* The summary is the print artefact; the interactive card is not.
+           Families print this and take it to siblings or an attorney, so it
+           has to stand alone on paper without steppers or buttons. */
+        .coc-print-btn.coc-print-btn {
+          min-height: 44px;
+          padding: 10px 20px !important;
+          font-family: "DM Sans", sans-serif !important;
+          font-size: 16px !important;
+          font-weight: 700 !important;
+          color: #14655f !important;
+          background: #ffffff !important;
+          border: 2px solid #14655f !important;
+          border-radius: 8px !important;
+          cursor: pointer !important;
+        }
+        .coc-print-btn.coc-print-btn:hover { background: #f2ece4 !important; }
+        .coc-print-btn.coc-print-btn:focus-visible {
+          outline: 3px solid #14655f !important;
+          outline-offset: 3px !important;
+        }
+        .coc-print-summary { display: none; }
+        @media print {
+          .coc-no-print { display: none !important; }
+          .coc-print-summary {
+            display: block !important;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+            background: #fff;
+          }
         }
       `}</style>
     </div>
