@@ -187,6 +187,9 @@ const Footer = () => {
             <Link to="/faq" className="rpp-footer-link">
               FAQs
             </Link>
+            <Link to="/privacy" className="rpp-footer-link">
+              Privacy
+            </Link>
             <Link to="/disclaimer" className="rpp-footer-link">
               Disclaimer
             </Link>
