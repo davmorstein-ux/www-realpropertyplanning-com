@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { articleSchema } from "@/lib/schema";
+import GuidanceGrid from "@/components/GuidanceGrid";
 
 const tiles = [
   {
@@ -96,7 +97,13 @@ const ExecutorResponsibilitiesFirstSteps = () => {
             </div>
           </div>
         </section>
-      </main>
+      {/* Guidance relocated here from /selling-an-inherited-home, which had
+            grown into a single page answering what its six sub-pages exist to
+            answer. Items live in src/lib/inheritedPropertyGuidance.ts and are
+            filtered by this slug — do not paste them inline. */}
+        <GuidanceGrid page="executor-responsibilities-first-steps" />
+
+        </main>
       <Footer />
     </div>
   );
