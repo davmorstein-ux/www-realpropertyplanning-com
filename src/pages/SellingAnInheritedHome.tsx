@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Compass, HeartHandshake, CheckCircle2 } from "lucide-react";
@@ -527,6 +528,18 @@ const SellingAnInheritedHome = () => {
             </div>
           </div>
         </section>
+
+        {/* FIRST PLACEMENT of the newsletter signup — deliberately one page
+            only until a real end-to-end signup has been confirmed. Rolling it
+            to every article before testing would mean discovering a broken
+            edge function on three hundred pages instead of one.
+
+            "probate" variant: this reader has just finished a guide on selling
+            an inherited home, so the copy matches what they were reading.
+            Placed after the article body and before the disclaimer — the
+            invitation belongs at the end, once they have had the guidance,
+            not before it. */}
+        <NewsletterSignup variant="probate" />
 
         <DisclaimerSection />
       </main>
