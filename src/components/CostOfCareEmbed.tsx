@@ -144,7 +144,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           margin: "0 0 20px",
         }}
       >
-        {careType.label} — Washington vs. National
+        {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National
       </h3>
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 20, marginBottom: 18 }}>
@@ -394,7 +394,12 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           lineHeight: 1.5,
         }}
       >
-        Assumes {DEFAULT_INFLATION}% annual cost growth. {careType.note}
+        {/* careType.note is the English string in careTypes.ts. The same
+            sentence exists translated under costOfCarePage.careTypes.<id>.note
+            in all eight locales, so read it from there and fall back to the
+            hardcoded copy only if a key is ever missing. */}
+        Assumes {DEFAULT_INFLATION}% annual cost growth.{" "}
+        {t(`costOfCarePage.careTypes.${careType.id}.note`, { defaultValue: careType.note })}
       </p>
 
       {/* The CTA is suppressed when this embed is rendered ON the full
