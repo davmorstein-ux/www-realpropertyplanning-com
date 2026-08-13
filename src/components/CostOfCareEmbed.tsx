@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CARE_TYPES, formatCurrency, COC_TEAL } from "@/lib/careTypes";
 
 const NAVY = "#272421";
@@ -65,6 +65,14 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
 
      If a calculator is ever built for adult day services or CCRCs, add the
      slug here as well as in careCalculators.ts, or the link stays on the hub. */
+  /* True when this embed is rendered on the full calculator page itself.
+     Matched from the path rather than passed as a prop deliberately: six
+     article pages render this component, and a prop would mean six chances to
+     forget it. The check is locale-agnostic — /es/cost-of-care-calculator/...
+     and the other six translated paths all contain the same segment. */
+  const { pathname } = useLocation();
+  const onCalculatorPage = pathname.includes("/cost-of-care-calculator");
+
   const calculatorSlug = useMemo(() => {
     const ID_TO_SLUG: Record<string, string> = {
       "independent-living": "independent-living",
@@ -381,7 +389,18 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         Assumes {DEFAULT_INFLATION}% annual cost growth. {careType.note}
       </p>
 
-      <div style={{ textAlign: "center" }}>
+      {/* The CTA is suppressed when this embed is rendered ON the full
+          calculator page, because there it points at the page you are already
+          reading. That was the actual bug behind two different reports: with
+          the old ?care= link it silently dropped the param and bounced the
+          reader to the six-option hub; once the link was correct it navigated
+          to the identical route, so the button looked dead.
+
+          CostOfCareDetail renders this embed as its calculator body, so the
+          "open the full calculator" invitation is meaningless there. On the
+          six article pages that embed it, the CTA is the whole point. */}
+      {!onCalculatorPage && (
+        <div style={{ textAlign: "center" }}>
         <Link
           to={calculatorSlug ? `/cost-of-care-calculator/${calculatorSlug}` : "/cost-of-care-calculator"}
           className="marquee-hover"
@@ -404,7 +423,8 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             ? "Open Full Calculator (Adjust Inflation, Compare Care Types) →"
             : "Compare Care Costs →"}
         </Link>
-      </div>
+        </div>
+      )}
 
       <style>{`
         @media (max-width: 420px) {
