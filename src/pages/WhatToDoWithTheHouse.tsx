@@ -12,6 +12,7 @@ import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washingt
 import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import GuidanceGrid from "@/components/GuidanceGrid";
 
 interface Decision {
   letter: string;
@@ -184,7 +185,13 @@ const WhatToDoWithTheHouse = () => {
             </div>
           </div>
         </section>
-      </main>
+      {/* Guidance relocated here from /selling-an-inherited-home, which had
+            grown into a single page answering what its six sub-pages exist to
+            answer. Items live in src/lib/inheritedPropertyGuidance.ts and are
+            filtered by this slug — do not paste them inline. */}
+        <GuidanceGrid page="what-to-do-with-the-house" />
+
+        </main>
       <Footer />
     </div>
   );
