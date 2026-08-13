@@ -18,8 +18,6 @@ import HeroBandTitle from "@/components/HeroBandTitle";
  *                           via the send-contact-email Supabase edge function
  *   Testimonials            ShareYourExperience.tsx — same edge function
  *   Cloudflare Turnstile    bot check on both forms
- *   Chat assistant          ChatAssistant.tsx — message text goes to the
- *                           chat-assistant edge function; capped at 20 msgs
  *   Supabase                edge functions and client; client is configured
  *                           with storage: localStorage
  *   YouTube                 ProviderVideoModal.tsx — youtube-nocookie.com,
@@ -86,12 +84,6 @@ const Privacy = () => {
                 on the site unless it is reviewed first.
               </p>
               <p>
-                <strong>Chat assistant.</strong> If you use the chat feature, the messages you type
-                are sent to a service that generates the replies. Please do not enter sensitive
-                personal, medical, or financial details into the chat. It is a general information
-                tool, not a secure channel, and it is not a substitute for speaking with a person.
-              </p>
-              <p>
                 <strong>Newsletter.</strong> If you subscribe, we collect your email address and
                 which page you subscribed from. Subscribing requires confirming through a link we
                 email you. Every message we send includes an unsubscribe link, and we act on
@@ -127,7 +119,7 @@ const Privacy = () => {
                 <li>We do not sell your personal information.</li>
                 <li>We do not share your information with other businesses for their marketing.</li>
                 <li>
-                  We do not use what you tell us in a form or the chat to target advertising to you.
+                  We do not use what you tell us in a form to target advertising to you.
                 </li>
               </ul>
               <p>
@@ -139,8 +131,8 @@ const Privacy = () => {
               <h2>Health-related information</h2>
               <p>
                 Many people come to this site while making decisions about care for themselves or a
-                family member. If you tell us about a health condition or care need in a form or in
-                the chat, we treat that as sensitive. We use it only to respond to you. We do not
+                family member. If you tell us about a health condition or care need in a form, we
+                treat that as sensitive. We use it only to respond to you. We do not
                 sell it, and we do not use it for advertising. You are never required to share
                 health details to use this site, and we would encourage you to share only what is
                 necessary.
