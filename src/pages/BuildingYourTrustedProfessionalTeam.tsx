@@ -10,6 +10,7 @@ import { articleSchema } from "@/lib/schema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
 import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
+import GuidanceGrid from "@/components/GuidanceGrid";
 
 type Card = {
   title: string;
@@ -467,6 +468,12 @@ const BuildingYourTrustedProfessionalTeam = () => {
             </div>
           </div>
         </section>
+
+        {/* Guidance relocated here from /selling-an-inherited-home, which had
+            grown into a single page answering what its six sub-pages exist to
+            answer. Items live in src/lib/inheritedPropertyGuidance.ts and are
+            filtered by this slug — do not paste them inline. */}
+        <GuidanceGrid page="building-your-trusted-professional-team" />
 
         <DisclaimerSection />
       </main>
