@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -116,15 +115,21 @@ const EstateProbateInheritedProperty = () => {
               </h2>
             </div>
 
-            <p className="max-w-3xl mx-auto text-center text-navy/70 text-base leading-relaxed mb-8">
-              Not sure where to start?{" "}
-              <Link
-                to="/contact"
-                className="text-gold font-bold underline underline-offset-2 hover:text-[hsl(var(--gold-dark))]"
-              >
-                Reach out and we'll help you figure out the right first step.
-              </Link>
-            </p>
+            {/* Removed: "Not sure where to start? Reach out and we'll help you
+                figure out the right first step."
+
+                Two problems. It attributed the help to Real Property Planning,
+                which is a neutral educational hub and does not provide
+                services — the same misattribution corrected in
+                ForAttorneysHowItWorks. And it was an unbounded promise of
+                individual guidance to every visitor on a page about probate
+                and inherited property, where readers arrive in distress and at
+                all hours.
+
+                Deliberately not replaced with a softer version. The topic list
+                below is the page doing its job; a call to action here would be
+                asking for contact at the moment of highest vulnerability. The
+                footer and /contact remain available to anyone who wants them. */}
 
             <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" currentPath={tiles[0].href} />
           </div>
