@@ -19,6 +19,7 @@ import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.we
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import GuidanceGrid from "@/components/GuidanceGrid";
 
 interface Pathway {
   letter: string;
@@ -526,6 +527,12 @@ const PreparingHomeForSaleDuringTransition = () => {
             </div>
           </div>
         </section>
+
+        {/* Guidance relocated here from /selling-an-inherited-home, which had
+            grown into a single page answering what its six sub-pages exist to
+            answer. Items live in src/lib/inheritedPropertyGuidance.ts and are
+            filtered by this slug — do not paste them inline. */}
+        <GuidanceGrid page="preparing-home-for-sale-during-transition" />
 
         <DisclaimerSection />
       </main>
