@@ -1,4 +1,5 @@
 import { Navigate, useParams, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -33,6 +34,13 @@ const CostOfCareDetail = () => {
   }
 
   const care = careTypeFor(option);
+  /* The h1 below reads the translated care-type label. careTypeFor() returns
+     the English record from careTypes.ts; the same label exists translated at
+     costOfCarePage.careTypes.<id>.label in all eight locales, verified present
+     for all nine care types. The SEO title deliberately stays English — it is
+     rendered per-route and the seo.* keys describe the hub, not this page. */
+  const { t } = useTranslation();
+  const careLabel = t(`costOfCarePage.careTypes.${care.id}.label`, { defaultValue: care.label });
   const url = `https://realpropertyplanning.com/cost-of-care-calculator/${option.slug}`;
 
   return (
@@ -60,7 +68,7 @@ const CostOfCareDetail = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">
-                {care.label}
+                {careLabel}
               </h1>
               <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                 {option.blurb}
