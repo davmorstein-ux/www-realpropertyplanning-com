@@ -83,17 +83,15 @@ const ProbateEstateSales = () => {
                 {t("probateEstateSales.comparison.heading2")}
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">​</p>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(2, auto)",
-                  columnGap: "8px",
-                  rowGap: "16px",
-                  width: "fit-content",
-                  margin: "0 auto",
-                  alignItems: "stretch",
-                }}
-              >
+              {/* Was an inline grid of repeat(2, auto) holding two 380px
+                  tiles — a hard 768px minimum on a 375px phone, which is why
+                  this page showed only a slice of itself on mobile. Inline
+                  styles cannot carry a media query, so the two columns never
+                  collapsed no matter the screen.
+
+                  Now a class (.probate-tile-grid, defined below) so the
+                  breakpoint can actually exist. */}
+              <div className="probate-tile-grid">
                 {comparisonMeta.map((s) => {
                   const title = t(`probateEstateSales.comparison.${s.key}.title`);
                   const description = t(`probateEstateSales.comparison.${s.key}.description`);
@@ -105,7 +103,6 @@ const ProbateEstateSales = () => {
                     to={s.href}
                     aria-label={`${title} — ${description} — ${cta}`}
                     className="interior-tile tile-white probate-wide-tile group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-                    style={{ width: "380px" }}
                   >
                     <div className="tile-white__inner h-full relative">
                       <div className="tile-white__face h-full">
@@ -174,17 +171,10 @@ const ProbateEstateSales = () => {
               <p className="text-muted-foreground text-[17px] leading-[1.85] mb-10">
                 {t("probateEstateSales.whatMakesDifferent.intro")}
               </p>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(3, auto)",
-                  rowGap: "16px",
-                  columnGap: "8px",
-                  width: "fit-content",
-                  margin: "0 auto",
-                  alignItems: "stretch",
-                }}
-              >
+              {/* Was repeat(3, auto) of 380px tiles — 1156px minimum, over three times
+                  a phone's width. Same class as the grid above; it steps 1 -> 2 -> 3
+                  columns by screen width instead of demanding all three always. */}
+              <div className="probate-tile-grid probate-tile-grid--three">
                 {whatMakesDifferentMeta.map((s) => {
                   const title = t(`probateEstateSales.whatMakesDifferent.${s.key}.title`);
                   const description = t(`probateEstateSales.whatMakesDifferent.${s.key}.description`);
@@ -195,7 +185,6 @@ const ProbateEstateSales = () => {
                     to={s.href}
                     aria-label={`${title} — ${description} — ${cta}`}
                     className="interior-tile tile-white probate-wide-tile group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-                    style={{ width: "380px" }}
                   >
                     <div className="tile-white__inner h-full relative" style={{ minHeight: "unset" }}>
                       <div className="tile-white__face h-full" style={{ minHeight: "unset" }}>
@@ -242,9 +231,39 @@ const ProbateEstateSales = () => {
         </section>
 
         <style>{`
+          /* Two columns of 380px tiles with an 8px gap needs 768px. Phones do
+             not have it, so the page overflowed its own viewport and readers
+             saw a fragment. The min-width of 320px made it worse: it forbade
+             the tile from shrinking even when there was room to.
+
+             One column below 820px, two above. The tile is capped at 380px so
+             it never stretches awkwardly wide, but it may now shrink to fit
+             whatever the screen actually is. */
+          .probate-tile-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 8px;
+            row-gap: 16px;
+            width: 100%;
+            max-width: 380px;
+            margin: 0 auto;
+            align-items: stretch;
+          }
           .probate-wide-tile {
+            width: 100% !important;
             max-width: 380px !important;
-            min-width: 320px !important;
+          }
+          @media (min-width: 820px) {
+            .probate-tile-grid {
+              grid-template-columns: repeat(2, 380px);
+              max-width: none;
+              width: fit-content;
+            }
+          }
+          @media (min-width: 1240px) {
+            .probate-tile-grid--three {
+              grid-template-columns: repeat(3, 380px);
+            }
           }
         `}</style>
 
