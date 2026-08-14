@@ -118,8 +118,22 @@ const QUICK_LINKS = [
   { name: "Contact", href: "/contact" },
 ];
 
-const PANEL_FADE_MS = 1400;
-const PANEL_HOVER_CLOSE_DELAY = 1500;
+/* Two timings, and they ADD UP — the menu lingered for 1500 + 1400 = 2.9
+   seconds after the cursor left, which read as the menu being stuck.
+
+   PANEL_HOVER_CLOSE_DELAY is grace time: the gap between the trigger and the
+   panel, and the diagonal path a cursor takes to reach a link, both need
+   forgiveness or the menu snaps shut mid-reach. That matters more here than on
+   most sites, since readers with tremor or imprecise pointing need the slack.
+   400ms is the usual comfortable value and still covers an unsteady hand.
+
+   PANEL_FADE_MS is the animation itself. 1400ms is a long time to watch
+   something leave; 260ms out reads as responsive without being abrupt. Note
+   this constant drives BOTH the in and out animations — a slow, graceful
+   entrance is fine, but it is the same number, so keep it short and let the
+   easing carry the polish. */
+const PANEL_FADE_MS = 260;
+const PANEL_HOVER_CLOSE_DELAY = 400;
 
 const CSS = `
   .wf-wrap {
