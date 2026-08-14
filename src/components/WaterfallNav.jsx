@@ -416,7 +416,27 @@ const CSS = `
   }
 
   @media (max-width: 640px) {
-    .wf-panel { width: 100vw; max-width: 100vw; }
+    /* FULL SCREEN ON PHONES. The panel used to start below the header at 64px
+       and run calc(100vh - 64px). On iOS Safari 100vh measures the viewport
+       WITHOUT the collapsing toolbar, so the panel stopped short of the real
+       bottom and homepage tiles showed underneath the menu.
+
+       dvh is the dynamic viewport unit and tracks the visible area as Safari's
+       chrome collapses. vh is kept first as the fallback for older browsers —
+       the second declaration wins where dvh is supported. */
+    .wf-panel {
+      width: 100vw;
+      max-width: 100vw;
+      top: 0;
+      height: 100vh;
+      height: 100dvh;
+      border-right: none;
+    }
+    /* Opaque, not a 30% tint. A translucent scrim over a page of photographs
+       and coloured tiles leaves the menu competing with whatever is behind it,
+       which is exactly what made the list hard to read. Nothing behind the
+       menu should be visible while it is open. */
+    .wf-overlay { background: #f7f4ef; }
     .wf-body { flex-direction: column; overflow-y: auto; }
     .wf-rail {
       width: 100%;
@@ -586,6 +606,24 @@ export default function WaterfallNav() {
     if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
     window.location.href = href;
   };
+
+  /* Freeze the page behind the menu. Without this, a scroll gesture that
+     starts inside the panel but reaches the end of its list keeps going and
+     scrolls the homepage underneath — so the reader's flick appears to move
+     the wrong thing, and on returning the page has wandered.
+
+     Restores the previous value rather than blindly setting "auto", so this
+     cannot clobber an overflow rule set elsewhere. The cleanup also runs on
+     unmount, which matters because navigating away closes the panel by
+     unmounting rather than by animating out. */
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
 
   useEffect(() => {
     const onKey = (e) => {
