@@ -34,7 +34,7 @@ const pathways: Pathway[] = [
     title: "Downsizing Before a Move",
     description:
       "Guidance for seniors and families preparing to move into smaller living arrangements, retirement communities, assisted living, or care environments.",
-    href: "/senior-housing-transitions",
+    href: "/senior-transitions",
     icon: iconAssisted,
   },
   {
@@ -66,7 +66,10 @@ const pathways: Pathway[] = [
     title: "Understanding What To Keep, Donate, Sell, or Distribute",
     description:
       "Helping families organize belongings thoughtfully while reducing overwhelm and family conflict.",
-    href: "/estate-liquidation-learn-more",
+    /* Was /estate-liquidation-learn-more, which is not a route and 404'd.
+       The step is about deciding what to keep, donate, sell or distribute, so
+       it points at the estate sale companies resource. */
+    href: "/resources/estate-sale-companies",
     icon: iconBookOpen,
   },
   {
