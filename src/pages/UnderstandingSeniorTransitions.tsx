@@ -40,7 +40,7 @@ const pathways: Pathway[] = [
     title: "Downsizing",
     description:
       "Understanding the emotional and practical challenges of reducing belongings, preparing a move, and simplifying living arrangements.",
-    href: "/senior-housing-transitions",
+    href: "/senior-transitions",
     icon: iconHome,
   },
   {
