@@ -6,7 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import RPPHomeV2 from "./pages/RPPHomeV2";
-import SiteChatWidget from "./components/SiteChatWidget";
 import RPPHomeV3 from "./pages/RPPHomeV3";
 import LanguageRoute from "./components/LanguageRoute";
 import Privacy from "./pages/Privacy";
@@ -262,7 +261,16 @@ const App = () => (
     <BrowserRouter>
       <ScrollToTop />
 
-      <SiteChatWidget />
+      {/* SiteChatWidget removed. It was not a chat widget — handleSubmit
+          cleared the input and showed a confirmation, and the component made
+          no network call of any kind in 581 lines. A reader could type a
+          question about a parent's care, be told it was received, and have it
+          go nowhere. On a site whose visitors are often mid-crisis that is
+          worse than having no widget at all.
+
+          It also floated at z-index 99999 over page content on mobile, which
+          is what prompted the look. Deleted rather than hidden; if a real chat
+          is wanted later it should be built against a live endpoint. */}
 
       <Suspense fallback={<RouteFallback />}>
         <Routes>
