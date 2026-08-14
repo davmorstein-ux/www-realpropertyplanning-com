@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 function hexToRgba(hex, alpha) {
   const h = hex.replace("#", "");
@@ -161,12 +162,24 @@ const CSS = `
     }
   }
 
+  /* These sit above SiteChatWidget, which uses 99998/99999. Now that the panel
+     is portalled to body these numbers are finally compared against the page
+     rather than against the header's private stacking context. */
   .wf-overlay {
     position: fixed;
     inset: 0;
     background: rgba(10,22,40,0.3);
-    z-index: 9998;
+    z-index: 999998;
     cursor: pointer;
+  }
+  /* The floating chat bubble is fixed at z-index 99999 and would otherwise
+     hover over the menu. Hidden via a class on <body> rather than by touching
+     SiteChatWidget, so that component keeps owning its own behaviour and this
+     one owns the menu. */
+  body.wf-menu-open .rpp-cw-btn,
+  body.wf-menu-open .rpp-cw-panel,
+  body.wf-menu-open .rpp-cw-bubble {
+    display: none !important;
   }
 
   .wf-panel {
@@ -192,7 +205,7 @@ const CSS = `
     max-width: 96vw;
     height: calc(100vh - 64px);
     background: #f7f4ef;
-    z-index: 9999;
+    z-index: 999999;
     border-right: 1px solid #d2b2b4;
     display: flex;
     flex-direction: column;
@@ -620,8 +633,10 @@ export default function WaterfallNav() {
     if (!open) return;
     const previous = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    document.body.classList.add("wf-menu-open");
     return () => {
       document.body.style.overflow = previous;
+      document.body.classList.remove("wf-menu-open");
     };
   }, [open]);
 
@@ -678,8 +693,24 @@ export default function WaterfallNav() {
         </button>
       </div>
 
-      {open && (
+      {/* PORTALLED TO document.body — this is load-bearing, not tidiness.
+
+          WaterfallNav renders inside Header, and Header is position:sticky
+          with zIndex 50 AND backdropFilter: blur(10px). Either one alone
+          creates a stacking context; the panel's z-index 9999 was therefore
+          never measured against the page, only against its siblings inside
+          the header. The entire menu was effectively pinned at z-index 50, so
+          homepage tiles kept painting over the top of it no matter how opaque
+          the overlay was made.
+
+          Raising the number would not have fixed it — 999999 inside a capped
+          context is still capped. The panel has to leave the header, which is
+          what the portal does.
+
+          If this is ever un-portalled, the tiles come straight back. */}
+      {open && createPortal(
         <>
+          <style dangerouslySetInnerHTML={{ __html: CSS }} />
           <div className="wf-overlay" onClick={closePanel} aria-hidden="true" />
           <div
             className={`wf-panel${exiting ? " wf-panel-exiting" : " wf-panel-entering"}`}
@@ -717,7 +748,8 @@ export default function WaterfallNav() {
               </button>
             </div>
           </div>
-        </>
+        </>,
+        document.body,
       )}
     </>
   );
