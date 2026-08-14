@@ -14,11 +14,17 @@ const CATEGORIES = [
     label: "Legal Professionals",
     color: "#ac1515",
     items: [
-      { name: "Estate Planning Attorneys", href: "/professionals/estate-planning-attorneys" },
+  /* Three of these pointed at /professionals/* routes that do not exist —
+     estate-planning-attorneys, real-estate-attorneys and family-law-attorneys
+     — so the main menu was sending readers to 404s. The category mixes two URL
+     patterns (/professionals/* and /for-*) because the pages were built at
+     different times; the hrefs below are the routes that actually exist in
+     App.tsx. Verify against the router before adding more. */
+      { name: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
       { name: "Probate & Estate Attorneys", href: "/professionals/probate-attorneys" },
       { name: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
-      { name: "Real Estate Attorneys", href: "/professionals/real-estate-attorneys" },
-      { name: "Family Law Attorneys", href: "/professionals/family-law-attorneys" },
+      { name: "Real Estate Attorneys", href: "/real-estate-attorneys" },
+      { name: "Family Law Attorneys", href: "/for-family-law-attorneys" },
       { name: "Divorce Attorneys", href: "/for-divorce-attorneys" },
       { name: "Legal Plans & Identity Protection", href: "/legal-plans-identity-protection" },
     ],
