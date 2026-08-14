@@ -43,7 +43,7 @@ const pathways: Pathway[] = [
     title: "Deciding Whether Repairs Are Worth Doing",
     description:
       "Guidance for understanding when repairs, updates, or improvements may help — and when they may create unnecessary stress or expense.",
-    href: "/insights-guidance/repairs-before-selling-probate-home-washington",
+    href: "/guides/estate-property-repairs-before-sale",
     icon: iconDocument,
   },
   {
@@ -67,7 +67,7 @@ const pathways: Pathway[] = [
     title: "Understanding As-Is vs Prepared Sales",
     description:
       "Learn how different preparation levels may affect timing, stress, convenience, and marketability.",
-    href: "/insights-guidance/sell-inherited-house-as-is-or-fix",
+    href: "/guides/sell-inherited-house-as-is-or-fix",
     icon: iconBookOpen,
   },
   {
