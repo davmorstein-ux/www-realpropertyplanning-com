@@ -133,7 +133,7 @@ const ALL: Record<string, RelatedLink> = {
     description: "Which document the situation actually requires.",
   },
   guideHeirsDisagree: {
-    href: "/guides/heirs-disagree-selling",
+    href: "/guides/heirs-disagree-selling-house",
     label: "When Heirs Disagree",
     description: "Working through sibling buyouts and conflicting positions.",
   },
@@ -153,7 +153,7 @@ const ALL: Record<string, RelatedLink> = {
     description: "Defensible pricing methodology for fiduciary sales.",
   },
   guideAppraisalBefore: {
-    href: "/guides/appraisal-before-selling",
+    href: "/guides/appraisal-before-selling-inherited-property",
     label: "Should You Get an Appraisal First?",
     description: "When an appraisal pays for itself before listing.",
   },
