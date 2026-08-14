@@ -52,7 +52,7 @@ const decisions: Decision[] = [
     title: "Should We Transfer Ownership?",
     description:
       "Learn why legal, tax, estate, and family considerations should be reviewed before transferring title.",
-    href: "/guides/who-has-authority-sell-probate-property",
+    href: "/guides/who-has-authority-sell-probate-property-washington",
     icon: iconDocument,
   },
   {
