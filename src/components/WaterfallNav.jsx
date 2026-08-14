@@ -424,8 +424,31 @@ const CSS = `
       border-bottom: 1px solid #dfc9cb;
       overflow-y: visible;
       flex-shrink: 0;
+      /* TWO COLUMNS ON PHONES. Stacked, the seven categories ran about 320px
+         before the links even began, so tapping a category put its list below
+         the fold and the menu looked broken — the reported complaint. Two
+         columns takes seven rows down to four and saves roughly 140px.
+
+         Height only. The buttons keep their full 44px+ tap target and their
+         type size; nothing is shrunk to fit. Long labels wrap to two lines
+         and that row simply grows, which is why this is a grid rather than
+         hand-paired rows — pairing by hand breaks the moment a category is
+         renamed. */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: #dfc9cb;
     }
+    .wf-rail-btn {
+      padding: 12px 12px;
+      background-color: #f7f4ef;
+    }
+    /* Chevrons pointed at a flyout to the right. There is no right on a
+       phone — the list appears below — so they misdirect and cost space. */
+    .wf-rail-chevron { display: none; }
     .wf-flyout { overflow-y: visible; }
+    /* Lets the three short labels share a row instead of forcing two-up. */
+    .wf-quick-btn { min-width: 96px; flex: 1 1 28%; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -448,7 +471,34 @@ function QuickLinks({ onNavigate }) {
   );
 }
 
-function NavRail({ categories, activeIndex, onSelect }) {
+function NavRail({ categories, activeIndex, onSelect, flyoutRef }) {
+  /* On a phone the links render BELOW the whole rail, so a tap could leave the
+     reader staring at an unchanged screen with the result off-screen. Shorter
+     rail helps; this guarantees it. Desktop is untouched — there the flyout is
+     already beside the rail and scrolling it would be wrong.
+
+     Guarded on matchMedia rather than window width alone so it cannot fire
+     during SSR, and behaviour follows the reduced-motion preference: readers
+     with vestibular sensitivity get an instant jump instead of a glide. */
+  const revealOnMobile = () => {
+    if (typeof window === "undefined" || !flyoutRef?.current) return;
+    if (!window.matchMedia("(max-width: 640px)").matches) return;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    /* Deferred a frame: the flyout has to re-render with the new category
+       before its position is worth measuring. */
+    requestAnimationFrame(() => {
+      flyoutRef.current?.scrollIntoView({
+        behavior: reduced ? "auto" : "smooth",
+        block: "start",
+      });
+    });
+  };
+
+  const handleSelect = (i) => {
+    onSelect(i);
+    revealOnMobile();
+  };
+
   return (
     <div className="wf-rail">
       {categories.map((cat, i) => (
@@ -462,8 +512,10 @@ function NavRail({ categories, activeIndex, onSelect }) {
             "--cat-bg-active": hexToRgba(cat.color, 0.2),
           }}
           aria-current={activeIndex === i}
+          /* Hover stays plain onSelect — a mouse user is on desktop, where
+             the flyout is already visible beside the rail. */
           onMouseEnter={() => onSelect(i)}
-          onClick={() => onSelect(i)}
+          onClick={() => handleSelect(i)}
         >
           <span className="wf-rail-btn-inner">
             <span className="wf-rail-dot" aria-hidden="true" />
@@ -478,10 +530,10 @@ function NavRail({ categories, activeIndex, onSelect }) {
   );
 }
 
-function NavFlyout({ category, onNavigate }) {
-  if (!category) return <div className="wf-flyout" />;
+function NavFlyout({ category, onNavigate, flyoutRef }) {
+  if (!category) return <div className="wf-flyout" ref={flyoutRef} />;
   return (
-    <div className="wf-flyout" style={{ "--cat-color": category.color }}>
+    <div className="wf-flyout" ref={flyoutRef} style={{ "--cat-color": category.color }}>
       <div className="wf-flyout-heading">{category.label}</div>
       {category.items.map((item) => (
         <button key={item.href} data-nav-button className="wf-item" onClick={() => onNavigate(item.href)}>
@@ -497,6 +549,8 @@ export default function WaterfallNav() {
   const [exiting, setExiting] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const exitTimerRef = useRef(null);
+  /* Points at the flyout so NavRail can scroll it into view on phones. */
+  const flyoutRef = useRef(null);
   const hoverTimerRef = useRef(null);
 
   const openPanel = () => {
@@ -606,8 +660,17 @@ export default function WaterfallNav() {
             <QuickLinks onNavigate={handleNavigate} />
 
             <div className="wf-body">
-              <NavRail categories={CATEGORIES} activeIndex={activeIndex} onSelect={setActiveIndex} />
-              <NavFlyout category={CATEGORIES[activeIndex]} onNavigate={handleNavigate} />
+              <NavRail
+                categories={CATEGORIES}
+                activeIndex={activeIndex}
+                onSelect={setActiveIndex}
+                flyoutRef={flyoutRef}
+              />
+              <NavFlyout
+                category={CATEGORIES[activeIndex]}
+                onNavigate={handleNavigate}
+                flyoutRef={flyoutRef}
+              />
             </div>
 
             <div className="wf-close-footer">
