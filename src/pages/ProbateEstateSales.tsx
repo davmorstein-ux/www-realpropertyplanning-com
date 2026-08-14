@@ -231,38 +231,65 @@ const ProbateEstateSales = () => {
         </section>
 
         <style>{`
-          /* Two columns of 380px tiles with an 8px gap needs 768px. Phones do
-             not have it, so the page overflowed its own viewport and readers
-             saw a fragment. The min-width of 320px made it worse: it forbade
-             the tile from shrinking even when there was room to.
+          /* MOBILE OVERFLOW FIX.
 
-             One column below 820px, two above. The tile is capped at 380px so
-             it never stretches awkwardly wide, but it may now shrink to fit
-             whatever the screen actually is. */
+             These grids were inline styles — repeat(2, auto) and
+             repeat(3, auto) — holding tiles with a hard style width of 380px.
+             That is a 768px and 1156px minimum against a 375-430px phone, so
+             the page was wider than the screen and readers saw a slice of it.
+             Inline styles cannot carry a media query, which is why no
+             breakpoint ever collapsed them.
+
+             EVERY declaration here is !important, deliberately. index.css sets
+             .interior-tile with max-width: 260px !important, flex: 1 1 0
+             !important and min-width: 180px !important, and the site-wide
+             responsive block near line 2620 forces grid-template-columns on
+             anything matching [class*="grid-cols-"]. Competing against that
+             without !important loses quietly, which is what happened on the
+             first attempt at this fix.
+
+             minmax(0, 1fr) rather than 1fr: a bare 1fr floors at the content's
+             min-content width, so a wide image or a long unbroken string can
+             still force the column wider than the screen. minmax(0, ...) lets
+             it shrink properly. This is the usual reason a "single column"
+             grid still overflows. */
           .probate-tile-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            column-gap: 8px;
-            row-gap: 16px;
-            width: 100%;
-            max-width: 380px;
-            margin: 0 auto;
-            align-items: stretch;
-          }
-          .probate-wide-tile {
+            display: grid !important;
+            grid-template-columns: minmax(0, 1fr) !important;
+            column-gap: 8px !important;
+            row-gap: 16px !important;
             width: 100% !important;
             max-width: 380px !important;
+            margin: 0 auto !important;
+            align-items: stretch !important;
           }
+          /* Overrides .interior-tile's 260px cap and, more importantly, its
+             min-width of 180px — a minimum is what stops a tile shrinking to
+             fit a narrow screen. */
+          .probate-tile-grid .probate-wide-tile {
+            width: 100% !important;
+            min-width: 0 !important;
+            max-width: 100% !important;
+          }
+          /* Nothing inside a tile may push it wider than its column. */
+          .probate-tile-grid .probate-wide-tile img {
+            max-width: 100% !important;
+            height: auto !important;
+          }
+
           @media (min-width: 820px) {
             .probate-tile-grid {
-              grid-template-columns: repeat(2, 380px);
-              max-width: none;
-              width: fit-content;
+              grid-template-columns: repeat(2, minmax(0, 380px)) !important;
+              max-width: none !important;
+              width: fit-content !important;
+            }
+            .probate-tile-grid .probate-wide-tile {
+              max-width: 380px !important;
             }
           }
           @media (min-width: 1240px) {
             .probate-tile-grid--three {
-              grid-template-columns: repeat(3, 380px);
+              grid-template-columns: repeat(3, minmax(0, 380px)) !important;
             }
           }
         `}</style>
