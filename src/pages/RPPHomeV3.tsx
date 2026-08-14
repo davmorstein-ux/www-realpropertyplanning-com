@@ -49,6 +49,7 @@ const RPPHomeV3 = () => {
       <main id="main-content">
         {/* ── Hero ── height driven by content, image is a background layer ── */}
         <div
+          className="rpp-hero-figure"
           style={{
             position: "relative",
             width: "100%",
@@ -57,11 +58,22 @@ const RPPHomeV3 = () => {
         >
           <img
             id="rpp-hero-image"
-            src="/hero-v2.webp"
-            srcSet="/hero-v2-640w.webp 640w, /hero-v2-960w.webp 960w, /hero-v2-1280w.webp 1280w, /hero-v2-1691w.webp 1691w"
+            /* rpp-hero-2026: new artwork carrying the current logo on the
+               yard sign — the previous file still showed the retired mark.
+               Cropped 118px off the top and 88px off the bottom of the
+               original to a 3.19:1 band: tighter, and it keeps the rooflines,
+               the couple's raised hand and the sold sign that the harder crop
+               was clipping.
+
+               Two files, not a srcSet ladder. On desktop the image is a
+               background the tagline sits over; on mobile it is shown WHOLE
+               above the tagline, so the phone file only needs phone width.
+               3.0 MB PNG became 198 KB and 56 KB. */
+            src="/rpp-hero-2026.webp"
+            srcSet="/rpp-hero-2026-mobile.webp 900w, /rpp-hero-2026.webp 1920w"
             sizes="100vw"
-            width={1691}
-            height={756}
+            width={1920}
+            height={602}
             alt={t("hero.imageAlt")}
             className="absolute inset-0 w-full h-full object-cover object-center"
             loading="eager"
