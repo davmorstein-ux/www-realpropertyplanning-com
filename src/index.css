@@ -3544,12 +3544,45 @@ main #rpp-orientation div {
    to break a suspected stuck preview cache tied to the old selector).
    The extra `main` and `#rpp-tagline` selectors raise specificity above
    the global `main [style*="letter-spacing"]` minimum-font-size rule. */
+/* The tagline was the last Cormorant Garamond on the site. RPPHomeV3.tsx was
+   moved to Source Serif 4 upright during the typography consolidation, but
+   this rule stayed behind and its !important beat the component, so the
+   change never actually took. Now matching the component instead of fighting
+   it — one display serif, as intended.
+
+   Sizing kept as a clamp but with a higher floor: at 390px the old
+   clamp(25px, 3.5vw, 50px) resolved to its 25px minimum, which is small for a
+   headline read by people with presbyopia. */
 main #rpp-tagline .rpp-tagline-line-v2 {
-  font-size: clamp(25px, 3.5vw, 50px) !important;
+  font-size: clamp(28px, 3.5vw, 50px) !important;
   color: #1b3a6b !important;
-  font-family: "Cormorant Garamond", Georgia, serif !important;
-  font-style: italic !important;
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-style: normal !important;
   font-weight: 600 !important;
+}
+
+/* MOBILE LEGIBILITY. The hero scrim is a white gradient fading to fully
+   transparent at the bottom. On a wide screen the tagline sits high in it,
+   where it is 82% opaque and the navy reads cleanly. On a phone the hero band
+   is a fraction of that height, so the second line lands near the bottom of
+   the gradient — over the brightest part of the photograph, at close to zero
+   scrim. Navy on a sunlit house is not a contrast ratio worth defending.
+
+   Below 640px the gradient is replaced with a flatter, more opaque wash. The
+   photo still reads as a photo; the words stop competing with it. */
+@media (max-width: 639px) {
+  #rpp-tagline {
+    position: relative;
+    z-index: 1;
+  }
+  .rpp-hero-scrim {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.82) 60%,
+      rgba(255, 255, 255, 0.7) 100%
+    ) !important;
+  }
 }
 
 .rpp-funnel-heading {
