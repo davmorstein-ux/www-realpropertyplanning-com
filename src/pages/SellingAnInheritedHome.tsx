@@ -16,7 +16,6 @@ import iconExecutor from "@/assets/icons/probate-executors-services-icon-washing
 import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
 import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.webp";
-import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
@@ -135,22 +134,7 @@ const faqs = [
   },
 ];
 
-const continueJourney = [
-  { href: "/estate-probate-inherited-property", title: "Managing an Estate, Probate, or Inherited Property", description: "A guided overview for executors, trustees, and heirs.", icon: iconExecutor },
-  { href: "/executor-responsibilities-first-steps", title: "Executor Responsibilities & First Steps", description: "A first-step roadmap for executors and families.", icon: iconDocument },
-  { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconHome },
-  { href: "/date-of-death-valuation-property-appraisals", title: "Date-of-Death Valuation & Property Appraisals", description: "Understand how valuation supports estate decisions.", icon: iconBookOpen },
-  { href: "/preparing-home-for-sale-during-transition", title: "Preparing a Home for Sale During a Transition", description: "Practical guidance for repairs, cleanout, and readiness.", icon: iconHeartHands },
-  { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconAssisted },
-];
 
-const nextSteps = [
-  "Understand who has authority to make decisions",
-  "Learn the property's approximate value and condition",
-  "Explore selling, keeping, or rental considerations",
-  "Build the right professional team",
-  "Move through the process one step at a time",
-];
 
 const jsonLd = articleSchema({
   headline: "Selling an Inherited Home",
@@ -261,22 +245,32 @@ const SellingAnInheritedHome = () => {
                   to={p.href}
                   className="marquee-hover group block bg-white border-2 border-gold/25 rounded-2xl shadow-[0_2px_8px_-4px_rgba(27,43,75,0.10)] hover:border-gold/55 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_-4px_rgba(27,43,75,0.14)] transition-all overflow-hidden"
                 >
-                  <div className="flex flex-col md:flex-row items-stretch">
-                    <div className="md:w-44 bg-gradient-to-br from-navy to-[hsl(var(--navy-dark))] text-cream p-5 md:p-6 flex md:flex-col items-center md:items-start gap-4 md:gap-2">
-                      <span className="font-serif text-5xl text-gold font-bold leading-none">
-                        {p.letter}
-                      </span>
-                      <span className="text-cream uppercase tracking-widest text-xs font-bold">
-                        Pathway {p.letter}
-                      </span>
-                    </div>
-                    <div className="flex-1 p-5 md:p-6 flex items-center gap-5">
-                      <img
-                        src={p.icon}
-                        alt=""
-                        aria-hidden="true"
-                        className="w-14 h-14 md:w-16 md:h-16 object-contain shrink-0 hidden sm:block"
-                        loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async"/>
+                  {/* TWO THINGS REMOVED HERE, both on purpose.
+
+                      1. A 176px black slab carrying the numeral and the words
+                         "PATHWAY n". It was `from-navy to-navy-dark` with the
+                         digit in `text-gold`, and the July rebrand remapped
+                         --navy to charcoal and --gold to burgundy — dark
+                         burgundy on near-black, 1.53:1, against a WCAG minimum
+                         of 4.5:1. Unreadable, and it read as a rendering fault.
+                         The caption also repeated the numeral sitting beside
+                         it. Replaced with a small navy badge (#1B3A6B, the hero
+                         band navy, white numeral at 10:1) that says the same
+                         thing in a twelfth of the space.
+
+                      2. The emoji-style icon. A 📄 or 🏠 beside a heading that
+                         already names the topic is decoration, and clip-art
+                         decoration at that — out of step with the rest of the
+                         site. The `icon` field remains in the Pathway data in
+                         case a real icon set arrives later. */}
+                  <div className="flex items-start gap-5 p-5 md:p-6">
+                    <span
+                      aria-hidden="true"
+                      className="shrink-0 flex items-center justify-center rounded-full font-serif font-bold text-xl"
+                      style={{ background: "#1B3A6B", color: "#ffffff", width: 44, height: 44 }}
+                    >
+                      {p.letter}
+                    </span>
                       <div className="flex-1">
                         <h3 className="font-serif text-xl md:text-2xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                           {p.title}
@@ -291,7 +285,6 @@ const SellingAnInheritedHome = () => {
                           </svg>
                         </span>
                       </div>
-                    </div>
                   </div>
                 </Link>
               ))}
