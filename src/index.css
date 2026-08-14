@@ -4877,33 +4877,20 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
   transition-duration: 90ms;
 }
 
-/* Burgundy rule that wipes out from the centre. scaleX on a
-   pseudo-element rather than an animated width: width animation
-   triggers layout on every frame, transform does not, and this
-   sits in a sticky header where jank is most visible. */
-.rpp-logo-home.rpp-logo-home::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -6px;
-  height: 2px;
-  border-radius: 2px;
-  background: hsl(var(--gold));
-  transform: scaleX(0);
-  transform-origin: center;
-  opacity: 0;
-  transition:
-    transform 340ms cubic-bezier(0.22, 0.61, 0.36, 1),
-    opacity 220ms ease;
-  pointer-events: none;
-}
+/* NO UNDERLINE. A burgundy rule used to wipe out from the centre beneath the
+   mark on hover. It was removed because the logo already carries two burgundy
+   rules flanking the word PLANNING — adding a third horizontal line to signal
+   the same thing made the header busier, not clearer.
 
-.rpp-logo-home.rpp-logo-home:hover::after,
-.rpp-logo-home.rpp-logo-home:focus-visible::after {
-  transform: scaleX(1);
-  opacity: 1;
-}
+   The obvious idea is to animate those existing rules instead. That is not
+   possible today: they are pixels inside rpp-logo-v9.webp, and CSS cannot
+   reach into a raster image. Doing it properly needs the logo as inline SVG,
+   at which point each rule becomes a <path> that can be targeted and animated
+   on hover — the effect described, using the marks already there rather than
+   inventing a new one.
+
+   Until then the hover is the lift and shadow below, which is quieter and
+   does not compete with the existing rules. */
 
 /* Keyboard users get a ring, not just the hover treatment. Offset
    so it clears the mark rather than crowding it. */
@@ -4921,16 +4908,11 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
    site's age range. Everything static, affordance intact: the rule
    still appears, it simply does not travel. */
 @media (prefers-reduced-motion: reduce) {
-  .rpp-logo-home.rpp-logo-home img,
-  .rpp-logo-home.rpp-logo-home::after {
+  .rpp-logo-home.rpp-logo-home img {
     transition: none !important;
   }
   .rpp-logo-home.rpp-logo-home:hover img,
   .rpp-logo-home.rpp-logo-home:focus-visible img {
     transform: none !important;
-  }
-  .rpp-logo-home.rpp-logo-home:hover::after,
-  .rpp-logo-home.rpp-logo-home:focus-visible::after {
-    transform: scaleX(1) !important;
   }
 }
