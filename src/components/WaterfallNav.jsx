@@ -168,9 +168,9 @@ const CSS = `
     }
   }
 
-  /* These sit above SiteChatWidget, which uses 99998/99999. Now that the panel
-     is portalled to body these numbers are finally compared against the page
-     rather than against the header's private stacking context. */
+  /* Deliberately high. Now that the panel is portalled to body, these numbers
+     are compared against the page rather than against the header's private
+     stacking context, so they finally mean something. */
   .wf-overlay {
     position: fixed;
     inset: 0;
@@ -178,15 +178,11 @@ const CSS = `
     z-index: 999998;
     cursor: pointer;
   }
-  /* The floating chat bubble is fixed at z-index 99999 and would otherwise
-     hover over the menu. Hidden via a class on <body> rather than by touching
-     SiteChatWidget, so that component keeps owning its own behaviour and this
-     one owns the menu. */
-  body.wf-menu-open .rpp-cw-btn,
-  body.wf-menu-open .rpp-cw-panel,
-  body.wf-menu-open .rpp-cw-bubble {
-    display: none !important;
-  }
+  /* SiteChatWidget was deleted (it never sent anything anywhere), so the
+     rules that used to hide its floating bubble behind the menu went with it.
+     The .wf-menu-open body class remains — it is still the hook for
+     suppressing anything fixed-position that would otherwise sit over the
+     open menu. */
 
   .wf-panel {
     position: fixed;
