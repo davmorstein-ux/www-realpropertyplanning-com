@@ -5,7 +5,6 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { articleSchema } from "@/lib/schema";
 
@@ -14,7 +13,6 @@ import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp"
 import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.webp";
 import iconHandshake from "@/assets/icons/real-estate-agent-handshake-icon-washington.webp";
 import iconExecutor from "@/assets/icons/probate-executors-services-icon-washington.webp";
-import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import SituationCards from "@/components/SituationCards";
 
 interface Pathway {
@@ -250,35 +248,19 @@ const WhatShouldWeDoFirst = () => {
           id="what-should-we-do-first"
         />
 
-        {/* CTA */}
-        <section className="py-10 lg:py-14 bg-primary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-                Want to talk it through first?
-              </h2>
-              <p className="text-primary-foreground/85 text-lg leading-relaxed mb-7">
-                A calm, no-pressure conversation can often clarify the very first step.
-              </p>
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <img
-                    src={iconPhone}
-                    alt=""
-                    aria-hidden="true"
-                    className="w-5 h-5 mr-2 object-contain"
-                    loading="lazy"
-                    sizes="100vw"
-                    decoding="async"
-                    width={1024}
-                    height={1536}
-                  />
-                  Start the Conversation
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* Removed: a navy CTA band reading "Want to talk it through first? /
+            A calm, no-pressure conversation can often clarify the very next
+            step." with a "Start the Conversation" button.
+
+            Same reasoning as the line cut from EstateProbateInheritedProperty.
+            It was an open-ended offer of a personal conversation, placed at
+            the end of pages about probate, inherited property, downsizing and
+            aging in place — where readers arrive during a decline or a death
+            in the family. Soliciting contact at that moment asks something of
+            someone at their least resourced.
+
+            Deliberately NOT replaced with a softer CTA. The footer and
+            /contact remain available to anyone who goes looking. */}
 
         <DisclaimerSection />
       </main>
