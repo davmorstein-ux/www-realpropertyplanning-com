@@ -64,7 +64,7 @@ const pathways: Pathway[] = [
     title: "Family Disagreements About Value",
     description:
       "Guidance for situations where heirs, siblings, or family members may have different opinions regarding a property's value.",
-    href: "/guides/heirs-disagree-selling",
+    href: "/guides/heirs-disagree-selling-house",
     icon: iconExecutor,
   },
   {
