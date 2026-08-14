@@ -265,7 +265,19 @@ const NewsletterSignup = ({ variant = "general", source }: NewsletterSignupProps
           outline: 3px solid hsl(355 45% 30%) !important;
           outline-offset: 2px !important;
         }
-        .rpp-news-btn.rpp-news-btn {
+        /* Named "submit", NOT "btn". index.css carries 45 rules keyed on
+           main button[class*="btn"] and [class*="cta"] — including one that
+           injects an ::after arrow and widens it from 13px to 23px on hover,
+           and another that runs an animated marching-ants border.
+
+           Together those made this button flicker: hover widened the element
+           by 10px, its right edge moved out from under the cursor, hover
+           dropped, the button shrank back, hover returned — a loop running as
+           fast as the pointer could keep up.
+
+           Any class containing "btn" or "cta" inside <main> inherits that
+           behaviour. Do not rename this back. */
+        .rpp-news-submit.rpp-news-submit {
           min-height: 48px;
           padding: 12px 22px !important;
           font-family: "DM Sans", system-ui, sans-serif !important;
@@ -278,12 +290,12 @@ const NewsletterSignup = ({ variant = "general", source }: NewsletterSignupProps
           cursor: pointer !important;
           transition: background 200ms ease;
         }
-        .rpp-news-btn.rpp-news-btn:hover { background: hsl(355 50% 24%) !important; }
-        .rpp-news-btn.rpp-news-btn:focus-visible {
+        .rpp-news-submit.rpp-news-submit:hover { background: hsl(355 50% 24%) !important; }
+        .rpp-news-submit.rpp-news-submit:focus-visible {
           outline: 3px solid #272421 !important;
           outline-offset: 3px !important;
         }
-        .rpp-news-btn.rpp-news-btn:disabled { opacity: 0.65; cursor: default !important; }
+        .rpp-news-submit.rpp-news-submit:disabled { opacity: 0.65; cursor: default !important; }
         .rpp-news-fine.rpp-news-fine {
           font-family: "DM Sans", system-ui, sans-serif !important;
           font-size: 14px !important;
@@ -320,7 +332,7 @@ const NewsletterSignup = ({ variant = "general", source }: NewsletterSignupProps
         }
         .rpp-news-turnstile { margin-top: 14px; }
         @media (prefers-reduced-motion: reduce) {
-          .rpp-news-btn.rpp-news-btn { transition: none !important; }
+          .rpp-news-submit.rpp-news-submit { transition: none !important; }
         }
       `}</style>
 
@@ -357,7 +369,7 @@ const NewsletterSignup = ({ variant = "general", source }: NewsletterSignupProps
               onFocus={() => setWantsTurnstile(true)}
               disabled={status === "sending"}
             />
-            <button className="rpp-news-btn" type="submit" disabled={status === "sending"}>
+            <button className="rpp-news-submit" type="submit" disabled={status === "sending"}>
               {status === "sending" ? "Sending…" : copy.cta}
             </button>
           </div>
