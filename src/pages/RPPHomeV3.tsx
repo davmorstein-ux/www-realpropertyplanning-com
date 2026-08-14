@@ -79,7 +79,13 @@ const RPPHomeV3 = () => {
               Point" only scrolled to tiles already visible in the same
               viewport, and "Connect with a Specialist" duplicated the
               "I Need a Professional" funnel tile below. */}
+          {/* rpp-hero-scrim: the white wash the tagline sits on. Classed so
+              index.css can flatten it below 640px — on a phone the hero band is
+              a fraction of its desktop height, so the second line of the
+              tagline lands near the bottom of this gradient where it is almost
+              fully transparent, over the brightest part of the photograph. */}
           <div
+            className="rpp-hero-scrim"
             style={{
               position: "relative",
               display: "flex",
