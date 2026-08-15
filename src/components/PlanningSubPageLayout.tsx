@@ -18,7 +18,9 @@ interface PlanningSubPageLayoutProps {
   canonicalPath: string;
   /** Breadcrumb name for this leaf page */
   breadcrumbName: string;
-  /** Blue band ALL CAPS title */
+  /** Blue band title. Rendered as the page h1 in Title Case — NOT all caps.
+   *  The old "ALL CAPS" note here described a bug, not a decision: the band
+   *  only uppercased because it was not being rendered as an h1. */
   bandTitle: string;
   /** Body sections */
   children: ReactNode;
@@ -64,8 +66,13 @@ const PlanningSubPageLayout = ({
           />
         </section>
 
-        {/* BLUE BAND */}
-        <HeroBandTitle>{bandTitle}</HeroBandTitle>
+        {/* BLUE BAND — `as="h1"` is load-bearing twice over. Without it
+            HeroBandTitle defaults to `as="div"`, so all twelve pages using
+            this layout shipped with NO h1 at all — a WCAG 1.3.1 / 2.4.6
+            failure. It also drives typography: HeroBandTitle keys
+            `textTransform` off `isH1`, so a non-h1 band renders ALL CAPS.
+            One attribute fixes both. */}
+        <HeroBandTitle as="h1">{bandTitle}</HeroBandTitle>
 
         {/* BODY */}
         <section className="py-14 md:py-20 bg-cream">
@@ -84,13 +91,41 @@ const PlanningSubPageLayout = ({
           </div>
         </section>
 
-        {/* CTA */}
+        {/* CTA — rescoped, not deleted.
+
+            The previous copy was "Have Questions? We're Here to Help." with
+            the phone, the info@ address and a "Get in Touch" button. That
+            same band was removed outright from EstateSubPageLayout and
+            ExecutorSubPageLayout, because the hubs above those two had
+            already deleted their CTAs on the grounds that readers arrive
+            bereaved, in distress, and at all hours.
+
+            This family is different and is treated differently on purpose.
+            "Planning Before a Crisis" is read by people who are planning
+            ahead — nobody has died, nothing is urgent, and a visitor who
+            reaches the bottom of one of these pages is exactly the person
+            for whom a property conversation is useful rather than intrusive.
+            So the affordance stays; only the misattribution goes.
+
+            The "we" is what had to change. Real Property Planning is a
+            neutral educational hub and provides no services, so it cannot
+            offer help. David Stein can, in his own name and inside his own
+            licenses. Copy below follows the MidPageCTA standard: scoped to
+            the property side, attributed personally, with everything else
+            pointed back at the licensed professionals in the directory.
+            Keep any future copy inside that line. */}
         <section className="py-14 md:py-20 bg-secondary">
           <div className="container px-5 md:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-serif text-[28px] md:text-[36px] font-semibold text-navy leading-tight mb-6">
-                Have Questions? We're Here to Help.
+                Questions About the Property Side?
               </h2>
+              <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-6">
+                David Stein is a licensed Washington real estate broker (eXp Realty, #133972) and a certified
+                residential appraiser (Stein Appraisal, #1702080). If your planning involves a home — what it is
+                worth, what condition it is in, or what a sale would actually involve — those are questions he can
+                answer directly.
+              </p>
               <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-8">
                 <strong>Call:</strong>{" "}
                 <a href="tel:+12069003015" className="text-navy underline hover:no-underline">
@@ -111,6 +146,10 @@ const PlanningSubPageLayout = ({
                   <polyline points="9 18 15 12 9 6" />
                 </svg>
               </Link>
+              <p className="text-muted-foreground text-[16px] leading-[1.6] mt-6 max-w-2xl mx-auto">
+                For legal, tax, and care questions, the attorneys, fiduciaries, and care professionals listed
+                throughout this site are the right place to start.
+              </p>
             </div>
           </div>
         </section>
