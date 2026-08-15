@@ -3584,7 +3584,7 @@ main #rpp-tagline .rpp-tagline-line-v2 {
   font-size: clamp(32px, 4.5vw, 46px) !important;
   line-height: 1.12 !important;
   color: #ffffff !important;
-  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-family: "Source Serif 4", Georgia, serif !important;
   font-style: normal !important;
   /* 500, not 700. The band weight is right for a page TITLE — "Executors,
      Powers of Attorney & Trustees" is a label, and bold reads as authoritative
@@ -3594,8 +3594,8 @@ main #rpp-tagline .rpp-tagline-line-v2 {
 
      Letter-spacing opens slightly too: DM Sans tightens optically as weight
      drops, and a touch of tracking keeps the line from feeling cramped. */
-  font-weight: 500 !important;
-  letter-spacing: 0.005em !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
 }
 
 /* HERO HEIGHT IS CAPPED, NOT LEFT TO THE WINDOW.
@@ -4859,7 +4859,7 @@ main .rpp-coc-cta:hover::after {
    not their direct child.
    ============================================================ */
 .rpp-hero-band.rpp-hero-band {
-  padding: 12px 24px 14px !important;
+  padding: 8px 24px 10px !important;
 }
 main section:has(> .rpp-hero-band),
 main section:has(> h1.rpp-hero-band-text) {
@@ -4899,8 +4899,8 @@ main section:has(> h1.rpp-hero-band-text) {
 }
 
 h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
-  font-family: "DM Sans", system-ui, sans-serif !important;
-  font-weight: 500 !important;
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
   font-size: clamp(24px, 3vw, 28px) !important;
   line-height: 1.1 !important;
   letter-spacing: 0.01em !important;
