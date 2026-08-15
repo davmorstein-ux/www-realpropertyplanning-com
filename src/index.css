@@ -4465,10 +4465,24 @@ main .article-resource-btn:hover {
    gives it 64px of vertical padding even when empty, which pushed the sticky
    header down the page on every route. It has no visual content of its own,
    so it should occupy nothing until a toast appears. */
-section[aria-label="Notifications"] {
+section[aria-label="Notifications"],
+section[aria-label*="Notification"],
+section:has(> [data-sonner-toaster]) {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+
+/* Three selectors, because the exact-match one alone proved brittle. Sonner
+   builds that label as `${containerAriaLabel} ${hotkeyLabel}`, so a version
+   bump can turn "Notifications" into "Notifications alt+T" — at which point
+   `[aria-label="Notifications"]` silently stops matching and the 64px gap
+   comes back with nothing in the code having changed. That is almost
+   certainly what happened here.
+
+   The substring selector survives any suffix. The :has() selector survives
+   the label being renamed or translated entirely, since it matches on the
+   toaster list actually being inside. Between them this should not regress
+   again. */
 
 
 
