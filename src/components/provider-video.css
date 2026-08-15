@@ -138,7 +138,7 @@
 }
 
 .provider-video-dialog__title.provider-video-dialog__title {
-  font-family: "Cormorant Garamond", serif !important;
+  font-family: "DM Sans", system-ui, sans-serif !important;
   font-size: 28px !important;
   font-weight: 700 !important;
   line-height: 1.2 !important;
