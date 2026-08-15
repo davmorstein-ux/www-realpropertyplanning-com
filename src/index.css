@@ -3586,7 +3586,16 @@ main #rpp-tagline .rpp-tagline-line-v2 {
   color: #ffffff !important;
   font-family: "DM Sans", system-ui, sans-serif !important;
   font-style: normal !important;
-  font-weight: 700 !important;
+  /* 500, not 700. The band weight is right for a page TITLE — "Executors,
+     Powers of Attorney & Trustees" is a label, and bold reads as authoritative
+     at that length. The homepage tagline is a full sentence across two lines,
+     and 700 at 46px puts so much ink on screen that it reads as heavy rather
+     than confident. 500 keeps the same size and presence with far less weight.
+
+     Letter-spacing opens slightly too: DM Sans tightens optically as weight
+     drops, and a touch of tracking keeps the line from feeling cramped. */
+  font-weight: 500 !important;
+  letter-spacing: 0.005em !important;
 }
 
 /* HERO HEIGHT IS CAPPED, NOT LEFT TO THE WINDOW.
