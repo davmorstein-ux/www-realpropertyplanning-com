@@ -125,7 +125,7 @@ const AFHFindProfessional = () => (
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#292521",
               lineHeight: 1.15,
@@ -193,7 +193,7 @@ const AFHFindProfessional = () => (
                     <h2
                       style={{
                         fontSize: "clamp(20px, 2.5vw, 26px)",
-                        fontFamily: "Georgia, serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         fontWeight: 700,
                         color: "#280a0c",
                         margin: "0 0 14px",
@@ -317,7 +317,7 @@ const AFHFindProfessional = () => (
           <h2
             style={{
               fontSize: "clamp(22px, 3.5vw, 32px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,

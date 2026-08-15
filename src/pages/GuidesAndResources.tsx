@@ -126,7 +126,7 @@ const GuidesAndResources = () => {
 
         {/* Looking for a professional? CTA */}
         <div style={{ background: "#f7f4ef", padding: "28px 24px", textAlign: "center" }}>
-          <p style={{ fontFamily: "Georgia, serif", fontSize: 17, color: "#280a0c", margin: 0 }}>
+          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 17, color: "#280a0c", margin: 0 }}>
             Looking for a professional instead of a guide?{" "}
             <Link to="/resources" style={{ color: GOLD, fontWeight: 700, textDecoration: "underline" }}>
               Browse our Find a Professional directory →
@@ -146,7 +146,7 @@ const GuidesAndResources = () => {
               <div style={{ marginBottom: 8, paddingBottom: 16, borderBottom: `2px solid ${GOLD}` }}>
                 <h2
                   style={{
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontSize: "clamp(20px, 2.5vw, 28px)",
                     fontWeight: 700,
                     color: "#280a0c",
@@ -186,7 +186,7 @@ const GuidesAndResources = () => {
                     <div
                       style={{
                         flex: 1,
-                        fontFamily: "Georgia, serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         fontSize: 16,
                         fontWeight: 700,
                         color: "#280a0c",

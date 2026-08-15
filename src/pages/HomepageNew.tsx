@@ -40,7 +40,7 @@ const HomepageNew = () => (
         <div style={{ maxWidth: "820px", margin: "0 auto", padding: "0 1.5rem", textAlign: "center" }}>
           <h2
             style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontSize: "clamp(2.5rem, 5vw, 3.75rem)",
               fontWeight: 600,
               color: "#8b2e2e",
@@ -84,7 +84,7 @@ const HomepageNew = () => (
           <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontSize: "2.25rem",
                 fontWeight: 600,
                 color: "#6f2a30",

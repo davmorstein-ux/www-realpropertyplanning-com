@@ -96,7 +96,7 @@ const AFHManagementCompanies = () => (
           <h2
             style={{
               fontSize: "clamp(32px, 4vw, 44px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -151,7 +151,7 @@ const AFHManagementCompanies = () => (
                   <p
                     style={{
                       fontSize: "20px",
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontWeight: 700,
                       color: "#280a0c",
                       margin: "0 0 6px",
@@ -185,7 +185,7 @@ const AFHManagementCompanies = () => (
                 <h3
                   style={{
                     fontSize: "clamp(22px, 2.5vw, 28px)",
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontWeight: 700,
                     color: "#280a0c",
                     margin: "0 0 16px",
@@ -382,7 +382,7 @@ const AFHManagementCompanies = () => (
               <h3
                 style={{
                   fontSize: "clamp(22px, 2.5vw, 28px)",
-                  fontFamily: "Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontWeight: 700,
                   color: "#280a0c",
                   margin: "0 0 24px",
@@ -459,7 +459,7 @@ const AFHManagementCompanies = () => (
             <h3
               style={{
                 fontSize: "clamp(24px, 3vw, 32px)",
-                fontFamily: "Georgia, serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#280a0c",
                 margin: "0 0 16px",

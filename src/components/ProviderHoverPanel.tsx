@@ -277,7 +277,7 @@ export default function ProviderHoverPanel({
                 <div style={{ flex: 1 }}>
                   <div
                     style={{
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: 18,
                       fontWeight: 700,
                       color: "#fff",
@@ -289,7 +289,7 @@ export default function ProviderHoverPanel({
                   {name2 && (
                     <div
                       style={{
-                        fontFamily: "Georgia, serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         fontSize: 18,
                         fontWeight: 700,
                         color: "#fff",
@@ -381,7 +381,7 @@ export default function ProviderHoverPanel({
                       <p
                         key={i}
                         style={{
-                          fontFamily: "Georgia, serif",
+                          fontFamily: "'DM Sans', system-ui, sans-serif",
                           fontSize: 14,
                           color: "#5e5954",
                           lineHeight: 1.6,
@@ -417,7 +417,7 @@ export default function ProviderHoverPanel({
                     >
                       Specialties
                     </div>
-                    <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#5e5954", lineHeight: 1.6 }}>
+                    <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#5e5954", lineHeight: 1.6 }}>
                       {specialty}
                     </div>
                   </div>

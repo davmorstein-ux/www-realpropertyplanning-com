@@ -65,7 +65,7 @@ const PageFAQ = ({
         </p>
         <h2
           style={{
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontFamily: "'DM Sans', system-ui, sans-serif",
             fontSize: "clamp(30px, 3.2vw, 42px)",
             fontWeight: 700,
             color: NAVY,
@@ -102,7 +102,7 @@ const PageFAQ = ({
                   >
                     <span
                       style={{
-                        fontFamily: "Georgia, 'Cormorant Garamond', serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         fontSize: "22px",
                         fontWeight: 700,
                         color: NAVY,
@@ -167,7 +167,7 @@ const PageFAQ = ({
                 >
                   <span
                     style={{
-                      fontFamily: "Georgia, 'Cormorant Garamond', serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: "24px",
                       fontWeight: 700,
                       color: NAVY,

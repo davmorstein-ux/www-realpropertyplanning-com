@@ -208,7 +208,7 @@ const AFHResources = () => (
         <h2
           style={{
             fontSize: "clamp(24px, 3.5vw, 36px)",
-            fontFamily: "Georgia, serif",
+            fontFamily: "'DM Sans', system-ui, sans-serif",
             fontWeight: 700,
             color: "#280a0c",
             lineHeight: 1.2,
@@ -256,7 +256,7 @@ const AFHResources = () => (
                 <h3
                   style={{
                     fontSize: 20,
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontWeight: 700,
                     color: "#280a0c",
                     margin: "0 0 8px",

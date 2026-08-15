@@ -92,7 +92,7 @@ const RPPHomeV3 = () => {
               <span
                 style={{
                   display: "block",
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "clamp(16px, 2.2vw, 32px)",
                   fontWeight: 600,
                   fontStyle: "italic",
@@ -108,7 +108,7 @@ const RPPHomeV3 = () => {
               <span
                 style={{
                   display: "block",
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "clamp(16px, 2.2vw, 32px)",
                   fontWeight: 600,
                   fontStyle: "italic",
@@ -132,7 +132,7 @@ const RPPHomeV3 = () => {
               <p
                 id="rpp-descriptor"
                 style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "clamp(18px, 2.4vw, 28px)",
                   fontWeight: 600,
                   fontStyle: "normal",
@@ -277,7 +277,7 @@ const RPPHomeV3 = () => {
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <h3
                     style={{
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: "clamp(22px,2.8vw,28px)",
                       fontWeight: 700,
                       color: "#272421",
@@ -345,7 +345,7 @@ const RPPHomeV3 = () => {
                 <div style={{ flex: 1, minWidth: 0, position: "relative", zIndex: 2 }}>
                   <h3
                     style={{
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: "clamp(22px,2.8vw,28px)",
                       fontWeight: 700,
                       color: "#0a5648",

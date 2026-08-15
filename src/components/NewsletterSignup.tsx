@@ -28,14 +28,7 @@ import { supabase } from "@/integrations/supabase/client";
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAAD8Pv43WG0GFRJob";
 
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (el: HTMLElement, opts: Record<string, unknown>) => string;
-      remove: (id: string) => void;
-    };
-  }
-}
+// Window.turnstile is declared once in src/types/turnstile.d.ts.
 
 /* ------------------------------------------------------------------ *
  * COPY — every variant lives here, not in the pages.
@@ -224,7 +217,7 @@ const NewsletterSignup = ({ variant = "general", source }: NewsletterSignupProps
           max-width: 640px;
         }
         .rpp-news-heading.rpp-news-heading {
-          font-family: "Source Serif 4", Georgia, serif !important;
+          font-family: 'DM Sans', system-ui, sans-serif !important;
           font-size: 24px !important;
           font-weight: 600 !important;
           line-height: 1.25 !important;

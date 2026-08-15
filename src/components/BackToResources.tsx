@@ -49,7 +49,7 @@ const CSS = `
     border-radius: 3px;
     box-shadow: 0 0 0 1px #8a7233, 0 3px 9px rgba(0,0,0,0.22),
                 inset 0 0 0 1px rgba(201,168,76,0.4);
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 21px;
     font-weight: 700;
     letter-spacing: 0.08em;

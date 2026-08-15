@@ -161,7 +161,7 @@ const AFHBuildingInspection = () => (
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#292521",
               lineHeight: 1.15,
@@ -208,7 +208,7 @@ const AFHBuildingInspection = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -317,7 +317,7 @@ const AFHBuildingInspection = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -354,7 +354,7 @@ const AFHBuildingInspection = () => (
                 <h3
                   style={{
                     fontSize: 18,
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontWeight: 700,
                     color: "#280a0c",
                     margin: "0 0 12px",
@@ -452,7 +452,7 @@ const AFHBuildingInspection = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -569,7 +569,7 @@ const AFHBuildingInspection = () => (
           <h2
             style={{
               fontSize: "clamp(24px, 3.5vw, 36px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               lineHeight: 1.2,
@@ -627,7 +627,7 @@ const AFHBuildingInspection = () => (
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontFamily: "Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontWeight: 700,
                   fontSize: 18,
                 }}
@@ -638,7 +638,7 @@ const AFHBuildingInspection = () => (
                 <h3
                   style={{
                     fontSize: 17,
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontWeight: 700,
                     color: "#280a0c",
                     margin: "0 0 6px",

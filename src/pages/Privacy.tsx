@@ -191,7 +191,7 @@ const Privacy = () => {
             margin: 0 0 16px !important;
           }
           .rpp-privacy.rpp-privacy h2 {
-            font-family: "Source Serif 4", Georgia, serif !important;
+            font-family: 'DM Sans', system-ui, sans-serif !important;
             font-size: 26px !important;
             font-weight: 600 !important;
             color: #272421 !important;

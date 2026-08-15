@@ -36,7 +36,7 @@ const Search = () => {
             <h1
               className="text-center mb-10 md:mb-14 search-page-h1"
               style={{
-                fontFamily: "'Cormorant Garamond', serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
                 fontWeight: 500,
                 lineHeight: 1.15,

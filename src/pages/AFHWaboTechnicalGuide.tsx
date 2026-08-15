@@ -20,7 +20,7 @@ const label = {
 
 const h2 = {
   fontSize: "clamp(24px, 3.5vw, 36px)",
-  fontFamily: "Georgia, serif",
+  fontFamily: "'DM Sans', system-ui, sans-serif",
   fontWeight: 700,
   color: "#280a0c",
   lineHeight: 1.2,
@@ -29,7 +29,7 @@ const h2 = {
 
 const h3 = {
   fontSize: "clamp(19px, 2.5vw, 24px)",
-  fontFamily: "Georgia, serif",
+  fontFamily: "'DM Sans', system-ui, sans-serif",
   fontWeight: 700,
   color: "#292521",
   lineHeight: 1.3,
@@ -109,7 +109,7 @@ const AFHWaboTechnicalGuide = () => (
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#292521",
               lineHeight: 1.15,

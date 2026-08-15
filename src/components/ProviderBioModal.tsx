@@ -92,7 +92,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               <div style={{ flex: 1 }}>
                 <div
                   style={{
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontSize: 18,
                     fontWeight: 700,
                     color: "#fff",
@@ -135,7 +135,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
             <div style={{ padding: "20px 24px" }}>
               <p
                 style={{
-                  fontFamily: "Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: 14,
                   color: "#5e5954",
                   lineHeight: 1.75,
@@ -168,7 +168,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                   >
                     Specialties
                   </div>
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#5e5954", lineHeight: 1.6 }}>
+                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#5e5954", lineHeight: 1.6 }}>
                     {props.specialty}
                   </div>
                 </div>
@@ -197,13 +197,13 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                   Contact
                 </div>
                 {props.address && (
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#5e5954" }}>📍 {props.address}</div>
+                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#5e5954" }}>📍 {props.address}</div>
                 )}
                 {props.phone && (
                   <a
                     href={`tel:${props.phone.replace(/\D/g, "")}`}
                     style={{
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: 13,
                       color: "#280a0c",
                       textDecoration: "none",
@@ -216,7 +216,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 {props.email && (
                   <a
                     href={`mailto:${props.email}`}
-                    style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#7f2028", textDecoration: "none" }}
+                    style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#7f2028", textDecoration: "none" }}
                   >
                     ✉️ {props.email}
                   </a>
@@ -226,7 +226,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                     href={props.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#7f2028", textDecoration: "none" }}
+                    style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#7f2028", textDecoration: "none" }}
                   >
                     🌐 {props.website.replace(/^https?:\/\//, "")}
                   </a>
@@ -273,7 +273,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
               justifyContent: "center",
             }}
           >
-            <span style={{ fontFamily: "Georgia, serif", fontSize: 28, color: "#fff", fontWeight: 700 }}>
+            <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 28, color: "#fff", fontWeight: 700 }}>
               {props.name
                 .split(" ")
                 .map((n: string) => n[0])

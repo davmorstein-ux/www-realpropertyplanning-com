@@ -9,7 +9,7 @@ const HomepageTestimonials = () => {
     <section style={{ backgroundColor: "#f5f2ec", padding: "3rem 0 3.5rem" }}>
       <style>{`
         .rpp-tm-quote.rpp-tm-quote {
-          font-family: Georgia, 'Cormorant Garamond', serif;
+          font-family: 'DM Sans', system-ui, sans-serif;
           font-size: 17px !important;
           font-weight: 400 !important;
           line-height: 1.7 !important;
@@ -37,7 +37,7 @@ const HomepageTestimonials = () => {
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
         <h2
           style={{
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontFamily: "'DM Sans', system-ui, sans-serif",
             fontSize: "clamp(28px, 3vw, 40px)",
             fontWeight: 500,
             color: "#272421",

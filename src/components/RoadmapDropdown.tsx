@@ -76,7 +76,7 @@ const RoadmapDropdown = ({
           {activeIndex + 1}
         </span>
         <span
-          style={{ fontSize: 17, fontWeight: 700, color: "#280a0c", lineHeight: 1.4, fontFamily: "Georgia, serif" }}
+          style={{ fontSize: 17, fontWeight: 700, color: "#280a0c", lineHeight: 1.4, fontFamily: "'DM Sans', system-ui, sans-serif" }}
         >
           {activeTopic.title}
         </span>
@@ -188,7 +188,7 @@ const RoadmapDropdown = ({
           borderRadius: 12,
           padding: "18px 22px",
           cursor: "pointer",
-          fontFamily: "Georgia, serif",
+          fontFamily: "'DM Sans', system-ui, sans-serif",
           textAlign: "left",
         }}
       >

@@ -144,7 +144,7 @@ const Articles = () => {
             maxWidth: 900,
             margin: "0 auto",
             padding: "56px 24px 80px",
-            fontFamily: "Georgia, serif",
+            fontFamily: "'DM Sans', system-ui, sans-serif",
           }}
         >
           <h2
@@ -221,7 +221,7 @@ const Articles = () => {
                       color: "#280a0c",
                       margin: "0 0 4px",
                       lineHeight: 1.3,
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                     }}
                   >
                     <Link to={article.href} style={{ color: "inherit", textDecoration: "none" }}>
@@ -234,7 +234,7 @@ const Articles = () => {
                       color: "#5e5954",
                       margin: "0 0 12px",
                       lineHeight: 1.6,
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                     }}
                   >
                     {article.description}

@@ -205,7 +205,7 @@ const Section = ({
                 <div style={{ minHeight: 72 }}>
                   <h3
                     style={{
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: 18,
                       fontWeight: 700,
                       color: color,
@@ -385,7 +385,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                         <div style={{ padding: "16px 20px 0" }}>
                           <h3
                             style={{
-                              fontFamily: "Georgia, serif",
+                              fontFamily: "'DM Sans', system-ui, sans-serif",
                               fontSize: 18,
                               fontWeight: 700,
                               color: "#721d24",

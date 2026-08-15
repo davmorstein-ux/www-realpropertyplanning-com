@@ -136,7 +136,7 @@ const LongTermCareOptions = () => {
           <h2
             style={{
               fontSize: "clamp(24px, 3vw, 34px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               marginBottom: 8,
@@ -202,7 +202,7 @@ const LongTermCareOptions = () => {
                       color: "#280a0c",
                       margin: "0 0 12px",
                       lineHeight: 1.3,
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                     }}
                   >
                     {topic.title}
