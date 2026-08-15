@@ -104,7 +104,7 @@ const RPPHomeV3 = () => {
                cannot drift. The cost is vertical space — roughly 450px of
                image at a 1440px window — which is why the crop is a 3.18:1
                band rather than the original 2.37:1. */
-            className="block w-full h-auto"
+            className="rpp-hero-img block w-full"
             loading="eager"
             /* WAS fetchPriority — React does not recognise the camelCase form
                on a DOM element and drops it with a console warning, so the
