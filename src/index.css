@@ -3553,9 +3553,20 @@ main #rpp-orientation div {
    Sizing kept as a clamp but with a higher floor: at 390px the old
    clamp(25px, 3.5vw, 50px) resolved to its 25px minimum, which is small for a
    headline read by people with presbyopia. */
+/* WHITE, because the tagline now sits in a navy band rather than on cream.
+   This rule carries !important and beats the component, so it MUST change in
+   step with RPPHomeV3.tsx — navy text on the navy band is 1.0:1 and the
+   tagline would vanish completely.
+
+   36px ceiling, not 50px. The standard band holds ONE line at 46px and stands
+   77px tall; this one holds TWO. At 50px it would be 138px — visibly a
+   different component. At 36px with 1.08 leading it comes to about 104px,
+   which reads as the same band. Smaller starts making the headline look like
+   body copy. */
 main #rpp-tagline .rpp-tagline-line-v2 {
-  font-size: clamp(28px, 3.5vw, 50px) !important;
-  color: #1b3a6b !important;
+  font-size: clamp(22px, 2.7vw, 36px) !important;
+  line-height: 1.08 !important;
+  color: #ffffff !important;
   font-family: "Source Serif 4", Georgia, serif !important;
   font-style: normal !important;
   font-weight: 600 !important;
