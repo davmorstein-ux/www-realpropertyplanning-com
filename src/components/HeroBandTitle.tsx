@@ -127,7 +127,22 @@ const HeroBandTitle = ({
   className = "",
 }: HeroBandTitleProps) => {
   const isH1 = Tag === "h1";
-  const isCompactH1 = isH1 && compact;
+  /* COMPACT IS NEUTRALISED — every h1 band is now the same size and padding.
+
+     The attorney family (seven pages) passes `compact`, which rendered those
+     bands at clamp(24px, 3vw, 28px) with 6px/8px padding while every other
+     page ran clamp(32px, 4.5vw, 46px) with 8px/10px. Two standards, so the
+     bands never matched no matter how carefully either one was tuned.
+
+     Pinned to false rather than ripped out: the prop stays in the signature
+     and the seven pages keep passing it, so nothing needs editing page-side
+     and nothing breaks. Because the `--compact` classes are only attached
+     when this is true, the compact rules in index.css now never match — they
+     are dead, harmless, and can be deleted whenever that file is next opened.
+
+     To bring the variant back, restore `isH1 && compact` here. Do not
+     reintroduce a second set of values anywhere else. */
+  const isCompactH1 = false;
   const textStyle = bandTextStyle(isH1, isCompactH1);
   /* className was also destructured-and-dropped before; it now reaches the
      text element so a page can add a hook without forking the component. */
