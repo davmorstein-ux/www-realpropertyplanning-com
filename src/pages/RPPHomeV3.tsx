@@ -168,7 +168,7 @@ const RPPHomeV3 = () => {
                  type block the same value reads as a gap. The real culprit for
                  the space under the text was the global h1 margin-bottom,
                  zeroed in index.css. */
-              padding: "12px 24px 6px",
+              padding: "8px 24px 10px",
               boxSizing: "border-box",
               background: "#1B3A6B",
               /* A 1px rule along the top edge, to give the photograph a clean
@@ -196,8 +196,18 @@ const RPPHomeV3 = () => {
                   display: "block",
                   /* Source Serif 4 600 per the typography review — the tagline
                      was the last Cormorant Garamond on the homepage, a third
-                     family doing a job the display serif now owns. */
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                     family doing a job the display serif now owns.
+
+                     The comment above said this for months while the value
+                     below said DM Sans. The declared intent and the shipped
+                     code had drifted apart, which is why the homepage tagline
+                     stayed sans while every other band went serif. Fixed.
+
+                     NOTE: index.css carries `main #rpp-tagline
+                     .rpp-tagline-line-v2` with !important, which BEATS this
+                     inline style. Changing this line alone does nothing —
+                     change both or neither. */
+                  fontFamily: "'Source Serif 4', Georgia, serif",
                   fontSize: "clamp(28px, 4.4vw, 62px)",
                   fontWeight: 600,
                   fontStyle: "normal",
@@ -222,8 +232,18 @@ const RPPHomeV3 = () => {
                   display: "block",
                   /* Source Serif 4 600 per the typography review — the tagline
                      was the last Cormorant Garamond on the homepage, a third
-                     family doing a job the display serif now owns. */
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                     family doing a job the display serif now owns.
+
+                     The comment above said this for months while the value
+                     below said DM Sans. The declared intent and the shipped
+                     code had drifted apart, which is why the homepage tagline
+                     stayed sans while every other band went serif. Fixed.
+
+                     NOTE: index.css carries `main #rpp-tagline
+                     .rpp-tagline-line-v2` with !important, which BEATS this
+                     inline style. Changing this line alone does nothing —
+                     change both or neither. */
+                  fontFamily: "'Source Serif 4', Georgia, serif",
                   fontSize: "clamp(28px, 4.4vw, 62px)",
                   fontWeight: 600,
                   fontStyle: "normal",
