@@ -1,4 +1,13 @@
 import Header from "@/components/Header";
+/* Imported as module assets rather than referenced from public/. The same
+   files sat in public/ and returned 404 in production despite being committed
+   and valid — newly added binaries were not making it into the deployed
+   build. Importing routes them through Vite's asset pipeline, which is the
+   path every working icon on this site already uses: the file is emitted with
+   a content hash and the URL is resolved at build time, so it cannot silently
+   go missing. */
+import heroDesktop from "@/assets/hero/rpp-hero-2026.webp";
+import heroMobile from "@/assets/hero/rpp-hero-2026-mobile.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -69,8 +78,8 @@ const RPPHomeV3 = () => {
                background the tagline sits over; on mobile it is shown WHOLE
                above the tagline, so the phone file only needs phone width.
                3.0 MB PNG became 198 KB and 56 KB. */
-            src="/rpp-hero-2026.webp"
-            srcSet="/rpp-hero-2026-mobile.webp 900w, /rpp-hero-2026.webp 1920w"
+            src={heroDesktop}
+            srcSet={`${heroMobile} 900w, ${heroDesktop} 1920w`}
             sizes="100vw"
             width={1920}
             height={602}
