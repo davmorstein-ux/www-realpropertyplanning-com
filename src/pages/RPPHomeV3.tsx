@@ -152,7 +152,13 @@ const RPPHomeV3 = () => {
                  middle is twice as tall. Trimming to 8/10 brings the band to
                  roughly 94px — close to the 77px of the single-line bands
                  without cramping the descenders. */
-              padding: "8px 24px 10px",
+              /* 6/8, tighter than HeroBandTitle's 12/24/14. That padding is
+                 balanced for ONE line; with two lines the same values leave
+                 too much air, because the type block between them is twice as
+                 tall. This brings the band to roughly 80px against the 77px of
+                 the single-line bands — near enough to read as the same
+                 component. */
+              padding: "6px 24px 8px",
               boxSizing: "border-box",
               background: "#1B3A6B",
               /* No gap: the h1 is the only child, so this only ever added
