@@ -4489,7 +4489,8 @@ section[aria-label="Notifications"] {
    ============================================================ */
 h1.rpp-hero-band-text.rpp-hero-band-text {
   font-family: "DM Sans", system-ui, sans-serif !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.005em !important;
   font-size: clamp(32px, 4.5vw, 46px) !important;
   line-height: 1.12 !important;
   letter-spacing: 0.01em !important;
@@ -4900,7 +4901,7 @@ main section:has(> h1.rpp-hero-band-text) {
 
 h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
   font-family: "DM Sans", system-ui, sans-serif !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   font-size: clamp(24px, 3vw, 28px) !important;
   line-height: 1.1 !important;
   letter-spacing: 0.01em !important;
