@@ -46,7 +46,7 @@ const HomepagePopularResources = () => {
         display: block !important;
       }
       .rpp-pr-heading {
-        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: clamp(32px, 3vw, 48px) !important;
         font-weight: 700 !important;
         color: #272421 !important;
@@ -95,7 +95,7 @@ const HomepagePopularResources = () => {
         flex-shrink: 0 !important;
       }
       .rpp-pr-card-text {
-        font-family: Georgia, 'Cormorant Garamond', serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 20px !important;
         font-weight: 700 !important;
         color: #272421 !important;

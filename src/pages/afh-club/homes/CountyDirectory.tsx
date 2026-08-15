@@ -72,7 +72,7 @@ const CountyDirectory = () => {
                   {countyGroups.length > 1 && (
                     <h2
                       style={{
-                        fontFamily: "Georgia, serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         fontSize: "24px",
                         fontWeight: 600,
                         color: "#111827",
@@ -111,7 +111,7 @@ const CountyDirectory = () => {
                               to={`/afh-club/homes/${c.citySlug}`}
                               className="underline underline-offset-4 hover:text-gold transition-colors"
                               style={{
-                                fontFamily: "Georgia, serif",
+                                fontFamily: "'DM Sans', system-ui, sans-serif",
                                 fontSize: "21px",
                                 fontWeight: 600,
                                 color: "#111827",

@@ -185,7 +185,7 @@ const ShareYourExperience = () => {
               <div className="mb-8">
                 <h1
                   style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontSize: "clamp(30px, 4vw, 46px)",
                     fontWeight: 600,
                     color: "#272421",

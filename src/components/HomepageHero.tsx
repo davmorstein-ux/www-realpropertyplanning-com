@@ -108,7 +108,7 @@ const HomepageFunnel = () => (
         margin: 0 0 0.75rem 0 !important;
       }
       .rpp-section-heading {
-        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 2.25rem !important;
         font-weight: 600 !important;
         color: #272421 !important;

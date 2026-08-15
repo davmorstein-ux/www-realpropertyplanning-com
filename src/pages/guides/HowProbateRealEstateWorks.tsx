@@ -78,7 +78,7 @@ const HowProbateRealEstateWorks = () => (
 
       {/* Clean prose section */}
       <section style={{ padding: "56px 24px", background: "#fff" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto", fontFamily: "Georgia, serif" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
           <div style={{ marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid #dfc9cb` }}>
             <h2 style={{ fontSize: 22, fontWeight: 700, color: "#280a0c", marginBottom: 12 }}>
               What Is Probate Real Estate?

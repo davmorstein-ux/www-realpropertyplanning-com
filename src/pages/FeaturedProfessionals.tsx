@@ -354,7 +354,7 @@ const FeaturedProfessionals = () => (
             <h2
               style={{
                 fontSize: "clamp(22px, 3vw, 30px)",
-                fontFamily: "Georgia, serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#292521",
                 margin: "0 0 28px",

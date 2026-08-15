@@ -224,7 +224,7 @@ const NewsletterSignup = ({ variant = "general", source }: NewsletterSignupProps
           max-width: 640px;
         }
         .rpp-news-heading.rpp-news-heading {
-          font-family: "Source Serif 4", Georgia, serif !important;
+          font-family: 'DM Sans', system-ui, sans-serif !important;
           font-size: 24px !important;
           font-weight: 600 !important;
           line-height: 1.25 !important;

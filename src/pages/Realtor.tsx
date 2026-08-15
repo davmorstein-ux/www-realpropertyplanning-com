@@ -213,7 +213,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
             <h2
               style={{
                 fontSize: "clamp(28px, 3.5vw, 40px)",
-                fontFamily: "Georgia, serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#280a0c",
                 margin: "0 0 16px",
@@ -243,7 +243,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                   </svg>
                 ))}
               </div>
-              <span style={{ fontSize: 20, fontFamily: "Georgia, serif", fontWeight: 700, color: "#280a0c" }}>5.0</span>
+              <span style={{ fontSize: 20, fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>5.0</span>
               <span style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#302b26" }}>
                 · 16 Reviews on Zillow
               </span>
@@ -281,7 +281,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
                 <p
                   style={{
                     fontSize: 17,
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontWeight: 700,
                     color: "#280a0c",
                     margin: 0,

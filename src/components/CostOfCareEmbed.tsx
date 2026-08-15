@@ -178,7 +178,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       </p>
       <h3
         style={{
-          fontFamily: "Georgia, serif",
+          fontFamily: "'DM Sans', system-ui, sans-serif",
           fontSize: "clamp(20px,2.6vw,26px)",
           fontWeight: 700,
           color: NAVY,

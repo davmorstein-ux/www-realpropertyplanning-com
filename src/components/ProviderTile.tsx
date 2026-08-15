@@ -225,7 +225,7 @@ export default function ProviderTile({
               <div style={{ flex: 1 }}>
                 <div
                   style={{
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontSize: 18,
                     fontWeight: 700,
                     color: "#fff",
@@ -237,7 +237,7 @@ export default function ProviderTile({
                 {name2 && (
                   <div
                     style={{
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: 18,
                       fontWeight: 700,
                       color: "#fff",
@@ -285,7 +285,7 @@ export default function ProviderTile({
             <div style={{ padding: "20px 24px" }}>
               <p
                 style={{
-                  fontFamily: "Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: 14,
                   color: "#5e5954",
                   lineHeight: 1.75,
@@ -316,7 +316,7 @@ export default function ProviderTile({
                   >
                     Specialties
                   </div>
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#5e5954", lineHeight: 1.6 }}>
+                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#5e5954", lineHeight: 1.6 }}>
                     {specialty}
                   </div>
                 </div>
@@ -395,7 +395,7 @@ export default function ProviderTile({
                     sizes="100vw"
                     decoding="async"
                   />
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
+                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
                     {name}
                   </div>
                   <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "#666" }}>{title}</div>
@@ -419,7 +419,7 @@ export default function ProviderTile({
                     sizes="100vw"
                     decoding="async"
                   />
-                  <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
+                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 14, fontWeight: 700, color: "#280a0c" }}>
                     {name2}
                   </div>
                   <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "#666" }}>{title2}</div>
@@ -473,13 +473,13 @@ export default function ProviderTile({
                 width: "100%",
               }}
             >
-              <div style={{ fontFamily: "Georgia, serif", fontSize: 18, fontWeight: 700, color: "#280a0c" }}>
+              <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 18, fontWeight: 700, color: "#280a0c" }}>
                 {name}
               </div>
               {name2 && (
                 <div
                   style={{
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                     fontSize: 18,
                     fontWeight: 700,
                     color: "#280a0c",
@@ -540,7 +540,7 @@ export default function ProviderTile({
           >
             <div
               style={{
-                fontFamily: "Georgia, serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontSize: 13,
                 color: "#806b6d",
                 fontStyle: "italic",

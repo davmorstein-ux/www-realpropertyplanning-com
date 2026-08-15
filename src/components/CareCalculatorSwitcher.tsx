@@ -101,7 +101,7 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
           line-height: 1.25;
         }
         .rpp-calcswitch-price.rpp-calcswitch-price {
-          font-family: Georgia, serif;
+          font-family: 'DM Sans', system-ui, sans-serif;
           font-size: 22px !important;
           font-weight: 700;
           color: #272421 !important;

@@ -30,7 +30,7 @@ const FacilityRow = ({ facility }: { facility: AFHFacility }) => {
             to={`/afh-club/homes/${a.citySlug}/${facility.slug}`}
             className="underline underline-offset-4 hover:text-gold transition-colors"
             style={{
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontSize: "20px",
               fontWeight: 600,
               color: "#111827",

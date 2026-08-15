@@ -75,7 +75,7 @@ const CostOfCareRotator = ({ costs = DEFAULT_COSTS }: Props) => (
         line-height: 1.3;
       }
       .rpp-cost-amount {
-        font-family: Georgia, 'Times New Roman', serif;
+        font-family: 'DM Sans', system-ui, sans-serif;
         font-size: 30px;
         font-weight: 700;
         line-height: 1.15;

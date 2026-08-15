@@ -61,7 +61,7 @@ const AboutTheHub = () => {
         }
 
         .rpp-abouthub-lead.rpp-abouthub-lead {
-          font-family: Georgia, serif;
+          font-family: 'DM Sans', system-ui, sans-serif;
           font-size: clamp(19px, 1.5vw, 24px) !important;
           font-weight: 400;
           color: #272421;

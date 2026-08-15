@@ -57,7 +57,7 @@ const PAGE_CSS = `
     opacity: 1 !important;
   }
   .rpp-afh-marketplace h2.rpp-afh-marketplace-heading {
-    font-family: 'Cormorant Garamond', serif !important;
+    font-family: 'DM Sans', system-ui, sans-serif !important;
     font-size: clamp(28px, 4vw, 40px) !important;
     font-weight: 600 !important;
     letter-spacing: -0.01em !important;
@@ -162,7 +162,7 @@ const AFHClub = () => {
             <h1
               style={{
                 fontSize: "clamp(52px, 7vw, 72px)",
-                fontFamily: "Georgia, serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#292521",
                 lineHeight: 1.1,
@@ -175,7 +175,7 @@ const AFHClub = () => {
             <p
               style={{
                 fontSize: "clamp(22px, 3vw, 28px)",
-                fontFamily: "Georgia, serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontWeight: 400,
                 color: "#481216",
                 margin: "0 0 20px",
@@ -337,7 +337,7 @@ const AFHClub = () => {
           <h2
             style={{
               fontSize: "clamp(28px, 3vw, 38px)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               fontWeight: 700,
               color: "#280a0c",
               marginBottom: 48,
@@ -396,7 +396,7 @@ const AFHClub = () => {
                       color: "#280a0c",
                       margin: "0 0 8px",
                       lineHeight: 1.3,
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
                     }}
                   >
                     {cat.title}
@@ -446,7 +446,7 @@ const AFHClub = () => {
             <h2
               style={{
                 fontSize: "clamp(30px, 3.5vw, 42px)",
-                fontFamily: "Georgia, serif",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontWeight: 700,
                 color: "#280a0c",
                 lineHeight: 1.2,
