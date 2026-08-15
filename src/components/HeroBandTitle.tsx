@@ -79,23 +79,36 @@ const transformChildren = (children: ReactNode): ReactNode =>
    there would otherwise repaint this; change BOTH places or neither. */
 const bandTextStyle = (isH1: boolean, isCompactH1: boolean) => ({
   color: "#FFFFFF",
-  /* ONE FAMILY SITEWIDE. The h1 band used Source Serif 4 while the nav, body,
-     buttons and every section heading used DM Sans — two families doing the
-     same job at different moments. Bands are now DM Sans too, so the site runs
-     on a single face and separation comes from size and weight instead.
+  /* TWO LAYERS, ONE FACE EACH. The band is Source Serif 4 again.
 
-     Weight 700 rather than the serif's 600: DM Sans at 600 reads lighter than
-     Source Serif at 600, so the band needs the extra weight to hold the same
-     presence against a solid navy field. */
-  fontFamily: "'DM Sans', system-ui, sans-serif",
-  /* 500, matching the homepage tagline — one band weight across the site.
+     The single-family consolidation that moved this to DM Sans was aimed at a
+     real problem — three families loading, one used — but it left the site
+     worse, because `serif` in tailwind.config.ts still pointed at Source Serif
+     4 and 207 files still asked for `font-serif`. Dropping the font did not
+     move those headings to DM Sans; it dropped them to the Georgia fallback.
+     So the live result was a DM Sans band sitting directly on top of Georgia
+     section headings: two unrelated faces stacked on every page, neither one
+     chosen.
 
-     This was 600 when the bands were Source Serif 4. Switching to DM Sans I
-     raised it to 700 on the reasoning that DM Sans reads lighter at the same
-     number, and that overcorrected: 700 at 46px across a full-width navy field
-     is a lot of ink, and it read as heavy rather than authoritative. 500 keeps
-     the presence and loses the bulk. */
-  fontWeight: 500,
+     The split now runs along a line that means something. DM Sans is the
+     INTERFACE face: navigation, buttons, body copy, the small-caps eyebrow
+     bands below. Source Serif 4 is the EDITORIAL face: this h1 band and every
+     section heading under it. A reader can tell at a glance which layer they
+     are looking at, and the hub reads as published reference material rather
+     than a product page — which is the whole positioning.
+
+     Non-h1 compact bands stay DM Sans. That is the one place the typography
+     review permits capitals, and small-caps serif at 15px is a worse read. */
+  fontFamily: "'Source Serif 4', Georgia, serif",
+  /* 600, back to the weight this band carried the last time it was serif.
+
+     The 500 here was calibrated for DM Sans, and the history is worth keeping
+     so it is not re-litigated: serif 600 → DM Sans 700 (overcorrected, 700 at
+     46px across a full-width navy field read as heavy rather than
+     authoritative) → DM Sans 500. Now that the face is serif again, 500 is the
+     wrong end of that correction — Source Serif at 500 goes thin and loses the
+     field. 600 is the value that was right before, for the same reason. */
+  fontWeight: 600,
   fontSize: isCompactH1 ? "clamp(24px, 3vw, 28px)" : isH1 ? "clamp(32px, 4.5vw, 46px)" : "15px",
   letterSpacing: isH1 ? "0.01em" : "0.16em",
   lineHeight: isCompactH1 ? 1.1 : isH1 ? 1.12 : 1.2,
