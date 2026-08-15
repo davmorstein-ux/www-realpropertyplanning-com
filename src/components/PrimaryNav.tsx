@@ -208,6 +208,23 @@ const PrimaryNav = () => {
         }
         .rpp-pn-line { display: block; white-space: nowrap; }
 
+        /* Reserves two lines of height for EVERY label, whether it has one or
+           two. The trigger is a centred flex column, so a one-line entry used
+           to be a shorter stack and its caret rode up — "Articles & Guides"
+           and "About" sat visibly higher than their two-line neighbours.
+
+           2.4em is exactly two lines at this component's 13px / 1.2. Fixing
+           the height here rather than forcing "Articles &" / "Guides" onto two
+           lines keeps the labels reading naturally, and it holds for any label
+           added later regardless of how many lines it takes. */
+        .rpp-pn-lines {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          min-height: 2.4em;
+        }
+
         /* Caret rotates when open — the only motion here, and it conveys state
            rather than decorating. */
         .rpp-pn-caret {
@@ -302,11 +319,13 @@ const PrimaryNav = () => {
                 to={entry.href}
                 className={`rpp-pn-trigger rpp-pn-trigger bg-transparent${pathname === entry.href ? " is-active" : ""}`}
               >
-                {entry.lines.map((line) => (
-                  <span className="rpp-pn-line" key={line}>
-                    {line}
-                  </span>
-                ))}
+                <span className="rpp-pn-lines">
+                  {entry.lines.map((line) => (
+                    <span className="rpp-pn-line" key={line}>
+                      {line}
+                    </span>
+                  ))}
+                </span>
                 {/* Reserves the caret's height so a link without a menu sits on
                     the same baseline as the ones with menus. Without it the
                     caret-less entry floated lower than its neighbours. */}
@@ -341,11 +360,13 @@ const PrimaryNav = () => {
                 setOpenIndex(isOpen ? null : i);
               }}
             >
-              {entry.lines.map((line) => (
-                <span className="rpp-pn-line" key={line}>
-                  {line}
-                </span>
-              ))}
+              <span className="rpp-pn-lines">
+                {entry.lines.map((line) => (
+                  <span className="rpp-pn-line" key={line}>
+                    {line}
+                  </span>
+                ))}
+              </span>
               <span className="rpp-pn-caret" aria-hidden="true">
                 &#9660;
               </span>
