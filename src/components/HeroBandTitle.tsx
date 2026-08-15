@@ -79,8 +79,16 @@ const transformChildren = (children: ReactNode): ReactNode =>
    there would otherwise repaint this; change BOTH places or neither. */
 const bandTextStyle = (isH1: boolean, isCompactH1: boolean) => ({
   color: "#FFFFFF",
-  fontFamily: isH1 ? "'Source Serif 4', Georgia, serif" : "'DM Sans', system-ui, sans-serif",
-  fontWeight: isH1 ? 600 : 700,
+  /* ONE FAMILY SITEWIDE. The h1 band used Source Serif 4 while the nav, body,
+     buttons and every section heading used DM Sans — two families doing the
+     same job at different moments. Bands are now DM Sans too, so the site runs
+     on a single face and separation comes from size and weight instead.
+
+     Weight 700 rather than the serif's 600: DM Sans at 600 reads lighter than
+     Source Serif at 600, so the band needs the extra weight to hold the same
+     presence against a solid navy field. */
+  fontFamily: "'DM Sans', system-ui, sans-serif",
+  fontWeight: 700,
   fontSize: isCompactH1 ? "clamp(24px, 3vw, 28px)" : isH1 ? "clamp(32px, 4.5vw, 46px)" : "15px",
   letterSpacing: isH1 ? "0.01em" : "0.16em",
   lineHeight: isCompactH1 ? 1.1 : isH1 ? 1.12 : 1.2,
