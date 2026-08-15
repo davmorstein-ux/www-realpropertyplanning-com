@@ -25,22 +25,7 @@ const ROLE_VALUES = ["family-member", "elder-individual", "professional", "other
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAAD8Pv43WG0GFRJob";
 
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (
-        container: HTMLElement,
-        options: {
-          sitekey: string;
-          callback: (token: string) => void;
-          "expired-callback"?: () => void;
-          "error-callback"?: () => void;
-        },
-      ) => string;
-      reset: (widgetId?: string) => void;
-    };
-  }
-}
+// Window.turnstile is declared once in src/types/turnstile.d.ts.
 
 const Contact = () => {
   const { t } = useTranslation();

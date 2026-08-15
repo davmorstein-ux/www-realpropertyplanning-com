@@ -28,14 +28,7 @@ import { supabase } from "@/integrations/supabase/client";
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAAD8Pv43WG0GFRJob";
 
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (el: HTMLElement, opts: Record<string, unknown>) => string;
-      remove: (id: string) => void;
-    };
-  }
-}
+// Window.turnstile is declared once in src/types/turnstile.d.ts.
 
 /* ------------------------------------------------------------------ *
  * COPY — every variant lives here, not in the pages.
