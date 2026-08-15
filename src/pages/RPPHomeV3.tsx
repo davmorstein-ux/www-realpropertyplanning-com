@@ -134,15 +134,21 @@ const RPPHomeV3 = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              /* Tightened from clamp(24px, 3vw, 40px). Three separate spacings
-                 were stacking here — this padding, a marginTop on the first
-                 tagline line below, and the flex gap — adding roughly 130px
-                 of cream between the photograph and the funnel tiles for no
-                 purpose. The band still reads as its own zone; it just no
-                 longer pushes the tiles off the first screen. */
-              padding: "clamp(16px, 1.8vw, 24px) 8%",
+              /* NAVY BAND at HeroBandTitle's exact padding — the treatment
+                 every other page opens with. The homepage used to be the one
+                 exception: a cream band with navy text.
+
+                 It also does what cream could not. Cream-on-cream made it look
+                 like the photograph had simply stopped; a solid navy rule
+                 reads as a deliberate divide between the image and the funnel
+                 tiles below.
+
+                 This band carries TWO lines where every other carries one, so
+                 it cannot be exactly 77px tall. The type size in index.css is
+                 pulled down to close that gap — change the two together. */
+              padding: "12px 24px 14px",
               boxSizing: "border-box",
-              background: "hsl(var(--cream))",
+              background: "#1B3A6B",
               /* No gap: the h1 is the only child, so this only ever added
                  space that looked like padding. */
             }}
