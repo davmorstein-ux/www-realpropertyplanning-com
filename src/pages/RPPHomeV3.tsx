@@ -175,7 +175,7 @@ const RPPHomeV3 = () => {
                   /* Source Serif 4 600 per the typography review — the tagline
                      was the last Cormorant Garamond on the homepage, a third
                      family doing a job the display serif now owns. */
-                  fontFamily: "'Source Serif 4', Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "clamp(28px, 4.4vw, 62px)",
                   fontWeight: 600,
                   fontStyle: "normal",
@@ -201,7 +201,7 @@ const RPPHomeV3 = () => {
                   /* Source Serif 4 600 per the typography review — the tagline
                      was the last Cormorant Garamond on the homepage, a third
                      family doing a job the display serif now owns. */
-                  fontFamily: "'Source Serif 4', Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "clamp(28px, 4.4vw, 62px)",
                   fontWeight: 600,
                   fontStyle: "normal",
@@ -230,7 +230,7 @@ const RPPHomeV3 = () => {
               <h2
                 className="rpp-funnel-heading"
                 style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "2.25rem",
                   fontWeight: 500,
                   color: "#272421",
@@ -383,7 +383,7 @@ const RPPHomeV3 = () => {
                 margin-bottom: 2px;
               }
               .rpp-coc-range {
-                font-family: Georgia, serif;
+                font-family: 'DM Sans', system-ui, sans-serif;
                 font-size: 30px;
                 font-weight: 700;
                 color: #7f1d1d;
@@ -427,7 +427,7 @@ const RPPHomeV3 = () => {
                  read as one row. They were charcoal so the figures formed a
                  comparable column; matching them was the explicit choice. */
               .rpp-coc-opt-figure {
-                font-family: Georgia, serif;
+                font-family: 'DM Sans', system-ui, sans-serif;
                 font-size: 18px !important;
                 font-weight: 700;
                 color: var(--opt-color, #272421) !important;
@@ -558,7 +558,7 @@ const RPPHomeV3 = () => {
                     <h3
                       className="coc-heading"
                       style={{
-                        fontFamily: "Georgia, serif",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
                         margin: 0,
                         lineHeight: 1.1,
                       }}
