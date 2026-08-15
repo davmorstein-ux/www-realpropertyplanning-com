@@ -1,17 +1,4 @@
-# `src/index.css` — one block to replace
-
-The file is 5,006 lines, so this is a find-and-replace rather than a full-file
-paste. Open the file in the GitHub editor and search for:
-
-```
-h1.rpp-hero-band-text.rpp-hero-band-text
-```
-
-It appears once, at **line 4489**. Replace the whole rule.
-
----
-
-## FIND (delete this)/* Fonts loaded non-blocking from index.html (DM Sans + DM Sans) */
+/* Fonts loaded non-blocking from index.html (DM Sans + DM Sans) */
 .hero-text-white {
   color: #ffffff !important;
   opacity: 1 !important;
@@ -5016,64 +5003,3 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
     transform: none !important;
   }
 }
-
-
-```css
-h1.rpp-hero-band-text.rpp-hero-band-text {
-  font-family: "DM Sans", system-ui, sans-serif !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.005em !important;
-  font-size: clamp(32px, 4.5vw, 46px) !important;
-  line-height: 1.12 !important;
-  letter-spacing: 0.01em !important;
-  text-transform: none !important;
-}
-```
-
-## REPLACE WITH (paste this)
-
-```css
-h1.rpp-hero-band-text.rpp-hero-band-text {
-  font-family: "Source Serif 4", Georgia, serif !important;
-  font-weight: 600 !important;
-  font-size: clamp(32px, 4.5vw, 46px) !important;
-  line-height: 1.12 !important;
-  letter-spacing: 0.01em !important;
-  text-transform: none !important;
-}
-```
-
----
-
-## What changed, and why
-
-**`font-family` → Source Serif 4.** This block exists specifically to beat the
-earlier `.rpp-hero-band-text` rules around line 3280 with `!important`, so it,
-not the component, is what actually paints the band. `HeroBandTitle.tsx` and
-this block have to agree or they fight — the file's own comment above says so.
-Both are moving together.
-
-**`font-weight` 500 → 600.** 500 was calibrated for DM Sans. Source Serif at
-500 goes thin against a full-width navy field.
-
-**Dropped the duplicate `letter-spacing`.** The old rule declared it twice —
-`0.005em` and then `0.01em`. Same specificity, so the later one silently won and
-the first line has never done anything. Removed rather than carried forward.
-
-**The comment block above this rule needs no edit.** It already reads "H1 bands:
-Source Serif 4 semibold, Title Case" — it was describing the intended design and
-had drifted out of sync with the code beneath it. The code now matches it again.
-
-## Leave the block below it alone
-
-```css
-div.rpp-hero-band-text.rpp-hero-band-text,
-span.rpp-hero-band-text.rpp-hero-band-text {
-  font-family: "DM Sans", system-ui, sans-serif !important;
-  ...
-}
-```
-
-That's the compact non-h1 eyebrow band, and DM Sans is correct there. It's
-small-caps at 15px with wide tracking, which is the one place the typography
-review permits capitals — and small-caps serif at that size is a worse read.
