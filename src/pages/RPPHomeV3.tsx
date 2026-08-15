@@ -158,9 +158,25 @@ const RPPHomeV3 = () => {
                  tall. This brings the band to roughly 80px against the 77px of
                  the single-line bands — near enough to read as the same
                  component. */
-              padding: "6px 24px 8px",
+              /* 4px top, 5px bottom. Descenders in "guidance" and
+                 "transitions" need a little clearance or the type looks like
+                 it is resting on the edge, but nothing more — the line-height
+                 already carries space below the last baseline. */
+              padding: "4px 24px 5px",
               boxSizing: "border-box",
               background: "#1B3A6B",
+              /* A 1px rule along the top edge, to give the photograph a clean
+                 stop rather than letting it bleed straight into the navy.
+
+                 Not pure black — #14161A, a very dark neutral. Against a navy
+                 this deep, true black reads as a hole rather than an edge, and
+                 the eye catches it as a separate colour. This sits close
+                 enough to the navy to read as a crisp boundary and no more.
+
+                 borderTop rather than a pseudo-element or a wrapper: it is
+                 part of the band's own box, so it can never drift out of
+                 alignment with it. */
+              borderTop: "1px solid #14161A",
               /* No gap: the h1 is the only child, so this only ever added
                  space that looked like padding. */
             }}
@@ -213,7 +229,10 @@ const RPPHomeV3 = () => {
                      it. White letters on the navy band need no lift, and a
                      white shadow behind white type only blurs its own edges —
                      which is what made the tagline look soft and embossed. */
-                  marginTop: "0.2em",
+                  /* Was 0.2em — about 6px at 31px — added on top of the
+                     1.12 line-height, so the two lines sat further apart than
+                     the leading intended and pushed the band taller. */
+                  marginTop: 0,
                 }}
               >
                 {" "}
