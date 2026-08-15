@@ -9,40 +9,38 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 
 import { articleSchema } from "@/lib/schema";
 import GuidanceGrid from "@/components/GuidanceGrid";
+import { estateProbateTopics } from "@/lib/estateProbateTopics";
 
-const tiles = [
-  {
-    title: "First Steps After a Death",
-    description: "Calm, practical actions to take in the early days — before any major decisions need to be made.",
-    href: "/estate-probate-inherited-property/first-steps",
-  },
-  {
-    title: "Understanding Probate & Legal Authority",
-    description: "Who has the authority to make decisions — and what probate actually means for your family.",
-    href: "/estate-probate-inherited-property/probate-and-legal-authority",
-  },
-  {
-    title: "Understanding the Property's Value",
-    description:
-      "Estate valuation has unique requirements. Here's what a date-of-death appraisal is and why it matters.",
-    href: "/estate-probate-inherited-property/property-value",
-  },
-  {
-    title: "Deciding What to Do With the Property",
-    description: "Sell, keep, rent, or transfer — how to think through the options carefully.",
-    href: "/estate-probate-inherited-property/what-to-do-with-the-property",
-  },
-  {
-    title: "Preparing the Property",
-    description: "From cleanout to repairs — what to handle before the home goes to market.",
-    href: "/estate-probate-inherited-property/preparing-the-property",
-  },
-  {
-    title: "Building Your Professional Team",
-    description: "Who you need, when to engage them, and how a coordinated team protects everyone.",
-    href: "/estate-probate-inherited-property/professional-team",
-  },
-];
+/* Descriptions live here, not in the shared topic list, on purpose.
+   RoadmapDropdown's "list" mode switches its grid from two columns to one
+   as soon as ANY topic carries a description. The six sub-pages render the
+   same list as a compact two-column rail and should stay that way, so the
+   descriptions belong to the hub alone.
+
+   Titles and hrefs, though, are now derived from estateProbateTopics rather
+   than retyped. Those two lists were maintained separately and were one
+   careless edit away from the hub and its own sub-pages disagreeing about
+   what the six topics are called. Keyed by href so a reordering in the lib
+   cannot silently pair the wrong blurb with the wrong topic. */
+const DESCRIPTIONS: Record<string, string> = {
+  "/estate-probate-inherited-property/first-steps":
+    "Calm, practical actions to take in the early days — before any major decisions need to be made.",
+  "/estate-probate-inherited-property/probate-and-legal-authority":
+    "Who has the authority to make decisions — and what probate actually means for your family.",
+  "/estate-probate-inherited-property/property-value":
+    "Estate valuation has unique requirements. Here's what a date-of-death appraisal is and why it matters.",
+  "/estate-probate-inherited-property/what-to-do-with-the-property":
+    "Sell, keep, rent, or transfer — how to think through the options carefully.",
+  "/estate-probate-inherited-property/preparing-the-property":
+    "From cleanout to repairs — what to handle before the home goes to market.",
+  "/estate-probate-inherited-property/professional-team":
+    "Who you need, when to engage them, and how a coordinated team protects everyone.",
+};
+
+const tiles = estateProbateTopics.map((topic) => ({
+  ...topic,
+  description: DESCRIPTIONS[topic.href],
+}));
 
 const faqs = [
   {
@@ -132,7 +130,13 @@ const EstateProbateInheritedProperty = () => {
                 asking for contact at the moment of highest vulnerability. The
                 footer and /contact remain available to anyone who wants them. */}
 
-            <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" currentPath={tiles[0].href} />
+            {/* No currentPath. This previously passed tiles[0].href, which told
+                RoadmapDropdown the reader was standing on "First Steps" — so
+                that one entry rendered in active blue (#1f6fb2) on a page the
+                reader was not on, while the other five stayed burgundy. On a
+                hub, nothing in the list is current; the prop is optional and
+                omitting it leaves every topic in its resting state. */}
+            <RoadmapDropdown topics={tiles} accentColor="#721d24" mode="list" />
           </div>
         </section>
 
@@ -142,14 +146,22 @@ const EstateProbateInheritedProperty = () => {
           eyebrow="Frequently Asked Questions"
           id="estate-probate-inherited-property"
         />
-      </main>
-      {/* Guidance relocated here from /selling-an-inherited-home, which had
+
+        {/* Guidance relocated here from /selling-an-inherited-home, which had
             grown into a single page answering what its six sub-pages exist to
             answer. Items live in src/lib/inheritedPropertyGuidance.ts and are
-            filtered by this slug — do not paste them inline. */}
+            filtered by this slug — do not paste them inline.
+
+            Both this and the disclaimer below previously sat AFTER </main>,
+            outside the main landmark, which put real page content somewhere
+            assistive technology does not reach via the skip link and screen
+            readers do not include when navigating by landmark. The
+            professional disclosure in particular is content that needs to
+            travel with the page, not sit adrift beside it. */}
         <GuidanceGrid page="estate-probate-inherited-property" />
 
         <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );
