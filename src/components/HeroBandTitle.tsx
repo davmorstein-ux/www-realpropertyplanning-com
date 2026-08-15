@@ -160,7 +160,7 @@ const HeroBandTitle = ({
              so the height is now pinned rather than inherited. Change it in
              BOTH places or the enforcement fights this inline value. */
           background: "#1B3A6B",
-          padding: isCompactH1 ? "6px 24px 8px" : isH1 ? "12px 24px 14px" : "6px 24px",
+          padding: isCompactH1 ? "6px 24px 8px" : isH1 ? "8px 24px 10px" : "6px 24px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
