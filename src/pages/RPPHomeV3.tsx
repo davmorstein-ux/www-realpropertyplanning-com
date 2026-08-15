@@ -60,7 +60,6 @@ const RPPHomeV3 = () => {
         <div
           className="rpp-hero-figure"
           style={{
-            position: "relative",
             width: "100%",
             overflow: "hidden",
           }}
@@ -82,9 +81,24 @@ const RPPHomeV3 = () => {
             srcSet={`${heroMobile} 900w, ${heroDesktop} 1920w`}
             sizes="100vw"
             width={1920}
-            height={602}
+            height={604}
             alt={t("hero.imageAlt")}
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
+               photograph at any width — it stacks beneath it.
+
+               This was the source of every hero problem so far. Overlaid text
+               needs a wash to stay legible, the wash has to be tuned to the
+               crop, and object-fit: cover crops differently at every viewport
+               width, so a wash tuned for desktop lands over the wrong part of
+               the picture on a phone. Any change to the artwork restarts that
+               work.
+
+               Stacking removes the whole class of problem: the image is shown
+               whole and undimmed at every width, and navy on cream is 10:1 and
+               cannot drift. The cost is vertical space — roughly 450px of
+               image at a 1440px window — which is why the crop is a 3.18:1
+               band rather than the original 2.37:1. */
+            className="block w-full h-auto"
             loading="eager"
             /* WAS fetchPriority — React does not recognise the camelCase form
                on a DOM element and drops it with a console warning, so the
@@ -105,18 +119,18 @@ const RPPHomeV3 = () => {
               a fraction of its desktop height, so the second line of the
               tagline lands near the bottom of this gradient where it is almost
               fully transparent, over the brightest part of the photograph. */}
+          {/* Tagline band. Cream, in flow, directly beneath the image — no
+              scrim, no overlay, no gradient to maintain. */}
           <div
             className="rpp-hero-scrim"
             style={{
-              position: "relative",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
               padding: "clamp(24px, 3vw, 40px) 8%",
               boxSizing: "border-box",
-              background:
-                "linear-gradient(to bottom, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.55) 55%, rgba(255,255,255,0) 100%)",
+              background: "hsl(var(--cream))",
               gap: "clamp(6px, 1vw, 12px)",
             }}
           >
