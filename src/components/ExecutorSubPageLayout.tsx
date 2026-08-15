@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -49,7 +48,14 @@ const ExecutorSubPageLayout = ({
             loading="eager" sizes="100vw" decoding="async" width={1806} height={820} />
         </section>
 
-        <HeroBandTitle>{bandTitle}</HeroBandTitle>
+        {/* `as="h1"` is load-bearing twice over. Without it HeroBandTitle
+            defaults to `as="div"`, so all six pages using this layout shipped
+            with NO h1 at all — a WCAG 1.3.1 / 2.4.6 failure and a real
+            problem for an audience that navigates by screen reader and by
+            heading structure. It also drives typography: HeroBandTitle keys
+            `textTransform` off `isH1`, so a non-h1 band renders ALL CAPS.
+            One attribute fixes both. */}
+        <HeroBandTitle as="h1">{bandTitle}</HeroBandTitle>
 
         <section className="py-14 md:py-20 bg-cream">
           <div className="container px-5 md:px-8">
@@ -62,39 +68,24 @@ const ExecutorSubPageLayout = ({
           </div>
         </section>
 
-        <section className="py-14 md:py-20 bg-secondary">
-          <div className="container px-5 md:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-[28px] md:text-[36px] font-semibold text-navy leading-tight mb-6">
-                Have Questions? We're Here to Help.
-              </h2>
-              <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-8">
-                <strong>Call:</strong>{" "}
-                <a href="tel:+12069003015" className="text-navy underline hover:no-underline">
-                  (206) 900-3015
-                </a>
-                <span className="mx-3 text-muted-foreground">·</span>
-                <strong>Email:</strong>{" "}
-                <a
-                  href="mailto:info@realpropertyplanning.com"
-                  className="text-navy underline hover:no-underline break-words"
-                >
-                  info@realpropertyplanning.com
-                </a>
-              </p>
-              <Link
-                to="/contact"
-                className="gold-cta inline-flex items-center"
-                style={{ fontSize: "15px" }}
-              >
-                Get in Touch
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* Removed: a "Have Questions? We're Here to Help." band carrying the
+            office phone, the info@ address and a "Get in Touch" button.
+
+            Same block and same reasoning as the CTA deleted from the
+            /estate-probate-inherited-property hub. "We're here to help"
+            attributes help to Real Property Planning, which is a neutral
+            educational hub that provides no services. And it was an unbounded
+            promise of individual guidance on pages read by people who have
+            just been handed fiduciary responsibility for a dead relative's
+            estate — often at 2am, often before they have any authority to act.
+
+            Deliberately not replaced with a softer version. The footer and
+            /contact remain available to anyone who wants them.
+
+            If a property-specific CTA is ever wanted on an individual page,
+            use <MidPageCTA /> in the page body rather than reinstating a
+            blanket band here — its copy is already scoped to the real estate
+            side and attributed to David Stein personally. */}
 
         <section className="py-8 bg-cream">
           <div className="container px-5 md:px-8">
