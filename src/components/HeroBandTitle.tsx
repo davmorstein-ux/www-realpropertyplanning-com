@@ -88,7 +88,14 @@ const bandTextStyle = (isH1: boolean, isCompactH1: boolean) => ({
      Source Serif at 600, so the band needs the extra weight to hold the same
      presence against a solid navy field. */
   fontFamily: "'DM Sans', system-ui, sans-serif",
-  fontWeight: 700,
+  /* 500, matching the homepage tagline — one band weight across the site.
+
+     This was 600 when the bands were Source Serif 4. Switching to DM Sans I
+     raised it to 700 on the reasoning that DM Sans reads lighter at the same
+     number, and that overcorrected: 700 at 46px across a full-width navy field
+     is a lot of ink, and it read as heavy rather than authoritative. 500 keeps
+     the presence and loses the bulk. */
+  fontWeight: 500,
   fontSize: isCompactH1 ? "clamp(24px, 3vw, 28px)" : isH1 ? "clamp(32px, 4.5vw, 46px)" : "15px",
   letterSpacing: isH1 ? "0.01em" : "0.16em",
   lineHeight: isCompactH1 ? 1.1 : isH1 ? 1.12 : 1.2,
