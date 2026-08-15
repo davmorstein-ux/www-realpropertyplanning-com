@@ -40,7 +40,13 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
        load preloaded 243 KB of an image the homepage no longer displays —
        while the one it does display got no preload at all, which is the
        opposite of the intent. */
-    heroImage: "/rpp-hero-2026.webp",
+    /* Preload disabled. This injects a literal <link rel="preload" href="...">
+       into index.html at build time, so it can only point at a fixed path in
+       public/. The hero is now a Vite module import with a content-hashed
+       filename, which this cannot know — leaving it set would preload a URL
+       that 404s, which is what the retired /hero-v2.webp value was already
+       doing. The <img> carries fetchPriority="high" regardless. */
+    // heroImage: "/rpp-hero-2026.webp",
     intro:
       "Guiding seniors, families, and professionals through real estate and housing transitions across Washington State — downsizing, relocation, probate, inherited property, and senior living decisions — with calm guidance, practical coordination, and clear next steps.",
     sections: [],
