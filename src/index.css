@@ -3565,7 +3565,7 @@ main #rpp-orientation div {
    body copy. */
 main #rpp-tagline .rpp-tagline-line-v2 {
   font-size: clamp(22px, 2.7vw, 36px) !important;
-  line-height: 1.08 !important;
+  line-height: 1.05 !important;
   color: #ffffff !important;
   font-family: "Source Serif 4", Georgia, serif !important;
   font-style: normal !important;
@@ -3663,7 +3663,7 @@ main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-la
   font-family: Georgia, serif !important;
   font-size: 32px !important;
   font-weight: 900 !important;
-  line-height: 1.08 !important;
+  line-height: 1.05 !important;
   margin-bottom: 8px !important;
 }
 
