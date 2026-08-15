@@ -19,10 +19,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
-    <!-- DM Sans only. Cormorant Garamond and Source Serif 4 were dropped once
-         the site consolidated to a single family — every page was downloading
-         three families and using one. -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap" />
+    <!-- TWO families, both used. Cormorant Garamond stays dropped.
+
+         Source Serif 4 is back because removing it did not consolidate
+         anything — it broke the site. `serif` in tailwind.config.ts points at
+         Source Serif 4, and 207 files use `font-serif` for their headings, so
+         dropping the font here did not move those headings to DM Sans. It
+         moved them to Georgia, the fallback. Every editorial heading on the
+         site has been rendering in a font nobody chose.
+
+         The waste this was meant to fix was real but different: the old link
+         loaded THREE families and used one. Loading two families that are
+         both genuinely used is not that problem. DM Sans carries navigation,
+         buttons, body copy and the small-caps eyebrow bands; Source Serif 4
+         carries the h1 hero bands and every section heading. One face for the
+         interface, one for the editorial layer.
+
+         Weights are deliberately narrow: 500/600/700 upright plus italic 500,
+         which is what the headings and bands actually call for. Do not widen
+         the range without a reason — this is a two-family site now, and the
+         download budget is the price of that. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&family=Source+Serif+4:ital,opsz,wght@0,8..60,500..700;1,8..60,500&display=swap" />
 
     <script type="application/ld+json">
       {
