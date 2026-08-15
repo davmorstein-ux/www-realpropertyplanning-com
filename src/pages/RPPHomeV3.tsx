@@ -81,7 +81,13 @@ const RPPHomeV3 = () => {
             srcSet={`${heroMobile} 900w, ${heroDesktop} 1920w`}
             sizes="100vw"
             width={1920}
-            height={604}
+            /* Must match the file. The intrinsic ratio is what reserves
+               space before the image loads; a stale value here causes the
+               page to jump as it arrives. Band re-cropped to 4.08:1 — 471px
+               tall at a 1920px window instead of 604px — because the stacked
+               layout shows the whole frame, so image height is now decided
+               entirely by the crop. */
+            height={471}
             alt={t("hero.imageAlt")}
             /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
                photograph at any width — it stacks beneath it.
