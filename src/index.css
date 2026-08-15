@@ -9,8 +9,12 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 600;
+  /* Global heading face. This one rule set every h1-h4 on the site in
+     Cormorant Garamond — the single biggest reason pages looked
+     typographically inconsistent, since components that set their own
+     fontFamily escaped it and everything else did not. */
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-weight: 700;
   line-height: 1.2 !important;
   margin-bottom: 0.4rem !important;
 }
@@ -4873,8 +4877,8 @@ main section:has(> h1.rpp-hero-band-text) {
 }
 
 h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
-  font-family: "Source Serif 4", Georgia, serif !important;
-  font-weight: 600 !important;
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-weight: 700 !important;
   font-size: clamp(24px, 3vw, 28px) !important;
   line-height: 1.1 !important;
   letter-spacing: 0.01em !important;
