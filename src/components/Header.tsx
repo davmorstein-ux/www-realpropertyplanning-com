@@ -204,7 +204,21 @@ const Header = () => {
           backgroundColor: "rgba(245, 240, 232, 0.96)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
-          borderBottom: "1px solid rgba(39,36,33,0.14)",
+          /* Strengthened from 14% to 30% opacity. Not a new dark rule: the
+             header is cream and the hero photograph sits directly beneath it,
+             so the tonal contrast already marks that boundary — a hard dark
+             line there would be answering a question the colours have already
+             answered, and it would box the hero in.
+
+             What was wrong was the asymmetry. The navy band below the image
+             now has a crisp 1px edge, so a barely-visible 14% line above it
+             read as vague by comparison. 30% is enough to look deliberate and
+             still light enough to stay a hairline rather than a border.
+
+             Charcoal at low opacity rather than a fixed colour, so it holds up
+             over the photograph on the homepage and over cream on interior
+             pages without needing a second rule. */
+          borderBottom: "1px solid rgba(39,36,33,0.30)",
           ...NAV_FONT,
           color: "#272421",
         }}
