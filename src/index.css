@@ -3561,6 +3561,37 @@ main #rpp-tagline .rpp-tagline-line-v2 {
   font-weight: 600 !important;
 }
 
+/* HERO HEIGHT IS CAPPED, NOT LEFT TO THE WINDOW.
+
+   Full-bleed means height is a function of viewport WIDTH: the same 4.08:1
+   band renders 471px tall at 1920px and keeps growing on wider monitors. The
+   image plus the tagline band was taking roughly 70% of the first screen, so
+   the funnel tiles — the page's actual navigation — started below the fold.
+
+   The height is now clamped and the image covers that box. Cropping is safe
+   here in a way it never was before: nothing is written over the picture any
+   more, so trimming it costs no legibility. Because the cap is always WIDER
+   than 4.08:1, cover trims top and bottom only — the couple on the left and
+   the sold sign on the right are never cut.
+
+   object-position sits slightly above centre to favour the truck and the
+   house over the empty foreground road.
+
+   Below 640px the cap is removed and the whole frame shows: at phone width a
+   fixed height would have to crop the sides, which is exactly the mistake the
+   stacked layout was built to avoid. */
+.rpp-hero-img {
+  height: clamp(200px, 24vw, 340px);
+  object-fit: cover;
+  object-position: center 42%;
+}
+@media (max-width: 639px) {
+  .rpp-hero-img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
 /* The homepage hero stacks at EVERY width now — image, then tagline on cream
    beneath it — so the mobile-only overlay overrides that used to live here are
    gone. See RPPHomeV3.tsx: the layout is plain flow, no absolute positioning,
