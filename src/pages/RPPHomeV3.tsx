@@ -134,10 +134,17 @@ const RPPHomeV3 = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              padding: "clamp(24px, 3vw, 40px) 8%",
+              /* Tightened from clamp(24px, 3vw, 40px). Three separate spacings
+                 were stacking here — this padding, a marginTop on the first
+                 tagline line below, and the flex gap — adding roughly 130px
+                 of cream between the photograph and the funnel tiles for no
+                 purpose. The band still reads as its own zone; it just no
+                 longer pushes the tiles off the first screen. */
+              padding: "clamp(16px, 1.8vw, 24px) 8%",
               boxSizing: "border-box",
               background: "hsl(var(--cream))",
-              gap: "clamp(6px, 1vw, 12px)",
+              /* No gap: the h1 is the only child, so this only ever added
+                 space that looked like padding. */
             }}
           >
             {/* Tagline in #1B3A6B — the same navy used by the homepage
@@ -158,7 +165,9 @@ const RPPHomeV3 = () => {
                   lineHeight: 1,
                   letterSpacing: "0.01em",
                   textShadow: "0 1px 3px rgba(255,255,255,0.85)",
-                  marginTop: "clamp(8px, 1.5vw, 20px)",
+                  /* Was clamp(8px, 1.5vw, 20px), which sat on top of the
+                     band padding above and read as one oversized gap. */
+                  marginTop: 0,
                 }}
               >
                 {t("hero.taglineLine1")}
