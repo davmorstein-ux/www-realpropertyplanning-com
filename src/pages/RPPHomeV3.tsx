@@ -146,7 +146,13 @@ const RPPHomeV3 = () => {
                  This band carries TWO lines where every other carries one, so
                  it cannot be exactly 77px tall. The type size in index.css is
                  pulled down to close that gap — change the two together. */
-              padding: "12px 24px 14px",
+              /* Tighter than HeroBandTitle's 12/24/14. That padding is
+                 balanced for ONE line of type; with two lines the same values
+                 read as too much air above and below, because the block in the
+                 middle is twice as tall. Trimming to 8/10 brings the band to
+                 roughly 94px — close to the 77px of the single-line bands
+                 without cramping the descenders. */
+              padding: "8px 24px 10px",
               boxSizing: "border-box",
               background: "#1B3A6B",
               /* No gap: the h1 is the only child, so this only ever added
@@ -170,7 +176,11 @@ const RPPHomeV3 = () => {
                   color: "#1B3A6B",
                   lineHeight: 1,
                   letterSpacing: "0.01em",
-                  textShadow: "0 1px 3px rgba(255,255,255,0.85)",
+                  /* No text shadow. This white glow existed to lift NAVY text
+                     off the photograph, back when the tagline was overlaid on
+                     it. White letters on the navy band need no lift, and a
+                     white shadow behind white type only blurs its own edges —
+                     which is what made the tagline look soft and embossed. */
                   /* Was clamp(8px, 1.5vw, 20px), which sat on top of the
                      band padding above and read as one oversized gap. */
                   marginTop: 0,
@@ -192,7 +202,11 @@ const RPPHomeV3 = () => {
                   color: "#1B3A6B",
                   lineHeight: 1,
                   letterSpacing: "0.01em",
-                  textShadow: "0 1px 3px rgba(255,255,255,0.85)",
+                  /* No text shadow. This white glow existed to lift NAVY text
+                     off the photograph, back when the tagline was overlaid on
+                     it. White letters on the navy band need no lift, and a
+                     white shadow behind white type only blurs its own edges —
+                     which is what made the tagline look soft and embossed. */
                   marginTop: "0.2em",
                 }}
               >
