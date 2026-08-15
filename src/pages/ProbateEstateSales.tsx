@@ -168,7 +168,15 @@ const ProbateEstateSales = () => {
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4 text-center font-sans">
                 {t("probateEstateSales.whatMakesDifferent.heading")}
               </h2>
-              <p className="text-muted-foreground text-[17px] leading-[1.85] mb-10">
+              {/* text-center and a narrower column, to match the h2 above.
+                  The heading centred inside the max-w-4xl wrapper while this
+                  paragraph left-aligned inside the same wrapper — and since
+                  the sentence is narrower than the column, it read as adrift
+                  to the left of a centred heading rather than as its intro.
+                  max-w-2xl keeps the line length readable now that it is
+                  centred; centred text much wider than this gets hard to
+                  track back to the start of the next line. */}
+              <p className="text-muted-foreground text-[17px] leading-[1.85] mb-10 text-center max-w-2xl mx-auto">
                 {t("probateEstateSales.whatMakesDifferent.intro")}
               </p>
               {/* Was repeat(3, auto) of 380px tiles — 1156px minimum, over three times
