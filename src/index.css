@@ -1367,7 +1367,7 @@ a:hover .gold-cta::after,
   margin-top: 0.18rem !important;
 }
 .premium-tile .tile-label-tight[data-tile-id="lending"] {
-  line-height: 1.05 !important;
+  line-height: 1.12 !important;
 }
 
 .service-nav-tile-link {
@@ -3564,12 +3564,12 @@ main #rpp-orientation div {
    which reads as the same band. Smaller starts making the headline look like
    body copy. */
 main #rpp-tagline .rpp-tagline-line-v2 {
-  font-size: clamp(22px, 2.7vw, 36px) !important;
-  line-height: 1.05 !important;
+  font-size: clamp(20px, 2.4vw, 31px) !important;
+  line-height: 1.12 !important;
   color: #ffffff !important;
-  font-family: "Source Serif 4", Georgia, serif !important;
+  font-family: "DM Sans", system-ui, sans-serif !important;
   font-style: normal !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
 /* HERO HEIGHT IS CAPPED, NOT LEFT TO THE WINDOW.
@@ -3618,7 +3618,7 @@ main #rpp-tagline .rpp-tagline-line-v2 {
 }
 a[href="/afh-club"] h3.afh-club-heading {
   font-size: 90px !important;
-  line-height: 1.05 !important;
+  line-height: 1.12 !important;
 }
 
 @media (max-width: 640px) {
@@ -3663,7 +3663,7 @@ main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-la
   font-family: Georgia, serif !important;
   font-size: 32px !important;
   font-weight: 900 !important;
-  line-height: 1.05 !important;
+  line-height: 1.12 !important;
   margin-bottom: 8px !important;
 }
 
@@ -4462,8 +4462,8 @@ section[aria-label="Notifications"] {
    review permits caps.
    ============================================================ */
 h1.rpp-hero-band-text.rpp-hero-band-text {
-  font-family: "Source Serif 4", Georgia, serif !important;
-  font-weight: 600 !important;
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-weight: 700 !important;
   font-size: clamp(32px, 4.5vw, 46px) !important;
   line-height: 1.12 !important;
   letter-spacing: 0.01em !important;
