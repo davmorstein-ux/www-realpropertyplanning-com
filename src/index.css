@@ -3567,8 +3567,21 @@ main #rpp-orientation div {
    different component. At 36px with 1.08 leading it comes to about 104px,
    which reads as the same band. Smaller starts making the headline look like
    body copy. */
+/* The global h1-h4 rule carries margin-bottom: 0.4rem !important — about
+   6.4px — and !important beats the inline margin: 0 on the element. Inside the
+   navy band that lands as unexplained space under the last line, which no
+   amount of trimming the band's own padding could remove. Zeroed here.
+
+   Size restored to the site standard, clamp(32px, 4.5vw, 46px). It had been
+   shrunk to 31px in an attempt to keep the two-line band as short as the
+   single-line bands elsewhere — which made the homepage type visibly smaller
+   than every other page. The band is simply taller instead; two lines need
+   the room. */
+main #rpp-tagline {
+  margin-bottom: 0 !important;
+}
 main #rpp-tagline .rpp-tagline-line-v2 {
-  font-size: clamp(20px, 2.4vw, 31px) !important;
+  font-size: clamp(32px, 4.5vw, 46px) !important;
   line-height: 1.12 !important;
   color: #ffffff !important;
   font-family: "DM Sans", system-ui, sans-serif !important;
