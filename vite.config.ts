@@ -35,7 +35,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "Calm, experienced guidance for probate, inherited property, and senior housing transitions across Washington State. Call (206) 900-3015.",
     h1: "Probate, Estate & Senior Transition Real Estate in Washington State",
-    heroImage: "/hero-v2.webp",
+    /* Must match the image RPPHomeV3 actually renders. This still pointed at
+       the retired /hero-v2.webp after the 2026 artwork swap, so every page
+       load preloaded 243 KB of an image the homepage no longer displays —
+       while the one it does display got no preload at all, which is the
+       opposite of the intent. */
+    heroImage: "/rpp-hero-2026.webp",
     intro:
       "Guiding seniors, families, and professionals through real estate and housing transitions across Washington State — downsizing, relocation, probate, inherited property, and senior living decisions — with calm guidance, practical coordination, and clear next steps.",
     sections: [],
