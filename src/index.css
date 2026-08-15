@@ -3561,55 +3561,15 @@ main #rpp-tagline .rpp-tagline-line-v2 {
   font-weight: 600 !important;
 }
 
-/* MOBILE LEGIBILITY. The hero scrim is a white gradient fading to fully
-   transparent at the bottom. On a wide screen the tagline sits high in it,
-   where it is 82% opaque and the navy reads cleanly. On a phone the hero band
-   is a fraction of that height, so the second line lands near the bottom of
-   the gradient — over the brightest part of the photograph, at close to zero
-   scrim. Navy on a sunlit house is not a contrast ratio worth defending.
+/* The homepage hero stacks at EVERY width now — image, then tagline on cream
+   beneath it — so the mobile-only overlay overrides that used to live here are
+   gone. See RPPHomeV3.tsx: the layout is plain flow, no absolute positioning,
+   no scrim, nothing left to override.
 
-   Below 640px the gradient is replaced with a flatter, more opaque wash. The
-   photo still reads as a photo; the words stop competing with it. */
-/* MOBILE: STOP OVERLAYING, START STACKING.
-
-   On a wide screen the tagline sits over the photograph and that works — the
-   image is 1920px of context and the words sit in a wash near the top of it.
-
-   On a phone it cannot work, and no amount of scrim fixes it. object-fit:
-   cover crops a 3.19:1 panorama to the centre, so the phone sees the side of
-   a truck and nothing else — not the couple, not the sold sign, not the water.
-   Any wash tuned for the desktop crop lands over a different part of the
-   picture entirely. That mismatch is what made the tagline hard to read, not
-   the opacity.
-
-   So below 640px the photo is shown WHOLE, uncropped and unwashed, and the
-   tagline moves to a cream band beneath it. Navy on cream is 10:1 and cannot
-   drift, because it no longer depends on what happens to be behind it. The
-   image is finally seen rather than sliced. */
-@media (max-width: 639px) {
-  .rpp-hero-figure {
-    position: static !important;
-    height: auto !important;
-    aspect-ratio: auto !important;
-  }
-  /* The whole frame, not a centre crop. */
-  .rpp-hero-figure img {
-    position: static !important;
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-  /* Out of the overlay, into the flow, on cream. */
-  .rpp-hero-scrim {
-    position: static !important;
-    background: hsl(var(--cream)) !important;
-    padding: 20px 24px 24px !important;
-  }
-  #rpp-tagline {
-    position: relative;
-    z-index: 1;
-  }
-}
+   Worth knowing before anyone reintroduces an overlay: text on the photograph
+   needs a wash, the wash has to match the crop, and object-fit: cover crops
+   differently at every viewport width. Every hero legibility bug on this site
+   came from that combination. */
 
 .rpp-funnel-heading {
   color: #272421 !important;
