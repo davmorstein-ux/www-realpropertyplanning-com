@@ -162,7 +162,13 @@ const RPPHomeV3 = () => {
                  "transitions" need a little clearance or the type looks like
                  it is resting on the edge, but nothing more — the line-height
                  already carries space below the last baseline. */
-              padding: "4px 24px 5px",
+              /* Top matches HeroBandTitle's 12px. Bottom is 6px rather than
+                 14px because this band holds two lines: the standard's bottom
+                 padding is balanced against a single line, and with a taller
+                 type block the same value reads as a gap. The real culprit for
+                 the space under the text was the global h1 margin-bottom,
+                 zeroed in index.css. */
+              padding: "12px 24px 6px",
               boxSizing: "border-box",
               background: "#1B3A6B",
               /* A 1px rule along the top edge, to give the photograph a clean
