@@ -194,14 +194,13 @@ const RPPHomeV3 = () => {
                 className="rpp-tagline-line-v2"
                 style={{
                   display: "block",
-                  /* Source Serif 4 600 per the typography review — the tagline
-                     was the last Cormorant Garamond on the homepage, a third
-                     family doing a job the display serif now owns.
+                  /* DM Sans, matching the rest of the site. This tagline was
+                     the last Cormorant Garamond on the homepage.
 
-                     The comment above said this for months while the value
-                     below said DM Sans. The declared intent and the shipped
-                     code had drifted apart, which is why the homepage tagline
-                     stayed sans while every other band went serif. Fixed.
+                     This exact comment previously claimed Source Serif 4 while
+                     the value beneath it said DM Sans, and it stayed wrong
+                     long enough to send a debugging session down the wrong
+                     path. If you change the value, change these words too.
 
                      NOTE: index.css carries `main #rpp-tagline
                      .rpp-tagline-line-v2` with !important, which BEATS this
@@ -230,14 +229,13 @@ const RPPHomeV3 = () => {
                 className="rpp-tagline-line-v2"
                 style={{
                   display: "block",
-                  /* Source Serif 4 600 per the typography review — the tagline
-                     was the last Cormorant Garamond on the homepage, a third
-                     family doing a job the display serif now owns.
+                  /* DM Sans, matching the rest of the site. This tagline was
+                     the last Cormorant Garamond on the homepage.
 
-                     The comment above said this for months while the value
-                     below said DM Sans. The declared intent and the shipped
-                     code had drifted apart, which is why the homepage tagline
-                     stayed sans while every other band went serif. Fixed.
+                     This exact comment previously claimed Source Serif 4 while
+                     the value beneath it said DM Sans, and it stayed wrong
+                     long enough to send a debugging session down the wrong
+                     path. If you change the value, change these words too.
 
                      NOTE: index.css carries `main #rpp-tagline
                      .rpp-tagline-line-v2` with !important, which BEATS this
