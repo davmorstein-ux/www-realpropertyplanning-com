@@ -124,7 +124,7 @@ const ShareYourExperience = () => {
       role: "testimonial",
       message,
       source_page: "/share-your-experience",
-      company_website: formData.get("company_website") as string,
+      company_website: formData.get("rpp_hp_field") as string,
       form_loaded_at: formData.get("form_loaded_at") as string,
       turnstile_token: turnstileToken,
     };
@@ -223,8 +223,22 @@ const ShareYourExperience = () => {
                     aria-hidden="true"
                     style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }}
                   >
-                    <label htmlFor="company_website">Company website</label>
-                    <input type="text" id="company_website" name="company_website" tabIndex={-1} autoComplete="off" />
+                    {/* Meaningless field name on purpose — see Contact.tsx for
+                        the full reasoning. Short version: this was named
+                        "company_website", Chrome autofilled it, and the edge
+                        function threw the submission away as a bot. Do not
+                        rename it back to anything a browser recognises. */}
+                    <label htmlFor="rpp_hp_field">Leave this field blank</label>
+                    <input
+                      type="text"
+                      id="rpp_hp_field"
+                      name="rpp_hp_field"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      data-1p-ignore="true"
+                      data-lpignore="true"
+                      data-form-type="other"
+                    />
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
