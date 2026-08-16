@@ -184,6 +184,22 @@ const Footer = () => {
             <Link to="/counties" className="rpp-footer-link">
               Service Areas
             </Link>
+            {/* Added because /share-your-experience had exactly one inbound
+                link on the entire site — a button at the bottom of
+                /testimonials, below every existing testimonial. A visitor had
+                to already be on that page and scroll past all of it to find
+                the form, which is not a discovery path.
+
+                Placed above Testimonials rather than below it: someone who
+                came to read testimonials is not the person with one to give.
+                Sits in About with the other whole-site links, so it appears on
+                every page without adding a nav item. */}
+            <Link to="/share-your-experience" className="rpp-footer-link">
+              Share Your Experience
+            </Link>
+            <Link to="/testimonials" className="rpp-footer-link">
+              Testimonials
+            </Link>
             <Link to="/faq" className="rpp-footer-link">
               FAQs
             </Link>
