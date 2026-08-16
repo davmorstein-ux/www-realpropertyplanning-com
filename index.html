@@ -1,140 +1,5019 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0X2GPKCW65"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-0X2GPKCW65');
-    </script>
-    <meta name="google-site-verification" content="WqzgPFUggfXVdfdb1HYv-dQdznpmIejwblRWHLJGvRc" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Real Property Planning" />
+/* Fonts loaded non-blocking from index.html (DM Sans + DM Sans) */
+.hero-text-white {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
 
-    <!-- FAVICON. There were no icon links here at all, so the browser fell
-         back to its default guess of /favicon.ico — which was still the old
-         silver-swoosh roof mark. Declaring them explicitly means the file that
-         ships is the file that renders.
+/* Global typography overhaul */
+h1,
+h2,
+h3,
+h4 {
+  /* Global heading face. This one rule set every h1-h4 on the site in
+     Cormorant Garamond — the single biggest reason pages looked
+     typographically inconsistent, since components that set their own
+     fontFamily escaped it and everything else did not. */
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.2 !important;
+  margin-bottom: 0.4rem !important;
+}
+body,
+p,
+li,
+td,
+span {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-weight: 400;
+}
+body {
+  line-height: 1.5;
+}
+p {
+  line-height: 1.4 !important;
+  margin-bottom: 0.6rem !important;
+}
+button,
+.btn,
+a[class*="btn"] {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-weight: 600;
+}
+label,
+.label,
+.caption,
+small {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-weight: 500;
+}
 
-         The ?v=2 is not decoration. Favicons are cached harder than almost
-         anything else a browser holds; replacing favicon.ico at the same URL
-         can leave the old mark showing for days. The query string makes it a
-         new URL. Bump it to v=3 next time the icon changes. -->
-    <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
+/* Global section spacing — all pages */
+section,
+[class*="section"],
+[class*="Section"] {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
 
-    <!-- Manifest supplies the name Chrome uses for shortcut tiles and home
-         screen icons. Without it Chrome guesses from the page title and was
-         landing on "Washington State", with the brand nowhere in it.
-         short_name in the manifest is what it uses instead.
+/* Global nav bar vertical alignment */
+nav,
+[class*="nav-bar"],
+[class*="navbar"],
+header nav {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+nav a,
+nav button:not([data-nav-button]),
+[class*="nav-item"],
+[class*="NavItem"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  vertical-align: middle !important;
+  line-height: 1 !important;
+}
+nav button[aria-haspopup],
+nav [class*="dropdown"] button {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  height: 100% !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+nav button[aria-haspopup] svg,
+nav [class*="dropdown"] button svg {
+  width: 14px !important;
+  height: 14px !important;
+}
 
-         NOTE: never write an HTML tag name in angle brackets inside a comment
-         in this file. Doing exactly that here took the whole site down on
-         2026-08-15: the minifier mangled the comment, consumed its closing
-         delimiter, and the browser then swallowed the rest of the document —
-         script, stylesheet and root div included — as comment text. Blank
-         page, empty console, nothing to debug. Describe tags in words. -->
-    <link rel="manifest" href="/site.webmanifest?v=2" />
+/* Tile overflow + body text alignment */
+.card,
+[class*="card"],
+[class*="tile"],
+[class*="Card"],
+[class*="Tile"] {
+  overflow: hidden !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.card h2,
+.card h3,
+[class*="card"] h2,
+[class*="card"] h3,
+[class*="tile"] h2,
+[class*="tile"] h3 {
+  min-height: unset !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 8px !important;
+}
+.card p,
+[class*="card"] p,
+[class*="tile"] p {
+  flex: 1 !important;
+}
+.card button,
+[class*="card"] button,
+[class*="card"] a,
+[class*="tile"] button,
+[class*="tile"] a {
+  margin-top: auto !important;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+/* Tile headings — maximum 2 lines */
+.card h2,
+.card h3,
+[class*="card"] h2,
+[class*="card"] h3,
+[class*="tile"] h2,
+[class*="tile"] h3 {
+  font-size: 1.1rem !important;
+  line-height: 1.2 !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
 
-    <!-- TWO families, both used. Cormorant Garamond stays dropped.
+/* (Removed: overly broad uniform tile sizing block — it matched every
+   class containing "card", "tile", or "grid". */
 
-         Source Serif 4 is back because removing it did not consolidate
-         anything — it broke the site. `serif` in tailwind.config.ts points at
-         Source Serif 4, and 207 files use `font-serif` for their headings, so
-         dropping the font here did not move those headings to DM Sans. It
-         moved them to Georgia, the fallback. Every editorial heading on the
-         site has been rendering in a font nobody chose.
+/* Hero blue title band — prevent descender clipping */
+[class*="hero-band"],
+[class*="title-band"],
+[class*="HeroBand"],
+[class*="blue-band"],
+[class*="BlueBand"],
+[data-hero-band] {
+  padding-top: 8px !important;
+  padding-bottom: 4px !important;
+  line-height: 1.4 !important;
+  overflow: visible !important;
+}
+@keyframes afh-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.afh-marquee-track {
+  animation: afh-marquee var(--afh-marquee-duration, 60s) linear infinite;
+}
+.afh-marquee-viewport:hover .afh-marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .afh-marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
 
-         The waste this was meant to fix was real but different: the old link
-         loaded THREE families and used one. Loading two families that are
-         both genuinely used is not that problem. DM Sans carries navigation,
-         buttons, body copy and the small-caps eyebrow bands; Source Serif 4
-         carries the h1 hero bands and every section heading. One face for the
-         interface, one for the editorial layer.
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-         Weights are deliberately narrow: 500/600/700 upright plus italic 500,
-         which is what the headings and bands actually call for. Do not widen
-         the range without a reason — this is a two-family site now, and the
-         download budget is the price of that. -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&family=Source+Serif+4:ital,opsz,wght@0,8..60,500..700;1,8..60,500&display=swap" />
+/* Utility: standardized content container and image rules */
+.content-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
-        "@id": "https://realpropertyplanning.com/#organization",
-        "name": "Real Property Planning",
-        "url": "https://realpropertyplanning.com",
-        "telephone": "(206) 900-3015",
-        "email": "info@realpropertyplanning.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://realpropertyplanning.com/logo.webp",
-          "width": 400,
-          "height": 400
-        },
-        "image": "https://realpropertyplanning.com/logo.webp",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "1455 NW Leary Way",
-          "addressLocality": "Seattle",
-          "addressRegion": "WA",
-          "postalCode": "98107",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 47.6062,
-          "longitude": -122.3321
-        },
-        "areaServed": ["King County", "Snohomish County", "Pierce County", "Skagit County", "Kitsap County"],
-        "description": "Probate real estate, inherited property sales, estate appraisals, and senior housing transitions in Western Washington.",
-        "hasCredential": ["Licensed Real Estate Broker", "Washington State Certified Residential Appraiser"],
-        "knowsAbout": ["Probate Real Estate", "Estate Sales", "Senior Transitions", "Residential Appraisal", "Inherited Property"],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "(206) 900-3015",
-          "contactType": "customer service",
-          "areaServed": "US",
-          "availableLanguage": "English"
-        },
-        "sameAs": []
-      }
-    </script>
-    <title>Probate &amp; Estate Real Estate in Washington State | Real Property Planning</title>
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://realpropertyplanning.com" />
-    <meta
-      name="description"
-      content="Calm, experienced guidance for probate, inherited property, and senior housing transitions across Washington State. Call (206) 900-3015."
-    />
-    <meta property="og:title" content="Probate & Senior Real Estate Guidance | Washington State" />
-    <meta
-      property="og:description"
-      content="Calm, experienced guidance for probate, inherited property, and senior housing transitions across Washington State. Call (206) 900-3015."
-    />
-    <meta property="og:url" content="https://realpropertyplanning.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://realpropertyplanning.com/logo.webp" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Probate & Senior Real Estate Guidance | Washington State" />
-    <meta
-      name="twitter:description"
-      content="Calm, experienced guidance for probate, inherited property, and senior housing transitions across Washington State. Call (206) 900-3015."
-    />
-    <meta name="twitter:image" content="https://realpropertyplanning.com/logo.webp" />
-  </head>
+.content-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+/* Global overflow safeguard */
+html,
+body {
+  overflow-x: hidden;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Reserve space at the bottom of every page for the floating SiteBottomNav pill (70px + 14px gap) */
+body {
+  padding-bottom: calc(100px + env(safe-area-inset-bottom));
+}
+@media (max-width: 639px) {
+  body {
+    padding-bottom: calc(90px + env(safe-area-inset-bottom));
+  }
+}
+
+main,
+#root,
+#root > div {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Reserve space for the fixed <Header /> so the hero image sits flush
+   below it — top gap matches the 0px bottom gap above the blue band. */
+#main-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* First hero section sits directly under the header — kill the global
+   32px section padding-top so the gap stays thin. */
+#main-content > *:first-child,
+#main-content > *:first-child > section,
+#main-content > *:first-child > section:first-child,
+#main-content > section:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@layer base {
+  :root {
+    /* Premium Estate Advisory Palette */
+    --background: 40 20% 98%;
+    --foreground: 220 35% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 35% 15%;
+
+    /* Deep Navy - Primary */
+    --primary: 220 45% 18%;
+    --primary-foreground: 40 20% 98%;
+
+    /* Soft Ivory */
+    --secondary: 40 30% 96%;
+    --secondary-foreground: 220 35% 18%;
+
+    /* Warm Gray */
+    --muted: 40 10% 92%;
+    --muted-foreground: 220 20% 32%;
+
+    /* Slate Blue Accent */
+    --accent: 210 30% 45%;
+    --accent-foreground: 40 20% 98%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 220 45% 18%;
+
+    --radius: 0.375rem;
+
+    /* Custom Estate Palette — charcoal + burgundy (navy/gold retired July 2026) */
+    --gold: 355 45% 30%;
+    --gold-light: 355 35% 60%;
+    --gold-dark: 355 55% 20%;
+    --navy: 30 8% 14%;
+    --navy-dark: 30 10% 8%;
+    --navy-light: 30 6% 28%;
+    --ivory: 40 30% 96%;
+    --ivory-dark: 40 20% 92%;
+    --cream: 38 40% 96%;
+    --warm-bg: 35 25% 95%;
+    --slate: 30 6% 32%;
+    --slate-light: 30 5% 48%;
+    --warm-gray: 30 8% 55%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 50% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 220 45% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 220 45% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 40 30% 90%;
+    --primary-foreground: 220 45% 12%;
+
+    --secondary: 220 40% 18%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 220 35% 20%;
+    --muted-foreground: 40 15% 65%;
+
+    --accent: 210 30% 55%;
+    --accent-foreground: 40 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 20% 95%;
+
+    --border: 220 35% 22%;
+    --input: 220 35% 22%;
+    --ring: 42 55% 55%;
+
+    --sidebar-background: 220 50% 10%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 42 55% 55%;
+    --sidebar-primary-foreground: 220 50% 10%;
+    --sidebar-accent: 220 40% 15%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 220 35% 18%;
+    --sidebar-ring: 42 55% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 420;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    color: hsl(220 35% 15%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  /* Sitewide breathing room inside the navy hero band (bg-primary):
+     extra top and bottom padding around its text. */
+  section.bg-primary {
+    padding-top: calc(0.5rem + 48px);
+    padding-bottom: calc(3.5rem + 32px);
+  }
+
+  /* WCAG 2.1 AA accessibility floor for older readers.
+     Sitewide minimum sizes for small-text utilities and inline tiny sizes.
+     Applied on all viewports; desktop overrides below scale further. */
+  :where(.text-xs) {
+    font-size: 1rem !important; /* 16px floor — nothing below 16px */
+    line-height: 1.7 !important;
+  }
+  :where(.text-sm) {
+    font-size: 1.0625rem !important; /* 17px floor */
+    line-height: 1.7 !important;
+  }
+  :where(.text-base) {
+    font-size: 1.125rem !important; /* 18px floor */
+    line-height: 1.7 !important;
+  }
+  :where(.text-\[10px\], .text-\[11px\], .text-\[12px\], .text-\[13px\], .text-\[14px\], .text-\[15px\]) {
+    font-size: 1.125rem !important; /* 18px floor for card/body text */
+    line-height: 1.7 !important;
+  }
+  :where(.text-\[16px\], .text-\[17px\]) {
+    font-size: 1.125rem !important; /* 18px floor */
+    line-height: 1.7 !important;
+  }
+
+  /* Desktop: consistent 18px body text */
+  @media (min-width: 768px) {
+    body {
+      font-size: 18px;
+      line-height: 1.75;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "DM Sans", serif;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: hsl(220 40% 12%);
+  }
+
+  /* Desktop-only body text at 18px */
+  @media (min-width: 768px) {
+    p,
+    li,
+    label,
+    td,
+    th,
+    blockquote,
+    figcaption {
+      font-size: 1rem !important;
+      line-height: 1.7 !important;
+    }
+
+    /* TEMPORARY: confirm CSS is reaching browser */
+
+    /* Hero tagline override — preserve large hero text (desktop) */
+    .hero-tagline-override,
+    .homepage-hero-tagline,
+    div.homepage-hero-tagline {
+      position: absolute !important;
+      left: 50% !important;
+      bottom: 1.2rem !important;
+      transform: translateX(-50%) !important;
+      width: min(960px, 92%) !important;
+      font-size: clamp(24px, 2vw, 32px) !important;
+      font-weight: 800 !important;
+      line-height: 1.1 !important;
+      letter-spacing: 0.04em !important;
+      color: #272421 !important;
+      font-family: "DM Sans", "Gill Sans", sans-serif !important;
+      margin: 0 !important;
+      text-align: center !important;
+      text-shadow:
+        0 1px 6px rgba(255, 255, 255, 0.9),
+        0 0 18px rgba(255, 255, 255, 0.7) !important;
+      z-index: 2 !important;
+    }
+
+    p {
+      margin-bottom: 0.5em;
+    }
+
+    p + p {
+      margin-top: 0.6em;
+    }
+
+    /* Force common body text utilities to 18px (1rem at 18px root) */
+    :where(
+      .text-xs,
+      .text-sm,
+      .text-base,
+      .text-lg,
+      .text-\[15px\],
+      .text-\[14px\],
+      .text-\[13px\],
+      .text-\[12px\],
+      .text-\[11px\],
+      .text-\[10px\]
+    ) {
+      font-size: 1rem !important;
+      line-height: 1.7 !important;
+    }
+
+    /* Ensure link text and span text also scale up */
+    a,
+    span {
+      font-size: inherit;
+    }
+
+    /* Preserve rem-based heading sizes from 22px root era */
+    :is(h1, h2, h3, h4, h5, h6):is(.text-6xl) {
+      font-size: 82.5px !important;
+    }
+    :is(h1, h2, h3, h4, h5, h6):is(.text-5xl) {
+      font-size: 66px !important;
+    }
+    :is(h1, h2, h3, h4, h5, h6):is(.text-4xl) {
+      font-size: 49.5px !important;
+    }
+    :is(h1, h2, h3, h4, h5, h6):is(.text-3xl) {
+      font-size: 41.25px !important;
+    }
+    :is(h1, h2, h3, h4, h5, h6):is(.text-2xl) {
+      font-size: 33px !important;
+    }
+    :is(h1, h2, h3, h4, h5, h6):is(.text-xl) {
+      font-size: 27.5px !important;
+    }
+  }
+
+  /* Keep tile button text unchanged */
+  .premium-tile :where(.text-sm, .text-base, .text-lg, .text-\[15px\], .text-\[14px\], .text-\[13px\]),
+  .premium-tile p,
+  .premium-tile span,
+  .premium-tile li,
+  .premium-tile h3:not(.tile-label-tight) {
+    font-size: revert-layer !important;
+    line-height: revert-layer !important;
+  }
+
+  /* Exempt homepage tile labels from sitewide accessibility font-size overrides */
+  .tile-label,
+  [data-tile-id],
+  .premium-tile h3,
+  .service-nav-tile h3 {
+    font-size: revert-layer !important;
+    line-height: revert-layer !important;
+    letter-spacing: revert-layer !important;
+  }
+
+  /* Keep footer legal disclaimers small */
+  footer .text-\[13px\] {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Improved contrast for muted text - critical for older readers */
+  .text-muted-foreground {
+    color: hsl(220 22% 28%) !important;
+  }
+  .dark .text-muted-foreground {
+    color: hsl(40 15% 72%) !important;
+  }
+
+  /* Placeholder text — darker for readability */
+  ::placeholder {
+    color: hsl(220 15% 42%) !important;
+    opacity: 1;
+  }
+
+  /* Input text styling */
+  input,
+  textarea,
+  select {
+    font-weight: 450;
+    color: hsl(220 35% 15%);
+  }
+}
+
+/* Desktop-only wider reading columns */
+@media (min-width: 1024px) {
+  .max-w-xl {
+    max-width: 44rem !important;
+  }
+
+  .max-w-2xl {
+    max-width: 56rem !important;
+  }
+
+  .max-w-3xl {
+    max-width: 68rem !important;
+  }
+
+  .max-w-4xl {
+    max-width: 76rem !important;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: "DM Sans", serif;
+  }
+
+  .font-sans {
+    font-family: "DM Sans", sans-serif;
+  }
+}
+
+/* Homepage FAQ — larger, high-contrast accordion text */
+.homepage-faq-item:hover {
+  background-color: rgba(201, 168, 76, 0.06) !important;
+}
+.homepage-faq-trigger {
+  color: #463f37 !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+}
+.homepage-faq-trigger:hover,
+.homepage-faq-trigger:focus-visible {
+  color: hsl(var(--gold-dark)) !important;
+  text-decoration: none !important;
+}
+.homepage-faq-trigger span {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+.homepage-faq-answer {
+  color: hsl(var(--foreground)) !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+}
+@media (min-width: 768px) {
+  .homepage-faq-trigger {
+    font-size: 24px !important;
+    min-height: 74px !important;
+  }
+  .homepage-faq-answer {
+    font-size: 20px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* Site-wide accordion trigger styling */
+.accordion-trigger-styled {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  background-color: white !important;
+  border-radius: 12px !important;
+  border: 1px solid #d1999e !important;
+  padding: 20px 24px !important;
+  text-decoration: none !important;
+  color: #463f37 !important;
+}
+.accordion-trigger-styled:hover {
+  color: hsl(var(--gold-dark)) !important;
+  text-decoration: none !important;
+}
+@media (min-width: 768px) {
+  .accordion-trigger-styled {
+    font-size: 20px !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   MARQUEE HOVER BORDER — classic marching-ants dashes
+   Replaces hover-lift on homepage tiles. Apply class="marquee-hover"
+   to any tile/card; border-radius is inherited from the host element.
+═══════════════════════════════════════════════ */
+.marquee-hover {
+  position: relative;
+  isolation: isolate;
+}
+.marquee-hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 3px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 30;
+  transition: opacity 0.2s ease;
+  background-image:
+    repeating-linear-gradient(90deg, var(--marquee-color, #7f1d1d) 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(180deg, var(--marquee-color, #7f1d1d) 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(90deg, var(--marquee-color, #7f1d1d) 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(180deg, var(--marquee-color, #7f1d1d) 0 10px, transparent 10px 20px);
+  background-position:
+    0 0,
+    0 0,
+    0 100%,
+    100% 0;
+  background-size:
+    20px 3px,
+    3px 20px,
+    20px 3px,
+    3px 20px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.marquee-hover:hover::before {
+  opacity: 1;
+  animation: marquee-hover-march 0.6s linear infinite;
+}
+@keyframes marquee-hover-march {
+  to {
+    background-position:
+      20px 0,
+      0 20px,
+      -20px 100%,
+      100% -20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-hover::before {
+    animation: none !important;
+  }
+}
+
+/* Arrow nudge on hover — pairs with .marquee-hover on CTA buttons that
+   include an .rpp-cta-arrow icon (e.g. the homepage hero CTA). */
+.rpp-cta-arrow {
+  transition: transform 0.2s ease;
+}
+.marquee-hover:hover .rpp-cta-arrow {
+  transform: translateY(3px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .rpp-cta-arrow {
+    transition: none !important;
+  }
+  .marquee-hover:hover .rpp-cta-arrow {
+    transform: none !important;
+  }
+}
+
+/* Right-pointing arrow variant — same pairing, but nudges rightward
+   instead of downward (e.g. the 'Connect with a Specialist' CTA). */
+.rpp-cta-arrow-right {
+  transition: transform 0.2s ease;
+}
+.marquee-hover:hover .rpp-cta-arrow-right {
+  transform: translateX(3px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .rpp-cta-arrow-right {
+    transition: none !important;
+  }
+  .marquee-hover:hover .rpp-cta-arrow-right {
+    transform: none !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   UNIFIED CTA LINK — homepage tile sections
+   Modern minimal text-link treatment: no filled box,
+   navy text, gold underline that expands on hover.
+═══════════════════════════════════════════════ */
+.gold-cta {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 6px !important;
+  padding: 0 0 5px 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  width: auto !important;
+  max-width: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  background: none !important;
+  color: hsl(var(--navy)) !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0.01em !important;
+  text-align: left !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+.gold-cta::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  height: 3px !important;
+  width: 100% !important;
+  background: #7f1d1d !important;
+  transform: scaleX(0) !important;
+  transform-origin: left !important;
+  transition: transform 0.3s ease !important;
+}
+a:hover .gold-cta::after,
+.group:hover .gold-cta::after {
+  transform: scaleX(1) !important;
+}
+
+/* ═══════════════════════════════════════════════
+   ARTICLE RELATED RESOURCES CTA LINK
+   Matches homepage .gold-cta styling for article pages
+═══════════════════════════════════════════════ */
+.article-resource-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 0 0 5px 0;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  background: none;
+  color: hsl(var(--navy));
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.article-resource-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: #7f1d1d;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.article-resource-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* ═══════════════════════════════════════════════
+   PREMIUM GOLD DIVIDER
+   Usage: <div class="premium-divider" />
+═══════════════════════════════════════════════ */
+.premium-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.premium-divider::before,
+.premium-divider::after {
+  content: "";
+  height: 2px;
+  width: 5rem;
+  border-radius: 9999px;
+  background: linear-gradient(to var(--dir, right), transparent, hsl(var(--gold) / 0.45));
+}
+.premium-divider::after {
+  --dir: left;
+}
+.premium-divider-dot {
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background: hsl(var(--gold) / 0.55);
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   STANDARDIZED 3D CLICKABLE CARD
+   Upgraded to match premium tile visual family:
+   ivory body, gold trim, inset face, strong depth
+═══════════════════════════════════════════════ */
+.card-3d {
+  @apply relative cursor-pointer transition-all duration-200;
+  border-radius: 18px;
+  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 25% 97%) 50%, hsl(38 18% 94%) 100%);
+  border: 2px solid hsl(42 55% 62% / 0.5);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.04);
+}
+/* Top-edge glossy highlight */
+.card-3d::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.85), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+/* Bottom ledge depth */
+.card-3d::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 4%;
+  right: 4%;
+  height: 6px;
+  border-radius: 0 0 14px 14px;
+  background: linear-gradient(180deg, transparent 0%, hsl(36 14% 90%) 70%, hsl(34 12% 88%) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.card-3d:hover {
+  transform: translateY(-4px);
+  border-color: hsl(42 60% 52% / 0.7);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.04);
+}
+.card-3d:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 2px 6px -2px rgba(0, 0, 0, 0.12),
+    inset 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+}
+/* Dark section variant */
+.bg-navy .card-3d,
+.bg-navy-dark .card-3d,
+[class*="bg-primary"] .card-3d {
+  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 25% 97%) 50%, hsl(38 18% 94%) 100%);
+}
+
+/* ═══════════════════════════════════════════════
+   PREMIUM 3D SERVICE CARD — luxury horizontal link
+   Multi-layer construction: outer body → gold trim → inner face
+═══════════════════════════════════════════════ */
+
+/* OUTER BODY — chunky 3D shell with thick visible base/ledge */
+.card-3d-premium {
+  @apply relative cursor-pointer transition-all duration-200;
+  border-radius: 22px;
+  background: linear-gradient(
+    180deg,
+    hsl(40 25% 96%) 0%,
+    hsl(38 18% 91%) 40%,
+    hsl(36 14% 86%) 80%,
+    hsl(34 12% 82%) 100%
+  );
+  border: 1.5px solid hsl(38 20% 80%);
+  padding: 8px 8px 12px 8px; /* thick shell: 8px sides/top, 12px bottom ledge */
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
+    inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+/* GOLD TRIM RING — thick prominent gold border */
+.card-3d-premium .card-3d-premium__inner {
+  @apply relative;
+  border-radius: 14px;
+  border: 3px solid hsl(42 58% 52%);
+  box-shadow:
+    0 0 0 1.5px hsl(42 50% 70% / 0.6),
+    0 0 6px 0 hsl(42 50% 60% / 0.15),
+    inset 0 0 0 1px hsl(42 55% 78% / 0.4);
+  overflow: hidden;
+}
+
+/* INNER FACE PANEL — clearly recessed white surface */
+.card-3d-premium .card-3d-premium__face {
+  @apply relative;
+  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 30% 99%) 50%, hsl(40 20% 97%) 100%);
+  border-radius: 11px;
+  box-shadow:
+    inset 0 3px 6px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -2px 4px 0 rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Top-edge glossy highlight on outer body */
+.card-3d-premium::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6%;
+  right: 6%;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.9), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Bottom base shadow — thick ledge underside */
+.card-3d-premium::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+  right: 3%;
+  height: 10px;
+  border-radius: 0 0 18px 18px;
+  background: linear-gradient(180deg, transparent 0%, hsl(36 14% 82%) 60%, hsl(34 12% 78%) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card-3d-premium:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
+    inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-3d-premium:hover .card-3d-premium__inner {
+  border-color: hsl(42 65% 48%);
+  box-shadow:
+    0 0 0 1.5px hsl(42 55% 62% / 0.7),
+    0 0 8px 0 hsl(42 55% 55% / 0.2),
+    inset 0 0 0 1px hsl(42 60% 72% / 0.5);
+}
+
+.card-3d-premium:active {
+  transform: translateY(1px);
+  padding-bottom: 8px;
+  box-shadow:
+    0 3px 8px -3px rgba(0, 0, 0, 0.14),
+    0 1px 3px -1px rgba(0, 0, 0, 0.08),
+    inset 0 2px 3px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* ═══════════════════════════════════════════════
+   TILE-WHITE — clean flat white card (replaces card-3d-blue site-wide)
+═══════════════════════════════════════════════ */
+.tile-white,
+.tile-white__face,
+.tile-white__inner {
+  background: #ffffff !important;
+  border-radius: 12px;
+  box-shadow: none;
+  border: none;
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════
+   INTERIOR TILE — standardized layout for all non-homepage tiles
+═══════════════════════════════════════════════ */
+.interior-tile {
+  position: relative !important;
+  isolation: isolate;
+  background: #fff !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 20px 16px 16px !important;
+  box-sizing: border-box !important;
+  flex: 1 1 0 !important;
+  min-width: 180px !important;
+  max-width: 260px !important;
+}
+/* Marquee marching-ants hover — baked directly into interior-tile so every
+   tile using this shared class gets it automatically, with no extra class
+   needed. Mirrors .marquee-hover; inset:0 keeps it inside the tile's own
+   box so overflow:hidden above never clips it. */
+.interior-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 3px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 30;
+  transition: opacity 0.2s ease;
+  background-image:
+    repeating-linear-gradient(90deg, #7f1d1d 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(180deg, #7f1d1d 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(90deg, #7f1d1d 0 10px, transparent 10px 20px),
+    repeating-linear-gradient(180deg, #7f1d1d 0 10px, transparent 10px 20px);
+  background-position:
+    0 0,
+    0 0,
+    0 100%,
+    100% 0;
+  background-size:
+    20px 3px,
+    3px 20px,
+    20px 3px,
+    3px 20px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.interior-tile:hover::before {
+  opacity: 1;
+  animation: marquee-hover-march 0.6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .interior-tile::before {
+    animation: none !important;
+  }
+}
+/* Static variant — for tiles that reuse interior-tile's card layout/styling
+   but are NOT themselves a link (e.g. an info card, or a card whose only
+   link is a small nested "Learn More"). Disables the marching-ants hover
+   entirely, since that affordance implies the whole tile is clickable. */
+.interior-tile--static::before {
+  content: none !important;
+}
+/* Compact wide variant for multi-person provider tiles — only wide enough for side-by-side round headshots */
+.interior-tile.interior-tile--wide {
+  max-width: 360px !important;
+  width: min(100%, 360px) !important;
+  justify-self: center !important;
+}
+.interior-tile .tile-white__inner,
+.interior-tile .tile-white__face {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.interior-tile h2,
+.interior-tile h3 {
+  text-align: center !important;
+  min-height: unset !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 8px !important;
+  font-size: 1.1rem !important;
+  line-height: 1.2 !important;
+}
+.interior-tile p {
+  text-align: center !important;
+  flex: 1 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Wider tiles, less padding for Professional Team page */
+.pro-team-grid .interior-tile {
+  max-width: 100% !important;
+  padding: 16px 8px 12px !important;
+}
+
+/* Wide, left-aligned variant for guide/article link cards (Continue Learning, etc.)
+   Same card system, but not capped to the narrow headshot-tile width. */
+.interior-tile.interior-tile--guide {
+  max-width: 100% !important;
+  min-width: 0 !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  padding: 26px 28px 24px !important;
+}
+.interior-tile.interior-tile--guide h3 {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  font-size: 1.22rem !important;
+  line-height: 1.3 !important;
+}
+.interior-tile.interior-tile--guide p {
+  text-align: left !important;
+}
+
+/* ═══════════════════════════════════════════════
+   PREMIUM 3D PILL — quick prompts + county links
+   Same ivory shell, gold trim, recessed face
+═══════════════════════════════════════════════ */
+.premium-pill-3d {
+  @apply relative inline-flex cursor-pointer transition-all duration-200 ease-out;
+  border-radius: 9999px;
+  padding: 4px 4px 8px;
+  background: linear-gradient(
+    180deg,
+    hsl(var(--ivory) / 0.98) 0%,
+    hsl(var(--secondary)) 55%,
+    hsl(var(--ivory-dark)) 100%
+  );
+  border: 1px solid hsl(var(--gold-light) / 0.55);
+  box-shadow:
+    0 10px 22px -16px hsl(var(--foreground) / 0.22),
+    0 5px 0 hsl(36 18% 80% / 0.95),
+    0 2px 6px -1px hsl(var(--foreground) / 0.08),
+    inset 0 1px 0 hsl(0 0% 100% / 0.96),
+    inset 0 -1px 0 hsl(36 18% 78% / 0.24);
+}
+.premium-pill-3d::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, transparent, hsl(0 0% 100% / 0.92), transparent);
+  pointer-events: none;
+}
+.premium-pill-3d::after {
+  content: "";
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: 0;
+  height: 8px;
+  border-radius: 0 0 9999px 9999px;
+  background: linear-gradient(180deg, transparent 0%, hsl(36 16% 82%) 65%, hsl(34 14% 78%) 100%);
+  pointer-events: none;
+}
+.premium-pill-3d__face {
+  @apply relative inline-flex items-center justify-center text-center;
+  gap: 0.55rem;
+  min-height: 42px;
+  padding: 0.72rem 1.15rem;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(var(--cream)) 46%, hsl(var(--secondary)) 100%);
+  border: 2px solid hsl(var(--gold) / 0.58);
+  box-shadow:
+    0 0 0 1px hsl(var(--gold-light) / 0.34),
+    inset 0 2px 5px hsl(0 0% 100% / 0.88),
+    inset 0 -2px 4px hsl(var(--foreground) / 0.04);
+  color: hsl(var(--foreground) / 0.86);
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: normal;
+  text-wrap: balance;
+  z-index: 1;
+}
+.premium-pill-3d:hover {
+  transform: translateY(-3px);
+  border-color: hsl(var(--gold) / 0.62);
+  box-shadow:
+    0 16px 28px -18px hsl(var(--foreground) / 0.26),
+    0 7px 0 hsl(36 18% 78% / 0.98),
+    0 4px 10px -2px hsl(var(--foreground) / 0.1),
+    inset 0 1px 0 hsl(0 0% 100% / 0.96);
+}
+.premium-pill-3d:hover .premium-pill-3d__face {
+  border-color: hsl(var(--gold-dark) / 0.76);
+  box-shadow:
+    0 0 0 1px hsl(var(--gold-light) / 0.45),
+    inset 0 2px 5px hsl(0 0% 100% / 0.92),
+    inset 0 -2px 4px hsl(var(--foreground) / 0.05);
+  color: hsl(var(--foreground));
+}
+.premium-pill-3d:active {
+  transform: translateY(1px);
+  padding-bottom: 5px;
+  box-shadow:
+    0 4px 10px -6px hsl(var(--foreground) / 0.16),
+    0 2px 0 hsl(36 18% 78% / 0.92),
+    inset 0 2px 3px hsl(var(--foreground) / 0.06);
+}
+.premium-pill-3d:active .premium-pill-3d__face {
+  box-shadow:
+    0 0 0 1px hsl(var(--gold-light) / 0.28),
+    inset 0 2px 4px hsl(var(--foreground) / 0.05),
+    inset 0 1px 0 hsl(0 0% 100% / 0.7);
+}
+
+/* Homepage pill buttons — uniform sizing on mobile */
+@media (max-width: 639px) {
+  .homepage-pill {
+    height: 80px;
+    padding: 4px 4px 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .homepage-pill .homepage-pill__face {
+    height: 100%;
+    min-height: unset;
+    padding: 0.5rem 0.85rem;
+    font-size: 16px;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   PREMIUM TILE — image-based 3D tile button
+═══════════════════════════════════════════════ */
+.premium-tile {
+  @apply relative cursor-pointer;
+}
+
+.tile-hover {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tile-hover:hover {
+  transform: translateY(-4px);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+@media (min-width: 640px) {
+  /* Realtor tile: nudge icon+text group up on desktop */
+  .premium-tile[data-tile-name="realtor"] > div > span {
+    transform: translateY(calc(-10.2% + 2%)) !important;
+  }
+  /* Realtor tile: vertical position of icon at 25% on desktop */
+  .premium-tile[data-tile-name="realtor"] .tile-icon {
+    transform: translateY(15%) scale(1.1) !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .premium-tile h3[data-mobile-tight="true"] {
+    line-height: 0.82 !important;
+    margin-top: 0.18rem !important;
+  }
+  .premium-tile .has-mobile-offset {
+    --tw-translate-y: calc(-10.2% + var(--mobile-offset, 0%)) !important;
+  }
+  .premium-tile h3.mobile-text-down {
+    margin-top: var(--mobile-text-mt, -0.15rem) !important;
+  }
+  .premium-tile h3.mobile-text-large {
+    font-size: 0.92rem !important;
+  }
+  .premium-tile h3.mobile-text-small {
+    font-size: 0.7rem !important;
+  }
+  .premium-tile h3.mobile-text-xsmall {
+    font-size: 0.6rem !important;
+  }
+  .premium-tile .mobile-icon-down {
+    margin-top: var(--mobile-icon-mt, 4%) !important;
+  }
+  /* Mobile-only: lower the vertical offset of the Service Areas tile label */
+  .premium-tile[data-tile-name="service-areas"] h3.tile-label {
+    margin-top: 15% !important;
+  }
+  /* Mobile-only: Service Areas tile icon vertical offset */
+  .premium-tile[data-tile-name="service-areas"] .tile-icon {
+    translate: 0 45% !important;
+  }
+  .premium-tile h3[data-tile-id="cpas"] {
+    margin-top: -0.5rem !important;
+  }
+  .premium-tile h3[data-tile-id="wills"] {
+    margin-top: -1.2rem !important;
+  }
+}
+.premium-tile h3[data-tile-id="senior-moves"],
+.premium-tile h3[data-tile-id="probate-sales"],
+.premium-tile h3[data-tile-id="the-process"],
+.premium-tile h3[data-tile-id="home-value"],
+.premium-tile h3[data-tile-id="lending"],
+.premium-tile h3[data-tile-id="senior-living"],
+.premium-tile h3[data-tile-id="realtor"] {
+  margin-top: -0.5rem !important;
+}
+@media (max-width: 639px) {
+  .premium-tile h3[data-tile-id="senior-moves"] {
+    margin-top: 0.15rem !important;
+  }
+}
+
+.premium-tile .tile-label-tight {
+  line-height: 0.82 !important;
+  margin-top: 0.18rem !important;
+}
+.premium-tile .tile-label-tight[data-tile-id="lending"] {
+  line-height: 1.12 !important;
+}
+
+.service-nav-tile-link {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  width: 28%;
+  height: 18%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  pointer-events: auto;
+  background: transparent;
+  border-radius: 9999px;
+}
+
+/* Homepage tiles: enlarge icons 10% on mobile only (except Probate Sales) */
+@media (max-width: 639px) {
+  .service-nav-tile-mobile-hitbox {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    width: 36%;
+    height: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    pointer-events: auto;
+    border-radius: 9999px;
+  }
+
+  .premium-tile:not([data-tile-name="probate-sales"]) .tile-icon {
+    transform: scale(1.1) !important;
+    transform-origin: top center !important;
+  }
+  /* The Process tile: lower icon */
+  .premium-tile[data-tile-name="the-process"] .tile-icon {
+    transform-origin: bottom center !important;
+    transform: scale(1.365) translateY(14%) !important;
+  }
+  /* Realtor: reset icon+text offset on mobile */
+  .premium-tile[data-tile-name="realtor"] > div > span {
+    transform: translateY(-8%) !important;
+  }
+  .premium-tile[data-tile-name="realtor"] .tile-icon {
+    transform: scale(1.1) translateX(0%) translateY(0%) !important;
+  }
+  /* Senior Moves: nudge icon down */
+  .premium-tile[data-tile-name="senior-moves"] .tile-icon {
+    transform: scale(1.1) translateY(30%) !important;
+  }
+  /* Senior Moves: match Trustees mobile font size */
+  .premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-move-managers"]) h3 {
+    font-size: 0.7rem !important;
+  }
+  /* Appraiser: raise icon more */
+  .premium-tile[data-tile-name="appraiser"] .tile-icon {
+    transform: scale(1.18) translateY(-30%) !important;
+  }
+  /* Service Areas: 10% bigger */
+  .premium-tile[data-tile-name="service-areas"] .tile-icon {
+    transform: scale(1.21) !important;
+  }
+  /* Estate Liquidation: nudge icon up slightly */
+  .premium-tile[data-tile-name="estate-liquidation"] .tile-icon {
+    transform: scale(1.045) translateY(-6%) !important;
+  }
+  /* Power of Attorney: reduce icon size 10%, nudge down */
+  .premium-tile[data-tile-name="power-of-attorney"] .tile-icon {
+    transform: scale(0.9) translateY(20%) !important;
+  }
+  /* Guides & Resources: nudge icon down */
+  .premium-tile[data-tile-name="guides-resources"] .tile-icon {
+    transform: scale(1.18) translateY(-10%) !important;
+  }
+  /* Senior Transitions: move icon down */
+  .premium-tile[data-tile-name="senior-transitions"] .tile-icon {
+    transform: scale(1.18) translateY(0%) !important;
+  }
+  /* Home Values & Pricing: nudge icon down */
+  .premium-tile[data-tile-name="home-values"] .tile-icon {
+    transform: scale(1.18) translateY(-10%) !important;
+  }
+  /* Wills: nudge icon up */
+  .premium-tile[data-tile-name="wills"] .tile-icon {
+    transform: scale(1.1) translateY(-10%) !important;
+  }
+  /* Attorneys: nudge text up */
+  .premium-tile h3[data-tile-id="attorneys"] {
+    margin-top: -0.75rem !important;
+  }
+  /* Mortgage Lending + Financial Planning: match centered mobile composition */
+  .premium-tile[data-tile-name="financial-planning"] > div > span {
+    transform: translateY(-9%) !important;
+  }
+  .premium-tile[data-tile-name="lending"] .tile-icon,
+  .premium-tile[data-tile-name="financial-planning"] .tile-icon {
+    transform: scale(1.1) translateY(-32%) !important;
+  }
+  /* Paying for Senior Living: match Service Areas mobile centering */
+  .premium-tile[data-tile-name="paying-for-senior-living"] > div > span {
+    transform: translateY(-10.2%) !important;
+  }
+  .premium-tile[data-tile-name="paying-for-senior-living"] .tile-icon {
+    transform: scale(1.1) translateY(0%) !important;
+  }
+  /* Paying for Senior Living: nudge text down only (9 nudges total) */
+  .premium-tile[data-tile-name="paying-for-senior-living"] h3 {
+    margin-top: 2.25rem !important;
+  }
+  /* Paying for Senior Living: icon vertical position 60% */
+  .premium-tile[data-tile-name="paying-for-senior-living"] .tile-icon {
+    transform: scale(1) translateY(60%) !important;
+  }
+  /* Senior Home Sales: nudge text down by 8 nudges total (increased by 2) */
+  .premium-tile[data-tile-name="senior-transitions"] h3 {
+    margin-top: 2rem !important;
+  }
+  /* Senior Placement: nudge text down 5 nudges total, icon down 25% */
+  .premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) h3 {
+    margin-top: 1.25rem !important;
+  }
+  .premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) .tile-icon {
+    transform: translateY(35%) !important;
+  }
+  /* Realtor: nudge text down */
+  .premium-tile h3[data-tile-id="realtor"] {
+    margin-top: 0.15rem !important;
+  }
+  /* Probate Terms: nudge icon up, vertical position -10% */
+  .premium-tile[data-tile-name="probate-terms"] .tile-icon {
+    transform: scale(1.1) translateY(-10%) !important;
+  }
+  /* CPAs: nudge icon up */
+  .premium-tile[data-tile-name="cpas"] .tile-icon {
+    transform: scale(1.1) translateY(-6%) !important;
+  }
+  /* Executors: increase icon by 10% (to 20% total), vertical position -5% */
+  .premium-tile[data-tile-name="executors"] .tile-icon {
+    transform: scale(1.331) translateY(-5%) !important;
+  }
+
+  .attorney-tiles-grid .premium-tile .tile-icon {
+    transform: none !important;
+    transform-origin: center center !important;
+  }
+}
+
+/* Senior Placement tile: remove any visible box behind the icon */
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]),
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]),
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div > span,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div > span,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) .tile-icon,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) .tile-icon,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div::before,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div::before,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div::after,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div::after,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div > span::before,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div > span::before,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div > span::after,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div > span::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) .tile-icon,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) .tile-icon {
+  mix-blend-mode: multiply;
+}
+
+/* Attorney tiles: reduce text size on mobile so it fits within tile face */
+@media (max-width: 639px) {
+  .attorney-tiles-grid .premium-tile h3 {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .premium-tile .tile-label-tight {
+    font-size: 0.9rem !important;
+  }
+  .premium-tile[data-tile-name="wills"] span {
+    transform: translateY(-14%) !important;
+  }
+  .premium-tile[data-tile-name="wills"] h3[data-tile-id="wills"] {
+    margin-top: -1rem !important;
+  }
+  .premium-tile[data-tile-name="wills"] .tile-icon {
+    transform: scale(1.1) translateY(12%) !important;
+  }
+
+  .premium-tile[data-tile-name="senior-moves"] .tile-icon {
+    transform: translateY(4%) !important;
+  }
+  .premium-tile[data-tile-name="cpas"] .tile-icon {
+    transform: translateY(8%) !important;
+  }
+  .premium-tile[data-tile-name="home-value"] .tile-icon {
+    transform: translateY(12%) !important;
+  }
+  .premium-tile[data-tile-name="the-process"] .tile-icon {
+    transform: scale(1.1) translateY(8%) !important;
+  }
+  .premium-tile[data-tile-name="lending"] .tile-icon {
+    transform: scale(1.1) translateY(0%) !important;
+  }
+  .premium-tile[data-tile-name="probate-sales"] .tile-icon {
+    transform: translateY(4%) !important;
+  }
+  .premium-tile[data-tile-name="realtor"] > div > span {
+    transform: translateY(calc(-10.2% + 4%)) !important;
+  }
+  .premium-tile[data-tile-name="realtor"] .tile-icon {
+    transform: translateX(-2%) scale(1.21) translateY(-2%) !important;
+  }
+  .premium-tile[data-tile-name="estate-liquidation"] .tile-icon {
+    transform: scale(0.9405) translateY(4%) !important;
+  }
+  .premium-tile[data-tile-name="realtor"] h3[data-tile-id="realtor"] {
+    transform: translateY(4%) !important;
+  }
+  .premium-tile[data-tile-name="guides-resources"] .tile-icon {
+    transform: scale(1.18) translateX(0%) translateY(2%) !important;
+  }
+
+  .premium-tile h3[data-tile-id="cpas"] {
+    margin-top: -0.5rem !important;
+  }
+  .premium-tile[data-tile-name="senior-living"] .tile-icon {
+    transform: scale(1.39) translateY(4%) !important;
+  }
+  .premium-tile h3[data-tile-id="senior-living"] {
+    transform: translateY(6px) !important;
+  }
+  /* Paying for Senior Living: nudge top "Paying for" line up on desktop only */
+  .premium-tile h3 .paying-for-line {
+    display: block;
+    transform: translateY(-6px);
+  }
+  /* Paying for Senior Living: desktop-only icon size +15% (mobile keeps inline scale 0.7) */
+  .premium-tile:has(.service-nav-tile-link[href="/sell-house-fund-senior-living"]) .tile-icon {
+    transform: translateY(-4%) scale(0.805) !important;
+  }
+  /* Trustees: match Wills h3 line placement on desktop */
+  .premium-tile:has(.service-nav-tile-link[href="/trustees"]) h3 {
+    margin-top: -1rem !important;
+  }
+  .premium-tile[data-tile-name="executors"] .tile-icon {
+    transform: scale(1.1) !important;
+  }
+  /* Executors: match Wills/Trustees h3 line placement on desktop */
+  .premium-tile[data-tile-name="executors"] h3 {
+    margin-top: -1rem !important;
+  }
+  /* Probate Terms: tiny desktop-only downward correction to match The Process */
+  .premium-tile[data-tile-name="probate-terms"] h3 {
+    transform: translateY(8px) !important;
+  }
+  .premium-tile[data-tile-name="attorneys"] .tile-icon {
+    transform: scale(1.1) !important;
+  }
+  /* Service Areas: 10% bigger on desktop */
+  .premium-tile[data-tile-name="service-areas"] .tile-icon {
+    transform: scale(1.1) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .premium-tile .tile-label-tight,
+  .premium-tile h3.tile-label {
+    font-size: 1.05rem !important;
+  }
+}
+
+/* Tablet only: shift tile text vertically by 0 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .premium-tile h3.tile-label,
+  .premium-tile .tile-label-tight {
+    transform: translateY(0) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .premium-tile .tile-label-tight,
+  .premium-tile h3.tile-label {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .premium-tile .tile-label-tight,
+  .premium-tile h3.tile-label {
+    font-size: 1.45rem !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .premium-tile .tile-label-tight {
+    font-size: 0.95rem !important;
+    margin-top: -0.45rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="financial-planning"],
+  .premium-tile .tile-label-tight[data-tile-id="lending"] {
+    font-size: 1.05rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="financial-planning"],
+  .premium-tile .tile-label-tight[data-tile-id="lending"] {
+    margin-top: -1.5rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="estate-liquidation"] {
+    margin-top: -0.1rem !important;
+    font-size: 1.05rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="estate-liquidation"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="appraiser"] {
+    margin-top: -1.1rem !important;
+    font-size: 1.05rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="appraiser"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="power-of-attorney"] {
+    margin-top: 0.7rem !important;
+    font-size: 1.05rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="power-of-attorney"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile h3.mobile-text-xsmall[data-tile-id="power-of-attorney"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="senior-transitions"] {
+    margin-top: 0.3rem !important;
+    font-size: 1.05rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="senior-transitions"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile h3.mobile-text-xsmall[data-tile-id="senior-transitions"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="guides-resources"] {
+    font-size: 1.05rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="guides-resources"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="senior-living"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="realtor"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="financial-planning"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="lending"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="attorneys"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="cpas"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="home-values"] {
+    margin-top: -0.25rem !important;
+    font-size: 1.05rem !important;
+  }
+  .premium-tile h3.mobile-text-small[data-tile-id="home-values"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile h3.mobile-text-xsmall[data-tile-id="home-values"] {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION EYEBROW LABEL
+═══════════════════════════════════════════════ */
+.section-eyebrow {
+  @apply text-gold font-bold tracking-[0.18em] uppercase text-base mb-3;
+}
+
+/* ═══════════════════════════════════════════════
+   ELEVATED STATIC CARDS — non-clickable info panels
+   match the card-3d family without hover effects
+═══════════════════════════════════════════════ */
+.bg-card[class*="border-border"][class*="rounded"] {
+  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 25% 97%) 50%, hsl(38 18% 95%) 100%) !important;
+  border-color: hsl(42 55% 62% / 0.4) !important;
+  box-shadow:
+    0 6px 18px -4px rgba(0, 0, 0, 0.1),
+    0 3px 8px -3px rgba(0, 0, 0, 0.06),
+    0 1px 0 0 hsl(36 14% 85%),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.03) !important;
+}
+
+/* ═══════════════════════════════════════════════
+   SECURE WILL CTA BUTTON — 3D electric-blue
+═══════════════════════════════════════════════ */
+.secure-will-cta {
+  background: linear-gradient(180deg, #d53b48 0%, #ca2b38 60%, #8a1e27 100%);
+  box-shadow:
+    0 4px 0 0 #8a1e27,
+    0 6px 16px rgba(30, 58, 138, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 2px solid hsl(42 55% 62% / 0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+}
+.secure-will-cta:hover {
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 0 #8a1e27,
+    0 3px 8px rgba(30, 58, 138, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.secure-will-cta:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 0 #8a1e27,
+    0 1px 4px rgba(30, 58, 138, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Floating animation for will vault icon */
+@keyframes will-vault-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.will-vault-float {
+  animation: will-vault-float 4s ease-in-out infinite;
+}
+
+/* Wizard subtitle — override global line-height */
+.wizard-subtitle-tight {
+  font-size: 1.0625rem !important;
+  line-height: 1.2 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* ===== WCAG 2.2 AA: Visible focus outlines ===== */
+*:focus-visible {
+  outline: 2px solid hsl(var(--gold));
+  outline-offset: 2px;
+}
+
+/* Inline text links: distinguishable by underline (not color alone) */
+main a:not([class*="btn"]):not([role="menuitem"]):not(.no-underline) {
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+}
+main a:not([class*="btn"]):not([role="menuitem"]):not(.no-underline):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Search bar textarea — mobile: allow placeholder to wrap onto 2 lines */
+.search-textarea-mobile {
+  white-space: nowrap;
+  min-height: auto;
+}
+@media (max-width: 639px) {
+  .search-textarea-mobile {
+    white-space: pre-wrap !important;
+    min-height: 3.2rem !important;
+    padding-top: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
+    font-size: 0.9375rem !important;
+    line-height: 1.35 !important;
+  }
+  .search-textarea-mobile::placeholder {
+    white-space: pre-wrap !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.35 !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   WCAG 2.1 AA: Card text accessibility
+   Sitewide minimum sizes, weights, and contrast for
+   any card-style content block (excludes premium tile
+   nav grid which has its own optimized typography).
+═══════════════════════════════════════════════ */
+
+/* Targets typical card containers across the site:
+   shadcn Card, raw .rounded-* + bg-card/bg-background/bg-white wrappers
+   used in guides, repair cards, comparison cards, step cards, etc. */
+/* Card title sizing/weight (h3-h6 inside any card-style container) */
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  :where(h2, h3, h4, h5, h6) {
+  font-weight: 700;
+  color: hsl(220 40% 12%);
+}
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  :where(h3, h4, h5, h6) {
+  font-size: max(1.125rem, 18px);
+  line-height: 1.35;
+}
+
+/* Card body text — ≥16px, line-height 1.7 */
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  :where(p, li) {
+  font-size: max(1rem, 16px);
+  line-height: 1.7;
+}
+
+/* Force muted text inside cards to meet AA contrast on light backgrounds */
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  .text-muted-foreground {
+  color: hsl(220 25% 25%) !important;
+}
+
+/* Cost / impact / meta labels (.text-gold inside cards) — readable & ≥15px/600 */
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  .text-gold {
+  color: hsl(42 70% 28%) !important;
+  font-weight: 600;
+  font-size: max(0.9375rem, 15px);
+}
+
+/* Desktop: enforce 1.7 line-height on card body text */
+@media (min-width: 768px) {
+  :where(
+      [class*="rounded-"][class*="bg-card"],
+      [class*="rounded-"][class*="bg-background"],
+      [class*="rounded-"][class*="bg-white"],
+      [data-card],
+      .card-3d,
+      .card-3d-blue-skin
+    ):not(.premium-tile):not(.premium-shell-tile)
+    :where(p, li) {
+    line-height: 1.7 !important;
+  }
+}
+
+/* =========================================================
+   GLOBAL SENIOR-FRIENDLY ACCESSIBILITY OVERRIDES (WCAG 2.1 AA)
+   Applies to all pages. Text-only — no layout/color/border changes.
+   ========================================================= */
+
+/* 1. Minimum font size: never below 16px anywhere (excludes homepage tile labels) */
+body,
+body *:not(.tile-label):not([data-tile-id]) {
+  font-size: max(1em, 16px);
+}
+
+/* Preserve large display headings (they already exceed 16px via 1em) */
+
+/* 2. Body text contrast — kill faded muted-foreground on light backgrounds */
+.text-muted-foreground {
+  color: #49443f !important;
+  opacity: 1 !important;
+}
+
+/* On navy/dark backgrounds, lift muted text to light gray */
+.bg-primary .text-muted-foreground,
+.bg-navy .text-muted-foreground,
+.bg-navy-dark .text-muted-foreground,
+.bg-foreground .text-muted-foreground,
+[class*="bg-navy"] .text-muted-foreground,
+[class*="bg-primary"] .text-muted-foreground {
+  color: #e5e7eb !important;
+  opacity: 1 !important;
+}
+
+/* 3. Quote and testimonial text */
+blockquote,
+blockquote p,
+q,
+.quote-text,
+.italic,
+em.italic,
+p.italic {
+  font-size: max(1.125rem, 18px) !important;
+  color: #2f2b27 !important;
+  opacity: 1 !important;
+}
+
+/* On dark backgrounds, keep quotes legible in light tone */
+[class*="bg-navy"] blockquote,
+[class*="bg-primary"] blockquote,
+[class*="bg-navy"] .italic,
+[class*="bg-primary"] .italic {
+  color: #e5e7eb !important;
+}
+
+/* 4. Subtitles and supporting paragraphs under headings */
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h1 + .text-muted-foreground,
+h2 + .text-muted-foreground,
+h3 + .text-muted-foreground,
+h4 + .text-muted-foreground {
+  font-size: max(1.0625rem, 17px) !important;
+  line-height: 1.75 !important;
+  color: #5b5753 !important;
+  opacity: 1 !important;
+}
+/* (Removed: overly broad uniform tile sizing block — it matched every class containing "card". */
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+#r-occ,
+#r-cap {
+  padding: 11px 14px !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+[class*="bg-navy"] :where(h1, h2, h3, h4) + p,
+[class*="bg-primary"] :where(h1, h2, h3, h4) + p {
+  color: #ffffff !important;
+}
+.calc-page-hero h1 + p,
+.calc-page-hero p,
+.calc-page-hero span {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+#r-occ,
+#r-cap {
+  padding: 11px 14px !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+/* 5. Card body text — readable, never faded */
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d
+  ):not(.premium-tile):not(.premium-shell-tile)
+  :where(p, li, span) {
+  font-size: max(1rem, 16px) !important;
+  color: #2f2b27 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d
+  ):not(.premium-tile):not(.premium-shell-tile)
+  span.gold-cta {
+  font-weight: 900 !important;
+  -webkit-text-stroke: 0.18px currentColor;
+  text-shadow:
+    0.16px 0 currentColor,
+    -0.16px 0 currentColor;
+}
+
+/* Preserve light text on dark/navy cards */
+:where(.card-3d-blue-skin, [class*="bg-navy"], [class*="bg-primary"]) :where(p, li, span) {
+  color: #e5e7eb !important;
+}
+
+/* 6. Homepage tile labels — exempt from accessibility font size overrides */
+.tile-label,
+[data-tile-id],
+.premium-tile h3,
+.service-nav-tile h3 {
+  font-size: unset !important;
+  line-height: unset !important;
+}
+@media (min-width: 768px) {
+  .hero-bright-subheading {
+    font-size: 22px !important;
+  }
+}
+[data-hero-band] {
+  padding: 4px 24px !important;
+  min-height: 0 !important;
+}
+
+/* Sitewide: compact gap between hero image/band and the first content section below */
+main > section:has(> [data-hero-band]) + section,
+main > section:has(> div > [data-hero-band]) + section,
+main > section:has(> [data-hero-band]) + div,
+main > section:has(> div > [data-hero-band]) + div {
+  padding-top: 24px !important;
+  margin-top: 0 !important;
+}
+@media (min-width: 768px) {
+  main > section:has(> [data-hero-band]) + section,
+  main > section:has(> div > [data-hero-band]) + section,
+  main > section:has(> [data-hero-band]) + div,
+  main > section:has(> div > [data-hero-band]) + div {
+    padding-top: 32px !important;
+  }
+}
+
+/* ===========================================================
+   Global accessibility font-size overrides (elderly readability)
+   =========================================================== */
+body {
+  font-size: 16px;
+}
+
+.attorney-role-description {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  line-height: 1.8 !important;
+  max-width: 850px !important;
+  margin: 40px auto !important;
+  padding: 0 24px !important;
+  display: block !important;
+}
+
+main h1,
+footer h1,
+header h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 36px !important;
+}
+
+.rpp-funnel-heading {
+  font-size: clamp(2rem, 5vw, 3.25rem) !important;
+}
+
+h3 {
+  font-size: 28px !important;
+  line-height: 1.2 !important;
+}
+
+.card-title,
+[data-card-title],
+.CardTitle {
+  font-size: 24px !important;
+}
+
+button:not([data-nav-button]),
+.btn,
+[role="button"]:not([data-nav-button]) {
+  font-size: 18px !important;
+}
+
+/* ============================================================
+   Real Property Planning roofline logo tiled across
+   light/cream surfaces as a subtle 8% watermark pattern.
+   ============================================================ */
+.bg-background,
+.bg-cream,
+.bg-secondary,
+.bg-muted,
+.bg-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.bg-background::before,
+.bg-cream::before,
+.bg-secondary::before,
+.bg-muted::before,
+.bg-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: url("/real-property-planning-logo-pattern.webp");
+  background-repeat: repeat;
+  background-size: 200px auto;
+  mix-blend-mode: multiply;
+  filter: sepia(1) saturate(2) hue-rotate(5deg) brightness(0.9);
+  opacity: 0.032;
+}
+
+/* Exempt RolesAndResponsibilities tile typography from global overrides */
+.r2-pill {
+  font-size: 13px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.r2-title {
+  font-size: 26px !important;
+  font-family: "DM Sans", serif !important;
+}
+.r2-label {
+  font-size: 10px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.r2-tagline {
+  font-size: 14px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.r2-eyebrow {
+  font-size: 13px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.r2-h2 {
+  font-size: 40px !important;
+  font-family: "DM Sans", serif !important;
+}
+
+/* Exempt all tile section pill/title/label typography from global overrides */
+.p1pill,
+.p2pill,
+.p3pill,
+.papill {
+  font-size: 13px !important;
+}
+.p1title,
+.p2title,
+.p3title,
+.patitle {
+  font-size: 26px !important;
+}
+.r2-label {
+  font-size: 13px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.p1label {
+  font-size: 13px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.p3label {
+  font-size: 13px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.r2-pill {
+  font-size: 13px !important;
+}
+.hn-question {
+  font-size: 38px !important;
+  font-family: "DM Sans", serif !important;
+  color: #8b1a1a !important;
+}
+.hn-title {
+  font-size: 28px !important;
+  font-family: "DM Sans", serif !important;
+  color: #8b1a1a !important;
+}
+.hn-eyebrow {
+  font-size: 16px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.hn-sub {
+  font-size: 18px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.hn-h2 {
+  font-size: 44px !important;
+  font-family: "DM Sans", serif !important;
+}
+.hn-item {
+  font-size: 16px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+
+.hn-list {
+  grid-template-columns: 1fr !important;
+}
+
+/* ============================================================
+   Affiliation badge marquee — continuous, linear, seamless loop.
+   The track contains the badge list duplicated twice; animating
+   from 0 to -50% lands on the start of the second copy, so the
+   loop restart is visually invisible.
+   ============================================================ */
+@keyframes affiliation-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .affiliation-marquee-track {
+    animation: none;
+  }
+}
+
+/* ============================================================
+   Affiliation 3D rotating ring — constant linear infinite spin.
+   The ring lives inside a perspective stage. Pure CSS only:
+   no JS timers, no snapping, no pause/resume.
+   ============================================================ */
+@keyframes affiliation-ring-spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .affiliation-ring-spin {
+    animation: none;
+  }
+}
+
+/* ============================================================
+   Global 3D contact icon normalization (phone, email, globe).
+   Targets icons by filename so all imports update at once.
+   - Uniform 32px height, auto width
+   - Blend modes hide baked-in backgrounds (black for phone,
+     white for email/globe)
+   ============================================================ */
+img[src*="real-estate-phone-contact-icon-washington"],
+img[src*="real-estate-phone-handset-3d-icon-washington"] {
+  height: 48px !important;
+  width: 48px !important;
+  object-fit: contain;
+  object-position: left center;
+  margin-left: -4px;
+  margin-right: -12px;
+  background: transparent;
+}
+
+img[src*="real-estate-email-contact-icon-washington"],
+img[src*="real-estate-email-envelope-3d-icon-washington"],
+img[src*="real-estate-website-globe-3d-icon-washington"] {
+  height: 32px !important;
+  width: 32px !important;
+  object-fit: contain;
+  object-position: left center;
+  mix-blend-mode: multiply;
+  background: transparent;
+}
+
+/* ==================================================================
+ * Senior Readability — Site-wide Minimum Type Sizes
+ * Body text: min 16px. Button text: min 15px.
+ * Uses :where() for zero specificity so component styles still win
+ * when they intentionally set a larger size.
+ * ================================================================== */
+:where(body, p, li, a, span, div, label, td, th, dd, dt, blockquote) {
+  font-size: max(1em, 16px);
+}
+:where(button, .btn, [role="button"], a.button) {
+  font-size: max(1em, 15px);
+}
+
+.homepage-cta-card .homepage-cta-card__label {
+  font-weight: 700 !important;
+  font-size: 19px !important;
+}
+
+/* Override Tailwind alpha-modified text colors so descriptive copy
+ * always renders at the full token color (no transparency). Tailwind v3
+ * compiles e.g. `text-primary-foreground/80` to
+ * `color: hsl(var(--primary-foreground) / 0.8)` — we restore alpha to 1
+ * by re-declaring the color at full opacity with !important. */
+[class*="text-primary-foreground/"] {
+  color: hsl(var(--primary-foreground)) !important;
+}
+[class*="text-white/"] {
+  color: #ffffff !important;
+}
+[class*="text-foreground/"] {
+  color: hsl(var(--foreground)) !important;
+}
+[class*="text-muted-foreground/"] {
+  color: hsl(var(--muted-foreground)) !important;
+}
+[class*="text-gold/"] {
+  color: hsl(var(--gold, 42 60% 54%)) !important;
+}
+[class*="text-accent/"] {
+  color: hsl(var(--accent)) !important;
+}
+
+/* Restore decorative/utility opacity for non-text visual elements
+ * (logos, separators, icons) that may legitimately use opacity. */
+img,
+svg,
+hr {
+  opacity: revert !important;
+}
+
+#rotating-tagline {
+  animation: taglineFade 14s ease-in-out forwards;
+}
+
+@keyframes taglineFade {
+  0% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes globeGlow {
+  0% {
+    opacity: 0.5;
+    transform: translateZ(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateZ(0) scale(1.1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateZ(0) scale(1);
+  }
+}
+
+/* === /terminology page typography + accordion overrides === */
+.terminology-page {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.terminology-page p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.terminology-page strong,
+.terminology-page b {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Transparent expanded accordion content area (panel only, not the header) */
+.terminology-page [data-radix-accordion-content] {
+  background-color: transparent !important;
+  background: none !important;
+}
+
+@keyframes accordionDown {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordionUp {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+[data-radix-accordion-content] {
+  overflow: hidden;
+}
+
+[data-radix-accordion-content][data-state="open"] {
+  animation: accordionDown 3.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+[data-radix-accordion-content][data-state="closed"] {
+  animation: accordionUp 3.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Premium cards: no underlines on any text within gold-bordered card links */
+a[class*="border-gold"],
+a[class*="border-gold"] *,
+a.card-3d-blue,
+a.card-3d-blue * {
+  text-decoration: none !important;
+}
+
+/* ===================================================================
+   Global spacing reduction — site-wide vertical rhythm tightening
+   Reduces excessive whitespace between sections for easier scrolling.
+   =================================================================== */
+.py-20 {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+.py-16 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+.py-14 {
+  padding-top: 1.75rem !important;
+  padding-bottom: 1.75rem !important;
+}
+.pt-20 {
+  padding-top: 2.5rem !important;
+}
+.pb-20 {
+  padding-bottom: 2.5rem !important;
+}
+.pt-16 {
+  padding-top: 2rem !important;
+}
+.pb-16 {
+  padding-bottom: 2rem !important;
+}
+.pt-14 {
+  padding-top: 1.75rem !important;
+}
+.pb-14 {
+  padding-bottom: 1.75rem !important;
+}
+
+.my-20 {
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+.my-16 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+.my-14 {
+  margin-top: 1.75rem !important;
+  margin-bottom: 1.75rem !important;
+}
+.my-10 {
+  margin-top: 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.mb-20 {
+  margin-bottom: 2.5rem !important;
+}
+.mb-16 {
+  margin-bottom: 2rem !important;
+}
+.mb-14 {
+  margin-bottom: 1.5rem !important;
+}
+.mb-10 {
+  margin-bottom: 1.25rem !important;
+}
+
+.mt-20 {
+  margin-top: 2.5rem !important;
+}
+.mt-16 {
+  margin-top: 2rem !important;
+}
+.mt-14 {
+  margin-top: 1.5rem !important;
+}
+.mt-10 {
+  margin-top: 1.25rem !important;
+}
+
+/* Card grid row gaps — cap at 24px */
+.gap-y-16,
+.gap-y-14,
+.gap-y-12,
+.gap-y-10 {
+  row-gap: 1.5rem !important;
+}
+.gap-16 {
+  gap: 1.5rem !important;
+}
+.gap-14 {
+  gap: 1.5rem !important;
+}
+.gap-12 {
+  gap: 1.5rem !important;
+}
+
+/* Section headings — tighten margins below */
+section h2.mb-10,
+section h2.mb-12,
+section h2.mb-14,
+section h2.mb-16,
+section h3.mb-10,
+section h3.mb-12,
+section h3.mb-14,
+section h3.mb-16 {
+  margin-bottom: 1rem !important;
+}
+
+/* Divider/separator empty space — cap to 24px */
+hr {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* ===================================================================
+   SITE-WIDE RESPONSIVE AUDIT — mobile / tablet / desktop fixes
+   =================================================================== */
+
+/* ---------- MOBILE (< 640px) ---------- */
+@media (max-width: 639px) {
+  /* 2. Tile grids → 1 column on mobile (overrides any lg:/md:/sm: grid-cols) */
+  [class*="grid-cols-"]:not([class*="grid-cols-1"]) {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  /* But keep explicit grid-cols-2 if author requested mobile 2-col */
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* 3. Hero images — cap height + cover */
+  img.w-full[class*="h-["],
+  section img.w-full {
+    max-height: 220px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+  /* 4. Blue band hero title — reduce 2 steps */
+  .hero-band-title {
+    font-size: clamp(12px, 3.5vw, 16px) !important;
+    line-height: 1.25 !important;
+    padding: 0 12px;
+  }
+
+  /* 8. Halve section padding */
+  .py-20,
+  .py-16,
+  .py-14,
+  .py-12,
+  .py-10 {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+  .py-8 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .pt-20,
+  .pt-16,
+  .pt-14,
+  .pt-12,
+  .pt-10 {
+    padding-top: 1.25rem !important;
+  }
+  .pb-20,
+  .pb-16,
+  .pb-14,
+  .pb-12,
+  .pb-10 {
+    padding-bottom: 1.25rem !important;
+  }
+
+  /* 9. Headings — reduce 1-2 steps on mobile to prevent overflow */
+  h1,
+  .text-5xl,
+  .text-6xl {
+    font-size: 1.875rem !important;
+    line-height: 1.2 !important;
+  }
+  h2,
+  .text-4xl {
+    font-size: 1.625rem !important;
+    line-height: 1.25 !important;
+  }
+  h3,
+  .text-3xl {
+    font-size: 1.375rem !important;
+    line-height: 1.3 !important;
+  }
+  .text-2xl {
+    font-size: 1.25rem !important;
+  }
+
+  /* 6. Hide homepage floating cream nav island on mobile (already hidden in JS,
+     but defensive in case any inline override) */
+  nav[aria-label="Main navigation"] {
+    /* desktop floating nav */
+  }
+}
+
+/* ---------- TABLET (640px – 1023px) ---------- */
+@media (min-width: 640px) and (max-width: 1023px) {
+  /* 2. Grid downgrades */
+  .lg\:grid-cols-4:not(.md\:grid-cols-2):not(.sm\:grid-cols-2),
+  .xl\:grid-cols-4:not(.md\:grid-cols-2):not(.sm\:grid-cols-2) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-3:not(.md\:grid-cols-2):not(.sm\:grid-cols-2) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* 3. Hero images — tablet height */
+  img.w-full[class*="h-["],
+  section > img.w-full {
+    max-height: 300px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  /* 8. Tablet section padding -25% */
+  .py-20 {
+    padding-top: 1.875rem !important;
+    padding-bottom: 1.875rem !important;
+  }
+  .py-16 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  .py-14 {
+    padding-top: 1.3125rem !important;
+    padding-bottom: 1.3125rem !important;
+  }
+  .py-12 {
+    padding-top: 1.125rem !important;
+    padding-bottom: 1.125rem !important;
+  }
+}
+
+/* ---------- DESKTOP (>= 1024px) ---------- */
+@media (min-width: 1024px) {
+  /* Hero images preserve their author-set heights (no override) */
+  section img.w-full[class*="h-["] {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Homepage floating cream nav island — tablet: -1 step font + tighter padding */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hp-floating-nav-island {
+    gap: 16px !important;
+    padding: 0 18px !important;
+    min-height: 44px !important;
+  }
+  .hp-floating-nav-island a,
+  .hp-floating-nav-island button {
+    font-size: 13px !important;
+    letter-spacing: 0.02em !important;
+  }
+}
+
+/* ===========================================================
+   Sitewide vertical whitespace reduction
+   Caps oversized py/pt/pb/my/mt/mb Tailwind utilities so no
+   section exceeds ~32px vertical padding. Hero, fonts, and
+   layout colors are untouched.
+   =========================================================== */
+main .py-12 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+main .py-14 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+main .py-16 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+main .py-20 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+main .py-24 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+main .pt-12,
+main .pt-14,
+main .pt-16,
+main .pt-20,
+main .pt-24 {
+  padding-top: 2rem !important;
+}
+main .pb-12,
+main .pb-14,
+main .pb-16,
+main .pb-20,
+main .pb-24 {
+  padding-bottom: 2rem !important;
+}
+
+main .my-12,
+main .my-14,
+main .my-16,
+main .my-20,
+main .my-24 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+main .mt-12,
+main .mt-14,
+main .mt-16,
+main .mt-20,
+main .mt-24 {
+  margin-top: 2rem !important;
+}
+main .mb-12,
+main .mb-14,
+main .mb-16,
+main .mb-20,
+main .mb-24 {
+  margin-bottom: 2rem !important;
+}
+
+/* Desktop variants — same cap */
+@media (min-width: 768px) {
+  main .md\:py-12,
+  main .md\:py-14,
+  main .md\:py-16,
+  main .md\:py-20,
+  main .md\:py-24 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  main .md\:pt-12,
+  main .md\:pt-14,
+  main .md\:pt-16,
+  main .md\:pt-20,
+  main .md\:pt-24 {
+    padding-top: 2rem !important;
+  }
+  main .md\:pb-12,
+  main .md\:pb-14,
+  main .md\:pb-16,
+  main .md\:pb-20,
+  main .md\:pb-24 {
+    padding-bottom: 2rem !important;
+  }
+  main .md\:my-12,
+  main .md\:my-14,
+  main .md\:my-16,
+  main .md\:my-20,
+  main .md\:my-24 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  main .md\:mt-12,
+  main .md\:mt-14,
+  main .md\:mt-16,
+  main .md\:mt-20,
+  main .md\:mt-24 {
+    margin-top: 2rem !important;
+  }
+  main .md\:mb-12,
+  main .md\:mb-14,
+  main .md\:mb-16,
+  main .md\:mb-20,
+  main .md\:mb-24 {
+    margin-bottom: 2rem !important;
+  }
+}
+@media (min-width: 1024px) {
+  main .lg\:py-12,
+  main .lg\:py-14,
+  main .lg\:py-16,
+  main .lg\:py-20,
+  main .lg\:py-24 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  main .lg\:pt-12,
+  main .lg\:pt-14,
+  main .lg\:pt-16,
+  main .lg\:pt-20,
+  main .lg\:pt-24 {
+    padding-top: 2rem !important;
+  }
+  main .lg\:pb-12,
+  main .lg\:pb-14,
+  main .lg\:pb-16,
+  main .lg\:pb-20,
+  main .lg\:pb-24 {
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* Tighten heading-to-text spacing where author used large mb-* on titles */
+main h1.mb-8,
+main h2.mb-8,
+main h3.mb-8,
+main h1.mb-10,
+main h2.mb-10,
+main h3.mb-10,
+main h1.mb-12,
+main h2.mb-12,
+main h3.mb-12 {
+  margin-bottom: 1rem !important;
+}
+@media (min-width: 768px) {
+  main h1.md\:mb-10,
+  main h2.md\:mb-10,
+  main h3.md\:mb-10,
+  main h1.md\:mb-12,
+  main h2.md\:mb-12,
+  main h3.md\:mb-12,
+  main h1.md\:mb-14,
+  main h2.md\:mb-14,
+  main h3.md\:mb-14 {
+    margin-bottom: 1.25rem !important;
+  }
+}
+
+/* Reduce gap between hero band and first content block site-wide (kept consistent with hero rule) */
+main > section:has(> [data-hero-band]) + *,
+main > section:has(> div > [data-hero-band]) + * {
+  padding-top: 1.5rem !important;
+  margin-top: 0 !important;
+}
+@media (min-width: 768px) {
+  main > section:has(> [data-hero-band]) + *,
+  main > section:has(> div > [data-hero-band]) + * {
+    padding-top: 1.5rem !important;
+  }
+}
+
+/* ============================================================
+   WCAG 2.1 AA COMPLIANCE PASS — SITEWIDE ENFORCEMENT
+   Author-stylesheet !important overrides inline styles that
+   don't use !important, so inline fontSize:11 etc. are lifted.
+   Text-only changes — no layout, spacing, or structure changes.
+   ============================================================ */
+
+/* 1. Absolute minimum font size — 14px floor, nothing smaller anywhere */
+main *,
+footer *,
+header * {
+  font-size: max(1em, 14px);
+}
+
+/* 2. Body / paragraph / list text — 18px floor on light surfaces */
+main p,
+main li,
+main blockquote,
+main blockquote p,
+main dd,
+main dt {
+  font-size: max(1.125rem, 18px) !important;
+  line-height: 1.7 !important;
+}
+
+/* 3. Card descriptions — 17px floor */
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [class*="bg-cream"],
+    [class*="bg-card"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  :where(p, li, dd) {
+  font-size: max(1.0625rem, 17px) !important;
+  line-height: 1.7 !important;
+}
+
+/* 4. Contact info, links, meta text — 16px floor */
+main a,
+main address,
+footer a,
+header a,
+[class*="text-meta"],
+[class*="meta-text"],
+.contact-info,
+.contact-info * {
+  font-size: max(1rem, 16px) !important;
+}
+
+/* 5. Eyebrow / label / uppercase tracking text — 14px floor + 600 weight */
+main [style*="text-transform: uppercase"],
+main [style*="textTransform: 'uppercase'"],
+main [style*="letter-spacing"],
+main [class*="uppercase"],
+main [class*="tracking-wide"],
+main [class*="tracking-wider"],
+main [class*="tracking-widest"],
+main [class*="tracking-[0"],
+main label,
+main .eyebrow,
+main .label-eyebrow,
+.source-citation,
+.source-label,
+[class*="source"],
+cite {
+  font-size: max(0.875rem, 14px) !important;
+  font-weight: 600 !important;
+}
+
+main .key-responsibilities-divider {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+/* 6. Footer text — 16px floor */
+footer,
+footer *,
+footer p,
+footer li,
+footer span,
+footer a {
+  font-size: max(1rem, 16px) !important;
+}
+footer [class*="uppercase"],
+footer [class*="tracking-"],
+footer label,
+footer .eyebrow {
+  font-size: max(0.875rem, 14px) !important;
+  font-weight: 600 !important;
+}
+
+/* 7. Headings.
+   WAS: font-size: revert !important — which rolls back to the BROWSER
+   default (h2 = 1.5em, h3 = 1.17em), not to the author sizes the comment
+   claimed to preserve. Because this block sits later in the file and has
+   higher specificity than the bare `h2 { font-size: 36px !important }`
+   rule above, it silently cancelled it. That is why headings rendered
+   around 24px and 19px instead of 36px and 28px.
+   NOW: the intended sizes, stated explicitly. */
+main h1,
+footer h1,
+header h1 {
+  font-size: 26px !important;
+}
+main h2,
+footer h2,
+header h2 {
+  font-size: 36px !important;
+}
+main h3,
+footer h3,
+header h3 {
+  font-size: 28px !important;
+}
+main h4,
+footer h4,
+header h4 {
+  font-size: 22px !important;
+}
+main h5,
+footer h5,
+header h5 {
+  font-size: 20px !important;
+}
+main h6,
+footer h6,
+header h6 {
+  font-size: 18px !important;
+}
+
+/* 8. Color contrast — global muted/gray text darken (4.5:1 on white) */
+main .text-muted-foreground,
+main [class*="text-muted"],
+main [class*="text-gray-3"],
+main [class*="text-gray-4"],
+main [class*="text-gray-5"],
+main [class*="text-neutral-3"],
+main [class*="text-neutral-4"],
+main [class*="text-neutral-5"],
+main [class*="text-slate-3"],
+main [class*="text-slate-4"],
+main [class*="text-slate-5"],
+main [class*="text-zinc-3"],
+main [class*="text-zinc-4"],
+main [class*="text-zinc-5"],
+footer .text-muted-foreground {
+  color: #49443f !important;
+  opacity: 1 !important;
+}
+
+/* 9. On dark/navy backgrounds, lift muted text instead */
+[class*="bg-navy"] .text-muted-foreground,
+[class*="bg-primary"] .text-muted-foreground,
+[class*="bg-foreground"] .text-muted-foreground,
+.bg-navy .text-muted-foreground,
+.bg-navy-dark .text-muted-foreground,
+[class*="bg-navy"] [class*="text-gray"],
+[class*="bg-primary"] [class*="text-gray"],
+[class*="bg-navy"] [class*="text-slate"],
+[class*="bg-primary"] [class*="text-slate"] {
+  color: #f3f4f6 !important;
+  opacity: 1 !important;
+}
+
+/* 10. Inline gray colors — darken via attribute selectors (covers inline style) */
+main [style*="color: #6"],
+main [style*="color: #7"],
+main [style*="color: #8"],
+main [style*="color: #9"],
+main [style*="color:#6"],
+main [style*="color:#7"],
+main [style*="color:#8"],
+main [style*="color:#9"],
+main [style*="color: rgb(1"],
+main [style*="color: rgb(2"] {
+  /* Most low-mid grays fall in this hex range — clamp to a passing tone */
+}
+/* Specific common low-contrast inline grays observed in codebase */
+main [style*="#806b6d"],
+main [style*="#806b6d"],
+main [style*="#af9c9e"],
+main [style*="#af9c9e"],
+main [style*="#c0a0a3"],
+main [style*="#c0a0a3"],
+main [style*="#b89497"],
+main [style*="#8b6467"],
+main [style*="#8b6467"] {
+  color: #49443f !important;
+}
+
+/* 11. Italic descriptive text — meet 4.5:1 */
+main em,
+main i,
+main .italic,
+main [style*="italic"] {
+  color: #2f2b27 !important;
+  opacity: 1 !important;
+}
+[class*="bg-navy"] em,
+[class*="bg-navy"] .italic,
+[class*="bg-primary"] em,
+[class*="bg-primary"] .italic {
+  color: #f3f4f6 !important;
+}
+
+/* 12. SOURCE / citation labels — readable, darkened */
+main :where(span, p, small, cite):where([class*="source"], [data-source], .citation, .source-label) {
+  color: #49443f !important;
+  font-size: max(0.875rem, 14px) !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+/* 13. Gold / copper text on LIGHT backgrounds → #751f26 (4.6:1 on white) */
+main .text-gold,
+main .text-gold-dark,
+main [class*="text-gold"],
+main [class*="text-amber-"],
+main [class*="text-yellow-5"],
+main [class*="text-yellow-6"],
+main [style*="#c3525c"],
+main [style*="#c3525c"],
+main [style*="#b13a44"],
+main [style*="#b13a44"],
+main [style*="#cf7980"],
+main [style*="#cf7980"] {
+  color: #751f26 !important;
+}
+/* But keep gold readable on dark surfaces */
+[class*="bg-navy"] .text-gold,
+[class*="bg-primary"] .text-gold,
+[class*="bg-foreground"] .text-gold,
+.bg-navy .text-gold,
+[class*="bg-navy"] [class*="text-gold"],
+[class*="bg-primary"] [class*="text-gold"] {
+  color: #dc727b !important;
+}
+
+/* 14. Links — minimum contrast on light backgrounds */
+/* Inline text links only. The added :not([style*="background"]) exclusion
+   is the fix for the unreadable CTA: buttons that set their fill with an
+   inline style carry no `bg-` class, so they fell through the old
+   exclusion list and had their label repainted #ca2b38 on burgundy.
+   Specificity here is (0,3,2), which beats Tailwind's .text-white at
+   (0,1,0) — the button had no way to win. */
+main a:not([class*="bg-"]):not(.btn):not([class*="button"]):not([style*="background"]) {
+  color: #ca2b38;
+}
+main a:not([class*="bg-"]):not(.btn):not([class*="button"]):not([style*="background"]):hover {
+  color: #8a1e27;
+}
+/* But don't override navy/primary/foreground branded links */
+main a.text-primary,
+main a.text-navy,
+main a.text-foreground,
+main a[class*="text-primary"],
+main a[class*="text-navy"] {
+  color: revert;
+}
+
+/* 15. "Back to ..." nav links — solid dark navy, never faded */
+main a[href*="back"],
+main a:where([aria-label*="Back"], [aria-label*="back"]),
+.back-link,
+[class*="back-to"],
+[class*="BackTo"] a {
+  color: #280a0c !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+/* 16. DisclaimerSection — readable body */
+[class*="disclaimer"],
+[class*="Disclaimer"],
+.disclaimer-section,
+.disclaimer-section * {
+  color: #2f2b27 !important;
+  opacity: 1 !important;
+}
+[class*="disclaimer"] p,
+[class*="Disclaimer"] p,
+.disclaimer-section p,
+.disclaimer-section li {
+  font-size: max(1rem, 16px) !important;
+  line-height: 1.7 !important;
+}
+[class*="bg-navy"] [class*="disclaimer"],
+[class*="bg-primary"] [class*="disclaimer"],
+[class*="bg-navy"] .disclaimer-section,
+[class*="bg-primary"] .disclaimer-section {
+  color: #f3f4f6 !important;
+}
+
+/* 17. ProviderTile / provider cards — full opacity, readable */
+[class*="ProviderTile"],
+[class*="provider-tile"],
+[data-provider-tile] {
+  color: #2f2b27 !important;
+}
+[class*="ProviderTile"] p,
+[class*="provider-tile"] p,
+[data-provider-tile] p,
+[class*="ProviderTile"] li,
+[class*="provider-tile"] li {
+  font-size: max(1.0625rem, 17px) !important;
+  color: #2f2b27 !important;
+  opacity: 1 !important;
+}
+
+/* 18. No text-opacity utilities allowed to dim text */
+main [class*="text-opacity"],
+main [class*="/50"],
+main [class*="/60"],
+main [class*="/70"],
+main [class*="/80"],
+main [class*="/90"] {
+  opacity: 1 !important;
+}
+
+/* ============================================================
+   Global reduced-motion enforcement (WCAG 2.3.3 / 2.1)
+   Disables all transitions/animations for users who request it.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.hero-band-title {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;
+  opacity: 1 !important;
+}
+
+/* Hero blue band title — override global p/body/main * font-size rules */
+html body main div.rpp-hero-band-text,
+html body div.rpp-hero-band-text,
+main div.rpp-hero-band-text,
+html body main span.rpp-hero-band-text,
+html body span.rpp-hero-band-text,
+main span.rpp-hero-band-text,
+div.rpp-hero-band-text,
+span.rpp-hero-band-text {
+  font-size: 18px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.18em !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+
+/* Hero blue band title used as the page's actual H1 — needs to read as a
+   real heading, not a decorative label, so it gets proper heading scale
+   instead of the compact 18px band size above. */
+html body main h1.rpp-hero-band-text,
+html body h1.rpp-hero-band-text,
+main h1.rpp-hero-band-text,
+h1.rpp-hero-band-text {
+  font-size: clamp(30px, 4vw, 44px) !important;
+  line-height: 1.15 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.04em !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+
+/* AFH carousel — mobile centering */
+@media (max-width: 768px) {
+  .afh-carousel-container {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .afh-carousel-track {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .afh-carousel-item,
+  .afh-carousel-card {
+    margin: 0 auto !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+  .afh-carousel-item img,
+  .afh-carousel-card img {
+    margin: 0 auto !important;
+  }
+}
+
+/* Calculator page overrides — do not remove */
+.calc-hero-text {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+
+.calc-hero-subtitle {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+}
+
+.calc-hero-eyebrow {
+  color: #c58d92 !important;
+  opacity: 1 !important;
+}
+
+/* ── Calculator page white text override ─────────────────── */
+.calc-page-hero,
+.calc-page-hero *,
+.calc-page-hero p,
+.calc-page-hero h1,
+.calc-page-hero span {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.calc-page-hero .eyebrow-label {
+  color: #c58d92 !important;
+}
+/* ── Calculator fixes — do not remove ── */
+#r-occ,
+#r-cap,
+#r-rev,
+#r-exp,
+#r-price,
+#r-rate,
+#r-down {
+  padding: 11px 14px !important;
+  font-size: 15px !important;
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: unset !important;
+}
+
+#calc-roi-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+/* Calculator fixes */
+#r-occ,
+#r-cap,
+#r-rev,
+#r-exp,
+#r-price,
+#r-rate,
+#r-down,
+#r-rerm {
+  padding: 11px 14px !important;
+  font-size: 15px !important;
+  height: auto !important;
+  min-height: unset !important;
+  box-sizing: border-box !important;
+}
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+#r-occ {
+  padding: 11px 14px !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+#r-cap {
+  padding: 11px 14px !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+/* FINAL OVERRIDES — must stay at bottom of file */
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+#r-occ,
+#r-cap {
+  padding: 11px 14px !important;
+  min-height: unset !important;
+  height: auto !important;
+  font-size: 15px !important;
+}
+.calc-page-hero p,
+.calc-page-hero h1,
+.calc-page-hero span,
+.calc-page-hero * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.calc-page-hero .eyebrow-label {
+  color: #c58d92 !important;
+}
+
+#calc-roi-btn,
+#calc-val-btn {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+#r-occ,
+#r-cap {
+  padding: 11px 14px !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+.calc-page-hero p,
+.calc-page-hero h1,
+.calc-page-hero span,
+.calc-page-hero * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.calc-page-hero .eyebrow-label {
+  color: #c58d92 !important;
+}
+#v-prop,
+#v-dshs,
+#v-county {
+  height: 46px !important;
+  box-sizing: border-box !important;
+}
+#r-rev,
+#r-exp,
+#r-cap,
+#r-occ {
+  height: 46px !important;
+  box-sizing: border-box !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   CALCULATOR & HOMEPAGE OVERRIDES
+   Beat: main * { font-size: max(1em, 14px) }
+   ════════════════════════════════════════════════════════════ */
+
+/* Cost of Care Calculator — section tile titles */
+.coc-section-title,
+.coc-section-title * {
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* Remove underline from all headings (prevents gold decorative div appearing as underline) */
+main h1,
+main h2,
+main h3 {
+  text-decoration: none !important;
+}
+
+/* LED inflation rate number */
+#coc-led-number {
+  font-size: 110px !important;
+  line-height: 1 !important;
+  letter-spacing: -0.05em !important;
+  font-weight: 900 !important;
+  color: #c42a37 !important;
+  text-shadow: 0 0 3px #c42a37 !important;
+}
+
+/* Homepage Orientation section — descriptor kept light, sized in RPPHomeV3.tsx */
+main #rpp-orientation p,
+main #rpp-orientation div {
+  margin-bottom: 0 !important;
+}
+/* Tagline — fresh class + rule (previous #rpp-tagline span version
+   removed entirely, replaced under a new class name, as an attempt
+   to break a suspected stuck preview cache tied to the old selector).
+   The extra `main` and `#rpp-tagline` selectors raise specificity above
+   the global `main [style*="letter-spacing"]` minimum-font-size rule. */
+/* The tagline was the last Cormorant Garamond on the site, and this rule has
+   a history of drifting away from RPPHomeV3.tsx: its !important beats the
+   component, so any change made only in the component silently never took.
+   Both are DM Sans now. Change them together or not at all.
+
+   Sizing kept as a clamp but with a higher floor: at 390px the old
+   clamp(25px, 3.5vw, 50px) resolved to its 25px minimum, which is small for a
+   headline read by people with presbyopia. */
+/* WHITE, because the tagline now sits in a navy band rather than on cream.
+   This rule carries !important and beats the component, so it MUST change in
+   step with RPPHomeV3.tsx — navy text on the navy band is 1.0:1 and the
+   tagline would vanish completely.
+
+   36px ceiling, not 50px. The standard band holds ONE line at 46px and stands
+   77px tall; this one holds TWO. At 50px it would be 138px — visibly a
+   different component. At 36px with 1.08 leading it comes to about 104px,
+   which reads as the same band. Smaller starts making the headline look like
+   body copy. */
+/* The global h1-h4 rule carries margin-bottom: 0.4rem !important — about
+   6.4px — and !important beats the inline margin: 0 on the element. Inside the
+   navy band that lands as unexplained space under the last line, which no
+   amount of trimming the band's own padding could remove. Zeroed here.
+
+   Size restored to the site standard, clamp(32px, 4.5vw, 46px). It had been
+   shrunk to 31px in an attempt to keep the two-line band as short as the
+   single-line bands elsewhere — which made the homepage type visibly smaller
+   than every other page. The band is simply taller instead; two lines need
+   the room. */
+main #rpp-tagline {
+  margin-bottom: 0 !important;
+}
+main #rpp-tagline .rpp-tagline-line-v2 {
+  font-size: clamp(32px, 4.5vw, 46px) !important;
+  line-height: 1.12 !important;
+  color: #ffffff !important;
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-style: normal !important;
+  /* 500, not 700. The band weight is right for a page TITLE — "Executors,
+     Powers of Attorney & Trustees" is a label, and bold reads as authoritative
+     at that length. The homepage tagline is a full sentence across two lines,
+     and 700 at 46px puts so much ink on screen that it reads as heavy rather
+     than confident. 500 keeps the same size and presence with far less weight.
+
+     Letter-spacing opens slightly too: DM Sans tightens optically as weight
+     drops, and a touch of tracking keeps the line from feeling cramped. */
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* HERO HEIGHT IS CAPPED, NOT LEFT TO THE WINDOW.
+
+   Full-bleed means height is a function of viewport WIDTH: the same 4.08:1
+   band renders 471px tall at 1920px and keeps growing on wider monitors. The
+   image plus the tagline band was taking roughly 70% of the first screen, so
+   the funnel tiles — the page's actual navigation — started below the fold.
+
+   The height is now clamped and the image covers that box. Cropping is safe
+   here in a way it never was before: nothing is written over the picture any
+   more, so trimming it costs no legibility. Because the cap is always WIDER
+   than 4.08:1, cover trims top and bottom only — the couple on the left and
+   the sold sign on the right are never cut.
+
+   object-position sits slightly above centre to favour the truck and the
+   house over the empty foreground road.
+
+   Below 640px the cap is removed and the whole frame shows: at phone width a
+   fixed height would have to crop the sides, which is exactly the mistake the
+   stacked layout was built to avoid. */
+.rpp-hero-img {
+  height: clamp(200px, 24vw, 340px);
+  object-fit: cover;
+  object-position: center 42%;
+}
+@media (max-width: 639px) {
+  .rpp-hero-img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* The homepage hero stacks at EVERY width now — image, then tagline on cream
+   beneath it — so the mobile-only overlay overrides that used to live here are
+   gone. See RPPHomeV3.tsx: the layout is plain flow, no absolute positioning,
+   no scrim, nothing left to override.
+
+   Worth knowing before anyone reintroduces an overlay: text on the photograph
+   needs a wash, the wash has to match the crop, and object-fit: cover crops
+   differently at every viewport width. Every hero legibility bug on this site
+   came from that combination. */
+
+.rpp-funnel-heading {
+  color: #272421 !important;
+}
+a[href="/afh-club"] h3.afh-club-heading {
+  font-size: 90px !important;
+  line-height: 1.12 !important;
+}
+
+@media (max-width: 640px) {
+  /* Mobile hero crop is much narrower/taller than desktop, so a centered
+     crop lands almost entirely inside the photo's bright center glow.
+     Shift left to reveal more of the scenic content on the sides. */
+  #rpp-hero-image {
+    object-position: 34% center !important;
+  }
+}
+
+@media (max-width: 640px) {
+  a[href="/afh-club"] h3.afh-club-heading {
+    font-size: 48px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  a[href="/cost-of-care-calculator"] h3.coc-heading {
+    font-size: 40px !important;
+    margin: 0 0 28px !important;
+  }
+}
+a[href="/cost-of-care-calculator"] h3.coc-heading {
+  font-size: 40px !important;
+  font-weight: 900 !important;
+  line-height: 1.1 !important;
+  margin: 0 0 20px !important;
+}
+
+@media (max-width: 640px) {
+  a[href="/cost-of-care-calculator"] h3.coc-heading {
+    font-size: 24px !important;
+    margin: 0 0 16px !important;
+  }
+}
+
+/* Direct Answer support labels — final override after sitewide accessibility rules */
+main .rpp-direct-answer-steps .rpp-direct-answer-step .rpp-direct-answer-step-label {
+  color: #6b1b22 !important;
+  display: block !important;
+  font-family: Georgia, serif !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  line-height: 1.12 !important;
+  margin-bottom: 8px !important;
+}
+
+@media (min-width: 640px) {
+  main .rpp-direct-answer-steps .rpp-direct-answer-step + .rpp-direct-answer-step {
+    border-left: 1px solid #d4b7b9 !important;
+    padding-left: 1.25rem !important;
+  }
+}
+/* FIX: .gold-cta's underline animation was written to only trigger when
+   nested inside a separately-hovered <a> or .group (like the big tile
+   links elsewhere on the site). In ProviderTile, the Learn More button
+   IS the <a> itself, not nested inside one, so that rule never matched.
+   This adds a direct self-hover version so it animates on its own. */
+.gold-cta:hover::after {
+  transform: scaleX(1) !important;
+}
+/* Thicker, easier-to-grab scrollbar for the ProviderTile bio panel */
+.rpp-provider-bio-scroll::-webkit-scrollbar {
+  width: 16px;
+}
+.rpp-provider-bio-scroll::-webkit-scrollbar-track {
+  background: #f0ede4;
+  border-radius: 8px;
+}
+.rpp-provider-bio-scroll::-webkit-scrollbar-thumb {
+  background: #a0222c;
+  border-radius: 8px;
+  border: 4px solid #f0ede4;
+}
+.rpp-provider-bio-scroll::-webkit-scrollbar-thumb:hover {
+  background: #7f1d1d;
+}
+.rpp-provider-bio-scroll {
+  scrollbar-width: auto;
+  scrollbar-color: #a0222c #f0ede4;
+}
+
+/* Search page H1 — a separate global h1 accessibility-floor rule earlier
+   in this file was silently overriding this page's intended heading size
+   until it was changed to no longer use !important. This override is kept
+   for extra certainty on this specific page. */
+html body main h1.search-page-h1,
+main h1.search-page-h1,
+h1.search-page-h1 {
+  font-size: clamp(30px, 4vw, 44px) !important;
+  line-height: 1.15 !important;
+}
+
+/* AFH Listings H1 — this heading has been reported as rendering far
+   smaller than intended despite a correct inline style. Rather than
+   continue relying on inline-style precedence (which has not reliably
+   held on this specific page), force it directly with a dedicated
+   class + !important, mirroring the search-page-h1 fix above. */
+html body main h1.afh-listings-h1,
+main h1.afh-listings-h1,
+h1.afh-listings-h1 {
+  font-size: clamp(28px, 4.5vw, 44px) !important;
+  line-height: 1.2 !important;
+}
+
+/* AFH Club homepage tile eyebrow label — fresh class + rule (previous
+   .afh-club-eyebrow version removed entirely, replaced under a new
+   class name, as an attempt to break a suspected stuck preview cache
+   tied to the old selector). */
+html body main p.afh-eyebrow-label-v2.afh-eyebrow-label-v2,
+main p.afh-eyebrow-label-v2.afh-eyebrow-label-v2,
+p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+/* ============================================================
+   Real Property Planning — page width, final
+   REPLACES sections 2 and 3 of rpp-ultrawide-layout.css.
+   Keep section 1 (the max-w scale bug) and section 4 (prose cap)
+   from that file — they are still correct.
+
+   Measured: ultrawide viewport = 3440px.
+   At the current 1088px content width that is 32% of the screen,
+   which is why it reads as half-empty. On a 15" at ~1440 the same
+   column is 76%, which should look fine — so if it looks wrong
+   there too, send me that window.innerWidth and I will adjust.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. PAGE SHELL — only bites on very wide screens
+
+   No effect below 1600px. Above it, the whole page (header, hero,
+   content, footer) shares one edge instead of the bars running to
+   3440 while content sits at 1088.
+   ------------------------------------------------------------ */
+
+@media (min-width: 1600px) {
+  #root {
+    max-width: 2100px;
+    margin-inline: auto;
+  }
+
+  /* Fixed and sticky elements are positioned against the viewport,
+     not #root, so they ignore the cap above unless pulled in. */
+  header[class*="fixed"],
+  header[class*="sticky"],
+  [class*="SiteBottomNav"],
+  [class*="site-bottom-nav"] {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 2100px !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   2. SECTIONS SCALE WITH THE VIEWPORT
+
+   The core change. Content columns stop parking at a fixed 1088px
+   and instead take 90% of the available width up to a 1600px cap.
+
+        viewport 1440  ->  1296px  (was 1088)
+        viewport 1512  ->  1360px  (was 1088)
+        viewport 1920  ->  1600px  (was 1088)
+        viewport 3440  ->  1600px inside a 2100px shell
+
+   This is why a single fixed breakpoint could not fix both
+   monitors: the problem is proportional, so the answer has to be
+   proportional too.
+   ------------------------------------------------------------ */
+
+@media (min-width: 1280px) {
+  main > section > .container,
+  main .max-w-2xl,
+  main .max-w-3xl,
+  main .max-w-4xl,
+  main .max-w-5xl,
+  main .max-w-6xl {
+    max-width: min(1600px, 90vw) !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   3. PROSE STAYS READABLE
+
+   Sections get wider; running text does not. 75ch at 18px DM Sans
+   is roughly 780px. Without this, widening the page would push
+   paragraphs past 130 characters per line — worse to read than
+   what you have now, and worst for the readers this site is for.
+
+   Grids, tiles, and cards are exempt: they are scanned, not read.
+   ------------------------------------------------------------ */
+
+@media (min-width: 1280px) {
+  main p,
+  main li {
+    max-width: 75ch;
+  }
+
+  main [class*="text-center"] p,
+  main p[class*="text-center"] {
+    max-width: 68ch;
+    margin-inline: auto;
+  }
+
+  [class*="tile"] p,
+  [class*="tile"] li,
+  [class*="card"] p,
+  [class*="card"] li,
+  [class*="Card"] p,
+  td p,
+  th p {
+    max-width: none;
+  }
+}
+/* Funnel heading — match the DM Sans used on the four choice tiles
+   instead of inheriting the serif heading stack. */
+.rpp-funnel-heading.rpp-funnel-heading {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  letter-spacing: -0.01em !important;
+}
+
+
+/* ============================================================
+   Real Property Planning — text contrast, site-wide
+   Paste at the BOTTOM of src/index.css.
+
+   Target: WCAG 2.1 AA — 4.5:1 for body text, 3:1 for large text
+   (24px+, or 19px+ bold). On your cream background (#F7F5F2) the
+   lightest grey that passes 4.5:1 is about #737373. Anything
+   lighter fails, no matter how good it looks.
+
+   This fixes causes rather than instances. Most of it works by
+   correcting the palette tokens, so every component using them is
+   fixed at once without another round of !important.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. THE ROOT CAUSE — two palette tokens fail at source
+
+   These are defined in @layer base and used across the site.
+   Darkening them here fixes every consumer in one edit.
+
+        --warm-gray    30 8% 55%  = #968D85 = 2.9:1  FAIL
+        --slate-light  30 5% 48%  = #827D78 = 3.6:1  FAIL
+
+   New values keep the same hue and warmth, only darker:
+
+        --warm-gray    30 8% 34%  = #5D564F = 7.2:1  PASS
+        --slate-light  30 5% 32%  = #56524E = 7.6:1  PASS
+   ------------------------------------------------------------ */
+
+:root {
+  --warm-gray: 30 8% 34%;
+  --slate-light: 30 5% 32%;
+  --muted-foreground: 220 20% 28%;
+}
+
+
+/* ------------------------------------------------------------
+   2. THE EMPTY RULE
+
+   index.css contains a selector for inline grey hex values whose
+   declaration block is empty — the comment describes a fix that
+   was never written. Every inline grey it was meant to catch has
+   been rendering unchanged. This is that rule, completed.
+
+   Covers the #6x/#7x/#8x/#9x/#Ax/#Bx/#Cx ranges, which is where
+   nearly every "looks light grey" value lands.
+   ------------------------------------------------------------ */
+
+[style*="color: #9"], [style*="color:#9"],
+[style*="color: #a"], [style*="color:#a"],
+[style*="color: #A"], [style*="color:#A"],
+[style*="color: #b"], [style*="color:#b"],
+[style*="color: #B"], [style*="color:#B"],
+[style*="color: #c"], [style*="color:#c"],
+[style*="color: #C"], [style*="color:#C"],
+[style*="color: #d"], [style*="color:#d"],
+[style*="color: #D"], [style*="color:#D"] {
+  color: #3D3833 !important;
+}
+
+/* Mid greys — #6x, #7x, #8x. Some of these pass and some do not,
+   so they are clamped rather than replaced wholesale. */
+[style*="color: #8"], [style*="color:#8"],
+[style*="color: #7"], [style*="color:#7"] {
+  color: #4A443E !important;
+}
+
+/* Do NOT catch inline colors on dark surfaces — light text there
+   is correct and must stay light. */
+[class*="bg-navy"] [style*="color: #"],
+[class*="bg-primary"] [style*="color: #"],
+[class*="bg-foreground"] [style*="color: #"],
+.calc-page-hero [style*="color: #"] {
+  color: revert !important;
+}
+
+
+/* ------------------------------------------------------------
+   3. TAILWIND GREY PALETTE — full coverage
+
+   The existing rules cover gray/neutral/slate/zinc at the 300–500
+   steps, but only inside `main`, and they miss the `stone` family
+   entirely. This covers all five families, all light steps,
+   everywhere on the page.
+   ------------------------------------------------------------ */
+
+[class*="text-gray-2"],   [class*="text-gray-3"],   [class*="text-gray-4"],   [class*="text-gray-5"],
+[class*="text-slate-2"],  [class*="text-slate-3"],  [class*="text-slate-4"],  [class*="text-slate-5"],
+[class*="text-zinc-2"],   [class*="text-zinc-3"],   [class*="text-zinc-4"],   [class*="text-zinc-5"],
+[class*="text-stone-2"],  [class*="text-stone-3"],  [class*="text-stone-4"],  [class*="text-stone-5"],
+[class*="text-neutral-2"],[class*="text-neutral-3"],[class*="text-neutral-4"],[class*="text-neutral-5"] {
+  color: #3D3833 !important;
+}
+
+/* On dark surfaces, lift instead of darken. */
+[class*="bg-navy"] [class*="text-gray-"],
+[class*="bg-navy"] [class*="text-slate-"],
+[class*="bg-navy"] [class*="text-stone-"],
+[class*="bg-navy"] [class*="text-zinc-"],
+[class*="bg-navy"] [class*="text-neutral-"],
+[class*="bg-primary"] [class*="text-gray-"],
+[class*="bg-primary"] [class*="text-slate-"],
+[class*="bg-primary"] [class*="text-stone-"],
+[class*="bg-primary"] [class*="text-zinc-"],
+[class*="bg-primary"] [class*="text-neutral-"],
+[class*="bg-foreground"] [class*="text-gray-"] {
+  color: #F3F4F6 !important;
+}
+
+
+/* ------------------------------------------------------------
+   4. OPACITY — the quiet contrast killer
+
+   Text at opacity 0.6 on cream looks like a valid grey but
+   measures far below 4.5:1, and it defeats color-only fixes
+   because the computed color is still "correct".
+
+   Tailwind alpha modifiers (text-foreground/60) and opacity-*
+   utilities on text elements are both neutralised.
+   ------------------------------------------------------------ */
+
+p[class*="opacity-"], span[class*="opacity-"],
+li[class*="opacity-"], h1[class*="opacity-"], h2[class*="opacity-"],
+h3[class*="opacity-"], h4[class*="opacity-"], a[class*="opacity-"],
+p[class*="/50"], p[class*="/60"], p[class*="/70"], p[class*="/80"],
+span[class*="/50"], span[class*="/60"], span[class*="/70"], span[class*="/80"],
+li[class*="/50"], li[class*="/60"], li[class*="/70"], li[class*="/80"] {
+  opacity: 1 !important;
+}
+
+/* Decorative elements keep their opacity — this is text only. */
+img[class*="opacity-"], svg[class*="opacity-"], hr[class*="opacity-"],
+[aria-hidden="true"][class*="opacity-"] {
+  opacity: revert !important;
+}
+
+
+/* ------------------------------------------------------------
+   5. STEPPER / WIZARD — the pattern in your screenshot
+
+   Progress indicators conventionally grey out future steps. That
+   convention fails AA, and on this site it means a senior reading
+   "Your guidance" as step 3 may not be able to see it at all.
+
+   Inactive steps stay visually secondary through weight and the
+   circle treatment rather than through unreadable text.
+   ------------------------------------------------------------ */
+
+[class*="step"] [class*="text-gray"],
+[class*="step"] [class*="text-muted"],
+[class*="stepper"] span,
+[class*="wizard"] [class*="text-muted"],
+[aria-current="step"] ~ * {
+  color: #4A443E !important;
+}
+
+
+/* ------------------------------------------------------------
+   6. PLACEHOLDER AND HELPER TEXT
+   ------------------------------------------------------------ */
+
+::placeholder {
+  color: #5B5753 !important;
+  opacity: 1 !important;
+}
+
+small,
+.helper-text,
+[class*="helper"],
+[class*="hint-text"],
+figcaption {
+  color: #4A443E !important;
+  opacity: 1 !important;
+}
+
+
+/* ------------------------------------------------------------
+   7. SAFETY NET
+
+   Any remaining light grey, wherever it came from. Deliberately
+   last so the more specific rules above win where they apply.
+   ------------------------------------------------------------ */
+
+main [style*="rgb(15"], main [style*="rgb(16"], main [style*="rgb(17"],
+main [style*="rgb(18"], main [style*="rgb(19"], main [style*="rgb(20"],
+main [style*="rgba(15"], main [style*="rgba(16"], main [style*="rgba(17"] {
+  color: #3D3833 !important;
+}
+
+
+/* ============================================================
+   Real Property Planning — font weight, site-wide
+   Paste at the BOTTOM of src/index.css, after the contrast file.
+
+   Thin text is a legibility problem in its own right, separate
+   from colour. A 400-weight stroke at 18px on a cream background
+   has less perceived contrast than a 600-weight stroke in the
+   same colour, because there is simply less ink on the page.
+   For readers with reduced vision this matters as much as the
+   colour value does.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. THE RULE THAT WAS FORCING THIN TEXT
+
+   index.css contains this, inside the card accessibility block:
+
+       :where([class*="rounded-"][class*="bg-card"], ...)
+         :where(p, li, span) { font-weight: 400 !important; }
+
+   It clamps EVERY span inside any card-like container to 400 —
+   including CTA labels, which are spans. That is why "Learn more"
+   renders thin even though .gold-cta asks for 900.
+
+   The evidence it has been fought before: .gold-cta carries
+   `font-weight: 900 !important` AND a -webkit-text-stroke hack
+   further down the file. The stroke was a workaround for this
+   rule rather than a fix for it.
+
+   Body copy stays at a comfortable reading weight; anything that
+   asked to be bold is allowed to be bold again.
+   ------------------------------------------------------------ */
+
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d
+  )
+  :where(p, li) {
+  font-weight: 500 !important;
+}
+
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d
+  )
+  :where(span, a, strong, b) {
+  font-weight: revert-layer !important;
+}
+
+
+/* ------------------------------------------------------------
+   2. BASE WEIGHT
+
+   body was set to 420. DM Sans at 420 is a hairline by the
+   standards of an audience with reduced vision. 500 is still a
+   normal-looking body weight, just with enough stroke to hold up
+   on a warm background.
+   ------------------------------------------------------------ */
+
+body {
+  font-weight: 500;
+}
+
+body p,
+body li,
+body td,
+body dd,
+body dt {
+  font-weight: 500;
+}
+
+
+/* ------------------------------------------------------------
+   3. LINKS AND CALLS TO ACTION
+
+   These are the things people need to find on the page. They
+   should be the heaviest text in the content area, not the
+   lightest.
+   ------------------------------------------------------------ */
+
+.gold-cta,
+.article-resource-btn,
+a[class*="cta"],
+a[class*="btn"],
+button,
+[role="button"],
+.rpp-answer-cta {
+  font-weight: 700 !important;
+}
+
+/* Inline links inside running text — heavier than the prose
+   around them so they are findable without relying on colour. */
+main p a,
+main li a {
+  font-weight: 600 !important;
+}
+
+/* The text-stroke hack is no longer needed now that the cause is
+   fixed. Faux-bolding blurs letterforms, which hurts exactly the
+   readers it was meant to help. */
+span.gold-cta {
+  -webkit-text-stroke: 0 !important;
+  text-shadow: none !important;
+}
+
+
+/* ------------------------------------------------------------
+   4. HEADINGS
+
+   Cormorant Garamond at 600 is thin at display sizes. DM Sans
+   headings hold up better at 700.
+   ------------------------------------------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+
+/* ------------------------------------------------------------
+   5. NOTHING BELOW 400, ANYWHERE
+
+   Catches light/thin utility classes and inline weights.
+   ------------------------------------------------------------ */
+
+[class*="font-light"],
+[class*="font-thin"],
+[class*="font-extralight"],
+[style*="font-weight: 100"],
+[style*="font-weight: 200"],
+[style*="font-weight: 300"],
+[style*="font-weight:100"],
+[style*="font-weight:200"],
+[style*="font-weight:300"] {
+  font-weight: 500 !important;
+}
+
+
+/* ------------------------------------------------------------
+   6. CHECK THIS IN index.html
+
+   None of the above works if the font file does not carry the
+   weights. Your Google Fonts <link> must request them.
+
+   If it looks like this — only 400 and 700 —
+
+       family=DM+Sans:wght@400;700
+
+   the browser will FAKE 500 and 600 by smearing the 400 outlines,
+   which looks muddy and is worse than the thin text you have now.
+
+   Change it to the variable range:
+
+       family=DM+Sans:ital,opsz,wght@0,9..40,100..1000
+
+   To verify, run this in the console:
+
+       document.fonts.check('500 18px "DM Sans"')
+
+   true  = the weight is really available
+   false = the browser is synthesising it, and the link needs fixing
+   ------------------------------------------------------------ */
+
+/* ============================================================
+   Real Property Planning — dark surface exemption
+   Paste at the BOTTOM of src/index.css, AFTER the contrast block.
+
+   THE STRUCTURAL PROBLEM
+
+   Every contrast rule in this codebase — mine included — forces dark
+   text on the assumption of a light background, then hand-lists the
+   exceptions:
+
+       [class*="bg-navy"] .text-muted-foreground { color: #f3f4f6 }
+       [class*="bg-primary"] em { color: #f3f4f6 }
+       ...
+
+   That list has to be extended by hand for every dark surface on the
+   site. The teal AFH band is not navy or primary, so none of the
+   exceptions matched it: the heading was forced dark and the body
+   copy to a muted red, both on dark green.
+
+   The fix is to stop enumerating. Section 1 adds one class that any
+   dark section can carry. Section 2 covers the teal band today, so
+   the page is correct before the components are updated.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. THE GENERAL FIX
+
+   Add className="rpp-dark-surface" to any section with a dark
+   background. Everything inside it becomes light, and no future
+   contrast rule needs to know the colour exists.
+   ------------------------------------------------------------ */
+
+.rpp-dark-surface,
+.rpp-dark-surface p,
+.rpp-dark-surface li,
+.rpp-dark-surface span,
+.rpp-dark-surface h1,
+.rpp-dark-surface h2,
+.rpp-dark-surface h3,
+.rpp-dark-surface h4,
+.rpp-dark-surface h5,
+.rpp-dark-surface h6,
+.rpp-dark-surface em,
+.rpp-dark-surface strong,
+.rpp-dark-surface blockquote,
+.rpp-dark-surface dd,
+.rpp-dark-surface dt,
+.rpp-dark-surface [class*="text-muted"],
+.rpp-dark-surface [class*="text-gray"],
+.rpp-dark-surface [class*="text-slate"],
+.rpp-dark-surface [class*="text-stone"],
+.rpp-dark-surface [class*="text-gold"] {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Secondary copy inside a dark surface — held back without dropping
+   below AA on the darker greens and navies used on this site. */
+.rpp-dark-surface .rpp-dark-muted,
+.rpp-dark-surface [class*="text-muted-foreground"] {
+  color: #e2e8e7 !important;
+}
+
+/* Links keep a light tone rather than inheriting the burgundy set by
+   `main a:not(...) { color: #ca2b38 }`, which is unreadable on dark. */
+.rpp-dark-surface a:not([class*="bg-"]) {
+  color: #ffffff !important;
+  text-decoration-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Buttons sitting ON a dark surface keep their own colours — these are
+   the white and outlined pills in the AFH band, which already read
+   correctly and must not be turned white-on-white. */
+.rpp-dark-surface [class*="bg-white"],
+.rpp-dark-surface [class*="bg-background"],
+.rpp-dark-surface button[class*="bg-"],
+.rpp-dark-surface a[class*="bg-"] {
+  color: revert !important;
+}
+.rpp-dark-surface [class*="bg-white"] *,
+.rpp-dark-surface [class*="bg-background"] * {
+  color: revert !important;
+}
+
+
+/* ------------------------------------------------------------
+   2. TEAL BANDS — covers the live page before components change
+
+   Matches the teal values already used in this codebase, including
+   the #0d9488 tile outline on the housing options page and the
+   #0f4c4a used elsewhere. Remove this section once the sections
+   themselves carry .rpp-dark-surface.
+   ------------------------------------------------------------ */
+
+[class*="bg-teal"],
+[class*="bg-[#0d9488]"],
+[class*="bg-[#0f4c4a]"],
+[class*="bg-[#14524f]"],
+[class*="bg-[#116"],
+[style*="background: #0d9488"],
+[style*="background-color: #0d9488"] {
+  --rpp-on-dark: 1;
+}
+
+[class*="bg-teal"] p, [class*="bg-teal"] h1, [class*="bg-teal"] h2,
+[class*="bg-teal"] h3, [class*="bg-teal"] h4, [class*="bg-teal"] li,
+[class*="bg-teal"] span:not([class*="bg-"]),
+[class*="bg-[#0d9488]"] p, [class*="bg-[#0d9488]"] h1, [class*="bg-[#0d9488]"] h2,
+[class*="bg-[#0d9488]"] h3, [class*="bg-[#0d9488]"] h4, [class*="bg-[#0d9488]"] li,
+[class*="bg-[#0d9488]"] span:not([class*="bg-"]),
+[class*="bg-[#0f4c4a]"] p, [class*="bg-[#0f4c4a]"] h1, [class*="bg-[#0f4c4a]"] h2,
+[class*="bg-[#0f4c4a]"] h3, [class*="bg-[#0f4c4a]"] h4, [class*="bg-[#0f4c4a]"] li,
+[class*="bg-[#0f4c4a]"] span:not([class*="bg-"]) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Protect the white and outlined buttons that sit on those bands. */
+[class*="bg-teal"] [class*="bg-white"],
+[class*="bg-teal"] [class*="bg-white"] *,
+[class*="bg-[#0d9488]"] [class*="bg-white"],
+[class*="bg-[#0d9488]"] [class*="bg-white"] *,
+[class*="bg-[#0f4c4a]"] [class*="bg-white"],
+[class*="bg-[#0f4c4a]"] [class*="bg-white"] * {
+  color: revert !important;
+}
+
+/* ============================================================
+   CTA BUTTONS — one appearance, everywhere
+   ============================================================
+
+   ROOT CAUSE THIS FIXES
+   The card-contrast block above forces `color: #2f2b27 !important`
+   on every p/li/span inside a rounded card. Button labels are
+   spans, and most buttons sit inside cards, so their labels were
+   being repainted dark — on a dark fill. Inline styles cannot win
+   against !important, which is why buttons that explicitly set
+   white still rendered unreadable.
+
+   Being last in the file, and matching the same !important, these
+   rules win on source order.
+
+   TWO TREATMENTS, DELIBERATELY:
+
+     Filled burgundy + white  — real calls to action. This is the
+                                thing you want the reader to do.
+
+     Dark red text + arrow    — .gold-cta and .article-resource-btn,
+                                which sit at the foot of cards whose
+                                whole surface is already a link. If
+                                every card carries a filled button,
+                                none of them reads as more important
+                                than the others.
+   ============================================================ */
+
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main .rpp-answer-cta {
+  background-color: #6b1b22 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+/* Labels and arrows inside those buttons — this is the declaration
+   the card rule was overriding. */
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]) :where(span, p, li, strong, em),
+main .rpp-answer-cta :where(span, p, li, strong, em) {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+main a[class*="btn"]:not([class*="bg-white"]):hover,
+main a[class*="cta"]:not([class*="bg-white"]):hover,
+main button[class*="btn"]:not([class*="bg-white"]):hover,
+main button[class*="cta"]:not([class*="bg-white"]):hover,
+main .rpp-answer-cta:hover {
+  background-color: #501419 !important;
+}
+
+
+/* ------------------------------------------------------------
+   IN-CARD LINKS — .gold-cta and .article-resource-btn
+
+   These are not buttons. They sit at the foot of cards whose whole
+   surface is already a link ("Learn More", "Find a Move Manager").
+   Filling them made every card shout equally, which is the same as
+   none of them shouting.
+
+   Dark red carries 10.9:1 on white. The arrow and the underline on
+   hover both signal "link" without relying on colour, which colour
+   alone would fail.
+   ------------------------------------------------------------ */
+
+main .gold-cta,
+main .gold-cta *,
+main .article-resource-btn,
+main .article-resource-btn * {
+  background: none !important;
+  background-color: transparent !important;
+  color: #6b1b22 !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  min-height: 0 !important;
+  text-decoration: none !important;
+  align-items: center;
+  gap: 5px;
+}
+
+main a:hover .gold-cta,
+main .gold-cta:hover,
+main .article-resource-btn:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+  /* The toast container renders as <section aria-label="Notifications"> as the
+   first child of #root. The global `section { padding: 32px }` rule above
+   gives it 64px of vertical padding even when empty, which pushed the sticky
+   header down the page on every route. It has no visual content of its own,
+   so it should occupy nothing until a toast appears. */
+section[aria-label="Notifications"],
+section[aria-label*="Notification"],
+section:has(> [data-sonner-toaster]) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Three selectors, because the exact-match one alone proved brittle. Sonner
+   builds that label as `${containerAriaLabel} ${hotkeyLabel}`, so a version
+   bump can turn "Notifications" into "Notifications alt+T" — at which point
+   `[aria-label="Notifications"]` silently stops matching and the 64px gap
+   comes back with nothing in the code having changed. That is almost
+   certainly what happened here.
+
+   The substring selector survives any suffix. The :has() selector survives
+   the label being renamed or translated entirely, since it matches on the
+   toaster list actually being inside. Between them this should not regress
+   again. */
+
+
+
+/* ============================================================
+   CANONICAL HERO BAND — overrides the two .rpp-hero-band-text
+   blocks around line 3280, which force uppercase DM Sans 900 with
+   !important and would repaint the component's new styles. Being
+   later in the file at equal specificity-with-!important, these
+   win. If the band design changes again, change HeroBandTitle.tsx
+   AND this block, or the two will disagree exactly the way the
+   site's bands disagreed before this existed.
+
+   H1 bands: DM Sans 500, Title Case — all-caps at heading length
+   was dropped per the typography review; capitals across a full
+   sentence are measurably harder for older readers. The site runs on
+   one family, so hierarchy here comes from size and weight rather
+   than a change of face. Compact non-H1 bands stay small-caps DM
+   Sans, the one place the review permits caps.
+   ============================================================ */
+h1.rpp-hero-band-text.rpp-hero-band-text {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(32px, 4.5vw, 46px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+}
+
+div.rpp-hero-band-text.rpp-hero-band-text,
+span.rpp-hero-band-text.rpp-hero-band-text {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.16em !important;
+}
+
+
+/* ============================================================
+   MARCHING ANTS — one weight, every button
+   ============================================================
+
+   Two things at once:
+
+   1. THINNER DASHES. The original ants (.marquee-hover around line
+      652 and .interior-tile around line 1059) draw a 3px-thick ring
+      with 10px dashes. These overrides thin every instance to a
+      1.5px ring with 8px dashes — same idea, half the weight.
+
+   2. EVERY CANONICAL BUTTON GETS THE EFFECT. The ants previously
+      existed only where a tile's class opted in, so some clickable
+      things marched and most didn't. The button rules below attach
+      the same ring to the canonical CTA set (anchors and buttons
+      carrying a btn/cta class, .rpp-answer-cta, .rpp-coc-cta), so
+      hovering ANY standard button marches.
+
+      On filled burgundy buttons the ring is WHITE — a burgundy ring
+      on a burgundy fill would be invisible, which is why the colour
+      is overridden per group rather than inherited.
+
+   The dash pattern is 8px on / 8px off = a 16px period, and the
+   keyframes below shift by exactly 16px so the loop is seamless.
+   The original keyframes shift 20px and would stutter against this
+   pattern — that is why the hover rules here name the new animation
+   explicitly. If the dash sizes ever change, change the keyframe
+   offsets to match the new period or the march will jitter.
+   ============================================================ */
+
+/* --- 1. Thin the two existing implementations --- */
+.marquee-hover.marquee-hover::before,
+.interior-tile.interior-tile::before {
+  padding: 1.5px;
+  background-image:
+    repeating-linear-gradient(90deg, var(--marquee-color, #7f1d1d) 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, var(--marquee-color, #7f1d1d) 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(90deg, var(--marquee-color, #7f1d1d) 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, var(--marquee-color, #7f1d1d) 0 8px, transparent 8px 16px);
+  background-size:
+    16px 1.5px,
+    1.5px 16px,
+    16px 1.5px,
+    1.5px 16px;
+}
+.marquee-hover.marquee-hover:hover::before,
+.interior-tile.interior-tile:hover::before {
+  animation: rpp-ants-fine 0.55s linear infinite;
+}
+
+/* --- 2. The canonical button set --- */
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]),
+main .rpp-answer-cta,
+main .rpp-coc-cta {
+  position: relative;
+  isolation: isolate;
+}
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"])::before,
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])::before,
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"])::before,
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])::before,
+main .rpp-answer-cta::before,
+main .rpp-coc-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 30;
+  transition: opacity 0.2s ease;
+  background-image:
+    repeating-linear-gradient(90deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(90deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, #ffffff 0 8px, transparent 8px 16px);
+  background-position:
+    0 0,
+    0 0,
+    0 100%,
+    100% 0;
+  background-size:
+    16px 1.5px,
+    1.5px 16px,
+    16px 1.5px,
+    1.5px 16px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::before,
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::before,
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::before,
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::before,
+main .rpp-answer-cta:hover::before,
+main .rpp-coc-cta:hover::before {
+  opacity: 1;
+  animation: rpp-ants-fine 0.55s linear infinite;
+}
+
+@keyframes rpp-ants-fine {
+  to {
+    background-position:
+      16px 0,
+      0 16px,
+      -16px 100%,
+      100% -16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main a[class*="btn"]::before,
+  main a[class*="cta"]::before,
+  main button[class*="btn"]::before,
+  main button[class*="cta"]::before,
+  main .rpp-answer-cta::before,
+  main .rpp-coc-cta::before,
+  .marquee-hover.marquee-hover::before,
+  .interior-tile.interior-tile::before {
+    animation: none !important;
+  }
+}
+
+
+/* ============================================================
+   CTA ARROW — one arrow, every button, drawn by CSS
+   ============================================================
+
+   Every canonical button gets a right-pointing arrow whose shaft
+   LENGTHENS on hover. The arrow is a masked ::after painted in
+   currentColor, so it needs no markup, no SVG in any component,
+   and no per-page wiring — which is why some buttons had arrows
+   and most didn't: the old arrows were hand-placed markup.
+
+   Mechanism: the ::after carries a fixed 24x16 arrow image as a
+   MASK anchored to its RIGHT edge. At rest the element is 13px
+   wide, showing the head and a short shaft; on hover it widens to
+   23px, revealing shaft — the head advances and the tail extends.
+   The ants effect owns ::before on these same elements; this owns
+   ::after. Both pseudo slots are now spoken for on canonical
+   buttons — any future decoration needs a real element.
+
+   The "Calculate My Costs" string used to END with a "→" glyph in
+   all eight locale files; those were stripped in the same change,
+   or this arrow would have doubled it. Do not re-add glyph arrows
+   to button strings — the CSS supplies the arrow now.
+   ============================================================ */
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"])::after,
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])::after,
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"])::after,
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])::after,
+main .rpp-answer-cta::after,
+main .rpp-coc-cta::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 15px;
+  margin-left: 9px;
+  flex: none;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
+  transition: width 0.22s ease;
+}
+main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::after,
+main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::after,
+main button[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::after,
+main button[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::after,
+main .rpp-answer-cta:hover::after,
+main .rpp-coc-cta:hover::after {
+  width: 23px;
+}
+@media (prefers-reduced-motion: reduce) {
+  main a[class*="btn"]::after,
+  main a[class*="cta"]::after,
+  main button[class*="btn"]::after,
+  main button[class*="cta"]::after,
+  main .rpp-answer-cta::after,
+  main .rpp-coc-cta::after {
+    transition: none !important;
+  }
+}
+/* ============================================================
+   CTA ARROW + ANTS — homepage components, enrolled by name
+   ============================================================
+
+   The funnel tiles, the "Read Guide" pills, the "Browse all
+   resources" button and the AFH Club strip are hand-built with
+   their own classes and deliberate category colours, so they can
+   NOT be enrolled by adding btn/cta to their class names — the
+   canonical block would repaint them burgundy. Instead their
+   classes are named here and given the same ::after arrow (and,
+   for the browse button, the same ::before ants).
+
+   Their hand-placed chevrons and "→" glyphs were removed from the
+   markup and locale strings in the same change — re-adding any of
+   those doubles the arrow.
+
+   Hover triggers differ per component because the arrow sits on a
+   child span while the hover target is the whole tile: the
+   ancestor's :hover drives the child's ::after.
+   ============================================================ */
+.rpp-funnel-cta::after,
+.rpp-pr-card-cta.rpp-pr-card-cta::after,
+.rpp-pr-browse.rpp-pr-browse::after,
+.rpp-afh-strip-cta.rpp-afh-strip-cta::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 15px;
+  margin-left: 9px;
+  flex: none;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
+  transition: width 0.22s ease;
+}
+.marquee-hover:hover .rpp-funnel-cta::after,
+.rpp-pr-card:hover .rpp-pr-card-cta.rpp-pr-card-cta::after,
+.rpp-pr-browse.rpp-pr-browse:hover::after,
+.rpp-afh-strip:hover .rpp-afh-strip-cta.rpp-afh-strip-cta::after {
+  width: 23px;
+}
+
+/* Browse-all also joins the ants: it is a solid dark pill with no
+   marquee class of its own. White ring, same fine pattern. */
+.rpp-pr-browse.rpp-pr-browse {
+  position: relative;
+  isolation: isolate;
+}
+.rpp-pr-browse.rpp-pr-browse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 30;
+  transition: opacity 0.2s ease;
+  background-image:
+    repeating-linear-gradient(90deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(90deg, #ffffff 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(180deg, #ffffff 0 8px, transparent 8px 16px);
+  background-position: 0 0, 0 0, 0 100%, 100% 0;
+  background-size: 16px 1.5px, 1.5px 16px, 16px 1.5px, 1.5px 16px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.rpp-pr-browse.rpp-pr-browse:hover::before {
+  opacity: 1;
+  animation: rpp-ants-fine 0.55s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rpp-funnel-cta::after,
+  .rpp-pr-card-cta::after,
+  .rpp-pr-browse::after,
+  .rpp-afh-strip-cta::after {
+    transition: none !important;
+  }
+  .rpp-pr-browse::before {
+    animation: none !important;
+  }
+}
+
+
+
+/* ============================================================
+   COMPONENT ARROWS — layout-stable variant
+   ============================================================
+
+   Overrides the component-arrow block above. The width animation
+   (13px -> 23px) works on standalone buttons, but inside the
+   fixed-width tile footers it CHANGED THE LAYOUT on hover: the
+   arrow widened the title span, the title wrapped to a second
+   line, the footer grew, and the whole tile changed size. That is
+   exactly the effect the site should never have.
+
+   Here the arrow's box is a CONSTANT 23px in both states, so
+   hovering can never reflow anything. The arrow itself animates by
+   mask-size — small at rest, full-size on hover — growing in place
+   within its reserved box. Same gesture, zero layout shift.
+
+   The canonical BUTTON arrows keep the width animation: a
+   standalone button widening by 10px absorbs its own growth. If a
+   button is ever placed somewhere its growth wraps text, move its
+   class into this block instead.
+   ============================================================ */
+.rpp-funnel-cta::after,
+.rpp-pr-card-cta.rpp-pr-card-cta::after,
+.rpp-pr-browse.rpp-pr-browse::after,
+.rpp-afh-strip-cta.rpp-afh-strip-cta::after {
+  width: 23px;
+  -webkit-mask-size: 16px 10px;
+  mask-size: 16px 10px;
+  transition: -webkit-mask-size 0.22s ease, mask-size 0.22s ease;
+}
+.marquee-hover:hover .rpp-funnel-cta::after,
+.rpp-pr-card:hover .rpp-pr-card-cta.rpp-pr-card-cta::after,
+.rpp-pr-browse.rpp-pr-browse:hover::after,
+.rpp-afh-strip:hover .rpp-afh-strip-cta.rpp-afh-strip-cta::after {
+  width: 23px;
+  -webkit-mask-size: 24px 15px;
+  mask-size: 24px 15px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rpp-funnel-cta::after,
+  .rpp-pr-card-cta::after,
+  .rpp-pr-browse::after,
+  .rpp-afh-strip-cta::after {
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+   HERO BAND HEIGHT — enforced
+   ============================================================
+
+   Bands were rendering at visibly different heights on different
+   pages despite identical component calls, and the interfering
+   rules were never fully traced. Rather than keep hunting, the
+   band wrapper now carries the rpp-hero-band class and its height
+   is PINNED here with !important — nothing page-side can vary it.
+
+   The values match the component's inline padding (12px / 14px,
+   the slim profile chosen in review). Change them in BOTH places
+   — HeroBandTitle.tsx and here — or they fight.
+
+   Section wrappers around bands on a few older pages (a bare
+   <section class="w-full overflow-hidden"> directly around the
+   band) were picking up the global 32px section padding, adding
+   invisible height outside the band itself. The :has() rule
+   zeroes exactly that pattern: a section whose DIRECT child is
+   the band. Deeper nestings (like the choice-flow container,
+   which needs its own padding) are untouched because the band is
+   not their direct child.
+   ============================================================ */
+.rpp-hero-band.rpp-hero-band {
+  padding: 8px 24px 10px !important;
+}
+main section:has(> .rpp-hero-band),
+main section:has(> h1.rpp-hero-band-text) {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+  
+
+/* ============================================================
+   HERO BAND — COMPACT VARIANT
+   ============================================================
+
+   The attorney family (seven pages) passes `compact` to
+   HeroBandTitle. That prop was destructured and never used, so
+   those bands rendered at the full H1 height — which is why that
+   family read as taller than the rest of the site. The prop is
+   wired now; these rules enforce it.
+
+   Placement is load-bearing. Both rules must stay AFTER:
+     - h1.rpp-hero-band-text.rpp-hero-band-text  (~line 4403)
+     - .rpp-hero-band.rpp-hero-band              (~line 4774)
+   They carry identical specificity to those, so later-in-file is
+   the only reason they win. Move them up and the full-size rules
+   take back over silently.
+
+   Values mirror HeroBandTitle.tsx exactly. Change BOTH or they
+   fight. Computed band height: 28px x 1.1 + 6 + 8 = ~45px at
+   desktop, ~40px once the clamp floors at 24px on narrow screens.
+
+   Compact is H1-only by design. The non-H1 bands in
+   AttorneyEducationalPage.tsx also pass `compact`, but they are
+   already 15px eyebrows and the component does not tag them, so
+   these selectors never reach them.
+   ============================================================ */
+.rpp-hero-band--compact.rpp-hero-band--compact {
+  padding: 6px 24px 8px !important;
+}
+
+h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(24px, 3vw, 28px) !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+}
+
+/* ============================================================
+   LOGO AS HOME BUTTON — affordance + hover
+   ============================================================
+
+   The mark in the top-left has always linked to "/", but nothing
+   communicated that: no tooltip, no hover state, and a screen
+   reader heard only the brand name. Three things now carry it —
+
+   1. aria-label on the Link (Header.tsx) says "go to the
+      homepage". The <img alt> was emptied so the name is not
+      announced twice. Do not put alt text back without removing
+      the aria-label.
+   2. title="Go to the homepage" — the native tooltip. Free, no
+      JS, and the one affordance that states the destination in
+      words rather than implying it.
+   3. The treatment below.
+
+   Hover is mouse-only, and this site's readers are largely on
+   tablets. So the weight is deliberately NOT all on hover: the
+   focus ring and the tooltip do the work hover cannot.
+
+   Doubled class selectors throughout — the global rules earlier
+   in this file repaint bare `a` with !important, and the Link
+   also carries inline styles. Placement at the end of the file
+   is what wins the ties.
+   ============================================================ */
+
+.rpp-logo-home.rpp-logo-home {
+  display: inline-block;
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The logo is a transparent PNG/WebP, so drop-shadow (which follows
+   the alpha channel) is correct here and box-shadow is not — a box
+   shadow would draw a rectangle around empty space. */
+.rpp-logo-home.rpp-logo-home img {
+  transition:
+    transform 300ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    filter 300ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.rpp-logo-home.rpp-logo-home:hover img,
+.rpp-logo-home.rpp-logo-home:focus-visible img {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 4px 10px hsl(355 45% 30% / 0.28));
+}
+
+.rpp-logo-home.rpp-logo-home:active img {
+  transform: translateY(0);
+  filter: drop-shadow(0 1px 3px hsl(355 45% 30% / 0.22));
+  transition-duration: 90ms;
+}
+
+/* NO UNDERLINE. A burgundy rule used to wipe out from the centre beneath the
+   mark on hover. It was removed because the logo already carries two burgundy
+   rules flanking the word PLANNING — adding a third horizontal line to signal
+   the same thing made the header busier, not clearer.
+
+   The obvious idea is to animate those existing rules instead. That is not
+   possible today: they are pixels inside rpp-logo-v9.webp, and CSS cannot
+   reach into a raster image. Doing it properly needs the logo as inline SVG,
+   at which point each rule becomes a <path> that can be targeted and animated
+   on hover — the effect described, using the marks already there rather than
+   inventing a new one.
+
+   Until then the hover is the lift and shadow below, which is quieter and
+   does not compete with the existing rules. */
+
+/* Keyboard users get a ring, not just the hover treatment. Offset
+   so it clears the mark rather than crowding it. */
+.rpp-logo-home.rpp-logo-home:focus-visible {
+  outline: 3px solid hsl(var(--gold)) !important;
+  outline-offset: 6px !important;
+  border-radius: 4px;
+}
+
+.rpp-logo-home.rpp-logo-home:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+/* Motion sensitivity and vestibular disorders are common in this
+   site's age range. Everything static, affordance intact: the rule
+   still appears, it simply does not travel. */
+@media (prefers-reduced-motion: reduce) {
+  .rpp-logo-home.rpp-logo-home img {
+    transition: none !important;
+  }
+  .rpp-logo-home.rpp-logo-home:hover img,
+  .rpp-logo-home.rpp-logo-home:focus-visible img {
+    transform: none !important;
+  }
+}
