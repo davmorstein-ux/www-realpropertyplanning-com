@@ -99,7 +99,7 @@ const bandTextStyle = (isH1: boolean, isCompactH1: boolean) => ({
 
      Non-h1 compact bands stay DM Sans. That is the one place the typography
      review permits capitals, and small-caps serif at 15px is a worse read. */
-  fontFamily: "'Source Serif 4', Georgia, serif",
+  fontFamily: "'DM Sans', system-ui, sans-serif",
   /* 600, back to the weight this band carried the last time it was serif.
 
      The 500 here was calibrated for DM Sans, and the history is worth keeping
@@ -108,7 +108,7 @@ const bandTextStyle = (isH1: boolean, isCompactH1: boolean) => ({
      authoritative) → DM Sans 500. Now that the face is serif again, 500 is the
      wrong end of that correction — Source Serif at 500 goes thin and loses the
      field. 600 is the value that was right before, for the same reason. */
-  fontWeight: 600,
+  fontWeight: 500,
   fontSize: isCompactH1 ? "clamp(24px, 3vw, 28px)" : isH1 ? "clamp(32px, 4.5vw, 46px)" : "15px",
   letterSpacing: isH1 ? "0.01em" : "0.16em",
   lineHeight: isCompactH1 ? 1.1 : isH1 ? 1.12 : 1.2,
