@@ -26,6 +26,12 @@
     <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
 
+    <!-- Without a manifest, Chrome guesses a name for shortcut tiles and home
+         screen icons by chopping up the <title>. It was landing on "Washington
+         State" — the trailing segment of the old static title, with the brand
+         nowhere in it. short_name below is what it uses instead. -->
+    <link rel="manifest" href="/site.webmanifest?v=2" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -96,7 +102,7 @@
         "sameAs": []
       }
     </script>
-    <title>Probate & Senior Real Estate Guidance | Washington State</title>
+    <title>Probate &amp; Estate Real Estate in Washington State | Real Property Planning</title>
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://realpropertyplanning.com" />
     <meta
