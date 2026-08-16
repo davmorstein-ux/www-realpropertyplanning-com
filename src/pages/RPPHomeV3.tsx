@@ -207,7 +207,7 @@ const RPPHomeV3 = () => {
                      .rpp-tagline-line-v2` with !important, which BEATS this
                      inline style. Changing this line alone does nothing —
                      change both or neither. */
-                  fontFamily: "'Source Serif 4', Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "clamp(28px, 4.4vw, 62px)",
                   fontWeight: 600,
                   fontStyle: "normal",
@@ -243,7 +243,7 @@ const RPPHomeV3 = () => {
                      .rpp-tagline-line-v2` with !important, which BEATS this
                      inline style. Changing this line alone does nothing —
                      change both or neither. */
-                  fontFamily: "'Source Serif 4', Georgia, serif",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: "clamp(28px, 4.4vw, 62px)",
                   fontWeight: 600,
                   fontStyle: "normal",
