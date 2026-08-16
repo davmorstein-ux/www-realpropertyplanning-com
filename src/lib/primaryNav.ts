@@ -104,8 +104,37 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     ],
   },
   {
+    /* About gained a menu. It was the only one of the five top-level entries
+       without items, so it rendered as a plain link with an invisible caret
+       placeholder holding its alignment.
+
+       The prompt for this was /share-your-experience: that page had exactly
+       ONE inbound link on the whole site — a button at the bottom of
+       /testimonials, below every existing testimonial. A client with something
+       to say had to already be reading other people's praise to find the form.
+       /testimonials was barely better off. Both now sit here, one click from
+       any page.
+
+       Order is deliberate. "Share Your Experience" comes before
+       "Testimonials" because the person with a story to tell is not the
+       person browsing for reassurance, and a client who has just closed a hard
+       sale should not have to scroll past a wall of other people's words to
+       reach the form.
+
+       Still send the direct link when you ask someone in person. This menu is
+       for the client who thinks of it three months later. */
     lines: ["About"],
     href: "/about",
+    color: "#721d24",
+    items: [
+      { name: "About Real Property Planning", href: "/about" },
+      { name: "How the Process Works", href: "/how-the-process-works" },
+      { name: "Share Your Experience", href: "/share-your-experience" },
+      { name: "Testimonials", href: "/testimonials" },
+      { name: "Service Areas", href: "/counties" },
+      { name: "FAQs", href: "/faq" },
+      { name: "Contact", href: "/contact" },
+    ],
   },
 
 ];
