@@ -1,3 +1,22 @@
+// ---------------------------------------------------------------------------
+// REDEPLOY MARKER — 2026-08-15
+//
+// This comment exists to change the file's contents and nothing else. Edge
+// functions deploy separately from the site: publishing rebuilds the React
+// app, but Supabase only redeploys a function when the function itself looks
+// changed. So setting `verify_jwt = false` in supabase/config.toml had no
+// effect — the running function was still the one deployed under the old
+// setting, and the browser kept reporting a bare CORS error.
+//
+// Why a CORS error and not a 401: the browser sends a preflight OPTIONS
+// request before any cross-origin JSON POST, and by specification it attaches
+// no Authorization header. With verify_jwt on, the Supabase gateway rejected
+// that preflight before this file ran. The OPTIONS handler below was correct
+// the whole time and simply never executed.
+//
+// Safe to delete once the newsletter is confirmed working end to end.
+// ---------------------------------------------------------------------------
+
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
 const corsHeaders = {
