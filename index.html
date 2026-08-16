@@ -26,10 +26,17 @@
     <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
 
-    <!-- Without a manifest, Chrome guesses a name for shortcut tiles and home
-         screen icons by chopping up the <title>. It was landing on "Washington
-         State" — the trailing segment of the old static title, with the brand
-         nowhere in it. short_name below is what it uses instead. -->
+    <!-- Manifest supplies the name Chrome uses for shortcut tiles and home
+         screen icons. Without it Chrome guesses from the page title and was
+         landing on "Washington State", with the brand nowhere in it.
+         short_name in the manifest is what it uses instead.
+
+         NOTE: never write an HTML tag name in angle brackets inside a comment
+         in this file. Doing exactly that here took the whole site down on
+         2026-08-15: the minifier mangled the comment, consumed its closing
+         delimiter, and the browser then swallowed the rest of the document —
+         script, stylesheet and root div included — as comment text. Blank
+         page, empty console, nothing to debug. Describe tags in words. -->
     <link rel="manifest" href="/site.webmanifest?v=2" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
