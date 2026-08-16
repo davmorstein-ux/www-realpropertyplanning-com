@@ -1,1 +1,45 @@
 
+project_id = "zgmoiivyxzppnrpksmfg"
+
+# ============================================================
+# EDGE FUNCTION AUTH
+# ============================================================
+#
+# Supabase verifies a JWT on every edge function by default. That default is
+# right for functions called by a signed-in user and WRONG for the two public
+# forms below, for a reason that is not obvious from the symptom.
+#
+# Before a browser POSTs cross-origin JSON it sends a preflight OPTIONS
+# request asking permission. Browsers do not attach an Authorization header to
+# a preflight — by specification. So with verify_jwt on, the Supabase gateway
+# rejects the preflight with a 401 BEFORE the function runs. The function's
+# own CORS headers are never attached, because the function never executed,
+# and the browser reports the whole exchange as a bare "CORS error" with no
+# status code and zero bytes.
+#
+# That is what the newsletter signup was doing. The function code was correct
+# the entire time — it handles OPTIONS properly on its first line — and it
+# simply never got called. Nothing in the frontend, the MailerLite key, or the
+# Turnstile setup was ever at fault.
+#
+# These endpoints are unauthenticated BY DESIGN. Newsletter signup and the
+# contact form are for anonymous visitors; requiring a login would defeat the
+# purpose. They defend themselves instead, and the defences are real:
+#   - Cloudflare Turnstile, verified server-side against the secret key
+#   - a honeypot field no human ever sees
+#   - a timing check that rejects sub-3-second submissions
+#   - MailerLite group ID pinned server-side, so a caller cannot choose it
+#   - uniform {success:true} responses, so the endpoint cannot be used to
+#     enumerate who is on the list
+#
+# Do NOT set verify_jwt = false on anything that lacks that protection.
+#
+# `mcp` is deliberately absent and keeps the secure default. It is generated
+# by Lovable's tooling, is not called from the browser, and has no business
+# accepting unauthenticated traffic.
+
+[functions.newsletter-subscribe]
+verify_jwt = false
+
+[functions.send-contact-email]
+verify_jwt = false
