@@ -81,12 +81,27 @@ export default {
         },
       },
       fontFamily: {
-        /* THE single highest-leverage typography line on the site: 209 files
-           use the `font-serif` class for headings, and until now it resolved
-           to DM Sans — the "serif" headings were never serif. Pointing it at
-           Source Serif 4 retypes every editorial heading at once.
-           Weights loaded in index.html: 500/600/700 + italic 500. */
-        serif: ["Source Serif 4", "Georgia", "serif"],
+        /* ONE FAMILY SITEWIDE. Both tokens are DM Sans on purpose.
+
+           209 files use the `font-serif` class for headings. That token is the
+           single highest-leverage typography line here — whatever it points at
+           retypes every editorial heading on the site at once.
+
+           It briefly pointed at Source Serif 4, giving serif headings over a
+           DM Sans interface. That was a defensible look and it is not the one
+           wanted: the site runs on a single face, with hierarchy coming from
+           size and weight rather than from a change of family.
+
+           The class name stays `font-serif` because renaming it would mean
+           touching 209 files for no visual gain. Read it as "the heading
+           token", not as a promise of an actual serif.
+
+           If you ever point this at a real serif again, four other places
+           hardcode the band face and must move with it or the h1 bands will
+           disagree with the headings beneath them: HeroBandTitle.tsx, the
+           h1 and --compact band rules in index.css, and the #rpp-tagline rule
+           in index.css that the homepage depends on. */
+        serif: ["DM Sans", "system-ui", "-apple-system", "sans-serif"],
         sans: ["DM Sans", "system-ui", "-apple-system", "sans-serif"],
       },
       borderRadius: {
