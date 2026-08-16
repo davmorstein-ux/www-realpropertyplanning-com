@@ -116,7 +116,10 @@ const Contact = () => {
       role,
       message: formData.get("message") as string,
       source_page: formData.get("source_page") as string,
-      company_website: formData.get("company_website") as string,
+      /* Still sent under the key the edge function checks; only the DOM
+         field name changed. Renaming this key too would need a function
+         redeploy, which deploys separately from the site. */
+      company_website: formData.get("rpp_hp_field") as string,
       form_loaded_at: formData.get("form_loaded_at") as string,
       turnstile_token: turnstileToken,
     };
@@ -264,8 +267,32 @@ const Contact = () => {
                       aria-hidden="true"
                       style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }}
                     >
-                      <label htmlFor="company_website">{t("contactPage.form.companyWebsiteLabel")}</label>
-                      <input type="text" id="company_website" name="company_website" tabIndex={-1} autoComplete="off" />
+                      {/* Field name is deliberately meaningless. It used to be
+                          "company_website" with a "Company Website" label, and
+                          that is exactly why real submissions were being thrown
+                          away: Chrome matches autofill on field-name heuristics,
+                          treats "company" as a known field type, and has ignored
+                          autocomplete="off" for autofill purposes for years.
+                          Password managers behave the same way. So the trap was
+                          catching people, not bots — every contact submission for
+                          twelve days was silently discarded as spam.
+
+                          A bot filling every input still trips this. A human's
+                          autofill has nothing to match on. Do not rename it back
+                          to anything containing company, website, url, address,
+                          phone, name or email. The data-* attributes below are
+                          the opt-outs 1Password, LastPass and Dashlane honour. */}
+                      <label htmlFor="rpp_hp_field">Leave this field blank</label>
+                      <input
+                        type="text"
+                        id="rpp_hp_field"
+                        name="rpp_hp_field"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        data-1p-ignore="true"
+                        data-lpignore="true"
+                        data-form-type="other"
+                      />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
