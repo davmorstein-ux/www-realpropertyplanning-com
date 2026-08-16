@@ -85,9 +85,29 @@ const WhenYouNeedExtraHelp = () => (
 
     <Divider />
 
-    <SubH2>Real Property Planning Is Here to Help</SubH2>
+    {/* Rewritten. This section previously read "Real Property Planning Is Here
+        to Help" and offered appraisals, attorney referrals, and help selling an
+        estate home in the hub's name.
+
+        Real Property Planning provides none of those things. It is a neutral
+        educational hub; it holds no licenses and performs no services. The
+        appraisal and brokerage work belongs to David Stein personally, under
+        his own two licenses, and everything legal belongs to the independent
+        attorneys in the directory. Offering licensed services in the hub's
+        name is the same misattribution corrected across the attorney pages and
+        in MidPageCTA.
+
+        It also matters where it sits. This page is read by executors who have
+        just been told the estate is more than they can handle. An unbounded
+        offer of help at that moment is the wrong promise to make, and a vague
+        one. Naming what is actually on offer, and from whom, is more useful
+        than warmth. */}
+    <SubH2>Where to Find That Help</SubH2>
     <P>
-      Whether you need an appraisal, a referral to a probate attorney, help navigating the sale of an estate home, or simply someone to talk through the situation with — Real Property Planning is a resource for executors and families across Washington State.
+      Real Property Planning is an educational resource, not a service provider — it holds no licenses and does not handle estates. What it offers is this library of guidance and a directory of independent Washington professionals: probate attorneys, CPAs, fiduciaries, senior move managers, and estate liquidators.
+    </P>
+    <P>
+      If the estate includes a home, David Stein can answer questions about the property directly. He is a licensed Washington real estate broker (eXp Realty, #133972) and a certified residential appraiser (Stein Appraisal, #1702080) — so questions about what the home is worth, what condition it is in, what a date-of-death valuation involves, or what selling it would actually require are ones he can speak to himself. Legal, tax, and care decisions belong with the professionals listed throughout this site.
     </P>
   </ExecutorSubPageLayout>
 );
