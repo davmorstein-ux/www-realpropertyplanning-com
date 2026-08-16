@@ -61,8 +61,8 @@ const transformChildren = (children: ReactNode): ReactNode =>
   Children.map(children, (child) => (typeof child === "string" ? titleCase(child) : child));
 
 /* THE canonical band text. Two tiers, plus one modifier:
-   - H1: Source Serif 4 semibold, Title Case (via the transform below), sized
-     to one clamp. All-caps at heading length was dropped on the typography
+   - H1: DM Sans 500, Title Case (via the transform below), sized to one
+     clamp. All-caps at heading length was dropped on the typography
      review's explicit rule — sentence-length capitals are measurably harder
      for older readers, who are this site's audience.
    - Non-H1 (compact eyebrow labels): small uppercase DM Sans, the one place
@@ -79,35 +79,35 @@ const transformChildren = (children: ReactNode): ReactNode =>
    there would otherwise repaint this; change BOTH places or neither. */
 const bandTextStyle = (isH1: boolean, isCompactH1: boolean) => ({
   color: "#FFFFFF",
-  /* TWO LAYERS, ONE FACE EACH. The band is Source Serif 4 again.
+  /* ONE FAMILY SITEWIDE. This band is DM Sans, like everything else.
 
-     The single-family consolidation that moved this to DM Sans was aimed at a
-     real problem — three families loading, one used — but it left the site
-     worse, because `serif` in tailwind.config.ts still pointed at Source Serif
-     4 and 207 files still asked for `font-serif`. Dropping the font did not
-     move those headings to DM Sans; it dropped them to the Georgia fallback.
-     So the live result was a DM Sans band sitting directly on top of Georgia
-     section headings: two unrelated faces stacked on every page, neither one
-     chosen.
+     Worth knowing the history, because this value has moved four times and
+     each move broke something:
 
-     The split now runs along a line that means something. DM Sans is the
-     INTERFACE face: navigation, buttons, body copy, the small-caps eyebrow
-     bands below. Source Serif 4 is the EDITORIAL face: this h1 band and every
-     section heading under it. A reader can tell at a glance which layer they
-     are looking at, and the hub reads as published reference material rather
-     than a product page — which is the whole positioning.
+     Source Serif 4 -> DM Sans, without updating the `serif` token in
+     tailwind.config.ts. 209 files still asked for `font-serif`, so those
+     headings did not follow the band to DM Sans — they fell through to the
+     Georgia fallback and stayed there, unnoticed, for four days.
 
-     Non-h1 compact bands stay DM Sans. That is the one place the typography
-     review permits capitals, and small-caps serif at 15px is a worse read. */
+     Back to Source Serif 4, token and font load agreeing this time, giving a
+     serif editorial layer over a DM Sans interface. That worked, and was
+     rejected on preference: one family, hierarchy from size and weight.
+
+     Now DM Sans, with tailwind.config.ts, index.css and RPPHomeV3.tsx all
+     moved in the same pass. Source Serif 4 is no longer loaded at all.
+
+     The rule that matters: this value is hardcoded in four other places and
+     they do not follow each other. HeroBandTitle.tsx (here), the h1 and
+     --compact band rules in index.css, and the #rpp-tagline rule in index.css
+     that the homepage depends on. Change all of them or none of them. */
   fontFamily: "'DM Sans', system-ui, sans-serif",
-  /* 600, back to the weight this band carried the last time it was serif.
+  /* 500, calibrated for DM Sans at this size.
 
-     The 500 here was calibrated for DM Sans, and the history is worth keeping
-     so it is not re-litigated: serif 600 → DM Sans 700 (overcorrected, 700 at
-     46px across a full-width navy field read as heavy rather than
-     authoritative) → DM Sans 500. Now that the face is serif again, 500 is the
-     wrong end of that correction — Source Serif at 500 goes thin and loses the
-     field. 600 is the value that was right before, for the same reason. */
+     History so it is not re-litigated: serif 600 -> DM Sans 700, which
+     overcorrected (700 at 46px across a full-width navy field read as heavy
+     rather than authoritative) -> DM Sans 500, which is right. It went to 600
+     briefly while the band was serif, since Source Serif at 500 goes thin.
+     Back on DM Sans, 500 is the value again. */
   fontWeight: 500,
   fontSize: isCompactH1 ? "clamp(24px, 3vw, 28px)" : isH1 ? "clamp(32px, 4.5vw, 46px)" : "15px",
   letterSpacing: isH1 ? "0.01em" : "0.16em",
