@@ -88,7 +88,8 @@ const NewsletterSignup = ({ variant = "general", source }: NewsletterSignupProps
   const { pathname } = useLocation();
   const [email, setEmail] = useState("");
   /* Honeypot. Real visitors never see this; bots that fill every input trip
-     it. Named company_website because that is plausible enough to be filled. */
+     it. Sent to the function under the key company_website; the DOM field
+     name is deliberately meaningless so browser autofill cannot match it. */
   const [companyWebsite, setCompanyWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [error, setError] = useState("");
@@ -369,15 +370,32 @@ const NewsletterSignup = ({ variant = "general", source }: NewsletterSignupProps
 
           {/* Honeypot. aria-hidden and tabIndex -1 keep it away from screen
               readers and keyboard users; only a script filling every field
-              will touch it. */}
+              will touch it.
+
+              The name is deliberately meaningless. It was "company_website"
+              with a "Company website" label, on the reasoning that the name had
+              to look plausible enough for a bot to fill. It did — and it looked
+              equally plausible to Chrome, which matches autofill on field-name
+              heuristics, treats "company" as a known field type, and ignores
+              autocomplete="off" for autofill. On the contact form that same
+              naming caused twelve days of real submissions to be discarded as
+              spam before anyone noticed.
+
+              Bots fill every field regardless of what it is called, so the trap
+              still works. Humans now have nothing for autofill to match. Do not
+              rename it to anything containing company, website, url, address,
+              phone, name or email. */}
           <div className="rpp-news-hp" aria-hidden="true">
-            <label htmlFor={hpId}>Company website</label>
+            <label htmlFor={hpId}>Leave this field blank</label>
             <input
               id={hpId}
               type="text"
-              name="company_website"
+              name="rpp_hp_field"
               tabIndex={-1}
               autoComplete="off"
+              data-1p-ignore="true"
+              data-lpignore="true"
+              data-form-type="other"
               value={companyWebsite}
               onChange={(e) => setCompanyWebsite(e.target.value)}
             />
