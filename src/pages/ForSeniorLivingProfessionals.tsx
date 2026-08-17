@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import people3d from "@/assets/real-estate-agent-team-icon-washington.webp";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -286,7 +285,6 @@ const ForSeniorLivingProfessionals = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                   Connect About a Client Situation
                 </Button>
               </Link>
