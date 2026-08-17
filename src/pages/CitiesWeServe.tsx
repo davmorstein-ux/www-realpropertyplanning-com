@@ -6,7 +6,6 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import { counties } from "@/lib/service-areas-data";
 
 const CityGrid = ({ countyData }: { countyData: typeof counties[0] }) => (
@@ -178,7 +177,6 @@ const CitiesWeServe = () => {
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Link to="/contact">
                   <Button variant="navy3d" size="lg">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                     Request a Confidential Consultation
                   </Button>
                 </Link>
