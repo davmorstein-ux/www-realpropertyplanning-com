@@ -1,4 +1,3 @@
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
@@ -44,7 +43,6 @@ const FeaturedProviderPlaceholder = ({ heading, altLabel }: Props) => (
                     <span className="text-muted-foreground">Address</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                     <span className="text-accent">Phone</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
