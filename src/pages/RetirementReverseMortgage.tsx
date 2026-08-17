@@ -8,7 +8,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
@@ -122,7 +121,6 @@ const RetirementReverseMortgage = () => (
                       <span className="text-muted-foreground">1721 Hewitt Ave Ste. 612, Everett, WA 98201</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                       <a href="tel:+12063105766" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                         (206) 310-5766
                       </a>
@@ -179,7 +177,6 @@ const RetirementReverseMortgage = () => (
                       <span className="text-muted-foreground">1000 Dexter Ave N, Suite 310, Seattle, WA 98109</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                       <a href="tel:+12062835626" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                         (206) 283-5626
                       </a>
@@ -238,7 +235,6 @@ const RetirementReverseMortgage = () => (
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
               Schedule a Conversation
             </Button>
           </Link>
