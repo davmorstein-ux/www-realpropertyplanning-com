@@ -78,7 +78,7 @@ const MarysvilleProbateEstate = () => {
         </div>
       </section>
 
-      <MidPageCTA heading="Questions About a Marysville Property?" body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families handling inherited or estate property in Marysville and Snohomish County." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
+      <MidPageCTA heading="Questions About a Marysville Property?" body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families handling inherited or estate property in Marysville and Snohomish County." buttonText="Schedule a Consultation" microcopy="" />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
@@ -97,7 +97,7 @@ const MarysvilleProbateEstate = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">How I Help Families Get From Questions to Answers</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">The approach is grounded, practical, and designed to give families what they need to make good decisions:</p>
             <ol className="space-y-6">
-              {[{ title: "Understanding Your Situation", desc: "We start with a conversation about the property, the family, and what everyone is working toward. No pressure — just a clear starting point." }, { title: "Assessing the Property", desc: "I visit the home and evaluate its condition — structure, systems, finishes, and grounds — in the context of Marysville's current market expectations." }, { title: "Developing a Realistic Strategy", desc: "Using my appraisal background and local data, I build a pricing and preparation plan that reflects the home's actual condition and the family's goals." }, { title: "Coordinating the Work", desc: "I manage cleanout, targeted preparation, and vendor coordination so the property is positioned well without unnecessary expense." }, { title: "Guiding the Sale", desc: "From listing through closing, I keep the process organized and everyone informed. Clear communication, practical timelines, and a steady path to resolution." }].map((step, i) => (
+              {[{ title: "Understanding Your Situation", desc: "We start with a conversation about the property, the family, and what everyone is working toward." }, { title: "Assessing the Property", desc: "I visit the home and evaluate its condition — structure, systems, finishes, and grounds — in the context of Marysville's current market expectations." }, { title: "Developing a Realistic Strategy", desc: "Using my appraisal background and local data, I build a pricing and preparation plan that reflects the home's actual condition and the family's goals." }, { title: "Coordinating the Work", desc: "I manage cleanout, targeted preparation, and vendor coordination so the property is positioned well without unnecessary expense." }, { title: "Guiding the Sale", desc: "From listing through closing, I keep the process organized and everyone informed. Clear communication, practical timelines, and a steady path to resolution." }].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-gold/15 text-gold font-semibold text-sm shrink-0 mt-0.5">{i + 1}</span>
                   <div><p className="text-foreground font-semibold text-[15px] mb-1">{step.title}</p><p className="text-muted-foreground text-[15px] leading-relaxed">{step.desc}</p></div>
@@ -118,7 +118,6 @@ const MarysvilleProbateEstate = () => {
       <section className="py-20 lg:py-28 bg-primary"><div className="container px-6 lg:px-8"><div className="max-w-3xl mx-auto text-center">
         <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Grounded First Step</h2>
         <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">If your family is working through decisions about a Marysville property, a short conversation can help you understand the home's condition, its realistic value, and what practical steps come next.</p>
-        <p className="text-primary-foreground/50 text-base mb-8">No pressure. Just practical guidance.</p>
         <div className="flex justify-center"><Link to="/contact"><Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />Schedule a Consultation</Button></Link></div>
       </div></div></section>
 
