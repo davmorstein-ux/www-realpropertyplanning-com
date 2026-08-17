@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
@@ -1144,10 +1145,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Probate vs Trust Sale in Washington State — What's the Difference? | Real Property Planning",
     description: "Real Property Planning explains the key differences between probate sales and trust sales in Washington State. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties — (206) 900-3015.",
     h1: "Probate vs Trust Sale in Washington State — What's the Difference?",
-  },
-  "/home-new": {
-    title: "Probate & Senior Real Estate Guidance | Washington State",
-    description: "Washington resource hub for probate real estate, inherited property, senior transitions, and trusted professional guidance.",
   },
   "/join-the-network": {
     title: "Join the Network | Real Property Planning Professional Referral Network | Washington State",
