@@ -1,6 +1,5 @@
 import abbyPhoto from "@/assets/abby-durr-silver-age-senior-living-advisor.webp";
 import silverAgeLogo from "@/assets/silver-age-senior-living-advisors-logo.webp";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
@@ -50,12 +49,10 @@ const AbbyDurrCard = () => (
                     <span className="text-muted-foreground">1567 Highlands Dr NE, Suite 110, Issaquah, WA 98029</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                     <a href="tel:+14258917569" className="text-accent hover:text-gold underline-offset-4 hover:underline">(425) 891-7569</a>
                     <span className="text-muted-foreground">Main</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                     <a href="tel:+12066697191" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 669-7191</a>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
