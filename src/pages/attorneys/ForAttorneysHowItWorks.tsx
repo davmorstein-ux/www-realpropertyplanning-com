@@ -7,7 +7,6 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
 
 const STEPS: { n: string; title: string; body: string }[] = [
@@ -202,7 +201,6 @@ const ForAttorneysHowItWorks = () => (
             <div className="flex flex-wrap gap-4">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                   Send a File Overview
                 </Button>
               </Link>
