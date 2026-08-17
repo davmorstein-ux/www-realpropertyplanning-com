@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 interface MidPageCTAProps {
   heading?: string;
   body?: string;
+  /** @deprecated Accepted and ignored. See the note above the render. */
   microcopy?: string;
   buttonText?: string;
   variant?: "light" | "dark";
@@ -18,7 +19,10 @@ const MidPageCTA = ({
      professionals in the directory. Keep any future copy inside that line. */
   heading = "Questions About the Real Estate Side?",
   body = "David Stein, a licensed real estate broker, can walk you through how the property side of the process works.",
-  microcopy,
+  /* Still destructured so the 34 pages passing it do not error, but no longer
+     rendered. Those props are inert and can be deleted whenever those files
+     are next open. */
+  microcopy: _microcopy,
   buttonText = "Schedule a Conversation About the Property",
   variant = "light",
 }: MidPageCTAProps) => {
@@ -53,15 +57,21 @@ const MidPageCTA = ({
           <Link to="/contact" className="rpp-answer-cta" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "14px 30px", borderRadius: 8 }}>
             {buttonText}
           </Link>
-          {microcopy && (
-            <p
-              className={`text-[16px] leading-[1.6] mt-4 ${
-                isDark ? "text-primary-foreground/50" : "text-muted-foreground/70"
-              }`}
-            >
-              {microcopy}
-            </p>
-          )}
+          {/* Microcopy no longer renders. Every page passing it was passing a
+              variant of "No pressure. Just practical guidance on the property
+              questions." — 74 instances of that voice across 43 files.
+
+              It was reassurance nobody asked for. David Stein is a licensed
+              broker and appraiser; the value on offer is competence, and
+              promising an executor that a conversation will be low-pressure
+              reads as managing their feelings rather than answering their
+              question. The heading and body above already say what is on offer
+              and from whom, which is the reassurance that actually helps.
+
+              The prop is accepted and discarded rather than removed from the
+              interface, so the pages still passing it keep compiling. If you
+              want a line here again, delete this block and render it — but
+              write something that carries information. */}
         </div>
       </div>
     </section>
