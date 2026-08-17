@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
@@ -191,17 +190,6 @@ const Contact = () => {
                       href="tel:2069003015"
                       className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold"
                     >
-                      <img
-                        src={iconPhone3d}
-                        alt=""
-                        aria-hidden="true"
-                        className="mr-2 w-5 h-5 shrink-0 object-contain"
-                        loading="lazy"
-                        sizes="100vw"
-                        decoding="async"
-                        width={1024}
-                        height={1536}
-                      />
                       <span>(206) 900-3015</span>
                     </a>
                   </div>
