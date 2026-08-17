@@ -14,7 +14,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const faqs = [
   {
