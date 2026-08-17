@@ -1,6 +1,5 @@
 import dominikPhoto from "@/assets/dominik-musafia-divorce-attorney-seattle.avif";
 import seattleDivorceOptionsLogo from "@/assets/seattle-divorce-options-logo.avif";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
@@ -53,7 +52,6 @@ const DominikMusafiaCard = () => (
                     <span className="text-muted-foreground">Arboretum Professional Center, 2910 E. Madison Street, Seattle, WA 98112</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                     <a href="tel:+12068602431" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 860-2431</a>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
