@@ -1078,14 +1078,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: ["/contact", "/helping-an-aging-parent"],
   },
   {
-    path: "/hero-test",
-    links: [],
-  },
-  {
-    path: "/home-new",
-    links: ["/afh-club"],
-  },
-  {
     path: "/how-the-process-works",
     links: [
       "/contact",
