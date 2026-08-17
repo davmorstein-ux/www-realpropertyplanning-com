@@ -5,7 +5,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { Home, Heart, Globe, ShieldCheck, FileText, Users, Briefcase } from "lucide-react";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import poaIcon from "@/assets/icons/power-of-attorney-icon-washington.webp";
 
 const sectionBase = "py-14 md:py-20";
@@ -234,7 +233,6 @@ const PowerOfAttorney = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:2069003015" className="inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold/90 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                   Call (206) 900-3015
                 </a>
                 <Link to="/contact" className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-primary-foreground font-semibold px-8 py-4 rounded-lg text-lg transition-colors border border-white/20">
