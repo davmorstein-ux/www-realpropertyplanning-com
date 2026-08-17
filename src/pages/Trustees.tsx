@@ -7,7 +7,6 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconTrustees from "@/assets/icons/estate-trustees-services-icon-washington.webp";
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
