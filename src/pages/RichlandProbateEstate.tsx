@@ -224,7 +224,6 @@ const RichlandProbateEstate = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Measured First Step</h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">If you're managing an estate property in Richland and want a clear, well-organized approach, a short conversation can help you understand the property's position and your options.</p>
-            <p className="text-primary-foreground/50 text-base mb-8">No pressure. Just practical guidance.</p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
