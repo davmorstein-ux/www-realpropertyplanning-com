@@ -11,7 +11,6 @@ import PageFAQ from "@/components/PageFAQ";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const willsFaqs = [
   {
@@ -287,7 +286,6 @@ const Wills = () => {
                       boxShadow: 'inset 0 2px 2px rgba(255,255,255,0.25), inset 0 -2px 4px rgba(0,0,0,0.15)',
                       borderTop: '1px solid rgba(255,255,255,0.3)',
                     }}>
-                      <img src={iconPhone3d} alt="" className="w-7 h-7" aria-hidden="true"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                       <span className="font-bold text-lg text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Schedule a Conversation</span>
                     </div>
                   </div>
