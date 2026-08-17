@@ -718,7 +718,6 @@ const PowerOfAttorneys = () => {
                   Send a Message
                 </Link>
               </div>
-              <p className="text-primary-foreground/60 text-sm">No pressure. Just practical guidance.</p>
             </div>
           </div>
         </section>
