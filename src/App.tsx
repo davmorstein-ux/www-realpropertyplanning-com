@@ -9,7 +9,6 @@ import RPPHomeV2 from "./pages/RPPHomeV2";
 import RPPHomeV3 from "./pages/RPPHomeV3";
 import LanguageRoute from "./components/LanguageRoute";
 import Privacy from "./pages/Privacy";
-import HeroTest from "./pages/HeroTest";
 import HomepageFinal from "./pages/HomepageFinal";
 
 // All other routes are lazy-loaded so the homepage bundle stays small.
@@ -239,7 +238,6 @@ const AFHCountyDirectory = lazy(() => import("./pages/afh-club/homes/CountyDirec
 const AFHCityDirectory = lazy(() => import("./pages/afh-club/homes/CityDirectory"));
 const AFHCitySegment = lazy(() => import("./pages/afh-club/homes/CitySegment"));
 const LongTermCareOptions = lazy(() => import("./pages/LongTermCareOptions"));
-const HomepageNew = lazy(() => import("./pages/HomepageNew"));
 const LTCNursingHomes = lazy(() => import("./pages/long-term-care/NursingHomes"));
 const LTCShortTermNursingHomeStays = lazy(() => import("./pages/long-term-care/ShortTermNursingHomeStays"));
 const LTCNurseDelegation = lazy(() => import("./pages/long-term-care/NurseDelegation"));
@@ -339,8 +337,16 @@ const App = () => (
               </LanguageRoute>
             }
           />
-          <Route path="/home-new" element={<HomepageNew />} />
-          <Route path="/hero-test" element={<HeroTest />} />
+          {/* /home-new and /hero-test removed. Both were development
+              scratch pages — an old homepage draft and a hero experiment —
+              left publicly routed since July, listed in sitemap.xml at
+              priority 0.75, and crawlable: robots.txt allows everything,
+              including GPTBot, ClaudeBot and PerplexityBot.
+
+              /home-new was the damaging one. It was a near-duplicate of the
+              real homepage, so search engines were being handed two versions
+              of the same page and invited to choose. The components survive
+              in git history if either is ever wanted again. */}
 
           {/* ─── Core commercial pages ────────────────────────────── */}
           <Route
