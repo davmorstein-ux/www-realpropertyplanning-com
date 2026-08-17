@@ -7,7 +7,6 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import { useLayoutEffect, useRef, useState, useCallback } from "react";
 import redSphere from "@/assets/property-accent-sphere-washington.webp";
@@ -687,17 +686,6 @@ const PowerOfAttorneys = () => {
                   href="tel:+12069003015"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gold text-primary font-semibold rounded-lg hover:bg-gold/90 transition-colors text-base"
                 >
-                  <img
-                    src={iconPhone3d}
-                    alt=""
-                    aria-hidden="true"
-                    className="w-4 h-4 object-contain shrink-0"
-                    loading="lazy"
-                    sizes="100vw"
-                    decoding="async"
-                    width={1024}
-                    height={1536}
-                  />
                   Call (206) 900-3015
                 </a>
                 <Link
