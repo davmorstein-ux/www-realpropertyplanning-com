@@ -1,7 +1,6 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const points = [
   "Real Property Planning handles property visits, vendor coordination, and inspections in person — so you don't have to fly back and forth.",
@@ -37,7 +36,6 @@ const OutOfStateBlock = () => (
         <div className="text-center">
           <Link to="/contact">
             <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
               Schedule a Call
             </Button>
           </Link>
