@@ -276,7 +276,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              Real Property Planning works with personal representatives, trustees, and attorneys throughout Washington State. No pressure — just practical guidance.
+              Real Property Planning works with personal representatives, trustees, and attorneys throughout Washington State.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">
