@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema, areaServed } from "@/lib/schema";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const faqs = [
   { question: "What should I do first with an inherited home in Renton?", answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of condition and market value. our team can walk through the property, identify what affects value, and help you understand your options before committing to anything." },
@@ -118,7 +117,7 @@ const RentonProbateEstate = () => {
       <section className="py-20 lg:py-28 bg-primary"><div className="container px-6 lg:px-8"><div className="max-w-3xl mx-auto text-center">
         <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear First Step</h2>
         <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">If you're handling inherited property in Renton and want clarity on pricing, condition, and next steps, a short conversation can help you get organized and move forward.</p>
-        <div className="flex justify-center"><Link to="/contact"><Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />Schedule a Consultation</Button></Link></div>
+        <div className="flex justify-center"><Link to="/contact"><Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">Schedule a Consultation</Button></Link></div>
       </div></div></section>
 
       <DisclaimerSection />
