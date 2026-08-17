@@ -94,9 +94,7 @@ const RealClientSituations = ({
                 Schedule a Consultation
               </Button>
             </Link>
-            <p className="text-muted-foreground/70 text-sm mt-4">
-              No pressure. Just practical guidance.
-            </p>
+
           </div>
         )}
       </div>
