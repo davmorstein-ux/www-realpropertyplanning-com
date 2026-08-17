@@ -307,9 +307,6 @@ const BellinghamProbateEstate = () => {
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
               If you're handling a Bellingham property — whether you're local or managing from a distance — a short conversation can help you understand the property's situation and your options.
             </p>
-            <p className="text-primary-foreground/50 text-base mb-8">
-              No pressure. Just practical guidance.
-            </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
