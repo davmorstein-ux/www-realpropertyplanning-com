@@ -12,7 +12,6 @@ import MidPageCTA from "@/components/MidPageCTA";
 import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 
 const keyDifferences = [
@@ -159,7 +158,7 @@ const SeniorTransitionDifferences = () => (
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">Need Help With a Senior Housing Transition?</h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">our team welcomes confidential conversations with families, care professionals, and their trusted advisors.</p>
-          <Link to="/contact"><Button variant="gold" size="lg"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />Schedule a Consultation</Button></Link>
+          <Link to="/contact"><Button variant="gold" size="lg">Schedule a Consultation</Button></Link>
         </div>
       </div>
     </section>
