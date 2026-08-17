@@ -1,6 +1,5 @@
 import jamesJacksonPhoto from "@/assets/james-jackson-estate-planning-attorney-seattle.webp";
 import ketterSheppardLogo from "@/assets/ketter-sheppard-law-firm-logo.webp";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 
@@ -49,7 +48,6 @@ const JamesJacksonCard = () => (
                     <span className="text-muted-foreground">Wells Fargo Center, Seattle, WA</span>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1024} height={1536} />
                     <a href="tel:+12063822600" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 382-2600</a>
                   </div>
                   <div className="flex items-center gap-2 justify-center sm:justify-start">
