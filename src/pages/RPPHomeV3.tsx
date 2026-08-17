@@ -66,34 +66,33 @@ const RPPHomeV3 = () => {
         >
           <img
             id="rpp-hero-image"
-            /* rpp-hero-2026: corrected artwork. The previous file carried a
-               ghosted duplicate of the PLANNING wordmark on the truck door,
-               sitting under the clean lockup and overlapping TRANSITIONS MADE
-               EASY. This version has it removed.
+            /* rpp-hero-2026: corrected artwork, third revision. Two defects
+               were fixed across successive versions — a ghosted duplicate of
+               the PLANNING wordmark on the truck door, and a mover missing a
+               forearm. The truck tagline also settled on "Life's Next
+               Transitions", matching the yard sign.
 
-               Supplied as a 6.11:1 banner rather than the 4.08:1 of the file
-               it replaces, and used at that ratio deliberately. Cropping it
-               back to 4.08 would have meant cutting a third of the width and
-               losing either the couple at the left or the sold sign at the
-               right — the two things the earlier crops were specifically
-               protecting. The band is shorter as a result: 314px at a 1920px
-               window instead of 471px.
+               2.87:1, used at the artwork's own ratio rather than cropped.
+               Cropping this composition loses either the couple at the left or
+               the sold sign at the right, and both are doing work: the couple
+               is who the site is for, the sign is the outcome.
 
                Two files, not a srcSet ladder. On desktop the image is a
                background the tagline sits over; on mobile it is shown WHOLE
                above the tagline, so the phone file only needs phone width.
-               3.0 MB PNG became 88 KB and 33 KB. */
+               6.2 MB PNG became 229 KB and 69 KB. */
             src={heroDesktop}
             srcSet={`${heroMobile} 900w, ${heroDesktop} 1920w`}
             sizes="100vw"
             width={1920}
             /* Must match the file. The intrinsic ratio is what reserves
                space before the image loads; a stale value here causes the
-               page to jump as it arrives. 1920x314 is the artwork's own
-               6.11:1 shape — the stacked layout shows the whole frame, so
-               image height is decided entirely by the file. If the artwork is
-               ever replaced again, change this number in the same commit. */
-            height={314}
+               page to jump as it arrives. 1920x670 is the artwork's own
+               2.87:1 shape — the stacked layout shows the whole frame, so
+               image height is decided entirely by the file. This number has
+               been wrong after an art swap more than once; change it in the
+               same commit as the images, every time. */
+            height={670}
             alt={t("hero.imageAlt")}
             /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
                photograph at any width — it stacks beneath it.
