@@ -86,7 +86,7 @@ const SecureWillSection = () => {
             Secure Your Will Now
           </button>
           <p className="text-sm sm:text-base italic max-w-md" style={{ color: 'hsl(220 20% 40%)' }}>
-            No pressure. Secure, private, and accessible only to you and those you trust.
+            Secure, private, and accessible only to you and those you trust.
           </p>
         </div>
 
