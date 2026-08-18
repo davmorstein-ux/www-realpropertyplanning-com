@@ -44,6 +44,7 @@ const providers: Provider[] = [
       "Medicare planning and coverage guidance for individuals turning 65, retiring, or reviewing existing coverage",
     logo: spearsLogo,
     logoAlt: "Spears Agency logo",
+    bio: "Heidi Bolton is a Medicare Advisor with Spears Agency, bringing an extensive background in Medicare to helping individuals navigate their coverage with clarity and confidence \u2014 whether they are turning 65, retiring, losing employer coverage, reviewing a current plan to be sure it is still the right fit, or simply asking general questions about coverage during the year. Medicare can feel overwhelming, and Heidi simplifies the process so her clients feel settled about their decisions.\n\nHeidi believes strongly in doing what is right for her clients rather than what is easiest or most profitable. She takes the time to truly understand each person\u2019s situation, answer their questions, and present options that make sense for their needs and budget.\n\nHer clients are treated like family, with honest advice and year-round support.",
   },
   {
     name: "J. R. Gillespie",
