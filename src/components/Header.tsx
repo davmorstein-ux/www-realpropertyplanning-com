@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import WaterfallNav from "./WaterfallNav";
@@ -86,8 +87,16 @@ const Header = () => {
   }, [isMobile]);
 
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 769);
-    check();
+    /* Keyed off WIDTH only. `resize` fires on every URL-bar show/hide during a
+       mobile scroll, but the width has not changed — re-running this on height
+       changes re-rendered the entire header mid-scroll for no reason. */
+    let lastWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+    const check = () => {
+      if (window.innerWidth === lastWidth) return;
+      lastWidth = window.innerWidth;
+      setIsMobile(window.innerWidth < 769);
+    };
+    setIsMobile(window.innerWidth < 769);
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
@@ -162,28 +171,45 @@ const Header = () => {
     const el = headerRef.current;
     if (!el) return;
 
+    /* JITTER FIX. On mobile, hiding and revealing the browser's URL bar during
+       a scroll fires `resize` continuously. This used to write --header-height
+       on every one of those events, and because layout across the site reads
+       that variable, each write forced a style recalculation mid-scroll — the
+       header appeared to shudder.
+
+       Two guards: only write when the height has actually changed by more than
+       half a pixel, and defer the write to the next animation frame so it never
+       lands in the middle of the browser's own scroll work. A ResizeObserver
+       callback that writes styles synchronously can also re-trigger itself. */
+    let last = -1;
+    let frame = 0;
+
     const setVar = () => {
-      document.documentElement.style.setProperty("--header-height", `${el.getBoundingClientRect().height}px`);
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const h = el.getBoundingClientRect().height;
+        if (Math.abs(h - last) < 0.5) return;
+        last = h;
+        document.documentElement.style.setProperty("--header-height", `${h}px`);
+      });
     };
 
     setVar();
 
     const observer = new ResizeObserver(setVar);
     observer.observe(el);
-    window.addEventListener("resize", setVar);
     window.addEventListener("orientationchange", setVar);
 
     return () => {
+      cancelAnimationFrame(frame);
       observer.disconnect();
-      window.removeEventListener("resize", setVar);
       window.removeEventListener("orientationchange", setVar);
     };
   }, [isMobile]);
 
   return (
     <>
-      <a
-        href="#main-content"
+      <a href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md focus:text-base"
       >
         Skip to main content
@@ -199,17 +225,32 @@ const Header = () => {
           right: 0,
           zIndex: 50,
           margin: 0,
+          /* env(safe-area-inset-top) is only meaningful when the header is at
+             the very top of the viewport. Once it is stuck and the page has
+             scrolled, iOS reports a different inset as the URL bar collapses,
+             which changed the header's own height mid-scroll and fed straight
+             back into the jitter. Fixed padding on mobile; the inset is handled
+             by the sticky offset instead. */
           padding: isMobile
-            ? "calc(env(safe-area-inset-top, 0px) + 8px) 12px 6px"
+            ? "10px 12px 6px"
             : "calc(env(safe-area-inset-top, 0px) + 8px) 24px 4px",
           /* Cream, matching the page background, so the header reads as part
              of the page rather than a bar sitting on top of it. Everything
              inside had to flip from light to dark when this changed — nav
              labels, carets, underlines, the divider and the hamburger. If this
              ever goes back to a dark colour, all of those flip back too. */
-          backgroundColor: "rgba(245, 240, 232, 0.96)",
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)",
+          backgroundColor: isMobile ? "#F5F0E8" : "rgba(245, 240, 232, 0.96)",
+          /* Blur is dropped on mobile. backdrop-filter on a sticky element is
+             one of the most expensive things a mobile browser can be asked to
+             do — it re-samples what is behind the header on every scroll frame.
+             The background opacity is raised to compensate, so the header still
+             reads as solid. Desktop keeps the blur, where it is affordable. */
+          backdropFilter: isMobile ? "none" : "blur(10px)",
+          WebkitBackdropFilter: isMobile ? "none" : "blur(10px)",
+          /* Own compositing layer, so scrolling repaints the page beneath it
+             without repainting the header itself. */
+          transform: "translateZ(0)",
+          willChange: "transform",
           /* Strengthened from 14% to 30% opacity. Not a new dark rule: the
              header is cream and the hero photograph sits directly beneath it,
              so the tonal contrast already marks that boundary — a hard dark
@@ -280,8 +321,7 @@ const Header = () => {
                   </Link>
                 ))}
                 <LanguageSwitcher compact={isMobile} />
-                <a
-                  href="tel:2069003015"
+                <a href="tel:2069003015"
                   className="rpp-header-phone"
                   style={{
                     ...NAV_FONT,
@@ -382,19 +422,9 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div
-                style={{
-                  flex: 1,
-                  minWidth: 0,
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  alignItems: "stretch",
-                  gap: 14,
-                }}
-              >
+              <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "stretch", gap: 14 }}>
                 <LanguageSwitcher compact />
-                <a
-                  href="tel:2069003015"
+                <a href="tel:2069003015"
                   ref={phoneRef}
                   className="rpp-header-phone"
                   style={{
@@ -472,15 +502,7 @@ const Header = () => {
               >
                 <WaterfallNav />
               </div>
-              <div
-                style={{
-                  width: SEARCH_WIDTH,
-                  flexShrink: 1,
-                  minWidth: 0,
-                  marginLeft: 8,
-                  marginRight: "clamp(44px, 5vw, 84px)",
-                }}
-              >
+              <div style={{ width: SEARCH_WIDTH, flexShrink: 1, minWidth: 0, marginLeft: 8, marginRight: "clamp(44px, 5vw, 84px)" }}>
                 <SiteSearchBar />
               </div>
               <PrimaryNav />
