@@ -1,1134 +1,455 @@
-import { Link } from "react-router-dom";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
-import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import CTASection from "@/components/CTASection";
-import DisclaimerSection from "@/components/DisclaimerSection";
-import AFHCarousel from "@/components/AFHCarousel";
-import HeroBandTitle from "@/components/HeroBandTitle";
-import { useTranslation } from "react-i18next";
+import { useEffect, useState, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import WaterfallNav from "./WaterfallNav";
+import SiteSearchBar from "./SiteSearchBar";
+import LanguageSwitcher from "./LanguageSwitcher";
+import PrimaryNav from "./PrimaryNav";
+import { PRIMARY_NAV } from "@/lib/primaryNav";
 
-/**
- * PAGE-SCOPED STYLES
- *
- * Two rules in index.css were breaking this page:
- *
- * 1. TINY TEXT
- *      main [style*="letter-spacing"],
- *      main [class*="uppercase"] { font-size: max(0.875rem, 14px) !important; }
- *    0.875rem IS 14px, so max() always returns 14px — the rule reads like a
- *    floor but behaves as a fixed size. Any element carrying letterSpacing or
- *    textTransform in its inline style was flattened to 14px, including the
- *    teal band's h2 and the hero eyebrow.
- *    Fixed here by moving those declarations OUT of the inline style objects
- *    and into the classes below, so the selectors no longer match.
- *
- * 2. DARK TEXT ON THE TEAL BAND
- *      body p:not(nav *)...   { color: #3d3833 !important }
- *      body h2, body h3, body h4 { color: #1B3A6B !important }
- *    The section sets color: #ffffff, but that reaches children only by
- *    inheritance, and inheritance loses to any rule targeting the element
- *    directly. Hence brown paragraphs and a near-black heading on teal.
- *
- * Deleting the revision-2 block from index.css is the real fix for #2. These
- * styles make the page correct either way.
- */
-const PAGE_CSS = `
-  .rpp-afh-eyebrow.rpp-afh-eyebrow {
-    font-size: 20px !important;
-    font-family: 'DM Sans', sans-serif !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.22em !important;
-    text-transform: uppercase !important;
-    color: #481216 !important;
-  }
-  .rpp-afh-kicker.rpp-afh-kicker {
-    font-size: 15px !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.15em !important;
-    text-transform: uppercase !important;
-  }
-  .rpp-afh-marketplace h2,
-  .rpp-afh-marketplace p,
-  .rpp-afh-marketplace h2 span,
-  .rpp-afh-marketplace p span {
-    color: #ffffff !important;
-    opacity: 1 !important;
-  }
-  .rpp-afh-marketplace h2.rpp-afh-marketplace-heading {
-    font-family: 'DM Sans', system-ui, sans-serif !important;
-    font-size: clamp(28px, 4vw, 40px) !important;
-    font-weight: 600 !important;
-    letter-spacing: -0.01em !important;
-    line-height: 1.2 !important;
-    margin: 0 0 12px !important;
-  }
-  .rpp-afh-marketplace p {
-    font-size: 19px !important;
-    line-height: 1.7 !important;
-  }
-  /* Buttons sit ON the dark band and must not be swept white by the rule
-     above — the solid one would become white on white. */
-  .rpp-afh-marketplace .rpp-afh-btn-solid,
-  .rpp-afh-marketplace .rpp-afh-btn-solid span {
-    color: #1F4A34 !important;
-  }
-  .rpp-afh-marketplace .rpp-afh-btn-outline,
-  .rpp-afh-marketplace .rpp-afh-btn-outline span {
-    color: #ffffff !important;
-  }
-  .rpp-afh-marketplace a { text-decoration: none !important; }
+const NAV_FONT = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 
-  /* ---- Paths + Network sections (added with the professional network) ---- */
-  .rpp-afh-paths h2,
-  .rpp-afh-paths h3,
-  .rpp-afh-network h2,
-  .rpp-afh-network h3 { color: #280a0c !important; }
-  .rpp-afh-paths p,
-  .rpp-afh-network p { color: #302b26 !important; }
-  .rpp-afh-paths li,
-  .rpp-afh-network li { color: #302b26 !important; }
+/* Contact was removed from the top nav — it now lives on the About page and in
+   the WaterfallNav quick-links strip. The CALL button covers urgent contact.
+   AFH Club was also removed; it is reachable from the homepage body. */
+/* Desktop logo height. The logo now occupies its own column spanning both the
+   nav row and the search row, so it can be far larger without making the
+   header taller — the two-column layout is actually SHORTER than the previous
+   stacked one (~112px vs ~140px) while the mark nearly doubles. Adjust this
+   single value to taste. */
+/* Logo height. The whole desktop header is now ONE row — logo, nav, search
+   and hamburger — so this value directly controls how much room the nav has.
+   At 52px the logo is ~252px wide; every pixel added here is a pixel taken
+   from the five nav labels. Lower it before shortening the labels. */
+/* Raised from 52. The brand column is exactly the logo's width, and the search
+   field lives inside it beneath the hamburger — at 52 the field was too narrow
+   and clipped its own placeholder. Every point here widens the search. */
+const DESKTOP_LOGO_HEIGHT = 60;
 
-  .rpp-afh-disclosure p {
-    color: #4a453f !important;
-    font-size: 16px !important;
-    line-height: 1.7 !important;
-  }
-  .rpp-afh-disclosure strong { color: #302b26 !important; }
+/* The logo file is 1608x331. Deriving its rendered width from the height above
+   means the search field beneath it can be given exactly the same width — and
+   stays matched if the logo height is ever changed. Hardcoding a pixel value
+   here would silently break that alignment. */
+const LOGO_ASPECT = 1608 / 331;
+const LOGO_WIDTH = Math.round(DESKTOP_LOGO_HEIGHT * LOGO_ASPECT);
 
-  /* ── HERO ────────────────────────────────────────────────────────────────
-     The badge is gone; the hero is the photograph, with the wordmark set as
-     LIVE TEXT over it rather than baked into the file.
+/* Search field width. It shares the nav tier now rather than sitting beneath
+   the logo, so it is no longer tied to the logo's width and can be sized for
+   its own placeholder. */
+/* Search field width — 25% longer than the previous 250px, and scaling with
+   the window so it stays generous on a wide screen without crowding the nav
+   labels on a laptop. */
+const SEARCH_WIDTH = "clamp(262px, 26vw, 412px)";
 
-     Why not just use the artwork with its text baked in: the words are the
-     page's H1. As pixels they give no H1 to search engines or screen readers,
-     they cannot translate into the other seven locales, they do not grow when
-     a reader enlarges their browser font, and at phone width the subtitle
-     rendered under 3px tall. All four are fixed by setting the type in CSS.
+/* Shared column geometry for the desktop header. The nav row and the search
+   row are laid out on identical tracks so every element lines up vertically:
+   a hamburger-width leading slot, a flexible middle, and a fixed trailing slot
+   that puts the phone button at the right edge. */
+const HAMBURGER_SLOT = 48; // narrower so more of the brand column goes to the search field // bordered trigger button in the search row
 
-     The section paints its own #192A19 — the green sampled from the artwork —
-     and the photograph sits to the RIGHT and fades into it. That guarantees
-     the text is always on flat green at every width, instead of depending on
-     where a background crop happens to land.
+/* Search field width. It used to be flex:1 and swallowed the whole middle of
+   the search row, which read as oversized next to the rest of the header.
+   It is now a fixed basis that may shrink but not grow; a flexible spacer to
+   its right absorbs the leftover space and keeps the phone button flush with
+   the right edge. Adjust this single value to taste. */
+/* Search width on the single-row header. Kept as a visible field rather than
+   an icon that expands: an always-present field is easier to find, which
+   matters more here than the space an icon would save. */
+/* Search width in the utility row. It shares that row with the language
+   switcher and the phone button and may shrink below this on narrow screens. */
 
-     The house-A cannot be set in type, so it stays an image. The H1 still
-     contains the real string "AFH CLUB"; the letter A is visually hidden and
-     the glyph sits in its place, so assistive tech reads the whole word. */
-  .rpp-afh-hero {
-    position: relative;
-    /* Flush against the navy band beneath it — no stray baseline gap. */
-    display: block;
-    margin-bottom: 0;
-    background-color: #192A19;
-    background-image: linear-gradient(
-        to right,
-        #192A19 0%,
-        #192A19 34%,
-        rgba(25, 42, 25, 0.55) 52%,
-        rgba(25, 42, 25, 0) 72%
-      ),
-      url("/afh-club-hero.webp");
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto 100%, cover;
-    /* Bottom padding is deliberately small: the band below butts straight up
-       against the hero, so any spare space here shows as a white gap. */
-    /* Left padding tracks the viewport so the wordmark holds the same
-       position the artwork had — text starting ~6.5% in — instead of drifting
-       toward the middle as the screen widens. */
-    padding: 30px clamp(20px, 6.5vw, 150px) 40px;
-  }
-  /* index.css has:
-       #main-content > section:first-child { padding-top/bottom: 0 !important }
-     This hero IS that first child, so both paddings were being stripped —
-     which is why the rule ended up sitting on the bottom edge. Same id +
-     element, plus a doubled class, so this out-specifies it. Do not remove.
-     Flex centring puts the wordmark in the middle of the visible green rather
-     than low in the box. */
-  #main-content > section.rpp-afh-hero.rpp-afh-hero {
-    display: flex !important;
-    align-items: center !important;
-    /* Hero height comes from here, NOT from the image. The photo is a
-       background at cover, so a shorter file would just scale up to fill the
-       same box — cropping it does nothing for height. Reduced from
-       clamp(260px, 23vw, 400px), which put hero + band at 470px on a 1920
-       screen. */
-    min-height: clamp(220px, 18.5vw, 330px) !important;
-    /* No header offset here. The header sits in normal flow directly above
-       this section, so reserving --header-height on top of it double-counted
-       and was part of why the hero read as too tall. */
-    padding-top: 34px !important;
-    padding-bottom: 44px !important;
-    margin-bottom: 0 !important;
-  }
-  .rpp-afh-hero-inner {
-    /* margin: 0, NOT 0 auto. Auto-centring inside a 1180px box is what pushed
-       the wordmark to roughly 25% from the left on wide screens and left the
-       dead space beside it. */
-    max-width: 1180px;
-    margin: 0;
-  }
-  .rpp-afh-hero h1.rpp-afh-hero-title {
-    display: flex;
-    align-items: center;
-    /* em, NOT px. Every other dimension in this lockup scales with font-size,
-       so a fixed gap makes the wordmark's width/size ratio drift as the type
-       shrinks — 2% of the width at 106px, 7% at 34px. That drift is what threw
-       the rule's length off on phones, since the rule is derived from that
-       ratio. 0.132em equals the original 14px at 106px type. */
-    gap: 0.132em;
-    font-family: 'DM Sans', system-ui, sans-serif !important;
-    /* Derived by rendering DM Sans and matching the artwork, not estimated.
-       Artwork "F" cap height is 75px in a 1999px frame -> 106px type = 5.30vw.
-       Letter gaps measure 31px and the word gap 69px, so letter-spacing and
-       word-spacing are set separately; a single tracking value spreads "AFH"
-       and "CLUB" evenly and loses the artwork's grouping. */
-    font-size: clamp(34px, 5.3vw, 106px) !important;
-    font-weight: 300 !important;
-    letter-spacing: 0.180em !important;
-    /* NEGATIVE, and correctly so. letter-spacing already applies to the space
-       character, on top of the space's own advance width. A positive value
-       here triple-counts the gap and blows "AFH" and "CLUB" apart. Solved
-       against the artwork's measured 69px word gap. */
-    word-spacing: -0.121em !important;
-    line-height: 1 !important;
-    color: #F3F0EA !important;
-    margin: 0 0 10px !important;
-    padding: 0 !important;
-  }
-  .rpp-afh-hero-glyph {
-    height: 0.98em;
-    width: auto;
-    display: block;
-    flex-shrink: 0;
-  }
-  /* The "A" the glyph replaces — present for screen readers and search, not
-     painted. Not display:none, which would remove it from the accessible name. */
-  .rpp-afh-hero-a {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
-  .rpp-afh-hero-sub {
-    font-family: 'DM Sans', system-ui, sans-serif !important;
-    /* Same derivation: cap height 14px -> 19px type = 0.95vw, letter gap 13px,
-       word gap 32px. */
-    font-size: clamp(11px, 0.95vw, 19px) !important;
-    font-weight: 400 !important;
-    /* 0.5157em, solved so line 2 ("FAMILY HOME RESOURCE NETWORK") measures
-       exactly as wide as the wordmark above it — so the K of NETWORK, the B of
-       CLUB, and the right end of the rule all land on the same edge.
-       The subtitle is 0.95vw and the title 5.3vw, and the title measures 5.64x
-       its own size, so line 2 has to be 5.2/(0.95/5.3) = 29.01em wide. Re-solved
-       when the wordmark changed to mixed case. */
-    letter-spacing: 0.4248em !important;
-    /* Solved against the artwork's measured 32px word gap — see the note on
-       the title above for why this is far smaller than it looks like it
-       should be. */
-    word-spacing: 0.272em !important;
-    text-transform: uppercase !important;
-    color: #F3F0EA !important;
-    margin: 0 0 12px !important;
-    padding: 0 !important;
-    /* Exactly two lines, split in JS below rather than left to the wrapper.
-       text-wrap: balance evens the lines but does NOT control how many there
-       are — that follows from the available width, which is how this ended up
-       at three. nowrap on each line pins it at two in every locale. */
-    max-width: none;
-    white-space: nowrap;
-  }
-  /* Rule under the subtitle. ONE VALUE — change here only. Currently the
-     artwork's orange; switch to the door colour if those should match. */
-  .rpp-afh-hero-rule {
-    /* Spans the width of "AFH CLUB" rather than an arbitrary fraction.
-       The wordmark measures 679px wide at 106px type in the artwork, a ratio
-       so multiplying the title's own clamp by that ratio keeps the rule locked
-       to the wordmark at every viewport width as the type scales.
-       5.2, re-solved for the mixed-case "AFH Club": lowercase letters are
-       narrower than caps, so the wordmark lost 7.7% of its width. */
-    width: calc(clamp(34px, 5.3vw, 106px) * 5.2);
-    max-width: 100%;
-    height: 2px;
-    background: #C0703C;
-    border: 0;
-    /* Space above so it clears the type, and the section's bottom padding
-       keeps it off the edge of the hero. */
-    margin: 16px 0 0 !important;
-  }
-  @media (max-width: 860px) {
-    .rpp-afh-hero {
-      background-image: linear-gradient(
-          to bottom,
-          #192A19 0%,
-          #192A19 58%,
-          rgba(25, 42, 25, 0.5) 78%,
-          rgba(25, 42, 25, 0) 100%
-        ),
-        url("/afh-club-hero-mobile.webp");
-      background-position: bottom center;
-      background-size: auto 100%, cover;
-      padding: 24px 20px 124px;
-    }
-    .rpp-afh-hero-sub { letter-spacing: 0.3em !important; word-spacing: 0.15em !important; }
-  }
-  @media (max-width: 480px) {
-    /* Both lines are nowrap, so tracking has to come down or the longer line
-       runs past the edge. */
-    .rpp-afh-hero-sub {
-      font-size: 10px !important;
-      letter-spacing: 0.16em !important;
-      word-spacing: 0.1em !important;
-    }
-  }
+/* The compact (mobile) header still renders plain links. The desktop header
+   uses PrimaryNav, which adds the dropdown menus. Both read PRIMARY_NAV so
+   the label set cannot diverge between the two layouts. */
+const CURATED_LINKS = PRIMARY_NAV;
 
-  /* Lane rows — a real 3D cube, title on its front face, description beside it.
-     Built with CSS 3D transforms (perspective + preserve-3d), NOT 2D shapes.
-     That matters: the heading sits on the actual front face, so it tilts with
-     the plane automatically. Faking the cube with skew/clip-path would leave
-     level text on a tilted face — the same defect as a level logo on a tilted
-     sign.
-     Angles chosen to reproduce the reference proportions:
-       rotateY(-24deg) -> visible side is ~44% of the apparent face width
-       rotateX(5.5deg) -> visible top  is ~10% of the apparent face height
-     Front face carries the lane colour. Top and side stay neutral grey/black
-     exactly as in the reference, so only one face is coloured. */
-  .rpp-afh-lane-list {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 46px;
-    max-width: 940px;
-    margin: 0 auto;
-  }
-  .rpp-afh-lane-row {
-    display: grid;
-    grid-template-columns: 262px minmax(0, 1fr);
-    align-items: center;
-    column-gap: 30px;
-  }
-  .rpp-afh-cube-wrap {
-    position: relative;
-    width: 252px;
-    height: 182px;
-    perspective: 1500px;
-  }
-  .rpp-afh-cube {
-    position: absolute;
-    left: 26px;
-    top: 16px;
-    width: 150px;
-    height: 150px;
-    transform-style: preserve-3d;
-    transform: rotateX(5.5deg) rotateY(-24deg);
-  }
-  .rpp-afh-cube > * {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 150px;
-    height: 150px;
-    box-sizing: border-box;
-  }
-  /* Front face = the heading itself, so the title stays real text: it scales
-     with browser font size, translates, and reads correctly aloud. */
-  .rpp-afh-lane-row h3.rpp-afh-cube-front {
-    transform: translateZ(75px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px !important;
-    text-align: center;
-    font-family: 'DM Sans', system-ui, sans-serif !important;
-    font-size: 25px !important;
-    font-weight: 700 !important;
-    line-height: 1.2 !important;
-    color: #ffffff !important;
-    margin: 0 !important;
-    min-height: 0 !important;
-    white-space: nowrap;
-  }
-  /* Neutral faces, sampled from the reference image. */
-  .rpp-afh-cube-side {
-    transform: rotateY(90deg) translateZ(75px);
-    background: #151515;
-  }
-  .rpp-afh-cube-top {
-    transform: rotateX(90deg) translateZ(75px);
-    background: #4f4f51;
-  }
-  /* Cast shadow on the ground: a hard-edged wedge tapering to the right and
-     fading along its length, as in the reference. Sits outside the 3D context
-     so the cube's transforms cannot drag it around. */
-  .rpp-afh-cube-shadow {
-    position: absolute;
-    left: 128px;
-    bottom: 16px;
-    width: 122px;
-    height: 62px;
-    background: linear-gradient(
-      100deg,
-      rgba(0, 0, 0, 0.46) 0%,
-      rgba(0, 0, 0, 0.26) 45%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    clip-path: polygon(0% 96%, 24% 4%, 100% 52%);
-  }
-  .rpp-afh-lane-row p {
-    font-family: 'DM Sans', sans-serif !important;
-    font-size: 20px !important;
-    line-height: 1.7 !important;
-    color: #302b26 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    min-height: 0 !important;
-  }
-  @media (max-width: 720px) {
-    .rpp-afh-lane-list { gap: 38px; }
-    .rpp-afh-lane-row { grid-template-columns: 212px minmax(0, 1fr); column-gap: 20px; }
-    .rpp-afh-cube-wrap { width: 204px; height: 150px; }
-    .rpp-afh-cube { left: 20px; top: 12px; width: 122px; height: 122px; }
-    .rpp-afh-cube > * { width: 122px; height: 122px; }
-    .rpp-afh-lane-row h3.rpp-afh-cube-front {
-      transform: translateZ(61px);
-      font-size: 21px !important;
-    }
-    .rpp-afh-cube-side { transform: rotateY(90deg) translateZ(61px); }
-    .rpp-afh-cube-top { transform: rotateX(90deg) translateZ(61px); }
-    .rpp-afh-cube-shadow { left: 104px; bottom: 12px; width: 98px; height: 50px; }
-    .rpp-afh-lane-row p { font-size: 18px !important; }
-  }
-`;
+const Header = () => {
+  const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
+  const { pathname } = useLocation();
+  const headerRef = useRef<HTMLElement>(null);
 
-const CATEGORY_META = [
-  { key: "resources", href: "/afh-club/resources", img: "/afh-resources.webp", placeholder: "#3f3a35" },
-  { key: "listings", href: "/afh-club/listings", img: "/afh-listings.webp", placeholder: "#3e3934" },
-  {
-    key: "management",
-    href: "/afh-club/management-companies",
-    img: "/afh-management-companies.webp",
-    placeholder: "#3c3732",
-  },
-  { key: "broker", href: "/afh-club/real-estate-broker", img: "/afh-real-estate-broker.webp", placeholder: "#3a3530" },
-  {
-    key: "calculators",
-    href: "/afh-club/calculators",
-    img: "/__l5e/assets-v1/f6d8b31f-90b0-4639-a379-feeff961e81c/afh-cost-calculator-v2.webp",
-    placeholder: "#433d37",
-  },
-] as const;
+  /* The final nav entry is centred beneath the phone button, which means it
+     needs the phone's width. That was a hardcoded estimate and it kept drifting
+     out of alignment whenever the button's padding or type size changed. This
+     measures the real element and publishes it as a CSS variable the nav reads,
+     so the two stay locked together. */
+  const phoneRef = useRef<HTMLAnchorElement>(null);
+  const [phoneWidth, setPhoneWidth] = useState(215);
 
-const AFHClub = () => {
-  const { t } = useTranslation();
-  const categories = CATEGORY_META.map((c) => ({
-    title: t(`afhClubPage.categories.${c.key}.title`),
-    description: t(`afhClubPage.categories.${c.key}.description`),
-    href: c.href,
-    img: c.img,
-    placeholder: c.placeholder,
-  }));
+  useEffect(() => {
+    const el = phoneRef.current;
+    if (!el) return;
+    const measure = () => setPhoneWidth(Math.round(el.getBoundingClientRect().width));
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [isMobile]);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 769);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  useEffect(() => {
+    /* The guard below skips injection when a style tag with this id already
+       exists, so the id must change whenever the CSS changes or returning
+       visitors keep the old rules. These rules now only style the compact
+       layout's links — the desktop nav carries its own styles in PrimaryNav. */
+    const id = "rpp-toplink-styles-v9";
+    if (document.getElementById(id)) return;
+    const style = document.createElement("style");
+    style.id = id;
+    style.innerHTML = `
+      .rpp-top-link {
+        color: #272421;
+        text-decoration: none;
+        font-family: 'DM Sans', system-ui, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        /* HOVER AREA FIX — was padding: 6px 4px with no height control.
+           index.css contains:
+               nav a { height: 100% !important; padding-top: 0 !important;
+                       padding-bottom: 0 !important; }
+           which stretched every nav link to the full height of the nav row,
+           so the hover state fired well away from the text.
+
+           .rpp-top-link is a class (0,1,0) and beats "nav a" (0,0,2), so
+           these !important flags hold. Height now hugs the label. */
+        padding: 5px 8px !important;
+        height: auto !important;
+        align-self: center !important;
+        border-bottom: 1px solid transparent;
+        transition: color 0.18s ease, border-color 0.18s ease;
+        text-align: center;
+        line-height: 1.2;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .rpp-top-link-line {
+        display: block;
+        white-space: nowrap;
+      }
+      .rpp-top-link:hover { color: #7f1d1d; }
+      .rpp-top-link.is-active { border-bottom-color: #7f1d1d; }
+      .rpp-top-link:focus-visible {
+        outline: 2px solid #7f1d1d;
+        outline-offset: 3px;
+        border-radius: 3px;
+      }
+      .rpp-curated-link { display: inline-flex; }
+      @media (min-width: 769px) {
+        .rpp-header-phone { font-size: 22px !important; }
+        .rpp-header-phone-icon {
+          width: 1.05em;
+          height: 1.05em;
+          flex-shrink: 0;
+        }
+      }
+      @media (max-width: 950px) {
+        .rpp-curated-link { display: none !important; }
+      }
+    `;
+    document.head.appendChild(style);
+  }, []);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+
+    const setVar = () => {
+      document.documentElement.style.setProperty("--header-height", `${el.getBoundingClientRect().height}px`);
+    };
+
+    setVar();
+
+    const observer = new ResizeObserver(setVar);
+    observer.observe(el);
+    window.addEventListener("resize", setVar);
+    window.addEventListener("orientationchange", setVar);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", setVar);
+      window.removeEventListener("orientationchange", setVar);
+    };
+  }, [isMobile]);
+
   return (
     <>
-      <SEOHead
-        title={t("afhClubPage.seo.title")}
-        description={t("afhClubPage.seo.description")}
-        canonical="https://realpropertyplanning.com/afh-club"
-      />
-      <BreadcrumbSchema
-        items={[
-          { name: "Home", url: "https://realpropertyplanning.com" },
-          { name: "AFH Club", url: "https://realpropertyplanning.com/afh-club" },
-        ]}
-      />
-      <Header />
-      <style>{PAGE_CSS}</style>
-      <main id="main-content">
-        {/* Hero — photograph with the wordmark set as live text over it. */}
-        <section className="rpp-afh-hero">
-          <div className="rpp-afh-hero-inner">
-            <h1 className="rpp-afh-hero-title">
-              <img
-                src="/afh-club-glyph.png"
-                alt=""
-                aria-hidden="true"
-                className="rpp-afh-hero-glyph"
-                width={200}
-                height={194}
-              />
-              <span>
-                <span className="rpp-afh-hero-a">A</span>FH Club
-              </span>
-            </h1>
-            <p className="rpp-afh-hero-sub">
-              {(() => {
-                // Split into two lines at the most even word boundary. Done
-                // here rather than with a hard-coded <br> so it stays correct
-                // for the other seven locales, whose strings differ in length.
-                const text = t("afhClubPage.hero.subtitle", {
-                  defaultValue: "Adult Family Home Marketplace",
-                });
-                const words = String(text).trim().split(/\s+/);
-                if (words.length < 2) return text;
-                let cut = 1;
-                let best = Infinity;
-                for (let i = 1; i < words.length; i++) {
-                  const diff = Math.abs(
-                    words.slice(0, i).join(" ").length -
-                      words.slice(i).join(" ").length
-                  );
-                  if (diff < best) {
-                    best = diff;
-                    cut = i;
-                  }
-                }
-                return (
-                  <>
-                    {words.slice(0, cut).join(" ")}
-                    <br />
-                    {words.slice(cut).join(" ")}
-                  </>
-                );
-              })()}
-            </p>
-            <hr className="rpp-afh-hero-rule" />
-          </div>
-        </section>
+      <a href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md focus:text-base"
+      >
+        Skip to main content
+      </a>
 
-        {/* Welcome banner */}
-        <HeroBandTitle as="h2">{t("afhClubPage.welcomeBanner")}</HeroBandTitle>
+      <header
+        ref={headerRef}
+        data-nosnippet="true"
+        style={{
+          position: "sticky",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 50,
+          margin: 0,
+          padding: isMobile
+            ? "calc(env(safe-area-inset-top, 0px) + 8px) 12px 6px"
+            : "calc(env(safe-area-inset-top, 0px) + 8px) 24px 4px",
+          /* Cream, matching the page background, so the header reads as part
+             of the page rather than a bar sitting on top of it. Everything
+             inside had to flip from light to dark when this changed — nav
+             labels, carets, underlines, the divider and the hamburger. If this
+             ever goes back to a dark colour, all of those flip back too. */
+          backgroundColor: "rgba(245, 240, 232, 0.96)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+          /* Strengthened from 14% to 30% opacity. Not a new dark rule: the
+             header is cream and the hero photograph sits directly beneath it,
+             so the tonal contrast already marks that boundary — a hard dark
+             line there would be answering a question the colours have already
+             answered, and it would box the hero in.
 
-        {/* Carousel — no text above it */}
-        <AFHCarousel categories={categories} />
+             What was wrong was the asymmetry. The navy band below the image
+             now has a crisp 1px edge, so a barely-visible 14% line above it
+             read as vague by comparison. 30% is enough to look deliberate and
+             still light enough to stay a hairline rather than a border.
 
-        {/* ==================================================================
-            MORE WAYS TO CLOSE — audience lanes.
-            Ordered by stated priority: sellers, buyers, investors, lessees.
-            Reads as options unlocked, not as a roster of professionals.
-           ================================================================== */}
-        <section className="rpp-afh-paths" style={{ background: "#ffffff", padding: "72px 24px 16px" }}>
-          <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-            <p className="rpp-afh-kicker" style={{ color: "#b13a44", marginBottom: 14, textAlign: "center" }}>
-              Buying, selling, and leasing in Washington State
-            </p>
-            <h2
+             Charcoal at low opacity rather than a fixed colour, so it holds up
+             over the photograph on the homepage and over cream on interior
+             pages without needing a second rule. */
+          borderBottom: "1px solid rgba(39,36,33,0.30)",
+          ...NAV_FONT,
+          color: "#272421",
+        }}
+      >
+        {/* Two-column desktop header: the logo occupies a full-height left
+            column while the nav links and search stack in the right column.
+            Mobile keeps the original stacked structure untouched. */}
+        {isMobile ? (
+          <>
+            <nav
+              aria-label="Primary"
               style={{
-                fontSize: "clamp(30px, 3.6vw, 44px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontWeight: 700,
-                lineHeight: 1.15,
-                margin: "0 0 18px",
-                textAlign: "center",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 12,
+                minWidth: 0,
               }}
             >
-              More ways of doing business
-            </h2>
-            <p
-              style={{
-                fontSize: "clamp(19px, 2vw, 23px)",
-                fontFamily: "'DM Sans', sans-serif",
-                lineHeight: 1.8,
-                maxWidth: 760,
-                margin: "0 auto 52px",
-                textAlign: "center",
-              }}
-            >
-              AFH Club connects owners, buyers, and operators of Washington adult family homes with the
-              professionals a transaction requires.
-            </p>
-
-            <div className="rpp-afh-lane-list">
-              {[
-                {
-                  title: "Selling",
-                  body: "Sell the home and the business together, or separate them and sell each to the buyer best suited to it.",
-                  accent: "#b13a44",
-                },
-                {
-                  title: "Retiring",
-                  body: "Step back without selling at all. A management company can run the home while the asset stays in your name.",
-                  accent: "#9a6b26",
-                },
-                {
-                  title: "Buying",
-                  body: "Being new is not a disqualifier. Management support can cover the experience gap, and financing paths exist for qualified buyers.",
-                  accent: "#41623f",
-                },
-                {
-                  title: "Investing",
-                  body: "Owners often talk to a broker long before they are ready to list, so homes become available before they reach the public market.",
-                  accent: "#12615f",
-                },
-                {
-                  title: "Leasing",
-                  body: "Keep the property in your name and collect income while a licensed operator runs the business inside it.",
-                  accent: "#3a5a80",
-                },
-                {
-                  title: "Managing",
-                  body: "An independent management company can take on staffing, compliance, and daily operations, whether you own one home or several.",
-                  accent: "#6b4363",
-                },
-              ].map((lane) => (
-                <div key={lane.title} className="rpp-afh-lane-row">
-                  <div className="rpp-afh-cube-wrap">
-                    <span className="rpp-afh-cube-shadow" aria-hidden="true" />
-                    <div className="rpp-afh-cube">
-                      <h3 className="rpp-afh-cube-front" style={{ background: lane.accent }}>
-                        {lane.title}
-                      </h3>
-                      {/* Decorative faces — neutral, as in the reference. */}
-                      <span className="rpp-afh-cube-side" aria-hidden="true" />
-                      <span className="rpp-afh-cube-top" aria-hidden="true" />
-                    </div>
-                  </div>
-                  <p>{lane.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ==================================================================
-            THE NETWORK — described as capabilities held by INDEPENDENT
-            professionals, never as staff or as services RPP provides.
-            This wording is what keeps the page consistent with the neutral-hub
-            architecture used across the rest of the site. Do not change
-            "independent" to "our" / "we" / "my team".
-           ================================================================== */}
-        <section className="rpp-afh-network" style={{ background: "#ffffff", padding: "64px 24px 72px" }}>
-          <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-            <p className="rpp-afh-kicker" style={{ color: "#b13a44", marginBottom: 14, textAlign: "center" }}>
-              Who you get access to
-            </p>
-            <h2
-              style={{
-                fontSize: "clamp(28px, 3.2vw, 40px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontWeight: 700,
-                lineHeight: 1.2,
-                margin: "0 0 18px",
-                textAlign: "center",
-              }}
-            >
-              Five kinds of professional, one point of contact
-            </h2>
-            <p
-              style={{
-                fontSize: "clamp(18px, 1.9vw, 21px)",
-                fontFamily: "'DM Sans', sans-serif",
-                lineHeight: 1.8,
-                maxWidth: 720,
-                margin: "0 auto 48px",
-                textAlign: "center",
-              }}
-            >
-              Each of these is an independent business with its own licensing and its own client
-              relationships. You are introduced to the ones your situation actually calls for, and you
-              engage them directly.
-            </p>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-              {[
-                {
-                  n: "01",
-                  title: "Residential real estate brokerage",
-                  who: "David Stein \u2014 eXp Realty, WA broker license #133972",
-                  body: "Listing, marketing, and sale of the real property itself, including homes marketed quietly to buyers already in the network.",
-                },
-                {
-                  n: "02",
-                  title: "Appraisal and valuation",
-                  who: "David Stein \u2014 Stein Appraisal, WA certified residential appraiser #1702080",
-                  body: "Independent valuation of the real estate. Appraisal and brokerage are kept on separate transactions \u2014 the same property is never both appraised and brokered by the same person.",
-                },
-                {
-                  n: "03",
-                  title: "Business and lease brokerage",
-                  who: "Independent commercial broker",
-                  body: "Represents buyers and sellers of the business itself, and negotiates commercial leases. This is what makes it possible to treat the operation and the building as two separate, separately sellable assets.",
-                },
-                {
-                  n: "04",
-                  title: "Adult family home management",
-                  who: "Independent management company",
-                  body: "Runs the day-to-day operation. For sellers, a way to keep the asset without the work. For buyers, a way to meet operational expectations while gaining experience.",
-                },
-                {
-                  n: "05",
-                  title: "Capital partners",
-                  who: "Independent investors",
-                  body: "There are investors interested in backing qualified buyers of adult family homes. Availability, structure, and terms vary by deal and are discussed individually. Nothing about these arrangements is offered or described on this site.",
-                },
-              ].map((row, i) => (
-                <div
-                  key={row.n}
-                  style={{
-                    display: "flex",
-                    gap: 26,
-                    alignItems: "flex-start",
-                    padding: "28px 0",
-                    borderTop: i === 0 ? "1px solid #dfc9cb" : "none",
-                    borderBottom: "1px solid #dfc9cb",
-                  }}
-                >
-                  <div
-                    style={{
-                      flexShrink: 0,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
-                      fontSize: 30,
-                      fontWeight: 700,
-                      color: "#b13a44",
-                      lineHeight: 1,
-                      width: 54,
-                      paddingTop: 4,
-                    }}
-                    aria-hidden="true"
-                  >
-                    {row.n}
-                  </div>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <h3
-                      style={{
-                        fontSize: "clamp(21px, 2.1vw, 26px)",
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
-                        fontWeight: 700,
-                        lineHeight: 1.3,
-                        margin: "0 0 6px",
-                      }}
-                    >
-                      {row.title}
-                    </h3>
-                    <p
-                      style={{
-                        fontSize: 17,
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontWeight: 600,
-                        lineHeight: 1.6,
-                        margin: "0 0 10px",
-                      }}
-                    >
-                      {row.who}
-                    </p>
-                    <p
-                      style={{
-                        fontSize: 18,
-                        fontFamily: "'DM Sans', sans-serif",
-                        lineHeight: 1.7,
-                        margin: 0,
-                      }}
-                    >
-                      {row.body}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* ------------------------------------------------------------------
-                REQUIRED DISCLOSURE. David receives compensation from some of the
-                parties described above, so this block is not optional and should
-                not be moved below the fold or reduced in size.
-               ------------------------------------------------------------------ */}
-            <div
-              className="rpp-afh-disclosure"
-              style={{
-                marginTop: 40,
-                background: "#f7f4ef",
-                border: "1px solid #dfc9cb",
-                borderLeft: "4px solid #481216",
-                borderRadius: 4,
-                padding: "26px 28px",
-              }}
-            >
-              <p style={{ margin: "0 0 12px" }}>
-                <strong>How this works, and how people are paid.</strong> Real Property Planning is an
-                educational hub. It is not a brokerage, a management company, or an investment firm, and
-                it does not employ the professionals described above. Each is an independent business
-                that you engage directly and on your own terms.
-              </p>
-              <p style={{ margin: "0 0 12px" }}>
-                Real estate brokerage services are provided by David Stein, a licensed Washington broker,
-                through eXp Realty. Appraisal services are provided by David Stein through Stein
-                Appraisal. David Stein may receive compensation, including referral fees or commission
-                splits, in connection with some of the introductions described on this page. You are
-                always free to work with professionals of your own choosing.
-              </p>
-              <p style={{ margin: 0 }}>
-                Nothing on this page is an offer to sell or a solicitation of an offer to buy any
-                security, nor is it financial, legal, or tax advice. Any financing or investment
-                arrangement is negotiated solely between you and that party, and you should consult your
-                own attorney and accountant before entering into one.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section style={{ background: "#fff", padding: "48px 24px" }}>
-          <div style={{ maxWidth: 960, margin: "0 auto", textAlign: "center" }}>
-            <p className="rpp-afh-kicker" style={{ color: "#b13a44", marginBottom: 12 }}>
-              {t("afhClubPage.marketplace.eyebrow")}
-            </p>
-            <h2
-              style={{
-                fontSize: "clamp(26px, 3vw, 36px)",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 700,
-                color: "#302b26",
-                marginBottom: 16,
-              }}
-            >
-              {t("afhClubPage.marketplace.heading")}
-            </h2>
-            <p
-              style={{
-                fontSize: 18,
-                fontFamily: "'DM Sans', sans-serif",
-                color: "#4a453f",
-                maxWidth: 600,
-                margin: "0 auto 32px",
-                lineHeight: 1.7,
-              }}
-            >
-              {t("afhClubPage.marketplace.description")}
-            </p>
-            <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-              <Link
-                to="/afh-club/listings"
-                style={{
-                  display: "inline-block",
-                  background: "#302b26",
-                  color: "#fff",
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 700,
-                  fontSize: 15,
-                  letterSpacing: "0.08em",
-                  padding: "14px 32px",
-                  borderRadius: 3,
-                  textDecoration: "none",
-                }}
-              >
-                {t("afhClubPage.marketplace.browseListings")}
-              </Link>
-              <Link
-                to="/afh-submit"
-                style={{
-                  display: "inline-block",
-                  background: "transparent",
-                  color: "#302b26",
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 700,
-                  fontSize: 15,
-                  letterSpacing: "0.08em",
-                  padding: "14px 32px",
-                  borderRadius: 3,
-                  textDecoration: "none",
-                  border: "2px solid #302b26",
-                }}
-              >
-                {t("afhClubPage.marketplace.submitListing")}
-              </Link>
-            </div>
-
-            {/* Directory of every licensed home, not just those for sale. Uses a
-              defaultValue so it reads correctly in all locales without needing a
-              new key added to each of the eight translation files. */}
-            <p style={{ marginTop: 28, fontSize: 17, lineHeight: 1.7 }}>
-              <Link
-                to="/afh-club/homes"
-                style={{ color: "#302b26", textDecoration: "underline", textUnderlineOffset: 4, fontWeight: 600 }}
-              >
-                {t("afhClubPage.marketplace.browseDirectory", {
-                  defaultValue: "Or browse every licensed adult family home in Washington by city →",
-                })}
-              </Link>
-            </p>
-          </div>
-        </section>
-
-        {/* Browse by city */}
-        <section style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px 56px" }}>
-          <p className="rpp-afh-kicker" style={{ textAlign: "center", color: "#4a453f", marginBottom: 14 }}>
-            {t("afhClubPage.browseByCity")}
-          </p>
-          <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
-            {[
-              { name: "Seattle", href: "/afh-club/for-sale/seattle-wa" },
-              { name: "Kirkland", href: "/afh-club/for-sale/kirkland-wa" },
-              { name: "Renton", href: "/afh-club/for-sale/renton-wa" },
-              { name: "Bellevue", href: "/afh-club/for-sale/bellevue-wa" },
-              { name: "Auburn", href: "/afh-club/for-sale/auburn-wa" },
-              { name: "Lynnwood", href: "/afh-club/for-sale/lynnwood-wa" },
-              { name: "Edmonds", href: "/afh-club/for-sale/edmonds-wa" },
-              { name: "Everett", href: "/afh-club/for-sale/everett-wa" },
-              { name: "Marysville", href: "/afh-club/for-sale/marysville-wa" },
-              { name: "Mukilteo", href: "/afh-club/for-sale/mukilteo-wa" },
-              { name: "Puyallup", href: "/afh-club/for-sale/puyallup-wa" },
-              { name: "Lakewood", href: "/afh-club/for-sale/lakewood-wa" },
-              { name: "Bonney Lake", href: "/afh-club/for-sale/bonney-lake-wa" },
-            ].map((c) => (
-              <Link
-                key={c.href}
-                to={c.href}
-                style={{
-                  display: "inline-block",
-                  background: "#f7f4ef",
-                  color: "#302b26",
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 600,
-                  fontSize: 15,
-                  padding: "8px 16px",
-                  borderRadius: 20,
-                  textDecoration: "none",
-                  border: "1px solid #dfc9cb",
-                }}
-              >
-                {c.name}, WA
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* Category list */}
-        <section style={{ maxWidth: 900, margin: "0 auto", padding: "56px 24px 80px" }}>
-          <h2
-            style={{
-              fontSize: "clamp(28px, 3vw, 38px)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              fontWeight: 700,
-              color: "#280a0c",
-              marginBottom: 48,
-            }}
-          >
-            {t("afhClubPage.exploreHeading")}
-          </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-            {categories.map((cat, i) => (
-              <Link
-                key={cat.href}
-                to={cat.href}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 24,
-                  padding: "22px 0",
-                  borderBottom: "1px solid #dfc9cb",
-                  borderTop: i === 0 ? "1px solid #dfc9cb" : "none",
-                  textDecoration: "none",
-                  transition: "background 0.2s ease",
-                }}
-                onMouseEnter={(e) =>
-                  ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(184,115,51,0.04)")
-                }
-                onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "transparent")}
-              >
-                <div
-                  style={{
-                    flexShrink: 0,
-                    width: 90,
-                    height: 120,
-                    borderRadius: 4,
-                    overflow: "hidden",
-                    background: cat.placeholder,
-                    boxShadow: "0 2px 12px rgba(10,22,40,0.12)",
-                  }}
+              <div style={{ display: "flex", alignItems: "center", gap: 14, minWidth: 0, flexShrink: 1 }}>
+                <WaterfallNav />
+                <Link
+                  to="/"
+                  className="rpp-logo-home"
+                  aria-label="Real Property Planning — go to the homepage"
+                  title="Go to the homepage"
+                  style={{ display: "flex", alignItems: "center", position: "relative" }}
                 >
                   <img
-                    src={cat.img}
-                    alt={cat.title}
-                    width={90}
-                    height={120}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
-                    loading="lazy"
+                    src="/rpp-logo-v9.webp"
+                    alt=""
+                    style={{ height: 38, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
+                    sizes="100vw"
+                    decoding="async"
+                    width={1608}
+                    height={331}
                   />
-                </div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <h3
-                    style={{
-                      fontSize: "clamp(20px, 2vw, 24px)",
-                      fontWeight: 700,
-                      color: "#280a0c",
-                      margin: "0 0 8px",
-                      lineHeight: 1.3,
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
-                    }}
-                  >
-                    {cat.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "clamp(18px, 1.8vw, 20px)",
-                      color: "#302b26",
-                      margin: "0 0 12px",
-                      lineHeight: 1.65,
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontWeight: 400,
-                    }}
-                  >
-                    {cat.description}
-                  </p>
-                  <span
-                    className="rpp-afh-kicker"
-                    style={{ color: "#481216", display: "inline-flex", alignItems: "center", gap: 5 }}
-                  >
-                    {t("afhClubPage.exploreLabel")}
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
+                </Link>
+              </div>
 
-        {/* What is an AFH */}
-        <section style={{ background: "#f7f4ef", padding: "80px 24px" }}>
-          <div style={{ maxWidth: 720, margin: "0 auto" }}>
-            <p className="rpp-afh-eyebrow" style={{ margin: "0 0 16px" }}>
-              {t("afhClubPage.whatIsAfh.eyebrow")}
-            </p>
-            <h2
-              style={{
-                fontSize: "clamp(30px, 3.5vw, 42px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontWeight: 700,
-                color: "#280a0c",
-                lineHeight: 1.2,
-                margin: "0 0 20px",
-              }}
-            >
-              {t("afhClubPage.whatIsAfh.heading")}
-            </h2>
-            <p
-              style={{
-                fontSize: "clamp(19px, 2vw, 22px)",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 400,
-                color: "#302b26",
-                lineHeight: 1.85,
-                margin: "0 0 22px",
-              }}
-            >
-              {t("afhClubPage.whatIsAfh.paragraph1")}
-            </p>
-            <p
-              style={{
-                fontSize: "clamp(19px, 2vw, 22px)",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 400,
-                color: "#302b26",
-                lineHeight: 1.85,
-                margin: "0 0 22px",
-              }}
-            >
-              {t("afhClubPage.whatIsAfh.paragraph2")}
-            </p>
-            <p
-              style={{
-                fontSize: "clamp(19px, 2vw, 22px)",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 400,
-                color: "#302b26",
-                lineHeight: 1.85,
-                margin: 0,
-              }}
-            >
-              {t("afhClubPage.whatIsAfh.paragraph3")}
-            </p>
-          </div>
-        </section>
+              <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0 }}>
+                {CURATED_LINKS.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className={`rpp-top-link rpp-curated-link${pathname === item.href ? " is-active" : ""}`}
+                  >
+                    {item.lines.map((line) => (
+                      <span key={line} className="rpp-top-link-line">
+                        {line}
+                      </span>
+                    ))}
+                  </Link>
+                ))}
+                <LanguageSwitcher compact={isMobile} />
+                <a href="tel:2069003015"
+                  className="rpp-header-phone"
+                  style={{
+                    ...NAV_FONT,
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
+                    color: "#fff",
+                    background: "#1f6fb2",
+                    padding: isMobile ? "6px 10px" : "4px 14px",
+                    borderRadius: 6,
+                    fontWeight: 700,
+                    fontSize: isMobile ? 15 : 16,
+                    letterSpacing: "0.02em",
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                    whiteSpace: "nowrap",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: isMobile ? 6 : 8,
+                  }}
+                  aria-label="Call David Stein at (206) 900-3015"
+                >
+                  {/* Handset mark sits BESIDE the number, not instead of it.
+                      This site's readers are largely older adults, for whom a
+                      visible number is the thing they act on — many will read
+                      it off the screen and dial on another phone, which an
+                      icon-only button makes impossible. The glyph adds the
+                      visual tidying without removing the information.
+                      aria-hidden because the aria-label above already names
+                      the action; otherwise screen readers announce it twice. */}
+                  <svg
+                    className="rpp-header-phone-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.1"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
+                  </svg>
+                  <span>{isMobile ? "CALL" : "(206) 900-3015"}</span>
+                </a>
+              </div>
+            </nav>
 
-        {/* Featured: AFH Marketplace */}
-        <section
-          className="rpp-afh-marketplace"
-          style={{
-            /* Dark green, flat. Was a teal gradient; a gradient makes the
-               band's apparent width shift with screen size, so it read as a
-               different band on different pages. One colour, like the navy
-               band component.
-
-               The 1px rule along the top edge matches the homepage hero band:
-               #14161A, a very dark neutral rather than true black. Against a
-               field this deep, pure black reads as a hole rather than an edge.
-               borderTop rather than a wrapper or pseudo-element, so it is part
-               of the band's own box and cannot drift out of alignment. */
-            background: "#1F4A34",
-            borderTop: "1px solid #14161A",
-            padding: "56px 24px",
-            color: "#ffffff",
-          }}
-        >
-          <div style={{ maxWidth: 920, margin: "0 auto", textAlign: "center" }}>
-            {/* Size, weight and letter-spacing now live in the class. Keeping
-                letterSpacing inline made this h2 match
-                  main [style*="letter-spacing"] { font-size: 14px !important }
-                and collapse from clamp(28px, 4vw, 40px) to 14px. */}
-            <h2 className="rpp-afh-marketplace-heading">{t("afhClubPage.readyToBuySell.heading")}</h2>
-            <p style={{ margin: "0 auto 28px", maxWidth: 640 }}>{t("afhClubPage.readyToBuySell.description")}</p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center" }}>
-              <Link
-                to="/afh-club/listings"
-                className="rpp-afh-btn-solid"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8,
-                  background: "#ffffff",
-                  fontSize: 16,
-                  fontWeight: 700,
-                  padding: "14px 28px",
-                  borderRadius: 10,
-                  textDecoration: "none",
-                  minHeight: 52,
-                  boxShadow: "0 4px 14px rgba(0,0,0,0.15)",
-                }}
-              >
-                {t("afhClubPage.readyToBuySell.browseListings")}
-              </Link>
-              <Link
-                to="/afh-submit"
-                className="rpp-afh-btn-outline"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8,
-                  background: "transparent",
-                  fontSize: 16,
-                  fontWeight: 700,
-                  padding: "14px 28px",
-                  borderRadius: 10,
-                  textDecoration: "none",
-                  minHeight: 52,
-                  border: "2px solid rgba(255,255,255,0.85)",
-                }}
-              >
-                {t("afhClubPage.readyToBuySell.sellYourAfh")}
-              </Link>
+            <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(39,36,33,0.12)" }}>
+              <SiteSearchBar />
             </div>
-          </div>
-        </section>
+          </>
+        ) : (
+          <>
+            {/* TIER 1 — brand block on the left, phone on the right.
+                The nav is NOT here. Sharing this row with the phone meant the
+                right-hand labels sat directly beneath the phone button, and
+                reserving space to clear it left about 60px for four gaps —
+                less separation between labels, not more. Giving the nav its
+                own tier below costs roughly 40px of header height and buys it
+                the full page width. */}
+            <div style={{ display: "flex", alignItems: "center", gap: 28, minWidth: 0 }}>
+              {/* Brand block: logo on top, hamburger and search side by side
+                  beneath it. The hamburger was previously to the LEFT of the
+                  logo, which pushed the whole brand block inward and left the
+                  menu button orphaned in the margin. Both rows are exactly
+                  LOGO_WIDTH, so the block has one clean left and right edge. */}
+              {/* Logo alone. The search moved down to the nav tier: stacking it
+                  under the logo made the left column ~112px tall on its own and
+                  pushed the whole header to ~190px. */}
+              <div style={{ width: LOGO_WIDTH, flexShrink: 0 }}>
+                {/* The logo is the site's home button, but nothing said so:
+                    no label, no tooltip, no hover state. The accessible name
+                    and title below carry that meaning to screen readers and
+                    mouse users; .rpp-logo-home in index.css carries the
+                    visual treatment. The img alt is now empty ON PURPOSE —
+                    the Link owns the accessible name, and leaving alt text
+                    on the image made screen readers announce the brand twice
+                    without ever saying "home". */}
+                <Link
+                  to="/"
+                  className="rpp-logo-home"
+                  aria-label="Real Property Planning — go to the homepage"
+                  title="Go to the homepage"
+                  style={{ display: "block", position: "relative" }}
+                >
+                  <img
+                    src="/rpp-logo-v9.webp"
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      display: "block",
+                      objectFit: "contain",
+                    }}
+                    sizes="100vw"
+                    decoding="async"
+                    width={1608}
+                    height={331}
+                  />
+                </Link>
+              </div>
 
-        <CTASection />
-        <DisclaimerSection />
-      </main>
-      <Footer />
+              <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "stretch", gap: 14 }}>
+                <LanguageSwitcher compact />
+                <a href="tel:2069003015"
+                  ref={phoneRef}
+                  className="rpp-header-phone"
+                  style={{
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
+                    color: "#fff",
+                    background: "#1f6fb2",
+                    borderRadius: 6,
+                    fontWeight: 700,
+                    letterSpacing: "0.02em",
+                    textDecoration: "none",
+                    whiteSpace: "nowrap",
+                    padding: "8px 20px",
+                    display: "inline-flex",
+                    alignItems: "center",
+                  }}
+                >
+                  (206) 900-3015
+                </a>
+              </div>
+            </div>
+
+            {/* TIER 2 — navigation across the full width, on its own rule.
+                Nothing sits above or below any label, so the five categories
+                read as one row of equals. */}
+            <div
+              style={{
+                marginTop: 8,
+                paddingTop: 8,
+                paddingBottom: 8,
+                borderTop: "1px solid rgba(39,36,33,0.10)",
+                ["--pn-phone-slot" as string]: `${phoneWidth}px`,
+                display: "flex",
+                alignItems: "center",
+                minWidth: 0,
+                /* Keeps the last label clear of the phone button sitting in the
+                   tier above it. Without this the right-hand category sat
+                   directly beneath the phone. */
+              }}
+            >
+              {/* Menu and search lead the row; the nav takes everything left.
+                  NOTE: there is not enough width at 1280px to also reserve room
+                  so the last label clears the phone button above it. Reserving
+                  270px would leave ~640px for labels that need ~655px. If that
+                  overlap matters more than the search being on this row, the
+                  labels have to get shorter. */}
+              <div
+                style={{
+                  width: HAMBURGER_SLOT,
+                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "stretch",
+                  justifyContent: "center",
+                }}
+              >
+                <WaterfallNav />
+              </div>
+              <div style={{ width: SEARCH_WIDTH, flexShrink: 1, minWidth: 0, marginLeft: 8, marginRight: "clamp(44px, 5vw, 84px)" }}>
+                <SiteSearchBar />
+              </div>
+              <PrimaryNav />
+            </div>
+          </>
+        )}
+      </header>
     </>
   );
 };
 
-export default AFHClub;
+export default Header;
