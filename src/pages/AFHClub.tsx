@@ -79,6 +79,34 @@ const PAGE_CSS = `
     color: #ffffff !important;
   }
   .rpp-afh-marketplace a { text-decoration: none !important; }
+
+  /* ---- Paths + Network sections (added with the professional network) ---- */
+  .rpp-afh-paths h2,
+  .rpp-afh-paths h3,
+  .rpp-afh-network h2,
+  .rpp-afh-network h3 { color: #280a0c !important; }
+  .rpp-afh-paths p,
+  .rpp-afh-network p { color: #302b26 !important; }
+  .rpp-afh-paths li,
+  .rpp-afh-network li { color: #302b26 !important; }
+
+  /* Class name must not contain "uppercase" — index.css matches
+     main [class*="uppercase"] and would force 14px. */
+  .rpp-afh-lane-label {
+    font-size: 15px !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: #481216 !important;
+    margin: 0 0 10px !important;
+  }
+  .rpp-afh-disclosure p {
+    color: #4a453f !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+  .rpp-afh-disclosure strong { color: #302b26 !important; }
 `;
 
 const CATEGORY_META = [
@@ -206,6 +234,324 @@ const AFHClub = () => {
 
         {/* Carousel — no text above it */}
         <AFHCarousel categories={categories} />
+
+        {/* ==================================================================
+            MORE WAYS TO CLOSE — audience lanes.
+            Ordered by stated priority: sellers, buyers, investors, lessees.
+            Reads as options unlocked, not as a roster of professionals.
+           ================================================================== */}
+        <section className="rpp-afh-paths" style={{ background: "#ffffff", padding: "72px 24px 16px" }}>
+          <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+            <p className="rpp-afh-kicker" style={{ color: "#b13a44", marginBottom: 14, textAlign: "center" }}>
+              What&rsquo;s new at AFH Club
+            </p>
+            <h2
+              style={{
+                fontSize: "clamp(30px, 3.6vw, 44px)",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontWeight: 700,
+                lineHeight: 1.15,
+                margin: "0 0 18px",
+                textAlign: "center",
+              }}
+            >
+              More ways for a deal to close
+            </h2>
+            <p
+              style={{
+                fontSize: "clamp(19px, 2vw, 23px)",
+                fontFamily: "'DM Sans', sans-serif",
+                lineHeight: 1.8,
+                maxWidth: 760,
+                margin: "0 auto 52px",
+                textAlign: "center",
+              }}
+            >
+              AFH Club began as a place to list and sell adult family homes. It has grown into something
+              more useful. Alongside licensed brokerage and appraisal, there are now independent
+              professionals covering business and lease brokerage, day-to-day home management, and
+              financing for qualified buyers. Each one opens a path that did not exist before &mdash;
+              which means fewer situations that end in &ldquo;there&rsquo;s nothing I can do.&rdquo;
+            </p>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: 28,
+              }}
+            >
+              {[
+                {
+                  label: "If you are selling or retiring",
+                  heading: "You likely have more exits than one",
+                  body: "Selling the home and the business together is only one option, and not always the best one.",
+                  items: [
+                    "Sell the business and keep the real estate as leased income",
+                    "Bring in a management company and step back without selling at all",
+                    "Sell to a buyer supported by outside financing who could not close alone",
+                    "Separate the going concern from the property and sell them to different parties",
+                  ],
+                },
+                {
+                  label: "If you are buying in",
+                  heading: "Being new is not a disqualifier",
+                  body: "The usual obstacles for first-time buyers are experience and capital. Both have answers.",
+                  items: [
+                    "Partner with a management company to satisfy operational requirements",
+                    "Buy the business and lease the real estate to lower what you need up front",
+                    "Financing paths exist for qualified buyers, discussed case by case",
+                    "Valuation and licensing guidance before you commit to anything",
+                  ],
+                },
+                {
+                  label: "If you are investing or expanding",
+                  heading: "Homes that never reach a listing",
+                  body: "Owners approaching retirement often talk to a broker long before they are ready to list publicly.",
+                  items: [
+                    "Independent valuation on the property and the operation",
+                    "Portfolio and multi-home acquisition structures",
+                    "Management in place so the asset does not require your daily attention",
+                  ],
+                },
+                {
+                  label: "If you are leasing",
+                  heading: "Income without operations",
+                  body: "A lease keeps the property in your name while someone else runs the business inside it.",
+                  items: [
+                    "Lease terms negotiated by a broker who handles business leases",
+                    "Tenant operators seeking licensed, ready homes",
+                    "Structures that preserve your long-term ownership and basis",
+                  ],
+                },
+              ].map((lane) => (
+                <div
+                  key={lane.label}
+                  style={{
+                    background: "#f7f4ef",
+                    border: "1px solid #dfc9cb",
+                    borderTop: "4px solid #b13a44",
+                    borderRadius: 4,
+                    padding: "30px 28px 26px",
+                  }}
+                >
+                  <p className="rpp-afh-lane-label">{lane.label}</p>
+                  <h3
+                    style={{
+                      fontSize: "clamp(21px, 2.1vw, 25px)",
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontWeight: 700,
+                      lineHeight: 1.3,
+                      margin: "0 0 12px",
+                    }}
+                  >
+                    {lane.heading}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: 18,
+                      fontFamily: "'DM Sans', sans-serif",
+                      lineHeight: 1.7,
+                      margin: "0 0 18px",
+                    }}
+                  >
+                    {lane.body}
+                  </p>
+                  <ul style={{ margin: 0, padding: "0 0 0 22px", listStyle: "disc" }}>
+                    {lane.items.map((it) => (
+                      <li
+                        key={it}
+                        style={{
+                          fontSize: 17,
+                          fontFamily: "'DM Sans', sans-serif",
+                          lineHeight: 1.65,
+                          marginBottom: 9,
+                        }}
+                      >
+                        {it}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ==================================================================
+            THE NETWORK — described as capabilities held by INDEPENDENT
+            professionals, never as staff or as services RPP provides.
+            This wording is what keeps the page consistent with the neutral-hub
+            architecture used across the rest of the site. Do not change
+            "independent" to "our" / "we" / "my team".
+           ================================================================== */}
+        <section className="rpp-afh-network" style={{ background: "#ffffff", padding: "64px 24px 72px" }}>
+          <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+            <p className="rpp-afh-kicker" style={{ color: "#b13a44", marginBottom: 14, textAlign: "center" }}>
+              Who you get access to
+            </p>
+            <h2
+              style={{
+                fontSize: "clamp(28px, 3.2vw, 40px)",
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                fontWeight: 700,
+                lineHeight: 1.2,
+                margin: "0 0 18px",
+                textAlign: "center",
+              }}
+            >
+              Five kinds of professional, one point of contact
+            </h2>
+            <p
+              style={{
+                fontSize: "clamp(18px, 1.9vw, 21px)",
+                fontFamily: "'DM Sans', sans-serif",
+                lineHeight: 1.8,
+                maxWidth: 720,
+                margin: "0 auto 48px",
+                textAlign: "center",
+              }}
+            >
+              Each of these is an independent business with its own licensing and its own client
+              relationships. You are introduced to the ones your situation actually calls for, and you
+              engage them directly.
+            </p>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+              {[
+                {
+                  n: "01",
+                  title: "Residential real estate brokerage",
+                  who: "David Stein \u2014 eXp Realty, WA broker license #133972",
+                  body: "Listing, marketing, and sale of the real property itself, including homes marketed quietly to buyers already in the network.",
+                },
+                {
+                  n: "02",
+                  title: "Appraisal and valuation",
+                  who: "David Stein \u2014 Stein Appraisal, WA certified residential appraiser #1702080",
+                  body: "Independent valuation of the real estate. Appraisal and brokerage are kept on separate transactions \u2014 the same property is never both appraised and brokered by the same person.",
+                },
+                {
+                  n: "03",
+                  title: "Business and lease brokerage",
+                  who: "Independent commercial broker",
+                  body: "Represents buyers and sellers of the business itself, and negotiates commercial leases. This is what makes it possible to treat the operation and the building as two separate, separately sellable assets.",
+                },
+                {
+                  n: "04",
+                  title: "Adult family home management",
+                  who: "Independent management company",
+                  body: "Runs the day-to-day operation. For sellers, a way to keep the asset without the work. For buyers, a way to meet operational expectations while gaining experience.",
+                },
+                {
+                  n: "05",
+                  title: "Capital partners",
+                  who: "Independent investors",
+                  body: "There are investors interested in backing qualified buyers of adult family homes. Availability, structure, and terms vary by deal and are discussed individually. Nothing about these arrangements is offered or described on this site.",
+                },
+              ].map((row, i) => (
+                <div
+                  key={row.n}
+                  style={{
+                    display: "flex",
+                    gap: 26,
+                    alignItems: "flex-start",
+                    padding: "28px 0",
+                    borderTop: i === 0 ? "1px solid #dfc9cb" : "none",
+                    borderBottom: "1px solid #dfc9cb",
+                  }}
+                >
+                  <div
+                    style={{
+                      flexShrink: 0,
+                      fontFamily: "'DM Sans', system-ui, sans-serif",
+                      fontSize: 30,
+                      fontWeight: 700,
+                      color: "#b13a44",
+                      lineHeight: 1,
+                      width: 54,
+                      paddingTop: 4,
+                    }}
+                    aria-hidden="true"
+                  >
+                    {row.n}
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <h3
+                      style={{
+                        fontSize: "clamp(21px, 2.1vw, 26px)",
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontWeight: 700,
+                        lineHeight: 1.3,
+                        margin: "0 0 6px",
+                      }}
+                    >
+                      {row.title}
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: 17,
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontWeight: 600,
+                        lineHeight: 1.6,
+                        margin: "0 0 10px",
+                      }}
+                    >
+                      {row.who}
+                    </p>
+                    <p
+                      style={{
+                        fontSize: 18,
+                        fontFamily: "'DM Sans', sans-serif",
+                        lineHeight: 1.7,
+                        margin: 0,
+                      }}
+                    >
+                      {row.body}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* ------------------------------------------------------------------
+                REQUIRED DISCLOSURE. David receives compensation from some of the
+                parties described above, so this block is not optional and should
+                not be moved below the fold or reduced in size.
+               ------------------------------------------------------------------ */}
+            <div
+              className="rpp-afh-disclosure"
+              style={{
+                marginTop: 40,
+                background: "#f7f4ef",
+                border: "1px solid #dfc9cb",
+                borderLeft: "4px solid #481216",
+                borderRadius: 4,
+                padding: "26px 28px",
+              }}
+            >
+              <p style={{ margin: "0 0 12px" }}>
+                <strong>How this works, and how people are paid.</strong> Real Property Planning is an
+                educational hub. It is not a brokerage, a management company, or an investment firm, and
+                it does not employ the professionals described above. Each is an independent business
+                that you engage directly and on your own terms.
+              </p>
+              <p style={{ margin: "0 0 12px" }}>
+                Real estate brokerage services are provided by David Stein, a licensed Washington broker,
+                through eXp Realty. Appraisal services are provided by David Stein through Stein
+                Appraisal. David Stein may receive compensation, including referral fees or commission
+                splits, in connection with some of the introductions described on this page. You are
+                always free to work with professionals of your own choosing.
+              </p>
+              <p style={{ margin: 0 }}>
+                Nothing on this page is an offer to sell or a solicitation of an offer to buy any
+                security, nor is it financial, legal, or tax advice. Any financing or investment
+                arrangement is negotiated solely between you and that party, and you should consult your
+                own attorney and accountant before entering into one.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <section style={{ background: "#fff", padding: "48px 24px" }}>
           <div style={{ maxWidth: 960, margin: "0 auto", textAlign: "center" }}>
