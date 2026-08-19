@@ -143,13 +143,13 @@ const Header = () => {
         border-radius: 3px;
       }
       .rpp-curated-link { display: inline-flex; }
-      @media (min-width: 769px) {
-        .rpp-header-phone { font-size: 22px !important; }
-        .rpp-header-phone-icon {
-          width: 1.05em;
-          height: 1.05em;
-          flex-shrink: 0;
-        }
+      /* Not inside a media query: the button is icon-only at every width, so
+         the icon needs a size at every width. It was scoped to >=769px when the
+         button still had a text label to fall back on. */
+      .rpp-header-phone-icon {
+        width: 21px;
+        height: 21px;
+        flex-shrink: 0;
       }
       @media (max-width: 950px) {
         .rpp-curated-link { display: none !important; }
@@ -286,28 +286,28 @@ const Header = () => {
                     fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
                     color: "#fff",
                     background: "#1f6fb2",
-                    padding: isMobile ? "6px 10px" : "4px 14px",
+                    /* Square icon button, sized to sit level with the language
+                       switcher beside it. Height comes from the row (the parent
+                       stretches its children) so the two stay matched if either
+                       control's padding changes; width is pinned equal to that
+                       so it reads as a square rather than a pill. */
+                    padding: 0,
                     borderRadius: 6,
-                    fontWeight: 700,
-                    fontSize: isMobile ? 15 : 16,
-                    letterSpacing: "0.02em",
-                    textTransform: "uppercase",
+                    width: isMobile ? 44 : 42,
+                    minWidth: isMobile ? 44 : 42,
+                    alignSelf: "stretch",
                     textDecoration: "none",
-                    whiteSpace: "nowrap",
                     display: "inline-flex",
                     alignItems: "center",
-                    gap: isMobile ? 6 : 8,
+                    justifyContent: "center",
                   }}
                   aria-label="Call David Stein at (206) 900-3015"
                 >
-                  {/* Handset mark sits BESIDE the number, not instead of it.
-                      This site's readers are largely older adults, for whom a
-                      visible number is the thing they act on — many will read
-                      it off the screen and dial on another phone, which an
-                      icon-only button makes impossible. The glyph adds the
-                      visual tidying without removing the information.
-                      aria-hidden because the aria-label above already names
-                      the action; otherwise screen readers announce it twice. */}
+                  {/* Icon-only button. The number is no longer visible here, so
+                      the anchor's aria-label carries it for screen readers and
+                      the footer remains the place a reader can actually read the
+                      digits off the page. aria-hidden on the svg so the label is
+                      not announced twice. */}
                   <svg
                     className="rpp-header-phone-icon"
                     viewBox="0 0 24 24"
@@ -321,7 +321,6 @@ const Header = () => {
                   >
                     <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
                   </svg>
-                  <span>{isMobile ? "CALL" : "(206) 900-3015"}</span>
                 </a>
               </div>
             </nav>
