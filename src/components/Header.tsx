@@ -386,20 +386,41 @@ const Header = () => {
                   ref={phoneRef}
                   className="rpp-header-phone"
                   style={{
-                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
                     color: "#fff",
                     background: "#1f6fb2",
                     borderRadius: 6,
-                    fontWeight: 700,
-                    letterSpacing: "0.02em",
                     textDecoration: "none",
-                    whiteSpace: "nowrap",
-                    padding: "8px 20px",
+                    /* Square icon button matching the LanguageSwitcher beside
+                       it. The parent sets alignItems: "stretch", so height
+                       comes from the row and the two stay level; width is
+                       pinned to the same 44 the switcher uses for its compact
+                       box, so this reads as a square, not a pill. */
+                    padding: 0,
+                    width: 44,
+                    minWidth: 44,
+                    alignSelf: "stretch",
                     display: "inline-flex",
                     alignItems: "center",
+                    justifyContent: "center",
                   }}
+                  aria-label="Call David Stein at (206) 900-3015"
                 >
-                  (206) 900-3015
+                  {/* Icon-only: the digits are no longer painted here, so the
+                      anchor's aria-label carries them for assistive tech.
+                      aria-hidden on the svg so it is not announced twice. */}
+                  <svg
+                    className="rpp-header-phone-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.1"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
+                  </svg>
                 </a>
               </div>
             </div>
