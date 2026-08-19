@@ -5,8 +5,6 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import AFHCarousel from "@/components/AFHCarousel";
-import HeroBandTitle from "@/components/HeroBandTitle";
 import { useTranslation } from "react-i18next";
 
 /**
@@ -135,12 +133,21 @@ const PAGE_CSS = `
     display: block;
     margin-bottom: 0;
     background-color: #192A19;
+    /* LIGHT scrim, and deliberately so. The artwork already carries its own
+       green gradient — the left 35% of the file measures 31-34 brightness and
+       only opens up after 45%. The previous stops (solid to 34%, clear at 72%)
+       laid a second scrim on top of that one, which is what buried the house.
+
+       Not removed entirely: at narrower widths background-size: cover crops
+       from the LEFT, which is exactly where the file's own green sits, so
+       without this the wordmark could land on the photograph. This layer is
+       insurance for those widths, not the primary scrim. */
     background-image: linear-gradient(
         to right,
-        #192A19 0%,
-        #192A19 34%,
-        rgba(25, 42, 25, 0.55) 52%,
-        rgba(25, 42, 25, 0) 72%
+        rgba(25, 42, 25, 0.90) 0%,
+        rgba(25, 42, 25, 0.72) 30%,
+        rgba(25, 42, 25, 0.25) 42%,
+        rgba(25, 42, 25, 0) 52%
       ),
       url("/afh-club-hero.webp");
     background-repeat: no-repeat;
@@ -310,36 +317,34 @@ const PAGE_CSS = `
     }
   }
 
-  /* Lane rows — a rendered cube image with the description beside it.
-     The CSS 3D cube that used to live here is gone: these are David's own
-     renders, so the geometry, lighting and shadow are baked in and there is
-     nothing to reproduce in CSS.
-     All six files share an identical canvas and an identical content bounding
-     box, so a fixed aspect-ratio box aligns every row without per-image
-     nudging. Do not re-crop one of them individually — that alignment is the
-     whole reason the rows line up. */
+  /* Lane cells — 3 across, 2 rows. Was six full-width rows, which made six
+     short sentences into a long scroll and forced the eye down the page one
+     item at a time. The point of this section is breadth, so the reader should
+     be able to take all six in at once.
+     All six cube files share an identical canvas and content bounding box, so
+     a fixed aspect-ratio box aligns every cell without per-image nudging. Do
+     not re-crop one of them individually. */
   .rpp-afh-lane-list {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 34px;
-    max-width: 940px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px 26px;
+    max-width: 1040px;
     margin: 0 auto;
   }
   .rpp-afh-lane-row {
-    display: grid;
-    grid-template-columns: 224px minmax(0, 1fr);
-    align-items: center;
-    column-gap: 30px;
+    display: block;
   }
   .rpp-afh-cube-img {
     display: block;
     width: 100%;
+    max-width: 172px;
     height: auto;
-    /* Matches the files (620x515). Declared so the row reserves its space
-       before the image loads and the list does not jump. */
+    /* Matches the files (620x515), so each cell reserves its space before the
+       image arrives and the grid does not reflow as six lazy images load. */
     aspect-ratio: 620 / 515;
+    margin: 0 0 12px -10px;
   }
-  /* The title is baked into the artwork, so the heading is carried here for
+  /* Titles are baked into the artwork, so the heading is carried here for
      assistive tech and search rather than painted. Not display:none, which
      would drop it from the accessibility tree entirely. */
   .rpp-afh-lane-row h3.rpp-afh-lane-heading {
@@ -355,17 +360,81 @@ const PAGE_CSS = `
   }
   .rpp-afh-lane-row p {
     font-family: 'DM Sans', sans-serif !important;
-    font-size: 20px !important;
-    line-height: 1.7 !important;
+    font-size: 18px !important;
+    line-height: 1.6 !important;
     color: #302b26 !important;
     margin: 0 !important;
     padding: 0 !important;
     min-height: 0 !important;
   }
-  @media (max-width: 720px) {
-    .rpp-afh-lane-list { gap: 26px; }
-    .rpp-afh-lane-row { grid-template-columns: 150px minmax(0, 1fr); column-gap: 20px; }
-    .rpp-afh-lane-row p { font-size: 18px !important; }
+  @media (max-width: 900px) {
+    .rpp-afh-lane-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 560px) {
+    .rpp-afh-lane-list { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+    .rpp-afh-cube-img { max-width: 140px; }
+    .rpp-afh-lane-row p { font-size: 17px !important; }
+  }
+
+  /* Destination cards — replaced the carousel.
+     A carousel showed two of five at a time, moved on its own, and hid the
+     rest behind arrows and dots. For a readership that is largely older
+     adults, content that moves or hides is the wrong default; these are five
+     links and all five should simply be visible. */
+  .rpp-afh-dest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .rpp-afh-dest-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e2dcd4;
+    border-radius: 6px;
+    overflow: hidden;
+    text-decoration: none !important;
+    transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  }
+  .rpp-afh-dest-card:hover {
+    border-color: #b13a44;
+    box-shadow: 0 6px 18px rgba(39, 36, 33, 0.13);
+    transform: translateY(-2px);
+  }
+  .rpp-afh-dest-card:focus-visible {
+    outline: 3px solid #b13a44;
+    outline-offset: 3px;
+  }
+  .rpp-afh-dest-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+  .rpp-afh-dest-body { padding: 18px 20px 20px; }
+  .rpp-afh-dest-card h3 {
+    font-family: 'DM Sans', system-ui, sans-serif !important;
+    font-size: 21px !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    color: #280a0c !important;
+    margin: 0 0 8px !important;
+  }
+  .rpp-afh-dest-card p {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    color: #302b26 !important;
+    margin: 0 !important;
+  }
+  @media (max-width: 900px) {
+    .rpp-afh-dest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 560px) {
+    .rpp-afh-dest-grid { grid-template-columns: minmax(0, 1fr); }
   }
 `;
 
@@ -463,11 +532,15 @@ const AFHClub = () => {
           </div>
         </section>
 
-        {/* Welcome banner */}
-        <HeroBandTitle as="h2">{t("afhClubPage.welcomeBanner")}</HeroBandTitle>
+        {/* Welcome band removed. It sat directly beneath a hero that already
+            says "AFH Club" in 106px type and repeated the same words, costing
+            ~77px of height to add nothing. It was also the same green as the
+            hero, so it read as an extension of it rather than a divider.
 
-        {/* Carousel — no text above it */}
-        <AFHCarousel categories={categories} />
+            To bring it back, restore:
+              <HeroBandTitle as="h2">{t("afhClubPage.welcomeBanner")}</HeroBandTitle>
+            The afhClubPage.welcomeBanner key is still present in all eight
+            locale files, and the h2 band styling is still in index.css. */}
 
         {/* ==================================================================
             MORE WAYS TO CLOSE — audience lanes.
@@ -550,6 +623,34 @@ const AFHClub = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ==================================================================
+            WHERE TO GO NEXT — five destinations, all visible.
+            Sits below "More ways of doing business" on purpose: explain what
+            the Club is, then offer the links. The carousel used to run before
+            any explanation, so a first-time visitor was asked to navigate
+            before being told what they were navigating.
+           ================================================================== */}
+        <section style={{ background: "#ffffff", padding: "8px 24px 64px" }}>
+          <div className="rpp-afh-dest-grid">
+            {categories.map((c) => (
+              <Link key={c.href} to={c.href} className="rpp-afh-dest-card">
+                <img
+                  src={c.img}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                  style={{ backgroundColor: c.placeholder }}
+                />
+                <div className="rpp-afh-dest-body">
+                  <h3>{c.title}</h3>
+                  <p>{c.description}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
 
