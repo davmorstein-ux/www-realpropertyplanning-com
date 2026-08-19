@@ -97,58 +97,46 @@ const PAGE_CSS = `
   }
   .rpp-afh-disclosure strong { color: #302b26 !important; }
 
-  /* Lane tiles — full-width horizontal bands.
+  /* Lane tiles — 3 rows x 2 columns.
      GRID, not flex, and deliberately so: with flex the title carried
      flex: 0 0 200px, and because flex-basis always applies to the MAIN axis,
-     that 200px silently became a 200px HEIGHT as soon as the tile switched to
-     flex-direction: column at narrow widths. Result was a tall empty gap under
-     every title. Grid track sizing is axis-explicit and cannot do that. */
+     that 200px silently became a 200px HEIGHT once the tile switched to
+     flex-direction: column. Grid track sizing is axis-explicit and cannot
+     do that. Per-tile background and accent colour are set inline from the
+     lane data, so there is one source of truth per lane. */
   .rpp-afh-lane-list {
     display: grid;
-    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
   }
   .rpp-afh-lane-tile {
-    display: grid;
-    grid-template-columns: 190px minmax(0, 1fr);
-    align-items: start;
-    column-gap: 24px;
-    row-gap: 6px;
-    background: #f7f4ef;
-    border: 1px solid #dfc9cb;
-    border-left: 5px solid #b13a44;
+    display: block;
     border-radius: 4px;
-    padding: 22px 30px;
+    padding: 24px 28px;
   }
   .rpp-afh-lane-tile h3 {
-    align-self: start;
     font-family: 'DM Sans', system-ui, sans-serif !important;
-    font-size: 26px !important;
+    font-size: 25px !important;
     font-weight: 700 !important;
-    line-height: 1.5 !important;
-    color: #280a0c !important;
-    margin: 0 !important;
+    line-height: 1.35 !important;
+    margin: 0 0 8px !important;
     padding: 0 !important;
     min-height: 0 !important;
   }
   .rpp-afh-lane-tile p {
-    align-self: start;
     font-family: 'DM Sans', sans-serif !important;
-    font-size: 20px !important;
+    font-size: 19px !important;
     line-height: 1.65 !important;
     color: #302b26 !important;
     margin: 0 !important;
     padding: 0 !important;
     min-height: 0 !important;
   }
-  /* Single column: title sits on its own line directly above the text. */
-  @media (max-width: 860px) {
-    .rpp-afh-lane-tile {
-      grid-template-columns: minmax(0, 1fr);
-      row-gap: 4px;
-      padding: 20px 24px;
-    }
-    .rpp-afh-lane-tile h3 { font-size: 24px !important; }
-    .rpp-afh-lane-tile p { font-size: 19px !important; }
+  @media (max-width: 780px) {
+    .rpp-afh-lane-list { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    .rpp-afh-lane-tile { padding: 20px 24px; }
+    .rpp-afh-lane-tile h3 { font-size: 23px !important; }
+    .rpp-afh-lane-tile p { font-size: 18px !important; }
   }
 `;
 
@@ -319,26 +307,59 @@ const AFHClub = () => {
                 {
                   title: "Selling",
                   body: "Sell the home and the business together, or separate them and sell each to the buyer best suited to it.",
+                  bg: "#f8efe9",
+                  accent: "#b13a44",
+                  ink: "#5e1a20",
                 },
                 {
                   title: "Retiring",
                   body: "Step back without selling at all. A management company can run the home while the asset stays in your name.",
+                  bg: "#f7f2e5",
+                  accent: "#9a6b26",
+                  ink: "#5a3f14",
                 },
                 {
                   title: "Buying",
                   body: "Being new is not a disqualifier. Management support can cover the experience gap, and financing paths exist for qualified buyers.",
+                  bg: "#edf2ed",
+                  accent: "#41623f",
+                  ink: "#28401f",
                 },
                 {
                   title: "Investing",
                   body: "Owners often talk to a broker long before they are ready to list, so homes become available before they reach the public market.",
+                  bg: "#e9f1f1",
+                  accent: "#12615f",
+                  ink: "#0d403f",
                 },
                 {
                   title: "Leasing",
                   body: "Keep the property in your name and collect income while a licensed operator runs the business inside it.",
+                  bg: "#ecf0f6",
+                  accent: "#3a5a80",
+                  ink: "#20374f",
+                },
+                {
+                  title: "Managing",
+                  body: "An independent management company can take on staffing, compliance, and daily operations, whether you own one home or several.",
+                  bg: "#f3edf1",
+                  accent: "#6b4363",
+                  ink: "#432a3e",
                 },
               ].map((lane) => (
-                <div key={lane.title} className="rpp-afh-lane-tile">
-                  <h3>{lane.title}</h3>
+                <div
+                  key={lane.title}
+                  className="rpp-afh-lane-tile"
+                  style={{
+                    background: lane.bg,
+                    border: "1px solid rgba(0,0,0,0.07)",
+                    borderLeft: `5px solid ${lane.accent}`,
+                  }}
+                >
+                  {/* Heading colour must be inline-overridden per tile: index.css
+                      forces body h3 to #1B3A6B, and the class rule cannot vary
+                      by lane. Inline style beats both. */}
+                  <h3 style={{ color: lane.ink }}>{lane.title}</h3>
                   <p>{lane.body}</p>
                 </div>
               ))}
