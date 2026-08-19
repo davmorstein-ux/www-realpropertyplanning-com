@@ -49,6 +49,20 @@ const PAGE_CSS = `
     letter-spacing: 0.15em !important;
     text-transform: uppercase !important;
   }
+  /* Lead kicker only — the one above "More ways of doing business".
+     A MODIFIER, not a change to .rpp-afh-kicker: that class is used six times
+     on this page, including an inline span in a card and two left-aligned
+     eyebrows, so enlarging and centring the shared class would have altered
+     all of them. */
+  .rpp-afh-kicker.rpp-afh-kicker-lead {
+    font-size: clamp(16px, 1.4vw, 19px) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.16em !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    line-height: 1.45 !important;
+  }
   .rpp-afh-marketplace h2,
   .rpp-afh-marketplace p,
   .rpp-afh-marketplace h2 span,
@@ -452,7 +466,7 @@ const AFHClub = () => {
            ================================================================== */}
         <section className="rpp-afh-paths" style={{ background: "#ffffff", padding: "72px 24px 16px" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-            <p className="rpp-afh-kicker" style={{ color: "#b13a44", marginBottom: 14, textAlign: "center" }}>
+            <p className="rpp-afh-kicker rpp-afh-kicker-lead" style={{ color: "#b13a44", marginBottom: 20 }}>
               Buying, selling, and leasing in Washington State
             </p>
             <h2
