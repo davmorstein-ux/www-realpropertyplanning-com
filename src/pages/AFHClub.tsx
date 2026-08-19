@@ -137,7 +137,7 @@ const PAGE_CSS = `
     /* Left padding tracks the viewport so the wordmark holds the same
        position the artwork had — text starting ~6.5% in — instead of drifting
        toward the middle as the screen widens. */
-    padding: 30px clamp(20px, 6.5vw, 150px) 26px;
+    padding: 30px clamp(20px, 6.5vw, 150px) 40px;
   }
   .rpp-afh-hero-inner {
     /* margin: 0, NOT 0 auto. Auto-centring inside a 1180px box is what pushed
@@ -201,12 +201,12 @@ const PAGE_CSS = `
     color: #F3F0EA !important;
     margin: 0 0 12px !important;
     padding: 0 !important;
-    /* The string is long enough to wrap, and the default greedy algorithm
-       left a single word stranded on line two. Balance distributes the
-       words evenly across however many lines it needs, so this stays correct
-       if the copy or the locale changes. max-width keeps it off the photo. */
-    text-wrap: balance;
-    max-width: 46ch;
+    /* Exactly two lines, split in JS below rather than left to the wrapper.
+       text-wrap: balance evens the lines but does NOT control how many there
+       are — that follows from the available width, which is how this ended up
+       at three. nowrap on each line pins it at two in every locale. */
+    max-width: none;
+    white-space: nowrap;
   }
   /* Rule under the subtitle. ONE VALUE — change here only. Currently the
      artwork's orange; switch to the door colour if those should match. */
@@ -215,7 +215,9 @@ const PAGE_CSS = `
     height: 2px;
     background: #C0703C;
     border: 0;
-    margin: 0;
+    /* Space above so it clears the type, and the section's bottom padding
+       keeps it off the edge of the hero. */
+    margin: 16px 0 0;
   }
   @media (max-width: 860px) {
     .rpp-afh-hero {
@@ -229,9 +231,18 @@ const PAGE_CSS = `
         url("/afh-club-hero-mobile.webp");
       background-position: bottom center;
       background-size: auto 100%, cover;
-      padding: 24px 20px 118px;
+      padding: 24px 20px 124px;
     }
     .rpp-afh-hero-sub { letter-spacing: 0.3em !important; word-spacing: 0.15em !important; }
+  }
+  @media (max-width: 480px) {
+    /* Both lines are nowrap, so tracking has to come down or the longer line
+       runs past the edge. */
+    .rpp-afh-hero-sub {
+      font-size: 10px !important;
+      letter-spacing: 0.16em !important;
+      word-spacing: 0.1em !important;
+    }
   }
 
   /* Lane rows — a real 3D cube, title on its front face, description beside it.
@@ -414,9 +425,35 @@ const AFHClub = () => {
               </span>
             </h1>
             <p className="rpp-afh-hero-sub">
-              {t("afhClubPage.hero.subtitle", {
-                defaultValue: "Adult Family Home Marketplace",
-              })}
+              {(() => {
+                // Split into two lines at the most even word boundary. Done
+                // here rather than with a hard-coded <br> so it stays correct
+                // for the other seven locales, whose strings differ in length.
+                const text = t("afhClubPage.hero.subtitle", {
+                  defaultValue: "Adult Family Home Marketplace",
+                });
+                const words = String(text).trim().split(/\s+/);
+                if (words.length < 2) return text;
+                let cut = 1;
+                let best = Infinity;
+                for (let i = 1; i < words.length; i++) {
+                  const diff = Math.abs(
+                    words.slice(0, i).join(" ").length -
+                      words.slice(i).join(" ").length
+                  );
+                  if (diff < best) {
+                    best = diff;
+                    cut = i;
+                  }
+                }
+                return (
+                  <>
+                    {words.slice(0, cut).join(" ")}
+                    <br />
+                    {words.slice(cut).join(" ")}
+                  </>
+                );
+              })()}
             </p>
             <hr className="rpp-afh-hero-rule" />
           </div>
