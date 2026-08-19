@@ -97,6 +97,119 @@ const PAGE_CSS = `
   }
   .rpp-afh-disclosure strong { color: #302b26 !important; }
 
+  /* ── HERO ────────────────────────────────────────────────────────────────
+     The badge is gone; the hero is the photograph, with the wordmark set as
+     LIVE TEXT over it rather than baked into the file.
+
+     Why not just use the artwork with its text baked in: the words are the
+     page's H1. As pixels they give no H1 to search engines or screen readers,
+     they cannot translate into the other seven locales, they do not grow when
+     a reader enlarges their browser font, and at phone width the subtitle
+     rendered under 3px tall. All four are fixed by setting the type in CSS.
+
+     The section paints its own #192A19 — the green sampled from the artwork —
+     and the photograph sits to the RIGHT and fades into it. That guarantees
+     the text is always on flat green at every width, instead of depending on
+     where a background crop happens to land.
+
+     The house-A cannot be set in type, so it stays an image. The H1 still
+     contains the real string "AFH CLUB"; the letter A is visually hidden and
+     the glyph sits in its place, so assistive tech reads the whole word. */
+  .rpp-afh-hero {
+    position: relative;
+    background-color: #192A19;
+    background-image: linear-gradient(
+        to right,
+        #192A19 0%,
+        #192A19 34%,
+        rgba(25, 42, 25, 0.55) 52%,
+        rgba(25, 42, 25, 0) 72%
+      ),
+      url("/afh-club-hero.webp");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%, cover;
+    padding: 54px 24px 48px;
+  }
+  .rpp-afh-hero-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .rpp-afh-hero h1.rpp-afh-hero-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: 'DM Sans', system-ui, sans-serif !important;
+    /* Derived by rendering DM Sans and matching the artwork, not estimated.
+       Artwork "F" cap height is 75px in a 1999px frame -> 106px type = 5.30vw.
+       Letter gaps measure 31px and the word gap 69px, so letter-spacing and
+       word-spacing are set separately; a single tracking value spreads "AFH"
+       and "CLUB" evenly and loses the artwork's grouping. */
+    font-size: clamp(34px, 5.3vw, 106px) !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.180em !important;
+    word-spacing: 0.358em !important;
+    line-height: 1 !important;
+    color: #F3F0EA !important;
+    margin: 0 0 18px !important;
+    padding: 0 !important;
+  }
+  .rpp-afh-hero-glyph {
+    height: 0.98em;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+  }
+  /* The "A" the glyph replaces — present for screen readers and search, not
+     painted. Not display:none, which would remove it from the accessible name. */
+  .rpp-afh-hero-a {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .rpp-afh-hero-sub {
+    font-family: 'DM Sans', system-ui, sans-serif !important;
+    /* Same derivation: cap height 14px -> 19px type = 0.95vw, letter gap 13px,
+       word gap 32px. */
+    font-size: clamp(11px, 0.95vw, 19px) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.548em !important;
+    word-spacing: 1em !important;
+    text-transform: uppercase !important;
+    color: #F3F0EA !important;
+    margin: 0 0 16px !important;
+    padding: 0 !important;
+  }
+  /* Rule under the subtitle. ONE VALUE — change here only. Currently the
+     artwork's orange; switch to the door colour if those should match. */
+  .rpp-afh-hero-rule {
+    width: min(430px, 62%);
+    height: 2px;
+    background: #C0703C;
+    border: 0;
+    margin: 0;
+  }
+  @media (max-width: 860px) {
+    .rpp-afh-hero {
+      background-image: linear-gradient(
+          to bottom,
+          #192A19 0%,
+          #192A19 58%,
+          rgba(25, 42, 25, 0.5) 78%,
+          rgba(25, 42, 25, 0) 100%
+        ),
+        url("/afh-club-hero-mobile.webp");
+      background-position: bottom center;
+      background-size: auto 100%, cover;
+      padding: 40px 22px 150px;
+    }
+    .rpp-afh-hero-sub { letter-spacing: 0.3em !important; word-spacing: 0.6em !important; }
+  }
+
   /* Lane rows — a real 3D cube, title on its front face, description beside it.
      Built with CSS 3D transforms (perspective + preserve-3d), NOT 2D shapes.
      That matters: the heading sits on the actual front face, so it tilts with
@@ -257,80 +370,31 @@ const AFHClub = () => {
       <Header />
       <style>{PAGE_CSS}</style>
       <main id="main-content">
-        {/* Hero — badge, title, subtitle, one description line only */}
-        <section
-          style={{
-            background: "#edf0f3",
-            padding: "48px 24px 40px",
-            textAlign: "center",
-            borderBottom: "3px solid #b13a44",
-          }}
-        >
-          <div style={{ maxWidth: 800, margin: "0 auto", paddingTop: "var(--header-height, 100px)" }}>
-            {/* Badge — tight */}
-            <div style={{ marginBottom: 8 }}>
+        {/* Hero — photograph with the wordmark set as live text over it. */}
+        <section className="rpp-afh-hero">
+          <div
+            className="rpp-afh-hero-inner"
+            style={{ paddingTop: "var(--header-height, 100px)" }}
+          >
+            <h1 className="rpp-afh-hero-title">
               <img
-                src="/afh-club-badge-logo.webp"
-                alt={t("afhClubPage.hero.badgeAlt")}
-                style={{
-                  width: "100%",
-                  maxWidth: 320,
-                  height: "auto",
-                  display: "block",
-                  margin: "0 auto",
-                }}
-                loading="eager"
-                width={320}
-                height={320}
+                src="/afh-club-glyph.png"
+                alt=""
+                aria-hidden="true"
+                className="rpp-afh-hero-glyph"
+                width={200}
+                height={194}
               />
-            </div>
-
-            {/* Eyebrow. Type moved into .rpp-afh-eyebrow — leaving
-                letterSpacing and textTransform inline made this match the
-                global 14px rule and shrink from 20px. */}
-            <p className="rpp-afh-eyebrow" style={{ margin: "0 0 8px" }}>
-              Real Property Planning
-            </p>
-
-            <h1
-              style={{
-                fontSize: "clamp(52px, 7vw, 72px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontWeight: 700,
-                color: "#292521",
-                lineHeight: 1.1,
-                margin: "0 0 8px",
-              }}
-            >
-              AFH Club
+              <span>
+                <span className="rpp-afh-hero-a">A</span>FH CLUB
+              </span>
             </h1>
-
-            <p
-              style={{
-                fontSize: "clamp(22px, 3vw, 28px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontWeight: 400,
-                color: "#481216",
-                margin: "0 0 20px",
-              }}
-            >
-              {t("afhClubPage.hero.subtitle")}
+            <p className="rpp-afh-hero-sub">
+              {t("afhClubPage.hero.subtitle", {
+                defaultValue: "Adult Family Home Marketplace",
+              })}
             </p>
-
-            {/* Single description line — moved from carousel */}
-            <p
-              style={{
-                fontSize: "clamp(22px, 2.4vw, 28px)",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 400,
-                color: "#302b26",
-                lineHeight: 1.8,
-                margin: "0 auto",
-                maxWidth: 680,
-              }}
-            >
-              {t("afhClubPage.hero.description")}
-            </p>
+            <hr className="rpp-afh-hero-rule" />
           </div>
         </section>
 
