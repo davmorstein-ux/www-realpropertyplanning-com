@@ -117,6 +117,9 @@ const PAGE_CSS = `
      the glyph sits in its place, so assistive tech reads the whole word. */
   .rpp-afh-hero {
     position: relative;
+    /* Flush against the navy band beneath it — no stray baseline gap. */
+    display: block;
+    margin-bottom: 0;
     background-color: #192A19;
     background-image: linear-gradient(
         to right,
@@ -129,7 +132,9 @@ const PAGE_CSS = `
     background-repeat: no-repeat;
     background-position: right center;
     background-size: auto 100%, cover;
-    padding: 54px 24px 48px;
+    /* Bottom padding is deliberately small: the band below butts straight up
+       against the hero, so any spare space here shows as a white gap. */
+    padding: 30px 24px 26px;
   }
   .rpp-afh-hero-inner {
     max-width: 1180px;
@@ -155,7 +160,7 @@ const PAGE_CSS = `
     word-spacing: -0.121em !important;
     line-height: 1 !important;
     color: #F3F0EA !important;
-    margin: 0 0 18px !important;
+    margin: 0 0 10px !important;
     padding: 0 !important;
   }
   .rpp-afh-hero-glyph {
@@ -188,8 +193,14 @@ const PAGE_CSS = `
     word-spacing: 0.272em !important;
     text-transform: uppercase !important;
     color: #F3F0EA !important;
-    margin: 0 0 16px !important;
+    margin: 0 0 12px !important;
     padding: 0 !important;
+    /* The string is long enough to wrap, and the default greedy algorithm
+       left a single word stranded on line two. Balance distributes the
+       words evenly across however many lines it needs, so this stays correct
+       if the copy or the locale changes. max-width keeps it off the photo. */
+    text-wrap: balance;
+    max-width: 46ch;
   }
   /* Rule under the subtitle. ONE VALUE — change here only. Currently the
      artwork's orange; switch to the door colour if those should match. */
@@ -212,7 +223,7 @@ const PAGE_CSS = `
         url("/afh-club-hero-mobile.webp");
       background-position: bottom center;
       background-size: auto 100%, cover;
-      padding: 40px 22px 150px;
+      padding: 24px 22px 118px;
     }
     .rpp-afh-hero-sub { letter-spacing: 0.3em !important; word-spacing: 0.15em !important; }
   }
@@ -381,7 +392,7 @@ const AFHClub = () => {
         <section className="rpp-afh-hero">
           <div
             className="rpp-afh-hero-inner"
-            style={{ paddingTop: "var(--header-height, 100px)" }}
+            style={{ paddingTop: "var(--header-height, 92px)" }}
           >
             <h1 className="rpp-afh-hero-title">
               <img
