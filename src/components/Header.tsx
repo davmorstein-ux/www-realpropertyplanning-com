@@ -182,7 +182,8 @@ const Header = () => {
 
   return (
     <>
-      <a href="#main-content"
+      <a
+        href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md focus:text-base"
       >
         Skip to main content
@@ -279,7 +280,8 @@ const Header = () => {
                   </Link>
                 ))}
                 <LanguageSwitcher compact={isMobile} />
-                <a href="tel:2069003015"
+                <a
+                  href="tel:2069003015"
                   className="rpp-header-phone"
                   style={{
                     ...NAV_FONT,
@@ -380,9 +382,19 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "stretch", gap: 14 }}>
+              <div
+                style={{
+                  flex: 1,
+                  minWidth: 0,
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  alignItems: "stretch",
+                  gap: 14,
+                }}
+              >
                 <LanguageSwitcher compact />
-                <a href="tel:2069003015"
+                <a
+                  href="tel:2069003015"
                   ref={phoneRef}
                   className="rpp-header-phone"
                   style={{
@@ -460,7 +472,15 @@ const Header = () => {
               >
                 <WaterfallNav />
               </div>
-              <div style={{ width: SEARCH_WIDTH, flexShrink: 1, minWidth: 0, marginLeft: 8, marginRight: "clamp(44px, 5vw, 84px)" }}>
+              <div
+                style={{
+                  width: SEARCH_WIDTH,
+                  flexShrink: 1,
+                  minWidth: 0,
+                  marginLeft: 8,
+                  marginRight: "clamp(44px, 5vw, 84px)",
+                }}
+              >
                 <SiteSearchBar />
               </div>
               <PrimaryNav />
