@@ -72,7 +72,7 @@ const RPPHomeV3 = () => {
                forearm. The truck tagline also settled on "Life's Next
                Transitions", matching the yard sign.
 
-               2.85:1, used at the artwork's own ratio rather than cropped.
+               5.01:1, used at the artwork's own ratio rather than cropped.
                Cropping this composition loses either the couple at the left or
                the sold sign at the right, and both are doing work: the couple
                is who the site is for, the sign is the outcome.
@@ -87,12 +87,16 @@ const RPPHomeV3 = () => {
             width={1920}
             /* Must match the file. The intrinsic ratio is what reserves
                space before the image loads; a stale value here causes the
-               page to jump as it arrives. 1920x674 is the artwork's own
-               2.85:1 shape — the stacked layout shows the whole frame, so
+               page to jump as it arrives. 1920x383 is the artwork's own
+               5.01:1 shape — the stacked layout shows the whole frame, so
                image height is decided entirely by the file. This number has
                been wrong after an art swap more than once; change it in the
-               same commit as the images, every time. */
-            height={674}
+               same commit as the images, every time.
+
+               PREVIOUS ARTWORK WAS 2.85:1 (1920x674). The 2026 replacement is
+               a much wider band, so the hero is now roughly 290px shorter at
+               full width. */
+            height={383}
             alt={t("hero.imageAlt")}
             /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
                photograph at any width — it stacks beneath it.
