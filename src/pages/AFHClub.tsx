@@ -149,7 +149,12 @@ const PAGE_CSS = `
   #main-content > section.rpp-afh-hero.rpp-afh-hero {
     display: flex !important;
     align-items: center !important;
-    min-height: clamp(260px, 23vw, 400px) !important;
+    /* Hero height comes from HERE, not from the image. The photo is a
+       background at cover, so a shorter file just scales up to fill the same
+       box — cropping the artwork does nothing for height.
+       Content needs ~280px (title, two subtitle lines, rule, padding), so this
+       is close to the floor without crowding. */
+    min-height: clamp(220px, 16vw, 300px) !important;
     /* No header offset here. The header sits in normal flow directly above
        this section, so reserving --header-height on top of it double-counted
        and was part of why the hero read as too tall. */
