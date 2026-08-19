@@ -201,10 +201,18 @@ nav [class*="dropdown"] button svg {
   display: block;
 }
 
-/* Global overflow safeguard */
+/* Global overflow safeguard.
+
+   CLIP, NOT HIDDEN — and this is load-bearing. `overflow-x: hidden` forces
+   overflow-y to compute as `auto`, which turns <body> into a scroll container.
+   Once that happens, position: sticky inside it has nothing to stick to, and
+   the header scrolls away with the page. `overflow-x: clip` suppresses the
+   same horizontal overflow WITHOUT creating a scroll container, so the sticky
+   header keeps working. If this is ever reverted to `hidden`, the header will
+   silently stop sticking again. */
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: 0 !important;
   margin-top: 0 !important;
   padding-top: 0 !important;
