@@ -231,9 +231,12 @@ const PAGE_CSS = `
   .rpp-afh-hero-rule {
     /* Spans the width of "AFH CLUB" rather than an arbitrary fraction.
        The wordmark measures 679px wide at 106px type in the artwork, a ratio
-       of 6.4, so multiplying the title's own clamp by that keeps the rule
-       locked to the wordmark at every viewport width as the type scales. */
-    width: calc(clamp(34px, 5.3vw, 106px) * 6.4);
+       so multiplying the title's own clamp by that ratio keeps the rule locked
+       to the wordmark at every viewport width as the type scales.
+       5.64, not 6.4: the first value came from the artwork's own letterforms,
+       but DM Sans renders "AFH CLUB" slightly narrower, so the rule overshot
+       by 13%. This figure is measured off the live render. */
+    width: calc(clamp(34px, 5.3vw, 106px) * 5.64);
     max-width: 100%;
     height: 2px;
     background: #C0703C;
