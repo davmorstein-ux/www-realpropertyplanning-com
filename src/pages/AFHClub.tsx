@@ -289,6 +289,16 @@ const PAGE_CSS = `
       padding: 24px 20px 124px;
     }
     .rpp-afh-hero-sub { letter-spacing: 0.3em !important; word-spacing: 0.15em !important; }
+    /* Tighter A-to-F gap on small screens. At phone type sizes the 0.132em gap
+       reads as a space between two separate marks rather than one lockup.
+
+       The rule below MUST move with it: the orange line's width is derived
+       from the wordmark's width, and narrowing this gap narrows the wordmark
+       by exactly the amount removed (0.132 - 0.06 = 0.072em), so the
+       multiplier drops from 5.2 to 5.13. Change one without the other and the
+       line stops lining up with the b of Club. */
+    .rpp-afh-hero h1.rpp-afh-hero-title { gap: 0.06em; }
+    .rpp-afh-hero-rule { width: calc(clamp(34px, 5.3vw, 106px) * 5.13); }
   }
   @media (max-width: 480px) {
     /* Both lines are nowrap, so tracking has to come down or the longer line
