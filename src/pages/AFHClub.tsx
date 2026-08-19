@@ -90,17 +90,6 @@ const PAGE_CSS = `
   .rpp-afh-paths li,
   .rpp-afh-network li { color: #302b26 !important; }
 
-  /* Class name must not contain "uppercase" — index.css matches
-     main [class*="uppercase"] and would force 14px. */
-  .rpp-afh-lane-label {
-    font-size: 15px !important;
-    font-family: 'DM Sans', sans-serif !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.14em !important;
-    text-transform: uppercase !important;
-    color: #481216 !important;
-    margin: 0 0 10px !important;
-  }
   .rpp-afh-disclosure p {
     color: #4a453f !important;
     font-size: 16px !important;
@@ -108,43 +97,48 @@ const PAGE_CSS = `
   }
   .rpp-afh-disclosure strong { color: #302b26 !important; }
 
-  /* Lane cards.
-     Each card is a subgrid sharing the parent's row tracks, so the label,
-     heading, body and list of every card sit on the same baselines even when
-     one card's label wraps to two lines and its neighbour's does not.
-     Without this the cards go ragged (they did). */
-  .rpp-afh-lane-grid {
-    display: grid;
-    gap: 28px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(4, auto);
+  /* Lane tiles — full-width horizontal bands.
+     Deliberately NOT columns: narrow columns forced 3-4 word line wraps and
+     read as ragged. One tile per row gives each line room to breathe, and the
+     bold title always sits alone on its own line above the text. */
+  .rpp-afh-lane-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
   }
-  .rpp-afh-lane-card {
-    display: grid;
-    grid-row: span 4;
-    grid-template-rows: subgrid;
-    row-gap: 0;
+  .rpp-afh-lane-tile {
+    display: flex;
+    align-items: baseline;
+    gap: 22px;
     background: #f7f4ef;
     border: 1px solid #dfc9cb;
-    border-top: 4px solid #b13a44;
+    border-left: 5px solid #b13a44;
     border-radius: 4px;
-    padding: 30px 28px 26px;
+    padding: 24px 30px;
   }
-  @media (max-width: 1180px) {
-    .rpp-afh-lane-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rpp-afh-lane-tile h3 {
+    flex: 0 0 200px;
+    font-family: 'DM Sans', system-ui, sans-serif !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    color: #280a0c !important;
+    margin: 0 !important;
   }
-  @media (max-width: 700px) {
-    .rpp-afh-lane-grid { grid-template-columns: minmax(0, 1fr); }
+  .rpp-afh-lane-tile p {
+    flex: 1;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 20px !important;
+    line-height: 1.65 !important;
+    color: #302b26 !important;
+    margin: 0 !important;
   }
-  /* Fallback for engines without subgrid: reserve the tallest line count.
-     Only above 700px, where cards sit side by side and misalignment shows. */
-  @media (min-width: 701px) {
-    @supports not (grid-template-rows: subgrid) {
-      .rpp-afh-lane-card { display: block; }
-      .rpp-afh-lane-card .rpp-afh-lane-label { min-height: 2.7em; }
-      .rpp-afh-lane-card h3 { min-height: 2.7em; }
-      .rpp-afh-lane-card p:not(.rpp-afh-lane-label) { min-height: 5.2em; }
-    }
+  /* Below 860px the title stacks above the text rather than beside it.
+     Either way the title occupies its own line. */
+  @media (max-width: 860px) {
+    .rpp-afh-lane-tile { flex-direction: column; gap: 8px; padding: 22px 24px; }
+    .rpp-afh-lane-tile h3 { flex: none; font-size: 24px !important; }
+    .rpp-afh-lane-tile p { font-size: 19px !important; }
   }
 `;
 
@@ -307,95 +301,35 @@ const AFHClub = () => {
               }}
             >
               AFH Club connects owners, buyers, and operators of Washington adult family homes with the
-              professionals a transaction actually requires: licensed real estate brokerage and
-              appraisal, business and lease brokerage, day-to-day home management, and financing for
-              qualified buyers. Because all of it is reachable through one conversation, situations that
-              stall elsewhere usually have a path forward here.
+              professionals a transaction requires.
             </p>
 
-            <div className="rpp-afh-lane-grid">
+            <div className="rpp-afh-lane-list">
               {[
                 {
-                  label: "If you are selling or retiring",
-                  heading: "You likely have more exits than one",
-                  body: "Selling the home and the business together is only one option, and not always the best one.",
-                  items: [
-                    "Sell the business and keep the real estate as leased income",
-                    "Bring in a management company and step back without selling at all",
-                    "Sell to a buyer supported by outside financing who could not close alone",
-                    "Separate the going concern from the property and sell them to different parties",
-                  ],
+                  title: "Selling",
+                  body: "Sell the home and the business together, or separate them and sell each to the buyer best suited to it.",
                 },
                 {
-                  label: "If you are buying in",
-                  heading: "Being new is not a disqualifier",
-                  body: "The usual obstacles for first-time buyers are experience and capital. Both have answers.",
-                  items: [
-                    "Partner with a management company to satisfy operational requirements",
-                    "Buy the business and lease the real estate to lower what you need up front",
-                    "Financing paths exist for qualified buyers, discussed case by case",
-                    "Valuation and licensing guidance before you commit to anything",
-                  ],
+                  title: "Retiring",
+                  body: "Step back without selling at all. A management company can run the home while the asset stays in your name.",
                 },
                 {
-                  label: "If you are investing or expanding",
-                  heading: "Homes that never reach a listing",
-                  body: "Owners approaching retirement often talk to a broker long before they are ready to list publicly.",
-                  items: [
-                    "Independent valuation on the property and the operation",
-                    "Portfolio and multi-home acquisition structures",
-                    "Management in place so the asset does not require your daily attention",
-                  ],
+                  title: "Buying",
+                  body: "Being new is not a disqualifier. Management support can cover the experience gap, and financing paths exist for qualified buyers.",
                 },
                 {
-                  label: "If you are leasing",
-                  heading: "Income without operations",
-                  body: "A lease keeps the property in your name while someone else runs the business inside it.",
-                  items: [
-                    "Lease terms negotiated by a broker who handles business leases",
-                    "Tenant operators seeking licensed, ready homes",
-                    "Structures that preserve your long-term ownership and basis",
-                  ],
+                  title: "Investing",
+                  body: "Owners often talk to a broker long before they are ready to list, so homes become available before they reach the public market.",
+                },
+                {
+                  title: "Leasing",
+                  body: "Keep the property in your name and collect income while a licensed operator runs the business inside it.",
                 },
               ].map((lane) => (
-                <div key={lane.label} className="rpp-afh-lane-card">
-                  <p className="rpp-afh-lane-label">{lane.label}</p>
-                  <h3
-                    style={{
-                      fontSize: "clamp(21px, 2.1vw, 25px)",
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
-                      fontWeight: 700,
-                      lineHeight: 1.3,
-                      margin: "0 0 12px",
-                    }}
-                  >
-                    {lane.heading}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: 18,
-                      fontFamily: "'DM Sans', sans-serif",
-                      lineHeight: 1.7,
-                      margin: "0 0 18px",
-                    }}
-                  >
-                    {lane.body}
-                  </p>
-                  <ul style={{ margin: 0, padding: "0 0 0 22px", listStyle: "disc" }}>
-                    {lane.items.map((it) => (
-                      <li
-                        key={it}
-                        style={{
-                          fontSize: 17,
-                          fontFamily: "'DM Sans', sans-serif",
-                          lineHeight: 1.65,
-                          marginBottom: 9,
-                        }}
-                      >
-                        {it}
-                      </li>
-                    ))}
-                  </ul>
+                <div key={lane.title} className="rpp-afh-lane-tile">
+                  <h3>{lane.title}</h3>
+                  <p>{lane.body}</p>
                 </div>
               ))}
             </div>
