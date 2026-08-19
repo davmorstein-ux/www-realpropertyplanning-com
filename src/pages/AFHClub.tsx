@@ -97,33 +97,72 @@ const PAGE_CSS = `
   }
   .rpp-afh-disclosure strong { color: #302b26 !important; }
 
-  /* Lane tiles — 3 rows x 2 columns.
-     GRID, not flex, and deliberately so: with flex the title carried
-     flex: 0 0 200px, and because flex-basis always applies to the MAIN axis,
-     that 200px silently became a 200px HEIGHT once the tile switched to
-     flex-direction: column. Grid track sizing is axis-explicit and cannot
-     do that. Per-tile background and accent colour are set inline from the
-     lane data, so there is one source of truth per lane. */
+  /* Lane tiles — 3 rows x 2 columns, each fronted by a 3D box.
+     The box is built from CSS geometry, not an image: the h3 IS the lit front
+     face, and two skewed spans form the top and side faces. That keeps every
+     title as real, selectable, translatable text at full size rather than
+     baked into artwork.
+     GRID, not flex, throughout: flex-basis applies to the MAIN axis, so a
+     fixed basis on the title silently became a HEIGHT when the axis rotated
+     at narrow widths. Grid tracks are axis-explicit and cannot do that. */
   .rpp-afh-lane-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    gap: 22px;
   }
   .rpp-afh-lane-tile {
-    display: block;
+    display: grid;
+    grid-template-columns: 196px minmax(0, 1fr);
+    align-items: stretch;
+    column-gap: 26px;
     border-radius: 4px;
-    padding: 24px 28px;
+    /* Top and right padding leave room for the box's raised faces. */
+    padding: 30px 30px 24px 26px;
   }
-  .rpp-afh-lane-tile h3 {
+  .rpp-afh-cube {
+    position: relative;
+    height: 100%;
+    min-height: 96px;
+  }
+  /* Front face = the heading itself. */
+  .rpp-afh-lane-tile h3.rpp-afh-cube-face {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 16px 20px !important;
     font-family: 'DM Sans', system-ui, sans-serif !important;
     font-size: 25px !important;
     font-weight: 700 !important;
-    line-height: 1.35 !important;
-    margin: 0 0 8px !important;
-    padding: 0 !important;
+    line-height: 1.25 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
     min-height: 0 !important;
   }
+  /* Top face: skewed so its leading edge lines up with the side face. */
+  .rpp-afh-cube-top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -15px;
+    height: 15px;
+    transform: skewX(-45deg);
+    transform-origin: bottom left;
+  }
+  /* Side face. */
+  .rpp-afh-cube-side {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -15px;
+    width: 15px;
+    transform: skewY(-45deg);
+    transform-origin: top left;
+  }
   .rpp-afh-lane-tile p {
+    align-self: center;
     font-family: 'DM Sans', sans-serif !important;
     font-size: 19px !important;
     line-height: 1.65 !important;
@@ -132,10 +171,17 @@ const PAGE_CSS = `
     padding: 0 !important;
     min-height: 0 !important;
   }
-  @media (max-width: 780px) {
-    .rpp-afh-lane-list { grid-template-columns: minmax(0, 1fr); gap: 14px; }
-    .rpp-afh-lane-tile { padding: 20px 24px; }
-    .rpp-afh-lane-tile h3 { font-size: 23px !important; }
+  @media (max-width: 900px) {
+    .rpp-afh-lane-list { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  }
+  @media (max-width: 560px) {
+    .rpp-afh-lane-tile {
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 16px;
+      padding: 26px 26px 22px 22px;
+    }
+    .rpp-afh-cube { min-height: 0; }
+    .rpp-afh-lane-tile h3.rpp-afh-cube-face { font-size: 23px !important; }
     .rpp-afh-lane-tile p { font-size: 18px !important; }
   }
 `;
@@ -309,42 +355,48 @@ const AFHClub = () => {
                   body: "Sell the home and the business together, or separate them and sell each to the buyer best suited to it.",
                   bg: "#f8efe9",
                   accent: "#b13a44",
-                  ink: "#5e1a20",
+                  top: "#8e2e37",
+                  side: "#6d232a",
                 },
                 {
                   title: "Retiring",
                   body: "Step back without selling at all. A management company can run the home while the asset stays in your name.",
                   bg: "#f7f2e5",
                   accent: "#9a6b26",
-                  ink: "#5a3f14",
+                  top: "#7b551e",
+                  side: "#5d4017",
                 },
                 {
                   title: "Buying",
                   body: "Being new is not a disqualifier. Management support can cover the experience gap, and financing paths exist for qualified buyers.",
                   bg: "#edf2ed",
                   accent: "#41623f",
-                  ink: "#28401f",
+                  top: "#344e32",
+                  side: "#273a26",
                 },
                 {
                   title: "Investing",
                   body: "Owners often talk to a broker long before they are ready to list, so homes become available before they reach the public market.",
                   bg: "#e9f1f1",
                   accent: "#12615f",
-                  ink: "#0d403f",
+                  top: "#0e4e4c",
+                  side: "#0a3a39",
                 },
                 {
                   title: "Leasing",
                   body: "Keep the property in your name and collect income while a licensed operator runs the business inside it.",
                   bg: "#ecf0f6",
                   accent: "#3a5a80",
-                  ink: "#20374f",
+                  top: "#2e4866",
+                  side: "#22364d",
                 },
                 {
                   title: "Managing",
                   body: "An independent management company can take on staffing, compliance, and daily operations, whether you own one home or several.",
                   bg: "#f3edf1",
                   accent: "#6b4363",
-                  ink: "#432a3e",
+                  top: "#56364f",
+                  side: "#40283b",
                 },
               ].map((lane) => (
                 <div
@@ -356,10 +408,23 @@ const AFHClub = () => {
                     borderLeft: `5px solid ${lane.accent}`,
                   }}
                 >
-                  {/* Heading colour must be inline-overridden per tile: index.css
-                      forces body h3 to #1B3A6B, and the class rule cannot vary
-                      by lane. Inline style beats both. */}
-                  <h3 style={{ color: lane.ink }}>{lane.title}</h3>
+                  <div className="rpp-afh-cube">
+                    {/* Decorative faces — hidden from assistive tech, since the
+                        box carries no information the heading does not. */}
+                    <span
+                      className="rpp-afh-cube-top"
+                      style={{ background: lane.top }}
+                      aria-hidden="true"
+                    />
+                    <span
+                      className="rpp-afh-cube-side"
+                      style={{ background: lane.side }}
+                      aria-hidden="true"
+                    />
+                    <h3 className="rpp-afh-cube-face" style={{ background: lane.accent }}>
+                      {lane.title}
+                    </h3>
+                  </div>
                   <p>{lane.body}</p>
                 </div>
               ))}
