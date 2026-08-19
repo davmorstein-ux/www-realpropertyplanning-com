@@ -291,17 +291,23 @@ const PAGE_CSS = `
   }
   @media (max-width: 860px) {
     .rpp-afh-hero {
+      /* The mobile file is now a 1.75:1 crop centred on the front door, not a
+         slice of the wide desktop frame. The old crop was ~3.7:1, so at phone
+         proportions background-size cover scaled it up enormously and showed only the middle
+         of it — walkway and steps, no house.
+         Gradient clears sooner (72% rather than 100%) so the porch is not
+         sitting under a veil for its whole height. */
       background-image: linear-gradient(
           to bottom,
           #192A19 0%,
-          #192A19 58%,
-          rgba(25, 42, 25, 0.5) 78%,
-          rgba(25, 42, 25, 0) 100%
+          #192A19 46%,
+          rgba(25, 42, 25, 0.45) 62%,
+          rgba(25, 42, 25, 0) 78%
         ),
         url("/afh-club-hero-mobile.webp");
       background-position: bottom center;
       background-size: auto 100%, cover;
-      padding: 24px 20px 124px;
+      padding: 24px 20px 190px;
     }
     .rpp-afh-hero-sub { letter-spacing: 0.3em !important; word-spacing: 0.15em !important; }
     /* Tighter A-to-F gap on small screens. At phone type sizes the 0.132em gap
