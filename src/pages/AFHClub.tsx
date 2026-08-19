@@ -328,7 +328,7 @@ const AFHClub = () => {
                 textAlign: "center",
               }}
             >
-              More ways for a deal to close
+              More ways of doing business
             </h2>
             <p
               style={{
