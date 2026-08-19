@@ -210,7 +210,13 @@ const PAGE_CSS = `
        word gap 32px. */
     font-size: clamp(11px, 0.95vw, 19px) !important;
     font-weight: 400 !important;
-    letter-spacing: 0.548em !important;
+    /* 0.5157em, solved so line 2 ("FAMILY HOME RESOURCE NETWORK") measures
+       exactly as wide as the wordmark above it — so the K of NETWORK, the B of
+       CLUB, and the right end of the rule all land on the same edge.
+       The subtitle is 0.95vw and the title 5.3vw, and the title measures 5.64x
+       its own size, so line 2 has to be 5.64/(0.95/5.3) = 31.47em wide. This
+       value produces exactly that. Was 0.548em, which overshot by 12px. */
+    letter-spacing: 0.5157em !important;
     /* Solved against the artwork's measured 32px word gap — see the note on
        the title above for why this is far smaller than it looks like it
        should be. */
