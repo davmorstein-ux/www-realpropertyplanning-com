@@ -1,4 +1,5 @@
 import { Children, ElementType, ReactNode } from "react";
+import { useLocation } from "react-router-dom";
 
 interface HeroBandTitleProps {
   children: ReactNode;
@@ -7,6 +8,8 @@ interface HeroBandTitleProps {
   compact?: boolean;
   className?: string;
 }
+
+const AFH_ROUTE = /\/afh-(club|marketplace|submit)(\/|$)/i;
 
 const KEEP_LOWER = new Set([
   "to",
@@ -126,6 +129,11 @@ const HeroBandTitle = ({
   compact = false,
   className = "",
 }: HeroBandTitleProps) => {
+  /* Top of the component, before any conditional return. React requires hooks
+     to run in the same order on every render; calling this inside the `bare`
+     branch would break that the moment a page toggled the prop. */
+  const { pathname } = useLocation();
+  const isAfhSection = AFH_ROUTE.test(pathname);
   const isH1 = Tag === "h1";
   /* COMPACT IS NEUTRALISED — every h1 band is now the same size and padding.
 
@@ -174,7 +182,14 @@ const HeroBandTitle = ({
              different pages and the interfering rules were never fully traced,
              so the height is now pinned rather than inherited. Change it in
              BOTH places or the enforcement fights this inline value. */
-          background: "#1B3A6B",
+          /* AFH Club section runs hunter green instead of the sitewide navy.
+             Sampled from the bottom-left of the AFH Club hero photograph so
+             the band reads as a continuation of it.
+             Keyed off the route rather than a prop, so all 40 AFH pages pick
+             it up without touching 40 files — and any AFH page added later
+             gets it automatically. The test tolerates a locale prefix
+             (/es/afh-club, etc.), which path-based i18n produces. */
+          background: isAfhSection ? "#182B19" : "#1B3A6B",
           padding: isCompactH1 ? "6px 24px 8px" : isH1 ? "8px 24px 10px" : "6px 24px",
           display: "flex",
           alignItems: "center",
