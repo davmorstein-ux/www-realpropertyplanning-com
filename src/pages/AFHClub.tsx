@@ -167,7 +167,12 @@ const PAGE_CSS = `
   .rpp-afh-hero h1.rpp-afh-hero-title {
     display: flex;
     align-items: center;
-    gap: 14px;
+    /* em, NOT px. Every other dimension in this lockup scales with font-size,
+       so a fixed gap makes the wordmark's width/size ratio drift as the type
+       shrinks — 2% of the width at 106px, 7% at 34px. That drift is what threw
+       the rule's length off on phones, since the rule is derived from that
+       ratio. 0.132em equals the original 14px at 106px type. */
+    gap: 0.132em;
     font-family: 'DM Sans', system-ui, sans-serif !important;
     /* Derived by rendering DM Sans and matching the artwork, not estimated.
        Artwork "F" cap height is 75px in a 1999px frame -> 106px type = 5.30vw.
