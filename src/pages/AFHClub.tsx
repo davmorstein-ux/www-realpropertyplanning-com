@@ -148,7 +148,11 @@ const PAGE_CSS = `
     font-size: clamp(34px, 5.3vw, 106px) !important;
     font-weight: 300 !important;
     letter-spacing: 0.180em !important;
-    word-spacing: 0.358em !important;
+    /* NEGATIVE, and correctly so. letter-spacing already applies to the space
+       character, on top of the space's own advance width. A positive value
+       here triple-counts the gap and blows "AFH" and "CLUB" apart. Solved
+       against the artwork's measured 69px word gap. */
+    word-spacing: -0.121em !important;
     line-height: 1 !important;
     color: #F3F0EA !important;
     margin: 0 0 18px !important;
@@ -178,7 +182,10 @@ const PAGE_CSS = `
     font-size: clamp(11px, 0.95vw, 19px) !important;
     font-weight: 400 !important;
     letter-spacing: 0.548em !important;
-    word-spacing: 1em !important;
+    /* Solved against the artwork's measured 32px word gap — see the note on
+       the title above for why this is far smaller than it looks like it
+       should be. */
+    word-spacing: 0.272em !important;
     text-transform: uppercase !important;
     color: #F3F0EA !important;
     margin: 0 0 16px !important;
@@ -207,7 +214,7 @@ const PAGE_CSS = `
       background-size: auto 100%, cover;
       padding: 40px 22px 150px;
     }
-    .rpp-afh-hero-sub { letter-spacing: 0.3em !important; word-spacing: 0.6em !important; }
+    .rpp-afh-hero-sub { letter-spacing: 0.3em !important; word-spacing: 0.15em !important; }
   }
 
   /* Lane rows — a real 3D cube, title on its front face, description beside it.
