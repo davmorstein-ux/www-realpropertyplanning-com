@@ -46,6 +46,14 @@ const PAGE_CSS = `
     font-weight: 700 !important;
     letter-spacing: 0.15em !important;
     text-transform: uppercase !important;
+    /* index.css caps every paragraph in <main> at 75ch above 1280px — about
+       780px — to keep running prose readable. A kicker is a label, not prose,
+       and the cap left it in a 780px box flush against the left of a 1000px
+       container, so its centred text sat ~105px left of the heading beneath it.
+       Longer paragraphs on this page escape the cap because they carry their
+       own inline maxWidth; these short labels did not. */
+    max-width: none !important;
+    margin-inline: auto !important;
   }
   /* Lead kicker only — the one above "More ways of doing business".
      A MODIFIER, not a change to .rpp-afh-kicker: that class is used six times
