@@ -219,9 +219,9 @@ const PAGE_CSS = `
        exactly as wide as the wordmark above it — so the K of NETWORK, the B of
        CLUB, and the right end of the rule all land on the same edge.
        The subtitle is 0.95vw and the title 5.3vw, and the title measures 5.64x
-       its own size, so line 2 has to be 5.64/(0.95/5.3) = 31.47em wide. This
-       value produces exactly that. Was 0.548em, which overshot by 12px. */
-    letter-spacing: 0.5157em !important;
+       its own size, so line 2 has to be 5.2/(0.95/5.3) = 29.01em wide. Re-solved
+       when the wordmark changed to mixed case. */
+    letter-spacing: 0.4248em !important;
     /* Solved against the artwork's measured 32px word gap — see the note on
        the title above for why this is far smaller than it looks like it
        should be. */
@@ -244,10 +244,9 @@ const PAGE_CSS = `
        The wordmark measures 679px wide at 106px type in the artwork, a ratio
        so multiplying the title's own clamp by that ratio keeps the rule locked
        to the wordmark at every viewport width as the type scales.
-       5.64, not 6.4: the first value came from the artwork's own letterforms,
-       but DM Sans renders "AFH CLUB" slightly narrower, so the rule overshot
-       by 13%. This figure is measured off the live render. */
-    width: calc(clamp(34px, 5.3vw, 106px) * 5.64);
+       5.2, re-solved for the mixed-case "AFH Club": lowercase letters are
+       narrower than caps, so the wordmark lost 7.7% of its width. */
+    width: calc(clamp(34px, 5.3vw, 106px) * 5.2);
     max-width: 100%;
     height: 2px;
     background: #C0703C;
@@ -455,7 +454,7 @@ const AFHClub = () => {
                 height={194}
               />
               <span>
-                <span className="rpp-afh-hero-a">A</span>FH CLUB
+                <span className="rpp-afh-hero-a">A</span>FH Club
               </span>
             </h1>
             <p className="rpp-afh-hero-sub">
