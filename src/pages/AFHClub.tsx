@@ -97,92 +97,88 @@ const PAGE_CSS = `
   }
   .rpp-afh-disclosure strong { color: #302b26 !important; }
 
-  /* Lane tiles — 3 rows x 2 columns, each fronted by a 3D box.
-     The box is built from CSS geometry, not an image: the h3 IS the lit front
-     face, and two skewed spans form the top and side faces. That keeps every
-     title as real, selectable, translatable text at full size rather than
-     baked into artwork.
-     GRID, not flex, throughout: flex-basis applies to the MAIN axis, so a
-     fixed basis on the title silently became a HEIGHT when the axis rotated
-     at narrow widths. Grid tracks are axis-explicit and cannot do that. */
+  /* Lane rows — a coloured box with the title inside it, description beside it.
+     No tile, no card, no border around the pair: the box is the only object on
+     the page here and the text simply sits next to it.
+     The box is CSS geometry, not artwork — the h3 IS the lit front face and two
+     skewed spans form the top and side. Titles therefore stay real text: they
+     scale with browser font size, translate, and read correctly aloud.
+     GRID, not flex: flex-basis applies to the MAIN axis, so a fixed basis
+     silently becomes a HEIGHT when the axis rotates at narrow widths. */
   .rpp-afh-lane-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 44px;
+    max-width: 860px;
+    margin: 0 auto;
   }
-  .rpp-afh-lane-tile {
+  .rpp-afh-lane-row {
     display: grid;
-    grid-template-columns: 196px minmax(0, 1fr);
-    align-items: stretch;
-    column-gap: 26px;
-    border-radius: 4px;
-    /* Top and right padding leave room for the box's raised faces. */
-    padding: 30px 30px 24px 26px;
+    grid-template-columns: 176px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 40px;
   }
   .rpp-afh-cube {
     position: relative;
-    height: 100%;
-    min-height: 96px;
+    width: 156px;
+    height: 156px;
   }
   /* Front face = the heading itself. */
-  .rpp-afh-lane-tile h3.rpp-afh-cube-face {
+  .rpp-afh-lane-row h3.rpp-afh-cube-face {
     position: relative;
     z-index: 2;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 100%;
     box-sizing: border-box;
-    padding: 16px 20px !important;
+    padding: 10px !important;
+    text-align: center;
     font-family: 'DM Sans', system-ui, sans-serif !important;
-    font-size: 25px !important;
+    font-size: 24px !important;
     font-weight: 700 !important;
-    line-height: 1.25 !important;
+    line-height: 1.2 !important;
     color: #ffffff !important;
     margin: 0 !important;
     min-height: 0 !important;
   }
-  /* Top face: skewed so its leading edge lines up with the side face. */
   .rpp-afh-cube-top {
     position: absolute;
     left: 0;
     right: 0;
-    top: -15px;
-    height: 15px;
+    top: -20px;
+    height: 20px;
     transform: skewX(-45deg);
     transform-origin: bottom left;
   }
-  /* Side face. */
   .rpp-afh-cube-side {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: -15px;
-    width: 15px;
+    right: -20px;
+    width: 20px;
     transform: skewY(-45deg);
     transform-origin: top left;
   }
-  .rpp-afh-lane-tile p {
-    align-self: center;
+  .rpp-afh-lane-row p {
     font-family: 'DM Sans', sans-serif !important;
-    font-size: 19px !important;
-    line-height: 1.65 !important;
+    font-size: 20px !important;
+    line-height: 1.7 !important;
     color: #302b26 !important;
     margin: 0 !important;
     padding: 0 !important;
     min-height: 0 !important;
   }
-  @media (max-width: 900px) {
-    .rpp-afh-lane-list { grid-template-columns: minmax(0, 1fr); gap: 18px; }
-  }
-  @media (max-width: 560px) {
-    .rpp-afh-lane-tile {
-      grid-template-columns: minmax(0, 1fr);
-      row-gap: 16px;
-      padding: 26px 26px 22px 22px;
+  @media (max-width: 640px) {
+    .rpp-afh-lane-list { gap: 38px; }
+    .rpp-afh-lane-row {
+      grid-template-columns: 140px minmax(0, 1fr);
+      column-gap: 28px;
     }
-    .rpp-afh-cube { min-height: 0; }
-    .rpp-afh-lane-tile h3.rpp-afh-cube-face { font-size: 23px !important; }
-    .rpp-afh-lane-tile p { font-size: 18px !important; }
+    .rpp-afh-cube { width: 124px; height: 124px; }
+    .rpp-afh-lane-row h3.rpp-afh-cube-face { font-size: 20px !important; }
+    .rpp-afh-lane-row p { font-size: 18px !important; }
   }
 `;
 
@@ -353,7 +349,6 @@ const AFHClub = () => {
                 {
                   title: "Selling",
                   body: "Sell the home and the business together, or separate them and sell each to the buyer best suited to it.",
-                  bg: "#f8efe9",
                   accent: "#b13a44",
                   top: "#8e2e37",
                   side: "#6d232a",
@@ -361,7 +356,6 @@ const AFHClub = () => {
                 {
                   title: "Retiring",
                   body: "Step back without selling at all. A management company can run the home while the asset stays in your name.",
-                  bg: "#f7f2e5",
                   accent: "#9a6b26",
                   top: "#7b551e",
                   side: "#5d4017",
@@ -369,7 +363,6 @@ const AFHClub = () => {
                 {
                   title: "Buying",
                   body: "Being new is not a disqualifier. Management support can cover the experience gap, and financing paths exist for qualified buyers.",
-                  bg: "#edf2ed",
                   accent: "#41623f",
                   top: "#344e32",
                   side: "#273a26",
@@ -377,7 +370,6 @@ const AFHClub = () => {
                 {
                   title: "Investing",
                   body: "Owners often talk to a broker long before they are ready to list, so homes become available before they reach the public market.",
-                  bg: "#e9f1f1",
                   accent: "#12615f",
                   top: "#0e4e4c",
                   side: "#0a3a39",
@@ -385,7 +377,6 @@ const AFHClub = () => {
                 {
                   title: "Leasing",
                   body: "Keep the property in your name and collect income while a licensed operator runs the business inside it.",
-                  bg: "#ecf0f6",
                   accent: "#3a5a80",
                   top: "#2e4866",
                   side: "#22364d",
@@ -393,21 +384,12 @@ const AFHClub = () => {
                 {
                   title: "Managing",
                   body: "An independent management company can take on staffing, compliance, and daily operations, whether you own one home or several.",
-                  bg: "#f3edf1",
                   accent: "#6b4363",
                   top: "#56364f",
                   side: "#40283b",
                 },
               ].map((lane) => (
-                <div
-                  key={lane.title}
-                  className="rpp-afh-lane-tile"
-                  style={{
-                    background: lane.bg,
-                    border: "1px solid rgba(0,0,0,0.07)",
-                    borderLeft: `5px solid ${lane.accent}`,
-                  }}
-                >
+                <div key={lane.title} className="rpp-afh-lane-row">
                   <div className="rpp-afh-cube">
                     {/* Decorative faces — hidden from assistive tech, since the
                         box carries no information the heading does not. */}
