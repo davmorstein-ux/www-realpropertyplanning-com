@@ -72,7 +72,7 @@ const PAGE_CSS = `
      above — the solid one would become white on white. */
   .rpp-afh-marketplace .rpp-afh-btn-solid,
   .rpp-afh-marketplace .rpp-afh-btn-solid span {
-    color: #12615f !important;
+    color: #1F4A34 !important;
   }
   .rpp-afh-marketplace .rpp-afh-btn-outline,
   .rpp-afh-marketplace .rpp-afh-btn-outline span {
@@ -348,7 +348,7 @@ const AFHClub = () => {
         <section className="rpp-afh-paths" style={{ background: "#ffffff", padding: "72px 24px 16px" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
             <p className="rpp-afh-kicker" style={{ color: "#b13a44", marginBottom: 14, textAlign: "center" }}>
-              Buying, selling, and leasing in Washington
+              Buying, selling, and leasing in Washington State
             </p>
             <h2
               style={{
@@ -894,7 +894,18 @@ const AFHClub = () => {
         <section
           className="rpp-afh-marketplace"
           style={{
-            background: "linear-gradient(135deg, #1a7a78 0%, #155f5d 100%)",
+            /* Dark green, flat. Was a teal gradient; a gradient makes the
+               band's apparent width shift with screen size, so it read as a
+               different band on different pages. One colour, like the navy
+               band component.
+
+               The 1px rule along the top edge matches the homepage hero band:
+               #14161A, a very dark neutral rather than true black. Against a
+               field this deep, pure black reads as a hole rather than an edge.
+               borderTop rather than a wrapper or pseudo-element, so it is part
+               of the band's own box and cannot drift out of alignment. */
+            background: "#1F4A34",
+            borderTop: "1px solid #14161A",
             padding: "56px 24px",
             color: "#ffffff",
           }}
