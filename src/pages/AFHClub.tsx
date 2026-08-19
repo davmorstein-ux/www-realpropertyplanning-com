@@ -229,7 +229,12 @@ const PAGE_CSS = `
   /* Rule under the subtitle. ONE VALUE — change here only. Currently the
      artwork's orange; switch to the door colour if those should match. */
   .rpp-afh-hero-rule {
-    width: min(430px, 62%);
+    /* Spans the width of "AFH CLUB" rather than an arbitrary fraction.
+       The wordmark measures 679px wide at 106px type in the artwork, a ratio
+       of 6.4, so multiplying the title's own clamp by that keeps the rule
+       locked to the wordmark at every viewport width as the type scales. */
+    width: calc(clamp(34px, 5.3vw, 106px) * 6.4);
+    max-width: 100%;
     height: 2px;
     background: #C0703C;
     border: 0;
