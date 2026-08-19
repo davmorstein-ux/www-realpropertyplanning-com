@@ -98,46 +98,56 @@ const PAGE_CSS = `
   .rpp-afh-disclosure strong { color: #302b26 !important; }
 
   /* Lane tiles — full-width horizontal bands.
-     Deliberately NOT columns: narrow columns forced 3-4 word line wraps and
-     read as ragged. One tile per row gives each line room to breathe, and the
-     bold title always sits alone on its own line above the text. */
+     GRID, not flex, and deliberately so: with flex the title carried
+     flex: 0 0 200px, and because flex-basis always applies to the MAIN axis,
+     that 200px silently became a 200px HEIGHT as soon as the tile switched to
+     flex-direction: column at narrow widths. Result was a tall empty gap under
+     every title. Grid track sizing is axis-explicit and cannot do that. */
   .rpp-afh-lane-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 14px;
   }
   .rpp-afh-lane-tile {
-    display: flex;
-    align-items: baseline;
-    gap: 22px;
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 24px;
+    row-gap: 6px;
     background: #f7f4ef;
     border: 1px solid #dfc9cb;
     border-left: 5px solid #b13a44;
     border-radius: 4px;
-    padding: 24px 30px;
+    padding: 22px 30px;
   }
   .rpp-afh-lane-tile h3 {
-    flex: 0 0 200px;
+    align-self: start;
     font-family: 'DM Sans', system-ui, sans-serif !important;
     font-size: 26px !important;
     font-weight: 700 !important;
-    line-height: 1.3 !important;
+    line-height: 1.5 !important;
     color: #280a0c !important;
     margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
   }
   .rpp-afh-lane-tile p {
-    flex: 1;
+    align-self: start;
     font-family: 'DM Sans', sans-serif !important;
     font-size: 20px !important;
     line-height: 1.65 !important;
     color: #302b26 !important;
     margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
   }
-  /* Below 860px the title stacks above the text rather than beside it.
-     Either way the title occupies its own line. */
+  /* Single column: title sits on its own line directly above the text. */
   @media (max-width: 860px) {
-    .rpp-afh-lane-tile { flex-direction: column; gap: 8px; padding: 22px 24px; }
-    .rpp-afh-lane-tile h3 { flex: none; font-size: 24px !important; }
+    .rpp-afh-lane-tile {
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 4px;
+      padding: 20px 24px;
+    }
+    .rpp-afh-lane-tile h3 { font-size: 24px !important; }
     .rpp-afh-lane-tile p { font-size: 19px !important; }
   }
 `;
