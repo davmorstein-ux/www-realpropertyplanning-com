@@ -4510,6 +4510,20 @@ h1.rpp-hero-band-text.rpp-hero-band-text {
   text-transform: none !important;
 }
 
+/* H2 bands render at the H1 band's size. 166 pages pass as="h1" and get the
+   large band; only three pass no tag and got the 15px small-caps band, which
+   is why those read as a different band entirely. Pages whose H1 lives
+   elsewhere (AFH Club's is in the hero artwork) pass as="h2" and land here,
+   so the band matches the rest of the site without a second H1 on the page. */
+h2.rpp-hero-band-text.rpp-hero-band-text {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(32px, 4.5vw, 46px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+}
+
 div.rpp-hero-band-text.rpp-hero-band-text,
 span.rpp-hero-band-text.rpp-hero-band-text {
   font-family: "DM Sans", system-ui, sans-serif !important;
