@@ -97,73 +97,96 @@ const PAGE_CSS = `
   }
   .rpp-afh-disclosure strong { color: #302b26 !important; }
 
-  /* Lane rows — a box with the title inside it, description beside it.
-     No tile, no card, no border around the pair.
-     The box is CSS geometry, not artwork — the h3 IS the front face and two
-     skewed spans form the top and side. Titles stay real text: they scale with
-     browser font size, translate, and read correctly aloud.
-     Box is sized to the longest title ("Investing") at the fixed 24px face
-     type, so all six are identical and none is larger than it needs to be.
-     Depth is 26px, ~47% of the face height, matching the reference proportion.
-     GRID, not flex: flex-basis applies to the MAIN axis, so a fixed basis
-     silently becomes a HEIGHT when the axis rotates at narrow widths. */
+  /* Lane rows — a real 3D cube, title on its front face, description beside it.
+     Built with CSS 3D transforms (perspective + preserve-3d), NOT 2D shapes.
+     That matters: the heading sits on the actual front face, so it tilts with
+     the plane automatically. Faking the cube with skew/clip-path would leave
+     level text on a tilted face — the same defect as a level logo on a tilted
+     sign.
+     Angles chosen to reproduce the reference proportions:
+       rotateY(-24deg) -> visible side is ~44% of the apparent face width
+       rotateX(5.5deg) -> visible top  is ~10% of the apparent face height
+     Front face carries the lane colour. Top and side stay neutral grey/black
+     exactly as in the reference, so only one face is coloured. */
   .rpp-afh-lane-list {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 40px;
-    max-width: 860px;
+    gap: 46px;
+    max-width: 940px;
     margin: 0 auto;
   }
   .rpp-afh-lane-row {
     display: grid;
-    grid-template-columns: 190px minmax(0, 1fr);
+    grid-template-columns: 262px minmax(0, 1fr);
     align-items: center;
-    column-gap: 36px;
+    column-gap: 30px;
+  }
+  .rpp-afh-cube-wrap {
+    position: relative;
+    width: 252px;
+    height: 182px;
+    perspective: 1500px;
   }
   .rpp-afh-cube {
-    position: relative;
-    width: 156px;
-    height: 56px;
+    position: absolute;
+    left: 26px;
+    top: 16px;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    transform: rotateX(5.5deg) rotateY(-24deg);
   }
-  /* Front face = the heading itself. White fill, so it needs its own outline
-     or it would vanish against the white section background. */
-  .rpp-afh-lane-row h3.rpp-afh-cube-face {
-    position: relative;
-    z-index: 2;
+  .rpp-afh-cube > * {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+  }
+  /* Front face = the heading itself, so the title stays real text: it scales
+     with browser font size, translates, and reads correctly aloud. */
+  .rpp-afh-lane-row h3.rpp-afh-cube-front {
+    transform: translateZ(75px);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 6px 10px !important;
+    padding: 8px !important;
     text-align: center;
-    background: #ffffff !important;
     font-family: 'DM Sans', system-ui, sans-serif !important;
-    font-size: 24px !important;
+    font-size: 25px !important;
     font-weight: 700 !important;
     line-height: 1.2 !important;
+    color: #ffffff !important;
     margin: 0 !important;
     min-height: 0 !important;
     white-space: nowrap;
   }
-  .rpp-afh-cube-top {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -26px;
-    height: 26px;
-    transform: skewX(-45deg);
-    transform-origin: bottom left;
-  }
+  /* Neutral faces, sampled from the reference image. */
   .rpp-afh-cube-side {
+    transform: rotateY(90deg) translateZ(75px);
+    background: #151515;
+  }
+  .rpp-afh-cube-top {
+    transform: rotateX(90deg) translateZ(75px);
+    background: #4f4f51;
+  }
+  /* Cast shadow on the ground: a hard-edged wedge tapering to the right and
+     fading along its length, as in the reference. Sits outside the 3D context
+     so the cube's transforms cannot drag it around. */
+  .rpp-afh-cube-shadow {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -26px;
-    width: 26px;
-    transform: skewY(-45deg);
-    transform-origin: top left;
+    left: 128px;
+    bottom: 16px;
+    width: 122px;
+    height: 62px;
+    background: linear-gradient(
+      100deg,
+      rgba(0, 0, 0, 0.46) 0%,
+      rgba(0, 0, 0, 0.26) 45%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    clip-path: polygon(0% 96%, 24% 4%, 100% 52%);
   }
   .rpp-afh-lane-row p {
     font-family: 'DM Sans', sans-serif !important;
@@ -174,12 +197,19 @@ const PAGE_CSS = `
     padding: 0 !important;
     min-height: 0 !important;
   }
-  @media (max-width: 640px) {
-    .rpp-afh-lane-list { gap: 34px; }
-    .rpp-afh-lane-row {
-      grid-template-columns: 168px minmax(0, 1fr);
-      column-gap: 24px;
+  @media (max-width: 720px) {
+    .rpp-afh-lane-list { gap: 38px; }
+    .rpp-afh-lane-row { grid-template-columns: 212px minmax(0, 1fr); column-gap: 20px; }
+    .rpp-afh-cube-wrap { width: 204px; height: 150px; }
+    .rpp-afh-cube { left: 20px; top: 12px; width: 122px; height: 122px; }
+    .rpp-afh-cube > * { width: 122px; height: 122px; }
+    .rpp-afh-lane-row h3.rpp-afh-cube-front {
+      transform: translateZ(61px);
+      font-size: 21px !important;
     }
+    .rpp-afh-cube-side { transform: rotateY(90deg) translateZ(61px); }
+    .rpp-afh-cube-top { transform: rotateX(90deg) translateZ(61px); }
+    .rpp-afh-cube-shadow { left: 104px; bottom: 12px; width: 98px; height: 50px; }
     .rpp-afh-lane-row p { font-size: 18px !important; }
   }
 `;
@@ -352,65 +382,44 @@ const AFHClub = () => {
                   title: "Selling",
                   body: "Sell the home and the business together, or separate them and sell each to the buyer best suited to it.",
                   accent: "#b13a44",
-                  top: "#8e2e37",
-                  side: "#6d232a",
                 },
                 {
                   title: "Retiring",
                   body: "Step back without selling at all. A management company can run the home while the asset stays in your name.",
                   accent: "#9a6b26",
-                  top: "#7b551e",
-                  side: "#5d4017",
                 },
                 {
                   title: "Buying",
                   body: "Being new is not a disqualifier. Management support can cover the experience gap, and financing paths exist for qualified buyers.",
                   accent: "#41623f",
-                  top: "#344e32",
-                  side: "#273a26",
                 },
                 {
                   title: "Investing",
                   body: "Owners often talk to a broker long before they are ready to list, so homes become available before they reach the public market.",
                   accent: "#12615f",
-                  top: "#0e4e4c",
-                  side: "#0a3a39",
                 },
                 {
                   title: "Leasing",
                   body: "Keep the property in your name and collect income while a licensed operator runs the business inside it.",
                   accent: "#3a5a80",
-                  top: "#2e4866",
-                  side: "#22364d",
                 },
                 {
                   title: "Managing",
                   body: "An independent management company can take on staffing, compliance, and daily operations, whether you own one home or several.",
                   accent: "#6b4363",
-                  top: "#56364f",
-                  side: "#40283b",
                 },
               ].map((lane) => (
                 <div key={lane.title} className="rpp-afh-lane-row">
-                  <div className="rpp-afh-cube">
-                    {/* Decorative faces — hidden from assistive tech, since the
-                        box carries no information the heading does not. */}
-                    <span
-                      className="rpp-afh-cube-top"
-                      style={{ background: lane.top }}
-                      aria-hidden="true"
-                    />
-                    <span
-                      className="rpp-afh-cube-side"
-                      style={{ background: lane.side }}
-                      aria-hidden="true"
-                    />
-                    <h3
-                      className="rpp-afh-cube-face"
-                      style={{ color: lane.accent, border: `2px solid ${lane.accent}` }}
-                    >
-                      {lane.title}
-                    </h3>
+                  <div className="rpp-afh-cube-wrap">
+                    <span className="rpp-afh-cube-shadow" aria-hidden="true" />
+                    <div className="rpp-afh-cube">
+                      <h3 className="rpp-afh-cube-front" style={{ background: lane.accent }}>
+                        {lane.title}
+                      </h3>
+                      {/* Decorative faces — neutral, as in the reference. */}
+                      <span className="rpp-afh-cube-side" aria-hidden="true" />
+                      <span className="rpp-afh-cube-top" aria-hidden="true" />
+                    </div>
                   </div>
                   <p>{lane.body}</p>
                 </div>
