@@ -134,11 +134,17 @@ const PAGE_CSS = `
     background-size: auto 100%, cover;
     /* Bottom padding is deliberately small: the band below butts straight up
        against the hero, so any spare space here shows as a white gap. */
-    padding: 30px 24px 26px;
+    /* Left padding tracks the viewport so the wordmark holds the same
+       position the artwork had — text starting ~6.5% in — instead of drifting
+       toward the middle as the screen widens. */
+    padding: 30px clamp(20px, 6.5vw, 150px) 26px;
   }
   .rpp-afh-hero-inner {
+    /* margin: 0, NOT 0 auto. Auto-centring inside a 1180px box is what pushed
+       the wordmark to roughly 25% from the left on wide screens and left the
+       dead space beside it. */
     max-width: 1180px;
-    margin: 0 auto;
+    margin: 0;
   }
   .rpp-afh-hero h1.rpp-afh-hero-title {
     display: flex;
@@ -223,7 +229,7 @@ const PAGE_CSS = `
         url("/afh-club-hero-mobile.webp");
       background-position: bottom center;
       background-size: auto 100%, cover;
-      padding: 24px 22px 118px;
+      padding: 24px 20px 118px;
     }
     .rpp-afh-hero-sub { letter-spacing: 0.3em !important; word-spacing: 0.15em !important; }
   }
