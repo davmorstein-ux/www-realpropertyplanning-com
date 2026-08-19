@@ -281,96 +281,48 @@ const PAGE_CSS = `
     }
   }
 
-  /* Lane rows — a real 3D cube, title on its front face, description beside it.
-     Built with CSS 3D transforms (perspective + preserve-3d), NOT 2D shapes.
-     That matters: the heading sits on the actual front face, so it tilts with
-     the plane automatically. Faking the cube with skew/clip-path would leave
-     level text on a tilted face — the same defect as a level logo on a tilted
-     sign.
-     Angles chosen to reproduce the reference proportions:
-       rotateY(-24deg) -> visible side is ~44% of the apparent face width
-       rotateX(5.5deg) -> visible top  is ~10% of the apparent face height
-     Front face carries the lane colour. Top and side stay neutral grey/black
-     exactly as in the reference, so only one face is coloured. */
+  /* Lane rows — a rendered cube image with the description beside it.
+     The CSS 3D cube that used to live here is gone: these are David's own
+     renders, so the geometry, lighting and shadow are baked in and there is
+     nothing to reproduce in CSS.
+     All six files share an identical canvas and an identical content bounding
+     box, so a fixed aspect-ratio box aligns every row without per-image
+     nudging. Do not re-crop one of them individually — that alignment is the
+     whole reason the rows line up. */
   .rpp-afh-lane-list {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 46px;
+    gap: 34px;
     max-width: 940px;
     margin: 0 auto;
   }
   .rpp-afh-lane-row {
     display: grid;
-    grid-template-columns: 262px minmax(0, 1fr);
+    grid-template-columns: 224px minmax(0, 1fr);
     align-items: center;
     column-gap: 30px;
   }
-  .rpp-afh-cube-wrap {
-    position: relative;
-    width: 252px;
-    height: 182px;
-    perspective: 1500px;
+  .rpp-afh-cube-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Matches the files (620x515). Declared so the row reserves its space
+       before the image loads and the list does not jump. */
+    aspect-ratio: 620 / 515;
   }
-  .rpp-afh-cube {
+  /* The title is baked into the artwork, so the heading is carried here for
+     assistive tech and search rather than painted. Not display:none, which
+     would drop it from the accessibility tree entirely. */
+  .rpp-afh-lane-row h3.rpp-afh-lane-heading {
     position: absolute;
-    left: 26px;
-    top: 16px;
-    width: 150px;
-    height: 150px;
-    transform-style: preserve-3d;
-    transform: rotateX(5.5deg) rotateY(-24deg);
-  }
-  .rpp-afh-cube > * {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 150px;
-    height: 150px;
-    box-sizing: border-box;
-  }
-  /* Front face = the heading itself, so the title stays real text: it scales
-     with browser font size, translates, and reads correctly aloud. */
-  .rpp-afh-lane-row h3.rpp-afh-cube-front {
-    transform: translateZ(75px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px !important;
-    text-align: center;
-    font-family: 'DM Sans', system-ui, sans-serif !important;
-    font-size: 25px !important;
-    font-weight: 700 !important;
-    line-height: 1.2 !important;
-    color: #ffffff !important;
-    margin: 0 !important;
-    min-height: 0 !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
     white-space: nowrap;
-  }
-  /* Neutral faces, sampled from the reference image. */
-  .rpp-afh-cube-side {
-    transform: rotateY(90deg) translateZ(75px);
-    background: #151515;
-  }
-  .rpp-afh-cube-top {
-    transform: rotateX(90deg) translateZ(75px);
-    background: #4f4f51;
-  }
-  /* Cast shadow on the ground: a hard-edged wedge tapering to the right and
-     fading along its length, as in the reference. Sits outside the 3D context
-     so the cube's transforms cannot drag it around. */
-  .rpp-afh-cube-shadow {
-    position: absolute;
-    left: 128px;
-    bottom: 16px;
-    width: 122px;
-    height: 62px;
-    background: linear-gradient(
-      100deg,
-      rgba(0, 0, 0, 0.46) 0%,
-      rgba(0, 0, 0, 0.26) 45%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    clip-path: polygon(0% 96%, 24% 4%, 100% 52%);
+    margin: 0 !important;
+    padding: 0 !important;
   }
   .rpp-afh-lane-row p {
     font-family: 'DM Sans', sans-serif !important;
@@ -382,18 +334,8 @@ const PAGE_CSS = `
     min-height: 0 !important;
   }
   @media (max-width: 720px) {
-    .rpp-afh-lane-list { gap: 38px; }
-    .rpp-afh-lane-row { grid-template-columns: 212px minmax(0, 1fr); column-gap: 20px; }
-    .rpp-afh-cube-wrap { width: 204px; height: 150px; }
-    .rpp-afh-cube { left: 20px; top: 12px; width: 122px; height: 122px; }
-    .rpp-afh-cube > * { width: 122px; height: 122px; }
-    .rpp-afh-lane-row h3.rpp-afh-cube-front {
-      transform: translateZ(61px);
-      font-size: 21px !important;
-    }
-    .rpp-afh-cube-side { transform: rotateY(90deg) translateZ(61px); }
-    .rpp-afh-cube-top { transform: rotateX(90deg) translateZ(61px); }
-    .rpp-afh-cube-shadow { left: 104px; bottom: 12px; width: 98px; height: 50px; }
+    .rpp-afh-lane-list { gap: 26px; }
+    .rpp-afh-lane-row { grid-template-columns: 150px minmax(0, 1fr); column-gap: 20px; }
     .rpp-afh-lane-row p { font-size: 18px !important; }
   }
 `;
@@ -539,47 +481,43 @@ const AFHClub = () => {
                 {
                   title: "Selling",
                   body: "Sell the home and the business together, or separate them and sell each to the buyer best suited to it.",
-                  accent: "#b13a44",
                 },
                 {
                   title: "Retiring",
                   body: "Step back without selling at all. A management company can run the home while the asset stays in your name.",
-                  accent: "#9a6b26",
                 },
                 {
                   title: "Buying",
                   body: "Being new is not a disqualifier. Management support can cover the experience gap, and financing paths exist for qualified buyers.",
-                  accent: "#41623f",
                 },
                 {
                   title: "Investing",
                   body: "Owners often talk to a broker long before they are ready to list, so homes become available before they reach the public market.",
-                  accent: "#12615f",
                 },
                 {
                   title: "Leasing",
                   body: "Keep the property in your name and collect income while a licensed operator runs the business inside it.",
-                  accent: "#3a5a80",
                 },
                 {
                   title: "Managing",
                   body: "An independent management company can take on staffing, compliance, and daily operations, whether you own one home or several.",
-                  accent: "#6b4363",
                 },
               ].map((lane) => (
                 <div key={lane.title} className="rpp-afh-lane-row">
-                  <div className="rpp-afh-cube-wrap">
-                    <span className="rpp-afh-cube-shadow" aria-hidden="true" />
-                    <div className="rpp-afh-cube">
-                      <h3 className="rpp-afh-cube-front" style={{ background: lane.accent }}>
-                        {lane.title}
-                      </h3>
-                      {/* Decorative faces — neutral, as in the reference. */}
-                      <span className="rpp-afh-cube-side" aria-hidden="true" />
-                      <span className="rpp-afh-cube-top" aria-hidden="true" />
-                    </div>
+                  <img
+                    src={`/afh-cube-${lane.title.toLowerCase()}.webp`}
+                    alt=""
+                    aria-hidden="true"
+                    className="rpp-afh-cube-img"
+                    width={620}
+                    height={515}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3 className="rpp-afh-lane-heading">{lane.title}</h3>
+                    <p>{lane.body}</p>
                   </div>
-                  <p>{lane.body}</p>
                 </div>
               ))}
             </div>
