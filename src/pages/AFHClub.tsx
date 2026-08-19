@@ -97,33 +97,36 @@ const PAGE_CSS = `
   }
   .rpp-afh-disclosure strong { color: #302b26 !important; }
 
-  /* Lane rows — a coloured box with the title inside it, description beside it.
-     No tile, no card, no border around the pair: the box is the only object on
-     the page here and the text simply sits next to it.
-     The box is CSS geometry, not artwork — the h3 IS the lit front face and two
-     skewed spans form the top and side. Titles therefore stay real text: they
-     scale with browser font size, translate, and read correctly aloud.
+  /* Lane rows — a box with the title inside it, description beside it.
+     No tile, no card, no border around the pair.
+     The box is CSS geometry, not artwork — the h3 IS the front face and two
+     skewed spans form the top and side. Titles stay real text: they scale with
+     browser font size, translate, and read correctly aloud.
+     Box is sized to the longest title ("Investing") at the fixed 24px face
+     type, so all six are identical and none is larger than it needs to be.
+     Depth is 26px, ~47% of the face height, matching the reference proportion.
      GRID, not flex: flex-basis applies to the MAIN axis, so a fixed basis
      silently becomes a HEIGHT when the axis rotates at narrow widths. */
   .rpp-afh-lane-list {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 44px;
+    gap: 40px;
     max-width: 860px;
     margin: 0 auto;
   }
   .rpp-afh-lane-row {
     display: grid;
-    grid-template-columns: 176px minmax(0, 1fr);
+    grid-template-columns: 190px minmax(0, 1fr);
     align-items: center;
-    column-gap: 40px;
+    column-gap: 36px;
   }
   .rpp-afh-cube {
     position: relative;
     width: 156px;
-    height: 156px;
+    height: 56px;
   }
-  /* Front face = the heading itself. */
+  /* Front face = the heading itself. White fill, so it needs its own outline
+     or it would vanish against the white section background. */
   .rpp-afh-lane-row h3.rpp-afh-cube-face {
     position: relative;
     z-index: 2;
@@ -133,22 +136,23 @@ const PAGE_CSS = `
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    padding: 10px !important;
+    padding: 6px 10px !important;
     text-align: center;
+    background: #ffffff !important;
     font-family: 'DM Sans', system-ui, sans-serif !important;
     font-size: 24px !important;
     font-weight: 700 !important;
     line-height: 1.2 !important;
-    color: #ffffff !important;
     margin: 0 !important;
     min-height: 0 !important;
+    white-space: nowrap;
   }
   .rpp-afh-cube-top {
     position: absolute;
     left: 0;
     right: 0;
-    top: -20px;
-    height: 20px;
+    top: -26px;
+    height: 26px;
     transform: skewX(-45deg);
     transform-origin: bottom left;
   }
@@ -156,8 +160,8 @@ const PAGE_CSS = `
     position: absolute;
     top: 0;
     bottom: 0;
-    right: -20px;
-    width: 20px;
+    right: -26px;
+    width: 26px;
     transform: skewY(-45deg);
     transform-origin: top left;
   }
@@ -171,13 +175,11 @@ const PAGE_CSS = `
     min-height: 0 !important;
   }
   @media (max-width: 640px) {
-    .rpp-afh-lane-list { gap: 38px; }
+    .rpp-afh-lane-list { gap: 34px; }
     .rpp-afh-lane-row {
-      grid-template-columns: 140px minmax(0, 1fr);
-      column-gap: 28px;
+      grid-template-columns: 168px minmax(0, 1fr);
+      column-gap: 24px;
     }
-    .rpp-afh-cube { width: 124px; height: 124px; }
-    .rpp-afh-lane-row h3.rpp-afh-cube-face { font-size: 20px !important; }
     .rpp-afh-lane-row p { font-size: 18px !important; }
   }
 `;
@@ -403,7 +405,10 @@ const AFHClub = () => {
                       style={{ background: lane.side }}
                       aria-hidden="true"
                     />
-                    <h3 className="rpp-afh-cube-face" style={{ background: lane.accent }}>
+                    <h3
+                      className="rpp-afh-cube-face"
+                      style={{ color: lane.accent, border: `2px solid ${lane.accent}` }}
+                    >
                       {lane.title}
                     </h3>
                   </div>
