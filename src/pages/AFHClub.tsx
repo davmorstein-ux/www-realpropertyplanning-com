@@ -107,6 +107,45 @@ const PAGE_CSS = `
     line-height: 1.7 !important;
   }
   .rpp-afh-disclosure strong { color: #302b26 !important; }
+
+  /* Lane cards.
+     Each card is a subgrid sharing the parent's row tracks, so the label,
+     heading, body and list of every card sit on the same baselines even when
+     one card's label wraps to two lines and its neighbour's does not.
+     Without this the cards go ragged (they did). */
+  .rpp-afh-lane-grid {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(4, auto);
+  }
+  .rpp-afh-lane-card {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+    background: #f7f4ef;
+    border: 1px solid #dfc9cb;
+    border-top: 4px solid #b13a44;
+    border-radius: 4px;
+    padding: 30px 28px 26px;
+  }
+  @media (max-width: 1180px) {
+    .rpp-afh-lane-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 700px) {
+    .rpp-afh-lane-grid { grid-template-columns: minmax(0, 1fr); }
+  }
+  /* Fallback for engines without subgrid: reserve the tallest line count.
+     Only above 700px, where cards sit side by side and misalignment shows. */
+  @media (min-width: 701px) {
+    @supports not (grid-template-rows: subgrid) {
+      .rpp-afh-lane-card { display: block; }
+      .rpp-afh-lane-card .rpp-afh-lane-label { min-height: 2.7em; }
+      .rpp-afh-lane-card h3 { min-height: 2.7em; }
+      .rpp-afh-lane-card p:not(.rpp-afh-lane-label) { min-height: 5.2em; }
+    }
+  }
 `;
 
 const CATEGORY_META = [
@@ -243,7 +282,7 @@ const AFHClub = () => {
         <section className="rpp-afh-paths" style={{ background: "#ffffff", padding: "72px 24px 16px" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
             <p className="rpp-afh-kicker" style={{ color: "#b13a44", marginBottom: 14, textAlign: "center" }}>
-              What&rsquo;s new at AFH Club
+              Buying, selling, and leasing in Washington
             </p>
             <h2
               style={{
@@ -267,20 +306,14 @@ const AFHClub = () => {
                 textAlign: "center",
               }}
             >
-              AFH Club began as a place to list and sell adult family homes. It has grown into something
-              more useful. Alongside licensed brokerage and appraisal, there are now independent
-              professionals covering business and lease brokerage, day-to-day home management, and
-              financing for qualified buyers. Each one opens a path that did not exist before &mdash;
-              which means fewer situations that end in &ldquo;there&rsquo;s nothing I can do.&rdquo;
+              AFH Club connects owners, buyers, and operators of Washington adult family homes with the
+              professionals a transaction actually requires: licensed real estate brokerage and
+              appraisal, business and lease brokerage, day-to-day home management, and financing for
+              qualified buyers. Because all of it is reachable through one conversation, situations that
+              stall elsewhere usually have a path forward here.
             </p>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                gap: 28,
-              }}
-            >
+            <div className="rpp-afh-lane-grid">
               {[
                 {
                   label: "If you are selling or retiring",
@@ -325,16 +358,7 @@ const AFHClub = () => {
                   ],
                 },
               ].map((lane) => (
-                <div
-                  key={lane.label}
-                  style={{
-                    background: "#f7f4ef",
-                    border: "1px solid #dfc9cb",
-                    borderTop: "4px solid #b13a44",
-                    borderRadius: 4,
-                    padding: "30px 28px 26px",
-                  }}
-                >
+                <div key={lane.label} className="rpp-afh-lane-card">
                   <p className="rpp-afh-lane-label">{lane.label}</p>
                   <h3
                     style={{
