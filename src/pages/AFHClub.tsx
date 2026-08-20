@@ -291,7 +291,12 @@ const PAGE_CSS = `
   }
   @media (max-width: 860px) {
     .rpp-afh-hero {
-      /* The mobile file is now a 1.75:1 crop centred on the front door, not a
+      /* Filename is afh-hero-phone.webp, NOT afh-club-hero-mobile.webp. The
+         older name accumulated copies numbered (1) through (5) in the repo
+         because the browser kept appending a number on download; a name it had
+         never seen uploads cleanly. Nothing else about the file changed.
+
+         The mobile file is a 1.75:1 crop centred on the front door, not a
          slice of the wide desktop frame. The old crop was ~3.7:1, so at phone
          proportions background-size cover scaled it up enormously and showed only the middle
          of it — walkway and steps, no house.
@@ -304,7 +309,7 @@ const PAGE_CSS = `
           rgba(25, 42, 25, 0.45) 62%,
           rgba(25, 42, 25, 0) 78%
         ),
-        url("/afh-club-hero-mobile.webp");
+        url("/afh-hero-phone.webp");
       background-position: bottom center;
       background-size: auto 100%, cover;
       padding: 24px 20px 190px;
