@@ -3224,7 +3224,12 @@ main a:where([aria-label*="Back"], [aria-label*="back"]),
   opacity: 1 !important;
 }
 
-/* 15b. The AFH Club return button.
+/* 15b. Return buttons ("Back to ...") that are solid filled buttons.
+
+   Applies to BackToAFHClub (.rpp-afh-return) and BackToArticles
+   (.rpp-return-btn). The other four BackTo* components do not need it:
+   BackToLongTermCare and BackToProfessionals are images, BackToResources sets
+   its own white, and BackToProfessionalsButton uses the Button component.
 
    Rule 15 above forces every "back to" link to #280a0c. That is right for a
    plain text link, but this one is a SOLID BUTTON whose background is #280a0c,
@@ -3234,7 +3239,9 @@ main a:where([aria-label*="Back"], [aria-label*="back"]),
    well as specificity. Do not rename the class to anything containing
    "BackTo" — rule 15 matches [class*="BackTo"] a and would take it back. */
 main a.rpp-afh-return.rpp-afh-return,
-a.rpp-afh-return.rpp-afh-return {
+a.rpp-afh-return.rpp-afh-return,
+main a.rpp-return-btn.rpp-return-btn,
+a.rpp-return-btn.rpp-return-btn {
   color: #ffffff !important;
   background: #280a0c !important;
   opacity: 1 !important;
@@ -3243,12 +3250,15 @@ a.rpp-afh-return.rpp-afh-return {
   font-weight: 800 !important;
 }
 main a.rpp-afh-return.rpp-afh-return:hover,
-a.rpp-afh-return.rpp-afh-return:hover {
+a.rpp-afh-return.rpp-afh-return:hover,
+main a.rpp-return-btn.rpp-return-btn:hover,
+a.rpp-return-btn.rpp-return-btn:hover {
   background: #431419 !important;
   color: #ffffff !important;
   border-color: #d9737c !important;
 }
-main a.rpp-afh-return.rpp-afh-return:focus-visible {
+main a.rpp-afh-return.rpp-afh-return:focus-visible,
+main a.rpp-return-btn.rpp-return-btn:focus-visible {
   outline: 3px solid #c3525c !important;
   outline-offset: 3px !important;
 }
