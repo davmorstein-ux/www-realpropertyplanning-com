@@ -3,8 +3,13 @@ import { Link } from "react-router-dom";
 export default function BackToAFHClub() {
   return (
     <div style={{ textAlign: "center", padding: "48px 24px 64px" }}>
+      {/* Class deliberately NOT named "BackTo…": index.css rule 15 targets
+          [class*="BackTo"] a and forces color #280a0c !important, which is the
+          same colour as this button's background. Naming it that way would
+          paint the label dark-on-dark — the exact bug this fixes. */}
       <Link
         to="/afh-club"
+        className="rpp-afh-return"
         style={{
           display: "inline-flex",
           alignItems: "center",
@@ -23,9 +28,7 @@ export default function BackToAFHClub() {
           borderRadius: 2,
           boxShadow: "inset 0 0 0 1px rgba(201,168,76,0.3), 0 4px 24px rgba(10,22,40,0.18)",
         }}
-        onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#342e28")}
-        onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#280a0c")}
-      >
+              >
         ← Back to AFH Club
       </Link>
     </div>
