@@ -309,27 +309,42 @@ const PAGE_CSS = `
       background-size: auto 100%, cover;
       padding: 24px 20px 190px;
     }
-    .rpp-afh-hero-sub { letter-spacing: 0.3em !important; word-spacing: 0.15em !important; }
-    /* Tighter A-to-F gap on small screens. At phone type sizes the 0.132em gap
-       reads as a space between two separate marks rather than one lockup.
+    /* ── MOBILE LOCKUP ──────────────────────────────────────────────────
+       All three elements — wordmark, subtitle line 2, and the rule — are
+       driven off ONE size expression so their right edges stay flush at every
+       phone width. They previously drifted because the title floored at 34px
+       while the subtitle floored at 11px, so below ~640px they stopped
+       scaling together.
 
-       The rule below MUST move with it: the orange line's width is derived
-       from the wordmark's width, and narrowing this gap narrows the wordmark
-       by exactly the amount removed (0.132 - 0.06 = 0.072em), so the
-       multiplier drops from 5.2 to 5.13. Change one without the other and the
-       line stops lining up with the b of Club. */
-    .rpp-afh-hero h1.rpp-afh-hero-title { gap: 0.06em; }
-    .rpp-afh-hero-rule { width: calc(clamp(34px, 5.3vw, 106px) * 5.13); }
-  }
-  @media (max-width: 480px) {
-    /* Both lines are nowrap, so tracking has to come down or the longer line
-       runs past the edge. */
-    .rpp-afh-hero-sub {
-      font-size: 10px !important;
-      letter-spacing: 0.16em !important;
-      word-spacing: 0.1em !important;
+       The title is also LARGER here than the shared clamp allowed. At a 34px
+       title the wordmark is only ~183px, and a subtitle wide enough to match
+       it would have to shrink to ~9px — too small for this readership. Sizing
+       the title up to 40-56px lets the subtitle sit at 11-15px and still line
+       up.
+
+       If any of these four numbers changes, the others must be re-solved:
+         --afh-t   the one size expression
+         5.38      wordmark width / title size (measured on device)
+         0.2655    subtitle size / title size
+         0.12em    subtitle tracking, which sets that 0.2655
+       ──────────────────────────────────────────────────────────────────── */
+    .rpp-afh-hero { --afh-t: clamp(40px, 11vw, 56px); }
+    .rpp-afh-hero h1.rpp-afh-hero-title {
+      font-size: var(--afh-t) !important;
+      /* Tighter A-to-F gap: at phone sizes 0.132em reads as a space between
+         two separate marks rather than one lockup. */
+      gap: 0.06em;
     }
+    .rpp-afh-hero-sub {
+      font-size: calc(var(--afh-t) * 0.2655) !important;
+      letter-spacing: 0.12em !important;
+      word-spacing: 0.10em !important;
+    }
+    .rpp-afh-hero-rule { width: calc(var(--afh-t) * 5.38); }
   }
+  /* The old 480px override is gone. It pinned the subtitle to a fixed 10px,
+     which broke the proportional relationship above and was the reason line 2
+     ran past the rule on a phone. */
 
   /* Lane cells — 3 across, 2 rows. Was six full-width rows, which made six
      short sentences into a long scroll and forced the eye down the page one
