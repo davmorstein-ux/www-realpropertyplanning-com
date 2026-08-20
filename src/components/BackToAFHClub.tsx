@@ -29,7 +29,7 @@ export default function BackToAFHClub() {
           boxShadow: "inset 0 0 0 1px rgba(201,168,76,0.3), 0 4px 24px rgba(10,22,40,0.18)",
         }}
               >
-        ← Back to AFH Club
+        ❮ Back to AFH Club
       </Link>
     </div>
   );
