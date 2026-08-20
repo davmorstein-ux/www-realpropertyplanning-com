@@ -4470,12 +4470,19 @@ main .rpp-answer-cta {
    text with a tight coloured box around it: unreadable, and not obviously a
    control.
 
+   SPECIFICITY NOTE: the global rule is
+     main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"])
+   Each :not() counts its argument, so that is THREE attribute selectors —
+   (0,3,2). A doubled class here is only (0,2,2) and loses, which is why an
+   earlier attempt at charcoal still rendered maroon. html body + a tripled
+   class is (0,3,4) and wins outright. Do not "simplify" these selectors.
+
    Rather than fight the fill, this makes them genuine pills — real padding, a
    radius, a hit area that clears the 44px touch target, and a visible hover
    and focus state. Doubled class plus !important, placed after the rule above
    so it wins on order as well as specificity. */
-main a.article-resource-btn.article-resource-btn,
-a.article-resource-btn.article-resource-btn {
+html body main a.article-resource-btn.article-resource-btn.article-resource-btn,
+html body a.article-resource-btn.article-resource-btn.article-resource-btn {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -4502,27 +4509,27 @@ a.article-resource-btn.article-resource-btn {
   transition: background-color 0.18s ease, transform 0.18s ease,
     box-shadow 0.18s ease !important;
 }
-main a.article-resource-btn.article-resource-btn:hover,
-a.article-resource-btn.article-resource-btn:hover {
+html body main a.article-resource-btn.article-resource-btn.article-resource-btn:hover,
+html body a.article-resource-btn.article-resource-btn.article-resource-btn:hover {
   background-color: #4a443c !important;
   transform: translateY(-1px) !important;
   box-shadow: 0 4px 12px rgba(39, 36, 33, 0.22) !important;
 }
-main a.article-resource-btn.article-resource-btn:focus-visible {
+html body main a.article-resource-btn.article-resource-btn.article-resource-btn:focus-visible {
   outline: 3px solid #6b1b22 !important;
   outline-offset: 3px !important;
 }
 /* The old hover underline was drawn as a 3px bar across the bottom of the
    text. On a filled pill it reads as a stray line, so it is suppressed. */
-main a.article-resource-btn.article-resource-btn::after,
-a.article-resource-btn.article-resource-btn::after {
+html body main a.article-resource-btn.article-resource-btn.article-resource-btn::after,
+html body a.article-resource-btn.article-resource-btn.article-resource-btn::after {
   display: none !important;
 }
 /* Long labels ("Building Your Trusted Professional Team") were nowrap, which
    pushed a single pill past the width of a phone. */
 @media (max-width: 640px) {
-  main a.article-resource-btn.article-resource-btn,
-  a.article-resource-btn.article-resource-btn {
+  html body main a.article-resource-btn.article-resource-btn.article-resource-btn,
+  html body a.article-resource-btn.article-resource-btn.article-resource-btn {
     white-space: normal !important;
     font-size: 16px !important;
     padding: 11px 18px !important;
