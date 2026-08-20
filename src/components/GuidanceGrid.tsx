@@ -42,7 +42,19 @@ const GuidanceGrid = ({ page }: GuidanceGridProps) => {
                   Naming what's hard often makes it easier to move forward.
                 </p>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
+              {/* A lone card in a two-column grid fills column 1 and leaves
+                  column 2 empty, which reads as left-aligned rather than
+                  deliberate. Five of the eleven sections across these pages
+                  have exactly one item, so this is the common case, not an
+                  edge case. Single card: one centred column, capped so it does
+                  not stretch the full width either. */}
+              <div
+                className={
+                  challenges.length === 1
+                    ? "grid grid-cols-1 gap-4 max-w-2xl mx-auto"
+                    : "grid sm:grid-cols-2 gap-4"
+                }
+              >
                 {challenges.map((c) => (
                   <div
                     key={c.title}
@@ -75,7 +87,13 @@ const GuidanceGrid = ({ page }: GuidanceGridProps) => {
                   Naming what often goes wrong makes it easier to plan well.
                 </p>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div
+                className={
+                  mistakes.length === 1
+                    ? "grid grid-cols-1 gap-4 max-w-2xl mx-auto"
+                    : "grid sm:grid-cols-2 gap-4"
+                }
+              >
                 {mistakes.map((m) => (
                   <div
                     key={m.title}
