@@ -3257,16 +3257,21 @@ a.rpp-return-btn.rpp-return-btn:hover {
   color: #ffffff !important;
   border-color: #d9737c !important;
 }
-/* Something in the build appends a right-pointing chevron to these buttons —
-   it is not in the component markup and not in any stylesheet in this repo, so
-   it is suppressed here rather than chased. A "back" button showing arrows in
+/* SOURCE OF THE RIGHT-POINTING ARROW, now identified: the CTA ARROW block at
+   the bottom of this file draws one with a masked SVG data URI on
+   main a[class*="btn"]::after. "rpp-return-btn" contains the substring "btn",
+   so these buttons were enrolled automatically. It is not a text glyph, which
+   is why searching for arrow characters found nothing.
+
+   That block's selector is (0,3,3) and sits LATER in the file, so a doubled
+   class here loses twice over. html body + a tripled class is (0,3,5). A "back" button showing arrows in
    both directions at once tells the reader nothing.
    content: none AND display: none, because a pseudo-element set by a rule with
    !important needs both to be reliably silenced. */
-main a.rpp-afh-return.rpp-afh-return::after,
-a.rpp-afh-return.rpp-afh-return::after,
-main a.rpp-return-btn.rpp-return-btn::after,
-a.rpp-return-btn.rpp-return-btn::after {
+html body main a.rpp-afh-return.rpp-afh-return.rpp-afh-return::after,
+html body a.rpp-afh-return.rpp-afh-return.rpp-afh-return::after,
+html body main a.rpp-return-btn.rpp-return-btn.rpp-return-btn::after,
+html body a.rpp-return-btn.rpp-return-btn.rpp-return-btn::after {
   content: none !important;
   display: none !important;
 }
@@ -3932,7 +3937,6 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
   letter-spacing: -0.01em !important;
 }
 
-
 /* ============================================================
    Real Property Planning — text contrast, site-wide
    Paste at the BOTTOM of src/index.css.
@@ -3946,7 +3950,6 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
    correcting the palette tokens, so every component using them is
    fixed at once without another round of !important.
    ============================================================ */
-
 
 /* ------------------------------------------------------------
    1. THE ROOT CAUSE — two palette tokens fail at source
@@ -3969,7 +3972,6 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
   --muted-foreground: 220 20% 28%;
 }
 
-
 /* ------------------------------------------------------------
    2. THE EMPTY RULE
 
@@ -3982,23 +3984,34 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
    nearly every "looks light grey" value lands.
    ------------------------------------------------------------ */
 
-[style*="color: #9"], [style*="color:#9"],
-[style*="color: #a"], [style*="color:#a"],
-[style*="color: #A"], [style*="color:#A"],
-[style*="color: #b"], [style*="color:#b"],
-[style*="color: #B"], [style*="color:#B"],
-[style*="color: #c"], [style*="color:#c"],
-[style*="color: #C"], [style*="color:#C"],
-[style*="color: #d"], [style*="color:#d"],
-[style*="color: #D"], [style*="color:#D"] {
-  color: #3D3833 !important;
+[style*="color: #9"],
+[style*="color:#9"],
+[style*="color: #a"],
+[style*="color:#a"],
+[style*="color: #A"],
+[style*="color:#A"],
+[style*="color: #b"],
+[style*="color:#b"],
+[style*="color: #B"],
+[style*="color:#B"],
+[style*="color: #c"],
+[style*="color:#c"],
+[style*="color: #C"],
+[style*="color:#C"],
+[style*="color: #d"],
+[style*="color:#d"],
+[style*="color: #D"],
+[style*="color:#D"] {
+  color: #3d3833 !important;
 }
 
 /* Mid greys — #6x, #7x, #8x. Some of these pass and some do not,
    so they are clamped rather than replaced wholesale. */
-[style*="color: #8"], [style*="color:#8"],
-[style*="color: #7"], [style*="color:#7"] {
-  color: #4A443E !important;
+[style*="color: #8"],
+[style*="color:#8"],
+[style*="color: #7"],
+[style*="color:#7"] {
+  color: #4a443e !important;
 }
 
 /* Do NOT catch inline colors on dark surfaces — light text there
@@ -4010,7 +4023,6 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
   color: revert !important;
 }
 
-
 /* ------------------------------------------------------------
    3. TAILWIND GREY PALETTE — full coverage
 
@@ -4020,12 +4032,27 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
    everywhere on the page.
    ------------------------------------------------------------ */
 
-[class*="text-gray-2"],   [class*="text-gray-3"],   [class*="text-gray-4"],   [class*="text-gray-5"],
-[class*="text-slate-2"],  [class*="text-slate-3"],  [class*="text-slate-4"],  [class*="text-slate-5"],
-[class*="text-zinc-2"],   [class*="text-zinc-3"],   [class*="text-zinc-4"],   [class*="text-zinc-5"],
-[class*="text-stone-2"],  [class*="text-stone-3"],  [class*="text-stone-4"],  [class*="text-stone-5"],
-[class*="text-neutral-2"],[class*="text-neutral-3"],[class*="text-neutral-4"],[class*="text-neutral-5"] {
-  color: #3D3833 !important;
+[class*="text-gray-2"],
+[class*="text-gray-3"],
+[class*="text-gray-4"],
+[class*="text-gray-5"],
+[class*="text-slate-2"],
+[class*="text-slate-3"],
+[class*="text-slate-4"],
+[class*="text-slate-5"],
+[class*="text-zinc-2"],
+[class*="text-zinc-3"],
+[class*="text-zinc-4"],
+[class*="text-zinc-5"],
+[class*="text-stone-2"],
+[class*="text-stone-3"],
+[class*="text-stone-4"],
+[class*="text-stone-5"],
+[class*="text-neutral-2"],
+[class*="text-neutral-3"],
+[class*="text-neutral-4"],
+[class*="text-neutral-5"] {
+  color: #3d3833 !important;
 }
 
 /* On dark surfaces, lift instead of darken. */
@@ -4040,9 +4067,8 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
 [class*="bg-primary"] [class*="text-zinc-"],
 [class*="bg-primary"] [class*="text-neutral-"],
 [class*="bg-foreground"] [class*="text-gray-"] {
-  color: #F3F4F6 !important;
+  color: #f3f4f6 !important;
 }
-
 
 /* ------------------------------------------------------------
    4. OPACITY — the quiet contrast killer
@@ -4055,21 +4081,36 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
    utilities on text elements are both neutralised.
    ------------------------------------------------------------ */
 
-p[class*="opacity-"], span[class*="opacity-"],
-li[class*="opacity-"], h1[class*="opacity-"], h2[class*="opacity-"],
-h3[class*="opacity-"], h4[class*="opacity-"], a[class*="opacity-"],
-p[class*="/50"], p[class*="/60"], p[class*="/70"], p[class*="/80"],
-span[class*="/50"], span[class*="/60"], span[class*="/70"], span[class*="/80"],
-li[class*="/50"], li[class*="/60"], li[class*="/70"], li[class*="/80"] {
+p[class*="opacity-"],
+span[class*="opacity-"],
+li[class*="opacity-"],
+h1[class*="opacity-"],
+h2[class*="opacity-"],
+h3[class*="opacity-"],
+h4[class*="opacity-"],
+a[class*="opacity-"],
+p[class*="/50"],
+p[class*="/60"],
+p[class*="/70"],
+p[class*="/80"],
+span[class*="/50"],
+span[class*="/60"],
+span[class*="/70"],
+span[class*="/80"],
+li[class*="/50"],
+li[class*="/60"],
+li[class*="/70"],
+li[class*="/80"] {
   opacity: 1 !important;
 }
 
 /* Decorative elements keep their opacity — this is text only. */
-img[class*="opacity-"], svg[class*="opacity-"], hr[class*="opacity-"],
+img[class*="opacity-"],
+svg[class*="opacity-"],
+hr[class*="opacity-"],
 [aria-hidden="true"][class*="opacity-"] {
   opacity: revert !important;
 }
-
 
 /* ------------------------------------------------------------
    5. STEPPER / WIZARD — the pattern in your screenshot
@@ -4087,16 +4128,15 @@ img[class*="opacity-"], svg[class*="opacity-"], hr[class*="opacity-"],
 [class*="stepper"] span,
 [class*="wizard"] [class*="text-muted"],
 [aria-current="step"] ~ * {
-  color: #4A443E !important;
+  color: #4a443e !important;
 }
-
 
 /* ------------------------------------------------------------
    6. PLACEHOLDER AND HELPER TEXT
    ------------------------------------------------------------ */
 
 ::placeholder {
-  color: #5B5753 !important;
+  color: #5b5753 !important;
   opacity: 1 !important;
 }
 
@@ -4105,10 +4145,9 @@ small,
 [class*="helper"],
 [class*="hint-text"],
 figcaption {
-  color: #4A443E !important;
+  color: #4a443e !important;
   opacity: 1 !important;
 }
-
 
 /* ------------------------------------------------------------
    7. SAFETY NET
@@ -4117,12 +4156,17 @@ figcaption {
    last so the more specific rules above win where they apply.
    ------------------------------------------------------------ */
 
-main [style*="rgb(15"], main [style*="rgb(16"], main [style*="rgb(17"],
-main [style*="rgb(18"], main [style*="rgb(19"], main [style*="rgb(20"],
-main [style*="rgba(15"], main [style*="rgba(16"], main [style*="rgba(17"] {
-  color: #3D3833 !important;
+main [style*="rgb(15"],
+main [style*="rgb(16"],
+main [style*="rgb(17"],
+main [style*="rgb(18"],
+main [style*="rgb(19"],
+main [style*="rgb(20"],
+main [style*="rgba(15"],
+main [style*="rgba(16"],
+main [style*="rgba(17"] {
+  color: #3d3833 !important;
 }
-
 
 /* ============================================================
    Real Property Planning — font weight, site-wide
@@ -4135,7 +4179,6 @@ main [style*="rgba(15"], main [style*="rgba(16"], main [style*="rgba(17"] {
    For readers with reduced vision this matters as much as the
    colour value does.
    ============================================================ */
-
 
 /* ------------------------------------------------------------
    1. THE RULE THAT WAS FORCING THIN TEXT
@@ -4180,7 +4223,6 @@ main [style*="rgba(15"], main [style*="rgba(16"], main [style*="rgba(17"] {
   font-weight: revert-layer !important;
 }
 
-
 /* ------------------------------------------------------------
    2. BASE WEIGHT
 
@@ -4201,7 +4243,6 @@ body dd,
 body dt {
   font-weight: 500;
 }
-
 
 /* ------------------------------------------------------------
    3. LINKS AND CALLS TO ACTION
@@ -4236,7 +4277,6 @@ span.gold-cta {
   text-shadow: none !important;
 }
 
-
 /* ------------------------------------------------------------
    4. HEADINGS
 
@@ -4244,10 +4284,14 @@ span.gold-cta {
    headings hold up better at 700.
    ------------------------------------------------------------ */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
-
 
 /* ------------------------------------------------------------
    5. NOTHING BELOW 400, ANYWHERE
@@ -4266,7 +4310,6 @@ h1, h2, h3, h4, h5, h6 {
 [style*="font-weight:300"] {
   font-weight: 500 !important;
 }
-
 
 /* ------------------------------------------------------------
    6. CHECK THIS IN index.html
@@ -4316,7 +4359,6 @@ h1, h2, h3, h4, h5, h6 {
    dark section can carry. Section 2 covers the teal band today, so
    the page is correct before the components are updated.
    ============================================================ */
-
 
 /* ------------------------------------------------------------
    1. THE GENERAL FIX
@@ -4378,7 +4420,6 @@ h1, h2, h3, h4, h5, h6 {
   color: revert !important;
 }
 
-
 /* ------------------------------------------------------------
    2. TEAL BANDS — covers the live page before components change
 
@@ -4398,14 +4439,26 @@ h1, h2, h3, h4, h5, h6 {
   --rpp-on-dark: 1;
 }
 
-[class*="bg-teal"] p, [class*="bg-teal"] h1, [class*="bg-teal"] h2,
-[class*="bg-teal"] h3, [class*="bg-teal"] h4, [class*="bg-teal"] li,
+[class*="bg-teal"] p,
+[class*="bg-teal"] h1,
+[class*="bg-teal"] h2,
+[class*="bg-teal"] h3,
+[class*="bg-teal"] h4,
+[class*="bg-teal"] li,
 [class*="bg-teal"] span:not([class*="bg-"]),
-[class*="bg-[#0d9488]"] p, [class*="bg-[#0d9488]"] h1, [class*="bg-[#0d9488]"] h2,
-[class*="bg-[#0d9488]"] h3, [class*="bg-[#0d9488]"] h4, [class*="bg-[#0d9488]"] li,
+[class*="bg-[#0d9488]"] p,
+[class*="bg-[#0d9488]"] h1,
+[class*="bg-[#0d9488]"] h2,
+[class*="bg-[#0d9488]"] h3,
+[class*="bg-[#0d9488]"] h4,
+[class*="bg-[#0d9488]"] li,
 [class*="bg-[#0d9488]"] span:not([class*="bg-"]),
-[class*="bg-[#0f4c4a]"] p, [class*="bg-[#0f4c4a]"] h1, [class*="bg-[#0f4c4a]"] h2,
-[class*="bg-[#0f4c4a]"] h3, [class*="bg-[#0f4c4a]"] h4, [class*="bg-[#0f4c4a]"] li,
+[class*="bg-[#0f4c4a]"] p,
+[class*="bg-[#0f4c4a]"] h1,
+[class*="bg-[#0f4c4a]"] h2,
+[class*="bg-[#0f4c4a]"] h3,
+[class*="bg-[#0f4c4a]"] h4,
+[class*="bg-[#0f4c4a]"] li,
 [class*="bg-[#0f4c4a]"] span:not([class*="bg-"]) {
   color: #ffffff !important;
   opacity: 1 !important;
@@ -4506,7 +4559,9 @@ html body a.article-resource-btn.article-resource-btn.article-resource-btn {
   text-align: center !important;
   text-decoration: none !important;
   box-shadow: 0 1px 2px rgba(39, 36, 33, 0.16) !important;
-  transition: background-color 0.18s ease, transform 0.18s ease,
+  transition:
+    background-color 0.18s ease,
+    transform 0.18s ease,
     box-shadow 0.18s ease !important;
 }
 html body main a.article-resource-btn.article-resource-btn.article-resource-btn:hover,
@@ -4556,7 +4611,6 @@ main .rpp-answer-cta:hover {
   background-color: #501419 !important;
 }
 
-
 /* ------------------------------------------------------------
    IN-CARD LINKS — .gold-cta and .article-resource-btn
 
@@ -4595,7 +4649,7 @@ main .article-resource-btn:hover {
   text-underline-offset: 3px !important;
 }
 
-  /* The toast container renders as <section aria-label="Notifications"> as the
+/* The toast container renders as <section aria-label="Notifications"> as the
    first child of #root. The global `section { padding: 32px }` rule above
    gives it 64px of vertical padding even when empty, which pushed the sticky
    header down the page on every route. It has no visual content of its own,
@@ -4618,8 +4672,6 @@ section:has(> [data-sonner-toaster]) {
    the label being renamed or translated entirely, since it matches on the
    toaster list actually being inside. Between them this should not regress
    again. */
-
-
 
 /* ============================================================
    CANONICAL HERO BAND — overrides the two .rpp-hero-band-text
@@ -4668,7 +4720,6 @@ span.rpp-hero-band-text.rpp-hero-band-text {
   line-height: 1.2 !important;
   letter-spacing: 0.16em !important;
 }
-
 
 /* ============================================================
    MARCHING ANTS — one weight, every button
@@ -4800,7 +4851,6 @@ main .rpp-coc-cta:hover::before {
   }
 }
 
-
 /* ============================================================
    CTA ARROW — one arrow, every button, drawn by CSS
    ============================================================
@@ -4838,8 +4888,10 @@ main .rpp-coc-cta::after {
   margin-left: 9px;
   flex: none;
   background: currentColor;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    right center / 24px 15px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    right center / 24px 15px no-repeat;
   transition: width 0.22s ease;
 }
 main a[class*="btn"]:not([class*="bg-white"]):not([class*="bg-transparent"]):hover::after,
@@ -4892,8 +4944,10 @@ main .rpp-coc-cta:hover::after {
   margin-left: 9px;
   flex: none;
   background: currentColor;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 24px 15px no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    right center / 24px 15px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M1 8h16M11 2l7 6-7 6' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    right center / 24px 15px no-repeat;
   transition: width 0.22s ease;
 }
 .marquee-hover:hover .rpp-funnel-cta::after,
@@ -4924,8 +4978,16 @@ main .rpp-coc-cta:hover::after {
     repeating-linear-gradient(180deg, #ffffff 0 8px, transparent 8px 16px),
     repeating-linear-gradient(90deg, #ffffff 0 8px, transparent 8px 16px),
     repeating-linear-gradient(180deg, #ffffff 0 8px, transparent 8px 16px);
-  background-position: 0 0, 0 0, 0 100%, 100% 0;
-  background-size: 16px 1.5px, 1.5px 16px, 16px 1.5px, 1.5px 16px;
+  background-position:
+    0 0,
+    0 0,
+    0 100%,
+    100% 0;
+  background-size:
+    16px 1.5px,
+    1.5px 16px,
+    16px 1.5px,
+    1.5px 16px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
@@ -4949,8 +5011,6 @@ main .rpp-coc-cta:hover::after {
     animation: none !important;
   }
 }
-
-
 
 /* ============================================================
    COMPONENT ARROWS — layout-stable variant
@@ -4980,7 +5040,9 @@ main .rpp-coc-cta:hover::after {
   width: 23px;
   -webkit-mask-size: 16px 10px;
   mask-size: 16px 10px;
-  transition: -webkit-mask-size 0.22s ease, mask-size 0.22s ease;
+  transition:
+    -webkit-mask-size 0.22s ease,
+    mask-size 0.22s ease;
 }
 .marquee-hover:hover .rpp-funnel-cta::after,
 .rpp-pr-card:hover .rpp-pr-card-cta.rpp-pr-card-cta::after,
@@ -5030,7 +5092,6 @@ main section:has(> h1.rpp-hero-band-text) {
   padding: 0 !important;
   margin: 0 !important;
 }
-  
 
 /* ============================================================
    HERO BAND — COMPACT VARIANT
