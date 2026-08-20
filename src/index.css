@@ -3257,6 +3257,20 @@ a.rpp-return-btn.rpp-return-btn:hover {
   color: #ffffff !important;
   border-color: #d9737c !important;
 }
+/* Something in the build appends a right-pointing chevron to these buttons —
+   it is not in the component markup and not in any stylesheet in this repo, so
+   it is suppressed here rather than chased. A "back" button showing arrows in
+   both directions at once tells the reader nothing.
+   content: none AND display: none, because a pseudo-element set by a rule with
+   !important needs both to be reliably silenced. */
+main a.rpp-afh-return.rpp-afh-return::after,
+a.rpp-afh-return.rpp-afh-return::after,
+main a.rpp-return-btn.rpp-return-btn::after,
+a.rpp-return-btn.rpp-return-btn::after {
+  content: none !important;
+  display: none !important;
+}
+
 main a.rpp-afh-return.rpp-afh-return:focus-visible,
 main a.rpp-return-btn.rpp-return-btn:focus-visible {
   outline: 3px solid #c3525c !important;
@@ -4468,8 +4482,14 @@ a.article-resource-btn.article-resource-btn {
   padding: 12px 22px !important;
   min-height: 44px !important;
   border-radius: 6px !important;
-  border: 1px solid rgba(255, 255, 255, 0.14) !important;
-  background-color: #6b1b22 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  /* CHARCOAL, not the maroon these inherit from the global
+     main a[class*="btn"] rule. There were 13 of these stacked under one
+     heading and, in maroon, they competed with the actual call to action
+     above them. Charcoal keeps them legible and obviously clickable while
+     leaving red to mean "this is the thing to click".
+     The "Back to ..." return buttons deliberately stay maroon. */
+  background-color: #302b26 !important;
   color: #ffffff !important;
   font-family: "DM Sans", system-ui, sans-serif !important;
   font-size: 17px !important;
@@ -4484,12 +4504,12 @@ a.article-resource-btn.article-resource-btn {
 }
 main a.article-resource-btn.article-resource-btn:hover,
 a.article-resource-btn.article-resource-btn:hover {
-  background-color: #8a2530 !important;
+  background-color: #4a443c !important;
   transform: translateY(-1px) !important;
   box-shadow: 0 4px 12px rgba(39, 36, 33, 0.22) !important;
 }
 main a.article-resource-btn.article-resource-btn:focus-visible {
-  outline: 3px solid #c3525c !important;
+  outline: 3px solid #6b1b22 !important;
   outline-offset: 3px !important;
 }
 /* The old hover underline was drawn as a 3px bar across the bottom of the
