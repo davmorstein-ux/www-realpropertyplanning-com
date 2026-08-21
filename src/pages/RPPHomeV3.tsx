@@ -179,7 +179,9 @@ const RPPHomeV3 = () => {
                  zeroed in index.css. */
               padding: "8px 24px 10px",
               boxSizing: "border-box",
-              background: "#1B3A6B",
+              /* Matches HeroBandTitle's new #272F2B. These two are separate
+                 elements that must look identical — change both or neither. */
+              background: "#272F2B",
               /* A 1px rule along the top edge, to give the photograph a clean
                  stop rather than letting it bleed straight into the navy.
 
