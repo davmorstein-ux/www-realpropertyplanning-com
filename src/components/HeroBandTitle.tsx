@@ -189,7 +189,18 @@ const HeroBandTitle = ({
              it up without touching 40 files — and any AFH page added later
              gets it automatically. The test tolerates a locale prefix
              (/es/afh-club, etc.), which path-based i18n produces. */
-          background: isAfhSection ? "#182B19" : "#1B3A6B",
+          /* #272F2B, not the old navy #1B3A6B. Navy was formally retired in
+             July 2026 (see the palette note in index.css) and the bands were
+             the last large element still carrying it. A saturated mid-blue
+             also competed with the four coloured funnel tiles it sits above on
+             the homepage — five saturated colours in a row, no hierarchy.
+
+             This is the site charcoal #302b26 at the same lightness, hue
+             rotated to 150deg at 10% saturation: neutral enough to read as a
+             header rather than a colour, with just enough green to look
+             chosen. Deliberately distinct from the AFH section green #182B19,
+             which is darker and more saturated, so that marker still works. */
+          background: isAfhSection ? "#182B19" : "#272F2B",
           padding: isCompactH1 ? "6px 24px 8px" : isH1 ? "8px 24px 10px" : "6px 24px",
           display: "flex",
           alignItems: "center",
