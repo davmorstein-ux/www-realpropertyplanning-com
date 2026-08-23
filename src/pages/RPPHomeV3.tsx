@@ -6,8 +6,8 @@ import Header from "@/components/Header";
    path every working icon on this site already uses: the file is emitted with
    a content hash and the URL is resolved at build time, so it cannot silently
    go missing. */
-import heroDesktop from "@/assets/hero/rpp-hero-2027.webp";
-import heroMobile from "@/assets/hero/rpp-hero-2027-mobile.webp";
+import heroDesktop from "@/assets/hero/rpp-hero-2028.webp";
+import heroMobile from "@/assets/hero/rpp-hero-2028-mobile.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -100,7 +100,7 @@ const RPPHomeV3 = () => {
                PREVIOUS ARTWORK WAS 2.85:1 (1920x674). The 2026 replacement is
                a much wider band, so the hero is now roughly 290px shorter at
                full width. */
-            height={412}
+            height={340}
             alt={t("hero.imageAlt")}
             /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
                photograph at any width — it stacks beneath it.
