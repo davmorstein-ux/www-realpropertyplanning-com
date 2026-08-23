@@ -67,39 +67,39 @@ const RPPHomeV3 = () => {
         >
           <img
             id="rpp-hero-image"
-            /* rpp-hero-2027: cutout artwork on a flat cream field. The
-               couple, the car and the porch are floated on #F5F2EC — the exact
-               page background — so the left third of the frame is empty field
-               rather than photograph. That column is the tagline's home, and it
-               is why the tagline is overlaid again after previously being
-               stacked: a flat field cannot produce a legibility bug.
+            /* rpp-hero-2028: watercolour of an open door on a stone path,
+               meadow and sunrise. Painted paper, not a cutout — the left
+               ~55% of the frame is open sky and unpainted paper, and that
+               column is the tagline's home.
 
-               1920x420, 4.57:1. Shown at its own ratio, NOT cropped. The
+               1920x340, 5.65:1. Shown at its own ratio, NOT cropped. The
                artwork is the crop — see .rpp-hero-img in index.css, which is
                height: auto / object-fit: contain for exactly this reason.
-               object-fit: cover at the old clamp(200px, 24vw, 340px) trimmed
-               80px at full width and cut the couple's feet.
 
-               Two files, not a srcSet ladder. Desktop carries the cream
-               tagline column; the mobile file is a tighter 3.05:1 crop on the
-               car and couple with no column, because below 900px the tagline
-               stacks beneath the image instead of sitting on it.
-               71 KB and 65 KB. */
+               The field was colour-corrected to #F5F2EC with a luminance-
+               masked delta so the paper matches the page while the sunrise
+               keeps its warmth. Samples read #F4F1E9 to #F7F1EA. Edge sweep
+               is clean on all four sides — no white fringe, no bottom notch.
+
+               Two files, not a srcSet ladder. Desktop carries the paper
+               column; the mobile file is a tighter 2.79:1 crop centred on the
+               door with no column, because below 900px the tagline stacks
+               beneath the image instead of sitting on it.
+               102 KB and 76 KB. */
             src={heroDesktop}
             srcSet={`${heroMobile} 900w, ${heroDesktop} 1920w`}
             sizes="100vw"
             width={1920}
             /* Must match the file. The intrinsic ratio is what reserves
                space before the image loads; a stale value here causes the
-               page to jump as it arrives. 1920x383 is the artwork's own
-               5.01:1 shape — the stacked layout shows the whole frame, so
-               image height is decided entirely by the file. This number has
-               been wrong after an art swap more than once; change it in the
-               same commit as the images, every time.
+               page to jump as it arrives. 1920x340 is the artwork's own
+               5.65:1 shape. This number has been wrong after an art swap
+               more than once; change it in the same commit as the images,
+               every time.
 
-               PREVIOUS ARTWORK WAS 2.85:1 (1920x674). The 2026 replacement is
-               a much wider band, so the hero is now roughly 290px shorter at
-               full width. */
+               PREVIOUS ARTWORK WAS 4.66:1 (1920x412). The 2028 replacement
+               is a shorter band, so the hero is about 72px shorter at full
+               width. */
             height={340}
             alt={t("hero.imageAlt")}
             /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
@@ -143,19 +143,29 @@ const RPPHomeV3 = () => {
           <div
             className="rpp-hero-scrim"
             style={{
-              /* OVERLAY, deliberately. The warning in index.css about text on
-                 the photograph does not apply to rpp-hero-2027: the left third
-                 of that artwork is a FLAT #F5F2EC field, standard deviation
-                 0.0, the same value as the page background. Charcoal type on
-                 it measures 12.3:1 and cannot drift with the crop, because
-                 every pixel in the column is identical at every height. There
-                 is no wash to tune and nothing to mistune.
+              /* OVERLAY, deliberately — but the justification changed with
+                 rpp-hero-2028 and the old one no longer applies. That
+                 artwork is NOT a flat field; it is painted paper with real
+                 texture. The reason overlay still works is measured, not
+                 structural: across the rows this block occupies, #2E5368
+                 holds AAA out to 59.8% of frame width, and the box ends at
+                 47.95%.
 
-                 IF THE ARTWORK IS EVER REPLACED WITH A PHOTOGRAPHIC HERO,
-                 this stops being true and the navy band must come back.
+                 top: 6%, NOT 20%. At 20% the block ran to ~76% of band
+                 height and line three sat 5px above the grass at 4.69:1.
+                 The clean column ends at 64%. At 6% the block ends at 48%
+                 and all three lines measure 7.18-7.25:1 on the live render.
+                 Anchor to the top; do not centre vertically.
+
+                 maxWidth stays at 43.75%. Narrowing it was considered and is
+                 unnecessary: the safe zone reaches 59.8%, which is also the
+                 headroom the longer locales need.
+
+                 IF THE ARTWORK IS REPLACED, RE-MEASURE both numbers before
+                 assuming the overlay still clears.
 
                  Below 900px index.css returns this to static flow on cream:
-                 the mobile file is a tighter crop with no cream column, and
+                 the mobile file is a tighter crop with no paper column, and
                  the image is too short there to hold four lines. */
               position: "absolute",
               left: "4.2%",
