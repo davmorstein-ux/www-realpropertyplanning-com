@@ -7,7 +7,7 @@ const resources = [
     title: "Executor's 10-Step Checklist",
     href: "/resources/washington-executors-10-step-checklist",
     icon: ClipboardCheck,
-    accent: "#D97706",
+    accent: "#8A4214",
   },
   {
     title: "How Probate Real Estate Works",
@@ -25,7 +25,7 @@ const resources = [
     title: "What to Do With an Inherited House",
     href: "/guides/inherited-house-washington",
     icon: KeyRound,
-    accent: "#5d2f74",
+    accent: "#662D56",
   },
 ];
 
