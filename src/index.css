@@ -3732,11 +3732,10 @@ main #rpp-tagline .rpp-tagline-line-v2 {
    Below 640px the cap is removed and the whole frame shows: at phone width a
    fixed height would have to crop the sides, which is exactly the mistake the
    stacked layout was built to avoid. */
-/* NO CROP. The asset IS the crop: rpp-hero-2027 is 1920x420, composed with
-   the tagline's cream column built into the frame. The previous rule was
-   height: clamp(200px, 24vw, 340px) with object-fit: cover, which at 1920px
-   trimmed 80px — 33 top, 46 bottom at object-position center 42% — and cut
-   the couple's feet off the bottom of the artwork.
+/* NO CROP. The asset IS the crop: rpp-hero-2028 is 1920x340, a watercolour
+   composed with the tagline's paper column built into the frame. An earlier
+   rule was height: clamp(200px, 24vw, 340px) with object-fit: cover, which
+   at 1920px trimmed the artwork and cut content off the bottom.
 
    Deciding the crop in the image rather than in CSS also removes the old
    problem noted below: cover crops differently at every viewport width, so
