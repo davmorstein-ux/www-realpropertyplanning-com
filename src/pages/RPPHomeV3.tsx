@@ -24,13 +24,13 @@ import { formatCurrency } from "@/lib/careTypes";
 import { CARE_CALCULATORS, careTypeFor } from "@/lib/careCalculators";
 
 const tileMeta = [
-  { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#D97706", imgSrc: tilePlanning },
+  { key: "planAhead", href: "/planning-before-a-crisis", bgColor: "#8A4214", imgSrc: tilePlanning },
   { key: "helpingParent", href: "/helping-an-aging-parent", bgColor: "#246044", imgSrc: tileHelping },
   { key: "handlingEstate", href: "/estate-probate-inherited-property", bgColor: "#25597e", imgSrc: tileEstate },
   {
     key: "needProfessional",
     href: "/building-your-trusted-professional-team",
-    bgColor: "#5d2f74",
+    bgColor: "#662D56",
     imgSrc: tileProfessionals,
   },
 ] as const;
@@ -331,7 +331,12 @@ const RPPHomeV3 = () => {
                         <div
                           style={{
                             backgroundColor: bgColor,
-                            padding: "1.1rem 1.25rem",
+                            /* WAS 1.1rem vertical. Two lines of 20px at 1.25 line-height is
+                               50px; 1.1rem a side added 35px on top, so a third of
+                               the band was empty and the 70px minHeight below never
+                               applied. 0.7rem lands a two-line label in a ~72px
+                               band, still clearing the floor for one-line locales. */
+                            padding: "0.7rem 1.25rem",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "space-between",
