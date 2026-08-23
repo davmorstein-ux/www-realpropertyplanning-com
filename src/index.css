@@ -3646,21 +3646,34 @@ main #rpp-tagline {
   margin-bottom: 0 !important;
 }
 main #rpp-tagline .rpp-tagline-line-v2 {
-  font-size: clamp(32px, 4.5vw, 46px) !important;
-  line-height: 1.12 !important;
-  color: #ffffff !important;
-  font-family: "DM Sans", system-ui, sans-serif !important;
-  font-style: normal !important;
-  /* 500, not 700. The band weight is right for a page TITLE — "Executors,
-     Powers of Attorney & Trustees" is a label, and bold reads as authoritative
-     at that length. The homepage tagline is a full sentence across two lines,
-     and 700 at 46px puts so much ink on screen that it reads as heavy rather
-     than confident. 500 keeps the same size and presence with far less weight.
+  /* IBM PLEX MONO, not DM Sans — the only element on the site that is not
+     DM Sans, and deliberately so. The hero tagline is the one place a
+     typewriter face earns its keep: the subject matter is typed documents
+     (deeds, wills, probate filings, appraisals) and the artwork behind it is
+     a vintage car. Plex Mono is the IBM Selectric lineage, so the character
+     is authentic rather than costume, and unlike Courier it ships a real
+     600 weight — Courier's thin strokes fail for low-vision readers at
+     display size. Loaded in index.html at 600 only. Do not spread it to any
+     other element.
 
-     Letter-spacing opens slightly too: DM Sans tightens optically as weight
-     drops, and a touch of tracking keeps the line from feeling cramped. */
-  font-weight: 500 !important;
-  letter-spacing: 0.01em !important;
+     CHARCOAL #272F2B, not white. The tagline now sits on the artwork's flat
+     cream column, not in a navy band. This rule's !important beats the
+     component, so it must change in step with RPPHomeV3.tsx — white here
+     would be 1.05:1 on cream and the tagline would disappear entirely.
+     Charcoal on #F5F2EC measures 12.3:1.
+
+     Monospace runs about 24% wider than DM Sans at the same size, so the
+     ceiling is 50px rather than 46px but the two translation lines wrap to
+     roughly four inside the 34% column. Line breaks vary by language; that
+     is fine, the column is what is fixed. Negative tracking because mono
+     reads loose at display size. */
+  font-size: clamp(20px, 2.6vw, 50px) !important;
+  line-height: 1.28 !important;
+  color: #272F2B !important;
+  font-family: "IBM Plex Mono", ui-monospace, monospace !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.015em !important;
 }
 
 /* HERO HEIGHT IS CAPPED, NOT LEFT TO THE WINDOW.
@@ -3682,15 +3695,43 @@ main #rpp-tagline .rpp-tagline-line-v2 {
    Below 640px the cap is removed and the whole frame shows: at phone width a
    fixed height would have to crop the sides, which is exactly the mistake the
    stacked layout was built to avoid. */
+/* NO CROP. The asset IS the crop: rpp-hero-2027 is 1920x420, composed with
+   the tagline's cream column built into the frame. The previous rule was
+   height: clamp(200px, 24vw, 340px) with object-fit: cover, which at 1920px
+   trimmed 80px — 33 top, 46 bottom at object-position center 42% — and cut
+   the couple's feet off the bottom of the artwork.
+
+   Deciding the crop in the image rather than in CSS also removes the old
+   problem noted below: cover crops differently at every viewport width, so
+   anything positioned over the picture lands somewhere different on every
+   screen. At height: auto the frame is identical at every width and the
+   tagline column is always exactly where it was composed to be. */
 .rpp-hero-img {
-  height: clamp(200px, 24vw, 340px);
-  object-fit: cover;
-  object-position: center 42%;
+  height: auto;
+  object-fit: contain;
 }
-@media (max-width: 639px) {
-  .rpp-hero-img {
-    height: auto;
-    object-fit: contain;
+
+/* Below 900px the overlay stops and the tagline stacks beneath the image on
+   cream — no navy band, just the page background continuing.
+
+   Two reasons, both hard: the mobile file is a tighter crop with no cream
+   column to sit on, and at phone width the image is only ~125px tall, which
+   cannot hold four lines of type at any readable size.
+
+   900px, not 640px. The breakpoint is set by when the tagline column stops
+   being wide enough for the type, not by any device boundary. */
+@media (max-width: 900px) {
+  main .rpp-hero-figure > div.rpp-hero-scrim {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    max-width: 100% !important;
+    padding: 20px 24px 26px !important;
+    background: #F5F2EC !important;
+    align-items: center !important;
+  }
+  main #rpp-tagline {
+    text-align: center !important;
   }
 }
 
