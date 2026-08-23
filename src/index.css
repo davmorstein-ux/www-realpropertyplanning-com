@@ -3659,11 +3659,11 @@ main #rpp-tagline .rpp-tagline-line-v2 {
      display size. Loaded in index.html at 600 only. Do not spread it to any
      other element.
 
-     CHARCOAL #272F2B, not white. The tagline now sits on the artwork's flat
-     cream column, not in a navy band. This rule's !important beats the
-     component, so it must change in step with RPPHomeV3.tsx — white here
-     would be 1.05:1 on cream and the tagline would disappear entirely.
-     Charcoal on #F5F2EC measures 12.3:1.
+     DARK, not white. The tagline now sits on the artwork's flat cream column,
+     not in a navy band. This rule's !important beats the component, so it must
+     change in step with RPPHomeV3.tsx — white here would be 1.05:1 on cream
+     and the tagline would disappear entirely. See the colour note below for
+     the current value.
 
      Monospace runs about 24% wider than DM Sans at the same size, so the
      ceiling is 50px rather than 46px but the two translation lines wrap to
@@ -3672,7 +3672,22 @@ main #rpp-tagline .rpp-tagline-line-v2 {
      reads loose at display size. */
   font-size: clamp(20px, 2.6vw, 50px) !important;
   line-height: 1.28 !important;
-  color: #272F2B !important;
+  /* DENIM #2E5368, sampled from the man's jeans in rpp-hero-2027 and taken one
+     step darker. The literal sample (#385A72) measures 6.54:1 on the cream
+     field — AA, but short of AAA, which is not good enough for the site's most
+     important sentence given the audience. #2E5368 reads as the same colour
+     and clears AAA at 7.36:1.
+
+     WAS #272F2B, the old band charcoal. With the funnel heading below it at
+     near-black #272421, two large dark type blocks stacked and neither
+     signalled what kind of text it was. The tagline is the brand voice; the
+     heading is wayfinding. Pulling the tagline's colour out of the artwork
+     ties the type to the picture and leaves the heading as neutral utility.
+
+     Cool against a warm cream, so it separates from the heading by temperature
+     as well as hue. If the hero artwork is ever replaced, RESAMPLE — this
+     colour is only justified while those jeans are in the frame. */
+  color: #2E5368 !important;
   /* COURIER PRIME 700, replacing IBM Plex Mono 600. Plex read as a code
      editor; Courier reads as a typed document, which is nearer the subject
      matter — deeds, wills, probate filings. Courier Prime specifically, NOT
