@@ -159,7 +159,7 @@ const RPPHomeV3 = () => {
                  the image is too short there to hold four lines. */
               position: "absolute",
               left: "4.2%",
-              top: "20%",
+              top: "6%",
               maxWidth: "43.75%",
               display: "flex",
               flexDirection: "column",
