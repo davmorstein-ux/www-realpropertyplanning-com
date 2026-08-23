@@ -3673,10 +3673,23 @@ main #rpp-tagline .rpp-tagline-line-v2 {
   font-size: clamp(20px, 2.6vw, 50px) !important;
   line-height: 1.28 !important;
   color: #272F2B !important;
-  font-family: "IBM Plex Mono", ui-monospace, monospace !important;
+  /* COURIER PRIME 700, replacing IBM Plex Mono 600. Plex read as a code
+     editor; Courier reads as a typed document, which is nearer the subject
+     matter — deeds, wills, probate filings. Courier Prime specifically, NOT
+     Courier New: New has no true bold on every platform and its regular
+     weight covers only 4.75% ink at this size, too thin to read comfortably
+     for an older audience. Prime Bold measures 6.86%, effectively identical
+     to the Plex 600 it replaces, so nothing about legibility regressed.
+
+     700, not 600. Courier Prime ships 400 and 700 only; 600 rounds DOWN to
+     the thin regular. Loaded in index.html at 700 alone. */
+  font-family: "Courier Prime", "Courier New", Courier, monospace !important;
   font-style: normal !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.015em !important;
+  font-weight: 700 !important;
+  /* -0.02em, slightly tighter than Plex's -0.015em: Courier's letterforms sit
+     looser on the monospace grid. Brings the longest line to 812px inside the
+     artwork's 856px cream column, so the tagline still wraps to three. */
+  letter-spacing: -0.02em !important;
 }
 
 /* HERO HEIGHT IS CAPPED, NOT LEFT TO THE WINDOW.
