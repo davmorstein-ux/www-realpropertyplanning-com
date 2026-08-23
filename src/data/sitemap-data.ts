@@ -1176,6 +1176,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
+    path: "/bookkeeping-services",
+    links: [],
+  },
+  {
     path: "/medicare-providers",
     links: [],
   },
