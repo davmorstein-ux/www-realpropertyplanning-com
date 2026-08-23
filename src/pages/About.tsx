@@ -16,18 +16,21 @@ import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
    photography. Colours and destinations are copied from there deliberately —
    if the homepage tiles change, change these to match.
 
-   ACCESSIBILITY: white on the orange (#D97706) measures 3.19:1. That passes
-   WCAG AA only under the LARGE-text threshold (3:1), not the normal-text one
-   (4.5:1). The labels must therefore stay bold at text-xl or larger. Do not
-   reduce the label size without darkening the orange.
+   ACCESSIBILITY: all four clear AAA for white text. Burnt umber #8A4214 is
+   7.32:1, green #246044 7.42:1, blue #25597E 7.48:1, plum #662D56 10.12:1.
+   The previous orange #D97706 measured 3.19:1 — AA under the large-text
+   threshold only — and sat at 0.95 saturation against 0.42-0.55 for its three
+   neighbours, which is why it shouted. The previous violet #5D2F74 cleared
+   contrast fine but had no anchor anywhere else in the palette. Keep any
+   replacement at or above 7:1 and inside the 0.4-0.75 saturation band.
 
    Labels are hardcoded English; the homepage equivalents run through i18next,
    so these need translation keys before the non-English locales are correct. */
 const nextSteps = [
-  { label: "I Want to Plan Ahead", href: "/planning-before-a-crisis", bgColor: "#D97706" },
+  { label: "I Want to Plan Ahead", href: "/planning-before-a-crisis", bgColor: "#8A4214" },
   { label: "I'm Helping an Aging Parent", href: "/helping-an-aging-parent", bgColor: "#246044" },
   { label: "I'm Handling an Estate", href: "/estate-probate-inherited-property", bgColor: "#25597e" },
-  { label: "I Need a Professional", href: "/building-your-trusted-professional-team", bgColor: "#5d2f74" },
+  { label: "I Need a Professional", href: "/building-your-trusted-professional-team", bgColor: "#662D56" },
 ];
 
 const About = () => {
