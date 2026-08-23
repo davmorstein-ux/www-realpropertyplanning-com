@@ -159,6 +159,7 @@ const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
 const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
 const GrayDivorce = lazy(() => import("./pages/GrayDivorce"));
 const GreyDivorce = lazy(() => import("./pages/GreyDivorce"));
+const BookkeepingServices = lazy(() => import("./pages/BookkeepingServices"));
 const MedicareProviders = lazy(() => import("./pages/MedicareProviders"));
 const LegalPlansIdentityProtection = lazy(() => import("./pages/LegalPlansIdentityProtection"));
 const TitleAndEscrow = lazy(() => import("./pages/TitleAndEscrow"));
@@ -684,6 +685,7 @@ const App = () => (
           <Route path="/power-of-attorney" element={<PowerOfAttorney />} />
           <Route path="/gray-divorce" element={<GrayDivorce />} />
           <Route path="/grey-divorce" element={<GreyDivorce />} />
+          <Route path="/bookkeeping-services" element={<BookkeepingServices />} />
           <Route path="/medicare-providers" element={<MedicareProviders />} />
           <Route path="/legal-plans-identity-protection" element={<LegalPlansIdentityProtection />} />
           <Route path="/title-and-escrow" element={<TitleAndEscrow />} />
