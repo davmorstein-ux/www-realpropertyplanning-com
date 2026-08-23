@@ -3649,44 +3649,50 @@ main #rpp-tagline {
   margin-bottom: 0 !important;
 }
 main #rpp-tagline .rpp-tagline-line-v2 {
-  /* IBM PLEX MONO, not DM Sans — the only element on the site that is not
-     DM Sans, and deliberately so. The hero tagline is the one place a
-     typewriter face earns its keep: the subject matter is typed documents
-     (deeds, wills, probate filings, appraisals) and the artwork behind it is
-     a vintage car. Plex Mono is the IBM Selectric lineage, so the character
-     is authentic rather than costume, and unlike Courier it ships a real
-     600 weight — Courier's thin strokes fail for low-vision readers at
-     display size. Loaded in index.html at 600 only. Do not spread it to any
-     other element.
+  /* MONOSPACE, not DM Sans — the only element on the site that is not DM
+     Sans, and deliberately so. The hero tagline is the one place a typewriter
+     face earns its keep: the subject matter is typed documents (deeds, wills,
+     probate filings, appraisals). The family is Courier Prime 700; see the
+     font-family note below for why, and do not spread it to any other
+     element.
 
-     DARK, not white. The tagline now sits on the artwork's flat cream column,
-     not in a navy band. This rule's !important beats the component, so it must
-     change in step with RPPHomeV3.tsx — white here would be 1.05:1 on cream
-     and the tagline would disappear entirely. See the colour note below for
-     the current value.
+     This paragraph previously argued for IBM Plex Mono 600 while the
+     font-family twelve lines down already said Courier Prime, and cited a
+     vintage car that is no longer in the artwork. Both sent a debugging
+     session down the wrong path. If you change a value, change these words.
+
+     DARK, not white. The tagline sits on the artwork's paper field, not in a
+     navy band. This rule's !important beats the component, so it must change
+     in step with RPPHomeV3.tsx — white here would be 1.05:1 on cream and the
+     tagline would disappear entirely. See the colour note below.
 
      Monospace runs about 24% wider than DM Sans at the same size, so the
-     ceiling is 50px rather than 46px but the two translation lines wrap to
-     roughly four inside the 34% column. Line breaks vary by language; that
-     is fine, the column is what is fixed. Negative tracking because mono
-     reads loose at display size. */
+     ceiling is 50px rather than 46px. English wraps to three lines inside the
+     43.75% column; translations run to about four. Line breaks vary by
+     language; that is fine, the column is what is fixed. Negative tracking
+     because mono reads loose at display size. */
   font-size: clamp(20px, 2.6vw, 50px) !important;
   line-height: 1.28 !important;
-  /* DENIM #2E5368, sampled from the man's jeans in rpp-hero-2027 and taken one
-     step darker. The literal sample (#385A72) measures 6.54:1 on the cream
-     field — AA, but short of AAA, which is not good enough for the site's most
-     important sentence given the audience. #2E5368 reads as the same colour
-     and clears AAA at 7.36:1.
+  /* DENIM #2E5368. Originally sampled from the jeans in rpp-hero-2027; that
+     artwork is gone, and the colour was re-justified rather than resampled.
+     It measures 7.18:1 worst-case on rpp-hero-2028's paper — AAA — and
+     nothing in the picture is needed to defend it.
+
+     Resampling was tried and rejected. The mountains are not the cool
+     blue-grey they appear at a glance: the darkest 2% averages #4D553C,
+     mossy green, which is 5.36:1 and must be darkened to about #383E2C to
+     clear AAA — by which point the hue is gone and it reads as off-black.
+     The door's red (#7B2419) is worse: 6.86:1, it steals focus from the one
+     saturated mark in the frame, and dark reds are the classic failure case
+     for red-green colour deficiency in an older readership.
 
      WAS #272F2B, the old band charcoal. With the funnel heading below it at
      near-black #272421, two large dark type blocks stacked and neither
      signalled what kind of text it was. The tagline is the brand voice; the
-     heading is wayfinding. Pulling the tagline's colour out of the artwork
-     ties the type to the picture and leaves the heading as neutral utility.
+     heading is wayfinding.
 
-     Cool against a warm cream, so it separates from the heading by temperature
-     as well as hue. If the hero artwork is ever replaced, RESAMPLE — this
-     colour is only justified while those jeans are in the frame. */
+     Cool against a warm cream, so it separates from the heading by
+     temperature as well as hue. */
   color: #2E5368 !important;
   /* COURIER PRIME 700, replacing IBM Plex Mono 600. Plex read as a code
      editor; Courier reads as a typed document, which is nearer the subject
