@@ -444,7 +444,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
           <Section heading="Senior Housing & Care" cards={housing} bg="bg-background" color="#25597e" />
         </div>
         <div id="property-transition-support" className="scroll-mt-20">
-          <Section heading="Property & Transition Support" cards={property} bg="bg-secondary" color="#5d2f74" />
+          <Section heading="Property & Transition Support" cards={property} bg="bg-secondary" color="#662D56" />
         </div>
 
         {/* Closing CTA */}
