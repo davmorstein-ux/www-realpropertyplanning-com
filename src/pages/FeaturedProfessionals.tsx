@@ -26,6 +26,11 @@ import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-wes
 import heidiPhoto from "@/assets/heidi-bolton-medicare-advisor-spears-agency.webp";
 import jrGillespiePhoto from "@/assets/jr-gillespie-medicare-advisor-allstar-financial.webp";
 import anthonyUpchurchPhoto from "@/assets/providers/anthony-upchurch-legal-plans-legalshield.webp";
+/* nicoleJohnsonPhoto, NOT nicolePhoto — that name is already taken above by
+   Nicole Amico Kane at Aging Wisdom. Two different Nicoles are listed on this
+   page; keep the surnames in the variable names so nobody wires the wrong
+   photo to the wrong person. */
+import nicoleJohnsonPhoto from "@/assets/providers/nicole-guzman-johnson-bookkeeper-books-on-the-rock.webp";
 
 const jennipherPhoto = jennipherPhotoAsset.url;
 const nicolePhoto = nicolePhotoAsset.url;
@@ -287,6 +292,23 @@ const groups: CategoryGroup[] = [
         specialty: "Tax planning, estate and trust taxation, and financial strategy for individuals and families.",
         photo: purpleGroupPhoto,
         href: "/for-cpas",
+      },
+    ],
+  },
+  /* Bookkeeping is its own category, deliberately. A bookkeeper is not a CPA —
+     different work, different credential — and folding one into a group headed
+     "CPAs & Tax Planning" would misstate a professional designation on a page
+     whose whole purpose is accurate attribution. */
+  {
+    category: "Bookkeeping",
+    professionals: [
+      {
+        name: "Nicole Guzman Johnson",
+        role: "Owner, Certified QuickBooks ProAdvisor",
+        company: "Books on The Rock, LLC",
+        specialty: "Bookkeeping and QuickBooks Online support for small- and medium-sized business owners. Hablo español.",
+        photo: nicoleJohnsonPhoto,
+        href: "/bookkeeping-services",
       },
     ],
   },
