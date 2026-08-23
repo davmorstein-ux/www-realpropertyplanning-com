@@ -251,7 +251,11 @@ const RPPHomeV3 = () => {
         {/* ── Funnel Tiles ─────────────────────────────────────────── */}
         <section id="rpp-start-here" style={{ backgroundColor: "#f5f2ec", padding: "2.5rem 0 4rem" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
+            {/* 2rem, was 0.5rem. With the global h1-h4 margin-bottom of
+                0.4rem that left roughly 14px between a 56px heading and the
+                tile tops, so the heading read as a label stuck to the tiles
+                rather than one introducing them. */}
+            <div style={{ textAlign: "center", marginBottom: "2rem" }}>
               <h2
                 className="rpp-funnel-heading"
                 style={{
@@ -364,8 +368,13 @@ const RPPHomeV3 = () => {
     text-transform: uppercase;
   }
 
+  /* WAS a fixed 2.25rem, which is why this heading read as weak: it stayed
+     36px on a 1920px monitor while everything around it scaled. index.css
+     carries a clamp for the same doubled selector, but this block is later in
+     document order at equal specificity, so THIS value won and the clamp never
+     applied. Both now carry the same clamp — change them together or neither. */
   .rpp-funnel-heading.rpp-funnel-heading {
-    font-size: 2.25rem !important;
+    font-size: clamp(2.25rem, 3.2vw, 3.5rem) !important;
   }
 
               /* Cost of Care tile — three columns on desktop: heading+CTA on
