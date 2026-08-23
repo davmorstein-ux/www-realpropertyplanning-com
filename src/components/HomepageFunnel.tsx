@@ -10,7 +10,7 @@ const tiles = [
     imgAlt: "Older couple reviewing an estate plan together at home",
     title: "I Want to Plan Ahead",
     href: "/planning-before-a-crisis",
-    bgColor: "#D97706", // dark orange
+    bgColor: "#8A4214", // dark orange
   },
   {
     imgSrc: tileHelping,
@@ -31,7 +31,7 @@ const tiles = [
     imgAlt: "Man at a laptop browsing trusted professional resources",
     title: "I Need a Professional",
     href: "/building-your-trusted-professional-team",
-    bgColor: "#5d2f74", // plum
+    bgColor: "#662D56", // plum
   },
 ];
 
@@ -163,7 +163,7 @@ const HomepageFunnel = () => (
               <div
                 style={{
                   backgroundColor: bgColor,
-                  padding: "1.1rem 1.25rem",
+                  padding: "0.7rem 1.25rem",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
