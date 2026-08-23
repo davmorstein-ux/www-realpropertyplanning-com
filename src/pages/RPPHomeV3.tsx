@@ -100,7 +100,7 @@ const RPPHomeV3 = () => {
                PREVIOUS ARTWORK WAS 2.85:1 (1920x674). The 2026 replacement is
                a much wider band, so the hero is now roughly 290px shorter at
                full width. */
-            height={420}
+            height={340}
             alt={t("hero.imageAlt")}
             /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
                photograph at any width — it stacks beneath it.
@@ -160,7 +160,7 @@ const RPPHomeV3 = () => {
               position: "absolute",
               left: "4.2%",
               top: "20%",
-              maxWidth: "34%",
+              maxWidth: "46%",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
