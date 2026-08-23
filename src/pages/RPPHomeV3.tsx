@@ -6,8 +6,8 @@ import Header from "@/components/Header";
    path every working icon on this site already uses: the file is emitted with
    a content hash and the URL is resolved at build time, so it cannot silently
    go missing. */
-import heroDesktop from "@/assets/hero/rpp-hero-2026.webp";
-import heroMobile from "@/assets/hero/rpp-hero-2026-mobile.webp";
+import heroDesktop from "@/assets/hero/rpp-hero-2027.webp";
+import heroMobile from "@/assets/hero/rpp-hero-2027-mobile.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -60,27 +60,31 @@ const RPPHomeV3 = () => {
         <div
           className="rpp-hero-figure"
           style={{
+            position: "relative",
             width: "100%",
             overflow: "hidden",
           }}
         >
           <img
             id="rpp-hero-image"
-            /* rpp-hero-2026: corrected artwork, third revision. Two defects
-               were fixed across successive versions — a ghosted duplicate of
-               the PLANNING wordmark on the truck door, and a mover missing a
-               forearm. The truck tagline also settled on "Life's Next
-               Transitions", matching the yard sign.
+            /* rpp-hero-2027: cutout artwork on a flat cream field. The
+               couple, the car and the porch are floated on #F5F2EC — the exact
+               page background — so the left third of the frame is empty field
+               rather than photograph. That column is the tagline's home, and it
+               is why the tagline is overlaid again after previously being
+               stacked: a flat field cannot produce a legibility bug.
 
-               5.01:1, used at the artwork's own ratio rather than cropped.
-               Cropping this composition loses either the couple at the left or
-               the sold sign at the right, and both are doing work: the couple
-               is who the site is for, the sign is the outcome.
+               1920x420, 4.57:1. Shown at its own ratio, NOT cropped. The
+               artwork is the crop — see .rpp-hero-img in index.css, which is
+               height: auto / object-fit: contain for exactly this reason.
+               object-fit: cover at the old clamp(200px, 24vw, 340px) trimmed
+               80px at full width and cut the couple's feet.
 
-               Two files, not a srcSet ladder. On desktop the image is a
-               background the tagline sits over; on mobile it is shown WHOLE
-               above the tagline, so the phone file only needs phone width.
-               2.5 MB PNG became 221 KB and 68 KB. */
+               Two files, not a srcSet ladder. Desktop carries the cream
+               tagline column; the mobile file is a tighter 3.05:1 crop on the
+               car and couple with no column, because below 900px the tagline
+               stacks beneath the image instead of sitting on it.
+               71 KB and 65 KB. */
             src={heroDesktop}
             srcSet={`${heroMobile} 900w, ${heroDesktop} 1920w`}
             sizes="100vw"
@@ -96,7 +100,7 @@ const RPPHomeV3 = () => {
                PREVIOUS ARTWORK WAS 2.85:1 (1920x674). The 2026 replacement is
                a much wider band, so the hero is now roughly 290px shorter at
                full width. */
-            height={383}
+            height={420}
             alt={t("hero.imageAlt")}
             /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
                photograph at any width — it stacks beneath it.
@@ -139,68 +143,35 @@ const RPPHomeV3 = () => {
           <div
             className="rpp-hero-scrim"
             style={{
+              /* OVERLAY, deliberately. The warning in index.css about text on
+                 the photograph does not apply to rpp-hero-2027: the left third
+                 of that artwork is a FLAT #F5F2EC field, standard deviation
+                 0.0, the same value as the page background. Charcoal type on
+                 it measures 12.3:1 and cannot drift with the crop, because
+                 every pixel in the column is identical at every height. There
+                 is no wash to tune and nothing to mistune.
+
+                 IF THE ARTWORK IS EVER REPLACED WITH A PHOTOGRAPHIC HERO,
+                 this stops being true and the navy band must come back.
+
+                 Below 900px index.css returns this to static flow on cream:
+                 the mobile file is a tighter crop with no cream column, and
+                 the image is too short there to hold four lines. */
+              position: "absolute",
+              left: "4.2%",
+              top: "20%",
+              maxWidth: "34%",
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              /* NAVY BAND at HeroBandTitle's exact padding — the treatment
-                 every other page opens with. The homepage used to be the one
-                 exception: a cream band with navy text.
-
-                 It also does what cream could not. Cream-on-cream made it look
-                 like the photograph had simply stopped; a solid navy rule
-                 reads as a deliberate divide between the image and the funnel
-                 tiles below.
-
-                 This band carries TWO lines where every other carries one, so
-                 it cannot be exactly 77px tall. The type size in index.css is
-                 pulled down to close that gap — change the two together. */
-              /* Tighter than HeroBandTitle's 12/24/14. That padding is
-                 balanced for ONE line of type; with two lines the same values
-                 read as too much air above and below, because the block in the
-                 middle is twice as tall. Trimming to 8/10 brings the band to
-                 roughly 94px — close to the 77px of the single-line bands
-                 without cramping the descenders. */
-              /* 6/8, tighter than HeroBandTitle's 12/24/14. That padding is
-                 balanced for ONE line; with two lines the same values leave
-                 too much air, because the type block between them is twice as
-                 tall. This brings the band to roughly 80px against the 77px of
-                 the single-line bands — near enough to read as the same
-                 component. */
-              /* 4px top, 5px bottom. Descenders in "guidance" and
-                 "transitions" need a little clearance or the type looks like
-                 it is resting on the edge, but nothing more — the line-height
-                 already carries space below the last baseline. */
-              /* Top matches HeroBandTitle's 12px. Bottom is 6px rather than
-                 14px because this band holds two lines: the standard's bottom
-                 padding is balanced against a single line, and with a taller
-                 type block the same value reads as a gap. The real culprit for
-                 the space under the text was the global h1 margin-bottom,
-                 zeroed in index.css. */
-              padding: "8px 24px 10px",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+              padding: 0,
               boxSizing: "border-box",
-              /* Matches HeroBandTitle's new #272F2B. These two are separate
-                 elements that must look identical — change both or neither. */
-              background: "#272F2B",
-              /* A 1px rule along the top edge, to give the photograph a clean
-                 stop rather than letting it bleed straight into the navy.
-
-                 Not pure black — #14161A, a very dark neutral. Against a navy
-                 this deep, true black reads as a hole rather than an edge, and
-                 the eye catches it as a separate colour. This sits close
-                 enough to the navy to read as a crisp boundary and no more.
-
-                 borderTop rather than a pseudo-element or a wrapper: it is
-                 part of the band's own box, so it can never drift out of
-                 alignment with it. */
-              borderTop: "1px solid #14161A",
-              /* No gap: the h1 is the only child, so this only ever added
-                 space that looked like padding. */
             }}
           >
             {/* Tagline in #1B3A6B — the same navy used by the homepage
                 descriptor and the calculator tile's secondary text. */}
-            <h1 id="rpp-tagline" style={{ textAlign: "center", margin: 0 }}>
+            <h1 id="rpp-tagline" style={{ textAlign: "left", margin: 0 }}>
               <span
                 className="rpp-tagline-line-v2"
                 style={{
