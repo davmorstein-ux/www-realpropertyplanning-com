@@ -2160,8 +2160,11 @@ h2 {
   font-size: 36px !important;
 }
 
+/* Matches the doubled-class rule in RPPHomeV3.tsx's inline <style>, which
+   is later in document order and wins at equal specificity. Kept identical so
+   the two cannot silently disagree the way they did before. */
 .rpp-funnel-heading {
-  font-size: clamp(2rem, 5vw, 3.25rem) !important;
+  font-size: clamp(2.25rem, 3.2vw, 3.5rem) !important;
 }
 
 h3 {
@@ -3747,6 +3750,9 @@ main #rpp-tagline .rpp-tagline-line-v2 {
 
 .rpp-funnel-heading {
   color: #272421 !important;
+  /* The global h1-h4 rule sets margin-bottom: 0.4rem !important; the wrapper
+     div in RPPHomeV3.tsx now carries the spacing instead. */
+  margin-bottom: 0 !important;
 }
 a[href="/afh-club"] h3.afh-club-heading {
   font-size: 90px !important;
