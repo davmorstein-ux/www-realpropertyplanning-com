@@ -108,7 +108,7 @@ const MortgageLenders = () => (
                       </h2>
                       <p className="text-foreground text-sm mb-1">{l.title}</p>
                       <p className="text-foreground text-sm font-semibold mb-3">{l.company}</p>
-                      <ProviderContact phone={l.phone} email={l.email} />
+                      <ProviderContact phone={l.phone} email={l.email} providerName={l.name} providerCompany={l.company} />
                       {l.logo && (
                         <img
                           src={l.logo}
