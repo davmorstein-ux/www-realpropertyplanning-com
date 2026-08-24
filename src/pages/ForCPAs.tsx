@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
@@ -62,8 +63,7 @@ const ForCPAs = () => (
             logo={purpleGroupLogo}
             logoAlt="The Purple Group logo"
             phone="(425) 207-3990"
-            email="intake@familyfirstathome.com"
-            emailHref="familyfirstathome.com"
+            email="hello@thepurplegroup.com"
             website="https://www.thepurplegroup.com"
             bio={PURPLE_GROUP_BIO}
             specialty="Tax planning, estate and trust taxation, and financial strategy for individuals, small businesses, and high-net-worth clients."
@@ -79,6 +79,45 @@ const ForCPAs = () => (
           <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8]">
             CPAs and tax professionals help people understand the financial and tax consequences of major decisions, including the sale, transfer, or ownership of real estate. When a senior is transitioning from a longtime home or a property is going through probate, they are especially important because they can help identify tax implications, coordinate financial records, and support decisions that affect timing, proceeds, and potential liabilities.
           </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Cross-link to bookkeeping.
+        Bookkeepers and CPAs are adjacent but distinct: a bookkeeper maintains
+        the records, a CPA files on them. Someone landing here with disorganised
+        books often needs the former first, so the link earns its place rather
+        than being a directory shortcut. It is deliberately NOT the only route
+        to /bookkeeping-services — a visitor looking for a bookkeeper has no
+        reason to open a page labelled CPAs. The card in Financial & Valuation
+        Professionals is the primary entrance; this is the secondary one. */}
+    <section className="py-10 md:py-12 bg-secondary">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-4" style={{ color: "#246044" }}>
+            Looking for Bookkeeping Support?
+          </h2>
+          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-6">
+            A bookkeeper keeps financial records accurate and current throughout the year, which is what makes a CPA's
+            work at tax time faster and more accurate. If your books have fallen behind, or an estate includes a
+            business or rental property whose records need organising, that work comes first.
+          </p>
+          <Link to="/bookkeeping-services" className="gold-cta" style={{ textDecoration: "none" }}>
+            Bookkeeping Services
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
