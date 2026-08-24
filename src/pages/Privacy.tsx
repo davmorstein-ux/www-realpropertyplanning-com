@@ -12,6 +12,15 @@ import HeroBandTitle from "@/components/HeroBandTitle";
  *
  *   Google Analytics 4      index.html, gtag G-0X2GPKCW65 — loads on every
  *                           page, before any consent step
+ *   Referral click events   providerTracking.ts — a provider_contact_click
+ *                           event when a visitor taps a featured
+ *                           professional's phone, email, or website link.
+ *                           Records the provider's name, company, which kind
+ *                           of link, and the page path. No visitor identity.
+ *   Referral UTM tags       providerTracking.ts — outbound provider website
+ *                           links carry utm_source=realpropertyplanning.com so
+ *                           the professional can see the referral in their own
+ *                           analytics
  *   Google Fonts            index.html stylesheet link — Google receives the
  *                           visitor's IP on every page load
  *   Contact form            Contact.tsx — name, email, phone, message, sent
@@ -97,6 +106,15 @@ const Privacy = () => {
                 where in the world the visitor is, and what kind of device was used. It sets cookies
                 in your browser to do this. We use this to improve the site, not to identify
                 individuals.
+              </p>
+              <p>
+                <strong>Referrals to professionals.</strong> When you tap a featured professional's
+                phone number, email address, or website link, we record that a link of that kind was
+                clicked, which professional it belonged to, and which page you were on. We use this
+                to tell each professional how much interest their listing received. It records the
+                click, not you — no name, no phone number, and nothing about what you go on to
+                say to them. Links to a professional's own website also carry a tag identifying this
+                site as the source, so they can see the referral in their own analytics.
               </p>
               <p>
                 <strong>Fonts.</strong> The typefaces on this site are served by Google Fonts. Your
