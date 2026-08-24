@@ -46,6 +46,7 @@ const providers: Provider[] = [
     alt: "Photo of Nicole Guzman Johnson, Owner and Certified QuickBooks ProAdvisor at Books on The Rock, LLC",
     href: "https://booksontherockllc.com",
     phone: "(225) 361-7916",
+    email: "njohnson.bk@booksontherockllc.com",
     specialty:
       "Organized, personalized bookkeeping and QuickBooks Online support for small- and medium-sized business owners across Washington State. Hablo español.",
     bio: "Nicole Guzman Johnson is the owner of Books on The Rock LLC and a Certified QuickBooks ProAdvisor who helps small- and medium-sized business owners gain clarity and confidence in their finances.\n\nThrough organized, personalized bookkeeping and QuickBooks Online support, Nicole helps clients stay current with their books, understand their financial position, and make informed decisions. Her goal is to reduce the stress of managing financial records so business owners can focus on serving their clients and growing their business.\n\nBased in Everett, Washington. Bookkeeping services built on a firm foundation. Hablo español.",
@@ -103,18 +104,21 @@ const BookkeepingServices = () => (
       <section className="pt-10 md:pt-12 pb-12 md:pb-16 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            {/* Width is conditional on how many providers are listed.
-                The three-column grid inherited from MedicareProviders divides
-                max-w-6xl (1152px) into ~362px columns; minus the card's p-6
-                that leaves ~314px of content, which is tight enough that the
-                company line wraps. With a single provider there is no reason to
-                hold a three-column shape, so the card is centred at max-w-xl
-                (576px) instead. When a second bookkeeper joins, this returns to
-                the grid automatically — no edit needed. */}
+            {/* WIDTH IS SET BY A CLASS ON THE CARD, NOT BY THIS WRAPPER.
+                index.css line ~1054 gives .interior-tile
+                  max-width: 260px !important
+                so any max-width on this container is ignored — an earlier
+                attempt at max-w-xl (576px) here did nothing at all. The only
+                lever is .interior-tile--wide, which raises the cap to 360px.
+
+                260px minus the tile's own 16px side padding leaves ~228px of
+                content, and index.css floors .text-sm at 17px (18px on mobile)
+                for the site's accessibility minimum — so "Books on The Rock,
+                LLC" wrapped. At 360px it fits on one line. */}
             <div
               className={
                 providers.length === 1
-                  ? "max-w-xl mx-auto"
+                  ? "flex justify-center"
                   : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch"
               }
             >
@@ -125,7 +129,7 @@ const BookkeepingServices = () => (
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${p.name}, ${p.title} at ${p.company} — Learn more`}
-                  className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  className="interior-tile interior-tile--wide tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                 >
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face h-full">
