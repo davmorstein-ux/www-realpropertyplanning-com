@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { trackProviderClick, withReferralParams } from "@/lib/providerTracking";
 
 interface ProviderTileProps {
   name: string;
@@ -569,7 +570,10 @@ export default function ProviderTile({
         {phone && (
           <a
             href={`tel:${phone.replace(/\D/g, "")}`}
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              trackProviderClick({ provider: name, company, kind: "phone" });
+            }}
             style={{ fontSize: 13, color: "#a0222c", textDecoration: "none", fontWeight: 600 }}
           >
             {phone}
@@ -578,7 +582,10 @@ export default function ProviderTile({
         {phone2 && (
           <a
             href={`tel:${phone2.replace(/\D/g, "")}`}
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              trackProviderClick({ provider: name2 || name, company, kind: "phone" });
+            }}
             style={{ fontSize: 13, color: "#a0222c", textDecoration: "none", fontWeight: 600 }}
           >
             {phone2}
@@ -587,7 +594,10 @@ export default function ProviderTile({
         {email && (
           <a
             href={emailHref || `mailto:${email}`}
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              trackProviderClick({ provider: name, company, kind: "email" });
+            }}
             style={{ fontSize: 12, color: "#7f2028", textDecoration: "none" }}
           >
             {email}
@@ -596,26 +606,39 @@ export default function ProviderTile({
         {email2 && (
           <a
             href={`mailto:${email2}`}
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              trackProviderClick({ provider: name2 || name, company, kind: "email" });
+            }}
             style={{ fontSize: 12, color: "#7f2028", textDecoration: "none" }}
           >
             {email2}
           </a>
         )}
         <a
-          href={website}
+          /* withReferralParams tags the outbound URL so the professional sees
+             realpropertyplanning.com as a referral source in THEIR analytics.
+             The visible text stays the bare domain — the parameters are for
+             their reporting, not for reading. */
+          href={withReferralParams(website)}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            trackProviderClick({ provider: name, company, kind: "website" });
+          }}
           style={{ fontSize: 12, color: "#7f2028", textDecoration: "none" }}
         >
           {website.replace(/^https?:\/\//, "")}
         </a>
         <a
-          href={website}
+          href={withReferralParams(website)}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            trackProviderClick({ provider: name, company, kind: "website" });
+          }}
           className="gold-cta"
           style={{ marginTop: 8 }}
         >
