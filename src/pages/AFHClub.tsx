@@ -520,7 +520,7 @@ const AFHClub = () => {
           <div className="rpp-afh-hero-inner">
             <h1 className="rpp-afh-hero-title">
               <img
-                src="/afh-club-glyph.png"
+                src="/afh-club-glyph.webp"
                 alt=""
                 aria-hidden="true"
                 className="rpp-afh-hero-glyph"
