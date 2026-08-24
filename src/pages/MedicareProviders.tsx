@@ -164,7 +164,7 @@ const MedicareProviders = () => (
                           <p className="text-foreground text-sm mb-1">{p.title}</p>
                           <p className="text-foreground text-sm font-semibold mb-3">{p.company}</p>
                         </ProviderHoverPanel>
-                        <ProviderContact phone={p.phone} email={p.email} />
+                        <ProviderContact phone={p.phone} email={p.email} providerName={p.name} providerCompany={p.company} />
                         {p.logo && (
                           <img
                             src={p.logo}
