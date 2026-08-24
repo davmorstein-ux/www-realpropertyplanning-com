@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
@@ -102,22 +103,32 @@ const ForCPAs = () => (
             work at tax time faster and more accurate. If your books have fallen behind, or an estate includes a
             business or rental property whose records need organising, that work comes first.
           </p>
-          <Link to="/bookkeeping-services" className="gold-cta" style={{ textDecoration: "none" }}>
-            Bookkeeping Services
-            <svg
-              viewBox="0 0 24 24"
-              width="18"
-              height="18"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </Link>
+          {/* Button component, NOT className="gold-cta" on the Link.
+              index.css carries
+                main a[class*="cta"]:not([class*="bg-white"]):not([class*="bg-transparent"])
+              which matches the substring "cta" in "gold-cta" and forces a
+              #6b1b22 fill with white text at (0,3,2) specificity. But .gold-cta
+              itself sets padding: 0 0 5px 0, so the fill lands as a tight
+              maroon box around bare text — small, dark, and not obviously a
+              control. It is the same defect index.css documents for
+              .article-resource-btn a few rules below.
+
+              .gold-cta is a TEXT link meant to sit in a <span> INSIDE an <a>
+              (see the provider tiles), which is why its hover rule reads
+              a:hover .gold-cta::after. Used on the anchor itself it cannot
+              work. This section wants a real button anyway — large tap target,
+              matching BackToProfessionalsButton. */}
+          <div className="flex justify-center">
+            <Link to="/bookkeeping-services">
+              <Button
+                variant="navy3d"
+                size="lg"
+                className="px-8 py-4 h-auto min-h-[52px] text-base md:text-lg !border-2 !border-gold"
+              >
+                Bookkeeping Services
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
