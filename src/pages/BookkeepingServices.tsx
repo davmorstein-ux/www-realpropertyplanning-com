@@ -103,7 +103,21 @@ const BookkeepingServices = () => (
       <section className="pt-10 md:pt-12 pb-12 md:pb-16 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+            {/* Width is conditional on how many providers are listed.
+                The three-column grid inherited from MedicareProviders divides
+                max-w-6xl (1152px) into ~362px columns; minus the card's p-6
+                that leaves ~314px of content, which is tight enough that the
+                company line wraps. With a single provider there is no reason to
+                hold a three-column shape, so the card is centred at max-w-xl
+                (576px) instead. When a second bookkeeper joins, this returns to
+                the grid automatically — no edit needed. */}
+            <div
+              className={
+                providers.length === 1
+                  ? "max-w-xl mx-auto"
+                  : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch"
+              }
+            >
               {providers.map((p) => (
                 <a
                   key={p.name}
