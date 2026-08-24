@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import nicoleJohnsonPhoto from "@/assets/providers/nicole-guzman-johnson-bookkeeper-books-on-the-rock.webp";
+import booksOnTheRockLogo from "@/assets/providers/books-on-the-rock-bookkeeping-logo.webp";
 
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -22,15 +23,12 @@ interface Provider {
   specialty: string;
   phone?: string;
   email?: string;
-  /* LOGO SLOT INTENTIONALLY EMPTY.
-     The only file supplied for Books on The Rock was 106x58px — a web
-     thumbnail, not a source asset. At the max-h-36 this card renders logos at,
-     it breaks into visible artifacts and the central figure dissolves. No
-     amount of upscaling recovers detail that was never captured. When a vector
-     (SVG/AI/EPS) or a PNG of at least 1000px arrives, add it to
-     src/assets/providers/ and set `logo` and `logoAlt` below; the card already
-     handles the absent case cleanly and shows nothing rather than a broken
-     image. */
+  /* The Books on The Rock logo is a transparent PNG at 1996x1206 source. It is
+     trimmed to its ink bounds and exported at 715x432 — 3x the max-h-36 (144px)
+     the card renders it at, so it stays sharp on retina. Alpha is preserved;
+     do NOT flatten it onto white, because the card background is white on
+     desktop and cream elsewhere and a baked-in white box would show. An
+     earlier 106x58 thumbnail was rejected as unusable at card size. */
   logo?: string;
   logoAlt?: string;
   bio?: string;
@@ -43,6 +41,8 @@ const providers: Provider[] = [
     title: "Owner, Certified QuickBooks ProAdvisor",
     company: "Books on The Rock, LLC",
     photo: nicoleJohnsonPhoto,
+    logo: booksOnTheRockLogo,
+    logoAlt: "Books on The Rock, LLC logo",
     alt: "Photo of Nicole Guzman Johnson, Owner and Certified QuickBooks ProAdvisor at Books on The Rock, LLC",
     href: "https://booksontherockllc.com",
     phone: "(225) 361-7916",
