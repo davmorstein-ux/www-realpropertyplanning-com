@@ -217,6 +217,7 @@ const AFHValuationEstimator = lazy(() => import("./pages/AFHValuationEstimator")
 const queryClient = new QueryClient();
 const AFHResources = lazy(() => import("./pages/AFHResources"));
 const AFHOwnershipStructure = lazy(() => import("./pages/AFHOwnershipStructure"));
+const AFHWhatIsAnAFH = lazy(() => import("./pages/AFHWhatIsAnAFH"));
 const AFHListings = lazy(() => import("./pages/AFHListings"));
 const AFHManagementCompanies = lazy(() => import("./pages/AFHManagementCompanies"));
 const AFHRealEstateBroker = lazy(() => import("./pages/AFHRealEstateBroker"));
@@ -1215,6 +1216,7 @@ const App = () => (
           <Route path="/afh-club/afh-valuation-estimator" element={<AFHValuationEstimator />} />
           <Route path="/afh-club/resources" element={<AFHResources />} />
           <Route path="/afh-club/ownership-structure" element={<AFHOwnershipStructure />} />
+          <Route path="/afh-club/what-is-an-adult-family-home" element={<AFHWhatIsAnAFH />} />
           <Route path="/afh-club/listings" element={<AFHListings />} />
           {/* Adult family home directory. The :segment route resolves to either a
               filter view or a facility page — facility slugs end in the DSHS
