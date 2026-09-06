@@ -88,7 +88,7 @@ export const davidSteinPerson = {
       credentialCategory: "license",
       name: "Washington State Real Estate Broker License (held under eXp Realty)",
       recognizedBy: { "@type": "Organization", name: "Washington State Department of Licensing" },
-      identifier: "113972",
+      identifier: "133972",
     },
     {
       "@type": "EducationalOccupationalCredential",
@@ -135,6 +135,42 @@ export const davidSteinPerson = {
     addressRegion: "WA",
     addressCountry: "US",
   },
+  sameAs: ["https://www.zillow.com/profile/DavidSteinRPP"],
+};
+
+/**
+ * Compact author node for Article schema on guide pages.
+ *
+ * Guides previously named the Organization as author. That was honest about
+ * the hub's role but threw away the strongest credibility signal the site has:
+ * a named, state-licensed author. This carries the credentials and points at
+ * the full Person node by @id so engines can merge the two. Publisher stays
+ * the Organization — publishing is the hub's function; expertise is David's.
+ */
+export const articleAuthor = {
+  "@type": "Person",
+  "@id": `${SITE_URL}/#david-stein`,
+  name: "David Stein",
+  jobTitle: "Washington State Licensed Real Estate Broker and Certified Residential Appraiser",
+  url: `${SITE_URL}/about`,
+  worksFor: { "@id": `${SITE_URL}/#organization` },
+  hasCredential: davidSteinPerson.hasCredential,
+  knowsAbout: [
+    "Adult family homes",
+    "Adult family home real estate transactions",
+    "Washington State DSHS adult family home licensing",
+    "Residential real estate appraisal",
+    "Probate real estate",
+    "Senior housing transitions",
+  ],
+};
+
+export const articlePublisher = {
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: BUSINESS_NAME,
+  url: SITE_URL,
+  logo: { "@type": "ImageObject", url: LOGO_URL },
 };
 
 /** Service schema — reusable for each core service */
