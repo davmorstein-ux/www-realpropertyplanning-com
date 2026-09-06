@@ -1,4 +1,6 @@
 import Header from "@/components/Header";
+import { articleAuthor, articlePublisher } from "@/lib/schema";
+import AuthorByline from "@/components/AuthorByline";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -83,20 +85,8 @@ const afhArticleSchema = {
   url: "https://realpropertyplanning.com/afh-club/selling-your-business-at-retirement",
   datePublished: "2026-07-22",
   dateModified: "2026-07-22",
-  author: {
-    "@type": "Organization",
-    name: "Real Property Planning",
-    url: "https://realpropertyplanning.com",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Real Property Planning",
-    url: "https://realpropertyplanning.com",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://realpropertyplanning.com/logo.webp",
-    },
-  },
+  author: articleAuthor,
+  publisher: articlePublisher,
   isPartOf: {
     "@type": "WebSite",
     name: "Real Property Planning",
@@ -193,6 +183,7 @@ const AFHSellingBusinessAtRetirement = () => (
         eyebrow="Frequently Asked Questions"
         id="afh-selling-business-retirement"
       />
+      <AuthorByline />
     </main>
     <DisclaimerSection />
     <Footer />
