@@ -41,9 +41,9 @@ export const STATE_TERMS: StateTerm[] = [
     abbr: "OR",
     term: "Adult Foster Home",
     shortName: "AFH",
-    agency: "Oregon Department of Human Services, Aging and People with Disabilities",
-    capacity: "Up to 5 residents",
-    note: "Same abbreviation as Washington, different word. Classified by level of care (Class 1–3).",
+    agency: "Oregon Department of Human Services, Aging and People with Disabilities (homes for adults with developmental disabilities are licensed by ODDS; mental health homes by the Oregon Health Authority)",
+    capacity: "Up to 5 residents; a 2024 law allows up to 7 for homes meeting additional DHS rules",
+    note: "Same abbreviation as Washington, different word. Licensed in three classes (1–3) based on the provider's training and experience.",
   },
   {
     state: "Idaho",
@@ -226,7 +226,7 @@ export const STATE_TERMS: StateTerm[] = [
     term: "Adult Foster Care Home",
     shortName: "AFC",
     agency: "Michigan Department of Licensing and Regulatory Affairs",
-    capacity: "Family home: up to 6; small group: 7–12; large group: 13–20",
+    capacity: "Family home: up to 6 with the licensee living on-site; small group home: up to 12; large group home: 13–20",
     note: "\"Homes for the Aged\" is a separate license for 21+ residents aged 55 and over.",
   },
   {
