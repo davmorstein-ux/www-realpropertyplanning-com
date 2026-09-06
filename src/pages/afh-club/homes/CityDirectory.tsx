@@ -76,6 +76,28 @@ const CityDirectory = () => {
   const { city } = cityEntry;
   const shown = filter && facilities ? facilities.filter(filter.matches) : facilities;
 
+  /* Counts spoken in the opening paragraph. Medicaid is derivable from the
+     index before the city file loads; the rest wait for the facility list.
+     The same sentence is prerendered at build time by src/data/afh/prerender.ts
+     so crawlers and visitors read identical facts. */
+  const medicaidCount = cityEntry.facilityCount - cityEntry.privatePay;
+  const stats = facilities
+    ? {
+        dementia: facilities.filter((f) => f.specialties.includes("dementia")).length,
+        mentalHealth: facilities.filter((f) => f.specialties.includes("mentalHealth")).length,
+        over6: facilities.filter((f) => f.licensedBeds > 6).length,
+        retrievedAt: facilities.reduce((m, f) => (f.retrievedAt > m ? f.retrievedAt : m), ""),
+      }
+    : null;
+  const retrievedLabel = stats?.retrievedAt
+    ? new Date(`${stats.retrievedAt}T00:00:00Z`).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        timeZone: "UTC",
+      })
+    : null;
+
   const path = filter
     ? `/afh-club/homes/${citySlug}/${filter.slug}`
     : `/afh-club/homes/${citySlug}`;
@@ -93,6 +115,35 @@ const CityDirectory = () => {
             : `All ${cityEntry.facilityCount} licensed adult family homes in ${city}, Washington, from DSHS records. Capacity, specialty designations, Medicaid status, and inspection history.`
         }
         canonical={`https://realpropertyplanning.com${path}`}
+        schemaJson={
+          shown
+            ? {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                name: heading,
+                numberOfItems: shown.length,
+                itemListElement: shown.map((f, i) => ({
+                  "@type": "ListItem",
+                  position: i + 1,
+                  item: {
+                    "@type": "ResidentialCareFacility",
+                    name: f.displayName,
+                    identifier: f.licenseNumber,
+                    url: `https://realpropertyplanning.com/afh-club/homes/${citySlug}/${f.slug}`,
+                    ...(f.phone ? { telephone: f.phone } : {}),
+                    address: {
+                      "@type": "PostalAddress",
+                      streetAddress: f.address.street,
+                      addressLocality: f.address.city,
+                      addressRegion: "WA",
+                      postalCode: f.address.zip,
+                      addressCountry: "US",
+                    },
+                  },
+                })),
+              }
+            : undefined
+        }
       />
       <BreadcrumbSchema
         items={[
@@ -116,10 +167,27 @@ const CityDirectory = () => {
                   {cityEntry.facilityCount} licensed adult family homes
                 </strong>{" "}
                 with {cityEntry.totalBeds} licensed beds, according to Washington State
-                DSHS records. Every home below is currently licensed. Capacity,
-                specialty designations, and Medicaid status come directly from those
-                records.
+                DSHS records. {medicaidCount} {medicaidCount === 1 ? "accepts" : "accept"}{" "}
+                Medicaid
+                {stats && (
+                  <>
+                    , {stats.dementia} {stats.dementia === 1 ? "carries" : "carry"} the dementia
+                    specialty designation, {stats.mentalHealth}{" "}
+                    {stats.mentalHealth === 1 ? "carries" : "carry"} the mental health
+                    designation, and {cityEntry.developmentalDisabilities}{" "}
+                    {cityEntry.developmentalDisabilities === 1 ? "serves" : "serve"} developmental
+                    disabilities. {stats.over6} {stats.over6 === 1 ? "is" : "are"} licensed for
+                    more than six residents
+                  </>
+                )}
+                . Capacity, specialty designations, and Medicaid status come directly
+                from those records.
               </p>
+              {retrievedLabel && (
+                <p className="text-muted-foreground text-[15px] mt-3">
+                  Records current as of {retrievedLabel}.
+                </p>
+              )}
               {filter && (
                 <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mt-4">
                   {filter.explanation}
