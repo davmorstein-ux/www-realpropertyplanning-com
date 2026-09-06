@@ -7,6 +7,7 @@ import { mkdir, readFile, writeFile, stat } from "node:fs/promises";
 import { componentTagger } from "lovable-tagger";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
+import { buildAfhDirectoryRoutes } from "./src/data/afh/prerender";
 
 // Skip optimization for images smaller than 10KB
 const MIN_OPTIMIZE_BYTES = 10 * 1024;
@@ -1820,6 +1821,28 @@ const routeMetadataPlugin = {
           await writeRouteHtmlVariants(distDir, route, routeHtml);
         })
     );
+
+    /* Adult family home directory — hub, city, filter, and facility pages.
+       These routes come from src/data/afh, not ROUTE_METADATA, so they are
+       prerendered from the data (see src/data/afh/prerender.ts). Written in
+       batches: ~4,500 routes, and writing them all concurrently exhausts file
+       handles on some CI runners. */
+    const directoryRoutes = buildAfhDirectoryRoutes(path.resolve(__dirname, "src/data/afh"));
+    const BATCH = 200;
+    for (let i = 0; i < directoryRoutes.length; i += BATCH) {
+      await Promise.all(
+        directoryRoutes.slice(i, i + BATCH).map(async ({ route, title, description, body }) => {
+          const routeHtml = applyMetadata(
+            baseHtml,
+            route,
+            { title, description },
+            { injectSsg: false }
+          ).replace('<div id="root"></div>', `<div id="root">${body}</div>`);
+          await writeRouteHtmlVariants(distDir, route, routeHtml);
+        })
+      );
+    }
+    console.log(`route-metadata-prerender: ${directoryRoutes.length} AFH directory routes written`);
   },
 };
 
