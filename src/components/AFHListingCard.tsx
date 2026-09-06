@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Bed, Bath, Square, Home } from "lucide-react";
 import type { AFHListing } from "@/data/afhListings";
+import { afhClassification, AFH_SOURCE_LABELS } from "@/data/afhListings";
 
 const TEAL = "#1a7a78";
 const TEAL_MID = "#2a9d9a";
@@ -257,7 +258,8 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
             {listing.price}
           </div>
           <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
-            {listing.priceLabel || "Asking price"} · MLS# {listing.mlsNum}
+            {listing.priceLabel || (listing.listingType === "business" ? "Business asking price" : "Asking price")} ·{" "}
+            {AFH_SOURCE_LABELS[listing.source]}# {listing.mlsNum}
           </div>
         </div>
       </div>
@@ -268,6 +270,32 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
         <StatPill icon={<Bath size={13} />} value={listing.bathDisplay} label={`baths (${listing.bathDetail})`} />
         <StatPill icon={<Square size={13} />} value={listing.sqft} label="sq ft" />
       </div>
+
+      {/* Classification: what the home's licensing status is and whether the business conveys */}
+      <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", alignItems: "center" }}>
+        <span
+          style={{
+            fontSize: "11px",
+            fontWeight: 700,
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            color: "#0a5648",
+            border: "1px solid #0a5648",
+            borderRadius: "4px",
+            padding: "3px 8px",
+          }}
+        >
+          {afhClassification(listing)}
+        </span>
+        {listing.linkedMls && (
+          <span style={{ fontSize: "12px", color: GRAY_TEXT }}>
+            {listing.listingType === "business" ? "Real estate" : "Business"} listed separately — MLS# {listing.linkedMls}
+          </span>
+        )}
+      </div>
+      {listing.businessNotes && (
+        <p style={{ margin: 0, fontSize: "13px", color: SLATE, lineHeight: 1.6 }}>{listing.businessNotes}</p>
+      )}
 
       <div style={{ height: "1px", backgroundColor: GRAY_BORDER }} />
 
@@ -330,16 +358,25 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
         }}
       >
         <span style={{ fontWeight: 600, color: SLATE }}>Listing broker:</span>
-        <span>
-          {listing.broker} · {listing.brokerage}
-        </span>
-        <span style={{ marginLeft: "auto", opacity: 0.6 }}>NWMLS</span>
+        <span>{listing.broker ? `${listing.broker} · ${listing.brokerage}` : listing.brokerage}</span>
+        {listing.source === "nwmls" ? (
+          <span style={{ marginLeft: "auto", opacity: 0.6 }}>NWMLS</span>
+        ) : (
+          <a
+            href={listing.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginLeft: "auto", color: TEAL, textDecoration: "underline" }}
+          >
+            View on {AFH_SOURCE_LABELS[listing.source]} listing →
+          </a>
+        )}
       </div>
     </div>
   </div>
 );
 
-export const AFHListingsDisclaimer = () => (
+export const AFHListingsDisclaimer = ({ sources = ["nwmls"] }: { sources?: AFHListing["source"][] }) => (
   <div
     style={{
       marginTop: "2.5rem",
@@ -353,7 +390,11 @@ export const AFHListingsDisclaimer = () => (
       textAlign: "center",
     }}
   >
-    Listings sourced from NWMLS. Information deemed reliable but not guaranteed. Real Property Planning is an
+    {sources.includes("nwmls") ? "NWMLS listings are provided courtesy of the Northwest Multiple Listing Service. " : ""}
+    {sources.some((x) => x !== "nwmls")
+      ? "Listings marked RMLS, BizBuySell, or direct are summarized from public sources and link to the listing brokerage; photos and remarks are not reproduced. "
+      : ""}
+    Information deemed reliable but not guaranteed. Real Property Planning is an
     independent educational hub and does not represent buyers or sellers on these properties directly — contact David
     Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #133972), for all inquiries, showings, and
     full listing details.
