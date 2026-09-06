@@ -596,9 +596,10 @@ export function realEstateListingSchema(listing: {
   sqft: string;
   price: string;
   photo: string | null;
-  broker: string;
+  broker?: string;
   brokerage: string;
   mlsNum: string;
+  source?: string;
 }) {
   const priceNumber = Number(listing.price.replace(/[^0-9.]/g, ""));
   const sqftNumber = Number(listing.sqft.replace(/[^0-9.]/g, ""));
@@ -611,7 +612,7 @@ export function realEstateListingSchema(listing: {
     name: hasDisclosedAddress
       ? `Adult Family Home for Sale — ${listing.address}, ${listing.city}, WA`
       : `Adult Family Home for Sale — ${listing.city}, WA (Address Upon Request)`,
-    description: `${listing.beds}-bedroom Adult Family Home for sale in ${listing.city}, Washington — ${listing.sqft} sq ft. Listed by ${listing.broker}, ${listing.brokerage}. NWMLS #${listing.mlsNum}.`,
+    description: `${listing.beds}-bedroom Adult Family Home for sale in ${listing.city}, Washington — ${listing.sqft} sq ft. Listed by ${listing.broker ? `${listing.broker}, ` : ""}${listing.brokerage}. ${(listing.source ?? "nwmls").toUpperCase()} #${listing.mlsNum}.`,
     url: `${SITE_URL}/afh-club/listings`,
     ...(listing.photo ? { image: `${SITE_URL}${listing.photo}` } : {}),
     address: {
@@ -656,15 +657,17 @@ export function realEstateListingsPageSchema(
     sqft: string;
     price: string;
     photo: string | null;
-    broker: string;
+    broker?: string;
     brokerage: string;
     mlsNum: string;
+    source?: string;
   }[],
+  name = "Adult Family Homes for Sale — Washington State",
 ) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Adult Family Homes for Sale — Washington State",
+    name,
     numberOfItems: listings.length,
     itemListElement: listings.map((listing, index) => ({
       "@type": "ListItem",

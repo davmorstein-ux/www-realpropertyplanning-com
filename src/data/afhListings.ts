@@ -1,5 +1,38 @@
+/**
+ * What is actually being sold. Each type gets its own page because a buyer of
+ * a house, a buyer of an operation, and a lessee need different facts.
+ *   realEstate — the building, licensed or AFH-ready, with or without the business
+ *   business   — the operation (license history, residents, staff, contracts); real estate leased or sold separately
+ *   lease      — the right to operate in someone else's house
+ */
+export type AFHListingType = "realEstate" | "business" | "lease";
+
+/** Where the listing data came from. Drives attribution: NWMLS entries carry the NWMLS disclaimer; others link to the source. */
+export type AFHListingSource = "nwmls" | "rmls" | "bizbuysell" | "direct";
+
+/**
+ * The home's relationship to AFH licensing, in the listing's own words.
+ *   operating            — licensed and caring for residents today
+ *   licensedNotOperating — licensed, no residents
+ *   former               — previously licensed; buyer must relicense
+ *   afhReady             — passed WABO / built to AFH code, never licensed
+ *   opportunity          — marketed for potential AFH use; no code work claimed
+ */
+export type AFHStatus = "operating" | "licensedNotOperating" | "former" | "afhReady" | "opportunity";
+
+/** Whether the operating business conveys with the real estate. "separate" means it is listed on its own (see linkedMls). */
+export type AFHBusinessIncluded = "yes" | "no" | "separate" | "unknown";
+
 export interface AFHListing {
   id: number;
+  listingType: AFHListingType;
+  source: AFHListingSource;
+  /** Listing page at the source. Required for non-NWMLS sources; that link IS the attribution. */
+  sourceUrl?: string;
+  afhStatus: AFHStatus;
+  businessIncluded: AFHBusinessIncluded;
+  /** MLS number of the companion listing — the business for a real-estate entry, or vice versa. */
+  linkedMls?: string;
   address: string;
   city: string;
   state: string;
@@ -10,18 +43,62 @@ export interface AFHListing {
   price: string;
   priceLabel?: string;
   photo: string | null;
-  broker: string;
+  /** Listing agent. Optional because some non-NWMLS sources publish only the office. */
+  broker?: string;
   brokerage: string;
+  /** MLS or source listing number. */
   mlsNum: string;
+  /** Business-only and lease listings: licensed capacity, current census, contracts, term. Free text, shown verbatim. */
+  businessNotes?: string;
 }
 
-// Single source of truth for AFH (Adult Family Home) NWMLS listings.
+export const AFH_STATUS_LABELS: Record<AFHStatus, string> = {
+  operating: "Operating AFH",
+  licensedNotOperating: "Licensed AFH — no residents",
+  former: "Former AFH",
+  afhReady: "AFH-ready (WABO)",
+  opportunity: "AFH opportunity",
+};
+
+export const AFH_SOURCE_LABELS: Record<AFHListingSource, string> = {
+  nwmls: "NWMLS",
+  rmls: "RMLS",
+  bizbuysell: "BizBuySell",
+  direct: "Direct from seller",
+};
+
+export const AFH_TYPE_LABELS: Record<AFHListingType, { singular: string; plural: string; slug: string }> = {
+  realEstate: { singular: "Property for sale", plural: "Properties for sale", slug: "properties" },
+  business: { singular: "Business for sale", plural: "Businesses for sale", slug: "businesses" },
+  lease: { singular: "For lease", plural: "For lease", slug: "for-lease" },
+};
+
+/** Human label for the classification shown on cards: status plus what conveys. */
+export function afhClassification(l: AFHListing): string {
+  if (l.listingType === "business") return "AFH business only";
+  if (l.listingType === "lease") return "AFH property for lease";
+  const base = AFH_STATUS_LABELS[l.afhStatus];
+  if (l.afhStatus === "operating" || l.afhStatus === "licensedNotOperating") {
+    if (l.businessIncluded === "yes") return `${base} + real estate`;
+    if (l.businessIncluded === "separate") return `${base} — business listed separately`;
+    if (l.businessIncluded === "no") return `${base} — business not included`;
+  }
+  return base;
+}
+
+export const listingsByType = (type: AFHListingType) => afhListings.filter((l) => l.listingType === type);
+
+// Single source of truth for AFH (Adult Family Home) listings across every source.
 // Used by AFHListings.tsx (the full filterable directory) and by
 // city-specific landing pages, so there is never more than one place
 // to update when a listing changes.
 export const afhListings: AFHListing[] = [
   {
     id: 4,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "operating",
+    businessIncluded: "yes",
     address: "Address Upon Request",
     city: "Lynnwood",
     state: "WA",
@@ -37,6 +114,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 6,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "operating",
+    businessIncluded: "yes",
     address: "Address Upon Request",
     city: "Edmonds",
     state: "WA",
@@ -52,6 +133,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 13,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "operating",
+    businessIncluded: "unknown",
     address: "9411 356th Street S",
     city: "McKenna",
     state: "WA",
@@ -70,6 +155,10 @@ export const afhListings: AFHListing[] = [
     // ("BR Approved: 5", seller will build out to buyer's spec), not a turnkey
     // licensed AFH like most others on this page. Confirm this fits before publishing.
     id: 14,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "opportunity",
+    businessIncluded: "no",
     address: "283 Division Avenue",
     city: "Morton",
     state: "WA",
@@ -87,6 +176,10 @@ export const afhListings: AFHListing[] = [
     // NOTE: address marked "Undisclosed" on MLS, but a partial house number is
     // visible in the photo (mailbox/porch area). Consider cropping before publishing.
     id: 15,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "operating",
+    businessIncluded: "yes",
     address: "Address Upon Request",
     city: "Mukilteo",
     state: "WA",
@@ -102,6 +195,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 16,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "afhReady",
+    businessIncluded: "no",
     address: "1001 8th Avenue NW",
     city: "Puyallup",
     state: "WA",
@@ -119,6 +216,10 @@ export const afhListings: AFHListing[] = [
     // NOTE: address marked "Undisclosed" on MLS, but a partial house number is
     // faintly visible above the front door in the photo. Worth a second look.
     id: 18,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "operating",
+    businessIncluded: "yes",
     address: "Address Upon Request",
     city: "Seattle",
     state: "WA",
@@ -134,6 +235,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 19,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "afhReady",
+    businessIncluded: "no",
     address: "226 O Street SE",
     city: "Auburn",
     state: "WA",
@@ -149,6 +254,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 20,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "afhReady",
+    businessIncluded: "no",
     address: "10702 SE 318th Place",
     city: "Auburn",
     state: "WA",
@@ -166,6 +275,10 @@ export const afhListings: AFHListing[] = [
     // NOTE: address marked "Undisclosed" on MLS, but a partial house number is
     // visible on the brick driveway pillar in the photo. Worth a second look.
     id: 21,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "afhReady",
+    businessIncluded: "unknown",
     address: "Address Upon Request",
     city: "Bellevue",
     state: "WA",
@@ -184,6 +297,10 @@ export const afhListings: AFHListing[] = [
     // previously-licensed/WABO-ready, not a currently operating AFH like most
     // others on this page. Confirm this fits before publishing.
     id: 22,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "former",
+    businessIncluded: "no",
     address: "9100 189th Avenue Court E",
     city: "Bonney Lake",
     state: "WA",
@@ -199,6 +316,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 25,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "afhReady",
+    businessIncluded: "no",
     address: "6425 Nyanza Park Drive SW",
     city: "Lakewood",
     state: "WA",
@@ -214,6 +335,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 26,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "former",
+    businessIncluded: "no",
     address: "243 E 61st Street",
     city: "Tacoma",
     state: "WA",
@@ -229,6 +354,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 27,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "afhReady",
+    businessIncluded: "no",
     address: "7643 S Ainsworth Avenue",
     city: "Tacoma",
     state: "WA",
@@ -244,6 +373,11 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 29,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "operating",
+    businessIncluded: "separate",
+    linkedMls: "2562632",
     address: "Address Upon Request",
     city: "Federal Way",
     state: "WA",
@@ -259,6 +393,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 30,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "operating",
+    businessIncluded: "yes",
     address: "Address Upon Request",
     city: "Kennewick",
     state: "WA",
@@ -274,6 +412,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 34,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "afhReady",
+    businessIncluded: "no",
     address: "10223 SE 213th Place",
     city: "Kent",
     state: "WA",
@@ -289,6 +431,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 35,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "opportunity",
+    businessIncluded: "no",
     address: "6311 188th Street SW",
     city: "Lynnwood",
     state: "WA",
@@ -304,6 +450,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 36,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "operating",
+    businessIncluded: "yes",
     address: "Address Upon Request",
     city: "Edmonds",
     state: "WA",
@@ -319,6 +469,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 37,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "afhReady",
+    businessIncluded: "no",
     address: "10702 59th Avenue NE",
     city: "Marysville",
     state: "WA",
@@ -334,6 +488,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 38,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "afhReady",
+    businessIncluded: "no",
     address: "9211 61st Drive NE",
     city: "Marysville",
     state: "WA",
@@ -349,6 +507,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 39,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "former",
+    businessIncluded: "no",
     address: "1257 Lattimore Road",
     city: "Ferndale",
     state: "WA",
@@ -364,6 +526,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 41,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "opportunity",
+    businessIncluded: "no",
     address: "924 7th Avenue NW",
     city: "Puyallup",
     state: "WA",
@@ -379,6 +545,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 42,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "opportunity",
+    businessIncluded: "no",
     address: "9320 220th Street SW",
     city: "Edmonds",
     state: "WA",
@@ -394,6 +564,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 43,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "operating",
+    businessIncluded: "yes",
     address: "Address Upon Request",
     city: "Monroe",
     state: "WA",
@@ -409,6 +583,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 44,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "former",
+    businessIncluded: "no",
     address: "2325 48th Avenue SW",
     city: "Tumwater",
     state: "WA",
@@ -424,6 +602,10 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 45,
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "opportunity",
+    businessIncluded: "no",
     address: "98 31st Avenue",
     city: "Milton",
     state: "WA",
@@ -436,6 +618,26 @@ export const afhListings: AFHListing[] = [
     broker: "Vallery C. Frink",
     brokerage: "Think Frink Home Team",
     mlsNum: "2536730",
+  },
+  {
+    id: 46,
+    listingType: "realEstate",
+    source: "rmls",
+    sourceUrl: "https://www.cascadehasson.com/realestate/details/134891517/2091-spruce-avenue-woodland-wa-98674",
+    afhStatus: "operating",
+    businessIncluded: "unknown",
+    address: "2091 Spruce Avenue",
+    city: "Woodland",
+    state: "WA",
+    beds: 7,
+    bathDisplay: "6.5",
+    bathDetail: "5 full · 3 half",
+    sqft: "3,364",
+    price: "$950,000",
+    photo: null,
+    brokerage: "Cascade Hasson Sotheby's International Realty",
+    mlsNum: "331286257",
+    businessNotes: "Operating as Zoe Adult Family Home (DSHS license 750742, licensed for 5). Five resident bedrooms plus separate caregiver quarters. Listed on RMLS; confirm whether the business conveys with the listing brokerage.",
   },
 ];
 
@@ -476,6 +678,12 @@ function validateAFHListings(listings: AFHListing[]): string[] {
 
   listings.forEach((l) => {
     if (!l.mlsNum?.trim()) problems.push(`Listing id ${l.id} is missing an MLS number.`);
+    if (l.source !== "nwmls" && !l.sourceUrl) {
+      problems.push(`Listing id ${l.id} is from ${l.source} but has no sourceUrl — the link is the attribution for non-NWMLS sources.`);
+    }
+    if (l.listingType === "lease" && !l.priceLabel) {
+      problems.push(`Listing id ${l.id} is a lease but has no priceLabel (e.g. "For Lease").`);
+    }
     if (!l.city?.trim()) problems.push(`Listing id ${l.id} is missing a city.`);
     // Sale prices must be plain currency. Listings carrying a priceLabel are
     // lease or other non-sale opportunities (e.g. "$7,500/mo"), so they only

@@ -1218,6 +1218,9 @@ const App = () => (
           <Route path="/afh-club/ownership-structure" element={<AFHOwnershipStructure />} />
           <Route path="/afh-club/what-is-an-adult-family-home" element={<AFHWhatIsAnAFH />} />
           <Route path="/afh-club/listings" element={<AFHListings />} />
+          <Route path="/afh-club/listings/properties" element={<AFHListings view="realEstate" />} />
+          <Route path="/afh-club/listings/businesses" element={<AFHListings view="business" />} />
+          <Route path="/afh-club/listings/for-lease" element={<AFHListings view="lease" />} />
           {/* Adult family home directory. The :segment route resolves to either a
               filter view or a facility page — facility slugs end in the DSHS
               license number, filter slugs never do. */}

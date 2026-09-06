@@ -1613,8 +1613,34 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/afh-club/listings": {
     title: "Adult Family Homes for Sale in Washington | AFH Club",
-    description: "Browse Adult Family Home properties currently listed for sale or lease throughout Washington State, with pricing, property details and NWMLS attribution.",
-    h1: "Adult Family Homes for Sale in Washington",
+    description: "Every adult family home opportunity currently listed in Washington State — properties for sale, operating AFH businesses for sale, and homes for lease — with pricing, licensing status, and source attribution.",
+    h1: "Adult Family Home Listings",
+    quickAnswerQ: "Where can I find adult family homes for sale in Washington?",
+    quickAnswerA: "AFH Club tracks every adult family home opportunity listed in Washington State in three groups: properties for sale (the real estate, whether licensed, formerly licensed, WABO-ready, or marketed for AFH use), operating AFH businesses for sale (the license history, residents, and contracts, sold with or without the building), and homes for lease to operators. Each listing shows its licensing status, whether the business conveys, the listing broker, and its source — NWMLS, RMLS, BizBuySell, or direct from the seller.",
+    intro: "The DSHS license never transfers with a sale. Whatever is bought — house, business, or lease — the new operator qualifies for a license of their own through the Change of Ownership process. That is why each listing here carries a licensing-status label: an operating home with residents, a formerly licensed home, and a house that has merely passed the WABO checklist are three different purchases.",
+    sections: [
+      "Properties for sale — Houses that are operating adult family homes, formerly licensed, built to the WABO checklist, or marketed for AFH use. Price, bedrooms, square footage, licensing status, and whether the business is included.",
+      "Businesses for sale — The operation, not the house: an established adult family home with residents in place, sold to a buyer who will relicense. Usually paired with a lease or a separate real estate listing.",
+      "For lease — Licensed and AFH-ready houses available to rent to an operator. A way to start without buying, or for an owner to keep the real estate while someone else runs the home.",
+    ],
+  },
+  "/afh-club/listings/properties": {
+    title: "Adult Family Home Properties for Sale in Washington | AFH Club",
+    description: "Houses currently for sale in Washington State that are licensed, formerly licensed, WABO-ready, or marketed as adult family home opportunities — with price, capacity, licensing status, and listing broker.",
+    h1: "Adult Family Home Properties for Sale",
+    intro: "The real estate: houses that are operating adult family homes, formerly licensed, built to the WABO checklist, or marketed for AFH use across Western Washington and beyond. Every listing shows its licensing status and whether the operating business conveys with the sale. Buyers relicense through DSHS regardless.",
+  },
+  "/afh-club/listings/businesses": {
+    title: "Adult Family Home Businesses for Sale in Washington | AFH Club",
+    description: "Operating adult family home businesses for sale in Washington State — the license history, residents, staff, and contracts — sold separately from, or together with, the real estate.",
+    h1: "Adult Family Home Businesses for Sale",
+    intro: "The operation, not the house: an established adult family home business with residents in place, sold to a buyer who will qualify for their own DSHS license. Some include the real estate; most are paired with a lease or a separate property listing. Operating homes sold together with their real estate appear under Properties for sale.",
+  },
+  "/afh-club/listings/for-lease": {
+    title: "Adult Family Homes for Lease in Washington | AFH Club",
+    description: "Licensed and AFH-ready houses available for lease to adult family home operators in Washington State — monthly rent, term, and licensing status.",
+    h1: "Adult Family Homes for Lease",
+    intro: "Houses available to lease for adult family home operation. Leasing lets an operator open without buying, and lets an owner keep the real estate while someone else runs the home. The lessee still holds their own DSHS license.",
   },
 
   // ===== AFH city-specific for-sale pages (LLM/AI-search AEO pages) =====
