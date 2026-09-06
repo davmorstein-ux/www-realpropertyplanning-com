@@ -3,7 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import { afhListings } from "@/data/afhListings";
+import { Link } from "react-router-dom";
+import { afhListings, AFH_TYPE_LABELS, type AFHListingType } from "@/data/afhListings";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import { realEstateListingsPageSchema } from "@/lib/schema";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
@@ -30,8 +31,64 @@ const BackButton = () => (
   </a>
 );
 
-const AFHListings = () => {
-  const saleValues = afhListings
+/**
+ * Copy for each view. "all" is the umbrella at /afh-club/listings; the three
+ * typed views live under /afh-club/listings/{properties,businesses,for-lease}.
+ * Each is a real URL so it can be prerendered, indexed, and cited on its own.
+ */
+const VIEWS: Record<
+  "all" | AFHListingType,
+  { path: string; title: string; description: string; h1: string; lede: string; empty: string }
+> = {
+  all: {
+    path: "/afh-club/listings",
+    title: "Adult Family Homes for Sale in Washington | AFH Club",
+    description:
+      "Every adult family home opportunity currently listed in Washington State — properties for sale, operating AFH businesses for sale, and homes for lease — with pricing, licensing status, and source attribution.",
+    h1: "Adult Family Home Listings",
+    lede: "Every adult family home opportunity we track in Washington State, in three groups: the real estate, the operating business, and homes for lease. Each listing shows its licensing status and whether the business conveys.",
+    empty: "No current listings.",
+  },
+  realEstate: {
+    path: "/afh-club/listings/properties",
+    title: "Adult Family Home Properties for Sale in Washington | AFH Club",
+    description:
+      "Houses currently for sale in Washington State that are licensed, formerly licensed, WABO-ready, or marketed as adult family home opportunities — with price, capacity, licensing status, and listing broker.",
+    h1: "Adult Family Home Properties for Sale",
+    lede: "The real estate: houses that are operating adult family homes, formerly licensed, built to the WABO checklist, or marketed for AFH use. The DSHS license never transfers with a sale — every buyer relicenses through a Change of Ownership.",
+    empty: "No properties are currently listed.",
+  },
+  business: {
+    path: "/afh-club/listings/businesses",
+    title: "Adult Family Home Businesses for Sale in Washington | AFH Club",
+    description:
+      "Operating adult family home businesses for sale in Washington State — the license history, residents, staff, and contracts — sold separately from, or together with, the real estate.",
+    h1: "Adult Family Home Businesses for Sale",
+    lede: "The operation, not the house: an established adult family home business with residents in place, sold to a buyer who will qualify for their own DSHS license. Some include the real estate; most are paired with a lease or a separate property listing.",
+    empty: "No businesses are currently listed. Operating homes that include the business are shown under Properties.",
+  },
+  lease: {
+    path: "/afh-club/listings/for-lease",
+    title: "Adult Family Homes for Lease in Washington | AFH Club",
+    description:
+      "Licensed and AFH-ready houses available for lease to adult family home operators in Washington State — monthly rent, term, and licensing status.",
+    h1: "Adult Family Homes for Lease",
+    lede: "Houses available to lease for adult family home operation. Leasing lets an operator start without buying, and lets an owner keep the real estate while someone else runs the home.",
+    empty: "No homes are currently listed for lease.",
+  },
+};
+
+const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
+  const copy = VIEWS[view];
+  const shown = view === "all" ? afhListings : afhListings.filter((l) => l.listingType === view);
+  const counts = {
+    realEstate: afhListings.filter((l) => l.listingType === "realEstate").length,
+    business: afhListings.filter((l) => l.listingType === "business").length,
+    lease: afhListings.filter((l) => l.listingType === "lease").length,
+  };
+  const sourcesPresent = [...new Set(shown.map((l) => l.source))];
+
+  const saleValues = shown
     .filter((l) => !l.priceLabel || l.priceLabel === "Asking price")
     .map((l) => Number(l.price.replace(/[^0-9.]/g, "")))
     .filter((n) => !Number.isNaN(n) && n > 0);
@@ -44,7 +101,7 @@ const AFHListings = () => {
       ? `${formatPrice(Math.min(...saleValues))} – ${formatPrice(Math.max(...saleValues))}`
       : "Contact for pricing";
 
-  const cityCounts = afhListings.reduce<Record<string, number>>((acc, l) => {
+  const cityCounts = shown.reduce<Record<string, number>>((acc, l) => {
     acc[l.city] = (acc[l.city] || 0) + 1;
     return acc;
   }, {});
@@ -55,7 +112,7 @@ const AFHListings = () => {
       ? `${citiesByVolume.slice(0, 3).join(" · ")} + ${citiesByVolume.length - 3} more`
       : citiesByVolume.join(" · ");
 
-  const listingsJsonLd = realEstateListingsPageSchema(afhListings);
+  const listingsJsonLd = realEstateListingsPageSchema(shown, `${copy.h1} — Washington State`);
 
   return (
     <div
@@ -66,9 +123,9 @@ const AFHListings = () => {
       }}
     >
       <SEOHead
-        title="Adult Family Homes for Sale in Washington | AFH Club"
-        description="Browse Adult Family Home properties currently listed for sale or lease throughout Washington State, with pricing, property details and NWMLS attribution."
-        canonical="https://realpropertyplanning.com/afh-club/listings"
+        title={copy.title}
+        description={copy.description}
+        canonical={`https://realpropertyplanning.com${copy.path}`}
         jsonLd={listingsJsonLd}
       />
       <BreadcrumbSchema
@@ -158,7 +215,7 @@ const AFHListings = () => {
                     lineHeight: 1.2,
                   }}
                 >
-                  Adult Family Home Properties
+                  {copy.h1}
                 </h1>
 
                 {/* Subtext */}
@@ -171,9 +228,37 @@ const AFHListings = () => {
                     maxWidth: "560px",
                   }}
                 >
-                  Properties currently marketed or operated as Adult Family Homes for sale in the Puget Sound region.
-                  Reach out for showings or additional information on any listing.
+                  {copy.lede}
                 </p>
+                {/* Category navigation — links, not tabs, so each view is a crawlable page */}
+                <nav aria-label="Listing categories" style={{ display: "flex", gap: "8px", flexWrap: "wrap", margin: "0 0 1.25rem" }}>
+                  {(["all", "realEstate", "business", "lease"] as const).map((v) => {
+                    const active = v === view;
+                    const label =
+                      v === "all"
+                        ? `All (${afhListings.length})`
+                        : `${AFH_TYPE_LABELS[v].plural} (${counts[v]})`;
+                    return (
+                      <Link
+                        key={v}
+                        to={VIEWS[v].path}
+                        aria-current={active ? "page" : undefined}
+                        style={{
+                          fontSize: "13px",
+                          fontWeight: active ? 700 : 500,
+                          color: active ? WHITE : SLATE,
+                          backgroundColor: active ? TEAL : WHITE,
+                          border: `1px solid ${active ? TEAL : GRAY_BORDER}`,
+                          borderRadius: "6px",
+                          padding: "6px 12px",
+                          textDecoration: "none",
+                        }}
+                      >
+                        {label}
+                      </Link>
+                    );
+                  })}
+                </nav>
                 <p
                   style={{
                     fontSize: "14px",
@@ -272,7 +357,7 @@ const AFHListings = () => {
               }}
             >
               {[
-                { label: "Active listings", value: String(afhListings.length) },
+                { label: "Active listings", value: String(shown.length) },
                 { label: "Locations", value: locationsLabel },
                 { label: "Price range", value: priceRangeLabel },
                 { label: "Cities covered", value: String(uniqueCities.length) },
@@ -306,13 +391,22 @@ const AFHListings = () => {
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-            {afhListings.map((listing, index) => (
-              <AFHListingCard key={listing.id} listing={listing} index={index} total={afhListings.length} />
+            {shown.length === 0 && (
+              <p style={{ fontSize: "16px", color: SLATE, padding: "1rem 0" }}>
+                {copy.empty} Have one to list?{" "}
+                <a href="/afh-submit" style={{ color: TEAL, textDecoration: "underline" }}>
+                  Talk with David
+                </a>
+                .
+              </p>
+            )}
+            {shown.map((listing, index) => (
+              <AFHListingCard key={listing.id} listing={listing} index={index} total={shown.length} />
             ))}
           </div>
 
           {/* ── DISCLAIMER ── */}
-          <AFHListingsDisclaimer />
+          <AFHListingsDisclaimer sources={sourcesPresent} />
 
           {/* ── SECOND BACK BUTTON ── */}
           <div style={{ marginTop: "2rem", paddingBottom: "2.5rem" }}>
