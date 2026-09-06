@@ -836,6 +836,18 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Should you buy an Adult Family Home as an individual or through an LLC? A guide to financing, liability, tax, and Washington State licensing considerations for AFH buyers.",
     h1: "Should You Buy an Adult Family Home as an Individual or Through an LLC?",
   },
+  "/afh-club/what-is-an-adult-family-home": {
+    title: "What Is an Adult Family Home? Definition and What It's Called in Every State | Real Property Planning",
+    description: "An adult family home is Washington State's term for a licensed residence caring for up to six adults. The same model is called an adult foster home, personal care home, board and care, or family care home elsewhere. State-by-state table of terms, agencies, and capacities.",
+    h1: "What is an adult family home — and what is it called in your state?",
+    quickAnswerQ: "What is an adult family home?",
+    quickAnswerA: "An adult family home is a regular house licensed by Washington State DSHS to provide housing and personal care for up to six adults (up to eight with approval). The term is Washington's; the same small residential care home is an adult foster home in Oregon and Michigan, a board and care (RCFE) in California, a personal care home in Georgia and Pennsylvania, and a family care home in North Carolina.",
+    intro: "Every state licenses some version of the same idea: a small number of adults who need daily help living together in an ordinary house, cared for by a provider who lives there or staffs it around the clock. This page maps Washington's term to what each state's regulator actually calls it, with the licensing agency and typical capacity for each.",
+    sections: [
+      "Same model, six vocabularies — Adult family home or adult family care (Washington, Wisconsin, Ohio, Florida, New Jersey, West Virginia, New Hampshire, Maine, North Dakota). Adult foster home or adult foster care (Oregon, Michigan, Minnesota, Indiana, Montana, Wyoming, South Dakota, Virginia, Massachusetts). Family care home (North Carolina, Kentucky, Idaho). Personal care home (Georgia, Pennsylvania, Mississippi). Residential care home, facility, or provider (Vermont, Missouri, Oklahoma, Arkansas, South Carolina, New Mexico, Louisiana, California, Hawaii, Tennessee). Assisted living with no separate small-home license (Alaska, Arizona, Utah, Colorado, Texas, Nebraska, Maryland, Illinois, Nevada).",
+      "Adult family home vs. assisted living — An adult family home is a private house serving up to six (occasionally eight) residents with a live-in or round-the-clock caregiver. An assisted living facility is a licensed building with shift staff and communal dining. In Washington the two are licensed under different laws: RCW 70.128 for adult family homes, RCW 18.20 for assisted living.",
+    ],
+  },
   "/afh-club/real-estate-broker": {
     title: "AFH Real Estate Broker | AFH Club | Real Property Planning",
     description: "Washington State licensed real estate broker specializing in Adult Family Home transactions — CHOW process, AFH valuations, and expert guidance for buyers and sellers.",
