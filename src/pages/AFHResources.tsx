@@ -85,6 +85,13 @@ const TOPICS = [
     description:
       "Should you buy an Adult Family Home as an individual or through an LLC? A guide to financing, liability, and Washington State licensing considerations.",
   },
+  {
+    title: "What Is an Adult Family Home?",
+    href: "/afh-club/what-is-an-adult-family-home",
+    img: "/afh-club-house-bg.webp",
+    description:
+      "The definition, how it differs from assisted living, and what the same small care home is called in every other state.",
+  },
 ];
 
 const AFHResources = () => (
