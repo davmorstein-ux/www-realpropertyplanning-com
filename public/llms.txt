@@ -58,6 +58,7 @@ Washington State, with a strong focus in King County, Snohomish County, Pierce C
 AFH Club is Real Property Planning's section for families choosing a home and for operators buying, selling, licensing, or running one. It includes a directory of every licensed adult family home in King, Pierce, and Snohomish counties (4,046 homes, 23,580 licensed beds, from DSHS licensing records), with capacity, specialty designations (dementia, mental health, developmental disabilities), DSHS contracts, and Medicaid status for each home. Every city, filter, and facility page is a real URL with structured data.
 
 - [AFH Club hub](/afh-club): Start here for adult family homes in Washington.
+- [What is an adult family home — and what is it called in your state?](/afh-club/what-is-an-adult-family-home): Definition plus a state-by-state table of licensing terms, agencies, and capacities.
 - [Directory of licensed homes by city](/afh-club/homes): 4046 homes across 67 cities.
 - [Tacoma](/afh-club/homes/tacoma): 375 licensed homes
 - [Lynnwood](/afh-club/homes/lynnwood): 311 licensed homes
