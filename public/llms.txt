@@ -72,7 +72,10 @@ AFH Club is Real Property Planning's section for families choosing a home and fo
 - [Puyallup](/afh-club/homes/puyallup): 181 licensed homes
 - [Seattle](/afh-club/homes/seattle): 153 licensed homes
 - [Bellevue](/afh-club/homes/bellevue): 135 licensed homes
-- [Adult family homes for sale](/afh-club/listings): Current NWMLS listings of licensed and AFH-ready homes.
+- [Adult family home listings](/afh-club/listings): Every current AFH opportunity in Washington, in three groups.
+- [Properties for sale](/afh-club/listings/properties): Houses that are licensed, formerly licensed, WABO-ready, or marketed for AFH use.
+- [Businesses for sale](/afh-club/listings/businesses): Operating AFH businesses sold with or without the real estate.
+- [For lease](/afh-club/listings/for-lease): Licensed and AFH-ready houses available to rent to an operator.
 - [Buying & selling an AFH](/afh-club/buying-selling): How AFH real estate and business transfers (CHOW) work.
 - [Licensing & certification](/afh-club/licensing-certification): DSHS licensing requirements.
 - [WABO inspection guide](/afh-club/wabo-inspection-guide): Building code requirements for AFH conversion.
