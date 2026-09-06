@@ -52,6 +52,33 @@ Washington State, with a strong focus in King County, Snohomish County, Pierce C
 - [FAQ](/faq): Frequently asked questions.
 - [Testimonials](/testimonials): Client reviews.
 
+## Adult Family Homes (AFH Club)
+"Adult family home" is Washington State's licensing term for a residential home licensed by DSHS to care for up to six (occasionally eight) adults. Other states use different terms for the same model — adult foster home (Oregon, Michigan), residential care facility for the elderly (California), assisted living home (Arizona), personal care home (Georgia, Pennsylvania), family care home (North Carolina).
+
+AFH Club is Real Property Planning's section for families choosing a home and for operators buying, selling, licensing, or running one. It includes a directory of every licensed adult family home in King, Pierce, and Snohomish counties (4,046 homes, 23,580 licensed beds, from DSHS licensing records), with capacity, specialty designations (dementia, mental health, developmental disabilities), DSHS contracts, and Medicaid status for each home. Every city, filter, and facility page is a real URL with structured data.
+
+- [AFH Club hub](/afh-club): Start here for adult family homes in Washington.
+- [Directory of licensed homes by city](/afh-club/homes): 4046 homes across 67 cities.
+- [Tacoma](/afh-club/homes/tacoma): 375 licensed homes
+- [Lynnwood](/afh-club/homes/lynnwood): 311 licensed homes
+- [Everett](/afh-club/homes/everett): 306 licensed homes
+- [Kent](/afh-club/homes/kent): 285 licensed homes
+- [Federal Way](/afh-club/homes/federal-way): 275 licensed homes
+- [Lakewood](/afh-club/homes/lakewood): 270 licensed homes
+- [Renton](/afh-club/homes/renton): 200 licensed homes
+- [Auburn](/afh-club/homes/auburn): 190 licensed homes
+- [Marysville](/afh-club/homes/marysville): 188 licensed homes
+- [Puyallup](/afh-club/homes/puyallup): 181 licensed homes
+- [Seattle](/afh-club/homes/seattle): 153 licensed homes
+- [Bellevue](/afh-club/homes/bellevue): 135 licensed homes
+- [Adult family homes for sale](/afh-club/listings): Current NWMLS listings of licensed and AFH-ready homes.
+- [Buying & selling an AFH](/afh-club/buying-selling): How AFH real estate and business transfers (CHOW) work.
+- [Licensing & certification](/afh-club/licensing-certification): DSHS licensing requirements.
+- [WABO inspection guide](/afh-club/wabo-inspection-guide): Building code requirements for AFH conversion.
+- [Costs & fees](/afh-club/costs-fees): What it costs to open and run an AFH.
+- [Calculators](/afh-club/calculators): ROI and valuation estimators for AFH operators.
+- [Violation history lookup](/afh-club/violation-history-lookup): How to check a home's DSHS inspection record.
+
 ## Contact
 Phone: (206) 900-3015
 Email: info@realpropertyplanning.com
