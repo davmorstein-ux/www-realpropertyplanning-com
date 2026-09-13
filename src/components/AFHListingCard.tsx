@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin, Bed, Bath, Square, Home } from "lucide-react";
 import type { AFHListing } from "@/data/afhListings";
-import { afhClassification, AFH_SOURCE_LABELS } from "@/data/afhListings";
+import { afhClassification, AFH_SOURCE_LABELS, AFH_MARKET_STATUS_LABELS, formatVerifiedDate } from "@/data/afhListings";
 
 const TEAL = "#1a7a78";
 const TEAL_MID = "#2a9d9a";
@@ -260,6 +260,12 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
           <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
             {listing.priceLabel || (listing.listingType === "business" ? "Business asking price" : "Asking price")} ·{" "}
             {AFH_SOURCE_LABELS[listing.source]}# {listing.mlsNum}
+          </div>
+          <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
+            <span style={{ fontWeight: 700, color: listing.marketStatus === "pending" ? "#a8892f" : "#0a5648" }}>
+              {AFH_MARKET_STATUS_LABELS[listing.marketStatus]}
+            </span>{" "}
+            · verified {formatVerifiedDate(listing.lastVerified)}
           </div>
         </div>
       </div>
