@@ -67,39 +67,59 @@ const CountyDirectory = () => {
           <div className="container px-5 md:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-4">Browse by county</h2>
-              <nav aria-label="Counties" style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-                {[...countiesChecked]
-                  .sort((a, b) => b.facilityCount - a.facilityCount || a.county.localeCompare(b.county))
-                  .map((c) => {
-                    const empty = c.facilityCount === 0;
-                    return (
-                      <Link
-                        key={c.slug}
-                        to={`/afh-club/homes/county/${c.slug}`}
-                        title={empty ? `${c.county} County was checked and has no licensed adult family homes` : `${c.facilityCount} licensed homes in ${c.county} County`}
-                        style={{
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: "8px",
-                          minHeight: "44px",
-                          padding: "8px 16px",
-                          borderRadius: "999px",
-                          border: `1px solid ${empty ? BORDER : GREEN}`,
-                          background: empty ? "#f5f5f5" : "#fff",
-                          color: empty ? "#6b7280" : GREEN,
-                          fontSize: "16px",
-                          fontWeight: 600,
-                          textDecoration: "none",
-                        }}
-                      >
-                        {c.county}
-                        <span style={{ fontWeight: 500, color: empty ? "#9ca3af" : "#374151", fontSize: "14px" }}>
-                          {empty ? "0" : c.facilityCount.toLocaleString()}
-                        </span>
-                      </Link>
-                    );
-                  })}
-              </nav>
+              {(() => {
+                const bySize = [...countiesChecked].sort((a, b) => b.facilityCount - a.facilityCount || a.county.localeCompare(b.county));
+                const largest = bySize.slice(0, 6);
+                const alpha = [...countiesChecked].sort((a, b) => a.county.localeCompare(b.county));
+                const Pill = ({ c }: { c: (typeof countiesChecked)[number] }) => {
+                  const empty = c.facilityCount === 0;
+                  return (
+                    <Link
+                      to={`/afh-club/homes/county/${c.slug}`}
+                      title={empty ? `${c.county} County was checked and has no licensed adult family homes` : `${c.facilityCount} licensed homes in ${c.county} County`}
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        minHeight: "44px",
+                        padding: "8px 16px",
+                        borderRadius: "999px",
+                        border: `1px solid ${empty ? BORDER : GREEN}`,
+                        background: empty ? "#f5f5f5" : "#fff",
+                        color: empty ? "#6b7280" : GREEN,
+                        fontSize: "16px",
+                        fontWeight: 600,
+                        textDecoration: "none",
+                      }}
+                    >
+                      {c.county}
+                      <span style={{ fontWeight: 500, color: empty ? "#9ca3af" : "#374151", fontSize: "14px" }}>
+                        {empty ? "0" : c.facilityCount.toLocaleString()}
+                      </span>
+                    </Link>
+                  );
+                };
+                return (
+                  <>
+                    <p style={{ margin: "0 0 8px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6b7280" }}>
+                      Largest markets
+                    </p>
+                    <nav aria-label="Largest counties" style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "20px" }}>
+                      {largest.map((c) => (
+                        <Pill key={c.slug} c={c} />
+                      ))}
+                    </nav>
+                    <p style={{ margin: "0 0 8px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6b7280" }}>
+                      All counties, A to Z
+                    </p>
+                    <nav aria-label="All counties" style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+                      {alpha.map((c) => (
+                        <Pill key={c.slug} c={c} />
+                      ))}
+                    </nav>
+                  </>
+                );
+              })()}
             </div>
           </div>
         </section>

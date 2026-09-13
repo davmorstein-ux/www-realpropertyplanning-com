@@ -418,14 +418,18 @@ const pill = (href: string, label: string, count: number, empty: boolean) =>
     empty ? "#9ca3af" : "#374151"
   };font-size:0.9em">${num(count)}</span></a>`;
 
-const countyPills = (checked: CountyChecked[], currentSlug?: string) =>
-  `<nav aria-label="Counties" style="margin:8px 0 16px">` +
-  [...checked]
-    .filter((c) => c.slug !== currentSlug)
-    .sort((x, y) => y.facilityCount - x.facilityCount || x.county.localeCompare(y.county))
-    .map((c) => pill(`/afh-club/homes/county/${c.slug}`, c.county, c.facilityCount, c.facilityCount === 0))
-    .join("") +
-  `</nav>`;
+const countyPills = (checked: CountyChecked[], currentSlug?: string) => {
+  const label = (t: string) =>
+    `<p style="margin:12px 0 6px;font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6b7280">${t}</p>`;
+  const row = (list: CountyChecked[], name: string) =>
+    `<nav aria-label="${name}" style="margin:0 0 8px">` +
+    list.map((c) => pill(`/afh-club/homes/county/${c.slug}`, c.county, c.facilityCount, c.facilityCount === 0)).join("") +
+    `</nav>`;
+  const others = checked.filter((c) => c.slug !== currentSlug);
+  const largest = [...others].sort((x, y) => y.facilityCount - x.facilityCount || x.county.localeCompare(y.county)).slice(0, 6);
+  const alpha = [...others].sort((x, y) => x.county.localeCompare(y.county));
+  return label("Largest markets") + row(largest, "Largest counties") + label("All counties, A to Z") + row(alpha, "All counties");
+};
 
 function buildCountyPage(c: CountyChecked, index: CityIndexEntry[], checked: CountyChecked[]): PrerenderedRoute {
   const route = `/afh-club/homes/county/${c.slug}`;
