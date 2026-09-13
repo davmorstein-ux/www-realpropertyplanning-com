@@ -10,13 +10,13 @@ const GREEN = "#0a5648";
 const BORDER = "#d9dede";
 
 /**
- * Entry point for the adult family home directory: every city we hold licensing
- * data for, largest first.
+ * Entry point for the adult family home directory: every county, then every
+ * city we hold licensing data for.
  *
- * Ordered by home count rather than alphabetically because the count is the
- * useful information — someone looking for placement wants to know where the
- * options actually are, and Kent having 285 homes against Duvall's 2 is the
- * single most decision-relevant fact on this page.
+ * Counties are pills sorted by size, because that is where "where are the
+ * options" gets answered. Within a county, cities are alphabetical — with 172
+ * cities statewide the list is scanned for a name, not ranked — and each shows
+ * its home and bed count.
  */
 const CountyDirectory = () => {
   const totalHomes = countyIndex.reduce((s, c) => s + c.facilityCount, 0);

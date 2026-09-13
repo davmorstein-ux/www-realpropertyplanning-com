@@ -431,7 +431,7 @@ function buildCountyPage(c: CountyChecked, index: CityIndexEntry[], checked: Cou
   const route = `/afh-club/homes/county/${c.slug}`;
   const cities = index
     .filter((x) => (x.counties ?? [x.county]).some((n) => n.toLowerCase() === c.county.toLowerCase()))
-    .sort((x, y) => y.facilityCount - x.facilityCount);
+    .sort((x, y) => x.city.localeCompare(y.city));
   const cityNames = new Set(cities.map((x) => x.city.toLowerCase()));
   const sales = afhListings.filter((l) => cityNames.has(l.city.toLowerCase()));
   const live = sales.filter((l) => l.marketStatus === "active" || l.marketStatus === "pending");
@@ -531,7 +531,7 @@ function buildHubPage(index: CityIndexEntry[], retrievedAt: string, checked: Cou
   const byCounty = countyNames
     .map((n) => ({
       county: n,
-      cities: index.filter((c) => (c.counties ?? [c.county]).includes(n)).sort((x, y) => y.facilityCount - x.facilityCount),
+      cities: index.filter((c) => (c.counties ?? [c.county]).includes(n)).sort((x, y) => x.city.localeCompare(y.city)),
     }))
     .sort((x, y) => y.cities.reduce((s, c) => s + c.facilityCount, 0) - x.cities.reduce((s, c) => s + c.facilityCount, 0));
 

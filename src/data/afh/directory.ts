@@ -150,7 +150,9 @@ export function getCountySummary(countyName: string): AFHCountySummary | null {
     behaviorSupport: cities.reduce((s, c) => s + c.behaviorSupport, 0),
     developmentalDisabilities: cities.reduce((s, c) => s + c.developmentalDisabilities, 0),
     privatePay: cities.reduce((s, c) => s + c.privatePay, 0),
-    cities,
+    // Alphabetical: with county pills carrying the size information, the city
+    // list is scanned by name. Counts still display next to each city.
+    cities: [...cities].sort((a, b) => a.city.localeCompare(b.city)),
   };
 }
 
