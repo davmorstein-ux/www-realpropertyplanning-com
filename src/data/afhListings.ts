@@ -23,8 +23,38 @@ export type AFHStatus = "operating" | "licensedNotOperating" | "former" | "afhRe
 /** Whether the operating business conveys with the real estate. "separate" means it is listed on its own (see linkedMls). */
 export type AFHBusinessIncluded = "yes" | "no" | "separate" | "unknown";
 
+/**
+ * Where the listing stands in the market. Listings are never deleted from this
+ * file when they leave the market — they are moved to sold / expired /
+ * withdrawn so their page can say so. Only "active" and "pending" display
+ * in the directory; the rest are historical.
+ */
+export type AFHMarketStatus = "active" | "pending" | "sold" | "expired" | "withdrawn";
+
+export const AFH_MARKET_STATUS_LABELS: Record<AFHMarketStatus, string> = {
+  active: "Active",
+  pending: "Pending",
+  sold: "Sold",
+  expired: "Expired",
+  withdrawn: "Withdrawn",
+};
+
+/** Statuses that count as currently on the market. */
+export const AFH_LIVE_STATUSES: readonly AFHMarketStatus[] = ["active", "pending"];
+
 export interface AFHListing {
   id: number;
+  /** Current market status. Change this instead of deleting the record when a listing leaves the market. */
+  marketStatus: AFHMarketStatus;
+  /**
+   * ISO date (YYYY-MM-DD) the status and price were last checked against the
+   * source. Displayed on the page as "Last verified …" and emitted as
+   * dateModified in structured data, so it must reflect a real check —
+   * a stale date is worse than none.
+   */
+  lastVerified: string;
+  /** ISO date the status last changed (went pending, sold, expired). Optional; only for non-active records. */
+  statusChanged?: string;
   listingType: AFHListingType;
   source: AFHListingSource;
   /** Listing page at the source. Required for non-NWMLS sources; that link IS the attribution. */
@@ -86,7 +116,23 @@ export function afhClassification(l: AFHListing): string {
   return base;
 }
 
-export const listingsByType = (type: AFHListingType) => afhListings.filter((l) => l.listingType === type);
+export const isLive = (l: AFHListing) => AFH_LIVE_STATUSES.includes(l.marketStatus);
+
+/** Listings currently on the market (active or pending). This is what every page displays. */
+export const liveListings = (): AFHListing[] => afhListings.filter(isLive);
+
+export const listingsByType = (type: AFHListingType) => liveListings().filter((l) => l.listingType === type);
+
+/** "September 13, 2026" from "2026-09-13". Parsed as UTC noon so the day never shifts across time zones. */
+export function formatVerifiedDate(iso: string): string {
+  const d = new Date(`${iso}T12:00:00Z`);
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+}
+
+/** Most recent lastVerified across a set of listings, as an ISO date. */
+export function latestVerified(listings: AFHListing[]): string | null {
+  return listings.reduce<string | null>((max, l) => (max === null || l.lastVerified > max ? l.lastVerified : max), null);
+}
 
 // Single source of truth for AFH (Adult Family Home) listings across every source.
 // Used by AFHListings.tsx (the full filterable directory) and by
@@ -95,6 +141,8 @@ export const listingsByType = (type: AFHListingType) => afhListings.filter((l) =
 export const afhListings: AFHListing[] = [
   {
     id: 4,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "operating",
@@ -114,6 +162,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 6,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "operating",
@@ -133,6 +183,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 13,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "operating",
@@ -155,6 +207,8 @@ export const afhListings: AFHListing[] = [
     // ("BR Approved: 5", seller will build out to buyer's spec), not a turnkey
     // licensed AFH like most others on this page. Confirm this fits before publishing.
     id: 14,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "opportunity",
@@ -176,6 +230,8 @@ export const afhListings: AFHListing[] = [
     // NOTE: address marked "Undisclosed" on MLS, but a partial house number is
     // visible in the photo (mailbox/porch area). Consider cropping before publishing.
     id: 15,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "operating",
@@ -195,6 +251,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 16,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "afhReady",
@@ -216,6 +274,8 @@ export const afhListings: AFHListing[] = [
     // NOTE: address marked "Undisclosed" on MLS, but a partial house number is
     // faintly visible above the front door in the photo. Worth a second look.
     id: 18,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "operating",
@@ -235,6 +295,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 19,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "afhReady",
@@ -254,6 +316,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 20,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "afhReady",
@@ -275,6 +339,8 @@ export const afhListings: AFHListing[] = [
     // NOTE: address marked "Undisclosed" on MLS, but a partial house number is
     // visible on the brick driveway pillar in the photo. Worth a second look.
     id: 21,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "afhReady",
@@ -297,6 +363,8 @@ export const afhListings: AFHListing[] = [
     // previously-licensed/WABO-ready, not a currently operating AFH like most
     // others on this page. Confirm this fits before publishing.
     id: 22,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "former",
@@ -316,6 +384,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 25,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "afhReady",
@@ -335,6 +405,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 26,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "former",
@@ -354,6 +426,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 27,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "afhReady",
@@ -373,6 +447,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 29,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "operating",
@@ -393,6 +469,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 30,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "operating",
@@ -412,6 +490,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 34,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "afhReady",
@@ -431,6 +511,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 35,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "opportunity",
@@ -450,6 +532,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 36,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "operating",
@@ -469,6 +553,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 37,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "afhReady",
@@ -488,6 +574,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 38,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "afhReady",
@@ -507,6 +595,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 39,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "former",
@@ -526,6 +616,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 41,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "opportunity",
@@ -545,6 +637,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 42,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "opportunity",
@@ -564,6 +658,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 43,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "operating",
@@ -583,6 +679,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 44,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "former",
@@ -602,6 +700,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 45,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "nwmls",
     afhStatus: "opportunity",
@@ -621,6 +721,8 @@ export const afhListings: AFHListing[] = [
   },
   {
     id: 46,
+    marketStatus: "active",
+    lastVerified: "2026-09-13",
     listingType: "realEstate",
     source: "rmls",
     sourceUrl: "https://www.cascadehasson.com/realestate/details/134891517/2091-spruce-avenue-woodland-wa-98674",
@@ -685,6 +787,19 @@ function validateAFHListings(listings: AFHListing[]): string[] {
       problems.push(`Listing id ${l.id} is a lease but has no priceLabel (e.g. "For Lease").`);
     }
     if (!l.city?.trim()) problems.push(`Listing id ${l.id} is missing a city.`);
+    const isoDate = /^\d{4}-\d{2}-\d{2}$/;
+    if (!isoDate.test(l.lastVerified) || Number.isNaN(Date.parse(l.lastVerified))) {
+      problems.push(`Listing id ${l.id} has a malformed lastVerified: "${l.lastVerified}". Expected YYYY-MM-DD.`);
+    }
+    if (!(l.marketStatus in AFH_MARKET_STATUS_LABELS)) {
+      problems.push(`Listing id ${l.id} has an unknown marketStatus: "${l.marketStatus}".`);
+    }
+    if (l.statusChanged && (!isoDate.test(l.statusChanged) || Number.isNaN(Date.parse(l.statusChanged)))) {
+      problems.push(`Listing id ${l.id} has a malformed statusChanged: "${l.statusChanged}". Expected YYYY-MM-DD.`);
+    }
+    if (l.marketStatus !== "active" && !l.statusChanged) {
+      problems.push(`Listing id ${l.id} is ${l.marketStatus} but has no statusChanged date.`);
+    }
     // Sale prices must be plain currency. Listings carrying a priceLabel are
     // lease or other non-sale opportunities (e.g. "$7,500/mo"), so they only
     // need to start with a currency amount.
