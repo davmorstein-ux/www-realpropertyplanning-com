@@ -108,7 +108,7 @@ const CountyHomes = () => {
                     <li key={c.citySlug} style={{ borderTop: `1px solid ${BORDER}`, padding: "16px 0" }}>
                       <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 16px", alignItems: "baseline" }}>
                         <h3 style={{ margin: 0, flex: "1 1 200px", fontSize: "20px" }}>
-                          <Link to={`/afh-club/homes/${c.citySlug}`} className="text-accent underline underline-offset-4 font-semibold">
+                          <Link to={`/afh-club/homes/${c.citySlug}`} className="rpp-heading-link text-accent underline underline-offset-4 font-semibold">
                             {c.city}
                           </Link>
                           {(c.counties?.length ?? 1) > 1 && (

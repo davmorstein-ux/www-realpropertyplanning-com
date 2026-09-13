@@ -3005,6 +3005,15 @@ header a,
   font-size: max(1rem, 16px) !important;
 }
 
+/* 4b. Links that ARE a heading (county and city names in the AFH directory)
+   must take the heading's size, not the 16px link floor above. */
+main h1 a.rpp-heading-link,
+main h2 a.rpp-heading-link,
+main h3 a.rpp-heading-link {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
 /* 5. Eyebrow / label / uppercase tracking text — 14px floor + 600 weight */
 main [style*="text-transform: uppercase"],
 main [style*="textTransform: 'uppercase'"],

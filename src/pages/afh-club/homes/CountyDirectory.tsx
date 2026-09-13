@@ -144,7 +144,11 @@ const CountyDirectory = () => {
                         letterSpacing: "-0.01em",
                       }}
                     >
-                      <Link to={`/afh-club/homes/county/${group.county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} style={{ color: "inherit", textDecoration: "none" }}>
+                      <Link
+                        to={`/afh-club/homes/county/${group.county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                        className="rpp-heading-link no-underline"
+                        style={{ color: "inherit", textDecoration: "none" }}
+                      >
                         {group.county} County
                       </Link>
                     </h2>
@@ -173,20 +177,24 @@ const CountyDirectory = () => {
                             alignItems: "baseline",
                           }}
                         >
-                          <h2 style={{ margin: 0, flex: "1 1 200px" }}>
+                          <h3
+                            style={{
+                              margin: 0,
+                              flex: "1 1 200px",
+                              fontFamily: "'DM Sans', system-ui, sans-serif",
+                              fontSize: "21px",
+                              fontWeight: 600,
+                              color: "#111827",
+                            }}
+                          >
                             <Link
                               to={`/afh-club/homes/${c.citySlug}`}
-                              className="underline underline-offset-4 hover:text-gold transition-colors"
-                              style={{
-                                fontFamily: "'DM Sans', system-ui, sans-serif",
-                                fontSize: "21px",
-                                fontWeight: 600,
-                                color: "#111827",
-                              }}
+                              className="rpp-heading-link underline underline-offset-4 hover:text-gold transition-colors"
+                              style={{ color: "#111827" }}
                             >
                               {c.city}
                             </Link>
-                          </h2>
+                          </h3>
                           <p
                             style={{
                               margin: 0,
