@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Link } from "react-router-dom";
 import { liveListings, soldListings, AFH_TYPE_LABELS, type AFHListingType, type AFHMarketStatus } from "@/data/afhListings";
+import { AFH_CITY_PAGES } from "@/data/afhCityPages";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import { realEstateListingsPageSchema } from "@/lib/schema";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
@@ -458,6 +459,53 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
               Is it really an AFH? Read the guide →
             </Link>
           </div>
+          {/* Browse by city. Counts come from the data so they never drift from the city pages. */}
+          <section aria-labelledby="browse-city" style={{ marginBottom: "1.5rem" }}>
+            <h2 id="browse-city" style={{ fontSize: "17px", fontWeight: 700, color: SLATE, margin: "0 0 10px" }}>
+              Browse by city
+            </h2>
+            {Object.entries(
+              AFH_CITY_PAGES.reduce<Record<string, typeof AFH_CITY_PAGES>>((acc, c) => {
+                (acc[c.county] ??= []).push(c);
+                return acc;
+              }, {})
+            ).map(([county, cities]) => (
+              <div key={county} style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", gap: "6px 10px", marginBottom: "8px" }}>
+                <span style={{ fontSize: "13px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: GRAY_TEXT, minWidth: "96px" }}>
+                  {county} County
+                </span>
+                {cities.map((c) => {
+                  const live = afhListings.filter((l) => l.city.toLowerCase() === c.city.toLowerCase()).length;
+                  const sold = soldListings().filter((l) => l.city.toLowerCase() === c.city.toLowerCase()).length;
+                  return (
+                    <Link
+                      key={c.slug}
+                      to={`/afh-club/for-sale/${c.slug}`}
+                      style={{
+                        fontSize: "15px",
+                        color: SLATE,
+                        backgroundColor: WHITE,
+                        border: `1px solid ${GRAY_BORDER}`,
+                        borderRadius: "999px",
+                        padding: "6px 12px",
+                        textDecoration: "none",
+                        minHeight: "36px",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "6px",
+                      }}
+                    >
+                      {c.city}
+                      <span style={{ color: GRAY_TEXT, fontSize: "13px" }}>
+                        {live} · {sold} sold
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
+            ))}
+          </section>
+
           {/* Status filter. Active/Pending filter in place; Recently sold is its own page. */}
           <nav aria-label="Listing status" style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "1.25rem", alignItems: "center" }}>
             {(

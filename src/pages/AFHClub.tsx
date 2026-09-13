@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AFH_CITY_PAGES } from "@/data/afhCityPages";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -951,21 +952,7 @@ const AFHClub = () => {
             {t("afhClubPage.browseByCity")}
           </p>
           <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
-            {[
-              { name: "Seattle", href: "/afh-club/for-sale/seattle-wa" },
-              { name: "Kirkland", href: "/afh-club/for-sale/kirkland-wa" },
-              { name: "Renton", href: "/afh-club/for-sale/renton-wa" },
-              { name: "Bellevue", href: "/afh-club/for-sale/bellevue-wa" },
-              { name: "Auburn", href: "/afh-club/for-sale/auburn-wa" },
-              { name: "Lynnwood", href: "/afh-club/for-sale/lynnwood-wa" },
-              { name: "Edmonds", href: "/afh-club/for-sale/edmonds-wa" },
-              { name: "Everett", href: "/afh-club/for-sale/everett-wa" },
-              { name: "Marysville", href: "/afh-club/for-sale/marysville-wa" },
-              { name: "Mukilteo", href: "/afh-club/for-sale/mukilteo-wa" },
-              { name: "Puyallup", href: "/afh-club/for-sale/puyallup-wa" },
-              { name: "Lakewood", href: "/afh-club/for-sale/lakewood-wa" },
-              { name: "Bonney Lake", href: "/afh-club/for-sale/bonney-lake-wa" },
-            ].map((c) => (
+            {AFH_CITY_PAGES.map((c) => ({ name: c.city, href: `/afh-club/for-sale/${c.slug}` })).map((c) => (
               <Link
                 key={c.href}
                 to={c.href}

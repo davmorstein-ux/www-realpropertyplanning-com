@@ -440,6 +440,19 @@ export function renderAfhInventory(
   html.push(
     `<p style="margin-top:8px"><a href="/afh-club/afh-property-classifications" style="color:#1a365d">What the AFH labels on these listings mean, and how to verify them</a></p>`
   );
+  if (!scope.city) {
+    const byCounty = new Map<string, typeof AFH_CITY_PAGES>();
+    AFH_CITY_PAGES.forEach((c) => byCounty.set(c.county, [...(byCounty.get(c.county) ?? []), c]));
+    html.push(`<h3 style="font-size:1.05rem;margin:20px 0 6px">Browse adult family homes for sale by city</h3>`);
+    byCounty.forEach((cities, county) => {
+      const items = cities.map((c) => {
+        const live = afhListings.filter((l) => isLive(l) && l.city.toLowerCase() === c.city.toLowerCase()).length;
+        const sold = afhListings.filter((l) => l.marketStatus === "sold" && l.city.toLowerCase() === c.city.toLowerCase()).length;
+        return `<a href="/afh-club/for-sale/${c.slug}" style="color:#1a365d">${esc(c.city)}</a> (${live} on market, ${sold} sold)`;
+      });
+      html.push(`<p style="color:#444;line-height:1.8;margin:0 0 6px"><strong>${esc(county)} County:</strong> ${items.join(" · ")}</p>`);
+    });
+  }
   if (!scope.sold) {
     html.push(
       `<p style="margin-top:8px"><a href="/afh-club/sold" style="color:#1a365d">Recently sold adult family homes in Washington</a></p>`
