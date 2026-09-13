@@ -6,7 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import { afhListings } from "@/data/afhListings";
+import { liveListings, formatVerifiedDate, latestVerified } from "@/data/afhListings";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import { Link } from "react-router-dom";
 import { cityExists, getCityIndexEntry } from "@/data/afh/directory";
@@ -23,7 +23,8 @@ interface AFHCityHubProps {
 }
 
 const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCityHubProps) => {
-  const cityListings = afhListings.filter((l) => l.city.toLowerCase() === city.toLowerCase());
+  const cityListings = liveListings().filter((l) => l.city.toLowerCase() === city.toLowerCase());
+  const verified = latestVerified(cityListings);
 
   // Cities outside the counties we hold DSHS data for have no directory page yet,
   // so the cross-link only renders where it actually resolves.
@@ -68,6 +69,12 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
                   ? `Adult Family Homes for sale in ${city} right now`
                   : `No active ${city} listings at this exact moment`}
               </h2>
+              {verified && (
+                <p className="text-foreground/70 text-[16px] mt-3">
+                  {cityListings.length} {cityListings.length === 1 ? "listing" : "listings"} · last verified{" "}
+                  {formatVerifiedDate(verified)}
+                </p>
+              )}
             </div>
 
             {cityListings.length > 0 ? (
