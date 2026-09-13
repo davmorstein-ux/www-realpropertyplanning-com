@@ -9,7 +9,7 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { buildAfhDirectoryRoutes } from "./src/data/afh/prerender";
 import { articleAuthor, articlePublisher } from "./src/lib/schema";
-import { renderAfhInventory, type AFHInventoryScope } from "./src/data/afhInventoryPrerender";
+import { renderAfhInventory, buildAfhListingRoutes, type AFHInventoryScope } from "./src/data/afhInventoryPrerender";
 
 // Skip optimization for images smaller than 10KB
 const MIN_OPTIMIZE_BYTES = 10 * 1024;
@@ -2134,6 +2134,50 @@ const routeMetadataPlugin = {
       );
     }
     console.log(`route-metadata-prerender: ${directoryRoutes.length} AFH directory routes written`);
+
+    /* Permanent per-listing pages for the AFH for-sale inventory
+       (/afh-club/listings/<city>-<source>-<number>). Generated from
+       src/data/afhListings.ts, including sold / expired records so a listing's
+       URL keeps resolving after it leaves the market. See
+       src/data/afhInventoryPrerender.ts. */
+    const cityRoutes: Record<string, string> = {};
+    for (const [route, meta] of Object.entries(ROUTE_METADATA)) {
+      if (meta.afhInventory?.city) cityRoutes[meta.afhInventory.city.toLowerCase()] = route;
+    }
+    const listingRoutes = buildAfhListingRoutes(cityRoutes);
+    await Promise.all(
+      listingRoutes.map(async ({ route, title, description, body }) => {
+        const routeHtml = applyMetadata(baseHtml, route, { title, description }, { injectSsg: false }).replace(
+          '<div id="root"></div>',
+          `<div id="root">${body}</div>`
+        );
+        await writeRouteHtmlVariants(distDir, route, routeHtml);
+      })
+    );
+    console.log(`route-metadata-prerender: ${listingRoutes.length} AFH listing pages written`);
+
+    /* Add the listing pages to the built sitemap. public/sitemap.xml is the
+       hand-maintained source; the generated block lives only in dist so it is
+       always in step with the data. */
+    const sitemapPath = path.join(distDir, "sitemap.xml");
+    try {
+      const START = "  <!-- BEGIN afh-listings (generated at build from src/data/afhListings.ts) -->";
+      const END = "  <!-- END afh-listings -->";
+      let sitemap = await readFile(sitemapPath, "utf8");
+      const block = [
+        START,
+        ...listingRoutes.map(
+          ({ route, lastmod }) =>
+            `  <url><loc>${SITE_URL}${route}</loc><lastmod>${lastmod}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`
+        ),
+        END,
+      ].join("\n");
+      // dist/sitemap.xml is a fresh copy of public/sitemap.xml on every build, so the block is never already present.
+      sitemap = sitemap.replace("</urlset>", `${block}\n</urlset>`);
+      await writeFile(sitemapPath, sitemap, "utf8");
+    } catch {
+      console.warn("route-metadata-prerender: sitemap.xml not found in dist; listing URLs not added");
+    }
   },
 };
 
