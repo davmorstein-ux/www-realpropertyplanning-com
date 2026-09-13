@@ -198,8 +198,8 @@ const AFHWhatIsAnAFH = () => {
             </p>
             <p style={bodyText}>
               In Washington that license is the adult family home, created by RCW 70.128 and regulated under
-              WAC 388-76. There are more than 4,000 licensed adult family homes in King, Pierce, and Snohomish
-              counties alone, most licensed for six residents, most accepting Medicaid, and most carrying
+              WAC 388-76. There are more than 6,000 licensed adult family homes across Washington's 39
+              counties, most licensed for six residents, most accepting Medicaid, and most carrying
               DSHS specialty designations for dementia, mental health, or developmental disabilities. This
               site's{" "}
               <Link to="/afh-club/homes" style={{ color: "#1a365d", textDecoration: "underline" }}>

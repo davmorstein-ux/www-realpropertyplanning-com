@@ -124,13 +124,13 @@ const AboutTheHub = () => {
            the repo: 67 editorial pages across guides, articles, long-term
            care, senior living, planning-before-a-crisis, executor
            responsibilities and estate/probate; 6 housing calculators plus 2
-           AFH operator calculators; 4,046 licensed homes in the DSHS data for
-           King, Snohomish and Pierce. "Over 4,000" is deliberate — the
-           directory is a snapshot and homes open and close, so a precise
+           AFH operator calculators; 6,042 licensed homes in the DSHS data
+           across all 39 counties (Sept 2026). "Over 6,000" is deliberate —
+           the directory is a snapshot and homes open and close, so a precise
            figure would go stale. Re-check before changing any of these.
 
            Hardcoded rather than derived: counting the directory at runtime
-           would mean importing 4,000+ records into the homepage bundle for
+           would mean importing 6,000+ records into the homepage bundle for
            the sake of one number. */
         .rpp-abouthub-stats.rpp-abouthub-stats {
           display: flex;
@@ -182,7 +182,7 @@ const AboutTheHub = () => {
             <strong>8</strong> calculators
           </span>
           <span>
-            Directory of over <strong>4,000</strong> licensed adult family homes
+            Statewide directory of over <strong>6,000</strong> licensed adult family homes
           </span>
         </p>
       </div>
