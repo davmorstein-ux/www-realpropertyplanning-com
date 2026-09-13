@@ -53,8 +53,14 @@ export interface AFHListing {
    * a stale date is worse than none.
    */
   lastVerified: string;
-  /** ISO date the status last changed (went pending, sold, expired). Optional; only for non-active records. */
+  /** ISO date the status last changed (went pending, sold, expired). Required for any non-active record. */
   statusChanged?: string;
+  /** ISO date the listing first hit the market, if known. Enables days-on-market on the sold page. */
+  listedDate?: string;
+  /** Closing price, e.g. "$1,850,000". Sold records only. Leave out if NWMLS display rules don't permit it. */
+  soldPrice?: string;
+  /** ISO closing date. Required for sold records. */
+  soldDate?: string;
   listingType: AFHListingType;
   source: AFHListingSource;
   /** Listing page at the source. Required for non-NWMLS sources; that link IS the attribution. */
@@ -128,6 +134,19 @@ export function formatVerifiedDate(iso: string): string {
   const d = new Date(`${iso}T12:00:00Z`);
   return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
 }
+
+/** URL slug for a listing's permanent page: /afh-club/listings/<city>-<source>-<number>. Stable across status changes. */
+export function listingSlug(l: AFHListing): string {
+  const city = l.city.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  return `${city}-${l.source}-${l.mlsNum.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+}
+
+export const findListingBySlug = (slug: string): AFHListing | undefined =>
+  afhListings.find((l) => listingSlug(l) === slug);
+
+/** Listings that have closed, newest first. */
+export const soldListings = (): AFHListing[] =>
+  afhListings.filter((l) => l.marketStatus === "sold").sort((a, b) => (b.soldDate ?? "").localeCompare(a.soldDate ?? ""));
 
 /** Most recent lastVerified across a set of listings, as an ISO date. */
 export function latestVerified(listings: AFHListing[]): string | null {
@@ -800,6 +819,18 @@ function validateAFHListings(listings: AFHListing[]): string[] {
     if (l.marketStatus !== "active" && !l.statusChanged) {
       problems.push(`Listing id ${l.id} is ${l.marketStatus} but has no statusChanged date.`);
     }
+    if (l.marketStatus === "sold" && (!l.soldDate || !isoDate.test(l.soldDate))) {
+      problems.push(`Listing id ${l.id} is sold but has no valid soldDate (YYYY-MM-DD).`);
+    }
+    if (l.soldPrice && !/^\$[\d,]+$/.test(l.soldPrice)) {
+      problems.push(`Listing id ${l.id} has a malformed soldPrice: "${l.soldPrice}".`);
+    }
+    if (l.listedDate && !isoDate.test(l.listedDate)) {
+      problems.push(`Listing id ${l.id} has a malformed listedDate: "${l.listedDate}".`);
+    }
+  });
+
+  listings.forEach((l) => {
     // Sale prices must be plain currency. Listings carrying a priceLabel are
     // lease or other non-sale opportunities (e.g. "$7,500/mo"), so they only
     // need to start with a currency amount.
@@ -807,6 +838,10 @@ function validateAFHListings(listings: AFHListing[]): string[] {
     if (!pricePattern.test(l.price)) {
       problems.push(`Listing id ${l.id} has a malformed price: "${l.price}". Expected e.g. "$1,449,000".`);
     }
+  });
+
+  seen(listings.map(listingSlug)).forEach((slug) => {
+    problems.push(`Duplicate page slug ${slug}. Two listings resolve to the same URL.`);
   });
 
   return problems;

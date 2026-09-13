@@ -1,6 +1,7 @@
 import { Phone, Mail, MapPin, Bed, Bath, Square, Home } from "lucide-react";
 import type { AFHListing } from "@/data/afhListings";
-import { afhClassification, AFH_SOURCE_LABELS, AFH_MARKET_STATUS_LABELS, formatVerifiedDate } from "@/data/afhListings";
+import { afhClassification, AFH_SOURCE_LABELS, AFH_MARKET_STATUS_LABELS, formatVerifiedDate, listingSlug } from "@/data/afhListings";
+import { Link } from "react-router-dom";
 
 const TEAL = "#1a7a78";
 const TEAL_MID = "#2a9d9a";
@@ -230,7 +231,13 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
               lineHeight: 1.25,
             }}
           >
-            {listing.address}
+            <Link
+              to={`/afh-club/listings/${listingSlug(listing)}`}
+              style={{ color: "inherit", textDecoration: "none" }}
+              title="Listing details and history"
+            >
+              {listing.address}
+            </Link>
           </h3>
           <div
             style={{
