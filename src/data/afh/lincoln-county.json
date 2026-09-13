@@ -1,0 +1,97 @@
+[
+  {
+    "licenseNumber": "755570",
+    "name": "Makini LLC",
+    "displayName": "Makini LLC",
+    "slug": "makini-755570",
+    "address": {
+      "street": "49 Park St",
+      "city": "Davenport",
+      "citySlug": "davenport",
+      "state": "WA",
+      "zip": "99122",
+      "county": "Lincoln"
+    },
+    "contactName": "Ndiege, Sarah",
+    "phone": "(509) 339-3025",
+    "regionUnit": "1E",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "508400",
+    "name": "SERENE MEADOWS II",
+    "displayName": "SERENE MEADOWS II",
+    "slug": "serene-meadows-ii-508400",
+    "address": {
+      "street": "804 1st St",
+      "city": "Davenport",
+      "citySlug": "davenport",
+      "state": "WA",
+      "zip": "99122",
+      "county": "Lincoln"
+    },
+    "contactName": "Badgley, Barbara",
+    "phone": "(509) 725-0299",
+    "regionUnit": "1E",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "637500",
+    "name": "SERENE MEADOWS III",
+    "displayName": "SERENE MEADOWS III",
+    "slug": "serene-meadows-iii-637500",
+    "address": {
+      "street": "803 1st St",
+      "city": "Davenport",
+      "citySlug": "davenport",
+      "state": "WA",
+      "zip": "99122",
+      "county": "Lincoln"
+    },
+    "contactName": "Badgley, Barbara",
+    "phone": "(509) 725-7778",
+    "regionUnit": "1E",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

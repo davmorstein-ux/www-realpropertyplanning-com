@@ -1,0 +1,260 @@
+[
+  {
+    "licenseNumber": "755916",
+    "name": "Casa Mia",
+    "displayName": "Casa Mia",
+    "slug": "casa-mia-755916",
+    "address": {
+      "street": "605 Hull Rd",
+      "city": "Brewster",
+      "citySlug": "brewster",
+      "state": "WA",
+      "zip": "98812",
+      "county": "Okanogan"
+    },
+    "contactName": "Deochoa, Marlen",
+    "phone": "(509) 689-2662",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751138",
+    "name": "Country Meadow Estate AFH",
+    "displayName": "Country Meadow Estate AFH",
+    "slug": "country-meadow-estate-afh-751138",
+    "address": {
+      "street": "461 Cape Labelle Rd",
+      "city": "Tonasket",
+      "citySlug": "tonasket",
+      "state": "WA",
+      "zip": "98855",
+      "county": "Okanogan"
+    },
+    "contactName": "Chambers, Danette M.",
+    "phone": "(509) 486-2124",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "597900",
+    "name": "GOLDEN YEARS",
+    "displayName": "GOLDEN YEARS",
+    "slug": "golden-years-597900",
+    "address": {
+      "street": "48 Hubbard Rd # A",
+      "city": "Riverside",
+      "citySlug": "riverside",
+      "state": "WA",
+      "zip": "98849",
+      "county": "Okanogan"
+    },
+    "contactName": "Holz, Ryan D.",
+    "phone": "(509) 846-0146",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "dementia"
+    ],
+    "contracts": [
+      "wcfAfhSow",
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752368",
+    "name": "Jamie's Place",
+    "displayName": "Jamie's Place",
+    "slug": "jamies-place-752368",
+    "address": {
+      "street": "109 Norfolk Rd",
+      "city": "Winthrop",
+      "citySlug": "winthrop",
+      "state": "WA",
+      "zip": "98862",
+      "county": "Okanogan"
+    },
+    "contactName": "Kulsrud, JESSICA L.",
+    "phone": "(509) 996-5964",
+    "regionUnit": "1C",
+    "licensedBeds": 8,
+    "specialties": [
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754472",
+    "name": "Lilac Estates Adult Family Home",
+    "displayName": "Lilac Estates Adult Family Home",
+    "slug": "lilac-estates-adult-family-home-754472",
+    "address": {
+      "street": "315 W 4th Ave",
+      "city": "Omak",
+      "citySlug": "omak",
+      "state": "WA",
+      "zip": "98841",
+      "county": "Okanogan"
+    },
+    "contactName": "Ince, Tanisha L.",
+    "phone": "(509) 668-0633",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752367",
+    "name": "MOUNTAIN VIEW",
+    "displayName": "MOUNTAIN VIEW",
+    "slug": "mountain-view-752367",
+    "address": {
+      "street": "109 Norfolk Rd",
+      "city": "Winthrop",
+      "citySlug": "winthrop",
+      "state": "WA",
+      "zip": "98862",
+      "county": "Okanogan"
+    },
+    "contactName": "Kulsrud, JESSICA L.",
+    "phone": "(509) 996-5964",
+    "regionUnit": "1C",
+    "licensedBeds": 8,
+    "specialties": [
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756547",
+    "name": "Okanogan Valley AFH LLC",
+    "displayName": "Okanogan Valley AFH LLC",
+    "slug": "okanogan-valley-afh-756547",
+    "address": {
+      "street": "348 E Dewberry Ave",
+      "city": "Omak",
+      "citySlug": "omak",
+      "state": "WA",
+      "zip": "98841",
+      "county": "Okanogan"
+    },
+    "contactName": "Hammers, Paul D.",
+    "phone": "(509) 826-2747",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756564",
+    "name": "Welcome Home Lodge AFH, LLC",
+    "displayName": "Welcome Home Lodge AFH, LLC",
+    "slug": "welcome-home-lodge-afh-756564",
+    "address": {
+      "street": "27 Hahn Road",
+      "city": "Omak",
+      "citySlug": "omak",
+      "state": "WA",
+      "zip": "98841",
+      "county": "Okanogan"
+    },
+    "contactName": "Ervin, Madison",
+    "phone": "(509) 322-2455",
+    "regionUnit": "1C",
+    "licensedBeds": 8,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754306",
+    "name": "Welcome Home Villa AFH LLC",
+    "displayName": "Welcome Home Villa AFH LLC",
+    "slug": "welcome-home-villa-afh-754306",
+    "address": {
+      "street": "163b Nichols Rd",
+      "city": "Omak",
+      "citySlug": "omak",
+      "state": "WA",
+      "zip": "98841",
+      "county": "Okanogan"
+    },
+    "contactName": "Davies, Kellie",
+    "phone": "(509) 826-3631",
+    "regionUnit": "1C",
+    "licensedBeds": 8,
+    "specialties": [
+      "dementia"
+    ],
+    "contracts": [
+      "wcfAfhSow",
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "licenseNumber": "752061",
+    "name": "COUNTRY ROSE ADULT FAMILY HOME",
+    "displayName": "COUNTRY ROSE ADULT FAMILY HOME",
+    "slug": "country-rose-adult-family-home-752061",
+    "address": {
+      "street": "415 S Columbus Ave",
+      "city": "Goldendale",
+      "citySlug": "goldendale",
+      "state": "WA",
+      "zip": "98620",
+      "county": "Klickitat"
+    },
+    "contactName": "Teel, Ladonna L.",
+    "phone": "(509) 773-3586",
+    "regionUnit": "3F",
+    "licensedBeds": 3,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753331",
+    "name": "Joy House",
+    "displayName": "Joy House",
+    "slug": "joy-house-753331",
+    "address": {
+      "street": "47 New Hope Farm Rd",
+      "city": "Goldendale",
+      "citySlug": "goldendale",
+      "state": "WA",
+      "zip": "98620",
+      "county": "Klickitat"
+    },
+    "contactName": "Gallant, Spring",
+    "phone": "(509) 773-3939",
+    "regionUnit": "3F",
+    "licensedBeds": 8,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751253",
+    "name": "Love House",
+    "displayName": "Love House",
+    "slug": "love-house-751253",
+    "address": {
+      "street": "36 New Hope Farm Rd",
+      "city": "Goldendale",
+      "citySlug": "goldendale",
+      "state": "WA",
+      "zip": "98620",
+      "county": "Klickitat"
+    },
+    "contactName": "Gallant, Spring",
+    "phone": "(509) 773-3939",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752261",
+    "name": "PATIENCE HOUSE",
+    "displayName": "PATIENCE HOUSE",
+    "slug": "patience-house-752261",
+    "address": {
+      "street": "37 New Hope Farm Rd",
+      "city": "Goldendale",
+      "citySlug": "goldendale",
+      "state": "WA",
+      "zip": "98620",
+      "county": "Klickitat"
+    },
+    "contactName": "Gallant, Spring",
+    "phone": "(509) 773-3939",
+    "regionUnit": "3F",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755112",
+    "name": "Wellness LLC",
+    "displayName": "Wellness LLC",
+    "slug": "wellness-755112",
+    "address": {
+      "street": "460 Ne Cherry St",
+      "city": "White Salmon",
+      "citySlug": "white-salmon",
+      "state": "WA",
+      "zip": "98672",
+      "county": "Klickitat"
+    },
+    "contactName": "Nginyayu, John N.",
+    "phone": "(509) 493-1084",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

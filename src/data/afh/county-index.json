@@ -394,6 +394,20 @@
     "withReports": 23
   },
   {
+    "city": "Pullman",
+    "citySlug": "pullman",
+    "county": "Whitman",
+    "counties": [
+      "Whitman"
+    ],
+    "facilityCount": 35,
+    "totalBeds": 204,
+    "behaviorSupport": 32,
+    "developmentalDisabilities": 26,
+    "privatePay": 0,
+    "withReports": 30
+  },
+  {
     "city": "Battle Ground",
     "citySlug": "battle-ground",
     "county": "Clark",
@@ -1180,6 +1194,20 @@
     "withReports": 6
   },
   {
+    "city": "Colfax",
+    "citySlug": "colfax",
+    "county": "Whitman",
+    "counties": [
+      "Whitman"
+    ],
+    "facilityCount": 5,
+    "totalBeds": 28,
+    "behaviorSupport": 5,
+    "developmentalDisabilities": 4,
+    "privatePay": 0,
+    "withReports": 4
+  },
+  {
     "city": "Ferndale",
     "citySlug": "ferndale",
     "county": "Whatcom",
@@ -1335,6 +1363,34 @@
     "withReports": 2
   },
   {
+    "city": "Goldendale",
+    "citySlug": "goldendale",
+    "county": "Klickitat",
+    "counties": [
+      "Klickitat"
+    ],
+    "facilityCount": 4,
+    "totalBeds": 22,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 4,
+    "privatePay": 0,
+    "withReports": 4
+  },
+  {
+    "city": "Omak",
+    "citySlug": "omak",
+    "county": "Okanogan",
+    "counties": [
+      "Okanogan"
+    ],
+    "facilityCount": 4,
+    "totalBeds": 28,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 4
+  },
+  {
     "city": "Walla Walla",
     "citySlug": "walla-walla",
     "county": "Walla Walla",
@@ -1361,6 +1417,34 @@
     "developmentalDisabilities": 2,
     "privatePay": 0,
     "withReports": 4
+  },
+  {
+    "city": "Davenport",
+    "citySlug": "davenport",
+    "county": "Lincoln",
+    "counties": [
+      "Lincoln"
+    ],
+    "facilityCount": 3,
+    "totalBeds": 18,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 3
+  },
+  {
+    "city": "East Wenatchee",
+    "citySlug": "east-wenatchee",
+    "county": "Douglas",
+    "counties": [
+      "Douglas"
+    ],
+    "facilityCount": 3,
+    "totalBeds": 18,
+    "behaviorSupport": 2,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 3
   },
   {
     "city": "Kelso",
@@ -1501,6 +1585,20 @@
     "developmentalDisabilities": 0,
     "privatePay": 0,
     "withReports": 0
+  },
+  {
+    "city": "Cle Elum",
+    "citySlug": "cle-elum",
+    "county": "Kittitas",
+    "counties": [
+      "Kittitas"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 2
   },
   {
     "city": "Cosmopolis",
@@ -1657,6 +1755,20 @@
     "withReports": 2
   },
   {
+    "city": "Nine Mile Falls",
+    "citySlug": "nine-mile-falls",
+    "county": "Stevens",
+    "counties": [
+      "Stevens"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
     "city": "Olalla",
     "citySlug": "olalla",
     "county": "Kitsap",
@@ -1727,6 +1839,20 @@
     "withReports": 2
   },
   {
+    "city": "Saint John",
+    "citySlug": "saint-john",
+    "county": "Whitman",
+    "counties": [
+      "Whitman"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 2,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
     "city": "Sequim",
     "citySlug": "sequim",
     "county": "Clallam",
@@ -1755,6 +1881,20 @@
     "withReports": 2
   },
   {
+    "city": "Winthrop",
+    "citySlug": "winthrop",
+    "county": "Okanogan",
+    "counties": [
+      "Okanogan"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 16,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
     "city": "Aberdeen",
     "citySlug": "aberdeen",
     "county": "Grays Harbor",
@@ -1764,6 +1904,20 @@
     "facilityCount": 1,
     "totalBeds": 6,
     "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Albion",
+    "citySlug": "albion",
+    "county": "Whitman",
+    "counties": [
+      "Whitman"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 1,
     "developmentalDisabilities": 1,
     "privatePay": 0,
     "withReports": 1
@@ -1807,6 +1961,34 @@
     "totalBeds": 6,
     "behaviorSupport": 1,
     "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Brewster",
+    "citySlug": "brewster",
+    "county": "Okanogan",
+    "counties": [
+      "Okanogan"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Brinnon",
+    "citySlug": "brinnon",
+    "county": "Jefferson",
+    "counties": [
+      "Jefferson"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 1,
     "privatePay": 0,
     "withReports": 1
   },
@@ -1861,6 +2043,20 @@
     ],
     "facilityCount": 1,
     "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Eastsound",
+    "citySlug": "eastsound",
+    "county": "San Juan",
+    "counties": [
+      "San Juan"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 3,
     "behaviorSupport": 0,
     "developmentalDisabilities": 0,
     "privatePay": 0,
@@ -1965,6 +2161,20 @@
     "withReports": 1
   },
   {
+    "city": "Lopez Island",
+    "citySlug": "lopez-island",
+    "county": "San Juan",
+    "counties": [
+      "San Juan"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 8,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 0
+  },
+  {
     "city": "Mabton",
     "citySlug": "mabton",
     "county": "Yakima",
@@ -1973,6 +2183,34 @@
     ],
     "facilityCount": 1,
     "totalBeds": 4,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "North Bonneville",
+    "citySlug": "north-bonneville",
+    "county": "Skamania",
+    "counties": [
+      "Skamania"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Ocean Park",
+    "citySlug": "ocean-park",
+    "county": "Pacific",
+    "counties": [
+      "Pacific"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 8,
     "behaviorSupport": 0,
     "developmentalDisabilities": 0,
     "privatePay": 0,
@@ -1991,6 +2229,20 @@
     "developmentalDisabilities": 0,
     "privatePay": 0,
     "withReports": 0
+  },
+  {
+    "city": "Port Townsend",
+    "citySlug": "port-townsend",
+    "county": "Jefferson",
+    "counties": [
+      "Jefferson"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
   },
   {
     "city": "Prosser",
@@ -2017,6 +2269,20 @@
     "totalBeds": 6,
     "behaviorSupport": 1,
     "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Riverside",
+    "citySlug": "riverside",
+    "county": "Okanogan",
+    "counties": [
+      "Okanogan"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
     "privatePay": 0,
     "withReports": 1
   },
@@ -2100,6 +2366,34 @@
     "facilityCount": 1,
     "totalBeds": 6,
     "behaviorSupport": 1,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Tonasket",
+    "citySlug": "tonasket",
+    "county": "Okanogan",
+    "counties": [
+      "Okanogan"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "White Salmon",
+    "citySlug": "white-salmon",
+    "county": "Klickitat",
+    "counties": [
+      "Klickitat"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
     "developmentalDisabilities": 0,
     "privatePay": 0,
     "withReports": 1

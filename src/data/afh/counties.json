@@ -56,6 +56,13 @@
     "retrievedAt": "2026-09-13"
   },
   {
+    "county": "Douglas",
+    "slug": "douglas",
+    "facilityCount": 3,
+    "totalBeds": 18,
+    "retrievedAt": "2026-09-13"
+  },
+  {
     "county": "Ferry",
     "slug": "ferry",
     "facilityCount": 1,
@@ -98,6 +105,13 @@
     "retrievedAt": "2026-09-13"
   },
   {
+    "county": "Jefferson",
+    "slug": "jefferson",
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "retrievedAt": "2026-09-13"
+  },
+  {
     "county": "King",
     "slug": "king",
     "facilityCount": 1809,
@@ -112,10 +126,31 @@
     "retrievedAt": "2026-09-13"
   },
   {
+    "county": "Kittitas",
+    "slug": "kittitas",
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Klickitat",
+    "slug": "klickitat",
+    "facilityCount": 5,
+    "totalBeds": 28,
+    "retrievedAt": "2026-09-13"
+  },
+  {
     "county": "Lewis",
     "slug": "lewis",
     "facilityCount": 50,
     "totalBeds": 303,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Lincoln",
+    "slug": "lincoln",
+    "facilityCount": 3,
+    "totalBeds": 18,
     "retrievedAt": "2026-09-13"
   },
   {
@@ -126,6 +161,27 @@
     "retrievedAt": "2026-09-13"
   },
   {
+    "county": "Okanogan",
+    "slug": "okanogan",
+    "facilityCount": 9,
+    "totalBeds": 62,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Pacific",
+    "slug": "pacific",
+    "facilityCount": 1,
+    "totalBeds": 8,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Pend Oreille",
+    "slug": "pend-oreille",
+    "facilityCount": 0,
+    "totalBeds": 0,
+    "retrievedAt": "2026-09-13"
+  },
+  {
     "county": "Pierce",
     "slug": "pierce",
     "facilityCount": 1060,
@@ -133,10 +189,24 @@
     "retrievedAt": "2026-08-01"
   },
   {
+    "county": "San Juan",
+    "slug": "san-juan",
+    "facilityCount": 2,
+    "totalBeds": 11,
+    "retrievedAt": "2026-09-13"
+  },
+  {
     "county": "Skagit",
     "slug": "skagit",
     "facilityCount": 27,
     "totalBeds": 156,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Skamania",
+    "slug": "skamania",
+    "facilityCount": 1,
+    "totalBeds": 6,
     "retrievedAt": "2026-09-13"
   },
   {
@@ -154,10 +224,24 @@
     "retrievedAt": "2026-09-13"
   },
   {
+    "county": "Stevens",
+    "slug": "stevens",
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "retrievedAt": "2026-09-13"
+  },
+  {
     "county": "Thurston",
     "slug": "thurston",
     "facilityCount": 312,
     "totalBeds": 1799,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Wahkiakum",
+    "slug": "wahkiakum",
+    "facilityCount": 0,
+    "totalBeds": 0,
     "retrievedAt": "2026-09-13"
   },
   {
@@ -172,6 +256,13 @@
     "slug": "whatcom",
     "facilityCount": 25,
     "totalBeds": 139,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Whitman",
+    "slug": "whitman",
+    "facilityCount": 43,
+    "totalBeds": 250,
     "retrievedAt": "2026-09-13"
   },
   {

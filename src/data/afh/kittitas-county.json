@@ -1,0 +1,58 @@
+[
+  {
+    "licenseNumber": "752404",
+    "name": "Belair House",
+    "displayName": "Belair House",
+    "slug": "belair-house-752404",
+    "address": {
+      "street": "304 E 3rd St",
+      "city": "Cle Elum",
+      "citySlug": "cle-elum",
+      "state": "WA",
+      "zip": "98922",
+      "county": "Kittitas"
+    },
+    "contactName": "Brown, Lori K.",
+    "phone": "(509) 674-4006",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753678",
+    "name": "Malibu House",
+    "displayName": "Malibu House",
+    "slug": "malibu-house-753678",
+    "address": {
+      "street": "401 Main Street South",
+      "city": "Cle Elum",
+      "citySlug": "cle-elum",
+      "state": "WA",
+      "zip": "98943",
+      "county": "Kittitas"
+    },
+    "contactName": "Brown, Lori K.",
+    "phone": "(509) 674-3795",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

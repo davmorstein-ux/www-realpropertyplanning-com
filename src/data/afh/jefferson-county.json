@@ -1,0 +1,65 @@
+[
+  {
+    "licenseNumber": "753600",
+    "name": "Olympic Neighbors",
+    "displayName": "Olympic Neighbors",
+    "slug": "olympic-neighbors-753600",
+    "address": {
+      "street": "2680 Highland Loop Dr",
+      "city": "Port Townsend",
+      "citySlug": "port-townsend",
+      "state": "WA",
+      "zip": "98368",
+      "county": "Jefferson"
+    },
+    "contactName": "Bell, Traci A.",
+    "phone": "(360) 344-2190",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaSpecialtyPilot",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753487",
+    "name": "Sunrise Adult Family Home",
+    "displayName": "Sunrise Adult Family Home",
+    "slug": "sunrise-adult-family-home-753487",
+    "address": {
+      "street": "323 Talons Roost Rd",
+      "city": "Brinnon",
+      "citySlug": "brinnon",
+      "state": "WA",
+      "zip": "98320",
+      "county": "Jefferson"
+    },
+    "contactName": "Maxaner, Madonna R.",
+    "phone": "(360) 993-2610",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

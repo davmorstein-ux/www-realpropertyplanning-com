@@ -487,6 +487,7 @@ export function loadAllFacilities(dataDir: string): Facility[] {
 /** "King, Pierce, Snohomish, Benton, and Franklin" from the county index. */
 function listCounties(index: CityIndexEntry[]): string {
   const names = [...new Set(index.flatMap((c) => (c as CityIndexEntry & { counties?: string[] }).counties ?? [c.county]))];
+  if (names.length >= 30) return "all 39";
   return names.length <= 2 ? names.join(" and ") : `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
 }
 

@@ -1,0 +1,59 @@
+[
+  {
+    "licenseNumber": "750894",
+    "name": "HAMLET HOUSE",
+    "displayName": "HAMLET HOUSE",
+    "slug": "hamlet-house-750894",
+    "address": {
+      "street": "273 Village Rd",
+      "city": "Lopez Island",
+      "citySlug": "lopez-island",
+      "state": "WA",
+      "zip": "98261",
+      "county": "San Juan"
+    },
+    "contactName": "Hatchel, Amy",
+    "phone": "(360) 468-3800",
+    "regionUnit": "2B",
+    "licensedBeds": 8,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752235",
+    "name": "ORCAS LOVING CARE INC",
+    "displayName": "ORCAS LOVING CARE INC",
+    "slug": "orcas-loving-care-752235",
+    "address": {
+      "street": "113 Michael Lane",
+      "city": "Eastsound",
+      "citySlug": "eastsound",
+      "state": "WA",
+      "zip": "98245",
+      "county": "San Juan"
+    },
+    "contactName": "Tyree, Timothy",
+    "phone": "(360) 376-2463",
+    "regionUnit": "2B",
+    "licensedBeds": 3,
+    "specialties": [
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]
