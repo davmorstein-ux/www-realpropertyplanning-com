@@ -220,7 +220,9 @@ const listingCard = (l: AFHListing): string => {
       `<p style="margin:0 0 6px;font-size:1.1rem"><strong>${esc(l.price)}</strong> <span style="color:#666;font-size:0.9rem">— ${esc(priceLabel)}</span> · <strong>${AFH_MARKET_STATUS_LABELS[l.marketStatus]}</strong></p>`
     );
   }
-  p.push(`<p style="margin:0 0 6px;color:#0a5648;font-weight:700">${esc(afhClassification(l))}</p>`);
+  p.push(
+    `<p style="margin:0 0 6px;color:#0a5648;font-weight:700"><a href="/afh-club/afh-property-classifications" style="color:#0a5648">${esc(afhClassification(l))}</a></p>`
+  );
   p.push(
     `<p style="margin:0 0 6px;color:#444">${l.beds} bedrooms · ${esc(l.bathDisplay)} bathrooms (${esc(l.bathDetail)}) · ${esc(l.sqft)} square feet</p>`
   );
@@ -364,6 +366,9 @@ export function renderAfhInventory(
       `<p style="margin-top:16px"><a href="/afh-club/listings" style="color:#1a365d">All adult family homes for sale in Washington</a></p>`
     );
   }
+  html.push(
+    `<p style="margin-top:8px"><a href="/afh-club/afh-property-classifications" style="color:#1a365d">What the AFH labels on these listings mean, and how to verify them</a></p>`
+  );
   if (!scope.sold) {
     html.push(
       `<p style="margin-top:8px"><a href="/afh-club/sold" style="color:#1a365d">Recently sold adult family homes in Washington</a></p>`

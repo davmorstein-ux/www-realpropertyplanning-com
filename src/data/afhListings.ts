@@ -93,7 +93,7 @@ export const AFH_STATUS_LABELS: Record<AFHStatus, string> = {
   licensedNotOperating: "Licensed AFH — no residents",
   former: "Former AFH",
   afhReady: "AFH-ready (WABO)",
-  opportunity: "AFH opportunity",
+  opportunity: "AFH potential — not verified",
 };
 
 export const AFH_SOURCE_LABELS: Record<AFHListingSource, string> = {

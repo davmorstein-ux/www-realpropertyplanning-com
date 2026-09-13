@@ -486,7 +486,11 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   },
   {
     path: "/afh-club/wabo-technical-guide",
-    links: ["/afh-club/wabo-inspection-guide"],
+    links: ["/afh-club/wabo-inspection-guide", "/afh-club/afh-property-classifications"],
+  },
+  {
+    path: "/afh-club/afh-property-classifications",
+    links: ["/afh-club/wabo-technical-guide", "/afh-club/listings", "/afh-club/sold"],
   },
   {
     path: "/afh-submit",

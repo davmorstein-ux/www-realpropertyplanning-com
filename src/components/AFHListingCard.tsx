@@ -288,7 +288,9 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
 
       {/* Classification: what the home's licensing status is and whether the business conveys */}
       <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", alignItems: "center" }}>
-        <span
+        <Link
+          to="/afh-club/afh-property-classifications"
+          title="What this label means and how it was verified"
           style={{
             fontSize: "11px",
             fontWeight: 700,
@@ -298,10 +300,11 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
             border: "1px solid #0a5648",
             borderRadius: "4px",
             padding: "3px 8px",
+            textDecoration: "none",
           }}
         >
           {afhClassification(listing)}
-        </span>
+        </Link>
         {listing.linkedMls && (
           <span style={{ fontSize: "12px", color: GRAY_TEXT }}>
             {listing.listingType === "business" ? "Real estate" : "Business"} listed separately — MLS# {listing.linkedMls}

@@ -48,6 +48,12 @@ const TOPICS = [
     description: "The technical deep-dive: what the WABO checklist covers, common delays, and why passing does not mean licensed.",
   },
   {
+    title: "Is It Really an Adult Family Home?",
+    href: "/afh-club/afh-property-classifications",
+    img: "/afh-cube-buying.webp",
+    description: "How to read 'AFH', 'AFH-ready', 'WABO-approved' and 'potential AFH' in a listing, the five labels AFH Club uses, and the documents to request before you buy.",
+  },
+  {
     title: "How to Check DSHS Violation History",
     href: "/afh-club/violation-history-lookup",
     img: "/afh-violation-history-cover.webp",
@@ -170,6 +176,12 @@ const AFHResources = () => (
             href: "/afh-club/wabo-technical-guide",
             img: "/wabo-technical-cover.webp",
             placeholder: "#39342f",
+          },
+          {
+            title: "Is It Really an Adult Family Home?",
+            href: "/afh-club/afh-property-classifications",
+            img: "/afh-cube-buying.webp",
+            placeholder: "#3a3f36",
           },
           {
             title: "How to Check DSHS Violation History",
