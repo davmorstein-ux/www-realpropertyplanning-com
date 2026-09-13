@@ -19,7 +19,7 @@
 import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { listingsForFacility } from "../afhAddressMatch";
-import { formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "../afhListings";
+import { afhListings, formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "../afhListings";
 
 /* ------------------------------------------------------------------ */
 /* Minimal local types (kept independent of ./types to avoid Vite-only  */
@@ -396,7 +396,134 @@ function buildFacilityPage(entry: CityIndexEntry, f: Facility): PrerenderedRoute
   return { route, title, description, body: parts.join("") };
 }
 
-function buildHubPage(index: CityIndexEntry[], retrievedAt: string): PrerenderedRoute {
+interface CountyChecked {
+  county: string;
+  slug: string;
+  facilityCount: number;
+  totalBeds: number;
+  retrievedAt: string;
+}
+
+const REAL_ESTATE_COUNTY_PAGES: Record<string, string> = {
+  king: "/counties/king",
+  pierce: "/counties/pierce",
+  snohomish: "/counties/snohomish",
+  kitsap: "/counties/kitsap",
+};
+
+const pill = (href: string, label: string, count: number, empty: boolean) =>
+  `<a href="${attr(href)}" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;margin:0 8px 8px 0;border-radius:999px;border:1px solid ${
+    empty ? "#d9dede" : "#0a5648"
+  };background:${empty ? "#f5f5f5" : "#fff"};color:${empty ? "#6b7280" : "#0a5648"};font-weight:600;text-decoration:none">${esc(label)} <span style="font-weight:500;color:${
+    empty ? "#9ca3af" : "#374151"
+  };font-size:0.9em">${num(count)}</span></a>`;
+
+const countyPills = (checked: CountyChecked[], currentSlug?: string) =>
+  `<nav aria-label="Counties" style="margin:8px 0 16px">` +
+  [...checked]
+    .filter((c) => c.slug !== currentSlug)
+    .sort((x, y) => y.facilityCount - x.facilityCount || x.county.localeCompare(y.county))
+    .map((c) => pill(`/afh-club/homes/county/${c.slug}`, c.county, c.facilityCount, c.facilityCount === 0))
+    .join("") +
+  `</nav>`;
+
+function buildCountyPage(c: CountyChecked, index: CityIndexEntry[], checked: CountyChecked[]): PrerenderedRoute {
+  const route = `/afh-club/homes/county/${c.slug}`;
+  const cities = index
+    .filter((x) => (x.counties ?? [x.county]).some((n) => n.toLowerCase() === c.county.toLowerCase()))
+    .sort((x, y) => y.facilityCount - x.facilityCount);
+  const cityNames = new Set(cities.map((x) => x.city.toLowerCase()));
+  const sales = afhListings.filter((l) => cityNames.has(l.city.toLowerCase()));
+  const live = sales.filter((l) => l.marketStatus === "active" || l.marketStatus === "pending");
+  const sold = sales.filter((l) => l.marketStatus === "sold");
+  const dd = cities.reduce((s, x) => s + x.developmentalDisabilities, 0);
+  const bs = cities.reduce((s, x) => s + x.behaviorSupport, 0);
+  const pp = cities.reduce((s, x) => s + x.privatePay, 0);
+
+  const title = `Licensed Adult Family Homes in ${c.county} County, WA | Real Property Planning`;
+  const description =
+    c.facilityCount > 0
+      ? `${num(c.facilityCount)} licensed adult family homes with ${num(c.totalBeds)} beds across ${cities.length} ${plural(cities.length, "city", "cities")} in ${c.county} County, Washington, from DSHS licensing records. Capacity, specialty designations, Medicaid status, and inspection history for each home.`
+      : `DSHS licensing records show no licensed adult family homes in ${c.county} County, Washington, as of ${longDate(c.retrievedAt)}. Nearby counties and statewide options.`;
+
+  const parts: string[] = [WRAP_OPEN, h1(`Licensed adult family homes in ${c.county} County`)];
+  if (c.facilityCount > 0) {
+    parts.push(
+      p(
+        `${esc(c.county)} County has <strong>${num(c.facilityCount)} licensed adult family homes with ${num(c.totalBeds)} licensed beds</strong> across ${cities.length} ${plural(cities.length, "city", "cities")}, according to Washington State DSHS licensing records current as of ${longDate(c.retrievedAt)}. ${num(dd)} carry a developmental-disabilities designation, ${num(bs)} hold a specialized behavior support contract, and ${num(pp)} are private-pay only.`,
+      ),
+    );
+    parts.push(h2(`Cities in ${c.county} County`));
+    parts.push(
+      `<ul style="padding-left:20px">` +
+        cities
+          .map(
+            (x) =>
+              `<li style="margin:0 0 6px">${a(`/afh-club/homes/${x.citySlug}`, x.city)} — ${num(x.facilityCount)} ${plural(x.facilityCount, "home", "homes")}, ${num(x.totalBeds)} beds${
+                (x.counties?.length ?? 1) > 1 ? ` (spans ${x.counties!.join(" and ")} counties)` : ""
+              }</li>`,
+          )
+          .join("") +
+        `</ul>`,
+    );
+  } else {
+    parts.push(
+      p(
+        `DSHS licensing records show <strong>no licensed adult family homes in ${esc(c.county)} County</strong> as of ${longDate(c.retrievedAt)}. This county was checked, not skipped; the result was empty. Families placing a relative here usually look to the nearest counties with licensed homes, listed below, or to other licensed care settings.`,
+      ),
+    );
+  }
+  if (live.length || sold.length) {
+    parts.push(h2(`Adult family homes for sale and recently sold in ${c.county} County`));
+    if (live.length)
+      parts.push(
+        p(
+          `<strong>${live.length} on the market:</strong> ` +
+            live.map((l) => `${a(`/afh-club/listings/${listingSlug(l)}`, `${l.city} ${l.price}`)} (${esc(afhClassification(l))})`).join(" · "),
+        ),
+      );
+    if (sold.length)
+      parts.push(
+        p(
+          `<strong>${sold.length} recently sold:</strong> ` +
+            sold.map((l) => `${a(`/afh-club/listings/${listingSlug(l)}`, `${l.city} ${l.soldPrice ?? l.price}`)}${l.soldDate ? ` (${longDate(l.soldDate)})` : ""}`).join(" · "),
+        ),
+      );
+    parts.push(p(`${a("/afh-club/listings", "All listings statewide")} · ${a("/afh-club/sold", "All closed sales")}`));
+  }
+  const re = REAL_ESTATE_COUNTY_PAGES[c.slug];
+  if (re) parts.push(p(a(re, `Real estate, probate, and senior-transition help in ${c.county} County`)));
+  parts.push(h2("Other counties"));
+  parts.push(countyPills(checked, c.slug));
+  parts.push(p(a("/afh-club/homes", "All licensed adult family homes in Washington by city →")));
+  parts.push(h2("About this data"));
+  parts.push(sourceNote(c.retrievedAt));
+  parts.push(
+    ld({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: `Licensed adult family homes in ${c.county} County, Washington, by city`,
+      numberOfItems: cities.length,
+      itemListElement: cities.map((x, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${x.city}, WA — ${x.facilityCount} licensed adult family homes`,
+        url: `${SITE}/afh-club/homes/${x.citySlug}`,
+      })),
+    }),
+    ld(
+      breadcrumbs([
+        { name: "AFH Club", url: "/afh-club" },
+        { name: "Adult Family Homes", url: "/afh-club/homes" },
+        { name: `${c.county} County`, url: route },
+      ]),
+    ),
+    WRAP_CLOSE,
+  );
+  return { route, title, description, body: parts.join("") };
+}
+
+function buildHubPage(index: CityIndexEntry[], retrievedAt: string, checked: CountyChecked[] = []): PrerenderedRoute {
   const route = "/afh-club/homes";
   const total = index.reduce((s, c) => s + c.facilityCount, 0);
   const beds = index.reduce((s, c) => s + c.totalBeds, 0);
@@ -412,15 +539,21 @@ function buildHubPage(index: CityIndexEntry[], retrievedAt: string): Prerendered
   parts.push(
     p(
       esc(
-        `This directory lists ${num(total)} licensed adult family homes with ${num(beds)} licensed beds across ${index.length} cities in ${countyNames.length > 1 ? countyNames.slice(0, -1).join(", ") + ", and " + countyNames.at(-1) : countyNames[0]} ${plural(countyNames.length, "County", "counties")}, Washington, from Washington State DSHS licensing records current as of ${longDate(
+        `This directory lists ${num(total)} licensed adult family homes with ${num(beds)} licensed beds across ${index.length} cities in ${countyNames.length} of Washington's 39 counties, from Washington State DSHS licensing records current as of ${longDate(
           retrievedAt,
-        )}. Each city page lists every licensed home with capacity, specialty designations, Medicaid status, and a link to its DSHS record.`,
+        )}. All 39 counties were checked${checked.length ? `; ${checked.filter((c) => c.facilityCount === 0).length} have no licensed homes` : ""}. Each city page lists every licensed home with capacity, specialty designations, Medicaid status, and a link to its DSHS record.`,
       ),
     ),
   );
+  if (checked.length) {
+    parts.push(h2("Browse by county"));
+    parts.push(countyPills(checked));
+  }
   for (const { county, cities } of byCounty) {
     const n = cities.reduce((s, c) => s + c.facilityCount, 0);
-    parts.push(h2(`${county} County — ${num(n)} homes in ${cities.length} cities`));
+    parts.push(
+      `<h2 style="font-size:1.3rem;margin:28px 0 8px">${a(`/afh-club/homes/county/${county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, `${county} County`)} — ${num(n)} ${plural(n, "home", "homes")} in ${cities.length} ${plural(cities.length, "city", "cities")}</h2>`,
+    );
     parts.push(
       `<ul style="columns:2;padding-left:20px">` +
         cities
@@ -514,6 +647,13 @@ export function buildAfhDirectoryRoutes(dataDir: string): PrerenderedRoute[] {
     for (const f of facilities) out.push(buildFacilityPage(entry, f));
   }
 
-  out.unshift(buildHubPage(index, latest));
+  let checked: CountyChecked[] = [];
+  try {
+    checked = JSON.parse(readFileSync(path.join(dataDir, "counties.json"), "utf8")) as CountyChecked[];
+  } catch {
+    /* manifest absent — hub renders without the county row */
+  }
+  for (const c of checked) out.push(buildCountyPage(c, index, checked));
+  out.unshift(buildHubPage(index, latest, checked));
   return out;
 }

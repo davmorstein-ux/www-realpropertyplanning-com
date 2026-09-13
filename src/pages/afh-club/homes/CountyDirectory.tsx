@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import { counties, countyIndex } from "@/data/afh/directory";
+import { counties, countyIndex, countiesChecked } from "@/data/afh/directory";
 
 const GREEN = "#0a5648";
 const BORDER = "#d9dede";
@@ -54,10 +54,52 @@ const CountyDirectory = () => {
                 <strong>
                   {totalHomes.toLocaleString()} licensed homes and {totalBeds.toLocaleString()} licensed beds
                 </strong>{" "}
-                across {countyIndex.length} cities in {countyGroups.map((c) => c.county).join(" and ")} County,
-                assembled from Washington State DSHS public records. Choose a city to see every licensed home in it,
-                with capacity, specialty designations, and Medicaid status.
+                across {countyIndex.length} cities in {countyGroups.length} of Washington's 39 counties, assembled
+                from Washington State DSHS public records. All 39 counties were checked; {countiesChecked.filter((c) => c.facilityCount === 0).length} have no licensed
+                homes. Choose a county or a city to see every licensed home in it, with capacity, specialty
+                designations, and Medicaid status.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-8 md:py-10 bg-background">
+          <div className="container px-5 md:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-4">Browse by county</h2>
+              <nav aria-label="Counties" style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+                {[...countiesChecked]
+                  .sort((a, b) => b.facilityCount - a.facilityCount || a.county.localeCompare(b.county))
+                  .map((c) => {
+                    const empty = c.facilityCount === 0;
+                    return (
+                      <Link
+                        key={c.slug}
+                        to={`/afh-club/homes/county/${c.slug}`}
+                        title={empty ? `${c.county} County was checked and has no licensed adult family homes` : `${c.facilityCount} licensed homes in ${c.county} County`}
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "8px",
+                          minHeight: "44px",
+                          padding: "8px 16px",
+                          borderRadius: "999px",
+                          border: `1px solid ${empty ? BORDER : GREEN}`,
+                          background: empty ? "#f5f5f5" : "#fff",
+                          color: empty ? "#6b7280" : GREEN,
+                          fontSize: "16px",
+                          fontWeight: 600,
+                          textDecoration: "none",
+                        }}
+                      >
+                        {c.county}
+                        <span style={{ fontWeight: 500, color: empty ? "#9ca3af" : "#374151", fontSize: "14px" }}>
+                          {empty ? "0" : c.facilityCount.toLocaleString()}
+                        </span>
+                      </Link>
+                    );
+                  })}
+              </nav>
             </div>
           </div>
         </section>
@@ -79,7 +121,9 @@ const CountyDirectory = () => {
                         margin: "0 0 4px",
                       }}
                     >
-                      {group.county} County
+                      <Link to={`/afh-club/homes/county/${group.county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} style={{ color: "inherit", textDecoration: "none" }}>
+                        {group.county} County
+                      </Link>
                     </h2>
                   )}
                   {countyGroups.length > 1 && (

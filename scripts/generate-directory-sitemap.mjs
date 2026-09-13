@@ -52,6 +52,15 @@ const cityFiles = readdirSync(citiesDir).filter((f) => f.endsWith(".json"));
 
 const lines = [START];
 lines.push(url("/afh-club/homes", "0.8"));
+let countyCount = 0;
+try {
+  for (const c of JSON.parse(readFileSync(join(root, "src", "data", "afh", "counties.json"), "utf8"))) {
+    lines.push(url(`/afh-club/homes/county/${c.slug}`, "0.7"));
+    countyCount++;
+  }
+} catch {
+  /* no manifest */
+}
 
 let cityCount = 0;
 let filterCount = 0;
@@ -99,7 +108,7 @@ writeFileSync(SITEMAP, next);
 
 const total = 1 + cityCount + filterCount + facilityCount;
 console.error(`sitemap: ${total} directory URLs written`);
-console.error(`  1 hub + ${cityCount} cities + ${filterCount} filter pages` +
+console.error(`  1 hub + ${countyCount} counties + ${cityCount} cities + ${filterCount} filter pages` +
   (includeFacilities ? ` + ${facilityCount} facility pages` : ""));
 console.error(`  ${filterSkipped} filter pages skipped (fewer than ${MIN_FILTER_RESULTS} homes)`);
 if (!includeFacilities) {

@@ -13,6 +13,7 @@
  */
 
 import countyIndexRaw from "./county-index.json";
+import countiesRaw from "./counties.json";
 import type { AFHFacility } from "./types";
 
 export interface AFHCityIndexEntry {
@@ -154,6 +155,21 @@ export function getCountySummary(countyName: string): AFHCountySummary | null {
 }
 
 /** Counties represented in the data, largest first. */
+/** Every county checked against DSHS, including those with no licensed homes. */
+export interface AFHCountyChecked {
+  county: string;
+  slug: string;
+  facilityCount: number;
+  totalBeds: number;
+  retrievedAt: string;
+}
+export const countiesChecked: AFHCountyChecked[] = countiesRaw as AFHCountyChecked[];
+
+export const countySlug = (name: string) => name.toLowerCase().replace(/\s+county$/, "").replace(/[^a-z0-9]+/g, "-");
+
+export const getCountyChecked = (slug: string): AFHCountyChecked | null =>
+  countiesChecked.find((c) => c.slug === slug) ?? null;
+
 export const counties = (): AFHCountySummary[] =>
   [...new Set(countyIndex.map((c) => c.county))]
     .map((n) => getCountySummary(n)!)

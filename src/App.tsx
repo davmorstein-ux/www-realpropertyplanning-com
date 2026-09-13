@@ -243,6 +243,7 @@ const AFHForSaleLakewood = lazy(() => import("./pages/AFHForSaleLakewood"));
 const AFHForSaleBonneyLake = lazy(() => import("./pages/AFHForSaleBonneyLake"));
 const AFHForSaleMukilteo = lazy(() => import("./pages/AFHForSaleMukilteo"));
 const AFHSellingBusinessAtRetirement = lazy(() => import("./pages/AFHSellingBusinessAtRetirement"));
+const AFHCountyHomes = lazy(() => import("./pages/afh-club/homes/CountyHomes"));
 const AFHCountyDirectory = lazy(() => import("./pages/afh-club/homes/CountyDirectory"));
 const AFHCityDirectory = lazy(() => import("./pages/afh-club/homes/CityDirectory"));
 const AFHCitySegment = lazy(() => import("./pages/afh-club/homes/CitySegment"));
@@ -1244,6 +1245,7 @@ const App = () => (
             element={<Navigate to="/afh-club/homes/kirkland" replace />}
           />
           <Route path="/afh-club/homes" element={<AFHCountyDirectory />} />
+          <Route path="/afh-club/homes/county/:countySlug" element={<AFHCountyHomes />} />
           <Route path="/afh-club/homes/:citySlug" element={<AFHCityDirectory />} />
           <Route path="/afh-club/homes/:citySlug/:segment" element={<AFHCitySegment />} />
           <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />
