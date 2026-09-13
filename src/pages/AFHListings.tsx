@@ -407,6 +407,50 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
             padding: "2rem 1.5rem 1rem",
           }}
         >
+          {/* Before-you-browse callout: every listing's label points at this guide, but a buyer who has never
+              heard of the labels needs it in front of them before the first card. */}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "1rem 1.5rem",
+              padding: "1.25rem 1.5rem",
+              marginBottom: "1.5rem",
+              background: "#0a5648",
+              borderRadius: "12px",
+              color: WHITE,
+            }}
+          >
+            <div style={{ flex: "1 1 360px" }}>
+              <p style={{ margin: "0 0 4px", fontSize: "13px", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.85 }}>
+                Before you browse
+              </p>
+              <p style={{ margin: 0, fontSize: "18px", lineHeight: 1.5, fontWeight: 600 }}>
+                "Adult family home," "AFH-ready," and "potential AFH" are not the same thing. Know what each label means
+                and what to ask for before you rely on a listing.
+              </p>
+            </div>
+            <Link
+              to="/afh-club/afh-property-classifications"
+              style={{
+                flex: "0 0 auto",
+                display: "inline-flex",
+                alignItems: "center",
+                minHeight: "52px",
+                padding: "0 1.5rem",
+                background: WHITE,
+                color: "#0a5648",
+                fontSize: "17px",
+                fontWeight: 700,
+                borderRadius: "8px",
+                textDecoration: "none",
+              }}
+            >
+              Is it really an AFH? Read the guide →
+            </Link>
+          </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {shown.length === 0 && (
               <p style={{ fontSize: "16px", color: SLATE, padding: "1rem 0" }}>

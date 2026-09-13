@@ -335,6 +335,9 @@ export function renderAfhInventory(
 
   const html: string[] = [];
   html.push(`<section style="margin:0 0 28px">`);
+  html.push(
+    `<p style="margin:0 0 16px;padding:14px 18px;background:#0a5648;color:#fff;border-radius:10px;font-size:1rem;line-height:1.5"><strong>Before you browse:</strong> "adult family home," "AFH-ready," and "potential AFH" are not the same thing. <a href="/afh-club/afh-property-classifications" style="color:#fff;font-weight:700">Read what each label means and what to ask for →</a></p>`
+  );
   html.push(`<h2 style="font-size:1.3rem;margin:0 0 8px">${scope.sold ? "Closed sales" : "Currently available"}</h2>`);
   html.push(`<p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0 0 6px">${esc(countSentence(listings, scope))}</p>`);
   if (scope.sold && listings.length > 0) {
