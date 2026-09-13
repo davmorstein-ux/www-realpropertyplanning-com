@@ -7,9 +7,10 @@ import { mkdir, readFile, writeFile, stat } from "node:fs/promises";
 import { componentTagger } from "lovable-tagger";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
-import { buildAfhDirectoryRoutes } from "./src/data/afh/prerender";
+import { buildAfhDirectoryRoutes, loadAllFacilities } from "./src/data/afh/prerender";
 import { articleAuthor, articlePublisher } from "./src/lib/schema";
 import { renderAfhInventory, buildAfhListingRoutes, type AFHInventoryScope } from "./src/data/afhInventoryPrerender";
+import { cityRoutes as afhCityRoutes } from "./src/data/afhCityPages";
 
 // Skip optimization for images smaller than 10KB
 const MIN_OPTIMIZE_BYTES = 10 * 1024;
@@ -1812,6 +1813,70 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerA: "Mukilteo's current AFH listings are shown on this page. As a smaller, waterfront Snohomish County community with strong ties to Boeing's Everett facility, Mukilteo has a compact but genuine AFH market.",
     intro: "Mukilteo is a smaller, waterfront Snohomish County community shaped by its ferry terminal, Boeing's nearby Everett facility, and a genuine sense of small-town character.",
   },
+  "/afh-club/for-sale/tacoma-wa": {
+    title: "Adult Family Homes For Sale in Tacoma, WA | Real Property Planning",
+    description: "Adult Family Homes for sale in Tacoma, WA — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
+    h1: "Adult Family Homes For Sale in Tacoma, WA",
+    afhInventory: { city: "Tacoma" },
+    quickAnswerQ: "What Adult Family Homes are for sale in Tacoma, WA?",
+    quickAnswerA: "Tacoma has the deepest Adult Family Home inventory in Pierce County, and current listings are shown on this page. A large stock of single-level mid-century homes, a big senior population, and proximity to the Tacoma hospitals make it one of the most active AFH markets in Washington.",
+    intro: "Tacoma is where much of Pierce County's adult family home activity happens. The city's older neighborhoods are full of one-story ramblers with the room counts operators look for, prices sit well below King County, and the hospitals, home-health agencies, and Medicaid case-management infrastructure that AFH operators depend on are all close.",
+    faq: [
+      { q: "What Adult Family Homes are for sale in Tacoma, WA?", a: "Tacoma has the deepest Adult Family Home inventory in Pierce County, and current listings are shown on this page. A large stock of single-level mid-century homes, a big senior population, and proximity to the Tacoma hospitals make it one of the most active AFH markets in Washington." },
+      { q: "How much does an Adult Family Home cost in Tacoma?", a: "Tacoma AFH real estate typically trades well below King County. Recent closed sales on this page show what licensed, formerly licensed, and WABO-ready homes actually sold for; the business, where it conveys, is usually priced separately." },
+      { q: "Which Tacoma neighborhoods have the most adult family homes?", a: "North Tacoma, West Tacoma, Browns Point, and the Parkland and South Tacoma areas all carry meaningful AFH activity. Single-level homes with four or more bedrooms and level entries are the common thread." },
+      { q: "Is Tacoma a good place to open an adult family home?", a: "Demand is strong and the supporting infrastructure is in place, but the market is competitive and the city has many established operators. Buying an existing licensed home through Change of Ownership is often faster than converting a house from scratch." },
+      { q: "How do I get notified about new AFH listings in Tacoma?", a: "Use the alert form on this page, or contact David Stein directly. He tracks Tacoma and the wider Pierce County AFH market and can notify you when a matching property lists." },
+    ],
+  },
+  "/afh-club/for-sale/kent-wa": {
+    title: "Adult Family Homes For Sale in Kent, WA | Real Property Planning",
+    description: "Adult Family Homes for sale in Kent, WA — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
+    h1: "Adult Family Homes For Sale in Kent, WA",
+    afhInventory: { city: "Kent" },
+    quickAnswerQ: "What Adult Family Homes are for sale in Kent, WA?",
+    quickAnswerA: "Kent has steady Adult Family Home listing activity across its West Hill and East Hill neighborhoods, and current listings are shown on this page. Its position between Seattle and Tacoma, with a large stock of affordable single-level homes, keeps it popular with owner-operators.",
+    intro: "Kent sits in the middle of the South King County corridor that produces a large share of the region's adult family home sales. West Hill and East Hill both carry established AFH neighborhoods, the housing stock skews toward the ramblers operators prefer, and prices remain below Seattle and the Eastside.",
+    faq: [
+      { q: "What Adult Family Homes are for sale in Kent, WA?", a: "Kent has steady Adult Family Home listing activity across its West Hill and East Hill neighborhoods, and current listings are shown on this page." },
+      { q: "How much does an Adult Family Home cost in Kent?", a: "Kent AFH real estate usually prices between Tacoma and the Eastside. The closed sales on this page show recent results, and business prices, where disclosed, are noted on each sale." },
+      { q: "Are Kent AFH sales usually real estate only, or real estate plus business?", a: "Both are common, and many Kent sales close as two transactions on the same day. The classification label on each listing says whether the operating business conveys, is listed separately, or is not included." },
+      { q: "Is Kent a good market for a first adult family home?", a: "Kent is one of the more accessible South King County markets for a first-time operator: prices are moderate, the licensing infrastructure is nearby, and there is a deep pool of experienced caregivers in the area." },
+      { q: "How do I get notified about new AFH listings in Kent?", a: "Use the alert form on this page, or contact David Stein directly. He tracks Kent and the South King County AFH market and can notify you when a matching property lists." },
+    ],
+  },
+  "/afh-club/for-sale/federal-way-wa": {
+    title: "Adult Family Homes For Sale in Federal Way, WA | Real Property Planning",
+    description: "Adult Family Homes for sale in Federal Way, WA — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
+    h1: "Adult Family Homes For Sale in Federal Way, WA",
+    afhInventory: { city: "Federal Way" },
+    quickAnswerQ: "What Adult Family Homes are for sale in Federal Way, WA?",
+    quickAnswerA: "Federal Way is one of the most active Adult Family Home markets in South King County, and current listings are shown on this page. Large 1960s and 1970s ramblers, a big senior population, and easy freeway access keep both buyers and operators interested.",
+    intro: "Federal Way has quietly become one of the busiest adult family home markets south of Seattle. The city's Dash Point, Twin Lakes, and Steel Lake neighborhoods are full of the single-level homes that convert well, and the closed sales on this page show homes moving from formerly licensed to relicensed within a year.",
+    faq: [
+      { q: "What Adult Family Homes are for sale in Federal Way, WA?", a: "Federal Way is one of the most active Adult Family Home markets in South King County, and current listings are shown on this page." },
+      { q: "How much does an Adult Family Home cost in Federal Way?", a: "Recent Federal Way sales on this page ranged widely depending on whether the home was operating, formerly licensed, or WABO-ready. Sold price per bedroom is shown for each closed sale." },
+      { q: "Which Federal Way neighborhoods have adult family homes?", a: "Dash Point, Twin Lakes, Steel Lake, and the Redondo border with Des Moines all have established AFH activity." },
+      { q: "Can a formerly licensed Federal Way home be relicensed quickly?", a: "Often, if the inspected floor plan is unchanged and later work was permitted. One Federal Way home on this page went from formerly licensed to relicensed under a new provider within months of closing." },
+      { q: "How do I get notified about new AFH listings in Federal Way?", a: "Use the alert form on this page, or contact David Stein directly. He tracks Federal Way and the South King County AFH market and can notify you when a matching property lists." },
+    ],
+  },
+  "/afh-club/for-sale/kennewick-wa": {
+    title: "Adult Family Homes For Sale in Kennewick, WA | Real Property Planning",
+    description: "Adult Family Homes for sale in Kennewick, WA — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
+    h1: "Adult Family Homes For Sale in Kennewick, WA",
+    afhInventory: { city: "Kennewick" },
+    quickAnswerQ: "What Adult Family Homes are for sale in Kennewick, WA?",
+    quickAnswerA: "Kennewick and the Tri-Cities have a growing Adult Family Home market with high occupancy and less competition than Puget Sound, and any current listings are shown on this page. Recent closed sales include a licensed home that had operated under the same family since 2008.",
+    intro: "Kennewick, with Pasco and Richland, forms a Tri-Cities adult family home market that behaves differently from Western Washington. Occupancy runs high, the retiree population is growing, and there are far fewer homes on the market at any given time, so a licensed home that lists tends to draw regional attention quickly.",
+    faq: [
+      { q: "What Adult Family Homes are for sale in Kennewick, WA?", a: "Kennewick and the Tri-Cities have a growing Adult Family Home market with high occupancy and less competition than Puget Sound. Any current listings are shown on this page, and recent closed sales appear below them." },
+      { q: "How much does an Adult Family Home cost in Kennewick?", a: "The most recent Kennewick sale on this page was a licensed home operating since 2008 that sold in the high $800,000s for the real estate, with the business offered separately. Tri-Cities AFH prices generally sit below Puget Sound for comparable homes." },
+      { q: "Is the Tri-Cities a good market for an adult family home?", a: "Operators report high occupancy and strong demand from a growing retiree population, with less competition than the Seattle-Tacoma corridor. The trade-off is thin inventory: opportunities to buy an operating home are infrequent." },
+      { q: "Do you cover Pasco and Richland as well?", a: "Yes. Tri-Cities listings and sales are grouped here until Pasco and Richland have enough activity for their own pages." },
+      { q: "How do I get notified about new AFH listings in Kennewick?", a: "Use the alert form on this page, or contact David Stein directly. He tracks the Tri-Cities AFH market and can notify you when a matching property lists." },
+    ],
+  },
   "/afh-club/selling-your-business-at-retirement": {
     title: "Selling Your Adult Family Home Business at Retirement | Real Property Planning",
     description: "Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, navigate the DSHS Change of Ownership process, and value your AFH accurately.",
@@ -2180,11 +2245,13 @@ const routeMetadataPlugin = {
        src/data/afhListings.ts, including sold / expired records so a listing's
        URL keeps resolving after it leaves the market. See
        src/data/afhInventoryPrerender.ts. */
-    const cityRoutes: Record<string, string> = {};
+    const cityRoutes = afhCityRoutes();
     for (const [route, meta] of Object.entries(ROUTE_METADATA)) {
-      if (meta.afhInventory?.city) cityRoutes[meta.afhInventory.city.toLowerCase()] = route;
+      if (meta.afhInventory?.city && !cityRoutes[meta.afhInventory.city.toLowerCase()]) {
+        throw new Error(`${route} has afhInventory.city "${meta.afhInventory.city}" but src/data/afhCityPages.ts has no entry for it.`);
+      }
     }
-    const listingRoutes = buildAfhListingRoutes(cityRoutes);
+    const listingRoutes = buildAfhListingRoutes(cityRoutes, loadAllFacilities(path.resolve(__dirname, "src/data/afh")));
     await Promise.all(
       listingRoutes.map(async ({ route, title, description, body }) => {
         const routeHtml = applyMetadata(baseHtml, route, { title, description }, { injectSsg: false }).replace(

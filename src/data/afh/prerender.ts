@@ -18,6 +18,8 @@
 
 import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
+import { listingsForFacility } from "../afhAddressMatch";
+import { formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "../afhListings";
 
 /* ------------------------------------------------------------------ */
 /* Minimal local types (kept independent of ./types to avoid Vite-only  */
@@ -352,6 +354,29 @@ function buildFacilityPage(entry: CityIndexEntry, f: Facility): PrerenderedRoute
         : "DSHS shows no inspection or enforcement documents on file for this home as of the retrieval date above.",
     ),
   );
+  const sales = listingsForFacility(f);
+  if (sales.length) {
+    parts.push(h2("Sales and listing history"));
+    parts.push(
+      p(
+        `This address has appeared in AFH Club's for-sale records. The DSHS license belongs to the provider, not the house, so a sale means a new provider licensed the home through Change of Ownership or the home left the licensed pool.`,
+      ),
+    );
+    parts.push(
+      `<ul style="padding-left:20px;margin:0 0 16px">` +
+        sales
+          .map((l) => {
+            const when = l.soldDate ?? l.statusChanged ?? l.lastVerified;
+            const what =
+              l.marketStatus === "sold" && l.soldPrice
+                ? `Sold ${esc(l.soldPrice)} on ${longDate(when)} (listed at ${esc(l.price)})`
+                : `${AFH_MARKET_STATUS_LABELS[l.marketStatus]} at ${esc(l.price)} as of ${longDate(l.lastVerified)}`;
+            return `<li style="margin:0 0 6px">${a(`/afh-club/listings/${listingSlug(l)}`, what)} — ${esc(afhClassification(l))}, NWMLS #${esc(l.mlsNum)}</li>`;
+          })
+          .join("") +
+        `</ul>`,
+    );
+  }
   parts.push(p(a(`/afh-club/homes/${citySlug}`, `All ${entry.facilityCount} licensed adult family homes in ${ad.city} →`)));
   parts.push(h2("About this data"));
   parts.push(sourceNote(f.retrievedAt));
@@ -445,6 +470,20 @@ function buildHubPage(index: CityIndexEntry[], retrievedAt: string): Prerendered
  *
  * @param dataDir absolute path to src/data/afh
  */
+/** Every licensed home across the county files, for address matching against listings. */
+export function loadAllFacilities(dataDir: string): Facility[] {
+  const index = JSON.parse(readFileSync(path.join(dataDir, "county-index.json"), "utf8")) as CityIndexEntry[];
+  const out: Facility[] = [];
+  for (const entry of index) {
+    try {
+      out.push(...(JSON.parse(readFileSync(path.join(dataDir, "cities", `${entry.citySlug}.json`), "utf8")) as Facility[]));
+    } catch {
+      /* city file missing — skip */
+    }
+  }
+  return out;
+}
+
 export function buildAfhDirectoryRoutes(dataDir: string): PrerenderedRoute[] {
   const index = JSON.parse(readFileSync(path.join(dataDir, "county-index.json"), "utf8")) as CityIndexEntry[];
   const citiesDir = path.join(dataDir, "cities");

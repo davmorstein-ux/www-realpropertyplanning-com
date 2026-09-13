@@ -69,6 +69,10 @@ interface NewsletterSignupProps {
   /* Overrides the auto-generated source tag. Use when two forms share a page
      and you need to tell them apart in MailerLite. */
   source?: string;
+  /* Overrides the variant copy for a specific use, e.g. a city listing alert.
+     The signup still lands in the same MailerLite group; the source tag is
+     what tells the alerts apart. */
+  copy?: { heading: string; body: string; cta: string };
 }
 
 /* The edge function holds the MailerLite key and pins the group; this only
@@ -84,7 +88,7 @@ async function subscribeRequest(payload: {
   if (error) throw error;
 }
 
-const NewsletterSignup = ({ variant = "general", source }: NewsletterSignupProps) => {
+const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: NewsletterSignupProps) => {
   const { pathname } = useLocation();
   const [email, setEmail] = useState("");
   /* Honeypot. Real visitors never see this; bots that fill every input trip
@@ -112,7 +116,7 @@ const NewsletterSignup = ({ variant = "general", source }: NewsletterSignupProps
   const inputId = useId();
   const errorId = `${inputId}-error`;
   const hpId = `${inputId}-hp`;
-  const copy = COPY[variant];
+  const copy = copyOverride ?? COPY[variant];
   const tag = source || `${variant}:${pathname}`;
 
   useEffect(() => {

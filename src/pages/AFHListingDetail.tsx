@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,25 +18,13 @@ import {
   type AFHListing,
 } from "@/data/afhListings";
 import { availabilityAnswer, whatIsBeingSold } from "@/data/afhInventoryPrerender";
+import { cityPageByCity } from "@/data/afhCityPages";
+import { cityExists, loadCity } from "@/data/afh/directory";
+import type { AFHFacility } from "@/data/afh/types";
+import { facilityForListing } from "@/data/afhAddressMatch";
 
 const GREEN = "#0a5648";
 
-/** Cities that have a /afh-club/for-sale/<slug> page. Keep in step with ROUTE_METADATA in vite.config.ts. */
-const CITY_PAGES: Record<string, string> = {
-  seattle: "seattle-wa",
-  kirkland: "kirkland-wa",
-  renton: "renton-wa",
-  lynnwood: "lynnwood-wa",
-  edmonds: "edmonds-wa",
-  puyallup: "puyallup-wa",
-  marysville: "marysville-wa",
-  auburn: "auburn-wa",
-  everett: "everett-wa",
-  bellevue: "bellevue-wa",
-  lakewood: "lakewood-wa",
-  "bonney lake": "bonney-lake-wa",
-  mukilteo: "mukilteo-wa",
-};
 
 const STATUS_HEADLINE: Record<AFHListing["marketStatus"], string> = {
   active: "for sale",
@@ -50,6 +39,19 @@ const statusColor = (s: AFHListing["marketStatus"]) => (s === "active" ? GREEN :
 const AFHListingDetail = () => {
   const { slug = "" } = useParams<{ slug: string }>();
   const listing = findListingBySlug(slug);
+  const [facility, setFacility] = useState<AFHFacility | null>(null);
+  useEffect(() => {
+    if (!listing) return;
+    const citySlug = listing.city.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    if (!cityExists(citySlug)) return;
+    let cancelled = false;
+    loadCity(citySlug).then((fs) => {
+      if (!cancelled) setFacility(facilityForListing(listing, fs) ?? null);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [listing]);
   if (!listing) return <NotFound />;
 
   const isUndisclosed = /upon request|undisclosed/i.test(listing.address);
@@ -60,7 +62,7 @@ const AFHListingDetail = () => {
       : listing.listingType === "lease"
         ? "Adult family home for lease"
         : "Adult family home";
-  const citySlug = CITY_PAGES[listing.city.toLowerCase()];
+  const citySlug = cityPageByCity(listing.city)?.slug;
   const canonical = `https://realpropertyplanning.com/afh-club/listings/${slug}`;
   const title = `${typeNoun} ${STATUS_HEADLINE[listing.marketStatus]}: ${heading} | AFH Club`;
   const description = `${heading} — ${afhClassification(listing)}, ${listing.beds} bedrooms, ${listing.sqft} sq ft, ${
@@ -135,6 +137,21 @@ const AFHListingDetail = () => {
                   </tbody>
                 </table>
               </div>
+              {facility && (
+                <div className="max-w-3xl">
+                  <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-3">
+                    DSHS licensing record
+                  </h2>
+                  <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed">
+                    The DSHS locator lists a licensed adult family home at this address:{" "}
+                    <Link to={`/afh-club/homes/${facility.address.citySlug}/${facility.slug}`} className="text-accent underline underline-offset-4 font-semibold">
+                      {facility.displayName}
+                    </Link>
+                    , licensed for {facility.licensedBeds} residents. The licensing record shows the current provider,
+                    capacity, and contracts; it does not show who owns the real estate.
+                  </p>
+                </div>
+              )}
               <div className="max-w-3xl">
                 <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-3">
                   What is — and is not — being sold

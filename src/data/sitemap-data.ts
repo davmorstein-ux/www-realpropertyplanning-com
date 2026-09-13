@@ -49,6 +49,22 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
+    path: "/afh-club/for-sale/tacoma-wa",
+    links: [],
+  },
+  {
+    path: "/afh-club/for-sale/kent-wa",
+    links: [],
+  },
+  {
+    path: "/afh-club/for-sale/federal-way-wa",
+    links: [],
+  },
+  {
+    path: "/afh-club/for-sale/kennewick-wa",
+    links: [],
+  },
+  {
     path: "/afh-club/for-sale/bellevue-wa",
     links: [],
   },

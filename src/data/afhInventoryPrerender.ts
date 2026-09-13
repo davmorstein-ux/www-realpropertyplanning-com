@@ -26,6 +26,8 @@ import {
   type AFHListing,
   type AFHListingType,
 } from "./afhListings";
+import { AFH_CITY_PAGES, cityPageByCity } from "./afhCityPages";
+import { facilityForListing, type FacilityLike } from "./afhAddressMatch";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -412,6 +414,25 @@ export function renderAfhInventory(
     if (listings.length + soldHere.length > 0) html.push(disclaimer([...listings, ...soldHere]));
   }
   if (scope.city) {
+    const page = cityPageByCity(scope.city);
+    const liveHere = listings.filter(isLive).length;
+    if (!scope.sold && liveHere === 0) {
+      html.push(
+        `<p style="margin:16px 0;padding:14px 18px;border:1px solid #e5e5e5;border-radius:10px;background:#fafafa;color:#444;line-height:1.6">Nothing in ${esc(scope.city)} is on the market right now. Adult family homes here list infrequently and sell quickly; the closed sales above show what the market has been doing, and the nearby cities below have current inventory. David Stein can notify you the day a ${esc(scope.city)} home lists.</p>`
+      );
+    }
+    if (page && page.nearby.length) {
+      const items = page.nearby
+        .map((slug) => AFH_CITY_PAGES.find((c) => c.slug === slug))
+        .filter((c): c is NonNullable<typeof c> => !!c)
+        .map((c) => {
+          const live = afhListings.filter((l) => isLive(l) && l.city.toLowerCase() === c.city.toLowerCase()).length;
+          const sold = afhListings.filter((l) => l.marketStatus === "sold" && l.city.toLowerCase() === c.city.toLowerCase()).length;
+          return `<a href="/afh-club/for-sale/${c.slug}" style="color:#1a365d">${esc(c.city)}</a> (${live} on market, ${sold} sold)`;
+        });
+      html.push(`<h3 style="font-size:1.05rem;margin:20px 0 6px">Nearby adult family home markets</h3>`);
+      html.push(`<p style="color:#444;line-height:1.8;margin:0 0 8px">${items.join(" · ")}</p>`);
+    }
     html.push(
       `<p style="margin-top:16px"><a href="/afh-club/listings" style="color:#1a365d">All adult family homes for sale in Washington</a></p>`
     );
@@ -533,8 +554,9 @@ export const availabilityAnswer = (l: AFHListing): string => {
   }
 };
 
-export function buildAfhListingRoutes(cityRoutes: Record<string, string>): AFHListingRoute[] {
+export function buildAfhListingRoutes(cityRoutes: Record<string, string>, facilities: FacilityLike[] = []): AFHListingRoute[] {
   return afhListings.map((l) => {
+    const facility = facilityForListing(l, facilities);
     const route = listingRoute(l);
     const canonical = `${SITE_URL}${route}`;
     const heading = listingHeading(l);
@@ -587,6 +609,12 @@ export function buildAfhListingRoutes(cityRoutes: Record<string, string>): AFHLi
         `</tbody></table>`
     );
     if (l.businessNotes) b.push(`<p style="color:#444;line-height:1.6;margin:0 0 24px">${esc(l.businessNotes)}</p>`);
+    if (facility) {
+      b.push(`<h2 style="font-size:1.3rem;margin:0 0 8px">DSHS licensing record</h2>`);
+      b.push(
+        `<p style="color:#444;line-height:1.7;margin:0 0 24px">The DSHS locator lists a licensed adult family home at this address: <a href="/afh-club/homes/${esc(facility.address.citySlug)}/${esc(facility.slug)}" style="color:#1a365d">${esc(facility.displayName)}</a>, licensed for ${facility.licensedBeds} residents. The licensing record shows the current provider, capacity, and contracts; it does not show who owns the real estate.</p>`
+      );
+    }
     b.push(`<h2 style="font-size:1.3rem;margin:0 0 8px">What is — and is not — being sold</h2>`);
     b.push(`<p style="color:#444;line-height:1.7;margin:0 0 24px">${esc(whatIsBeingSold(l))}</p>`);
     if (l.source !== "nwmls" && l.sourceUrl) {

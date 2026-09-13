@@ -11,6 +11,9 @@ import { soldStats } from "@/data/afhInventoryPrerender";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import { Link } from "react-router-dom";
 import { cityExists, getCityIndexEntry } from "@/data/afh/directory";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import { AFH_CITY_PAGES, cityPageBySlug } from "@/data/afhCityPages";
+import { liveListings as allLive, soldListings as allSold } from "@/data/afhListings";
 
 const GREEN = "#0a5648";
 
@@ -30,6 +33,14 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
   const soldHere = soldListings().filter((l) => l.city.toLowerCase() === city.toLowerCase());
   const soldHereStats = soldStats(soldHere);
   const verified = latestVerified([...cityListings, ...soldHere]);
+  const nearby = (cityPageBySlug(slug)?.nearby ?? [])
+    .map((s) => AFH_CITY_PAGES.find((c) => c.slug === s))
+    .filter((c): c is NonNullable<typeof c> => !!c)
+    .map((c) => ({
+      ...c,
+      live: allLive().filter((l) => l.city.toLowerCase() === c.city.toLowerCase()).length,
+      sold: allSold().filter((l) => l.city.toLowerCase() === c.city.toLowerCase()).length,
+    }));
   const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
   const num = (s: string) => Number(s.replace(/[^0-9.]/g, "")) || 0;
 
@@ -117,10 +128,16 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
               </div>
             ) : (
               <div className="max-w-2xl mx-auto text-center text-foreground/80 text-[17px] leading-relaxed">
-                <p className="mb-6">
-                  Inventory in {city} changes regularly — a specific address isn't always on the market at any given
-                  moment. The fastest way to see what's currently available across {county} County, or to get notified
-                  the moment a {city} property lists, is to browse the full marketplace or reach out directly.
+                <p className="mb-4">
+                  Nothing in {city} is on the market right now. Adult family homes here list infrequently and sell
+                  quickly.{" "}
+                  {soldHere.length > 0
+                    ? `The ${soldHere.length} recent ${soldHere.length === 1 ? "sale" : "sales"} below show what the market has been doing, and `
+                    : "The "}
+                  {nearby.length > 0 ? "nearby cities below have current inventory." : "statewide directory has current inventory."}
+                  {directoryEntry
+                    ? ` ${city} has ${directoryEntry.facilityCount} licensed adult family homes today, so ownership changes do come up.`
+                    : ""}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
@@ -130,10 +147,10 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
                     Browse All AFH Listings
                   </Link>
                   <a
-                    href="tel:+12069003015"
+                    href="#city-alert"
                     className="inline-flex items-center justify-center gap-2 border-2 border-[#0a5648] text-[#0a5648] font-bold px-6 py-3 rounded-lg no-underline"
                   >
-                    Call (206) 900-3015
+                    Get notified when {city} lists
                   </a>
                 </div>
               </div>
@@ -198,6 +215,46 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
                 All adult family home sales in Washington →
               </Link>
             </p>
+          </div>
+        </section>
+
+        {nearby.length > 0 && (
+          <section className="py-8 md:py-10 bg-background">
+            <div className="container px-5 md:px-8">
+              <div className="max-w-3xl mx-auto">
+                <p className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-3">Nearby markets</p>
+                <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-4">
+                  Adult family homes for sale near {city}
+                </h2>
+                <ul className="flex flex-wrap gap-x-6 gap-y-3 text-[17px] md:text-[18px] list-none p-0 m-0">
+                  {nearby.map((c) => (
+                    <li key={c.slug}>
+                      <Link to={`/afh-club/for-sale/${c.slug}`} className="text-accent underline underline-offset-4 font-semibold">
+                        {c.city}
+                      </Link>{" "}
+                      <span className="text-foreground/70">
+                        ({c.live} on market, {c.sold} sold)
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section id="city-alert" className="py-10 md:py-14 bg-cream scroll-mt-32">
+          <div className="container px-5 md:px-8">
+            <div className="max-w-3xl mx-auto">
+              <NewsletterSignup
+                source={`afh-alert:${slug}`}
+                copy={{
+                  heading: `Tell me when an adult family home lists in ${city}`,
+                  body: `An email from David Stein when a ${city} AFH property, business, or lease comes on the market or changes status. Nothing else.`,
+                  cta: "Notify me",
+                }}
+              />
+            </div>
           </div>
         </section>
 

@@ -7,6 +7,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { CONTRACT_LABELS, SPECIALTY_LABELS, type AFHFacility } from "@/data/afh/types";
 import { getCityIndexEntry, loadFacility } from "@/data/afh/directory";
+import { listingsForFacility } from "@/data/afhAddressMatch";
+import { formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "@/data/afhListings";
 
 const GREEN = "#0a5648";
 const BORDER = "#d9dede";
@@ -206,6 +208,34 @@ const FacilityDetail = () => {
                   <Row label="Record retrieved" value={facility.retrievedAt} />
                 </tbody>
               </table>
+
+              {listingsForFacility(facility).length > 0 && (
+                <div className="mt-10">
+                  <p className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-3">Sales and listing history</p>
+                  <p className="text-[17px] text-foreground leading-relaxed mb-3">
+                    This address has appeared in AFH Club's for-sale records. The DSHS license belongs to the provider,
+                    not the house, so a sale means a new provider licensed the home through Change of Ownership or the
+                    home left the licensed pool.
+                  </p>
+                  <ul className="list-disc pl-6 text-[17px] leading-relaxed">
+                    {listingsForFacility(facility).map((l) => {
+                      const when = l.soldDate ?? l.statusChanged ?? l.lastVerified;
+                      const what =
+                        l.marketStatus === "sold" && l.soldPrice
+                          ? `Sold ${l.soldPrice} on ${formatVerifiedDate(when)} (listed at ${l.price})`
+                          : `${AFH_MARKET_STATUS_LABELS[l.marketStatus]} at ${l.price} as of ${formatVerifiedDate(l.lastVerified)}`;
+                      return (
+                        <li key={l.id}>
+                          <Link to={`/afh-club/listings/${listingSlug(l)}`} className="text-accent underline underline-offset-4">
+                            {what}
+                          </Link>{" "}
+                          — {afhClassification(l)}, NWMLS #{l.mlsNum}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
 
               <p className="mt-8 text-[17px] text-foreground leading-relaxed">
                 {facility.hasReports

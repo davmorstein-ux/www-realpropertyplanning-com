@@ -220,6 +220,10 @@ const AFHResources = lazy(() => import("./pages/AFHResources"));
 const AFHOwnershipStructure = lazy(() => import("./pages/AFHOwnershipStructure"));
 const AFHWhatIsAnAFH = lazy(() => import("./pages/AFHWhatIsAnAFH"));
 const AFHListings = lazy(() => import("./pages/AFHListings"));
+const AFHForSaleTacoma = lazy(() => import("./pages/AFHForSaleTacoma"));
+const AFHForSaleKent = lazy(() => import("./pages/AFHForSaleKent"));
+const AFHForSaleFederalWay = lazy(() => import("./pages/AFHForSaleFederalWay"));
+const AFHForSaleKennewick = lazy(() => import("./pages/AFHForSaleKennewick"));
 const AFHListingDetail = lazy(() => import("./pages/AFHListingDetail"));
 const AFHSold = lazy(() => import("./pages/AFHSold"));
 const AFHManagementCompanies = lazy(() => import("./pages/AFHManagementCompanies"));
@@ -1247,6 +1251,10 @@ const App = () => (
           <Route path="/afh-marketplace" element={<Navigate to="/afh-club/listings" replace />} />
           <Route path="/afh-submit" element={<AFHSubmit />} />
           <Route path="/afh-club/for-sale/seattle-wa" element={<AFHForSaleSeattle />} />
+          <Route path="/afh-club/for-sale/tacoma-wa" element={<AFHForSaleTacoma />} />
+          <Route path="/afh-club/for-sale/kent-wa" element={<AFHForSaleKent />} />
+          <Route path="/afh-club/for-sale/federal-way-wa" element={<AFHForSaleFederalWay />} />
+          <Route path="/afh-club/for-sale/kennewick-wa" element={<AFHForSaleKennewick />} />
           <Route path="/afh-club/for-sale/kirkland-wa" element={<AFHForSaleKirkland />} />
           <Route path="/afh-club/for-sale/renton-wa" element={<AFHForSaleRenton />} />
           <Route path="/afh-club/for-sale/lynnwood-wa" element={<AFHForSaleLynnwood />} />
