@@ -1,0 +1,179 @@
+[
+  {
+    "licenseNumber": "758941",
+    "name": "1ST CONNECTION AFH LLC",
+    "displayName": "1ST CONNECTION AFH LLC",
+    "slug": "1st-connection-afh-758941",
+    "address": {
+      "street": "1043 Connection St",
+      "city": "Shelton",
+      "citySlug": "shelton",
+      "state": "WA",
+      "zip": "98584",
+      "county": "Mason"
+    },
+    "contactName": "KINYANJUI, ANTHONY W.",
+    "phone": "(360) 868-2096",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751117",
+    "name": "Carlstrom Comfort Living LLC Adult Family Home",
+    "displayName": "Carlstrom Comfort Living LLC Adult Family Home",
+    "slug": "carlstrom-comfort-living-llc-adult-family-home-751117",
+    "address": {
+      "street": "5012 E Brockdale Rd",
+      "city": "Shelton",
+      "citySlug": "shelton",
+      "state": "WA",
+      "zip": "98584",
+      "county": "Mason"
+    },
+    "contactName": "Carlstrom, Tera L.",
+    "phone": "(360) 432-2199",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758869",
+    "name": "Claret AFH III",
+    "displayName": "Claret AFH III",
+    "slug": "claret-afh-iii-758869",
+    "address": {
+      "street": "1109 Northcliff Rd",
+      "city": "Shelton",
+      "citySlug": "shelton",
+      "state": "WA",
+      "zip": "98584",
+      "county": "Mason"
+    },
+    "contactName": "Leshinka, Claret M.",
+    "phone": "(253) 363-3551",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "566300",
+    "name": "FOUR SEASONS AFH",
+    "displayName": "FOUR SEASONS AFH",
+    "slug": "four-seasons-afh-566300",
+    "address": {
+      "street": "1420 Se Cole Rd",
+      "city": "Shelton",
+      "citySlug": "shelton",
+      "state": "WA",
+      "zip": "98584",
+      "county": "Mason"
+    },
+    "contactName": "Kaufman, Teresa S.",
+    "phone": "(360) 427-4003",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "699400",
+    "name": "FRANK & MARIAS PLACE ADULT FAMILY HOME",
+    "displayName": "FRANK & MARIAS PLACE ADULT FAMILY HOME",
+    "slug": "frank-and-marias-place-adult-family-home-699400",
+    "address": {
+      "street": "726 Dawn Ave",
+      "city": "Shelton",
+      "citySlug": "shelton",
+      "state": "WA",
+      "zip": "98584",
+      "county": "Mason"
+    },
+    "contactName": "Areopagita, Francisco",
+    "phone": "(360) 868-2030",
+    "regionUnit": "3F",
+    "licensedBeds": 2,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752007",
+    "name": "Grandma's Garden Adult Family Home LLC",
+    "displayName": "Grandma's Garden Adult Family Home LLC",
+    "slug": "grandmas-garden-adult-family-home-752007",
+    "address": {
+      "street": "21 E Wildlife Way",
+      "city": "Belfair",
+      "citySlug": "belfair",
+      "state": "WA",
+      "zip": "98528",
+      "county": "Mason"
+    },
+    "contactName": "Gunter, Donald C.",
+    "phone": "(360) 275-6640",
+    "regionUnit": "3F",
+    "licensedBeds": 2,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

@@ -1,0 +1,235 @@
+[
+  {
+    "licenseNumber": "752625",
+    "name": "Angells on Whidbey Adult Family Home",
+    "displayName": "Angells on Whidbey Adult Family Home",
+    "slug": "angells-on-whidbey-adult-family-home-752625",
+    "address": {
+      "street": "905 Burroughs Ave",
+      "city": "Oak Harbor",
+      "citySlug": "oak-harbor",
+      "state": "WA",
+      "zip": "98277",
+      "county": "Island"
+    },
+    "contactName": "Brodt, Chrysta S.",
+    "phone": "(360) 679-4688",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758405",
+    "name": "ANTHEA ANDREA AFH, LLC",
+    "displayName": "ANTHEA ANDREA AFH, LLC",
+    "slug": "anthea-andrea-afh-758405",
+    "address": {
+      "street": "450 Ne Harvest Dr",
+      "city": "Oak Harbor",
+      "citySlug": "oak-harbor",
+      "state": "WA",
+      "zip": "98277",
+      "county": "Island"
+    },
+    "contactName": "Santos, Irene",
+    "phone": "(360) 246-4147",
+    "regionUnit": "2B",
+    "licensedBeds": 4,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755490",
+    "name": "Camano Senior Care LLC",
+    "displayName": "Camano Senior Care LLC",
+    "slug": "camano-senior-care-755490",
+    "address": {
+      "street": "116 Chase Way",
+      "city": "Camano Island",
+      "citySlug": "camano-island",
+      "state": "WA",
+      "zip": "98282",
+      "county": "Island"
+    },
+    "contactName": "Dondos, George J.",
+    "phone": "(206) 948-3027",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758668",
+    "name": "Crest View LLC",
+    "displayName": "Crest View LLC",
+    "slug": "crest-view-758668",
+    "address": {
+      "street": "1032 Circle Drive",
+      "city": "Camano Island",
+      "citySlug": "camano-island",
+      "state": "WA",
+      "zip": "98282",
+      "county": "Island"
+    },
+    "contactName": "Kifle, Netsanet",
+    "phone": "(360) 926-8024",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759070",
+    "name": "MELKAM CARE ADULT FAMILY HOME LLC",
+    "displayName": "MELKAM CARE ADULT FAMILY HOME LLC",
+    "slug": "melkam-care-adult-family-home-759070",
+    "address": {
+      "street": "1429 Morningside Ln",
+      "city": "Freeland",
+      "citySlug": "freeland",
+      "state": "WA",
+      "zip": "98249",
+      "county": "Island"
+    },
+    "contactName": "TEFERA, AZEB A.",
+    "phone": "(360) 222-2193",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "699700",
+    "name": "PACIFIC PALISADES AFH",
+    "displayName": "PACIFIC PALISADES AFH",
+    "slug": "pacific-palisades-afh-699700",
+    "address": {
+      "street": "280 Denneboom Rd",
+      "city": "Coupeville",
+      "citySlug": "coupeville",
+      "state": "WA",
+      "zip": "98239",
+      "county": "Island"
+    },
+    "contactName": "Eck, Kenia X.",
+    "phone": "(360) 678-6707",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755858",
+    "name": "Platinum Care 365",
+    "displayName": "Platinum Care 365",
+    "slug": "platinum-care-365-755858",
+    "address": {
+      "street": "1685 Sw 10th Ave",
+      "city": "Oak Harbor",
+      "citySlug": "oak-harbor",
+      "state": "WA",
+      "zip": "98277",
+      "county": "Island"
+    },
+    "contactName": "Goldsmith, Billie L.",
+    "phone": "(360) 720-1318",
+    "regionUnit": "2B",
+    "licensedBeds": 4,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "667900",
+    "name": "SYLVIAS ADULT HOME",
+    "displayName": "SYLVIAS ADULT HOME",
+    "slug": "sylvias-adult-home-667900",
+    "address": {
+      "street": "707 Ne Gould St",
+      "city": "Coupeville",
+      "citySlug": "coupeville",
+      "state": "WA",
+      "zip": "98239",
+      "county": "Island"
+    },
+    "contactName": "Robbins Miller, Jimma D.",
+    "phone": "(360) 678-3405",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

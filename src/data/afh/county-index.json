@@ -450,6 +450,20 @@
     "withReports": 17
   },
   {
+    "city": "Longview",
+    "citySlug": "longview",
+    "county": "Cowlitz",
+    "counties": [
+      "Cowlitz"
+    ],
+    "facilityCount": 30,
+    "totalBeds": 175,
+    "behaviorSupport": 4,
+    "developmentalDisabilities": 18,
+    "privatePay": 0,
+    "withReports": 20
+  },
+  {
     "city": "Kenmore",
     "citySlug": "kenmore",
     "county": "King",
@@ -562,6 +576,20 @@
     "withReports": 19
   },
   {
+    "city": "Moses Lake",
+    "citySlug": "moses-lake",
+    "county": "Grant",
+    "counties": [
+      "Grant"
+    ],
+    "facilityCount": 21,
+    "totalBeds": 114,
+    "behaviorSupport": 12,
+    "developmentalDisabilities": 12,
+    "privatePay": 0,
+    "withReports": 21
+  },
+  {
     "city": "Mill Creek",
     "citySlug": "mill-creek",
     "county": "Snohomish",
@@ -617,6 +645,20 @@
     "developmentalDisabilities": 9,
     "privatePay": 0,
     "withReports": 13
+  },
+  {
+    "city": "Mount Vernon",
+    "citySlug": "mount-vernon",
+    "county": "Skagit",
+    "counties": [
+      "Skagit"
+    ],
+    "facilityCount": 17,
+    "totalBeds": 100,
+    "behaviorSupport": 2,
+    "developmentalDisabilities": 6,
+    "privatePay": 0,
+    "withReports": 5
   },
   {
     "city": "Sumner",
@@ -816,6 +858,20 @@
     "withReports": 5
   },
   {
+    "city": "Wenatchee",
+    "citySlug": "wenatchee",
+    "county": "Chelan",
+    "counties": [
+      "Chelan"
+    ],
+    "facilityCount": 9,
+    "totalBeds": 50,
+    "behaviorSupport": 5,
+    "developmentalDisabilities": 6,
+    "privatePay": 0,
+    "withReports": 9
+  },
+  {
     "city": "Bellingham",
     "citySlug": "bellingham",
     "county": "Whatcom",
@@ -912,6 +968,20 @@
     "developmentalDisabilities": 3,
     "privatePay": 0,
     "withReports": 6
+  },
+  {
+    "city": "Sedro Woolley",
+    "citySlug": "sedro-woolley",
+    "county": "Skagit",
+    "counties": [
+      "Skagit"
+    ],
+    "facilityCount": 8,
+    "totalBeds": 48,
+    "behaviorSupport": 2,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 5
   },
   {
     "city": "Maple Valley",
@@ -1138,6 +1208,20 @@
     "withReports": 2
   },
   {
+    "city": "Shelton",
+    "citySlug": "shelton",
+    "county": "Mason",
+    "counties": [
+      "Mason"
+    ],
+    "facilityCount": 5,
+    "totalBeds": 26,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 4,
+    "privatePay": 0,
+    "withReports": 3
+  },
+  {
     "city": "Silverdale",
     "citySlug": "silverdale",
     "county": "Kitsap",
@@ -1223,6 +1307,62 @@
     "withReports": 2
   },
   {
+    "city": "Walla Walla",
+    "citySlug": "walla-walla",
+    "county": "Walla Walla",
+    "counties": [
+      "Walla Walla"
+    ],
+    "facilityCount": 4,
+    "totalBeds": 18,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 4
+  },
+  {
+    "city": "Woodland",
+    "citySlug": "woodland",
+    "county": "Cowlitz",
+    "counties": [
+      "Cowlitz"
+    ],
+    "facilityCount": 4,
+    "totalBeds": 23,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 4
+  },
+  {
+    "city": "Kelso",
+    "citySlug": "kelso",
+    "county": "Cowlitz",
+    "counties": [
+      "Cowlitz"
+    ],
+    "facilityCount": 3,
+    "totalBeds": 18,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
+    "city": "Leavenworth",
+    "citySlug": "leavenworth",
+    "county": "Chelan",
+    "counties": [
+      "Chelan"
+    ],
+    "facilityCount": 3,
+    "totalBeds": 17,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 3
+  },
+  {
     "city": "Morton",
     "citySlug": "morton",
     "county": "Lewis",
@@ -1247,6 +1387,20 @@
     "totalBeds": 18,
     "behaviorSupport": 0,
     "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
+    "city": "Oak Harbor",
+    "citySlug": "oak-harbor",
+    "county": "Island",
+    "counties": [
+      "Island"
+    ],
+    "facilityCount": 3,
+    "totalBeds": 14,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
     "privatePay": 0,
     "withReports": 2
   },
@@ -1279,6 +1433,20 @@
     "withReports": 3
   },
   {
+    "city": "Anacortes",
+    "citySlug": "anacortes",
+    "county": "Skagit",
+    "counties": [
+      "Skagit"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 8,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
     "city": "Blaine",
     "citySlug": "blaine",
     "county": "Whatcom",
@@ -1291,6 +1459,48 @@
     "developmentalDisabilities": 2,
     "privatePay": 0,
     "withReports": 1
+  },
+  {
+    "city": "Camano Island",
+    "citySlug": "camano-island",
+    "county": "Island",
+    "counties": [
+      "Island"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 0
+  },
+  {
+    "city": "Cosmopolis",
+    "citySlug": "cosmopolis",
+    "county": "Grays Harbor",
+    "counties": [
+      "Grays Harbor"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 0
+  },
+  {
+    "city": "Coupeville",
+    "citySlug": "coupeville",
+    "county": "Island",
+    "counties": [
+      "Island"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 2
   },
   {
     "city": "Duvall",
@@ -1331,6 +1541,34 @@
     "totalBeds": 12,
     "behaviorSupport": 0,
     "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
+    "city": "Ephrata",
+    "citySlug": "ephrata",
+    "county": "Grant",
+    "counties": [
+      "Grant"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 2,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
+    "city": "Kalama",
+    "citySlug": "kalama",
+    "county": "Cowlitz",
+    "counties": [
+      "Cowlitz"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 2,
     "privatePay": 0,
     "withReports": 2
   },
@@ -1377,6 +1615,20 @@
     "withReports": 1
   },
   {
+    "city": "Montesano",
+    "citySlug": "montesano",
+    "county": "Grays Harbor",
+    "counties": [
+      "Grays Harbor"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
     "city": "Olalla",
     "citySlug": "olalla",
     "county": "Kitsap",
@@ -1419,6 +1671,20 @@
     "withReports": 1
   },
   {
+    "city": "Quincy",
+    "citySlug": "quincy",
+    "county": "Grant",
+    "counties": [
+      "Grant"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 11,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
     "city": "Roy",
     "citySlug": "roy",
     "county": "Pierce",
@@ -1431,6 +1697,20 @@
     "developmentalDisabilities": 1,
     "privatePay": 0,
     "withReports": 2
+  },
+  {
+    "city": "Sequim",
+    "citySlug": "sequim",
+    "county": "Clallam",
+    "counties": [
+      "Clallam"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 1
   },
   {
     "city": "Vashon",
@@ -1447,11 +1727,39 @@
     "withReports": 2
   },
   {
+    "city": "Aberdeen",
+    "citySlug": "aberdeen",
+    "county": "Grays Harbor",
+    "counties": [
+      "Grays Harbor"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
     "city": "Amboy",
     "citySlug": "amboy",
     "county": "Clark",
     "counties": [
       "Clark"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 2,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Belfair",
+    "citySlug": "belfair",
+    "county": "Mason",
+    "counties": [
+      "Mason"
     ],
     "facilityCount": 1,
     "totalBeds": 2,
@@ -1475,6 +1783,20 @@
     "withReports": 1
   },
   {
+    "city": "Castle Rock",
+    "citySlug": "castle-rock",
+    "county": "Cowlitz",
+    "counties": [
+      "Cowlitz"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
     "city": "Chattaroy",
     "citySlug": "chattaroy",
     "county": "Spokane",
@@ -1484,6 +1806,20 @@
     "facilityCount": 1,
     "totalBeds": 6,
     "behaviorSupport": 1,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "College Place",
+    "citySlug": "college-place",
+    "county": "Walla Walla",
+    "counties": [
+      "Walla Walla"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 2,
+    "behaviorSupport": 0,
     "developmentalDisabilities": 1,
     "privatePay": 0,
     "withReports": 1
@@ -1501,6 +1837,48 @@
     "developmentalDisabilities": 0,
     "privatePay": 0,
     "withReports": 1
+  },
+  {
+    "city": "Entiat",
+    "citySlug": "entiat",
+    "county": "Chelan",
+    "counties": [
+      "Chelan"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 2,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Forks",
+    "citySlug": "forks",
+    "county": "Clallam",
+    "counties": [
+      "Clallam"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 0
+  },
+  {
+    "city": "Freeland",
+    "citySlug": "freeland",
+    "county": "Island",
+    "counties": [
+      "Island"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 0
   },
   {
     "city": "Grandview",
@@ -1573,6 +1951,20 @@
     "withReports": 1
   },
   {
+    "city": "Port Angeles",
+    "citySlug": "port-angeles",
+    "county": "Clallam",
+    "counties": [
+      "Clallam"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 0
+  },
+  {
     "city": "Prosser",
     "citySlug": "prosser",
     "county": "Benton",
@@ -1613,6 +2005,20 @@
     "developmentalDisabilities": 0,
     "privatePay": 0,
     "withReports": 1
+  },
+  {
+    "city": "Silverlake",
+    "citySlug": "silverlake",
+    "county": "Cowlitz",
+    "counties": [
+      "Cowlitz"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 0
   },
   {
     "city": "Snoqualmie",

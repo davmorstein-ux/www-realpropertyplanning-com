@@ -1,0 +1,757 @@
+[
+  {
+    "licenseNumber": "756106",
+    "name": "Adult Family Center LLC",
+    "displayName": "Adult Family Center LLC",
+    "slug": "adult-family-center-756106",
+    "address": {
+      "street": "4391 Road 7.4 Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Stoyanova, Irina",
+    "phone": "(509) 550-8030",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751637",
+    "name": "BLUE GOOSE CARE CENTER",
+    "displayName": "BLUE GOOSE CARE CENTER",
+    "slug": "blue-goose-care-center-751637",
+    "address": {
+      "street": "7340 Blue Goose Rd Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Ramirez, Araceli",
+    "phone": "(509) 764-0729",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753956",
+    "name": "Blue Goose Care Center 2",
+    "displayName": "Blue Goose Care Center 2",
+    "slug": "blue-goose-care-center-2-753956",
+    "address": {
+      "street": "3781 Thayer Rd Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Barnabas Msaki, Happy",
+    "phone": "(509) 765-4850",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755912",
+    "name": "Blue Goose Care Center 3, LLC",
+    "displayName": "Blue Goose Care Center 3, LLC",
+    "slug": "blue-goose-care-center-3-755912",
+    "address": {
+      "street": "7529 Rainier Rd Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Nganga, Veronica W.",
+    "phone": "(509) 765-2540",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756759",
+    "name": "Caring Hands AFH",
+    "displayName": "Caring Hands AFH",
+    "slug": "caring-hands-afh-756759",
+    "address": {
+      "street": "806 S Wilder St",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Polunets, Valentina Y.",
+    "phone": "(509) 761-4931",
+    "regionUnit": "1C",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "750085",
+    "name": "CRYSTAL SPRINGS AFH",
+    "displayName": "CRYSTAL SPRINGS AFH",
+    "slug": "crystal-springs-afh-750085",
+    "address": {
+      "street": "5131 Crystal Springs Pl Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Puyu, Violina M.",
+    "phone": "(509) 750-9904",
+    "regionUnit": "1C",
+    "licensedBeds": 4,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751819",
+    "name": "CRYSTAL SPRINGS AFH II",
+    "displayName": "CRYSTAL SPRINGS AFH II",
+    "slug": "crystal-springs-afh-ii-751819",
+    "address": {
+      "street": "5108 Crystal Springs Pl Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Puyu, Violina M.",
+    "phone": "(509) 793-8413",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757653",
+    "name": "Golden Years Home Care LLC",
+    "displayName": "Golden Years Home Care LLC",
+    "slug": "golden-years-home-care-757653",
+    "address": {
+      "street": "1329 E Landon St",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Tercero Vargas, Aida",
+    "phone": "(509) 707-0250",
+    "regionUnit": "1C",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756404",
+    "name": "Helping Hands In Home Care LLC",
+    "displayName": "Helping Hands In Home Care LLC",
+    "slug": "helping-hands-in-home-care-756404",
+    "address": {
+      "street": "7451 Road E.7 Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Kharitonov, Maria",
+    "phone": "(509) 762-6750",
+    "regionUnit": "1C",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752790",
+    "name": "Lakeshore West Residential Care, PLLC",
+    "displayName": "Lakeshore West Residential Care, PLLC",
+    "slug": "lakeshore-west-residential-care-pllc-752790",
+    "address": {
+      "street": "8026 Road 2.4 Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "JENSON, JULIE A.",
+    "phone": "(509) 764-6659",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752838",
+    "name": "Lakeview Home Care Inc",
+    "displayName": "Lakeview Home Care Inc",
+    "slug": "lakeview-home-care-752838",
+    "address": {
+      "street": "2927 W Lakeside Dr",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Weber, Edward W.",
+    "phone": "(509) 764-9290",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752816",
+    "name": "Life Is Good AFH, Inc",
+    "displayName": "Life Is Good AFH, Inc",
+    "slug": "life-is-good-afh-752816",
+    "address": {
+      "street": "7582 Mcbeth Ln Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Abonyi, Chichodi E.",
+    "phone": "(509) 762-2829",
+    "regionUnit": "1C",
+    "licensedBeds": 4,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752053",
+    "name": "LOVE AND CARE ADULT HOME",
+    "displayName": "LOVE AND CARE ADULT HOME",
+    "slug": "love-and-care-adult-home-752053",
+    "address": {
+      "street": "384 Young Rd Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Veresko, Alla D.",
+    "phone": "(206) 451-3968",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757785",
+    "name": "May Valley Adult Family Home",
+    "displayName": "May Valley Adult Family Home",
+    "slug": "may-valley-adult-family-home-757785",
+    "address": {
+      "street": "5816 Road 4.4 Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Tsymbalyuk, Nazariy",
+    "phone": "(509) 707-0150",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "750283",
+    "name": "MEKONEN INC",
+    "displayName": "MEKONEN INC",
+    "slug": "mekonen-750283",
+    "address": {
+      "street": "511 E Sharon Ave",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "MEKONEN, NEGASH",
+    "phone": "(509) 766-1862",
+    "regionUnit": "1C",
+    "licensedBeds": 3,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758470",
+    "name": "Parkway Adult Family Homecare II",
+    "displayName": "Parkway Adult Family Homecare II",
+    "slug": "parkway-adult-family-homecare-ii-758470",
+    "address": {
+      "street": "1106 9th Ave Ne",
+      "city": "Ephrata",
+      "citySlug": "ephrata",
+      "state": "WA",
+      "zip": "98823",
+      "county": "Grant"
+    },
+    "contactName": "KALSI, POONAM",
+    "phone": "(509) 717-0055",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755835",
+    "name": "Parkway Adult Family Homecare LLC",
+    "displayName": "Parkway Adult Family Homecare LLC",
+    "slug": "parkway-adult-family-homecare-755835",
+    "address": {
+      "street": "330 10th Ave Sw",
+      "city": "Ephrata",
+      "citySlug": "ephrata",
+      "state": "WA",
+      "zip": "98823",
+      "county": "Grant"
+    },
+    "contactName": "KALSI, POONAM",
+    "phone": "(509) 237-7297",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755109",
+    "name": "Peaceful Meadows Adult Family Home",
+    "displayName": "Peaceful Meadows Adult Family Home",
+    "slug": "peaceful-meadows-adult-family-home-755109",
+    "address": {
+      "street": "8306 Teal Road Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "McKean, Rosario",
+    "phone": "(509) 764-0381",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757465",
+    "name": "PENDO HOMECARE LLC",
+    "displayName": "PENDO HOMECARE LLC",
+    "slug": "pendo-homecare-757465",
+    "address": {
+      "street": "2128 W Lakeside Dr",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Ngugi, Isaac I.",
+    "phone": "(509) 707-0274",
+    "regionUnit": "1C",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753598",
+    "name": "Pennys Adult Family Home Inc",
+    "displayName": "Pennys Adult Family Home Inc",
+    "slug": "pennys-adult-family-home-753598",
+    "address": {
+      "street": "3023 W Lakeside Dr",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Weber, Penny E.",
+    "phone": "(509) 765-3637",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758896",
+    "name": "QUINCY ADULT FAMILY HOMES LLC",
+    "displayName": "QUINCY ADULT FAMILY HOMES LLC",
+    "slug": "quincy-adult-family-homes-758896",
+    "address": {
+      "street": "734 J St Ne",
+      "city": "Quincy",
+      "citySlug": "quincy",
+      "state": "WA",
+      "zip": "98848",
+      "county": "Grant"
+    },
+    "contactName": "Ombaire, Cyrus M.",
+    "phone": "(509) 289-8958",
+    "regionUnit": "1C",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "22402",
+    "name": "SAIGE COTTAGE",
+    "displayName": "SAIGE COTTAGE",
+    "slug": "saige-cottage-22402",
+    "address": {
+      "street": "116 C St Sw",
+      "city": "Quincy",
+      "citySlug": "quincy",
+      "state": "WA",
+      "zip": "98848",
+      "county": "Grant"
+    },
+    "contactName": "Thompson, Diane",
+    "phone": "(509) 450-0024",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752797",
+    "name": "Smith Adult Family Home Inc",
+    "displayName": "Smith Adult Family Home Inc",
+    "slug": "smith-adult-family-home-752797",
+    "address": {
+      "street": "9451 Benjamin Way Se",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Smith, Wyatt E.",
+    "phone": "(509) 707-0028",
+    "regionUnit": "1C",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752428",
+    "name": "Touch of Love AFH LLC",
+    "displayName": "Touch of Love AFH LLC",
+    "slug": "touch-of-love-afh-752428",
+    "address": {
+      "street": "2627 W Texas St",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Rolly, Megan D.",
+    "phone": "(509) 855-9702",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751743",
+    "name": "VALLEY ROAD RESIDENTIAL CARE",
+    "displayName": "VALLEY ROAD RESIDENTIAL CARE",
+    "slug": "valley-road-residential-care-751743",
+    "address": {
+      "street": "3072 Valley Road Ne",
+      "city": "Moses Lake",
+      "citySlug": "moses-lake",
+      "state": "WA",
+      "zip": "98837",
+      "county": "Grant"
+    },
+    "contactName": "Dogbe, Kokou O.",
+    "phone": "(509) 764-5342",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

@@ -1,0 +1,123 @@
+[
+  {
+    "licenseNumber": "754652",
+    "name": "Asis",
+    "displayName": "Asis",
+    "slug": "asis-754652",
+    "address": {
+      "street": "331 W Bell St",
+      "city": "Sequim",
+      "citySlug": "sequim",
+      "state": "WA",
+      "zip": "98382",
+      "county": "Clallam"
+    },
+    "contactName": "Kendagor, Naomi J.",
+    "phone": "(360) 477-4391",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "464000",
+    "name": "CONNECTING LINKS ADULT FAMILY HOME",
+    "displayName": "CONNECTING LINKS ADULT FAMILY HOME",
+    "slug": "connecting-links-adult-family-home-464000",
+    "address": {
+      "street": "73 Sportsman Club Rd",
+      "city": "Forks",
+      "citySlug": "forks",
+      "state": "WA",
+      "zip": "98331",
+      "county": "Clallam"
+    },
+    "contactName": "Middleton, Linda",
+    "phone": "(360) 374-2044",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "afhRespite",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756458",
+    "name": "Odyssey Adult Family Home, LLC",
+    "displayName": "Odyssey Adult Family Home, LLC",
+    "slug": "odyssey-adult-family-home-756458",
+    "address": {
+      "street": "1017 W 17th St",
+      "city": "Port Angeles",
+      "citySlug": "port-angeles",
+      "state": "WA",
+      "zip": "98363",
+      "county": "Clallam"
+    },
+    "contactName": "Mbote, Joseph",
+    "phone": "(360) 477-4684",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758572",
+    "name": "sequim ave adult family home LLC",
+    "displayName": "sequim ave adult family home LLC",
+    "slug": "sequim-ave-adult-family-home-758572",
+    "address": {
+      "street": "511 S Sequim Ave",
+      "city": "Sequim",
+      "citySlug": "sequim",
+      "state": "WA",
+      "zip": "98382",
+      "county": "Clallam"
+    },
+    "contactName": "Nginyo, Eliud N.",
+    "phone": "(360) 670-3064",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  }
+]

@@ -1,0 +1,150 @@
+[
+  {
+    "licenseNumber": "757023",
+    "name": "Arc of Grays Harbor Adult Family Home",
+    "displayName": "Arc of Grays Harbor Adult Family Home",
+    "slug": "arc-of-grays-harbor-adult-family-home-757023",
+    "address": {
+      "street": "401 F Street",
+      "city": "Cosmopolis",
+      "citySlug": "cosmopolis",
+      "state": "WA",
+      "zip": "98537",
+      "county": "Grays Harbor"
+    },
+    "contactName": "Stolen, Bryn J.",
+    "phone": "(360) 310-0117",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756750",
+    "name": "Cider Creast 1 AFH LLC",
+    "displayName": "Cider Creast 1 AFH LLC",
+    "slug": "cider-creast-1-afh-756750",
+    "address": {
+      "street": "426 E King St",
+      "city": "Aberdeen",
+      "citySlug": "aberdeen",
+      "state": "WA",
+      "zip": "98520",
+      "county": "Grays Harbor"
+    },
+    "contactName": "Cornish, Monicah",
+    "phone": "(206) 637-9643",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759179",
+    "name": "CIDER CREAST 3 AFH",
+    "displayName": "CIDER CREAST 3 AFH",
+    "slug": "cider-creast-3-afh-759179",
+    "address": {
+      "street": "3 Perth Pl",
+      "city": "Cosmopolis",
+      "citySlug": "cosmopolis",
+      "state": "WA",
+      "zip": "98537",
+      "county": "Grays Harbor"
+    },
+    "contactName": "Cornish, Monicah",
+    "phone": "(360) 612-3333",
+    "regionUnit": "3G",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755075",
+    "name": "Cider Creast AFH LLC",
+    "displayName": "Cider Creast AFH LLC",
+    "slug": "cider-creast-afh-755075",
+    "address": {
+      "street": "1301 E Cedar Ave",
+      "city": "Montesano",
+      "citySlug": "montesano",
+      "state": "WA",
+      "zip": "98563",
+      "county": "Grays Harbor"
+    },
+    "contactName": "Cornish, Monicah",
+    "phone": "(360) 249-3900",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756444",
+    "name": "Welcome Home Family Living LLC",
+    "displayName": "Welcome Home Family Living LLC",
+    "slug": "welcome-home-family-living-756444",
+    "address": {
+      "street": "1330 Seely Ct",
+      "city": "Montesano",
+      "citySlug": "montesano",
+      "state": "WA",
+      "zip": "98563",
+      "county": "Grays Harbor"
+    },
+    "contactName": "Rager, Lisa L.",
+    "phone": "(360) 249-8319",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

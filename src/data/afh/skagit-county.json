@@ -1,0 +1,790 @@
+[
+  {
+    "licenseNumber": "758365",
+    "name": "AGAPE 1ST AFH LLC",
+    "displayName": "AGAPE 1ST AFH LLC",
+    "slug": "agape-1st-afh-758365",
+    "address": {
+      "street": "3206 Trumpeter Dr",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "ARAYA, SELAM",
+    "phone": "(360) 399-7861",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758131",
+    "name": "Bakerview Adult Family Home LLC",
+    "displayName": "Bakerview Adult Family Home LLC",
+    "slug": "bakerview-adult-family-home-758131",
+    "address": {
+      "street": "3620 Tundra Ct",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "Ames, Edna A.",
+    "phone": "(360) 503-8227",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756400",
+    "name": "Beacons of Hope Adult Family Home LLC",
+    "displayName": "Beacons of Hope Adult Family Home LLC",
+    "slug": "beacons-of-hope-adult-family-home-756400",
+    "address": {
+      "street": "1430 Sunset Pl",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "Mwaura, Josephine W.",
+    "phone": "(206) 816-4928",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758905",
+    "name": "BY FAITH ADULT FAMILY HOME LLC",
+    "displayName": "BY FAITH ADULT FAMILY HOME LLC",
+    "slug": "by-faith-adult-family-home-758905",
+    "address": {
+      "street": "1108 S 18th St",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98274",
+      "county": "Skagit"
+    },
+    "contactName": "WAITHAKA, FAITH M.",
+    "phone": "(205) 920-3676",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "692000",
+    "name": "CARING HEARTS ADULT FAMILY HOME",
+    "displayName": "CARING HEARTS ADULT FAMILY HOME",
+    "slug": "caring-hearts-adult-family-home-692000",
+    "address": {
+      "street": "3019 W 2nd St",
+      "city": "Anacortes",
+      "citySlug": "anacortes",
+      "state": "WA",
+      "zip": "98221",
+      "county": "Skagit"
+    },
+    "contactName": "Cook, Terina I.",
+    "phone": "(360) 293-8170",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756388",
+    "name": "Cross Creek AFH",
+    "displayName": "Cross Creek AFH",
+    "slug": "cross-creek-afh-756388",
+    "address": {
+      "street": "720 Shoeshel Dr",
+      "city": "Sedro Woolley",
+      "citySlug": "sedro-woolley",
+      "state": "WA",
+      "zip": "98284",
+      "county": "Skagit"
+    },
+    "contactName": "Prather, Mary E.",
+    "phone": "(360) 854-9421",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752407",
+    "name": "FAIRMONT MANOR CARE CENTER INC",
+    "displayName": "FAIRMONT MANOR CARE CENTER INC",
+    "slug": "fairmont-manor-care-center-752407",
+    "address": {
+      "street": "112 N 39th Pl",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "Fuertes, Maria L.",
+    "phone": "(360) 419-0377",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759088",
+    "name": "Foxglove Manor AFH",
+    "displayName": "Foxglove Manor AFH",
+    "slug": "foxglove-manor-afh-759088",
+    "address": {
+      "street": "3914 Foxglove Cir",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "KIRUKI, LUCY N.",
+    "phone": "(360) 404-5890",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757319",
+    "name": "FRACULATE ADULT FAMILY HOME",
+    "displayName": "FRACULATE ADULT FAMILY HOME",
+    "slug": "fraculate-adult-family-home-757319",
+    "address": {
+      "street": "708 Jameson St",
+      "city": "Sedro Woolley",
+      "citySlug": "sedro-woolley",
+      "state": "WA",
+      "zip": "98284",
+      "county": "Skagit"
+    },
+    "contactName": "Okumu, Maureen A.",
+    "phone": "(360) 404-5595",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758172",
+    "name": "GARDEN OF EDEN LUXURY AFH LLC",
+    "displayName": "GARDEN OF EDEN LUXURY AFH LLC",
+    "slug": "garden-of-eden-luxury-afh-758172",
+    "address": {
+      "street": "211 Garden Of Eden Rd",
+      "city": "Sedro Woolley",
+      "citySlug": "sedro-woolley",
+      "state": "WA",
+      "zip": "98284",
+      "county": "Skagit"
+    },
+    "contactName": "Abraha, Robel",
+    "phone": "(425) 244-6965",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753411",
+    "name": "Harmony Adult Family Home LLC",
+    "displayName": "Harmony Adult Family Home LLC",
+    "slug": "harmony-adult-family-home-753411",
+    "address": {
+      "street": "22906 Greenough Lane",
+      "city": "Sedro Woolley",
+      "citySlug": "sedro-woolley",
+      "state": "WA",
+      "zip": "98284",
+      "county": "Skagit"
+    },
+    "contactName": "Kidanemariam, Ruth G.",
+    "phone": "(360) 856-4085",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752144",
+    "name": "HEAVENLY CARE INC",
+    "displayName": "HEAVENLY CARE INC",
+    "slug": "heavenly-care-752144",
+    "address": {
+      "street": "7055 Holiday Blvd",
+      "city": "Anacortes",
+      "citySlug": "anacortes",
+      "state": "WA",
+      "zip": "98221",
+      "county": "Skagit"
+    },
+    "contactName": "RICHMOND, LAWRENCE E.",
+    "phone": "(360) 299-8584",
+    "regionUnit": "2B",
+    "licensedBeds": 2,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754823",
+    "name": "Holistic Care Center LLC",
+    "displayName": "Holistic Care Center LLC",
+    "slug": "holistic-care-center-754823",
+    "address": {
+      "street": "1402 Fowler St",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98274",
+      "county": "Skagit"
+    },
+    "contactName": "MACARILAY, MARY JOY",
+    "phone": "(206) 834-5740",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "750071",
+    "name": "JOSHUAS HOUSE",
+    "displayName": "JOSHUAS HOUSE",
+    "slug": "joshuas-house-750071",
+    "address": {
+      "street": "1809 Township St",
+      "city": "Sedro Woolley",
+      "citySlug": "sedro-woolley",
+      "state": "WA",
+      "zip": "98284",
+      "county": "Skagit"
+    },
+    "contactName": "Anderson, Lisa A.",
+    "phone": "(360) 873-8223",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757881",
+    "name": "Kayden's Loving Care",
+    "displayName": "Kayden's Loving Care",
+    "slug": "kaydens-loving-care-757881",
+    "address": {
+      "street": "121 Claremont Pl",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98274",
+      "county": "Skagit"
+    },
+    "contactName": "O'Leary, Karen S.",
+    "phone": "(206) 255-7919",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759142",
+    "name": "LAKESIDE AFH LLC",
+    "displayName": "LAKESIDE AFH LLC",
+    "slug": "lakeside-afh-759142",
+    "address": {
+      "street": "18034 Mariposa Ln",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98274",
+      "county": "Skagit"
+    },
+    "contactName": "WILLIAMS, BRUCE",
+    "phone": "(360) 853-4210",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755586",
+    "name": "Lilac Gardens Adult Family Home, LLC",
+    "displayName": "Lilac Gardens Adult Family Home, LLC",
+    "slug": "lilac-gardens-adult-family-home-755586",
+    "address": {
+      "street": "130 Lilac Dr",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "Mason, Kananu",
+    "phone": "(206) 793-9601",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753581",
+    "name": "Living In Comfort LLC",
+    "displayName": "Living In Comfort LLC",
+    "slug": "living-in-comfort-753581",
+    "address": {
+      "street": "1231 Warner St",
+      "city": "Sedro Woolley",
+      "citySlug": "sedro-woolley",
+      "state": "WA",
+      "zip": "98284",
+      "county": "Skagit"
+    },
+    "contactName": "Seifu, Emebet T.",
+    "phone": "(360) 982-2413",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758849",
+    "name": "P AND K Haven Adult Family Home LLC",
+    "displayName": "P AND K Haven Adult Family Home LLC",
+    "slug": "p-and-k-haven-adult-family-home-758849",
+    "address": {
+      "street": "3625 Tundra Ct",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "Kamau, Florence W.",
+    "phone": "(360) 982-2918",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758568",
+    "name": "Park Ridge Care Home",
+    "displayName": "Park Ridge Care Home",
+    "slug": "park-ridge-care-home-758568",
+    "address": {
+      "street": "1026 S 38th Pl",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98274",
+      "county": "Skagit"
+    },
+    "contactName": "ODINGO, SIDNEY O.",
+    "phone": "(360) 755-6185",
+    "regionUnit": "2B",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758149",
+    "name": "PRIMENOOK AFH LLC",
+    "displayName": "PRIMENOOK AFH LLC",
+    "slug": "primenook-afh-758149",
+    "address": {
+      "street": "2519 Northwoods Loop Rd",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "MUHINJA, MAXWELL K.",
+    "phone": "(425) 443-8816",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758369",
+    "name": "Rainbow Ridge AFH LLC",
+    "displayName": "Rainbow Ridge AFH LLC",
+    "slug": "rainbow-ridge-afh-758369",
+    "address": {
+      "street": "4156 Mclaughlin Rd",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "Kamau, Samuel K.",
+    "phone": "(678) 462-1599",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757591",
+    "name": "SEDRO WOOLLEY ADULT FAMILY HOME",
+    "displayName": "SEDRO WOOLLEY ADULT FAMILY HOME",
+    "slug": "sedro-woolley-adult-family-home-757591",
+    "address": {
+      "street": "904 Alderwood Lane",
+      "city": "Sedro Woolley",
+      "citySlug": "sedro-woolley",
+      "state": "WA",
+      "zip": "98284",
+      "county": "Skagit"
+    },
+    "contactName": "Areda, Samrawit",
+    "phone": "(360) 755-6705",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758924",
+    "name": "Senior Services Adult Family Home LLC",
+    "displayName": "Senior Services Adult Family Home LLC",
+    "slug": "senior-services-adult-family-home-758924",
+    "address": {
+      "street": "3707 Trumpeter Ct",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "Ngaruiya, Rachel J.",
+    "phone": "(360) 770-6434",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758550",
+    "name": "SKAGIT RIVER ADULT FAMILY HOME LLC",
+    "displayName": "SKAGIT RIVER ADULT FAMILY HOME LLC",
+    "slug": "skagit-river-adult-family-home-758550",
+    "address": {
+      "street": "2120 Forest Dr",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "Tekle, Bereket",
+    "phone": "(360) 723-2907",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759015",
+    "name": "Skagit Senior Living LLC",
+    "displayName": "Skagit Senior Living LLC",
+    "slug": "skagit-senior-living-759015",
+    "address": {
+      "street": "931 Alderwood Ln",
+      "city": "Sedro Woolley",
+      "citySlug": "sedro-woolley",
+      "state": "WA",
+      "zip": "98284",
+      "county": "Skagit"
+    },
+    "contactName": "Matheos, Biniam",
+    "phone": "(206) 321-8304",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757067",
+    "name": "SKAGIT VALLEY ADULT FAMILY HOME LLC",
+    "displayName": "SKAGIT VALLEY ADULT FAMILY HOME LLC",
+    "slug": "skagit-valley-adult-family-home-757067",
+    "address": {
+      "street": "1931 East Fir Street",
+      "city": "Mount Vernon",
+      "citySlug": "mount-vernon",
+      "state": "WA",
+      "zip": "98273",
+      "county": "Skagit"
+    },
+    "contactName": "LECHA, JOSHUA K.",
+    "phone": "(425) 268-1719",
+    "regionUnit": "2B",
+    "licensedBeds": 5,
+    "specialties": [
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

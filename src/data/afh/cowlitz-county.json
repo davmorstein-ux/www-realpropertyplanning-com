@@ -1,0 +1,1212 @@
+[
+  {
+    "licenseNumber": "758104",
+    "name": "A & H Excellent Quality AFH",
+    "displayName": "A & H Excellent Quality AFH",
+    "slug": "a-and-h-excellent-quality-afh-758104",
+    "address": {
+      "street": "3784 Ohio St",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "DESSIE, ASRES H.",
+    "phone": "(206) 488-5574",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755449",
+    "name": "A Excellent Quality Care Home LLC",
+    "displayName": "A Excellent Quality Care Home LLC",
+    "slug": "a-excellent-quality-care-home-755449",
+    "address": {
+      "street": "2446 50th Ave",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "DESSIE, ASRES H.",
+    "phone": "(360) 575-9356",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751778",
+    "name": "A Time Honored Adult Family Home, LLC",
+    "displayName": "A Time Honored Adult Family Home, LLC",
+    "slug": "a-time-honored-adult-family-home-751778",
+    "address": {
+      "street": "154 Niblett Way",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Burgoyne, Amanda",
+    "phone": "(360) 703-3404",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758235",
+    "name": "AANGELS HEART 2 AFH LLC",
+    "displayName": "AANGELS HEART 2 AFH LLC",
+    "slug": "aangels-heart-2-afh-758235",
+    "address": {
+      "street": "105 Monterey Dr",
+      "city": "Kelso",
+      "citySlug": "kelso",
+      "state": "WA",
+      "zip": "98626",
+      "county": "Cowlitz"
+    },
+    "contactName": "NJUGUNA, ALEXANDER M.",
+    "phone": "(206) 294-0457",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755433",
+    "name": "Aangels Heart AFH LLC",
+    "displayName": "Aangels Heart AFH LLC",
+    "slug": "aangels-heart-afh-755433",
+    "address": {
+      "street": "3424 Ocean Beach Hwy",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Githinji, Mary R.",
+    "phone": "(360) 998-2851",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "750379",
+    "name": "ADELINES GARDENS LLC",
+    "displayName": "ADELINES GARDENS LLC",
+    "slug": "adelines-gardens-750379",
+    "address": {
+      "street": "182 Raspberry Lane",
+      "city": "Woodland",
+      "citySlug": "woodland",
+      "state": "WA",
+      "zip": "98674",
+      "county": "Cowlitz"
+    },
+    "contactName": "Trewhella, Kevin C.",
+    "phone": "(360) 841-8134",
+    "regionUnit": "3F",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759245",
+    "name": "Amani Comfort AFH LLC",
+    "displayName": "Amani Comfort AFH LLC",
+    "slug": "amani-comfort-afh-759245",
+    "address": {
+      "street": "58 Pacific Pl",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "NGONGOI, MARY W.",
+    "phone": "(360) 232-8428",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753934",
+    "name": "Angel's View Adult Family Home",
+    "displayName": "Angel's View Adult Family Home",
+    "slug": "angels-view-adult-family-home-753934",
+    "address": {
+      "street": "2329 W Castleman St",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "HUMMEL, JENNIFER L.",
+    "phone": "(360) 749-1091",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759202",
+    "name": "ATRIUM ADULT FAMILY HOME LLC",
+    "displayName": "ATRIUM ADULT FAMILY HOME LLC",
+    "slug": "atrium-adult-family-home-759202",
+    "address": {
+      "street": "1719 Dorothy St",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Wanjema, Bildad",
+    "phone": "(360) 232-8260",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757796",
+    "name": "BELLA CARE AFH",
+    "displayName": "BELLA CARE AFH",
+    "slug": "bella-care-afh-757796",
+    "address": {
+      "street": "2304 W Castleman St",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Kabucho, Willie N.",
+    "phone": "(206) 606-3580",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759166",
+    "name": "Blessed Souls Adult Family Home LLC",
+    "displayName": "Blessed Souls Adult Family Home LLC",
+    "slug": "blessed-souls-adult-family-home-759166",
+    "address": {
+      "street": "1123 20th Ave",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Mbugua, Margaret W.",
+    "phone": "(360) 261-7419",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759064",
+    "name": "Castle Hill 2 AFH",
+    "displayName": "Castle Hill 2 AFH",
+    "slug": "castle-hill-2-afh-759064",
+    "address": {
+      "street": "2050 Cascade Way",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Karanja, Lilian",
+    "phone": "(360) 703-3470",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757778",
+    "name": "Castle Hill AFH",
+    "displayName": "Castle Hill AFH",
+    "slug": "castle-hill-afh-757778",
+    "address": {
+      "street": "2306 W Castleman St",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Karanja, Lilian",
+    "phone": "(253) 325-7745",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757122",
+    "name": "Cedar Gardens of Longview",
+    "displayName": "Cedar Gardens of Longview",
+    "slug": "cedar-gardens-of-longview-757122",
+    "address": {
+      "street": "26 W Pine Lane",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Stinnett, Kareem",
+    "phone": "(850) 339-8809",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757225",
+    "name": "Cedar Gardens of Longview II",
+    "displayName": "Cedar Gardens of Longview II",
+    "slug": "cedar-gardens-of-longview-ii-757225",
+    "address": {
+      "street": "28 W Pine Ln",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Stinnett, Kareem",
+    "phone": "(360) 578-0279",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754031",
+    "name": "Cedrian Adult Family Home LLC",
+    "displayName": "Cedrian Adult Family Home LLC",
+    "slug": "cedrian-adult-family-home-754031",
+    "address": {
+      "street": "491 Windflower Dr",
+      "city": "Woodland",
+      "citySlug": "woodland",
+      "state": "WA",
+      "zip": "98674",
+      "county": "Cowlitz"
+    },
+    "contactName": "Gabales, Liza F.",
+    "phone": "(360) 562-1741",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758326",
+    "name": "Country Club Drive AFH",
+    "displayName": "Country Club Drive AFH",
+    "slug": "country-club-drive-afh-758326",
+    "address": {
+      "street": "30 Country Club Dr",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Nakanjako, Dorothy N.",
+    "phone": "(360) 703-3568",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758329",
+    "name": "DASH POINT ADULT FAMILY HOME LLC",
+    "displayName": "DASH POINT ADULT FAMILY HOME LLC",
+    "slug": "dash-point-adult-family-home-758329",
+    "address": {
+      "street": "160 Livingston Heights Dr",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Wubie, Tadla A.",
+    "phone": "(360) 644-7162",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753911",
+    "name": "Elim Adult Family Home LLC",
+    "displayName": "Elim Adult Family Home LLC",
+    "slug": "elim-adult-family-home-753911",
+    "address": {
+      "street": "2129 Branch Creek Dr",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Waweru, Serah W.",
+    "phone": "(360) 425-2055",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755822",
+    "name": "Gift Adult Family Home LLC",
+    "displayName": "Gift Adult Family Home LLC",
+    "slug": "gift-adult-family-home-755822",
+    "address": {
+      "street": "2441 Hickory Ave",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Chekol, Zelalem",
+    "phone": "(360) 575-9357",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757577",
+    "name": "Heartland AFH LLC",
+    "displayName": "Heartland AFH LLC",
+    "slug": "heartland-afh-757577",
+    "address": {
+      "street": "3542 Ocean Beach Hwy",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Mwangi, Lucy",
+    "phone": "(360) 425-3054",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752346",
+    "name": "Henderson's Adult Family Home",
+    "displayName": "Henderson's Adult Family Home",
+    "slug": "hendersons-adult-family-home-752346",
+    "address": {
+      "street": "122 Vista Dr",
+      "city": "Woodland",
+      "citySlug": "woodland",
+      "state": "WA",
+      "zip": "98674",
+      "county": "Cowlitz"
+    },
+    "contactName": "Stenson, Kimberly L.",
+    "phone": "(360) 225-9611",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757200",
+    "name": "Kalama Adult Family Home, LLC",
+    "displayName": "Kalama Adult Family Home, LLC",
+    "slug": "kalama-adult-family-home-757200",
+    "address": {
+      "street": "192 Kilkelly Rd",
+      "city": "Kalama",
+      "citySlug": "kalama",
+      "state": "WA",
+      "zip": "98625",
+      "county": "Cowlitz"
+    },
+    "contactName": "Tang, James Y.",
+    "phone": "(360) 673-1777",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757355",
+    "name": "LACHINE FAMILY HOME LLC",
+    "displayName": "LACHINE FAMILY HOME LLC",
+    "slug": "lachine-family-home-757355",
+    "address": {
+      "street": "175 Balboa Loop",
+      "city": "Kelso",
+      "citySlug": "kelso",
+      "state": "WA",
+      "zip": "98626",
+      "county": "Cowlitz"
+    },
+    "contactName": "Lachine, Barbara",
+    "phone": "(360) 353-3690",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756985",
+    "name": "LONGVIEW ADULT FAMILY HOME LLC",
+    "displayName": "LONGVIEW ADULT FAMILY HOME LLC",
+    "slug": "longview-adult-family-home-756985",
+    "address": {
+      "street": "1919 Branch Creek Drive",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Awungshi, Damaris",
+    "phone": "(602) 781-3559",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757588",
+    "name": "Longview Caring Manor LLC",
+    "displayName": "Longview Caring Manor LLC",
+    "slug": "longview-caring-manor-757588",
+    "address": {
+      "street": "3309 William Ave",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Benson, Loise W.",
+    "phone": "(360) 261-7424",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752954",
+    "name": "Mini Niemi AFH Corp",
+    "displayName": "Mini Niemi AFH Corp",
+    "slug": "mini-niemi-afh-752954",
+    "address": {
+      "street": "258 Niemi Rd",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Gloor, Brenda L.",
+    "phone": "(360) 414-9133",
+    "regionUnit": "3F",
+    "licensedBeds": 4,
+    "specialties": [
+      "mentalHealth"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758092",
+    "name": "Orchids Bloom Family Home LLC",
+    "displayName": "Orchids Bloom Family Home LLC",
+    "slug": "orchids-bloom-family-home-758092",
+    "address": {
+      "street": "4421 Pennsylvania St",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Peregrino, Corazon",
+    "phone": "(564) 227-9535",
+    "regionUnit": "3F",
+    "licensedBeds": 4,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "750286",
+    "name": "PACIFIC COUNTRY HOME LLC",
+    "displayName": "PACIFIC COUNTRY HOME LLC",
+    "slug": "pacific-country-home-750286",
+    "address": {
+      "street": "3205 Pacific Way",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Zimmerman, Heidi R.",
+    "phone": "(360) 578-9252",
+    "regionUnit": "3F",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753305",
+    "name": "Pacific Country Homes 2",
+    "displayName": "Pacific Country Homes 2",
+    "slug": "pacific-country-homes-2-753305",
+    "address": {
+      "street": "3215 Pacific Way",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Estacio, Annaliza",
+    "phone": "(360) 578-1918",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756771",
+    "name": "Remar Adult Family Home LLC",
+    "displayName": "Remar Adult Family Home LLC",
+    "slug": "remar-adult-family-home-756771",
+    "address": {
+      "street": "3139 Maple St",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Smith, CECILIA A.",
+    "phone": "(564) 217-4085",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "398604",
+    "name": "RIVER BEND ADULT FAMILY HOME INC",
+    "displayName": "RIVER BEND ADULT FAMILY HOME INC",
+    "slug": "river-bend-adult-family-home-398604",
+    "address": {
+      "street": "101 Mission Rd",
+      "city": "Kelso",
+      "citySlug": "kelso",
+      "state": "WA",
+      "zip": "98626",
+      "county": "Cowlitz"
+    },
+    "contactName": "Freiburger, Sarah M.",
+    "phone": "(360) 575-9347",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "750225",
+    "name": "RIVER BEND ADULT FAMILY HOME INC",
+    "displayName": "RIVER BEND ADULT FAMILY HOME INC",
+    "slug": "river-bend-adult-family-home-750225",
+    "address": {
+      "street": "2439 Hickory Ave",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Freiburger, Sarah M.",
+    "phone": "(360) 423-1284",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758952",
+    "name": "River Watch Care Home",
+    "displayName": "River Watch Care Home",
+    "slug": "river-watch-care-home-758952",
+    "address": {
+      "street": "195 Eli Avery Ave",
+      "city": "Kalama",
+      "citySlug": "kalama",
+      "state": "WA",
+      "zip": "98625",
+      "county": "Cowlitz"
+    },
+    "contactName": "Levin, Jeremy A.",
+    "phone": "(541) 610-6656",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757941",
+    "name": "Rose Adult Family Home LLC",
+    "displayName": "Rose Adult Family Home LLC",
+    "slug": "rose-adult-family-home-757941",
+    "address": {
+      "street": "3728 Sunset Way",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Yohannes, Yerusalem G.",
+    "phone": "(206) 476-2809",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758709",
+    "name": "Silverlake Happy Oasis",
+    "displayName": "Silverlake Happy Oasis",
+    "slug": "silverlake-happy-oasis-758709",
+    "address": {
+      "street": "163 Rogers Rd",
+      "city": "Silverlake",
+      "citySlug": "silverlake",
+      "state": "WA",
+      "zip": "98645",
+      "county": "Cowlitz"
+    },
+    "contactName": "Kosgei, Joan C.",
+    "phone": "(360) 852-7667",
+    "regionUnit": "3A",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754491",
+    "name": "Sires Meadow LLC",
+    "displayName": "Sires Meadow LLC",
+    "slug": "sires-meadow-754491",
+    "address": {
+      "street": "2430 Sires Lane",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Tilton, Joenena",
+    "phone": "(360) 266-7054",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756745",
+    "name": "Tea Time Lifestyle LLC",
+    "displayName": "Tea Time Lifestyle LLC",
+    "slug": "tea-time-lifestyle-756745",
+    "address": {
+      "street": "2271 Hazel Dell Rd",
+      "city": "Castle Rock",
+      "citySlug": "castle-rock",
+      "state": "WA",
+      "zip": "98611",
+      "county": "Cowlitz"
+    },
+    "contactName": "Tu, Chuan C.",
+    "phone": "(564) 777-2024",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758715",
+    "name": "TERRY TAYLOR ADULT FAMILY HOME LLC",
+    "displayName": "TERRY TAYLOR ADULT FAMILY HOME LLC",
+    "slug": "terry-taylor-adult-family-home-758715",
+    "address": {
+      "street": "2751 Taylor Ave",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "MIHAI-LAZAR, ELENA C.",
+    "phone": "(360) 433-0366",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "179102",
+    "name": "THE WALKER HOUSE",
+    "displayName": "THE WALKER HOUSE",
+    "slug": "the-walker-house-179102",
+    "address": {
+      "street": "4326 Pine St",
+      "city": "Longview",
+      "citySlug": "longview",
+      "state": "WA",
+      "zip": "98632",
+      "county": "Cowlitz"
+    },
+    "contactName": "Derum, Vickie L.",
+    "phone": "(360) 423-5080",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "750742",
+    "name": "Zoe Adult Family Home",
+    "displayName": "Zoe Adult Family Home",
+    "slug": "zoe-adult-family-home-750742",
+    "address": {
+      "street": "2091 Spruce Ave",
+      "city": "Woodland",
+      "citySlug": "woodland",
+      "state": "WA",
+      "zip": "98674",
+      "county": "Cowlitz"
+    },
+    "contactName": "Schiopu, Alina C.",
+    "phone": "(360) 225-1639",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]
