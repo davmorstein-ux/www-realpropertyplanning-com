@@ -167,6 +167,9 @@ const Footer = () => {
             <Link to="/afh-club/homes" className="rpp-footer-link">
               Adult Family Home Directory
             </Link>
+            <Link to="/afh-club/cost-by-location" className="rpp-footer-link">
+              AFH Cost by City &amp; County
+            </Link>
             {/* The primary nav reaches this page as "Find a Professional".
                 Named "Featured Professionals" here to match the page's own H1
                 and title, so someone scanning the footer for the directory they

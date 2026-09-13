@@ -66,6 +66,44 @@ const CountyDirectory = () => {
         <section className="py-8 md:py-10 bg-background">
           <div className="container px-5 md:px-8">
             <div className="max-w-3xl mx-auto">
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "1rem 1.5rem",
+                  padding: "1.25rem 1.5rem",
+                  marginBottom: "2rem",
+                  background: GREEN,
+                  borderRadius: "12px",
+                  color: "#fff",
+                }}
+              >
+                <p style={{ margin: 0, fontSize: "18px", lineHeight: 1.5, fontWeight: 600, flex: "1 1 360px" }}>
+                  Budgeting first? See what an adult family home costs in any city or county — Medicaid rate range,
+                  private-pay range, and how many homes there accept Medicaid.
+                </p>
+                <Link
+                  to="/afh-club/cost-by-location"
+                  className="no-underline"
+                  style={{
+                    flex: "0 0 auto",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    minHeight: "52px",
+                    padding: "0 1.5rem",
+                    background: "#fff",
+                    color: GREEN,
+                    fontSize: "17px",
+                    fontWeight: 700,
+                    borderRadius: "8px",
+                    textDecoration: "none",
+                  }}
+                >
+                  Cost by city &amp; county →
+                </Link>
+              </div>
               <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-4">Browse by county</h2>
               {(() => {
                 const bySize = [...countiesChecked].sort((a, b) => b.facilityCount - a.facilityCount || a.county.localeCompare(b.county));
