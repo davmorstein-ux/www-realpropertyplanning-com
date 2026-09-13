@@ -1654,6 +1654,22 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Houses available to lease for adult family home operation. Leasing lets an operator open without buying, and lets an owner keep the real estate while someone else runs the home. The lessee still holds their own DSHS license.",
   },
 
+  "/afh-club/sold": {
+    title: "Adult Family Home Sales in Washington — Sold Prices & Comps | AFH Club",
+    description: "Closed adult family home sales across Washington State with sold price, sold price per bedroom, size, licensing status at sale, and whether the business conveyed. NWMLS records reviewed by David Stein, certified residential appraiser.",
+    h1: "Adult Family Home Sales in Washington",
+    afhInventory: { sold: true },
+    quickAnswerQ: "What do adult family homes sell for in Washington?",
+    quickAnswerA: "This page lists closed adult family home sales in Washington State from NWMLS records, each reviewed to confirm the home was licensed, formerly licensed, or WABO-approved rather than merely marketed as an AFH opportunity. Every sale shows the sold price, last list price, sold price per bedroom, size, licensing status at the time of sale, and whether the operating business conveyed. Summary medians are calculated from the sales shown.",
+    intro: "Adult family homes trade differently from ordinary houses. A licensed, occupied home carries an income stream, a fire-sprinkler system, widened doors and roll-in showers, and often a caregiver suite, and buyers pay for that whether or not the business is included in the deed. A formerly licensed home or a WABO-approved house that was never licensed is a different purchase, which is why each sale below is labelled by its status at closing. David Stein, a Washington State certified residential appraiser (Stein Appraisal), reviewed each record against the listing remarks and the DSHS licensing locator.",
+    faq: [
+      { q: "Where do these sales come from?", a: "Closed-sale records from the Northwest Multiple Listing Service, filtered for adult family home references and then reviewed one by one. Sales that only described a house as a possible adult family home were removed." },
+      { q: "Does the sold price include the business?", a: "Only when the record says so. Many AFH sales close the real estate and the operating business as two transactions; where the business price was disclosed it is noted on the sale, and the sold price shown is the real estate closing price." },
+      { q: "Why show price per bedroom?", a: "Buyers and lenders value adult family homes largely on resident capacity. Price per bedroom is a rough proxy for that; the licensed capacity, where known, appears on each listing's page." },
+      { q: "Can David Stein appraise my adult family home?", a: "Yes. David Stein is a Washington State certified residential appraiser (Stein Appraisal, license #1702080) and a licensed real estate broker (eXp Realty). Contact him directly for appraisal or brokerage work." },
+    ],
+  },
+
   // ===== AFH city-specific for-sale pages (LLM/AI-search AEO pages) =====
   "/afh-club/for-sale/seattle-wa": {
     title: "Adult Family Homes For Sale in Seattle, WA | Real Property Planning",

@@ -220,6 +220,7 @@ const AFHOwnershipStructure = lazy(() => import("./pages/AFHOwnershipStructure")
 const AFHWhatIsAnAFH = lazy(() => import("./pages/AFHWhatIsAnAFH"));
 const AFHListings = lazy(() => import("./pages/AFHListings"));
 const AFHListingDetail = lazy(() => import("./pages/AFHListingDetail"));
+const AFHSold = lazy(() => import("./pages/AFHSold"));
 const AFHManagementCompanies = lazy(() => import("./pages/AFHManagementCompanies"));
 const AFHRealEstateBroker = lazy(() => import("./pages/AFHRealEstateBroker"));
 const AFHSubmit = lazy(() => import("./pages/AFHSubmit"));
@@ -1222,6 +1223,7 @@ const App = () => (
           <Route path="/afh-club/listings/properties" element={<AFHListings view="realEstate" />} />
           <Route path="/afh-club/listings/businesses" element={<AFHListings view="business" />} />
           <Route path="/afh-club/listings/for-lease" element={<AFHListings view="lease" />} />
+          <Route path="/afh-club/sold" element={<AFHSold />} />
           {/* Permanent per-listing pages (/afh-club/listings/<city>-<source>-<number>). Static siblings above must stay above this. */}
           <Route path="/afh-club/listings/:slug" element={<AFHListingDetail />} />
           {/* Adult family home directory. The :segment route resolves to either a

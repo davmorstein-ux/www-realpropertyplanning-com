@@ -16,6 +16,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/afh-club/calculators", label: "AFH Calculators" },
   { path: "/afh-club", label: "AFH Club" },
   { path: "/afh-club/costs-fees", label: "AFH Costs Fees" },
+  { path: "/afh-club/sold", label: "AFH Sold Prices Washington" },
   { path: "/afh-club/for-sale/edmonds-wa", label: "AFH For Sale Edmonds WA" },
   { path: "/afh-club/for-sale/kirkland-wa", label: "AFH For Sale Kirkland WA" },
   { path: "/afh-club/for-sale/lynnwood-wa", label: "AFH For Sale Lynnwood WA" },

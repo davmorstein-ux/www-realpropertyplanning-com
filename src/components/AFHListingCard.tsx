@@ -262,14 +262,16 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
               lineHeight: 1,
             }}
           >
-            {listing.price}
+            {listing.marketStatus === "sold" && listing.soldPrice ? listing.soldPrice : listing.price}
           </div>
           <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
-            {listing.priceLabel || (listing.listingType === "business" ? "Business asking price" : "Asking price")} ·{" "}
-            {AFH_SOURCE_LABELS[listing.source]}# {listing.mlsNum}
+            {listing.marketStatus === "sold" && listing.soldPrice
+              ? `Sold${listing.soldDate ? ` ${formatVerifiedDate(listing.soldDate)}` : ""} · last listed at ${listing.price}`
+              : listing.priceLabel || (listing.listingType === "business" ? "Business asking price" : "Asking price")}{" "}
+            · {AFH_SOURCE_LABELS[listing.source]}# {listing.mlsNum}
           </div>
           <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
-            <span style={{ fontWeight: 700, color: listing.marketStatus === "pending" ? "#a8892f" : "#0a5648" }}>
+            <span style={{ fontWeight: 700, color: listing.marketStatus === "pending" ? "#a8892f" : listing.marketStatus === "active" ? "#0a5648" : "#8a2a2a" }}>
               {AFH_MARKET_STATUS_LABELS[listing.marketStatus]}
             </span>{" "}
             · verified {formatVerifiedDate(listing.lastVerified)}

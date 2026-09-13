@@ -35,6 +35,8 @@ export interface AFHInventoryScope {
   city?: string;
   /** Restrict to one listing type. Omit for all types. */
   type?: AFHListingType;
+  /** Show closed sales (marketStatus "sold", newest first) instead of live inventory. */
+  sold?: boolean;
 }
 
 const esc = (s: string) =>
@@ -63,13 +65,66 @@ export const listingAnchor = (l: AFHListing) => `listing-${listingSlug(l)}`;
 /** Permanent page for a listing. */
 export const listingRoute = (l: AFHListing) => `/afh-club/listings/${listingSlug(l)}`;
 
-const scopedListings = (scope: AFHInventoryScope): AFHListing[] =>
-  afhListings.filter(
+const scopedListings = (scope: AFHInventoryScope): AFHListing[] => {
+  const base = scope.sold
+    ? afhListings.filter((l) => l.marketStatus === "sold").sort((a, b) => (b.soldDate ?? "").localeCompare(a.soldDate ?? ""))
+    : afhListings.filter(isLive);
+  return base.filter(
     (l) =>
-      isLive(l) &&
       (!scope.city || l.city.toLowerCase() === scope.city.toLowerCase()) &&
       (!scope.type || l.listingType === scope.type)
   );
+};
+
+const soldNumber = (l: AFHListing): number | null =>
+  l.soldPrice ? Number(l.soldPrice.replace(/[^0-9.]/g, "")) || null : null;
+
+const median = (xs: number[]): number | null => {
+  if (!xs.length) return null;
+  const a = [...xs].sort((x, y) => x - y);
+  const m = Math.floor(a.length / 2);
+  return a.length % 2 ? a[m] : (a[m - 1] + a[m]) / 2;
+};
+
+const money0 = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+
+/** Summary figures for a set of closed sales. Exported so the React sold page shows the same numbers the prerender does. */
+export interface SoldStats {
+  count: number;
+  earliest: string | null;
+  latest: string | null;
+  medianSold: number | null;
+  medianPerBed: number | null;
+  medianPerSqft: number | null;
+  medianPctOfList: number | null;
+  medianDaysOnMarket: number | null;
+  byStatus: Array<{ label: string; count: number }>;
+}
+
+export function soldStats(listings: AFHListing[]): SoldStats {
+  const sold = listings.filter((l) => l.marketStatus === "sold");
+  const prices = sold.map(soldNumber).filter((n): n is number => n !== null);
+  const perBed = sold.map((l) => { const p = soldNumber(l); return p && l.beds > 0 ? p / l.beds : null; }).filter((n): n is number => n !== null);
+  const perSqft = sold.map((l) => { const p = soldNumber(l); const q = sqftNumber(l); return p && q ? p / q : null; }).filter((n): n is number => n !== null);
+  const pct = sold.map((l) => { const p = soldNumber(l); const q = priceNumber(l); return p && q ? p / q : null; }).filter((n): n is number => n !== null);
+  const dom = sold
+    .map((l) => (l.listedDate && l.soldDate ? (Date.parse(l.soldDate) - Date.parse(l.listedDate)) / 86400000 : null))
+    .filter((n): n is number => n !== null && n >= 0);
+  const dates = sold.map((l) => l.soldDate ?? "").filter(Boolean).sort();
+  const counts = new Map<string, number>();
+  sold.forEach((l) => { const k = afhClassification(l); counts.set(k, (counts.get(k) ?? 0) + 1); });
+  return {
+    count: sold.length,
+    earliest: dates[0] ?? null,
+    latest: dates[dates.length - 1] ?? null,
+    medianSold: median(prices),
+    medianPerBed: median(perBed),
+    medianPerSqft: median(perSqft),
+    medianPctOfList: median(pct),
+    medianDaysOnMarket: median(dom),
+    byStatus: [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([label, count]) => ({ label, count })),
+  };
+}
 
 const countSentence = (listings: AFHListing[], scope: AFHInventoryScope): string => {
   const where = scope.city ? `${scope.city}, Washington` : "Washington State";
@@ -80,6 +135,11 @@ const countSentence = (listings: AFHListing[], scope: AFHInventoryScope): string
     lease: { one: "adult family home for lease", many: "adult family homes for lease" },
   };
   const noun = nouns[scope.type ?? "all"];
+  if (scope.sold) {
+    const st = soldStats(listings);
+    if (!st.count) return `No closed adult family home sales are recorded for ${where} yet.`;
+    return `${st.count} adult family home ${st.count === 1 ? "sale" : "sales"} closed in ${where} between ${formatVerifiedDate(st.earliest!)} and ${formatVerifiedDate(st.latest!)}, sourced from NWMLS closed-sale records and reviewed by David Stein.`;
+  }
   const active = listings.filter((l) => l.marketStatus === "active").length;
   const pending = listings.filter((l) => l.marketStatus === "pending").length;
   if (listings.length === 0) {
@@ -91,10 +151,35 @@ const countSentence = (listings: AFHListing[], scope: AFHInventoryScope): string
   return `There ${n === 1 ? "is" : "are"} currently ${n} ${n === 1 ? noun.one : noun.many} publicly listed in ${where} in this directory (${parts.join(", ")}).`;
 };
 
-const summaryTable = (listings: AFHListing[]): string => {
+const summaryTable = (listings: AFHListing[], sold = false): string => {
   const th = (t: string) =>
     `<th style="text-align:left;padding:8px 10px;border-bottom:2px solid #ddd;font-size:0.85rem">${t}</th>`;
   const td = (t: string) => `<td style="padding:8px 10px;border-bottom:1px solid #eee;font-size:0.95rem">${t}</td>`;
+  if (sold) {
+    const rows = listings
+      .map((l) => {
+        const p = soldNumber(l);
+        return (
+          `<tr>` +
+          td(l.soldDate ? formatVerifiedDate(l.soldDate) : "") +
+          td(esc(`${displayAddress(l)}, ${l.city}`)) +
+          td(esc(l.soldPrice ?? "")) +
+          td(esc(l.price)) +
+          td(String(l.beds)) +
+          td(`${esc(l.sqft)} sq ft`) +
+          td(p && l.beds ? money0(p / l.beds) : "") +
+          td(esc(afhClassification(l))) +
+          td(esc(sourceRef(l))) +
+          `</tr>`
+        );
+      })
+      .join("");
+    return (
+      `<div style="overflow-x:auto;margin:16px 0 24px"><table style="width:100%;border-collapse:collapse">` +
+      `<thead><tr>${th("Closed")}${th("Location")}${th("Sold price")}${th("Last list price")}${th("Beds")}${th("Size")}${th("Sold $/bed")}${th("AFH classification")}${th("Source #")}</tr></thead>` +
+      `<tbody>${rows}</tbody></table></div>`
+    );
+  }
   const rows = listings
     .map(
       (l) =>
@@ -126,9 +211,15 @@ const listingCard = (l: AFHListing): string => {
     `<h3 style="font-size:1.15rem;line-height:1.3;margin:0 0 6px"><a href="${listingRoute(l)}" style="color:#1a365d">${esc(listingHeading(l))}</a></h3>`
   );
   const priceLabel = l.priceLabel || (l.listingType === "business" ? "Business asking price" : "Asking price");
-  p.push(
-    `<p style="margin:0 0 6px;font-size:1.1rem"><strong>${esc(l.price)}</strong> <span style="color:#666;font-size:0.9rem">— ${esc(priceLabel)}</span> · <strong>${AFH_MARKET_STATUS_LABELS[l.marketStatus]}</strong></p>`
-  );
+  if (l.marketStatus === "sold" && l.soldPrice) {
+    p.push(
+      `<p style="margin:0 0 6px;font-size:1.1rem"><strong>Sold ${esc(l.soldPrice)}</strong>${l.soldDate ? ` on ${formatVerifiedDate(l.soldDate)}` : ""} <span style="color:#666;font-size:0.9rem">— last listed at ${esc(l.price)}</span></p>`
+    );
+  } else {
+    p.push(
+      `<p style="margin:0 0 6px;font-size:1.1rem"><strong>${esc(l.price)}</strong> <span style="color:#666;font-size:0.9rem">— ${esc(priceLabel)}</span> · <strong>${AFH_MARKET_STATUS_LABELS[l.marketStatus]}</strong></p>`
+    );
+  }
   p.push(`<p style="margin:0 0 6px;color:#0a5648;font-weight:700">${esc(afhClassification(l))}</p>`);
   p.push(
     `<p style="margin:0 0 6px;color:#444">${l.beds} bedrooms · ${esc(l.bathDisplay)} bathrooms (${esc(l.bathDetail)}) · ${esc(l.sqft)} square feet</p>`
@@ -242,21 +333,44 @@ export function renderAfhInventory(
 
   const html: string[] = [];
   html.push(`<section style="margin:0 0 28px">`);
-  html.push(`<h2 style="font-size:1.3rem;margin:0 0 8px">Currently available</h2>`);
+  html.push(`<h2 style="font-size:1.3rem;margin:0 0 8px">${scope.sold ? "Closed sales" : "Currently available"}</h2>`);
   html.push(`<p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0 0 6px">${esc(countSentence(listings, scope))}</p>`);
-  if (verified) {
+  if (scope.sold && listings.length > 0) {
+    const st = soldStats(listings);
+    const cell = (k: string, v: string) =>
+      `<div style="padding:12px 14px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa"><div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#666">${k}</div><div style="font-size:1.3rem;font-weight:700;color:#1B3A6B">${v}</div></div>`;
+    html.push(`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0 8px">`);
+    if (st.medianSold !== null) html.push(cell("Median sold price", money0(st.medianSold)));
+    if (st.medianPerBed !== null) html.push(cell("Median sold $ per bedroom", money0(st.medianPerBed)));
+    if (st.medianPerSqft !== null) html.push(cell("Median sold $ per sq ft", money0(st.medianPerSqft)));
+    if (st.medianPctOfList !== null) html.push(cell("Median sold ÷ last list", `${Math.round(st.medianPctOfList * 1000) / 10}%`));
+    if (st.medianDaysOnMarket !== null) html.push(cell("Median days on market", String(Math.round(st.medianDaysOnMarket))));
+    html.push(`</div>`);
+    html.push(
+      `<p style="color:#666;font-size:0.9rem;margin:0 0 12px">By classification at sale: ${st.byStatus.map((b) => `${esc(b.label)} (${b.count})`).join(" · ")}. Per-bedroom figures use the listed bedroom count, not licensed capacity. Verified ${verified ? formatVerifiedDate(verified) : ""}.</p>`
+    );
+  } else if (verified) {
     html.push(
       `<p style="color:#666;font-size:0.9rem;margin:0 0 12px">Listings last verified ${formatVerifiedDate(verified)}. Sold, expired, and withdrawn listings are removed from this list.</p>`
     );
   }
   if (listings.length > 0) {
-    html.push(summaryTable(listings));
+    html.push(summaryTable(listings, !!scope.sold));
     listings.forEach((l) => html.push(listingCard(l)));
     html.push(disclaimer(listings));
   }
   if (scope.city) {
     html.push(
       `<p style="margin-top:16px"><a href="/afh-club/listings" style="color:#1a365d">All adult family homes for sale in Washington</a></p>`
+    );
+  }
+  if (!scope.sold) {
+    html.push(
+      `<p style="margin-top:8px"><a href="/afh-club/sold" style="color:#1a365d">Recently sold adult family homes in Washington</a></p>`
+    );
+  } else {
+    html.push(
+      `<p style="margin-top:16px"><a href="/afh-club/listings" style="color:#1a365d">Adult family homes currently for sale in Washington</a></p>`
     );
   }
   html.push(`</section>`);

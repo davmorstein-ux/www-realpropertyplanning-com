@@ -260,6 +260,21 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
                       </Link>
                     );
                   })}
+                  <Link
+                    to="/afh-club/sold"
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 500,
+                      color: SLATE,
+                      backgroundColor: WHITE,
+                      border: `1px solid ${GRAY_BORDER}`,
+                      borderRadius: "6px",
+                      padding: "6px 12px",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Sold
+                  </Link>
                 </nav>
                 <p
                   style={{
