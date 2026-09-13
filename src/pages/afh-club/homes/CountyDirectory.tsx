@@ -180,7 +180,8 @@ const CountyDirectory = () => {
                         margin: "48px 0 6px",
                         paddingTop: "18px",
                         borderTop: `4px solid ${GREEN}`,
-                        letterSpacing: "-0.01em",
+                        // No letterSpacing here: index.css treats any inline
+                        // letter-spacing as eyebrow text and forces it to 14px.
                       }}
                     >
                       {group.county} County
