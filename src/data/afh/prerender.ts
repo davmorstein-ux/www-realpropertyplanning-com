@@ -552,7 +552,7 @@ function buildHubPage(index: CityIndexEntry[], retrievedAt: string, checked: Cou
   for (const { county, cities } of byCounty) {
     const n = cities.reduce((s, c) => s + c.facilityCount, 0);
     parts.push(
-      `<h2 style="font-size:1.3rem;margin:28px 0 8px">${a(`/afh-club/homes/county/${county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, `${county} County`)} — ${num(n)} ${plural(n, "home", "homes")} in ${cities.length} ${plural(cities.length, "city", "cities")}</h2>`,
+      `<h2 style="font-size:1.9rem;font-weight:800;color:#0a5648;margin:40px 0 4px;padding-top:14px;border-top:4px solid #0a5648">${a(`/afh-club/homes/county/${county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, `${county} County`)}</h2><p style="margin:0 0 10px;font-weight:600;color:#374151">${num(n)} ${plural(n, "home", "homes")} in ${cities.length} ${plural(cities.length, "city", "cities")}</p>`,
     );
     parts.push(
       `<ul style="columns:2;padding-left:20px">` +

@@ -115,10 +115,13 @@ const CountyDirectory = () => {
                     <h2
                       style={{
                         fontFamily: "'DM Sans', system-ui, sans-serif",
-                        fontSize: "24px",
-                        fontWeight: 600,
-                        color: "#111827",
-                        margin: "0 0 4px",
+                        fontSize: "clamp(28px, 3.2vw, 36px)",
+                        fontWeight: 800,
+                        color: GREEN,
+                        margin: "48px 0 6px",
+                        paddingTop: "18px",
+                        borderTop: `4px solid ${GREEN}`,
+                        letterSpacing: "-0.01em",
                       }}
                     >
                       <Link to={`/afh-club/homes/county/${group.county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} style={{ color: "inherit", textDecoration: "none" }}>
@@ -127,7 +130,7 @@ const CountyDirectory = () => {
                     </h2>
                   )}
                   {countyGroups.length > 1 && (
-                    <p style={{ margin: "0 0 12px", fontSize: "16px", color: "#6b7280" }}>
+                    <p style={{ margin: "0 0 14px", fontSize: "18px", fontWeight: 600, color: "#374151" }}>
                       {group.facilityCount.toLocaleString()} homes · {group.totalBeds.toLocaleString()} beds ·{" "}
                       {group.cityCount} cities
                     </p>
