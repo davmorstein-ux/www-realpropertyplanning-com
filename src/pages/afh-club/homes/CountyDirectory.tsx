@@ -135,7 +135,7 @@ const CountyDirectory = () => {
                     <h2
                       style={{
                         fontFamily: "'DM Sans', system-ui, sans-serif",
-                        fontSize: "clamp(28px, 3.2vw, 36px)",
+                        fontSize: "36px",
                         fontWeight: 800,
                         color: GREEN,
                         margin: "48px 0 6px",
@@ -144,19 +144,19 @@ const CountyDirectory = () => {
                         letterSpacing: "-0.01em",
                       }}
                     >
-                      <Link
-                        to={`/afh-club/homes/county/${group.county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
-                        className="rpp-heading-link no-underline"
-                        style={{ color: "inherit", textDecoration: "none" }}
-                      >
-                        {group.county} County
-                      </Link>
+                      {group.county} County
                     </h2>
                   )}
                   {countyGroups.length > 1 && (
                     <p style={{ margin: "0 0 14px", fontSize: "18px", fontWeight: 600, color: "#374151" }}>
                       {group.facilityCount.toLocaleString()} homes · {group.totalBeds.toLocaleString()} beds ·{" "}
-                      {group.cityCount} cities
+                      {group.cityCount} cities ·{" "}
+                      <Link
+                        to={`/afh-club/homes/county/${group.county.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                        className="text-accent underline underline-offset-4"
+                      >
+                        County page →
+                      </Link>
                     </p>
                   )}
                   <ul
