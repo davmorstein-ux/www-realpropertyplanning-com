@@ -2170,27 +2170,16 @@ const applyMetadata = (
   return out;
 };
 
-const writeRouteHtmlVariants = async (
-  distDir: string,
-  route: string,
-  routeHtml: string
-) => {
-  const relativeRoutePath = route.slice(1);
-  const directoryIndexPath = path.join(distDir, relativeRoutePath, "index.html");
-  const htmlAliasPath = path.join(distDir, `${relativeRoutePath}.html`);
-
-  await Promise.all([
-    mkdir(path.dirname(directoryIndexPath), { recursive: true }),
-    mkdir(path.dirname(htmlAliasPath), { recursive: true }),
-  ]);
-
-  // Each variant carries a marker so we can tell from "view source" on the
-  // live site which file the host actually serves for a clean URL. Once known,
-  // the unused variant can stop being written (it doubles the file count).
-  await Promise.all([
-    writeFile(directoryIndexPath, routeHtml.replace("</head>", "<!-- prerender-variant: index -->\n</head>"), "utf8"),
-    writeFile(htmlAliasPath, routeHtml.replace("</head>", "<!-- prerender-variant: alias -->\n</head>"), "utf8"),
-  ]);
+/**
+ * Write a prerendered route as <route>/index.html. The host serves that file
+ * for the clean URL (confirmed on the live site via a variant marker, Sept
+ * 2026); a parallel <route>.html copy used to be written as well, which doubled
+ * the file count of every build for no benefit.
+ */
+const writeRouteHtml = async (distDir: string, route: string, routeHtml: string) => {
+  const directoryIndexPath = path.join(distDir, route.slice(1), "index.html");
+  await mkdir(path.dirname(directoryIndexPath), { recursive: true });
+  await writeFile(directoryIndexPath, routeHtml, "utf8");
 };
 
 const routeMetadataPlugin = {
@@ -2217,7 +2206,7 @@ const routeMetadataPlugin = {
         .filter(([route]) => route !== "/")
         .map(async ([route, metadata]) => {
           const routeHtml = applyMetadata(baseHtml, route, metadata);
-          await writeRouteHtmlVariants(distDir, route, routeHtml);
+          await writeRouteHtml(distDir, route, routeHtml);
         })
     );
 
@@ -2237,7 +2226,7 @@ const routeMetadataPlugin = {
             { title, description },
             { injectSsg: false }
           ).replace('<div id="root"></div>', `<div id="root">${body}</div>`);
-          await writeRouteHtmlVariants(distDir, route, routeHtml);
+          await writeRouteHtml(distDir, route, routeHtml);
         })
       );
     }
@@ -2261,7 +2250,7 @@ const routeMetadataPlugin = {
           '<div id="root"></div>',
           `<div id="root">${body}</div>`
         );
-        await writeRouteHtmlVariants(distDir, route, routeHtml);
+        await writeRouteHtml(distDir, route, routeHtml);
       })
     );
     console.log(`route-metadata-prerender: ${listingRoutes.length} AFH listing pages written`);
