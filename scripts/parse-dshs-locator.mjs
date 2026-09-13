@@ -37,6 +37,7 @@ const CONTRACT_MAP = {
   "dda specialty afh pilot": "ddaSpecialtyPilot",
   "dda meaningful day": "ddaMeaningfulDay",
   "hcs meaningful day": "hcsMeaningfulDay",
+  "wcf afh sow": "wcfAfhSow",
 };
 
 /**

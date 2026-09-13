@@ -456,7 +456,7 @@ function buildHubPage(index: CityIndexEntry[], retrievedAt: string): Prerendered
   return {
     route,
     title: "Licensed Adult Family Homes in Washington by City | Real Property Planning",
-    description: `Every licensed adult family home in King, Pierce, and Snohomish counties, Washington — ${num(total)} homes across ${index.length} cities, from DSHS licensing records. Capacity, specialty designations, and Medicaid status for each.`,
+    description: `Every licensed adult family home in ${listCounties(index)} counties, Washington — ${num(total)} homes across ${index.length} cities, from DSHS licensing records. Capacity, specialty designations, and Medicaid status for each.`,
     body: parts.join(""),
   };
 }
@@ -482,6 +482,12 @@ export function loadAllFacilities(dataDir: string): Facility[] {
     }
   }
   return out;
+}
+
+/** "King, Pierce, Snohomish, Benton, and Franklin" from the county index. */
+function listCounties(index: CityIndexEntry[]): string {
+  const names = [...new Set(index.flatMap((c) => (c as CityIndexEntry & { counties?: string[] }).counties ?? [c.county]))];
+  return names.length <= 2 ? names.join(" and ") : `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
 }
 
 export function buildAfhDirectoryRoutes(dataDir: string): PrerenderedRoute[] {

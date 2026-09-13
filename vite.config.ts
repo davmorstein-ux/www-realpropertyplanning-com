@@ -789,7 +789,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Washington State's resource network for adult family home owners, buyers, sellers, prospective providers, and the professionals who serve them — a directory of every licensed home, current homes for sale, licensing and WABO guides, cost and ROI calculators, and a vetted professional network.",
     h1: "AFH Club — Washington's adult family home resource network",
     quickAnswerQ: "What is AFH Club?",
-    quickAnswerA: "AFH Club is Real Property Planning's section for adult family homes in Washington State. It has two audiences: families looking for a licensed home, and operators who want to open, buy, sell, license, or run one. It includes a directory of all 4,000+ licensed adult family homes in King, Pierce, and Snohomish counties from DSHS records, current NWMLS listings of adult family homes for sale, plain-language guides to DSHS licensing, WABO building inspections, costs, and compliance, and a network of brokers, appraisers, business brokers, and management companies who work in this niche.",
+    quickAnswerA: "AFH Club is Real Property Planning's section for adult family homes in Washington State. It has two audiences: families looking for a licensed home, and operators who want to open, buy, sell, license, or run one. It includes a directory of more than 4,100 licensed adult family homes from DSHS records — King, Pierce, Snohomish, Benton, and Franklin counties so far, with the rest of the state being added county by county — current NWMLS listings of adult family homes for sale, plain-language guides to DSHS licensing, WABO building inspections, costs, and compliance, and a network of brokers, appraisers, business brokers, and management companies who work in this niche.",
     intro: "An adult family home is a regular house licensed by Washington State DSHS to care for up to six adults. Buying, selling, or opening one involves a real estate transaction and a DSHS licensing process that have to move together, and most brokers, lenders, and inspectors have never handled one. AFH Club exists to close that gap with reference material written from transaction experience and a directory built from state licensing data.",
     sections: [
       "For families — Find every licensed adult family home in your city, with capacity, specialty designations for dementia, mental health, and developmental disabilities, Medicaid status, and a link to the home's DSHS inspection record. Learn how to read inspection reports and what the enforcement levels mean.",
@@ -798,7 +798,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Five kinds of professional, one point of contact — Real estate brokerage, independent appraisal, business brokerage for the operation itself, management companies that run the day-to-day, and introductions to investors backing qualified buyers. Appraisal and brokerage are kept on separate transactions.",
     ],
     faq: [
-      { q: "How many adult family homes are there in Washington?", a: "More than 4,000 in King, Pierce, and Snohomish counties alone, according to DSHS licensing records. AFH Club's directory lists every one by city. Most are licensed for six residents and most accept Medicaid." },
+      { q: "How many adult family homes are there in Washington?", a: "More than 4,100 in King, Pierce, Snohomish, Benton, and Franklin counties, according to DSHS licensing records, and AFH Club's directory lists every one by city; the remaining counties are being added. Most are licensed for six residents and most accept Medicaid." },
       { q: "Can I buy an adult family home that is already operating?", a: "Yes. The real estate transfers like any home sale, but the DSHS license does not — the buyer must qualify for a new license through the Change of Ownership (CHOW) process before operating. Specialty contracts also do not transfer." },
       { q: "Does AFH Club operate adult family homes?", a: "No. Real Property Planning is an independent educational resource. It does not own, operate, or manage any adult family home. Brokerage and appraisal services are provided by David Stein through his own licensed practice, not by the site." },
     ],
@@ -2184,9 +2184,12 @@ const writeRouteHtmlVariants = async (
     mkdir(path.dirname(htmlAliasPath), { recursive: true }),
   ]);
 
+  // Each variant carries a marker so we can tell from "view source" on the
+  // live site which file the host actually serves for a clean URL. Once known,
+  // the unused variant can stop being written (it doubles the file count).
   await Promise.all([
-    writeFile(directoryIndexPath, routeHtml, "utf8"),
-    writeFile(htmlAliasPath, routeHtml, "utf8"),
+    writeFile(directoryIndexPath, routeHtml.replace("</head>", "<!-- prerender-variant: index -->\n</head>"), "utf8"),
+    writeFile(htmlAliasPath, routeHtml.replace("</head>", "<!-- prerender-variant: alias -->\n</head>"), "utf8"),
   ]);
 };
 

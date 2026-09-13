@@ -36,6 +36,7 @@ const CONTRACT_MAP = {
   "dda specialty afh pilot": "ddaSpecialtyPilot",
   "dda meaningful day": "ddaMeaningfulDay",
   "hcs meaningful day": "hcsMeaningfulDay",
+  "wcf afh sow": "wcfAfhSow",
 };
 
 const CITY_CORRECTIONS = {
@@ -92,11 +93,47 @@ function splitList(cell) {
     .filter(Boolean);
 }
 
+/** Minimal RFC-4180 reader: quoted fields, doubled quotes, embedded delimiters and newlines. */
+function parseDelimited(text, delim) {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (inQuotes) {
+      if (ch === '"') {
+        if (text[i + 1] === '"') {
+          field += '"';
+          i++;
+        } else inQuotes = false;
+      } else field += ch;
+    } else if (ch === '"') inQuotes = true;
+    else if (ch === delim) {
+      row.push(field);
+      field = "";
+    } else if (ch === "\n" || ch === "\r") {
+      if (ch === "\r" && text[i + 1] === "\n") i++;
+      row.push(field);
+      field = "";
+      if (row.some((c) => c.trim() !== "")) rows.push(row);
+      row = [];
+    } else field += ch;
+  }
+  if (field !== "" || row.length) {
+    row.push(field);
+    if (row.some((c) => c.trim() !== "")) rows.push(row);
+  }
+  return rows;
+}
+
 export function importExport(text, { retrievedAt = new Date().toISOString().slice(0, 10) } = {}) {
-  const lines = text.replace(/^\uFEFF/, "").split(/\r?\n/).filter((l) => l.trim());
-  if (lines.length < 2) throw new Error("export has no data rows");
-  const delim = lines[0].includes("\t") ? "\t" : ",";
-  const header = lines[0].split(delim).map((h) => h.trim());
+  const clean = text.replace(/^\uFEFF/, "");
+  const firstLine = clean.split(/\r?\n/, 1)[0];
+  const delim = firstLine.includes("\t") ? "\t" : ",";
+  const rows = parseDelimited(clean, delim);
+  if (rows.length < 2) throw new Error("export has no data rows");
+  const header = rows[0].map((h) => h.trim());
   const col = (name) => {
     const i = header.indexOf(name);
     if (i === -1) throw new Error(`export is missing the "${name}" column`);
@@ -124,8 +161,7 @@ export function importExport(text, { retrievedAt = new Date().toISOString().slic
   const problems = [];
   const out = [];
   const seen = new Set();
-  lines.slice(1).forEach((line, idx) => {
-    const cells = line.split(delim);
+  rows.slice(1).forEach((cells, idx) => {
     const row = idx + 2;
     const get = (i) => (cells[i] ?? "").trim();
     if (get(C.type) !== "AF") {
