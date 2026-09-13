@@ -412,7 +412,7 @@ const REAL_ESTATE_COUNTY_PAGES: Record<string, string> = {
 };
 
 const pill = (href: string, label: string, count: number, empty: boolean) =>
-  `<a href="${attr(href)}" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;margin:0 8px 8px 0;border-radius:999px;border:1px solid ${
+  `<a href="${attr(href)}" class="rpp-county-pill no-underline${empty ? " is-empty" : ""}" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;margin:0 8px 8px 0;border-radius:999px;border:1px solid ${
     empty ? "#d9dede" : "#0a5648"
   };background:${empty ? "#f5f5f5" : "#fff"};color:${empty ? "#6b7280" : "#0a5648"};font-weight:600;text-decoration:none">${esc(label)} <span style="font-weight:500;color:${
     empty ? "#9ca3af" : "#374151"

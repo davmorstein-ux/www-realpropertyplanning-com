@@ -3014,6 +3014,35 @@ main h3 a.rpp-heading-link {
   line-height: inherit !important;
 }
 
+/* 4c. AFH directory pills and city links — hover feedback.
+   Pills invert (green fill, white text); city names turn green. */
+main a.rpp-county-pill {
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+main a.rpp-county-pill:hover,
+main a.rpp-county-pill:focus-visible {
+  background-color: #0a5648 !important;
+  color: #ffffff !important;
+  border-color: #0a5648 !important;
+}
+main a.rpp-county-pill:hover span,
+main a.rpp-county-pill:focus-visible span {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+main a.rpp-county-pill.is-empty:hover,
+main a.rpp-county-pill.is-empty:focus-visible {
+  background-color: #6b7280 !important;
+  border-color: #6b7280 !important;
+}
+main a.rpp-city-link {
+  transition: color 0.15s ease;
+}
+main a.rpp-city-link:hover,
+main a.rpp-city-link:focus-visible {
+  color: #0a5648 !important;
+  text-decoration-thickness: 2px;
+}
+
 /* 5. Eyebrow / label / uppercase tracking text — 14px floor + 600 weight */
 main [style*="text-transform: uppercase"],
 main [style*="textTransform: 'uppercase'"],

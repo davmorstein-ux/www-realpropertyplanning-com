@@ -76,6 +76,7 @@ const CountyDirectory = () => {
                   return (
                     <Link
                       to={`/afh-club/homes/county/${c.slug}`}
+                      className={`rpp-county-pill no-underline${empty ? " is-empty" : ""}`}
                       title={empty ? `${c.county} County was checked and has no licensed adult family homes` : `${c.facilityCount} licensed homes in ${c.county} County`}
                       style={{
                         display: "inline-flex",
@@ -189,7 +190,7 @@ const CountyDirectory = () => {
                           >
                             <Link
                               to={`/afh-club/homes/${c.citySlug}`}
-                              className="rpp-heading-link underline underline-offset-4 hover:text-gold transition-colors"
+                              className="rpp-heading-link rpp-city-link underline underline-offset-4"
                               style={{ color: "#111827" }}
                             >
                               {c.city}
