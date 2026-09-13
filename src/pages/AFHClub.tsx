@@ -416,13 +416,17 @@ const PAGE_CSS = `
      rest behind arrows and dots. For a readership that is largely older
      adults, content that moves or hides is the wrong default; these are five
      links and all five should simply be visible. */
+  /* Flex rather than grid so an incomplete last row centres instead of
+     leaving a hole on the right. Card width matches a 3-column grid. */
   .rpp-afh-dest-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
     max-width: 1040px;
     margin: 0 auto;
   }
+  .rpp-afh-dest-card { flex: 0 1 calc((100% - 48px) / 3); }
   .rpp-afh-dest-card {
     display: flex;
     flex-direction: column;
@@ -442,12 +446,16 @@ const PAGE_CSS = `
     outline: 3px solid #b13a44;
     outline-offset: 3px;
   }
+  /* The destination images are portrait posters with text in them, so they
+     are shown whole (3:4, contain) rather than cropped to a landscape band.
+     The placeholder colour fills any letterboxing on the one 2:3 image. */
   .rpp-afh-dest-card img {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
+    object-position: center;
   }
   .rpp-afh-dest-body { padding: 18px 20px 20px; }
   .rpp-afh-dest-card h3 {
@@ -466,10 +474,10 @@ const PAGE_CSS = `
     margin: 0 !important;
   }
   @media (max-width: 900px) {
-    .rpp-afh-dest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .rpp-afh-dest-card { flex-basis: calc((100% - 24px) / 2); }
   }
   @media (max-width: 560px) {
-    .rpp-afh-dest-grid { grid-template-columns: minmax(0, 1fr); }
+    .rpp-afh-dest-card { flex-basis: 100%; max-width: 420px; }
   }
 `;
 
