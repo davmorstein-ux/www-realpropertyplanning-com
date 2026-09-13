@@ -35,6 +35,8 @@ const CONTRACT_MAP = {
   "wa cares fund adult family home respite": "waCaresFundRespite",
   "wcf private duty nursing": "wcfPrivateDutyNursing",
   "dda specialty afh pilot": "ddaSpecialtyPilot",
+  "dda meaningful day": "ddaMeaningfulDay",
+  "hcs meaningful day": "hcsMeaningfulDay",
 };
 
 /**

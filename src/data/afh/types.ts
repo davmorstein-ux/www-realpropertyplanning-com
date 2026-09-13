@@ -26,7 +26,9 @@ export type AFHContract =
   | "waCaresFund"
   | "waCaresFundRespite"
   | "wcfPrivateDutyNursing"
-  | "ddaSpecialtyPilot";
+  | "ddaSpecialtyPilot"
+  | "ddaMeaningfulDay"
+  | "hcsMeaningfulDay";
 
 export interface AFHAddress {
   /** Street line as published by DSHS, e.g. "7339 Ne 140th St" */
@@ -101,6 +103,8 @@ export const CONTRACT_LABELS: Record<AFHContract, string> = {
   waCaresFundRespite: "WA Cares Fund Adult Family Home Respite",
   wcfPrivateDutyNursing: "WCF Private Duty Nursing",
   ddaSpecialtyPilot: "DDA Specialty AFH Pilot",
+  ddaMeaningfulDay: "DDA Meaningful Day",
+  hcsMeaningfulDay: "HCS Meaningful Day",
 };
 
 /* ------------------------------------------------------------------ */
