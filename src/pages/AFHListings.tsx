@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Link } from "react-router-dom";
-import { afhListings, AFH_TYPE_LABELS, type AFHListingType } from "@/data/afhListings";
+import { liveListings, AFH_TYPE_LABELS, type AFHListingType } from "@/data/afhListings";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import { realEstateListingsPageSchema } from "@/lib/schema";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
@@ -44,9 +44,9 @@ const VIEWS: Record<
     path: "/afh-club/listings",
     title: "Adult Family Homes for Sale in Washington | AFH Club",
     description:
-      "Every adult family home opportunity currently listed in Washington State — properties for sale, operating AFH businesses for sale, and homes for lease — with pricing, licensing status, and source attribution.",
+      "An independently researched directory of publicly marketed adult family home properties, businesses, and leases in Washington State — with pricing, licensing status, source attribution, and a verification date on every listing.",
     h1: "Adult Family Home Listings",
-    lede: "Every adult family home opportunity we track in Washington State, in three groups: the real estate, the operating business, and homes for lease. Each listing shows its licensing status and whether the business conveys.",
+    lede: "An independently researched directory of publicly marketed adult family home opportunities in Washington State, in three groups: the real estate, the operating business, and homes for lease. Listings are gathered from NWMLS, RMLS, BizBuySell, and direct-from-owner sources and regularly checked for status changes. Each one shows its licensing status and whether the business conveys.",
     empty: "No current listings.",
   },
   realEstate: {
@@ -80,6 +80,8 @@ const VIEWS: Record<
 
 const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
   const copy = VIEWS[view];
+  // Only listings currently on the market (active or pending); sold / expired records stay in the data file but never display here.
+  const afhListings = liveListings();
   const shown = view === "all" ? afhListings : afhListings.filter((l) => l.listingType === view);
   const counts = {
     realEstate: afhListings.filter((l) => l.listingType === "realEstate").length,
