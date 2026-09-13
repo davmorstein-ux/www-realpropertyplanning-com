@@ -1,0 +1,755 @@
+[
+  {
+    "licenseNumber": "694000",
+    "name": "ARCADIA ADULT FAMILY HOME LLC",
+    "displayName": "ARCADIA ADULT FAMILY HOME LLC",
+    "slug": "arcadia-adult-family-home-694000",
+    "address": {
+      "street": "910 38th St",
+      "city": "Bellingham",
+      "citySlug": "bellingham",
+      "state": "WA",
+      "zip": "98229",
+      "county": "Whatcom"
+    },
+    "contactName": "North, Olga M.",
+    "phone": "(360) 739-8859",
+    "regionUnit": "2B",
+    "licensedBeds": 2,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754749",
+    "name": "Bellingham Adult Family Homes",
+    "displayName": "Bellingham Adult Family Homes",
+    "slug": "bellingham-adult-family-homes-754749",
+    "address": {
+      "street": "3614 Alabama St",
+      "city": "Bellingham",
+      "citySlug": "bellingham",
+      "state": "WA",
+      "zip": "98229",
+      "county": "Whatcom"
+    },
+    "contactName": "ANTON, CONSTANTIN",
+    "phone": "(360) 656-6997",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757617",
+    "name": "Beyond Sight AFH LLC",
+    "displayName": "Beyond Sight AFH LLC",
+    "slug": "beyond-sight-afh-757617",
+    "address": {
+      "street": "1090 Victoria St",
+      "city": "Sumas",
+      "citySlug": "sumas",
+      "state": "WA",
+      "zip": "98295",
+      "county": "Whatcom"
+    },
+    "contactName": "Githiri, Nancy H.",
+    "phone": "(360) 933-1848",
+    "regionUnit": "2B",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758409",
+    "name": "Caring and Comfort Adult Family Home",
+    "displayName": "Caring and Comfort Adult Family Home",
+    "slug": "caring-and-comfort-adult-family-home-758409",
+    "address": {
+      "street": "2123 Lagerwey Cir",
+      "city": "Lynden",
+      "citySlug": "lynden",
+      "state": "WA",
+      "zip": "98264",
+      "county": "Whatcom"
+    },
+    "contactName": "Brar, Simran",
+    "phone": "(360) 441-1358",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758304",
+    "name": "DELIGHT CARE AFH LLC",
+    "displayName": "DELIGHT CARE AFH LLC",
+    "slug": "delight-care-afh-758304",
+    "address": {
+      "street": "1048 Ridgeway Dr",
+      "city": "Lynden",
+      "citySlug": "lynden",
+      "state": "WA",
+      "zip": "98264",
+      "county": "Whatcom"
+    },
+    "contactName": "Habtemaryam, Selas D.",
+    "phone": "(206) 327-4153",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756830",
+    "name": "Emmanuel Charity AFH Inc",
+    "displayName": "Emmanuel Charity AFH Inc",
+    "slug": "emmanuel-charity-afh-756830",
+    "address": {
+      "street": "3446 Cottonwood Ave",
+      "city": "Bellingham",
+      "citySlug": "bellingham",
+      "state": "WA",
+      "zip": "98225",
+      "county": "Whatcom"
+    },
+    "contactName": "Muigai, Karen",
+    "phone": "(360) 526-5023",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753663",
+    "name": "Glorious Family Home Care Inc",
+    "displayName": "Glorious Family Home Care Inc",
+    "slug": "glorious-family-home-care-753663",
+    "address": {
+      "street": "201 S Garden Dr",
+      "city": "Lynden",
+      "citySlug": "lynden",
+      "state": "WA",
+      "zip": "98264",
+      "county": "Whatcom"
+    },
+    "contactName": "Shinohara, Ryo",
+    "phone": "(360) 656-6890",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758667",
+    "name": "Gods Immense Home",
+    "displayName": "Gods Immense Home",
+    "slug": "gods-immense-home-758667",
+    "address": {
+      "street": "4917 Henley St",
+      "city": "Blaine",
+      "citySlug": "blaine",
+      "state": "WA",
+      "zip": "98230",
+      "county": "Whatcom"
+    },
+    "contactName": "Applewhite, Famous",
+    "phone": "(346) 754-0595",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "750378",
+    "name": "GRACE ADULT FAMILY HOME LLC",
+    "displayName": "GRACE ADULT FAMILY HOME LLC",
+    "slug": "grace-adult-family-home-750378",
+    "address": {
+      "street": "6826 Daffodil Terrace",
+      "city": "Ferndale",
+      "citySlug": "ferndale",
+      "state": "WA",
+      "zip": "98248",
+      "county": "Whatcom"
+    },
+    "contactName": "Mekonnen, Tsegaye A.",
+    "phone": "(360) 366-9999",
+    "regionUnit": "2B",
+    "licensedBeds": 8,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758943",
+    "name": "Grace Wood Creek LLC",
+    "displayName": "Grace Wood Creek LLC",
+    "slug": "grace-wood-creek-758943",
+    "address": {
+      "street": "503 Wood Creek Dr",
+      "city": "Lynden",
+      "citySlug": "lynden",
+      "state": "WA",
+      "zip": "98264",
+      "county": "Whatcom"
+    },
+    "contactName": "Shiferaw, Meron S.",
+    "phone": "(206) 779-2578",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758123",
+    "name": "Happy Quest Adult Family LLC",
+    "displayName": "Happy Quest Adult Family LLC",
+    "slug": "happy-quest-adult-family-758123",
+    "address": {
+      "street": "2835 Haxton Way",
+      "city": "Bellingham",
+      "citySlug": "bellingham",
+      "state": "WA",
+      "zip": "98226",
+      "county": "Whatcom"
+    },
+    "contactName": "Mbaya, Sammy",
+    "phone": "(360) 223-7661",
+    "regionUnit": "2B",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754381",
+    "name": "Julie's Bayview Inc",
+    "displayName": "Julie's Bayview Inc",
+    "slug": "julies-bayview-754381",
+    "address": {
+      "street": "8261 Harborview Rd",
+      "city": "Blaine",
+      "citySlug": "blaine",
+      "state": "WA",
+      "zip": "98230",
+      "county": "Whatcom"
+    },
+    "contactName": "Hill, Johanna",
+    "phone": "(360) 922-0708",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757146",
+    "name": "La Casa De Esperanza",
+    "displayName": "La Casa De Esperanza",
+    "slug": "la-casa-de-esperanza-757146",
+    "address": {
+      "street": "1637 Grandview Pl",
+      "city": "Ferndale",
+      "citySlug": "ferndale",
+      "state": "WA",
+      "zip": "98248",
+      "county": "Whatcom"
+    },
+    "contactName": "Utecht, Brittiny",
+    "phone": "(360) 384-1774",
+    "regionUnit": "2B",
+    "licensedBeds": 3,
+    "specialties": [
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751518",
+    "name": "LEE MANOR",
+    "displayName": "LEE MANOR",
+    "slug": "lee-manor-751518",
+    "address": {
+      "street": "2233 Main St",
+      "city": "Ferndale",
+      "citySlug": "ferndale",
+      "state": "WA",
+      "zip": "98248",
+      "county": "Whatcom"
+    },
+    "contactName": "LEE, ANNETTA",
+    "phone": "(360) 312-8649",
+    "regionUnit": "2B",
+    "licensedBeds": 2,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759210",
+    "name": "LOYAL PALACE AFH LLC",
+    "displayName": "LOYAL PALACE AFH LLC",
+    "slug": "loyal-palace-afh-759210",
+    "address": {
+      "street": "291 Birch Bay Lynden Rd",
+      "city": "Lynden",
+      "citySlug": "lynden",
+      "state": "WA",
+      "zip": "98264",
+      "county": "Whatcom"
+    },
+    "contactName": "NJOROGE, JULIA W.",
+    "phone": "(360) 746-7117",
+    "regionUnit": "2B",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755708",
+    "name": "M & S Grace Manor Adult Family Home LLC",
+    "displayName": "M & S Grace Manor Adult Family Home LLC",
+    "slug": "m-and-s-grace-manor-adult-family-home-755708",
+    "address": {
+      "street": "3786 Britton Rd",
+      "city": "Bellingham",
+      "citySlug": "bellingham",
+      "state": "WA",
+      "zip": "98226",
+      "county": "Whatcom"
+    },
+    "contactName": "Shiferaw, Eyoel S.",
+    "phone": "(360) 305-5779",
+    "regionUnit": "2B",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755774",
+    "name": "Maple Park Adult Family Home LLC",
+    "displayName": "Maple Park Adult Family Home LLC",
+    "slug": "maple-park-adult-family-home-755774",
+    "address": {
+      "street": "319 S Park St",
+      "city": "Lynden",
+      "citySlug": "lynden",
+      "state": "WA",
+      "zip": "98264",
+      "county": "Whatcom"
+    },
+    "contactName": "Hartl-OLeary, Joana",
+    "phone": "(360) 922-0689",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754721",
+    "name": "Mountain View AFH LLC",
+    "displayName": "Mountain View AFH LLC",
+    "slug": "mountain-view-afh-754721",
+    "address": {
+      "street": "2545 Mountain View Road",
+      "city": "Ferndale",
+      "citySlug": "ferndale",
+      "state": "WA",
+      "zip": "98248",
+      "county": "Whatcom"
+    },
+    "contactName": "Hartl-OLeary, Joana",
+    "phone": "(360) 393-3056",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755579",
+    "name": "P&M Among Friends LLC",
+    "displayName": "P&M Among Friends LLC",
+    "slug": "p-and-m-among-friends-755579",
+    "address": {
+      "street": "612 Dahlia Street",
+      "city": "Lynden",
+      "citySlug": "lynden",
+      "state": "WA",
+      "zip": "98264",
+      "county": "Whatcom"
+    },
+    "contactName": "Tsige, Aemere",
+    "phone": "(360) 393-4661",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "303200",
+    "name": "SEAN HUMPHREY HOUSE",
+    "displayName": "SEAN HUMPHREY HOUSE",
+    "slug": "sean-humphrey-house-303200",
+    "address": {
+      "street": "1630 H Street",
+      "city": "Bellingham",
+      "citySlug": "bellingham",
+      "state": "WA",
+      "zip": "98225",
+      "county": "Whatcom"
+    },
+    "contactName": "Kindy, Patrick I.",
+    "phone": "(360) 733-0176",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth"
+    ],
+    "contracts": [
+      "wcfAfhSow",
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751011",
+    "name": "SWEET GOLDEN YEARS INCORPORATED",
+    "displayName": "SWEET GOLDEN YEARS INCORPORATED",
+    "slug": "sweet-golden-years-incorporated-751011",
+    "address": {
+      "street": "4952 Hannegan Rd",
+      "city": "Bellingham",
+      "citySlug": "bellingham",
+      "state": "WA",
+      "zip": "98226",
+      "county": "Whatcom"
+    },
+    "contactName": "TUREK, MICHELLE L.",
+    "phone": "(360) 933-4728",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755601",
+    "name": "T&A Adult Care Lynden LLC",
+    "displayName": "T&A Adult Care Lynden LLC",
+    "slug": "t-and-a-adult-care-lynden-755601",
+    "address": {
+      "street": "925 E Front St",
+      "city": "Lynden",
+      "citySlug": "lynden",
+      "state": "WA",
+      "zip": "98264",
+      "county": "Whatcom"
+    },
+    "contactName": "Gebreyes, Hanna T.",
+    "phone": "(360) 366-8441",
+    "regionUnit": "2B",
+    "licensedBeds": 8,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753492",
+    "name": "Taylor Adult Family Home",
+    "displayName": "Taylor Adult Family Home",
+    "slug": "taylor-adult-family-home-753492",
+    "address": {
+      "street": "5015 Hannegan Rd",
+      "city": "Bellingham",
+      "citySlug": "bellingham",
+      "state": "WA",
+      "zip": "98226",
+      "county": "Whatcom"
+    },
+    "contactName": "Wayne, Victoria P.",
+    "phone": "(360) 398-2582",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753240",
+    "name": "The Malloy Place 2",
+    "displayName": "The Malloy Place 2",
+    "slug": "the-malloy-place-2-753240",
+    "address": {
+      "street": "6072 Malloy Ave",
+      "city": "Ferndale",
+      "citySlug": "ferndale",
+      "state": "WA",
+      "zip": "98248",
+      "county": "Whatcom"
+    },
+    "contactName": "Paez, Marlene C.",
+    "phone": "(360) 392-8664",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "750840",
+    "name": "VINYARD HAVEN ADULT FAMILY HOME",
+    "displayName": "VINYARD HAVEN ADULT FAMILY HOME",
+    "slug": "vinyard-haven-adult-family-home-750840",
+    "address": {
+      "street": "8285 Custer School Rd",
+      "city": "Custer",
+      "citySlug": "custer",
+      "state": "WA",
+      "zip": "98240",
+      "county": "Whatcom"
+    },
+    "contactName": "LARSEN, TERESA T.",
+    "phone": "(360) 223-6208",
+    "regionUnit": "2B",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

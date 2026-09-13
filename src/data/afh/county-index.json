@@ -1,5 +1,19 @@
 [
   {
+    "city": "Vancouver",
+    "citySlug": "vancouver",
+    "county": "Clark",
+    "counties": [
+      "Clark"
+    ],
+    "facilityCount": 494,
+    "totalBeds": 2887,
+    "behaviorSupport": 67,
+    "developmentalDisabilities": 256,
+    "privatePay": 0,
+    "withReports": 443
+  },
+  {
     "city": "Tacoma",
     "citySlug": "tacoma",
     "county": "Pierce",
@@ -12,6 +26,20 @@
     "developmentalDisabilities": 286,
     "privatePay": 15,
     "withReports": 246
+  },
+  {
+    "city": "Spokane",
+    "citySlug": "spokane",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 330,
+    "totalBeds": 1884,
+    "behaviorSupport": 235,
+    "developmentalDisabilities": 244,
+    "privatePay": 0,
+    "withReports": 237
   },
   {
     "city": "Lynnwood",
@@ -82,6 +110,20 @@
     "developmentalDisabilities": 226,
     "privatePay": 9,
     "withReports": 168
+  },
+  {
+    "city": "Spokane Valley",
+    "citySlug": "spokane-valley",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 242,
+    "totalBeds": 1417,
+    "behaviorSupport": 200,
+    "developmentalDisabilities": 185,
+    "privatePay": 0,
+    "withReports": 174
   },
   {
     "city": "Renton",
@@ -155,6 +197,20 @@
     "withReports": 85
   },
   {
+    "city": "Lacey",
+    "citySlug": "lacey",
+    "county": "Thurston",
+    "counties": [
+      "Thurston"
+    ],
+    "facilityCount": 143,
+    "totalBeds": 830,
+    "behaviorSupport": 48,
+    "developmentalDisabilities": 105,
+    "privatePay": 0,
+    "withReports": 106
+  },
+  {
     "city": "Bellevue",
     "citySlug": "bellevue",
     "county": "King",
@@ -167,6 +223,20 @@
     "developmentalDisabilities": 36,
     "privatePay": 29,
     "withReports": 82
+  },
+  {
+    "city": "Olympia",
+    "citySlug": "olympia",
+    "county": "Thurston",
+    "counties": [
+      "Thurston"
+    ],
+    "facilityCount": 135,
+    "totalBeds": 770,
+    "behaviorSupport": 36,
+    "developmentalDisabilities": 70,
+    "privatePay": 0,
+    "withReports": 92
   },
   {
     "city": "Edmonds",
@@ -310,6 +380,48 @@
     "withReports": 23
   },
   {
+    "city": "Port Orchard",
+    "citySlug": "port-orchard",
+    "county": "Kitsap",
+    "counties": [
+      "Kitsap"
+    ],
+    "facilityCount": 37,
+    "totalBeds": 211,
+    "behaviorSupport": 8,
+    "developmentalDisabilities": 21,
+    "privatePay": 0,
+    "withReports": 23
+  },
+  {
+    "city": "Battle Ground",
+    "citySlug": "battle-ground",
+    "county": "Clark",
+    "counties": [
+      "Clark"
+    ],
+    "facilityCount": 33,
+    "totalBeds": 196,
+    "behaviorSupport": 5,
+    "developmentalDisabilities": 10,
+    "privatePay": 0,
+    "withReports": 27
+  },
+  {
+    "city": "Yakima",
+    "citySlug": "yakima",
+    "county": "Yakima",
+    "counties": [
+      "Yakima"
+    ],
+    "facilityCount": 31,
+    "totalBeds": 185,
+    "behaviorSupport": 4,
+    "developmentalDisabilities": 12,
+    "privatePay": 0,
+    "withReports": 30
+  },
+  {
     "city": "Burien",
     "citySlug": "burien",
     "county": "King",
@@ -352,6 +464,20 @@
     "withReports": 9
   },
   {
+    "city": "Tumwater",
+    "citySlug": "tumwater",
+    "county": "Thurston",
+    "counties": [
+      "Thurston"
+    ],
+    "facilityCount": 29,
+    "totalBeds": 173,
+    "behaviorSupport": 7,
+    "developmentalDisabilities": 16,
+    "privatePay": 0,
+    "withReports": 20
+  },
+  {
     "city": "Bonney Lake",
     "citySlug": "bonney-lake",
     "county": "Pierce",
@@ -364,6 +490,20 @@
     "developmentalDisabilities": 16,
     "privatePay": 3,
     "withReports": 18
+  },
+  {
+    "city": "Bremerton",
+    "citySlug": "bremerton",
+    "county": "Kitsap",
+    "counties": [
+      "Kitsap"
+    ],
+    "facilityCount": 27,
+    "totalBeds": 153,
+    "behaviorSupport": 2,
+    "developmentalDisabilities": 19,
+    "privatePay": 0,
+    "withReports": 22
   },
   {
     "city": "Pasco",
@@ -477,6 +617,20 @@
     "developmentalDisabilities": 10,
     "privatePay": 1,
     "withReports": 11
+  },
+  {
+    "city": "Brush Prairie",
+    "citySlug": "brush-prairie",
+    "county": "Clark",
+    "counties": [
+      "Clark"
+    ],
+    "facilityCount": 15,
+    "totalBeds": 86,
+    "behaviorSupport": 4,
+    "developmentalDisabilities": 7,
+    "privatePay": 0,
+    "withReports": 15
   },
   {
     "city": "Covington",
@@ -648,6 +802,34 @@
     "withReports": 5
   },
   {
+    "city": "Bellingham",
+    "citySlug": "bellingham",
+    "county": "Whatcom",
+    "counties": [
+      "Whatcom"
+    ],
+    "facilityCount": 8,
+    "totalBeds": 42,
+    "behaviorSupport": 3,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 6
+  },
+  {
+    "city": "Cheney",
+    "citySlug": "cheney",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 8,
+    "totalBeds": 44,
+    "behaviorSupport": 5,
+    "developmentalDisabilities": 7,
+    "privatePay": 0,
+    "withReports": 5
+  },
+  {
     "city": "Lake Forest Park",
     "citySlug": "lake-forest-park",
     "county": "King",
@@ -662,6 +844,20 @@
     "withReports": 5
   },
   {
+    "city": "Lynden",
+    "citySlug": "lynden",
+    "county": "Whatcom",
+    "counties": [
+      "Whatcom"
+    ],
+    "facilityCount": 8,
+    "totalBeds": 49,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 6,
+    "privatePay": 0,
+    "withReports": 4
+  },
+  {
     "city": "Orting",
     "citySlug": "orting",
     "county": "Pierce",
@@ -673,6 +869,20 @@
     "behaviorSupport": 1,
     "developmentalDisabilities": 4,
     "privatePay": 1,
+    "withReports": 6
+  },
+  {
+    "city": "Ridgefield",
+    "citySlug": "ridgefield",
+    "county": "Clark",
+    "counties": [
+      "Clark"
+    ],
+    "facilityCount": 8,
+    "totalBeds": 43,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
     "withReports": 6
   },
   {
@@ -760,6 +970,20 @@
     "withReports": 3
   },
   {
+    "city": "Camas",
+    "citySlug": "camas",
+    "county": "Clark",
+    "counties": [
+      "Clark"
+    ],
+    "facilityCount": 6,
+    "totalBeds": 36,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 6
+  },
+  {
     "city": "Enumclaw",
     "citySlug": "enumclaw",
     "county": "King",
@@ -844,6 +1068,34 @@
     "withReports": 6
   },
   {
+    "city": "Ferndale",
+    "citySlug": "ferndale",
+    "county": "Whatcom",
+    "counties": [
+      "Whatcom"
+    ],
+    "facilityCount": 5,
+    "totalBeds": 25,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 3
+  },
+  {
+    "city": "Mead",
+    "citySlug": "mead",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 5,
+    "totalBeds": 27,
+    "behaviorSupport": 4,
+    "developmentalDisabilities": 4,
+    "privatePay": 0,
+    "withReports": 3
+  },
+  {
     "city": "North Bend",
     "citySlug": "north-bend",
     "county": "King",
@@ -856,6 +1108,119 @@
     "developmentalDisabilities": 2,
     "privatePay": 3,
     "withReports": 2
+  },
+  {
+    "city": "Silverdale",
+    "citySlug": "silverdale",
+    "county": "Kitsap",
+    "counties": [
+      "Kitsap"
+    ],
+    "facilityCount": 5,
+    "totalBeds": 32,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 4
+  },
+  {
+    "city": "Washougal",
+    "citySlug": "washougal",
+    "county": "Clark",
+    "counties": [
+      "Clark"
+    ],
+    "facilityCount": 5,
+    "totalBeds": 26,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 5
+  },
+  {
+    "city": "Yelm",
+    "citySlug": "yelm",
+    "county": "Thurston",
+    "counties": [
+      "Thurston",
+      "Pierce"
+    ],
+    "facilityCount": 5,
+    "totalBeds": 26,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 3
+  },
+  {
+    "city": "Airway Heights",
+    "citySlug": "airway-heights",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 4,
+    "totalBeds": 22,
+    "behaviorSupport": 3,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 4
+  },
+  {
+    "city": "Colbert",
+    "citySlug": "colbert",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 4,
+    "totalBeds": 23,
+    "behaviorSupport": 2,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 4
+  },
+  {
+    "city": "Deer Park",
+    "citySlug": "deer-park",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 4,
+    "totalBeds": 22,
+    "behaviorSupport": 2,
+    "developmentalDisabilities": 3,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
+    "city": "Veradale",
+    "citySlug": "veradale",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 3,
+    "totalBeds": 18,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 3
+  },
+  {
+    "city": "Blaine",
+    "citySlug": "blaine",
+    "county": "Whatcom",
+    "counties": [
+      "Whatcom"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 1
   },
   {
     "city": "Duvall",
@@ -900,6 +1265,76 @@
     "withReports": 2
   },
   {
+    "city": "La Center",
+    "citySlug": "la-center",
+    "county": "Clark",
+    "counties": [
+      "Clark"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
+    "city": "Medical Lake",
+    "citySlug": "medical-lake",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 10,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Millwood",
+    "citySlug": "millwood",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 10,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Olalla",
+    "citySlug": "olalla",
+    "county": "Kitsap",
+    "counties": [
+      "Kitsap"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 9,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
+    "city": "Otis Orchards",
+    "citySlug": "otis-orchards",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 2,
+    "totalBeds": 12,
+    "behaviorSupport": 2,
+    "developmentalDisabilities": 2,
+    "privatePay": 0,
+    "withReports": 0
+  },
+  {
     "city": "Parkland",
     "citySlug": "parkland",
     "county": "Pierce",
@@ -942,6 +1377,20 @@
     "withReports": 2
   },
   {
+    "city": "Amboy",
+    "citySlug": "amboy",
+    "county": "Clark",
+    "counties": [
+      "Clark"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 2,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
     "city": "Benton City",
     "citySlug": "benton-city",
     "county": "Benton",
@@ -952,6 +1401,48 @@
     "totalBeds": 6,
     "behaviorSupport": 1,
     "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Chattaroy",
+    "citySlug": "chattaroy",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Custer",
+    "citySlug": "custer",
+    "county": "Whatcom",
+    "counties": [
+      "Whatcom"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Grandview",
+    "citySlug": "grandview",
+    "county": "Yakima",
+    "counties": [
+      "Yakima"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 1,
     "privatePay": 0,
     "withReports": 1
   },
@@ -984,6 +1475,34 @@
     "withReports": 1
   },
   {
+    "city": "Liberty Lake",
+    "citySlug": "liberty-lake",
+    "county": "Spokane",
+    "counties": [
+      "Spokane"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Mabton",
+    "citySlug": "mabton",
+    "county": "Yakima",
+    "counties": [
+      "Yakima"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 4,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
     "city": "Prosser",
     "citySlug": "prosser",
     "county": "Benton",
@@ -994,6 +1513,34 @@
     "totalBeds": 6,
     "behaviorSupport": 1,
     "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Rochester",
+    "citySlug": "rochester",
+    "county": "Thurston",
+    "counties": [
+      "Thurston"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Selah",
+    "citySlug": "selah",
+    "county": "Yakima",
+    "counties": [
+      "Yakima"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 5,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 0,
     "privatePay": 0,
     "withReports": 1
   },
@@ -1012,17 +1559,31 @@
     "withReports": 1
   },
   {
-    "city": "Yelm",
-    "citySlug": "yelm",
-    "county": "Pierce",
+    "city": "Sumas",
+    "citySlug": "sumas",
+    "county": "Whatcom",
     "counties": [
-      "Pierce"
+      "Whatcom"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 5,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 0
+  },
+  {
+    "city": "Sunnyside",
+    "citySlug": "sunnyside",
+    "county": "Yakima",
+    "counties": [
+      "Yakima"
     ],
     "facilityCount": 1,
     "totalBeds": 6,
-    "behaviorSupport": 0,
+    "behaviorSupport": 1,
     "developmentalDisabilities": 0,
     "privatePay": 0,
-    "withReports": 0
+    "withReports": 1
   }
 ]

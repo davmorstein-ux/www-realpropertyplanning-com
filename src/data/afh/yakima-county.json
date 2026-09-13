@@ -1,0 +1,1034 @@
+[
+  {
+    "licenseNumber": "589700",
+    "name": "A PART OF THE FAMILY TOO",
+    "displayName": "A PART OF THE FAMILY TOO",
+    "slug": "a-part-of-the-family-too-589700",
+    "address": {
+      "street": "412 Warrior Rd",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98901",
+      "county": "Yakima"
+    },
+    "contactName": "Dixon, Lisa M.",
+    "phone": "(509) 469-8157",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "621201",
+    "name": "APPLE CREEK",
+    "displayName": "APPLE CREEK",
+    "slug": "apple-creek-621201",
+    "address": {
+      "street": "525 W Washington Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98903",
+      "county": "Yakima"
+    },
+    "contactName": "Miller, Diep",
+    "phone": "(509) 225-9084",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "621301",
+    "name": "APPLE CREEK",
+    "displayName": "APPLE CREEK",
+    "slug": "apple-creek-621301",
+    "address": {
+      "street": "517 West Washington Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98903",
+      "county": "Yakima"
+    },
+    "contactName": "Miller, Diep",
+    "phone": "(509) 225-9084",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "621402",
+    "name": "APPLE CREEK",
+    "displayName": "APPLE CREEK",
+    "slug": "apple-creek-621402",
+    "address": {
+      "street": "521 W Washington Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98903",
+      "county": "Yakima"
+    },
+    "contactName": "Miller, Diep",
+    "phone": "(509) 225-9084",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758359",
+    "name": "Benton House Adult Family Home, LLC",
+    "displayName": "Benton House Adult Family Home, LLC",
+    "slug": "benton-house-adult-family-home-758359",
+    "address": {
+      "street": "203 S 77th Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98908",
+      "county": "Yakima"
+    },
+    "contactName": "Woods, Jordan M.",
+    "phone": "(509) 966-1075",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756668",
+    "name": "CarolinesHaven AFH LLC",
+    "displayName": "CarolinesHaven AFH LLC",
+    "slug": "carolineshaven-afh-756668",
+    "address": {
+      "street": "1006 Sawyer Pl",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98908",
+      "county": "Yakima"
+    },
+    "contactName": "Allmendinger, Caroline",
+    "phone": "(509) 307-9021",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751620",
+    "name": "COVENANT HOUSE",
+    "displayName": "COVENANT HOUSE",
+    "slug": "covenant-house-751620",
+    "address": {
+      "street": "226 S 16th Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Miles, Delbert N.",
+    "phone": "(509) 453-1301",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "29800",
+    "name": "DEAVER ADULT FOSTER HOME",
+    "displayName": "DEAVER ADULT FOSTER HOME",
+    "slug": "deaver-adult-foster-home-29800",
+    "address": {
+      "street": "1213 Pleasant Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Deaver, Loretta L.",
+    "phone": "(509) 453-1564",
+    "regionUnit": "1C",
+    "licensedBeds": 5,
+    "specialties": [
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "389901",
+    "name": "HARMONY HOUSE AFH",
+    "displayName": "HARMONY HOUSE AFH",
+    "slug": "harmony-house-afh-389901",
+    "address": {
+      "street": "1501 S 6th Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Braten, Cora",
+    "phone": "(509) 249-0867",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "643600",
+    "name": "HAWTHORN NORTH",
+    "displayName": "HAWTHORN NORTH",
+    "slug": "hawthorn-north-643600",
+    "address": {
+      "street": "1608 Drake Ct Apt D",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Paul A.",
+    "phone": "(509) 457-1908",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "570100",
+    "name": "HAWTHORN SOUTH",
+    "displayName": "HAWTHORN SOUTH",
+    "slug": "hawthorn-south-570100",
+    "address": {
+      "street": "1608 Drake Ct Apt C",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Paul A.",
+    "phone": "(509) 457-3479",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757630",
+    "name": "Heartlinks Adult Family Home",
+    "displayName": "Heartlinks Adult Family Home",
+    "slug": "heartlinks-adult-family-home-757630",
+    "address": {
+      "street": "3920 Outlook Rd",
+      "city": "Sunnyside",
+      "citySlug": "sunnyside",
+      "state": "WA",
+      "zip": "98944",
+      "county": "Yakima"
+    },
+    "contactName": "Moore, Shelby E.",
+    "phone": "(509) 837-1676",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "438300",
+    "name": "HOLBROOK NORTH",
+    "displayName": "HOLBROOK NORTH",
+    "slug": "holbrook-north-438300",
+    "address": {
+      "street": "1700 Cedar Hills Ct # A",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Paul A.",
+    "phone": "(509) 452-8477",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "444300",
+    "name": "HOLBROOK SOUTH",
+    "displayName": "HOLBROOK SOUTH",
+    "slug": "holbrook-south-444300",
+    "address": {
+      "street": "1700 Cedar Hills Ct #B",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Paul A.",
+    "phone": "(509) 249-2979",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751619",
+    "name": "IZZY'S ADULT FAMILY HOME",
+    "displayName": "IZZY'S ADULT FAMILY HOME",
+    "slug": "izzys-adult-family-home-751619",
+    "address": {
+      "street": "600 S 83rd Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98908",
+      "county": "Yakima"
+    },
+    "contactName": "Miles, Delbert N.",
+    "phone": "(509) 388-9475",
+    "regionUnit": "1C",
+    "licensedBeds": 8,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755868",
+    "name": "Lola Kay AFH",
+    "displayName": "Lola Kay AFH",
+    "slug": "lola-kay-afh-755868",
+    "address": {
+      "street": "402 S 16th Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Martinez, Amber D.",
+    "phone": "(509) 823-4121",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754461",
+    "name": "Lolly Angel House LLC",
+    "displayName": "Lolly Angel House LLC",
+    "slug": "lolly-angel-house-754461",
+    "address": {
+      "street": "5704 Douglas Dr",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98908",
+      "county": "Yakima"
+    },
+    "contactName": "Martinez, Amber D.",
+    "phone": "(509) 972-0416",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756868",
+    "name": "Lolly Angel House LLC. DBA Ohana House AFH",
+    "displayName": "Lolly Angel House LLC. DBA Ohana House AFH",
+    "slug": "lolly-angel-house-llc-dba-ohana-house-afh-756868",
+    "address": {
+      "street": "2104 S 72nd Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98903",
+      "county": "Yakima"
+    },
+    "contactName": "Martinez, Amber D.",
+    "phone": "(509) 426-2280",
+    "regionUnit": "1C",
+    "licensedBeds": 8,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751882",
+    "name": "LOVING HANDS ADULT FAMILY HOME",
+    "displayName": "LOVING HANDS ADULT FAMILY HOME",
+    "slug": "loving-hands-adult-family-home-751882",
+    "address": {
+      "street": "7504 W Chestnut Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98908",
+      "county": "Yakima"
+    },
+    "contactName": "Webb, JENNIFER R.",
+    "phone": "(509) 972-9712",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757611",
+    "name": "Magnolia Heart Adult Family Home",
+    "displayName": "Magnolia Heart Adult Family Home",
+    "slug": "magnolia-heart-adult-family-home-757611",
+    "address": {
+      "street": "408 N 55th Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98908",
+      "county": "Yakima"
+    },
+    "contactName": "Pulliam, Dianna",
+    "phone": "(509) 902-1397",
+    "regionUnit": "1C",
+    "licensedBeds": 4,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "158701",
+    "name": "MILLIGAN HOUSE",
+    "displayName": "MILLIGAN HOUSE",
+    "slug": "milligan-house-158701",
+    "address": {
+      "street": "3504 Stanton Rd",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98903",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Tyler A.",
+    "phone": "(509) 966-5478",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "208501",
+    "name": "MIRANDA CARE",
+    "displayName": "MIRANDA CARE",
+    "slug": "miranda-care-208501",
+    "address": {
+      "street": "601 N 39th St",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98901",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Nicole C.",
+    "phone": "(509) 577-0423",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "602700",
+    "name": "OAKRIDGE NORTH",
+    "displayName": "OAKRIDGE NORTH",
+    "slug": "oakridge-north-602700",
+    "address": {
+      "street": "1608 Drake Ct Apt B",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Paul A.",
+    "phone": "(509) 469-2764",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "707300",
+    "name": "OAKRIDGE SOUTH",
+    "displayName": "OAKRIDGE SOUTH",
+    "slug": "oakridge-south-707300",
+    "address": {
+      "street": "1608 Drake Ct Apt A",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Paul A.",
+    "phone": "(509) 453-2870",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757392",
+    "name": "Pine Mountain Ridge AFH",
+    "displayName": "Pine Mountain Ridge AFH",
+    "slug": "pine-mountain-ridge-afh-757392",
+    "address": {
+      "street": "590 Pine Mountain Dr",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98903",
+      "county": "Yakima"
+    },
+    "contactName": "Prather, Justine N.",
+    "phone": "(509) 965-1403",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "444600",
+    "name": "REESE'S RESIDENTIAL CARE AFH",
+    "displayName": "REESE'S RESIDENTIAL CARE AFH",
+    "slug": "reeses-residential-care-afh-444600",
+    "address": {
+      "street": "9618 Mieras Rd",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98901",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Tami D.",
+    "phone": "(509) 248-7230",
+    "regionUnit": "1C",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "444400",
+    "name": "ROCKENFIELD NORTH",
+    "displayName": "ROCKENFIELD NORTH",
+    "slug": "rockenfield-north-444400",
+    "address": {
+      "street": "1701 Cedar Hills Ct # A",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Paul A.",
+    "phone": "(509) 454-4544",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "444500",
+    "name": "ROCKENFIELD SOUTH",
+    "displayName": "ROCKENFIELD SOUTH",
+    "slug": "rockenfield-south-444500",
+    "address": {
+      "street": "1701 Cedar Hills Ct #B",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Reese, Paul A.",
+    "phone": "(509) 576-8692",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "240700",
+    "name": "ROSA'S ADULT FAMILY HOME",
+    "displayName": "ROSA'S ADULT FAMILY HOME",
+    "slug": "rosas-adult-family-home-240700",
+    "address": {
+      "street": "817 S 6th St",
+      "city": "Mabton",
+      "citySlug": "mabton",
+      "state": "WA",
+      "zip": "98935",
+      "county": "Yakima"
+    },
+    "contactName": "Bonewell, Rosa E.",
+    "phone": "(509) 894-4786",
+    "regionUnit": "1C",
+    "licensedBeds": 4,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751735",
+    "name": "TAYONS ADULT FAMILY HOME",
+    "displayName": "TAYONS ADULT FAMILY HOME",
+    "slug": "tayons-adult-family-home-751735",
+    "address": {
+      "street": "880 Stover Rd",
+      "city": "Grandview",
+      "citySlug": "grandview",
+      "state": "WA",
+      "zip": "98930",
+      "county": "Yakima"
+    },
+    "contactName": "Stewart, Shannon Y.",
+    "phone": "(509) 882-4949",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756842",
+    "name": "The Heights Assisted Living",
+    "displayName": "The Heights Assisted Living",
+    "slug": "the-heights-assisted-living-756842",
+    "address": {
+      "street": "7630 Roza Hill Drive",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98901",
+      "county": "Yakima"
+    },
+    "contactName": "Pittmon, Amber",
+    "phone": "(509) 480-2260",
+    "regionUnit": "1C",
+    "licensedBeds": 8,
+    "specialties": [
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757075",
+    "name": "The Nest, Adult Family Home LLC",
+    "displayName": "The Nest, Adult Family Home LLC",
+    "slug": "the-nest-adult-family-home-757075",
+    "address": {
+      "street": "708 S 34th Ave",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98902",
+      "county": "Yakima"
+    },
+    "contactName": "Brandrup, Ashley K.",
+    "phone": "(509) 469-9001",
+    "regionUnit": "1C",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "752148",
+    "name": "TRANQUILITY SAINTS ADULT FAMILY HOME LLC",
+    "displayName": "TRANQUILITY SAINTS ADULT FAMILY HOME LLC",
+    "slug": "tranquility-saints-adult-family-home-752148",
+    "address": {
+      "street": "431 Rainier View Lane",
+      "city": "Selah",
+      "citySlug": "selah",
+      "state": "WA",
+      "zip": "98942",
+      "county": "Yakima"
+    },
+    "contactName": "Lopez, Mara Edith G.",
+    "phone": "(509) 697-3397",
+    "regionUnit": "1C",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756711",
+    "name": "Vasile Clark Adult Family Home LLC",
+    "displayName": "Vasile Clark Adult Family Home LLC",
+    "slug": "vasile-clark-adult-family-home-756711",
+    "address": {
+      "street": "905 Majesty Heights Dr",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98908",
+      "county": "Yakima"
+    },
+    "contactName": "THOMPSON, RAMONA E.",
+    "phone": "(206) 259-1630",
+    "regionUnit": "1C",
+    "licensedBeds": 6,
+    "specialties": [
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "724700",
+    "name": "YOUR HOME WITH US",
+    "displayName": "YOUR HOME WITH US",
+    "slug": "your-home-with-us-724700",
+    "address": {
+      "street": "7004 Mieras Rd",
+      "city": "Yakima",
+      "citySlug": "yakima",
+      "state": "WA",
+      "zip": "98901",
+      "county": "Yakima"
+    },
+    "contactName": "Scull, Carla G.",
+    "phone": "(509) 910-3297",
+    "regionUnit": "1C",
+    "licensedBeds": 4,
+    "specialties": [
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]

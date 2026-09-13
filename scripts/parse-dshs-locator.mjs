@@ -38,6 +38,8 @@ const CONTRACT_MAP = {
   "dda meaningful day": "ddaMeaningfulDay",
   "hcs meaningful day": "hcsMeaningfulDay",
   "wcf afh sow": "wcfAfhSow",
+  "wcf respite": "waCaresFundRespite",
+  "adult family home (afh)": "adultFamilyHome",
 };
 
 /**

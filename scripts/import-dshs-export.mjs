@@ -37,6 +37,8 @@ const CONTRACT_MAP = {
   "dda meaningful day": "ddaMeaningfulDay",
   "hcs meaningful day": "hcsMeaningfulDay",
   "wcf afh sow": "wcfAfhSow",
+  "wcf respite": "waCaresFundRespite",
+  "adult family home (afh)": "adultFamilyHome",
 };
 
 const CITY_CORRECTIONS = {
@@ -186,6 +188,7 @@ export function importExport(text, { retrievedAt = new Date().toISOString().slic
     if (!county) problems.push(`row ${row}: license ${licenseNumber} has no county`);
     const specialties = [];
     for (const s of splitList(get(C.specialty))) {
+      if (/^(none|no speciali?ty)$/i.test(s)) continue;
       const key = SPECIALTY_MAP[s.toLowerCase()];
       if (!key) problems.push(`row ${row}: unknown specialty "${s}"`);
       else if (!specialties.includes(key)) specialties.push(key);
@@ -195,6 +198,13 @@ export function importExport(text, { retrievedAt = new Date().toISOString().slic
       const key = CONTRACT_MAP[c.toLowerCase()];
       if (!key) problems.push(`row ${row}: unknown contract "${c}"`);
       else if (!contracts.includes(key)) contracts.push(key);
+    }
+    if (get(C.beds) === "") {
+      // A handful of brand-new licenses are exported before DSHS records a bed
+      // count. A public page saying "0 beds" would be wrong, so hold the record
+      // until the next export carries the number.
+      problems.push(`row ${row}: license ${licenseNumber} (${get(C.name)}) has no bed count yet — skipped`);
+      return;
     }
     const beds = Number(get(C.beds));
     if (!Number.isInteger(beds) || beds < 1 || beds > 8) problems.push(`row ${row}: bed count "${get(C.beds)}" out of range`);
@@ -245,6 +255,6 @@ if (isMain) {
     console.error(`\n${errors.length} problem(s); nothing written.`);
     process.exit(1);
   }
-  console.error(`${facilities.length} facilities${skips.length ? `, ${skips.length} non-operating rows skipped` : ""}`);
+  console.error(`${facilities.length} facilities${skips.length ? `, ${skips.length} rows skipped (see above)` : ""}`);
   process.stdout.write(JSON.stringify(facilities, null, 2) + "\n");
 }
