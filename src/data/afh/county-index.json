@@ -408,6 +408,20 @@
     "withReports": 27
   },
   {
+    "city": "Centralia",
+    "citySlug": "centralia",
+    "county": "Lewis",
+    "counties": [
+      "Lewis"
+    ],
+    "facilityCount": 32,
+    "totalBeds": 194,
+    "behaviorSupport": 10,
+    "developmentalDisabilities": 16,
+    "privatePay": 0,
+    "withReports": 20
+  },
+  {
     "city": "Yakima",
     "citySlug": "yakima",
     "county": "Yakima",
@@ -816,6 +830,20 @@
     "withReports": 6
   },
   {
+    "city": "Chehalis",
+    "citySlug": "chehalis",
+    "county": "Lewis",
+    "counties": [
+      "Lewis"
+    ],
+    "facilityCount": 8,
+    "totalBeds": 49,
+    "behaviorSupport": 2,
+    "developmentalDisabilities": 5,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
     "city": "Cheney",
     "citySlug": "cheney",
     "county": "Spokane",
@@ -1193,6 +1221,48 @@
     "developmentalDisabilities": 3,
     "privatePay": 0,
     "withReports": 2
+  },
+  {
+    "city": "Morton",
+    "citySlug": "morton",
+    "county": "Lewis",
+    "counties": [
+      "Lewis"
+    ],
+    "facilityCount": 3,
+    "totalBeds": 18,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 0,
+    "privatePay": 0,
+    "withReports": 3
+  },
+  {
+    "city": "Napavine",
+    "citySlug": "napavine",
+    "county": "Lewis",
+    "counties": [
+      "Lewis"
+    ],
+    "facilityCount": 3,
+    "totalBeds": 18,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 2
+  },
+  {
+    "city": "Pe Ell",
+    "citySlug": "pe-ell",
+    "county": "Lewis",
+    "counties": [
+      "Lewis"
+    ],
+    "facilityCount": 3,
+    "totalBeds": 18,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 3
   },
   {
     "city": "Veradale",
@@ -1585,5 +1655,19 @@
     "developmentalDisabilities": 0,
     "privatePay": 0,
     "withReports": 1
+  },
+  {
+    "city": "Winlock",
+    "citySlug": "winlock",
+    "county": "Lewis",
+    "counties": [
+      "Lewis"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 0
   }
 ]

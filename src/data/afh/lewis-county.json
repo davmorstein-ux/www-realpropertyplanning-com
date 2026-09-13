@@ -1,0 +1,1518 @@
+[
+  {
+    "licenseNumber": "757622",
+    "name": "1 SUNNYSIDE DR LLC",
+    "displayName": "1 SUNNYSIDE DR LLC",
+    "slug": "1-sunnyside-dr-757622",
+    "address": {
+      "street": "122 Sunnyside Dr",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Jarju, Mariama",
+    "phone": "(360) 807-4481",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756061",
+    "name": "#1st Seniors Hope II Adult Family Home LLC",
+    "displayName": "1st Seniors Hope II Adult Family Home LLC",
+    "slug": "1st-seniors-hope-ii-adult-family-home-756061",
+    "address": {
+      "street": "52 Sw 12th St",
+      "city": "Chehalis",
+      "citySlug": "chehalis",
+      "state": "WA",
+      "zip": "98532",
+      "county": "Lewis"
+    },
+    "contactName": "Wesseh, Quianaca",
+    "phone": "(360) 977-7859",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759241",
+    "name": "A Curtis Hill Estate Senior Living LLC",
+    "displayName": "A Curtis Hill Estate Senior Living LLC",
+    "slug": "a-curtis-hill-estate-senior-living-759241",
+    "address": {
+      "street": "733 Cousins Rd",
+      "city": "Chehalis",
+      "citySlug": "chehalis",
+      "state": "WA",
+      "zip": "98532",
+      "county": "Lewis"
+    },
+    "contactName": "Longnecker, Angela R.",
+    "phone": "(360) 789-5773",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756126",
+    "name": "A Moment of Grace AFH",
+    "displayName": "A Moment of Grace AFH",
+    "slug": "a-moment-of-grace-afh-756126",
+    "address": {
+      "street": "2306 Scheuber Ridge Ct",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Brown, Karen",
+    "phone": "(360) 807-4195",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758615",
+    "name": "A MOMENT OF GRACE AFH 2",
+    "displayName": "A MOMENT OF GRACE AFH 2",
+    "slug": "a-moment-of-grace-afh-2-758615",
+    "address": {
+      "street": "3297 Prill Rd",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Brown, Karen",
+    "phone": "(360) 807-4582",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758563",
+    "name": "A SOLACE PLACE LLC",
+    "displayName": "A SOLACE PLACE LLC",
+    "slug": "a-solace-place-758563",
+    "address": {
+      "street": "811 Nw Saint Helens Ave",
+      "city": "Chehalis",
+      "citySlug": "chehalis",
+      "state": "WA",
+      "zip": "98532",
+      "county": "Lewis"
+    },
+    "contactName": "KANGNIDE, FOLAKE R.",
+    "phone": "(360) 262-7708",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757477",
+    "name": "ABU'S CARE AFH",
+    "displayName": "ABU'S CARE AFH",
+    "slug": "abus-care-afh-757477",
+    "address": {
+      "street": "1222 St Helens St",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Silameh Kassama, Fatou",
+    "phone": "(360) 807-4421",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756398",
+    "name": "Arianna Care AFH 2",
+    "displayName": "Arianna Care AFH 2",
+    "slug": "arianna-care-afh-2-756398",
+    "address": {
+      "street": "132 Sunnyside Dr",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Njoroge, Johnson",
+    "phone": "(360) 807-4644",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754579",
+    "name": "Arianna Care LLC",
+    "displayName": "Arianna Care LLC",
+    "slug": "arianna-care-754579",
+    "address": {
+      "street": "610 Hamilton Ave",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Njoroge, Johnson",
+    "phone": "(360) 807-4237",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755875",
+    "name": "Asante Group LLC",
+    "displayName": "Asante Group LLC",
+    "slug": "asante-group-755875",
+    "address": {
+      "street": "812 Cowlitz Rd",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Enyart, Larry",
+    "phone": "(360) 736-2626",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756436",
+    "name": "Beloved AFH",
+    "displayName": "Beloved AFH",
+    "slug": "beloved-afh-756436",
+    "address": {
+      "street": "701 Marsh Ave Apt B",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Otura, George",
+    "phone": "(360) 669-0806",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758450",
+    "name": "BEST QUALITY CARE HOME CENTRALIA LLC",
+    "displayName": "BEST QUALITY CARE HOME CENTRALIA LLC",
+    "slug": "best-quality-care-home-centralia-758450",
+    "address": {
+      "street": "317 S Berry St",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Vasey, Kathryn",
+    "phone": "(360) 200-3867",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758677",
+    "name": "Blessed Care AFH 3",
+    "displayName": "Blessed Care AFH 3",
+    "slug": "blessed-care-afh-3-758677",
+    "address": {
+      "street": "1220 St Helens St",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Kassama, Abdoulie",
+    "phone": "(360) 807-4340",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754087",
+    "name": "Brenda's Elder Care",
+    "displayName": "Brenda's Elder Care",
+    "slug": "brendas-elder-care-754087",
+    "address": {
+      "street": "1033 Chieri Ct",
+      "city": "Napavine",
+      "citySlug": "napavine",
+      "state": "WA",
+      "zip": "98565",
+      "county": "Lewis"
+    },
+    "contactName": "Corwin, Brenda",
+    "phone": "(360) 262-9481",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758233",
+    "name": "CLEO CREST AFH",
+    "displayName": "CLEO CREST AFH",
+    "slug": "cleo-crest-afh-758233",
+    "address": {
+      "street": "2569 Kristine Ct",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Mfaume, Miriam H.",
+    "phone": "(360) 807-4217",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756401",
+    "name": "Cobham AFH",
+    "displayName": "Cobham AFH",
+    "slug": "cobham-afh-756401",
+    "address": {
+      "street": "1110 Cobra Ln",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "MATONYA, MAULID H.",
+    "phone": null,
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753695",
+    "name": "Coffee Creek AFH",
+    "displayName": "Coffee Creek AFH",
+    "slug": "coffee-creek-afh-753695",
+    "address": {
+      "street": "1817 Hillview Rd",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Varick, Melissa M.",
+    "phone": "(360) 669-0038",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755194",
+    "name": "Fairhill Care 2 AFH",
+    "displayName": "Fairhill Care 2 AFH",
+    "slug": "fairhill-care-2-afh-755194",
+    "address": {
+      "street": "802 Atherton St",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Mnyuku, Miriam",
+    "phone": "(360) 736-2046",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "wcfAfhSow",
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755925",
+    "name": "Fairhill Care 3 AFH",
+    "displayName": "Fairhill Care 3 AFH",
+    "slug": "fairhill-care-3-afh-755925",
+    "address": {
+      "street": "2521 Kristine Ct",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Mnyuku, Miriam",
+    "phone": "(360) 669-0019",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754065",
+    "name": "Favored Homes LLC",
+    "displayName": "Favored Homes LLC",
+    "slug": "favored-homes-754065",
+    "address": {
+      "street": "1218 N Washington Ave",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Kimani, Tabitha W.",
+    "phone": "(253) 232-0685",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754992",
+    "name": "Forget Me Not Adult Family Home LLC",
+    "displayName": "Forget Me Not Adult Family Home LLC",
+    "slug": "forget-me-not-adult-family-home-754992",
+    "address": {
+      "street": "214 Washington Way",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Sudano, Mirranda",
+    "phone": "(360) 388-5940",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757459",
+    "name": "Golden Breeze LLC",
+    "displayName": "Golden Breeze LLC",
+    "slug": "golden-breeze-757459",
+    "address": {
+      "street": "507 Cardinal Ave",
+      "city": "Winlock",
+      "citySlug": "winlock",
+      "state": "WA",
+      "zip": "98596",
+      "county": "Lewis"
+    },
+    "contactName": "Osborne, Rose N.",
+    "phone": "(360) 368-4009",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758098",
+    "name": "GOWANJU ADULT FAMILY HOME LLC",
+    "displayName": "GOWANJU ADULT FAMILY HOME LLC",
+    "slug": "gowanju-adult-family-home-758098",
+    "address": {
+      "street": "85 Se 6th St",
+      "city": "Chehalis",
+      "citySlug": "chehalis",
+      "state": "WA",
+      "zip": "98532",
+      "county": "Lewis"
+    },
+    "contactName": "Njuguna, Gorret",
+    "phone": "(360) 996-4254",
+    "regionUnit": "3F",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758581",
+    "name": "Harmony Living House Adult Family LLC",
+    "displayName": "Harmony Living House Adult Family LLC",
+    "slug": "harmony-living-house-adult-family-758581",
+    "address": {
+      "street": "120 Newaukum Village Dr",
+      "city": "Chehalis",
+      "citySlug": "chehalis",
+      "state": "WA",
+      "zip": "98532",
+      "county": "Lewis"
+    },
+    "contactName": "NYANDIA, PENINNAH",
+    "phone": "(360) 557-3937",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754621",
+    "name": "Lander House",
+    "displayName": "Lander House",
+    "slug": "lander-house-754621",
+    "address": {
+      "street": "607 Lander Dr",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Varick, Melissa M.",
+    "phone": "(360) 736-8598",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754088",
+    "name": "Life Star Adult Family Home I",
+    "displayName": "Life Star Adult Family Home I",
+    "slug": "life-star-adult-family-home-i-754088",
+    "address": {
+      "street": "1214 N Washington Ave",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Waruinge, Melvin N.",
+    "phone": "(360) 669-0057",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755784",
+    "name": "Logan Manor AFH, LLC",
+    "displayName": "Logan Manor AFH, LLC",
+    "slug": "logan-manor-afh-755784",
+    "address": {
+      "street": "1410 Logan Street",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Kibwana, Sulmen",
+    "phone": "(360) 736-1680",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757969",
+    "name": "LOGAN MANOR AFH, LLC II",
+    "displayName": "LOGAN MANOR AFH, LLC II",
+    "slug": "logan-manor-afh-llc-ii-757969",
+    "address": {
+      "street": "1750 Sw Armstrong Ct",
+      "city": "Chehalis",
+      "citySlug": "chehalis",
+      "state": "WA",
+      "zip": "98532",
+      "county": "Lewis"
+    },
+    "contactName": "KIMUNGU, MARY N.",
+    "phone": "(360) 557-8095",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751270",
+    "name": "Maple Street Manor",
+    "displayName": "Maple Street Manor",
+    "slug": "maple-street-manor-751270",
+    "address": {
+      "street": "616 Maple St",
+      "city": "Pe Ell",
+      "citySlug": "pe-ell",
+      "state": "WA",
+      "zip": "98572",
+      "county": "Lewis"
+    },
+    "contactName": "Shepherd, Janet L.",
+    "phone": "(360) 815-1437",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753630",
+    "name": "Maple Street Manor Too LLC",
+    "displayName": "Maple Street Manor Too LLC",
+    "slug": "maple-street-manor-too-753630",
+    "address": {
+      "street": "610 Maple Street",
+      "city": "Pe Ell",
+      "citySlug": "pe-ell",
+      "state": "WA",
+      "zip": "98572",
+      "county": "Lewis"
+    },
+    "contactName": "Shepherd, Janet L.",
+    "phone": "(360) 982-4942",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753866",
+    "name": "Morton Love & Care Adult Family Home",
+    "displayName": "Morton Love & Care Adult Family Home",
+    "slug": "morton-love-and-care-adult-family-home-753866",
+    "address": {
+      "street": "370 Westlake Ave",
+      "city": "Morton",
+      "citySlug": "morton",
+      "state": "WA",
+      "zip": "98356",
+      "county": "Lewis"
+    },
+    "contactName": "Garcia (Gabon), Shane",
+    "phone": "(360) 496-0859",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756487",
+    "name": "Morton Love & Care II",
+    "displayName": "Morton Love & Care II",
+    "slug": "morton-love-and-care-ii-756487",
+    "address": {
+      "street": "401 Temple Ave",
+      "city": "Morton",
+      "citySlug": "morton",
+      "state": "WA",
+      "zip": "98356",
+      "county": "Lewis"
+    },
+    "contactName": "Garcia (Gabon), Shane",
+    "phone": "(360) 496-0340",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757220",
+    "name": "Morton Manor Adult Family Home",
+    "displayName": "Morton Manor Adult Family Home",
+    "slug": "morton-manor-adult-family-home-757220",
+    "address": {
+      "street": "180 Adams Ave",
+      "city": "Morton",
+      "citySlug": "morton",
+      "state": "WA",
+      "zip": "98356",
+      "county": "Lewis"
+    },
+    "contactName": "JULATON, HAZEL C.",
+    "phone": "(360) 496-0333",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "751188",
+    "name": "Oak Wood Haven Adult Family Home LLC",
+    "displayName": "Oak Wood Haven Adult Family Home LLC",
+    "slug": "oak-wood-haven-adult-family-home-751188",
+    "address": {
+      "street": "1518 Jensen Ave",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Unknown, Unknown",
+    "phone": "(360) 520-0045",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757621",
+    "name": "PACIFIC CARE ADULT FAMILY HOME LLC",
+    "displayName": "PACIFIC CARE ADULT FAMILY HOME LLC",
+    "slug": "pacific-care-adult-family-home-757621",
+    "address": {
+      "street": "702 Scott Dr",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "MUCHEMI, MARY W.",
+    "phone": "(360) 821-8003",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758900",
+    "name": "Peace 1st Adult Care Home LLC",
+    "displayName": "Peace 1st Adult Care Home LLC",
+    "slug": "peace-1st-adult-care-home-758900",
+    "address": {
+      "street": "210 W Washington St",
+      "city": "Napavine",
+      "citySlug": "napavine",
+      "state": "WA",
+      "zip": "98565",
+      "county": "Lewis"
+    },
+    "contactName": "CHAGE, FETENECH L.",
+    "phone": "(360) 262-9956",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758662",
+    "name": "PEACH POINTE AFH LLC",
+    "displayName": "PEACH POINTE AFH LLC",
+    "slug": "peach-pointe-afh-758662",
+    "address": {
+      "street": "705 Scott Dr",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "MUCHEMI, MONICA",
+    "phone": "(360) 771-4442",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756178",
+    "name": "Plentycare AFH LLC",
+    "displayName": "Plentycare AFH LLC",
+    "slug": "plentycare-afh-756178",
+    "address": {
+      "street": "1218 W Main St",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Olsen (Njuguana), Rachael W.",
+    "phone": "(360) 807-4380",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "753308",
+    "name": "Potter's Country Home",
+    "displayName": "Potter's Country Home",
+    "slug": "potters-country-home-753308",
+    "address": {
+      "street": "250 Katula Rd",
+      "city": "Chehalis",
+      "citySlug": "chehalis",
+      "state": "WA",
+      "zip": "98532",
+      "county": "Lewis"
+    },
+    "contactName": "Potter, Amanda D.",
+    "phone": "(360) 291-0551",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758622",
+    "name": "Radiant valley AFH",
+    "displayName": "Radiant valley AFH",
+    "slug": "radiant-valley-afh-758622",
+    "address": {
+      "street": "2501 Kristine Ct",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "CHEPKORIR, EMILY",
+    "phone": "(564) 999-7468",
+    "regionUnit": "3F",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755453",
+    "name": "Rhehema Adult Family Home LLC",
+    "displayName": "Rhehema Adult Family Home LLC",
+    "slug": "rhehema-adult-family-home-755453",
+    "address": {
+      "street": "711 N Main St",
+      "city": "Pe Ell",
+      "citySlug": "pe-ell",
+      "state": "WA",
+      "zip": "98572",
+      "county": "Lewis"
+    },
+    "contactName": "MURAGE, ROBERT M.",
+    "phone": "(360) 219-9973",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755483",
+    "name": "Silver Acres II",
+    "displayName": "Silver Acres II",
+    "slug": "silver-acres-ii-755483",
+    "address": {
+      "street": "1221 Johnson Rd",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Elsner, Danae T.",
+    "phone": "(360) 206-0861",
+    "regionUnit": "3F",
+    "licensedBeds": 8,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755957",
+    "name": "Silver Acres III",
+    "displayName": "Silver Acres III",
+    "slug": "silver-acres-iii-755957",
+    "address": {
+      "street": "821 H St",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Elsner, Danae T.",
+    "phone": "(360) 206-0861",
+    "regionUnit": "3F",
+    "licensedBeds": 8,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "754409",
+    "name": "Silver Acres LLC",
+    "displayName": "Silver Acres LLC",
+    "slug": "silver-acres-754409",
+    "address": {
+      "street": "1266 Sw 22nd St",
+      "city": "Chehalis",
+      "citySlug": "chehalis",
+      "state": "WA",
+      "zip": "98532",
+      "county": "Lewis"
+    },
+    "contactName": "Elsner, Danae T.",
+    "phone": "(360) 206-0861",
+    "regionUnit": "3F",
+    "licensedBeds": 8,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "757816",
+    "name": "Stars AFH 02",
+    "displayName": "Stars AFH 02",
+    "slug": "stars-afh-02-757816",
+    "address": {
+      "street": "2568 Kristine Court",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Halley, Everline",
+    "phone": "(201) 800-5723",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759047",
+    "name": "STARS AFH 03",
+    "displayName": "STARS AFH 03",
+    "slug": "stars-afh-03-759047",
+    "address": {
+      "street": "1308 Eshom Rd",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Halley, Everline",
+    "phone": "(360) 807-4282",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "755985",
+    "name": "Stars AFH LLC",
+    "displayName": "Stars AFH LLC",
+    "slug": "stars-afh-755985",
+    "address": {
+      "street": "2517 Kristine Ct",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Halley, Everline",
+    "phone": "(201) 800-5723",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "hcsMeaningfulDay",
+      "expandedCommunityServices",
+      "ddaMeaningfulDay",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "756417",
+    "name": "Swaza AFH, LLC",
+    "displayName": "Swaza AFH, LLC",
+    "slug": "swaza-afh-756417",
+    "address": {
+      "street": "275 W Vine St",
+      "city": "Napavine",
+      "citySlug": "napavine",
+      "state": "WA",
+      "zip": "98532",
+      "county": "Lewis"
+    },
+    "contactName": "Wanjema, Josephine",
+    "phone": "(360) 262-0433",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "758342",
+    "name": "The Adult Family Home Masters 2",
+    "displayName": "The Adult Family Home Masters 2",
+    "slug": "the-adult-family-home-masters-2-758342",
+    "address": {
+      "street": "1514 View Ave",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Gakuru, Lucy N.",
+    "phone": "(253) 457-2326",
+    "regionUnit": "3F",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "licenseNumber": "759002",
+    "name": "The Precious Gift Adult Family Home",
+    "displayName": "The Precious Gift Adult Family Home",
+    "slug": "the-precious-gift-adult-family-home-759002",
+    "address": {
+      "street": "710 Bengal Ct",
+      "city": "Centralia",
+      "citySlug": "centralia",
+      "state": "WA",
+      "zip": "98531",
+      "county": "Lewis"
+    },
+    "contactName": "Hinga, Winnie",
+    "phone": "(360) 807-4032",
+    "regionUnit": "3F",
+    "licensedBeds": 5,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": false,
+    "retrievedAt": "2026-09-13"
+  }
+]
