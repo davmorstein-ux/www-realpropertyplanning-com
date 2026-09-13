@@ -134,7 +134,8 @@ export function importExport(text, { retrievedAt = new Date().toISOString().slic
   const firstLine = clean.split(/\r?\n/, 1)[0];
   const delim = firstLine.includes("\t") ? "\t" : ",";
   const rows = parseDelimited(clean, delim);
-  if (rows.length < 2) throw new Error("export has no data rows");
+  // A header-only export is a real result: the county has no licensed adult family homes.
+  if (rows.length < 1) throw new Error("export is empty (no header row)");
   const header = rows[0].map((h) => h.trim());
   const col = (name) => {
     const i = header.indexOf(name);

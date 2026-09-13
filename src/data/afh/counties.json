@@ -1,0 +1,184 @@
+[
+  {
+    "county": "Adams",
+    "slug": "adams",
+    "facilityCount": 5,
+    "totalBeds": 30,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Asotin",
+    "slug": "asotin",
+    "facilityCount": 13,
+    "totalBeds": 74,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Benton",
+    "slug": "benton",
+    "facilityCount": 79,
+    "totalBeds": 458,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Chelan",
+    "slug": "chelan",
+    "facilityCount": 13,
+    "totalBeds": 69,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Clallam",
+    "slug": "clallam",
+    "facilityCount": 4,
+    "totalBeds": 24,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Clark",
+    "slug": "clark",
+    "facilityCount": 564,
+    "totalBeds": 3288,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Columbia",
+    "slug": "columbia",
+    "facilityCount": 0,
+    "totalBeds": 0,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Cowlitz",
+    "slug": "cowlitz",
+    "facilityCount": 41,
+    "totalBeds": 240,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Ferry",
+    "slug": "ferry",
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Franklin",
+    "slug": "franklin",
+    "facilityCount": 26,
+    "totalBeds": 155,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Garfield",
+    "slug": "garfield",
+    "facilityCount": 0,
+    "totalBeds": 0,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Grant",
+    "slug": "grant",
+    "facilityCount": 25,
+    "totalBeds": 137,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Grays Harbor",
+    "slug": "grays-harbor",
+    "facilityCount": 5,
+    "totalBeds": 30,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Island",
+    "slug": "island",
+    "facilityCount": 8,
+    "totalBeds": 44,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "King",
+    "slug": "king",
+    "facilityCount": 1809,
+    "totalBeds": 10572,
+    "retrievedAt": "2026-07-31"
+  },
+  {
+    "county": "Kitsap",
+    "slug": "kitsap",
+    "facilityCount": 71,
+    "totalBeds": 405,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Lewis",
+    "slug": "lewis",
+    "facilityCount": 50,
+    "totalBeds": 303,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Mason",
+    "slug": "mason",
+    "facilityCount": 6,
+    "totalBeds": 28,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Pierce",
+    "slug": "pierce",
+    "facilityCount": 1060,
+    "totalBeds": 6199,
+    "retrievedAt": "2026-08-01"
+  },
+  {
+    "county": "Skagit",
+    "slug": "skagit",
+    "facilityCount": 27,
+    "totalBeds": 156,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Snohomish",
+    "slug": "snohomish",
+    "facilityCount": 1177,
+    "totalBeds": 6809,
+    "retrievedAt": "2026-08-01"
+  },
+  {
+    "county": "Spokane",
+    "slug": "spokane",
+    "facilityCount": 608,
+    "totalBeds": 3501,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Thurston",
+    "slug": "thurston",
+    "facilityCount": 312,
+    "totalBeds": 1799,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Walla Walla",
+    "slug": "walla-walla",
+    "facilityCount": 5,
+    "totalBeds": 20,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Whatcom",
+    "slug": "whatcom",
+    "facilityCount": 25,
+    "totalBeds": 139,
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "county": "Yakima",
+    "slug": "yakima",
+    "facilityCount": 35,
+    "totalBeds": 206,
+    "retrievedAt": "2026-09-13"
+  }
+]

@@ -759,6 +759,20 @@
     "withReports": 3
   },
   {
+    "city": "Clarkston",
+    "citySlug": "clarkston",
+    "county": "Asotin",
+    "counties": [
+      "Asotin"
+    ],
+    "facilityCount": 13,
+    "totalBeds": 74,
+    "behaviorSupport": 7,
+    "developmentalDisabilities": 9,
+    "privatePay": 0,
+    "withReports": 11
+  },
+  {
     "city": "Woodinville",
     "citySlug": "woodinville",
     "county": "King",
@@ -1206,6 +1220,20 @@
     "developmentalDisabilities": 2,
     "privatePay": 3,
     "withReports": 2
+  },
+  {
+    "city": "Othello",
+    "citySlug": "othello",
+    "county": "Adams",
+    "counties": [
+      "Adams"
+    ],
+    "facilityCount": 5,
+    "totalBeds": 30,
+    "behaviorSupport": 3,
+    "developmentalDisabilities": 5,
+    "privatePay": 0,
+    "withReports": 5
   },
   {
     "city": "Shelton",
@@ -1970,6 +1998,20 @@
     "county": "Benton",
     "counties": [
       "Benton"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 1
+  },
+  {
+    "city": "Republic",
+    "citySlug": "republic",
+    "county": "Ferry",
+    "counties": [
+      "Ferry"
     ],
     "facilityCount": 1,
     "totalBeds": 6,

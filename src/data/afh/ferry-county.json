@@ -1,0 +1,33 @@
+[
+  {
+    "licenseNumber": "752822",
+    "name": "MJ's AFH LLC",
+    "displayName": "MJ's AFH LLC",
+    "slug": "mjs-afh-752822",
+    "address": {
+      "street": "779 S Adams St",
+      "city": "Republic",
+      "citySlug": "republic",
+      "state": "WA",
+      "zip": "99166",
+      "county": "Ferry"
+    },
+    "contactName": "Olsen, Mari J.",
+    "phone": "(509) 775-2344",
+    "regionUnit": "1E",
+    "licensedBeds": 6,
+    "specialties": [
+      "mentalHealth",
+      "dementia",
+      "developmentalDisabilities"
+    ],
+    "contracts": [
+      "specializedBehaviorSupport",
+      "expandedCommunityServices",
+      "adultFamilyHome"
+    ],
+    "acceptsMedicaid": true,
+    "hasReports": true,
+    "retrievedAt": "2026-09-13"
+  }
+]
