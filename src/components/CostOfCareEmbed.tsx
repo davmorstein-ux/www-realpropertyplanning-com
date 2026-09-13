@@ -23,7 +23,6 @@ const DEFAULT_INFLATION = CARE_INFLATION_RATE;
 const INFLATION_MIN = 1;
 const INFLATION_MAX = 8;
 const INFLATION_STEP = 0.1;
-const YEARS_OUT_OPTIONS = [0, 5, 10, 15, 20];
 const YEARS_OF_CARE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8];
 
 interface CostOfCareEmbedProps {
@@ -299,12 +298,40 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         >
           When Might Care Begin?
         </label>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-          {YEARS_OUT_OPTIONS.map((y) => (
-            <button key={y} onClick={() => setYearsOut(y)} style={pillBtn(y === yearsOut)}>
-              {y === 0 ? "Now" : `${y} yrs`}
-            </button>
-          ))}
+        {/* Any year from now to 20 out, matching the stepper above rather than
+            fixed 5-year jumps. "Now" is 0; the box reads "Now", "1 yr", "2 yrs"… */}
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <button
+            onClick={() => setYearsOut((y) => Math.max(0, y - 1))}
+            style={stepperBtn}
+            aria-label="Care begins one year sooner"
+          >
+            −
+          </button>
+          <div
+            style={{
+              background: "#f5f2ec",
+              border: "2px solid #dccdce",
+              borderRadius: 8,
+              padding: "6px 14px",
+              textAlign: "center",
+              minWidth: 92,
+            }}
+          >
+            <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 24, color: COC_TEAL }}>
+              {yearsOut === 0 ? "Now" : `${yearsOut} ${yearsOut === 1 ? "yr" : "yrs"}`}
+            </span>
+          </div>
+          <button
+            onClick={() => setYearsOut((y) => Math.min(20, y + 1))}
+            style={stepperBtn}
+            aria-label="Care begins one year later"
+          >
+            +
+          </button>
+          <button onClick={() => setYearsOut(0)} style={pillBtn(yearsOut === 0)} aria-label="Reset to now">
+            Now
+          </button>
         </div>
       </div>
 
