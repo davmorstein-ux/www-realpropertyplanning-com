@@ -215,6 +215,7 @@ const AFHFindProfessional = lazy(() => import("./pages/AFHFindProfessional"));
 const AFHCalculators = lazy(() => import("./pages/AFHCalculators"));
 const AFHROICalculator = lazy(() => import("./pages/AFHROICalculator"));
 const AFHValuationEstimator = lazy(() => import("./pages/AFHValuationEstimator"));
+const AFHCostByLocation = lazy(() => import("./pages/AFHCostByLocation"));
 const queryClient = new QueryClient();
 const AFHResources = lazy(() => import("./pages/AFHResources"));
 const AFHOwnershipStructure = lazy(() => import("./pages/AFHOwnershipStructure"));
@@ -1223,6 +1224,7 @@ const App = () => (
           <Route path="/afh-club/calculators" element={<AFHCalculators />} />
           <Route path="/afh-club/afh-roi-calculator" element={<AFHROICalculator />} />
           <Route path="/afh-club/afh-valuation-estimator" element={<AFHValuationEstimator />} />
+          <Route path="/afh-club/cost-by-location" element={<AFHCostByLocation />} />
           <Route path="/afh-club/resources" element={<AFHResources />} />
           <Route path="/afh-club/ownership-structure" element={<AFHOwnershipStructure />} />
           <Route path="/afh-club/what-is-an-adult-family-home" element={<AFHWhatIsAnAFH />} />

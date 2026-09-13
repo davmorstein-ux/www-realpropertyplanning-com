@@ -909,6 +909,25 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "AFH Calculators",
     intro: "Two tools built for Washington adult family homes: an ROI calculator that models revenue by bed count, occupancy, and Medicaid versus private-pay mix against operating costs, and a valuation estimator that separates what the real estate is worth from what the operating business adds.",
   },
+  "/afh-club/cost-by-location": {
+    title: "Adult Family Home Cost by City and County in Washington | AFH Club",
+    description: "Look up what an adult family home costs in any Washington city or county: the DSHS Medicaid daily and monthly rate range for that county, typical private-pay ranges, and how many licensed homes there accept Medicaid.",
+    h1: "What does an adult family home cost where you're looking?",
+    quickAnswerQ: "How much does an adult family home cost in Washington?",
+    quickAnswerA: "It depends on the county and the resident's care level. DSHS pays adult family homes a Medicaid daily rate on two schedules: in King, Pierce, and Snohomish counties the base rate runs from $144.47 to $279.30 per day (about $4,394 to $8,495 per month) from the lightest to the heaviest care level, effective July 1, 2026; in every other Washington county it runs from $132.49 to $250.61 per day (about $4,030 to $7,623 per month). A Medicaid resident contributes most of their own income toward that cost. Private-pay rates are set by each home and are generally higher than the Medicaid rate for the same care level, with memory care higher still. Type a city or county into the tool on this page for its rate range and how many licensed homes there accept Medicaid.",
+    intro: "Families usually start with a location and a budget. This lookup turns a Washington city or county into three facts: the DSHS Medicaid rate range that applies there (exact, published by DSHS each July), a typical private-pay range where one has been reviewed, and how many licensed adult family homes the county has and how many of them accept Medicaid, from the same DSHS records behind AFH Club's statewide directory.",
+    sections: [
+      "Medicaid rate, King, Pierce, and Snohomish counties (High Cost schedule, July 1, 2026) — $144.47 per day (A Low) to $279.30 per day (E High); about $4,394 to $8,495 per month. Base adult family home rate, service code T1020 U1, before specialty add-ons.",
+      "Medicaid rate, all other Washington counties (Standard Cost schedule, July 1, 2026) — $132.49 per day (A Low) to $250.61 per day (E High); about $4,030 to $7,623 per month.",
+      "What a Medicaid resident pays — The daily rate is what DSHS pays the home. The resident contributes most of their monthly income toward it and keeps a personal needs allowance, so the family's out-of-pocket is usually the resident's income rather than the rate.",
+      "Private pay — No public dataset exists. Homes set their own rates; the ranges shown in the tool are working bands from David Stein's experience with operating homes, published only once reviewed, and memory care or heavy-care needs sit above them.",
+    ],
+    faq: [
+      { q: "What does a Medicaid resident actually pay?", a: "The DSHS daily rate is what the state pays the home. A Medicaid resident contributes most of their own monthly income toward that cost and keeps a small personal needs allowance, so the family's out-of-pocket under Medicaid is usually the resident's income, not the rate." },
+      { q: "Why do King, Pierce, and Snohomish have a higher rate?", a: "DSHS pays a High Cost schedule in those three counties and a Standard Cost schedule everywhere else, reflecting labor and housing costs. Within a region the rate depends only on the resident's CARE classification, A Low through E High." },
+      { q: "Does a cheaper county mean a cheaper home?", a: "On average, but the spread inside a county is wider than the spread between counties. Care level, private versus shared room, and nursing staff move the number more than the ZIP code. Use the county figure to set a budget, then compare specific homes." },
+    ],
+  },
   "/afh-club/costs-fees": {
     title: "AFH Costs & Fees | AFH Club | Real Property Planning",
     description: "Complete breakdown of Washington State Adult Family Home startup costs, annual licensing fees, liability insurance, building permits, and Medicaid rate information for 2025.",

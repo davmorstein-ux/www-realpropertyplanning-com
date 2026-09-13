@@ -36,6 +36,15 @@ const TILES: Tile[] = [
     desc: "Estimate your AFH business and property value using income capitalization — before you call a broker.",
     accent: "green",
   },
+  {
+    to: "/afh-club/cost-by-location",
+    img: "/afh-cube-buying.webp",
+    alt: "AFH cost by city and county",
+    pill: "For families",
+    title: "AFH Cost by Location",
+    desc: "Type a city or county and see the DSHS Medicaid rate range, typical private-pay range, and how many licensed homes there accept Medicaid.",
+    accent: "blue",
+  },
 ];
 
 const accentMap = {
@@ -91,7 +100,7 @@ const AFHCalculators: React.FC = () => {
     <>
       <SEOHead
         title="AFH Calculators — ROI & Valuation Tools | Real Property Planning"
-        description="Professional financial tools built exclusively for Washington State Adult Family Homes — ROI calculator and valuation estimator."
+        description="Tools built for Washington adult family homes: an ROI calculator and valuation estimator for operators, and a cost-by-location lookup for families comparing cities and counties."
         canonical="https://realpropertyplanning.com/afh-club/calculators"
       />
       <Header />
