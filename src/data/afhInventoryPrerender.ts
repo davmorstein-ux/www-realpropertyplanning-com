@@ -359,10 +359,57 @@ export function renderAfhInventory(
       `<p style="color:#666;font-size:0.9rem;margin:0 0 12px">Listings last verified ${formatVerifiedDate(verified)}. Sold, expired, and withdrawn listings are removed from this list.</p>`
     );
   }
-  if (listings.length > 0) {
-    html.push(summaryTable(listings, !!scope.sold));
-    listings.forEach((l) => html.push(listingCard(l)));
-    html.push(disclaimer(listings));
+  if (scope.sold) {
+    if (listings.length > 0) {
+      html.push(summaryTable(listings, true));
+      listings.forEach((l) => html.push(listingCard(l)));
+      html.push(disclaimer(listings));
+    }
+  } else {
+    const active = listings.filter((l) => l.marketStatus === "active");
+    const pending = listings.filter((l) => l.marketStatus === "pending");
+    const soldHere = scope.city
+      ? afhListings
+          .filter((l) => l.marketStatus === "sold" && l.city.toLowerCase() === scope.city!.toLowerCase())
+          .sort((a, b) => (b.soldDate ?? "").localeCompare(a.soldDate ?? ""))
+      : [];
+    // Status navigation. Anchors keep it crawlable; the React page turns these into filters.
+    html.push(
+      `<p style="margin:0 0 16px;font-size:0.95rem"><a href="#active" style="color:#1a365d">Active (${active.length})</a> · <a href="#pending" style="color:#1a365d">Pending (${pending.length})</a> · ${
+        scope.city ? `<a href="#recently-sold" style="color:#1a365d">Recently sold in ${esc(scope.city)} (${soldHere.length})</a>` : `<a href="/afh-club/sold" style="color:#1a365d">Recently sold in Washington</a>`
+      }</p>`
+    );
+    html.push(`<h3 id="active" style="font-size:1.15rem;margin:16px 0 8px">Active — ${active.length} ${active.length === 1 ? "listing" : "listings"}</h3>`);
+    if (active.length) {
+      html.push(summaryTable(active));
+      active.forEach((l) => html.push(listingCard(l)));
+    } else {
+      html.push(`<p style="color:#555;margin:0 0 16px">No active listings at the moment.</p>`);
+    }
+    html.push(`<h3 id="pending" style="font-size:1.15rem;margin:24px 0 8px">Pending — ${pending.length} ${pending.length === 1 ? "listing" : "listings"} under contract</h3>`);
+    if (pending.length) {
+      html.push(`<p style="color:#555;margin:0 0 8px">Under contract but not closed. Pending sales can fall through, so these may return to the market.</p>`);
+      html.push(summaryTable(pending));
+      pending.forEach((l) => html.push(listingCard(l)));
+    } else {
+      html.push(`<p style="color:#555;margin:0 0 16px">Nothing pending.</p>`);
+    }
+    if (scope.city) {
+      const st = soldStats(soldHere);
+      html.push(`<h3 id="recently-sold" style="font-size:1.15rem;margin:24px 0 8px">Recently sold in ${esc(scope.city)} — ${soldHere.length} ${soldHere.length === 1 ? "sale" : "sales"}</h3>`);
+      if (soldHere.length) {
+        html.push(
+          `<p style="color:#555;margin:0 0 8px">Closed adult family home sales in ${esc(scope.city)} from NWMLS records${
+            st.medianPerBed !== null && soldHere.length >= 3 ? `; median sold price ${money0(st.medianSold!)}, ${money0(st.medianPerBed)} per bedroom` : ""
+          }. <a href="/afh-club/sold" style="color:#1a365d">All Washington sales</a>.</p>`
+        );
+        html.push(summaryTable(soldHere, true));
+        soldHere.forEach((l) => html.push(listingCard(l)));
+      } else {
+        html.push(`<p style="color:#555;margin:0 0 16px">No closed sales recorded for ${esc(scope.city)} yet. <a href="/afh-club/sold" style="color:#1a365d">See sales across Washington</a>.</p>`);
+      }
+    }
+    if (listings.length + soldHere.length > 0) html.push(disclaimer([...listings, ...soldHere]));
   }
   if (scope.city) {
     html.push(

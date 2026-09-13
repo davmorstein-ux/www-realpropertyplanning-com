@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Link } from "react-router-dom";
-import { liveListings, AFH_TYPE_LABELS, type AFHListingType } from "@/data/afhListings";
+import { liveListings, soldListings, AFH_TYPE_LABELS, type AFHListingType, type AFHMarketStatus } from "@/data/afhListings";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import { realEstateListingsPageSchema } from "@/lib/schema";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
@@ -82,7 +82,14 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
   const copy = VIEWS[view];
   // Only listings currently on the market (active or pending); sold / expired records stay in the data file but never display here.
   const afhListings = liveListings();
-  const shown = view === "all" ? afhListings : afhListings.filter((l) => l.listingType === view);
+  const [status, setStatus] = React.useState<"all" | AFHMarketStatus>("all");
+  const byType = view === "all" ? afhListings : afhListings.filter((l) => l.listingType === view);
+  const statusCounts = {
+    active: byType.filter((l) => l.marketStatus === "active").length,
+    pending: byType.filter((l) => l.marketStatus === "pending").length,
+  };
+  const soldCount = soldListings().length;
+  const shown = status === "all" ? byType : byType.filter((l) => l.marketStatus === status);
   const counts = {
     realEstate: afhListings.filter((l) => l.listingType === "realEstate").length,
     business: afhListings.filter((l) => l.listingType === "business").length,
@@ -451,8 +458,64 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
               Is it really an AFH? Read the guide →
             </Link>
           </div>
+          {/* Status filter. Active/Pending filter in place; Recently sold is its own page. */}
+          <nav aria-label="Listing status" style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "1.25rem", alignItems: "center" }}>
+            {(
+              [
+                ["all", `All on market (${byType.length})`],
+                ["active", `Active (${statusCounts.active})`],
+                ["pending", `Pending (${statusCounts.pending})`],
+              ] as const
+            ).map(([key, lbl]) => {
+              const on = status === key;
+              return (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => setStatus(key)}
+                  aria-pressed={on}
+                  style={{
+                    fontSize: "15px",
+                    fontWeight: on ? 700 : 500,
+                    color: on ? WHITE : SLATE,
+                    backgroundColor: on ? "#0a5648" : WHITE,
+                    border: `1px solid ${on ? "#0a5648" : GRAY_BORDER}`,
+                    borderRadius: "999px",
+                    padding: "8px 16px",
+                    minHeight: "44px",
+                    cursor: "pointer",
+                  }}
+                >
+                  {lbl}
+                </button>
+              );
+            })}
+            <Link
+              to="/afh-club/sold"
+              style={{
+                fontSize: "15px",
+                fontWeight: 500,
+                color: SLATE,
+                backgroundColor: WHITE,
+                border: `1px solid ${GRAY_BORDER}`,
+                borderRadius: "999px",
+                padding: "8px 16px",
+                minHeight: "44px",
+                display: "inline-flex",
+                alignItems: "center",
+                textDecoration: "none",
+              }}
+            >
+              Recently sold ({soldCount}) →
+            </Link>
+          </nav>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-            {shown.length === 0 && (
+            {shown.length === 0 && status !== "all" && (
+              <p style={{ fontSize: "16px", color: SLATE, padding: "1rem 0" }}>
+                Nothing {status} in this category right now.
+              </p>
+            )}
+            {shown.length === 0 && status === "all" && (
               <p style={{ fontSize: "16px", color: SLATE, padding: "1rem 0" }}>
                 {copy.empty} Have one to list?{" "}
                 <a href="/afh-submit" style={{ color: TEAL, textDecoration: "underline" }}>

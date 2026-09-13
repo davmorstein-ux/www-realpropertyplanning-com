@@ -6,7 +6,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import { liveListings, formatVerifiedDate, latestVerified } from "@/data/afhListings";
+import { liveListings, soldListings, formatVerifiedDate, latestVerified, afhClassification, listingSlug } from "@/data/afhListings";
+import { soldStats } from "@/data/afhInventoryPrerender";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import { Link } from "react-router-dom";
 import { cityExists, getCityIndexEntry } from "@/data/afh/directory";
@@ -24,7 +25,13 @@ interface AFHCityHubProps {
 
 const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCityHubProps) => {
   const cityListings = liveListings().filter((l) => l.city.toLowerCase() === city.toLowerCase());
-  const verified = latestVerified(cityListings);
+  const activeListings = cityListings.filter((l) => l.marketStatus === "active");
+  const pendingListings = cityListings.filter((l) => l.marketStatus === "pending");
+  const soldHere = soldListings().filter((l) => l.city.toLowerCase() === city.toLowerCase());
+  const soldHereStats = soldStats(soldHere);
+  const verified = latestVerified([...cityListings, ...soldHere]);
+  const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+  const num = (s: string) => Number(s.replace(/[^0-9.]/g, "")) || 0;
 
   // Cities outside the counties we hold DSHS data for have no directory page yet,
   // so the cross-link only renders where it actually resolves.
@@ -71,16 +78,40 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
               </h2>
               {verified && (
                 <p className="text-foreground/70 text-[16px] mt-3">
-                  {cityListings.length} {cityListings.length === 1 ? "listing" : "listings"} · last verified{" "}
-                  {formatVerifiedDate(verified)}
+                  {activeListings.length} active · {pendingListings.length} pending · {soldHere.length} recently sold ·
+                  last verified {formatVerifiedDate(verified)}
                 </p>
               )}
+              <nav aria-label="Jump to" className="mt-4 text-[17px] flex flex-wrap gap-x-5 gap-y-2 justify-center">
+                <a href="#active" className="text-accent underline underline-offset-4">Active ({activeListings.length})</a>
+                <a href="#pending" className="text-accent underline underline-offset-4">Pending ({pendingListings.length})</a>
+                <a href="#recently-sold" className="text-accent underline underline-offset-4">Recently sold ({soldHere.length})</a>
+              </nav>
             </div>
 
             {cityListings.length > 0 ? (
               <div className="max-w-[1000px] mx-auto flex flex-col gap-4">
-                {cityListings.map((listing, index) => (
-                  <AFHListingCard key={listing.id} listing={listing} index={index} total={cityListings.length} />
+                <h3 id="active" className="font-serif text-[22px] md:text-[26px] font-semibold text-navy scroll-mt-32">
+                  Active — {activeListings.length} {activeListings.length === 1 ? "listing" : "listings"}
+                </h3>
+                {activeListings.length === 0 && (
+                  <p className="text-foreground/80 text-[17px]">No active listings at the moment.</p>
+                )}
+                {activeListings.map((listing, index) => (
+                  <AFHListingCard key={listing.id} listing={listing} index={index} total={activeListings.length} />
+                ))}
+                <h3 id="pending" className="font-serif text-[22px] md:text-[26px] font-semibold text-navy mt-6 scroll-mt-32">
+                  Pending — {pendingListings.length} under contract
+                </h3>
+                {pendingListings.length === 0 ? (
+                  <p className="text-foreground/80 text-[17px]">Nothing pending.</p>
+                ) : (
+                  <p className="text-foreground/80 text-[17px]">
+                    Under contract but not closed. Pending sales can fall through, so these may return to the market.
+                  </p>
+                )}
+                {pendingListings.map((listing, index) => (
+                  <AFHListingCard key={listing.id} listing={listing} index={index} total={pendingListings.length} />
                 ))}
                 <AFHListingsDisclaimer />
               </div>
@@ -107,6 +138,66 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
                 </div>
               </div>
             )}
+          </div>
+        </section>
+
+        <section id="recently-sold" className="py-12 md:py-16 bg-cream scroll-mt-32">
+          <div className="container px-5 md:px-8">
+            <div className="max-w-3xl mx-auto mb-8 text-center">
+              <p className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-3">Recently sold</p>
+              <h2 className="font-serif text-[26px] md:text-[34px] font-semibold text-navy leading-tight">
+                {soldHere.length > 0
+                  ? `${soldHere.length} adult family home ${soldHere.length === 1 ? "sale" : "sales"} in ${city}`
+                  : `No closed ${city} sales recorded yet`}
+              </h2>
+              {soldHere.length >= 3 && soldHereStats.medianSold !== null && soldHereStats.medianPerBed !== null && (
+                <p className="text-foreground/70 text-[16px] mt-3">
+                  Median sold price {money(soldHereStats.medianSold)} · {money(soldHereStats.medianPerBed)} per bedroom
+                </p>
+              )}
+            </div>
+            {soldHere.length > 0 && (
+              <div className="max-w-[1000px] mx-auto overflow-x-auto mb-6">
+                <table className="w-full text-[16px]">
+                  <thead>
+                    <tr className="text-left border-b-2 border-border">
+                      <th className="py-2 pr-3">Closed</th>
+                      <th className="py-2 pr-3">Address</th>
+                      <th className="py-2 pr-3">Sold</th>
+                      <th className="py-2 pr-3">Last list</th>
+                      <th className="py-2 pr-3">Beds</th>
+                      <th className="py-2 pr-3">$/bed</th>
+                      <th className="py-2 pr-3">Classification</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {soldHere.map((l) => {
+                      const sp = l.soldPrice ? num(l.soldPrice) : 0;
+                      return (
+                        <tr key={l.id} className="border-b border-border">
+                          <td className="py-2 pr-3 whitespace-nowrap">{l.soldDate ? formatVerifiedDate(l.soldDate) : ""}</td>
+                          <td className="py-2 pr-3">
+                            <Link to={`/afh-club/listings/${listingSlug(l)}`} className="text-accent underline underline-offset-4">
+                              {/upon request|undisclosed/i.test(l.address) ? "Undisclosed" : l.address}
+                            </Link>
+                          </td>
+                          <td className="py-2 pr-3 whitespace-nowrap font-semibold">{l.soldPrice}</td>
+                          <td className="py-2 pr-3 whitespace-nowrap">{l.price}</td>
+                          <td className="py-2 pr-3">{l.beds}</td>
+                          <td className="py-2 pr-3 whitespace-nowrap">{sp && l.beds ? money(sp / l.beds) : ""}</td>
+                          <td className="py-2 pr-3">{afhClassification(l)}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+            <p className="text-center text-[18px]">
+              <Link to="/afh-club/sold" className="text-accent underline underline-offset-4 font-semibold">
+                All adult family home sales in Washington →
+              </Link>
+            </p>
           </div>
         </section>
 
