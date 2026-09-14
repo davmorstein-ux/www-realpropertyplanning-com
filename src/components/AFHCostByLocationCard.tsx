@@ -148,7 +148,7 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
                     fontSize: 19,
                     padding: "12px 14px",
                     minHeight: 52,
-                    border: `2px solid ${picked ? GREEN : "#dccdce"}`,
+                    border: `2px solid ${GREEN}b3`,
                     borderRadius: 8,
                     background: "#f5f2ec",
                     color: "#272421",
@@ -171,7 +171,7 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
               </div>
               {/* Results render in flow (not floating) so they can never sit behind the sections below. */}
               {!picked && matches.length > 0 && (
-                <ul role="listbox" style={{ listStyle: "none", margin: "8px 0 0", padding: 0, border: "2px solid #dccdce", borderRadius: 8, overflow: "hidden", background: "#fff" }}>
+                <ul role="listbox" style={{ listStyle: "none", margin: "8px 0 0", padding: 0, border: `2px solid ${GREEN}b3`, borderRadius: 8, overflow: "hidden", background: "#fff" }}>
                   {matches.map((m) => (
                     <li key={m.label}>
                       <button
@@ -227,7 +227,7 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
                         band.confirmed ? `typical range, reviewed ${band.reviewed}` : "ask each home for its rate sheet",
                       ],
                     ].map(([k, v, note]) => (
-                      <div key={k} style={{ background: "#f5f2ec", border: `1px solid ${GREEN}30`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
+                      <div key={k} style={{ background: "#f5f2ec", border: `2px solid ${GREEN}b3`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
                         <div style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "#5f6b66", fontWeight: 700, marginBottom: 6 }}>{k}</div>
                         <div style={{ fontSize: 20, fontWeight: 700, color: GREEN, lineHeight: 1.2 }}>{v}</div>
                         <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 4 }}>{note}</div>
@@ -286,7 +286,7 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
                             ["Accept Medicaid", cityEntry ? cityEntry.facilityCount - cityEntry.privatePay : checked.facilityCount - privatePayOnly, "hold a DSHS contract"],
                             ["Private-pay only", cityEntry ? cityEntry.privatePay : privatePayOnly, "no DSHS contract"],
                           ].map(([k, v, note]) => (
-                            <div key={String(k)} style={{ background: "#f5f2ec", border: `1px solid ${GREEN}30`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
+                            <div key={String(k)} style={{ background: "#f5f2ec", border: `2px solid ${GREEN}b3`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
                               <div style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "#5f6b66", fontWeight: 700, marginBottom: 6 }}>{k}</div>
                               <div style={{ fontSize: 24, fontWeight: 700, color: "#272421", lineHeight: 1.2 }}>{Number(v).toLocaleString()}</div>
                               <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 4 }}>{note}</div>

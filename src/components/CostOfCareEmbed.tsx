@@ -275,7 +275,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         <div
           style={{
             background: "#f5f2ec",
-            border: `2px solid ${COC_TEAL}60`,
+            border: `2px solid ${COC_TEAL}b3`,
             borderRadius: 10,
             padding: "10px 12px",
             textAlign: "center",
@@ -307,7 +307,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         <div
           style={{
             background: "#f5f2ec",
-            border: `2px solid ${COC_TEAL}60`,
+            border: `2px solid ${COC_TEAL}b3`,
             borderRadius: 10,
             padding: "10px 12px",
             textAlign: "center",
@@ -341,7 +341,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       <div
         style={{
           background: "#f5f2ec",
-          border: `2px solid ${COC_TEAL}60`,
+          border: `2px solid ${COC_TEAL}b3`,
           borderRadius: 10,
           padding: "10px 12px",
           textAlign: "center",
