@@ -3018,7 +3018,7 @@ main h2.coc-card-title {
   display: block !important;
 }
 main h2.coc-card-title .coc-card-title-accent.is-green {
-  color: #0a5648 !important;
+  color: #1c9e90 !important; /* the AFH Club teal, lighter than the dark green of "Cost by" */
 }
 main h2.coc-card-title .coc-card-title-accent {
   display: inline !important;
