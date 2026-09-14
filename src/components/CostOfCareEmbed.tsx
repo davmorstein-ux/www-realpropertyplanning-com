@@ -163,7 +163,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           {t(`costOfCarePage.careTypes.${careType.id}.label`)}
         </div>
         <h2 className="coc-card-title" style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0 }}>
-          Cost of <span style={{ color: "#b62733" }}>Care Calculator</span>
+          Cost of <strong className="coc-card-title-accent">Care Calculator</strong>
         </h2>
         <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
           Washington vs. National Average

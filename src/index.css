@@ -3014,6 +3014,18 @@ main h2.coc-card-title {
   text-align: center !important;
   white-space: nowrap !important;
   text-wrap: nowrap !important;
+  display: block !important;
+}
+/* The coloured half of the title. A <strong>, not a <span>, because the
+   card-body rule forces spans inside cards to 16px regular; and every
+   property restated so nothing generic can dim, shrink, or wrap it. */
+main h2.coc-card-title .coc-card-title-accent {
+  display: inline !important;
+  color: #b62733 !important;
+  font-size: inherit !important;
+  font-weight: 700 !important;
+  font-family: inherit !important;
+  white-space: nowrap !important;
 }
 main .coc-divider-label {
   font-family: 'DM Sans', system-ui, sans-serif !important;
