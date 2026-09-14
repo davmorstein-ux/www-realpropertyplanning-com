@@ -331,19 +331,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               rather than a continuation of the projection above. */}
           <div style={{ display: "flex", alignItems: "center", gap: 14, margin: "22px 0 18px" }}>
             <span style={{ flex: 1, height: 3, background: COC_TEAL }} />
-            <span
-              style={{
-                fontSize: 18,
-                fontWeight: 800,
-                letterSpacing: "0.02em",
-                color: COC_TEAL,
-                fontFamily: "'DM Sans', sans-serif",
-                whiteSpace: "nowrap",
-                textAlign: "center",
-              }}
-            >
-              Now check your city or county
-            </span>
+            <div className="coc-divider-label">Now check your city or county</div>
             <span style={{ flex: 1, height: 3, background: COC_TEAL }} />
           </div>
           <AFHCostByLocationCard compact />
