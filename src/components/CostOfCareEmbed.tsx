@@ -169,13 +169,13 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           fontSize: "clamp(20px,2.6vw,26px)",
           fontWeight: 700,
           color: NAVY,
-          margin: "0 0 20px",
+          margin: "0 0 36px",
         }}
       >
         {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National
       </h3>
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "16px 56px", marginBottom: 18 }}>
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "16px 56px", marginBottom: 18 }}>
         <div>
           <label
             style={{
@@ -271,7 +271,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         </div>
       </div>
 
-      <div style={{ marginBottom: 20 }}>
+      <div style={{ marginBottom: 20, textAlign: "center" }}>
         <label
           style={{
             display: "block",
@@ -288,7 +288,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         </label>
         {/* Any year from now to 20 out, matching the stepper above rather than
             fixed 5-year jumps. "Now" is 0; the box reads "Now", "1 yr", "2 yrs"… */}
-        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
           <button
             onClick={() => setYearsOut((y) => Math.max(0, y - 1))}
             style={stepperBtn}
