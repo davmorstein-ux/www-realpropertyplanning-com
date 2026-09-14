@@ -168,6 +168,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           color: "#272421",
           margin: "0 0 4px",
           lineHeight: 1.15,
+          textAlign: "center",
         }}
       >
         Cost of <span style={{ color: COC_TEAL }}>Care Calculator</span>
@@ -180,6 +181,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           fontWeight: 600,
           color: "#5f6b66",
           margin: 0,
+          textAlign: "center",
           whiteSpace: "nowrap",
           overflow: "hidden",
           textOverflow: "ellipsis",
