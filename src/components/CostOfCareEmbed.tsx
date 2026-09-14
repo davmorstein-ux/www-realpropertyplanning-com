@@ -162,8 +162,8 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National Average
       </h3>
 
-      <div className="coc-controls" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "16px 24px", margin: "32px 0 18px" }}>
-        <div style={{ flex: "0 1 auto", minWidth: 160, display: "inline-flex", flexDirection: "column", alignItems: "center" }}>
+      <div className="coc-controls" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px 12px", margin: "32px 0 18px" }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 0 }}>
         <label
           style={{
             display: "block",
@@ -215,7 +215,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             +
           </button>
         </div>
-        <div style={{ flex: "0 1 auto", minWidth: 160, marginLeft: "auto", display: "inline-flex", flexDirection: "column", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 0 }}>
           <label
             style={{
               display: "block",
@@ -570,6 +570,9 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       </div>
 
       <style>{`
+        @media (max-width: 340px) {
+          .coc-controls { grid-template-columns: 1fr !important; }
+        }
         @media (max-width: 420px) {
           .coc-embed-results { grid-template-columns: 1fr !important; }
         }
