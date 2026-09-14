@@ -31,6 +31,14 @@ const actionLinkStyle: CSSProperties = {
 
 const ARTICLES = [
   {
+    title: "Hospice Care in Washington",
+    href: "/articles/hospice-care-washington",
+    minutes: 6,
+    listenMinutes: 5,
+    img: "/hospice-care-cover.webp",
+    description: "Hospice comes to where a person lives — home, an adult family home, assisted living — and doesn't replace it. What Medicare pays, what it doesn't, and what \"24-hour\" really means.",
+  },
+  {
     title: "The Silver Tsunami",
     href: "/articles/silver-tsunami",
     minutes: 5,

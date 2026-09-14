@@ -4,6 +4,7 @@ import { useIsVisible } from "@/hooks/use-is-visible";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 const ARTICLES = [
+  { title: "Hospice Care in Washington", href: "/articles/hospice-care-washington", img: "/hospice-care-cover.webp" },
   { title: "The Silver Tsunami", href: "/articles/silver-tsunami", img: "/The_Silver_Tsunami.webp" },
   { title: "The Senior Housing Guide", href: "/articles/senior-housing-guide", img: "/The_Senior_Housing_Guide.webp" },
   { title: "Senior Housing Options", href: "/articles/senior-housing-options", img: "/Senior_Housing_Options.webp" },
