@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { CARE_TYPES, formatCurrency, COC_TEAL } from "@/lib/careTypes";
 import { CARE_INFLATION_RATE } from "@/lib/careInflation";
+import AFHCostByLocationCard from "@/components/AFHCostByLocationCard";
 
 const NAVY = "#272421";
 /* The default growth rate now comes from src/lib/careInflation.ts, which
@@ -388,52 +389,10 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       </p>
 
       {/* AFH only: the statewide median above hides a wide county spread, so
-          the city/county lookup sits directly under this calculator. */}
+          the city/county lookup itself sits directly under this calculator. */}
       {careType.id === "adult-family-home" && (
-        <div
-          className="coc-no-print"
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "12px 20px",
-            padding: "16px 18px",
-            marginBottom: 18,
-            background: "#0a5648",
-            borderRadius: 10,
-            color: "#fff",
-          }}
-        >
-          <div style={{ flex: "1 1 300px" }}>
-            <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.85, marginBottom: 4 }}>
-              By city &amp; county
-            </div>
-            <div style={{ fontSize: 17, fontWeight: 600, lineHeight: 1.45, fontFamily: "'DM Sans', sans-serif" }}>
-              $6,500 is the statewide median. See the Medicaid rate range, private-pay range, and licensed homes
-              for your city or county.
-            </div>
-          </div>
-          <Link
-            to="/afh-club/cost-by-location"
-            className="no-underline"
-            style={{
-              flex: "0 0 auto",
-              display: "inline-flex",
-              alignItems: "center",
-              minHeight: 48,
-              padding: "0 18px",
-              background: "#fff",
-              color: "#0a5648",
-              fontSize: 16,
-              fontWeight: 700,
-              borderRadius: 8,
-              textDecoration: "none",
-              fontFamily: "'DM Sans', sans-serif",
-            }}
-          >
-            Look up my city →
-          </Link>
+        <div className="coc-no-print" style={{ marginBottom: 18 }}>
+          <AFHCostByLocationCard compact />
         </div>
       )}
 
