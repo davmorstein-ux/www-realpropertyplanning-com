@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -19,6 +19,30 @@ import { privatePayBandForCounty } from "@/data/afhPrivatePayRanges";
 import { cityPageByCity } from "@/data/afhCityPages";
 
 const GREEN = "#0a5648";
+/* Section, section-title, and divider styles shared with the ROI calculator so the tools read as a family. */
+const PS: React.CSSProperties = { marginBottom: 20 };
+const PT: React.CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: 10,
+  fontSize: 13,
+  letterSpacing: ".18em",
+  textTransform: "uppercase",
+  color: GREEN,
+  fontWeight: 700,
+  marginBottom: 6,
+};
+const DV: React.CSSProperties = { height: 1, background: "#eee6e7", margin: "0 0 12px" };
+const stepperBtn: React.CSSProperties = {
+  fontSize: 22,
+  fontWeight: 700,
+  background: "#f5f2ec",
+  border: "2px solid #dccdce",
+  borderRadius: 8,
+  cursor: "pointer",
+  color: "#272421",
+  fontFamily: "'DM Sans', system-ui, sans-serif",
+};
 const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
 const money2 = (n: number) => "$" + n.toFixed(2);
 
@@ -66,7 +90,21 @@ const CostByLocation = () => {
 
   const [query, setQuery] = useState("");
   const [picked, setPicked] = useState<Place | null>(null);
-  const matches = query.trim().length >= 2 ? places.filter((p) => p.label.toLowerCase().includes(query.trim().toLowerCase())).slice(0, 8) : [];
+  const q = query.trim().toLowerCase();
+  const matches =
+    q.length >= 2
+      ? places
+          .map((p) => {
+            const name = p.label.toLowerCase();
+            const bare = p.kind === "city" ? name.split(" (")[0] : name.replace(/ county$/, "");
+            const score = bare.startsWith(q) ? 0 : name.startsWith(q) ? 1 : bare.includes(q) ? 2 : name.includes(q) ? 3 : -1;
+            return { p, score: score === -1 ? -1 : score * 2 + (p.kind === "county" ? 0 : 1) };
+          })
+          .filter((x) => x.score >= 0)
+          .sort((a, b) => a.score - b.score || a.p.label.localeCompare(b.p.label))
+          .slice(0, 8)
+          .map((x) => x.p)
+      : [];
 
   const county = picked?.county ?? null;
   const region = county ? rateRegionForCounty(county) : null;
@@ -93,22 +131,50 @@ const CostByLocation = () => {
         ]}
       />
       <Header />
+      <style>{`@media (max-width: 640px) { .cost-tiles { grid-template-columns: 1fr !important; } }`}</style>
       <main id="main-content">
         <div style={{ background: GREEN, padding: "6px 24px 4px" }} />
         <HeroBandTitle as="h1">What does an adult family home cost where you're looking?</HeroBandTitle>
 
-        <section className="py-10 md:py-14 bg-cream">
-          <div className="container px-5 md:px-8">
-            <div className="max-w-3xl mx-auto">
-              <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mb-6">
-                Type a city or county. You'll get the DSHS Medicaid rate range for that county (what the state pays a
-                home per day and per month, by care level), a typical private-pay range where one has been reviewed,
-                and how many licensed homes are there and how many accept Medicaid.
-              </p>
-              <label htmlFor="place" className="block text-[17px] font-semibold mb-2">
+        <div style={{ background: "#f5f2ec", padding: "2.5rem 1rem 3rem" }}>
+          <div
+            style={{
+              maxWidth: 900,
+              margin: "0 auto",
+              background: "#ffffff",
+              border: `2px solid ${GREEN}40`,
+              borderRadius: 14,
+              padding: "1.5rem 1.25rem",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+              <div style={{ fontSize: 13, letterSpacing: ".25em", textTransform: "uppercase", color: GREEN, marginBottom: 8, fontWeight: 700 }}>
+                Adult Family Home
+              </div>
+              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0 }}>
+                Cost by <span style={{ color: GREEN }}>City &amp; County</span>
+              </h2>
+              <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
+                Medicaid rates · Private pay · Licensed homes
+              </div>
+            </div>
+
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "#302b26", margin: "0 0 18px", textAlign: "center" }}>
+              Type a city or county. You'll get the DSHS Medicaid rate range for that county (what the state pays a
+              home per day and per month, by care level), a typical private-pay range where one has been reviewed,
+              and how many licensed homes are there and how many accept Medicaid.
+            </p>
+
+            <div style={PS}>
+              <div style={PT}>
+                Location <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
+              </div>
+              <div style={DV} />
+              <label htmlFor="place" style={{ display: "block", fontSize: 15, fontWeight: 700, color: "#272421", marginBottom: 6 }}>
                 City or county
               </label>
-              <div style={{ position: "relative" }}>
+              <div style={{ display: "flex", gap: 8, alignItems: "stretch" }}>
                 <input
                   id="place"
                   type="text"
@@ -120,181 +186,182 @@ const CostByLocation = () => {
                   placeholder="e.g. Kennewick, Spokane County, Edmonds"
                   autoComplete="off"
                   style={{
-                    width: "100%",
-                    fontSize: "19px",
-                    padding: "14px 16px",
-                    minHeight: "52px",
-                    border: "1px solid #cfcfcf",
-                    borderRadius: "10px",
-                    background: "#fff",
+                    flex: 1,
+                    fontSize: 19,
+                    padding: "12px 14px",
+                    minHeight: 52,
+                    border: `2px solid ${picked ? GREEN : "#dccdce"}`,
+                    borderRadius: 8,
+                    background: "#f5f2ec",
+                    color: "#272421",
+                    fontFamily: "'DM Sans', system-ui, sans-serif",
                   }}
                 />
-                {!picked && matches.length > 0 && (
-                  <ul
-                    role="listbox"
-                    style={{
-                      position: "absolute",
-                      zIndex: 10,
-                      left: 0,
-                      right: 0,
-                      margin: 0,
-                      padding: 0,
-                      listStyle: "none",
-                      background: "#fff",
-                      border: "1px solid #cfcfcf",
-                      borderRadius: "10px",
-                      boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
-                      overflow: "hidden",
+                {picked && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setPicked(null);
+                      setQuery("");
                     }}
+                    style={{ ...stepperBtn, minWidth: 52 }}
+                    aria-label="Clear"
                   >
-                    {matches.map((m) => (
-                      <li key={m.label}>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setPicked(m);
-                            setQuery("");
-                          }}
-                          style={{
-                            width: "100%",
-                            textAlign: "left",
-                            fontSize: "17px",
-                            padding: "12px 16px",
-                            minHeight: "48px",
-                            background: "none",
-                            border: "none",
-                            borderBottom: "1px solid #eee",
-                            cursor: "pointer",
-                          }}
-                        >
-                          {m.label}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
+                    ×
+                  </button>
                 )}
               </div>
-              {!picked && query.trim().length >= 2 && matches.length === 0 && (
-                <p className="text-foreground/70 text-[16px] mt-2">No Washington city or county matches that. Try the county name.</p>
+              {/* Results render in flow (not floating) so they can never sit behind the sections below. */}
+              {!picked && matches.length > 0 && (
+                <ul role="listbox" style={{ listStyle: "none", margin: "8px 0 0", padding: 0, border: "2px solid #dccdce", borderRadius: 8, overflow: "hidden", background: "#fff" }}>
+                  {matches.map((m) => (
+                    <li key={m.label}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setPicked(m);
+                          setQuery("");
+                        }}
+                        style={{
+                          width: "100%",
+                          textAlign: "left",
+                          fontSize: 17,
+                          padding: "12px 14px",
+                          minHeight: 48,
+                          background: m.kind === "county" ? "#f5f2ec" : "#fff",
+                          border: "none",
+                          borderBottom: "1px solid #eee",
+                          cursor: "pointer",
+                          fontFamily: "'DM Sans', system-ui, sans-serif",
+                          color: "#272421",
+                          fontWeight: m.kind === "county" ? 700 : 500,
+                        }}
+                      >
+                        {m.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {!picked && q.length >= 2 && matches.length === 0 && (
+                <p style={{ fontSize: 15, color: "#5f6b66", margin: "8px 0 0" }}>No Washington city or county matches that. Try the county name.</p>
               )}
             </div>
-          </div>
-        </section>
 
-        {picked && county && region && range && band && (
-          <section className="py-10 md:py-14 bg-background">
-            <div className="container px-5 md:px-8">
-              <div className="max-w-3xl mx-auto flex flex-col gap-8">
-                <div>
-                  <h2 className="font-serif text-[26px] md:text-[32px] font-semibold text-navy leading-tight mb-2">
+            {picked && county && region && range && band && (
+              <>
+                <div style={PS}>
+                  <div style={PT}>
                     {picked.kind === "city" ? `${picked.label.split(" (")[0]}, ` : ""}
-                    {county} County
-                  </h2>
-                  <p className="text-foreground/70 text-[16px]">
-                    DSHS rate region: <strong>{AFH_RATE_REGION_LABELS[region]}</strong>
+                    {county} County <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
+                  </div>
+                  <div style={DV} />
+                  <div style={{ fontSize: 14, color: "#5f6b66", marginBottom: 12 }}>
+                    DSHS rate region: <strong style={{ color: "#272421" }}>{AFH_RATE_REGION_LABELS[region]}</strong>
+                  </div>
+                  <div className="cost-tiles" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10 }}>
+                    {[
+                      ["Medicaid, per month", `${money(monthly(range.minDaily))} – ${money(monthly(range.maxDaily))}`, "lightest to heaviest care level"],
+                      ["Medicaid, per day", `${money2(range.minDaily)} – ${money2(range.maxDaily)}`, "what DSHS pays the home"],
+                      [
+                        "Private pay, per month",
+                        band.confirmed ? `${money(band.low)} – ${money(band.high)}` : "Not yet published",
+                        band.confirmed ? `typical range, reviewed ${band.reviewed}` : "ask each home for its rate sheet",
+                      ],
+                    ].map(([k, v, note]) => (
+                      <div key={k} style={{ background: "#f5f2ec", border: `1px solid ${GREEN}30`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
+                        <div style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "#5f6b66", fontWeight: 700, marginBottom: 6 }}>{k}</div>
+                        <div style={{ fontSize: 20, fontWeight: 700, color: GREEN, lineHeight: 1.2 }}>{v}</div>
+                        <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 4 }}>{note}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <p style={{ fontSize: 15, lineHeight: 1.6, color: "#302b26", margin: "14px 0 0" }}>
+                    The Medicaid figures are what DSHS pays the home; a Medicaid resident contributes most of their own
+                    income toward that cost and keeps a personal needs allowance, so a family's out-of-pocket under
+                    Medicaid is usually the resident's income, not the rate.
+                    {band.confirmed
+                      ? ` The private-pay range is for a standard-needs resident in ${band.label}, from David Stein's experience with operating homes; memory care and heavy-care needs run above it, and each home sets its own rate.`
+                      : ""}
                   </p>
-                </div>
-
-                <div className="rounded-xl border border-border bg-cream p-5 md:p-6">
-                  <p className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-2">Medicaid rate range</p>
-                  <p className="text-[28px] md:text-[34px] font-bold text-navy leading-tight mb-1">
-                    {money(monthly(range.minDaily))} – {money(monthly(range.maxDaily))} per month
-                  </p>
-                  <p className="text-foreground/80 text-[17px] mb-4">
-                    {money2(range.minDaily)} – {money2(range.maxDaily)} per day, from the lightest care level (A Low) to the
-                    heaviest (E High). What DSHS pays the home; a Medicaid resident contributes most of their income toward
-                    it.
-                  </p>
-                  <details>
-                    <summary className="text-accent underline underline-offset-4 cursor-pointer text-[17px]">All 17 care levels</summary>
-                    <table className="w-full text-[16px] mt-3">
+                  <details style={{ marginTop: 12 }}>
+                    <summary style={{ cursor: "pointer", color: GREEN, fontWeight: 700, fontSize: 15 }}>All 17 Medicaid care levels for this region</summary>
+                    <table style={{ width: "100%", fontSize: 15, marginTop: 8, borderCollapse: "collapse" }}>
                       <thead>
-                        <tr className="text-left border-b-2 border-border">
-                          <th className="py-1 pr-3">CARE level</th>
-                          <th className="py-1 pr-3">Per day</th>
-                          <th className="py-1 pr-3">Per month</th>
+                        <tr style={{ textAlign: "left", borderBottom: "2px solid #dccdce" }}>
+                          <th style={{ padding: "6px 8px" }}>CARE level</th>
+                          <th style={{ padding: "6px 8px" }}>Per day</th>
+                          <th style={{ padding: "6px 8px" }}>Per month</th>
                         </tr>
                       </thead>
                       <tbody>
                         {AFH_MEDICAID_RATES.levels.map((l) => (
-                          <tr key={l.classification} className="border-b border-border">
-                            <td className="py-1 pr-3">{l.classification}</td>
-                            <td className="py-1 pr-3">{money2(l[region])}</td>
-                            <td className="py-1 pr-3">{money(monthly(l[region]))}</td>
+                          <tr key={l.classification} style={{ borderBottom: "1px solid #eee" }}>
+                            <td style={{ padding: "6px 8px" }}>{l.classification}</td>
+                            <td style={{ padding: "6px 8px" }}>{money2(l[region])}</td>
+                            <td style={{ padding: "6px 8px" }}>{money(monthly(l[region]))}</td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
-                  </details>
-                  <p className="text-foreground/60 text-[14px] mt-3">
-                    Source:{" "}
-                    <a href={AFH_MEDICAID_RATES.source} target="_blank" rel="noopener noreferrer" className="underline">
-                      {AFH_MEDICAID_RATES.sourceLabel}
-                    </a>
-                    . Base AFH rate only; specialty add-ons excluded.
-                  </p>
-                </div>
-
-                <div className="rounded-xl border border-border bg-background p-5 md:p-6">
-                  <p className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-2">Private pay</p>
-                  {band.confirmed ? (
-                    <>
-                      <p className="text-[28px] md:text-[34px] font-bold text-navy leading-tight mb-1">
-                        {money(band.low)} – {money(band.high)} per month
-                      </p>
-                      <p className="text-foreground/80 text-[17px]">
-                        Typical range for a standard-needs resident in {band.label}, from David Stein's experience with
-                        operating homes, reviewed {band.reviewed}. Memory care and heavy-care needs run above the top of
-                        this range. Each home sets its own rate.
-                      </p>
-                    </>
-                  ) : (
-                    <p className="text-foreground/80 text-[17px]">
-                      A reviewed private-pay range for {band.label} isn't published yet. Statewide, most adult family
-                      homes quote private-pay rates well above the Medicaid rate for the same care level, and memory care
-                      sits higher still. Ask each home for its rate sheet.
+                    <p style={{ fontSize: 13, color: "#5f6b66", margin: "8px 0 0" }}>
+                      Source:{" "}
+                      <a href={AFH_MEDICAID_RATES.source} target="_blank" rel="noopener noreferrer" style={{ color: GREEN }}>
+                        {AFH_MEDICAID_RATES.sourceLabel}
+                      </a>
+                      . Base AFH rate only; specialty add-ons excluded.
                     </p>
-                  )}
+                  </details>
                 </div>
 
                 {checked && (
-                  <div className="rounded-xl border border-border bg-cream p-5 md:p-6">
-                    <p className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-2">Licensed homes here</p>
+                  <div style={{ ...PS, marginBottom: 0 }}>
+                    <div style={PT}>
+                      Licensed homes here <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
+                    </div>
+                    <div style={DV} />
                     {checked.facilityCount > 0 ? (
                       <>
-                        <p className="text-[17px] md:text-[18px] leading-relaxed mb-3">
-                          {cityEntry ? (
-                            <>
-                              <strong>{cityEntry.city}</strong> has {cityEntry.facilityCount} licensed adult family homes with{" "}
-                              {cityEntry.totalBeds} beds; {cityEntry.facilityCount - cityEntry.privatePay} hold a DSHS contract
-                              and can accept Medicaid.{" "}
-                            </>
-                          ) : null}
-                          <strong>{county} County</strong> has {checked.facilityCount.toLocaleString()} licensed homes with{" "}
-                          {checked.totalBeds.toLocaleString()} beds across {countyCities.length} {countyCities.length === 1 ? "city" : "cities"};{" "}
-                          {(checked.facilityCount - privatePayOnly).toLocaleString()} can accept Medicaid and {privatePayOnly} are private-pay only.
-                        </p>
-                        <p className="text-[17px] flex flex-wrap gap-x-5 gap-y-2">
+                        <div className="cost-tiles" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10, marginBottom: 14 }}>
+                          {[
+                            [cityEntry ? `Homes in ${cityEntry.city}` : `Homes in ${county} County`, cityEntry ? cityEntry.facilityCount : checked.facilityCount, cityEntry ? `${cityEntry.totalBeds} beds` : `${checked.totalBeds.toLocaleString()} beds`],
+                            ["Accept Medicaid", cityEntry ? cityEntry.facilityCount - cityEntry.privatePay : checked.facilityCount - privatePayOnly, "hold a DSHS contract"],
+                            ["Private-pay only", cityEntry ? cityEntry.privatePay : privatePayOnly, "no DSHS contract"],
+                          ].map(([k, v, note]) => (
+                            <div key={String(k)} style={{ background: "#f5f2ec", border: `1px solid ${GREEN}30`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
+                              <div style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "#5f6b66", fontWeight: 700, marginBottom: 6 }}>{k}</div>
+                              <div style={{ fontSize: 24, fontWeight: 700, color: "#272421", lineHeight: 1.2 }}>{Number(v).toLocaleString()}</div>
+                              <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 4 }}>{note}</div>
+                            </div>
+                          ))}
+                        </div>
+                        {cityEntry && (
+                          <p style={{ fontSize: 15, color: "#302b26", margin: "0 0 10px" }}>
+                            {county} County overall: {checked.facilityCount.toLocaleString()} licensed homes, {checked.totalBeds.toLocaleString()} beds,{" "}
+                            {(checked.facilityCount - privatePayOnly).toLocaleString()} accepting Medicaid.
+                          </p>
+                        )}
+                        <p style={{ fontSize: 16, display: "flex", flexWrap: "wrap", gap: "6px 18px", margin: 0 }}>
                           {cityEntry && (
-                            <Link to={`/afh-club/homes/${cityEntry.citySlug}`} className="text-accent underline underline-offset-4 font-semibold">
+                            <Link to={`/afh-club/homes/${cityEntry.citySlug}`} style={{ color: GREEN, fontWeight: 700 }}>
                               Every licensed home in {cityEntry.city} →
                             </Link>
                           )}
-                          <Link to={`/afh-club/homes/county/${countySlug(county)}`} className="text-accent underline underline-offset-4 font-semibold">
+                          <Link to={`/afh-club/homes/county/${countySlug(county)}`} style={{ color: GREEN, fontWeight: 700 }}>
                             {county} County directory →
                           </Link>
                           {forSale && (
-                            <Link to={`/afh-club/for-sale/${forSale.slug}`} className="text-accent underline underline-offset-4">
+                            <Link to={`/afh-club/for-sale/${forSale.slug}`} style={{ color: GREEN }}>
                               Homes for sale in {forSale.city}
                             </Link>
                           )}
                         </p>
                       </>
                     ) : (
-                      <p className="text-[17px] md:text-[18px] leading-relaxed">
+                      <p style={{ fontSize: 16, lineHeight: 1.6, color: "#302b26", margin: 0 }}>
                         DSHS records show no licensed adult family homes in {county} County. The Medicaid rate above is what a
                         home there would be paid; families usually look to neighbouring counties.{" "}
-                        <Link to={`/afh-club/homes/county/${countySlug(county)}`} className="text-accent underline underline-offset-4">
+                        <Link to={`/afh-club/homes/county/${countySlug(county)}`} style={{ color: GREEN, fontWeight: 700 }}>
                           See the county page
                         </Link>
                         .
@@ -302,15 +369,14 @@ const CostByLocation = () => {
                     )}
                   </div>
                 )}
-
-                <p className="text-foreground/70 text-[15px]">
+                <p style={{ fontSize: 13, color: "#5f6b66", margin: "16px 0 0", textAlign: "center" }}>
                   Rates and counts change. Medicaid rates are updated by DSHS each July; directory counts come from DSHS
-                  licensing records dated {checked ? checked.retrievedAt : "recently"}. This tool is for budgeting, not a quote.
+                  licensing records dated {checked ? checked.retrievedAt : "recently"}. For budgeting, not a quote.
                 </p>
-              </div>
-            </div>
-          </section>
-        )}
+              </>
+            )}
+          </div>
+        </div>
 
         <section className="py-10 md:py-14 bg-cream">
           <div className="container px-5 md:px-8">
