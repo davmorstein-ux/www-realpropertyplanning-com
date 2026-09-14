@@ -346,21 +346,21 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           {/* Divider with a label so the lookup reads as a second, related tool
               rather than a continuation of the projection above. */}
           <div style={{ display: "flex", alignItems: "center", gap: 14, margin: "22px 0 18px" }}>
-            <span style={{ flex: 1, height: 2, background: `${COC_TEAL}55` }} />
+            <span style={{ flex: 1, height: 3, background: COC_TEAL }} />
             <span
               style={{
-                fontSize: 13,
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                textTransform: "uppercase",
+                fontSize: 18,
+                fontWeight: 800,
+                letterSpacing: "0.02em",
                 color: COC_TEAL,
                 fontFamily: "'DM Sans', sans-serif",
                 whiteSpace: "nowrap",
+                textAlign: "center",
               }}
             >
               Now check your city or county
             </span>
-            <span style={{ flex: 1, height: 2, background: `${COC_TEAL}55` }} />
+            <span style={{ flex: 1, height: 3, background: COC_TEAL }} />
           </div>
           <AFHCostByLocationCard compact />
         </div>
