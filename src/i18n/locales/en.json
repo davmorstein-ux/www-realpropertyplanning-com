@@ -409,7 +409,7 @@
       "monthly": "Monthly",
       "annual": "Annual",
       "washington": "Washington",
-      "nationalMedian": "National Median",
+      "nationalMedian": "National Average",
       "perMonth": "per month",
       "perYear": "per year",
       "totalPlan": "Total · {{years}}-Year Plan",

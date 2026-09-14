@@ -159,7 +159,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           textWrap: "nowrap",
         }}
       >
-        {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National
+        {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National Average
       </h3>
 
       <div className="coc-controls" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "16px 24px", margin: "32px 0 18px" }}>
