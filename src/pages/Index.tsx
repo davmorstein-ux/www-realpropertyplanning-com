@@ -319,87 +319,151 @@ const RPPHomeV3 = () => {
                 </div>
               </a>
 
-              <a
-                href="/afh-club"
-                className="group block transition-transform duration-200 hover:-translate-y-1"
-                style={{
-                  textDecoration: "none",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1.25rem",
-                  background: "#ffffff",
-                  border: "2px solid #1c9e90",
-                  borderRadius: 12,
-                  padding: "1.25rem 1.5rem",
-                  overflow: "hidden",
-                  position: "relative",
-                  minHeight: 200,
-                }}
-              >
-                <img
-                  src="/afh-club-badge.webp"
-                  alt=""
-                  aria-hidden="true"
-                  style={{ width: 92, height: 92, flexShrink: 0, display: "block", position: "relative", zIndex: 2 }}
-                />
-                <div style={{ flex: 1, minWidth: 0, position: "relative", zIndex: 2 }}>
-                  <h3
+              {/* Right column: AFH Club, condensed, with the AFH cost lookup
+                  directly beneath it so a family sees the tool without
+                  entering the Club. The two together match the height of
+                  the Cost of Care card on the left. */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>
+                <a
+                  href="/afh-club"
+                  className="group block transition-transform duration-200 hover:-translate-y-1"
+                  style={{
+                    textDecoration: "none",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                    background: "#ffffff",
+                    border: "2px solid #1c9e90",
+                    borderRadius: 12,
+                    padding: "0.9rem 1.25rem",
+                    overflow: "hidden",
+                    position: "relative",
+                    flex: 1,
+                  }}
+                >
+                  <img
+                    src="/afh-club-badge.webp"
+                    alt=""
+                    aria-hidden="true"
+                    style={{ width: 64, height: 64, flexShrink: 0, display: "block", position: "relative", zIndex: 2 }}
+                  />
+                  <div style={{ flex: 1, minWidth: 0, position: "relative", zIndex: 2 }}>
+                    <h3
+                      style={{
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontSize: "clamp(20px,2.4vw,24px)",
+                        fontWeight: 700,
+                        color: "#0a5648",
+                        margin: "0 0 4px",
+                        lineHeight: 1.15,
+                      }}
+                    >
+                      AFH Club
+                    </h3>
+                    <p
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: 16,
+                        color: "#272421",
+                        lineHeight: 1.45,
+                        margin: 0,
+                        maxWidth: 300,
+                      }}
+                    >
+                      Buying, selling, managing and learning about Adult Family Homes.{" "}
+                      <span style={{ color: "#0a5648", fontWeight: 700, whiteSpace: "nowrap" }}>Explore →</span>
+                    </p>
+                  </div>
+                  <img
+                    src="/afh-club-house.webp"
+                    alt=""
+                    aria-hidden="true"
                     style={{
-                      fontFamily: "'DM Sans', system-ui, sans-serif",
-                      fontSize: "clamp(22px,2.8vw,28px)",
-                      fontWeight: 700,
-                      color: "#0a5648",
-                      margin: "0 0 8px",
-                      lineHeight: 1.15,
+                      position: "absolute",
+                      right: 0,
+                      top: 0,
+                      height: "100%",
+                      width: "auto",
+                      maxWidth: "34%",
+                      objectFit: "cover",
+                      zIndex: 1,
+                      opacity: 0.9,
                     }}
-                  >
-                    AFH Club
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 16,
-                      color: "#272421",
-                      lineHeight: 1.5,
-                      margin: "0 0 14px",
-                      maxWidth: 280,
-                    }}
-                  >
-                    The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.
-                  </p>
+                  />
+                </a>
+
+                <a
+                  href="/afh-club/cost-by-location"
+                  className="group block transition-transform duration-200 hover:-translate-y-1"
+                  style={{
+                    textDecoration: "none",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                    background: "#0a5648",
+                    border: "2px solid #0a5648",
+                    borderRadius: 12,
+                    padding: "0.9rem 1.25rem",
+                    flex: 1,
+                  }}
+                >
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: 13,
+                        fontWeight: 700,
+                        letterSpacing: "0.16em",
+                        textTransform: "uppercase",
+                        color: "rgba(255,255,255,0.85)",
+                        marginBottom: 4,
+                      }}
+                    >
+                      New · For families
+                    </div>
+                    <h3
+                      style={{
+                        fontFamily: "'DM Sans', system-ui, sans-serif",
+                        fontSize: "clamp(20px,2.4vw,24px)",
+                        fontWeight: 700,
+                        color: "#ffffff",
+                        margin: "0 0 4px",
+                        lineHeight: 1.15,
+                      }}
+                    >
+                      What does an adult family home cost in your city?
+                    </h3>
+                    <p
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: 16,
+                        color: "rgba(255,255,255,0.92)",
+                        lineHeight: 1.45,
+                        margin: 0,
+                      }}
+                    >
+                      Medicaid rate range, private-pay range, and licensed homes for any Washington city or county.
+                    </p>
+                  </div>
                   <span
                     style={{
+                      flexShrink: 0,
                       display: "inline-flex",
                       alignItems: "center",
-                      gap: 8,
-                      background: "#0a5648",
-                      color: "#ffffff",
+                      background: "#ffffff",
+                      color: "#0a5648",
                       fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 700,
                       fontSize: 16,
-                      padding: "10px 20px",
+                      padding: "10px 16px",
                       borderRadius: 8,
+                      whiteSpace: "nowrap",
                     }}
                   >
-                    Explore AFH Club →
+                    Look it up →
                   </span>
-                </div>
-                <img
-                  src="/afh-club-house.webp"
-                  alt=""
-                  aria-hidden="true"
-                  style={{
-                    position: "absolute",
-                    right: 0,
-                    top: 0,
-                    height: "100%",
-                    width: "auto",
-                    maxWidth: "42%",
-                    objectFit: "cover",
-                    zIndex: 1,
-                  }}
-                />
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </section>
