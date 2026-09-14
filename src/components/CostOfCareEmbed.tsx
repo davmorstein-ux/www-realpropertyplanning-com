@@ -357,7 +357,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         <div
           style={{
             background: "#f5f2ec",
-            border: "1px solid #dccdce",
+            border: `2px solid ${COC_TEAL}60`,
             borderRadius: 10,
             padding: "10px 12px",
             textAlign: "center",
