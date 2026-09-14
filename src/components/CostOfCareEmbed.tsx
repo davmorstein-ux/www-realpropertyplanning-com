@@ -146,12 +146,17 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         Cost of Care Calculator
       </p>
       <h3
+        className="coc-title"
         style={{
           fontFamily: "'DM Sans', system-ui, sans-serif",
-          fontSize: "clamp(20px,2.6vw,26px)",
+          fontSize: "clamp(18px,2.2vw,22px)",
           fontWeight: 700,
           color: NAVY,
           margin: 0,
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          textWrap: "nowrap",
         }}
       >
         {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National

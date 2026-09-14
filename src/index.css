@@ -3005,6 +3005,21 @@ header a,
   font-size: max(1rem, 16px) !important;
 }
 
+/* 4a. Cost of Care calculator title — one line, sized to fit the card,
+   exempt from the 28px h3 floor and the balanced-wrap default. */
+main h3.coc-title {
+  font-size: 22px !important;
+  white-space: nowrap !important;
+  text-wrap: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 560px) {
+  main h3.coc-title {
+    font-size: 18px !important;
+  }
+}
+
 /* 4b. Links that ARE a heading (county and city names in the AFH directory)
    must take the heading's size, not the 16px link floor above. */
 main h1 a.rpp-heading-link,
