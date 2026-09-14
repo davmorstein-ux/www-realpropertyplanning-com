@@ -31,14 +31,6 @@ const actionLinkStyle: CSSProperties = {
 
 const ARTICLES = [
   {
-    title: "Hospice Care in Washington",
-    href: "/articles/hospice-care-washington",
-    minutes: 6,
-    listenMinutes: 5,
-    img: "/hospice-care-cover.webp",
-    description: "Hospice comes to where a person lives — home, an adult family home, assisted living — and doesn't replace it. What Medicare pays, what it doesn't, and what \"24-hour\" really means.",
-  },
-  {
     title: "The Silver Tsunami",
     href: "/articles/silver-tsunami",
     minutes: 5,
@@ -128,6 +120,14 @@ const ARTICLES = [
     listenMinutes: 4,
     img: "/Wills_Trusts_Other_Options.webp",
     description: "How to pass real estate to your children — and the tradeoffs each method carries.",
+  },
+  {
+    title: "Hospice Care in Washington",
+    href: "/articles/hospice-care-washington",
+    minutes: 6,
+    listenMinutes: 5,
+    img: "/hospice-care-cover.webp",
+    description: "Hospice comes to where a person lives — home, an adult family home, assisted living — and doesn't replace it. What Medicare pays, what it doesn't, and what \"24-hour\" really means.",
   },
 ];
 
