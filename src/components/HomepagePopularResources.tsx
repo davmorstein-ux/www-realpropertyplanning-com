@@ -129,8 +129,8 @@ const HomepagePopularResources = () => {
         font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 16px !important;
         font-weight: 700 !important;
-        color: #ffffff !important;
-        background-color: #3d3833 !important;
+        color: #3d3833 !important;
+        background-color: #ffffff !important;
         border: 2px solid #3d3833 !important;
         border-radius: 8px !important;
         /* Padding and min-height are set inline on the <Link> instead of
@@ -147,8 +147,9 @@ const HomepagePopularResources = () => {
       }
       .rpp-pr-browse:hover,
       .rpp-pr-browse:focus-visible {
-        background-color: #7f1d1d !important;
-        border-color: #7f1d1d !important;
+        color: #ffffff !important;
+        background-color: #3d3833 !important;
+        border-color: #3d3833 !important;
       }
 
       /* AFH Club — a quiet, explicitly labeled door for the owner /
