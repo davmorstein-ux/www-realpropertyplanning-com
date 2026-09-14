@@ -175,7 +175,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National
       </h3>
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 20, marginBottom: 18 }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "16px 56px", marginBottom: 18 }}>
         <div>
           <label
             style={{
