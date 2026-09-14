@@ -156,26 +156,29 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         margin: "0 auto",
       }}
     >
+      {/* Title in the same register as "Cost by City & County" below it:
+          large, bold, two-tone. The uppercase eyebrow it replaced was being
+          shrunk to 14px by the sitewide eyebrow rule. */}
       <p
+        className="coc-card-title"
         style={{
-          fontSize: 17,
-          fontFamily: "'DM Sans', sans-serif",
+          fontSize: 28,
+          fontFamily: "'DM Sans', system-ui, sans-serif",
           fontWeight: 700,
-          letterSpacing: "0.16em",
-          textTransform: "uppercase",
-          color: "#6f2a30",
-          margin: "0 0 6px",
+          color: "#272421",
+          margin: "0 0 4px",
+          lineHeight: 1.15,
         }}
       >
-        Cost of Care Calculator
+        Cost of <span style={{ color: COC_TEAL }}>Care Calculator</span>
       </p>
       <h3
         className="coc-title"
         style={{
           fontFamily: "'DM Sans', system-ui, sans-serif",
-          fontSize: "clamp(18px,2.2vw,22px)",
-          fontWeight: 700,
-          color: NAVY,
+          fontSize: "clamp(16px,2vw,19px)",
+          fontWeight: 600,
+          color: "#5f6b66",
           margin: 0,
           whiteSpace: "nowrap",
           overflow: "hidden",
