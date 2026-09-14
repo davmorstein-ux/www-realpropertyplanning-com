@@ -5361,3 +5361,66 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
     transform: none !important;
   }
 }
+
+/* ------------------------------------------------------------------
+   MOBILE OVERFLOW SAFETY NET (Sept 2026)
+   The body clips horizontal overflow (see "Global overflow safeguard"), so
+   anything wider than the viewport is cut off at the right edge rather than
+   scrolling. These rules make the usual culprits fit or scroll inside their
+   own box on phones: tables, inline nowrap text, fixed multi-column grids,
+   oversized minimum widths, media, and long unbreakable strings. Buttons
+   and links keep their tap-target sizing.
+   ------------------------------------------------------------------ */
+@media (max-width: 640px) {
+  main table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  main img,
+  main svg,
+  main video,
+  main iframe {
+    max-width: 100%;
+  }
+  main pre,
+  main code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  main p,
+  main li,
+  main h1,
+  main h2,
+  main h3,
+  main h4,
+  main dd,
+  main dt,
+  main td,
+  main th,
+  main figcaption {
+    overflow-wrap: anywhere;
+  }
+  main [style*="white-space: nowrap"]:not(button):not(a):not(th):not(td) {
+    white-space: normal !important;
+  }
+  main [style*="min-width"]:not(button):not(a):not(input):not(select) {
+    min-width: 0 !important;
+  }
+  main [style*="grid-template-columns: repeat(3"],
+  main [style*="grid-template-columns: repeat(4"],
+  main [style*="grid-template-columns: repeat(5"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  main [style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 400px) {
+  main [style*="grid-template-columns: repeat(3"],
+  main [style*="grid-template-columns: repeat(4"],
+  main [style*="grid-template-columns: repeat(5"] {
+    grid-template-columns: 1fr !important;
+  }
+}
