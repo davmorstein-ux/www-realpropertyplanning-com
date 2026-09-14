@@ -203,7 +203,8 @@ const HomepagePopularResources = () => {
         font-size: 18px;
         font-weight: 700;
         color: #ffffff;
-        background: #0a5648;
+        /* The Club hero's forest green (#192A19), not the AFH teal. */
+        background: #192a19;
         border-radius: 8px;
         padding: 10px 18px;
         min-height: 48px;
@@ -212,7 +213,7 @@ const HomepagePopularResources = () => {
         transition: background-color 0.15s ease;
       }
       .rpp-afh-strip:hover .rpp-afh-strip-cta.rpp-afh-strip-cta {
-        background: #0d6a58;
+        background: #26402a;
       }
       .rpp-afh-strip-wordmark {
         display: inline-flex;
@@ -307,7 +308,6 @@ const HomepagePopularResources = () => {
               <img src="/afh-club-glyph.webp" alt="" aria-hidden="true" className="rpp-afh-strip-glyph" width={200} height={194} />
               <span className="rpp-afh-strip-sr">A</span>FH Club
             </span>
-            <span aria-hidden="true">→</span>
           </span>
         </Link>
       </div>
