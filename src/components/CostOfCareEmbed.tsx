@@ -2,12 +2,7 @@ import { useState, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { CARE_TYPES, formatCurrency, COC_TEAL } from "@/lib/careTypes";
-import {
-  CARE_INFLATION_RATE,
-  CARE_INFLATION_VERIFIED,
-  CARE_INFLATION_FIRST_YEAR,
-  CARE_INFLATION_LAST_YEAR,
-} from "@/lib/careInflation";
+import { CARE_INFLATION_RATE } from "@/lib/careInflation";
 
 const NAVY = "#272421";
 /* The default growth rate now comes from src/lib/careInflation.ts, which
@@ -441,35 +436,62 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         </div>
       </div>
 
-      {/* Growth-rate control removed Sept 2026 at David's request: the arrows,
-          bars, and three-state source note confused more readers than they
-          helped. Projections still grow at DEFAULT_INFLATION; the assumption is
-          stated in one line so the honesty about its source is kept. */}
-      <p className="coc-infl-source" style={{ marginTop: 6 }}>
-        {CARE_INFLATION_VERIFIED
-          ? t("costOfCarePage.card2.rateSourceNote", {
-              defaultValue: `Future costs assume ${DEFAULT_INFLATION.toFixed(1)}% annual growth, based on U.S. Bureau of Labor Statistics long-term care price data, ${CARE_INFLATION_FIRST_YEAR}–${CARE_INFLATION_LAST_YEAR}. Projections are estimates; actual costs vary.`,
-            })
-          : t("costOfCarePage.card2.rateAssumedNote", {
-              defaultValue: `Future costs assume ${DEFAULT_INFLATION.toFixed(1)}% annual growth, a working assumption rather than a published figure. Projections are estimates; actual costs vary.`,
-            })}
+      {/* Growth-rate control and its source sentence removed Sept 2026 at
+          David's request. Projections still grow at DEFAULT_INFLATION; the
+          care-type note is also dropped here so the card ends on one line. */}
+      <p className="coc-infl-source" style={{ margin: "6px 0 16px", textAlign: "center" }}>
+        Projections are estimates; actual costs vary.
       </p>
 
-      <p
-        style={{
-          fontSize: 17,
-          fontFamily: "'DM Sans', sans-serif",
-          color: "#49443f",
-          margin: "0 0 16px",
-          lineHeight: 1.5,
-        }}
-      >
-        {/* careType.note is the English string in careTypes.ts. The same
-            sentence exists translated under costOfCarePage.careTypes.<id>.note
-            in all eight locales, so read it from there and fall back to the
-            hardcoded copy only if a key is ever missing. */}
-        {t(`costOfCarePage.careTypes.${careType.id}.note`, { defaultValue: careType.note })}
-      </p>
+      {/* AFH only: the statewide median above hides a wide county spread, so
+          the city/county lookup sits directly under this calculator. */}
+      {careType.id === "adult-family-home" && (
+        <div
+          className="coc-no-print"
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "12px 20px",
+            padding: "16px 18px",
+            marginBottom: 18,
+            background: "#0a5648",
+            borderRadius: 10,
+            color: "#fff",
+          }}
+        >
+          <div style={{ flex: "1 1 300px" }}>
+            <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.85, marginBottom: 4 }}>
+              By city &amp; county
+            </div>
+            <div style={{ fontSize: 17, fontWeight: 600, lineHeight: 1.45, fontFamily: "'DM Sans', sans-serif" }}>
+              $6,500 is the statewide median. See the Medicaid rate range, private-pay range, and licensed homes
+              for your city or county.
+            </div>
+          </div>
+          <Link
+            to="/afh-club/cost-by-location"
+            className="no-underline"
+            style={{
+              flex: "0 0 auto",
+              display: "inline-flex",
+              alignItems: "center",
+              minHeight: 48,
+              padding: "0 18px",
+              background: "#fff",
+              color: "#0a5648",
+              fontSize: 16,
+              fontWeight: 700,
+              borderRadius: 8,
+              textDecoration: "none",
+              fontFamily: "'DM Sans', sans-serif",
+            }}
+          >
+            Look up my city →
+          </Link>
+        </div>
+      )}
 
       {/* The CTA is suppressed when this embed is rendered ON the full
           calculator page, because there it points at the page you are already
