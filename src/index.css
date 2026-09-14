@@ -3028,6 +3028,18 @@ main h2.coc-card-title .coc-card-title-accent {
   font-family: inherit !important;
   white-space: nowrap !important;
 }
+/* Phones: the one-line titles must wrap or they push the card past the
+   screen edge (the page clips horizontal overflow, so the excess vanishes). */
+@media (max-width: 560px) {
+  main h2.coc-card-title,
+  main h2.coc-card-title .coc-card-title-accent {
+    white-space: normal !important;
+    text-wrap: balance !important;
+  }
+  main h2.coc-card-title {
+    font-size: 28px !important;
+  }
+}
 main .coc-divider-label {
   font-family: 'DM Sans', system-ui, sans-serif !important;
   font-size: 22px !important;
@@ -3040,7 +3052,7 @@ main .coc-divider-label {
 @media (max-width: 560px) {
   main .coc-divider-label {
     font-size: 18px !important;
-    white-space: normal;
+    white-space: normal !important;
   }
 }
 /* When the card is too narrow for one line, wrap rather than chop the words. */

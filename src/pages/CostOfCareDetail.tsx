@@ -89,15 +89,17 @@ const CostOfCareDetail = () => {
                  rail squeezed the calculator and was easy to miss. */
               .rpp-calcpage-layout {
                 display: grid;
-                grid-template-columns: 1fr;
+                grid-template-columns: minmax(0, 1fr);
                 gap: 3rem;
                 max-width: 1180px;
                 margin: 0 auto;
+                min-width: 0;
               }
               .rpp-calcpage-calc {
                 max-width: 760px;
                 width: 100%;
                 margin: 0 auto;
+                min-width: 0;
               }
               .rpp-calcpage-railhead {
                 font-family: 'DM Sans', system-ui, sans-serif;

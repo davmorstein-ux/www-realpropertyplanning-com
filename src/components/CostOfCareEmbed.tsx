@@ -154,6 +154,9 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         padding: "1.5rem",
         maxWidth: 640,
         margin: "0 auto",
+        minWidth: 0,
+        width: "100%",
+        boxSizing: "border-box",
       }}
     >
       {/* Same structure as the Cost by City & County card's header so the two
