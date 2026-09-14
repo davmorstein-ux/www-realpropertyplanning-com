@@ -8,6 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -42,6 +43,7 @@ const jsonLd = {
   url: CANONICAL,
   datePublished: "2026-09-14",
   dateModified: "2026-09-14",
+  image: "https://realpropertyplanning.com/hospice-care-cover.webp",
 };
 
 const FAQS = [
@@ -80,6 +82,7 @@ const HospiceCare = () => {
         title="Hospice Care in Washington: Where It Can Come, Who Pays, and How It Fits With an Adult Family Home"
         description="Hospice is end-of-life care that comes to where a person lives, not a place to live. What Medicare covers, what it doesn't (room and board), what '24-hour hospice' means, and how hospice works inside an adult family home, assisted living, or your own home in Washington."
         canonical={CANONICAL}
+        ogImage="https://realpropertyplanning.com/hospice-care-cover.webp"
         jsonLd={jsonLd}
       />
       <Header />
@@ -89,9 +92,20 @@ const HospiceCare = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
-              {/* Audio player and magazine-style hero image slot: David is
-                  supplying both. Add <ArticleAudioPlayer audioSrc=… /> and the
-                  hero <img> here when they arrive. */}
+              <div className="mb-6">
+                <ArticleAudioPlayer audioSrc="/audio/hospice-care.mp3" />
+              </div>
+
+              <div className="text-center mb-8">
+                <img
+                  src="/hospice-care-cover.webp"
+                  alt="Hospice care: a nurse holding the hand of an older woman resting at home — coordinated medical, personal, emotional and spiritual support when an illness is no longer being treated for cure"
+                  style={{ maxWidth: 340, width: "100%", height: "auto", borderRadius: 8, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}
+                  width={1024}
+                  height={1536}
+                  decoding="async"
+                />
+              </div>
 
               <p className={leadClass}>
                 Hospice is not a place. It is care that comes to you, wherever you live, when the goal has changed from
