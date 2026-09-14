@@ -24,6 +24,30 @@ interface CostOfCareEmbedProps {
   careTypeId: string;
 }
 
+const ctrlLabel: React.CSSProperties = {
+  display: "block",
+  fontSize: 17,
+  fontWeight: 700,
+  fontFamily: "'DM Sans', sans-serif",
+  letterSpacing: "0.06em",
+  textTransform: "uppercase",
+  color: "#272421",
+  marginBottom: 8,
+  textAlign: "center",
+};
+const valueBox: React.CSSProperties = {
+  background: "#f5f2ec",
+  border: "2px solid #dccdce",
+  borderRadius: 8,
+  padding: "4px 10px",
+  textAlign: "center",
+  minWidth: 60,
+  height: 44,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
+const valueText: React.CSSProperties = { fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 18, color: "#0d5c63", lineHeight: 1 };
 const stepperBtn: React.CSSProperties = {
   width: 44,
   height: 44,
@@ -163,113 +187,37 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       </h3>
 
       <div className="coc-controls" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px 12px", margin: "32px 0 18px" }}>
+        {/* Left: when care begins (0–20 years). */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 0 }}>
-        <label
-          style={{
-            display: "block",
-            fontSize: 17,
-            fontWeight: 700,
-            fontFamily: "'DM Sans', sans-serif",
-            letterSpacing: "0.06em",
-            textTransform: "uppercase",
-            color: NAVY,
-            marginBottom: 8,
-            textAlign: "center",
-          }}
-        >
-          When Might Care Begin?
-        </label>
-        {/* Any year from now to 20 out, matching the stepper above rather than
-            fixed 5-year jumps. "Now" is 0; the box reads "Now", "1 yr", "2 yrs"… */}
+          <label style={{ ...ctrlLabel }}>When Might Care Begin?</label>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <button
-            onClick={() => setYearsOut((y) => Math.max(0, y - 1))}
-            style={stepperBtn}
-            aria-label="Care begins one year sooner"
-          >
-            −
-          </button>
-          <div
-            className="coc-value"
-            style={{
-              background: "#f5f2ec",
-              border: "2px solid #dccdce",
-              borderRadius: 8,
-              padding: "4px 10px",
-              textAlign: "center",
-              minWidth: 68,
-              height: 44,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 18, color: COC_TEAL, lineHeight: 1 }}>
-              {yearsOut === 0 ? "Now" : `${yearsOut} ${yearsOut === 1 ? "yr" : "yrs"}`}
-            </span>
-          </div>
-          <button
-            onClick={() => setYearsOut((y) => Math.min(20, y + 1))}
-            style={stepperBtn}
-            aria-label="Care begins one year later"
-          >
-            +
-          </button>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 0 }}>
-          <label
-            style={{
-              display: "block",
-              fontSize: 17,
-              fontWeight: 700,
-              fontFamily: "'DM Sans', sans-serif",
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
-              color: NAVY,
-              marginBottom: 8,
-              textAlign: "center",
-            }}
-          >
-            {t("costOfCarePage.card2.howManyYears")}
-          </label>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <button
-              onClick={() => setYearsOfCareNeeded((y) => Math.max(1, y - 1))}
-              style={stepperBtn}
-              aria-label={t("costOfCarePage.card2.decreaseYears")}
-            >
+            <button onClick={() => setYearsOut((y) => Math.max(0, y - 1))} style={stepperBtn} aria-label="Care begins one year sooner">
               −
             </button>
-            <div
-              className="coc-value"
-              style={{
-                background: "#f5f2ec",
-                border: "2px solid #dccdce",
-                borderRadius: 8,
-                padding: "4px 10px",
-                textAlign: "center",
-                minWidth: 52,
-                height: 44,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 18, color: COC_TEAL, lineHeight: 1 }}>
-                {yearsOfCareNeeded}
-              </span>
+            <div className="coc-value" style={valueBox}>
+              <span style={valueText}>{yearsOut === 0 ? "Now" : `${yearsOut} ${yearsOut === 1 ? "yr" : "yrs"}`}</span>
             </div>
-            <button
-              onClick={() => setYearsOfCareNeeded((y) => Math.min(10, y + 1))}
-              style={stepperBtn}
-              aria-label={t("costOfCarePage.card2.increaseYears")}
-            >
+            <button onClick={() => setYearsOut((y) => Math.min(20, y + 1))} style={stepperBtn} aria-label="Care begins one year later">
               +
             </button>
           </div>
         </div>
-      </div>
 
+        {/* Right: years of care (1–10). */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 0 }}>
+          <label style={{ ...ctrlLabel }}>{t("costOfCarePage.card2.howManyYears")}</label>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <button onClick={() => setYearsOfCareNeeded((y) => Math.max(1, y - 1))} style={stepperBtn} aria-label={t("costOfCarePage.card2.decreaseYears")}>
+              −
+            </button>
+            <div className="coc-value" style={valueBox}>
+              <span style={valueText}>{yearsOfCareNeeded}</span>
+            </div>
+            <button onClick={() => setYearsOfCareNeeded((y) => Math.min(10, y + 1))} style={stepperBtn} aria-label={t("costOfCarePage.card2.increaseYears")}>
+              +
+            </button>
+          </div>
+        </div>
       </div>
 
       <div
