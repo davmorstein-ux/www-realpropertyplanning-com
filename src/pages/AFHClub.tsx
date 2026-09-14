@@ -494,7 +494,7 @@ const CATEGORY_META = [
   {
     key: "calculators",
     href: "/afh-club/calculators",
-    img: "/__l5e/assets-v1/f6d8b31f-90b0-4639-a379-feeff961e81c/afh-cost-calculator-v2.webp",
+    img: "/afh-calculators-cover.webp",
     placeholder: "#433d37",
   },
 ] as const;
