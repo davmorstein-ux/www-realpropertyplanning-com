@@ -3024,6 +3024,22 @@ main h3.coc-title {
   }
 }
 
+/* 4a-ii. Cost of Care calculator steppers: always two columns, left and
+   right. Declared here with !important because inline grid styles were
+   observed rendering as a single column on the live site. */
+main .coc-controls.coc-controls {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  grid-auto-flow: column !important;
+  align-items: start !important;
+  justify-items: center !important;
+}
+main .coc-controls.coc-controls > * {
+  grid-row: 1 !important;
+  width: auto !important;
+  max-width: 100% !important;
+}
+
 /* 4b. Links that ARE a heading (county and city names in the AFH directory)
    must take the heading's size, not the 16px link floor above. */
 main h1 a.rpp-heading-link,
