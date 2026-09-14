@@ -163,7 +163,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       </h3>
 
       <div className="coc-controls" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "16px 24px", margin: "32px 0 18px" }}>
-        <div style={{ flex: "1 1 40%", minWidth: 160 }}>
+        <div style={{ flex: "0 1 auto", minWidth: 160, display: "inline-flex", flexDirection: "column", alignItems: "center" }}>
         <label
           style={{
             display: "block",
@@ -174,6 +174,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             textTransform: "uppercase",
             color: NAVY,
             marginBottom: 8,
+            textAlign: "center",
           }}
         >
           When Might Care Begin?
@@ -214,7 +215,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             +
           </button>
         </div>
-        <div style={{ flex: "0 1 auto", minWidth: 160, marginLeft: "auto" }}>
+        <div style={{ flex: "0 1 auto", minWidth: 160, marginLeft: "auto", display: "inline-flex", flexDirection: "column", alignItems: "center" }}>
           <label
             style={{
               display: "block",
@@ -225,6 +226,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               textTransform: "uppercase",
               color: NAVY,
               marginBottom: 8,
+              textAlign: "center",
             }}
           >
             {t("costOfCarePage.card2.howManyYears")}
