@@ -20,12 +20,12 @@
     "counties": [
       "Pierce"
     ],
-    "facilityCount": 375,
-    "totalBeds": 2168,
-    "behaviorSupport": 94,
-    "developmentalDisabilities": 286,
-    "privatePay": 15,
-    "withReports": 246
+    "facilityCount": 380,
+    "totalBeds": 2200,
+    "behaviorSupport": 96,
+    "developmentalDisabilities": 289,
+    "privatePay": 14,
+    "withReports": 251
   },
   {
     "city": "Spokane",
@@ -49,11 +49,11 @@
       "Snohomish"
     ],
     "facilityCount": 311,
-    "totalBeds": 1791,
-    "behaviorSupport": 82,
+    "totalBeds": 1794,
+    "behaviorSupport": 83,
     "developmentalDisabilities": 210,
-    "privatePay": 11,
-    "withReports": 235
+    "privatePay": 10,
+    "withReports": 240
   },
   {
     "city": "Everett",
@@ -62,12 +62,12 @@
     "counties": [
       "Snohomish"
     ],
-    "facilityCount": 306,
-    "totalBeds": 1762,
-    "behaviorSupport": 71,
-    "developmentalDisabilities": 183,
-    "privatePay": 8,
-    "withReports": 127
+    "facilityCount": 310,
+    "totalBeds": 1787,
+    "behaviorSupport": 72,
+    "developmentalDisabilities": 185,
+    "privatePay": 10,
+    "withReports": 147
   },
   {
     "city": "Kent",
@@ -76,12 +76,12 @@
     "counties": [
       "King"
     ],
-    "facilityCount": 285,
-    "totalBeds": 1637,
-    "behaviorSupport": 50,
-    "developmentalDisabilities": 174,
-    "privatePay": 8,
-    "withReports": 124
+    "facilityCount": 287,
+    "totalBeds": 1646,
+    "behaviorSupport": 51,
+    "developmentalDisabilities": 176,
+    "privatePay": 7,
+    "withReports": 121
   },
   {
     "city": "Federal Way",
@@ -90,12 +90,12 @@
     "counties": [
       "King"
     ],
-    "facilityCount": 275,
-    "totalBeds": 1603,
-    "behaviorSupport": 56,
-    "developmentalDisabilities": 174,
-    "privatePay": 12,
-    "withReports": 147
+    "facilityCount": 278,
+    "totalBeds": 1621,
+    "behaviorSupport": 58,
+    "developmentalDisabilities": 175,
+    "privatePay": 11,
+    "withReports": 150
   },
   {
     "city": "Lakewood",
@@ -104,12 +104,12 @@
     "counties": [
       "Pierce"
     ],
-    "facilityCount": 270,
-    "totalBeds": 1601,
-    "behaviorSupport": 110,
-    "developmentalDisabilities": 226,
-    "privatePay": 9,
-    "withReports": 168
+    "facilityCount": 274,
+    "totalBeds": 1625,
+    "behaviorSupport": 111,
+    "developmentalDisabilities": 230,
+    "privatePay": 8,
+    "withReports": 175
   },
   {
     "city": "Spokane Valley",
@@ -132,12 +132,12 @@
     "counties": [
       "King"
     ],
-    "facilityCount": 200,
-    "totalBeds": 1177,
+    "facilityCount": 203,
+    "totalBeds": 1195,
     "behaviorSupport": 40,
-    "developmentalDisabilities": 104,
-    "privatePay": 5,
-    "withReports": 115
+    "developmentalDisabilities": 106,
+    "privatePay": 7,
+    "withReports": 113
   },
   {
     "city": "Auburn",
@@ -147,26 +147,12 @@
       "King",
       "Pierce"
     ],
-    "facilityCount": 190,
-    "totalBeds": 1102,
+    "facilityCount": 191,
+    "totalBeds": 1108,
     "behaviorSupport": 55,
-    "developmentalDisabilities": 126,
-    "privatePay": 1,
-    "withReports": 109
-  },
-  {
-    "city": "Marysville",
-    "citySlug": "marysville",
-    "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
-    "facilityCount": 188,
-    "totalBeds": 1085,
-    "behaviorSupport": 26,
-    "developmentalDisabilities": 111,
-    "privatePay": 12,
-    "withReports": 69
+    "developmentalDisabilities": 127,
+    "privatePay": 2,
+    "withReports": 112
   },
   {
     "city": "Puyallup",
@@ -175,12 +161,26 @@
     "counties": [
       "Pierce"
     ],
-    "facilityCount": 181,
-    "totalBeds": 1068,
-    "behaviorSupport": 34,
-    "developmentalDisabilities": 125,
-    "privatePay": 9,
-    "withReports": 116
+    "facilityCount": 188,
+    "totalBeds": 1113,
+    "behaviorSupport": 33,
+    "developmentalDisabilities": 131,
+    "privatePay": 14,
+    "withReports": 115
+  },
+  {
+    "city": "Marysville",
+    "citySlug": "marysville",
+    "county": "Snohomish",
+    "counties": [
+      "Snohomish"
+    ],
+    "facilityCount": 184,
+    "totalBeds": 1065,
+    "behaviorSupport": 33,
+    "developmentalDisabilities": 108,
+    "privatePay": 7,
+    "withReports": 74
   },
   {
     "city": "Seattle",
@@ -189,12 +189,12 @@
     "counties": [
       "King"
     ],
-    "facilityCount": 153,
-    "totalBeds": 890,
+    "facilityCount": 151,
+    "totalBeds": 881,
     "behaviorSupport": 25,
-    "developmentalDisabilities": 70,
-    "privatePay": 21,
-    "withReports": 85
+    "developmentalDisabilities": 71,
+    "privatePay": 20,
+    "withReports": 86
   },
   {
     "city": "Lacey",
@@ -220,9 +220,9 @@
     "facilityCount": 135,
     "totalBeds": 808,
     "behaviorSupport": 4,
-    "developmentalDisabilities": 36,
-    "privatePay": 29,
-    "withReports": 82
+    "developmentalDisabilities": 37,
+    "privatePay": 30,
+    "withReports": 84
   },
   {
     "city": "Olympia",
@@ -246,11 +246,11 @@
       "Snohomish"
     ],
     "facilityCount": 124,
-    "totalBeds": 713,
+    "totalBeds": 712,
     "behaviorSupport": 25,
     "developmentalDisabilities": 66,
-    "privatePay": 14,
-    "withReports": 95
+    "privatePay": 12,
+    "withReports": 100
   },
   {
     "city": "Shoreline",
@@ -260,11 +260,11 @@
       "King"
     ],
     "facilityCount": 122,
-    "totalBeds": 699,
-    "behaviorSupport": 21,
+    "totalBeds": 701,
+    "behaviorSupport": 20,
     "developmentalDisabilities": 68,
     "privatePay": 17,
-    "withReports": 91
+    "withReports": 88
   },
   {
     "city": "Bothell",
@@ -278,7 +278,7 @@
     "totalBeds": 570,
     "behaviorSupport": 13,
     "developmentalDisabilities": 38,
-    "privatePay": 14,
+    "privatePay": 15,
     "withReports": 70
   },
   {
@@ -289,10 +289,10 @@
       "King"
     ],
     "facilityCount": 80,
-    "totalBeds": 455,
+    "totalBeds": 457,
     "behaviorSupport": 14,
     "developmentalDisabilities": 52,
-    "privatePay": 7,
+    "privatePay": 5,
     "withReports": 48
   },
   {
@@ -302,12 +302,12 @@
     "counties": [
       "King"
     ],
-    "facilityCount": 67,
-    "totalBeds": 392,
-    "behaviorSupport": 5,
+    "facilityCount": 68,
+    "totalBeds": 399,
+    "behaviorSupport": 6,
     "developmentalDisabilities": 40,
-    "privatePay": 0,
-    "withReports": 32
+    "privatePay": 1,
+    "withReports": 34
   },
   {
     "city": "Kennewick",
@@ -335,7 +335,7 @@
     "behaviorSupport": 7,
     "developmentalDisabilities": 19,
     "privatePay": 11,
-    "withReports": 38
+    "withReports": 39
   },
   {
     "city": "Mountlake Terrace",
@@ -344,12 +344,12 @@
     "counties": [
       "Snohomish"
     ],
-    "facilityCount": 54,
-    "totalBeds": 313,
+    "facilityCount": 55,
+    "totalBeds": 319,
     "behaviorSupport": 14,
     "developmentalDisabilities": 34,
-    "privatePay": 0,
-    "withReports": 43
+    "privatePay": 1,
+    "withReports": 45
   },
   {
     "city": "Spanaway",
@@ -362,7 +362,7 @@
     "totalBeds": 269,
     "behaviorSupport": 14,
     "developmentalDisabilities": 37,
-    "privatePay": 2,
+    "privatePay": 1,
     "withReports": 32
   },
   {
@@ -377,7 +377,7 @@
     "behaviorSupport": 7,
     "developmentalDisabilities": 25,
     "privatePay": 7,
-    "withReports": 23
+    "withReports": 24
   },
   {
     "city": "Port Orchard",
@@ -464,6 +464,20 @@
     "withReports": 17
   },
   {
+    "city": "Lake Stevens",
+    "citySlug": "lake-stevens",
+    "county": "Snohomish",
+    "counties": [
+      "Snohomish"
+    ],
+    "facilityCount": 30,
+    "totalBeds": 176,
+    "behaviorSupport": 7,
+    "developmentalDisabilities": 18,
+    "privatePay": 3,
+    "withReports": 9
+  },
+  {
     "city": "Longview",
     "citySlug": "longview",
     "county": "Cowlitz",
@@ -490,20 +504,6 @@
     "developmentalDisabilities": 10,
     "privatePay": 4,
     "withReports": 24
-  },
-  {
-    "city": "Lake Stevens",
-    "citySlug": "lake-stevens",
-    "county": "Snohomish",
-    "counties": [
-      "Snohomish"
-    ],
-    "facilityCount": 29,
-    "totalBeds": 172,
-    "behaviorSupport": 7,
-    "developmentalDisabilities": 18,
-    "privatePay": 3,
-    "withReports": 9
   },
   {
     "city": "Tumwater",
@@ -572,8 +572,8 @@
     "totalBeds": 151,
     "behaviorSupport": 3,
     "developmentalDisabilities": 7,
-    "privatePay": 4,
-    "withReports": 17
+    "privatePay": 3,
+    "withReports": 16
   },
   {
     "city": "Gig Harbor",
@@ -602,6 +602,20 @@
     "developmentalDisabilities": 12,
     "privatePay": 0,
     "withReports": 21
+  },
+  {
+    "city": "Tukwila",
+    "citySlug": "tukwila",
+    "county": "King",
+    "counties": [
+      "King"
+    ],
+    "facilityCount": 19,
+    "totalBeds": 106,
+    "behaviorSupport": 1,
+    "developmentalDisabilities": 9,
+    "privatePay": 1,
+    "withReports": 13
   },
   {
     "city": "Mill Creek",
@@ -645,20 +659,6 @@
     "developmentalDisabilities": 12,
     "privatePay": 1,
     "withReports": 15
-  },
-  {
-    "city": "Tukwila",
-    "citySlug": "tukwila",
-    "county": "King",
-    "counties": [
-      "King"
-    ],
-    "facilityCount": 18,
-    "totalBeds": 101,
-    "behaviorSupport": 1,
-    "developmentalDisabilities": 9,
-    "privatePay": 0,
-    "withReports": 13
   },
   {
     "city": "Mount Vernon",
@@ -756,7 +756,7 @@
     "behaviorSupport": 1,
     "developmentalDisabilities": 4,
     "privatePay": 1,
-    "withReports": 7
+    "withReports": 8
   },
   {
     "city": "Stanwood",
@@ -769,7 +769,7 @@
     "totalBeds": 78,
     "behaviorSupport": 0,
     "developmentalDisabilities": 6,
-    "privatePay": 3,
+    "privatePay": 2,
     "withReports": 3
   },
   {
@@ -812,7 +812,7 @@
     "totalBeds": 62,
     "behaviorSupport": 2,
     "developmentalDisabilities": 6,
-    "privatePay": 2,
+    "privatePay": 1,
     "withReports": 2
   },
   {
@@ -826,7 +826,7 @@
     "totalBeds": 64,
     "behaviorSupport": 4,
     "developmentalDisabilities": 7,
-    "privatePay": 1,
+    "privatePay": 0,
     "withReports": 7
   },
   {
@@ -839,7 +839,7 @@
     "facilityCount": 11,
     "totalBeds": 68,
     "behaviorSupport": 1,
-    "developmentalDisabilities": 1,
+    "developmentalDisabilities": 2,
     "privatePay": 2,
     "withReports": 8
   },
@@ -851,7 +851,7 @@
       "King"
     ],
     "facilityCount": 11,
-    "totalBeds": 67,
+    "totalBeds": 68,
     "behaviorSupport": 0,
     "developmentalDisabilities": 2,
     "privatePay": 4,
@@ -882,7 +882,7 @@
     "totalBeds": 53,
     "behaviorSupport": 2,
     "developmentalDisabilities": 6,
-    "privatePay": 1,
+    "privatePay": 0,
     "withReports": 5
   },
   {
@@ -953,7 +953,7 @@
     "behaviorSupport": 0,
     "developmentalDisabilities": 3,
     "privatePay": 2,
-    "withReports": 5
+    "withReports": 6
   },
   {
     "city": "Lynden",
@@ -970,6 +970,20 @@
     "withReports": 4
   },
   {
+    "city": "Maple Valley",
+    "citySlug": "maple-valley",
+    "county": "King",
+    "counties": [
+      "King"
+    ],
+    "facilityCount": 8,
+    "totalBeds": 46,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 4,
+    "privatePay": 3,
+    "withReports": 3
+  },
+  {
     "city": "Orting",
     "citySlug": "orting",
     "county": "Pierce",
@@ -981,7 +995,7 @@
     "behaviorSupport": 1,
     "developmentalDisabilities": 4,
     "privatePay": 1,
-    "withReports": 6
+    "withReports": 5
   },
   {
     "city": "Ridgefield",
@@ -1012,20 +1026,6 @@
     "withReports": 5
   },
   {
-    "city": "Maple Valley",
-    "citySlug": "maple-valley",
-    "county": "King",
-    "counties": [
-      "King"
-    ],
-    "facilityCount": 7,
-    "totalBeds": 40,
-    "behaviorSupport": 0,
-    "developmentalDisabilities": 4,
-    "privatePay": 2,
-    "withReports": 3
-  },
-  {
     "city": "Monroe",
     "citySlug": "monroe",
     "county": "Snohomish",
@@ -1037,7 +1037,7 @@
     "behaviorSupport": 0,
     "developmentalDisabilities": 1,
     "privatePay": 1,
-    "withReports": 3
+    "withReports": 4
   },
   {
     "city": "Steilacoom",
@@ -1177,7 +1177,7 @@
     "behaviorSupport": 2,
     "developmentalDisabilities": 4,
     "privatePay": 0,
-    "withReports": 2
+    "withReports": 3
   },
   {
     "city": "West Richland",
@@ -1318,7 +1318,7 @@
     "behaviorSupport": 0,
     "developmentalDisabilities": 3,
     "privatePay": 0,
-    "withReports": 3
+    "withReports": 4
   },
   {
     "city": "Airway Heights",
@@ -1797,20 +1797,6 @@
     "withReports": 0
   },
   {
-    "city": "Parkland",
-    "citySlug": "parkland",
-    "county": "Pierce",
-    "counties": [
-      "Pierce"
-    ],
-    "facilityCount": 2,
-    "totalBeds": 12,
-    "behaviorSupport": 0,
-    "developmentalDisabilities": 2,
-    "privatePay": 0,
-    "withReports": 1
-  },
-  {
     "city": "Quincy",
     "citySlug": "quincy",
     "county": "Grant",
@@ -2215,6 +2201,20 @@
     "developmentalDisabilities": 0,
     "privatePay": 0,
     "withReports": 1
+  },
+  {
+    "city": "Parkland",
+    "citySlug": "parkland",
+    "county": "Pierce",
+    "counties": [
+      "Pierce"
+    ],
+    "facilityCount": 1,
+    "totalBeds": 6,
+    "behaviorSupport": 0,
+    "developmentalDisabilities": 1,
+    "privatePay": 0,
+    "withReports": 0
   },
   {
     "city": "Port Angeles",

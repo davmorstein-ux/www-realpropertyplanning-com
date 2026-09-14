@@ -125,7 +125,7 @@ const AboutTheHub = () => {
            care, senior living, planning-before-a-crisis, executor
            responsibilities and estate/probate; 6 housing calculators plus 2
            AFH operator calculators plus the AFH cost-by-location lookup
-           (Sept 2026) = 9; 6,042 licensed homes in the DSHS data
+           (Sept 2026) = 9; 6,069 licensed homes in the DSHS data
            across all 39 counties (Sept 2026). "Over 6,000" is deliberate —
            the directory is a snapshot and homes open and close, so a precise
            figure would go stale. Re-check before changing any of these.

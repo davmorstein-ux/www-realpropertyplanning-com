@@ -46,7 +46,7 @@
     "slug": "columbia",
     "facilityCount": 0,
     "totalBeds": 0,
-    "retrievedAt": "2026-09-13"
+    "retrievedAt": "2026-09-14"
   },
   {
     "county": "Cowlitz",
@@ -81,7 +81,7 @@
     "slug": "garfield",
     "facilityCount": 0,
     "totalBeds": 0,
-    "retrievedAt": "2026-09-13"
+    "retrievedAt": "2026-09-14"
   },
   {
     "county": "Grant",
@@ -114,9 +114,9 @@
   {
     "county": "King",
     "slug": "king",
-    "facilityCount": 1809,
-    "totalBeds": 10572,
-    "retrievedAt": "2026-07-31"
+    "facilityCount": 1819,
+    "totalBeds": 10637,
+    "retrievedAt": "2026-09-14"
   },
   {
     "county": "Kitsap",
@@ -179,14 +179,14 @@
     "slug": "pend-oreille",
     "facilityCount": 0,
     "totalBeds": 0,
-    "retrievedAt": "2026-09-13"
+    "retrievedAt": "2026-09-14"
   },
   {
     "county": "Pierce",
     "slug": "pierce",
-    "facilityCount": 1060,
-    "totalBeds": 6199,
-    "retrievedAt": "2026-08-01"
+    "facilityCount": 1075,
+    "totalBeds": 6294,
+    "retrievedAt": "2026-09-14"
   },
   {
     "county": "San Juan",
@@ -212,9 +212,9 @@
   {
     "county": "Snohomish",
     "slug": "snohomish",
-    "facilityCount": 1177,
-    "totalBeds": 6809,
-    "retrievedAt": "2026-08-01"
+    "facilityCount": 1179,
+    "totalBeds": 6826,
+    "retrievedAt": "2026-09-14"
   },
   {
     "county": "Spokane",
@@ -242,7 +242,7 @@
     "slug": "wahkiakum",
     "facilityCount": 0,
     "totalBeds": 0,
-    "retrievedAt": "2026-09-13"
+    "retrievedAt": "2026-09-14"
   },
   {
     "county": "Walla Walla",

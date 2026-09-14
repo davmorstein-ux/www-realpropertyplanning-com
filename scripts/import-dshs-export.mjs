@@ -196,6 +196,7 @@ export function importExport(text, { retrievedAt = new Date().toISOString().slic
     }
     const contracts = [];
     for (const c of splitList(get(C.contract))) {
+      if (/^no contract$/i.test(c)) continue; // private-pay only; acceptsMedicaid stays false
       const key = CONTRACT_MAP[c.toLowerCase()];
       if (!key) problems.push(`row ${row}: unknown contract "${c}"`);
       else if (!contracts.includes(key)) contracts.push(key);
