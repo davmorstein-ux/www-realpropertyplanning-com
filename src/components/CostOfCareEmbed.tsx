@@ -164,13 +164,13 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           fontSize: "clamp(20px,2.6vw,26px)",
           fontWeight: 700,
           color: NAVY,
-          margin: "0 0 36px",
+          margin: 0,
         }}
       >
         {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National
       </h3>
 
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "16px 56px", marginBottom: 18 }}>
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "16px 56px", margin: "32px 0 18px" }}>
         <div>
           <label
             style={{
@@ -320,14 +320,14 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
 
       <div
         className="coc-embed-results"
-        style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 14 }}
+        style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 8 }}
       >
         <div
           style={{
             background: "#f5f2ec",
             border: `2px solid ${COC_TEAL}60`,
             borderRadius: 10,
-            padding: "12px",
+            padding: "10px 12px",
             textAlign: "center",
           }}
         >
@@ -339,23 +339,19 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               color: NAVY,
               fontWeight: 700,
               fontFamily: "'DM Sans', sans-serif",
-              marginBottom: 4,
+              marginBottom: 2,
+              lineHeight: 1.3,
             }}
           >
             {t("costOfCarePage.results.washington")}
           </div>
-          <div
-            style={{
-              fontFamily: "'Courier New', monospace",
-              fontWeight: 700,
-              fontSize: "clamp(16px,2.6vw,20px)",
-              color: COC_TEAL,
-            }}
-          >
-            {formatCurrency(projectedWaMonthly)}
-          </div>
-          <div style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif" }}>
-            {t("costOfCarePage.results.perMonth")}
+          <div style={{ lineHeight: 1.25, display: "flex", alignItems: "baseline", justifyContent: "center", gap: 6, flexWrap: "wrap" }}>
+            <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(18px,2.6vw,22px)", color: COC_TEAL }}>
+              {formatCurrency(projectedWaMonthly)}
+            </span>
+            <span style={{ fontSize: 15, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif" }}>
+              {t("costOfCarePage.results.perMonth")}
+            </span>
           </div>
         </div>
         <div
@@ -363,7 +359,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             background: "#f5f2ec",
             border: "1px solid #dccdce",
             borderRadius: 10,
-            padding: "12px",
+            padding: "10px 12px",
             textAlign: "center",
           }}
         >
@@ -375,23 +371,19 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               color: NAVY,
               fontWeight: 700,
               fontFamily: "'DM Sans', sans-serif",
-              marginBottom: 4,
+              marginBottom: 2,
+              lineHeight: 1.3,
             }}
           >
             {t("costOfCarePage.results.nationalMedian")}
           </div>
-          <div
-            style={{
-              fontFamily: "'Courier New', monospace",
-              fontWeight: 700,
-              fontSize: "clamp(16px,2.6vw,20px)",
-              color: NAVY,
-            }}
-          >
-            {formatCurrency(projectedNationalMonthly)}
-          </div>
-          <div style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif" }}>
-            {t("costOfCarePage.results.perMonth")}
+          <div style={{ lineHeight: 1.25, display: "flex", alignItems: "baseline", justifyContent: "center", gap: 6, flexWrap: "wrap" }}>
+            <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(18px,2.6vw,22px)", color: NAVY }}>
+              {formatCurrency(projectedNationalMonthly)}
+            </span>
+            <span style={{ fontSize: 15, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif" }}>
+              {t("costOfCarePage.results.perMonth")}
+            </span>
           </div>
         </div>
       </div>
@@ -401,9 +393,9 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           background: "#f5f2ec",
           border: `2px solid ${COC_TEAL}60`,
           borderRadius: 10,
-          padding: "12px",
+          padding: "10px 12px",
           textAlign: "center",
-          marginBottom: 16,
+          marginBottom: 12,
         }}
       >
         <div
@@ -414,7 +406,8 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             color: NAVY,
             fontWeight: 700,
             fontFamily: "'DM Sans', sans-serif",
-            marginBottom: 4,
+            marginBottom: 2,
+            lineHeight: 1.3,
           }}
         >
           {t("costOfCarePage.results.totalPlan", { years: yearsOfCareNeeded })}
@@ -425,12 +418,13 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             fontWeight: 700,
             fontSize: "clamp(20px,3vw,26px)",
             color: COC_TEAL,
+            lineHeight: 1.2,
           }}
         >
           {formatCurrency(totalWaCost)}
         </div>
         <div
-          style={{ fontSize: 17, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif", marginTop: 2 }}
+          style={{ fontSize: 16, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif", marginTop: 2, lineHeight: 1.3 }}
         >
           {t("costOfCarePage.results.inWashingtonVs", { amount: formatCurrency(totalNationalCost) })}
         </div>
