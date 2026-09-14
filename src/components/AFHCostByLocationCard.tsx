@@ -110,8 +110,8 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
               <div style={{ fontSize: 13, letterSpacing: ".25em", textTransform: "uppercase", color: GREEN, marginBottom: 8, fontWeight: 700 }}>
                 Adult Family Home
               </div>
-              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0 }}>
-                Cost by <span style={{ color: GREEN }}>City &amp; County</span>
+              <h2 className="coc-card-title" style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0 }}>
+                Cost by <strong className="coc-card-title-accent is-green">City &amp; County</strong>
               </h2>
               <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
                 Medicaid rates · Private pay · Licensed homes

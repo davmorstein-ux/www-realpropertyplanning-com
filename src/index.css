@@ -3017,6 +3017,9 @@ main h2.coc-card-title {
   text-wrap: nowrap !important;
   display: block !important;
 }
+main h2.coc-card-title .coc-card-title-accent.is-green {
+  color: #0a5648 !important;
+}
 main h2.coc-card-title .coc-card-title-accent {
   display: inline !important;
   color: #b62733 !important;
