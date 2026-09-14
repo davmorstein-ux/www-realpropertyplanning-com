@@ -52,7 +52,6 @@ const pillBtn = (active: boolean): React.CSSProperties => ({
 });
 
 const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
-  const [currentAge, setCurrentAge] = useState(75);
   const [yearsOut, setYearsOut] = useState(0);
   const [yearsOfCareNeeded, setYearsOfCareNeeded] = useState(3);
 
@@ -127,8 +126,6 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
      it, while leaving 20-odd translated printSummary keys orphaned in all
      eight locales. */
   const currentYear = new Date().getFullYear();
-  const ageAtCareStart = currentAge + yearsOut;
-  const ageAtCareEnd = ageAtCareStart + yearsOfCareNeeded;
   const projectedWaAnnual = projectedWaMonthly * 12;
   const projectedNationalAnnual = projectedNationalMonthly * 12;
   const totalWaCost = projectedWaMonthly * 12 * yearsOfCareNeeded;
@@ -172,52 +169,55 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
 
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "16px 56px", margin: "32px 0 18px" }}>
         <div>
-          <label
+        <label
+          style={{
+            display: "block",
+            fontSize: 17,
+            fontWeight: 700,
+            fontFamily: "'DM Sans', sans-serif",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            color: NAVY,
+            marginBottom: 8,
+          }}
+        >
+          When Might Care Begin?
+        </label>
+        {/* Any year from now to 20 out, matching the stepper above rather than
+            fixed 5-year jumps. "Now" is 0; the box reads "Now", "1 yr", "2 yrs"… */}
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <button
+            onClick={() => setYearsOut((y) => Math.max(0, y - 1))}
+            style={stepperBtn}
+            aria-label="Care begins one year sooner"
+          >
+            −
+          </button>
+          <div
             style={{
-              display: "block",
-              fontSize: 17,
-              fontWeight: 700,
-              fontFamily: "'DM Sans', sans-serif",
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
-              color: NAVY,
-              marginBottom: 8,
+              background: "#f5f2ec",
+              border: "2px solid #dccdce",
+              borderRadius: 8,
+              padding: "6px 14px",
+              textAlign: "center",
+              minWidth: 92,
             }}
           >
-            {t("costOfCarePage.card2.currentAge")}
-          </label>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <button
-              onClick={() => setCurrentAge((a) => Math.max(18, a - 1))}
-              style={stepperBtn}
-              aria-label={t("costOfCarePage.card2.decreaseAge")}
-            >
-              −
-            </button>
-            <div
-              style={{
-                background: "#f5f2ec",
-                border: "2px solid #dccdce",
-                borderRadius: 8,
-                padding: "6px 14px",
-                textAlign: "center",
-                minWidth: 60,
-              }}
-            >
-              <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 24, color: COC_TEAL }}>
-                {currentAge}
-              </span>
-            </div>
-            <button
-              onClick={() => setCurrentAge((a) => Math.min(105, a + 1))}
-              style={stepperBtn}
-              aria-label={t("costOfCarePage.card2.increaseAge")}
-            >
-              +
-            </button>
+            <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 24, color: COC_TEAL }}>
+              {yearsOut === 0 ? "Now" : `${yearsOut} ${yearsOut === 1 ? "yr" : "yrs"}`}
+            </span>
           </div>
+          <button
+            onClick={() => setYearsOut((y) => Math.min(20, y + 1))}
+            style={stepperBtn}
+            aria-label="Care begins one year later"
+          >
+            +
+          </button>
+          <button onClick={() => setYearsOut(0)} style={pillBtn(yearsOut === 0)} aria-label="Reset to now">
+            Now
+          </button>
         </div>
-
         <div>
           <label
             style={{
@@ -266,56 +266,6 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         </div>
       </div>
 
-      <div style={{ marginBottom: 20, textAlign: "center" }}>
-        <label
-          style={{
-            display: "block",
-            fontSize: 17,
-            fontWeight: 700,
-            fontFamily: "'DM Sans', sans-serif",
-            letterSpacing: "0.06em",
-            textTransform: "uppercase",
-            color: NAVY,
-            marginBottom: 8,
-          }}
-        >
-          When Might Care Begin?
-        </label>
-        {/* Any year from now to 20 out, matching the stepper above rather than
-            fixed 5-year jumps. "Now" is 0; the box reads "Now", "1 yr", "2 yrs"… */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
-          <button
-            onClick={() => setYearsOut((y) => Math.max(0, y - 1))}
-            style={stepperBtn}
-            aria-label="Care begins one year sooner"
-          >
-            −
-          </button>
-          <div
-            style={{
-              background: "#f5f2ec",
-              border: "2px solid #dccdce",
-              borderRadius: 8,
-              padding: "6px 14px",
-              textAlign: "center",
-              minWidth: 92,
-            }}
-          >
-            <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 24, color: COC_TEAL }}>
-              {yearsOut === 0 ? "Now" : `${yearsOut} ${yearsOut === 1 ? "yr" : "yrs"}`}
-            </span>
-          </div>
-          <button
-            onClick={() => setYearsOut((y) => Math.min(20, y + 1))}
-            style={stepperBtn}
-            aria-label="Care begins one year later"
-          >
-            +
-          </button>
-          <button onClick={() => setYearsOut(0)} style={pillBtn(yearsOut === 0)} aria-label="Reset to now">
-            Now
-          </button>
-        </div>
       </div>
 
       <div
@@ -586,26 +536,12 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           {t("costOfCarePage.printSummary.careTimeline")}
         </h3>
         <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>
-          {t("costOfCarePage.printSummary.today", { age: currentAge })}
-        </p>
-        <p style={{ fontSize: "14px", color: "#222", margin: "0 0 4px" }}>
           {yearsOut === 0
-            ? t("costOfCarePage.printSummary.careBeginsToday", {
-                age: ageAtCareStart,
-                year: currentYear + yearsOut,
-              })
-            : t("costOfCarePage.printSummary.careBeginsIn", {
-                years: yearsOut,
-                age: ageAtCareStart,
-                year: currentYear + yearsOut,
-              })}
+            ? `Care begins now (${currentYear}).`
+            : `Care begins in ${yearsOut} ${yearsOut === 1 ? "year" : "years"} (${currentYear + yearsOut}).`}
         </p>
         <p style={{ fontSize: "14px", color: "#222", margin: 0 }}>
-          {t("costOfCarePage.printSummary.careEnds", {
-            years: yearsOfCareNeeded,
-            yearWord: yearsOfCareNeeded === 1 ? t("costOfCarePage.card2.year") : t("costOfCarePage.card2.years"),
-            age: ageAtCareEnd,
-          })}
+          {`Planned for ${yearsOfCareNeeded} ${yearsOfCareNeeded === 1 ? "year" : "years"} of care, through ${currentYear + yearsOut + yearsOfCareNeeded}.`}
         </p>
         <h3
           style={{
