@@ -5472,6 +5472,16 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
     grid-template-columns: 1fr !important;
   }
 }
+/* CTA labels are forced to one line for their plate effect; on phones a
+   long label must be allowed to wrap rather than widen the card. */
+@media (max-width: 640px) {
+  .gold-cta,
+  span.gold-cta,
+  .article-resource-btn {
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
 @media (max-width: 400px) {
   main [style*="grid-template-columns: repeat(3"],
   main [style*="grid-template-columns: repeat(4"],
