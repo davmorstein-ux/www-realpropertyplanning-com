@@ -156,40 +156,19 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         margin: "0 auto",
       }}
     >
-      {/* Title in the same register as "Cost by City & County" below it:
-          large, bold, two-tone. The uppercase eyebrow it replaced was being
-          shrunk to 14px by the sitewide eyebrow rule. */}
-      <p
-        className="coc-card-title"
-        style={{
-          fontSize: 28,
-          fontFamily: "'DM Sans', system-ui, sans-serif",
-          fontWeight: 700,
-          color: "#272421",
-          margin: "0 0 4px",
-          lineHeight: 1.15,
-          textAlign: "center",
-        }}
-      >
-        Cost of <span style={{ color: COC_TEAL }}>Care Calculator</span>
-      </p>
-      <h3
-        className="coc-title"
-        style={{
-          fontFamily: "'DM Sans', system-ui, sans-serif",
-          fontSize: "clamp(16px,2vw,19px)",
-          fontWeight: 600,
-          color: "#5f6b66",
-          margin: 0,
-          textAlign: "center",
-          whiteSpace: "nowrap",
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          textWrap: "nowrap",
-        }}
-      >
-        {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National Average
-      </h3>
+      {/* Same structure as the Cost by City & County card's header so the two
+          titles render identically: centred wrapper, h2 at 28px, two-tone. */}
+      <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
+        <h2 className="coc-card-title" style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0, whiteSpace: "nowrap" }}>
+          Cost of <span style={{ color: "#b62733" }}>Care Calculator</span>
+        </h2>
+        <div
+          className="coc-title"
+          style={{ fontSize: 16, color: "#5f6b66", marginTop: 6, fontWeight: 600, fontFamily: "'DM Sans', system-ui, sans-serif" }}
+        >
+          {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National Average
+        </div>
+      </div>
 
       <div className="coc-controls" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px 12px", margin: "32px 0 18px" }}>
         {/* Left: when care begins (0–20 years). */}

@@ -3007,28 +3007,25 @@ header a,
 
 /* 4a. Cost of Care calculator title — one line, sized to fit the card,
    exempt from the 28px h3 floor and the balanced-wrap default. */
-main p.coc-card-title {
+main h2.coc-card-title {
   font-size: 28px !important;
   font-weight: 700 !important;
   line-height: 1.15 !important;
-}
-main h3.coc-title {
-  font-size: 19px !important;
+  text-align: center !important;
   white-space: nowrap !important;
   text-wrap: nowrap !important;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+main .coc-title {
+  font-size: 16px !important;
+  text-align: center !important;
 }
 /* When the card is too narrow for one line, wrap rather than chop the words. */
 @media (max-width: 560px) {
-  main p.coc-card-title {
+  main h2.coc-card-title {
     font-size: 24px !important;
   }
-  main h3.coc-title {
-    font-size: 16px !important;
-    white-space: normal !important;
-    text-wrap: balance !important;
-    overflow: visible;
+  main .coc-title {
+    font-size: 15px !important;
   }
 }
 
