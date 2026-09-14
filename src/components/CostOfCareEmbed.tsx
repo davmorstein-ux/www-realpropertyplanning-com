@@ -163,7 +163,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       </h3>
 
       <div className="coc-controls" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "16px 24px", margin: "32px 0 18px" }}>
-        <div>
+        <div style={{ flex: "1 1 40%", minWidth: 160 }}>
         <label
           style={{
             display: "block",
@@ -214,7 +214,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             +
           </button>
         </div>
-        <div>
+        <div style={{ flex: "0 1 auto", minWidth: 160, marginLeft: "auto" }}>
           <label
             style={{
               display: "block",
