@@ -102,7 +102,7 @@ const HospiceCare = () => {
                   alt="Hospice care: a nurse holding the hand of an older woman resting at home — coordinated medical, personal, emotional and spiritual support when an illness is no longer being treated for cure"
                   style={{ maxWidth: 340, width: "100%", height: "auto", borderRadius: 8, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}
                   width={1024}
-                  height={1536}
+                  height={1365}
                   decoding="async"
                 />
               </div>
