@@ -191,17 +191,49 @@ const HomepagePopularResources = () => {
         color: #063e33;
         margin: 0;
       }
+      /* CTA carries the AFH Club wordmark (house glyph standing in for the
+         "A") on the Club's dark green, exactly as the Club's own hero draws
+         it. The glyph is cream with a red door, so it needs the dark ground. */
       .rpp-afh-strip-cta.rpp-afh-strip-cta {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
         font-family: 'DM Sans', system-ui, sans-serif;
         font-size: 18px;
         font-weight: 700;
-        color: #0a5648;
-        border-bottom: 2px solid #0a5648;
-        padding-bottom: 2px;
+        color: #ffffff;
+        background: #0a5648;
+        border-radius: 8px;
+        padding: 10px 18px;
+        min-height: 48px;
         margin: 0;
+        border: none;
+        transition: background-color 0.15s ease;
+      }
+      .rpp-afh-strip:hover .rpp-afh-strip-cta.rpp-afh-strip-cta {
+        background: #0d6a58;
+      }
+      .rpp-afh-strip-wordmark {
+        display: inline-flex;
+        align-items: center;
+        font-size: 22px;
+        letter-spacing: 0.04em;
+        line-height: 1;
+      }
+      .rpp-afh-strip-glyph {
+        height: 0.95em;
+        width: auto;
+        display: block;
+        margin-right: 1px;
+      }
+      .rpp-afh-strip-sr {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        white-space: nowrap;
       }
 
       @media (max-width: 900px) {
@@ -268,7 +300,14 @@ const HomepagePopularResources = () => {
             afhClub.cta string already ends in an arrow in every locale. */}
         <Link to="/afh-club" className="rpp-afh-strip marquee-hover">
           <span className="rpp-afh-strip-label">{t("afhClub.eyebrow")}</span>
-          <span className="rpp-afh-strip-cta">{t("afhClub.cta")}</span>
+          <span className="rpp-afh-strip-cta">
+            Explore
+            <span className="rpp-afh-strip-wordmark" aria-label="AFH Club">
+              <img src="/afh-club-glyph.webp" alt="" aria-hidden="true" className="rpp-afh-strip-glyph" width={200} height={194} />
+              <span className="rpp-afh-strip-sr">A</span>FH Club
+            </span>
+            <span aria-hidden="true">→</span>
+          </span>
         </Link>
       </div>
     </section>
