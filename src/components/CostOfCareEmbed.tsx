@@ -190,6 +190,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             −
           </button>
           <div
+            className="coc-value"
             style={{
               background: "#f5f2ec",
               border: "2px solid #dccdce",
@@ -240,6 +241,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               −
             </button>
             <div
+              className="coc-value"
               style={{
                 background: "#f5f2ec",
                 border: "2px solid #dccdce",
@@ -589,8 +591,15 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       </div>
 
       <style>{`
-        @media (max-width: 340px) {
-          .coc-controls { grid-template-columns: 1fr !important; }
+        /* Narrow cards (phones, and the calculator column at tablet widths):
+           keep the two steppers side by side by shrinking them, never by
+           stacking. Buttons stay at the 40px tap floor. */
+        @media (max-width: 560px) {
+          .coc-controls { gap: 12px 8px !important; }
+          .coc-controls button { width: 40px !important; height: 40px !important; font-size: 22px !important; }
+          .coc-controls .coc-value { min-width: 48px !important; height: 40px !important; padding: 2px 6px !important; }
+          .coc-controls .coc-value span { font-size: 16px !important; }
+          .coc-controls label { font-size: 14px !important; letter-spacing: 0.04em !important; }
         }
         @media (max-width: 420px) {
           .coc-embed-results { grid-template-columns: 1fr !important; }

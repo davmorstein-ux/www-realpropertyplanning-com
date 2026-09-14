@@ -3014,9 +3014,13 @@ main h3.coc-title {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* When the card is too narrow for one line, wrap rather than chop the words. */
 @media (max-width: 560px) {
   main h3.coc-title {
     font-size: 18px !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+    overflow: visible;
   }
 }
 
