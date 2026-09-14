@@ -62,6 +62,21 @@ const CostOfCareHub = () => (
               out the move is, and how many years of care to plan for.
             </p>
 
+            {/* Hospice is a service, not a setting, so it is deliberately not a
+                seventh card with a price. */}
+            <div className="mt-8 rounded-xl border-2 border-dashed" style={{ borderColor: "#7f1d1d", padding: "1.25rem 1.5rem", background: "#fff8f6" }}>
+              <p className="font-serif text-[22px] md:text-[26px] font-semibold text-navy leading-tight mb-2">What about hospice care?</p>
+              <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mb-3">
+                Hospice isn't a housing option, so it isn't a card above. It is end-of-life care that comes to wherever
+                the person lives: their own home, an adult family home, assisted living, memory care, or a nursing
+                facility. For eligible Medicare patients the hospice services themselves cost little or nothing; the
+                room, board, and day-to-day care of the residence are paid separately, exactly as before hospice began.
+              </p>
+              <Link to="/articles/hospice-care-washington" className="text-accent underline underline-offset-4 font-semibold text-[17px]">
+                Learn about hospice care in Washington →
+              </Link>
+            </div>
+
             <div
               className="mt-8"
               style={{

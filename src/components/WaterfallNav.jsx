@@ -47,6 +47,7 @@ const CATEGORIES = [
     items: [
       { name: "Adult Family Home Directory", href: "/afh-club/homes" },
       { name: "AFH Cost by City & County", href: "/afh-club/cost-by-location" },
+      { name: "Hospice Care", href: "/articles/hospice-care-washington" },
       { name: "Senior Living Advisors", href: "/senior-living-advisors" },
       { name: "Senior Move Managers", href: "/senior-move-managers" },
       { name: "Aging in Place", href: "/aging-in-place-staying-home-safely" },

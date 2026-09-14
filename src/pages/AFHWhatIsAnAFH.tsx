@@ -205,7 +205,12 @@ const AFHWhatIsAnAFH = () => {
               <Link to="/afh-club/homes" style={{ color: "#1a365d", textDecoration: "underline" }}>
                 directory lists every one of them
               </Link>{" "}
-              from DSHS licensing records.
+              from DSHS licensing records. Many of these homes also care for residents on hospice; hospice is a
+              service that comes to the home rather than a place of its own, which is{" "}
+              <Link to="/articles/hospice-care-washington" style={{ color: "#1a365d", textDecoration: "underline" }}>
+                explained in the hospice guide
+              </Link>
+              .
             </p>
             <p style={bodyText}>
               The confusion starts at the state line. Someone searching for this kind of care in Phoenix will

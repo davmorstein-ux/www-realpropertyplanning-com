@@ -192,6 +192,7 @@ const IndependentLivingCosts = lazy(() => import("./pages/articles/IndependentLi
 const MemoryCareCosts = lazy(() => import("./pages/articles/MemoryCareCosts"));
 const CcrcCosts = lazy(() => import("./pages/articles/CcrcCosts"));
 const AffordableSeniorHousing = lazy(() => import("./pages/articles/AffordableSeniorHousing"));
+const HospiceCare = lazy(() => import("./pages/articles/HospiceCare"));
 const AgingInPlaceArticle = lazy(() => import("./pages/articles/AgingInPlace"));
 const SeniorHousingCosts = lazy(() => import("./pages/articles/SeniorHousingCosts"));
 const SeniorHousingGuide = lazy(() => import("./pages/articles/SeniorHousingGuide"));
@@ -953,6 +954,7 @@ const App = () => (
           <Route path="/articles/memory-care-costs" element={<MemoryCareCosts />} />
           <Route path="/articles/ccrc-costs" element={<CcrcCosts />} />
           <Route path="/articles/affordable-senior-housing" element={<AffordableSeniorHousing />} />
+          <Route path="/articles/hospice-care-washington" element={<HospiceCare />} />
           <Route path="/articles/aging-in-place" element={<AgingInPlaceArticle />} />
           <Route path="/articles/senior-housing-costs" element={<SeniorHousingCosts />} />
           <Route path="/articles/senior-housing-guide" element={<SeniorHousingGuide />} />

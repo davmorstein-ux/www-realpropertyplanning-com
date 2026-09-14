@@ -235,7 +235,12 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
                     ))}
                   </div>
                   <p style={{ fontSize: 15, lineHeight: 1.6, color: "#302b26", margin: "14px 0 0" }}>
-                    The Medicaid figures are what DSHS pays the home; a Medicaid resident contributes most of their own
+                    Hospice is separate from these figures: Medicare covers hospice services but not the home's room and
+                    board, so a resident on hospice still pays the home as before.{" "}
+                    <Link to="/articles/hospice-care-washington" style={{ color: GREEN, fontWeight: 700 }}>
+                      How hospice works in an adult family home
+                    </Link>
+                    . The Medicaid figures are what DSHS pays the home; a Medicaid resident contributes most of their own
                     income toward that cost and keeps a personal needs allowance, so a family's out-of-pocket under
                     Medicaid is usually the resident's income, not the rate.
                     {band.confirmed
