@@ -3015,10 +3015,6 @@ main h2.coc-card-title {
   white-space: nowrap !important;
   text-wrap: nowrap !important;
 }
-main .coc-title {
-  font-size: 16px !important;
-  text-align: center !important;
-}
 main .coc-divider-label {
   font-family: 'DM Sans', system-ui, sans-serif !important;
   font-size: 22px !important;
@@ -3038,9 +3034,6 @@ main .coc-divider-label {
 @media (max-width: 560px) {
   main h2.coc-card-title {
     font-size: 24px !important;
-  }
-  main .coc-title {
-    font-size: 15px !important;
   }
 }
 

@@ -157,16 +157,16 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       }}
     >
       {/* Same structure as the Cost by City & County card's header so the two
-          titles render identically: centred wrapper, h2 at 28px, two-tone. */}
+          titles render identically: eyebrow, centred h2, tracking subtitle. */}
       <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
-        <h2 className="coc-card-title" style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0, whiteSpace: "nowrap" }}>
+        <div style={{ fontSize: 13, letterSpacing: ".25em", textTransform: "uppercase", color: "#b62733", marginBottom: 8, fontWeight: 700 }}>
+          {t(`costOfCarePage.careTypes.${careType.id}.label`)}
+        </div>
+        <h2 className="coc-card-title" style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0 }}>
           Cost of <span style={{ color: "#b62733" }}>Care Calculator</span>
         </h2>
-        <div
-          className="coc-title"
-          style={{ fontSize: 16, color: "#5f6b66", marginTop: 6, fontWeight: 600, fontFamily: "'DM Sans', system-ui, sans-serif" }}
-        >
-          {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National Average
+        <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
+          Washington vs. National Average
         </div>
       </div>
 
