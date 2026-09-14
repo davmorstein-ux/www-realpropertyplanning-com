@@ -393,6 +393,25 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           the city/county lookup itself sits directly under this calculator. */}
       {careType.id === "adult-family-home" && (
         <div className="coc-no-print" style={{ marginBottom: 18 }}>
+          {/* Divider with a label so the lookup reads as a second, related tool
+              rather than a continuation of the projection above. */}
+          <div style={{ display: "flex", alignItems: "center", gap: 14, margin: "22px 0 18px" }}>
+            <span style={{ flex: 1, height: 2, background: `${COC_TEAL}55` }} />
+            <span
+              style={{
+                fontSize: 13,
+                fontWeight: 700,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: COC_TEAL,
+                fontFamily: "'DM Sans', sans-serif",
+                whiteSpace: "nowrap",
+              }}
+            >
+              Now check your city or county
+            </span>
+            <span style={{ flex: 1, height: 2, background: `${COC_TEAL}55` }} />
+          </div>
           <AFHCostByLocationCard compact />
         </div>
       )}
