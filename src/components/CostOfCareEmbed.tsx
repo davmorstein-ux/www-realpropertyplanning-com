@@ -40,17 +40,6 @@ const stepperBtn: React.CSSProperties = {
   flexShrink: 0,
 };
 
-const pillBtn = (active: boolean): React.CSSProperties => ({
-  padding: "8px 10px",
-  borderRadius: 8,
-  fontSize: "15px",
-  fontWeight: 700,
-  fontFamily: "'DM Sans', sans-serif",
-  color: active ? "#ffffff" : NAVY,
-  background: active ? COC_TEAL : "#f5f2ec",
-  border: `1px solid ${active ? COC_TEAL : "#dccdce"}`,
-  cursor: "pointer",
-});
 
 const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
   const [yearsOut, setYearsOut] = useState(0);
@@ -168,7 +157,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         {t(`costOfCarePage.careTypes.${careType.id}.label`)} — Washington vs. National
       </h3>
 
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "16px 56px", margin: "32px 0 18px" }}>
+      <div className="coc-controls" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "16px 24px", margin: "32px 0 18px" }}>
         <div>
         <label
           style={{
@@ -199,12 +188,16 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               background: "#f5f2ec",
               border: "2px solid #dccdce",
               borderRadius: 8,
-              padding: "6px 14px",
+              padding: "4px 10px",
               textAlign: "center",
-              minWidth: 92,
+              minWidth: 68,
+              height: 44,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 24, color: COC_TEAL }}>
+            <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 18, color: COC_TEAL, lineHeight: 1 }}>
               {yearsOut === 0 ? "Now" : `${yearsOut} ${yearsOut === 1 ? "yr" : "yrs"}`}
             </span>
           </div>
@@ -214,9 +207,6 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             aria-label="Care begins one year later"
           >
             +
-          </button>
-          <button onClick={() => setYearsOut(0)} style={pillBtn(yearsOut === 0)} aria-label="Reset to now">
-            Now
           </button>
         </div>
         <div>
@@ -247,12 +237,16 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
                 background: "#f5f2ec",
                 border: "2px solid #dccdce",
                 borderRadius: 8,
-                padding: "6px 14px",
+                padding: "4px 10px",
                 textAlign: "center",
-                minWidth: 60,
+                minWidth: 52,
+                height: 44,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 24, color: COC_TEAL }}>
+              <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 18, color: COC_TEAL, lineHeight: 1 }}>
                 {yearsOfCareNeeded}
               </span>
             </div>
