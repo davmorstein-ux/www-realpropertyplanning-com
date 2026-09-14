@@ -3007,23 +3007,21 @@ header a,
 
 /* 4a. Cost of Care calculator title — one line, sized to fit the card,
    exempt from the 28px h3 floor and the balanced-wrap default. */
+/* Cost of Care calculator title. Deliberately NOT given a size or weight:
+   the sitewide `main h2` rules (36px) are what make the City & County card's
+   title look the way it does, and this one should get exactly the same. Only
+   centring and one-line behaviour are added. */
 main h2.coc-card-title {
-  font-size: 28px !important;
-  font-weight: 700 !important;
-  line-height: 1.15 !important;
   text-align: center !important;
   white-space: nowrap !important;
   text-wrap: nowrap !important;
   display: block !important;
 }
-/* The coloured half of the title. A <strong>, not a <span>, because the
-   card-body rule forces spans inside cards to 16px regular; and every
-   property restated so nothing generic can dim, shrink, or wrap it. */
 main h2.coc-card-title .coc-card-title-accent {
   display: inline !important;
   color: #b62733 !important;
   font-size: inherit !important;
-  font-weight: 700 !important;
+  font-weight: inherit !important;
   font-family: inherit !important;
   white-space: nowrap !important;
 }
@@ -3044,9 +3042,6 @@ main .coc-divider-label {
 }
 /* When the card is too narrow for one line, wrap rather than chop the words. */
 @media (max-width: 560px) {
-  main h2.coc-card-title {
-    font-size: 24px !important;
-  }
 }
 
 /* 4a-ii. Cost of Care calculator steppers: always two columns, left and
