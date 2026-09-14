@@ -1,4 +1,4 @@
-import { useState, useMemo, useId } from "react";
+import { useState, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { CARE_TYPES, formatCurrency, COC_TEAL } from "@/lib/careTypes";
@@ -20,8 +20,6 @@ const NAVY = "#272421";
    land on 47%, producing a total that destroys the page's credibility. 8% is
    already far above any sustained historical run. */
 const DEFAULT_INFLATION = CARE_INFLATION_RATE;
-const INFLATION_MIN = 1;
-const INFLATION_MAX = 8;
 const INFLATION_STEP = 0.1;
 const YEARS_OF_CARE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -97,19 +95,9 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
 
-  /* Reader-adjustable growth rate. Starts at the sourced default; the caption
-     stops citing BLS the moment it moves, because past that point the number
-     is the reader's assumption and not the Bureau's. Rounded on every change:
-     floating point turns 3.5 + 0.1 into 3.6000000000000005, which would render
-     literally. */
-  const inflLabelId = useId();
-  const [inflation, setInflation] = useState<number>(DEFAULT_INFLATION);
-  const atDefault = Math.abs(inflation - DEFAULT_INFLATION) < 0.001;
-  const nudge = (delta: number) =>
-    setInflation((r) => {
-      const next = Math.round((r + delta) * 10) / 10;
-      return Math.min(INFLATION_MAX, Math.max(INFLATION_MIN, next));
-    });
+  /* Growth rate is fixed at the sourced default; the reader-adjustable
+     control was removed in Sept 2026 as more confusing than useful. */
+  const inflation = DEFAULT_INFLATION;
   const onCalculatorPage = pathname.includes("/cost-of-care-calculator");
 
   const calculatorSlug = useMemo(() => {
@@ -453,111 +441,19 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         </div>
       </div>
 
-      {/* GROWTH RATE — arrows, with the bars as a readout only.
-          The bars are deliberately NOT clickable. Two ways to set one value is
-          exactly the confusion this control exists to avoid, and a drag target
-          is the worst interaction for hands with tremor or arthritis: press,
-          hold, move precisely, release, and any slip resets you. The arrows
-          match the age and years steppers above, so this card has one
-          interaction pattern rather than two.
-
-          The marked bar pins the sourced default, so moving away from it reads
-          as departing from the data rather than as an abstract number change. */}
-      <div className="coc-infl" role="group" aria-labelledby={inflLabelId}>
-        <div id={inflLabelId} className="coc-infl-label">
-          {t("costOfCarePage.card2.growthRate", { defaultValue: "Annual Cost Growth" })}
-        </div>
-
-        <div className="coc-infl-row">
-          <button
-            type="button"
-            className="coc-infl-btn"
-            onClick={() => nudge(-INFLATION_STEP)}
-            disabled={inflation <= INFLATION_MIN}
-            aria-label={t("costOfCarePage.card2.decreaseRate", { defaultValue: "Decrease growth rate" })}
-          >
-            −
-          </button>
-
-          {/* role=spinbutton with aria-valuetext so a screen reader hears what
-              the bars show sighted readers: the number AND whether it is still
-              the sourced figure. */}
-          <div
-            className="coc-infl-value"
-            role="spinbutton"
-            tabIndex={0}
-            aria-valuenow={inflation}
-            aria-valuemin={INFLATION_MIN}
-            aria-valuemax={INFLATION_MAX}
-            aria-valuetext={`${inflation.toFixed(1)}% ${
-              atDefault
-                ? t("costOfCarePage.card2.rateAtDefault", { defaultValue: "historical average" })
-                : t("costOfCarePage.card2.rateAdjusted", { defaultValue: "your own assumption" })
-            }`}
-            onKeyDown={(e) => {
-              if (e.key === "ArrowUp" || e.key === "ArrowRight") { e.preventDefault(); nudge(INFLATION_STEP); }
-              if (e.key === "ArrowDown" || e.key === "ArrowLeft") { e.preventDefault(); nudge(-INFLATION_STEP); }
-              if (e.key === "Home") { e.preventDefault(); setInflation(INFLATION_MIN); }
-              if (e.key === "End") { e.preventDefault(); setInflation(INFLATION_MAX); }
-            }}
-          >
-            {inflation.toFixed(1)}%
-          </div>
-
-          <button
-            type="button"
-            className="coc-infl-btn"
-            onClick={() => nudge(INFLATION_STEP)}
-            disabled={inflation >= INFLATION_MAX}
-            aria-label={t("costOfCarePage.card2.increaseRate", { defaultValue: "Increase growth rate" })}
-          >
-            +
-          </button>
-        </div>
-
-        {/* Decorative: the value and its meaning are both already announced by
-            the spinbutton, so exposing 36 bars would be noise. */}
-        <div className="coc-infl-bars" aria-hidden="true">
-          {Array.from({ length: 36 }, (_, i) => {
-            const barValue = INFLATION_MIN + i * ((INFLATION_MAX - INFLATION_MIN) / 35);
-            const filled = barValue <= inflation + 0.0001;
-            const isAnchor =
-              Math.abs(barValue - DEFAULT_INFLATION) < (INFLATION_MAX - INFLATION_MIN) / 70;
-            return (
-              <span
-                key={i}
-                className={`coc-infl-bar${filled ? " is-filled" : ""}${isAnchor ? " is-anchor" : ""}`}
-              />
-            );
-          })}
-        </div>
-
-        <div className="coc-infl-scale" aria-hidden="true">
-          <span>{t("costOfCarePage.card2.rateSlower", { defaultValue: "Slower growth" })}</span>
-          <span>{t("costOfCarePage.card2.rateFaster", { defaultValue: "Faster growth" })}</span>
-        </div>
-
-        {/* THE HONESTY LINE. Three states, and they must stay distinct:
-              moved off default -> the reader's own assumption, cite nothing
-              verified          -> name BLS and the years covered
-              seed              -> an assumption, and it says so
-            Never cite BLS for a number BLS did not produce. CARE_INFLATION_VERIFIED
-            is false until scripts/fetch-care-inflation.mjs has actually run. */}
-        <p className="coc-infl-source">
-          {!atDefault
-            ? t("costOfCarePage.card2.rateCustomNote", {
-                defaultValue: "Your own assumption — not based on published data.",
-              })
-            : CARE_INFLATION_VERIFIED
-            ? t("costOfCarePage.card2.rateSourceNote", {
-                defaultValue: `Based on U.S. Bureau of Labor Statistics long-term care price data, ${CARE_INFLATION_FIRST_YEAR}–${CARE_INFLATION_LAST_YEAR}. Projections are estimates; actual costs vary.`,
-              })
-            : t("costOfCarePage.card2.rateAssumedNote", {
-                defaultValue:
-                  "A working assumption, not a published figure. Projections are estimates; actual costs vary.",
-              })}
-        </p>
-      </div>
+      {/* Growth-rate control removed Sept 2026 at David's request: the arrows,
+          bars, and three-state source note confused more readers than they
+          helped. Projections still grow at DEFAULT_INFLATION; the assumption is
+          stated in one line so the honesty about its source is kept. */}
+      <p className="coc-infl-source" style={{ marginTop: 6 }}>
+        {CARE_INFLATION_VERIFIED
+          ? t("costOfCarePage.card2.rateSourceNote", {
+              defaultValue: `Future costs assume ${DEFAULT_INFLATION.toFixed(1)}% annual growth, based on U.S. Bureau of Labor Statistics long-term care price data, ${CARE_INFLATION_FIRST_YEAR}–${CARE_INFLATION_LAST_YEAR}. Projections are estimates; actual costs vary.`,
+            })
+          : t("costOfCarePage.card2.rateAssumedNote", {
+              defaultValue: `Future costs assume ${DEFAULT_INFLATION.toFixed(1)}% annual growth, a working assumption rather than a published figure. Projections are estimates; actual costs vary.`,
+            })}
+      </p>
 
       <p
         style={{
