@@ -3019,7 +3019,7 @@ main .coc-divider-label {
   font-family: 'DM Sans', system-ui, sans-serif !important;
   font-size: 22px !important;
   font-weight: 800 !important;
-  color: #0d5c63 !important;
+  color: #0047ab !important; /* cobalt blue */
   white-space: nowrap;
   text-align: center;
   line-height: 1.2 !important;
