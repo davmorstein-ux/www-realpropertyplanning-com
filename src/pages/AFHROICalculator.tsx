@@ -463,6 +463,13 @@ const AFHROICalculator = () => {
                 <div>
                   <label style={LS} htmlFor="r-rev">Annual gross revenue ($)</label>
                   <input type="number" id="r-rev" placeholder="288000" style={IS} />
+                  <div style={{ fontSize: 13, color: "#7a5a5d", marginTop: 6, lineHeight: 1.4 }}>
+                    Modelling Medicaid beds? The DSHS daily rate by county and care level is in the{" "}
+                    <Link to="/afh-club/cost-by-location" style={{ color: BLUE, fontWeight: 700 }}>
+                      cost-by-location lookup
+                    </Link>
+                    .
+                  </div>
                 </div>
                 <div>
                   <label style={LS} htmlFor="r-exp">Annual operating expenses ($)</label>

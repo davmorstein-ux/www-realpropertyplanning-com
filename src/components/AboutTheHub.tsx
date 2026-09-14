@@ -124,7 +124,8 @@ const AboutTheHub = () => {
            the repo: 67 editorial pages across guides, articles, long-term
            care, senior living, planning-before-a-crisis, executor
            responsibilities and estate/probate; 6 housing calculators plus 2
-           AFH operator calculators; 6,042 licensed homes in the DSHS data
+           AFH operator calculators plus the AFH cost-by-location lookup
+           (Sept 2026) = 9; 6,042 licensed homes in the DSHS data
            across all 39 counties (Sept 2026). "Over 6,000" is deliberate —
            the directory is a snapshot and homes open and close, so a precise
            figure would go stale. Re-check before changing any of these.
@@ -179,7 +180,7 @@ const AboutTheHub = () => {
             <strong>67</strong> guides &amp; articles
           </span>
           <span>
-            <strong>8</strong> calculators
+            <strong>9</strong> calculators
           </span>
           <span>
             Statewide directory of over <strong>6,000</strong> licensed adult family homes

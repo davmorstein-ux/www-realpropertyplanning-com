@@ -1,5 +1,6 @@
 
 import Header from "@/components/Header";
+import { Link } from "react-router-dom";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -60,6 +61,45 @@ const CostOfCareHub = () => (
               Figures are Washington State monthly medians. Every calculator lets you adjust the age, how far
               out the move is, and how many years of care to plan for.
             </p>
+
+            <div
+              className="mt-8"
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: "1rem 1.5rem",
+                padding: "1.25rem 1.5rem",
+                background: "#0a5648",
+                borderRadius: "12px",
+                color: "#fff",
+              }}
+            >
+              <p style={{ margin: 0, fontSize: "18px", lineHeight: 1.5, fontWeight: 600, flex: "1 1 360px" }}>
+                Weighing an adult family home? The statewide median hides a wide spread by county. Look up the DSHS
+                Medicaid rate range, private-pay range, and licensed homes for any Washington city or county.
+              </p>
+              <Link
+                to="/afh-club/cost-by-location"
+                className="no-underline"
+                style={{
+                  flex: "0 0 auto",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  minHeight: "52px",
+                  padding: "0 1.5rem",
+                  background: "#fff",
+                  color: "#0a5648",
+                  fontSize: "17px",
+                  fontWeight: 700,
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                }}
+              >
+                AFH cost by city &amp; county →
+              </Link>
+            </div>
 
            
           </div>

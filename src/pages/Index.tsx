@@ -298,7 +298,7 @@ const RPPHomeV3 = () => {
                     }}
                   >
                     Compare in-home care, assisted living, memory care, and more — in Washington versus national
-                    averages.
+                    averages. For adult family homes, look up the rate range for any city or county.
                   </p>
                   <span
                     style={{
