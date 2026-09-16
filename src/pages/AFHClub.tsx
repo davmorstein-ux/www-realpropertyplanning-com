@@ -378,6 +378,27 @@ const PAGE_CSS = `
        image arrives and the grid does not reflow as six lazy images load. */
     aspect-ratio: 620 / 515;
     margin: 0 0 12px -10px;
+    /* Hover: the cube tilts toward the reader and lifts, as if turned in the
+       hand. The artwork is a flat render, so this is a tilt, not a spin — a
+       full rotation would expose the flat edge. Origin sits low so the cube
+       pivots on its base. */
+    transform-origin: 50% 85%;
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.45s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+  .rpp-afh-lane-row {
+    perspective: 700px;
+  }
+  .rpp-afh-lane-row:hover .rpp-afh-cube-img,
+  .rpp-afh-lane-row:focus-within .rpp-afh-cube-img {
+    transform: rotateY(-16deg) rotateX(7deg) translateY(-6px) scale(1.06);
+    filter: drop-shadow(0 16px 18px rgba(10, 22, 40, 0.28)) brightness(1.04);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rpp-afh-cube-img { transition: none; }
+    .rpp-afh-lane-row:hover .rpp-afh-cube-img,
+    .rpp-afh-lane-row:focus-within .rpp-afh-cube-img { transform: none; }
   }
   /* Titles are baked into the artwork, so the heading is carried here for
      assistive tech and search rather than painted. Not display:none, which
