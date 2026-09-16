@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import SEOHead from "@/components/SEOHead";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import roiAsset from "@/assets/afh/afh-roi-calculator.webp.asset.json";
 
 type Tile = {
   to: string;
@@ -20,7 +19,7 @@ type Tile = {
 const TILES: Tile[] = [
   {
     to: "/afh-club/afh-roi-calculator",
-    img: roiAsset.url,
+    img: "/afh-roi-calculator-cover-v2.webp",
     alt: "AFH ROI Calculator",
     pill: "For buyers & investors",
     title: "AFH ROI Calculator",
