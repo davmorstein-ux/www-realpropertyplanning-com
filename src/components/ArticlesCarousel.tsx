@@ -37,7 +37,8 @@ const TRACK = [...ARTICLES, ...ARTICLES, ...ARTICLES];
 const START = ARTICLES.length; // begin in the middle copy
 const CARD_GAP = 24;
 const AUTO_MS = 7000;
-const SLIDE_MS = 650;
+const CLICK_MS = 650; // a click should feel immediate
+const AUTO_MS_SLIDE = 2600; // the timer's own slides glide slowly
 
 
 function ArrowButton({ dir, onClick }: { dir: "prev" | "next"; onClick: () => void }) {
@@ -72,6 +73,7 @@ function ArrowButton({ dir, onClick }: { dir: "prev" | "next"; onClick: () => vo
 export default function ArticlesCarousel() {
   const [pos, setPos] = useState(START);
   const [transitioning, setTransitioning] = useState(false);
+  const [slideMs, setSlideMs] = useState(AUTO_MS_SLIDE);
   const [hovered, setHovered] = useState<number | null>(null);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -81,20 +83,19 @@ export default function ArticlesCarousel() {
   const prefersReducedMotion = useReducedMotion();
 
   const slideTo = useCallback(
-    (newPos: number) => {
+    (newPos: number, ms: number = CLICK_MS) => {
       if (transitioning) return;
+      setSlideMs(ms);
       setTransitioning(true);
       setPos(newPos);
-      setTimeout(() => setTransitioning(false), SLIDE_MS + 100);
+      setTimeout(() => setTransitioning(false), ms + 60);
     },
     [transitioning],
   );
 
-  const next = useCallback(() => {
-    slideTo(pos + 1);
-  }, [pos, slideTo]);
-
+  const next = useCallback(() => slideTo(pos + 1), [pos, slideTo]);
   const prev = () => slideTo(pos - 1);
+  const autoNext = useCallback(() => slideTo(pos + 1, AUTO_MS_SLIDE), [pos, slideTo]);
 
   // After sliding to near the edges, silently reset to middle copy
   useEffect(() => {
@@ -108,11 +109,11 @@ export default function ArticlesCarousel() {
 
   useEffect(() => {
     if (paused || !isVisible || prefersReducedMotion) return;
-    timerRef.current = setInterval(next, AUTO_MS);
+    timerRef.current = setInterval(autoNext, AUTO_MS);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [next, paused, isVisible, prefersReducedMotion]);
+  }, [autoNext, paused, isVisible, prefersReducedMotion]);
 
   // Card width: container is 960px, 3 cards with 2 gaps of 24px each
   // (960 - 48) / 3 = 304px per card
@@ -169,7 +170,7 @@ export default function ArticlesCarousel() {
             display: "flex",
             gap: CARD_GAP,
             transform: `translateX(calc(-${pos} * ${CARD_W + CARD_GAP}px))`,
-            transition: transitioning ? `transform ${SLIDE_MS}ms cubic-bezier(0.16, 1, 0.3, 1)` : "none",
+            transition: transitioning ? `transform ${slideMs}ms ${slideMs > 1000 ? "cubic-bezier(0.45, 0.05, 0.25, 1)" : "cubic-bezier(0.16, 1, 0.3, 1)"}` : "none",
             willChange: "transform",
           }}
         >
