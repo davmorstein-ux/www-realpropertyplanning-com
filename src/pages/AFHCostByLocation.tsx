@@ -47,8 +47,8 @@ const CostByLocation = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Adult Family Home Cost by City and County in Washington | AFH Club"
-        description="Look up what an adult family home costs in any Washington city or county: the DSHS Medicaid daily and monthly rate range for that county, typical private-pay ranges, and how many licensed homes there accept Medicaid."
+        title="What It Costs to Live in an Adult Family Home, by City and County | AFH Club"
+        description="What it costs to live in an adult family home in any Washington city or county: the DSHS Medicaid daily and monthly rate for that county, typical private-pay ranges per resident, and how many licensed homes there accept Medicaid."
         canonical="https://realpropertyplanning.com/afh-club/cost-by-location"
       />
       <BreadcrumbSchema
@@ -61,7 +61,7 @@ const CostByLocation = () => {
       <Header />
       <main id="main-content">
         <div style={{ background: GREEN, padding: "6px 24px 4px" }} />
-        <HeroBandTitle as="h1">What does an adult family home cost where you're looking?</HeroBandTitle>
+        <HeroBandTitle as="h1">What It Costs to Live in an Adult Family Home, by City and County</HeroBandTitle>
 
         <div style={{ background: "#f5f2ec", padding: "2rem 1rem 3rem" }}>
           <div style={{ maxWidth: 900, margin: "0 auto 20px" }}>
