@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BackToAFHClub from "@/components/BackToAFHClub";
 import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
 import BackToCalculators from "@/components/BackToCalculators";
 
@@ -697,6 +698,7 @@ const AFHValuationEstimator = () => {
             .val-results-grid { grid-template-columns: repeat(3, 1fr) !important; }
           }
         `}</style>
+        <BackToAFHClub />
       </main>
       <Footer />
     </>

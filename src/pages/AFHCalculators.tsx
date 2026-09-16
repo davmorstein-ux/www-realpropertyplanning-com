@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BackToAFHClub from "@/components/BackToAFHClub";
 import SEOHead from "@/components/SEOHead";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import roiAsset from "@/assets/afh/afh-roi-calculator.webp.asset.json";
@@ -130,6 +131,7 @@ const AFHCalculators: React.FC = () => {
             </p>
           </div>
         </section>
+        <BackToAFHClub />
       </main>
       <Footer />
     </>

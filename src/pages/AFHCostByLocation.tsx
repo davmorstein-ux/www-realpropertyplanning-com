@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BackToAFHClub from "@/components/BackToAFHClub";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
@@ -119,6 +120,7 @@ const CostByLocation = () => {
         </section>
 
         <PageFAQ faqs={FAQS} heading="Adult Family Home Costs: Common Questions" eyebrow="Frequently Asked Questions" id="afh-cost-location" />
+        <BackToAFHClub />
       </main>
       <DisclaimerSection />
       <Footer />
