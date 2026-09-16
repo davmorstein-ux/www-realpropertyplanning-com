@@ -153,7 +153,7 @@ const AFHRevenueBuilder = ({
             <tr key={r.key} style={{ borderBottom: "1px solid #eee" }}>
               <td style={{ padding: "8px 6px" }}>
                 <strong style={{ color: "#272421" }}>{r.label}</strong>
-                <div style={{ color: "#5f6b66", fontSize: 14 }}>
+                <div style={{ color: "#5f6b66", fontSize: 16 }}>
                   {money(r.low)} – {money(r.high)}
                   {r.openEnded ? "+" : ""} · {r.note}
                 </div>
@@ -175,7 +175,7 @@ const AFHRevenueBuilder = ({
           <tr style={{ borderBottom: "1px solid #eee" }}>
             <td style={{ padding: "8px 6px" }}>
               <strong style={{ color: "#272421" }}>Medicaid</strong>
-              <div style={{ color: "#5f6b66", fontSize: 14 }}>
+              <div style={{ color: "#5f6b66", fontSize: 16 }}>
                 {money(monthly(med.minDaily))} – {money(monthly(med.maxDaily))} · DSHS {AFH_RATE_REGION_LABELS[region]} rate, lightest to heaviest care
               </div>
             </td>
@@ -226,27 +226,25 @@ const AFHRevenueBuilder = ({
 
       <button
         type="button"
-        disabled={totalBeds === 0 || overCap}
-        onClick={() =>
-          onApply({ annualFull, annualOccupied, monthlyFull, beds: totalBeds, occupancy: occ, marketLabel: band.label })
-        }
+        className="rpp-cta-btn"
+        aria-disabled={totalBeds === 0 || overCap}
+        onClick={() => {
+          if (totalBeds === 0 || overCap) return;
+          onApply({ annualFull, annualOccupied, monthlyFull, beds: totalBeds, occupancy: occ, marketLabel: band.label });
+        }}
         style={{
-          padding: "11px 20px",
+          width: "100%",
+          padding: "14px 20px",
           borderRadius: 8,
-          background: totalBeds === 0 || overCap ? "#cfc9c2" : accent,
-          color: "#ffffff",
           border: "none",
-          fontSize: 16,
-          fontWeight: 700,
-          letterSpacing: ".06em",
-          textTransform: "uppercase",
+          fontSize: 19,
           cursor: totalBeds === 0 || overCap ? "not-allowed" : "pointer",
           fontFamily: "'DM Sans', system-ui, sans-serif",
         }}
       >
-        Use this revenue
+        Use this revenue in the calculator
       </button>
-      <p style={{ fontSize: 14, lineHeight: 1.5, color: "#5f6b66", margin: "10px 0 0" }}>
+      <p style={{ fontSize: 16, lineHeight: 1.5, color: "#5f6b66", margin: "12px 0 0" }}>
         Private-pay ranges are David Stein's working bands from brokerage and appraisal experience (reviewed September
         2026); Medicaid rates are the DSHS schedule effective July 1, 2026. You can still type your own gross revenue
         below if you have the actual P&amp;L.{" "}
