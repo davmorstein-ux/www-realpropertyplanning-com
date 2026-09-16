@@ -90,31 +90,35 @@ const CostByLocation = () => {
                 DSHS pays two schedules. The figures are the base adult family home rate per resident, from the lightest
                 to the heaviest care level, effective {AFH_MEDICAID_RATES.effective}.
               </p>
-              <table className="w-full text-[17px]">
-                <thead>
-                  <tr className="text-left border-b-2 border-border">
-                    <th className="py-2 pr-3">Region</th>
-                    <th className="py-2 pr-3">Per day</th>
-                    <th className="py-2 pr-3">Per month</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {(["highCost", "standard"] as const).map((r) => {
-                    const rg = medicaidRange(r);
-                    return (
-                      <tr key={r} className="border-b border-border">
-                        <td className="py-2 pr-3">{AFH_RATE_REGION_LABELS[r]}</td>
-                        <td className="py-2 pr-3 whitespace-nowrap">
-                          {money2(rg.minDaily)} – {money2(rg.maxDaily)}
-                        </td>
-                        <td className="py-2 pr-3 whitespace-nowrap">
-                          {money(monthly(rg.minDaily))} – {money(monthly(rg.maxDaily))}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+              <div className="cost-tiles" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 14 }}>
+                <style>{`@media (max-width: 640px) { .cost-tiles { grid-template-columns: 1fr !important; } }`}</style>
+                {(["highCost", "standard"] as const).map((r) => {
+                  const rg = medicaidRange(r);
+                  return (
+                    <div
+                      key={r}
+                      style={{
+                        background: "#ffffff",
+                        border: `2px solid ${ORANGE}40`,
+                        borderRadius: 10,
+                        padding: "18px 16px",
+                        textAlign: "center",
+                      }}
+                    >
+                      <div style={{ fontSize: 18, fontWeight: 700, color: "#272421", marginBottom: 10, lineHeight: 1.3 }}>
+                        {AFH_RATE_REGION_LABELS[r]}
+                      </div>
+                      <div style={{ fontSize: 26, fontWeight: 700, color: ORANGE, lineHeight: 1.2 }}>
+                        {money(monthly(rg.minDaily))} – {money(monthly(rg.maxDaily))}
+                      </div>
+                      <div style={{ fontSize: 18, color: "#302b26", marginTop: 4 }}>per resident, per month</div>
+                      <div style={{ fontSize: 18, color: "#5f6b66", marginTop: 10 }}>
+                        {money2(rg.minDaily)} – {money2(rg.maxDaily)} per day
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
