@@ -6,7 +6,6 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import SEOHead from "@/components/SEOHead";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import roiAsset from "@/assets/afh/afh-roi-calculator.webp.asset.json";
-import valuationAsset from "@/assets/afh/afh-valuation-estimator.webp.asset.json";
 
 type Tile = {
   to: string;
@@ -30,7 +29,7 @@ const TILES: Tile[] = [
   },
   {
     to: "/afh-club/afh-valuation-estimator",
-    img: valuationAsset.url,
+    img: "/afh-valuation-estimator-cover-v2.webp",
     alt: "AFH Valuation Estimator",
     pill: "For sellers",
     title: "AFH Valuation Estimator",
