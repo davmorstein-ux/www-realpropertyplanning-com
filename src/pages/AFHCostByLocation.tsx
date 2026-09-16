@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -62,7 +63,16 @@ const CostByLocation = () => {
         <div style={{ background: GREEN, padding: "6px 24px 4px" }} />
         <HeroBandTitle as="h1">What does an adult family home cost where you're looking?</HeroBandTitle>
 
-        <div style={{ background: "#f5f2ec", padding: "2.5rem 1rem 3rem" }}>
+        <div style={{ background: "#f5f2ec", padding: "2rem 1rem 3rem" }}>
+          <div style={{ maxWidth: 900, margin: "0 auto 20px" }}>
+            <Link to="/afh-club/calculators" style={{ display: "inline-block" }}>
+              <img
+                src="/back-to-calculators-green.webp"
+                alt="Back to Calculators"
+                style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
+              />
+            </Link>
+          </div>
           <AFHCostByLocationCard />
           <div className="container px-5 md:px-8 mt-8">
             <div className="max-w-3xl mx-auto">
