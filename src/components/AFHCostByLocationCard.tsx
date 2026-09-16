@@ -44,6 +44,10 @@ const stepperBtn: React.CSSProperties = {
 };
 const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
 const money2 = (n: number) => "$" + n.toFixed(2);
+const reviewedLabel = (iso: string) => {
+  const d = new Date(iso + "T00:00:00");
+  return isNaN(d.getTime()) ? iso : d.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+};
 
 interface Place {
   kind: "city" | "county";
@@ -224,7 +228,7 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
                       [
                         "Private pay, per month",
                         band.confirmed ? `${money(band.low)} – ${money(band.high)}` : "Not yet published",
-                        band.confirmed ? `typical range, reviewed ${band.reviewed}` : "ask each home for its rate sheet",
+                        band.confirmed ? `typical range, reviewed ${reviewedLabel(band.reviewed)}` : "ask each home for its rate sheet",
                       ],
                     ].map(([k, v, note]) => (
                       <div key={k} style={{ background: "#f5f2ec", border: `2px solid ${GREEN}b3`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
@@ -244,9 +248,35 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
                     income toward that cost and keeps a personal needs allowance, so a family's out-of-pocket under
                     Medicaid is usually the resident's income, not the rate.
                     {band.confirmed
-                      ? ` The private-pay range is for a standard-needs resident in ${band.label}, from David Stein's experience with operating homes; memory care and heavy-care needs run above it, and each home sets its own rate.`
+                      ? ` The private-pay range is the typical rate for a private room with moderate care in ${band.label}, from David Stein's brokerage and appraisal experience with operating homes (reviewed ${reviewedLabel(band.reviewed)}). Lighter care runs below it and heavy-care or specialty needs run well above it; each home sets its own rate.`
                       : ""}
                   </p>
+                  {band.confirmed && band.tiers.length > 0 && (
+                    <details style={{ marginTop: 12 }} open>
+                      <summary style={{ cursor: "pointer", color: GREEN, fontWeight: 700, fontSize: 15 }}>Private pay by care level in {band.label}</summary>
+                      <table style={{ width: "100%", fontSize: 15, marginTop: 8, borderCollapse: "collapse" }}>
+                        <thead>
+                          <tr style={{ textAlign: "left", borderBottom: "2px solid #dccdce" }}>
+                            <th style={{ padding: "6px 8px" }}>Care level</th>
+                            <th style={{ padding: "6px 8px", whiteSpace: "nowrap" }}>Per month</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {band.tiers.map((t) => (
+                            <tr key={t.label} style={{ borderBottom: "1px solid #eee" }}>
+                              <td style={{ padding: "6px 8px" }}>
+                                <strong style={{ color: "#272421" }}>{t.label}</strong>
+                                <div style={{ color: "#5f6b66" }}>{t.note}</div>
+                              </td>
+                              <td style={{ padding: "6px 8px", whiteSpace: "nowrap", fontWeight: 700, color: GREEN }}>
+                                {money(t.low)} – {money(t.high)}{t.openEnded ? "+" : ""}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </details>
+                  )}
                   <details style={{ marginTop: 12 }}>
                     <summary style={{ cursor: "pointer", color: GREEN, fontWeight: 700, fontSize: 15 }}>All 17 Medicaid care levels for this region</summary>
                     <table style={{ width: "100%", fontSize: 15, marginTop: 8, borderCollapse: "collapse" }}>
