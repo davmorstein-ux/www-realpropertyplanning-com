@@ -67,7 +67,7 @@ const CostByLocation = () => {
           <div style={{ maxWidth: 900, margin: "0 auto 20px" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block" }}>
               <img
-                src="/back-to-calculators-green.webp"
+                src="/back-to-calculators-green-v2.webp"
                 alt="Back to Calculators"
                 style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
               />

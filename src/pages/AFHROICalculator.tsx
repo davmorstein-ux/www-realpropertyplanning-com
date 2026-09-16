@@ -237,7 +237,7 @@ const AFHROICalculator = () => {
           <div style={{ maxWidth: 960, margin: "0 auto", paddingTop: "var(--header-height, 100px)" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
               <img
-                src="/back-to-calculators-blue.webp"
+                src="/back-to-calculators-blue-v2.webp"
                 alt="Back to Calculators"
                 style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
               />

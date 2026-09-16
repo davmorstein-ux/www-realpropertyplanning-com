@@ -225,7 +225,7 @@ const AFHValuationEstimator = () => {
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
               <img
-                src="/back-to-calculators-green.webp"
+                src="/back-to-calculators-green-v2.webp"
                 alt="Back to Calculators"
                 style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
               />
