@@ -3839,13 +3839,26 @@ main #rpp-tagline .rpp-tagline-line-v2 {
 
      700, not 600. Courier Prime ships 400 and 700 only; 600 rounds DOWN to
      the thin regular. Loaded in index.html at 700 alone. */
-  font-family: "Courier Prime", "Courier New", Courier, monospace !important;
+  /* Sept 2026: back to DM Sans. Courier Prime earned its keep over the
+     watercolour "paper" hero (typed-document feel), but over rpp-hero-2029,
+     a photograph of a real entryway, it read as a caption pasted on a photo
+     and the monospace grid made the line both long and cramped. The
+     paragraphs above explaining the Courier choice are kept as history. */
+  font-family: 'DM Sans', system-ui, sans-serif !important;
   font-style: normal !important;
   font-weight: 700 !important;
-  /* -0.02em, slightly tighter than Plex's -0.015em: Courier's letterforms sit
-     looser on the monospace grid. Brings the longest line to 812px inside the
-     artwork's 856px cream column, so the tagline still wraps to three. */
-  letter-spacing: -0.02em !important;
+  letter-spacing: -0.01em !important;
+}
+/* Short rule under the tagline, in the front door's brick red (#B0352A, the
+   AFH Club logo door). The only red allowed near the headline: the text stays
+   navy for contrast (~9:1 on the wall), the rule does the echoing. */
+main #rpp-tagline .rpp-tagline-rule {
+  display: block;
+  width: clamp(72px, 7vw, 140px);
+  height: 4px;
+  margin-top: clamp(10px, 1.2vw, 20px);
+  background: #b0352a;
+  border-radius: 2px;
 }
 
 /* HERO HEIGHT IS CAPPED, NOT LEFT TO THE WINDOW.

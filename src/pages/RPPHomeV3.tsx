@@ -263,6 +263,7 @@ const RPPHomeV3 = () => {
                 {t("hero.taglineLine2")}
               </span>
             </h1>
+            <span className="rpp-tagline-rule" aria-hidden="true" />
           </div>
         </div>
 
