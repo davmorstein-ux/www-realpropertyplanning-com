@@ -6,8 +6,8 @@ import Header from "@/components/Header";
    path every working icon on this site already uses: the file is emitted with
    a content hash and the URL is resolved at build time, so it cannot silently
    go missing. */
-import heroDesktop from "@/assets/hero/rpp-hero-2028.webp";
-import heroMobile from "@/assets/hero/rpp-hero-2028-mobile.webp";
+import heroDesktop from "@/assets/hero/rpp-hero-2029.webp";
+import heroMobile from "@/assets/hero/rpp-hero-2029-mobile.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -67,10 +67,18 @@ const RPPHomeV3 = () => {
         >
           <img
             id="rpp-hero-image"
-            /* rpp-hero-2028: watercolour of an open door on a stone path,
-               meadow and sunrise. Painted paper, not a cutout — the left
-               ~55% of the frame is open sky and unpainted paper, and that
-               column is the tagline's home.
+            /* rpp-hero-2029 (Sept 2026): photographic entryway — cream wall,
+               console with mirror and olive branches, open brick-red front
+               door (#B0352A, the AFH Club logo door) onto a garden path.
+               Cut from a true panorama render, so the whole room fits the
+               band with nothing amputated. The left ~50% is plain sunlit
+               wall, and that column is the tagline's home. Navy on that
+               wall measures ~9:1. Mobile file is a 2.79:1 crop of the SAME
+               render centred on the door.
+
+               Replaced rpp-hero-2028, the watercolour of an open door on a
+               stone path; that art's notes below still describe the layout
+               rules, which are unchanged.
 
                1920x340, 5.65:1. Shown at its own ratio, NOT cropped. The
                artwork is the crop — see .rpp-hero-img in index.css, which is
