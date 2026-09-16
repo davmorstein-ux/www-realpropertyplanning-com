@@ -35,7 +35,37 @@ const TRACK = [...ARTICLES, ...ARTICLES, ...ARTICLES];
 const START = ARTICLES.length; // begin in the middle copy
 const CARD_GAP = 24;
 const AUTO_MS = 7000;
-const SLIDE_MS = 4400;
+const SLIDE_MS = 650;
+
+
+function ArrowButton({ dir, onClick }: { dir: "prev" | "next"; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={dir === "prev" ? "Previous articles" : "Next articles"}
+      className={`rpp-car-arrow is-${dir}`}
+      style={{
+        width: 56,
+        height: 56,
+        borderRadius: "50%",
+        background: "#ffffff",
+        border: "2px solid #1B3A6B",
+        color: "#1B3A6B",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        boxShadow: "0 4px 14px rgba(10,22,40,0.18)",
+        padding: 0,
+      }}
+    >
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        {dir === "prev" ? <polyline points="15 18 9 12 15 6" /> : <polyline points="9 18 15 12 9 6" />}
+      </svg>
+    </button>
+  );
+}
 
 export default function ArticlesCarousel() {
   const [pos, setPos] = useState(START);
@@ -112,9 +142,21 @@ export default function ArticlesCarousel() {
         <div style={{ width: 48, height: 2, background: "#7f2028", margin: "16px auto 0", borderRadius: 1 }} />
       </div>
 
-      {/* Carousel viewport */}
+      {/* Carousel viewport with arrows on either side */}
+      <div style={{ position: "relative", maxWidth: 960, margin: "0 auto" }}>
+        <style>{`
+          .rpp-car-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; }
+          .rpp-car-arrow.is-prev { left: -72px; }
+          .rpp-car-arrow.is-next { right: -72px; }
+          @media (max-width: 1120px) {
+            .rpp-car-arrow.is-prev { left: 8px; }
+            .rpp-car-arrow.is-next { right: 8px; }
+          }
+        `}</style>
+        <ArrowButton dir="prev" onClick={prev} />
+        <ArrowButton dir="next" onClick={next} />
       <div
-        style={{ maxWidth: 960, margin: "0 auto", padding: "8px 0 16px", overflow: "hidden", boxSizing: "content-box" }}
+        style={{ padding: "8px 0 16px", overflow: "hidden", boxSizing: "content-box" }}
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
@@ -214,91 +256,30 @@ export default function ArticlesCarousel() {
           ))}
         </div>
       </div>
+      </div>
 
-      {/* Controls */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, marginTop: 36 }}>
-        <button
-          onClick={prev}
-          aria-label="Previous"
-          style={{
-            background: "none",
-            border: "1px solid #c58d92",
-            borderRadius: "50%",
-            width: 40,
-            height: 40,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            color: "#7f2028",
-          }}
-        >
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </button>
-
-        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          {ARTICLES.map((_, i) => {
-            const normalizedPos = (((pos - START) % ARTICLES.length) + ARTICLES.length) % ARTICLES.length;
-            return (
-              <button
-                key={i}
-                onClick={() => slideTo(START + i)}
-                aria-label={`Slide ${i + 1}`}
-                style={{
-                  background: normalizedPos === i ? "#7f2028" : "#d2b2b4",
-                  border: "none",
-                  borderRadius: 2,
-                  width: normalizedPos === i ? 24 : 8,
-                  height: 4,
-                  cursor: "pointer",
-                  padding: 0,
-                  transition: "width 0.3s ease, background 0.3s ease",
-                }}
-              />
-            );
-          })}
-        </div>
-
-        <button
-          onClick={next}
-          aria-label="Next"
-          style={{
-            background: "none",
-            border: "1px solid #c58d92",
-            borderRadius: "50%",
-            width: 40,
-            height: 40,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            color: "#7f2028",
-          }}
-        >
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </button>
+      {/* Position dots */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 28 }}>
+        {ARTICLES.map((_, i) => {
+          const normalizedPos = (((pos - START) % ARTICLES.length) + ARTICLES.length) % ARTICLES.length;
+          return (
+            <button
+              key={i}
+              onClick={() => slideTo(START + i)}
+              aria-label={`Slide ${i + 1}`}
+              style={{
+                background: normalizedPos === i ? "#1B3A6B" : "#c9cfd9",
+                border: "none",
+                borderRadius: 2,
+                width: normalizedPos === i ? 24 : 8,
+                height: 4,
+                cursor: "pointer",
+                padding: 0,
+                transition: "width 0.3s ease, background 0.3s ease",
+              }}
+            />
+          );
+        })}
       </div>
     </section>
   );
