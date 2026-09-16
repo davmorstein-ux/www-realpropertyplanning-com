@@ -3084,6 +3084,16 @@ main h3 a.rpp-heading-link {
   line-height: inherit !important;
 }
 
+/* 4b. Large call-to-action links (AFHRunTheNumbers) — exempt from the
+   16px link floor and the red link colour; the component sets its own. */
+main a.rpp-btn-link {
+  font-size: 20px !important;
+}
+main a.rpp-btn-link:hover,
+main a.rpp-btn-link:focus-visible {
+  filter: brightness(1.12);
+}
+
 /* 4c. AFH directory pills and city links — hover feedback.
    Pills invert (green fill, white text); city names turn green. */
 main a.rpp-county-pill {

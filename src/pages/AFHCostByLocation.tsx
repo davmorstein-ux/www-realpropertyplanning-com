@@ -78,7 +78,7 @@ const CostByLocation = () => {
             <div className="max-w-3xl mx-auto">
               <AFHRunTheNumbers
                 county="King"
-                heading="Buying or selling a home, not placing a parent? Model the revenue"
+                heading="Buying or selling a home?"
               />
             </div>
           </div>

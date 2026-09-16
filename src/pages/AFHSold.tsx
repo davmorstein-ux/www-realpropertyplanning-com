@@ -236,7 +236,7 @@ const AFHSold = () => {
               <AFHRunTheNumbers
                 county="King"
                 lead="both"
-                heading="Turn a comp into a value: what the revenue behind these sales looks like"
+                heading="What is behind these prices?"
               />
             </div>
           </div>

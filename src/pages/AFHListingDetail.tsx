@@ -159,7 +159,7 @@ const AFHListingDetail = () => {
                   county={cityPageByCity(listing.city)?.county ?? facility?.address.county ?? "King"}
                   beds={facility?.licensedBeds ?? null}
                   lead={listing.marketStatus === "sold" ? "both" : "buyer"}
-                  heading={`Run the numbers on this ${listing.city} home`}
+                  heading="Run the numbers on this home"
                 />
               </div>
               <div className="max-w-3xl">
