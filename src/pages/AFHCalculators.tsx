@@ -38,8 +38,8 @@ const TILES: Tile[] = [
   },
   {
     to: "/afh-club/cost-by-location",
-    img: "/afh-cube-buying.webp",
-    alt: "AFH cost by city and county",
+    img: "/afh-cost-by-location-cover.webp",
+    alt: "AFH Cost by City & County — Medicaid rates, private pay, licensed homes",
     pill: "For families",
     title: "AFH Cost by Location",
     desc: "Type a city or county and see the DSHS Medicaid rate range, typical private-pay range, and how many licensed homes there accept Medicaid.",
