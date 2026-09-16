@@ -41,9 +41,22 @@ const AFHRevenueBuilder = ({
   onApply: (r: RevenueBuildResult) => void;
 }) => {
   const bands = useMemo(() => confirmedPrivatePayBands(), []);
-  const [market, setMarket] = useState(defaultMarket);
+  // A listing, city page, or sold page can open this pre-filled: ?market=king-eastside&beds=6
+  const fromUrl = useMemo(() => {
+    if (typeof window === "undefined") return { market: null as string | null, beds: null as number | null };
+    const sp = new URLSearchParams(window.location.search);
+    const m = sp.get("market");
+    const b = parseInt(sp.get("beds") ?? "");
+    return { market: m && privatePayBandByMarket(m)?.confirmed ? m : null, beds: b >= 1 && b <= 8 ? b : null };
+  }, []);
+  const initialMarket = fromUrl.market ?? defaultMarket;
+  const typicalIndexFor = (m: string) => {
+    const b = privatePayBandByMarket(m);
+    return Math.max(0, b ? b.tiers.findIndex((t) => /typical|personal|higher-end/i.test(t.label)) : 0);
+  };
+  const [market, setMarket] = useState(initialMarket);
   const [ratePoint, setRatePoint] = useState<RatePoint>("mid");
-  const [beds, setBeds] = useState<Record<string, number>>({ "1": 6 });
+  const [beds, setBeds] = useState<Record<string, number>>({ [String(typicalIndexFor(initialMarket))]: fromUrl.beds ?? 6 });
   const [medicaidBeds, setMedicaidBeds] = useState(0);
   const [occupancy, setOccupancy] = useState(defaultOccupancy);
 
@@ -67,15 +80,8 @@ const AFHRevenueBuilder = ({
 
   const changeMarket = (m: string) => {
     setMarket(m);
-    const next = privatePayBandByMarket(m);
-    if (next) {
-      // Put every private-pay bed on the market's "typical" tier by default.
-      const typicalIdx = Math.max(
-        0,
-        next.tiers.findIndex((t) => /typical|personal|higher-end/i.test(t.label)),
-      );
-      setBeds({ [String(typicalIdx)]: privateBeds || 6 });
-    }
+    // Put every private-pay bed on the market's "typical" tier by default.
+    setBeds({ [String(typicalIndexFor(m))]: privateBeds || 6 });
   };
 
   const inputStyle: React.CSSProperties = {

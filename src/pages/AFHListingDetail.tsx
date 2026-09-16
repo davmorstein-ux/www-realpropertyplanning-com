@@ -22,6 +22,7 @@ import { cityPageByCity } from "@/data/afhCityPages";
 import { cityExists, loadCity } from "@/data/afh/directory";
 import type { AFHFacility } from "@/data/afh/types";
 import { facilityForListing } from "@/data/afhAddressMatch";
+import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 
 const GREEN = "#0a5648";
 
@@ -152,6 +153,15 @@ const AFHListingDetail = () => {
                   </p>
                 </div>
               )}
+              <div className="max-w-3xl">
+                <AFHRunTheNumbers
+                  city={listing.city}
+                  county={cityPageByCity(listing.city)?.county ?? facility?.address.county ?? "King"}
+                  beds={facility?.licensedBeds ?? null}
+                  lead={listing.marketStatus === "sold" ? "both" : "buyer"}
+                  heading={`Run the numbers on this ${listing.city} home`}
+                />
+              </div>
               <div className="max-w-3xl">
                 <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-3">
                   What is — and is not — being sold

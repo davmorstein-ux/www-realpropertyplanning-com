@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import AFHCostByLocationCard from "@/components/AFHCostByLocationCard";
+import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { AFH_MEDICAID_RATES, AFH_RATE_REGION_LABELS, medicaidRange, monthly } from "@/data/afhMedicaidRates";
@@ -63,6 +64,14 @@ const CostByLocation = () => {
 
         <div style={{ background: "#f5f2ec", padding: "2.5rem 1rem 3rem" }}>
           <AFHCostByLocationCard />
+          <div className="container px-5 md:px-8 mt-8">
+            <div className="max-w-3xl mx-auto">
+              <AFHRunTheNumbers
+                county="King"
+                heading="Buying or selling a home, not placing a parent? Model the revenue"
+              />
+            </div>
+          </div>
         </div>
 
         <section className="py-10 md:py-14 bg-cream">

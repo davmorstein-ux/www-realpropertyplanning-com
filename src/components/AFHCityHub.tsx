@@ -12,6 +12,7 @@ import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCa
 import { Link } from "react-router-dom";
 import { cityExists, getCityIndexEntry } from "@/data/afh/directory";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 import { AFH_CITY_PAGES, cityPageBySlug } from "@/data/afhCityPages";
 import { liveListings as allLive, soldListings as allSold } from "@/data/afhListings";
 
@@ -215,6 +216,14 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
                 All adult family home sales in Washington →
               </Link>
             </p>
+          </div>
+        </section>
+
+        <section className="py-8 md:py-10 bg-background">
+          <div className="container px-5 md:px-8">
+            <div className="max-w-3xl mx-auto">
+              <AFHRunTheNumbers city={city} county={county} />
+            </div>
           </div>
         </section>
 

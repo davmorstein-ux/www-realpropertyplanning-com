@@ -24,7 +24,7 @@ const TILES: Tile[] = [
     alt: "AFH ROI Calculator",
     pill: "For buyers & investors",
     title: "AFH ROI Calculator",
-    desc: "Analyze your cash-on-cash return, cap rate, NOI, and monthly cash flow before you buy.",
+    desc: "Build gross revenue from reviewed private-pay and DSHS Medicaid rates for the home's market and bed mix, then see cash-on-cash return, cap rate, NOI, and monthly cash flow before you buy.",
     accent: "blue",
   },
   {
@@ -33,7 +33,7 @@ const TILES: Tile[] = [
     alt: "AFH Valuation Estimator",
     pill: "For sellers",
     title: "AFH Valuation Estimator",
-    desc: "Estimate your AFH business and property value using income capitalization — before you call a broker.",
+    desc: "Estimate your AFH business and property value using income capitalization, with a market-rate revenue builder if you don't have the P&L in front of you — before you call a broker.",
     accent: "green",
   },
   {

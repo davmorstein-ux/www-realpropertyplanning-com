@@ -10,6 +10,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import { soldListings, afhClassification, formatVerifiedDate, latestVerified, listingSlug } from "@/data/afhListings";
 import { soldStats } from "@/data/afhInventoryPrerender";
+import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 
 const GREEN = "#0a5648";
 
@@ -225,6 +226,18 @@ const AFHSold = () => {
                   Adult family homes currently for sale in Washington →
                 </Link>
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-8 md:py-10 bg-cream">
+          <div className="container px-5 md:px-8">
+            <div className="max-w-3xl mx-auto">
+              <AFHRunTheNumbers
+                county="King"
+                lead="both"
+                heading="Turn a comp into a value: what the revenue behind these sales looks like"
+              />
             </div>
           </div>
         </section>
