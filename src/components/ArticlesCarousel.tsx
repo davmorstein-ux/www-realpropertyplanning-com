@@ -27,7 +27,9 @@ const ARTICLES = [
   },
   { title: "Aging in Place With Support", href: "/articles/aging-in-place", img: "/Aging_in_Place_With_Support.webp" },
   { title: "Wills, Trusts, and Other Options", href: "/articles/wills-trusts-other-options", img: "/Wills_Trusts_Other_Options.webp" },
-  { title: "Hospice Care in Washington", href: "/articles/hospice-care-washington", img: "/hospice-care-cover.webp" },
+  // Hospice Care is deliberately NOT in this carousel. The loop puts every
+  // cover in the lead position at some point, and David does not want older
+  // visitors greeted by a hospice cover. It stays in the articles grid (last).
 ];
 
 // Duplicate articles so we always have enough cards ahead to slide into
