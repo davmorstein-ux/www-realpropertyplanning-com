@@ -8,7 +8,7 @@ import {
   monthly,
   rateRegionForCounty,
 } from "@/data/afhMedicaidRates";
-import { privatePayBandForCounty } from "@/data/afhPrivatePayRanges";
+import { privatePayBandForPlace } from "@/data/afhPrivatePayRanges";
 import { cityPageByCity } from "@/data/afhCityPages";
 
 /**
@@ -89,7 +89,7 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
   const county = picked?.county ?? null;
   const region = county ? rateRegionForCounty(county) : null;
   const range = region ? medicaidRange(region) : null;
-  const band = county ? privatePayBandForCounty(county) : null;
+  const band = county ? privatePayBandForPlace(picked?.kind === "city" ? picked.label.split(" (")[0] : null, county) : null;
   const checked = county ? countiesChecked.find((c) => c.county.toLowerCase() === county.toLowerCase()) : null;
   const countyCities = county ? countyIndex.filter((c) => (c.counties ?? [c.county]).some((n) => n.toLowerCase() === county.toLowerCase())) : [];
   const privatePayOnly = countyCities.reduce((s, c) => s + c.privatePay, 0);
@@ -248,12 +248,12 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
                     income toward that cost and keeps a personal needs allowance, so a family's out-of-pocket under
                     Medicaid is usually the resident's income, not the rate.
                     {band.confirmed
-                      ? ` The private-pay range is the typical rate for a private room with moderate care in ${band.label}, from David Stein's brokerage and appraisal experience with operating homes (reviewed ${reviewedLabel(band.reviewed)}). Lighter care runs below it and heavy-care or specialty needs run well above it; each home sets its own rate.`
+                      ? ` The private-pay figure is per resident, not the home's total revenue: the typical monthly rate for a private room with moderate care in ${band.label}, from David Stein's brokerage and appraisal experience with operating homes (reviewed ${reviewedLabel(band.reviewed)}). Lighter care runs below it and heavy-care or specialty needs run well above it; each home sets its own rate.${band.note ? " " + band.note : ""}`
                       : ""}
                   </p>
                   {band.confirmed && band.tiers.length > 0 && (
                     <details style={{ marginTop: 12 }} open>
-                      <summary style={{ cursor: "pointer", color: GREEN, fontWeight: 700, fontSize: 15 }}>Private pay by care level in {band.label}</summary>
+                      <summary style={{ cursor: "pointer", color: GREEN, fontWeight: 700, fontSize: 15 }}>Private pay by care level, {band.label}</summary>
                       <table style={{ width: "100%", fontSize: 15, marginTop: 8, borderCollapse: "collapse" }}>
                         <thead>
                           <tr style={{ textAlign: "left", borderBottom: "2px solid #dccdce" }}>

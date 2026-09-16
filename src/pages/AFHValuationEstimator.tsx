@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
 
 const GREEN = "#1a7a4a";
 const GREEN_LIGHT = "#2ecc71";
@@ -320,6 +321,22 @@ const AFHValuationEstimator = () => {
                 <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
               </div>
               <div style={dividerStyle} />
+              <AFHRevenueBuilder
+                accent={GREEN}
+                onApply={(r) => {
+                  const rev = document.getElementById("v-rev") as HTMLInputElement | null;
+                  const cap = document.getElementById("v-cap") as HTMLSelectElement | null;
+                  const occ = document.getElementById("v-occ") as HTMLSelectElement | null;
+                  if (rev) rev.value = String(Math.round(r.annualOccupied));
+                  if (cap && r.beds >= 3 && r.beds <= 8) cap.value = String(r.beds);
+                  if (occ) {
+                    const opts = Array.from(occ.options).map((o) => parseInt(o.value));
+                    const nearest = opts.reduce((best, v) => (Math.abs(v - r.occupancy) < Math.abs(best - r.occupancy) ? v : best), opts[0]);
+                    occ.value = String(nearest);
+                  }
+                  rev?.scrollIntoView({ behavior: "smooth", block: "center" });
+                }}
+              />
               {/* 2-col → 1-col mobile */}
               <div
                 className="val-grid2"

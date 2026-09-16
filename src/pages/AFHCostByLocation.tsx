@@ -26,7 +26,12 @@ const FAQS = [
   {
     question: "Where do the private-pay ranges come from?",
     answer:
-      "There is no public dataset of private-pay AFH rates in Washington. The ranges shown are working bands from David Stein's brokerage and appraisal experience with operating homes, reviewed on the date shown. Individual homes quote their own rates, and memory care or heavy-care needs sit above the top of any band.",
+      "There is no public dataset of private-pay AFH rates in Washington. The ranges shown are working bands from David Stein's brokerage and appraisal experience with operating homes, reviewed on the date shown, and they are per resident per month, not the home's total revenue. Individual homes quote their own rates, and memory care or heavy-care needs sit above the top of any band.",
+  },
+  {
+    question: "Why does King County show different numbers for different cities?",
+    answer:
+      "King County has the widest private-pay spread in the state. South King (Kent, Federal Way, Renton, Auburn) sits below the county average, the Eastside (Bellevue, Kirkland, Redmond, Issaquah, Bothell) sits above it, and Mercer Island, Medina, and Clyde Hill are a premium market of their own. Typing a city shows its submarket; typing 'King' shows the countywide band.",
   },
   {
     question: "Does a cheaper county mean a cheaper home?",

@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
 
 const BLUE = "#b62733";
 const BLUE_LIGHT = "#dc5964";
@@ -456,19 +457,28 @@ const AFHROICalculator = () => {
                 <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${BLUE}30,transparent)` }} />
               </div>
               <div style={DV} />
+              <AFHRevenueBuilder
+                accent={BLUE}
+                onApply={(r) => {
+                  const rev = document.getElementById("r-rev") as HTMLInputElement | null;
+                  const cap = document.getElementById("r-cap") as HTMLSelectElement | null;
+                  const occ = document.getElementById("r-occ") as HTMLInputElement | null;
+                  if (rev) rev.value = String(Math.round(r.annualFull));
+                  if (cap && r.beds >= 1 && r.beds <= 8) cap.value = String(r.beds);
+                  if (occ) occ.value = String(r.occupancy);
+                  rev?.scrollIntoView({ behavior: "smooth", block: "center" });
+                }}
+              />
               <div
                 className="roi-grid2"
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
               >
                 <div>
-                  <label style={LS} htmlFor="r-rev">Annual gross revenue ($)</label>
+                  <label style={LS} htmlFor="r-rev">Annual gross revenue at full occupancy ($)</label>
                   <input type="number" id="r-rev" placeholder="288000" style={IS} />
                   <div style={{ fontSize: 13, color: "#4b4744", marginTop: 6, lineHeight: 1.4 }}>
-                    Modelling Medicaid beds? The DSHS daily rate by county and care level is in the{" "}
-                    <Link to="/afh-club/cost-by-location" style={{ color: BLUE, fontWeight: 700 }}>
-                      cost-by-location lookup
-                    </Link>
-                    .
+                    Occupancy below is applied to this figure. Use the builder above, or type the actual P&amp;L
+                    number from the seller.
                   </div>
                 </div>
                 <div>
