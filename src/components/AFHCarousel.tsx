@@ -48,7 +48,7 @@ const DEFAULT_TOPICS = [
   {
     title: "AFH Calculators",
     href: "/afh-club/calculators",
-    img: "/afh-calculators-cover-v2.webp",
+    img: "/afh-calculators-cover-v3.webp",
     placeholder: "#433d37",
   },
 ];
