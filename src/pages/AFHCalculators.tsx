@@ -38,7 +38,7 @@ const TILES: Tile[] = [
   },
   {
     to: "/afh-club/cost-by-location",
-    img: "/afh-cost-by-location-cover-v2.webp",
+    img: "/afh-cost-by-location-cover-v3.webp",
     alt: "AFH Cost by City & County — Medicaid rates, private pay, licensed homes",
     pill: "For families",
     title: "AFH Cost by Location",
