@@ -482,7 +482,7 @@ const PAGE_CSS = `
 `;
 
 const CATEGORY_META = [
-  { key: "resources", href: "/afh-club/resources", img: "/afh-resources-v2.webp", placeholder: "#3f3a35" },
+  { key: "resources", href: "/afh-club/resources", img: "/afh-resources-v3.webp", placeholder: "#3f3a35" },
   { key: "listings", href: "/afh-club/listings", img: "/afh-listings.webp", placeholder: "#3e3934" },
   {
     key: "management",
