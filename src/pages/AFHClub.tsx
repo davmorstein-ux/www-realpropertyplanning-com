@@ -487,7 +487,7 @@ const CATEGORY_META = [
   {
     key: "management",
     href: "/afh-club/management-companies",
-    img: "/afh-management-companies.webp",
+    img: "/afh-management-companies-v2.webp",
     placeholder: "#3c3732",
   },
   { key: "broker", href: "/afh-club/real-estate-broker", img: "/afh-real-estate-broker-v3.webp", placeholder: "#3a3530" },
