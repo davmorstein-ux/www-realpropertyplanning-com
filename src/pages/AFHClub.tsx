@@ -490,7 +490,7 @@ const CATEGORY_META = [
     img: "/afh-management-companies.webp",
     placeholder: "#3c3732",
   },
-  { key: "broker", href: "/afh-club/real-estate-broker", img: "/afh-real-estate-broker.webp", placeholder: "#3a3530" },
+  { key: "broker", href: "/afh-club/real-estate-broker", img: "/afh-real-estate-broker-v2.webp", placeholder: "#3a3530" },
   {
     key: "calculators",
     href: "/afh-club/calculators",
