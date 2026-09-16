@@ -369,35 +369,32 @@ const PAGE_CSS = `
   .rpp-afh-lane-row {
     display: block;
   }
-  .rpp-afh-cube {
-    position: relative;
-    width: 100%;
-    max-width: 172px;
-    /* Matches the files (620x515), so each cell reserves its space before the
-       images arrive and the grid does not reflow as they load. */
-    aspect-ratio: 620 / 515;
-    margin: 0 0 12px -10px;
-  }
   .rpp-afh-cube-img {
     display: block;
-    position: absolute;
-    inset: 0;
     width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease;
+    max-width: 172px;
+    height: auto;
+    /* Matches the files (620x515), so each cell reserves its space before the
+       image arrives and the grid does not reflow as six lazy images load. */
+    aspect-ratio: 620 / 515;
+    margin: 0 0 12px -10px;
+    /* Hover: a plain lift. A 3D tilt was tried first (Sept 2026) and
+       skewed the isometric artwork into an odd shape — David said the cubes
+       looked "frightened". No rotation; just rise and grow slightly. */
+    transform-origin: 50% 85%;
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.45s ease;
+    will-change: transform;
+    backface-visibility: hidden;
   }
-  /* Rest state: angled cube showing, front cube hidden. Hover anywhere in
-     the cell (or keyboard focus inside it) crossfades to the square-on
-     render — the cube appears to turn to face the reader. A CSS 3D tilt
-     was tried first (Sept 2026) and warped the isometric artwork; this
-     swap between two true renders is what replaced it. */
-  .rpp-afh-cube-img.is-front { opacity: 0; }
-  .rpp-afh-lane-row:hover .rpp-afh-cube-img.is-front,
-  .rpp-afh-lane-row:focus-within .rpp-afh-cube-img.is-front { opacity: 1; }
-  .rpp-afh-lane-row:hover .rpp-afh-cube-img.is-angled,
-  .rpp-afh-lane-row:focus-within .rpp-afh-cube-img.is-angled { opacity: 0; }
+  .rpp-afh-lane-row:hover .rpp-afh-cube-img,
+  .rpp-afh-lane-row:focus-within .rpp-afh-cube-img {
+    transform: translateY(-8px) scale(1.05);
+    filter: drop-shadow(0 14px 14px rgba(10, 22, 40, 0.22));
+  }
   @media (prefers-reduced-motion: reduce) {
     .rpp-afh-cube-img { transition: none; }
+    .rpp-afh-lane-row:hover .rpp-afh-cube-img,
+    .rpp-afh-lane-row:focus-within .rpp-afh-cube-img { transform: none; }
   }
   /* Titles are baked into the artwork, so the heading is carried here for
      assistive tech and search rather than painted. Not display:none, which
@@ -427,7 +424,7 @@ const PAGE_CSS = `
   }
   @media (max-width: 560px) {
     .rpp-afh-lane-list { grid-template-columns: minmax(0, 1fr); gap: 26px; }
-    .rpp-afh-cube { max-width: 140px; }
+    .rpp-afh-cube-img { max-width: 140px; }
     .rpp-afh-lane-row p { font-size: 17px !important; }
   }
 
@@ -669,32 +666,16 @@ const AFHClub = () => {
                 },
               ].map((lane) => (
                 <div key={lane.title} className="rpp-afh-lane-row">
-                  {/* Two renders of the same cube: angled (rest) and square-on
-                      (hover). A crossfade between real renders reads as the
-                      cube turning to face the reader without warping either
-                      image. Both share the 620x515 canvas and footprint. */}
-                  <div className="rpp-afh-cube">
-                    <img
-                      src={`/afh-cube-${lane.title.toLowerCase()}.webp`}
-                      alt=""
-                      aria-hidden="true"
-                      className="rpp-afh-cube-img is-angled"
-                      width={620}
-                      height={515}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <img
-                      src={`/afh-cube-${lane.title.toLowerCase()}-front.webp`}
-                      alt=""
-                      aria-hidden="true"
-                      className="rpp-afh-cube-img is-front"
-                      width={620}
-                      height={515}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
+                  <img
+                    src={`/afh-cube-${lane.title.toLowerCase()}.webp`}
+                    alt=""
+                    aria-hidden="true"
+                    className="rpp-afh-cube-img"
+                    width={620}
+                    height={515}
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div>
                     <h3 className="rpp-afh-lane-heading">{lane.title}</h3>
                     <p>{lane.body}</p>
