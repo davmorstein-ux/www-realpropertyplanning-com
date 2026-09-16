@@ -494,7 +494,8 @@ const RPPHomeV3 = () => {
                  A filled shape is the strongest signal available and costs one
                  element. Keep it filled.
 
-                 White on #6b1b22 measures 11.63:1, and 14.43:1 on hover — the
+                 Cobalt blue (David, Sept 2026). White on #0047ab measures 8.6:1,
+                 and higher on the darker hover — the
                  label has to survive the global card rule that repaints spans
                  inside rounded cards, hence the !important on colour. */
               .rpp-coc-cta.rpp-coc-cta {
@@ -502,7 +503,7 @@ const RPPHomeV3 = () => {
                 align-items: center;
                 justify-content: center;
                 gap: 8px;
-                background: #6b1b22 !important;
+                background: #0047ab !important;
                 color: #ffffff !important;
                 font-family: 'DM Sans', system-ui, sans-serif;
                 font-size: 19px !important;
@@ -516,12 +517,12 @@ const RPPHomeV3 = () => {
                 text-decoration: none !important;
                 /* Slight lift and a shadow so it reads as a raised control
                    rather than a coloured rectangle. */
-                box-shadow: 0 2px 6px rgba(107, 27, 34, 0.35);
+                box-shadow: 0 2px 6px rgba(0, 71, 171, 0.35);
                 transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
               }
               .rpp-coc-card:hover .rpp-coc-cta.rpp-coc-cta {
-                background: #501419 !important;
-                box-shadow: 0 4px 12px rgba(107, 27, 34, 0.45);
+                background: #003580 !important;
+                box-shadow: 0 4px 12px rgba(0, 71, 171, 0.45);
                 transform: translateY(-1px);
               }
               .rpp-coc-left.rpp-coc-left {
