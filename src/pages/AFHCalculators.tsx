@@ -28,7 +28,7 @@ const TILES: Tile[] = [
   },
   {
     to: "/afh-club/afh-valuation-estimator",
-    img: "/afh-valuation-estimator-cover-v2.webp",
+    img: "/afh-valuation-estimator-cover-v3.webp",
     alt: "AFH Valuation Estimator",
     pill: "For sellers",
     title: "AFH Valuation Estimator",
