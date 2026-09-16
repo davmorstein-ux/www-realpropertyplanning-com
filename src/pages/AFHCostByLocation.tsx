@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -6,11 +5,12 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import AFHCostByLocationCard from "@/components/AFHCostByLocationCard";
 import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
+import BackToCalculators from "@/components/BackToCalculators";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { AFH_MEDICAID_RATES, AFH_RATE_REGION_LABELS, medicaidRange, monthly } from "@/data/afhMedicaidRates";
 
-const GREEN = "#0a5648";
+const ORANGE = "#c2410c";
 const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
 const money2 = (n: number) => "$" + n.toFixed(2);
 
@@ -60,24 +60,19 @@ const CostByLocation = () => {
       />
       <Header />
       <main id="main-content">
-        <div style={{ background: GREEN, padding: "6px 24px 4px" }} />
+        <div style={{ background: ORANGE, padding: "6px 24px 4px" }} />
         <HeroBandTitle as="h1">What It Costs to Live in an Adult Family Home, by City and County</HeroBandTitle>
 
         <div style={{ background: "#f5f2ec", padding: "2rem 1rem 3rem" }}>
           <div style={{ maxWidth: 900, margin: "0 auto 20px" }}>
-            <Link to="/afh-club/calculators" style={{ display: "inline-block" }}>
-              <img
-                src="/back-to-calculators-green-v2.webp"
-                alt="Back to Calculators"
-                style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
-              />
-            </Link>
+            <BackToCalculators accent={ORANGE} />
           </div>
           <AFHCostByLocationCard />
           <div className="container px-5 md:px-8 mt-8">
             <div className="max-w-3xl mx-auto">
               <AFHRunTheNumbers
                 county="King"
+                accent={ORANGE}
                 heading="Buying or selling a home?"
               />
             </div>

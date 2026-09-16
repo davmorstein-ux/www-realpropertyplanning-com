@@ -18,7 +18,7 @@ import { cityPageByCity } from "@/data/afhCityPages";
  * Cost of Care calculator.
  */
 
-const GREEN = "#0a5648";
+const ORANGE = "#c2410c";
 const PS: React.CSSProperties = { marginBottom: 20 };
 const PT: React.CSSProperties = {
   display: "flex",
@@ -27,7 +27,6 @@ const PT: React.CSSProperties = {
   fontSize: 13,
   letterSpacing: ".18em",
   textTransform: "uppercase",
-  color: GREEN,
   fontWeight: 700,
   marginBottom: 6,
 };
@@ -56,7 +55,8 @@ interface Place {
   citySlug?: string;
 }
 
-const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
+const AFHCostByLocationCard = ({ compact = false, accent = ORANGE }: { compact?: boolean; accent?: string }) => {
+  const GREEN = accent;
   const places = useMemo<Place[]>(() => {
     const cities: Place[] = countyIndex.map((c) => ({
       kind: "city",
@@ -115,7 +115,7 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
                 Adult Family Home
               </div>
               <h2 className="coc-card-title" style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0 }}>
-                Cost by <strong className="coc-card-title-accent is-green">City &amp; County</strong>
+                Cost by <strong className="coc-card-title-accent is-orange">City &amp; County</strong>
               </h2>
               <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
                 Medicaid rates · Private pay · Licensed homes
@@ -129,7 +129,7 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
             </p>
 
             <div style={PS}>
-              <div style={PT}>
+              <div style={{ ...PT, color: GREEN }}>
                 Location <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
               </div>
               <div style={DV} />
@@ -213,7 +213,7 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
             {picked && county && region && range && band && (
               <>
                 <div style={PS}>
-                  <div style={PT}>
+                  <div style={{ ...PT, color: GREEN }}>
                     {picked.kind === "city" ? `${picked.label.split(" (")[0]}, ` : ""}
                     {county} County <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
                   </div>
@@ -309,7 +309,7 @@ const AFHCostByLocationCard = ({ compact = false }: { compact?: boolean }) => {
 
                 {checked && (
                   <div style={{ ...PS, marginBottom: 0 }}>
-                    <div style={PT}>
+                    <div style={{ ...PT, color: GREEN }}>
                       Licensed homes here <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
                     </div>
                     <div style={DV} />

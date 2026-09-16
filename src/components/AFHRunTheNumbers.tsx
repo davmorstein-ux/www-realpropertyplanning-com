@@ -28,14 +28,16 @@ interface Props {
   lead?: "buyer" | "seller" | "both";
   /** Override the heading for the page it sits on. */
   heading?: string;
+  /** Accent colour; defaults to AFH Club hunter green. */
+  accent?: string;
 }
 
-const Stat = ({ label, value, sub }: { label: string; value: string; sub: string }) => (
+const Stat = ({ label, value, sub, accent }: { label: string; value: string; sub: string; accent: string }) => (
   <div
     style={{
       flex: "1 1 260px",
       background: "#f5f2ec",
-      border: `2px solid ${GREEN}40`,
+      border: `2px solid ${accent}40`,
       borderRadius: 10,
       padding: "18px 16px",
       textAlign: "center",
@@ -44,19 +46,19 @@ const Stat = ({ label, value, sub }: { label: string; value: string; sub: string
     <div style={{ fontSize: 14, letterSpacing: ".12em", textTransform: "uppercase", color: "#5f6b66", fontWeight: 700, marginBottom: 8 }}>
       {label}
     </div>
-    <div style={{ fontSize: 30, fontWeight: 700, color: GREEN, lineHeight: 1.15 }}>{value}</div>
+    <div style={{ fontSize: 30, fontWeight: 700, color: accent, lineHeight: 1.15 }}>{value}</div>
     <div style={{ fontSize: 18, color: "#302b26", marginTop: 8 }}>{sub}</div>
   </div>
 );
 
-const Btn = ({ to, children }: { to: string; children: ReactNode }) => (
+const Btn = ({ to, accent, children }: { to: string; accent: string; children: ReactNode }) => (
   <Link
     to={to}
     className="rpp-link-large rpp-filled no-underline"
     style={{
-      ["--rpp-fill" as string]: GREEN,
+      ["--rpp-fill" as string]: accent,
       display: "block",
-      background: GREEN,
+      background: accent,
       color: "#ffffff",
       textAlign: "center",
       padding: "16px 20px",
@@ -70,7 +72,7 @@ const Btn = ({ to, children }: { to: string; children: ReactNode }) => (
   </Link>
 );
 
-const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading }: Props) => {
+const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading, accent = GREEN }: Props) => {
   const band = privatePayBandForPlace(city, county);
   const region = rateRegionForCounty(county);
   const med = medicaidRange(region);
@@ -84,13 +86,13 @@ const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading }: Props)
     <div
       style={{
         background: "#ffffff",
-        border: `2px solid ${GREEN}40`,
+        border: `2px solid ${accent}40`,
         borderRadius: 14,
         padding: "28px 24px",
         boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
       }}
     >
-      <div style={{ fontSize: 14, letterSpacing: ".2em", textTransform: "uppercase", color: GREEN, fontWeight: 700, marginBottom: 8 }}>
+      <div style={{ fontSize: 14, letterSpacing: ".2em", textTransform: "uppercase", color: accent, fontWeight: 700, marginBottom: 8 }}>
         Run the numbers
       </div>
       <h2 style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: "0 0 20px", lineHeight: 1.25 }}>
@@ -99,11 +101,13 @@ const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading }: Props)
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginBottom: 18 }}>
         <Stat
+          accent={accent}
           label="Private pay"
           value={band.confirmed ? `${money(band.low)} – ${money(band.high)}` : "Not yet published"}
           sub={band.confirmed ? "per resident, per month" : "ask each home for its rate sheet"}
         />
         <Stat
+          accent={accent}
           label="Medicaid (DSHS)"
           value={`${money(monthly(med.minDaily))} – ${money(monthly(med.maxDaily))}`}
           sub="per resident, per month"
@@ -118,12 +122,12 @@ const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading }: Props)
       </p>
 
       <div style={{ display: "grid", gap: 12 }}>
-        {lead !== "seller" && <Btn to={`/afh-club/afh-roi-calculator${q}`}>Buying? See your return</Btn>}
-        {lead !== "buyer" && <Btn to={`/afh-club/afh-valuation-estimator${q}`}>Selling? See what it's worth</Btn>}
+        {lead !== "seller" && <Btn accent={accent} to={`/afh-club/afh-roi-calculator${q}`}>Buying? See your return</Btn>}
+        {lead !== "buyer" && <Btn accent={accent} to={`/afh-club/afh-valuation-estimator${q}`}>Selling? See what it's worth</Btn>}
       </div>
 
       <p style={{ fontSize: 18, margin: "20px 0 0", textAlign: "center" }}>
-        <Link to="/afh-club/cost-by-location" className="rpp-link-large" style={{ color: GREEN, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 4 }}>
+        <Link to="/afh-club/cost-by-location" className="rpp-link-large" style={{ color: accent, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 4 }}>
           Look up rates for any city or county
         </Link>
       </p>

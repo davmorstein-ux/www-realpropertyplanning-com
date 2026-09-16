@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
+import BackToCalculators from "@/components/BackToCalculators";
 
 const GREEN = "#1a7a4a";
 const GREEN_LIGHT = "#2ecc71";
@@ -223,13 +224,9 @@ const AFHValuationEstimator = () => {
         {/* Hero */}
         <div style={{ background: "#f5f2ec", padding: "48px 24px 40px", borderBottom: `3px solid ${GREEN}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
-            <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
-              <img
-                src="/back-to-calculators-green-v2.webp"
-                alt="Back to Calculators"
-                style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
-              />
-            </Link>
+            <div style={{ marginBottom: 24 }}>
+              <BackToCalculators accent={GREEN} />
+            </div>
             <p
               style={{
                 fontSize: 13,

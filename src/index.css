@@ -3017,6 +3017,9 @@ main h2.coc-card-title {
   text-wrap: nowrap !important;
   display: block !important;
 }
+main h2.coc-card-title .coc-card-title-accent.is-orange {
+  color: #c2410c !important; /* cost-by-location accent */
+}
 main h2.coc-card-title .coc-card-title-accent.is-green {
   color: #1c9e90 !important; /* the AFH Club teal, lighter than the dark green of "Cost by" */
 }
@@ -3091,6 +3094,7 @@ main h3 a.rpp-heading-link {
    that fill and white text win the cascade. */
 main a.rpp-link-large {
   font-size: 20px !important;
+  font-weight: 700 !important;
 }
 main a.rpp-link-large.rpp-filled,
 main button.rpp-apply-button {

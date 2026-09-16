@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
+import BackToCalculators from "@/components/BackToCalculators";
 
 const BLUE = "#0047ab";
 const BLUE_LIGHT = "#3b7dd8";
@@ -235,13 +236,9 @@ const AFHROICalculator = () => {
         {/* Hero */}
         <div style={{ background: "#f5f2ec", padding: "48px 24px 40px", borderBottom: `3px solid ${BLUE}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto", paddingTop: "var(--header-height, 100px)" }}>
-            <Link to="/afh-club/calculators" style={{ display: "inline-block", marginBottom: 24 }}>
-              <img
-                src="/back-to-calculators-blue-v2.webp"
-                alt="Back to Calculators"
-                style={{ height: 52, width: "auto", display: "block", cursor: "pointer" }}
-              />
-            </Link>
+            <div style={{ marginBottom: 24 }}>
+              <BackToCalculators accent={BLUE} />
+            </div>
             <p
               style={{
                 fontSize: 13,
