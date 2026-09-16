@@ -5,8 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
 
-const BLUE = "#b62733";
-const BLUE_LIGHT = "#dc5964";
+const BLUE = "#0047ab";
+const BLUE_LIGHT = "#3b7dd8";
 
 const AFHROICalculator = () => {
   const calcRef = useRef<HTMLDivElement>(null);
@@ -45,7 +45,7 @@ const AFHROICalculator = () => {
       if (!pBtn || !dBtn) return;
       if (mode === "pct") {
         pBtn.style.cssText =
-          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#b62733;color:#ffffff;outline:none;border-radius:6px 0 0 6px";
+          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#0047ab;color:#ffffff;outline:none;border-radius:6px 0 0 6px";
         dBtn.style.cssText =
           "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#f5f2ec;color:#272421;outline:none;border-radius:0 6px 6px 0";
         if (inp) inp.placeholder = "25";
@@ -54,7 +54,7 @@ const AFHROICalculator = () => {
         else if (inp) inp.value = "";
       } else {
         dBtn.style.cssText =
-          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#b62733;color:#ffffff;outline:none;border-radius:0 6px 6px 0";
+          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#0047ab;color:#ffffff;outline:none;border-radius:0 6px 6px 0";
         pBtn.style.cssText =
           "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#f5f2ec;color:#272421;outline:none;border-radius:6px 0 0 6px";
         if (inp) inp.placeholder = "212500";
@@ -143,10 +143,10 @@ const AFHROICalculator = () => {
             (b) =>
               `<div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
             <span style="font-size:13px;color:#272421;width:150px;flex-shrink:0;font-weight:600">${b.label}</span>
-            <div style="flex:1;height:7px;background:#dfc9cb;border-radius:4px;overflow:hidden">
-              <div class="roi-bar-fill" data-pct="${Math.max(0, b.pct)}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#b62733,#dc5964);transition:width .9s ease"></div>
+            <div style="flex:1;height:7px;background:#d6e2f5;border-radius:4px;overflow:hidden">
+              <div class="roi-bar-fill" data-pct="${Math.max(0, b.pct)}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#0047ab,#3b7dd8);transition:width .9s ease"></div>
             </div>
-            <span style="font-size:13px;color:#b62733;width:70px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
+            <span style="font-size:13px;color:#0047ab;width:70px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
           </div>`,
           )
           .join("");
@@ -171,7 +171,7 @@ const AFHROICalculator = () => {
   const IS: React.CSSProperties = {
     width: "100%",
     background: "#ffffff",
-    border: `1.5px solid #e8c8cb`,
+    border: `1.5px solid #c7d7f0`,
     borderRadius: 6,
     color: "#272421",
     fontSize: 15,
@@ -190,7 +190,7 @@ const AFHROICalculator = () => {
     fontWeight: 700,
   };
   const PS: React.CSSProperties = {
-    border: `1px solid #e8c8cb`,
+    border: `1px solid #c7d7f0`,
     borderRadius: 10,
     padding: "1.25rem 1.4rem",
     marginBottom: 14,
@@ -200,7 +200,7 @@ const AFHROICalculator = () => {
     fontSize: 14,
     letterSpacing: ".18em",
     textTransform: "uppercase",
-    color: "#7f1d1d",
+    color: "#003580",
     marginBottom: 14,
     fontWeight: 700,
     display: "flex",
@@ -248,7 +248,7 @@ const AFHROICalculator = () => {
                 fontWeight: 700,
                 letterSpacing: ".15em",
                 textTransform: "uppercase",
-                color: "#6f2a30",
+                color: "#003580",
                 marginBottom: 10,
                 fontFamily: "'DM Sans', system-ui, sans-serif",
               }}

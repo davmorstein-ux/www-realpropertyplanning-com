@@ -50,8 +50,8 @@ const TILES: Tile[] = [
 const accentMap = {
   blue: {
     pillBg: "#dbeafe",
-    pillText: "#ca2b38",
-    link: "#ca2b38",
+    pillText: "#0047ab",
+    link: "#0047ab",
     shadow: "0 24px 48px -16px rgba(29, 78, 216, 0.45)",
   },
   green: {
