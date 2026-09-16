@@ -10,8 +10,8 @@ import { medicaidRange, monthly, rateRegionForCounty } from "@/data/afhMedicaidR
  * builder opens pre-filled.
  *
  * Built for an older audience: two large figures, one short sentence, two big
- * buttons. Nothing under 18px except the eyebrow. Links use `rpp-btn-link`,
- * which index.css exempts from the 16px link floor and the red link colour.
+ * buttons. Nothing under 18px except the eyebrow. Links use `rpp-link-large`
+ * (+ `rpp-filled` for buttons), which index.css sizes at 20px and fills with --rpp-fill.
  */
 
 const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
@@ -52,8 +52,9 @@ const Stat = ({ label, value, sub }: { label: string; value: string; sub: string
 const Btn = ({ to, children }: { to: string; children: ReactNode }) => (
   <Link
     to={to}
-    className="rpp-btn-link"
+    className="rpp-link-large rpp-filled no-underline"
     style={{
+      ["--rpp-fill" as string]: GREEN,
       display: "block",
       background: GREEN,
       color: "#ffffff",
@@ -122,7 +123,7 @@ const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading }: Props)
       </div>
 
       <p style={{ fontSize: 18, margin: "20px 0 0", textAlign: "center" }}>
-        <Link to="/afh-club/cost-by-location" className="rpp-btn-link" style={{ color: GREEN, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 4 }}>
+        <Link to="/afh-club/cost-by-location" className="rpp-link-large" style={{ color: GREEN, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 4 }}>
           Look up rates for any city or county
         </Link>
       </p>

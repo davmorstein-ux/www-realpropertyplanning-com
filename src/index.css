@@ -3084,14 +3084,30 @@ main h3 a.rpp-heading-link {
   line-height: inherit !important;
 }
 
-/* 4b. Large call-to-action links (AFHRunTheNumbers) — exempt from the
-   16px link floor and the red link colour; the component sets its own. */
-main a.rpp-btn-link {
+/* 4b. Large call-to-action links and buttons (AFHRunTheNumbers,
+   AFHRevenueBuilder). Class names deliberately avoid "btn"/"cta" so the
+   maroon global CTA rule does not claim them; each element sets its own
+   fill through the --rpp-fill custom property, and the rules below make
+   that fill and white text win the cascade. */
+main a.rpp-link-large {
   font-size: 20px !important;
 }
-main a.rpp-btn-link:hover,
-main a.rpp-btn-link:focus-visible {
-  filter: brightness(1.12);
+main a.rpp-link-large.rpp-filled,
+main button.rpp-apply-button {
+  background-color: var(--rpp-fill, #0a5648) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+main button.rpp-apply-button {
+  font-size: 19px !important;
+}
+main a.rpp-link-large.rpp-filled:hover,
+main a.rpp-link-large.rpp-filled:focus-visible,
+main button.rpp-apply-button:hover,
+main button.rpp-apply-button:focus-visible {
+  filter: brightness(1.15);
 }
 
 /* 4c. AFH directory pills and city links — hover feedback.

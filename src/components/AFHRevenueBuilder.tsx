@@ -226,13 +226,14 @@ const AFHRevenueBuilder = ({
 
       <button
         type="button"
-        className="rpp-cta-btn"
+        className="rpp-apply-button"
         aria-disabled={totalBeds === 0 || overCap}
         onClick={() => {
           if (totalBeds === 0 || overCap) return;
           onApply({ annualFull, annualOccupied, monthlyFull, beds: totalBeds, occupancy: occ, marketLabel: band.label });
         }}
         style={{
+          ["--rpp-fill" as string]: totalBeds === 0 || overCap ? "#9a948c" : accent,
           width: "100%",
           padding: "14px 20px",
           borderRadius: 8,
