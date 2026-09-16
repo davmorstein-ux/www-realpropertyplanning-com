@@ -393,7 +393,7 @@ const RPPHomeV3 = () => {
                 </a>
 
                 <a
-                  href="/afh-club/cost-by-location"
+                  href="/adult-family-home-costs"
                   className="group block transition-transform duration-200 hover:-translate-y-1"
                   style={{
                     textDecoration: "none",

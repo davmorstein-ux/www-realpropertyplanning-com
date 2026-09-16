@@ -18,7 +18,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/afh-club", label: "AFH Club" },
   { path: "/afh-club/costs-fees", label: "AFH Costs Fees" },
   { path: "/afh-club/sold", label: "AFH Sold Prices Washington" },
-  { path: "/afh-club/cost-by-location", label: "AFH Cost by City and County Washington" },
+  { path: "/adult-family-home-costs", label: "AFH Cost by City and County Washington" },
   { path: "/articles/hospice-care-washington", label: "Hospice Care in Washington" },
   { path: "/afh-club/for-sale/tacoma-wa", label: "AFH For Sale Tacoma WA" },
   { path: "/afh-club/for-sale/kent-wa", label: "AFH For Sale Kent WA" },

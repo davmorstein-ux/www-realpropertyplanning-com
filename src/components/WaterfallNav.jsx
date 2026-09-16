@@ -46,7 +46,7 @@ const CATEGORIES = [
     color: "#1d7239",
     items: [
       { name: "Adult Family Home Directory", href: "/afh-club/homes" },
-      { name: "AFH Cost by City & County", href: "/afh-club/cost-by-location" },
+      { name: "Adult Family Home Costs by City & County", href: "/adult-family-home-costs" },
       { name: "Hospice Care", href: "/articles/hospice-care-washington" },
       { name: "Senior Living Advisors", href: "/senior-living-advisors" },
       { name: "Senior Move Managers", href: "/senior-move-managers" },
@@ -97,7 +97,6 @@ const CATEGORIES = [
       { name: "AFH Club", href: "/afh-club" },
       { name: "Licensed AFH Directory", href: "/afh-club/homes" },
       { name: "AFH Calculators", href: "/afh-club/calculators" },
-      { name: "AFH Cost by City & County", href: "/afh-club/cost-by-location" },
       { name: "Selling Your AFH at Retirement", href: "/afh-club/selling-your-business-at-retirement" },
       { name: "Cost of Care Calculator", href: "/cost-of-care-calculator" },
       { name: "Find a Professional", href: "/resources" },

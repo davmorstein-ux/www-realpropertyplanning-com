@@ -3017,9 +3017,6 @@ main h2.coc-card-title {
   text-wrap: nowrap !important;
   display: block !important;
 }
-main h2.coc-card-title .coc-card-title-accent.is-orange {
-  color: #c2410c !important; /* cost-by-location accent */
-}
 main h2.coc-card-title .coc-card-title-accent.is-green {
   color: #1c9e90 !important; /* the AFH Club teal, lighter than the dark green of "Cost by" */
 }

@@ -249,7 +249,7 @@ const AFHRevenueBuilder = ({
         Private-pay ranges are David Stein's working bands from brokerage and appraisal experience (reviewed September
         2026); Medicaid rates are the DSHS schedule effective July 1, 2026. You can still type your own gross revenue
         below if you have the actual P&amp;L.{" "}
-        <Link to="/afh-club/cost-by-location" style={{ color: accent, fontWeight: 700 }}>
+        <Link to="/adult-family-home-costs" style={{ color: accent, fontWeight: 700 }}>
           See the full rate lookup by city and county
         </Link>
         .

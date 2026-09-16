@@ -127,7 +127,7 @@ const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading, accent =
       </div>
 
       <p style={{ fontSize: 18, margin: "20px 0 0", textAlign: "center" }}>
-        <Link to="/afh-club/cost-by-location" className="rpp-link-large" style={{ color: accent, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 4 }}>
+        <Link to="/adult-family-home-costs" className="rpp-link-large" style={{ color: accent, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 4 }}>
           Look up rates for any city or county
         </Link>
       </p>

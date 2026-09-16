@@ -1226,7 +1226,9 @@ const App = () => (
           <Route path="/afh-club/calculators" element={<AFHCalculators />} />
           <Route path="/afh-club/afh-roi-calculator" element={<AFHROICalculator />} />
           <Route path="/afh-club/afh-valuation-estimator" element={<AFHValuationEstimator />} />
-          <Route path="/afh-club/cost-by-location" element={<AFHCostByLocation />} />
+          {/* Family-facing tool: lives on the senior-housing side, not AFH Club (moved Sept 2026). */}
+          <Route path="/adult-family-home-costs" element={<AFHCostByLocation />} />
+          <Route path="/afh-club/cost-by-location" element={<Navigate to="/adult-family-home-costs" replace />} />
           <Route path="/afh-club/resources" element={<AFHResources />} />
           <Route path="/afh-club/ownership-structure" element={<AFHOwnershipStructure />} />
           <Route path="/afh-club/what-is-an-adult-family-home" element={<AFHWhatIsAnAFH />} />

@@ -14,11 +14,11 @@ import { cityPageByCity } from "@/data/afhCityPages";
 /**
  * The city/county cost lookup as a self-contained card, in the same idiom as
  * the ROI and valuation calculators. Rendered on its own page
- * (/afh-club/cost-by-location) and embedded under the Adult Family Home
+ * (/adult-family-home-costs) and embedded under the Adult Family Home
  * Cost of Care calculator.
  */
 
-const ORANGE = "#c2410c";
+const DEFAULT_ACCENT = "#0f6b56";
 const PS: React.CSSProperties = { marginBottom: 20 };
 const PT: React.CSSProperties = {
   display: "flex",
@@ -55,7 +55,7 @@ interface Place {
   citySlug?: string;
 }
 
-const AFHCostByLocationCard = ({ compact = false, accent = ORANGE }: { compact?: boolean; accent?: string }) => {
+const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { compact?: boolean; accent?: string }) => {
   const GREEN = accent;
   const places = useMemo<Place[]>(() => {
     const cities: Place[] = countyIndex.map((c) => ({
@@ -115,7 +115,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = ORANGE }: { compact?:
                 Adult Family Home
               </div>
               <h2 className="coc-card-title" style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0 }}>
-                Cost by <strong className="coc-card-title-accent is-orange">City &amp; County</strong>
+                Cost by <strong className="coc-card-title-accent is-green">City &amp; County</strong>
               </h2>
               <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
                 Medicaid rates · Private pay · Licensed homes

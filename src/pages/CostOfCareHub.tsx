@@ -96,7 +96,7 @@ const CostOfCareHub = () => (
                 Medicaid rate range, private-pay range, and licensed homes for any Washington city or county.
               </p>
               <Link
-                to="/afh-club/cost-by-location"
+                to="/adult-family-home-costs"
                 className="no-underline"
                 style={{
                   flex: "0 0 auto",

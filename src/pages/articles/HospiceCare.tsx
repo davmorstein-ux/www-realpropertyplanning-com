@@ -26,7 +26,7 @@ const CANONICAL = "https://realpropertyplanning.com/articles/hospice-care-washin
 const relatedResources = [
   { title: "Adult Family Homes", href: "/senior-living/adult-family-homes" },
   { title: "Licensed Adult Family Home Directory", href: "/afh-club/homes" },
-  { title: "AFH Cost by City & County", href: "/afh-club/cost-by-location" },
+  { title: "AFH Cost by City & County", href: "/adult-family-home-costs" },
   { title: "Cost of Care Calculators", href: "/cost-of-care-calculator" },
   { title: "Assisted Living", href: "/senior-living/assisted-living" },
   { title: "Memory Care", href: "/senior-living/memory-care" },
@@ -245,7 +245,7 @@ const HospiceCare = () => {
                 </Link>
                 , by city and county, with capacity, specialty designations, and Medicaid status. For what a home costs in
                 a given place, the{" "}
-                <Link to="/afh-club/cost-by-location" className={inlineLink}>
+                <Link to="/adult-family-home-costs" className={inlineLink}>
                   cost-by-location lookup
                 </Link>{" "}
                 shows the Medicaid rate range and licensed-home counts for any Washington city or county.

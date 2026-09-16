@@ -167,7 +167,7 @@ const Footer = () => {
             <Link to="/afh-club/homes" className="rpp-footer-link">
               Adult Family Home Directory
             </Link>
-            <Link to="/afh-club/cost-by-location" className="rpp-footer-link">
+            <Link to="/adult-family-home-costs" className="rpp-footer-link">
               AFH Cost by City &amp; County
             </Link>
             {/* The primary nav reaches this page as "Find a Professional".

@@ -85,7 +85,7 @@ const CountyDirectory = () => {
                   private-pay range, and how many homes there accept Medicaid.
                 </p>
                 <Link
-                  to="/afh-club/cost-by-location"
+                  to="/adult-family-home-costs"
                   className="no-underline"
                   style={{
                     flex: "0 0 auto",

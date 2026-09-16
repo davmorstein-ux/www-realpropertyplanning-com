@@ -78,7 +78,7 @@ const CountyHomes = () => {
                   </p>
                   <p>Choose a city to see every licensed home in it, with capacity, specialty designations, Medicaid status, and a link to its DSHS inspection record.</p>
                   <p>
-                    <Link to="/afh-club/cost-by-location" className="text-accent underline underline-offset-4 font-semibold">
+                    <Link to="/adult-family-home-costs" className="text-accent underline underline-offset-4 font-semibold">
                       What does an adult family home cost in {checked.county} County? →
                     </Link>
                   </p>
