@@ -120,7 +120,10 @@ const AFHFinancingCalculator = () => {
   const debtService = pi + taxIns;
   const needNOI = debtService * dscr;
 
-  const rows = useMemo(() => {
+  // Computed on every render: cheap, and it guarantees the table and chart
+  // follow every input (a memo with a missed dependency here once left the
+  // chart looking frozen).
+  const rows = (() => {
     const out = [];
     const from = Math.max(1, beds - 3);
     for (let n = from; n <= beds; n++) {
@@ -132,18 +135,15 @@ const AFHFinancingCalculator = () => {
       out.push({ n, gross, noi, ratio, ok: ratio >= dscr, cash: noi - debtService, maxPrice });
     }
     return out;
-  }, [beds, bedRates, fixed, variable, wages, debtService, dscr, taxIns, loanRate, term, down]); // eslint-disable-line react-hooks/exhaustive-deps
+  })();
 
-  // Price sensitivity: 7 prices centred on the entered total
-  const grid = useMemo(() => {
-    const step = 100000;
-    const start = Math.max(step, Math.round(total / step) * step - 3 * step);
-    const prices = Array.from({ length: 7 }, (_, i) => start + i * step);
-    return prices.map((p) => {
-      const ds = annualPI(p * (1 - down / 100), loanRate / 100, term) + taxIns;
-      return { p, ratios: rows.map((r) => (ds > 0 ? r.noi / ds : 0)) };
-    });
-  }, [total, down, loanRate, term, taxIns, rows]);
+  // Price sensitivity: 7 prices in $100K steps, centred on the entered total
+  const gridStep = 100000;
+  const gridStart = Math.max(gridStep, Math.round(total / gridStep) * gridStep - 3 * gridStep);
+  const grid = Array.from({ length: 7 }, (_, i) => gridStart + i * gridStep).map((p) => {
+    const ds = annualPI(p * (1 - down / 100), loanRate / 100, term) + taxIns;
+    return { p, ratios: rows.map((r) => (ds > 0 ? r.noi / ds : 0)) };
+  });
 
   const fmtIn = (v: number) => (Number.isFinite(v) ? v : 0);
   const num = (setter: (v: number) => void) => (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -195,10 +195,11 @@ const AFHFinancingCalculator = () => {
   );
 
   // Chart geometry (inline SVG, responsive via viewBox)
-  const W = 760, H = 300, PL = 56, PR = 16, PT = 20, PB = 46;
+  const W = 760, H = 320, PL = 60, PR = 84, PT = 24, PB = 50;
   const yMax = Math.max(2, dscr * 1.2, ...grid.flatMap((g) => g.ratios));
   const x = (i: number) => PL + (i / (grid.length - 1)) * (W - PL - PR);
-  const y = (v: number) => PT + (1 - Math.min(v, yMax) / yMax) * (H - PT - PB);
+  const y = (v: number) => PT + (1 - Math.min(Math.max(v, 0), yMax) / yMax) * (H - PT - PB);
+  const xPrice = (p: number) => PL + ((p - grid[0].p) / (grid[grid.length - 1].p - grid[0].p)) * (W - PL - PR);
   const seriesColors = ["#6b7280", "#d97706", "#0f766e", "#1B3A6B"];
 
   return (
@@ -412,7 +413,7 @@ const AFHFinancingCalculator = () => {
                 </g>
               ))}
               <line x1={PL} x2={W - PR} y1={y(dscr)} y2={y(dscr)} stroke="#b91c1c" strokeWidth="2" strokeDasharray="6 4" />
-              <text x={W - PR} y={y(dscr) - 6} fontSize="12" textAnchor="end" fill="#b91c1c" fontWeight="700">Lender requirement {dscr.toFixed(2)}×</text>
+              <text x={W - PR} y={y(dscr) - 7} fontSize="13" textAnchor="end" fill="#b91c1c" fontWeight="700">Lender requirement {dscr.toFixed(2)}×</text>
               {grid.map((g, i) => (
                 <text key={g.p} x={x(i)} y={H - PB + 18} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">{"$" + (g.p / 1e6).toFixed(2) + "M"}</text>
               ))}
@@ -423,11 +424,17 @@ const AFHFinancingCalculator = () => {
                   <g key={r.n}>
                     <polyline points={pts} fill="none" stroke={col} strokeWidth="4" strokeLinejoin="round" />
                     {grid.map((g, i) => <circle key={i} cx={x(i)} cy={y(g.ratios[si])} r="3.5" fill={col} />)}
-                    <text x={x(grid.length - 1) + 6} y={y(grid[grid.length - 1].ratios[si]) + 4} fontSize="12" fill={col} fontWeight="700">{r.n} beds</text>
+                    <text x={x(grid.length - 1) + 8} y={y(grid[grid.length - 1].ratios[si]) + 5} fontSize="14" fill={col} fontWeight="700">{r.n} beds{r.n === filledCount ? " (today)" : ""}</text>
                   </g>
                 );
               })}
-              <text x={(PL + W - PR) / 2} y={H - 6} fontSize="12" textAnchor="middle" fill="#5f6b66">Total purchase price</text>
+              {total >= grid[0].p && total <= grid[grid.length - 1].p && (
+                <g>
+                  <line x1={xPrice(total)} x2={xPrice(total)} y1={PT} y2={H - PB} stroke="#1B3A6B" strokeWidth="2" strokeDasharray="3 3" />
+                  <text x={xPrice(total)} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="middle" fill="#1B3A6B">Your price {money(total)}</text>
+                </g>
+              )}
+              <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">Total purchase price</text>
             </svg>
             <p style={{ fontSize: 18, color: "#141210", lineHeight: 1.6, margin: "12px 0 0" }}>
               Each line is one occupancy level. Where a line sits above the dashed requirement, a lender can approve that price. The chart re-centres on the price you enter.
