@@ -35,6 +35,15 @@ const TILES: Tile[] = [
     desc: "Estimate your AFH business and property value using income capitalization, with a market-rate revenue builder if you don't have the P&L in front of you — before you call a broker.",
     accent: "green",
   },
+  {
+    to: "/afh-club/afh-financing-calculator",
+    img: "/afh-costs-fees.webp",
+    alt: "AFH Occupancy & Financing Calculator — can a buyer get the loan at this price and occupancy?",
+    pill: "For sellers & buyers",
+    title: "Occupancy & Financing Calculator",
+    desc: "At this price, with this many residents, can a buyer get the loan? See how each empty bed changes the lender's answer, with a price-sensitivity chart.",
+    accent: "blue",
+  },
 ];
 
 const accentMap = {
