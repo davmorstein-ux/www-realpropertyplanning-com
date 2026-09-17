@@ -37,7 +37,7 @@ const TILES: Tile[] = [
   },
   {
     to: "/afh-club/afh-financing-calculator",
-    img: "/afh-costs-fees.webp",
+    img: "/afh-costs-fees-v2.webp",
     alt: "AFH Occupancy & Financing Calculator — can a buyer get the loan at this price and occupancy?",
     pill: "For sellers & buyers",
     title: "Occupancy & Financing Calculator",

@@ -26,7 +26,7 @@ const DEFAULT_TOPICS = [
     img: "/afh-building-inspection.webp",
     placeholder: "#433d38",
   },
-  { title: "Costs & Fees", href: "/afh-club/costs-fees", img: "/afh-costs-fees.webp", placeholder: "#4e4842" },
+  { title: "Costs & Fees", href: "/afh-club/costs-fees", img: "/afh-costs-fees-v2.webp", placeholder: "#4e4842" },
   {
     title: "Buying or Selling an AFH",
     href: "/afh-club/buying-selling",

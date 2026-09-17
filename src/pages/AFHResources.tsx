@@ -62,7 +62,7 @@ const TOPICS = [
   {
     title: "Costs & Fees",
     href: "/afh-club/costs-fees",
-    img: "/afh-costs-fees.webp",
+    img: "/afh-costs-fees-v2.webp",
     description: "Startup costs, licensing fees, and ongoing operating expenses for running an AFH.",
   },
   {
@@ -192,7 +192,7 @@ const AFHResources = () => (
           {
             title: "Costs & Fees",
             href: "/afh-club/costs-fees",
-            img: "/afh-costs-fees.webp",
+            img: "/afh-costs-fees-v2.webp",
             placeholder: "#4e4842",
           },
           {
