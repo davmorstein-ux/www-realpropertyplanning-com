@@ -231,7 +231,7 @@ const AFHFinancingCalculator = () => {
   if (down > 60) warnings.push("Down payment looks too high — enter it as a percentage, e.g. 10.");
 
   // Chart geometry (inline SVG, responsive via viewBox)
-  const W = 760, H = 320, PL = 60, PR = 84, PT = 24, PB = 50;
+  const W = 760, H = 320, PL = 60, PR = 118, PT = 24, PB = 50;
   const yMax = Math.max(2, dscr * 1.2, ...grid.flatMap((g) => g.ratios));
   const x = (i: number) => PL + (i / (grid.length - 1)) * (W - PL - PR);
   const y = (v: number) => PT + (1 - Math.min(Math.max(v, 0), yMax) / yMax) * (H - PT - PB);
@@ -545,31 +545,66 @@ const AFHFinancingCalculator = () => {
               {grid.map((g, i) => (i % 2 === 0 ? (
                 <text key={g.p} x={x(i)} y={H - PB + 18} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">{"$" + (g.p / 1e6).toFixed(1) + "M"}</text>
               ) : null))}
-              {rows.map((r, si) => {
-                const pts = grid.map((g, i) => `${x(i)},${y(g.ratios[si])}`).join(" ");
-                const col = seriesColors[(si + 4 - rows.length) % 4];
-                return (
-                  <g key={r.n}>
-                    <polyline points={pts} fill="none" stroke={col} strokeWidth="4" strokeLinejoin="round" />
-                    <text x={x(grid.length - 1) + 8} y={y(grid[grid.length - 1].ratios[si]) + 5} fontSize="14" fill={col} fontWeight="700">{r.n} beds</text>
-                    {r.n === filledCount && <text x={x(grid.length - 1) + 8} y={y(grid[grid.length - 1].ratios[si]) + 20} fontSize="12" fill={col} fontWeight="700">(today)</text>}
-                  </g>
-                );
-              })}
+              {(() => {
+                // Right-hand labels: start at each line's end, then push apart
+                // (top to bottom) so no two are closer than 18px.
+                const endY = rows.map((_, si) => y(grid[grid.length - 1].ratios[si]));
+                const order = endY.map((v, i) => [v, i] as [number, number]).sort((a, b) => a[0] - b[0]);
+                const placed: number[] = new Array(rows.length);
+                let last = -Infinity;
+                for (const [v, i] of order) {
+                  const yy = Math.max(v, last + 18);
+                  placed[i] = yy;
+                  last = yy;
+                }
+                return rows.map((r, si) => {
+                  const pts = grid.map((g, i) => `${x(i)},${y(g.ratios[si])}`).join(" ");
+                  const col = seriesColors[(si + 4 - rows.length) % 4];
+                  return (
+                    <g key={r.n}>
+                      <polyline points={pts} fill="none" stroke={col} strokeWidth="4" strokeLinejoin="round" />
+                      <text x={x(grid.length - 1) + 8} y={placed[si] + 5} fontSize="14" fill={col} fontWeight="700">
+                        {r.n} beds{r.n === filledCount ? " (today)" : ""}
+                      </text>
+                    </g>
+                  );
+                });
+              })()}
               {inRange && (
                 <g>
                   <line x1={xPrice(priceProperty)} x2={xPrice(priceProperty)} y1={PT} y2={H - PB} stroke="#1B3A6B" strokeWidth="2" strokeDasharray="3 3" />
                   <text x={xPrice(priceProperty)} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="middle" fill="#1B3A6B">Your property price {money(priceProperty)}</text>
-                  {rows.map((r) => {
-                    const v = ratioAt(r.noi, priceProperty);
-                    const ok = v >= dscr;
-                    return (
-                      <g key={r.n}>
-                        <circle cx={xPrice(priceProperty)} cy={y(v)} r="7" fill={ok ? "#15803d" : "#b91c1c"} stroke="#fff" strokeWidth="2" />
-                        <text x={xPrice(priceProperty) + 11} y={y(v) - 8} fontSize="13" fontWeight="700" fill={ok ? "#15803d" : "#b91c1c"}>{v.toFixed(2)}×</text>
-                      </g>
-                    );
-                  })}
+                  {(() => {
+                    const vals = rows.map((r) => ratioAt(r.noi, priceProperty));
+                    // Labels alternate right/left of the marker; within each side, push apart vertically.
+                    const sides = vals.map((_, i) => (i % 2 === 0 ? 1 : -1));
+                    const placed: number[] = new Array(vals.length);
+                    for (const side of [1, -1]) {
+                      const idx = vals.map((v, i) => [y(v), i] as [number, number]).filter(([, i]) => sides[i] === side).sort((a, b) => a[0] - b[0]);
+                      let last = -Infinity;
+                      for (const [yy, i] of idx) {
+                        const py = Math.max(yy, last + 17);
+                        placed[i] = py;
+                        last = py;
+                      }
+                    }
+                    return rows.map((r, i) => {
+                      const v = vals[i];
+                      const ok = v >= dscr;
+                      const col = ok ? "#15803d" : "#b91c1c";
+                      const mx = xPrice(priceProperty);
+                      const tx = sides[i] === 1 ? mx + 12 : mx - 12;
+                      const txt = v.toFixed(2) + "×";
+                      const w = txt.length * 7.4 + 10;
+                      return (
+                        <g key={r.n}>
+                          <circle cx={mx} cy={y(v)} r="7" fill={col} stroke="#fff" strokeWidth="2" />
+                          <rect x={sides[i] === 1 ? tx - 5 : tx - w + 5} y={placed[i] - 10} width={w} height={18} rx="4" fill="#ffffff" opacity="0.9" />
+                          <text x={tx} y={placed[i] + 4} fontSize="13" fontWeight="700" fill={col} textAnchor={sides[i] === 1 ? "start" : "end"}>{txt}</text>
+                        </g>
+                      );
+                    });
+                  })()}
                 </g>
               )}
               <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">Property price</text>
