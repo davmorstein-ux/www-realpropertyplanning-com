@@ -198,13 +198,28 @@ const AFHFinancingCalculator = () => {
     maxWidth: 900,
     margin: "0 auto 24px",
   };
-  const field = (lbl: string, value: number, set: (v: number) => void, opts: { step?: number; min?: number; max?: number; note?: string } = {}) => (
-    <div>
-      <label style={label}>{lbl}</label>
-      <input type="number" style={input} value={value} onChange={num(set)} step={opts.step ?? 1} min={opts.min} max={opts.max} />
-      {opts.note && <div style={{ fontSize: 16, color: "#3b3733", marginTop: 6, lineHeight: 1.45 }}>{opts.note}</div>}
-    </div>
-  );
+  const field = (lbl: string, value: number, set: (v: number) => void, opts: { step?: number; min?: number; max?: number; note?: string } = {}) => {
+    const isMoney = lbl.includes("($");
+    return (
+      <div>
+        <label style={label}>{lbl}</label>
+        <input type="number" style={input} value={value} onChange={num(set)} step={opts.step ?? 1} min={opts.min} max={opts.max} onFocus={(e) => e.currentTarget.select()} />
+        {isMoney && (
+          <div style={{ fontSize: 16, fontWeight: 700, color: TEAL_DARK, marginTop: 5 }}>= {money(value)}{lbl.includes("/yr") || lbl.includes("per year") || lbl.includes("Annual") ? " a year" : ""}</div>
+        )}
+        {opts.note && <div style={{ fontSize: 16, color: "#3b3733", marginTop: 4, lineHeight: 1.45 }}>{opts.note}</div>}
+      </div>
+    );
+  };
+  // Sanity checks: catch a stray zero before it produces nonsense
+  const grossToday = monthlyTotal * 12;
+  const costsToday = fixed + filledCount * variable + wages;
+  const warnings: string[] = [];
+  if (grossToday > 0 && fixed > grossToday) warnings.push(`Fixed operating costs (${money(fixed)}) are larger than everything the home takes in a year (${money(grossToday)}). Check the fixed-cost figure — it is usually 25–45% of gross.`);
+  else if (grossToday > 0 && costsToday > grossToday) warnings.push(`Costs (${money(costsToday)}) are larger than the home's gross income (${money(grossToday)}). Check the fixed costs, variable cost and replacement wages.`);
+  if (avgRate > 0 && variable > avgRate * 12) warnings.push(`Variable cost per resident (${money(variable)} a year) is more than a resident pays (${money(avgRate * 12)} a year). Check the figure.`);
+  if (loanRate > 20) warnings.push("Interest rate looks too high — enter it as a percentage, e.g. 9.5.");
+  if (down > 60) warnings.push("Down payment looks too high — enter it as a percentage, e.g. 10.");
 
   // Chart geometry (inline SVG, responsive via viewBox)
   const W = 760, H = 320, PL = 60, PR = 84, PT = 24, PB = 50;
@@ -357,6 +372,16 @@ const AFHFinancingCalculator = () => {
           {/* Results */}
           <div style={card}>
             <div style={section}>What the lender sees</div>
+            {warnings.length > 0 && (
+              <div role="alert" style={{ background: "#fef2f2", border: "2px solid #b91c1c", borderRadius: 8, padding: "12px 16px", marginBottom: 16, fontSize: 17, lineHeight: 1.55, color: "#7f1d1d" }}>
+                <strong>Check your inputs:</strong>
+                <ul style={{ margin: "6px 0 0", paddingLeft: 22 }}>
+                  {warnings.map((w) => (
+                    <li key={w}>{w}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
             {(() => {
               const todayGross = monthlyTotal * 12;
               const todayNOI = todayGross - fixed - filledCount * variable - wages;
