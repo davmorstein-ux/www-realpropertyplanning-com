@@ -418,7 +418,21 @@ const PAGE_CSS = `
     margin: 0 !important;
     padding: 0 !important;
     min-height: 0 !important;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
   }
+  /* Hover highlight for the lane's text, coordinated with the cube lift.
+     Deliberately NOT a font-weight change: semibold DM Sans is wider and
+     would rewrap the paragraph and jump the grid. A hairline text-shadow in
+     the text colour fakes a heavier weight at identical metrics, and the
+     colour goes to near-black. Heading darkens with it. */
+  .rpp-afh-lane-row:hover p,
+  .rpp-afh-lane-row:focus-within p {
+    color: #141210 !important;
+    text-shadow: 0 0 0.45px #141210, 0 0 0.45px #141210;
+  }
+  .rpp-afh-lane-row h3.rpp-afh-lane-heading { transition: color 0.25s ease; }
+  .rpp-afh-lane-row:hover h3.rpp-afh-lane-heading,
+  .rpp-afh-lane-row:focus-within h3.rpp-afh-lane-heading { color: #0a5648 !important; }
   @media (max-width: 900px) {
     .rpp-afh-lane-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
