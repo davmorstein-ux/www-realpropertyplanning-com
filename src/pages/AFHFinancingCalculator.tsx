@@ -271,14 +271,18 @@ const AFHFinancingCalculator = () => {
                 {Array.from({ length: beds }, (_, i) => (
                   <div key={i}>
                     <div style={{ fontSize: 15, fontWeight: 700, color: TEAL_DARK, marginBottom: 4 }}>Bed {i + 1}</div>
+                    {/* Empty bed shows as an empty box, not "0", so typing "8000" gives
+                        8000 rather than "08000". Selecting on focus makes overtyping easy. */}
                     <input
                       type="number"
                       inputMode="numeric"
+                      placeholder="0"
                       style={{ ...input, textAlign: "center", fontWeight: 700, fontSize: 18 }}
-                      value={bedRates[i]}
+                      value={bedRates[i] === 0 ? "" : bedRates[i]}
                       step={50}
                       min={0}
-                      onChange={(e) => setBedRate(i, fmtIn(parseFloat(e.target.value)))}
+                      onFocus={(e) => e.currentTarget.select()}
+                      onChange={(e) => setBedRate(i, e.target.value === "" ? 0 : fmtIn(parseFloat(e.target.value)))}
                     />
                   </div>
                 ))}
