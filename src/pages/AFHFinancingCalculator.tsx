@@ -200,6 +200,12 @@ const AFHFinancingCalculator = () => {
   const x = (i: number) => PL + (i / (grid.length - 1)) * (W - PL - PR);
   const y = (v: number) => PT + (1 - Math.min(Math.max(v, 0), yMax) / yMax) * (H - PT - PB);
   const xPrice = (p: number) => PL + ((p - grid[0].p) / (grid[grid.length - 1].p - grid[0].p)) * (W - PL - PR);
+  /** Coverage ratio for a given occupancy row at an arbitrary price. */
+  const ratioAt = (noi: number, p: number) => {
+    const ds = annualPI(p * (1 - down / 100), loanRate / 100, term) + taxIns;
+    return ds > 0 ? noi / ds : 0;
+  };
+  const inRange = total >= grid[0].p && total <= grid[grid.length - 1].p;
   const seriesColors = ["#6b7280", "#d97706", "#0f766e", "#1B3A6B"];
 
   return (
@@ -424,14 +430,25 @@ const AFHFinancingCalculator = () => {
                   <g key={r.n}>
                     <polyline points={pts} fill="none" stroke={col} strokeWidth="4" strokeLinejoin="round" />
                     {grid.map((g, i) => <circle key={i} cx={x(i)} cy={y(g.ratios[si])} r="3.5" fill={col} />)}
-                    <text x={x(grid.length - 1) + 8} y={y(grid[grid.length - 1].ratios[si]) + 5} fontSize="14" fill={col} fontWeight="700">{r.n} beds{r.n === filledCount ? " (today)" : ""}</text>
+                    <text x={x(grid.length - 1) + 8} y={y(grid[grid.length - 1].ratios[si]) + 5} fontSize="14" fill={col} fontWeight="700">{r.n} beds</text>
+                    {r.n === filledCount && <text x={x(grid.length - 1) + 8} y={y(grid[grid.length - 1].ratios[si]) + 20} fontSize="12" fill={col} fontWeight="700">(today)</text>}
                   </g>
                 );
               })}
-              {total >= grid[0].p && total <= grid[grid.length - 1].p && (
+              {inRange && (
                 <g>
                   <line x1={xPrice(total)} x2={xPrice(total)} y1={PT} y2={H - PB} stroke="#1B3A6B" strokeWidth="2" strokeDasharray="3 3" />
                   <text x={xPrice(total)} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="middle" fill="#1B3A6B">Your price {money(total)}</text>
+                  {rows.map((r) => {
+                    const v = ratioAt(r.noi, total);
+                    const ok = v >= dscr;
+                    return (
+                      <g key={r.n}>
+                        <circle cx={xPrice(total)} cy={y(v)} r="7" fill={ok ? "#15803d" : "#b91c1c"} stroke="#fff" strokeWidth="2" />
+                        <text x={xPrice(total) + 11} y={y(v) - 8} fontSize="13" fontWeight="700" fill={ok ? "#15803d" : "#b91c1c"}>{v.toFixed(2)}×</text>
+                      </g>
+                    );
+                  })}
                 </g>
               )}
               <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">Total purchase price</text>
@@ -455,6 +472,25 @@ const AFHFinancingCalculator = () => {
                 <span aria-hidden="true" style={{ display: "inline-block", width: 34, height: 0, borderTop: "3px dashed #1B3A6B" }} />
                 The price you entered
               </div>
+            </div>
+            <div style={{ marginTop: 16, background: "#e6f2f0", borderLeft: `6px solid ${TEAL}`, borderRadius: 8, padding: "14px 16px", fontSize: 18, lineHeight: 1.6, color: "#141210" }}>
+              <strong>At your price of {money(total)}:</strong>
+              <ul style={{ margin: "6px 0 0", paddingLeft: 22 }}>
+                {rows.map((r) => {
+                  const v = ratioAt(r.noi, total);
+                  const ok = v >= dscr;
+                  // Highest price (to the nearest $5K) at which this occupancy still clears the requirement
+                  const maxOk = r.maxPrice;
+                  return (
+                    <li key={r.n} style={{ marginBottom: 4 }}>
+                      <strong>{r.n} beds</strong>{r.n === filledCount ? " (today)" : ""}: {v.toFixed(2)}× —{" "}
+                      <span style={{ color: ok ? "#15803d" : "#b91c1c", fontWeight: 700 }}>{ok ? "above the requirement, lender can approve" : "below the requirement"}</span>
+                      {!ok && maxOk > 0 ? <> · works at <strong>{money(Math.floor(maxOk / 5000) * 5000)}</strong> or less</> : null}
+                      {!ok && maxOk <= 0 ? <> · does not work at any price</> : null}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
             <p style={{ fontSize: 18, color: "#141210", lineHeight: 1.6, margin: "14px 0 0" }}>
               <strong>How to read it:</strong> each line shows how the home's coverage ratio changes as the purchase price goes up, for one number of residents. Where a line is <strong>above</strong> the red dashed requirement, a lender can approve that price at that occupancy; where it is <strong>below</strong>, the buyer would have to offer less or fill more beds. Find your price on the bottom axis and look up.
