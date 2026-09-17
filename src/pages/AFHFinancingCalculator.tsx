@@ -161,9 +161,11 @@ const AFHFinancingCalculator = () => {
   const num = (setter: (v: number) => void) => (e: React.ChangeEvent<HTMLInputElement>) =>
     setter(fmtIn(parseFloat(e.target.value)));
 
+  // Rendered as a <div>, not <label>: index.css forces every <label> in main
+  // down to 14px "eyebrow" size, which made this page hard to read.
   const label: React.CSSProperties = {
     display: "block",
-    fontSize: 15,
+    fontSize: 17,
     color: "#141210",
     marginBottom: 7,
     fontWeight: 700,
@@ -175,8 +177,8 @@ const AFHFinancingCalculator = () => {
     border: `2px solid ${TEAL}`,
     borderRadius: 6,
     color: "#141210",
-    fontSize: 17,
-    padding: "10px 12px",
+    fontSize: 18,
+    padding: "11px 12px",
     fontFamily: "'DM Sans', system-ui, sans-serif",
     boxSizing: "border-box",
     display: "block",
@@ -202,12 +204,12 @@ const AFHFinancingCalculator = () => {
     const isMoney = lbl.includes("($");
     return (
       <div>
-        <label style={label}>{lbl}</label>
-        <input type="number" style={input} value={value} onChange={num(set)} step={opts.step ?? 1} min={opts.min} max={opts.max} onFocus={(e) => e.currentTarget.select()} />
+        <div style={label}>{lbl}</div>
+        <input type="number" aria-label={lbl} style={input} value={value} onChange={num(set)} step={opts.step ?? 1} min={opts.min} max={opts.max} onFocus={(e) => e.currentTarget.select()} />
         {isMoney && (
-          <div style={{ fontSize: 16, fontWeight: 700, color: TEAL_DARK, marginTop: 5 }}>= {money(value)}{lbl.includes("/yr") || lbl.includes("per year") || lbl.includes("Annual") ? " a year" : ""}</div>
+          <div style={{ fontSize: 17, fontWeight: 700, color: TEAL_DARK, marginTop: 5 }}>= {money(value)}{lbl.includes("/yr") || lbl.includes("per year") || lbl.includes("Annual") ? " a year" : ""}</div>
         )}
-        {opts.note && <div style={{ fontSize: 16, color: "#3b3733", marginTop: 4, lineHeight: 1.45 }}>{opts.note}</div>}
+        {opts.note && <div style={{ fontSize: 17, color: "#2b2825", marginTop: 4, lineHeight: 1.5 }}>{opts.note}</div>}
       </div>
     );
   };
@@ -264,7 +266,7 @@ const AFHFinancingCalculator = () => {
             <h1 style={{ fontSize: "clamp(28px,4vw,42px)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: INK, marginBottom: 12, lineHeight: 1.2 }}>
               AFH Occupancy &amp; Financing Calculator
             </h1>
-            <p style={{ fontSize: 18, fontFamily: "'DM Sans', system-ui, sans-serif", color: "#302b26", lineHeight: 1.7, maxWidth: 640, margin: 0 }}>
+            <p style={{ fontSize: 19, fontFamily: "'DM Sans', system-ui, sans-serif", color: "#141210", lineHeight: 1.7, maxWidth: 640, margin: 0 }}>
               At this price, with this many residents, can a buyer get the loan? See how each empty bed changes what a lender will finance.
             </p>
           </div>
@@ -287,8 +289,8 @@ const AFHFinancingCalculator = () => {
             <div style={section}>The home</div>
             <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 20 }}>
               <div>
-                <label style={label}>Market (sets a typical rate)</label>
-                <select style={input} value={market} onChange={(e) => pickMarket(e.target.value)}>
+                <div style={label}>Market (sets a typical rate)</div>
+                <select aria-label="Market" style={input} value={market} onChange={(e) => pickMarket(e.target.value)}>
                   {bands.map((b) => (
                     <option key={b.market} value={b.market}>
                       {b.market.startsWith("king-") ? `King — ${b.label.replace(/ \(.*\)$/, "")}` : b.label}
@@ -300,11 +302,11 @@ const AFHFinancingCalculator = () => {
             </div>
 
             <div style={{ marginBottom: 20 }}>
-              <label style={label}>Monthly rate for each bed ($) — leave empty beds at 0</label>
+              <div style={label}>Monthly rate for each bed ($) — leave empty beds blank</div>
               <div className="fin-beds" style={{ display: "grid", gridTemplateColumns: `repeat(${Math.min(beds, 4)}, 1fr)`, gap: 12 }}>
                 {Array.from({ length: beds }, (_, i) => (
                   <div key={i}>
-                    <div style={{ fontSize: 15, fontWeight: 700, color: TEAL_DARK, marginBottom: 4 }}>Bed {i + 1}</div>
+                    <div style={{ fontSize: 17, fontWeight: 700, color: TEAL_DARK, marginBottom: 4 }}>Bed {i + 1}</div>
                     {/* Empty bed shows as an empty box, not "0", so typing "8000" gives
                         8000 rather than "08000". Selecting on focus makes overtyping easy. */}
                     <input
@@ -325,11 +327,11 @@ const AFHFinancingCalculator = () => {
                 <div style={{ fontSize: 18, fontWeight: 700, color: INK }}>
                   Total monthly income today: <span style={{ color: TEAL, fontSize: 24 }}>{money(monthlyTotal)}</span>
                 </div>
-                <div style={{ fontSize: 17, color: "#3b3733", fontWeight: 600 }}>
+                <div style={{ fontSize: 18, color: "#141210", fontWeight: 600 }}>
                   {filledCount} of {beds} beds filled · {money(monthlyTotal * 12)} a year
                 </div>
               </div>
-              <div style={{ fontSize: 16, color: "#3b3733", marginTop: 8, lineHeight: 1.5 }}>
+              <div style={{ fontSize: 17, color: "#2b2825", marginTop: 8, lineHeight: 1.5 }}>
                 Empty beds are modelled at the average of today's rates ({money(avgRate)}) when the table adds residents.
               </div>
             </div>
@@ -351,13 +353,13 @@ const AFHFinancingCalculator = () => {
             </div>
 
             <div style={{ ...section, marginTop: 24 }}>Is the buyer also financing the business?</div>
-            <p style={{ fontSize: 17, lineHeight: 1.55, color: "#141210", margin: "0 0 12px" }}>
+            <p style={{ fontSize: 18, lineHeight: 1.6, color: "#141210", margin: "0 0 12px" }}>
               The licence, contracts and residents are often priced separately from the house. However the buyer pays for them, any loan on the business is repaid from the same income — so a lender counts that payment too. Choose how it is handled:
             </p>
             <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
               <div>
-                <label style={label}>Business financing</label>
-                <select style={input} value={bizMode} onChange={(e) => setBizMode(e.target.value as "cash" | "sameLoan" | "carry")}>
+                <div style={label}>Business financing</div>
+                <select aria-label="Business financing" style={input} value={bizMode} onChange={(e) => setBizMode(e.target.value as "cash" | "sameLoan" | "carry")}>
                   <option value="cash">No — buyer pays cash for the business</option>
                   <option value="sameLoan">Yes — in the same loan as the house</option>
                   <option value="carry">Yes — seller carries a note on the business</option>
@@ -410,14 +412,14 @@ const AFHFinancingCalculator = () => {
                 ["Total the buyer pays (house + business)", money(dealTotal)],
               ].map(([k, v]) => (
                 <div key={k} style={{ background: "#f5f2ec", border: `2px solid ${TEAL}`, borderRadius: 10, padding: "14px 12px", textAlign: "center" }}>
-                  <div style={{ fontSize: 16, color: "#141210", fontWeight: 700 }}>{k}</div>
+                  <div style={{ fontSize: 17, color: "#141210", fontWeight: 700 }}>{k}</div>
                   <div style={{ fontSize: 26, fontWeight: 700, color: TEAL, marginTop: 4 }}>{v}</div>
                 </div>
               ))}
             </div>
 
             <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", fontSize: 17, borderCollapse: "collapse", color: "#141210" }}>
+              <table style={{ width: "100%", fontSize: 18, borderCollapse: "collapse", color: "#141210" }}>
                 <thead>
                   <tr style={{ borderBottom: `2px solid ${TEAL}` }}>
                     <th style={{ textAlign: "left", padding: "8px 6px" }}>By occupancy</th>
@@ -509,7 +511,7 @@ const AFHFinancingCalculator = () => {
               <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">Property price</text>
             </svg>
             {/* Legend — HTML rather than SVG so it wraps cleanly on phones */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 22px", marginTop: 14, fontSize: 17, color: "#141210", fontWeight: 600 }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 22px", marginTop: 14, fontSize: 18, color: "#141210", fontWeight: 600 }}>
               {rows.map((r, si) => {
                 const col = seriesColors[(si + 4 - rows.length) % 4];
                 return (
@@ -552,7 +554,7 @@ const AFHFinancingCalculator = () => {
             </p>
           </div>
 
-          <p style={{ maxWidth: 900, margin: "0 auto", fontSize: 16, color: "#3b3733", lineHeight: 1.6 }}>
+          <p style={{ maxWidth: 900, margin: "0 auto", fontSize: 17, color: "#2b2825", lineHeight: 1.6 }}>
             Working estimates for discussion. SBA 7(a) rates are Prime plus a spread and change with the market; a buyer's actual terms depend on their lender and file. Not a loan quote or an appraisal. Private-pay defaults come from David Stein's reviewed ranges for King, Snohomish and Pierce counties.
           </p>
         </div>
