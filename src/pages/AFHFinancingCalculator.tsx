@@ -495,6 +495,30 @@ const AFHFinancingCalculator = () => {
           {/* Chart */}
           <div style={card}>
             <div style={section}>Coverage ratio by property price</div>
+            {/* Price slider — bound to the same property price as the input above */}
+            <div style={{ background: "#e6f2f0", border: `2px solid ${TEAL}`, borderRadius: 10, padding: "14px 16px 10px", marginBottom: 16 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: 8, marginBottom: 6 }}>
+                <div style={{ fontSize: 18, fontWeight: 700, color: "#141210" }}>Slide to change the property price</div>
+                <div style={{ fontSize: 28, fontWeight: 700, color: TEAL }}>{money(priceProperty)}</div>
+              </div>
+              <input
+                type="range"
+                aria-label="Property price"
+                min={500000}
+                max={3000000}
+                step={5000}
+                value={Math.min(3000000, Math.max(500000, priceProperty))}
+                onChange={(e) => setPriceProperty(parseInt(e.target.value))}
+                style={{ width: "100%", accentColor: TEAL, height: 32, cursor: "pointer" }}
+              />
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 16, color: "#2b2825", fontWeight: 600 }}>
+                <span>$500,000</span>
+                <span>$3,000,000</span>
+              </div>
+              <div style={{ fontSize: 17, color: "#141210", marginTop: 6 }}>
+                Every number on this page — the table, the verdict and the chart — follows the slider.
+              </div>
+            </div>
             <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label="Coverage ratio at each purchase price for each occupancy, against the lender requirement" style={{ display: "block", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               {[0, 0.5, 1, 1.5, 2, 2.5, 3].filter((v) => v <= yMax).map((v) => (
                 <g key={v}>
@@ -503,7 +527,7 @@ const AFHFinancingCalculator = () => {
                 </g>
               ))}
               <line x1={PL} x2={W - PR} y1={y(dscr)} y2={y(dscr)} stroke="#b91c1c" strokeWidth="2" strokeDasharray="6 4" />
-              <text x={W - PR} y={y(dscr) - 7} fontSize="13" textAnchor="end" fill="#b91c1c" fontWeight="700">Lender requirement {dscr.toFixed(2)}×</text>
+              <text x={PL + 6} y={y(dscr) - 7} fontSize="13" textAnchor="start" fill="#b91c1c" fontWeight="700">Lender requirement {dscr.toFixed(2)}×</text>
               {grid.map((g, i) => (
                 <text key={g.p} x={x(i)} y={H - PB + 18} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">{"$" + (g.p / 1e6).toFixed(2) + "M"}</text>
               ))}
