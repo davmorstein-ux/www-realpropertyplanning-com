@@ -124,6 +124,7 @@ const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading, accent =
       <div style={{ display: "grid", gap: 12 }}>
         {lead !== "seller" && <Btn accent={accent} to={`/afh-club/afh-roi-calculator${q}`}>Buying? See your return</Btn>}
         {lead !== "buyer" && <Btn accent={accent} to={`/afh-club/afh-valuation-estimator${q}`}>Selling? See what it's worth</Btn>}
+        {lead !== "buyer" && <Btn accent={accent} to="/afh-club/afh-financing-calculator">Can a buyer get the loan at your price?</Btn>}
       </div>
 
       <p style={{ fontSize: 18, margin: "20px 0 0", textAlign: "center" }}>

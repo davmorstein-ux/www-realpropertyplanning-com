@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import BackToCalculators from "@/components/BackToCalculators";
+import PageFAQ from "@/components/PageFAQ";
 import { confirmedPrivatePayBands, privatePayBandByMarket } from "@/data/afhPrivatePayRanges";
 
 /**
@@ -19,6 +20,34 @@ import { confirmedPrivatePayBands, privatePayBandByMarket } from "@/data/afhPriv
  * spreadsheet David used with the owner, generalised for any home.
  * Colour: teal, distinct from ROI (cobalt) and valuation (green).
  */
+
+const FAQS = [
+  {
+    question: "How much income does an adult family home need for a buyer to get an SBA loan?",
+    answer:
+      "Lenders divide the home's net operating income by the annual loan payment (principal, interest, property tax and insurance) and want the result to be at least about 1.25. So the minimum net income is roughly 1.25 times the annual debt service at the proposed price. For a $2 million purchase financed with a 10%-down SBA 7(a) loan at current rates, that is in the region of $250,000 a year.",
+  },
+  {
+    question: "Why is the income lower than what the owner takes home?",
+    answer:
+      "Most adult family homes are owner-operated: the owners provide many of the care hours themselves. A buyer who will not work those hours has to pay staff to cover them, so lenders subtract replacement wages before they count the income. A home that nets $150,000 to its owners may net far less to a buyer on paper.",
+  },
+  {
+    question: "Does occupancy really change whether a buyer can get financing?",
+    answer:
+      "Yes, more than almost anything else. Each additional resident adds a full year of rate to the top line while adding little to costs, because the house, licence, insurance and base staff are already paid for. Two residents can move a home from a loan the lender declines to one it approves at full price. Lenders underwrite last year's tax returns, so occupancy must be real, not projected.",
+  },
+  {
+    question: "What is an SBA 7(a) loan and why do AFH buyers use it?",
+    answer:
+      "It is a bank loan partly guaranteed by the U.S. Small Business Administration, which lets the bank accept about 10% down and terms up to 25 years when real estate is included. The rate is variable, set at the WSJ Prime rate plus a spread. Buyers use it because few can put 25% down on a $2 million home. The SBA 504 program is an alternative for the real estate portion at a lower fixed rate.",
+  },
+  {
+    question: "What can a seller do if the numbers do not work at the asking price?",
+    answer:
+      "Fill empty beds before or during the listing; state the price split between property and business so each can be financed correctly; and consider carrying the business portion on seller financing, which removes the buyer's most expensive loan. Lowering the price is the last lever, not the first.",
+  },
+];
 
 const TEAL = "#0f766e";
 const TEAL_DARK = "#0b5b55";
@@ -194,6 +223,17 @@ const AFHFinancingCalculator = () => {
         </div>
 
         <div style={{ background: "#f5f2ec", padding: "2.5rem 1rem 3rem" }}>
+          {/* How lenders decide */}
+          <div style={{ ...card, background: "#ffffff" }}>
+            <div style={section}>How a lender decides</div>
+            <p style={{ fontSize: 18, lineHeight: 1.65, color: "#302b26", margin: "0 0 12px" }}>
+              When a buyer applies for a loan to purchase an adult family home, the lender does not ask what the home <em>could</em> earn. It takes last year's income, subtracts operating costs and the wages needed to replace the hours the owners work themselves, and divides what is left by the annual loan payment. That number is the <strong>coverage ratio</strong>, and most SBA lenders want it to be at least <strong>1.25</strong>.
+            </p>
+            <p style={{ fontSize: 18, lineHeight: 1.65, color: "#302b26", margin: 0 }}>
+              Below that, the loan is declined or reduced — and the buyer has to offer less. This calculator shows the minimum income a lender needs at a given price, how close the home is at each occupancy, and the most a lender would finance with the residents it has today.
+            </p>
+          </div>
+
           {/* Inputs */}
           <div style={card}>
             <div style={section}>The home</div>
@@ -230,6 +270,22 @@ const AFHFinancingCalculator = () => {
           {/* Results */}
           <div style={card}>
             <div style={section}>What the lender sees</div>
+            {(() => {
+              const cur = rows[rows.length - 1];
+              const first = rows.find((r) => r.ok);
+              const perResident = rate * 12 - variable;
+              const shortBy = perResident > 0 ? Math.max(0, Math.ceil((needNOI - cur.noi) / perResident)) : 0;
+              return (
+                <div style={{ background: "#f5f2ec", borderLeft: `6px solid ${TEAL}`, borderRadius: 8, padding: "16px 18px", marginBottom: 20, fontSize: 19, lineHeight: 1.6, color: INK }}>
+                  At <strong>{money(total)}</strong>, a lender needs about <strong>{money(needNOI)}</strong> of net income a year. With all <strong>{beds}</strong> beds filled this home produces <strong>{money0(cur.noi)}</strong>
+                  {cur.ok ? (
+                    <> — the loan works{first && first.n < beds ? <>, and it first works at <strong>{first.n} residents</strong></> : null}.</>
+                  ) : (
+                    <> — about <strong>{shortBy} more resident{shortBy === 1 ? "" : "s"}</strong> worth of income short, even full. Lower the price, raise the rate, or reduce costs.</>
+                  )}
+                </div>
+              );
+            })()}
             <div className="fin-tiles" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 12, marginBottom: 20 }}>
               {[
                 ["Total price", money(total)],
@@ -328,6 +384,7 @@ const AFHFinancingCalculator = () => {
           </p>
         </div>
         <style>{`@media (max-width: 640px) { .fin-grid { grid-template-columns: 1fr !important; } .fin-tiles { grid-template-columns: 1fr !important; } }`}</style>
+        <PageFAQ faqs={FAQS} heading="Financing an Adult Family Home: Common Questions" eyebrow="Frequently Asked Questions" id="afh-financing" />
         <BackToAFHClub />
       </main>
       <Footer />
