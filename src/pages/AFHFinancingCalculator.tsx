@@ -25,7 +25,7 @@ const FAQS = [
   {
     question: "How much income does an adult family home need for a buyer to get an SBA loan?",
     answer:
-      "Lenders divide the home's net operating income by the annual loan payment (principal, interest, property tax and insurance) and want the result to be at least about 1.25. So the minimum net income is roughly 1.25 times the annual debt service at the proposed price. For a $2 million purchase financed with a 10%-down SBA 7(a) loan at current rates, that is in the region of $250,000 a year.",
+      "Lenders divide the home's net operating income by the annual loan payment (principal, interest, property tax and insurance) and want the result to be at least about 1.25× — one and a quarter times the payment. So the minimum net income is roughly 1.25 times the annual debt service at the proposed price. For a $2 million purchase financed with a 10%-down SBA 7(a) loan at current rates, that is in the region of $250,000 a year.",
   },
   {
     question: "Why is the income lower than what the owner takes home?",
@@ -260,7 +260,7 @@ const AFHFinancingCalculator = () => {
           <div style={{ ...card, background: "#ffffff" }}>
             <div style={section}>How a lender decides</div>
             <p style={{ fontSize: 19, lineHeight: 1.65, color: "#141210", margin: "0 0 12px" }}>
-              When a buyer applies for a loan to purchase an adult family home, the lender does not ask what the home <em>could</em> earn. It takes last year's income, subtracts operating costs and the wages needed to replace the hours the owners work themselves, and divides what is left by the annual loan payment. That number is the <strong>coverage ratio</strong>, and most SBA lenders want it to be at least <strong>1.25</strong>.
+              When a buyer applies for a loan to purchase an adult family home, the lender does not ask what the home <em>could</em> earn. It takes last year's income, subtracts operating costs and the wages needed to replace the hours the owners work themselves, and divides what is left by the annual loan payment. That number is the <strong>coverage ratio</strong>, and most SBA lenders want it to be at least <strong>1.25×</strong> — the income must be one and a quarter times the loan payment. (It is a multiple, not a percentage.)
             </p>
             <p style={{ fontSize: 19, lineHeight: 1.65, color: "#141210", margin: 0 }}>
               Below that, the loan is declined or reduced — and the buyer has to offer less. This calculator shows the minimum income a lender needs at a given price, how close the home is at each occupancy, and the most a lender would finance with the residents it has today.
