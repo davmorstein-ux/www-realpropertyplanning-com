@@ -83,7 +83,11 @@ const AFHFinancingCalculator = () => {
   const [bedRates, setBedRates] = useState<number[]>([7000, 7000, 7000, 7000, 0, 0, 0, 0]);
   const [fixed, setFixed] = useState(150000);
   const [variable, setVariable] = useState(18000);
-  const [wages, setWages] = useState(90000);
+  const [buyerType, setBuyerType] = useState<"operator" | "investor">("operator");
+  const [wagesInput, setWagesInput] = useState(90000);
+  // An owner-operator does the owners' work themselves, so a lender does not
+  // subtract replacement wages. An investor hires staff for it.
+  const wages = buyerType === "investor" ? wagesInput : 0;
   const [priceProperty, setPriceProperty] = useState(1500000);
   // Business financing (optional). The business — licence, contracts, residents —
   // is often priced separately from the house. However it is paid for, any loan
@@ -280,7 +284,7 @@ const AFHFinancingCalculator = () => {
               When a buyer applies for a loan to purchase an adult family home, the lender does not ask what the home <em>could</em> earn. It takes last year's income, subtracts operating costs and the wages needed to replace the hours the owners work themselves, and divides what is left by the annual loan payment. That number is the <strong>coverage ratio</strong>, and most SBA lenders want it to be at least <strong>1.25×</strong> — the income must be one and a quarter times the loan payment. (It is a multiple, not a percentage.)
             </p>
             <p style={{ fontSize: 19, lineHeight: 1.65, color: "#141210", margin: 0 }}>
-              Below that, the loan is declined or reduced — and the buyer has to offer less. This calculator shows the minimum income a lender needs at a given price, how close the home is at each occupancy, and the most a lender would finance with the residents it has today.
+              Below that, the loan is declined or reduced — and the buyer has to offer less. This calculator shows the minimum income a lender needs at a given price, how close the home is at each occupancy, and the most a lender would finance with the residents it has today — for an owner-operator who will work in the home, or for an investor who will hire staff. Those two buyers get very different answers for the same home.
             </p>
           </div>
 
@@ -339,7 +343,21 @@ const AFHFinancingCalculator = () => {
             <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 20 }}>
               {field("Fixed operating costs per year ($)", fixed, setFixed, { step: 1000, note: "Costs that do not change with one more resident: base staff, insurance, utilities, licence, maintenance." })}
               {field("Variable cost per resident per year ($)", variable, setVariable, { step: 500, note: "Extra food, supplies and care hours for each added resident." })}
-              {field("Replacement wages for owners' own work ($/yr)", wages, setWages, { step: 1000, note: "What a buyer must pay staff to replace the hours the owners work themselves. Lenders add this back." })}
+            </div>
+
+            <div style={{ ...section, marginTop: 24 }}>Who is the buyer?</div>
+            <p style={{ fontSize: 18, lineHeight: 1.6, color: "#141210", margin: "0 0 12px" }}>
+              This changes the answer more than anything else. An <strong>owner-operator</strong> does the care and management work themselves, so a lender counts all of the home's income. An <strong>investor</strong> hires staff to do that work, so the lender subtracts those wages first — and the same home supports a much lower price.
+            </p>
+            <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 20 }}>
+              <div>
+                <div style={label}>Buyer type</div>
+                <select aria-label="Buyer type" style={input} value={buyerType} onChange={(e) => setBuyerType(e.target.value as "operator" | "investor")}>
+                  <option value="operator">Owner-operator — will work in the home</option>
+                  <option value="investor">Investor — will hire staff to run it</option>
+                </select>
+              </div>
+              {buyerType === "investor" && field("Replacement wages for the owners' work ($/yr)", wagesInput, setWagesInput, { step: 1000, note: "What the investor must pay staff to replace the hours the current owners work themselves." })}
             </div>
 
             <div style={section}>Price and financing</div>
@@ -385,6 +403,11 @@ const AFHFinancingCalculator = () => {
               </div>
             )}
             {(() => {
+              // The other kind of buyer, for comparison, at today's occupancy
+              const otherWages = buyerType === "investor" ? 0 : wagesInput;
+              const otherNOI = monthlyTotal * 12 - fixed - filledCount * variable - otherWages;
+              const otherMax = Math.max(0, principalFor(Math.max(0, otherNOI / dscr - taxIns - carryPI), loanRate / 100, term) / (1 - down / 100) - bizIncluded);
+              const thisMax = rows.find((r) => r.n === filledCount)?.maxPrice ?? 0;
               const todayGross = monthlyTotal * 12;
               const todayNOI = todayGross - fixed - filledCount * variable - wages;
               const todayOk = debtService > 0 && todayNOI / debtService >= dscr;
@@ -401,6 +424,10 @@ const AFHFinancingCalculator = () => {
                   ) : (
                     <> — short even with every bed filled. Lower the price, raise rates, or reduce costs.</>
                   )}
+                  <div style={{ marginTop: 10, fontSize: 18, borderTop: `1px solid ${TEAL}55`, paddingTop: 10 }}>
+                    Most a lender would finance at today's occupancy: <strong>{money(thisMax)}</strong> for {buyerType === "operator" ? "an owner-operator" : "an investor"} versus <strong>{money(otherMax)}</strong> for {buyerType === "operator" ? "an investor who hires staff" : "an owner-operator who works in the home"}.
+                    {buyerType === "investor" && otherMax > thisMax ? " Marketing to owner-operators reaches the buyers who can pay more." : ""}
+                  </div>
                 </div>
               );
             })()}
@@ -461,7 +488,7 @@ const AFHFinancingCalculator = () => {
               </table>
             </div>
             <p style={{ fontSize: 18, color: "#141210", lineHeight: 1.6, margin: "16px 0 0" }}>
-              A lender divides the home's net operating income by the annual loan payment and wants at least {dscr.toFixed(2)}×. Net operating income here is what a <strong>buyer</strong> nets — after paying staff to replace the owners' own hours — which is why it is lower than what an owner-operator takes home. The last row is the highest property price a lender would finance at each occupancy, after any business financing; compare it to your asking price to see the gap each resident closes.
+              A lender divides the home's net operating income by the annual loan payment and wants at least {dscr.toFixed(2)}×. Net operating income here is what the <strong>buyer you selected</strong> nets. For an investor that is after paying staff to replace the current owners' hours, which is why it is lower than what an owner-operator takes home. The last row is the highest property price a lender would finance at each occupancy, after any business financing; compare it to your asking price to see the gap each resident closes.
             </p>
           </div>
 
