@@ -152,11 +152,14 @@ const AFHFinancingCalculator = () => {
     return out;
   })();
 
-  // Price sensitivity: 7 prices in $100K steps, centred on the entered total
-  const gridStep = 100000;
-  const gridStart = Math.max(gridStep, Math.round(priceProperty / gridStep) * gridStep - 3 * gridStep);
+  // Price sensitivity across a FIXED axis matching the slider ($500K–$3M).
+  // A fixed axis is what lets the slider feel smooth: only the marker moves,
+  // never the chart under it. (An earlier version re-centred the axis on the
+  // entered price in $100K steps, which made the marker jump.)
+  const SLIDER_MIN = 500000, SLIDER_MAX = 3000000;
+  const gridStep = 250000;
   const dsAtProperty = (p: number) => annualPI((p + bizIncluded) * (1 - down / 100), loanRate / 100, term) + taxIns + carryPI;
-  const grid = Array.from({ length: 7 }, (_, i) => gridStart + i * gridStep).map((p) => {
+  const grid = Array.from({ length: (SLIDER_MAX - SLIDER_MIN) / gridStep + 1 }, (_, i) => SLIDER_MIN + i * gridStep).map((p) => {
     const ds = dsAtProperty(p);
     return { p, ratios: rows.map((r) => (ds > 0 ? r.noi / ds : 0)) };
   });
@@ -504,10 +507,10 @@ const AFHFinancingCalculator = () => {
               <input
                 type="range"
                 aria-label="Property price"
-                min={500000}
-                max={3000000}
+                min={SLIDER_MIN}
+                max={SLIDER_MAX}
                 step={5000}
-                value={Math.min(3000000, Math.max(500000, priceProperty))}
+                value={Math.min(SLIDER_MAX, Math.max(SLIDER_MIN, priceProperty))}
                 onChange={(e) => setPriceProperty(parseInt(e.target.value))}
                 style={{ width: "100%", accentColor: TEAL, height: 32, cursor: "pointer" }}
               />
@@ -528,16 +531,15 @@ const AFHFinancingCalculator = () => {
               ))}
               <line x1={PL} x2={W - PR} y1={y(dscr)} y2={y(dscr)} stroke="#b91c1c" strokeWidth="2" strokeDasharray="6 4" />
               <text x={PL + 6} y={y(dscr) - 7} fontSize="13" textAnchor="start" fill="#b91c1c" fontWeight="700">Lender requirement {dscr.toFixed(2)}×</text>
-              {grid.map((g, i) => (
-                <text key={g.p} x={x(i)} y={H - PB + 18} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">{"$" + (g.p / 1e6).toFixed(2) + "M"}</text>
-              ))}
+              {grid.map((g, i) => (i % 2 === 0 ? (
+                <text key={g.p} x={x(i)} y={H - PB + 18} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">{"$" + (g.p / 1e6).toFixed(1) + "M"}</text>
+              ) : null))}
               {rows.map((r, si) => {
                 const pts = grid.map((g, i) => `${x(i)},${y(g.ratios[si])}`).join(" ");
                 const col = seriesColors[(si + 4 - rows.length) % 4];
                 return (
                   <g key={r.n}>
                     <polyline points={pts} fill="none" stroke={col} strokeWidth="4" strokeLinejoin="round" />
-                    {grid.map((g, i) => <circle key={i} cx={x(i)} cy={y(g.ratios[si])} r="3.5" fill={col} />)}
                     <text x={x(grid.length - 1) + 8} y={y(grid[grid.length - 1].ratios[si]) + 5} fontSize="14" fill={col} fontWeight="700">{r.n} beds</text>
                     {r.n === filledCount && <text x={x(grid.length - 1) + 8} y={y(grid[grid.length - 1].ratios[si]) + 20} fontSize="12" fill={col} fontWeight="700">(today)</text>}
                   </g>
