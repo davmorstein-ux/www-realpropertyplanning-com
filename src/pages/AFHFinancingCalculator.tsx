@@ -436,8 +436,28 @@ const AFHFinancingCalculator = () => {
               )}
               <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">Total purchase price</text>
             </svg>
-            <p style={{ fontSize: 18, color: "#141210", lineHeight: 1.6, margin: "12px 0 0" }}>
-              Each line is one occupancy level. Where a line sits above the dashed requirement, a lender can approve that price. The chart re-centres on the price you enter.
+            {/* Legend — HTML rather than SVG so it wraps cleanly on phones */}
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 22px", marginTop: 14, fontSize: 17, color: "#141210", fontWeight: 600 }}>
+              {rows.map((r, si) => {
+                const col = seriesColors[(si + 4 - rows.length) % 4];
+                return (
+                  <div key={r.n} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <span aria-hidden="true" style={{ display: "inline-block", width: 34, height: 6, borderRadius: 3, background: col }} />
+                    {r.n} of {beds} beds filled{r.n === filledCount ? " (today)" : ""}
+                  </div>
+                );
+              })}
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span aria-hidden="true" style={{ display: "inline-block", width: 34, height: 0, borderTop: "3px dashed #b91c1c" }} />
+                Lender requirement ({dscr.toFixed(2)}×)
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span aria-hidden="true" style={{ display: "inline-block", width: 34, height: 0, borderTop: "3px dashed #1B3A6B" }} />
+                The price you entered
+              </div>
+            </div>
+            <p style={{ fontSize: 18, color: "#141210", lineHeight: 1.6, margin: "14px 0 0" }}>
+              <strong>How to read it:</strong> each line shows how the home's coverage ratio changes as the purchase price goes up, for one number of residents. Where a line is <strong>above</strong> the red dashed requirement, a lender can approve that price at that occupancy; where it is <strong>below</strong>, the buyer would have to offer less or fill more beds. Find your price on the bottom axis and look up.
             </p>
           </div>
 
