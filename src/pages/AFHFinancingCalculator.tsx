@@ -85,7 +85,13 @@ const AFHFinancingCalculator = () => {
   const [variable, setVariable] = useState(18000);
   const [wages, setWages] = useState(90000);
   const [priceProperty, setPriceProperty] = useState(1500000);
+  // Business financing (optional). The business — licence, contracts, residents —
+  // is often priced separately from the house. However it is paid for, any loan
+  // on it is serviced from the same income, so a lender counts that payment too.
   const [priceBusiness, setPriceBusiness] = useState(150000);
+  const [bizMode, setBizMode] = useState<"cash" | "sameLoan" | "carry">("sameLoan");
+  const [carryRate, setCarryRate] = useState(7);
+  const [carryTerm, setCarryTerm] = useState(5);
   const [down, setDown] = useState(10);
   const [loanRate, setLoanRate] = useState(9.5);
   const [term, setTerm] = useState(25);
@@ -114,10 +120,14 @@ const AFHFinancingCalculator = () => {
   const rate = avgRate;
 
   // Derived
-  const total = priceProperty + priceBusiness;
+  const bizIncluded = bizMode === "sameLoan" ? priceBusiness : 0;
+  const total = priceProperty + bizIncluded; // amount on the main loan
   const loan = total * (1 - down / 100);
   const pi = annualPI(loan, loanRate / 100, term);
-  const debtService = pi + taxIns;
+  // Seller carry on the business: typically 100% financed on its own note
+  const carryPI = bizMode === "carry" ? annualPI(priceBusiness, carryRate / 100, carryTerm) : 0;
+  const debtService = pi + taxIns + carryPI;
+  const dealTotal = priceProperty + priceBusiness;
   const needNOI = debtService * dscr;
 
   // Computed on every render: cheap, and it guarantees the table and chart
@@ -130,8 +140,9 @@ const AFHFinancingCalculator = () => {
       const gross = monthlyAt(n) * 12;
       const noi = gross - fixed - n * variable - wages;
       const ratio = debtService > 0 ? noi / debtService : 0;
-      const maxPrincipal = principalFor(Math.max(0, noi / dscr - taxIns), loanRate / 100, term);
-      const maxPrice = maxPrincipal / (1 - down / 100);
+      // Most a lender would finance on the main loan, then expressed as a property price
+      const maxPrincipal = principalFor(Math.max(0, noi / dscr - taxIns - carryPI), loanRate / 100, term);
+      const maxPrice = Math.max(0, maxPrincipal / (1 - down / 100) - bizIncluded);
       out.push({ n, gross, noi, ratio, ok: ratio >= dscr, cash: noi - debtService, maxPrice });
     }
     return out;
@@ -139,9 +150,10 @@ const AFHFinancingCalculator = () => {
 
   // Price sensitivity: 7 prices in $100K steps, centred on the entered total
   const gridStep = 100000;
-  const gridStart = Math.max(gridStep, Math.round(total / gridStep) * gridStep - 3 * gridStep);
+  const gridStart = Math.max(gridStep, Math.round(priceProperty / gridStep) * gridStep - 3 * gridStep);
+  const dsAtProperty = (p: number) => annualPI((p + bizIncluded) * (1 - down / 100), loanRate / 100, term) + taxIns + carryPI;
   const grid = Array.from({ length: 7 }, (_, i) => gridStart + i * gridStep).map((p) => {
-    const ds = annualPI(p * (1 - down / 100), loanRate / 100, term) + taxIns;
+    const ds = dsAtProperty(p);
     return { p, ratios: rows.map((r) => (ds > 0 ? r.noi / ds : 0)) };
   });
 
@@ -202,10 +214,10 @@ const AFHFinancingCalculator = () => {
   const xPrice = (p: number) => PL + ((p - grid[0].p) / (grid[grid.length - 1].p - grid[0].p)) * (W - PL - PR);
   /** Coverage ratio for a given occupancy row at an arbitrary price. */
   const ratioAt = (noi: number, p: number) => {
-    const ds = annualPI(p * (1 - down / 100), loanRate / 100, term) + taxIns;
+    const ds = dsAtProperty(p);
     return ds > 0 ? noi / ds : 0;
   };
-  const inRange = total >= grid[0].p && total <= grid[grid.length - 1].p;
+  const inRange = priceProperty >= grid[0].p && priceProperty <= grid[grid.length - 1].p;
   const seriesColors = ["#6b7280", "#d97706", "#0f766e", "#1B3A6B"];
 
   return (
@@ -315,13 +327,30 @@ const AFHFinancingCalculator = () => {
 
             <div style={section}>Price and financing</div>
             <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
-              {field("Price — property ($)", priceProperty, setPriceProperty, { step: 5000 })}
-              {field("Price — business ($)", priceBusiness, setPriceBusiness, { step: 5000, note: "Licence, contracts and residents. Stating the split lets a buyer finance each part correctly." })}
-              {field("Buyer down payment (%)", down, setDown, { step: 1, min: 0, max: 100, note: "SBA 7(a): typically 10%." })}
+              {field("Property price ($)", priceProperty, setPriceProperty, { step: 5000, note: "The house. This is the price the calculator tests." })}
+              {field("Buyer down payment (%)", down, setDown, { step: 1, min: 0, max: 100, note: "SBA 7(a): typically 10%. Conventional on a house: 20–25%." })}
               {field("Loan interest rate (%)", loanRate, setLoanRate, { step: 0.05, note: "SBA 7(a) is Prime plus a spread; conventional on the house alone is lower." })}
               {field("Loan term (years)", term, setTerm, { min: 1, max: 30 })}
               {field("Annual property tax + insurance ($)", taxIns, setTaxIns, { step: 500 })}
               {field("Lender coverage requirement (×)", dscr, setDscr, { step: 0.05, note: "Net operating income ÷ annual debt service. Most SBA lenders want 1.25×; some accept 1.15×." })}
+            </div>
+
+            <div style={{ ...section, marginTop: 24 }}>Is the buyer also financing the business?</div>
+            <p style={{ fontSize: 17, lineHeight: 1.55, color: "#141210", margin: "0 0 12px" }}>
+              The licence, contracts and residents are often priced separately from the house. However the buyer pays for them, any loan on the business is repaid from the same income — so a lender counts that payment too. Choose how it is handled:
+            </p>
+            <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
+              <div>
+                <label style={label}>Business financing</label>
+                <select style={input} value={bizMode} onChange={(e) => setBizMode(e.target.value as "cash" | "sameLoan" | "carry")}>
+                  <option value="cash">No — buyer pays cash for the business</option>
+                  <option value="sameLoan">Yes — in the same loan as the house</option>
+                  <option value="carry">Yes — seller carries a note on the business</option>
+                </select>
+              </div>
+              {field("Business price ($)", priceBusiness, setPriceBusiness, { step: 5000, note: bizMode === "cash" ? "Paid in cash: does not add to the buyer's loan payments." : bizMode === "carry" ? "Financed on a separate note from the seller, on the terms below." : "Added to the main loan at the rate and term above." })}
+              {bizMode === "carry" && field("Seller-carry interest rate (%)", carryRate, setCarryRate, { step: 0.25, note: "Usually below the SBA rate — that is the point of carrying it." })}
+              {bizMode === "carry" && field("Seller-carry term (years)", carryTerm, setCarryTerm, { min: 1, max: 15, note: "Short notes mean higher payments; 5–7 years is common." })}
             </div>
           </div>
 
@@ -337,7 +366,7 @@ const AFHFinancingCalculator = () => {
               const shortBy = perResident > 0 ? Math.max(0, Math.ceil((needNOI - todayNOI) / perResident)) : 0;
               return (
                 <div style={{ background: "#e6f2f0", borderLeft: `6px solid ${TEAL}`, borderRadius: 8, padding: "16px 18px", marginBottom: 20, fontSize: 20, lineHeight: 1.6, color: INK }}>
-                  At <strong>{money(total)}</strong>, a lender needs about <strong>{money(needNOI)}</strong> of net income a year. With today's <strong>{filledCount} of {beds}</strong> beds filled, this home produces <strong>{money0(todayNOI)}</strong>
+                  At a property price of <strong>{money(priceProperty)}</strong>{bizMode !== "cash" ? <> (plus {money(priceBusiness)} for the business, {bizMode === "carry" ? "seller-carried" : "in the same loan"})</> : null}, a lender needs about <strong>{money(needNOI)}</strong> of net income a year. With today's <strong>{filledCount} of {beds}</strong> beds filled, this home produces <strong>{money0(todayNOI)}</strong>
                   {todayOk ? (
                     <> — <strong style={{ color: TEAL }}>the loan works today</strong>.</>
                   ) : first ? (
@@ -348,15 +377,16 @@ const AFHFinancingCalculator = () => {
                 </div>
               );
             })()}
-            <div className="fin-tiles" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 12, marginBottom: 20 }}>
+            <div className="fin-tiles" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 12, marginBottom: 20 }}>
               {[
-                ["Total price", money(total)],
-                ["Annual debt service", money(debtService)],
+                ["Property price", money(priceProperty)],
+                ["Buyer's annual debt service", money(debtService)],
                 ["Net income the lender needs", money(needNOI)],
+                ["Total the buyer pays (house + business)", money(dealTotal)],
               ].map(([k, v]) => (
                 <div key={k} style={{ background: "#f5f2ec", border: `2px solid ${TEAL}`, borderRadius: 10, padding: "14px 12px", textAlign: "center" }}>
                   <div style={{ fontSize: 16, color: "#141210", fontWeight: 700 }}>{k}</div>
-                  <div style={{ fontSize: 30, fontWeight: 700, color: TEAL, marginTop: 4 }}>{v}</div>
+                  <div style={{ fontSize: 26, fontWeight: 700, color: TEAL, marginTop: 4 }}>{v}</div>
                 </div>
               ))}
             </div>
@@ -378,9 +408,9 @@ const AFHFinancingCalculator = () => {
                     ["Annual gross income", (r: (typeof rows)[0]) => money(r.gross)],
                     ["Net operating income to a buyer", (r: (typeof rows)[0]) => money0(r.noi)],
                     ["Coverage ratio", (r: (typeof rows)[0]) => r.ratio.toFixed(2) + "×"],
-                    ["Lender approves at this price?", (r: (typeof rows)[0]) => (r.ok ? "YES" : "NO")],
+                    ["Lender approves at this property price?", (r: (typeof rows)[0]) => (r.ok ? "YES" : "NO")],
                     ["Cash to buyer after debt service", (r: (typeof rows)[0]) => money0(r.cash)],
-                    ["Most a lender would finance", (r: (typeof rows)[0]) => money(r.maxPrice)],
+                    ["Most a lender would finance — property price", (r: (typeof rows)[0]) => money(r.maxPrice)],
                   ].map(([k, fn], i) => (
                     <tr key={k as string} style={{ borderBottom: "1px solid #eee", background: i === 3 || i === 5 ? "#f5f2ec" : undefined }}>
                       <td style={{ padding: "9px 6px", fontWeight: i === 2 || i === 3 || i === 5 ? 700 : 400 }}>{k as string}</td>
@@ -404,13 +434,13 @@ const AFHFinancingCalculator = () => {
               </table>
             </div>
             <p style={{ fontSize: 18, color: "#141210", lineHeight: 1.6, margin: "16px 0 0" }}>
-              A lender divides the home's net operating income by the annual loan payment and wants at least {dscr.toFixed(2)}×. Net operating income here is what a <strong>buyer</strong> nets — after paying staff to replace the owners' own hours — which is why it is lower than what an owner-operator takes home. The last row is the most a lender would finance at each occupancy; compare it to the price to see the gap each resident closes.
+              A lender divides the home's net operating income by the annual loan payment and wants at least {dscr.toFixed(2)}×. Net operating income here is what a <strong>buyer</strong> nets — after paying staff to replace the owners' own hours — which is why it is lower than what an owner-operator takes home. The last row is the highest property price a lender would finance at each occupancy, after any business financing; compare it to your asking price to see the gap each resident closes.
             </p>
           </div>
 
           {/* Chart */}
           <div style={card}>
-            <div style={section}>Coverage ratio by purchase price</div>
+            <div style={section}>Coverage ratio by property price</div>
             <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label="Coverage ratio at each purchase price for each occupancy, against the lender requirement" style={{ display: "block", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               {[0, 0.5, 1, 1.5, 2, 2.5, 3].filter((v) => v <= yMax).map((v) => (
                 <g key={v}>
@@ -437,21 +467,21 @@ const AFHFinancingCalculator = () => {
               })}
               {inRange && (
                 <g>
-                  <line x1={xPrice(total)} x2={xPrice(total)} y1={PT} y2={H - PB} stroke="#1B3A6B" strokeWidth="2" strokeDasharray="3 3" />
-                  <text x={xPrice(total)} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="middle" fill="#1B3A6B">Your price {money(total)}</text>
+                  <line x1={xPrice(priceProperty)} x2={xPrice(priceProperty)} y1={PT} y2={H - PB} stroke="#1B3A6B" strokeWidth="2" strokeDasharray="3 3" />
+                  <text x={xPrice(priceProperty)} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="middle" fill="#1B3A6B">Your property price {money(priceProperty)}</text>
                   {rows.map((r) => {
-                    const v = ratioAt(r.noi, total);
+                    const v = ratioAt(r.noi, priceProperty);
                     const ok = v >= dscr;
                     return (
                       <g key={r.n}>
-                        <circle cx={xPrice(total)} cy={y(v)} r="7" fill={ok ? "#15803d" : "#b91c1c"} stroke="#fff" strokeWidth="2" />
-                        <text x={xPrice(total) + 11} y={y(v) - 8} fontSize="13" fontWeight="700" fill={ok ? "#15803d" : "#b91c1c"}>{v.toFixed(2)}×</text>
+                        <circle cx={xPrice(priceProperty)} cy={y(v)} r="7" fill={ok ? "#15803d" : "#b91c1c"} stroke="#fff" strokeWidth="2" />
+                        <text x={xPrice(priceProperty) + 11} y={y(v) - 8} fontSize="13" fontWeight="700" fill={ok ? "#15803d" : "#b91c1c"}>{v.toFixed(2)}×</text>
                       </g>
                     );
                   })}
                 </g>
               )}
-              <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">Total purchase price</text>
+              <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">Property price</text>
             </svg>
             {/* Legend — HTML rather than SVG so it wraps cleanly on phones */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 22px", marginTop: 14, fontSize: 17, color: "#141210", fontWeight: 600 }}>
@@ -474,10 +504,10 @@ const AFHFinancingCalculator = () => {
               </div>
             </div>
             <div style={{ marginTop: 16, background: "#e6f2f0", borderLeft: `6px solid ${TEAL}`, borderRadius: 8, padding: "14px 16px", fontSize: 18, lineHeight: 1.6, color: "#141210" }}>
-              <strong>At your price of {money(total)}:</strong>
+              <strong>At your property price of {money(priceProperty)}:</strong>
               <ul style={{ margin: "6px 0 0", paddingLeft: 22 }}>
                 {rows.map((r) => {
-                  const v = ratioAt(r.noi, total);
+                  const v = ratioAt(r.noi, priceProperty);
                   const ok = v >= dscr;
                   // Highest price (to the nearest $5K) at which this occupancy still clears the requirement
                   const maxOk = r.maxPrice;
