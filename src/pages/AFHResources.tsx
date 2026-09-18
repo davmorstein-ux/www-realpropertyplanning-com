@@ -66,6 +66,12 @@ const TOPICS = [
     description: "Startup costs, licensing fees, and ongoing operating expenses for running an AFH.",
   },
   {
+    title: "How to Finance an AFH",
+    href: "/afh-club/how-to-finance-an-afh",
+    img: "/afh-how-to-finance-cover.webp",
+    description: "Residential, SBA 7(a), SBA 504, or commercial — which loan fits, what the lender checks, and lenders that work with adult family homes.",
+  },
+  {
     title: "Buying or Selling an AFH",
     href: "/afh-club/buying-selling",
     img: "/afh-buying-selling.webp",
@@ -194,6 +200,12 @@ const AFHResources = () => (
             href: "/afh-club/costs-fees",
             img: "/afh-costs-fees-v2.webp",
             placeholder: "#4e4842",
+          },
+          {
+            title: "How to Finance an AFH",
+            href: "/afh-club/how-to-finance-an-afh",
+            img: "/afh-how-to-finance-cover.webp",
+            placeholder: "#2f4f4a",
           },
           {
             title: "Buying or Selling an AFH",
