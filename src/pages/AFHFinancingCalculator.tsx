@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import BackToCalculators from "@/components/BackToCalculators";
 import PageFAQ from "@/components/PageFAQ";
+import { Link } from "react-router-dom";
 import { confirmedPrivatePayBands, privatePayBandByMarket } from "@/data/afhPrivatePayRanges";
 
 /**
@@ -287,7 +288,7 @@ const AFHFinancingCalculator = () => {
               When a buyer applies for a loan to purchase an adult family home, the lender does not ask what the home <em>could</em> earn. It takes last year's income, subtracts operating costs and the wages needed to replace the hours the owners work themselves, and divides what is left by the annual loan payment. That number is the <strong>coverage ratio</strong>, and most SBA lenders want it to be at least <strong>1.25×</strong> — the income must be one and a quarter times the loan payment. (It is a multiple, not a percentage.)
             </p>
             <p style={{ fontSize: 19, lineHeight: 1.65, color: "#141210", margin: 0 }}>
-              Below that, the loan is declined or reduced — and the buyer has to offer less. This calculator shows the minimum income a lender needs at a given price, how close the home is at each occupancy, and the most a lender would finance with the residents it has today — for an owner-operator who will work in the home, or for an investor who will hire staff. Those two buyers get very different answers for the same home.
+              Below that, the loan is declined or reduced — and the buyer has to offer less. This calculator shows the minimum income a lender needs at a given price, how close the home is at each occupancy, and the most a lender would finance with the residents it has today — for an owner-operator who will work in the home, or for an investor who will hire staff. Those two buyers get very different answers for the same home. New to this? Start with <Link to="/afh-club/how-to-finance-an-afh" style={{ color: TEAL, fontWeight: 700 }}>How to Finance an Adult Family Home in Washington</Link>.
             </p>
           </div>
 

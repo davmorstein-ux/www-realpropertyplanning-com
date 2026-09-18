@@ -97,6 +97,7 @@ const CATEGORIES = [
       { name: "AFH Club", href: "/afh-club" },
       { name: "Licensed AFH Directory", href: "/afh-club/homes" },
       { name: "AFH Calculators", href: "/afh-club/calculators" },
+      { name: "How to Finance an AFH", href: "/afh-club/how-to-finance-an-afh" },
       { name: "Selling Your AFH at Retirement", href: "/afh-club/selling-your-business-at-retirement" },
       { name: "Cost of Care Calculator", href: "/cost-of-care-calculator" },
       { name: "Find a Professional", href: "/resources" },
