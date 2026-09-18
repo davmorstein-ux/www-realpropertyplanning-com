@@ -231,7 +231,7 @@ const AFHFinancingCalculator = () => {
   if (down > 60) warnings.push("Down payment looks too high — enter it as a percentage, e.g. 10.");
 
   // Chart geometry (inline SVG, responsive via viewBox)
-  const W = 760, H = 320, PL = 60, PR = 118, PT = 24, PB = 50;
+  const W = 760, H = 330, PL = 60, PR = 118, PT = 34, PB = 50;
   const yMax = Math.max(2, dscr * 1.2, ...grid.flatMap((g) => g.ratios));
   const x = (i: number) => PL + (i / (grid.length - 1)) * (W - PL - PR);
   const y = (v: number) => PT + (1 - Math.min(Math.max(v, 0), yMax) / yMax) * (H - PT - PB);
@@ -523,6 +523,7 @@ const AFHFinancingCalculator = () => {
               </div>
             </div>
             <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label="Coverage ratio at each purchase price for each occupancy, against the lender requirement" style={{ display: "block", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+              <text x={W - PR} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="end" fill="#b91c1c">- - -  Lender requirement {dscr.toFixed(2)}×</text>
               {[0, 0.5, 1, 1.5, 2, 2.5, 3].filter((v) => v <= yMax).map((v) => (
                 <g key={v}>
                   <line x1={PL} x2={W - PR} y1={y(v)} y2={y(v)} stroke="#d1d5db" />
@@ -596,18 +597,6 @@ const AFHFinancingCalculator = () => {
                   })()}
                 </g>
               )}
-              {(() => {
-                // Drawn LAST so it sits on top of every line (SVG paints in order)
-                const txt = `Lender requirement ${dscr.toFixed(2)}×`;
-                const w = txt.length * 7.6 + 14, h = 20;
-                const lx = PL + 6, ly = y(dscr) - 8 - h;
-                return (
-                  <g>
-                    <rect x={lx} y={ly} width={w} height={h} rx="5" fill="#ffffff" stroke="#b91c1c" strokeWidth="1.5" />
-                    <text x={lx + 7} y={ly + 14} fontSize="13" textAnchor="start" fill="#b91c1c" fontWeight="700">{txt}</text>
-                  </g>
-                );
-              })()}
               <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">Property price</text>
             </svg>
             {/* Legend — HTML rather than SVG so it wraps cleanly on phones */}
