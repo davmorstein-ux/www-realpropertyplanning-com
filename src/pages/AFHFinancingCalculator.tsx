@@ -530,18 +530,7 @@ const AFHFinancingCalculator = () => {
                 </g>
               ))}
               <line x1={PL} x2={W - PR} y1={y(dscr)} y2={y(dscr)} stroke="#b91c1c" strokeWidth="2" strokeDasharray="6 4" />
-              {(() => {
-                // Label on a white pill so the series lines never run through it
-                const txt = `Lender requirement ${dscr.toFixed(2)}×`;
-                const w = txt.length * 7.6 + 14, h = 20;
-                const lx = PL + 6, ly = y(dscr) - 8 - h;
-                return (
-                  <g>
-                    <rect x={lx} y={ly} width={w} height={h} rx="5" fill="#ffffff" stroke="#b91c1c" strokeWidth="1.5" />
-                    <text x={lx + 7} y={ly + 14} fontSize="13" textAnchor="start" fill="#b91c1c" fontWeight="700">{txt}</text>
-                  </g>
-                );
-              })()}
+
               {grid.map((g, i) => (i % 2 === 0 ? (
                 <text key={g.p} x={x(i)} y={H - PB + 18} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">{"$" + (g.p / 1e6).toFixed(1) + "M"}</text>
               ) : null))}
@@ -607,6 +596,18 @@ const AFHFinancingCalculator = () => {
                   })()}
                 </g>
               )}
+              {(() => {
+                // Drawn LAST so it sits on top of every line (SVG paints in order)
+                const txt = `Lender requirement ${dscr.toFixed(2)}×`;
+                const w = txt.length * 7.6 + 14, h = 20;
+                const lx = PL + 6, ly = y(dscr) - 8 - h;
+                return (
+                  <g>
+                    <rect x={lx} y={ly} width={w} height={h} rx="5" fill="#ffffff" stroke="#b91c1c" strokeWidth="1.5" />
+                    <text x={lx + 7} y={ly + 14} fontSize="13" textAnchor="start" fill="#b91c1c" fontWeight="700">{txt}</text>
+                  </g>
+                );
+              })()}
               <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">Property price</text>
             </svg>
             {/* Legend — HTML rather than SVG so it wraps cleanly on phones */}
