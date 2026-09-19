@@ -217,6 +217,9 @@ const AFHCalculators = lazy(() => import("./pages/AFHCalculators"));
 const AFHROICalculator = lazy(() => import("./pages/AFHROICalculator"));
 const AFHFinancingCalculator = lazy(() => import("./pages/AFHFinancingCalculator"));
 const HowToFinanceAnAFH = lazy(() => import("./pages/HowToFinanceAnAFH"));
+const AFHPaymentFieldGuide = lazy(() => import("./pages/AFHPaymentFieldGuide"));
+const AFHCareClassifications = lazy(() => import("./pages/AFHCareClassifications"));
+const AFHCBHSTiers = lazy(() => import("./pages/AFHCBHSTiers"));
 const AFHValuationEstimator = lazy(() => import("./pages/AFHValuationEstimator"));
 const AFHCostByLocation = lazy(() => import("./pages/AFHCostByLocation"));
 const queryClient = new QueryClient();
@@ -1230,6 +1233,10 @@ const App = () => (
           <Route path="/afh-club/afh-valuation-estimator" element={<AFHValuationEstimator />} />
           <Route path="/afh-club/afh-financing-calculator" element={<AFHFinancingCalculator />} />
           <Route path="/afh-club/how-to-finance-an-afh" element={<HowToFinanceAnAFH />} />
+          {/* How AFHs get paid: three-part series (Sept 2026). Hub + two deep dives. */}
+          <Route path="/afh-club/afh-payment-field-guide" element={<AFHPaymentFieldGuide />} />
+          <Route path="/afh-club/care-classifications-a-through-e" element={<AFHCareClassifications />} />
+          <Route path="/afh-club/cbhs-tiers" element={<AFHCBHSTiers />} />
           {/* Family-facing tool: lives on the senior-housing side, not AFH Club (moved Sept 2026). */}
           <Route path="/adult-family-home-costs" element={<AFHCostByLocation />} />
           <Route path="/afh-club/cost-by-location" element={<Navigate to="/adult-family-home-costs" replace />} />

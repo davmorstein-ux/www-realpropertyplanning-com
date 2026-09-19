@@ -72,6 +72,24 @@ const TOPICS = [
     description: "Residential, SBA 7(a), SBA 504, or commercial — which loan fits, what the lender checks, and lenders that work with adult family homes.",
   },
   {
+    title: "Which Tier? The AFH Payment Field Guide",
+    href: "/afh-club/afh-payment-field-guide",
+    img: "/afh-payment-field-guide-cover.webp",
+    description: "A–E classifications, CBHS tiers, specialty contracts and private-pay levels are four different systems. Who sets each one, and which survive a sale.",
+  },
+  {
+    title: "A Through E: CARE Classifications",
+    href: "/afh-club/care-classifications-a-through-e",
+    img: "/afh-care-classifications-cover.webp",
+    description: "How a Medicaid resident's CARE classification sets the daily rate, why one bed can be worth very different revenue, and what buyers should verify.",
+  },
+  {
+    title: "CBHS Tiers Explained",
+    href: "/afh-club/cbhs-tiers",
+    img: "/afh-cbhs-tiers-cover.webp",
+    description: "The six supportive-supervision tiers behind some AFH income: who qualifies, how tiers are reviewed and re-tiered, and what to check before relying on it.",
+  },
+  {
     title: "Buying or Selling an AFH",
     href: "/afh-club/buying-selling",
     img: "/afh-buying-selling.webp",
@@ -206,6 +224,24 @@ const AFHResources = () => (
             href: "/afh-club/how-to-finance-an-afh",
             img: "/afh-how-to-finance-cover.webp",
             placeholder: "#2f4f4a",
+          },
+          {
+            title: "Which Tier? The AFH Payment Field Guide",
+            href: "/afh-club/afh-payment-field-guide",
+            img: "/afh-payment-field-guide-cover.webp",
+            placeholder: "#3b2140",
+          },
+          {
+            title: "A Through E: CARE Classifications",
+            href: "/afh-club/care-classifications-a-through-e",
+            img: "/afh-care-classifications-cover.webp",
+            placeholder: "#2c3a33",
+          },
+          {
+            title: "CBHS Tiers Explained",
+            href: "/afh-club/cbhs-tiers",
+            img: "/afh-cbhs-tiers-cover.webp",
+            placeholder: "#4a3a30",
           },
           {
             title: "Buying or Selling an AFH",
