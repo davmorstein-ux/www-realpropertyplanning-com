@@ -50,7 +50,7 @@ const TOPICS = [
   {
     title: "Is It Really an Adult Family Home?",
     href: "/afh-club/afh-property-classifications",
-    img: "/afh-cube-buying.webp",
+    img: "/afh-property-classifications-cover.webp",
     description: "How to read 'AFH', 'AFH-ready', 'WABO-approved' and 'potential AFH' in a listing, the five labels AFH Club uses, and the documents to request before you buy.",
   },
   {
@@ -118,7 +118,7 @@ const TOPICS = [
   {
     title: "What Is an Adult Family Home?",
     href: "/afh-club/what-is-an-adult-family-home",
-    img: "/afh-club-house-bg.webp",
+    img: "/afh-what-is-an-afh-cover.webp",
     description:
       "The definition, how it differs from assisted living, and what the same small care home is called in every other state.",
   },
@@ -172,6 +172,12 @@ const AFHResources = () => (
             placeholder: "#3f3a35",
           },
           {
+            title: "What Is an Adult Family Home?",
+            href: "/afh-club/what-is-an-adult-family-home",
+            img: "/afh-what-is-an-afh-cover.webp",
+            placeholder: "#1f3350",
+          },
+          {
             title: "Licensing & Certification",
             href: "/afh-club/licensing-certification",
             img: "/afh-licensing-certification.webp",
@@ -204,7 +210,7 @@ const AFHResources = () => (
           {
             title: "Is It Really an Adult Family Home?",
             href: "/afh-club/afh-property-classifications",
-            img: "/afh-cube-buying.webp",
+            img: "/afh-property-classifications-cover.webp",
             placeholder: "#3a3f36",
           },
           {
