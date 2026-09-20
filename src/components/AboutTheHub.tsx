@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { HOMEPAGE_CALCULATOR_CLAIM } from "@/data/calculatorIndex";
+
 /**
  * AboutTheHub
  *
@@ -129,9 +132,10 @@ const AboutTheHub = () => {
            one family-side AFH explainer (/senior-living/adult-family-homes)
            is excluded for the same reason. Shown as "90+" rather than the
            exact figure so it stays true as pages are added; re-check only if
-           it could fall below 90. Calculators: 6 housing plus 3 AFH operator
-           (ROI, valuation, occupancy & financing) plus the AFH cost-by-
-           location lookup = 10; 6,069 licensed homes in the DSHS data
+           it could fall below 90. Calculators: no longer hand-counted. The
+           figure comes from src/data/calculatorIndex.ts (six cost-of-care
+           calculators plus the AFH tools), and a test fails if the real total
+           drops below the "10+" shown here. 6,069 licensed homes in the DSHS data
            across all 39 counties (Sept 2026). "Over 6,000" is deliberate —
            the directory is a snapshot and homes open and close, so a precise
            figure would go stale. Re-check before changing any of these.
@@ -142,6 +146,12 @@ const AboutTheHub = () => {
         .rpp-abouthub-stats.rpp-abouthub-stats {
           display: flex;
           flex-wrap: wrap;
+          /* BASELINE, not centre. The links carry vertical padding for a 44px
+             touch target, so their boxes are taller than the plain text beside
+             them. With no alignment their text sat 10px low; with centre it was
+             still 4px off, because centring lines up boxes, not text. Baseline
+             lines up the words themselves whatever the box heights are. */
+          align-items: baseline;
           gap: 0.4rem 2.25rem;
           margin: 1.35rem 0 0;
           padding-top: 1.15rem;
@@ -152,12 +162,57 @@ const AboutTheHub = () => {
           color: #272421;
           line-height: 1.4;
         }
+        /* Stat links. Underlined so they read as links and not as captions;
+           index.css carries !important link rules, hence the doubled selector
+           and the bg-transparent token on the element. Padding gives a phone a
+           44px-tall target without changing how the row looks. */
+        .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink {
+          color: #272421 !important;
+          /* Match the plain "90+ guides & articles" beside them EXACTLY. Measured:
+             index.css renders that span at weight 400 / 17px, but gives links
+             600 / 16px, so an unstyled link here looked bolder and smaller than
+             its neighbour. Only the underline should mark these as links. */
+          font-weight: 400 !important;
+          font-size: clamp(17px, 1.3vw, 20px) !important;
+          line-height: 1.4 !important;
+          text-decoration: underline !important;
+          text-decoration-color: #9db3d6 !important;
+          text-decoration-thickness: 2px !important;
+          text-underline-offset: 5px;
+          /* No padding or margin here: the link's box must be exactly its text,
+             like the plain stat beside it, or the row goes uneven (a padding plus
+             negative-margin trick was tried and the margin was not honoured). The
+             44px touch target comes from the ::after overlay below, which takes up
+             no space in the layout. */
+          position: relative;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink::after {
+          content: "";
+          position: absolute;
+          left: -6px;
+          right: -6px;
+          top: -11px;
+          bottom: -11px;
+        }
+        @media (hover: hover) {
+          .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:hover { text-decoration-color: #1B3A6B !important; color: #1B3A6B !important; }
+        }
+        .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:focus-visible { outline: 3px solid #9db3d6; outline-offset: 3px; border-radius: 4px; }
+        .rpp-abouthub-stats.rpp-abouthub-stats > span { line-height: 1.4 !important; }
         .rpp-abouthub-stats.rpp-abouthub-stats strong {
           font-weight: 700;
           color: #1B3A6B;
         }
 
         @media (max-width: 640px) {
+          /* On phones the three stats stack. At the desktop row gap the links'
+             touch overlays overlapped by ~16px, so a tap between two lines could
+             open the wrong page. More space between the rows, and a slightly
+             shorter overlay, keeps each target to itself (about 42px tall). */
+          .rpp-abouthub-stats.rpp-abouthub-stats { row-gap: 1.1rem; }
+          .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink::after { top: -9px; bottom: -9px; }
           .rpp-abouthub-card.rpp-abouthub-card {
             padding: 1.3rem 1.25rem 1.25rem;
           }
@@ -181,16 +236,20 @@ const AboutTheHub = () => {
           <li>A directory of attorneys, fiduciaries, and care professionals</li>
         </ul>
 
+        {/* Each figure links to the page that proves it. "90+" stays plain text
+            until /guides-and-resources lists the full library: today it shows
+            about a quarter of it, and linking a claim to a page that appears to
+            contradict it would be worse than not linking. */}
         <p className="rpp-abouthub-stats rpp-abouthub-stats">
           <span>
             <strong>90+</strong> guides &amp; articles
           </span>
-          <span>
-            <strong>10</strong> calculators
-          </span>
-          <span>
+          <Link to="/calculators" className="rpp-abouthub-statlink bg-transparent">
+            <strong>{HOMEPAGE_CALCULATOR_CLAIM}+</strong> calculators
+          </Link>
+          <Link to="/afh-club/homes" className="rpp-abouthub-statlink bg-transparent">
             Statewide directory of over <strong>6,000</strong> licensed adult family homes
-          </span>
+          </Link>
         </p>
       </div>
     </div>

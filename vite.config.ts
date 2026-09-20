@@ -884,6 +884,14 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
     article: { datePublished: "2026-07-27", dateModified: "2026-09-05" },
   },
+  "/calculators": {
+    title: "Calculators: Cost of Care and Adult Family Home Tools | Real Property Planning",
+    description: "All of Real Property Planning's free calculators in one place. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.",
+    h1: "Calculators",
+    quickAnswerQ: "What calculators does Real Property Planning offer?",
+    quickAnswerA: "Eleven free calculators in two groups. For families, six cost-of-care calculators, one each for memory care, independent living, in-home care, nursing homes, assisted living, and adult family homes. For people buying, owning or investing in a Washington adult family home, five tools: the AFH Property Score, an ROI calculator, a valuation estimator, an occupancy and financing calculator, and a lookup of costs by city and county. None asks for contact details.",
+    intro: "Every calculator on the site, grouped by who it is for. Families choosing care and people buying or running an adult family home have different questions, so the two groups are kept separate, and each links on to its own section.",
+  },
   "/afh-club/afh-property-score": {
     title: "AFH Property Score: Could This House Work as an Adult Family Home? | AFH Club",
     description: "A free screen for Washington adult family home buyers that takes three to five minutes. Answer questions from the listing and get a 100-point physical suitability score, a feasibility check, the likely conversion projects, and a tape-measure checklist for the showing.",

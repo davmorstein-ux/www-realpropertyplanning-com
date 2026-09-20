@@ -43,6 +43,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     color: "#6b30a6",
     items: [
      { name: "All Guides & Articles", href: "/guides-and-resources" },
+      { name: "All Calculators", href: "/calculators" },
       { name: "Articles Library", href: "/articles" },
       { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
       { name: "Independent Living Costs", href: "/articles/independent-living-costs" },

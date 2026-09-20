@@ -156,6 +156,7 @@ const EverettProbateEstate = lazy(() => import("./pages/EverettProbateEstate"));
 const OlympiaProbateEstate = lazy(() => import("./pages/OlympiaProbateEstate"));
 const BellinghamProbateEstate = lazy(() => import("./pages/BellinghamProbateEstate"));
 const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
+const Calculators = lazy(() => import("./pages/Calculators"));
 const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
 const GrayDivorce = lazy(() => import("./pages/GrayDivorce"));
 const GreyDivorce = lazy(() => import("./pages/GreyDivorce"));
@@ -802,6 +803,8 @@ const App = () => (
 
           {/* ─── Educational guides (canonical: /guides/*) ────────── */}
           <Route path="/guides-and-resources" element={<GuidesAndResources />} />
+          {/* Every calculator on the site, in two groups. Destination of the homepage "10+ calculators" figure. */}
+          <Route path="/calculators" element={<Calculators />} />
           <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
           <Route path="/guides/what-executors-should-do" element={<WhatExecutorsShouldDo />} />
           <Route path="/guides/appraisal-vs-cma" element={<AppraisalVsCma />} />
