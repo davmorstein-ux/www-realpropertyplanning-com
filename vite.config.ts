@@ -943,10 +943,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: "2026-07-24", dateModified: "2026-09-05" },
   },
   "/afh-club/calculators": {
-    title: "AFH Calculators — ROI & Valuation Tools | Real Property Planning",
-    description: "Professional financial tools built exclusively for Washington State Adult Family Homes — ROI calculator and valuation estimator.",
+    title: "AFH Calculators: ROI, Valuation & Financing Tools | Real Property Planning",
+    description: "Professional financial tools built exclusively for Washington State Adult Family Homes: an ROI calculator, a valuation estimator, and an occupancy and financing calculator.",
     h1: "AFH Calculators",
-    intro: "Two tools built for Washington adult family homes: an ROI calculator that models revenue by bed count, occupancy, and Medicaid versus private-pay mix against operating costs, and a valuation estimator that separates what the real estate is worth from what the operating business adds.",
+    intro: "Three tools built for Washington adult family homes: an ROI calculator that models revenue by bed count, occupancy, and Medicaid versus private-pay mix against operating costs; a valuation estimator that separates what the real estate is worth from what the operating business adds; and an occupancy and financing calculator that shows whether a buyer can get the loan at a given price and number of residents, and how each empty bed changes the lender's answer.",
   },
   "/afh-club/cost-by-location": {
     title: "Adult Family Home Cost by City and County in Washington | AFH Club",

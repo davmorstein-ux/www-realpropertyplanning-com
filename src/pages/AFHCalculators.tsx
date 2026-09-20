@@ -98,8 +98,8 @@ const AFHCalculators: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="AFH Calculators — ROI & Valuation Tools | Real Property Planning"
-        description="Tools built for Washington adult family home operators and investors: an ROI calculator and a business and property valuation estimator."
+        title="AFH Calculators: ROI, Valuation & Financing Tools | Real Property Planning"
+        description="Tools built for Washington adult family home operators and investors: an ROI calculator, a business and property valuation estimator, and an occupancy and financing calculator."
         canonical="https://realpropertyplanning.com/afh-club/calculators"
       />
       <Header />
