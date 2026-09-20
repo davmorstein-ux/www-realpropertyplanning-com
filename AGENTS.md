@@ -26,6 +26,12 @@ adult family homes (AFHs).
 
 ## 2. Ground rules when more than one assistant has access
 
+As of September 20, 2026 the **ChatGPT Codex Connector** GitHub app is installed
+on this repository with read **and write** access to code, pull requests,
+issues, actions and workflows. Claude works through short-lived access tokens
+issued per session. Neither can see the other's sessions.
+
+
 1. **`main` is production.** A push is live within minutes. Build and test first.
 2. **One writer at a time.** Assistants cannot see each other's sessions. Before
    changing anything, read `git log -15` and the diff of recent commits so you
@@ -153,7 +159,7 @@ sufficient; ask for a screenshot from the real phone when it matters.
 | CBHS / IBSS per diems, ECS, SBS, Community Integration, stacking rules | `src/data/afhBehavioralRates.ts` |
 | Private-pay ranges by market (only `confirmed: true` bands render) | `src/data/afhPrivatePayRanges.ts` |
 | Which guides a listing page links to (used by React **and** the prerender) | `src/data/afhBuyerGuides.ts` |
-| AFH Property Score: every question, point, flag, band, checklist line | `src/data/afhPropertyScore.ts` (tests: `src/test/afhPropertyScore.test.ts`) |
+| AFH Property Score: every question, point, flag, band, checklist line | `src/data/afhPropertyScore.ts` (tests: `src/test/afhPropertyScore.test.ts`; 31 rules, including every correction from outside review) |
 | DSHS licensed-home directory | `src/data/afh/` (public state data) |
 | For-sale and sold listings | `src/data/afhListings.ts` |
 
@@ -211,10 +217,33 @@ AFH Club.
   do not count (WAC 388-76-10865); one toilet per five persons (WAC 388-76-10780).
 - RCW 70.128.140(2): an AFH is a residential use, permitted in every residential
   and commercial zone. Zoning is a reassurance, not a risk, in Washington.
+- RCW 64.38.060: HOA governing documents may **not** limit the operation of a
+  licensed AFH. It applies retroactively and makes conflicting provisions
+  unenforceable. Reasonable rules covering every home (signs, landscaping) still
+  apply. A companion provision in chapter 70.128 RCW covers restrictive
+  covenants. Chapter 64.38 is scheduled for repeal on January 1, 2028, when
+  chapter 64.90 takes over, so re-check the citation then. *(An earlier version
+  of the Property Score wrongly implied a covenant could block an AFH.)*
+- WAC 388-76-10780, as amended effective March 4, 2025: one accessible indoor
+  flush toilet per five persons, counting residents **and household members who
+  live in the home**, reachable without going through another person's room.
+  Ensuite toilets can count. **The rule counts toilets, not full bathrooms.**
+- IRC R311.2: the required exit door is side-hinged, 32 in clear width, 78 in
+  high. IRC R311.8.2: ramp landings at least 3 x 3 ft at the top, the bottom,
+  where a door opens onto the ramp, and at any turn.
+- "Closets and door swings do not count" toward bedroom floor area comes from
+  DSHS's Resident Bedroom and AFH Characteristics information sheets, not from
+  the text of WAC 388-76-10690. Cite the sheets.
+- **Proposed, not adopted:** DSHS opened rulemaking on chapter 388-76 in June
+  2026. One proposal would require 36 in of clear space outside a bedroom escape
+  window in newly licensed homes. Check its status before calling it a rule.
+- A claim that chapter 388-76 WAC was amended effective September 20, 2026 was
+  checked and **not** found; the Legislature's page showed the chapter last
+  updated March 30, 2026.
 
 **Not yet verified. Do not state numbers for these.**
-- Minimum clear width of the required exit door, and the bedroom doorway width
-  DSHS licensors expect.
+- The bedroom doorway width DSHS licensors expect (the exit door is verified
+  above).
 - What a new owner must have in place for **CBHS payments to continue after a
   change of ownership**. Nothing published answers it. Pages pose it as a
   question to the reader.

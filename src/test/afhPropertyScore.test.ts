@@ -7,7 +7,7 @@ import {
 const scored = QUESTIONS.filter((q) => q.section === "score");
 const best = (): Answers => Object.fromEntries(scored.map((q) => [q.id, [...q.options].sort((a, b) => (b.points ?? 0) - (a.points ?? 0))[0].id]));
 const worst = (): Answers => Object.fromEntries(scored.map((q) => [q.id, [...q.options].sort((a, b) => (a.points ?? 0) - (b.points ?? 0))[0].id]));
-const clean = { licensed: "no", residents: "both", sewer: "sewer", hoa: "no", levels: "no", permits: "no", access: "no" };
+const clean = { licensed: "no", residents: "both", sewer: "sewer", hoa: "no", levels: "no", permits: "no", access: "no", systems: "no" };
 
 describe("AFH Property Score: configuration", () => {
   it("category maximums add up to exactly 100", () => {
@@ -49,25 +49,25 @@ describe("AFH Property Score: scoring", () => {
     expect(r.burden.level).toBe("Low"); expect(r.burden.projects).toHaveLength(0);
     expect(scoreText(r)).toBe("100");
   });
-  it("the worst possible house scores the floor of 2 and a high burden", () => {
-    // The floor is 2, not 0: every house has at least one door to the outside,
-    // so that question has no zero-point option.
+  it("the worst possible house scores the floor of 4 and a high burden", () => {
+    // The floor is 4, not 0: every house has at least one door to the outside,
+    // and one door is not a defect (building code sleeping-room type NS1).
     const r = scoreProperty({ ...clean, ...worst() });
-    expect(r.low).toBe(2); expect(r.high).toBe(2);
+    expect(r.low).toBe(4); expect(r.high).toBe(4);
     expect(r.burden.level).toBe("High");
     expect(r.band.label).toContain("Significant challenges");
   });
   it("is deterministic", () => {
-    const a = { ...clean, ...best(), entrySteps: "3-4", mainBaths: "1" };
+    const a = { ...clean, ...best(), entrySteps: "3-4", toilets: "1" };
     expect(scoreProperty(a)).toEqual(scoreProperty({ ...a }));
   });
   it("'not sure' widens the range instead of guessing, and does not inflate the low end", () => {
-    const a: Answers = { ...clean, ...best(), mainBaths: NOT_SURE, parking: NOT_SURE };
+    const a: Answers = { ...clean, ...best(), toilets: NOT_SURE, parking: NOT_SURE };
     const r = scoreProperty(a);
     expect(r.high).toBe(100);
-    expect(r.low).toBe(100 - 12 - 5);
+    expect(r.low).toBe(100 - 10 - 5);
     expect(r.answered).toBe(SCORED_COUNT - 2);
-    expect(scoreText(r)).toBe("83 to 100");
+    expect(scoreText(r)).toBe("85 to 100");
     expect(r.withheld).toBe(false);
   });
   it("withholds a score when too little is known", () => {
@@ -106,7 +106,7 @@ describe("AFH Property Score: flags and burden", () => {
   });
   it("unknown feasibility answers read as 'needs verification', never green", () => {
     const r = scoreProperty({ licensed: "no", residents: "both", ...best() });
-    for (const id of ["sewer", "hoa", "levels", "permits", "access"]) expect(r.flags.find((f) => f.id === id)!.level, id).toBe("yellow");
+    for (const id of ["sewer", "hoa", "levels", "permits", "access", "systems"]) expect(r.flags.find((f) => f.id === id)!.level, id).toBe("yellow");
   });
   it("a tall entry raises a ramp flag", () => {
     expect(scoreProperty({ ...clean, ...best(), entrySteps: "5+" }).flags.find((f) => f.id === "ramp")!.level).toBe("red");
@@ -114,13 +114,52 @@ describe("AFH Property Score: flags and burden", () => {
     expect(scoreProperty({ ...clean, ...best(), entrySteps: "1-2" }).flags.find((f) => f.id === "ramp")).toBeUndefined();
   });
   it("many moderate projects add up to a HIGH burden even when no single one is large", () => {
-    const a = { ...clean, ...best(), entrySteps: "3-4", interiorSteps: "one", mainBaths: "1", exitDoors: "1" };
+    const a = { ...clean, ...best(), entrySteps: "3-4", interiorSteps: "several", toilets: "1", bathing: "0" };
     const r = scoreProperty(a);
     expect(r.burden.projects).toHaveLength(4);
     expect(r.burden.level).toBe("High");
   });
   it("one small project is a LOW burden", () => {
     expect(scoreProperty({ ...clean, ...best(), shower: "room" }).burden.level).toBe("Low");
+  });
+});
+
+describe("AFH Property Score: rules added after the Sept 2026 code review", () => {
+  it("not knowing about major systems can never raise the score", () => {
+    const base = { ...clean, ...best() };
+    const known = scoreProperty({ ...base, systems: "no" });
+    const unknown = scoreProperty({ ...base, systems: NOT_SURE });
+    const bad = scoreProperty({ ...base, systems: "yes" });
+    expect(unknown.low).toBe(known.low); expect(bad.low).toBe(known.low);
+    expect(QUESTIONS.find((q) => q.id === "systems")!.section).toBe("feasibility");
+    expect(bad.flags.find((f) => f.id === "systems")!.level).toBe("yellow");
+  });
+  it("bathrooms are scored on toilets and bathing rooms, never on 'full bathrooms'", () => {
+    expect(QUESTIONS.some((q) => q.id === "mainBaths")).toBe(false);
+    expect(QUESTIONS.find((q) => q.id === "toilets")!.prompt).toContain("half bathrooms");
+    expect(QUESTIONS.some((q) => q.id === "bathReach")).toBe(false);
+  });
+  it("one exterior door is not treated as a defect", () => {
+    const o = QUESTIONS.find((q) => q.id === "exitDoors")!.options.find((x) => x.id === "1")!;
+    expect(o.cure).toBeUndefined(); expect(o.points).toBeGreaterThanOrEqual(4);
+  });
+  it("living split across levels is RED for residents who need help, YELLOW if unsure, silent if independent", () => {
+    const base = { ...clean, ...best(), oneLevel: "no" };
+    expect(scoreProperty({ ...base, residents: "assist" }).flags.find((f) => f.id === "oneLevel")!.level).toBe("red");
+    expect(scoreProperty({ ...base, residents: "both" }).flags.find((f) => f.id === "oneLevel")!.level).toBe("yellow");
+    expect(scoreProperty({ ...base, residents: "independent" }).flags.find((f) => f.id === "oneLevel")).toBeUndefined();
+  });
+  it("no main-level toilet raises a flag", () => {
+    expect(scoreProperty({ ...clean, ...best(), toilets: "0" }).flags.find((f) => f.id === "toilets")!.level).toBe("yellow");
+  });
+  it("the HOA flag states the law correctly: restrictions on AFHs are unenforceable", () => {
+    const d = scoreProperty({ ...clean, ...best(), hoa: "yes" }).flags.find((f) => f.id === "hoa")!.detail;
+    expect(d).toContain("RCW 64.38.060"); expect(d).toContain("unenforceable");
+  });
+  it("no checklist line states a bedroom doorway width, which is still unverified", () => {
+    const text = scoreProperty({ ...clean, ...best() }).checklist.map((c) => c.title + " " + c.text).join(" ");
+    expect(/27\s*inch/i.test(text)).toBe(false);
+    expect(text).toContain("32 inches");
   });
 });
 
@@ -133,7 +172,7 @@ describe("AFH Property Score: paths and saved links", () => {
     expect(scoreProperty({ ...clean, ...best(), licensed: "empty" }).acquisition).not.toBeNull();
   });
   it("licensing and occupancy answers never change the score", () => {
-    const base = { ...clean, ...best(), mainBaths: "1" };
+    const base = { ...clean, ...best(), toilets: "1" };
     const a = scoreProperty({ ...base, licensed: "operating", aqFilled: "all", aqHistory: "clean" });
     const b = scoreProperty({ ...base, licensed: "operating", aqFilled: "none", aqHistory: "serious" });
     expect(a.low).toBe(b.low); expect(a.high).toBe(b.high);
