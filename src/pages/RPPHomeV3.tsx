@@ -315,27 +315,23 @@ const RPPHomeV3 = () => {
                         }}
                       >
                         <div style={{ position: "relative" }}>
+                          {/* Sizing lives in .rpp-funnel-img below, not inline:
+                              the height has to differ by breakpoint. width and
+                              height attributes are the photos' real proportions
+                              so the browser reserves the space before they load. */}
                           <img
                             src={imgSrc}
                             alt={imgAlt}
                             loading="lazy"
-                            style={{ display: "block", width: "100%", height: "190px", objectFit: "cover" }}
+                            width={1160}
+                            height={793}
+                            className="rpp-funnel-img"
                           />
-                          <span
-                            className="absolute top-3 right-3 sm:hidden rpp-explore-badge"
-                            style={{
-                              backgroundColor: "rgba(255,255,255,0.88)",
-                              color: "#272421",
-                              fontSize: 11,
-                              fontWeight: 700,
-                              fontFamily: "'DM Sans', system-ui, sans-serif",
-                              padding: "3px 8px",
-                              borderRadius: 20,
-                              letterSpacing: "0.04em",
-                            }}
-                          >
-                            {t("funnel.exploreBadge")}
-                          </span>
+                          {/* The mobile-only "EXPLORE ->" pill that sat here was
+                              removed (Sept 2026). The title below already carries
+                              the sitewide CTA arrow, so phones showed two arrows
+                              per card while desktop showed one, and the pill
+                              covered part of each photo. */}
                         </div>
                         <div
                           style={{
@@ -388,8 +384,26 @@ const RPPHomeV3 = () => {
                 inline. Doubled class names beat the global
                 "main p font-size !important" rule. */}
             <style>{`
-  .rpp-explore-badge.rpp-explore-badge {
-    text-transform: uppercase;
+  /* FUNNEL TILE PHOTOS. The four photos are 1160x793 (1.46:1), and the box
+     takes that same shape at every width, so nothing is ever cropped.
+
+     It used to be a fixed 190px tall. That only suits a tile about 277px wide.
+     Full-width on a phone (~350px) and two-up on a tablet (~350px) the box
+     became 1.85:1 and object-fit: cover cut a fifth off every photo's height,
+     clipping heads. Four-up near 1024px (~229px wide) it went the other way
+     and trimmed the sides. At the common 1280px desktop the new height is
+     187px against the old 190px, so desktop looks the same as before.
+
+     If the photos are ever replaced with a different shape, change the ratio
+     here and the width/height attributes on the <img> together.
+
+     Doubled class + !important because index.css carries global img rules. */
+  .rpp-funnel-img.rpp-funnel-img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1160 / 793;
+    object-fit: cover;
   }
 
   /* WAS a fixed 2.25rem, which is why this heading read as weak: it stayed
