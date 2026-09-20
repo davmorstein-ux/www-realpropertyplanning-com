@@ -884,6 +884,19 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
     article: { datePublished: "2026-07-27", dateModified: "2026-09-05" },
   },
+  "/afh-club/afh-property-score": {
+    title: "AFH Property Score: Could This House Work as an Adult Family Home? | AFH Club",
+    description: "A free screen for Washington adult family home buyers that takes three to five minutes. Answer questions from the listing and get a 100-point physical suitability score, a feasibility check, the likely conversion projects, and a tape-measure checklist for the showing.",
+    h1: "AFH Property Score",
+    quickAnswerQ: "What makes a house suitable for an adult family home in Washington?",
+    quickAnswerA: "The hardest things to change matter most: enough main-level bedrooms of at least 80 square feet, living that works on one level, a step-free or rampable entry, enough main-level bathrooms (plan on one toilet per five people), and more than one way out at ground level. Each resident bedroom needs an escape window with a sill no higher than 44 inches and a clear opening at least 24 by 20 inches. Residents who need help evacuating must have an exit path with no stairs, so basement and upstairs bedrooms suit only residents who can get out on their own. Zoning is rarely the obstacle, because state law makes an adult family home a permitted residential use; septic capacity, HOA covenants, unpermitted additions, and fire access are the more common problems.",
+    intro: "The AFH Property Score is a free screening tool for people evaluating a house for adult family home use. It asks about twenty questions that can be answered from a listing and its photos, scores the building out of 100 using cost to cure, and keeps feasibility issues separate from the score so a serious problem is never hidden inside a good number. It then lists the conversion projects the house is likely to need and builds a checklist of what to measure at the showing. It scores the real estate only. For a home that is already licensed, it adds an unscored review of what a buyer is actually acquiring, because a license never transfers with a house.",
+    faq: [
+      { q: "Does a high AFH Property Score mean the home can be licensed?", a: "No. It means the property shows characteristics favorable for further evaluation. The home must still pass the local building official's adult family home inspection and meet DSHS licensing requirements, and the provider must qualify separately." },
+      { q: "Can a two-story house be an adult family home?", a: "Yes, but stairs limit who can live in a room. Residents who need help evacuating must have an exit path with no stairs, and an elevator, chairlift, or platform lift does not count. A bedroom reached by stairs can be used only by residents who can get out on their own." },
+      { q: "Is zoning a problem for an adult family home in Washington?", a: "Generally not. RCW 70.128.140 says an adult family home must be treated as a residential use and is a permitted use in all areas zoned residential or commercial, including single-family zones." },
+    ],
+  },
   "/afh-club/afh-payment-field-guide": {
     title: "AFH Tiers, Levels and Classifications Explained | How Washington Adult Family Homes Get Paid | AFH Club",
     description: "CARE classifications A through E, CBHS Tiers 1 through 6, ECS and SBS specialty contracts, and private-pay care levels are four different systems. A field guide for Washington AFH buyers, sellers and owners: who sets each one, who it applies to, and what survives a sale.",
@@ -943,10 +956,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     article: { datePublished: "2026-07-24", dateModified: "2026-09-05" },
   },
   "/afh-club/calculators": {
-    title: "AFH Calculators: ROI, Valuation & Financing Tools | Real Property Planning",
-    description: "Professional financial tools built exclusively for Washington State Adult Family Homes: an ROI calculator, a valuation estimator, and an occupancy and financing calculator.",
+    title: "AFH Calculators: Property Score, ROI, Valuation & Financing Tools | Real Property Planning",
+    description: "Professional tools built exclusively for Washington State Adult Family Homes: a property score, an ROI calculator, a valuation estimator, and an occupancy and financing calculator.",
     h1: "AFH Calculators",
-    intro: "Three tools built for Washington adult family homes: an ROI calculator that models revenue by bed count, occupancy, and Medicaid versus private-pay mix against operating costs; a valuation estimator that separates what the real estate is worth from what the operating business adds; and an occupancy and financing calculator that shows whether a buyer can get the loan at a given price and number of residents, and how each empty bed changes the lender's answer.",
+    intro: "Four tools built for Washington adult family homes: the AFH Property Score, which screens a house for physical suitability from its listing and builds a tape-measure checklist for the showing; an ROI calculator that models revenue by bed count, occupancy, and Medicaid versus private-pay mix against operating costs; a valuation estimator that separates what the real estate is worth from what the operating business adds; and an occupancy and financing calculator that shows whether a buyer can get the loan at a given price and number of residents, and how each empty bed changes the lender's answer.",
   },
   "/afh-club/cost-by-location": {
     title: "Adult Family Home Cost by City and County in Washington | AFH Club",

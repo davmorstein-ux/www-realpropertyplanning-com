@@ -33,6 +33,11 @@ export interface BuyerGuide {
 }
 
 const G = {
+  score: {
+    href: "/afh-club/afh-property-score",
+    title: "AFH Property Score",
+    why: "A quick screen of how well a house could work as an adult family home, with a checklist for the showing.",
+  },
   labels: {
     href: "/afh-club/afh-property-classifications",
     title: "Is It Really an Adult Family Home?",
@@ -135,7 +140,8 @@ export function guidesForListing(l: Pick<AFHListing, "listingType" | "afhStatus"
   return {
     heading: "Before you buy this property",
     intro: "A listing that mentions adult family home use is not always a licensed adult family home. These guides cover what to confirm and what it takes to open.",
-    guides: [G.labels, G.wabo, G.licensing, G.finance, ...(licensedNow || l.afhStatus === "former" ? [G.violations] : [G.whatIs])],
+    // The score leads here: these are houses a buyer would convert, which is what it screens.
+    guides: [G.score, G.labels, G.wabo, G.licensing, G.finance],
   };
 }
 
@@ -143,7 +149,7 @@ export function guidesForListing(l: Pick<AFHListing, "listingType" | "afhStatus"
 export const GUIDES_FOR_BROWSING: BuyerGuideSet = {
   heading: "Guides for AFH buyers",
   intro: "Written for people buying, selling, or operating an adult family home in Washington.",
-  guides: [G.labels, G.fieldGuide, G.finance, G.buySell, G.wabo],
+  guides: [G.score, G.labels, G.fieldGuide, G.finance, G.buySell],
 };
 
 /** Same links as static HTML, for the build-time prerender that crawlers read. */

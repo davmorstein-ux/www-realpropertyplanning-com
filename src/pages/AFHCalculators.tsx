@@ -13,10 +13,19 @@ type Tile = {
   pill: string;
   title: string;
   desc: string;
-  accent: "blue" | "green";
+  accent: "blue" | "green" | "plum";
 };
 
 const TILES: Tile[] = [
+  {
+    to: "/afh-club/afh-property-score",
+    img: "/afh-property-score-cover.webp",
+    alt: "AFH Property Score: could this house work as an adult family home?",
+    pill: "Start here: for buyers",
+    title: "AFH Property Score",
+    desc: "Could this house work as an adult family home? Answer questions from the listing in a few minutes and get a 100-point score for the building, a feasibility check, the likely conversion projects, and a tape-measure checklist for the showing.",
+    accent: "plum",
+  },
   {
     to: "/afh-club/afh-roi-calculator",
     img: "/afh-roi-calculator-cover-v2.webp",
@@ -53,6 +62,12 @@ const accentMap = {
     link: "#0047ab",
     shadow: "0 24px 48px -16px rgba(29, 78, 216, 0.45)",
   },
+  plum: {
+    pillBg: "#ede4f7",
+    pillText: "#4c2a78",
+    link: "#4c2a78",
+    shadow: "0 24px 48px -16px rgba(107, 63, 160, 0.45)",
+  },
   green: {
     pillBg: "#dcfce7",
     pillText: "#15803d",
@@ -87,7 +102,7 @@ const CalcTile: React.FC<{ tile: Tile }> = ({ tile }) => {
         <h2 className="text-[22px] md:text-[24px] font-bold text-slate-900 mb-2">{tile.title}</h2>
         <p className="text-[16px] text-slate-700 leading-relaxed mb-4">{tile.desc}</p>
         <span className="inline-flex items-center gap-1 font-bold" style={{ color: a.link }}>
-          Launch calculator <span aria-hidden>→</span>
+          {tile.accent === "plum" ? "Start the score" : "Launch calculator"} <span aria-hidden>→</span>
         </span>
       </div>
     </Link>
@@ -98,8 +113,8 @@ const AFHCalculators: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="AFH Calculators: ROI, Valuation & Financing Tools | Real Property Planning"
-        description="Tools built for Washington adult family home operators and investors: an ROI calculator, a business and property valuation estimator, and an occupancy and financing calculator."
+        title="AFH Calculators: Property Score, ROI, Valuation & Financing Tools | Real Property Planning"
+        description="Tools built for Washington adult family home buyers, operators and investors: a property score that screens a house for AFH use, an ROI calculator, a business and property valuation estimator, and an occupancy and financing calculator."
         canonical="https://realpropertyplanning.com/afh-club/calculators"
       />
       <Header />
