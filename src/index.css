@@ -3539,19 +3539,32 @@ h1.rpp-hero-band-text {
     justify-content: center !important;
     align-items: center !important;
   }
+  /* The track overflows its container (3x the cards), so it must start at the
+     left edge and be positioned only by the transform in AFHCarousel.tsx.
+     justify-content:center on an overflowing flex row centres the overflow,
+     which parked the carousel BETWEEN two cards whenever the item count was
+     even. The active card is centred via --afh-carousel-offset instead:
+     half the viewport minus half a 304px card. */
   .afh-carousel-track {
-    justify-content: center !important;
-    align-items: center !important;
+    justify-content: flex-start !important;
+    align-items: flex-end !important;
+    --afh-carousel-offset: calc(50% - 152px);
   }
   .afh-carousel-item,
   .afh-carousel-card {
-    margin: 0 auto !important;
+    margin: 0 !important;
     text-align: center !important;
-    align-items: center !important;
   }
   .afh-carousel-item img,
   .afh-carousel-card img {
     margin: 0 auto !important;
+  }
+  /* Dots overflow a phone screen and shove the arrows off it; show "3 of 18". */
+  .afh-carousel-dots {
+    display: none !important;
+  }
+  .afh-carousel-counter {
+    display: inline-block !important;
   }
 }
 

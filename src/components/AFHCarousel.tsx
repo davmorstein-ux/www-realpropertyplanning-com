@@ -127,8 +127,15 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           style={{
             display: "flex",
             gap: CARD_GAP,
-            // Width never changes on hover — always CARD_W + CARD_GAP per step
-            transform: `translateX(calc(-${pos} * ${CARD_W + CARD_GAP}px))`,
+            // Width never changes on hover — always CARD_W + CARD_GAP per step.
+            // --afh-carousel-offset is 0 on desktop (first card flush left, three
+            // visible). On mobile, index.css sets it to calc(50% - half a card) so
+            // the ACTIVE card is centred. Inside translateX, % resolves against the
+            // track's own box, which is the viewport width. Do not centre the track
+            // with justify-content instead: the track overflows, so centring it only
+            // lands on a card when the item count is odd, and the card shown stops
+            // matching the active dot.
+            transform: `translateX(calc(var(--afh-carousel-offset, 0px) - ${pos * (CARD_W + CARD_GAP)}px))`,
             transition: transitioning ? `transform ${SLIDE_MS}ms cubic-bezier(0.16, 1, 0.3, 1)` : "none",
             willChange: "transform",
             alignItems: "flex-end",
@@ -279,7 +286,26 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
           </svg>
         </button>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        {/* Phones: a row of dots is wider than the screen once there are more than
+            about eight cards, which pushed both arrows off-screen. index.css hides
+            the dots at <=768px and shows this counter instead. */}
+        <span
+          className="afh-carousel-counter"
+          aria-live="polite"
+          style={{
+            display: "none",
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 16,
+            fontWeight: 700,
+            color: "#481216",
+            minWidth: 72,
+            textAlign: "center",
+          }}
+        >
+          {((((pos - START) % ITEMS.length) + ITEMS.length) % ITEMS.length) + 1} of {ITEMS.length}
+        </span>
+
+        <div className="afh-carousel-dots" style={{ display: "flex", alignItems: "center", gap: 8 }}>
           {ITEMS.map((_, i) => {
             const normalizedPos = (((pos - START) % ITEMS.length) + ITEMS.length) % ITEMS.length;
             const isActive = normalizedPos === i;
