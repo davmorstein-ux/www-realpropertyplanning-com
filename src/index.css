@@ -5505,10 +5505,29 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
   main h4,
   main dd,
   main dt,
-  main td,
-  main th,
   main figcaption {
     overflow-wrap: anywhere;
+  }
+  /* TABLE CELLS ARE DELIBERATELY NOT IN THE LIST ABOVE.
+
+     "anywhere" and "break-word" both break a too-long string, but they differ
+     in one way that matters enormously inside a table: with "anywhere" the
+     browser counts every between-letter break when it works out how narrow a
+     column is ALLOWED to be, so any column may shrink to one character wide.
+     A table with one long-text column then takes all the room for that column
+     and crushes the others, stacking their words a few letters per line
+     ("Whe / re / they / live", "Adul / t / famil / y / hom / e"). Because the
+     table always "fits" this way, the overflow-x: auto on main table above
+     never gets a chance to scroll. Measured Sept 20, 2026 at 390px: 11 of 13
+     tables on the site had cells narrower than their own longest word.
+
+     "break-word" does not count those breaks when sizing, so no column can be
+     narrower than its longest word. If the columns then do not fit, the table
+     scrolls sideways inside its own box, which is what this block intends. */
+  main td,
+  main th {
+    overflow-wrap: break-word;
+    word-break: normal;
   }
   main [style*="white-space: nowrap"]:not(button):not(a):not(th):not(td) {
     white-space: normal !important;

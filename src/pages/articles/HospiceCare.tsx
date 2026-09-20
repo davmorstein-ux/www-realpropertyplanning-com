@@ -74,6 +74,17 @@ const FAQS = [
   },
 ];
 
+
+/** Where hospice can come, and who pays for the residence. Rendered as a table on
+ *  larger screens and as a stacked list on phones; edit the rows here only. */
+const HOSPICE_PLACES: [string, string, string][] = [
+  ["Own home", "Yes", "Nobody extra: the family keeps paying for the home as before. Personal care between hospice visits is family, private caregivers, or in-home care."],
+  ["Adult family home", "Yes", "The resident (private pay), Medicaid, long-term care insurance, or VA benefits, exactly as before hospice began. The hospice agency's team visits the home."],
+  ["Assisted living or memory care", "Yes", "The resident or their existing coverage. The community's staff continue daily care; hospice adds to it."],
+  ["Nursing facility", "Yes", "Depends on coverage. Medicare's skilled-nursing benefit and the hospice benefit interact; Medicaid often pays room and board for eligible residents."],
+  ["Hospice care center or hospital", "Yes, short term", "Medicare covers qualifying short-term inpatient care and respite stays arranged by the hospice; these are not long-term residences."],
+];
+
 const HospiceCare = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -148,7 +159,24 @@ const HospiceCare = () => {
                 Washington's Medicaid rule states it plainly: hospice care may be in a client's temporary or permanent
                 place of residence. Medicare says the same. The table below is the practical version.
               </p>
-              <div className="overflow-x-auto mb-6">
+              {/* Phones get a stacked list, larger screens get the table. The third
+                  column is a full sentence or two; in three columns on a 390px screen
+                  that leaves it about 120px wide, which is readable but runs very tall.
+                  One list of rows feeds both, so they cannot drift apart. */}
+              <div className="sm:hidden mb-6 flex flex-col" data-hospice-places="">
+                {HOSPICE_PLACES.map(([place, canCome, whoPays]) => (
+                  <div key={place} className="py-4 border-b border-border first:border-t">
+                    <p className="font-semibold text-[18px] text-foreground" style={{ margin: 0 }}>{place}</p>
+                    <p className="text-[16px] text-foreground" style={{ margin: "4px 0 0" }}>
+                      <span className="font-semibold">Hospice can come there?</span> {canCome}
+                    </p>
+                    <p className="text-[16px] text-muted-foreground" style={{ margin: "6px 0 0" }}>
+                      <span className="font-semibold text-foreground">Who generally pays for the residence:</span> {whoPays}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="hidden sm:block overflow-x-auto mb-6">
                 <table className="w-full text-[16px] md:text-[17px]">
                   <thead>
                     <tr className="text-left border-b-2 border-border">
@@ -158,13 +186,7 @@ const HospiceCare = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {[
-                      ["Own home", "Yes", "Nobody extra: the family keeps paying for the home as before. Personal care between hospice visits is family, private caregivers, or in-home care."],
-                      ["Adult family home", "Yes", "The resident (private pay), Medicaid, long-term care insurance, or VA benefits, exactly as before hospice began. The hospice agency's team visits the home."],
-                      ["Assisted living or memory care", "Yes", "The resident or their existing coverage. The community's staff continue daily care; hospice adds to it."],
-                      ["Nursing facility", "Yes", "Depends on coverage. Medicare's skilled-nursing benefit and the hospice benefit interact; Medicaid often pays room and board for eligible residents."],
-                      ["Hospice care center or hospital", "Yes, short term", "Medicare covers qualifying short-term inpatient care and respite stays arranged by the hospice; these are not long-term residences."],
-                    ].map(([a, b, c]) => (
+                    {HOSPICE_PLACES.map(([a, b, c]) => (
                       <tr key={a} className="border-b border-border align-top">
                         <td className="py-2 pr-3 font-semibold">{a}</td>
                         <td className="py-2 pr-3 whitespace-nowrap">{b}</td>
