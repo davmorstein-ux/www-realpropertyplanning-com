@@ -19,8 +19,8 @@ type Tile = {
 const TILES: Tile[] = [
   {
     to: "/afh-club/afh-property-score",
-    img: "/afh-property-score-cover.webp",
-    alt: "AFH Property Score: could this house work as an adult family home?",
+    img: "/afh-property-score-cover-v2.webp",
+    alt: "AFH Property Score: Screen It Before You Tour It. A sample score of 85 out of 100 across bedrooms, bathrooms, access, safety, and site.",
     pill: "Start here: for buyers",
     title: "AFH Property Score",
     desc: "Could this house work as an adult family home? Answer questions from the listing in a few minutes and get a 100-point score for the building, a feasibility check, the likely conversion projects, and a tape-measure checklist for the showing.",
