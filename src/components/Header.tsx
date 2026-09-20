@@ -248,9 +248,24 @@ const Header = () => {
           backdropFilter: isMobile ? "none" : "blur(10px)",
           WebkitBackdropFilter: isMobile ? "none" : "blur(10px)",
           /* Own compositing layer, so scrolling repaints the page beneath it
-             without repainting the header itself. */
-          transform: "translateZ(0)",
-          willChange: "transform",
+             without repainting the header itself. DESKTOP ONLY.
+
+             On phones this hack was the tremor. A position:sticky element is
+             already promoted to its own layer by every current mobile browser,
+             and the browser's scrolling thread positions that layer itself so
+             it stays glued to the top during touch scrolling and while the URL
+             bar collapses and expands. Adding transform/will-change on top
+             makes it a transformed layer as well, and the sticky offset and the
+             transform then get reconciled on different threads, a frame apart:
+             the header visibly shivers on every scroll frame, in both
+             directions. Layout was verified stable while this happened (header
+             top fixed at 0, height constant, no style writes across 200+
+             scrolled frames), which is how the cause was narrowed to the
+             compositor. Nothing inside the header depends on the transform:
+             the mobile menu is portalled to <body>, and the search and language
+             dropdowns are position:absolute. */
+          transform: isMobile ? "none" : "translateZ(0)",
+          willChange: isMobile ? "auto" : "transform",
           /* Strengthened from 14% to 30% opacity. Not a new dark rule: the
              header is cream and the hero photograph sits directly beneath it,
              so the tonal contrast already marks that boundary — a hard dark
