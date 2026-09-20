@@ -399,10 +399,19 @@ const PAGE_CSS = `
     width: 100%;
     max-width: 172px;
     height: auto;
-    /* Matches the files (620x515), so each cell reserves its space before the
-       image arrives and the grid does not reflow as six lazy images load. */
-    aspect-ratio: 620 / 515;
-    margin: 0 0 12px -10px;
+    /* Matches the files (688x626), so each cell reserves its space before the
+       image arrives and the grid does not reflow as six lazy images load.
+       The six -v2 cubes (Sept 2026) were normalised when they were prepared:
+       every cube body is the same width, centred, and sits on the same baseline
+       inside an identical canvas, because the source renders varied in scale by
+       up to 9%. If a cube is ever replaced, normalise it the same way or it will
+       stand taller or shorter than its neighbours. */
+    aspect-ratio: 688 / 626;
+    /* The -v2 canvas has 82px of transparent padding left of the cube (of 688).
+       At 172px wide that is ~21px, so this pulls the visible cube flush with the
+       text beneath it. Measured, not guessed: at -10px (the value tuned for the
+       old artwork) the cube sat 11px to the right of the text. */
+    margin: 0 0 12px -21px;
     /* Hover: a plain lift. A 3D tilt was tried first (Sept 2026) and
        skewed the isometric artwork into an odd shape — David said the cubes
        looked "frightened". No rotation; just rise and grow slightly. */
@@ -463,7 +472,8 @@ const PAGE_CSS = `
   }
   @media (max-width: 560px) {
     .rpp-afh-lane-list { grid-template-columns: minmax(0, 1fr); gap: 26px; }
-    .rpp-afh-cube-img { max-width: 140px; }
+    /* 82/688 of 140px is ~17px: keeps the cube flush with the text on phones. */
+    .rpp-afh-cube-img { max-width: 140px; margin-left: -17px; }
     .rpp-afh-lane-row p { font-size: 17px !important; }
   }
 
@@ -710,12 +720,12 @@ const AFHClub = () => {
               ].map((lane) => (
                 <div key={lane.title} className="rpp-afh-lane-row">
                   <img
-                    src={`/afh-cube-${lane.title.toLowerCase()}.webp`}
+                    src={`/afh-cube-${lane.title.toLowerCase()}-v2.webp`}
                     alt=""
                     aria-hidden="true"
                     className="rpp-afh-cube-img"
-                    width={620}
-                    height={515}
+                    width={688}
+                    height={626}
                     loading="lazy"
                     decoding="async"
                   />
