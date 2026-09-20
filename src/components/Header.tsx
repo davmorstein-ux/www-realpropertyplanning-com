@@ -219,10 +219,28 @@ const Header = () => {
         ref={headerRef}
         data-nosnippet="true"
         style={{
-          position: "sticky",
+          /* FIXED ON PHONES, STICKY ON DESKTOP: the tremor fix.
+
+             A sticky element has to be re-positioned by the browser on every
+             scroll frame. On phones, where scrolling runs on a separate thread
+             from the page, that re-positioning can land a frame late, and the
+             header shivers in both directions. Layout was measured rock-stable
+             while it happened (top 0, constant height, no style writes), and
+             removing the translateZ/will-change layer did not cure it, so the
+             mechanism itself was removed instead: a fixed element is never
+             re-positioned during a scroll, so there is nothing to lag.
+
+             The spacer rendered straight after the closing header tag keeps the
+             header's exact footprint in the flow, so every page lays out
+             precisely as it did when the header was sticky. If the header is
+             ever made sticky on mobile again, delete the spacer too or every
+             page gains a header's worth of blank space. */
+          position: isMobile ? "fixed" : "sticky",
           top: 0,
           left: 0,
           right: 0,
+          width: isMobile ? "100%" : undefined,
+          boxSizing: "border-box",
           zIndex: 50,
           margin: 0,
           /* env(safe-area-inset-top) is only meaningful when the header is at
@@ -525,6 +543,12 @@ const Header = () => {
           </>
         )}
       </header>
+      {/* Holds the fixed mobile header's place in the flow. Height comes from the
+          measured --header-height; 136px is the real mobile height, used only
+          for the first paint before measurement so nothing jumps. */}
+      {isMobile && (
+        <div aria-hidden="true" data-header-spacer="" style={{ height: "var(--header-height, 136px)", flexShrink: 0 }} />
+      )}
     </>
   );
 };
