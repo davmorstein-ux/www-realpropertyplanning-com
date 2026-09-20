@@ -772,13 +772,13 @@ const AFHClub = () => {
                 {
                   n: "01",
                   title: "Residential real estate brokerage",
-                  who: "David Stein \u2014 eXp Realty, WA broker license #133972",
+                  who: "Licensed Washington real estate broker, eXp Realty",
                   body: "Listing, marketing, and sale of the real property itself, including homes marketed quietly to buyers already in the network.",
                 },
                 {
                   n: "02",
                   title: "Appraisal and valuation",
-                  who: "David Stein \u2014 Stein Appraisal, WA certified residential appraiser #1702080",
+                  who: "Washington certified residential appraiser",
                   body: "Independent valuation of the real estate. Appraisal and brokerage are kept on separate transactions \u2014 the same property is never both appraised and brokered by the same person.",
                 },
                 {
