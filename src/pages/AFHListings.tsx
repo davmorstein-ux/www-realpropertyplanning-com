@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { liveListings, soldListings, AFH_TYPE_LABELS, type AFHListingType, type AFHMarketStatus } from "@/data/afhListings";
 import { AFH_CITY_PAGES } from "@/data/afhCityPages";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
+import AFHBuyerGuides from "@/components/AFHBuyerGuides";
 import { realEstateListingsPageSchema } from "@/lib/schema";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
 import expRealtyLogo from "@/assets/providers/exp-realty-brokerage-large-logo-washington.webp";
@@ -575,6 +576,11 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
             {shown.map((listing, index) => (
               <AFHListingCard key={listing.id} listing={listing} index={index} total={shown.length} />
             ))}
+          </div>
+
+          {/* ── GUIDES FOR BUYERS ── same list the prerender writes into the static HTML */}
+          <div style={{ marginTop: "2.5rem", marginBottom: "1rem" }}>
+            <AFHBuyerGuides />
           </div>
 
           {/* ── DISCLAIMER ── */}

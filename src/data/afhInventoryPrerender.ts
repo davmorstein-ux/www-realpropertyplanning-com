@@ -28,6 +28,7 @@ import {
 } from "./afhListings";
 import { AFH_CITY_PAGES, cityPageByCity } from "./afhCityPages";
 import { facilityForListing, type FacilityLike } from "./afhAddressMatch";
+import { buyerGuidesHtml, guidesForListing, GUIDES_FOR_BROWSING } from "./afhBuyerGuides";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -463,6 +464,8 @@ export function renderAfhInventory(
     );
   }
   html.push(`</section>`);
+  /* Guides for buyers: index, type views, city pages and the sold page alike. */
+  html.push(buyerGuidesHtml(GUIDES_FOR_BROWSING, esc));
 
   const jsonLd: Record<string, unknown>[] = [];
   if (listings.length > 0) {
@@ -637,6 +640,8 @@ export function buildAfhListingRoutes(cityRoutes: Record<string, string>, facili
     b.push(
       `<p style="color:#444;line-height:1.7;margin:0 0 24px">If this listing has sold, changed price, or come off the market, <a href="mailto:info@realpropertyplanning.com?subject=${encodeURIComponent(`AFH listing status change — ${sourceRef(l)}`)}" style="color:#1a365d">report the change</a> and it will be verified against the source and updated.</p>`
     );
+    /* Guides chosen by what is being sold. Same list the React page renders. */
+    b.push(buyerGuidesHtml(guidesForListing(l), esc));
     b.push(`<p style="margin:0 0 8px"><a href="${typeRoute}" style="color:#1a365d">All ${esc(AFH_TYPE_LABELS[l.listingType].plural.toLowerCase())} in Washington</a></p>`);
     if (cityRoute) b.push(`<p style="margin:0 0 8px"><a href="${cityRoute}" style="color:#1a365d">Adult family homes for sale in ${esc(l.city)}, WA</a></p>`);
     b.push(`<p style="margin:0 0 24px"><a href="/afh-club/listings" style="color:#1a365d">All adult family home listings in Washington</a></p>`);

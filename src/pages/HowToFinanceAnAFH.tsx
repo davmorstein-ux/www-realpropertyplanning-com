@@ -224,6 +224,10 @@ const HowToFinanceAnAFH = () => {
               </div>
             </div>
 
+            <p style={{ ...p, marginTop: 28 }}>
+              Ready to look at what is on the market? See <Link to="/afh-club/listings" style={{ color: TEAL, fontWeight: 700 }}>adult family homes for sale in Washington</Link>: properties, businesses, and leases, each labeled by what is actually being sold.
+            </p>
+
             {/* Disclaimer */}
             <p style={{ ...p, fontSize: 17, color: "#2b2825", marginTop: 28 }}>
               Real Property Planning receives no compensation from any lender listed and does not endorse or guarantee any lender, program, rate, or approval. Lenders are listed because they publish information showing they work with adult family homes; "confirmed" entries are ones David Stein has spoken with about their current AFH lending. Published terms change; verify everything with the lender. This page is general information, not lending or financial advice.

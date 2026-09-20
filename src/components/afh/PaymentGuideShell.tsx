@@ -158,6 +158,7 @@ const PaymentGuideShell = ({ id, seoTitle, seoDescription, eyebrow, lede, cover,
                 ))}
                 <li style={gs.li}><Link to="/afh-club/afh-valuation-estimator" style={gs.link}>AFH Valuation Estimator</Link> and <Link to="/afh-club/how-to-finance-an-afh" style={gs.link}>How to Finance an Adult Family Home</Link></li>
                 <li style={gs.li}><Link to="/afh-club/buying-selling" style={gs.link}>Buying or Selling an AFH</Link>: the change-of-ownership process and what transfers</li>
+                <li style={gs.li}><Link to="/afh-club/listings" style={gs.link}>Adult family homes for sale in Washington</Link>: properties, businesses, and leases currently on the market</li>
               </ul>
             </div>
 

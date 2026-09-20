@@ -23,6 +23,7 @@ import { cityExists, loadCity } from "@/data/afh/directory";
 import type { AFHFacility } from "@/data/afh/types";
 import { facilityForListing } from "@/data/afhAddressMatch";
 import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
+import AFHBuyerGuides from "@/components/AFHBuyerGuides";
 
 const GREEN = "#0a5648";
 
@@ -168,6 +169,7 @@ const AFHListingDetail = () => {
                 </h2>
                 <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed">{whatIsBeingSold(listing)}</p>
               </div>
+              <AFHBuyerGuides listing={listing} />
               <div className="max-w-3xl">
                 <h2 className="font-serif text-[24px] md:text-[28px] font-semibold text-navy leading-tight mb-3">
                   Seen a change?
