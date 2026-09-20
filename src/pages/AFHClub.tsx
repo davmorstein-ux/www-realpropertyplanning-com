@@ -70,6 +70,31 @@ const PAGE_CSS = `
     width: 100% !important;
     line-height: 1.45 !important;
   }
+  /* LEAD BLOCK SPACING: kicker -> heading -> intro -> cubes.
+
+     index.css opens with two sitewide rules:
+         h1,h2,h3,h4 { margin-bottom: 0.4rem !important }   (6.4px)
+         p           { margin-bottom: 0.6rem !important }   (9.6px)
+     !important beats an inline style, so the 20 / 18 / 52px written on these
+     three elements was never applied: the browser rendered 10 / 6 / 10px and
+     the block read as cramped, with the cubes jammed under the sentence.
+
+     The gaps have to be set HERE, in a class with !important, to win. The
+     inline margins on the elements below are kept in step with these values
+     so the JSX does not lie about what renders; change both together.
+
+     Rhythm: the kicker and heading are one unit, so that gap is the smallest;
+     the intro sentence belongs to the heading but needs air; the cubes start a
+     new group, so that gap is the largest. */
+  .rpp-afh-paths .rpp-afh-kicker.rpp-afh-kicker-lead { margin-bottom: 26px !important; }
+  .rpp-afh-paths h2.rpp-afh-paths-heading { margin-bottom: 26px !important; }
+  .rpp-afh-paths p.rpp-afh-paths-intro { margin-bottom: 64px !important; }
+  @media (max-width: 640px) {
+    .rpp-afh-paths .rpp-afh-kicker.rpp-afh-kicker-lead { margin-bottom: 20px !important; }
+    .rpp-afh-paths h2.rpp-afh-paths-heading { margin-bottom: 20px !important; }
+    .rpp-afh-paths p.rpp-afh-paths-intro { margin-bottom: 44px !important; }
+  }
+
   .rpp-afh-marketplace h2,
   .rpp-afh-marketplace p,
   .rpp-afh-marketplace h2 span,
@@ -623,28 +648,32 @@ const AFHClub = () => {
            ================================================================== */}
         <section className="rpp-afh-paths" style={{ background: "#ffffff", padding: "72px 24px 16px" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-            <p className="rpp-afh-kicker rpp-afh-kicker-lead" style={{ color: "#b13a44", marginBottom: 20 }}>
+            {/* Gaps in this block are set in PAGE_CSS (LEAD BLOCK SPACING): a sitewide
+                !important rule overrides inline margins on every p and heading. */}
+            <p className="rpp-afh-kicker rpp-afh-kicker-lead" style={{ color: "#b13a44", marginBottom: 26 }}>
               Buying, selling, and leasing in Washington State
             </p>
             <h2
+              className="rpp-afh-paths-heading"
               style={{
                 fontSize: "clamp(30px, 3.6vw, 44px)",
                 fontFamily: "'DM Sans', system-ui, sans-serif",
                 fontWeight: 700,
                 lineHeight: 1.15,
-                margin: "0 0 18px",
+                margin: "0 0 26px",
                 textAlign: "center",
               }}
             >
               More ways of doing business
             </h2>
             <p
+              className="rpp-afh-paths-intro"
               style={{
                 fontSize: "clamp(19px, 2vw, 23px)",
                 fontFamily: "'DM Sans', sans-serif",
                 lineHeight: 1.8,
                 maxWidth: 760,
-                margin: "0 auto 52px",
+                margin: "0 auto 64px",
                 textAlign: "center",
               }}
             >
