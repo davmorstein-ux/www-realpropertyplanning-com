@@ -17,8 +17,8 @@ import { confirmedPrivatePayBands, privatePayBandByMarket } from "@/data/afhPriv
  * own hours) by the annual debt service and wants at least ~1.25x. Below
  * that the loan is declined or reduced and the buyer must offer less.
  *
- * Built from the Cedar View (Edmonds) analysis: the same model as the
- * spreadsheet David used with the owner, generalised for any home.
+ * Generalised from a real lender-style analysis of a six-bed home: net
+ * operating income against annual debt service, by occupancy and price.
  * Colour: teal, distinct from ROI (cobalt) and valuation (green).
  */
 

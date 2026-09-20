@@ -1,3 +1,7 @@
+> **Working on this codebase, as a person or an AI assistant? Read [AGENTS.md](./AGENTS.md) first.**
+> It covers the ground rules, the stylesheet traps, the add-a-page checklist, the single sources of truth,
+> and which facts on the site have been verified. `main` deploys straight to the live site.
+
 # Welcome to your Lovable project
 
 ## Project info
