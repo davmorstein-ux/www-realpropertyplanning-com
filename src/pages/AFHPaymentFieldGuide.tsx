@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PaymentGuideShell, { GUIDES, Table, gs } from "@/components/afh/PaymentGuideShell";
+import { AFH_SPECIALTY_RATES } from "@/data/afhBehavioralRates";
 
 /**
  * Tiers, Levels, and Classifications: A Field Guide to How Washington AFHs
@@ -10,13 +11,18 @@ import PaymentGuideShell, { GUIDES, Table, gs } from "@/components/afh/PaymentGu
  * Sources checked Sept 18, 2026: WAC 388-106-0115 (CARE residential groups),
  * WAC 182-561-0500 (CBHS tiers), DSHS CHOW page (specialty contracts do not
  * transfer), WAC 388-106-1810/1840 (the 2026 five-tier PE rule is in-home only).
+ * Revised Sept 19, 2026: Meaningful Day removed as a current specialty contract
+ * (funding cut July 1, 2025); ECS/SBS mechanics and rates added from the 2025-27
+ * CBA via src/data/afhBehavioralRates.ts; CBHS-before-SBS rule (WAC 388-106-0336(11)).
  */
+
+const money = (n: number) => n.toLocaleString("en-US", { style: "currency", currency: "USD" });
 
 const FAQS = [
   { question: "Are Washington adult family homes classified as Tier 1 through Tier 5?", answer: "No. Homes are not tiered at all. The systems people call tiers are assigned to individual residents or, for specialty contracts, held by the owner. The numbered tiers an AFH owner usually means are CBHS supportive supervision tiers, which run 1 through 6 and apply only to residents with qualifying behavioral health needs." },
   { question: "What is the difference between a CARE classification and a CBHS tier?", answer: "A CARE classification (A Low through E High) is assigned by DSHS to every Medicaid resident and sets the base daily rate. A CBHS tier (1 through 6) is a separate Health Care Authority benefit for residents with qualifying behavioral needs, defined by hours of dedicated staff supervision per day, and paid in addition to the base rate." },
   { question: "What is the 2026 five-tier personal care rule I keep finding online?", answer: "It is part of Washington's long-term services presumptive eligibility program. It sets Tier 1 through 5 monthly personal care hours for people receiving care in their own home while their Medicaid application is processed. It does not apply to adult family home residents and has no effect on AFH income." },
-  { question: "Which AFH income survives a sale?", answer: "It depends on the system. Base CARE classifications follow each resident. CBHS tiers also follow the resident and are reviewed at least yearly. Specialty contracts such as ECS, SBS and Meaningful Day belong to the owner and do not transfer in a change of ownership; a buyer must qualify for their own. Private-pay rates are set by the home and can be changed by the next owner." },
+  { question: "Which AFH income survives a sale?", answer: "It depends on the system. Base CARE classifications follow each resident. CBHS tiers also follow the resident and are reviewed at least yearly. Specialty contracts such as ECS and SBS belong to the owner and do not transfer in a change of ownership; a buyer must qualify for their own. Private-pay rates are set by the home and can be changed by the next owner." },
 ];
 
 const AFHPaymentFieldGuide = () => (
@@ -27,7 +33,7 @@ const AFHPaymentFieldGuide = () => (
     eyebrow="For buyers, sellers & owners"
     lede="Spend an afternoon with adult family home owners and you will hear about Tier 3 residents, C High, Level 4 care, and the ECS contract, sometimes in one sentence. These are not one system. They are four."
     cover={{ src: "/afh-payment-field-guide-cover.webp", alt: "Which Tier? The AFH Payment Field Guide — four separate systems: A–E classifications, CBHS tiers, specialty contracts, and private-pay levels" }}
-    dateModified="2026-09-18"
+    dateModified="2026-09-19"
     faqs={FAQS}
     faqHeading="AFH Tiers and Classifications: Common Questions"
     disclaimer="This page is general educational information for people buying, selling, or operating an adult family home. It is not legal, financial, or reimbursement advice. Program rules and rates change; confirm current details with DSHS and the Washington State Health Care Authority."
@@ -42,7 +48,7 @@ const AFHPaymentFieldGuide = () => (
       rows={[
         ["CARE classifications", "DSHS", "Each Medicaid resident", "A Low … E High"],
         ["CBHS tiers", "Health Care Authority", "Residents with qualifying behavioral needs", "Tier 1 … Tier 6"],
-        ["Specialty contracts", "DSHS", "The owner / the home", "ECS, SBS, Meaningful Day"],
+        ["Specialty contracts", "DSHS", "The owner / the home", "ECS, SBS"],
         ["Private-pay care levels", "The home itself", "Each private-pay resident", "Often Level 1 … 5"],
       ]}
     />
@@ -57,15 +63,21 @@ const AFHPaymentFieldGuide = () => (
       This is where the word "tier" properly belongs. Community Behavioral Health Support is a Health Care Authority benefit that pays for supportive supervision of residents with qualifying behavioral needs, on top of the base rate. Tiers are defined by hours of dedicated staff time per day. Only some residents qualify. Full guide: <Link to={GUIDES.cbhs.href} style={gs.link}>CBHS Tiers Explained</Link>.
     </p>
 
-    <h3 style={gs.h3}>3. Specialty contracts (ECS, SBS, Meaningful Day)</h3>
+    <h3 style={gs.h3}>3. Specialty contracts (ECS and SBS)</h3>
     <p style={gs.p}>
-      These are contracts the home itself must qualify for and hold, and they pay add-on rates for eligible residents. They come with a warning every buyer should memorize.
+      These are contracts the home itself must qualify for and hold under the state's Residential Support Waiver. They pay in two different ways, and the difference matters when you read a seller's income. <strong>Expanded Community Services (ECS)</strong> is not an add-on: the home is paid the ECS daily rate ({money(AFH_SPECIALTY_RATES.ecsDailyPaid)}) or the resident's base rate, whichever is greater. <strong>Specialized Behavior Support (SBS)</strong> is an add-on: {money(AFH_SPECIALTY_RATES.sbsAddOn)} a day on top of the base rate, in exchange for six to eight additional hours a day of individualized staffing.
+    </p>
+    <p style={gs.p}>
+      These contracts matter less than they used to. Since July 1, 2025, a resident must first be found not eligible for CBHS before receiving SBS, which makes CBHS the primary route for behavioral support and means the two never stack. Both contracts come with a warning every buyer should memorize.
     </p>
     <div style={gs.warn}>
       <p style={{ ...gs.p, margin: 0 }}>
-        <strong>Specialty contracts do not transfer with the home.</strong> DSHS states that contracts such as Meaningful Day, Expanded Community Services (ECS), and Specialized Behavior Support (SBS) are not transferable in a change of ownership. The new owner must qualify and hold a fully executed contract before providing, or being paid for, those services. Revenue from them cannot be assumed to survive closing.
+        <strong>Specialty contracts do not transfer with the home.</strong> DSHS states that specialty contracts such as Expanded Community Services (ECS) and Specialized Behavior Support (SBS) are not transferable in a change of ownership. The new owner must qualify and hold a fully executed contract before providing, or being paid for, those services. Revenue from them cannot be assumed to survive closing.
       </p>
     </div>
+    <p style={{ ...gs.p, fontSize: 17 }}>
+      A note on Meaningful Day: you will still see it listed alongside ECS and SBS, including on state pages. The 2025 state budget eliminated funding for the Home and Community Services Meaningful Day add-on as of July 1, 2025. Do not count it as income in a purchase without confirming its current status with DSHS.
+    </p>
 
     <h3 style={gs.h3}>4. Private-pay care levels</h3>
     <p style={gs.p}>

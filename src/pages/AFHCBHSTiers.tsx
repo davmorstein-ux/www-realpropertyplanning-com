@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PaymentGuideShell, { GUIDES, Table, gs } from "@/components/afh/PaymentGuideShell";
+import { AFH_CBA_SOURCE, SUPPORTIVE_SUPERVISION_TIERS } from "@/data/afhBehavioralRates";
 
 /**
  * CBHS Tiers Explained: The Behavioral Health Add-On Behind Some AFH Income
@@ -10,15 +11,23 @@ import PaymentGuideShell, { GUIDES, Table, gs } from "@/components/afh/PaymentGu
  * and billing guide (Jan 2026), HCA re-tiering request form 13-0125, HCA
  * supportive-supervision tracking form 13-0126, AFH Council guidance Feb 2025.
  *
- * DELIBERATELY ABSENT: per-tier dollar amounts. HCA publishes a fee schedule,
- * but no figure has been verified, and what a home is paid under its managed
- * care contracts has not been confirmed either. Do not add dollar figures
- * without a source. Also open: exactly what a new owner must have in place
- * for CBHS payments to continue after a change of ownership — posed to the
- * reader as a question, not answered.
+ * RATES (added Sept 19, 2026). Per-tier dollar amounts come from Article 7.13
+ * of the 2025-27 AFH Council collective bargaining agreement, via
+ * src/data/afhBehavioralRates.ts. Do not hard-code them here. The CBA says
+ * managed care organizations "shall pay" these per diems and that single case
+ * agreements "will strictly adhere" to them, so the rate does not vary by home.
+ *
+ * STILL OPEN: exactly what a new owner must have in place for CBHS payments to
+ * continue after a change of ownership. Posed to the reader as a question.
  */
 
+const usd = (n: number, d = 2) => n.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: d, maximumFractionDigits: d });
+const hrs = (n: number) => (Number.isInteger(n) ? n.toFixed(0) : n.toFixed(1));
+const T = SUPPORTIVE_SUPERVISION_TIERS;
+const t3 = T[2];
+
 const FAQS = [
+  { question: "How much does CBHS pay an adult family home?", answer: `CBHS pays a per diem by tier, set in the 2025-27 collective bargaining agreement between the state and the Adult Family Home Council: ${T.map((t) => `Tier ${t.tier} ${usd(t.daily)}`).join(", ")} per day. Managed care organizations are required to pay these rates, so the rate itself does not vary from home to home. The payment is for supportive supervision the home must actually staff and document; it is not profit.` },
   { question: "What are CBHS tiers in a Washington adult family home?", answer: "Community Behavioral Health Support (CBHS) is a Medicaid benefit administered by the Health Care Authority with DSHS. It pays for supportive supervision of residents with qualifying behavioral health needs. There are six tiers, defined by the average hours per day of dedicated staff a resident requires, from 0.5 to 2 hours at Tier 1 up to 20.1 to 24 hours at Tier 6." },
   { question: "Is a CBHS tier the same as a CARE classification?", answer: "No. The CARE classification (A Low through E High) is assigned by DSHS and sets the base daily rate for every Medicaid resident. A CBHS tier is a separate benefit for residents with qualifying behavioral needs. It covers supportive supervision only, not personal care or room and board." },
   { question: "Does every AFH receive CBHS payments?", answer: "No. The tier belongs to the individual resident, and only residents who meet the eligibility criteria have one. Two homes identical in size, location and licensing can have very different CBHS income depending on who lives there." },
@@ -34,10 +43,10 @@ const AFHCBHSTiers = () => (
     eyebrow="For buyers, sellers & owners"
     lede="If an adult family home owner talks about Tier 2 or Tier 4 residents, this is almost certainly the system they mean. It is separate from the A through E classification that sets the base rate."
     cover={{ src: "/afh-cbhs-tiers-cover.webp", alt: "CBHS Tiers: The Add-On Buyers Overlook — understand, qualify, staff, sustain" }}
-    dateModified="2026-09-18"
+    dateModified="2026-09-19"
     faqs={FAQS}
     faqHeading="CBHS Tiers: Common Questions"
-    disclaimer="This page is general educational information for people buying, selling, or operating an adult family home. It is not legal, financial, clinical, or reimbursement advice, and it deliberately quotes no payment amounts. Confirm current rules, rates, and contracting requirements with the Washington State Health Care Authority and the relevant managed care organizations."
+    disclaimer="This page is general educational information for people buying, selling, or operating an adult family home. It is not legal, financial, clinical, or reimbursement advice. Rates shown are the negotiated per diems in effect through June 30, 2027; tier and eligibility are decided by the Health Care Authority and the managed care organizations, not by this page. Confirm current rules, rates, and contracting requirements with the Washington State Health Care Authority and the relevant managed care organizations."
   >
     <h2 style={gs.h2}>What CBHS is</h2>
     <p style={gs.p}>
@@ -60,29 +69,28 @@ const AFHCBHSTiers = () => (
     </p>
 
     <Table
-      head={["Tier", "Average dedicated staff hours per day"]}
-      rows={[
-        ["Tier 1", "0.5 to 2.0. Daily intermittent monitoring, redirection, and cueing"],
-        ["Tier 2", "2.1 to 6.0"],
-        ["Tier 3", "6.1 to 10.0 of one-on-one staffing"],
-        ["Tier 4", "10.1 to 15.0 of one-on-one staffing"],
-        ["Tier 5", "15.1 to 20.0 of one-on-one staffing"],
-        ["Tier 6", "20.1 to 24, or regular episodes requiring multiple staff"],
-      ]}
+      head={["Tier", "Average dedicated staff hours per day", "Paid per day", "30-day month"]}
+      rows={T.map((t) => [
+        `Tier ${t.tier}`,
+        t.tier === 6 ? `${hrs(t.minHours)} to ${hrs(t.maxHours)}, or regular episodes requiring multiple staff` : `${hrs(t.minHours)} to ${hrs(t.maxHours)}`,
+        usd(t.daily),
+        usd(t.daily * 30, 0),
+      ])}
     />
     <p style={{ ...gs.p, fontSize: 17 }}>
-      Source: WAC 182-561-0500. The hour bands for Tiers 4 and 5 were revised by an amendment effective May 24, 2025, so older handouts may show slightly different ranges.
+      Hour bands: WAC 182-561-0500 (the bands for Tiers 4 and 5 were revised effective May 24, 2025, so older handouts may differ). Rates: Article 7.13 of the{" "}
+      <a href={AFH_CBA_SOURCE.url} target="_blank" rel="noopener noreferrer" style={gs.link}>2025-27 collective bargaining agreement</a> between the state and the Adult Family Home Council, in effect through June 30, 2027. The same table applies to Intensive Behavioral Supportive Supervision (IBSS), a managed-care alternative route to the same service; a resident has one or the other, never both.
     </p>
 
     <h2 style={gs.h2}>Why two similar homes can have very different CBHS income</h2>
     <p style={gs.p}>
-      The tier belongs to the resident, not the house. A home with three Tier 2 residents and a home with none can be identical in size, location, and licensing. This is why owners say tier income "varies from home to home" even though the tier structure is the state's. HCA publishes a fee schedule for CBHS; what a particular home is actually paid should be confirmed against its managed care contracts and its deposits.
+      The tier belongs to the resident, not the house. A home with three Tier 2 residents and a home with none can be identical in size, location, and licensing. This is why owners say tier income "varies from home to home." What varies is who lives there. The rate does not: the collective bargaining agreement says managed care organizations shall pay these per diems, and that even one-off single case agreements will strictly adhere to the same tiers. A buyer can therefore check a seller's CBHS deposits against a published number.
     </p>
 
     <div style={gs.callout}>
       <p style={{ fontSize: 14, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", margin: "0 0 10px", color: "#9fe3dc" }}>The income is real, and so is the cost</p>
       <p style={{ fontSize: 21, lineHeight: 1.5, margin: 0, fontWeight: 600 }}>
-        A Tier 3 resident is authorized for six to ten hours a day of one-on-one staffing. That staffing has to actually be provided. Look at the payroll supporting the income, not just the deposits.
+        Tier {t3.tier} pays {usd(t3.daily)} a day, about {usd(Math.round((t3.daily * 365) / 100) * 100, 0)} a year. It also authorizes {hrs(t3.minHours)} to {hrs(t3.maxHours)} hours a day of one-on-one staffing that has to actually be provided. At eight hours a day, that is about {usd(t3.daily / 8)} per staffed hour before payroll taxes and overhead. Look at the payroll supporting the income, not just the deposits.
       </p>
     </div>
 
@@ -111,7 +119,7 @@ const AFHCBHSTiers = () => (
 
     <h2 style={gs.h2}>Where CBHS fits</h2>
     <p style={gs.p}>
-      CBHS sits on top of the base Medicaid rate set by the resident's <Link to={GUIDES.care.href} style={gs.link}>CARE classification (A through E)</Link>, and it is separate again from owner-held specialty contracts such as ECS and SBS, which do not transfer in a sale. The <Link to={GUIDES.hub.href} style={gs.link}>Field Guide</Link> lays all four systems side by side.
+      CBHS is now the state's primary route for paying behavioral support in an adult family home. For care plans from eligibility assessments on or after July 1, 2025, a resident must first be found <strong>not</strong> eligible for CBHS before receiving Specialized Behavior Support (SBS) under the Residential Support Waiver, so the two do not stack. CBHS sits on top of the base Medicaid rate set by the resident's <Link to={GUIDES.care.href} style={gs.link}>CARE classification (A through E)</Link>, and it is separate again from owner-held specialty contracts such as ECS and SBS, which do not transfer in a sale. The <Link to={GUIDES.hub.href} style={gs.link}>Field Guide</Link> lays all four systems side by side.
     </p>
   </PaymentGuideShell>
 );

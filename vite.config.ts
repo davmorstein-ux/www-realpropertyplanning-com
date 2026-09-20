@@ -893,9 +893,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Owners talk about Tier 3 residents, C High, Level 4 care and the ECS contract as if they were one system. They are four, set by different agencies, attached to different things, and they behave differently when a home is sold.",
     faq: [
       { q: "What is the difference between a CARE classification and a CBHS tier?", a: "A CARE classification is assigned by DSHS to every Medicaid resident and sets the base daily rate. A CBHS tier is a separate Health Care Authority benefit for residents with qualifying behavioral needs, defined by hours of dedicated staff supervision per day." },
-      { q: "Which AFH income survives a sale?", a: "CARE classifications and CBHS tiers follow each resident. Specialty contracts such as ECS, SBS and Meaningful Day belong to the owner and do not transfer in a change of ownership. Private-pay rates are set by the home and can be changed by the next owner." },
+      { q: "Which AFH income survives a sale?", a: "CARE classifications and CBHS tiers follow each resident. Specialty contracts such as ECS and SBS belong to the owner and do not transfer in a change of ownership. Private-pay rates are set by the home and can be changed by the next owner." },
     ],
-    article: { datePublished: "2026-09-18", dateModified: "2026-09-18" },
+    article: { datePublished: "2026-09-18", dateModified: "2026-09-19" },
   },
   "/afh-club/care-classifications-a-through-e": {
     title: "CARE Classifications A Through E: How Medicaid Pays Washington Adult Family Homes | AFH Club",
@@ -915,7 +915,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Community Behavioral Health Support (CBHS) pays adult family homes for supportive supervision in six tiers defined by staff hours per day. What the tiers are, who qualifies, how they are reviewed and re-tiered, and what AFH buyers and sellers should verify.",
     h1: "CBHS Tiers Explained: The Behavioral Health Add-On Behind Some AFH Income",
     quickAnswerQ: "What are CBHS tiers in a Washington adult family home?",
-    quickAnswerA: "Community Behavioral Health Support (CBHS) is a Medicaid benefit administered by the Health Care Authority with DSHS that pays for supportive supervision of residents with qualifying behavioral health needs. There are six tiers, defined by average hours per day of dedicated staff: Tier 1 is 0.5 to 2 hours, Tier 2 is 2.1 to 6, Tier 3 is 6.1 to 10, Tier 4 is 10.1 to 15, Tier 5 is 15.1 to 20, and Tier 6 is 20.1 to 24.",
+    quickAnswerA: "Community Behavioral Health Support (CBHS) is a Medicaid benefit administered by the Health Care Authority with DSHS that pays for supportive supervision of residents with qualifying behavioral health needs. There are six tiers, defined by average hours per day of dedicated staff: Tier 1 is 0.5 to 2 hours, Tier 2 is 2.1 to 6, Tier 3 is 6.1 to 10, Tier 4 is 10.1 to 15, Tier 5 is 15.1 to 20, and Tier 6 is 20.1 to 24. Under the 2025-27 collective bargaining agreement the per diems are $36.30, $98.01, $194.81, $303.71, $424.71 and $528.00, and managed care organizations are required to pay them, so the rate does not vary by home.",
     intro: "If an adult family home owner talks about Tier 2 or Tier 4 residents, this is almost certainly the system they mean. It is separate from the A through E classification that sets the base Medicaid rate.",
     faq: [
       { q: "Does every AFH receive CBHS payments?", a: "No. The tier belongs to the individual resident, and only residents who meet the eligibility criteria have one." },
