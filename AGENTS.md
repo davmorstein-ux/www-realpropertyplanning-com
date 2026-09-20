@@ -159,7 +159,7 @@ sufficient; ask for a screenshot from the real phone when it matters.
 | CBHS / IBSS per diems, ECS, SBS, Community Integration, stacking rules | `src/data/afhBehavioralRates.ts` |
 | Private-pay ranges by market (only `confirmed: true` bands render) | `src/data/afhPrivatePayRanges.ts` |
 | Which guides a listing page links to (used by React **and** the prerender) | `src/data/afhBuyerGuides.ts` |
-| AFH Property Score: every question, point, flag, band, checklist line | `src/data/afhPropertyScore.ts` (tests: `src/test/afhPropertyScore.test.ts`; 31 rules, including every correction from outside review) |
+| AFH Property Score: every question, point, flag, band, checklist line | `src/data/afhPropertyScore.ts` (tests: `src/test/afhPropertyScore.test.ts`, including every correction from outside review) |
 | DSHS licensed-home directory | `src/data/afh/` (public state data) |
 | For-sale and sold listings | `src/data/afhListings.ts` |
 
@@ -237,13 +237,31 @@ AFH Club.
 - **Proposed, not adopted:** DSHS opened rulemaking on chapter 388-76 in June
   2026. One proposal would require 36 in of clear space outside a bedroom escape
   window in newly licensed homes. Check its status before calling it a rule.
-- A claim that chapter 388-76 WAC was amended effective September 20, 2026 was
-  checked and **not** found; the Legislature's page showed the chapter last
-  updated March 30, 2026.
+- **WSR 26-17-004 (filed Aug 5, 2026, effective September 20, 2026)** amended
+  several sections of chapter 388-76 WAC. Among them, WAC 388-76-10715(6): in
+  homes licensed after that date, every interior door residents pass through,
+  other than the designated emergency exit, must be at least **27 inches** wide.
+  Until that date 27 inches was an unwritten licensor practice. Whether it
+  reaches a buyer of an already-licensed home (who applies for a new license)
+  is a question for DSHS.
+- WAC 388-76-10031: a home must hold its initial license 24 months before
+  applying to increase from six beds to seven or eight, and a seven or eight bed
+  home without sprinklers may not serve residents who need evacuation
+  assistance. A new operator cannot start at seven or eight.
+
+> **A lesson recorded on purpose.** An earlier version of this file said the
+> September 20, 2026 amendment had been "checked and not found." That was wrong.
+> A web search had missed it, and the absence of a search result was written
+> down as if it were verification. It is not. **To check whether a WAC section
+> changed, open that section on apps.leg.wa.gov and read the history line at the
+> bottom, which lists every filing and effective date.** A chapter-level "last
+> update" date is not reliable for this. When another reviewer cites a specific
+> filing number, look up the filing before disagreeing.
 
 **Not yet verified. Do not state numbers for these.**
-- The bedroom doorway width DSHS licensors expect (the exit door is verified
-  above).
+- Which other sections WSR 26-17-004 changed, beyond the door-width rule. The
+  filing reportedly also touched evacuation drill timing and licensing
+  provisions; read it before relying on older text in those areas.
 - What a new owner must have in place for **CBHS payments to continue after a
   change of ownership**. Nothing published answers it. Pages pose it as a
   question to the reader.

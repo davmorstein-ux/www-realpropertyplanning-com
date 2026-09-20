@@ -156,10 +156,15 @@ describe("AFH Property Score: rules added after the Sept 2026 code review", () =
     const d = scoreProperty({ ...clean, ...best(), hoa: "yes" }).flags.find((f) => f.id === "hoa")!.detail;
     expect(d).toContain("RCW 64.38.060"); expect(d).toContain("unenforceable");
   });
-  it("no checklist line states a bedroom doorway width, which is still unverified", () => {
-    const text = scoreProperty({ ...clean, ...best() }).checklist.map((c) => c.title + " " + c.text).join(" ");
-    expect(/27\s*inch/i.test(text)).toBe(false);
-    expect(text).toContain("32 inches");
+  it("the checklist states the 27-inch interior door rule with its source and its effective date", () => {
+    // Until Sept 20, 2026 this was an unwritten practice and the tool refused to
+    // state a number. WAC 388-76-10715(6) made it a rule on that date.
+    const c = scoreProperty({ ...clean, ...best() }).checklist;
+    const door = c.find((x) => x.text.includes("27 inches"))!;
+    expect(door).toBeDefined();
+    expect(door.source).toContain("388-76-10715");
+    expect(door.text).toContain("September 20, 2026");
+    expect(c.some((x) => x.text.includes("32 inches"))).toBe(true);
   });
 });
 

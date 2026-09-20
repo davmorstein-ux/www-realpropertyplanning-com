@@ -265,7 +265,7 @@ const AFHPropertyClassifications = () => (
             <li style={li}>At least 80 square feet of usable floor area for one resident, 120 for two; closets and vestibules don't count. No more than two residents per room.</li>
             <li style={li}>A smoke alarm in the room, a door that can be opened from outside if locked, and clothing storage.</li>
             <li style={li}>An emergency escape window: sill no higher than 44 inches, clear opening at least 5.7 square feet (5.0 at grade), at least 24 inches high and 20 inches wide, openable without a key or tool. Steps or furniture under the window don't fix a high sill.</li>
-            <li style={li}>A DSHS licensor will also expect resident bedroom doorways of at least 27 inches; this is a Residential Care Services practice rather than a code line, so it does not appear on the building checklist.</li>
+            <li style={li}>Interior doors residents pass through must be at least 27 inches wide in any home licensed after September 20, 2026 (WAC 388-76-10715). This was an unwritten licensor practice until that date, and it is a DSHS licensing rule, not a building-code line, so it may not appear on the building official's checklist.</li>
           </ul>
 
           <h3 style={h3}>Bedroom evacuation type</h3>
