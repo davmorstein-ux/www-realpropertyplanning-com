@@ -772,13 +772,13 @@ const AFHClub = () => {
                 {
                   n: "01",
                   title: "Residential real estate brokerage",
-                  who: "Licensed Washington real estate broker, eXp Realty",
+                  who: "Independent real estate broker",
                   body: "Listing, marketing, and sale of the real property itself, including homes marketed quietly to buyers already in the network.",
                 },
                 {
                   n: "02",
                   title: "Appraisal and valuation",
-                  who: "Washington certified residential appraiser",
+                  who: "Independent certified appraiser",
                   body: "Independent valuation of the real estate. Appraisal and brokerage are kept on separate transactions \u2014 the same property is never both appraised and brokered by the same person.",
                 },
                 {
