@@ -401,7 +401,14 @@ const PAGE_CSS = `
     height: auto;
     /* Matches the files (688x626), so each cell reserves its space before the
        image arrives and the grid does not reflow as six lazy images load.
-       The six -v2 cubes (Sept 2026) were normalised when they were prepared:
+       -v3 (Sept 21, 2026): five cubes were re-rendered to match Selling's
+       lighting; Selling's pixels are unchanged and only renamed so all six share
+       one filename pattern. WHEN PREPARING A CUBE, find its bottom edge from the
+       dark contact line with the ground, not from where the opaque pixels stop
+       being cube-wide: these renders have a solid reflection underneath, and on
+       three of the five that fooled the width test by 15-38px, which would have
+       left those cubes floating above the others.
+       The cubes were normalised when they were prepared:
        every cube body is the same width, centred, and sits on the same baseline
        inside an identical canvas, because the source renders varied in scale by
        up to 9%. If a cube is ever replaced, normalise it the same way or it will
@@ -720,7 +727,7 @@ const AFHClub = () => {
               ].map((lane) => (
                 <div key={lane.title} className="rpp-afh-lane-row">
                   <img
-                    src={`/afh-cube-${lane.title.toLowerCase()}-v2.webp`}
+                    src={`/afh-cube-${lane.title.toLowerCase()}-v3.webp`}
                     alt=""
                     aria-hidden="true"
                     className="rpp-afh-cube-img"
