@@ -147,13 +147,8 @@ const AboutTheHub = () => {
         .rpp-abouthub-stats.rpp-abouthub-stats {
           display: flex;
           flex-wrap: wrap;
-          /* BASELINE, not centre. The links carry vertical padding for a 44px
-             touch target, so their boxes are taller than the plain text beside
-             them. With no alignment their text sat 10px low; with centre it was
-             still 4px off, because centring lines up boxes, not text. Baseline
-             lines up the words themselves whatever the box heights are. */
-          align-items: baseline;
-          gap: 0.4rem 2.25rem;
+          align-items: stretch;
+          gap: 12px 12px;
           margin: 1.35rem 0 0;
           padding-top: 1.15rem;
           border-top: 1px solid #e4ddd1;
@@ -163,44 +158,47 @@ const AboutTheHub = () => {
           color: #272421;
           line-height: 1.4;
         }
-        /* Stat links. Underlined so they read as links and not as captions;
-           index.css carries !important link rules, hence the doubled selector
-           and the bg-transparent token on the element. Padding gives a phone a
-           44px-tall target without changing how the row looks. */
+        /* STAT BUTTONS. These began as underlined text and read as captions, not
+           as something to press, so they are now pill buttons: a border, a tinted
+           fill, an arrow, and a solid fill on hover. All three are the same element
+           with the same padding, so the row lines up without any alignment tricks,
+           and the padding itself is the touch target (no overlay needed).
+           index.css carries !important rules on link colour, weight, size and
+           underline, hence the doubled selector, the !important values, and the
+           bg-transparent token on the element. The class name avoids "btn" and
+           "cta", which index.css also targets by substring. */
         .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink {
-          color: #272421 !important;
-          /* Match the plain "90+ guides & articles" beside them EXACTLY. Measured:
-             index.css renders that span at weight 400 / 17px, but gives links
-             600 / 16px, so an unstyled link here looked bolder and smaller than
-             its neighbour. Only the underline should mark these as links. */
-          font-weight: 400 !important;
-          font-size: clamp(17px, 1.3vw, 20px) !important;
-          line-height: 1.4 !important;
-          text-decoration: underline !important;
-          text-decoration-color: #9db3d6 !important;
-          text-decoration-thickness: 2px !important;
-          text-underline-offset: 5px;
-          /* No padding or margin here: the link's box must be exactly its text,
-             like the plain stat beside it, or the row goes uneven (a padding plus
-             negative-margin trick was tried and the margin was not honoured). The
-             44px touch target comes from the ::after overlay below, which takes up
-             no space in the layout. */
-          position: relative;
-          padding: 0 !important;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.55em;
+          min-height: 46px;
+          box-sizing: border-box;
+          padding: 9px 18px !important;
           margin: 0 !important;
+          border: 2px solid #1B3A6B;
+          border-radius: 999px;
+          background: #eef3fb !important;
+          color: #1f2a3d !important;
+          font-weight: 600 !important;
+          font-size: clamp(16px, 1.15vw, 18px) !important;
+          line-height: 1.3 !important;
+          text-decoration: none !important;
+          box-shadow: 0 1px 0 rgba(27, 58, 107, 0.18);
+          transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
         }
-        .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink::after {
-          content: "";
-          position: absolute;
-          left: -6px;
-          right: -6px;
-          top: -11px;
-          bottom: -11px;
+        .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink .rpp-abouthub-statarrow {
+          font-weight: 700;
+          color: #1B3A6B;
+          transition: transform 0.15s ease;
         }
         @media (hover: hover) {
-          .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:hover { text-decoration-color: #1B3A6B !important; color: #1B3A6B !important; }
+          .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:hover { background: #1B3A6B !important; color: #ffffff !important; box-shadow: 0 6px 16px -8px rgba(27, 58, 107, 0.7); }
+          .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:hover strong,
+          .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:hover .rpp-abouthub-statarrow { color: #ffffff !important; }
+          .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:hover .rpp-abouthub-statarrow { transform: translateX(3px); }
         }
-        .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:focus-visible { outline: 3px solid #9db3d6; outline-offset: 3px; border-radius: 4px; }
+        .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:active { background: #dbe6f7 !important; }
+        .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:focus-visible { outline: 3px solid #9db3d6; outline-offset: 3px; }
         .rpp-abouthub-stats.rpp-abouthub-stats > span { line-height: 1.4 !important; }
         .rpp-abouthub-stats.rpp-abouthub-stats strong {
           font-weight: 700;
@@ -208,12 +206,11 @@ const AboutTheHub = () => {
         }
 
         @media (max-width: 640px) {
-          /* On phones the three stats stack. At the desktop row gap the links'
-             touch overlays overlapped by ~16px, so a tap between two lines could
-             open the wrong page. More space between the rows, and a slightly
-             shorter overlay, keeps each target to itself (about 42px tall). */
-          .rpp-abouthub-stats.rpp-abouthub-stats { row-gap: 1.1rem; }
-          .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink::after { top: -9px; bottom: -9px; }
+          /* On phones the three buttons stack at full width, which makes each an
+             easy target. The directory label wraps to two lines there, so the pill
+             becomes a rounded rectangle; a two-line capsule looks pinched. */
+          .rpp-abouthub-stats.rpp-abouthub-stats { gap: 10px; }
+          .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink { width: 100%; justify-content: space-between; border-radius: 14px; padding: 11px 16px !important; }
           .rpp-abouthub-card.rpp-abouthub-card {
             padding: 1.3rem 1.25rem 1.25rem;
           }
@@ -242,13 +239,16 @@ const AboutTheHub = () => {
             calculatorIndex.ts), so none can be typed in and left to go stale. */}
         <p className="rpp-abouthub-stats rpp-abouthub-stats">
           <Link to="/guides-and-resources" className="rpp-abouthub-statlink bg-transparent">
-            <strong>{HOMEPAGE_GUIDE_CLAIM}+</strong> guides &amp; articles
+            <span><strong>{HOMEPAGE_GUIDE_CLAIM}+</strong> guides &amp; articles</span>
+            <span className="rpp-abouthub-statarrow" aria-hidden="true">→</span>
           </Link>
           <Link to="/calculators" className="rpp-abouthub-statlink bg-transparent">
-            <strong>{HOMEPAGE_CALCULATOR_CLAIM}+</strong> calculators
+            <span><strong>{HOMEPAGE_CALCULATOR_CLAIM}+</strong> calculators</span>
+            <span className="rpp-abouthub-statarrow" aria-hidden="true">→</span>
           </Link>
           <Link to="/afh-club/homes" className="rpp-abouthub-statlink bg-transparent">
-            Statewide directory of over <strong>6,000</strong> licensed adult family homes
+            <span>Statewide directory of over <strong>6,000</strong> licensed adult family homes</span>
+            <span className="rpp-abouthub-statarrow" aria-hidden="true">→</span>
           </Link>
         </p>
       </div>
