@@ -401,6 +401,17 @@ const PAGE_CSS = `
     height: auto;
     /* Matches the files (688x626), so each cell reserves its space before the
        image arrives and the grid does not reflow as six lazy images load.
+       -v4 (Sept 21, 2026): what each cube SITS ON was rebuilt so all six are
+       grounded identically. Each source render came with its own shadow: a long
+       grey smear trailing right under Selling and Retiring, almost nothing under
+       Leasing and Managing. The cube's own pixels are kept down to its dark
+       contact line; beneath it is one recipe for all six, modelled on
+       measurements of the original glows: a near-black band hugging the base
+       and wrapping the rounded corners, and a pool of the cube's own colour
+       centred under its light bar. The layers run up BEHIND the cube rather
+       than starting at a flat row, or a ruler-straight edge shows past the
+       rounded corners. No cast shadow to the side: hover already adds a
+       drop-shadow, and the two doubled up.
        -v3 (Sept 21, 2026): five cubes were re-rendered to match Selling's
        lighting; Selling's pixels are unchanged and only renamed so all six share
        one filename pattern. WHEN PREPARING A CUBE, find its bottom edge from the
@@ -727,7 +738,7 @@ const AFHClub = () => {
               ].map((lane) => (
                 <div key={lane.title} className="rpp-afh-lane-row">
                   <img
-                    src={`/afh-cube-${lane.title.toLowerCase()}-v3.webp`}
+                    src={`/afh-cube-${lane.title.toLowerCase()}-v4.webp`}
                     alt=""
                     aria-hidden="true"
                     className="rpp-afh-cube-img"
