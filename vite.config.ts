@@ -1014,9 +1014,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/afh-club/find-a-professional": {
     title: "Find an AFH Professional | AFH Club | Real Property Planning",
-    description: "Directory of professional categories serving Washington State Adult Family Homes — real estate brokers, appraisers, management companies, CPAs, attorneys, and compliance consultants.",
+    description: "Professionals who work with Washington adult family homes, each one met with and vetted personally: an AFH expert real estate broker and a bookkeeper, with more to come. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant.",
     h1: "Find an AFH Professional",
-    intro: "Adult family home transactions need professionals who have done one before. This page lists the categories — real estate brokers, appraisers, business brokers, management companies, CPAs, attorneys, and compliance consultants — and how each fits into a purchase, sale, or licensing process.",
+    intro: "Adult family home transactions need professionals who have done one before. This page first introduces people who have been met with and vetted personally: David Stein, AFH expert real estate broker with eXp Realty, and Nicole Guzman Johnson of Books on The Rock, LLC, a Certified QuickBooks ProAdvisor providing bookkeeping. Listings are a courtesy: no one pays to be featured, and Real Property Planning receives nothing if a visitor hires them, with the one exception that David Stein is compensated when hired as a broker. The page then explains what to look for in each kind of professional, including real estate brokers, appraisers, management companies, CPAs, attorneys, and compliance consultants, and how each fits into a purchase, sale, or licensing process.",
   },
   "/afh-club/getting-started": {
     title: "Getting Started with an Adult Family Home | AFH Club | Real Property Planning",

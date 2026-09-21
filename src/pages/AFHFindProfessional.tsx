@@ -8,6 +8,26 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-find-a-professional.mp3.asset.json";
+import ProviderTile from "@/components/ProviderTile";
+import { ACTIVE_AFH_PROFESSIONAL_GROUPS, type AFHProfessional } from "@/data/afhProfessionals";
+
+/** One person, shown with the same tile used for professionals across the site. */
+const Tile = ({ person }: { person: AFHProfessional }) => (
+  <ProviderTile
+    name={person.name}
+    title={person.title}
+    company={person.company}
+    photo={person.photo}
+    photoAlt={person.photoAlt}
+    logo={person.logo}
+    logoAlt={person.logoAlt}
+    phone={person.phone}
+    email={person.email}
+    website={person.website}
+    specialty={person.specialty}
+    bio={person.bio}
+  />
+);
 
 const PROFESSIONAL_CATEGORIES = [
   {
@@ -21,7 +41,7 @@ const PROFESSIONAL_CATEGORIES = [
       "Familiarity with AFH valuation beyond residential comps",
       "Network of AFH-related professionals",
     ],
-    link: { label: "Real Property Planning — AFH Real Estate Services", href: "/realtor" },
+    link: { label: "Real Property Planning — AFH Real Estate Services", href: "/afh-club/real-estate-broker" },
   },
   {
     title: "Certified Residential Appraisers",
@@ -94,7 +114,7 @@ const AFHFindProfessional = () => (
   <>
     <SEOHead
       title="Find an AFH Professional | AFH Club | Real Property Planning"
-      description="Directory of professional categories serving Washington State Adult Family Homes — real estate brokers, appraisers, management companies, CPAs, attorneys, and compliance consultants."
+      description="Professionals who work with Washington adult family homes, each one met with and vetted personally: an AFH expert real estate broker and a bookkeeper, with more to come. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant."
       canonical="https://realpropertyplanning.com/afh-club/find-a-professional"
     />
     <BreadcrumbSchema
@@ -146,8 +166,9 @@ const AFHFindProfessional = () => (
             }}
           >
             Running an Adult Family Home successfully requires a team of specialists who understand the unique
-            intersection of residential real estate, small business operations, and DSHS regulation. This directory
-            outlines the key professional categories and what to look for when selecting each one.
+            intersection of residential real estate, small business operations, and DSHS regulation. This page
+            introduces professionals we have met with and vetted personally, then explains what to look for when
+            choosing each kind of specialist.
           </p>
           <p
             style={{
@@ -159,8 +180,95 @@ const AFHFindProfessional = () => (
               maxWidth: 680,
             }}
           >
-            Real Property Planning is a neutral resource network — we do not receive compensation for professional
-            listings and do not endorse specific providers unless they are featured members of our network.
+            Listings here are a courtesy. No one pays to be featured, and Real Property Planning receives nothing
+            if you hire them. The one exception is noted on the broker's listing below.
+          </p>
+        </div>
+      </section>
+
+      {/* FEATURED PROFESSIONALS (Sept 2026).
+          Real people, grouped by role, from src/data/afhProfessionals.ts. Only groups
+          with someone in them are rendered: never an empty category, never a "coming
+          soon". Each person is shown with the same ProviderTile used across the site.
+          The guide further down (and its audio narration) is unchanged: it explains
+          what to look for in each KIND of professional, which is a different job. */}
+      <style>{`
+        .rpp-afhpro h2.rpp-afhpro-h2 { font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important; margin: 0 0 10px !important; }
+        .rpp-afhpro h3.rpp-afhpro-h3 { font-size: clamp(20px, 2.4vw, 24px) !important; line-height: 1.25 !important; margin: 0 0 8px !important; }
+        .rpp-afhpro p.rpp-afhpro-p { font-size: 18px !important; line-height: 1.75 !important; margin: 0 0 22px !important; }
+        .rpp-afhpro p.rpp-afhpro-note { font-size: 16px !important; line-height: 1.65 !important; margin: 14px 0 0 !important; }
+        .rpp-afhpro-jump { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0 0 8px; padding: 0; }
+        .rpp-afhpro-jump a.rpp-afhpro-chip.rpp-afhpro-chip { display: inline-block; padding: 9px 16px; border: 2px solid #3f3a35; border-radius: 999px; background: #fff; color: #280a0c !important; font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px !important; font-weight: 600 !important; text-decoration: none !important; }
+        @media (hover: hover) { .rpp-afhpro-jump a.rpp-afhpro-chip.rpp-afhpro-chip:hover { background: #3f3a35; color: #fff !important; } }
+        .rpp-afhpro-group { scroll-margin-top: calc(var(--header-height, 120px) + 12px); }
+        .rpp-afhpro-people { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 420px)); }
+        /* A group with ONE person: explanation and card side by side on wide screens, so the
+           card is not stranded beside empty space. Two or more people: text above, grid below. */
+        .rpp-afhpro-solo { display: grid; gap: 28px; grid-template-columns: 1fr; align-items: start; }
+        @media (min-width: 900px) { .rpp-afhpro-solo { grid-template-columns: minmax(0, 1fr) minmax(340px, 400px); gap: 48px; } }
+      `}</style>
+      <section className="rpp-afhpro" style={{ background: "#ffffff", padding: "64px 24px 56px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontSize: 14, fontFamily: "'DM Sans', sans-serif", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#481216", margin: "0 0 10px" }}>
+            Met with and vetted
+          </p>
+          <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>
+            Featured professionals
+          </h2>
+          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#302b26", maxWidth: 720 }}>
+            A short list on purpose. Everyone here is someone we have sat down with. The list grows as more people earn a place on it.
+          </p>
+          {ACTIVE_AFH_PROFESSIONAL_GROUPS.length > 1 && (
+            <ul className="rpp-afhpro-jump" aria-label="Jump to a kind of professional">
+              {ACTIVE_AFH_PROFESSIONAL_GROUPS.map((g) => (
+                <li key={g.id}>
+                  <a href={`#${g.id}`} className="rpp-afhpro-chip bg-transparent">{g.label}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+          {ACTIVE_AFH_PROFESSIONAL_GROUPS.map((g) => (
+            <div key={g.id} id={g.id} className="rpp-afhpro-group" style={{ marginTop: 44 }}>
+              {g.people.length === 1 ? (
+                <div className="rpp-afhpro-solo">
+                  <div>
+                    <h3 className="rpp-afhpro-h3" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>{g.label}</h3>
+                    <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#302b26" }}>{g.why}</p>
+                    {g.people[0].note && (
+                      <p className="rpp-afhpro-note" style={{ fontFamily: "'DM Sans', sans-serif", color: "#3b3630", borderLeft: "4px solid #3f3a35", paddingLeft: 14 }}>{g.people[0].note}</p>
+                    )}
+                  </div>
+                  <Tile person={g.people[0]} />
+                </div>
+              ) : (
+                <>
+                  <h3 className="rpp-afhpro-h3" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>{g.label}</h3>
+                  <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#302b26", maxWidth: 760 }}>{g.why}</p>
+                  <div className="rpp-afhpro-people">
+                    {g.people.map((person) => (
+                      <div key={person.id}>
+                        <Tile person={person} />
+                        {person.note && (
+                          <p className="rpp-afhpro-note" style={{ fontFamily: "'DM Sans', sans-serif", color: "#3b3630", borderLeft: "4px solid #3f3a35", paddingLeft: 14 }}>{person.note}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* The guide: what to look for in each kind of professional. Narrated by the audio below. */}
+      <section className="rpp-afhpro" style={{ background: "#edf0f3", padding: "56px 24px 0" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>
+            What to look for in each kind of professional
+          </h2>
+          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#302b26" }}>
+            Whoever you hire, these are the questions that separate someone who knows adult family homes from someone who does not.
           </p>
         </div>
       </section>

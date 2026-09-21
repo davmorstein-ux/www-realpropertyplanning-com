@@ -1,8 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import nicoleJohnsonPhoto from "@/assets/providers/nicole-guzman-johnson-bookkeeper-books-on-the-rock.webp";
-import booksOnTheRockLogo from "@/assets/providers/books-on-the-rock-bookkeeping-logo.webp";
+import { NICOLE_GUZMAN_JOHNSON } from "@/data/afhProfessionals";
 
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -35,21 +34,13 @@ interface Provider {
   videoUrl?: string;
 }
 
+/* Nicole's details live in src/data/afhProfessionals.ts, because she also appears
+   on AFH Club's Find a Professional page. Edit them there, not here. */
 const providers: Provider[] = [
   {
-    name: "Nicole Guzman Johnson",
-    title: "Owner, Certified QuickBooks ProAdvisor",
-    company: "Books on The Rock, LLC",
-    photo: nicoleJohnsonPhoto,
-    logo: booksOnTheRockLogo,
-    logoAlt: "Books on The Rock, LLC logo",
-    alt: "Photo of Nicole Guzman Johnson, Owner and Certified QuickBooks ProAdvisor at Books on The Rock, LLC",
-    href: "https://booksontherockllc.com",
-    phone: "(225) 361-7916",
-    email: "njohnson.bk@booksontherockllc.com",
-    specialty:
-      "Organized, personalized bookkeeping and QuickBooks Online support for small- and medium-sized business owners across Washington State. Hablo español.",
-    bio: "Nicole Guzman Johnson is the owner of Books on The Rock LLC and a Certified QuickBooks ProAdvisor who helps small- and medium-sized business owners gain clarity and confidence in their finances.\n\nThrough organized, personalized bookkeeping and QuickBooks Online support, Nicole helps clients stay current with their books, understand their financial position, and make informed decisions. Her goal is to reduce the stress of managing financial records so business owners can focus on serving their clients and growing their business.\n\nBased in Everett, Washington. Bookkeeping services built on a firm foundation. Hablo español.",
+    ...NICOLE_GUZMAN_JOHNSON,
+    alt: NICOLE_GUZMAN_JOHNSON.photoAlt,
+    href: NICOLE_GUZMAN_JOHNSON.website,
   },
 ];
 

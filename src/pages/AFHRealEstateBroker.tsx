@@ -8,8 +8,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderTile from "@/components/ProviderTile";
-import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
-import expRealtyLogo from "@/assets/providers/exp-realty-brokerage-large-logo-washington.webp";
+import { DAVID_STEIN } from "@/data/afhProfessionals";
 
 const REVIEWS = [
   {
@@ -197,19 +196,21 @@ const AFHRealEstateBroker = () => (
               >
                 Real Property Planning
               </h2>
+              {/* David's details live in src/data/afhProfessionals.ts (he also appears on
+                  Find a Professional). This page keeps its own title for him. */}
               <ProviderTile
-                name="David Stein"
+                name={DAVID_STEIN.name}
                 title="Washington State Licensed Real Estate Broker"
-                company="eXp Realty"
-                photo={davidSteinPhoto}
-                photoAlt="Photo of David Stein, AFH Real Estate Broker"
-                logo={expRealtyLogo}
-                logoAlt="eXp Realty logo"
-                phone="(206) 900-3015"
-                email="dave.stein@exprealty.com"
-                website="https://davestein.exprealty.com"
-                specialty="Adult Family Home transactions, probate, estate, and trust property sales across Washington State."
-                bio="David Stein is a Washington State licensed real estate broker and Certified Residential Appraiser with over 20 years of experience in complex property transactions. He brings a rare combination of appraisal expertise and brokerage experience to AFH transactions — understanding both how to value a licensed care facility and how to navigate the CHOW process, DSHS timelines, and specialty contract considerations that define AFH real estate."
+                company={DAVID_STEIN.company}
+                photo={DAVID_STEIN.photo}
+                photoAlt={DAVID_STEIN.photoAlt}
+                logo={DAVID_STEIN.logo}
+                logoAlt={DAVID_STEIN.logoAlt}
+                phone={DAVID_STEIN.phone}
+                email={DAVID_STEIN.email}
+                website={DAVID_STEIN.website}
+                specialty={DAVID_STEIN.specialty}
+                bio={DAVID_STEIN.bio}
               />
               <div
                 style={{
