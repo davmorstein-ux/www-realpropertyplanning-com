@@ -5561,3 +5561,34 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ============================================================
+   MAGAZINE COVER EDGE (Sept 2026)
+   A one-pixel edge at 27% dark on every magazine-style cover.
+
+   Why: the covers come in two kinds. Dark ones (ROI, Calculators, WABO) define
+   their own edge against the cream page. Light ones (Property Score, Which
+   Tier?, What Is an AFH?) have pale skies and white backgrounds running to the
+   edge, and on a light page that edge dissolves: you cannot tell where the
+   cover ends. A hairline closes it. On a dark cover it is invisible, so one
+   treatment suits both. A thick dark border was tried in a mock-up and
+   rejected: it frames the light covers heavily, does nothing for the dark
+   ones, and turns covers into boxed posters.
+
+   How: OUTLINE with a negative offset, not border and not box-shadow. A border
+   would change the image's size and shift layouts; an inset box-shadow is
+   hidden underneath an <img>'s own pixels. The outline is drawn on top, inside
+   the image, takes no space, follows border-radius, and leaves each page's
+   existing drop shadow alone.
+
+   Which images: anything whose filename contains "-cover" (every newer cover
+   follows that convention, so new ones get the edge with no extra work), plus
+   the .rpp-cover-edge class for older cover artwork that is not named that way
+   (Getting Started, Licensing, and so on, in the AFH Club carousel and lists).
+   NAME NEW COVERS  something-cover.webp  and nothing else is needed.
+   ============================================================ */
+img[src*="-cover"],
+img.rpp-cover-edge {
+  outline: 1px solid rgba(20, 18, 16, 0.27);
+  outline-offset: -1px;
+}

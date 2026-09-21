@@ -772,6 +772,7 @@ const AFHClub = () => {
                   src={c.img}
                   alt=""
                   aria-hidden="true"
+                  className="rpp-cover-edge"
                   loading="lazy"
                   decoding="async"
                   style={{ backgroundColor: c.placeholder }}
@@ -1118,6 +1119,7 @@ const AFHClub = () => {
                   <img
                     src={cat.img}
                     alt={cat.title}
+                    className="rpp-cover-edge"
                     width={90}
                     height={120}
                     style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}

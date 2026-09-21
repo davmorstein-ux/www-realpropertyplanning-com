@@ -144,7 +144,11 @@ sufficient; ask for a screenshot from the real phone when it matters.
    answer, intro, FAQs) so crawlers get real content.
 5. If it is an AFH Club guide: the grid **and** the carousel in
    `src/pages/AFHResources.tsx` (two separate lists), with a 3:4 cover at
-   1024 x 1365 WebP in `public/`.
+   1024 x 1365 WebP in `public/`. **Name the file `something-cover.webp`.** A
+   rule in `index.css` gives every image with `-cover` in its filename a
+   one-pixel edge, which light covers need to stay distinct from the cream
+   page. Older cover art not named that way gets it via the `rpp-cover-edge`
+   class. Do not add borders to covers by hand.
 6. If it is an AFH Club calculator: a tile in `src/pages/AFHCalculators.tsx`,
    and the "AFH Calculators" card description, which lives in **eight** locale
    files under `src/i18n/locales/` (key `calculators.description`).

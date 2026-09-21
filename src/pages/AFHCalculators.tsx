@@ -89,6 +89,7 @@ const CalcTile: React.FC<{ tile: Tile }> = ({ tile }) => {
       <img
         src={tile.img}
         alt={tile.alt}
+        className="rpp-cover-edge"
         loading="lazy"
         style={{ width: "100%", height: "auto", display: "block" }}
       />

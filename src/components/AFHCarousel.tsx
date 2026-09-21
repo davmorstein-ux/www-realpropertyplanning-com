@@ -174,6 +174,7 @@ export default function AFHCarousel({ categories }: AFHCarouselProps) {
                 <img
                   src={item.img}
                   alt={item.title}
+                  className="rpp-cover-edge"
                   width={CARD_W}
                   height={CARD_H}
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
