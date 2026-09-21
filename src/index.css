@@ -5564,7 +5564,7 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
 
 /* ============================================================
    MAGAZINE COVER EDGE (Sept 2026)
-   A one-pixel edge at 27% dark on every magazine-style cover.
+   A thin edge (2px at 40% dark) on every magazine-style cover.
 
    Why: the covers come in two kinds. Dark ones (ROI, Calculators, WABO) define
    their own edge against the cream page. Light ones (Property Score, Which
@@ -5589,6 +5589,11 @@ h1.rpp-hero-band-text--compact.rpp-hero-band-text--compact {
    ============================================================ */
 img[src*="-cover"],
 img.rpp-cover-edge {
-  outline: 1px solid rgba(20, 18, 16, 0.27);
-  outline-offset: -1px;
+  /* STRENGTH. Started at 1px / 27% and read as too light on a real screen. THICKNESS is
+     the lever, not darkness: tested side by side, 1px at 60% was barely distinguishable
+     from 1px at 27%, because a line that thin has too little of itself to darken, while
+     2px was plainly heavier. To adjust, change the width first. Keep outline-offset equal
+     to minus the width so the line stays inside the image and layout never moves. */
+  outline: 2px solid rgba(20, 18, 16, 0.40);
+  outline-offset: -2px;
 }
