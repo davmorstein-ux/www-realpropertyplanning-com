@@ -5,110 +5,38 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
+import { GUIDE_LIBRARY, GUIDE_COUNT } from "@/data/guideLibrary";
 
 const NAV_FONT = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 const GOLD = "#7f2028";
 
-const categories = [
-  {
-    label: "Probate & Inherited Property",
-    id: "probate-inherited",
-    articles: [
-      {
-        title: "Can You Sell a House During Probate in Washington?",
-        href: "/guides/sell-house-during-probate-washington",
-      },
-      { title: "How Long Does It Take to Sell a Probate Property?", href: "/guides/how-long-sell-probate-property" },
-      { title: "How Probate Real Estate Works in Washington", href: "/guides/how-probate-real-estate-works" },
-      {
-        title: "Probate House Sale Timeline in Washington State",
-        href: "/guides/probate-house-sale-timeline-washington",
-      },
-      {
-        title: "Probate vs Trust Sale in Washington — What's the Difference?",
-        href: "/guides/probate-vs-trust-sale-washington",
-      },
-      { title: "What Happens If Heirs Disagree About Selling?", href: "/guides/heirs-disagree-selling-house" },
-      {
-        title: "What Taxes Apply When Selling an Inherited House in Washington?",
-        href: "/guides/taxes-selling-inherited-house-washington",
-      },
-      { title: "What to Do With an Inherited House in Washington", href: "/guides/inherited-house-washington" },
-      {
-        title: "Who Has Authority to Sell Probate Property in Washington?",
-        href: "/guides/who-has-authority-sell-probate-property-washington",
-      },
-    ],
-  },
-  {
-    label: "Executors, Trustees & Families",
-    id: "executors-trustees",
-    articles: [
-      {
-        title: "Can an Executor Sell Before Probate in Washington?",
-        href: "/guides/executor-sell-house-before-probate-washington",
-      },
-      {
-        title: "How Out-of-State Families Can Handle a Washington Property Sale",
-        href: "/guides/out-of-state-families",
-      },
-      { title: "What Executors Should Do Before Selling a Home", href: "/guides/what-executors-should-do" },
-      {
-        title: "What Happens When Family Members Disagree About Selling?",
-        href: "/insights/family-disagreement-selling-house",
-      },
-      { title: "What Should an Executor Do First With a House?", href: "/guides/executor-first-steps-house" },
-    ],
-  },
-  {
-    label: "Senior Moves & Housing Options",
-    id: "senior-moves",
-    articles: [
-      { title: "Downsizing a Senior's Home: Where to Start", href: "/senior-transitions" },
-      {
-        title: "How Senior Transition Sales Differ From Ordinary Home Sales",
-        href: "/guides/senior-transition-differences",
-      },
-      { title: "How to Help a Parent Move From a Longtime Home", href: "/how-to-move-elderly-parents" },
-      { title: "Senior Housing Options Explained", href: "/senior-living-and-relocation" },
-    ],
-  },
-  {
-    label: "Selling, Pricing & Preparation",
-    id: "selling-pricing",
-    articles: [
-      { title: "Appraisal vs. CMA for Estate Property", href: "/guides/appraisal-vs-cma" },
-      {
-        title: "Do You Need an Appraisal Before Selling Inherited Property?",
-        href: "/guides/appraisal-before-selling-inherited-property",
-      },
-      { title: "How Do You Price a House in a Trust or Estate?", href: "/guides/pricing-house-trust-estate" },
-      {
-        title: "Should You Sell an Inherited House As-Is or Fix It First?",
-        href: "/guides/sell-inherited-house-as-is-or-fix",
-      },
-      {
-        title: "What Are the Biggest Mistakes When Selling Estate Property?",
-        href: "/insights/estate-property-mistakes",
-      },
-      {
-        title: "What Repairs Should Be Done Before Selling Estate Property?",
-        href: "/guides/estate-property-repairs-before-sale",
-      },
-      {
-        title: "What Repairs Should Be Made Before Selling a Probate Home?",
-        href: "/guides/repairs-before-selling-probate-home-washington",
-      },
-    ],
-  },
-];
+/**
+ * The list itself lives in src/data/guideLibrary.ts, not here. That one file is
+ * rendered by this page, written into the static HTML for crawlers at build
+ * time, and counted by a test, so the homepage's "90+ guides & articles" can be
+ * checked by a visitor and cannot silently become untrue. To add, remove or
+ * regroup a guide, edit the data file.
+ */
+const categories = GUIDE_LIBRARY.map((g) => ({ label: g.label, id: g.id, landing: g.landing, articles: g.pieces }));
+
+const LIBRARY_CSS = `
+  /* index.css overrides inline margins and link styles with !important, so the
+     few new elements on this page are styled here with enough weight to win. */
+  .rpp-lib-jump { display: flex; flex-wrap: wrap; gap: 10px 10px; justify-content: center; max-width: 980px; margin: 0 auto; padding: 0; list-style: none; }
+  .rpp-lib-jump a.rpp-lib-chip.rpp-lib-chip { display: inline-block; padding: 9px 14px; border: 1px solid #c9a9ac; border-radius: 999px; background: #fff; color: #280a0c !important; font-family: 'DM Sans', system-ui, sans-serif; font-size: 15.5px !important; font-weight: 600 !important; line-height: 1.3; text-decoration: none !important; }
+  @media (hover: hover) { .rpp-lib-jump a.rpp-lib-chip.rpp-lib-chip:hover { border-color: #7f2028; background: #fbf3f4; } }
+  .rpp-lib-jump a.rpp-lib-chip.rpp-lib-chip:focus-visible { outline: 3px solid #d9b3b7; outline-offset: 2px; }
+  .rpp-lib-count.rpp-lib-count { font-family: 'DM Sans', system-ui, sans-serif; font-size: 18px !important; line-height: 1.6 !important; color: #280a0c; text-align: center; max-width: 760px; margin: 0 auto 22px !important; }
+  a.rpp-lib-landing.rpp-lib-landing { display: inline-block; margin: 14px 0 4px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 16.5px !important; font-weight: 700 !important; color: #7f2028 !important; text-decoration: underline !important; text-underline-offset: 4px; }
+  section[id] { scroll-margin-top: calc(var(--header-height, 120px) + 12px); }
+`;
 
 const GuidesAndResources = () => {
   return (
     <>
       <SEOHead
         title="Guides & Articles | Probate, Estate & Senior Transition Guidance | Real Property Planning"
-        description="Clear, practical guides and articles for families, executors, trustees, and professionals navigating probate, inherited property, senior transitions, pricing, and real estate decisions in Washington State."
+        description="All 90 of Real Property Planning's guides and articles in one place, grouped by topic. Clear, practical guides and articles for families, executors, trustees, and professionals navigating probate, inherited property, senior transitions, pricing, and real estate decisions in Washington State."
         canonical="https://realpropertyplanning.com/guides-and-resources"
       />
       <BreadcrumbSchema
@@ -134,6 +62,23 @@ const GuidesAndResources = () => {
           </p>
         </div>
 
+        {/* How many, and a way to jump to a group */}
+        <div style={{ background: "#fff", padding: "34px 20px 30px" }}>
+          <style>{LIBRARY_CSS}</style>
+          <p className="rpp-lib-count">
+            <strong>{GUIDE_COUNT} guides and articles</strong> for Washington families, executors, and trustees, in {categories.length} groups. Jump to the one that fits where you are.
+          </p>
+          <ul className="rpp-lib-jump">
+            {categories.map((c) => (
+              <li key={c.id}>
+                <a href={`#${c.id}`} className="rpp-lib-chip bg-transparent">
+                  {c.label} <span style={{ fontWeight: 400, color: "#5b4446" }}>({c.articles.length})</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* Category Sections */}
         {categories.map((cat, catIndex) => (
           <section
@@ -155,6 +100,11 @@ const GuidesAndResources = () => {
                 >
                   {cat.label}
                 </h2>
+                {cat.landing && (
+                  <Link to={cat.landing.href} className="rpp-lib-landing bg-transparent">
+                    {cat.landing.label}
+                  </Link>
+                )}
               </div>
 
               {/* Article List */}

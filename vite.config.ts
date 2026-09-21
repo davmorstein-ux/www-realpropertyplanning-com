@@ -10,6 +10,7 @@ import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { buildAfhDirectoryRoutes, loadAllFacilities } from "./src/data/afh/prerender";
 import { articleAuthor, articlePublisher } from "./src/lib/schema";
 import { renderAfhInventory, buildAfhListingRoutes, type AFHInventoryScope } from "./src/data/afhInventoryPrerender";
+import { guideLibraryHtml } from "./src/data/guideLibrary";
 import { cityRoutes as afhCityRoutes } from "./src/data/afhCityPages";
 
 // Skip optimization for images smaller than 10KB
@@ -48,6 +49,8 @@ interface RouteMeta {
    * placed right after the quick answer. See src/data/afhInventoryPrerender.ts.
    */
   afhInventory?: AFHInventoryScope;
+  /** Write the full guides and articles library (src/data/guideLibrary.ts) into the static HTML as grouped links. */
+  guideLibrary?: boolean;
 }
 
 const ROUTE_METADATA: Record<string, RouteMeta> = {
@@ -453,6 +456,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "Clear, practical guides and articles for families, executors, trustees, and professionals navigating probate, inherited property, senior transitions, pricing, and real estate decisions in Washington State.",
     h1: "Guides & Articles",
+    guideLibrary: true,
     intro:
       "Practical answers to common questions about probate, inherited homes, senior transitions, and pricing — written in plain language for families, executors, trustees, and professionals throughout Washington State.",
   },
@@ -2066,6 +2070,8 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
   if (inventory) ssgParts.push(inventory.html);
 
   if (intro) ssgParts.push(`<p style="font-size:1.1rem;line-height:1.7;color:#444">${intro}</p>`);
+
+  if (meta.guideLibrary) ssgParts.push(guideLibraryHtml(escHtml));
 
   if (sections) {
     sections.forEach((s) => {

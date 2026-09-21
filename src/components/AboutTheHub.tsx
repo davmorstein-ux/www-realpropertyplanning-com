@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { HOMEPAGE_CALCULATOR_CLAIM } from "@/data/calculatorIndex";
+import { HOMEPAGE_GUIDE_CLAIM } from "@/data/guideLibrary";
 
 /**
  * AboutTheHub
@@ -236,14 +237,13 @@ const AboutTheHub = () => {
           <li>A directory of attorneys, fiduciaries, and care professionals</li>
         </ul>
 
-        {/* Each figure links to the page that proves it. "90+" stays plain text
-            until /guides-and-resources lists the full library: today it shows
-            about a quarter of it, and linking a claim to a page that appears to
-            contradict it would be worse than not linking. */}
+        {/* Each figure links to the page that proves it, and each figure comes
+            from a data file with a test behind it (guideLibrary.ts,
+            calculatorIndex.ts), so none can be typed in and left to go stale. */}
         <p className="rpp-abouthub-stats rpp-abouthub-stats">
-          <span>
-            <strong>90+</strong> guides &amp; articles
-          </span>
+          <Link to="/guides-and-resources" className="rpp-abouthub-statlink bg-transparent">
+            <strong>{HOMEPAGE_GUIDE_CLAIM}+</strong> guides &amp; articles
+          </Link>
           <Link to="/calculators" className="rpp-abouthub-statlink bg-transparent">
             <strong>{HOMEPAGE_CALCULATOR_CLAIM}+</strong> calculators
           </Link>

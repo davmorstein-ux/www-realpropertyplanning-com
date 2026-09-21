@@ -803,6 +803,8 @@ const App = () => (
 
           {/* ─── Educational guides (canonical: /guides/*) ────────── */}
           <Route path="/guides-and-resources" element={<GuidesAndResources />} />
+          {/* Twenty pages live under /guides/..., so a trimmed URL should land on the library, not a 404. */}
+          <Route path="/guides" element={<Navigate to="/guides-and-resources" replace />} />
           {/* Every calculator on the site, in two groups. Destination of the homepage "10+ calculators" figure. */}
           <Route path="/calculators" element={<Calculators />} />
           <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />

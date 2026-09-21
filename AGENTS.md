@@ -160,6 +160,8 @@ sufficient; ask for a screenshot from the real phone when it matters.
 | Private-pay ranges by market (only `confirmed: true` bands render) | `src/data/afhPrivatePayRanges.ts` |
 | Which guides a listing page links to (used by React **and** the prerender) | `src/data/afhBuyerGuides.ts` |
 | AFH Property Score: every question, point, flag, band, checklist line | `src/data/afhPropertyScore.ts` (tests: `src/test/afhPropertyScore.test.ts`, including every correction from outside review) |
+| The guides & articles library, and the homepage's "90+" figure | `src/data/guideLibrary.ts` (tests: `src/test/guideLibrary.test.ts`). Rendered by `/guides-and-resources`, written into its static HTML, and counted. **The count is exactly 90, with no slack:** remove a piece without adding one and the test fails. Change the homepage figure rather than let it overstate. AFH content and `/resources/*` directory pages are deliberately not counted |
+| Every calculator, and the homepage's "10+" figure | `src/data/calculatorIndex.ts` (tests: `src/test/calculatorIndex.test.ts`). Rendered by `/calculators` |
 | DSHS licensed-home directory | `src/data/afh/` (public state data) |
 | For-sale and sold listings | `src/data/afhListings.ts` |
 
@@ -188,6 +190,11 @@ AFH Club.
   A test enforces this for the Property Score.
 - The Property Score measures the building only. Licensing, occupancy, income
   and staffing are never scored; they belong to the unscored Acquisition Review.
+- **Figures shown to visitors are derived, never typed.** The three homepage
+  stats each link to the page that proves them, and the two counts come from
+  data files with tests behind them. A hand-typed "10 calculators" went stale
+  the day a new tool shipped, and the only guide index listed 26 of a claimed
+  90+. If you add a number to a page, give it a source the build can check.
 - Every tool is framed for **understanding and verifying** a home's income or
   suitability, not for maximizing reimbursement.
 
