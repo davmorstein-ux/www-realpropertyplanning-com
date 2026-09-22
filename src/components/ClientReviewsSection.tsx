@@ -1,4 +1,5 @@
 import { Quote, Star, ExternalLink } from "lucide-react";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 interface ClientReview {
   text: string;
@@ -98,7 +99,7 @@ const ClientReviewsSection = ({
         {showZillowLink && (
           <div className="text-center mt-8">
             <a
-              href="https://www.zillow.com/profile/dstein2112#reviews"
+              href={`${FEATURED_BROKER.zillowProfileUrl}#reviews`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-sm text-accent hover:text-gold underline underline-offset-4 transition-colors"

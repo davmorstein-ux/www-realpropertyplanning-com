@@ -245,7 +245,7 @@ const FAQ = () => {
                 </Button>
               </Link>
               <a
-                href="https://www.zillow.com/profile/dstein2112#reviews"
+                href={`${FEATURED_BROKER.zillowProfileUrl}#reviews`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

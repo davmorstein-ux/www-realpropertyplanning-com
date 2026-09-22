@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const reviews = [
   { name: "Anday", date: "3/5/2026", title: "Bought a Single Family home in 2025 in Holly, Everett, WA.", text: "Dave is an excellent person to work with and above all an expert on the field. I have enjoyed his honest and professional recommendations and he always has a room to listen and so patient, a highly recommend to work with. He has deep knowledge on history of the property, comparable market analysis and is open to any time of the days." },
@@ -151,7 +152,7 @@ const ZillowReviewsCarousel = () => {
           {/* Zillow link */}
           <div className="text-center mt-6">
             <a
-              href="https://www.zillow.com/profile/dstein2112#reviews"
+              href={`${FEATURED_BROKER.zillowProfileUrl}#reviews`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm underline underline-offset-4 transition-colors"
