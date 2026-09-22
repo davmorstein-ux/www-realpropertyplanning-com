@@ -7,6 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 
 const professionalCategories = [
@@ -155,7 +156,7 @@ const ProfessionalNetwork = () => {
               Helping Families Navigate Important Transitions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              When real estate becomes part of a larger transition — whether that involves probate, trust administration, downsizing, or moving into a care setting — clear information and coordination among independent professionals can make a significant difference. Real Property Planning provides educational resources and helps connect families with independent professionals who may assist.
+              When real estate becomes part of a larger transition — whether that involves probate, trust administration, downsizing, or moving into a care setting — clear information and coordination among independent professionals can make a significant difference. {FEATURED_BROKER.name} provides educational resources and helps connect families with independent professionals who may assist.
             </p>
           </div>
         </div>
@@ -171,7 +172,7 @@ const ProfessionalNetwork = () => {
             <p className="text-muted-foreground text-lg leading-relaxed">
               Attorneys, care managers, financial advisors, and other
               professionals occasionally encounter situations where real estate
-              guidance is needed. In those cases, Real Property Planning serves
+              guidance is needed. In those cases, {FEATURED_BROKER.name} serves
               as a reliable resource for helping clients understand their
               property options and navigate the sale process in a thoughtful and
               organized way.

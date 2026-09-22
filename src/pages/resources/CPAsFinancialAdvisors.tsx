@@ -8,6 +8,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const purpleGroupLogo = "/the-purple-group-logo.webp";
 
 const CPAsFinancialAdvisors = () => (
@@ -44,7 +45,7 @@ const CPAsFinancialAdvisors = () => (
               informed decisions.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Real Property Planning works with CPAs and financial advisors to provide property-specific market data and{" "}
+              {FEATURED_BROKER.name} works with CPAs and financial advisors to provide property-specific market data and{" "}
               <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">
                 valuation insights
               </Link>{" "}

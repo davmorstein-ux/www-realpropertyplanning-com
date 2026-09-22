@@ -109,7 +109,7 @@ const SellHouseFundSeniorLiving = () => {
               For most Washington State families, the home is the key to affording the care their parent needs.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              Real Property Planning coordinates the home sale with the care plan — so the timing and the proceeds work together.
+              {FEATURED_BROKER.name} coordinates the home sale with the care plan — so the timing and the proceeds work together.
             </p>
             </div>
           </div>
@@ -280,7 +280,7 @@ const SellHouseFundSeniorLiving = () => {
                 Ready to Talk?
               </h2>
               <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed mb-8">
-                Most families start with a single question. We are happy to hear it — no pressure, no obligation.
+                Most families start with a single question. {FEATURED_BROKER.name} is happy to hear it — no pressure, no obligation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:2069003015">

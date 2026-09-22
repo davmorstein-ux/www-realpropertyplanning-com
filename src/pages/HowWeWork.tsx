@@ -13,19 +13,19 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const contentBlocks = [
   {
     heading: "Clear Real Estate Guidance",
-    text: "Real Property Planning helps clients and professional advisors understand property condition, likely market position, preparation options, pricing considerations, and the practical steps involved in bringing real estate to market.",
+    text: `${FEATURED_BROKER.name} helps clients and professional advisors understand property condition, likely market position, preparation options, pricing considerations, and the practical steps involved in bringing real estate to market.`,
   },
   {
     heading: "Grounded in Real Estate and Appraisal Experience",
-    text: "Real Property Planning brings dual experience as a real estate broker and Washington state certified residential appraiser, adding depth to questions of value, marketability, and sale strategy during estate-related property transitions.",
+    text: `${FEATURED_BROKER.name} brings dual experience as a real estate broker and Washington state certified residential appraiser, adding depth to questions of value, marketability, and sale strategy during estate-related property transitions.`,
   },
   {
     heading: "Coordination With Professional Advisors",
-    text: "Real Property Planning works alongside attorneys, fiduciaries, trustees, and other advisors by providing real-estate-related insight, communication, and follow-through within the scope of its professional role.",
+    text: `${FEATURED_BROKER.name} works alongside attorneys, fiduciaries, trustees, and other advisors by providing real-estate-related insight, communication, and follow-through within the scope of its professional role.`,
   },
   {
     heading: "Support for Executors and Families",
-    text: "Executors, personal representatives, trustees, heirs, and family members are often navigating unfamiliar responsibilities. Real Property Planning helps bring order, clarity, and a more structured process to the real estate side of those decisions.",
+    text: `Executors, personal representatives, trustees, heirs, and family members are often navigating unfamiliar responsibilities. ${FEATURED_BROKER.name} helps bring order, clarity, and a more structured process to the real estate side of those decisions.`,
   },
   {
     heading: "Focus on Important Property Transitions",
@@ -46,13 +46,13 @@ const HowWeWork = () => {
         jsonLd={articleSchema({
           headline: "How Real Property Planning Works With Attorneys, Executors, Trustees & Families",
           description: "How Real Property Planning collaborates with attorneys, executors, trustees, and families during probate, trust, and estate property transitions.",
-          url: "/how-we-work",
+          url: `/how-we-work`,
           datePublished: "2025-01-15",
           dateModified: "2026-03-15",
           about: ["Real estate guidance", "Probate coordination", "Estate property", "Attorney collaboration"],
         })}
       />
-      <BreadcrumbSchema items={[{ name: "How We Work", url: "/how-we-work" }]} />
+      <BreadcrumbSchema items={[{ name: `How We Work`, url: `/how-we-work` }]} />
       <Header />
       <main id="main-content">
 
@@ -65,7 +65,7 @@ const HowWeWork = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Real Property Planning works as a real estate and valuation resource to help bring structure, market clarity, and experienced guidance to the real-property side of these matters throughout Washington State.
+            Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. {FEATURED_BROKER.name} works as a real estate and valuation resource to help bring structure, market clarity, and experienced guidance to the real-property side of these matters throughout Washington State.
           </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ const HowWeWork = () => {
                 Discuss a Property Transition With Real Property Planning
               </h2>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
-                If you are an attorney, executor, trustee, fiduciary, or family member navigating probate property, inherited real estate, or trust-owned property anywhere in Washington State, Real Property Planning provides experienced real estate guidance grounded in market knowledge, valuation insight, and a practical understanding of complex property transitions.
+                If you are an attorney, executor, trustee, fiduciary, or family member navigating probate property, inherited real estate, or trust-owned property anywhere in Washington State, {FEATURED_BROKER.name} provides experienced real estate guidance grounded in market knowledge, valuation insight, and a practical understanding of complex property transitions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Link to="/contact">

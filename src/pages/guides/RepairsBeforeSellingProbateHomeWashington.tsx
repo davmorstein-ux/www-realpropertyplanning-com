@@ -215,7 +215,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               Every potential improvement to a probate property should be evaluated through one lens: will this investment return more than it costs at closing?
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in methodology — not guesswork. We evaluate each potential improvement based on comparable sales data, buyer behavior in the current market, and the property's specific condition.
+              A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in methodology — not guesswork. {FEATURED_BROKER.name} evaluates each potential improvement based on comparable sales data, buyer behavior in the current market, and the property's specific condition.
             </p>
             <div className="rounded-lg bg-background border-l-4 border-gold p-6 shadow-sm">
               <p className="text-foreground text-base md:text-lg leading-relaxed">
@@ -269,7 +269,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
                 Selling as-is does not mean giving the property away. It means pricing it accurately for its actual condition and marketing it to buyers who are specifically looking for properties they can improve themselves — investors, contractors, and experienced buyers who understand the estate sale market.
               </p>
               <p className="text-foreground text-base md:text-lg leading-relaxed">
-                Real Property Planning evaluates every estate property honestly — recommending the preparation approach that will produce the best financial outcome for the estate given its specific condition, timeline, and market position.
+                {FEATURED_BROKER.name} evaluates every estate property honestly — recommending the preparation approach that will produce the best financial outcome for the estate given its specific condition, timeline, and market position.
               </p>
             </div>
           </div>
@@ -336,7 +336,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              Real Property Planning evaluates every estate property honestly — recommending the preparation approach that will produce the best outcome for the estate.
+              {FEATURED_BROKER.name} evaluates every estate property honestly — recommending the preparation approach that will produce the best outcome for the estate.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">

@@ -8,6 +8,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const PropertyPreparationServices = () => (
   <>
@@ -37,7 +38,7 @@ const PropertyPreparationServices = () => (
               Estate and transition properties often need cleanout, minor repairs, painting, landscaping, or light staging before listing. Property preparation services handle the hands-on work of transforming a home from its current condition into a property that shows well to buyers and commands a fair market price.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Real Property Planning coordinates with property preparation vendors as part of the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">sale process</Link>. Real Property Planning evaluates which improvements are worth the investment and which are not — ensuring preparation decisions are guided by market data, not guesswork.
+              {FEATURED_BROKER.name} coordinates with property preparation vendors as part of the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">sale process</Link>. {FEATURED_BROKER.name} evaluates which improvements are worth the investment and which are not — ensuring preparation decisions are guided by market data, not guesswork.
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">

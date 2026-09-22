@@ -18,32 +18,32 @@ const faqs = [
   {
     question: "How does selling an inherited home work in Vancouver, WA?",
     answer:
-      "Selling an inherited home in Vancouver requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a pricing and preparation strategy. We coordinate the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.",
+      `Selling an inherited home in Vancouver requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a pricing and preparation strategy. ${FEATURED_BROKER.name} coordinates the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.`,
   },
   {
     question: "What if the family is split between Washington and Oregon?",
     answer:
-      "This is common in the Vancouver area. We work with families where some members live in Portland, others out of state, and the property is in Clark County. We coordinate communication across all parties, manages local logistics, and ensures the process moves forward smoothly regardless of where each person is located.",
+      `This is common in the Vancouver area. ${FEATURED_BROKER.name} works with families where some members live in Portland, others out of state, and the property is in Clark County. ${FEATURED_BROKER.pronoun.Subject} coordinates communication across all parties, manages local logistics, and ensures the process moves forward smoothly regardless of where each person is located.`,
   },
   {
     question: "How does an appraisal background help with Vancouver properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, we provide pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable in Vancouver, where proximity to Portland creates unique pricing dynamics that require careful local analysis.",
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable in Vancouver, where proximity to Portland creates unique pricing dynamics that require careful local analysis.`,
   },
   {
     question: "Can you get help coordinate a sale alongside a senior transition or relocation?",
     answer:
-      "Yes. Many Vancouver families are managing a property sale at the same time as a move to senior living, a relocation to be closer to family, or a transition between Washington and Oregon. We coordinate the sale timeline with the broader transition — working with moving companies, family members, and other professionals to keep everything aligned.",
+      `Yes. Many Vancouver families are managing a property sale at the same time as a move to senior living, a relocation to be closer to family, or a transition between Washington and Oregon. ${FEATURED_BROKER.name} coordinates the sale timeline with the broader transition — working with moving companies, family members, and other professionals to keep everything aligned.`,
   },
   {
     question: "Should I prepare the home before selling?",
     answer:
-      "It depends on the property's condition, your timeline, and the transition situation. We evaluate which improvements are likely to increase the sale price enough to justify the cost and delay — and which aren't. When timing is tight due to a move or transition, we help prioritize what matters most.",
+      `It depends on the property's condition, your timeline, and the transition situation. ${FEATURED_BROKER.name} evaluates which improvements are likely to increase the sale price enough to justify the cost and delay — and which aren't. When timing is tight due to a move or transition, ${FEATURED_BROKER.pronoun.subject} helps prioritize what matters most.`,
   },
   {
     question: "How long does it take to sell an estate property in Vancouver?",
     answer:
-      "Timelines vary based on the probate or trust process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Vancouver homes typically sell within a few weeks. We help set realistic expectations and coordinate the sale timeline with any broader transition plans.",
+      `Timelines vary based on the probate or trust process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Vancouver homes typically sell within a few weeks. ${FEATURED_BROKER.name} helps set realistic expectations and coordinate the sale timeline with any broader transition plans.`,
   },
 ];
 
@@ -157,7 +157,7 @@ const VancouverWaProbateEstate = () => {
               Whether the property is in Salmon Creek, Felida, the Heights, or closer to downtown, neighborhood-level pricing differences matter. Inherited and estate homes often need thoughtful preparation — and when a move or transition is happening simultaneously, the sequencing of decisions becomes critical.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a valuation-first perspective grounded in actual property condition and local market data. This dual expertise provides defensible pricing, clearer communication with attorneys and family members, and greater confidence for families managing complex transitions.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} brings a valuation-first perspective grounded in actual property condition and local market data. This dual expertise provides defensible pricing, clearer communication with attorneys and family members, and greater confidence for families managing complex transitions.
             </p>
           </div>
         </div>
@@ -182,7 +182,7 @@ const VancouverWaProbateEstate = () => {
               Many Vancouver property situations involve more than just selling a home. A parent may be moving to senior living while the family home needs to be prepared and sold. An executor in Portland may be managing a Clark County estate. A family may be relocating out of state and needs the sale coordinated with their move timeline.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              We serve as a central point of coordination — managing property access, working with cleanout crews, contractors, moving companies, and other vendors, communicating with attorneys and family members, and keeping the timeline aligned with the broader transition.
+              {FEATURED_BROKER.name} serves as a central point of coordination — managing property access, working with cleanout crews, contractors, moving companies, and other vendors, communicating with attorneys and family members, and keeping the timeline aligned with the broader transition.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is to reduce the logistical burden so families can focus on the people and decisions that matter most — not the day-to-day details of preparing and selling a property.
@@ -205,7 +205,7 @@ const VancouverWaProbateEstate = () => {
               {[
                 {
                   title: "Understanding the Full Picture",
-                  desc: "We start with a conversation about the property, the people involved, the timeline, and any transition or relocation factors that affect the process.",
+                  desc: `${FEATURED_BROKER.name} starts with a conversation about the property, the people involved, the timeline, and any transition or relocation factors that affect the process.`,
                 },
                 {
                   title: "Assessing the Property",
@@ -217,7 +217,7 @@ const VancouverWaProbateEstate = () => {
                 },
                 {
                   title: "Vancouver Pricing Strategy",
-                  desc: "Drawing on certified appraisal experience and Vancouver-specific market data, we develop pricing that's defensible, realistic, and aligned with the property's actual condition and location.",
+                  desc: `Drawing on certified appraisal experience and Vancouver-specific market data, ${FEATURED_BROKER.name} develops pricing that's defensible, realistic, and aligned with the property's actual condition and location.`,
                 },
                 {
                   title: "Guiding the Process to Completion",
@@ -255,7 +255,7 @@ const VancouverWaProbateEstate = () => {
                 { to: "/for-attorneys", label: "For Attorneys" },
                 { to: "/why-valuation-matters", label: "Why Valuation Matters" },
                 { to: "/how-the-process-works", label: "How the Process Works" },
-                { to: "/cities-we-serve", label: "All Cities" },
+                { to: `/cities-we-serve`, label: "All Cities" },
               ].map((link, i) => (
                 <span key={link.to} className="flex items-center gap-3">
                   {i > 0 && <span className="text-muted-foreground/40">·</span>}

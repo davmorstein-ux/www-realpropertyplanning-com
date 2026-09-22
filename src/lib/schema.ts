@@ -540,7 +540,7 @@ export const homepageFaqSchema = {
       name: "How is Real Property Planning different from a regular real estate agent?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Real Property Planning brings two credentials most real estate practices don't combine: a licensed real estate broker and a Washington State Certified Residential Appraiser. That means properties can be valued with professional appraisal standards and sold with integrated guidance — under one platform families can trust.",
+        text: `${FEATURED_BROKER.name} brings two credentials most real estate practices don't combine: a licensed real estate broker and a Washington State Certified Residential Appraiser. That means properties can be valued with professional appraisal standards and sold with integrated guidance — under one platform families can trust.`,
       },
     },
     {
@@ -564,7 +564,7 @@ export const homepageFaqSchema = {
       name: "Can Real Property Planning help out-of-state executors?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — this is one of the most common situations we work with. Our team manages the full property process locally, including assessment, cleanout coordination, repairs, listing, and sale, with regular updates so out-of-state executors never need to be present for every step.",
+        text: `Yes — this is one of the most common situations ${FEATURED_BROKER.name} works with. ${FEATURED_BROKER.pronoun.Subject} manages the full property process locally, including assessment, cleanout coordination, repairs, listing, and sale, with regular updates so out-of-state executors never need to be present for every step.`,
       },
     },
     {

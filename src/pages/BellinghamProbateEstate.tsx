@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "Can you get help with an inherited property in Bellingham if I live out of the area?",
     answer:
-      "Yes. our team regularly works with families managing Bellingham properties from Seattle, out of state, or farther. We coordinate property access, vendor management, preparation, and the sale process — keeping you informed without requiring unnecessary trips.",
+      `Yes. ${FEATURED_BROKER.firstName} regularly works with families managing Bellingham properties from Seattle, out of state, or farther. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the sale process — keeping you informed without requiring unnecessary trips.`,
   },
   {
     question: "What makes Bellingham's real estate market different from the rest of Washington?",
@@ -28,22 +28,22 @@ const faqs = [
   {
     question: "How does an appraisal background help with Bellingham properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, we provide pricing grounded in actual condition assessment and local market data. This is especially important in Bellingham, where unique property types and location-specific factors can significantly affect value.",
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing grounded in actual condition assessment and local market data. This is especially important in Bellingham, where unique property types and location-specific factors can significantly affect value.`,
   },
   {
     question: "Should I prepare an inherited Bellingham home before selling?",
     answer:
-      "It depends on the property's condition, your timeline, and your goals. We evaluate which improvements are likely to return more than they cost — and which aren't worth the investment. For families managing from a distance, this honest assessment saves both time and money.",
+      `It depends on the property's condition, your timeline, and your goals. ${FEATURED_BROKER.name} evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. For families managing from a distance, this honest assessment saves both time and money.`,
   },
   {
     question: "How long does it typically take to sell an estate property in Bellingham?",
     answer:
-      "Timelines depend on the probate or trust process, property condition, and seasonal market factors. Once the property is ready and legal authority is established, well-priced Bellingham homes generally sell within a reasonable timeframe. We help set realistic expectations based on your specific situation.",
+      `Timelines depend on the probate or trust process, property condition, and seasonal market factors. Once the property is ready and legal authority is established, well-priced Bellingham homes generally sell within a reasonable timeframe. ${FEATURED_BROKER.name} helps set realistic expectations based on your specific situation.`,
   },
   {
     question: "What if the inherited property is a second home or vacation property?",
     answer:
-      "Second homes and vacation properties are common in the Bellingham area. These properties may have deferred maintenance, shared ownership, or unique characteristics that affect pricing. We assess the property's condition and market positioning to develop a strategy that accounts for these factors.",
+      `Second homes and vacation properties are common in the Bellingham area. These properties may have deferred maintenance, shared ownership, or unique characteristics that affect pricing. ${FEATURED_BROKER.name} assesses the property's condition and market positioning to develop a strategy that accounts for these factors.`,
   },
 ];
 
@@ -157,7 +157,7 @@ const BellinghamProbateEstate = () => {
               Property types vary widely — from walkable Lettered Streets Victorians and South Hill craftsmen to rural parcels in the county. Inherited and estate homes here often reflect decades of ownership, and condition can range from well-maintained to significantly deferred. Understanding what a property is actually worth in its current state requires honest, on-the-ground assessment.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a valuation-first perspective grounded in actual property condition and comparable market data — not automated estimates that miss Bellingham's local nuances.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} brings a valuation-first perspective grounded in actual property condition and comparable market data — not automated estimates that miss Bellingham's local nuances.
             </p>
           </div>
         </div>
@@ -182,10 +182,10 @@ const BellinghamProbateEstate = () => {
               A significant number of Bellingham estate properties belong to families who don't live nearby. The owner may have retired here, used the property as a vacation home, or held it for decades before passing it to the next generation. In any case, the family handling the property now often faces the same challenge: making sound decisions about a home they can't easily visit.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              We serve as your local point of coordination — visiting the property, assessing its condition, managing cleanout crews and contractors, and communicating with attorneys and family members. The goal is to reduce the logistical burden so you can make informed decisions without unnecessary stress or travel.
+              {FEATURED_BROKER.name} serves as your local point of coordination — visiting the property, assessing its condition, managing cleanout crews and contractors, and communicating with attorneys and family members. The goal is to reduce the logistical burden so you can make informed decisions without unnecessary stress or travel.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              For second homes and vacation properties, there are often additional considerations — seasonal access, shared ownership, deferred maintenance, or unique features that affect marketability. We evaluate these factors honestly and builds a strategy around the property's actual condition and positioning.
+              For second homes and vacation properties, there are often additional considerations — seasonal access, shared ownership, deferred maintenance, or unique features that affect marketability. {FEATURED_BROKER.name} evaluates these factors honestly and builds a strategy around the property's actual condition and positioning.
             </p>
           </div>
         </div>
@@ -205,7 +205,7 @@ const BellinghamProbateEstate = () => {
               {[
                 {
                   title: "Understanding Your Situation",
-                  desc: "We start with a conversation about the property, the people involved, the legal context, and what you're hoping to accomplish — whether that's a straightforward sale or something that requires more coordination.",
+                  desc: `${FEATURED_BROKER.name} starts with a conversation about the property, the people involved, the legal context, and what you're hoping to accomplish — whether that's a straightforward sale or something that requires more coordination.`,
                 },
                 {
                   title: "Assessing the Property",
@@ -255,7 +255,7 @@ const BellinghamProbateEstate = () => {
                 { to: "/for-attorneys", label: "For Attorneys" },
                 { to: "/why-valuation-matters", label: "Why Valuation Matters" },
                 { to: "/how-the-process-works", label: "How the Process Works" },
-                { to: "/cities-we-serve", label: "All Cities" },
+                { to: `/cities-we-serve`, label: "All Cities" },
               ].map((link, i) => (
                 <span key={link.to} className="flex items-center gap-3">
                   {i > 0 && <span className="text-muted-foreground/40">·</span>}

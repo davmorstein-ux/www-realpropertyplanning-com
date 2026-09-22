@@ -7,6 +7,7 @@ import ProviderTile from "@/components/ProviderTile";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import scottPhoto from "@/assets/providers/elder-law-scott-schill-mercer-island.webp";
 import schillLogo from "@/assets/providers/elder-law-sr-schill-associates-logo.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const SCOTT_BIO = `Scott Schill serves as Director of Longevity Planning at S.R. Schill & Associates and founder of Thrive Longevity Law. In collaboration with Certified Financial Planners®, he delivers integrated, fiduciary guidance bringing together wealth management, retirement strategy, estate planning, elder law, housing, and care planning. Scott's commitment to this work was shaped by personal experience advocating for his mother. Before entering longevity law, he practiced complex commercial litigation at Yarmuth Wilsdon Calfo PLLC and Perkins Coie LLP in Seattle. A graduate of UC Berkeley and The George Washington University Law School, Scott is a committed advocate for proactive planning and helping people live longer, healthier, and more fulfilling lives.`;
 
@@ -14,7 +15,7 @@ const ForElderLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Elder Law Attorneys in Washington State | Real Property Planning"
-      description="Real Property Planning helps elder law attorneys and their clients navigate senior home sales, Medicaid planning property decisions, and estate transitions in Washington State."
+      description={`${FEATURED_BROKER.name} helps elder law attorneys and their clients navigate senior home sales, Medicaid planning property decisions, and estate transitions in Washington State.`}
     />
     <BreadcrumbSchema
       items={[

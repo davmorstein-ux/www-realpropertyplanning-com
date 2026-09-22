@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   { question: "Do you pay capital gains tax on an inherited house in Washington?", answer: "You may owe federal capital gains tax on any appreciation above the stepped-up basis — meaning the property's fair market value at the date of the decedent's death. If you sell shortly after inheriting, there is often little or no gain. Washington State does not have a state capital gains tax on real estate sales of primary residences, but a 7% tax may apply to long-term capital gains above $250,000. Consult a tax professional for your specific situation." },
@@ -124,7 +125,7 @@ const TaxesSellingInheritedHouseWashington = () => (
 
     <MidPageCTA
       heading="Need Help Understanding Your Property's Value?"
-      body="An accurate valuation is the foundation for sound tax planning. our team can help you understand the property's current and historical value so you and your CPA can make informed decisions."
+      body={`An accurate valuation is the foundation for sound tax planning. ${FEATURED_BROKER.firstName} can help you understand the property's current and historical value so you and your CPA can make informed decisions.`}
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance on the property questions."
     />

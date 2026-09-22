@@ -43,6 +43,8 @@ export interface Pronouns {
   subject: string; // he / she / they
   object: string; // him / her / them
   possessive: string; // his / her / their
+  Subject: string; // He — sentence-initial
+  Possessive: string; // His — sentence-initial
 }
 
 export interface FeaturedAppraiser {
@@ -71,7 +73,7 @@ export const FEATURED_BROKER: FeaturedBroker = {
   website: "https://davestein.exprealty.com",
   yearsExperience: 20,
   zillowProfileUrl: "https://www.zillow.com/profile/DaveStein",
-  pronoun: { subject: "he", object: "him", possessive: "his" },
+  pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" },
 };
 
 export const FEATURED_APPRAISER: FeaturedAppraiser = {
@@ -83,7 +85,7 @@ export const FEATURED_APPRAISER: FeaturedAppraiser = {
   phoneTel: "+12069003015",
   email: "dave@steinappraisal.com",
   yearsExperience: 20,
-  pronoun: { subject: "he", object: "him", possessive: "his" },
+  pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" },
 };
 
 /** True while one person holds both roles. Components use it to write "broker and appraiser" as one clause instead of two. */

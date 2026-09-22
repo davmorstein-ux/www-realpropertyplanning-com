@@ -12,6 +12,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import PageFAQ from "@/components/PageFAQ";
 
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",
@@ -64,7 +65,7 @@ const faqs = [
   },
   {
     question: "If you're an appraiser, can you also be the listing agent — isn't that a conflict?",
-    answer: "Real Property Planning provides brokerage services as the listing agent, drawing on appraiser training to inform pricing. When a formal, USPAP-compliant appraisal report is required (for example, for tax filings, court, or trust accounting), that work is done as a separate engagement under appraiser independence rules — not bundled with the listing.",
+    answer: `${FEATURED_BROKER.name} provides brokerage services as the listing agent, drawing on appraiser training to inform pricing. When a formal, USPAP-compliant appraisal report is required (for example, for tax filings, court, or trust accounting), that work is done as a separate engagement under appraiser independence rules — not bundled with the listing.`,
   },
 ];
 
@@ -227,7 +228,7 @@ const WhyValuationMatters = () => {
 
       <MidPageCTA
         heading="Need Help Pricing an Estate or Inherited Property?"
-        body="Real Property Planning provides valuation-informed pricing strategy grounded in dual broker and appraiser experience."
+        body={`${FEATURED_BROKER.name} provides valuation-informed pricing strategy grounded in dual broker and appraiser experience.`}
         buttonText="Discuss a Property"
         microcopy="No pressure. Just honest, market-grounded guidance."
       />

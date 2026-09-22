@@ -5,6 +5,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const serviceCards = [
   {
@@ -44,7 +45,7 @@ const Services = () => {
     <>
       <SEOHead
         title="Senior Relocation & Estate Real Estate Services | Real Property Planning"
-        description="Real Property Planning provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout Washington State."
+        description={`${FEATURED_BROKER.name} provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout Washington State.`}
         canonical="https://realpropertyplanning.com/services"
       />
       <BreadcrumbSchema
@@ -64,7 +65,7 @@ const Services = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              Every situation is different. These are the areas where Real Property Planning's experience as a licensed brokerage with certified appraisal expertise makes the biggest difference.
+              Every situation is different. These are the areas where {FEATURED_BROKER.name}'s experience as a licensed brokerage with certified appraisal expertise makes the biggest difference.
             </p>
             </div>
           </div>

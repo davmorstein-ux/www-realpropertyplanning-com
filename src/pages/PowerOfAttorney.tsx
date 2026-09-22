@@ -6,7 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { Home, Heart, Globe, ShieldCheck, FileText, Users, Briefcase } from "lucide-react";
 import poaIcon from "@/assets/icons/power-of-attorney-icon-washington.webp";
-import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
+import { FEATURED_APPRAISER, FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -175,7 +175,7 @@ const PowerOfAttorney = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className={h2Class + " text-center"}>How Real Property Planning Helps Agents Under Power of Attorney</h2>
               <p className={pClass + " text-center max-w-3xl mx-auto mb-10"}>
-                We understand the unique position agents find themselves in — responsible for someone else's most valuable asset, often during a stressful and emotional time.
+                {FEATURED_BROKER.name} understands the unique position agents find themselves in — responsible for someone else's most valuable asset, often during a stressful and emotional time.
               </p>
               <div className="grid sm:grid-cols-2 gap-6">
                 {howWeHelpCards.map((card) => (
@@ -198,10 +198,10 @@ const PowerOfAttorney = () => {
             <div className={proseWrap}>
               <h2 className={h2Class}>Important Note About Legal Authority</h2>
               <p className={pClass}>
-                Real Property Planning is an educational and connection hub and does not provide legal advice. Before taking any real estate action under Power of Attorney, we strongly recommend consulting with a qualified Washington State attorney to confirm the scope and validity of your authority.
+                Real Property Planning is an educational and connection hub and does not provide legal advice. Before taking any real estate action under Power of Attorney, {FEATURED_BROKER.name} strongly recommends consulting with a qualified Washington State attorney to confirm the scope and validity of your authority.
               </p>
               <p className={pClass}>
-                If you need a referral to an elder law attorney in Washington State, we are happy to help connect you with a trusted professional.
+                If you need a referral to an elder law attorney in Washington State, {FEATURED_BROKER.name} is happy to help connect you with a trusted professional.
               </p>
             </div>
           </div>
@@ -213,10 +213,10 @@ const PowerOfAttorney = () => {
             <div className={proseWrap}>
               <h2 className={h2Class}>Serving Power of Attorney Agents Throughout Washington State</h2>
               <p className={pClass}>
-                From Seattle and King County to Spokane, Bellingham, Tacoma, Olympia, and every community in between — Real Property Planning works with agents under Power of Attorney throughout Washington State.
+                From Seattle and King County to Spokane, Bellingham, Tacoma, Olympia, and every community in between — {FEATURED_BROKER.name} works with agents under Power of Attorney throughout Washington State.
               </p>
               <p className={pClass}>
-                Whether the situation is straightforward or complex, we are here to help you move forward with confidence.
+                Whether the situation is straightforward or complex, {FEATURED_BROKER.name} is here to help you move forward with confidence.
               </p>
             </div>
           </div>

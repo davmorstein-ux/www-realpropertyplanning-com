@@ -643,7 +643,7 @@ const AFHROICalculator = () => {
                 }}
               >
                 Estimates are for informational purposes only. Actual returns depend on financing terms, occupancy,
-                staffing costs, regulatory changes, and market conditions. Consult our team for a professional
+                staffing costs, regulatory changes, and market conditions. Consult {FEATURED_BROKER.name} for a professional
                 investment analysis.
               </div>
               <div

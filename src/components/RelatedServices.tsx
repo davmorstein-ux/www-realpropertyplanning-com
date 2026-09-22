@@ -43,7 +43,7 @@ const ALL: Record<string, RelatedLink> = {
   forFinancialPlanners: {
     href: "/for-financial-planners",
     label: "For Financial Planners",
-    description: "How we work with financial planners whose clients face housing decisions.",
+    description: "Guides for financial planners whose clients face housing decisions.",
   },
   whyValuation: {
     href: "/why-valuation-matters",
@@ -177,7 +177,7 @@ const ALL: Record<string, RelatedLink> = {
   resPrep: {
     href: "/resources/property-preparation-services",
     label: "Property Preparation Services",
-    description: "Cleanout, repairs, and pre-list trades we coordinate with.",
+    description: "Cleanout, repair, and pre-list trades in the professional network.",
   },
   resMoving: {
     href: "/resources/moving-relocation-services",

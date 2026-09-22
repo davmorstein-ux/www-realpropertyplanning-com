@@ -33,7 +33,7 @@ const steps = [
   },
   {
     title: "Weeks 10–16: Property preparation",
-    body: "Cleanout, minor repairs, staging, and landscaping are coordinated. The length of this phase depends heavily on the condition of the property and the extent of personal belongings left behind. Real Property Planning coordinates all vendors so the executor does not need to be on-site.",
+    body: `Cleanout, minor repairs, staging, and landscaping are coordinated. The length of this phase depends heavily on the condition of the property and the extent of personal belongings left behind. ${FEATURED_BROKER.name} coordinates all vendors so the executor does not need to be on-site.`,
   },
   {
     title: "Weeks 14–20: Listing and marketing",
@@ -266,7 +266,7 @@ const ProbateHouseSaleTimelineWashington = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Reduces Timeline Delays</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Real Property Planning begins working with families before Letters Testamentary are issued — assessing the property, coordinating early preparation, and developing a pricing strategy so everything is ready to move the moment legal authority is granted.
+              {FEATURED_BROKER.name} begins working with families before Letters Testamentary are issued — assessing the property, coordinating early preparation, and developing a pricing strategy so everything is ready to move the moment legal authority is granted.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               His dual credential as a Licensed Broker and Certified Residential Appraiser means the pricing decision is made once — accurately — without the back-and-forth that comes when a broker's estimate and an appraiser's valuation don't match.
@@ -323,7 +323,7 @@ const ProbateHouseSaleTimelineWashington = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              Real Property Planning works with executors, trustees, and attorneys throughout Washington State.
+              {FEATURED_BROKER.name} works with executors, trustees, and attorneys throughout Washington State.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">

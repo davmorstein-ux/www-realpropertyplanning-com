@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import MidPageCTA from "@/components/MidPageCTA";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 
 const SeniorEstateServices = () => {
@@ -36,7 +37,7 @@ const SeniorEstateServices = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Real Property Planning specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties. Whether you are a senior planning a move, an adult child helping a parent, an executor settling an estate, or an attorney advising a client, Real Property Planning coordinates the real estate side so you can focus on the decisions that matter — not the logistics. Every engagement begins with a clear plan, honest communication, and a calm, professional approach.
+            Real Property Planning specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties. Whether you are a senior planning a move, an adult child helping a parent, an executor settling an estate, or an attorney advising a client, {FEATURED_BROKER.name} coordinates the real estate side so you can focus on the decisions that matter — not the logistics. Every engagement begins with a clear plan, honest communication, and a calm, professional approach.
           </p>
           </div>
         </div>
@@ -49,7 +50,7 @@ const SeniorEstateServices = () => {
             Senior Relocation Home Sales
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            Selling a home after 20, 30, or 40 years is one of the biggest transitions a family can face. Real Property Planning works with seniors and their families to plan and complete the sale of a long‑time home — including timing, preparation, and coordination with trusted local vendors and senior communities — so the process feels manageable rather than overwhelming.
+            Selling a home after 20, 30, or 40 years is one of the biggest transitions a family can face. {FEATURED_BROKER.name} works with seniors and their families to plan and complete the sale of a long‑time home — including timing, preparation, and coordination with trusted local vendors and senior communities — so the process feels manageable rather than overwhelming.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -75,7 +76,7 @@ const SeniorEstateServices = () => {
             Estate and Inherited Property Sales
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            When a family inherits a home, the path forward is rarely straightforward. Real Property Planning guides executors and heirs through pricing, preparation, and sale of inherited homes so the estate can be settled with clarity and minimal stress — whether the property is down the street or across the state.
+            When a family inherits a home, the path forward is rarely straightforward. {FEATURED_BROKER.name} guides executors and heirs through pricing, preparation, and sale of inherited homes so the estate can be settled with clarity and minimal stress — whether the property is down the street or across the state.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -101,7 +102,7 @@ const SeniorEstateServices = () => {
             Probate Real Estate Sales
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            Probate property sales involve court timelines, legal documentation, and coordination with attorneys and personal representatives. Real Property Planning works alongside probate attorneys and personal representatives to market and sell property within court and estate timelines, while respecting legal requirements at every stage.
+            Probate property sales involve court timelines, legal documentation, and coordination with attorneys and personal representatives. {FEATURED_BROKER.name} works alongside probate attorneys and personal representatives to market and sell property within court and estate timelines, while respecting legal requirements at every stage.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -152,7 +153,7 @@ const SeniorEstateServices = () => {
             Clean‑Out and Preparation Coordination
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            Most estate and senior properties need some level of preparation before going to market — from clearing personal belongings to handling basic repairs. Real Property Planning coordinates clean‑out, haul‑away, basic repairs, and staging resources so the property is ready for market without the family managing every detail.
+            Most estate and senior properties need some level of preparation before going to market — from clearing personal belongings to handling basic repairs. {FEATURED_BROKER.name} coordinates clean‑out, haul‑away, basic repairs, and staging resources so the property is ready for market without the family managing every detail.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -172,7 +173,7 @@ const SeniorEstateServices = () => {
 
       <MidPageCTA
         heading="Have Questions About a Senior or Estate Property?"
-        body="Whether you are a senior planning a move, a family member coordinating a sale, or an attorney advising a client — Real Property Planning welcomes a confidential conversation."
+        body={`Whether you are a senior planning a move, a family member coordinating a sale, or an attorney advising a client — ${FEATURED_BROKER.name} welcomes a confidential conversation.`}
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance on the property questions."
       />
@@ -184,7 +185,7 @@ const SeniorEstateServices = () => {
             Home Value and Market Analysis
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            Before making any decision about selling, you need to understand what the property is worth and what your options look like. Real Property Planning provides clear, data‑driven opinions of value and market conditions for seniors, executors, and attorneys who need to understand their options before committing to a sale.
+            Before making any decision about selling, you need to understand what the property is worth and what your options look like. {FEATURED_BROKER.name} provides clear, data‑driven opinions of value and market conditions for seniors, executors, and attorneys who need to understand their options before committing to a sale.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -209,7 +210,7 @@ const SeniorEstateServices = () => {
             Areas I Serve
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-4 max-w-3xl">
-            Real Property Planning serves clients throughout Washington State, with a strong focus across Western Washington and the Puget Sound region. Whether the property is in a dense urban neighborhood or a quieter suburban community, local market knowledge and hands‑on coordination are brought to every engagement.
+            {FEATURED_BROKER.name} serves clients throughout Washington State, with a strong focus across Western Washington and the Puget Sound region. Whether the property is in a dense urban neighborhood or a quieter suburban community, local market knowledge and hands‑on coordination are brought to every engagement.
           </p>
           <p className="text-foreground text-[15px] font-medium">
             Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and communities throughout Washington State.
@@ -258,7 +259,7 @@ const SeniorEstateServices = () => {
               Schedule a No‑Pressure Consultation
             </h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-8">
-              Whether you are a senior planning a move, a family member coordinating a sale, an executor managing an estate, or an attorney advising a client — Real Property Planning welcomes a confidential conversation about your situation. There is no obligation and no sales pressure.
+              Whether you are a senior planning a move, a family member coordinating a sale, an executor managing an estate, or an attorney advising a client — {FEATURED_BROKER.name} welcomes a confidential conversation about your situation. There is no obligation and no sales pressure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">

@@ -19,32 +19,32 @@ const faqs = [
   {
     question: "Can you get help if I live outside Spokane?",
     answer:
-      "Yes. our team regularly works with executors, trustees, and family members who live outside the Spokane area — whether across the state, across the country, or internationally. We coordinate property access, vendor management, preparation, and the sale process so you don't need to make unnecessary trips.",
+      `Yes. ${FEATURED_BROKER.firstName} regularly works with executors, trustees, and family members who live outside the Spokane area — whether across the state, across the country, or internationally. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the sale process so you don't need to make unnecessary trips.`,
   },
   {
     question: "What should an executor do first with a Spokane inherited property?",
     answer:
-      "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. our team can walk through the property on your behalf, identify issues that affect value, and help you understand your options before you commit to anything.",
+      `Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. ${FEATURED_BROKER.firstName} can walk through the property on your behalf, identify issues that affect value, and help you understand your options before you commit to anything.`,
   },
   {
     question: "How does an appraisal background help with Spokane properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, we provide pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable when families are making decisions from a distance and need confidence in the numbers.",
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable when families are making decisions from a distance and need confidence in the numbers.`,
   },
   {
     question: "How long does it take to sell an inherited home in Spokane?",
     answer:
-      "Timelines depend on the probate or trust administration process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Spokane homes typically sell within a few weeks. We help set realistic expectations and builds a timeline around your specific situation.",
+      `Timelines depend on the probate or trust administration process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Spokane homes typically sell within a few weeks. ${FEATURED_BROKER.name} helps set realistic expectations and builds a timeline around your specific situation.`,
   },
   {
     question: "Should I fix up an inherited property in Spokane before selling?",
     answer:
-      "It depends on the home's condition, your budget, and your timeline. We evaluate which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. When you're managing from a distance, this kind of honest guidance saves time and money.",
+      `It depends on the home's condition, your budget, and your timeline. ${FEATURED_BROKER.name} evaluates which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. When you're managing from a distance, this kind of honest guidance saves time and money.`,
   },
   {
-    question: "How does our team coordinate the process for remote families?",
+    question: `How does ${FEATURED_BROKER.firstName} coordinate the process for remote families?`,
     answer:
-      "We serve as your local point of coordination. We manage property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provide clear updates throughout — so you always know where things stand without needing to be there in person.",
+      `${FEATURED_BROKER.name} serves as your local point of coordination. ${FEATURED_BROKER.pronoun.Subject} manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provide clear updates throughout — so you always know where things stand without needing to be there in person.`,
   },
 ];
 
@@ -118,7 +118,7 @@ const SpokaneProbateEstate = () => {
 
       <DirectAnswerBlock
         question="How does Real Property Planning help families manage inherited property in Spokane?"
-        answer="Many Spokane estate properties are managed by families who live outside the area. Real Property Planning provides reliable, on-the-ground coordination — property assessment, preparation, pricing, and sale management — so out-of-area executors and trustees can make confident decisions without needing to be on-site."
+        answer={`Many Spokane estate properties are managed by families who live outside the area. ${FEATURED_BROKER.name} provides reliable, on-the-ground coordination — property assessment, preparation, pricing, and sale management — so out-of-area executors and trustees can make confident decisions without needing to be on-site.`}
         supportBullets={[
           "Clear guidance for out-of-state executors managing Spokane property from a distance",
           "Pricing analysis grounded in Spokane's neighborhood-level market dynamics",
@@ -168,7 +168,7 @@ const SpokaneProbateEstate = () => {
               Property condition plays a major role in Spokane estate sales. Many inherited homes have been lived in for decades and may need repairs, cleanout, or preparation before they're ready for market. Knowing which improvements are worth the investment — and which aren't — requires honest, condition-based assessment rather than guesswork.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a valuation-first perspective grounded in actual property condition and local market data. This dual expertise is especially valuable when families are coordinating from outside the area and need confidence that the pricing strategy and preparation decisions are sound.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} brings a valuation-first perspective grounded in actual property condition and local market data. This dual expertise is especially valuable when families are coordinating from outside the area and need confidence that the pricing strategy and preparation decisions are sound.
             </p>
           </div>
         </div>
@@ -193,7 +193,7 @@ const SpokaneProbateEstate = () => {
               One of the most common challenges with Spokane estate properties is distance. The executor, trustee, or primary decision-maker often lives in Western Washington, out of state, or even overseas. Managing vendors, accessing the property, and making informed decisions from afar is stressful — especially when you're also managing grief or family dynamics.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              We serve as your boots-on-the-ground coordinator. We manage property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provide clear, consistent updates — so you always know where things stand without needing to be there in person.
+              {FEATURED_BROKER.name} serves as your boots-on-the-ground coordinator. {FEATURED_BROKER.pronoun.Subject} manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provide clear, consistent updates — so you always know where things stand without needing to be there in person.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is simple: minimize your travel, reduce your stress, and give you confidence that the process is moving forward thoughtfully and professionally.
@@ -216,7 +216,7 @@ const SpokaneProbateEstate = () => {
               {[
                 {
                   title: "Understanding the Situation",
-                  desc: "We start with a conversation — by phone or video — to understand who's involved, what authority exists, where the property stands, and what the goals are.",
+                  desc: `${FEATURED_BROKER.name} starts with a conversation — by phone or video — to understand who's involved, what authority exists, where the property stands, and what the goals are.`,
                 },
                 {
                   title: "Assessing the Property",
@@ -266,7 +266,7 @@ const SpokaneProbateEstate = () => {
                 { to: "/for-attorneys", label: "For Attorneys" },
                 { to: "/why-valuation-matters", label: "Why Valuation Matters" },
                 { to: "/how-the-process-works", label: "How the Process Works" },
-                { to: "/cities-we-serve", label: "All Cities" },
+                { to: `/cities-we-serve`, label: "All Cities" },
               ].map((link, i) => (
                 <span key={link.to} className="flex items-center gap-3">
                   {i > 0 && <span className="text-muted-foreground/40">·</span>}

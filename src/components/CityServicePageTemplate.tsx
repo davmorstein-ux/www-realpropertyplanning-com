@@ -70,7 +70,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
-              How We Help
+              How the Featured Broker Helps
             </h2>
             <ul className="space-y-3">
               {howWeHelp.slice(0, 5).map((item, i) => (

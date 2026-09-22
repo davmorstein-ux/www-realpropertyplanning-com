@@ -17,27 +17,27 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const faqs = [
   {
     question: "What should I do first with an inherited home in Kennewick?",
-    answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. our team can walk through the home, identify what affects value, and help you understand your options before you commit to anything.",
+    answer: `Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. ${FEATURED_BROKER.firstName} can walk through the home, identify what affects value, and help you understand your options before you commit to anything.`,
   },
   {
     question: "How does an appraisal background help in Kennewick?",
-    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, we provide pricing based on actual property condition and local comparable data — not automated estimates. In Kennewick, where condition varies widely and pricing is sensitive, this dual perspective prevents costly mistakes.",
+    answer: `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing based on actual property condition and local comparable data — not automated estimates. In Kennewick, where condition varies widely and pricing is sensitive, this dual perspective prevents costly mistakes.`,
   },
   {
     question: "Should I renovate a Kennewick inherited home before selling?",
-    answer: "Not always. We evaluate which improvements are likely to return more than they cost — and which aren't worth the investment. Many Kennewick inherited homes benefit more from targeted preparation and honest pricing than from expensive renovations.",
+    answer: `Not always. ${FEATURED_BROKER.name} evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. Many Kennewick inherited homes benefit more from targeted preparation and honest pricing than from expensive renovations.`,
   },
   {
     question: "What if family members disagree about selling?",
-    answer: "This is common. We provide objective, condition-based information — realistic market value, preparation costs, and available options — so every family member is working from the same set of facts. That clarity often helps move conversations forward.",
+    answer: `This is common. ${FEATURED_BROKER.name} provides objective, condition-based information — realistic market value, preparation costs, and available options — so every family member is working from the same set of facts. That clarity often helps move conversations forward.`,
   },
   {
     question: "Can you get help if I don't live in Kennewick?",
-    answer: "Yes. our team regularly works with executors and family members who live outside the Tri-Cities. We coordinate property access, vendor management, and the sale process so you can make informed decisions without unnecessary travel.",
+    answer: `Yes. ${FEATURED_BROKER.firstName} regularly works with executors and family members who live outside the Tri-Cities. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, and the sale process so you can make informed decisions without unnecessary travel.`,
   },
   {
     question: "How long does it take to sell an inherited home in Kennewick?",
-    answer: "Timelines depend on the probate or trust process, property condition, and market conditions. Once the home is ready and legal authority is established, well-priced Kennewick properties generally sell within a reasonable timeframe. We help set realistic expectations from the start.",
+    answer: `Timelines depend on the probate or trust process, property condition, and market conditions. Once the home is ready and legal authority is established, well-priced Kennewick properties generally sell within a reasonable timeframe. ${FEATURED_BROKER.name} helps set realistic expectations from the start.`,
   },
 ];
 
@@ -132,7 +132,7 @@ const KennewickProbateEstate = () => {
               In a market where pricing is sensitive to condition, the preparation decisions you make before listing can meaningfully affect the outcome. Spending money on the wrong improvements wastes resources; skipping necessary preparation can lead to lower offers or extended time on market.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning evaluates inherited properties based on their actual condition, not assumptions. This valuation-first approach helps families make preparation and pricing decisions grounded in facts rather than guesswork.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} evaluates inherited properties based on their actual condition, not assumptions. This valuation-first approach helps families make preparation and pricing decisions grounded in facts rather than guesswork.
             </p>
           </div>
         </div>
@@ -148,10 +148,10 @@ const KennewickProbateEstate = () => {
               When multiple family members are involved in an inherited property decision, things can stall. One person wants to move quickly. Another wants to wait. A third isn't sure what the house needs or what it's worth. Without a clear framework, these conversations can go in circles.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              We provide objective, condition-based information that gives everyone a common starting point — what the property looks like today, what it's realistically worth, what preparation makes sense, and what the timeline looks like. That shared understanding often helps families move forward together.
+              {FEATURED_BROKER.name} provides objective, condition-based information that gives everyone a common starting point — what the property looks like today, what it's realistically worth, what preparation makes sense, and what the timeline looks like. That shared understanding often helps families move forward together.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              From there, we manage the practical steps — coordinating cleanout crews, overseeing targeted repairs, and handling the logistics of getting the property ready and sold — so the family can focus on the decisions that matter most.
+              From there, {FEATURED_BROKER.name} manages the practical steps — coordinating cleanout crews, overseeing targeted repairs, and handling the logistics of getting the property ready and sold — so the family can focus on the decisions that matter most.
             </p>
           </div>
         </div>
@@ -164,7 +164,7 @@ const KennewickProbateEstate = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">Every inherited property is different, but the approach stays consistent — practical, honest, and focused on getting to a good outcome:</p>
             <ol className="space-y-6">
               {[
-                { title: "Understanding the Situation", desc: "We start with a conversation about the property, the family, and what needs to happen. No assumptions — just listening and asking the right questions." },
+                { title: "Understanding the Situation", desc: `${FEATURED_BROKER.name} starts with a conversation about the property, the family, and what needs to happen. No assumptions — just listening and asking the right questions.` },
                 { title: "Evaluating the Property", desc: "I visit the home, assess its condition, and identify what actually affects its value. This includes deferred maintenance, structural concerns, and neighborhood context." },
                 { title: "Developing a Pricing Strategy", desc: "Using my appraisal background and Kennewick-specific market data, I build a pricing strategy based on what the property is — not what someone hopes it might be." },
                 { title: "Managing Preparation", desc: "I coordinate cleanout, targeted repairs, and vendor logistics so the property is positioned well without unnecessary expense or delay." },
@@ -190,7 +190,7 @@ const KennewickProbateEstate = () => {
           <div className="max-w-3xl mx-auto">
             <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
             <div className="flex flex-wrap gap-3">
-              {[{ to: "/executors", label: "For Executors" }, { to: "/probate-estate-sales", label: "Probate & Estate Sales" }, { to: "/senior-transitions", label: "Senior Transitions" }, { to: "/for-attorneys", label: "For Attorneys" }, { to: "/why-valuation-matters", label: "Why Valuation Matters" }, { to: "/how-the-process-works", label: "How the Process Works" }, { to: "/cities-we-serve", label: "All Cities" }].map((link, i) => (
+              {[{ to: "/executors", label: "For Executors" }, { to: "/probate-estate-sales", label: "Probate & Estate Sales" }, { to: "/senior-transitions", label: "Senior Transitions" }, { to: "/for-attorneys", label: "For Attorneys" }, { to: "/why-valuation-matters", label: "Why Valuation Matters" }, { to: "/how-the-process-works", label: "How the Process Works" }, { to: `/cities-we-serve`, label: "All Cities" }].map((link, i) => (
                 <span key={link.to} className="flex items-center gap-3">
                   {i > 0 && <span className="text-muted-foreground/40">·</span>}
                   <Link to={link.to} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{link.label}</Link>

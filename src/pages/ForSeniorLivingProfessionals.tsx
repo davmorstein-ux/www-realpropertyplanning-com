@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import people3d from "@/assets/real-estate-agent-team-icon-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -93,7 +94,7 @@ const collaborationPartners = [
 
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for Senior Living and Transition Professionals",
-  description: "Real Property Planning works with senior living communities, move managers, downsizing specialists, and related professionals when a home is part of a major life transition.",
+  description: `${FEATURED_BROKER.name} works with senior living communities, move managers, downsizing specialists, and related professionals when a home is part of a major life transition.`,
   url: "/for-senior-living-professionals",
   datePublished: "2026-03-16",
   dateModified: "2026-03-16",
@@ -105,7 +106,7 @@ const ForSeniorLivingProfessionals = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="For Senior Living & Transition Professionals | Real Property Planning"
-        description="Real Property Planning works with senior living communities, move managers, downsizing specialists, and estate sale companies when a home is part of a major life transition throughout Washington State."
+        description={`${FEATURED_BROKER.name} works with senior living communities, move managers, downsizing specialists, and estate sale companies when a home is part of a major life transition throughout Washington State.`}
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Senior Living & Transition Professionals", url: `${SITE_URL}/for-senior-living-professionals` }]} />
@@ -124,7 +125,7 @@ const ForSeniorLivingProfessionals = () => {
             For Senior Living &amp; Transition Professionals
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Real Property Planning works with senior living communities, move managers, downsizing specialists, estate sale companies, and related professionals when a home is part of a major life transition. With dual credentials as a licensed broker and certified appraiser, Real Property Planning brings the market knowledge and professional sensitivity these situations require.
+            {FEATURED_BROKER.name} works with senior living communities, move managers, downsizing specialists, estate sale companies, and related professionals when a home is part of a major life transition. With dual credentials as a licensed broker and certified appraiser, {FEATURED_BROKER.name} brings the market knowledge and professional sensitivity these situations require.
           </p>
           </div>
         </div>
@@ -280,7 +281,7 @@ const ForSeniorLivingProfessionals = () => {
               Working with a family navigating a housing transition?
             </h2>
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Real Property Planning welcomes the opportunity to connect with senior living and transition professionals. Whether you have a specific client situation or simply want to learn how we can work together, we encourage you to reach out.
+              {FEATURED_BROKER.name} welcomes the opportunity to connect with senior living and transition professionals. Whether you have a specific client situation or simply want to learn how we can work together, we encourage you to reach out.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">

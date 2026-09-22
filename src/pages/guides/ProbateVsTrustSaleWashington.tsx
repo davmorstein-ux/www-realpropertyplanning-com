@@ -257,7 +257,7 @@ const ProbateVsTrustSaleWashington = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Works With Both</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Whether a property is going through probate or trust administration, Real Property Planning brings the same discipline to every sale — accurate condition-based pricing, coordinated preparation, and clear communication with all parties involved.
+              Whether a property is going through probate or trust administration, {FEATURED_BROKER.name} brings the same discipline to every sale — accurate condition-based pricing, coordinated preparation, and clear communication with all parties involved.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               For probate sales, {FEATURED_BROKER.firstName} works directly with the executor and estate attorney — providing regular updates, handling all property preparation coordination, and ensuring the pricing documentation supports the executor's fiduciary obligations.
@@ -314,7 +314,7 @@ const ProbateVsTrustSaleWashington = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              Real Property Planning works with executors, trustees, and attorneys throughout Washington State.
+              {FEATURED_BROKER.name} works with executors, trustees, and attorneys throughout Washington State.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">

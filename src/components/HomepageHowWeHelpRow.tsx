@@ -21,7 +21,7 @@ const HomepageHowWeHelpRow = () => (
         className="font-serif text-navy text-center mb-12"
         style={{ fontSize: "clamp(20px, 2vw, 24px)", lineHeight: 1.3, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase" }}
       >
-        How We Help
+        How This Hub Helps
       </h2>
 
 

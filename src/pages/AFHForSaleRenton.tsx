@@ -1,4 +1,5 @@
 import AFHCityHub from "@/components/AFHCityHub";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -29,7 +30,7 @@ const faqs = [
   {
     question: "How do I get notified about new AFH listings in Renton and South King County?",
     answer:
-      "Contact our team directly — he tracks AFH inventory across South King County and can reach out when a Renton-area property matching your criteria comes on the market.",
+      `Contact ${FEATURED_BROKER.name} directly — ${FEATURED_BROKER.pronoun.subject} tracks AFH inventory across South King County and can reach out when a Renton-area property matching your criteria comes on the market.`,
   },
 ];
 

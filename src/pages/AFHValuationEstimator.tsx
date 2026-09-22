@@ -612,7 +612,7 @@ const AFHValuationEstimator = () => {
               >
                 This estimate uses income capitalization methodology and Washington AFH market data. It is for
                 informational purposes only and does not constitute a certified appraisal or broker opinion of value.
-                Contact our team for a professional certified valuation.
+                Contact {FEATURED_BROKER.name} for a professional certified valuation.
               </div>
               <div
                 style={{

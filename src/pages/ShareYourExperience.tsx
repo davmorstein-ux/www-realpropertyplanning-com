@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAAD8Pv43WG0GFRJob";
 
@@ -166,7 +167,7 @@ const ShareYourExperience = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Share Your Experience | Real Property Planning"
-        description="Tell us how Real Property Planning helped. Your words may be published on our testimonials page, only with your permission and only as you asked to be credited."
+        description={`Tell us how ${FEATURED_BROKER.name} helped. Your words may be published on our testimonials page, only with your permission and only as you asked to be credited.`}
         canonical="https://realpropertyplanning.com/share-your-experience"
       />
       <BreadcrumbSchema

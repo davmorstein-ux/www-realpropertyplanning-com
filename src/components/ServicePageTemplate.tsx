@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { counties, isTier1City } from "@/lib/service-areas-data";
 import type { ServiceData } from "@/lib/service-areas-data";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 interface ServicePageTemplateProps {
   service: ServiceData;
@@ -30,7 +31,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
     <div className="min-h-screen bg-background">
       <SEOHead
         title={`${service.name} in Washington State | Real Property Planning`}
-        description={`${service.description} Real Property Planning provides ${service.name.toLowerCase()} throughout Washington State with licensed broker and certified appraiser credentials.`}
+        description={`${service.description} ${FEATURED_BROKER.name} provides ${service.name.toLowerCase()} throughout Washington State with licensed broker and certified appraiser credentials.`}
       />
       <BreadcrumbSchema
         items={[

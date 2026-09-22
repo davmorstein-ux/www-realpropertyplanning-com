@@ -34,7 +34,7 @@ const GrayDivorce = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              When a long marriage ends after 50, the family home is often the most complex — and emotional — asset to navigate. Real Property Planning helps separating couples understand their options clearly.
+              When a long marriage ends after 50, the family home is often the most complex — and emotional — asset to navigate. {FEATURED_BROKER.name} helps separating couples understand their options clearly.
             </p>
             </div>
           </div>
@@ -168,7 +168,7 @@ const GrayDivorce = () => {
                 Working With the Right Team
               </h2>
               <p className="text-foreground/90 text-lg leading-[1.7]">
-                Gray divorce is not a situation to navigate alone. The professionals you'll want on your side include a family law attorney experienced in gray divorce, a CPA or financial planner familiar with retirement asset division, a real estate professional who understands the sensitivity of the situation, and potentially a senior living advisor if downsizing is part of the plan. Real Property Planning works alongside attorneys, CPAs, and financial planners throughout Washington State to help separating couples handle the real estate side of gray divorce with clarity and care.
+                Gray divorce is not a situation to navigate alone. The professionals you'll want on your side include a family law attorney experienced in gray divorce, a CPA or financial planner familiar with retirement asset division, a real estate professional who understands the sensitivity of the situation, and potentially a senior living advisor if downsizing is part of the plan. {FEATURED_BROKER.name} works alongside attorneys, CPAs, and financial planners throughout Washington State to help separating couples handle the real estate side of gray divorce with clarity and care.
               </p>
             </div>
           </div>

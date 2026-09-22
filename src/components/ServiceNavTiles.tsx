@@ -73,7 +73,7 @@ const ServiceNavTiles = () => {
           className="text-center font-serif text-red-900 tracking-tight mb-3"
           style={{ fontSize: "2.5rem", fontWeight: "bold" }}
         >
-          How can we help today?
+          What brings you here today?
         </h2>
 
         {/* 2. Search bar */}

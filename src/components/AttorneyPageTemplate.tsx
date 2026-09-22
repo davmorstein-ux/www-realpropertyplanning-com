@@ -7,6 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 
 interface AttorneyPageProps {
@@ -96,7 +97,7 @@ const AttorneyPageTemplate = ({
               Common Scenarios
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              These are typical situations where Real Property Planning provides value:
+              These are typical situations where {FEATURED_BROKER.name} provides value:
             </p>
             <div className="grid gap-5">
               {scenarios.map((s, i) => (
@@ -120,7 +121,7 @@ const AttorneyPageTemplate = ({
               How Real Property Planning Helps
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Real Property Planning brings dual credentials as a licensed broker and certified residential appraiser to every engagement:
+              {FEATURED_BROKER.name} brings dual credentials as a licensed broker and certified residential appraiser to every engagement:
             </p>
             <ul className="space-y-4">
               {howWeHelp.map((item, i) => (

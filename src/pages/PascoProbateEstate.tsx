@@ -17,27 +17,27 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const faqs = [
   {
     question: "Can you get help with a property in Pasco?",
-    answer: "Yes. We work with executors, trustees, and families handling inherited and estate property throughout Washington State, including Pasco and the broader Tri-Cities region. We provide property assessment, pricing guidance, and coordination support whether you're local or managing from a distance.",
+    answer: `Yes. ${FEATURED_BROKER.name} works with executors, trustees, and families handling inherited and estate property throughout Washington State, including Pasco and the broader Tri-Cities region. ${FEATURED_BROKER.pronoun.Subject} provides property assessment, pricing guidance, and coordination support whether you're local or managing from a distance.`,
   },
   {
     question: "What if the inherited property needs significant work?",
-    answer: "Many Pasco inherited homes have deferred maintenance or condition issues. We assess the property honestly and help you understand which repairs are worth the investment and which aren't. The goal is a realistic strategy that accounts for the property's actual condition — not an idealized version of it.",
+    answer: `Many Pasco inherited homes have deferred maintenance or condition issues. ${FEATURED_BROKER.name} assesses the property honestly and help you understand which repairs are worth the investment and which aren't. The goal is a realistic strategy that accounts for the property's actual condition — not an idealized version of it.`,
   },
   {
-    question: "How does our team price a property in varied condition?",
-    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, we evaluate the property based on its actual condition, location, and local comparable sales. This approach produces defensible pricing that reflects what the market will realistically pay — which is especially important when condition varies significantly.",
+    question: `How does ${FEATURED_BROKER.firstName} price a property in varied condition?`,
+    answer: `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} evaluates the property based on its actual condition, location, and local comparable sales. This approach produces defensible pricing that reflects what the market will realistically pay — which is especially important when condition varies significantly.`,
   },
   {
     question: "What if I'm not sure whether to sell or keep the property?",
-    answer: "That's a common starting point. our team can provide an honest assessment of the property's condition, realistic market value, and the costs associated with holding versus selling. Having clear data often makes the decision easier — whatever direction the family ultimately chooses.",
+    answer: `That's a common starting point. ${FEATURED_BROKER.firstName} can provide an honest assessment of the property's condition, realistic market value, and the costs associated with holding versus selling. Having clear data often makes the decision easier — whatever direction the family ultimately chooses.`,
   },
   {
     question: "How does a team help coordinate the process?",
-    answer: "We manage the practical steps — property access, cleanout coordination, contractor oversight, and communication with attorneys and family members. We keep the process organized and moving forward so you're not left figuring out logistics on your own.",
+    answer: `${FEATURED_BROKER.name} manages the practical steps — property access, cleanout coordination, contractor oversight, and communication with attorneys and family members. ${FEATURED_BROKER.pronoun.Subject} keeps the process organized and moving forward so you're not left figuring out logistics on your own.`,
   },
   {
     question: "How long does it take to sell an inherited home in Pasco?",
-    answer: "Timelines vary based on the legal process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Pasco properties typically sell within a reasonable timeframe. We help set clear expectations from the beginning.",
+    answer: `Timelines vary based on the legal process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Pasco properties typically sell within a reasonable timeframe. ${FEATURED_BROKER.name} helps set clear expectations from the beginning.`,
   },
 ];
 
@@ -132,7 +132,7 @@ const PascoProbateEstate = () => {
               Condition is often the defining factor in Pasco estate sales. A home with a sound roof and updated systems sits in a very different pricing category than one with deferred mechanical work or structural concerns. Families who don't have an honest assessment of where the property falls on that spectrum risk either overpricing and waiting, or underpricing and leaving value behind.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning provides condition-based pricing grounded in what the property actually is today. This clarity gives families the foundation they need to make sound decisions — whether that means investing in preparation or pricing the home to sell in its current state.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} provides condition-based pricing grounded in what the property actually is today. This clarity gives families the foundation they need to make sound decisions — whether that means investing in preparation or pricing the home to sell in its current state.
             </p>
           </div>
         </div>
@@ -148,7 +148,7 @@ const PascoProbateEstate = () => {
               When an inherited property needs attention — whether that's a cleanout, targeted repairs, or just an honest evaluation — someone needs to manage the details. For families who aren't local or who are managing multiple responsibilities, that coordination can feel like a full-time job on its own.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              our team steps into that role. We manage property access, works with cleanout crews and contractors, communicates with attorneys and other professionals, and provide clear updates so the family always knows where things stand. The process stays organized and moves forward without depending on anyone making repeated trips to Pasco.
+              {FEATURED_BROKER.firstName} steps into that role. {FEATURED_BROKER.pronoun.Subject} manages property access, works with cleanout crews and contractors, communicates with attorneys and other professionals, and provide clear updates so the family always knows where things stand. The process stays organized and moves forward without depending on anyone making repeated trips to Pasco.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is straightforward: take the logistical weight off the family so they can focus on the decisions that matter — not the day-to-day details of getting a property ready to sell.
@@ -164,7 +164,7 @@ const PascoProbateEstate = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">Every property and family is different, but the framework is designed to provide structure and reduce uncertainty from the start:</p>
             <ol className="space-y-6">
               {[
-                { title: "Listening First", desc: "We start with a conversation about the property, the people involved, and what you're dealing with. No agenda — just understanding where things stand." },
+                { title: "Listening First", desc: `${FEATURED_BROKER.name} starts with a conversation about the property, the people involved, and what you're dealing with. No agenda — just understanding where things stand.` },
                 { title: "Honest Property Assessment", desc: "I visit the property and evaluate its actual condition — structural, mechanical, and cosmetic. This isn't about finding problems; it's about understanding what affects value." },
                 { title: "Condition-Based Pricing", desc: "Using my appraisal background and Pasco-specific data, I develop pricing that reflects the property's real condition and location — not inflated expectations or algorithmic guesses." },
                 { title: "Managing the Details", desc: "I coordinate cleanout, preparation, and vendor logistics so the property is positioned appropriately without unnecessary expense or delay." },
@@ -190,7 +190,7 @@ const PascoProbateEstate = () => {
           <div className="max-w-3xl mx-auto">
             <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
             <div className="flex flex-wrap gap-3">
-              {[{ to: "/executors", label: "For Executors" }, { to: "/probate-estate-sales", label: "Probate & Estate Sales" }, { to: "/senior-transitions", label: "Senior Transitions" }, { to: "/for-attorneys", label: "For Attorneys" }, { to: "/why-valuation-matters", label: "Why Valuation Matters" }, { to: "/how-the-process-works", label: "How the Process Works" }, { to: "/cities-we-serve", label: "All Cities" }].map((link, i) => (
+              {[{ to: "/executors", label: "For Executors" }, { to: "/probate-estate-sales", label: "Probate & Estate Sales" }, { to: "/senior-transitions", label: "Senior Transitions" }, { to: "/for-attorneys", label: "For Attorneys" }, { to: "/why-valuation-matters", label: "Why Valuation Matters" }, { to: "/how-the-process-works", label: "How the Process Works" }, { to: `/cities-we-serve`, label: "All Cities" }].map((link, i) => (
                 <span key={link.to} className="flex items-center gap-3">
                   {i > 0 && <span className="text-muted-foreground/40">·</span>}
                   <Link to={link.to} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{link.label}</Link>

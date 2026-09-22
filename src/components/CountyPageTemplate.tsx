@@ -47,9 +47,10 @@ import skamaniаLogo from "@/assets/counties/skamania-county-logo.webp";
 import wahkiakumLogo from "@/assets/counties/wahkiakum-county-logo.webp";
 import graysHarborLogo from "@/assets/counties/grays-harbor-county-logo.webp";
 import { services, counties } from "@/lib/service-areas-data";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const COUNTY_WEBSITES: Record<string, string> = {
-  "benton-county": "https://www.co.benton.wa.us",
+  "benton-county": `https://www.co.benton.wa.${FEATURED_BROKER.pronoun.object}`,
   "clark-county": "https://www.clark.wa.gov",
   "king-county": "https://kingcounty.gov",
   "kitsap-county": "https://www.kitsapgov.com",
@@ -58,8 +59,8 @@ const COUNTY_WEBSITES: Record<string, string> = {
   "snohomish-county": "https://snohomishcountywa.gov",
   "spokane-county": "https://www.spokanecounty.org",
   "thurston-county": "https://www.thurstoncountywa.gov",
-  "whatcom-county": "https://www.whatcomcounty.us",
-  "cowlitz-county": "https://www.co.cowlitz.wa.us",
+  "whatcom-county": `https://www.whatcomcounty.${FEATURED_BROKER.pronoun.object}`,
+  "cowlitz-county": `https://www.co.cowlitz.wa.${FEATURED_BROKER.pronoun.object}`,
   "grays-harbor-county": "https://www.graysharborcounty.net",
   "island-county": "https://www.islandcountywa.gov",
   "jefferson-county": "https://www.jeffersoncountywa.gov",
@@ -258,7 +259,7 @@ const CountyPageTemplate = ({
   const defaultCountyFaqs = [
     {
       question: `Does Real Property Planning open ${countyName} probate listings before Letters are issued?`,
-      answer: `No. The property cannot be marketed until the personal representative receives Letters Testamentary or Letters of Administration from the ${countyName} Superior Court. We do, however, use that waiting period for the date-of-death valuation walk-through, securing the home, lining up cleanout vendors, and preparing the marketing file — so the day Letters arrive, you are ready to list rather than starting from zero.`,
+      answer: `No. The property cannot be marketed until the personal representative receives Letters Testamentary or Letters of Administration from the ${countyName} Superior Court. ${FEATURED_BROKER.name} does, however, use that waiting period for the date-of-death valuation walk-through, securing the home, lining up cleanout vendors, and preparing the marketing file — so the day Letters arrive, you are ready to list rather than starting from zero.`,
     },
     {
       question: `Is there anything specific to ${countyName} that affects how an estate property sells?`,
@@ -417,7 +418,7 @@ const CountyPageTemplate = ({
           question={aeoQuestion || `How do probate and estate property sales work in ${countyName}?`}
           answer={
             aeoAnswer ||
-            `Real Property Planning provides experienced guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}. Each property is carefully evaluated, and defensible pricing is provided based on licensed broker and certified appraiser expertise.`
+            `${FEATURED_BROKER.name} provides experienced guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}. Each property is carefully evaluated, and defensible pricing is provided based on licensed broker and certified appraiser expertise.`
           }
           supportBullets={aeoSupportBullets}
           supportFaqs={aeoSupportFaqs}
@@ -515,7 +516,7 @@ const CountyPageTemplate = ({
                   anywhere families can compare them.
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-                  We publish the full DSHS licensing record for every one of them: capacity, specialty designations,
+                  {FEATURED_BROKER.name} publishs the full DSHS licensing record for every one of them: capacity, specialty designations,
                   Medicaid status, and inspection history.
                 </p>
                 <p className="text-lg">

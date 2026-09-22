@@ -6,7 +6,7 @@ const HomepageWarmStatement = () => {
       <div className="container px-6 lg:px-8">
         <div className="max-w-[820px] mx-auto text-center">
           <Link to="/about" className="gold-cta mx-auto">
-            Learn how we work
+            Learn how this works
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <polyline points="9 18 15 12 9 6" />
             </svg>

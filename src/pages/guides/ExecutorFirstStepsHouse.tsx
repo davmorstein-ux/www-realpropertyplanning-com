@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   { question: "Should I change the locks on the estate property?", answer: "Yes, this is generally one of the first things to do. You want to control access to the property and protect it from unauthorized entry. Change the locks and keep a record of who has keys." },
@@ -111,7 +112,7 @@ const ExecutorFirstStepsHouse = () => (
 
     <MidPageCTA
       heading="Just Named as Executor?"
-      body="The first few weeks can feel overwhelming. A short conversation with our team can help you prioritize what matters most and understand the process ahead."
+      body={`The first few weeks can feel overwhelming. A short conversation with ${FEATURED_BROKER.name} can help you prioritize what matters most and understand the process ahead.`}
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance on the property questions."
     />

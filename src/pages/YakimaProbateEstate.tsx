@@ -18,32 +18,32 @@ const faqs = [
   {
     question: "Can you get help with an inherited property in Yakima?",
     answer:
-      "Yes. We work with executors, trustees, and families handling inherited and estate property throughout Washington State, including Yakima and the surrounding area. We coordinate the process remotely when needed and provide on-the-ground support for property assessment and preparation.",
+      `Yes. ${FEATURED_BROKER.name} works with executors, trustees, and families handling inherited and estate property throughout Washington State, including Yakima and the surrounding area. ${FEATURED_BROKER.pronoun.Subject} coordinates the process remotely when needed and provide on-the-ground support for property assessment and preparation.`,
   },
   {
     question: "What should I do first with an inherited house in Yakima?",
     answer:
-      "Secure the property, confirm your legal authority to act, and get an honest assessment of the home's condition and realistic market value. our team can walk through the property, identify what affects value, and help you understand your options before making any commitments.",
+      `Secure the property, confirm your legal authority to act, and get an honest assessment of the home's condition and realistic market value. ${FEATURED_BROKER.firstName} can walk through the property, identify what affects value, and help you understand your options before making any commitments.`,
   },
   {
     question: "How does an appraisal background help with Yakima properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, we provide pricing grounded in actual condition assessment and local comparable data — not automated estimates. In Yakima, where property values are sensitive to condition and neighborhood, this dual perspective prevents costly pricing mistakes.",
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing grounded in actual condition assessment and local comparable data — not automated estimates. In Yakima, where property values are sensitive to condition and neighborhood, this dual perspective prevents costly pricing mistakes.`,
   },
   {
     question: "Should I fix up the house before selling?",
     answer:
-      "Not necessarily. We evaluate which repairs or improvements are likely to return more than they cost — and which ones aren't worth the investment. Many Yakima inherited homes benefit more from honest pricing and targeted preparation than from expensive renovations.",
+      `Not necessarily. ${FEATURED_BROKER.name} evaluates which repairs or improvements are likely to return more than they cost — and which ones aren't worth the investment. Many Yakima inherited homes benefit more from honest pricing and targeted preparation than from expensive renovations.`,
   },
   {
     question: "What if family members disagree about what to do with the property?",
     answer:
-      "This is common. We provide objective, valuation-based information that helps families make decisions grounded in facts rather than assumptions. Having clear data about the property's condition, realistic value, and available options often helps move conversations forward.",
+      `This is common. ${FEATURED_BROKER.name} provides objective, valuation-based information that helps families make decisions grounded in facts rather than assumptions. Having clear data about the property's condition, realistic value, and available options often helps move conversations forward.`,
   },
   {
     question: "How long does it take to sell an inherited home in Yakima?",
     answer:
-      "Timelines depend on the probate or trust process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Yakima homes typically sell within a reasonable timeframe. We help set realistic expectations and builds a timeline around your situation.",
+      `Timelines depend on the probate or trust process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Yakima homes typically sell within a reasonable timeframe. ${FEATURED_BROKER.name} helps set realistic expectations and builds a timeline around your situation.`,
   },
 ];
 
@@ -157,7 +157,7 @@ const YakimaProbateEstate = () => {
               Neighborhoods across Yakima vary significantly. A home near Englewood Hill, in the West Valley, or closer to downtown each sits in a different pricing context. Inherited properties often reflect years of personal use — and the gap between what a family remembers and what the market sees can be substantial. Bridging that gap with honest data is where good decisions start.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a condition-based, valuation-first perspective. This means pricing grounded in what the property actually is today — not what it was worth ten years ago or what an algorithm estimates from a distance.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} brings a condition-based, valuation-first perspective. This means pricing grounded in what the property actually is today — not what it was worth ten years ago or what an algorithm estimates from a distance.
             </p>
           </div>
         </div>
@@ -182,7 +182,7 @@ const YakimaProbateEstate = () => {
               Inherited property decisions in Yakima often involve multiple family members — sometimes with different priorities, different levels of involvement, and different ideas about what to do next. One person wants to sell quickly. Another wants to renovate. A third isn't sure the timing is right.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              We provide objective, data-driven information that gives everyone a common set of facts to work from. When family members can see the property's actual condition, understand the realistic market value, and review the available options together, conversations tend to move forward more productively.
+              {FEATURED_BROKER.name} provides objective, data-driven information that gives everyone a common set of facts to work from. When family members can see the property's actual condition, understand the realistic market value, and review the available options together, conversations tend to move forward more productively.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The role isn't to push a particular outcome — it's to provide the clarity that allows families to make decisions they feel good about, together.
@@ -205,7 +205,7 @@ const YakimaProbateEstate = () => {
               {[
                 {
                   title: "Understanding Your Situation",
-                  desc: "We start with a conversation about the property, the family, the legal context, and what you're trying to accomplish. No assumptions — just listening.",
+                  desc: `${FEATURED_BROKER.name} starts with a conversation about the property, the family, the legal context, and what you're trying to accomplish. No assumptions — just listening.`,
                 },
                 {
                   title: "Assessing the Property Honestly",
@@ -255,7 +255,7 @@ const YakimaProbateEstate = () => {
                 { to: "/for-attorneys", label: "For Attorneys" },
                 { to: "/why-valuation-matters", label: "Why Valuation Matters" },
                 { to: "/how-the-process-works", label: "How the Process Works" },
-                { to: "/cities-we-serve", label: "All Cities" },
+                { to: `/cities-we-serve`, label: "All Cities" },
               ].map((link, i) => (
                 <span key={link.to} className="flex items-center gap-3">
                   {i > 0 && <span className="text-muted-foreground/40">·</span>}

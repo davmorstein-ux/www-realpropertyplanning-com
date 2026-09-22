@@ -7,6 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
 import BackToResources from "@/components/BackToResources";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -22,12 +23,12 @@ const faqs = [
   {
     question: "Does probate property have to be sold at fair market value?",
     answer:
-      "Executors and personal representatives have a fiduciary duty to act in the best interest of the estate, which generally means achieving fair market value. Our dual credentials as a broker and certified appraiser help ensure pricing decisions are defensible and well-supported by market data.",
+      `Executors and personal representatives have a fiduciary duty to act in the best interest of the estate, which generally means achieving fair market value. ${FEATURED_BROKER.name}'s dual credentials as a broker and certified appraiser help ensure pricing decisions are defensible and well-supported by market data.`,
   },
   {
     question: "What happens if heirs disagree about selling?",
     answer:
-      "Disagreements among heirs are common in probate situations. When pricing disputes arise, we provide objective, data-driven market analysis that can help move the conversation forward. Legal questions about authority and heir rights should be directed to the estate attorney.",
+      `Disagreements among heirs are common in probate situations. When pricing disputes arise, ${FEATURED_BROKER.name} provides objective, data-driven market analysis that can help move the conversation forward. Legal questions about authority and heir rights should be directed to the estate attorney.`,
   },
   {
     question: "Do I need a specialized agent for probate real estate?",
