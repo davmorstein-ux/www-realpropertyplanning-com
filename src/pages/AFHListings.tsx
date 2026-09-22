@@ -9,8 +9,8 @@ import { AFH_CITY_PAGES } from "@/data/afhCityPages";
 import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCard";
 import AFHBuyerGuides from "@/components/AFHBuyerGuides";
 import { realEstateListingsPageSchema } from "@/lib/schema";
-import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
-import expRealtyLogo from "@/assets/providers/exp-realty-brokerage-large-logo-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { BROKER_PHOTO, BROKERAGE_LOGO } from "@/data/featuredProfessionalAssets";
 
 const TEAL = "#1a7a78";
 const TEAL_MID = "#2a9d9a";
@@ -312,10 +312,10 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
                   width: "200px",
                 }}
               >
-                <a href="/realtor" aria-label="David Stein" style={{ textDecoration: "none", display: "inline-block" }}>
+                <a href="/realtor" aria-label={FEATURED_BROKER.name} style={{ textDecoration: "none", display: "inline-block" }}>
                   <img
-                    src={davidSteinPhoto}
-                    alt="David Stein"
+                    src={BROKER_PHOTO}
+                    alt={FEATURED_BROKER.name}
                     style={{
                       height: "120px",
                       width: "120px",
@@ -335,7 +335,7 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
                       lineHeight: 1.3,
                     }}
                   >
-                    David Stein
+                    {FEATURED_BROKER.name}
                   </div>
                   <div
                     style={{
@@ -348,12 +348,12 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
                     AFH Expert
                   </div>
                   <img
-                    src={expRealtyLogo}
-                    alt="eXp Realty"
+                    src={BROKERAGE_LOGO}
+                    alt={FEATURED_BROKER.brokerage}
                     style={{ height: "44px", width: "auto", display: "block", margin: "4px auto" }}
                   />
                   <a
-                    href="tel:2069003015"
+                    href={`tel:${FEATURED_BROKER.phoneTel}`}
                     style={{
                       display: "block",
                       fontWeight: 600,
@@ -364,7 +364,7 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
                       minHeight: "24px",
                     }}
                   >
-                    (206) 900-3015
+                    {FEATURED_BROKER.phone}
                   </a>
                 </div>
               </div>

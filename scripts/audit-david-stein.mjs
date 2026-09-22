@@ -1,7 +1,21 @@
 #!/usr/bin/env node
 /**
- * Sitewide audit: find every "David Stein" reference outside the approved
- * pages (About, Featured Realtor, Featured Real Estate Appraiser).
+ * Sitewide audit: find every literal "David Stein" reference outside the
+ * approved files.
+ *
+ * Since Sept 22, 2026 the featured broker and appraiser are defined ONCE, in
+ * src/data/featuredProfessionals.ts (and their photos/bios in
+ * src/data/featuredProfessionalAssets.ts). Every disclosure, CTA, byline,
+ * credential line, contact tool and schema entity reads from there, so the
+ * name may appear literally only in those two files, in the About page's
+ * founder story, and in the old /about-david-stein redirect. Everything the
+ * audit lists as a violation is page prose that still names him as the actor
+ * ("David handles…", "Can David Stein appraise…") — the remaining rewrite
+ * work, to be reworded so the actor is the featured broker or a licensed
+ * professional, or made to read the record.
+ *
+ * Testimonial quotes that say "David" without the surname are not matched;
+ * they are the featured broker's reviews and move with him.
  *
  * Usage:
  *   node scripts/audit-david-stein.mjs           # human-readable report
@@ -17,9 +31,11 @@ const EXTRA_FILES = ["index.html"];
 const TEXT_EXT = /\.(tsx?|jsx?|html|md|mdx|txt|json|css|svg)$/i;
 
 const APPROVED = new Set([
+  "src/data/featuredProfessionals.ts",
+  "src/data/featuredProfessionalAssets.ts",
   "src/pages/About.tsx",
-  "src/pages/Realtor.tsx",
-  "src/pages/RealEstateAppraiser.tsx",
+  "src/App.tsx", // /about-david-stein redirect only
+  "src/data/sitemap-data.ts", // same redirect
 ]);
 
 const PATTERNS = [

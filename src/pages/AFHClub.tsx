@@ -7,6 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { useTranslation } from "react-i18next";
+import { FEATURED_BROKER, brokerageAttribution, appraisalAttribution } from "@/data/featuredProfessionals";
 
 /**
  * PAGE-SCOPED STYLES
@@ -950,7 +951,7 @@ const AFHClub = () => {
             </div>
 
             {/* ------------------------------------------------------------------
-                REQUIRED DISCLOSURE. David receives compensation from some of the
+                REQUIRED DISCLOSURE. The featured broker receives compensation from some of the
                 parties described above, so this block is not optional and should
                 not be moved below the fold or reduced in size.
                ------------------------------------------------------------------ */}
@@ -972,10 +973,9 @@ const AFHClub = () => {
                 that you engage directly and on your own terms.
               </p>
               <p style={{ margin: "0 0 12px" }}>
-                Real estate brokerage services are provided by David Stein, a licensed Washington broker,
-                through eXp Realty. Appraisal services are provided by David Stein through Stein
-                Appraisal. David Stein may receive compensation, including referral fees or commission
-                splits, in connection with some of the introductions described on this page. You are
+                {brokerageAttribution} {appraisalAttribution} {FEATURED_BROKER.name} may receive
+                compensation, including referral fees or commission splits, in connection with some of the
+                introductions described on this page. You are
                 always free to work with professionals of your own choosing.
               </p>
               <p style={{ margin: 0 }}>

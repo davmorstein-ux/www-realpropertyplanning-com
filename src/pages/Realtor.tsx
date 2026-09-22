@@ -5,8 +5,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderTile from "@/components/ProviderTile";
-import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
-import expRealtyLogo from "@/assets/providers/exp-realty-brokerage-large-logo-washington.webp";
+import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
+import { BROKER_PHOTO, BROKER_PHOTO_ALT, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, BROKER_BIO } from "@/data/featuredProfessionalAssets";
 
 const REVIEWS = [
   {
@@ -140,29 +140,24 @@ const Realtor = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             <ProviderTile
-              name="David Stein"
+              name={FEATURED_BROKER.name}
               title="Washington State Licensed Real Estate Broker"
-              company="eXp Realty"
-              photo={davidSteinPhoto}
-              photoAlt="Photo of David Stein"
-              logo={expRealtyLogo}
-              logoAlt="eXp Realty logo"
-              phone="(206) 900-3015"
-              email="dave.stein@exprealty.com"
-              website="https://davestein.exprealty.com"
+              company={FEATURED_BROKER.brokerage}
+              photo={BROKER_PHOTO}
+              photoAlt={BROKER_PHOTO_ALT}
+              logo={BROKERAGE_LOGO}
+              logoAlt={BROKERAGE_LOGO_ALT}
+              phone={FEATURED_BROKER.phone}
+              email={FEATURED_BROKER.email}
+              website={FEATURED_BROKER.website}
               specialty="Probate, estate, and trust property sales across Washington State — working with executors, trustees, and families navigating inherited real estate."
-              bio="David Stein is a Washington State licensed real estate broker and Certified Residential Appraiser specializing in Adult Family Home sales, probate and estate properties, and trust-owned real estate across the Puget Sound region.
-
-With over 20 years of experience, David represents buyers and sellers of licensed Adult Family Homes, and works with executors, trustees, personal representatives, and agents under power of attorney navigating the sale of inherited real estate — bringing calm, expert guidance to some of the most complex transactions a family can face.
-
-As a broker with eXp Realty, he combines deep local knowledge with a powerful nationwide network. His dual license as both broker and appraiser is a rare advantage — particularly valuable when an AFH, estate, or trust property must be both accurately valued and strategically sold.
-
-Specialties: Adult Family Home sales · Probate, estate & trust properties · Executors, trustees & families navigating inherited real estate across Washington State."
+              bio={BROKER_BIO}
             />
           </div>
           <p className="max-w-3xl mx-auto text-center text-muted-foreground text-sm mt-6 leading-relaxed">
-            David Stein is Real Property Planning's founder and a member of its professional network. His real estate
-            brokerage services are provided independently through eXp Realty — not through Real Property Planning.
+            {FEATURED_BROKER.name} is Real Property Planning's featured real estate broker and a member of its
+            professional network. His real estate brokerage services are provided independently through{" "}
+            {FEATURED_BROKER.brokerage} — not through Real Property Planning.
           </p>
         </div>
       </section>
@@ -173,11 +168,11 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
           <div className="max-w-3xl mx-auto">
             <div className="text-muted-foreground text-base leading-relaxed mb-5 space-y-1">
               <p>
-                Washington State Licensed Real Estate Broker — David Stein's real estate license is held under eXp
-                Realty
+                Washington State Licensed Real Estate Broker — {FEATURED_BROKER.name}'s real estate license is held
+                under {FEATURED_BROKER.brokerage}
               </p>
-              <p>Washington State Certified Residential Appraiser — Stein Appraisal</p>
-              <p>Real Estate License #133972</p>
+              {SAME_PERSON && <p>Washington State Certified Residential Appraiser — {FEATURED_APPRAISER.firm}</p>}
+              <p>Real Estate License #{FEATURED_BROKER.licenseNumber}</p>
             </div>
             <div>
               <p className="text-foreground font-semibold mb-2">Proud Member of the:</p>
@@ -328,7 +323,7 @@ Specialties: Adult Family Home sales · Probate, estate & trust properties · Ex
           {/* View on Zillow CTA */}
           <div style={{ textAlign: "center", marginTop: 48 }}>
             <a
-              href="https://www.zillow.com/profile/DaveStein"
+              href={FEATURED_BROKER.zillowProfileUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{

@@ -7,7 +7,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
-import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
+import { FEATURED_BROKER, FEATURED_APPRAISER } from "@/data/featuredProfessionals";
+import { BROKER_PHOTO, APPRAISER_PHOTO } from "@/data/featuredProfessionalAssets";
 import scottPhoto from "@/assets/providers/elder-law-scott-schill-mercer-island.webp";
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
 import lauraPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
@@ -58,19 +59,19 @@ const groups: CategoryGroup[] = [
     category: "Real Estate & Appraisal",
     professionals: [
       {
-        name: "David Stein",
+        name: FEATURED_BROKER.name,
         role: "Washington State Licensed Real Estate Broker",
-        company: "eXp Realty",
+        company: FEATURED_BROKER.brokerage,
         specialty: "Probate, estate, and trust property sales throughout Washington State.",
-        photo: davidSteinPhoto,
+        photo: BROKER_PHOTO,
         href: "/realtor",
       },
       {
-        name: "David Stein",
+        name: FEATURED_APPRAISER.name,
         role: "Certified Residential Appraiser",
-        company: "Stein Appraisal",
+        company: FEATURED_APPRAISER.firm,
         specialty: "Date-of-death valuations, estate appraisals, and residential appraisal services.",
-        photo: davidSteinPhoto,
+        photo: APPRAISER_PHOTO,
         href: "/real-estate-appraiser",
       },
     ],

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 interface MidPageCTAProps {
   heading?: string;
@@ -10,15 +11,15 @@ interface MidPageCTAProps {
 }
 
 const MidPageCTA = ({
-  /* Copy is deliberately scoped to the PROPERTY side and attributed to David
-     Stein personally. The previous default — "Ready to Talk Through Your
+  /* Copy is deliberately scoped to the PROPERTY side and attributed to the
+     featured broker personally (src/data/featuredProfessionals.ts). The previous default — "Ready to Talk Through Your
      Situation?" / "Schedule a Conversation" — invited visitors to bring legal,
      care and family questions to RPP, and RPP is a neutral hub that provides
      no services and gives no advice. Real-estate conversations belong to
-     David Stein as a licensed broker; everything else belongs to the licensed
+     the featured broker as a licensed broker; everything else belongs to the licensed
      professionals in the directory. Keep any future copy inside that line. */
   heading = "Questions About the Real Estate Side?",
-  body = "David Stein, a licensed real estate broker, can walk you through how the property side of the process works.",
+  body = `${FEATURED_BROKER.name}, a licensed real estate broker, can walk you through how the property side of the process works.`,
   /* Still destructured so the 34 pages passing it do not error, but no longer
      rendered. Those props are inert and can be deleted whenever those files
      are next open. */
@@ -61,8 +62,8 @@ const MidPageCTA = ({
               variant of "No pressure. Just practical guidance on the property
               questions." — 74 instances of that voice across 43 files.
 
-              It was reassurance nobody asked for. David Stein is a licensed
-              broker and appraiser; the value on offer is competence, and
+              It was reassurance nobody asked for. The featured broker is a licensed
+              professional; the value on offer is competence, and
               promising an executor that a conversation will be low-pressure
               reads as managing their feelings rather than answering their
               question. The heading and body above already say what is on offer

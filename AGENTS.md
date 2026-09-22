@@ -170,6 +170,7 @@ sufficient; ask for a screenshot from the real phone when it matters.
 
 | What | File |
 |---|---|
+| **The featured broker and the featured appraiser** — name, brokerage, firm, license numbers, phone, email; the attribution sentences every disclosure uses; the schema Person | `src/data/featuredProfessionals.ts` (Node-safe, no assets) and `src/data/featuredProfessionalAssets.ts` (photos, logos, page bios). Real Property Planning holds no licenses; licensed work is attributed to the person, never the hub. The name may appear literally only in these two files, the About page's founder story, and the old `/about-david-stein` redirect; `node scripts/audit-david-stein.mjs` lists everything else (page prose still naming him as the actor — being reworded so the actor is "the featured broker" or a licensed professional). When another appraiser or broker takes the spot, change the record here; nothing else should need editing |
 | DSHS Medicaid base daily rates, all 17 CARE classifications, both rate areas | `src/data/afhMedicaidRates.ts` |
 | CBHS / IBSS per diems, ECS, SBS, Community Integration, stacking rules | `src/data/afhBehavioralRates.ts` |
 | Private-pay ranges by market (only `confirmed: true` bands render) | `src/data/afhPrivatePayRanges.ts` |

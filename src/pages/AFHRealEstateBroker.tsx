@@ -8,7 +8,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderTile from "@/components/ProviderTile";
-import { DAVID_STEIN } from "@/data/afhProfessionals";
+import { FEATURED_AFH_BROKER } from "@/data/afhProfessionals";
+import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 const REVIEWS = [
   {
@@ -196,21 +197,22 @@ const AFHRealEstateBroker = () => (
               >
                 Real Property Planning
               </h2>
-              {/* David's details live in src/data/afhProfessionals.ts (he also appears on
-                  Find a Professional). This page keeps its own title for him. */}
+              {/* The featured broker's details live in src/data/afhProfessionals.ts and
+                  src/data/featuredProfessionals.ts (he also appears on Find a
+                  Professional). This page keeps its own title for him. */}
               <ProviderTile
-                name={DAVID_STEIN.name}
+                name={FEATURED_AFH_BROKER.name}
                 title="Washington State Licensed Real Estate Broker"
-                company={DAVID_STEIN.company}
-                photo={DAVID_STEIN.photo}
-                photoAlt={DAVID_STEIN.photoAlt}
-                logo={DAVID_STEIN.logo}
-                logoAlt={DAVID_STEIN.logoAlt}
-                phone={DAVID_STEIN.phone}
-                email={DAVID_STEIN.email}
-                website={DAVID_STEIN.website}
-                specialty={DAVID_STEIN.specialty}
-                bio={DAVID_STEIN.bio}
+                company={FEATURED_AFH_BROKER.company}
+                photo={FEATURED_AFH_BROKER.photo}
+                photoAlt={FEATURED_AFH_BROKER.photoAlt}
+                logo={FEATURED_AFH_BROKER.logo}
+                logoAlt={FEATURED_AFH_BROKER.logoAlt}
+                phone={FEATURED_AFH_BROKER.phone}
+                email={FEATURED_AFH_BROKER.email}
+                website={FEATURED_AFH_BROKER.website}
+                specialty={FEATURED_AFH_BROKER.specialty}
+                bio={FEATURED_AFH_BROKER.bio}
               />
               <div
                 style={{
@@ -231,9 +233,13 @@ const AFHRealEstateBroker = () => (
                     margin: 0,
                   }}
                 >
-                  WA Licensed Real Estate Broker · eXp Realty · License #133972
-                  <br />
-                  {" "}WA Certified Residential Appraiser · Stein Appraisal
+                  WA Licensed Real Estate Broker · {FEATURED_BROKER.brokerage} · License #{FEATURED_BROKER.licenseNumber}
+                  {SAME_PERSON && (
+                    <>
+                      <br />
+                      {" "}WA Certified Residential Appraiser · {FEATURED_APPRAISER.firm}
+                    </>
+                  )}
                   <br />
                   {" "}Member: ALCA · NAOSA · NAEPC · NAR
                 </p>
@@ -247,9 +253,9 @@ const AFHRealEstateBroker = () => (
                   lineHeight: 1.7,
                 }}
               >
-                David Stein is Real Property Planning's founder and a member of its professional network. His real
-                estate brokerage services are provided independently through eXp Realty — not through Real Property
-                Planning.
+                {FEATURED_BROKER.name} is Real Property Planning's featured real estate broker and a member of its
+                professional network. His real estate brokerage services are provided independently through{" "}
+                {FEATURED_BROKER.brokerage} — not through Real Property Planning.
               </p>
             </div>
 
@@ -469,7 +475,7 @@ const AFHRealEstateBroker = () => (
 
           <div style={{ textAlign: "center", marginTop: 48 }}>
             <a
-              href="https://www.zillow.com/profile/DaveStein"
+              href={FEATURED_BROKER.zillowProfileUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{

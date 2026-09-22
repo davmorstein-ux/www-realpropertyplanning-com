@@ -19,14 +19,48 @@ var echo_default = defineTool({
 
 // src/lib/mcp/tools/get-contact-info.ts
 import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
+
+// src/data/featuredProfessionals.ts
+var FEATURED_BROKER = {
+  name: "David Stein",
+  firstName: "David",
+  brokerage: "eXp Realty",
+  brokerageUrl: "https://www.exprealty.com",
+  licenseNumber: "133972",
+  phone: "(206) 900-3015",
+  phoneTel: "+12069003015",
+  email: "dave.stein@exprealty.com",
+  website: "https://davestein.exprealty.com",
+  yearsExperience: 20,
+  zillowProfileUrl: "https://www.zillow.com/profile/DaveStein"
+};
+var FEATURED_APPRAISER = {
+  name: "David Stein",
+  firstName: "David",
+  firm: "Stein Appraisal",
+  licenseNumber: "1702080",
+  phone: "(206) 900-3015",
+  phoneTel: "+12069003015",
+  email: "dave@steinappraisal.com",
+  yearsExperience: 20
+};
+var SAME_PERSON = FEATURED_BROKER.name === FEATURED_APPRAISER.name;
+var brokerLicenseShort = `${FEATURED_BROKER.brokerage}, license #${FEATURED_BROKER.licenseNumber}`;
+var appraiserLicenseShort = `${FEATURED_APPRAISER.firm}, license #${FEATURED_APPRAISER.licenseNumber}`;
+var brokerageAttribution = `Real estate brokerage services are provided by ${FEATURED_BROKER.name}, a licensed Washington broker, through ${FEATURED_BROKER.brokerage}.`;
+var appraisalAttribution = `Appraisal services are provided by ${FEATURED_APPRAISER.name} through ${FEATURED_APPRAISER.firm}.`;
+var brokerCredentialSentence = SAME_PERSON ? `${FEATURED_BROKER.name} is a licensed Washington real estate broker (${FEATURED_BROKER.brokerage}, #${FEATURED_BROKER.licenseNumber}) and a certified residential appraiser (${FEATURED_APPRAISER.firm}, #${FEATURED_APPRAISER.licenseNumber}).` : `${FEATURED_BROKER.name} is a licensed Washington real estate broker (${FEATURED_BROKER.brokerage}, #${FEATURED_BROKER.licenseNumber}).`;
+var appraiserCredentialSentence = `${FEATURED_APPRAISER.name} is a Washington State certified residential appraiser (${FEATURED_APPRAISER.firm}, #${FEATURED_APPRAISER.licenseNumber}).`;
+
+// src/lib/mcp/tools/get-contact-info.ts
 var CONTACT = {
   business: "Real Property Planning",
   phone: "(206) 900-3015",
   email: "info@realpropertyplanning.com",
   website: "https://www.realpropertyplanning.com",
   service_area: "Washington State (with a focus on Western Washington and the Puget Sound region)",
-  brokerage: "eXp Realty (Washington State Licensed Real Estate Broker)",
-  appraisal: "Stein Appraisal (Washington State Certified Residential Appraiser)"
+  featured_broker: `${FEATURED_BROKER.name}, Washington State Licensed Real Estate Broker, ${FEATURED_BROKER.brokerage} (license #${FEATURED_BROKER.licenseNumber}) \u2014 brokerage services are his, not the hub's`,
+  featured_appraiser: `${FEATURED_APPRAISER.name}, Washington State Certified Residential Appraiser, ${FEATURED_APPRAISER.firm} (license #${FEATURED_APPRAISER.licenseNumber}) \u2014 appraisal services are his, not the hub's`
 };
 var get_contact_info_default = defineTool2({
   name: "get_contact_info",
@@ -54,8 +88,8 @@ var SERVICES = [
 ];
 var list_services_default = defineTool3({
   name: "list_services",
-  title: "List services",
-  description: "List the core services offered by Real Property Planning with a short audience description and page path.",
+  title: "List resource areas",
+  description: "List the main resource areas of Real Property Planning, a free educational hub (it provides no brokerage or appraisal services itself), with a short audience description and page path.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({

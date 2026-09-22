@@ -376,7 +376,7 @@ const Header = () => {
                     alignItems: "center",
                     justifyContent: "center",
                   }}
-                  aria-label="Call David Stein at (206) 900-3015"
+                  aria-label="Call Real Property Planning at (206) 900-3015"
                 >
                   {/* Icon-only button. The number is no longer visible here, so
                       the anchor's aria-label carries it for screen readers and
@@ -478,7 +478,7 @@ const Header = () => {
                     alignItems: "center",
                     justifyContent: "center",
                   }}
-                  aria-label="Call David Stein at (206) 900-3015"
+                  aria-label="Call Real Property Planning at (206) 900-3015"
                 >
                   {/* Icon-only: the digits are no longer painted here, so the
                       anchor's aria-label carries them for assistive tech.

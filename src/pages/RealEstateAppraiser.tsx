@@ -5,8 +5,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderTile from "@/components/ProviderTile";
-import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
-import steinAppraisalLogo from "@/assets/stein-appraisal-appraiser-logo-washington.webp";
+import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
+import { APPRAISER_PHOTO, APPRAISER_PHOTO_ALT, APPRAISAL_FIRM_LOGO, APPRAISAL_FIRM_LOGO_ALT, APPRAISER_BIO } from "@/data/featuredProfessionalAssets";
 
 const RealEstateAppraiser = () => (
   <>
@@ -30,23 +30,24 @@ const RealEstateAppraiser = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             <ProviderTile
-              name="David Stein"
+              name={FEATURED_APPRAISER.name}
               title="Certified Residential Appraiser"
-              company="Stein Appraisal"
-              photo={davidSteinPhoto}
-              photoAlt="Photo of David Stein"
-              logo={steinAppraisalLogo}
-              logoAlt="Stein Appraisal logo"
-              phone="(206) 900-3015"
-              email="dave@steinappraisal.com"
+              company={FEATURED_APPRAISER.firm}
+              photo={APPRAISER_PHOTO}
+              photoAlt={APPRAISER_PHOTO_ALT}
+              logo={APPRAISAL_FIRM_LOGO}
+              logoAlt={APPRAISAL_FIRM_LOGO_ALT}
+              phone={FEATURED_APPRAISER.phone}
+              email={FEATURED_APPRAISER.email}
               website="https://realpropertyplanning.com/real-estate-appraiser"
               specialty="Estate and date-of-death appraisals, divorce and litigation support, retrospective valuations, and residential appraisals for attorneys, executors, and trustees throughout the Puget Sound region."
-              bio="David Stein is a Washington State Certified Residential Appraiser with over 20 years of experience providing independent property valuations for attorneys, executors, trustees, courts, and families across the Puget Sound region. Through Stein Appraisal, he specializes in the appraisal assignments that require precision, defensibility, and an appraiser who understands the legal and fiduciary context — including date-of-death valuations for estate tax returns and probate, retrospective appraisals for prior tax years, divorce and dissolution appraisals accepted by family law courts, and litigation support for disputed property values. His appraisal reports are prepared to meet IRS, court, and lender standards and are regularly relied upon by probate attorneys, CPAs, and estate planners throughout Western Washington. David also holds a Washington State real estate broker license, giving him an unusually complete understanding of both market value and the transaction process — a combination that is especially valuable when an estate or trust property must be both appraised and sold."
+              bio={APPRAISER_BIO}
             />
           </div>
           <p className="max-w-3xl mx-auto text-center text-muted-foreground text-sm mt-6 leading-relaxed">
-            David Stein is Real Property Planning's founder and a member of its professional network. His appraisal
-            services are provided independently through Stein Appraisal — not through Real Property Planning.
+            {FEATURED_APPRAISER.name} is Real Property Planning's featured appraiser and a member of its professional
+            network. His appraisal services are provided independently through {FEATURED_APPRAISER.firm} — not
+            through Real Property Planning.
           </p>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import { defineTool } from "@lovable.dev/mcp-js";
+import { FEATURED_BROKER, FEATURED_APPRAISER } from "../../../data/featuredProfessionals";
 
 const CONTACT = {
   business: "Real Property Planning",
@@ -6,8 +7,8 @@ const CONTACT = {
   email: "info@realpropertyplanning.com",
   website: "https://www.realpropertyplanning.com",
   service_area: "Washington State (with a focus on Western Washington and the Puget Sound region)",
-  brokerage: "eXp Realty (Washington State Licensed Real Estate Broker)",
-  appraisal: "Stein Appraisal (Washington State Certified Residential Appraiser)",
+  featured_broker: `${FEATURED_BROKER.name}, Washington State Licensed Real Estate Broker, ${FEATURED_BROKER.brokerage} (license #${FEATURED_BROKER.licenseNumber}) — brokerage services are his, not the hub's`,
+  featured_appraiser: `${FEATURED_APPRAISER.name}, Washington State Certified Residential Appraiser, ${FEATURED_APPRAISER.firm} (license #${FEATURED_APPRAISER.licenseNumber}) — appraisal services are his, not the hub's`,
 };
 
 export default defineTool({

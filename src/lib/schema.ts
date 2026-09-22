@@ -1,3 +1,4 @@
+import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "../data/featuredProfessionals";
 const SITE_URL = "https://realpropertyplanning.com";
 const LOGO_URL = `${SITE_URL}/logo.webp`;
 const BUSINESS_NAME = "Real Property Planning";
@@ -47,14 +48,20 @@ export const areaServed = [
   { "@type": "City", name: "La Conner", containedInPlace: { "@type": "State", name: "Washington" } },
 ];
 
-/** Person schema for Real Property Planning — President of Real Property Planning */
-export const davidSteinPerson = {
+/**
+ * Person schema for the featured licensed professional. Name, brokerage, firm
+ * and license numbers come from src/data/featuredProfessionals.ts — the one
+ * place they are defined — so this stays true when the featured person changes.
+ */
+export const featuredProfessionalPerson = {
   "@type": "Person",
-  "@id": `${SITE_URL}/#david-stein`,
+  "@id": `${SITE_URL}/#featured-broker`,
   // Was "Real Property Planning" — a Person entity carrying the company name.
   // Search engines had no correctly-named person for the licensed work.
-  name: "David Stein",
-  jobTitle: "Designated Broker & Certified Residential Appraiser",
+  name: FEATURED_BROKER.name,
+  jobTitle: SAME_PERSON
+    ? "Licensed Real Estate Broker & Certified Residential Appraiser"
+    : "Licensed Real Estate Broker",
   url: `${SITE_URL}/about`,
   worksFor: {
     "@type": "Organization",
@@ -70,32 +77,30 @@ export const davidSteinPerson = {
   affiliation: [
     {
       "@type": "Organization",
-      name: "eXp Realty",
-      url: "https://www.exprealty.com",
-      description:
-        "License broker only — Real Property Planning's Washington State real estate license is held under eXp Realty. eXp Realty is not an owner, partner, or affiliate of Real Property Planning.",
+      name: FEATURED_BROKER.brokerage,
+      url: FEATURED_BROKER.brokerageUrl,
+      description: `License broker only — ${FEATURED_BROKER.name}'s Washington State real estate license is held under ${FEATURED_BROKER.brokerage}. ${FEATURED_BROKER.brokerage} is not an owner, partner, or affiliate of Real Property Planning.`,
     },
     {
       "@type": "Organization",
-      name: "Stein Appraisal",
-      description:
-        "An independent Washington State certified residential appraisal practice. Stein Appraisal is separate from Real Property Planning and from eXp Realty.",
+      name: FEATURED_APPRAISER.firm,
+      description: `An independent Washington State certified residential appraisal practice. ${FEATURED_APPRAISER.firm} is separate from Real Property Planning and from ${FEATURED_BROKER.brokerage}.`,
     },
   ],
   hasCredential: [
     {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Washington State Real Estate Broker License (held under eXp Realty)",
+      name: `Washington State Real Estate Broker License (held under ${FEATURED_BROKER.brokerage})`,
       recognizedBy: { "@type": "Organization", name: "Washington State Department of Licensing" },
-      identifier: "133972",
+      identifier: FEATURED_BROKER.licenseNumber,
     },
     {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "certification",
-      name: "Washington State Certified Residential Appraiser (Stein Appraisal)",
+      name: `Washington State Certified Residential Appraiser (${FEATURED_APPRAISER.firm})`,
       recognizedBy: { "@type": "Organization", name: "Washington State Department of Licensing" },
-      identifier: "1702080",
+      identifier: FEATURED_APPRAISER.licenseNumber,
     },
   ],
   memberOf: [
@@ -149,12 +154,14 @@ export const davidSteinPerson = {
  */
 export const articleAuthor = {
   "@type": "Person",
-  "@id": `${SITE_URL}/#david-stein`,
-  name: "David Stein",
-  jobTitle: "Washington State Licensed Real Estate Broker and Certified Residential Appraiser",
+  "@id": `${SITE_URL}/#featured-broker`,
+  name: FEATURED_BROKER.name,
+  jobTitle: SAME_PERSON
+    ? "Washington State Licensed Real Estate Broker and Certified Residential Appraiser"
+    : "Washington State Licensed Real Estate Broker",
   url: `${SITE_URL}/about`,
   worksFor: { "@id": `${SITE_URL}/#organization` },
-  hasCredential: davidSteinPerson.hasCredential,
+  hasCredential: featuredProfessionalPerson.hasCredential,
   knowsAbout: [
     "Adult family homes",
     "Adult family home real estate transactions",
@@ -181,7 +188,7 @@ export const serviceSchemas = [
     name: "Probate Real Estate Sales",
     description:
       "Full-service real estate guidance for executors, trustees, and families selling estate property during probate in Washington State. Includes property assessment, condition-based pricing, preparation coordination, listing, and sale management.",
-    provider: { "@id": `${SITE_URL}/#david-stein` },
+    provider: { "@id": `${SITE_URL}/#featured-broker` },
     areaServed: areaServed,
     url: `${SITE_URL}/probate-estate-sales`,
     serviceType: "Probate Real Estate",
@@ -192,7 +199,7 @@ export const serviceSchemas = [
     name: "Estate & Probate Appraisals",
     description:
       "Washington State Certified Residential Appraiser providing defensible valuations for probate, trust administration, estate settlements, date of death valuations, and financial planning purposes throughout the Puget Sound region.",
-    provider: { "@id": `${SITE_URL}/#david-stein` },
+    provider: { "@id": `${SITE_URL}/#featured-broker` },
     areaServed: areaServed,
     url: `${SITE_URL}/real-estate-appraiser`,
     serviceType: "Real Estate Appraisal",
@@ -203,7 +210,7 @@ export const serviceSchemas = [
     name: "Senior Housing Transitions",
     description:
       "Patient, coordinated real estate guidance for seniors and families navigating the sale of a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. Includes coordination with senior move managers, care teams, and advisors throughout Washington State.",
-    provider: { "@id": `${SITE_URL}/#david-stein` },
+    provider: { "@id": `${SITE_URL}/#featured-broker` },
     areaServed: areaServed,
     url: `${SITE_URL}/senior-move-managers`,
     serviceType: "Senior Real Estate Transition",
@@ -214,7 +221,7 @@ export const serviceSchemas = [
     name: "Inherited Home Sales",
     description:
       "Comprehensive real estate guidance for families and executors selling inherited property in Washington State. Includes honest condition assessment, condition-based pricing, cleanout coordination, and full sale management.",
-    provider: { "@id": `${SITE_URL}/#david-stein` },
+    provider: { "@id": `${SITE_URL}/#featured-broker` },
     areaServed: areaServed,
     url: `${SITE_URL}/executors`,
     serviceType: "Inherited Property Sales",
@@ -261,8 +268,8 @@ export const realEstateAgentSchema = {
           addressCountry: "US",
         },
       },
-      founder: davidSteinPerson,
-      employee: davidSteinPerson,
+      founder: featuredProfessionalPerson,
+      employee: featuredProfessionalPerson,
       areaServed: areaServed,
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -270,7 +277,9 @@ export const realEstateAgentSchema = {
         // engines that the hub itself sells a catalogue of services. The four
         // entries are genuine licensed brokerage and appraisal work, so they
         // stay — but they belong to the licensed practice, not to the hub.
-        name: "Brokerage & Appraisal Services — David Stein (eXp Realty / Stein Appraisal)",
+        name: SAME_PERSON
+          ? `Brokerage & Appraisal Services — ${FEATURED_BROKER.name} (${FEATURED_BROKER.brokerage} / ${FEATURED_APPRAISER.firm})`
+          : `Brokerage Services — ${FEATURED_BROKER.name} (${FEATURED_BROKER.brokerage}); Appraisal Services — ${FEATURED_APPRAISER.name} (${FEATURED_APPRAISER.firm})`,
         itemListElement: serviceSchemas,
       },
       openingHoursSpecification: [
@@ -335,7 +344,7 @@ export const realEstateAgentSchema = {
       currenciesAccepted: "USD",
       paymentAccepted: "Check, Wire Transfer",
     },
-    davidSteinPerson,
+    featuredProfessionalPerson,
     ...serviceSchemas,
   ],
 };
@@ -416,7 +425,7 @@ export function articleSchema({
     description,
     url: `${SITE_URL}${url}`,
     ...(image ? { image } : {}),
-    author: davidSteinPerson,
+    author: featuredProfessionalPerson,
     publisher,
     ...(datePublished ? { datePublished } : {}),
     ...(dateModified ? { dateModified } : {}),
@@ -466,7 +475,7 @@ export function countyPageSchema(countyName: string, url: string, description: s
       name: countyName,
       containedInPlace: { "@type": "State", name: "Washington" },
     },
-    employee: davidSteinPerson,
+    employee: featuredProfessionalPerson,
     parentOrganization: {
       "@id": `${SITE_URL}/#organization`,
     },

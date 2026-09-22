@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 /**
  * Visible byline for AFH guide pages.
  *
- * The Article schema on these pages names David Stein as author. Search and AI
+ * The Article schema on these pages names the featured broker as author. Search and AI
  * engines discount schema that has no visible counterpart, so this renders the
  * same claim in prose: who wrote it, what licenses they hold, and where to read
- * more. The license numbers match src/lib/schema.ts exactly.
+ * more. Name and license numbers come from src/data/featuredProfessionals.ts, the
+ * same source schema.ts reads, so the two cannot disagree.
  */
 export default function AuthorByline({ reviewed }: { reviewed?: string }) {
   return (
@@ -37,13 +39,15 @@ export default function AuthorByline({ reviewed }: { reviewed?: string }) {
         About the author
       </p>
       <p style={{ margin: 0, fontSize: 17 }}>
-        <strong>David Stein</strong> is a Washington State licensed real estate broker (eXp Realty,
-        license #133972) and a Washington State certified residential appraiser (Stein Appraisal,
-        license #1702080). He has more than 20 years of experience in both disciplines and works
-        directly with adult family home buyers, sellers, and operators across the Puget Sound
+        <strong>{FEATURED_BROKER.name}</strong> is a Washington State licensed real estate broker (
+        {FEATURED_BROKER.brokerage}, license #{FEATURED_BROKER.licenseNumber})
+        {SAME_PERSON
+          ? ` and a Washington State certified residential appraiser (${FEATURED_APPRAISER.firm}, license #${FEATURED_APPRAISER.licenseNumber}). He has more than ${FEATURED_BROKER.yearsExperience} years of experience in both disciplines`
+          : `. He has more than ${FEATURED_BROKER.yearsExperience} years of experience`}{" "}
+        and works directly with adult family home buyers, sellers, and operators across the Puget Sound
         region.{reviewed ? ` This guide was last reviewed ${reviewed}.` : ""}{" "}
         <Link to="/about" style={{ color: "#1a365d", textDecoration: "underline" }}>
-          More about David
+          More about {FEATURED_BROKER.firstName}
         </Link>
         .
       </p>

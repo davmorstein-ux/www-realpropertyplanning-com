@@ -8,6 +8,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
 import { planningBeforeACrisisTopics } from "@/lib/planningBeforeACrisisTopics";
 import heroImage from "@/assets/planning-before-a-crisis-hero-washington.webp";
+import { FEATURED_BROKER, brokerCredentialSentence } from "@/data/featuredProfessionals";
 
 interface PlanningSubPageLayoutProps {
   /** Browser tab + meta title */
@@ -109,8 +110,8 @@ const PlanningSubPageLayout = ({
 
             The "we" is what had to change. Real Property Planning is a
             neutral educational hub and provides no services, so it cannot
-            offer help. David Stein can, in his own name and inside his own
-            licenses. Copy below follows the MidPageCTA standard: scoped to
+            offer help. The featured broker can, in his own name and inside his own
+            licenses (src/data/featuredProfessionals.ts). Copy below follows the MidPageCTA standard: scoped to
             the property side, attributed personally, with everything else
             pointed back at the licensed professionals in the directory.
             Keep any future copy inside that line. */}
@@ -121,15 +122,13 @@ const PlanningSubPageLayout = ({
                 Questions About the Property Side?
               </h2>
               <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-6">
-                David Stein is a licensed Washington real estate broker (eXp Realty, #133972) and a certified
-                residential appraiser (Stein Appraisal, #1702080). If your planning involves a home — what it is
-                worth, what condition it is in, or what a sale would actually involve — those are questions he can
-                answer directly.
+                {brokerCredentialSentence} If your planning involves a home — what it is worth, what condition it
+                is in, or what a sale would actually involve — those are questions he can answer directly.
               </p>
               <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-8">
                 <strong>Call:</strong>{" "}
-                <a href="tel:+12069003015" className="text-navy underline hover:no-underline">
-                  (206) 900-3015
+                <a href={`tel:${FEATURED_BROKER.phoneTel}`} className="text-navy underline hover:no-underline">
+                  {FEATURED_BROKER.phone}
                 </a>
                 <span className="mx-3 text-muted-foreground">·</span>
                 <strong>Email:</strong>{" "}

@@ -11,6 +11,7 @@ import FeaturedAttorneyPlaceholder from "@/components/FeaturedAttorneyPlaceholde
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { brokerageAttribution, appraisalAttribution } from "@/data/featuredProfessionals";
 
 /*
   ATTRIBUTION NOTE — do not reintroduce "our team" / "we" / "Real Property Planning"
@@ -189,8 +190,7 @@ const ForRealEstateAttorneys = () => (
             ))}
           </ul>
           <p className="text-muted-foreground text-sm leading-relaxed mt-8">
-            Real estate brokerage services are provided by David Stein through eXp Realty. Appraisal services are
-            provided through Stein Appraisal. Real Property Planning is an educational hub and does not provide
+            {brokerageAttribution} {appraisalAttribution} Real Property Planning is an educational hub and does not provide
             brokerage, appraisal, legal, or tax services.
           </p>
         </div>

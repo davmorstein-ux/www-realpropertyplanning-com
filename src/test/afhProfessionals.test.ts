@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
-import { AFH_PROFESSIONAL_GROUPS, ACTIVE_AFH_PROFESSIONAL_GROUPS, DAVID_STEIN, NICOLE_GUZMAN_JOHNSON } from "@/data/afhProfessionals";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { AFH_PROFESSIONAL_GROUPS, ACTIVE_AFH_PROFESSIONAL_GROUPS, FEATURED_AFH_BROKER, NICOLE_GUZMAN_JOHNSON } from "@/data/afhProfessionals";
 
 const everyone = AFH_PROFESSIONAL_GROUPS.flatMap((g) => g.people);
 const page = readFileSync("src/pages/AFHFindProfessional.tsx", "utf8");
@@ -36,9 +37,9 @@ describe("AFH Club featured professionals", () => {
     expect(page).toContain("receives nothing");
   });
   it("the one person who IS compensated says so on his own listing", () => {
-    expect(DAVID_STEIN.note).toBeDefined();
-    expect(DAVID_STEIN.note).toContain("compensated");
-    expect(DAVID_STEIN.note).toContain("133972");
+    expect(FEATURED_AFH_BROKER.note).toBeDefined();
+    expect(FEATURED_AFH_BROKER.note).toContain("compensated");
+    expect(FEATURED_AFH_BROKER.note).toContain(FEATURED_BROKER.licenseNumber);
   });
   it("no listing promises more than was supplied", () => {
     const text = JSON.stringify(everyone).toLowerCase();
@@ -48,7 +49,7 @@ describe("AFH Club featured professionals", () => {
   });
   it("each person's details live in one place: the pages that show them import the shared record", () => {
     expect(readFileSync("src/pages/BookkeepingServices.tsx", "utf8")).toContain("NICOLE_GUZMAN_JOHNSON");
-    expect(readFileSync("src/pages/AFHRealEstateBroker.tsx", "utf8")).toContain("DAVID_STEIN");
+    expect(readFileSync("src/pages/AFHRealEstateBroker.tsx", "utf8")).toContain("FEATURED_AFH_BROKER");
     expect(readFileSync("src/pages/BookkeepingServices.tsx", "utf8")).not.toContain(NICOLE_GUZMAN_JOHNSON.phone as string);
   });
 });

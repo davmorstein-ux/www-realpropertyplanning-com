@@ -13,9 +13,9 @@ const SERVICES = [
 
 export default defineTool({
   name: "list_services",
-  title: "List services",
+  title: "List resource areas",
   description:
-    "List the core services offered by Real Property Planning with a short audience description and page path.",
+    "List the main resource areas of Real Property Planning, a free educational hub (it provides no brokerage or appraisal services itself), with a short audience description and page path.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
