@@ -53,6 +53,9 @@ export interface AFHProfessional {
   bio: string;
   /** Shown beneath the person's card. Used for anything a visitor should know before calling. */
   note?: string;
+  /** A page ON THIS SITE about the person. The card's own "Learn More" goes to their external website. */
+  morePath?: string;
+  moreLabel?: string;
 }
 
 export const NICOLE_GUZMAN_JOHNSON: AFHProfessional = {
@@ -88,6 +91,8 @@ export const DAVID_STEIN: AFHProfessional = {
   specialty:
     "Adult Family Home transactions, probate, estate, and trust property sales across Washington State.",
   bio: "David Stein is a Washington State licensed real estate broker and Certified Residential Appraiser with over 20 years of experience in complex property transactions. He brings a rare combination of appraisal expertise and brokerage experience to AFH transactions — understanding both how to value a licensed care facility and how to navigate the CHOW process, DSHS timelines, and specialty contract considerations that define AFH real estate.",
+  morePath: "/afh-club/real-estate-broker",
+  moreLabel: "More about selling or buying an adult family home with David",
   note: "David Stein is the broker behind AFH Club. Unlike everyone else on this page, he is compensated if you hire him as your broker. WA real estate broker, eXp Realty, license #133972.",
 };
 

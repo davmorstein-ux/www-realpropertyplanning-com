@@ -283,6 +283,10 @@
       "calculators": {
         "title": "AFH Calculators",
         "description": "Property score, ROI calculator, valuation estimator, and occupancy & financing calculator for Adult Family Home buyers, sellers, and investors."
+      },
+      "professionals": {
+        "title": "AFH Professionals",
+        "description": "People who work with adult family homes, each one met with and vetted: a real estate broker, a bookkeeper, and more to come."
       }
     },
     "marketplace": {

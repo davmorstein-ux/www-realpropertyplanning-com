@@ -283,6 +283,10 @@
       "calculators": {
         "title": "Calculadoras de AFH",
         "description": "Puntuación de la propiedad, calculadora de ROI, estimador de valoración y calculadora de ocupación y financiamiento para compradores, vendedores e inversionistas de Hogares Familiares para Adultos."
+      },
+      "professionals": {
+        "title": "Profesionales de AFH",
+        "description": "Personas que trabajan con hogares familiares para adultos, cada una conocida y verificada en persona: un corredor de bienes raíces, una contadora y más por venir."
       }
     },
     "marketplace": {

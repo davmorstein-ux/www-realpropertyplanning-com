@@ -574,7 +574,10 @@ const CATEGORY_META = [
     img: "/afh-management-companies-v2.webp",
     placeholder: "#3c3732",
   },
-  { key: "broker", href: "/afh-club/real-estate-broker", img: "/afh-real-estate-broker-v3.webp", placeholder: "#3a3530" },
+  // Was the broker card. Replaced Sept 22, 2026: AFH Club presents itself as a
+  // network, and the broker is the first listing on the professionals page.
+  // The cover is a placeholder until a magazine-style one arrives.
+  { key: "professionals", href: "/afh-club/find-a-professional", img: "/afh-professionals-cover.webp", placeholder: "#2b3a2e" },
   {
     key: "calculators",
     href: "/afh-club/calculators",
@@ -920,6 +923,30 @@ const AFHClub = () => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div style={{ marginTop: 28 }}>
+              <Link
+                to="/afh-club/find-a-professional"
+                className="bg-transparent"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 10,
+                  minHeight: 50,
+                  padding: "12px 24px",
+                  border: "2px solid #3f3a35",
+                  borderRadius: 999,
+                  background: "#3f3a35",
+                  color: "#fff",
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  fontSize: 18,
+                  fontWeight: 700,
+                  textDecoration: "none",
+                }}
+              >
+                Meet the professionals <span aria-hidden="true">→</span>
+              </Link>
             </div>
 
             {/* ------------------------------------------------------------------

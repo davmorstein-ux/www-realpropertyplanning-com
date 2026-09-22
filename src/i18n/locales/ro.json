@@ -283,6 +283,10 @@
       "calculators": {
         "title": "Calculatoare AFH",
         "description": "Scorul proprietății, calculator ROI, estimator de evaluare și calculator de ocupare și finanțare pentru cumpărători, vânzători și investitori de Case Familiale pentru Adulți."
+      },
+      "professionals": {
+        "title": "Profesioniști AFH",
+        "description": "Persoane care lucrează cu case familiale pentru adulți, fiecare întâlnită și verificată personal: un agent imobiliar, un contabil și alții în curând."
       }
     },
     "marketplace": {

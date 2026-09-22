@@ -283,6 +283,10 @@
       "calculators": {
         "title": "Công Cụ Tính Toán AFH",
         "description": "Điểm đánh giá bất động sản, công cụ tính ROI, ước tính định giá, và công cụ tính tỷ lệ lấp đầy và tài chính dành cho người mua, người bán, và nhà đầu tư Nhà Chăm Sóc Gia Đình Người Lớn."
+      },
+      "professionals": {
+        "title": "Chuyên gia AFH",
+        "description": "Những người làm việc với nhà chăm sóc gia đình người lớn, mỗi người đều đã được gặp và thẩm định trực tiếp: một môi giới bất động sản, một kế toán viên, và sẽ còn thêm nữa."
       }
     },
     "marketplace": {

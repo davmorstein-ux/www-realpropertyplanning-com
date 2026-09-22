@@ -283,6 +283,10 @@
       "calculators": {
         "title": "AFH 計算器",
         "description": "為成人家庭照護之家買家、賣家及投資者提供的房產評分、投報率計算器、估價工具以及入住率與融資計算器。"
+      },
+      "professionals": {
+        "title": "AFH 專業人士",
+        "description": "與成人家庭照護之家合作的專業人士，每一位都經過當面會面與審核：一位不動產經紀人、一位記帳員，更多即將加入。"
       }
     },
     "marketplace": {

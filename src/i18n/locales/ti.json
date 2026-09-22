@@ -283,6 +283,10 @@
       "calculators": {
         "title": "AFH መጠንቀቕታት",
         "description": "ናይ ROI መጠንቀቒ ከምኡውን ናይ ገምጋም ገማቲ ንገዘእቲ፡ ሸየጥቲ፡ ከምኡውን ኣውፈርቲ ናይ ኣረጋውያን ስድራ ገዛ።"
+      },
+      "professionals": {
+        "title": "AFH Professionals",
+        "description": "ፍቓድ ዘለዎ ደላሊ ናይ ዋሽንግተን ስቴት ኣብ ናይ ኣረጋውያን ስድራ ገዛ ልውውጥ ዝተለልየ።"
       }
     },
     "marketplace": {

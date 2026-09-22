@@ -283,6 +283,10 @@
       "calculators": {
         "title": "Mga Calculator ng AFH",
         "description": "Property score, ROI calculator, valuation estimator, at occupancy at financing calculator para sa mga mamimili, nagbebenta, at investor ng Adult Family Home."
+      },
+      "professionals": {
+        "title": "Mga Propesyonal ng AFH",
+        "description": "Mga taong nakikipagtulungan sa mga adult family home, bawat isa ay nakilala at na-verify nang personal: isang real estate broker, isang bookkeeper, at marami pang darating."
       }
     },
     "marketplace": {

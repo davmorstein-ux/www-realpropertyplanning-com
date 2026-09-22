@@ -237,6 +237,11 @@ const AFHFindProfessional = () => (
                     {g.people[0].note && (
                       <p className="rpp-afhpro-note" style={{ fontFamily: "'DM Sans', sans-serif", color: "#3b3630", borderLeft: "4px solid #3f3a35", paddingLeft: 14 }}>{g.people[0].note}</p>
                     )}
+                    {g.people[0].morePath && (
+                      <p className="rpp-afhpro-note" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                        <Link to={g.people[0].morePath} className="bg-transparent" style={{ color: "#7f2028", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 4 }}>{g.people[0].moreLabel}</Link>
+                      </p>
+                    )}
                   </div>
                   <Tile person={g.people[0]} />
                 </div>
