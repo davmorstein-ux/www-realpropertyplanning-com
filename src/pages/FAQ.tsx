@@ -16,24 +16,24 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const softCta = `If you would like to discuss your specific situation, contact ${FEATURED_BROKER.pronoun.object} for guidance.`;
+const softCta = `If you would like to discuss your specific situation, contact ${FEATURED_BROKER.name} for guidance.`;
 
 const faqs = [
   {
     question: "How do executors sell a house in Washington State?",
-    answer: `In Washington, an executor typically needs letters testamentary or letters of administration from the probate court before they have legal authority to sell real property. Once authority is established, the executor can engage a real estate broker, prepare the home for sale, and proceed with the listing and transaction. The process involves coordinating legal timelines, property preparation, pricing, and communication with heirs and beneficiaries. ${FEATURED_BROKER.name} guides executors through each step — from initial property assessment to closing.\n\n${softCta}`,
+    answer: `In Washington, an executor typically needs letters testamentary or letters of administration from the probate court before they have legal authority to sell real property. Once authority is established, the executor can engage a real estate broker, prepare the home for sale, and proceed with the listing and transaction. The process involves coordinating legal timelines, property preparation, pricing, and communication with heirs and beneficiaries. ${FEATURED_BROKER.Role} guides executors through each step — from initial property assessment to closing.\n\n${softCta}`,
   },
   {
     question: "What happens to a house during probate?",
-    answer: `During probate, the home becomes part of the estate and is managed by the executor or personal representative appointed by the court. The property must be maintained, secured, and insured throughout the process. Depending on the terms of the will and the needs of the estate, the home may be sold to pay debts, distributed to beneficiaries, or held temporarily. ${FEATURED_BROKER.name} works with executors and attorneys to evaluate the property, develop a plan, and manage the real estate side of the process.\n\n${softCta}`,
+    answer: `During probate, the home becomes part of the estate and is managed by the executor or personal representative appointed by the court. The property must be maintained, secured, and insured throughout the process. Depending on the terms of the will and the needs of the estate, the home may be sold to pay debts, distributed to beneficiaries, or held temporarily. ${FEATURED_BROKER.Role} works with executors and attorneys to evaluate the property, develop a plan, and manage the real estate side of the process.\n\n${softCta}`,
   },
   {
     question: "Can a house be sold before probate is completed?",
-    answer: `In some cases, yes — but it depends on the estate structure, the court's requirements, and whether the executor has been granted authority to sell. Some properties held in trust or with survivorship rights may not require probate at all. In other situations, the court may need to approve the sale before it can close. ${FEATURED_BROKER.name} works with estate attorneys to align the real estate timeline with the legal process, so the sale moves forward as efficiently as possible.\n\n${softCta}`,
+    answer: `In some cases, yes — but it depends on the estate structure, the court's requirements, and whether the executor has been granted authority to sell. Some properties held in trust or with survivorship rights may not require probate at all. In other situations, the court may need to approve the sale before it can close. ${FEATURED_BROKER.Role} works with estate attorneys to align the real estate timeline with the legal process, so the sale moves forward as efficiently as possible.\n\n${softCta}`,
   },
   {
     question: "How do families move elderly parents into assisted living?",
-    answer: `Moving an elderly parent into assisted living involves many moving parts — finding the right community, managing the emotional transition, sorting through a lifetime of belongings, and often selling the family home. Families benefit from working with senior move managers, senior living placement services, and a real estate broker experienced in senior transitions. ${FEATURED_BROKER.name} provides patient, practical guidance on the property side, coordinating the home sale with the transition timeline so families aren't overwhelmed.\n\n${softCta}`,
+    answer: `Moving an elderly parent into assisted living involves many moving parts — finding the right community, managing the emotional transition, sorting through a lifetime of belongings, and often selling the family home. Families benefit from working with senior move managers, senior living placement services, and a real estate broker experienced in senior transitions. ${FEATURED_BROKER.Role} provides patient, practical guidance on the property side, coordinating the home sale with the transition timeline so families aren't overwhelmed.\n\n${softCta}`,
   },
   {
     question: "Do I need probate before selling a house in Washington?",
@@ -41,63 +41,63 @@ const faqs = [
   },
   {
     question: "Can a trustee sell trust-owned real estate?",
-    answer: `In most cases, yes — as long as the trust document grants the trustee authority to sell. Trust sales often avoid probate court involvement but still require informed pricing, preparation decisions, and communication with beneficiaries. ${FEATURED_BROKER.name} works with trustees to coordinate the real estate side of the process with care and professionalism.\n\n${softCta}`,
+    answer: `In most cases, yes — as long as the trust document grants the trustee authority to sell. Trust sales often avoid probate court involvement but still require informed pricing, preparation decisions, and communication with beneficiaries. ${FEATURED_BROKER.Role} works with trustees to coordinate the real estate side of the process with care and professionalism.\n\n${softCta}`,
   },
   {
     question: "What if an inherited house needs repairs before sale?",
-    answer: `Many inherited homes have deferred maintenance, outdated finishes, or condition issues. Whether to repair, update, or sell as-is depends on the property, the market, and the likely return on investment. ${FEATURED_BROKER.name} helps families and executors evaluate which improvements are worth making and which are not, based on local market conditions and buyer expectations.\n\n${softCta}`,
+    answer: `Many inherited homes have deferred maintenance, outdated finishes, or condition issues. Whether to repair, update, or sell as-is depends on the property, the market, and the likely return on investment. ${FEATURED_BROKER.Role} helps families and executors evaluate which improvements are worth making and which are not, based on local market conditions and buyer expectations.\n\n${softCta}`,
   },
   {
     question: "How is a sale price determined for estate property?",
-    answer: `Pricing estate property requires understanding condition, location, market trends, buyer demand, and comparable sales. Properties with deferred maintenance, vacancy, or unusual characteristics need more careful analysis. ${FEATURED_BROKER.name}'s dual background as a broker and state certified residential appraiser helps clients avoid the costly mistakes of overpricing or underpricing.\n\n${softCta}`,
+    answer: `Pricing estate property requires understanding condition, location, market trends, buyer demand, and comparable sales. Properties with deferred maintenance, vacancy, or unusual characteristics need more careful analysis. ${FEATURED_BROKER.Role}'s dual background as a broker and state certified residential appraiser helps clients avoid the costly mistakes of overpricing or underpricing.\n\n${softCta}`,
   },
   {
     question: "What does an executor need to know before listing a property?",
-    answer: `Executors should understand who has legal authority to sell, the property's current condition, whether cleanup or preparation is needed, and what the home is likely worth in its current state. ${FEATURED_BROKER.name} helps executors evaluate these factors and build a practical plan before listing — reducing surprises and helping the process move forward smoothly.\n\n${softCta}`,
+    answer: `Executors should understand who has legal authority to sell, the property's current condition, whether cleanup or preparation is needed, and what the home is likely worth in its current state. ${FEATURED_BROKER.Role} helps executors evaluate these factors and build a practical plan before listing — reducing surprises and helping the process move forward smoothly.\n\n${softCta}`,
   },
   {
     question: "Can siblings sell an inherited home if they disagree?",
-    answer: `Disagreements among siblings about timing, repairs, pricing, or whether to sell at all are common in inherited property situations. Having clear, objective information about the property's condition and market value often helps reduce conflict. ${FEATURED_BROKER.name} provides a calm, fact-based perspective that helps families move toward a workable decision.\n\n${softCta}`,
+    answer: `Disagreements among siblings about timing, repairs, pricing, or whether to sell at all are common in inherited property situations. Having clear, objective information about the property's condition and market value often helps reduce conflict. ${FEATURED_BROKER.Role} provides a calm, fact-based perspective that helps families move toward a workable decision.\n\n${softCta}`,
   },
   {
     question: "Should an estate property be sold as-is or improved first?",
-    answer: `It depends on the property, the local market, and the likely return. Some properties benefit meaningfully from targeted cleanup, paint, flooring, or landscaping. Others are better sold as-is, especially when time or budget constraints make preparation impractical. ${FEATURED_BROKER.name} helps clients evaluate these options with a practical, market-informed perspective.\n\n${softCta}`,
+    answer: `It depends on the property, the local market, and the likely return. Some properties benefit meaningfully from targeted cleanup, paint, flooring, or landscaping. Others are better sold as-is, especially when time or budget constraints make preparation impractical. ${FEATURED_BROKER.Role} helps clients evaluate these options with a practical, market-informed perspective.\n\n${softCta}`,
   },
   {
     question: "How can an attorney or fiduciary refer a client to Real Property Planning?",
-    answer: `Attorneys and fiduciaries can reach out directly by phone or through the contact page. ${FEATURED_BROKER.name} works as a real estate resource for professional referral partners, providing experienced guidance on property value, sale preparation, market strategy, and transaction coordination. The goal is to make the referring professional look well-supported throughout the process.\n\n${softCta}`,
+    answer: `Attorneys and fiduciaries can reach out directly by phone or through the contact page. ${FEATURED_BROKER.Role} works as a real estate resource for professional referral partners, providing experienced guidance on property value, sale preparation, market strategy, and transaction coordination. The goal is to make the referring professional look well-supported throughout the process.\n\n${softCta}`,
   },
   {
     question: "What specific Washington court forms or filings affect when we can list the property?",
-    answer: `In a typical Washington probate, the personal representative needs Letters Testamentary (with a will) or Letters of Administration (without one) before listing. If the will grants Nonintervention Powers — which is common in Washington — the PR can usually sell without further court approval. If the estate is supervised, you may need a court order authorizing the sale and confirming the price. ${FEATURED_BROKER.name} coordinates directly with the estate attorney so the listing date, the offer-acceptance date, and the closing date all line up with whatever order the court requires.\n\n${softCta}`,
+    answer: `In a typical Washington probate, the personal representative needs Letters Testamentary (with a will) or Letters of Administration (without one) before listing. If the will grants Nonintervention Powers — which is common in Washington — the PR can usually sell without further court approval. If the estate is supervised, you may need a court order authorizing the sale and confirming the price. ${FEATURED_BROKER.Role} coordinates directly with the estate attorney so the listing date, the offer-acceptance date, and the closing date all line up with whatever order the court requires.\n\n${softCta}`,
   },
   {
     question: "Can we accept the first reasonable offer, or do we need to follow a court bidding process?",
-    answer: `It depends on the type of probate. With Nonintervention Powers, the PR can negotiate and accept like a normal seller. In supervised probates — and in some judicial-confirmation situations — the accepted offer may be subject to overbid at a court hearing. ${FEATURED_BROKER.name} structures the listing strategy and disclosures around whichever standard applies, so heirs and the attorney are not surprised at the hearing.\n\n${softCta}`,
+    answer: `It depends on the type of probate. With Nonintervention Powers, the PR can negotiate and accept like a normal seller. In supervised probates — and in some judicial-confirmation situations — the accepted offer may be subject to overbid at a court hearing. ${FEATURED_BROKER.Role} structures the listing strategy and disclosures around whichever standard applies, so heirs and the attorney are not surprised at the hearing.\n\n${softCta}`,
   },
   {
     question: "How do you protect an executor from later claims that the home was sold for too little?",
-    answer: `This is fiduciary defensibility, and it is why ${FEATURED_BROKER.name} leads with a documented, valuation-based pricing analysis rather than a marketing CMA. The PR's file includes condition photos, comparable-sales adjustments, marketing exposure records, every offer received, and the rationale for the accepted price — the same documentation an appraiser would produce. If a beneficiary later questions the sale price, the answer is in the file.\n\n${softCta}`,
+    answer: `This is fiduciary defensibility, and it is why ${FEATURED_BROKER.role} leads with a documented, valuation-based pricing analysis rather than a marketing CMA. The PR's file includes condition photos, comparable-sales adjustments, marketing exposure records, every offer received, and the rationale for the accepted price — the same documentation an appraiser would produce. If a beneficiary later questions the sale price, the answer is in the file.\n\n${softCta}`,
   },
   {
     question: "The house is full of belongings and hasn't been touched in years. Where do you even start?",
-    answer: `${FEATURED_BROKER.name} starts with a walk-through to separate the property questions from the contents questions. For contents, ${FEATURED_BROKER.pronoun.subject} coordinates vetted estate-sale companies, donation pickups, and full cleanout crews — and tell you which approach actually nets more for the estate. For the property itself, ${FEATURED_BROKER.pronoun.subject} identifies the small set of repairs that move the appraised value (and therefore the sale price) and the larger set that do not. Most estate homes need far less work than families assume.\n\n${softCta}`,
+    answer: `${FEATURED_BROKER.Role} starts with a walk-through to separate the property questions from the contents questions. For contents, ${FEATURED_BROKER.pronoun.subject} coordinates vetted estate-sale companies, donation pickups, and full cleanout crews — and tell you which approach actually nets more for the estate. For the property itself, ${FEATURED_BROKER.pronoun.subject} identifies the small set of repairs that move the appraised value (and therefore the sale price) and the larger set that do not. Most estate homes need far less work than families assume.\n\n${softCta}`,
   },
   {
     question: "How does selling during probate affect our tax situation as heirs?",
-    answer: `Inherited property generally receives a stepped-up basis to fair market value as of the date of death — which is why a defensible date-of-death valuation matters. If the property sells reasonably close to that value, capital-gains exposure for the heirs is usually minimal. ${FEATURED_BROKER.name} is not tax advisors, but ${FEATURED_BROKER.pronoun.subject} coordinates closely with your CPA or estate attorney and can produce the valuation documentation they need.\n\n${softCta}`,
+    answer: `Inherited property generally receives a stepped-up basis to fair market value as of the date of death — which is why a defensible date-of-death valuation matters. If the property sells reasonably close to that value, capital-gains exposure for the heirs is usually minimal. ${FEATURED_BROKER.Role} is not tax advisors, but ${FEATURED_BROKER.pronoun.subject} coordinates closely with your CPA or estate attorney and can produce the valuation documentation they need.\n\n${softCta}`,
   },
   {
     question: "Can you start working with us before the estate attorney is even hired?",
-    answer: `Yes. Many families call ${FEATURED_BROKER.pronoun.object} first because the property is the most visible, most stressful piece. ${FEATURED_BROKER.name} will tell you honestly whether you need an attorney (almost always yes for Washington probate) and refer you to several experienced probate attorneys in your county if you don't have one. Then ${FEATURED_BROKER.pronoun.subject} works alongside whichever attorney you choose — they handle the legal proceeding, ${FEATURED_BROKER.pronoun.subject} handles the property.\n\n${softCta}`,
+    answer: `Yes. Many families call ${FEATURED_BROKER.role} first because the property is the most visible, most stressful piece. ${FEATURED_BROKER.Role} will tell you honestly whether you need an attorney (almost always yes for Washington probate) and refer you to several experienced probate attorneys in your county if you don't have one. Then ${FEATURED_BROKER.pronoun.subject} works alongside whichever attorney you choose — they handle the legal proceeding, ${FEATURED_BROKER.pronoun.subject} handles the property.\n\n${softCta}`,
   },
   {
     question: "What counties does Real Property Planning serve?",
-    answer: `${FEATURED_BROKER.name} serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County throughout Washington State. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
+    answer: `${FEATURED_BROKER.Role} serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County throughout Washington State. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
   },
   {
     question: "Can Real Property Planning help with senior transitions and downsizing decisions?",
-    answer: `Yes. ${FEATURED_BROKER.name} works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. ${FEATURED_BROKER.name} provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
+    answer: `Yes. ${FEATURED_BROKER.Role} works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. ${FEATURED_BROKER.Role} provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
   },
   {
     question: "Do I need an appraisal before selling inherited property?",
@@ -105,23 +105,23 @@ const faqs = [
   },
   {
     question: "Can an executor sell a house before probate is complete?",
-    answer: `In some cases, an executor may be able to sell before the full probate process concludes — but it depends on the estate structure, the will, and whether the court has granted authority. ${FEATURED_BROKER.name} works with estate attorneys to align the real estate timeline with legal proceedings so the sale happens at the right time.\n\n${softCta}`,
+    answer: `In some cases, an executor may be able to sell before the full probate process concludes — but it depends on the estate structure, the will, and whether the court has granted authority. ${FEATURED_BROKER.Role} works with estate attorneys to align the real estate timeline with legal proceedings so the sale happens at the right time.\n\n${softCta}`,
   },
   {
     question: "What repairs should be done before selling an estate property?",
-    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. ${FEATURED_BROKER.name} evaluates each situation using ${FEATURED_BROKER.pronoun.possessive} appraisal background to recommend only the improvements worth making.\n\n${softCta}`,
+    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. ${FEATURED_BROKER.Role} evaluates each situation using ${FEATURED_BROKER.pronoun.possessive} appraisal background to recommend only the improvements worth making.\n\n${softCta}`,
   },
   {
     question: "How do siblings decide what to do with an inherited house?",
-    answer: `Disagreements among siblings are common and understandable. Clear, objective information about the property's condition and market value helps reduce conflict. ${FEATURED_BROKER.name} provides a calm, data-driven perspective that helps families move toward a workable decision — whether that means selling, keeping, or renting the property.\n\n${softCta}`,
+    answer: `Disagreements among siblings are common and understandable. Clear, objective information about the property's condition and market value helps reduce conflict. ${FEATURED_BROKER.Role} provides a calm, data-driven perspective that helps families move toward a workable decision — whether that means selling, keeping, or renting the property.\n\n${softCta}`,
   },
   {
     question: "What should an attorney look for in a probate real estate broker?",
-    answer: `Attorneys should look for a broker with probate experience, valuation expertise, clear communication skills, and the ability to coordinate with legal timelines and multiple decision-makers. ${FEATURED_BROKER.name}'s dual credentials as a broker and certified residential appraiser, combined with 20+ years of estate-focused experience, make ${FEATURED_BROKER.pronoun.object} a reliable partner for attorneys throughout Washington State.\n\n${softCta}`,
+    answer: `Attorneys should look for a broker with probate experience, valuation expertise, clear communication skills, and the ability to coordinate with legal timelines and multiple decision-makers. ${FEATURED_BROKER.Role}'s dual credentials as a broker and certified residential appraiser, combined with 20+ years of estate-focused experience, make ${FEATURED_BROKER.pronoun.object} a reliable partner for attorneys throughout Washington State.\n\n${softCta}`,
   },
   {
     question: "How do you prepare a senior's home for sale during a move?",
-    answer: `Preparing a senior's home typically involves sorting decades of belongings, coordinating cleanout, addressing deferred maintenance, and managing the timeline alongside a care transition. ${FEATURED_BROKER.name} works with families and senior move managers to handle the real estate side with patience and practical planning.\n\n${softCta}`,
+    answer: `Preparing a senior's home typically involves sorting decades of belongings, coordinating cleanout, addressing deferred maintenance, and managing the timeline alongside a care transition. ${FEATURED_BROKER.Role} works with families and senior move managers to handle the real estate side with patience and practical planning.\n\n${softCta}`,
   },
 ];
 
@@ -236,12 +236,12 @@ const FAQ = () => {
               Have a question not listed here?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              {FEATURED_BROKER.firstName} welcomes confidential conversations with attorneys, executors, trustees, families, and financial professionals. A short call can often clarify your next steps.
+              {FEATURED_BROKER.Role} welcomes confidential conversations with attorneys, executors, trustees, families, and financial professionals. A short call can often clarify your next steps.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">
                 <Button variant="gold" size="lg">
-                  Contact {FEATURED_BROKER.pronoun.object}
+                  Contact {FEATURED_BROKER.name}
                 </Button>
               </Link>
               <a

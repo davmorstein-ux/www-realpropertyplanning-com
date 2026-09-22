@@ -17,7 +17,7 @@ const PURPLE_GROUP_BIO = `Tenly Krakoff, CPA and Jessica Simons, CPA are the co-
 
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for CPAs and Their Clients in Washington State",
-  description: `${FEATURED_BROKER.name} provides experienced real estate support for CPAs whose clients face inherited property, probate sales, or estate transitions in Washington State.`,
+  description: `${FEATURED_BROKER.Role} provides experienced real estate support for CPAs whose clients face inherited property, probate sales, or estate transitions in Washington State.`,
   url: "/for-cpas",
   datePublished: "2025-01-15",
   dateModified: "2026-04-14",
@@ -28,7 +28,7 @@ const ForCPAs = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Guidance for CPAs | Estate & Inherited Property Support | Real Property Planning"
-      description={`${FEATURED_BROKER.name} provides experienced real estate support for CPAs whose clients face inherited property, probate sales, or estate transitions in Washington State.`}
+      description={`${FEATURED_BROKER.Role} provides experienced real estate support for CPAs whose clients face inherited property, probate sales, or estate transitions in Washington State.`}
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[{ name: "For CPAs", url: "/for-cpas" }]} />

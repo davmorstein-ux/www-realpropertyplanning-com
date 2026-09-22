@@ -15,27 +15,27 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const whoIWorkWith = [
   {
     title: "Estate Planning and Probate Attorneys",
-    text: `${FEATURED_BROKER.name} works with attorneys whose clients face real property decisions during probate, trust administration, guardianship, or conservatorship. ${FEATURED_BROKER.name} provides the property assessment, pricing guidance, and sale coordination that allow attorneys to focus on the legal matter — confident that the real estate side is handled with professionalism and discretion.`,
+    text: `${FEATURED_BROKER.Role} works with attorneys whose clients face real property decisions during probate, trust administration, guardianship, or conservatorship. ${FEATURED_BROKER.Role} provides the property assessment, pricing guidance, and sale coordination that allow attorneys to focus on the legal matter — confident that the real estate side is handled with professionalism and discretion.`,
   },
   {
     title: "Personal Representatives and Executors",
-    text: `Most executors are managing an estate for the first time. ${FEATURED_BROKER.name} walks them through the real estate process step by step — from property evaluation to preparation, pricing, and closing — with clear communication and practical guidance that reduces stress and prevents costly mistakes.`,
+    text: `Most executors are managing an estate for the first time. ${FEATURED_BROKER.Role} walks them through the real estate process step by step — from property evaluation to preparation, pricing, and closing — with clear communication and practical guidance that reduces stress and prevents costly mistakes.`,
   },
   {
     title: "Trustees and Fiduciaries",
-    text: `Trustees managing trust-owned real estate need accurate market data, honest condition assessments, and a structured path to sale. ${FEATURED_BROKER.name} provides condition-based pricing and professional coordination that supports fiduciary obligations and keeps beneficiaries informed.`,
+    text: `Trustees managing trust-owned real estate need accurate market data, honest condition assessments, and a structured path to sale. ${FEATURED_BROKER.Role} provides condition-based pricing and professional coordination that supports fiduciary obligations and keeps beneficiaries informed.`,
   },
   {
     title: "CPAs and Financial Professionals",
-    text: `When estate property decisions intersect with tax planning, capital gains considerations, or financial advisory work, ${FEATURED_BROKER.name} provides the real estate and valuation perspective that helps CPAs and financial advisors give their clients well-rounded guidance.`,
+    text: `When estate property decisions intersect with tax planning, capital gains considerations, or financial advisory work, ${FEATURED_BROKER.role} provides the real estate and valuation perspective that helps CPAs and financial advisors give their clients well-rounded guidance.`,
   },
   {
     title: "Senior Move Managers and Transition Professionals",
-    text: `${FEATURED_BROKER.name} works with senior move managers and care professionals who need a reliable real estate partner for clients transitioning out of longtime homes. ${FEATURED_BROKER.name} coordinates seamlessly with transition teams, handling property preparation and sale while the care side focuses on the client's wellbeing.`,
+    text: `${FEATURED_BROKER.Role} works with senior move managers and care professionals who need a reliable real estate partner for clients transitioning out of longtime homes. ${FEATURED_BROKER.Role} coordinates seamlessly with transition teams, handling property preparation and sale while the care side focuses on the client's wellbeing.`,
   },
   {
     title: "Families Handling Inherited or Transition-Related Property",
-    text: `Whether the situation involves an inherited home, a parent moving to assisted living, or siblings coordinating from different states, ${FEATURED_BROKER.name} provides the steady, experienced guidance that helps families make informed decisions during an emotional and unfamiliar process.`,
+    text: `Whether the situation involves an inherited home, a parent moving to assisted living, or siblings coordinating from different states, ${FEATURED_BROKER.role} provides the steady, experienced guidance that helps families make informed decisions during an emotional and unfamiliar process.`,
   },
 ];
 
@@ -50,19 +50,19 @@ const whyRefer = [
   },
   {
     title: "Clear Communication Throughout the Process",
-    text: `Referring professionals and their clients receive consistent updates at meaningful milestones — not just when problems arise. ${FEATURED_BROKER.name} communicates in plain language, keeps all parties informed, and is available for questions between scheduled updates.`,
+    text: `Referring professionals and their clients receive consistent updates at meaningful milestones — not just when problems arise. ${FEATURED_BROKER.Role} communicates in plain language, keeps all parties informed, and is available for questions between scheduled updates.`,
   },
   {
     title: "Help Coordinating Vendors, Cleanout, Repairs, and Preparation",
-    text: `Many estate and transition properties need significant work before they are ready for the market. ${FEATURED_BROKER.name} coordinates the entire preparation process — scheduling vendors, overseeing cleanout, managing repairs, and evaluating which improvements are worth the investment.`,
+    text: `Many estate and transition properties need significant work before they are ready for the market. ${FEATURED_BROKER.Role} coordinates the entire preparation process — scheduling vendors, overseeing cleanout, managing repairs, and evaluating which improvements are worth the investment.`,
   },
   {
     title: "Respect for Family Dynamics and Fiduciary Responsibilities",
-    text: `${FEATURED_BROKER.firstName} understands that estate and trust situations involve legal obligations, emotional complexity, and multiple stakeholders with different perspectives. ${FEATURED_BROKER.pronoun.Subject} navigates these dynamics with care — presenting facts clearly, listening carefully, and never taking sides.`,
+    text: `${FEATURED_BROKER.Role} understands that estate and trust situations involve legal obligations, emotional complexity, and multiple stakeholders with different perspectives. ${FEATURED_BROKER.pronoun.Subject} navigates these dynamics with care — presenting facts clearly, listening carefully, and never taking sides.`,
   },
   {
     title: "Local Knowledge of Washington State Markets",
-    text: `${FEATURED_BROKER.name} serves clients throughout Washington State — with detailed knowledge of neighborhood-level pricing patterns, buyer expectations, and the practical realities of selling estate properties in each market.`,
+    text: `${FEATURED_BROKER.Role} serves clients throughout Washington State — with detailed knowledge of neighborhood-level pricing patterns, buyer expectations, and the practical realities of selling estate properties in each market.`,
   },
 ];
 
@@ -128,7 +128,7 @@ const ProfessionalReferralResource = () => {
             Real estate guidance for attorneys, fiduciaries, executors, trustees, seniors, and families navigating probate, estate property sales, inherited homes, and major housing transitions throughout Washington State.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Real Property Planning is an educational and connection hub that helps clients make informed property decisions during complex and often emotional transitions, and connects them with appropriately licensed professionals when needed. {FEATURED_BROKER.name} works closely with professional referral partners who want their clients served with care, discretion, responsiveness, and practical follow-through.
+            Real Property Planning is an educational and connection hub that helps clients make informed property decisions during complex and often emotional transitions, and connects them with appropriately licensed professionals when needed. {FEATURED_BROKER.Role} works closely with professional referral partners who want their clients served with care, discretion, responsiveness, and practical follow-through.
           </p>
           </div>
         </div>
@@ -236,7 +236,7 @@ const ProfessionalReferralResource = () => {
               My Commitment to Referral Partners
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              When you refer a client to Real Property Planning, that referral reflects your professional judgment and your relationship with the client. {FEATURED_BROKER.firstName} treats every referral accordingly — with responsiveness, discretion, and the kind of thorough follow-through that reinforces your credibility.
+              When you refer a client to Real Property Planning, that referral reflects your professional judgment and your relationship with the client. {FEATURED_BROKER.Role} treats every referral accordingly — with responsiveness, discretion, and the kind of thorough follow-through that reinforces your credibility.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed">
               The goal is straightforward: serve your client well, communicate clearly with everyone involved, handle the process responsibly, and make you confident in recommending this resource again. That means no surprises, no pressure tactics, and no shortcuts — just experienced, principled real estate guidance delivered with the professionalism your clients deserve.
@@ -272,14 +272,14 @@ const ProfessionalReferralResource = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-              Learn More About How {FEATURED_BROKER.firstName} Helps
+              Learn More About How {FEATURED_BROKER.roleTitle} Helps
             </h2>
             <p className="text-muted-foreground text-base leading-relaxed mb-8">
               Explore these pages for additional detail on specific situations and services.
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { href: "/for-attorneys", label: "For Attorneys", desc: `How ${FEATURED_BROKER.name} works with attorneys on probate, trust, and estate property matters.` },
+                { href: "/for-attorneys", label: "For Attorneys", desc: `How ${FEATURED_BROKER.role} works with attorneys on probate, trust, and estate property matters.` },
                 { href: "/executors", label: "For Executors & Trustees", desc: "Step-by-step guidance for personal representatives managing estate property." },
                 { href: "/probate-estate-sales", label: "Probate & Estate Sales", desc: "Overview of probate and estate-related real estate services." },
                 { href: "/how-the-process-works", label: "How the Process Works", desc: "A seven-step process from consultation through closing and beyond." },

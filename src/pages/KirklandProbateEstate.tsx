@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "How does selling an inherited home in Kirkland work?",
     answer:
-      `Selling inherited property in Kirkland typically requires legal authority through probate or trust administration. ${FEATURED_BROKER.name} coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout the process.`,
+      `Selling inherited property in Kirkland typically requires legal authority through probate or trust administration. ${FEATURED_BROKER.Role} coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout the process.`,
   },
   {
     question: "What makes Kirkland properties different in estate situations?",
@@ -26,24 +26,24 @@ const faqs = [
       "Kirkland's market includes a mix of waterfront properties, higher-value neighborhoods like Juanita, Houghton, and Moss Bay, and homes with location-specific premiums. Pricing these properties requires neighborhood-level awareness and an understanding of how condition, view, and lot characteristics affect value — not just automated estimates.",
   },
   {
-    question: `How does ${FEATURED_BROKER.name}'s appraisal background help with Kirkland property sales?`,
+    question: `How does ${FEATURED_BROKER.role}'s appraisal background help with Kirkland property sales?`,
     answer:
-      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis. In Kirkland's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.`,
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis. In Kirkland's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.`,
   },
   {
     question: "Can you get help if the family is downsizing or transitioning into senior living?",
     answer:
-      `Yes. Many Kirkland families reach out when a parent is moving into assisted living, independent living, or memory care. ${FEATURED_BROKER.name} helps coordinate the timing of the property sale with the transition, working with families, care professionals, and attorneys to keep the process organized and manageable.`,
+      `Yes. Many Kirkland families reach out when a parent is moving into assisted living, independent living, or memory care. ${FEATURED_BROKER.Role} helps coordinate the timing of the property sale with the transition, working with families, care professionals, and attorneys to keep the process organized and manageable.`,
   },
   {
     question: "What if multiple family members are involved in the decision?",
     answer:
-      `Multi-party situations are common in Kirkland estate and trust sales. ${FEATURED_BROKER.name} provides clear, documented communication so all parties — whether local or out of state — have the same information. Pricing grounded in certified appraisal methodology also helps establish defensible value when consensus is needed.`,
+      `Multi-party situations are common in Kirkland estate and trust sales. ${FEATURED_BROKER.Role} provides clear, documented communication so all parties — whether local or out of state — have the same information. Pricing grounded in certified appraisal methodology also helps establish defensible value when consensus is needed.`,
   },
   {
     question: "How long does it take to sell an estate property in Kirkland?",
     answer:
-      `Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Kirkland homes typically sell within a few weeks. ${FEATURED_BROKER.name} helps set realistic expectations and builds a plan around your specific situation and constraints.`,
+      `Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Kirkland homes typically sell within a few weeks. ${FEATURED_BROKER.Role} helps set realistic expectations and builds a plan around your specific situation and constraints.`,
   },
 ];
 
@@ -158,7 +158,7 @@ const KirklandProbateEstate = () => {
               Higher price points increase sensitivity to pricing strategy. A home priced too high may sit on the market, raising questions from beneficiaries and courts. A home priced too low leaves money on the table. Waterfront and location-specific differences compound this challenge — view corridors, lot access, and proximity to amenities all influence value in ways that automated tools cannot reliably capture.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} brings a valuation-first perspective that provides defensible pricing, organized communication with attorneys and trustees, and greater confidence for families navigating complex property decisions in Kirkland.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} brings a valuation-first perspective that provides defensible pricing, organized communication with attorneys and trustees, and greater confidence for families navigating complex property decisions in Kirkland.
             </p>
           </div>
         </div>
@@ -183,7 +183,7 @@ const KirklandProbateEstate = () => {
               Many Kirkland families reach out when a parent or loved one is transitioning into assisted living, independent living, or memory care. These situations are often emotionally complex, and the property decisions that accompany them can feel overwhelming — especially when timing, family dynamics, and financial considerations are all in play.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.name} works with families to coordinate the timing of the property sale with the transition itself, ensuring that move plans, care arrangements, and sale preparation are aligned. {FEATURED_BROKER.pronoun.Subject} also communicates clearly with all family members and professionals involved, reducing confusion and keeping the process moving forward.
+              {FEATURED_BROKER.Role} works with families to coordinate the timing of the property sale with the transition itself, ensuring that move plans, care arrangements, and sale preparation are aligned. {FEATURED_BROKER.pronoun.Subject} also communicates clearly with all family members and professionals involved, reducing confusion and keeping the process moving forward.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Whether the transition is planned or sudden, having a calm, experienced resource who understands both the property and the human side of the process can make a meaningful difference.
@@ -206,7 +206,7 @@ const KirklandProbateEstate = () => {
               {[
                 {
                   title: "Understand Your Situation",
-                  desc: `${FEATURED_BROKER.name} starts with a confidential conversation to understand who's involved, what authority exists, what the timeline looks like, and what matters most to the family.`,
+                  desc: `${FEATURED_BROKER.Role} starts with a confidential conversation to understand who's involved, what authority exists, what the timeline looks like, and what matters most to the family.`,
                 },
                 {
                   title: "Evaluate the Property and Its Positioning",

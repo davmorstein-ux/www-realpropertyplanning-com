@@ -33,7 +33,10 @@ var FEATURED_BROKER = {
   website: "https://davestein.exprealty.com",
   yearsExperience: 20,
   zillowProfileUrl: "https://www.zillow.com/profile/DaveStein",
-  pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" }
+  pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" },
+  role: "the featured broker",
+  Role: "The featured broker",
+  roleTitle: "the Featured Broker"
 };
 var FEATURED_APPRAISER = {
   name: "David Stein",
@@ -44,7 +47,10 @@ var FEATURED_APPRAISER = {
   phoneTel: "+12069003015",
   email: "dave@steinappraisal.com",
   yearsExperience: 20,
-  pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" }
+  pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" },
+  role: "the featured appraiser",
+  Role: "The featured appraiser",
+  roleTitle: "the Featured Appraiser"
 };
 var HUB_FOUNDER_NAME = "David Stein";
 var FEATURED_BROKER_IS_FOUNDER = FEATURED_BROKER.name === HUB_FOUNDER_NAME;

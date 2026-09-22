@@ -18,32 +18,32 @@ const faqs = [
   {
     question: "What should I do first with an inherited home in Everett?",
     answer:
-      `Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and value. Many Everett inherited homes have years of deferred maintenance. ${FEATURED_BROKER.firstName} can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.`,
+      `Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and value. Many Everett inherited homes have years of deferred maintenance. ${FEATURED_BROKER.Role} can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.`,
   },
   {
     question: "How does a team help with homes that need a lot of work?",
     answer:
-      `${FEATURED_BROKER.firstName} uses ${FEATURED_BROKER.pronoun.possessive} appraisal background to evaluate which repairs and improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference. The key is making that decision based on data, not guesswork.`,
+      `${FEATURED_BROKER.Role} uses ${FEATURED_BROKER.pronoun.possessive} appraisal background to evaluate which repairs and improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference. The key is making that decision based on data, not guesswork.`,
   },
   {
     question: "How does Our dual expertise benefit Everett sellers?",
     answer:
-      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing grounded in actual condition assessment and neighborhood-level market data. This dual perspective is especially valuable with older Everett homes where condition, location, and lot characteristics can significantly affect value.`,
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} provides pricing grounded in actual condition assessment and neighborhood-level market data. This dual perspective is especially valuable with older Everett homes where condition, location, and lot characteristics can significantly affect value.`,
   },
   {
     question: "What if family members disagree about what to do with the property?",
     answer:
-      `This is common. ${FEATURED_BROKER.name} provides objective, data-driven information — condition assessment, realistic pricing, and a clear explanation of options — so families can make decisions based on facts rather than assumptions. Having a neutral, professional perspective often helps move conversations forward.`,
+      `This is common. ${FEATURED_BROKER.Role} provides objective, data-driven information — condition assessment, realistic pricing, and a clear explanation of options — so families can make decisions based on facts rather than assumptions. Having a neutral, professional perspective often helps move conversations forward.`,
   },
   {
     question: "Can you get help if I don't live in the Everett area?",
     answer:
-      `Yes. ${FEATURED_BROKER.firstName} regularly works with executors and family members managing Everett properties from outside the area. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.`,
+      `Yes. ${FEATURED_BROKER.Role} regularly works with executors and family members managing Everett properties from outside the area. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.`,
   },
   {
     question: "How long does it take to sell an inherited home in Everett?",
     answer:
-      `Timelines depend on the probate or trust process, property condition, and how much preparation is needed. Once the property is ready and authority is established, well-priced Everett homes typically sell within a few weeks. ${FEATURED_BROKER.name} helps set realistic expectations and builds a timeline around your specific situation.`,
+      `Timelines depend on the probate or trust process, property condition, and how much preparation is needed. Once the property is ready and authority is established, well-priced Everett homes typically sell within a few weeks. ${FEATURED_BROKER.Role} helps set realistic expectations and builds a timeline around your specific situation.`,
   },
 ];
 
@@ -158,7 +158,7 @@ const EverettProbateEstate = () => {
               Many inherited homes in Everett have been lived in for decades. Roofs, plumbing, electrical systems, and cosmetic finishes may be significantly dated. Knowing which issues are deal-breakers for buyers, which improvements justify the cost, and which ones aren't worth the delay requires honest, condition-based assessment — not guesswork or generic advice.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} brings a practical, valuation-first perspective to every property. This dual expertise helps families make realistic decisions about preparation, pricing, and timing — grounded in what the data actually shows.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} brings a practical, valuation-first perspective to every property. This dual expertise helps families make realistic decisions about preparation, pricing, and timing — grounded in what the data actually shows.
             </p>
           </div>
         </div>
@@ -183,10 +183,10 @@ const EverettProbateEstate = () => {
               Inherited property decisions are rarely simple — especially when multiple family members are involved. Siblings may have different memories of the home, different financial situations, and different ideas about what should happen next. These conversations can be emotional, and they benefit from objective, data-driven information.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.name} provides a clear, professional perspective: an honest assessment of the property's condition, realistic pricing based on local market data, and a straightforward explanation of the options. This kind of neutral, fact-based guidance often helps families move past uncertainty and toward a decision everyone can understand.
+              {FEATURED_BROKER.Role} provides a clear, professional perspective: an honest assessment of the property's condition, realistic pricing based on local market data, and a straightforward explanation of the options. This kind of neutral, fact-based guidance often helps families move past uncertainty and toward a decision everyone can understand.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether family members are local, scattered across the state, or across the country, {FEATURED_BROKER.name} keeps everyone informed with consistent communication throughout the process.
+              Whether family members are local, scattered across the state, or across the country, {FEATURED_BROKER.role} keeps everyone informed with consistent communication throughout the process.
             </p>
           </div>
         </div>
@@ -206,7 +206,7 @@ const EverettProbateEstate = () => {
               {[
                 {
                   title: "Understanding the Situation",
-                  desc: `${FEATURED_BROKER.name} starts with a conversation about the property, the people involved, the timeline, and any concerns.`,
+                  desc: `${FEATURED_BROKER.Role} starts with a conversation about the property, the people involved, the timeline, and any concerns.`,
                 },
                 {
                   title: "Evaluating the Property",

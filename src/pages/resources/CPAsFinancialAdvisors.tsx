@@ -45,7 +45,7 @@ const CPAsFinancialAdvisors = () => (
               informed decisions.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              {FEATURED_BROKER.name} works with CPAs and financial advisors to provide property-specific market data and{" "}
+              {FEATURED_BROKER.Role} works with CPAs and financial advisors to provide property-specific market data and{" "}
               <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">
                 valuation insights
               </Link>{" "}

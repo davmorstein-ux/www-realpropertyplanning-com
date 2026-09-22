@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { brokerageAttribution, appraisalAttribution } from "@/data/featuredProfessionals";
 
 /**
  * Professional disclaimer shown in the body of every page.
@@ -31,6 +32,7 @@ const DisclaimerSection = () => {
               <strong className="font-semibold">Real Property Planning is an educational and connection hub.</strong> It
               does not provide legal, tax, accounting, financial, brokerage, or appraisal services. Professionals
               referenced on this site are independently licensed and operate through their own separate businesses.{" "}
+              {brokerageAttribution} {appraisalAttribution}{" "}
               <Link
                 to="/disclaimer"
                 className="text-foreground font-semibold underline underline-offset-4 decoration-2"

@@ -38,7 +38,7 @@ const SeniorLivingCommunities = () => (
               When a senior is transitioning from a longtime family home, finding the right assisted living, independent living, or memory care community is one of the most important decisions a family makes. The right fit depends on care needs, location preferences, budget, and the level of independence desired.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              {FEATURED_BROKER.name} works with families navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and often coordinates the home sale alongside a move into a senior living community. {FEATURED_BROKER.name} helps align the property timeline with the transition plan so families aren't managing both at once without support.
+              {FEATURED_BROKER.Role} works with families navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and often coordinates the home sale alongside a move into a senior living community. {FEATURED_BROKER.Role} helps align the property timeline with the transition plan so families aren't managing both at once without support.
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">

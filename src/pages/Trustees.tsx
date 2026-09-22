@@ -51,7 +51,7 @@ const Trustees = () => (
       faqs={[
         {
           question: "What should a trustee do first when a trust includes real property?",
-          answer: `Confirm the trustee appointment in writing (a Certification of Trust or successor trustee acceptance), secure the property and insurance, locate the deed and title information, and obtain a current valuation — typically a date-of-death appraisal if the trust became irrevocable on the grantor's passing. ${FEATURED_BROKER.name} handles the property-side steps and coordinates with the trust attorney.`,
+          answer: `Confirm the trustee appointment in writing (a Certification of Trust or successor trustee acceptance), secure the property and insurance, locate the deed and title information, and obtain a current valuation — typically a date-of-death appraisal if the trust became irrevocable on the grantor's passing. ${FEATURED_BROKER.Role} handles the property-side steps and coordinates with the trust attorney.`,
         },
         {
           question: "Does a trustee need a property appraisal before selling?",

@@ -23,11 +23,11 @@ const steps = [
   },
   {
     title: "Figure out the timeline",
-    body: `Three options: sell before the move, sell while the senior is in care, or use bridge financing. Each has tradeoffs. ${FEATURED_BROKER.firstName} helps families choose the right path for their situation.`,
+    body: `Three options: sell before the move, sell while the senior is in care, or use bridge financing. Each has tradeoffs. ${FEATURED_BROKER.Role} helps families choose the right path for their situation.`,
   },
   {
     title: "Prepare the home for sale",
-    body: `Cleanout, minor repairs, paint, landscaping, and staging — evaluated through a return-on-investment lens. ${FEATURED_BROKER.firstName} coordinates every vendor so out-of-state families never have to fly in to supervise.`,
+    body: `Cleanout, minor repairs, paint, landscaping, and staging — evaluated through a return-on-investment lens. ${FEATURED_BROKER.Role} coordinates every vendor so out-of-state families never have to fly in to supervise.`,
   },
   {
     title: "Price it correctly for its condition",
@@ -42,7 +42,7 @@ const steps = [
 const faqs = [
   {
     q: "Can we sell the house if my parent still lives there?",
-    a: `Yes — but it requires sensitivity and careful coordination. ${FEATURED_BROKER.firstName} has experience listing homes where the senior is still in residence and handles showings in a way that is respectful and minimally disruptive.`,
+    a: `Yes — but it requires sensitivity and careful coordination. ${FEATURED_BROKER.Role} has experience listing homes where the senior is still in residence and handles showings in a way that is respectful and minimally disruptive.`,
   },
   {
     q: "Does selling the house affect Medicaid eligibility?",
@@ -53,12 +53,12 @@ const faqs = [
     a: "From first conversation to closing, most senior home sales take 60–120 days depending on preparation needs and market conditions. Starting early gives the family the most options.",
   },
   {
-    q: `Can ${FEATURED_BROKER.firstName} start before my parent has moved?`,
-    a: `Yes. ${FEATURED_BROKER.firstName} can assess the home, develop a pricing strategy, and begin coordinating preparation work before the move happens — so everything is ready to go the moment the family gives the word.`,
+    q: `Can ${FEATURED_BROKER.role} start before my parent has moved?`,
+    a: `Yes. ${FEATURED_BROKER.Role} can assess the home, develop a pricing strategy, and begin coordinating preparation work before the move happens — so everything is ready to go the moment the family gives the word.`,
   },
   {
     q: "What if siblings disagree about selling?",
-    a: `This is very common. ${FEATURED_BROKER.firstName} provides objective, data-based pricing guidance that gives all family members a shared foundation for the conversation — removing emotion from the financial decision.`,
+    a: `This is very common. ${FEATURED_BROKER.Role} provides objective, data-based pricing guidance that gives all family members a shared foundation for the conversation — removing emotion from the financial decision.`,
   },
 ];
 
@@ -109,7 +109,7 @@ const SellHouseFundSeniorLiving = () => {
               For most Washington State families, the home is the key to affording the care their parent needs.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              {FEATURED_BROKER.name} coordinates the home sale with the care plan — so the timing and the proceeds work together.
+              {FEATURED_BROKER.Role} coordinates the home sale with the care plan — so the timing and the proceeds work together.
             </p>
             </div>
           </div>
@@ -280,7 +280,7 @@ const SellHouseFundSeniorLiving = () => {
                 Ready to Talk?
               </h2>
               <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed mb-8">
-                Most families start with a single question. {FEATURED_BROKER.name} is happy to hear it — no pressure, no obligation.
+                Most families start with a single question. {FEATURED_BROKER.Role} is happy to hear it — no pressure, no obligation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:2069003015">

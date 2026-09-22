@@ -33,7 +33,7 @@ const steps = [
   },
   {
     title: "Weeks 10–16: Property preparation",
-    body: `Cleanout, minor repairs, staging, and landscaping are coordinated. The length of this phase depends heavily on the condition of the property and the extent of personal belongings left behind. ${FEATURED_BROKER.name} coordinates all vendors so the executor does not need to be on-site.`,
+    body: `Cleanout, minor repairs, staging, and landscaping are coordinated. The length of this phase depends heavily on the condition of the property and the extent of personal belongings left behind. ${FEATURED_BROKER.Role} coordinates all vendors so the executor does not need to be on-site.`,
   },
   {
     title: "Weeks 14–20: Listing and marketing",
@@ -81,7 +81,7 @@ const tableRows: Array<{ phase: string; duration: string; bold?: boolean }> = [
 const faqs = [
   {
     q: "Can we do anything before Letters Testamentary are issued?",
-    a: `Yes. ${FEATURED_BROKER.firstName} can assess the property, develop a pricing strategy, and coordinate early preparation work — so the moment legal authority is granted, the property is ready to list immediately.`,
+    a: `Yes. ${FEATURED_BROKER.Role} can assess the property, develop a pricing strategy, and coordinate early preparation work — so the moment legal authority is granted, the property is ready to list immediately.`,
   },
   {
     q: "What is the fastest a probate sale can close in Washington State?",
@@ -266,13 +266,13 @@ const ProbateHouseSaleTimelineWashington = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Reduces Timeline Delays</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.name} begins working with families before Letters Testamentary are issued — assessing the property, coordinating early preparation, and developing a pricing strategy so everything is ready to move the moment legal authority is granted.
+              {FEATURED_BROKER.Role} begins working with families before Letters Testamentary are issued — assessing the property, coordinating early preparation, and developing a pricing strategy so everything is ready to move the moment legal authority is granted.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               His dual credential as a Licensed Broker and Certified Residential Appraiser means the pricing decision is made once — accurately — without the back-and-forth that comes when a broker's estimate and an appraiser's valuation don't match.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              {FEATURED_BROKER.firstName} coordinates directly with estate attorneys throughout Washington State to ensure the real estate timeline supports — rather than conflicts with — the overall estate administration plan.
+              {FEATURED_BROKER.Role} coordinates directly with estate attorneys throughout Washington State to ensure the real estate timeline supports — rather than conflicts with — the overall estate administration plan.
             </p>
             <AffiliationBadgeGrid />
           </div>
@@ -323,7 +323,7 @@ const ProbateHouseSaleTimelineWashington = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              {FEATURED_BROKER.name} works with executors, trustees, and attorneys throughout Washington State.
+              {FEATURED_BROKER.Role} works with executors, trustees, and attorneys throughout Washington State.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">

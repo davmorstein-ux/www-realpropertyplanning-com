@@ -38,7 +38,7 @@ const MovingRelocationServices = () => (
               Moving and relocation specialists experienced with estate and senior transitions understand the sensitivity and complexity involved. They handle packing, transport, storage, and delivery with care — especially when families are managing a move under emotional or time-sensitive circumstances.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              {FEATURED_BROKER.name} works with movers and relocation services to coordinate timing between a <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition</Link> or estate property sale and the physical move, ensuring the process stays on track.
+              {FEATURED_BROKER.Role} works with movers and relocation services to coordinate timing between a <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition</Link> or estate property sale and the physical move, ensuring the process stays on track.
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">

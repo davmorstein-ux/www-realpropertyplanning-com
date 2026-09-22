@@ -18,32 +18,32 @@ const faqs = [
   {
     question: "How does selling an inherited home work in Tacoma?",
     answer:
-      `Selling an inherited home in Tacoma typically requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a realistic pricing and preparation strategy. ${FEATURED_BROKER.name} coordinates the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.`,
+      `Selling an inherited home in Tacoma typically requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a realistic pricing and preparation strategy. ${FEATURED_BROKER.Role} coordinates the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.`,
   },
   {
     question: "What should a Tacoma executor do first with an inherited property?",
     answer:
-      `Secure the property, confirm your legal authority, and get an honest assessment of its condition and value. Many Tacoma inherited homes have years of deferred maintenance. ${FEATURED_BROKER.firstName} can walk through the property, identify issues that affect value, and help you understand your options before committing to any course of action.`,
+      `Secure the property, confirm your legal authority, and get an honest assessment of its condition and value. Many Tacoma inherited homes have years of deferred maintenance. ${FEATURED_BROKER.Role} can walk through the property, identify issues that affect value, and help you understand your options before committing to any course of action.`,
   },
   {
-    question: `How does ${FEATURED_BROKER.name}'s appraisal background help with Tacoma properties?`,
+    question: `How does ${FEATURED_BROKER.role}'s appraisal background help with Tacoma properties?`,
     answer:
-      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing grounded in actual condition assessment and neighborhood-level market data — not automated estimates. This is especially valuable in Tacoma, where property values can vary significantly from one neighborhood to the next.`,
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} provides pricing grounded in actual condition assessment and neighborhood-level market data — not automated estimates. This is especially valuable in Tacoma, where property values can vary significantly from one neighborhood to the next.`,
   },
   {
     question: "Can you get help if I live out of state but the property is in Tacoma?",
     answer:
-      `Yes. ${FEATURED_BROKER.firstName} regularly works with out-of-state executors and family members managing Tacoma properties remotely. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.`,
+      `Yes. ${FEATURED_BROKER.Role} regularly works with out-of-state executors and family members managing Tacoma properties remotely. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.`,
   },
   {
     question: "Should I fix up an inherited home in Tacoma before selling?",
     answer:
-      `It depends on the home's condition, your budget, and your timeline. ${FEATURED_BROKER.firstName} uses ${FEATURED_BROKER.pronoun.possessive} appraisal background to evaluate which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference.`,
+      `It depends on the home's condition, your budget, and your timeline. ${FEATURED_BROKER.Role} uses ${FEATURED_BROKER.pronoun.possessive} appraisal background to evaluate which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference.`,
   },
   {
     question: "How long does it take to sell an estate property in Tacoma?",
     answer:
-      `Timelines vary based on the probate or trust administration process, property condition, and current market conditions. Once the property is ready and authority is established, well-priced Tacoma homes typically sell within a few weeks. ${FEATURED_BROKER.name} helps set realistic expectations and builds a timeline around your specific situation.`,
+      `Timelines vary based on the probate or trust administration process, property condition, and current market conditions. Once the property is ready and authority is established, well-priced Tacoma homes typically sell within a few weeks. ${FEATURED_BROKER.Role} helps set realistic expectations and builds a timeline around your specific situation.`,
   },
 ];
 
@@ -158,7 +158,7 @@ const TacomaProbateEstate = () => {
               Many inherited properties in Tacoma have been lived in for decades. Deferred maintenance, dated systems, and personal belongings are common. Practical strategy — knowing when to invest in preparation and when to sell as-is — matters as much as marketing. The wrong approach can cost families time, money, and unnecessary stress.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} brings a valuation-first perspective grounded in actual property condition and neighborhood-level market data. This dual expertise provides defensible pricing, clearer communication with attorneys and courts, and greater confidence for families navigating difficult decisions.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} brings a valuation-first perspective grounded in actual property condition and neighborhood-level market data. This dual expertise provides defensible pricing, clearer communication with attorneys and courts, and greater confidence for families navigating difficult decisions.
             </p>
           </div>
         </div>
@@ -183,10 +183,10 @@ const TacomaProbateEstate = () => {
               Many families managing Tacoma estate property live elsewhere — across the state, across the country, or even internationally. Coordinating vendors, accessing the property, understanding local conditions, and managing a sale remotely adds significant stress during an already difficult time.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.name} serves as a local point of coordination. {FEATURED_BROKER.pronoun.Subject} manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and keep you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
+              {FEATURED_BROKER.Role} serves as a local point of coordination. {FEATURED_BROKER.pronoun.Subject} manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and keep you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether you're managing from Portland, Phoenix, or across the country, {FEATURED_BROKER.name}'s goal is to make the process as clear and manageable as possible from wherever you are.
+              Whether you're managing from Portland, Phoenix, or across the country, {FEATURED_BROKER.role}'s goal is to make the process as clear and manageable as possible from wherever you are.
             </p>
           </div>
         </div>
@@ -206,7 +206,7 @@ const TacomaProbateEstate = () => {
               {[
                 {
                   title: "Understanding the Situation",
-                  desc: `${FEATURED_BROKER.name} starts with a conversation — no pressure, no sales pitch. I want to understand who's involved, what authority exists, what the property looks like, and what the goals are.`,
+                  desc: `${FEATURED_BROKER.Role} starts with a conversation — no pressure, no sales pitch. I want to understand who's involved, what authority exists, what the property looks like, and what the goals are.`,
                 },
                 {
                   title: "Evaluating the Property",
@@ -214,7 +214,7 @@ const TacomaProbateEstate = () => {
                 },
                 {
                   title: "Tacoma Pricing Strategy",
-                  desc: `Drawing on certified appraisal experience and Tacoma-specific market data, ${FEATURED_BROKER.name} develops pricing that's defensible, realistic, and tailored to the neighborhood and condition of the home.`,
+                  desc: `Drawing on certified appraisal experience and Tacoma-specific market data, ${FEATURED_BROKER.role} develops pricing that's defensible, realistic, and tailored to the neighborhood and condition of the home.`,
                 },
                 {
                   title: "Coordinating Preparation and Next Steps",

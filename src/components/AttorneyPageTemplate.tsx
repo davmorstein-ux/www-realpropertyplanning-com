@@ -97,7 +97,7 @@ const AttorneyPageTemplate = ({
               Common Scenarios
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              These are typical situations where {FEATURED_BROKER.name} provides value:
+              These are typical situations where {FEATURED_BROKER.role} provides value:
             </p>
             <div className="grid gap-5">
               {scenarios.map((s, i) => (
@@ -121,7 +121,7 @@ const AttorneyPageTemplate = ({
               How Real Property Planning Helps
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              {FEATURED_BROKER.name} brings dual credentials as a licensed broker and certified residential appraiser to every engagement:
+              {FEATURED_BROKER.Role} brings dual credentials as a licensed broker and certified residential appraiser to every engagement:
             </p>
             <ul className="space-y-4">
               {howWeHelp.map((item, i) => (

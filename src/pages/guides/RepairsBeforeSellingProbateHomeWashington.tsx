@@ -94,15 +94,15 @@ const faqs = [
   },
   {
     q: "What if we don't have estate funds available for repairs?",
-    a: `Some families use bridge financing or negotiate with contractors for payment at closing. ${FEATURED_BROKER.firstName} can help identify practical options based on the specific situation.`,
+    a: `Some families use bridge financing or negotiate with contractors for payment at closing. ${FEATURED_BROKER.Role} can help identify practical options based on the specific situation.`,
   },
   {
-    q: `How does ${FEATURED_BROKER.firstName} decide what to recommend?`,
+    q: `How does ${FEATURED_BROKER.role} decide what to recommend?`,
     a: "Every recommendation is based on comparable sales data, current buyer behavior in that price range and neighborhood, and an honest assessment of what the improvement will actually return at closing.",
   },
   {
-    q: `Can ${FEATURED_BROKER.firstName} coordinate the repairs so we don't have to?`,
-    a: `Yes. ${FEATURED_BROKER.firstName} manages vendor coordination for all preparation work — scheduling contractors, overseeing the work, and ensuring the property is ready to list without the executor needing to be on-site.`,
+    q: `Can ${FEATURED_BROKER.role} coordinate the repairs so we don't have to?`,
+    a: `Yes. ${FEATURED_BROKER.Role} manages vendor coordination for all preparation work — scheduling contractors, overseeing the work, and ensuring the property is ready to list without the executor needing to be on-site.`,
   },
 ];
 
@@ -215,7 +215,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               Every potential improvement to a probate property should be evaluated through one lens: will this investment return more than it costs at closing?
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in methodology — not guesswork. {FEATURED_BROKER.name} evaluates each potential improvement based on comparable sales data, buyer behavior in the current market, and the property's specific condition.
+              A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in methodology — not guesswork. {FEATURED_BROKER.Role} evaluates each potential improvement based on comparable sales data, buyer behavior in the current market, and the property's specific condition.
             </p>
             <div className="rounded-lg bg-background border-l-4 border-gold p-6 shadow-sm">
               <p className="text-foreground text-base md:text-lg leading-relaxed">
@@ -269,7 +269,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
                 Selling as-is does not mean giving the property away. It means pricing it accurately for its actual condition and marketing it to buyers who are specifically looking for properties they can improve themselves — investors, contractors, and experienced buyers who understand the estate sale market.
               </p>
               <p className="text-foreground text-base md:text-lg leading-relaxed">
-                {FEATURED_BROKER.name} evaluates every estate property honestly — recommending the preparation approach that will produce the best financial outcome for the estate given its specific condition, timeline, and market position.
+                {FEATURED_BROKER.Role} evaluates every estate property honestly — recommending the preparation approach that will produce the best financial outcome for the estate given its specific condition, timeline, and market position.
               </p>
             </div>
           </div>
@@ -285,7 +285,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in comparable sales data and current buyer behavior — not general contractor estimates or guesswork.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              {FEATURED_BROKER.firstName} manages vendor coordination for all preparation work — scheduling contractors, overseeing the work, and ensuring the property is ready to list without the executor needing to be on-site.
+              {FEATURED_BROKER.Role} manages vendor coordination for all preparation work — scheduling contractors, overseeing the work, and ensuring the property is ready to list without the executor needing to be on-site.
             </p>
             <AffiliationBadgeGrid />
           </div>
@@ -336,7 +336,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              {FEATURED_BROKER.name} evaluates every estate property honestly — recommending the preparation approach that will produce the best outcome for the estate.
+              {FEATURED_BROKER.Role} evaluates every estate property honestly — recommending the preparation approach that will produce the best outcome for the estate.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">

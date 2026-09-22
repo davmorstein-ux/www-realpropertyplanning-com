@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "What types of professionals are typically involved in an estate or senior transition?",
-    answer: `Depending on the situation, you may work with attorneys, CPAs, senior move managers, estate sale companies, financial advisors, care coordinators, and a real estate professional. ${FEATURED_BROKER.name} helps coordinate the real estate piece alongside these other professionals.`,
+    answer: `Depending on the situation, you may work with attorneys, CPAs, senior move managers, estate sale companies, financial advisors, care coordinators, and a real estate professional. ${FEATURED_BROKER.Role} helps coordinate the real estate piece alongside these other professionals.`,
   },
   {
     question: "Is Real Property Planning a referral service?",
@@ -140,7 +140,7 @@ const helpfulGuides = [
   {
     href: "/how-the-process-works",
     title: "How the Process Works",
-    description: `A step-by-step overview of how ${FEATURED_BROKER.firstName} guides clients from initial conversation through closing.`,
+    description: `A step-by-step overview of how ${FEATURED_BROKER.role} guides clients from initial conversation through closing.`,
   },
 ];
 
@@ -149,7 +149,7 @@ const professionalPages = [
     href: "/for-attorneys",
     title: "For Attorneys",
     description:
-      `How ${FEATURED_BROKER.name} works with attorneys and their clients when real property is part of probate, trust, or estate matters.`,
+      `How ${FEATURED_BROKER.role} works with attorneys and their clients when real property is part of probate, trust, or estate matters.`,
   },
   {
     href: "/for-senior-living-professionals",
@@ -167,7 +167,7 @@ const professionalPages = [
     href: "/for-financial-planners",
     title: "For Financial Planners",
     description:
-      `How ${FEATURED_BROKER.name} works with financial planners whose clients face housing-related decisions.`,
+      `How ${FEATURED_BROKER.role} works with financial planners whose clients face housing-related decisions.`,
   },
 ];
 
@@ -337,7 +337,7 @@ const TransitionResources = () => {
               </h2>
             </div>
             <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
-              {FEATURED_BROKER.name} works with attorneys, CPAs, financial
+              {FEATURED_BROKER.Role} works with attorneys, CPAs, financial
               planners, senior living communities, move managers, and other
               professionals who support families through complex housing
               transitions. The following pages are designed specifically for
@@ -372,7 +372,7 @@ const TransitionResources = () => {
             </h2>
             <p className="text-foreground text-base md:text-[17px] leading-relaxed mb-4">
               Many life transitions involve overlapping legal, financial,
-              logistical, and housing decisions. {FEATURED_BROKER.name} works
+              logistical, and housing decisions. {FEATURED_BROKER.Role} works
               with families and professionals to navigate the real estate side
               when a home is part of that equation — whether through probate,
               estate administration, downsizing, or a senior housing move.
@@ -380,9 +380,9 @@ const TransitionResources = () => {
             <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed">
               With over 20 years of experience and dual credentials as a
               licensed real estate broker and state-certified residential
-              appraiser, {FEATURED_BROKER.name} brings the market knowledge, valuation
+              appraiser, {FEATURED_BROKER.role} brings the market knowledge, valuation
               insight, and professional sensitivity that these situations
-              require. {FEATURED_BROKER.name} serves families and professionals
+              require. {FEATURED_BROKER.Role} serves families and professionals
               throughout Washington State.
             </p>
           </div>

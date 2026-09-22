@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "How do I get notified about new AFH listings in Auburn?",
     answer:
-      `Reach out directly — ${FEATURED_BROKER.name} tracks Auburn and the broader South King/North Pierce County AFH market and can notify you when a matching property comes to market.`,
+      `Reach out directly — ${FEATURED_BROKER.Role} tracks Auburn and the broader South King/North Pierce County AFH market and can notify you when a matching property comes to market.`,
   },
 ];
 

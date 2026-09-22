@@ -37,6 +37,16 @@ export interface FeaturedBroker {
   zillowProfileUrl?: string;
   /** Pronouns used in prose about this person ("he uses his appraisal background"). */
   pronoun: Pronouns;
+  /**
+   * How hub pages refer to this person after the attribution: "the featured
+   * broker". The name itself appears only in the attribution sentences,
+   * contact CTAs, and on the person's own pages — the hub is not about them.
+   */
+  role: string;
+  /** Sentence-initial form: "The featured broker". */
+  Role: string;
+  /** Title-case form for headings: "the Featured Broker". */
+  roleTitle: string;
 }
 
 export interface Pronouns {
@@ -59,6 +69,9 @@ export interface FeaturedAppraiser {
   email: string;
   yearsExperience: number;
   pronoun: Pronouns;
+  role: string;
+  Role: string;
+  roleTitle: string;
 }
 
 export const FEATURED_BROKER: FeaturedBroker = {
@@ -74,6 +87,9 @@ export const FEATURED_BROKER: FeaturedBroker = {
   yearsExperience: 20,
   zillowProfileUrl: "https://www.zillow.com/profile/DaveStein",
   pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" },
+  role: "the featured broker",
+  Role: "The featured broker",
+  roleTitle: "the Featured Broker",
 };
 
 export const FEATURED_APPRAISER: FeaturedAppraiser = {
@@ -86,6 +102,9 @@ export const FEATURED_APPRAISER: FeaturedAppraiser = {
   email: "dave@steinappraisal.com",
   yearsExperience: 20,
   pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" },
+  role: "the featured appraiser",
+  Role: "The featured appraiser",
+  roleTitle: "the Featured Appraiser",
 };
 
 /**

@@ -17,7 +17,7 @@ const willsFaqs = [
   {
     question: "Does Real Property Planning write or review wills?",
     answer:
-      `No. ${FEATURED_BROKER.name} is not an attorney and does not provide legal advice. ${FEATURED_BROKER.pronoun.Subject} focuses exclusively on the real estate side — helping families, executors, and trustees understand property value and navigate the sale or transfer of real property referenced in a will.`,
+      `No. ${FEATURED_BROKER.Role} is not an attorney and does not provide legal advice. ${FEATURED_BROKER.pronoun.Subject} focuses exclusively on the real estate side — helping families, executors, and trustees understand property value and navigate the sale or transfer of real property referenced in a will.`,
   },
   {
     question: "Why does a will matter when selling a house?",
@@ -27,17 +27,17 @@ const willsFaqs = [
   {
     question: "What if there is no will?",
     answer:
-      `When someone passes without a will (intestate), Washington State law determines how property is distributed. The probate court appoints a personal representative. ${FEATURED_BROKER.name} works with families in these situations regularly and can help coordinate with your attorney on the real estate side.`,
+      `When someone passes without a will (intestate), Washington State law determines how property is distributed. The probate court appoints a personal representative. ${FEATURED_BROKER.Role} works with families in these situations regularly and can help coordinate with your attorney on the real estate side.`,
   },
   {
     question: "Can an executor sell a house before probate is complete?",
     answer:
-      `In some cases, yes — but it depends on the terms of the will, the type of probate, and court approval. ${FEATURED_BROKER.name} helps executors understand timing, pricing, and preparation so the property is ready when the time comes.`,
+      `In some cases, yes — but it depends on the terms of the will, the type of probate, and court approval. ${FEATURED_BROKER.Role} helps executors understand timing, pricing, and preparation so the property is ready when the time comes.`,
   },
   {
     question: "How does a will affect property valuation?",
     answer:
-      `The terms of a will can influence whether a property needs a formal appraisal for estate tax purposes, equitable distribution among heirs, or establishing a stepped-up cost basis. ${FEATURED_BROKER.name} provides valuations informed by certified appraisal expertise that hold up to legal and financial scrutiny.`,
+      `The terms of a will can influence whether a property needs a formal appraisal for estate tax purposes, equitable distribution among heirs, or establishing a stepped-up cost basis. ${FEATURED_BROKER.Role} provides valuations informed by certified appraisal expertise that hold up to legal and financial scrutiny.`,
   },
 ];
 
@@ -187,7 +187,7 @@ const Wills = () => {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     You've been named in a will as the executor — but you've never done this before.
                     You're not sure what to do with the house, whether to clean it out, when you can
-                    sell, or how to price it. {FEATURED_BROKER.name} walks executors through the real estate side step by
+                    sell, or how to price it. {FEATURED_BROKER.Role} walks executors through the real estate side step by
                     step.
                   </p>
                 </div>
@@ -208,7 +208,7 @@ const Wills = () => {
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     Managing estate property from a distance is one of the most stressful situations
-                    {FEATURED_BROKER.name} sees. {FEATURED_BROKER.pronoun.Subject} coordinates with attorneys, manage property access, and handle the
+                    {FEATURED_BROKER.Role} sees. {FEATURED_BROKER.pronoun.Subject} coordinates with attorneys, manage property access, and handle the
                     preparation and sale — so you don't have to fly back and forth.
                   </p>
                 </div>
@@ -218,7 +218,7 @@ const Wills = () => {
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     When someone passes without a will, the process becomes more complex — but it
-                    doesn't have to be chaotic. {FEATURED_BROKER.name} works with families and their attorneys to navigate
+                    doesn't have to be chaotic. {FEATURED_BROKER.Role} works with families and their attorneys to navigate
                     the real estate side of intestate estates with the same care and precision.
                   </p>
                 </div>
@@ -237,7 +237,7 @@ const Wills = () => {
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 That distinction is important. When families are navigating a will, they need
-                professionals who stay in their lane. {FEATURED_BROKER.name} focuses on what {FEATURED_BROKER.pronoun.subject} does best — accurate property
+                professionals who stay in their lane. {FEATURED_BROKER.Role} focuses on what {FEATURED_BROKER.pronoun.subject} does best — accurate property
                 valuation, thoughtful preparation, and steady guidance through the real estate side
                 of estate transitions — while working alongside the attorneys and advisors who handle
                 the legal and financial dimensions.
@@ -253,7 +253,7 @@ const Wills = () => {
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 With over 20 years of experience as both a certified appraiser and a licensed real
-                estate broker, {FEATURED_BROKER.name} works with families, executors, and attorneys to handle
+                estate broker, {FEATURED_BROKER.role} works with families, executors, and attorneys to handle
                 the real property side of estate administration — from the first conversation to the
                 closing table.
               </p>

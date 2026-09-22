@@ -51,7 +51,7 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
               While much of the featured broker's work is concentrated in King, Snohomish, Pierce, and Kitsap Counties, families anywhere in the state can use the guides here and ask for a connection.
             </p>
             <p>
-              For situations outside Washington, {FEATURED_BROKER.name}, the featured broker, can connect families with a trusted broker anywhere in the country through {FEATURED_BROKER.brokerage}'s nationwide network.
+              For situations outside Washington, {FEATURED_BROKER.role} can connect families with a trusted broker anywhere in the country through {FEATURED_BROKER.brokerage}'s nationwide network.
             </p>
           </div>
 

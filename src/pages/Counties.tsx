@@ -96,7 +96,7 @@ const countyCards = [
     county: "Cowlitz County",
     href: "/cowlitz-county",
     logo: cowlitzCountyLogo,
-    intro: `From Longview's established neighborhoods to rural properties along the Toutle River corridor, Cowlitz County estate sales require local market knowledge and condition-adjusted pricing. ${FEATURED_BROKER.name} coordinates the full process for families and executors throughout the area.`,
+    intro: `From Longview's established neighborhoods to rural properties along the Toutle River corridor, Cowlitz County estate sales require local market knowledge and condition-adjusted pricing. ${FEATURED_BROKER.Role} coordinates the full process for families and executors throughout the area.`,
   },
   {
     county: "Grays Harbor County",
@@ -114,7 +114,7 @@ const countyCards = [
     county: "Jefferson County",
     href: "/jefferson-county",
     logo: jeffersonCountyLogo,
-    intro: `Jefferson County's Olympic Peninsula setting — from Port Townsend's Victorian waterfront to the rural Hood Canal communities — creates a distinctive market for estate and inherited properties. ${FEATURED_BROKER.name} provides experienced guidance for executors and families throughout the area.`,
+    intro: `Jefferson County's Olympic Peninsula setting — from Port Townsend's Victorian waterfront to the rural Hood Canal communities — creates a distinctive market for estate and inherited properties. ${FEATURED_BROKER.Role} provides experienced guidance for executors and families throughout the area.`,
   },
   {
     county: "Lewis County",
@@ -150,7 +150,7 @@ const countyCards = [
     county: "Wahkiakum County",
     href: "/wahkiakum-county",
     logo: wahkiakumCountyLogo,
-    intro: `Wahkiakum County is Washington's smallest county by population — a rural, river-delta community along the Columbia where estate properties often include acreage, agricultural character, and limited market activity. ${FEATURED_BROKER.name} provides practical, honest guidance for families navigating property decisions in this distinctive area.`,
+    intro: `Wahkiakum County is Washington's smallest county by population — a rural, river-delta community along the Columbia where estate properties often include acreage, agricultural character, and limited market activity. ${FEATURED_BROKER.Role} provides practical, honest guidance for families navigating property decisions in this distinctive area.`,
   },
 ];
 
@@ -174,10 +174,10 @@ const Counties = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. {FEATURED_BROKER.name} provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits. Real Property Planning now serves families, executors, attorneys, and professionals across more than 20 Washington counties — from the urban Puget Sound region to the Olympic Peninsula, the Columbia River Gorge, and beyond.
+            Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. {FEATURED_BROKER.Role} provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits. Real Property Planning now serves families, executors, attorneys, and professionals across more than 20 Washington counties — from the urban Puget Sound region to the Olympic Peninsula, the Columbia River Gorge, and beyond.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            As a licensed broker and state-certified residential appraiser with over 20 years of experience, {FEATURED_BROKER.name} evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to learn more about service in that area.
+            As a licensed broker and state-certified residential appraiser with over 20 years of experience, {FEATURED_BROKER.role} evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to learn more about service in that area.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
             Select a county above to see the cities served in that area.
@@ -230,7 +230,7 @@ const Counties = () => {
               Services Available in Each County
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
-              Whether the situation involves probate, an inherited home, a trust-owned property, or a senior transition, {FEATURED_BROKER.name} provides hands-on guidance through every step:
+              Whether the situation involves probate, an inherited home, a trust-owned property, or a senior transition, {FEATURED_BROKER.role} provides hands-on guidance through every step:
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((service) => (

@@ -20,32 +20,32 @@ const faqs = [
   {
     question: "How does selling a home in probate work in Seattle?",
     answer:
-      `Probate property sales in Seattle require court-granted authority before listing. ${FEATURED_BROKER.name} coordinates with the estate attorney and personal representative to evaluate the property, manage preparation, develop a pricing strategy grounded in local market data, and guide the sale from start to finish — keeping all parties informed throughout.`,
+      `Probate property sales in Seattle require court-granted authority before listing. ${FEATURED_BROKER.Role} coordinates with the estate attorney and personal representative to evaluate the property, manage preparation, develop a pricing strategy grounded in local market data, and guide the sale from start to finish — keeping all parties informed throughout.`,
   },
   {
     question: "What should an executor do first with a Seattle property?",
     answer:
-      `Secure the property, confirm your legal authority to act, and get an honest assessment of the home's condition and market value. ${FEATURED_BROKER.firstName} can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.`,
+      `Secure the property, confirm your legal authority to act, and get an honest assessment of the home's condition and market value. ${FEATURED_BROKER.Role} can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.`,
   },
   {
-    question: `How does ${FEATURED_BROKER.name}'s appraisal background benefit Seattle sellers?`,
+    question: `How does ${FEATURED_BROKER.role}'s appraisal background benefit Seattle sellers?`,
     answer:
-      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing strategy rooted in actual condition assessment and neighborhood-level market data — not automated estimates. This dual perspective is especially valuable in Seattle, where neighborhood pricing differences can be significant.`,
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} provides pricing strategy rooted in actual condition assessment and neighborhood-level market data — not automated estimates. This dual perspective is especially valuable in Seattle, where neighborhood pricing differences can be significant.`,
   },
   {
     question: "Can you get help if I live out of state but the property is in Seattle?",
     answer:
-      `Yes. ${FEATURED_BROKER.firstName} regularly works with out-of-state executors, trustees, and heirs managing Seattle properties remotely. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the entire sale process — keeping you informed at every step so you don't need to make unnecessary trips.`,
+      `Yes. ${FEATURED_BROKER.Role} regularly works with out-of-state executors, trustees, and heirs managing Seattle properties remotely. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the entire sale process — keeping you informed at every step so you don't need to make unnecessary trips.`,
   },
   {
     question: "What should be done before listing an inherited home in Seattle?",
     answer:
-      `It depends on the property's condition, location, and your timeline. ${FEATURED_BROKER.name} evaluates whether to sell as-is or invest in targeted preparation — using ${FEATURED_BROKER.pronoun.possessive} appraisal background to determine which improvements are likely to increase the sale price enough to justify the cost and delay.`,
+      `It depends on the property's condition, location, and your timeline. ${FEATURED_BROKER.Role} evaluates whether to sell as-is or invest in targeted preparation — using ${FEATURED_BROKER.pronoun.possessive} appraisal background to determine which improvements are likely to increase the sale price enough to justify the cost and delay.`,
   },
   {
     question: "How long does it take to sell a probate property in Seattle?",
     answer:
-      `Timelines vary depending on the probate process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Seattle homes often sell within 2–4 weeks. ${FEATURED_BROKER.name} helps set realistic expectations and builds a timeline around your specific situation.`,
+      `Timelines vary depending on the probate process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Seattle homes often sell within 2–4 weeks. ${FEATURED_BROKER.Role} helps set realistic expectations and builds a timeline around your specific situation.`,
   },
 ];
 
@@ -160,7 +160,7 @@ const SeattleProbateEstate = () => {
               Pricing strategy is critical. List too high and the property sits, raising questions from the court or other parties. Price too low and heirs lose value they're entitled to. In estate and probate situations, there's often less room for error.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} brings a valuation-first perspective that provides defensible pricing, clearer communication with attorneys and courts, and greater confidence for families making difficult decisions.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} brings a valuation-first perspective that provides defensible pricing, clearer communication with attorneys and courts, and greater confidence for families making difficult decisions.
             </p>
           </div>
         </div>
@@ -185,10 +185,10 @@ const SeattleProbateEstate = () => {
               Many executors and trustees managing Seattle property live hundreds or thousands of miles away. Coordinating vendors, accessing the property, understanding local conditions, and managing a sale remotely is stressful — especially when you're also grieving.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.name} serves as a local point of coordination. {FEATURED_BROKER.pronoun.Subject} manages property access, works with cleanout crews, contractors, and staging vendors, communicates with attorneys and other parties, and keep you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
+              {FEATURED_BROKER.Role} serves as a local point of coordination. {FEATURED_BROKER.pronoun.Subject} manages property access, works with cleanout crews, contractors, and staging vendors, communicates with attorneys and other parties, and keep you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether you're in California, Texas, New York, or overseas, {FEATURED_BROKER.name}'s goal is to make the process as clear and manageable as possible from wherever you are.
+              Whether you're in California, Texas, New York, or overseas, {FEATURED_BROKER.role}'s goal is to make the process as clear and manageable as possible from wherever you are.
             </p>
           </div>
         </div>
@@ -208,7 +208,7 @@ const SeattleProbateEstate = () => {
               {[
                 {
                   title: "Understanding the Situation",
-                  desc: `${FEATURED_BROKER.name} starts with a conversation — no pressure, no sales pitch. I want to understand who's involved, what authority exists, and what the goals are.`,
+                  desc: `${FEATURED_BROKER.Role} starts with a conversation — no pressure, no sales pitch. I want to understand who's involved, what authority exists, and what the goals are.`,
                 },
                 {
                   title: "Property Review",

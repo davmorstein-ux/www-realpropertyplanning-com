@@ -21,23 +21,23 @@ const faqs = [
   },
   {
     question: "How does an appraisal background help with Richland properties?",
-    answer: `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing grounded in actual condition assessment and local comparable data. In Richland, where homes tend to be well-built but may need cosmetic updating, this dual perspective ensures pricing reflects reality rather than outdated assumptions.`,
+    answer: `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} provides pricing grounded in actual condition assessment and local comparable data. In Richland, where homes tend to be well-built but may need cosmetic updating, this dual perspective ensures pricing reflects reality rather than outdated assumptions.`,
   },
   {
     question: "Should I update a Richland home before selling?",
-    answer: `It depends on the home's condition relative to buyer expectations in the neighborhood. ${FEATURED_BROKER.name} evaluates which updates are likely to return more than they cost and which aren't necessary. In Richland's more established neighborhoods, targeted cosmetic improvements can make a meaningful difference — but not every update is worth the investment.`,
+    answer: `It depends on the home's condition relative to buyer expectations in the neighborhood. ${FEATURED_BROKER.Role} evaluates which updates are likely to return more than they cost and which aren't necessary. In Richland's more established neighborhoods, targeted cosmetic improvements can make a meaningful difference — but not every update is worth the investment.`,
   },
   {
     question: "Can you get help if I live outside the Tri-Cities?",
-    answer: `Yes. ${FEATURED_BROKER.name} works with executors and families who live outside the area — whether across the state or out of state. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the sale process so you can make decisions without unnecessary travel.`,
+    answer: `Yes. ${FEATURED_BROKER.Role} works with executors and families who live outside the area — whether across the state or out of state. ${FEATURED_BROKER.pronoun.Subject} coordinates property access, vendor management, preparation, and the sale process so you can make decisions without unnecessary travel.`,
   },
   {
     question: "What if the estate involves a long-term family home?",
-    answer: `Long-term ownership is common in Richland. These homes often carry sentimental value alongside practical considerations. ${FEATURED_BROKER.name} provides an honest, respectful assessment of the property's condition and market position, giving families the facts they need to make decisions at their own pace.`,
+    answer: `Long-term ownership is common in Richland. These homes often carry sentimental value alongside practical considerations. ${FEATURED_BROKER.Role} provides an honest, respectful assessment of the property's condition and market position, giving families the facts they need to make decisions at their own pace.`,
   },
   {
     question: "How long does it take to sell an estate property in Richland?",
-    answer: `Timelines depend on the legal process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Richland properties typically attract interest within a reasonable timeframe. ${FEATURED_BROKER.name} helps set realistic expectations based on your specific situation.`,
+    answer: `Timelines depend on the legal process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Richland properties typically attract interest within a reasonable timeframe. ${FEATURED_BROKER.Role} helps set realistic expectations based on your specific situation.`,
   },
 ];
 
@@ -132,7 +132,7 @@ const RichlandProbateEstate = () => {
               Many inherited Richland homes are structurally sound but cosmetically dated. Flooring, paint, fixtures, and landscaping may reflect the owner's preferences from twenty years ago. Understanding which updates matter to today's buyers — and which don't — requires honest assessment, not guesswork.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} brings a valuation-first perspective that accounts for condition, location, and realistic buyer expectations. This means pricing that's defensible and preparation advice that's practical.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} brings a valuation-first perspective that accounts for condition, location, and realistic buyer expectations. This means pricing that's defensible and preparation advice that's practical.
             </p>
           </div>
         </div>
@@ -148,7 +148,7 @@ const RichlandProbateEstate = () => {
               Richland families often want the sale process to feel organized, respectful, and well-paced. They're not looking for pressure — they want clarity about what the home needs, what it's worth, and how the timeline works.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.name} provides that structure. {FEATURED_BROKER.pronoun.Subject} coordinates with family members, manages vendors and preparation logistics, communicates with attorneys when needed, and keep everyone informed with clear, consistent updates. The goal is a process that feels steady and well-managed from start to finish.
+              {FEATURED_BROKER.Role} provides that structure. {FEATURED_BROKER.pronoun.Subject} coordinates with family members, manages vendors and preparation logistics, communicates with attorneys when needed, and keep everyone informed with clear, consistent updates. The goal is a process that feels steady and well-managed from start to finish.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               For families where the home carries significant sentimental value, this measured approach matters. Decisions don't need to be rushed — but they do need to be informed.
@@ -164,7 +164,7 @@ const RichlandProbateEstate = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">Each situation has its own timeline and priorities, but the framework stays consistent — organized, transparent, and focused on a sound outcome:</p>
             <ol className="space-y-6">
               {[
-                { title: "Understanding the Situation", desc: `${FEATURED_BROKER.name} begins with a conversation about the property, the family's goals, and the legal and personal context. No rushing — just a clear picture of where things stand.` },
+                { title: "Understanding the Situation", desc: `${FEATURED_BROKER.Role} begins with a conversation about the property, the family's goals, and the legal and personal context. No rushing — just a clear picture of where things stand.` },
                 { title: "Assessing the Property", desc: "I visit the home, evaluate its condition against current market standards, and identify what genuinely affects its value and marketability." },
                 { title: "Recommending a Strategy", desc: "Based on the property's condition, the neighborhood, and your timeline, I develop a pricing and preparation plan that balances cost, effort, and expected return." },
                 { title: "Coordinating Preparation", desc: "I manage the logistics — cleanout, cosmetic updates, staging if appropriate — keeping things on track without adding unnecessary expense." },

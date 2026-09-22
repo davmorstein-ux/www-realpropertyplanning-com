@@ -131,7 +131,7 @@ const HeirsDisagreeSelling = () => (
 
     <MidPageCTA
       heading="Navigating a Family Disagreement?"
-      body={`${FEATURED_BROKER.name} works with multi-heir families regularly. An independent property assessment can provide the objective information needed to move conversations forward.`}
+      body={`${FEATURED_BROKER.Role} works with multi-heir families regularly. An independent property assessment can provide the objective information needed to move conversations forward.`}
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

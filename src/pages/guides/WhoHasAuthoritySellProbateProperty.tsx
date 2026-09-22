@@ -21,7 +21,7 @@ import {
 const faqs = [
   {
     q: "Can we list the house before Letters Testamentary are issued?",
-    a: `No — a title company will not close a sale without proper documentation of legal authority. However ${FEATURED_BROKER.firstName} can begin assessment and preparation work before authority is formally granted.`,
+    a: `No — a title company will not close a sale without proper documentation of legal authority. However ${FEATURED_BROKER.role} can begin assessment and preparation work before authority is formally granted.`,
   },
   {
     q: "How long does it take to get Letters Testamentary in Washington?",
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "What if the personal representative lives out of state?",
-    a: `Out-of-state personal representatives can manage the entire process remotely. ${FEATURED_BROKER.firstName} provides photo updates, digital document signing, and regular communication so the representative never has to travel to supervise the property.`,
+    a: `Out-of-state personal representatives can manage the entire process remotely. ${FEATURED_BROKER.Role} provides photo updates, digital document signing, and regular communication so the representative never has to travel to supervise the property.`,
   },
   {
     q: "Can a beneficiary sell the property if there is no will?",
@@ -222,10 +222,10 @@ const WhoHasAuthoritySellProbateProperty = () => (
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Works Within This Framework</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Real Property Planning regularly works with personal representatives, trustees, estate attorneys, and families throughout Washington State. {FEATURED_BROKER.firstName} understands exactly what documentation is required before a sale can proceed — and {FEATURED_BROKER.pronoun.subject} coordinates directly with legal counsel to ensure every step is properly authorized.
+              Real Property Planning regularly works with personal representatives, trustees, estate attorneys, and families throughout Washington State. {FEATURED_BROKER.Role} understands exactly what documentation is required before a sale can proceed — and {FEATURED_BROKER.pronoun.subject} coordinates directly with legal counsel to ensure every step is properly authorized.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              {FEATURED_BROKER.firstName} can begin working with the family before Letters Testamentary are issued — assessing the property, developing a pricing strategy, and coordinating preparation so everything is ready the moment legal authority is in place.
+              {FEATURED_BROKER.Role} can begin working with the family before Letters Testamentary are issued — assessing the property, developing a pricing strategy, and coordinating preparation so everything is ready the moment legal authority is in place.
             </p>
             <AffiliationBadgeGrid />
           </div>
@@ -276,7 +276,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              {FEATURED_BROKER.name} works with personal representatives, trustees, and attorneys throughout Washington State.
+              {FEATURED_BROKER.Role} works with personal representatives, trustees, and attorneys throughout Washington State.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">

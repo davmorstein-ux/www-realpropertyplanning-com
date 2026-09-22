@@ -31,7 +31,7 @@ const countyMeta = [
     eyebrow: "King County Communities",
     heading: "King County Cities Served",
     intro: "King County includes a wide range of urban, suburban, waterfront, and estate-oriented markets. Probate, inherited, and trust-related real estate decisions often vary significantly depending on the city, neighborhood, and property type.",
-    outro: `From Seattle and Bellevue to Kirkland, Redmond, Renton, Bothell, Issaquah, and beyond, ${FEATURED_BROKER.name} helps clients approach estate-related real property decisions with local perspective and practical, evidence-based guidance.`,
+    outro: `From Seattle and Bellevue to Kirkland, Redmond, Renton, Bothell, Issaquah, and beyond, ${FEATURED_BROKER.role} helps clients approach estate-related real property decisions with local perspective and practical, evidence-based guidance.`,
     bg: "bg-secondary",
   },
   {
@@ -39,7 +39,7 @@ const countyMeta = [
     eyebrow: "Snohomish County Communities",
     heading: "Snohomish County Cities Served",
     intro: "Snohomish County includes coastal, suburban, historic, rural, and growing residential markets where property condition, lot characteristics, buyer expectations, and neighborhood context can meaningfully affect sale strategy.",
-    outro: `From Everett, Edmonds, Lynnwood, Mukilteo, and Mill Creek to Snohomish, Lake Stevens, Monroe, Marysville, and surrounding communities, ${FEATURED_BROKER.name} helps clients make better-informed real estate decisions during important property transitions.`,
+    outro: `From Everett, Edmonds, Lynnwood, Mukilteo, and Mill Creek to Snohomish, Lake Stevens, Monroe, Marysville, and surrounding communities, ${FEATURED_BROKER.role} helps clients make better-informed real estate decisions during important property transitions.`,
     bg: "bg-background",
   },
   {
@@ -47,7 +47,7 @@ const countyMeta = [
     eyebrow: "Pierce County Communities",
     heading: "Pierce County Cities Served",
     intro: "Pierce County includes waterfront markets, established neighborhoods, smaller towns, suburban communities, and military-influenced areas where local positioning and preparation strategy can have a major effect on value and sale timing.",
-    outro: `From Tacoma and University Place to Puyallup, Gig Harbor, Lakewood, Bonney Lake, Sumner, DuPont, and nearby communities, ${FEATURED_BROKER.name} helps clients and families navigate estate-related property decisions with clarity and local market awareness.`,
+    outro: `From Tacoma and University Place to Puyallup, Gig Harbor, Lakewood, Bonney Lake, Sumner, DuPont, and nearby communities, ${FEATURED_BROKER.role} helps clients and families navigate estate-related property decisions with clarity and local market awareness.`,
     bg: "bg-secondary",
   },
   {
@@ -55,7 +55,7 @@ const countyMeta = [
     eyebrow: "Kitsap County Communities",
     heading: "Kitsap County Cities & Communities Served",
     intro: "Kitsap County's peninsula geography creates distinct real estate markets shaped by ferry access, military presence, and the appeal of waterfront and rural living. Both incorporated cities and major search-relevant communities are included below.",
-    outro: `From Bremerton and Bainbridge Island to Poulsbo, Port Orchard, Silverdale, and Kingston, ${FEATURED_BROKER.name} provides guidance informed by how local market positioning affects inherited, probate, and trust-owned property decisions throughout Kitsap County.`,
+    outro: `From Bremerton and Bainbridge Island to Poulsbo, Port Orchard, Silverdale, and Kingston, ${FEATURED_BROKER.role} provides guidance informed by how local market positioning affects inherited, probate, and trust-owned property decisions throughout Kitsap County.`,
     bg: "bg-background",
   },
 ];
@@ -72,7 +72,7 @@ const CitiesWeServe = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Cities We Serve for Probate and Inherited Property Guidance | Real Property Planning"
-        description={`${FEATURED_BROKER.name} serves cities throughout Washington State for probate real estate, inherited property, trust-owned homes, and estate-related sales, with especially strong experience in Western Washington and the Puget Sound region.`}
+        description={`${FEATURED_BROKER.Role} serves cities throughout Washington State for probate real estate, inherited property, trust-owned homes, and estate-related sales, with especially strong experience in Western Washington and the Puget Sound region.`}
       />
       <Header />
       <main id="main-content">
@@ -86,7 +86,7 @@ const CitiesWeServe = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            {FEATURED_BROKER.name} helps clients and referring professionals navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions across a wide range of communities throughout Washington State. Our work combines over 20 years of real estate experience with Washington state certified appraisal expertise to help clients make more informed decisions about value, preparation, timing, and sale strategy.
+            {FEATURED_BROKER.Role} helps clients and referring professionals navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions across a wide range of communities throughout Washington State. Our work combines over 20 years of real estate experience with Washington state certified appraisal expertise to help clients make more informed decisions about value, preparation, timing, and sale strategy.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
             Click on any city below to explore local guidance and available services.
@@ -133,7 +133,7 @@ const CitiesWeServe = () => {
               Explore County-Specific Guidance
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              For more detailed local guidance, explore each county page for deeper insight into how {FEATURED_BROKER.name} helps clients navigate probate, inherited, and trust-owned property decisions.
+              For more detailed local guidance, explore each county page for deeper insight into how {FEATURED_BROKER.role} helps clients navigate probate, inherited, and trust-owned property decisions.
             </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {countyLinks.map((county) => (
@@ -173,7 +173,7 @@ const CitiesWeServe = () => {
                 Discuss a Local Property Transition With Real Property Planning
               </h2>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
-                If you are handling probate property, inherited real estate, trust-owned property, or an estate-related home sale in King County, Snohomish County, Pierce County, or Kitsap County, {FEATURED_BROKER.name} provides experienced guidance grounded in market knowledge, valuation insight, and a practical understanding of important property transitions.
+                If you are handling probate property, inherited real estate, trust-owned property, or an estate-related home sale in King County, Snohomish County, Pierce County, or Kitsap County, {FEATURED_BROKER.role} provides experienced guidance grounded in market knowledge, valuation insight, and a practical understanding of important property transitions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Link to="/contact">

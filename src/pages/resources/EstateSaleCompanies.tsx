@@ -38,7 +38,7 @@ const EstateSaleCompanies = () => (
               Estate sale companies organize, price, and conduct on-site sales of personal property, furniture, collectibles, and household contents. They are often engaged during <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">probate and estate sales</Link> when families need to liquidate the contents of a home before the property is listed or transferred.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              {FEATURED_BROKER.name} works with estate sale companies to coordinate timing between the contents sale and the real estate listing process, ensuring a smooth transition from cleanout to market-ready preparation.
+              {FEATURED_BROKER.Role} works with estate sale companies to coordinate timing between the contents sale and the real estate listing process, ensuring a smooth transition from cleanout to market-ready preparation.
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">

@@ -643,7 +643,7 @@ const AFHROICalculator = () => {
                 }}
               >
                 Estimates are for informational purposes only. Actual returns depend on financing terms, occupancy,
-                staffing costs, regulatory changes, and market conditions. Consult {FEATURED_BROKER.name} for a professional
+                staffing costs, regulatory changes, and market conditions. Consult {FEATURED_BROKER.role} for a professional
                 investment analysis.
               </div>
               <div
@@ -665,7 +665,7 @@ const AFHROICalculator = () => {
                     Ready to analyze a specific deal?
                   </strong>
                   <p style={{ fontSize: 13, color: "#272421", marginTop: 3 }}>
-                    {FEATURED_BROKER.name} · Licensed Broker{SAME_PERSON ? " & Certified Appraiser" : ""} · {FEATURED_BROKER.brokerage} · {FEATURED_BROKER.yearsExperience}+ years AFH experience
+                    {FEATURED_BROKER.Role} · Licensed Broker{SAME_PERSON ? " & Certified Appraiser" : ""} · {FEATURED_BROKER.brokerage} · {FEATURED_BROKER.yearsExperience}+ years AFH experience
                   </p>
                 </div>
                 <button

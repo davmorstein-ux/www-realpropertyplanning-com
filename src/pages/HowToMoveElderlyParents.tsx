@@ -14,7 +14,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const faqs = [
   {
     question: "What should families do with a home when a parent moves into assisted living?",
-    answer: `Families typically need to decide whether to sell the home, rent it, or hold it. In most cases, selling is the practical choice — especially when the home requires maintenance the family cannot manage remotely. ${FEATURED_BROKER.name} helps families evaluate their options and manage the sale when the time is right.`,
+    answer: `Families typically need to decide whether to sell the home, rent it, or hold it. In most cases, selling is the practical choice — especially when the home requires maintenance the family cannot manage remotely. ${FEATURED_BROKER.Role} helps families evaluate their options and manage the sale when the time is right.`,
   },
   {
     question: "Should we sell the house before or after moving a parent into senior housing?",
@@ -22,11 +22,11 @@ const faqs = [
   },
   {
     question: "How long does it take to prepare a home for sale after downsizing?",
-    answer: `Preparation timelines vary depending on the home's condition, how much cleanout is needed, and whether repairs or staging are involved. Many homes can be sale-ready in 3–6 weeks with the right coordination. ${FEATURED_BROKER.name} helps manage this process from start to finish.`,
+    answer: `Preparation timelines vary depending on the home's condition, how much cleanout is needed, and whether repairs or staging are involved. Many homes can be sale-ready in 3–6 weeks with the right coordination. ${FEATURED_BROKER.Role} helps manage this process from start to finish.`,
   },
   {
     question: "Do I need a senior move manager to help with the transition?",
-    answer: `A senior move manager can be a valuable resource — especially when the move involves decades of personal belongings, emotional attachment, or complex logistics. They coordinate packing, sorting, and settling into the new space. ${FEATURED_BROKER.name} works alongside senior move managers to handle the real estate side.`,
+    answer: `A senior move manager can be a valuable resource — especially when the move involves decades of personal belongings, emotional attachment, or complex logistics. They coordinate packing, sorting, and settling into the new space. ${FEATURED_BROKER.Role} works alongside senior move managers to handle the real estate side.`,
   },
   {
     question: "What if siblings disagree about selling a parent's home?",
@@ -139,7 +139,7 @@ const HowToMoveElderlyParents = () => (
               </div>
             </div>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Families navigating senior housing decisions often benefit from working with professionals who understand the local landscape. {FEATURED_BROKER.name} works with families during <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and can connect you with <Link to="/resources/senior-living-communities" className="text-accent hover:text-gold underline underline-offset-4">senior living communities</Link> throughout Washington State.
+              Families navigating senior housing decisions often benefit from working with professionals who understand the local landscape. {FEATURED_BROKER.Role} works with families during <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and can connect you with <Link to="/resources/senior-living-communities" className="text-accent hover:text-gold underline underline-offset-4">senior living communities</Link> throughout Washington State.
             </p>
 
             {/* Section 3 */}
@@ -207,7 +207,7 @@ const HowToMoveElderlyParents = () => (
               A <Link to="/senior-move-managers" className="text-accent hover:text-gold underline underline-offset-4">senior move manager</Link> is a professional who specializes in helping older adults and their families manage the logistics of a residential transition. They handle everything from sorting and packing to coordinating movers, setting up the new living space, and even arranging furniture to feel familiar and comfortable.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Senior move managers are especially valuable when adult children live out of state, when the timeline is tight, or when the emotional weight of the move makes it difficult for the family to manage alone. {FEATURED_BROKER.name} works with senior move managers regularly and can coordinate the move timeline alongside the property sale.
+              Senior move managers are especially valuable when adult children live out of state, when the timeline is tight, or when the emotional weight of the move makes it difficult for the family to manage alone. {FEATURED_BROKER.Role} works with senior move managers regularly and can coordinate the move timeline alongside the property sale.
             </p>
 
             {/* Section 6 */}
@@ -235,7 +235,7 @@ const HowToMoveElderlyParents = () => (
               ))}
             </ul>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              {FEATURED_BROKER.name} coordinates with <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link> to handle these steps efficiently. {FEATURED_BROKER.name} evaluates which improvements are worth the investment based on current market conditions — not guesswork — so families don't overspend on unnecessary upgrades.
+              {FEATURED_BROKER.Role} coordinates with <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link> to handle these steps efficiently. {FEATURED_BROKER.Role} evaluates which improvements are worth the investment based on current market conditions — not guesswork — so families don't overspend on unnecessary upgrades.
             </p>
 
             {/* Section 7 */}
@@ -246,7 +246,7 @@ const HowToMoveElderlyParents = () => (
               Selling a home during a senior transition requires a real estate professional who understands the unique circumstances involved. These are not typical real estate transactions — they involve emotional timelines, family dynamics, and often multiple decision-makers.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              {FEATURED_BROKER.name} provides experienced guidance through the entire sale process. {FEATURED_BROKER.name} brings over 20 years of dual expertise as a licensed real estate broker and certified appraiser, offering families honest valuation, strategic pricing, and a clear understanding of <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">how the process works</Link> from listing through closing.
+              {FEATURED_BROKER.Role} provides experienced guidance through the entire sale process. {FEATURED_BROKER.Role} brings over 20 years of dual expertise as a licensed real estate broker and certified appraiser, offering families honest valuation, strategic pricing, and a clear understanding of <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">how the process works</Link> from listing through closing.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
               Understanding <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why valuation matters</Link> is especially important in these situations, where accurate pricing protects the family's financial interests and avoids unnecessary delays.
@@ -274,7 +274,7 @@ const HowToMoveElderlyParents = () => (
               ))}
             </ul>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              {FEATURED_BROKER.name} works with <Link to="/resources/probate-estate-attorneys" className="text-accent hover:text-gold underline underline-offset-4">probate and estate attorneys</Link> and <Link to="/resources/cpas-financial-advisors" className="text-accent hover:text-gold underline underline-offset-4">CPAs and financial advisors</Link> to ensure the property side of the transition is handled in coordination with the family's broader legal and financial plan.
+              {FEATURED_BROKER.Role} works with <Link to="/resources/probate-estate-attorneys" className="text-accent hover:text-gold underline underline-offset-4">probate and estate attorneys</Link> and <Link to="/resources/cpas-financial-advisors" className="text-accent hover:text-gold underline underline-offset-4">CPAs and financial advisors</Link> to ensure the property side of the transition is handled in coordination with the family's broader legal and financial plan.
             </p>
 
             {/* Conclusion */}
@@ -286,7 +286,7 @@ const HowToMoveElderlyParents = () => (
                 Moving an elderly parent out of their home is one of the most significant transitions a family will face. It takes time, compassion, and the right team of professionals working together.
               </p>
               <p className="text-muted-foreground text-base leading-relaxed mb-4">
-                {FEATURED_BROKER.name} provides experienced, thoughtful support for families throughout Washington State who are navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and the real estate decisions that come with them. Whether you're just beginning to think about a move or already coordinating a transition, Real Property Planning is here to help.
+                {FEATURED_BROKER.Role} provides experienced, thoughtful support for families throughout Washington State who are navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and the real estate decisions that come with them. Whether you're just beginning to think about a move or already coordinating a transition, Real Property Planning is here to help.
               </p>
               <p className="text-muted-foreground text-base leading-relaxed">
                 <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for a confidential conversation about your family's situation.

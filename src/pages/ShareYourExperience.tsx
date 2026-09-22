@@ -167,7 +167,7 @@ const ShareYourExperience = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Share Your Experience | Real Property Planning"
-        description={`Tell us how ${FEATURED_BROKER.name} helped. Your words may be published on our testimonials page, only with your permission and only as you asked to be credited.`}
+        description={`Tell us how ${FEATURED_BROKER.role} helped. Your words may be published on our testimonials page, only with your permission and only as you asked to be credited.`}
         canonical="https://realpropertyplanning.com/share-your-experience"
       />
       <BreadcrumbSchema

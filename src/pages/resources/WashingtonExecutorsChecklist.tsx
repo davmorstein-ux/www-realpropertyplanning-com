@@ -161,7 +161,7 @@ const WashingtonExecutorsChecklist = () => {
                 Need help navigating the real estate side of an estate?
               </h2>
               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-                {FEATURED_BROKER.name} works with executors, trustees, and families to make informed property decisions with clarity, coordination, and structured, evidence-based strategy.
+                {FEATURED_BROKER.Role} works with executors, trustees, and families to make informed property decisions with clarity, coordination, and structured, evidence-based strategy.
               </p>
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-8 py-4 h-auto text-base tracking-wide">

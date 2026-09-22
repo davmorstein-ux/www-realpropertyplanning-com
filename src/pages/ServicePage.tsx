@@ -7,7 +7,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 // Service-specific content that makes each page unique
 const serviceContent: Record<string, { introText: string; situations: string[]; benefits: string[] }> = {
   "probate-estate-sales": {
-    introText: `${FEATURED_BROKER.name} provides experienced guidance for executors, attorneys, and families navigating probate and estate property sales throughout Washington State. Real Property Planning combines over 20 years of experience as a licensed broker and state-certified residential appraiser to help clients approach these complex transactions with clarity, realistic expectations, and structured, evidence-based strategy.`,
+    introText: `${FEATURED_BROKER.Role} provides experienced guidance for executors, attorneys, and families navigating probate and estate property sales throughout Washington State. Real Property Planning combines over 20 years of experience as a licensed broker and state-certified residential appraiser to help clients approach these complex transactions with clarity, realistic expectations, and structured, evidence-based strategy.`,
     situations: [
       "A loved one has passed and the estate includes real property that needs to be sold",
       "An executor or personal representative needs guidance on pricing, preparation, and sale timeline",
@@ -26,7 +26,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "senior-transitions": {
-    introText: `Real Property Planning supports seniors and their families through the sale of a longtime home — one of the most significant transitions a family can face. ${FEATURED_BROKER.name} provides patient, experienced guidance that addresses the practical, financial, and emotional aspects of selling a family home during a senior transition.`,
+    introText: `Real Property Planning supports seniors and their families through the sale of a longtime home — one of the most significant transitions a family can face. ${FEATURED_BROKER.Role} provides patient, experienced guidance that addresses the practical, financial, and emotional aspects of selling a family home during a senior transition.`,
     situations: [
       "A senior parent is moving to assisted living, independent living, or a family member's home",
       "The family home needs significant preparation before it can be listed for sale",
@@ -45,7 +45,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "downsizing-services": {
-    introText: `${FEATURED_BROKER.name} helps homeowners who are ready to simplify their living situation — whether moving to a smaller home, a retirement community, or closer to family. ${FEATURED_BROKER.name} provides practical guidance on preparing, pricing, and selling your current home while coordinating the timeline with your next chapter.`,
+    introText: `${FEATURED_BROKER.Role} helps homeowners who are ready to simplify their living situation — whether moving to a smaller home, a retirement community, or closer to family. ${FEATURED_BROKER.Role} provides practical guidance on preparing, pricing, and selling your current home while coordinating the timeline with your next chapter.`,
     situations: [
       "You're ready to move to a smaller, more manageable home",
       "You're relocating closer to family or to a retirement community",
@@ -64,7 +64,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "executor-support": {
-    introText: `${FEATURED_BROKER.name} provides executors and personal representatives with clear, experienced guidance on managing and selling estate real property. ${FEATURED_BROKER.name} understands the responsibilities executors face and provides the practical support, communication, and valuation expertise that helps them fulfill their duties with confidence.`,
+    introText: `${FEATURED_BROKER.Role} provides executors and personal representatives with clear, experienced guidance on managing and selling estate real property. ${FEATURED_BROKER.Role} understands the responsibilities executors face and provides the practical support, communication, and valuation expertise that helps them fulfill their duties with confidence.`,
     situations: [
       "You've been named executor and aren't sure where to start with the property",
       "The estate property needs assessment, cleanout, or repairs before it can be sold",
@@ -83,7 +83,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "attorney-fiduciary-support": {
-    introText: `${FEATURED_BROKER.name} serves as a reliable real estate resource for attorneys and fiduciaries who need experienced, communicative support on estate, trust, and probate property matters. ${FEATURED_BROKER.name}'s dual credentials as a licensed broker and certified appraiser provide the valuation perspective and professional communication that legal and fiduciary professionals expect.`,
+    introText: `${FEATURED_BROKER.Role} serves as a reliable real estate resource for attorneys and fiduciaries who need experienced, communicative support on estate, trust, and probate property matters. ${FEATURED_BROKER.Role}'s dual credentials as a licensed broker and certified appraiser provide the valuation perspective and professional communication that legal and fiduciary professionals expect.`,
     situations: [
       "You represent an estate that includes real property requiring sale",
       "A trustee client needs guidance on trust-owned property valuation and sale strategy",
@@ -102,7 +102,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "valuation-guidance": {
-    introText: `${FEATURED_BROKER.name} provides evidence-based pricing insight for inherited, estate, and transition-related property decisions where pricing accuracy is critical. As both a licensed Washington real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} brings a unique combination of market expertise and formal valuation training to every client engagement.`,
+    introText: `${FEATURED_BROKER.Role} provides evidence-based pricing insight for inherited, estate, and transition-related property decisions where pricing accuracy is critical. As both a licensed Washington real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} brings a unique combination of market expertise and formal valuation training to every client engagement.`,
     situations: [
       "You need to understand a property's realistic value for estate settlement or tax purposes",
       "The property has condition issues that make automated valuations unreliable",
@@ -121,7 +121,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "preparing-home-for-sale": {
-    introText: `${FEATURED_BROKER.name} coordinates property preparation — from cleanout and repairs to staging and presentation — so the home is positioned for the best possible outcome. ${FEATURED_BROKER.name} helps clients make smart decisions about what to fix, what to skip, and how to present the property to attract the right buyers at the right price.`,
+    introText: `${FEATURED_BROKER.Role} coordinates property preparation — from cleanout and repairs to staging and presentation — so the home is positioned for the best possible outcome. ${FEATURED_BROKER.Role} helps clients make smart decisions about what to fix, what to skip, and how to present the property to attract the right buyers at the right price.`,
     situations: [
       "An inherited or estate property needs cleanout and preparation before listing",
       "A longtime family home has accumulated belongings and deferred maintenance",
@@ -140,7 +140,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "divorce-related-home-sales": {
-    introText: `Real Property Planning assists with the sale of marital property during divorce proceedings, providing the discretion, objectivity, and clear communication that these sensitive situations require. ${FEATURED_BROKER.name} works with divorcing parties and their attorneys to manage the sale process fairly and efficiently.`,
+    introText: `Real Property Planning assists with the sale of marital property during divorce proceedings, providing the discretion, objectivity, and clear communication that these sensitive situations require. ${FEATURED_BROKER.Role} works with divorcing parties and their attorneys to manage the sale process fairly and efficiently.`,
     situations: [
       "A divorce agreement requires the sale of the marital home",
       "Both parties need an objective assessment of the property's value",
@@ -159,7 +159,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "trust-estate-property-sales": {
-    introText: `Real Property Planning assists trustees and fiduciaries with the valuation, preparation, and sale of trust-owned residential real estate. ${FEATURED_BROKER.name} understands the specific responsibilities trustees face and provides the documentation, communication, and pricing expertise that trust administration requires.`,
+    introText: `Real Property Planning assists trustees and fiduciaries with the valuation, preparation, and sale of trust-owned residential real estate. ${FEATURED_BROKER.Role} understands the specific responsibilities trustees face and provides the documentation, communication, and pricing expertise that trust administration requires.`,
     situations: [
       "A trust document requires the sale of real property",
       "A trustee needs realistic valuation guidance for trust accounting purposes",

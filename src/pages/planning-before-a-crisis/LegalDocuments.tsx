@@ -54,7 +54,7 @@ const LegalDocuments = () => (
 
     <SubH2>Finding the Right Estate Planning Attorney</SubH2>
     <P>
-      The right professional to help with all four of these documents is a Washington State estate planning attorney. {FEATURED_BROKER.name} works with families and professionals across Washington State and can connect you with attorneys who specialize in exactly this kind of planning.
+      The right professional to help with all four of these documents is a Washington State estate planning attorney. {FEATURED_BROKER.Role} works with families and professionals across Washington State and can connect you with attorneys who specialize in exactly this kind of planning.
     </P>
     <P>
       Once the legal documents are in place, the real estate side of planning becomes much smoother — because the right people have the authority to act when the time comes.

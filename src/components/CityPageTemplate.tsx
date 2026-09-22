@@ -108,7 +108,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
 
       <DirectAnswerBlock
         question={city.aeoQuestion || `How do probate and estate property sales work in ${city.name}?`}
-        answer={city.aeoAnswer || `${FEATURED_BROKER.name} provides hands-on guidance for executors, trustees, attorneys, and families selling property in ${city.name}. Each property is carefully evaluated, and the full sale process is coordinated with licensed broker and certified appraiser expertise.`}
+        answer={city.aeoAnswer || `${FEATURED_BROKER.Role} provides hands-on guidance for executors, trustees, attorneys, and families selling property in ${city.name}. Each property is carefully evaluated, and the full sale process is coordinated with licensed broker and certified appraiser expertise.`}
         supportBullets={city.aeoSupportBullets}
         supportFaqs={city.aeoSupportFaqs}
         supportSteps={!city.aeoSupportBullets && !city.aeoSupportFaqs ? [
@@ -156,7 +156,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         const ctaCopy: Record<string, { h2: string; body: string; cta: string }> = {
           premium: {
             h2: `Considering an Estate Sale on a ${city.name} Property?`,
-            body: `Send a brief situation overview — the home, who has authority, and what's already been touched. ${FEATURED_BROKER.name} typically responds within one business day with a recommended next step.`,
+            body: `Send a brief situation overview — the home, who has authority, and what's already been touched. ${FEATURED_BROKER.Role} typically responds within one business day with a recommended next step.`,
             cta: `Discuss a ${city.name} Estate`,
           },
           urban: {
@@ -166,7 +166,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
           },
           suburban: {
             h2: `Working Through a Family Home in ${city.name}?`,
-            body: `Most ${city.name} families call before they have a plan — just a situation. That's the right time. ${FEATURED_BROKER.name}'ll talk through where things stand and what makes sense first.`,
+            body: `Most ${city.name} families call before they have a plan — just a situation. That's the right time. ${FEATURED_BROKER.Role}'ll talk through where things stand and what makes sense first.`,
             cta: `Talk Through a ${city.name} Sale`,
           },
           waterfront: {

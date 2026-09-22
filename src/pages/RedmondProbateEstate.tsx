@@ -18,32 +18,32 @@ const faqs = [
   {
     question: "How does selling an inherited home in Redmond work?",
     answer:
-      `Selling inherited property in Redmond typically requires legal authority through probate or trust administration before the home can be listed. ${FEATURED_BROKER.name} coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout.`,
+      `Selling inherited property in Redmond typically requires legal authority through probate or trust administration before the home can be listed. ${FEATURED_BROKER.Role} coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout.`,
   },
   {
     question: "What should I do first with an inherited Redmond property?",
     answer:
-      `Secure the property, review the legal authority with the estate attorney, and get a realistic assessment of the home's condition and current market value. ${FEATURED_BROKER.firstName} can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.`,
+      `Secure the property, review the legal authority with the estate attorney, and get a realistic assessment of the home's condition and current market value. ${FEATURED_BROKER.Role} can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.`,
   },
   {
-    question: `How does ${FEATURED_BROKER.name}'s appraisal background benefit Redmond property sales?`,
+    question: `How does ${FEATURED_BROKER.role}'s appraisal background benefit Redmond property sales?`,
     answer:
-      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.name} provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis — not automated estimates. In Redmond's competitive market, this dual perspective helps protect families from costly pricing mistakes.`,
+      `As both a licensed Washington State real estate broker and a state-certified residential appraiser, ${FEATURED_BROKER.role} provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis — not automated estimates. In Redmond's competitive market, this dual perspective helps protect families from costly pricing mistakes.`,
   },
   {
     question: "Can you get help if I'm relocating and need to sell an inherited property?",
     answer:
-      `Yes. Relocation-driven property decisions are common in Redmond. Whether you're moving into or out of the area, ${FEATURED_BROKER.name} helps coordinate timing, preparation, and sale strategy so the property process aligns with your broader transition — reducing stress and keeping things organized.`,
+      `Yes. Relocation-driven property decisions are common in Redmond. Whether you're moving into or out of the area, ${FEATURED_BROKER.role} helps coordinate timing, preparation, and sale strategy so the property process aligns with your broader transition — reducing stress and keeping things organized.`,
   },
   {
     question: "What if multiple family members are involved in the decision?",
     answer:
-      `Multi-party situations are common in estate sales. ${FEATURED_BROKER.name} provides clear, documented communication so all decision-makers — whether local or out of state — have the same information. Pricing grounded in certified appraisal methodology also helps establish defensible value when consensus is needed.`,
+      `Multi-party situations are common in estate sales. ${FEATURED_BROKER.Role} provides clear, documented communication so all decision-makers — whether local or out of state — have the same information. Pricing grounded in certified appraisal methodology also helps establish defensible value when consensus is needed.`,
   },
   {
     question: "How long does it take to sell an estate property in Redmond?",
     answer:
-      `Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Redmond homes typically sell quickly given the area's strong demand. ${FEATURED_BROKER.name} helps set realistic expectations and builds a plan around your specific situation.`,
+      `Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Redmond homes typically sell quickly given the area's strong demand. ${FEATURED_BROKER.Role} helps set realistic expectations and builds a plan around your specific situation.`,
   },
 ];
 
@@ -158,7 +158,7 @@ const RedmondProbateEstate = () => {
               Timing and preparation are especially important in Redmond. A well-prepared home positioned correctly can attract competitive interest, while a property that enters the market without thoughtful pricing or preparation may underperform — costing families time and money during an already stressful period.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.name} brings a valuation-first perspective that provides defensible pricing, organized communication, and greater confidence for families navigating property decisions during periods of change.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, {FEATURED_BROKER.role} brings a valuation-first perspective that provides defensible pricing, organized communication, and greater confidence for families navigating property decisions during periods of change.
             </p>
           </div>
         </div>
@@ -183,7 +183,7 @@ const RedmondProbateEstate = () => {
               Redmond families often face property decisions during broader life transitions — a career-driven relocation, a parent moving into care, or a family restructuring after a loss. When the property decision is just one part of a larger change, having a reliable resource to coordinate the details makes the process far more manageable.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              {FEATURED_BROKER.name} works with families to align property timing with relocation schedules, care transitions, and multi-party decision-making. {FEATURED_BROKER.pronoun.Subject} keeps all stakeholders informed with clear, consistent communication — whether they are local, across the state, or out of the country.
+              {FEATURED_BROKER.Role} works with families to align property timing with relocation schedules, care transitions, and multi-party decision-making. {FEATURED_BROKER.pronoun.Subject} keeps all stakeholders informed with clear, consistent communication — whether they are local, across the state, or out of the country.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is simple: reduce uncertainty, stay organized, and help the family move forward at a pace that works for their situation.
@@ -206,7 +206,7 @@ const RedmondProbateEstate = () => {
               {[
                 {
                   title: "Understand Your Situation",
-                  desc: `${FEATURED_BROKER.name} starts with a confidential conversation to understand who's involved, what authority exists, what the timeline looks like, and what matters most to the family.`,
+                  desc: `${FEATURED_BROKER.Role} starts with a confidential conversation to understand who's involved, what authority exists, what the timeline looks like, and what matters most to the family.`,
                 },
                 {
                   title: "Review the Property and Context",

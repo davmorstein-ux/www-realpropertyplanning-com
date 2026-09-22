@@ -45,36 +45,36 @@ const services = [
     title: "Accurate Market Valuation",
     description: (
       <>
-        A shared, objective market value is often the most important tool for moving a family law property matter forward. {FEATURED_BROKER.firstName} provides a condition-adjusted, comparable-supported market analysis — not a listing agent's pitch — that both parties can evaluate from the same factual foundation.
+        A shared, objective market value is often the most important tool for moving a family law property matter forward. {FEATURED_BROKER.Role} provides a condition-adjusted, comparable-supported market analysis — not a listing agent's pitch — that both parties can evaluate from the same factual foundation.
       </>
     ),
   },
   {
     title: "Neutral, Professional Coordination",
-    description: `${FEATURED_BROKER.firstName}'s role is not to represent either party's interests — it's to handle the property professionally and move the process forward. He maintains clear, consistent communication with both parties (or through their respective counsel) and manages the sale with the goal of a fair outcome, not a fast commission.`,
+    description: `${FEATURED_BROKER.Role}'s role is not to represent either party's interests — it's to handle the property professionally and move the process forward. He maintains clear, consistent communication with both parties (or through their respective counsel) and manages the sale with the goal of a fair outcome, not a fast commission.`,
   },
   {
     title: "Structured Process Guidance",
-    description: `Many clients navigating family law situations have never managed a home sale on their own. ${FEATURED_BROKER.firstName} explains each step clearly, manages the preparation and listing process, and provides regular updates so clients always know where things stand.`,
+    description: `Many clients navigating family law situations have never managed a home sale on their own. ${FEATURED_BROKER.Role} explains each step clearly, manages the preparation and listing process, and provides regular updates so clients always know where things stand.`,
   },
   {
     title: "Calm, Consistent Communication",
-    description: `In situations where communication between parties is strained, ${FEATURED_BROKER.firstName}'s structured approach to updates — consistent, factual, and professionally neutral — reduces opportunities for misunderstanding and conflict.`,
+    description: `In situations where communication between parties is strained, ${FEATURED_BROKER.role}'s structured approach to updates — consistent, factual, and professionally neutral — reduces opportunities for misunderstanding and conflict.`,
   },
 ];
 
 const faqs = [
   {
-    question: `Can ${FEATURED_BROKER.name} work with both parties in a family law property situation?`,
-    answer: `Yes — ${FEATURED_BROKER.firstName}'s role is explicitly neutral. He provides objective market analysis and manages the sale process professionally, without advocacy for either party. Communication protocols can be structured to route through respective counsel if that is preferred.`,
+    question: `Can ${FEATURED_BROKER.role} work with both parties in a family law property situation?`,
+    answer: `Yes — ${FEATURED_BROKER.Role}'s role is explicitly neutral. He provides objective market analysis and manages the sale process professionally, without advocacy for either party. Communication protocols can be structured to route through respective counsel if that is preferred.`,
   },
   {
     question: "How does valuation work when parties disagree on what the home is worth?",
-    answer: `${FEATURED_BROKER.firstName} provides a condition-adjusted, comparable-supported market analysis grounded in his certified appraisal training. Because the analysis is methodology-based rather than opinion-based, it gives both parties and their attorneys a shared factual foundation — which often resolves valuation disputes more efficiently than competing agent opinions.`,
+    answer: `${FEATURED_BROKER.Role} provides a condition-adjusted, comparable-supported market analysis grounded in his certified appraisal training. Because the analysis is methodology-based rather than opinion-based, it gives both parties and their attorneys a shared factual foundation — which often resolves valuation disputes more efficiently than competing agent opinions.`,
   },
   {
     question: "Can the home be sold during active legal proceedings?",
-    answer: `In many cases, yes — though the specifics depend on court orders, agreements between parties, and the legal structure of the proceeding. ${FEATURED_BROKER.firstName} works in alignment with whatever legal requirements are in place and coordinates with both attorneys to ensure the real estate process supports rather than complicates the legal timeline.`,
+    answer: `In many cases, yes — though the specifics depend on court orders, agreements between parties, and the legal structure of the proceeding. ${FEATURED_BROKER.Role} works in alignment with whatever legal requirements are in place and coordinates with both attorneys to ensure the real estate process supports rather than complicates the legal timeline.`,
   },
 ];
 
@@ -82,7 +82,7 @@ const ForFamilyLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Family Law Attorneys in Washington State | Real Property Planning"
-      description={`${FEATURED_BROKER.name} — a Washington State licensed real estate broker and certified residential appraiser — provides experienced real estate support for family law attorneys and their clients navigating property decisions in Washington State.`}
+      description={`${FEATURED_BROKER.Role} — a Washington State licensed real estate broker and certified residential appraiser — provides experienced real estate support for family law attorneys and their clients navigating property decisions in Washington State.`}
     />
     <BreadcrumbSchema
       items={[
@@ -104,7 +104,7 @@ const ForFamilyLawAttorneys = () => (
             Family law matters involving real property are rarely just about the property. They're about the life the property represents, the disagreements it surfaces, and the financial reality it creates for people who are already navigating one of the hardest transitions of their lives. What clients need in those moments is not pressure — it's clarity. Not a rushed listing — it's an honest assessment of what the home is worth and what their realistic options are.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            {FEATURED_BROKER.name} works alongside family law attorneys throughout Washington State to provide reliable valuation, structured guidance, and a calm, professional approach that reduces conflict rather than adding to it.
+            {FEATURED_BROKER.Role} works alongside family law attorneys throughout Washington State to provide reliable valuation, structured guidance, and a calm, professional approach that reduces conflict rather than adding to it.
           </p>
         </div>
       </div>
@@ -137,7 +137,7 @@ const ForFamilyLawAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-10">
-            How {FEATURED_BROKER.name} Supports Your Clients
+            How {FEATURED_BROKER.roleTitle} Supports Your Clients
           </h2>
           <div className="grid gap-5">
             {services.map((s, i) => (
@@ -170,7 +170,7 @@ const ForFamilyLawAttorneys = () => (
             If you have a client navigating a family law matter that involves real property in Washington State, a brief conversation is usually the most efficient starting point.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            {FEATURED_BROKER.firstName} works collaboratively with family law attorneys throughout the Puget Sound area — providing the neutral, structured real estate support that helps complex situations move forward.
+            {FEATURED_BROKER.Role} works collaboratively with family law attorneys throughout the Puget Sound area — providing the neutral, structured real estate support that helps complex situations move forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+12069003015">

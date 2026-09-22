@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "How do I find out about new AFH listings in Marysville before they're widely marketed?",
     answer:
-      `Reach out directly — ${FEATURED_BROKER.name} tracks Marysville and broader Snohomish County AFH inventory closely and can notify you as soon as a matching property comes to market.`,
+      `Reach out directly — ${FEATURED_BROKER.Role} tracks Marysville and broader Snohomish County AFH inventory closely and can notify you as soon as a matching property comes to market.`,
   },
 ];
 

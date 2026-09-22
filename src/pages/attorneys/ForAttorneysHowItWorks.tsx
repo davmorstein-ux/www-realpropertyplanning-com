@@ -14,12 +14,12 @@ const STEPS: { n: string; title: string; body: string }[] = [
   {
     n: "1",
     title: "Initial contact",
-    body: `${FEATURED_BROKER.name} responds to your referral within one business day, confirms scope with you in writing, and identifies the single point of contact for the file.`,
+    body: `${FEATURED_BROKER.Role} responds to your referral within one business day, confirms scope with you in writing, and identifies the single point of contact for the file.`,
   },
   {
     n: "2",
     title: "Property assessment",
-    body: `${FEATURED_BROKER.name} conducts an on-site condition review and produces a date-of-death or current-market valuation supported by appraisal-grade analysis — defensible if the file ever requires it.`,
+    body: `${FEATURED_BROKER.Role} conducts an on-site condition review and produces a date-of-death or current-market valuation supported by appraisal-grade analysis — defensible if the file ever requires it.`,
   },
   {
     n: "3",
@@ -29,12 +29,12 @@ const STEPS: { n: string; title: string; body: string }[] = [
   {
     n: "4",
     title: "Listing or valuation delivery",
-    body: `Where a sale is the path, ${FEATURED_BROKER.name} manages preparation, pricing, marketing, offers, and negotiation. Where only a valuation is required, the report is delivered in a format suitable for court, IRS, or beneficiary use.`,
+    body: `Where a sale is the path, ${FEATURED_BROKER.role} manages preparation, pricing, marketing, offers, and negotiation. Where only a valuation is required, the report is delivered in a format suitable for court, IRS, or beneficiary use.`,
   },
   {
     n: "5",
     title: "Closing and reporting back to attorney",
-    body: `${FEATURED_BROKER.name} manages escrow through closing and provides a written close-out summary — net proceeds, key dates, signed documents, and any items the file should retain.`,
+    body: `${FEATURED_BROKER.Role} manages escrow through closing and provides a written close-out summary — net proceeds, key dates, signed documents, and any items the file should retain.`,
   },
 ];
 
@@ -73,7 +73,7 @@ const ForAttorneysHowItWorks = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            This page is for Washington State estate and probate attorneys who refer clients for real estate services. It walks through exactly what happens after the referral, what {FEATURED_BROKER.name} handles on your behalf, and how to send a file over.
+            This page is for Washington State estate and probate attorneys who refer clients for real estate services. It walks through exactly what happens after the referral, what {FEATURED_BROKER.role} handles on your behalf, and how to send a file over.
           </p>
           </div>
         </div>
@@ -117,7 +117,7 @@ const ForAttorneysHowItWorks = () => (
 
       {/* Section 2 — What a licensed broker handles.
           NOT "what we handle": RPP is a neutral hub and does not perform
-          brokerage work. Attribution goes to {FEATURED_BROKER.name} through eXp Realty,
+          brokerage work. Attribution goes to {FEATURED_BROKER.role} through eXp Realty,
           never to the hub. */}
       <section className="py-12 md:py-16 bg-[#FAF7EE]">
         <div className="container px-6 lg:px-8">
@@ -173,7 +173,7 @@ const ForAttorneysHowItWorks = () => (
               How to Make a Referral
             </h2>
             <p className="text-[#39332d] text-lg md:text-xl leading-[1.8] mb-8">
-              Send a brief overview by phone or email. {FEATURED_BROKER.name} responds within one business day.
+              Send a brief overview by phone or email. {FEATURED_BROKER.Role} responds within one business day.
             </p>
 
             <div className="space-y-5 mb-8">

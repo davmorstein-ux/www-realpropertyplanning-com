@@ -24,7 +24,7 @@ const steps = [
     number: "4",
     title: "Execution & Coordination",
     description:
-      `From here, ${FEATURED_BROKER.name} handles the day-to-day — coordinating vendors, managing the listing, communicating with attorneys and family members, and keeping things moving. You stay informed without having to manage every detail.`,
+      `From here, ${FEATURED_BROKER.role} handles the day-to-day — coordinating vendors, managing the listing, communicating with attorneys and family members, and keeping things moving. You stay informed without having to manage every detail.`,
   },
 ];
 

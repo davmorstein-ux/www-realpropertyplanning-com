@@ -14,11 +14,11 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const whyReferCards = [
   {
     heading: "Evidence-Based Guidance",
-    text: `As both a real estate broker and Washington state certified real estate appraiser, ${FEATURED_BROKER.name} brings added perspective to pricing, property condition, marketability, and sale strategy.`,
+    text: `As both a real estate broker and Washington state certified real estate appraiser, ${FEATURED_BROKER.role} brings added perspective to pricing, property condition, marketability, and sale strategy.`,
   },
   {
     heading: "Experienced With Sensitive Transitions",
-    text: `Probate, inherited property, trust sales, and estate-related transitions often require discretion, patience, and a measured approach. ${FEATURED_BROKER.name} helps clients move forward with clarity and professionalism.`,
+    text: `Probate, inherited property, trust sales, and estate-related transitions often require discretion, patience, and a measured approach. ${FEATURED_BROKER.Role} helps clients move forward with clarity and professionalism.`,
   },
   {
     heading: "Reliable Communication",
@@ -26,26 +26,26 @@ const whyReferCards = [
   },
   {
     heading: "Local Market Knowledge",
-    text: `${FEATURED_BROKER.name} serves King County, Snohomish County, Pierce County, and Kitsap County with local insight that helps inform value, preparation strategy, and market positioning across different property types and communities.`,
+    text: `${FEATURED_BROKER.Role} serves King County, Snohomish County, Pierce County, and Kitsap County with local insight that helps inform value, preparation strategy, and market positioning across different property types and communities.`,
   },
 ];
 
 const howWeWorkBlocks = [
   {
     heading: "Clear Real Estate Guidance",
-    text: `${FEATURED_BROKER.name} helps clients and professional advisors understand property condition, likely market position, preparation options, pricing considerations, and the practical steps involved in bringing real estate to market.`,
+    text: `${FEATURED_BROKER.Role} helps clients and professional advisors understand property condition, likely market position, preparation options, pricing considerations, and the practical steps involved in bringing real estate to market.`,
   },
   {
     heading: "Appraisal-Grounded Perspective",
-    text: `As both a real estate broker and Washington state certified real estate appraiser, ${FEATURED_BROKER.name} brings added perspective to questions of value, marketability, and sale strategy during estate-related property transitions.`,
+    text: `As both a real estate broker and Washington state certified real estate appraiser, ${FEATURED_BROKER.role} brings added perspective to questions of value, marketability, and sale strategy during estate-related property transitions.`,
   },
   {
     heading: "Coordination With Professional Advisors",
-    text: `${FEATURED_BROKER.name} works alongside attorneys, fiduciaries, trustees, and other advisors by providing real-estate-related insight, communication, and follow-through within the scope of its professional role.`,
+    text: `${FEATURED_BROKER.Role} works alongside attorneys, fiduciaries, trustees, and other advisors by providing real-estate-related insight, communication, and follow-through within the scope of its professional role.`,
   },
   {
     heading: "Support for Executors and Families",
-    text: `Executors, personal representatives, trustees, heirs, and family members are often navigating unfamiliar responsibilities. ${FEATURED_BROKER.name} helps bring order, clarity, and a more structured process to the real estate side of those decisions.`,
+    text: `Executors, personal representatives, trustees, heirs, and family members are often navigating unfamiliar responsibilities. ${FEATURED_BROKER.Role} helps bring order, clarity, and a more structured process to the real estate side of those decisions.`,
   },
   {
     heading: "Focus on Important Property Transitions",
@@ -53,7 +53,7 @@ const howWeWorkBlocks = [
   },
   {
     heading: "Experience Across Washington State",
-    text: `Real Property Planning's guides cover all of Washington State, and its featured broker's experience is deepest in King, Snohomish, Pierce, and Kitsap Counties. For property outside Washington, ${FEATURED_BROKER.name} can connect families with a trusted broker anywhere in the country through ${FEATURED_BROKER.brokerage}'s nationwide network.`,
+    text: `Real Property Planning's guides cover all of Washington State, and its featured broker's experience is deepest in King, Snohomish, Pierce, and Kitsap Counties. For property outside Washington, ${FEATURED_BROKER.role} can connect families with a trusted broker anywhere in the country through ${FEATURED_BROKER.brokerage}'s nationwide network.`,
   },
 ];
 
@@ -75,7 +75,7 @@ const situations = [
 const differentiators = [
   {
     heading: "Over 20 Years of Real Estate Experience",
-    text: `${FEATURED_BROKER.name} brings more than two decades of experience helping clients make informed real estate decisions across changing markets, property types, and life transitions.`,
+    text: `${FEATURED_BROKER.Role} brings more than two decades of experience helping clients make informed real estate decisions across changing markets, property types, and life transitions.`,
   },
   {
     heading: "Brokerage Expertise Combined With Valuation Insight",
@@ -118,7 +118,7 @@ const AttorneyReferral = () => {
             Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with over 20 years of experience helping clients make informed decisions about important property transitions throughout Washington State.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            {FEATURED_BROKER.name}'s work is focused on inherited homes, probate property, trust-owned real estate, estate-related sales, and situations where valuation insight, local market knowledge, communication, and practical coordination matter. {FEATURED_BROKER.pronoun.Subject} works alongside attorneys and related professionals as a real estate resource to help clients move forward with greater clarity, stronger preparation, and a more organized sale strategy.
+            {FEATURED_BROKER.Role}'s work is focused on inherited homes, probate property, trust-owned real estate, estate-related sales, and situations where valuation insight, local market knowledge, communication, and practical coordination matter. {FEATURED_BROKER.pronoun.Subject} works alongside attorneys and related professionals as a real estate resource to help clients move forward with greater clarity, stronger preparation, and a more organized sale strategy.
           </p>
           </div>
         </div>
@@ -167,7 +167,7 @@ const AttorneyReferral = () => {
               How Real Property Planning Works With Attorneys, Executors, Trustees, and Families
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. {FEATURED_BROKER.name} works as a real estate and valuation resource to help bring structure, market clarity, and experienced guidance to the real-property side of these matters throughout Washington State.
+              Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. {FEATURED_BROKER.Role} works as a real estate and valuation resource to help bring structure, market clarity, and experienced guidance to the real-property side of these matters throughout Washington State.
             </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {howWeWorkBlocks.map((block, index) => (
@@ -199,7 +199,7 @@ const AttorneyReferral = () => {
               Situations Where Real Property Planning Can Help
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Not every property transition follows the same path. {FEATURED_BROKER.name} helps clients and referring professionals navigate a wide range of real-estate-related situations connected to probate, trusts, inherited ownership, and estate settlement.
+              Not every property transition follows the same path. {FEATURED_BROKER.Role} helps clients and referring professionals navigate a wide range of real-estate-related situations connected to probate, trusts, inherited ownership, and estate settlement.
             </p>
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-10">
               {situations.map((situation, index) => (
@@ -210,7 +210,7 @@ const AttorneyReferral = () => {
               ))}
             </div>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
-              Whether the property is a longtime family home, an outdated inherited residence, a trust-owned property, or an estate asset that needs to be evaluated and prepared for sale, {FEATURED_BROKER.name} helps clients move from uncertainty toward a more informed and organized process.
+              Whether the property is a longtime family home, an outdated inherited residence, a trust-owned property, or an estate asset that needs to be evaluated and prepared for sale, {FEATURED_BROKER.role} helps clients move from uncertainty toward a more informed and organized process.
             </p>
           </div>
         </div>
@@ -242,7 +242,7 @@ const AttorneyReferral = () => {
               ))}
             </div>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-8">
-              For attorneys, fiduciaries, executors, trustees, and families seeking a knowledgeable real estate resource in King County, Snohomish County, Pierce County, or Kitsap County, {FEATURED_BROKER.name} offers experience that extends beyond a conventional listing approach.
+              For attorneys, fiduciaries, executors, trustees, and families seeking a knowledgeable real estate resource in King County, Snohomish County, Pierce County, or Kitsap County, {FEATURED_BROKER.role} offers experience that extends beyond a conventional listing approach.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
@@ -276,7 +276,7 @@ const AttorneyReferral = () => {
                 Discuss a Property Transition With Real Property Planning
               </h2>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
-                If you are an attorney, executor, trustee, fiduciary, personal representative, or family decision-maker navigating probate property, inherited real estate, trust-owned property, or an estate-related home sale in King County, Snohomish County, Pierce County, or Kitsap County, {FEATURED_BROKER.name} provides experienced real estate guidance grounded in market knowledge, valuation insight, and a practical understanding of important property transitions.
+                If you are an attorney, executor, trustee, fiduciary, personal representative, or family decision-maker navigating probate property, inherited real estate, trust-owned property, or an estate-related home sale in King County, Snohomish County, Pierce County, or Kitsap County, {FEATURED_BROKER.role} provides experienced real estate guidance grounded in market knowledge, valuation insight, and a practical understanding of important property transitions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Link to="/contact">
