@@ -48,8 +48,8 @@
   "descriptor": "Connecting Washington families with trusted guidance on senior housing, probate real estate, and the specialists who help along the way",
   "probateEstateSales": {
     "seo": {
-      "title": "Probate Real Estate Broker & Agent in Washington State | Real Property Planning",
-      "description": "Real Property Planning — Washington State Licensed Real Estate Broker & Certified Appraiser specializing in probate real estate sales in King, Snohomish, Pierce & Kitsap Counties. Real Property Planning.",
+      "title": "Probate & Estate Property Sales in Washington State | Real Property Planning",
+      "description": "How a probate home sale works in Washington — court authority, valuation, preparation, and timelines — explained in plain language for executors and families, with help finding a licensed broker or appraiser when a property decision calls for one.",
       "jsonLdHeadline": "Probate Real Estate Sales in Washington State",
       "jsonLdDescription": "Evidence-based probate real estate guidance for executors, attorneys, and families throughout Washington State. Serving King, Snohomish, Pierce & Kitsap Counties."
     },
@@ -57,14 +57,14 @@
     "heroTitle": "PROBATE & ESTATE PROPERTY SALES",
     "directAnswer": {
       "question": "How does selling a house through probate work in Washington State?",
-      "answer": "In Washington, an estate property typically cannot be sold until the court grants the executor formal legal authority — usually through Letters Testamentary. Once that authority is in place, the process follows familiar real estate steps — evaluation, preparation, listing, negotiation, and closing — but with added requirements: a defensible appraisal, coordination among multiple decision-makers, and pricing that reflects the property's true condition rather than an automated estimate. Real Property Planning is led by a dual-licensed real estate broker and certified appraiser, guiding families and executors through each stage.",
+      "answer": "In Washington, an estate property typically cannot be sold until the court grants the executor formal legal authority — usually through Letters Testamentary. Once that authority is in place, the process follows familiar real estate steps — evaluation, preparation, listing, negotiation, and closing — but with added requirements: a defensible appraisal, coordination among multiple decision-makers, and pricing that reflects the property's true condition rather than an automated estimate. Real Property Planning explains each stage and can connect you with a featured Washington licensed broker or certified appraiser when you need one.",
       "step1Label": "Before Authority",
       "step1Desc": "Property is assessed and a plan is developed while legal authority is pending.",
       "step2Label": "During Probate",
       "step2Desc": "Preparation, pricing, and listing proceed alongside the court process.",
       "step3Label": "After Probate",
       "step3Desc": "The property moves to market with every repair decision evaluated for return.",
-      "ctaLabel": "Request a Property Assessment"
+      "ctaLabel": "Get Connected With a Probate Broker"
     },
     "comparison": {
       "heading1": "Probate Property vs. Inherited Property:",

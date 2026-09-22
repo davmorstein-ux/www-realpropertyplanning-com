@@ -22,6 +22,17 @@ adult family homes (AFHs).
   AFH listing/directory pages). Search and AI crawlers mostly read that static
   HTML, not the React app. **If a change matters for SEO, it must exist in the
   prerendered output too.**
+- **Voice of the prerendered copy (`ROUTE_METADATA` in `vite.config.ts`).** Real
+  Property Planning is a free educational hub, not a brokerage. The static copy
+  never says "our team", "we handle / price / manage", "our clients", or
+  "serving clients"; the subject is the page ("This guide explains…") or the hub
+  ("Real Property Planning can connect you with a featured Washington licensed
+  broker or certified appraiser"). Licensed work is done by featured
+  professionals through their own practices. Routes that only redirect (the old
+  `/services/*` URLs) get no `ROUTE_METADATA` entry, because a prerendered file
+  for a redirect route is what crawlers read instead of the redirect. Sept 22,
+  2026: 30 entries and the sitewide footer line were rewritten to this voice
+  after an outside audit found the indexed pages still describing a brokerage.
 - **This repository is public.** See section 9.
 
 ## 2. Ground rules when more than one assistant has access
