@@ -19,34 +19,38 @@ import { AFH_FEATURED_PEOPLE, type AFHProfessional } from "@/data/afhProfessiona
  */
 const PersonCard = ({ person, profession }: { person: AFHProfessional; profession: string }) => {
   const site = person.website?.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  /* div/span throughout, not <p>: the site's global p rules add margins and line-height that
+     made these cards twice as tall as they should be. */
   return (
     <div className="rpp-afhpro-card">
-      <p className="rpp-afhpro-card-profession">{profession}</p>
-      <img src={person.photo} alt={person.photoAlt} width={160} height={160} loading="lazy" className="rpp-afhpro-card-photo" />
-      <p className="rpp-afhpro-card-name">{person.name}</p>
-      {person.license && <p className="rpp-afhpro-card-license">{person.license}</p>}
-      <p className="rpp-afhpro-card-line">
-        <a href={`tel:${person.phone.replace(/[^\d+]/g, "")}`} className="bg-transparent">{person.phone}</a>
-      </p>
-      <p className="rpp-afhpro-card-line">
-        <a href={`mailto:${person.email}`} className="bg-transparent">{person.email}</a>
-      </p>
+      <div className="rpp-afhpro-card-profession">{profession}</div>
+      <img src={person.photo} alt={person.photoAlt} width={96} height={96} loading="lazy" className="rpp-afhpro-card-photo" />
+      <div className="rpp-afhpro-card-name">{person.name}</div>
+      {person.license && <div className="rpp-afhpro-card-license">{person.license}</div>}
+      {person.phone && (
+        <div className="rpp-afhpro-card-line">
+          <a href={`tel:${person.phone.replace(/[^\d+]/g, "")}`} className="bg-transparent">{person.phone}</a>
+        </div>
+      )}
+      {person.email && (
+        <div className="rpp-afhpro-card-line">
+          <a href={`mailto:${person.email}`} className="bg-transparent">{person.email}</a>
+        </div>
+      )}
       {person.website && site && (
-        <p className="rpp-afhpro-card-line">
+        <div className="rpp-afhpro-card-line">
           <a href={person.website} target="_blank" rel="noopener noreferrer" className="bg-transparent">{site}</a>
-        </p>
+        </div>
       )}
-      {person.logo ? (
-        <div className="rpp-afhpro-card-logo"><img src={person.logo} alt={person.logoAlt || `${person.company} logo`} loading="lazy" /></div>
-      ) : (
-        <div className="rpp-afhpro-card-logo rpp-afhpro-card-logo-empty" aria-hidden="true" />
-      )}
+      <div className="rpp-afhpro-card-logo">
+        {person.logo && <img src={person.logo} alt={person.logoAlt || `${person.company} logo`} loading="lazy" />}
+      </div>
       {person.morePath && (
-        <p className="rpp-afhpro-card-line" style={{ marginTop: 8 }}>
+        <div className="rpp-afhpro-card-line">
           <Link to={person.morePath} className="bg-transparent" style={{ color: "#7f2028", fontWeight: 700 }}>Profile →</Link>
-        </p>
+        </div>
       )}
-      {person.note && <p className="rpp-afhpro-card-note">{person.note}</p>}
+      {person.note && <div className="rpp-afhpro-card-note">{person.note}</div>}
     </div>
   );
 };
@@ -220,22 +224,22 @@ const AFHFindProfessional = () => (
         .rpp-afhpro h3.rpp-afhpro-h3 { font-size: clamp(20px, 2.4vw, 24px) !important; line-height: 1.25 !important; margin: 0 0 8px !important; }
         .rpp-afhpro p.rpp-afhpro-p { font-size: 18px !important; line-height: 1.75 !important; margin: 0 0 22px !important; }
         .rpp-afhpro p.rpp-afhpro-note { font-size: 16px !important; line-height: 1.65 !important; margin: 14px 0 0 !important; }
-        .rpp-afhpro-grid { display: grid; gap: 28px 20px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 8px; }
-        @media (min-width: 720px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-        @media (min-width: 1000px) { .rpp-afhpro-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; } }
-        .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px 12px 18px; border: 1px solid #ddd6cc; border-radius: 14px; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; }
-        .rpp-afhpro .rpp-afhpro-card p { margin: 0; }
-        .rpp-afhpro-card-profession { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #481216; margin-bottom: 12px !important; }
-        .rpp-afhpro-card-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #f1ede6; margin-bottom: 12px; }
-        @media (min-width: 1000px) { .rpp-afhpro-card-photo { width: 140px; height: 140px; } }
-        .rpp-afhpro-card-name { font-size: 18px; font-weight: 700; color: #280a0c; line-height: 1.3; margin-bottom: 8px !important; }
-        .rpp-afhpro-card-license { font-size: 13px; color: #5a534b; letter-spacing: 0.02em; margin-bottom: 10px !important; }
-        .rpp-afhpro-card-line { font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; }
-        .rpp-afhpro-card-logo { width: 100%; height: 56px; margin-top: 14px; display: flex; align-items: center; justify-content: center; }
-        .rpp-afhpro-card-logo img { max-height: 56px; max-width: 150px; width: auto; height: auto; object-fit: contain; }
-        .rpp-afhpro-card-line a { color: #302b26; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9c0b4; }
-        @media (hover: hover) { .rpp-afhpro-card-line a:hover { color: #7f2028; text-decoration-color: #7f2028; } }
-        .rpp-afhpro-card-note { font-size: 12px; line-height: 1.5; color: #5a534b; margin-top: 12px !important; padding-top: 10px; border-top: 1px solid #eee8df; }
+        .rpp-afhpro-grid { display: grid; gap: 14px 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 8px; }
+        @media (min-width: 640px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (min-width: 960px) { .rpp-afhpro-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 14px; } }
+        .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 12px 10px 10px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; line-height: 1.3; }
+        .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; }
+        .rpp-afhpro .rpp-afhpro-card-profession { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #481216; min-height: 2.6em; display: flex; align-items: center; justify-content: center; margin-bottom: 6px !important; }
+        .rpp-afhpro .rpp-afhpro-card-photo { width: 96px !important; height: 96px !important; max-width: 96px; border-radius: 50%; object-fit: cover; border: 2px solid #f1ede6; margin-bottom: 8px !important; flex: none; }
+        .rpp-afhpro .rpp-afhpro-card-name { font-size: 16px; font-weight: 700; color: #280a0c; line-height: 1.2; }
+        .rpp-afhpro .rpp-afhpro-card-license { font-size: 12px; color: #5a534b; margin-top: 2px !important; }
+        .rpp-afhpro .rpp-afhpro-card-line { font-size: 13px; line-height: 1.35; overflow-wrap: anywhere; margin-top: 4px !important; }
+        .rpp-afhpro .rpp-afhpro-card-name + .rpp-afhpro-card-line, .rpp-afhpro .rpp-afhpro-card-license + .rpp-afhpro-card-line { margin-top: 8px !important; }
+        .rpp-afhpro .rpp-afhpro-card-line a { color: #302b26; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9c0b4; }
+        @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-line a:hover { color: #7f2028; text-decoration-color: #7f2028; } }
+        .rpp-afhpro .rpp-afhpro-card-logo { width: 100%; height: 40px; margin-top: 10px !important; display: flex; align-items: center; justify-content: center; }
+        .rpp-afhpro .rpp-afhpro-card-logo img { max-height: 40px; max-width: 120px; width: auto; height: auto; object-fit: contain; }
+        .rpp-afhpro .rpp-afhpro-card-note { font-size: 11px; line-height: 1.4; color: #5a534b; margin-top: 8px !important; padding-top: 6px; border-top: 1px solid #eee8df; }
       `}</style>
       <section className="rpp-afhpro" style={{ background: "#ffffff", padding: "64px 24px 56px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
