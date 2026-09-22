@@ -32,7 +32,7 @@ var FEATURED_BROKER = {
   email: "dave.stein@exprealty.com",
   website: "https://davestein.exprealty.com",
   yearsExperience: 20,
-  zillowProfileUrl: "https://www.zillow.com/profile/DaveStein",
+  zillowProfileUrl: "https://www.zillow.com/profile/dstein2112",
   pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" },
   role: "the featured broker",
   Role: "The featured broker",

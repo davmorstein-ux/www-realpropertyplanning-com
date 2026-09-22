@@ -100,6 +100,8 @@ export const FEATURED_AFH_BROKER: AFHProfessional = {
 export interface AFHProfessionalGroup {
   id: string;
   label: string;
+  /** What the person does, in two or three words, shown ABOVE the headshot on the directory grid ("Real Estate Broker", "Bookkeeper"). */
+  profession: string;
   /** Why an adult family home needs this ROLE. About the role, never a claim about a person. */
   why: string;
   people: AFHProfessional[];
@@ -109,12 +111,14 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
   {
     id: "real-estate",
     label: "Real estate",
+    profession: "Real Estate Broker",
     why: "Selling or buying an adult family home is not an ordinary house sale. The license does not transfer, the business and the building can be sold together or apart, and a lender looks at the home's income as well as its walls.",
     people: [FEATURED_AFH_BROKER],
   },
   {
     id: "bookkeeping",
     label: "Bookkeeping",
+    profession: "Bookkeeper",
     why: "Clean books are what make an adult family home's income believable. A buyer's lender will ask for a year or two of statements that reconcile: residents, to rates, to actual deposits. Owners who keep them current sell more easily, and buyers who inherit them can see what they are getting.",
     people: [NICOLE_GUZMAN_JOHNSON],
   },
@@ -122,3 +126,8 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
 
 /** Groups that actually have someone in them. The page renders only these. */
 export const ACTIVE_AFH_PROFESSIONAL_GROUPS = AFH_PROFESSIONAL_GROUPS.filter((g) => g.people.length > 0);
+
+/** Every featured person as one flat list, each tagged with their profession, in group order. This is what the directory grid renders. */
+export const AFH_FEATURED_PEOPLE: Array<{ person: AFHProfessional; profession: string; groupId: string }> = AFH_PROFESSIONAL_GROUPS.flatMap((g) =>
+  g.people.map((person) => ({ person, profession: g.profession, groupId: g.id })),
+);

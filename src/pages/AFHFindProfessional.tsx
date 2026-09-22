@@ -8,26 +8,41 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-find-a-professional.mp3.asset.json";
-import ProviderTile from "@/components/ProviderTile";
-import { ACTIVE_AFH_PROFESSIONAL_GROUPS, type AFHProfessional } from "@/data/afhProfessionals";
+import { AFH_FEATURED_PEOPLE, type AFHProfessional } from "@/data/afhProfessionals";
 
-/** One person, shown with the same tile used for professionals across the site. */
-const Tile = ({ person }: { person: AFHProfessional }) => (
-  <ProviderTile
-    name={person.name}
-    title={person.title}
-    company={person.company}
-    photo={person.photo}
-    photoAlt={person.photoAlt}
-    logo={person.logo}
-    logoAlt={person.logoAlt}
-    phone={person.phone}
-    email={person.email}
-    website={person.website}
-    specialty={person.specialty}
-    bio={person.bio}
-  />
-);
+/**
+ * One person on the directory grid. Deliberately compact so twelve fit on one
+ * page: profession on top (so a visitor knows what the person does before
+ * anything else), then headshot, name, phone, email, website. No bio, no logo —
+ * those live on the person's own page where there is one.
+ */
+const PersonCard = ({ person, profession }: { person: AFHProfessional; profession: string }) => {
+  const site = person.website?.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  return (
+    <div className="rpp-afhpro-card">
+      <p className="rpp-afhpro-card-profession">{profession}</p>
+      <img src={person.photo} alt={person.photoAlt} width={160} height={160} loading="lazy" className="rpp-afhpro-card-photo" />
+      <p className="rpp-afhpro-card-name">{person.name}</p>
+      <p className="rpp-afhpro-card-line">
+        <a href={`tel:${person.phone.replace(/[^\d+]/g, "")}`} className="bg-transparent">{person.phone}</a>
+      </p>
+      <p className="rpp-afhpro-card-line">
+        <a href={`mailto:${person.email}`} className="bg-transparent">{person.email}</a>
+      </p>
+      {person.website && site && (
+        <p className="rpp-afhpro-card-line">
+          <a href={person.website} target="_blank" rel="noopener noreferrer" className="bg-transparent">{site}</a>
+        </p>
+      )}
+      {person.morePath && (
+        <p className="rpp-afhpro-card-line" style={{ marginTop: 8 }}>
+          <Link to={person.morePath} className="bg-transparent" style={{ color: "#7f2028", fontWeight: 700 }}>Profile →</Link>
+        </p>
+      )}
+      {person.note && <p className="rpp-afhpro-card-note">{person.note}</p>}
+    </div>
+  );
+};
 
 const PROFESSIONAL_CATEGORIES = [
   {
@@ -187,9 +202,10 @@ const AFHFindProfessional = () => (
       </section>
 
       {/* FEATURED PROFESSIONALS (Sept 2026).
-          Real people, grouped by role, from src/data/afhProfessionals.ts. Only groups
-          with someone in them are rendered: never an empty category, never a "coming
-          soon". Each person is shown with the same ProviderTile used across the site.
+          Real people from src/data/afhProfessionals.ts, as one flat grid so a dozen fit
+          on the page (David, Sept 22 2026): profession above the headshot, then name,
+          phone, email, website. No bios here. Never an empty category, never a
+          "coming soon".
           The guide further down (and its audio narration) is unchanged: it explains
           what to look for in each KIND of professional, which is a different job. */}
       <style>{`
@@ -197,18 +213,22 @@ const AFHFindProfessional = () => (
         .rpp-afhpro h3.rpp-afhpro-h3 { font-size: clamp(20px, 2.4vw, 24px) !important; line-height: 1.25 !important; margin: 0 0 8px !important; }
         .rpp-afhpro p.rpp-afhpro-p { font-size: 18px !important; line-height: 1.75 !important; margin: 0 0 22px !important; }
         .rpp-afhpro p.rpp-afhpro-note { font-size: 16px !important; line-height: 1.65 !important; margin: 14px 0 0 !important; }
-        .rpp-afhpro-jump { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0 0 8px; padding: 0; }
-        .rpp-afhpro-jump a.rpp-afhpro-chip.rpp-afhpro-chip { display: inline-block; padding: 9px 16px; border: 2px solid #3f3a35; border-radius: 999px; background: #fff; color: #280a0c !important; font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px !important; font-weight: 600 !important; text-decoration: none !important; }
-        @media (hover: hover) { .rpp-afhpro-jump a.rpp-afhpro-chip.rpp-afhpro-chip:hover { background: #3f3a35; color: #fff !important; } }
-        .rpp-afhpro-group { scroll-margin-top: calc(var(--header-height, 120px) + 12px); }
-        .rpp-afhpro-people { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 420px)); }
-        /* A group with ONE person: explanation and card side by side on wide screens, so the
-           card is not stranded beside empty space. Two or more people: text above, grid below. */
-        .rpp-afhpro-solo { display: grid; gap: 28px; grid-template-columns: 1fr; align-items: start; }
-        @media (min-width: 900px) { .rpp-afhpro-solo { grid-template-columns: minmax(0, 1fr) minmax(340px, 400px); gap: 48px; } }
+        .rpp-afhpro-grid { display: grid; gap: 28px 20px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 8px; }
+        @media (min-width: 720px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (min-width: 1000px) { .rpp-afhpro-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; } }
+        .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px 12px 18px; border: 1px solid #ddd6cc; border-radius: 14px; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; }
+        .rpp-afhpro .rpp-afhpro-card p { margin: 0; }
+        .rpp-afhpro-card-profession { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #481216; margin-bottom: 12px !important; }
+        .rpp-afhpro-card-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #f1ede6; margin-bottom: 12px; }
+        @media (min-width: 1000px) { .rpp-afhpro-card-photo { width: 140px; height: 140px; } }
+        .rpp-afhpro-card-name { font-size: 18px; font-weight: 700; color: #280a0c; line-height: 1.3; margin-bottom: 8px !important; }
+        .rpp-afhpro-card-line { font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; }
+        .rpp-afhpro-card-line a { color: #302b26; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9c0b4; }
+        @media (hover: hover) { .rpp-afhpro-card-line a:hover { color: #7f2028; text-decoration-color: #7f2028; } }
+        .rpp-afhpro-card-note { font-size: 12px; line-height: 1.5; color: #5a534b; margin-top: 12px !important; padding-top: 10px; border-top: 1px solid #eee8df; }
       `}</style>
       <section className="rpp-afhpro" style={{ background: "#ffffff", padding: "64px 24px 56px" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+        <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           <p style={{ fontSize: 14, fontFamily: "'DM Sans', sans-serif", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#481216", margin: "0 0 10px" }}>
             Met with and vetted
           </p>
@@ -218,51 +238,11 @@ const AFHFindProfessional = () => (
           <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#302b26", maxWidth: 720 }}>
             A short list on purpose. Everyone here is someone we have sat down with. The list grows as more people earn a place on it.
           </p>
-          {ACTIVE_AFH_PROFESSIONAL_GROUPS.length > 1 && (
-            <ul className="rpp-afhpro-jump" aria-label="Jump to a kind of professional">
-              {ACTIVE_AFH_PROFESSIONAL_GROUPS.map((g) => (
-                <li key={g.id}>
-                  <a href={`#${g.id}`} className="rpp-afhpro-chip bg-transparent">{g.label}</a>
-                </li>
-              ))}
-            </ul>
-          )}
-          {ACTIVE_AFH_PROFESSIONAL_GROUPS.map((g) => (
-            <div key={g.id} id={g.id} className="rpp-afhpro-group" style={{ marginTop: 44 }}>
-              {g.people.length === 1 ? (
-                <div className="rpp-afhpro-solo">
-                  <div>
-                    <h3 className="rpp-afhpro-h3" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>{g.label}</h3>
-                    <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#302b26" }}>{g.why}</p>
-                    {g.people[0].note && (
-                      <p className="rpp-afhpro-note" style={{ fontFamily: "'DM Sans', sans-serif", color: "#3b3630", borderLeft: "4px solid #3f3a35", paddingLeft: 14 }}>{g.people[0].note}</p>
-                    )}
-                    {g.people[0].morePath && (
-                      <p className="rpp-afhpro-note" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                        <Link to={g.people[0].morePath} className="bg-transparent" style={{ color: "#7f2028", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 4 }}>{g.people[0].moreLabel}</Link>
-                      </p>
-                    )}
-                  </div>
-                  <Tile person={g.people[0]} />
-                </div>
-              ) : (
-                <>
-                  <h3 className="rpp-afhpro-h3" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>{g.label}</h3>
-                  <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#302b26", maxWidth: 760 }}>{g.why}</p>
-                  <div className="rpp-afhpro-people">
-                    {g.people.map((person) => (
-                      <div key={person.id}>
-                        <Tile person={person} />
-                        {person.note && (
-                          <p className="rpp-afhpro-note" style={{ fontFamily: "'DM Sans', sans-serif", color: "#3b3630", borderLeft: "4px solid #3f3a35", paddingLeft: 14 }}>{person.note}</p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-          ))}
+          <div className="rpp-afhpro-grid">
+            {AFH_FEATURED_PEOPLE.map(({ person, profession }) => (
+              <PersonCard key={person.id} person={person} profession={profession} />
+            ))}
+          </div>
         </div>
       </section>
 
