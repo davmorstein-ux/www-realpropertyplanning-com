@@ -68,7 +68,7 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
+        "@type": ["Organization", "LocalBusiness"],
         "@id": "https://realpropertyplanning.com/#organization",
         "name": "Real Property Planning",
         "url": "https://realpropertyplanning.com",
@@ -94,18 +94,17 @@
           "latitude": 47.6062,
           "longitude": -122.3321
         },
-        "areaServed": ["King County", "Snohomish County", "Pierce County", "Skagit County", "Kitsap County"],
-        "description": "Probate real estate, inherited property sales, estate appraisals, and senior housing transitions in Western Washington.",
-        "hasCredential": ["Licensed Real Estate Broker", "Washington State Certified Residential Appraiser"],
-        "knowsAbout": ["Probate Real Estate", "Estate Sales", "Senior Transitions", "Residential Appraisal", "Inherited Property"],
+        "areaServed": { "@type": "State", "name": "Washington" },
+        "description": "A free educational hub for probate real estate, inherited property, estate valuation, and senior housing transitions in Washington State. The hub holds no licenses; licensed brokerage and appraisal work is done by featured professionals through their own practices.",
+        "isAccessibleForFree": true,
+        "knowsAbout": ["Probate Real Estate", "Estate Sales", "Senior Transitions", "Residential Appraisal", "Inherited Property", "Adult Family Homes"],
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "(206) 900-3015",
           "contactType": "customer service",
-          "areaServed": "US",
+          "areaServed": "US-WA",
           "availableLanguage": "English"
-        },
-        "sameAs": []
+        }
       }
     </script>
     <title>Probate &amp; Estate Real Estate in Washington State | Real Property Planning</title>

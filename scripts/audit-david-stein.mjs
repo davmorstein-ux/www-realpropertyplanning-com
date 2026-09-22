@@ -39,6 +39,7 @@ const APPROVED = new Set([
   "src/data/afhListings.ts", // provenance comment: who reviewed the closed-sales data, when
   "src/data/afhPrivatePayRanges.ts", // provenance comment: whose working bands these are
   "src/components/ZillowReviewsCarousel.tsx", // the featured broker's own Zillow reviews, quoted
+  "public/llms.txt", // static; src/test/featuredProfessionals.test.ts checks it still matches the record
 ]);
 
 // Lines the audit ignores: code comments (decision notes such as "David said…"),

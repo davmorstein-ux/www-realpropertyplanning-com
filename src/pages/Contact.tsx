@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { realEstateAgentSchema } from "@/lib/schema";
+import { hubOrganizationSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -159,7 +159,7 @@ const Contact = () => {
       <SEOHead
         title={t("contactPage.seo.title")}
         description={t("contactPage.seo.description")}
-        jsonLd={realEstateAgentSchema}
+        jsonLd={hubOrganizationSchema}
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
       <Header />

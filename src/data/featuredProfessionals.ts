@@ -88,6 +88,14 @@ export const FEATURED_APPRAISER: FeaturedAppraiser = {
   pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" },
 };
 
+/**
+ * The hub's founder — a fixed historical fact, not a role that changes hands.
+ * Only the About page's founder story and the schema `founderOf` line use it.
+ */
+export const HUB_FOUNDER_NAME = "David Stein";
+/** True while the founder is also the featured broker; the schema Person then carries founderOf. */
+export const FEATURED_BROKER_IS_FOUNDER = FEATURED_BROKER.name === HUB_FOUNDER_NAME;
+
 /** True while one person holds both roles. Components use it to write "broker and appraiser" as one clause instead of two. */
 export const SAME_PERSON = FEATURED_BROKER.name === FEATURED_APPRAISER.name;
 

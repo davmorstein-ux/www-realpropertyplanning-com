@@ -46,6 +46,8 @@ var FEATURED_APPRAISER = {
   yearsExperience: 20,
   pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" }
 };
+var HUB_FOUNDER_NAME = "David Stein";
+var FEATURED_BROKER_IS_FOUNDER = FEATURED_BROKER.name === HUB_FOUNDER_NAME;
 var SAME_PERSON = FEATURED_BROKER.name === FEATURED_APPRAISER.name;
 var brokerLicenseShort = `${FEATURED_BROKER.brokerage}, license #${FEATURED_BROKER.licenseNumber}`;
 var appraiserLicenseShort = `${FEATURED_APPRAISER.firm}, license #${FEATURED_APPRAISER.licenseNumber}`;

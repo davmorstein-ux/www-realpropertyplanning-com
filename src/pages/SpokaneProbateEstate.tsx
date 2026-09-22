@@ -12,7 +12,7 @@ import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { realEstateAgentSchema, areaServed } from "@/lib/schema";
+import { hubOrganizationSchema, areaServed } from "@/lib/schema";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
@@ -61,7 +61,7 @@ const SpokaneProbateEstate = () => {
     };
 
     const localSchema = {
-      ...realEstateAgentSchema,
+      ...hubOrganizationSchema,
       "@context": "https://schema.org",
       areaServed: [
         { "@type": "City", name: "Spokane", containedInPlace: { "@type": "State", name: "Washington" } },

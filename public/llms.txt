@@ -1,21 +1,22 @@
 # Real Property Planning
 
-Real Property Planning provides specialized real estate guidance for probate and estate property sales, senior transitions, and trust-owned real estate throughout Washington State, with deep experience across Western Washington and the Puget Sound region.
+Real Property Planning is a free, independent educational hub for probate real estate, inherited and trust-owned property, estate valuation, and senior housing transitions in Washington State. It publishes 90+ plain-language guides, 10+ calculators, a statewide adult family home directory (AFH Club), and a directory of independent Washington professionals. The hub itself holds no licenses and provides no brokerage, appraisal, legal, tax, or advisory services.
 
-## Who we serve
-Attorneys, executors, trustees, fiduciaries, and families navigating the sale of inherited or estate-owned property. Also serves seniors and families transitioning from longtime homes to assisted living or smaller housing. Clients throughout Washington State and, through eXp Realty's referral network, connections to trusted brokers across the U.S. and internationally.
+## Who it is for
+Executors, trustees, heirs, and families dealing with an estate property; seniors and families planning a move out of a longtime home; adult family home owners, buyers, and operators; and the attorneys, CPAs, financial planners, and care professionals who serve them.
 
-## What makes us different
-Real Property Planning brings together licensed Washington State real estate brokerage and Washington State certified residential appraisal expertise — over 20 years of combined experience. This dual capability means clients receive both professional valuation insight and skilled brokerage representation in one relationship.
+## The featured professionals
+When a property decision calls for licensed help, the hub connects visitors with its featured Washington real estate broker and its featured certified residential appraiser, who work independently through their own practices (currently David Stein: broker with eXp Realty, license #133972; appraiser through Stein Appraisal, license #1702080). Brokerage and appraisal services are provided by that person, not by Real Property Planning. The featured roles can change; the guides do not depend on who holds them.
 
-## Services
-- Probate and estate property sales
-- Trust-owned real estate sales
-- Senior transitions and downsizing support
-- Condition-based pricing and preparation strategy
+## Topics covered
+- Probate and estate property sales in Washington, including court authority, timelines, and as-is versus prepared sales
+- Trust-owned real estate and trustee duties
+- Date-of-death and estate valuation, appraisal vs. CMA
+- Senior transitions, downsizing, and paying for care
+- Adult family homes: licensing, buying, selling, financing, and a statewide directory
 
-## Areas served
-Washington State, with a strong focus in King County, Snohomish County, Pierce County, Skagit County, and Kitsap County across Western Washington and the Puget Sound region. Cities include Seattle, Bellevue, Kirkland, Redmond, Mercer Island, Issaquah, Everett, Edmonds, Tacoma, Gig Harbor, Bainbridge Island, and more. Through eXp Realty's referral network, clients can also be connected with trusted brokers across the United States and internationally.
+## Coverage
+All of Washington State, with county and city guides; deepest coverage of King, Snohomish, Pierce, Kitsap, and Skagit Counties.
 
 ## Pages
 - [Home](/): Probate, estate, and senior transition real estate guidance for Washington State.
@@ -50,7 +51,7 @@ Washington State, with a strong focus in King County, Snohomish County, Pierce C
 - [About](/about): About Real Property Planning.
 - [Contact](/contact): Get in touch.
 - [FAQ](/faq): Frequently asked questions.
-- [Testimonials](/testimonials): Client reviews.
+- [Testimonials](/testimonials): Reviews of the featured broker and appraiser.
 
 ## Adult Family Homes (AFH Club)
 "Adult family home" is Washington State's licensing term for a residential home licensed by DSHS to care for up to six (occasionally eight) adults. Other states use different terms for the same model — adult foster home (Oregon, Michigan), residential care facility for the elderly (California), assisted living home (Arizona), personal care home (Georgia, Pennsylvania), family care home (North Carolina).

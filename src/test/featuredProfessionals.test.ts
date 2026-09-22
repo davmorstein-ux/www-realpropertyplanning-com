@@ -98,3 +98,29 @@ describe("no page names the featured broker by hand", () => {
     expect(out).toContain("Total violations: 0");
   });
 });
+
+describe("schema: the hub is not a brokerage", () => {
+  it("Organization carries no founder/employee/offer catalog and is not a RealEstateAgent", async () => {
+    const { hubOrganizationSchema, countyPageSchema, featuredProfessionalPerson } = await import("@/lib/schema");
+    const org = (hubOrganizationSchema["@graph"] as Array<Record<string, unknown>>)[0];
+    expect(org["@type"]).not.toContain("RealEstateAgent");
+    expect(org).not.toHaveProperty("founder");
+    expect(org).not.toHaveProperty("employee");
+    expect(org).not.toHaveProperty("hasOfferCatalog");
+    expect(org).not.toHaveProperty("priceRange");
+    expect(featuredProfessionalPerson).not.toHaveProperty("worksFor");
+    const county = countyPageSchema("King County", "/king-county", "x");
+    expect(county["@type"]).toBe("WebPage");
+    expect(county).not.toHaveProperty("employee");
+  });
+});
+
+describe("public/llms.txt matches the record", () => {
+  it("names the current featured broker and appraiser with their license numbers", () => {
+    const txt = readFileSync("public/llms.txt", "utf8");
+    expect(txt).toContain(FEATURED_BROKER.name);
+    expect(txt).toContain(FEATURED_BROKER.licenseNumber);
+    expect(txt).toContain(FEATURED_APPRAISER.licenseNumber);
+    expect(txt).not.toMatch(/\bour team\b|\bclients\b/i);
+  });
+});

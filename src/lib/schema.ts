@@ -1,4 +1,4 @@
-import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON, brokerageAttribution, appraisalAttribution } from "../data/featuredProfessionals";
+import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON, FEATURED_BROKER_IS_FOUNDER, brokerageAttribution, appraisalAttribution } from "../data/featuredProfessionals";
 const SITE_URL = "https://realpropertyplanning.com";
 const LOGO_URL = `${SITE_URL}/logo.webp`;
 const BUSINESS_NAME = "Real Property Planning";
@@ -62,19 +62,23 @@ export const featuredProfessionalPerson = {
   jobTitle: SAME_PERSON
     ? "Licensed Real Estate Broker & Certified Residential Appraiser"
     : "Licensed Real Estate Broker",
-  url: `${SITE_URL}/about`,
-  worksFor: {
-    "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
-    name: BUSINESS_NAME,
-    url: SITE_URL,
-  },
-  founderOf: {
-    "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
-    name: BUSINESS_NAME,
-  },
+  url: `${SITE_URL}/realtor`,
+  // The featured broker is not employed by the hub; licensed work is done
+  // through the brokerage and the appraisal firm below. The hub is listed as
+  // an affiliation ("featured professional"), and founderOf only while the
+  // featured broker is in fact the founder.
+  ...(FEATURED_BROKER_IS_FOUNDER
+    ? { founderOf: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: BUSINESS_NAME } }
+    : {}),
+  sameAs: FEATURED_BROKER.zillowProfileUrl ? [FEATURED_BROKER.zillowProfileUrl] : [],
   affiliation: [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: BUSINESS_NAME,
+      url: SITE_URL,
+      description: "Featured real estate broker on Real Property Planning, a free educational hub. The hub holds no licenses and provides no brokerage or appraisal services.",
+    },
     {
       "@type": "Organization",
       name: FEATURED_BROKER.brokerage,
@@ -140,7 +144,6 @@ export const featuredProfessionalPerson = {
     addressRegion: "WA",
     addressCountry: "US",
   },
-  sameAs: ["https://www.zillow.com/profile/DavidSteinRPP"],
 };
 
 /**
@@ -159,8 +162,8 @@ export const articleAuthor = {
   jobTitle: SAME_PERSON
     ? "Washington State Licensed Real Estate Broker and Certified Residential Appraiser"
     : "Washington State Licensed Real Estate Broker",
-  url: `${SITE_URL}/about`,
-  worksFor: { "@id": `${SITE_URL}/#organization` },
+  url: `${SITE_URL}/realtor`,
+  affiliation: { "@id": `${SITE_URL}/#organization` },
   hasCredential: featuredProfessionalPerson.hasCredential,
   knowsAbout: [
     "Adult family homes",
@@ -228,14 +231,19 @@ export const serviceSchemas = [
   },
 ];
 
-export const realEstateAgentSchema = {
+export const hubOrganizationSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["RealEstateAgent", "LocalBusiness"],
+      // Was ["RealEstateAgent", "LocalBusiness"] — which told search engines
+      // the hub is a brokerage. It is an educational organization with a
+      // phone, an address and hours; the licensed work belongs to the
+      // featured broker (Person below) and the services carry that Person as
+      // provider.
+      "@type": ["Organization", "LocalBusiness"],
       "@id": `${SITE_URL}/#organization`,
       name: BUSINESS_NAME,
-      alternateName: "Real Property Planning — Probate & Estate Real Estate Washington State",
+      alternateName: "Real Property Planning — Washington Probate, Estate & Senior Transition Hub",
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
@@ -268,20 +276,10 @@ export const realEstateAgentSchema = {
           addressCountry: "US",
         },
       },
-      founder: featuredProfessionalPerson,
-      employee: featuredProfessionalPerson,
       areaServed: areaServed,
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        // Was "Real Property Planning Services", which declared to search
-        // engines that the hub itself sells a catalogue of services. The four
-        // entries are genuine licensed brokerage and appraisal work, so they
-        // stay — but they belong to the licensed practice, not to the hub.
-        name: SAME_PERSON
-          ? `Brokerage & Appraisal Services — ${FEATURED_BROKER.name} (${FEATURED_BROKER.brokerage} / ${FEATURED_APPRAISER.firm})`
-          : `Brokerage Services — ${FEATURED_BROKER.name} (${FEATURED_BROKER.brokerage}); Appraisal Services — ${FEATURED_APPRAISER.name} (${FEATURED_APPRAISER.firm})`,
-        itemListElement: serviceSchemas,
-      },
+      // No founder/employee here: the featured broker is a Person node in the
+      // graph, affiliated with the hub, not staff. No hasOfferCatalog: the hub
+      // sells nothing; the Service nodes below name the Person as provider.
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
@@ -339,10 +337,7 @@ export const realEstateAgentSchema = {
         "Probate sales Kitsap County",
         "Probate sales Skagit County",
       ],
-      sameAs: ["https://www.zillow.com/profile/DavidSteinRPP"],
-      priceRange: "$$",
-      currenciesAccepted: "USD",
-      paymentAccepted: "Check, Wire Transfer",
+      isAccessibleForFree: true,
     },
     featuredProfessionalPerson,
     ...serviceSchemas,
@@ -460,25 +455,26 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
   };
 }
 
-/** Local business schema for county pages */
+/**
+ * County page schema. Was a RealEstateAgent named "Real Property Planning —
+ * <County>" with the featured broker as employee, i.e. a branch office of a
+ * brokerage. It is a page of the hub about that county; the featured broker
+ * is mentioned, not employed.
+ */
 export function countyPageSchema(countyName: string, url: string, description: string) {
   return {
     "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    name: `Real Property Planning — ${countyName}`,
+    "@type": "WebPage",
+    name: `${countyName} — Probate, Estate & Senior Transition Guide`,
     url: `${SITE_URL}${url}`,
     description,
-    telephone: "(206) 900-3015",
-    email: "info@realpropertyplanning.com",
-    areaServed: {
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    about: {
       "@type": "AdministrativeArea",
       name: countyName,
       containedInPlace: { "@type": "State", name: "Washington" },
     },
-    employee: featuredProfessionalPerson,
-    parentOrganization: {
-      "@id": `${SITE_URL}/#organization`,
-    },
+    mentions: { "@id": `${SITE_URL}/#featured-broker` },
   };
 }
 

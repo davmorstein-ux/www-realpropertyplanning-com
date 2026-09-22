@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import { realEstateAgentSchema } from "@/lib/schema";
+import { hubOrganizationSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
@@ -42,7 +42,7 @@ const About = () => {
       <SEOHead
         title="About Real Property Planning | Senior Transitions & Estate Hub"
         description="Washington State's resource hub for senior transitions, probate, and estate real estate — coordinating brokers, appraisers, and trusted professionals."
-        schemaJson={realEstateAgentSchema}
+        schemaJson={hubOrganizationSchema}
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
       <Header />
