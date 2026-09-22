@@ -22,15 +22,15 @@ const PersonCard = ({ person, profession }: { person: AFHProfessional; professio
   /* div/span throughout, not <p>: the site's global p rules add margins and line-height that
      made these cards twice as tall as they should be. The card is kept square (aspect-ratio 1)
      with content compact enough to fit inside; the name links to the person's page on this
-     site when there is one, and a compensation note becomes an asterisk with one footnote
-     under the grid, so neither adds a line to the card. */
+     site when there is one. No per-person notes on this page (David, Sept 22): the
+     compensation disclosure lives in the site-wide Professional Disclosure block and on
+     the person's own page. */
   return (
     <div className="rpp-afhpro-card">
       <div className="rpp-afhpro-card-profession">{profession}</div>
       <img src={person.photo} alt={person.photoAlt} width={80} height={80} loading="lazy" className="rpp-afhpro-card-photo" />
       <div className="rpp-afhpro-card-name">
         {person.morePath ? <Link to={person.morePath} className="bg-transparent">{person.name}</Link> : person.name}
-        {person.note && <sup aria-label="See note below">*</sup>}
       </div>
       {person.license && <div className="rpp-afhpro-card-license">{person.license}</div>}
       {person.phone && (
@@ -234,7 +234,6 @@ const AFHFindProfessional = () => (
         .rpp-afhpro .rpp-afhpro-card-name { font-size: 15px; font-weight: 700; color: #280a0c; line-height: 1.15; }
         .rpp-afhpro .rpp-afhpro-card-name a { color: inherit; text-decoration: none; }
         @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-name a:hover { color: #7f2028; text-decoration: underline; text-underline-offset: 3px; } }
-        .rpp-afhpro .rpp-afhpro-card-name sup { font-size: 11px; color: #7f2028; margin-left: 2px; }
         .rpp-afhpro .rpp-afhpro-card-license { font-size: 11px; color: #5a534b; margin-top: 2px !important; }
         .rpp-afhpro .rpp-afhpro-card-line { font-size: 12.5px; line-height: 1.3; overflow-wrap: anywhere; margin-top: 3px !important; }
         .rpp-afhpro .rpp-afhpro-card-name + .rpp-afhpro-card-line, .rpp-afhpro .rpp-afhpro-card-license + .rpp-afhpro-card-line { margin-top: 6px !important; }
@@ -259,11 +258,6 @@ const AFHFindProfessional = () => (
               <PersonCard key={person.id} person={person} profession={profession} />
             ))}
           </div>
-          {AFH_FEATURED_PEOPLE.filter(({ person }) => person.note).map(({ person }) => (
-            <p key={person.id} className="rpp-afhpro-note" style={{ fontFamily: "'DM Sans', sans-serif", color: "#5a534b", fontSize: 14 }}>
-              * {person.note}
-            </p>
-          ))}
         </div>
       </section>
 
