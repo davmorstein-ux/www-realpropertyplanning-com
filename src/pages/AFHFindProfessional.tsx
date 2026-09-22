@@ -227,8 +227,9 @@ const AFHFindProfessional = () => (
         .rpp-afhpro-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 8px; }
         @media (min-width: 640px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
         @media (min-width: 960px) { .rpp-afhpro-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; } }
-        .rpp-afhpro .rpp-afhpro-card { aspect-ratio: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10px 8px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; line-height: 1.25; }
-        .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; }
+        .rpp-afhpro .rpp-afhpro-card { aspect-ratio: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 12px 8px; border: 1px solid #ddd6cc; border-radius: 12px; overflow: visible; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; line-height: 1.25; }
+        /* flex: none — otherwise the square box shrinks the lines into each other; with it, a card with more text grows just past square. */
+        .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; flex: 0 0 auto; }
         .rpp-afhpro .rpp-afhpro-card-profession { font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #481216; margin-bottom: 6px !important; }
         .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 2px solid #f1ede6; margin-bottom: 6px !important; flex: none; }
         .rpp-afhpro .rpp-afhpro-card-name { font-size: 15px; font-weight: 700; color: #280a0c; line-height: 1.15; }
