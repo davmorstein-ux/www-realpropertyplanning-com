@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 type ListingType = "Property" | "Business" | "Both";
 
@@ -237,7 +238,7 @@ const AFHMarketplace: React.FC = () => {
                 Thinking of selling your AFH?
               </h3>
               <p className="text-[17px] text-white/90 mt-2 leading-relaxed">
-                Contact our team with eXp Realty first to discuss your goals, timeline, and options. A signed listing agreement is required before any property is marketed.
+                Contact {FEATURED_BROKER.name}, the featured broker ({FEATURED_BROKER.brokerage}), first to discuss your goals, timeline, and options. A signed listing agreement is required before any property is marketed.
               </p>
             </div>
             <Link

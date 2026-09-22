@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema, areaServed } from "@/lib/schema";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -166,7 +167,7 @@ const TacomaProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Tacoma?"
-        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families dealing with inherited or estate property in Tacoma and throughout Pierce County."
+        body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families dealing with inherited or estate property in Tacoma and throughout Pierce County.`}
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance on the property questions."
       />

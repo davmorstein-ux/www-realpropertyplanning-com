@@ -90,3 +90,11 @@ describe("featured professionals record", () => {
     expect(creds).toContain(FEATURED_APPRAISER.licenseNumber);
   });
 });
+
+describe("no page names the featured broker by hand", () => {
+  it("scripts/audit-david-stein.mjs --strict passes", async () => {
+    const { execFileSync } = await import("node:child_process");
+    const out = execFileSync("node", ["scripts/audit-david-stein.mjs", "--strict"], { encoding: "utf8" });
+    expect(out).toContain("Total violations: 0");
+  });
+});

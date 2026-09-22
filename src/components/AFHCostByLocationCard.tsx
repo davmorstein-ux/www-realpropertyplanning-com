@@ -10,6 +10,7 @@ import {
 } from "@/data/afhMedicaidRates";
 import { privatePayBandForPlace } from "@/data/afhPrivatePayRanges";
 import { cityPageByCity } from "@/data/afhCityPages";
+import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
 
 /**
  * The city/county cost lookup as a self-contained card, in the same idiom as
@@ -248,7 +249,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                     income toward that cost and keeps a personal needs allowance, so a family's out-of-pocket under
                     Medicaid is usually the resident's income, not the rate.
                     {band.confirmed
-                      ? ` The private-pay figure is per resident, not the home's total revenue: the typical monthly rate for a private room with moderate care in ${band.label}, from David Stein's brokerage and appraisal experience with operating homes (reviewed ${reviewedLabel(band.reviewed)}). Lighter care runs below it and heavy-care or specialty needs run well above it; each home sets its own rate.${band.note ? " " + band.note : ""}`
+                      ? ` The private-pay figure is per resident, not the home's total revenue: the typical monthly rate for a private room with moderate care in ${band.label}, from ${FEATURED_APPRAISER.name}'s brokerage and appraisal experience with operating homes (reviewed ${reviewedLabel(band.reviewed)}). Lighter care runs below it and heavy-care or specialty needs run well above it; each home sets its own rate.${band.note ? " " + band.note : ""}`
                       : ""}
                   </p>
                   {band.confirmed && band.tiers.length > 0 && (

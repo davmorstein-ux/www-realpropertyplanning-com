@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema, areaServed } from "@/lib/schema";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -168,7 +169,7 @@ const SeattleProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Seattle?"
-        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, attorneys, trustees, and families dealing with inherited or estate property in Seattle and throughout King County."
+        body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for executors, attorneys, trustees, and families dealing with inherited or estate property in Seattle and throughout King County.`}
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance on the property questions."
       />

@@ -13,6 +13,7 @@ import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const keyDifferences = [
   { title: "The Emotional Weight Is Different", text: "A conventional seller is usually excited about the next chapter — a bigger home, a new city, a fresh start. Senior transition sellers are often processing loss of independence, health changes, grief, or family tension. The emotional context affects every decision and communication." },
@@ -24,7 +25,7 @@ const keyDifferences = [
 
 const faqs = [
   { question: "How early should we start planning a senior home sale?", answer: "As early as possible. Even if a move is months away, early planning allows time for a property assessment, conversations about preparation, and realistic expectation-setting. Starting early reduces pressure and gives the family more control over timing." },
-  { question: "Can David Stein work with a senior move manager or care coordinator?", answer: "Absolutely. David Stein regularly collaborates with senior move managers, care coordinators, social workers, and placement specialists to ensure the real estate timeline supports the broader transition plan." },
+  { question: `Can ${FEATURED_BROKER.name} work with a senior move manager or care coordinator?`, answer: `Absolutely. ${FEATURED_BROKER.name} regularly collaborates with senior move managers, care coordinators, social workers, and placement specialists to ensure the real estate timeline supports the broader transition plan.` },
   { question: "What if the senior is resistant to selling?", answer: "This is common and understandable. our team does not pressure anyone. We provide information, answers questions, and help families understand their options — so the senior can participate in the decision at their own pace." },
   { question: "How does the home's condition affect the sale approach?", answer: "We evaluate the property's condition and recommends a preparation strategy that balances cost, timeline, and likely return. Some homes benefit from targeted updates; others are better sold in their current condition to specific buyer pools." },
 ];
@@ -101,7 +102,7 @@ const SeniorTransitionDifferences = () => (
 
     <MidPageCTA
       heading="Planning a Senior Housing Transition?"
-      body="David Stein works at the family's pace — with patience, clear communication, and experienced coordination throughout Washington State."
+      body={`${FEATURED_BROKER.name} works at the family's pace — with patience, clear communication, and experienced coordination throughout Washington State.`}
       buttonText="Schedule a Consultation"
       microcopy="No pressure. Just practical guidance for your family's situation."
     />

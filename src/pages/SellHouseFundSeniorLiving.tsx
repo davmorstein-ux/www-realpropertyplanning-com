@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import fundSeniorLivingIcon from "@/assets/icons/fund-senior-living-icon-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const steps = [
   {
@@ -22,11 +23,11 @@ const steps = [
   },
   {
     title: "Figure out the timeline",
-    body: "Three options: sell before the move, sell while the senior is in care, or use bridge financing. Each has tradeoffs. David helps families choose the right path for their situation.",
+    body: `Three options: sell before the move, sell while the senior is in care, or use bridge financing. Each has tradeoffs. ${FEATURED_BROKER.firstName} helps families choose the right path for their situation.`,
   },
   {
     title: "Prepare the home for sale",
-    body: "Cleanout, minor repairs, paint, landscaping, and staging — evaluated through a return-on-investment lens. David coordinates every vendor so out-of-state families never have to fly in to supervise.",
+    body: `Cleanout, minor repairs, paint, landscaping, and staging — evaluated through a return-on-investment lens. ${FEATURED_BROKER.firstName} coordinates every vendor so out-of-state families never have to fly in to supervise.`,
   },
   {
     title: "Price it correctly for its condition",
@@ -41,7 +42,7 @@ const steps = [
 const faqs = [
   {
     q: "Can we sell the house if my parent still lives there?",
-    a: "Yes — but it requires sensitivity and careful coordination. David has experience listing homes where the senior is still in residence and handles showings in a way that is respectful and minimally disruptive.",
+    a: `Yes — but it requires sensitivity and careful coordination. ${FEATURED_BROKER.firstName} has experience listing homes where the senior is still in residence and handles showings in a way that is respectful and minimally disruptive.`,
   },
   {
     q: "Does selling the house affect Medicaid eligibility?",
@@ -52,12 +53,12 @@ const faqs = [
     a: "From first conversation to closing, most senior home sales take 60–120 days depending on preparation needs and market conditions. Starting early gives the family the most options.",
   },
   {
-    q: "Can David start before my parent has moved?",
-    a: "Yes. David can assess the home, develop a pricing strategy, and begin coordinating preparation work before the move happens — so everything is ready to go the moment the family gives the word.",
+    q: `Can ${FEATURED_BROKER.firstName} start before my parent has moved?`,
+    a: `Yes. ${FEATURED_BROKER.firstName} can assess the home, develop a pricing strategy, and begin coordinating preparation work before the move happens — so everything is ready to go the moment the family gives the word.`,
   },
   {
     q: "What if siblings disagree about selling?",
-    a: "This is very common. David provides objective, data-based pricing guidance that gives all family members a shared foundation for the conversation — removing emotion from the financial decision.",
+    a: `This is very common. ${FEATURED_BROKER.firstName} provides objective, data-based pricing guidance that gives all family members a shared foundation for the conversation — removing emotion from the financial decision.`,
   },
 ];
 

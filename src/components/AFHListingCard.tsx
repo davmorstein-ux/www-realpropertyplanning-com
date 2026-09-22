@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, Bed, Bath, Square, Home } from "lucide-react";
 import type { AFHListing } from "@/data/afhListings";
 import { afhClassification, AFH_SOURCE_LABELS, AFH_MARKET_STATUS_LABELS, formatVerifiedDate, listingSlug } from "@/data/afhListings";
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const TEAL = "#1a7a78";
 const TEAL_MID = "#2a9d9a";
@@ -413,8 +414,8 @@ export const AFHListingsDisclaimer = ({ sources = ["nwmls"] }: { sources?: AFHLi
       ? "Listings marked RMLS, BizBuySell, or direct are summarized from public sources and link to the listing brokerage; photos and remarks are not reproduced. "
       : ""}
     Information deemed reliable but not guaranteed. Real Property Planning is an
-    independent educational hub and does not represent buyers or sellers on these properties directly — contact David
-    Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #133972), for all inquiries, showings, and
-    full listing details.
+    independent educational hub and does not represent buyers or sellers on these properties directly — contact{" "}
+    {FEATURED_BROKER.name}, Washington State Licensed Real Estate Broker ({FEATURED_BROKER.brokerage} · License #
+    {FEATURED_BROKER.licenseNumber}), for all inquiries, showings, and full listing details.
   </div>
 );

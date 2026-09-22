@@ -10,6 +10,7 @@ import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import {
   Accordion,
   AccordionContent,
@@ -20,7 +21,7 @@ import {
 const faqs = [
   {
     q: "Can we list the house before Letters Testamentary are issued?",
-    a: "No — a title company will not close a sale without proper documentation of legal authority. However David can begin assessment and preparation work before authority is formally granted.",
+    a: `No — a title company will not close a sale without proper documentation of legal authority. However ${FEATURED_BROKER.firstName} can begin assessment and preparation work before authority is formally granted.`,
   },
   {
     q: "How long does it take to get Letters Testamentary in Washington?",
@@ -28,7 +29,7 @@ const faqs = [
   },
   {
     q: "What if the personal representative lives out of state?",
-    a: "Out-of-state personal representatives can manage the entire process remotely. David provides photo updates, digital document signing, and regular communication so the representative never has to travel to supervise the property.",
+    a: `Out-of-state personal representatives can manage the entire process remotely. ${FEATURED_BROKER.firstName} provides photo updates, digital document signing, and regular communication so the representative never has to travel to supervise the property.`,
   },
   {
     q: "Can a beneficiary sell the property if there is no will?",
@@ -224,7 +225,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
               Real Property Planning regularly works with personal representatives, trustees, estate attorneys, and families throughout Washington State. our team understands exactly what documentation is required before a sale can proceed — and we coordinate directly with legal counsel to ensure every step is properly authorized.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              David can begin working with the family before Letters Testamentary are issued — assessing the property, developing a pricing strategy, and coordinating preparation so everything is ready the moment legal authority is in place.
+              {FEATURED_BROKER.firstName} can begin working with the family before Letters Testamentary are issued — assessing the property, developing a pricing strategy, and coordinating preparation so everything is ready the moment legal authority is in place.
             </p>
             <AffiliationBadgeGrid />
           </div>

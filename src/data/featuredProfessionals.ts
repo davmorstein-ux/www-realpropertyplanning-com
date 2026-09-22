@@ -35,6 +35,14 @@ export interface FeaturedBroker {
   yearsExperience: number;
   /** Zillow reviews profile, if any. */
   zillowProfileUrl?: string;
+  /** Pronouns used in prose about this person ("he uses his appraisal background"). */
+  pronoun: Pronouns;
+}
+
+export interface Pronouns {
+  subject: string; // he / she / they
+  object: string; // him / her / them
+  possessive: string; // his / her / their
 }
 
 export interface FeaturedAppraiser {
@@ -48,6 +56,7 @@ export interface FeaturedAppraiser {
   phoneTel: string;
   email: string;
   yearsExperience: number;
+  pronoun: Pronouns;
 }
 
 export const FEATURED_BROKER: FeaturedBroker = {
@@ -62,6 +71,7 @@ export const FEATURED_BROKER: FeaturedBroker = {
   website: "https://davestein.exprealty.com",
   yearsExperience: 20,
   zillowProfileUrl: "https://www.zillow.com/profile/DaveStein",
+  pronoun: { subject: "he", object: "him", possessive: "his" },
 };
 
 export const FEATURED_APPRAISER: FeaturedAppraiser = {
@@ -73,6 +83,7 @@ export const FEATURED_APPRAISER: FeaturedAppraiser = {
   phoneTel: "+12069003015",
   email: "dave@steinappraisal.com",
   yearsExperience: 20,
+  pronoun: { subject: "he", object: "him", possessive: "his" },
 };
 
 /** True while one person holds both roles. Components use it to write "broker and appraiser" as one clause instead of two. */

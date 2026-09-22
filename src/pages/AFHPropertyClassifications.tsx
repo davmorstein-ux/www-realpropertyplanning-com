@@ -10,6 +10,7 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
 import { AFH_STATUS_LABELS } from "@/data/afhListings";
+import { FEATURED_BROKER, brokerCredentialSentence } from "@/data/featuredProfessionals";
 
 const label = {
   fontSize: 15,
@@ -357,11 +358,10 @@ const AFHPropertyClassifications = () => (
         <div style={wrap}>
           <h2 style={h2}>Evaluating an AFH property before you buy</h2>
           <p style={body}>
-            AFH Club is an educational hub and does not provide brokerage or appraisal services. David Stein, who
-            publishes it, is a Washington State licensed real estate broker (eXp Realty, license #133972) and a Washington
-            State certified residential appraiser (Stein Appraisal, license #1702080) with more than 20 years in both
-            disciplines. If you want a property examined against the labels above, the fundamentals of the real estate
-            valued, or the right licensing, building, and lending professionals brought in, contact David directly
+            AFH Club is an educational hub and does not provide brokerage or appraisal services. Its featured broker,{" "}
+            {brokerCredentialSentence.replace(/\.$/, "")}, has more than {FEATURED_BROKER.yearsExperience} years in the field. If you
+            want a property examined against the labels above, the fundamentals of the real estate valued, or the right
+            licensing, building, and lending professionals brought in, contact {FEATURED_BROKER.firstName} directly
             through the{" "}
             <Link to="/afh-club/real-estate-broker" style={linkStyle}>
               broker page

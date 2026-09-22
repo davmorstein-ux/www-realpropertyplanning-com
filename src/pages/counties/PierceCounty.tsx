@@ -1,4 +1,5 @@
 import CountyPageTemplate from "@/components/CountyPageTemplate";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const PierceCounty = () => (
   <CountyPageTemplate
@@ -49,7 +50,7 @@ const PierceCounty = () => (
       },
       {
         question: "Can a Pierce County estate sale be managed if I live out of state?",
-        answer: "Yes. David Stein regularly coordinates Pierce County estate sales for executors and trustees who live in Seattle, Portland, California, and beyond — managing property access, vendor coordination, cleanout supervision, and the full sale process, with consistent updates so you can fulfill your fiduciary role without repeated travel to the area.",
+        answer: `Yes. ${FEATURED_BROKER.name} regularly coordinates Pierce County estate sales for executors and trustees who live in Seattle, Portland, California, and beyond — managing property access, vendor coordination, cleanout supervision, and the full sale process, with consistent updates so you can fulfill your fiduciary role without repeated travel to the area.`,
       },
       {
         question: "How long does it typically take to sell an inherited home in Pierce County?",

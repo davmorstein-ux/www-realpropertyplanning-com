@@ -288,7 +288,8 @@ const About = () => {
 
               <p className="text-muted-foreground text-sm leading-relaxed mt-6">
                 Real Property Planning is an educational hub and does not provide brokerage, appraisal, legal, or tax
-                services. Messages about those services are handled by David Stein personally through his own practice.
+                services. Messages about those services go to the featured broker or appraiser, who handles them personally
+                through their own practice.
               </p>
             </div>
           </div>

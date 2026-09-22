@@ -1,5 +1,6 @@
 import ExecutorSubPageLayout from "@/components/ExecutorSubPageLayout";
 import { SubH2, P, UL, Divider } from "@/components/PlanningSubPageLayout";
+import { FEATURED_BROKER, brokerCredentialSentence } from "@/data/featuredProfessionals";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult a licensed Washington State probate attorney for guidance specific to your situation.";
@@ -91,7 +92,7 @@ const WhenYouNeedExtraHelp = () => (
 
         Real Property Planning provides none of those things. It is a neutral
         educational hub; it holds no licenses and performs no services. The
-        appraisal and brokerage work belongs to David Stein personally, under
+        appraisal and brokerage work belongs to the featured broker personally, under
         his own two licenses, and everything legal belongs to the independent
         attorneys in the directory. Offering licensed services in the hub's
         name is the same misattribution corrected across the attorney pages and
@@ -107,7 +108,7 @@ const WhenYouNeedExtraHelp = () => (
       Real Property Planning is an educational resource, not a service provider — it holds no licenses and does not handle estates. What it offers is this library of guidance and a directory of independent Washington professionals: probate attorneys, CPAs, fiduciaries, senior move managers, and estate liquidators.
     </P>
     <P>
-      If the estate includes a home, David Stein can answer questions about the property directly. He is a licensed Washington real estate broker (eXp Realty, #133972) and a certified residential appraiser (Stein Appraisal, #1702080) — so questions about what the home is worth, what condition it is in, what a date-of-death valuation involves, or what selling it would actually require are ones he can speak to himself. Legal, tax, and care decisions belong with the professionals listed throughout this site.
+      If the estate includes a home, {FEATURED_BROKER.name}, the featured broker on this site, can answer questions about the property directly. {brokerCredentialSentence.replace(/\.$/, "")} — so questions about what the home is worth, what condition it is in, what a date-of-death valuation involves, or what selling it would actually require are ones he can speak to himself. Legal, tax, and care decisions belong with the professionals listed throughout this site.
     </P>
   </ExecutorSubPageLayout>
 );

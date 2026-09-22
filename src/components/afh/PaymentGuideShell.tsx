@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import PageFAQ from "@/components/PageFAQ";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 /**
  * Shell shared by the three "how AFHs get paid" guides (Sept 2026):
@@ -101,7 +102,7 @@ const PaymentGuideShell = ({ id, seoTitle, seoDescription, eyebrow, lede, cover,
           "@context": "https://schema.org",
           "@type": "Article",
           headline: guide.title,
-          author: { "@type": "Person", name: "David Stein" },
+          author: { "@type": "Person", name: `${FEATURED_BROKER.name}` },
           datePublished: "2026-09-18",
           dateModified,
           image: `https://realpropertyplanning.com${cover.src}`,

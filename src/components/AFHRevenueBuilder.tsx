@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { confirmedPrivatePayBands, privatePayBandByMarket } from "@/data/afhPrivatePayRanges";
 import { AFH_RATE_REGION_LABELS, medicaidRange, monthly, rateRegionForCounty } from "@/data/afhMedicaidRates";
+import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
 
 /**
  * Builds an annual gross revenue figure for an adult family home from a
@@ -246,7 +247,7 @@ const AFHRevenueBuilder = ({
         Use this revenue in the calculator
       </button>
       <p style={{ fontSize: 16, lineHeight: 1.5, color: "#5f6b66", margin: "12px 0 0" }}>
-        Private-pay ranges are David Stein's working bands from brokerage and appraisal experience (reviewed September
+        Private-pay ranges are {FEATURED_APPRAISER.name}'s working bands from brokerage and appraisal experience (reviewed September
         2026); Medicaid rates are the DSHS schedule effective July 1, 2026. You can still type your own gross revenue
         below if you have the actual P&amp;L.{" "}
         <Link to="/adult-family-home-costs" style={{ color: accent, fontWeight: 700 }}>

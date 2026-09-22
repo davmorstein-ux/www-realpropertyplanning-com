@@ -568,7 +568,7 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
               <p style={{ fontSize: "16px", color: SLATE, padding: "1rem 0" }}>
                 {copy.empty} Have one to list?{" "}
                 <a href="/afh-submit" style={{ color: TEAL, textDecoration: "underline" }}>
-                  Talk with David
+                  Talk with {FEATURED_BROKER.firstName}
                 </a>
                 .
               </p>

@@ -1,4 +1,5 @@
 import AFHCityHub from "@/components/AFHCityHub";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -29,7 +30,7 @@ const faqs = [
   {
     question: "How do I find out about new Bellevue AFH listings before they're widely marketed?",
     answer:
-      "Reach out directly — David Stein works with AFH buyers and sellers throughout the Eastside and can flag new Bellevue listings as they come available, often ahead of general market exposure.",
+      `Reach out directly — ${FEATURED_BROKER.name} works with AFH buyers and sellers throughout the Eastside and can flag new Bellevue listings as they come available, often ahead of general market exposure.`,
   },
 ];
 

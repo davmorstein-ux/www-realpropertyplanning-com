@@ -11,6 +11,7 @@ import { AFHListingCard, AFHListingsDisclaimer } from "@/components/AFHListingCa
 import { soldListings, afhClassification, formatVerifiedDate, latestVerified, listingSlug } from "@/data/afhListings";
 import { soldStats } from "@/data/afhInventoryPrerender";
 import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
+import { FEATURED_APPRAISER, FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 const GREEN = "#0a5648";
 
@@ -34,9 +35,9 @@ const FAQS = [
       "Buyers and lenders value adult family homes largely on resident capacity. Price per bedroom is a rough proxy for that; the licensed capacity, where known, appears on each listing's page.",
   },
   {
-    question: "Can David Stein appraise my adult family home?",
+    question: `Can ${FEATURED_APPRAISER.name} appraise my adult family home?`,
     answer:
-      "Yes. David Stein is a Washington State certified residential appraiser (Stein Appraisal, license #1702080) and a licensed real estate broker (eXp Realty). Contact him directly for appraisal or brokerage work.",
+      `Yes. ${FEATURED_APPRAISER.name} is a Washington State certified residential appraiser (${FEATURED_APPRAISER.firm}, license #${FEATURED_APPRAISER.licenseNumber})${SAME_PERSON ? ` and a licensed real estate broker (${FEATURED_BROKER.brokerage})` : ""}. Contact him directly for appraisal or brokerage work.`,
   },
 ];
 
@@ -64,7 +65,7 @@ const AFHSold = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Adult Family Home Sales in Washington — Sold Prices & Comps | AFH Club"
-        description="Closed adult family home sales across Washington State with sold price, sold price per bedroom, size, licensing status at sale, and whether the business conveyed. NWMLS records reviewed by David Stein, certified residential appraiser."
+        description={`Closed adult family home sales across Washington State with sold price, sold price per bedroom, size, licensing status at sale, and whether the business conveyed. NWMLS records reviewed by ${FEATURED_APPRAISER.name}, certified residential appraiser.`}
         canonical="https://realpropertyplanning.com/afh-club/sold"
       />
       <BreadcrumbSchema
@@ -102,7 +103,7 @@ const AFHSold = () => {
                 labelled by its status at closing.
               </p>
               <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed">
-                David Stein, a Washington State certified residential appraiser (Stein Appraisal), reviewed each record
+                {FEATURED_APPRAISER.name}, a Washington State certified residential appraiser ({FEATURED_APPRAISER.firm}), reviewed each record
                 against the listing remarks and the DSHS licensing locator.
               </p>
             </div>

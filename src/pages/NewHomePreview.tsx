@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 /**
  * Preview-only page (route: /new-home).
@@ -14,7 +15,7 @@ const NAV = [
   { label: "Downsizing", href: "/sell-house-fund-senior-living" },
   { label: "Property Valuation", href: "/why-valuation-matters" },
   { label: "Resources", href: "/resources" },
-  { label: "About David", href: "/about" },
+  { label: `About ${FEATURED_BROKER.firstName}`, href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 

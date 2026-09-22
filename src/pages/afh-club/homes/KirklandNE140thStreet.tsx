@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const TEAL = "#1a7a78";
 const SLATE = "#443e38";
@@ -177,8 +178,8 @@ const KirklandNE140thStreet = () => {
                   Listing broker: Zora Brzac · HomeSmart Real Estate Assoc
                 </p>
                 <p style={{ fontSize: "15px", color: GRAY_TEXT, margin: 0, lineHeight: 1.7 }}>
-                  For showings and full listing details, contact David Stein, Washington State Licensed Real Estate
-                  Broker (eXp Realty).
+                  For showings and full listing details, contact {FEATURED_BROKER.name}, Washington State Licensed Real Estate
+                  Broker ({FEATURED_BROKER.brokerage}).
                 </p>
               </div>
               <div

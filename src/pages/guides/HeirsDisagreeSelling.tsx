@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   { question: "Can one heir force the sale of an inherited house?", answer: "In some cases, yes. If heirs cannot reach agreement, one heir can petition the court for a partition action — essentially asking the court to order the sale. This is expensive, time-consuming, and adversarial. Reaching agreement through informed discussion is almost always the better path." },
@@ -130,7 +131,7 @@ const HeirsDisagreeSelling = () => (
 
     <MidPageCTA
       heading="Navigating a Family Disagreement?"
-      body="David Stein works with multi-heir families regularly. An independent property assessment can provide the objective information needed to move conversations forward."
+      body={`${FEATURED_BROKER.name} works with multi-heir families regularly. An independent property assessment can provide the objective information needed to move conversations forward.`}
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

@@ -12,12 +12,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema, areaServed } from "@/lib/schema";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   { question: "What should I do first with an inherited home in Federal Way?", answer: "Secure the property, confirm your legal authority, and get an honest assessment of condition and value. our team can walk through the home, identify what affects its marketability, and help you understand your options before making commitments." },
   { question: "How does an appraisal background help in Federal Way?", answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, we provide pricing based on actual property condition and local comparable data. In Federal Way, where homes range from well-maintained to significantly deferred, this dual expertise ensures pricing reflects reality." },
   { question: "Is it better to sell quickly or take time to prepare?", answer: "It depends on the property's condition, your timeline, and the transition situation. We evaluate the trade-offs honestly — sometimes targeted preparation yields a strong return; other times, pricing the home to sell in current condition is the smarter path. He'll help you weigh both options." },
-  { question: "Can the process be coordinated if I'm not local?", answer: "Yes. David Stein regularly works with executors and families managing Federal Way properties from other parts of Washington, out of state, or internationally — handling property access, vendor coordination, and communication so you can participate in decisions without managing logistics." },
+  { question: "Can the process be coordinated if I'm not local?", answer: `Yes. ${FEATURED_BROKER.name} regularly works with executors and families managing Federal Way properties from other parts of Washington, out of state, or internationally — handling property access, vendor coordination, and communication so you can participate in decisions without managing logistics.` },
   { question: "What if the sale is tied to a parent's move to care?", answer: "This is common in Federal Way. We coordinate sale timelines with care transitions, working with families, senior living communities, and other professionals to keep everything aligned. The goal is to reduce pressure during an already stressful time." },
   { question: "How long does it take to sell an inherited home in Federal Way?", answer: "Timelines depend on the legal process, property condition, and preparation scope. Once the home is ready and authority is in place, well-priced Federal Way properties typically sell within a few weeks. We help set realistic expectations based on your specific situation." },
 ];
@@ -77,7 +78,7 @@ const FederalWayProbateEstate = () => {
         </div>
       </section>
 
-      <MidPageCTA heading="Facing a Timing Decision in Federal Way?" body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families managing inherited or transition-related property decisions in Federal Way and South King County." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
+      <MidPageCTA heading="Facing a Timing Decision in Federal Way?" body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families managing inherited or transition-related property decisions in Federal Way and South King County.`} buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">

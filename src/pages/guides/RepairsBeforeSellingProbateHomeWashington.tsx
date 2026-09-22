@@ -15,6 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const payOff = [
   {
@@ -93,15 +94,15 @@ const faqs = [
   },
   {
     q: "What if we don't have estate funds available for repairs?",
-    a: "Some families use bridge financing or negotiate with contractors for payment at closing. David can help identify practical options based on the specific situation.",
+    a: `Some families use bridge financing or negotiate with contractors for payment at closing. ${FEATURED_BROKER.firstName} can help identify practical options based on the specific situation.`,
   },
   {
-    q: "How does David decide what to recommend?",
+    q: `How does ${FEATURED_BROKER.firstName} decide what to recommend?`,
     a: "Every recommendation is based on comparable sales data, current buyer behavior in that price range and neighborhood, and an honest assessment of what the improvement will actually return at closing.",
   },
   {
-    q: "Can David coordinate the repairs so we don't have to?",
-    a: "Yes. David manages vendor coordination for all preparation work — scheduling contractors, overseeing the work, and ensuring the property is ready to list without the executor needing to be on-site.",
+    q: `Can ${FEATURED_BROKER.firstName} coordinate the repairs so we don't have to?`,
+    a: `Yes. ${FEATURED_BROKER.firstName} manages vendor coordination for all preparation work — scheduling contractors, overseeing the work, and ensuring the property is ready to list without the executor needing to be on-site.`,
   },
 ];
 
@@ -284,7 +285,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in comparable sales data and current buyer behavior — not general contractor estimates or guesswork.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              David manages vendor coordination for all preparation work — scheduling contractors, overseeing the work, and ensuring the property is ready to list without the executor needing to be on-site.
+              {FEATURED_BROKER.firstName} manages vendor coordination for all preparation work — scheduling contractors, overseeing the work, and ensuring the property is ready to list without the executor needing to be on-site.
             </p>
             <AffiliationBadgeGrid />
           </div>

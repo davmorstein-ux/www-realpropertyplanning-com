@@ -29,6 +29,7 @@ import {
 import { AFH_CITY_PAGES, cityPageByCity } from "./afhCityPages";
 import { facilityForListing, type FacilityLike } from "./afhAddressMatch";
 import { buyerGuidesHtml, guidesForListing, GUIDES_FOR_BROWSING } from "./afhBuyerGuides";
+import { FEATURED_BROKER, FEATURED_APPRAISER } from "./featuredProfessionals";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -141,7 +142,7 @@ const countSentence = (listings: AFHListing[], scope: AFHInventoryScope): string
   if (scope.sold) {
     const st = soldStats(listings);
     if (!st.count) return `No closed adult family home sales are recorded for ${where} yet.`;
-    return `${st.count} adult family home ${st.count === 1 ? "sale" : "sales"} closed in ${where} between ${formatVerifiedDate(st.earliest!)} and ${formatVerifiedDate(st.latest!)}, sourced from NWMLS closed-sale records and reviewed by David Stein.`;
+    return `${st.count} adult family home ${st.count === 1 ? "sale" : "sales"} closed in ${where} between ${formatVerifiedDate(st.earliest!)} and ${formatVerifiedDate(st.latest!)}, sourced from NWMLS closed-sale records and reviewed by ${FEATURED_APPRAISER.name}.`;
   }
   const active = listings.filter((l) => l.marketStatus === "active").length;
   const pending = listings.filter((l) => l.marketStatus === "pending").length;
@@ -261,7 +262,7 @@ const disclaimer = (listings: AFHListing[]): string => {
     (hasOther
       ? "Listings marked RMLS, BizBuySell, or direct are summarized from public sources and link to the listing brokerage; photos and remarks are not reproduced. "
       : "") +
-    `Information deemed reliable but not guaranteed. Real Property Planning is an independent educational hub and does not represent buyers or sellers on these properties directly — contact David Stein, Washington State Licensed Real Estate Broker (eXp Realty · License #133972), for all inquiries, showings, and full listing details.` +
+    `Information deemed reliable but not guaranteed. Real Property Planning is an independent educational hub and does not represent buyers or sellers on these properties directly — contact ${FEATURED_BROKER.name}, Washington State Licensed Real Estate Broker (${FEATURED_BROKER.brokerage} · License #${FEATURED_BROKER.licenseNumber}), for all inquiries, showings, and full listing details.` +
     `</p>`
   );
 };
@@ -419,7 +420,7 @@ export function renderAfhInventory(
     const liveHere = listings.filter(isLive).length;
     if (!scope.sold && liveHere === 0) {
       html.push(
-        `<p style="margin:16px 0;padding:14px 18px;border:1px solid #e5e5e5;border-radius:10px;background:#fafafa;color:#444;line-height:1.6">Nothing in ${esc(scope.city)} is on the market right now. Adult family homes here list infrequently and sell quickly; the closed sales above show what the market has been doing, and the nearby cities below have current inventory. David Stein can notify you the day a ${esc(scope.city)} home lists.</p>`
+        `<p style="margin:16px 0;padding:14px 18px;border:1px solid #e5e5e5;border-radius:10px;background:#fafafa;color:#444;line-height:1.6">Nothing in ${esc(scope.city)} is on the market right now. Adult family homes here list infrequently and sell quickly; the closed sales above show what the market has been doing, and the nearby cities below have current inventory. ${FEATURED_BROKER.name} can notify you the day a ${esc(scope.city)} home lists.</p>`
       );
     }
     if (page && page.nearby.length) {

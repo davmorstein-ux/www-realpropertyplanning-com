@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 interface StatewideSupportProps {
   background?: "bg-background" | "bg-secondary" | "bg-cream" | "bg-primary";
@@ -47,10 +48,10 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
               Real Property Planning supports clients throughout Washington State, helping executors, families, attorneys, and fiduciaries work through probate real estate, inherited homes, and major property transitions.
             </p>
             <p>
-              While much of the work is concentrated in King, Snohomish, Pierce, and Kitsap Counties, clients are assisted across the entire state when guidance is needed.
+              While much of the featured broker's work is concentrated in King, Snohomish, Pierce, and Kitsap Counties, families anywhere in the state can use the guides here and ask for a connection.
             </p>
             <p>
-              For situations outside the immediate area, Real Property Planning can connect clients with a trusted broker anywhere in the country through our eXp Realty network — while remaining involved to help ensure consistency, communication, and a smooth overall process.
+              For situations outside Washington, {FEATURED_BROKER.name}, the featured broker, can connect families with a trusted broker anywhere in the country through {FEATURED_BROKER.brokerage}'s nationwide network.
             </p>
           </div>
 

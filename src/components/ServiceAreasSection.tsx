@@ -1,4 +1,5 @@
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const areas = [
   {
@@ -31,7 +32,7 @@ const ServiceAreasSection = () => {
             Serving Clients Throughout Washington State
           </h2>
           <p className="text-primary-foreground/70 text-lg">
-            With a strong focus in Western Washington and the Puget Sound region. Through our eXp Realty network, Real Property Planning can connect clients with a trusted broker anywhere in the country.
+            With a strong focus in Western Washington and the Puget Sound region. For situations outside Washington, {FEATURED_BROKER.name}, the featured broker, can connect families with a trusted broker anywhere in the country through {FEATURED_BROKER.brokerage}'s nationwide network.
           </p>
         </div>
         

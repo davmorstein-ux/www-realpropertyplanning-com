@@ -6,6 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { Home, Heart, Globe, ShieldCheck, FileText, Users, Briefcase } from "lucide-react";
 import poaIcon from "@/assets/icons/power-of-attorney-icon-washington.webp";
+import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -162,7 +163,7 @@ const PowerOfAttorney = () => {
                 When selling a property on behalf of someone else, an agent under Power of Attorney has a legal duty to act in the principal's best interests. A certified appraisal from a Washington State licensed appraiser establishes defensible fair market value — protecting the agent from any future questions about whether the property was sold fairly.
               </p>
               <p className={pClass}>
-                It also provides documentation that courts, family members, and financial institutions may require. Real Property Planning provides certified residential appraisals (WA #1702080) that meet this standard throughout Washington State.
+                It also provides documentation that courts, family members, and financial institutions may require. {FEATURED_APPRAISER.name}, the featured appraiser on this site ({FEATURED_APPRAISER.firm}, WA #{FEATURED_APPRAISER.licenseNumber}), provides certified residential appraisals that meet this standard throughout Washington State — independently of Real Property Planning, which holds no licenses.
               </p>
             </div>
           </div>

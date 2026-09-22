@@ -103,7 +103,7 @@ const EstateSubPageLayout = ({
             If a property-specific CTA is ever wanted on an individual page,
             use <MidPageCTA /> in the page body rather than reinstating a
             blanket band here — its copy is already scoped to the real estate
-            side and attributed to David Stein personally. */}
+            side and attributed to the featured broker personally. */}
 
         <section className="py-8 bg-cream">
           <div className="container px-5 md:px-8">

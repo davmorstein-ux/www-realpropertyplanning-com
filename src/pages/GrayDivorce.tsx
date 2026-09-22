@@ -7,6 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import grayDivorceIcon from "@/assets/gray-divorce-hero-icon.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const GrayDivorce = () => {
   return (
@@ -114,7 +115,7 @@ const GrayDivorce = () => {
                   },
                   {
                     title: "Pricing & Valuation",
-                    body: "As both a licensed real estate broker and a Washington State Certified Residential Appraiser, David brings a dual perspective to pricing that most agents simply can't offer. An accurate, defensible valuation matters in divorce proceedings.",
+                    body: `As both a licensed real estate broker and a Washington State Certified Residential Appraiser, ${FEATURED_BROKER.firstName} brings a dual perspective to pricing that most agents simply can't offer. An accurate, defensible valuation matters in divorce proceedings.`,
                   },
                   {
                     title: "Neutral Coordination",

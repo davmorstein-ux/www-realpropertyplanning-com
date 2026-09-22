@@ -1,4 +1,5 @@
 import AFHCityHub from "@/components/AFHCityHub";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -24,7 +25,7 @@ const faqs = [
   {
     question: "How do I get notified about new AFH listings in Federal Way?",
     answer:
-      "Use the alert form on this page, or contact David Stein directly. He tracks Federal Way and the South King County AFH market and can notify you when a matching property lists.",
+      `Use the alert form on this page, or contact ${FEATURED_BROKER.name} directly. He tracks Federal Way and the South King County AFH market and can notify you when a matching property lists.`,
   },
 ];
 

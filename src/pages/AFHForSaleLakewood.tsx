@@ -1,4 +1,5 @@
 import AFHCityHub from "@/components/AFHCityHub";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -29,7 +30,7 @@ const faqs = [
   {
     question: "How do I get notified about new AFH listings in Lakewood and Pierce County?",
     answer:
-      "Reach out directly — David Stein tracks AFH inventory across Pierce County and can notify you when a Lakewood-area property matching your criteria comes on the market.",
+      `Reach out directly — ${FEATURED_BROKER.name} tracks AFH inventory across Pierce County and can notify you when a Lakewood-area property matching your criteria comes on the market.`,
   },
 ];
 

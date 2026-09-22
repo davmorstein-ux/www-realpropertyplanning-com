@@ -1,4 +1,4 @@
-import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "../data/featuredProfessionals";
+import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON, brokerageAttribution, appraisalAttribution } from "../data/featuredProfessionals";
 const SITE_URL = "https://realpropertyplanning.com";
 const LOGO_URL = `${SITE_URL}/logo.webp`;
 const BUSINESS_NAME = "Real Property Planning";
@@ -245,7 +245,7 @@ export const realEstateAgentSchema = {
       },
       image: LOGO_URL,
       description:
-        "Real Property Planning is Washington State's independent professional resource hub and ecosystem for probate real estate, inherited property sales, estate appraisals, and senior housing transitions — serving families, executors, attorneys, and professionals throughout the Puget Sound region. Real estate licenses are held under eXp Realty; appraisal services are provided through Stein Appraisal.",
+        `Real Property Planning is Washington State's independent, free educational hub for probate real estate, inherited property, estate valuation, and senior housing transitions, for families, executors, attorneys, and the professionals who serve them. The hub holds no licenses; ${brokerageAttribution} ${appraisalAttribution}`,
       telephone: "(206) 900-3015",
       email: "info@realpropertyplanning.com",
       address: {

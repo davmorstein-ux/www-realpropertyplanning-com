@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema, areaServed } from "@/lib/schema";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   { question: "What should I do first with an inherited home in Auburn?", answer: "Secure the property, confirm your legal authority, and get an honest assessment of its condition and realistic market value. our team can visit the home, document what affects its value, and walk you through your options before you make any commitments." },
@@ -77,7 +78,7 @@ const AuburnProbateEstate = () => {
         </div>
       </section>
 
-      <MidPageCTA heading="Have Questions About an Auburn Property?" body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families handling inherited or estate property in Auburn. Whether the home is in great shape or needs significant work, a conversation can help clarify your path." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
+      <MidPageCTA heading="Have Questions About an Auburn Property?" body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families handling inherited or estate property in Auburn. Whether the home is in great shape or needs significant work, a conversation can help clarify your path.`} buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">

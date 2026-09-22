@@ -1,4 +1,5 @@
 import CountyPageTemplate from "@/components/CountyPageTemplate";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const SkagitCounty = () => (
   <CountyPageTemplate
@@ -27,7 +28,7 @@ const SkagitCounty = () => (
       },
       {
         question: "Can a Skagit County estate sale be coordinated if the family lives in Seattle?",
-        answer: "Yes — and this is one of the most common situations David Stein handles in Skagit County. Many families managing Skagit estate property are based in Seattle, the Eastside, or out of state entirely. He coordinates the full process locally — property assessment, cleanout coordination, vendor management, listing, and sale — with regular written and photo updates so the family stays informed without needing to make the drive north for every step. Digital document signing means most of the process can be completed remotely.",
+        answer: `Yes — and this is one of the most common situations ${FEATURED_BROKER.name} handles in Skagit County. Many families managing Skagit estate property are based in Seattle, the Eastside, or out of state entirely. He coordinates the full process locally — property assessment, cleanout coordination, vendor management, listing, and sale — with regular written and photo updates so the family stays informed without needing to make the drive north for every step. Digital document signing means most of the process can be completed remotely.`,
       },
       {
         question: "What should I know about selling an inherited home in a small Skagit community like La Conner or Edison?",
@@ -61,7 +62,7 @@ const SkagitCounty = () => (
       },
       {
         question: "Can a Skagit County estate sale be coordinated if the family lives in Seattle?",
-        answer: "Yes — and this is one of the most common situations David Stein handles in Skagit County. Many families managing Skagit estate property are based in Seattle, the Eastside, or out of state entirely. He coordinates the full process locally — property assessment, cleanout coordination, vendor management, listing, and sale — with regular written and photo updates so the family stays informed without needing to make the drive north for every step. Digital document signing means most of the process can be completed remotely.",
+        answer: `Yes — and this is one of the most common situations ${FEATURED_BROKER.name} handles in Skagit County. Many families managing Skagit estate property are based in Seattle, the Eastside, or out of state entirely. He coordinates the full process locally — property assessment, cleanout coordination, vendor management, listing, and sale — with regular written and photo updates so the family stays informed without needing to make the drive north for every step. Digital document signing means most of the process can be completed remotely.`,
       },
       {
         question: "What should I know about selling an inherited home in a small Skagit community like La Conner or Edison?",

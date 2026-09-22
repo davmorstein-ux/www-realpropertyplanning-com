@@ -10,6 +10,7 @@ import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import {
   Accordion,
   AccordionContent,
@@ -31,8 +32,8 @@ const faqs = [
     a: "This can happen when only some assets were transferred into a trust before death. An estate attorney should advise on how to handle the split — the real estate side will follow whichever process applies to how that specific property is titled.",
   },
   {
-    q: "Does David work with both executors and trustees?",
-    a: "Yes. David works regularly with both — as well as with the attorneys who represent them.",
+    q: `Does ${FEATURED_BROKER.firstName} work with both executors and trustees?`,
+    a: `Yes. ${FEATURED_BROKER.firstName} works regularly with both — as well as with the attorneys who represent them.`,
   },
   {
     q: "How quickly can a trust sale close compared to a probate sale?",
@@ -259,10 +260,10 @@ const ProbateVsTrustSaleWashington = () => (
               Whether a property is going through probate or trust administration, Real Property Planning brings the same discipline to every sale — accurate condition-based pricing, coordinated preparation, and clear communication with all parties involved.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              For probate sales, David works directly with the executor and estate attorney — providing regular updates, handling all property preparation coordination, and ensuring the pricing documentation supports the executor's fiduciary obligations.
+              For probate sales, {FEATURED_BROKER.firstName} works directly with the executor and estate attorney — providing regular updates, handling all property preparation coordination, and ensuring the pricing documentation supports the executor's fiduciary obligations.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              For trust sales, David works with the trustee and their legal counsel — moving quickly when the trust allows, and ensuring the sale price is well-documented and defensible to beneficiaries.
+              For trust sales, {FEATURED_BROKER.firstName} works with the trustee and their legal counsel — moving quickly when the trust allows, and ensuring the sale price is well-documented and defensible to beneficiaries.
             </p>
             <AffiliationBadgeGrid />
           </div>

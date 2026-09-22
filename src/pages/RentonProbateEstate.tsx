@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema, areaServed } from "@/lib/schema";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   { question: "What should I do first with an inherited home in Renton?", answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of condition and market value. our team can walk through the property, identify what affects value, and help you understand your options before committing to anything." },
@@ -77,7 +78,7 @@ const RentonProbateEstate = () => {
         </div>
       </section>
 
-      <MidPageCTA heading="Questions About a Renton Property?" body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families handling inherited or estate property in Renton and South King County." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
+      <MidPageCTA heading="Questions About a Renton Property?" body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families handling inherited or estate property in Renton and South King County.`} buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">

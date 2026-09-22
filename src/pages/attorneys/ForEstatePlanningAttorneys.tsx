@@ -10,7 +10,7 @@ import JamesJacksonCard from "@/components/JamesJacksonCard";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { brokerageAttribution, appraisalAttribution } from "@/data/featuredProfessionals";
+import { brokerageAttribution, appraisalAttribution,  FEATURED_BROKER} from "@/data/featuredProfessionals";
 
 /*
   ATTRIBUTION NOTE — do not reintroduce "our team" / "we" here.
@@ -18,7 +18,7 @@ import { brokerageAttribution, appraisalAttribution } from "@/data/featuredProfe
   Real Property Planning is a neutral educational hub. It does not provide
   brokerage, appraisal, legal, tax, or advisory services, and it has no team.
   The real estate and appraisal work described on this page is performed by
-  David Stein personally — as a Washington State licensed real estate broker
+  the featured broker personally (src/data/featuredProfessionals.ts) — today a Washington State licensed real estate broker
   with eXp Realty, and as a certified residential appraiser through Stein
   Appraisal — both of which are separate businesses from this site.
 
@@ -41,7 +41,7 @@ const services = [
     title: "Clear, Defensible Valuation",
     description: (
       <>
-        David's work as a{" "}
+        {FEATURED_BROKER.firstName}'s work as a{" "}
         <Link
           to="/real-estate-appraiser"
           className="text-accent hover:text-gold underline underline-offset-4"
@@ -57,17 +57,17 @@ const services = [
   {
     title: "Strategic Sale Planning",
     description:
-      "David advises on timing, preparation, and market positioning — always in alignment with the broader estate plan and the client's specific situation. Decisions about what to repair, when to list, and how to price are made with both market knowledge and fiduciary awareness.",
+      `${FEATURED_BROKER.firstName} advises on timing, preparation, and market positioning — always in alignment with the broader estate plan and the client's specific situation. Decisions about what to repair, when to list, and how to price are made with both market knowledge and fiduciary awareness.`,
   },
   {
     title: "Coordination With Advisors",
     description:
-      "David works collaboratively with attorneys, CPAs, and financial planners, so that everyone involved in the client's plan is working from the same real estate information. One consistent point of contact. Regular updates. No gaps in communication.",
+      `${FEATURED_BROKER.firstName} works collaboratively with attorneys, CPAs, and financial planners, so that everyone involved in the client's plan is working from the same real estate information. One consistent point of contact. Regular updates. No gaps in communication.`,
   },
   {
     title: "Property Preparation Oversight",
     description:
-      "When preparation is needed before a sale, David coordinates vendors, manages the process, and keeps the client and their advisors informed — without adding to their administrative burden.",
+      `When preparation is needed before a sale, ${FEATURED_BROKER.firstName} coordinates vendors, manages the process, and keeps the client and their advisors informed — without adding to their administrative burden.`,
   },
 ];
 
@@ -75,7 +75,7 @@ const ForEstatePlanningAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Estate Planning Attorneys in Washington State | Real Property Planning"
-      description="David Stein, a Washington State licensed real estate broker and certified residential appraiser, works with estate planning attorneys and their clients on property valuation, sale timing, and real estate coordination throughout Washington State."
+      description={`${FEATURED_BROKER.name}, a Washington State licensed real estate broker and certified residential appraiser, works with estate planning attorneys and their clients on property valuation, sale timing, and real estate coordination throughout Washington State.`}
     />
     <BreadcrumbSchema
       items={[
@@ -99,7 +99,7 @@ const ForEstatePlanningAttorneys = () => (
               actually needs to be sold. The family member who agreed on paper may resist when it becomes real.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              David Stein — a Washington State licensed real estate broker and certified residential appraiser — works
+              {FEATURED_BROKER.name} — a Washington State licensed real estate broker and certified residential appraiser — works
               alongside estate planning attorneys to help clients move from strategy to execution, providing clear
               valuation insight, coordinated sale planning, and a calm, professional presence during transitions that
               matter.
@@ -138,7 +138,7 @@ const ForEstatePlanningAttorneys = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-[900px] mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-10">
-              How David Stein Supports Your Clients
+              How {FEATURED_BROKER.name} Supports Your Clients
             </h2>
             <div className="grid gap-5">
               {services.map((s, i) => (
@@ -165,11 +165,11 @@ const ForEstatePlanningAttorneys = () => (
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
               If you work with clients who hold real property as part of their estate plan — and who will eventually
-              need to sell, transfer, or make decisions about that property — David Stein welcomes the opportunity to
+              need to sell, transfer, or make decisions about that property — {FEATURED_BROKER.name} welcomes the opportunity to
               be a resource for your practice.
             </p>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              A brief conversation is the most efficient way to discuss how David can support your clients in
+              A brief conversation is the most efficient way to discuss how {FEATURED_BROKER.firstName} can support your clients in
               Washington State.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

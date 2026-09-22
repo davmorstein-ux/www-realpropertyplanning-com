@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema, areaServed } from "@/lib/schema";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -165,7 +166,7 @@ const BellinghamProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Handling a Bellingham Property From a Distance?"
-        body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families dealing with inherited or estate property in Bellingham and Whatcom County — whether you're local or managing from out of the area."
+        body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families dealing with inherited or estate property in Bellingham and Whatcom County — whether you're local or managing from out of the area.`}
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance on the property questions."
       />

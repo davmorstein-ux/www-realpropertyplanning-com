@@ -11,7 +11,7 @@ import FeaturedAttorneyPlaceholder from "@/components/FeaturedAttorneyPlaceholde
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { brokerageAttribution, appraisalAttribution } from "@/data/featuredProfessionals";
+import { brokerageAttribution, appraisalAttribution,  FEATURED_BROKER} from "@/data/featuredProfessionals";
 
 /*
   ATTRIBUTION NOTE — do not reintroduce "our team" / "we" / "Real Property Planning"
@@ -20,7 +20,7 @@ import { brokerageAttribution, appraisalAttribution } from "@/data/featuredProfe
   Real Property Planning is a neutral educational hub. It does not provide
   brokerage, appraisal, legal, tax, or advisory services, and it has no team.
   The real estate and appraisal work described on this page is performed by
-  David Stein personally — as a Washington State licensed real estate broker
+  the featured broker personally (src/data/featuredProfessionals.ts) — today a Washington State licensed real estate broker
   with eXp Realty, and as a certified residential appraiser through Stein
   Appraisal — both of which are separate businesses from this site.
 
@@ -72,7 +72,7 @@ const commonSituations = [
 const faqs = [
   {
     question: "Do you provide legal advice?",
-    answer: "No. Neither Real Property Planning nor David Stein provides legal advice. When legal questions arise, clients should consult a qualified real estate attorney. David helps with the real estate, valuation, and practical property side of the situation.",
+    answer: `No. Neither Real Property Planning nor ${FEATURED_BROKER.name} provides legal advice. When legal questions arise, clients should consult a qualified real estate attorney. ${FEATURED_BROKER.firstName} helps with the real estate, valuation, and practical property side of the situation.`,
   },
   {
     question: "When should I contact a real estate attorney?",
@@ -84,7 +84,7 @@ const faqs = [
   },
   {
     question: "Can you work with my attorney?",
-    answer: "Yes. David Stein can work alongside your attorney and other advisors to help with pricing, valuation insight, sale preparation, and practical coordination related to the property.",
+    answer: `Yes. ${FEATURED_BROKER.name} can work alongside your attorney and other advisors to help with pricing, valuation insight, sale preparation, and practical coordination related to the property.`,
   },
   {
     question: "Do all real estate transactions need an attorney?",
@@ -96,7 +96,7 @@ const ForRealEstateAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Brokerage Support for Real Estate Attorneys in Washington State | Real Property Planning"
-      description="David Stein — a Washington State licensed real estate broker and certified residential appraiser — works alongside real estate attorneys to provide market analysis, property coordination, and sale management when clients need both legal and real estate expertise."
+      description={`${FEATURED_BROKER.name} — a Washington State licensed real estate broker and certified residential appraiser — works alongside real estate attorneys to provide market analysis, property coordination, and sale management when clients need both legal and real estate expertise.`}
     />
     <BreadcrumbSchema
       items={[
@@ -118,7 +118,7 @@ const ForRealEstateAttorneys = () => (
             Real estate matters don't always fit neatly into either the legal category or the brokerage category. Sometimes a client needs both — legal counsel to navigate rights, risks, and obligations, and an experienced real estate professional to assess the property, understand the market, and manage the practical path forward.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            David Stein works alongside real estate attorneys to provide the property side of that equation — market analysis, valuation insight, preparation coordination, and sale management — while leaving the legal guidance where it belongs.
+            {FEATURED_BROKER.name} works alongside real estate attorneys to provide the property side of that equation — market analysis, valuation insight, preparation coordination, and sale management — while leaving the legal guidance where it belongs.
           </p>
         </div>
       </div>
@@ -171,15 +171,15 @@ const ForRealEstateAttorneys = () => (
       </div>
     </section>
 
-    {/* How David Stein Works Alongside Real Estate Attorneys */}
+    {/* How the featured broker Works Alongside Real Estate Attorneys */}
     <section className="py-16 lg:py-24 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-            How David Stein Works Alongside Real Estate Attorneys
+            How {FEATURED_BROKER.name} Works Alongside Real Estate Attorneys
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            David Stein does not provide legal advice. Instead, he provides the real estate expertise that complements legal counsel — particularly in situations where property condition, market value, or sale logistics are part of a larger legal matter:
+            {FEATURED_BROKER.name} does not provide legal advice. Instead, he provides the real estate expertise that complements legal counsel — particularly in situations where property condition, market value, or sale logistics are part of a larger legal matter:
           </p>
           <ul className="space-y-4">
             {howDavidHelps.map((item, i) => (
@@ -205,7 +205,7 @@ const ForRealEstateAttorneys = () => (
             Common Situations Where Clients May Need Both Attorney and Real Estate Guidance
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            Real estate attorneys and their clients benefit from David's support in situations including:
+            Real estate attorneys and their clients benefit from {FEATURED_BROKER.firstName}'s support in situations including:
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {commonSituations.map((item, i) => (
@@ -234,10 +234,10 @@ const ForRealEstateAttorneys = () => (
             Discuss a Client Situation
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-            When a client's legal matter involves real property in Washington State, David Stein provides a reliable, professional resource for the market and logistics side of the situation.
+            When a client's legal matter involves real property in Washington State, {FEATURED_BROKER.name} provides a reliable, professional resource for the market and logistics side of the situation.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            David serves clients throughout{" "}
+            {FEATURED_BROKER.firstName} serves clients throughout{" "}
             <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King County, Snohomish County, Pierce County, Kitsap County</Link>, and across Washington State. A brief conversation is usually the most efficient way to determine how he can support your client's situation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

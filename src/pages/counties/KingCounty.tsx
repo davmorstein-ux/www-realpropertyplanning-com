@@ -1,4 +1,5 @@
 import CountyPageTemplate from "@/components/CountyPageTemplate";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const KingCounty = () => (
   <CountyPageTemplate
@@ -44,7 +45,7 @@ const KingCounty = () => (
       },
       {
         question: "Can an estate sale be coordinated if multiple heirs live in different states?",
-        answer: "Yes — this is one of the most common situations David Stein handles. He manages the full process locally, provides regular written and photo updates, handles all vendor coordination, and communicates with each heir consistently. Digital document signing means heirs rarely need to be physically present for any step of the process.",
+        answer: `Yes — this is one of the most common situations ${FEATURED_BROKER.name} handles. He manages the full process locally, provides regular written and photo updates, handles all vendor coordination, and communicates with each heir consistently. Digital document signing means heirs rarely need to be physically present for any step of the process.`,
       },
       {
         question: "Should I get a formal appraisal before selling an inherited King County home?",

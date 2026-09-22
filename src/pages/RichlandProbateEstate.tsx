@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema, areaServed } from "@/lib/schema";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -137,7 +138,7 @@ const RichlandProbateEstate = () => {
         </div>
       </section>
 
-      <MidPageCTA heading="Handling an Estate Property in Richland?" body="David Stein, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families managing inherited or estate property in Richland and the Tri-Cities area." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
+      <MidPageCTA heading="Handling an Estate Property in Richland?" body={`${FEATURED_BROKER.name}, a licensed real estate broker, offers confidential property consultations for executors, trustees, and families managing inherited or estate property in Richland and the Tri-Cities area.`} buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance on the property questions." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">

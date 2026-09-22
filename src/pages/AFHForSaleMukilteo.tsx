@@ -1,4 +1,5 @@
 import AFHCityHub from "@/components/AFHCityHub";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -29,7 +30,7 @@ const faqs = [
   {
     question: "How do I find out about new AFH listings in Mukilteo before they're widely marketed?",
     answer:
-      "Reach out directly — given how limited Mukilteo's inventory typically is, David Stein can notify you as soon as a matching property comes to market, often before it's widely advertised.",
+      `Reach out directly — given how limited Mukilteo's inventory typically is, ${FEATURED_BROKER.name} can notify you as soon as a matching property comes to market, often before it's widely advertised.`,
   },
 ];
 

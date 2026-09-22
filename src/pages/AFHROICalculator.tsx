@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
 import BackToCalculators from "@/components/BackToCalculators";
+import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 
 const BLUE = "#0047ab";
 const BLUE_LIGHT = "#3b7dd8";
@@ -664,7 +665,7 @@ const AFHROICalculator = () => {
                     Ready to analyze a specific deal?
                   </strong>
                   <p style={{ fontSize: 13, color: "#272421", marginTop: 3 }}>
-                    our team — Licensed Broker &amp; Certified Appraiser · eXp Realty · 20+ years AFH experience
+                    {FEATURED_BROKER.name} · Licensed Broker{SAME_PERSON ? " & Certified Appraiser" : ""} · {FEATURED_BROKER.brokerage} · {FEATURED_BROKER.yearsExperience}+ years AFH experience
                   </p>
                 </div>
                 <button
@@ -685,7 +686,7 @@ const AFHROICalculator = () => {
                     transition: "all 0.2s",
                   }}
                 >
-                  Contact David ↗
+                  Contact {FEATURED_BROKER.firstName} ↗
                 </button>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import CountyPageTemplate from "@/components/CountyPageTemplate";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const KitsapCounty = () => (
   <CountyPageTemplate
@@ -46,7 +47,7 @@ const KitsapCounty = () => (
       },
       {
         question: "Can a Kitsap County sale be managed if I live in Seattle or out of state?",
-        answer: "Absolutely. The ferry-separated geography of Kitsap County makes remote management common. David Stein handles property access, vendor coordination, preparation, showings, and the full sale process — providing consistent updates so you can manage your executor or trustee responsibilities from wherever you are.",
+        answer: `Absolutely. The ferry-separated geography of Kitsap County makes remote management common. ${FEATURED_BROKER.name} handles property access, vendor coordination, preparation, showings, and the full sale process — providing consistent updates so you can manage your executor or trustee responsibilities from wherever you are.`,
       },
       {
         question: "What makes selling a home in Poulsbo or Kingston different from other Kitsap communities?",

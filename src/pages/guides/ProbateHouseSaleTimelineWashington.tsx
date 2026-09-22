@@ -10,6 +10,7 @@ import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Check, AlertTriangle } from "lucide-react";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import {
   Accordion,
   AccordionContent,
@@ -80,7 +81,7 @@ const tableRows: Array<{ phase: string; duration: string; bold?: boolean }> = [
 const faqs = [
   {
     q: "Can we do anything before Letters Testamentary are issued?",
-    a: "Yes. David can assess the property, develop a pricing strategy, and coordinate early preparation work — so the moment legal authority is granted, the property is ready to list immediately.",
+    a: `Yes. ${FEATURED_BROKER.firstName} can assess the property, develop a pricing strategy, and coordinate early preparation work — so the moment legal authority is granted, the property is ready to list immediately.`,
   },
   {
     q: "What is the fastest a probate sale can close in Washington State?",
@@ -134,7 +135,7 @@ const ProbateHouseSaleTimelineWashington = () => (
           buttons were removed; the subtitle now sits in the section below.
           The credential line read "Real Property Planning — Licensed Real
           Estate Broker & Certified Residential Appraiser", which attributed
-          licensure to the hub rather than to David Stein personally. Do not
+          licensure to the hub rather than to the featured broker personally. Do not
           reinstate it in that form. */}
       <HeroBandTitle as="h1">Probate House Sale Timeline in Washington State</HeroBandTitle>
 
@@ -271,7 +272,7 @@ const ProbateHouseSaleTimelineWashington = () => (
               His dual credential as a Licensed Broker and Certified Residential Appraiser means the pricing decision is made once — accurately — without the back-and-forth that comes when a broker's estimate and an appraiser's valuation don't match.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              David coordinates directly with estate attorneys throughout Washington State to ensure the real estate timeline supports — rather than conflicts with — the overall estate administration plan.
+              {FEATURED_BROKER.firstName} coordinates directly with estate attorneys throughout Washington State to ensure the real estate timeline supports — rather than conflicts with — the overall estate administration plan.
             </p>
             <AffiliationBadgeGrid />
           </div>

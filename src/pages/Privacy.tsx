@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessionals";
 
 /**
  * Privacy policy.
@@ -187,9 +188,9 @@ const Privacy = () => {
                 <a href="mailto:contact@realpropertyplanning.com">
                   contact@realpropertyplanning.com
                 </a>
-                . Real estate brokerage services referenced on this site are provided by David
-                Stein, a licensed Washington real estate broker with eXp Realty, and appraisal
-                services by David Stein, a Washington certified residential appraiser.
+                . Real estate brokerage services referenced on this site are provided by {FEATURED_BROKER.name}, a
+                licensed Washington real estate broker with {FEATURED_BROKER.brokerage}, and appraisal services by{" "}
+                {FEATURED_APPRAISER.name}, a Washington certified residential appraiser.
               </p>
             </div>
           </div>

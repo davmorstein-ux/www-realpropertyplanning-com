@@ -1,4 +1,5 @@
 import AFHCityHub from "@/components/AFHCityHub";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   {
@@ -29,7 +30,7 @@ const faqs = [
   {
     question: "How do I get notified about new AFH listings in Bonney Lake?",
     answer:
-      "Reach out directly — David Stein tracks AFH inventory across Pierce County, including Bonney Lake and the surrounding plateau communities, and can notify you when a matching property comes to market.",
+      `Reach out directly — ${FEATURED_BROKER.name} tracks AFH inventory across Pierce County, including Bonney Lake and the surrounding plateau communities, and can notify you when a matching property comes to market.`,
   },
 ];
 

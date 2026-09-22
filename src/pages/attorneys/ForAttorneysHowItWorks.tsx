@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const STEPS: { n: string; title: string; body: string }[] = [
   {
@@ -116,7 +117,7 @@ const ForAttorneysHowItWorks = () => (
 
       {/* Section 2 — What a licensed broker handles.
           NOT "what we handle": RPP is a neutral hub and does not perform
-          brokerage work. Attribution goes to David Stein through eXp Realty,
+          brokerage work. Attribution goes to {FEATURED_BROKER.name} through eXp Realty,
           never to the hub. */}
       <section className="py-12 md:py-16 bg-[#FAF7EE]">
         <div className="container px-6 lg:px-8">

@@ -12,6 +12,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const faqs = [
   { question: "Should I renovate an inherited home before selling?", answer: "Usually, no. Full renovations rarely make financial sense for estate properties. Targeted improvements — deep cleaning, paint, landscaping, minor repairs — often deliver the best return. A professional assessment can identify which specific improvements are worth the investment." },
@@ -134,7 +135,7 @@ const EstatePropertyRepairs = () => (
 
     <MidPageCTA
       heading="Not Sure What's Worth Fixing?"
-      body="David Stein evaluates each potential improvement through a return-on-investment lens, informed by his appraisal background. A short conversation can help you decide where estate funds are best spent."
+      body={`${FEATURED_BROKER.name} evaluates each potential improvement through a return-on-investment lens, informed by his appraisal background. A short conversation can help you decide where estate funds are best spent.`}
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

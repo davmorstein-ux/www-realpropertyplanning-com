@@ -7,6 +7,7 @@ import BackToCalculators from "@/components/BackToCalculators";
 import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
 import { confirmedPrivatePayBands, privatePayBandByMarket } from "@/data/afhPrivatePayRanges";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 /**
  * AFH Occupancy & Financing Calculator (Sept 2026).
@@ -645,7 +646,7 @@ const AFHFinancingCalculator = () => {
           </div>
 
           <p style={{ maxWidth: 900, margin: "0 auto", fontSize: 17, color: "#2b2825", lineHeight: 1.6 }}>
-            Working estimates for discussion. SBA 7(a) rates are Prime plus a spread and change with the market; a buyer's actual terms depend on their lender and file. Not a loan quote or an appraisal. Private-pay defaults come from David Stein's reviewed ranges for King, Snohomish and Pierce counties.
+            Working estimates for discussion. SBA 7(a) rates are Prime plus a spread and change with the market; a buyer`s actual terms depend on their lender and file. Not a loan quote or an appraisal. Private-pay defaults come from ${FEATURED_BROKER.name}`s reviewed ranges for King, Snohomish and Pierce counties.
           </p>
         </div>
         <style>{`@media (max-width: 640px) { .fin-grid { grid-template-columns: 1fr !important; } .fin-tiles { grid-template-columns: 1fr !important; } .fin-beds { grid-template-columns: repeat(2, 1fr) !important; } }`}</style>

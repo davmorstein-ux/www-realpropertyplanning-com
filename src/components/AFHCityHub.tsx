@@ -16,6 +16,7 @@ import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 import AFHBuyerGuides from "@/components/AFHBuyerGuides";
 import { AFH_CITY_PAGES, cityPageBySlug } from "@/data/afhCityPages";
 import { liveListings as allLive, soldListings as allSold } from "@/data/afhListings";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const GREEN = "#0a5648";
 
@@ -268,7 +269,7 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
                 source={`afh-alert:${slug}`}
                 copy={{
                   heading: `Tell me when an adult family home lists in ${city}`,
-                  body: `An email from David Stein when a ${city} AFH property, business, or lease comes on the market or changes status. Nothing else.`,
+                  body: `An email from ${FEATURED_BROKER.name} when a ${city} AFH property, business, or lease comes on the market or changes status. Nothing else.`,
                   cta: "Notify me",
                 }}
               />

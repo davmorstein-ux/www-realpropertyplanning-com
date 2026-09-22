@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import PageFAQ from "@/components/PageFAQ";
 import { LANES, LENDERS, SBA_RATE_BOX, type LaneId } from "@/data/afhLenders";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 /**
  * How to Finance an Adult Family Home in Washington (Sept 2026).
@@ -38,7 +39,7 @@ const FAQS = [
   { question: "Can I get a regular home mortgage on an adult family home?", answer: "Sometimes. A handful of Puget Sound lenders write owner-occupied residential mortgages on licensed AFHs for buyers who will live in the home and can qualify on their own income and credit. It is the cheapest money available and the lowest down payment, but it finances the house, not the business, and not every lender will do it." },
   { question: "What is the difference between SBA 7(a) and SBA 504?", answer: "7(a) is the general-purpose loan: one lender, about 10% down, up to 25 years, and it can include the business, working capital and closing costs. 504 pairs a bank with a Certified Development Company to finance owner-occupied real estate at a lower fixed rate, but it cannot finance the business portion." },
   { question: "What does the lender check before approving an AFH loan?", answer: "Whether the home's income covers the loan payment. The lender takes last year's net operating income — after operating costs and, for a buyer who will hire staff, the wages to replace the owners' own hours — and divides it by the annual debt service. Most want at least 1.25 times. Occupancy on the tax returns moves this more than anything else." },
-  { question: "Does Real Property Planning recommend these lenders or get paid by them?", answer: "No. The list is informational and unpaid. Each lender is included because it publishes information showing it understands adult family homes; entries marked 'confirmed' are ones David Stein has spoken with about their current AFH lending. RPP does not guarantee financing or terms, and a buyer's actual loan depends on the lender and the file." },
+  { question: "Does Real Property Planning recommend these lenders or get paid by them?", answer: `No. The list is informational and unpaid. Each lender is included because it publishes information showing it understands adult family homes; entries marked 'confirmed' are ones ${FEATURED_BROKER.name} has spoken with about their current AFH lending. RPP does not guarantee financing or terms, and a buyer's actual loan depends on the lender and the file.` },
 ];
 
 const HowToFinanceAnAFH = () => {
@@ -57,7 +58,7 @@ const HowToFinanceAnAFH = () => {
       <SEOHead
         title="How to Finance an Adult Family Home in Washington | Residential, SBA 7(a), 504 and Commercial | AFH Club"
         description="How buyers finance a Washington adult family home: owner-occupied residential mortgages, SBA 7(a) business acquisition loans, SBA 504, and portfolio lending — what each requires, what the lender checks, current SBA rate ceilings, and lenders that work with AFHs."
-        schemaJson={{ "@context": "https://schema.org", "@type": "Article", headline: "How to Finance an Adult Family Home in Washington", author: { "@type": "Person", name: "David Stein" }, dateModified: "2026-09-18", url: "https://realpropertyplanning.com/afh-club/how-to-finance-an-afh" }}
+        schemaJson={{ "@context": "https://schema.org", "@type": "Article", headline: "How to Finance an Adult Family Home in Washington", author: { "@type": "Person", name: `${FEATURED_BROKER.name}` }, dateModified: "2026-09-18", url: "https://realpropertyplanning.com/afh-club/how-to-finance-an-afh" }}
       />
       <Header />
       <main>
@@ -230,7 +231,7 @@ const HowToFinanceAnAFH = () => {
 
             {/* Disclaimer */}
             <p style={{ ...p, fontSize: 17, color: "#2b2825", marginTop: 28 }}>
-              Real Property Planning receives no compensation from any lender listed and does not endorse or guarantee any lender, program, rate, or approval. Lenders are listed because they publish information showing they work with adult family homes; "confirmed" entries are ones David Stein has spoken with about their current AFH lending. Published terms change; verify everything with the lender. This page is general information, not lending or financial advice.
+              Real Property Planning receives no compensation from any lender listed and does not endorse or guarantee any lender, program, rate, or approval. Lenders are listed because they publish information showing they work with adult family homes; "confirmed" entries are ones {FEATURED_BROKER.name} has spoken with about their current AFH lending. Published terms change; verify everything with the lender. This page is general information, not lending or financial advice.
             </p>
           </div>
         </div>

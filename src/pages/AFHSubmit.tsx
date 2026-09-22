@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 type FormState = {
   firstName: string;
@@ -87,15 +88,15 @@ const AFHSubmit: React.FC = () => {
       setSubmitted(true);
       if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      alert("Something went wrong. Please try again or call David directly.");
+      alert(`Something went wrong. Please try again or call ${FEATURED_BROKER.firstName} directly.`);
     }
   };
 
   return (
     <>
       <SEOHead
-        title="Sell Your AFH — Talk With David | Real Property Planning"
-        description="Thinking of selling your Adult Family Home in Washington? Start with a conversation with David Stein, licensed Washington broker."
+        title={`Sell Your AFH — Talk With ${FEATURED_BROKER.firstName} | Real Property Planning`}
+        description={`Thinking of selling your Adult Family Home in Washington? Start with a conversation with ${FEATURED_BROKER.name}, licensed Washington broker.`}
         canonical="https://realpropertyplanning.com/afh-submit"
       />
       <Header />
@@ -111,7 +112,7 @@ const AFHSubmit: React.FC = () => {
             <div className="bg-white border border-slate-200 rounded-xl p-8 md:p-10 text-center">
               <h2 className="text-[24px] md:text-[28px] font-bold text-slate-900">Thank you</h2>
               <p className="text-[17px] text-slate-700 mt-3 leading-relaxed">
-                Thank you — David will be in touch within 24 hours to schedule a conversation.
+                Thank you — {FEATURED_BROKER.firstName} will be in touch within 24 hours to schedule a conversation.
               </p>
             </div>
           ) : (
@@ -208,7 +209,7 @@ const AFHSubmit: React.FC = () => {
               </fieldset>
 
               <div>
-                <label className={labelCls} htmlFor="notes">Anything else you'd like David to know? <span className="font-normal text-slate-500 normal-case tracking-normal">(optional)</span></label>
+                <label className={labelCls} htmlFor="notes">Anything else you'd like {FEATURED_BROKER.firstName} to know? <span className="font-normal text-slate-500 normal-case tracking-normal">(optional)</span></label>
                 <textarea
                   id="notes"
                   rows={5}

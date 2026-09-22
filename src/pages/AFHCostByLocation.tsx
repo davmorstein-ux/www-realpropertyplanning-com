@@ -8,6 +8,7 @@ import AFHCostByLocationCard from "@/components/AFHCostByLocationCard";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { AFH_MEDICAID_RATES, AFH_RATE_REGION_LABELS, medicaidRange, monthly } from "@/data/afhMedicaidRates";
+import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
 
 // Family-facing page (senior-housing side). Uses the same green as the
 // Adult Family Home line in the Cost of Care calculator.
@@ -29,7 +30,7 @@ const FAQS = [
   {
     question: "Where do the private-pay ranges come from?",
     answer:
-      "There is no public dataset of private-pay AFH rates in Washington. The ranges shown are working bands from David Stein's brokerage and appraisal experience with operating homes, reviewed on the date shown, and they are per resident per month, not the home's total revenue. Individual homes quote their own rates, and memory care or heavy-care needs sit above the top of any band.",
+      `There is no public dataset of private-pay AFH rates in Washington. The ranges shown are working bands from ${FEATURED_APPRAISER.name}'s brokerage and appraisal experience with operating homes, reviewed on the date shown, and they are per resident per month, not the home's total revenue. Individual homes quote their own rates, and memory care or heavy-care needs sit above the top of any band.`,
   },
   {
     question: "Why does King County show different numbers for different cities?",
