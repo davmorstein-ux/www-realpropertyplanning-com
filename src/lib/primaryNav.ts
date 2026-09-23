@@ -38,23 +38,7 @@ export interface PrimaryNavEntry {
 
 export const PRIMARY_NAV: PrimaryNavEntry[] = [
   {
-    lines: ["Articles & Guides"],
-    href: "/guides-and-resources",
-    color: "#6b30a6",
-    items: [
-     { name: "All Guides & Articles", href: "/guides-and-resources" },
-      { name: "All Calculators", href: "/calculators" },
-      { name: "Articles Library", href: "/articles" },
-      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
-      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
-      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
-      { name: "Aging in Place", href: "/articles/aging-in-place" },
-      { name: "Wills, Trusts & Other Options", href: "/articles/wills-trusts-other-options" },
-      { name: "Terminology", href: "/terminology" },
-    ],
-  },
-  {
-    lines: ["Probate &", "Estate Sales"],
+    lines: ["Estate &", "Probate"],
     href: "/probate-estate-sales",
     color: "#25597e",
     items: [
@@ -68,7 +52,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     ],
   },
   {
-    lines: ["Senior Housing &", "Transitions"],
+    lines: ["Senior", "Transitions"],
     href: "/senior-transitions",
     color: "#1d7239",
     items: [
@@ -84,8 +68,8 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     ],
   },
   {
-    lines: ["Real Estate &", "Legal Professionals"],
-    href: "/for-attorneys",
+    lines: ["Find a", "Professional"],
+    href: "/featured-professionals",
     color: "#9c5000",
     items: [
       { name: "Find a Professional", href: "/featured-professionals" },
@@ -102,6 +86,40 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "Financial Planners", href: "/professionals/financial-planners" },
       { name: "Mortgage Lenders", href: "/mortgage-lenders" },
       { name: "Estate Liquidators", href: "/estate-liquidators" },
+    ],
+  },
+  {
+    /* AFH Club is the site's second audience (owners, buyers, operators) and
+       had no top-level entry; visitors reached it only through the tiles or
+       a footer link. Sept 2026. */
+    lines: ["AFH Club"],
+    href: "/afh-club",
+    color: "#7f2028",
+    items: [
+      { name: "AFH Club Home", href: "/afh-club" },
+      { name: "Adult Family Home Directory", href: "/afh-club/homes" },
+      { name: "Homes & Businesses for Sale", href: "/afh-club/listings" },
+      { name: "Buying & Selling an AFH", href: "/afh-club/buying-selling" },
+      { name: "How to Finance an AFH", href: "/afh-club/how-to-finance-an-afh" },
+      { name: "AFH Calculators", href: "/afh-club/calculators" },
+      { name: "Licensing & Certification", href: "/afh-club/licensing-certification" },
+      { name: "Find a Professional", href: "/afh-club/find-a-professional" },
+    ],
+  },
+  {
+    lines: ["Guides &", "Tools"],
+    href: "/guides-and-resources",
+    color: "#6b30a6",
+    items: [
+     { name: "All Guides & Articles", href: "/guides-and-resources" },
+      { name: "All Calculators", href: "/calculators" },
+      { name: "Articles Library", href: "/articles" },
+      { name: "Senior Housing Guide", href: "/articles/senior-housing-guide" },
+      { name: "Independent Living Costs", href: "/articles/independent-living-costs" },
+      { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
+      { name: "Aging in Place", href: "/articles/aging-in-place" },
+      { name: "Wills, Trusts & Other Options", href: "/articles/wills-trusts-other-options" },
+      { name: "Terminology", href: "/terminology" },
     ],
   },
   {

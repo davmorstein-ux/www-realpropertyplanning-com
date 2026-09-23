@@ -39,13 +39,11 @@ const LOGO_WIDTH = Math.round(DESKTOP_LOGO_HEIGHT * LOGO_ASPECT);
 /* Search field width — 25% longer than the previous 250px, and scaling with
    the window so it stays generous on a wide screen without crowding the nav
    labels on a laptop. */
-const SEARCH_WIDTH = "clamp(262px, 26vw, 412px)";
 
 /* Shared column geometry for the desktop header. The nav row and the search
    row are laid out on identical tracks so every element lines up vertically:
    a hamburger-width leading slot, a flexible middle, and a fixed trailing slot
    that puts the phone button at the right edge. */
-const HAMBURGER_SLOT = 48; // narrower so more of the brand column goes to the search field // bordered trigger button in the search row
 
 /* Search field width. It used to be flex:1 and swallowed the whole middle of
    the search row, which read as oversized next to the rest of the header.
@@ -64,8 +62,12 @@ const HAMBURGER_SLOT = 48; // narrower so more of the brand column goes to the s
 const CURATED_LINKS = PRIMARY_NAV;
 
 const Header = () => {
+  const [searchOpen, setSearchOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
   const { pathname } = useLocation();
+  useEffect(() => {
+    setSearchOpen(false);
+  }, [pathname]);
   const headerRef = useRef<HTMLElement>(null);
 
   /* The final nav entry is centred beneath the phone button, which means it
@@ -455,7 +457,76 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "stretch", gap: 14 }}>
+              <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "stretch", gap: 14, position: "relative" }}>
+                {/* Search lives behind an icon on desktop (Sept 2026 header
+                    tidy-up): the full field was the widest thing in the nav
+                    row and pushed the last category against the right edge.
+                    The field drops down under this cluster when opened. */}
+                <button
+                  type="button"
+                  onClick={() => setSearchOpen((v) => !v)}
+                  aria-expanded={searchOpen}
+                  aria-label={searchOpen ? "Close site search" : "Search the site"}
+                  className="rpp-header-search-toggle"
+                  style={{
+                    width: 44,
+                    minWidth: 44,
+                    alignSelf: "stretch",
+                    borderRadius: 6,
+                    border: "1px solid rgba(39,36,33,0.25)",
+                    background: searchOpen ? "#272421" : "transparent",
+                    color: searchOpen ? "#fff" : "#272421",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                  }}
+                >
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                    <circle cx="11" cy="11" r="7" />
+                    <path d="m20 20-3.5-3.5" />
+                  </svg>
+                </button>
+                {searchOpen && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "calc(100% + 8px)",
+                      right: 0,
+                      width: "min(520px, 60vw)",
+                      background: "#F5F0E8",
+                      border: "1px solid rgba(39,36,33,0.25)",
+                      borderRadius: 8,
+                      padding: 10,
+                      boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+                      zIndex: 60,
+                    }}
+                  >
+                    <SiteSearchBar />
+                  </div>
+                )}
+                {/* The header's one action, in the hub's voice. */}
+                <Link
+                  to="/contact?reason=other"
+                  className="rpp-header-connect bg-transparent"
+                  style={{
+                    ...NAV_FONT,
+                    display: "inline-flex",
+                    alignItems: "center",
+                    padding: "0 18px",
+                    borderRadius: 6,
+                    background: "#1B3A6B",
+                    color: "#fff",
+                    fontWeight: 700,
+                    fontSize: 15,
+                    letterSpacing: "0.01em",
+                    textDecoration: "none",
+                    whiteSpace: "nowrap",
+                    alignSelf: "stretch",
+                  }}
+                >
+                  Get Connected
+                </Link>
                 <LanguageSwitcher compact />
                 <a href="tel:2069003015"
                   ref={phoneRef}
@@ -518,26 +589,9 @@ const Header = () => {
                    directly beneath the phone. */
               }}
             >
-              {/* Menu and search lead the row; the nav takes everything left.
-                  NOTE: there is not enough width at 1280px to also reserve room
-                  so the last label clears the phone button above it. Reserving
-                  270px would leave ~640px for labels that need ~655px. If that
-                  overlap matters more than the search being on this row, the
-                  labels have to get shorter. */}
-              <div
-                style={{
-                  width: HAMBURGER_SLOT,
-                  flexShrink: 0,
-                  display: "flex",
-                  alignItems: "stretch",
-                  justifyContent: "center",
-                }}
-              >
-                <WaterfallNav />
-              </div>
-              <div style={{ width: SEARCH_WIDTH, flexShrink: 1, minWidth: 0, marginLeft: 8, marginRight: "clamp(44px, 5vw, 84px)" }}>
-                <SiteSearchBar />
-              </div>
+              {/* Nav only. The hamburger (a duplicate of this menu) and the
+                  search field moved off this row in Sept 2026; the mobile
+                  header keeps both. */}
               <PrimaryNav />
             </div>
           </>

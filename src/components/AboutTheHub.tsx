@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { HOMEPAGE_CALCULATOR_CLAIM } from "@/data/calculatorIndex";
-import { HOMEPAGE_GUIDE_CLAIM } from "@/data/guideLibrary";
 
 /**
  * AboutTheHub
@@ -234,23 +232,7 @@ const AboutTheHub = () => {
           <li>A directory of attorneys, fiduciaries, and care professionals</li>
         </ul>
 
-        {/* Each figure links to the page that proves it, and each figure comes
-            from a data file with a test behind it (guideLibrary.ts,
-            calculatorIndex.ts), so none can be typed in and left to go stale. */}
-        <p className="rpp-abouthub-stats rpp-abouthub-stats">
-          <Link to="/guides-and-resources" className="rpp-abouthub-statlink bg-transparent">
-            <span><strong>{HOMEPAGE_GUIDE_CLAIM}+</strong> guides &amp; articles</span>
-            <span className="rpp-abouthub-statarrow" aria-hidden="true">→</span>
-          </Link>
-          <Link to="/calculators" className="rpp-abouthub-statlink bg-transparent">
-            <span><strong>{HOMEPAGE_CALCULATOR_CLAIM}+</strong> calculators</span>
-            <span className="rpp-abouthub-statarrow" aria-hidden="true">→</span>
-          </Link>
-          <Link to="/afh-club/homes" className="rpp-abouthub-statlink bg-transparent">
-            <span>Statewide directory of over <strong>6,000</strong> licensed adult family homes</span>
-            <span className="rpp-abouthub-statarrow" aria-hidden="true">→</span>
-          </Link>
-        </p>
+        {/* The three figures moved to HomepageTrustBar (Sept 2026); see its note. */}
       </div>
     </div>
   );

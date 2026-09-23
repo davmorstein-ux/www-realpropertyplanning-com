@@ -20,13 +20,13 @@ describe("the calculators the homepage counts", () => {
     expect(new Set(all).size).toBe(all.length);
   });
   it("the homepage shows the claim from the data file, not a typed number", () => {
-    const hub = readFileSync("src/components/AboutTheHub.tsx", "utf8");
+    const hub = readFileSync("src/components/HomepageTrustBar.tsx", "utf8");
     expect(hub).toContain("HOMEPAGE_CALCULATOR_CLAIM");
     expect(/<strong>\d+<\/strong> calculators/.test(hub)).toBe(false);
   });
   it("the /calculators page exists and the homepage links to it and to the directory", () => {
     expect(routeExists("/calculators")).toBe(true);
-    const hub = readFileSync("src/components/AboutTheHub.tsx", "utf8");
-    expect(hub).toContain('to="/calculators"'); expect(hub).toContain('to="/afh-club/homes"');
+    const hub = readFileSync("src/components/HomepageTrustBar.tsx", "utf8");
+    expect(hub).toContain('"/calculators"'); expect(hub).toContain('"/afh-club/homes"');
   });
 });

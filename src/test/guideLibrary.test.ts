@@ -38,9 +38,9 @@ describe("the guides and articles the homepage counts", () => {
     for (const p of all) expect(landings.has(p.href), p.href).toBe(false);
   });
   it("the homepage shows the claim from the data file and links it to the library", () => {
-    const hub = readFileSync("src/components/AboutTheHub.tsx", "utf8");
+    const hub = readFileSync("src/components/HomepageTrustBar.tsx", "utf8");
     expect(hub).toContain("HOMEPAGE_GUIDE_CLAIM");
-    expect(hub).toContain('to="/guides-and-resources"');
+    expect(hub).toContain('"/guides-and-resources"');
     expect(/<strong>\d+\+<\/strong> guides/.test(hub)).toBe(false);
   });
   it("/guides forwards to the library instead of dead-ending", () => {
