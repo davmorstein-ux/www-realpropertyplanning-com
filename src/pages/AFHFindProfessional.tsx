@@ -19,35 +19,35 @@ import { AFH_FEATURED_PEOPLE, type AFHProfessional } from "@/data/afhProfessiona
  */
 const PersonCard = ({ person, profession }: { person: AFHProfessional; profession: string }) => {
   const site = person.website?.replace(/^https?:\/\//, "").replace(/\/$/, "");
-  /* div/span throughout, not <p>: the site's global p rules add margins and line-height that
-     made these cards twice as tall as they should be. The card is kept square (aspect-ratio 1)
-     with content compact enough to fit inside; the name links to the person's page on this
-     site when there is one. No per-person notes on this page (David, Sept 22): the
-     compensation disclosure lives in the site-wide Professional Disclosure block and on
-     the person's own page. */
+  const [emailLocal, emailDomain] = person.email ? person.email.split("@") : ["", ""];
+  /* Every slot has a fixed height so the same row of every card lines up across the grid
+     (David, Sept 22): profession, photo, name, license (kept open even when empty — most
+     people will not have one), phone, email on two lines split at the "@", website, logo.
+     div/span throughout, not <p>: the site's global p rules add margins. */
   return (
     <div className="rpp-afhpro-card">
       <div className="rpp-afhpro-card-profession">{profession}</div>
-      <img src={person.photo} alt={person.photoAlt} width={80} height={80} loading="lazy" className="rpp-afhpro-card-photo" />
+      <img src={person.photo} alt={person.photoAlt} width={76} height={76} loading="lazy" className="rpp-afhpro-card-photo" />
       <div className="rpp-afhpro-card-name">
         {person.morePath ? <Link to={person.morePath} className="bg-transparent">{person.name}</Link> : person.name}
       </div>
-      {person.license && <div className="rpp-afhpro-card-license">{person.license}</div>}
-      {person.phone && (
-        <div className="rpp-afhpro-card-line">
-          <a href={`tel:${person.phone.replace(/[^\d+]/g, "")}`} className="bg-transparent">{person.phone}</a>
-        </div>
-      )}
-      {person.email && (
-        <div className="rpp-afhpro-card-line">
-          <a href={`mailto:${person.email}`} className="bg-transparent">{person.email}</a>
-        </div>
-      )}
-      {person.website && site && (
-        <div className="rpp-afhpro-card-line">
-          <a href={person.website} target="_blank" rel="noopener noreferrer" className="bg-transparent">{site}</a>
-        </div>
-      )}
+      <div className="rpp-afhpro-card-license">{person.license || "\u00a0"}</div>
+      <div className="rpp-afhpro-card-line rpp-afhpro-card-phone">
+        {person.phone ? <a href={`tel:${person.phone.replace(/[^\d+]/g, "")}`} className="bg-transparent">{person.phone}</a> : "\u00a0"}
+      </div>
+      <div className="rpp-afhpro-card-line rpp-afhpro-card-email">
+        {person.email ? (
+          <a href={`mailto:${person.email}`} className="bg-transparent">
+            <span>{emailLocal}@</span>
+            <span>{emailDomain}</span>
+          </a>
+        ) : (
+          "\u00a0"
+        )}
+      </div>
+      <div className="rpp-afhpro-card-line rpp-afhpro-card-site">
+        {person.website && site ? <a href={person.website} target="_blank" rel="noopener noreferrer" className="bg-transparent">{site}</a> : "\u00a0"}
+      </div>
       <div className="rpp-afhpro-card-logo">
         {person.logo && <img src={person.logo} alt={person.logoAlt || `${person.company} logo`} loading="lazy" />}
       </div>
@@ -227,22 +227,25 @@ const AFHFindProfessional = () => (
         .rpp-afhpro-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 8px; }
         @media (min-width: 640px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
         @media (min-width: 960px) { .rpp-afhpro-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; } }
-        /* No fixed aspect ratio: the square box clipped top and bottom. The card is as tall as its content (roughly square at four across) and rows stretch to match. */
-        .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; padding: 14px 8px 12px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; line-height: 1.25; }
-        /* flex: none — otherwise the square box shrinks the lines into each other; with it, a card with more text grows just past square. */
-        .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; flex: 0 0 auto; }
-        .rpp-afhpro .rpp-afhpro-card-profession { font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #481216; margin-bottom: 6px !important; }
-        .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 2px solid #f1ede6; margin-bottom: 6px !important; flex: none; }
-        .rpp-afhpro .rpp-afhpro-card-name { font-size: 15px; font-weight: 700; color: #280a0c; line-height: 1.15; }
-        .rpp-afhpro .rpp-afhpro-card-name a { color: inherit; text-decoration: none; }
-        @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-name a:hover { color: #7f2028; text-decoration: underline; text-underline-offset: 3px; } }
-        .rpp-afhpro .rpp-afhpro-card-license { font-size: 11px; color: #5a534b; margin-top: 2px !important; }
-        .rpp-afhpro .rpp-afhpro-card-line { font-size: 12.5px; line-height: 1.3; overflow-wrap: anywhere; margin-top: 3px !important; }
-        .rpp-afhpro .rpp-afhpro-card-name + .rpp-afhpro-card-line, .rpp-afhpro .rpp-afhpro-card-license + .rpp-afhpro-card-line { margin-top: 6px !important; }
+        /* Fixed-height slots: the same row of every card lines up across the grid. */
+        .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px 12px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; line-height: 1.25; }
+        .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; flex: 0 0 auto; width: 100%; }
+        .rpp-afhpro .rpp-afhpro-card-profession { height: 16px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #481216; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 8px !important; }
+        .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 2px solid #f1ede6; margin-bottom: 8px !important; }
+        .rpp-afhpro .rpp-afhpro-card-name { height: 20px; font-size: 15px; font-weight: 700; color: #280a0c; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .rpp-afhpro .rpp-afhpro-card-name a { color: inherit !important; text-decoration: none !important; }
+        @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-name a:hover { color: #7f2028 !important; } }
+        .rpp-afhpro .rpp-afhpro-card-license { height: 16px; font-size: 11px; line-height: 16px; color: #5a534b; margin-top: 2px !important; }
+        .rpp-afhpro .rpp-afhpro-card-line { font-size: 12.5px; line-height: 17px; overflow-wrap: anywhere; }
+        .rpp-afhpro .rpp-afhpro-card-phone { height: 17px; margin-top: 6px !important; white-space: nowrap; }
+        .rpp-afhpro .rpp-afhpro-card-email { height: 34px; margin-top: 3px !important; }
+        .rpp-afhpro .rpp-afhpro-card-email a { display: inline-flex; flex-direction: column; align-items: center; }
+        .rpp-afhpro .rpp-afhpro-card-email a span { display: block; line-height: 17px; white-space: nowrap; }
+        .rpp-afhpro .rpp-afhpro-card-site { height: 17px; margin-top: 3px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .rpp-afhpro .rpp-afhpro-card-line a { color: #302b26; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9c0b4; }
         @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-line a:hover { color: #7f2028; text-decoration-color: #7f2028; } }
-        .rpp-afhpro .rpp-afhpro-card-logo { width: 100%; height: 34px; margin-top: auto !important; padding-top: 10px; display: flex; align-items: center; justify-content: center; }
-        .rpp-afhpro .rpp-afhpro-card-logo img { max-height: 30px; max-width: 110px; width: auto; height: auto; object-fit: contain; }
+        .rpp-afhpro .rpp-afhpro-card-logo { height: 34px; margin-top: 10px !important; display: flex; align-items: center; justify-content: center; }
+        .rpp-afhpro .rpp-afhpro-card-logo img { max-height: 34px; max-width: 110px; width: auto; height: auto; object-fit: contain; }
       `}</style>
       <section className="rpp-afhpro" style={{ background: "#ffffff", padding: "64px 24px 56px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>

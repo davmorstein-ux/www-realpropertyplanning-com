@@ -47,7 +47,7 @@ export interface AFHProfessional {
   photoAlt: string;
   logo?: string;
   logoAlt?: string;
-  /** Professional license, shown under the name on the directory grid ("WA Real Estate Broker #…"). Omit when the profession has none. */
+  /** Professional license, shown under the name on the directory grid ("License #…"; the profession label above already says what kind). Omit when the profession has none. */
   license?: string;
   phone?: string;
   email?: string;
@@ -88,7 +88,7 @@ export const FEATURED_AFH_BROKER: AFHProfessional = {
   photoAlt: `Photo of ${FEATURED_BROKER.name}, AFH Real Estate Broker`,
   logo: BROKERAGE_LOGO,
   logoAlt: BROKERAGE_LOGO_ALT,
-  license: `WA Real Estate Broker #${FEATURED_BROKER.licenseNumber}`,
+  license: `License #${FEATURED_BROKER.licenseNumber}`,
   phone: FEATURED_BROKER.phone,
   email: FEATURED_BROKER.email,
   website: FEATURED_BROKER.website,
