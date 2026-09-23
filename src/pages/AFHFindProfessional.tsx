@@ -70,17 +70,17 @@ const PROFESSIONAL_CATEGORIES = [
     link: { label: "Real Property Planning — AFH Real Estate Services", href: "/afh-club/real-estate-broker" },
   },
   {
-    title: "Certified Residential Appraisers",
-    icon: "📋",
+    title: "Bookkeepers",
+    icon: "🧾",
     description:
-      "Appraising an AFH requires understanding both the residential market and the business operations that give the property its licensed value. A certified residential appraiser with AFH experience can provide credible valuations for sales, financing, estate settlement, or tax purposes.",
+      "An AFH is a small business with payroll, resident billing, Medicaid and private-pay receivables, and expenses that have to be tracked for DSHS, lenders, and tax time. A bookkeeper who already works with care homes keeps the books in a shape a buyer, a lender, or a CPA can rely on.",
     lookFor: [
-      "State-certified residential or general appraiser credential",
-      "AFH or group home appraisal experience",
-      "Understanding of DSHS licensing and bed capacity",
-      "Familiarity with income approaches for licensed care facilities",
+      "Experience with adult family homes or other licensed care businesses",
+      "Payroll and caregiver scheduling records kept alongside the books",
+      "Resident billing and Medicaid/private-pay receivables tracking",
+      "Monthly financials clean enough to hand to a CPA or a buyer",
     ],
-    link: { label: "Real Property Planning — Appraisal Services", href: "/real-estate-appraiser" },
+    link: { label: "Bookkeeping for AFH owners", href: "/bookkeeping-services" },
   },
   {
     title: "AFH Management Companies",
@@ -107,19 +107,6 @@ const PROFESSIONAL_CATEGORIES = [
       "Estate and business transition planning",
     ],
     link: { label: "Find a CPA — Resources Page", href: "/resources/cpas-financial-advisors" },
-  },
-  {
-    title: "Elder Law & Business Attorneys",
-    icon: "⚖️",
-    description:
-      "An attorney experienced in both elder law and small business matters can help with entity formation, CHOW purchase agreements, resident contracts, DSHS appeal processes, and succession planning. AFH providers operating as entities should have legal counsel involved from the start.",
-    lookFor: [
-      "Washington State elder law or healthcare licensing experience",
-      "Business entity formation for care providers",
-      "DSHS regulatory appeal experience",
-      "AFH resident agreement drafting",
-    ],
-    link: { label: "Find an Attorney — Resources Page", href: "/for-attorneys" },
   },
   {
     title: "AFH Inspectors & Compliance Consultants",
