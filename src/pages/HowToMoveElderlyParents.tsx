@@ -10,6 +10,7 @@ import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import IntentCTA from "@/components/IntentCTA";
 
 const faqs = [
   {
@@ -299,6 +300,13 @@ const HowToMoveElderlyParents = () => (
       <PageFAQ faqs={faqs} heading="Senior Move & Downsizing FAQs" />
       <CTASection />
       <RelatedServices currentPath="/how-to-move-elderly-parents" />
+      <IntentCTA
+        heading="Helping a parent move?"
+        body="The home decides more of the plan than anything else — its value, its timing, and what the proceeds cover. Talk it through and be pointed to the right resources."
+        buttonText="Talk through the housing and property options"
+        reason="aging-parent"
+        professional="broker"
+      />
       <DisclaimerSection />
     </main>
     <Footer />

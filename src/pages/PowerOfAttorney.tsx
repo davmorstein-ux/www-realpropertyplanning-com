@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { Home, Heart, Globe, ShieldCheck, FileText, Users, Briefcase } from "lucide-react";
 import poaIcon from "@/assets/icons/power-of-attorney-icon-washington.webp";
 import { FEATURED_APPRAISER, FEATURED_BROKER } from "@/data/featuredProfessionals";
+import IntentCTA from "@/components/IntentCTA";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -266,6 +267,13 @@ const PowerOfAttorney = () => {
           </div>
         </section>
 
+        <IntentCTA
+          heading="Acting under a power of attorney for a property?"
+          body="What the document lets you do, what a title company will accept, and how to document the value are questions to settle before listing. Ask about the property."
+          buttonText="Ask about selling under a power of attorney"
+          reason="estate-property"
+          professional="broker"
+        />
         <DisclaimerSection />
       </main>
       <Footer />

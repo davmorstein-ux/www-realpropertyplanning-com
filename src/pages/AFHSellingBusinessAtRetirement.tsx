@@ -9,6 +9,7 @@ import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import IntentCTA from "@/components/IntentCTA";
 
 const GREEN = "#0a5648";
 
@@ -186,6 +187,13 @@ const AFHSellingBusinessAtRetirement = () => (
       />
       <AuthorByline />
     </main>
+    <IntentCTA
+      heading="Selling the property, the business, or both?"
+      body="How the sale is structured changes the price, the taxes, and who the buyer can be. Ask about your home before deciding."
+      buttonText="Discuss selling the property, the business, or both"
+      reason="afh-buy-sell"
+      professional="broker"
+    />
     <DisclaimerSection />
     <Footer />
   </div>

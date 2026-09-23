@@ -15,6 +15,7 @@ import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp"
 import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
+import IntentCTA from "@/components/IntentCTA";
 
 interface Pathway {
   letter: string;
@@ -456,6 +457,13 @@ const UnderstandingSeniorTransitions = () => {
             Deliberately NOT replaced with a softer CTA. The footer and
             /contact remain available to anyone who goes looking. */}
 
+        <IntentCTA
+          heading="Working through a housing move for yourself or a parent?"
+          body="The home is usually the biggest piece of the plan — what it is worth, whether to sell before or after the move, and how the proceeds fit the cost of care. Talk through the housing and property options."
+          buttonText="Talk through the housing and property options"
+          reason="aging-parent"
+          professional="broker"
+        />
         <DisclaimerSection />
       </main>
       <Footer />

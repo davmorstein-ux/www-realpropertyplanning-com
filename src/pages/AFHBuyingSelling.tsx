@@ -10,6 +10,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-buying-selling.mp3.asset.json";
+import IntentCTA from "@/components/IntentCTA";
 
 const CHOW_STEPS = [
   {
@@ -526,6 +527,13 @@ const AFHBuyingSelling = () => (
       <AuthorByline />
       <BackToAFHClub />
       <CTASection />
+      <IntentCTA
+        heading="Buying or selling an adult family home?"
+        body="The license, the business, and the building can change hands together or separately, and the CHOW timeline drives everything. Ask about your situation before setting a price or making an offer."
+        buttonText="Discuss the property, the business, or both"
+        reason="afh-buy-sell"
+        professional="broker"
+      />
       <DisclaimerSection />
     </main>
     <Footer />

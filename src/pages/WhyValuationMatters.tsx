@@ -13,6 +13,7 @@ import PageFAQ from "@/components/PageFAQ";
 
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import IntentCTA from "@/components/IntentCTA";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",
@@ -224,6 +225,13 @@ const WhyValuationMatters = () => {
         intro=""
       />
 
+      <IntentCTA
+        heading="Do you need an appraisal or a CMA?"
+        body="It depends on who will rely on the number — a court, the IRS, a lender, a buyer, or siblings. Ask which one your situation calls for before paying for either."
+        buttonText="Ask whether you need an appraisal or a CMA"
+        reason="sell-or-value"
+        professional="appraiser"
+      />
       <DisclaimerSection />
 
       <MidPageCTA

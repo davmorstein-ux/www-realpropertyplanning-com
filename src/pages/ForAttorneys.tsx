@@ -6,6 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Link } from "react-router-dom";
 import FeaturedAttorneys from "@/components/FeaturedAttorneys";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import IntentCTA from "@/components/IntentCTA";
 
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
@@ -70,6 +71,13 @@ const ForAttorneys = () => (
       </div>
     </section>
 
+    <IntentCTA
+      heading="Attorneys: explore a referral relationship"
+      body="Guides you can hand to clients, a featured broker and appraiser who work independently, and a clear line between the hub and the licensed work. Ask how it fits your practice."
+      buttonText="Explore a referral relationship"
+      reason="join-network"
+      professional="broker"
+    />
     <DisclaimerSection />
     </main>
     <Footer />

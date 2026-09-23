@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import attorneysTileImg from "@/assets/legal/attorneys-tile.webp";
 
 import HeroBandTitle from "@/components/HeroBandTitle";
+import IntentCTA from "@/components/IntentCTA";
 
 const tileMeta = [
   { key: "moveManagers", image: "/tiles/set1/senior-move-managers-tile.webp", href: "/senior-move-managers" },
@@ -182,6 +183,13 @@ const SeniorTransitions = () => {
           ]}
         />
 
+        <IntentCTA
+          heading="Ready to talk through the move?"
+          body="Timing, the home's value, and how a sale fits the care plan are the questions families bring most often. Ask them here and be pointed to the right guide or professional."
+          buttonText="Talk through the housing and property options"
+          reason="aging-parent"
+          professional="broker"
+        />
         <DisclaimerSection />
       </main>
       <Footer />

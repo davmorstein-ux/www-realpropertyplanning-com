@@ -11,6 +11,7 @@ import iconTrustees from "@/assets/icons/estate-trustees-services-icon-washingto
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import IntentCTA from "@/components/IntentCTA";
 
 const jsonLd = articleSchema({
   headline: "Trust Property Guide for Trustees",
@@ -72,6 +73,13 @@ const Trustees = () => (
     />
 
     <CTASection />
+    <IntentCTA
+      heading="Trustee responsible for real estate?"
+      body="A trust sale has its own valuation, documentation, and beneficiary-communication questions. Ask about the property, and be pointed to the right guide or professional."
+      buttonText="Ask about the trust property"
+      reason="estate-property"
+      professional="broker"
+    />
     <DisclaimerSection />
     </main>
     <Footer />

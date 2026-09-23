@@ -10,6 +10,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { articleSchema } from "@/lib/schema";
 import GuidanceGrid from "@/components/GuidanceGrid";
 import { estateProbateTopics } from "@/lib/estateProbateTopics";
+import IntentCTA from "@/components/IntentCTA";
 
 /* Descriptions live here, not in the shared topic list, on purpose.
    RoadmapDropdown's "list" mode switches its grid from two columns to one
@@ -160,6 +161,13 @@ const EstateProbateInheritedProperty = () => {
             travel with the page, not sit adrift beside it. */}
         <GuidanceGrid page="estate-probate-inherited-property" />
 
+        <IntentCTA
+          heading="Dealing with an estate property?"
+          body="Whether you are the executor, an heir, or the attorney, the property side has its own timeline, valuation questions, and decisions about repairs and sale. Ask, and be pointed to the right guide or the right licensed professional."
+          buttonText="Get connected about an estate property"
+          reason="estate-property"
+          professional="broker"
+        />
         <DisclaimerSection />
       </main>
       <Footer />

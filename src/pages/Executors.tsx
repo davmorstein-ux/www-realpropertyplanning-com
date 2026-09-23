@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import executorImg from "@/assets/executors/executor-tile.webp";
 import poaImg from "@/assets/executors/power-of-attorney-tile.webp";
 import trusteeImg from "@/assets/executors/trustee-tile.webp";
+import IntentCTA from "@/components/IntentCTA";
 
 const roles = [
   {
@@ -311,6 +312,13 @@ const Executors = () => (
         ]}
       />
 
+      <IntentCTA
+        heading="Executor with a house to deal with?"
+        body="Securing the home, confirming your authority, getting a defensible value, and deciding what to repair before listing are the property steps. Ask which one you are at."
+        buttonText="Request an executor property consultation"
+        reason="estate-property"
+        professional="broker"
+      />
       <DisclaimerSection />
     </main>
     <Footer />

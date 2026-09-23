@@ -18,6 +18,7 @@ import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washingt
 import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import IntentCTA from "@/components/IntentCTA";
 
 interface Pathway {
   letter: string;
@@ -346,6 +347,13 @@ const SellingAnInheritedHome = () => {
             not before it. */}
         <NewsletterSignup variant="probate" />
 
+        <IntentCTA
+          heading="Selling as-is or preparing the home first?"
+          body="That decision depends on condition, market, timeline, and who is paying for the work. It is the question most inherited-home sellers get wrong by guessing. Ask it with the property in mind."
+          buttonText="Ask about selling the inherited home"
+          reason="estate-property"
+          professional="broker"
+        />
         <DisclaimerSection />
       </main>
       <Footer />
