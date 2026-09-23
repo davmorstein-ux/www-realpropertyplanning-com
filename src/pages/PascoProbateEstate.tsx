@@ -225,7 +225,7 @@ const PascoProbateEstate = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear First Step</h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">If you're dealing with an inherited property in Pasco and want an honest assessment of where things stand, a short conversation can help you understand your options and move forward.</p>
             <div className="flex justify-center">
-              <Link to="/contact">
+              <Link to="/contact?reason=estate-property">
                 <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
                   Schedule a Consultation
                 </Button>

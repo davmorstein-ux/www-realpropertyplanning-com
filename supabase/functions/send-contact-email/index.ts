@@ -13,7 +13,7 @@ serve(async (req) => {
   }
 
   try {
-    const { name, email, phone, role, message, source_page, company_website, form_loaded_at, turnstile_token } =
+    const { name, email, phone, role, reason, message, source_page, company_website, form_loaded_at, turnstile_token } =
       await req.json();
 
     // Honeypot: real visitors never see or fill this field. Bots that
@@ -93,6 +93,7 @@ serve(async (req) => {
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
+      <p><strong>Reason:</strong> ${reason || "Not specified"}</p>
       <p><strong>I am a:</strong> ${role || "Not specified"}</p>
       <p><strong>Message:</strong></p>
       <p>${String(message).replace(/\n/g, "<br>")}</p>

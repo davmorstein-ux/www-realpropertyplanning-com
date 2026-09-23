@@ -311,7 +311,7 @@ const TacomaProbateEstate = () => {
               If you are dealing with an inherited or estate property in Tacoma and need help deciding what to do next, a short conversation can often make the path forward much clearer.
             </p>
             <div className="flex justify-center">
-              <Link to="/contact">
+              <Link to="/contact?reason=estate-property">
                 <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
                   Schedule a Consultation
                 </Button>

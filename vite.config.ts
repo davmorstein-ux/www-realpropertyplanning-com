@@ -55,10 +55,10 @@ interface RouteMeta {
 
 const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/": {
-    title: "Probate & Estate Real Estate in Washington State | Real Property Planning",
+    title: "Probate, Estate & Senior Transition Guidance in Washington State | Real Property Planning",
     description:
-      "Calm, experienced guidance for probate, inherited property, and senior housing transitions across Washington State. Call (206) 900-3015.",
-    h1: "Probate, Estate & Senior Transition Real Estate in Washington State",
+      "A free educational hub for Washington families: plain-language guides and calculators for probate, inherited property, adult family homes, and senior moves, plus a path to the right licensed professional. Call (206) 900-3015.",
+    h1: "Probate, estate & senior transition guidance for Washington families.",
     /* Must match the image RPPHomeV3 actually renders. This still pointed at
        the retired /hero-v2.webp after the 2026 artwork swap, so every page
        load preloaded 243 KB of an image the homepage no longer displays —

@@ -446,7 +446,7 @@ const AFHPropertyScore = () => {
                 <div style={{ background: "#f6f1fb", borderRadius: 12, padding: "18px 16px" }}>
                   <h3 className="aps-h3" style={h2}>Want a second set of eyes before you make an offer?</h3>
                   <p style={body}>Talk with an AFH expert resource about the real estate side of this property and the questions worth asking.</p>
-                  <Link to="/contact" className="aps-go">Request a property review</Link>
+                  <Link to="/contact?reason=afh-buy-sell" className="aps-go">Request a property review</Link>
                 </div>
               </div>
 

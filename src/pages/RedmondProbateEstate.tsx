@@ -310,7 +310,7 @@ const RedmondProbateEstate = () => {
               If you are dealing with a property in Redmond and navigating a transition, a short conversation can help clarify your options.
             </p>
             <div className="flex justify-center">
-              <Link to="/contact">
+              <Link to="/contact?reason=estate-property">
                 <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
                   Schedule a Consultation
                 </Button>

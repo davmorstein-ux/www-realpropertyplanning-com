@@ -5597,3 +5597,51 @@ img.rpp-cover-edge {
   outline: 2px solid rgba(20, 18, 16, 0.40);
   outline-offset: -2px;
 }
+
+/* Homepage hero CTA strip: cream band between the artwork and the funnel
+   tiles. Sept 2026. */
+main .rpp-hero-cta {
+  background: #f5f2ec;
+  padding: 1.75rem 1.5rem 0.25rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main .rpp-hero-cta .rpp-hero-cta-lead {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.45 !important;
+  color: #3a3531;
+  max-width: 760px;
+  margin: 0 auto 1rem !important;
+}
+main .rpp-hero-cta .rpp-hero-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 20px;
+}
+main .rpp-hero-cta a.rpp-hero-cta-primary {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 999px;
+  background: #1B3A6B;
+  color: #fff !important;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none !important;
+  box-shadow: 0 2px 10px rgba(27, 58, 107, 0.25);
+}
+@media (hover: hover) { main .rpp-hero-cta a.rpp-hero-cta-primary:hover { background: #142c52; } }
+main .rpp-hero-cta a.rpp-hero-cta-secondary {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1B3A6B !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: #b0352a;
+}

@@ -288,7 +288,7 @@ const SellHouseFundSeniorLiving = () => {
                     Call (206) 900-3015
                   </Button>
                 </a>
-                <Link to="/contact">
+                <Link to="/contact?reason=aging-parent">
                   <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold w-full sm:w-auto">
                     Send a Message
                   </Button>

@@ -159,7 +159,7 @@ const SeniorTransitionDifferences = () => (
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">Need Help With a Senior Housing Transition?</h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">{FEATURED_BROKER.Role} welcomes confidential conversations with families, care professionals, and their trusted advisors.</p>
-          <Link to="/contact"><Button variant="gold" size="lg">Schedule a Consultation</Button></Link>
+          <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Schedule a Consultation</Button></Link>
         </div>
       </div>
     </section>

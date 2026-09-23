@@ -308,7 +308,7 @@ const VancouverWaProbateEstate = () => {
               If you are handling a Vancouver property during a transition or relocation, a short conversation can help clarify the path forward.
             </p>
             <div className="flex justify-center">
-              <Link to="/contact">
+              <Link to="/contact?reason=estate-property">
                 <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
                   Schedule a Consultation
                 </Button>

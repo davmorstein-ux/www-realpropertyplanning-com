@@ -176,7 +176,7 @@ const AppraisalVsCma = () => (
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">Need Pricing Guidance for an Estate Property?</h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">We provide honest, market-grounded assessments informed by over 20 years of dual broker and appraiser experience.</p>
-          <Link to="/contact"><Button variant="gold" size="lg">Discuss a Property</Button></Link>
+          <Link to="/contact?reason=estate-property"><Button variant="gold" size="lg">Discuss a Property</Button></Link>
         </div>
       </div>
     </section>

@@ -267,6 +267,25 @@ const RPPHomeV3 = () => {
           </div>
         </div>
 
+        {/* ── Hero CTA strip ────────────────────────────────────────
+            The one action the homepage previously lacked (Sept 2026 audit:
+            "the hero has no visible action button"). It lives in the cream
+            band BELOW the artwork, not inside the measured tagline column,
+            so it never interferes with the overlay geometry above and works
+            at every width. One primary action in the hub's voice — never a
+            person's name — plus a lead line that says what the site is. */}
+        <div className="rpp-hero-cta">
+          <p className="rpp-hero-cta-lead">{t("hero.ctaLead")}</p>
+          <div className="rpp-hero-cta-actions">
+            <Link to="/contact?reason=other" className="rpp-hero-cta-primary bg-transparent">
+              {t("hero.ctaPrimary")}
+            </Link>
+            <a href="#rpp-start-here" className="rpp-hero-cta-secondary bg-transparent">
+              {t("hero.ctaSecondary")} ↓
+            </a>
+          </div>
+        </div>
+
         {/* ── Funnel Tiles ─────────────────────────────────────────── */}
         <section id="rpp-start-here" style={{ backgroundColor: "#f5f2ec", padding: "2.5rem 0 4rem" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>

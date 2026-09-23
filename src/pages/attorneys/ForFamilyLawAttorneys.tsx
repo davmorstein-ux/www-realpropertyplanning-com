@@ -178,7 +178,7 @@ const ForFamilyLawAttorneys = () => (
                 Call (206) 900-3015
               </Button>
             </a>
-            <Link to="/contact">
+            <Link to="/contact?reason=join-network">
               <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold">
                 Send a Message
               </Button>

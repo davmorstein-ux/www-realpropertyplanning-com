@@ -112,7 +112,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
             <p className="text-primary-foreground/70 text-lg mb-6">
               {ctaBody}
             </p>
-            <Link to="/contact">
+            <Link to="/contact?reason=estate-property">
               <Button variant="gold" size="lg">{ctaButton}</Button>
             </Link>
           </div>

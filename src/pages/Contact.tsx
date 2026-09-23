@@ -12,6 +12,7 @@ import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washingto
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { useState, useEffect, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "react-i18next";
@@ -21,6 +22,12 @@ import { useTranslation } from "react-i18next";
 // never change based on which language a visitor filled the form in.
 // The display label is looked up via translation at render time.
 const ROLE_VALUES = ["family-member", "elder-individual", "professional", "other"] as const;
+/* The first question is WHY someone is writing (Sept 2026): it routes the
+   message and lets a page's CTA carry the visitor's intent into the form
+   through ?reason=<value>. The role question stays as the second one. */
+const REASON_VALUES = ["estate-property", "aging-parent", "sell-or-value", "afh-buy-sell", "find-professional", "join-network", "other"] as const;
+type Reason = (typeof REASON_VALUES)[number];
+const isReason = (v: string | null): v is Reason => !!v && (REASON_VALUES as readonly string[]).includes(v);
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAAD8Pv43WG0GFRJob";
 
@@ -31,6 +38,11 @@ const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [role, setRole] = useState("");
+  const [searchParams] = useSearchParams();
+  const [reason, setReason] = useState<string>(() => {
+    const r = searchParams.get("reason");
+    return isReason(r) ? r : "";
+  });
   const [formLoadedAt] = useState(() => Date.now());
   const [turnstileToken, setTurnstileToken] = useState("");
   const turnstileContainerRef = useRef<HTMLDivElement>(null);
@@ -113,7 +125,11 @@ const Contact = () => {
       email: formData.get("email") as string,
       phone: formData.get("phone") as string,
       role,
-      message: formData.get("message") as string,
+      reason,
+      /* The edge function that sends the email deploys separately from the
+         site, so the reason is also written into the message body: it shows
+         up in the inbox whether or not the function has been redeployed. */
+      message: `[${t(`contactPage.reasonOptions.${reason}`)}]\n\n${formData.get("message") as string}`,
       source_page: formData.get("source_page") as string,
       /* Still sent under the key the edge function checks; only the DOM
          field name changed. Renaming this key too would need a function
@@ -138,6 +154,7 @@ const Contact = () => {
       });
       form.reset();
       setRole("");
+      setReason("");
     } catch (err) {
       console.error(err);
       toast({
@@ -307,6 +324,22 @@ const Contact = () => {
                           placeholder={t("contactPage.form.emailPlaceholder")}
                         />
                       </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="reason">{t("contactPage.form.reasonLabel")}</Label>
+                      <Select value={reason} onValueChange={setReason} required>
+                        <SelectTrigger id="reason" aria-label={t("contactPage.form.reasonLabel")}>
+                          <SelectValue placeholder={t("contactPage.form.reasonSelectPlaceholder")} />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {REASON_VALUES.map((value) => (
+                            <SelectItem key={value} value={value}>
+                              {t(`contactPage.reasonOptions.${value}`)}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">

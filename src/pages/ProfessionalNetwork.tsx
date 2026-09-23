@@ -195,7 +195,7 @@ const ProfessionalNetwork = () => {
               conversation.
             </p>
             <div className="flex justify-center">
-              <Link to="/contact">
+              <Link to="/contact?reason=join-network">
                 <Button variant="gold"
                   size="lg"
  className="hover:-light"

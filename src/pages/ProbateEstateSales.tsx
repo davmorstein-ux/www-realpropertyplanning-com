@@ -69,7 +69,7 @@ const ProbateEstateSales = () => {
             },
           ]}
           ctaLabel={t("probateEstateSales.directAnswer.ctaLabel")}
-          ctaHref="/contact"
+          ctaHref="/contact?reason=estate-property"
         />
 
         {/* SECTION 2 — Probate vs. Inherited (two tiles, no accordions) */}

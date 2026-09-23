@@ -312,7 +312,7 @@ const SeattleProbateEstate = () => {
               If you're dealing with a property in Seattle and aren't sure what to do next, a short conversation can often bring immediate clarity.
             </p>
             <div className="flex justify-center">
-              <Link to="/contact">
+              <Link to="/contact?reason=estate-property">
                 <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
                   Schedule a Consultation
                 </Button>

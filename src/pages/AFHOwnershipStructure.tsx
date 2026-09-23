@@ -572,7 +572,7 @@ const AFHOwnershipStructure = () => (
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
-              to="/contact"
+              to="/contact?reason=afh-buy-sell"
               style={{
                 display: "inline-block",
                 fontSize: 16,

@@ -152,7 +152,7 @@ const OutOfStateFamilies = () => (
             <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
               Most out-of-state families don't know which professional they need first. Real Property Planning can help identify the right sequence and connect you with trusted professionals throughout Washington State.
             </p>
-            <Link to="/contact">
+            <Link to="/contact?reason=estate-property">
               <Button variant="gold" size="lg">
                 Start a Conversation →
               </Button>

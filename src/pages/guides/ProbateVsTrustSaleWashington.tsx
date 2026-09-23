@@ -322,7 +322,7 @@ const ProbateVsTrustSaleWashington = () => (
                   Call (206) 900-3015
                 </Button>
               </a>
-              <Link to="/contact">
+              <Link to="/contact?reason=estate-property">
                 <Button variant="outline" size="lg" className="rounded-lg bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground">
                   Send a Message
                 </Button>

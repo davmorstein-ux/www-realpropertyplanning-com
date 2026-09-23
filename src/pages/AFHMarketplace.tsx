@@ -242,7 +242,7 @@ const AFHMarketplace: React.FC = () => {
               </p>
             </div>
             <Link
-              to="/contact"
+              to="/contact?reason=afh-buy-sell"
               className="inline-flex items-center gap-2 bg-white text-[#1a7a78] text-[15px] font-bold px-6 py-3 rounded-lg hover:bg-slate-100 transition-colors"
             >
               Get in Touch

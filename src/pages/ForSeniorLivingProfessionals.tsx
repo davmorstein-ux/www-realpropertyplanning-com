@@ -284,12 +284,12 @@ const ForSeniorLivingProfessionals = () => {
               {FEATURED_BROKER.Role} welcomes the opportunity to connect with senior living and transition professionals. Whether you have a specific client situation or simply want to learn how we can work together, we encourage you to reach out.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/contact">
+              <Link to="/contact?reason=join-network">
  <Button variant="gold" size="lg"className="hover:-light w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
                   Connect About a Client Situation
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/contact?reason=join-network">
                 <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Schedule a Consultation

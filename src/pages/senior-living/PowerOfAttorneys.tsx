@@ -689,7 +689,7 @@ const PowerOfAttorneys = () => {
                   Call (206) 900-3015
                 </a>
                 <Link
-                  to="/contact"
+                  to="/contact?reason=aging-parent"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary-foreground/10 text-primary-foreground font-semibold rounded-lg border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-colors text-base"
                 >
                   <img

@@ -201,7 +201,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
                 <p className="text-primary-foreground/70 text-lg mb-6">
                   {copy.body}
                 </p>
-                <Link to="/contact">
+                <Link to="/contact?reason=estate-property">
                   <Button variant="gold" size="lg">{copy.cta}</Button>
                 </Link>
               </div>

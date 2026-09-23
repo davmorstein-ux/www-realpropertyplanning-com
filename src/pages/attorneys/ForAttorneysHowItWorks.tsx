@@ -200,7 +200,7 @@ const ForAttorneysHowItWorks = () => (
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link to="/contact">
+              <Link to="/contact?reason=join-network">
                 <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
                   Send a File Overview
                 </Button>

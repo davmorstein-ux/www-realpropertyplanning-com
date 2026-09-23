@@ -178,7 +178,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               Real Property Planning — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/contact">
+              <Link to="/contact?reason=estate-property">
                 <Button variant="gold" size="lg" className="rounded-lg">Contact</Button>
               </Link>
               <a href="tel:2069003015">
@@ -344,7 +344,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
                   Call (206) 900-3015
                 </Button>
               </a>
-              <Link to="/contact">
+              <Link to="/contact?reason=estate-property">
                 <Button variant="outline" size="lg" className="rounded-lg bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground">
                   Send a Message
                 </Button>

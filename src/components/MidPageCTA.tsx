@@ -55,7 +55,7 @@ const MidPageCTA = ({
           {/* Canonical flat burgundy CTA (styled by the CTA block at the end
               of index.css) — the glossy 3D gold button and phone icon it
               replaces predated the CTA standard and rendered badly. */}
-          <Link to="/contact" className="rpp-answer-cta" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "14px 30px", borderRadius: 8 }}>
+          <Link to="/contact?reason=estate-property" className="rpp-answer-cta" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "14px 30px", borderRadius: 8 }}>
             {buttonText}
           </Link>
           {/* Microcopy no longer renders. Every page passing it was passing a

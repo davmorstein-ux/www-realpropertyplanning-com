@@ -57,7 +57,7 @@ const SeniorTransitions = () => {
             t("seniorTransitions.directAnswer.bullet3"),
           ]}
           ctaLabel={t("seniorTransitions.directAnswer.ctaLabel")}
-          ctaHref="/contact"
+          ctaHref="/contact?reason=aging-parent"
         />
 
         {/* What Goes Into a Senior Transition */}

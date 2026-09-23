@@ -154,7 +154,7 @@ const AFHSellingBusinessAtRetirement = () => (
           <p className="max-w-3xl mx-auto text-center text-navy/70 text-base leading-relaxed mb-8">
             Not sure where to start?{" "}
             <Link
-              to="/contact"
+              to="/contact?reason=afh-buy-sell"
               className="text-gold font-bold underline underline-offset-2 hover:text-[hsl(var(--gold-dark))]"
             >
               Reach out and we'll help you figure out the right first step.

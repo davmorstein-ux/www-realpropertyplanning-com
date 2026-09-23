@@ -319,7 +319,7 @@ const SpokaneProbateEstate = () => {
               If you're managing a Spokane property from outside the area, a short conversation can help you understand your options and next steps.
             </p>
             <div className="flex justify-center">
-              <Link to="/contact">
+              <Link to="/contact?reason=estate-property">
                 <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
                   Schedule a Consultation
                 </Button>
