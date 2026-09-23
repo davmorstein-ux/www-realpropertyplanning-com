@@ -125,6 +125,43 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     why: "Clean books are what make an adult family home's income believable. A buyer's lender will ask for a year or two of statements that reconcile: residents, to rates, to actual deposits. Owners who keep them current sell more easily, and buyers who inherit them can see what they are getting.",
     people: [NICOLE_GUZMAN_JOHNSON],
   },
+  // Groups David is filling next (Sept 2026). Empty until a person is added, and an
+  // empty group renders nothing — no placeholder, no "coming soon".
+  {
+    id: "photography",
+    label: "Photography",
+    profession: "Photographer",
+    why: "A licensed care home is sold on its rooms, its light and its condition as much as on its numbers, and DSHS-required features (grab bars, ramps, door widths) have to be visible without making the home look institutional. A photographer who has shot care homes knows the difference.",
+    people: [],
+  },
+  {
+    id: "house-cleaning",
+    label: "House cleaning",
+    profession: "House Cleaning",
+    why: "An operating home has to be cleaned around residents, on a schedule, to a standard an inspector or a buyer walking through will notice. A cleaning company used to care settings works quietly, on time, and with the products the home allows.",
+    people: [],
+  },
+  {
+    id: "business-insurance",
+    label: "Business insurance",
+    profession: "Business Insurance",
+    why: "An adult family home needs general and professional liability, property, workers' compensation for caregivers, and often abuse-and-molestation coverage, and a buyer cannot take over the seller's policies. A broker who writes care homes knows which carriers will bind the risk and what DSHS and lenders expect to see.",
+    people: [],
+  },
+  {
+    id: "sba-lending",
+    label: "SBA lending",
+    profession: "SBA Loan Specialist",
+    why: "Most AFH purchases that include the business are financed with an SBA 7(a) or 504 loan, which underwrites the home's income as well as the real estate. A lender who has closed AFH deals knows how to present the resident revenue, the CHOW timeline, and the owner's role to underwriting.",
+    people: [],
+  },
+  {
+    id: "business-brokerage",
+    label: "Business brokerage",
+    profession: "Business Broker",
+    why: "When the business changes hands separately from the building — or the buyer is leasing — a commercial business broker values and markets the operation itself: the license, the resident census, the staff and the contracts. That is different work from selling the real estate.",
+    people: [],
+  },
 ];
 
 /** Groups that actually have someone in them. The page renders only these. */

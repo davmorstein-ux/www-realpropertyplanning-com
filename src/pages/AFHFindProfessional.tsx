@@ -83,6 +83,71 @@ const PROFESSIONAL_CATEGORIES = [
     link: { label: "Bookkeeping for AFH owners", href: "/bookkeeping-services" },
   },
   {
+    title: "Photographers",
+    icon: "📷",
+    description:
+      "A care home sells on its rooms, its light and its condition as much as on its numbers. A photographer who has shot licensed homes shows the resident rooms, common areas, and required accessibility features without making the home look institutional, and works around residents and staff.",
+    lookFor: [
+      "Experience photographing care homes, senior living, or medical settings",
+      "Comfortable working around residents and on a care schedule",
+      "Interior and exterior sets sized for listing sites and print",
+      "Quick turnaround so listing and CHOW timelines line up",
+    ],
+    link: null,
+  },
+  {
+    title: "House Cleaning",
+    icon: "🧹",
+    description:
+      "An operating home is cleaned around residents, on a schedule, to a standard an inspector or a buyer walking through will notice. A company used to care settings works quietly, on time, and with the products the home allows.",
+    lookFor: [
+      "Experience in care homes, clinics, or senior living",
+      "Staff who are background-checked and consistent week to week",
+      "Willing to follow the home's product and infection-control rules",
+      "Deep-clean and move-out service for a sale or a room turnover",
+    ],
+    link: null,
+  },
+  {
+    title: "Business Insurance",
+    icon: "🛡️",
+    description:
+      "An adult family home needs general and professional liability, property, workers' compensation for caregivers, and often abuse-and-molestation coverage. A buyer cannot take over the seller's policies, so coverage has to be placed before the CHOW date.",
+    lookFor: [
+      "Writes adult family homes or assisted living, not just homeowners",
+      "Knows which carriers will bind care-home risk in Washington",
+      "Can quote before closing so the CHOW is not delayed",
+      "Explains what DSHS and lenders expect to see on the certificate",
+    ],
+    link: null,
+  },
+  {
+    title: "SBA Loan Specialists",
+    icon: "🏦",
+    description:
+      "Most AFH purchases that include the business are financed with an SBA 7(a) or 504 loan, which underwrites the home's income as well as the real estate. A lender who has closed AFH deals knows how to present resident revenue, the CHOW timeline, and the owner's role to underwriting.",
+    lookFor: [
+      "Closed SBA loans on adult family homes or similar care businesses",
+      "Comfortable with income from Medicaid and private-pay residents",
+      "Can sequence funding with the DSHS change-of-ownership approval",
+      "Clear on down payment, guarantees, and what the appraisal must show",
+    ],
+    link: { label: "How to finance an AFH", href: "/afh-club/how-to-finance-an-afh" },
+  },
+  {
+    title: "Commercial Business Brokers",
+    icon: "🤝",
+    description:
+      "When the business changes hands separately from the building, or the buyer will lease, a commercial business broker values and markets the operation itself: the license, the resident census, the staff, and the contracts. That is different work from selling the real estate.",
+    lookFor: [
+      "Has sold care businesses, not only restaurants or retail",
+      "Values the operation on its census and margins, not the house",
+      "Coordinates with the real estate broker when both are sold",
+      "Understands that the DSHS license does not transfer with the sale",
+    ],
+    link: null,
+  },
+  {
     title: "AFH Management Companies",
     icon: "🏢",
     description:
