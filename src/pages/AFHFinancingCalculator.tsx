@@ -8,6 +8,8 @@ import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
 import { confirmedPrivatePayBands, privatePayBandByMarket } from "@/data/afhPrivatePayRanges";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import IntentCTA from "@/components/IntentCTA";
+import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 
 /**
  * AFH Occupancy & Financing Calculator (Sept 2026).
@@ -652,6 +654,16 @@ const AFHFinancingCalculator = () => {
         <style>{`@media (max-width: 640px) { .fin-grid { grid-template-columns: 1fr !important; } .fin-tiles { grid-template-columns: 1fr !important; } .fin-beds { grid-template-columns: repeat(2, 1fr) !important; } }`}</style>
         <PageFAQ faqs={FAQS} heading="Financing an Adult Family Home: Common Questions" eyebrow="Frequently Asked Questions" id="afh-financing" />
         <BackToAFHClub />
+        <section style={{ padding: "1.25rem 1.5rem 0" }}>
+          <AFHBuyerSteps current={5} compact />
+        </section>
+        <IntentCTA
+          heading="Testing whether the loan will carry?"
+          body="Occupancy assumptions, SBA terms, and the CHOW timeline decide whether a purchase works. Ask how lenders will read this home before you go to them."
+          buttonText="Ask about financing"
+          reason="afh-buy-sell"
+          professional="broker"
+        />
       </main>
       <Footer />
     </>

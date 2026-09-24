@@ -9,6 +9,7 @@ import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { AFH_MEDICAID_RATES, AFH_RATE_REGION_LABELS, medicaidRange, monthly } from "@/data/afhMedicaidRates";
 import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
+import IntentCTA from "@/components/IntentCTA";
 
 // Family-facing page (senior-housing side). Uses the same green as the
 // Adult Family Home line in the Cost of Care calculator.
@@ -113,6 +114,13 @@ const CostByLocation = () => {
 
         <PageFAQ faqs={FAQS} heading="Adult Family Home Costs: Common Questions" eyebrow="Frequently Asked Questions" id="afh-cost-location" />
         <BackToLongTermCare />
+        <IntentCTA
+          heading="Pricing a home against its market?"
+          body="Private-pay and Medicaid rates vary by city and by care level, and a home's rates are only part of its value. Ask what the local numbers mean for a purchase, a sale, or a lease."
+          buttonText="Ask about this market"
+          reason="afh-buy-sell"
+          professional="broker"
+        />
       </main>
       <DisclaimerSection />
       <Footer />

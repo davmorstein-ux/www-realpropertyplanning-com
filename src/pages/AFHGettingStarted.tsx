@@ -371,7 +371,10 @@ const AFHGettingStarted = () => (
                 margin: 0,
               }}
             >
-              <strong>Note:</strong> As of January 1, 2024, the DSHS-provided Orientation class is no longer required.
+              <strong>Note:</strong> As of January 1, 2024, the DSHS <em>Prospective Provider Orientation class</em> — a separate one-day class for
+              license applicants, formerly required by WAC 388-76-10060 — is no longer required; DSHS repealed the rule (WSR 23-24-010)
+              because its content is covered in AFH Administrator Training. This is not the same thing as the two-hour caregiver orientation
+              module inside the 75-hour Home Care Aide training, which is still required unless you are exempt.
               However, prospective providers are strongly encouraged to read the DSHS document{" "}
               <a
                 href="https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/information/AFH%20Information%20Sheet%20-%20What%20You%20Need%20to%20Understand.pdf"

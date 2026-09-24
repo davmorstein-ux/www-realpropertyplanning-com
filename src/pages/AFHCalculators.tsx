@@ -6,6 +6,7 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import SEOHead from "@/components/SEOHead";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 
 type Tile = {
   to: string;
@@ -147,6 +148,9 @@ const AFHCalculators: React.FC = () => {
           </div>
         </section>
         <BackToAFHClub />
+        <section style={{ padding: "2rem 1.5rem", background: "#faf8f4" }}>
+          <AFHBuyerSteps />
+        </section>
       </main>
       <Footer />
     </>

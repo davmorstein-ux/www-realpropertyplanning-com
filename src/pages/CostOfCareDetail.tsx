@@ -8,6 +8,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import CostOfCareEmbed from "@/components/CostOfCareEmbed";
 import CareCalculatorSwitcher from "@/components/CareCalculatorSwitcher";
 import { findCareCalculator, careTypeFor } from "@/lib/careCalculators";
+import IntentCTA from "@/components/IntentCTA";
 
 /**
  * One calculator page per housing option, at
@@ -131,6 +132,7 @@ const CostOfCareDetail = () => {
         </section>
 
         <DisclaimerSection />
+        <IntentCTA heading="Working out how to pay for care?" body="The home is usually the largest part of the answer — what it is worth, whether to sell before or after the move, and how the proceeds fit the monthly number above. Talk through the housing and property options." buttonText="Talk through the housing and property options" reason="aging-parent" professional="broker" />
       </main>
       <Footer />
     </div>

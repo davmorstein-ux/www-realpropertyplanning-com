@@ -194,8 +194,8 @@ const AFHLicensingCertification = () => (
             }}
           >
             Unless you qualify for an exemption, you must be a certified Home Care Aide before applying for an AFH
-            license. This means completing a 75-hour orientation, safety, and basic training program, passing the HCA
-            certification examination, and receiving certification from the Washington State Department of Health.
+            license. This means completing the 75-hour long-term care worker training (a two-hour caregiver orientation, three hours of safety,
+            and 70 hours of basic training under WAC 388-112A), passing the HCA certification examination, and receiving certification from the Washington State Department of Health.
           </p>
           <p
             style={{

@@ -8,6 +8,8 @@ import BackToCalculators from "@/components/BackToCalculators";
 import PageFAQ from "@/components/PageFAQ";
 import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 import { countyIndex } from "@/data/afh/directory";
+import IntentCTA from "@/components/IntentCTA";
+import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import {
   NOT_SURE, CATEGORIES, FLAG_LABEL, CURE_LABEL, BEFORE_YOU_COMMIT,
   activeQuestions, scoreProperty, scoreText, scoreLine, encodeAnswers, decodeAnswers,
@@ -463,6 +465,16 @@ const AFHPropertyScore = () => {
           <PageFAQ faqs={FAQS} heading="AFH Property Score: Common Questions" eyebrow="Frequently Asked Questions" id="afh-property-score" />
           <BackToAFHClub />
         </div>
+        <section style={{ padding: "1.25rem 1.5rem 0" }}>
+          <AFHBuyerSteps current={2} compact />
+        </section>
+        <IntentCTA
+          heading="Want a second opinion on this property?"
+          body="Send the address and what the score flagged, and be pointed to what to investigate before making an offer — licensing fit, layout, and the condition items that change value."
+          buttonText="Ask about this property"
+          reason="afh-buy-sell"
+          professional="broker"
+        />
       </main>
       <Footer />
     </>

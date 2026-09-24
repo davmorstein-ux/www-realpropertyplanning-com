@@ -7,6 +7,8 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
 import BackToCalculators from "@/components/BackToCalculators";
 import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
+import IntentCTA from "@/components/IntentCTA";
+import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 
 const GREEN = "#1a7a4a";
 const GREEN_LIGHT = "#2ecc71";
@@ -700,6 +702,16 @@ const AFHValuationEstimator = () => {
           }
         `}</style>
         <BackToAFHClub />
+        <section style={{ padding: "1.25rem 1.5rem 0" }}>
+          <AFHBuyerSteps current={4} compact />
+        </section>
+        <IntentCTA
+          heading="Not sure the estimate is right for this home?"
+          body="A licensed care home is valued on its real estate and its operation separately, and the two often point in different directions. Ask which one is driving the price you are looking at."
+          buttonText="Ask about the valuation"
+          reason="afh-buy-sell"
+          professional="broker"
+        />
       </main>
       <Footer />
     </>

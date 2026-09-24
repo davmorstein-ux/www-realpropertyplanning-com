@@ -16,7 +16,7 @@ const TRAINING_REQUIREMENTS = [
     hours: "75 hrs",
     required: "All non-exempt providers",
     description:
-      "Orientation, safety, and basic training covering personal care, resident rights, communication, safety, and infection control. Must be completed at a DSHS-approved program. After completing the 75 hours, pass the HCA certification exam and receive DOH certification before applying for an AFH license.",
+      "The 75 hours are a two-hour caregiver orientation, three hours of safety training, and 70 hours of basic training covering personal care, resident rights, communication, safety, and infection control. Must be completed at a DSHS-approved program. (Not to be confused with the former DSHS Prospective Provider Orientation class for license applicants, which was repealed effective January 1, 2024.) After completing the 75 hours, pass the HCA certification exam and receive DOH certification before applying for an AFH license.",
     wac: "WAC 388-112A",
   },
   {

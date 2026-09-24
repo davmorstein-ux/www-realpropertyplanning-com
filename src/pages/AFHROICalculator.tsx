@@ -7,6 +7,8 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
 import BackToCalculators from "@/components/BackToCalculators";
 import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
+import IntentCTA from "@/components/IntentCTA";
+import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 
 const BLUE = "#0047ab";
 const BLUE_LIGHT = "#3b7dd8";
@@ -726,6 +728,16 @@ const AFHROICalculator = () => {
           #r-occ, #r-cap { box-sizing: border-box !important; padding: 10px 13px !important; }
         `}</style>
         <BackToAFHClub />
+        <section style={{ padding: "1.25rem 1.5rem 0" }}>
+          <AFHBuyerSteps current={3} compact />
+        </section>
+        <IntentCTA
+          heading="Considering an AFH purchase?"
+          body="The numbers here are only as good as the census and rates behind them. Ask how to separate the real estate value from the business opportunity before you commit."
+          buttonText="Ask about the numbers"
+          reason="afh-buy-sell"
+          professional="broker"
+        />
       </main>
       <Footer />
     </>

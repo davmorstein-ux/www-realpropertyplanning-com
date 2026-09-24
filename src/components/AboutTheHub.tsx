@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 /**
  * AboutTheHub
@@ -198,6 +199,7 @@ const AboutTheHub = () => {
         .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:active { background: #dbe6f7 !important; }
         .rpp-abouthub-stats a.rpp-abouthub-statlink.rpp-abouthub-statlink:focus-visible { outline: 3px solid #9db3d6; outline-offset: 3px; }
         .rpp-abouthub-stats.rpp-abouthub-stats > span { line-height: 1.4 !important; }
+        .rpp-abouthub-card .rpp-abouthub-why { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(15px, 1.15vw, 17px); line-height: 1.55 !important; color: #3a3531; margin: 1.1rem 0 0 !important; padding-top: 1rem; border-top: 1px solid #e6e0d6; }
         .rpp-abouthub-stats.rpp-abouthub-stats strong {
           font-weight: 700;
           color: #1B3A6B;
@@ -231,6 +233,19 @@ const AboutTheHub = () => {
           <li>Plain-language answers on real estate, housing, and planning</li>
           <li>A directory of attorneys, fiduciaries, and care professionals</li>
         </ul>
+
+        {/* Why it exists — the bridge a visitor otherwise never gets (Sept 24
+            2026 audit). Hub voice: the reason is the situation, not a person;
+            the featured professional is named once, by role, from the record. */}
+        <p className="rpp-abouthub-why">
+          Property decisions caused by aging, illness, or a death are not ordinary transactions. An attorney, a
+          fiduciary, an appraiser, a care provider, a lender, and several family members are often making decisions at
+          the same time, and nobody is responsible for the whole picture. Real Property Planning was built to be the
+          neutral place to start: the guides and tools are free, and when a decision needs a licensed professional, the
+          hub connects you with one — including its featured broker, {FEATURED_BROKER.name}, who is also a
+          certified residential appraiser and has worked on these properties for more than{" "}
+          {FEATURED_BROKER.yearsExperience} years.
+        </p>
 
         {/* The three figures moved to HomepageTrustBar (Sept 2026); see its note. */}
       </div>
