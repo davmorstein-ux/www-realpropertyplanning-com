@@ -281,9 +281,6 @@ const RPPHomeV3 = () => {
             <Link to="/contact?reason=other" className="rpp-hero-cta-primary bg-transparent">
               {t("hero.ctaPrimary")}
             </Link>
-            <a href="#rpp-start-here" className="rpp-hero-cta-secondary bg-transparent">
-              {t("hero.ctaSecondary")} ↓
-            </a>
           </div>
         </div>
 
@@ -307,6 +304,9 @@ const RPPHomeV3 = () => {
               >
                 {t("funnel.heading")}
               </h2>
+              {/* Plain text, not a link: it used to be a hero link that only
+                  scrolled to the tiles directly beneath it (David, Sept 23). */}
+              <p className="rpp-funnel-sub hidden sm:block">{t("hero.ctaSecondary")}</p>
             </div>
 
             <p className="block sm:hidden text-center text-base text-navy font-medium mb-4 tracking-wide">
