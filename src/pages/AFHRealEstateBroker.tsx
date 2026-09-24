@@ -10,6 +10,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderTile from "@/components/ProviderTile";
 import { FEATURED_AFH_BROKER } from "@/data/afhProfessionals";
 import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
+import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 
 const REVIEWS = [
   {
@@ -257,6 +258,10 @@ const AFHRealEstateBroker = () => (
                 professional network. His real estate brokerage services are provided independently through{" "}
                 {FEATURED_BROKER.brokerage} — not through Real Property Planning.
               </p>
+              {/* His professional memberships, in colour, on his own card (David, Sept 23). */}
+              <div style={{ marginTop: 20 }}>
+                <AffiliationBadgeGrid />
+              </div>
             </div>
 
             {/* Right — Why You Need a Specialist */}

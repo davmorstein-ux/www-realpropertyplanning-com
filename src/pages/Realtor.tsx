@@ -7,6 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderTile from "@/components/ProviderTile";
 import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKER_PHOTO_ALT, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, BROKER_BIO } from "@/data/featuredProfessionalAssets";
+import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 
 const REVIEWS = [
   {
@@ -159,6 +160,11 @@ const Realtor = () => (
             professional network. His real estate brokerage services are provided independently through{" "}
             {FEATURED_BROKER.brokerage} — not through Real Property Planning.
           </p>
+          {/* The featured broker's professional memberships belong on HIS card,
+              not on the hub's homepage (David, Sept 23). In colour. */}
+          <div className="mt-8">
+            <AffiliationBadgeGrid />
+          </div>
         </div>
       </section>
 

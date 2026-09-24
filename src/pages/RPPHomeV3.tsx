@@ -21,7 +21,6 @@ import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import AboutTheHub from "@/components/AboutTheHub";
 import HomepageTrustBar from "@/components/HomepageTrustBar";
-import AffiliationLogoStrip from "@/components/AffiliationLogoStrip";
 import { formatCurrency } from "@/lib/careTypes";
 import { CARE_CALCULATORS, careTypeFor } from "@/lib/careCalculators";
 
@@ -642,7 +641,7 @@ const RPPHomeV3 = () => {
             `}</style>
 
             {/* ── Trust bar: the numbers, once, in one row ─────────── */}
-            <div style={{ margin: "0 calc(50% - 50vw) 2.5rem", width: "100vw" }}>
+            <div style={{ margin: "0 calc(50% - 50vw) 2rem", width: "100vw" }}>
               <HomepageTrustBar />
             </div>
 
@@ -722,7 +721,6 @@ const RPPHomeV3 = () => {
         {/* <HomepageTestimonials /> — hidden until real testimonials are collected */}
         <HomepageFAQ />
       </main>
-      <AffiliationLogoStrip />
       <Footer />
     </>
   );

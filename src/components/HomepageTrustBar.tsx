@@ -12,10 +12,10 @@ import { HOMEPAGE_GUIDE_CLAIM } from "@/data/guideLibrary";
  * one number.
  */
 const STATS = [
-  { value: `${HOMEPAGE_GUIDE_CLAIM}+`, label: "plain-language guides & articles", href: "/guides-and-resources" },
-  { value: `${HOMEPAGE_CALCULATOR_CLAIM}+`, label: "calculators & planning tools", href: "/calculators" },
-  { value: "6,000+", label: "licensed adult family homes in the statewide directory", href: "/afh-club/homes" },
-  { value: "Free", label: "independent, and no services sold", href: "/about" },
+  { value: `${HOMEPAGE_GUIDE_CLAIM}+`, label: "guides & articles", href: "/guides-and-resources" },
+  { value: `${HOMEPAGE_CALCULATOR_CLAIM}+`, label: "calculators", href: "/calculators" },
+  { value: "6,000+", label: "licensed adult family homes", href: "/afh-club/homes" },
+  { value: "Free", label: "and independent", href: "/about" },
 ];
 
 const HomepageTrustBar = () => (
@@ -31,13 +31,15 @@ const HomepageTrustBar = () => (
       ))}
     </ul>
     <style>{`
-      .rpp-trustbar { background: #1B3A6B; color: #fff; padding: 1.5rem 1.5rem; }
-      .rpp-trustbar ul { list-style: none; margin: 0 auto; padding: 0; max-width: 1200px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 24px; }
-      @media (min-width: 900px) { .rpp-trustbar ul { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 32px; } }
+      /* Quiet on purpose (David, Sept 23: the navy band overpowered the page):
+         cream, hairline top and bottom, navy figures, one row. */
+      .rpp-trustbar { background: #faf8f4; border-top: 1px solid #e6e0d6; border-bottom: 1px solid #e6e0d6; padding: 0.9rem 1.5rem; }
+      .rpp-trustbar ul { list-style: none; margin: 0 auto; padding: 0; max-width: 1100px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 20px; }
+      @media (min-width: 900px) { .rpp-trustbar ul { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 28px; } }
       .rpp-trustbar li { margin: 0; text-align: center; }
-      .rpp-trustbar a { color: #fff !important; text-decoration: none !important; display: block; font-family: 'DM Sans', system-ui, sans-serif; }
-      .rpp-trustbar strong { display: block; font-size: clamp(26px, 2.6vw, 38px); font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; }
-      .rpp-trustbar span { display: block; font-size: clamp(13px, 1.05vw, 15px); line-height: 1.35; opacity: 0.9; margin-top: 6px; }
+      .rpp-trustbar a { color: #272421 !important; text-decoration: none !important; display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap; justify-content: center; font-family: 'DM Sans', system-ui, sans-serif; }
+      .rpp-trustbar strong { font-size: clamp(18px, 1.5vw, 22px); font-weight: 700; color: #1B3A6B; line-height: 1.1; }
+      .rpp-trustbar span { font-size: clamp(13px, 1vw, 15px); line-height: 1.3; color: #4a443e; }
       @media (hover: hover) { .rpp-trustbar a:hover span { text-decoration: underline; text-underline-offset: 3px; } }
     `}</style>
   </section>
