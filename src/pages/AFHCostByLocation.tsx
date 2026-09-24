@@ -64,7 +64,7 @@ const CostByLocation = () => {
         <div style={{ background: GREEN, padding: "6px 24px 4px" }} />
         <HeroBandTitle as="h1">What It Costs to Live in an Adult Family Home, by City and County</HeroBandTitle>
 
-        <div style={{ background: "#f5f2ec", padding: "2.5rem 1rem 3rem" }}>
+        <div style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
           <AFHCostByLocationCard accent={GREEN} />
         </div>
 

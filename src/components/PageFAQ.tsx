@@ -41,7 +41,7 @@ const PageFAQ = ({
   };
 
   return (
-    <section style={{ padding: "4rem 0 5rem", background: "#f5f2ec" }}>
+    <section style={{ padding: "4rem 0 5rem", background: "#faf8f4" }}>
       <Helmet>
         <script type="application/ld+json" data-page-faq-jsonld={id}>
           {JSON.stringify(faqJsonLd)}

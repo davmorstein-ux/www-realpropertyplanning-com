@@ -35,7 +35,7 @@ const DV: React.CSSProperties = { height: 1, background: "#eee6e7", margin: "0 0
 const stepperBtn: React.CSSProperties = {
   fontSize: 22,
   fontWeight: 700,
-  background: "#f5f2ec",
+  background: "#faf8f4",
   border: "2px solid #dccdce",
   borderRadius: 8,
   cursor: "pointer",
@@ -155,7 +155,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                     minHeight: 52,
                     border: `2px solid ${GREEN}b3`,
                     borderRadius: 8,
-                    background: "#f5f2ec",
+                    background: "#faf8f4",
                     color: "#272421",
                     fontFamily: "'DM Sans', system-ui, sans-serif",
                   }}
@@ -191,7 +191,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                           fontSize: 17,
                           padding: "12px 14px",
                           minHeight: 48,
-                          background: m.kind === "county" ? "#f5f2ec" : "#fff",
+                          background: m.kind === "county" ? "#faf8f4" : "#fff",
                           border: "none",
                           borderBottom: "1px solid #eee",
                           cursor: "pointer",
@@ -232,7 +232,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                         band.confirmed ? `typical range, reviewed ${reviewedLabel(band.reviewed)}` : "ask each home for its rate sheet",
                       ],
                     ].map(([k, v, note]) => (
-                      <div key={k} style={{ background: "#f5f2ec", border: `2px solid ${GREEN}b3`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
+                      <div key={k} style={{ background: "#faf8f4", border: `2px solid ${GREEN}b3`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
                         <div style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "#5f6b66", fontWeight: 700, marginBottom: 6 }}>{k}</div>
                         <div style={{ fontSize: 20, fontWeight: 700, color: GREEN, lineHeight: 1.2 }}>{v}</div>
                         <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 4 }}>{note}</div>
@@ -322,7 +322,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                             ["Accept Medicaid", cityEntry ? cityEntry.facilityCount - cityEntry.privatePay : checked.facilityCount - privatePayOnly, "hold a DSHS contract"],
                             ["Private-pay only", cityEntry ? cityEntry.privatePay : privatePayOnly, "no DSHS contract"],
                           ].map(([k, v, note]) => (
-                            <div key={String(k)} style={{ background: "#f5f2ec", border: `2px solid ${GREEN}b3`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
+                            <div key={String(k)} style={{ background: "#faf8f4", border: `2px solid ${GREEN}b3`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
                               <div style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "#5f6b66", fontWeight: 700, marginBottom: 6 }}>{k}</div>
                               <div style={{ fontSize: 24, fontWeight: 700, color: "#272421", lineHeight: 1.2 }}>{Number(v).toLocaleString()}</div>
                               <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 4 }}>{note}</div>

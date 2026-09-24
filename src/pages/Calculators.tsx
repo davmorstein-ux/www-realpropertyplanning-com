@@ -58,7 +58,7 @@ const Calculators = () => (
     <style>{PAGE_CSS}</style>
     <Header />
     <main className="rpp-calcs">
-      <div style={{ background: "#f5f2ec", borderBottom: `3px solid ${NAVY}` }}>
+      <div style={{ background: "#faf8f4", borderBottom: `3px solid ${NAVY}` }}>
         <div className="rpp-calcs-section" style={{ paddingTop: 44, paddingBottom: 36 }}>
           <p className="rpp-calcs-kicker" style={{ color: NAVY, fontFamily: FONT }}>Free tools</p>
           <h1 className="rpp-calcs-h1" style={{ fontFamily: FONT, fontWeight: 700, color: INK }}>Calculators</h1>
@@ -84,7 +84,7 @@ const Calculators = () => (
       </section>
 
       {/* ---------- adult family home buyers, owners, investors ---------- */}
-      <section style={{ background: "#f5f2ec" }}>
+      <section style={{ background: "#faf8f4" }}>
         <div className="rpp-calcs-section">
           <p className="rpp-calcs-kicker" style={{ color: PLUM, fontFamily: FONT }}>For adult family home buyers, owners &amp; investors</p>
           <h2 className="rpp-calcs-h2" style={{ fontFamily: FONT, fontWeight: 700, color: INK }}>Is this home a good purchase?</h2>

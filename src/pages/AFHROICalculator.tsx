@@ -50,7 +50,7 @@ const AFHROICalculator = () => {
         pBtn.style.cssText =
           "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#0047ab;color:#ffffff;outline:none;border-radius:6px 0 0 6px";
         dBtn.style.cssText =
-          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#f5f2ec;color:#272421;outline:none;border-radius:0 6px 6px 0";
+          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#faf8f4;color:#272421;outline:none;border-radius:0 6px 6px 0";
         if (inp) inp.placeholder = "25";
         if (hint) hint.textContent = "Enter percentage of purchase price";
         if (price > 0 && cur > 0 && inp) inp.value = String(Math.round((cur / price) * 100));
@@ -59,7 +59,7 @@ const AFHROICalculator = () => {
         dBtn.style.cssText =
           "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#0047ab;color:#ffffff;outline:none;border-radius:0 6px 6px 0";
         pBtn.style.cssText =
-          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#f5f2ec;color:#272421;outline:none;border-radius:6px 0 0 6px";
+          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#faf8f4;color:#272421;outline:none;border-radius:6px 0 0 6px";
         if (inp) inp.placeholder = "212500";
         if (hint) hint.textContent = "Enter dollar amount of down payment";
         if (price > 0 && cur > 0 && inp) inp.value = String(Math.round(price * (cur / 100)));
@@ -236,7 +236,7 @@ const AFHROICalculator = () => {
       <Header />
       <main>
         {/* Hero */}
-        <div style={{ background: "#f5f2ec", padding: "48px 24px 40px", borderBottom: `3px solid ${BLUE}` }}>
+        <div style={{ background: "#faf8f4", padding: "48px 24px 40px", borderBottom: `3px solid ${BLUE}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto", paddingTop: "var(--header-height, 100px)" }}>
             <div style={{ marginBottom: 24 }}>
               <BackToCalculators accent={BLUE} />
@@ -282,7 +282,7 @@ const AFHROICalculator = () => {
         </div>
 
         {/* Calculator */}
-        <div ref={calcRef} style={{ background: "#f5f2ec", padding: "2.5rem 1rem 3rem" }}>
+        <div ref={calcRef} style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
           <div
             style={{
               maxWidth: 900,
@@ -411,7 +411,7 @@ const AFHROICalculator = () => {
                         cursor: "pointer",
                         fontFamily: "'DM Sans', system-ui, sans-serif",
                         border: "none",
-                        background: "#f5f2ec",
+                        background: "#faf8f4",
                         color: "#272421",
                         outline: "none",
                         borderRadius: "0 6px 6px 0",
@@ -550,7 +550,7 @@ const AFHROICalculator = () => {
                   textAlign: "center",
                   marginBottom: 14,
                   marginTop: 16,
-                  background: "#f5f2ec",
+                  background: "#faf8f4",
                 }}
               >
                 <div
@@ -598,7 +598,7 @@ const AFHROICalculator = () => {
                   <div
                     key={id}
                     style={{
-                      background: "#f5f2ec",
+                      background: "#faf8f4",
                       border: `1px solid ${BLUE}30`,
                       borderRadius: 8,
                       padding: "1rem",
@@ -639,7 +639,7 @@ const AFHROICalculator = () => {
                   padding: "12px 16px",
                   border: `1px solid ${BLUE}20`,
                   borderRadius: 8,
-                  background: "#f5f2ec",
+                  background: "#faf8f4",
                 }}
               >
                 Estimates are for informational purposes only. Actual returns depend on financing terms, occupancy,
@@ -657,7 +657,7 @@ const AFHROICalculator = () => {
                   gap: 14,
                   flexWrap: "wrap",
                   marginTop: 12,
-                  background: "#f5f2ec",
+                  background: "#faf8f4",
                 }}
               >
                 <div>

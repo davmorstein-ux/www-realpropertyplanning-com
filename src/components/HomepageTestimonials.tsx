@@ -6,7 +6,7 @@ const HomepageTestimonials = () => {
   if (items.length === 0) return null;
 
   return (
-    <section style={{ backgroundColor: "#f5f2ec", padding: "3rem 0 3.5rem" }}>
+    <section style={{ backgroundColor: "#faf8f4", padding: "3rem 0 3.5rem" }}>
       <style>{`
         .rpp-tm-quote.rpp-tm-quote {
           font-family: 'DM Sans', system-ui, sans-serif;

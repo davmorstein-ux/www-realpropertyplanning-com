@@ -44,7 +44,7 @@ const IntentCTA = ({ heading, body, buttonText, reason, professional = "broker",
     <section
       aria-label={heading}
       style={{
-        background: dark ? "#1B3A6B" : "#f5f2ec",
+        background: dark ? "#1B3A6B" : "#faf8f4",
         borderTop: dark ? "none" : "1px solid #e6e0d6",
         padding: "2.5rem 1.5rem",
       }}

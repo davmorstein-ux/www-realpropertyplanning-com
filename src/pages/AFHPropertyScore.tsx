@@ -206,7 +206,7 @@ const AFHPropertyScore = () => {
       <style>{PAGE_CSS}</style>
       <Header />
       <main>
-        <div className="aps-noprint" style={{ background: "#f5f2ec", padding: "40px 24px 36px", borderBottom: `3px solid ${PLUM}` }}>
+        <div className="aps-noprint" style={{ background: "#faf8f4", padding: "40px 24px 36px", borderBottom: `3px solid ${PLUM}` }}>
           <div style={{ maxWidth: 900, margin: "0 auto" }}>
             <div style={{ marginBottom: 22 }}><BackToCalculators accent={PLUM} /></div>
             <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: PLUM_DARK, marginBottom: 10, fontFamily: FONT }}>For buyers, owners &amp; investors</p>
@@ -217,7 +217,7 @@ const AFHPropertyScore = () => {
           </div>
         </div>
 
-        <div className="aps-root" style={{ background: "#f5f2ec", padding: "2rem 1rem 3rem" }}>
+        <div className="aps-root" style={{ background: "#faf8f4", padding: "2rem 1rem 3rem" }}>
           <div ref={topRef} style={{ scrollMarginTop: "calc(var(--header-height, 120px) + 12px)" }} />
 
           {/* ---------------- INTRO ---------------- */}

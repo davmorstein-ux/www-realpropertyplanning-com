@@ -62,7 +62,7 @@ const HowToFinanceAnAFH = () => {
       />
       <Header />
       <main>
-        <div style={{ background: "#f5f2ec", padding: "48px 24px 40px", borderBottom: `3px solid ${TEAL}` }}>
+        <div style={{ background: "#faf8f4", padding: "48px 24px 40px", borderBottom: `3px solid ${TEAL}` }}>
           <div style={{ maxWidth: 900, margin: "0 auto", paddingTop: "var(--header-height, 100px)" }}>
             <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: TEAL_DARK, marginBottom: 10, fontFamily: "'DM Sans', system-ui, sans-serif" }}>For buyers, sellers &amp; new operators</p>
             <h1 style={{ fontSize: "clamp(30px,4.2vw,44px)", fontWeight: 700, color: INK, marginBottom: 12, lineHeight: 1.2, fontFamily: "'DM Sans', system-ui, sans-serif" }}>How to Finance an Adult Family Home in Washington</h1>
@@ -70,7 +70,7 @@ const HowToFinanceAnAFH = () => {
           </div>
         </div>
 
-        <div style={{ background: "#f5f2ec", padding: "2rem 1rem 3rem" }}>
+        <div style={{ background: "#faf8f4", padding: "2rem 1rem 3rem" }}>
           <div style={{ maxWidth: 900, margin: "0 auto" }}>
             {/* The one idea */}
             <div style={card}>
@@ -140,7 +140,7 @@ const HowToFinanceAnAFH = () => {
                     <div style={{ fontSize: 17, fontWeight: 700, color: INK, marginBottom: 10, borderTop: `1px solid ${TEAL}55`, paddingTop: 14 }}>Lenders that publish AFH lending in this lane</div>
                     <div style={{ display: "grid", gap: 12 }}>
                       {LENDERS.filter((l) => l.lane === lane.id).map((l) => (
-                        <div key={l.name} style={{ background: "#f5f2ec", border: "1px solid #dccdce", borderRadius: 10, padding: "14px 16px" }}>
+                        <div key={l.name} style={{ background: "#faf8f4", border: "1px solid #dccdce", borderRadius: 10, padding: "14px 16px" }}>
                           <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8, alignItems: "baseline" }}>
                             <div style={{ fontSize: 20, fontWeight: 700, color: NAVY }}>{l.name} <span style={{ fontSize: 16, fontWeight: 600, color: "#3b3733" }}>· {l.location}</span></div>
                             <div style={{ fontSize: 15, fontWeight: 700, color: l.verified ? "#15803d" : "#7a4a00", background: l.verified ? "#dcfce7" : "#fef3c7", borderRadius: 999, padding: "3px 10px" }}>

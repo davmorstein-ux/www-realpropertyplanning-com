@@ -36,7 +36,7 @@ const tiles = [
 ];
 
 const HomepageFunnel = () => (
-  <section id="guided-entry" style={{ backgroundColor: "#f5f2ec", padding: "3.5rem 0 4.5rem" }}>
+  <section id="guided-entry" style={{ backgroundColor: "#faf8f4", padding: "3.5rem 0 4.5rem" }}>
     <style>{`
       @media (max-width: 900px) {
         .rpp-funnel-grid { grid-template-columns: repeat(2,1fr) !important; }

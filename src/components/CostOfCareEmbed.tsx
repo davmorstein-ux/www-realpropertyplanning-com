@@ -36,7 +36,7 @@ const ctrlLabel: React.CSSProperties = {
   textAlign: "center",
 };
 const valueBox: React.CSSProperties = {
-  background: "#f5f2ec",
+  background: "#faf8f4",
   border: "2px solid #dccdce",
   borderRadius: 8,
   padding: "4px 10px",
@@ -55,7 +55,7 @@ const stepperBtn: React.CSSProperties = {
   fontSize: "26px",
   fontWeight: 700,
   color: NAVY,
-  background: "#f5f2ec",
+  background: "#faf8f4",
   border: "1px solid #dccdce",
   cursor: "pointer",
   display: "flex",
@@ -213,7 +213,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       >
         <div
           style={{
-            background: "#f5f2ec",
+            background: "#faf8f4",
             border: `2px solid ${COC_TEAL}b3`,
             borderRadius: 10,
             padding: "10px 12px",
@@ -245,7 +245,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         </div>
         <div
           style={{
-            background: "#f5f2ec",
+            background: "#faf8f4",
             border: `2px solid ${COC_TEAL}b3`,
             borderRadius: 10,
             padding: "10px 12px",
@@ -279,7 +279,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
 
       <div
         style={{
-          background: "#f5f2ec",
+          background: "#faf8f4",
           border: `2px solid ${COC_TEAL}b3`,
           borderRadius: 10,
           padding: "10px 12px",
@@ -574,7 +574,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           font-weight: 700 !important;
           font-size: 24px !important;
           color: #14655f !important;
-          background: #f5f2ec !important;
+          background: #faf8f4 !important;
           border: 2px solid #dccdce !important;
           border-radius: 8px !important;
           padding: 6px 14px !important;

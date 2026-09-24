@@ -308,7 +308,9 @@ const RPPHomeV3 = () => {
               {t("funnel.mobileHint")}
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
+            {/* Tiles sit in a narrower column with wider gaps so the row reads
+                as four objects with air around them, not a strip (David, Sept 23). */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-9 mb-5" style={{ maxWidth: 1040, margin: "0 auto 1.25rem" }}>
               {tileMeta.map(({ key, href, bgColor, imgSrc }) => {
                 const title = t(`funnel.tiles.${key}.title`);
                 const imgAlt = t(`funnel.tiles.${key}.imgAlt`);

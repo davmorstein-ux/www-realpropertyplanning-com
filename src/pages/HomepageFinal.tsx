@@ -128,7 +128,7 @@ const HomepageFinal = () => {
         </section>
 
         {/* Funnel Tiles */}
-        <section style={{ backgroundColor: "#f5f2ec", padding: "0.5rem 0 4rem" }}>
+        <section style={{ backgroundColor: "#faf8f4", padding: "0.5rem 0 4rem" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
               <h2

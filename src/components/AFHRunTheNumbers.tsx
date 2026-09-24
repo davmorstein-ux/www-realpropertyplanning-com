@@ -36,7 +36,7 @@ const Stat = ({ label, value, sub, accent }: { label: string; value: string; sub
   <div
     style={{
       flex: "1 1 260px",
-      background: "#f5f2ec",
+      background: "#faf8f4",
       border: `2px solid ${accent}40`,
       borderRadius: 10,
       padding: "18px 16px",

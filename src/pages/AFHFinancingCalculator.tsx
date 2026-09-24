@@ -264,7 +264,7 @@ const AFHFinancingCalculator = () => {
       />
       <Header />
       <main>
-        <div style={{ background: "#f5f2ec", padding: "48px 24px 40px", borderBottom: `3px solid ${TEAL}` }}>
+        <div style={{ background: "#faf8f4", padding: "48px 24px 40px", borderBottom: `3px solid ${TEAL}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto", paddingTop: "var(--header-height, 100px)" }}>
             <div style={{ marginBottom: 24 }}>
               <BackToCalculators accent={TEAL} />
@@ -281,7 +281,7 @@ const AFHFinancingCalculator = () => {
           </div>
         </div>
 
-        <div style={{ background: "#f5f2ec", padding: "2.5rem 1rem 3rem" }}>
+        <div style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
           {/* How lenders decide */}
           <div style={{ ...card, background: "#ffffff" }}>
             <div style={section}>How a lender decides</div>
@@ -332,7 +332,7 @@ const AFHFinancingCalculator = () => {
                   </div>
                 ))}
               </div>
-              <div style={{ marginTop: 14, background: "#f5f2ec", border: `2px solid ${TEAL}`, borderRadius: 10, padding: "12px 16px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
+              <div style={{ marginTop: 14, background: "#faf8f4", border: `2px solid ${TEAL}`, borderRadius: 10, padding: "12px 16px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
                 <div style={{ fontSize: 18, fontWeight: 700, color: INK }}>
                   Total monthly income today: <span style={{ color: TEAL, fontSize: 24 }}>{money(monthlyTotal)}</span>
                 </div>
@@ -443,7 +443,7 @@ const AFHFinancingCalculator = () => {
                 ["Net income the lender needs", money(needNOI)],
                 ["Total the buyer pays (house + business)", money(dealTotal)],
               ].map(([k, v]) => (
-                <div key={k} style={{ background: "#f5f2ec", border: `2px solid ${TEAL}`, borderRadius: 10, padding: "14px 12px", textAlign: "center" }}>
+                <div key={k} style={{ background: "#faf8f4", border: `2px solid ${TEAL}`, borderRadius: 10, padding: "14px 12px", textAlign: "center" }}>
                   <div style={{ fontSize: 17, color: "#141210", fontWeight: 700 }}>{k}</div>
                   <div style={{ fontSize: 26, fontWeight: 700, color: TEAL, marginTop: 4 }}>{v}</div>
                 </div>
@@ -471,7 +471,7 @@ const AFHFinancingCalculator = () => {
                     ["Cash to buyer after debt service", (r: (typeof rows)[0]) => money0(r.cash)],
                     ["Most a lender would finance — property price", (r: (typeof rows)[0]) => money(r.maxPrice)],
                   ].map(([k, fn], i) => (
-                    <tr key={k as string} style={{ borderBottom: "1px solid #eee", background: i === 3 || i === 5 ? "#f5f2ec" : undefined }}>
+                    <tr key={k as string} style={{ borderBottom: "1px solid #eee", background: i === 3 || i === 5 ? "#faf8f4" : undefined }}>
                       <td style={{ padding: "9px 6px", fontWeight: i === 2 || i === 3 || i === 5 ? 700 : 400 }}>{k as string}</td>
                       {rows.map((r) => (
                         <td

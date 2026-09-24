@@ -224,7 +224,7 @@ const AFHValuationEstimator = () => {
       <Header />
       <main>
         {/* Hero */}
-        <div style={{ background: "#f5f2ec", padding: "48px 24px 40px", borderBottom: `3px solid ${GREEN}` }}>
+        <div style={{ background: "#faf8f4", padding: "48px 24px 40px", borderBottom: `3px solid ${GREEN}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <div style={{ marginBottom: 24 }}>
               <BackToCalculators accent={GREEN} />
@@ -271,7 +271,7 @@ const AFHValuationEstimator = () => {
         </div>
 
         {/* Calculator */}
-        <div ref={calcRef} style={{ background: "#f5f2ec", padding: "2.5rem 1rem 3rem" }}>
+        <div ref={calcRef} style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
           <div
             style={{
               maxWidth: 900,
@@ -502,7 +502,7 @@ const AFHValuationEstimator = () => {
                   textAlign: "center",
                   marginBottom: 14,
                   marginTop: 16,
-                  background: "#f5f2ec",
+                  background: "#faf8f4",
                 }}
               >
                 <div
@@ -552,7 +552,7 @@ const AFHValuationEstimator = () => {
                   <div
                     key={id}
                     style={{
-                      background: "#f5f2ec",
+                      background: "#faf8f4",
                       border: `1px solid ${GREEN}30`,
                       borderRadius: 8,
                       padding: "1rem",
@@ -589,7 +589,7 @@ const AFHValuationEstimator = () => {
               <div
                 id="v-assumptions"
                 style={{
-                  background: "#f5f2ec",
+                  background: "#faf8f4",
                   border: `1px solid ${GREEN}25`,
                   borderRadius: 8,
                   padding: "1rem 1.25rem",
@@ -607,7 +607,7 @@ const AFHValuationEstimator = () => {
                   padding: "12px 16px",
                   border: `1px solid ${GREEN}18`,
                   borderRadius: 8,
-                  background: "#f5f2ec",
+                  background: "#faf8f4",
                 }}
               >
                 This estimate uses income capitalization methodology and Washington AFH market data. It is for
@@ -625,7 +625,7 @@ const AFHValuationEstimator = () => {
                   gap: 14,
                   flexWrap: "wrap",
                   marginTop: 12,
-                  background: "#f5f2ec",
+                  background: "#faf8f4",
                 }}
               >
                 <div>

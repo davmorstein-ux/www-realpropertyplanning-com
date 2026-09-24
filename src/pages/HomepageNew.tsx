@@ -36,7 +36,7 @@ const HomepageNew = () => (
       </section>
 
       {/* Orientation */}
-      <section className="py-8 md:py-10 lg:py-12" style={{ backgroundColor: "#f5f2ec" }}>
+      <section className="py-8 md:py-10 lg:py-12" style={{ backgroundColor: "#faf8f4" }}>
         <div style={{ maxWidth: "820px", margin: "0 auto", padding: "0 1.5rem", textAlign: "center" }}>
           <h2
             style={{
@@ -79,7 +79,7 @@ const HomepageNew = () => (
       </section>
 
       {/* Funnel Tiles */}
-      <section style={{ backgroundColor: "#f5f2ec", padding: "0.5rem 0 4rem" }}>
+      <section style={{ backgroundColor: "#faf8f4", padding: "0.5rem 0 4rem" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
           <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
             <h2
