@@ -82,7 +82,9 @@ export const NICOLE_GUZMAN_JOHNSON: AFHProfessional = {
 export const FEATURED_AFH_BROKER: AFHProfessional = {
   id: "featured-broker",
   name: FEATURED_BROKER.name,
-  title: "AFH Expert Real Estate Broker",
+  /* Was "AFH Expert Real Estate Broker". "Expert" is a self-assessment; the
+     credentials are verifiable (Sept 24, 2026). */
+  title: "Adult Family Home Real Estate Specialist",
   company: FEATURED_BROKER.brokerage,
   photo: BROKER_PHOTO,
   photoAlt: `Photo of ${FEATURED_BROKER.name}, AFH Real Estate Broker`,
