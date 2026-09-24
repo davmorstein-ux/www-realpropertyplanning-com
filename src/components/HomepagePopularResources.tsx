@@ -90,7 +90,7 @@ const HomepagePopularResources = () => {
         width: 52px !important;
         height: 52px !important;
         border-radius: 50% !important;
-        background-color: var(--pr-accent-soft, #f5f2ec) !important;
+        background-color: var(--pr-accent-soft, #faf8f4) !important;
         margin-bottom: 1.1rem !important;
         flex-shrink: 0 !important;
       }

@@ -277,7 +277,10 @@ const RPPHomeV3 = () => {
         </div>
 
         {/* ── Funnel Tiles ─────────────────────────────────────────── */}
-        <section id="rpp-start-here" style={{ backgroundColor: "#f5f2ec", padding: "2.5rem 0 4rem" }}>
+        {/* Sections from here down sit on a lighter cream (#faf8f4, David Sept 23:
+            "more alive"). The hero band and the lead-line strip above stay
+            #f5f2ec because the artwork's paper field was colour-matched to it. */}
+        <section id="rpp-start-here" style={{ backgroundColor: "#faf8f4", padding: "2.5rem 0 4rem" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
             {/* 2rem, was 0.5rem. With the global h1-h4 margin-bottom of
                 0.4rem that left roughly 14px between a 56px heading and the
