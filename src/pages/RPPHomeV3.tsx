@@ -268,20 +268,12 @@ const RPPHomeV3 = () => {
           </div>
         </div>
 
-        {/* ── Hero CTA strip ────────────────────────────────────────
-            The one action the homepage previously lacked (Sept 2026 audit:
-            "the hero has no visible action button"). It lives in the cream
-            band BELOW the artwork, not inside the measured tagline column,
-            so it never interferes with the overlay geometry above and works
-            at every width. One primary action in the hub's voice — never a
-            person's name — plus a lead line that says what the site is. */}
+        {/* ── Lead line under the artwork ───────────────────────────
+            One sentence saying what the site is. The "Get Connected" button
+            that sat here (Sept 23 2026) is gone: the header carries the same
+            button on every page, so it appeared twice on the homepage. */}
         <div className="rpp-hero-cta">
           <p className="rpp-hero-cta-lead">{t("hero.ctaLead")}</p>
-          <div className="rpp-hero-cta-actions">
-            <Link to="/contact?reason=other" className="rpp-hero-cta-primary bg-transparent">
-              {t("hero.ctaPrimary")}
-            </Link>
-          </div>
         </div>
 
         {/* ── Funnel Tiles ─────────────────────────────────────────── */}

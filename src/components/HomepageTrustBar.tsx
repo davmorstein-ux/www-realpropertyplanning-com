@@ -26,21 +26,22 @@ const HomepageTrustBar = () => (
           <Link to={s.href} className="bg-transparent">
             <strong>{s.value}</strong>
             <span>{s.label}</span>
+            <span className="rpp-trustbar-arrow" aria-hidden="true">→</span>
           </Link>
         </li>
       ))}
     </ul>
     <style>{`
-      /* Quiet on purpose (David, Sept 23: the navy band overpowered the page):
-         cream, hairline top and bottom, navy figures, one row. */
-      .rpp-trustbar { background: #faf8f4; border-top: 1px solid #e6e0d6; border-bottom: 1px solid #e6e0d6; padding: 0.9rem 1.5rem; }
-      .rpp-trustbar ul { list-style: none; margin: 0 auto; padding: 0; max-width: 1100px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 20px; }
-      @media (min-width: 900px) { .rpp-trustbar ul { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 28px; } }
-      .rpp-trustbar li { margin: 0; text-align: center; }
-      .rpp-trustbar a { color: #272421 !important; text-decoration: none !important; display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap; justify-content: center; font-family: 'DM Sans', system-ui, sans-serif; }
-      .rpp-trustbar strong { font-size: clamp(18px, 1.5vw, 22px); font-weight: 700; color: #1B3A6B; line-height: 1.1; }
-      .rpp-trustbar span { font-size: clamp(13px, 1vw, 15px); line-height: 1.3; color: #4a443e; }
-      @media (hover: hover) { .rpp-trustbar a:hover span { text-decoration: underline; text-underline-offset: 3px; } }
+      /* Quiet, but obviously clickable (David, Sept 23): each figure is a
+         bordered pill with an arrow, on a cream hairline row. */
+      .rpp-trustbar { background: #faf8f4; border-top: 1px solid #e6e0d6; border-bottom: 1px solid #e6e0d6; padding: 1rem 1.5rem; }
+      .rpp-trustbar ul { list-style: none; margin: 0 auto; padding: 0; max-width: 1100px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 14px; }
+      .rpp-trustbar li { margin: 0; }
+      .rpp-trustbar a { display: inline-flex; align-items: baseline; gap: 6px; white-space: nowrap; padding: 9px 16px; border: 1.5px solid #1B3A6B; border-radius: 999px; background: #fff; color: #1B3A6B !important; text-decoration: none !important; font-family: 'DM Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; transition: background 0.15s, color 0.15s; }
+      .rpp-trustbar strong { font-size: 18px; font-weight: 700; }
+      .rpp-trustbar .rpp-trustbar-arrow { margin-left: 2px; }
+      @media (hover: hover) { .rpp-trustbar a:hover { background: #1B3A6B; color: #fff !important; } }
+      @media (max-width: 480px) { .rpp-trustbar a { white-space: normal; font-size: 14px; padding: 8px 14px; } }
     `}</style>
   </section>
 );
