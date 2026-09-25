@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import AuthorByline from "@/components/AuthorByline";
 
 const faqs = [
   { question: "Which should I get — an appraisal or a CMA?", answer: `It depends on the purpose. A CMA is typically used for listing pricing decisions. A formal appraisal is used when legal documentation, court submission, tax reporting, or lending requirements demand a certified independent valuation. ${FEATURED_BROKER.Role} can advise on which is appropriate for your situation.` },
@@ -181,6 +182,7 @@ const AppraisalVsCma = () => (
       </div>
     </section>
 
+    <AuthorByline context="estate" />
     <DisclaimerSection />
     </main>
     <Footer />

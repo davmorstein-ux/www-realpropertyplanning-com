@@ -8,6 +8,7 @@ import PageFAQ from "@/components/PageFAQ";
 import BackToResources from "@/components/BackToResources";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import AuthorByline from "@/components/AuthorByline";
 
 const faqs = [
   {
@@ -129,6 +130,7 @@ const HowProbateRealEstateWorks = () => (
       <PageFAQ faqs={faqs} heading="Probate Real Estate FAQs" />
 
       <BackToResources />
+      <AuthorByline context="estate" />
       <DisclaimerSection />
     </main>
     <Footer />

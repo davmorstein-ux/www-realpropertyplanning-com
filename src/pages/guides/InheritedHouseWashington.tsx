@@ -9,6 +9,7 @@ import PageFAQ from "@/components/PageFAQ";
 import NextStepBlock from "@/components/NextStepBlock";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import AuthorByline from "@/components/AuthorByline";
 
 const tiles = [
   {
@@ -163,6 +164,7 @@ const InheritedHouseWashington = () => (
 
       <RelatedServices currentPath="/guides/inherited-house-washington" />
 
+      <AuthorByline context="estate" />
       <DisclaimerSection />
     </main>
     <Footer />

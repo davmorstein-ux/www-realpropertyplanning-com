@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import AuthorByline from "@/components/AuthorByline";
 
 const keyDifferences = [
   { title: "The Emotional Weight Is Different", text: "A conventional seller is usually excited about the next chapter — a bigger home, a new city, a fresh start. Senior transition sellers are often processing loss of independence, health changes, grief, or family tension. The emotional context affects every decision and communication." },
@@ -164,6 +165,7 @@ const SeniorTransitionDifferences = () => (
       </div>
     </section>
 
+    <AuthorByline context="estate" />
     <DisclaimerSection />
     </main>
     <Footer />

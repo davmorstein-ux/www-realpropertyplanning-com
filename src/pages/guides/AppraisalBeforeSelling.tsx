@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import AuthorByline from "@/components/AuthorByline";
 
 const faqs = [
   { question: "Is an appraisal legally required before selling inherited property?", answer: "Not always. Washington State does not mandate a formal appraisal for every estate sale. However, certain situations — such as court oversight, multi-heir disputes, or tax reporting — may require or strongly benefit from one. The estate attorney can advise on legal requirements specific to your case." },
@@ -193,6 +194,7 @@ const AppraisalBeforeSelling = () => (
       </div>
     </section>
 
+    <AuthorByline context="estate" />
     <DisclaimerSection />
     </main>
     <Footer />

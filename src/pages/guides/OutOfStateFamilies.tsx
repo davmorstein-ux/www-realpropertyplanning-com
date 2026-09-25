@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PremiumTile from "@/components/PremiumTile";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import AuthorByline from "@/components/AuthorByline";
 
 const needs = [
   "Someone local to visit the property, document its condition, and provide an honest assessment",
@@ -161,6 +162,7 @@ const OutOfStateFamilies = () => (
         </div>
       </section>
 
+      <AuthorByline context="estate" />
       <DisclaimerSection />
     </main>
     <Footer />

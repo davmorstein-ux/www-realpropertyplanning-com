@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/accordion";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import AuthorByline from "@/components/AuthorByline";
 
 const payOff = [
   {
@@ -354,6 +355,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
         </div>
       </section>
 
+      <AuthorByline context="estate" />
       <DisclaimerSection />
     </main>
     <BackToResources />

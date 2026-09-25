@@ -12,6 +12,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import AuthorByline from "@/components/AuthorByline";
 
 const faqs = [
   { question: "Can an executor list a house before probate is complete?", answer: "In most cases, no. The executor generally needs letters testamentary or letters of administration — issued by the court — before they have legal authority to sell. However, you can begin planning, assessing the property, and coordinating with professionals while probate is pending." },
@@ -218,6 +219,7 @@ const ExecutorSellBeforeProbate = () => (
       </div>
     </section>
 
+    <AuthorByline context="estate" />
     <DisclaimerSection />
     </main>
     <Footer />

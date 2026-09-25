@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import AuthorByline from "@/components/AuthorByline";
 import {
   Accordion,
   AccordionContent,
@@ -332,6 +333,7 @@ const ProbateVsTrustSaleWashington = () => (
         </div>
       </section>
 
+      <AuthorByline context="estate" />
       <DisclaimerSection />
     </main>
     <BackToResources />

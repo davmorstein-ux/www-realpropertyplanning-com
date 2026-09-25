@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ListenButton from "@/components/ListenButton";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import AuthorByline from "@/components/AuthorByline";
 
 const immediateSteps = [
   { title: "Secure the Property", text: "Change locks if needed, verify insurance coverage, and make sure utilities remain active. A vacant home is vulnerable to weather damage, vandalism, and liability issues." },
@@ -214,6 +215,7 @@ const WhatExecutorsShouldDo = () => (
       </div>
     </section>
 
+    <AuthorByline context="estate" />
     <DisclaimerSection />
     </main>
     <Footer />
