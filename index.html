@@ -2,6 +2,17 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
+    <!-- Canonical host fallback (Sept 25 2026). Search Console showed
+         www.realpropertyplanning.com indexed as a separate site, splitting
+         every page's signal. The real fix is a 301 at the host (Lovable
+         domain settings: bare domain primary); this forwards a www visitor
+         to the same path on the bare host if that redirect is ever missing.
+         Runs before anything else so no analytics hit is recorded on www. -->
+    <script>
+      if (location.hostname === "www.realpropertyplanning.com") {
+        location.replace("https://realpropertyplanning.com" + location.pathname + location.search + location.hash);
+      }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0X2GPKCW65"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
