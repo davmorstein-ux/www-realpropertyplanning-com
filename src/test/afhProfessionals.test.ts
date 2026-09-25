@@ -7,13 +7,15 @@ const everyone = AFH_PROFESSIONAL_GROUPS.flatMap((g) => g.people);
 const page = readFileSync("src/pages/AFHFindProfessional.tsx", "utf8");
 
 describe("AFH Club featured professionals", () => {
-  it("every person can actually be reached: a name, a business, a photo, a website, and a phone or email", () => {
+  it("every person can actually be reached: a name, a business, a photo, and a website or both a phone and an email", () => {
     for (const p of everyone) {
       expect(p.name.trim().length, p.id).toBeGreaterThan(3);
       expect(p.company.trim().length, p.id).toBeGreaterThan(1);
       expect(p.photo, `${p.id} photo`).toBeTruthy();
       expect(p.photoAlt.trim().length, `${p.id} photo description`).toBeGreaterThan(10);
-      expect(p.website.startsWith("https://"), `${p.id} website`).toBe(true);
+      // A website is optional when the person gives both a phone and an email (MJ Sharma, Sept 2026).
+      if (p.website) expect(p.website.startsWith("https://"), `${p.id} website`).toBe(true);
+      else expect(!!p.phone && !!p.email, `${p.id} needs a website, or both a phone and an email`).toBe(true);
       expect(Boolean(p.phone || p.email), `${p.id} needs a phone or an email`).toBe(true);
       if (p.email) expect(p.email, p.id).toMatch(/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i);
       if (p.phone) expect(p.phone.replace(/\D/g, "").length, `${p.id} phone`).toBe(10);

@@ -1,5 +1,7 @@
 import nicolePhoto from "@/assets/providers/nicole-guzman-johnson-bookkeeper-books-on-the-rock.webp";
 import booksOnTheRockLogo from "@/assets/providers/books-on-the-rock-bookkeeping-logo.webp";
+import mjSharmaPhoto from "@/assets/providers/mj-sharma-two-maids-headshot.webp";
+import twoMaidsLogo from "@/assets/providers/two-maids-cleaning-logo.webp";
 import { FEATURED_BROKER, brokerLicenseShort } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from "@/data/featuredProfessionalAssets";
 
@@ -102,6 +104,23 @@ export const FEATURED_AFH_BROKER: AFHProfessional = {
   note: `${FEATURED_BROKER.name} is the broker behind AFH Club. Unlike everyone else on this page, he is compensated if you hire him as your broker. WA real estate broker, ${brokerLicenseShort}.`,
 };
 
+
+export const MJ_SHARMA: AFHProfessional = {
+  id: "mj-sharma",
+  name: "MJ Sharma",
+  title: "Owner, Two Maids",
+  company: "Two Maids",
+  photo: mjSharmaPhoto,
+  photoAlt: "Photo of MJ Sharma, owner of Two Maids",
+  logo: twoMaidsLogo,
+  logoAlt: "Two Maids logo",
+  phone: "(512) 771-5011",
+  email: "mj.sharma@twomaidscleaning.com",
+  website: "",
+  specialty: "Professional house cleaning — Bothell, Sammamish, and Covington, WA",
+  bio: "",
+};
+
 export interface AFHProfessionalGroup {
   id: string;
   label: string;
@@ -141,7 +160,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     label: "House cleaning",
     profession: "House Cleaning",
     why: "An operating home has to be cleaned around residents, on a schedule, to a standard an inspector or a buyer walking through will notice. A cleaning company used to care settings works quietly, on time, and with the products the home allows.",
-    people: [],
+    people: [MJ_SHARMA],
   },
   {
     id: "business-insurance",
