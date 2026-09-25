@@ -235,15 +235,21 @@ function buildCityPage(entry: CityIndexEntry, facilities: Facility[], filter?: (
   const { city, citySlug } = entry;
   const shown = filter ? facilities.filter(filter.matches) : facilities;
   const route = filter ? `/afh-club/homes/${citySlug}/${filter.slug}` : `/afh-club/homes/${citySlug}`;
+  // Count-led (Sept 25, 2026): Search Console showed these pages with the
+  // most impressions on the site and almost no clicks — Bothell 2,906 / 9 —
+  // against directory results whose titles lead with the number of homes.
+  // The count is the DSHS-derived figure the page itself reports.
   const heading = filter
-    ? `Adult family homes in ${city} ${filter.label}`
-    : `Licensed adult family homes in ${city}, Washington`;
+    ? `${shown.length} adult family homes in ${city} ${filter.label}`
+    : `${entry.facilityCount} licensed adult family homes in ${city}, Washington`;
   const s = cityStats(facilities);
 
-  const title = `${heading} | Real Property Planning`;
+  const title = filter
+    ? `${shown.length} Adult Family Homes in ${city}, WA ${filter.label} | AFH Club`
+    : `${entry.facilityCount} Adult Family Homes in ${city}, WA (${num(entry.totalBeds)} beds) — Licensed Directory | AFH Club`;
   const description = filter
-    ? `${shown.length} ${city}, Washington adult family homes ${filter.label}, from Washington State DSHS licensing records. Capacity, specialty designations, and Medicaid status for each home.`
-    : `All ${entry.facilityCount} licensed adult family homes in ${city}, Washington, from DSHS records. Capacity, specialty designations, Medicaid status, and inspection history.`;
+    ? `${shown.length} adult family homes in ${city}, WA ${filter.label}, from DSHS licensing records — capacity, specialty designations, Medicaid status, and inspection history. Records current as of ${longDate(s.retrievedAt)}.`
+    : `${entry.facilityCount} licensed adult family homes in ${city}, WA with ${num(entry.totalBeds)} beds — every DSHS record, with capacity, Medicaid, dementia and mental-health specialties, expanded capacity, and inspection history. Records current as of ${longDate(s.retrievedAt)}.`;
 
   const itemList = {
     "@context": "https://schema.org",
@@ -444,7 +450,9 @@ function buildCountyPage(c: CountyChecked, index: CityIndexEntry[], checked: Cou
   const bs = cities.reduce((s, x) => s + x.behaviorSupport, 0);
   const pp = cities.reduce((s, x) => s + x.privatePay, 0);
 
-  const title = `Licensed Adult Family Homes in ${c.county} County, WA | Real Property Planning`;
+  const title = c.facilityCount > 0
+    ? `${num(c.facilityCount)} Adult Family Homes in ${c.county} County, WA (${num(c.totalBeds)} beds) — Licensed Directory | AFH Club`
+    : `Adult Family Homes in ${c.county} County, WA — Licensed Directory | AFH Club`;
   const description =
     c.facilityCount > 0
       ? `${num(c.facilityCount)} licensed adult family homes with ${num(c.totalBeds)} beds across ${cities.length} ${plural(cities.length, "city", "cities")} in ${c.county} County, Washington, from DSHS licensing records. Capacity, specialty designations, Medicaid status, and inspection history for each home.`
@@ -592,7 +600,7 @@ function buildHubPage(index: CityIndexEntry[], retrievedAt: string, checked: Cou
 
   return {
     route,
-    title: "Licensed Adult Family Homes in Washington by City | Real Property Planning",
+    title: "6,000+ Licensed Adult Family Homes in Washington by City and County | AFH Club",
     description: `Every licensed adult family home in ${listCounties(index)} counties, Washington — ${num(total)} homes across ${index.length} cities, from DSHS licensing records. Capacity, specialty designations, and Medicaid status for each.`,
     body: parts.join(""),
   };

@@ -102,17 +102,20 @@ const CityDirectory = () => {
     ? `/afh-club/homes/${citySlug}/${filter.slug}`
     : `/afh-club/homes/${citySlug}`;
   const heading = filter
-    ? `Adult family homes in ${city} ${filter.label}`
-    : `Licensed adult family homes in ${city}, Washington`;
+    ? `${shown?.length ?? cityEntry.facilityCount} adult family homes in ${city} ${filter.label}`
+    : `${cityEntry.facilityCount} licensed adult family homes in ${city}, Washington`;
+  const seoTitle = filter
+    ? `${shown?.length ?? cityEntry.facilityCount} Adult Family Homes in ${city}, WA ${filter.label} | AFH Club`
+    : `${cityEntry.facilityCount} Adult Family Homes in ${city}, WA (${cityEntry.totalBeds.toLocaleString()} beds) — Licensed Directory | AFH Club`;
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title={`${heading} | Real Property Planning`}
+        title={seoTitle}
         description={
           filter
-            ? `${city}, Washington adult family homes ${filter.label}, from Washington State DSHS licensing records. Capacity, specialty designations, and Medicaid status for each home.`
-            : `All ${cityEntry.facilityCount} licensed adult family homes in ${city}, Washington, from DSHS records. Capacity, specialty designations, Medicaid status, and inspection history.`
+            ? `${shown?.length ?? ""} adult family homes in ${city}, WA ${filter.label}, from DSHS licensing records — capacity, specialty designations, Medicaid status, and inspection history.`
+            : `${cityEntry.facilityCount} licensed adult family homes in ${city}, WA with ${cityEntry.totalBeds.toLocaleString()} beds — every DSHS record, with capacity, Medicaid, dementia and mental-health specialties, expanded capacity, and inspection history.`
         }
         canonical={`https://realpropertyplanning.com${path}`}
         schemaJson={

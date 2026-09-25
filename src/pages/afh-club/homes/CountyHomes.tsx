@@ -31,7 +31,10 @@ const CountyHomes = () => {
   const live = sales.filter(isLive);
   const sold = sales.filter((l) => l.marketStatus === "sold");
   const canonical = `https://realpropertyplanning.com/afh-club/homes/county/${slug}`;
-  const title = `Licensed Adult Family Homes in ${checked.county} County, WA | Real Property Planning`;
+  const title =
+    checked.facilityCount > 0
+      ? `${checked.facilityCount.toLocaleString()} Adult Family Homes in ${checked.county} County, WA (${checked.totalBeds.toLocaleString()} beds) — Licensed Directory | AFH Club`
+      : `Adult Family Homes in ${checked.county} County, WA — Licensed Directory | AFH Club`;
   const description =
     checked.facilityCount > 0
       ? `${checked.facilityCount.toLocaleString()} licensed adult family homes with ${checked.totalBeds.toLocaleString()} beds across ${cities.length} ${cities.length === 1 ? "city" : "cities"} in ${checked.county} County, Washington, from DSHS licensing records. Capacity, specialty designations, Medicaid status, and inspection history for each home.`

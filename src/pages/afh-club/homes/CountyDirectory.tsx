@@ -26,7 +26,7 @@ const CountyDirectory = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Licensed Adult Family Homes in Washington by City | Real Property Planning"
+        title="6,000+ Licensed Adult Family Homes in Washington by City and County | AFH Club"
         description={`Directory of ${totalHomes} licensed adult family homes across ${countyIndex.length} Washington cities, from DSHS records. Capacity, specialty designations, Medicaid status, and inspection history for each home.`}
         canonical="https://realpropertyplanning.com/afh-club/homes"
       />
