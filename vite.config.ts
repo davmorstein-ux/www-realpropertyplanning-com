@@ -9,7 +9,7 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { buildAfhDirectoryRoutes, loadAllFacilities } from "./src/data/afh/prerender";
 import { articleAuthor, articlePublisher } from "./src/lib/schema";
-import { renderAfhInventory, buildAfhListingRoutes, type AFHInventoryScope } from "./src/data/afhInventoryPrerender";
+import { renderAfhInventory, buildAfhListingRoutes, inventoryCounts, type AFHInventoryScope } from "./src/data/afhInventoryPrerender";
 import { guideLibraryHtml } from "./src/data/guideLibrary";
 import { cityRoutes as afhCityRoutes } from "./src/data/afhCityPages";
 
@@ -1732,12 +1732,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "AFH Valuation Estimator",
   },
   "/afh-club/listings": {
-    title: "Adult Family Homes for Sale in Washington | AFH Club",
-    description: "An independently researched directory of publicly marketed adult family home properties, businesses, and leases in Washington State — with pricing, licensing status, source attribution, and a verification date on every listing.",
-    h1: "Adult Family Home Listings",
+    title: "{{live}} Adult Family Homes for Sale in Washington State ({{cities}} cities) | AFH Club",
+    description: "{{live}} adult family homes for sale in Washington right now — {{active}} active and {{pending}} pending across {{cities}} cities — plus {{sold}} closed sales with prices. Licensed businesses, properties, and leases, independently researched from NWMLS, RMLS, BizBuySell and direct sources, with licensing status and $/bed.",
+    h1: "Adult Family Homes for Sale in Washington State",
     afhInventory: {},
-    quickAnswerQ: "Where can I find adult family homes for sale in Washington?",
-    quickAnswerA: "AFH Club maintains an independently researched directory of publicly marketed adult family home properties, businesses, and leases throughout Washington State, gathered from NWMLS, RMLS, BizBuySell, and direct-from-owner sources and regularly checked for status changes. It is organized in three groups: properties for sale (the real estate, whether licensed, formerly licensed, WABO-ready, or marketed for AFH use), operating AFH businesses for sale (the license history, residents, and contracts, sold with or without the building), and homes for lease to operators. Each listing shows its licensing status, whether the business conveys, the listing broker, and its source — NWMLS, RMLS, BizBuySell, or direct from the seller.",
+    quickAnswerQ: "How many adult family homes are for sale in Washington right now?",
+    quickAnswerA: "{{live}} at the moment — {{active}} active and {{pending}} pending across {{cities}} Washington cities, plus {{sold}} closed sales with prices. AFH Club maintains an independently researched directory of publicly marketed adult family home properties, businesses, and leases throughout Washington State, gathered from NWMLS, RMLS, BizBuySell, and direct-from-owner sources and regularly checked for status changes. It is organized in three groups: properties for sale (the real estate, whether licensed, formerly licensed, WABO-ready, or marketed for AFH use), operating AFH businesses for sale (the license history, residents, and contracts, sold with or without the building), and homes for lease to operators. Each listing shows its licensing status, whether the business conveys, the listing broker, and its source — NWMLS, RMLS, BizBuySell, or direct from the seller.",
     intro: "The DSHS license never transfers with a sale. Whatever is bought — house, business, or lease — the new operator qualifies for a license of their own through the Change of Ownership process. That is why each listing here carries a licensing-status label: an operating home with residents, a formerly licensed home, and a house that has merely passed the WABO checklist are three different purchases.",
     sections: [
       "Properties for sale — Houses that are operating adult family homes, formerly licensed, built to the WABO checklist, or marketed for AFH use. Price, bedrooms, square footage, licensing status, and whether the business is included.",
@@ -1746,14 +1746,14 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
   },
   "/afh-club/listings/properties": {
-    title: "Adult Family Home Properties for Sale in Washington | AFH Club",
+    title: "{{live}} Adult Family Home Properties for Sale in Washington | AFH Club",
     description: "Houses currently for sale in Washington State that are licensed, formerly licensed, WABO-ready, or marketed as adult family home opportunities — with price, capacity, licensing status, and listing broker.",
     h1: "Adult Family Home Properties for Sale",
     afhInventory: { type: "realEstate" },
     intro: "The real estate: houses that are operating adult family homes, formerly licensed, built to the WABO checklist, or marketed for AFH use across Western Washington and beyond. Every listing shows its licensing status and whether the operating business conveys with the sale. Buyers relicense through DSHS regardless.",
   },
   "/afh-club/listings/businesses": {
-    title: "Adult Family Home Businesses for Sale in Washington | AFH Club",
+    title: "{{live}} Adult Family Home Businesses for Sale in Washington | AFH Club",
     description: "Operating adult family home businesses for sale in Washington State — the license history, residents, staff, and contracts — sold separately from, or together with, the real estate.",
     h1: "Adult Family Home Businesses for Sale",
     afhInventory: { type: "business" },
@@ -1785,8 +1785,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
 
   // ===== AFH city-specific for-sale pages (LLM/AI-search AEO pages) =====
   "/afh-club/for-sale/seattle-wa": {
-    title: "Adult Family Homes For Sale in Seattle, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Seattle, WA — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Seattle, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Seattle, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Seattle, WA",
     afhInventory: { city: "Seattle" },
     quickAnswerQ: "What Adult Family Homes are for sale in Seattle, WA?",
@@ -1794,8 +1794,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Seattle's Adult Family Home market sits at the intersection of the city's aging population and its persistently tight housing supply, which together keep demand for licensed AFH care steady across nearly every neighborhood. Every AFH sale in Seattle runs on two parallel tracks: the real estate transaction itself, and the DSHS licensing process that determines who can legally operate the home.",
   },
   "/afh-club/for-sale/kirkland-wa": {
-    title: "Adult Family Homes For Sale in Kirkland, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Kirkland, WA — licensed businesses, properties, or both on the Eastside. Current listings and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Kirkland, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Kirkland, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both on the Eastside. Current listings and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Kirkland, WA",
     afhInventory: { city: "Kirkland" },
     quickAnswerQ: "What Adult Family Homes are for sale in Kirkland, WA?",
@@ -1803,8 +1803,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Kirkland sits at a distinctive point in the Eastside AFH market — strong household incomes, an aging homeowner base, and land values that make new construction of care facilities financially difficult all combine to keep demand for existing licensed homes high.",
   },
   "/afh-club/for-sale/renton-wa": {
-    title: "Adult Family Homes For Sale in Renton, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Renton, WA — licensed businesses, properties, or both in South King County. Current listings and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Renton, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Renton, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both in South King County. Current listings and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Renton, WA",
     afhInventory: { city: "Renton" },
     quickAnswerQ: "What Adult Family Homes are for sale in Renton, WA?",
@@ -1812,8 +1812,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Renton occupies a practical middle ground in the King County AFH market — close enough to Seattle and the Eastside to draw on the same employment base and senior population, while offering more approachable pricing than either.",
   },
   "/afh-club/for-sale/lynnwood-wa": {
-    title: "Adult Family Homes For Sale in Lynnwood, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Lynnwood, WA — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Lynnwood, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Lynnwood, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Lynnwood, WA",
     afhInventory: { city: "Lynnwood" },
     quickAnswerQ: "What Adult Family Homes are for sale in Lynnwood, WA?",
@@ -1821,8 +1821,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Lynnwood is one of the more active Adult Family Home markets in Snohomish County — its central location along the I-5 corridor, established residential neighborhoods, and proximity to major medical facilities all make it a natural fit for licensed care.",
   },
   "/afh-club/for-sale/edmonds-wa": {
-    title: "Adult Family Homes For Sale in Edmonds, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Edmonds, WA — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Edmonds, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Edmonds, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Edmonds, WA",
     afhInventory: { city: "Edmonds" },
     quickAnswerQ: "What Adult Family Homes are for sale in Edmonds, WA?",
@@ -1830,8 +1830,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Edmonds has one of the deepest, most established Adult Family Home markets in Snohomish County. Its housing stock skews older and larger than much of the surrounding area, its senior population is significant, and its proximity to Swedish Edmonds hospital makes it an attractive location for licensed care.",
   },
   "/afh-club/for-sale/puyallup-wa": {
-    title: "Adult Family Homes For Sale in Puyallup, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Puyallup, WA — licensed businesses, properties, or both in Pierce County. Current listings and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Puyallup, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Puyallup, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both in Pierce County. Current listings and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Puyallup, WA",
     afhInventory: { city: "Puyallup" },
     quickAnswerQ: "What Adult Family Homes are for sale in Puyallup, WA?",
@@ -1839,8 +1839,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Puyallup has grown into one of Pierce County's more active residential markets, and its Adult Family Home inventory has grown alongside it — offering a genuinely more accessible entry point into AFH ownership for buyers priced out of King County or the Eastside.",
   },
   "/afh-club/for-sale/marysville-wa": {
-    title: "Adult Family Homes For Sale in Marysville, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Marysville, WA — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Marysville, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Marysville, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Marysville, WA",
     afhInventory: { city: "Marysville" },
     quickAnswerQ: "What Adult Family Homes are for sale in Marysville, WA?",
@@ -1848,8 +1848,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Marysville has grown into one of Snohomish County's most active Adult Family Home markets, driven by the same rapid residential expansion that's reshaped the city over the past two decades.",
   },
   "/afh-club/for-sale/auburn-wa": {
-    title: "Adult Family Homes For Sale in Auburn, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Auburn, WA — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Auburn, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Auburn, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Auburn, WA",
     afhInventory: { city: "Auburn" },
     quickAnswerQ: "What Adult Family Homes are for sale in Auburn, WA?",
@@ -1857,8 +1857,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Auburn's position at the boundary of King and Pierce counties has long made it a practical hub for South Sound real estate, and its Adult Family Home market reflects that same central location.",
   },
   "/afh-club/for-sale/everett-wa": {
-    title: "Adult Family Homes For Sale in Everett, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Everett, WA — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Everett, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Everett, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Everett, WA",
     afhInventory: { city: "Everett" },
     quickAnswerQ: "What Adult Family Homes are for sale in Everett, WA?",
@@ -1866,8 +1866,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "As the county seat and largest city in Snohomish County, Everett anchors a substantial share of the region's senior care infrastructure — anchored by Providence Regional Medical Center Everett and a dense network of referral sources.",
   },
   "/afh-club/for-sale/bellevue-wa": {
-    title: "Adult Family Homes For Sale in Bellevue, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Bellevue, WA — licensed businesses, properties, or both on the Eastside. Current listings and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Bellevue, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Bellevue, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both on the Eastside. Current listings and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Bellevue, WA",
     afhInventory: { city: "Bellevue" },
     quickAnswerQ: "What Adult Family Homes are for sale in Bellevue, WA?",
@@ -1875,8 +1875,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Bellevue sits at the center of the Eastside's high-value real estate market — a combination of tech-sector wealth, top-rated schools, and central location that keeps demand for existing licensed AFHs consistently strong.",
   },
   "/afh-club/for-sale/lakewood-wa": {
-    title: "Adult Family Homes For Sale in Lakewood, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Lakewood, WA — licensed businesses, properties, or both in Pierce County. Current listings and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Lakewood, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Lakewood, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both in Pierce County. Current listings and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Lakewood, WA",
     afhInventory: { city: "Lakewood" },
     quickAnswerQ: "What Adult Family Homes are for sale in Lakewood, WA?",
@@ -1884,8 +1884,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Lakewood is one of Pierce County's larger, more established cities, with a housing stock shaped by decades of steady growth and proximity to Joint Base Lewis-McChord.",
   },
   "/afh-club/for-sale/bonney-lake-wa": {
-    title: "Adult Family Homes For Sale in Bonney Lake, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Bonney Lake, WA — licensed businesses, properties, or both in Pierce County. Current listings and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Bonney Lake, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Bonney Lake, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both in Pierce County. Current listings and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Bonney Lake, WA",
     afhInventory: { city: "Bonney Lake" },
     quickAnswerQ: "What Adult Family Homes are for sale in Bonney Lake, WA?",
@@ -1893,8 +1893,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Bonney Lake has grown quickly on the plateau east of Tacoma, and its Adult Family Home inventory has grown alongside it — favoring newer, single-level construction that converts well to AFH use.",
   },
   "/afh-club/for-sale/mukilteo-wa": {
-    title: "Adult Family Homes For Sale in Mukilteo, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Mukilteo, WA — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Mukilteo, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Mukilteo, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Mukilteo, WA",
     afhInventory: { city: "Mukilteo" },
     quickAnswerQ: "What Adult Family Homes are for sale in Mukilteo, WA?",
@@ -1902,8 +1902,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Mukilteo is a smaller, waterfront Snohomish County community shaped by its ferry terminal, Boeing's nearby Everett facility, and a genuine sense of small-town character.",
   },
   "/afh-club/for-sale/tacoma-wa": {
-    title: "Adult Family Homes For Sale in Tacoma, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Tacoma, WA — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Tacoma, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Tacoma, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Tacoma, WA",
     afhInventory: { city: "Tacoma" },
     quickAnswerQ: "What Adult Family Homes are for sale in Tacoma, WA?",
@@ -1918,8 +1918,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
   },
   "/afh-club/for-sale/kent-wa": {
-    title: "Adult Family Homes For Sale in Kent, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Kent, WA — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Kent, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Kent, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Kent, WA",
     afhInventory: { city: "Kent" },
     quickAnswerQ: "What Adult Family Homes are for sale in Kent, WA?",
@@ -1934,8 +1934,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
   },
   "/afh-club/for-sale/federal-way-wa": {
-    title: "Adult Family Homes For Sale in Federal Way, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Federal Way, WA — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Federal Way, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Federal Way, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Federal Way, WA",
     afhInventory: { city: "Federal Way" },
     quickAnswerQ: "What Adult Family Homes are for sale in Federal Way, WA?",
@@ -1950,8 +1950,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
   },
   "/afh-club/for-sale/kennewick-wa": {
-    title: "Adult Family Homes For Sale in Kennewick, WA | Real Property Planning",
-    description: "Adult Family Homes for sale in Kennewick, WA — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
+    title: "Adult Family Homes for Sale in Kennewick, WA ({{live}} on market) | AFH Club",
+    description: "{{live}} adult family homes for sale in Kennewick, WA ({{active}} active, {{pending}} pending) and {{sold}} closed sales with prices — licensed businesses, properties, or both. Current listings, recent sales, pricing guidance, and answers to common AFH buying questions.",
     h1: "Adult Family Homes For Sale in Kennewick, WA",
     afhInventory: { city: "Kennewick" },
     quickAnswerQ: "What Adult Family Homes are for sale in Kennewick, WA?",
@@ -2016,6 +2016,44 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Who Has Authority to Sell Probate Property?",
   },
 };
+
+/* Live-count tokens. A route with afhInventory may write {{live}}, {{active}},
+   {{pending}}, {{cities}} or {{sold}} in its title, description, h1 or quick
+   answer; they are filled from src/data/afhListings.ts at build time, so the
+   count a searcher sees in the snippet is the count on the page. Search
+   Console (Sept 2026) showed the for-sale phrases sitting at positions 8–13
+   with 0–2% click-through; a snippet that leads with the number is what the
+   competing results do. */
+const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+for (const meta of Object.values(ROUTE_METADATA)) {
+  if (!meta.afhInventory) continue;
+  const c = inventoryCounts(meta.afhInventory);
+  const fill = (t?: string) =>
+    t
+      ?.replace(/\{\{live\}\}/g, String(c.live))
+      .replace(/\{\{active\}\}/g, String(c.active))
+      .replace(/\{\{pending\}\}/g, String(c.pending))
+      .replace(/\{\{cities\}\}/g, String(c.cities))
+      .replace(/\{\{sold\}\}/g, String(c.sold));
+  const cityMatch = meta.description.match(/^\{\{live\}\} adult family homes for sale in ([^(]+?) \(\{\{active\}\} active, \{\{pending\}\} pending\) and \{\{sold\}\} closed sales with prices — (.*)$/s);
+  if (cityMatch) {
+    // City pages: small numbers, so the sentence is built to read correctly
+    // at 0, 1 or many, and never says "0 adult family homes for sale".
+    const [, city, tail] = cityMatch;
+    const lead = c.live > 0
+      ? `${plural(c.live, "adult family home", "adult family homes")} for sale in ${city} right now (${c.active} active, ${c.pending} pending)`
+      : `Adult family homes in ${city} — no active listings at the moment`;
+    const soldPart = c.sold > 0 ? `, ${plural(c.sold, "closed sale", "closed sales")} with prices` : "";
+    meta.description = `${lead}${soldPart} — ${tail}`;
+    meta.title = meta.title.replace(/ \(\{\{live\}\} on market\)/, c.live > 0 ? ` (${c.live} on market)` : "");
+    continue;
+  }
+  if (c.live === 0) meta.title = meta.title.replace(/^\{\{live\}\} /, "");
+  meta.title = fill(meta.title)!;
+  meta.description = fill(meta.description)!;
+  if (meta.h1) meta.h1 = fill(meta.h1);
+  if (meta.quickAnswerA) meta.quickAnswerA = fill(meta.quickAnswerA);
+}
 
 const DEFAULT_SHELL_META: RouteMeta = ROUTE_METADATA["/"] || {
   title: "Real Property Planning | Washington State Real Estate Guidance",

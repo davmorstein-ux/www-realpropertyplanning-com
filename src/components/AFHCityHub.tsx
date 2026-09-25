@@ -36,6 +36,8 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
   const soldHere = soldListings().filter((l) => l.city.toLowerCase() === city.toLowerCase());
   const soldHereStats = soldStats(soldHere);
   const verified = latestVerified([...cityListings, ...soldHere]);
+  const countyName = cityPageBySlug(slug)?.county ?? "";
+  const countySiblings = AFH_CITY_PAGES.filter((c) => c.county === countyName && c.slug !== slug);
   const nearby = (cityPageBySlug(slug)?.nearby ?? [])
     .map((s) => AFH_CITY_PAGES.find((c) => c.slug === s))
     .filter((c): c is NonNullable<typeof c> => !!c)
@@ -147,7 +149,7 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
                     to="/afh-club/listings"
                     className="inline-flex items-center justify-center gap-2 bg-[#0a5648] text-white font-bold px-6 py-3 rounded-lg no-underline"
                   >
-                    Browse All AFH Listings
+                    All adult family homes for sale in Washington
                   </Link>
                   <a
                     href="#city-alert"
@@ -257,6 +259,27 @@ const AFHCityHub = ({ city, county, slug, metaDescription, intro, faqs }: AFHCit
                     </li>
                   ))}
                 </ul>
+                {/* County siblings and the state page: every city page links
+                    up to /afh-club/listings and across to its county, so the
+                    for-sale pages form one connected set (Sept 25, 2026). */}
+                {countySiblings.length > 0 && (
+                  <p className="mt-5 text-[16px] md:text-[17px]">
+                    <span className="text-foreground/70">Elsewhere in {countyName} County: </span>
+                    {countySiblings.map((c, k) => (
+                      <span key={c.slug}>
+                        <Link to={`/afh-club/for-sale/${c.slug}`} className="text-accent underline underline-offset-4">
+                          {c.city}
+                        </Link>
+                        {k < countySiblings.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
+                  </p>
+                )}
+                <p className="mt-3 text-[16px] md:text-[17px]">
+                  <Link to="/afh-club/listings" className="text-accent underline underline-offset-4 font-semibold">
+                    All adult family homes for sale in Washington →
+                  </Link>
+                </p>
               </div>
             </div>
           </section>

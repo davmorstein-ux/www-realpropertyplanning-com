@@ -33,6 +33,7 @@ adult family homes (AFHs).
   for a redirect route is what crawlers read instead of the redirect. Sept 22,
   2026: 30 entries and the sitewide footer line were rewritten to this voice
   after an outside audit found the indexed pages still describing a brokerage.
+- **Live counts in for-sale snippets.** A `ROUTE_METADATA` entry with `afhInventory` may use `{{live}}`, `{{active}}`, `{{pending}}`, `{{cities}}`, `{{sold}}` in its title, description, h1 or quick answer; `vite.config.ts` fills them from `src/data/afhListings.ts` at build time (city pages get a sentence built to read at 0, 1 or many). The state page `/afh-club/listings` is the one page targeting "adult family homes for sale in Washington"; the business/property sub-pages and the 17 city pages target their narrower phrases and link up to it. Do not create another page aimed at the state-level phrase.
 - **This repository is public.** See section 9.
 
 ## 2. Ground rules when more than one assistant has access

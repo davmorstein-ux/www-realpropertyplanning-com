@@ -80,6 +80,24 @@ const scopedListings = (scope: AFHInventoryScope): AFHListing[] => {
   );
 };
 
+/**
+ * Live counts for a scope, for titles and descriptions ("35 adult family homes
+ * for sale in Washington across 22 cities"). Computed at build time from the
+ * same data the page renders, so the number in the search snippet is the
+ * number on the page. Sept 25, 2026.
+ */
+export function inventoryCounts(scope: AFHInventoryScope): { live: number; active: number; pending: number; cities: number; sold: number } {
+  const live = scopedListings({ ...scope, sold: false });
+  const sold = scopedListings({ ...scope, sold: true });
+  return {
+    live: live.length,
+    active: live.filter((l) => l.marketStatus === "active").length,
+    pending: live.filter((l) => l.marketStatus === "pending").length,
+    cities: new Set(live.map((l) => l.city.toLowerCase())).size,
+    sold: sold.length,
+  };
+}
+
 const soldNumber = (l: AFHListing): number | null =>
   l.soldPrice ? Number(l.soldPrice.replace(/[^0-9.]/g, "")) || null : null;
 
