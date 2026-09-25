@@ -2,6 +2,8 @@ import nicolePhoto from "@/assets/providers/nicole-guzman-johnson-bookkeeper-boo
 import booksOnTheRockLogo from "@/assets/providers/books-on-the-rock-bookkeeping-logo.webp";
 import mjSharmaPhoto from "@/assets/providers/mj-sharma-two-maids-headshot.webp";
 import twoMaidsLogo from "@/assets/providers/two-maids-cleaning-logo.webp";
+import ruslanBagaveevPhoto from "@/assets/providers/ruslan-bagaveev-dryout-headshot.webp";
+import dryoutLogo from "@/assets/providers/dryout-water-damage-restoration-logo.webp";
 import { FEATURED_BROKER, brokerLicenseShort } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from "@/data/featuredProfessionalAssets";
 
@@ -121,6 +123,23 @@ export const MJ_SHARMA: AFHProfessional = {
   bio: "",
 };
 
+
+export const RUSLAN_BAGAVEEV: AFHProfessional = {
+  id: "ruslan-bagaveev",
+  name: "Ruslan Bagaveev",
+  title: "Water Damage Restoration, Dryout",
+  company: "Dryout",
+  photo: ruslanBagaveevPhoto,
+  photoAlt: "Photo of Ruslan Bagaveev, Dryout water damage restoration",
+  logo: dryoutLogo,
+  logoAlt: "Dryout Water Damage Restoration logo",
+  phone: "(425) 221-3264",
+  email: "dryout@wtrdmg.com",
+  website: "https://www.wtrdmg.com",
+  specialty: "Water damage restoration and dry-out for homes and licensed care homes",
+  bio: "",
+};
+
 export interface AFHProfessionalGroup {
   id: string;
   label: string;
@@ -161,6 +180,13 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     profession: "House Cleaning",
     why: "An operating home has to be cleaned around residents, on a schedule, to a standard an inspector or a buyer walking through will notice. A cleaning company used to care settings works quietly, on time, and with the products the home allows.",
     people: [MJ_SHARMA],
+  },
+  {
+    id: "water-damage",
+    label: "Water damage restoration",
+    profession: "Water Damage Restoration",
+    why: "A burst line or a slow leak in an operating home is an emergency twice over: the residents cannot simply move out while it dries, and DSHS will want to see that the home stayed safe and sanitary. A restoration company that can dry, contain, and document the work around residents matters more here than in an ordinary house.",
+    people: [RUSLAN_BAGAVEEV],
   },
   {
     id: "business-insurance",

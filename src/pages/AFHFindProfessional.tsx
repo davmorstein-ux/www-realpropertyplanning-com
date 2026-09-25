@@ -109,6 +109,19 @@ const PROFESSIONAL_CATEGORIES = [
     link: null,
   },
   {
+    title: "Water Damage Restoration",
+    icon: "💧",
+    description:
+      "A burst line or a slow leak in an operating home is an emergency twice over: residents cannot simply move out while it dries, and DSHS will expect the home to have stayed safe and sanitary. A restoration company that can dry, contain, and document the work around residents matters more here than in an ordinary house.",
+    lookFor: [
+      "24-hour response and the equipment to dry in place",
+      "Containment that keeps residents' rooms usable during the work",
+      "Moisture readings and photos documented for insurance and DSHS",
+      "Experience in care homes, clinics, or other occupied buildings",
+    ],
+    link: null,
+  },
+  {
     title: "Business Insurance",
     icon: "🛡️",
     description:
