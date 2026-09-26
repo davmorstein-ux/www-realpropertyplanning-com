@@ -1816,6 +1816,28 @@ export const afhListings: AFHListing[] = [
     mlsNum: "2470647",
     businessNotes: "Sound-view home one block from the waterfront with an operating adult family home on the main level; business sold separately for $75,000.",
   },
+  {
+    id: 88,
+    marketStatus: "active",
+    lastVerified: "2026-09-25",
+    listedDate: "2026-09-24",
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "afhReady",
+    businessIncluded: "no",
+    address: "124 167th Place SW",
+    city: "Bothell",
+    state: "WA",
+    beds: 6,
+    bathDisplay: "4",
+    bathDetail: "2 full · 4 half",
+    sqft: "2,504",
+    price: "$1,299,950",
+    photo: "/listing-photos/124_167th_Pl_SW_Bothell.webp",
+    broker: "Mahlet Altaye",
+    brokerage: "KW Greater Seattle",
+    mlsNum: "2585127",
+  },
 ];
 
 /* ---------------------------------------------------------------------------
