@@ -5,7 +5,7 @@ ChatGPT/Codex, or another), or a human developer. It records ground rules and
 hard-won lessons so nobody has to rediscover them. Keep it current: if you learn
 something the next person needs, add it here in the same commit.
 
-Last substantial update: September 20, 2026.
+Last substantial update: September 25, 2026.
 
 ## 1. What this is
 
@@ -230,9 +230,26 @@ AFH Club.
 - WAC 388-106-0336(11): for assessments on or after July 1, 2025, a person must
   be found **not** eligible for CBHS before receiving SBS. They never stack.
 - ECS and SBS specialty contracts do not transfer in a change of ownership.
-- HCS Meaningful Day: funding was eliminated July 1, 2025. Status since then is
-  contested and unconfirmed. Do not present it as current income. Three older
-  pages still name it in a "does not transfer" list.
+- Meaningful Day: DSHS contracting staff wrote in September 2026 that it "is not
+  available as of July 1, 2025." The answer did not separate the HCS and DDA
+  versions; treat both as unavailable unless DSHS says otherwise. It was removed
+  from every "does not transfer" list on Sept 25, 2026. Do not reintroduce it.
+- **Change of ownership, Medicaid contract side** (written answers from DSHS
+  contracting staff (HCLA/MSD) and the DSHS Residential Policy Program Manager,
+  September 2026). Pages attribute these to "DSHS contracting staff" and never
+  name the individuals:
+  - The new owner's Medicaid contract starts the day the new license is
+    assigned, which is the day after the seller's license closes. No gap.
+  - Contract paperwork cannot start until the license is approved and assigned;
+    DSHS sends the forms when notified the change of ownership is complete. As
+    little as about a week if filled out correctly and completely first time.
+  - Residents do not need new assessments. They do need new authorizations
+    under the new owner's ProviderOne number. Services continue, except
+    specialty services the new owner is not granted.
+  - An approved Exception to Rule follows the client, so it carries over.
+  - ECS and SBS can be added to a contract only with AFH program staff approval.
+  - "Plan for a lag between the contract date and the first deposit" is this
+    site's practical advice, not a DSHS statement. Keep it worded as advice.
 - WAC 388-106-1800 to -1815 (a five-tier hours system, 2026) is **in-home
   presumptive eligibility**. It has nothing to do with AFHs.
 - Property requirements: bedrooms 80 sq ft usable single / 120 double (WAC
@@ -269,7 +286,8 @@ AFH Club.
   other than the designated emergency exit, must be at least **27 inches** wide.
   Until that date 27 inches was an unwritten licensor practice. Whether it
   reaches a buyer of an already-licensed home (who applies for a new license)
-  is a question for DSHS.
+  is a question for DSHS. Sent in writing September 2026 and referred to the
+  licensing unit (BAAU); no answer yet.
 - WAC 388-76-10031: a home must hold its initial license 24 months before
   applying to increase from six beds to seven or eight, and a seven or eight bed
   home without sprinklers may not serve residents who need evacuation
@@ -290,7 +308,12 @@ AFH Club.
   provisions; read it before relying on older text in those areas.
 - What a new owner must have in place for **CBHS payments to continue after a
   change of ownership**. Nothing published answers it. Pages pose it as a
-  question to the reader.
+  question to the reader. DSHS referred the question internally in September
+  2026; the Health Care Authority owns CBHS payment and has not answered.
+- How long the **new license** takes in a change of ownership (referred to BAAU).
+- Whether a buyer can apply for **ECS or SBS before closing**, or get an
+  exception to the operating-history requirement (referred to the DSHS program
+  managers for those contracts).
 - Property Score weights are provisional: they follow AI-estimated cost-to-cure
   ranges, not field data. Replace with real conversion costs when available.
 
@@ -324,6 +347,7 @@ not possible, so it may lag the others.
 - A Medicaid reimbursement and six-bed revenue simulator. The plan is to extend
   `AFHRevenueBuilder`, not build a parallel tool, and to omit any "compare
   programs" table, since a resident's program is not a choice.
-- A fourth payment-series article on change of ownership, waiting on answers
-  from DSHS and the Health Care Authority.
+- A fourth payment-series article on change of ownership. The DSHS contract-side
+  answers are in (section 8); still waiting on the licensing unit, the ECS/SBS
+  program managers, and the Health Care Authority.
 - The sitewide `!important` cleanup described in section 4.

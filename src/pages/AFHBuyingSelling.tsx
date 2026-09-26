@@ -22,7 +22,7 @@ const CHOW_STEPS = [
   {
     step: "2",
     title: "Verify specialty contracts separately",
-    body: "Specialty contracts (Meaningful Day Activities, ECS, SBS) do not transfer with ownership. If the home operates under specialty contracts, you must independently qualify and execute new contracts before providing or billing for those services.",
+    body: "Specialty contracts (ECS, SBS) do not transfer with ownership. If the home operates under specialty contracts, you must independently qualify and execute new contracts before providing or billing for those services.",
   },
   {
     step: "3",

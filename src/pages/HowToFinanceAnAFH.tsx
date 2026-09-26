@@ -208,7 +208,7 @@ const HowToFinanceAnAFH = () => {
                 <ul style={{ margin: 0, paddingLeft: 22 }}>
                   <li style={li}>Get pre-qualified in your lane before you shop. SBA closes in 45–90 days; start early.</li>
                   <li style={li}>Ask for two years of tax returns and the resident roster with payer types. That is what your lender will underwrite.</li>
-                  <li style={li}>Ask about the contracts. ECS, SBS, Meaningful Day and DDA contracts do not transfer on a sale — confirm you can qualify for your own before you price them in.</li>
+                  <li style={li}>Ask about the contracts. ECS, SBS and DDA contracts do not transfer on a sale — confirm you can qualify for your own before you price them in.</li>
                   <li style={li}>Ask for a price allocation between house and business. It decides what you can finance and how.</li>
                   <li style={li}>Consider asking for seller financing on the business. It replaces your most expensive loan.</li>
                 </ul>

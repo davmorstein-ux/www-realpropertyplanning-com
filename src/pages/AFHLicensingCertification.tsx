@@ -523,7 +523,7 @@ const AFHLicensingCertification = () => (
               margin: "0 0 24px",
             }}
           >
-            Specialty contracts — such as Meaningful Day Activities, Expanded Community Services (ECS), and Specialized
+            Specialty contracts — such as Expanded Community Services (ECS) and Specialized
             Behavior Support (SBS) — are not transferable in a CHOW. The new owner must independently qualify and
             execute new specialty contracts before providing or billing for those services.
           </p>

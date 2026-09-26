@@ -14,6 +14,11 @@ import { AFH_MEDICAID_RATES, AFH_RATE_REGION_LABELS, medicaidRange } from "@/dat
  * Group definitions checked against WAC 388-106-0115 on Sept 18, 2026. Note that
  * for residential settings Group B is mood/behavior only; cognition is what
  * separates D from C. (The in-home rule, 388-106-0125, differs.)
+ *
+ * "When the home is sold" (added Sept 25, 2026) comes from written answers by
+ * DSHS contracting and residential policy staff. Still open with DSHS: how long
+ * the new license takes (licensing unit). The working-capital note is this
+ * guide's practical advice, not a DSHS statement, and is worded that way.
  */
 
 const usd = (n: number, digits = 0) => n.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: digits, maximumFractionDigits: digits });
@@ -37,6 +42,7 @@ const FAQS = [
   { question: "Is A through E a ladder that residents move up over time?", answer: "No. The letters describe different combinations of need, not steps. Group E is exceptional care, D is clinical complexity with significant cognitive impairment, C is clinical complexity without it, B is qualifying mood and behavior needs, and A is everyone else. A physically frail resident with no behavioral or medical complexity can be A High, while a physically capable resident with serious behaviors is a B." },
   { question: "How much difference does a resident's classification make to AFH income?", answer: `At the rates effective ${effective}, the gap between the lowest and highest classification in King, Pierce and Snohomish counties is ${usd(spreadDaily, 2)} per day, or about ${usd(roundTo(spreadYearly, 100))} per year for a single bed.` },
   { question: "Can a resident's classification change?", answer: "Yes. A classification reflects current assessed need. Residents are reassessed, including when their condition changes significantly, and the rate can go down as well as up. A buyer should not value a home by simply annualizing the current month's Medicaid deposits." },
+  { question: "Does a resident need a new assessment when an adult family home is sold?", answer: "No. DSHS contracting staff confirmed in September 2026 that residents do not need new assessments after a change of ownership, so their classifications carry over. Each resident does need a new authorization under the new owner's ProviderOne number. The new owner's Medicaid contract starts the day the new license is assigned, the day after the seller's license closes." },
   { question: "What should an AFH buyer request about classifications in due diligence?", answer: "A de-identified resident schedule showing payer type, current CARE classification, daily rate, any add-ons, and the date of the most recent assessment. Then reconcile it: roster, to classification, to authorized rate, to actual deposits." },
 ];
 
@@ -48,7 +54,7 @@ const AFHCareClassifications = () => (
     eyebrow="For buyers, sellers & owners"
     lede="When a Medicaid client moves into an adult family home, the home does not set the price. An assessment produces a classification, and the classification sets the daily rate. One bed can be worth very different amounts."
     cover={{ src: "/afh-care-classifications-cover.webp", alt: "A Through E: One Bed, Very Different Revenue — how CARE classifications affect adult family home income" }}
-    dateModified="2026-09-18"
+    dateModified="2026-09-25"
     faqs={FAQS}
     faqHeading="CARE Classifications: Common Questions"
     disclaimer={`This page is general educational information for people buying, selling, or operating an adult family home. It is not legal, financial, or reimbursement advice. Rates shown are DSHS base adult family home rates effective ${effective}; they change each July 1 and sometimes January 1. Confirm current figures with DSHS.`}
@@ -126,6 +132,20 @@ const AFHCareClassifications = () => (
     </ul>
     <p style={gs.p}>
       Then reconcile it: <strong>roster, to classification, to authorized rate, to actual deposits.</strong> If those four don't agree, find out why before you value the business. The <Link to="/afh-club/afh-valuation-estimator" style={gs.link}>AFH Valuation Estimator</Link> will show you how much the answer moves the price.
+    </p>
+
+    <h2 style={gs.h2}>When the home is sold</h2>
+    <p style={gs.p}>
+      A sale does not reset anyone's classification. DSHS contracting staff confirmed in September 2026 that after a change of ownership, residents do not need new assessments. What changes is the paperwork behind the payment:
+    </p>
+    <ul style={{ margin: "0 0 16px", paddingLeft: 22 }}>
+      <li style={gs.li}><strong>The contract starts with the license.</strong> The new owner's Medicaid contract takes effect the day the new license is assigned, which is the day after the seller's license closes. There is no gap between the two.</li>
+      <li style={gs.li}><strong>The contract cannot be started early.</strong> DSHS will not begin the contract paperwork until the new license is approved and assigned. It sends the forms once the change of ownership is complete, and the contract can be in place in about a week if they are filled out correctly and completely the first time.</li>
+      <li style={gs.li}><strong>Authorizations are reissued.</strong> Each resident needs a new authorization under the new owner's ProviderOne number.</li>
+      <li style={gs.li}><strong>Exceptions follow the resident.</strong> An approved exception to rule belongs to the resident, not the provider, so it carries over to the new owner.</li>
+    </ul>
+    <p style={gs.p}>
+      One practical point: a contract start date is not the same as a deposit. Billing depends on the reissued authorizations, so a buyer should plan working capital for a lag after closing and confirm the expected timing with DSHS. How long the new license itself takes is a separate question, now with DSHS's licensing unit.
     </p>
 
     <h2 style={gs.h2}>What sits on top of the base rate</h2>

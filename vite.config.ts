@@ -901,9 +901,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "Owners talk about Tier 3 residents, C High, Level 4 care and the ECS contract as if they were one system. They are four, set by different agencies, attached to different things, and they behave differently when a home is sold.",
     faq: [
       { q: "What is the difference between a CARE classification and a CBHS tier?", a: "A CARE classification is assigned by DSHS to every Medicaid resident and sets the base daily rate. A CBHS tier is a separate Health Care Authority benefit for residents with qualifying behavioral needs, defined by hours of dedicated staff supervision per day." },
-      { q: "Which AFH income survives a sale?", a: "CARE classifications and CBHS tiers follow each resident. Specialty contracts such as ECS and SBS belong to the owner and do not transfer in a change of ownership. Private-pay rates are set by the home and can be changed by the next owner." },
+      { q: "Which AFH income survives a sale?", a: "CARE classifications and CBHS tiers follow each resident. DSHS contracting staff confirmed in September 2026 that residents do not need new assessments after a change of ownership, though each authorization is reissued under the new owner's ProviderOne number. Specialty contracts such as ECS and SBS belong to the owner and do not transfer; a buyer needs its own, approved by DSHS program staff. Private-pay rates are set by the home and can be changed by the next owner." },
     ],
-    article: { datePublished: "2026-09-18", dateModified: "2026-09-19" },
+    article: { datePublished: "2026-09-18", dateModified: "2026-09-25" },
   },
   "/afh-club/care-classifications-a-through-e": {
     title: "CARE Classifications A Through E: How Medicaid Pays Washington Adult Family Homes | AFH Club",
@@ -915,8 +915,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     faq: [
       { q: "Is A through E a ladder that residents move up over time?", a: "No. The letters describe different combinations of need, not steps. A physically frail resident with no behavioral or medical complexity can be A High, while a physically capable resident with serious behaviors is a B." },
       { q: "Can a resident's classification change?", a: "Yes. A classification reflects current assessed need, residents are reassessed, and the rate can go down as well as up." },
+      { q: "Does a resident need a new assessment when an adult family home is sold?", a: "No. DSHS contracting staff confirmed in September 2026 that residents do not need new assessments after a change of ownership. Each resident needs a new authorization under the new owner's ProviderOne number, and the new owner's Medicaid contract starts the day the new license is assigned, the day after the seller's license closes." },
     ],
-    article: { datePublished: "2026-09-18", dateModified: "2026-09-18" },
+    article: { datePublished: "2026-09-18", dateModified: "2026-09-25" },
   },
   "/afh-club/cbhs-tiers": {
     title: "CBHS Tiers Explained for Washington Adult Family Homes | Supportive Supervision Tiers 1-6 | AFH Club",
@@ -936,7 +937,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Complete guide to buying or selling an Adult Family Home in Washington State — CHOW process, what transfers, DSHS locator, specialty contracts, and real estate considerations.",
     h1: "Buying or Selling an Adult Family Home",
     quickAnswerQ: "What transfers when an adult family home is sold?",
-    quickAnswerA: "The real estate transfers. The DSHS license does not — the buyer must qualify for and obtain a new license through the Change of Ownership (CHOW) process before operating. Specialty contracts (Meaningful Day Activities, Expanded Community Services, Specialized Behavior Support) do not transfer either; the buyer must independently qualify and execute new ones. Resident relationships continue, but under the new license once the buyer is approved.",
+    quickAnswerA: "The real estate transfers. The DSHS license does not — the buyer must qualify for and obtain a new license through the Change of Ownership (CHOW) process before operating. Specialty contracts (Expanded Community Services, Specialized Behavior Support) do not transfer either; the buyer must independently qualify and execute new ones. Resident relationships continue, but under the new license once the buyer is approved.",
     intro: "An adult family home sale is two transactions that have to close in step: a real estate purchase and a DSHS licensing process with no fixed timeline. A licensed, operating home typically sells at a premium over the same house as a residence, because the buyer is paying for bed capacity, compliance history, specialty contracts, and referral relationships as well as the building.",
     sections: [
       "What a CHOW is — A Change of Ownership is DSHS's process for licensing a new provider at an existing adult family home. There is no abbreviated application; the buyer files a complete license application through the DSHS BAAU portal and must meet every current qualification — training, Home Care Aide certification, background check, caregiving hours — regardless of the seller's history.",
