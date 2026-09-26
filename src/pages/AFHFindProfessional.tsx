@@ -328,7 +328,7 @@ const AFHFindProfessional = () => (
             Met with and vetted
           </p>
           <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>
-            Featured professionals
+            AFH Club Featured Professionals
           </h2>
           <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#302b26", maxWidth: 720 }}>
             A short list on purpose. Everyone here is someone we have sat down with. The list grows as more people earn a place on it.
