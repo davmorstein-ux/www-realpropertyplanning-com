@@ -145,6 +145,8 @@ export interface AFHProfessionalGroup {
   label: string;
   /** What the person does, in two or three words, shown ABOVE the headshot on the directory grid ("Real Estate Broker", "Bookkeeper"). */
   profession: string;
+  /** The card's profession label, always two lines (David, Sept 25 2026): e.g. ["Water Damage", "Restoration"], ["Professional", "Bookkeeper"]. */
+  professionLines: [string, string];
   /** Why an adult family home needs this ROLE. About the role, never a claim about a person. */
   why: string;
   people: AFHProfessional[];
@@ -155,6 +157,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     id: "real-estate",
     label: "Real estate",
     profession: "Real Estate Broker",
+    professionLines: ["Real Estate", "Broker"],
     why: "Selling or buying an adult family home is not an ordinary house sale. The license does not transfer, the business and the building can be sold together or apart, and a lender looks at the home's income as well as its walls.",
     people: [FEATURED_AFH_BROKER],
   },
@@ -162,6 +165,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     id: "bookkeeping",
     label: "Bookkeeping",
     profession: "Bookkeeper",
+    professionLines: ["Professional", "Bookkeeper"],
     why: "Clean books are what make an adult family home's income believable. A buyer's lender will ask for a year or two of statements that reconcile: residents, to rates, to actual deposits. Owners who keep them current sell more easily, and buyers who inherit them can see what they are getting.",
     people: [NICOLE_GUZMAN_JOHNSON],
   },
@@ -171,6 +175,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     id: "photography",
     label: "Photography",
     profession: "Photographer",
+    professionLines: ["Professional", "Photographer"],
     why: "A licensed care home is sold on its rooms, its light and its condition as much as on its numbers, and DSHS-required features (grab bars, ramps, door widths) have to be visible without making the home look institutional. A photographer who has shot care homes knows the difference.",
     people: [],
   },
@@ -178,6 +183,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     id: "house-cleaning",
     label: "House cleaning",
     profession: "House Cleaning",
+    professionLines: ["Professional", "House Cleaning"],
     why: "An operating home has to be cleaned around residents, on a schedule, to a standard an inspector or a buyer walking through will notice. A cleaning company used to care settings works quietly, on time, and with the products the home allows.",
     people: [MJ_SHARMA],
   },
@@ -185,6 +191,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     id: "water-damage",
     label: "Water damage restoration",
     profession: "Water Damage Restoration",
+    professionLines: ["Water Damage", "Restoration"],
     why: "A burst line or a slow leak in an operating home is an emergency twice over: the residents cannot simply move out while it dries, and DSHS will want to see that the home stayed safe and sanitary. A restoration company that can dry, contain, and document the work around residents matters more here than in an ordinary house.",
     people: [RUSLAN_BAGAVEEV],
   },
@@ -192,6 +199,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     id: "business-insurance",
     label: "Business insurance",
     profession: "Business Insurance",
+    professionLines: ["Business", "Insurance"],
     why: "An adult family home needs general and professional liability, property, workers' compensation for caregivers, and often abuse-and-molestation coverage, and a buyer cannot take over the seller's policies. A broker who writes care homes knows which carriers will bind the risk and what DSHS and lenders expect to see.",
     people: [],
   },
@@ -199,6 +207,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     id: "sba-lending",
     label: "SBA lending",
     profession: "SBA Loan Specialist",
+    professionLines: ["SBA Loan", "Specialist"],
     why: "Most AFH purchases that include the business are financed with an SBA 7(a) or 504 loan, which underwrites the home's income as well as the real estate. A lender who has closed AFH deals knows how to present the resident revenue, the CHOW timeline, and the owner's role to underwriting.",
     people: [],
   },
@@ -206,6 +215,7 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     id: "business-brokerage",
     label: "Business brokerage",
     profession: "Business Broker",
+    professionLines: ["Business", "Broker"],
     why: "When the business changes hands separately from the building — or the buyer is leasing — a commercial business broker values and markets the operation itself: the license, the resident census, the staff and the contracts. That is different work from selling the real estate.",
     people: [],
   },
@@ -215,6 +225,6 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
 export const ACTIVE_AFH_PROFESSIONAL_GROUPS = AFH_PROFESSIONAL_GROUPS.filter((g) => g.people.length > 0);
 
 /** Every featured person as one flat list, each tagged with their profession, in group order. This is what the directory grid renders. */
-export const AFH_FEATURED_PEOPLE: Array<{ person: AFHProfessional; profession: string; groupId: string }> = AFH_PROFESSIONAL_GROUPS.flatMap((g) =>
-  g.people.map((person) => ({ person, profession: g.profession, groupId: g.id })),
+export const AFH_FEATURED_PEOPLE: Array<{ person: AFHProfessional; profession: string; professionLines: [string, string]; groupId: string }> = AFH_PROFESSIONAL_GROUPS.flatMap((g) =>
+  g.people.map((person) => ({ person, profession: g.profession, professionLines: g.professionLines, groupId: g.id })),
 );

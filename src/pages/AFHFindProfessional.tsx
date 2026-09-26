@@ -17,7 +17,7 @@ import { AFH_FEATURED_PEOPLE, type AFHProfessional } from "@/data/afhProfessiona
  * and the company logo. No bio — that lives on the person's own page where
  * there is one. The logo slot is always reserved so cards line up.
  */
-const PersonCard = ({ person, profession }: { person: AFHProfessional; profession: string }) => {
+const PersonCard = ({ person, professionLines }: { person: AFHProfessional; professionLines: [string, string] }) => {
   const site = person.website?.replace(/^https?:\/\//, "").replace(/\/$/, "");
   const [emailLocal, emailDomain] = person.email ? person.email.split("@") : ["", ""];
   /* Every slot has a fixed height so the same row of every card lines up across the grid
@@ -26,7 +26,10 @@ const PersonCard = ({ person, profession }: { person: AFHProfessional; professio
      div/span throughout, not <p>: the site's global p rules add margins. */
   return (
     <div className="rpp-afhpro-card">
-      <div className="rpp-afhpro-card-profession">{profession}</div>
+      <div className="rpp-afhpro-card-profession">
+        <span>{professionLines[0]}</span>
+        <span>{professionLines[1]}</span>
+      </div>
       <img src={person.photo} alt={person.photoAlt} width={76} height={76} loading="lazy" className="rpp-afhpro-card-photo" />
       <div className="rpp-afhpro-card-name">
         {person.morePath ? <Link to={person.morePath} className="bg-transparent">{person.name}</Link> : person.name}
@@ -295,7 +298,14 @@ const AFHFindProfessional = () => (
         /* Fixed-height slots: the same row of every card lines up across the grid. */
         .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px 12px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; line-height: 1.25; }
         .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; flex: 0 0 auto; width: 100%; }
-        .rpp-afhpro .rpp-afhpro-card-profession { height: 16px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #481216; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 8px !important; }
+        /* Two fixed lines (David, Sept 25): every profession label is set as two lines in
+           src/data/afhProfessionals.ts (professionLines), e.g. "Water Damage" / "Restoration",
+           "Professional" / "Bookkeeper", so every card's label is the same height and the
+           photos below line up. Each line stays on one line of its own. */
+        .rpp-afhpro .rpp-afhpro-card-profession { height: 30px; font-size: 10.5px; line-height: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #481216; margin-bottom: 8px !important; }
+        .rpp-afhpro .rpp-afhpro-card-profession span { display: block; height: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        /* Two columns on a phone leave ~150px per label: tighter tracking keeps "House Cleaning" and "Water Damage" whole. */
+        @media (max-width: 639px) { .rpp-afhpro .rpp-afhpro-card-profession { letter-spacing: 0.03em; } }
         .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 2px solid #f1ede6; margin-bottom: 8px !important; }
         .rpp-afhpro .rpp-afhpro-card-name { height: 20px; font-size: 15px; font-weight: 700; color: #280a0c; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .rpp-afhpro .rpp-afhpro-card-name a { color: inherit !important; text-decoration: none !important; }
@@ -324,8 +334,8 @@ const AFHFindProfessional = () => (
             A short list on purpose. Everyone here is someone we have sat down with. The list grows as more people earn a place on it.
           </p>
           <div className="rpp-afhpro-grid">
-            {AFH_FEATURED_PEOPLE.map(({ person, profession }) => (
-              <PersonCard key={person.id} person={person} profession={profession} />
+            {AFH_FEATURED_PEOPLE.map(({ person, professionLines }) => (
+              <PersonCard key={person.id} person={person} professionLines={professionLines} />
             ))}
           </div>
         </div>

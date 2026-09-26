@@ -21,6 +21,13 @@ describe("AFH Club featured professionals", () => {
       if (p.phone) expect(p.phone.replace(/\D/g, "").length, `${p.id} phone`).toBe(10);
     }
   });
+  it("every profession label is set as exactly two non-empty lines", () => {
+    for (const g of AFH_PROFESSIONAL_GROUPS) {
+      expect(g.professionLines, g.id).toHaveLength(2);
+      for (const line of g.professionLines) expect(line.trim().length, `${g.id} has an empty label line`).toBeGreaterThan(0);
+    }
+  });
+
   it("nobody is listed twice, and group ids are unique", () => {
     expect(new Set(everyone.map((p) => p.id)).size).toBe(everyone.length);
     expect(new Set(AFH_PROFESSIONAL_GROUPS.map((g) => g.id)).size).toBe(AFH_PROFESSIONAL_GROUPS.length);
