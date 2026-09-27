@@ -272,7 +272,7 @@ const AFHROICalculator = () => {
               style={{
                 fontSize: 18,
                 fontFamily: "'DM Sans', system-ui, sans-serif",
-                color: "#302b26",
+                color: "#1c1917",
                 lineHeight: 1.7,
                 maxWidth: 600,
                 margin: 0,

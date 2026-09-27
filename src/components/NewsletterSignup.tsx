@@ -233,7 +233,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
           font-family: "DM Sans", system-ui, sans-serif !important;
           font-size: 17px !important;
           line-height: 1.55 !important;
-          color: #4a443e !important;
+          color: #1c1917 !important;
           margin: 0 0 18px !important;
         }
         /* A real, visible label. Placeholder-as-label disappears the moment
@@ -297,7 +297,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
         .rpp-news-fine.rpp-news-fine {
           font-family: "DM Sans", system-ui, sans-serif !important;
           font-size: 14px !important;
-          color: #4a443e !important;
+          color: #1c1917 !important;
           margin: 12px 0 0 !important;
         }
         .rpp-news-fine.rpp-news-fine a { color: hsl(355 45% 30%) !important; }

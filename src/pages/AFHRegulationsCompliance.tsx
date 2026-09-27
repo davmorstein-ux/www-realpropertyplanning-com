@@ -213,7 +213,7 @@ const AFHRegulationsCompliance = () => (
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               maxWidth: 680,
             }}
@@ -264,7 +264,7 @@ const AFHRegulationsCompliance = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -277,7 +277,7 @@ const AFHRegulationsCompliance = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 36px",
             }}
@@ -331,7 +331,7 @@ const AFHRegulationsCompliance = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.75,
                     margin: 0,
                   }}
@@ -402,7 +402,7 @@ const AFHRegulationsCompliance = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 36px",
             }}
@@ -426,7 +426,7 @@ const AFHRegulationsCompliance = () => (
                   alignItems: "flex-start",
                 }}
               >
-                <div
+                <div className="rpp-dark-surface"
                   style={{
                     flexShrink: 0,
                     width: 32,
@@ -460,7 +460,7 @@ const AFHRegulationsCompliance = () => (
                     style={{
                       fontSize: 17,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       lineHeight: 1.75,
                       margin: 0,
                     }}
@@ -506,7 +506,7 @@ const AFHRegulationsCompliance = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 36px",
               maxWidth: 680,
@@ -529,7 +529,7 @@ const AFHRegulationsCompliance = () => (
                   alignItems: "flex-start",
                 }}
               >
-                <div
+                <div className="rpp-dark-surface"
                   style={{
                     flexShrink: 0,
                     width: 40,
@@ -563,7 +563,7 @@ const AFHRegulationsCompliance = () => (
                     style={{
                       fontSize: 17,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       lineHeight: 1.75,
                       margin: "0 0 8px",
                     }}
@@ -601,7 +601,7 @@ const AFHRegulationsCompliance = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'DM Sans', sans-serif",
-                color: "#302b26",
+                color: "#1c1917",
                 lineHeight: 1.75,
                 margin: 0,
               }}
@@ -654,7 +654,7 @@ const AFHRegulationsCompliance = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 36px",
               maxWidth: 680,
@@ -699,7 +699,7 @@ const AFHRegulationsCompliance = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.75,
                     margin: "0 0 20px",
                     flex: 1,
@@ -822,7 +822,7 @@ const AFHRegulationsCompliance = () => (
                   alignItems: "flex-start",
                 }}
               >
-                <div
+                <div className="rpp-dark-surface"
                   style={{
                     flexShrink: 0,
                     width: 8,
@@ -849,7 +849,7 @@ const AFHRegulationsCompliance = () => (
                     style={{
                       fontSize: 18,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       lineHeight: 1.8,
                       margin: 0,
                     }}

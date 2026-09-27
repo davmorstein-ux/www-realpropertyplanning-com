@@ -239,7 +239,7 @@ const Articles = () => {
                   <p
                     style={{
                       fontSize: 14,
-                      color: "#3d3833",
+                      color: "#1c1917",
                       margin: "0 0 12px",
                       lineHeight: 1.6,
                       fontFamily: "'DM Sans', system-ui, sans-serif",

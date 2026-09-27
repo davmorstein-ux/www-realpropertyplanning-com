@@ -25,7 +25,7 @@ import { FEATURED_BROKER, brokerageAttribution, appraisalAttribution } from "@/d
  *    and into the classes below, so the selectors no longer match.
  *
  * 2. DARK TEXT ON THE TEAL BAND
- *      body p:not(nav *)...   { color: #3d3833 !important }
+ *      body p:not(nav *)...   { color: #1c1917 !important }
  *      body h2, body h3, body h4 { color: #1B3A6B !important }
  *    The section sets color: #ffffff, but that reaches children only by
  *    inheritance, and inheritance loses to any rule targeting the element
@@ -133,16 +133,16 @@ const PAGE_CSS = `
   .rpp-afh-network h2,
   .rpp-afh-network h3 { color: #280a0c !important; }
   .rpp-afh-paths p,
-  .rpp-afh-network p { color: #302b26 !important; }
+  .rpp-afh-network p { color: #1c1917 !important; }
   .rpp-afh-paths li,
-  .rpp-afh-network li { color: #302b26 !important; }
+  .rpp-afh-network li { color: #1c1917 !important; }
 
   .rpp-afh-disclosure p {
     color: #4a453f !important;
     font-size: 16px !important;
     line-height: 1.7 !important;
   }
-  .rpp-afh-disclosure strong { color: #302b26 !important; }
+  .rpp-afh-disclosure strong { color: #1c1917 !important; }
 
   /* ── HERO ────────────────────────────────────────────────────────────────
      The badge is gone; the hero is the photograph, with the wordmark set as
@@ -467,7 +467,7 @@ const PAGE_CSS = `
     font-family: 'DM Sans', sans-serif !important;
     font-size: 18px !important;
     line-height: 1.6 !important;
-    color: #302b26 !important;
+    color: #1c1917 !important;
     margin: 0 !important;
     padding: 0 !important;
     min-height: 0 !important;
@@ -555,7 +555,7 @@ const PAGE_CSS = `
     font-family: 'DM Sans', sans-serif !important;
     font-size: 17px !important;
     line-height: 1.6 !important;
-    color: #302b26 !important;
+    color: #1c1917 !important;
     margin: 0 !important;
   }
   @media (max-width: 900px) {
@@ -998,7 +998,7 @@ const AFHClub = () => {
                 fontSize: "clamp(26px, 3vw, 36px)",
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
-                color: "#302b26",
+                color: "#1c1917",
                 marginBottom: 16,
               }}
             >
@@ -1039,7 +1039,7 @@ const AFHClub = () => {
                 style={{
                   display: "inline-block",
                   background: "transparent",
-                  color: "#302b26",
+                  color: "#1c1917",
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 700,
                   fontSize: 15,
@@ -1060,7 +1060,7 @@ const AFHClub = () => {
             <p style={{ marginTop: 28, fontSize: 17, lineHeight: 1.7 }}>
               <Link
                 to="/afh-club/homes"
-                style={{ color: "#302b26", textDecoration: "underline", textUnderlineOffset: 4, fontWeight: 600 }}
+                style={{ color: "#1c1917", textDecoration: "underline", textUnderlineOffset: 4, fontWeight: 600 }}
               >
                 {t("afhClubPage.marketplace.browseDirectory", {
                   defaultValue: "Or browse every licensed adult family home in Washington by city →",
@@ -1083,7 +1083,7 @@ const AFHClub = () => {
                 style={{
                   display: "inline-block",
                   background: "#f7f4ef",
-                  color: "#302b26",
+                  color: "#1c1917",
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 600,
                   fontSize: 15,
@@ -1172,7 +1172,7 @@ const AFHClub = () => {
                   <p
                     style={{
                       fontSize: "clamp(18px, 1.8vw, 20px)",
-                      color: "#302b26",
+                      color: "#1c1917",
                       margin: "0 0 12px",
                       lineHeight: 1.65,
                       fontFamily: "'DM Sans', sans-serif",
@@ -1228,7 +1228,7 @@ const AFHClub = () => {
                 fontSize: "clamp(19px, 2vw, 22px)",
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 400,
-                color: "#302b26",
+                color: "#1c1917",
                 lineHeight: 1.85,
                 margin: "0 0 22px",
               }}
@@ -1240,7 +1240,7 @@ const AFHClub = () => {
                 fontSize: "clamp(19px, 2vw, 22px)",
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 400,
-                color: "#302b26",
+                color: "#1c1917",
                 lineHeight: 1.85,
                 margin: "0 0 22px",
               }}
@@ -1252,7 +1252,7 @@ const AFHClub = () => {
                 fontSize: "clamp(19px, 2vw, 22px)",
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 400,
-                color: "#302b26",
+                color: "#1c1917",
                 lineHeight: 1.85,
                 margin: 0,
               }}

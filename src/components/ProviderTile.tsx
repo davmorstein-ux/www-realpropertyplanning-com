@@ -288,7 +288,7 @@ export default function ProviderTile({
                 style={{
                   fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: 14,
-                  color: "#3d3833",
+                  color: "#1c1917",
                   lineHeight: 1.75,
                   marginBottom: specialty ? 16 : 0,
                 }}
@@ -317,7 +317,7 @@ export default function ProviderTile({
                   >
                     Specialties
                   </div>
-                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#3d3833", lineHeight: 1.6 }}>
+                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#1c1917", lineHeight: 1.6 }}>
                     {specialty}
                   </div>
                 </div>

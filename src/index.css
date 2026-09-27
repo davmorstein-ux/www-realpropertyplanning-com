@@ -275,7 +275,7 @@ main,
 
     /* Warm Gray */
     --muted: 40 10% 92%;
-    --muted-foreground: 220 20% 32%;
+    --muted-foreground: 220 25% 18%; /* was 32% lightness; darkened Sept 27, 2026 for readability */
 
     /* Slate Blue Accent */
     --accent: 210 30% 45%;
@@ -1980,7 +1980,7 @@ body *:not(.tile-label):not([data-tile-id]) {
 
 /* 2. Body text contrast — kill faded muted-foreground on light backgrounds */
 .text-muted-foreground {
-  color: #49443f !important;
+  color: #1c1917 !important;
   opacity: 1 !important;
 }
 
@@ -2004,7 +2004,7 @@ q,
 em.italic,
 p.italic {
   font-size: max(1.125rem, 18px) !important;
-  color: #2f2b27 !important;
+  color: #1c1917 !important;
   opacity: 1 !important;
 }
 
@@ -2028,8 +2028,9 @@ h4 + .text-muted-foreground {
   font-size: max(1.0625rem, 17px) !important;
   line-height: 1.75 !important;
   /* Darkened Sept 27, 2026 from #5b5753 (6.6:1 on cream) after visitors said intro
-     text was hard to read. #3d3833 is about 11:1, past the AAA line. */
-  color: #3d3833 !important;
+     text was hard to read; then to near-black #1c1917 (about 17:1) at the owner's
+     request the same day. Body text on this site is near-black. */
+  color: #1c1917 !important;
   opacity: 1 !important;
 }
 /* (Removed: overly broad uniform tile sizing block — it matched every class containing "card". */
@@ -2075,7 +2076,7 @@ h4 + .text-muted-foreground {
   ):not(.premium-tile):not(.premium-shell-tile)
   :where(p, li, span) {
   font-size: max(1rem, 16px) !important;
-  color: #2f2b27 !important;
+  color: #1c1917 !important;
   font-weight: 400 !important;
   opacity: 1 !important;
 }
@@ -3239,7 +3240,7 @@ main [class*="text-zinc-3"],
 main [class*="text-zinc-4"],
 main [class*="text-zinc-5"],
 footer .text-muted-foreground {
-  color: #49443f !important;
+  color: #1c1917 !important;
   opacity: 1 !important;
 }
 
@@ -3280,7 +3281,7 @@ main [style*="#c0a0a3"],
 main [style*="#b89497"],
 main [style*="#8b6467"],
 main [style*="#8b6467"] {
-  color: #49443f !important;
+  color: #1c1917 !important;
 }
 
 /* 11. Italic descriptive text — meet 4.5:1 */
@@ -3288,7 +3289,7 @@ main em,
 main i,
 main .italic,
 main [style*="italic"] {
-  color: #2f2b27 !important;
+  color: #1c1917 !important;
   opacity: 1 !important;
 }
 [class*="bg-navy"] em,
@@ -3300,7 +3301,7 @@ main [style*="italic"] {
 
 /* 12. SOURCE / citation labels — readable, darkened */
 main :where(span, p, small, cite):where([class*="source"], [data-source], .citation, .source-label) {
-  color: #49443f !important;
+  color: #1c1917 !important;
   font-size: max(0.875rem, 14px) !important;
   font-weight: 600 !important;
   opacity: 1 !important;
@@ -3427,7 +3428,7 @@ main a.rpp-return-btn.rpp-return-btn:focus-visible {
 [class*="Disclaimer"],
 .disclaimer-section,
 .disclaimer-section * {
-  color: #2f2b27 !important;
+  color: #1c1917 !important;
   opacity: 1 !important;
 }
 [class*="disclaimer"] p,
@@ -3448,7 +3449,7 @@ main a.rpp-return-btn.rpp-return-btn:focus-visible {
 [class*="ProviderTile"],
 [class*="provider-tile"],
 [data-provider-tile] {
-  color: #2f2b27 !important;
+  color: #1c1917 !important;
 }
 [class*="ProviderTile"] p,
 [class*="provider-tile"] p,
@@ -3456,7 +3457,7 @@ main a.rpp-return-btn.rpp-return-btn:focus-visible {
 [class*="ProviderTile"] li,
 [class*="provider-tile"] li {
   font-size: max(1.0625rem, 17px) !important;
-  color: #2f2b27 !important;
+  color: #1c1917 !important;
   opacity: 1 !important;
 }
 
@@ -4245,7 +4246,7 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
 [style*="color:#d"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
 [style*="color: #D"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
 [style*="color:#D"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)) {
-  color: #3d3833 !important;
+  color: #1c1917 !important;
 }
 
 /* Mid greys — #6x, #7x, #8x. Some of these pass and some do not,
@@ -4254,7 +4255,7 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
 [style*="color:#8"],
 [style*="color: #7"],
 [style*="color:#7"] {
-  color: #4a443e !important;
+  color: #1c1917 !important;
 }
 
 /* Do NOT catch inline colors on dark surfaces — light text there
@@ -4295,7 +4296,7 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
 [class*="text-neutral-3"],
 [class*="text-neutral-4"],
 [class*="text-neutral-5"] {
-  color: #3d3833 !important;
+  color: #1c1917 !important;
 }
 
 /* On dark surfaces, lift instead of darken. */
@@ -4371,7 +4372,7 @@ hr[class*="opacity-"],
 [class*="stepper"] span,
 [class*="wizard"] [class*="text-muted"],
 [aria-current="step"] ~ * {
-  color: #4a443e !important;
+  color: #1c1917 !important;
 }
 
 /* ------------------------------------------------------------
@@ -4389,7 +4390,7 @@ small,
 [class*="helper"],
 [class*="hint-text"],
 figcaption {
-  color: #4a443e !important;
+  color: #1c1917 !important;
   opacity: 1 !important;
 }
 
@@ -4419,7 +4420,7 @@ main [style*="rgb(20"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
 main [style*="rgba(15"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
 main [style*="rgba(16"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
 main [style*="rgba(17"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)) {
-  color: #3d3833 !important;
+  color: #1c1917 !important;
 }
 
 /* ============================================================
@@ -4733,7 +4734,7 @@ h6 {
    ============================================================
 
    ROOT CAUSE THIS FIXES
-   The card-contrast block above forces `color: #2f2b27 !important`
+   The card-contrast block above forces `color: #1c1917 !important`
    on every p/li/span inside a rounded card. Button labels are
    spans, and most buttons sit inside cards, so their labels were
    being repainted dark — on a dark fill. Inline styles cannot win

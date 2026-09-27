@@ -47,7 +47,7 @@ const Stat = ({ label, value, sub, accent }: { label: string; value: string; sub
       {label}
     </div>
     <div style={{ fontSize: 30, fontWeight: 700, color: accent, lineHeight: 1.15 }}>{value}</div>
-    <div style={{ fontSize: 18, color: "#302b26", marginTop: 8 }}>{sub}</div>
+    <div style={{ fontSize: 18, color: "#1c1917", marginTop: 8 }}>{sub}</div>
   </div>
 );
 
@@ -114,7 +114,7 @@ const AFHRunTheNumbers = ({ city, county, beds, lead = "both", heading, accent =
         />
       </div>
 
-      <p style={{ fontSize: 19, lineHeight: 1.6, color: "#302b26", margin: "0 0 22px" }}>
+      <p style={{ fontSize: 19, lineHeight: 1.6, color: "#1c1917", margin: "0 0 22px" }}>
         {band.confirmed
           ? `Typical rates in ${band.label} for a private room with moderate care. Heavier care costs more.`
           : `Medicaid rates for ${county} County by care level. Private-pay figures are coming.`}

@@ -146,7 +146,7 @@ const AFHRealEstateBroker = () => (
               fontSize: "clamp(18px, 2vw, 20px)",
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               maxWidth: 680,
             }}
@@ -229,7 +229,7 @@ const AFHRealEstateBroker = () => (
                   style={{
                     fontSize: 16,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.8,
                     margin: 0,
                   }}
@@ -250,7 +250,7 @@ const AFHRealEstateBroker = () => (
                   marginTop: 16,
                   fontSize: 14,
                   fontFamily: "'DM Sans', sans-serif",
-                  color: "#3d3833",
+                  color: "#1c1917",
                   lineHeight: 1.7,
                 }}
               >
@@ -335,7 +335,7 @@ const AFHRealEstateBroker = () => (
                       style={{
                         fontSize: 16,
                         fontFamily: "'DM Sans', sans-serif",
-                        color: "#302b26",
+                        color: "#1c1917",
                         lineHeight: 1.8,
                         margin: 0,
                       }}
@@ -399,7 +399,7 @@ const AFHRealEstateBroker = () => (
                 ))}
               </div>
               <span style={{ fontSize: 20, fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>5.0</span>
-              <span style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#302b26" }}>
+              <span style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#1c1917" }}>
                 · 16 Reviews on Zillow
               </span>
             </div>
@@ -425,7 +425,7 @@ const AFHRealEstateBroker = () => (
                   style={{
                     fontSize: 14,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#3d3833",
+                    color: "#1c1917",
                     margin: 0,
                     fontWeight: 500,
                   }}
@@ -448,7 +448,7 @@ const AFHRealEstateBroker = () => (
                   style={{
                     fontSize: 16,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.8,
                     margin: 0,
                   }}

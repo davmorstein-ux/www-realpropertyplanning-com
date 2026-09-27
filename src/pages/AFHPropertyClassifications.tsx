@@ -40,7 +40,7 @@ const h3 = {
 const body = {
   fontSize: 18,
   fontFamily: "'DM Sans', sans-serif",
-  color: "#302b26",
+  color: "#1c1917",
   lineHeight: 1.85,
   margin: "0 0 20px",
 };

@@ -17,7 +17,7 @@ const TEAL_MID = "#2a9d9a";
 const SLATE = "#443e38";
 const GRAY_BG = "#f4f6f7";
 const GRAY_BORDER = "#dde3e8";
-const GRAY_TEXT = "#5c474a";
+const GRAY_TEXT = "#3a2d2f";
 const WHITE = "#ffffff";
 
 const BackButton = () => (

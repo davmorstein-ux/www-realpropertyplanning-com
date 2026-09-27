@@ -114,7 +114,7 @@ const AFHRevenueBuilder = ({
       <div style={{ fontSize: 12, letterSpacing: ".18em", textTransform: "uppercase", color: accent, fontWeight: 700, marginBottom: 4 }}>
         Build revenue from market rates
       </div>
-      <p style={{ fontSize: 15, lineHeight: 1.55, color: "#302b26", margin: "0 0 14px" }}>
+      <p style={{ fontSize: 15, lineHeight: 1.55, color: "#1c1917", margin: "0 0 14px" }}>
         Don't have the P&amp;L? Pick the market, enter how many beds you expect at each care level, and this fills in
         gross revenue using the per-resident private-pay ranges and the DSHS Medicaid rate for that county. Rates are
         per resident, per month.
@@ -209,7 +209,7 @@ const AFHRevenueBuilder = ({
             onChange={(e) => setOccupancy(parseInt(e.target.value) || 0)}
           />
         </div>
-        <div style={{ fontSize: 15, lineHeight: 1.5, color: "#302b26" }}>
+        <div style={{ fontSize: 15, lineHeight: 1.5, color: "#1c1917" }}>
           <div>
             <strong>{totalBeds}</strong> beds · <strong>{money(monthlyFull)}</strong>/mo at full
           </div>

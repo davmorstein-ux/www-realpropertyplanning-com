@@ -270,7 +270,7 @@ const AFHFindProfessional = () => (
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               maxWidth: 680,
             }}
@@ -294,11 +294,12 @@ const AFHFindProfessional = () => (
         .rpp-afhpro p.rpp-afhpro-p { font-size: 18px !important; line-height: 1.75 !important; margin: 0 0 22px !important; }
         .rpp-afhpro p.rpp-afhpro-note { font-size: 16px !important; line-height: 1.65 !important; margin: 14px 0 0 !important; }
         /* One card per row on phones (David, Sept 27): at two columns the names, emails and
-           websites were cut off. Two columns from 480px, three from 768, four from 960. */
+           websites were cut off. Two columns from 480px, three from 768 and up — never four
+           (David, Sept 27): a lone card on the last row is fine; every line must show. */
         .rpp-afhpro-grid { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); margin-top: 8px; }
         @media (min-width: 480px) { .rpp-afhpro-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
         @media (min-width: 768px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-        @media (min-width: 960px) { .rpp-afhpro-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; } }
+        @media (min-width: 960px) { .rpp-afhpro-grid { gap: 16px; } }
         /* Fixed-height slots: the same row of every card lines up across the grid. */
         .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px 12px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; line-height: 1.25; }
         .rpp-afhpro .rpp-afhpro-card > * { margin: 0 !important; flex: 0 0 auto; width: 100%; }
@@ -314,17 +315,17 @@ const AFHFindProfessional = () => (
         .rpp-afhpro .rpp-afhpro-card-name { height: 20px; font-size: 15px; font-weight: 700; color: #280a0c; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .rpp-afhpro .rpp-afhpro-card-name a { color: inherit !important; text-decoration: none !important; }
         @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-name a:hover { color: #7f2028 !important; } }
-        .rpp-afhpro .rpp-afhpro-card-license { height: 16px; font-size: 11px; line-height: 16px; color: #3d3833; margin-top: 2px !important; }
+        .rpp-afhpro .rpp-afhpro-card-license { height: 16px; font-size: 11px; line-height: 16px; color: #1c1917; margin-top: 2px !important; }
         .rpp-afhpro .rpp-afhpro-card-line { font-size: 12.5px; line-height: 17px; overflow-wrap: anywhere; }
         .rpp-afhpro .rpp-afhpro-card-phone { height: 17px; margin-top: 6px !important; white-space: nowrap; }
         .rpp-afhpro .rpp-afhpro-card-email { height: 34px; margin-top: 3px !important; }
         .rpp-afhpro .rpp-afhpro-card-email a { display: inline-flex; flex-direction: column; align-items: center; }
         .rpp-afhpro .rpp-afhpro-card-email a span { display: block; line-height: 17px; white-space: nowrap; }
         .rpp-afhpro .rpp-afhpro-card-site { height: 17px; margin-top: 3px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .rpp-afhpro .rpp-afhpro-card-line a { color: #302b26; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9c0b4; }
+        .rpp-afhpro .rpp-afhpro-card-line a { color: #1c1917; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9c0b4; }
         @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-line a:hover { color: #7f2028; text-decoration-color: #7f2028; } }
-        .rpp-afhpro .rpp-afhpro-card-logo { height: 34px; margin-top: 10px !important; display: flex; align-items: center; justify-content: center; }
-        .rpp-afhpro .rpp-afhpro-card-logo img { max-height: 34px; max-width: 110px; width: auto; height: auto; object-fit: contain; }
+        .rpp-afhpro .rpp-afhpro-card-logo { height: 64px; margin-top: 12px !important; display: flex; align-items: center; justify-content: center; }
+        .rpp-afhpro .rpp-afhpro-card-logo img { max-height: 64px; max-width: 170px; width: auto; height: auto; object-fit: contain; }
       `}</style>
       <section className="rpp-afhpro" style={{ background: "#ffffff", padding: "64px 24px 56px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
@@ -334,7 +335,7 @@ const AFHFindProfessional = () => (
           <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>
             AFH Club Featured Professionals
           </h2>
-          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#302b26", maxWidth: 720 }}>
+          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#1c1917", maxWidth: 720 }}>
             A short list on purpose. Everyone here is someone we have sat down with. The list grows as more people earn a place on it.
           </p>
           <div className="rpp-afhpro-grid">
@@ -351,7 +352,7 @@ const AFHFindProfessional = () => (
           <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>
             What to look for in each kind of professional
           </h2>
-          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#302b26" }}>
+          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#1c1917" }}>
             Whoever you hire, these are the questions that separate someone who knows adult family homes from someone who does not.
           </p>
         </div>
@@ -397,7 +398,7 @@ const AFHFindProfessional = () => (
                       style={{
                         fontSize: 18,
                         fontFamily: "'DM Sans', sans-serif",
-                        color: "#302b26",
+                        color: "#1c1917",
                         lineHeight: 1.8,
                         margin: "0 0 20px",
                       }}
@@ -434,7 +435,7 @@ const AFHFindProfessional = () => (
                             style={{
                               fontSize: 16,
                               fontFamily: "'DM Sans', sans-serif",
-                              color: "#302b26",
+                              color: "#1c1917",
                               lineHeight: 1.65,
                               margin: 0,
                             }}
@@ -523,7 +524,7 @@ const AFHFindProfessional = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 28px",
             }}

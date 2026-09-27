@@ -152,7 +152,7 @@ const AFHGettingStarted = () => (
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               maxWidth: 680,
             }}
@@ -195,7 +195,7 @@ const AFHGettingStarted = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -209,7 +209,7 @@ const AFHGettingStarted = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -219,7 +219,7 @@ const AFHGettingStarted = () => (
             more complex care for residents with dementia, mental health needs, or developmental disabilities.
           </p>
           <p
-            style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#302b26", lineHeight: 1.85, margin: 0 }}
+            style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#1c1917", lineHeight: 1.85, margin: 0 }}
           >
             AFHs are permitted in all single-family residential zoning districts throughout Washington State. The
             concept originated in Washington in the 1990s specifically to create a homelike alternative to larger
@@ -260,7 +260,7 @@ const AFHGettingStarted = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -341,7 +341,7 @@ const AFHGettingStarted = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       lineHeight: 1.65,
                       margin: 0,
                     }}
@@ -422,7 +422,7 @@ const AFHGettingStarted = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -457,7 +457,7 @@ const AFHGettingStarted = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.75,
                     margin: 0,
                   }}
@@ -502,7 +502,7 @@ const AFHGettingStarted = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -538,7 +538,7 @@ const AFHGettingStarted = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.75,
                     margin: "0 0 20px",
                   }}
@@ -564,7 +564,7 @@ const AFHGettingStarted = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       lineHeight: 1.65,
                       margin: "0 0 4px",
                       paddingLeft: 12,
@@ -592,7 +592,7 @@ const AFHGettingStarted = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       lineHeight: 1.65,
                       margin: "0 0 4px",
                       paddingLeft: 12,
@@ -618,7 +618,7 @@ const AFHGettingStarted = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'DM Sans', sans-serif",
-                color: "#302b26",
+                color: "#1c1917",
                 lineHeight: 1.75,
                 margin: 0,
               }}
@@ -737,7 +737,7 @@ const AFHGettingStarted = () => (
                     style={{
                       fontSize: 17,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       lineHeight: 1.75,
                       margin: 0,
                     }}

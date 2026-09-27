@@ -50,7 +50,7 @@ const AFHManagementCompanies = () => (
               fontSize: "20px",
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 16px",
               maxWidth: 680,
@@ -64,7 +64,7 @@ const AFHManagementCompanies = () => (
               fontSize: "18px",
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 400,
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               maxWidth: 680,
             }}
@@ -163,7 +163,7 @@ const AFHManagementCompanies = () => (
                     style={{
                       fontSize: "18px",
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       margin: "0 0 16px",
                     }}
                   >
@@ -197,7 +197,7 @@ const AFHManagementCompanies = () => (
                   style={{
                     fontSize: "19px",
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.8,
                     margin: "0 0 24px",
                   }}
@@ -316,7 +316,7 @@ const AFHManagementCompanies = () => (
                         <polyline points="12 6 12 12 16 14" />
                       </svg>
                     </div>
-                    <p style={{ fontSize: "19px", fontFamily: "'DM Sans', sans-serif", color: "#302b26", margin: 0 }}>
+                    <p style={{ fontSize: "19px", fontFamily: "'DM Sans', sans-serif", color: "#1c1917", margin: 0 }}>
                       Mon–Sun: 9:00 AM – 6:00 PM
                     </p>
                   </div>
@@ -347,7 +347,7 @@ const AFHManagementCompanies = () => (
                         <circle cx="12" cy="10" r="3" />
                       </svg>
                     </div>
-                    <p style={{ fontSize: "19px", fontFamily: "'DM Sans', sans-serif", color: "#302b26", margin: 0 }}>
+                    <p style={{ fontSize: "19px", fontFamily: "'DM Sans', sans-serif", color: "#1c1917", margin: 0 }}>
                       Seattle, WA
                     </p>
                   </div>
@@ -420,7 +420,7 @@ const AFHManagementCompanies = () => (
                         style={{
                           fontSize: "17px",
                           fontFamily: "'DM Sans', sans-serif",
-                          color: "#302b26",
+                          color: "#1c1917",
                           lineHeight: 1.65,
                           margin: 0,
                         }}
@@ -472,7 +472,7 @@ const AFHManagementCompanies = () => (
               style={{
                 fontSize: "19px",
                 fontFamily: "'DM Sans', sans-serif",
-                color: "#302b26",
+                color: "#1c1917",
                 lineHeight: 1.8,
                 margin: "0 auto 28px",
                 maxWidth: 560,

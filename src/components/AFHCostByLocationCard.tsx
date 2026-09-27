@@ -123,7 +123,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
               </div>
             </div>
 
-            <p style={{ fontSize: 17, lineHeight: 1.6, color: "#302b26", margin: "0 0 18px", textAlign: "center" }}>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "#1c1917", margin: "0 0 18px", textAlign: "center" }}>
               Type a city or county. You'll get the DSHS Medicaid rate range for that county (what the state pays a
               home per day and per month, by care level), a typical private-pay range where one has been reviewed,
               and how many licensed homes are there and how many accept Medicaid.
@@ -239,7 +239,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                       </div>
                     ))}
                   </div>
-                  <p style={{ fontSize: 15, lineHeight: 1.6, color: "#302b26", margin: "14px 0 0" }}>
+                  <p style={{ fontSize: 15, lineHeight: 1.6, color: "#1c1917", margin: "14px 0 0" }}>
                     Hospice is separate from these figures: Medicare covers hospice services but not the home's room and
                     board, so a resident on hospice still pays the home as before.{" "}
                     <Link to="/articles/hospice-care-washington" style={{ color: GREEN, fontWeight: 700 }}>
@@ -330,7 +330,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                           ))}
                         </div>
                         {cityEntry && (
-                          <p style={{ fontSize: 15, color: "#302b26", margin: "0 0 10px" }}>
+                          <p style={{ fontSize: 15, color: "#1c1917", margin: "0 0 10px" }}>
                             {county} County overall: {checked.facilityCount.toLocaleString()} licensed homes, {checked.totalBeds.toLocaleString()} beds,{" "}
                             {(checked.facilityCount - privatePayOnly).toLocaleString()} accepting Medicaid.
                           </p>
@@ -352,7 +352,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                         </p>
                       </>
                     ) : (
-                      <p style={{ fontSize: 16, lineHeight: 1.6, color: "#302b26", margin: 0 }}>
+                      <p style={{ fontSize: 16, lineHeight: 1.6, color: "#1c1917", margin: 0 }}>
                         DSHS records show no licensed adult family homes in {county} County. The Medicaid rate above is what a
                         home there would be paid; families usually look to neighbouring counties.{" "}
                         <Link to={`/afh-club/homes/county/${countySlug(county)}`} style={{ color: GREEN, fontWeight: 700 }}>

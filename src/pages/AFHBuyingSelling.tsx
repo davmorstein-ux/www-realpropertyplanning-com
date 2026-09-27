@@ -188,7 +188,7 @@ const AFHBuyingSelling = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -201,7 +201,7 @@ const AFHBuyingSelling = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -214,7 +214,7 @@ const AFHBuyingSelling = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 24px",
             }}
@@ -289,7 +289,7 @@ const AFHBuyingSelling = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 28px",
             }}
@@ -344,7 +344,7 @@ const AFHBuyingSelling = () => (
                     style={{
                       fontSize: 17,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       lineHeight: 1.75,
                       margin: 0,
                     }}
@@ -413,7 +413,7 @@ const AFHBuyingSelling = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.75,
                     margin: 0,
                   }}

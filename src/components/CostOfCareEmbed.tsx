@@ -238,7 +238,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(18px,2.6vw,22px)", color: COC_TEAL }}>
               {formatCurrency(projectedWaMonthly)}
             </span>
-            <span style={{ fontSize: 15, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif" }}>
+            <span style={{ fontSize: 15, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif" }}>
               {t("costOfCarePage.results.perMonth")}
             </span>
           </div>
@@ -270,7 +270,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(18px,2.6vw,22px)", color: NAVY }}>
               {formatCurrency(projectedNationalMonthly)}
             </span>
-            <span style={{ fontSize: 15, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif" }}>
+            <span style={{ fontSize: 15, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif" }}>
               {t("costOfCarePage.results.perMonth")}
             </span>
           </div>
@@ -313,7 +313,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           {formatCurrency(totalWaCost)}
         </div>
         <div
-          style={{ fontSize: 16, fontWeight: 600, color: "#49443f", fontFamily: "'DM Sans', sans-serif", marginTop: 2, lineHeight: 1.3 }}
+          style={{ fontSize: 16, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif", marginTop: 2, lineHeight: 1.3 }}
         >
           {t("costOfCarePage.results.inWashingtonVs", { amount: formatCurrency(totalNationalCost) })}
         </div>
@@ -607,13 +607,13 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           justify-content: space-between;
           font-family: "DM Sans", sans-serif;
           font-size: 13px;
-          color: #4a443e;
+          color: #1c1917;
         }
         .coc-infl-source.coc-infl-source {
           font-family: "DM Sans", sans-serif !important;
           font-size: 14px !important;
           line-height: 1.5 !important;
-          color: #4a443e !important;
+          color: #1c1917 !important;
           margin: 10px 0 0 !important;
         }
         @media (prefers-reduced-motion: reduce) {

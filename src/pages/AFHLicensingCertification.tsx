@@ -188,7 +188,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -201,7 +201,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 28px",
             }}
@@ -233,7 +233,7 @@ const AFHLicensingCertification = () => (
               style={{
                 fontSize: 17,
                 fontFamily: "'DM Sans', sans-serif",
-                color: "#302b26",
+                color: "#1c1917",
                 lineHeight: 1.75,
                 margin: "0 0 16px",
               }}
@@ -256,7 +256,7 @@ const AFHLicensingCertification = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.65,
                     margin: 0,
                   }}
@@ -269,7 +269,7 @@ const AFHLicensingCertification = () => (
               style={{
                 fontSize: 16,
                 fontFamily: "'DM Sans', sans-serif",
-                color: "#302b26",
+                color: "#1c1917",
                 lineHeight: 1.6,
                 margin: "16px 0 0",
                 fontStyle: "italic",
@@ -313,7 +313,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -368,7 +368,7 @@ const AFHLicensingCertification = () => (
                     style={{
                       fontSize: 17,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       lineHeight: 1.75,
                       margin: 0,
                     }}
@@ -414,7 +414,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -426,7 +426,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -492,7 +492,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -505,7 +505,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -518,7 +518,7 @@ const AFHLicensingCertification = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 24px",
             }}

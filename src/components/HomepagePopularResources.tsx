@@ -129,7 +129,7 @@ const HomepagePopularResources = () => {
         font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 16px !important;
         font-weight: 700 !important;
-        color: #3d3833 !important;
+        color: #1c1917 !important;
         background-color: #ffffff !important;
         border: 2px solid #3d3833 !important;
         border-radius: 8px !important;

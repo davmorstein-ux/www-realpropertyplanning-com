@@ -57,7 +57,7 @@ const DirectAnswerBlock = ({
               Quick Answer
             </p>
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">{question}</h2>
-            <p className="text-foreground text-lg md:text-xl leading-relaxed" style={{ color: "#2f2b27" }}>
+            <p className="text-foreground text-lg md:text-xl leading-relaxed" style={{ color: "#1c1917" }}>
               {answer}
             </p>
 
@@ -67,7 +67,7 @@ const DirectAnswerBlock = ({
                 {supportBullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full mt-2.5 shrink-0" style={{ backgroundColor: "#6b1b22" }} />
-                    <span className="text-lg leading-relaxed" style={{ color: "#2f2b27" }}>
+                    <span className="text-lg leading-relaxed" style={{ color: "#1c1917" }}>
                       {bullet}
                     </span>
                   </li>
@@ -96,7 +96,7 @@ const DirectAnswerBlock = ({
                     >
                       {step.label}
                     </span>
-                    <p className="text-base mt-1 leading-relaxed" style={{ color: "#2f2b27" }}>
+                    <p className="text-base mt-1 leading-relaxed" style={{ color: "#1c1917" }}>
                       {step.desc}
                     </p>
                   </div>
@@ -110,7 +110,7 @@ const DirectAnswerBlock = ({
                 {supportFaqs.map((faq, i) => (
                   <div key={i} className="bg-secondary/50 rounded-xl p-4">
                     <p className="text-foreground text-base font-semibold mb-1.5">{faq.question}</p>
-                    <p className="text-base leading-relaxed" style={{ color: "#2f2b27" }}>
+                    <p className="text-base leading-relaxed" style={{ color: "#1c1917" }}>
                       {faq.answer}
                     </p>
                   </div>

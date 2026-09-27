@@ -211,7 +211,7 @@ const AFHBuildingInspection = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -224,7 +224,7 @@ const AFHBuildingInspection = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 20px",
             }}
@@ -238,7 +238,7 @@ const AFHBuildingInspection = () => (
             style={{
               fontSize: 18,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.85,
               margin: "0 0 28px",
             }}
@@ -320,7 +320,7 @@ const AFHBuildingInspection = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 32px",
             }}
@@ -356,7 +356,7 @@ const AFHBuildingInspection = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.75,
                     margin: "0 0 16px",
                   }}
@@ -382,7 +382,7 @@ const AFHBuildingInspection = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       margin: "0 0 3px",
                       paddingLeft: 10,
                     }}
@@ -409,7 +409,7 @@ const AFHBuildingInspection = () => (
                     style={{
                       fontSize: 16,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       margin: "0 0 3px",
                       paddingLeft: 10,
                     }}
@@ -455,7 +455,7 @@ const AFHBuildingInspection = () => (
             style={{
               fontSize: 17,
               fontFamily: "'DM Sans', sans-serif",
-              color: "#302b26",
+              color: "#1c1917",
               lineHeight: 1.8,
               margin: "0 0 28px",
             }}
@@ -502,7 +502,7 @@ const AFHBuildingInspection = () => (
                     style={{
                       fontSize: 17,
                       fontFamily: "'DM Sans', sans-serif",
-                      color: "#302b26",
+                      color: "#1c1917",
                       lineHeight: 1.7,
                       margin: 0,
                     }}
@@ -640,7 +640,7 @@ const AFHBuildingInspection = () => (
                   style={{
                     fontSize: 17,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#302b26",
+                    color: "#1c1917",
                     lineHeight: 1.75,
                     margin: 0,
                   }}
