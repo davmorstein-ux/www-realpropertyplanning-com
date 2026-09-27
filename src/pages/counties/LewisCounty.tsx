@@ -17,14 +17,14 @@ const LewisCounty = () => (
     ]}
     localInsight={`Lewis County stretches from the twin cities of Chehalis and Centralia along the I-5 corridor to the rural communities of the Cascade foothills and the Cowlitz River valley. It is a county of genuine contrasts — the commercial activity of Centralia and Chehalis, the quiet agricultural communities of Toledo and Winlock, and the mountain-gateway towns of Morton, Randle, and Packwood near Mount Rainier. Estate and inherited properties here span a wide range: older homes in established neighborhoods, rural acreage with outbuildings, agricultural parcels, and properties in communities where comparable sales are limited and local knowledge is essential. ${FEATURED_BROKER.Role} provides the condition-based pricing and practical coordination that Lewis County estate situations require.`}
     aeoQuestion="How does probate real estate work in Lewis County?"
-    aeoAnswer="Lewis County probate is administered through the Lewis County Superior Court in Chehalis. Personal representatives must receive Letters Testamentary before listing or selling estate property. Real Property Planning supports executors through every step — from the initial date-of-death valuation through closing — with particular attention to the rural property characteristics and community-specific market dynamics that are common throughout Lewis County."
+    aeoAnswer="Lewis County probate is administered through the Lewis County Superior Court in Chehalis. Personal representatives must receive Letters Testamentary before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families through every step — from the initial date-of-death valuation through closing — with particular attention to the rural property characteristics and community-specific market dynamics that are common throughout Lewis County."
     aeoSupportFaqs={[
       {
         question: "What types of estate properties are most common in Lewis County?",
         answer: "Lewis County estates frequently involve older single-family homes in Centralia and Chehalis, rural acreage and agricultural parcels throughout the county, properties in small communities with limited comparable sales, and mountain-area homes near Morton, Randle, and Packwood. Each type requires a different valuation and preparation approach.",
       },
       {
-        question: "How does Real Property Planning handle rural Lewis County properties with acreage or outbuildings?",
+        question: "How are rural Lewis County properties with acreage or outbuildings handled in an estate sale?",
         answer: `Rural properties with acreage, barns, shops, or agricultural features require hands-on evaluation that automated tools cannot provide. ${FEATURED_BROKER.Role}'s certified appraisal background is particularly valuable for these property types, where land characteristics, outbuilding condition, and access all affect value in ways that standard residential comparisons miss.`,
       },
     ]}
@@ -40,7 +40,7 @@ const LewisCounty = () => (
     ]}
     countySpecificFaqs={[
       {
-        question: "Does Real Property Planning handle Lewis County probate listings before Letters are issued?",
+        question: "Can a Lewis County probate property be listed before Letters are issued?",
         answer: `No — the property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the Lewis County Superior Court in Chehalis. ${FEATURED_BROKER.Role} uses that waiting period to conduct the valuation walk-through, secure the property, coordinate cleanout vendors, and prepare the marketing file — so you're ready to move the moment Letters arrive.`,
       },
       {
@@ -48,7 +48,7 @@ const LewisCounty = () => (
         answer: `Agricultural and acreage properties in Lewis County require valuation that accounts for land quality, outbuildings, irrigation or water rights, access, and the specific buyer pool for that type of property in that area. ${FEATURED_BROKER.Role}'s certified appraisal background provides the property-specific analysis these situations require — not a desktop estimate derived from residential comparables that don't apply.`,
       },
       {
-        question: "Can Real Property Planning coordinate a Lewis County estate sale for out-of-area heirs?",
+        question: "Can a Lewis County estate sale be managed for out-of-area heirs?",
         answer: `Yes — and this is especially common in Lewis County, where many property owners have family living in the Seattle metro area or out of state. ${FEATURED_BROKER.Role} handles property assessment, vendor coordination, preparation, showings, and offer review locally — with regular updates so families don't need to travel to Lewis County to manage the process.`,
       },
       {

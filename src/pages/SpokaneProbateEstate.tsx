@@ -117,7 +117,7 @@ const SpokaneProbateEstate = () => {
       </section>
 
       <DirectAnswerBlock
-        question="How does Real Property Planning help families manage inherited property in Spokane?"
+        question="How can families manage inherited property in Spokane from out of the area?"
         answer={`Many Spokane estate properties are managed by families who live outside the area. ${FEATURED_BROKER.Role} provides reliable, on-the-ground coordination — property assessment, preparation, pricing, and sale management — so out-of-area executors and trustees can make confident decisions without needing to be on-site.`}
         supportBullets={[
           "Clear guidance for out-of-state executors managing Spokane property from a distance",
@@ -202,12 +202,12 @@ const SpokaneProbateEstate = () => {
         </div>
       </section>
 
-      {/* How I Help */}
+      {/* How a featured broker helps (third person since Sept 27, 2026: the hub does not do this work) */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How I Help Bring Clarity From a Distance
+              How {FEATURED_BROKER.roleTitle} Can Help From a Distance
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Every situation is different, but the approach follows a clear, repeatable framework — designed to work smoothly even when you can't be there in person:
@@ -220,19 +220,19 @@ const SpokaneProbateEstate = () => {
                 },
                 {
                   title: "Assessing the Property",
-                  desc: "I visit the property on your behalf, assess its condition, document issues that affect value, and provide an honest evaluation of what preparation might be worthwhile.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property on your behalf, assesses its condition, documents issues that affect value, and gives an honest view of what preparation might be worthwhile.`,
                 },
                 {
                   title: "Coordinating Next Steps",
-                  desc: "I line up cleanout crews, contractors, and other vendors as needed — managing the logistics locally so you don't have to make unnecessary trips or phone calls.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} lines up cleanout crews, contractors, and other vendors as needed, managing the logistics locally so you don't have to make unnecessary trips or phone calls.`,
                 },
                 {
                   title: "Developing a Pricing Strategy",
-                  desc: "Using my appraisal background and Spokane-specific market data, I develop a pricing strategy that's defensible, realistic, and aligned with the property's actual condition and location.",
+                  desc: `Using ${FEATURED_BROKER.pronoun.possessive} appraisal background and Spokane-specific market data, ${FEATURED_BROKER.pronoun.subject} develops a pricing strategy that's defensible, realistic, and aligned with the property's actual condition and location.`,
                 },
                 {
                   title: "Guiding the Sale Process",
-                  desc: "From listing through closing, I manage the details and keep you informed with clear updates. No surprises — just a calm, structured path to resolution.",
+                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details and keeps you informed with clear updates. No surprises — just a calm, structured path to resolution.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">

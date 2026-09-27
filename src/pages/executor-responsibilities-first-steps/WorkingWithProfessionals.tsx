@@ -99,7 +99,7 @@ const WorkingWithProfessionals = () => (
 
     <SubH2>How Real Property Planning Can Help</SubH2>
     <P>
-      Real Property Planning serves as a coordinating hub for families navigating estate administration. We can connect you with experienced professionals across all of these disciplines in Washington State — so you don't have to search for each one separately while also managing an estate.
+      Real Property Planning is a free resource for families navigating estate administration. It can connect you with experienced professionals across all of these disciplines in Washington State — so you don't have to search for each one separately while also managing an estate.
     </P>
   </ExecutorSubPageLayout>
 );

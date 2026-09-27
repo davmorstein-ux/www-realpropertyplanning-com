@@ -17,7 +17,7 @@ const WahkiakumCounty = () => (
     ]}
     localInsight={`Wahkiakum County is Washington's smallest county by population — a quiet, rural community along the Columbia River delta where the pace of life, the landscape, and the real estate market are unlike anywhere else in the state. Cathlamet serves as the county seat, a small historic town on the Columbia's north bank with deep roots in the region's fishing and timber heritage. Skamokawa's historic buildings and river setting have made it a destination for those seeking an authentically rural Pacific Northwest lifestyle. Puget Island, accessible by ferry from Oregon, is one of Washington's largest river islands — a farming community with a character entirely its own. Estate and inherited properties throughout Wahkiakum County require someone willing to engage seriously with a small, distinctive market — understanding who the buyers are, what they value, and how to price and present properties that don't fit standard residential templates. ${FEATURED_BROKER.Role} brings that engagement to every Wahkiakum County estate situation.`}
     aeoQuestion="How does probate real estate work in Wahkiakum County?"
-    aeoAnswer="Wahkiakum County probate is administered through the Wahkiakum County Superior Court in Cathlamet. Personal representatives must receive Letters Testamentary before listing or selling estate property. Real Property Planning supports executors and families through the full process — from date-of-death valuation through closing — with particular attention to the county's rural property characteristics, very limited comparable sales, and the practical realities of coordinating estate property management in one of Washington's most remote counties."
+    aeoAnswer="Wahkiakum County probate is administered through the Wahkiakum County Superior Court in Cathlamet. Personal representatives must receive Letters Testamentary before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families through the full process — from date-of-death valuation through closing — with particular attention to the county's rural property characteristics, very limited comparable sales, and the practical realities of coordinating estate property management in one of Washington's most remote counties."
     aeoSupportFaqs={[
       {
         question: "What types of estate properties are most common in Wahkiakum County?",
@@ -40,7 +40,7 @@ const WahkiakumCounty = () => (
     ]}
     countySpecificFaqs={[
       {
-        question: "Does Real Property Planning handle Wahkiakum County probate listings before Letters are issued?",
+        question: "Can a Wahkiakum County probate property be listed before Letters are issued?",
         answer: `No — the property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the Wahkiakum County Superior Court in Cathlamet. ${FEATURED_BROKER.Role} uses that waiting period to conduct the valuation walk-through, secure the property, line up cleanout vendors, and prepare the marketing file — so you're ready to move immediately when Letters arrive.`,
       },
       {
@@ -48,7 +48,7 @@ const WahkiakumCounty = () => (
         answer: `Puget Island agricultural properties require valuation that accounts for farmland quality, drainage, outbuildings, ferry-dependent access, and a buyer pool that is specifically interested in island farming and rural Columbia River living. These are not properties that standard residential comparable analysis handles well. ${FEATURED_BROKER.Role}'s certified appraisal background and willingness to engage with unique property types provide the evaluation these situations require.`,
       },
       {
-        question: "Can Real Property Planning coordinate a Wahkiakum County estate sale for out-of-area families?",
+        question: "Can a Wahkiakum County estate sale be managed for out-of-area families?",
         answer: `Yes — and given the county's remoteness, out-of-area coordination is nearly universal for Wahkiakum County estate sales. ${FEATURED_BROKER.Role} handles property assessment, vendor coordination, preparation, showings, and closing locally — with regular updates so families based in Portland, Seattle, or out of state can manage the process without repeated trips to the Columbia River delta.`,
       },
       {

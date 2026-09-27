@@ -61,7 +61,7 @@ const CPAsFinancialAdvisors = () => (
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">
-              Recommended Professionals
+              Listed Professionals
             </h2>
 
             {/* The Purple Group */}

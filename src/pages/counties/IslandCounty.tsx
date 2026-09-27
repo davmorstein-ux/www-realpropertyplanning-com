@@ -17,7 +17,7 @@ const IslandCounty = () => (
     ]}
     localInsight={`Island County encompasses Whidbey Island — the longest island in the contiguous United States — and Camano Island, two communities with deeply distinct characters and real estate markets. Oak Harbor's naval-adjacent economy and family-oriented housing stock differs considerably from Coupeville's historic charm, Langley's arts community, and the rural stretches of central and south Whidbey. Camano Island attracts retirees and second-home owners seeking waterfront access and a quieter pace. Estate and inherited properties across Island County require locally informed guidance that accounts for island logistics, waterfront premiums, seasonal buyer patterns, and the specific community each property sits within. ${FEATURED_BROKER.Role} coordinates the full process for families, executors, and attorneys — including the practical realities of managing an island property from the mainland.`}
     aeoQuestion="How does probate real estate work in Island County?"
-    aeoAnswer="Island County probate is administered through the Island County Superior Court in Coupeville. Personal representatives must receive Letters Testamentary before listing or selling estate property. Real Property Planning assists executors and families with date-of-death valuations, property preparation, and the full sale process — with particular attention to island logistics and the mainland coordination that out-of-area families often need."
+    aeoAnswer="Island County probate is administered through the Island County Superior Court in Coupeville. Personal representatives must receive Letters Testamentary before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can assist executors and families with date-of-death valuations, property preparation, and the full sale process — with particular attention to island logistics and the mainland coordination that out-of-area families often need."
     aeoSupportFaqs={[
       {
         question: "What makes selling estate property on Whidbey or Camano Island different from the mainland?",
@@ -40,7 +40,7 @@ const IslandCounty = () => (
     ]}
     countySpecificFaqs={[
       {
-        question: "Does Real Property Planning handle Island County probate listings before Letters are issued?",
+        question: "Can an Island County probate property be listed before Letters are issued?",
         answer: `No — the property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the Island County Superior Court in Coupeville. ${FEATURED_BROKER.Role} uses that waiting period to conduct the date-of-death valuation walk-through, secure the property, coordinate cleanout vendors, and prepare the marketing file — so you're ready to move immediately when Letters arrive.`,
       },
       {
@@ -48,7 +48,7 @@ const IslandCounty = () => (
         answer: `NAS Whidbey Island is the dominant economic force in Oak Harbor, creating a military-influenced buyer pool with specific characteristics — VA loan eligibility, PCS-related relocation timelines, and familiarity with the base lifestyle. Estate properties in Oak Harbor often attract military buyers, which affects marketing strategy, financing considerations, and realistic pricing. ${FEATURED_BROKER.Role} accounts for these dynamics specifically.`,
       },
       {
-        question: "Can Real Property Planning coordinate an island estate sale for out-of-state heirs?",
+        question: "Can an island estate sale be managed for out-of-state heirs?",
         answer: `Yes — this is one of the most common situations ${FEATURED_BROKER.role} handles in Island County. Managing an estate property on Whidbey or Camano Island from the mainland or out of state requires someone on the ground who can handle property access, vendor coordination, ferry logistics, and regular updates. ${FEATURED_BROKER.pronoun.Subject} manages all of this so heirs rarely need to be present on the island for any step of the process.`,
       },
       {

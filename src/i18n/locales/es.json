@@ -146,7 +146,7 @@
       },
       "q5": {
         "question": "¿Qué calificaciones debe tener un corredor para manejar una venta de sucesión o propiedad de sucesión?",
-        "answer": "Busque un corredor con experiencia específica y práctica en transacciones de sucesión y propiedades de sucesión — alguien que entienda los requisitos judiciales, la documentación fiduciaria y la fijación de precios basada en la condición. Real Property Planning está dirigido por un corredor de bienes raíces con licencia del Estado de Washington que también es tasador residencial certificado, combinando ambas credenciales en un solo punto de contacto."
+        "answer": "Busque un corredor con experiencia específica y práctica en transacciones de sucesión y propiedades de sucesión — alguien que entienda los requisitos judiciales, la documentación fiduciaria y la fijación de precios basada en la condición. Real Property Planning presenta a un corredor destacado con licencia del Estado de Washington que también es tasador residencial certificado y que trabaja a través de su propia empresa de corretaje."
       }
     }
   },
@@ -161,7 +161,7 @@
     "heroTitle": "Vendiendo la Casa de una Persona Mayor",
     "directAnswer": {
       "question": "¿Cómo vendo la casa de un padre o madre mayor en el Estado de Washington?",
-      "answer": "Vender una casa familiar de toda la vida durante una transición de una persona mayor generalmente implica más que un listado estándar — coordinar con proveedores de cuidado, hermanos fuera del estado, gerentes de mudanza, y a veces un abogado o planificador financiero, todo a un ritmo que la familia pueda manejar. Real Property Planning conecta a las familias con los profesionales adecuados para cada paso y proporciona orientación de precios basada en la condición para que la casa se venda a un valor justo y defendible.",
+      "answer": "Vender una casa familiar de toda la vida durante una transición de una persona mayor generalmente implica más que un listado estándar — coordinar con proveedores de cuidado, hermanos fuera del estado, gerentes de mudanza, y a veces un abogado o planificador financiero, todo a un ritmo que la familia pueda manejar. Real Property Planning explica cada paso y presenta profesionales independientes para cada uno, incluido un corredor con licencia y tasador certificado destacado que puede fijar un precio basado en la condición para que la casa se venda a un valor justo y defendible.",
       "bullet1": "Trabaja al propio ritmo de la familia — sin presión para apresurar una decisión",
       "bullet2": "Le conecta con gerentes de mudanza, asesores de vivienda y liquidadores de sucesiones según sea necesario",
       "bullet3": "Proporciona una valoración honesta basada en la condición en lugar de una estimación automatizada",
@@ -484,6 +484,7 @@
       "messageLabel": "Mensaje *",
       "messagePlaceholder": "Comparta su pregunta, sugiera un recurso, o pregunte sobre cómo unirse a nuestra red profesional...",
       "privacyNote": "🔒 Su información se usa únicamente para responder a su consulta — nunca se vende ni se comparte con fines de marketing.",
+      "recipientNote": "Su mensaje llega a {{name}}, corredor de bienes raíces independiente con {{brokerage}} y tasador residencial certificado. Real Property Planning es un recurso informativo y no presta servicios de corretaje ni de tasación.",
       "sendButton": "Enviar",
       "sendingButton": "Enviando..."
     },

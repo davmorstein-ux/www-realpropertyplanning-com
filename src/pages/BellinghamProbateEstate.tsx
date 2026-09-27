@@ -191,12 +191,12 @@ const BellinghamProbateEstate = () => {
         </div>
       </section>
 
-      {/* How I Help */}
+      {/* How a featured broker helps (third person since Sept 27, 2026: the hub does not do this work) */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How I Help Bring Clarity to Bellingham Property Decisions
+              How {FEATURED_BROKER.roleTitle} Can Help Bring Clarity to Bellingham Property Decisions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Every property and family situation is different, but the approach follows a clear framework designed to keep things grounded and moving forward:
@@ -209,19 +209,19 @@ const BellinghamProbateEstate = () => {
                 },
                 {
                   title: "Assessing the Property",
-                  desc: "I visit the property, document its condition, identify issues that affect value, and provide an honest evaluation of what preparation — if any — makes sense given your goals and timeline.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, documents its condition, identifies issues that affect value, and gives an honest view of what preparation — if any — makes sense given your goals and timeline.`,
                 },
                 {
                   title: "Understanding the Local Market",
-                  desc: "Using my appraisal background and Bellingham-specific data, I develop a pricing strategy that reflects the property's actual condition, location, and the current market — not wishful thinking or automated guesses.",
+                  desc: `Using ${FEATURED_BROKER.pronoun.possessive} appraisal background and Bellingham-specific data, ${FEATURED_BROKER.pronoun.subject} develops a pricing strategy that reflects the property's actual condition, location, and the current market — not wishful thinking or automated guesses.`,
                 },
                 {
                   title: "Coordinating Locally",
-                  desc: "I manage cleanout crews, contractors, and other vendors as needed. For out-of-area families, I handle the local logistics so you don't have to make repeated trips to Bellingham.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} works with cleanout crews, contractors, and other vendors as needed. For out-of-area families, ${FEATURED_BROKER.pronoun.subject} handles the local logistics so you don't have to make repeated trips to Bellingham.`,
                 },
                 {
                   title: "Guiding the Sale to Completion",
-                  desc: "From listing through closing, I manage the details and keep you informed with clear, consistent updates. No surprises — just a calm, organized process.",
+                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details and keeps you informed with clear, consistent updates. No surprises — just a calm, organized process.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">

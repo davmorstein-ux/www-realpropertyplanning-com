@@ -57,7 +57,7 @@ const RetirementReverseMortgage = () => (
             In some situations, selling a home is the right decision. In others, financing solutions may provide flexibility and allow clients to remain in their home.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            I work with trusted lending professionals who help clients explore their options clearly and without pressure.
+            Real Property Planning lists independent lending professionals who can help clients explore their options clearly and without pressure.
           </p>
         </div>
       </div>
@@ -231,7 +231,7 @@ const RetirementReverseMortgage = () => (
             Let's Connect
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            If you're exploring whether selling, staying, or financing options make the most sense, I'm happy to help you evaluate your situation and connect you with the right professionals.
+            If you're exploring whether selling, staying, or financing options make the most sense, Real Property Planning can connect you with independent professionals who can help you evaluate your situation.
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg">

@@ -146,9 +146,9 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Services */}
+          {/* Topics & Resources (was "Services" until Sept 27, 2026: the hub provides none) */}
           <div>
-            <span className="rpp-footer-col-heading">Services</span>
+            <span className="rpp-footer-col-heading">Topics &amp; Resources</span>
             <Link to="/probate-estate-sales" className="rpp-footer-link">
               Probate &amp; Estate Sales
             </Link>

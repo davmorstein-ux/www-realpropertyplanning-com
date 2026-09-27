@@ -45,7 +45,7 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
             }`}
           >
             <p>
-              Real Property Planning supports clients throughout Washington State, helping executors, families, attorneys, and fiduciaries work through probate real estate, inherited homes, and major property transitions.
+              Real Property Planning is a free resource throughout Washington State for executors, families, attorneys, and fiduciaries working through probate real estate, inherited homes, and major property transitions.
             </p>
             <p>
               While much of the featured broker's work is concentrated in King, Snohomish, Pierce, and Kitsap Counties, families anywhere in the state can use the guides here and ask for a connection.

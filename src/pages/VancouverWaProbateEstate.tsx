@@ -191,12 +191,12 @@ const VancouverWaProbateEstate = () => {
         </div>
       </section>
 
-      {/* How I Help */}
+      {/* How a featured broker helps (third person since Sept 27, 2026: the hub does not do this work) */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How I Help Simplify Transition-Driven Decisions
+              How {FEATURED_BROKER.roleTitle} Can Help With Transition-Driven Decisions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Every transition is different, but the approach follows a clear framework designed to keep things moving without adding pressure:
@@ -209,11 +209,11 @@ const VancouverWaProbateEstate = () => {
                 },
                 {
                   title: "Assessing the Property",
-                  desc: "I visit the property, assess its condition, identify issues that affect value, and evaluate what preparation makes sense given your timeline and goals.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, assesses its condition, identifies issues that affect value, and weighs what preparation makes sense given your timeline and goals.`,
                 },
                 {
                   title: "Aligning the Timeline",
-                  desc: "When a sale needs to coordinate with a move, a senior transition, or a cross-state relocation, I build a realistic timeline that accounts for all the moving parts.",
+                  desc: `When a sale needs to line up with a move, a senior transition, or a cross-state relocation, ${FEATURED_BROKER.pronoun.subject} builds a realistic timeline that accounts for all the moving parts.`,
                 },
                 {
                   title: "Vancouver Pricing Strategy",
@@ -221,7 +221,7 @@ const VancouverWaProbateEstate = () => {
                 },
                 {
                   title: "Guiding the Process to Completion",
-                  desc: "From preparation through closing, I manage the details and keep all parties informed. Clear updates, no surprises, and a calm path to resolution.",
+                  desc: `From preparation through closing, ${FEATURED_BROKER.pronoun.subject} manages the details and keeps all parties informed. Clear updates, no surprises, and a calm path to resolution.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">

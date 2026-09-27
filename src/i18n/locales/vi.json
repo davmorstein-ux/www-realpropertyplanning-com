@@ -146,7 +146,7 @@
       },
       "q5": {
         "question": "Một môi giới cần có những trình độ chuyên môn gì để xử lý việc bán tài sản thừa kế hoặc di sản?",
-        "answer": "Hãy tìm một môi giới có kinh nghiệm thực tế, cụ thể trong các giao dịch thừa kế và di sản — người hiểu rõ các yêu cầu của tòa án, hồ sơ ủy thác và cách định giá dựa trên tình trạng tài sản. Real Property Planning được lãnh đạo bởi một môi giới bất động sản được cấp phép tại Tiểu Bang Washington, đồng thời cũng là một chuyên viên thẩm định nhà ở được chứng nhận, kết hợp cả hai chứng chỉ chuyên môn trong một đầu mối liên hệ duy nhất."
+        "answer": "Hãy tìm một môi giới có kinh nghiệm thực tế, cụ thể trong các giao dịch thừa kế và di sản — người hiểu rõ các yêu cầu của tòa án, hồ sơ ủy thác và cách định giá dựa trên tình trạng tài sản. Real Property Planning giới thiệu một môi giới nổi bật được cấp phép tại Tiểu Bang Washington, đồng thời là chuyên viên thẩm định nhà ở được chứng nhận, làm việc thông qua công ty môi giới riêng của mình."
       }
     }
   },
@@ -161,7 +161,7 @@
     "heroTitle": "Bán Nhà Của Người Cao Niên",
     "directAnswer": {
       "question": "Làm thế nào để tôi bán nhà của cha mẹ lớn tuổi tại Tiểu Bang Washington?",
-      "answer": "Việc bán một ngôi nhà gia đình lâu năm trong quá trình chuyển đổi cho người cao niên thường liên quan đến nhiều điều hơn là một giao dịch niêm yết thông thường — phối hợp với các nhà cung cấp dịch vụ chăm sóc, anh chị em ở tiểu bang khác, người quản lý di chuyển, và đôi khi là luật sư hoặc nhà hoạch định tài chính, tất cả theo nhịp độ mà gia đình có thể quản lý được. Real Property Planning kết nối các gia đình với đúng chuyên gia cho từng bước và cung cấp hướng dẫn định giá dựa trên tình trạng để ngôi nhà được bán với giá trị công bằng, có thể bảo vệ được.",
+      "answer": "Việc bán một ngôi nhà gia đình lâu năm trong quá trình chuyển đổi cho người cao niên thường liên quan đến nhiều điều hơn là một giao dịch niêm yết thông thường — phối hợp với các nhà cung cấp dịch vụ chăm sóc, anh chị em ở tiểu bang khác, người quản lý di chuyển, và đôi khi là luật sư hoặc nhà hoạch định tài chính, tất cả theo nhịp độ mà gia đình có thể quản lý được. Real Property Planning giải thích từng bước và giới thiệu các chuyên gia độc lập cho mỗi bước, bao gồm một môi giới có giấy phép kiêm thẩm định viên được chứng nhận, người có thể định giá dựa trên tình trạng để ngôi nhà được bán với giá trị công bằng, có thể bảo vệ được.",
       "bullet1": "Hoạt động theo nhịp độ riêng của gia đình — không có áp lực phải vội vàng quyết định",
       "bullet2": "Kết nối quý vị với người quản lý di chuyển, cố vấn nơi ở, và chuyên gia thanh lý tài sản khi cần thiết",
       "bullet3": "Cung cấp định giá trung thực dựa trên tình trạng thay vì ước tính tự động",
@@ -484,6 +484,7 @@
       "messageLabel": "Tin Nhắn *",
       "messagePlaceholder": "Chia sẻ câu hỏi của quý vị, đề xuất một nguồn lực, hoặc hỏi về việc tham gia mạng lưới chuyên gia của chúng tôi...",
       "privacyNote": "🔒 Thông tin của quý vị chỉ được sử dụng để phản hồi yêu cầu của quý vị — không bao giờ được bán hoặc chia sẻ cho mục đích tiếp thị.",
+      "recipientNote": "Tin nhắn của bạn được gửi đến {{name}}, một môi giới bất động sản độc lập thuộc {{brokerage}} và là thẩm định viên nhà ở được chứng nhận. Real Property Planning là nguồn thông tin và không cung cấp dịch vụ môi giới hay thẩm định.",
       "sendButton": "Gửi",
       "sendingButton": "Đang Gửi..."
     },

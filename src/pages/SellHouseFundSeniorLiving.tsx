@@ -82,7 +82,7 @@ const SellHouseFundSeniorLiving = () => {
     <>
       <SEOHead
         title="How to Sell a Parent's House to Pay for Senior Living in Washington State | Real Property Planning"
-        description="Learn how Washington State families use home sale proceeds to pay for assisted living, memory care, and adult family home placement. Real Property Planning — Licensed Broker & Certified Appraiser — (206) 900-3015."
+        description="Learn how Washington State families use home sale proceeds to pay for assisted living, memory care, and adult family home placement. A free Real Property Planning guide."
         canonical="https://realpropertyplanning.com/sell-house-fund-senior-living"
       />
       <BreadcrumbSchema

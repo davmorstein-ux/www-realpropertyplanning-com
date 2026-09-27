@@ -16,7 +16,7 @@ const ForFinancialPlanners = () => {
   const jsonLd = articleSchema({
     headline: "Real Estate Guidance for Financial Planners and Their Clients in Washington State",
     description:
-      "Real Property Planning supports financial planners whose clients face inherited property, trust-owned homes, or senior housing transitions in Washington State.",
+      "Real Property Planning is a free reference for financial planners whose clients face inherited property, trust-owned homes, or senior housing transitions in Washington State.",
     url: "/for-financial-planners",
     datePublished: "2025-01-15",
     dateModified: "2026-04-14",
@@ -27,7 +27,7 @@ const ForFinancialPlanners = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Real Estate Guidance for Financial Planners | Real Property Planning"
-        description="Real Property Planning supports financial planners whose clients face inherited property, trust-owned homes, or senior housing transitions in Washington State."
+        description="Real Property Planning is a free reference for financial planners whose clients face inherited property, trust-owned homes, or senior housing transitions in Washington State."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Financial Planners", url: "/for-financial-planners" }]} />
@@ -73,9 +73,9 @@ const ForFinancialPlanners = () => {
                 financial planner's guidance can be essential to making sound, well-timed decisions.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-                Real Property Planning works alongside financial planners to provide coordinated support — ensuring that
-                real estate decisions align with each client's broader financial plan, estate goals, and family
-                circumstances.
+                Real Property Planning gives financial planners plain-language guides to share with clients, and can
+                introduce a featured licensed broker or certified appraiser whose work fits each client's broader
+                financial plan, estate goals, and family circumstances.
               </p>
             </div>
           </div>

@@ -146,7 +146,7 @@
       },
       "q5": {
         "question": "Anong mga kwalipikasyon ang dapat mayroon ang isang broker para hawakan ang isang probate o estate sale?",
-        "answer": "Humanap ng broker na may partikular at praktikal na karanasan sa mga transaksyon ng probate at estate — isang taong nakakaunawa sa mga kinakailangan ng hukuman, dokumentasyong fiduciary, at pagpepresyo batay sa kalagayan. Ang Real Property Planning ay pinamumunuan ng isang licensed real estate broker ng Washington State na isa ring certified residential appraiser, na pinagsasama ang dalawang kredensyal sa iisang punto ng ugnayan."
+        "answer": "Humanap ng broker na may partikular at praktikal na karanasan sa mga transaksyon ng probate at estate — isang taong nakakaunawa sa mga kinakailangan ng hukuman, dokumentasyong fiduciary, at pagpepresyo batay sa kalagayan. Nakalista sa Real Property Planning ang isang itinatampok na licensed broker ng Washington State na isa ring certified residential appraiser at nagtatrabaho sa pamamagitan ng sarili niyang brokerage."
       }
     }
   },
@@ -161,7 +161,7 @@
     "heroTitle": "Pagbebenta ng Tahanan ng Isang Nakatatanda",
     "directAnswer": {
       "question": "Paano ko ibebenta ang bahay ng aking nakatatandang magulang sa Washington State?",
-      "answer": "Ang pagbebenta ng matagal nang tahanan ng pamilya sa panahon ng transisyon ng isang nakatatanda ay karaniwang nangangailangan ng higit pa sa karaniwang pag-lista — pakikipag-coordinate sa mga tagapagbigay ng pangangalaga, mga kapatid na nasa ibang estado, mga move manager, at kung minsan ay isang abogado o financial planner, lahat sa bilis na kayang tugunan ng pamilya. Ikinokonekta ng Real Property Planning ang mga pamilya sa tamang mga propesyonal para sa bawat hakbang at nagbibigay ng gabay sa pagpepresyo batay sa kalagayan upang maibenta ang tahanan sa isang patas at mapagtatanggol na halaga.",
+      "answer": "Ang pagbebenta ng matagal nang tahanan ng pamilya sa panahon ng transisyon ng isang nakatatanda ay karaniwang nangangailangan ng higit pa sa karaniwang pag-lista — pakikipag-coordinate sa mga tagapagbigay ng pangangalaga, mga kapatid na nasa ibang estado, mga move manager, at kung minsan ay isang abogado o financial planner, lahat sa bilis na kayang tugunan ng pamilya. Ipinapaliwanag ng Real Property Planning ang bawat hakbang at inililista ang mga independiyenteng propesyonal para sa bawat isa, kabilang ang isang itinatampok na licensed broker at certified appraiser na makapagbibigay ng presyong batay sa kalagayan upang maibenta ang tahanan sa isang patas at mapagtatanggol na halaga.",
       "bullet1": "Gumagana sa sariling bilis ng pamilya — walang presyon na magmadali sa desisyon",
       "bullet2": "Ikinokonekta kayo sa mga move manager, living advisor, at estate liquidator ayon sa pangangailangan",
       "bullet3": "Nagbibigay ng tapat na valuation batay sa kalagayan sa halip na isang awtomatikong pagtatantya",
@@ -484,6 +484,7 @@
       "messageLabel": "Mensahe *",
       "messagePlaceholder": "Ibahagi ang inyong tanong, magmungkahi ng mapagkukunan, o magtanong tungkol sa pagsali sa aming propesyonal na network...",
       "privacyNote": "🔒 Ang inyong impormasyon ay gagamitin lamang upang tumugon sa inyong katanungan — hindi kailanman ibinebenta o ibinabahagi para sa marketing.",
+      "recipientNote": "Ang iyong mensahe ay mapupunta kay {{name}}, isang independiyenteng real estate broker sa {{brokerage}} at certified residential appraiser. Ang Real Property Planning ay isang mapagkukunan ng impormasyon at hindi nagbibigay ng brokerage o appraisal na serbisyo.",
       "sendButton": "Ipadala",
       "sendingButton": "Ipinapadala..."
     },

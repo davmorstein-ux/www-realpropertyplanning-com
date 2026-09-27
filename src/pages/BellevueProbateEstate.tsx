@@ -192,12 +192,12 @@ const BellevueProbateEstate = () => {
         </div>
       </section>
 
-      {/* How I Help */}
+      {/* How a featured broker helps (third person since Sept 27, 2026: the hub does not do this work) */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How I Help Simplify High-Stakes Property Decisions
+              How {FEATURED_BROKER.roleTitle} Can Help With High-Stakes Property Decisions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Every situation is different, but the approach follows a clear, structured framework designed to reduce uncertainty:
@@ -210,7 +210,7 @@ const BellevueProbateEstate = () => {
                 },
                 {
                   title: "Reviewing the Property and Ownership Context",
-                  desc: "I visit the property, assess its condition, review ownership structure, and identify factors that may affect value, preparation needs, or the sales approach.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, assesses its condition, reviews the ownership structure, and identifies factors that may affect value, preparation needs, or the sales approach.`,
                 },
                 {
                   title: "Eastside Pricing Strategy",
@@ -218,11 +218,11 @@ const BellevueProbateEstate = () => {
                 },
                 {
                   title: "Coordinating Preparation and Next Steps",
-                  desc: "I coordinate with attorneys, trustees, cleanout vendors, contractors, and staging professionals — keeping the process organized and all parties aligned.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} works with attorneys, trustees, cleanout vendors, contractors, and staging professionals to keep the process organized and all parties aligned.`,
                 },
                 {
                   title: "Guiding the Sale With Clarity and Professionalism",
-                  desc: "From listing through closing, I manage the details with consistent communication, clear updates, and a calm approach that keeps the process moving toward resolution.",
+                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details with consistent communication, clear updates, and a calm approach that keeps the process moving toward resolution.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">

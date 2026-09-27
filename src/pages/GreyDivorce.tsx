@@ -260,7 +260,7 @@ const GreyDivorce = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary-foreground text-lg md:text-xl leading-[1.7] mb-8 max-w-2xl mx-auto">
-              Working with a Divorce Attorney? Learn how Real Property Planning supports Divorce Attorneys and their clients with real estate, valuation, and senior transition services.
+              Working with a Divorce Attorney? See what Real Property Planning offers divorce attorneys and their clients: guides on real estate, valuation, and senior transitions, and introductions to independent professionals.
             </p>
             <Link to="/for-attorneys">
               <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold">

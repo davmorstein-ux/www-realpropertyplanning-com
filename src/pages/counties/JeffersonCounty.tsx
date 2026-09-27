@@ -17,7 +17,7 @@ const JeffersonCounty = () => (
     ]}
     localInsight={`Jefferson County occupies the northeastern corner of the Olympic Peninsula — a region of striking natural beauty, small communities with strong individual identities, and a real estate market shaped as much by lifestyle as by economics. Port Townsend's Victorian architecture and arts community attract buyers seeking historic character and waterfront access. Sequim's lavender fields and mild microclimate have made it one of Washington's premier retirement destinations. The rural communities of Quilcene, Brinnon, and the Hood Canal corridor draw buyers seeking quiet, nature-oriented living at the edge of the Olympic Peninsula. Estate and inherited properties across Jefferson County require locally informed guidance — someone who understands not just the property but the community it sits within and the buyers it will attract. ${FEATURED_BROKER.Role} provides that guidance for families and executors throughout the region.`}
     aeoQuestion="How does probate real estate work in Jefferson County?"
-    aeoAnswer="Jefferson County probate is administered through the Jefferson County Superior Court in Port Townsend. Personal representatives must receive Letters Testamentary before marketing or selling estate property. Real Property Planning supports executors through every step — from the initial date-of-death valuation to closing — with particular attention to the Peninsula's unique market dynamics and the logistics of coordinating property management across communities that can be significant distances apart."
+    aeoAnswer="Jefferson County probate is administered through the Jefferson County Superior Court in Port Townsend. Personal representatives must receive Letters Testamentary before marketing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families through every step — from the initial date-of-death valuation to closing — with particular attention to the Peninsula's unique market dynamics and the logistics of coordinating property management across communities that can be significant distances apart."
     aeoSupportFaqs={[
       {
         question: "What types of estate properties are most common in Jefferson County?",
@@ -40,7 +40,7 @@ const JeffersonCounty = () => (
     ]}
     countySpecificFaqs={[
       {
-        question: "Does Real Property Planning handle Jefferson County probate listings before Letters are issued?",
+        question: "Can a Jefferson County probate property be listed before Letters are issued?",
         answer: `No — the property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the Jefferson County Superior Court in Port Townsend. ${FEATURED_BROKER.Role} uses that waiting period to conduct the valuation walk-through, secure the property, coordinate vendors, and prepare the marketing file — so you're ready to move immediately when Letters arrive.`,
       },
       {
@@ -48,7 +48,7 @@ const JeffersonCounty = () => (
         answer: `Port Townsend's Victorian homes are among the most architecturally significant in Washington State — and their value reflects both the historic character and the specific condition of each property. Restoration work, period-appropriate features, and proximity to the historic district all affect value in ways that automated tools miss. ${FEATURED_BROKER.Role}'s appraisal background provides the property-specific analysis these distinctive homes require.`,
       },
       {
-        question: "Can Real Property Planning manage a Jefferson County estate sale for out-of-area heirs?",
+        question: "Can a Jefferson County estate sale be managed for out-of-area heirs?",
         answer: `Yes — and this is especially common in Jefferson County, where many property owners relocated from Western Washington or out of state for retirement. ${FEATURED_BROKER.Role} handles property assessment, vendor coordination, preparation, showings, and offer review locally — keeping out-of-area families informed with regular updates. Travel to Jefferson County is rarely required.`,
       },
       {

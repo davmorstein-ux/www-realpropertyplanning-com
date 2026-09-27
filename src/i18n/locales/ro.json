@@ -146,7 +146,7 @@
       },
       "q5": {
         "question": "Ce calificări ar trebui să aibă un agent pentru a gestiona o vânzare succesorală?",
-        "answer": "Căutați un agent cu experiență specifică și practică în tranzacții succesorale — cineva care înțelege cerințele instanței, documentația fiduciară și prețurile bazate pe stare. Real Property Planning este condus de un agent imobiliar licențiat al Statului Washington care este de asemenea evaluator rezidențial certificat, combinând ambele calificări într-un singur punct de contact."
+        "answer": "Căutați un agent cu experiență specifică și practică în tranzacții succesorale — cineva care înțelege cerințele instanței, documentația fiduciară și prețurile bazate pe stare. Real Property Planning prezintă un agent imobiliar recomandat, licențiat în Statul Washington, care este și evaluator rezidențial certificat și lucrează prin propria agenție."
       }
     }
   },
@@ -161,7 +161,7 @@
     "heroTitle": "Vânzarea Casei unui Vârstnic",
     "directAnswer": {
       "question": "Cum vând casa unui părinte vârstnic în Statul Washington?",
-      "answer": "Vânzarea unei case familiale îndelungate în timpul unei tranziții pentru vârstnici implică de obicei mai mult decât o listare standard — coordonare cu furnizorii de îngrijire, frați aflați în alte state, manageri de mutare și uneori un avocat sau planificator financiar, totul în ritmul pe care familia îl poate gestiona. Real Property Planning conectează familiile cu profesioniștii potriviți pentru fiecare pas și oferă îndrumare de preț bazată pe stare, astfel încât casa să se vândă la o valoare corectă și defendabilă.",
+      "answer": "Vânzarea unei case familiale îndelungate în timpul unei tranziții pentru vârstnici implică de obicei mai mult decât o listare standard — coordonare cu furnizorii de îngrijire, frați aflați în alte state, manageri de mutare și uneori un avocat sau planificator financiar, totul în ritmul pe care familia îl poate gestiona. Real Property Planning explică fiecare pas și prezintă profesioniști independenți pentru fiecare, inclusiv un agent licențiat și evaluator certificat recomandat, care poate stabili un preț bazat pe starea casei, astfel încât aceasta să se vândă la o valoare corectă și defendabilă.",
       "bullet1": "Funcționează în ritmul propriu al familiei — fără presiune de a grăbi o decizie",
       "bullet2": "Vă conectează cu manageri de mutare, consilieri de locuință și lichidatori succesorali după necesitate",
       "bullet3": "Oferă o evaluare onestă bazată pe stare, nu o estimare automatizată",
@@ -484,6 +484,7 @@
       "messageLabel": "Mesaj *",
       "messagePlaceholder": "Împărtășiți întrebarea dvs., sugerați o resursă sau întrebați despre alăturarea la rețeaua noastră profesională...",
       "privacyNote": "🔒 Informațiile dvs. sunt folosite doar pentru a răspunde solicitării dvs. — niciodată vândute sau partajate pentru marketing.",
+      "recipientNote": "Mesajul dumneavoastră ajunge la {{name}}, agent imobiliar independent la {{brokerage}} și evaluator rezidențial certificat. Real Property Planning este o resursă informativă și nu oferă servicii de intermediere sau de evaluare.",
       "sendButton": "Trimiteți",
       "sendingButton": "Se trimite..."
     },

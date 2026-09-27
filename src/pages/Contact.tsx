@@ -16,6 +16,7 @@ import { useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "react-i18next";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 // Value sent to the backend is always this fixed English slug,
 // regardless of display language, so the email function's expectations
@@ -378,6 +379,10 @@ const Contact = () => {
 
                     <div ref={turnstileContainerRef} />
 
+                    {/* Who receives the message, stated before sending (Sept 27, 2026, after an outside audit). */}
+                    <p className="text-sm text-muted-foreground text-center">
+                      {t("contactPage.form.recipientNote", { name: FEATURED_BROKER.name, brokerage: FEATURED_BROKER.brokerage })}
+                    </p>
                     <p className="text-sm text-muted-foreground text-center">
                       {t("contactPage.form.privacyNote")}
                     </p>

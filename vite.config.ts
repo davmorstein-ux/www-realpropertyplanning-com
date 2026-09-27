@@ -96,7 +96,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "A free real estate reference for attorneys handling probate and estate matters in Washington State — plain-language guides on inherited and court-supervised property sales, plus introductions to a featured licensed broker and certified appraiser.",
     h1: "Real Estate Guidance for Probate & Estate Attorneys",
-    quickAnswerQ: "How does Real Property Planning support attorneys with estate and probate real estate?",
+    quickAnswerQ: "What does Real Property Planning offer attorneys handling estate and probate real estate?",
     quickAnswerA: "Real Property Planning gives attorneys guides and tools to share with clients when real property is part of an estate, probate, or family law matter — and, when brokerage or appraisal work is needed, an introduction to a featured Washington licensed broker or certified appraiser who handles it through their own practice.",
     intro:
       "Real Property Planning is a free reference attorneys can point clients to when real property is involved in probate, trust administration, estate transitions, and senior housing moves throughout Washington State.",
@@ -135,22 +135,22 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/senior-transitions": {
     title: "Senior Housing Transitions & Downsizing in Washington State | Real Property Planning",
     description:
-      "Helping seniors and families navigate downsizing, relocation, and senior living decisions across Washington State. Compassionate coordination and clear next steps every step of the way.",
+      "A free guide for seniors and families facing downsizing, relocation, and senior living decisions across Washington State: what to decide first, what each step involves, and how to find independent professionals for each one.",
     h1: "Senior Housing Transitions & Downsizing in Washington State",
-    quickAnswerQ: "How does Real Property Planning support senior housing transitions?",
-    quickAnswerA: "Real Property Planning provides patient, step-by-step guidance for seniors and families transitioning from a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. The process includes home evaluation, preparation coordination, accurate pricing, and full sale management.",
+    quickAnswerQ: "How does a senior housing transition usually work?",
+    quickAnswerA: "Moving from a longtime home — to assisted living, a smaller place, or closer to family — usually runs in steps: choosing the next setting, evaluating the current home, preparing it, pricing it, and selling it. Real Property Planning explains each step in plain language and lists independent professionals, including a featured Washington licensed broker and certified appraiser, who provide the evaluation, pricing, and sale through their own practices.",
     intro:
-      "When a parent or loved one needs to sell the family home, the process should feel steady — not rushed. Real Property Planning works at the family's pace, handling preparation, pricing, and the sale with patience and care throughout Washington State.",
+      "When a parent or loved one needs to sell the family home, the process should feel steady — not rushed. This guide explains preparation, pricing, and the sale at the family's pace, and where to find independent professionals who handle each part throughout Washington State.",
   },
   "/how-the-process-works": {
     title: "How the Process Works — Estate Property Sales | Real Property Planning",
     description:
-      "From initial consultation to closing day — here is exactly how Real Property Planning helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
+      "From the first conversation to closing day — how the sale of a probate, inherited, or trust-owned property in Washington State usually runs, and which independent professional handles each step.",
     h1: "How the Process Works",
     quickAnswerQ: "How does the estate and probate property sale process work?",
-    quickAnswerA: "Real Property Planning follows a clear seven-step process: initial consultation, property evaluation and condition-based pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support.",
+    quickAnswerA: "A licensed broker's estate sale usually runs in seven steps: a first conversation, property evaluation and condition-based pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing, and post-sale follow-up. Real Property Planning explains each step; a featured Washington licensed broker performs them through their own practice.",
     intro:
-      "From initial consultation to closing day — here is exactly how Real Property Planning helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
+      "From the first conversation to closing day — how the sale of a probate, inherited, or trust-owned property in Washington State usually runs, and which independent professional handles each step.",
   },
   "/for-cpas": {
     title: "Real Estate Guidance for CPAs | Real Property Planning",
@@ -254,7 +254,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/kitsap-county": {
     title: "Probate & Estate Real Estate in Kitsap County, WA | Real Property Planning",
     description:
-      "Estate property guidance for Bainbridge Island, Poulsbo, Bremerton, Silverdale, and Kitsap waterfront communities. Local pricing and coordination.",
+      "Estate property guidance for Bainbridge Island, Poulsbo, Bremerton, Silverdale, and Kitsap waterfront communities: how local pricing works and how to find a featured local broker or appraiser.",
     h1: "Estate and Inherited Property Sales in Kitsap County",
     intro:
       "Kitsap County's waterfront properties, military-adjacent communities, and ferry-served islands create distinctive valuation considerations for estate sales — Bainbridge premiums, Bremerton revitalization dynamics, and Poulsbo's small-town buyer pool each behave differently.",
@@ -1516,9 +1516,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/spokane-probate-estate-real-estate": {
     title: "Probate & Estate Real Estate in Spokane, WA",
-    description: "Guidance for executors and families with inherited property in Spokane, WA. Local on-the-ground coordination for out-of-area decision-makers.",
+    description: "Guidance for executors and families with inherited property in Spokane, WA, especially those deciding from out of the area, and how to find a featured local broker or appraiser.",
     h1: "Helping Families Manage Inherited Property in Spokane",
-    quickAnswerQ: "How does Real Property Planning help families manage inherited property in Spokane?",
+    quickAnswerQ: "How can families manage inherited property in Spokane from out of the area?",
     quickAnswerA: "Many Spokane estate properties are managed by families who live outside the area. This page explains what out-of-area executors and trustees need to have in place — property assessment, preparation, pricing, and a local point of contact — and how to connect with a featured Washington licensed broker or certified appraiser who works the Spokane market.",
   },
   "/title-and-escrow": {

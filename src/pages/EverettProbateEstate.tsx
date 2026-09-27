@@ -192,12 +192,12 @@ const EverettProbateEstate = () => {
         </div>
       </section>
 
-      {/* How I Help */}
+      {/* How a featured broker helps (third person since Sept 27, 2026: the hub does not do this work) */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How I Help Everett Families Move Forward
+              How {FEATURED_BROKER.roleTitle} Can Help Everett Families Move Forward
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Every situation is different, but the approach follows a clear, practical framework:
@@ -210,19 +210,19 @@ const EverettProbateEstate = () => {
                 },
                 {
                   title: "Evaluating the Property",
-                  desc: "I visit the home, assess its condition, identify issues that affect value, and note what preparation might be worthwhile — and what isn't worth the cost or delay.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the home, assesses its condition, identifies issues that affect value, and notes what preparation might be worthwhile — and what isn't worth the cost or delay.`,
                 },
                 {
                   title: "Realistic Pricing Strategy",
-                  desc: "Using my appraisal background and Everett-specific market data, I develop a pricing strategy that reflects the home's actual condition, location, and neighborhood context.",
+                  desc: `Using ${FEATURED_BROKER.pronoun.possessive} appraisal background and Everett-specific market data, ${FEATURED_BROKER.pronoun.subject} develops a pricing strategy that reflects the home's actual condition, location, and neighborhood context.`,
                 },
                 {
                   title: "Coordinating Preparation",
-                  desc: "I coordinate cleanout, contractors, and preparation vendors as needed — keeping the process organized and the timeline realistic.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} works with cleanout crews, contractors, and preparation vendors as needed to keep the process organized and the timeline realistic.`,
                 },
                 {
                   title: "Guiding the Sale to Completion",
-                  desc: "From listing through closing, I manage the details and keep all parties informed. Clear updates, no surprises, and a steady path to resolution.",
+                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details and keeps all parties informed. Clear updates, no surprises, and a steady path to resolution.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">

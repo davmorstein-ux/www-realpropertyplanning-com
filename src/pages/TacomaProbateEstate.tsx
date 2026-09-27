@@ -192,12 +192,12 @@ const TacomaProbateEstate = () => {
         </div>
       </section>
 
-      {/* How I Help */}
+      {/* How a featured broker helps (third person since Sept 27, 2026: the hub does not do this work) */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How I Help Bring Structure to the Process
+              How {FEATURED_BROKER.roleTitle} Can Help Bring Structure to the Process
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Every situation is different, but the approach follows a clear, repeatable framework:
@@ -206,11 +206,11 @@ const TacomaProbateEstate = () => {
               {[
                 {
                   title: "Understanding the Situation",
-                  desc: `${FEATURED_BROKER.Role} starts with a conversation — no pressure, no sales pitch. I want to understand who's involved, what authority exists, what the property looks like, and what the goals are.`,
+                  desc: `${FEATURED_BROKER.Role} starts with a conversation — no pressure, no sales pitch — to understand who's involved, what authority exists, what the property looks like, and what the goals are.`,
                 },
                 {
                   title: "Evaluating the Property",
-                  desc: "I visit the property and assess its condition, identify issues that affect value, and note what preparation might be worthwhile — and what isn't worth the cost or delay.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, assesses its condition, identifies issues that affect value, and notes what preparation might be worthwhile — and what isn't worth the cost or delay.`,
                 },
                 {
                   title: "Tacoma Pricing Strategy",
@@ -218,11 +218,11 @@ const TacomaProbateEstate = () => {
                 },
                 {
                   title: "Coordinating Preparation and Next Steps",
-                  desc: "I coordinate with attorneys, co-executors, cleanout crews, contractors, and other parties — keeping everyone aligned, the timeline clear, and the process moving forward.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} works with attorneys, co-executors, cleanout crews, contractors, and other parties to keep everyone aligned, the timeline clear, and the process moving forward.`,
                 },
                 {
                   title: "Guiding the Process From Start to Finish",
-                  desc: "From listing through closing, I manage the details so you can focus on what matters most. Clear updates, no surprises, and a calm, structured path to resolution.",
+                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details so you can focus on what matters most. Clear updates, no surprises, and a calm, structured path to resolution.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">

@@ -23,7 +23,7 @@ const steps = [
   {
     number: "01",
     title: "Initial Consultation",
-    text: "Every engagement begins with a conversation about the property, the people involved, and the circumstances driving the decision. A licensed broker listens to understand the full picture — legal authority, family dynamics, timeline pressures, and financial goals. Whether you are an executor managing your first estate, an attorney referring a client, or a family navigating a senior transition, this conversation establishes the foundation for everything that follows.",
+    text: "Every sale begins with a conversation about the property, the people involved, and the circumstances driving the decision. A licensed broker listens to understand the full picture — legal authority, family dynamics, timeline pressures, and financial goals. Whether you are an executor managing your first estate, an attorney referring a client, or a family navigating a senior transition, this conversation establishes the foundation for everything that follows.",
   },
   {
     number: "02",
@@ -223,12 +223,13 @@ const HowTheProcessWorks = () => {
                   maintenance, and HOA fees — continue to accumulate.
                 </p>
                 <p>
-                  Real Property Planning exists because these pressures are so common, and connects{" "}
+                  Because these pressures are so common, a good licensed broker helps{" "}
                   <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">
                     executors
                   </Link>
-                  , attorneys, and families develop a timeline that accounts for legal proceedings, property
+                  , attorneys, and families build a timeline that accounts for legal proceedings, property
                   preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
+                  Real Property Planning explains how that works and can introduce a featured broker who does it.
                 </p>
                 <p>
                   For properties that need work before listing, each potential improvement is evaluated through a{" "}
@@ -264,7 +265,7 @@ const HowTheProcessWorks = () => {
                   >
                     executors managing property from out of state
                   </Link>
-                  , the entire process can be handled remotely — with photo updates, digital document signing, and
+                  , a broker can handle the entire process remotely — with photo updates, digital document signing, and
                   regular calls to keep you informed without requiring you to travel for every step.
                 </p>
               </div>

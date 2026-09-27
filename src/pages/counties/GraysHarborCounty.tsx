@@ -17,7 +17,7 @@ const GraysHarborCounty = () => (
     ]}
     localInsight={`Grays Harbor County stretches from the timber-rich interior to the Pacific coastline, encompassing communities as varied as the urban twin cities of Aberdeen and Hoquiam, the coastal resort community of Ocean Shores, and the quiet county seat of Montesano. Estate and probate properties here range from historic downtown homes to coastal cottages to rural timber parcels — each requiring a different approach to valuation, preparation, and marketing. ${FEATURED_BROKER.Role} brings certified appraisal methodology and broker experience to every engagement, giving families and executors the honest guidance they need to move forward with confidence.`}
     aeoQuestion="How does probate real estate work in Grays Harbor County?"
-    aeoAnswer="Grays Harbor County probate is administered through the Grays Harbor County Superior Court in Montesano. Personal representatives must obtain Letters Testamentary before listing or selling estate property. Real Property Planning supports executors through every step — from the initial date-of-death valuation to closing — with local coordination that keeps the process moving even when heirs are far away."
+    aeoAnswer="Grays Harbor County probate is administered through the Grays Harbor County Superior Court in Montesano. Personal representatives must obtain Letters Testamentary before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families through every step — from the initial date-of-death valuation to closing — with local coordination that keeps the process moving even when heirs are far away."
     aeoSupportFaqs={[
       {
         question: "What kinds of estate properties are most common in Grays Harbor County?",
@@ -40,7 +40,7 @@ const GraysHarborCounty = () => (
     ]}
     countySpecificFaqs={[
       {
-        question: "Does Real Property Planning open Grays Harbor County probate listings before Letters are issued?",
+        question: "Can a Grays Harbor County probate property be listed before Letters are issued?",
         answer: `No. The property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the Grays Harbor County Superior Court in Montesano. ${FEATURED_BROKER.Role} uses that waiting period to conduct the valuation walk-through, secure the property, line up cleanout vendors, and prepare the marketing file — so you're ready to move immediately when Letters arrive.`,
       },
       {

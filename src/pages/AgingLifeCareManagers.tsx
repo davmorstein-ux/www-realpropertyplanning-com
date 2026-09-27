@@ -125,8 +125,8 @@ const AgingLifeCareManagers = () => (
                 managed with compassion and attention to detail.
               </p>
               <p>
-                Real Property Planning works alongside Aging Life Care Managers to help families
-                address the real estate side of major transitions. Whether the goal is selling a longtime
+                Real Property Planning explains the real estate side of major transitions and lists independent
+                professionals, including Aging Life Care Managers, who help families through them. Whether the goal is selling a longtime
                 home to fund care, navigating a probate sale after a loss, or finding the right senior
                 housing solution, having a care manager involved helps the family stay focused on what
                 matters most.

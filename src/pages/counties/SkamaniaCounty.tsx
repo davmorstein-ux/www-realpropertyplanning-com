@@ -17,7 +17,7 @@ const SkamaniaCounty = () => (
     ]}
     localInsight={`Skamania County occupies the Washington side of the Columbia River Gorge — one of the most dramatic natural landscapes in the Pacific Northwest, and a place where geography shapes everything about the real estate market. Stevenson serves as the county seat and primary community, a small town with a strong tourism connection to the Gorge's outdoor recreation culture. North Bonneville sits near the Bonneville Dam, and Carson and the surrounding communities draw residents seeking rural living with Columbia River access. Estate and inherited properties throughout Skamania County require specialized local knowledge — the Gorge's scenic designation affects land use and development, comparable sales are limited, and the buyer pool is specific to those drawn to the area's natural setting and recreation-oriented lifestyle. ${FEATURED_BROKER.Role} provides the honest, condition-based guidance that Skamania County's distinctive market requires.`}
     aeoQuestion="How does probate real estate work in Skamania County?"
-    aeoAnswer="Skamania County probate is administered through the Skamania County Superior Court in Stevenson. Personal representatives must receive Letters Testamentary before listing or selling estate property. Real Property Planning supports executors and families through the full process — from date-of-death valuation through closing — with particular attention to the Gorge's unique land use considerations, limited comparable sales, and the practical logistics of coordinating estate property management in a rural county."
+    aeoAnswer="Skamania County probate is administered through the Skamania County Superior Court in Stevenson. Personal representatives must receive Letters Testamentary before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families through the full process — from date-of-death valuation through closing — with particular attention to the Gorge's unique land use considerations, limited comparable sales, and the practical logistics of coordinating estate property management in a rural county."
     aeoSupportFaqs={[
       {
         question: "How does the Columbia River Gorge National Scenic Area designation affect property values in Skamania County?",
@@ -40,7 +40,7 @@ const SkamaniaCounty = () => (
     ]}
     countySpecificFaqs={[
       {
-        question: "Does Real Property Planning handle Skamania County probate listings before Letters are issued?",
+        question: "Can a Skamania County probate property be listed before Letters are issued?",
         answer: `No — the property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the Skamania County Superior Court in Stevenson. ${FEATURED_BROKER.Role} uses that waiting period to conduct the valuation walk-through, secure the property, coordinate cleanout vendors, and prepare the marketing file — so you're ready to move immediately when Letters arrive.`,
       },
       {
@@ -48,7 +48,7 @@ const SkamaniaCounty = () => (
         answer: `River views and Columbia River access carry real premiums in Skamania County — but those premiums vary significantly based on the quality of the view, the type of access, bank height, and proximity to communities and amenities. Automated estimates are especially unreliable for these properties. ${FEATURED_BROKER.Role}'s certified appraisal background provides the hands-on, property-specific evaluation that Gorge waterfront and view properties require.`,
       },
       {
-        question: "Can Real Property Planning manage a Skamania County estate sale for families in Portland or Seattle?",
+        question: "Can a Skamania County estate sale be managed for families in Portland or Seattle?",
         answer: `Yes — and this is the most common situation in Skamania County, where many property owners have family based in the Portland metro area, Vancouver, or the Seattle region. ${FEATURED_BROKER.Role} handles property assessment, vendor coordination, preparation, showings, and closing locally — with regular updates so families don't need to make repeated trips to the Gorge.`,
       },
       {

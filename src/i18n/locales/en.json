@@ -147,7 +147,7 @@
       },
       "q5": {
         "question": "What qualifications should a broker have to handle a probate or estate sale?",
-        "answer": "Look for a broker with specific, hands-on experience in probate and estate transactions — someone who understands court requirements, fiduciary documentation, and condition-based pricing. Real Property Planning is led by a Washington State licensed real estate broker who is also a certified residential appraiser, combining both credentials in one point of contact."
+        "answer": "Look for a broker with specific, hands-on experience in probate and estate transactions — someone who understands court requirements, fiduciary documentation, and condition-based pricing. Real Property Planning lists a featured Washington State licensed broker who is also a certified residential appraiser and works through their own brokerage."
       }
     }
   },
@@ -162,7 +162,7 @@
     "heroTitle": "Senior Housing & Transitions",
     "directAnswer": {
       "question": "How do I sell a senior parent's home in Washington State?",
-      "answer": "Selling a longtime family home during a senior transition usually involves more than a standard listing — coordinating with care providers, out-of-state siblings, move managers, and sometimes an attorney or financial planner, all at a pace the family can manage. Real Property Planning connects families with the right professionals for each step and provides condition-based pricing guidance so the home sells for a fair, defensible value.",
+      "answer": "Selling a longtime family home during a senior transition usually involves more than a standard listing — coordinating with care providers, out-of-state siblings, move managers, and sometimes an attorney or financial planner, all at a pace the family can manage. Real Property Planning explains each step and lists independent professionals for each one, including a featured licensed broker and certified appraiser who can provide condition-based pricing so the home sells for a fair, defensible value.",
       "bullet1": "Works at the family's own pace — no pressure to rush a decision",
       "bullet2": "Connects you with move managers, living advisors, and estate liquidators as needed",
       "bullet3": "Provides an honest, condition-based valuation rather than an automated estimate",
@@ -486,6 +486,7 @@
       "messageLabel": "Message *",
       "messagePlaceholder": "Share your question, suggest a resource, or ask about joining our professional network...",
       "privacyNote": "🔒 Your information is used only to respond to your inquiry — never sold or shared for marketing.",
+      "recipientNote": "Your message goes to {{name}}, an independent real estate broker with {{brokerage}} and a certified residential appraiser. Real Property Planning is an information resource and does not provide brokerage or appraisal services.",
       "sendButton": "Send My Question",
       "sendingButton": "Sending...",
       "reasonLabel": "What brings you here? *",

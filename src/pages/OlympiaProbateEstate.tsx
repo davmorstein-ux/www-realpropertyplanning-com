@@ -192,12 +192,12 @@ const OlympiaProbateEstate = () => {
         </div>
       </section>
 
-      {/* How I Help */}
+      {/* How a featured broker helps (third person since Sept 27, 2026: the hub does not do this work) */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How I Help Make the Process More Manageable
+              How {FEATURED_BROKER.roleTitle} Can Help Make the Process More Manageable
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Every situation is different, but the approach follows a clear, structured framework designed to reduce uncertainty:
@@ -210,19 +210,19 @@ const OlympiaProbateEstate = () => {
                 },
                 {
                   title: "Assess the Property and Needs",
-                  desc: "I visit the property, evaluate its condition, and identify what preparation — if any — would meaningfully improve the outcome.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, evaluates its condition, and identifies what preparation — if any — would meaningfully improve the outcome.`,
                 },
                 {
                   title: "Develop a Clear Plan",
-                  desc: "Using my appraisal background and local market knowledge, I develop a pricing and preparation strategy that's realistic, defensible, and aligned with the family's goals.",
+                  desc: `Using ${FEATURED_BROKER.pronoun.possessive} appraisal background and local market knowledge, ${FEATURED_BROKER.pronoun.subject} develops a pricing and preparation strategy that's realistic, defensible, and aligned with the family's goals.`,
                 },
                 {
                   title: "Coordinate Next Steps",
-                  desc: "I coordinate with attorneys, family members, cleanout services, and contractors — keeping the process organized and all parties informed.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} works with attorneys, family members, cleanout services, and contractors to keep the process organized and all parties informed.`,
                 },
                 {
                   title: "Guide the Process From Start to Finish",
-                  desc: "From listing through closing, I manage the details with consistent communication, clear updates, and a patient approach that respects the family's pace.",
+                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details with consistent communication, clear updates, and a patient approach that respects the family's pace.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">

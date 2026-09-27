@@ -290,7 +290,7 @@ const JoinTheNetwork = () => {
                 Who We're Looking For
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-                Real Property Planning works with families and professionals navigating some of life's most complex transitions. We're building a trusted referral network of professionals who share our commitment to honest, client-centered service.
+                Real Property Planning is a free resource for families and professionals navigating some of life's most complex transitions. It lists independent professionals who share a commitment to honest, client-centered service.
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 {professions.map((profession) => (

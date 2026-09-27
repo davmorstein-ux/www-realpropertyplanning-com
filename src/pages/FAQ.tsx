@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     question: "Do I need probate before selling a house in Washington?",
-    answer: `It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. Some properties held in trust or with survivorship rights may avoid probate entirely. The legal requirements should be reviewed with an attorney, but on the real estate side, Real Property Planning can help you evaluate the property and prepare a plan so you are ready to move forward once authority is confirmed.\n\n${softCta}`,
+    answer: `It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. Some properties held in trust or with survivorship rights may avoid probate entirely. The legal requirements should be reviewed with an attorney, but on the real estate side, a featured licensed broker or certified appraiser can help you evaluate the property and prepare a plan so you are ready to move forward once authority is confirmed.\n\n${softCta}`,
   },
   {
     question: "Can a trustee sell trust-owned real estate?",
@@ -96,7 +96,7 @@ const faqs = [
     answer: `${FEATURED_BROKER.Role} serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County throughout Washington State. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
   },
   {
-    question: "Can Real Property Planning help with senior transitions and downsizing decisions?",
+    question: "Is there help for senior transitions and downsizing decisions?",
     answer: `Yes. ${FEATURED_BROKER.Role} works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. ${FEATURED_BROKER.Role} provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
   },
   {

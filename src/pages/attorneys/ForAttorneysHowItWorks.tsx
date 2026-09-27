@@ -52,7 +52,7 @@ const ForAttorneysHowItWorks = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="How Real Property Planning Works With Attorneys | Referral Process"
-      description="A clear, document-style walkthrough of how Real Property Planning supports Washington estate, probate, and family law attorneys from referral through closing — including what a licensed broker handles and how to make a referral."
+      description="A clear, document-style walkthrough of how Washington estate, probate, and family law attorneys can work with a featured licensed broker from referral through closing — what the broker handles, what Real Property Planning does and does not do, and how to make a referral."
       canonical="https://realpropertyplanning.com/for-attorneys/how-it-works"
     />
     <BreadcrumbSchema
@@ -158,7 +158,7 @@ const ForAttorneysHowItWorks = () => (
             </p>
             <blockquote className="p-6 md:p-8 rounded-xl border-l-4 border-[#c3525c] bg-[#FAF7EE]">
               <p className="text-[#39332d] text-xl md:text-2xl leading-[1.8] font-serif italic">
-                &ldquo;I work with a real estate firm called Real Property Planning that handles homes tied to estates, trusts, and family transitions across Washington State. They are calm, experienced, and used to working with families during difficult times. They will take care of the property side from start to finish — assessing the home, coordinating any preparation, pricing it appropriately, and managing the sale — and they will keep me informed along the way. You will have one steady point of contact. There is no pressure and no rush.&rdquo;
+                &ldquo;For the house, I&rsquo;d like to introduce you to a licensed real estate broker who handles homes tied to estates, trusts, and family transitions across Washington State. I found them through Real Property Planning, a free resource for families in situations like yours. The broker is calm, experienced, and used to working with families during difficult times, and will take care of the property side from start to finish — assessing the home, coordinating any preparation, pricing it appropriately, and managing the sale — and will keep me informed along the way. You will have one steady point of contact. There is no pressure and no rush.&rdquo;
               </p>
             </blockquote>
           </div>

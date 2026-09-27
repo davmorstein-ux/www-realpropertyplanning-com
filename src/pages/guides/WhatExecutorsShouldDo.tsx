@@ -147,7 +147,7 @@ const WhatExecutorsShouldDo = () => (
             The key question is which improvements are worth the investment. A $5,000 kitchen cleanup might add $15,000 in sale price. A $40,000 renovation might add only $20,000. {FEATURED_BROKER.Role} evaluates each potential improvement using {FEATURED_BROKER.pronoun.possessive} appraisal background to estimate the likely return — helping you spend estate funds wisely.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            We coordinate the entire preparation process — scheduling <Link to="/resources/estate-sale-companies" className="text-accent hover:text-gold underline underline-offset-4">estate sale companies</Link>, cleanout crews, handymen, and <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link> — so you don't have to manage contractors yourself.
+            A featured broker can coordinate the preparation process — scheduling <Link to="/resources/estate-sale-companies" className="text-accent hover:text-gold underline underline-offset-4">estate sale companies</Link>, cleanout crews, handymen, and <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link> — so you don't have to manage contractors yourself.
           </p>
         </div>
       </div>

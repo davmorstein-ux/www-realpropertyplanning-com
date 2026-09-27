@@ -100,7 +100,7 @@ const SeniorLivingAndRelocation = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              When a senior is moving out of their home, families face important decisions about where to go next — and what to do with the property they're leaving behind. I help families navigate both sides of that transition with clarity and care.
+              When a senior is moving out of their home, families face important decisions about where to go next — and what to do with the property they're leaving behind. This guide covers both sides of that transition, and where to find independent professionals for each.
             </p>
             </div>
           </div>
@@ -233,7 +233,7 @@ const SeniorLivingAndRelocation = () => {
               </h2>
               <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10 leading-relaxed">
                 The decision to move often raises questions about the family home. When should it be sold? How should it
-                be prepared? How does the timing align with the move? I help families answer these questions.
+                be prepared? How does the timing align with the move? The sections below help families answer these questions.
               </p>
 
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -271,9 +271,9 @@ const SeniorLivingAndRelocation = () => {
                 A Guide, Not a Placement Agency
               </h2>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-                My role is not to recommend specific communities or make placement decisions. Instead, I help families
-                understand how real estate timing and strategy connect to the larger transition — and I work alongside
-                the professionals who specialize in senior placement and care coordination.
+                This resource does not recommend specific communities or make placement decisions. It explains how
+                real estate timing and strategy connect to the larger transition, and lists the independent
+                professionals who specialize in senior placement and care coordination.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
                 Together, this resource can help ensure that housing decisions — both the home being left and the home

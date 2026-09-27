@@ -17,7 +17,7 @@ const MasonCounty = () => (
     ]}
     localInsight={`Mason County occupies a distinctive position on the Olympic Peninsula — anchored by Shelton as its county seat and commercial center, and defined along its eastern edge by Hood Canal, one of the most scenic and ecologically unique waterways in the Pacific Northwest. The county attracts retirees, second-home buyers, and families seeking waterfront access, rural privacy, and a slower pace than the Puget Sound suburbs. Estate and inherited properties throughout Mason County reflect this character — waterfront cabins and homes along Hood Canal, rural acreage in the surrounding hills, and established properties in Shelton's residential neighborhoods. Each type requires a different valuation approach, and limited comparable sales in many parts of the county make professional, on-the-ground evaluation essential. ${FEATURED_BROKER.Role} provides the locally informed guidance that Mason County's varied property landscape requires.`}
     aeoQuestion="How does probate real estate work in Mason County?"
-    aeoAnswer="Mason County probate is administered through the Mason County Superior Court in Shelton. Personal representatives must receive Letters Testamentary before listing or selling estate property. Real Property Planning supports executors and families through every step — from date-of-death valuation through closing — with particular attention to waterfront property characteristics, rural market dynamics, and the practical logistics of coordinating estate property management in communities that can be significant distances from Seattle."
+    aeoAnswer="Mason County probate is administered through the Mason County Superior Court in Shelton. Personal representatives must receive Letters Testamentary before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families through every step — from date-of-death valuation through closing — with particular attention to waterfront property characteristics, rural market dynamics, and the practical logistics of coordinating estate property management in communities that can be significant distances from Seattle."
     aeoSupportFaqs={[
       {
         question: "How are Hood Canal waterfront properties valued for estate purposes?",
@@ -40,7 +40,7 @@ const MasonCounty = () => (
     ]}
     countySpecificFaqs={[
       {
-        question: "Does Real Property Planning handle Mason County probate listings before Letters are issued?",
+        question: "Can a Mason County probate property be listed before Letters are issued?",
         answer: `No — the property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the Mason County Superior Court in Shelton. ${FEATURED_BROKER.Role} uses that waiting period productively — conducting the date-of-death valuation walk-through, securing the property, coordinating cleanout vendors, and preparing the marketing file so you're ready to move immediately when Letters arrive.`,
       },
       {
@@ -48,7 +48,7 @@ const MasonCounty = () => (
         answer: `Tideland ownership and oyster lease rights can add meaningful value to Hood Canal waterfront properties — but they also add complexity to the sale process, including title considerations and buyer education. ${FEATURED_BROKER.Role}'s appraisal background and familiarity with Hood Canal waterfront transactions help executors and families understand how these features affect value and what buyers will need to know.`,
       },
       {
-        question: "Can Real Property Planning manage a Mason County estate sale for families in the Seattle area?",
+        question: "Can a Mason County estate sale be managed for families in the Seattle area?",
         answer: `Yes — this is one of the most common situations ${FEATURED_BROKER.role} handles in Mason County. Many Hood Canal and Mason County properties are owned by families based in King, Pierce, or Snohomish County. ${FEATURED_BROKER.pronoun.Subject} handles the full process locally — property assessment, vendor coordination, preparation, showings, and closing — with regular updates so families don't need to make repeated trips to the peninsula.`,
       },
       {

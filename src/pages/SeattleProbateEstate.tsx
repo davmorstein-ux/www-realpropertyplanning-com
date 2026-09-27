@@ -194,12 +194,12 @@ const SeattleProbateEstate = () => {
         </div>
       </section>
 
-      {/* How I Help */}
+      {/* How a featured broker helps (third person since Sept 27, 2026: the hub does not do this work) */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How I Help Simplify the Process
+              How {FEATURED_BROKER.roleTitle} Can Help Simplify the Process
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Every situation is different, but the approach follows a clear, repeatable framework:
@@ -208,23 +208,23 @@ const SeattleProbateEstate = () => {
               {[
                 {
                   title: "Understanding the Situation",
-                  desc: `${FEATURED_BROKER.Role} starts with a conversation — no pressure, no sales pitch. I want to understand who's involved, what authority exists, and what the goals are.`,
+                  desc: `${FEATURED_BROKER.Role} starts with a conversation — no pressure, no sales pitch — to understand who's involved, what authority exists, and what the goals are.`,
                 },
                 {
                   title: "Property Review",
-                  desc: "I visit the property and assess its condition, identify issues that may affect value, and note what preparation might be worthwhile.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} visits the property, assesses its condition, identifies issues that may affect value, and notes what preparation might be worthwhile.`,
                 },
                 {
                   title: "Pricing Strategy",
-                  desc: "Using my appraisal background and local market data, I develop a pricing strategy that's defensible, realistic, and tailored to the neighborhood and condition.",
+                  desc: `Using ${FEATURED_BROKER.pronoun.possessive} appraisal background and local market data, ${FEATURED_BROKER.pronoun.subject} develops a pricing strategy that's defensible, realistic, and tailored to the neighborhood and condition.`,
                 },
                 {
                   title: "Coordination",
-                  desc: "I coordinate with attorneys, co-executors, cleanout crews, contractors, and other parties — keeping everyone aligned and the process moving.",
+                  desc: `${FEATURED_BROKER.pronoun.Subject} works with attorneys, co-executors, cleanout crews, contractors, and other parties to keep everyone aligned and the process moving.`,
                 },
                 {
                   title: "Guiding the Process to Completion",
-                  desc: "From listing through closing, I manage the details so you can focus on what matters most. Clear updates, no surprises, and a calm path to resolution.",
+                  desc: `From listing through closing, ${FEATURED_BROKER.pronoun.subject} manages the details so you can focus on what matters most. Clear updates, no surprises, and a calm path to resolution.`,
                 },
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">

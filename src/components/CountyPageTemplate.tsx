@@ -258,7 +258,7 @@ const CountyPageTemplate = ({
   const cityList = cities.slice(0, 3).join(", ");
   const defaultCountyFaqs = [
     {
-      question: `Does Real Property Planning open ${countyName} probate listings before Letters are issued?`,
+      question: `Can a ${countyName} probate property be listed before Letters are issued?`,
       answer: `No. The property cannot be marketed until the personal representative receives Letters Testamentary or Letters of Administration from the ${countyName} Superior Court. ${FEATURED_BROKER.Role} does, however, use that waiting period for the date-of-death valuation walk-through, securing the home, lining up cleanout vendors, and preparing the marketing file — so the day Letters arrive, you are ready to list rather than starting from zero.`,
     },
     {
@@ -433,7 +433,7 @@ const CountyPageTemplate = ({
           }
         />
 
-        {/* What we handle locally — narrative, not a duplicated services grid */}
+        {/* How a sale typically runs locally — work attributed to the featured broker, not the hub (Sept 27, 2026) */}
         <section className="py-14 lg:py-18 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
@@ -441,14 +441,14 @@ const CountyPageTemplate = ({
                 How a {countyName} Estate Sale Actually Runs
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                In {countyName}, most calls start one of three ways: a personal representative who has just received
-                Letters and needs to know what to do with the house first, an attorney whose client is stuck on the
-                property piece of the file, or an out-of-state heir who has not been inside the home in years. The first
-                conversation is short and concrete — what the property is, who has authority, and what's already been
-                touched.
+                In {countyName}, most estate sales start one of three ways: a personal representative who has just
+                received Letters and needs to know what to do with the house first, an attorney whose client is stuck on
+                the property piece of the file, or an out-of-state heir who has not been inside the home in years. A first
+                conversation with {FEATURED_BROKER.role} is short and concrete — what the property is, who has authority,
+                and what's already been touched.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-                From there, the work usually includes a date-of-death walk-through with{" "}
+                From there, the broker's work usually includes a date-of-death walk-through with{" "}
                 <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">
                   appraisal-grade pricing analysis
                 </Link>

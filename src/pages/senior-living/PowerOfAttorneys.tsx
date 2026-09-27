@@ -7,6 +7,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import { useLayoutEffect, useRef, useState, useCallback } from "react";
 import redSphere from "@/assets/property-accent-sphere-washington.webp";
@@ -414,37 +415,38 @@ const PowerOfAttorneys = () => {
           </div>
         </section>
 
-        {/* Section 5: How I Help */}
+        {/* Section 5: How the featured broker helps (third person since Sept 27, 2026: the hub does not do this work) */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-[1100px] mx-auto">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">How I Help</h2>
+              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">How {FEATURED_BROKER.roleTitle} Can Help</h2>
               <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
-                I don't provide legal advice — and I'll always recommend working with a qualified attorney for the legal
-                side of a power of attorney. But when it comes to the real estate process, I bring experience and
+                {FEATURED_BROKER.Role} does not give legal advice, and the legal side of a power of attorney belongs with a
+                qualified attorney. On the real estate side, {FEATURED_BROKER.pronoun.subject} brings experience and
                 structure to situations that often feel uncertain.
               </p>
               <div className="space-y-5 text-muted-foreground text-base md:text-[17px] leading-relaxed">
                 <p>
-                  <strong className="text-foreground">Coordination with attorneys, title, and escrow.</strong> I work
-                  alongside your legal team to make sure the real estate side of things moves smoothly. That includes
+                  <strong className="text-foreground">Coordination with attorneys, title, and escrow.</strong>{" "}
+                  {FEATURED_BROKER.Role} works alongside your legal team to make sure the real estate side of things moves smoothly. That includes
                   verifying documentation requirements, communicating with title companies, and keeping everyone
                   aligned.
                 </p>
                 <p>
                   <strong className="text-foreground">Understanding documentation requirements.</strong> With more than
-                  20 years of experience as both a licensed broker and a certified appraiser, I know what title
-                  companies, lenders, and underwriters expect — and I can help you prepare before issues arise.
+                  20 years of experience as both a licensed broker and a certified appraiser, {FEATURED_BROKER.pronoun.subject}{" "}
+                  knows what title companies, lenders, and underwriters expect, and can help you prepare before issues
+                  arise.
                 </p>
                 <p>
                   <strong className="text-foreground">Helping families move forward with clarity.</strong> Many families
-                  come to me feeling overwhelmed. My role is to provide a steady, calm presence — someone who can
+                  arrive feeling overwhelmed. {FEATURED_BROKER.Role}'s role is to provide a steady, calm presence — someone who can
                   explain the process, answer questions, and help the family make informed decisions about the property.
                 </p>
                 <p>
                   <strong className="text-foreground">Experience with sensitive situations.</strong> These are rarely
-                  simple transactions. They involve aging parents, family dynamics, and high-stakes decisions. I
-                  approach every situation with the patience and professionalism it deserves.
+                  simple transactions. They involve aging parents, family dynamics, and high-stakes decisions.{" "}
+                  {FEATURED_BROKER.pronoun.Subject} approaches every situation with the patience and professionalism it deserves.
                 </p>
               </div>
             </div>
@@ -466,8 +468,8 @@ const PowerOfAttorneys = () => {
                     families face this situation — and having the right guidance makes it less stressful.
                   </p>
                   <p className="text-muted-foreground text-[15px] leading-relaxed">
-                    I'll help you understand the process, coordinate with your team, and take care of the property
-                    details so you can focus on what matters most.
+                    {FEATURED_BROKER.Role} can help you understand the process, work with your team, and take care of the
+                    property details so you can focus on what matters most.
                   </p>
                 </div>
                 <div className="card-3d px-6 py-8">
@@ -477,19 +479,19 @@ const PowerOfAttorneys = () => {
                     trustee — you likely have property responsibilities that require careful handling.
                   </p>
                   <p className="text-muted-foreground text-[15px] leading-relaxed">
-                    I work with fiduciaries regularly and understand the documentation, timing, and coordination
-                    involved in selling property under legal authority.
+                    {FEATURED_BROKER.Role} works with fiduciaries regularly and understands the documentation, timing, and
+                    coordination involved in selling property under legal authority.
                   </p>
                 </div>
                 <div className="card-3d px-6 py-8">
                   <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Attorneys &amp; Advisors</h3>
                   <p className="text-muted-foreground text-[15px] leading-relaxed mb-3">
-                    If you represent clients who need to sell property under a POA, I can serve as a reliable point of
-                    coordination on the real estate side.
+                    If you represent clients who need to sell property under a POA, {FEATURED_BROKER.role} can serve as a
+                    reliable point of coordination on the real estate side.
                   </p>
                   <p className="text-muted-foreground text-[15px] leading-relaxed">
-                    I communicate clearly, respect timelines, and understand the standards your clients' transactions
-                    need to meet.
+                    {FEATURED_BROKER.pronoun.Subject} communicates clearly, respects timelines, and understands the standards
+                    your clients' transactions need to meet.
                   </p>
                 </div>
               </div>
@@ -503,7 +505,7 @@ const PowerOfAttorneys = () => {
             <div className="max-w-[1100px] mx-auto">
               <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Practical Guidance</p>
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-8">
-                Real-World Situations We Help Navigate
+                Real-World Situations and How They Are Handled
               </h2>
               <div className="space-y-10">
                 <div>
@@ -514,7 +516,7 @@ const PowerOfAttorneys = () => {
                     A parent's health has changed, and the family home needs to be sold to fund care or simplify the
                     estate. A properly executed power of attorney allows a trusted family member to list the property,
                     review offers, and coordinate with title and escrow — without the parent needing to be directly
-                    involved. I work alongside families in these situations to keep the process organized, reduce
+                    involved. {FEATURED_BROKER.Role} works alongside families in these situations to keep the process organized, reduce
                     stress, and make sure the real estate side moves forward smoothly. If you're also managing{" "}
                     <Link
                       to="/senior-transitions"
@@ -522,7 +524,7 @@ const PowerOfAttorneys = () => {
                     >
                       a senior transition
                     </Link>
-                    , I can help coordinate both the property sale and the move.
+                    , {FEATURED_BROKER.pronoun.subject} can help coordinate both the property sale and the move.
                   </p>
                 </div>
                 <div>
@@ -533,9 +535,9 @@ const PowerOfAttorneys = () => {
                     A sudden illness, stroke, or hospitalization can create an immediate need to manage property matters
                     — from listing a home to handling offers and closing. When a power of attorney is already in place,
                     these decisions can move forward without delay. When it isn't, families often face difficult legal
-                    hurdles. I bring experience and structure to these time-sensitive situations, coordinating with
+                    hurdles. {FEATURED_BROKER.Role} brings experience and structure to these time-sensitive situations, coordinating with
                     attorneys and title companies to keep things on track. Families managing an estate alongside these
-                    decisions may also benefit from our{" "}
+                    decisions may also benefit from the{" "}
                     <Link
                       to="/probate-estate-sales"
                       className="text-primary underline underline-offset-4 hover:text-accent transition-colors"
@@ -551,17 +553,20 @@ const PowerOfAttorneys = () => {
                   </h3>
                   <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed">
                     When the person responsible for managing a property lives in another state, a power of attorney
-                    enables them to authorize someone local to handle the coordination and sale. I work with
-                    out-of-state families regularly — handling inspections, appraisals, contractor access, and buyer
-                    negotiations so the family doesn't need to travel back and forth. Clear communication and reliable
-                    coordination are essential, and that's exactly what I provide. If you're serving as{" "}
+                    enables them to authorize someone local to handle the coordination and sale. {FEATURED_BROKER.Role}{" "}
+                    works with out-of-state families regularly, handling inspections, appraisals, contractor access, and
+                    buyer negotiations so the family doesn't need to travel back and forth. If you're serving as{" "}
                     <Link
                       to="/executors"
                       className="text-primary underline underline-offset-4 hover:text-accent transition-colors"
                     >
                       executor of an estate
                     </Link>
-                    , I understand the additional responsibilities you're managing.
+                    , the{" "}
+                    <Link to="/executors" className="text-primary underline underline-offset-4 hover:text-accent transition-colors">
+                      executor's guide
+                    </Link>{" "}
+                    covers the additional responsibilities you're managing.
                   </p>
                 </div>
                 <div>
@@ -572,7 +577,7 @@ const PowerOfAttorneys = () => {
                     Financial pressures, pending offers, or legal timelines sometimes mean a property needs to move
                     quickly. A properly documented power of attorney allows the transaction to proceed without
                     unnecessary delays — but the documentation must be current, specific, and accepted by all parties
-                    involved. I help families and{" "}
+                    involved. {FEATURED_BROKER.Role} helps families and{" "}
                     <Link
                       to="/for-attorneys"
                       className="text-primary underline underline-offset-4 hover:text-accent transition-colors"
@@ -602,14 +607,14 @@ const PowerOfAttorneys = () => {
                   additional verification, the sale can stall.
                 </p>
                 <p>
-                  With more than 20 years of experience as both a licensed real estate broker and a certified appraiser,
-                  I've worked through these situations many times. I know what title companies look for, how lenders
-                  evaluate POA documents during underwriting, and how to prepare families before problems arise — not
-                  after.
+                  {FEATURED_BROKER.Role} has more than 20 years of experience as both a licensed real estate broker and a
+                  certified appraiser, and has worked through these situations many times: what title companies look
+                  for, how lenders evaluate POA documents during underwriting, and how to prepare families before
+                  problems arise, not after.
                 </p>
                 <p>
                   Most people in these situations didn't plan for this. They're stepping into unfamiliar territory
-                  during a stressful time. My role is to provide a calm, experienced presence — someone who can explain
+                  during a stressful time. What helps is a calm, experienced presence: someone who can explain
                   the process clearly, anticipate challenges, and keep the transaction moving forward. That kind of
                   guidance makes a real difference when the stakes are high and the timeline is tight.
                 </p>
@@ -674,8 +679,8 @@ const PowerOfAttorneys = () => {
                 Have Questions About a Power of Attorney and Real Estate?
               </h2>
               <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-3 max-w-2xl mx-auto">
-                Every situation is different. I'm here to help you understand your options and move forward with
-                clarity.
+                Every situation is different. The guides here explain your options, and {FEATURED_BROKER.role} can help
+                you move forward with clarity.
               </p>
               <p className="text-primary-foreground/85 text-[15px] leading-relaxed mb-8 max-w-2xl mx-auto">
                 Whether you're a family member stepping in to help, an executor managing property, or a professional

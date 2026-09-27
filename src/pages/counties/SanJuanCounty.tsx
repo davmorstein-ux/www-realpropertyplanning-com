@@ -17,7 +17,7 @@ const SanJuanCounty = () => (
     ]}
     localInsight={`San Juan County is Washington's only island county — an archipelago of 172 named islands accessible only by Washington State Ferry, private boat, or small aircraft. The county's four main islands — San Juan, Orcas, Lopez, and Shaw — each have distinct characters, communities, and real estate markets. San Juan Island's Friday Harbor serves as the county seat and primary commercial center. Orcas Island's Eastsound is the largest community in the archipelago, known for its arts community and Moran State Park. Lopez Island attracts those seeking quiet, agricultural character and cycling culture. Estate and inherited properties throughout San Juan County require specialized knowledge — island logistics, ferry-dependent access, limited comparable sales, and a buyer pool drawn from across the Pacific Northwest and beyond. ${FEATURED_BROKER.Role} provides the experienced, locally coordinated guidance that island estate situations uniquely demand.`}
     aeoQuestion="How does probate real estate work in San Juan County?"
-    aeoAnswer="San Juan County probate is administered through the San Juan County Superior Court in Friday Harbor on San Juan Island. Personal representatives must receive Letters Testamentary before listing or selling estate property. Real Property Planning supports executors and families through the full process — with particular attention to the ferry logistics, island-specific property characteristics, and the mainland coordination that out-of-area families almost always need."
+    aeoAnswer="San Juan County probate is administered through the San Juan County Superior Court in Friday Harbor on San Juan Island. Personal representatives must receive Letters Testamentary before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families through the full process — with particular attention to the ferry logistics, island-specific property characteristics, and the mainland coordination that out-of-area families almost always need."
     aeoSupportFaqs={[
       {
         question: "What makes selling estate property in the San Juan Islands different from mainland sales?",
@@ -40,7 +40,7 @@ const SanJuanCounty = () => (
     ]}
     countySpecificFaqs={[
       {
-        question: "Does Real Property Planning handle San Juan County probate listings before Letters are issued?",
+        question: "Can a San Juan County probate property be listed before Letters are issued?",
         answer: `No — the property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the San Juan County Superior Court in Friday Harbor. ${FEATURED_BROKER.Role} uses that waiting period to conduct the date-of-death valuation walk-through, secure the property, coordinate cleanout vendors, and prepare the marketing file — accounting for ferry schedules and island logistics throughout.`,
       },
       {
@@ -48,7 +48,7 @@ const SanJuanCounty = () => (
         answer: `Ferry schedules affect almost every aspect of an island estate sale — vendor access for cleanout and repairs, showing logistics for buyers traveling from the mainland, and the timeline for inspections and appraisals. ${FEATURED_BROKER.Role} coordinates all of this locally, building ferry schedules into the preparation and marketing plan from the start rather than treating them as an afterthought.`,
       },
       {
-        question: "Can Real Property Planning manage a San Juan County estate sale for mainland families?",
+        question: "Can a San Juan County estate sale be managed for mainland families?",
         answer: `Yes — and mainland coordination is the norm for San Juan County estate sales, not the exception. Most island property owners have family based in King, Snohomish, or Pierce County, or out of state. ${FEATURED_BROKER.Role} handles everything on the island — property assessment, vendor coordination, preparation, showings, and closing — with regular updates so families rarely need to take the ferry for any step of the process.`,
       },
       {
