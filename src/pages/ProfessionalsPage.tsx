@@ -10,7 +10,7 @@ const ProfessionalsPage = () => (
   <div className="min-h-screen flex flex-col">
     <SEOHead
       title="Professionals & Services | Estate, Probate & Senior Specialists — WA"
-      description="Connect with vetted attorneys, CPAs, lenders, appraisers, and senior transition specialists serving families across Washington State."
+      description="Find independent attorneys, CPAs, lenders, appraisers, and senior transition specialists serving families across Washington State."
     />
     <BreadcrumbSchema items={[{ name: "Professionals & Services", url: "/professionals" }]} />
     <Header />

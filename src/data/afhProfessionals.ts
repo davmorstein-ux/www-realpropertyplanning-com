@@ -20,7 +20,8 @@ import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from
  * Change a phone number, email, photo or bio HERE and all of them update.
  *
  * THE STANDARD FOR BEING LISTED, in the site owner's words: people he has met
- * with and vetted. Listings are a courtesy. Nobody pays to be listed and Real
+ * with personally (not "vetted": that implies an endorsement the Disclaimer denies,
+ * owner's decision Sept 27, 2026). Listings are a courtesy. Nobody pays to be listed and Real
  * Property Planning receives nothing if a visitor hires them. The page says so,
  * so do not add anyone who does not meet that standard, and if a paid listing
  * is ever introduced, the statement on the page must change with it.
@@ -221,10 +222,23 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
   },
 ];
 
-/** Groups that actually have someone in them. The page renders only these. */
-export const ACTIVE_AFH_PROFESSIONAL_GROUPS = AFH_PROFESSIONAL_GROUPS.filter((g) => g.people.length > 0);
+/**
+ * Neutral order (owner's decision, Sept 27, 2026, after an outside audit noted
+ * the featured broker always came first): groups A to Z by label, people A to Z
+ * by last name. Applied here so every page that reads these lists agrees.
+ */
+const lastName = (name: string) => {
+  const words = name.split(" & ")[0].split(",")[0].trim().split(/\s+/);
+  return words[words.length - 1].toLowerCase();
+};
+const NEUTRAL_ORDER: AFHProfessionalGroup[] = [...AFH_PROFESSIONAL_GROUPS]
+  .sort((a, b) => a.label.localeCompare(b.label))
+  .map((g) => ({ ...g, people: [...g.people].sort((a, b) => lastName(a.name).localeCompare(lastName(b.name))) }));
+
+/** Groups that actually have someone in them, in neutral order. The page renders only these. */
+export const ACTIVE_AFH_PROFESSIONAL_GROUPS = NEUTRAL_ORDER.filter((g) => g.people.length > 0);
 
 /** Every featured person as one flat list, each tagged with their profession, in group order. This is what the directory grid renders. */
-export const AFH_FEATURED_PEOPLE: Array<{ person: AFHProfessional; profession: string; professionLines: [string, string]; groupId: string }> = AFH_PROFESSIONAL_GROUPS.flatMap((g) =>
+export const AFH_FEATURED_PEOPLE: Array<{ person: AFHProfessional; profession: string; professionLines: [string, string]; groupId: string }> = NEUTRAL_ORDER.flatMap((g) =>
   g.people.map((person) => ({ person, profession: g.profession, professionLines: g.professionLines, groupId: g.id })),
 );

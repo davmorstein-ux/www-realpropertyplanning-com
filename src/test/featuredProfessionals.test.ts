@@ -113,6 +113,18 @@ describe("schema: the hub is not a brokerage", () => {
     expect(county["@type"]).toBe("WebPage");
     expect(county).not.toHaveProperty("employee");
   });
+
+  it("the site-wide graph is only Organization + WebSite; services and the Person live on the profile pages", async () => {
+    const { hubOrganizationSchema, featuredProfessionalProfileSchema } = await import("@/lib/schema");
+    const graph = hubOrganizationSchema["@graph"] as Array<Record<string, unknown>>;
+    expect(graph.map((n) => n["@type"])).toEqual(["Organization", "WebSite"]);
+    expect(graph[0]).not.toHaveProperty("openingHoursSpecification");
+    const html = (await import("node:fs")).readFileSync("index.html", "utf8");
+    const ld = JSON.parse(html.split('<script type="application/ld+json">')[1].split("</script>")[0]);
+    expect(ld["@graph"].map((n: Record<string, unknown>) => n["@type"])).toEqual(["Organization", "WebSite"]);
+    const profile = featuredProfessionalProfileSchema(["estate-appraisals"])["@graph"] as Array<Record<string, unknown>>;
+    expect(profile.map((n) => n["@type"])).toEqual(["Person", "Service"]);
+  });
 });
 
 describe("public/llms.txt matches the record", () => {

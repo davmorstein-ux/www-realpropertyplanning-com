@@ -231,16 +231,30 @@ export const serviceSchemas = [
   },
 ];
 
+/** The website itself, published by the hub Organization. */
+export const websiteNode = {
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  url: SITE_URL,
+  name: BUSINESS_NAME,
+  description:
+    "A free educational hub and directory for probate real estate, inherited property, senior housing transitions and adult family homes in Washington State.",
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  inLanguage: ["en", "es", "ro", "ti", "tl", "vi", "zh-CN", "zh-TW"],
+  isAccessibleForFree: true,
+};
+
 export const hubOrganizationSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      // Was ["RealEstateAgent", "LocalBusiness"] — which told search engines
-      // the hub is a brokerage. It is an educational organization with a
-      // phone, an address and hours; the licensed work belongs to the
-      // featured broker (Person below) and the services carry that Person as
-      // provider.
-      "@type": ["Organization", "LocalBusiness"],
+      // Was ["RealEstateAgent", "LocalBusiness"], then ["Organization",
+      // "LocalBusiness"]. Both told search engines the hub is a business that
+      // provides services. Since Sept 27, 2026 (owner's decision after an
+      // outside audit) it is a plain Organization, published alongside a
+      // WebSite node. The featured broker's Person node and the Service nodes
+      // live only on his own profile pages (featuredProfessionalProfileSchema).
+      "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       name: BUSINESS_NAME,
       alternateName: "Real Property Planning — Washington Probate, Estate & Senior Transition Hub",
@@ -280,14 +294,6 @@ export const hubOrganizationSchema = {
       // No founder/employee here: the featured broker is a Person node in the
       // graph, affiliated with the hub, not staff. No hasOfferCatalog: the hub
       // sells nothing; the Service nodes below name the Person as provider.
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          opens: "08:00",
-          closes: "20:00",
-        },
-      ],
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "(206) 900-3015",
@@ -339,10 +345,23 @@ export const hubOrganizationSchema = {
       ],
       isAccessibleForFree: true,
     },
-    featuredProfessionalPerson,
-    ...serviceSchemas,
+    websiteNode,
   ],
 };
+
+/**
+ * The featured broker's own structured data: the Person and the services he
+ * provides through his own practice. Used ONLY on his profile pages
+ * (/realtor, /real-estate-appraiser), never site-wide, so no hub page tells
+ * search engines that Real Property Planning provides these services.
+ */
+export const featuredProfessionalProfileSchema = (serviceIds: string[]) => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    featuredProfessionalPerson,
+    ...serviceSchemas.filter((s) => serviceIds.some((id) => s["@id"].endsWith(`#service-${id}`))),
+  ],
+});
 
 /** Organization schema — positions Real Property Planning as a hub/ecosystem, not centered on any individual */
 export const organizationSchema = {

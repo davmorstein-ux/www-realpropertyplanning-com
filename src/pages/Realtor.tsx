@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { featuredProfessionalProfileSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
@@ -125,6 +126,7 @@ const Realtor = () => (
       title="Real Estate Broker | Real Property Planning"
       description="Washington State licensed real estate broker serving the Puget Sound region — residential, multi-family, investment, and specialty properties."
       canonical="https://realpropertyplanning.com/realtor"
+      schemaJson={featuredProfessionalProfileSchema(["probate-sales", "inherited-property", "senior-transitions"])}
     />
     <BreadcrumbSchema
       items={[

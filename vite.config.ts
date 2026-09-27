@@ -674,9 +674,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/building-your-trusted-professional-team": {
     title: "Building Your Trusted Professional Team | Real Property Planning",
-    description: "Connect with attorneys, CPAs, lenders, care managers, and other vetted professionals supporting estate, probate, and senior transition decisions.",
+    description: "Connect with attorneys, CPAs, lenders, care managers, and other independent professionals supporting estate, probate, and senior transition decisions.",
     h1: "Building Your Trusted Professional Team",
-    intro: "Estates and senior transitions often require a coordinated team. This guided journey helps families connect with the right vetted professionals.",
+    intro: "Estates and senior transitions often require a coordinated team. This guided journey helps families find the right independent professionals.",
   },
   "/downsizing-preparing-for-transition": {
     title: "Downsizing & Preparing for a Transition | Real Property Planning",
@@ -712,7 +712,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   // ===== Bulk-added SSG coverage (144 previously-uncovered routes) =====
   "/afh-club": {
     title: "AFH Club | Adult Family Home Resource Network | Real Property Planning",
-    description: "Washington State's resource network for adult family home owners, buyers, sellers, prospective providers, and the professionals who serve them — a directory of every licensed home, current homes for sale, licensing and WABO guides, cost and ROI calculators, and a vetted professional network.",
+    description: "Washington State's resource network for adult family home owners, buyers, sellers, prospective providers, and the professionals who serve them — a directory of every licensed home, current homes for sale, licensing and WABO guides, cost and ROI calculators, and a directory of independent professionals.",
     h1: "AFH Club — Washington's adult family home resource network",
     quickAnswerQ: "What is AFH Club?",
     quickAnswerA: "AFH Club is Real Property Planning's section for adult family homes in Washington State. It has two audiences: families looking for a licensed home, and operators who want to open, buy, sell, license, or run one. It includes a statewide directory of every licensed adult family home in Washington — more than 6,000 homes in all 39 counties, from DSHS licensing records — current NWMLS listings of adult family homes for sale, plain-language guides to DSHS licensing, WABO building inspections, costs, and compliance, and a network of brokers, appraisers, business brokers, and management companies who work in this niche.",
@@ -918,9 +918,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/afh-club/find-a-professional": {
     title: "Find an AFH Professional | AFH Club | Real Property Planning",
-    description: "Professionals who work with Washington adult family homes, each one met with and vetted personally: an AFH expert real estate broker and a bookkeeper, with more to come. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant.",
+    description: "Professionals who work with Washington adult family homes, each one met with personally: an AFH expert real estate broker and a bookkeeper, with more to come. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant.",
     h1: "Find an AFH Professional",
-    intro: "Adult family home transactions need professionals who have done one before. This page first introduces people who have been met with and vetted personally: David Stein, AFH expert real estate broker with eXp Realty, and Nicole Guzman Johnson of Books on The Rock, LLC, a Certified QuickBooks ProAdvisor providing bookkeeping. Listings are a courtesy: no one pays to be featured, and Real Property Planning receives nothing if a visitor hires them, with the one exception that David Stein is compensated when hired as a broker. The page then explains what to look for in each kind of professional, including real estate brokers, appraisers, management companies, CPAs, attorneys, and compliance consultants, and how each fits into a purchase, sale, or licensing process.",
+    intro: "Adult family home transactions need professionals who have done one before. This page first introduces people who have been met with personally: an AFH expert real estate broker with eXp Realty, and Nicole Guzman Johnson of Books on The Rock, LLC, a Certified QuickBooks ProAdvisor providing bookkeeping. Listings are a courtesy: no one pays to be featured, and Real Property Planning receives nothing if a visitor hires them, with the one exception that the featured AFH broker is compensated when hired as a broker. The page then explains what to look for in each kind of professional, including real estate brokers, appraisers, management companies, CPAs, attorneys, and compliance consultants, and how each fits into a purchase, sale, or licensing process.",
   },
   "/afh-club/getting-started": {
     title: "Getting Started with an Adult Family Home | AFH Club | Real Property Planning",
@@ -1392,7 +1392,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/professionals-services": {
     title: "Professionals & Services | Estate, Probate & Senior Specialists — WA",
-    description: "Connect with vetted attorneys, CPAs, lenders, appraisers, and senior transition specialists serving families across Washington State.",
+    description: "Find independent attorneys, CPAs, lenders, appraisers, and senior transition specialists serving families across Washington State.",
     h1: "Professionals &amp; Services",
   },
   "/professionals/attorneys": {

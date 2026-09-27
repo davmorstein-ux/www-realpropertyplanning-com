@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 /**
  * AboutTheHub
@@ -236,15 +235,17 @@ const AboutTheHub = () => {
 
         {/* Why it exists — the bridge a visitor otherwise never gets (Sept 24
             2026 audit). Hub voice: the reason is the situation, not a person;
-            the featured professional is named once, by role, from the record. */}
+            the featured professional is named once, by role, from the record.
+            Sept 27, 2026 (owner's decision after an outside audit): no individual is named here;
+            the name stays on the About page, the professional's own pages, and the required
+            attribution line in the disclaimer. */}
         <p className="rpp-abouthub-why">
           Property decisions caused by aging, illness, or a death are not ordinary transactions. An attorney, a
           fiduciary, an appraiser, a care provider, a lender, and several family members are often making decisions at
           the same time, and nobody is responsible for the whole picture. Real Property Planning was built to be the
           neutral place to start: the guides and tools are free, and when a decision needs a licensed professional, the
-          hub connects you with one — including its featured broker, {FEATURED_BROKER.name}, who is also a
-          certified residential appraiser and has worked on these properties for more than{" "}
-          {FEATURED_BROKER.yearsExperience} years.
+          hub connects you with one, including independent featured brokers and appraisers who work through their
+          own practices.
         </p>
 
         {/* The three figures moved to HomepageTrustBar (Sept 2026); see its note. */}

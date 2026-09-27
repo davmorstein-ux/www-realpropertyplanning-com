@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     question: "The house is full of belongings and hasn't been touched in years. Where do you even start?",
-    answer: `${FEATURED_BROKER.Role} starts with a walk-through to separate the property questions from the contents questions. For contents, ${FEATURED_BROKER.pronoun.subject} coordinates vetted estate-sale companies, donation pickups, and full cleanout crews — and tell you which approach actually nets more for the estate. For the property itself, ${FEATURED_BROKER.pronoun.subject} identifies the small set of repairs that move the appraised value (and therefore the sale price) and the larger set that do not. Most estate homes need far less work than families assume.\n\n${softCta}`,
+    answer: `${FEATURED_BROKER.Role} starts with a walk-through to separate the property questions from the contents questions. For contents, ${FEATURED_BROKER.pronoun.subject} coordinates established estate-sale companies, donation pickups, and full cleanout crews — and tell you which approach actually nets more for the estate. For the property itself, ${FEATURED_BROKER.pronoun.subject} identifies the small set of repairs that move the appraised value (and therefore the sale price) and the larger set that do not. Most estate homes need far less work than families assume.\n\n${softCta}`,
   },
   {
     question: "How does selling during probate affect our tax situation as heirs?",

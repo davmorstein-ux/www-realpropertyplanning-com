@@ -218,7 +218,7 @@ const AFHFindProfessional = () => (
   <>
     <SEOHead
       title="Find an AFH Professional | AFH Club | Real Property Planning"
-      description="Professionals who work with Washington adult family homes, each one met with and vetted personally: an AFH expert real estate broker and a bookkeeper, with more to come. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant."
+      description="Professionals who work with Washington adult family homes, each one met with personally: an AFH expert real estate broker and a bookkeeper, with more to come. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant."
       canonical="https://realpropertyplanning.com/afh-club/find-a-professional"
     />
     <BreadcrumbSchema
@@ -271,7 +271,7 @@ const AFHFindProfessional = () => (
           >
             Running an Adult Family Home successfully requires a team of specialists who understand the unique
             intersection of residential real estate, small business operations, and DSHS regulation. This page
-            introduces professionals we have met with and vetted personally, then explains what to look for when
+            introduces professionals met with personally, then explains what to look for when
             choosing each kind of specialist.
           </p>
           <p
@@ -342,7 +342,7 @@ const AFHFindProfessional = () => (
       <section className="rpp-afhpro" style={{ background: "#ffffff", padding: "64px 24px 56px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           <p style={{ fontSize: 14, fontFamily: "'DM Sans', sans-serif", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#481216", margin: "0 0 10px" }}>
-            Met with and vetted
+            Met with personally
           </p>
           <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>
             AFH Club Featured Professionals

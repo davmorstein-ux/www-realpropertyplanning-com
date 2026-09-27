@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { featuredProfessionalProfileSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
@@ -14,6 +15,7 @@ const RealEstateAppraiser = () => (
       title="Real Estate Appraisers in Washington State"
       description="Washington State Certified Residential Appraisers. Estate, probate, and senior transition appraisals accepted by courts, lenders, and the IRS."
       canonical="https://realpropertyplanning.com/real-estate-appraiser"
+      schemaJson={featuredProfessionalProfileSchema(["estate-appraisals"])}
     />
     <BreadcrumbSchema
       items={[

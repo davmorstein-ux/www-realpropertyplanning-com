@@ -275,7 +275,7 @@ const Section = ({
 const jsonLd = articleSchema({
   headline: "Building Your Trusted Professional Team",
   description:
-    "Connect with vetted legal, financial, senior housing, and property professionals throughout Washington State.",
+    "Find independent legal, financial, senior housing, and property professionals throughout Washington State.",
   url: "/building-your-trusted-professional-team",
   datePublished: "2026-05-08",
   dateModified: "2026-05-17",
@@ -287,7 +287,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Building Your Trusted Professional Team | Real Property Planning"
-        description="Connect with vetted legal, financial, senior housing, and property professionals throughout Washington State."
+        description="Find independent legal, financial, senior housing, and property professionals throughout Washington State."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema

@@ -54,7 +54,7 @@ interface CategoryGroup {
   professionals: Professional[];
 }
 
-const groups: CategoryGroup[] = [
+const groupsAsWritten: CategoryGroup[] = [
   {
     category: "Real Estate & Appraisal",
     professionals: [
@@ -314,6 +314,22 @@ const groups: CategoryGroup[] = [
     ],
   },
 ];
+
+/**
+ * Directory order is neutral (owner's decision, Sept 27, 2026, after an outside
+ * audit noted the featured broker always came first): categories A to Z, and
+ * people A to Z by last name within each category. Sorted here, so entries can
+ * be written in any order above and new ones fall into place. Ties keep their
+ * written order (the broker and appraiser tiles for the same person).
+ */
+const lastName = (name: string) => {
+  const first = name.split(" & ")[0].split(",")[0].trim();
+  const words = first.split(/\s+/);
+  return words[words.length - 1].toLowerCase();
+};
+const groups: CategoryGroup[] = [...groupsAsWritten]
+  .sort((a, b) => a.category.localeCompare(b.category))
+  .map((g) => ({ ...g, professionals: [...g.professionals].sort((a, b) => lastName(a.name).localeCompare(lastName(b.name))) }));
 
 const wrap = { maxWidth: 1080, margin: "0 auto" };
 

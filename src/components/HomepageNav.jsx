@@ -5,7 +5,7 @@ const sections = [
     title: "Professionals & Services",
     href: "/professionals-services",
     img: "/tiles/nav/professional-services.webp",
-    blurb: "Connect with vetted attorneys, CPAs, lenders, brokers, and senior care advisors.",
+    blurb: "Find independent attorneys, CPAs, lenders, brokers, and senior care advisors.",
   },
   {
     title: "Roles & Responsibilities",

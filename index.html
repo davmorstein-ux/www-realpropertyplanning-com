@@ -76,46 +76,77 @@
          add weights or apply it anywhere else. -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" />
 
+    <!-- Organization + WebSite only (Sept 27, 2026). Not LocalBusiness: the hub provides no services. Keep in step with hubOrganizationSchema in src/lib/schema.ts. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": ["Organization", "LocalBusiness"],
-        "@id": "https://realpropertyplanning.com/#organization",
-        "name": "Real Property Planning",
-        "url": "https://realpropertyplanning.com",
-        "telephone": "(206) 900-3015",
-        "email": "info@realpropertyplanning.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://realpropertyplanning.com/logo.webp",
-          "width": 400,
-          "height": 400
-        },
-        "image": "https://realpropertyplanning.com/logo.webp",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "1455 NW Leary Way",
-          "addressLocality": "Seattle",
-          "addressRegion": "WA",
-          "postalCode": "98107",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 47.6062,
-          "longitude": -122.3321
-        },
-        "areaServed": { "@type": "State", "name": "Washington" },
-        "description": "A free educational hub for probate real estate, inherited property, estate valuation, and senior housing transitions in Washington State. The hub holds no licenses; licensed brokerage and appraisal work is done by featured professionals through their own practices.",
-        "isAccessibleForFree": true,
-        "knowsAbout": ["Probate Real Estate", "Estate Sales", "Senior Transitions", "Residential Appraisal", "Inherited Property", "Adult Family Homes"],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "(206) 900-3015",
-          "contactType": "customer service",
-          "areaServed": "US-WA",
-          "availableLanguage": "English"
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://realpropertyplanning.com/#organization",
+            "name": "Real Property Planning",
+            "url": "https://realpropertyplanning.com",
+            "telephone": "(206) 900-3015",
+            "email": "info@realpropertyplanning.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://realpropertyplanning.com/logo.webp",
+              "width": 400,
+              "height": 400
+            },
+            "image": "https://realpropertyplanning.com/logo.webp",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1455 NW Leary Way",
+              "addressLocality": "Seattle",
+              "addressRegion": "WA",
+              "postalCode": "98107",
+              "addressCountry": "US"
+            },
+            "areaServed": {
+              "@type": "State",
+              "name": "Washington"
+            },
+            "description": "A free educational hub for probate real estate, inherited property, estate valuation, and senior housing transitions in Washington State. The hub holds no licenses; licensed brokerage and appraisal work is done by featured professionals through their own practices.",
+            "isAccessibleForFree": true,
+            "knowsAbout": [
+              "Probate Real Estate",
+              "Estate Sales",
+              "Senior Transitions",
+              "Residential Appraisal",
+              "Inherited Property",
+              "Adult Family Homes"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "(206) 900-3015",
+              "contactType": "customer service",
+              "areaServed": "US-WA",
+              "availableLanguage": "English"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://realpropertyplanning.com/#website",
+            "url": "https://realpropertyplanning.com",
+            "name": "Real Property Planning",
+            "description": "A free educational hub and directory for probate real estate, inherited property, senior housing transitions and adult family homes in Washington State.",
+            "publisher": {
+              "@id": "https://realpropertyplanning.com/#organization"
+            },
+            "inLanguage": [
+              "en",
+              "es",
+              "ro",
+              "ti",
+              "tl",
+              "vi",
+              "zh-CN",
+              "zh-TW"
+            ],
+            "isAccessibleForFree": true
+          }
+        ]
       }
     </script>
     <title>Probate &amp; Estate Real Estate in Washington State | Real Property Planning</title>
