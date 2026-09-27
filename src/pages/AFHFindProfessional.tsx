@@ -18,7 +18,8 @@ import { AFH_FEATURED_PEOPLE, type AFHProfessional } from "@/data/afhProfessiona
  * there is one. The logo slot is always reserved so cards line up.
  */
 const PersonCard = ({ person, professionLines }: { person: AFHProfessional; professionLines: [string, string] }) => {
-  const site = person.website?.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  /* The card shows just the domain ("twomaidscleaning.com"); the link still goes to the full address. A path made it too long for the card. */
+  const site = person.website?.replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0];
   const [emailLocal, emailDomain] = person.email ? person.email.split("@") : ["", ""];
   /* Every slot has a fixed height so the same row of every card lines up across the grid
      (David, Sept 22): profession, photo, name, license (kept open even when empty — most
@@ -292,8 +293,11 @@ const AFHFindProfessional = () => (
         .rpp-afhpro h3.rpp-afhpro-h3 { font-size: clamp(20px, 2.4vw, 24px) !important; line-height: 1.25 !important; margin: 0 0 8px !important; }
         .rpp-afhpro p.rpp-afhpro-p { font-size: 18px !important; line-height: 1.75 !important; margin: 0 0 22px !important; }
         .rpp-afhpro p.rpp-afhpro-note { font-size: 16px !important; line-height: 1.65 !important; margin: 14px 0 0 !important; }
-        .rpp-afhpro-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 8px; }
-        @media (min-width: 640px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        /* One card per row on phones (David, Sept 27): at two columns the names, emails and
+           websites were cut off. Two columns from 480px, three from 768, four from 960. */
+        .rpp-afhpro-grid { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); margin-top: 8px; }
+        @media (min-width: 480px) { .rpp-afhpro-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (min-width: 768px) { .rpp-afhpro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
         @media (min-width: 960px) { .rpp-afhpro-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; } }
         /* Fixed-height slots: the same row of every card lines up across the grid. */
         .rpp-afhpro .rpp-afhpro-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 8px 12px; border: 1px solid #ddd6cc; border-radius: 12px; background: #fff; font-family: 'DM Sans', sans-serif; min-width: 0; line-height: 1.25; }
@@ -304,8 +308,8 @@ const AFHFindProfessional = () => (
            photos below line up. Each line stays on one line of its own. */
         .rpp-afhpro .rpp-afhpro-card-profession { height: 30px; font-size: 10.5px; line-height: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #481216; margin-bottom: 8px !important; }
         .rpp-afhpro .rpp-afhpro-card-profession span { display: block; height: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        /* Two columns on a phone leave ~150px per label: tighter tracking keeps "House Cleaning" and "Water Damage" whole. */
-        @media (max-width: 639px) { .rpp-afhpro .rpp-afhpro-card-profession { letter-spacing: 0.03em; } }
+        /* At two columns (480-767px) each label has ~200px: tighter tracking keeps "House Cleaning" and "Water Damage" whole. */
+        @media (min-width: 480px) and (max-width: 767px) { .rpp-afhpro .rpp-afhpro-card-profession { letter-spacing: 0.03em; } }
         .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 2px solid #f1ede6; margin-bottom: 8px !important; }
         .rpp-afhpro .rpp-afhpro-card-name { height: 20px; font-size: 15px; font-weight: 700; color: #280a0c; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .rpp-afhpro .rpp-afhpro-card-name a { color: inherit !important; text-decoration: none !important; }
