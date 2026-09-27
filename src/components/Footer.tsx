@@ -225,6 +225,9 @@ const Footer = () => {
             <Link to="/sitemap" className="rpp-footer-link">
               Site Map
             </Link>
+            <Link to="/afh-club/site-map" className="rpp-footer-link">
+              AFH Club Site Map
+            </Link>
           </div>
         </div>
 

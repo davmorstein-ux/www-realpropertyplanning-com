@@ -162,7 +162,13 @@ sufficient; ask for a screenshot from the real phone when it matters.
 1. The page in `src/pages/`.
 2. `src/App.tsx`: the lazy import and the `<Route>`.
 3. `public/sitemap.xml`: alphabetical, same format as neighbours. Then run
-   `node scripts/check-sitemap.mjs`; it must report no drift.
+   `node scripts/check-sitemap.mjs`; it must report no drift. This is the one
+   file to edit: the build splits it into `sitemap-main.xml`,
+   `sitemap-afh-club.xml` and `sitemap-afh-directory.xml` behind a sitemap
+   index at `/sitemap.xml` (dist only, see the end of `vite.config.ts`).
+   Also put the page on a visitor site map in `src/data/siteMaps.ts`, unless a
+   header menu, the guide library or the calculator index already lists it;
+   `src/test/siteMaps.test.ts` fails on any live page on neither map.
 4. `vite.config.ts`: a route-metadata entry (title, description, h1, quick
    answer, intro, FAQs) so crawlers get real content.
 5. If it is an AFH Club guide: the grid **and** the carousel in
@@ -192,6 +198,7 @@ sufficient; ask for a screenshot from the real phone when it matters.
 | The guides & articles library, and the homepage's "90+" figure | `src/data/guideLibrary.ts` (tests: `src/test/guideLibrary.test.ts`). Rendered by `/guides-and-resources`, written into its static HTML, and counted. **The count is exactly 90, with no slack:** remove a piece without adding one and the test fails. Change the homepage figure rather than let it overstate. AFH content and `/resources/*` directory pages are deliberately not counted |
 | Every calculator, and the homepage's "10+" figure | `src/data/calculatorIndex.ts` (tests: `src/test/calculatorIndex.test.ts`). Rendered by `/calculators` |
 | AFH Club's featured professionals, and each person's details | `src/data/afhProfessionals.ts` (tests: `src/test/afhProfessionals.test.ts`). Read by `/afh-club/find-a-professional`, `/afh-club/real-estate-broker` and `/bookkeeping-services`, so a phone number is changed once. **The listing standard is on the page and must stay true:** people the owner has met with and vetted; a courtesy, nobody pays, RPP receives nothing; the one exception (the owner is compensated when hired as broker) is stated on his own listing. Group text explains why a ROLE matters and never makes a claim about a person. Empty groups are not rendered |
+| The two visitor site maps, `/sitemap` (families) and `/afh-club/site-map` (AFH owners and operators) | `src/data/siteMaps.ts` (tests: `src/test/siteMaps.test.ts`). Built mostly from `PRIMARY_NAV`, the guide library and the calculator index; the rest is listed by hand. The audience rule decides the map. `/counties/<slug>` pages are excluded as duplicates of `/<slug>-county` (same component at two addresses, both in the XML sitemap; a redirect is worth considering) |
 | DSHS licensed-home directory | `src/data/afh/` (public state data) |
 | For-sale and sold listings | `src/data/afhListings.ts` |
 

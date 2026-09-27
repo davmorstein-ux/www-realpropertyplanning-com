@@ -50,6 +50,7 @@ const ORIGIN = "https://realpropertyplanning.com";
 const INTENTIONALLY_EXCLUDED = {
   "*": "catch-all 404 route",
   "/sitemap": "human-readable sitemap page; the XML is the crawlable one",
+  "/afh-club/site-map": "human-readable AFH Club site map; same reason as /sitemap",
 };
 
 if (!existsSync(APP) || !existsSync(SITEMAP)) {

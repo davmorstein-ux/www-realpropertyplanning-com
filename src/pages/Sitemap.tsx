@@ -1,162 +1,77 @@
 import { Link } from "react-router-dom";
-import { useMemo } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { SITEMAP_PAGES, SITEMAP_REDIRECTS, type SitemapPage } from "@/data/sitemap-data";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import SiteMapSections from "@/components/SiteMapSections";
+import { RPP_SITE_MAP } from "@/data/siteMaps";
 
-interface TreeNode {
-  segment: string;
-  fullPath: string;
-  page?: SitemapPage;
-  children: Map<string, TreeNode>;
-}
-
-function buildTree(pages: SitemapPage[]): TreeNode {
-  const root: TreeNode = { segment: "", fullPath: "/", children: new Map(), page: pages.find((p) => p.path === "/") };
-  for (const page of pages) {
-    if (page.path === "/" || page.path === "*" || page.path.includes(":")) continue;
-    const segments = page.path.split("/").filter(Boolean);
-    let node = root;
-    let acc = "";
-    for (const seg of segments) {
-      acc += "/" + seg;
-      let next = node.children.get(seg);
-      if (!next) {
-        next = { segment: seg, fullPath: acc, children: new Map() };
-        node.children.set(seg, next);
-      }
-      node = next;
-    }
-    node.page = page;
-  }
-  return root;
-}
-
-const TreeRow = ({ node, depth }: { node: TreeNode; depth: number }) => {
-  const children = [...node.children.values()].sort((a, b) => a.segment.localeCompare(b.segment));
-  const hasPage = !!node.page;
-  return (
-    <div>
-      <div
-        className="py-2 border-l-2 border-gold/20 pl-4"
-        style={{ marginLeft: `${depth * 1.25}rem`, lineHeight: 1.4 }}
-      >
-        <div className="flex flex-wrap items-baseline gap-x-3">
-          {hasPage ? (
-            <Link
-              to={node.fullPath}
-              className="font-mono text-primary hover:text-gold transition-colors font-semibold"
-              style={{ fontSize: "12px", lineHeight: 1.4 }}
-            >
-              {node.fullPath}
-            </Link>
-          ) : (
-            <span className="font-mono text-muted-foreground" style={{ fontSize: "12px", lineHeight: 1.4 }}>
-              {node.fullPath}/
-            </span>
-          )}
-        </div>
-        {hasPage && node.page!.links.length > 0 && (
-          <div className="mt-1 ml-1 text-muted-foreground" style={{ fontSize: "11px", lineHeight: 1.4 }}>
-            <span className="text-gold uppercase tracking-wide font-semibold mr-2" style={{ fontSize: "11px" }}>
-              Links to:
-            </span>
-            {node.page!.links.map((l, i) => (
-              <span key={l}>
-                <Link to={l} className="font-mono hover:text-gold transition-colors" style={{ fontSize: "11px" }}>
-                  {l}
-                </Link>
-                {i < node.page!.links.length - 1 && <span className="text-muted-foreground/40"> · </span>}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
-      {children.map((c) => (
-        <TreeRow key={c.fullPath} node={c} depth={depth + 1} />
-      ))}
-    </div>
-  );
+/**
+ * /sitemap: the Real Property Planning site map, for families, executors,
+ * trustees and professionals.
+ *
+ * Rebuilt Sept 27, 2026. It was a tree of raw addresses in 11px code type with
+ * "Links to:" lines under each, generated from src/data/sitemap-data.ts; hard
+ * to read for this audience and mixed AFH Club pages in with family pages. It
+ * now lists page titles by topic, from src/data/siteMaps.ts, and sends
+ * adult family home owners and operators to /afh-club/site-map.
+ *
+ * Section accents are the header menu colours, so a section here reads as the
+ * same place as its menu.
+ */
+const ACCENTS: Record<string, string> = {
+  "estate-probate": "#25597e",
+  "senior-transitions": "#1d7239",
+  professionals: "#9c5000",
+  guides: "#6b30a6",
 };
 
-
-const Sitemap = () => {
-  const tree = useMemo(() => buildTree(SITEMAP_PAGES), []);
-  const topChildren = useMemo(
-    () => [...tree.children.values()].sort((a, b) => a.segment.localeCompare(b.segment)),
-    [tree],
-  );
-  const totalPages = SITEMAP_PAGES.filter((p) => !p.path.includes(":") && p.path !== "*").length;
-
-  return (
-    <div className="rpp-sitemap min-h-screen bg-background">
-      <style>{`
-        .rpp-sitemap h1 { font-size: 22px !important; }
-        .rpp-sitemap h2, .rpp-sitemap h3, .rpp-sitemap h4 { font-size: 14px !important; }
-        .rpp-sitemap p { font-size: 12px !important; }
-        .rpp-sitemap .rpp-sitemap-counter { font-size: 11px !important; }
-        .rpp-sitemap main a,
-        .rpp-sitemap main .font-mono,
-        .rpp-sitemap main .font-mono span,
-        .rpp-sitemap main .font-mono a { font-size: 11px !important; }
-      `}</style>
-      <SEOHead
-        title="Site Map | Real Property Planning"
-        description="Complete site map of Real Property Planning showing every page, its URL, and the internal links each page contains."
-      />
-      <Header />
-      <main id="main-content">
-        <HeroBandTitle as="h1">Site Map</HeroBandTitle>
-
-
-        <section className="py-16 lg:py-20 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-5xl">
-              <div className="mb-10" style={{ lineHeight: 1.4 }}>
-                <Link to="/" className="font-mono text-primary hover:text-gold font-semibold" style={{ fontSize: "12px" }}>
-                  /
-                </Link>
-                <span className="ml-3 text-muted-foreground" style={{ fontSize: "13px" }}>(Homepage)</span>
-              </div>
-
-              {topChildren.map((node) => (
-                <div key={node.fullPath} className="mb-10">
-                  <h2 className="font-serif text-2xl text-primary font-semibold mb-3 border-b border-gold/30 pb-2">
-                    /{node.segment}
-                  </h2>
-                  <TreeRow node={node} depth={0} />
-                </div>
-              ))}
-
-              <div className="mt-16 pt-10 border-t border-gold/30">
-                <h2 className="font-serif text-2xl text-primary font-semibold mb-4">
-                  Legacy Redirects
-                </h2>
-                <p className="text-muted-foreground mb-6" style={{ fontSize: "13px" }}>
-                  Older URLs that automatically forward to their current canonical page.
-                </p>
-                <div className="grid gap-1">
-                  {SITEMAP_REDIRECTS.map((r) => (
-                    <div key={r.from} className="font-mono py-1 flex flex-wrap gap-2 items-center" style={{ fontSize: "11px", lineHeight: 1.4 }}>
-                      <span className="text-muted-foreground">{r.from}</span>
-                      <span className="text-gold">→</span>
-                      <Link to={r.to} className="text-primary hover:text-gold">
-                        {r.to}
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div>
+const Sitemap = () => (
+  <div className="min-h-screen" style={{ background: "#f7f4ef" }}>
+    <SEOHead
+      title="Site Map | Real Property Planning"
+      description="Every Real Property Planning page by topic: estate and probate, senior transitions, professionals, guides, calculators and local pages. Adult family home owners have their own AFH Club site map."
+    />
+    <BreadcrumbSchema
+      items={[
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Site Map", url: "https://realpropertyplanning.com/sitemap" },
+      ]}
+    />
+    <Header />
+    <main id="main-content">
+      <HeroBandTitle as="h1">Site Map</HeroBandTitle>
+      <section style={{ padding: "40px 16px 64px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <style>{`
+            .smap-intro p.smap-lead { font-family: 'DM Sans', sans-serif !important; font-size: 19px !important; line-height: 1.6 !important; color: #1c1917 !important; margin: 0 0 18px !important; max-width: 760px; }
+            .smap-intro .smap-afh { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; background: #ffffff; border: 1px solid #ddd6cc; border-left: 5px solid #7f2028; border-radius: 10px; padding: 16px 20px; margin: 0 0 28px; }
+            .smap-intro .smap-afh span { font-family: 'DM Sans', sans-serif; font-size: 18px; line-height: 1.45; color: #1c1917; flex: 1 1 320px; }
+            .smap-intro a.smap-afh-link { display: inline-flex; align-items: center; min-height: 48px; padding: 10px 20px !important; background: #7f2028 !important; color: #ffffff !important; border-radius: 6px; font-family: 'DM Sans', sans-serif !important; font-size: 17px !important; font-weight: 700 !important; text-decoration: none !important; }
+            .smap-intro a.smap-afh-link::after { content: none !important; display: none !important; }
+            @media (hover: hover) { .smap-intro a.smap-afh-link:hover { background: #5e161d !important; } }
+          `}</style>
+          <div className="smap-intro">
+            <p className="smap-lead">
+              Every page on Real Property Planning, grouped by topic. Start from the <Link to="/">homepage</Link> or go
+              straight to what you need.
+            </p>
+            <div className="smap-afh">
+              <span>
+                <strong>Own, run, buy or sell an adult family home?</strong> AFH Club has its own site map.
+              </span>
+              <Link to="/afh-club/site-map" className="smap-afh-link rpp-dark-surface">
+                AFH Club Site Map →
+              </Link>
             </div>
           </div>
-        </section>
-
-      </main>
-      <Footer />
-    </div>
-  );
-};
+          <SiteMapSections sections={RPP_SITE_MAP} accents={ACCENTS} />
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </div>
+);
 
 export default Sitemap;

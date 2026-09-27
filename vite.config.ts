@@ -1113,6 +1113,11 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "AFH Resource Library",
     intro: "Every AFH Club guide in one place, organized by what you are trying to do: understand what an adult family home is, decide whether to open one, get licensed, meet building requirements, buy or sell, stay compliant, or plan a retirement sale.",
   },
+  "/afh-club/site-map": {
+    title: "AFH Club Site Map | Real Property Planning",
+    description: "Every AFH Club page by topic: buying and selling an adult family home, homes for sale, licensing and WABO, how AFHs get paid, calculators and professionals.",
+    h1: "AFH Club Site Map",
+  },
   "/afh-club/training-education": {
     title: "AFH Training & Education | AFH Club | Real Property Planning",
     description: "Complete guide to Washington State AFH training requirements — 75-hour HCA training, AFH Administrator Training, specialty courses, continuing education, and where to enroll.",
@@ -1672,7 +1677,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/sitemap": {
     title: "Site Map | Real Property Planning",
-    description: "Complete site map of Real Property Planning showing every page, its URL, and the internal links each page contains.",
+    description: "Every Real Property Planning page by topic: estate and probate, senior transitions, professionals, guides, calculators and local pages. Adult family home owners have their own AFH Club site map.",
     h1: "Site Map",
   },
   "/spokane-probate-estate-real-estate": {
@@ -2405,6 +2410,48 @@ const routeMetadataPlugin = {
       await writeFile(sitemapPath, sitemap, "utf8");
     } catch {
       console.warn("route-metadata-prerender: sitemap.xml not found in dist; listing URLs not added");
+    }
+
+    /* Split the built sitemap into three files behind a sitemap index (Sept 27, 2026).
+       public/sitemap.xml stays the single hand-maintained source that
+       scripts/check-sitemap.mjs and scripts/generate-directory-sitemap.mjs work on;
+       only dist/ is split. Google Search Console reports indexing per file, so the
+       ~4,500 directory pages no longer bury the signal for the guides.
+         sitemap-main.xml          Real Property Planning (family side)
+         sitemap-afh-club.xml      AFH Club guides, tools, listings hubs
+         sitemap-afh-directory.xml licensed-home directory, individual listings, city for-sale pages
+       robots.txt keeps pointing at /sitemap.xml, which becomes the index. */
+    try {
+      const xml = await readFile(sitemapPath, "utf8");
+      const head = xml.slice(0, xml.indexOf(">", xml.indexOf("<urlset")) + 1);
+      const entries = [...xml.matchAll(/<url>[\s\S]*?<\/url>/g)].map((m) => m[0]);
+      const pathOf = (e: string) => (e.match(/<loc>https?:\/\/[^/<]+([^<]*)<\/loc>/)?.[1] || "/");
+      const LISTING_HUBS = new Set(["properties", "businesses", "for-lease"]);
+      const bucket = (p: string) => {
+        if (p === "/afh-club/homes" || p.startsWith("/afh-club/homes/") || p.startsWith("/afh-club/for-sale/")) return "afh-directory";
+        const listing = p.match(/^\/afh-club\/listings\/([^/]+)$/);
+        if (listing && !LISTING_HUBS.has(listing[1])) return "afh-directory";
+        if (p === "/afh-club" || p.startsWith("/afh-club/") || p === "/afh-submit") return "afh-club";
+        return "main";
+      };
+      const files: Record<string, string[]> = { main: [], "afh-club": [], "afh-directory": [] };
+      for (const e of entries) files[bucket(pathOf(e))].push(e);
+      const today = new Date().toISOString().slice(0, 10);
+      const index: string[] = [];
+      for (const [name, list] of Object.entries(files)) {
+        const file = `sitemap-${name}.xml`;
+        await writeFile(path.join(distDir, file), `${head}\n${list.join("\n")}\n</urlset>\n`, "utf8");
+        const lastmod = list.map((e) => e.match(/<lastmod>([^<]+)<\/lastmod>/)?.[1] || "").sort().pop() || today;
+        index.push(`  <sitemap><loc>${SITE_URL}/${file}</loc><lastmod>${lastmod}</lastmod></sitemap>`);
+        console.log(`route-metadata-prerender: ${file} — ${list.length} URLs`);
+      }
+      await writeFile(
+        sitemapPath,
+        `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${index.join("\n")}\n</sitemapindex>\n`,
+        "utf8"
+      );
+    } catch (err) {
+      console.warn("route-metadata-prerender: sitemap split skipped; dist/sitemap.xml left whole", err);
     }
   },
 };
