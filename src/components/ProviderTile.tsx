@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { BIO_CLOSE_DELAY, BIO_FADE_OUT, bioTransition, isOverElement, isOverHeadshot } from "@/lib/bioHoverZone";
 import { trackProviderClick, withReferralParams } from "@/lib/providerTracking";
 
 interface ProviderTileProps {
@@ -61,8 +62,8 @@ export default function ProviderTile({
     if (closeTimer.current) clearTimeout(closeTimer.current);
     closeTimer.current = setTimeout(() => {
       setVisible(false);
-      closeTimer.current = setTimeout(() => setHovered(false), 400);
-    }, 150);
+      closeTimer.current = setTimeout(() => setHovered(false), BIO_FADE_OUT);
+    }, BIO_CLOSE_DELAY);
   };
 
   // Robust dismissal: while hovered, watch the document pointer and close
@@ -74,17 +75,9 @@ export default function ProviderTile({
   useEffect(() => {
     if (!hovered || !bio) return;
     const onMove = (e: MouseEvent) => {
-      const el = wrapperRef.current;
-      if (!el) return;
-      const r = el.getBoundingClientRect();
-      const insideTile = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
-
-      let insideOverlay = false;
-      const overlayEl = overlayRef.current;
-      if (overlayEl) {
-        const or = overlayEl.getBoundingClientRect();
-        insideOverlay = e.clientX >= or.left && e.clientX <= or.right && e.clientY >= or.top && e.clientY <= or.bottom;
-      }
+      // Only the headshot (plus a small margin) or the bio panel itself keeps it open.
+      const insideTile = isOverHeadshot(wrapperRef.current, e.clientX, e.clientY);
+      const insideOverlay = isOverElement(overlayRef.current, e.clientX, e.clientY);
 
       if (insideTile || insideOverlay) {
         // Pointer is safely inside one of the two zones — cancel any close
@@ -136,7 +129,7 @@ export default function ProviderTile({
               zIndex: 2147483646,
               background: "rgba(10,22,40,0.5)",
               opacity: visible ? 1 : 0,
-              transition: "opacity 1.4s ease",
+              transition: bioTransition(visible, ["opacity"]),
               pointerEvents: "none",
             }}
           />
@@ -159,7 +152,7 @@ export default function ProviderTile({
               opacity: visible ? 1 : 0,
               filter: visible ? "blur(0px)" : "blur(8px)",
               transition:
-                "opacity 1.4s cubic-bezier(0.16,1,0.3,1), transform 1.4s cubic-bezier(0.16,1,0.3,1), filter 1.4s cubic-bezier(0.16,1,0.3,1)",
+                bioTransition(visible, ["opacity", "transform", "filter"]),
               pointerEvents: "auto",
             }}
           >
@@ -330,7 +323,12 @@ export default function ProviderTile({
       {/* Top portion — hover trigger scoped to here only, not the contact section below */}
       <div
         ref={wrapperRef}
-        onMouseEnter={handleEnter}
+        onMouseMove={(e) => {
+          if (!bio) return;
+          const over = isOverHeadshot(wrapperRef.current, e.clientX, e.clientY);
+          e.currentTarget.style.cursor = over ? "pointer" : "";
+          if (over) handleEnter();
+        }}
         onMouseLeave={handleLeave}
         className="marquee-hover"
         style={{
@@ -339,7 +337,6 @@ export default function ProviderTile({
           flexDirection: "column",
           alignItems: "center",
           width: "100%",
-          cursor: bio ? "pointer" : "default",
         }}
       >
         {/* Tile: logo */}
