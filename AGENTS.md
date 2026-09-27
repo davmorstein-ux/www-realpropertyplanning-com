@@ -110,7 +110,7 @@ from background or border colour, so a red button (`background:#ca2b38` becomes
 `.rpp-dark-surface` is exempt, and that class makes its text white. The exemption is
 wrapped in `:where()` on purpose: a bare `:not(.class)` adds specificity and
 overrode the button fixes for `.rpp-afh-return` and `.rpp-filled` (Sept 27, 2026).
-Body text is `#3d3833`; do not introduce text lighter than about 7:1 on its
+Body text is near-black `#1c1917` (owner's choice); do not introduce text lighter than about 7:1 on its
 background. The audience is older and people have said so.
 
 **How to win:** put the rule in a page-scoped `<style>` block (see `PAGE_CSS` in
