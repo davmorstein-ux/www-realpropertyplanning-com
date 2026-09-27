@@ -44,14 +44,14 @@ const FeaturedAttorneys = () => (
                     <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
                       <span
                         className="block mb-2 text-[11px] font-bold tracking-[0.18em] uppercase"
-                        style={{ color: "#b35f66", fontFamily: "'DM Sans', sans-serif" }}
+                        style={{ color: "#8a3a42", fontFamily: "'DM Sans', sans-serif" }}
                       >
                         {s.pill}
                       </span>
                       <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center">
                         {s.title}
                       </h3>
-                      <p className="text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', sans-serif", color: "#806b6d" }}>
+                      <p className="text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', sans-serif", color: "#5c474a" }}>
                         {s.tagline}
                       </p>
                       <span className="gold-cta mt-auto">

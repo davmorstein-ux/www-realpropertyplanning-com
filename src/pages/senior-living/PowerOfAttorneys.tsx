@@ -677,20 +677,20 @@ const PowerOfAttorneys = () => {
                 Every situation is different. I'm here to help you understand your options and move forward with
                 clarity.
               </p>
-              <p className="text-primary-foreground/65 text-[15px] leading-relaxed mb-8 max-w-2xl mx-auto">
+              <p className="text-primary-foreground/85 text-[15px] leading-relaxed mb-8 max-w-2xl mx-auto">
                 Whether you're a family member stepping in to help, an executor managing property, or a professional
                 coordinating on behalf of a client — a conversation is the best place to start.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
                 <a
                   href="tel:+12069003015"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gold text-primary font-semibold rounded-lg hover:bg-gold/90 transition-colors text-base"
+                  className="rpp-dark-surface inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gold text-primary font-semibold rounded-lg hover:bg-gold/90 transition-colors text-base"
                 >
                   Call (206) 900-3015
                 </a>
                 <Link
                   to="/contact?reason=aging-parent"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary-foreground/10 text-primary-foreground font-semibold rounded-lg border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-colors text-base"
+                  className="rpp-dark-surface inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary-foreground/10 text-primary-foreground font-semibold rounded-lg border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-colors text-base"
                 >
                   <img
                     src={iconEmail3d}

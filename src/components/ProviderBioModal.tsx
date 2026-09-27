@@ -137,7 +137,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                 style={{
                   fontFamily: "'DM Sans', system-ui, sans-serif",
                   fontSize: 14,
-                  color: "#5e5954",
+                  color: "#3d3833",
                   lineHeight: 1.75,
                   marginBottom: 16,
                 }}
@@ -168,7 +168,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                   >
                     Specialties
                   </div>
-                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#5e5954", lineHeight: 1.6 }}>
+                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#3d3833", lineHeight: 1.6 }}>
                     {props.specialty}
                   </div>
                 </div>
@@ -197,7 +197,7 @@ export default function ProviderBioModal(props: ProviderBioModalProps) {
                   Contact
                 </div>
                 {props.address && (
-                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#5e5954" }}>📍 {props.address}</div>
+                  <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#3d3833" }}>📍 {props.address}</div>
                 )}
                 {props.phone && (
                   <a

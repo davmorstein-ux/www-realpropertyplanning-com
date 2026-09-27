@@ -494,7 +494,7 @@ const FeaturedProfessionals = () => (
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: 14,
                       fontWeight: 600,
-                      color: "#5a5147",
+                      color: "#3d3833",
                       margin: "0 0 10px",
                     }}
                   >
@@ -504,7 +504,7 @@ const FeaturedProfessionals = () => (
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: 14,
-                      color: "#5a5147",
+                      color: "#3d3833",
                       lineHeight: 1.6,
                       margin: 0,
                     }}

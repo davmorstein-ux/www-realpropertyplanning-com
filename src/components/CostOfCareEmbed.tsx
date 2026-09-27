@@ -168,7 +168,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         <h2 className="coc-card-title" style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0 }}>
           Cost of <strong className="coc-card-title-accent">Care Calculator</strong>
         </h2>
-        <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
+        <div style={{ fontSize: 13, color: "#3f4a46", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
           Washington vs. National Average
         </div>
       </div>
@@ -607,13 +607,13 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           justify-content: space-between;
           font-family: "DM Sans", sans-serif;
           font-size: 13px;
-          color: #6b635b;
+          color: #4a443e;
         }
         .coc-infl-source.coc-infl-source {
           font-family: "DM Sans", sans-serif !important;
           font-size: 14px !important;
           line-height: 1.5 !important;
-          color: #6b635b !important;
+          color: #4a443e !important;
           margin: 10px 0 0 !important;
         }
         @media (prefers-reduced-motion: reduce) {

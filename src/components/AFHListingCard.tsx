@@ -9,7 +9,7 @@ const TEAL_MID = "#2a9d9a";
 const SLATE = "#443e38";
 const GRAY_BG = "#f4f6f7";
 const GRAY_BORDER = "#dde3e8";
-const GRAY_TEXT = "#876b6d";
+const GRAY_TEXT = "#5c474a";
 const WHITE = "#ffffff";
 
 const StatPill = ({ icon, label, value }: { icon: JSX.Element; label: string; value: string }) => (
@@ -125,7 +125,6 @@ const PhotoPanel = ({
           style={{
             fontSize: "10px",
             color: TEAL,
-            opacity: 0.6,
             letterSpacing: "0.07em",
             textTransform: "uppercase" as const,
           }}
@@ -272,7 +271,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
             · {AFH_SOURCE_LABELS[listing.source]}# {listing.mlsNum}
           </div>
           <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
-            <span style={{ fontWeight: 700, color: listing.marketStatus === "pending" ? "#a8892f" : listing.marketStatus === "active" ? "#0a5648" : "#8a2a2a" }}>
+            <span style={{ fontWeight: 700, color: listing.marketStatus === "pending" ? "#6f5410" : listing.marketStatus === "active" ? "#0a5648" : "#8a2a2a" }}>
               {AFH_MARKET_STATUS_LABELS[listing.marketStatus]}
             </span>{" "}
             · verified {formatVerifiedDate(listing.lastVerified)}
@@ -379,7 +378,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
         <span style={{ fontWeight: 600, color: SLATE }}>Listing broker:</span>
         <span>{listing.broker ? `${listing.broker} · ${listing.brokerage}` : listing.brokerage}</span>
         {listing.source === "nwmls" ? (
-          <span style={{ marginLeft: "auto", opacity: 0.6 }}>NWMLS</span>
+          <span style={{ marginLeft: "auto" }}>NWMLS</span>
         ) : (
           <a
             href={listing.sourceUrl}

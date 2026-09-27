@@ -353,6 +353,7 @@ const AFHManagementCompanies = () => (
                   </div>
                   <div style={{ marginTop: 8 }}>
                     <a
+                      className="rpp-dark-surface"
                       href="https://auralivingcare.com"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -363,7 +364,7 @@ const AFHManagementCompanies = () => (
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
                         color: "#fff",
-                        background: "#0d9488",
+                        background: "#0f766e",
                         padding: "12px 24px",
                         borderRadius: 4,
                         textDecoration: "none",
@@ -399,7 +400,7 @@ const AFHManagementCompanies = () => (
                         width: 10,
                         height: 10,
                         borderRadius: "50%",
-                        background: "#0d9488",
+                        background: "#0f766e",
                         marginTop: 8,
                       }}
                     />
@@ -482,6 +483,7 @@ const AFHManagementCompanies = () => (
             </p>
             <Link
               to="/afh-club/real-estate-broker"
+              className="rpp-dark-surface"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

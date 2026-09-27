@@ -272,7 +272,7 @@ const Realtor = () => (
                   style={{
                     fontSize: 14,
                     fontFamily: "'DM Sans', sans-serif",
-                    color: "#5e5954",
+                    color: "#3d3833",
                     margin: 0,
                     fontWeight: 500,
                   }}
@@ -328,7 +328,7 @@ const Realtor = () => (
 
           {/* View on Zillow CTA */}
           <div style={{ textAlign: "center", marginTop: 48 }}>
-            <a
+            <a className="rpp-dark-surface"
               href={FEATURED_BROKER.zillowProfileUrl}
               target="_blank"
               rel="noopener noreferrer"

@@ -152,7 +152,7 @@ const AFHSellingBusinessAtRetirement = () => (
             </h2>
           </div>
 
-          <p className="max-w-3xl mx-auto text-center text-navy/70 text-base leading-relaxed mb-8">
+          <p className="max-w-3xl mx-auto text-center text-navy/90 text-base leading-relaxed mb-8">
             Not sure where to start?{" "}
             <Link
               to="/contact?reason=afh-buy-sell"

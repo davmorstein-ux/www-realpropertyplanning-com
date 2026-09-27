@@ -87,7 +87,7 @@ const AFHCBHSTiers = () => (
       The tier belongs to the resident, not the house. A home with three Tier 2 residents and a home with none can be identical in size, location, and licensing. This is why owners say tier income "varies from home to home." What varies is who lives there. The rate does not: the collective bargaining agreement says managed care organizations shall pay these per diems, and that even one-off single case agreements will strictly adhere to the same tiers. A buyer can therefore check a seller's CBHS deposits against a published number.
     </p>
 
-    <div style={gs.callout}>
+    <div className="rpp-dark-surface" style={gs.callout}>
       <p style={{ fontSize: 14, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", margin: "0 0 10px", color: "#9fe3dc" }}>The income is real, and so is the cost</p>
       <p style={{ fontSize: 21, lineHeight: 1.5, margin: 0, fontWeight: 600 }}>
         Tier {t3.tier} pays {usd(t3.daily)} a day, about {usd(Math.round((t3.daily * 365) / 100) * 100, 0)} a year. It also authorizes {hrs(t3.minHours)} to {hrs(t3.maxHours)} hours a day of one-on-one staffing that has to actually be provided. At eight hours a day, that is about {usd(t3.daily / 8)} per staffed hour before payroll taxes and overhead. Look at the payroll supporting the income, not just the deposits.

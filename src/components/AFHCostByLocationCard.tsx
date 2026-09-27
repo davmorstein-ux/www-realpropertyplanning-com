@@ -118,7 +118,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
               <h2 className="coc-card-title" style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0 }}>
                 Cost by <strong className="coc-card-title-accent is-green">City &amp; County</strong>
               </h2>
-              <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
+              <div style={{ fontSize: 13, color: "#3f4a46", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
                 Medicaid rates · Private pay · Licensed homes
               </div>
             </div>
@@ -207,7 +207,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                 </ul>
               )}
               {!picked && q.length >= 2 && matches.length === 0 && (
-                <p style={{ fontSize: 15, color: "#5f6b66", margin: "8px 0 0" }}>No Washington city or county matches that. Try the county name.</p>
+                <p style={{ fontSize: 15, color: "#3f4a46", margin: "8px 0 0" }}>No Washington city or county matches that. Try the county name.</p>
               )}
             </div>
 
@@ -219,7 +219,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                     {county} County <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
                   </div>
                   <div style={DV} />
-                  <div style={{ fontSize: 14, color: "#5f6b66", marginBottom: 12 }}>
+                  <div style={{ fontSize: 14, color: "#3f4a46", marginBottom: 12 }}>
                     DSHS rate region: <strong style={{ color: "#272421" }}>{AFH_RATE_REGION_LABELS[region]}</strong>
                   </div>
                   <div className="cost-tiles" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10 }}>
@@ -233,9 +233,9 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                       ],
                     ].map(([k, v, note]) => (
                       <div key={k} style={{ background: "#faf8f4", border: `2px solid ${GREEN}b3`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
-                        <div style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "#5f6b66", fontWeight: 700, marginBottom: 6 }}>{k}</div>
+                        <div style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "#3f4a46", fontWeight: 700, marginBottom: 6 }}>{k}</div>
                         <div style={{ fontSize: 20, fontWeight: 700, color: GREEN, lineHeight: 1.2 }}>{v}</div>
-                        <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 4 }}>{note}</div>
+                        <div style={{ fontSize: 13, color: "#3f4a46", marginTop: 4 }}>{note}</div>
                       </div>
                     ))}
                   </div>
@@ -267,7 +267,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                             <tr key={t.label} style={{ borderBottom: "1px solid #eee" }}>
                               <td style={{ padding: "6px 8px" }}>
                                 <strong style={{ color: "#272421" }}>{t.label}</strong>
-                                <div style={{ color: "#5f6b66" }}>{t.note}</div>
+                                <div style={{ color: "#3f4a46" }}>{t.note}</div>
                               </td>
                               <td style={{ padding: "6px 8px", whiteSpace: "nowrap", fontWeight: 700, color: GREEN }}>
                                 {money(t.low)} – {money(t.high)}{t.openEnded ? "+" : ""}
@@ -298,7 +298,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                         ))}
                       </tbody>
                     </table>
-                    <p style={{ fontSize: 13, color: "#5f6b66", margin: "8px 0 0" }}>
+                    <p style={{ fontSize: 13, color: "#3f4a46", margin: "8px 0 0" }}>
                       Source:{" "}
                       <a href={AFH_MEDICAID_RATES.source} target="_blank" rel="noopener noreferrer" style={{ color: GREEN }}>
                         {AFH_MEDICAID_RATES.sourceLabel}
@@ -323,9 +323,9 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                             ["Private-pay only", cityEntry ? cityEntry.privatePay : privatePayOnly, "no DSHS contract"],
                           ].map(([k, v, note]) => (
                             <div key={String(k)} style={{ background: "#faf8f4", border: `2px solid ${GREEN}b3`, borderRadius: 8, padding: "12px 10px", textAlign: "center" }}>
-                              <div style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "#5f6b66", fontWeight: 700, marginBottom: 6 }}>{k}</div>
+                              <div style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "#3f4a46", fontWeight: 700, marginBottom: 6 }}>{k}</div>
                               <div style={{ fontSize: 24, fontWeight: 700, color: "#272421", lineHeight: 1.2 }}>{Number(v).toLocaleString()}</div>
-                              <div style={{ fontSize: 13, color: "#5f6b66", marginTop: 4 }}>{note}</div>
+                              <div style={{ fontSize: 13, color: "#3f4a46", marginTop: 4 }}>{note}</div>
                             </div>
                           ))}
                         </div>
@@ -363,7 +363,7 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
                     )}
                   </div>
                 )}
-                <p style={{ fontSize: 13, color: "#5f6b66", margin: "16px 0 0", textAlign: "center" }}>
+                <p style={{ fontSize: 13, color: "#3f4a46", margin: "16px 0 0", textAlign: "center" }}>
                   Rates and counts change. Medicaid rates are updated by DSHS each July; directory counts come from DSHS
                   licensing records dated {checked ? checked.retrievedAt : "recently"}. For budgeting, not a quote.
                 </p>

@@ -377,6 +377,7 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
           role="button"
           tabIndex={0}
           aria-label="Listen to this article"
+          className="rpp-dark-surface"
           style={pillStyle}
           onClick={() => {
             setIsExpanded(true);
@@ -394,7 +395,7 @@ export default function ArticleAudioPlayer({ audioSrc = "" }) {
           <HeadphoneIcon size={26} color={COLORS.brass} />
           <div>
             <div style={pillLabelStyle}>Listen to this Article</div>
-            <div style={pillSubStyle}>AI-generated audio · Real Property Planning</div>
+            <div className="rpp-dark-muted" style={pillSubStyle}>AI-generated audio · Real Property Planning</div>
           </div>
         </div>
       )}

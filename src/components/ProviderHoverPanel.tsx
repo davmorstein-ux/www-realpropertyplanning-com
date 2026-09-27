@@ -383,7 +383,7 @@ export default function ProviderHoverPanel({
                         style={{
                           fontFamily: "'DM Sans', system-ui, sans-serif",
                           fontSize: 14,
-                          color: "#5e5954",
+                          color: "#3d3833",
                           lineHeight: 1.6,
                           margin: 0,
                           marginBottom: i === arr.length - 1 ? 0 : 10,
@@ -417,7 +417,7 @@ export default function ProviderHoverPanel({
                     >
                       Specialties
                     </div>
-                    <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#5e5954", lineHeight: 1.6 }}>
+                    <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: 13, color: "#3d3833", lineHeight: 1.6 }}>
                       {specialty}
                     </div>
                   </div>

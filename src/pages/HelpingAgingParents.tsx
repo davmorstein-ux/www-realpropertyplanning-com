@@ -334,7 +334,7 @@ const HelpingAgingParents = () => {
                     <h3 className="font-serif text-xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                       {r.title}
                     </h3>
-                    <p className="text-navy/75 text-base leading-relaxed mb-3">
+                    <p className="text-navy/90 text-base leading-relaxed mb-3">
                       {r.description}
                     </p>
                     <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">

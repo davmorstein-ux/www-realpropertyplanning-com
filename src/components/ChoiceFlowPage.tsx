@@ -93,7 +93,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
               {hasChildren ? (
                 <>
                   <RoadmapSteps activeStep={activeStep} trail={trail} />
-                  <p className="text-center text-navy/70 text-base mb-8">
+                  <p className="text-center text-navy/90 text-base mb-8">
                     Pick the option below that best matches your situation to get started.
                   </p>
                   <ChoiceGrid choices={node.children!} />
@@ -101,7 +101,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
               ) : node.content ? (
                 <>
                   <RoadmapSteps activeStep={activeStep} trail={trail} />
-                  <p className="text-center text-navy/70 text-base mb-8">
+                  <p className="text-center text-navy/90 text-base mb-8">
                     You've made it — here's the guidance for your situation.
                   </p>
                   <ContentBlock content={node.content} />
@@ -138,7 +138,7 @@ const RoadmapSteps = ({ activeStep, trail }: { activeStep: number; trail: FlowNo
               ? "text-white shadow-[0_0_0_4px_rgba(31,111,178,0.25)]"
               : isDone
                 ? "bg-navy border-navy text-white"
-                : "bg-white border-navy/40 text-navy/40"
+                : "bg-white border-navy/40 text-navy/70"
           }`}
           style={isCurrent ? { background: CURRENT_COLOR, borderColor: CURRENT_COLOR } : undefined}
         >
@@ -164,7 +164,7 @@ const RoadmapSteps = ({ activeStep, trail }: { activeStep: number; trail: FlowNo
               <>
                 {circle}
                 <span
-                  className={`mt-2 text-base leading-snug ${isCurrent ? "font-bold" : "font-medium text-navy/50"}`}
+                  className={`mt-2 text-base leading-snug ${isCurrent ? "font-bold" : "font-medium text-navy/80"}`}
                   style={isCurrent ? { color: CURRENT_COLOR } : undefined}
                 >
                   {label}
@@ -227,12 +227,12 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
                     {choice.children?.length ? (
                       <ul className="mt-4 space-y-1.5" aria-label={`Topics under ${choice.label}`}>
                         {choice.children.slice(0, 4).map((child) => (
-                          <li key={child.path} className="text-base text-navy/75 leading-snug">
+                          <li key={child.path} className="text-base text-navy/90 leading-snug">
                             {child.label}
                           </li>
                         ))}
                         {choice.children.length > 4 && (
-                          <li className="text-base text-navy/60">+{choice.children.length - 4} more</li>
+                          <li className="text-base text-navy/90">+{choice.children.length - 4} more</li>
                         )}
                       </ul>
                     ) : null}
@@ -257,7 +257,7 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
 const ComingSoon = () => (
   <div className="bg-white border-2 border-gold/25 rounded-2xl p-8 md:p-10 text-center shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]">
     <p className="text-navy text-lg md:text-xl leading-relaxed mb-2 font-semibold">Content coming soon.</p>
-    <p className="text-navy/70 text-base md:text-lg leading-relaxed">
+    <p className="text-navy/90 text-base md:text-lg leading-relaxed">
       We're putting together clear, helpful guidance for this step. Check back shortly.
     </p>
   </div>
@@ -269,7 +269,7 @@ const ContentBlock = ({ content }: { content: NonNullable<FlowNode["content"]> }
     {content.sections.map((section, i) => (
       <div key={i}>
         <h2 className="font-serif text-xl font-semibold text-navy mb-2">{section.heading}</h2>
-        <p className="text-navy/75 text-base leading-relaxed whitespace-pre-line">{section.body}</p>
+        <p className="text-navy/90 text-base leading-relaxed whitespace-pre-line">{section.body}</p>
       </div>
     ))}
     <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-8">

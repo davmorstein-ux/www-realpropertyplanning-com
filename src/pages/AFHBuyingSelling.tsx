@@ -427,7 +427,7 @@ const AFHBuyingSelling = () => (
       </section>
 
       {/* Real Estate Broker CTA */}
-      <section style={{ background: "#3f3a35", padding: "64px 24px" }}>
+      <section className="rpp-dark-surface" style={{ background: "#3f3a35", padding: "64px 24px" }}>
         <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
           <p
             style={{

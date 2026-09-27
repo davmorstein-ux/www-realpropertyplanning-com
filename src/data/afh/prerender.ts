@@ -194,7 +194,7 @@ const facilityRow = (f: Facility) => {
     `<p style="margin:4px 0 0;color:#4b5563">${esc(spec)} — ${
       f.acceptsMedicaid ? "accepts Medicaid" : "private pay only"
     }</p>` +
-    `<p style="margin:4px 0 0;color:#6b7280;font-size:0.95rem">DSHS license ${esc(f.licenseNumber)}</p>` +
+    `<p style="margin:4px 0 0;color:#4b5563;font-size:0.95rem">DSHS license ${esc(f.licenseNumber)}</p>` +
     `</li>`
   );
 };
@@ -420,13 +420,13 @@ const REAL_ESTATE_COUNTY_PAGES: Record<string, string> = {
 const pill = (href: string, label: string, count: number, empty: boolean) =>
   `<a href="${attr(href)}" class="rpp-county-pill no-underline${empty ? " is-empty" : ""}" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;margin:0 8px 8px 0;border-radius:999px;border:1px solid ${
     empty ? "#d9dede" : "#0a5648"
-  };background:${empty ? "#f5f5f5" : "#fff"};color:${empty ? "#6b7280" : "#0a5648"};font-weight:600;text-decoration:none">${esc(label)} <span style="font-weight:500;color:${
+  };background:${empty ? "#f5f5f5" : "#fff"};color:${empty ? "#4b5563" : "#0a5648"};font-weight:600;text-decoration:none">${esc(label)} <span style="font-weight:500;color:${
     empty ? "#9ca3af" : "#374151"
   };font-size:0.9em">${num(count)}</span></a>`;
 
 const countyPills = (checked: CountyChecked[], currentSlug?: string) => {
   const label = (t: string) =>
-    `<p style="margin:12px 0 6px;font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6b7280">${t}</p>`;
+    `<p style="margin:12px 0 6px;font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#4b5563">${t}</p>`;
   const row = (list: CountyChecked[], name: string) =>
     `<nav aria-label="${name}" style="margin:0 0 8px">` +
     list.map((c) => pill(`/afh-club/homes/county/${c.slug}`, c.county, c.facilityCount, c.facilityCount === 0)).join("") +

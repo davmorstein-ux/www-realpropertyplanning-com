@@ -91,7 +91,7 @@ const AFHCareClassifications = () => (
       Rates effective {effective}. In {AFH_RATE_REGION_LABELS.highCost}, the base adult family home rate runs from {usd(high.minDaily, 2)} to {usd(high.maxDaily, 2)} per day. In all other Washington counties it runs from {usd(std.minDaily, 2)} to {usd(std.maxDaily, 2)}.
     </p>
 
-    <div style={gs.callout}>
+    <div className="rpp-dark-surface" style={gs.callout}>
       <p style={{ fontSize: 14, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", margin: "0 0 10px", color: "#9fe3dc" }}>One bed, very different revenue</p>
       <p style={{ fontSize: 22, lineHeight: 1.45, margin: 0, fontWeight: 600 }}>
         The gap between the lowest and highest classification in the high-cost counties is {usd(spreadDaily, 2)} per day. That is about {usd(roundTo(spreadYearly, 100))} per year for a single bed{" "}

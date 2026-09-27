@@ -43,7 +43,7 @@ const Stat = ({ label, value, sub, accent }: { label: string; value: string; sub
       textAlign: "center",
     }}
   >
-    <div style={{ fontSize: 14, letterSpacing: ".12em", textTransform: "uppercase", color: "#5f6b66", fontWeight: 700, marginBottom: 8 }}>
+    <div style={{ fontSize: 14, letterSpacing: ".12em", textTransform: "uppercase", color: "#3f4a46", fontWeight: 700, marginBottom: 8 }}>
       {label}
     </div>
     <div style={{ fontSize: 30, fontWeight: 700, color: accent, lineHeight: 1.15 }}>{value}</div>

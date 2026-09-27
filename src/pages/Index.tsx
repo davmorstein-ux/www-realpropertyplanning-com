@@ -169,7 +169,7 @@ const RPPHomeV3 = () => {
             </div>
 
             {/* Tap hint — mobile only */}
-            <p className="block sm:hidden text-center text-[13px] text-navy/60 font-medium mb-4 tracking-wide">
+            <p className="block sm:hidden text-center text-[13px] text-navy/90 font-medium mb-4 tracking-wide">
               Tap a card to get started
             </p>
 

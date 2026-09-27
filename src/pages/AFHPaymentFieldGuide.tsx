@@ -97,7 +97,7 @@ const AFHPaymentFieldGuide = () => (
       Search "Washington five-tier system" and you will find a 2026 rule assigning Tier 1 through 5 personal care hours. That rule belongs to a presumptive eligibility program for people receiving care <strong>in their own home</strong>, not in an adult family home. Washington also has a tiered quality incentive for nursing facilities. Neither one affects AFH income, and neither one classifies adult family homes.
     </p>
 
-    <div style={gs.callout}>
+    <div className="rpp-dark-surface" style={gs.callout}>
       <p style={{ fontSize: 14, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", margin: "0 0 10px", color: "#9fe3dc" }}>The question to ask about any revenue line</p>
       <p style={{ fontSize: 21, lineHeight: 1.5, margin: 0, fontWeight: 600 }}>
         Who sets it? Is it attached to the resident or to the owner? How often is it reviewed? Does it survive a sale?

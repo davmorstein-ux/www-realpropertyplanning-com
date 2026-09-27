@@ -314,7 +314,7 @@ const AFHFindProfessional = () => (
         .rpp-afhpro .rpp-afhpro-card-name { height: 20px; font-size: 15px; font-weight: 700; color: #280a0c; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .rpp-afhpro .rpp-afhpro-card-name a { color: inherit !important; text-decoration: none !important; }
         @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-name a:hover { color: #7f2028 !important; } }
-        .rpp-afhpro .rpp-afhpro-card-license { height: 16px; font-size: 11px; line-height: 16px; color: #5a534b; margin-top: 2px !important; }
+        .rpp-afhpro .rpp-afhpro-card-license { height: 16px; font-size: 11px; line-height: 16px; color: #3d3833; margin-top: 2px !important; }
         .rpp-afhpro .rpp-afhpro-card-line { font-size: 12.5px; line-height: 17px; overflow-wrap: anywhere; }
         .rpp-afhpro .rpp-afhpro-card-phone { height: 17px; margin-top: 6px !important; white-space: nowrap; }
         .rpp-afhpro .rpp-afhpro-card-email { height: 34px; margin-top: 3px !important; }

@@ -125,7 +125,7 @@ const CountyDirectory = () => {
                         borderRadius: "999px",
                         border: `1px solid ${empty ? BORDER : GREEN}`,
                         background: empty ? "#f5f5f5" : "#fff",
-                        color: empty ? "#6b7280" : GREEN,
+                        color: empty ? "#4b5563" : GREEN,
                         fontSize: "16px",
                         fontWeight: 600,
                         textDecoration: "none",
@@ -140,7 +140,7 @@ const CountyDirectory = () => {
                 };
                 return (
                   <>
-                    <p style={{ margin: "0 0 8px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6b7280" }}>
+                    <p style={{ margin: "0 0 8px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4b5563" }}>
                       Largest markets
                     </p>
                     <nav aria-label="Largest counties" style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "20px" }}>
@@ -148,7 +148,7 @@ const CountyDirectory = () => {
                         <Pill key={c.slug} c={c} />
                       ))}
                     </nav>
-                    <p style={{ margin: "0 0 8px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6b7280" }}>
+                    <p style={{ margin: "0 0 8px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4b5563" }}>
                       All counties, A to Z
                     </p>
                     <nav aria-label="All counties" style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
@@ -246,7 +246,7 @@ const CountyDirectory = () => {
                             {c.facilityCount} {c.facilityCount === 1 ? "home" : "homes"} · {c.totalBeds} beds
                           </p>
                         </div>
-                        <p style={{ margin: "4px 0 0", fontSize: "16px", color: "#6b7280" }}>
+                        <p style={{ margin: "4px 0 0", fontSize: "16px", color: "#4b5563" }}>
                           {c.developmentalDisabilities} serving developmental disabilities · {c.behaviorSupport} with
                           behavior support · {c.privatePay} private pay
                         </p>

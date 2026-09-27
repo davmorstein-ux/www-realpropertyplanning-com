@@ -227,7 +227,7 @@ const Privacy = () => {
           }
           .rpp-privacy.rpp-privacy .rpp-privacy-updated {
             font-size: 16px !important;
-            color: #6b635b !important;
+            color: #4a443e !important;
             margin: 0 0 24px !important;
           }
         `}</style>

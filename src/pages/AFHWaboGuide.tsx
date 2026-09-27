@@ -273,7 +273,7 @@ const AFHWaboGuide = () => (
             The local city or county building official performs the inspection, and DSHS handles licensing. Knowing
             the difference can save time, money, and frustration.
           </p>
-          <p style={{ fontSize: 16, fontFamily: "'DM Sans', sans-serif", color: "#5a5147", margin: "20px 0 0" }}>
+          <p style={{ fontSize: 16, fontFamily: "'DM Sans', sans-serif", color: "#3d3833", margin: "20px 0 0" }}>
             Ready for the technical details?{" "}
             <Link to="/afh-club/wabo-technical-guide" style={{ color: "#9e2c35", fontWeight: 600, textDecoration: "underline" }}>
               WABO Checklist & Technical Requirements →

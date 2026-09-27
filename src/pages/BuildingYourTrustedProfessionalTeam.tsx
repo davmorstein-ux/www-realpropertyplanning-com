@@ -215,7 +215,7 @@ const Section = ({
                     {s.title}
                   </h3>
                 </div>
-                <p style={{ fontSize: 14, color: "#806b6d", lineHeight: 1.6, flex: 1 }}>{s.description}</p>
+                <p style={{ fontSize: 14, color: "#5c474a", lineHeight: 1.6, flex: 1 }}>{s.description}</p>
               </div>
 
               {/* CTA bar */}
@@ -303,7 +303,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
         </section>
 
         <div className="container px-6 lg:px-8 pt-8">
-          <p className="max-w-3xl mx-auto text-center text-navy/70 text-base leading-relaxed mb-6">
+          <p className="max-w-3xl mx-auto text-center text-navy/90 text-base leading-relaxed mb-6">
             Not sure where to start?{" "}
             <Link
               to="/contact"
@@ -395,7 +395,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                           >
                             {s.title}
                           </h3>
-                          <p style={{ fontSize: 14, color: "#806b6d", lineHeight: 1.6 }}>{s.description}</p>
+                          <p style={{ fontSize: 14, color: "#5c474a", lineHeight: 1.6 }}>{s.description}</p>
                         </div>
                         <div style={{ padding: "12px 20px 16px" }}>
                           <div

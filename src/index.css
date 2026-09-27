@@ -2027,7 +2027,9 @@ h3 + .text-muted-foreground,
 h4 + .text-muted-foreground {
   font-size: max(1.0625rem, 17px) !important;
   line-height: 1.75 !important;
-  color: #5b5753 !important;
+  /* Darkened Sept 27, 2026 from #5b5753 (6.6:1 on cream) after visitors said intro
+     text was hard to read. #3d3833 is about 11:1, past the AAA line. */
+  color: #3d3833 !important;
   opacity: 1 !important;
 }
 /* (Removed: overly broad uniform tile sizing block — it matched every class containing "card". */
@@ -3018,7 +3020,7 @@ main h2.coc-card-title {
   display: block !important;
 }
 main h2.coc-card-title .coc-card-title-accent.is-green {
-  color: #1c9e90 !important; /* the AFH Club teal, lighter than the dark green of "Cost by" */
+  color: #13766b !important; /* the AFH Club teal, lighter than the dark green of "Cost by" */
 }
 main h2.coc-card-title .coc-card-title-accent {
   display: inline !important;
@@ -4225,24 +4227,24 @@ p.afh-eyebrow-label-v2.afh-eyebrow-label-v2 {
    nearly every "looks light grey" value lands.
    ------------------------------------------------------------ */
 
-[style*="color: #9"],
-[style*="color:#9"],
-[style*="color: #a"],
-[style*="color:#a"],
-[style*="color: #A"],
-[style*="color:#A"],
-[style*="color: #b"],
-[style*="color:#b"],
-[style*="color: #B"],
-[style*="color:#B"],
-[style*="color: #c"],
-[style*="color:#c"],
-[style*="color: #C"],
-[style*="color:#C"],
-[style*="color: #d"],
-[style*="color:#d"],
-[style*="color: #D"],
-[style*="color:#D"] {
+[style*="color: #9"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color:#9"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color: #a"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color:#a"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color: #A"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color:#A"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color: #b"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color:#b"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color: #B"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color:#B"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color: #c"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color:#c"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color: #C"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color:#C"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color: #d"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color:#d"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color: #D"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+[style*="color:#D"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)) {
   color: #3d3833 !important;
 }
 
@@ -4377,6 +4379,7 @@ hr[class*="opacity-"],
    ------------------------------------------------------------ */
 
 ::placeholder {
+  /* Kept lighter than body text on purpose, so a hint is never mistaken for a typed answer. */
   color: #5b5753 !important;
   opacity: 1 !important;
 }
@@ -4395,17 +4398,27 @@ figcaption {
 
    Any remaining light grey, wherever it came from. Deliberately
    last so the more specific rules above win where they apply.
+
+   These attribute matches cannot tell a text colour from a
+   BACKGROUND colour: a red button styled background:#ca2b38
+   serializes to "rgb(202, 43, 56)", matches "rgb(20", and its white
+   label was painted dark (Sept 27, 2026). Anything inside or on a
+   .rpp-dark-surface is exempt, here and in the #9-#D rule above.
+   Mark dark sections and coloured buttons with that class. The
+   exemption is wrapped in :where() so it adds NO specificity: a bare
+   :not(.class) raised these rules above the button fixes elsewhere in
+   this file (.rpp-afh-return, .rpp-filled) and repainted them dark.
    ------------------------------------------------------------ */
 
-main [style*="rgb(15"],
-main [style*="rgb(16"],
-main [style*="rgb(17"],
-main [style*="rgb(18"],
-main [style*="rgb(19"],
-main [style*="rgb(20"],
-main [style*="rgba(15"],
-main [style*="rgba(16"],
-main [style*="rgba(17"] {
+main [style*="rgb(15"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+main [style*="rgb(16"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+main [style*="rgb(17"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+main [style*="rgb(18"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+main [style*="rgb(19"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+main [style*="rgb(20"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+main [style*="rgba(15"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+main [style*="rgba(16"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)),
+main [style*="rgba(17"]:where(:not(.rpp-dark-surface):not(.rpp-dark-surface *)) {
   color: #3d3833 !important;
 }
 

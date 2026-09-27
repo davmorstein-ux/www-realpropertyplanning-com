@@ -57,7 +57,7 @@ const FacilityRow = ({ facility }: { facility: AFHFacility }) => {
         {facility.acceptsMedicaid ? "accepts Medicaid" : "private pay only"}
       </p>
 
-      <p style={{ margin: "4px 0 0", fontSize: "15px", color: "#6b7280" }}>
+      <p style={{ margin: "4px 0 0", fontSize: "15px", color: "#4b5563" }}>
         DSHS license {facility.licenseNumber}
         {facility.hasReports ? " · inspection reports on file" : ""}
       </p>

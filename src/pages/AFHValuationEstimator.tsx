@@ -304,7 +304,7 @@ const AFHValuationEstimator = () => {
               <div
                 style={{
                   fontSize: 13,
-                  color: "#7a5a5d",
+                  color: "#5c3f42",
                   marginTop: 6,
                   letterSpacing: ".1em",
                   textTransform: "uppercase",
@@ -346,7 +346,7 @@ const AFHValuationEstimator = () => {
                 <div>
                   <label style={labelStyle} htmlFor="v-net">Annual net income ($)</label>
                   <input type="number" id="v-net" placeholder="124000" style={inputStyle} />
-                  <div style={{ fontSize: 12, color: "#7a5a5d", marginTop: 5 }}>
+                  <div style={{ fontSize: 12, color: "#5c3f42", marginTop: 5 }}>
                     After expenses, before owner salary
                   </div>
                 </div>
@@ -458,7 +458,7 @@ const AFHValuationEstimator = () => {
                   </select>
                 </div>
               </div>
-              <div style={{ fontSize: 12, color: "#7a5a5d" }}>Leave property value blank if selling business only.</div>
+              <div style={{ fontSize: 12, color: "#5c3f42" }}>Leave property value blank if selling business only.</div>
             </div>
 
             {/* Calculate */}
@@ -576,7 +576,7 @@ const AFHValuationEstimator = () => {
                     <div id={id} style={{ fontSize: 18, fontWeight: 700, color: "#272421", minHeight: 28 }}>
                       —
                     </div>
-                    {sub && <div style={{ fontSize: 11, color: "#7a5a5d", marginTop: 3 }}>{sub}</div>}
+                    {sub && <div style={{ fontSize: 11, color: "#5c3f42", marginTop: 3 }}>{sub}</div>}
                   </div>
                 ))}
               </div>
@@ -604,7 +604,7 @@ const AFHValuationEstimator = () => {
               <div
                 style={{
                   fontSize: 12,
-                  color: "#7a5a5d",
+                  color: "#5c3f42",
                   lineHeight: 1.8,
                   padding: "12px 16px",
                   border: `1px solid ${GREEN}18`,
@@ -665,7 +665,7 @@ const AFHValuationEstimator = () => {
               style={{
                 textAlign: "center",
                 fontSize: 13,
-                color: "#7a5a5d",
+                color: "#5c3f42",
                 letterSpacing: ".12em",
                 textTransform: "uppercase",
                 marginTop: "1.75rem",

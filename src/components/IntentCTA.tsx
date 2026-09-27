@@ -81,7 +81,7 @@ const IntentCTA = ({ heading, body, buttonText, reason, professional = "broker",
           {buttonText}
         </Link>
         {attribution && (
-          <p style={{ fontSize: 13, lineHeight: 1.5, color: dark ? "rgba(255,255,255,0.75)" : "#5a534b", margin: "1rem auto 0", maxWidth: 560 }}>{attribution}</p>
+          <p style={{ fontSize: 13, lineHeight: 1.5, color: dark ? "rgba(255,255,255,0.88)" : "#3d3833", margin: "1rem auto 0", maxWidth: 560 }}>{attribution}</p>
         )}
       </div>
     </section>

@@ -114,7 +114,7 @@ const AFHWaboTechnicalGuide = () => (
             technical side of the process — what the checklist covers, who performs the inspection, what usually
             causes delays, and why passing the checklist is only one part of the larger licensing process.
           </p>
-          <p style={{ fontSize: 16, fontFamily: "'DM Sans', sans-serif", color: "#5a5147", margin: 0 }}>
+          <p style={{ fontSize: 16, fontFamily: "'DM Sans', sans-serif", color: "#3d3833", margin: 0 }}>
             New to WABO? Start with{" "}
             <Link to="/afh-club/wabo-inspection-guide" style={{ color: "#9e2c35", fontWeight: 600, textDecoration: "underline" }}>
               What Is WABO? A Simple Overview →

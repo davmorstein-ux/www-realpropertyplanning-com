@@ -42,7 +42,7 @@ export default function AuthorByline({ reviewed, context = "afh" }: { reviewed?:
           fontWeight: 700,
           letterSpacing: "0.15em",
           textTransform: "uppercase",
-          color: "#a8892f",
+          color: "#6f5410",
           margin: "0 0 8px",
         }}
       >

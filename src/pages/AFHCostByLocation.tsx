@@ -101,7 +101,7 @@ const CostByLocation = () => {
                         {money(monthly(rg.minDaily))} – {money(monthly(rg.maxDaily))}
                       </div>
                       <div style={{ fontSize: 18, color: "#302b26", marginTop: 4 }}>per resident, per month</div>
-                      <div style={{ fontSize: 18, color: "#5f6b66", marginTop: 10 }}>
+                      <div style={{ fontSize: 18, color: "#3f4a46", marginTop: 10 }}>
                         {money2(rg.minDaily)} – {money2(rg.maxDaily)} per day
                       </div>
                     </div>

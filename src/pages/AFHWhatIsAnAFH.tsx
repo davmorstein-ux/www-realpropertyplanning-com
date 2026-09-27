@@ -163,7 +163,7 @@ const AFHWhatIsAnAFH = () => {
                   fontWeight: 700,
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "#a8892f",
+                  color: "#6f5410",
                   margin: "0 0 8px",
                 }}
               >
@@ -178,7 +178,7 @@ const AFHWhatIsAnAFH = () => {
               </p>
             </div>
 
-            <p style={{ ...bodyText, fontSize: 15, color: "#5b554e" }}>
+            <p style={{ ...bodyText, fontSize: 15, color: "#3d3833" }}>
               Reviewed {reviewedLabel}. State terms and capacity limits change; verify with the agency listed
               before relying on this table.
             </p>
@@ -273,7 +273,7 @@ const AFHWhatIsAnAFH = () => {
                           <strong>{s.term}</strong>
                           {s.shortName ? ` (${s.shortName})` : ""}
                           {s.note && (
-                            <div style={{ color: "#5b554e", fontSize: 15, marginTop: 4 }}>{s.note}</div>
+                            <div style={{ color: "#3d3833", fontSize: 15, marginTop: 4 }}>{s.note}</div>
                           )}
                         </td>
                         <td style={cell}>{s.agency}</td>
@@ -283,7 +283,7 @@ const AFHWhatIsAnAFH = () => {
                 </tbody>
               </table>
             </div>
-            <p style={{ ...bodyText, fontSize: 15, color: "#5b554e", marginTop: 16 }}>
+            <p style={{ ...bodyText, fontSize: 15, color: "#3d3833", marginTop: 16 }}>
               {STATE_TERMS.length} states listed. States not shown either fold small homes into their
               general assisted living license or have not yet been reviewed. Corrections are welcome — the
               agency named in each row is the authority.

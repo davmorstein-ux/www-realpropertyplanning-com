@@ -154,7 +154,7 @@ const AFHRevenueBuilder = ({
             <tr key={r.key} style={{ borderBottom: "1px solid #eee" }}>
               <td style={{ padding: "8px 6px" }}>
                 <strong style={{ color: "#272421" }}>{r.label}</strong>
-                <div style={{ color: "#5f6b66", fontSize: 16 }}>
+                <div style={{ color: "#3f4a46", fontSize: 16 }}>
                   {money(r.low)} – {money(r.high)}
                   {r.openEnded ? "+" : ""} · {r.note}
                 </div>
@@ -176,7 +176,7 @@ const AFHRevenueBuilder = ({
           <tr style={{ borderBottom: "1px solid #eee" }}>
             <td style={{ padding: "8px 6px" }}>
               <strong style={{ color: "#272421" }}>Medicaid</strong>
-              <div style={{ color: "#5f6b66", fontSize: 16 }}>
+              <div style={{ color: "#3f4a46", fontSize: 16 }}>
                 {money(monthly(med.minDaily))} – {money(monthly(med.maxDaily))} · DSHS {AFH_RATE_REGION_LABELS[region]} rate, lightest to heaviest care
               </div>
             </td>
@@ -246,7 +246,7 @@ const AFHRevenueBuilder = ({
       >
         Use this revenue in the calculator
       </button>
-      <p style={{ fontSize: 16, lineHeight: 1.5, color: "#5f6b66", margin: "12px 0 0" }}>
+      <p style={{ fontSize: 16, lineHeight: 1.5, color: "#3f4a46", margin: "12px 0 0" }}>
         Private-pay ranges are {FEATURED_APPRAISER.name}'s working bands from brokerage and appraisal experience (reviewed September
         2026); Medicaid rates are the DSHS schedule effective July 1, 2026. You can still type your own gross revenue
         below if you have the actual P&amp;L.{" "}

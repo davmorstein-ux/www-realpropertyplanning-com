@@ -90,14 +90,14 @@ const Footer = () => {
         .rpp-footer-disclaimer {
           font-family: 'DM Sans', system-ui, sans-serif !important;
           font-size: 13px !important;
-          color: rgba(255,255,255,0.62) !important;
+          color: rgba(255,255,255,0.82) !important;
           line-height: 1.6 !important;
           text-align: center !important;
           max-width: 820px !important;
           margin: 0 auto 0.5rem auto !important;
         }
         .rpp-footer-disclaimer a {
-          color: rgba(255,255,255,0.72) !important;
+          color: rgba(255,255,255,0.9) !important;
           text-decoration: underline !important;
         }
       `}</style>

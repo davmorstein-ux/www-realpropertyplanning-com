@@ -119,7 +119,7 @@ const SiteSearchBar = () => {
                 padding: "18px 16px",
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 16,
-                color: "#806b6d",
+                color: "#5c474a",
               }}
             >
               No pages match "{query}"

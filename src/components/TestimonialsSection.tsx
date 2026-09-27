@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button asChild className="text-lg font-bold px-8 py-6">
-            <Link to="/share-your-experience">Share your experience</Link>
+            <Link to="/share-your-experience" className="rpp-dark-surface">Share your experience</Link>
           </Button>
 
           

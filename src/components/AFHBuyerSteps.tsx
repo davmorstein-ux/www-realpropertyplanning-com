@@ -42,7 +42,7 @@ const AFHBuyerSteps = ({ current, compact = false }: { current?: number; compact
       .rpp-afhsteps a { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 14px 10px; border: 1.5px solid #ddd6cc; border-radius: 12px; background: #fff; color: #272421 !important; text-decoration: none !important; height: 100%; }
       .rpp-afhsteps .rpp-afhsteps-n { width: 28px; height: 28px; border-radius: 50%; background: #7f2028; color: #fff; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; justify-content: center; }
       .rpp-afhsteps .rpp-afhsteps-label { font-weight: 700; font-size: 15px; line-height: 1.2; }
-      .rpp-afhsteps .rpp-afhsteps-hint { font-size: 12.5px; line-height: 1.35; color: #5a534b; }
+      .rpp-afhsteps .rpp-afhsteps-hint { font-size: 12.5px; line-height: 1.35; color: #3d3833; }
       .rpp-afhsteps li.is-current a { border-color: #7f2028; background: #fdf6f4; }
       @media (hover: hover) { .rpp-afhsteps a:hover { border-color: #7f2028; } }
       .rpp-afhsteps-compact ol { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }

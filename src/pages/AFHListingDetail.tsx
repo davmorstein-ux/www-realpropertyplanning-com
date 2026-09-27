@@ -36,7 +36,7 @@ const STATUS_HEADLINE: Record<AFHListing["marketStatus"], string> = {
   withdrawn: "no longer listed",
 };
 
-const statusColor = (s: AFHListing["marketStatus"]) => (s === "active" ? GREEN : s === "pending" ? "#a8892f" : "#8a2a2a");
+const statusColor = (s: AFHListing["marketStatus"]) => (s === "active" ? GREEN : s === "pending" ? "#6f5410" : "#8a2a2a");
 
 const AFHListingDetail = () => {
   const { slug = "" } = useParams<{ slug: string }>();
