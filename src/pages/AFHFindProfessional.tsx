@@ -53,7 +53,16 @@ const PersonCard = ({ person, professionLines }: { person: AFHProfessional; prof
         {person.website && site ? <a href={person.website} target="_blank" rel="noopener noreferrer" className="bg-transparent">{site}</a> : "\u00a0"}
       </div>
       <div className="rpp-afhpro-card-logo">
-        {person.logo && <img src={person.logo} alt={person.logoAlt || `${person.company} logo`} loading="lazy" />}
+        {/* The logo links to the same website as the line above (David, Sept 27 2026). The alt
+            text names the destination, because for a linked image it is the link's name. */}
+        {person.logo &&
+          (person.website ? (
+            <a href={person.website} target="_blank" rel="noopener noreferrer" className="bg-transparent rpp-afhpro-logo-link">
+              <img src={person.logo} alt={`${person.company || person.name} website (opens in a new tab)`} loading="lazy" />
+            </a>
+          ) : (
+            <img src={person.logo} alt={person.logoAlt || `${person.company} logo`} loading="lazy" />
+          ))}
       </div>
     </div>
   );
@@ -325,7 +334,10 @@ const AFHFindProfessional = () => (
         .rpp-afhpro .rpp-afhpro-card-line a { color: #1c1917; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9c0b4; }
         @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-line a:hover { color: #7f2028; text-decoration-color: #7f2028; } }
         .rpp-afhpro .rpp-afhpro-card-logo { height: 64px; margin-top: 12px !important; display: flex; align-items: center; justify-content: center; }
-        .rpp-afhpro .rpp-afhpro-card-logo img { max-height: 64px; max-width: 170px; width: auto; height: auto; object-fit: contain; }
+        .rpp-afhpro .rpp-afhpro-card-logo a.rpp-afhpro-logo-link { display: inline-flex; align-items: center; justify-content: center; height: 100%; text-decoration: none !important; border: 0 !important; background: none !important; padding: 0 !important; }
+        .rpp-afhpro .rpp-afhpro-card-logo a.rpp-afhpro-logo-link::after { content: none !important; display: none !important; }
+        @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-logo a.rpp-afhpro-logo-link:hover img { transform: scale(1.04); } }
+        .rpp-afhpro .rpp-afhpro-card-logo img { transition: transform 0.15s ease; max-height: 64px; max-width: 170px; width: auto; height: auto; object-fit: contain; }
       `}</style>
       <section className="rpp-afhpro" style={{ background: "#ffffff", padding: "64px 24px 56px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
