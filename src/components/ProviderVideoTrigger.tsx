@@ -60,6 +60,13 @@ interface ProviderVideoTriggerProps {
    * Never called for external (non-YouTube) links — see the note above.
    */
   onOpenChange?: (isOpen: boolean) => void;
+  /**
+   * Set when the trigger sits inside a card that is itself a link (the
+   * directory tiles). It then always renders a <button> — never a nested <a>,
+   * which is invalid HTML — and stops the click from following the card's
+   * link. An external (non-YouTube) video opens in a new tab from script.
+   */
+  insideLink?: boolean;
 }
 
 /** Play glyph, shared by both render modes. */
@@ -86,6 +93,7 @@ export default function ProviderVideoTrigger({
   label,
   className,
   onOpenChange,
+  insideLink = false,
 }: ProviderVideoTriggerProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -112,6 +120,24 @@ export default function ProviderVideoTrigger({
    * so provider-video.css needs a matching doubled-selector rule to win on
    * specificity. See the snippet accompanying this file.
    */
+  if (!isYouTube && insideLink) {
+    return (
+      <button
+        type="button"
+        className={className ? `provider-video-trigger ${className}` : "provider-video-trigger"}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          window.open(videoUrl, "_blank", "noopener,noreferrer");
+        }}
+      >
+        <PlayIcon />
+        <span>{buttonLabel}</span>
+        <span className="sr-only"> (opens in a new tab)</span>
+      </button>
+    );
+  }
+
   if (!isYouTube) {
     return (
       <a
@@ -154,7 +180,13 @@ export default function ProviderVideoTrigger({
       <button
         type="button"
         className={className ? `provider-video-trigger ${className}` : "provider-video-trigger"}
-        onClick={() => setOpen(true)}
+        onClick={(e) => {
+          if (insideLink) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+          setOpen(true);
+        }}
       >
         <PlayIcon />
         <span>{buttonLabel}</span>

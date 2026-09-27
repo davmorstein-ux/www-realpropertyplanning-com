@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, type ReactNode } from "react";
-import { BIO_CLOSE_DELAY, BIO_FADE_OUT, bioTransition, isOverElement, isOverHeadshot } from "@/lib/bioHoverZone";
+import { bioTransition, isOverHeadshot } from "@/lib/bioHoverZone";
 import { createPortal } from "react-dom";
 import ProviderVideoTrigger from "./ProviderVideoTrigger";
 
@@ -14,11 +14,10 @@ import ProviderVideoTrigger from "./ProviderVideoTrigger";
  * for wide provider pages and would break the compact directory grids.
  *
  * Behavior is intentionally identical to ProviderTile:
- *   - hover the wrapped region (the "top portion" of a card) to open
+ *   - hover the headshot (plus a small margin) to open; see src/lib/bioHoverZone.ts
  *   - fixed-position centered panel, so it is not constrained by tile width
- *   - the mousemove watcher checks BOTH the trigger rect and the overlay
- *     rect, so moving the pointer toward the panel (e.g. to reach its
- *     scrollbar) does not dismiss it
+ *   - closes the instant the pointer leaves the headshot; the panel takes no
+ *     pointer events and does not hold it open (Sept 27, 2026)
  *   - renders nothing extra when `bio` is absent, so cards without a bio
  *     degrade cleanly to their normal appearance
  *
@@ -29,7 +28,9 @@ import ProviderVideoTrigger from "./ProviderVideoTrigger";
  * portal lifts it out of the anchor entirely.
  *
  * VIDEO SUPPORT
- * Pass `videoUrl` to add a "Watch introduction" button to the panel body.
+ * Pass `videoUrl` to add a "Watch introduction" button ON THE TILE, under the
+ * wrapped content (it was in the panel body until Sept 27, 2026, but a panel
+ * that closes on leaving the headshot cannot hold a button).
  * While that video modal is open, every close path is suppressed — the
  * delayed close timer, the mousemove watcher, and the window mouseleave
  * handler. This is required, not optional: ProviderVideoTrigger lives
@@ -107,10 +108,10 @@ export default function ProviderHoverPanel({
     if (!bio) return;
     if (videoOpenRef.current) return;
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => {
-      setVisible(false);
-      closeTimer.current = setTimeout(() => setHovered(false), BIO_FADE_OUT);
-    }, BIO_CLOSE_DELAY);
+    closeTimer.current = null;
+    // Immediate: no delay and no fade-out.
+    setVisible(false);
+    setHovered(false);
   };
 
   const handleVideoOpenChange = (isOpen: boolean) => {
@@ -127,15 +128,16 @@ export default function ProviderHoverPanel({
     }
   };
 
+  // Dismissal: while open, watch the pointer anywhere on the page and close the
+  // instant it is no longer over the headshot zone (see src/lib/bioHoverZone.ts).
   useEffect(() => {
     if (!hovered || !bio) return;
     const onMove = (e: MouseEvent) => {
       if (videoOpenRef.current) return;
-      // Only the headshot (plus a small margin) or the bio panel itself keeps it open.
+      // Only the headshot (plus a small margin) keeps it open. The panel does not.
       const insideTile = isOverHeadshot(wrapperRef.current, e.clientX, e.clientY);
-      const insideOverlay = isOverElement(overlayRef.current, e.clientX, e.clientY);
 
-      if (insideTile || insideOverlay) {
+      if (insideTile) {
         if (closeTimer.current) {
           clearTimeout(closeTimer.current);
           closeTimer.current = null;
@@ -180,7 +182,7 @@ export default function ProviderHoverPanel({
                 zIndex: 2147483646,
                 background: "rgba(10,22,40,0.5)",
                 opacity: visible ? 1 : 0,
-                transition: bioTransition(visible, ["opacity"]),
+                transition: visible ? bioTransition(["opacity"]) : "none",
                 pointerEvents: "none",
               }}
             />
@@ -205,8 +207,8 @@ export default function ProviderHoverPanel({
                 opacity: visible ? 1 : 0,
                 filter: visible ? "blur(0px)" : "blur(8px)",
                 transition:
-                  bioTransition(visible, ["opacity", "transform", "filter"]),
-                pointerEvents: "auto",
+                  visible ? bioTransition(["opacity", "transform", "filter"]) : "none",
+                pointerEvents: "none",
               }}
             >
               {/* Panel header */}
@@ -394,7 +396,7 @@ export default function ProviderHoverPanel({
                       background: "#f7f4ef",
                       borderLeft: "3px solid #7f2028",
                       borderRadius: "0 4px 4px 0",
-                      marginBottom: videoUrl ? 16 : 0,
+                      marginBottom: 0,
                     }}
                   >
                     <div
@@ -416,12 +418,6 @@ export default function ProviderHoverPanel({
                   </div>
                 )}
 
-                <ProviderVideoTrigger
-                  videoUrl={videoUrl}
-                  providerName={name}
-                  providerRole={[title, company].filter(Boolean).join(", ")}
-                  onOpenChange={handleVideoOpenChange}
-                />
               </div>
             </div>
           </>,
@@ -445,6 +441,21 @@ export default function ProviderHoverPanel({
         }}
       >
         {children}
+        {/* On the tile, not in the bio: the bio closes the instant the pointer leaves the
+            headshot, so a button inside it could never be reached (Sept 27, 2026). The card
+            is often an <a>, so the trigger renders as a button that stops the card's link. */}
+        {videoUrl && (
+          <div style={{ marginTop: 4, marginBottom: 12 }}>
+            <ProviderVideoTrigger
+              videoUrl={videoUrl}
+              providerName={name}
+              providerRole={[title, company].filter(Boolean).join(", ")}
+              onOpenChange={handleVideoOpenChange}
+              insideLink
+              label="Watch introduction"
+            />
+          </div>
+        )}
       </div>
     </>
   );

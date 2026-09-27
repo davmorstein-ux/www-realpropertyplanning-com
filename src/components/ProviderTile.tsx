@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { BIO_CLOSE_DELAY, BIO_FADE_OUT, bioTransition, isOverElement, isOverHeadshot } from "@/lib/bioHoverZone";
+import { bioTransition, isOverHeadshot } from "@/lib/bioHoverZone";
 import { trackProviderClick, withReferralParams } from "@/lib/providerTracking";
 
 interface ProviderTileProps {
@@ -60,26 +60,21 @@ export default function ProviderTile({
   const handleLeave = () => {
     if (!bio) return;
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => {
-      setVisible(false);
-      closeTimer.current = setTimeout(() => setHovered(false), BIO_FADE_OUT);
-    }, BIO_CLOSE_DELAY);
+    closeTimer.current = null;
+    // Immediate: no delay and no fade-out.
+    setVisible(false);
+    setHovered(false);
   };
 
-  // Robust dismissal: while hovered, watch the document pointer and close
-  // as soon as it leaves BOTH the tile's bounding rect AND the overlay
-  // panel's own bounding rect. The panel is fixed-positioned elsewhere on
-  // screen (not nested inside the tile visually), so checking only the
-  // tile's rect closed the panel the moment the pointer moved toward the
-  // panel itself — e.g. to reach its internal scrollbar.
+  // Dismissal: while open, watch the pointer anywhere on the page and close the
+  // instant it is no longer over the headshot zone (see src/lib/bioHoverZone.ts).
   useEffect(() => {
     if (!hovered || !bio) return;
     const onMove = (e: MouseEvent) => {
-      // Only the headshot (plus a small margin) or the bio panel itself keeps it open.
+      // Only the headshot (plus a small margin) keeps it open. The panel does not.
       const insideTile = isOverHeadshot(wrapperRef.current, e.clientX, e.clientY);
-      const insideOverlay = isOverElement(overlayRef.current, e.clientX, e.clientY);
 
-      if (insideTile || insideOverlay) {
+      if (insideTile) {
         // Pointer is safely inside one of the two zones — cancel any close
         // timer that was armed while briefly passing through the gap
         // between them, so it doesn't fire late and close the panel out
@@ -129,7 +124,7 @@ export default function ProviderTile({
               zIndex: 2147483646,
               background: "rgba(10,22,40,0.5)",
               opacity: visible ? 1 : 0,
-              transition: bioTransition(visible, ["opacity"]),
+              transition: visible ? bioTransition(["opacity"]) : "none",
               pointerEvents: "none",
             }}
           />
@@ -146,14 +141,14 @@ export default function ProviderTile({
               borderRadius: 8,
               maxWidth: 1000,
               width: "92vw",
-              maxHeight: "42vh",
+              maxHeight: "calc(100vh - 120px)",
               overflowY: "auto",
               boxShadow: "0 24px 80px rgba(10,22,40,0.5)",
               opacity: visible ? 1 : 0,
               filter: visible ? "blur(0px)" : "blur(8px)",
               transition:
-                bioTransition(visible, ["opacity", "transform", "filter"]),
-              pointerEvents: "auto",
+                visible ? bioTransition(["opacity", "transform", "filter"]) : "none",
+              pointerEvents: "none",
             }}
           >
             {/* Modal header */}

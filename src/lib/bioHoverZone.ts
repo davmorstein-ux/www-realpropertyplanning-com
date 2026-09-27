@@ -14,15 +14,14 @@
 /** How far outside the headshot circle's box the pointer may be and still count. */
 export const HEADSHOT_HOVER_MARGIN = 14;
 
-/** Delay before a bio starts to close after the pointer leaves, in ms. */
-export const BIO_CLOSE_DELAY = 60;
-
-/** Fade-out time, in ms. Opening keeps its slower, softer fade. */
-export const BIO_FADE_OUT = 220;
-
-/** CSS transition for the bio panel and backdrop, by direction. */
-export const bioTransition = (opening: boolean, props: string[]) =>
-  props.map((p) => (opening ? `${p} 1.4s cubic-bezier(0.16,1,0.3,1)` : `${p} ${BIO_FADE_OUT}ms ease-out`)).join(", ");
+/**
+ * The bio closes the instant the pointer leaves the headshot zone: no delay,
+ * no fade (David, Sept 27 2026). The panel itself does NOT keep it open and
+ * takes no pointer events, so it can sit over the headshot without stealing
+ * the hover and flickering. Nothing inside a bio panel is clickable; the
+ * "Watch introduction" button lives on the tile instead.
+ */
+export const bioTransition = (props: string[]) => props.map((p) => `${p} 1.4s cubic-bezier(0.16,1,0.3,1)`).join(", ");
 
 function headshotRects(root: HTMLElement, margin: number): DOMRect[] {
   const rects: DOMRect[] = [];
