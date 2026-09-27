@@ -66,7 +66,7 @@ const situations = [
     description:
       "Managing a Washington State property remotely — coordinating care, sale, and decisions from a distance.",
     cta: "Learn More",
-    href: "/out-of-state-families",
+    href: "/guides/out-of-state-families",
   },
 ];
 

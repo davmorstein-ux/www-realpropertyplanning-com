@@ -35,7 +35,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
       />
       <BreadcrumbSchema
         items={[
-          { name: "Services", url: "/services" },
+          { name: "Services", url: "/probate-estate-sales" },
           { name: service.name, url: `/services/${service.slug}` },
         ]}
       />

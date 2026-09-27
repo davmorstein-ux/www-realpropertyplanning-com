@@ -79,7 +79,7 @@ const KennewickProbateEstate = () => {
         title="Probate & Estate Real Estate in Kennewick, WA"
         description="Guidance for executors and families with inherited property in Kennewick, WA. Practical preparation, realistic pricing, and family coordination."
       />
-      <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }, { name: "Kennewick", url: "/kennewick-probate-estate-real-estate" }]} />
+      <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }, { name: "Kennewick", url: "/benton-county" }]} />
       <Header />
       <main id="main-content">
 
@@ -190,7 +190,7 @@ const KennewickProbateEstate = () => {
           <div className="max-w-3xl mx-auto">
             <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
             <div className="flex flex-wrap gap-3">
-              {[{ to: "/executors", label: "For Executors" }, { to: "/probate-estate-sales", label: "Probate & Estate Sales" }, { to: "/senior-transitions", label: "Senior Transitions" }, { to: "/for-attorneys", label: "For Attorneys" }, { to: "/why-valuation-matters", label: "Why Valuation Matters" }, { to: "/how-the-process-works", label: "How the Process Works" }, { to: `/cities-we-serve`, label: "All Cities" }].map((link, i) => (
+              {[{ to: "/executors", label: "For Executors" }, { to: "/probate-estate-sales", label: "Probate & Estate Sales" }, { to: "/senior-transitions", label: "Senior Transitions" }, { to: "/for-attorneys", label: "For Attorneys" }, { to: "/why-valuation-matters", label: "Why Valuation Matters" }, { to: "/how-the-process-works", label: "How the Process Works" }, { to: `/counties`, label: "All Cities" }].map((link, i) => (
                 <span key={link.to} className="flex items-center gap-3">
                   {i > 0 && <span className="text-muted-foreground/40">·</span>}
                   <Link to={link.to} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{link.label}</Link>

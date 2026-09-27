@@ -4,7 +4,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const SpokaneCounty = () => (
   <CountyPageTemplate
     countyName="Spokane County"
-    countyPath="/spokane-county-probate-estate-real-estate"
+    countyPath="/spokane-county"
     countySlug="spokane-county"
     cities={[
       "Spokane", "Spokane Valley", "Liberty Lake", "Cheney", "Medical Lake",

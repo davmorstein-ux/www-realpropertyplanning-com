@@ -1,10 +1,12 @@
 import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { GUIDE_LIBRARY, GUIDE_COUNT, HOMEPAGE_GUIDE_CLAIM } from "@/data/guideLibrary";
+import { REDIRECTS } from "@/data/redirects";
 
 const app = readFileSync("src/App.tsx", "utf8");
 const isRoute = (href: string) => app.includes(`path="${href}"`);
-const isRedirect = (href: string) => new RegExp(`path="${href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"\\s*element=\\{<Navigate`).test(app);
+// Redirects live in src/data/redirects.ts (Sept 27, 2026), not as literal routes in App.tsx.
+const isRedirect = (href: string) => REDIRECTS.some((r) => r.from === href);
 const all = GUIDE_LIBRARY.flatMap((g) => g.pieces);
 
 describe("the guides and articles the homepage counts", () => {

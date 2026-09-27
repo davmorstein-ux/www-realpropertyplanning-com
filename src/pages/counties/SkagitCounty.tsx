@@ -4,7 +4,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const SkagitCounty = () => (
   <CountyPageTemplate
     countyName="Skagit County"
-    countyPath="/counties/skagit"
+    countyPath="/skagit-county"
     countySlug="skagit-county"
     seoTitle="Skagit County Probate & Estate Real Estate | Real Property Planning"
     seoDescription="Probate, inherited property, and senior transitions across Skagit County — Mount Vernon, Burlington, Anacortes, La Conner, and more."

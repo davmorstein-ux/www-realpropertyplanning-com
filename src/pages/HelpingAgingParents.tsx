@@ -171,7 +171,7 @@ const jsonLd = articleSchema({
   headline: "Helping an Aging Parent or Loved One",
   description:
     "A guided roadmap for families navigating senior transitions, housing decisions, caregiving, downsizing, and important property decisions in Washington State.",
-  url: "/helping-aging-parents",
+  url: "/helping-an-aging-parent",
   datePublished: "2026-05-08",
   dateModified: "2026-05-08",
   about: ["Senior transitions", "Aging parents", "Senior housing", "Downsizing", "Estate planning"],
@@ -186,7 +186,7 @@ const HelpingAgingParents = () => {
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema
-        items={[{ name: "Helping an Aging Parent or Loved One", url: "/helping-aging-parents" }]}
+        items={[{ name: "Helping an Aging Parent or Loved One", url: "/helping-an-aging-parent" }]}
       />
       <Header />
       <main id="main-content">

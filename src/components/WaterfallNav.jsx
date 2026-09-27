@@ -34,7 +34,7 @@ const CATEGORIES = [
     color: "#aa570e",
     items: [
       { name: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
-      { name: "CPAs & Accountants", href: "/professionals/cpas" },
+      { name: "CPAs & Accountants", href: "/for-cpas" },
       { name: "Certified Appraisers", href: "/real-estate-appraiser" },
       { name: "Mortgage Lenders", href: "/mortgage-lenders" },
       { name: "Real Estate Brokers", href: "/realtor" },

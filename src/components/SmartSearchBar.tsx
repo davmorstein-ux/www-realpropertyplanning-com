@@ -72,7 +72,7 @@ const routeMap: RouteMatch[] = [
   },
   {
     keywords: ["resource", "resources", "referral", "partner", "network", "professional"],
-    path: "/professional-referral-resource",
+    path: "/join-the-network",
     label: "Professional Resources",
   },
   {

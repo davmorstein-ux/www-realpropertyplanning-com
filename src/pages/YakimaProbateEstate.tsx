@@ -94,7 +94,7 @@ const YakimaProbateEstate = () => {
       <BreadcrumbSchema
         items={[
           { name: "Counties", url: "/counties" },
-          { name: "Yakima", url: "/yakima-probate-estate-real-estate" },
+          { name: "Yakima", url: "/yakima-county" },
         ]}
       />
       <Header />
@@ -255,7 +255,7 @@ const YakimaProbateEstate = () => {
                 { to: "/for-attorneys", label: "For Attorneys" },
                 { to: "/why-valuation-matters", label: "Why Valuation Matters" },
                 { to: "/how-the-process-works", label: "How the Process Works" },
-                { to: `/cities-we-serve`, label: "All Cities" },
+                { to: `/counties`, label: "All Cities" },
               ].map((link, i) => (
                 <span key={link.to} className="flex items-center gap-3">
                   {i > 0 && <span className="text-muted-foreground/40">·</span>}

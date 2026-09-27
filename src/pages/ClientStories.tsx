@@ -56,7 +56,7 @@ const ClientStories = () => (
       title="Real Situations. Real Outcomes. | Real Property Planning"
       description="See how Real Property Planning has helped executors, families, and trustees navigate real probate and estate property situations across Washington State."
     />
-    <BreadcrumbSchema items={[{ name: "Client Stories", url: "/client-stories" }]} />
+    <BreadcrumbSchema items={[{ name: "Client Stories", url: "/testimonials" }]} />
     <Header />
     <main id="main-content">
       <HeroBandTitle as="h1">Real Situations. Real Outcomes.</HeroBandTitle>

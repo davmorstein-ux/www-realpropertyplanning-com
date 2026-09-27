@@ -98,7 +98,7 @@ const goodFit = [
 const jsonLd = articleSchema({
   headline: "A Professional Real Estate Resource for Important Property Transitions",
   description: "A trusted real estate resource for attorneys, fiduciaries, and professionals helping clients with probate, estate, inherited property, and senior transition decisions.",
-  url: "/professional-referral-resource",
+  url: "/join-the-network",
   datePublished: "2026-03-16",
   dateModified: "2026-03-16",
   about: ["Professional referral", "Probate real estate", "Estate property", "Fiduciary support", "Senior transitions", "Inherited property"],
@@ -112,7 +112,7 @@ const ProfessionalReferralResource = () => {
         description="A trusted real estate resource for attorneys, fiduciaries, and professionals helping clients with probate, estate, inherited property, and senior transition decisions."
         jsonLd={jsonLd}
       />
-      <BreadcrumbSchema items={[{ name: "Professional Referral Resource", url: "/professional-referral-resource" }]} />
+      <BreadcrumbSchema items={[{ name: "Professional Referral Resource", url: "/join-the-network" }]} />
       <Header />
       <main id="main-content">
 

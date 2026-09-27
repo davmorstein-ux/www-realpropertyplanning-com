@@ -47,7 +47,7 @@ export const AFH_CALCULATORS: CalculatorEntry[] = [
     blurb: "Whether a buyer can get the loan at a given price and number of residents, and what each empty bed does to the lender's answer.",
   },
   {
-    href: "/afh-club/cost-by-location",
+    href: "/adult-family-home-costs", // was /afh-club/cost-by-location, which redirects here
     title: "AFH Cost by City & County",
     blurb: "Medicaid daily rates and private-pay ranges for adult family homes anywhere in Washington.",
   },

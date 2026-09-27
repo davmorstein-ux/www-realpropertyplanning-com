@@ -39,7 +39,7 @@ const groups = [
     label: "Property, Legal & Financial",
     items: [
       {
-        href: "/professionals/cpas",
+        href: "/for-cpas",
         title: "CPAs & Accountants",
         description:
           "Tax guidance, estate coordination, and financial planning for inherited property.",

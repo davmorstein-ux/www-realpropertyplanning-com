@@ -1,3 +1,4 @@
+import { REDIRECTS } from "./data/redirects";
 import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -433,7 +434,6 @@ const App = () => (
               </LanguageRoute>
             }
           />
-          <Route path="/client-stories" element={<Navigate to="/testimonials" replace />} />
           <Route
             path="/senior-transitions"
             element={
@@ -498,7 +498,6 @@ const App = () => (
               </LanguageRoute>
             }
           />
-          <Route path="/helping-aging-parents" element={<Navigate to="/helping-an-aging-parent" replace />} />
           <Route path="/helping-an-aging-parent" element={<ChoiceFlowPage />} />
           <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />
           <Route path="/estate-probate-inherited-property" element={<EstateProbateInheritedProperty />} />
@@ -547,9 +546,7 @@ const App = () => (
             element={<DateOfDeathValuationPropertyAppraisals />}
           />
 
-          <Route path="/out-of-state-families" element={<Navigate to="/guides/out-of-state-families" replace />} />
           <Route path="/senior-living-advisors" element={<SeniorLivingAdvisors />} />
-          <Route path="/senior-placement" element={<Navigate to="/senior-living-advisors" replace />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
           <Route path="/privacy" element={<Privacy />} />
          <Route
@@ -690,11 +687,6 @@ const App = () => (
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/executors" element={<Executors />} />
           <Route path="/executors/executors-guide" element={<ExecutorsGuide />} />
-          <Route
-            path="/executors/power-of-attorney-guide"
-            element={<Navigate to="/senior-living/power-of-attorneys" replace />}
-          />
-          <Route path="/executors/trustees-guide" element={<Navigate to="/trustees" replace />} />
           <Route path="/trustees" element={<Trustees />} />
           <Route path="/estate-liquidation" element={<EstateLiquidation />} />
           <Route path="/estate-liquidation/learn-more" element={<EstateLiquidationLearnMore />} />
@@ -721,76 +713,34 @@ const App = () => (
           <Route path="/attorneys/for-elder-law-attorneys" element={<AttorneysForElderLawAttorneys />} />
           <Route path="/attorneys/for-real-estate-attorney" element={<AttorneysForRealEstateAttorney />} />
           <Route path="/attorneys/for-family-law-attorneys" element={<AttorneysForFamilyLawAttorneys />} />
-          <Route path="/attorneys/for-divorce-attorneys" element={<Navigate to="/for-divorce-attorneys" replace />} />
-          <Route path="/for-attorneys/probate-attorneys" element={<Navigate to="/for-probate-attorneys" replace />} />
-          <Route
-            path="/for-attorneys/estate-planning-attorneys"
-            element={<Navigate to="/for-estate-planning-attorneys" replace />}
-          />
-          <Route
-            path="/for-attorneys/elder-law-attorneys"
-            element={<Navigate to="/for-elder-law-attorneys" replace />}
-          />
-          <Route
-            path="/for-attorneys/family-law-attorneys"
-            element={<Navigate to="/for-family-law-attorneys" replace />}
-          />
-          <Route path="/for-attorneys/divorce-attorneys" element={<Navigate to="/for-divorce-attorneys" replace />} />
-          <Route
-            path="/for-attorneys/real-estate-attorneys"
-            element={<Navigate to="/real-estate-attorneys" replace />}
-          />
           <Route path="/for-cpas" element={<ForCPAs />} />
-          <Route path="/professionals/cpas" element={<Navigate to="/for-cpas" replace />} />
           <Route path="/for-financial-planners" element={<ForFinancialPlanners />} />
           <Route path="/join-the-network" element={<JoinTheNetwork />} />
 
           {/* ─── County hubs ─────────────────────────────────────── */}
           <Route path="/counties" element={<Counties />} />
           <Route path="/king-county" element={<KingCounty />} />
-          <Route path="/counties/king" element={<KingCounty />} />
           <Route path="/snohomish-county" element={<SnohomishCounty />} />
-          <Route path="/counties/snohomish" element={<SnohomishCounty />} />
           <Route path="/pierce-county" element={<PierceCounty />} />
-          <Route path="/counties/pierce" element={<PierceCounty />} />
           <Route path="/kitsap-county" element={<KitsapCounty />} />
-          <Route path="/counties/kitsap" element={<KitsapCounty />} />
           <Route path="/skagit-county" element={<SkagitCounty />} />
-          <Route path="/counties/skagit" element={<SkagitCounty />} />
           <Route path="/thurston-county" element={<ThurstonCounty />} />
-          <Route path="/counties/thurston" element={<ThurstonCounty />} />
           <Route path="/whatcom-county" element={<WhatcomCounty />} />
-          <Route path="/counties/whatcom" element={<WhatcomCounty />} />
           <Route path="/clark-county" element={<ClarkCounty />} />
-          <Route path="/counties/clark" element={<ClarkCounty />} />
           <Route path="/spokane-county" element={<SpokaneCounty />} />
-          <Route path="/counties/spokane" element={<SpokaneCounty />} />
           <Route path="/benton-county" element={<BentonCounty />} />
-          <Route path="/counties/benton" element={<BentonCounty />} />
           <Route path="/yakima-county" element={<YakimaCounty />} />
-          <Route path="/counties/yakima" element={<YakimaCounty />} />
           <Route path="/franklin-county" element={<FranklinCounty />} />
-          <Route path="/counties/franklin" element={<FranklinCounty />} />
           <Route path="/cowlitz-county" element={<CowlitzCounty />} />
-          <Route path="/counties/cowlitz" element={<CowlitzCounty />} />
           <Route path="/grays-harbor-county" element={<GraysHarborCounty />} />
-          <Route path="/counties/grays-harbor" element={<GraysHarborCounty />} />
           <Route path="/island-county" element={<IslandCounty />} />
-          <Route path="/counties/island" element={<IslandCounty />} />
           <Route path="/jefferson-county" element={<JeffersonCounty />} />
-          <Route path="/counties/jefferson" element={<JeffersonCounty />} />
           <Route path="/lewis-county" element={<LewisCounty />} />
-          <Route path="/counties/lewis" element={<LewisCounty />} />
           <Route path="/mason-county" element={<MasonCounty />} />
-          <Route path="/counties/mason" element={<MasonCounty />} />
           <Route path="/pacific-county" element={<PacificCounty />} />
-          <Route path="/counties/pacific" element={<PacificCounty />} />
           <Route path="/san-juan-county" element={<SanJuanCounty />} />
-          <Route path="/counties/san-juan" element={<SanJuanCounty />} />
           <Route path="/skamania-county" element={<SkamaniaCounty />} />
-          <Route path="/counties/skamania" element={<SkamaniaCounty />} />
           <Route path="/wahkiakum-county" element={<WahkiakumCounty />} />
-          <Route path="/counties/wahkiakum" element={<WahkiakumCounty />} />
 
           {/* ─── Tier-1 city pages (only) ─────────────────────────── */}
           <Route path="/seattle-probate-estate-real-estate" element={<SeattleProbateEstate />} />
@@ -805,7 +755,6 @@ const App = () => (
           {/* ─── Educational guides (canonical: /guides/*) ────────── */}
           <Route path="/guides-and-resources" element={<GuidesAndResources />} />
           {/* Twenty pages live under /guides/..., so a trimmed URL should land on the library, not a 404. */}
-          <Route path="/guides" element={<Navigate to="/guides-and-resources" replace />} />
           {/* Every calculator on the site, in two groups. Destination of the homepage "10+ calculators" figure. */}
           <Route path="/calculators" element={<Calculators />} />
           <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
@@ -873,7 +822,6 @@ const App = () => (
 
           {/* ─── Resources directory ──────────────────────────────── */}
           <Route path="/resources" element={<Resources />} />
-          <Route path="/resources/senior-move-managers" element={<Navigate to="/senior-move-managers" replace />} />
           <Route path="/resources/estate-sale-companies" element={<EstateSaleCompanies />} />
           <Route path="/resources/probate-estate-attorneys" element={<ProbateEstateAttorneys />} />
           <Route path="/resources/cpas-financial-advisors" element={<CPAsFinancialAdvisors />} />
@@ -886,8 +834,6 @@ const App = () => (
           {/* /about is the single canonical About page (brand-neutral About page) */}
           <Route path="/about" element={<About />} />
           {/* Legacy routes → redirect to /about */}
-          <Route path="/about-david-stein" element={<Navigate to="/about" replace />} />
-          <Route path="/about-platform" element={<Navigate to="/about" replace />} />
           <Route
             path="/contact"
             element={
@@ -979,185 +925,33 @@ const App = () => (
               Implemented as React Router Navigate (client-side 301 equivalent).
           ══════════════════════════════════════════════════════════ */}
 
-          {/* Counties — old URL families → /{county}-county
-              Covers: /counties/{slug}-county,
-                      /service-areas/{slug}-county, and *-probate-estate-real-estate
-              Note: /counties/{slug} are now direct routes above */}
-          {[
-            "king",
-            "snohomish",
-            "pierce",
-            "kitsap",
-            "skagit",
-            "thurston",
-            "whatcom",
-            "clark",
-            "spokane",
-            "benton",
-            "yakima",
-            "franklin",
-            "cowlitz",
-            "grays-harbor",
-            "island",
-            "jefferson",
-            "lewis",
-            "mason",
-            "pacific",
-            "san-juan",
-            "skamania",
-            "wahkiakum",
-          ].flatMap((slug) => [
-            <Route
-              key={`c2-${slug}`}
-              path={`/counties/${slug}-county`}
-              element={<Navigate to={`/${slug}-county`} replace />}
-            />,
-            <Route
-              key={`sa-${slug}`}
-              path={`/service-areas/${slug}-county`}
-              element={<Navigate to={`/${slug}-county`} replace />}
-            />,
-            <Route
-              key={`pe-${slug}`}
-              path={`/${slug}-county-probate-estate-real-estate`}
-              element={<Navigate to={`/${slug}-county`} replace />}
-            />,
-          ])}
+          {/* Every redirect on the site lives in src/data/redirects.ts (Sept 27, 2026).
+              The build writes the same list to dist/_redirects, so the host answers
+              with a real 301 before any JavaScript runs; this route is the fallback
+              for in-app navigation. Add or change redirects there, not here. */}
+          {REDIRECTS.map((r) => (
+            <Route key={r.from} path={r.from} element={<Navigate to={r.to} replace />} />
+          ))}
 
           {/* Tier-2 cities → their county hub */}
-          <Route path="/kirkland-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
-          <Route path="/redmond-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
-          <Route path="/renton-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
-          <Route path="/kent-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
-          <Route path="/federal-way-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
-          <Route path="/auburn-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
-          <Route path="/marysville-probate-estate-real-estate" element={<Navigate to="/snohomish-county" replace />} />
-          <Route path="/yakima-probate-estate-real-estate" element={<Navigate to="/yakima-county" replace />} />
-          <Route path="/kennewick-probate-estate-real-estate" element={<Navigate to="/benton-county" replace />} />
-          <Route path="/richland-probate-estate-real-estate" element={<Navigate to="/benton-county" replace />} />
-          <Route path="/pasco-probate-estate-real-estate" element={<Navigate to="/franklin-county" replace />} />
 
           {/* Old "cities" hub & dynamic city pages → counties hub */}
-          <Route path="/cities-we-serve" element={<Navigate to="/counties" replace />} />
-          <Route path="/cities/:citySlug" element={<Navigate to="/counties" replace />} />
-          <Route path="/cities/:citySlug/:serviceSlug" element={<Navigate to="/counties" replace />} />
 
           {/* Dynamic /services/:slug → canonical service pages */}
-          <Route path="/probate-sales" element={<Navigate to="/probate-estate-sales" replace />} />
-          <Route path="/services" element={<Navigate to="/probate-estate-sales" replace />} />
-          <Route path="/services/probate-estate-sales" element={<Navigate to="/probate-estate-sales" replace />} />
-          <Route path="/services/senior-transitions" element={<Navigate to="/senior-transitions" replace />} />
-          <Route path="/services/downsizing-services" element={<Navigate to="/senior-transitions" replace />} />
-          <Route path="/services/executor-support" element={<Navigate to="/executors" replace />} />
-          <Route path="/services/attorney-fiduciary-support" element={<Navigate to="/for-attorneys" replace />} />
-          <Route path="/services/valuation-guidance" element={<Navigate to="/why-valuation-matters" replace />} />
-          <Route path="/services/preparing-home-for-sale" element={<Navigate to="/probate-estate-sales" replace />} />
-          <Route
-            path="/services/divorce-related-home-sales"
-            element={<Navigate to="/for-divorce-attorneys" replace />}
-          />
-          <Route path="/services/trust-estate-property-sales" element={<Navigate to="/trustees" replace />} />
 
           {/* /insights and /insights-guidance → /guides */}
-          <Route path="/insights" element={<Navigate to="/guides-and-resources" replace />} />
-          <Route
-            path="/insights/first-steps-inherited-house-washington"
-            element={<Navigate to="/guides/executor-first-steps-house" replace />}
-          />
-          <Route
-            path="/insights/out-of-state-inherited-house-help"
-            element={<Navigate to="/guides/out-of-state-families" replace />}
-          />
-          <Route
-            path="/insights/out-of-state-executor-case-study"
-            element={<Navigate to="/guides/out-of-state-families" replace />}
-          />
-          <Route
-            path="/insights/estate-property-sale-timeline"
-            element={<Navigate to="/guides/how-long-sell-probate-property" replace />}
-          />
-          <Route
-            path="/insights/estate-property-cleanout-before-sale"
-            element={<Navigate to="/guides/estate-property-repairs-before-sale" replace />}
-          />
-          <Route
-            path="/insights/empty-house-before-selling"
-            element={<Navigate to="/guides/estate-property-repairs-before-sale" replace />}
-          />
-          <Route
-            path="/insights/pricing-inherited-property-differences"
-            element={<Navigate to="/guides/pricing-house-trust-estate" replace />}
-          />
-          <Route
-            path="/insights/sell-inherited-house-without-repairs"
-            element={<Navigate to="/guides/sell-inherited-house-as-is-or-fix" replace />}
-          />
-          <Route
-            path="/insights/family-disagreement-selling-house"
-            element={<Navigate to="/guides/heirs-disagree-selling-house" replace />}
-          />
-          <Route
-            path="/insights/sell-or-keep-inherited-property"
-            element={<Navigate to="/guides/sell-inherited-house-as-is-or-fix" replace />}
-          />
-          <Route
-            path="/insights/estate-property-mistakes"
-            element={<Navigate to="/guides/what-executors-should-do" replace />}
-          />
-          <Route
-            path="/insights-guidance/how-does-probate-real-estate-work-in-washington"
-            element={<Navigate to="/guides/how-probate-real-estate-works" replace />}
-          />
-          <Route
-            path="/insights-guidance/how-to-move-elderly-parents-safely-and-respectfully"
-            element={<Navigate to="/guides/senior-transition-differences" replace />}
-          />
-          <Route
-            path="/how-to-move-elderly-parents"
-            element={<Navigate to="/guides/senior-transition-differences" replace />}
-          />
 
           {/* /learn-more pages → fold into parent (Phase 2c will merge content) */}
-          <Route path="/executors/learn-more" element={<Navigate to="/executors" replace />} />
-          <Route path="/trustees/learn-more" element={<Navigate to="/trustees" replace />} />
-          <Route path="/for-attorneys/learn-more" element={<Navigate to="/for-attorneys" replace />} />
-          <Route path="/for-cpas/learn-more" element={<Navigate to="/for-cpas" replace />} />
-          <Route
-            path="/for-financial-planners/learn-more"
-            element={<Navigate to="/for-financial-planners" replace />}
-          />
-          <Route path="/realtor/learn-more" element={<Navigate to="/realtor" replace />} />
-          <Route path="/real-estate-appraiser/learn-more" element={<Navigate to="/real-estate-appraiser" replace />} />
-          <Route path="/senior-move-managers/learn-more" element={<Navigate to="/senior-transitions" replace />} />
           <Route path="/estate-liquidators" element={<EstateLiquidators />} />
 
           {/* Redundant professional / referral pages → consolidated targets */}
-          <Route path="/professional-referral-resource" element={<Navigate to="/join-the-network" replace />} />
-          <Route
-            path="/professional-network"
-            element={<Navigate to="/building-your-trusted-professional-team" replace />}
-          />
-          <Route path="/attorney-referral" element={<Navigate to="/for-attorneys" replace />} />
-          <Route path="/for-referral-partners" element={<Navigate to="/join-the-network" replace />} />
-          <Route path="/for-professionals" element={<Navigate to="/professionals" replace />} />
-          <Route
-            path="/for-senior-living-professionals"
-            element={<Navigate to="/professionals/senior-housing-advisors" replace />}
-          />
 
           {/* Redundant senior pages → /senior-transitions */}
-          <Route path="/senior-estate-services" element={<Navigate to="/senior-transitions" replace />} />
           <Route path="/senior-move-managers" element={<SeniorMoveManagersFull />} />
           <Route path="/featured-senior-move-managers" element={<FeaturedSeniorMoveManagers />} />
           <Route path="/featured-professionals" element={<FeaturedProfessionals />} />
-          <Route path="/transition-resources" element={<Navigate to="/senior-transitions" replace />} />
 
           {/* Misc legacy */}
-          <Route path="/how-we-work" element={<Navigate to="/how-the-process-works" replace />} />
-          <Route path="/cpas" element={<Navigate to="/for-cpas" replace />} />
-          <Route path="/financial-planning" element={<Navigate to="/for-financial-planners" replace />} />
-          <Route path="/senior-living" element={<Navigate to="/senior-living-and-relocation" replace />} />
-          <Route path="/lenders-financing" element={<Navigate to="/lenders-and-financing-specialists" replace />} />
           <Route
             path="/afh-club"
             element={
@@ -1234,7 +1028,6 @@ const App = () => (
           <Route path="/afh-club/buying-selling" element={<AFHBuyingSelling />} />
           <Route path="/afh-club/regulations-compliance" element={<AFHRegulationsCompliance />} />
           <Route path="/afh-club/find-a-professional" element={<AFHFindProfessional />} />
-          <Route path="/afh-club/afh-cost-calculator" element={<Navigate to="/afh-club/calculators" replace />} />
           <Route path="/afh-club/calculators" element={<AFHCalculators />} />
           <Route path="/afh-club/afh-roi-calculator" element={<AFHROICalculator />} />
           <Route path="/afh-club/afh-valuation-estimator" element={<AFHValuationEstimator />} />
@@ -1247,7 +1040,6 @@ const App = () => (
           <Route path="/afh-club/cbhs-tiers" element={<AFHCBHSTiers />} />
           {/* Family-facing tool: lives on the senior-housing side, not AFH Club (moved Sept 2026). */}
           <Route path="/adult-family-home-costs" element={<AFHCostByLocation />} />
-          <Route path="/afh-club/cost-by-location" element={<Navigate to="/adult-family-home-costs" replace />} />
           <Route path="/afh-club/resources" element={<AFHResources />} />
           <Route path="/afh-club/site-map" element={<AFHSiteMap />} />
           <Route path="/afh-club/ownership-structure" element={<AFHOwnershipStructure />} />
@@ -1266,17 +1058,12 @@ const App = () => (
               directory under DSHS license 755603. Redirect rather than fall through
               to the city route, which would render a soft 404. Must precede
               the :citySlug route. */}
-          <Route
-            path="/afh-club/homes/kirkland-ne-140th-street"
-            element={<Navigate to="/afh-club/homes/kirkland" replace />}
-          />
           <Route path="/afh-club/homes" element={<AFHCountyDirectory />} />
           <Route path="/afh-club/homes/county/:countySlug" element={<AFHCountyHomes />} />
           <Route path="/afh-club/homes/:citySlug" element={<AFHCityDirectory />} />
           <Route path="/afh-club/homes/:citySlug/:segment" element={<AFHCitySegment />} />
           <Route path="/afh-club/management-companies" element={<AFHManagementCompanies />} />
           <Route path="/afh-club/real-estate-broker" element={<AFHRealEstateBroker />} />
-          <Route path="/afh-marketplace" element={<Navigate to="/afh-club/listings" replace />} />
           <Route path="/afh-submit" element={<AFHSubmit />} />
           <Route path="/afh-club/for-sale/seattle-wa" element={<AFHForSaleSeattle />} />
           <Route path="/afh-club/for-sale/tacoma-wa" element={<AFHForSaleTacoma />} />

@@ -49,7 +49,7 @@ const rolesImageTiles: ProfessionalImageTileData[] = [
   { alt: "Power of Attorney roles and responsibilities Washington State", href: "/power-of-attorney", src: imgPowerOfAttorney },
   { alt: "Probate terms and terminology glossary Washington State", href: "/terminology", src: imgProbateTerms },
   { alt: "The probate process steps overview Washington State", href: "/how-the-process-works", src: imgTheProcess },
-  { alt: "Probate sales estate inventory Washington State", href: "/probate-sales", src: imgProbateSales },
+  { alt: "Probate sales estate inventory Washington State", href: "/probate-estate-sales", src: imgProbateSales },
   { alt: "Title and escrow services real estate Washington State", href: "/title-and-escrow", src: imgTitleEscrow },
 ];
 

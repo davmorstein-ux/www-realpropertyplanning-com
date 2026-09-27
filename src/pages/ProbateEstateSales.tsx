@@ -17,7 +17,7 @@ const whatMakesDifferentMeta = [
   { key: "decisionMakers", image: "/tiles/set2/executors.webp", href: "/executors" },
   { key: "propertyCondition", image: "/tiles/set2/probate-estate-sales.webp?v=20260602b", href: "/how-the-process-works" },
   { key: "honestPricing", image: "/tiles/set1/real-estate-appraisers.webp", href: "/why-valuation-matters" },
-  { key: "emotionalComplexity", image: "/tiles/set2/trustees.webp", href: "/client-stories" },
+  { key: "emotionalComplexity", image: "/tiles/set2/trustees.webp", href: "/testimonials" },
   { key: "preparationStrategy", image: "/tiles/set3/home-values-pricing.webp", href: "/how-the-process-works" },
 ] as const;
 

@@ -96,13 +96,13 @@ const AttorneyReferral = () => {
         jsonLd={articleSchema({
           headline: "Attorney and Professional Referral Resource for Probate Real Estate",
           description: "Real Property Planning is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters.",
-          url: "/attorney-referral",
+          url: "/for-attorneys",
           datePublished: "2025-01-15",
           dateModified: "2026-03-15",
           about: ["Attorney referral", "Probate real estate", "Trust property", "Fiduciary support", "Estate property sales"],
         })}
       />
-      <BreadcrumbSchema items={[{ name: "Attorney Referral", url: "/attorney-referral" }]} />
+      <BreadcrumbSchema items={[{ name: "Attorney Referral", url: "/for-attorneys" }]} />
       <Header />
       <main id="main-content">
 

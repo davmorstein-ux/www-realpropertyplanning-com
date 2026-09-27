@@ -65,7 +65,7 @@ const faqs = [
 const relatedResources = [
   {
     title: "Senior Placement in Washington State",
-    href: "/senior-placement",
+    href: "/senior-living-advisors",
   },
   {
     title: "Senior Home Sale",

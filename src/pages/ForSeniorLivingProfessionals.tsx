@@ -95,7 +95,7 @@ const collaborationPartners = [
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for Senior Living and Transition Professionals",
   description: `${FEATURED_BROKER.Role} works with senior living communities, move managers, downsizing specialists, and related professionals when a home is part of a major life transition.`,
-  url: "/for-senior-living-professionals",
+  url: "/professionals/senior-housing-advisors",
   datePublished: "2026-03-16",
   dateModified: "2026-03-16",
   about: ["Senior transitions", "Senior living referrals", "Downsizing real estate", "Senior move coordination"],
@@ -252,8 +252,8 @@ const ForSeniorLivingProfessionals = () => {
               {[
                 { href: "/senior-transitions", label: "Senior Transitions", desc: "How Real Property Planning supports families navigating a move from a longtime home." },
                 { href: "/resources", label: "Resource Directory", desc: "Trusted professionals who assist with transitions throughout Washington State." },
-                { href: "/how-to-move-elderly-parents", label: "Moving Elderly Parents", desc: "A compassionate guide for families planning a senior housing transition." },
-                { href: "/services", label: "Our Services", desc: "An overview of how Real Property Planning supports families and professionals." },
+                { href: "/guides/senior-transition-differences", label: "Moving Elderly Parents", desc: "A compassionate guide for families planning a senior housing transition." },
+                { href: "/probate-estate-sales", label: "Our Services", desc: "An overview of how Real Property Planning supports families and professionals." },
               ].map((link) => (
                 <Link
                   key={link.href}

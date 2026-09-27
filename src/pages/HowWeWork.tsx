@@ -46,13 +46,13 @@ const HowWeWork = () => {
         jsonLd={articleSchema({
           headline: "How Real Property Planning Works With Attorneys, Executors, Trustees & Families",
           description: "How Real Property Planning collaborates with attorneys, executors, trustees, and families during probate, trust, and estate property transitions.",
-          url: `/how-we-work`,
+          url: `/how-the-process-works`,
           datePublished: "2025-01-15",
           dateModified: "2026-03-15",
           about: ["Real estate guidance", "Probate coordination", "Estate property", "Attorney collaboration"],
         })}
       />
-      <BreadcrumbSchema items={[{ name: `How We Work`, url: `/how-we-work` }]} />
+      <BreadcrumbSchema items={[{ name: `How We Work`, url: `/how-the-process-works` }]} />
       <Header />
       <main id="main-content">
 

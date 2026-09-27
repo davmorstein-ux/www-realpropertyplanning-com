@@ -57,10 +57,10 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
 
           <div className="mt-8 flex flex-wrap gap-3">
             {[
-              { label: "King County", href: "/counties/king" },
-              { label: "Snohomish County", href: "/counties/snohomish" },
-              { label: "Pierce County", href: "/counties/pierce" },
-              { label: "Kitsap County", href: "/counties/kitsap" },
+              { label: "King County", href: "/king-county" },
+              { label: "Snohomish County", href: "/snohomish-county" },
+              { label: "Pierce County", href: "/pierce-county" },
+              { label: "Kitsap County", href: "/kitsap-county" },
             ].map((county) => (
               <Link
                 key={county.href}

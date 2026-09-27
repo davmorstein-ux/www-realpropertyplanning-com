@@ -51,7 +51,7 @@ const ForProfessionals = () => {
         title="Real Estate Support for Professional Partners | Real Property Planning"
         description="A coordinated approach to property decisions involving legal planning, financial strategy, and life transitions. Collaborate with a licensed broker and certified appraiser."
       />
-      <BreadcrumbSchema items={[{ name: "For Professionals", url: "/for-professionals" }]} />
+      <BreadcrumbSchema items={[{ name: "For Professionals", url: "/professionals" }]} />
       <Header />
       <main id="main-content">
 

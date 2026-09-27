@@ -57,7 +57,7 @@ const jsonLd = articleSchema({
   headline: "Professional Network & Trusted Resources",
   description:
     "A collaborative network of professionals helping families navigate estate matters, senior transitions, and real estate decisions throughout Washington State.",
-  url: "/professional-network",
+  url: "/building-your-trusted-professional-team",
   datePublished: "2026-03-16",
   dateModified: "2026-03-16",
   about: [
@@ -78,7 +78,7 @@ const ProfessionalNetwork = () => {
       />
       <BreadcrumbSchema
         items={[
-          { name: "Professional Network", url: "/professional-network" },
+          { name: "Professional Network", url: "/building-your-trusted-professional-team" },
         ]}
       />
       <Header />

@@ -251,11 +251,6 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
 /* AFH Club                                                              */
 /* ------------------------------------------------------------------ */
 
-/** The calculator index still lists one tool by an address that now redirects. */
-const AFH_CALC_ADDRESS_FIX: Record<string, string> = {
-  "/afh-club/cost-by-location": "/adult-family-home-costs",
-};
-
 export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
   {
     id: "start",
@@ -345,7 +340,7 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
       {
         links: [
           { title: "All AFH Calculators", href: "/afh-club/calculators" },
-          ...AFH_CALCULATORS.map((c) => ({ title: c.title, href: AFH_CALC_ADDRESS_FIX[c.href] ?? c.href })),
+          ...AFH_CALCULATORS.map((c) => ({ title: c.title, href: c.href })),
         ],
       },
     ],
@@ -373,9 +368,6 @@ export const SITE_MAP_EXCLUDED: Record<string, string> = {
   "/": "the homepage; both maps link to it from their introductions",
   "/sitemap": "this page",
   "/afh-club/site-map": "this page",
-  ...Object.fromEntries(
-    COUNTIES.map((c) => [`/counties/${c}`, `duplicate address of /${c}-county (same page); the map lists the one the Service Areas page links to`]),
-  ),
   ...Object.fromEntries(
     ["es", "ro", "ti", "tl", "vi", "zh-cn", "zh-tw"].flatMap((l) =>
       ["afh-club", "contact", "cost-of-care-calculator", "probate-estate-sales", "senior-transitions"].map((p) => [

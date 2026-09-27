@@ -30,7 +30,7 @@ const partnerTiles = [
   {
     title: "Senior &\nTransition",
     description: "Coordinating with those who help seniors and families navigate downsizing, relocation, and care transitions.",
-    href: "/transition-resources",
+    href: "/senior-transitions",
     iconSrc: iconSeniorMoves,
   },
   {
@@ -56,7 +56,7 @@ const ForReferralPartners = () => {
         title="Referral Partners | Probate & Estate Real Estate Network | WA"
         description="Refer clients with confidence. Real Property Planning partners with attorneys, CPAs, financial planners, and senior living advisors on probate and estate property across Washington State."
       />
-      <BreadcrumbSchema items={[{ name: "For Professional Partners", url: "/for-referral-partners" }]} />
+      <BreadcrumbSchema items={[{ name: "For Professional Partners", url: "/join-the-network" }]} />
       <Header />
       <main id="main-content">
 

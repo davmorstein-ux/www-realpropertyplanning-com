@@ -24,7 +24,7 @@ const RetirementReverseMortgage = () => (
     />
     <BreadcrumbSchema
       items={[
-        { name: "For Professionals", url: "/for-professionals" },
+        { name: "For Professionals", url: "/professionals" },
         { name: "Lenders & Financing Specialists", url: "/retirement-reverse-mortgage" },
       ]}
     />

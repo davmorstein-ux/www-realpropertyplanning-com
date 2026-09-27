@@ -35,6 +35,7 @@ const APPROVED = new Set([
   "src/data/featuredProfessionalAssets.ts",
   "src/pages/About.tsx",
   "src/App.tsx", // /about-david-stein redirect only
+  "src/data/redirects.ts", // /about-david-stein redirect only (moved from App.tsx, Sept 27 2026)
   "src/data/sitemap-data.ts", // same redirect
   "src/data/afhListings.ts", // provenance comment: who reviewed the closed-sales data, when
   "src/data/afhPrivatePayRanges.ts", // provenance comment: whose working bands these are

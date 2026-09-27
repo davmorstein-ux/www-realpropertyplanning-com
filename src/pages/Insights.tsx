@@ -31,7 +31,7 @@ const categories: Category[] = [
       {
         title: "How Does Probate Real Estate Work in Washington?",
         description: "An overview of the probate sale process, court requirements, and what executors and attorneys need to know.",
-        href: "/insights-guidance/how-does-probate-real-estate-work-in-washington",
+        href: "/guides/how-probate-real-estate-works",
       },
       {
         title: "Can an Executor Sell a House Before Probate?",
@@ -46,12 +46,12 @@ const categories: Category[] = [
       {
         title: "Understanding the Timeline for Selling an Estate Property",
         description: "What affects timing, how probate and non-probate situations differ, and realistic expectations.",
-        href: "/insights/estate-property-sale-timeline",
+        href: "/guides/how-long-sell-probate-property",
       },
       {
         title: "What Are the Biggest Mistakes When Selling Estate Property?",
         description: "Common pricing, preparation, timing, and communication errors — and how to avoid them.",
-        href: "/insights/estate-property-mistakes",
+        href: "/guides/what-executors-should-do",
       },
     ],
   },
@@ -68,7 +68,7 @@ const categories: Category[] = [
       {
         title: "What Should You Do First After Inheriting a House in Washington?",
         description: "Immediate priorities, common mistakes to avoid, and how to think through your next steps.",
-        href: "/insights/first-steps-inherited-house-washington",
+        href: "/guides/executor-first-steps-house",
       },
       {
         title: "What Repairs Should Be Done Before Selling an Estate Property?",
@@ -78,22 +78,22 @@ const categories: Category[] = [
       {
         title: "Should You Clean Out an Estate Property Before Selling?",
         description: "When cleanout is necessary, when it may not be needed, and a practical decision approach.",
-        href: "/insights/estate-property-cleanout-before-sale",
+        href: "/guides/estate-property-repairs-before-sale",
       },
       {
         title: "Can You Sell an Inherited House Without Fixing It Up?",
         description: "Pros and cons of selling as-is, when repairs make sense, and how to evaluate the decision.",
-        href: "/insights/sell-inherited-house-without-repairs",
+        href: "/guides/sell-inherited-house-as-is-or-fix",
       },
       {
         title: "Do You Need to Empty a House Before Selling It?",
         description: "When emptying matters, when it doesn't, and a practical approach to the decision.",
-        href: "/insights/empty-house-before-selling",
+        href: "/guides/estate-property-repairs-before-sale",
       },
       {
         title: "How Do You Decide Whether to Sell or Keep an Inherited Property?",
         description: "Financial considerations, emotional factors, and a simple decision framework.",
-        href: "/insights/sell-or-keep-inherited-property",
+        href: "/guides/sell-inherited-house-as-is-or-fix",
       },
     ],
   },
@@ -115,7 +115,7 @@ const categories: Category[] = [
       {
         title: "What Happens If Family Members Disagree About Selling?",
         description: "Common conflict scenarios, communication strategies, and how to find a way forward.",
-        href: "/insights/family-disagreement-selling-house",
+        href: "/guides/heirs-disagree-selling-house",
       },
     ],
   },
@@ -132,7 +132,7 @@ const categories: Category[] = [
       {
         title: "How to Move Elderly Parents Safely and Respectfully",
         description: "Guidance for families coordinating a move from a longtime home to a new living situation.",
-        href: "/insights-guidance/how-to-move-elderly-parents-safely-and-respectfully",
+        href: "/guides/senior-transition-differences",
       },
     ],
   },
@@ -159,7 +159,7 @@ const categories: Category[] = [
       {
         title: "What Makes Pricing an Inherited Property Different?",
         description: "Why inherited property pricing requires a different approach — and how to avoid costly mistakes.",
-        href: "/insights/pricing-inherited-property-differences",
+        href: "/guides/pricing-house-trust-estate",
       },
     ],
   },
@@ -176,7 +176,7 @@ const categories: Category[] = [
       {
         title: "How to Handle an Inherited House When You Live Out of State",
         description: "Practical strategies for managing inherited property remotely — coordination, condition, and minimizing travel.",
-        href: "/insights/out-of-state-inherited-house-help",
+        href: "/guides/out-of-state-families",
       },
     ],
   },

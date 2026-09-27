@@ -258,7 +258,7 @@ const EverettProbateEstate = () => {
                 { to: "/why-valuation-matters", label: "Why Valuation Matters" },
                 { to: "/how-the-process-works", label: "How the Process Works" },
                 { to: "/resources/property-preparation-services", label: "Property Preparation" },
-                { to: `/cities-we-serve`, label: "All Cities" },
+                { to: `/counties`, label: "All Cities" },
               ].map((link, i) => (
                 <span key={link.to} className="flex items-center gap-3">
                   {i > 0 && <span className="text-muted-foreground/40">·</span>}

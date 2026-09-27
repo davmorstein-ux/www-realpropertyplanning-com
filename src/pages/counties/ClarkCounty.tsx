@@ -4,7 +4,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const ClarkCounty = () => (
   <CountyPageTemplate
     countyName="Clark County"
-    countyPath="/clark-county-probate-estate-real-estate"
+    countyPath="/clark-county"
     countySlug="clark-county"
     cities={[
       "Vancouver", "Camas", "Washougal", "Battle Ground", "Ridgefield",

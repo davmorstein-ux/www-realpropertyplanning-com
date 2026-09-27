@@ -4,7 +4,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const BentonCounty = () => (
   <CountyPageTemplate
     countyName="Benton County"
-    countyPath="/benton-county-probate-estate-real-estate"
+    countyPath="/benton-county"
     countySlug="benton-county"
     cities={[
       "Kennewick", "Richland", "West Richland", "Prosser", "Benton City",

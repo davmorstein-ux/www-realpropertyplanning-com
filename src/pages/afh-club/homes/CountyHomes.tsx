@@ -14,10 +14,10 @@ const BORDER = "#d9dede";
 
 /** Counties that also have a probate / real-estate services page on the main site. */
 const REAL_ESTATE_COUNTY_PAGES: Record<string, string> = {
-  king: "/counties/king",
-  pierce: "/counties/pierce",
-  snohomish: "/counties/snohomish",
-  kitsap: "/counties/kitsap",
+  king: "/king-county",
+  pierce: "/pierce-county",
+  snohomish: "/snohomish-county",
+  kitsap: "/kitsap-county",
 };
 
 const CountyHomes = () => {

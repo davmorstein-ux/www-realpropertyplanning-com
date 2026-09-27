@@ -29,7 +29,7 @@ const LendersFinancingSpecialists = () => (
     />
     <BreadcrumbSchema
       items={[
-        { name: "For Professionals", url: "/for-professionals" },
+        { name: "For Professionals", url: "/professionals" },
         { name: "Lenders & Financing Specialists", url: "/lenders-and-financing-specialists" },
       ]}
     />

@@ -4,7 +4,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 const WhatcomCounty = () => (
   <CountyPageTemplate
     countyName="Whatcom County"
-    countyPath="/whatcom-county-probate-estate-real-estate"
+    countyPath="/whatcom-county"
     countySlug="whatcom-county"
     cities={[
       "Bellingham", "Lynden", "Ferndale", "Blaine", "Everson",

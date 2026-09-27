@@ -133,7 +133,7 @@ const helpfulGuides = [
     description: "Options, decision factors, and practical guidance when you inherit property in Washington.",
   },
   {
-    href: "/how-to-move-elderly-parents",
+    href: "/guides/senior-transition-differences",
     title: "How to Move Elderly Parents",
     description: "A compassionate guide for families planning a senior housing transition in Washington State.",
   },
@@ -152,7 +152,7 @@ const professionalPages = [
       `How ${FEATURED_BROKER.role} works with attorneys and their clients when real property is part of probate, trust, or estate matters.`,
   },
   {
-    href: "/for-senior-living-professionals",
+    href: "/professionals/senior-housing-advisors",
     title: "For Senior Living & Transition Professionals",
     description:
       "Real estate guidance for senior living communities, move managers, and professionals supporting families through later-life transitions.",
@@ -175,7 +175,7 @@ const jsonLd = articleSchema({
   headline: "Transition Resources for Families and Professionals",
   description:
     "A curated starting point for families, attorneys, senior living professionals, and others navigating probate, downsizing, inherited property, senior moves, and other major housing transitions.",
-  url: "/transition-resources",
+  url: "/senior-transitions",
   datePublished: "2026-03-16",
   dateModified: "2026-03-16",
   about: [

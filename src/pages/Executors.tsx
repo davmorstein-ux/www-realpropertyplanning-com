@@ -31,7 +31,7 @@ const roles = [
   {
     title: "Powers of Attorney",
     subtitle: "Acting on behalf of a living person",
-    href: "/executors/power-of-attorney-guide",
+    href: "/senior-living/power-of-attorneys",
     image: poaImg,
     alt: "Power of attorney document with pen and estate planning book",
     description:
@@ -46,7 +46,7 @@ const roles = [
   {
     title: "Trustees",
     subtitle: "Administering assets held in trust",
-    href: "/executors/trustees-guide",
+    href: "/trustees",
     image: trusteeImg,
     alt: "Trustee meeting with beneficiaries outside a family home",
     description:

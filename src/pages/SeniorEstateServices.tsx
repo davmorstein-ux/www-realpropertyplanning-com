@@ -216,22 +216,22 @@ const SeniorEstateServices = () => {
             Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and communities throughout Washington State.
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
-            <Link to="/counties/king">
+            <Link to="/king-county">
               <Button variant="outline3d" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
                 King County
               </Button>
             </Link>
-            <Link to="/counties/snohomish">
+            <Link to="/snohomish-county">
               <Button variant="outline3d" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
                 Snohomish County
               </Button>
             </Link>
-            <Link to="/counties/pierce">
+            <Link to="/pierce-county">
               <Button variant="outline3d" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
                 Pierce County
               </Button>
             </Link>
-            <Link to="/counties/kitsap">
+            <Link to="/kitsap-county">
               <Button variant="outline3d" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
                 Kitsap County
               </Button>

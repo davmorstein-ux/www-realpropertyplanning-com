@@ -65,7 +65,7 @@ const relatedPages = [
   { title: "Senior Transitions", href: "/senior-transitions" },
   { title: "Real Estate Appraiser", href: "/real-estate-appraiser" },
   { title: "For Attorneys", href: "/for-attorneys" },
-  { title: "How to Move Elderly Parents", href: "/insights-guidance/how-to-move-elderly-parents-safely-and-respectfully" },
+  { title: "How to Move Elderly Parents", href: "/guides/senior-transition-differences" },
 ];
 
 const jsonLd = {

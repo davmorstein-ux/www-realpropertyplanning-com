@@ -411,10 +411,10 @@ interface CountyChecked {
 }
 
 const REAL_ESTATE_COUNTY_PAGES: Record<string, string> = {
-  king: "/counties/king",
-  pierce: "/counties/pierce",
-  snohomish: "/counties/snohomish",
-  kitsap: "/counties/kitsap",
+  king: "/king-county",
+  pierce: "/pierce-county",
+  snohomish: "/snohomish-county",
+  kitsap: "/kitsap-county",
 };
 
 const pill = (href: string, label: string, count: number, empty: boolean) =>

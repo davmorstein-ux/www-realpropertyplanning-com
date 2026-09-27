@@ -56,7 +56,7 @@ const ALL: Record<string, RelatedLink> = {
     description: "The seven-step workflow from first call through closing.",
   },
   moveElderly: {
-    href: "/how-to-move-elderly-parents",
+    href: "/guides/senior-transition-differences",
     label: "How to Move Elderly Parents",
     description: "A practical guide for adult children planning a parent's housing transition.",
   },
@@ -66,7 +66,7 @@ const ALL: Record<string, RelatedLink> = {
     description: "Service-area hubs across Washington State.",
   },
   transitionResources: {
-    href: "/transition-resources",
+    href: "/senior-transitions",
     label: "Transition Resources",
     description: "A starting point for families navigating a major housing transition.",
   },

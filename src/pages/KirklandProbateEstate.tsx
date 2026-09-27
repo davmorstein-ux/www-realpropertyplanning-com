@@ -95,7 +95,7 @@ const KirklandProbateEstate = () => {
         items={[
           { name: "Counties", url: "/counties" },
           { name: "King County", url: "/king-county" },
-          { name: "Kirkland", url: "/kirkland-probate-estate-real-estate" },
+          { name: "Kirkland", url: "/king-county" },
         ]}
       />
       <Header />
@@ -257,7 +257,7 @@ const KirklandProbateEstate = () => {
                 { to: "/senior-transitions", label: "Senior Transitions" },
                 { to: "/king-county", label: "King County Overview" },
                 { to: "/how-the-process-works", label: "How the Process Works" },
-                { to: `/cities-we-serve`, label: "All Cities" },
+                { to: `/counties`, label: "All Cities" },
               ].map((link, i) => (
                 <span key={link.to} className="flex items-center gap-3">
                   {i > 0 && <span className="text-muted-foreground/40">·</span>}

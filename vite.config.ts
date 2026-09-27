@@ -12,6 +12,7 @@ import { articleAuthor, articlePublisher } from "./src/lib/schema";
 import { renderAfhInventory, buildAfhListingRoutes, inventoryCounts, type AFHInventoryScope } from "./src/data/afhInventoryPrerender";
 import { guideLibraryHtml } from "./src/data/guideLibrary";
 import { cityRoutes as afhCityRoutes } from "./src/data/afhCityPages";
+import { REDIRECTS } from "./src/data/redirects";
 
 // Skip optimization for images smaller than 10KB
 const MIN_OPTIMIZE_BYTES = 10 * 1024;
@@ -151,22 +152,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro:
       "From initial consultation to closing day — here is exactly how Real Property Planning helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
   },
-  "/how-we-work": {
-    title: "How We Work With Attorneys, Executors, Trustees & Families",
-    description:
-      "Learn how Real Property Planning collaborates with attorneys, executors, trustees, and families to provide real estate guidance, valuation insight, and practical coordination during estate property transitions.",
-    h1: "How Real Property Planning Works With Attorneys, Executors, Trustees, and Families",
-    intro:
-      "Real Property Planning is a free educational hub. It gives attorneys, executors, trustees, and families plain-language guidance on probate, trust, and estate property transitions, and connects them with featured licensed professionals — a Washington real estate broker and a certified residential appraiser who work independently through their own practices — when a property decision needs one.",
-  },
-  "/attorney-referral": {
-    title: "Attorney & Professional Referral Resource | Real Property Planning",
-    description:
-      "Real Property Planning is a free real estate and valuation reference for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters throughout Washington State, with introductions to featured licensed professionals.",
-    h1: "Attorney and Professional Referral Resource for Probate Real Estate",
-    intro:
-      "Real Property Planning is a free real estate and valuation reference for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters throughout Washington State, with introductions to featured licensed professionals.",
-  },
   "/for-cpas": {
     title: "Real Estate Guidance for CPAs | Real Property Planning",
     description:
@@ -182,22 +167,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Real Estate Guidance for Financial Planners and the Families They Advise",
     intro:
       "Real Property Planning gives financial planners plain-language guides on probate real estate, inherited property, trust-owned real estate, and estate sales to share with the families they advise, and can introduce a featured Washington licensed broker or certified appraiser when a valuation or sale is needed.",
-  },
-  "/for-senior-living-professionals": {
-    title: "For Senior Living & Transition Professionals | Real Property Planning",
-    description:
-      "Real Property Planning works with senior living communities, move managers, downsizing specialists, and estate sale companies when a home is part of a major life transition throughout Washington State.",
-    h1: "For Senior Living and Transition Professionals",
-    intro:
-      "Real Property Planning works with senior living communities, move managers, downsizing specialists, and estate sale companies when a home is part of a major life transition throughout Washington State.",
-  },
-  "/for-referral-partners": {
-    title: "For Professional Referral Partners | Real Property Planning",
-    description:
-      "Learn how Real Property Planning collaborates with attorneys, CPAs, senior move managers, and other professionals who assist families navigating probate property and estate transitions.",
-    h1: "For Professional Referral Partners",
-    intro:
-      "Real Property Planning collaborates with attorneys, CPAs, senior move managers, and other professionals who assist families navigating probate property, estate transitions, and senior housing decisions.",
   },
   "/about": {
     title: "About Real Property Planning | Senior Transitions & Estate Hub",
@@ -238,14 +207,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Washington State Counties",
     intro:
       "Real Property Planning covers every county in Washington State with plain-language guidance on probate real estate, inherited property, estate sales, and senior transitions. Each county page explains what makes that market different and how to connect with a featured Washington licensed broker or certified appraiser who works there.",
-  },
-  "/cities-we-serve": {
-    title: "Washington Cities | Probate, Estate & Senior Transition Guides by City",
-    description:
-      "City-by-city guides to probate real estate, inherited property, trust-owned homes, and estate-related sales throughout Washington State.",
-    h1: "Washington Cities: Probate, Estate & Senior Transition Guides",
-    intro:
-      "Real Property Planning's guides cover communities throughout Washington State — including Seattle, Bellevue, Kirkland, Everett, Tacoma, Gig Harbor, Bremerton, Bainbridge Island, and dozens of others — with help connecting to a licensed broker or appraiser who works each one.",
   },
   "/king-county": {
     title: "Probate & Estate Real Estate in King County, WA | Real Property Planning",
@@ -346,14 +307,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro:
       "Trusted professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
   },
-  "/resources/senior-move-managers": {
-    title: "Senior Move Managers | Resources | Real Property Planning",
-    description:
-      "Senior move management professionals in Washington State who coordinate and manage the physical and emotional aspects of relocating seniors.",
-    h1: "Senior Move Managers in Washington State",
-    intro:
-      "Senior move management professionals in Washington State who coordinate and manage the physical and emotional aspects of relocating seniors.",
-  },
   "/resources/estate-sale-companies": {
     title: "Estate Sale Companies | Resources | Real Property Planning",
     description:
@@ -402,22 +355,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro:
       "Moving companies and relocation specialists experienced with estate and senior transitions throughout Washington State.",
   },
-  "/how-to-move-elderly-parents": {
-    title: "How to Move Elderly Parents | Real Property Planning",
-    description:
-      "A compassionate step-by-step guide for families navigating senior housing transitions in Washington State — from recognizing when it's time to move through selling the family home.",
-    h1: "How to Move Elderly Parents Out of Their Home in Washington State",
-    intro:
-      "A compassionate step-by-step guide for families navigating senior housing transitions in Washington State — from recognizing when it's time to move through selling the family home.",
-  },
-  "/transition-resources": {
-    title: "Transition Resources for Families | Real Property Planning",
-    description:
-      "A curated starting point for families and professionals navigating probate, downsizing, inherited property, senior moves, and other major housing transitions throughout Washington State.",
-    h1: "Transition Resources for Families and Professionals",
-    intro:
-      "A curated starting point for families, attorneys, senior living professionals, and others navigating probate, downsizing, inherited property, senior moves, and other major housing transitions throughout Washington State.",
-  },
   "/testimonials": {
     title: "Testimonials & Reviews | Real Property Planning",
     description:
@@ -455,6 +392,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Probate & Estate Real Estate in Thurston County, WA | Real Property Planning",
     description: "Estate and inherited property sales across Olympia, Lacey, Tumwater, and the South Sound. Honest condition assessment and Thurston-County-specific pricing.",
     h1: "Thurston County, WA",
+    quickAnswerQ: "How do practical probate and estate sale strategies work in Thurston County?",
+    quickAnswerA: "Thurston County's government-employment-driven market creates a steady buyer pool that behaves differently from faster-growing metro areas. This page explains how to set realistic expectations and plan an estate sale around Thurston County's measured market dynamics, and how to connect with a featured Washington licensed broker or certified appraiser who works the county.",
     intro: "Olympia's older established neighborhoods, Lacey's mid-century inventory, and Tumwater's family communities each carry different buyer expectations. Pricing should be condition-based and calibrated to the actual neighborhood. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
   },
   "/clark-county": {
@@ -957,25 +896,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "AFH Calculators",
     intro: "Four tools built for Washington adult family homes: the AFH Property Score, which screens a house for physical suitability from its listing and builds a tape-measure checklist for the showing; an ROI calculator that models revenue by bed count, occupancy, and Medicaid versus private-pay mix against operating costs; a valuation estimator that separates what the real estate is worth from what the operating business adds; and an occupancy and financing calculator that shows whether a buyer can get the loan at a given price and number of residents, and how each empty bed changes the lender's answer.",
   },
-  "/afh-club/cost-by-location": {
-    title: "Adult Family Home Cost by City and County in Washington | AFH Club",
-    description: "Look up what an adult family home costs in any Washington city or county: the DSHS Medicaid daily and monthly rate range for that county, typical private-pay ranges, and how many licensed homes there accept Medicaid.",
-    h1: "What does an adult family home cost where you're looking?",
-    quickAnswerQ: "How much does an adult family home cost in Washington?",
-    quickAnswerA: "It depends on the county and the resident's care level. DSHS pays adult family homes a Medicaid daily rate on two schedules: in King, Pierce, and Snohomish counties the base rate runs from $144.47 to $279.30 per day (about $4,394 to $8,495 per month) from the lightest to the heaviest care level, effective July 1, 2026; in every other Washington county it runs from $132.49 to $250.61 per day (about $4,030 to $7,623 per month). A Medicaid resident contributes most of their own income toward that cost. Private-pay rates are set by each home and are generally higher than the Medicaid rate for the same care level, with memory care higher still. Type a city or county into the tool on this page for its rate range and how many licensed homes there accept Medicaid.",
-    intro: "Families usually start with a location and a budget. This lookup turns a Washington city or county into three facts: the DSHS Medicaid rate range that applies there (exact, published by DSHS each July), a typical private-pay range where one has been reviewed, and how many licensed adult family homes the county has and how many of them accept Medicaid, from the same DSHS records behind AFH Club's statewide directory.",
-    sections: [
-      "Medicaid rate, King, Pierce, and Snohomish counties (High Cost schedule, July 1, 2026) — $144.47 per day (A Low) to $279.30 per day (E High); about $4,394 to $8,495 per month. Base adult family home rate, service code T1020 U1, before specialty add-ons.",
-      "Medicaid rate, all other Washington counties (Standard Cost schedule, July 1, 2026) — $132.49 per day (A Low) to $250.61 per day (E High); about $4,030 to $7,623 per month.",
-      "What a Medicaid resident pays — The daily rate is what DSHS pays the home. The resident contributes most of their monthly income toward it and keeps a personal needs allowance, so the family's out-of-pocket is usually the resident's income rather than the rate.",
-      "Private pay — No public dataset exists. Homes set their own rates; the ranges shown in the tool are working bands from David Stein's experience with operating homes, published only once reviewed, and memory care or heavy-care needs sit above them.",
-    ],
-    faq: [
-      { q: "What does a Medicaid resident actually pay?", a: "The DSHS daily rate is what the state pays the home. A Medicaid resident contributes most of their own monthly income toward that cost and keeps a small personal needs allowance, so the family's out-of-pocket under Medicaid is usually the resident's income, not the rate." },
-      { q: "Why do King, Pierce, and Snohomish have a higher rate?", a: "DSHS pays a High Cost schedule in those three counties and a Standard Cost schedule everywhere else, reflecting labor and housing costs. Within a region the rate depends only on the resident's CARE classification, A Low through E High." },
-      { q: "Does a cheaper county mean a cheaper home?", a: "On average, but the spread inside a county is wider than the spread between counties. Care level, private versus shared room, and nursing staff move the number more than the ZIP code. Use the county figure to set a budget, then compare specific homes." },
-    ],
-  },
   "/afh-club/costs-fees": {
     title: "AFH Costs & Fees | AFH Club | Real Property Planning",
     description: "Complete breakdown of Washington State Adult Family Home startup costs, annual licensing fees, liability insurance, building permits, and Medicaid rate information for 2025.",
@@ -1247,96 +1167,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Guidance for executors and families with inherited or estate property in Bellingham, WA. Out-of-area support and coordinated decisions.",
     h1: "Helping Families Handle Inherited Property in Bellingham",
   },
-  "/client-stories": {
-    title: "Real Situations. Real Outcomes. | Real Property Planning",
-    description: "Real probate and estate property situations from across Washington State — what executors, families, and trustees faced, and how each was resolved with the featured broker and appraiser.",
-    h1: "Real Situations. Real Outcomes.",
-  },
   "/cost-of-care-calculator": {
     title: "Cost of Care Calculator | Washington State Long-Term Care Costs",
     description: "Compare the cost of in-home care, assisted living, memory care, and nursing homes in Washington State versus national averages, with future cost projections.",
     h1: "Cost of Care Calculator",
-  },
-  "/counties/cowlitz": {
-    title: "Probate & Estate Real Estate in Cowlitz County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Cowlitz County, Washington. Serving Longview, Kelso, Castle Rock & surrounding communities.",
-    h1: "Cowlitz County, WA",
-  },
-  "/counties/grays-harbor": {
-    title: "Probate & Estate Real Estate in Grays Harbor County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Grays Harbor County, Washington. Serving Aberdeen, Hoquiam, Ocean Shores & surrounding communities.",
-    h1: "Grays Harbor County, WA",
-  },
-  "/counties/island": {
-    title: "Probate & Estate Real Estate in Island County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Island County, Washington. Serving Whidbey Island, Camano Island, Oak Harbor, Coupeville & surrounding communities.",
-    h1: "Island County, WA",
-  },
-  "/counties/jefferson": {
-    title: "Probate & Estate Real Estate in Jefferson County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Jefferson County, Washington. Serving Port Townsend, Sequim, Port Hadlock & surrounding communities.",
-    h1: "Jefferson County, WA",
-  },
-  "/counties/king": {
-    title: "Probate & Estate Real Estate in King County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout King County, Washington. Serving Seattle, Bellevue, Kirkland, Redmond & more.",
-    h1: "King County, WA",
-  },
-  "/counties/kitsap": {
-    title: "Probate & Estate Real Estate in Kitsap County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Kitsap County. Serving Bremerton, Silverdale, Poulsbo, Bainbridge Island & more.",
-    h1: "Kitsap County, WA",
-  },
-  "/counties/lewis": {
-    title: "Probate & Estate Real Estate in Lewis County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Lewis County, Washington. Serving Chehalis, Centralia, Morton & surrounding communities.",
-    h1: "Lewis County, WA",
-  },
-  "/counties/mason": {
-    title: "Probate & Estate Real Estate in Mason County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Mason County, Washington. Serving Shelton, Belfair, Union, Hoodsport & surrounding communities.",
-    h1: "Mason County, WA",
-  },
-  "/counties/pacific": {
-    title: "Probate & Estate Real Estate in Pacific County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Pacific County, Washington. Serving Long Beach, Raymond, South Bend, Ilwaco & surrounding communities.",
-    h1: "Pacific County, WA",
-  },
-  "/counties/pierce": {
-    title: "Probate & Estate Real Estate in Pierce County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Pierce County. Serving Tacoma, Puyallup, Gig Harbor, Lakewood & more.",
-    h1: "Inherited Homes in Tacoma, Gig Harbor, and Across Pierce County",
-  },
-  "/counties/san-juan": {
-    title: "Probate & Estate Real Estate in San Juan County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout San Juan County, Washington. Serving San Juan Island, Orcas Island, Lopez Island & surrounding communities.",
-    h1: "San Juan County, WA",
-  },
-  "/counties/skagit": {
-    title: "Skagit County Probate & Estate Real Estate | Real Property Planning",
-    description: "Probate, inherited property, and senior transitions across Skagit County — Mount Vernon, Burlington, Anacortes, La Conner, and more.",
-    h1: "Probate & Estate Real Estate in Skagit County, Washington",
-  },
-  "/counties/skamania": {
-    title: "Probate & Estate Real Estate in Skamania County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Skamania County, Washington. Serving Stevenson, North Bonneville, Carson & surrounding communities.",
-    h1: "Skamania County, WA",
-  },
-  "/counties/snohomish": {
-    title: "Probate & Estate Real Estate in Snohomish County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Snohomish County. Serving Everett, Edmonds, Lynnwood, Bothell, Woodinville & more.",
-    h1: "Snohomish County, WA",
-  },
-  "/counties/thurston": {
-    title: "Thurston County Probate & Estate Real Estate | Real Property Planning",
-    description: "Probate, inherited property, and senior transitions across Thurston County — Olympia, Lacey, Tumwater, Yelm, and surrounding communities.",
-    quickAnswerQ: "How do practical probate and estate sale strategies work in Thurston County?",
-    quickAnswerA: "Thurston County's government-employment-driven market creates a steady buyer pool that behaves differently from faster-growing metro areas. This page explains how to set realistic expectations and plan an estate sale around Thurston County's measured market dynamics, and how to connect with a featured Washington licensed broker or certified appraiser who works the county.",
-  },
-  "/counties/wahkiakum": {
-    title: "Probate & Estate Real Estate in Wahkiakum County, WA | Real Property Planning",
-    description: "Experienced probate real estate, inherited home sales, and senior transition guidance throughout Wahkiakum County, Washington. Serving Cathlamet, Skamokawa & surrounding communities.",
-    h1: "Wahkiakum County, WA",
   },
   "/disclaimer": {
     title: "Disclaimer | Real Property Planning",
@@ -1696,36 +1530,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Probate & Estate Real Estate in Vancouver, WA",
     description: "Guidance for families, executors, and trustees with inherited property in Vancouver, WA. Relocation, timing, and coordinated transitions.",
     h1: "Helping Families Navigate Property Transitions in Vancouver",
-  },
-  "/counties/benton": {
-    title: "Probate Real Estate & Inherited Property Sales in Benton County | Real Property Planning",
-    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Benton County, Washington State.",
-    h1: "Estate & Inherited Property Sales in Benton County",
-  },
-  "/counties/clark": {
-    title: "Probate Real Estate & Inherited Property Sales in Clark County | Real Property Planning",
-    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Clark County, Washington State.",
-    h1: "Estate & Inherited Property Sales in Clark County",
-  },
-  "/counties/franklin": {
-    title: "Probate Real Estate & Inherited Property Sales in Franklin County | Real Property Planning",
-    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Franklin County, Washington State.",
-    h1: "Estate & Inherited Property Sales in Franklin County",
-  },
-  "/counties/spokane": {
-    title: "Probate Real Estate & Inherited Property Sales in Spokane County | Real Property Planning",
-    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Spokane County, Washington State.",
-    h1: "Estate & Inherited Property Sales in Spokane County",
-  },
-  "/counties/whatcom": {
-    title: "Probate Real Estate & Inherited Property Sales in Whatcom County | Real Property Planning",
-    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Whatcom County, Washington State.",
-    h1: "Estate & Inherited Property Sales in Whatcom County",
-  },
-  "/counties/yakima": {
-    title: "Probate Real Estate & Inherited Property Sales in Yakima County | Real Property Planning",
-    description: "Probate real estate and inherited property sales guidance for executors, attorneys, and families in Yakima County, Washington State.",
-    h1: "Estate & Inherited Property Sales in Yakima County",
   },
   "/afh-club/afh-roi-calculator": {
     title: "AFH ROI Calculator | Real Property Planning",
@@ -2452,6 +2256,21 @@ const routeMetadataPlugin = {
       );
     } catch (err) {
       console.warn("route-metadata-prerender: sitemap split skipped; dist/sitemap.xml left whole", err);
+    }
+
+    /* Real 301s. The host (Netlify or Cloudflare) reads dist/_redirects and
+       answers an old address with a permanent redirect before any JavaScript
+       runs. Source of truth: src/data/redirects.ts (Sept 27, 2026). Pattern
+       redirects (":name" parts) go last so exact addresses win. */
+    {
+      const exact = REDIRECTS.filter((r) => !r.from.includes(":"));
+      const patterns = REDIRECTS.filter((r) => r.from.includes(":"));
+      const body = [
+        "# Generated at build from src/data/redirects.ts. Do not edit dist/_redirects by hand.",
+        ...[...exact, ...patterns].map((r) => `${r.from} ${r.to} 301`),
+      ].join("\n");
+      await writeFile(path.join(distDir, "_redirects"), body + "\n", "utf8");
+      console.log(`route-metadata-prerender: _redirects — ${REDIRECTS.length} permanent redirects`);
     }
   },
 };

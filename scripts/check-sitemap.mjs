@@ -41,6 +41,7 @@ import { dirname, resolve } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const APP = resolve(__dirname, "../src/App.tsx");
+const REDIRECTS_FILE = resolve(__dirname, "../src/data/redirects.ts");
 const SITEMAP = resolve(__dirname, "../public/sitemap.xml");
 const ORIGIN = "https://realpropertyplanning.com";
 
@@ -67,9 +68,18 @@ const sitemapSrc = readFileSync(SITEMAP, "utf8");
 const allRoutes = new Set();
 for (const m of appSrc.matchAll(/<Route\s+path=\{?"([^"]+)"/g)) allRoutes.add(m[1]);
 
+/* Redirects live in src/data/redirects.ts (Sept 27, 2026); App.tsx renders
+   them with REDIRECTS.map, so they are read from the data file. Any <Navigate>
+   route still written literally in App.tsx is counted too. */
 const redirects = new Set();
 for (const m of appSrc.matchAll(/<Route\s+path=\{?"([^"]+)"\}?\s+element=\{<Navigate/g)) {
   redirects.add(m[1]);
+}
+if (existsSync(REDIRECTS_FILE)) {
+  for (const m of readFileSync(REDIRECTS_FILE, "utf8").matchAll(/from: "([^"]+)"/g)) {
+    redirects.add(m[1]);
+    allRoutes.add(m[1]);
+  }
 }
 
 const dynamic = [...allRoutes].filter((p) => p.includes(":"));

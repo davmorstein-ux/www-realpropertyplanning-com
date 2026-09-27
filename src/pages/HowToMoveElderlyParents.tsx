@@ -44,7 +44,7 @@ const HowToMoveElderlyParents = () => (
       jsonLd={articleSchema({
         headline: "How to Move Elderly Parents Out of Their Home in Washington State",
         description: "A compassionate step-by-step guide for families navigating senior housing transitions in Washington State — from recognizing when it's time to move through selling the family home.",
-        url: "/how-to-move-elderly-parents",
+        url: "/guides/senior-transition-differences",
         datePublished: "2025-03-01",
         dateModified: "2026-03-15",
         about: ["Senior transitions", "Assisted living", "Downsizing", "Senior move management", "Selling a family home", "Elder care housing"],
