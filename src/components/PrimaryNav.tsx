@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
 
@@ -42,6 +42,8 @@ const PrimaryNav = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const triggerRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const caretRefs = useRef<Array<HTMLSpanElement | null>>([]);
+  const menuRef = useRef<HTMLDivElement>(null);
   const closeTimer = useRef<number | null>(null);
 
   const cancelClose = () => {
@@ -54,6 +56,31 @@ const PrimaryNav = () => {
     cancelClose();
     closeTimer.current = window.setTimeout(() => setOpenIndex(null), HOVER_CLOSE_DELAY);
   };
+
+  /* Each open menu's left edge lines up with the arrow under its label (David,
+     Sept 27 2026). Centred menus ran off the left of a laptop screen under
+     "Estate & Probate". If a menu would run off the RIGHT edge instead, it is
+     shifted left just enough to stay 16px inside the window. Measured before
+     paint, so the menu never appears in the wrong place first. */
+  useLayoutEffect(() => {
+    if (openIndex === null) return;
+    const menu = menuRef.current;
+    const caret = caretRefs.current[openIndex];
+    const slot = menu?.parentElement;
+    if (!menu || !caret || !slot) return;
+    const slotLeft = slot.getBoundingClientRect().left;
+    /* The caret span is display:block (full width), so measure the arrow glyph itself. */
+    const range = document.createRange();
+    range.selectNodeContents(caret);
+    const arrow = range.getBoundingClientRect();
+    let left = (arrow.width > 0 ? arrow.left : caret.getBoundingClientRect().left) - slotLeft;
+    menu.style.left = `${left}px`;
+    const overflow = menu.getBoundingClientRect().right - (document.documentElement.clientWidth - 16);
+    if (overflow > 0) left -= overflow;
+    const underflow = 16 - (slotLeft + left);
+    if (underflow > 0) left += underflow;
+    menu.style.left = `${left}px`;
+  }, [openIndex]);
 
   /* Close on route change — otherwise the menu stays open over the new page. */
   useEffect(() => {
@@ -240,8 +267,8 @@ const PrimaryNav = () => {
         .rpp-pn-menu {
           position: absolute;
           top: calc(100% + 10px);
+          /* Final position is set in useLayoutEffect: left edge under the arrow. */
           left: 50%;
-          transform: translateX(-50%);
           z-index: 60;
           /* Width follows the longest item because the items no longer wrap.
              max-width is a safety stop, not a target. */
@@ -255,8 +282,6 @@ const PrimaryNav = () => {
           box-shadow: 0 12px 30px rgba(0,0,0,0.22);
           padding: 6px 0 8px;
         }
-        /* Menus near the right edge would otherwise overflow the viewport. */
-        .rpp-pn-slot:last-child .rpp-pn-menu { left: auto; right: 0; transform: none; }
 
         .rpp-pn-menu-heading {
           padding: 10px 18px 8px;
@@ -367,13 +392,20 @@ const PrimaryNav = () => {
                   </span>
                 ))}
               </span>
-              <span className="rpp-pn-caret" aria-hidden="true">
+              <span
+                className="rpp-pn-caret"
+                aria-hidden="true"
+                ref={(el) => {
+                  caretRefs.current[i] = el;
+                }}
+              >
                 &#9660;
               </span>
             </button>
 
             {isOpen ? (
               <div
+                ref={menuRef}
                 className="rpp-pn-menu"
                 id={`rpp-pn-menu-${i}`}
                 style={{ ["--pn-color" as string]: entry.color }}
