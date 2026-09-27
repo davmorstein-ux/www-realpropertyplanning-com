@@ -102,6 +102,17 @@ What has bitten people so far:
 | an inline `min-width` inside `<main>` on a phone | `min-width: 0` | the mobile overflow safety net |
 | an inline 3-5 column grid on a phone | two columns | same block |
 
+**Dark sections and coloured buttons: add `className="rpp-dark-surface"`.** Near the
+end of `index.css`, "safety net" rules darken any element whose inline `style`
+attribute contains strings like `rgb(20` or `color: #c`. They cannot tell text colour
+from background or border colour, so a red button (`background:#ca2b38` becomes
+`rgb(202, 43, 56)`) gets its white label painted dark. Anything on or inside
+`.rpp-dark-surface` is exempt, and that class makes its text white. The exemption is
+wrapped in `:where()` on purpose: a bare `:not(.class)` adds specificity and
+overrode the button fixes for `.rpp-afh-return` and `.rpp-filled` (Sept 27, 2026).
+Body text is `#3d3833`; do not introduce text lighter than about 7:1 on its
+background. The audience is older and people have said so.
+
 **How to win:** put the rule in a page-scoped `<style>` block (see `PAGE_CSS` in
 `src/pages/AFHClub.tsx` and `src/pages/AFHPropertyScore.tsx`), use a selector
 with real specificity (`.page-root h2.my-heading`), and mark it `!important`.
