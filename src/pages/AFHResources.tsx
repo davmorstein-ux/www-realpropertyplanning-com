@@ -103,6 +103,12 @@ const TOPICS = [
     description: "Ongoing compliance obligations, inspections, and how to stay in good standing with DSHS.",
   },
   {
+    title: "The Dos and Don'ts of Operating an AFH",
+    href: "/afh-club/dos-and-donts-operating-adult-family-home",
+    img: "/afh-dos-and-donts-cover.webp",
+    description: "Fourteen topics every operator faces, from admissions and staffing to medications, emergencies, inspections, finances, and succession, each marked as a Washington requirement or a best practice.",
+  },
+  {
     title: "Find a Professional",
     href: "/afh-club/find-a-professional",
     img: "/afh-find-professional.webp",
@@ -260,6 +266,12 @@ const AFHResources = () => (
             href: "/afh-club/regulations-compliance",
             img: "/afh-regulations-compliance.webp",
             placeholder: "#49433d",
+          },
+          {
+            title: "The Dos and Don'ts of Operating an AFH",
+            href: "/afh-club/dos-and-donts-operating-adult-family-home",
+            img: "/afh-dos-and-donts-cover.webp",
+            placeholder: "#3b2a26",
           },
           {
             title: "Find a Professional",

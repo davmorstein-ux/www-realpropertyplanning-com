@@ -209,6 +209,7 @@ const AFHBuildingInspection = lazy(() => import("./pages/AFHBuildingInspection")
 const AFHWaboGuide = lazy(() => import("./pages/AFHWaboGuide"));
 const AFHWaboTechnicalGuide = lazy(() => import("./pages/AFHWaboTechnicalGuide"));
 const AFHPropertyClassifications = lazy(() => import("./pages/AFHPropertyClassifications"));
+const AFHDosAndDonts = lazy(() => import("./pages/AFHDosAndDonts"));
 const AFHViolationHistory = lazy(() => import("./pages/AFHViolationHistory"));
 const AFHCostsFees = lazy(() => import("./pages/AFHCostsFees"));
 const AFHBuyingSelling = lazy(() => import("./pages/AFHBuyingSelling"));
@@ -1023,6 +1024,7 @@ const App = () => (
           <Route path="/afh-club/wabo-inspection-guide" element={<AFHWaboGuide />} />
           <Route path="/afh-club/wabo-technical-guide" element={<AFHWaboTechnicalGuide />} />
           <Route path="/afh-club/afh-property-classifications" element={<AFHPropertyClassifications />} />
+          <Route path="/afh-club/dos-and-donts-operating-adult-family-home" element={<AFHDosAndDonts />} />
           <Route path="/afh-club/violation-history-lookup" element={<AFHViolationHistory />} />
           <Route path="/afh-club/costs-fees" element={<AFHCostsFees />} />
           <Route path="/afh-club/buying-selling" element={<AFHBuyingSelling />} />

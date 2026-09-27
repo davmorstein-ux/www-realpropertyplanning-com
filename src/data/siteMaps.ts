@@ -315,6 +315,7 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "What Is WABO? A Simple Overview", href: "/afh-club/wabo-inspection-guide" },
           { title: "WABO Checklist & Technical Requirements", href: "/afh-club/wabo-technical-guide" },
           { title: "DSHS Inspections & Compliance", href: "/afh-club/regulations-compliance" },
+          { title: "The Dos and Don'ts of Operating an AFH", href: "/afh-club/dos-and-donts-operating-adult-family-home" },
           { title: "AFH Costs & Fees", href: "/afh-club/costs-fees" },
         ],
       },
