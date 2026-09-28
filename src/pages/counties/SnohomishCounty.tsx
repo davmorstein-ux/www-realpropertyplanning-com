@@ -9,7 +9,7 @@ const SnohomishCounty = () => (
     seoTitle="Probate & Estate Real Estate in Snohomish County, WA | Real Property Planning"
     seoDescription="Experienced probate real estate, inherited home sales, and senior transition guidance throughout Snohomish County. Serving Everett, Edmonds, Lynnwood, Bothell, Woodinville & more."
     heroH1="Snohomish County, WA"
-    heroSubheading={`From Mukilteo waterfront to Mill Creek family homes to Arlington acreage — every corner of Snohomish has its own buyer pool. ${FEATURED_BROKER.Role} prices and prepare each estate property for the actual neighborhood it sits in.`}
+    heroSubheading={`From Mukilteo waterfront to Mill Creek family homes to Arlington acreage — every corner of Snohomish has its own buyer pool. ${FEATURED_BROKER.Role} prices and prepares each estate property for the actual neighborhood it sits in.`}
     cities={[
       "Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek", "Bothell",
       "Snohomish", "Lake Stevens", "Marysville", "Monroe", "Arlington",

@@ -162,9 +162,9 @@
     "directAnswer": {
       "question": "Làm thế nào để tôi bán nhà của cha mẹ lớn tuổi tại Tiểu Bang Washington?",
       "answer": "Việc bán một ngôi nhà gia đình lâu năm trong quá trình chuyển đổi cho người cao niên thường liên quan đến nhiều điều hơn là một giao dịch niêm yết thông thường — phối hợp với các nhà cung cấp dịch vụ chăm sóc, anh chị em ở tiểu bang khác, người quản lý di chuyển, và đôi khi là luật sư hoặc nhà hoạch định tài chính, tất cả theo nhịp độ mà gia đình có thể quản lý được. Real Property Planning giải thích từng bước và giới thiệu các chuyên gia độc lập cho mỗi bước, bao gồm một môi giới có giấy phép kiêm thẩm định viên được chứng nhận, người có thể định giá dựa trên tình trạng để ngôi nhà được bán với giá trị công bằng, có thể bảo vệ được.",
-      "bullet1": "Hoạt động theo nhịp độ riêng của gia đình — không có áp lực phải vội vàng quyết định",
-      "bullet2": "Kết nối quý vị với người quản lý di chuyển, cố vấn nơi ở, và chuyên gia thanh lý tài sản khi cần thiết",
-      "bullet3": "Cung cấp định giá trung thực dựa trên tình trạng thay vì ước tính tự động",
+      "bullet1": "Hướng dẫn giúp gia đình tiến hành theo nhịp độ riêng, không có áp lực phải vội vàng quyết định",
+      "bullet2": "Danh bạ các người quản lý di chuyển, cố vấn nhà ở cho người cao tuổi và chuyên gia thanh lý tài sản độc lập mà quý vị có thể liên hệ trực tiếp",
+      "bullet3": "Một thẩm định viên hoặc nhà môi giới được giới thiệu có thể cung cấp định giá dựa trên tình trạng thông qua doanh nghiệp độc lập của riêng họ, thay vì ước tính tự động",
       "ctaLabel": "Bắt Đầu Cuộc Trò Chuyện"
     },
     "whatGoesInto": {
@@ -224,7 +224,7 @@
     },
     "notSure": {
       "heading": "Không Chắc Nên Bắt Đầu Từ Đâu?",
-      "body": "Hầu hết các gia đình không biết chuyên gia nào họ cần trước tiên. Điều đó không sao cả. Real Property Planning giúp quý vị tìm ra trình tự đúng đắn và kết nối quý vị với các chuyên gia đáng tin cậy trên khắp khu vực Puget Sound.",
+      "body": "Hầu hết các gia đình không biết chuyên gia nào họ cần trước tiên. Điều đó không sao cả. Real Property Planning cung cấp các hướng dẫn để so sánh các bước có thể thực hiện và danh bạ các chuyên gia độc lập trên khắp khu vực Puget Sound mà quý vị có thể liên hệ trực tiếp.",
       "button": "Bắt Đầu Cuộc Trò Chuyện"
     },
     "faq": {

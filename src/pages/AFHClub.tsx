@@ -624,7 +624,10 @@ const AFHClub = () => {
                 width={200}
                 height={194}
               />
-              <span>
+              {/* The styled "A" is split into its own span for the wordmark; screen
+                  readers get the name in one piece from the visually hidden copy. */}
+              <span className="sr-only">AFH Club</span>
+              <span aria-hidden="true">
                 <span className="rpp-afh-hero-a">A</span>FH Club
               </span>
             </h1>
@@ -725,7 +728,7 @@ const AFHClub = () => {
                 },
                 {
                   title: "Buying",
-                  body: "Being new is not a disqualifier. Management support can cover the experience gap, and financing paths exist for qualified buyers.",
+                  body: "Being new is not a disqualifier. A management company can support day-to-day operations, though it does not replace the provider's own licensing, training, or legal responsibilities, and financing paths exist for qualified buyers.",
                 },
                 {
                   title: "Investing",

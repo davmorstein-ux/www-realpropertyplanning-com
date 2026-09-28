@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import FeaturedAttorneys from "@/components/FeaturedAttorneys";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import IntentCTA from "@/components/IntentCTA";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
@@ -54,7 +55,7 @@ const ForAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-[#39332d] text-2xl md:text-[1.7rem] leading-[1.8]">
-            Attorneys working in probate, estate planning, elder law, family law, and divorce regularly encounter real estate questions that fall outside the scope of legal counsel. When a client needs honest property valuation, coordinated sale management, or a professional who can hold a complex multi-party process together — that's where Real Property Planning fits in.
+            Attorneys working in probate, estate planning, elder law, family law, and divorce regularly encounter real estate questions that fall outside the scope of legal counsel. When a client needs honest property valuation, coordinated sale management, or a professional who can hold a complex multi-party process together, the independent professionals featured on Real Property Planning may be able to help. Each works through their own business.
           </p>
         </div>
       </div>
@@ -72,9 +73,9 @@ const ForAttorneys = () => (
     </section>
 
     <IntentCTA
-      heading="Attorneys: explore a referral relationship"
-      body="Guides you can hand to clients, a featured broker and appraiser who work independently, and a clear line between the hub and the licensed work. Ask how it fits your practice."
-      buttonText="Explore a referral relationship"
+      heading={`Attorneys: talk with ${FEATURED_BROKER.name}`}
+      body={`Referral relationships are with the independent professional, not with Real Property Planning. ${FEATURED_BROKER.name} is the featured broker, working through ${FEATURED_BROKER.brokerage}. The hub's guides are free to hand to clients.`}
+      buttonText={`Contact ${FEATURED_BROKER.firstName}`}
       reason="join-network"
       professional="broker"
     />

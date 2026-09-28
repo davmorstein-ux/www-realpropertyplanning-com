@@ -298,7 +298,7 @@ export const hubOrganizationSchema = {
         "@type": "ContactPoint",
         telephone: "(206) 900-3015",
         email: "info@realpropertyplanning.com",
-        contactType: "customer service",
+        contactType: "general inquiries",
         areaServed: "US-WA",
         availableLanguage: "English",
         hoursAvailable: {
@@ -402,7 +402,7 @@ export const organizationSchema = {
     "@type": "ContactPoint",
     telephone: "(206) 900-3015",
     email: "info@realpropertyplanning.com",
-    contactType: "customer service",
+    contactType: "general inquiries",
     areaServed: "US-WA",
     availableLanguage: "English",
   },
