@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,13 +18,43 @@ import { AFH_FEATURED_PEOPLE, type AFHProfessional } from "@/data/afhProfessiona
  * and the company logo. No bio — that lives on the person's own page where
  * there is one. The logo slot is always reserved so cards line up.
  */
+/* One line per email address (David, Sept 28 2026; replaces the Sept 22 split at
+   the "@"). The text starts at the card's normal 16px and steps down only as far as
+   the card's width requires, never below 11px, so short addresses stay full size.
+   setProperty(..., "important") because index.css forces every link in <main> to
+   16px with !important. Re-fits when the card resizes. */
+const FitEmail = ({ email }: { email: string }) => {
+  const ref = useRef<HTMLAnchorElement | null>(null);
+  useLayoutEffect(() => {
+    const el = ref.current;
+    const box = el?.parentElement;
+    if (!el || !box) return;
+    const fit = () => {
+      let size = 16;
+      el.style.setProperty("font-size", `${size}px`, "important");
+      while (el.scrollWidth > box.clientWidth && size > 11) {
+        size -= 0.5;
+        el.style.setProperty("font-size", `${size}px`, "important");
+      }
+    };
+    fit();
+    const ro = new ResizeObserver(fit);
+    ro.observe(box);
+    return () => ro.disconnect();
+  }, []);
+  return (
+    <a ref={ref} href={`mailto:${email}`} className="bg-transparent">
+      {email}
+    </a>
+  );
+};
+
 const PersonCard = ({ person, professionLines }: { person: AFHProfessional; professionLines: [string, string] }) => {
   /* The card shows just the domain ("twomaidscleaning.com"); the link still goes to the full address. A path made it too long for the card. */
   const site = person.website?.replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0];
-  const [emailLocal, emailDomain] = person.email ? person.email.split("@") : ["", ""];
   /* Every slot has a fixed height so the same row of every card lines up across the grid
      (David, Sept 22): profession, photo, name, license (kept open even when empty — most
-     people will not have one), phone, email on two lines split at the "@", website, logo.
+     people will not have one), phone, email on one line (FitEmail), website, logo.
      div/span throughout, not <p>: the site's global p rules add margins. */
   return (
     <div className="rpp-afhpro-card">
@@ -40,14 +71,7 @@ const PersonCard = ({ person, professionLines }: { person: AFHProfessional; prof
         {person.phone ? <a href={`tel:${person.phone.replace(/[^\d+]/g, "")}`} className="bg-transparent">{person.phone}</a> : "\u00a0"}
       </div>
       <div className="rpp-afhpro-card-line rpp-afhpro-card-email">
-        {person.email ? (
-          <a href={`mailto:${person.email}`} className="bg-transparent">
-            <span>{emailLocal}@</span>
-            <span>{emailDomain}</span>
-          </a>
-        ) : (
-          "\u00a0"
-        )}
+        {person.email ? <FitEmail email={person.email} /> : "\u00a0"}
       </div>
       <div className="rpp-afhpro-card-line rpp-afhpro-card-site">
         {person.website && site ? <a href={person.website} target="_blank" rel="noopener noreferrer" className="bg-transparent">{site}</a> : "\u00a0"}
@@ -327,9 +351,8 @@ const AFHFindProfessional = () => (
         .rpp-afhpro .rpp-afhpro-card-license { height: 16px; font-size: 11px; line-height: 16px; color: #1c1917; margin-top: 2px !important; }
         .rpp-afhpro .rpp-afhpro-card-line { font-size: 12.5px; line-height: 17px; overflow-wrap: anywhere; }
         .rpp-afhpro .rpp-afhpro-card-phone { height: 17px; margin-top: 6px !important; white-space: nowrap; }
-        .rpp-afhpro .rpp-afhpro-card-email { height: 34px; margin-top: 3px !important; }
-        .rpp-afhpro .rpp-afhpro-card-email a { display: inline-flex; flex-direction: column; align-items: center; }
-        .rpp-afhpro .rpp-afhpro-card-email a span { display: block; line-height: 17px; white-space: nowrap; }
+        .rpp-afhpro .rpp-afhpro-card-email { height: 20px; margin-top: 3px !important; white-space: nowrap; overflow: hidden; overflow-wrap: normal; }
+        .rpp-afhpro .rpp-afhpro-card-email a { display: inline-block; line-height: 20px; white-space: nowrap; }
         .rpp-afhpro .rpp-afhpro-card-site { height: 17px; margin-top: 3px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .rpp-afhpro .rpp-afhpro-card-line a { color: #1c1917; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9c0b4; }
         @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-line a:hover { color: #7f2028; text-decoration-color: #7f2028; } }
