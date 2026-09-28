@@ -60,7 +60,7 @@ const afhArticleSchema = {
   description: "A simple overview of WABO and the WABO inspection process for Adult Family Homes in Washington State — what WABO is, who inspects the home, and why it matters before buying.",
   url: "https://realpropertyplanning.com/afh-club/wabo-inspection-guide",
   datePublished: "2026-07-26",
-  dateModified: "2026-07-26",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -94,7 +94,7 @@ const AFHWaboGuide = () => (
           <div className="mb-6">
             <ArticleAudioPlayer audioSrc="/audio/wabo-overview.mp3" />
           </div>
-          <p style={label}>AFH Club · Resource Guide · Last reviewed July 2026</p>
+          <p style={label}>AFH Club · Resource Guide · Last reviewed September 2026</p>
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
@@ -231,7 +231,9 @@ const AFHWaboGuide = () => (
           <p style={body}>
             This is not the same as a general home inspection, and it is not the same as the DSHS licensing review.
             Each review serves a different purpose. A home may pass one review and still need corrections for
-            another.
+            another. For example, DSHS licensing rules require interior doors that residents pass through to be at
+            least 27 inches wide in homes licensed after September 20, 2026, a requirement that does not appear on
+            the building checklist.
           </p>
           <p style={{ ...body, margin: 0 }}>
             For buyers, sellers, and operators, that distinction is important. A property may look suitable on the

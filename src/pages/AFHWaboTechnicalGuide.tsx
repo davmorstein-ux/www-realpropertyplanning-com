@@ -61,7 +61,7 @@ const afhArticleSchema = {
   description: "A technical guide to the WABO Adult Family Home Building Inspection Checklist in Washington State — what the checklist covers, common delays, and why passing does not mean licensed.",
   url: "https://realpropertyplanning.com/afh-club/wabo-technical-guide",
   datePublished: "2026-07-26",
-  dateModified: "2026-07-26",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -95,7 +95,7 @@ const AFHWaboTechnicalGuide = () => (
           <div className="mb-6">
             <ArticleAudioPlayer audioSrc="/audio/wabo-technical.mp3" />
           </div>
-          <p style={label}>AFH Club · Resource Guide · Last reviewed July 2026</p>
+          <p style={label}>AFH Club · Resource Guide · Last reviewed September 2026</p>
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
@@ -245,6 +245,13 @@ const AFHWaboTechnicalGuide = () => (
             This can become an issue when a home has round doorknobs, keyed deadbolts, or other hardware that is
             difficult for residents to operate. In an Adult Family Home, simple details can have a major impact on
             compliance.
+          </p>
+          <p style={body}>
+            The checklist sets widths only for exit doors (at least 32 inches clear). Interior doors are a separate,
+            DSHS licensing rule that the checklist does not show: in a home licensed after September 20, 2026, every
+            interior door residents pass through, other than a designated emergency exit, must be at least 27 inches
+            wide (WAC 388-76-10715, as amended by WSR 26-17-004). A home can pass the building inspection and still
+            need doorways widened before DSHS will license it, so measure bedroom, bathroom, and hallway doors early.
           </p>
 
           <h3 style={h3}>Smoke and Carbon Monoxide Alarms</h3>

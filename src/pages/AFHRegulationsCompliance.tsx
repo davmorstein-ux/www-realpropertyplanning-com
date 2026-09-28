@@ -25,7 +25,7 @@ const ENFORCEMENT_LEVELS = [
     bg: "#fdf3e8",
     border: "#b13a44",
     description:
-      "Financial penalties for more serious or uncorrected violations. Typically $100–$3,000 per day per violation depending on severity. Up to $10,000 for operating without a license.",
+      "Financial penalties, which by law become more severe for violations that are repeated, uncorrected, widespread, or a threat to residents: at least $100 per day per violation, up to $3,000 per incident, and up to $10,000 for a current or former provider operating an unlicensed home (RCW 70.128.160).",
   },
   {
     level: "Stop Placement Order",
@@ -45,48 +45,35 @@ const ENFORCEMENT_LEVELS = [
   },
 ];
 
+/* DSHS "Top AFH Citations — CY 2024 Q4" (the most recent quarterly list DSHS
+   has published that we could find), verified Sept 28, 2026. Counts and rule
+   numbers are DSHS's; the one-line explanations are ours, checked against the
+   current rule text. Replace the whole list when DSHS publishes a newer one. */
+const CITATIONS_SOURCE = {
+  period: "October–December 2024",
+  url: "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/2024%20Q4%20--%20Top%20AFH%20Citations.pdf",
+};
 const TOP_CITATIONS = [
-  {
-    rank: 1,
-    violation: "Unpaid or late license fees",
-    detail: "Failure to pay the $450/bed annual fee on time triggers a stop-placement order blocking new admissions.",
-    wac: "WAC 388-76-10191",
-  },
-  {
-    rank: 2,
-    violation: "Missing or expired background checks",
-    detail:
-      "All owners, household members, and staff must have current background checks on file. Lapses are among the most cited violations statewide.",
-    wac: "WAC 388-76-10135",
-  },
-  {
-    rank: 3,
-    violation: "Incomplete negotiated care plans",
-    detail:
-      "Each resident must have a written, signed, and regularly updated care plan. Missing or outdated plans are frequently cited.",
-    wac: "WAC 388-76-10375",
-  },
-  {
-    rank: 4,
-    violation: "Medication documentation errors",
-    detail:
-      "Medication Administration Records (MARs) must be complete, timestamped, and include missed, refused, or PRN doses.",
-    wac: "WAC 388-76-10430",
-  },
-  {
-    rank: 5,
-    violation: "Failure to document evacuation drills",
-    detail:
-      "Evacuation drills must be conducted every two months and fully documented. Missing records are a common finding.",
-    wac: "WAC 388-76-10895",
-  },
-  {
-    rank: 6,
-    violation: "Missing or outdated succession plans",
-    detail:
-      "As of 2025, DSHS actively verifies that a written succession plan exists showing how operations continue if the provider becomes unavailable.",
-    wac: "WAC 388-76-10201",
-  },
+  { rank: 1, count: 179, violation: "Medication system", wac: "WAC 388-76-10430",
+    detail: "How the home stores, assists with, gives, and tracks residents' medications. The single most-cited rule." },
+  { rank: 2, count: 140, violation: "License annual fee", wac: "WAC 388-76-10025",
+    detail: "The fee is due each year in the month the home was first licensed. If it is not paid when due, DSHS imposes remedies." },
+  { rank: 3, count: 112, violation: "Notice of resident rights and services", wac: "WAC 388-76-10530",
+    detail: "Residents must receive written notice of their rights and the home's services. Since September 20, 2026, the resident record must also hold a copy, with the resident's acknowledgement." },
+  { rank: 4, count: 106, violation: "Medical devices", wac: "WAC 388-76-10650",
+    detail: "Devices that carry a safety risk, such as bed rails, cannot be used as a restraint or for staff convenience, and need an assessment, informed consent, and a place in the care plan first." },
+  { rank: 5, count: 101, violation: "Background checks", wac: "WAC 388-76-10165",
+    detail: "The Washington name and date-of-birth check is valid for two years and must be kept current; the national fingerprint check is valid indefinitely." },
+  { rank: 6, count: 94, violation: "Personnel records", wac: "WAC 388-76-10198",
+    detail: "Each staff member's file must hold the required records, such as background checks, training, and certification." },
+  { rank: 7, count: 75, violation: "Emergency evacuation drills", wac: "WAC 388-76-10895",
+    detail: "Partial drills at least every two months on random staffing shifts (every sixty days before September 20, 2026), each resident in one each year, and a full drill every year, all documented." },
+  { rank: 8, count: 73, violation: "Safety and maintenance", wac: "WAC 388-76-10750",
+    detail: "The home must be kept safe, clean, and in good repair." },
+  { rank: 9, count: 70, violation: "Resident record content", wac: "WAC 388-76-10320",
+    detail: "What each resident's record must contain. Amended September 20, 2026: Social Security numbers are no longer required, and the notice of rights is now required." },
+  { rank: 10, count: 69, violation: "Medication log", wac: "WAC 388-76-10475",
+    detail: "A daily log for each resident of every medication, dose, time, the staff member's initials, refusals, and any change with its written verification." },
 ];
 
 const LOOKUP_TOOLS = [
@@ -131,7 +118,7 @@ const afhArticleSchema = {
   description: "A plain-language guide to Washington State DSHS inspections, enforcement levels, top AFH violations, and public lookup tools for Adult Family Homes.",
   url: "https://realpropertyplanning.com/afh-club/regulations-compliance",
   datePublished: "2026-07-24",
-  dateModified: "2026-07-24",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -269,8 +256,9 @@ const AFHRegulationsCompliance = () => (
               margin: "0 0 20px",
             }}
           >
-            DSHS licensors conduct <strong>unannounced inspections</strong> approximately every 15 months. Homes with a
-            clean three-inspection record may qualify for a 24-month cycle. Because visits are unpredictable, providers
+            DSHS licensors conduct <strong>unannounced inspections</strong> at least every 18 months, with a statewide
+            average of 15 months. A home with no citations on its last three inspections, and no violations from
+            complaint investigations in that time, may go up to two years (RCW 70.128.070). Because visits are unpredictable, providers
             must maintain continuous compliance — not just prepare when an inspection is expected.
           </p>
           <p
@@ -299,7 +287,7 @@ const AFHRegulationsCompliance = () => (
             {[
               {
                 title: "Routine Inspections",
-                body: "Conducted every 15–24 months. Covers all aspects of care, documentation, staffing, and safety. Inspectors review records, interview staff and residents, and observe daily operations.",
+                body: "At least every 18 months (15 months on average), or up to two years for homes with three clean inspections in a row. Covers all aspects of care, documentation, staffing, and safety. Inspectors review records, interview staff and residents, and observe daily operations.",
               },
               {
                 title: "Complaint-Based Inspections",
@@ -500,7 +488,7 @@ const AFHRegulationsCompliance = () => (
               margin: "0 0 20px",
             }}
           >
-            Top AFH Violations in Washington
+            The 10 Most-Cited AFH Rules in Washington
           </h2>
           <p
             style={{
@@ -512,8 +500,12 @@ const AFHRegulationsCompliance = () => (
               maxWidth: 680,
             }}
           >
-            Based on DSHS AFH citation data for 2024–2025, these are the six most frequently cited violations statewide.
-            Most are administrative and preventable with organized record-keeping systems.
+            These are the ten rules DSHS cited most often in adult family homes in {CITATIONS_SOURCE.period}, from the
+            most recent quarterly list DSHS has published (
+            <a href={CITATIONS_SOURCE.url} target="_blank" rel="noopener noreferrer" style={{ color: "#1B3A6B", textDecoration: "underline" }}>
+              DSHS Top AFH Citations
+            </a>
+            ). Most are record-keeping problems a good system prevents.
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
@@ -580,7 +572,7 @@ const AFHRegulationsCompliance = () => (
                       color: "#481216",
                     }}
                   >
-                    {item.wac}
+                    {item.wac} · {item.count} citations
                   </span>
                 </div>
               </div>

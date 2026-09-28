@@ -69,12 +69,13 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     published: "2026-09-18",
     reviewed: "2026-09-28",
     changes: [
-      { date: "2026-09-28", text: "Added how DSHS delivers a new license after a change of ownership: emailed within a day of approval, paper copies by mail a few days later." },
+      { date: "2026-09-28", text: "Added how DSHS delivers a new license after a change of ownership (emailed within a day of approval) and DSHS's posted licensing queue: applications received in May 2026 were being processed in late September, with up to 60 days once an application is complete." },
       { date: "2026-09-25", text: "Added \"When the home is sold\": the contract starts the day the new license is assigned, residents keep their assessments, authorizations are reissued, and exceptions to rule follow the resident." },
     ],
     sources: [
       { label: "WAC 388-106-0115: CARE residential classification groups", href: WAC("388-106-0115") },
       { label: "DSHS Home and Community Services rate tables (adult family home daily rates)", href: DSHS_RATES },
+      { label: "DSHS: BAAU Application Processing Timeline", href: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline" },
       DSHS_CHOW_ANSWERS,
     ],
   },
@@ -88,6 +89,42 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "Chapter 182-561 WAC: Community behavioral health support services", href: WAC("182-561") },
       { label: "2025-27 Adult Family Home Council collective bargaining agreement, Article 7.13", href: AFH_CBA },
       { label: "WAC 388-106-0336: CBHS is applied before SBS", href: WAC("388-106-0336") },
+    ],
+  },
+  "/afh-club/wabo-inspection-guide": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Added that DSHS licensing rules also have physical requirements the building checklist does not show, such as 27-inch interior doors in homes licensed after September 20, 2026." },
+    ],
+    sources: [
+      { label: "Adult Family Home Local Building Inspection Checklist (DSHS form 15-604, revised April 2025)", href: "https://www.dshs.wa.gov/sites/default/files/forms/pdf/15-604.pdf" },
+      { label: "WAC 388-76-10715: doors, as amended by WSR 26-17-004", href: WAC("388-76-10715") },
+      { label: "WSR 26-17-004: amendments effective September 20, 2026", href: WSR_26_17_004 },
+    ],
+  },
+  "/afh-club/wabo-technical-guide": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Added the DSHS 27-inch interior door requirement for homes licensed after September 20, 2026, and that the building checklist sets widths only for exit doors." },
+    ],
+    sources: [
+      { label: "Adult Family Home Local Building Inspection Checklist (DSHS form 15-604, revised April 2025)", href: "https://www.dshs.wa.gov/sites/default/files/forms/pdf/15-604.pdf" },
+      { label: "Washington State Residential Code, Section R330 (adult family homes), WAC 51-51-0330", href: WAC("51-51-0330") },
+      { label: "WAC 388-76-10715: doors, as amended by WSR 26-17-004", href: WAC("388-76-10715") },
+    ],
+  },
+  "/afh-club/regulations-compliance": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Replaced the most-cited violations list with DSHS's own most recent published list (October–December 2024), with citation counts. The earlier list cited the wrong rule for the license fee and included items not on DSHS's list." },
+      { date: "2026-09-28", text: "Corrected civil fine amounts to match the statute: at least $100 per day per violation and up to $3,000 per incident (the page had said $100 to $3,000 per day)." },
+      { date: "2026-09-28", text: "Stated inspection frequency as the statute does: at least every 18 months, a 15-month statewide average, up to two years for homes with three clean inspections." },
+    ],
+    sources: [
+      { label: "RCW 70.128.070: inspection frequency", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128.070" },
+      { label: "RCW 70.128.160: enforcement remedies and civil penalties", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128.160" },
+      { label: "DSHS Top AFH Citations, October–December 2024", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/2024%20Q4%20--%20Top%20AFH%20Citations.pdf" },
+      { label: "Chapter 388-76 WAC, including the September 20, 2026 amendments (WSR 26-17-004)", href: WAC("388-76") },
     ],
   },
   "/afh-club/afh-property-classifications": {
