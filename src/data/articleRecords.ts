@@ -98,6 +98,16 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "WAC 388-106-0336: CBHS is applied before SBS", href: WAC("388-106-0336") },
     ],
   },
+  "/afh-club/washington-afh-data": {
+    published: "2026-09-28",
+    reviewed: "2026-09-28",
+    changes: [],
+    sources: [
+      { label: "DSHS Adult Family Home Locator (all 39 counties, retrieved September 13-14, 2026)", href: "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx" },
+      { label: "WAC 388-76-10031: seven- and eight-bed capacity requires 24 months of licensed operation", href: WAC("388-76-10031") },
+      { label: "Research and Data Methodology (how the records are cleaned and counted)", href: "https://realpropertyplanning.com/research-methodology" },
+    ],
+  },
   "/afh-club/wabo-inspection-guide": {
     reviewed: "2026-09-28",
     changes: [

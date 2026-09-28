@@ -83,6 +83,7 @@ AFH Club is Real Property Planning's section for families choosing a home and fo
 - [Costs & fees](/afh-club/costs-fees): What it costs to open and run an AFH.
 - [Calculators](/afh-club/calculators): ROI and valuation estimators for AFH operators.
 - [Violation history lookup](/afh-club/violation-history-lookup): How to check a home's DSHS inspection record.
+- [Washington AFHs by the Numbers](/afh-club/washington-afh-data): Counts of all licensed adult family homes and beds by county, capacity, Medicaid, specialty designations, and ECS/SBS contracts, from DSHS locator data. CSV: /data/washington-afh-by-county.csv
 
 ## Standards and sources
 - [Editorial Standards](/editorial-standards): How guides are written, sourced, reviewed, and updated.

@@ -1,0 +1,42 @@
+# Source: DSHS Adult Family Home Locator, retrieved 2026-09-13 to 2026-09-14. Compiled by Real Property Planning (AFH Club). Methodology: https://realpropertyplanning.com/research-methodology
+county,licensed_homes,licensed_beds,share_of_state_homes_pct,avg_beds_per_home,homes_accepting_medicaid,homes_with_dementia_designation,homes_with_mental_health_designation,homes_with_developmental_disabilities_designation,homes_with_ecs_contract,homes_with_sbs_contract
+Adams,5,30,0.1,6.00,5,5,5,5,4,3
+Asotin,13,74,0.2,5.69,13,13,11,9,7,7
+Benton,79,458,1.3,5.80,79,74,70,40,43,35
+Chelan,13,69,0.2,5.31,13,10,6,9,6,5
+Clallam,4,24,0.1,6.00,4,4,4,3,1,0
+Clark,564,3288,9.3,5.83,564,554,556,283,228,78
+Columbia,0,0,0.0,,0,0,0,0,0,0
+Cowlitz,41,240,0.7,5.85,41,40,40,25,10,4
+Douglas,3,18,0.0,6.00,3,3,3,3,3,2
+Ferry,1,6,0.0,6.00,1,1,1,1,1,1
+Franklin,26,155,0.4,5.96,26,26,26,18,18,17
+Garfield,0,0,0.0,,0,0,0,0,0,0
+Grant,25,137,0.4,5.48,25,25,25,14,16,14
+Grays Harbor,5,30,0.1,6.00,5,4,4,5,1,1
+Island,8,44,0.1,5.50,8,8,8,3,2,0
+Jefferson,2,12,0.0,6.00,2,1,1,2,1,1
+King,1819,10637,30.0,5.85,1666,1790,1780,963,672,297
+Kitsap,71,405,1.2,5.70,71,68,66,43,38,11
+Kittitas,2,12,0.0,6.00,2,2,2,0,0,0
+Klickitat,5,28,0.1,5.60,5,5,5,4,4,0
+Lewis,50,303,0.8,6.06,50,50,49,24,28,14
+Lincoln,3,18,0.0,6.00,3,3,3,3,1,1
+Mason,6,28,0.1,4.67,6,6,6,4,3,0
+Okanogan,9,62,0.1,6.89,9,9,5,2,0,0
+Pacific,1,8,0.0,8.00,1,1,1,0,0,0
+Pend Oreille,0,0,0.0,,0,0,0,0,0,0
+Pierce,1075,6294,17.7,5.85,1017,1054,1050,798,589,292
+San Juan,2,11,0.0,5.50,2,2,1,0,0,0
+Skagit,27,156,0.4,5.78,27,27,26,9,8,4
+Skamania,1,6,0.0,6.00,1,1,1,0,0,0
+Snohomish,1179,6826,19.4,5.79,1124,1177,1173,698,561,266
+Spokane,608,3501,10.0,5.76,608,596,596,458,472,458
+Stevens,2,12,0.0,6.00,2,2,2,2,1,1
+Thurston,312,1799,5.1,5.77,312,307,306,194,167,91
+Wahkiakum,0,0,0.0,,0,0,0,0,0,0
+Walla Walla,5,20,0.1,4.00,5,5,5,3,1,0
+Whatcom,25,139,0.4,5.56,25,23,24,13,15,3
+Whitman,43,250,0.7,5.81,43,43,43,33,40,40
+Yakima,35,206,0.6,5.89,35,32,31,13,29,7
+Washington (total),6069,35306,100.0,5.82,5803,5971,5935,3684,2970,1653

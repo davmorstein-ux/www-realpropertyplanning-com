@@ -1,0 +1,695 @@
+{
+  "retrievedFrom": "2026-09-13",
+  "retrievedTo": "2026-09-14",
+  "state": {
+    "homes": 6069,
+    "beds": 35306,
+    "medicaid": 5803,
+    "dementia": 5971,
+    "mentalHealth": 5935,
+    "developmentalDisabilities": 3684,
+    "ecs": 2970,
+    "sbs": 1653,
+    "counties": 35,
+    "avgBeds": 5.82
+  },
+  "shares": {
+    "medicaid": 95.6,
+    "dementia": 98.4,
+    "mentalHealth": 97.8,
+    "developmentalDisabilities": 60.7,
+    "ecs": 48.9,
+    "sbs": 27.2
+  },
+  "bedSizes": [
+    {
+      "beds": 2,
+      "homes": 40,
+      "share": 0.7
+    },
+    {
+      "beds": 3,
+      "homes": 66,
+      "share": 1.1
+    },
+    {
+      "beds": 4,
+      "homes": 263,
+      "share": 4.3
+    },
+    {
+      "beds": 5,
+      "homes": 615,
+      "share": 10.1
+    },
+    {
+      "beds": 6,
+      "homes": 4885,
+      "share": 80.5
+    },
+    {
+      "beds": 7,
+      "homes": 9,
+      "share": 0.1
+    },
+    {
+      "beds": 8,
+      "homes": 191,
+      "share": 3.1
+    }
+  ],
+  "contracts": [
+    {
+      "id": "adultFamilyHome",
+      "homes": 5802,
+      "share": 95.6
+    },
+    {
+      "id": "expandedCommunityServices",
+      "homes": 2970,
+      "share": 48.9
+    },
+    {
+      "id": "ddaMeaningfulDay",
+      "homes": 2550,
+      "share": 42
+    },
+    {
+      "id": "hcsMeaningfulDay",
+      "homes": 2459,
+      "share": 40.5
+    },
+    {
+      "id": "specializedBehaviorSupport",
+      "homes": 1653,
+      "share": 27.2
+    },
+    {
+      "id": "wcfAfhSow",
+      "homes": 270,
+      "share": 4.4
+    },
+    {
+      "id": "waCaresFundRespite",
+      "homes": 121,
+      "share": 2
+    },
+    {
+      "id": "privateDutyNursing",
+      "homes": 76,
+      "share": 1.3
+    },
+    {
+      "id": "ddaSpecialtyPilot",
+      "homes": 25,
+      "share": 0.4
+    },
+    {
+      "id": "afhRespite",
+      "homes": 21,
+      "share": 0.3
+    },
+    {
+      "id": "wcfPrivateDutyNursing",
+      "homes": 3,
+      "share": 0
+    }
+  ],
+  "counties": [
+    {
+      "county": "Adams",
+      "slug": "adams",
+      "homes": 5,
+      "beds": 30,
+      "medicaid": 5,
+      "dementia": 5,
+      "mentalHealth": 5,
+      "developmentalDisabilities": 5,
+      "ecs": 4,
+      "sbs": 3
+    },
+    {
+      "county": "Asotin",
+      "slug": "asotin",
+      "homes": 13,
+      "beds": 74,
+      "medicaid": 13,
+      "dementia": 13,
+      "mentalHealth": 11,
+      "developmentalDisabilities": 9,
+      "ecs": 7,
+      "sbs": 7
+    },
+    {
+      "county": "Benton",
+      "slug": "benton",
+      "homes": 79,
+      "beds": 458,
+      "medicaid": 79,
+      "dementia": 74,
+      "mentalHealth": 70,
+      "developmentalDisabilities": 40,
+      "ecs": 43,
+      "sbs": 35
+    },
+    {
+      "county": "Chelan",
+      "slug": "chelan",
+      "homes": 13,
+      "beds": 69,
+      "medicaid": 13,
+      "dementia": 10,
+      "mentalHealth": 6,
+      "developmentalDisabilities": 9,
+      "ecs": 6,
+      "sbs": 5
+    },
+    {
+      "county": "Clallam",
+      "slug": "clallam",
+      "homes": 4,
+      "beds": 24,
+      "medicaid": 4,
+      "dementia": 4,
+      "mentalHealth": 4,
+      "developmentalDisabilities": 3,
+      "ecs": 1,
+      "sbs": 0
+    },
+    {
+      "county": "Clark",
+      "slug": "clark",
+      "homes": 564,
+      "beds": 3288,
+      "medicaid": 564,
+      "dementia": 554,
+      "mentalHealth": 556,
+      "developmentalDisabilities": 283,
+      "ecs": 228,
+      "sbs": 78
+    },
+    {
+      "county": "Columbia",
+      "slug": "columbia",
+      "homes": 0,
+      "beds": 0,
+      "medicaid": 0,
+      "dementia": 0,
+      "mentalHealth": 0,
+      "developmentalDisabilities": 0,
+      "ecs": 0,
+      "sbs": 0
+    },
+    {
+      "county": "Cowlitz",
+      "slug": "cowlitz",
+      "homes": 41,
+      "beds": 240,
+      "medicaid": 41,
+      "dementia": 40,
+      "mentalHealth": 40,
+      "developmentalDisabilities": 25,
+      "ecs": 10,
+      "sbs": 4
+    },
+    {
+      "county": "Douglas",
+      "slug": "douglas",
+      "homes": 3,
+      "beds": 18,
+      "medicaid": 3,
+      "dementia": 3,
+      "mentalHealth": 3,
+      "developmentalDisabilities": 3,
+      "ecs": 3,
+      "sbs": 2
+    },
+    {
+      "county": "Ferry",
+      "slug": "ferry",
+      "homes": 1,
+      "beds": 6,
+      "medicaid": 1,
+      "dementia": 1,
+      "mentalHealth": 1,
+      "developmentalDisabilities": 1,
+      "ecs": 1,
+      "sbs": 1
+    },
+    {
+      "county": "Franklin",
+      "slug": "franklin",
+      "homes": 26,
+      "beds": 155,
+      "medicaid": 26,
+      "dementia": 26,
+      "mentalHealth": 26,
+      "developmentalDisabilities": 18,
+      "ecs": 18,
+      "sbs": 17
+    },
+    {
+      "county": "Garfield",
+      "slug": "garfield",
+      "homes": 0,
+      "beds": 0,
+      "medicaid": 0,
+      "dementia": 0,
+      "mentalHealth": 0,
+      "developmentalDisabilities": 0,
+      "ecs": 0,
+      "sbs": 0
+    },
+    {
+      "county": "Grant",
+      "slug": "grant",
+      "homes": 25,
+      "beds": 137,
+      "medicaid": 25,
+      "dementia": 25,
+      "mentalHealth": 25,
+      "developmentalDisabilities": 14,
+      "ecs": 16,
+      "sbs": 14
+    },
+    {
+      "county": "Grays Harbor",
+      "slug": "grays-harbor",
+      "homes": 5,
+      "beds": 30,
+      "medicaid": 5,
+      "dementia": 4,
+      "mentalHealth": 4,
+      "developmentalDisabilities": 5,
+      "ecs": 1,
+      "sbs": 1
+    },
+    {
+      "county": "Island",
+      "slug": "island",
+      "homes": 8,
+      "beds": 44,
+      "medicaid": 8,
+      "dementia": 8,
+      "mentalHealth": 8,
+      "developmentalDisabilities": 3,
+      "ecs": 2,
+      "sbs": 0
+    },
+    {
+      "county": "Jefferson",
+      "slug": "jefferson",
+      "homes": 2,
+      "beds": 12,
+      "medicaid": 2,
+      "dementia": 1,
+      "mentalHealth": 1,
+      "developmentalDisabilities": 2,
+      "ecs": 1,
+      "sbs": 1
+    },
+    {
+      "county": "King",
+      "slug": "king",
+      "homes": 1819,
+      "beds": 10637,
+      "medicaid": 1666,
+      "dementia": 1790,
+      "mentalHealth": 1780,
+      "developmentalDisabilities": 963,
+      "ecs": 672,
+      "sbs": 297
+    },
+    {
+      "county": "Kitsap",
+      "slug": "kitsap",
+      "homes": 71,
+      "beds": 405,
+      "medicaid": 71,
+      "dementia": 68,
+      "mentalHealth": 66,
+      "developmentalDisabilities": 43,
+      "ecs": 38,
+      "sbs": 11
+    },
+    {
+      "county": "Kittitas",
+      "slug": "kittitas",
+      "homes": 2,
+      "beds": 12,
+      "medicaid": 2,
+      "dementia": 2,
+      "mentalHealth": 2,
+      "developmentalDisabilities": 0,
+      "ecs": 0,
+      "sbs": 0
+    },
+    {
+      "county": "Klickitat",
+      "slug": "klickitat",
+      "homes": 5,
+      "beds": 28,
+      "medicaid": 5,
+      "dementia": 5,
+      "mentalHealth": 5,
+      "developmentalDisabilities": 4,
+      "ecs": 4,
+      "sbs": 0
+    },
+    {
+      "county": "Lewis",
+      "slug": "lewis",
+      "homes": 50,
+      "beds": 303,
+      "medicaid": 50,
+      "dementia": 50,
+      "mentalHealth": 49,
+      "developmentalDisabilities": 24,
+      "ecs": 28,
+      "sbs": 14
+    },
+    {
+      "county": "Lincoln",
+      "slug": "lincoln",
+      "homes": 3,
+      "beds": 18,
+      "medicaid": 3,
+      "dementia": 3,
+      "mentalHealth": 3,
+      "developmentalDisabilities": 3,
+      "ecs": 1,
+      "sbs": 1
+    },
+    {
+      "county": "Mason",
+      "slug": "mason",
+      "homes": 6,
+      "beds": 28,
+      "medicaid": 6,
+      "dementia": 6,
+      "mentalHealth": 6,
+      "developmentalDisabilities": 4,
+      "ecs": 3,
+      "sbs": 0
+    },
+    {
+      "county": "Okanogan",
+      "slug": "okanogan",
+      "homes": 9,
+      "beds": 62,
+      "medicaid": 9,
+      "dementia": 9,
+      "mentalHealth": 5,
+      "developmentalDisabilities": 2,
+      "ecs": 0,
+      "sbs": 0
+    },
+    {
+      "county": "Pacific",
+      "slug": "pacific",
+      "homes": 1,
+      "beds": 8,
+      "medicaid": 1,
+      "dementia": 1,
+      "mentalHealth": 1,
+      "developmentalDisabilities": 0,
+      "ecs": 0,
+      "sbs": 0
+    },
+    {
+      "county": "Pend Oreille",
+      "slug": "pend-oreille",
+      "homes": 0,
+      "beds": 0,
+      "medicaid": 0,
+      "dementia": 0,
+      "mentalHealth": 0,
+      "developmentalDisabilities": 0,
+      "ecs": 0,
+      "sbs": 0
+    },
+    {
+      "county": "Pierce",
+      "slug": "pierce",
+      "homes": 1075,
+      "beds": 6294,
+      "medicaid": 1017,
+      "dementia": 1054,
+      "mentalHealth": 1050,
+      "developmentalDisabilities": 798,
+      "ecs": 589,
+      "sbs": 292
+    },
+    {
+      "county": "San Juan",
+      "slug": "san-juan",
+      "homes": 2,
+      "beds": 11,
+      "medicaid": 2,
+      "dementia": 2,
+      "mentalHealth": 1,
+      "developmentalDisabilities": 0,
+      "ecs": 0,
+      "sbs": 0
+    },
+    {
+      "county": "Skagit",
+      "slug": "skagit",
+      "homes": 27,
+      "beds": 156,
+      "medicaid": 27,
+      "dementia": 27,
+      "mentalHealth": 26,
+      "developmentalDisabilities": 9,
+      "ecs": 8,
+      "sbs": 4
+    },
+    {
+      "county": "Skamania",
+      "slug": "skamania",
+      "homes": 1,
+      "beds": 6,
+      "medicaid": 1,
+      "dementia": 1,
+      "mentalHealth": 1,
+      "developmentalDisabilities": 0,
+      "ecs": 0,
+      "sbs": 0
+    },
+    {
+      "county": "Snohomish",
+      "slug": "snohomish",
+      "homes": 1179,
+      "beds": 6826,
+      "medicaid": 1124,
+      "dementia": 1177,
+      "mentalHealth": 1173,
+      "developmentalDisabilities": 698,
+      "ecs": 561,
+      "sbs": 266
+    },
+    {
+      "county": "Spokane",
+      "slug": "spokane",
+      "homes": 608,
+      "beds": 3501,
+      "medicaid": 608,
+      "dementia": 596,
+      "mentalHealth": 596,
+      "developmentalDisabilities": 458,
+      "ecs": 472,
+      "sbs": 458
+    },
+    {
+      "county": "Stevens",
+      "slug": "stevens",
+      "homes": 2,
+      "beds": 12,
+      "medicaid": 2,
+      "dementia": 2,
+      "mentalHealth": 2,
+      "developmentalDisabilities": 2,
+      "ecs": 1,
+      "sbs": 1
+    },
+    {
+      "county": "Thurston",
+      "slug": "thurston",
+      "homes": 312,
+      "beds": 1799,
+      "medicaid": 312,
+      "dementia": 307,
+      "mentalHealth": 306,
+      "developmentalDisabilities": 194,
+      "ecs": 167,
+      "sbs": 91
+    },
+    {
+      "county": "Wahkiakum",
+      "slug": "wahkiakum",
+      "homes": 0,
+      "beds": 0,
+      "medicaid": 0,
+      "dementia": 0,
+      "mentalHealth": 0,
+      "developmentalDisabilities": 0,
+      "ecs": 0,
+      "sbs": 0
+    },
+    {
+      "county": "Walla Walla",
+      "slug": "walla-walla",
+      "homes": 5,
+      "beds": 20,
+      "medicaid": 5,
+      "dementia": 5,
+      "mentalHealth": 5,
+      "developmentalDisabilities": 3,
+      "ecs": 1,
+      "sbs": 0
+    },
+    {
+      "county": "Whatcom",
+      "slug": "whatcom",
+      "homes": 25,
+      "beds": 139,
+      "medicaid": 25,
+      "dementia": 23,
+      "mentalHealth": 24,
+      "developmentalDisabilities": 13,
+      "ecs": 15,
+      "sbs": 3
+    },
+    {
+      "county": "Whitman",
+      "slug": "whitman",
+      "homes": 43,
+      "beds": 250,
+      "medicaid": 43,
+      "dementia": 43,
+      "mentalHealth": 43,
+      "developmentalDisabilities": 33,
+      "ecs": 40,
+      "sbs": 40
+    },
+    {
+      "county": "Yakima",
+      "slug": "yakima",
+      "homes": 35,
+      "beds": 206,
+      "medicaid": 35,
+      "dementia": 32,
+      "mentalHealth": 31,
+      "developmentalDisabilities": 13,
+      "ecs": 29,
+      "sbs": 7
+    }
+  ],
+  "topCities": [
+    {
+      "city": "Vancouver",
+      "county": "Clark",
+      "citySlug": "vancouver",
+      "homes": 494,
+      "beds": 2887
+    },
+    {
+      "city": "Tacoma",
+      "county": "Pierce",
+      "citySlug": "tacoma",
+      "homes": 380,
+      "beds": 2200
+    },
+    {
+      "city": "Spokane",
+      "county": "Spokane",
+      "citySlug": "spokane",
+      "homes": 330,
+      "beds": 1884
+    },
+    {
+      "city": "Lynnwood",
+      "county": "Snohomish",
+      "citySlug": "lynnwood",
+      "homes": 311,
+      "beds": 1794
+    },
+    {
+      "city": "Everett",
+      "county": "Snohomish",
+      "citySlug": "everett",
+      "homes": 310,
+      "beds": 1787
+    },
+    {
+      "city": "Kent",
+      "county": "King",
+      "citySlug": "kent",
+      "homes": 287,
+      "beds": 1646
+    },
+    {
+      "city": "Federal Way",
+      "county": "King",
+      "citySlug": "federal-way",
+      "homes": 278,
+      "beds": 1621
+    },
+    {
+      "city": "Lakewood",
+      "county": "Pierce",
+      "citySlug": "lakewood",
+      "homes": 274,
+      "beds": 1625
+    },
+    {
+      "city": "Spokane Valley",
+      "county": "Spokane",
+      "citySlug": "spokane-valley",
+      "homes": 242,
+      "beds": 1417
+    },
+    {
+      "city": "Renton",
+      "county": "King",
+      "citySlug": "renton",
+      "homes": 203,
+      "beds": 1195
+    },
+    {
+      "city": "Auburn",
+      "county": "King",
+      "citySlug": "auburn",
+      "homes": 189,
+      "beds": 1097
+    },
+    {
+      "city": "Puyallup",
+      "county": "Pierce",
+      "citySlug": "puyallup",
+      "homes": 188,
+      "beds": 1113
+    },
+    {
+      "city": "Marysville",
+      "county": "Snohomish",
+      "citySlug": "marysville",
+      "homes": 184,
+      "beds": 1065
+    },
+    {
+      "city": "Seattle",
+      "county": "King",
+      "citySlug": "seattle",
+      "homes": 151,
+      "beds": 881
+    },
+    {
+      "city": "Lacey",
+      "county": "Thurston",
+      "citySlug": "lacey",
+      "homes": 143,
+      "beds": 830
+    }
+  ]
+}

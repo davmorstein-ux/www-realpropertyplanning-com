@@ -297,6 +297,7 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "For Lease", href: "/afh-club/listings/for-lease" },
           { title: "Recent AFH Sales", href: "/afh-club/sold" },
           { title: "Directory of Licensed Adult Family Homes", href: "/afh-club/homes" },
+          { title: "Washington Adult Family Homes by the Numbers", href: "/afh-club/washington-afh-data" },
         ],
       },
       {
