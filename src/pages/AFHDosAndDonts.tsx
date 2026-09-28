@@ -8,6 +8,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import AuthorByline from "@/components/AuthorByline";
 import PageFAQ from "@/components/PageFAQ";
+import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { articleAuthor, articlePublisher } from "@/lib/schema";
 
 /**
@@ -929,6 +930,8 @@ const schema = {
    Class names use an "afhdd-" prefix and avoid card/tile/btn/cta. */
 const CSS = `
 .afhdd { background: #f7f4ef; }
+/* index.css zeroes the first section's top padding sitewide; add the gap inside instead. */
+.afhdd section.afhdd-herosec > .afhdd-wrap { padding-top: 36px; }
 .afhdd .afhdd-wrap { max-width: 800px; margin: 0 auto; }
 .afhdd p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.75 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .afhdd .afhdd-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.2em !important; text-transform: uppercase; color: #7f2028 !important; margin: 0 0 12px !important; }
@@ -999,10 +1002,13 @@ const AFHDosAndDonts = () => (
     />
     <Header />
     <main id="main-content">
-      <section style={{ background: "#edf0f3", padding: "56px 16px 48px", borderBottom: "3px solid #b13a44" }}>
+      <section className="afhdd-herosec" style={{ background: "#edf0f3", padding: "56px 16px 48px", borderBottom: "3px solid #b13a44" }}>
         <div className="afhdd-wrap" style={{ maxWidth: 1040 }}>
           <div className="afhdd-hero">
             <div>
+              <div className="mb-6">
+                <ArticleAudioPlayer audioSrc="/audio/afh-dos-and-donts.mp3" />
+              </div>
               <p className="afhdd-eyebrow">AFH Club · Operator Field Guide · Reviewed September 27, 2026</p>
               <h1 className="afhdd-h1">{TITLE}</h1>
               <p className="afhdd-lede">
