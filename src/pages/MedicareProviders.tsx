@@ -86,7 +86,7 @@ const faqs = [
   },
   {
     q: "How do I find a Medicare specialist near me?",
-    a: "A licensed Medicare specialist or insurance broker can help you compare plans, understand costs, and enroll in the right coverage for your situation. Look for someone who is licensed in Washington State, represents multiple carriers, and has experience working with seniors in transition. We are building a directory of trusted Medicare providers across Washington — check back soon.",
+    a: "A licensed Medicare specialist or insurance broker can help you compare plans, understand costs, and enroll in the right coverage for your situation. Look for someone who is licensed in Washington State, represents multiple carriers, and has experience working with seniors in transition. We are building a directory of independent Medicare providers across Washington — check back soon.",
   },
   {
     q: "Does Medicare cover senior living or memory care facilities?",
@@ -98,7 +98,7 @@ const MedicareProviders = () => (
   <>
     <SEOHead
       title="Medicare Providers in Washington State | Real Property Planning"
-      description="Connect with trusted Medicare specialists in Washington State. Learn about Medicare Parts A, B, C, and D, enrollment timing, and how Medicare planning fits into senior life transitions."
+      description="Connect with independent Medicare specialists in Washington State. Learn about Medicare Parts A, B, C, and D, enrollment timing, and how Medicare planning fits into senior life transitions."
       canonical="https://realpropertyplanning.com/medicare-providers"
     />
     <BreadcrumbSchema
@@ -272,13 +272,13 @@ const MedicareProviders = () => (
             <p className="text-foreground text-lg leading-relaxed mb-6">
               During these transitions, families are often juggling multiple responsibilities at once — coordinating
               with attorneys, managing property, supporting aging parents, and navigating unfamiliar systems. Having a
-              trusted Medicare specialist on your team means one less thing to worry about, and one more area where you
+              Medicare specialist on your team means one less thing to worry about, and one more area where you
               can feel confident the right decisions are being made.
             </p>
             <p className="text-foreground text-lg leading-relaxed">
               We believe Medicare planning belongs alongside the other essential services families need during times of
               change — legal guidance, financial planning, real estate support, and senior care coordination. That is
-              why we are building a network of trusted Medicare providers who understand the unique needs of seniors and
+              why we are building a directory of independent Medicare providers who understand the unique needs of seniors and
               families in Washington State.
             </p>
           </div>

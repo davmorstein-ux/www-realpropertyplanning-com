@@ -78,7 +78,7 @@ const continueJourney = [
   { href: "/preparing-home-for-sale-during-transition", title: "Preparing a Home for Sale", description: "Practical guidance for repairs, cleanout, and readiness.", icon: iconHome },
   { href: "/selling-an-inherited-home", title: "Selling an Inherited Home", description: "How estate sales differ from ordinary listings.", icon: iconExecutor },
   { href: "/downsizing-preparing-for-transition", title: "Downsizing & Preparing for a Transition", description: "A calm, practical roadmap for organizing and moving.", icon: iconHeartHands },
-  { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
+  { href: "/building-your-professional-team", title: "Building Your Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
 ];
 
 const jsonLd = articleSchema({

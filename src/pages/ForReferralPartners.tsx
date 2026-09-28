@@ -35,7 +35,7 @@ const partnerTiles = [
   },
   {
     title: "Lenders &\nFinancing",
-    description: "Connecting clients with trusted professionals who provide financing solutions, including reverse mortgage options.",
+    description: "Connecting clients with independent professionals who provide financing solutions, including reverse mortgage options.",
     href: "/retirement-reverse-mortgage",
     iconSrc: iconHomeValue,
   },
@@ -83,7 +83,7 @@ const ForReferralPartners = () => {
               Many real estate decisions are part of a much larger picture — involving legal planning, financial strategy, and major life transitions.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              I work alongside trusted professionals to help ensure that property-related decisions are handled with clarity, coordination, and care.
+              I work alongside independent professionals to help ensure that property-related decisions are handled with clarity, coordination, and care.
             </p>
           </div>
         </div>

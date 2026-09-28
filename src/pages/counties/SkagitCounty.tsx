@@ -45,7 +45,7 @@ const SkagitCounty = () => (
     communitiesIntro={`${FEATURED_BROKER.Role} serves families, executors, and professionals throughout Skagit County, including:`}
     closingCtaBody={[
       `Whether you're managing a straightforward inherited home in Mount Vernon or navigating a complex agricultural property near Burlington, a short conversation with ${FEATURED_BROKER.name} can help clarify your options and develop a realistic next step.`,
-      `${FEATURED_BROKER.Role} serves Skagit County families and executors directly — and can connect those with needs beyond real estate brokerage and appraisal with trusted referral partners throughout the county and region.`,
+      `${FEATURED_BROKER.Role} serves Skagit County families and executors directly — and can connect those with needs beyond real estate brokerage and appraisal with independent professionals throughout the county and region.`,
     ]}
     countySpecificFaqs={[
       {

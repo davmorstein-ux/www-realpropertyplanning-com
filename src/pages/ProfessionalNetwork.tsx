@@ -44,7 +44,7 @@ const professionalCategories = [
   {
     title: "Home Repair & Contractor Services",
     description:
-      "Trusted contractors address deferred maintenance, safety concerns, and cosmetic updates that can meaningfully affect a property's marketability and sale price. Experienced guidance on which repairs are worth the investment helps families avoid unnecessary spending.",
+      "Contractors address deferred maintenance, safety concerns, and cosmetic updates that can meaningfully affect a property's marketability and sale price. Experienced guidance on which repairs are worth the investment helps families avoid unnecessary spending.",
   },
   {
     title: "Senior Housing & Transition Specialists",
@@ -54,10 +54,10 @@ const professionalCategories = [
 ];
 
 const jsonLd = articleSchema({
-  headline: "Professional Network & Trusted Resources",
+  headline: "Professional Network & Resources",
   description:
     "A collaborative network of professionals helping families navigate estate matters, senior transitions, and real estate decisions throughout Washington State.",
-  url: "/building-your-trusted-professional-team",
+  url: "/building-your-professional-team",
   datePublished: "2026-03-16",
   dateModified: "2026-03-16",
   about: [
@@ -72,20 +72,20 @@ const ProfessionalNetwork = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Professional Network & Trusted Resources | Real Property Planning"
+        title="Professional Network & Resources | Real Property Planning"
         description="A collaborative network of professionals helping families navigate estate matters, senior transitions, and real estate decisions throughout Washington State."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema
         items={[
-          { name: "Professional Network", url: "/building-your-trusted-professional-team" },
+          { name: "Professional Network", url: "/building-your-professional-team" },
         ]}
       />
       <Header />
       <main id="main-content">
 
       {/* Hero */}
-      <HeroBandTitle as="h1">Independent Professionals & Trusted Resources</HeroBandTitle>
+      <HeroBandTitle as="h1">Independent Professionals & Resources</HeroBandTitle>
 
       {/* Intro — relocated out of the title band. The band carries the
           page title and nothing else, sitewide. */}
@@ -167,7 +167,7 @@ const ProfessionalNetwork = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              A Trusted Resource for Professional Referrals
+              A Resource for Professional Referrals
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Attorneys, care managers, financial advisors, and other

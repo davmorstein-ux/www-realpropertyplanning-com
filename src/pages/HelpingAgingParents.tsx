@@ -89,7 +89,7 @@ const stages: Stage[] = [
   },
   {
     letter: "E",
-    title: "Building Your Trusted Team",
+    title: "Building Your Professional Team",
     description:
       "A coordinated network of professionals who work together on behalf of your family.",
     items: [
@@ -163,7 +163,7 @@ const faqs = [
 const nextSteps = [
   "Learn about your options",
   "Understand the transition process",
-  "Build your trusted team",
+  "Build your team",
   "Make informed decisions at your pace",
 ];
 
@@ -347,7 +347,7 @@ const HelpingAgingParents = () => {
           </div>
         </section>
 
-        {/* TRUSTED PROFESSIONAL NETWORK */}
+        {/* PROFESSIONAL NETWORK */}
         <section className="py-10 lg:py-14 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
@@ -358,7 +358,7 @@ const HelpingAgingParents = () => {
                 className="w-16 h-16 object-contain mx-auto mb-5"
                 loading="lazy" sizes="(max-width: 768px) 90px, 90px" decoding="async" width={512} height={512} />
               <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-5">
-                A Trusted Professional Network
+                A Network of Independent Professionals
               </h2>
               <p className="text-navy/85 text-lg leading-relaxed mb-8">
                 Real Property Planning works alongside attorneys, CPAs, financial

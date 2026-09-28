@@ -3,7 +3,7 @@ import { professionalNetworkCategories } from "./professional-network-tiles-data
 
 /**
  * Full Professional Network grid — finalized 30-tile premium ecosystem.
- * Lives on /building-your-trusted-professional-team.
+ * Lives on /building-your-professional-team.
  */
 const ProfessionalNetworkGrid = () => {
   return (

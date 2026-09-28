@@ -74,7 +74,7 @@ const pathways: Pathway[] = [
     title: "Building the Right Professional Team",
     description:
       "Understanding how attorneys, CPAs, appraisers, real estate professionals, estate liquidators, and advisors may help guide the process.",
-    href: "/building-your-trusted-professional-team",
+    href: "/building-your-professional-team",
     icon: iconAssisted,
   },
 ];

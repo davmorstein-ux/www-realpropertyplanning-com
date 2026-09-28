@@ -29,7 +29,7 @@ const relatedResources = [
   { title: "Memory Care Costs", href: "/articles/memory-care-costs" },
   { title: "CCRC Costs", href: "/articles/ccrc-costs" },
   { title: "Affordable Senior Housing", href: "/articles/affordable-senior-housing" },
-  { title: "Building Your Trusted Professional Team", href: "/building-your-trusted-professional-team" },
+  { title: "Building Your Professional Team", href: "/building-your-professional-team" },
 ];
 
 const jsonLd = {

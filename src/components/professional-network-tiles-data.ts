@@ -79,7 +79,7 @@ export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
 ];
 
 // Curated 6-tile homepage preview only. The full 30-tile ecosystem remains on
-// the trusted professional team page.
+// the professional team page.
 export const featuredHomepageTiles: ProfessionalNetworkTile[] = [
   professionalNetworkCategories[0].tiles[2], // Probate Attorneys
   professionalNetworkCategories[1].tiles[0], // CPAs

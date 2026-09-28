@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Orientación sobre Sucesiones y Bienes Raíces para Personas Mayores | Estado de Washington",
-    "description": "Centro de recursos de Washington para bienes raíces en sucesiones, propiedades heredadas, transiciones de personas mayores y orientación profesional confiable."
+    "description": "Centro de recursos de Washington para bienes raíces en sucesiones, propiedades heredadas, transiciones de personas mayores y cómo encontrar profesionales independientes."
   },
   "hero": {
     "imageAlt": "Real Property Planning — sirviendo a familias de Washington en transiciones de personas mayores, sucesiones y ventas de bienes de sucesión",
@@ -29,7 +29,7 @@
       },
       "needProfessional": {
         "title": "Necesito un Profesional",
-        "imgAlt": "Hombre en una laptop buscando recursos profesionales de confianza"
+        "imgAlt": "Hombre en una laptop buscando recursos profesionales"
       }
     }
   },
@@ -45,7 +45,7 @@
     "description": "La red de recursos definitiva para comprar, vender, administrar y aprender sobre los Hogares Familiares para Adultos (AFH).",
     "cta": "Explorar AFH Club"
   },
-  "descriptor": "Conectando a las familias de Washington con orientación confiable sobre vivienda para personas mayores, bienes raíces en sucesiones y los especialistas que ayudan en el camino",
+  "descriptor": "Conectando a las familias de Washington con orientación clara sobre vivienda para personas mayores, bienes raíces en sucesiones y los especialistas que ayudan en el camino",
   "probateEstateSales": {
     "seo": {
       "title": "Agente y Corredor de Bienes Raíces de Sucesiones en Washington | Real Property Planning",
@@ -461,7 +461,7 @@
     "heroTitle": "Conéctese",
     "intro": {
       "paragraph1": "Real Property Planning es un centro de recursos gratuito que conecta a personas mayores, sus familias y profesionales en todo el Estado de Washington.",
-      "paragraph2": "Ya sea que esté navegando por una sucesión, una propiedad heredada, una transición de vivienda para personas mayores, o simplemente buscando profesionales de confianza — estamos aquí para ayudarlo a encontrar la dirección correcta. Use esta página para comunicarse con preguntas, sugerir un recurso, o preguntar sobre cómo unirse a nuestra red profesional."
+      "paragraph2": "Ya sea que esté navegando por una sucesión, una propiedad heredada, una transición de vivienda para personas mayores, o simplemente buscando profesionales independientes — estamos aquí para ayudarlo a encontrar la dirección correcta. Use esta página para comunicarse con preguntas, sugerir un recurso, o preguntar sobre cómo unirse a nuestra red profesional."
     },
     "contactInfo": {
       "phoneLabel": "Teléfono",

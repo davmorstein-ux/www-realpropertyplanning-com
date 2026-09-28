@@ -97,7 +97,7 @@ const faqs = [
   },
   {
     question: "Is there help for senior transitions and downsizing decisions?",
-    answer: `Yes. ${FEATURED_BROKER.Role} works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. ${FEATURED_BROKER.Role} provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
+    answer: `Yes. ${FEATURED_BROKER.Role} works with seniors, adult children, attorneys, and other advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. ${FEATURED_BROKER.Role} provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
   },
   {
     question: "Do I need an appraisal before selling inherited property?",

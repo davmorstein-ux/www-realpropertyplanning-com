@@ -30,7 +30,7 @@ const tileMeta = [
   { key: "handlingEstate", href: "/estate-probate-inherited-property", bgColor: "#25597e", imgSrc: tileEstate },
   {
     key: "needProfessional",
-    href: "/building-your-trusted-professional-team",
+    href: "/building-your-professional-team",
     bgColor: "#662D56",
     imgSrc: tileProfessionals,
   },

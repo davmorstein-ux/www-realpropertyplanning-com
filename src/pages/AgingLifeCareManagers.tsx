@@ -106,7 +106,7 @@ const AgingLifeCareManagers = () => (
                 An Aging Life Care Manager — also known as a geriatric care manager — is a trained
                 professional who helps older adults and their families navigate the complex challenges of
                 aging. They assess physical, emotional, and environmental needs; coordinate medical care;
-                and serve as a trusted advocate during major life transitions.
+                and serve as an advocate during major life transitions.
               </p>
               <p>
                 These professionals often come from backgrounds in nursing, social work, or counseling,

@@ -77,7 +77,7 @@ const BookkeepingServices = () => (
   <>
     <SEOHead
       title="Bookkeeping Services in Washington State | Real Property Planning"
-      description="Connect with trusted bookkeepers and Certified QuickBooks ProAdvisors in Washington State. Learn how organized financial records support business owners, executors, and families navigating estate and life transitions."
+      description="Connect with independent bookkeepers and Certified QuickBooks ProAdvisors in Washington State. Learn how organized financial records support business owners, executors, and families navigating estate and life transitions."
       canonical="https://realpropertyplanning.com/bookkeeping-services"
     />
     <BreadcrumbSchema

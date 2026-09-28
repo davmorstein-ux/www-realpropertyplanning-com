@@ -92,12 +92,12 @@ const goodFit = [
   "The family needs practical help coordinating next steps for a property",
   "The home may need repairs, cleanout, staging, or other preparation",
   "The decision-makers are overwhelmed and need a steady, experienced guide",
-  "A professional wants a trusted real estate resource for property situations throughout Washington State",
+  "A professional wants a real estate resource for property situations throughout Washington State",
 ];
 
 const jsonLd = articleSchema({
   headline: "A Professional Real Estate Resource for Important Property Transitions",
-  description: "A trusted real estate resource for attorneys, fiduciaries, and professionals helping clients with probate, estate, inherited property, and senior transition decisions.",
+  description: "A real estate resource for attorneys, fiduciaries, and professionals helping clients with probate, estate, inherited property, and senior transition decisions.",
   url: "/join-the-network",
   datePublished: "2026-03-16",
   dateModified: "2026-03-16",
@@ -109,7 +109,7 @@ const ProfessionalReferralResource = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Professional Referral Resource | Real Property Planning"
-        description="A trusted real estate resource for attorneys, fiduciaries, and professionals helping clients with probate, estate, inherited property, and senior transition decisions."
+        description="A real estate resource for attorneys, fiduciaries, and professionals helping clients with probate, estate, inherited property, and senior transition decisions."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Professional Referral Resource", url: "/join-the-network" }]} />

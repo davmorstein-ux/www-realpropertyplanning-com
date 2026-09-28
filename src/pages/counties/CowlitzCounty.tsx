@@ -53,7 +53,7 @@ const CowlitzCounty = () => (
       },
       {
         question: "Can cleanout and repairs be coordinated for a Cowlitz County estate property?",
-        answer: `Yes. ${FEATURED_BROKER.Role} maintains relationships with trusted local vendors for estate cleanout, basic repairs, and property preparation throughout Cowlitz County. Coordinating these services locally is part of what ${FEATURED_BROKER.pronoun.subject} does — so executors and out-of-state heirs don't have to manage it themselves from a distance.`,
+        answer: `Yes. ${FEATURED_BROKER.Role} maintains relationships with independent local vendors for estate cleanout, basic repairs, and property preparation throughout Cowlitz County. Coordinating these services locally is part of what ${FEATURED_BROKER.pronoun.subject} does — so executors and out-of-state heirs don't have to manage it themselves from a distance.`,
       },
     ]}
   />

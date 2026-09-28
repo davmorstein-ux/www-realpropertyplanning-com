@@ -20,7 +20,7 @@ const RetirementReverseMortgage = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Retirement & Reverse Mortgage Guidance | Real Property Planning"
-      description="Reverse mortgage and retirement financing guidance for Washington seniors and families. Trusted lending professionals supporting long-term housing and estate planning decisions."
+      description="Reverse mortgage and retirement financing guidance for Washington seniors and families. Independent lending professionals supporting long-term housing and estate planning decisions."
     />
     <BreadcrumbSchema
       items={[
@@ -40,7 +40,7 @@ const RetirementReverseMortgage = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
+          Connecting clients with independent professionals who provide clarity around financing, retirement planning, and long-term strategy.
         </p>
         </div>
       </div>

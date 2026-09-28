@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const services = [
   {
     title: "Senior Relocation Home Sales",
-    description: "Helping seniors and their families plan and complete the sale of a long‑time home, including timing, preparation, and coordinating trusted local vendors.",
+    description: "Helping seniors and their families plan and complete the sale of a long‑time home, including timing, preparation, and coordinating independent local vendors.",
     link: "/senior-transitions"
   },
   {

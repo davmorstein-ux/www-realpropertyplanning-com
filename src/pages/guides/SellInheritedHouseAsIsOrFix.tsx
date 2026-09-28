@@ -175,7 +175,7 @@ const SellInheritedHouseAsIsOrFix = () => (
             {[
               "A realistic assessment of the property's current market value",
               "Estimated value after targeted improvements",
-              "Repair cost estimates from trusted vendors",
+              "Repair cost estimates from independent vendors",
               "A comparison of net proceeds under both scenarios",
               "Timeline projections for each approach",
             ].map((item, i) => (

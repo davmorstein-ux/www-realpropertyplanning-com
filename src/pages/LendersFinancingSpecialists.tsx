@@ -25,7 +25,7 @@ const LendersFinancingSpecialists = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Lenders & Financing Specialists | Real Property Planning"
-      description="Supporting clients with financing options and long-term planning. Connect with trusted lending professionals who help you explore reverse mortgage and retirement strategies."
+      description="Supporting clients with financing options and long-term planning. Connect with independent lending professionals who help you explore reverse mortgage and retirement strategies."
     />
     <BreadcrumbSchema
       items={[
@@ -45,7 +45,7 @@ const LendersFinancingSpecialists = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
+          Connecting clients with independent professionals who provide clarity around financing, retirement planning, and long-term strategy.
         </p>
         </div>
       </div>

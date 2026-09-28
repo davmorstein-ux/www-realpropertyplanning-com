@@ -50,7 +50,7 @@ const SeniorEstateServices = () => {
             Senior Relocation Home Sales
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            Selling a home after 20, 30, or 40 years is one of the biggest transitions a family can face. {FEATURED_BROKER.Role} works with seniors and their families to plan and complete the sale of a long‑time home — including timing, preparation, and coordination with trusted local vendors and senior communities — so the process feels manageable rather than overwhelming.
+            Selling a home after 20, 30, or 40 years is one of the biggest transitions a family can face. {FEATURED_BROKER.Role} works with seniors and their families to plan and complete the sale of a long‑time home — including timing, preparation, and coordination with independent local vendors and senior communities — so the process feels manageable rather than overwhelming.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -157,7 +157,7 @@ const SeniorEstateServices = () => {
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
-              "Referrals to trusted local clean‑out and haul‑away partners",
+              "Referrals to independent local clean‑out and haul‑away companies",
               "Help prioritizing repairs versus selling as‑is",
               "Guidance on staging or simple presentation improvements",
               "Vendor scheduling and oversight so you don't have to be on‑site",

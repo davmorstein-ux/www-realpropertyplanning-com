@@ -273,12 +273,12 @@ const Section = ({
 );
 
 const jsonLd = articleSchema({
-  headline: "Building Your Trusted Professional Team",
+  headline: "Building Your Professional Team",
   description:
     "Find independent legal, financial, senior housing, and property professionals throughout Washington State.",
-  url: "/building-your-trusted-professional-team",
+  url: "/building-your-professional-team",
   datePublished: "2026-05-08",
-  dateModified: "2026-05-17",
+  dateModified: "2026-09-27",
   about: ["Professional team", "Senior transitions", "Estate planning", "Probate"],
 });
 
@@ -286,19 +286,19 @@ const BuildingYourTrustedProfessionalTeam = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Building Your Trusted Professional Team | Real Property Planning"
+        title="Building Your Professional Team | Real Property Planning"
         description="Find independent legal, financial, senior housing, and property professionals throughout Washington State."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema
-        items={[{ name: "Building Your Trusted Professional Team", url: "/building-your-trusted-professional-team" }]}
+        items={[{ name: "Building Your Professional Team", url: "/building-your-professional-team" }]}
       />
       <Header />
       <main id="main-content">
         
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
-<HeroBandTitle as="h1">A Guide to Trusted, Independent Professionals</HeroBandTitle>
+<HeroBandTitle as="h1">A Guide to Independent Professionals</HeroBandTitle>
           </div>
         </section>
 
@@ -473,7 +473,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
             grown into a single page answering what its six sub-pages exist to
             answer. Items live in src/lib/inheritedPropertyGuidance.ts and are
             filtered by this slug — do not paste them inline. */}
-        <GuidanceGrid page="building-your-trusted-professional-team" />
+        <GuidanceGrid page="building-your-professional-team" />
 
         <DisclaimerSection />
       </main>

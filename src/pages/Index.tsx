@@ -34,9 +34,9 @@ const tiles = [
   },
   {
     imgSrc: tileProfessionals,
-    imgAlt: "Man at a laptop browsing trusted professional resources",
+    imgAlt: "Man at a laptop browsing professional resources",
     title: "I Need a Professional",
-    href: "/building-your-trusted-professional-team",
+    href: "/building-your-professional-team",
     bgColor: "#7a4f8a",
   },
 ];
@@ -46,7 +46,7 @@ const RPPHomeV3 = () => {
     <>
       <SEOHead
         title="Real Property Planning | Estate & Senior Resources"
-        description="Washington resource hub for probate real estate, inherited property, senior transitions, and trusted professional guidance."
+        description="Washington resource hub for probate real estate, inherited property, senior transitions, and finding independent professionals."
         canonical="https://realpropertyplanning.com"
       />
       <Header />

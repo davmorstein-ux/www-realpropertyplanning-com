@@ -27,7 +27,7 @@ const relatedResources = [
   { title: "Senior Housing Options", href: "/articles/senior-housing-options" },
   { title: "Independent Living Costs", href: "/articles/independent-living-costs" },
   { title: "Memory Care Costs", href: "/articles/memory-care-costs" },
-  { title: "Building Your Trusted Professional Team", href: "/building-your-trusted-professional-team" },
+  { title: "Building Your Professional Team", href: "/building-your-professional-team" },
 ];
 
 const jsonLd = {

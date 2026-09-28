@@ -28,9 +28,9 @@ const tiles = [
   },
   {
     imgSrc: tileProfessionals,
-    imgAlt: "Man at a laptop browsing trusted professional resources",
+    imgAlt: "Man at a laptop browsing professional resources",
     title: "I Need a Professional",
-    href: "/building-your-trusted-professional-team",
+    href: "/building-your-professional-team",
     bgColor: "#662D56", // plum
   },
 ];

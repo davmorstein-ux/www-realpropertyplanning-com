@@ -180,7 +180,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
     id: "reference",
     label: "Getting oriented & reference",
     pieces: [
-      { title: "Building Your Trusted Professional Team", href: "/building-your-trusted-professional-team" },
+      { title: "Building Your Professional Team", href: "/building-your-professional-team" },
       { title: "Frequently Asked Questions About Probate Real Estate", href: "/faq" },
       { title: "Gray Divorce and Your Home — What Washington Couples Need to Know", href: "/gray-divorce" },
       { title: "Grey Divorce and the Grey Tsunami", href: "/grey-divorce" },

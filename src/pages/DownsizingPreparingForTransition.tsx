@@ -76,7 +76,7 @@ const pathways: Pathway[] = [
     title: "Building the Right Support Team",
     description:
       "Understanding how move managers, estate liquidators, care professionals, real estate professionals, appraisers, and advisors may help simplify the process.",
-    href: "/building-your-trusted-professional-team",
+    href: "/building-your-professional-team",
     icon: iconDocument,
   },
 ];
@@ -104,7 +104,7 @@ const considerations = [
   "Family communication",
   "Emotional stress and burnout",
   "Future caregiving needs",
-  "Building a trusted support team",
+  "Building a support team",
 ];
 
 const faqs = [
@@ -156,7 +156,7 @@ const faqs = [
   {
     question: "How do families reduce stress during transitions?",
     answer:
-      "Clear communication, realistic timelines, and coordinated guidance from a trusted team tend to replace pressure with a calmer, more manageable rhythm.",
+      "Clear communication, realistic timelines, and coordinated guidance from one team tend to replace pressure with a calmer, more manageable rhythm.",
   },
 ];
 

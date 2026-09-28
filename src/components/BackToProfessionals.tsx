@@ -6,7 +6,7 @@ export default function BackToProfessionals() {
 
     <div style={{ textAlign: "center", padding: "48px 24px 64px" }}>
 
-      <Link to="/building-your-trusted-professional-team">
+      <Link to="/building-your-professional-team">
 
         <img
 

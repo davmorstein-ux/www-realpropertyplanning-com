@@ -24,7 +24,7 @@ const relatedResources = [
   { title: "Senior Move Managers", href: "/senior-move-managers" },
   { title: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
   { title: "Senior Housing Options", href: "/articles/senior-housing-options" },
-  { title: "Building Your Trusted Professional Team", href: "/building-your-trusted-professional-team" },
+  { title: "Building Your Professional Team", href: "/building-your-professional-team" },
 ];
 
 const jsonLd = {

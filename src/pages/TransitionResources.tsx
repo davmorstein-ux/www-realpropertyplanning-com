@@ -260,7 +260,7 @@ const TransitionResources = () => {
               Resource Categories
             </h2>
             <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-10 max-w-3xl">
-              Explore trusted professionals and service providers who assist
+              Explore independent professionals and service providers who assist
               families during probate, estate, and senior transition situations
               throughout Washington State.
             </p>

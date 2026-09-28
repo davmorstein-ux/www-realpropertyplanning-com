@@ -70,7 +70,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/bellevue-probate-estate-real-estate", label: "Bellevue Probate Estate" },
   { path: "/bellingham-probate-estate-real-estate", label: "Bellingham Probate Estate" },
   { path: "/benton-county", label: "Benton County" },
-  { path: "/building-your-trusted-professional-team", label: "Building Your Trusted Professional Team" },
+  { path: "/building-your-professional-team", label: "Building Your Professional Team" },
   { path: "/resources/cpas-financial-advisors", label: "CPAs & Financial Advisors" },
   { path: "/professionals/care-managers", label: "Care Managers" },
   { path: "/articles/ccrc-costs", label: "Ccrc Costs" },

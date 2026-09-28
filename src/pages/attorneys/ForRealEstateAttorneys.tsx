@@ -52,7 +52,7 @@ const howDavidHelps = [
   "Pricing strategy — positioning the property accurately for current market conditions in the specific neighborhood",
   "Market analysis — comparable sales data and market trend context to support legal proceedings or settlement negotiations",
   "Sale preparation recommendations — honest assessment of what to address before listing and what to leave",
-  "Vendor coordination — connecting clients with trusted local professionals for cleanout, repairs, and staging",
+  "Vendor coordination — connecting clients with independent local professionals for cleanout, repairs, and staging",
   "Full sale management — listing, marketing, showings, negotiation, and closing coordination",
 ];
 

@@ -74,7 +74,7 @@ const pathways: Pathway[] = [
     title: "Building the Right Support Team",
     description:
       "Understanding how real estate professionals, appraisers, estate liquidators, move managers, contractors, attorneys, and advisors may help simplify the process.",
-    href: "/building-your-trusted-professional-team",
+    href: "/building-your-professional-team",
     icon: iconAssisted,
   },
 ];
@@ -102,7 +102,7 @@ const considerations = [
   "Family communication",
   "Occupancy issues",
   "Timing considerations",
-  "Building a trusted support team",
+  "Building a support team",
 ];
 
 const mistakes = [
@@ -155,12 +155,12 @@ const faqs = [
   {
     question: "What professionals may help coordinate the process?",
     answer:
-      "A real estate professional, certified appraiser, senior move manager, estate liquidator, trusted contractor, and — when applicable — an attorney and CPA often work together.",
+      "A real estate professional, certified appraiser, senior move manager, estate liquidator, contractor, and — when applicable — an attorney and CPA often work together.",
   },
   {
     question: "How do families reduce stress during preparation?",
     answer:
-      "Realistic timelines, one decision at a time, and a small trusted team usually replace pressure with a calmer rhythm.",
+      "Realistic timelines, one decision at a time, and a small, coordinated team usually replace pressure with a calmer rhythm.",
   },
   {
     question: "What if everything feels overwhelming?",

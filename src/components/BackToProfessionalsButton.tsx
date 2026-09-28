@@ -5,7 +5,7 @@ const BackToProfessionalsButton = () => (
   <section className="py-10 md:py-14 bg-background">
     <div className="container px-6 lg:px-8">
       <div className="flex justify-center">
-        <Link to="/building-your-trusted-professional-team">
+        <Link to="/building-your-professional-team">
           <Button
             variant="navy3d"
             size="lg"

@@ -34,9 +34,9 @@ const tiles = [
   },
   {
     imgSrc: tileProfessionals,
-    imgAlt: "Man at a laptop browsing trusted professional resources",
+    imgAlt: "Man at a laptop browsing professional resources",
     title: "I Need a Professional",
-    href: "/building-your-trusted-professional-team",
+    href: "/building-your-professional-team",
     bgColor: "#7a4f8a",
   },
 ];
@@ -46,7 +46,7 @@ const HomepageFinal = () => {
     <>
       <SEOHead
         title="Probate & Senior Real Estate Guidance | Washington State"
-        description="Washington resource hub for probate real estate, inherited property, senior transitions, and trusted professional guidance."
+        description="Washington resource hub for probate real estate, inherited property, senior transitions, and finding independent professionals."
         canonical="https://realpropertyplanning.com"
       />
       <Header />
@@ -118,7 +118,7 @@ const HomepageFinal = () => {
                 Welcome to Real Property Planning
               </h2>
               <p className="font-sans text-[12px] md:text-[13px] font-bold tracking-[0.18em] uppercase text-[hsl(var(--gold-dark))] mb-4 md:mb-5">
-                A Free-To-Use Hub · Built For Families · Trusted By Professionals
+                A Free-To-Use Hub · Built For Families
               </p>
               <p className="text-[19px] md:text-[22px] lg:text-[24px] text-navy font-medium leading-[1.55]">
                 Connecting families, seniors, and professionals with the right people and resources.

@@ -98,7 +98,7 @@ const considerations = [
   "Financial considerations",
   "Family communication",
   "Future planning",
-  "Building a trusted support team",
+  "Building a support team",
 ];
 
 const faqs = [
@@ -160,7 +160,7 @@ const nextSteps = [
   "Understand the current situation and concerns",
   "Explore available housing, caregiving, and support options",
   "Discuss property, financial, and legal considerations",
-  "Build a trusted support team",
+  "Build a support team",
   "Make informed decisions one step at a time",
 ];
 

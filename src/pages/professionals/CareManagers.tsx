@@ -10,7 +10,7 @@ const CareManagers = () => {
       helpRows={[
         { icon: "❤️", text: "Assesses the older adult's medical, emotional, and daily living needs — and creates a personalized care plan" },
         { icon: "🔗", text: "Coordinates with doctors, facilities, and family members so everyone is informed and working toward the same goals" },
-        { icon: "🌍", text: "Serves as a trusted local advocate — especially valuable for families who live out of state or out of the area" },
+        { icon: "🌍", text: "Serves as a local advocate — especially valuable for families who live out of state or out of the area" },
       ]}
       faqs={[
         {

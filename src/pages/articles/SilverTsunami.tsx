@@ -22,7 +22,7 @@ const relatedResources = [
   { title: "Senior Move Managers", href: "/senior-move-managers" },
   { title: "Aging Life Care Managers", href: "/aging-life-care-managers" },
   { title: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
-  { title: "Building Your Trusted Professional Team", href: "/building-your-trusted-professional-team" },
+  { title: "Building Your Professional Team", href: "/building-your-professional-team" },
 ];
 
 const jsonLd = {
@@ -197,7 +197,7 @@ const SilverTsunami = () => {
               </p>
               <p className={pClass}>
                 Effective planning means evaluating future housing needs honestly, understanding the full cost of senior
-                living options, reviewing financial resources, and building a team of trusted professionals — an estate
+                living options, reviewing financial resources, and building a team of professionals — an estate
                 planning attorney, a financial advisor, a senior living advisor, perhaps an Aging Life Care Manager who
                 can help coordinate support services before a medical crisis changes everything.
               </p>

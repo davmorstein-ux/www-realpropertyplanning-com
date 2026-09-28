@@ -28,7 +28,7 @@ const PierceCounty = () => (
       },
       {
         question: `How does ${FEATURED_BROKER.role} handle older Tacoma homes with significant deferred maintenance?`,
-        answer: `With honesty and a clear cost-benefit framework. Tacoma has a significant inventory of older craftsman and mid-century homes — many of which are estate properties. ${FEATURED_BROKER.Role} evaluates each potential improvement for return on investment, helps families decide what to address and what to sell as-is, and coordinate trusted local vendors for cleanout, repairs, and preparation.`,
+        answer: `With honesty and a clear cost-benefit framework. Tacoma has a significant inventory of older craftsman and mid-century homes — many of which are estate properties. ${FEATURED_BROKER.Role} evaluates each potential improvement for return on investment, helps families decide what to address and what to sell as-is, and coordinate independent local vendors for cleanout, repairs, and preparation.`,
       },
     ]}
     communitiesIntro={`${FEATURED_BROKER.Role} serves families, executors, and professionals throughout Pierce County, including:`}

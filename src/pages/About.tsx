@@ -30,7 +30,7 @@ const nextSteps = [
   { label: "I Want to Plan Ahead", href: "/planning-before-a-crisis", bgColor: "#8A4214" },
   { label: "I'm Helping an Aging Parent", href: "/helping-an-aging-parent", bgColor: "#246044" },
   { label: "I'm Handling an Estate", href: "/estate-probate-inherited-property", bgColor: "#25597e" },
-  { label: "I Need a Professional", href: "/building-your-trusted-professional-team", bgColor: "#662D56" },
+  { label: "I Need a Professional", href: "/building-your-professional-team", bgColor: "#662D56" },
 ];
 
 const About = () => {
@@ -41,7 +41,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="About Real Property Planning | Senior Transitions & Estate Hub"
-        description="Washington State's resource hub for senior transitions, probate, and estate real estate — coordinating brokers, appraisers, and trusted professionals."
+        description="Washington State's resource hub for senior transitions, probate, and estate real estate — with guides and a directory of independent brokers, appraisers, and other professionals."
         schemaJson={hubOrganizationSchema}
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />

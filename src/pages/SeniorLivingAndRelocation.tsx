@@ -56,7 +56,7 @@ const supportItems = [
   {
     title: "Property Preparation & Coordination",
     description:
-      "Coordinating cleanout, repairs, and staging with trusted vendors so the home is market-ready without adding stress.",
+      "Coordinating cleanout, repairs, and staging with independent vendors so the home is market-ready without adding stress.",
   },
   {
     title: "Clear, Objective Valuation",

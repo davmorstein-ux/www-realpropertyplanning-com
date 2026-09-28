@@ -186,7 +186,7 @@ export default function NewHomePreview() {
               marginBottom: 16,
             }}
           >
-            Washington State's Trusted Choice
+            Washington State's Resource Hub
           </p>
           <h1
             style={{

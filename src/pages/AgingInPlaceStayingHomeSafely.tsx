@@ -74,7 +74,7 @@ const pathways: Pathway[] = [
     title: "Building the Right Support Team",
     description:
       "Understanding how caregivers, care advisors, attorneys, financial professionals, housing specialists, and property professionals may help guide the process.",
-    href: "/building-your-trusted-professional-team",
+    href: "/building-your-professional-team",
     icon: iconTeam,
   },
 ];
@@ -102,7 +102,7 @@ const considerations = [
   "Social connection",
   "Housing transitions",
   "Future planning",
-  "Building a trusted support team",
+  "Building a support team",
 ];
 
 const mistakes = [
@@ -175,7 +175,7 @@ const continueJourney = [
   { href: "/helping-an-aging-parent", title: "Helping an Aging Parent or Loved One", description: "Support for adult children navigating caregiving and family decisions.", icon: iconHeartHands },
   { href: "/estate-planning-powers-of-attorney", title: "Estate Planning & Powers of Attorney", description: "How legal and financial planning may help protect families.", icon: iconEstatePlanning },
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for property and housing choices.", icon: iconHome },
-  { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconTeam },
+  { href: "/building-your-professional-team", title: "Building Your Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconTeam },
 ];
 
 const nextSteps = [

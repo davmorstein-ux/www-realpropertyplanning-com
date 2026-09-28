@@ -36,7 +36,7 @@ const inputClass =
 const jsonLd = articleSchema({
   headline: "Join the Real Property Planning Professional Network",
   description:
-    "We connect seniors, families, executors, and attorneys with trusted local professionals. If you serve this community, we want to know you.",
+    "We connect seniors, families, executors, and attorneys with independent local professionals. If you serve this community, we want to know you.",
   url: "/join-network",
   datePublished: "2026-04-14",
   dateModified: "2026-05-05",
@@ -259,7 +259,7 @@ const JoinTheNetwork = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Join the Network | Real Property Planning Professional Referral Network | Washington State"
-        description="We connect seniors, families, executors, and attorneys with trusted local professionals. If you serve this community, join the Real Property Planning referral network."
+        description="We connect seniors, families, executors, and attorneys with independent local professionals. If you serve this community, join the Real Property Planning referral network."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema
@@ -276,7 +276,7 @@ const JoinTheNetwork = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              We connect seniors, families, executors, and attorneys with trusted local professionals. If you serve this community, we want to know you.
+              We connect seniors, families, executors, and attorneys with independent local professionals. If you serve this community, we want to know you.
             </p>
             </div>
           </div>

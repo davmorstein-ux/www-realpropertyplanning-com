@@ -307,7 +307,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "HIPAA Authorization", body: "Allows healthcare providers to share medical information with named family members. Without this, providers may refuse to discuss your parent's condition with you." },
               { heading: "If documents aren't in place", body: "Act now, while your parent still has capacity to sign. An elder law attorney can prepare these documents quickly — often within days. If your parent has already lost capacity, guardianship or conservatorship through the courts may be necessary." },
             ],
-            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can connect you with trusted legal resources in Washington.",
+            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can connect you with legal resources in Washington.",
           },
         },
         {
@@ -348,7 +348,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "Will and Trust", body: "A will directs how assets are distributed after death. A revocable living trust allows assets — including real property — to pass to beneficiaries without going through probate." },
               { heading: "What to do", body: "Schedule an appointment with an elder law or estate planning attorney. Many can prepare a basic package of documents — POA, healthcare directive, and will — for a reasonable flat fee. Don't rely on online forms for documents this important." },
             ],
-            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can refer you to trusted elder law attorneys in Washington.",
+            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can connect you with independent elder law attorneys in Washington.",
           },
         },
         {
@@ -362,7 +362,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "Washington-specific considerations", body: "Washington is a community property state — how assets are titled matters for surviving spouses. Washington has its own estate tax, with an exemption currently around $2.193 million. Real property that doesn't pass through a trust typically goes through probate." },
               { heading: "When to involve an attorney", body: "Always. Estate planning documents are legal instruments and errors can cause real harm. An elder law or estate planning attorney in Washington will know the state-specific rules and can prepare documents that hold up." },
             ],
-            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can refer you to trusted estate planning attorneys in Washington.",
+            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can connect you with independent estate planning attorneys in Washington.",
           },
         },
         {

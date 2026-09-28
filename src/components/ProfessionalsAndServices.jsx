@@ -119,8 +119,8 @@ const ProfessionalsAndServices = () => (
       </div>
       <div className="p1bar">
         <div className="p1bar-text">
-          <strong>Are you a professional serving estate, probate or senior transition clients?</strong> Join Washington
-          State's most trusted referral network.
+          <strong>Are you a professional serving estate, probate or senior transition clients?</strong> Join the Real Property Planning
+          directory.
         </div>
         <button className="p1bar-btn">Get Featured →</button>
       </div>

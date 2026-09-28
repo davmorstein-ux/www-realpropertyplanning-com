@@ -51,7 +51,7 @@ const services = [
   },
   {
     title: "Property Preparation Coordination",
-    description: `From professional cleanout to targeted repairs to staging, ${FEATURED_BROKER.role} coordinates the full preparation process through trusted local vendors — so the executor doesn't have to manage it and you don't have to track it down.`,
+    description: `From professional cleanout to targeted repairs to staging, ${FEATURED_BROKER.role} coordinates the full preparation process through independent local vendors — so the executor doesn't have to manage it and you don't have to track it down.`,
   },
   {
     title: "Communication With All Parties",
@@ -87,7 +87,7 @@ const faqs = [
   },
   {
     question: "Do you work with probate attorneys outside of Western Washington?",
-    answer: `${FEATURED_BROKER.Role}'s primary service area is Western Washington and the Puget Sound region — King, Snohomish, Pierce, and Kitsap Counties, with additional coverage in Skagit County and surrounding areas. For attorneys with clients in other parts of Washington State, ${FEATURED_BROKER.role} can discuss appropriate referral connections. For clients outside Washington, ${FEATURED_BROKER.role} can connect attorneys and clients with a trusted broker anywhere in the country through his eXp Realty network.`,
+    answer: `${FEATURED_BROKER.Role}'s primary service area is Western Washington and the Puget Sound region — King, Snohomish, Pierce, and Kitsap Counties, with additional coverage in Skagit County and surrounding areas. For attorneys with clients in other parts of Washington State, ${FEATURED_BROKER.role} can discuss appropriate referral connections. For clients outside Washington, ${FEATURED_BROKER.role} can connect attorneys and clients with a licensed broker anywhere in the country through his eXp Realty network.`,
   },
 ];
 
@@ -116,7 +116,7 @@ const ForProbateAttorneys = () => (
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
             Probate situations involve more than legal process. They involve families navigating loss, responsibility, and financial decisions they've never faced before — often on a timeline they don't control. When real estate is part of the estate, the{" "}
             <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executor</Link>{" "}
-            and family are faced with questions about value, condition, timing, and coordination that most attorneys reasonably prefer to hand off to a trusted real estate professional.
+            and family are faced with questions about value, condition, timing, and coordination that most attorneys reasonably prefer to hand off to an experienced real estate professional.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
             {FEATURED_BROKER.Role} works alongside probate attorneys throughout Washington State to provide defensible valuation, coordinated preparation, and a steady, professional presence through every step of the property sale.

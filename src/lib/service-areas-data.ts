@@ -226,7 +226,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     localFaqs: [
       { question: "What are the first steps when selling an inherited home in Issaquah?", answer: `Secure the property, confirm your legal authority to act, and get a realistic assessment of condition and value. ${FEATURED_BROKER.Role} can visit the property, evaluate what needs attention, and help you develop a clear plan — whether the home is in Olde Town, the Highlands, Talus, or the surrounding area.` },
       { question: `How does ${FEATURED_BROKER.role} determine the right price for an Issaquah estate property?`, answer: `Through a condition-adjusted comparable analysis grounded in certified appraisal methodology. This means ${FEATURED_BROKER.role} doesn't just pull nearby sales — ${FEATURED_BROKER.Role} evaluates how the subject property's specific condition, location within Issaquah, and current buyer demand affect its realistic market position. The result is a defensible price that holds up to scrutiny from co-heirs, attorneys, and the market itself.` },
-      { question: `Does ${FEATURED_BROKER.role} help with cleanout and preparation?`, answer: `Yes — ${FEATURED_BROKER.Role} coordinates with trusted local vendors for estate cleanout, targeted repairs, and staging as needed. ${FEATURED_BROKER.pronoun.Subject} evaluates each potential improvement through a return-on-investment lens so families don't over-spend on preparation that won't meaningfully improve the outcome.` },
+      { question: `Does ${FEATURED_BROKER.role} help with cleanout and preparation?`, answer: `Yes — ${FEATURED_BROKER.Role} coordinates with independent local vendors for estate cleanout, targeted repairs, and staging as needed. ${FEATURED_BROKER.pronoun.Subject} evaluates each potential improvement through a return-on-investment lens so families don't over-spend on preparation that won't meaningfully improve the outcome.` },
     ],
   },
   sammamish: {
@@ -1778,7 +1778,7 @@ export function getCityServiceHowWeHelp(cityName: string, serviceSlug?: string):
         "Coordination of cleanout, sorting, and donation logistics",
         "Timeline planning that aligns the sale with your move to a new living situation",
         "Honest counsel on market timing and pricing strategy",
-        "Referrals to trusted moving companies and transition resources",
+        "Referrals to independent moving companies and transition resources",
       ];
     case "executor-support":
       return [
@@ -1810,7 +1810,7 @@ export function getCityServiceHowWeHelp(cityName: string, serviceSlug?: string):
     case "preparing-home-for-sale":
       return [
         `Assessment of which repairs and improvements will affect value in ${cityName}'s market`,
-        "Coordination of cleanout, hauling, and donation services with trusted local vendors",
+        "Coordination of cleanout, hauling, and donation services with independent local vendors",
         "Guidance on staging, presentation, and photography strategy",
         "Management of contractor work including repairs, painting, and landscaping",
         "Budget-conscious recommendations that focus on return rather than perfection",
@@ -2273,7 +2273,7 @@ const deepScenarioBank: Record<string, Partial<Record<CommunityTone, string[]>>>
     smalltown: [
       "A longtime family property in {city} where the community knows the family and discretion matters",
       "An estate property in {city} with a larger lot, older construction, or nonstandard features",
-      "An out-of-town executor who needs trusted local coordination for a property in {city}",
+      "An out-of-town executor who needs local coordination for a property in {city}",
       "A family home in {city} where limited comparable sales make pricing more nuanced",
       "A probate property in {city} that needs practical preparation before it can be listed",
     ],
@@ -2390,7 +2390,7 @@ const deepScenarioBank: Record<string, Partial<Record<CommunityTone, string[]>>>
   "executor-support": {
     premium: [
       "A newly appointed executor managing a high-value estate property in {city}",
-      "An out-of-state executor responsible for a premium {city} property who needs trusted local coordination",
+      "An out-of-state executor responsible for a premium {city} property who needs local coordination",
       "Co-executors in {city} who need a neutral real estate professional to guide the sale objectively",
       "An executor who needs defensible valuation documentation for beneficiaries and the court",
       "A {city} estate where the property has appreciated substantially and pricing accuracy carries high stakes",
@@ -2774,7 +2774,7 @@ const deepHowWeHelpBank: Record<string, Partial<Record<CommunityTone, string[]>>
       "Coordination of cleanout, repairs, and presentation within the family's budget and timeline",
       "Patient communication with seniors and adult children who may have different perspectives",
       "Timeline planning that aligns the sale closing with the move to a new living situation",
-      "Referrals to trusted move managers and transition professionals in {city}",
+      "Referrals to independent move managers and transition professionals in {city}",
     ],
     waterfront: [
       "Valuation guidance that captures the waterfront premium while reflecting actual property condition",
@@ -2789,7 +2789,7 @@ const deepHowWeHelpBank: Record<string, Partial<Record<CommunityTone, string[]>>
     premium: [
       "Thorough valuation analysis reflecting {city}'s premium market and how condition affects realistic pricing",
       "Guidance on which updates and improvements deliver measurable return in this price range",
-      "Coordination of cleanout, sorting, and donation logistics with trusted professionals",
+      "Coordination of cleanout, sorting, and donation logistics with independent professionals",
       "Timeline planning that aligns the sale with your move to a new living arrangement",
       "Honest counsel on market timing, pricing strategy, and realistic buyer expectations in {city}",
       "Full-service transaction management so you can focus on your next chapter",
@@ -2805,10 +2805,10 @@ const deepHowWeHelpBank: Record<string, Partial<Record<CommunityTone, string[]>>
     suburban: [
       "Honest, condition-based assessment of what your {city} home is worth in today's market",
       "Practical guidance on which repairs and updates will affect the sale price — and which to skip",
-      "Coordination of cleanout, donation, and move logistics with trusted local vendors",
+      "Coordination of cleanout, donation, and move logistics with independent local vendors",
       "Patient communication throughout a process that involves emotional decisions",
       "Timeline coordination so the sale aligns with your move to a new home or community",
-      "Referrals to trusted moving companies and transition resources in {city}",
+      "Referrals to independent moving companies and transition resources in {city}",
     ],
     waterfront: [
       "Valuation guidance that captures the waterfront premium while honestly reflecting property condition",
@@ -2863,7 +2863,7 @@ const deepHowWeHelpBank: Record<string, Partial<Record<CommunityTone, string[]>>
     suburban: [
       "Honest assessment of the estate property's condition and realistic value in {city}'s suburban market",
       "Step-by-step guidance on the executor's responsibilities related to the property sale",
-      "Coordination of cleanout, repairs, and preparation with trusted {city}-area vendors",
+      "Coordination of cleanout, repairs, and preparation with independent {city}-area vendors",
       "Clear communication with co-executors, beneficiaries, and the estate attorney",
       "Pricing strategy that accounts for how the property compares to updated homes in {city}",
       "Full-service sale management from assessment through closing and proceeds distribution",
@@ -3052,7 +3052,7 @@ const deepHowWeHelpBank: Record<string, Partial<Record<CommunityTone, string[]>>
     ],
     smalltown: [
       "Practical assessment of which repairs and improvements matter most in {city}'s local market",
-      "Coordination of cleanout and preparation with trusted local vendors",
+      "Coordination of cleanout and preparation with independent local vendors",
       "Honest guidance on what to fix, what to leave, and what buyers in {city} actually care about",
       "Sensitive handling of preparation for homes with personal significance to the family",
       "Budget-conscious approach focused on practical improvements rather than cosmetic perfection",
@@ -3327,7 +3327,7 @@ const deepCTAHeadings: Record<CommunityTone, string[]> = {
     "Ready to Explore Your Options?",
     "Schedule a Confidential Conversation",
     "Let's Talk About Your {city} Property Goals",
-    "Get Trusted Guidance for Your {city} Property",
+    "Get Guidance for Your {city} Property",
     "Your {city} Property Deserves Expert Attention",
   ],
   urban: [

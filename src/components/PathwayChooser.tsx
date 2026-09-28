@@ -25,9 +25,9 @@ const pathways = [
     icon: proIcon,
     title: "Are You a Professional or Advisor?",
     description:
-      "Connect with trusted professionals, referral resources, and collaborative support for clients and families.",
+      "Connect with independent professionals, referral resources, and collaborative support for clients and families.",
     cta: "Start Here",
-    href: "/building-your-trusted-professional-team",
+    href: "/building-your-professional-team",
   },
 ];
 

@@ -251,7 +251,7 @@ const ForSeniorLivingProfessionals = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 { href: "/senior-transitions", label: "Senior Transitions", desc: "How Real Property Planning supports families navigating a move from a longtime home." },
-                { href: "/resources", label: "Resource Directory", desc: "Trusted professionals who assist with transitions throughout Washington State." },
+                { href: "/resources", label: "Resource Directory", desc: "Independent professionals who assist with transitions throughout Washington State." },
                 { href: "/guides/senior-transition-differences", label: "Moving Elderly Parents", desc: "A compassionate guide for families planning a senior housing transition." },
                 { href: "/probate-estate-sales", label: "Our Services", desc: "An overview of how Real Property Planning supports families and professionals." },
               ].map((link) => (

@@ -4835,7 +4835,7 @@ html body main a.article-resource-btn.article-resource-btn.article-resource-btn:
 html body a.article-resource-btn.article-resource-btn.article-resource-btn::after {
   display: none !important;
 }
-/* Long labels ("Building Your Trusted Professional Team") were nowrap, which
+/* Long labels ("Building Your Professional Team") were nowrap, which
    pushed a single pill past the width of a phone. */
 @media (max-width: 640px) {
   html body main a.article-resource-btn.article-resource-btn.article-resource-btn,

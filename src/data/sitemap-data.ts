@@ -634,7 +634,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
-    path: "/building-your-trusted-professional-team",
+    path: "/building-your-professional-team",
     links: ["/contact"],
   },
   {
@@ -835,7 +835,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   },
   {
     path: "/executors/executors-guide",
-    links: ["/building-your-trusted-professional-team", "/executors"],
+    links: ["/building-your-professional-team", "/executors"],
   },
   {
     path: "/faq",
@@ -1767,7 +1767,7 @@ export const SITEMAP_REDIRECTS: SitemapRedirect[] = [
   },
   {
     from: "/professional-network",
-    to: "/building-your-trusted-professional-team",
+    to: "/building-your-professional-team",
   },
   {
     from: "/attorney-referral",

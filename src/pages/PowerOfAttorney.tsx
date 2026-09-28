@@ -202,7 +202,7 @@ const PowerOfAttorney = () => {
                 Real Property Planning is an educational and connection hub and does not provide legal advice. Before taking any real estate action under Power of Attorney, {FEATURED_BROKER.role} strongly recommends consulting with a qualified Washington State attorney to confirm the scope and validity of your authority.
               </p>
               <p className={pClass}>
-                If you need a referral to an elder law attorney in Washington State, {FEATURED_BROKER.role} is happy to help connect you with a trusted professional.
+                If you need a referral to an elder law attorney in Washington State, {FEATURED_BROKER.role} is happy to help connect you with an independent professional.
               </p>
             </div>
           </div>

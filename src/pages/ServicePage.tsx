@@ -18,7 +18,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
     benefits: [
       "Condition-based pricing based on actual condition and local market context",
-      "Coordination of cleanout, repairs, and preparation with trusted vendors",
+      "Coordination of cleanout, repairs, and preparation with independent vendors",
       "Clear communication with attorneys, co-executors, and family members throughout the process",
       "Experience with court-supervised sales and probate procedural requirements",
       "Honest assessment of repair-vs-sell-as-is decisions",
@@ -41,7 +41,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
       "Realistic valuation guidance based on the home's actual condition",
       "Timeline management that coordinates with the senior's transition schedule",
       "Clear communication with all family members, including those managing from a distance",
-      "Connections to trusted senior move managers, estate sale companies, and related professionals",
+      "Connections to independent senior move managers, estate sale companies, and related professionals",
     ],
   },
   "downsizing-services": {

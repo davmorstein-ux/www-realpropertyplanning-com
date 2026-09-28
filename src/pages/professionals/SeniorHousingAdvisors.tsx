@@ -5,7 +5,7 @@ const SeniorHousingAdvisors = () => {
     <ProfessionPageTemplate
       title="Senior Housing Advisors"
       metaTitle="Senior Housing Advisors in Western Washington | Real Property Planning"
-      metaDescription="Find trusted senior housing advisors and placement specialists serving the Puget Sound region — helping older adults and families choose assisted living, memory care, and independent living options."
+      metaDescription="Find independent senior housing advisors and placement specialists serving the Puget Sound region — helping older adults and families choose assisted living, memory care, and independent living options."
       helpHeadline="How a Senior Housing Advisor Helps Your Family"
       helpRows={[
         { icon: "🏡", text: "Assesses the older adult's care needs, preferences, and budget to identify the right housing options" },

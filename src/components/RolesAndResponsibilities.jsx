@@ -114,8 +114,8 @@ const RolesAndResponsibilities = () => {
         </div>
         <div className="r2-bar">
           <div className="r2-bar-text">
-            <strong>Need guidance navigating probate or an estate transition?</strong> Our network of trusted
-            professionals is here to help.
+            <strong>Need guidance navigating probate or an estate transition?</strong> The directory lists independent
+            professionals who can help.
           </div>
           <button className="r2-bar-btn">Find Help →</button>
         </div>

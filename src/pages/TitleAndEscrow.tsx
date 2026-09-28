@@ -173,7 +173,7 @@ const TitleAndEscrow = () => (
             </h2>
             <div className="bg-background border border-border rounded-lg p-10">
               <p className="text-foreground text-lg font-semibold mb-2">
-                Trusted providers coming soon.
+                Provider listings coming soon.
               </p>
               <p className="text-foreground text-base">
                 Check back shortly.

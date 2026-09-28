@@ -83,7 +83,7 @@ const ALL: Record<string, RelatedLink> = {
   resources: {
     href: "/resources",
     label: "Professional Resources",
-    description: "Trusted attorneys, CPAs, and senior-care professionals across Washington.",
+    description: "Independent attorneys, CPAs, and senior-care professionals across Washington.",
   },
   poa: {
     href: "/senior-living/power-of-attorneys",
@@ -334,7 +334,7 @@ function pickContextual(currentPath: string): { keys: Array<keyof typeof ALL>; h
       return {
         keys: ["resAttorneys", "forCpas", "forFinancialPlanners"],
         heading: "Other Professional Resources",
-        intro: "Related directories of trusted professionals.",
+        intro: "Related directories of independent professionals.",
       };
     if (p.includes("estate-sale") || p.includes("preparation") || p.includes("moving")) {
       return {
@@ -358,7 +358,7 @@ function pickContextual(currentPath: string): { keys: Array<keyof typeof ALL>; h
     return {
       keys: ["resAttorneys", "resCpas", "resSeniorLiving"],
       heading: "Other Resources",
-      intro: "More directories of trusted Washington professionals.",
+      intro: "More directories of independent Washington professionals.",
     };
   }
 

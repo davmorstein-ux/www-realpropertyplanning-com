@@ -198,7 +198,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Questions about probate, an inherited home, or a senior housing move? Reach Real Property Planning to be pointed to the right guide, tool, or licensed professional. Call (206) 900-3015.",
     h1: "Get Connected",
     intro:
-      "Real Property Planning is a free resource hub connecting elderly individuals, their families, and professionals across Washington State. Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for trusted professionals, use this page to ask a question and be pointed in the right direction.",
+      "Real Property Planning is a free resource hub connecting elderly individuals, their families, and professionals across Washington State. Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for independent professionals, use this page to ask a question and be pointed in the right direction.",
   },
   "/counties": {
     title: "Washington Counties | Probate, Estate & Senior Transition Guides by County",
@@ -302,10 +302,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/resources": {
     title: "Find a Professional | Real Property Planning",
     description:
-      "Trusted professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
+      "Independent professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
     h1: "Find a Professional",
     intro:
-      "Trusted professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
+      "Independent professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
   },
   "/resources/estate-sale-companies": {
     title: "Estate Sale Companies | Resources | Real Property Planning",
@@ -672,10 +672,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Estate Planning & Powers of Attorney",
     intro: "A calm orientation to wills, trusts, powers of attorney, and the planning steps that protect families before a crisis develops.",
   },
-  "/building-your-trusted-professional-team": {
-    title: "Building Your Trusted Professional Team | Real Property Planning",
+  "/building-your-professional-team": {
+    title: "Building Your Professional Team | Real Property Planning",
     description: "Connect with attorneys, CPAs, lenders, care managers, and other independent professionals supporting estate, probate, and senior transition decisions.",
-    h1: "Building Your Trusted Professional Team",
+    h1: "Building Your Professional Team",
     intro: "Estates and senior transitions often require a coordinated team. This guided journey helps families find the right independent professionals.",
   },
   "/downsizing-preparing-for-transition": {
@@ -1309,7 +1309,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/join-the-network": {
     title: "Join the Network | Real Property Planning Professional Referral Network | Washington State",
-    description: "We connect seniors, families, executors, and attorneys with trusted local professionals. If you serve this community, join the Real Property Planning referral network.",
+    description: "We connect seniors, families, executors, and attorneys with independent local professionals. If you serve this community, join the Real Property Planning referral network.",
     h1: "Join the Real Property Planning Professional Network",
   },
   "/lenders-and-financing-specialists": {
@@ -1363,7 +1363,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/medicare-providers": {
     title: "Medicare Providers in Washington State | Real Property Planning",
-    description: "Connect with trusted Medicare specialists in Washington State. Learn about Medicare Parts A, B, C, and D, enrollment timing, and how Medicare planning fits into senior life transitions.",
+    description: "Connect with independent Medicare specialists in Washington State. Learn about Medicare Parts A, B, C, and D, enrollment timing, and how Medicare planning fits into senior life transitions.",
     h1: "Medicare Providers in Washington State",
   },
   "/mortgage-lenders": {
@@ -1411,7 +1411,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/professionals": {
     title: "Find a Professional | Real Property Planning | Western Washington",
-    description: "A resource for families navigating estate settlement, inherited homes, and senior transitions — find trusted probate attorneys, senior housing advisors, financial planners, and more across the Puget Sound region.",
+    description: "A resource for families navigating estate settlement, inherited homes, and senior transitions — find independent probate attorneys, senior housing advisors, financial planners, and more across the Puget Sound region.",
     h1: "The Right Team Makes All the Difference",
   },
   "/professionals-services": {
@@ -1430,7 +1430,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/professionals/estate-sale": {
     title: "Estate Sale & Personal Property Specialists | Puget Sound | Real Property Planning",
-    description: "Find trusted estate sale companies and personal property specialists serving Western Washington — helping families sort, value, and sell belongings from an estate or senior downsizing.",
+    description: "Find independent estate sale companies and personal property specialists serving Western Washington — helping families sort, value, and sell belongings from an estate or senior downsizing.",
   },
   "/professionals/financial-planners": {
     title: "Financial Planners for Estate & Senior Transitions | Western Washington | Real Property Planning",
@@ -1447,7 +1447,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/professionals/senior-housing-advisors": {
     title: "Senior Housing Advisors in Western Washington | Real Property Planning",
-    description: "Find trusted senior housing advisors and placement specialists serving the Puget Sound region — helping older adults and families choose assisted living, memory care, and independent living options.",
+    description: "Find independent senior housing advisors and placement specialists serving the Puget Sound region — helping older adults and families choose assisted living, memory care, and independent living options.",
   },
   "/real-estate-attorneys": {
     title: "Real Estate Guidance for Real Estate Attorneys in Washington State | Real Property Planning",
@@ -1461,7 +1461,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/retirement-reverse-mortgage": {
     title: "Retirement & Reverse Mortgage Guidance | Real Property Planning",
-    description: "Reverse mortgage and retirement financing guidance for Washington seniors and families. Trusted lending professionals supporting long-term housing and estate planning decisions.",
+    description: "Reverse mortgage and retirement financing guidance for Washington seniors and families. Independent lending professionals supporting long-term housing and estate planning decisions.",
     h1: "Financing Options and Long-Term Planning",
   },
   "/roles": {

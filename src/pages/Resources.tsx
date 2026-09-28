@@ -72,7 +72,7 @@ const groups = [
         href: "/mortgage-lenders",
         title: "Mortgage Lenders",
         description:
-          "Trusted mortgage professionals specializing in estate, senior transition, and residential financing.",
+          "Independent mortgage professionals specializing in estate, senior transition, and residential financing.",
       },
       {
         href: "/resources/moving-relocation-services",
@@ -119,7 +119,7 @@ const Resources = () => {
     <>
       <SEOHead
         title="Find a Professional | Real Property Planning"
-        description="Trusted professionals and service providers for probate, estate, and senior transition needs throughout Washington State."
+        description="Independent professionals and service providers for probate, estate, and senior transition needs throughout Washington State."
         canonical="https://realpropertyplanning.com/resources"
       />
       <BreadcrumbSchema

@@ -258,7 +258,7 @@ const Professionals = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Find a Professional | Real Property Planning | Western Washington"
-        description="A resource for families navigating estate settlement, inherited homes, and senior transitions — find trusted probate attorneys, senior housing advisors, financial planners, and more across the Puget Sound region."
+        description="A resource for families navigating estate settlement, inherited homes, and senior transitions — find independent probate attorneys, senior housing advisors, financial planners, and more across the Puget Sound region."
       />
       <BreadcrumbSchema items={[{ name: "Professionals", url: "/professionals" }]} />
       <Header />
@@ -339,7 +339,7 @@ const Professionals = () => {
               Know a Professional Who Should Be Listed?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              We welcome referrals from trusted professionals serving families across Western Washington.
+              We welcome referrals from professionals serving families across Western Washington.
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg">

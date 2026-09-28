@@ -10,7 +10,7 @@ const items = [
   { icon: probateIcon, label: "Settling a loved one's estate" },
   { icon: propertyIcon, label: "Deciding what to do with the house" },
   { icon: careIcon, label: "Finding the right place to live" },
-  { icon: proIcon, label: "Trusted people to help" },
+  { icon: proIcon, label: "Independent professionals" },
   { icon: familyIcon, label: "Bringing the family together" },
 ];
 

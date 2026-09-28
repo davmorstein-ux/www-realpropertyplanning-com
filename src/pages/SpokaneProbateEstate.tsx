@@ -142,7 +142,7 @@ const SpokaneProbateEstate = () => {
                 "Family unsure how to handle an inherited property without local knowledge",
                 "Inherited home needing inspection, preparation, or cleanout coordination",
                 "Limited understanding of Spokane's neighborhoods and pricing ranges",
-                "Need for trusted local coordination so decisions can be made with confidence",
+                "Need for local coordination so decisions can be made with confidence",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <GoldCheck3D size={22} className="mt-0.5 shrink-0" />

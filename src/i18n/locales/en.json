@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Probate & Senior Real Estate Guidance | Washington State",
-    "description": "Washington resource hub for probate real estate, inherited property, senior transitions, and trusted professional guidance."
+    "description": "Washington resource hub for probate real estate, inherited property, senior transitions, and finding independent professionals."
   },
   "hero": {
     "imageAlt": "Real Property Planning — serving Washington families through senior transitions, probate, and estate sales",
@@ -30,7 +30,7 @@
       },
       "needProfessional": {
         "title": "I Need a Professional",
-        "imgAlt": "Man at a laptop browsing trusted professional resources"
+        "imgAlt": "Man at a laptop browsing professional resources"
       }
     }
   },
@@ -46,7 +46,7 @@
     "description": "The ultimate resource network for buying, selling, managing and learning about Adult Family Homes.",
     "cta": "Explore AFH Club"
   },
-  "descriptor": "Connecting Washington families with trusted guidance on senior housing, probate real estate, and the specialists who help along the way",
+  "descriptor": "Connecting Washington families with clear guidance on senior housing, probate real estate, and the specialists who help along the way",
   "probateEstateSales": {
     "seo": {
       "title": "Probate & Estate Property Sales in Washington State | Real Property Planning",
@@ -463,7 +463,7 @@
     "heroTitle": "Get Connected",
     "intro": {
       "paragraph1": "Real Property Planning is a free resource hub connecting elderly individuals, their families, and professionals across Washington State.",
-      "paragraph2": "Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for trusted professionals — we are here to help point you in the right direction. Use this page to reach out with questions, suggest a resource, or inquire about joining our professional network."
+      "paragraph2": "Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for independent professionals — we are here to help point you in the right direction. Use this page to reach out with questions, suggest a resource, or inquire about joining our professional network."
     },
     "contactInfo": {
       "phoneLabel": "Phone",

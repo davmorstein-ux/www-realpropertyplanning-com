@@ -57,7 +57,7 @@ const pathways: Pathway[] = [
   },
   {
     letter: "E",
-    title: "Looking for Trusted Professionals & Resources",
+    title: "Looking for Independent Professionals & Resources",
     description: "Connect with experienced professionals and educational guidance for important transition decisions.",
     href: "/professionals",
     icon: iconHandshake,
@@ -114,7 +114,7 @@ const understand = [
   "Downsizing & cleanout",
   "Financial & tax considerations",
   "Family coordination",
-  "Building a trusted team",
+  "Building your team",
 ];
 
 const continueJourney = [
@@ -143,8 +143,8 @@ const continueJourney = [
     icon: iconHome,
   },
   {
-    href: "/building-your-trusted-professional-team",
-    title: "Building Your Trusted Professional Team",
+    href: "/building-your-professional-team",
+    title: "Building Your Professional Team",
     description: "Meet the coordinated team supporting Washington families.",
     icon: iconHandshake,
   },
@@ -154,7 +154,7 @@ const nextSteps = [
   "Understand your situation",
   "Learn what questions to ask",
   "Explore your options",
-  "Build your trusted team",
+  "Build your team",
   "Make informed decisions at your own pace",
 ];
 

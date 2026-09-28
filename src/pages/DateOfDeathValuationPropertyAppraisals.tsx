@@ -159,7 +159,7 @@ const continueJourney = [
   { href: "/selling-an-inherited-home", title: "Selling an Inherited Home", description: "How estate sales differ from ordinary listings.", icon: iconHome },
   { href: "/estate-probate-inherited-property", title: "Estate, Probate & Inherited Property", description: "A guided path for executors, trustees, and heirs.", icon: iconDocument },
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconAssisted },
-  { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
+  { href: "/building-your-professional-team", title: "Building Your Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
 ];
 
 const nextSteps = [

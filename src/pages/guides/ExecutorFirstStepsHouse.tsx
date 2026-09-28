@@ -177,7 +177,7 @@ const ExecutorFirstStepsHouse = () => (
             It is normal to feel overwhelmed. It is normal to feel uncertain. And it is completely reasonable to ask for help — not because you cannot handle it, but because this is a complex situation that benefits from experience and support.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            The most effective executors are not the ones who do everything themselves. They are the ones who build a team of trusted professionals — an attorney, a CPA, and a broker who understands estate property — and let that team share the weight.
+            The most effective executors are not the ones who do everything themselves. They are the ones who build a team of professionals — an attorney, a CPA, and a broker who understands estate property — and let that team share the weight.
           </p>
         </div>
       </div>

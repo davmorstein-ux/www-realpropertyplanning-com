@@ -54,7 +54,7 @@ const cards = [
 
 const jsonLd = articleSchema({
   headline: "Out-of-State Families: Washington State Property Resources",
-  description: "A referral hub connecting out-of-state families with trusted Washington State professionals for estate, probate, and inherited property situations.",
+  description: "A referral hub connecting out-of-state families with independent Washington State professionals for estate, probate, and inherited property situations.",
   url: "/guides/out-of-state-families",
   datePublished: "2026-03-27",
   dateModified: "2026-05-16",
@@ -65,7 +65,7 @@ const OutOfStateFamilies = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Out-of-State Families | Washington State Property Resources"
-      description="A referral hub connecting out-of-state families with trusted Washington State professionals for estate, probate, and inherited property situations."
+      description="A referral hub connecting out-of-state families with independent Washington State professionals for estate, probate, and inherited property situations."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
@@ -151,7 +151,7 @@ const OutOfStateFamilies = () => (
               Not Sure Where to Start?
             </h2>
             <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
-              Most out-of-state families don't know which professional they need first. Real Property Planning can help identify the right sequence and connect you with trusted professionals throughout Washington State.
+              Most out-of-state families don't know which professional they need first. Real Property Planning can help identify the right sequence and connect you with independent professionals throughout Washington State.
             </p>
             <Link to="/contact?reason=estate-property">
               <Button variant="gold" size="lg">

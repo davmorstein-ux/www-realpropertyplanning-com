@@ -76,7 +76,7 @@ const FeaturedSeniorMoveManagers = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Trusted senior move managers supporting Washington families with downsizing, relocation, and compassionate transitions.
+            Independent senior move managers supporting Washington families with downsizing, relocation, and compassionate transitions.
           </p>
           </div>
         </div>

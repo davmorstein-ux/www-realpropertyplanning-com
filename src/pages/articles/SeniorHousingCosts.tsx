@@ -30,7 +30,7 @@ const relatedResources = [
   { title: "Aging Life Care Managers", href: "/aging-life-care-managers" },
   { title: "Senior Move Managers", href: "/senior-move-managers" },
   { title: "Financial Planners & Advisors", href: "/professionals/financial-planners" },
-  { title: "Building Your Trusted Professional Team", href: "/building-your-trusted-professional-team" },
+  { title: "Building Your Professional Team", href: "/building-your-professional-team" },
 ];
 
 const jsonLd = {
