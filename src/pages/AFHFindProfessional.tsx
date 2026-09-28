@@ -325,6 +325,16 @@ const AFHFindProfessional = () => (
         .rpp-afhpro h2.rpp-afhpro-h2 { font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important; margin: 0 0 10px !important; }
         .rpp-afhpro h3.rpp-afhpro-h3 { font-size: clamp(20px, 2.4vw, 24px) !important; line-height: 1.25 !important; margin: 0 0 8px !important; }
         .rpp-afhpro p.rpp-afhpro-p { font-size: 18px !important; line-height: 1.75 !important; margin: 0 0 22px !important; }
+        /* Wordmark banner. main h2 is forced to 36px sitewide, hence the specificity. */
+        .rpp-afhpro h2.rpp-afhpro-banner { display: flex !important; flex-wrap: wrap; align-items: center; column-gap: 0.45em; row-gap: 0.15em; background: #192A19; color: #F3F0EA !important; border-radius: 12px; padding: 18px 24px !important; margin: 0 0 18px !important; font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.6vw, 40px) !important; font-weight: 300 !important; line-height: 1.1 !important; }
+        .rpp-afhpro .rpp-afhpro-banner-wm { display: inline-flex; align-items: center; gap: 0.08em; letter-spacing: 0.18em; white-space: nowrap; }
+        .rpp-afhpro .rpp-afhpro-banner-glyph { height: 1.02em; width: auto; flex-shrink: 0; display: block; }
+        .rpp-afhpro .rpp-afhpro-banner-fp { letter-spacing: 0.04em; white-space: nowrap; }
+        /* Phones: the wordmark on the first line, the words beneath it, sized to fit the card width. */
+        @media (max-width: 560px) {
+          .rpp-afhpro h2.rpp-afhpro-banner { padding: 16px 18px !important; font-size: 30px !important; }
+          .rpp-afhpro h2.rpp-afhpro-banner .rpp-afhpro-banner-fp { font-size: 0.7em !important; letter-spacing: 0.02em !important; flex-basis: 100%; }
+        }
         .rpp-afhpro p.rpp-afhpro-note { font-size: 16px !important; line-height: 1.65 !important; margin: 14px 0 0 !important; }
         /* One card per row on phones (David, Sept 27): at two columns the names, emails and
            websites were cut off. Two columns from 480px, three from 768 and up — never four
@@ -364,11 +374,17 @@ const AFHFindProfessional = () => (
       `}</style>
       <section className="rpp-afhpro" style={{ background: "#ffffff", padding: "64px 24px 56px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
-          <p style={{ fontSize: 14, fontFamily: "'DM Sans', sans-serif", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#481216", margin: "0 0 10px" }}>
-            Met with personally
-          </p>
-          <h2 className="rpp-afhpro-h2" style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#280a0c" }}>
-            AFH Club Featured Professionals
+          {/* Heading set as the AFH Club wordmark on its green (David, Sept 28 2026): the
+              red-door "A" glyph, white type. The visible letters are aria-hidden and the
+              heading's name comes from the sr-only copy, so it reads "AFH Club Featured
+              Professionals" rather than "FH Club...". */}
+          <h2 className="rpp-afhpro-banner">
+            <span className="sr-only">AFH Club Featured Professionals</span>
+            <span aria-hidden="true" className="rpp-afhpro-banner-wm">
+              <img src="/afh-club-glyph.webp" alt="" className="rpp-afhpro-banner-glyph" width={200} height={194} />
+              <span>FH Club</span>
+            </span>{" "}
+            <span aria-hidden="true" className="rpp-afhpro-banner-fp">Featured Professionals</span>
           </h2>
           <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#1c1917", maxWidth: 720 }}>
             A short list on purpose. Everyone here is someone we have sat down with. The list grows as more people earn a place on it.
