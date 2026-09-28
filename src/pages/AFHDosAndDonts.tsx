@@ -167,6 +167,8 @@ const TOPICS: Topic[] = [
             <L to="/afh-club/wabo-inspection-guide">What Is WABO?</L> and the{" "}
             <L to="/afh-club/wabo-technical-guide">WABO checklist and technical requirements</L>. Homes licensed after
             September 20, 2026 also need interior doors of at least 27 inches wherever residents pass through (WAC 388-76-10715).
+            DSHS confirmed in September 2026 that this does not apply to the buyer of a continuously licensed home, but it
+            does apply to a former adult family home that is no longer licensed.
           </p>
         </>
       ),

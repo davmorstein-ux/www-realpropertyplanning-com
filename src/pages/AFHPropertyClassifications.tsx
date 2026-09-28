@@ -228,7 +228,10 @@ const AFHPropertyClassifications = () => (
           <p style={body}>
             Operated as a licensed home in the past; no license today. The inspected floor plan may have changed,
             later work may not have been permitted, and the checklist has been revised over the years. Expect a new
-            inspection, and possibly new work, before relicensing.
+            inspection, and possibly new work, before relicensing. This label matters more than it looks: DSHS
+            licensing staff confirmed in September 2026 that a home which was once an adult family home but is not
+            licensed now must meet the <strong>current</strong> rules, including the 27-inch interior door rule. Only a
+            home that has stayed continuously licensed keeps the rules it was first licensed under.
           </p>
 
           <h3 style={h3}>
@@ -266,7 +269,7 @@ const AFHPropertyClassifications = () => (
             <li style={li}>At least 80 square feet of usable floor area for one resident, 120 for two; closets and vestibules don't count. No more than two residents per room.</li>
             <li style={li}>A smoke alarm in the room, a door that can be opened from outside if locked, and clothing storage.</li>
             <li style={li}>An emergency escape window: sill no higher than 44 inches, clear opening at least 5.7 square feet (5.0 at grade), at least 24 inches high and 20 inches wide, openable without a key or tool. Steps or furniture under the window don't fix a high sill.</li>
-            <li style={li}>Interior doors residents pass through must be at least 27 inches wide in any home licensed after September 20, 2026 (WAC 388-76-10715). This was an unwritten licensor practice until that date, and it is a DSHS licensing rule, not a building-code line, so it may not appear on the building official's checklist.</li>
+            <li style={li}>Interior doors residents pass through must be at least 27 inches wide in any home licensed after September 20, 2026 (WAC 388-76-10715). This was an unwritten licensor practice until that date, and it is a DSHS licensing rule, not a building-code line, so it may not appear on the building official's checklist. It does not reach a buyer of a continuously licensed home: DSHS licensing staff confirmed in September 2026 that a change of ownership is held to the rules in place when the home was first licensed. A formerly licensed home that has lapsed must meet it.</li>
           </ul>
 
           <h3 style={h3}>Bedroom evacuation type</h3>

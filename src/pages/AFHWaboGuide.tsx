@@ -233,7 +233,8 @@ const AFHWaboGuide = () => (
             Each review serves a different purpose. A home may pass one review and still need corrections for
             another. For example, DSHS licensing rules require interior doors that residents pass through to be at
             least 27 inches wide in homes licensed after September 20, 2026, a requirement that does not appear on
-            the building checklist.
+            the building checklist. It applies to newly licensed homes and to former adult family homes that are
+            being relicensed, but not to a buyer of a home that has stayed continuously licensed.
           </p>
           <p style={{ ...body, margin: 0 }}>
             For buyers, sellers, and operators, that distinction is important. A property may look suitable on the

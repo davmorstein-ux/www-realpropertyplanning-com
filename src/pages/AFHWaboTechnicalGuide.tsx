@@ -253,6 +253,13 @@ const AFHWaboTechnicalGuide = () => (
             wide (WAC 388-76-10715, as amended by WSR 26-17-004). A home can pass the building inspection and still
             need doorways widened before DSHS will license it, so measure bedroom, bathroom, and hallway doors early.
           </p>
+          <p style={body}>
+            Who it applies to: DSHS licensing staff confirmed in September 2026 that when a continuously licensed home
+            changes ownership, the home is held to the rules in place when it was first licensed, so the 27-inch rule
+            does not apply to that buyer. A home that was once an adult family home but is not licensed now must meet
+            current rules, including this one. That makes the license status on the day you buy worth confirming in the
+            DSHS locator, not just the seller's description.
+          </p>
 
           <h3 style={h3}>Smoke and Carbon Monoxide Alarms</h3>
           <p style={body}>

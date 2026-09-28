@@ -66,7 +66,9 @@
  *   WAC 388-76-10715(6) (WSR 26-17-004, filed 8/5/26, EFFECTIVE SEPT 20, 2026):
  *     in homes licensed after that date, every interior door residents pass
  *     through, other than the designated emergency exit, must be at least 27 in
- *     wide. Until that date this was an unwritten licensor practice.
+ *     wide. Until that date this was an unwritten licensor practice. DSHS
+ *     (Sept 28, 2026): not applied to a change of ownership of a continuously
+ *     licensed home; applied to a lapsed former AFH.
  *   WAC 388-76-10031: a home must hold its initial license 24 months before it
  *     can apply to go from six beds to seven or eight, so a new operator
  *     cannot start there.
@@ -707,9 +709,11 @@ function showingChecklist(a: Answers): ChecklistItem[] {
     { title: "Measure the exit door", text: "The required exit door must be side-hinged with at least 32 inches of clear width and 78 inches of height.", source: "Building code R311.2" },
     // WAC 388-76-10715(6), added by WSR 26-17-004, effective Sept 20, 2026. Before
     // that date 27 inches was an unwritten licensor practice. It applies to homes
-    // LICENSED after that date. A buyer of an existing home applies for a new
-    // license, so whether it reaches that purchase is a question for DSHS.
-    { title: "Measure every interior doorway residents would use", text: "In a home licensed after September 20, 2026, every interior door residents pass through must be at least 27 inches wide. Measure bedrooms, bathrooms, and the hall. A buyer of a licensed home applies for a new license, so ask DSHS whether this applies to your purchase.", source: "WAC 388-76-10715(6)" },
+    // LICENSED after that date. DSHS licensing staff (Colleen Jensen, RCS) answered
+    // in writing Sept 28, 2026: a change of ownership of a CONTINUOUSLY licensed home
+    // is held to the WAC in place when the home was first licensed, so the rule does
+    // not reach that buyer; a formerly licensed home that has lapsed must meet it.
+    { title: "Measure every interior doorway residents would use", text: "In a home licensed after September 20, 2026, every interior door residents pass through must be at least 27 inches wide. Measure bedrooms, bathrooms, and the hall. It does not apply if you are buying a home that has stayed continuously licensed (DSHS confirmed this in September 2026), but it does apply to a former adult family home that is no longer licensed.", source: "WAC 388-76-10715(6)" },
     { title: "Count the toilets, and how you reach them", text: "One toilet for every five people living in the home, counting household members. Each must be reachable without passing through another person's room. A toilet in an ensuite bathroom can count if it is licensed for resident use.", source: "WAC 388-76-10780" },
     { title: "Check the showers", text: "A shower for residents must be at least 30 by 48 inches, with walls that can carry grab bars.", source: "Building code R330" },
     { title: "Photograph every exit", text: "Include the ground right outside each door." },

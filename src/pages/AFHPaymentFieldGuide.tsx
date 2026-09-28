@@ -23,10 +23,12 @@ import { AFH_SPECIALTY_RATES } from "@/data/afhBehavioralRates";
  *   - ECS/SBS before closing, and the 12-month rule for a first-time Medicaid
  *     contractor: routed to program managers Pamela Young / James Selby. OPEN.
  *   - CBHS contact at a change of ownership: routed to Ethan Leon. OPEN.
- *   - How long the new license takes: routed to BAAU. OPEN (BAAU did say the
- *     license letter and license are emailed within a day of approval).
- *   - Whether the 27-inch door rule (WAC 388-76-10715) reaches a CHOW buyer:
- *     routed to BAAU and RCS Policy. OPEN.
+ *   - How long the new license takes: ANSWERED Sept 28 (RCS, Colleen Jensen):
+ *     DSHS will not estimate; a complete application avoids delays. DSHS's
+ *     posted BAAU queue is quoted on the A-E page instead.
+ *   - 27-inch door rule and a CHOW buyer: ANSWERED Sept 28 (RCS): a continuously
+ *     licensed home is held to the rules in place at its original licensing, so
+ *     the rule does not apply; a lapsed former AFH must meet current rules.
  */
 
 const money = (n: number) => n.toLocaleString("en-US", { style: "currency", currency: "USD" });
