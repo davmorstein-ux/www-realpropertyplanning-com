@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
+import ArticleRecord from "@/components/ArticleRecord";
 
 /**
  * Visible byline for AFH guide pages.
@@ -64,6 +65,7 @@ export default function AuthorByline({ reviewed, context = "afh" }: { reviewed?:
         </Link>
         .
       </p>
+      <ArticleRecord />
     </aside>
   );
 }

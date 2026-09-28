@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToAFHClub from "@/components/BackToAFHClub";
+import AuthorByline from "@/components/AuthorByline";
 import PageFAQ from "@/components/PageFAQ";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
@@ -167,6 +168,9 @@ const PaymentGuideShell = ({ id, seoTitle, seoDescription, eyebrow, lede, cover,
           </div>
         </div>
         <style>{`@media (max-width: 760px) { .pg-top { grid-template-columns: 1fr !important; } }`}</style>
+        <div style={{ padding: "0 16px" }}>
+          <AuthorByline />
+        </div>
         <PageFAQ faqs={faqs} heading={faqHeading} eyebrow="Frequently Asked Questions" id={`afh-payment-${id}`} />
         <BackToAFHClub />
       </main>
