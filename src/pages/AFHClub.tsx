@@ -976,10 +976,10 @@ const AFHClub = () => {
                 that you engage directly and on your own terms.
               </p>
               <p style={{ margin: "0 0 12px" }}>
-                {brokerageAttribution} {appraisalAttribution} {FEATURED_BROKER.name} may receive
-                compensation, including referral fees or commission splits, in connection with some of the
-                professional relationships described on this page. You are
-                always free to work with professionals of your own choosing.
+                {brokerageAttribution} {appraisalAttribution} {FEATURED_BROKER.name} is paid a
+                commission through {FEATURED_BROKER.brokerage} only when {FEATURED_BROKER.pronoun.subject} represents a
+                buyer or seller and the property sells. No one else described on this page pays or is paid through
+                Real Property Planning. You are always free to work with professionals of your own choosing.
               </p>
               <p style={{ margin: 0 }}>
                 Nothing on this page is an offer to sell or a solicitation of an offer to buy any

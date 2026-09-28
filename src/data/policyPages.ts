@@ -13,6 +13,10 @@
  *    paid a commission for representing a buyer or seller, only when a property sells.
  *  - Nobody besides the owner reviews content today.
  *  - Corrections go to the general inbox (info@realpropertyplanning.com).
+ *  - Referral fees: only when the featured broker refers someone to a broker in
+ *    another state (the site offers that through the brokerage's national
+ *    network). No referral fees or commission splits otherwise.
+ *  - Every professional listed has been met with personally by the owner.
  * If any of these change, change this file the same day.
  */
 import { FEATURED_APPRAISER, FEATURED_BROKER, SAME_PERSON } from "./featuredProfessionals";
@@ -217,7 +221,7 @@ export const POLICY_PAGES: PolicyPage[] = [
       {
         heading: "How professionals are added",
         paragraphs: [
-          "Professionals are added at the site owner's discretion. On AFH Club's Find a Professional page, the standard is stated on the page: each person listed is someone the owner has met with personally.",
+          "Every professional listed on the site, on the main directory and on AFH Club, is someone the site's owner has met with personally. Meeting someone is how a listing starts; it is not an evaluation of their work.",
           "Professionals can ask to be considered through the contact form. Being considered does not guarantee a listing.",
         ],
       },
@@ -270,6 +274,7 @@ export const POLICY_PAGES: PolicyPage[] = [
         heading: `The featured broker${SAME_PERSON ? " and appraiser" : ""}`,
         paragraphs: [
           `${FEATURED_BROKER.name}, the featured broker, is a licensed real estate broker with ${FEATURED_BROKER.brokerage}. If you hire ${FEATURED_BROKER.pronoun.object} to represent you as a buyer or seller, ${FEATURED_BROKER.pronoun.subject} is paid a commission through ${FEATURED_BROKER.brokerage}, and only when the property sells. The commission comes from the transaction, never from Real Property Planning, and it is disclosed on ${FEATURED_BROKER.pronoun.possessive} own listing.`,
+          `The only other case: for a property outside Washington, ${FEATURED_BROKER.pronoun.subject} can refer you to a licensed broker in that state through ${FEATURED_BROKER.brokerage}'s national network. If that property sells, the other broker may pay ${FEATURED_BROKER.pronoun.object} a referral fee out of their own commission. ${FEATURED_BROKER.pronoun.Subject} receives no referral fees for referrals within Washington.`,
           ...(SAME_PERSON
             ? [
                 `${FEATURED_APPRAISER.name} is also a certified residential appraiser with ${FEATURED_APPRAISER.firm}. Appraisal fees are paid by the client who orders the appraisal. Appraisal and brokerage are kept on separate transactions: the same property is never both appraised and brokered by the same person.`,
