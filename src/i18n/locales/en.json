@@ -486,11 +486,16 @@
       "messageLabel": "Message *",
       "messagePlaceholder": "Share your question, suggest a resource, or ask about joining our professional network...",
       "privacyNote": "🔒 Your information is used only to respond to your inquiry — never sold or shared for marketing.",
-      "recipientNote": "Your message goes to {{name}}, an independent real estate broker with {{brokerage}} and a certified residential appraiser. Real Property Planning is an information resource and does not provide brokerage or appraisal services.",
       "sendButton": "Send My Question",
       "sendingButton": "Sending...",
       "reasonLabel": "What brings you here? *",
-      "reasonSelectPlaceholder": "Choose the closest fit"
+      "reasonSelectPlaceholder": "Choose the closest fit",
+      "recipient": {
+        "choose": "Choose a topic above to see who will receive your message.",
+        "general": "Your message goes to Real Property Planning's general inbox ({{email}}). Real Property Planning is an information resource and does not provide professional services.",
+        "broker": "Your message goes to {{name}}, an independent real estate broker, at {{brokerage}}. Real Property Planning does not provide brokerage services.",
+        "appraiser": "Your message goes to {{name}}, an independent certified residential appraiser, at {{firm}}. Real Property Planning does not provide appraisal services."
+      }
     },
     "roleOptions": {
       "family-member": "Family Member",
@@ -512,8 +517,11 @@
       "sell-or-value": "I need to sell or value a property",
       "afh-buy-sell": "I'm buying or selling an adult family home",
       "find-professional": "I'm looking for a professional",
-      "join-network": "I'm a professional interested in the network",
-      "other": "Something else"
+      "join-network": "I'm a professional and want to join the directory",
+      "other": "Something else",
+      "appraisal": "I have an appraisal question",
+      "afh-question": "I have a question about AFH Club",
+      "site-question": "I have a website question or correction"
     }
   }
 }

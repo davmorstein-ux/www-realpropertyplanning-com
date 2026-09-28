@@ -484,9 +484,14 @@
       "messageLabel": "Mensaje *",
       "messagePlaceholder": "Comparta su pregunta, sugiera un recurso, o pregunte sobre cómo unirse a nuestra red profesional...",
       "privacyNote": "🔒 Su información se usa únicamente para responder a su consulta — nunca se vende ni se comparte con fines de marketing.",
-      "recipientNote": "Su mensaje llega a {{name}}, corredor de bienes raíces independiente con {{brokerage}} y tasador residencial certificado. Real Property Planning es un recurso informativo y no presta servicios de corretaje ni de tasación.",
       "sendButton": "Enviar",
-      "sendingButton": "Enviando..."
+      "sendingButton": "Enviando...",
+      "recipient": {
+        "choose": "Elija un tema arriba para ver quién recibirá su mensaje.",
+        "general": "Su mensaje se envía a la bandeja de entrada general de Real Property Planning ({{email}}). Real Property Planning es un recurso informativo y no presta servicios profesionales.",
+        "broker": "Su mensaje se envía a {{name}}, corredor de bienes raíces independiente con {{brokerage}}, en esa correduría. Real Property Planning no presta servicios de corretaje.",
+        "appraiser": "Su mensaje se envía a {{name}}, tasador residencial certificado independiente con {{firm}}, en esa firma. Real Property Planning no presta servicios de tasación."
+      }
     },
     "roleOptions": {
       "family-member": "Miembro de la Familia",

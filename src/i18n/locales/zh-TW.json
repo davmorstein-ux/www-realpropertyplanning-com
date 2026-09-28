@@ -484,9 +484,14 @@
       "messageLabel": "訊息 *",
       "messagePlaceholder": "請分享您的問題、推薦資源，或詢問加入我們專業網絡的方式……",
       "privacyNote": "🔒 您的資料僅用於回覆您的詢問——絕不會出售或用於行銷用途。",
-      "recipientNote": "您的留言將傳送給 {{name}}，他是 {{brokerage}} 的獨立不動產經紀人及認證住宅鑑價師。Real Property Planning 是資訊資源，不提供經紀或鑑價服務。",
       "sendButton": "傳送",
-      "sendingButton": "傳送中……"
+      "sendingButton": "傳送中……",
+      "recipient": {
+        "choose": "請在上方選擇一個主題，即可看到您的留言將由誰接收。",
+        "general": "您的留言將發送至 Real Property Planning 的一般收件匣（{{email}}）。Real Property Planning 是資訊資源，不提供專業服務。",
+        "broker": "您的留言將發送至 {{name}}，{{brokerage}} 的獨立房地產經紀人，由該經紀公司接收。Real Property Planning 不提供經紀服務。",
+        "appraiser": "您的留言將發送至 {{name}}，{{firm}} 的獨立認證住宅估價師，由該公司接收。Real Property Planning 不提供估價服務。"
+      }
     },
     "roleOptions": {
       "family-member": "家庭成員",

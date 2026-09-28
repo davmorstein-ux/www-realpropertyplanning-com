@@ -16,7 +16,8 @@ import { useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "react-i18next";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_APPRAISER, FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { GENERAL_INBOX, REASON_VALUES, isContactReason, recipientFor } from "@/data/contactRouting";
 
 // Value sent to the backend is always this fixed English slug,
 // regardless of display language, so the email function's expectations
@@ -26,9 +27,8 @@ const ROLE_VALUES = ["family-member", "elder-individual", "professional", "other
 /* The first question is WHY someone is writing (Sept 2026): it routes the
    message and lets a page's CTA carry the visitor's intent into the form
    through ?reason=<value>. The role question stays as the second one. */
-const REASON_VALUES = ["estate-property", "aging-parent", "sell-or-value", "afh-buy-sell", "find-professional", "join-network", "other"] as const;
-type Reason = (typeof REASON_VALUES)[number];
-const isReason = (v: string | null): v is Reason => !!v && (REASON_VALUES as readonly string[]).includes(v);
+/* The reasons, their order, and who receives each one live in
+   src/data/contactRouting.ts (Sept 27, 2026). */
 
 const TURNSTILE_SITE_KEY = "0x4AAAAAAD8Pv43WG0GFRJob";
 
@@ -42,7 +42,7 @@ const Contact = () => {
   const [searchParams] = useSearchParams();
   const [reason, setReason] = useState<string>(() => {
     const r = searchParams.get("reason");
-    return isReason(r) ? r : "";
+    return isContactReason(r) ? r : "";
   });
   const [formLoadedAt] = useState(() => Date.now());
   const [turnstileToken, setTurnstileToken] = useState("");
@@ -380,8 +380,14 @@ const Contact = () => {
                     <div ref={turnstileContainerRef} />
 
                     {/* Who receives the message, stated before sending (Sept 27, 2026, after an outside audit). */}
-                    <p className="text-sm text-muted-foreground text-center">
-                      {t("contactPage.form.recipientNote", { name: FEATURED_BROKER.name, brokerage: FEATURED_BROKER.brokerage })}
+                    <p className="text-sm text-muted-foreground text-center" aria-live="polite">
+                      {!reason
+                        ? t("contactPage.form.recipient.choose")
+                        : recipientFor(reason) === "broker"
+                          ? t("contactPage.form.recipient.broker", { name: FEATURED_BROKER.name, brokerage: FEATURED_BROKER.brokerage })
+                          : recipientFor(reason) === "appraiser"
+                            ? t("contactPage.form.recipient.appraiser", { name: FEATURED_APPRAISER.name, firm: FEATURED_APPRAISER.firm })
+                            : t("contactPage.form.recipient.general", { email: GENERAL_INBOX })}
                     </p>
                     <p className="text-sm text-muted-foreground text-center">
                       {t("contactPage.form.privacyNote")}

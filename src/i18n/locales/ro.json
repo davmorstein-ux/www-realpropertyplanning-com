@@ -484,9 +484,14 @@
       "messageLabel": "Mesaj *",
       "messagePlaceholder": "Împărtășiți întrebarea dvs., sugerați o resursă sau întrebați despre alăturarea la rețeaua noastră profesională...",
       "privacyNote": "🔒 Informațiile dvs. sunt folosite doar pentru a răspunde solicitării dvs. — niciodată vândute sau partajate pentru marketing.",
-      "recipientNote": "Mesajul dumneavoastră ajunge la {{name}}, agent imobiliar independent la {{brokerage}} și evaluator rezidențial certificat. Real Property Planning este o resursă informativă și nu oferă servicii de intermediere sau de evaluare.",
       "sendButton": "Trimiteți",
-      "sendingButton": "Se trimite..."
+      "sendingButton": "Se trimite...",
+      "recipient": {
+        "choose": "Alegeți un subiect mai sus pentru a vedea cine va primi mesajul.",
+        "general": "Mesajul dvs. ajunge în căsuța generală a Real Property Planning ({{email}}). Real Property Planning este o resursă informativă și nu oferă servicii profesionale.",
+        "broker": "Mesajul dvs. ajunge la {{name}}, broker imobiliar independent la {{brokerage}}, în cadrul acelei agenții. Real Property Planning nu oferă servicii de brokeraj.",
+        "appraiser": "Mesajul dvs. ajunge la {{name}}, evaluator rezidențial certificat independent la {{firm}}, în cadrul acelei firme. Real Property Planning nu oferă servicii de evaluare."
+      }
     },
     "roleOptions": {
       "family-member": "Membru al Familiei",

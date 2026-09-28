@@ -112,7 +112,7 @@ const Footer = () => {
               Real Property Planning
             </Link>
             <p className="rpp-footer-tagline">
-              Probate, estate &amp; senior transition real estate — Washington State.
+              Independent education and professional resources for Washington families.
             </p>
             <a href="tel:2069003015" className="rpp-footer-nap">
               (206) 900-3015

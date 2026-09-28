@@ -484,9 +484,14 @@
       "messageLabel": "Tin Nhắn *",
       "messagePlaceholder": "Chia sẻ câu hỏi của quý vị, đề xuất một nguồn lực, hoặc hỏi về việc tham gia mạng lưới chuyên gia của chúng tôi...",
       "privacyNote": "🔒 Thông tin của quý vị chỉ được sử dụng để phản hồi yêu cầu của quý vị — không bao giờ được bán hoặc chia sẻ cho mục đích tiếp thị.",
-      "recipientNote": "Tin nhắn của bạn được gửi đến {{name}}, một môi giới bất động sản độc lập thuộc {{brokerage}} và là thẩm định viên nhà ở được chứng nhận. Real Property Planning là nguồn thông tin và không cung cấp dịch vụ môi giới hay thẩm định.",
       "sendButton": "Gửi",
-      "sendingButton": "Đang Gửi..."
+      "sendingButton": "Đang Gửi...",
+      "recipient": {
+        "choose": "Hãy chọn một chủ đề ở trên để xem ai sẽ nhận tin nhắn của quý vị.",
+        "general": "Tin nhắn của quý vị được gửi đến hộp thư chung của Real Property Planning ({{email}}). Real Property Planning là nguồn thông tin và không cung cấp dịch vụ chuyên môn.",
+        "broker": "Tin nhắn của quý vị được gửi đến {{name}}, nhà môi giới bất động sản độc lập thuộc {{brokerage}}, tại công ty môi giới đó. Real Property Planning không cung cấp dịch vụ môi giới.",
+        "appraiser": "Tin nhắn của quý vị được gửi đến {{name}}, thẩm định viên nhà ở được chứng nhận độc lập thuộc {{firm}}, tại công ty đó. Real Property Planning không cung cấp dịch vụ thẩm định."
+      }
     },
     "roleOptions": {
       "family-member": "Thành Viên Gia Đình",

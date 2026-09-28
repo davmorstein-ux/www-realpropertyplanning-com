@@ -484,9 +484,14 @@
       "messageLabel": "Mensahe *",
       "messagePlaceholder": "Ibahagi ang inyong tanong, magmungkahi ng mapagkukunan, o magtanong tungkol sa pagsali sa aming propesyonal na network...",
       "privacyNote": "🔒 Ang inyong impormasyon ay gagamitin lamang upang tumugon sa inyong katanungan — hindi kailanman ibinebenta o ibinabahagi para sa marketing.",
-      "recipientNote": "Ang iyong mensahe ay mapupunta kay {{name}}, isang independiyenteng real estate broker sa {{brokerage}} at certified residential appraiser. Ang Real Property Planning ay isang mapagkukunan ng impormasyon at hindi nagbibigay ng brokerage o appraisal na serbisyo.",
       "sendButton": "Ipadala",
-      "sendingButton": "Ipinapadala..."
+      "sendingButton": "Ipinapadala...",
+      "recipient": {
+        "choose": "Pumili ng paksa sa itaas para makita kung sino ang tatanggap ng inyong mensahe.",
+        "general": "Mapupunta ang inyong mensahe sa pangkalahatang inbox ng Real Property Planning ({{email}}). Ang Real Property Planning ay isang mapagkukunan ng impormasyon at hindi nagbibigay ng mga propesyonal na serbisyo.",
+        "broker": "Mapupunta ang inyong mensahe kay {{name}}, isang independiyenteng real estate broker sa {{brokerage}}, sa brokerage na iyon. Hindi nagbibigay ng serbisyong brokerage ang Real Property Planning.",
+        "appraiser": "Mapupunta ang inyong mensahe kay {{name}}, isang independiyenteng certified residential appraiser sa {{firm}}, sa firm na iyon. Hindi nagbibigay ng serbisyong appraisal ang Real Property Planning."
+      }
     },
     "roleOptions": {
       "family-member": "Miyembro ng Pamilya",

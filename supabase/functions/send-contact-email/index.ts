@@ -7,6 +7,29 @@ const corsHeaders = {
 
 const TO_EMAIL = "info@realpropertyplanning.com";
 
+/* Routing by the form's first question (Sept 27, 2026). This is a copy of
+   src/data/contactRouting.ts, which this function cannot import because it
+   deploys separately. src/test/contactRouting.test.ts fails if they drift.
+   The recipient is chosen here from the reason slug, never taken from the
+   request, so a visitor cannot direct mail to an arbitrary address. */
+const RECIPIENT_EMAIL: Record<string, string> = {
+  general: "info@realpropertyplanning.com",
+  broker: "dave.stein@exprealty.com",
+  appraiser: "dave@steinappraisal.com",
+};
+const REASON_RECIPIENT: Record<string, string> = {
+  "estate-property": "broker",
+  "sell-or-value": "broker",
+  "appraisal": "appraiser",
+  "afh-buy-sell": "broker",
+  "aging-parent": "general",
+  "find-professional": "general",
+  "afh-question": "general",
+  "join-network": "general",
+  "site-question": "general",
+  "other": "general",
+};
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -109,9 +132,9 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "Real Property Planning <contact@realpropertyplanning.com>",
-        to: [TO_EMAIL],
+        to: [RECIPIENT_EMAIL[REASON_RECIPIENT[String(reason)] ?? "general"] ?? TO_EMAIL],
         reply_to: email,
-        subject: `New Contact Form Message from ${name}`,
+        subject: `New Contact Form Message from ${name}${reason ? ` [${reason}]` : ""}`,
         html,
       }),
     });

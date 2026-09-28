@@ -803,7 +803,7 @@ const AFHClub = () => {
         <section className="rpp-afh-network" style={{ background: "#ffffff", padding: "64px 24px 72px" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
             <p className="rpp-afh-kicker" style={{ color: "#b13a44", marginBottom: 14, textAlign: "center" }}>
-              Who you get access to
+              Professionals in the directory
             </p>
             <h2
               style={{
@@ -815,7 +815,7 @@ const AFHClub = () => {
                 textAlign: "center",
               }}
             >
-              Five kinds of professional, one point of contact
+              Five professional categories, independently engaged
             </h2>
             <p
               style={{
@@ -827,9 +827,9 @@ const AFHClub = () => {
                 textAlign: "center",
               }}
             >
-              Each of these is an independent business with its own licensing and its own client
-              relationships. You are introduced to the ones your situation actually calls for, and you
-              engage them directly.
+              Explore the directory and contact the independent professionals appropriate for your
+              needs. Each operates through a separate business and is responsible for their own
+              services, fees, advice, and client relationships.
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
@@ -838,7 +838,7 @@ const AFHClub = () => {
                   n: "01",
                   title: "Residential real estate brokerage",
                   who: "Independent real estate broker",
-                  body: "Listing, marketing, and sale of the real property itself, including homes marketed quietly to buyers already in the network.",
+                  body: "Listing, marketing, and sale of the real property itself, including homes the broker markets quietly to buyers they already know.",
                 },
                 {
                   n: "02",
@@ -856,7 +856,7 @@ const AFHClub = () => {
                   n: "04",
                   title: "Adult family home management",
                   who: "Independent management company",
-                  body: "Runs the day-to-day operation. For sellers, a way to keep the asset without the work. For buyers, a way to meet operational expectations while gaining experience.",
+                  body: "Runs the day-to-day operation. For sellers, a way to keep the asset without the work. For buyers, operational support while they build experience. It does not replace the provider's own licensing, training, or legal responsibilities.",
                 },
                 {
                   n: "05",
@@ -978,7 +978,7 @@ const AFHClub = () => {
               <p style={{ margin: "0 0 12px" }}>
                 {brokerageAttribution} {appraisalAttribution} {FEATURED_BROKER.name} may receive
                 compensation, including referral fees or commission splits, in connection with some of the
-                introductions described on this page. You are
+                professional relationships described on this page. You are
                 always free to work with professionals of your own choosing.
               </p>
               <p style={{ margin: 0 }}>
