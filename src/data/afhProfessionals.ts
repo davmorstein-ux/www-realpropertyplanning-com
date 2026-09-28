@@ -5,6 +5,7 @@ import twoMaidsLogo from "@/assets/providers/two-maids-cleaning-logo.webp";
 import ruslanBagaveevPhoto from "@/assets/providers/ruslan-bagaveev-dryout-headshot.webp";
 import dryoutLogo from "@/assets/providers/dryout-water-damage-restoration-logo.webp";
 import kaylinPhoto from "@/assets/providers/kaylin-cottingham-wilson-griffith-insurance-headshot.webp";
+import griffithLogo from "@/assets/providers/griffith-insurance-group-logo.webp";
 import { FEATURED_BROKER, brokerLicenseShort } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from "@/data/featuredProfessionalAssets";
 
@@ -144,8 +145,8 @@ export const RUSLAN_BAGAVEEV: AFHProfessional = {
 
 /* Added Sept 28, 2026. License number OE20486 (owner clarified the same day that
    "CA" belonged to the company line, not the license); displayed like his. Card has one phone
-   line, so the second number she gave, (503) 432-0666, is not shown. No logo
-   supplied yet; the logo slot stays reserved. */
+   line, so the second number she gave, (503) 432-0666, is not shown. Logo supplied by
+   the owner Sept 28, 2026 (light-blue background removed). */
 export const KAYLIN_COTTINGHAM_WILSON: AFHProfessional = {
   id: "kaylin-cottingham-wilson",
   name: "Kaylin Cottingham-Wilson",
@@ -153,6 +154,8 @@ export const KAYLIN_COTTINGHAM_WILSON: AFHProfessional = {
   company: "Griffith Insurance Group, Inc.",
   photo: kaylinPhoto,
   photoAlt: "Photo of Kaylin Cottingham-Wilson, Producing Agent at Griffith Insurance Group",
+  logo: griffithLogo,
+  logoAlt: "Griffith Insurance Group logo",
   license: "License #OE20486",
   phone: "(206) 363-0550",
   email: "kaylin@grdins.com",
