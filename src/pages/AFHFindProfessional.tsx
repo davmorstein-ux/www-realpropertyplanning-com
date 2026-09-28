@@ -218,7 +218,7 @@ const AFHFindProfessional = () => (
   <>
     <SEOHead
       title="Find an AFH Professional | AFH Club | Real Property Planning"
-      description="Professionals who work with Washington adult family homes, each one met with personally: an AFH expert real estate broker and a bookkeeper, with more to come. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant."
+      description="Professionals who work with Washington adult family homes, each one met with personally: a real estate broker, a bookkeeper, business insurance, house cleaning, and water damage restoration. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant."
       canonical="https://realpropertyplanning.com/afh-club/find-a-professional"
     />
     <BreadcrumbSchema
