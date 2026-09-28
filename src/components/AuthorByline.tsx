@@ -58,6 +58,10 @@ export default function AuthorByline({ reviewed, context = "afh" }: { reviewed?:
         <Link to="/about" style={{ color: "#1a365d", textDecoration: "underline" }}>
           More about {FEATURED_BROKER.firstName}
         </Link>
+        {" · "}
+        <Link to="/editorial-standards" style={{ color: "#1a365d", textDecoration: "underline" }}>
+          How guides are written and reviewed
+        </Link>
         .
       </p>
     </aside>

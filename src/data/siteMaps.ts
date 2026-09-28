@@ -24,6 +24,7 @@ import { GUIDE_LIBRARY } from "../data/guideLibrary";
 import { CARE_CALCULATORS } from "../lib/careCalculators";
 import { AFH_CALCULATORS } from "./calculatorIndex";
 import { AFH_CITY_PAGES } from "./afhCityPages";
+import { POLICY_PAGES } from "./policyPages";
 
 export interface SiteMapLink {
   title: string;
@@ -235,6 +236,7 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "Search the Site", href: "/search" },
           { title: "Privacy Policy", href: "/privacy" },
           { title: "Disclaimer", href: "/disclaimer" },
+          ...POLICY_PAGES.map((p) => ({ title: p.h1, href: p.path })),
         ],
       },
     ],

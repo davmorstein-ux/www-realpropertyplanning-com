@@ -13,6 +13,7 @@ import { renderAfhInventory, buildAfhListingRoutes, inventoryCounts, type AFHInv
 import { guideLibraryHtml } from "./src/data/guideLibrary";
 import { cityRoutes as afhCityRoutes } from "./src/data/afhCityPages";
 import { REDIRECTS } from "./src/data/redirects";
+import { POLICY_PAGES } from "./src/data/policyPages";
 
 // Skip optimization for images smaller than 10KB
 const MIN_OPTIMIZE_BYTES = 10 * 1024;
@@ -55,6 +56,21 @@ interface RouteMeta {
 }
 
 const ROUTE_METADATA: Record<string, RouteMeta> = {
+  /* The six standards pages; words live in src/data/policyPages.ts. */
+  ...Object.fromEntries(
+    POLICY_PAGES.map((p) => [
+      p.path,
+      {
+        title: p.title,
+        description: p.description,
+        h1: p.h1,
+        intro: `${p.intro} Last reviewed ${p.lastReviewed}.`,
+        sections: p.sections.map(
+          (s) => `${s.heading} — ${[...s.paragraphs, ...(s.bullets ?? [])].join(" ")}`
+        ),
+      } satisfies RouteMeta,
+    ])
+  ),
   "/": {
     title: "Probate, Estate & Senior Transition Guidance in Washington State | Real Property Planning",
     description:

@@ -222,6 +222,12 @@ const Footer = () => {
             <Link to="/disclaimer" className="rpp-footer-link">
               Disclaimer
             </Link>
+            <Link to="/editorial-standards" className="rpp-footer-link">
+              Editorial Standards
+            </Link>
+            <Link to="/compensation-disclosure" className="rpp-footer-link">
+              Compensation Disclosure
+            </Link>
             <Link to="/sitemap" className="rpp-footer-link">
               Site Map
             </Link>

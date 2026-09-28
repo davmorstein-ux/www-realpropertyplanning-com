@@ -57,6 +57,7 @@ const DateOfDeathValuationPropertyAppraisals = lazy(() => import("./pages/DateOf
 const SeniorLivingAdvisors = lazy(() => import("./pages/SeniorLivingAdvisors"));
 const SellHouseFundSeniorLiving = lazy(() => import("./pages/SellHouseFundSeniorLiving"));
 const ForAttorneys = lazy(() => import("./pages/ForAttorneys"));
+const PolicyPage = lazy(() => import("./pages/PolicyPage"));
 const ForAttorneysHowItWorks = lazy(() => import("./pages/attorneys/ForAttorneysHowItWorks"));
 const ForProbateAttorneys = lazy(() => import("./pages/attorneys/ForProbateAttorneys"));
 const ForEstatePlanningAttorneys = lazy(() => import("./pages/attorneys/ForEstatePlanningAttorneys"));
@@ -906,6 +907,13 @@ const App = () => (
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/search" element={<Search />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          {/* Standards pages (Sept 27, 2026); paths and words in src/data/policyPages.ts */}
+          <Route path="/editorial-standards" element={<PolicyPage />} />
+          <Route path="/research-methodology" element={<PolicyPage />} />
+          <Route path="/corrections-policy" element={<PolicyPage />} />
+          <Route path="/professional-inclusion-standards" element={<PolicyPage />} />
+          <Route path="/compensation-disclosure" element={<PolicyPage />} />
+          <Route path="/authors" element={<PolicyPage />} />
           <Route path="/articles" element={<ArticlesIndex />} />
           <Route path="/articles/silver-tsunami" element={<SilverTsunami />} />
           <Route path="/articles/senior-housing-options" element={<SeniorHousingOptions />} />
