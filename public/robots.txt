@@ -13,6 +13,19 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+# OpenAI's search crawler, used to show sites in ChatGPT search answers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 

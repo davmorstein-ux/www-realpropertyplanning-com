@@ -84,6 +84,14 @@ AFH Club is Real Property Planning's section for families choosing a home and fo
 - [Calculators](/afh-club/calculators): ROI and valuation estimators for AFH operators.
 - [Violation history lookup](/afh-club/violation-history-lookup): How to check a home's DSHS inspection record.
 
+## Standards and sources
+- [Editorial Standards](/editorial-standards): How guides are written, sourced, reviewed, and updated.
+- [Research and Data Methodology](/research-methodology): Where the AFH directory, rates, listings, and calculators get their data, and their limits.
+- [Corrections Policy](/corrections-policy): How errors are reported and corrected.
+- [Professional Inclusion Standards](/professional-inclusion-standards): How professionals are listed and what a listing means.
+- [Advertising and Compensation Disclosure](/compensation-disclosure): The hub carries no ads and pays no one; who is paid, and how.
+- [About Our Authors and Reviewers](/authors): Who writes and reviews the guides, with licenses.
+
 ## Contact
 Phone: (206) 900-3015
 Email: info@realpropertyplanning.com
