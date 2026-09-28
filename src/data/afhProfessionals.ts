@@ -142,8 +142,8 @@ export const RUSLAN_BAGAVEEV: AFHProfessional = {
   bio: "",
 };
 
-/* Added Sept 28, 2026. License shown exactly as she supplied it ("CA License:
-   OE20486"); the owner asked that it be displayed like his. Card has one phone
+/* Added Sept 28, 2026. License number OE20486 (owner clarified the same day that
+   "CA" belonged to the company line, not the license); displayed like his. Card has one phone
    line, so the second number she gave, (503) 432-0666, is not shown. No logo
    supplied yet; the logo slot stays reserved. */
 export const KAYLIN_COTTINGHAM_WILSON: AFHProfessional = {
@@ -153,7 +153,7 @@ export const KAYLIN_COTTINGHAM_WILSON: AFHProfessional = {
   company: "Griffith Insurance Group, Inc.",
   photo: kaylinPhoto,
   photoAlt: "Photo of Kaylin Cottingham-Wilson, Producing Agent at Griffith Insurance Group",
-  license: "CA License #OE20486",
+  license: "License #OE20486",
   phone: "(206) 363-0550",
   email: "kaylin@grdins.com",
   website: "https://www.grdins.com",
