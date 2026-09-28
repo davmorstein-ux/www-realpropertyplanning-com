@@ -916,7 +916,7 @@ const schema = {
   headline: TITLE,
   description: DESCRIPTION,
   url: CANONICAL,
-  image: "https://realpropertyplanning.com/afh-dos-and-donts-cover.webp",
+  image: "https://realpropertyplanning.com/afh-dos-and-donts-cover-v2.webp",
   datePublished: "2026-09-27",
   dateModified: "2026-09-27",
   author: articleAuthor,
@@ -1011,7 +1011,7 @@ const AFHDosAndDonts = () => (
               </p>
             </div>
             <img
-              src="/afh-dos-and-donts-cover.webp"
+              src="/afh-dos-and-donts-cover-v2.webp"
               alt="Operator field guide cover: The Dos and Don'ts of Operating an Adult Family Home"
               className="afhdd-cover"
               width={1024}

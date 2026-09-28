@@ -105,7 +105,7 @@ const TOPICS = [
   {
     title: "The Dos and Don'ts of Operating an AFH",
     href: "/afh-club/dos-and-donts-operating-adult-family-home",
-    img: "/afh-dos-and-donts-cover.webp",
+    img: "/afh-dos-and-donts-cover-v2.webp",
     description: "Fourteen topics every operator faces, from admissions and staffing to medications, emergencies, inspections, finances, and succession, each marked as a Washington requirement or a best practice.",
   },
   {
@@ -270,7 +270,7 @@ const AFHResources = () => (
           {
             title: "The Dos and Don'ts of Operating an AFH",
             href: "/afh-club/dos-and-donts-operating-adult-family-home",
-            img: "/afh-dos-and-donts-cover.webp",
+            img: "/afh-dos-and-donts-cover-v2.webp",
             placeholder: "#3b2a26",
           },
           {
