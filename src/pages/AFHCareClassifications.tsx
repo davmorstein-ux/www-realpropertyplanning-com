@@ -145,7 +145,7 @@ const AFHCareClassifications = () => (
       <li style={gs.li}><strong>Exceptions follow the resident.</strong> An approved exception to rule belongs to the resident, not the provider, so it carries over to the new owner.</li>
     </ul>
     <p style={gs.p}>
-      One practical point: a contract start date is not the same as a deposit. Billing depends on the reissued authorizations, so a buyer should plan working capital for a lag after closing and confirm the expected timing with DSHS. How long the new license itself takes is a separate question, now with DSHS's licensing unit.
+      One practical point: a contract start date is not the same as a deposit. Billing depends on the reissued authorizations, so a buyer should plan working capital for a lag after closing and confirm the expected timing with DSHS. Once DSHS approves the new license, it emails the license letter and license to the new owner within a day, and mails paper copies, along with the background and fingerprint check results, a few days later. How long approval itself takes is a separate question, still with DSHS's licensing unit.
     </p>
 
     <h2 style={gs.h2}>What sits on top of the base rate</h2>

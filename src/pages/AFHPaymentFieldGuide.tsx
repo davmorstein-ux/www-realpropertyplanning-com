@@ -19,6 +19,14 @@ import { AFH_SPECIALTY_RATES } from "@/data/afhBehavioralRates";
  * under the new owner's ProviderOne number, ECS/SBS need AFH program staff
  * approval, Meaningful Day not available since July 1, 2025. Still open with
  * DSHS: whether a buyer can qualify for ECS/SBS before closing (program managers).
+ * Status Sept 28, 2026 (DSHS residential policy reply of Sept 25, forwarded):
+ *   - ECS/SBS before closing, and the 12-month rule for a first-time Medicaid
+ *     contractor: routed to program managers Pamela Young / James Selby. OPEN.
+ *   - CBHS contact at a change of ownership: routed to Ethan Leon. OPEN.
+ *   - How long the new license takes: routed to BAAU. OPEN (BAAU did say the
+ *     license letter and license are emailed within a day of approval).
+ *   - Whether the 27-inch door rule (WAC 388-76-10715) reaches a CHOW buyer:
+ *     routed to BAAU and RCS Policy. OPEN.
  */
 
 const money = (n: number) => n.toLocaleString("en-US", { style: "currency", currency: "USD" });
