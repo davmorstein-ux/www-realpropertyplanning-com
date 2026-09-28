@@ -387,7 +387,7 @@ const AFHFindProfessional = () => (
             <span aria-hidden="true" className="rpp-afhpro-banner-fp">Featured Professionals</span>
           </h2>
           <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#1c1917", maxWidth: 720 }}>
-            A short list on purpose. Everyone here is someone we have sat down with. The list grows as more people earn a place on it.
+            Independent professionals who can help your adult family home succeed.
           </p>
           <div className="rpp-afhpro-grid">
             {AFH_FEATURED_PEOPLE.map(({ person, professionLines }) => (
