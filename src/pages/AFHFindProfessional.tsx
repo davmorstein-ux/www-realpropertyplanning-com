@@ -326,14 +326,14 @@ const AFHFindProfessional = () => (
         .rpp-afhpro h3.rpp-afhpro-h3 { font-size: clamp(20px, 2.4vw, 24px) !important; line-height: 1.25 !important; margin: 0 0 8px !important; }
         .rpp-afhpro p.rpp-afhpro-p { font-size: 18px !important; line-height: 1.75 !important; margin: 0 0 22px !important; }
         /* Wordmark banner. main h2 is forced to 36px sitewide, hence the specificity. */
-        .rpp-afhpro h2.rpp-afhpro-banner { display: flex !important; flex-wrap: wrap; align-items: center; column-gap: 0.45em; row-gap: 0.15em; background: #192A19; color: #F3F0EA !important; border-radius: 12px; padding: 18px 24px !important; margin: 0 0 18px !important; font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.6vw, 40px) !important; font-weight: 300 !important; line-height: 1.1 !important; }
+        .rpp-afhpro h2.rpp-afhpro-banner { display: flex !important; width: fit-content; max-width: 100%; flex-wrap: wrap; align-items: center; column-gap: 0.45em; row-gap: 0.15em; background: #192A19; color: #F3F0EA !important; border-radius: 10px; padding: 12px 22px !important; margin: 0 0 18px !important; font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.6vw, 40px) !important; font-weight: 300 !important; line-height: 1.1 !important; }
         .rpp-afhpro .rpp-afhpro-banner-wm { display: inline-flex; align-items: center; gap: 0.08em; letter-spacing: 0.18em; white-space: nowrap; }
         .rpp-afhpro .rpp-afhpro-banner-glyph { height: 1.02em; width: auto; flex-shrink: 0; display: block; }
         .rpp-afhpro .rpp-afhpro-banner-fp { letter-spacing: 0.04em; white-space: nowrap; }
         /* Phones: the wordmark on the first line, the words beneath it, sized to fit the card width. */
         @media (max-width: 560px) {
-          .rpp-afhpro h2.rpp-afhpro-banner { padding: 16px 18px !important; font-size: 30px !important; }
-          .rpp-afhpro h2.rpp-afhpro-banner .rpp-afhpro-banner-fp { font-size: 0.7em !important; letter-spacing: 0.02em !important; flex-basis: 100%; }
+          .rpp-afhpro h2.rpp-afhpro-banner { display: grid !important; grid-template-columns: max-content; justify-items: start; padding: 12px 16px !important; font-size: 30px !important; }
+          .rpp-afhpro h2.rpp-afhpro-banner .rpp-afhpro-banner-fp { font-size: 0.7em !important; letter-spacing: 0.02em !important; }
         }
         .rpp-afhpro p.rpp-afhpro-note { font-size: 16px !important; line-height: 1.65 !important; margin: 14px 0 0 !important; }
         /* One card per row on phones (David, Sept 27): at two columns the names, emails and
@@ -374,7 +374,7 @@ const AFHFindProfessional = () => (
       `}</style>
       <section className="rpp-afhpro" style={{ background: "#ffffff", padding: "64px 24px 56px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
-          {/* Heading set as the AFH Club wordmark on its green (David, Sept 28 2026): the
+          {/* Heading set as the AFH Club wordmark on its green, the green hugging the text only (David, Sept 28 2026): the
               red-door "A" glyph, white type. The visible letters are aria-hidden and the
               heading's name comes from the sr-only copy, so it reads "AFH Club Featured
               Professionals" rather than "FH Club...". */}
