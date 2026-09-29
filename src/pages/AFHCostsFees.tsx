@@ -13,10 +13,10 @@ import audioAsset from "@/assets/afh-costs-fees.mp3.asset.json";
 const STARTUP_COSTS = [
   {
     category: "DSHS Annual License Fee",
-    amount: "Per bed, set in the state budget",
+    amount: "$450 per bed per year",
     detail:
-      "The per-bed annual fee is set in the state operating budget, not in rule. It is due each year in the month the home was first licensed, and DSHS imposes remedies if it is not paid. Unpaid annual fees were the second most-cited adult family home deficiency in DSHS's most recent published list (fourth quarter of 2024). Confirm the current per-bed amount with DSHS before you budget.",
-    source: "RCW 70.128.060; WAC 388-76-10025",
+      "$450 per licensed bed, in place since July 2025 (DSHS, in writing, September 2026). A six-bed home pays $2,700 a year. The amount is set in the state budget the Legislature passes every two years, so it can change; DSHS announces changes in provider letters. DSHS mails a billing statement 60 days before the home's license anniversary month, and the fee is due that month. Unpaid annual fees were the second most-cited adult family home deficiency in DSHS's most recent published list (fourth quarter of 2024).",
+    source: "DSHS written answer, Sept 2026; RCW 70.128.060; WAC 388-76-10025",
   },
   {
     category: "DSHS Application & Processing Fees",
@@ -208,8 +208,9 @@ const AFHCostsFees = () => (
                 margin: 0,
               }}
             >
-              <strong>Annual license fee:</strong> The per-bed fee is set in the state operating budget and can change
-              with each budget. Confirm the current amount with DSHS before you budget, and pay it on time every year.
+              <strong>Annual license fee:</strong> $450 per licensed bed per year since July 2025, or $2,700 for a six-bed
+              home. It is set in the state budget every two years and can change. DSHS bills 60 days before your license
+              anniversary month; pay it on time every year.
             </p>
           </div>
         </div>

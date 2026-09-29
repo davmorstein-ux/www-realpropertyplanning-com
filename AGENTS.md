@@ -210,6 +210,8 @@ APIs, and **relative imports, not the `@/` alias**.
 
 ## 8. Content rules and what has been verified
 
+- **AFH annual license fee — ANSWERED in writing by DSHS, Sept 29, 2026:** $450 per licensed bed, in place since July 2025, set in the biennial omnibus appropriations act; DSHS announces changes in provider letters and mails a billing statement 60 days before the license anniversary month. Cite it as DSHS's written answer. DSHS's AFH License Application Process slideshow: https://www.dshs.wa.gov/sites/default/files/2026-04/AFH-License-Application-Process-Informational-Slideshow.pptx (linked from the prospective-providers page).
+
 - **27-inch interior doors (WAC 388-76-10715, eff. Sept 20, 2026) and a change of ownership — ANSWERED in writing by DSHS Residential Care Services, Sept 28, 2026:** a continuously licensed home that changes owners is held to the rules in place when it was first licensed, so the rule does NOT apply to that buyer. A home that was once an AFH but is not licensed now must meet current rules, including this one. DSHS will not estimate how long a change-of-ownership license takes; its posted BAAU queue (dshs.wa.gov/altsa/baau-application-processing-timeline) is what pages quote. Still open with DSHS: ECS/SBS before closing and the 12-month rule (Pamela Young / James Selby), CBHS at a change of ownership (Ethan Leon).
 
 **Audience.** AFH Club is for buyers, sellers, owners and investors. Content for a

@@ -56,7 +56,7 @@ const APPLICATION_STEPS = [
     step: "8",
     title: "License issued",
     detail:
-      "Once all requirements are met and the inspection is passed, DSHS issues the AFH license. After that, an annual per-bed license fee is due each year in the month the home was first licensed. The per-bed amount is set in the state operating budget (RCW 70.128.060, WAC 388-76-10025).",
+      "Once all requirements are met and the inspection is passed, DSHS issues the AFH license. After that, an annual license fee of $450 per licensed bed (in place since July 2025, per DSHS) is due each year in the month the home was first licensed; DSHS mails the bill 60 days before. The amount is set in the state budget every two years (RCW 70.128.060, WAC 388-76-10025).",
   },
 ];
 
@@ -567,6 +567,7 @@ const AFHLicensingCertification = () => (
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
               { label: "DSHS Online License Application", url: "https://baau.dshs.wa.gov/" },
+              { label: "DSHS: AFH License Application Process slideshow (PowerPoint)", url: "https://www.dshs.wa.gov/sites/default/files/2026-04/AFH-License-Application-Process-Informational-Slideshow.pptx" },
               {
                 label: "AFH Prospective Provider Information",
                 url: "https://www.dshs.wa.gov/altsa/residential-care-services/information-afh-prospective-providers",

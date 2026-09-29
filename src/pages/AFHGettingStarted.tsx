@@ -773,6 +773,7 @@ const AFHGettingStarted = () => (
                 url: "https://www.dshs.wa.gov/altsa/residential-care-services/information-afh-prospective-providers",
               },
               { label: "DSHS Online License Application (BAAU)", url: "https://baau.dshs.wa.gov/" },
+              { label: "DSHS: AFH License Application Process slideshow (PowerPoint)", url: "https://www.dshs.wa.gov/sites/default/files/2026-04/AFH-License-Application-Process-Informational-Slideshow.pptx" },
               {
                 label: "DSHS Application Processing Timeline",
                 url: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline",

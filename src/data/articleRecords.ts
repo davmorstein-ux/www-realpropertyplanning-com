@@ -38,6 +38,10 @@ const DSHS_RCS_DOOR_ANSWER: ArticleSource = {
   label: "Written answer from DSHS Residential Care Services licensing staff on the 27-inch door rule at a change of ownership (September 28, 2026)",
 };
 
+const DSHS_FEE_ANSWER: ArticleSource = {
+  label: "Written answer from DSHS on the annual license fee: $450 per bed since July 2025, set in the biennial budget, billed 60 days before the license anniversary month (September 29, 2026)",
+};
+
 const DSHS_CHOW_ANSWERS: ArticleSource = {
   label: "Written answers from DSHS contracting and residential policy staff to AFH Club's change-of-ownership questions (September 2026)",
 };
@@ -149,11 +153,13 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     ],
   },
   "/afh-club/licensing-certification": {
-    reviewed: "2026-09-28",
+    reviewed: "2026-09-29",
     changes: [
+      { date: "2026-09-29", text: "Restored the annual license fee, $450 per licensed bed since July 2025, now sourced to a written answer from DSHS, with how DSHS bills it." },
       { date: "2026-09-28", text: "Removed the $450-per-bed fee figure, which no current primary source confirms (the fee is set in the state operating budget); corrected the Home Care Aide exemption list and removed a citation to a rule that does not exist; corrected background-check rules (household members over 11, two-year state check, fingerprint check); added DSHS's posted processing queue, the inspection limits, and DSHS's September 2026 answer on change-of-ownership building rules." },
     ],
     sources: [
+      DSHS_FEE_ANSWER,
       { label: "WAC 388-112A-0050: AFH training and certification requirements", href: WAC("388-112A-0050") },
       { label: "WAC 388-112A-0090: training exemptions", href: WAC("388-112A-0090") },
       { label: "WAC 246-980-025: Home Care Aide certification exemptions", href: WAC("246-980-025") },
@@ -240,13 +246,15 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     ],
   },
   "/afh-club/costs-fees": {
-    reviewed: "2026-09-28",
+    reviewed: "2026-09-29",
     changes: [
+      { date: "2026-09-29", text: "Restored the annual license fee, $450 per licensed bed since July 2025, now sourced to a written answer from DSHS, with how DSHS bills it." },
       { date: "2026-09-28", text: "Removed the $450-per-bed annual license fee, which no current primary source confirms; the page now explains the fee is set in the state budget and due each year in the month the home was first licensed." },
       { date: "2026-09-28", text: "Corrected Home Care Aide certification to the $100 DOH application fee, business registration to the $50 DOR processing fee and $180 LLC filing fee, and added the required insurance limits ($500,000 per occurrence, $1,000,000 aggregate)." },
       { date: "2026-09-28", text: "Removed unsourced tuition, permit, building-modification, total startup and private-pay dollar ranges; corrected background-check and CPR rule citations; replaced the 3-6 month timeline with DSHS's processing queue." },
     ],
     sources: [
+      DSHS_FEE_ANSWER,
       { label: "RCW 70.128.060 and WAC 388-76-10025: license fees", href: WAC("388-76-10025") },
       { label: "WAC 388-76-10070 and 10073: application and processing fees", href: WAC("388-76-10073") },
       { label: "WAC 388-76-10191 and 10192: liability insurance", href: WAC("388-76-10192") },
