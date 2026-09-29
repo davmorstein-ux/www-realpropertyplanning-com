@@ -30,6 +30,7 @@ import { AFH_SITE_MAP } from "@/data/siteMaps";
 const PATH = "/afh-club/washington-adult-family-home-guide";
 const CANONICAL = `https://realpropertyplanning.com${PATH}`;
 const TITLE = "Washington Adult Family Homes: The Complete Guide";
+const COVER = "/afh-washington-guide-cover.webp";
 const DESCRIPTION =
   "What a Washington adult family home is, who licenses it, what the house and the owner need, how homes are paid, and what happens when one is sold, with a path for opening, running, buying, selling or evaluating an AFH.";
 
@@ -165,6 +166,7 @@ const schema = {
   headline: TITLE,
   description: DESCRIPTION,
   url: CANONICAL,
+  image: `https://realpropertyplanning.com${COVER}`,
   datePublished: "2026-09-29",
   dateModified: "2026-09-29",
   author: articleAuthor,
@@ -177,6 +179,9 @@ const CSS = `
 .afhp { background: #ffffff; }
 .afhp .afhp-wrap { max-width: 960px; margin: 0 auto; }
 .afhp .afhp-narrow { max-width: 760px; }
+.afhp .afhp-hero { display: grid; gap: 28px; align-items: start; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .afhp .afhp-hero { grid-template-columns: minmax(0, 1fr) 250px; } }
+.afhp .afhp-cover { width: 100%; max-width: 300px; height: auto; aspect-ratio: 3 / 4; border-radius: 8px; box-shadow: 0 12px 30px rgba(10,42,77,0.25); justify-self: center; }
 .afhp p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .afhp .afhp-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #0a5648 !important; margin: 0 0 12px !important; }
 .afhp h1.afhp-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 18px !important; text-wrap: balance; }
@@ -254,6 +259,7 @@ const AFHPillarGuide = () => (
       <section style={{ background: "#edf0f3", padding: "40px 16px 36px", borderBottom: "3px solid #0a5648" }}>
         {/* index.css zeroes the first section's top padding sitewide; the gap goes inside. */}
         <div className="afhp-wrap" style={{ paddingTop: 32 }}>
+          <div className="afhp-hero">
           <div className="afhp-narrow">
             <p className="afhp-eyebrow">AFH Club · Start here</p>
             <h1 className="afhp-h1">{TITLE}</h1>
@@ -270,6 +276,16 @@ const AFHPillarGuide = () => (
                 rate set by each resident's CARE classification and where the home is.
               </p>
             </div>
+          </div>
+            <img
+              src={COVER}
+              alt="AFH Club reference guide cover: Washington Adult Family Homes, The Complete Guide, over a gold map of Washington State"
+              className="afhp-cover"
+              width={1024}
+              height={1365}
+              loading="eager"
+              decoding="async"
+            />
           </div>
           <div className="afhp-figs">
             <div className="afhp-fig"><div className="afhp-fig-n">{n(S.homes)}</div><div className="afhp-fig-l">licensed homes in Washington</div></div>

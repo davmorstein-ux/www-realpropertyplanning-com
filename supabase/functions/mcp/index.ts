@@ -3,10 +3,10 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
 
 // src/lib/mcp/tools/echo.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.1";
 import { z } from "npm:zod@^3.25.76";
 var echo_default = defineTool({
   name: "echo",
@@ -18,7 +18,7 @@ var echo_default = defineTool({
 });
 
 // src/lib/mcp/tools/get-contact-info.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.1";
 
 // src/data/featuredProfessionals.ts
 var FEATURED_BROKER = {
@@ -85,7 +85,7 @@ var get_contact_info_default = defineTool2({
 });
 
 // src/lib/mcp/tools/list-services.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.1";
 var SERVICES = [
   { name: "Probate & Estate Sales", url: "/probate-estate-sales", audience: "Executors, attorneys, families" },
   { name: "Support for Executors", url: "/executors", audience: "Executors managing inherited property" },
@@ -109,7 +109,7 @@ var list_services_default = defineTool3({
 });
 
 // src/lib/mcp/tools/list-service-areas.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.1";
 var COUNTIES = [
   { name: "King County", url: "/king-county", cities: ["Seattle", "Bellevue", "Kirkland", "Redmond", "Mercer Island", "Issaquah", "Renton"] },
   { name: "Snohomish County", url: "/snohomish-county", cities: ["Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek", "Monroe"] },
@@ -144,5 +144,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.0/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.1/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));

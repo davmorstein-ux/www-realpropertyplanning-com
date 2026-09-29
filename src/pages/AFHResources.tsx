@@ -11,6 +11,13 @@ import AFHCarousel from "@/components/AFHCarousel";
 
 const TOPICS = [
   {
+    title: "Washington Adult Family Homes: The Complete Guide",
+    href: "/afh-club/washington-adult-family-home-guide",
+    img: "/afh-washington-guide-cover.webp",
+    description:
+      "Start here: what an AFH is, who licenses it, what the owner and the house need, how homes are paid, and what happens in a sale, with a path to the right guide.",
+  },
+  {
     title: "Getting Started",
     href: "/afh-club/getting-started",
     img: "/afh-getting-started.webp",
@@ -191,6 +198,12 @@ const AFHResources = () => (
       {/* Featured Articles Carousel */}
       <AFHCarousel
         categories={[
+          {
+            title: "Washington Adult Family Homes: The Complete Guide",
+            href: "/afh-club/washington-adult-family-home-guide",
+            img: "/afh-washington-guide-cover.webp",
+            placeholder: "#1d2e22",
+          },
           {
             title: "Getting Started",
             href: "/afh-club/getting-started",
