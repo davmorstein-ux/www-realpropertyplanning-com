@@ -2334,6 +2334,29 @@ const routeMetadataPlugin = {
       ].join("\n");
       await writeFile(path.join(distDir, "_redirects"), body + "\n", "utf8");
       console.log(`route-metadata-prerender: _redirects — ${REDIRECTS.length} permanent redirects`);
+
+      /* Lovable's host ignores _redirects (httpstatus.io, Sept 29, 2026: all
+         three test addresses answered 200 with the homepage's HTML and a
+         canonical pointing at the homepage). So each exact old address also
+         gets a tiny forwarding page: an instant meta refresh (Google treats a
+         0-second refresh as a permanent redirect), a canonical to the new
+         address, noindex, and a script fallback. Pattern redirects can't get
+         files; the in-app <Navigate> routes still cover those. */
+      const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+      for (const r of exact) {
+        const url = `${SITE_URL}${r.to}`;
+        const html = `<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Moved | Real Property Planning</title>
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="${esc(url)}">
+<meta http-equiv="refresh" content="0; url=${esc(url)}">
+<script>location.replace(${JSON.stringify(r.to)} + location.search + location.hash);</script>
+</head><body><p>This page has moved to <a href="${esc(url)}">${esc(url)}</a>.</p></body></html>
+`;
+        await writeRouteHtml(distDir, r.from, html);
+      }
+      console.log(`route-metadata-prerender: ${exact.length} forwarding pages for old addresses`);
     }
   },
 };
