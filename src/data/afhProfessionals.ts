@@ -6,6 +6,8 @@ import ruslanBagaveevPhoto from "@/assets/providers/ruslan-bagaveev-dryout-heads
 import dryoutLogo from "@/assets/providers/dryout-water-damage-restoration-logo.webp";
 import kaylinPhoto from "@/assets/providers/kaylin-cottingham-wilson-griffith-insurance-headshot.webp";
 import griffithLogo from "@/assets/providers/griffith-insurance-group-logo.webp";
+import exaelPhoto from "@/assets/providers/exael-zuniga-invision-marketing-headshot.webp";
+import invisionLogo from "@/assets/providers/invision-marketing-logo.webp";
 import { FEATURED_BROKER, brokerLicenseShort } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from "@/data/featuredProfessionalAssets";
 
@@ -164,6 +166,23 @@ export const KAYLIN_COTTINGHAM_WILSON: AFHProfessional = {
   bio: "",
 };
 
+/* Added Sept 29, 2026 at the owner's request. */
+export const EXAEL_ZUNIGA: AFHProfessional = {
+  id: "exael-zuniga",
+  name: "Exael Zuniga",
+  title: "Invision Marketing",
+  company: "Invision Marketing",
+  photo: exaelPhoto,
+  photoAlt: "Photo of Exael Zuniga, Invision Marketing",
+  logo: invisionLogo,
+  logoAlt: "Invision Marketing logo",
+  phone: "(509) 948-0860",
+  email: "exael@invisionmarketing.io",
+  website: "https://invisionmarketing.io",
+  specialty: "Website design and marketing — Woodinville, WA",
+  bio: "",
+};
+
 export interface AFHProfessionalGroup {
   id: string;
   label: string;
@@ -226,6 +245,14 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     professionLines: ["Insurance", "Broker"],
     why: "An adult family home needs general and professional liability, property, workers' compensation for caregivers, and often abuse-and-molestation coverage, and a buyer cannot take over the seller's policies. A broker who writes care homes knows which carriers will bind the risk and what DSHS and lenders expect to see.",
     people: [KAYLIN_COTTINGHAM_WILSON],
+  },
+  {
+    id: "website-marketing",
+    label: "Website design and marketing",
+    profession: "Website Design & Marketing",
+    professionLines: ["Website Design", "& Marketing"],
+    why: "Families, case managers and hospital discharge planners look a home up online before they call. A clear website with accurate photos, the home's specialties and current contact details, and a listing that shows up in local search, is how an adult family home fills an empty bed without paying a placement fee.",
+    people: [EXAEL_ZUNIGA],
   },
   {
     id: "sba-lending",
