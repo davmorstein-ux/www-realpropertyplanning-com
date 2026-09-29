@@ -109,6 +109,12 @@ const TOPICS = [
     description: "Fourteen topics every operator faces, from admissions and staffing to medications, emergencies, inspections, finances, and succession, each marked as a Washington requirement or a best practice.",
   },
   {
+    title: "Washington AFHs by the Numbers",
+    href: "/afh-club/washington-afh-data",
+    img: "/afh-washington-data-cover.webp",
+    description: "Every licensed adult family home in Washington, counted from DSHS records: homes and beds by county, home size, Medicaid, specialty designations, and ECS and SBS contracts. Free CSV download.",
+  },
+  {
     title: "Find a Professional",
     href: "/afh-club/find-a-professional",
     img: "/afh-find-professional.webp",
@@ -272,6 +278,12 @@ const AFHResources = () => (
             href: "/afh-club/dos-and-donts-operating-adult-family-home",
             img: "/afh-dos-and-donts-cover-v2.webp",
             placeholder: "#3b2a26",
+          },
+          {
+            title: "Washington AFHs by the Numbers",
+            href: "/afh-club/washington-afh-data",
+            img: "/afh-washington-data-cover.webp",
+            placeholder: "#0a2a4d",
           },
           {
             title: "Find a Professional",

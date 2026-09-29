@@ -90,6 +90,7 @@ const datasetSchema = {
   name: "Washington State licensed adult family homes, by county",
   description: `Counts of licensed adult family homes and beds in Washington State by county, with Medicaid contracts, DSHS specialty designations, and ECS and SBS contracts. Compiled from the DSHS Adult Family Home Locator, retrieved ${RETRIEVED}.`,
   url: CANONICAL,
+  image: "https://realpropertyplanning.com/afh-washington-data-cover.webp",
   creator: { "@type": "Organization", name: "Real Property Planning", url: "https://realpropertyplanning.com" },
   isBasedOn: "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx",
   spatialCoverage: { "@type": "Place", name: "Washington State, United States" },
@@ -105,6 +106,9 @@ const CSS = `
 .afhd { background: #ffffff; }
 .afhd .afhd-wrap { max-width: 960px; margin: 0 auto; }
 .afhd .afhd-narrow { max-width: 760px; }
+.afhd .afhd-hero { display: grid; gap: 24px; align-items: center; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 860px) { .afhd .afhd-hero { grid-template-columns: minmax(0, 1fr) 230px; } }
+.afhd .afhd-cover { width: 100%; max-width: 300px; height: auto; aspect-ratio: 3 / 4; border-radius: 8px; box-shadow: 0 12px 30px rgba(10,42,77,0.25); }
 .afhd p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .afhd .afhd-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #0a5648 !important; margin: 0 0 12px !important; }
 .afhd h1.afhd-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 16px !important; text-wrap: balance; }
@@ -161,13 +165,27 @@ const AFHWashingtonData = () => {
       <Header />
       <main id="main-content">
         <section style={{ background: "#edf0f3", padding: "40px 16px 36px", borderBottom: "3px solid #0a5648" }}>
-          <div className="afhd-wrap">
-            <p className="afhd-eyebrow">AFH Club · Data · DSHS records retrieved {RETRIEVED}</p>
-            <h1 className="afhd-h1">Washington Adult Family Homes by the Numbers</h1>
-            <p style={{ fontSize: 20 }}>
-              Every licensed adult family home in Washington, counted from the state's own records: how many there are,
-              where they are, how big they are, and which contracts and specialty designations they hold.
-            </p>
+          {/* index.css zeroes the first section's top padding sitewide; the gap goes inside. */}
+          <div className="afhd-wrap" style={{ paddingTop: 32 }}>
+            <div className="afhd-hero">
+              <div>
+                <p className="afhd-eyebrow">AFH Club · Data · DSHS records retrieved {RETRIEVED}</p>
+                <h1 className="afhd-h1">Washington Adult Family Homes by the Numbers</h1>
+                <p style={{ fontSize: 20 }}>
+                  Every licensed adult family home in Washington, counted from the state's own records: how many there are,
+                  where they are, how big they are, and which contracts and specialty designations they hold.
+                </p>
+              </div>
+              <img
+                src="/afh-washington-data-cover.webp"
+                alt="AFH Club data report cover: Washington Adult Family Homes by the Numbers, every licensed adult family home in Washington"
+                className="afhd-cover"
+                width={1024}
+                height={1365}
+                loading="eager"
+                decoding="async"
+              />
+            </div>
             <div className="afhd-figs">
               <div className="afhd-fig"><div className="afhd-fig-n">{n(S.homes)}</div><div className="afhd-fig-l">licensed adult family homes</div></div>
               <div className="afhd-fig"><div className="afhd-fig-n">{n(S.beds)}</div><div className="afhd-fig-l">licensed beds</div></div>
