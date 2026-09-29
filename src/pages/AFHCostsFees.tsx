@@ -103,7 +103,7 @@ const REVENUE_CONTEXT = [
   {
     label: "Maximum residents (standard)",
     amount: "6 residents",
-    note: "Seven or eight is possible after at least 24 months of licensure and other requirements, including inspections without enforcement actions and sprinklers, under RCW 70.128.066.",
+    note: "Seven or eight is possible after at least 24 months of licensure and other requirements, including inspections without enforcement actions, and a sprinkler system unless every resident can evacuate without help (RCW 70.128.066; WAC 388-76-10031).",
   },
 ];
 
