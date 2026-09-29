@@ -145,7 +145,7 @@ export const RUSLAN_BAGAVEEV: AFHProfessional = {
 
 /* Added Sept 28, 2026. License number OE20486 (owner clarified the same day that
    "CA" belonged to the company line, not the license); displayed like his. Card has one phone
-   line, so the second number she gave, (503) 432-0666, is not shown. Logo supplied by
+   line; at her request (Sept 28, 2026) it shows (503) 432-0666 rather than (206) 363-0550. Logo supplied by
    the owner Sept 28, 2026 (light-blue background removed). */
 export const KAYLIN_COTTINGHAM_WILSON: AFHProfessional = {
   id: "kaylin-cottingham-wilson",
@@ -157,7 +157,7 @@ export const KAYLIN_COTTINGHAM_WILSON: AFHProfessional = {
   logo: griffithLogo,
   logoAlt: "Griffith Insurance Group logo",
   license: "License #OE20486",
-  phone: "(206) 363-0550",
+  phone: "(503) 432-0666",
   email: "kaylin@grdins.com",
   website: "https://www.grdins.com",
   specialty: "Business insurance — Griffith Insurance Group, Kenmore, WA",
@@ -221,9 +221,9 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
   },
   {
     id: "business-insurance",
-    label: "Business insurance",
-    profession: "Business Insurance",
-    professionLines: ["Business", "Insurance"],
+    label: "Insurance broker",
+    profession: "Insurance Broker",
+    professionLines: ["Insurance", "Broker"],
     why: "An adult family home needs general and professional liability, property, workers' compensation for caregivers, and often abuse-and-molestation coverage, and a buyer cannot take over the seller's policies. A broker who writes care homes knows which carriers will bind the risk and what DSHS and lenders expect to see.",
     people: [KAYLIN_COTTINGHAM_WILSON],
   },

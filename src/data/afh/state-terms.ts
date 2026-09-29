@@ -42,7 +42,7 @@ export const STATE_TERMS: StateTerm[] = [
     term: "Adult Foster Home",
     shortName: "AFH",
     agency: "Oregon Department of Human Services, Aging and People with Disabilities (homes for adults with developmental disabilities are licensed by ODDS; mental health homes by the Oregon Health Authority)",
-    capacity: "Up to 5 residents; a 2024 law allows up to 7 for homes meeting additional DHS rules",
+    capacity: "Up to 5 residents (ORS 443.705)",
     note: "Same abbreviation as Washington, different word. Licensed in three classes (1–3) based on the provider's training and experience.",
   },
   {
