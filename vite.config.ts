@@ -176,6 +176,11 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerA: "A licensed broker's estate sale usually runs in seven steps: a first conversation, property evaluation and condition-based pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing, and post-sale follow-up. Real Property Planning explains each step; a featured Washington licensed broker performs them through their own practice.",
     intro:
       "From the first conversation to closing day — how the sale of a probate, inherited, or trust-owned property in Washington State usually runs, and which independent professional handles each step.",
+    sections: [
+      "What process is this? — How a house is sold when the owner has died, the home is held in a trust, or a parent is moving out of the family home: seven steps with a licensed listing broker. Written for executors and personal representatives, trustees, heirs, adult children helping a parent move, and the professionals who refer them.",
+      "Before step 1: who can sign — For a probate estate, usually the court-appointed personal representative; for a trust, the trustee; for a living owner, the owner or an agent under a power of attorney. Confirm with an attorney. Not the court side of probate, and not legal or tax advice.",
+      "The seven steps — 1 Initial consultation. 2 Property review and pricing discussion. 3 Cleanout, repairs and vendor coordination. 4 Listing preparation and marketing. 5 Offer review, negotiation and contract. 6 Escrow and closing. 7 Post-sale support.",
+    ],
   },
   "/for-cpas": {
     title: "Real Estate Guidance for CPAs | Real Property Planning",

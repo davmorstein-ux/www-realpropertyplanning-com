@@ -9,6 +9,10 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
+import BackToPreviousPage from "@/components/BackToPreviousPage";
+
+/* Where "Back to …" goes when the visitor arrived from outside the site. */
+const BACK_FALLBACK = { href: "/probate-estate-sales", label: "Probate & Estate Sales" };
 
 /* HERO IMAGE.
    Replaces the small 3D clipboard-and-gavel icon that previously sat centred
@@ -113,6 +117,72 @@ const HowTheProcessWorks = () => {
       <main id="main-content">
         <HeroBandTitle as="h1">How the Process Works</HeroBandTitle>
 
+        <BackToPreviousPage variant="top" fallback={BACK_FALLBACK} />
+
+        {/* WHAT THIS PAGE IS ABOUT (Sept 29, 2026). The owner: "There has to be
+            more information for what process this page is talking about." The
+            h1 stays "How the Process Works" (owner's decision, second audit);
+            this section names the process in the first lines a visitor reads. */}
+        <section className="pb-4 bg-background">
+          <div className="container px-6 lg:px-8">
+            {/* index.css zeroes the first section's top padding sitewide; the gap goes inside. */}
+            <div className="max-w-[900px] mx-auto" style={{ paddingTop: 32 }}>
+              <p className="text-foreground/80 font-semibold uppercase tracking-[0.14em] text-sm mb-3">
+                Selling an estate, probate, trust or inherited home in Washington
+              </p>
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">
+                What process is this?
+              </h2>
+              <div className="space-y-4 text-foreground text-lg leading-relaxed">
+                <p>
+                  This page walks through how a house is sold when the owner has died, the home is held in a trust, or a
+                  parent is moving out of the family home: seven steps, from the first conversation with a listing broker
+                  to the questions that come up after closing. It explains what a licensed broker usually does at each
+                  step, so you know what to expect and what to ask.
+                </p>
+                <p>
+                  <strong>It is written for</strong> executors and personal representatives, trustees, heirs selling a
+                  home they inherited, adult children helping a parent move, and the attorneys, CPAs and other
+                  professionals who refer them.
+                </p>
+                <p>
+                  <strong>Before step 1: who can sign.</strong> Someone has to have legal authority to sell. For a probate
+                  estate, that is usually the personal representative appointed by the court; for a trust, the trustee;
+                  for a living owner, the owner or an agent under a power of attorney. Confirm this with an attorney
+                  first. See{" "}
+                  <Link
+                    to="/estate-probate-inherited-property/probate-and-legal-authority"
+                    className="text-accent hover:text-gold underline underline-offset-4"
+                  >
+                    Probate and legal authority
+                  </Link>
+                  .
+                </p>
+                <p>
+                  <strong>What this page is not:</strong> it is not the court side of probate, and it is not legal or tax
+                  advice. Real Property Planning explains the process; the work itself is done by an independent,
+                  licensed real estate broker you choose. How the site's featured broker is paid is on the{" "}
+                  <Link to="/compensation-disclosure" className="text-accent hover:text-gold underline underline-offset-4">
+                    compensation disclosure
+                  </Link>{" "}
+                  page.
+                </p>
+              </div>
+
+              <h2 className="font-serif text-2xl text-foreground font-semibold mt-10 mb-4">The seven steps at a glance</h2>
+              <ol className="rpp-process-toc grid gap-2 sm:grid-cols-2 text-foreground text-lg" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                {steps.map((step) => (
+                  <li key={step.number}>
+                    <a href={`#step-${step.number}`} className="text-accent hover:text-gold underline underline-offset-4">
+                      <span className="font-semibold">{step.number}</span> {step.title}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+
         {/* DirectAnswerBlock removed.
           Its answer read "Real Property Planning follows a clear seven-step
           process: initial consultation, property evaluation and pricing
@@ -125,13 +195,16 @@ const HowTheProcessWorks = () => {
           Ask and I will write that version. */}
 
         {/* Seven Steps */}
-        <section className="py-20 lg:py-28 bg-background">
+        <section className="pt-10 pb-20 lg:pb-28 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-[900px] mx-auto">
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">The seven steps</h2>
               <div className="grid gap-5 lg:gap-6">
                 {steps.map((step) => (
                   <div
                     key={step.number}
+                    id={`step-${step.number}`}
+                    style={{ scrollMarginTop: 110 }}
                     className="bg-card border border-border rounded-[18px] px-7 py-7 md:px-9 md:py-8 flex gap-5 md:gap-7 items-start"
                   >
                     {/* WAS text-muted-foreground/30 — a 30% opacity step number,
@@ -333,6 +406,8 @@ const HowTheProcessWorks = () => {
         </section>
 
         <RelatedServices currentPath="/how-the-process-works" />
+
+        <BackToPreviousPage fallback={BACK_FALLBACK} />
 
         {/* Bottom CTA removed — the navy "Want to talk through your situation
           and next steps?" band with its "Schedule a Consultation" button.
