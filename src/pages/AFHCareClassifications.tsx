@@ -53,7 +53,7 @@ const AFHCareClassifications = () => (
     seoDescription="How DSHS's CARE assessment places Medicaid residents into seventeen classifications from A Low to E High, what each group means, current daily rates, why classification mix matters as much as occupancy, and what AFH buyers should verify in due diligence."
     eyebrow="For buyers, sellers & owners"
     lede="When a Medicaid client moves into an adult family home, the home does not set the price. An assessment produces a classification, and the classification sets the daily rate. One bed can be worth very different amounts."
-    cover={{ src: "/afh-care-classifications-cover.webp", alt: "A Through E: One Bed, Very Different Revenue — how CARE classifications affect adult family home income" }}
+    cover={{ src: "/afh-care-classifications-cover-v2.webp", alt: "The Medicaid Rate Guide, A through E: what each classification means, how it affects income, and what to review in due diligence" }}
     dateModified="2026-09-25"
     faqs={FAQS}
     faqHeading="CARE Classifications: Common Questions"

@@ -80,7 +80,7 @@ const TOPICS = [
   {
     title: "A Through E: CARE Classifications",
     href: "/afh-club/care-classifications-a-through-e",
-    img: "/afh-care-classifications-cover.webp",
+    img: "/afh-care-classifications-cover-v2.webp",
     description: "How a Medicaid resident's CARE classification sets the daily rate, why one bed can be worth very different revenue, and what buyers should verify.",
   },
   {
@@ -246,7 +246,7 @@ const AFHResources = () => (
           {
             title: "A Through E: CARE Classifications",
             href: "/afh-club/care-classifications-a-through-e",
-            img: "/afh-care-classifications-cover.webp",
+            img: "/afh-care-classifications-cover-v2.webp",
             placeholder: "#2c3a33",
           },
           {
