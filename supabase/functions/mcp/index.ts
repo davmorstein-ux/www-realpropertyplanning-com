@@ -45,7 +45,7 @@ var FEATURED_APPRAISER = {
   licenseNumber: "1702080",
   phone: "(206) 900-3015",
   phoneTel: "+12069003015",
-  email: "dave@steinappraisal.com",
+  email: "david@realpropertyplanning.com",
   yearsExperience: 20,
   pronoun: { subject: "he", object: "him", possessive: "his", Subject: "He", Possessive: "His" },
   role: "the featured appraiser",

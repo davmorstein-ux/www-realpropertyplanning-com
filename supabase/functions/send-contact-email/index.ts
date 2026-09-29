@@ -15,7 +15,7 @@ const TO_EMAIL = "info@realpropertyplanning.com";
 const RECIPIENT_EMAIL: Record<string, string> = {
   general: "info@realpropertyplanning.com",
   broker: "dave.stein@exprealty.com",
-  appraiser: "dave@steinappraisal.com",
+  appraiser: "david@realpropertyplanning.com",
 };
 const REASON_RECIPIENT: Record<string, string> = {
   "estate-property": "broker",
