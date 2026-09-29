@@ -60,8 +60,8 @@
       },
       {
         "name": "list_services",
-        "title": "List services",
-        "description": "List the core services offered by Real Property Planning with a short audience description and page path.",
+        "title": "List resource areas",
+        "description": "List the main resource areas of Real Property Planning, a free educational hub (it provides no brokerage or appraisal services itself), with a short audience description and page path.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
