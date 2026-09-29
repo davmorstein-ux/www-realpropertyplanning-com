@@ -86,6 +86,7 @@ const PATHS: { id: string; short: string; title: string; who: string; steps: Ste
       { label: "A Through E: CARE Classifications", href: "/afh-club/care-classifications-a-through-e", note: "How each Medicaid resident's daily rate is set." },
       { label: "CBHS Tiers Explained", href: "/afh-club/cbhs-tiers", note: "Behavioral health support paid on top of the base rate." },
       { label: "The AFH Payment Field Guide", href: "/afh-club/afh-payment-field-guide", note: "ECS, SBS, private pay, and what a contract list does not prove." },
+      { label: "Washington AFH Rules Have Changed", href: "/afh-club/washington-afh-rule-changes", note: "Every rule change since 2023, old beside new." },
       { label: "Find a Professional", href: "/afh-club/find-a-professional", note: "Independent bookkeepers, insurance brokers and others." },
     ],
   },
@@ -339,7 +340,8 @@ const AFHPillarGuide = () => (
         </div>
         <p className="afhp-small" style={{ marginTop: 10 }}>
           Checked against each rule on September 29, 2026. The license fee is from DSHS's written answer of the same date; the rule
-          itself says the fee is set in the state budget.
+          itself says the fee is set in the state budget. What changed recently, and when:{" "}
+          <Link className="afhp-link" to="/afh-club/washington-afh-rule-changes">Washington AFH Rules Have Changed</Link>.
         </p>
       </Section>
 
@@ -422,7 +424,8 @@ const AFHPillarGuide = () => (
               <a className="afhp-link" href={WAC("388-76-10700")} target="_blank" rel="noopener noreferrer">WAC 388-76-10700</a>). It covers
               bedroom exits and classifications, emergency escape windows, smoke and carbon monoxide alarms, doors, ramps, stairs,
               bathrooms and fire access. WABO helped write the checklist but does not inspect. Homes licensed after September 20,
-              2026 also need interior doors at least 27 inches wide wherever residents pass through.
+              2026 also need interior doors at least 27 inches wide wherever residents pass through, and since that date no resident may
+              sleep in a bedroom DSHS has not inspected and approved.
             </p>
             <More to="/afh-club/building-inspection">Read Building Requirements & Inspections</More>
           </div>

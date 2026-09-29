@@ -119,6 +119,23 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "DSHS Adult Family Home Locator (counts retrieved September 13-14, 2026)", href: "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx" },
     ],
   },
+  "/afh-club/washington-afh-rule-changes": {
+    published: "2026-09-29",
+    reviewed: "2026-09-29",
+    changes: [],
+    sources: [
+      { label: "WSR 26-17-004: amendments effective September 20, 2026", href: WSR_26_17_004 },
+      { label: "WSR 23-12-075, 25-04-035, 25-04-069, 25-16-099, 25-18-037, 26-05-046: chapter 388-76 WAC amendments 2023-2026", href: WAC("388-76") },
+      { label: "WSR 24-06-073 and 23-24-010: administrator training and repeal of the orientation class", href: WAC("388-112A-0800") },
+      { label: "WAC 246-980-040 (WSR 26-12-065): Home Care Aide certification timelines", href: WAC("246-980-040") },
+      { label: "WAC 388-106-0336 (WSR 25-15-100) and chapter 182-561 WAC: SBS and CBHS", href: WAC("388-106-0336") },
+      { label: "DSHS notice AFH #2025-024: Meaningful Day add-on eliminated", href: "https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/025-024.pdf" },
+      { label: "Bolina v. AssureCare Adult Home LLC, Washington Supreme Court (July 9, 2026)", href: "https://statecourtreport.org/sites/default/files/2026-07/supreme_court_of_washington-opinion_0.pdf" },
+      { label: "WSR 26-13-037 and 25-11-052: pending preproposals", href: "https://lawfilesext.leg.wa.gov/law/wsr/2026/13/26-13-037.htm" },
+      DSHS_FEE_ANSWER,
+      DSHS_RCS_DOOR_ANSWER,
+    ],
+  },
   "/afh-club/glossary": {
     published: "2026-09-29",
     reviewed: "2026-09-29",

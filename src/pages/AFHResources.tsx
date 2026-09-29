@@ -18,6 +18,13 @@ const TOPICS = [
       "Start here: what an AFH is, who licenses it, what the owner and the house need, how homes are paid, and what happens in a sale, with a path to the right guide.",
   },
   {
+    title: "Washington AFH Rules Have Changed",
+    href: "/afh-club/washington-afh-rule-changes",
+    img: "/afh-rule-changes-cover.webp",
+    description:
+      "Every rule change since 2023, old requirement beside today's, with effective dates, who is affected, citations, and proposals that are not yet law.",
+  },
+  {
     title: "Getting Started",
     href: "/afh-club/getting-started",
     img: "/afh-getting-started.webp",
@@ -203,6 +210,12 @@ const AFHResources = () => (
             href: "/afh-club/washington-adult-family-home-guide",
             img: "/afh-washington-guide-cover.webp",
             placeholder: "#1d2e22",
+          },
+          {
+            title: "Washington AFH Rules Have Changed",
+            href: "/afh-club/washington-afh-rule-changes",
+            img: "/afh-rule-changes-cover.webp",
+            placeholder: "#0f1b2b",
           },
           {
             title: "Getting Started",

@@ -214,6 +214,7 @@ const AFHDosAndDonts = lazy(() => import("./pages/AFHDosAndDonts"));
 const AFHWashingtonData = lazy(() => import("./pages/AFHWashingtonData"));
 const AFHPillarGuide = lazy(() => import("./pages/AFHPillarGuide"));
 const AFHGlossary = lazy(() => import("./pages/AFHGlossary"));
+const AFHRuleChanges = lazy(() => import("./pages/AFHRuleChanges"));
 const AFHViolationHistory = lazy(() => import("./pages/AFHViolationHistory"));
 const AFHCostsFees = lazy(() => import("./pages/AFHCostsFees"));
 const AFHBuyingSelling = lazy(() => import("./pages/AFHBuyingSelling"));
@@ -1039,6 +1040,7 @@ const App = () => (
           <Route path="/afh-club/washington-afh-data" element={<AFHWashingtonData />} />
           <Route path="/afh-club/washington-adult-family-home-guide" element={<AFHPillarGuide />} />
           <Route path="/afh-club/glossary" element={<AFHGlossary />} />
+          <Route path="/afh-club/washington-afh-rule-changes" element={<AFHRuleChanges />} />
           <Route path="/afh-club/violation-history-lookup" element={<AFHViolationHistory />} />
           <Route path="/afh-club/costs-fees" element={<AFHCostsFees />} />
           <Route path="/afh-club/buying-selling" element={<AFHBuyingSelling />} />
