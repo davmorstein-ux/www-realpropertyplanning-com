@@ -313,6 +313,13 @@
       "description": "Browse Adult Family Homes for sale — property, business, or both. A dedicated Washington AFH buy/sell marketplace.",
       "browseListings": "Browse listings",
       "sellYourAfh": "Sell Your AFH"
+    },
+    "startHere": {
+      "lead": "New to adult family homes?",
+      "start": "Start with",
+      "guide": "Washington Adult Family Homes: The Complete Guide",
+      "and": "and the",
+      "glossary": "AFH Glossary"
     }
   },
   "costOfCarePage": {

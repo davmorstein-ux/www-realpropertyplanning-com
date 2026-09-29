@@ -791,6 +791,20 @@ const AFHClub = () => {
               </Link>
             ))}
           </div>
+          {/* Start-here links (Sept 29, 2026): the pillar guide and glossary are English-only pages. */}
+          <p
+            className="rpp-afh-starthere"
+            style={{ maxWidth: 1000, margin: "28px auto 0", textAlign: "center", fontFamily: "'DM Sans', sans-serif", fontSize: 19, lineHeight: 1.7, color: "#342e28" }}
+          >
+            <strong>{t("afhClubPage.startHere.lead")}</strong> {t("afhClubPage.startHere.start")}{" "}
+            <Link to="/afh-club/washington-adult-family-home-guide" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
+              {t("afhClubPage.startHere.guide")}
+            </Link>{" "}
+            {t("afhClubPage.startHere.and")}{" "}
+            <Link to="/afh-club/glossary" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
+              {t("afhClubPage.startHere.glossary")}
+            </Link>
+          </p>
         </section>
 
         {/* ==================================================================

@@ -261,6 +261,8 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
       {
         links: [
           { title: "AFH Club Home", href: "/afh-club" },
+          { title: "Washington Adult Family Homes: The Complete Guide", href: "/afh-club/washington-adult-family-home-guide" },
+          { title: "AFH Glossary", href: "/afh-club/glossary" },
           { title: "Is an Adult Family Home Right for You?", href: "/afh-club/getting-started" },
           { title: "What Is an Adult Family Home?", href: "/afh-club/what-is-an-adult-family-home" },
           { title: "AFH Resource Library", href: "/afh-club/resources" },

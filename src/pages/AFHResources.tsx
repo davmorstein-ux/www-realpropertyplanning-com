@@ -169,6 +169,20 @@ const AFHResources = () => (
             Everything you need to know about opening, operating, buying, or selling an Adult Family Home in Washington
             State — organized by topic so you can go straight to what matters most.
           </p>
+          <p
+            className="rpp-afhres-start"
+            style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#342e28", lineHeight: 1.7, margin: "16px 0 0" }}
+          >
+            <strong>New here?</strong> Start with{" "}
+            <Link to="/afh-club/washington-adult-family-home-guide" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
+              Washington Adult Family Homes: The Complete Guide
+            </Link>
+            , and keep the{" "}
+            <Link to="/afh-club/glossary" style={{ color: "#1B3A6B", textDecoration: "underline", textUnderlineOffset: 3 }}>
+              AFH Glossary
+            </Link>{" "}
+            open for the acronyms.
+          </p>
         </div>
       </section>
 
