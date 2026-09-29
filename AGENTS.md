@@ -210,7 +210,7 @@ APIs, and **relative imports, not the `@/` alias**.
 
 ## 8. Content rules and what has been verified
 
-- **Contact addresses (owner, Sept 29, 2026):** dave@steinappraisal.com is DEAD (unused 6+ years) and must never appear anywhere. Appraisal inquiries and the appraiser's shown email use david@realpropertyplanning.com. Never publish or route to an email address the owner has not confirmed in conversation.
+- **Contact addresses (owner, Sept 29, 2026):** The old Stein Appraisal email address is DEAD (unused 6+ years) and must never appear anywhere; src/test/deadEmail.test.ts fails if it does. Appraisal inquiries and the appraiser's shown email use david@realpropertyplanning.com. Never publish or route to an email address the owner has not confirmed in conversation.
 
 - **AFH annual license fee — ANSWERED in writing by DSHS, Sept 29, 2026:** $450 per licensed bed, in place since July 2025, set in the biennial omnibus appropriations act; DSHS announces changes in provider letters and mails a billing statement 60 days before the license anniversary month. Cite it as DSHS's written answer. DSHS's AFH License Application Process slideshow: https://www.dshs.wa.gov/sites/default/files/2026-04/AFH-License-Application-Process-Informational-Slideshow.pptx (linked from the prospective-providers page).
 
