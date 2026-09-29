@@ -68,7 +68,7 @@ const afhArticleSchema = {
   description: "A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State — how to search, read reports, spot red flags, and know what the records actually mean.",
   url: "https://realpropertyplanning.com/afh-club/violation-history-lookup",
   datePublished: "2026-07-27",
-  dateModified: "2026-07-27",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -102,7 +102,7 @@ const AFHViolationHistory = () => (
           <div className="mb-6">
             <ArticleAudioPlayer audioSrc="/audio/afh-violation-lookup.mp3" />
           </div>
-          <p style={label}>AFH Club · Resource Guide · Last reviewed July 2026</p>
+          <p style={label}>AFH Club · Resource Guide · Last reviewed September 2026</p>
           <h1
             style={{
               fontSize: "clamp(32px, 5vw, 50px)",
@@ -143,9 +143,9 @@ const AFHViolationHistory = () => (
       <section style={sectionWhite}>
         <div style={wrap}>
           <p style={body}>
-            There is no "violations" button on the DSHS site. Instead, records are under "Reports and Inspection
-            Letters," where you will find inspections, deficiencies, complaints, enforcement actions, and compliance
-            updates.
+            There is no "violations" button on the DSHS site. Instead, each home's listing in the DSHS Adult Family
+            Home Locator links to its reports and inspection letters, where you will find inspection reports,
+            deficiency citations, complaint investigation results, and enforcement letters.
           </p>
           <div
             style={{
@@ -162,7 +162,7 @@ const AFHViolationHistory = () => (
               <li style={li}>Go to the DSHS Adult Family Home Locator</li>
               <li style={li}>Search for the home</li>
               <li style={li}>Open the listing</li>
-              <li style={li}>Click "View letters" under "Reports and Inspection Letters"</li>
+              <li style={li}>Open the home's reports and inspection letters</li>
               <li style={li}>Review inspections, deficiencies, corrections, and enforcement actions</li>
             </ol>
           </div>
@@ -191,16 +191,23 @@ const AFHViolationHistory = () => (
       <section style={sectionWhite}>
         <div style={wrap}>
           <h2 style={h2}>What Records Are Available</h2>
-          <p style={body}>Most records cover roughly the past three years. You may see:</p>
+          <p style={body}>
+            DSHS says the Locator shows limits and enforcement issued within the previous three years. The
+            advanced search of enforcement letters goes back further, to actions from 2011. You may see:
+          </p>
           <ul style={{ margin: "0 0 20px", paddingLeft: 22 }}>
-            <li style={li}>Inspection letters</li>
-            <li style={li}>Statements of deficiency</li>
-            <li style={li}>Complaint investigations</li>
-            <li style={li}>Correction plans or attestations</li>
-            <li style={li}>Return-to-compliance notices</li>
-            <li style={li}>Enforcement actions or license conditions</li>
+            <li style={li}>Inspection reports, including any cited deficiencies</li>
+            <li style={li}>Complaint investigation results</li>
+            <li style={li}>Enforcement letters, such as civil penalties, license conditions, or stop placement</li>
+            <li style={li}>Limits on the type of residents the home can accept</li>
           </ul>
-          <p style={{ ...body, margin: 0 }}>Not every home will have every document.</p>
+          <p style={body}>Not every home will have every document.</p>
+          <p style={{ ...body, margin: 0 }}>
+            The home itself must also keep a copy of every inspection report it received from DSHS in the past three
+            years available for residents and the public to review (RCW 70.128.080). You can ask to see them. Licensed
+            homes are inspected at least every 18 months, and up to every 24 months for a home with no citations on
+            its last three inspections (RCW 70.128.070).
+          </p>
         </div>
       </section>
 
@@ -210,15 +217,15 @@ const AFHViolationHistory = () => (
           <h2 style={h2}>How to Look Up an AFH</h2>
           <ol style={{ margin: "0 0 20px", paddingLeft: 22 }}>
             <li style={li}>Go to the DSHS Adult Family Home Locator</li>
-            <li style={li}>Search by name, city, ZIP, or license number</li>
-            <li style={li}>Use advanced search if needed</li>
+            <li style={li}>Search for the home by name or location</li>
+            <li style={li}>Use the advanced search if needed (it also searches enforcement letters)</li>
             <li style={li}>Confirm the correct home (address, phone, license)</li>
-            <li style={li}>Click "View letters" under Reports and Inspection Letters</li>
+            <li style={li}>Open the home's reports and inspection letters</li>
             <li style={li}>Open and read each document</li>
             <li style={li}>Match each issue to its outcome</li>
           </ol>
           <p style={{ ...body, margin: 0, fontStyle: "italic" }}>
-            If it says "This facility has none," it only means no documents are currently displayed.
+            If no documents are listed, it only means no documents are currently displayed.
           </p>
         </div>
       </section>
@@ -238,13 +245,11 @@ const AFHViolationHistory = () => (
 
           <h3 style={h3}>What the Documents Mean</h3>
           <ul style={{ margin: "0 0 20px", paddingLeft: 22 }}>
-            <li style={li}><strong>Inspection letter:</strong> routine licensing visit</li>
-            <li style={li}><strong>Statement of deficiency:</strong> rule violation identified</li>
+            <li style={li}><strong>Inspection report:</strong> the result of a licensing inspection. When DSHS finds the home out of compliance, it sends an inspection report citing each deficiency</li>
             <li style={li}><strong>Investigation report:</strong> complaint reviewed</li>
-            <li style={li}><strong>Correction plan:</strong> how the issue was fixed</li>
-            <li style={li}><strong>Return-to-compliance:</strong> issue resolved</li>
-            <li style={li}><strong>Enforcement action:</strong> penalties or restrictions</li>
-            <li style={li}><strong>License condition:</strong> limits on operations or admissions</li>
+            <li style={li}><strong>Attestation of correction:</strong> the home's signed statement, returned within 10 calendar days, that it has corrected or will correct each deficiency by a date DSHS approves. The home keeps its own plan of correction and must show it to DSHS on request (WAC 388-76-10930, as amended September 20, 2026)</li>
+            <li style={li}><strong>Enforcement action:</strong> civil penalties, suspension or revocation of the license, or stop placement, which suspends admissions (RCW 70.128.160)</li>
+            <li style={li}><strong>License condition:</strong> conditions DSHS places on the license, such as correction within a set time, training, or limits on the type of residents the home may admit or serve</li>
           </ul>
         </div>
       </section>
@@ -252,7 +257,7 @@ const AFHViolationHistory = () => (
       {/* What "none" means */}
       <section style={sectionLight}>
         <div style={wrap}>
-          <h2 style={h2}>What "This Facility Has None" Means</h2>
+          <h2 style={h2}>What It Means When No Documents Are Listed</h2>
           <p style={body}>It does <strong>not</strong> mean:</p>
           <ul style={{ margin: "0 0 20px", paddingLeft: 22 }}>
             <li style={li}>No past violations</li>
@@ -320,6 +325,7 @@ const AFHViolationHistory = () => (
             <li style={li}>Review all reports, not just the latest</li>
             <li style={li}>Identify whether issues relate to current or prior operator</li>
             <li style={li}>Confirm active enforcement actions</li>
+            <li style={li}>Ask the seller about any ongoing limits, exemptions, or outstanding enforcement on the current license</li>
             <li style={li}>Request older records</li>
           </ul>
           <p style={{ ...body, margin: 0 }}>
@@ -333,7 +339,7 @@ const AFHViolationHistory = () => (
         <div style={wrap}>
           <h2 style={h2}>Limits of the System</h2>
           <ul style={{ margin: "0 0 20px", paddingLeft: 22 }}>
-            <li style={li}>Typically shows only recent years</li>
+            <li style={li}>Limits and enforcement are shown for the previous three years</li>
             <li style={li}>Posting delays can occur</li>
             <li style={li}>Some data is redacted</li>
             <li style={li}>Not all complaints appear publicly</li>
@@ -349,7 +355,11 @@ const AFHViolationHistory = () => (
       <section style={sectionWhite}>
         <div style={wrap}>
           <h2 style={h2}>Requesting More Information</h2>
-          <p style={body}>Contact DSHS or submit a public records request. Include:</p>
+          <p style={body}>
+            Contact the Residential Care Services office for the area where the home is located, or submit a public
+            records request to DSHS (online form, email DSHSPublicDisclosure@dshs.wa.gov, or call (360) 902-8484).
+            Include:
+          </p>
           <ul style={{ margin: "0 0 20px", paddingLeft: 22 }}>
             <li style={li}>Facility name</li>
             <li style={li}>Address</li>
@@ -361,7 +371,7 @@ const AFHViolationHistory = () => (
           <h3 style={h3}>Reporting a Concern</h3>
           <ul style={{ margin: 0, paddingLeft: 22 }}>
             <li style={li}><strong>Emergency:</strong> call 911</li>
-            <li style={li}><strong>DSHS Complaint Resolution Unit:</strong> 1-800-562-6078</li>
+            <li style={li}><strong>DSHS Complaint Resolution Unit:</strong> 1-800-562-6078 (TTY 1-800-737-7931)</li>
             <li style={li}><strong>Long-Term Care Ombudsman:</strong> available for independent support</li>
           </ul>
         </div>
@@ -372,7 +382,7 @@ const AFHViolationHistory = () => (
         <div style={wrap}>
           <h2 style={h2}>Final Takeaway</h2>
           <p style={body}>
-            Use the DSHS Locator and review "Reports and Inspection Letters." Focus on the full story: what happened,
+            Use the DSHS Locator and review the home's reports and inspection letters. Focus on the full story: what happened,
             how it was corrected, and whether compliance was restored.
           </p>
           <p style={{ ...body, margin: 0, fontWeight: 600 }}>

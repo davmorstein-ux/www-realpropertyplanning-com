@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-// @ts-expect-error plain .mjs script, no type declarations
+// @ts-ignore plain .mjs script with no type declarations (the error differs between tsconfigs)
 import { computeAfhStats } from "../../scripts/build-afh-stats.mjs";
 import stats from "@/data/afh/stats.json";
 

@@ -349,10 +349,10 @@ const AFHRegulationsCompliance = () => (
                 margin: 0,
               }}
             >
-              <strong>Important for families:</strong> Public inspection reports show only the most recent three years
-              of records. When an AFH changes ownership, the license number often changes and prior violations may no
-              longer appear in the public file — even if the building and residents remain the same. Use the DSHS
-              Locator as a starting point, not the complete picture.
+              <strong>Important for buyers:</strong> DSHS says the Locator shows limits and enforcement issued within the
+              previous three years, and each home must keep its last three years of inspection reports available to
+              anyone who asks (RCW 70.128.080). A change of ownership brings a new license, so a previous owner's record
+              may not follow the address. Use the DSHS Locator as a starting point, not the complete picture.
             </p>
           </div>
         </div>
@@ -745,9 +745,9 @@ const AFHRegulationsCompliance = () => (
                 margin: 0,
               }}
             >
-              <strong>Limitation to be aware of:</strong> The DSHS AFH Locator shows only the most recent three years of
-              records. When a home changes ownership, the license number changes and prior violations may disappear from
-              the public file. Always ask the current owner about any ongoing limits, exemptions, or outstanding
+              <strong>Limitation to be aware of:</strong> DSHS says the Locator shows limits and enforcement issued within
+              the previous three years. A change of ownership brings a new license, so a previous owner's record may not
+              follow the address. Always ask the current owner about any ongoing limits, exemptions, or outstanding
               enforcement on the existing license before making a decision.
             </p>
           </div>

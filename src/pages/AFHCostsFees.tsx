@@ -13,88 +13,97 @@ import audioAsset from "@/assets/afh-costs-fees.mp3.asset.json";
 const STARTUP_COSTS = [
   {
     category: "DSHS Annual License Fee",
-    amount: "$450 per licensed bed",
+    amount: "Per bed, set in the state budget",
     detail:
-      "Effective July 1, 2025 (doubled from $225/bed). A 6-bed home pays $2,700/year. Due annually — late payment triggers a stop-placement order.",
-    source: "ESSB 5167 / DSHS Letter 2025-016",
+      "The per-bed annual fee is set in the state operating budget, not in rule. It is due each year in the month the home was first licensed, and DSHS imposes remedies if it is not paid. Unpaid annual fees were the second most-cited adult family home deficiency in DSHS's most recent published list (fourth quarter of 2024). Confirm the current per-bed amount with DSHS before you budget.",
+    source: "RCW 70.128.060; WAC 388-76-10025",
+  },
+  {
+    category: "DSHS Application & Processing Fees",
+    amount: "Set in the state budget",
+    detail:
+      "Fees must be paid with the application. The processing fee applies to every application, including a new license, a change of ownership, and a change of location. Confirm current amounts with DSHS.",
+    source: "WAC 388-76-10070; WAC 388-76-10073",
   },
   {
     category: "Background Checks",
-    amount: "$40–$80 per person",
+    amount: "Varies",
     detail:
-      "Required for provider, all household members, and staff. Must be renewed every two years for ongoing employees.",
-    source: "WAC 388-76-10135",
+      "The applicant, anyone affiliated with the applicant, entity representatives, resident managers and caregivers need a Washington State name and date of birth check and a national fingerprint check. Household members over age 11, volunteers and noncaregiving staff with unsupervised access need the name and date of birth check. The name and date of birth check must be renewed every two years; the fingerprint check does not expire.",
+    source: "WAC 388-76-10161; WAC 388-76-10165",
   },
   {
-    category: "HCA Training (75 hours)",
-    amount: "$800–$2,000",
+    category: "Home Care Aide Training (75 hours)",
+    amount: "Varies by training provider",
     detail:
-      "Tuition varies by training provider. The Long-Term Care Foundation may cover this cost for Medicaid-contracted AFHs through the Training Network.",
-    source: "WAC 388-112A",
+      "Tuition varies by training provider. The Long-Term Care Foundation's Adult Family Home Training Network covers training and testing for employees of Medicaid-contracted homes that have at least one Medicaid resident; it is not a way for a new applicant to fund their own training.",
+    source: "Chapter 388-112A WAC",
   },
   {
-    category: "HCA Certification Exam",
-    amount: "~$125",
-    detail: "DOH exam fee. Scheduling changed as of February 2024 — contact DOH for current process.",
-    source: "Washington DOH",
+    category: "Home Care Aide Certification (DOH)",
+    amount: "$100 application",
+    detail:
+      "The Department of Health charges $100 to apply for Home Care Aide certification and $100 to renew. The exam is scheduled and paid for separately; check DOH for the current exam process and fee.",
+    source: "WAC 246-980-990",
   },
   {
     category: "AFH Administrator Training",
-    amount: "$300–$600",
-    detail: "Offered through contracted community colleges. North Seattle College is one primary provider.",
-    source: "WAC 388-112A-0800",
+    amount: "Varies by college",
+    detail:
+      "At least 48 hours of instruction from an approved community college. Required of applicants and entity representatives.",
+    source: "WAC 388-112A-0800; WAC 388-76-10064",
   },
   {
     category: "CPR & First Aid",
-    amount: "$50–$150",
-    detail: "Varies by provider. Must remain current throughout licensure.",
-    source: "WAC 388-76-10120",
+    amount: "Varies",
+    detail: "Required of the provider, entity representative and resident manager. Cost varies by course provider.",
+    source: "WAC 388-76-10130",
   },
   {
     category: "Building Modifications",
-    amount: "$2,000–$30,000+",
+    amount: "Varies widely",
     detail:
-      "Highly variable. Ramps, bathroom modifications, window upgrades, and fire safety improvements are common. Septic upgrades can cost significantly more.",
+      "Depends almost entirely on the house. Ramps, bathroom modifications, escape windows, and smoke and carbon monoxide alarms are common. DSHS warns that septic system improvements can carry significant costs.",
     source: "WAC 51-51-0330",
   },
   {
     category: "Remodel & Building Permits",
-    amount: "$500–$3,000+",
+    amount: "Varies by jurisdiction",
     detail:
       "Permit fees vary by jurisdiction and scope of work. Some jurisdictions have flat AFH permit fees; others charge by project cost.",
     source: "Local jurisdiction",
   },
   {
     category: "Liability Insurance",
-    amount: "$1,900–$2,800/year",
+    amount: "About $1,900–$2,840/year (6 beds)",
     detail:
-      "Required by WAC 388-76-10191. Annual per-bed premiums ranged from $318 (2019) to $473 (2024) per bed per year. For a 6-bed home, expect approximately $1,900–$2,800 annually. Some insurers have training requirements beyond DSHS minimums.",
-    source: "WA OIC 2025 Report",
+      "Required by WAC 388-76-10191, with minimum limits of $500,000 per occurrence and $1,000,000 aggregate. The Insurance Commissioner's 2025 study found the average annual premium was $318 per bed in 2019 and $473 per bed in 2024. Six beds at those averages is about $1,900 to $2,840 a year. Some insurers have training and experience requirements beyond DSHS minimums.",
+    source: "WAC 388-76-10192; WA OIC 2025 study",
   },
   {
     category: "Business Registration",
-    amount: "$90–$200",
+    amount: "$50 + endorsements",
     detail:
-      "Required with the Washington Secretary of State and Department of Revenue. Entity providers (LLCs, corporations) have additional formation costs.",
-    source: "WA Dept. of Revenue",
+      "The Department of Revenue charges a $50 processing fee to open a new business license, plus any city or state endorsement fees. Forming an LLC with the Secretary of State costs $180 plus an online processing fee.",
+    source: "WA Dept. of Revenue; WA Secretary of State",
   },
 ];
 
 const REVENUE_CONTEXT = [
   {
-    label: "Private pay (private room)",
-    amount: "$5,000–$7,500+/month",
-    note: "Per resident. Market rate varies significantly by location and level of care.",
+    label: "Private pay",
+    amount: "Set by the provider",
+    note: "Per resident. Market rates vary by location, room and level of care.",
   },
   {
     label: "Medicaid daily rate",
     amount: "Varies by classification",
-    note: "Rates set by WAC 388-105. Increased July 1, 2024. Depends on county, care level, and specialty contracts.",
+    note: "Set under chapter 388-105 WAC and the state's collective bargaining agreement with the Adult Family Home Council. Depends on the resident's assessed care level, the county, and any specialty contract.",
   },
   {
     label: "Maximum residents (standard)",
     amount: "6 residents",
-    note: "Expansion to 7–8 possible for qualified homes with clean compliance history under RCW 70.128.066.",
+    note: "Seven or eight is possible after at least 24 months of licensure and other requirements, including inspections without enforcement actions and sprinklers, under RCW 70.128.066.",
   },
 ];
 
@@ -106,10 +115,10 @@ const afhArticleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "AFH Costs & Fees",
-  description: "Complete breakdown of Washington State Adult Family Home startup costs, annual licensing fees, liability insurance, building permits, and Medicaid rate information for 2025.",
+  description: "Breakdown of Washington State Adult Family Home startup costs, annual licensing fees, liability insurance, building permits, and Medicaid rate information.",
   url: "https://realpropertyplanning.com/afh-club/costs-fees",
   datePublished: "2026-07-24",
-  dateModified: "2026-07-24",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -123,7 +132,7 @@ const AFHCostsFees = () => (
   <>
     <SEOHead
       title="AFH Costs & Fees | AFH Club | Real Property Planning"
-      description="Complete breakdown of Washington State Adult Family Home startup costs, annual licensing fees, liability insurance, building permits, and Medicaid rate information for 2025."
+      description="Breakdown of Washington State Adult Family Home startup costs, annual licensing fees, liability insurance, building permits, and Medicaid rate information."
       canonical="https://realpropertyplanning.com/afh-club/costs-fees"
       ogType="article"
       schemaJson={afhArticleSchema}
@@ -177,7 +186,7 @@ const AFHCostsFees = () => (
             }}
           >
             Opening an Adult Family Home involves a range of startup costs that can surprise unprepared applicants. This
-            page provides a realistic breakdown of fees, licensing costs, and ongoing expenses — updated for 2025 — so
+            page breaks down fees, licensing costs, and ongoing expenses, with the rule or agency behind each one, so
             you can plan with clear eyes.
           </p>
           <div
@@ -199,8 +208,8 @@ const AFHCostsFees = () => (
                 margin: 0,
               }}
             >
-              <strong>2025 fee increase:</strong> Effective July 1, 2025, the annual DSHS licensing fee doubled from
-              $225 to $450 per bed as part of the state budget (ESSB 5167). Plan accordingly.
+              <strong>Annual license fee:</strong> The per-bed fee is set in the state operating budget and can change
+              with each budget. Confirm the current amount with DSHS before you budget, and pay it on time every year.
             </p>
           </div>
         </div>
@@ -250,9 +259,9 @@ const AFHCostsFees = () => (
               margin: "0 0 28px",
             }}
           >
-            Total startup costs before first revenue typically range from <strong>$20,000 to $50,000 or more</strong>{" "}
-            depending on the condition of your home, your prior training, and your jurisdiction's permit fees. Building
-            modifications are the largest and most variable expense.
+            Total startup costs before first revenue depend on the condition of the home, the training you already
+            have, and your jurisdiction's permit fees. Building modifications are usually the largest and most variable
+            expense.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {STARTUP_COSTS.map((item, i) => (
@@ -358,9 +367,12 @@ const AFHCostsFees = () => (
               margin: "0 0 20px",
             }}
           >
-            Liability insurance is required for all licensed AFHs under WAC 388-76-10191 through 10192. Coverage for
-            AFHs in Washington typically comes from surplus lines insurers and risk retention groups — not the standard
-            homeowner's insurance market.
+            Liability insurance is required for all licensed AFHs under WAC 388-76-10191 through 10192: commercial
+            general liability and professional liability, each with limits of at least $500,000 per occurrence and
+            $1,000,000 aggregate, in place before the first resident is admitted or within 10 working days of the
+            license, whichever comes first. A Medicaid contract may require higher limits. Coverage for AFHs in
+            Washington comes from surplus lines insurers and risk retention groups, not the standard homeowner's
+            insurance market.
           </p>
           <p
             style={{
@@ -371,10 +383,10 @@ const AFHCostsFees = () => (
               margin: "0 0 20px",
             }}
           >
-            A 2025 report by the Washington Office of the Insurance Commissioner found that the annual per-bed premium
-            ranged from $318 (2019) to $473 (2024). For a 6-bed home this equates to approximately $1,900–$2,800 per
-            year. Some insurers impose training and experience requirements above and beyond what DSHS requires for
-            licensure.
+            A 2025 study by the Washington Office of the Insurance Commissioner found that the average annual premium
+            was $318 per bed in 2019 and $473 per bed in 2024. For a 6-bed home that is about $1,900 to $2,840 a year.
+            DSHS notes that some insurers impose training and experience requirements above and beyond what DSHS
+            requires for licensure.
           </p>
           <div
             style={{
@@ -439,9 +451,8 @@ const AFHCostsFees = () => (
               margin: "0 0 24px",
             }}
           >
-            AFH revenue comes from private pay, Medicaid (for contracted homes), or a combination of both. Private pay
-            rates in Washington typically start at $5,000 per month per resident for a private room, with averages
-            reported between $3,800 and $6,750 depending on location and level of care.
+            AFH revenue comes from private pay, Medicaid (for contracted homes), or a combination of both. The provider
+            sets private-pay rates; Medicaid rates are set by the state.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 28 }}>
             {REVENUE_CONTEXT.map((item, i) => (
@@ -507,9 +518,10 @@ const AFHCostsFees = () => (
               margin: "0 0 20px",
             }}
           >
-            Medicaid rates are governed by WAC 388-105 and were increased effective July 1, 2024. Rates vary by county,
-            care classification, and specialty contract type. Homes with specialty contracts (Dementia, ECS, SBS)
-            qualify for higher rates but must meet additional training and qualification requirements.
+            Medicaid rates are set under chapter 388-105 WAC and the state's 2025-27 collective bargaining agreement
+            with the Adult Family Home Council, and DSHS publishes the current rate tables. Rates vary by county and
+            care classification. Specialty contracts such as Expanded Community Services (ECS) and Specialized Behavior
+            Support (SBS) pay more but need AFH program approval and carry additional requirements.
           </p>
           <div
             style={{
@@ -529,8 +541,9 @@ const AFHCostsFees = () => (
                 margin: 0,
               }}
             >
-              Allow 3–6 months from application to first resident. Homes typically do not reach full capacity
-              immediately. Financial planning should account for a ramp-up period before reaching stable revenue.
+              In late September 2026 DSHS was processing license applications received in May 2026, and it allows up
+              to 60 days once an application is complete. Most applicants do not pass the first inspection. Homes
+              typically do not reach full capacity immediately, so plan for a ramp-up period before revenue is stable.
               Consulting a CPA familiar with AFH operations before opening is strongly advised.
             </p>
           </div>
@@ -552,13 +565,21 @@ const AFHCostsFees = () => (
                 label: "DSHS AFH Annual License Fee Information",
                 url: "https://www.dshs.wa.gov/altsa/afh-annual-license-fee",
               },
+              {
+                label: "DSHS Application Processing Timeline",
+                url: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline",
+              },
               { label: "Medicaid Rates — WAC 388-105", url: "https://app.leg.wa.gov/wac/default.aspx?cite=388-105" },
+              {
+                label: "DSHS Current Rates (PDF)",
+                url: "https://www.dshs.wa.gov/sites/default/files/ALTSA/msd/documents/All_HCS_Rates.pdf",
+              },
               {
                 label: "WA Insurance Commissioner AFH Insurance Report (2025)",
                 url: "https://www.insurance.wa.gov/about-us/news/2025/study-liability-insurance-adult-family-homes-finds-market-reasonable-shape",
               },
               {
-                label: "Long-Term Care Foundation Training Network (Tuition Support)",
+                label: "AFH Training Network (staff of Medicaid-contracted homes)",
                 url: "https://www.longtermcarefoundationwa.org/training-network",
               },
               {

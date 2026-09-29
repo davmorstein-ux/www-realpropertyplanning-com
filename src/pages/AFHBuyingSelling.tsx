@@ -17,27 +17,27 @@ const CHOW_STEPS = [
   {
     step: "1",
     title: "Research the home thoroughly",
-    body: "Use the DSHS AFH Locator to check the home's licensing status, any limits, enforcements, or exemptions issued in the previous three years. Ask the seller about any ongoing limits, outstanding enforcement, or specialty contracts in place.",
+    body: "Use the DSHS AFH Locator to check the home's licensing status and any limits and enforcements issued in the previous three years. Ask the current owner about any ongoing limits or exemptions, any outstanding enforcement on the current license, and any specialty contracts in place. The new owner must correct all deficiencies that exist at the time of the ownership change (WAC 388-76-10105).",
   },
   {
     step: "2",
     title: "Verify specialty contracts separately",
-    body: "Specialty contracts (ECS, SBS) do not transfer with ownership. If the home operates under specialty contracts, you must independently qualify and execute new contracts before providing or billing for those services.",
+    body: "Specialty contracts such as Expanded Community Services (ECS) and Specialized Behavior Support (SBS) do not transfer at a change of ownership. You must meet the qualifications and have your own fully executed contract before providing or billing for those services; ECS and SBS also need approval from DSHS AFH program staff. (DSHS's list also names Meaningful Day, but HCS Meaningful Day funding ended July 1, 2025.) The Medicaid contract is new too: DSHS starts it the day the new license is assigned, the day after the seller's license closes.",
   },
   {
     step: "3",
     title: "Complete all provider qualifications",
-    body: "You must meet all current DSHS qualification requirements — training, certification, background check, caregiving hours — regardless of the seller's qualifications. The license does not transfer.",
+    body: "You must meet all current DSHS qualification requirements — training, certification, background check, caregiving experience — regardless of the seller's qualifications. The license does not transfer (WAC 388-76-10010). To buy a seven- or eight-bed home, you must already have been a licensed AFH provider for at least 24 months and meet the other conditions in WAC 388-76-10032.",
   },
   {
     step: "4",
     title: "Prepare the home for inspection",
-    body: "Even if the home has been previously licensed, a new inspection may be required depending on the scope of the CHOW. Review the current WABO checklist against the home's current condition.",
+    body: "DSHS inspects the home on site as part of licensing. Most applicants do not pass the first inspection, and DSHS allows at most three visits. DSHS has confirmed in writing that a home licensed continuously through the sale is held to the rules in place when it was first licensed, so the 27-inch interior door rule for homes licensed after Sept. 20, 2026 does not apply to the buyer. A home whose license has lapsed must meet current rules. Review the current building checklist (DSHS form 15-604) against the home's condition.",
   },
   {
     step: "5",
     title: "Submit a new DSHS license application",
-    body: "Apply through the DSHS BAAU online portal. A complete license application is required — there is no abbreviated process for CHOW transactions.",
+    body: "Apply through the DSHS BAAU online portal. A change of ownership requires a complete new license application and a new license (WAC 388-76-10105). The current provider may ask DSHS in writing for priority processing to avoid disrupting residents (WAC 388-76-10107).",
   },
   {
     step: "6",
@@ -49,19 +49,19 @@ const CHOW_STEPS = [
 const SELLER_CONSIDERATIONS = [
   {
     title: "Disclose all limits and enforcements",
-    body: "Sellers are obligated to disclose any ongoing limits on the license, exemptions, outstanding enforcement actions, or restrictions on the type of residents the home can accept. These must be posted in the home and disclosed to buyers.",
+    body: "Limits on the type of residents the home can accept, or on who can provide care, must be posted in the home. DSHS tells buyers to ask the current owner about any ongoing limits or exemptions and any outstanding enforcement on the current license, so expect those questions and answer them in writing.",
   },
   {
     title: "Understand what transfers — and what does not",
-    body: "The real estate transfers. The license does not. Specialty contracts do not transfer. Resident relationships continue but under a new license once the buyer is approved. Plan the transition carefully to protect current residents.",
+    body: "The real estate transfers. The license does not, and neither do specialty contracts or the Medicaid contract. Residents decide whether to stay or move. Medicaid residents who stay need no new assessment, but they need new authorizations under the new owner's ProviderOne number. An Exception to Rule follows the resident.",
   },
   {
     title: "AFH sale price versus residential sale price",
-    body: "A licensed, operating AFH typically commands a premium over the equivalent residential property. The business value — bed capacity, established compliance history, specialty contracts, referral relationships — affects pricing beyond the real estate alone.",
+    body: "A licensed, operating AFH can sell for more than the same house as a residence when the buyer is also paying for the business: occupancy, staff, referral relationships and the home's inspection record. The license and specialty contracts do not transfer, so they are not something the buyer receives. A residential appraisal values the real estate only; value the business separately.",
   },
   {
     title: "Timing the DSHS process into your sale timeline",
-    body: "CHOW requires the buyer to obtain a new license before they can operate the home. There is no fixed processing timeline. Sales involving operational transitions of residents require careful coordination between seller, buyer, DSHS, and legal counsel.",
+    body: "You must give DSHS and each resident (or their representative) written notice 60 calendar days before the proposed change of ownership, naming the buyer, the resident's right to decide whether to stay or move, and any policy change that could affect them, such as whether the home will serve Medicaid residents (WAC 388-76-10106). DSHS may waive the 60 days if it grants priority processing. The buyer cannot operate until DSHS issues the new license, and DSHS will not estimate how long that takes.",
   },
 ];
 
@@ -76,7 +76,7 @@ const afhArticleSchema = {
   description: "Complete guide to buying or selling an Adult Family Home in Washington State — CHOW process, what transfers, DSHS locator, specialty contracts, and real estate considerations.",
   url: "https://realpropertyplanning.com/afh-club/buying-selling",
   datePublished: "2026-07-24",
-  dateModified: "2026-07-24",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -195,7 +195,8 @@ const AFHBuyingSelling = () => (
           >
             CHOW stands for <strong>Change of Ownership</strong>. When an Adult Family Home is sold, DSHS requires the
             new owner to apply for a completely new AFH license. The existing license does not transfer to the buyer —
-            it remains with the seller until it expires or is surrendered.
+            it is valid only for the seller and that address, and it closes when the seller relinquishes or surrenders
+            it.
           </p>
           <p
             style={{
@@ -207,8 +208,8 @@ const AFHBuyingSelling = () => (
             }}
           >
             This means the buyer must meet all current DSHS qualifications, complete the same training requirements,
-            pass a background check, and in most cases have the home re-inspected — even if the home was recently
-            licensed.
+            pass a background check, and have the home inspected by DSHS as part of licensing — even if the home was
+            recently licensed.
           </p>
           <p
             style={{
@@ -219,9 +220,9 @@ const AFHBuyingSelling = () => (
               margin: "0 0 24px",
             }}
           >
-            Because violations are tied to the license rather than the physical home, a buyer's public record for that
-            address may appear clean even if the previous operator had significant enforcement history. Always research
-            the seller's license history directly — not just the address.
+            The DSHS AFH Locator shows limits and enforcements issued in the previous three years only. Anything older,
+            and anything still in progress, you learn by asking the current owner. The new owner must correct every
+            deficiency that exists at the time of the ownership change.
           </p>
           <div
             style={{
@@ -294,8 +295,10 @@ const AFHBuyingSelling = () => (
               margin: "0 0 28px",
             }}
           >
-            There is no abbreviated licensing path for CHOW buyers. Plan for the same timeline as a new applicant —
-            typically several months from application to license issuance.
+            A CHOW buyer files a full license application. DSHS will not estimate how long a change-of-ownership license
+            takes; a complete application avoids delays. Its posted queue showed applications received in May 2026
+            being processed in late September 2026, and once an application is complete, processing can take up to 60
+            days.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {CHOW_STEPS.map((item, i) => (
@@ -440,7 +443,7 @@ const AFHBuyingSelling = () => (
               margin: "0 0 16px",
             }}
           >
-            Real Estate Services
+            Featured Professionals
           </p>
           <h2
             style={{
@@ -464,9 +467,9 @@ const AFHBuyingSelling = () => (
               margin: "0 0 32px",
             }}
           >
-            Real Property Planning maintains a network of resources for those buying or selling Adult Family Homes
-            throughout Washington State — including real estate broker services, appraisal support, and professional
-            referrals for attorneys familiar with AFH transactions.
+            Real Property Planning can connect you with a featured Washington licensed broker or certified appraiser.
+            Licensed work is done by those professionals through their own practices, and the Find a Professional page
+            lists others who work with adult family homes.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
@@ -533,7 +536,7 @@ const AFHBuyingSelling = () => (
       </section>
       <IntentCTA
         heading="Buying or selling an adult family home?"
-        body="The license, the business, and the building can change hands together or separately, and the CHOW timeline drives everything. Ask about your situation before setting a price or making an offer."
+        body="The business and the building can change hands together or separately. The license never does: the buyer's new license drives the timeline. Ask about your situation before setting a price or making an offer."
         buttonText="Discuss the property, the business, or both"
         reason="afh-buy-sell"
         professional="broker"

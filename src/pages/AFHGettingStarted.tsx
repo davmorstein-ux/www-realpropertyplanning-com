@@ -13,7 +13,7 @@ import audioAsset from "@/assets/getting-started.mp3.asset.json";
 const REALITY_CHECKS = [
   {
     q: "Are you available around the clock?",
-    a: "AFH providers must be on-site or have a qualified caregiver present at all times. Residents may need assistance at 2am just as much as 2pm. This is not a 9-to-5 business.",
+    a: "Under WAC 388-76-10040, the provider or entity representative must live in the home or employ a resident manager who does, unless the home has 24-hour staffing with a staff person who can make needed decisions always present. Residents may need assistance at 2am just as much as 2pm. This is not a 9-to-5 business.",
   },
   {
     q: "Can you manage the emotional weight?",
@@ -25,11 +25,11 @@ const REALITY_CHECKS = [
   },
   {
     q: "Do you have the financial runway?",
-    a: "It typically takes 3–6 months from application to first resident. Startup costs — building modifications, training, insurance, and licensing — can reach $20,000–$50,000 or more before revenue begins.",
+    a: "Building modifications, training, insurance, and licensing are paid for before any revenue begins, and applicants must show proof of financial solvency (RCW 70.128.120). DSHS posts its current processing timeline: in late September 2026 it was working on applications received in May 2026, and review can take up to 60 days once an application is complete. Most applicants do not pass the first licensing inspection.",
   },
   {
     q: "Do you have caregiving experience?",
-    a: "DSHS requires at least 1,000 hours of direct caregiving experience in the previous 60 months. This is not a business you can enter without hands-on care experience.",
+    a: "WAC 388-76-10130 requires at least 1,000 hours of successful direct care experience with vulnerable adults, in a licensed or contracted setting, in the previous 60 months and after age 18. Physicians, physician assistants, and licensed RNs, ARNPs, and LPNs are exempt. This is not a business you can enter without hands-on care experience.",
   },
   {
     q: "Can you communicate effectively in English?",
@@ -41,9 +41,9 @@ const PROVIDER_TYPES = [
   {
     type: "Individual Provider",
     description:
-      "A single person who is licensed to operate the AFH and lives in or manages the home directly. The individual is personally responsible for all licensing requirements, training, and care standards. DSHS issues one license per provider.",
+      "A single person who is licensed to operate the AFH and either lives in the home or employs a resident manager who does (or staffs it 24 hours a day with a decision-maker present). The individual is personally responsible for all licensing requirements, training, and care standards.",
     pros: ["Direct personal accountability", "Simpler structure", "Provider lives in the home in many cases"],
-    cons: ["Limits scalability", "Provider bears full personal liability", "Cannot hold multiple licenses easily"],
+    cons: ["Limits scalability", "Provider bears full personal liability", "Each additional home needs its own license and proof of financial solvency and management experience (RCW 70.128.065)"],
   },
   {
     type: "Entity Provider",
@@ -51,7 +51,7 @@ const PROVIDER_TYPES = [
       "A business entity — such as an LLC, corporation, or partnership — that holds the AFH license. The entity must designate an Entity Representative who meets all individual qualification requirements. An individual may only be the entity representative for one entity provider.",
     pros: [
       "Liability protection through business structure",
-      "Enables growth and multiple homes",
+      "Can suit owners planning multiple homes or partners",
       "Professional business framework",
     ],
     cons: [
@@ -73,7 +73,7 @@ const afhArticleSchema = {
   description: "Is an Adult Family Home right for you? A comprehensive guide to what AFHs are, who can open one, individual vs entity providers, and what to expect before applying.",
   url: "https://realpropertyplanning.com/afh-club/getting-started",
   datePublished: "2026-07-24",
-  dateModified: "2026-07-24",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -202,8 +202,10 @@ const AFHGettingStarted = () => (
           >
             An Adult Family Home (AFH) is a private residence licensed by the Washington State Department of Social and
             Health Services (DSHS) to provide personal care, room, and board to adults who are not related to the
-            provider. Licensed under RCW 70.128 and regulated under WAC 388-76, AFHs may serve up to six residents, with
-            expansion to seven or eight possible for qualified homes with clean compliance histories.
+            provider. Licensed under RCW 70.128 and regulated under WAC 388-76, AFHs may serve two to six residents. DSHS may
+            approve seven or eight for a provider who has held the initial license at least 24 months (12 of them at six
+            residents), shows financial solvency and management experience, has recent inspections without enforcement
+            action, and meets the sprinkler and evacuation requirements in WAC 388-76-10031.
           </p>
           <p
             style={{
@@ -214,16 +216,18 @@ const AFHGettingStarted = () => (
               margin: "0 0 20px",
             }}
           >
-            Services provided include room and board, laundry, necessary supervision, assistance with activities of
-            daily living, personal care, and social services. Homes that obtain specialty contracts may also provide
-            more complex care for residents with dementia, mental health needs, or developmental disabilities.
+            The license covers room, board, personal care (hands-on help with, and supervision of, daily personal care
+            tasks), and special care beyond that (RCW 70.128.010; WAC 388-76-10000). Homes whose providers and staff
+            complete DSHS specialty training may carry designations for dementia, mental health, or developmental
+            disabilities, and some hold additional DSHS contracts for residents with higher needs.
           </p>
           <p
             style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#1c1917", lineHeight: 1.85, margin: 0 }}
           >
-            AFHs are permitted in all single-family residential zoning districts throughout Washington State. The
-            concept originated in Washington in the 1990s specifically to create a homelike alternative to larger
-            institutional care settings.
+            State law makes AFHs a permitted use in all areas zoned for residential or commercial purposes, including
+            single-family zones (RCW 70.128.140), and homeowners' association restrictions on licensed AFHs are
+            unenforceable (RCW 64.38.060). Washington's adult family home law, chapter 70.128 RCW, dates to 1989; the
+            Legislature describes these homes as an alternative to institutional settings (RCW 70.128.005).
           </p>
         </div>
       </section>
@@ -265,36 +269,50 @@ const AFHGettingStarted = () => (
               margin: "0 0 32px",
             }}
           >
-            Under RCW 70.128.120, prospective providers must meet all of the following qualifications before applying
-            for an AFH license:
+            Under RCW 70.128.120 and WAC 388-76-10130, prospective providers must meet all of the following
+            qualifications before applying for an AFH license:
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
             {[
-              { label: "High school diploma or equivalent", detail: "Per RCW 28B.50.536" },
+              { label: "At least 21 years old", detail: "WAC 388-76-10130." },
+              {
+                label: "High school diploma or equivalent",
+                detail:
+                  "A U.S. diploma or high school equivalency certificate (RCW 28B.50.536), or one of the college or foreign-education equivalents listed in WAC 388-76-10130.",
+              },
               {
                 label: "1,000 hours of direct caregiving experience",
                 detail:
-                  "Must be within the previous 60 months. Documented via the Caregiver Experience Attestation (CEA) form DSHS 10-417.",
+                  "Successful direct care of vulnerable adults in a licensed or contracted setting, within the previous 60 months and after age 18. Documented via the Caregiver Experience Attestation (CEA) form DSHS 10-417. Physicians, physician assistants, and licensed RNs, ARNPs, and LPNs are exempt.",
               },
               {
                 label: "Home Care Aide (HCA) certification",
                 detail:
-                  "OR qualification for one of the DSHS-approved exemptions (RNs, LPNs, CNAs, Medicare-certified home health aides, and others).",
+                  "OR qualification for one of the exemptions in RCW 18.88B.041 (RNs, LPNs, CNAs, Medicare-certified home health aides, and others).",
               },
               {
                 label: "AFH Administrator Training",
                 detail:
-                  "Offered through contracted community colleges. Required for all initial applicants and those opening additional homes.",
+                  "Offered through colleges contracted with DSHS and required of new license applicants (WAC 388-112A-0810). State law sets a minimum of 48 classroom hours (RCW 70.128.120).",
               },
               { label: "CPR and First Aid certification", detail: "First Aid not required for licensed nurses." },
-              { label: "Food Safety training", detail: "Per WAC 388-112A-0610." },
+              {
+                label: "Food Safety training",
+                detail:
+                  "A current food worker card, or 30 minutes of food safety continuing education each year using the state food workers' manual, per DSHS guidance.",
+              },
               {
                 label: "Cleared DSHS background check",
-                detail: "Required for the provider and all household members and staff.",
+                detail:
+                  "Required for the applicant, anyone affiliated with the applicant, caregivers, entity representatives, and resident managers; household members over age 11 need a Washington name and date of birth check (WAC 388-76-10161).",
               },
               {
                 label: "Good moral character and management ability",
                 detail: "DSHS evaluates this as part of the application review.",
+              },
+              {
+                label: "Proof of financial solvency",
+                detail: "Required of applicants under RCW 70.128.120.",
               },
               {
                 label: "English literacy and communication ability",
@@ -427,8 +445,7 @@ const AFHGettingStarted = () => (
               margin: "0 0 32px",
             }}
           >
-            Experienced AFH providers developed these questions to help prospective providers honestly evaluate their
-            readiness. There are no right or wrong answers — only honest ones.
+            These questions are meant to help prospective providers honestly evaluate their readiness. There are no right or wrong answers — only honest ones.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {REALITY_CHECKS.map((item, i) => (
@@ -689,7 +706,7 @@ const AFHGettingStarted = () => (
                 step: "5",
                 title: "Submit your application to DSHS",
                 detail:
-                  "Apply online at the DSHS BAAU portal. Allow significant time — there is no fixed timeline for becoming licensed. Contact baau@dshs.wa.gov for application questions.",
+                  "Apply online at the DSHS BAAU portal. Allow significant time: DSHS posts its current processing timeline, which in late September 2026 showed applications received in May 2026 being processed and up to 60 days once an application is complete. A licensing inspection is required, most applicants need more than one, and DSHS makes up to three visits. Contact baau@dshs.wa.gov for application questions.",
               },
             ].map((item, i) => (
               <div
@@ -756,6 +773,10 @@ const AFHGettingStarted = () => (
                 url: "https://www.dshs.wa.gov/altsa/residential-care-services/information-afh-prospective-providers",
               },
               { label: "DSHS Online License Application (BAAU)", url: "https://baau.dshs.wa.gov/" },
+              {
+                label: "DSHS Application Processing Timeline",
+                url: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline",
+              },
               {
                 label: "AFH Locator — Search Licensed Homes",
                 url: "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx",

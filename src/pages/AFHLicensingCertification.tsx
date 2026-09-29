@@ -15,13 +15,13 @@ const APPLICATION_STEPS = [
     step: "1",
     title: "Complete all required training",
     detail:
-      "75-hour HCA training (if not exempt), AFH Administrator Training, CPR, First Aid, and Food Safety must all be completed before applying.",
+      "75-hour Home Care Aide training and Department of Health certification (if not exempt), AFH Administrator Training, and current CPR and first-aid cards. Safe food handling is taught inside the basic training. You also need 1,000 hours of direct care experience with vulnerable adults within the past 60 months (nurses and physicians are exempt).",
   },
   {
     step: "2",
     title: "Pass your background check",
     detail:
-      "Submit a background check through DSHS for yourself, all household members, and any staff. Disqualifying crimes are defined under WAC 388-113.",
+      "Submit background checks through DSHS for yourself and anyone affiliated with the application, household members over age 11, and any staff. Disqualifying crimes are defined under WAC 388-113.",
   },
   {
     step: "3",
@@ -33,39 +33,39 @@ const APPLICATION_STEPS = [
     step: "4",
     title: "Gather your documentation",
     detail:
-      "Assemble the Caregiver Experience Attestation form (DSHS 10-417), training certificates, background check clearance, liability insurance proof, and the Disclosure of Services form (DSHS 10-508).",
+      "Assemble the Caregiver Experience Attestation form (DSHS 10-417) documenting your 1,000 hours, training certificates, background check forms, liability insurance proof, and the Disclosure of Services form (DSHS 10-508).",
   },
   {
     step: "5",
     title: "Submit the online application",
     detail:
-      "Apply at the DSHS BAAU portal (baau.dshs.wa.gov). Avoid using the symbols &, =, +, or # in the application — they cause submission errors. There is no fixed timeline for processing.",
+      "Apply at the DSHS BAAU portal (baau.dshs.wa.gov). Avoid using the symbols &, =, +, or # in the application; DSHS asks applicants to spell them out. DSHS posts its current processing queue online: in late September 2026 it was working on applications received in May 2026, and it allows up to 60 days once an application is complete.",
   },
   {
     step: "6",
     title: "DSHS initial inspection",
     detail:
-      "A DSHS licensor will conduct an initial inspection of your home. You will also need a passed local building inspection from your jurisdiction before the DSHS inspection is completed.",
+      "A DSHS licensor will conduct an initial inspection of your home. You will also need a passed local building inspection from your jurisdiction before the DSHS inspection is completed. DSHS reports that most applicants do not pass the first inspection and allows a maximum of three inspection visits.",
   },
   {
     step: "7",
     title: "TB testing",
-    detail: "Tuberculosis testing must be completed within three days of the home being licensed.",
+    detail: "DSHS lists tuberculosis testing as due within three days of the home being licensed.",
   },
   {
     step: "8",
     title: "License issued",
     detail:
-      "Once all requirements are met and the inspection is passed, DSHS issues the AFH license. Annual renewal requires payment of the $450/bed licensing fee.",
+      "Once all requirements are met and the inspection is passed, DSHS issues the AFH license. After that, an annual per-bed license fee is due each year in the month the home was first licensed. The per-bed amount is set in the state operating budget (RCW 70.128.060, WAC 388-76-10025).",
   },
 ];
 
 const HCA_EXEMPTIONS = [
-  "Registered Nurses (RNs) and Licensed Practical Nurses (LPNs)",
-  "Certified Nursing Assistants (CNA/NA-C) or persons in an approved CNA training program",
-  "Medicare-certified home health aides",
+  "Registered Nurses (RNs), Licensed Practical Nurses (LPNs), and Advanced Registered Nurse Practitioners (ARNPs)",
+  "Nursing Assistants Certified (NA-C/CNA), or persons in an approved CNA training program who finish it within 120 days of hire and receive the DOH credential",
+  "Home health aides employed by a Medicare-certified home health agency within the year before hire",
   "Persons with special education training and an endorsement from the Superintendent of Public Instruction",
-  "Long-term care workers employed between January 1, 2011 and January 6, 2012 who completed training requirements then in effect (must have proof of employment per DOH WAC 246-980-070)",
+  "Long-term care workers employed at some time between January 1, 2011 and January 6, 2012 who completed the training requirements then in effect (under DOH rules this exemption lapses after three consecutive years without long-term care work)",
 ];
 
 /* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
@@ -79,7 +79,7 @@ const afhArticleSchema = {
   description: "Complete guide to Washington State AFH licensing — DSHS application process, Home Care Aide certification, background checks, HCA exemptions, and CHOW requirements.",
   url: "https://realpropertyplanning.com/afh-club/licensing-certification",
   datePublished: "2026-07-24",
-  dateModified: "2026-07-24",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -193,8 +193,8 @@ const AFHLicensingCertification = () => (
               margin: "0 0 20px",
             }}
           >
-            Unless you qualify for an exemption, you must be a certified Home Care Aide before applying for an AFH
-            license. This means completing the 75-hour long-term care worker training (a two-hour caregiver orientation, three hours of safety,
+            Unless you qualify for an exemption, you must be a certified Home Care Aide before you can be licensed
+            as an AFH provider. This means completing the 75-hour long-term care worker training (a two-hour caregiver orientation, three hours of safety,
             and 70 hours of basic training under WAC 388-112A), passing the HCA certification examination, and receiving certification from the Washington State Department of Health.
           </p>
           <p
@@ -206,8 +206,8 @@ const AFHLicensingCertification = () => (
               margin: "0 0 28px",
             }}
           >
-            As of February 29, 2024, the Department of Health made changes to the HCA credential and exam scheduling
-            process. Contact DOH or an approved training program for current scheduling details.
+            The certification exam and credential are handled by the Department of Health. Contact DOH or an approved
+            training program for current exam scheduling.
           </p>
           <div
             style={{
@@ -238,7 +238,7 @@ const AFHLicensingCertification = () => (
                 margin: "0 0 16px",
               }}
             >
-              You do NOT need HCA certification if you are one of the following:
+              You do NOT need the 70-hour basic training or HCA certification if you are one of the following:
             </p>
             {HCA_EXEMPTIONS.map((item, i) => (
               <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", marginBottom: 10 }}>
@@ -275,7 +275,7 @@ const AFHLicensingCertification = () => (
                 fontStyle: "italic",
               }}
             >
-              Source: WAC 388-112A-0090. If unsure whether you qualify, contact DSHS at rcspolicy@dshs.wa.gov.
+              Sources: WAC 388-112A-0090 and WAC 246-980-025. If unsure whether you qualify, contact DSHS at rcspolicy@dshs.wa.gov.
             </p>
           </div>
         </div>
@@ -318,8 +318,9 @@ const AFHLicensingCertification = () => (
               margin: "0 0 32px",
             }}
           >
-            There is no fixed timeline for becoming licensed. Allow several months from application to first resident.
-            The process involves both DSHS and your local building jurisdiction.
+            DSHS does not promise a timeline for becoming licensed. It posts its current processing queue, and review can take up to 60 days once an application is complete; most applicants need more than one inspection. Allow several months from application to first resident.
+            The process involves both DSHS and your local building jurisdiction. Training, background checks and building
+            work can run at the same time.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {APPLICATION_STEPS.map((item, i) => (
@@ -419,8 +420,11 @@ const AFHLicensingCertification = () => (
               margin: "0 0 20px",
             }}
           >
-            Background checks are required for the provider, all household members, and all staff — including volunteers
-            who have unsupervised access to residents. Checks must be renewed every two years for ongoing staff.
+            Before licensure, the applicant and anyone affiliated with the applicant need a Washington State name and
+            date-of-birth check and a national fingerprint check. Caregivers, entity representatives and resident managers
+            need both checks. Household members over age 11, volunteers, students and noncaregiving staff who may have
+            unsupervised access to residents need the Washington State check. The Washington State check is valid for two
+            years and must be redone every two years; the fingerprint check does not expire (WAC 388-76-10161 and 10165).
           </p>
           <p
             style={{
@@ -453,8 +457,8 @@ const AFHLicensingCertification = () => (
                 margin: 0,
               }}
             >
-              <strong>Important:</strong> Missing or expired background checks are among the most frequently cited
-              violations statewide. Establish a tracking system for renewal dates from day one.
+              <strong>Important:</strong> Background checks (WAC 388-76-10165) were the fifth most frequently cited
+              AFH rule in DSHS's most recent published quarterly list (October to December 2024). Establish a tracking system for renewal dates from day one.
             </p>
           </div>
         </div>
@@ -497,9 +501,12 @@ const AFHLicensingCertification = () => (
               margin: "0 0 20px",
             }}
           >
-            Purchasing an existing licensed AFH is called a Change of Ownership (CHOW). The new owner must submit a
-            fresh AFH license application and meet all current qualification and licensing requirements — the existing
-            license does not transfer automatically.
+            Purchasing an existing licensed AFH is called a Change of Ownership (CHOW). Licenses are not transferable:
+            the new owner must submit a complete new AFH license application and meet all current provider
+            qualifications. DSHS Residential Care Services has stated in writing (September 2026) that a continuously
+            licensed home that changes owners is held to the building rules in place when it was first licensed; a home
+            whose license has lapsed must meet current rules. DSHS does not estimate how long a CHOW license takes, but a
+            complete application avoids delays.
           </p>
           <p
             style={{
@@ -524,8 +531,8 @@ const AFHLicensingCertification = () => (
             }}
           >
             Specialty contracts — such as Expanded Community Services (ECS) and Specialized
-            Behavior Support (SBS) — are not transferable in a CHOW. The new owner must independently qualify and
-            execute new specialty contracts before providing or billing for those services.
+            Behavior Support (SBS) — are not transferable in a CHOW. The new owner needs approval from DSHS AFH program
+            staff and new specialty contracts before providing or billing for those services.
           </p>
           <a
             href="https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx"

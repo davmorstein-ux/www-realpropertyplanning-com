@@ -148,6 +148,158 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "Chapter 388-76 WAC, including the September 20, 2026 amendments (WSR 26-17-004)", href: WAC("388-76") },
     ],
   },
+  "/afh-club/licensing-certification": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Removed the $450-per-bed fee figure, which no current primary source confirms (the fee is set in the state operating budget); corrected the Home Care Aide exemption list and removed a citation to a rule that does not exist; corrected background-check rules (household members over 11, two-year state check, fingerprint check); added DSHS's posted processing queue, the inspection limits, and DSHS's September 2026 answer on change-of-ownership building rules." },
+    ],
+    sources: [
+      { label: "WAC 388-112A-0050: AFH training and certification requirements", href: WAC("388-112A-0050") },
+      { label: "WAC 388-112A-0090: training exemptions", href: WAC("388-112A-0090") },
+      { label: "WAC 246-980-025: Home Care Aide certification exemptions", href: WAC("246-980-025") },
+      { label: "WAC 388-76-10130: provider qualifications", href: WAC("388-76-10130") },
+      { label: "WAC 388-76-10161 and 10165: background checks", href: WAC("388-76-10161") },
+      { label: "WAC 388-76-10025 and RCW 70.128.060: annual license fee", href: WAC("388-76-10025") },
+      { label: "DSHS: Information for AFH prospective providers", href: "https://www.dshs.wa.gov/altsa/residential-care-services/information-afh-prospective-providers" },
+      { label: "DSHS: BAAU application processing timeline", href: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline" },
+      DSHS_RCS_DOOR_ANSWER,
+    ],
+  },
+  "/afh-club/training-education": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Corrected rule citations for CPR, first aid, and food safety; stated Administrator Training hours (48-hour minimum in rule, 54-hour course) and that providers who completed it do not repeat it; corrected the North Seattle College phone number; renamed the nurse delegation trainings; specified 12 continuing-education hours by each birthday; replaced an unverified University of Washington certification description with the statute." },
+    ],
+    sources: [
+      { label: "WAC 388-112A-0050: AFH training and certification requirements", href: WAC("388-112A-0050") },
+      { label: "WAC 388-112A-0800 and 0820: administrator training", href: WAC("388-112A-0800") },
+      { label: "WAC 388-76-10064: administrator training for applicants", href: WAC("388-76-10064") },
+      { label: "WAC 388-112A-0490: specialty training", href: WAC("388-112A-0490") },
+      { label: "WAC 388-112A-0550: nurse delegation training", href: WAC("388-112A-0550") },
+      { label: "WAC 388-112A-0610: continuing education", href: WAC("388-112A-0610") },
+      { label: "WAC 388-112A-0720: CPR and first aid", href: WAC("388-112A-0720") },
+      { label: "RCW 70.128.250: food safety training", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128.250" },
+      { label: "DSHS: Adult Family Home Administrator Training", href: "https://www.dshs.wa.gov/altsa/training/adult-family-home-administrator-training" },
+    ],
+  },
+  "/afh-club/getting-started": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Corrected the 1,000-hour experience rule (only physicians, physician assistants, RNs, ARNPs and LPNs are exempt; the page had listed CNAs and home health aides), added the age-21 and financial-solvency requirements, corrected the background-check, food-safety and live-in rules, replaced unsourced 3-6 month and $20,000-$50,000 estimates with DSHS's posted processing timeline, and corrected capacity (2-6; 7-8 only under WAC 388-76-10031), zoning, and the law's 1989 origin." },
+    ],
+    sources: [
+      { label: "RCW 70.128.010, 70.128.120, 70.128.140: definitions, qualifications, zoning", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128" },
+      { label: "RCW 18.88B.041: Home Care Aide certification exemptions", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=18.88B.041" },
+      { label: "WAC 388-76-10130: qualifications", href: WAC("388-76-10130") },
+      { label: "WAC 388-76-10040: qualified person must live in the home", href: WAC("388-76-10040") },
+      { label: "WAC 388-76-10031: seven or eight beds", href: WAC("388-76-10031") },
+      { label: "WAC 388-76-10161: background checks", href: WAC("388-76-10161") },
+      { label: "DSHS: BAAU application processing timeline", href: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline" },
+      { label: "DSHS: AFH food safety and food worker card", href: "https://www.dshs.wa.gov/altsa/residential-care-services/adult-family-homes-food-safety-food-worker-card" },
+    ],
+  },
+  "/afh-club/what-is-an-adult-family-home": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Washington section: counts now come from DSHS locator data (6,069 homes and 35,306 beds in 35 of 39 counties) instead of \"more than 6,000 across 39 counties\"; capacity (2-6, with 7-8 under WAC 388-76-10031) and the live-in rule (WAC 388-76-10040) corrected. The other states in the comparison table were not re-reviewed on this date." },
+    ],
+    sources: [
+      { label: "RCW 70.128.010: definition of an adult family home", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128.010" },
+      { label: "WAC 388-76-10031: seven or eight beds", href: WAC("388-76-10031") },
+      { label: "WAC 388-76-10040: qualified person must live in the home", href: WAC("388-76-10040") },
+      { label: "DSHS Adult Family Home Locator", href: "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx" },
+    ],
+  },
+  "/afh-club/buying-selling": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Added the 60-day written notice to DSHS and residents (WAC 388-76-10106), priority processing (10107), the new owner's duty to correct existing deficiencies (10105), the seven- and eight-bed change-of-ownership rule (10032), DSHS's processing queue and inspection limits, and DSHS's answer on the 27-inch door rule. Corrected that the license \"expires\" (AFH licenses do not) and that the license can change hands; noted the Medicaid contract does not transfer and HCS Meaningful Day funding ended July 1, 2025; softened pricing claims and an unsupported seller-disclosure duty." },
+    ],
+    sources: [
+      { label: "WAC 388-76-10010: license valid and not transferable", href: WAC("388-76-10010") },
+      { label: "WAC 388-76-10032: seven or eight beds at a change of ownership", href: WAC("388-76-10032") },
+      { label: "WAC 388-76-10105, 10106, 10107: change of ownership application, notice, priority processing", href: WAC("388-76-10106") },
+      { label: "DSHS: Buying an AFH through a change of ownership", href: "https://www.dshs.wa.gov/node/35985" },
+      { label: "DSHS: BAAU application processing timeline", href: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline" },
+      DSHS_CHOW_ANSWERS,
+      DSHS_RCS_DOOR_ANSWER,
+    ],
+  },
+  "/afh-club/selling-your-business-at-retirement": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Replaced general statements about resident notice with the rule: 60 days' written notice to DSHS and each resident and what it must say (WAC 388-76-10106), and the priority-processing waiver (10107). Added the seven- and eight-bed buyer rule (10032) and DSHS's processing queue. Corrected that licensing is \"already in place\" for a buyer, replaced \"home study\" with the DSHS inspection and \"Medicaid certification\" with the Medicaid/private-pay mix, and softened \"most owners\" and \"often nets more\"." },
+    ],
+    sources: [
+      { label: "WAC 388-76-10010: license not transferable", href: WAC("388-76-10010") },
+      { label: "WAC 388-76-10032: seven or eight beds at a change of ownership", href: WAC("388-76-10032") },
+      { label: "WAC 388-76-10106: change of ownership notice", href: WAC("388-76-10106") },
+      { label: "WAC 388-76-10107: priority processing", href: WAC("388-76-10107") },
+      { label: "DSHS: BAAU application processing timeline", href: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline" },
+      { label: "IRS Publication 544: sale of a business and Form 8594 allocation", href: "https://www.irs.gov/publications/p544" },
+    ],
+  },
+  "/afh-club/costs-fees": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Removed the $450-per-bed annual license fee, which no current primary source confirms; the page now explains the fee is set in the state budget and due each year in the month the home was first licensed." },
+      { date: "2026-09-28", text: "Corrected Home Care Aide certification to the $100 DOH application fee, business registration to the $50 DOR processing fee and $180 LLC filing fee, and added the required insurance limits ($500,000 per occurrence, $1,000,000 aggregate)." },
+      { date: "2026-09-28", text: "Removed unsourced tuition, permit, building-modification, total startup and private-pay dollar ranges; corrected background-check and CPR rule citations; replaced the 3-6 month timeline with DSHS's processing queue." },
+    ],
+    sources: [
+      { label: "RCW 70.128.060 and WAC 388-76-10025: license fees", href: WAC("388-76-10025") },
+      { label: "WAC 388-76-10070 and 10073: application and processing fees", href: WAC("388-76-10073") },
+      { label: "WAC 388-76-10191 and 10192: liability insurance", href: WAC("388-76-10192") },
+      { label: "WAC 246-980-990: Home Care Aide fees", href: WAC("246-980-990") },
+      { label: "Washington Insurance Commissioner: AFH liability insurance study (July 2025)", href: "https://www.insurance.wa.gov/about-us/news/2025/study-liability-insurance-adult-family-homes-finds-market-reasonable-shape" },
+      { label: "Department of Revenue: business license processing fees", href: "https://dor.wa.gov/open-business/apply-business-license/variable-business-license-processing-fees" },
+      { label: "Secretary of State: forming an LLC", href: "https://www.sos.wa.gov/corporations-charities/business-entities/online-filing-instructions/start-domestic-wa-limited-liability-company-llc-online" },
+      { label: "DSHS Home and Community Services rate tables", href: DSHS_RATES },
+      { label: "RCW 70.128.066: seven or eight beds", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128.066" },
+    ],
+  },
+  "/afh-club/ownership-structure": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Added the licensing rules that depend on structure: the entity representative, background checks for affiliated owners, when forming an LLC or transferring shares is a change of ownership, and naming a separate property owner; removed an unsupported privacy claim; tax questions now referred to a CPA." },
+    ],
+    sources: [
+      { label: "WAC 388-76-10010: license not transferable", href: WAC("388-76-10010") },
+      { label: "WAC 388-76-10090: entity applicants", href: WAC("388-76-10090") },
+      { label: "WAC 388-76-10095: property owner", href: WAC("388-76-10095") },
+      { label: "WAC 388-76-10105: change of ownership", href: WAC("388-76-10105") },
+      { label: "WAC 388-76-10161: background checks", href: WAC("388-76-10161") },
+    ],
+  },
+  "/afh-club/violation-history-lookup": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Corrected the record-window claim: DSHS says the Locator shows limits and enforcement from the previous three years, and the advanced search covers enforcement letters from 2011. Added the home's duty to keep three years of inspection reports (RCW 70.128.080) and inspection frequency (RCW 70.128.070); updated correction documents to the September 20, 2026 plan-of-correction rule (attestation of correction within 10 days); matched enforcement remedies to RCW 70.128.160; added the complaint TTY line and DSHS public records contacts." },
+    ],
+    sources: [
+      { label: "DSHS Adult Family Home Locator (advanced search)", href: "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx" },
+      { label: "RCW 70.128.070, 70.128.080, 70.128.160: inspections, reports, remedies", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128" },
+      { label: "WAC 388-76-10930: plan of correction (amended September 20, 2026)", href: WAC("388-76-10930") },
+      { label: "DSHS: Report abuse and neglect", href: "https://www.dshs.wa.gov/report-abuse-and-neglect" },
+      { label: "DSHS: How to request public records", href: "https://www.dshs.wa.gov/office-of-the-secretary/how-request-public-records" },
+    ],
+  },
+  "/afh-club/building-inspection": {
+    reviewed: "2026-09-28",
+    changes: [
+      { date: "2026-09-28", text: "Updated to DSHS form 15-604 (revised April 2025) and current Section R330. Corrected ramps (not required by code; a code ramp can change a Type S bedroom to NS1). Removed unverified claims about sprinklers, bathroom turning radius, build costs and permit timelines. Added the 27-inch interior door rule and DSHS's change-of-ownership answer, noted DSHS window rulemaking (opened, not adopted), and cited WAC 388-76-10700 for approval before licensing." },
+    ],
+    sources: [
+      { label: "Adult Family Home Local Building Inspection Checklist (DSHS form 15-604)", href: "https://www.dshs.wa.gov/sites/default/files/forms/pdf/15-604.pdf" },
+      { label: "WAC 51-51-0330: Section R330, adult family homes", href: WAC("51-51-0330") },
+      { label: "WAC 388-76-10700: building official inspection and approval", href: WAC("388-76-10700") },
+      { label: "WAC 388-76-10715: doors", href: WAC("388-76-10715") },
+      { label: "WAC 388-76-10795: windows", href: WAC("388-76-10795") },
+      { label: "WAC 388-76-10755: sewage and liquid wastes", href: WAC("388-76-10755") },
+      { label: "DSHS rulemaking: AFH discharge notice, background checks and windows", href: "https://www.dshs.wa.gov/altsa/residential-care-services/afh-discharge-notice-background-checks-and-windows" },
+      DSHS_RCS_DOOR_ANSWER,
+    ],
+  },
   "/afh-club/afh-property-classifications": {
     published: "2026-09-13",
     reviewed: "2026-09-28",

@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "What's the DSHS licensing process like for a Bellevue AFH?",
     answer:
-      "Regardless of city, Adult Family Homes in Washington State are licensed through the Department of Social and Health Services, involving a background check, home study, and fire/safety inspection. Buying an already-licensed home doesn't skip this process for the new owner, but it does mean the property itself has already passed inspection once.",
+      "Regardless of city, Adult Family Homes in Washington State are licensed through the Department of Social and Health Services, involving a background check, licensing inspection, and fire/safety inspection. Buying an already-licensed home doesn't skip this process for the new owner, but it does mean the property itself has already passed inspection once.",
   },
   {
     question: "How does Bellevue's AFH market compare to Kirkland's?",

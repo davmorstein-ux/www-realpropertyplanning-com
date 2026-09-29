@@ -43,7 +43,7 @@ const CONSIDERATIONS = [
   },
   {
     title: "Buying through an LLC",
-    body: "Buying an AFH through an LLC is often attractive to buyers who want a clearer line between their personal assets and the property or business. An LLC can help create that separation and may offer more privacy as well. This structure can also be useful if you plan to own more than one AFH, bring in partners, or create a long-term business plan. The downside is that financing may be more complicated — lenders may require different underwriting, larger down payments, or higher interest rates, and there are added costs for forming and maintaining the entity.",
+    body: "Buying an AFH through an LLC is often attractive to buyers who want a clearer line between their personal assets and the property or business. An LLC can help create that separation. This structure can also be useful if you plan to own more than one AFH, bring in partners, or create a long-term business plan. The downside is that financing may be more complicated — lenders may require different underwriting, larger down payments, or higher interest rates, and there are added costs for forming and maintaining the entity.",
   },
 ];
 
@@ -58,7 +58,7 @@ const afhArticleSchema = {
   description: "Should you buy an Adult Family Home as an individual or through an LLC? A guide to financing, liability, tax, and Washington State licensing considerations for AFH buyers.",
   url: "https://realpropertyplanning.com/afh-club/ownership-structure",
   datePublished: "2026-07-24",
-  dateModified: "2026-07-24",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -373,10 +373,46 @@ const AFHOwnershipStructure = () => (
               margin: "0 0 20px",
             }}
           >
-            In Washington State, Adult Family Homes are regulated and licensed. Ownership changes can affect licensing,
-            and in some cases may require a new application or other compliance steps. That means the ownership
-            structure is not just a real estate issue — it can also affect how the AFH is licensed and whether the
-            business can continue operating smoothly after the purchase.
+            In Washington State, DSHS licenses the provider that operates the home. The provider can be an individual
+            or an entity such as an LLC, corporation or partnership. A license is not transferable (WAC 388-76-10010), so a buyer of an
+            existing home applies for a new license, and the ownership structure decides who that applicant is.
+          </p>
+          <ul style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif", color: "#1c1917", lineHeight: 1.85, margin: "0 0 20px", paddingLeft: 22 }}>
+            <li>
+              <strong>An entity must name an entity representative</strong> who meets the training and qualification
+              requirements only an individual can meet (experience, training, background checks). One person can be
+              the entity representative for only one entity provider (WAC 388-76-10090).
+            </li>
+            <li>
+              <strong>Background checks reach the owners.</strong> The applicant and anyone affiliated with it
+              (partners, officers, directors, the entity representative, the resident manager, a majority owner, and
+              the applicant's spouse or domestic partner) need a Washington name and date of birth check and a
+              national fingerprint check before licensure (WAC 388-76-10000, 388-76-10161). An entity application
+              also lists homes or facilities where owners of five percent or more provided care in the last ten years.
+            </li>
+            <li>
+              <strong>Changing structure later is a change of ownership.</strong> Forming an LLC or corporation to
+              take over a licensed home, a merger, or a transfer of 50 percent or more of an entity's shares counts as
+              a change of ownership, which means a new license application. Replacing the entity representative does
+              not (WAC 388-76-10105).
+            </li>
+            <li>
+              <strong>Holding the real estate separately has its own rule.</strong> If the building is leased or
+              rented to the licensee and the property owner takes an active interest in running the home, the
+              application must name the property owner (WAC 388-76-10095).
+            </li>
+          </ul>
+          <p
+            style={{
+              fontSize: 18,
+              fontFamily: "'DM Sans', sans-serif",
+              color: "#1c1917",
+              lineHeight: 1.85,
+              margin: "0 0 20px",
+            }}
+          >
+            Tax treatment is not covered here. How an LLC or corporation is taxed depends on elections and your own
+            situation; ask a CPA before you choose.
           </p>
         </div>
       </section>
@@ -542,7 +578,7 @@ const AFHOwnershipStructure = () => (
               margin: "0 0 16px",
             }}
           >
-            Real Estate Services
+            Buying an AFH
           </p>
           <h2
             style={{
@@ -566,9 +602,9 @@ const AFHOwnershipStructure = () => (
               margin: "0 0 32px",
             }}
           >
-            Real Property Planning maintains a network of resources for those buying or selling Adult Family Homes
-            throughout Washington State — including real estate broker services, appraisal support, and professional
-            referrals for attorneys and lenders familiar with AFH transactions.
+            Real Property Planning can connect you with a featured Washington licensed broker or certified appraiser
+            who works with Adult Family Homes. Licensed work is done by those professionals through their own
+            practices.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link

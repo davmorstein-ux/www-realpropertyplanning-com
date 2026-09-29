@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "What's involved in the DSHS licensing process for a Kirkland AFH?",
     answer:
-      "Regardless of city, Adult Family Homes in Washington State are licensed through the Department of Social and Health Services. The process includes a background check, a home study, fire and safety inspections, and training requirements for the licensee. Buying an already-licensed home doesn't eliminate this process, but it does streamline it since the property has already passed inspection once.",
+      "Regardless of city, Adult Family Homes in Washington State are licensed through the Department of Social and Health Services. The process includes a background check, a licensing inspection, fire and safety inspections, and training requirements for the licensee. Buying an already-licensed home doesn't eliminate this process, but it does streamline it since the property has already passed inspection once.",
   },
   {
     question: "How does zoning affect buying an AFH in Kirkland?",

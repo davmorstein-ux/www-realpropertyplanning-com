@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "Do Puyallup Adult Family Homes need to meet different licensing requirements than other counties?",
     answer:
-      "No — Adult Family Home licensing is governed at the state level by DSHS, so the core requirements (background checks, training, home study, fire and safety inspection) are the same in Puyallup as anywhere else in Washington. Local zoning and building code compliance are handled separately at the city/county level.",
+      "No — Adult Family Home licensing is governed at the state level by DSHS, so the core requirements (background checks, training, licensing inspection, fire and safety inspection) are the same in Puyallup as anywhere else in Washington. Local zoning and building code compliance are handled separately at the city/county level.",
   },
   {
     question: "How do I get notified about new AFH listings in Puyallup and Pierce County?",

@@ -7,6 +7,12 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import { STATE_TERMS, TERM_FAMILIES, LAST_REVIEWED } from "@/data/afh/state-terms";
+import stats from "@/data/afh/stats.json";
+
+/* Washington counts come from the same DSHS locator snapshot as /afh-club/washington-afh-data. */
+const WA = stats.state;
+const SIX_BED_SHARE = Math.round(stats.bedSizes.find((b) => b.beds === 6)?.share ?? 0);
+const RETRIEVED_LABEL = new Date(`${stats.retrievedTo}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
 
 const URL = "https://realpropertyplanning.com/afh-club/what-is-an-adult-family-home";
 const TITLE = "What Is an Adult Family Home? Definition and What It's Called in Every State";
@@ -25,7 +31,7 @@ const reviewedLabel = new Date(`${LAST_REVIEWED}T00:00:00Z`).toLocaleDateString(
 const FAQ = [
   {
     q: "What is an adult family home?",
-    a: "An adult family home (AFH) is a regular residential house licensed by Washington State DSHS to provide housing, meals, and personal care to up to six adults who are not related to the provider. DSHS may approve up to eight. The provider or staff live in or staff the home around the clock, and residents receive help with daily activities, medication, and, in homes with specialty designations, dementia, mental health, or developmental disability care.",
+    a: "An adult family home (AFH) is a regular residential house licensed by Washington State DSHS to provide room, board, and personal care to two to six adults who are not related to the provider. DSHS may approve seven or eight for experienced providers who meet added requirements (WAC 388-76-10031). The provider, entity representative, or a resident manager lives in the home, unless the home has 24-hour staffing with a decision-maker always present (WAC 388-76-10040). Residents receive help with daily activities, medication, and, in homes with specialty designations, dementia, mental health, or developmental disability care.",
   },
   {
     q: "Is \"adult family home\" a national term?",
@@ -45,7 +51,7 @@ const FAQ = [
   },
   {
     q: "Does Medicaid pay for adult family home care?",
-    a: "In Washington, yes, for residents who qualify. Most adult family homes hold a DSHS Medicaid contract; the site's directory shows which homes accept Medicaid and which are private pay only. Other states have their own Medicaid waiver programs for small residential care, and eligibility and rates differ by state.",
+    a: `In Washington, yes, for residents who qualify. Most adult family homes hold a DSHS Medicaid contract (${stats.shares.medicaid.toFixed(0)}% in DSHS locator data retrieved ${RETRIEVED_LABEL}); the site's directory shows which homes accept Medicaid and which are private pay only. Other states have their own Medicaid waiver programs for small residential care, and eligibility and rates differ by state.`,
   },
 ];
 
@@ -198,10 +204,15 @@ const AFHWhatIsAnAFH = () => {
             </p>
             <p style={bodyText}>
               In Washington that license is the adult family home, created by RCW 70.128 and regulated under
-              WAC 388-76. There are more than 6,000 licensed adult family homes across Washington's 39
-              counties, most licensed for six residents, most accepting Medicaid, and most carrying
-              DSHS specialty designations for dementia, mental health, or developmental disabilities. This
-              site's{" "}
+              WAC 388-76. DSHS locator data retrieved {RETRIEVED_LABEL} shows {WA.homes.toLocaleString("en-US")}{" "}
+              licensed adult family homes with {WA.beds.toLocaleString("en-US")} beds in {WA.counties} of
+              Washington's 39 counties. About {SIX_BED_SHARE}% are licensed for six residents, about{" "}
+              {stats.shares.medicaid.toFixed(0)}% hold a DSHS Medicaid contract, and most carry DSHS specialty
+              designations for dementia or mental health (
+              <Link to="/afh-club/washington-afh-data" style={{ color: "#1a365d", textDecoration: "underline" }}>
+                full counts by county
+              </Link>
+              ). This site's{" "}
               <Link to="/afh-club/homes" style={{ color: "#1a365d", textDecoration: "underline" }}>
                 directory lists every one of them
               </Link>{" "}

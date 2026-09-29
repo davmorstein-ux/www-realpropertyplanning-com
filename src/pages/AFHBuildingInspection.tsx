@@ -15,7 +15,7 @@ const PROPERTY_OPTIONS = [
     title: "Convert an Existing Home",
     icon: "🏠",
     description:
-      "The most common path. A single-family home you already own or purchase is evaluated against the WABO AFH Building Inspection Checklist. Modifications are made as needed — often ramps, bathroom reconfigurations, window changes, and fire safety upgrades — and a remodel permit is typically required.",
+      "The most common path. A single-family home you already own or purchase is evaluated against the AFH Local Building Inspection Checklist (DSHS 15-604). Modifications are made as needed — often ramps, bathroom changes, window changes, and alarm upgrades — and construction work usually needs its own permit from the local building department.",
     pros: ["Lower total entry cost", "Faster to licensure than new build", "Established neighborhood context"],
     cons: [
       "May require costly structural changes",
@@ -27,15 +27,15 @@ const PROPERTY_OPTIONS = [
     title: "Build a New Home",
     icon: "🏗️",
     description:
-      "A new single-family home designed specifically as an AFH can be built to code from the ground up. This gives maximum control over layout, accessibility, and bedroom classification — but comes with the full cost and timeline of new residential construction in Washington.",
+      "A new single-family home designed specifically as an AFH can be built to code from the ground up. This gives maximum control over layout, accessibility, and bedroom classification, but comes with the full cost and timeline of new residential construction.",
     pros: [
       "Optimal layout for AFH operations",
       "No surprise renovation costs",
-      "Can be designed for 7-8 resident capacity from the start",
+      "Can be laid out for 7-8 residents, though a provider must hold an initial license for 24 months before applying for more than 6 (WAC 388-76-10031)",
     ],
     cons: [
       "Most expensive option",
-      "Washington build costs average $200–$350/sq ft in 2025",
+      "Construction costs vary widely; get local bids",
       "Long lead time before first revenue",
     ],
   },
@@ -43,16 +43,17 @@ const PROPERTY_OPTIONS = [
     title: "Purchase a Licensed AFH (CHOW)",
     icon: "🔑",
     description:
-      "Buy an existing licensed AFH through a Change of Ownership (CHOW). The building has already passed inspection, which simplifies the building process — but a new DSHS license application and fresh inspection are still required. The prior license does not transfer.",
+      "Buy an existing licensed AFH through a Change of Ownership (CHOW). The building was approved when the home was licensed, and DSHS says a continuously licensed home that changes owners is held to the rules in place when it was first licensed. The buyer still files a full DSHS license application and must meet all licensing requirements. The prior license does not transfer.",
     pros: [
-      "Building already meets AFH code",
+      "Building was approved for AFH use when first licensed",
       "May have existing residents and revenue",
       "Established community relationships",
     ],
     cons: [
       "Must still apply for new DSHS license",
-      "CHOW specialty contracts do not transfer",
-      "Prior violation history may not appear in public records",
+      "Specialty contracts such as ECS and SBS do not transfer at a CHOW",
+      "A home whose license has lapsed must meet current rules",
+      "The DSHS Locator shows only the previous three years of limits and enforcement",
     ],
   },
 ];
@@ -61,32 +62,37 @@ const COMMON_MODIFICATIONS = [
   {
     item: "Ramp installation",
     detail:
-      "Required when means of egress has stairs. Maximum slope 1:12 (8.3%). Must have handrails on both sides. Landings required at top and bottom.",
+      "A bedroom whose exit path has stairs is classified Type S. A ramp built to code can let the room be classified Type NS1 instead. Maximum slope 1:12 (8.3%), handrails on both sides, and a landing at least 3 by 3 feet at the top and bottom where doors open onto the ramp.",
   },
   {
     item: "Bathroom modifications",
     detail:
-      "Grab bars, turning radius clearance, and accessible fixture placement are commonly required. Bathroom access must accommodate residents using mobility aids.",
+      "Grab bars are required at toilets, bathtubs, and showers; toilet grab bars go on both sides, 33 to 36 inches high. A shower, where one is provided, must be at least 30 by 48 inches.",
   },
   {
     item: "Window modifications",
     detail:
-      "Sleeping room windows must meet egress size and height requirements for emergency exit. Type S rooms (with stairs) have different requirements than Type NS1 (grade-level) rooms.",
+      "Every resident bedroom needs an emergency escape window: sill no more than 44 inches above the floor (no steps or platforms), a net clear opening of at least 5.7 square feet (5.0 at grade), at least 24 inches high and 20 inches wide, and free of obstructions. In June 2026 DSHS began rulemaking to update its window rule (WAC 388-76-10795) for new homes only; nothing has been adopted yet.",
   },
   {
     item: "Fire safety upgrades",
     detail:
-      "Interconnected smoke alarms, carbon monoxide detectors, and in some cases sprinkler systems. Requirements depend on bedroom count and room classifications.",
+      "Smoke alarms on every level and in each resident bedroom, arranged so a single alarm is audible throughout the home, and carbon monoxide alarms on each level.",
   },
   {
     item: "Septic system evaluation",
     detail:
-      "If the home is on a septic system, it must be inspected and approved by the local health authority for the number of people — not bedrooms — it will serve. Septic upgrades can be a significant unexpected cost.",
+      "If the home is on a septic system, DSHS asks for a document from the local health authority showing the system was inspected and approved for use as an AFH, and how many people (not bedrooms) it can serve. Septic upgrades can be a significant unexpected cost.",
+  },
+  {
+    item: "Interior doors",
+    detail:
+      "For homes licensed after September 20, 2026, interior doors residents pass through (other than the emergency exit) must be at least 27 inches wide (WAC 388-76-10715). DSHS says this does not apply to a continuously licensed home sold through a change of ownership, but a home whose license has lapsed must meet it.",
   },
   {
     item: "Floor plan submission",
     detail:
-      "A floor plan of each level of the home must be submitted with both the building inspection checklist and the DSHS license application.",
+      "The building inspection checklist asks for a floor plan of every floor, with bedrooms and exit components labeled.",
   },
 ];
 
@@ -101,7 +107,7 @@ const afhArticleSchema = {
   description: "Complete guide to Washington State AFH building requirements — WABO inspection process, what WABO is, common modifications, new build vs remodel vs existing home, and septic requirements.",
   url: "https://realpropertyplanning.com/afh-club/building-inspection",
   datePublished: "2026-07-24",
-  dateModified: "2026-07-24",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -172,8 +178,8 @@ const AFHBuildingInspection = () => (
             }}
           >
             Before an Adult Family Home can be licensed in Washington State, the physical structure must be inspected
-            and approved by your local building jurisdiction. This process is separate from the DSHS licensing
-            inspection — and must often be completed first. Understanding the building requirements early can prevent
+            and approved by the local building official (WAC 388-76-10700). This is separate from the DSHS licensing
+            inspection, and DSHS will not license the home until it is done. Understanding the building requirements early can prevent
             expensive surprises.
           </p>
         </div>
@@ -217,8 +223,10 @@ const AFHBuildingInspection = () => (
             }}
           >
             WABO stands for the <strong>Washington Association of Building Officials</strong>. In collaboration with
-            DSHS, WABO developed the standardized Adult Family Home Building Inspection Checklist used by all local
-            building jurisdictions throughout Washington State (WAC 51-51-0330, effective February 1, 2021).
+            DSHS, WABO developed the Adult Family Home Local Building Inspection Checklist (DSHS form 15-604, current
+            revision 04/2025). It is based on Section R330 of the Washington residential code (WAC 51-51-0330), which
+            applies to new adult family homes and houses being converted to one, but not to homes licensed before
+            July 1, 2001.
           </p>
           <p
             style={{
@@ -232,7 +240,7 @@ const AFHBuildingInspection = () => (
             When people refer to getting a "WABO inspection" for an AFH, they mean the building inspection performed by
             your local building official using the WABO checklist.{" "}
             <strong>WABO itself does not perform inspections</strong> — your local city or county building department
-            does, using the WABO checklist as the standard.
+            does, and it completes the inspection section of the checklist.
           </p>
           <p
             style={{
@@ -244,8 +252,7 @@ const AFHBuildingInspection = () => (
             }}
           >
             Building inspection requirements may vary slightly by jurisdiction. Always contact your local building
-            department early in the process to understand their specific permitting procedures and timelines. Permit
-            review alone can take several weeks.
+            department early in the process to understand their specific permitting procedures and timelines.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
             <a
@@ -267,7 +274,7 @@ const AFHBuildingInspection = () => (
               DSHS Building Inspection Page →
             </a>
             <a
-              href="https://wabo.memberclicks.net/assets/pdfs/AFH%20Building%20Inspection%20Checklist%20(updated%20and%20finalized)%20-%20April%207%202024.pdf"
+              href="https://www.dshs.wa.gov/sites/default/files/forms/pdf/15-604.pdf"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -282,7 +289,7 @@ const AFHBuildingInspection = () => (
                 paddingBottom: 2,
               }}
             >
-              Download WABO AFH Checklist (2024) →
+              Download the Checklist (DSHS 15-604) →
             </a>
           </div>
         </div>
@@ -572,27 +579,27 @@ const AFHBuildingInspection = () => (
             {
               step: "1",
               title: "Review the WABO Checklist",
-              body: "Download the AFH Building Inspection Checklist from DSHS or WABO. Walk through your property against every item before contacting your local jurisdiction.",
+              body: "Download the AFH Local Building Inspection Checklist (DSHS form 15-604) from DSHS. Walk through your property against every item before contacting your local jurisdiction.",
             },
             {
               step: "2",
               title: "Contact your local building department",
-              body: "Building inspection requirements vary by city and county. Contact your local building official early. Use the 'Find Your Local Building Official' tool on the DSHS building inspections page.",
+              body: "Building inspection requirements vary by city and county. Contact your local building official early. The DSHS building inspections page links to WABO's directory of local building officials.",
             },
             {
               step: "3",
               title: "Obtain a remodel permit (if needed)",
-              body: "Most homes require a remodel permit if modifications are needed. If construction is proposed (ramps, bathroom work, window changes, electrical), submit plans and apply for the remodel permit first. The remodel must have a passed final inspection before the AFH inspection can proceed.",
+              body: "If construction is proposed (ramps, bathroom work, window changes, electrical), apply for the permit the work needs first. Ask the building department whether that work must pass its final inspection before the AFH inspection is scheduled.",
             },
             {
               step: "4",
               title: "Submit for the AFH building inspection",
-              body: "Once all modifications are complete (or if no construction is needed), apply for the AFH building inspection permit through your local jurisdiction. Submit the WABO checklist and a floor plan of each level.",
+              body: "Once all modifications are complete (or if no construction is needed), request the AFH building inspection through your local jurisdiction. Submit the checklist and a floor plan of every floor.",
             },
             {
               step: "5",
               title: "Pass the building inspection",
-              body: "The local building inspector completes the WABO checklist during the inspection. Once the home passes, the inspector signs the checklist and you have the documentation needed for your DSHS license application.",
+              body: "The local building department completes the inspection section of the checklist. DSHS requires the building official's inspection and approval before licensing, and again after any construction that affects residents' ability to exit or changes a resident bedroom (WAC 388-76-10700).",
             },
           ].map((item, i) => (
             <div
@@ -677,7 +684,7 @@ const AFHBuildingInspection = () => (
                 textDecoration: "underline",
               }}
             >
-              WABO AFH Building Inspection Checklist (PDF) →
+              AFH Local Building Inspection Checklist, DSHS 15-604 (PDF) →
             </a>
             <a
               href="https://www.dshs.wa.gov/sites/default/files/ALTSA/rcs/documents/afh/AFH%20Initial%20Inspection%20Preparation%20Checklist.pdf"

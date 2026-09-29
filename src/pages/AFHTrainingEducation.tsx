@@ -16,53 +16,59 @@ const TRAINING_REQUIREMENTS = [
     hours: "75 hrs",
     required: "All non-exempt providers",
     description:
-      "The 75 hours are a two-hour caregiver orientation, three hours of safety training, and 70 hours of basic training covering personal care, resident rights, communication, safety, and infection control. Must be completed at a DSHS-approved program. (Not to be confused with the former DSHS Prospective Provider Orientation class for license applicants, which was repealed effective January 1, 2024.) After completing the 75 hours, pass the HCA certification exam and receive DOH certification before applying for an AFH license.",
+      "The 75 hours are a two-hour caregiver orientation, three hours of safety training, and 70 hours of basic training covering personal care, resident rights, communication, safety, and infection control. Must be completed at a DSHS-approved program. (Not to be confused with the former DSHS Prospective Provider Orientation class for license applicants, which was repealed effective January 1, 2024.) After completing the 75 hours, pass the HCA certification exam and receive Department of Health certification before you can be licensed.",
     wac: "WAC 388-112A",
   },
   {
     title: "AFH Administrator Training",
-    hours: "Variable",
+    hours: "48–54 hrs",
     required: "All initial applicants",
     description:
-      "A multi-day course offered exclusively through contracted Washington community colleges. Covers licensing requirements, home management, care planning, medication systems, and building inspection preparation. Awards 12 hours of continuing education credit. Required for every new AFH application and for providers opening an additional home.",
+      "A DSHS-developed course offered only through community colleges contracted with DSHS. The rules set a minimum of 48 hours of instruction (WAC 388-112A-0800); DSHS and North Seattle College currently describe a 54-hour course. Covers business and fiscal planning, human resources, resident health issues, care planning, emergency and disaster planning, resident rights, the licensing process, legal issues, and fire safety. The certificate counts for 12 hours of continuing education in the year the course is taken. Required for new applicants and entity representatives; a current provider who has already completed it does not repeat it for an additional home.",
     wac: "WAC 388-112A-0800 through 0840",
   },
   {
     title: "CPR Certification",
     hours: "Varies",
-    required: "All providers",
+    required: "All applicants",
     description:
-      "Current CPR certification is required at time of application and must remain current. Accepted from any accredited CPR provider.",
-    wac: "WAC 388-76-10120",
+      "Applicants, providers, entity representatives, and resident managers must have a valid CPR card before the home is licensed and must keep it current. The course must be taught by an authorized CPR instructor and include written and skills tests.",
+    wac: "WAC 388-112A-0700, 0720",
   },
   {
     title: "First Aid Certification",
     hours: "Varies",
-    required: "Non-nursing providers",
-    description: "Required for all providers who are not licensed nurses (RN or LPN). Must remain current.",
-    wac: "WAC 388-76-10120",
+    required: "Applicants",
+    description: "Required with CPR before licensure for applicants, providers, entity representatives, and resident managers, and must remain current. DSHS lists licensed nurses as not required to hold first aid.",
+    wac: "WAC 388-112A-0720",
   },
   {
     title: "Food Safety Training",
-    hours: "Varies",
+    hours: "Built in",
     required: "All providers",
-    description: "Training on safe food handling, storage, and preparation. Required before licensure.",
-    wac: "WAC 388-112A-0610",
+    description: "Safe food handling is part of the required caregiver training. A separate food handler's permit is not required for anyone who completed basic training after June 30, 2005. A provider or employee relying on a food handler's permit held before June 30, 2005 must complete a half hour of food safety continuing education each year.",
+    wac: "RCW 70.128.250 · WAC 388-112A-0610",
   },
 ];
 
 const SPECIALTY_TRAININGS = [
-  { name: "Dementia Specialty Training", trigger: "Required before admitting residents with dementia" },
+  { name: "Dementia Specialty Training", trigger: "Required before admitting or serving residents with dementia-related needs" },
   {
     name: "Mental Health Specialty Training",
-    trigger: "Required before admitting residents with mental health diagnoses",
+    trigger: "Required before admitting or serving residents with needs related to mental illness",
   },
   {
     name: "Developmental Disabilities Specialty Training",
-    trigger: "Required before admitting residents with developmental disabilities",
+    trigger: "Required before admitting or serving residents with developmental disabilities",
   },
-  { name: "Nurse Delegation — Basic", trigger: "Required if providing delegated nursing tasks" },
-  { name: "Nurse Delegation — Insulin", trigger: "Required if administering insulin through delegation" },
+  {
+    name: "Nurse Delegation — Core",
+    trigger: "Required before a caregiver performs any delegated nursing task; the caregiver must also be a certified Home Care Aide or Nursing Assistant Certified",
+  },
+  {
+    name: "Nurse Delegation — Specialized Diabetes",
+    trigger: "Required, in addition to core, before a caregiver gives insulin injections under delegation",
+  },
 ];
 
 /* Article schema. AFH guides previously emitted only BreadcrumbSchema, so
@@ -76,7 +82,7 @@ const afhArticleSchema = {
   description: "Complete guide to Washington State AFH training requirements — 75-hour HCA training, AFH Administrator Training, specialty courses, continuing education, and where to enroll.",
   url: "https://realpropertyplanning.com/afh-club/training-education",
   datePublished: "2026-07-24",
-  dateModified: "2026-07-24",
+  dateModified: "2026-09-28",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -146,8 +152,7 @@ const AFHTrainingEducation = () => (
               maxWidth: 680,
             }}
           >
-            Washington State has some of the most comprehensive caregiver training requirements in the country. For AFH
-            providers, training is not a one-time event — it is an ongoing professional responsibility. This page
+            For AFH providers, training is not a one-time event — it is an ongoing professional responsibility. This page
             outlines every required training, who must complete it, and where to find approved programs.
           </p>
         </div>
@@ -190,8 +195,8 @@ const AFHTrainingEducation = () => (
               margin: "0 0 32px",
             }}
           >
-            All of the following must be completed before you can apply for an AFH license. Training takes time — build
-            this into your planning timeline.
+            All of the following must be completed before an AFH license is issued. Training takes time — build this
+            into your planning timeline.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {TRAINING_REQUIREMENTS.map((item) => (
@@ -320,9 +325,9 @@ const AFHTrainingEducation = () => (
               margin: "0 0 20px",
             }}
           >
-            The AFH Administrator Training is available only through contracted Washington State community colleges. It
-            is a required step for every person applying for an initial AFH license and for any provider opening an
-            additional home.
+            The AFH Administrator Training is available only through community colleges contracted with DSHS. It is
+            required for new applicants and entity representatives. DSHS must deny a license to an applicant who has not
+            completed it (WAC 388-76-10120).
           </p>
           <p
             style={{
@@ -333,10 +338,13 @@ const AFHTrainingEducation = () => (
               margin: "0 0 20px",
             }}
           >
-            Topics covered include Washington State licensing requirements, resident rights, care planning, medication
-            systems, building inspection preparation, emergency procedures, and home administration. Upon completion,
-            participants receive a certificate that also counts as 12 hours of DSHS-approved continuing education for
-            long-term care workers.
+            The rules set a minimum of 48 hours of instruction (WAC 388-112A-0800); DSHS and North Seattle College
+            currently describe the course as 54 hours. Required subjects include business planning and marketing, fiscal
+            management, human resources, identifying resident health issues, person-centered and negotiated care planning,
+            emergency and disaster planning, nutrition and food service, resident rights, the licensing process, legal
+            issues, and physical maintenance and fire safety (WAC 388-112A-0820). Upon completion, participants receive a
+            certificate that can be used for 12 hours of long-term care worker continuing education in the year the
+            course was taken.
           </p>
           <p
             style={{
@@ -347,10 +355,9 @@ const AFHTrainingEducation = () => (
               margin: "0 0 28px",
             }}
           >
-            Classes are typically offered at multiple Washington community colleges including North Seattle College.
-            Contact the college directly for current schedules — some classes are available on weekends for working
-            professionals. Call (206) 934-3619 or email afh.north@seattlecolleges.edu for North Seattle College
-            scheduling.
+            To find a participating college, use the DSHS training finder and choose "AFH Administrator Training" under
+            Other Training. North Seattle College is one of them; call 206-934-3705 or email
+            afh.north@seattlecolleges.edu for its current schedule.
           </p>
           <div
             style={{
@@ -370,9 +377,10 @@ const AFHTrainingEducation = () => (
                 margin: 0,
               }}
             >
-              <strong>Already licensed?</strong> A currently licensed provider who has completed the AFH Administrator
-              Training is not required to take it again when applying for a new license for an additional home — unless
-              they have not yet completed it at all. If unsure, email rcspolicy@dshs.wa.gov.
+              <strong>Already licensed?</strong> A current provider or entity representative who has already completed
+              the AFH Administrator Training does not take it again to apply for an additional home. One who has never
+              completed it must take it before submitting the new application (WAC 388-76-10064). If unsure, email
+              rcspolicy@dshs.wa.gov.
             </p>
           </div>
         </div>
@@ -416,8 +424,11 @@ const AFHTrainingEducation = () => (
             }}
           >
             These trainings are required only if your home admits residents with specific diagnoses or assessed needs.
-            They must be completed before providing those services — not after. Each allows you to accept a broader
-            range of residents and may qualify your home for specialty Medicaid contracts.
+            The provider, entity representative and resident manager must complete specialty training and pass the DSHS
+            competency test before admitting or serving those residents. If a current resident develops one of these
+            needs in a home without that specialty designation, they have 120 days to complete it (WAC 388-112A-0490).
+            Caregivers serving those residents need the matching specialty training too (WAC 388-112A-0400). Nurse
+            delegation training is required before a caregiver performs delegated nursing tasks (WAC 388-112A-0550).
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
             {SPECIALTY_TRAININGS.map((item) => (
@@ -531,9 +542,11 @@ const AFHTrainingEducation = () => (
               margin: "0 0 20px",
             }}
           >
-            AFH providers and staff are required to complete continuing education annually. Long-term care workers must
-            accumulate DSHS-approved CE credits each year to maintain their credentials. The AFH Administrator Training
-            certificate counts for 12 CE hours in the year it is completed.
+            Providers, entity representatives, resident managers, certified Home Care Aides, and nursing assistants
+            certified must complete 12 hours of DSHS-approved continuing education by their birthday each year. RNs, LPNs
+            and ARNPs are not covered by this requirement. A caregiver who falls behind may not provide care until the
+            hours are done (WAC 388-112A-0610). The AFH Administrator Training certificate counts for 12 CE hours in the
+            year it is completed.
           </p>
           <p
             style={{
@@ -544,10 +557,10 @@ const AFHTrainingEducation = () => (
               margin: "0 0 20px",
             }}
           >
-            An optional but prestigious credential is the <strong>Certified Adult Family Home Provider</strong> program
-            offered through the University of Washington's Northwest Geriatric Education Center. Completing 52–57
-            credits covering more than 20 geriatric health topics earns this designation, which signals advanced
-            expertise to families and referral agencies.
+            State law also directs DSHS to establish a specialty license with a geriatric specialty certification for
+            providers who complete the <strong>University of Washington School of Nursing</strong> certified geriatric
+            certification program and testing (RCW 70.128.040). It is voluntary. Check with the University of Washington
+            for whether the program is currently offered.
           </p>
           <p
             style={{
@@ -558,9 +571,10 @@ const AFHTrainingEducation = () => (
               margin: "0 0 28px",
             }}
           >
-            The Long-Term Care Foundation of Washington (LTCF) operates an AFH Training Network that provides sponsored
-            training — including HCA and CNA certification tuition — at no out-of-pocket cost for Medicaid-contracted
-            AFHs. Providers pay employees for training hours; LTCF reimburses the AFH after completion.
+            The Long-Term Care Foundation of Washington (LTCF) operates an AFH Training Network. For
+            Medicaid-contracted AFHs with at least one Medicaid resident, it describes paying tuition, testing and
+            application fees for HCA or CNA certification and some specialty courses, plus a training participation
+            allowance paid after the employee completes training. Confirm current terms with LTCF.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[

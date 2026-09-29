@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "What's the DSHS licensing process like for a Mukilteo AFH?",
     answer:
-      "The same statewide process applies regardless of city — a background check, home study, and fire/safety inspection through the Department of Social and Health Services. Buying an already-licensed home means the property has already passed that inspection once, though the new owner still needs DSHS approval.",
+      "The same statewide process applies regardless of city — a background check, licensing inspection, and fire/safety inspection through the Department of Social and Health Services. Buying an already-licensed home means the property has already passed that inspection once, though the new owner still needs DSHS approval.",
   },
   {
     question: "How do I find out about new AFH listings in Mukilteo before they're widely marketed?",
