@@ -1,5 +1,6 @@
 import { REDIRECTS } from "./data/redirects";
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
+import { lazy } from "@/lib/chunkRecovery";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import RPPHome from "./pages/RPPHome";

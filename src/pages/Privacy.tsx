@@ -33,8 +33,10 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  *   YouTube                 ProviderVideoModal.tsx — youtube-nocookie.com,
  *                           the privacy-preserving variant, loaded only when
  *                           a reader opens a video
- *   sessionStorage          main.tsx — a single "rpp-chunk-reloaded" flag for
- *                           recovering from a failed chunk load. Not tracking.
+ *   sessionStorage          src/lib/chunkRecovery.ts — one timestamp
+ *                           ("rpp-chunk-reload-at") used to recover from a
+ *                           failed code-file load without a reload loop.
+ *                           Not tracking.
  *
  * IF YOU CHANGE WHAT THE SITE COLLECTS, CHANGE THIS PAGE. A policy that
  * describes the wrong thing is worse than no policy: it is a written statement

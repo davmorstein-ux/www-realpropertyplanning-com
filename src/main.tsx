@@ -3,17 +3,15 @@ import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
 import "./i18n/config";
+import { recoverFromChunkError } from "./lib/chunkRecovery";
 
-/* After a new deploy, an old index.html can still reference chunk filenames
-   that no longer exist, so lazy route imports fail with
-   "Failed to fetch dynamically imported module". Reload once to pick up the
-   fresh manifest instead of showing a blank screen. */
+/* After a new deploy, an old tab can still reference code files that no longer
+   exist. Reload to the fresh build every time this happens (guarded against a
+   loop); see src/lib/chunkRecovery.ts. The old version reloaded once per
+   session and then silently ignored failures, so menu links stopped working. */
 window.addEventListener("vite:preloadError", (event) => {
   event.preventDefault();
-  if (!sessionStorage.getItem("rpp-chunk-reloaded")) {
-    sessionStorage.setItem("rpp-chunk-reloaded", "1");
-    window.location.reload();
-  }
+  recoverFromChunkError();
 });
 
 
