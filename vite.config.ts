@@ -229,7 +229,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Questions about probate, an inherited home, or a senior housing move? Reach Real Property Planning to be pointed to the right guide, tool, or licensed professional. Call (206) 900-3015.",
     h1: "Get Connected",
     intro:
-      "Real Property Planning is a free resource hub connecting elderly individuals, their families, and professionals across Washington State. Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for independent professionals, use this page to ask a question and be pointed in the right direction.",
+      "Real Property Planning is a free educational resource for older adults, their families, and the professionals who work with them across Washington State. Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for independent professionals, use this page to ask a question and be pointed in the right direction.",
   },
   "/counties": {
     title: "Washington Counties | Probate, Estate & Senior Transition Guides by County",

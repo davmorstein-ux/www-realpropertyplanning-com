@@ -9,7 +9,7 @@ import { describe, expect, it } from "vitest";
    Old, unrouted homepage versions are skipped. */
 const ROOT = resolve(__dirname, "../..");
 const SKIP = /RPPHome\.tsx$|RPPHomeV2\.tsx$|HomepageFinal\.tsx$|HomepageNew\.tsx$|HomepageOrientation(New)?\.tsx$|HomepageTeamSection\.tsx$|StatewideSupport\.tsx$|ServiceAreasSection\.tsx$|\/test\//;
-const BAD = /(Real Property Planning|the hub|AFH Club|Real Property Planning network)\s+(can\s+(help\s+)?)?(connects?|introduce)\b/i;
+const BAD = /(Real Property Planning|the hub|AFH Club|Real Property Planning network)\s+(can\s+(help\s+)?)?(connects?|introduce)\b|resource hub connecting/i;
 
 const files = (dir: string): string[] =>
   readdirSync(dir).flatMap((f) => {
