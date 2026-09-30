@@ -18,6 +18,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "react-i18next";
 import { FEATURED_APPRAISER, FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { GENERAL_INBOX, REASON_VALUES, isContactReason, recipientFor } from "@/data/contactRouting";
+import { trackLead } from "@/lib/leadTracking";
+import { getPreviousPage } from "@/lib/navHistory";
 
 // Value sent to the backend is always this fixed English slug,
 // regardless of display language, so the email function's expectations
@@ -153,6 +155,10 @@ const Contact = () => {
         title: t("contactPage.toasts.successTitle"),
         description: t("contactPage.toasts.successDescription"),
       });
+      /* Analytics lead event, only after the server confirmed the send. The
+         source is the in-site page the visitor came from before Contact, so
+         reports show which pages produce inquiries. No personal details. */
+      trackLead({ reason, recipient: recipientFor(reason), sourcePage: getPreviousPage()?.path.split("?")[0] ?? "(direct to contact)" });
       form.reset();
       setRole("");
       setReason("");

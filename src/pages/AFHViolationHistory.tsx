@@ -117,8 +117,8 @@ const AFHViolationHistory = () => (
           </h1>
           <p style={{ ...body, margin: 0, maxWidth: 680 }}>
             Washington State provides free public access to Adult Family Home (AFH) inspection and enforcement
-            records. These records help families compare care options, help residents understand a home's history,
-            and support buyers performing due diligence. The challenge is not access — it's knowing where to look
+            records. These records support buyers and investors doing due diligence, show owners how their home's record
+            reads to others, and let anyone check a home's history. The challenge is not access — it's knowing where to look
             and how to interpret what you find.
           </p>
         </div>

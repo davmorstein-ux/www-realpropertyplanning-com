@@ -207,8 +207,8 @@ const AFHRegulationsCompliance = () => (
               maxWidth: 680,
             }}
           >
-            This page is written for two audiences: <strong>families</strong> researching a home for a loved one, and{" "}
-            <strong>providers</strong> who need to stay inspection-ready year-round.
+            This page is written for two audiences: <strong>buyers and investors</strong> checking a home's record before a purchase,
+            and <strong>providers</strong> who need to stay inspection-ready year-round.
           </p>
         </div>
       </section>
@@ -770,7 +770,7 @@ const AFHRegulationsCompliance = () => (
               margin: "0 0 14px",
             }}
           >
-            For Families
+            For Buyers and Investors
           </p>
           <h2
             style={{
@@ -805,7 +805,7 @@ const AFHRegulationsCompliance = () => (
               },
               {
                 heading: "Use inspections as one tool among many.",
-                body: "Visit the home in person. Speak with current residents and families. Ask about staffing levels and daily routines. Public records alone rarely tell the complete story.",
+                body: "Visit the home in person. Ask the seller about staffing levels, the current census and daily routines, and request the home's own copies of recent inspection reports and plans of correction. Public records alone rarely tell the complete story.",
               },
             ].map((item) => (
               <div

@@ -9,7 +9,7 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  * Privacy policy.
  *
  * DRAFTED FROM A CODE AUDIT, NOT FROM A TEMPLATE. Every disclosure below
- * corresponds to something the site actually does as of 2026-08-13:
+ * corresponds to something the site actually does as of 2026-09-30:
  *
  *   Google Analytics 4      index.html, gtag G-0X2GPKCW65 — loads on every
  *                           page, before any consent step
@@ -18,6 +18,10 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  *                           professional's phone, email, or website link.
  *                           Records the provider's name, company, which kind
  *                           of link, and the page path. No visitor identity.
+ *   Contact-form leads      leadTracking.ts — a generate_lead event after a
+ *                           contact message is sent: topic code, which inbox
+ *                           (general / broker / appraiser) and the page the
+ *                           visitor came from. No name, email, phone or text.
  *   Referral UTM tags       providerTracking.ts — outbound provider website
  *                           links carry utm_source=realpropertyplanning.com so
  *                           the professional can see the referral in their own
@@ -49,7 +53,7 @@ import { FEATURED_APPRAISER,  FEATURED_BROKER} from "@/data/featuredProfessional
  * current practice — it is not a substitute for a lawyer reading it.
  */
 
-const UPDATED = "August 13, 2026";
+const UPDATED = "September 30, 2026";
 
 const Privacy = () => {
   return (
@@ -118,6 +122,14 @@ const Privacy = () => {
                 click, not you — no name, no phone number, and nothing about what you go on to
                 say to them. Links to a professional's own website also carry a tag identifying this
                 site as the source, so they can see the referral in their own analytics.
+              </p>
+              <p>
+                <strong>Contact form.</strong> When a message you send through the contact form goes
+                through, we record that a message was sent, its topic (for example "buying or selling
+                an adult family home"), which inbox it went to, and the page you were reading before
+                you opened the form. This tells us which pages people find useful enough to ask a
+                question about. It does not record your name, email address, phone number, or anything
+                you wrote.
               </p>
               <p>
                 <strong>Fonts.</strong> The typefaces on this site are served by Google Fonts. Your
