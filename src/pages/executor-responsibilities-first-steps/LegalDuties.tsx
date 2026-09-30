@@ -92,7 +92,7 @@ const LegalDuties = () => (
     </UL>
     <P>…professional guidance isn't optional — it's essential.</P>
     <P>
-      Real Property Planning can connect you with experienced probate and estate attorneys across Washington State.
+      Real Property Planning does not refer clients to attorneys. Choose a Washington-licensed probate attorney yourself; you can confirm any lawyer's license with the Washington State Bar Association (wsba.org).
     </P>
   </ExecutorSubPageLayout>
 );

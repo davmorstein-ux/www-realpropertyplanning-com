@@ -379,8 +379,8 @@ const FeaturedProfessionals = () => (
               maxWidth: 680,
             }}
           >
-            Real Property Planning connects families with independent specialists across Washington State. Each
-            professional below is featured elsewhere on this site — click through to learn more and see their full
+            Independent specialists across Washington State, each met with personally by the site's owner. You contact
+            and hire them directly; nobody pays to be listed. Each professional below is featured elsewhere on this site — click through to learn more and see their full
             profile.
           </p>
         </div>

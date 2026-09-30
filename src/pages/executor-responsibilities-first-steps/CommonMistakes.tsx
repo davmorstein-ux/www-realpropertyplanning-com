@@ -99,9 +99,9 @@ const CommonMistakes = () => (
 
     <Divider />
 
-    <SubH2>We Can Help Connect You With the Right Professionals</SubH2>
+    <SubH2>Finding the Right Professionals</SubH2>
     <P>
-      Real Property Planning connects executors with experienced probate attorneys, appraisers, and real estate professionals across Washington State.
+      Real Property Planning explains what each of these professionals does. Its Find a Professional page lists independent professionals the site's owner has met with personally; you contact and hire them directly, and you are free to choose anyone.
     </P>
   </ExecutorSubPageLayout>
 );

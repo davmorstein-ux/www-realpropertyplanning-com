@@ -133,7 +133,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Are you an executor managing a probate property in Washington? Get calm, step-by-step guidance on pricing, preparing, and selling inherited real estate. Serving King, Snohomish & surrounding counties.",
     h1: "Guidance for Executors Managing Inherited Property",
     quickAnswerQ: "What should an executor do when there is real estate in the estate?",
-    quickAnswerA: "Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. The guides here walk through each of those steps; when the estate needs a valuation or a sale, Real Property Planning can connect you with a featured Washington licensed broker or certified appraiser.",
+    quickAnswerA: "Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. The guides here walk through each of those steps; when the estate needs a valuation or a sale, you can contact the site's featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
     intro:
       "First time managing an estate property? These guides walk executors and trustees through every step — securing the home, understanding its value, deciding what to repair, pricing it, and selling it — and explain when a licensed professional should be involved.",
   },
@@ -144,7 +144,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Probate & Estate Property Sales",
     quickAnswerQ: "How does selling a house through probate work in Washington State?",
     quickAnswerA:
-      "In Washington, an estate property typically cannot be sold until the court grants the executor formal legal authority — usually through Letters Testamentary. Once that authority is in place, the process follows familiar real estate steps — evaluation, preparation, listing, negotiation, and closing — but with added requirements: a defensible appraisal, coordination among multiple decision-makers, and pricing that reflects the property's true condition rather than an automated estimate. Real Property Planning explains each stage and can connect you with a featured Washington licensed broker or certified appraiser when you need one.",
+      "In Washington, an estate property typically cannot be sold until the court grants the executor formal legal authority — usually through Letters Testamentary. Once that authority is in place, the process follows familiar real estate steps — evaluation, preparation, listing, negotiation, and closing — but with added requirements: a defensible appraisal, coordination among multiple decision-makers, and pricing that reflects the property's true condition rather than an automated estimate. Real Property Planning explains each stage; when you need a broker or appraiser, you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
     intro:
       "Probate sales involve court timelines, fiduciary duties, deferred maintenance, and family coordination. This page explains what to expect at each stage and where a licensed professional fits in, so executors, heirs, and attorneys know what comes next.",
   },
@@ -189,7 +189,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Free reference guides on probate real estate, inherited property, trust-owned real estate, and estate sales that CPAs can share with the families they advise in Washington State.",
     h1: "Real Estate Guidance for CPAs and the Families They Advise",
     intro:
-      "Real Property Planning gives CPAs plain-language guides on probate real estate, inherited property, trust-owned real estate, and estate sales to share with the families they advise, and can introduce a featured Washington licensed broker or certified appraiser when a valuation or sale is needed.",
+      "Real Property Planning gives CPAs plain-language guides on probate real estate, inherited property, trust-owned real estate, and estate sales to share with the families they advise, and lists a featured Washington licensed broker and certified appraiser they and their clients can contact directly when a valuation or sale is needed.",
   },
   "/for-financial-planners": {
     title: "Real Estate Guidance for Financial Planners | Real Property Planning",
@@ -197,7 +197,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Free reference guides on probate real estate, inherited property, trust-owned real estate, and estate sales that financial planners can share with the families they advise in Washington State.",
     h1: "Real Estate Guidance for Financial Planners and the Families They Advise",
     intro:
-      "Real Property Planning gives financial planners plain-language guides on probate real estate, inherited property, trust-owned real estate, and estate sales to share with the families they advise, and can introduce a featured Washington licensed broker or certified appraiser when a valuation or sale is needed.",
+      "Real Property Planning gives financial planners plain-language guides on probate real estate, inherited property, trust-owned real estate, and estate sales to share with the families they advise, and lists a featured Washington licensed broker and certified appraiser they and their clients can contact directly when a valuation or sale is needed.",
   },
   "/about": {
     title: "About Real Property Planning | Senior Transitions & Estate Hub",
@@ -245,7 +245,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Selling an inherited home in Seattle, the Eastside, or South King County. Neighborhood-level pricing for Capitol Hill, Mercer Island, Renton, Bellevue, and beyond.",
     h1: "Selling an Inherited Home in Seattle, the Eastside, or South King County",
     quickAnswerQ: "How does selling estate property work in King County's competitive market?",
-    quickAnswerA: "King County's market is active, but condition-impaired or vacant estate properties don't automatically benefit. Start with an honest, condition-adjusted valuation calibrated to the specific neighborhood and buyer pool — not a county-wide average. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    quickAnswerA: "King County's market is active, but condition-impaired or vacant estate properties don't automatically benefit. Start with an honest, condition-adjusted valuation calibrated to the specific neighborhood and buyer pool — not a county-wide average. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
     intro:
       "From Capitol Hill craftsmans to Mercer Island waterfront and Renton ramblers — King County estate properties demand neighborhood-level pricing, not county averages. This page explains what to know before pricing or preparing a King County estate property, and how to find a broker or appraiser who works the neighborhood.",
     cities: [
@@ -260,7 +260,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Estate property sales from Edmonds to Monroe. Waterfront homes in Mukilteo, family houses in Mill Creek, rural acreage near Arlington — priced for the actual neighborhood.",
     h1: "Estate Property Sales from Edmonds to Monroe — Snohomish County, WA",
     quickAnswerQ: "How do probate and estate property sales work in Snohomish County?",
-    quickAnswerA: "Snohomish County stretches from Edmonds and Mukilteo waterfronts to Mill Creek suburbs to rural acreage near Monroe and Arlington — each with its own buyer pool. Pricing and preparation should follow the specific neighborhood the home sits in. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    quickAnswerA: "Snohomish County stretches from Edmonds and Mukilteo waterfronts to Mill Creek suburbs to rural acreage near Monroe and Arlington — each with its own buyer pool. Pricing and preparation should follow the specific neighborhood the home sits in. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
     intro:
       "Waterfront homes in Mukilteo, longtime family houses in Mill Creek, rural acreage near Arlington — every Snohomish corner has its own buyer pool. This page explains what to know about pricing and preparing an estate property here, and how to find a broker or appraiser who works the area.",
     cities: [
@@ -417,7 +417,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Probate & Estate Real Estate in Whatcom County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Bellingham, Ferndale, Lynden, and the Whatcom County communities. Local pricing for waterfront, rural, and in-town homes.",
     h1: "Whatcom County, WA",
-    intro: "From Bellingham bayfront homes to Lynden farmhouses and Ferndale family neighborhoods, Whatcom County estate properties span very different buyer pools. Pricing and preparation should follow the actual market the home sits in. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "From Bellingham bayfront homes to Lynden farmhouses and Ferndale family neighborhoods, Whatcom County estate properties span very different buyer pools. Pricing and preparation should follow the actual market the home sits in. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/thurston-county": {
     title: "Probate & Estate Real Estate in Thurston County, WA | Real Property Planning",
@@ -425,97 +425,97 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Thurston County, WA",
     quickAnswerQ: "How do practical probate and estate sale strategies work in Thurston County?",
     quickAnswerA: "Thurston County's government-employment-driven market creates a steady buyer pool that behaves differently from faster-growing metro areas. This page explains how to set realistic expectations and plan an estate sale around Thurston County's measured market dynamics, and how to connect with a featured Washington licensed broker or certified appraiser who works the county.",
-    intro: "Olympia's older established neighborhoods, Lacey's mid-century inventory, and Tumwater's family communities each carry different buyer expectations. Pricing should be condition-based and calibrated to the actual neighborhood. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Olympia's older established neighborhoods, Lacey's mid-century inventory, and Tumwater's family communities each carry different buyer expectations. Pricing should be condition-based and calibrated to the actual neighborhood. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/clark-county": {
     title: "Probate & Estate Real Estate in Clark County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Vancouver, Camas, Battle Ground, Ridgefield, and the Southwest Washington market. Pricing built for the local Portland-metro buyer pool.",
     h1: "Clark County, WA",
-    intro: "Clark County estate sales play to a Portland-influenced buyer pool — Vancouver waterfront condos, Camas family homes, and Battle Ground acreage each behave differently. Pricing should follow the actual sub-market, not the metro average. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Clark County estate sales play to a Portland-influenced buyer pool — Vancouver waterfront condos, Camas family homes, and Battle Ground acreage each behave differently. Pricing should follow the actual sub-market, not the metro average. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/spokane-county": {
     title: "Probate & Estate Real Estate in Spokane County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Spokane, Spokane Valley, Liberty Lake, and the Inland Northwest. Honest condition-based pricing for the Spokane buyer pool.",
     h1: "Spokane County, WA",
-    intro: "Spokane's South Hill craftsmans, Spokane Valley ramblers, and Liberty Lake newer construction draw different buyers and tolerate different prep choices. Pricing should be condition-adjusted and built for the Spokane market — not Westside assumptions. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Spokane's South Hill craftsmans, Spokane Valley ramblers, and Liberty Lake newer construction draw different buyers and tolerate different prep choices. Pricing should be condition-adjusted and built for the Spokane market — not Westside assumptions. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/benton-county": {
     title: "Probate & Estate Real Estate in Benton County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Kennewick, Richland, West Richland, and the Tri-Cities. Local pricing calibrated to the Benton County buyer pool.",
     h1: "Benton County, WA",
-    intro: "Tri-Cities estate properties — Kennewick family homes, Richland mid-centurys, West Richland newer construction — reward neighborhood-specific pricing and an honest read on condition. A sale here needs that local discipline from the first pricing conversation. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Tri-Cities estate properties — Kennewick family homes, Richland mid-centurys, West Richland newer construction — reward neighborhood-specific pricing and an honest read on condition. A sale here needs that local discipline from the first pricing conversation. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/yakima-county": {
     title: "Probate & Estate Real Estate in Yakima County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Yakima, Selah, Sunnyside, and the lower Yakima Valley. Honest pricing calibrated to local buyer expectations and decades-held homes.",
     h1: "Yakima County, WA",
-    intro: "Yakima Valley buyers expect honest pricing and negotiate hard on condition. Pricing should rest on the property's actual features — not Westside comparables that don't translate. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Yakima Valley buyers expect honest pricing and negotiate hard on condition. Pricing should rest on the property's actual features — not Westside comparables that don't translate. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/franklin-county": {
     title: "Probate & Estate Real Estate in Franklin County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Pasco, West Pasco, and the Tri-Cities side of Franklin County. Pricing built for the local agricultural-and-suburban buyer pool.",
     h1: "Franklin County, WA",
-    intro: "Pasco's growing neighborhoods and Franklin County's mix of newer construction and rural acreage call for buyer-pool-specific pricing. Executors, trustees, and families need condition-based valuation before any sale decision. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Pasco's growing neighborhoods and Franklin County's mix of newer construction and rural acreage call for buyer-pool-specific pricing. Executors, trustees, and families need condition-based valuation before any sale decision. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/cowlitz-county": {
     title: "Probate & Estate Real Estate in Cowlitz County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Longview, Kelso, Castle Rock, and the Lower Columbia. Honest pricing for Cowlitz County's regional buyer pool.",
     h1: "Cowlitz County, WA",
-    intro: "Longview's established neighborhoods, Kelso family homes, and Castle Rock acreage each carry their own pricing dynamics. Valuation should be condition-adjusted and built for the Cowlitz County market. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Longview's established neighborhoods, Kelso family homes, and Castle Rock acreage each carry their own pricing dynamics. Valuation should be condition-adjusted and built for the Cowlitz County market. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/grays-harbor-county": {
     title: "Probate & Estate Real Estate in Grays Harbor County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Aberdeen, Hoquiam, Montesano, Ocean Shores, and the Washington coast. Local pricing for coastal and inland properties.",
     h1: "Grays Harbor County, WA",
-    intro: "Coastal properties in Ocean Shores, working-town homes in Aberdeen and Hoquiam, and rural acreage near Montesano all behave differently. Pricing should follow the buyer pool the home actually competes in. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Coastal properties in Ocean Shores, working-town homes in Aberdeen and Hoquiam, and rural acreage near Montesano all behave differently. Pricing should follow the buyer pool the home actually competes in. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/island-county": {
     title: "Probate & Estate Real Estate in Island County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Whidbey Island, Camano Island, Oak Harbor, Coupeville, Langley, and Freeland. Local pricing for waterfront and view homes.",
     h1: "Island County, WA",
-    intro: "Whidbey and Camano estate properties — waterfront, view lots, and inland family homes — each carry distinct buyer pools shaped by ferry access, the Naval base, and second-home demand. Pricing should follow the actual sub-market. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Whidbey and Camano estate properties — waterfront, view lots, and inland family homes — each carry distinct buyer pools shaped by ferry access, the Naval base, and second-home demand. Pricing should follow the actual sub-market. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/jefferson-county": {
     title: "Probate & Estate Real Estate in Jefferson County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Port Townsend, Port Hadlock, Chimacum, and the Olympic Peninsula. Local pricing for historic, waterfront, and rural homes.",
     h1: "Jefferson County, WA",
-    intro: "Port Townsend's Victorian-era homes, Port Hadlock waterfront properties, and Chimacum acreage attract different buyers and reward different prep choices. Pricing should be condition-based and calibrated to the local market. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Port Townsend's Victorian-era homes, Port Hadlock waterfront properties, and Chimacum acreage attract different buyers and reward different prep choices. Pricing should be condition-based and calibrated to the local market. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/lewis-county": {
     title: "Probate & Estate Real Estate in Lewis County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Centralia, Chehalis, Napavine, and the I-5 corridor through Lewis County. Honest local pricing for in-town and rural homes.",
     h1: "Lewis County, WA",
-    intro: "Lewis County's mix of established Centralia and Chehalis neighborhoods, smaller-town homes, and rural acreage each behave differently. Pricing should follow the actual buyer pool — not regional averages. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Lewis County's mix of established Centralia and Chehalis neighborhoods, smaller-town homes, and rural acreage each behave differently. Pricing should follow the actual buyer pool — not regional averages. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/mason-county": {
     title: "Probate & Estate Real Estate in Mason County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Shelton, Belfair, Allyn, Hoodsport, and Mason County's waterfront and rural communities. Local pricing for varied property types.",
     h1: "Mason County, WA",
-    intro: "Mason County estate properties span Shelton in-town homes, Belfair and Allyn waterfront, and rural acreage across the peninsula. Pricing should be condition-based and built for each sub-market's specific buyer pool. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Mason County estate properties span Shelton in-town homes, Belfair and Allyn waterfront, and rural acreage across the peninsula. Pricing should be condition-based and built for each sub-market's specific buyer pool. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/pacific-county": {
     title: "Probate & Estate Real Estate in Pacific County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Long Beach, Ilwaco, Raymond, South Bend, and Pacific County's coastal communities. Honest pricing for coastal and inland properties.",
     h1: "Pacific County, WA",
-    intro: "Long Beach Peninsula vacation homes, Ilwaco coastal properties, and Raymond and South Bend in-town houses each face very different buyer pools. Pricing should follow the home's actual market. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Long Beach Peninsula vacation homes, Ilwaco coastal properties, and Raymond and South Bend in-town houses each face very different buyer pools. Pricing should follow the home's actual market. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/san-juan-county": {
     title: "Probate & Estate Real Estate in San Juan County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for San Juan Island, Orcas Island, Lopez Island, and the San Juans. Local pricing for waterfront, view, and island properties.",
     h1: "San Juan County, WA",
-    intro: "San Juan, Orcas, and Lopez Island estate properties draw a specific buyer pool shaped by ferry access, second-home demand, and limited inventory. Pricing should follow the actual island sub-market. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "San Juan, Orcas, and Lopez Island estate properties draw a specific buyer pool shaped by ferry access, second-home demand, and limited inventory. Pricing should follow the actual island sub-market. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/skamania-county": {
     title: "Probate & Estate Real Estate in Skamania County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Stevenson, Carson, North Bonneville, and the Columbia River Gorge area. Local pricing for rural, view, and waterfront homes.",
     h1: "Skamania County, WA",
-    intro: "Skamania County's Columbia Gorge properties — Stevenson in-town homes, Carson rural acreage, and view lots near North Bonneville — each carry their own pricing dynamics. Valuation should be condition-based and tailored to the local market. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Skamania County's Columbia Gorge properties — Stevenson in-town homes, Carson rural acreage, and view lots near North Bonneville — each carry their own pricing dynamics. Valuation should be condition-based and tailored to the local market. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
   "/wahkiakum-county": {
     title: "Probate & Estate Real Estate in Wahkiakum County, WA | Real Property Planning",
     description: "Estate and inherited property guidance for Cathlamet, Skamokawa, and Wahkiakum County's Lower Columbia communities. Local pricing for rural, river, and in-town homes.",
     h1: "Wahkiakum County, WA",
-    intro: "Wahkiakum County estate properties — Cathlamet town homes, Skamokawa river properties, and rural acreage — each face a small, specific buyer pool. Executors and families need honest pricing before any sale decision. Real Property Planning explains the process and can connect you with a featured Washington licensed broker or certified appraiser who works that market.",
+    intro: "Wahkiakum County estate properties — Cathlamet town homes, Skamokawa river properties, and rural acreage — each face a small, specific buyer pool. Executors and families need honest pricing before any sale decision. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
   },
 
   // ─── Single-page service hubs ──────────────────────────────────────────

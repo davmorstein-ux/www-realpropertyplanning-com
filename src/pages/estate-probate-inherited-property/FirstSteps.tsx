@@ -98,7 +98,7 @@ const FirstSteps = () => (
       Consult with a Washington State probate attorney as early as possible — ideally within the first two weeks. They can confirm whether probate is required, explain the filing deadlines, and walk you through what the administration process looks like for this specific estate.
     </P>
     <P>
-      Real Property Planning can connect you with experienced probate attorneys across Washington State.
+      Real Property Planning does not refer clients to attorneys. Choose a Washington-licensed probate attorney yourself; you can confirm any lawyer's license with the Washington State Bar Association (wsba.org).
     </P>
   </EstateSubPageLayout>
 );

@@ -58,7 +58,7 @@
     "heroTitle": "PROBATE & ESTATE PROPERTY SALES",
     "directAnswer": {
       "question": "How does selling a house through probate work in Washington State?",
-      "answer": "In Washington, an estate property typically cannot be sold until the court grants the executor formal legal authority — usually through Letters Testamentary. Once that authority is in place, the process follows familiar real estate steps — evaluation, preparation, listing, negotiation, and closing — but with added requirements: a defensible appraisal, coordination among multiple decision-makers, and pricing that reflects the property's true condition rather than an automated estimate. Real Property Planning explains each stage and can connect you with a featured Washington licensed broker or certified appraiser when you need one.",
+      "answer": "In Washington, an estate property typically cannot be sold until the court grants the executor formal legal authority — usually through Letters Testamentary. Once that authority is in place, the process follows familiar real estate steps — evaluation, preparation, listing, negotiation, and closing — but with added requirements: a defensible appraisal, coordination among multiple decision-makers, and pricing that reflects the property's true condition rather than an automated estimate. Real Property Planning explains each stage; when you need a broker or appraiser, you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
       "step1Label": "Before Authority",
       "step1Desc": "Property is assessed and a plan is developed while legal authority is pending.",
       "step2Label": "During Probate",
@@ -170,7 +170,7 @@
     },
     "whatGoesInto": {
       "heading": "What Goes Into a Senior Transition?",
-      "body": "When a senior leaves a longtime home — whether moving to assisted living, a memory care community, a smaller residence, or closer to family — it rarely involves just real estate. It's a coordinated process that touches nearly every part of a family's life. Real Property Planning connects families and professionals to the right people for each step."
+      "body": "When a senior leaves a longtime home — whether moving to assisted living, a memory care community, a smaller residence, or closer to family — it rarely involves just real estate. It's a coordinated process that touches nearly every part of a family's life. Real Property Planning explains who handles each step, and its Find a Professional page lists independent professionals you can contact directly."
     },
     "whoHelps": {
       "heading": "Who Helps With a Senior Transition?",
@@ -195,7 +195,7 @@
       "broker": {
         "alt": "Real estate brokers experienced in senior transitions Washington State",
         "title": "Real Estate Broker",
-        "description": "A broker experienced in senior transitions understands condition-based pricing, family dynamics, and the need for patience. Real Property Planning connects families with brokers who specialize in this work throughout Washington State.",
+        "description": "A broker experienced in senior transitions understands condition-based pricing, family dynamics, and the need for patience. The site's featured broker does this work, and you can contact the broker directly or hire anyone you choose.",
         "cta": "Learn More"
       },
       "appraiser": {
@@ -245,11 +245,11 @@
       },
       "q4": {
         "question": "Who helps coordinate a senior's move alongside the home sale?",
-        "answer": "A senior move manager typically handles the physical side — sorting, packing, and setting up the new home — while a senior living advisor helps evaluate placement options. Real Property Planning connects families with both, alongside the real estate and valuation side of the transition."
+        "answer": "A senior move manager typically handles the physical side — sorting, packing, and setting up the new home — while a senior living advisor helps evaluate placement options. Real Property Planning's Find a Professional page lists independent senior move managers and senior living advisors, as well as a broker and appraiser for the real estate side; you contact them directly."
       },
       "q5": {
         "question": "Are there tax considerations when selling a longtime family home?",
-        "answer": "Yes — capital gains exclusions, stepped-up basis in a trust, and other tax factors can significantly affect the outcome. A CPA or financial planner should be part of the conversation before listing, and Real Property Planning can help connect your family with one."
+        "answer": "Yes — capital gains exclusions, stepped-up basis in a trust, and other tax factors can significantly affect the outcome. A CPA or financial planner should be part of the conversation before listing, and Real Property Planning's Find a Professional page lists independent CPAs and financial planners you can contact directly."
       }
     }
   },

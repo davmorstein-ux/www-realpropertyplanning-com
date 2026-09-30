@@ -302,7 +302,7 @@ const HowTheProcessWorks = () => {
                   </Link>
                   , attorneys, and families build a timeline that accounts for legal proceedings, property
                   preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
-                  Real Property Planning explains how that works and can introduce a featured broker who does it.
+                  Real Property Planning explains how that works; the site's featured broker is one broker who does it, and you can contact the broker directly or hire anyone you choose.
                 </p>
                 <p>
                   For properties that need work before listing, each potential improvement is evaluated through a{" "}

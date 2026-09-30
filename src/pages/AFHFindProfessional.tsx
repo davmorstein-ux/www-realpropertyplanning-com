@@ -582,7 +582,7 @@ const AFHFindProfessional = () => (
               margin: "0 0 28px",
             }}
           >
-            Real Property Planning connects professionals who serve the AFH community with owners, buyers, and families
+            AFH Club lists independent professionals who serve adult family home owners, buyers, and operators
             throughout Washington State. If you work with Adult Family Homes and would like to be considered for a
             listing in this directory, contact us to learn more.
           </p>

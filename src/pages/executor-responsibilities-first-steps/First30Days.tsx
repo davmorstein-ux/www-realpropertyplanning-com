@@ -113,7 +113,7 @@ const First30Days = () => (
 
     <SubH2>Need Help Navigating the Real Estate Side?</SubH2>
     <P>
-      Real Property Planning connects families and professionals with experienced real estate and appraisal resources across Washington State.
+      For the real estate itself, you can contact the site's featured broker or featured certified appraiser directly, or hire any licensed professional you choose.
     </P>
   </ExecutorSubPageLayout>
 );

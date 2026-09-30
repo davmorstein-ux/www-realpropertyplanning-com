@@ -68,7 +68,7 @@ const WhenAMoveIsComing = () => (
       The same is true for appraisers, attorneys, care managers, and financial advisors. Professionals who regularly work with seniors and their families understand the pace, the emotional complexity, and the practical constraints involved.
     </P>
     <P>
-      Real Property Planning exists to help connect families with the right people across all of these disciplines — so you don't have to figure out who to call on top of everything else.
+      Real Property Planning explains what each of these professionals does, so you know who to call. Its Find a Professional page lists independent professionals you can contact directly.
     </P>
 
     <Divider />

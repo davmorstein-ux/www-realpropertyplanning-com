@@ -76,13 +76,13 @@ const PropertyQuestions = () => (
     <P><strong>Washington State Estate Tax:</strong> Washington has its own estate tax, separate from the federal estate tax, with a relatively low exemption threshold. For estates that include significant real property, this can be a meaningful consideration.</P>
     <P><strong>Stepped-Up Basis:</strong> When property is inherited, its tax basis is generally "stepped up" to its fair market value at the time of death. This means heirs who sell shortly after inheriting typically owe little or no capital gains tax — a significant benefit compared to receiving the property as a gift during the owner's lifetime.</P>
     <P><strong>Gifting vs. Inheriting:</strong> Some families consider transferring property during the owner's lifetime. This can have Medicaid planning implications, gift tax considerations, and capital gains consequences that are very different from what heirs would face if they inherited the same property. It's worth understanding the difference before deciding.</P>
-    <P>These are conversations for an estate planning attorney and a CPA or financial advisor. Real Property Planning can help connect families with the right professionals.</P>
+    <P>These are conversations for an estate planning attorney and a CPA or financial advisor. Real Property Planning's guides explain what each of them does.</P>
 
     <Divider />
 
     <SubH2>Have Questions About a Specific Property?</SubH2>
     <P>
-      Real Property Planning is a resource hub for families and professionals working through these questions across Washington State. We can connect you with appraisers, brokers, attorneys, and other specialists — or simply help you understand what questions to be asking.
+      Real Property Planning is a resource hub for families and professionals working through these questions across Washington State. Its guides help you understand which questions to ask, and its Find a Professional page lists independent professionals you can contact directly.
     </P>
   </PlanningSubPageLayout>
 );

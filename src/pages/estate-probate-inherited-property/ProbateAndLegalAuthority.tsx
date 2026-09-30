@@ -99,7 +99,7 @@ const ProbateAndLegalAuthority = () => (
 
     <SubH2>Getting the Right Legal Help</SubH2>
     <P>
-      Real Property Planning can connect you with experienced probate and estate attorneys across Washington State who work specifically with families in this situation.
+      Real Property Planning does not refer clients to attorneys. Choose a Washington-licensed probate attorney yourself; you can confirm any lawyer's license with the Washington State Bar Association (wsba.org).
     </P>
   </EstateSubPageLayout>
 );

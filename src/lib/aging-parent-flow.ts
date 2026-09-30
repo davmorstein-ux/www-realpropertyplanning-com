@@ -98,7 +98,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "Washington Medicaid and other resources", body: "Washington's Medicaid program (Apple Health) covers long-term care for those who qualify financially and medically. Eligibility rules are strict and worth understanding early. Veterans may also qualify for Aid & Attendance benefits through the VA." },
               { heading: "What to do now", body: "Locate financial and legal documents. Understand the rough monthly cost of the care your parent may eventually need. Talk with an elder law attorney if there are questions about Medicaid planning or asset protection." },
             ],
-            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can help you understand the financial picture and connect you with the right professionals.",
+            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning's guides can help you understand the financial picture, and its Find a Professional page lists independent professionals you can contact directly.",
           },
         },
       ],
@@ -150,7 +150,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "When to call a professional", body: "Minor changes like grab bars and lighting can often be DIY. Larger modifications — ramps, stairlifts, bathroom remodels — should be handled by a contractor familiar with accessibility needs. A Certified Aging-in-Place Specialist (CAPS) is trained specifically for this work." },
               { heading: "Washington resources", body: "Some Washington seniors may qualify for home modification assistance through Area Agencies on Aging or community development programs. Your local senior center or DSHS office can point you toward available programs in your county." },
             ],
-            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can connect you with the right resources.",
+            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can point you toward the right resources.",
           },
         },
         {
@@ -307,7 +307,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "HIPAA Authorization", body: "Allows healthcare providers to share medical information with named family members. Without this, providers may refuse to discuss your parent's condition with you." },
               { heading: "If documents aren't in place", body: "Act now, while your parent still has capacity to sign. An elder law attorney can prepare these documents quickly — often within days. If your parent has already lost capacity, guardianship or conservatorship through the courts may be necessary." },
             ],
-            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can connect you with legal resources in Washington.",
+            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can point you toward legal resources in Washington.",
           },
         },
         {
@@ -348,7 +348,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "Will and Trust", body: "A will directs how assets are distributed after death. A revocable living trust allows assets — including real property — to pass to beneficiaries without going through probate." },
               { heading: "What to do", body: "Schedule an appointment with an elder law or estate planning attorney. Many can prepare a basic package of documents — POA, healthcare directive, and will — for a reasonable flat fee. Don't rely on online forms for documents this important." },
             ],
-            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can connect you with independent elder law attorneys in Washington.",
+            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can point you toward the site's listed independent elder law attorney, or you can choose any Washington-licensed elder law attorney.",
           },
         },
         {
@@ -362,7 +362,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "Washington-specific considerations", body: "Washington is a community property state — how assets are titled matters for surviving spouses. Washington has its own estate tax, with an exemption currently around $2.193 million. Real property that doesn't pass through a trust typically goes through probate." },
               { heading: "When to involve an attorney", body: "Always. Estate planning documents are legal instruments and errors can cause real harm. An elder law or estate planning attorney in Washington will know the state-specific rules and can prepare documents that hold up." },
             ],
-            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can connect you with independent estate planning attorneys in Washington.",
+            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning does not refer clients to attorneys; choose a Washington-licensed estate planning attorney and confirm their license with the Washington State Bar Association (wsba.org).",
           },
         },
         {
@@ -378,7 +378,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
               { heading: "Washington Medicaid (Apple Health)", body: "Covers long-term care — including adult family homes, assisted living, and nursing facilities — for those who qualify financially and medically. Asset and income limits apply. Planning ahead with an elder law attorney can help families navigate Medicaid rules." },
               { heading: "Medicare", body: "Covers short-term skilled nursing and rehabilitation after a qualifying hospital stay — not long-term custodial care. Understanding this distinction prevents costly surprises." },
             ],
-            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning can help you understand the financial picture and connect you with the right professionals.",
+            closing: "Ready to talk it through? Reach out through the contact page and Real Property Planning's guides can help you understand the financial picture, and its Find a Professional page lists independent professionals you can contact directly.",
           },
         },
         {

@@ -80,7 +80,7 @@ const PropertyValue = () => (
 
     <SubH2>Real Property Planning Can Help</SubH2>
     <P>
-      Real Property Planning connects families with Washington State certified residential appraisers who specialize in estate valuations — date-of-death appraisals, retrospective appraisals, and current market valuations for properties preparing to sell.
+      Any Washington State certified residential appraiser can prepare a date-of-death, retrospective, or current market appraisal. The site's featured certified appraiser does this work, and you can contact the appraiser directly or hire anyone you choose.
     </P>
   </EstateSubPageLayout>
 );

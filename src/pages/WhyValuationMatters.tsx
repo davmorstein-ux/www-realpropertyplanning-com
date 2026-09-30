@@ -133,7 +133,7 @@ const WhyValuationMatters = () => {
                 <AccordionContent className="px-6 md:px-8 pb-6 !text-[16px] !leading-[1.6]">
                   <p data-valuation-label className="text-gold font-bold tracking-[0.15em] uppercase mb-2 !text-[13px]">Quick Answer</p>
                   <p data-valuation-main-answer className="text-muted-foreground !leading-[1.7] text-base">
-                    Accurate valuation helps prevent two costly estate-property mistakes: pricing too high, which can create carrying costs and lost buyer interest, or pricing too low, which can leave significant value behind. Real Property Planning connects executors, attorneys, and trustees with valuation-informed guidance and qualified professionals who can help support defensible pricing decisions based on property condition, market context, and estate objectives.
+                    Accurate valuation helps prevent two costly estate-property mistakes: pricing too high, which can create carrying costs and lost buyer interest, or pricing too low, which can leave significant value behind. Real Property Planning explains how valuation works, and a certified appraisal can support a defensible pricing decision based on property condition, market context, and estate objectives.
                   </p>
                   <div className="mt-5 pt-5 border-t border-border space-y-4">
                     <div>
@@ -210,7 +210,7 @@ const WhyValuationMatters = () => {
               ))}
             </ul>
             <p className="text-muted-foreground mt-6 !text-[16px] !leading-[1.6]">
-              Real Property Planning connects executors, trustees, and attorneys with qualified professionals throughout Washington State.
+              The site's featured certified appraiser and featured broker can be contacted directly, or you can hire any licensed professional you choose.
             </p>
           </div>
         </div>

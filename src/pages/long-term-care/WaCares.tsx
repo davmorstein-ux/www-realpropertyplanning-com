@@ -256,7 +256,7 @@ const WaCares = () => {
             <hr className={hrClass} />
 
             <p className={pClass + " italic"}>
-              Real Property Planning connects families in the Puget Sound region with the professionals who can help —{" "}
+              Professionals who can help include{" "}
               <Link to="/for-elder-law-attorneys" className={inlineLink}>
                 elder law attorneys
               </Link>

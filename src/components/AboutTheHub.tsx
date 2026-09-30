@@ -244,8 +244,8 @@ const AboutTheHub = () => {
           fiduciary, an appraiser, a care provider, a lender, and several family members are often making decisions at
           the same time, and nobody is responsible for the whole picture. Real Property Planning was built to be the
           neutral place to start: the guides and tools are free, and when a decision needs a licensed professional, the
-          hub connects you with one, including independent featured brokers and appraisers who work through their
-          own practices.
+          hub lists independent professionals you can contact directly, including a featured broker and appraiser who
+          work through their own practices.
         </p>
 
         {/* The three figures moved to HomepageTrustBar (Sept 2026); see its note. */}

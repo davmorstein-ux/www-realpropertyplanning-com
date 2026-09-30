@@ -315,8 +315,8 @@ const ExecutorsGuide = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 style={sectionHeading}>Find the Right Professionals</h2>
             <p style={{ ...bodyText, marginBottom: 28 }}>
-              The Real Property Planning network connects executors with experienced probate attorneys, appraisers, estate
-              sale companies, and real estate brokers across Washington State.
+              Real Property Planning's Find a Professional page lists independent professionals, including an appraiser, a
+              broker and an estate liquidation service, whom you contact and hire directly. Choose a probate attorney yourself.
             </p>
             <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
               <Link

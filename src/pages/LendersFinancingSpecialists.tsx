@@ -45,7 +45,7 @@ const LendersFinancingSpecialists = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          Connecting clients with independent professionals who provide clarity around financing, retirement planning, and long-term strategy.
+          Independent professionals who provide clarity around financing, retirement planning, and long-term strategy.
         </p>
         </div>
       </div>

@@ -712,8 +712,8 @@ const AFHClub = () => {
                 textAlign: "center",
               }}
             >
-              AFH Club connects owners, buyers, and operators of Washington adult family homes with the
-              professionals a transaction requires.
+              AFH Club explains how Washington adult family home transactions work and lists independent
+              professionals that owners, buyers, and operators can contact directly.
             </p>
 
             <div className="rpp-afh-lane-list">

@@ -73,9 +73,9 @@ const ForFinancialPlanners = () => {
                 financial planner's guidance can be essential to making sound, well-timed decisions.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-                Real Property Planning gives financial planners plain-language guides to share with clients, and can
-                introduce a featured licensed broker or certified appraiser whose work fits each client's broader
-                financial plan, estate goals, and family circumstances.
+                Real Property Planning gives financial planners plain-language guides to share with clients, and lists a
+                featured licensed broker and certified appraiser that planners and clients can contact directly when the
+                real estate is part of a broader financial plan.
               </p>
             </div>
           </div>

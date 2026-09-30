@@ -70,7 +70,7 @@ const WhyPlanningEarly = () => (
 
     <SubH2>Need Guidance on the Real Estate Side?</SubH2>
     <P>
-      Real Property Planning is a resource hub for families and professionals navigating senior housing transitions and estate property in Washington State. We can connect you with the right professionals — appraisers, brokers, attorneys, and care managers — for where you are in the process.
+      Real Property Planning is a resource hub for families and professionals navigating senior housing transitions and estate property in Washington State. Its guides explain which professional fits each stage — appraisers, brokers, attorneys, and care managers — and its Find a Professional page lists independent professionals you can contact directly.
     </P>
   </PlanningSubPageLayout>
 );

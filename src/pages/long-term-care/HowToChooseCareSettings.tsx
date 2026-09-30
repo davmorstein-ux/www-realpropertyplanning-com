@@ -208,7 +208,7 @@ const HowToChooseCareSettings = () => {
             <hr className={hrClass} />
 
             <p className={pClass + " italic"}>
-              Real Property Planning connects families in the Puget Sound region with the professionals who can help —{" "}
+              Professionals who can help include{" "}
               <Link to="/senior-living-advisors" className={inlineLink}>
                 Senior Living Advisors
               </Link>

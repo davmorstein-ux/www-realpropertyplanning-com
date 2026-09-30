@@ -96,7 +96,7 @@ const ConversationsToHave = () => (
 
     <SubH2>Looking for the Right Professionals to Help?</SubH2>
     <P>
-      Real Property Planning connects families and professionals with experienced real estate, appraisal, legal, and care resources across Washington State. If you're not sure who to talk to next, we can point you in the right direction.
+      Real Property Planning's guides explain which professional handles which question, and its Find a Professional page lists independent professionals you can contact directly.
     </P>
   </PlanningSubPageLayout>
 );

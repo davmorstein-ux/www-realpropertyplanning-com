@@ -78,7 +78,7 @@ const PropertyDecisions = () => (
 
     <SubH2>Getting the Right Help</SubH2>
     <P>
-      Real Property Planning connects executors with experienced residential appraisers, real estate brokers who specialize in estate sales, and probate attorneys across Washington State.
+      For the real estate itself, you can contact the site's featured broker or featured certified appraiser directly, or hire any licensed professional you choose. For the legal side, choose a Washington-licensed probate attorney yourself.
     </P>
   </ExecutorSubPageLayout>
 );

@@ -96,7 +96,7 @@ const WhatToDoWithTheProperty = () => (
 
     <SubH2>Getting the Right Guidance</SubH2>
     <P>
-      Real Property Planning connects families with experienced estate real estate brokers, certified appraisers, and probate attorneys across Washington State.
+      For the real estate itself, you can contact the site's featured broker or featured certified appraiser directly, or hire any licensed professional you choose. For the legal side, choose a Washington-licensed probate attorney yourself.
     </P>
   </EstateSubPageLayout>
 );

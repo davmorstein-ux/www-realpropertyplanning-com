@@ -40,7 +40,7 @@ const RetirementReverseMortgage = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          Connecting clients with independent professionals who provide clarity around financing, retirement planning, and long-term strategy.
+          Independent professionals who provide clarity around financing, retirement planning, and long-term strategy.
         </p>
         </div>
       </div>
@@ -231,7 +231,7 @@ const RetirementReverseMortgage = () => (
             Let's Connect
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            If you're exploring whether selling, staying, or financing options make the most sense, Real Property Planning can connect you with independent professionals who can help you evaluate your situation.
+            If you're exploring whether selling, staying, or financing options make the most sense, Real Property Planning's Find a Professional page lists independent professionals you can contact directly to evaluate your situation.
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg">

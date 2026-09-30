@@ -54,7 +54,7 @@ const cards = [
 
 const jsonLd = articleSchema({
   headline: "Out-of-State Families: Washington State Property Resources",
-  description: "A referral hub connecting out-of-state families with independent Washington State professionals for estate, probate, and inherited property situations.",
+  description: "A guide for out-of-state families: which independent Washington State professionals handle each part of an estate, probate, or inherited property situation, and in what order.",
   url: "/guides/out-of-state-families",
   datePublished: "2026-03-27",
   dateModified: "2026-05-16",
@@ -65,7 +65,7 @@ const OutOfStateFamilies = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Out-of-State Families | Washington State Property Resources"
-      description="A referral hub connecting out-of-state families with independent Washington State professionals for estate, probate, and inherited property situations."
+      description="A guide for out-of-state families: which independent Washington State professionals handle each part of an estate, probate, or inherited property situation, and in what order."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
@@ -85,7 +85,7 @@ const OutOfStateFamilies = () => (
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              Connecting families managing Washington State property from a distance with the right local professionals.
+              A guide for families managing Washington State property from a distance: which local professionals you need, and in what order.
             </p>
             </div>
           </div>
@@ -96,7 +96,7 @@ const OutOfStateFamilies = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <p className="text-foreground text-lg leading-relaxed">
-              Managing a Washington State property from another state is one of the most common situations families face during an estate or senior transition. Distance makes every step harder — coordinating access, assessing condition, managing vendors, and staying informed. This page connects out-of-state families with the right local professionals for each part of the process.
+              Managing a Washington State property from another state is one of the most common situations families face during an estate or senior transition. Distance makes every step harder — coordinating access, assessing condition, managing vendors, and staying informed. This page explains which local professional handles each part of the process.
             </p>
           </div>
         </div>
@@ -151,7 +151,7 @@ const OutOfStateFamilies = () => (
               Not Sure Where to Start?
             </h2>
             <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
-              Most out-of-state families don't know which professional they need first. Real Property Planning can help identify the right sequence and connect you with independent professionals throughout Washington State.
+              Most out-of-state families don't know which professional they need first. This guide sets out the usual sequence, and Real Property Planning's Find a Professional page lists independent professionals you can contact directly.
             </p>
             <Link to="/contact?reason=estate-property">
               <Button variant="gold" size="lg">

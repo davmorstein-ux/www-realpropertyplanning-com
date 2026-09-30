@@ -249,7 +249,7 @@ const GreyDivorce = () => (
               How Real Property Planning Helps
             </h2>
             <p className="text-foreground text-lg leading-[1.7]">
-              Real Property Planning serves as an educational and professional resource hub for families, seniors, fiduciaries, and attorneys navigating complex real estate and life transitions involving grey divorce. Whether the question is about home valuation, timing a sale, coordinating with legal counsel, or understanding senior housing options, Real Property Planning connects people with the knowledge and professionals they need to make informed decisions during one of life's most challenging transitions.
+              Real Property Planning serves as an educational and professional resource hub for families, seniors, fiduciaries, and attorneys navigating complex real estate and life transitions involving grey divorce. Whether the question is about home valuation, timing a sale, coordinating with legal counsel, or understanding senior housing options, Real Property Planning provides the information, and lists independent professionals people can contact directly, to support informed decisions during one of life's most challenging transitions.
             </p>
           </div>
         </div>

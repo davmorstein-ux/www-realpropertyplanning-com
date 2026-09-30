@@ -41,7 +41,7 @@ const PreparingTheProperty = () => (
       <li><strong>Disposal</strong> — some items simply need to be removed and disposed of.</li>
     </UL>
     <P>
-      A professional estate liquidator can manage this entire process, which saves the family significant time and emotional energy. Real Property Planning can connect you with reputable estate liquidation services in Washington State.
+      A professional estate liquidator can manage this entire process, which saves the family significant time and emotional energy. Real Property Planning's Find a Professional page lists an independent estate liquidation service you can contact directly.
     </P>
 
     <Divider />
@@ -90,7 +90,7 @@ const PreparingTheProperty = () => (
 
     <SubH2>Getting the Property Ready Without Getting Overwhelmed</SubH2>
     <P>
-      Real Property Planning can connect you with estate liquidators, contractors, and real estate brokers who specialize in estate property preparation across Washington State.
+      Real Property Planning explains each step. Its Find a Professional page lists independent professionals, including an estate liquidation service and the site's featured broker, whom you contact and hire directly; you are free to choose anyone.
     </P>
   </EstateSubPageLayout>
 );

@@ -469,7 +469,7 @@ const AFHBuyingSelling = () => (
               margin: "0 0 32px",
             }}
           >
-            Real Property Planning can connect you with a featured Washington licensed broker or certified appraiser.
+            You can contact AFH Club's featured Washington licensed broker or certified appraiser directly.
             Licensed work is done by those professionals through their own practices, and the Find a Professional page
             lists others who work with adult family homes.
           </p>

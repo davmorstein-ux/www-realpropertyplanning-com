@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "Do we need an attorney to put these documents in place?",
     answer:
-      "For documents like powers of attorney, healthcare directives, wills, and trusts, working with an estate planning or elder law attorney licensed in Washington State helps ensure everything is valid and reflects your family's actual wishes. Real Property Planning can connect you with attorneys in our professional network.",
+      "For documents like powers of attorney, healthcare directives, wills, and trusts, working with an estate planning or elder law attorney licensed in Washington State helps ensure everything is valid and reflects your family's actual wishes. Real Property Planning does not refer clients to attorneys; you can confirm any lawyer's license with the Washington State Bar Association (wsba.org).",
   },
   {
     question: "What if family members don't agree on the plan?",

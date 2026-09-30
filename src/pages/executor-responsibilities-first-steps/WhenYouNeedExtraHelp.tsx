@@ -52,7 +52,7 @@ const WhenYouNeedExtraHelp = () => (
     </UL>
     <P>As executor, you are caught in the middle — legally obligated to administer the estate fairly while personally connected to the people involved.</P>
     <P>
-      In these situations, an experienced probate attorney is essential. In some cases, a mediator can help resolve disputes without litigation. Real Property Planning can help connect you with both.
+      In these situations, an experienced probate attorney is essential. In some cases, a mediator can help resolve disputes without litigation. Real Property Planning does not refer clients to attorneys or mediators; choose them yourself, and confirm an attorney's license with the Washington State Bar Association (wsba.org).
     </P>
 
     <Divider />
