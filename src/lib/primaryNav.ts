@@ -97,6 +97,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     color: "#7f2028",
     items: [
       { name: "AFH Club Home", href: "/afh-club" },
+      { name: "AFH Resources & Articles", href: "/afh-club/resources" },
       { name: "Adult Family Home Directory", href: "/afh-club/homes" },
       { name: "Homes & Businesses for Sale", href: "/afh-club/listings" },
       { name: "Buying & Selling an AFH", href: "/afh-club/buying-selling" },
