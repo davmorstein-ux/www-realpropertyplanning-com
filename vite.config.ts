@@ -2002,6 +2002,55 @@ const escHtml = (t: string) =>
 const jsonLdTag = (obj: unknown) =>
   `<script type="application/ld+json">${JSON.stringify(obj).replace(/</g, "\\u003c")}</script>`;
 
+/* Static-page navigation (Sept 29, 2026). The prerendered #ssg-content is what
+   crawlers read and what a visitor sees if the app's scripts fail to load (for
+   example a browser holding an old copy right after a publish). It used to have
+   no links at all, leaving that visitor stranded. Now it carries a small site
+   header, a "you are here" trail and a back link. React replaces all of it once
+   the app loads. */
+const SSG_PARENTS: Array<[string, string, string]> = [
+  ["/afh-club/", "/afh-club", "AFH Club"],
+  ["/articles/", "/articles", "Featured Articles"],
+  ["/guides/", "/guides-and-resources", "Guides & Articles"],
+  ["/estate-probate-inherited-property/", "/estate-probate-inherited-property", "Estate, Probate & Inherited Property"],
+  ["/executor-responsibilities-first-steps/", "/executor-responsibilities-first-steps", "Executor's First Steps"],
+  ["/senior-living/", "/senior-transitions", "Senior Transitions"],
+];
+const ssgParentOf = (route: string): [string, string] => {
+  const hit = SSG_PARENTS.find(([prefix, href]) => route.startsWith(prefix) && route !== href);
+  return hit ? [hit[1], hit[2]] : ["/", "Home"];
+};
+const SSG_LINK = "color:#1B3A6B;text-decoration:underline;text-underline-offset:3px";
+const ssgNav = (route: string) => {
+  if (route === "/") return "";
+  const [parentHref, parentLabel] = ssgParentOf(route);
+  const top = [
+    ["/", "Home"],
+    ["/probate-estate-sales", "Estate & Probate"],
+    ["/senior-transitions", "Senior Transitions"],
+    ["/afh-club", "AFH Club"],
+    ["/guides-and-resources", "Guides & Tools"],
+    ["/contact", "Contact"],
+  ]
+    .map(([h, l]) => `<a href="${h}" style="${SSG_LINK};margin-right:14px;white-space:nowrap">${l}</a>`)
+    .join("");
+  const trail =
+    parentHref === "/"
+      ? `<a href="/" style="${SSG_LINK}">Home</a>`
+      : `<a href="/" style="${SSG_LINK}">Home</a> › <a href="${parentHref}" style="${SSG_LINK}">${escHtml(parentLabel)}</a>`;
+  return (
+    `<div style="border-bottom:1px solid #e5e1da;padding:0 0 14px;margin:0 0 20px">` +
+    `<a href="/" style="display:inline-block;font-weight:700;font-size:1.15rem;color:#1B3A6B;text-decoration:none;margin-bottom:8px">Real Property Planning</a>` +
+    `<div role="navigation" aria-label="Site" style="font-size:0.95rem;line-height:2">${top}</div></div>` +
+    `<p style="font-size:0.9rem;color:#555;margin:0 0 12px">${trail}</p>`
+  );
+};
+const ssgBack = (route: string) => {
+  if (route === "/") return "";
+  const [parentHref, parentLabel] = ssgParentOf(route);
+  return `<p style="margin:32px 0 0;padding-top:16px;border-top:1px solid #e5e1da"><a href="${parentHref}" style="${SSG_LINK};font-weight:600">‹ Back to ${escHtml(parentLabel)}</a></p>`;
+};
+
 const buildSsgContent = (meta: RouteMeta, route = "/") => {
   const { h1, intro, sections, cities, quickAnswerQ, quickAnswerA, faq, article, afhInventory } = meta;
   const inventory = afhInventory ? renderAfhInventory(afhInventory, route, h1 ?? meta.title, meta.description) : null;
@@ -2010,6 +2059,7 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
 
   const ssgParts: string[] = [];
   ssgParts.push(`<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">`);
+  ssgParts.push(ssgNav(route));
 
   if (h1) ssgParts.push(`<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">${h1}</h1>`);
 
@@ -2101,6 +2151,7 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
     );
   }
 
+  ssgParts.push(ssgBack(route));
   ssgParts.push(`</div>`);
   return ssgParts.join("");
 };
@@ -2144,6 +2195,7 @@ setMeta('meta[property="og:url"]',"content",canon);
 var link=document.querySelector('link[rel="canonical"]');if(link)link.setAttribute("href",canon);else{link=document.createElement("link");link.rel="canonical";link.href=canon;document.head.appendChild(link);}
 var root=document.getElementById("root");
 if(root&&m.h1&&!document.getElementById("ssg-content")){var html='<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">';
+html+='<p style="margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid #e5e1da"><a href="/" style="font-weight:700;color:#1B3A6B;text-decoration:none">Real Property Planning</a> · <a href="/afh-club" style="color:#1B3A6B">AFH Club</a> · <a href="/guides-and-resources" style="color:#1B3A6B">Guides</a> · <a href="/contact" style="color:#1B3A6B">Contact</a></p>';
 html+='<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">'+m.h1+'</h1>';
 if(m.qQ&&m.qA){html+='<div style="margin:20px 0;padding:20px;border:1px solid #e2e2e2;border-radius:12px;background:#fafaf8"><p style="font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;color:#a8892f;margin:0 0 6px 0">Quick Answer</p><h2 style="font-size:1.25rem;line-height:1.3;margin:0 0 8px 0">'+m.qQ+'</h2><p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0">'+m.qA+'</p></div>';}
 if(m.intro){html+='<p style="font-size:1.1rem;line-height:1.7;color:#444">'+m.intro+'</p>';}
