@@ -12,8 +12,7 @@ import { rcw, DOR_ESTATE_TAX } from "./probateGlossary";
 export const PROBATE_PILLAR = {
   PATH: "/washington-probate-guide",
   TITLE: "Washington Probate & Estate Property: The Complete Guide",
-  /** Set to "/<name>-cover.webp" once the owner supplies cover art; empty hides the image. */
-  COVER: "" as string,
+  COVER: "/washington-probate-guide-cover.webp" as string,
   DESCRIPTION:
     "How probate works in Washington when a house is involved: who has authority to sell, nonintervention powers, the 20-day, three-month and four-month deadlines, property that skips probate, taxes, and a path for executors, heirs and trustees.",
   SHORT_ANSWER:

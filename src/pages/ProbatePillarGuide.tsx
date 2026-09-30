@@ -158,7 +158,7 @@ const ProbatePillarGuide = () => (
             {COVER && (
               <img
                 src={COVER}
-                alt="Reference guide cover: The Washington Probate and Estate Property Guide"
+                alt="Guide cover: Washington Probate & Estate Property, The Complete Guide for Executors, Heirs & Trustees, over a lit house on Puget Sound at dusk with Mount Rainier and a gold outline of Washington State"
                 className="prp-cover"
                 width={1024}
                 height={1365}
