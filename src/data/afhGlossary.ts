@@ -124,6 +124,26 @@ export const AFH_GLOSSARY: GlossaryTerm[] = [
     source: { label: "DSHS: BAAU application processing timeline", href: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline" },
   },
   {
+    id: "wac",
+    term: "WAC",
+    aka: "Washington Administrative Code",
+    category: "Agencies and programs",
+    definition:
+      "Rules adopted by state agencies to carry out the statutes. Most adult family home requirements are in chapter 388-76 WAC (licensing) and chapter 388-112A WAC (training). A rule changes only when the agency files an adopted rule (a CR-103) in the Washington State Register.",
+    guide: { label: "Washington AFH Rules Have Changed", href: "/afh-club/washington-afh-rule-changes" },
+    source: { label: "Chapter 388-76 WAC", href: WAC("388-76") },
+  },
+  {
+    id: "rcw",
+    term: "RCW",
+    aka: "Revised Code of Washington",
+    category: "Agencies and programs",
+    definition:
+      "The state's statutes, passed by the Legislature. Chapter 70.128 RCW is the adult family home law: what an AFH is, capacity, inspections and enforcement. Agency rules (WAC) must fit within it.",
+    guide: { label: "Washington AFH Rules Have Changed", href: "/afh-club/washington-afh-rule-changes" },
+    source: { label: "Chapter 70.128 RCW", href: RCW("70.128") },
+  },
+  {
     id: "hca-agency",
     term: "Health Care Authority",
     aka: "HCA (the agency)",
