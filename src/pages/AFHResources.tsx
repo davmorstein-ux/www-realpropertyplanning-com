@@ -47,7 +47,7 @@ const TOPICS = [
   {
     title: "Building & Inspection",
     href: "/afh-club/building-inspection",
-    img: "/afh-building-inspection.webp",
+    img: "/afh-building-inspection-cover-v2.webp",
     description: "WABO building requirements, fire safety standards, and what inspectors look for before licensing.",
   },
   {
@@ -89,7 +89,7 @@ const TOPICS = [
   {
     title: "Which Tier? The AFH Payment Field Guide",
     href: "/afh-club/afh-payment-field-guide",
-    img: "/afh-payment-field-guide-cover.webp",
+    img: "/afh-field-guide-cover-v2.webp",
     description: "A–E classifications, CBHS tiers, specialty contracts and private-pay levels are four different systems. Who sets each one, and which survive a sale.",
   },
   {
@@ -246,7 +246,7 @@ const AFHResources = () => (
           {
             title: "Building & Inspection",
             href: "/afh-club/building-inspection",
-            img: "/afh-building-inspection.webp",
+            img: "/afh-building-inspection-cover-v2.webp",
             placeholder: "#433d38",
           },
           {
@@ -288,7 +288,7 @@ const AFHResources = () => (
           {
             title: "Which Tier? The AFH Payment Field Guide",
             href: "/afh-club/afh-payment-field-guide",
-            img: "/afh-payment-field-guide-cover.webp",
+            img: "/afh-field-guide-cover-v2.webp",
             placeholder: "#3b2140",
           },
           {

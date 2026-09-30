@@ -142,7 +142,7 @@ const AFHBuildingInspection = () => (
           <div className="mb-6">
             <ArticleAudioPlayer audioSrc={audioAsset.url} />
           </div>
-          <ArticleCover src="/afh-building-inspection.webp" alt="Cover art: AFH Building Requirements & Inspections" width={1086} height={1448} />
+          <ArticleCover src="/afh-building-inspection-cover-v2.webp" alt="Cover art: AFH Building Requirements & Inspections" width={1086} height={1448} />
           <p
             style={{
               fontSize: 15,

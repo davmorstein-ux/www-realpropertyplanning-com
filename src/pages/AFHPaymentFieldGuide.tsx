@@ -47,7 +47,7 @@ const AFHPaymentFieldGuide = () => (
     seoDescription="CARE classifications A through E, CBHS Tiers 1 through 6, ECS and SBS specialty contracts, and private-pay care levels are four different systems. A field guide for Washington AFH buyers, sellers and owners: who sets each one, who it applies to, and what survives a sale."
     eyebrow="For buyers, sellers & owners"
     lede="Spend an afternoon with adult family home owners and you will hear about Tier 3 residents, C High, Level 4 care, and the ECS contract, sometimes in one sentence. These are not one system. They are four."
-    cover={{ src: "/afh-payment-field-guide-cover.webp", alt: "Which Tier? The AFH Payment Field Guide — four separate systems: A–E classifications, CBHS tiers, specialty contracts, and private-pay levels" }}
+    cover={{ src: "/afh-field-guide-cover-v2.webp", alt: "Which Tier? The AFH Payment Field Guide — four separate systems: A–E classifications, CBHS tiers, specialty contracts, and private-pay levels" }}
     dateModified="2026-09-25"
     faqs={FAQS}
     faqHeading="AFH Tiers and Classifications: Common Questions"

@@ -23,7 +23,7 @@ const DEFAULT_TOPICS = [
   {
     title: "Building & Inspection",
     href: "/afh-club/building-inspection",
-    img: "/afh-building-inspection.webp",
+    img: "/afh-building-inspection-cover-v2.webp",
     placeholder: "#433d38",
   },
   { title: "Costs & Fees", href: "/afh-club/costs-fees", img: "/afh-costs-fees-v2.webp", placeholder: "#4e4842" },
