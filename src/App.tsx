@@ -215,6 +215,8 @@ const AFHDosAndDonts = lazy(() => import("./pages/AFHDosAndDonts"));
 const AFHWashingtonData = lazy(() => import("./pages/AFHWashingtonData"));
 const AFHPillarGuide = lazy(() => import("./pages/AFHPillarGuide"));
 const AFHGlossary = lazy(() => import("./pages/AFHGlossary"));
+const ProbatePillarGuide = lazy(() => import("./pages/ProbatePillarGuide"));
+const ProbateGlossary = lazy(() => import("./pages/ProbateGlossary"));
 const AFHRuleChanges = lazy(() => import("./pages/AFHRuleChanges"));
 const AFHViolationHistory = lazy(() => import("./pages/AFHViolationHistory"));
 const AFHCostsFees = lazy(() => import("./pages/AFHCostsFees"));
@@ -339,6 +341,8 @@ const App = () => (
           />
           <Route path="/helping-an-aging-parent" element={<ChoiceFlowPage />} />
           <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />
+          <Route path="/washington-probate-guide" element={<ProbatePillarGuide />} />
+          <Route path="/probate-glossary" element={<ProbateGlossary />} />
           <Route path="/estate-probate-inherited-property" element={<EstateProbateInheritedProperty />} />
           <Route path="/estate-probate-inherited-property/first-steps" element={<EPIPFirstSteps />} />
           <Route

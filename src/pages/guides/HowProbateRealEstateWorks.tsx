@@ -87,7 +87,7 @@ const HowProbateRealEstateWorks = () => (
             </h2>
             <p style={{ fontSize: 17, color: "#1c1917", lineHeight: 1.8, margin: 0 }}>
               When someone passes away owning property, that property often must pass through probate before it can be
-              sold. Probate is the court-supervised process of settling an estate — establishing legal authority,
+              sold. Probate is the court process for settling an estate — establishing legal authority,
               settling debts, and distributing assets to heirs.
             </p>
           </div>

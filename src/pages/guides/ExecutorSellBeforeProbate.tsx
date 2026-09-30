@@ -70,7 +70,7 @@ const ExecutorSellBeforeProbate = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What This Means in Practice</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            When someone passes away and leaves real property, the estate typically goes through probate — a court-supervised process that validates the will, appoints the executor, and grants legal authority to manage and distribute assets.
+            When someone passes away and leaves real property, the estate typically goes through probate — a court process that validates the will, appoints the executor, and grants legal authority to manage and distribute assets.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Until the court issues letters testamentary (or letters of administration if there is no will), the executor does not have the legal standing to sign a listing agreement, accept an offer, or transfer title. Attempting to sell without this authority can create serious legal complications.

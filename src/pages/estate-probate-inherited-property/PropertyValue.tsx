@@ -44,7 +44,7 @@ const PropertyValue = () => (
       <strong>Equitable distribution:</strong> If the property is being divided among multiple heirs, everyone needs an agreed-upon professional value to work from. An independent appraisal removes the guesswork and the arguments.
     </P>
     <P>
-      <strong>Court requirements:</strong> Probate courts in Washington State require a formal inventory and appraisal of estate assets. A certified appraisal meets that requirement; an online estimate does not.
+      <strong>The estate inventory:</strong> Washington requires the personal representative to prepare an inventory valuing estate property as of the date of death within three months of appointment (RCW 11.44.015). It need not be filed with the court and the law does not demand a certified appraisal, but an appraisal is the value that holds up if an heir, a creditor or the tax authorities question it; an online estimate does not.
     </P>
 
     <Divider />

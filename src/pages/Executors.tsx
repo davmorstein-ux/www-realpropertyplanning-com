@@ -302,7 +302,7 @@ const Executors = () => (
           {
             question: "What's the difference between an executor, a Power of Attorney, and a trustee?",
             answer:
-              "An executor administers a deceased person's estate under court supervision. A Power of Attorney agent acts on behalf of a living person who can no longer manage their own affairs. A trustee manages assets already placed in a trust, generally outside of court oversight. Each role carries its own fiduciary duties and real estate responsibilities.",
+              "An executor is appointed by the court to administer a deceased person's estate, usually with nonintervention powers that keep court involvement light. A Power of Attorney agent acts on behalf of a living person who can no longer manage their own affairs. A trustee manages assets already placed in a trust, generally outside of court oversight. Each role carries its own fiduciary duties and real estate responsibilities.",
           },
           {
             question: "What's the biggest mistake executors make with estate real estate?",

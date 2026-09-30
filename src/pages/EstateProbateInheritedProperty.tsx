@@ -11,6 +11,7 @@ import { articleSchema } from "@/lib/schema";
 import GuidanceGrid from "@/components/GuidanceGrid";
 import { estateProbateTopics } from "@/lib/estateProbateTopics";
 import IntentCTA from "@/components/IntentCTA";
+import { Link } from "react-router-dom";
 
 /* Descriptions live here, not in the shared topic list, on purpose.
    RoadmapDropdown's "list" mode switches its grid from two columns to one
@@ -113,6 +114,17 @@ const EstateProbateInheritedProperty = () => {
               <h2 className="font-serif text-[28px] md:text-[40px] lg:text-[44px] font-semibold text-navy leading-tight">
                 Six areas most families need to think through
               </h2>
+              <p className="mt-5 text-lg text-foreground">
+                New to probate?{" "}
+                <Link to="/washington-probate-guide" className="font-semibold text-navy underline underline-offset-4">
+                  Start with the Washington Probate &amp; Estate Property Guide
+                </Link>{" "}
+                or look up a word in the{" "}
+                <Link to="/probate-glossary" className="font-semibold text-navy underline underline-offset-4">
+                  Probate &amp; Estate Glossary
+                </Link>
+                .
+              </p>
             </div>
 
             {/* Removed: "Not sure where to start? Reach out and we'll help you

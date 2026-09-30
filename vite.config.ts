@@ -15,6 +15,8 @@ import { cityRoutes as afhCityRoutes } from "./src/data/afhCityPages";
 import { REDIRECTS } from "./src/data/redirects";
 import { POLICY_PAGES } from "./src/data/policyPages";
 import { GLOSSARY_A_TO_Z } from "./src/data/afhGlossary";
+import { PROBATE_GLOSSARY_A_TO_Z } from "./src/data/probateGlossary";
+import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/data/probatePillar";
 import { RULE_CHANGES, PENDING_RULES, OUTDATED_ADVICE } from "./src/data/afhRuleChanges";
 import { readFileSync as readFileSyncForStats } from "node:fs";
 
@@ -660,6 +662,27 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Guidance for adult children and families supporting aging parents — housing, caregiving, downsizing, and major life decisions across Washington State.",
     h1: "Helping an Aging Parent",
     intro: "A guided journey for families helping a parent or loved one through housing, care, and major life transitions — calm, practical, and free of pressure.",
+  },
+  "/washington-probate-guide": {
+    title: `${PROBATE_PILLAR.TITLE} | Real Property Planning`,
+    description: PROBATE_PILLAR.DESCRIPTION,
+    h1: PROBATE_PILLAR.TITLE,
+    ...(PROBATE_PILLAR.COVER ? { heroImage: PROBATE_PILLAR.COVER } : {}),
+    quickAnswerQ: "How does probate work in Washington when there is a house?",
+    quickAnswerA: PROBATE_PILLAR.SHORT_ANSWER,
+    intro: "For executors, heirs, trustees and families dealing with a house after a death in Washington: how probate works, who can act, the deadlines that matter, and a path to the right guide for your role. General information, not legal advice.",
+    sections: PROBATE_PILLAR_SECTIONS,
+    faq: PROBATE_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: "2026-09-30", dateModified: "2026-09-30" },
+  },
+  "/probate-glossary": {
+    title: "Washington Probate & Estate Glossary: Terms Explained | Real Property Planning",
+    description: `${PROBATE_GLOSSARY_A_TO_Z.length} Washington probate and estate property terms in plain English: personal representative, letters testamentary, nonintervention powers, creditor claims, transfer on death deeds, stepped-up basis and estate tax, each with its statute.`,
+    h1: "Washington Probate & Estate Glossary",
+    quickAnswerQ: "What are nonintervention powers in Washington probate?",
+    quickAnswerA: "Authority the court can grant the personal representative of a solvent estate to settle it without further court orders, including to sell, mortgage or lease real estate without court approval or confirmation (RCW 11.68.090). Most Washington estates are administered this way.",
+    intro: `${PROBATE_GLOSSARY_A_TO_Z.length} terms you will meet when settling an estate, inheriting a house or selling one in Washington, in plain English, each linked to the guide that explains it and, where there is one, the statute behind it. General information, not legal advice.`,
+    sections: PROBATE_GLOSSARY_A_TO_Z.map((t) => `${t.term}${t.aka ? ` (${t.aka})` : ""} — ${t.definition}${t.source ? ` Source: ${t.source.label}.` : ""}`),
   },
   "/estate-probate-inherited-property": {
     title: "Estate, Probate & Inherited Property — Guided Journey | Real Property Planning",

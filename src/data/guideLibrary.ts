@@ -43,8 +43,9 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
   {
     id: "probate-inherited",
     label: "Probate & inherited property",
-    landing: { href: "/estate-probate-inherited-property", label: "Start here: estate, probate and inherited property" },
+    landing: { href: "/washington-probate-guide", label: "Start here: the Washington Probate & Estate Property Guide" },
     pieces: [
+      { title: "Estate, Probate & Inherited Property", href: "/estate-probate-inherited-property" },
       { title: "Building Your Professional Team", href: "/estate-probate-inherited-property/professional-team" },
       { title: "Can You Sell a House During Probate in Washington?", href: "/guides/sell-house-during-probate-washington" },
       { title: "Deciding What to Do With the Property", href: "/estate-probate-inherited-property/what-to-do-with-the-property" },
@@ -57,6 +58,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "Probate vs Trust Sale in Washington — What's the Difference?", href: "/guides/probate-vs-trust-sale-washington" },
       { title: "Selling an Inherited Home", href: "/selling-an-inherited-home" },
       { title: "Understanding Probate & Legal Authority", href: "/estate-probate-inherited-property/probate-and-legal-authority" },
+      { title: "Washington Probate & Estate Glossary", href: "/probate-glossary" },
       { title: "Understanding the Property's Value", href: "/estate-probate-inherited-property/property-value" },
       { title: "What Happens If Heirs Disagree About Selling?", href: "/guides/heirs-disagree-selling-house" },
       { title: "What Taxes Apply When Selling an Inherited House in Washington?", href: "/guides/taxes-selling-inherited-house-washington" },

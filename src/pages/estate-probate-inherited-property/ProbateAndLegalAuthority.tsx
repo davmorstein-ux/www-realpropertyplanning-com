@@ -21,7 +21,7 @@ const ProbateAndLegalAuthority = () => (
 
     <SubH2>What Probate Is — and What It Isn't</SubH2>
     <P>
-      Probate is the court-supervised process of administering a deceased person's estate. It involves validating the will, appointing an executor, notifying creditors, paying debts, and ultimately distributing assets to heirs.
+      Probate is the court process for administering a deceased person's estate, though in Washington most estates are then handled with little court involvement. It involves validating the will, appointing an executor, notifying creditors, paying debts, and ultimately distributing assets to heirs.
     </P>
     <P>
       Probate is not a punishment, and it's not always something to be feared. In Washington State, the probate process is relatively straightforward for most estates — though it does take time, typically six months to a year or more for an average estate.
@@ -38,10 +38,10 @@ const ProbateAndLegalAuthority = () => (
     <SubH2>Do You Need Probate in Washington State?</SubH2>
     <P>Washington State has two main paths:</P>
     <P>
-      <strong>Full probate</strong> — required when the estate includes real property titled solely in the deceased's name, or when significant assets don't have beneficiary designations or co-owners. A personal representative (executor) is appointed by the court and administers the estate under court supervision.
+      <strong>Full probate</strong> — required when the estate includes real property titled solely in the deceased's name, or when significant assets don't have beneficiary designations or co-owners. A personal representative (executor) is appointed by the court. Most are granted nonintervention powers, which let them settle the estate, including selling the house, without further court orders.
     </P>
     <P>
-      <strong>Small estate affidavit</strong> — available for estates with total assets under a certain threshold (consult an attorney for current limits). Allows heirs to collect assets without full probate proceedings.
+      <strong>Small estate affidavit</strong> — available when the whole probate estate, including any real estate, is worth $100,000 or less after liens. Forty days after the death, heirs can collect personal property such as bank accounts without probate. It cannot transfer real estate (RCW 11.62.010).
     </P>
     <P>An experienced probate attorney can quickly tell you which applies to your situation.</P>
 

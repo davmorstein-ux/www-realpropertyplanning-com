@@ -43,6 +43,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
     color: "#25597e",
     items: [
       { name: "Probate & Estate Sales", href: "/probate-estate-sales" },
+      { name: "Washington Probate Guide (Start Here)", href: "/washington-probate-guide" },
       { name: "For Executors", href: "/executors" },
       { name: "For Trustees", href: "/trustees" },
       { name: "Selling an Inherited Home", href: "/selling-an-inherited-home" },

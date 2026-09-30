@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "What is Washington State's estate tax and who does it affect?",
-    a: "Washington State has its own estate tax, separate from the federal one, that applies to estates valued above approximately $2.193 million (as of 2024). This is lower than the federal threshold, meaning some Washington families are affected by the state tax even when no federal estate tax is owed. A financial planner familiar with Washington law can help families plan ahead.",
+    a: "Washington State has its own estate tax, separate from the federal one. The Department of Revenue lists an exclusion of $3,000,000 for deaths from July 1, 2026 ($3,076,000 for January to June 2026). This is lower than the federal threshold, meaning some Washington families are affected by the state tax even when no federal estate tax is owed. A financial planner familiar with Washington law can help families plan ahead.",
   },
   {
     q: "How can a financial advisor help with the cost of assisted living?",

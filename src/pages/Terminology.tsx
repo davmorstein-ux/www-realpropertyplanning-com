@@ -42,7 +42,7 @@ const glossaryData: GlossaryCategory[] = [
       { term: "Letters of Administration", definition: "Court-issued authority allowing an administrator to act on behalf of an estate when there is no executor with valid authority under a will." },
       { term: "Letters Testamentary", definition: "Court-issued authority confirming that an executor has legal power to act for the estate." },
       { term: "Personal Representative", definition: "A general term for the person legally responsible for administering an estate. Depending on the situation, that person may be an executor or administrator." },
-      { term: "Probate", definition: "The legal court-supervised process used to determine the validity of a will, appoint the person with authority to act, and oversee administration of the estate." },
+      { term: "Probate", definition: "The court process used to determine the validity of a will and appoint the person with authority to act. In Washington, most estates are then administered with nonintervention powers and little court involvement." },
       { term: "Probate Estate", definition: "The assets that are subject to probate administration, generally including property held in the deceased person's individual name without a built-in transfer method." },
       { term: "Testate", definition: "Dying with a valid will." },
       { term: "Testator", definition: "A person who makes a will." },
