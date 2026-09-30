@@ -20,6 +20,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { listingsForFacility } from "../afhAddressMatch";
 import { afhListings, formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "../afhListings";
+import { dshsReportsUrl, inspectionStatus, INSPECTION_HEADING, REPORTS_LINK_TEXT, DOCUMENT_TYPES, INSPECTION_NOTES } from "./inspectionRecord";
 
 /* ------------------------------------------------------------------ */
 /* Minimal local types (kept independent of ./types to avoid Vite-only  */
@@ -194,7 +195,7 @@ const facilityRow = (f: Facility) => {
     `<p style="margin:4px 0 0;color:#4b5563">${esc(spec)} — ${
       f.acceptsMedicaid ? "accepts Medicaid" : "private pay only"
     }</p>` +
-    `<p style="margin:4px 0 0;color:#4b5563;font-size:0.95rem">DSHS license ${esc(f.licenseNumber)}</p>` +
+    `<p style="margin:4px 0 0;color:#4b5563;font-size:0.95rem">DSHS license ${esc(f.licenseNumber)} · <a href="${attr(dshsReportsUrl(f.licenseNumber))}" rel="noopener" style="color:#1a365d">DSHS inspection record</a>${f.hasReports ? " (documents posted)" : " (none posted when checked)"}</p>` +
     `</li>`
   );
 };
@@ -353,13 +354,16 @@ function buildFacilityPage(entry: CityIndexEntry, f: Facility): PrerenderedRoute
         .join("") +
       `</tbody></table>`,
   );
+  parts.push(h2(INSPECTION_HEADING));
+  parts.push(p(esc(inspectionStatus(f.hasReports, longDate(f.retrievedAt)))));
+  parts.push(p(`<a href="${attr(dshsReportsUrl(f.licenseNumber))}" rel="noopener" style="color:#1a365d;font-weight:700">${esc(REPORTS_LINK_TEXT)} (DSHS)</a>`));
   parts.push(
-    p(
-      f.hasReports
-        ? "DSHS has inspection or enforcement documents on file for this home. Those records are published by the state and can be viewed through the DSHS Adult Family Home Locator."
-        : "DSHS shows no inspection or enforcement documents on file for this home as of the retrieval date above.",
-    ),
+    `<ul style="padding-left:20px;margin:0 0 12px">` +
+      DOCUMENT_TYPES.map((d) => `<li><strong>${esc(d.name)}</strong>: ${esc(d.what)}</li>`).join("") +
+      INSPECTION_NOTES.map((t) => `<li>${esc(t)}</li>`).join("") +
+      `</ul>`,
   );
+  parts.push(p(a("/afh-club/violation-history-lookup", "How to read DSHS inspection and enforcement records")));
   const sales = listingsForFacility(f);
   if (sales.length) {
     parts.push(h2("Sales and listing history"));

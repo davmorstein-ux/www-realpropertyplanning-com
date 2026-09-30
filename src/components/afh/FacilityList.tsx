@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { AFHFacility } from "@/data/afh/types";
 import { SPECIALTY_LABELS } from "@/data/afh/types";
+import { dshsReportsUrl } from "@/data/afh/inspectionRecord";
 
 const GREEN = "#0a5648";
 const BORDER = "#d9dede";
@@ -58,8 +59,18 @@ const FacilityRow = ({ facility }: { facility: AFHFacility }) => {
       </p>
 
       <p style={{ margin: "4px 0 0", fontSize: "15px", color: "#4b5563" }}>
-        DSHS license {facility.licenseNumber}
-        {facility.hasReports ? " · inspection reports on file" : ""}
+        DSHS license {facility.licenseNumber} ·{" "}
+        <a
+          href={dshsReportsUrl(facility.licenseNumber)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4"
+          style={{ color: "#1a365d" }}
+          aria-label={`DSHS inspection record for ${facility.displayName} (opens in a new tab)`}
+        >
+          DSHS inspection record
+        </a>
+        {facility.hasReports ? " (documents posted)" : " (none posted when checked)"}
       </p>
     </li>
   );

@@ -9,6 +9,7 @@ import { CONTRACT_LABELS, SPECIALTY_LABELS, type AFHFacility } from "@/data/afh/
 import { getCityIndexEntry, loadFacility } from "@/data/afh/directory";
 import { listingsForFacility } from "@/data/afhAddressMatch";
 import { formatVerifiedDate, listingSlug, afhClassification, AFH_MARKET_STATUS_LABELS } from "@/data/afhListings";
+import { dshsReportsUrl, inspectionStatus, INSPECTION_HEADING, REPORTS_LINK_TEXT, DOCUMENT_TYPES, INSPECTION_NOTES } from "@/data/afh/inspectionRecord";
 
 const GREEN = "#0a5648";
 const BORDER = "#d9dede";
@@ -209,6 +210,45 @@ const FacilityDetail = () => {
                 </tbody>
               </table>
 
+              {/* Inspection record (Sept 30, 2026): a direct link to this license's
+                  DSHS "Documents & Reports" page, plus how to read it. Words live in
+                  src/data/afh/inspectionRecord.ts, shared with the prerender. */}
+              <div
+                className="rpp-afh-inspection"
+                style={{ marginTop: 32, background: "#f3f6f4", border: "1px solid #d5e0da", borderLeft: `5px solid ${GREEN}`, borderRadius: 10, padding: "20px 22px" }}
+              >
+                <p className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-3">{INSPECTION_HEADING}</p>
+                <p className="text-[17px] text-foreground leading-relaxed mb-4">
+                  {inspectionStatus(facility.hasReports, formatVerifiedDate(facility.retrievedAt))}
+                </p>
+                <a
+                  href={dshsReportsUrl(facility.licenseNumber)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: "inline-block", background: GREEN, color: "#ffffff", fontWeight: 700, padding: "10px 18px", borderRadius: 8, textDecoration: "none" }}
+                >
+                  {REPORTS_LINK_TEXT} (DSHS, opens in a new tab)
+                </a>
+                <p className="text-[16px] text-foreground leading-relaxed mt-5 mb-2">What you will find there:</p>
+                <ul className="list-disc pl-6 text-[16px] leading-relaxed mb-4">
+                  {DOCUMENT_TYPES.map((d) => (
+                    <li key={d.name}>
+                      <strong>{d.name}</strong>: {d.what}
+                    </li>
+                  ))}
+                </ul>
+                <ul className="list-disc pl-6 text-[16px] leading-relaxed mb-4">
+                  {INSPECTION_NOTES.map((n) => (
+                    <li key={n}>{n}</li>
+                  ))}
+                </ul>
+                <p className="text-[16px] mb-0">
+                  <Link to="/afh-club/violation-history-lookup" className="underline underline-offset-4 text-accent">
+                    How to read DSHS inspection and enforcement records
+                  </Link>
+                </p>
+              </div>
+
               {listingsForFacility(facility).length > 0 && (
                 <div className="mt-10">
                   <p className="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-3">Sales and listing history</p>
@@ -236,12 +276,6 @@ const FacilityDetail = () => {
                   </ul>
                 </div>
               )}
-
-              <p className="mt-8 text-[17px] text-foreground leading-relaxed">
-                {facility.hasReports
-                  ? "DSHS has inspection or enforcement documents on file for this home. Those records are published by the state and can be viewed through the DSHS Adult Family Home Locator."
-                  : "DSHS shows no inspection or enforcement documents on file for this home as of the retrieval date above."}
-              </p>
 
               <p className="mt-6 text-[17px]">
                 <Link
