@@ -14,6 +14,7 @@ import PageFAQ from "@/components/PageFAQ";
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",
@@ -88,6 +89,7 @@ const WhyValuationMatters = () => {
       <BreadcrumbSchema items={[{ name: "Why Valuation Matters", url: "/why-valuation-matters" }]} />
       <Header />
       <main id="main-content">
+        <ProbateStartHere />
       <style>{`
         #valuation-quick-answer-accordion [data-valuation-trigger],
         #valuation-quick-answer-accordion [data-valuation-trigger] span {

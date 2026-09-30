@@ -17,7 +17,7 @@ const LewisCounty = () => (
     ]}
     localInsight={`Lewis County stretches from the twin cities of Chehalis and Centralia along the I-5 corridor to the rural communities of the Cascade foothills and the Cowlitz River valley. It is a county of genuine contrasts — the commercial activity of Centralia and Chehalis, the quiet agricultural communities of Toledo and Winlock, and the mountain-gateway towns of Morton, Randle, and Packwood near Mount Rainier. Estate and inherited properties here span a wide range: older homes in established neighborhoods, rural acreage with outbuildings, agricultural parcels, and properties in communities where comparable sales are limited and local knowledge is essential. ${FEATURED_BROKER.Role} provides the condition-based pricing and practical coordination that Lewis County estate situations require.`}
     aeoQuestion="How does probate real estate work in Lewis County?"
-    aeoAnswer="Lewis County probate is administered through the Lewis County Superior Court in Chehalis. Personal representatives must receive Letters Testamentary before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families through every step — from the initial date-of-death valuation through closing — with particular attention to the rural property characteristics and community-specific market dynamics that are common throughout Lewis County."
+    aeoAnswer="Lewis County probates are usually filed in the Lewis County Superior Court in Chehalis, though Washington allows filing in any county. Personal representatives must receive Letters Testamentary (or, without a will, Letters of Administration) before listing or selling estate property. The featured Washington licensed broker, who is also a certified residential appraiser, can support executors and families through every step — from the initial date-of-death valuation through closing — with particular attention to the rural property characteristics and community-specific market dynamics that are common throughout Lewis County."
     aeoSupportFaqs={[
       {
         question: "What types of estate properties are most common in Lewis County?",
@@ -41,7 +41,7 @@ const LewisCounty = () => (
     countySpecificFaqs={[
       {
         question: "Can a Lewis County probate property be listed before Letters are issued?",
-        answer: `No — the property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the Lewis County Superior Court in Chehalis. ${FEATURED_BROKER.Role} uses that waiting period to conduct the valuation walk-through, secure the property, coordinate cleanout vendors, and prepare the marketing file — so you're ready to move the moment Letters arrive.`,
+        answer: `No — the property cannot be marketed until Letters Testamentary or Letters of Administration have been issued by the superior court handling the estate (usually the Lewis County Superior Court in Chehalis). ${FEATURED_BROKER.Role} uses that waiting period to conduct the valuation walk-through, secure the property, coordinate cleanout vendors, and prepare the marketing file — so you're ready to move the moment Letters arrive.`,
       },
       {
         question: "How are agricultural or acreage properties valued in a Lewis County estate?",

@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const navy = "#6b1b22";
 const gold = "#c3525c";
@@ -119,6 +120,7 @@ const ExecutorsGuide = () => (
     />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
       <HeroBandTitle as="h1">Executor's Guide</HeroBandTitle>
 
       {/* Intro */}

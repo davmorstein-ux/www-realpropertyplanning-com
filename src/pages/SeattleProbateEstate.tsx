@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { hubOrganizationSchema, areaServed } from "@/lib/schema";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -102,6 +103,7 @@ const SeattleProbateEstate = () => {
       />
       <Header />
       <main id="main-content">
+        <ProbateStartHere />
 
       {/* Hero */}
       <HeroBandTitle as="h1">Selling an Inherited Seattle Home — From Ballard to Beacon Hill</HeroBandTitle>

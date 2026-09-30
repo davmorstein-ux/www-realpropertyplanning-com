@@ -25,6 +25,7 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
   { question: "Can you list a house for sale while probate is still open?", answer: "Yes. In Washington State, once the executor or personal representative has been granted letters testamentary by the court, they have the authority to list and sell the property — even while other aspects of the estate are still being settled." },
@@ -92,6 +93,7 @@ const SellHouseDuringProbateWashington = () => (
     ]} />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
 
     {/* Hero — simplified */}
     <HeroBandTitle as="h1">Can You Sell a House During Probate in Washington State?</HeroBandTitle>

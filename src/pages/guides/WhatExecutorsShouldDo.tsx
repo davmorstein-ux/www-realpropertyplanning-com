@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import ListenButton from "@/components/ListenButton";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const immediateSteps = [
   { title: "Secure the Property", text: "Change locks if needed, verify insurance coverage, and make sure utilities remain active. A vacant home is vulnerable to weather damage, vandalism, and liability issues." },
@@ -53,6 +54,7 @@ const WhatExecutorsShouldDo = () => (
     ]} />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
 
     <HeroBandTitle as="h1">What Executors Should Do Before Selling an Inherited Home</HeroBandTitle>
 

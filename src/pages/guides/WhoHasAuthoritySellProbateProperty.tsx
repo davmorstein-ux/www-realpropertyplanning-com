@@ -18,6 +18,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
   {
@@ -94,6 +95,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
     />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
       {/* Hero */}
       <HeroBandTitle as="h1">Who Has Authority to Sell Probate Property in Washington State?</HeroBandTitle>
 

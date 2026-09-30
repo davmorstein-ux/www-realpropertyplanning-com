@@ -12,6 +12,7 @@ import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const jsonLd = articleSchema({
   headline: "Trust Property Guide for Trustees",
@@ -32,6 +33,7 @@ const Trustees = () => (
     <BreadcrumbSchema items={[{ name: "Trustees", url: "/trustees" }]} />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
 
     {/* Hero */}
     <HeroBandTitle as="h1">Trustees</HeroBandTitle>

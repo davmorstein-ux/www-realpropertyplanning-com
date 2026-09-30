@@ -186,7 +186,7 @@ const CSS = `
 .afhp p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .afhp .afhp-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #0a5648 !important; margin: 0 0 12px !important; }
 .afhp h1.afhp-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 18px !important; text-wrap: balance; }
-.afhp h2.afhp-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 14px !important; text-wrap: balance; scroll-margin-top: 110px; }
+.afhp h2.afhp-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 14px !important; text-wrap: balance; scroll-margin-top: 180px; }
 .afhp h3.afhp-h3 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: 21px !important; line-height: 1.3 !important; font-weight: 700 !important; color: #192A19 !important; margin: 0 0 6px !important; }
 .afhp .afhp-answer { background: #ffffff; border: 1px solid #d5e0da; border-left: 5px solid #0a5648; border-radius: 10px; padding: 18px 22px; margin: 4px 0 0; }
 .afhp .afhp-answer p { font-size: 19px !important; margin: 0 !important; }
@@ -212,7 +212,7 @@ const CSS = `
 .afhp .afhp-jump a:hover, .afhp .afhp-jump a:focus-visible { background: #0a5648; color: #ffffff !important; }
 .afhp .afhp-paths { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 820px) { .afhp .afhp-paths { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.afhp .afhp-path { background: #ffffff; border: 1px solid #ddd6cc; border-top: 4px solid #0a5648; border-radius: 10px; padding: 20px 22px; scroll-margin-top: 110px; }
+.afhp .afhp-path { background: #ffffff; border: 1px solid #ddd6cc; border-top: 4px solid #0a5648; border-radius: 10px; padding: 20px 22px; scroll-margin-top: 180px; }
 .afhp .afhp-path .afhp-who { font-size: 16px !important; color: #4a443e !important; margin: 0 0 12px !important; }
 .afhp ol.afhp-steps { margin: 0; padding: 0 0 0 22px; font-family: 'DM Sans', sans-serif; }
 .afhp ol.afhp-steps li { margin-bottom: 12px; font-size: 16px !important; line-height: 1.45 !important; color: #3f3a35; }

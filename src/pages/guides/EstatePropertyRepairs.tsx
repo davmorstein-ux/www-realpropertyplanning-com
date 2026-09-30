@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
   { question: "Should I renovate an inherited home before selling?", answer: "Usually, no. Full renovations rarely make financial sense for estate properties. Targeted improvements — deep cleaning, paint, landscaping, minor repairs — often deliver the best return. A professional assessment can identify which specific improvements are worth the investment." },
@@ -45,6 +46,7 @@ const EstatePropertyRepairs = () => (
     ]} />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
 
     <HeroBandTitle as="h1">What Repairs Should Be Done Before Selling an Estate Property?</HeroBandTitle>
 

@@ -13,6 +13,7 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import GuidanceGrid from "@/components/GuidanceGrid";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 interface Decision {
   letter: string;
@@ -102,6 +103,7 @@ const WhatToDoWithTheHouse = () => {
       <BreadcrumbSchema items={[{ name: "What To Do With the House", url: "/what-to-do-with-the-house" }]} />
       <Header />
       <main id="main-content">
+        <ProbateStartHere />
         {/* HERO */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>

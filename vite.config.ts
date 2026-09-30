@@ -17,6 +17,7 @@ import { POLICY_PAGES } from "./src/data/policyPages";
 import { GLOSSARY_A_TO_Z } from "./src/data/afhGlossary";
 import { PROBATE_GLOSSARY_A_TO_Z } from "./src/data/probateGlossary";
 import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/data/probatePillar";
+import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
 import { RULE_CHANGES, PENDING_RULES, OUTDATED_ADVICE } from "./src/data/afhRuleChanges";
 import { readFileSync as readFileSyncForStats } from "node:fs";
 
@@ -1336,22 +1337,32 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/estate-probate-inherited-property/first-steps": {
     title: "First Steps After a Death | Real Property Planning",
     description: "The early days after a loved one passes are overwhelming. Here are the calm, practical first steps to take — before any major decisions need to be made.",
+    h1: "First Steps After a Death",
+    intro: "The early days after a loved one passes are overwhelming. Here are the calm, practical first steps to take — before any major decisions need to be made.",
   },
   "/estate-probate-inherited-property/preparing-the-property": {
     title: "Preparing the Property for Sale | Real Property Planning",
     description: "From cleanout to repairs to occupancy concerns — what to handle before an estate home goes to market, and how to make smart decisions about what's worth doing.",
+    h1: "Preparing the Property for Sale",
+    intro: "From cleanout to repairs to occupancy concerns — what to handle before an estate home goes to market, and how to make smart decisions about what's worth doing.",
   },
   "/estate-probate-inherited-property/professional-team": {
     title: "Building Your Professional Team | Real Property Planning",
     description: "Estate administration requires the right professionals working together. Here's who you need, what each one does, and how to assemble the right team.",
+    h1: "Building Your Professional Team",
+    intro: "Estate administration requires the right professionals working together. Here's who you need, what each one does, and how to assemble the right team.",
   },
   "/estate-probate-inherited-property/property-value": {
     title: "Understanding the Property's Value | Real Property Planning",
     description: "Estate property valuation has unique requirements. Here's what a date-of-death appraisal is, why it matters, and how it differs from a standard market estimate.",
+    h1: "Understanding the Property's Value",
+    intro: "Estate property valuation has unique requirements. Here's what a date-of-death appraisal is, why it matters, and how it differs from a standard market estimate.",
   },
   "/estate-probate-inherited-property/what-to-do-with-the-property": {
     title: "Deciding What to Do With the Property | Real Property Planning",
     description: "Sell, keep, rent, or transfer — there's no single right answer for estate property. Here's how to think through the options carefully.",
+    h1: "Deciding What to Do With the Property",
+    intro: "Sell, keep, rent, or transfer — there's no single right answer for estate property. Here's how to think through the options carefully.",
   },
   "/everett-probate-estate-real-estate": {
     title: "Probate & Estate Real Estate in Everett, WA",
@@ -1361,18 +1372,26 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/executor-responsibilities-first-steps/common-mistakes": {
     title: "Common Executor Mistakes — and How to Avoid Them | Real Property Planning",
     description: "Most executor mistakes are avoidable. Here are the ones that trip people up most often — and what to do instead.",
+    h1: "Common Executor Mistakes — and How to Avoid Them",
+    intro: "Most executor mistakes are avoidable. Here are the ones that trip people up most often — and what to do instead.",
   },
   "/executor-responsibilities-first-steps/first-30-days": {
     title: "Your First 30 Days as Executor | Real Property Planning",
     description: "The weeks immediately after a death are overwhelming. Here's a clear, prioritized list of what actually needs to happen first — and what can wait.",
+    h1: "Your First 30 Days as Executor",
+    intro: "The weeks immediately after a death are overwhelming. Here's a clear, prioritized list of what actually needs to happen first — and what can wait.",
   },
   "/executor-responsibilities-first-steps/legal-duties": {
     title: "Understanding Your Legal Duties as Executor | Real Property Planning",
     description: "What are you actually responsible for as an executor or trustee? A plain-language overview of the legal obligations Washington State executors need to understand.",
+    h1: "Understanding Your Legal Duties as Executor",
+    intro: "What are you actually responsible for as an executor or trustee? A plain-language overview of the legal obligations Washington State executors need to understand.",
   },
   "/executor-responsibilities-first-steps/property-decisions": {
     title: "What to Do With Real Estate in the Estate | Real Property Planning",
     description: "The family home is often the largest and most complicated asset in an estate. Here's what executors need to know about real property decisions.",
+    h1: "What to Do With Real Estate in the Estate",
+    intro: "The family home is often the largest and most complicated asset in an estate. Here's what executors need to know about real property decisions.",
   },
   "/executors/executors-guide": {
     title: "Executor's Guide | Real Property Planning",
@@ -2083,6 +2102,15 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
   const ssgParts: string[] = [];
   ssgParts.push(`<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">`);
   ssgParts.push(ssgNav(route));
+  if (PROBATE_START_HERE_ROUTES.includes(route)) {
+    const T = PROBATE_START_HERE;
+    const l = (h: string, t: string) => `<a href="${h}" style="${SSG_LINK}">${escHtml(t)}</a>`;
+    ssgParts.push(
+      `<p style="background:#eef3f7;padding:10px 14px;margin:0 0 18px">` +
+        `<strong>${escHtml(T.lead)}</strong> Start with the ${l(T.guide.href, T.guide.label)}, or look up terms like ` +
+        `${l(T.terms[0].href, T.terms[0].label)} and ${l(T.terms[1].href, T.terms[1].label)} in the ${l(T.glossary.href, T.glossary.label)}.</p>`
+    );
+  }
 
   if (h1) ssgParts.push(`<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">${h1}</h1>`);
 

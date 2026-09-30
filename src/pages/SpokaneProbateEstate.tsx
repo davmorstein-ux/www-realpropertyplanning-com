@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { hubOrganizationSchema, areaServed } from "@/lib/schema";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
   {
@@ -100,6 +101,7 @@ const SpokaneProbateEstate = () => {
       />
       <Header />
       <main id="main-content">
+        <ProbateStartHere />
 
       {/* Hero */}
       <HeroBandTitle as="h1">Helping Families Manage Inherited Property in Spokane</HeroBandTitle>

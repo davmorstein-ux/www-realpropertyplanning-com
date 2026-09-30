@@ -64,7 +64,7 @@ const CSS = `
 .prg p { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; line-height: 1.7 !important; color: #1c1917 !important; margin: 0 0 14px !important; }
 .prg .prg-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: ${A} !important; margin: 0 0 12px !important; }
 .prg h1.prg-h1 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(30px, 4.6vw, 46px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 16px !important; text-wrap: balance; }
-.prg h2.prg-letter { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: 30px !important; line-height: 1 !important; font-weight: 700 !important; color: ${A} !important; margin: 0 0 8px !important; padding-bottom: 8px; border-bottom: 2px solid #d3dfe8; scroll-margin-top: 110px; }
+.prg h2.prg-letter { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: 30px !important; line-height: 1 !important; font-weight: 700 !important; color: ${A} !important; margin: 0 0 8px !important; padding-bottom: 8px; border-bottom: 2px solid #d3dfe8; scroll-margin-top: 180px; }
 .prg h2.prg-h2 { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.2vw, 30px) !important; line-height: 1.2 !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 14px !important; }
 .prg .prg-jump { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 0; }
 .prg .prg-jump a, .prg .prg-jump span { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 17px !important; font-weight: 700; text-decoration: none !important; }
@@ -73,7 +73,7 @@ const CSS = `
 .prg .prg-jump a:focus-visible { background: ${A}; color: #ffffff !important; }
 .prg .prg-jump span { color: #9a948c; border: 1px solid transparent; }
 .prg dl { margin: 0; }
-.prg .prg-term { padding: 18px 0; border-bottom: 1px solid #eee9e1; scroll-margin-top: 110px; }
+.prg .prg-term { padding: 18px 0; border-bottom: 1px solid #eee9e1; scroll-margin-top: 180px; }
 .prg .prg-term:last-child { border-bottom: 0; }
 .prg .prg-term:target { background: #eef3f7; box-shadow: -12px 0 0 #eef3f7, 12px 0 0 #eef3f7; }
 .prg dt { font-family: 'DM Sans', sans-serif; font-size: 21px; font-weight: 700; color: #14283a; line-height: 1.3; }

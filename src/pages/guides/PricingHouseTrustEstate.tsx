@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
   { question: "Is pricing an estate home different from pricing a regular home?", answer: "Yes. Estate properties often have deferred maintenance, dated finishes, and condition issues that standard market comparisons do not capture. Pricing must account for the property's actual condition — not its potential after renovation. A broker with appraisal experience can make these adjustments accurately." },
@@ -45,6 +46,7 @@ const PricingHouseTrustEstate = () => (
     ]} />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
 
     <HeroBandTitle as="h1">How Do You Price a House in a Trust or Estate?</HeroBandTitle>
 

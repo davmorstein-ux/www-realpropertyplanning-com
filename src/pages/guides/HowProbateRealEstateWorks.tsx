@@ -9,6 +9,7 @@ import BackToResources from "@/components/BackToResources";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
   {
@@ -71,6 +72,7 @@ const HowProbateRealEstateWorks = () => (
     />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
       
       <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
         <div style={{ lineHeight: 0 }}>

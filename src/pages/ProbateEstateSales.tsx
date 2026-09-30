@@ -9,6 +9,7 @@ import PageFAQ from "@/components/PageFAQ";
 import { useTranslation } from "react-i18next";
 
 import { Link } from "react-router-dom";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 // ── Data ── (images, hrefs — text pulled via t() in the component)
 
@@ -46,6 +47,7 @@ const ProbateEstateSales = () => {
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
       <Header />
       <main id="main-content">
+        <ProbateStartHere />
         {/* SECTION 1 — Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
 <HeroBandTitle as="h1">{t("probateEstateSales.heroTitle")}</HeroBandTitle>

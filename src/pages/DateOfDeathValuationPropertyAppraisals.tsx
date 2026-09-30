@@ -17,6 +17,7 @@ import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.we
 import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import GuidanceGrid from "@/components/GuidanceGrid";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 interface Pathway {
   letter: string;
@@ -191,6 +192,7 @@ const DateOfDeathValuationPropertyAppraisals = () => {
       <BreadcrumbSchema items={[{ name: "Date-of-Death Valuation & Property Appraisals", url: "/date-of-death-valuation-property-appraisals" }]} />
       <Header />
       <main id="main-content">
+        <ProbateStartHere />
         {/* WTDW Shared Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>

@@ -14,9 +14,29 @@ const ScrollToTop = () => {
     }
   }, [pathname, search, hash, navigate]);
 
+  /* A new page opens at the top, unless the address names a spot on it
+     (/probate-glossary#letters-testamentary). Pages load lazily, so the target
+     may not exist yet: look for it for up to 4 seconds (Sept 30, 2026). */
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    const id = hash ? decodeURIComponent(hash.slice(1)) : "";
+    if (!id) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    let tries = 0;
+    let timer: number | undefined;
+    const seek = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ block: "start" });
+        return;
+      }
+      if (tries === 0) window.scrollTo(0, 0);
+      if (++tries < 40) timer = window.setTimeout(seek, 100);
+    };
+    seek();
+    return () => window.clearTimeout(timer);
+  }, [pathname, hash]);
 
   /* Remember the page being left, for "Back to …" links (src/lib/navHistory.ts).
      Recorded when an in-site link is clicked: at that moment the address and

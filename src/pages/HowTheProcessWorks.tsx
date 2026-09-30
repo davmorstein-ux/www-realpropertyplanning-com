@@ -10,6 +10,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
 import BackToPreviousPage from "@/components/BackToPreviousPage";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 /* Where "Back to …" goes when the visitor arrived from outside the site. */
 const BACK_FALLBACK = { href: "/probate-estate-sales", label: "Probate & Estate Sales" };
@@ -115,6 +116,7 @@ const HowTheProcessWorks = () => {
       <BreadcrumbSchema items={[{ name: "How the Process Works", url: "/how-the-process-works" }]} />
       <Header />
       <main id="main-content">
+        <ProbateStartHere />
         <HeroBandTitle as="h1">How the Process Works</HeroBandTitle>
 
         <BackToPreviousPage variant="top" fallback={BACK_FALLBACK} />

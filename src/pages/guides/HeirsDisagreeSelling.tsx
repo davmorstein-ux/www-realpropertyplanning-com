@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
   { question: "Can one heir force the sale of an inherited house?", answer: "In some cases, yes. If heirs cannot reach agreement, one heir can petition the court for a partition action — essentially asking the court to order the sale. This is expensive, time-consuming, and adversarial. Reaching agreement through informed discussion is almost always the better path." },
@@ -44,6 +45,7 @@ const HeirsDisagreeSelling = () => (
     ]} />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
 
     <HeroBandTitle as="h1">What Happens If Heirs Disagree on Selling a House?</HeroBandTitle>
 

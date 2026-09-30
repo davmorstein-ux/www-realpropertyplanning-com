@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
   { question: "Do you pay capital gains tax on an inherited house in Washington?", answer: "You may owe federal capital gains tax on any appreciation above the stepped-up basis — meaning the property's fair market value at the date of the decedent's death. If you sell shortly after inheriting, there is often little or no gain. Washington's capital gains tax does not apply to any sale of real estate (RCW 82.87.050), so a Washington house is not subject to it. Consult a tax professional for your specific situation." },
@@ -44,6 +45,7 @@ const TaxesSellingInheritedHouseWashington = () => (
     ]} />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
 
     <HeroBandTitle as="h1">What Taxes Do You Pay When Selling an Inherited House in Washington?</HeroBandTitle>
 

@@ -18,6 +18,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const steps = [
   {
@@ -132,6 +133,7 @@ const ProbateHouseSaleTimelineWashington = () => (
     />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
      {/* Hero — title only. The eyebrow, subtitle, credential line and CTA
           buttons were removed; the subtitle now sits in the section below.
           The credential line read "Real Property Planning — Licensed Real

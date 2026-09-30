@@ -17,6 +17,7 @@ import {
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const payOff = [
   {
@@ -158,6 +159,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
     />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
         {/* WTDW Shared Hero */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>

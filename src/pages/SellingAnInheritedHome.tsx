@@ -19,6 +19,7 @@ import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.
 import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import IntentCTA from "@/components/IntentCTA";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 interface Pathway {
   letter: string;
@@ -158,6 +159,7 @@ const SellingAnInheritedHome = () => {
       <BreadcrumbSchema items={[{ name: "Selling an Inherited Home", url: "/selling-an-inherited-home" }]} />
       <Header />
       <main id="main-content">
+        <ProbateStartHere />
         {/* HERO — brought into line with the rest of the site.
             This page kept the old two-part pattern long after everything else
             moved on: an eyebrow-sized band (HeroBandTitle as="div" renders the

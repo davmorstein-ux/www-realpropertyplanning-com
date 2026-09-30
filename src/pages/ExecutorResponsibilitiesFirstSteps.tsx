@@ -6,6 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { articleSchema } from "@/lib/schema";
 import GuidanceGrid from "@/components/GuidanceGrid";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const tiles = [
   {
@@ -63,6 +64,7 @@ const ExecutorResponsibilitiesFirstSteps = () => {
       />
       <Header />
       <main id="main-content">
+        <ProbateStartHere />
         <HeroBandTitle as="h1">SERVING&nbsp; AS&nbsp; EXECUTOR&nbsp; &amp;&nbsp; TRUSTEE</HeroBandTitle>
 
         {/* TOPICS TO EXPLORE */}

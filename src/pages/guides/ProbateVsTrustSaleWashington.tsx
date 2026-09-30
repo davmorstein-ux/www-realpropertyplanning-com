@@ -18,6 +18,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const faqs = [
   {
@@ -111,6 +112,7 @@ const ProbateVsTrustSaleWashington = () => (
     />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
       {/* Hero */}
       <HeroBandTitle as="h1">Probate vs Trust Sale in Washington State — What's the Difference?</HeroBandTitle>
 

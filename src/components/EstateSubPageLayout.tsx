@@ -7,6 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import RoadmapDropdown from "@/components/RoadmapDropdown";
 import { estateProbateTopics } from "@/lib/estateProbateTopics";
 import heroImage from "@/assets/managing-estate-probate-inherited-property-hero-washington.webp";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 interface EstateSubPageLayoutProps {
   seoTitle: string;
@@ -46,6 +47,7 @@ const EstateSubPageLayout = ({
       />
       <Header />
       <main id="main-content">
+        <ProbateStartHere />
         <section className="bg-white">
           <img
             src={heroImageOverride ?? heroImage}

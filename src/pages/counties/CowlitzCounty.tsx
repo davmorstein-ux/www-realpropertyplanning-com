@@ -17,7 +17,7 @@ const CowlitzCounty = () => (
     ]}
     localInsight={`Cowlitz County sits at the confluence of the Cowlitz and Columbia Rivers, with a real estate market shaped by its industrial roots, natural landscape, and tight-knit communities. From the established neighborhoods of Longview — one of the first planned cities in the Pacific Northwest — to the rural properties along the Toutle River corridor, estate and probate properties here require someone who understands both the local market dynamics and the unique characteristics of each community. ${FEATURED_BROKER.Role} brings the dual perspective of a licensed broker and certified appraiser to every Cowlitz County engagement, helping families, executors, and attorneys navigate inherited and estate property with clarity and confidence.`}
     aeoQuestion="How does probate real estate work in Cowlitz County?"
-    aeoAnswer="In Cowlitz County, probate real estate follows Washington State law and is overseen by the Cowlitz County Superior Court. The personal representative must receive Letters Testamentary before the property can be listed or sold. The featured Washington licensed broker, who is also a certified residential appraiser, can assist executors and families with date-of-death valuations, property preparation, and the full sale process — coordinating locally so out-of-area heirs rarely need to travel."
+    aeoAnswer="In Cowlitz County, probate real estate follows Washington State law, and local estates are usually filed in the Cowlitz County Superior Court (Washington allows filing in any county). The personal representative must receive Letters Testamentary (or, without a will, Letters of Administration) before the property can be listed or sold. The featured Washington licensed broker, who is also a certified residential appraiser, can assist executors and families with date-of-death valuations, property preparation, and the full sale process — coordinating locally so out-of-area heirs rarely need to travel."
     aeoSupportFaqs={[
       {
         question: "What types of estate properties are most common in Cowlitz County?",
@@ -41,7 +41,7 @@ const CowlitzCounty = () => (
     countySpecificFaqs={[
       {
         question: "Can a Cowlitz County probate property be listed before Letters are issued?",
-        answer: `No — the property cannot be listed until the personal representative has received Letters Testamentary or Letters of Administration from the Cowlitz County Superior Court. However, ${FEATURED_BROKER.role} uses that waiting period productively: conducting the date-of-death valuation walk-through, securing the property, coordinating cleanout vendors, and preparing the marketing file so you're ready to move the moment Letters arrive.`,
+        answer: `No — the property cannot be listed until the personal representative has received Letters Testamentary or Letters of Administration from the superior court handling the estate (usually the Cowlitz County Superior Court). However, ${FEATURED_BROKER.role} uses that waiting period productively: conducting the date-of-death valuation walk-through, securing the property, coordinating cleanout vendors, and preparing the marketing file so you're ready to move the moment Letters arrive.`,
       },
       {
         question: "What should I know about selling a rural property in Cowlitz County as part of an estate?",

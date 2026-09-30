@@ -11,6 +11,7 @@ import executorImg from "@/assets/executors/executor-tile.webp";
 import poaImg from "@/assets/executors/power-of-attorney-tile.webp";
 import trusteeImg from "@/assets/executors/trustee-tile.webp";
 import IntentCTA from "@/components/IntentCTA";
+import ProbateStartHere from "@/components/ProbateStartHere";
 
 const roles = [
   {
@@ -70,6 +71,7 @@ const Executors = () => (
     <BreadcrumbSchema items={[{ name: "Executors, POAs & Trustees", url: "/executors" }]} />
     <Header />
     <main id="main-content">
+      <ProbateStartHere />
       <HeroBandTitle as="h1">Executors, Powers of Attorney &amp; Trustees</HeroBandTitle>
 
       <DirectAnswerBlock

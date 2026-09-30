@@ -132,7 +132,7 @@ export const PROBATE_GLOSSARY: ProbateGlossaryTerm[] = [
     term: "Nonintervention powers",
     category: "The court process",
     definition:
-      "Authority the court can grant a personal representative of a solvent estate to settle it without further court orders, including to sell, mortgage or lease real estate without court approval or confirmation. Only a solvent estate qualifies, and most Washington estates are administered this way.",
+      "Authority the court can grant a personal representative of a solvent estate to settle it without further court orders, including to sell, mortgage or lease real estate without court approval or confirmation. Most Washington estates are administered this way.",
     guide: G.duringProbate,
     source: src("11.68.090", "powers without court intervention"),
   },
