@@ -9,6 +9,7 @@ import BackToCalculators from "@/components/BackToCalculators";
 import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
+import ArticleCover from "@/components/ArticleCover";
 
 const BLUE = "#0047ab";
 const BLUE_LIGHT = "#3b7dd8";
@@ -243,6 +244,7 @@ const AFHROICalculator = () => {
             <div style={{ marginBottom: 24 }}>
               <BackToCalculators accent={BLUE} />
             </div>
+            <ArticleCover src="/afh-roi-calculator-cover-v2.webp" alt="Cover art: AFH ROI Calculator" width={1024} height={1365} />
             <p
               style={{
                 fontSize: 13,

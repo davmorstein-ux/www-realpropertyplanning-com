@@ -9,6 +9,7 @@ import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/how-to-choose-senior-housing.mp3.asset.json";
+import ArticleCover from "@/components/ArticleCover";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -62,6 +63,7 @@ const HowToChooseSeniorHousing = () => {
           <div className={contentWrap}>
             <article className={proseWrap}>
               <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+              <ArticleCover src="/How_to_Choose_Senior_Housing.webp" alt="Cover art: How to Choose Senior Housing" width={876} height={1314} />
               <h2 className={h2Class + " mt-0"}>How to Choose Senior Housing</h2>
               <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
                 A step-by-step guide for families navigating one of life's most important decisions

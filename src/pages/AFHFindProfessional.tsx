@@ -10,6 +10,7 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-find-a-professional.mp3.asset.json";
 import { AFH_FEATURED_PEOPLE, type AFHProfessional } from "@/data/afhProfessionals";
+import ArticleCover from "@/components/ArticleCover";
 
 /**
  * One person on the directory grid. Deliberately compact so twelve fit on one
@@ -257,6 +258,7 @@ const AFHFindProfessional = () => (
       {/* Hero */}
       <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleCover src="/afh-professionals-cover.webp" alt="Cover art: AFH Professionals" width={1024} height={1365} />
           <p
             style={{
               fontSize: 15,

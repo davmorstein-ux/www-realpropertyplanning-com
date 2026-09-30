@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import { STATE_TERMS, TERM_FAMILIES, LAST_REVIEWED } from "@/data/afh/state-terms";
 import stats from "@/data/afh/stats.json";
+import ArticleCover from "@/components/ArticleCover";
 
 /* Washington counts come from the same DSHS locator snapshot as /afh-club/washington-afh-data. */
 const WA = stats.state;
@@ -127,6 +128,7 @@ const AFHWhatIsAnAFH = () => {
         {/* Hero */}
         <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
+            <ArticleCover src="/afh-what-is-an-afh-cover.webp" alt="Cover art: What Is an Adult Family Home?" width={1024} height={1365} />
             <p
               style={{
                 fontSize: 15,

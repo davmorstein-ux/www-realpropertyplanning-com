@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/getting-started.mp3.asset.json";
+import ArticleCover from "@/components/ArticleCover";
 
 const REALITY_CHECKS = [
   {
@@ -104,6 +105,7 @@ const AFHGettingStarted = () => (
       {/* Hero */}
       <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleCover src="/afh-getting-started.webp" alt="Cover art: Getting Started with Adult Family Homes" width={1086} height={1448} />
           <p
             style={{
               fontSize: 15,

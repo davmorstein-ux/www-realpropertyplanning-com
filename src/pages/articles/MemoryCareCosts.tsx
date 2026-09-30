@@ -9,6 +9,7 @@ import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/memory-care-costs.mp3.asset.json";
+import ArticleCover from "@/components/ArticleCover";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -55,6 +56,7 @@ const MemoryCareCosts = () => {
           <div className={contentWrap}>
             <article className={proseWrap}>
               <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+              <ArticleCover src="/Memory_Care_Costs.webp" alt="Cover art: Memory Care Costs" width={1086} height={1448} />
               <h2 className={h2Class + " mt-0"}>Memory Care Costs</h2>
               <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
                 What families need to know — and what no brochure will tell you about making this decision

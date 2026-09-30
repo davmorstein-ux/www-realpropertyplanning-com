@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-training-and-education-requirements.mp3.asset.json";
+import ArticleCover from "@/components/ArticleCover";
 
 const TRAINING_REQUIREMENTS = [
   {
@@ -113,6 +114,7 @@ const AFHTrainingEducation = () => (
       {/* Hero */}
       <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleCover src="/afh-training-education.webp" alt="Cover art: AFH Training & Education" width={1024} height={1536} />
           <p
             style={{
               fontSize: 15,

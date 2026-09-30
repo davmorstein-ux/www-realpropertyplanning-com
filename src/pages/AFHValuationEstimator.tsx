@@ -9,6 +9,7 @@ import BackToCalculators from "@/components/BackToCalculators";
 import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
+import ArticleCover from "@/components/ArticleCover";
 
 const GREEN = "#1a7a4a";
 const GREEN_LIGHT = "#2ecc71";
@@ -231,6 +232,7 @@ const AFHValuationEstimator = () => {
             <div style={{ marginBottom: 24 }}>
               <BackToCalculators accent={GREEN} />
             </div>
+            <ArticleCover src="/afh-valuation-estimator-cover-v3.webp" alt="Cover art: AFH Valuation Estimator" width={1024} height={1365} />
             <p
               style={{
                 fontSize: 13,

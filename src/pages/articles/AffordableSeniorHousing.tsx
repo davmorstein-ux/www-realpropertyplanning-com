@@ -9,6 +9,7 @@ import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/affordable-senior-housing.mp3.asset.json";
+import ArticleCover from "@/components/ArticleCover";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -58,6 +59,7 @@ const AffordableSeniorHousing = () => {
           <div className={contentWrap}>
             <article className={proseWrap}>
               <div className="mb-6"><ArticleAudioPlayer audioSrc={audioAsset.url} /></div>
+              <ArticleCover src="/Affordable_Senior_Housing.webp" alt="Cover art: Affordable Senior Housing" width={930} height={1240} />
               <p className={leadClass}>
                 For older adults on fixed incomes, the right housing isn't just about comfort — it's about financial survival. Here's what's available, how it works, and why the time to act is now.
               </p>

@@ -9,6 +9,7 @@ import RelatedResourcesSection from "@/components/RelatedResourcesSection";
 import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/independent-living-costs.mp3.asset.json";
+import ArticleCover from "@/components/ArticleCover";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -53,6 +54,7 @@ const IndependentLivingCosts = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>
+              <ArticleCover src="/Independent_Living_Costs.webp" alt="Cover art: Independent Living Costs" width={979} height={1305} />
               <h2 className={h2Class + " mt-0"}>The Real Cost of Independent Living</h2>
               <p className="text-muted-foreground text-lg md:text-xl italic mb-8">
                 What the monthly fee actually covers — and what the number on the brochure doesn't tell you

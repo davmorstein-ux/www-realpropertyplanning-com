@@ -8,6 +8,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import AFHCarousel from "@/components/AFHCarousel";
+import ArticleCover from "@/components/ArticleCover";
 
 const TOPICS = [
   {
@@ -131,7 +132,7 @@ const TOPICS = [
   {
     title: "Find a Professional",
     href: "/afh-club/find-a-professional",
-    img: "/afh-find-professional.webp",
+    img: "/afh-professionals-cover.webp",
     description: "Connect with attorneys, CPAs, lenders, and brokers experienced in Adult Family Home transactions.",
   },
   {
@@ -169,6 +170,7 @@ const AFHResources = () => (
       {/* Hero */}
       <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleCover src="/afh-resources-v3.webp" alt="Cover art: AFH Resource Library" width={1024} height={1365} />
           <p
             style={{
               fontSize: 18,
@@ -328,7 +330,7 @@ const AFHResources = () => (
           {
             title: "Find a Professional",
             href: "/afh-club/find-a-professional",
-            img: "/afh-find-professional.webp",
+            img: "/afh-professionals-cover.webp",
             placeholder: "#524c46",
           },
           {

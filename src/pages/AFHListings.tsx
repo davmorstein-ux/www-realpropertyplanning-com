@@ -11,6 +11,7 @@ import AFHBuyerGuides from "@/components/AFHBuyerGuides";
 import { realEstateListingsPageSchema } from "@/lib/schema";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO } from "@/data/featuredProfessionalAssets";
+import ArticleCover from "@/components/ArticleCover";
 
 const TEAL = "#1a7a78";
 const TEAL_MID = "#2a9d9a";
@@ -215,6 +216,7 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
                     NOTE: the effective size is enforced by the
                     html body main h1.afh-listings-h1 rule in index.css, which
                     carries !important; that rule must match this value. */}
+                <ArticleCover src="/afh-listings-v3.webp" alt="Cover art: AFH Listings" width={1024} height={1365} />
                 <h1
                   className="afh-listings-h1"
                   style={{

@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-building-requirements-and-inspections.mp3.asset.json";
+import ArticleCover from "@/components/ArticleCover";
 
 const PROPERTY_OPTIONS = [
   {
@@ -141,6 +142,7 @@ const AFHBuildingInspection = () => (
           <div className="mb-6">
             <ArticleAudioPlayer audioSrc={audioAsset.url} />
           </div>
+          <ArticleCover src="/afh-building-inspection.webp" alt="Cover art: AFH Building Requirements & Inspections" width={1086} height={1448} />
           <p
             style={{
               fontSize: 15,

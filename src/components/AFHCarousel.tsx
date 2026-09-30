@@ -42,7 +42,7 @@ const DEFAULT_TOPICS = [
   {
     title: "Find a Professional",
     href: "/afh-club/find-a-professional",
-    img: "/afh-find-professional.webp",
+    img: "/afh-professionals-cover.webp",
     placeholder: "#524c46",
   },
   {

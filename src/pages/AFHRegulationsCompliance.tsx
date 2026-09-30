@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-regulations-compliance.mp3.asset.json";
+import ArticleCover from "@/components/ArticleCover";
 
 const ENFORCEMENT_LEVELS = [
   {
@@ -155,6 +156,7 @@ const AFHRegulationsCompliance = () => (
         }}
       >
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleCover src="/afh-regulations-compliance.webp" alt="Cover art: AFH Regulations & Compliance" width={1086} height={1448} />
           <p
             style={{
               fontSize: 15,

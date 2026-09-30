@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
 import { AFH_STATUS_LABELS } from "@/data/afhListings";
 import { FEATURED_BROKER, brokerCredentialSentence } from "@/data/featuredProfessionals";
+import ArticleCover from "@/components/ArticleCover";
 
 const label = {
   fontSize: 15,
@@ -122,6 +123,7 @@ const AFHPropertyClassifications = () => (
     <main id="main-content">
       <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={wrap}>
+          <ArticleCover src="/afh-property-classifications-cover.webp" alt="Cover art: Is It Really an Adult Family Home?" width={1024} height={1365} />
           <p style={label}>AFH Club · Buyer's Guide · Last reviewed September 2026</p>
           <h1
             style={{

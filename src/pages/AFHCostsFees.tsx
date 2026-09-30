@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-costs-fees.mp3.asset.json";
+import ArticleCover from "@/components/ArticleCover";
 
 const STARTUP_COSTS = [
   {
@@ -149,6 +150,7 @@ const AFHCostsFees = () => (
       {/* Hero */}
       <section style={{ background: "#edf0f3", padding: "64px 24px 56px", borderBottom: "3px solid #b13a44" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <ArticleCover src="/afh-costs-fees-v2.webp" alt="Cover art: AFH Costs & Fees" width={1024} height={1365} />
           <p
             style={{
               fontSize: 15,

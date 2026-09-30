@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-licensing-and-certification.mp3.asset.json";
+import ArticleCover from "@/components/ArticleCover";
 
 const APPLICATION_STEPS = [
   {
@@ -113,6 +114,7 @@ const AFHLicensingCertification = () => (
           <div className="mb-6">
             <ArticleAudioPlayer audioSrc={audioAsset.url} />
           </div>
+          <ArticleCover src="/afh-licensing-certification.webp" alt="Cover art: AFH Licensing & Certification" width={1086} height={1448} />
           <p
             style={{
               fontSize: 15,

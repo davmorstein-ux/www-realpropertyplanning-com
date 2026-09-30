@@ -10,6 +10,7 @@ import AFHRunTheNumbers from "@/components/AFHRunTheNumbers";
 import { countyIndex } from "@/data/afh/directory";
 import IntentCTA from "@/components/IntentCTA";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
+import ArticleCover from "@/components/ArticleCover";
 import {
   NOT_SURE, CATEGORIES, FLAG_LABEL, CURE_LABEL, BEFORE_YOU_COMMIT,
   activeQuestions, scoreProperty, scoreText, scoreLine, encodeAnswers, decodeAnswers,
@@ -211,6 +212,7 @@ const AFHPropertyScore = () => {
         <div className="aps-noprint" style={{ background: "#faf8f4", padding: "40px 24px 36px", borderBottom: `3px solid ${PLUM}` }}>
           <div style={{ maxWidth: 900, margin: "0 auto" }}>
             <div style={{ marginBottom: 22 }}><BackToCalculators accent={PLUM} /></div>
+            <ArticleCover src="/afh-property-score-cover-v2.webp" alt="Cover art: AFH Property Score" width={1024} height={1365} />
             <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: PLUM_DARK, marginBottom: 10, fontFamily: FONT }}>For buyers, owners &amp; investors</p>
             <h1 className="aps-h1" style={{ fontFamily: FONT, fontWeight: 700, color: INK }}>AFH Property Score</h1>
             <p style={{ fontSize: 20, fontFamily: FONT, color: INK, lineHeight: 1.6, maxWidth: 680, margin: 0 }}>
