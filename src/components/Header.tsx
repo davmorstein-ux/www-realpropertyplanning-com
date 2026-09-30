@@ -3,7 +3,6 @@ import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import WaterfallNav from "./WaterfallNav";
 import SiteSearchBar from "./SiteSearchBar";
-import LanguageSwitcher from "./LanguageSwitcher";
 import PrimaryNav from "./PrimaryNav";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
 
@@ -341,7 +340,7 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 10 : 22, flexShrink: 0, height: 44 }}>
                 {CURATED_LINKS.map((item) => (
                   <Link
                     key={item.href}
@@ -355,7 +354,6 @@ const Header = () => {
                     ))}
                   </Link>
                 ))}
-                <LanguageSwitcher compact={isMobile} />
                 <a href="tel:2069003015"
                   className="rpp-header-phone"
                   style={{
@@ -372,7 +370,10 @@ const Header = () => {
                     borderRadius: 6,
                     width: isMobile ? 44 : 42,
                     minWidth: isMobile ? 44 : 42,
-                    alignSelf: "stretch",
+                    /* Fixed height since the language switcher it used to match
+                       was removed (Sept 30, 2026); stretching alone left it flat. */
+                    height: isMobile ? 44 : 42,
+                    alignSelf: "center",
                     textDecoration: "none",
                     display: "inline-flex",
                     alignItems: "center",
@@ -457,7 +458,7 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "stretch", gap: 14, position: "relative" }}>
+              <div style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "flex-end", alignItems: "stretch", gap: 14, position: "relative", height: 44 }}>
                 {/* Search lives behind an icon on desktop (Sept 2026 header
                     tidy-up): the full field was the widest thing in the nav
                     row and pushed the last category against the right edge.
@@ -527,7 +528,6 @@ const Header = () => {
                 >
                   Get Connected
                 </Link>
-                <LanguageSwitcher compact />
                 <a href="tel:2069003015"
                   ref={phoneRef}
                   className="rpp-header-phone"

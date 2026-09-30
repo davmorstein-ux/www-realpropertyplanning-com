@@ -98,16 +98,6 @@ const CITY_PAGES: SiteMapLink[] = [
   { title: "Vancouver, WA", href: "/vancouver-wa-probate-estate-real-estate" },
 ];
 
-const LANGUAGES: SiteMapLink[] = [
-  { title: "Español (Spanish)", href: "/es" },
-  { title: "Română (Romanian)", href: "/ro" },
-  { title: "ትግርኛ (Tigrinya)", href: "/ti" },
-  { title: "Tagalog", href: "/tl" },
-  { title: "Tiếng Việt (Vietnamese)", href: "/vi" },
-  { title: "简体中文 (Simplified Chinese)", href: "/zh-cn" },
-  { title: "繁體中文 (Traditional Chinese)", href: "/zh-tw" },
-];
-
 export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
   {
     id: "estate-probate",
@@ -241,12 +231,6 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
       },
     ],
   },
-  {
-    id: "languages",
-    label: "Other Languages",
-    blurb: "Key pages translated into seven languages.",
-    groups: [{ links: LANGUAGES }],
-  },
 ]);
 
 /* ------------------------------------------------------------------ */
@@ -375,12 +359,4 @@ export const SITE_MAP_EXCLUDED: Record<string, string> = {
   "/": "the homepage; both maps link to it from their introductions",
   "/sitemap": "this page",
   "/afh-club/site-map": "this page",
-  ...Object.fromEntries(
-    ["es", "ro", "ti", "tl", "vi", "zh-cn", "zh-tw"].flatMap((l) =>
-      ["afh-club", "contact", "cost-of-care-calculator", "probate-estate-sales", "senior-transitions"].map((p) => [
-        `/${l}/${p}`,
-        "translated page; reached from its language's home page, which the map lists",
-      ]),
-    ),
-  ),
 };
