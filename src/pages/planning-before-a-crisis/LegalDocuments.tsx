@@ -25,21 +25,21 @@ const LegalDocuments = () => (
     <SubH3>1. Durable Power of Attorney (Financial)</SubH3>
     <P><strong>What it is:</strong> A legal document that authorizes a named person — called an "agent" or "attorney-in-fact" — to manage financial matters on behalf of someone else.</P>
     <P><strong>Why it matters for real estate:</strong> Without a durable power of attorney, no one can legally sign real estate documents, access financial accounts, or make financial decisions on behalf of a person who has become incapacitated. This includes selling a home. Even adult children have no automatic legal authority to act for a parent.</P>
-    <P><strong>The "durable" part matters:</strong> A standard power of attorney becomes invalid if the person becomes incapacitated. A <em>durable</em> power of attorney remains in effect — which is exactly when you need it most.</P>
-    <P><strong>Washington State note:</strong> Powers of attorney in Washington must meet specific requirements to be valid, including notarization. An estate planning attorney can ensure yours is properly executed.</P>
+    <P><strong>The "durable" part matters:</strong> In Washington, a power of attorney ends if the person becomes incapacitated unless the document says it survives incapacity (RCW 11.125.040). A <em>durable</em> power of attorney — one that says so — remains in effect, which is exactly when you need it most.</P>
+    <P><strong>Washington State note:</strong> A Washington power of attorney must be signed and dated, and either notarized or signed by two qualified witnesses — people who are not related to you or your agent and are not your caregivers (RCW 11.125.050). For anything involving real estate, have it notarized: title companies usually record the power of attorney with the deed, and the statute's rules requiring banks and others to accept a power of attorney apply to notarized ones. An estate planning attorney can ensure yours is properly executed.</P>
 
     <Divider />
 
     <SubH3>2. Healthcare Power of Attorney &amp; Healthcare Directive</SubH3>
     <P><strong>What it is:</strong> Two related documents. The Healthcare Power of Attorney names someone to make medical decisions on your behalf if you cannot. The Healthcare Directive (sometimes called a Living Will or Advance Directive) documents your own wishes for care — what treatments you want or don't want under various circumstances.</P>
-    <P><strong>Why it matters:</strong> These documents are separate from financial authority. Someone with a financial power of attorney cannot automatically make healthcare decisions. Both documents are needed to give a trusted person full authority to act.</P>
+    <P><strong>Why it matters:</strong> These documents are separate from financial authority. Someone with a financial power of attorney cannot automatically make healthcare decisions. Without a healthcare power of attorney, Washington law lets close family consent to medical care in a set priority order (RCW 7.70.065) — but naming the person yourself avoids confusion and disagreement. Both documents are needed to give a trusted person full authority to act.</P>
     <P><strong>Why families are glad they did it:</strong> When a health crisis happens, medical providers need to know who has authority to make decisions — and quickly. Having these documents in place removes ambiguity at an already stressful moment.</P>
 
     <Divider />
 
     <SubH3>3. A Current Will or Trust</SubH3>
     <P><strong>What it is:</strong> A will specifies what happens to a person's assets after death, and who is responsible for carrying out those wishes (the executor). A trust accomplishes similar goals but can also be structured to take effect during a person's lifetime and to transfer assets outside of the probate process.</P>
-    <P><strong>Why it matters for property:</strong> Without a will, Washington State law determines how assets are distributed — which may or may not reflect the person's actual wishes. With a will, those wishes are documented. With a trust, the property can transfer to heirs without going through probate at all, which saves time, legal fees, and court involvement.</P>
+    <P><strong>Why it matters for property:</strong> Without a will, Washington State law determines how assets are distributed — which may or may not reflect the person's actual wishes. With a will, those wishes are documented. With a funded trust — one that actually holds the property — it can transfer to heirs without going through probate at all, which saves time, legal fees, and court involvement. A recorded transfer on death deed, joint tenancy with right of survivorship, or a community property agreement can also pass property outside probate.</P>
     <P><strong>Is a will enough, or is a trust better?</strong> It depends on the situation — the size and complexity of the estate, the family structure, and what the person wants to accomplish. An estate planning attorney can help evaluate which approach makes more sense.</P>
     <P><strong>Keep it current:</strong> A will or trust written decades ago may not reflect current wishes, current family circumstances, or current law. It's worth reviewing periodically — especially after major life changes.</P>
 
@@ -47,7 +47,7 @@ const LegalDocuments = () => (
 
     <SubH3>4. Beneficiary Designations</SubH3>
     <P><strong>What they are:</strong> Named recipients on financial accounts — life insurance policies, retirement accounts (IRAs, 401ks), and some bank or investment accounts — that determine who receives those assets directly upon death.</P>
-    <P><strong>Why they matter:</strong> Beneficiary designations pass assets <em>outside</em> of a will entirely. It doesn't matter what a will says — if a beneficiary designation names someone different, the designation controls. This catches many families off guard.</P>
+    <P><strong>Why they matter:</strong> Beneficiary designations pass assets <em>outside</em> of a will. In most cases the designation controls, whatever the will says. Washington's "superwill" law (chapter 11.11 RCW) lets a later will redirect some accounts only if it names them specifically — so review the designations themselves rather than relying on the will. This catches many families off guard.</P>
     <P><strong>What to review:</strong> Life insurance policies, retirement accounts, and any accounts designated as "payable on death" (POD) or "transfer on death" (TOD). These should be reviewed regularly to make sure they still reflect current wishes — especially after a divorce, a death in the family, or a major life change.</P>
 
     <Divider />

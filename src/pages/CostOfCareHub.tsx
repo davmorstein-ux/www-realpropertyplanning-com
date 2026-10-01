@@ -7,6 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CareCalculatorSwitcher from "@/components/CareCalculatorSwitcher";
+import { COST_SOURCE_LINE, COST_SOURCE_URL } from "@/lib/careTypes";
 
 /**
  * Cost of Care calculator hub — the landing page at /cost-of-care-calculator.
@@ -46,7 +47,7 @@ const CostOfCareHub = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Washington State costs more than the national average for nearly every kind of care. Choose the option you are weighing up and see what it runs today, and what it is likely to run later.
+            Washington State costs more than the national average for nearly every kind of care. Choose the option you are weighing up and see what it typically costs now, and what it may cost later.
           </p>
           </div>
         </div>
@@ -58,8 +59,12 @@ const CostOfCareHub = () => (
             <CareCalculatorSwitcher heading="Choose a housing option" />
 
             <p className="text-muted-foreground text-base leading-relaxed mt-8">
-              Figures are Washington State monthly medians. Every calculator lets you adjust the age, how far
-              out the move is, and how many years of care to plan for.
+              {/* Source line comes from careTypes.ts so it changes with the figures. */}
+              <a href={COST_SOURCE_URL} target="_blank" rel="noopener noreferrer">
+                {COST_SOURCE_LINE}
+              </a>{" "}
+              Actual prices vary widely by area and care level, and Seattle-area prices run higher. Every calculator
+              lets you adjust how far out the move is and how many years of care to plan for.
             </p>
 
             {/* Hospice is a service, not a setting, so it is deliberately not a

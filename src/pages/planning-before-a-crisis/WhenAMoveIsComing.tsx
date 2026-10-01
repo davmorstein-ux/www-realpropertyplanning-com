@@ -23,7 +23,7 @@ const WhenAMoveIsComing = () => (
 
     <SubH2>Start Looking at Senior Living Options Now</SubH2>
     <P>
-      The single biggest mistake families make in this window is waiting. Senior living communities — particularly those with memory care or higher levels of support — often have waitlists measured in months, not weeks. If a move becomes urgent and you haven't already started looking, your options narrow dramatically.
+      The single biggest mistake families make in this window is waiting. Senior living communities — particularly those with memory care or higher levels of support — can have waitlists. If a move becomes urgent and you haven't already started looking, your options narrow dramatically.
     </P>
     <P><strong>What to do:</strong></P>
     <UL>
@@ -75,7 +75,7 @@ const WhenAMoveIsComing = () => (
 
     <SubH2>You Don't Have to Figure This Out Alone</SubH2>
     <P>
-      If you're in this window — you can see a transition coming but haven't quite gotten started — a single conversation can help clarify what the next steps actually are.
+      If you're in this window — you can see a transition coming but haven't quite gotten started — a single conversation with the right professional can help clarify what the next steps actually are.
     </P>
   </PlanningSubPageLayout>
 );

@@ -99,14 +99,14 @@ const glossaryData: GlossaryCategory[] = [
       { term: "Probate Listing", definition: "A real estate listing involving property that is subject to probate or estate administration." },
       { term: "Probate Sale", definition: "A sale of real property that is part of a deceased person's estate and is being transferred through probate procedures." },
       { term: "Quiet Title", definition: "A legal action used to resolve competing claims, clarify ownership, or remove clouds on title." },
-      { term: "Transfer on Death Deed", definition: "A deed allowed in some states that names a beneficiary to receive real property automatically at death without probate." },
+      { term: "Transfer on Death Deed", definition: "A deed that names a beneficiary to receive real property automatically at death without probate. Allowed in Washington since 2014 (chapter 64.80 RCW); it must be recorded with the county auditor before the owner's death." },
     ],
   },
   {
     title: "Helpful Supporting Legal Terms",
     terms: [
       { term: "Affidavit", definition: "A written statement made under oath. In probate and real-property matters, affidavits are often used to confirm facts, heirship, title history, or exemption status." },
-      { term: "Community Property", definition: "Property acquired by spouses during marriage in states that follow community-property rules." },
+      { term: "Community Property", definition: "Property acquired by spouses during marriage in states that follow community-property rules, including Washington; property received by gift or inheritance is generally separate property." },
       { term: "Fraud", definition: "An intentional misrepresentation or deceit that may affect the validity of a will, transfer, or legal claim." },
       { term: "Sale Authority", definition: "The legal authority granted to a personal representative, executor, administrator, or trustee to market and sell property." },
       { term: "Successor Trustee", definition: "The person named to take over management of a trust when the original trustee can no longer serve." },

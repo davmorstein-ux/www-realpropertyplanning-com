@@ -223,7 +223,7 @@ const AgingInPlace = () => {
               <hr className={hrClass} />
 
               <p className={pClass + " italic text-center"}>
-                Real Property Planning helps families navigate senior housing decisions with clarity and compassion.{" "}
+                These guides explain senior housing and care decisions in plain language.{" "}
                 <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link>
               </p>
 

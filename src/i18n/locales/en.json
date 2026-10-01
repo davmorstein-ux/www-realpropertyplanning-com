@@ -37,7 +37,7 @@
   "costOfCare": {
     "headingPart1": "Cost of Care",
     "headingPart2": "Calculators",
-    "description": "Compare in-home care, assisted living, memory care, and more — in Washington versus national averages.",
+    "description": "Compare in-home care, assisted living, memory care, and more — in Washington versus national medians.",
     "cta": "Calculate My Costs"
   },
   "afhClub": {
@@ -154,11 +154,11 @@
   "seniorTransitions": {
     "seo": {
       "title": "Senior Home Sales & Downsizing in Washington | Family-Paced Guidance",
-      "description": "Help for Washington families selling a longtime home during a move to assisted living, memory care, or downsizing. Coordinated with care teams, attorneys, and out-of-state siblings.",
+      "description": "Help for Washington families selling a longtime home during a move to assisted living, memory care, or downsizing. What each step involves, and how to find independent professionals for each one.",
       "jsonLdHeadline": "Senior Housing Transitions in Washington State",
-      "jsonLdDescription": "Patient, experienced guidance for families helping a senior sell their home in Washington State. Serving King, Snohomish, Pierce & Kitsap Counties."
+      "jsonLdDescription": "A free guide for families helping a senior sell their home in Washington State: what each step involves and which independent professionals handle it."
     },
-    "heroImageAlt": "Senior couple in front of their longtime Washington home with a Real Property Planning For Sale sign",
+    "heroImageAlt": "Senior couple in front of their longtime Washington home with a For Sale sign",
     "heroTitle": "Senior Housing & Transitions",
     "directAnswer": {
       "question": "How do I sell a senior parent's home in Washington State?",
@@ -233,7 +233,7 @@
       "heading": "Senior Transition Questions",
       "q1": {
         "question": "What's the first step in selling a senior's home in Washington?",
-        "answer": "Most families start by getting an honest sense of the home's value and condition, then deciding on next steps together — whether that's assisted living, a smaller home, or moving closer to family. Real Property Planning can help you figure out the right sequence of professionals before any decisions are made."
+        "answer": "Most families start by getting an honest sense of the home's value and condition, then deciding on next steps together — whether that's assisted living, a smaller home, or moving closer to family. Real Property Planning's guides explain the usual sequence of professionals before any decisions are made."
       },
       "q2": {
         "question": "Do I need a Power of Attorney to sell my parent's house?",
@@ -249,7 +249,7 @@
       },
       "q5": {
         "question": "Are there tax considerations when selling a longtime family home?",
-        "answer": "Yes — capital gains exclusions, stepped-up basis in a trust, and other tax factors can significantly affect the outcome. A CPA or financial planner should be part of the conversation before listing, and Real Property Planning's Find a Professional page lists independent CPAs and financial planners you can contact directly."
+        "answer": "Yes. A seller who owned and lived in the home at least two of the five years before the sale can exclude up to $250,000 of gain ($500,000 for a married couple filing jointly), and a parent who moved into a licensed care facility keeps that exclusion if they lived there at least one of those years (IRC 121(d)(7)). Heirs who inherit receive a stepped-up basis at death. A CPA or financial planner should be part of the conversation before listing; Real Property Planning's Find a Professional page lists independent CPAs and financial planners you can contact directly."
       }
     }
   },
@@ -325,7 +325,7 @@
   "costOfCarePage": {
     "seo": {
       "title": "Cost of Care Calculator | Washington State Long-Term Care Costs",
-      "description": "Compare the cost of in-home care, assisted living, memory care, and nursing homes in Washington State versus national averages, with future cost projections."
+      "description": "Compare the cost of in-home care, assisted living, memory care, and nursing homes in Washington State versus national medians, with future cost projections."
     },
     "hero": {
       "eyebrow": "Senior Transitions · Cost of Care",
@@ -337,7 +337,7 @@
         "label": "Independent Living Community",
         "shortLabel": "Independent Living",
         "unit": "monthly fee",
-        "note": "Washington-specific figures aren't available from this source — shown here is the national median. Independent living generally costs less than assisted living since it doesn't include personal care services."
+        "note": "Estimate. No survey publishes a Washington figure for independent living; this is a national industry estimate, and Seattle-area communities often charge more. It generally costs less than assisted living because personal care is not included."
       },
       "in-home": {
         "label": "In-Home Care (Non-Medical)",
@@ -355,19 +355,19 @@
         "label": "Adult Family Home",
         "shortLabel": "Adult Family Home",
         "unit": "monthly fee",
-        "note": "Often a more affordable, home-like alternative to assisted living, with 24/7 care bundled into one rate."
+        "note": "Estimate. No survey covers adult family home private-pay rates; each home sets its own. DSHS Medicaid rates work out to about $4,030–$8,495 a month depending on county and care level."
       },
       "assisted-living": {
         "label": "Assisted Living Community",
         "shortLabel": "Assisted Living",
         "unit": "monthly fee",
-        "note": "Washington runs about 23% above the national median."
+        "note": "Washington runs about 22% above the national median."
       },
       "memory-care": {
         "label": "Memory Care",
         "shortLabel": "Memory Care",
         "unit": "monthly fee",
-        "note": "Typically runs about 25% above standard assisted living rates."
+        "note": "Estimate. No survey covers memory care; it typically runs about 25% above assisted living in the same area."
       },
       "nursing-semi": {
         "label": "Nursing Home — Semi-Private",
@@ -379,13 +379,13 @@
         "label": "Nursing Home — Private Room",
         "shortLabel": "Nursing Home Private Room",
         "unit": "monthly",
-        "note": "Private rooms carry a premium over semi-private accommodations."
+        "note": "Washington runs about 48% above the national median; private rooms cost more than shared ones."
       },
       "ccrc": {
         "label": "CCRC",
         "shortLabel": "CCRC / Life Plan",
         "unit": "monthly service fee",
-        "note": "CCRCs also require a separate one-time entrance fee — commonly $400,000 or more nationally."
+        "note": "Estimate. CCRCs also charge a separate one-time entrance fee, which can run into the hundreds of thousands of dollars."
       }
     },
     "inflationPresets": {
@@ -412,7 +412,7 @@
       "years": "years"
     },
     "inflationCard": {
-      "assumptionText": "This estimate assumes long-term care costs rise about {{rate}}% a year, in line with recent historical trends.",
+      "assumptionText": "This estimate assumes long-term care costs rise about {{rate}}% a year.",
       "hideOptions": "Hide Growth Rate Options ▲",
       "changeOptions": "Change Growth Rate Assumption ▼"
     },
@@ -421,7 +421,7 @@
       "monthly": "Monthly",
       "annual": "Annual",
       "washington": "Washington",
-      "nationalMedian": "National Average",
+      "nationalMedian": "National Median",
       "perMonth": "per month",
       "perYear": "per year",
       "totalPlan": "Total · {{years}}-Year Plan",
@@ -430,7 +430,7 @@
       "aboutAbove": "about {{percent}}% above",
       "aboutBelow": "about {{percent}}% below",
       "theNationalMedian": "the national median. {{note}}",
-      "figuresBasedOn": "Figures based on the CareScout/Genworth Cost of Care Survey and related industry sources. Actual costs vary by region, provider, and level of care.",
+      "figuresBasedOn": "Washington medians from the CareScout Cost of Care Survey, 2025 data (published March 2026); memory care, adult family home, independent living and CCRC figures are estimates. Actual costs vary by region, provider, and level of care.",
       "printButton": "Print or Save as PDF",
       "currentlyRunsIn": "in Washington currently runs"
     },
@@ -451,7 +451,7 @@
       "rowPerMonth": "Per month",
       "rowPerYear": "Per year",
       "rowTotal": "Total over {{years}}-year plan",
-      "footer": "Figures based on the CareScout/Genworth Cost of Care Survey. Actual costs vary by region, provider, and level of care. This tool is for general planning purposes only. Courtesy of Real Property Planning — realpropertyplanning.com."
+      "footer": "Washington medians from the CareScout Cost of Care Survey, 2025 data (published March 2026); memory care, adult family home, independent living and CCRC figures are estimates. Actual costs vary by region, provider, and level of care. For general planning only. Courtesy of Real Property Planning — realpropertyplanning.com."
     },
     "whyCostsVary": {
       "eyebrow": "Key Concept",

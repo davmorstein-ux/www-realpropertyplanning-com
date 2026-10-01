@@ -121,9 +121,10 @@ const Wills = () => {
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 In Washington State, a valid will must be in writing, signed by the person making
-                it (the testator), and witnessed by at least two competent individuals. While a will
-                does not avoid probate, it provides the court with a clear roadmap for how the estate
-                should be administered.
+                it (the testator), and witnessed by at least two competent individuals (RCW 11.12.020).
+                If the testator later divorces, gifts in the will to the former spouse are
+                automatically revoked (RCW 11.12.051). While a will does not avoid probate, it
+                provides the court with a clear roadmap for how the estate should be administered.
               </p>
             </div>
           </section>
@@ -157,8 +158,8 @@ const Wills = () => {
                 decisions carry real financial consequences.
               </p>
               <ul className="space-y-4">
-                <CheckItem>The executor named in the will is the only person authorized to list and sell estate property</CheckItem>
-                <CheckItem>Without a will, the court must appoint a personal representative — which can delay the sale by months</CheckItem>
+                <CheckItem>The executor named in the will can list and sell estate property only after the court appoints them and issues letters testamentary; property held in a trust, by a recorded transfer on death deed, in joint tenancy with right of survivorship, or under a community property agreement passes outside the will</CheckItem>
+                <CheckItem>Without a will, there is no named executor, so family members must ask the court to appoint a personal representative, and state law, not the person's wishes, decides who inherits</CheckItem>
                 <CheckItem>A will may require an appraisal for equitable distribution among multiple heirs</CheckItem>
                 <CheckItem>Tax obligations — including stepped-up basis calculations — depend on accurate property valuation at the date of death</CheckItem>
                 <CheckItem>Disagreements between heirs about whether to sell or keep a property are more easily resolved when a will provides clear direction</CheckItem>
@@ -208,7 +209,7 @@ const Wills = () => {
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     Managing estate property from a distance is one of the most stressful situations
-                    {FEATURED_BROKER.Role} sees. {FEATURED_BROKER.pronoun.Subject} coordinates with attorneys, manage property access, and handle the
+                    {FEATURED_BROKER.Role} sees. {FEATURED_BROKER.pronoun.Subject} coordinates with attorneys, manages property access, and handles the
                     preparation and sale — so you don't have to fly back and forth.
                   </p>
                 </div>
@@ -233,7 +234,7 @@ const Wills = () => {
                 We Don't Provide Legal Advice — And Here's Why That Matters
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Real Property Planning is an educational and connection hub. Real Property Planning is not an attorney, CPA, or tax advisor, and does not provide legal, tax, or accounting advice.
+                Real Property Planning is a free educational resource. It is not an attorney, CPA, or tax advisor, and does not provide legal, tax, or accounting advice.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 That distinction is important. When families are navigating a will, they need
@@ -249,11 +250,11 @@ const Wills = () => {
           <section className="py-16 sm:py-20 bg-secondary">
             <div className="mx-auto max-w-3xl px-6">
               <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground mb-6">
-                How Real Property Planning Helps
+                How the Featured Broker Works With Executors
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 With over 20 years of experience as both a certified appraiser and a licensed real
-                estate broker, {FEATURED_BROKER.role} works with families, executors, and attorneys to handle
+                estate broker, {FEATURED_BROKER.role}, working through {FEATURED_BROKER.pronoun.possessive} own brokerage, works with families, executors, and attorneys to handle
                 the real property side of estate administration — from the first conversation to the
                 closing table.
               </p>

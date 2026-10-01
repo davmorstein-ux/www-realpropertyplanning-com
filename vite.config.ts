@@ -542,7 +542,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/power-of-attorney": {
     title: "Power of Attorney & Real Estate in Washington State | Real Property Planning",
-    description: "If you hold Power of Attorney for an aging parent or loved one in Washington State, this guide explains the real estate decisions, home sales, and appraisals you may face, and how to connect with a licensed professional.",
+    description: "If you hold Power of Attorney for an aging parent or loved one in Washington State, this guide explains the real estate decisions, home sales, and appraisals you may face, and which independent licensed professionals handle each part.",
     h1: "Power of Attorney and Real Estate in Washington State",
     intro: "Practical guidance for agents holding Power of Attorney who must make real estate decisions for an aging parent or loved one — including sales, valuations, and timing.",
   },
@@ -722,10 +722,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro: "A certified date-of-death appraisal supports stepped-up basis, estate filings, and fair distribution among heirs — performed to professional appraisal standards.",
   },
   "/estate-planning-powers-of-attorney": {
-    title: "Estate Planning & Powers of Attorney — Guided Overview | Real Property Planning",
-    description: "Plain-language overview of wills, trusts, powers of attorney, and estate planning basics for Washington State families.",
-    h1: "Estate Planning & Powers of Attorney",
-    intro: "A calm orientation to wills, trusts, powers of attorney, and the planning steps that protect families before a crisis develops.",
+    title: "Estate Planning Attorneys in Washington State | Real Property Planning",
+    description: "What an estate planning attorney does: drafts wills, trusts, powers of attorney, and health care directives. Real Property Planning does not refer clients to attorneys; confirm any lawyer's license at wsba.org.",
+    h1: "Estate Planning Attorney",
+    intro: "An estate planning attorney drafts the documents that let the right people act if you cannot. This page explains their role; Real Property Planning does not refer clients to attorneys. For the documents themselves, see /planning-before-a-crisis/legal-documents.",
   },
   "/building-your-professional-team": {
     title: "Building Your Professional Team | Real Property Planning",
@@ -1222,22 +1222,22 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Hospice is end-of-life care that comes to where a person lives, not a place to live. What Medicare covers, what it doesn't (room and board), what '24-hour hospice' means, and how hospice works inside an adult family home, assisted living, or your own home in Washington.",
     h1: "Hospice Care in Washington",
     quickAnswerQ: "Where can my parent receive hospice care in Washington?",
-    quickAnswerA: "Almost anywhere they already live: their own home, an adult family home, assisted living, memory care, or a nursing facility, plus short stays in a hospice care center or hospital when symptoms can't be managed at home. Washington's Medicaid rule says hospice care may be in a client's temporary or permanent place of residence. Medicare covers the hospice services for eligible patients at little or no cost (a copayment of up to $5 per prescription and 5% for inpatient respite care); it does not cover room and board, so the home or facility is paid for the way it was before hospice began. \"24-hour hospice\" means a team on call around the clock with scheduled visits, not a worker in the house all day and night.",
+    quickAnswerA: "Almost anywhere they already live: their own home, an adult family home, assisted living, memory care, or a nursing facility, plus short stays in a hospice care center or hospital when symptoms can't be managed at home. Washington's Medicaid rule (WAC 182-551-1000) says hospice care may be in a client's temporary or permanent place of residence. Medicare covers the hospice services for eligible patients at little or no cost (a copayment of up to $5 per prescription and 5% for inpatient respite care); it does not cover room and board, so the home or facility is paid for the way it was before hospice began. \"24-hour hospice\" means a team on call around the clock with scheduled visits, not a worker in the house all day and night.",
     intro: "Hospice is not a place. It is care that comes to you, wherever you live, when the goal has changed from curing an illness to comfort. Families choosing between staying home, an adult family home, assisted living, or memory care need to know that hospice can usually be added to any of those settings, and that it does not replace them: someone still has to be there between hospice visits, and the residence is still paid for separately.",
     sections: [
-      "Where hospice can come — Own home (yes; family keeps paying for the home, personal care between visits is family or hired caregivers). Adult family home (yes; the resident, Medicaid, long-term care insurance or VA benefits keep paying the home's rate; the hospice team visits). Assisted living or memory care (yes; community staff continue daily care). Nursing facility (yes; coverage interacts with Medicare and Medicaid). Hospice care center or hospital (short-term inpatient and respite stays arranged by the hospice, covered by Medicare).",
-      "Who pays for what — Medicare Part A covers the hospice benefit for a beneficiary certified as terminally ill (six months or less) who elects comfort care: the team's visits, symptom-control medications, related equipment and supplies, short-term inpatient and respite care. Patient cost is limited to up to $5 per prescription and 5% of the approved amount for respite care. Medicare does not cover room and board at home, in a nursing home, or in a hospice inpatient facility. Washington Medicaid (WAC 388-551) covers hospice for eligible clients; a Medicaid resident of an adult family home keeps their residential coverage.",
-      "What 24-hour hospice means — Washington's Medicaid rule describes hospice as a twenty-four-hour program coordinated by an interdisciplinary team: reachable around the clock, with intermittent scheduled visits. Continuous care is a short-crisis level only. Day-to-day supervision still comes from family, private caregivers, or the staff of the adult family home or facility.",
-      "Hospice inside an adult family home — Adult family homes fit hospice well: up to six residents, caregivers present around the clock, accessible rooms. Ask a provider which hospice agencies they work with, whether they have cared for residents through end of life, how they handle hospice-supplied medications, and what changes their rate near the end.",
+      "Where hospice can come — Own home (yes; family keeps paying for the home, personal care between visits is family or hired caregivers). Adult family home (yes; the resident, Medicaid, long-term care insurance or VA benefits keep paying the home's rate; the hospice team visits). Assisted living or memory care (yes; community staff continue daily care). Nursing facility (yes; Medicare hospice does not pay nursing-home room and board, which is paid privately, by long-term care insurance, or by Apple Health for eligible residents). Hospice care center or hospital (short-term inpatient and respite stays arranged by the hospice, covered by Medicare).",
+      "Who pays for what — Medicare Part A covers the hospice benefit for a beneficiary certified as terminally ill (six months or less) who elects comfort care: the team's visits, symptom-control medications, related equipment and supplies, short-term inpatient and respite care, in two 90-day benefit periods followed by unlimited 60-day periods. Patient cost is limited to up to $5 per prescription and 5% of the approved amount for respite care. Medicare does not cover room and board at home, in a nursing home, or in a hospice inpatient facility. Apple Health (Medicaid) hospice is run by the Health Care Authority under chapter 182-551 WAC: for residents with Medicare, Medicare Part A pays hospice, and Apple Health covers hospice only for people without Medicare. A Medicaid resident of an adult family home keeps their residential coverage.",
+      "What 24-hour hospice means — Washington's Medicaid rule (WAC 182-551-1000) describes hospice as a 24-hour-a-day program coordinated by an interdisciplinary team: reachable around the clock, with intermittent scheduled visits. Continuous care is a short-crisis level only. Day-to-day supervision still comes from family, private caregivers, or the staff of the adult family home or facility.",
+      "Hospice inside an adult family home — Adult family homes fit hospice well: two to six residents (up to eight with DSHS approval) and caregivers present around the clock. Ask a provider which hospice agencies they work with, whether they have cared for residents through end of life, how they handle hospice-supplied medications, and what changes their rate near the end.",
     ],
     faq: [
       { q: "Is hospice a place you move to?", a: "Usually not. In Washington, hospice is delivered by a licensed in-home services agency to wherever the person already lives. Free-standing hospice care centers exist for short stays when symptoms can't be managed at home." },
       { q: "Does Medicare pay for hospice?", a: "Yes, under Part A for a beneficiary certified as terminally ill who elects comfort care. Out-of-pocket is limited to a copayment of up to $5 per prescription and 5% of the Medicare-approved amount for inpatient respite care." },
       { q: "What does Medicare not pay for under hospice?", a: "Room and board. A resident of an adult family home or assisted living on hospice still pays the home's monthly rate, or continues under Medicaid or other coverage. Hospice pays for the hospice; the residence is separate." },
       { q: "Does 24-hour hospice mean someone is there around the clock?", a: "No. It means the hospice team is on call around the clock and visits on a schedule. Continuous care exists only for short crises. Daily supervision and personal care still come from family, private caregivers, or the home's staff." },
-      { q: "Can an adult family home take a hospice resident?", a: "Most can, and many do. Ask which hospice agencies the provider works with and whether they have cared for residents through end of life before." },
+      { q: "Can an adult family home take a hospice resident?", a: "Many can, and many do. Ask which hospice agencies the provider works with and whether they have cared for residents through end of life before." },
     ],
-    article: { datePublished: "2026-09-14", dateModified: "2026-09-14" },
+    article: { datePublished: "2026-09-14", dateModified: "2026-09-30" },
   },
   "/articles/affordable-senior-housing": {
     title: "Affordable Senior Housing for Older Adults: What to Expect",
@@ -1316,8 +1316,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/cost-of-care-calculator": {
     title: "Cost of Care Calculator | Washington State Long-Term Care Costs",
-    description: "Compare the cost of in-home care, assisted living, memory care, and nursing homes in Washington State versus national averages, with future cost projections.",
-    h1: "Cost of Care Calculator",
+    description: "Compare the cost of in-home care, assisted living, memory care, and nursing homes in Washington State versus national medians (CareScout 2025 survey), with future cost projections.",
+    h1: "Cost of Care Calculators",
   },
   "/disclaimer": {
     title: "Disclaimer | Real Property Planning",
@@ -1435,7 +1435,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/gray-divorce": {
     title: "Gray Divorce and the Family Home in Washington State | Real Property Planning",
-    description: "Guidance for Washington State couples over 50 navigating the family home during divorce. Calm, neutral real estate coordination from a Licensed Broker & Certified Appraiser.",
+    description: "Guidance for Washington State couples over 50 navigating the family home during divorce. How Washington divides the home, the federal home-sale tax exclusion, and which independent professionals handle each part.",
     h1: "Gray Divorce and Your Home — What Washington Couples Need to Know",
   },
   "/grey-divorce": {
@@ -1445,7 +1445,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/guides/probate-vs-trust-sale-washington": {
     title: "Probate vs Trust Sale in Washington State — What's the Difference? | Real Property Planning",
-    description: "Real Property Planning explains the key differences between probate sales and trust sales in Washington State. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties — (206) 900-3015.",
+    description: "Real Property Planning explains the key differences between probate sales and trust sales in Washington State.",
     h1: "Probate vs Trust Sale in Washington State — What's the Difference?",
   },
   "/join-the-network": {
@@ -1465,7 +1465,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/long-term-care/finding-care-roomandcare": {
     title: "Finding Care: RoomandCare.com",
-    description: "How Real Property Planning helps families evaluate RoomAndCare.com listings and other Adult Family Home options throughout Washington State.",
+    description: "A guide to evaluating RoomAndCare.com listings and other Adult Family Home options throughout Washington State.",
   },
   "/long-term-care/hospital-discharge-planning": {
     title: "Planning Your Hospital Discharge: A Guide for Washington Families",
@@ -1484,7 +1484,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/long-term-care/nurse-delegation": {
     title: "The Nurse Delegation Program in Washington State: What Families Need to Know",
-    description: "Learn how Washington State's Nurse Delegation Program allows trained caregivers to perform nursing tasks in home care and adult family home settings — and how Medicaid covers the cost.",
+    description: "Learn how Washington State's Nurse Delegation Program allows trained caregivers to perform nursing tasks at home, in adult family homes, and in assisted living — and how Medicaid covers the cost.",
     h1: "The Nurse Delegation Program in Washington State: What Families Need to Know",
   },
   "/long-term-care/nursing-homes": {
@@ -1617,7 +1617,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/sell-house-fund-senior-living": {
     title: "How to Sell a Parent's House to Pay for Senior Living in Washington State | Real Property Planning",
-    description: "Learn how Washington State families use home sale proceeds to pay for assisted living, memory care, and adult family home placement. Real Property Planning — Licensed Broker & Certified Appraiser — (206) 900-3015.",
+    description: "Learn how Washington State families use home sale proceeds to pay for assisted living, memory care, and adult family home placement. A free guide covering timing, Medicaid, and the federal home-sale tax exclusion.",
     h1: "How to Sell a Parent's House to Pay for Senior Living",
   },
   "/senior-living-advisors": {
@@ -1632,7 +1632,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/senior-living/adult-family-homes": {
     title: "Adult Family Homes",
-    description: "Adult Family Homes in Washington State — licensed residential homes serving 2–6 residents with personal care in a home-like setting.",
+    description: "Adult Family Homes in Washington State — licensed residential homes serving 2–6 residents (up to 8 with DSHS approval) with personal care in a home-like setting.",
   },
   "/senior-living/aging-in-place": {
     title: "Aging in Place",
@@ -1977,12 +1977,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
   "/guides/probate-house-sale-timeline-washington": {
     title: "Probate House Sale Timeline in Washington State | Real Property Planning",
-    description: "Real Property Planning explains the realistic timeline for selling a probate property in Washington State — from death to distribution of proceeds. Licensed Broker & Certified Appraiser — (206) 900-3015.",
+    description: "Real Property Planning explains the realistic timeline for selling a probate property in Washington State — from death to distribution of proceeds.",
     h1: "Probate House Sale Timeline in Washington State",
   },
   "/guides/repairs-before-selling-probate-home-washington": {
     title: "What Repairs Should Be Made Before Selling a Probate Home in Washington? | Real Property Planning",
-    description: "Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip. Licensed Broker & Certified Appraiser — (206) 900-3015.",
+    description: "Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip.",
     h1: "What Repairs Should Be Made Before Selling a Probate Home?",
   },
   "/guides/who-has-authority-sell-probate-property-washington": {

@@ -51,27 +51,27 @@ const supportItems = [
   {
     title: "Timing Real Estate with Relocation",
     description:
-      "Understanding when to list, how to prepare the home, and how to align the sale with the move timeline.",
+      "When to list, how to prepare the home, and how to line up the sale with the move timeline.",
   },
   {
-    title: "Property Preparation & Coordination",
+    title: "Property Preparation",
     description:
-      "Coordinating cleanout, repairs, and staging with independent vendors so the home is market-ready without adding stress.",
+      "How cleanout, repairs, and staging are usually handled by independent vendors so the home is market-ready.",
   },
   {
-    title: "Clear, Objective Valuation",
+    title: "Understanding Value",
     description:
-      "Providing accurate market insight so families can make informed financial decisions about the property.",
+      "How a broker's market analysis and a certified appraisal differ, and which one a family's decision calls for.",
   },
   {
     title: "Working with Your Team",
     description:
-      "Collaborating with senior move managers, care advisors, attorneys, and family members to keep everyone aligned.",
+      "How senior move managers, care advisors, attorneys, brokers, and family members each fit into the transition.",
   },
   {
-    title: "Calm, Steady Communication",
+    title: "Keeping the Family Informed",
     description:
-      "Providing regular updates and a patient, structured approach during what is often an emotional process.",
+      "Why regular updates and a patient, structured approach matter during what is often an emotional process.",
   },
 ];
 

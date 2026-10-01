@@ -74,14 +74,24 @@ const HospitalDischargePlanning = () => {
 
             <h2 className={h2Class}>Who Is Involved in Discharge Planning</h2>
             <p className={pClass}>
-              Every hospital patient is entitled to discharge planning services. The primary professional responsible is
+              Hospitals must identify patients who need discharge planning, and a patient or family can ask for it. The
+              primary professional responsible is
               typically a hospital discharge planner — usually a social worker or case manager — whose job is to assess
               the patient's post-discharge needs and help arrange appropriate services and settings.
             </p>
             <p className={pClass}>
-              In Washington State, hospitals are required to provide patients and families with a written discharge plan
-              that includes information about where the patient is being discharged, what services have been arranged,
-              and what follow-up care is needed.
+              In Washington State, hospital discharge policies must produce a discharge plan suited to the patient&apos;s
+              needs and describe the aftercare tasks needed at home (RCW 70.41.322). A patient can name a family member
+              or friend as a &quot;lay caregiver&quot;; the hospital must then notify that person of the discharge and
+              offer instruction in the care tasks they will be performing.
+            </p>
+            <p className={pClass}>
+              Medicare patients also have the right to appeal a discharge they believe is too soon. The hospital must
+              give them a notice called the &quot;Important Message from Medicare about Your Rights.&quot; Following the
+              directions on that notice, the patient or family can request a fast review by the Quality Improvement
+              Organization (BFCC-QIO) no later than the planned discharge day; the patient can then stay in the
+              hospital while the review is decided without paying for those extra days, other than usual deductibles or
+              coinsurance.
             </p>
             <p className={pClass}>
               The discharge planner is a valuable resource — but they are managing many patients simultaneously, and
@@ -127,9 +137,13 @@ const HospitalDischargePlanning = () => {
             <h3 className={h3Class}>Short-Term Skilled Nursing Facility Care</h3>
             <p className={pClass}>
               For patients who need more intensive rehabilitation or nursing care than can be safely provided at home, a
-              short-term stay in a skilled nursing facility may be recommended. Medicare covers the full cost of skilled
-              nursing facility care for the first 20 days, with a daily copayment from day 21 through day 100, when
-              coverage ends. Understanding this timeline before agreeing to a skilled nursing placement is essential.
+              short-term stay in a skilled nursing facility may be recommended. If the patient was formally admitted as
+              a hospital inpatient for at least three days in a row (time &quot;under observation&quot; or in the
+              emergency room does not count) and needs daily skilled care, Medicare covers skilled nursing facility care
+              in full for days 1–20, then charges $217 a day (2026) for days 21–100. Nothing is covered after day 100,
+              and coverage can end sooner if skilled care is no longer needed. Ask the hospital in writing whether your
+              loved one is an inpatient or under observation. Understanding this timeline before agreeing to a skilled
+              nursing placement is essential.
             </p>
 
             <h3 className={h3Class}>Adult Family Homes and Assisted Living</h3>
@@ -171,10 +185,10 @@ const HospitalDischargePlanning = () => {
 
             <hr className={hrClass} />
 
-            <h2 className={h2Class}>After Discharge: The First 72 Hours</h2>
+            <h2 className={h2Class}>After Discharge: The First Few Days</h2>
             <p className={pClass}>
-              The first 72 hours after hospital discharge are statistically the highest-risk period for complications
-              and readmission. This is the window when medications get missed, warning signs go unrecognized, and the
+              The first days after hospital discharge are a high-risk period for complications and readmission. This
+              is the window when medications get missed, warning signs go unrecognized, and the
               gap between what was planned and what is actually happening becomes apparent.
             </p>
             <p className={pClass}>
@@ -183,7 +197,7 @@ const HospitalDischargePlanning = () => {
               ensuring that scheduled follow-up appointments are kept.
             </p>
             <p className={pClass}>
-              If something does not feel right in the first 72 hours, calling the doctor is always the right move. The
+              If something does not feel right in the first few days, calling the doctor is always the right move. The
               cost of a phone call is far lower than the cost of a readmission.
             </p>
 

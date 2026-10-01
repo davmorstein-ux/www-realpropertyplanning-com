@@ -164,7 +164,7 @@ const HowToChooseSeniorHousing = () => {
                 Check availability and waitlists — some communities, particularly memory care and affordable housing, book months or years in advance. Gather basic information about monthly fees, included services, and care levels. Read reviews and ask for recommendations from people who have been through this process recently.
               </p>
               <p className={pClass}>
-                A <Link to="/senior-living-advisors" className={inlineLink}>senior living advisor</Link> can compress this research significantly, providing vetted shortlists of communities that match specific needs and budgets — and saving families from hours of calls and website searches that all start to look the same.
+                A <Link to="/senior-living-advisors" className={inlineLink}>senior living advisor</Link> can compress this research significantly, providing shortlists of communities that match specific needs and budgets — and saving families from hours of calls and website searches that all start to look the same.
               </p>
 
               <hr className={hrClass} />
@@ -238,7 +238,7 @@ const HowToChooseSeniorHousing = () => {
               <hr className={hrClass} />
 
               <p className={pClass}>
-                <em>Real Property Planning helps families navigate senior housing decisions with clarity and confidence. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
+                <em>These guides explain senior housing and care decisions in plain language. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
               </p>
 
             </article>

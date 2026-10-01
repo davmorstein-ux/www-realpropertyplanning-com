@@ -56,8 +56,8 @@ const howWeHelpCards = [
   },
   {
     icon: <Users className="h-6 w-6 text-gold" aria-hidden="true" />,
-    title: "Professional Coordination",
-    text: "Connection to elder law attorneys, senior move managers, and other professionals who support families in these situations.",
+    title: "Working Alongside Your Advisors",
+    text: "Communication with the attorney, senior move manager, and other professionals you have chosen, so the sale fits the rest of the plan.",
   },
 ];
 
@@ -99,7 +99,7 @@ const PowerOfAttorney = () => {
               If you have been granted Power of Attorney for an aging parent, spouse, or loved one, you may find yourself responsible for making real estate decisions on their behalf.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              That is a significant responsibility — and one that Real Property Planning is uniquely equipped to help you navigate with confidence, care, and the right professional expertise.
+              That is a significant responsibility. This guide explains what the document usually allows, what to confirm before acting, and which independent professionals handle each part of a sale.
             </p>
             </div>
           </div>
@@ -114,7 +114,7 @@ const PowerOfAttorney = () => {
                 Power of Attorney is a legal document that grants one person — the agent — the authority to make decisions on behalf of another person — the principal. In the context of real estate, a Power of Attorney may allow the agent to sell, manage, or make decisions about property owned by the principal when they are no longer able to do so themselves.
               </p>
               <p className={pClass}>
-                In Washington State, a Durable Power of Attorney remains in effect even if the principal becomes incapacitated — making it one of the most important legal tools in senior transition and estate planning.
+                In Washington State, a power of attorney ends if the principal becomes incapacitated unless the document says it survives incapacity (RCW 11.125.040). A power of attorney that does say so — a durable power of attorney — remains in effect, which makes it one of the most important legal tools in senior transition and estate planning. To be valid, it must be signed and dated, and either notarized or signed by two qualified witnesses (RCW 11.125.050). For real estate, have it notarized: title companies usually record the power of attorney with the deed, and the statute's rules requiring banks and others to accept a power of attorney apply to notarized ones. A power of attorney ends at the principal's death; after that, only a court-appointed personal representative or a trustee can sell.
               </p>
             </div>
           </div>
@@ -174,9 +174,9 @@ const PowerOfAttorney = () => {
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <div className="max-w-4xl mx-auto">
-              <h2 className={h2Class + " text-center"}>How Real Property Planning Helps Agents Under Power of Attorney</h2>
+              <h2 className={h2Class + " text-center"}>How a Featured Broker and Appraiser Work With Agents Under Power of Attorney</h2>
               <p className={pClass + " text-center max-w-3xl mx-auto mb-10"}>
-                {FEATURED_BROKER.Role} understands the unique position agents find themselves in — responsible for someone else's most valuable asset, often during a stressful and emotional time.
+                {FEATURED_BROKER.Role}, working through {FEATURED_BROKER.pronoun.possessive} own brokerage, understands the unique position agents find themselves in — responsible for someone else's most valuable asset, often during a stressful and emotional time.
               </p>
               <div className="grid sm:grid-cols-2 gap-6">
                 {howWeHelpCards.map((card) => (
@@ -199,10 +199,10 @@ const PowerOfAttorney = () => {
             <div className={proseWrap}>
               <h2 className={h2Class}>Important Note About Legal Authority</h2>
               <p className={pClass}>
-                Real Property Planning is an educational and connection hub and does not provide legal advice. Before taking any real estate action under Power of Attorney, {FEATURED_BROKER.role} strongly recommends consulting with a qualified Washington State attorney to confirm the scope and validity of your authority.
+                Real Property Planning is a free educational resource and does not provide legal advice. Before taking any real estate action under Power of Attorney, {FEATURED_BROKER.role} strongly recommends consulting with a qualified Washington State attorney to confirm the scope and validity of your authority.
               </p>
               <p className={pClass}>
-                If you need a referral to an elder law attorney in Washington State, {FEATURED_BROKER.role} is happy to help connect you with an independent professional.
+                Real Property Planning does not refer clients to attorneys; choose a Washington-licensed elder law attorney and confirm their license with the Washington State Bar Association (wsba.org).
               </p>
             </div>
           </div>

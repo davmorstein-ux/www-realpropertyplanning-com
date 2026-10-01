@@ -42,7 +42,7 @@ const jsonLd = {
     "Hospice is end-of-life care that comes to where a person lives, not a place to live. What Medicare covers, what it doesn't (room and board), what '24-hour hospice' actually means, and how hospice works inside an adult family home, assisted living, or your own home in Washington.",
   url: CANONICAL,
   datePublished: "2026-09-14",
-  dateModified: "2026-09-14",
+  dateModified: "2026-09-30",
   image: "https://realpropertyplanning.com/hospice-care-cover.webp",
 };
 
@@ -65,12 +65,12 @@ const FAQS = [
   {
     question: "Does '24-hour hospice' mean someone is there around the clock?",
     answer:
-      "No, and this is the misunderstanding that causes the most trouble. Washington's Medicaid rule describes hospice as a twenty-four-hour program coordinated by a hospice interdisciplinary team, meaning the team is on call and visits are scheduled as needed, not that a hospice worker stays in the home. Continuous care is available only during short crises. Day-to-day supervision and personal care still come from family, private caregivers, or the staff of the adult family home or facility where the person lives.",
+      "No, and this is the misunderstanding that causes the most trouble. Washington's Medicaid rule (WAC 182-551-1000) describes hospice as a 24-hour-a-day program, with care coordinated by a hospice interdisciplinary team, meaning the team is on call and visits are scheduled as needed, not that a hospice worker stays in the home. Continuous care is available only during short crises. Day-to-day supervision and personal care still come from family, private caregivers, or the staff of the adult family home or facility where the person lives.",
   },
   {
     question: "Can an adult family home take a hospice resident?",
     answer:
-      "Most can, and many do; a large share of adult family homes in Washington care for hospice residents, with the hospice agency's nurses, aides, and social worker visiting the home. Ask the provider directly which hospice agencies they work with, whether they've cared for residents through end of life before, and how they handle medications supplied by the hospice.",
+      "Many can, and many do care for hospice residents, with the hospice agency's nurses, aides, and social worker visiting the home. Ask the provider directly which hospice agencies they work with, whether they've cared for residents through end of life before, and how they handle medications supplied by the hospice.",
   },
 ];
 
@@ -81,7 +81,7 @@ const HOSPICE_PLACES: [string, string, string][] = [
   ["Own home", "Yes", "Nobody extra: the family keeps paying for the home as before. Personal care between hospice visits is family, private caregivers, or in-home care."],
   ["Adult family home", "Yes", "The resident (private pay), Medicaid, long-term care insurance, or VA benefits, exactly as before hospice began. The hospice agency's team visits the home."],
   ["Assisted living or memory care", "Yes", "The resident or their existing coverage. The community's staff continue daily care; hospice adds to it."],
-  ["Nursing facility", "Yes", "Depends on coverage. Medicare's skilled-nursing benefit and the hospice benefit interact; Medicaid often pays room and board for eligible residents."],
+  ["Nursing facility", "Yes", "Medicare hospice does not pay nursing-home room and board. The resident pays privately, or long-term care insurance or Apple Health (Medicaid, for eligible residents) pays it."],
   ["Hospice care center or hospital", "Yes, short term", "Medicare covers qualifying short-term inpatient care and respite stays arranged by the hospice; these are not long-term residences."],
 ];
 
@@ -156,7 +156,7 @@ const HospiceCare = () => {
 
               <h2 className={h2Class}>Where hospice can come</h2>
               <p className={pClass}>
-                Washington's Medicaid rule states it plainly: hospice care may be in a client's temporary or permanent
+                Washington's Medicaid rule (WAC 182-551-1000) states it plainly: hospice care may be in a client's temporary or permanent
                 place of residence. Medicare says the same. The table below is the practical version.
               </p>
               {/* Phones get a stacked list, larger screens get the table. The third
@@ -204,7 +204,9 @@ const HospiceCare = () => {
                 with a life expectancy of six months or less and the patient elects comfort care in place of curative
                 treatment. The benefit covers the hospice team's visits, medications for pain and symptom control,
                 medical equipment and supplies related to the terminal illness, short-term inpatient care, and respite
-                care the hospice arranges. According to Medicare's own guidance, the patient pays nothing for covered
+                care the hospice arranges. The benefit runs in two 90-day benefit periods, followed by an unlimited number
+                of 60-day periods, as long as the hospice doctor recertifies that the patient is terminally ill.
+                According to Medicare's own guidance, the patient pays nothing for covered
                 hospice services except a copayment of up to $5 per prescription for symptom-management drugs and 5% of
                 the Medicare-approved amount for inpatient respite care. Original Medicare keeps covering health problems
                 unrelated to the terminal illness.
@@ -220,16 +222,18 @@ const HospiceCare = () => {
               </p>
               <h3 className={h3Class}>Medicaid (Apple Health)</h3>
               <p className={pClass}>
-                Washington Medicaid also covers hospice for eligible clients, under WAC 388-551. A Medicaid resident of
-                an adult family home who elects hospice keeps their residential coverage; the home continues to be paid
-                its DSHS daily rate for the resident's care level, and the hospice agency bills Medicaid for the hospice
-                services. Nothing about the placement has to change.
+                Washington's Apple Health (Medicaid) hospice program is run by the Health Care Authority under chapter
+                182-551 WAC. For a resident who has Medicare, Medicare Part A pays for hospice; Apple Health covers
+                hospice only for people without Medicare. A Medicaid resident of an adult family home who elects hospice
+                keeps their residential coverage: the home continues to be paid its DSHS daily rate for the resident's
+                care level, and the hospice agency bills Medicare (or Apple Health, if the resident has no Medicare) for
+                the hospice services. Nothing about the placement has to change.
               </p>
 
               <h2 className={h2Class}>What "24-hour hospice" actually means</h2>
               <p className={pClass}>
-                Washington's Medicaid rule describes hospice as a twenty-four-hour program coordinated by a hospice
-                interdisciplinary team. Read that carefully: the program is available around the clock, meaning a nurse
+                Washington's Medicaid rule (WAC 182-551-1000) describes hospice as a 24-hour-a-day program, with care
+                coordinated by a hospice interdisciplinary team. Read that carefully: the program is available around the clock, meaning a nurse
                 is reachable at 3 a.m. and will come if needed. It does not mean a hospice worker stays in the home.
                 Routine hospice care is intermittent: scheduled visits, typically several a week, of varying length.
                 Continuous around-the-clock care exists as a distinct level for short crises, and it ends when the crisis
@@ -245,10 +249,9 @@ const HospiceCare = () => {
 
               <h2 className={h2Class}>Hospice inside an adult family home</h2>
               <p className={pClass}>
-                Adult family homes are, by design, a good fit for hospice: a household of up to six residents, a
-                provider or caregivers present around the clock, and rooms built to Washington's accessibility standards.
-                Many of the operating homes in Washington care for hospice residents as a matter of course; several of
-                the homes that sold in the last year described hospice residents in their listings. The hospice agency's
+                Adult family homes are, by design, a good fit for hospice: a household of two to six residents (up to
+                eight with DSHS approval) and caregivers present around the clock. Many homes in Washington care for
+                hospice residents; ask each provider about their experience. The hospice agency's
                 team visits the home, coordinates with the provider on medications and the plan of care, and supplies
                 the equipment.
               </p>
@@ -290,8 +293,9 @@ const HospiceCare = () => {
               </ol>
 
               <p className="text-muted-foreground text-[15px] leading-relaxed mt-8">
-                Sources: Medicare.gov, "Hospice care" coverage page; CMS hospice payment guidance (FY2026); WAC 388-551
-                (Washington Medicaid hospice program); chapter 246-335 WAC (in-home services agencies and hospice care
+                Sources: Medicare.gov, "Hospice care" coverage page; CMS hospice payment guidance (FY2026); chapter 182-551
+                WAC (Washington Apple Health hospice program, Health Care Authority); RCW 70.128.010 (adult family home
+                capacity); chapter 246-335 WAC (in-home services agencies and hospice care
                 centers); RCW 70.127. Rules and copayment amounts change; confirm current figures with Medicare and the
                 hospice agency. This guide is educational and is not medical, legal, or financial advice.
               </p>

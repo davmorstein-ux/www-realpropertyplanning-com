@@ -46,8 +46,8 @@ const MedicaidAndLongTermCare = () => {
               anyone anticipated.
             </p>
             <p className={pClass}>
-              Medicaid is not just for the poor. It is for anyone who lives long enough to need significant long-term
-              care — which, statistically, is most of us.
+              Medicaid is not just for people who have always had low incomes. Many middle-class families come to rely
+              on it after years of paying privately for care have used up their savings.
             </p>
 
             <hr className={hrClass} />
@@ -60,13 +60,15 @@ const MedicaidAndLongTermCare = () => {
             </p>
             <p className={pClass}>
               The program that covers most of these services in Washington is called Apple Health — Washington&apos;s
-              Medicaid program — administered through the Department of Social and Health Services (DSHS) and its Aging
-              and Long-Term Support Administration (ALTSA).
+              Medicaid program. Long-term care services are administered through the Department of Social and Health
+              Services (DSHS) and its Home and Community Living Administration (HCLA), which took over the former Aging
+              and Long-Term Support Administration&apos;s (ALTSA) programs in 2025.
             </p>
             <p className={pClass}>
-              For older adults and individuals with disabilities who need long-term care, the relevant program is
-              typically the Community Options Program Entry System, known as COPES, or the Medicaid Personal Care
-              program. These programs help people receive care in the least restrictive setting possible — meaning at
+              For older adults and individuals with disabilities who need long-term care, the relevant programs are
+              typically Community First Choice (CFC), the COPES waiver (Community Options Program Entry System), and
+              Medicaid Personal Care (MPC). PACE is another option for people 55 and older who live in a PACE service
+              area. These programs help people receive care in the least restrictive setting possible — meaning at
               home or in a smaller residential setting — before moving to a nursing facility.
             </p>
 
@@ -78,21 +80,28 @@ const MedicaidAndLongTermCare = () => {
               a financial eligibility test. Both must be met.
             </p>
             <p className={pClass}>
-              The medical need test requires that the individual have a level of care need that meets the state&apos;s
-              criteria for nursing facility level of care. This does not mean they must be in a nursing home. It means
+              For nursing home, COPES, and Community First Choice coverage, the medical need test requires that the
+              individual have a level of care need that meets the state&apos;s criteria for nursing facility level of
+              care. (Medicaid Personal Care has a lower threshold.) This does not mean they must be in a nursing home. It means
               their care needs are significant enough that they could qualify for that level of support.
             </p>
             <p className={pClass}>
-              The financial eligibility test looks at both income and assets. In Washington State, individuals applying
-              for Medicaid nursing home coverage may have income up to approximately $2,829 per month in 2025. Asset
-              limits are $2,000 for a single individual. A primary residence, one vehicle, personal belongings, and
-              certain other assets are exempt from the asset calculation.
+              The financial eligibility test looks at both income and assets. For home and community programs such as
+              COPES, the 2026 income limit is $2,982 a month (300% of the $994 SSI rate). For nursing home care there is
+              no fixed income cap: a person whose income is less than the cost of their care may still qualify, and most
+              of their income then goes toward that cost.
+            </p>
+            <p className={pClass}>
+              The resource (asset) limit is $2,000 for a single person, or $3,000 for a married couple who both receive
+              care. A primary residence, one vehicle, personal belongings, and certain other assets are exempt from the
+              asset calculation — though for nursing home and COPES coverage, home equity above $1,130,000 (2026) makes
+              the applicant ineligible unless a spouse or dependent child lives in the home.
             </p>
             <p className={pClass}>
               For married couples, the rules are more complex. The community spouse — the partner who remains at home —
               is entitled to keep a portion of the couple&apos;s assets, known as the Community Spouse Resource
-              Allowance, as well as a minimum monthly income. These protections exist specifically to prevent the
-              healthy spouse from being impoverished by the cost of the other&apos;s care.
+              Allowance (up to $162,660 in 2026), as well as a minimum monthly income. These protections exist
+              specifically to prevent the healthy spouse from being impoverished by the cost of the other&apos;s care.
             </p>
 
             <hr className={hrClass} />
@@ -106,8 +115,10 @@ const MedicaidAndLongTermCare = () => {
               This is not a failure of planning. It is how the system is designed to work. Medicaid is a payer of last
               resort, meaning it steps in after other resources have been used. But the way assets are spent down
               matters enormously. Money spent on care is treated differently than money transferred to family members.
-              Washington State has a five-year look-back period for asset transfers — meaning that gifts or transfers
-              made within five years of applying for Medicaid may be counted against eligibility.
+              Washington State has a five-year (60-month) look-back period for asset transfers — meaning that gifts or
+              transfers for less than fair value made within five years before applying can cause a penalty period:
+              months when Medicaid will not pay for long-term care, based on the amount given away. (This penalty does
+              not apply to someone who needs only Community First Choice in-home care.)
             </p>
             <p className={pClass}>
               This is precisely why early planning with an elder law attorney is so valuable. The strategies available
@@ -158,7 +169,7 @@ const MedicaidAndLongTermCare = () => {
             </p>
             <p className={pClass}>
               Eligible workers who have paid into the program and meet the benefit triggers can receive up to $36,500 in
-              lifetime benefits — adjusted annually for inflation — to use for a range of long-term care services
+              lifetime benefits — an amount that grows with inflation — to use for a range of long-term care services
               including personal care, facility care, transportation, meal delivery, and home modifications.
             </p>
             <p className={pClass}>

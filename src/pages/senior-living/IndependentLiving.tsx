@@ -8,7 +8,7 @@ const IndependentLiving = () => (
       metaDescription="Independent Living communities in Washington State for active, self-sufficient seniors who want convenience, social connection, and freedom from home maintenance."
       whatItIs="Communities designed for active, largely self-sufficient seniors who want convenience, social connection, and freedom from home maintenance. No medical or personal care is provided on-site."
       bestFor="Seniors who are healthy and independent but want community, amenities, and a simpler lifestyle."
-      typicalCosts="$2,000–$5,000/month in Washington State, depending on location and amenities. Usually private pay."
+      typicalCosts="No Washington cost survey covers independent living. Costs work much like rent and vary widely: often a few thousand dollars a month, and more in the Seattle area, depending on location, apartment size, and amenities. This is an estimate. Usually private pay."
       whatsIncluded="Apartment or cottage-style residence, meals, housekeeping, transportation, activities, and common areas."
       calculatorCareId="independent-living"
     />

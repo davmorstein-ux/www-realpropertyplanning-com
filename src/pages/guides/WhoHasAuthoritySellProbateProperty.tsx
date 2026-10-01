@@ -84,7 +84,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Who Has Authority to Sell Probate Property in Washington State? | Real Property Planning"
-      description="Real Property Planning explains who has legal authority to sell estate property in Washington State — including personal representatives, trustees, and what Letters Testamentary mean for your sale. (206) 900-3015."
+      description="Real Property Planning explains who has legal authority to sell estate property in Washington State — including personal representatives, trustees, and what Letters Testamentary mean for your sale."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema

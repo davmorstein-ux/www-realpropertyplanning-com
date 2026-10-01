@@ -188,7 +188,7 @@ const ProfessionalReferralResource = () => {
               Common Referral Situations
             </h2>
             <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
-              Professional partners refer clients to Real Property Planning when the situation involves complexity, sensitivity, or the need for both real estate and valuation expertise. Common referral situations include:
+              Professionals refer clients to {FEATURED_BROKER.role} when the situation involves complexity, sensitivity, or the need for both real estate and valuation expertise. Common referral situations include:
             </p>
             <ul className="space-y-4">
               {referralSituations.map((item, index) => (
@@ -236,7 +236,7 @@ const ProfessionalReferralResource = () => {
               My Commitment to Referral Partners
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              When you refer a client to Real Property Planning, that referral reflects your professional judgment and your relationship with the client. {FEATURED_BROKER.Role} treats every referral accordingly — with responsiveness, discretion, and the kind of thorough follow-through that reinforces your credibility.
+              When you refer a client to {FEATURED_BROKER.role}, that referral reflects your professional judgment and your relationship with the client. {FEATURED_BROKER.Role} treats every referral accordingly — with responsiveness, discretion, and the kind of thorough follow-through that reinforces your credibility.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed">
               The goal is straightforward: serve your client well, communicate clearly with everyone involved, handle the process responsibly, and make you confident in recommending this resource again. That means no surprises, no pressure tactics, and no shortcuts — just experienced, principled real estate guidance delivered with the professionalism your clients deserve.

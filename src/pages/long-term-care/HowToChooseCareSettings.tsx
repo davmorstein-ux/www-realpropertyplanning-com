@@ -96,7 +96,8 @@ const HowToChooseCareSettings = () => {
 
             <h3 className={h3Class}>Adult Family Homes in Washington</h3>
             <p className={pClass}>
-              Adult family homes are licensed residential homes in Washington State that serve two to six residents.
+              Adult family homes are licensed residential homes in Washington State that serve two to six residents, or
+              up to eight with DSHS approval.
               They are among the most distinctive options in the state's care landscape — offering a genuinely home-like
               environment, smaller staff-to-resident ratios, and a level of personalization that larger facilities often
               cannot match.
@@ -115,7 +116,7 @@ const HowToChooseCareSettings = () => {
 
             <h3 className={h3Class}>Assisted Living Facilities in Washington</h3>
             <p className={pClass}>
-              Assisted living facilities in Washington are licensed for seven or more residents and provide housing,
+              Assisted living facilities in Washington are licensed by DSHS for seven or more residents and provide housing,
               meals, personal care assistance, and social programming. They are designed for individuals who need
               regular support with daily activities but do not require the intensive medical oversight of a nursing
               facility.

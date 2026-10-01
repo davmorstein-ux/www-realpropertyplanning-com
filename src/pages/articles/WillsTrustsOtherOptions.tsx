@@ -24,7 +24,7 @@ const jsonLd = articleSchema({
     "A plain-language guide to the most common ways Washington homeowners transfer real estate to the next generation — and the tradeoffs each method carries.",
   url: "/articles/wills-trusts-other-options",
   datePublished: "2026-06-06",
-  dateModified: "2026-06-06",
+  dateModified: "2026-09-30",
   about: ["Estate planning", "Wills", "Trusts", "Transfer on death deed", "Inherited property", "Washington State"],
 });
 
@@ -111,7 +111,7 @@ const WillsTrustsOtherOptions = () => {
               Often it is none of those things.
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              Once real estate is gifted, the parent may lose control. The child's creditors, divorce, or financial trouble can suddenly become relevant to the family home. Tax consequences can also follow, especially if the child later sells the property and inherits the parent's tax basis rather than receiving a fresh one at death. What looks like a clean transfer can become a long and expensive headache.
+              Once real estate is gifted, the parent may lose control. The child's creditors, divorce, or financial trouble can suddenly become relevant to the family home. Tax consequences can also follow: a child who receives the house as a gift takes over the parent's original tax basis (a "carryover" basis), rather than the stepped-up basis an heir receives at death, so a later sale can mean a much larger capital gains bill. And a gift made within five years (60 months) before the parent applies for Medicaid long-term care can cause a penalty period without coverage. What looks like a clean transfer can become a long and expensive headache.
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 24 }}>
               There are moments when lifetime gifting makes sense. But for most families, it is a move that should be treated with caution, not enthusiasm.
@@ -122,13 +122,13 @@ const WillsTrustsOtherOptions = () => {
               Washington's practical shortcut
             </h3>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              Washington homeowners have another tool worth knowing: the transfer on death deed. It is a fairly direct way to name who should receive the property after death, without sending the house through probate. For a single residence, or a straightforward plan, it can be a smart and efficient option.
+              Washington homeowners have another tool worth knowing: the transfer on death deed (chapter 64.80 RCW). It is a fairly direct way to name who should receive the property after death, without sending the house through probate. It must be recorded with the county auditor before the owner's death, and it takes the same mental capacity as making a will. For a single residence, or a straightforward plan, it can be a smart and efficient option.
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 16 }}>
-              Still, it is not a full estate plan disguised as paperwork. It does not do everything a trust can do, and it does not resolve every family dynamic or incapacity issue. It is useful, yes. But useful is not the same thing as complete.
+              Still, it is not a full estate plan disguised as paperwork. It does not do everything a trust can do, and it does not resolve every family dynamic or incapacity issue. The property can still be reached by the owner's creditors and by Medicaid estate recovery. Married couples have a related Washington tool, the community property agreement, which can pass property to the surviving spouse without probate. It is useful, yes. But useful is not the same thing as complete.
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 18, lineHeight: 1.8, color: "hsl(220 25% 22%)", marginBottom: 24 }}>
-              Joint ownership with right of survivorship is another path people sometimes try, often because it feels easy. The problem is that easy can be deceptive. Adding a child to title may seem like a shortcut, but it can create tax complications, ownership issues, and unintended exposure to that child's personal financial life.
+              Joint ownership with right of survivorship is another path people sometimes try, often because it feels easy. The problem is that easy can be deceptive. Adding a child to title may seem like a shortcut, but it is a gift: it can create tax complications (the added share gets no step-up at death), ownership issues, unintended exposure to that child's personal financial life, and a Medicaid penalty if done within five years before applying for long-term care.
             </p>
 
             {/* Section: The forgotten question */}

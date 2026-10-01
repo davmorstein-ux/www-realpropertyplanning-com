@@ -84,15 +84,15 @@ const AffordableSeniorHousing = () => {
                 Affordable senior housing is a broad term covering several distinct types of programs, all designed to make housing accessible to older adults with limited income.
               </p>
               <p className={pClass}>
-                The most common form is <strong>income-based or subsidized housing</strong> — communities where rent is set as a percentage of the resident's income rather than at market rate. A person paying 30% of their monthly income toward rent pays very differently than their neighbor in a private apartment down the street.
+                The most common form is <strong>income-based or subsidized housing</strong> — communities where rent is set as a percentage of the resident's income rather than at market rate. In HUD's Section 202 senior housing, for example, residents generally pay about 30% of their adjusted income (income after certain allowed deductions) toward rent, which is very different from what a neighbor in a private apartment down the street pays.
               </p>
               <p className={pClass}>
-                These communities are typically age-restricted, most commonly to adults 62 and older. They are designed for people who can still live independently — they are not care facilities, and they do not provide personal care services. But they provide something equally essential: a safe, stable, affordable place to live.
+                These communities are typically age-restricted, most commonly to adults 62 and older; Section 202 housing is generally for people 62 and older with income below half of the area's median income. They are designed for people who can still live independently — they are not care facilities, and they do not provide personal care services. But they provide something equally essential: a safe, stable, affordable place to live.
               </p>
               <p className={pClass}>
-                The programs that fund affordable senior housing include HUD Section 202 properties, Low Income Housing Tax Credit (LIHTC) developments, Section 8 vouchers, and various state and local programs. Each has its own eligibility rules, income limits, and application process. A{" "}
+                The programs that fund affordable senior housing include HUD Section 202 properties, Low Income Housing Tax Credit (LIHTC) developments, Section 8 vouchers, and various state and local programs. Each has its own eligibility rules, income limits, and application process. Not every program works the same way: in LIHTC buildings, for example, rents are capped based on the area's income limits rather than set from each tenant's own income. The local housing authority and the local Area Agency on Aging are the usual places to start; they can tell you which programs operate in your area and how to apply. A{" "}
                 <Link to="/senior-living-advisors" className={inlineLink}>senior living advisor</Link>{" "}
-                can help families understand which programs may be available in their area and what the application process looks like.
+                may also know the local options.
               </p>
 
               <hr className={hrClass} />
@@ -127,7 +127,7 @@ const AffordableSeniorHousing = () => {
                 <li>A social environment of peers in similar life circumstances</li>
               </ul>
               <p className={pClass}>
-                What most do <em>not</em> include: meals, personal care, transportation, or medical support. Residents are responsible for arranging their own groceries, cooking, healthcare, and any assistance they may need with daily tasks.
+                What most do <em>not</em> include: meals, personal care, transportation, or medical support. Residents are responsible for arranging their own groceries, cooking, healthcare, and any assistance they may need with daily tasks. Some buildings, including about half of Section 202 properties, have a service coordinator on staff who can help residents find and arrange outside services.
               </p>
               <p className={pClass}>
                 This is an important distinction. Affordable senior housing is a housing solution, not a care solution. For residents whose needs are still primarily about where to live rather than how to be cared for, it can be an excellent fit. For those who need hands-on daily support, additional services will need to be arranged separately — and budgeted for.
@@ -212,7 +212,7 @@ const AffordableSeniorHousing = () => {
               <hr className={hrClass} />
 
               <p className={pClass + " italic text-center"}>
-                Real Property Planning helps families navigate senior housing decisions at every budget level.{" "}
+                These guides cover senior housing decisions at every budget level.{" "}
                 <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link>
               </p>
 

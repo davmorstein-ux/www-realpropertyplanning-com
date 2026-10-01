@@ -38,8 +38,8 @@ const tiles = [
     href: "/planning-before-a-crisis/when-a-move-is-coming",
   },
   {
-    title: "How Real Property Planning Can Help",
-    description: "Calm, unhurried guidance coordinated across the professionals who matter most to your situation.",
+    title: "How This Resource Helps",
+    description: "What these free guides cover, and how to find independent professionals you contact and hire directly.",
     href: "/planning-before-a-crisis/how-we-can-help",
   },
 ];
@@ -53,7 +53,7 @@ const faqs = [
   {
     question: "What's the difference between a power of attorney and a court-appointed guardianship?",
     answer:
-      "A power of attorney is a document a person signs while they still have legal capacity, naming someone to act on their behalf. A guardianship is a court process that only becomes necessary if capacity is lost without one in place — and it's typically slower, more expensive, and less private. Having the right documents ahead of time is usually the better path.",
+      "A power of attorney is a document a person signs while they still have legal capacity, naming someone to act on their behalf. A guardianship or conservatorship is a court process that usually becomes necessary only if capacity is lost without one in place — and it's typically slower, more expensive, and less private. Having the right documents ahead of time is usually the better path.",
   },
   {
     question: "Do we need an attorney to put these documents in place?",
@@ -114,10 +114,10 @@ const PlanningBeforeACrisis = () => {
             <p className="max-w-3xl mx-auto text-center text-navy/90 text-base leading-relaxed mb-8">
               Not sure where to start?{" "}
               <Link
-                to="/contact"
+                to="/what-should-we-do-first"
                 className="text-gold font-bold underline underline-offset-2 hover:text-[hsl(var(--gold-dark))]"
               >
-                Reach out and we'll help you figure out the right first step.
+                See the guided first steps.
               </Link>
             </p>
 

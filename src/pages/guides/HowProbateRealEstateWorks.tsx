@@ -61,7 +61,7 @@ const HowProbateRealEstateWorks = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="How Probate Real Estate Sales Work in Washington | Real Property Planning"
-      description="Real Property Planning explains how probate real estate sales work in Washington State. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties."
+      description="Real Property Planning explains how probate real estate sales work in Washington State."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema

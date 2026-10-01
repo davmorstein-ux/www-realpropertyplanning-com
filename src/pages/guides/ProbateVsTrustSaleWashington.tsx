@@ -101,7 +101,7 @@ const ProbateVsTrustSaleWashington = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Probate vs Trust Sale in Washington State — What's the Difference? | Real Property Planning"
-      description="Real Property Planning explains the key differences between probate sales and trust sales in Washington State. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties — (206) 900-3015."
+      description="Real Property Planning explains the key differences between probate sales and trust sales in Washington State."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema

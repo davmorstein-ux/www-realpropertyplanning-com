@@ -31,7 +31,7 @@ const WhyPlanningEarly = () => (
 
     <SubH3>Legal gaps that freeze everything</SubH3>
     <P>
-      If an aging parent becomes incapacitated and no one has been given legal authority to act on their behalf, the family may find themselves unable to access bank accounts, sign real estate documents, or make care decisions. Courts can appoint a guardian or conservator — but that process takes time, costs money, and removes control from the family entirely.
+      If an aging parent becomes incapacitated and no one has been given legal authority to act on their behalf, the family may find themselves unable to access bank accounts or sign real estate documents. Washington law lets close family make most medical decisions (RCW 7.70.065), but no one can manage the money or the house without a power of attorney or a court-appointed conservator — a slower, costlier, public process in which a judge, not the parent, decides who is in charge.
     </P>
 
     <SubH3>Family conflict</SubH3>
@@ -41,7 +41,7 @@ const WhyPlanningEarly = () => (
 
     <SubH3>Missed planning opportunities</SubH3>
     <P>
-      Some options are only available with lead time. Gifting property to reduce estate tax exposure. Coordinating real estate decisions with Medicaid planning. Updating beneficiary designations. Making repairs before a home goes on the market. Once a crisis hits, many of these doors close.
+      Some options are only available with lead time. Gifting property to reduce estate tax exposure. Coordinating real estate decisions with Medicaid planning, which reviews gifts made in the five years before applying for long-term care. Updating beneficiary designations. Making repairs before a home goes on the market. Once a crisis hits, many of these doors close.
     </P>
 
     <Divider />

@@ -1,11 +1,45 @@
+/**
+ * Monthly care costs used by every Cost of Care calculator, the hub tiles and
+ * the homepage tile.
+ *
+ * SOURCE: CareScout (formerly Genworth) Cost of Care Survey, 2025 data,
+ * published March 2026 — Washington State and national MEDIANS, annual figure
+ * divided by 12:
+ * https://www.businesswire.com/news/home/20260302776244/en/CareScout-Releases-2025-Cost-of-Care-Data-for-Washington
+ *   in-home (non-medical) WA $102,960 / US $80,080
+ *   adult day health      WA $64,740  / US $24,700
+ *   assisted living       WA $90,550  / US $74,400
+ *   nursing semi-private  WA $157,859 / US $114,975
+ *   nursing private       WA $191,625 / US $129,575
+ *
+ * The survey does NOT cover memory care, adult family homes, independent
+ * living or CCRCs. Those rows are the site's working estimates and carry
+ * `estimate: true`, which makes the calculator say so on screen. Never
+ * describe an estimate row as a survey median. Adult family homes have no
+ * national equivalent (the license category is Washington's), so their
+ * national figure is null and the calculator shows no national comparison.
+ *
+ * Checked against the source Sept 30, 2026. When CareScout publishes new
+ * data, update every surveyed row, the year in COST_SOURCE_LINE, and the
+ * percentages in the notes together.
+ */
 export interface CareType {
   id: string;
   label: string;
   waMonthly: number;
-  nationalMonthly: number;
+  /** National median, or null where no national equivalent exists. */
+  nationalMonthly: number | null;
   unit: string;
   note: string;
+  /** True when the figure is the site's estimate, not a CareScout median. */
+  estimate?: boolean;
 }
+
+/** The source sentence shown under every calculator and on the hub. */
+export const COST_SOURCE_LINE =
+  "Washington medians from the CareScout Cost of Care Survey, 2025 data (published March 2026); memory care, adult family home, independent living and CCRC figures are estimates.";
+export const COST_SOURCE_URL =
+  "https://www.businesswire.com/news/home/20260302776244/en/CareScout-Releases-2025-Cost-of-Care-Data-for-Washington";
 
 export const CARE_TYPES: CareType[] = [
   {
@@ -14,13 +48,14 @@ export const CARE_TYPES: CareType[] = [
     waMonthly: 3145,
     nationalMonthly: 3145,
     unit: "monthly fee",
-    note: "Washington-specific figures aren't available from this source — shown here is the national median. Independent living generally costs less than assisted living since it doesn't include personal care services.",
+    note: "Estimate. No survey publishes a Washington figure for independent living; this is a national industry estimate, and Seattle-area communities often charge more. It generally costs less than assisted living because personal care is not included.",
+    estimate: true,
   },
   {
     id: "in-home",
     label: "In-Home Care (Non-Medical)",
     waMonthly: 8580,
-    nationalMonthly: 6717,
+    nationalMonthly: 6673,
     unit: "~44 hrs/week",
     note: "Washington averages $45/hour versus the national median of about $35/hour.",
   },
@@ -28,7 +63,7 @@ export const CARE_TYPES: CareType[] = [
     id: "adult-day",
     label: "Adult Day Care",
     waMonthly: 5395,
-    nationalMonthly: 2057,
+    nationalMonthly: 2058,
     unit: "5 days/week",
     note: "The most affordable long-term care option, providing daytime supervision and activities.",
   },
@@ -36,17 +71,18 @@ export const CARE_TYPES: CareType[] = [
     id: "adult-family-home",
     label: "Adult Family Home",
     waMonthly: 6500,
-    nationalMonthly: 5500,
+    nationalMonthly: null,
     unit: "monthly fee",
-    note: "Often a more affordable, home-like alternative to assisted living, with 24/7 care bundled into one rate.",
+    note: "Estimate. No survey covers adult family home private-pay rates; each home sets its own. DSHS Medicaid rates work out to about $4,030–$8,495 a month depending on county and care level.",
+    estimate: true,
   },
   {
     id: "assisted-living",
     label: "Assisted Living Community",
-    waMonthly: 7600,
+    waMonthly: 7546,
     nationalMonthly: 6200,
     unit: "monthly fee",
-    note: "Washington runs about 23% above the national median.",
+    note: "Washington runs about 22% above the national median.",
   },
   {
     id: "memory-care",
@@ -54,7 +90,8 @@ export const CARE_TYPES: CareType[] = [
     waMonthly: 9500,
     nationalMonthly: 7750,
     unit: "monthly fee",
-    note: "Typically runs about 25% above standard assisted living rates.",
+    note: "Estimate. No survey covers memory care; it typically runs about 25% above assisted living in the same area.",
+    estimate: true,
   },
   {
     id: "nursing-semi",
@@ -67,10 +104,10 @@ export const CARE_TYPES: CareType[] = [
   {
     id: "nursing-private",
     label: "Nursing Home — Private Room",
-    waMonthly: 14800,
+    waMonthly: 15969,
     nationalMonthly: 10798,
     unit: "monthly",
-    note: "Private rooms carry a premium over semi-private accommodations.",
+    note: "Washington runs about 48% above the national median; private rooms cost more than shared ones.",
   },
   {
     id: "ccrc",
@@ -78,7 +115,8 @@ export const CARE_TYPES: CareType[] = [
     waMonthly: 3353,
     nationalMonthly: 3353,
     unit: "monthly service fee",
-    note: "CCRCs also require a separate one-time entrance fee — commonly $400,000 or more nationally.",
+    note: "Estimate. CCRCs also charge a separate one-time entrance fee, which can run into the hundreds of thousands of dollars.",
+    estimate: true,
   },
 ];
 

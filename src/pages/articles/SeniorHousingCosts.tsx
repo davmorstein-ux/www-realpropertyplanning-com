@@ -82,7 +82,7 @@ const SeniorHousingCosts = () => {
                 At one end, <strong>independent living</strong> is designed for older adults who want a simpler, maintenance-free lifestyle — no more lawn care, no more fixing the furnace, meals available when you want them. At the other end, <strong>memory care</strong> delivers round-the-clock specialized support for individuals living with Alzheimer's or dementia, with enhanced staffing, secure environments, and structured programming.
               </p>
               <p className={pClass}>
-                Between those two poles sit assisted living, continuing care retirement communities, affordable senior housing, and the option many families don't initially think of as "senior housing" at all: aging in place with professional support.
+                Between those two poles sit assisted living, adult family homes (licensed private homes caring for a small number of residents, common in Washington), continuing care retirement communities, affordable senior housing, and the option many families don't initially think of as "senior housing" at all: aging in place with professional support. Nursing homes, for people who need skilled medical care every day, sit beyond memory care and cost more still.
               </p>
               <p className={pClass}>
                 Each has a different pricing structure. Each includes different services. And each carries a different set of long-term financial implications.
@@ -118,7 +118,7 @@ const SeniorHousingCosts = () => {
 
               <h2 className={h2Class}>Memory Care: Specialized Support at a Premium</h2>
               <p className={pClass}>
-                Memory care carries the highest monthly costs among senior housing options, and for good reason. These communities require enhanced staffing ratios, purpose-built physical environments, and specialized programming designed around the unique needs of individuals living with cognitive decline.
+                Memory care usually carries the highest monthly costs of any senior housing option short of a nursing home, and for good reason. These communities require enhanced staffing ratios, purpose-built physical environments, and specialized programming designed around the unique needs of individuals living with cognitive decline.
               </p>
               <p className={pClass}>
                 The higher price reflects not just care, but expertise and safety. For families navigating dementia, memory care provides something that cannot be easily quantified: peace of mind.
@@ -198,7 +198,7 @@ const SeniorHousingCosts = () => {
               <hr className={hrClass} />
 
               <p className={pClass}>
-                <em>Real Property Planning helps families navigate senior housing decisions with clarity and confidence. Explore our full library of <Link to="/guides-and-resources" className={inlineLink}>senior housing guides and resources</Link>.</em>
+                <em>These guides explain senior housing decisions in plain language. Explore the full library of <Link to="/guides-and-resources" className={inlineLink}>senior housing guides and resources</Link>.</em>
               </p>
 
             </article>

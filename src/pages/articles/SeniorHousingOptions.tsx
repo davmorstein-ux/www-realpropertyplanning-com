@@ -167,9 +167,12 @@ const SeniorHousingOptions = () => {
                 environment.
               </p>
               <p className={pClass}>
-                The pricing is complex — typically an entrance fee plus monthly costs — and the contracts require
-                careful review. But for families who value long-term stability and want a clear plan, CCRCs can be among
-                the most thoughtful investments available.
+                The pricing is complex — typically an entrance fee plus monthly costs — and how much future care the
+                contract promises, and at what price, depends on the contract type. Washington requires CCRCs to register
+                with DSHS and to give you a disclosure statement, including audited financial statements, fee ranges, and
+                refund policies, before you sign or pay an entrance fee (RCW 18.390.060). Registration is not a license
+                or an endorsement. For families who value long-term stability and want a clear plan, a CCRC can be a
+                sound choice once the contract has been read carefully.
               </p>
               <p className={pClass}>
                 A{" "}
@@ -293,7 +296,7 @@ const SeniorHousingOptions = () => {
 
               <p className={pClass}>
                 <em>
-                  Real Property Planning helps families navigate senior housing decisions with clarity and confidence.{" "}
+                  These guides explain senior housing and care decisions in plain language.{" "}
                   <Link to="/guides-and-resources" className={inlineLink}>
                     Explore our full library of resources →
                   </Link>

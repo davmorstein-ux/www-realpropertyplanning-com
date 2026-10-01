@@ -32,7 +32,7 @@ export const STATE_TERMS: StateTerm[] = [
     abbr: "WA",
     term: "Adult Family Home",
     shortName: "AFH",
-    agency: "Department of Social and Health Services (DSHS), Aging and Long-Term Support Administration",
+    agency: "Department of Social and Health Services (DSHS), Residential Care Services (part of the Home and Community Living Administration since 2025)",
     capacity: "Up to 6 residents; DSHS may approve up to 8",
     note: "The term this site is built around. Licensed under RCW 70.128 and WAC 388-76.",
   },

@@ -64,8 +64,8 @@ const faqs = [
     answer: `It depends on the property, the local market, and the likely return. Some properties benefit meaningfully from targeted cleanup, paint, flooring, or landscaping. Others are better sold as-is, especially when time or budget constraints make preparation impractical. ${FEATURED_BROKER.Role} helps clients evaluate these options with a practical, market-informed perspective.\n\n${softCta}`,
   },
   {
-    question: "How can an attorney or fiduciary refer a client to Real Property Planning?",
-    answer: `Attorneys and fiduciaries can reach out directly by phone or through the contact page. ${FEATURED_BROKER.Role} works as a real estate resource for professional referral partners, providing experienced guidance on property value, sale preparation, market strategy, and transaction coordination. The goal is to make the referring professional look well-supported throughout the process.\n\n${softCta}`,
+    question: "How can an attorney or fiduciary reach the featured broker about a client's property?",
+    answer: `Attorneys and fiduciaries can reach out directly by phone or through the contact page. Real Property Planning itself provides no services; ${FEATURED_BROKER.role}, working through ${FEATURED_BROKER.pronoun.possessive} own brokerage, works as a real estate resource for professional referral partners, providing experienced guidance on property value, sale preparation, market strategy, and transaction coordination. The goal is to make the referring professional look well-supported throughout the process.\n\n${softCta}`,
   },
   {
     question: "What specific Washington court forms or filings affect when we can list the property?",
@@ -81,19 +81,19 @@ const faqs = [
   },
   {
     question: "The house is full of belongings and hasn't been touched in years. Where do you even start?",
-    answer: `${FEATURED_BROKER.Role} starts with a walk-through to separate the property questions from the contents questions. For contents, ${FEATURED_BROKER.pronoun.subject} coordinates established estate-sale companies, donation pickups, and full cleanout crews — and tell you which approach actually nets more for the estate. For the property itself, ${FEATURED_BROKER.pronoun.subject} identifies the small set of repairs that move the appraised value (and therefore the sale price) and the larger set that do not. Most estate homes need far less work than families assume.\n\n${softCta}`,
+    answer: `${FEATURED_BROKER.Role} starts with a walk-through to separate the property questions from the contents questions. For contents, ${FEATURED_BROKER.pronoun.subject} coordinates established estate-sale companies, donation pickups, and full cleanout crews — and tells you which approach actually nets more for the estate. For the property itself, ${FEATURED_BROKER.pronoun.subject} identifies the small set of repairs that move the appraised value (and therefore the sale price) and the larger set that do not. Most estate homes need far less work than families assume.\n\n${softCta}`,
   },
   {
     question: "How does selling during probate affect our tax situation as heirs?",
-    answer: `Inherited property generally receives a stepped-up basis to fair market value as of the date of death — which is why a defensible date-of-death valuation matters. If the property sells reasonably close to that value, capital-gains exposure for the heirs is usually minimal. ${FEATURED_BROKER.Role} is not tax advisors, but ${FEATURED_BROKER.pronoun.subject} coordinates closely with your CPA or estate attorney and can produce the valuation documentation they need.\n\n${softCta}`,
+    answer: `Inherited property generally receives a stepped-up basis to fair market value as of the date of death — which is why a defensible date-of-death valuation matters. If the property sells reasonably close to that value, capital-gains exposure for the heirs is usually minimal. ${FEATURED_BROKER.Role} is not a tax advisor, but ${FEATURED_BROKER.pronoun.subject} coordinates closely with your CPA or estate attorney and can produce the valuation documentation they need.\n\n${softCta}`,
   },
   {
     question: "Can you start working with us before the estate attorney is even hired?",
-    answer: `Yes. Many families call ${FEATURED_BROKER.role} first because the property is the most visible, most stressful piece. ${FEATURED_BROKER.Role} will tell you honestly whether you need an attorney (almost always yes for Washington probate) and refer you to several experienced probate attorneys in your county if you don't have one. Then ${FEATURED_BROKER.pronoun.subject} works alongside whichever attorney you choose — they handle the legal proceeding, ${FEATURED_BROKER.pronoun.subject} handles the property.\n\n${softCta}`,
+    answer: `Yes. Many families call ${FEATURED_BROKER.role} first because the property is the most visible, most stressful piece. ${FEATURED_BROKER.Role} will tell you honestly whether you need an attorney (almost always yes for Washington probate). Real Property Planning does not refer clients to attorneys; choose a Washington-licensed probate attorney and confirm their license with the Washington State Bar Association (wsba.org). Then ${FEATURED_BROKER.pronoun.subject} works alongside whichever attorney you choose — they handle the legal proceeding, ${FEATURED_BROKER.pronoun.subject} handles the property.\n\n${softCta}`,
   },
   {
-    question: "What counties does Real Property Planning serve?",
-    answer: `${FEATURED_BROKER.Role} serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County throughout Washington State. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
+    question: "What areas does the featured broker work in?",
+    answer: `Real Property Planning is a free educational resource and provides no services itself. ${FEATURED_BROKER.Role} works in King, Snohomish, Pierce, and Kitsap Counties. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
   },
   {
     question: "Is there help for senior transitions and downsizing decisions?",
@@ -101,7 +101,7 @@ const faqs = [
   },
   {
     question: "Do I need an appraisal before selling inherited property?",
-    answer: `Not always, but understanding the property's true market value is critical — especially in estate situations where pricing must be defensible. A broker with appraisal credentials, like Real Property Planning, can provide condition-based pricing that satisfies fiduciary obligations without the cost and delay of a formal appraisal in every case.\n\n${softCta}`,
+    answer: `Not always, but understanding the property's true market value is critical — especially in estate situations where pricing must be defensible. A broker who is also a certified appraiser, such as the featured broker, can provide condition-based pricing analysis. A broker's pricing analysis is not an appraisal: when value must be documented for estate tax, a stepped-up basis, a court, or a dispute among heirs, ask the estate attorney or CPA whether a formal appraisal is needed.\n\n${softCta}`,
   },
   {
     question: "Can an executor sell a house before probate is complete?",

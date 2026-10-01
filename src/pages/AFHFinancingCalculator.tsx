@@ -39,7 +39,7 @@ const FAQS = [
   {
     question: "Does occupancy really change whether a buyer can get financing?",
     answer:
-      "Yes, more than almost anything else. Each additional resident adds a full year of rate to the top line while adding little to costs, because the house, licence, insurance and base staff are already paid for. Two residents can move a home from a loan the lender declines to one it approves at full price. Lenders underwrite last year's tax returns, so occupancy must be real, not projected.",
+      "Yes, more than almost anything else. Each additional resident adds a full year of rate to the top line while adding little to costs, because the house, license, insurance and base staff are already paid for. Two residents can move a home from a loan the lender declines to one it approves at full price. Lenders underwrite last year's tax returns, so occupancy must be real, not projected.",
   },
   {
     question: "What is an SBA 7(a) loan and why do AFH buyers use it?",
@@ -93,7 +93,7 @@ const AFHFinancingCalculator = () => {
   // subtract replacement wages. An investor hires staff for it.
   const wages = buyerType === "investor" ? wagesInput : 0;
   const [priceProperty, setPriceProperty] = useState(1500000);
-  // Business financing (optional). The business — licence, contracts, residents —
+  // Business financing (optional). The business — license, contracts, residents —
   // is often priced separately from the house. However it is paid for, any loan
   // on it is serviced from the same income, so a lender counts that payment too.
   const [priceBusiness, setPriceBusiness] = useState(150000);
@@ -348,7 +348,7 @@ const AFHFinancingCalculator = () => {
             </div>
 
             <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 20 }}>
-              {field("Fixed operating costs per year ($)", fixed, setFixed, { step: 1000, note: "Costs that do not change with one more resident: base staff, insurance, utilities, licence, maintenance." })}
+              {field("Fixed operating costs per year ($)", fixed, setFixed, { step: 1000, note: "Costs that do not change with one more resident: base staff, insurance, utilities, license, maintenance." })}
               {field("Variable cost per resident per year ($)", variable, setVariable, { step: 500, note: "Extra food, supplies and care hours for each added resident." })}
             </div>
 
@@ -379,7 +379,7 @@ const AFHFinancingCalculator = () => {
 
             <div style={{ ...section, marginTop: 24 }}>Is the buyer also financing the business?</div>
             <p style={{ fontSize: 18, lineHeight: 1.6, color: "#141210", margin: "0 0 12px" }}>
-              The licence, contracts and residents are often priced separately from the house. However the buyer pays for them, any loan on the business is repaid from the same income — so a lender counts that payment too. Choose how it is handled:
+              The license, contracts and residents are often priced separately from the house. However the buyer pays for them, any loan on the business is repaid from the same income — so a lender counts that payment too. Choose how it is handled:
             </p>
             <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
               <div>

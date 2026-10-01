@@ -14,7 +14,7 @@ const GrayDivorce = () => {
     <>
       <SEOHead
         title="Gray Divorce and the Family Home in Washington State | Real Property Planning"
-        description="Guidance for Washington State couples over 50 navigating the family home during divorce. Calm, neutral real estate coordination from a Licensed Broker & Certified Appraiser."
+        description="Guidance for Washington State couples over 50 navigating the family home during divorce. How Washington divides the home, the federal home-sale tax exclusion, and which independent professionals handle each part."
         canonical="https://realpropertyplanning.com/gray-divorce"
       />
       <BreadcrumbSchema
@@ -34,7 +34,7 @@ const GrayDivorce = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              When a long marriage ends after 50, the family home is often the most complex — and emotional — asset to navigate. {FEATURED_BROKER.Role} helps separating couples understand their options clearly.
+              When a long marriage ends after 50, the family home is often the most complex — and emotional — asset to navigate. This guide explains the options separating couples usually weigh.
             </p>
             </div>
           </div>
@@ -48,7 +48,7 @@ const GrayDivorce = () => {
                 What Is Gray Divorce?
               </h2>
               <p className="text-foreground/90 text-lg leading-[1.7]">
-                Gray divorce refers to the growing trend of couples over age 50 ending long-term marriages. While divorce rates among younger adults have actually declined in recent years, divorce among those over 50 has more than doubled since 1990. Today, nearly 1 in 4 divorces in the U.S. involves someone over age 50, and among adults over 65, divorce rates continue to climb. The reasons are varied — empty nest syndrome, growing apart after decades together, differing retirement goals, infidelity, and increased financial independence among women. Whatever the reason, gray divorce brings unique challenges that younger couples rarely face, particularly when it comes to real estate, retirement assets, and long-term financial security.
+                Gray divorce refers to the growing trend of couples over age 50 ending long-term marriages. While divorce rates among younger adults have declined, divorce among people over 50 has risen sharply since 1990, and people over 50 now make up a much larger share of all divorces than they once did. The reasons are varied — empty nest syndrome, growing apart after decades together, differing retirement goals, infidelity, and increased financial independence among women. Whatever the reason, gray divorce brings unique challenges that younger couples rarely face, particularly when it comes to real estate, retirement assets, and long-term financial security.
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ const GrayDivorce = () => {
                 Washington State Is a Community Property State
               </h2>
               <p className="text-foreground/90 text-lg leading-[1.7]">
-                This matters enormously in a gray divorce. Washington's community property laws treat most assets and debts acquired during marriage as equally owned by both spouses — including the family home, retirement accounts, rental properties, and business interests — regardless of whose name appears on the title or who earned the income. However, Washington courts aim for a "just and equitable" division rather than an automatic 50/50 split, taking into account factors like the length of the marriage, each spouse's earning capacity, age, health, and career sacrifices made during the marriage.
+                This matters enormously in a gray divorce. Washington's community property laws treat most assets and debts acquired during marriage as owned by both spouses — including the family home, retirement accounts, rental properties, and business interests — regardless of whose name appears on the title or who earned the income. However, Washington courts divide both community and separate property in a way that is "just and equitable" (RCW 26.09.080) rather than by an automatic 50/50 split, considering the nature and extent of the community and separate property, the length of the marriage, and each spouse's economic circumstances — which in practice includes earning capacity, age, and health.
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ const GrayDivorce = () => {
                 {[
                   "One spouse buys out the other and refinances the mortgage in their own name",
                   "The home is sold and the proceeds are divided",
-                  "The court orders a partition by sale if the couple cannot agree",
+                  "If the couple cannot agree, the judge decides — awarding the home to one spouse (often with an offsetting payment) or ordering it sold",
                 ].map((option, i) => (
                   <div key={i} className="card-3d p-6 flex flex-col">
                     <span className="font-serif text-2xl text-gold font-semibold mb-3">{i + 1}</span>
@@ -91,7 +91,7 @@ const GrayDivorce = () => {
                 ))}
               </div>
               <p className="text-foreground/90 text-lg leading-[1.7]">
-                If the home was your primary residence for at least two years, you may qualify for a capital gains tax exemption on up to $250,000 of the gain — or $500,000 if filing jointly before the divorce is finalized. This is an important consideration when deciding whether to sell before or after the divorce is complete. Working with both a divorce attorney and an experienced real estate professional is essential to making an informed decision about the home.
+                If you owned and lived in the home at least two of the five years before the sale, up to $250,000 of the gain per person is excluded from federal income tax (IRC section 121). Up to $500,000 can be excluded on a joint return, and a joint return is possible only if the divorce is not final by December 31 of the year of the sale. A spouse who moved out can still count the time the other spouse lived there under the divorce decree. This is an important consideration when deciding whether to sell before or after the divorce is complete. Working with both a divorce attorney and an experienced real estate professional is essential to making an informed decision about the home.
               </p>
             </div>
           </div>
@@ -102,7 +102,7 @@ const GrayDivorce = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6 leading-tight text-center">
-                Where Real Property Planning Can Help
+                Where the Real Estate Side Comes In
               </h2>
               <p className="text-foreground/90 text-lg leading-[1.7] mb-10 text-center max-w-3xl mx-auto">
                 Gray divorce often triggers one or both of the following real estate needs.
@@ -111,7 +111,7 @@ const GrayDivorce = () => {
                 {[
                   {
                     title: "Selling the Family Home",
-                    body: "Whether it's a straightforward sale or a more complex situation involving an estate, trust, or court oversight, Real Property Planning has the experience to guide both parties through the process with sensitivity and professionalism.",
+                    body: "Whether it's a straightforward sale or a more complex situation involving an estate, trust, or court oversight, an experienced broker can guide both parties through the process with sensitivity and professionalism.",
                   },
                   {
                     title: "Pricing & Valuation",
@@ -140,7 +140,7 @@ const GrayDivorce = () => {
                 The Financial Realities of Gray Divorce
               </h2>
               <p className="text-foreground/90 text-lg leading-[1.7] mb-8">
-                The financial impact of gray divorce is significant and often underestimated. Women who divorce after age 50 experience an average 45% drop in their standard of living. Men experience a 21% drop. Both face the challenge of rebuilding financial security with less time before retirement. Gray divorce also necessitates comprehensive updates to estate planning documents — wills, trusts, beneficiary designations, and powers of attorney all require revision. Key financial considerations include:
+                The financial impact of gray divorce is significant and often underestimated. Research on people who divorce after 50 has found that both women and men see their standard of living fall, and women's typically falls further. Both face the challenge of rebuilding financial security with less time before retirement. Gray divorce also necessitates comprehensive updates to estate planning documents — wills, trusts, beneficiary designations, and powers of attorney all require revision. Washington law does some of this automatically: filing for divorce ends a spouse's authority as agent under a power of attorney unless the document says otherwise (RCW 11.125.100), and a final divorce revokes gifts to the former spouse in a will (RCW 11.12.051). Beneficiary forms on employer retirement plans are not changed automatically, so update them directly. Key financial considerations include:
               </p>
               <ul className="space-y-3">
                 {[
@@ -168,7 +168,7 @@ const GrayDivorce = () => {
                 Working With the Right Team
               </h2>
               <p className="text-foreground/90 text-lg leading-[1.7]">
-                Gray divorce is not a situation to navigate alone. The professionals you'll want on your side include a family law attorney experienced in gray divorce, a CPA or financial planner familiar with retirement asset division, a real estate professional who understands the sensitivity of the situation, and potentially a senior living advisor if downsizing is part of the plan. {FEATURED_BROKER.Role} works alongside attorneys, CPAs, and financial planners throughout Washington State to help separating couples handle the real estate side of gray divorce with clarity and care.
+                Gray divorce is not a situation to navigate alone. The professionals you'll want on your side include a family law attorney experienced in gray divorce, a CPA or financial planner familiar with retirement asset division, a real estate professional who understands the sensitivity of the situation, and potentially a senior living advisor if downsizing is part of the plan. {FEATURED_BROKER.Role}, working through {FEATURED_BROKER.pronoun.possessive} own brokerage, works alongside attorneys, CPAs, and financial planners on the real estate side of gray divorce. Real Property Planning does not refer clients to attorneys; choose a Washington-licensed family law attorney and confirm their license with the Washington State Bar Association (wsba.org).
               </p>
             </div>
           </div>
@@ -183,10 +183,10 @@ const GrayDivorce = () => {
                 className="marquee-hover block bg-primary border-2 border-gold rounded-xl px-8 py-8 md:px-10 md:py-10 text-center shadow-md hover:shadow-lg transition-shadow duration-300 group"
               >
                 <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                  Featured Divorce Attorneys
+                  Divorce Attorneys
                 </p>
                 <p className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold leading-snug">
-                  Looking for a Divorce Attorney? Meet our Featured Divorce Attorneys{" "}
+                  What a Divorce Attorney Does — and the Divorce Attorneys Listed in the Directory{" "}
                   <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </p>
               </Link>
@@ -202,7 +202,7 @@ const GrayDivorce = () => {
                 Going Through a Gray Divorce? Let's Talk.
               </h2>
               <p className="text-primary-foreground/90 text-lg md:text-xl leading-[1.7] mb-10 max-w-2xl mx-auto">
-                Whether you need a home valuation, help selling the family home, or simply want to understand your options, Real Property Planning is here to help — with no pressure and no judgment.
+                Whether you need a home valuation, help selling the family home, or simply want to understand your options, the featured broker and appraiser are available for a no-pressure conversation through their own practices.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

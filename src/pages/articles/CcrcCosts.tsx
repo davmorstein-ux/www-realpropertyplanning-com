@@ -169,7 +169,7 @@ const CcrcCosts = () => {
                 This question trips up many families, and the answer varies widely.
               </p>
               <p className={pClass}>
-                Some communities offer a fully refundable entrance fee — effectively held in trust and returned to the resident or their estate when they leave or pass away. Others offer partial refunds on a declining scale. Others are non-refundable entirely.
+                Some communities offer a largely refundable entrance fee, returned to the resident or their estate when they leave or pass away — under some contracts only after the unit is re-occupied, so ask about timing. Others offer partial refunds on a declining scale. Others are non-refundable entirely. The refund terms come from the contract itself; Washington law does not require refundable fees to be held in trust.
               </p>
               <p className={pClass}>
                 The refund policy has significant implications for estate planning and for how families think about the entrance fee. A non-refundable entrance fee is, essentially, a prepayment for future care. A refundable one functions more like a security deposit.
@@ -211,6 +211,9 @@ const CcrcCosts = () => {
               <p className={pClass}>
                 That last question matters. A CCRC is a long-term financial relationship with an organization. Understanding the financial stability of that organization — its occupancy rates, its reserves, its history of fee increases — is part of due diligence that shouldn't be skipped.
               </p>
+              <p className={pClass}>
+                Washington law helps here. A continuing care retirement community must register with the Department of Social and Health Services (DSHS) and must give you its disclosure statement before you sign a residency agreement or pay an entrance fee. That statement includes its two most recent audited financial statements, the current range of each fee, its refund policies, and how much notice it gives before raising fees (<a href="https://lawfilesext.leg.wa.gov/law/RCW/RCW%20%2018%20%20TITLE/RCW%20%2018%20.390%20%20CHAPTER/RCW%20%2018%20.390%20.060.htm" target="_blank" rel="noopener noreferrer" className={inlineLink}>RCW 18.390.060</a>). Registration is not a license or an endorsement: DSHS reviews the application for completeness only (<a href="https://lawfilesext.leg.wa.gov/law/RCW/RCW%20%2018%20%20TITLE/RCW%20%2018%20.390%20%20CHAPTER/RCW%20%2018%20.390%20.040.htm" target="_blank" rel="noopener noreferrer" className={inlineLink}>RCW 18.390.040</a>). Ask for the disclosure statement early and read it alongside the contract.
+              </p>
 
               <hr className={hrClass} />
 
@@ -231,7 +234,7 @@ const CcrcCosts = () => {
               <hr className={hrClass} />
 
               <p className={pClass}>
-                <em>Real Property Planning helps families navigate senior housing and CCRC decisions with clarity and confidence. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
+                <em>These guides explain senior housing and CCRC decisions in plain language. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
               </p>
 
             </article>

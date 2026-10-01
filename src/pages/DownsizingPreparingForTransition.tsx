@@ -156,7 +156,7 @@ const faqs = [
   {
     question: "How do families reduce stress during transitions?",
     answer:
-      "Clear communication, realistic timelines, and coordinated guidance from one team tend to replace pressure with a calmer, more manageable rhythm.",
+      "Clear communication, realistic timelines, and professionals who share information with each other tend to replace pressure with a calmer, more manageable rhythm.",
   },
 ];
 

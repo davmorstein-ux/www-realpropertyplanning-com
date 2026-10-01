@@ -67,8 +67,8 @@ const WaCares = () => {
 
             <h2 className={h2Class}>How WA Cares Is Funded</h2>
             <p className={pClass}>
-              Most Washington workers contribute 0.58% of their gross wages through automatic payroll deductions. Here
-              is what that roughly looks like:
+              Most Washington workers contribute 0.58% of their gross wages through automatic payroll deductions, with
+              no cap on the wages it applies to. Here is what that roughly looks like:
             </p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
               <li className={pClass + " mt-0"}>$50,000 annual income = about $290 per year</li>
@@ -85,8 +85,8 @@ const WaCares = () => {
 
             <h2 className={h2Class}>What WA Cares May Pay For</h2>
             <p className={pClass}>
-              If you qualify, WA Cares provides a lifetime benefit starting at $36,500, adjusted over time for
-              inflation. Approved uses may include:
+              Benefits became available on July 1, 2026. If you qualify, WA Cares provides a lifetime benefit of
+              $36,500, an amount that grows with inflation. Approved uses may include:
             </p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
               <li className={pClass + " mt-0"}>In-home personal care</li>
@@ -94,9 +94,9 @@ const WaCares = () => {
               <li className={pClass + " mt-0"}>Adult Family Homes</li>
               <li className={pClass + " mt-0"}>Assisted living communities</li>
               <li className={pClass + " mt-0"}>Memory care</li>
-              <li className={pClass + " mt-0"}>Skilled nursing facilities</li>
+              <li className={pClass + " mt-0"}>Long-term care services in nursing homes</li>
               <li className={pClass + " mt-0"}>Home modifications such as ramps and grab bars</li>
-              <li className={pClass + " mt-0"}>Durable medical equipment</li>
+              <li className={pClass + " mt-0"}>Adaptive equipment and technology</li>
               <li className={pClass + " mt-0"}>Transportation services</li>
               <li className={pClass + " mt-0"}>Meal delivery</li>
               <li className={pClass + " mt-0"}>Respite care</li>
@@ -112,15 +112,30 @@ const WaCares = () => {
             <h2 className={h2Class}>Who May Qualify</h2>
             <p className={pClass}>Eligibility generally has two parts.</p>
             <p className={pClass}>
-              First, a person must meet the program&apos;s contribution requirements based on work and payroll
-              contributions. Current program materials describe multiple pathways, including longer-term contribution
-              history, more recent contribution history, and partial benefits for certain older workers.
+              First, a person must meet the program&apos;s contribution requirements. There are three ways to qualify:
+              contributing for 10 years without a break of five or more consecutive years; contributing for 3 of the
+              last 6 years; or, for people born before 1968, partial benefits after at least one year of contributions.
             </p>
             <p className={pClass}>
-              Second, a person must need help with three or more activities of daily living for at least 90 days. These
-              activities can include bathing, dressing, eating, toileting, mobility, and medication-related help.
+              Second, a person must need help with three or more activities of daily living, such as bathing, dressing,
+              eating, toileting, or getting around, and that need must be expected to last at least 90 days.
             </p>
             <p className={pClass}>A formal assessment is used to determine benefit eligibility.</p>
+            <p className={pClass}>
+              People who move out of Washington can choose to keep their coverage if they have contributed for at least
+              three years and opt in within one year of moving; out-of-state benefits begin in July 2030. Starting in
+              January 2026, veterans with a service-connected disability rating of 70% or more and spouses of
+              active-duty service members can apply for an exemption from the premium. Details are at{" "}
+              <a
+                href="https://wacaresfund.wa.gov/"
+                className={inlineLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                wacaresfund.wa.gov
+              </a>
+              .
+            </p>
 
             <hr className={hrClass} />
 
@@ -153,7 +168,7 @@ const WaCares = () => {
               , which are an important part of long-term care planning for many families.
             </p>
             <p className={pClass}>
-              These smaller residential homes typically care for two to six residents in a home-like setting. Families
+              These smaller residential homes care for two to six residents (up to eight with DSHS approval) in a home-like setting. Families
               often appreciate the more personal environment, lower resident count, and closer caregiver attention.
             </p>
             <p className={pClass}>
@@ -228,10 +243,10 @@ const WaCares = () => {
 
             <hr className={hrClass} />
 
-            <h2 className={h2Class}>How Real Property Planning Can Help</h2>
+            <h2 className={h2Class}>Related Guides on This Site</h2>
             <p className={pClass}>
-              At Real Property Planning, housing is viewed as a key part of long-term care planning. Resources may help
-              families better understand WA Cares Fund planning, Adult Family Homes, assisted living communities, senior
+              Real Property Planning is a free educational resource that treats housing as a key part of long-term care
+              planning. Its guides cover WA Cares Fund planning, Adult Family Homes, assisted living communities, senior
               housing options, aging in place, downsizing strategies, estate and probate real estate, housing transition
               planning, and home valuation and market insight.
             </p>

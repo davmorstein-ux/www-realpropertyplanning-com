@@ -148,7 +148,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="What Repairs Should Be Made Before Selling a Probate Home in Washington? | Real Property Planning"
-      description="Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip. Licensed Broker & Certified Appraiser — (206) 900-3015."
+      description="Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema

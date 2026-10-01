@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { CARE_TYPES, formatCurrency, COC_TEAL } from "@/lib/careTypes";
+import { CARE_TYPES, formatCurrency, COC_TEAL, COST_SOURCE_LINE, COST_SOURCE_URL } from "@/lib/careTypes";
 import { CARE_INFLATION_RATE } from "@/lib/careInflation";
 import AFHCostByLocationCard from "@/components/AFHCostByLocationCard";
 
@@ -131,10 +131,15 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
     () => careType.waMonthly * Math.pow(1 + inflation / 100, yearsOut),
     [careType, yearsOut, inflation],
   );
+  /* Null for adult family homes: the license category is Washington's, so
+     there is no national median to compare against. Every national figure
+     below renders a plain "no national figure" message in that case. */
+  const hasNational = careType.nationalMonthly !== null;
   const projectedNationalMonthly = useMemo(
-    () => careType.nationalMonthly * Math.pow(1 + inflation / 100, yearsOut),
+    () => (careType.nationalMonthly ?? 0) * Math.pow(1 + inflation / 100, yearsOut),
     [careType, yearsOut, inflation],
   );
+  const NO_NATIONAL = "No national figure";
   /* Derived values for the print summary. Restored alongside it from
      0274a1aa^ — the Aug 6 Lovable rewrite deleted the summary and these with
      it, while leaving 20-odd translated printSummary keys orphaned in all
@@ -169,7 +174,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           Cost of <strong className="coc-card-title-accent">Care Calculator</strong>
         </h2>
         <div style={{ fontSize: 13, color: "#3f4a46", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
-          Washington vs. National Average
+          {hasNational ? "Washington vs. National Median" : "Washington estimate"}
         </div>
       </div>
 
@@ -264,16 +269,24 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
               lineHeight: 1.3,
             }}
           >
-            {t("costOfCarePage.results.nationalMedian")}
+            {/* Hard-coded rather than t("costOfCarePage.results.nationalMedian"),
+                whose en.json text reads "National Average"; the figures are medians. */}
+            National Median
           </div>
-          <div style={{ lineHeight: 1.25, display: "flex", alignItems: "baseline", justifyContent: "center", gap: 6, flexWrap: "wrap" }}>
-            <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(18px,2.6vw,22px)", color: NAVY }}>
-              {formatCurrency(projectedNationalMonthly)}
-            </span>
-            <span style={{ fontSize: 15, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif" }}>
-              {t("costOfCarePage.results.perMonth")}
-            </span>
-          </div>
+          {hasNational ? (
+            <div style={{ lineHeight: 1.25, display: "flex", alignItems: "baseline", justifyContent: "center", gap: 6, flexWrap: "wrap" }}>
+              <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(18px,2.6vw,22px)", color: NAVY }}>
+                {formatCurrency(projectedNationalMonthly)}
+              </span>
+              <span style={{ fontSize: 15, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif" }}>
+                {t("costOfCarePage.results.perMonth")}
+              </span>
+            </div>
+          ) : (
+            <div style={{ fontSize: 15, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif", lineHeight: 1.3 }}>
+              {NO_NATIONAL}: adult family homes are a Washington license type
+            </div>
+          )}
         </div>
       </div>
 
@@ -315,15 +328,29 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         <div
           style={{ fontSize: 16, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif", marginTop: 2, lineHeight: 1.3 }}
         >
-          {t("costOfCarePage.results.inWashingtonVs", { amount: formatCurrency(totalNationalCost) })}
+          {hasNational
+            ? t("costOfCarePage.results.inWashingtonVs", { amount: formatCurrency(totalNationalCost) })
+            : "in Washington"}
         </div>
       </div>
 
       {/* Growth-rate control and its source sentence removed Sept 2026 at
           David's request. Projections still grow at DEFAULT_INFLATION; the
           care-type note is also dropped here so the card ends on one line. */}
+      {/* Estimate rows (memory care, adult family home, independent living,
+          CCRC) say so here, so no reader takes them for a survey median. */}
+      {careType.estimate && (
+        <p className="coc-infl-source" style={{ margin: "6px 0 6px", textAlign: "center" }}>
+          {careType.note}
+        </p>
+      )}
       <p className="coc-infl-source" style={{ margin: "6px 0 16px", textAlign: "center" }}>
-        Projections are estimates; actual costs vary.
+        {/* Source line hard-coded from careTypes.ts (not en.json) so the year
+            and the estimate caveat change with the figures. */}
+        <a href={COST_SOURCE_URL} target="_blank" rel="noopener noreferrer">
+          {COST_SOURCE_LINE}
+        </a>{" "}
+        Future years assume costs rise {inflation}% a year. Prices vary widely by area and care level; projections are estimates.
       </p>
 
       {/* AFH only: the statewide median above hides a wide county spread, so
@@ -372,7 +399,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           }}
         >
           {calculatorSlug
-            ? "Open Full Calculator (Adjust Inflation, Compare Care Types) →"
+            ? "Open Full Calculator (Compare Care Types) →"
             : "Compare Care Costs →"}
         </Link>
         </div>
@@ -490,26 +517,29 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
             <tr>
               <td style={{ padding: "4px 0" }}>{t("costOfCarePage.printSummary.rowPerMonth")}</td>
               <td style={{ textAlign: "right" }}>{formatCurrency(projectedWaMonthly)}</td>
-              <td style={{ textAlign: "right" }}>{formatCurrency(projectedNationalMonthly)}</td>
+              <td style={{ textAlign: "right" }}>{hasNational ? formatCurrency(projectedNationalMonthly) : NO_NATIONAL}</td>
             </tr>
             <tr>
               <td style={{ padding: "4px 0" }}>{t("costOfCarePage.printSummary.rowPerYear")}</td>
               <td style={{ textAlign: "right" }}>{formatCurrency(projectedWaAnnual)}</td>
-              <td style={{ textAlign: "right" }}>{formatCurrency(projectedNationalAnnual)}</td>
+              <td style={{ textAlign: "right" }}>{hasNational ? formatCurrency(projectedNationalAnnual) : NO_NATIONAL}</td>
             </tr>
             <tr>
               <td style={{ padding: "4px 0", fontWeight: 700 }}>
                 {t("costOfCarePage.printSummary.rowTotal", { years: yearsOfCareNeeded })}
               </td>
               <td style={{ textAlign: "right", fontWeight: 700 }}>{formatCurrency(totalWaCost)}</td>
-              <td style={{ textAlign: "right", fontWeight: 700 }}>{formatCurrency(totalNationalCost)}</td>
+              <td style={{ textAlign: "right", fontWeight: 700 }}>{hasNational ? formatCurrency(totalNationalCost) : NO_NATIONAL}</td>
             </tr>
           </tbody>
         </table>
         <p
           style={{ fontSize: "11px", color: "#777", margin: "20px 0 0", borderTop: "1px solid #ccc", paddingTop: 8 }}
         >
-          {t("costOfCarePage.printSummary.footer")}
+          {/* Hard-coded: en.json's printSummary.footer credits every figure to
+              CareScout/Genworth, which is not true of the estimate rows. */}
+          {COST_SOURCE_LINE} Actual costs vary by area, provider, and level of care. For general planning only.
+          Courtesy of Real Property Planning — realpropertyplanning.com.
         </p>
       </div>
 

@@ -70,21 +70,35 @@ const NursingHomes = () => {
 
             <h2 className={h2Class}>Washington State: The Numbers Families Need</h2>
             <p className={pClass}>
-              Washington has 194 licensed nursing homes statewide. The Seattle-Tacoma metro area alone accounts for 86
-              of them — which gives families in the region meaningful options, but also makes comparison essential.
-              Families in rural areas may face a more limited selection and should plan earlier, factoring in
+              Washington had 194 certified nursing facilities as of 2025 (KFF analysis of Medicare&apos;s nursing home
+              data). Many are in the Puget Sound region, which gives families there meaningful options, but also makes
+              comparison essential. Families in rural areas may face a more limited selection and should plan earlier, factoring in
               transportation and the practicalities of regular visits.
             </p>
             <p className={pClass}>
-              The costs are significant. In Washington, a semi-private room averages approximately $12,167 per month. A
-              private room averages approximately $13,688 per month. For context, the national average for a shared room
-              runs about $327 per day. These are not small numbers, and understanding them early — before a crisis
-              forces a decision — is one of the most valuable things a family can do.
+              The costs are significant. Washington medians (CareScout 2025 survey) are about $13,155 a month for a
+              semi-private room ($157,859 a year) and about $15,970 a month for a private room ($191,625 a year). The
+              national medians are about $9,581 and $10,798 a month. Actual prices vary widely by area and care level,
+              and Seattle-area prices run higher. These are not small numbers, and understanding them early — before a
+              crisis forces a decision — is one of the most valuable things a family can do.
             </p>
             <p className={pClass}>
-              For families weighing their options, it is worth noting that assisted living in Washington averages
-              approximately $6,000 per month — roughly half the cost of nursing home care. For individuals whose needs
-              can be safely met in a less intensive setting, that difference matters enormously over time.
+              For families weighing their options, it is worth noting that the Washington median for assisted living is
+              about $7,550 a month (CareScout 2025 survey) — a little more than half the cost of a semi-private nursing
+              home room. For individuals whose needs can be safely met in a less intensive setting, that difference
+              matters enormously over time.
+            </p>
+            <p className={pClass}>
+              Source:{" "}
+              <a
+                href="https://www.businesswire.com/news/home/20260302776244/en/CareScout-Releases-2025-Cost-of-Care-Data-for-Washington"
+                className={inlineLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CareScout (formerly Genworth) Cost of Care Survey, 2025 data, released March 2026
+              </a>
+              .
             </p>
 
             <hr className={hrClass} />
@@ -97,13 +111,13 @@ const NursingHomes = () => {
             <p className={pClass}>
               At the federal level, the Centers for Medicare and Medicaid Services (CMS) establishes the standards that
               all nursing facilities must meet to participate in Medicare and Medicaid programs. At the state level, the
-              Department of Social and Health Services (DSHS), through its Aging and Long-Term Support Administration
-              (ALTSA) and Residential Care Services (RCS) Division, is responsible for licensing and ongoing oversight
-              of all nursing facilities operating in Washington.
+              Department of Social and Health Services (DSHS), through its Residential Care Services division — now
+              part of the Home and Community Living Administration (HCLA), formerly ALTSA — is responsible for licensing
+              and ongoing oversight of all nursing facilities operating in Washington.
             </p>
             <p className={pClass}>
-              Federal law requires DSHS to conduct unannounced inspections of every nursing home at least once every
-              fifteen months. These inspections are comprehensive health surveys that examine everything from medication
+              Federal law requires DSHS to conduct unannounced inspections (surveys) of every certified nursing home at
+              least once every fifteen months. These inspections are comprehensive health surveys that examine everything from medication
               management and infection control to resident rights and quality of life. The results are public record.
             </p>
 
@@ -115,10 +129,12 @@ const NursingHomes = () => {
               overlooked by families evaluating facilities.
             </p>
             <p className={pClass}>
-              Federal rules now require Medicare and Medicaid certified nursing homes to provide at least 3.48 hours of
-              care per resident per day. Of that total, at least 0.55 hours must come from a registered nurse and 2.45
-              hours from a certified nurse aide. Federal rules also mandate 24-hour RN coverage in all certified
-              facilities. Washington State's own minimum standard is 3.4 hours of care per resident day.
+              A 2024 federal rule that would have required 3.48 hours of nursing care per resident per day and a
+              registered nurse on site around the clock was repealed effective February 2, 2026. Federal rules now
+              require a registered nurse at least 8 consecutive hours a day, seven days a week, plus
+              &quot;sufficient&quot; nursing staff to meet residents&apos; needs. Washington law is stricter: nursing
+              homes must provide at least 3.4 hours of direct care per resident day (RCW 74.42.360), and larger
+              facilities must have a registered nurse on duty 24 hours a day.
             </p>
             <p className={pClass}>
               When reviewing a facility, ask not just whether it meets these minimums — but by how much. Facilities that
@@ -194,8 +210,10 @@ const NursingHomes = () => {
             </p>
             <p className={pClass}>
               In Washington State, Medicaid can cover nursing home care for eligible residents who have both a medical
-              need for long-term care and meet financial requirements. If your income is less than approximately $11,700
-              per month, you may be financially eligible for Medicaid nursing home coverage. Not all facilities accept
+              need for long-term care and meet financial requirements. In 2026 the resource limit is $2,000 for a single
+              person. There is no fixed income cap for nursing home coverage: a person whose income is less than the
+              cost of their nursing home care may qualify, and most of that income then goes toward the cost of care.
+              Not all facilities accept
               Medicaid residents, and those that do may have limited Medicaid beds — making early planning essential.
             </p>
             <p className={pClass}>
@@ -254,14 +272,14 @@ const NursingHomes = () => {
             <hr className={hrClass} />
 
             <p className={pClass + " italic"}>
-              Real Property Planning helps families navigate senior housing and care decisions with clarity and
-              confidence.{" "}
+              Real Property Planning is a free educational resource for families navigating senior housing and care
+              decisions.{" "}
               <Link to="/guides-and-resources" className={inlineLink}>
                 Explore our full library of resources
               </Link>{" "}
               or{" "}
               <Link to="/senior-living-advisors" className={inlineLink}>
-                connect with a senior living advisor
+                learn what an independent senior living advisor does
               </Link>{" "}
               to start the conversation.
             </p>

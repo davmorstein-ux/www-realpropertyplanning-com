@@ -32,6 +32,10 @@ const EstatePlanningPowersOfAttorney = () => (
         An estate planning attorney helps individuals and families prepare for the future by drafting wills, trusts, powers of attorney, and healthcare directives. Their work ensures that your wishes are legally documented and that the right people have authority to act on your behalf if you cannot. Good estate planning can help families avoid confusion, conflict, and unnecessary probate proceedings.
       </p>
 
+      <p className="attorney-role-description">
+        Real Property Planning does not refer clients to attorneys; choose a Washington-licensed estate planning attorney and confirm their license with the Washington State Bar Association (wsba.org). For a plain-language overview of the documents involved, see <Link to="/planning-before-a-crisis/legal-documents">The Legal Documents That Matter Most</Link>.
+      </p>
+
       <div className="flex justify-center my-8">
         <Link to="/professionals/attorneys">
           <Button variant="gold" size="lg">Back to Attorneys</Button>

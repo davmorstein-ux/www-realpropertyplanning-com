@@ -146,7 +146,7 @@ const SeniorHousingGuide = () => {
               <h2 className={h2Class}>Memory Care: When Safety Becomes the Priority</h2>
               <p className={pClass}>
                 Memory care communities are purpose-built for individuals living with Alzheimer's disease or other forms
-                of dementia. They offer secure environments, enhanced staffing ratios, and structured daily programming
+                of dementia. They offer secure environments, staff trained in dementia care, and structured daily programming
                 designed around the specific challenges of cognitive decline.
               </p>
               <p className={pClass}>
@@ -169,7 +169,8 @@ const SeniorHousingGuide = () => {
               <h2 className={h2Class}>CCRCs: A Plan for Every Stage</h2>
               <p className={pClass}>
                 Continuing care retirement communities — CCRCs — offer something the other options generally don't: a
-                contractual commitment to care across multiple life stages.
+                contract that can cover housing and care across multiple life stages. How much future care is promised,
+                and at what price, depends on the contract type, so read it closely.
               </p>
               <p className={pClass}>
                 Residents move in while they're healthy and independent. If their needs change over time, the community
@@ -179,8 +180,9 @@ const SeniorHousingGuide = () => {
               <p className={pClass}>
                 The pricing model reflects this long-term commitment. CCRCs typically charge a substantial entrance fee
                 plus ongoing monthly costs. For families who value predictability and want to avoid future relocations,
-                this can be a sound investment. But the contracts are complex, and careful review before signing is
-                essential.
+                this can be a sound choice. But the contracts are complex. Washington requires a CCRC to give you a
+                disclosure statement, including audited financial statements, fee ranges, and refund policies, before
+                you sign or pay an entrance fee (RCW 18.390.060); careful review before signing is essential.
               </p>
               <p className={pClass}>
                 <em>
@@ -259,8 +261,10 @@ const SeniorHousingGuide = () => {
                 <Link to="/senior-living-advisors" className={inlineLink}>
                   senior living advisor
                 </Link>{" "}
-                can help map realistic options to specific situations — not as a salesperson, but as a guide through
-                terrain most families haven't navigated before.
+                can help map realistic options to specific situations. Advisors are usually paid by the communities or
+                homes where a family moves, not by the family. In Washington, an elder placement agency must give you a
+                written disclosure statement before making a referral, including how its fee from a provider is
+                computed, and must tell you the amount of that fee if you ask (RCW 18.330.050).
               </p>
 
               <hr className={hrClass} />
@@ -293,7 +297,7 @@ const SeniorHousingGuide = () => {
 
               <p className={pClass}>
                 <em>
-                  Real Property Planning helps families navigate senior housing decisions with clarity and confidence.{" "}
+                  These guides explain senior housing and care decisions in plain language.{" "}
                   <Link to="/guides-and-resources" className={inlineLink}>
                     Explore our full library of resources →
                   </Link>

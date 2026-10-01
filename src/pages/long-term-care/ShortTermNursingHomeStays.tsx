@@ -42,8 +42,8 @@ const ShortTermNursingHomeStays = () => {
 
             <h2 className={h2Class}>How Medicare Covers Short-Term Nursing Home Stays</h2>
             <p className={pClass}>For many families, the financial picture of a short-term stay is less daunting than expected — because Medicare covers skilled nursing facility care under specific conditions.</p>
-            <p className={pClass}>To qualify, the individual must have had a hospital stay of at least three consecutive days, be admitted to a Medicare-certified skilled nursing facility within 30 days of that hospital stay, and require skilled nursing or rehabilitation services on a daily basis.</p>
-            <p className={pClass}>When those conditions are met, Medicare covers the full cost for the first 20 days. From day 21 through day 100, a daily copayment applies — in 2025, that copayment is $204 per day. After day 100, Medicare coverage ends entirely.</p>
+            <p className={pClass}>To qualify, the individual must have been formally admitted to the hospital as an inpatient for at least three days in a row, generally be admitted to a Medicare-certified skilled nursing facility within 30 days of leaving the hospital, and require skilled nursing or rehabilitation services on a daily basis. Time spent in the hospital &quot;under observation&quot; or in the emergency room does not count toward the three days — even if the person stayed overnight. Ask the hospital in writing whether your loved one is an inpatient or under observation.</p>
+            <p className={pClass}>When those conditions are met, Medicare covers the full cost for the first 20 days. From day 21 through day 100, a daily copayment applies — in 2026, that copayment is $217 per day. After day 100, Medicare coverage ends entirely, and it can end sooner if daily skilled care is no longer needed. Medicare does not pay for long-term custodial care.</p>
             <p className={pClass}>Knowing the timeline and copayment rules before a stay begins allows families to plan rather than react.</p>
 
             <hr className={hrClass} />
@@ -51,7 +51,7 @@ const ShortTermNursingHomeStays = () => {
             <h2 className={h2Class}>What Good Rehabilitation Looks Like in Washington Nursing Homes</h2>
             <p className={pClass}>Not all skilled nursing facilities offer the same quality of rehabilitation. Strong therapy programs lead to faster recovery and better outcomes.</p>
             <p className={pClass}>When choosing a facility for a short-term stay, look for on-site physical therapy, occupational therapy, and speech-language pathology. Ask how many therapy hours are provided each day, whether therapy is available seven days a week, and what percentage of short-term residents return home successfully.</p>
-            <p className={pClass}>Washington State nursing home inspection records and Medicare's Care Compare website include quality measures specifically relevant to short-term care — including community discharge rates and functional improvement during recovery. These are public records, and reviewing them before choosing a facility is time well spent.</p>
+            <p className={pClass}>Medicare's Care Compare website includes quality measures specifically relevant to short-term care — including how often short-stay residents return home and how much their function improves. Washington State inspection reports, available through DSHS, show any deficiencies found at each facility. Both are public, and reviewing them before choosing a facility is time well spent.</p>
 
             <hr className={hrClass} />
 
@@ -75,7 +75,7 @@ const ShortTermNursingHomeStays = () => {
 
             <hr className={hrClass} />
 
-            <p className={pClass + " italic"}>Real Property Planning helps families in the Puget Sound region navigate senior care decisions with clarity and confidence. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources</Link> or <Link to="/senior-living-advisors" className={inlineLink}>connect with a senior living advisor</Link> to start the conversation.</p>
+            <p className={pClass + " italic"}>Real Property Planning is a free educational resource for Washington families navigating senior care decisions. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources</Link> or <Link to="/senior-living-advisors" className={inlineLink}>learn what an independent senior living advisor does</Link> to start the conversation.</p>
           </div>
         </section>
 

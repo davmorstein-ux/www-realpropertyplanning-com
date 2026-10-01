@@ -134,9 +134,13 @@ const HousingOptionDetail = ({
         <section className="py-12 md:py-16 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <Link to="/contact">
+              {/* Was "Talk to a Senior Living Advisor" linking to /contact, which
+                  implied the hub itself is an advisor. It provides no services
+                  (owner's rule), so this points to the guide that explains
+                  what independent senior living advisors do. Sept 30, 2026. */}
+              <Link to="/senior-living-advisors">
                 <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold">
-                  Talk to a Senior Living Advisor →
+                  What a Senior Living Advisor Does →
                 </Button>
               </Link>
             </div>

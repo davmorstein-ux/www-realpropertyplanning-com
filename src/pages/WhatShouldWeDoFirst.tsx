@@ -145,7 +145,7 @@ const continueJourney = [
   {
     href: "/building-your-professional-team",
     title: "Building Your Professional Team",
-    description: "Meet the coordinated team supporting Washington families.",
+    description: "Which independent professionals handle each part of a transition.",
     icon: iconHandshake,
   },
 ];

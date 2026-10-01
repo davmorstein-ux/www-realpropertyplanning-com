@@ -46,11 +46,15 @@ const faqs = [
   },
   {
     q: "Does selling the house affect Medicaid eligibility?",
-    a: "Potentially yes. Medicaid has asset and income rules that vary by situation. Consult an elder law attorney before selling if Medicaid is a current or future consideration.",
+    a: "Often, yes. While your parent intends to return home, or a spouse or dependent relative lives there, the home is usually an exempt asset for Apple Health (Washington Medicaid) long-term care, within a home equity limit ($1,130,000 in 2026). Once the house is sold, the cash proceeds count toward the asset limit — $2,000 for a single person (WAC 182-513-1350) — so they are generally spent on care before Medicaid will pay. Giving proceeds away, or selling to family for less than fair value, within five years (60 months) before applying can cause a penalty period without coverage (WAC 182-513-1363). Consult an elder law attorney before selling if Medicaid is a current or future consideration.",
+  },
+  {
+    q: "Will my parent owe capital gains tax on the sale?",
+    a: "Often not, or not much. Under federal law (IRC section 121), a seller who owned and lived in the home at least two of the five years before the sale can exclude up to $250,000 of gain ($500,000 for a married couple filing jointly). A parent who moved into a licensed care facility because they could no longer care for themselves keeps that exclusion if they owned and lived in the home at least one of those five years (IRC 121(d)(7)). Washington's capital gains tax does not apply to real estate. A CPA can confirm the numbers for your parent's situation.",
   },
   {
     q: "How long does it take to sell a senior's home?",
-    a: "From first conversation to closing, most senior home sales take 60–120 days depending on preparation needs and market conditions. Starting early gives the family the most options.",
+    a: "It varies widely. Preparation, family decisions, market conditions, and the buyer's financing all affect the timeline; many sales take a few months from the first conversation to closing, and some take longer. Starting early gives the family the most options.",
   },
   {
     q: `Can ${FEATURED_BROKER.role} start before my parent has moved?`,
@@ -123,7 +127,7 @@ const SellHouseFundSeniorLiving = () => {
                 Why the Home Sale and the Care Decision Are Connected
               </h2>
               <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
-                Senior care in Washington State is expensive. Assisted living averages $4,000–$8,000 per month. Memory care can reach $10,000 or more. For most families, Social Security and savings alone are not enough — the home is the primary asset available to bridge the gap.
+                Senior care in Washington State is expensive. The Washington median for assisted living is about $7,550 a month, and a semi-private nursing home room about $13,155 a month (CareScout 2025 survey); memory care typically costs more than assisted living — an estimate of roughly $9,000–$10,000 or more a month. Actual prices vary widely by area and care level, and Seattle-area prices run higher. For most families, Social Security and savings alone are not enough — the home is the primary asset available to bridge the gap.
               </p>
               <p className="text-foreground text-base md:text-lg leading-relaxed">
                 That means two things have to happen at roughly the same time: your parent moves into care, and the home goes on the market. Getting the timing right — and the price right — directly affects how long the care can be funded and how much financial stress the family carries.
@@ -191,22 +195,22 @@ const SellHouseFundSeniorLiving = () => {
               </h2>
               <div className="border-2 border-gold rounded-2xl bg-card p-6 md:p-10 shadow-lg">
                 <p className="text-foreground text-base md:text-lg leading-relaxed mb-6">
-                  A Washington State home selling for <span className="font-bold">$600,000</span> with a <span className="font-bold">$100,000</span> remaining mortgage and <span className="font-bold">$40,000</span> in closing and preparation costs leaves approximately <span className="font-bold text-primary">$460,000</span> in net proceeds.
+                  An illustrative example, not a forecast: a Washington State home selling for <span className="font-bold">$600,000</span> with a <span className="font-bold">$100,000</span> remaining mortgage and <span className="font-bold">$40,000</span> in closing and preparation costs leaves approximately <span className="font-bold text-primary">$460,000</span> in net proceeds.
                 </p>
                 <ul className="space-y-4 mb-6">
                   <li className="border-l-4 border-gold pl-5">
                     <p className="text-foreground text-base md:text-lg leading-relaxed">
-                      <span className="font-bold">At $6,000/month for assisted living</span> — approximately 6 years of care funded
+                      <span className="font-bold">At about $7,550/month for assisted living</span> (the Washington median, CareScout 2025 survey) — approximately 5 years of care funded
                     </p>
                   </li>
                   <li className="border-l-4 border-gold pl-5">
                     <p className="text-foreground text-base md:text-lg leading-relaxed">
-                      <span className="font-bold">At $9,000/month for memory care</span> — approximately 4 years of care funded
+                      <span className="font-bold">At about $9,500/month for memory care</span> (an estimate; no survey covers memory care) — approximately 4 years of care funded
                     </p>
                   </li>
                 </ul>
                 <p className="italic text-foreground/85 text-base md:text-lg leading-relaxed">
-                  Getting the home sold at the right price, at the right time, matters enormously to the family's long-term financial picture.
+                  The example leaves out income taxes, rising care costs, and other income such as Social Security and pensions. Getting the home sold at the right price, at the right time, matters enormously to the family's long-term financial picture.
                 </p>
               </div>
             </div>

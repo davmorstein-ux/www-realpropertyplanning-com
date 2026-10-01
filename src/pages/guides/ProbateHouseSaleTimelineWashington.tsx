@@ -122,7 +122,7 @@ const ProbateHouseSaleTimelineWashington = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Probate House Sale Timeline in Washington State | Real Property Planning"
-      description="Real Property Planning explains the realistic timeline for selling a probate property in Washington State — from death to distribution of proceeds. Licensed Broker & Certified Appraiser — (206) 900-3015."
+      description="Real Property Planning explains the realistic timeline for selling a probate property in Washington State — from death to distribution of proceeds."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema

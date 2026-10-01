@@ -139,7 +139,9 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
               <span className="rpp-calcswitch-name rpp-calcswitch-name">{o.shortLabel}</span>
               <span className="rpp-calcswitch-price rpp-calcswitch-price">
                 {formatCurrency(care.waMonthly)}
-                <span className="rpp-calcswitch-per rpp-calcswitch-per">&nbsp;/ month</span>
+                <span className="rpp-calcswitch-per rpp-calcswitch-per">
+                  &nbsp;/ month{care.estimate ? " (estimate)" : " (median)"}
+                </span>
               </span>
               <span className="rpp-calcswitch-blurb rpp-calcswitch-blurb">{o.blurb}</span>
             </Link>

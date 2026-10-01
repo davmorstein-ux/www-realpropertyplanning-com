@@ -26,7 +26,7 @@ const FAQS = [
   {
     question: "Why do King, Pierce, and Snohomish have a higher rate?",
     answer:
-      "DSHS pays a 'High Cost' schedule in those three counties and a 'Standard Cost' schedule everywhere else, reflecting labor and housing costs. Within a region the rate depends only on the resident's CARE classification (A Low through E High), which a DSHS case manager assigns after an assessment.",
+      "DSHS pays a 'High Cost' schedule in those three counties and a 'Standard Cost' schedule everywhere else. Within a region the base rate depends on the resident's CARE classification (A Low through E High), which a DSHS case manager assigns after an assessment; some residents also qualify for add-on payments for specialized services, which are not included in the figures here.",
   },
   {
     question: "Where do the private-pay ranges come from?",

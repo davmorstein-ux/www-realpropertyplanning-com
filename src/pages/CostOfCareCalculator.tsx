@@ -15,15 +15,17 @@
  * than rebuilding it — the accessibility handling was the hard part.
  *
  * FIGURES
- * Three values only. The three previously shown were the confirmed ones;
- * the other three carried "TODO: confirm" and have been dropped rather
- * than published unverified. Add them back only with real numbers.
+ * Read from src/lib/careTypes.ts (Sept 30, 2026) instead of being typed in
+ * here, so this tile can never drift from the calculators. Adult family home
+ * and memory care are estimates there, and are labelled as such below.
  *
  * COLOURS
  * Deliberately three different hues — green, blue, red — so the figures
  * are told apart by hue and not just by position. Every colour must reach
  * 4.5:1 on white; these measure 6.45, 11.27 and 10.02 respectively.
  */
+
+import { CARE_TYPES, formatCurrency } from "@/lib/careTypes";
 
 export interface CareCost {
   label: string;
@@ -32,10 +34,16 @@ export interface CareCost {
   color: string;
 }
 
+const figure = (id: string) => {
+  const care = CARE_TYPES.find((c) => c.id === id);
+  if (!care) return "";
+  return `${formatCurrency(care.waMonthly)}${care.estimate ? " (est.)" : ""}`;
+};
+
 const DEFAULT_COSTS: CareCost[] = [
-  { label: "Adult Family Home", amount: "$6,500", color: "#0f6b56" },
-  { label: "Assisted Living", amount: "$7,600", color: "#1B3A6B" },
-  { label: "Memory Care", amount: "$9,500", color: "#7f1d1d" },
+  { label: "Adult Family Home", amount: figure("adult-family-home"), color: "#0f6b56" },
+  { label: "Assisted Living", amount: figure("assisted-living"), color: "#1B3A6B" },
+  { label: "Memory Care", amount: figure("memory-care"), color: "#7f1d1d" },
 ];
 
 interface Props {

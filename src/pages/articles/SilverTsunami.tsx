@@ -77,20 +77,22 @@ const SilverTsunami = () => {
 
               <hr className="my-8 border-border" />
 
-              <h2 className={h2Class}>11,400 Americans Turn 65 Every Single Day</h2>
+              <h2 className={h2Class}>More Than 11,000 Americans Turn 65 Every Day</h2>
               <p className={pClass}>Let that number settle for a moment.</p>
               <p className={pClass}>
-                Not 11,400 per week. Not per month. Every day, roughly 11,400 Americans cross the threshold into what we
-                still call "retirement age" — a term that increasingly fails to capture the complexity of what follows.
+                Not per week. Not per month. Every day from 2024 through 2027, more than 11,000 Americans cross the
+                threshold into what we still call "retirement age" — more than 4.1 million a year, according to the
+                Alliance for Lifetime Income's Peak 65 research. "Retirement age" is a term that increasingly fails to
+                capture the complexity of what follows.
               </p>
               <p className={pClass}>
-                This has been happening since 2011, when the oldest Boomers first hit 65. It will continue until
-                approximately 2030, when the youngest members of that generation follow. The stretch from 2024 through
-                the late 2020s has been dubbed <strong>"Peak 65"</strong> — the most concentrated period of aging in
-                American history.
+                The wave began in 2011, when the oldest Boomers first hit 65, at roughly 10,000 a day. It will continue
+                until about 2030, when the youngest members of that generation follow. The stretch from 2024 through 2027
+                has been dubbed <strong>"Peak 65"</strong> — the most concentrated period of aging in American history.
               </p>
               <p className={pClass}>
-                By 2050, adults 65 and older are projected to make up more than 20% of the U.S. population. This is not
+                By 2030, when all Boomers will be older than 65, about 1 in 5 Americans will be 65 or older, according
+                to the U.S. Census Bureau. This is not
                 a temporary surge. It is a permanent restructuring of who we are as a country.
               </p>
 
@@ -147,8 +149,8 @@ const SilverTsunami = () => {
                 Beneath the Silver Tsunami runs a financial fault line that rarely gets discussed openly.
               </p>
               <p className={pClass}>
-                According to AARP, one in five Americans age 50 and older has no retirement savings. A majority worry
-                about outliving their money. And even among those who have saved responsibly, longevity creates risk
+                According to a 2024 AARP survey, one in five Americans age 50 and older has no retirement savings, and
+                more than half worry they will not have enough money to last in retirement. And even among those who have saved responsibly, longevity creates risk
                 that most financial plans weren't built to handle.
               </p>
               <p className={pClass}>
@@ -237,16 +239,15 @@ const SilverTsunami = () => {
               <hr className="my-8 border-border" />
 
               <p className={pClass + " italic"}>
-                Real Property Planning helps families navigate senior housing and transition decisions with clarity and
-                confidence.{" "}
+                These guides explain senior housing and transition decisions in plain language.{" "}
                 <Link to="/guides-and-resources" className={inlineLink}>
                   Explore our resources
                 </Link>{" "}
                 or{" "}
                 <Link to="/senior-living-advisors" className={inlineLink}>
-                  connect with a senior living advisor
+                  read what a senior living advisor does
                 </Link>{" "}
-                to start the conversation.
+                before you start the conversation.
               </p>
             </article>
           </div>

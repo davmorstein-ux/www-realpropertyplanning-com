@@ -35,7 +35,7 @@ const HowWeCanHelp = () => (
     <UL>
       <li><strong>Educational guides</strong> on probate, inherited property, senior housing options, and planning ahead</li>
       <li><strong>Plain-language explanations</strong> of key legal, financial, and real estate terms</li>
-      <li><strong>A directory of featured providers and professionals</strong> across Washington State — including estate planning and elder law attorneys, CPAs, financial planners, senior living advisors, move managers, real estate brokers, and certified residential appraisers</li>
+      <li><strong>A directory of featured providers and professionals</strong> across Washington State — including CPAs, financial planners, senior living advisors, move managers, real estate brokers, and certified residential appraisers. The directory does not list estate planning or elder law attorneys, and Real Property Planning does not refer clients to attorneys; choose a Washington-licensed attorney and confirm their license with the Washington State Bar Association (wsba.org)</li>
       <li><strong>Checklists and next-step prompts</strong> to help visitors organize their thinking</li>
     </UL>
 
@@ -45,7 +45,7 @@ const HowWeCanHelp = () => (
     <UL>
       <li><strong>Learn.</strong> Read the guides that match your situation to better understand the options and decisions ahead.</li>
       <li><strong>Compare.</strong> Use the explanations and checklists to think through what matters most to your family.</li>
-      <li><strong>Connect.</strong> Browse the featured providers and professionals and reach out directly to the ones that fit your needs.</li>
+      <li><strong>Contact.</strong> Browse the featured providers and professionals and reach out directly to the ones that fit your needs.</li>
     </UL>
 
     <Divider />

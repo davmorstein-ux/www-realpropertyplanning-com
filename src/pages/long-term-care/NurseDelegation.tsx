@@ -19,7 +19,7 @@ const NurseDelegation = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="The Nurse Delegation Program in Washington State: What Families Need to Know"
-        description="Learn how Washington State's Nurse Delegation Program allows trained caregivers to perform nursing tasks in home care and adult family home settings — and how Medicaid covers the cost."
+        description="Learn how Washington State's Nurse Delegation Program allows trained caregivers to perform nursing tasks at home, in adult family homes, and in assisted living — and how Medicaid covers the cost."
       />
       <Header />
       <main id="main-content">
@@ -52,13 +52,15 @@ const NurseDelegation = () => {
 
             <h2 className={h2Class}>What Is Nurse Delegation?</h2>
             <p className={pClass}>
-              Nurse delegation is a formal process where a registered nurse trains and authorizes an unlicensed
-              caregiver — called a home care aide or adult family home provider — to perform specific nursing tasks for
-              a specific client.
+              Nurse delegation is a formal process where a registered nurse trains and authorizes a credentialed
+              caregiver — a registered or certified nursing assistant, or a certified home care aide, who has completed
+              nurse delegation training — to perform specific nursing tasks for a specific client.
             </p>
             <p className={pClass}>
-              This is not a workaround or a compromise. It is a legally recognized, carefully regulated program
-              administered by the Washington State Department of Social and Health Services (DSHS). The delegating nurse
+              This is not a workaround or a compromise. It is a legally recognized, carefully regulated practice,
+              governed by state nursing law (RCW 18.79.260) and Nursing Commission rules (WAC 246-840-910 to -970). The
+              Washington State Department of Social and Health Services (DSHS) provides caregiver training and pays
+              for delegation for Medicaid clients. The delegating nurse
               retains clinical oversight and responsibility. The trained caregiver performs the tasks under that nurse's
               supervision. The client receives the care they need in the setting they prefer.
             </p>
@@ -67,12 +69,13 @@ const NurseDelegation = () => {
 
             <h2 className={h2Class}>Who Can Benefit From Nurse Delegation in Washington?</h2>
             <p className={pClass}>
-              Nurse delegation is available to adults receiving home care services or living in an adult family home who
-              need assistance with tasks that would otherwise require a licensed nurse.
+              Nurse delegation is available to adults receiving care at home, in an adult family home, or in an assisted
+              living facility who need assistance with tasks that would otherwise require a licensed nurse. (It is not
+              used in nursing homes, which have licensed nurses on staff.)
             </p>
             <p className={pClass}>
-              To be eligible, the client must be medically stable. The nursing tasks must be ones that can be safely
-              taught to and performed by an unlicensed caregiver. And the registered nurse overseeing the delegation
+              To be eligible, the client&apos;s condition must be stable and predictable. The nursing tasks must be ones
+              that can be safely taught to and performed by a trained nursing assistant or home care aide. And the registered nurse overseeing the delegation
               must determine that the arrangement is appropriate for that specific individual.
             </p>
             <p className={pClass}>
@@ -81,8 +84,9 @@ const NurseDelegation = () => {
               or blood glucose levels.
             </p>
             <p className={pClass}>
-              Tasks that cannot be delegated include those requiring ongoing clinical judgment — situations where the
-              nature of the task changes based on the client's condition in ways that require a nurse's real-time
+              Washington law says some tasks can never be delegated: injections other than insulin, sterile procedures,
+              central line care, and any task that requires a nurse&apos;s judgment — situations where the nature of the
+              task changes based on the client&apos;s condition in ways that require a nurse&apos;s real-time
               assessment.
             </p>
 
@@ -97,7 +101,8 @@ const NurseDelegation = () => {
               If the nurse determines that delegation is appropriate, they provide hands-on training to the caregiver
               for each specific task. The caregiver must demonstrate competency before performing the task
               independently. The nurse then documents the delegation formally and establishes a plan for ongoing
-              oversight — including regular visits to monitor the client and check in with the caregiver.
+              oversight — including regular visits, at least every 90 days, to monitor the client and check in with the
+              caregiver.
             </p>
             <p className={pClass}>
               The delegation is client-specific and task-specific. A caregiver delegated to administer insulin for one
@@ -110,7 +115,8 @@ const NurseDelegation = () => {
             <h2 className={h2Class}>Nurse Delegation in Adult Family Homes</h2>
             <p className={pClass}>
               Adult family homes are one of the primary settings where nurse delegation makes a meaningful difference.
-              Because adult family homes are smaller residential settings — licensed for two to six residents — they are
+              Because adult family homes are smaller residential settings — licensed for two to six residents, or up to
+              eight with DSHS approval — they are
               not required to have a nurse on staff around the clock. Without delegation, residents who develop
               nursing-level care needs may face a difficult choice: move to a higher level of care, or go without.
             </p>
@@ -162,14 +168,14 @@ const NurseDelegation = () => {
             <hr className={hrClass} />
 
             <p className={pClass + " italic"}>
-              Real Property Planning helps families in the Puget Sound region navigate senior care decisions with
-              clarity and confidence.{" "}
+              Real Property Planning is a free educational resource for Washington families navigating senior care
+              decisions.{" "}
               <Link to="/guides-and-resources" className={inlineLink}>
                 Explore our full library of resources
               </Link>{" "}
               or{" "}
               <Link to="/aging-life-care-managers" className={inlineLink}>
-                connect with an Aging Life Care Manager
+                learn what an independent Aging Life Care Manager does
               </Link>{" "}
               to start the conversation.
             </p>

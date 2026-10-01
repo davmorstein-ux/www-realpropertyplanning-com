@@ -110,7 +110,7 @@ const MemoryCareCosts = () => {
 
               <h2 className={h2Class}>What Memory Care Costs — and Why</h2>
               <p className={pClass}>
-                Memory care is typically the most expensive senior housing option, and the reason is straightforward: it requires more. More staff per resident. More specialized training. More physical infrastructure. More programming designed around a specific and demanding set of needs.
+                Memory care is typically the most expensive senior housing option short of a nursing home, and the reason is straightforward: it requires more. More staff per resident. More specialized training. More physical infrastructure. More programming designed around a specific and demanding set of needs.
               </p>
               <p className={pClass}>
                 Monthly fees vary considerably by location, community design, and care level — but families should plan for costs that sit meaningfully above assisted living rates in the same market. In high-cost regions, monthly memory care costs can be substantial.
@@ -208,7 +208,7 @@ const MemoryCareCosts = () => {
               <hr className={hrClass} />
 
               <p className={pClass}>
-                <em>Real Property Planning helps families navigate memory care and senior housing decisions with clarity and compassion. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
+                <em>These guides explain memory care and senior housing decisions in plain language. <Link to="/guides-and-resources" className={inlineLink}>Explore our full library of resources →</Link></em>
               </p>
 
             </article>
