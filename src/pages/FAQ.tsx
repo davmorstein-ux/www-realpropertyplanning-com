@@ -93,7 +93,7 @@ const faqs = [
   },
   {
     question: "What areas does the featured broker work in?",
-    answer: `Real Property Planning is a free educational resource and provides no services itself. ${FEATURED_BROKER.Role} works in King, Snohomish, Pierce, and Kitsap Counties. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
+    answer: `Real Property Planning is a free educational resource and provides no services itself. ${FEATURED_BROKER.Role} works throughout Washington State. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
   },
   {
     question: "Is there help for senior transitions and downsizing decisions?",
@@ -117,7 +117,7 @@ const faqs = [
   },
   {
     question: "What should an attorney look for in a probate real estate broker?",
-    answer: `Attorneys should look for a broker with probate experience, valuation expertise, clear communication skills, and the ability to coordinate with legal timelines and multiple decision-makers. ${FEATURED_BROKER.Role}'s dual credentials as a broker and certified residential appraiser, combined with 20+ years of estate-focused experience, make ${FEATURED_BROKER.pronoun.object} a reliable partner for attorneys throughout Washington State.\n\n${softCta}`,
+    answer: `Attorneys should look for a broker with probate experience, valuation expertise, clear communication skills, and the ability to coordinate with legal timelines and multiple decision-makers. ${FEATURED_BROKER.Role}'s dual credentials as a broker and certified residential appraiser, combined with estate-focused experience, make ${FEATURED_BROKER.pronoun.object} a reliable partner for attorneys throughout Washington State.\n\n${softCta}`,
   },
   {
     question: "How do you prepare a senior's home for sale during a move?",

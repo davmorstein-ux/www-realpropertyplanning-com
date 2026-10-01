@@ -563,7 +563,7 @@ export const homepageFaqSchema = {
       name: "What areas does Real Property Planning serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We serve all of Western Washington and the Puget Sound region, including King, Snohomish, Pierce, Skagit, and Kitsap Counties — cities like Seattle, Bellevue, Kirkland, Everett, Tacoma, Bainbridge Island, and many more.",
+        text: "Real Property Planning's guides cover all of Washington State, and its featured broker and appraiser work statewide.",
       },
     },
     {

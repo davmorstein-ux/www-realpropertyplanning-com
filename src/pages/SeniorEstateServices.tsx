@@ -16,7 +16,7 @@ const SeniorEstateServices = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Senior & Estate Real Estate Services | Real Property Planning | Washington State"
-        description="Real Property Planning specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties."
+        description="These guides cover senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State."
       />
       <BreadcrumbSchema
         items={[
@@ -37,7 +37,7 @@ const SeniorEstateServices = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Real Property Planning specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties. Whether you are a senior planning a move, an adult child helping a parent, an executor settling an estate, or an attorney advising a client, {FEATURED_BROKER.role} coordinates the real estate side so you can focus on the decisions that matter — not the logistics. Every engagement begins with a clear plan, honest communication, and a calm, professional approach.
+            These guides cover senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State. Whether you are a senior planning a move, an adult child helping a parent, an executor settling an estate, or an attorney advising a client, {FEATURED_BROKER.role} coordinates the real estate side so you can focus on the decisions that matter — not the logistics. Every engagement begins with a clear plan, honest communication, and a calm, professional approach.
           </p>
           </div>
         </div>
@@ -210,7 +210,7 @@ const SeniorEstateServices = () => {
             Areas I Serve
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-4 max-w-3xl">
-            {FEATURED_BROKER.Role} serves clients throughout Washington State, with a strong focus across Western Washington and the Puget Sound region. Whether the property is in a dense urban neighborhood or a quieter suburban community, local market knowledge and hands‑on coordination are brought to every engagement.
+            {FEATURED_BROKER.Role} works throughout Washington State. Whether the property is in a dense urban neighborhood or a quieter suburban community, local market knowledge and hands‑on coordination are brought to every engagement.
           </p>
           <p className="text-foreground text-[15px] font-medium">
             Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and communities throughout Washington State.

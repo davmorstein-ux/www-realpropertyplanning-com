@@ -33,7 +33,7 @@ const contentBlocks = [
   },
   {
     heading: "Experience Across Washington State",
-    text: `Real Property Planning's guides cover all of Washington State, and its featured broker's experience is deepest in King, Snohomish, Pierce, and Kitsap Counties. For property outside Washington, ${FEATURED_BROKER.role} can connect families with a licensed broker anywhere in the country through ${FEATURED_BROKER.brokerage}'s nationwide network.`,
+    text: `Real Property Planning's guides cover all of Washington State, and its featured broker works statewide. For property outside Washington, ${FEATURED_BROKER.role} can connect families with a licensed broker anywhere in the country through ${FEATURED_BROKER.brokerage}'s nationwide network.`,
   },
 ];
 

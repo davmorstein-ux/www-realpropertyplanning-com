@@ -437,8 +437,8 @@ const PowerOfAttorneys = () => {
                   aligned.
                 </p>
                 <p>
-                  <strong className="text-foreground">Understanding documentation requirements.</strong> With more than
-                  20 years of experience as both a licensed broker and a certified appraiser, {FEATURED_BROKER.pronoun.subject}{" "}
+                  <strong className="text-foreground">Understanding documentation requirements.</strong> As both a licensed
+                  broker and a certified appraiser, {FEATURED_BROKER.pronoun.subject}{" "}
                   knows what title companies, lenders, and underwriters expect, and can help you prepare before issues
                   arise.
                 </p>
@@ -611,7 +611,7 @@ const PowerOfAttorneys = () => {
                   additional verification, the sale can stall.
                 </p>
                 <p>
-                  {FEATURED_BROKER.Role} has more than 20 years of experience as both a licensed real estate broker and a
+                  {FEATURED_BROKER.Role} is both a licensed real estate broker and a
                   certified appraiser, and has worked through these situations many times: what title companies look
                   for, how lenders evaluate POA documents during underwriting, and how to prepare families before
                   problems arise, not after.

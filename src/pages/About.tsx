@@ -175,7 +175,7 @@ const About = () => {
 
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  Real Property Planning was founded by David Stein, a Washington State Licensed Real Estate Broker and Washington State Certified Residential Appraiser with over 20 years of experience in both disciplines.
+                  Real Property Planning was founded by David Stein, a Washington State Licensed Real Estate Broker and Washington State Certified Residential Appraiser.
                 </p>
                 <p>
                   David spent years working alongside families through probate sales, estate appraisals, and senior housing transitions — and kept seeing the same pattern. People weren't short on options. They were short on clarity. Executors didn't know which step came first. Adult children didn't know who to trust. Families were navigating attorneys, appraisers, real estate agents, and care professionals all separately, with no one connecting the dots.

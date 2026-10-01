@@ -253,7 +253,7 @@ const Wills = () => {
                 How the Featured Broker Works With Executors
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                With over 20 years of experience as both a certified appraiser and a licensed real
+                As both a certified appraiser and a licensed real
                 estate broker, {FEATURED_BROKER.role}, working through {FEATURED_BROKER.pronoun.possessive} own brokerage, works with families, executors, and attorneys to handle
                 the real property side of estate administration — from the first conversation to the
                 closing table.

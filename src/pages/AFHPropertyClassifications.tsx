@@ -364,7 +364,7 @@ const AFHPropertyClassifications = () => (
           <h2 style={h2}>Evaluating an AFH property before you buy</h2>
           <p style={body}>
             AFH Club is an educational hub and does not provide brokerage or appraisal services. Its featured broker,{" "}
-            {brokerCredentialSentence.replace(/\.$/, "")}, has more than {FEATURED_BROKER.yearsExperience} years in the field. If you
+            {brokerCredentialSentence.replace(/\.$/, "")}, works across Washington State. If you
             want a property examined against the labels above, the fundamentals of the real estate valued, or the right
             licensing, building, and lending professionals brought in, contact {FEATURED_BROKER.firstName} directly
             through the{" "}

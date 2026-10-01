@@ -299,7 +299,7 @@ export const POLICY_PAGES: PolicyPage[] = [
       {
         heading: FEATURED_BROKER.name,
         paragraphs: [
-          `${FEATURED_BROKER.name} writes and reviews the site's guides. ${FEATURED_BROKER.pronoun.Subject} is ${authorCredentials}, with more than ${FEATURED_BROKER.yearsExperience} years of experience${SAME_PERSON ? " in both disciplines" : ""}.`,
+          `${FEATURED_BROKER.name} writes and reviews the site's guides. ${FEATURED_BROKER.pronoun.Subject} is ${authorCredentials}.`,
           `${FEATURED_BROKER.pronoun.Possessive} work covers probate, estate, and inherited-property sales for executors, trustees, heirs, and attorneys across Washington State, and adult family home purchases and sales for buyers, sellers, and operators in the Puget Sound region. That experience is where many of the site's questions come from.`,
           `Licenses can be verified with the Washington State Department of Licensing. ${FEATURED_BROKER.pronoun.Possessive} work as a broker${SAME_PERSON ? " and appraiser" : ""} is done through ${FEATURED_BROKER.pronoun.possessive} own independent business${SAME_PERSON ? "es" : ""}, not through Real Property Planning. See the Advertising and Compensation Disclosure.`,
         ],

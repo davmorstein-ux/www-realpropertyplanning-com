@@ -53,7 +53,7 @@ const howWeWorkBlocks = [
   },
   {
     heading: "Experience Across Washington State",
-    text: `Real Property Planning's guides cover all of Washington State, and its featured broker's experience is deepest in King, Snohomish, Pierce, and Kitsap Counties. For property outside Washington, ${FEATURED_BROKER.role} can connect families with a licensed broker anywhere in the country through ${FEATURED_BROKER.brokerage}'s nationwide network.`,
+    text: `Real Property Planning's guides cover all of Washington State, and its featured broker works statewide. For property outside Washington, ${FEATURED_BROKER.role} can connect families with a licensed broker anywhere in the country through ${FEATURED_BROKER.brokerage}'s nationwide network.`,
   },
 ];
 
@@ -74,8 +74,8 @@ const situations = [
 
 const differentiators = [
   {
-    heading: "Over 20 Years of Real Estate Experience",
-    text: `${FEATURED_BROKER.Role} brings more than two decades of experience helping clients make informed real estate decisions across changing markets, property types, and life transitions.`,
+    heading: "Real Estate Experience Across Washington",
+    text: `${FEATURED_BROKER.Role} helps clients make informed real estate decisions across changing markets, property types, and life transitions throughout Washington State.`,
   },
   {
     heading: "Brokerage Expertise Combined With Valuation Insight",
@@ -115,7 +115,7 @@ const AttorneyReferral = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with over 20 years of experience helping clients make informed decisions about important property transitions throughout Washington State.
+            Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser who helps clients make informed decisions about important property transitions throughout Washington State.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
             {FEATURED_BROKER.Role}'s work is focused on inherited homes, probate property, trust-owned real estate, estate-related sales, and situations where valuation insight, local market knowledge, communication, and practical coordination matter. {FEATURED_BROKER.pronoun.Subject} works alongside attorneys and related professionals as a real estate resource to help clients move forward with greater clarity, stronger preparation, and a more organized sale strategy.

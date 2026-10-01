@@ -378,7 +378,7 @@ const TransitionResources = () => {
               estate administration, downsizing, or a senior housing move.
             </p>
             <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed">
-              With over 20 years of experience and dual credentials as a
+              With dual credentials as a
               licensed real estate broker and state-certified residential
               appraiser, {FEATURED_BROKER.role} brings the market knowledge, valuation
               insight, and professional sensitivity that these situations

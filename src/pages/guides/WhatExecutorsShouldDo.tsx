@@ -9,7 +9,6 @@ import RelatedServices from "@/components/RelatedServices";
 import NextStepBlock from "@/components/NextStepBlock";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
-import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ListenButton from "@/components/ListenButton";
@@ -116,19 +115,10 @@ const WhatExecutorsShouldDo = () => (
       </div>
     </section>
 
-    {/* Proof callout */}
-    <section className="py-10 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <ProofCallout
-            quote={`We didn't know where to start. ${FEATURED_BROKER.Role} made the entire process manageable and kept us informed every step of the way.`}
-            attribution="Executor, Snohomish County"
-            context="Inherited property sale"
-            variant="accent"
-          />
-        </div>
-      </div>
-    </section>
+    {/* An unattributed "Executor, Snohomish County" quote stood here. Removed
+        Sept 30, 2026 with the matching quote on SeniorTransitionDifferences,
+        which the owner confirmed was not a real review. Use only real reviews,
+        quoted word for word, with permission (src/data/testimonials.ts). */}
 
     <MidPageCTA
       heading="Not Sure Where to Start?"

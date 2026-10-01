@@ -7,7 +7,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 // Service-specific content that makes each page unique
 const serviceContent: Record<string, { introText: string; situations: string[]; benefits: string[] }> = {
   "probate-estate-sales": {
-    introText: `${FEATURED_BROKER.Role} provides experienced guidance for executors, attorneys, and families navigating probate and estate property sales throughout Washington State. Real Property Planning combines over 20 years of experience as a licensed broker and state-certified residential appraiser to help clients approach these complex transactions with clarity, realistic expectations, and structured, evidence-based strategy.`,
+    introText: `${FEATURED_BROKER.Role} provides experienced guidance for executors, attorneys, and families navigating probate and estate property sales throughout Washington State. ${FEATURED_BROKER.Role} combines work as a licensed broker and state-certified residential appraiser to help clients approach these complex transactions with clarity, realistic expectations, and structured, evidence-based strategy.`,
     situations: [
       "A loved one has passed and the estate includes real property that needs to be sold",
       "An executor or personal representative needs guidance on pricing, preparation, and sale timeline",

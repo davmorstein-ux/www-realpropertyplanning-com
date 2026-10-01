@@ -637,7 +637,7 @@ const AFHValuationEstimator = () => {
                     Get a certified professional valuation
                   </strong>
                   <p style={{ fontSize: 13, color: "#272421", marginTop: 3 }}>
-                    {FEATURED_BROKER.Role} · Licensed Broker{SAME_PERSON ? " & Certified Appraiser" : ""} · {FEATURED_BROKER.brokerage} · {FEATURED_BROKER.yearsExperience}+ years AFH experience
+                    {FEATURED_BROKER.Role} · Licensed Broker{SAME_PERSON ? " & Certified Appraiser" : ""} · {FEATURED_BROKER.brokerage}
                   </p>
                 </div>
                 <button

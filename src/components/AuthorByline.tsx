@@ -21,7 +21,7 @@ export default function AuthorByline({ reviewed, context = "afh" }: { reviewed?:
   const focus =
     context === "estate"
       ? "works with executors, trustees, heirs, and attorneys on probate, estate, and inherited-property sales across Washington State, and has valued and sold estate homes in every condition"
-      : "works directly with adult family home buyers, sellers, and operators across the Puget Sound region";
+      : "works directly with adult family home buyers, sellers, and operators across Washington State";
   return (
     <aside
       aria-label="About the author"
@@ -53,9 +53,9 @@ export default function AuthorByline({ reviewed, context = "afh" }: { reviewed?:
         <strong>{FEATURED_BROKER.name}</strong> is a Washington State licensed real estate broker (
         {FEATURED_BROKER.brokerage}, license #{FEATURED_BROKER.licenseNumber})
         {SAME_PERSON
-          ? ` and a Washington State certified residential appraiser (${FEATURED_APPRAISER.firm}, license #${FEATURED_APPRAISER.licenseNumber}). He has more than ${FEATURED_BROKER.yearsExperience} years of experience in both disciplines`
-          : `. He has more than ${FEATURED_BROKER.yearsExperience} years of experience`}{" "}
-        and {focus}.{reviewed ? ` This guide was last reviewed ${reviewed}.` : ""}{" "}
+          ? ` and a Washington State certified residential appraiser (${FEATURED_APPRAISER.firm}, license #${FEATURED_APPRAISER.licenseNumber}). He`
+          : `. He`}{" "}
+        {focus}.{reviewed ? ` This guide was last reviewed ${reviewed}.` : ""}{" "}
         <Link to="/about" style={{ color: "#1a365d", textDecoration: "underline" }}>
           More about {FEATURED_BROKER.firstName}
         </Link>

@@ -247,7 +247,7 @@ const HowToMoveElderlyParents = () => (
               Selling a home during a senior transition requires a real estate professional who understands the unique circumstances involved. These are not typical real estate transactions — they involve emotional timelines, family dynamics, and often multiple decision-makers.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              {FEATURED_BROKER.Role} provides experienced guidance through the entire sale process. {FEATURED_BROKER.Role} brings over 20 years of dual expertise as a licensed real estate broker and certified appraiser, offering families honest valuation, strategic pricing, and a clear understanding of <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">how the process works</Link> from listing through closing.
+              {FEATURED_BROKER.Role} provides experienced guidance through the entire sale process. {FEATURED_BROKER.Role} brings dual expertise as a licensed real estate broker and certified appraiser, offering families honest valuation, strategic pricing, and a clear understanding of <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">how the process works</Link> from listing through closing.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
               Understanding <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why valuation matters</Link> is especially important in these situations, where accurate pricing protects the family's financial interests and avoids unnecessary delays.

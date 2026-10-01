@@ -72,7 +72,7 @@ const CitiesWeServe = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Cities We Serve for Probate and Inherited Property Guidance | Real Property Planning"
-        description={`${FEATURED_BROKER.Role} serves cities throughout Washington State for probate real estate, inherited property, trust-owned homes, and estate-related sales, with especially strong experience in Western Washington and the Puget Sound region.`}
+        description={`${FEATURED_BROKER.Role} serves cities throughout Washington State for probate real estate, inherited property, trust-owned homes, and estate-related sales.`}
       />
       <Header />
       <main id="main-content">
@@ -86,7 +86,7 @@ const CitiesWeServe = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-            {FEATURED_BROKER.Role} helps clients and referring professionals navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions across a wide range of communities throughout Washington State. Our work combines over 20 years of real estate experience with Washington state certified appraisal expertise to help clients make more informed decisions about value, preparation, timing, and sale strategy.
+            {FEATURED_BROKER.Role} helps clients and referring professionals navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions across a wide range of communities throughout Washington State. {FEATURED_BROKER.pronoun.Subject} combines real estate brokerage with Washington state certified appraisal expertise to help clients make more informed decisions about value, preparation, timing, and sale strategy.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
             Click on any city below to explore local guidance and available services.

@@ -9,7 +9,6 @@ import RelatedServices from "@/components/RelatedServices";
 import NextStepBlock from "@/components/NextStepBlock";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
-import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
@@ -87,19 +86,9 @@ const SeniorTransitionDifferences = () => (
       </div>
     </section>
 
-    {/* Proof callout */}
-    <section className="py-10 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <ProofCallout
-            quote={`We appreciated ${FEATURED_BROKER.role}'s patience, thoughtful communication, and realistic guidance throughout the sale of our family property.`}
-            attribution="Family Member"
-            context="Senior transition home sale"
-            variant="accent"
-          />
-        </div>
-      </div>
-    </section>
+    {/* A "Family Member" quote stood here. Removed Sept 30, 2026: the owner
+        confirmed it was not a real review (FTC rule on fake reviews). Use
+        only real reviews, quoted word for word, with permission. */}
 
     <MidPageCTA
       heading="Planning a Senior Housing Transition?"

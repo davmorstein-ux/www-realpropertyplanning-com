@@ -2142,7 +2142,7 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
 
   if (article) {
     ssgParts.push(
-      `<p style="margin-top:24px;color:#555;line-height:1.6"><strong>About the author:</strong> David Stein is a Washington State licensed real estate broker (eXp Realty, license #133972) and a Washington State certified residential appraiser (Stein Appraisal, license #1702080), with more than 20 years of experience in both disciplines. <a href="/about" style="color:#1a365d">More about David</a>.</p>`
+      `<p style="margin-top:24px;color:#555;line-height:1.6"><strong>About the author:</strong> David Stein is a Washington State licensed real estate broker (eXp Realty, license #133972) and a Washington State certified residential appraiser (Stein Appraisal, license #1702080). <a href="/about" style="color:#1a365d">More about David</a>.</p>`
     );
   }
 
@@ -2162,7 +2162,7 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
   if (cities && cities.length > 0) {
     ssgParts.push(`<p style="color:#555;line-height:1.8">${cities.join(" · ")}</p>`);
   }
-  ssgParts.push(`<p style="color:#666;margin-top:8px;line-height:1.6">A free educational resource covering all of Washington State, with especially deep coverage of Western Washington and the Puget Sound region.</p>`);
+  ssgParts.push(`<p style="color:#666;margin-top:8px;line-height:1.6">A free educational resource covering all of Washington State.</p>`);
   ssgParts.push(`</div>`);
 
   const canonical = route === "/" ? SITE_URL : `${SITE_URL}${route}`;
