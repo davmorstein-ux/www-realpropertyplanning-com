@@ -1,6 +1,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import AFHClubQuickLinks from "@/components/AFHClubQuickLinks";
 import WaterfallNav from "./WaterfallNav";
 import SiteSearchBar from "./SiteSearchBar";
 import PrimaryNav from "./PrimaryNav";
@@ -603,6 +604,8 @@ const Header = () => {
       {isMobile && (
         <div aria-hidden="true" data-header-spacer="" style={{ height: "var(--header-height, 136px)", flexShrink: 0 }} />
       )}
+      {/* AFH Club quick links: renders only on AFH Club pages (owner, Oct 1, 2026). */}
+      <AFHClubQuickLinks />
     </>
   );
 };

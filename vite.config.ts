@@ -18,6 +18,7 @@ import { GLOSSARY_A_TO_Z } from "./src/data/afhGlossary";
 import { PROBATE_GLOSSARY_A_TO_Z } from "./src/data/probateGlossary";
 import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/data/probatePillar";
 import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
+import { AFH_QUICK_LINKS, isAFHClubPath } from "./src/lib/afhQuickLinks";
 import { RULE_CHANGES, PENDING_RULES, OUTDATED_ADVICE } from "./src/data/afhRuleChanges";
 import { readFileSync as readFileSyncForStats } from "node:fs";
 
@@ -2083,6 +2084,13 @@ const ssgNav = (route: string) => {
     `<p style="font-size:0.9rem;color:#555;margin:0 0 12px">${trail}</p>`
   );
 };
+/* AFH Club quick links (owner, Oct 1, 2026): the same seven as
+   src/components/AFHClubQuickLinks.tsx, on every AFH Club page's static HTML,
+   including the ~4,500 directory pages written below. */
+const ssgAfhQuickLinks = () =>
+  `<p style="margin:0 0 16px;line-height:2"><strong>AFH Club:</strong> ` +
+  AFH_QUICK_LINKS.map((l) => `<a href="${l.href}" style="${SSG_LINK};margin-right:12px;white-space:nowrap">${escHtml(l.label)}</a>`).join("") +
+  `</p>`;
 const ssgBack = (route: string) => {
   if (route === "/") return "";
   const [parentHref, parentLabel] = ssgParentOf(route);
@@ -2098,6 +2106,7 @@ const buildSsgContent = (meta: RouteMeta, route = "/") => {
   const ssgParts: string[] = [];
   ssgParts.push(`<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">`);
   ssgParts.push(ssgNav(route));
+  if (isAFHClubPath(route)) ssgParts.push(ssgAfhQuickLinks());
   if (PROBATE_START_HERE_ROUTES.includes(route)) {
     const T = PROBATE_START_HERE;
     const l = (h: string, t: string) => `<a href="${h}" style="${SSG_LINK}">${escHtml(t)}</a>`;
@@ -2385,7 +2394,7 @@ const routeMetadataPlugin = {
             route,
             { title, description },
             { injectSsg: false }
-          ).replace('<div id="root"></div>', `<div id="root">${body}</div>`);
+          ).replace('<div id="root"></div>', `<div id="root"><div style="max-width:800px;margin:0 auto;padding:16px 20px 0;font-family:system-ui,sans-serif">${ssgAfhQuickLinks()}</div>${body}</div>`);
           await writeRouteHtml(distDir, route, routeHtml);
         })
       );
@@ -2408,7 +2417,7 @@ const routeMetadataPlugin = {
       listingRoutes.map(async ({ route, title, description, body }) => {
         const routeHtml = applyMetadata(baseHtml, route, { title, description }, { injectSsg: false }).replace(
           '<div id="root"></div>',
-          `<div id="root">${body}</div>`
+          `<div id="root"><div style="max-width:800px;margin:0 auto;padding:16px 20px 0;font-family:system-ui,sans-serif">${ssgAfhQuickLinks()}</div>${body}</div>`
         );
         await writeRouteHtml(distDir, route, routeHtml);
       })
