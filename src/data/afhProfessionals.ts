@@ -8,6 +8,8 @@ import kaylinPhoto from "@/assets/providers/kaylin-cottingham-wilson-griffith-in
 import griffithLogo from "@/assets/providers/griffith-insurance-group-logo.webp";
 import exaelPhoto from "@/assets/providers/exael-zuniga-invision-marketing-headshot.webp";
 import invisionLogo from "@/assets/providers/invision-marketing-logo.webp";
+import rachaelScottPhoto from "@/assets/providers/rachael-scott-ballpark-realty-headshot.webp";
+import ballparkRealtyLogo from "@/assets/providers/ballpark-realty-logo.webp";
 import { FEATURED_BROKER, brokerLicenseShort } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from "@/data/featuredProfessionalAssets";
 
@@ -183,6 +185,26 @@ export const EXAEL_ZUNIGA: AFHProfessional = {
   bio: "",
 };
 
+/* Added Sept 30, 2026 at the owner's request: name, firm, phone, email, photo,
+   logo and BizBuySell profile all supplied by the owner (the email was given
+   by him in conversation, so it is confirmed). No bio or license claim: none
+   was supplied, and the BizBuySell page could not be read that day. */
+export const RACHAEL_SCOTT: AFHProfessional = {
+  id: "rachael-scott",
+  name: "Rachael Scott",
+  title: "Business Broker",
+  company: "Scott Consulting / Ballpark Realty",
+  photo: rachaelScottPhoto,
+  photoAlt: "Photo of Rachael Scott, Business Broker with Scott Consulting and Ballpark Realty",
+  logo: ballparkRealtyLogo,
+  logoAlt: "Ballpark Realty logo",
+  phone: "(662) 380-2502",
+  email: "rachaelscott.wa@gmail.com",
+  website: "https://www.bizbuysell.com/business-broker/rachael-scott/ballpark-realty/43960/",
+  specialty: "Business brokerage — Scott Consulting / Ballpark Realty",
+  bio: "",
+};
+
 export interface AFHProfessionalGroup {
   id: string;
   label: string;
@@ -267,8 +289,8 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
     label: "Business brokerage",
     profession: "Business Broker",
     professionLines: ["Business", "Broker"],
-    why: "When the business changes hands separately from the building — or the buyer is leasing — a commercial business broker values and markets the operation itself: the license, the resident census, the staff and the contracts. That is different work from selling the real estate.",
-    people: [],
+    why: "When the business changes hands separately from the building — or the buyer is leasing — a business broker values and markets the operation itself: the resident census, staff, contracts and goodwill. The DSHS license is not part of the sale (a buyer applies for a new one), so a business broker who understands that timing matters. That is different work from selling the real estate.",
+    people: [RACHAEL_SCOTT],
   },
 ];
 
