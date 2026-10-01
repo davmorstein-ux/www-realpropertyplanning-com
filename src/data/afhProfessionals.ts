@@ -94,8 +94,8 @@ export const FEATURED_AFH_BROKER: AFHProfessional = {
   id: "featured-broker",
   name: FEATURED_BROKER.name,
   /* Was "AFH Expert Real Estate Broker". "Expert" is a self-assessment; the
-     credentials are verifiable (Sept 24, 2026). */
-  title: "Adult Family Home Real Estate Specialist",
+     credentials are verifiable (Sept 24, 2026). Owner, Sept 30, 2026: "AFH Real Estate Broker". */
+  title: "AFH Real Estate Broker",
   company: FEATURED_BROKER.brokerage,
   photo: BROKER_PHOTO,
   photoAlt: `Photo of ${FEATURED_BROKER.name}, AFH Real Estate Broker`,
@@ -222,8 +222,8 @@ export const AFH_PROFESSIONAL_GROUPS: AFHProfessionalGroup[] = [
   {
     id: "real-estate",
     label: "Real estate",
-    profession: "Real Estate Broker",
-    professionLines: ["Real Estate", "Broker"],
+    profession: "AFH Real Estate Broker",
+    professionLines: ["AFH Real Estate", "Broker"],
     why: "Selling or buying an adult family home is not an ordinary house sale. The license does not transfer, the business and the building can be sold together or apart, and a lender looks at the home's income as well as its walls.",
     people: [FEATURED_AFH_BROKER],
   },

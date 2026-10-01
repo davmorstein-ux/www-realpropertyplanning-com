@@ -352,8 +352,11 @@ const AFHFindProfessional = () => (
            src/data/afhProfessionals.ts (professionLines), e.g. "Water Damage" / "Restoration",
            "Professional" / "Bookkeeper", so every card's label is the same height and the
            photos below line up. Each line stays on one line of its own. */
-        .rpp-afhpro .rpp-afhpro-card-profession { height: 30px; font-size: 10.5px; line-height: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #481216; margin-bottom: 8px !important; }
-        .rpp-afhpro .rpp-afhpro-card-profession span { display: block; height: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        /* index.css forces every <span> to 16px / weight 400, so the label rendered thin and
+           crammed into a 15px line (owner: "odd color, thin, hard to read", Sept 30, 2026).
+           The size, weight and color now sit on the spans themselves, with !important. */
+        .rpp-afhpro .rpp-afhpro-card-profession { height: 36px; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 8px !important; }
+        .rpp-afhpro .rpp-afhpro-card-profession span { display: block; height: 18px; font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; line-height: 18px !important; font-weight: 700 !important; color: #1c1917 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         /* At two columns (480-767px) each label has ~200px: tighter tracking keeps "House Cleaning" and "Water Damage" whole. */
         @media (min-width: 480px) and (max-width: 767px) { .rpp-afhpro .rpp-afhpro-card-profession { letter-spacing: 0.03em; } }
         .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 2px solid #f1ede6; margin-bottom: 8px !important; }

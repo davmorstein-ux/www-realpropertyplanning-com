@@ -347,7 +347,7 @@ const AFHListings = ({ view = "all" }: { view?: "all" | AFHListingType }) => {
                       lineHeight: 1.3,
                     }}
                   >
-                    Adult Family Home Real Estate Specialist
+                    AFH Real Estate Broker
                   </div>
                   <img
                     src={BROKERAGE_LOGO}
