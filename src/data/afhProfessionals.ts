@@ -186,9 +186,9 @@ export const EXAEL_ZUNIGA: AFHProfessional = {
 };
 
 /* Added Sept 30, 2026 at the owner's request: name, firm, phone, email, photo,
-   logo and BizBuySell profile all supplied by the owner (the email was given
+   and logo supplied by the owner (the email was given
    by him in conversation, so it is confirmed). No bio or license claim: none
-   was supplied, and the BizBuySell page could not be read that day. */
+   was supplied. */
 export const RACHAEL_SCOTT: AFHProfessional = {
   id: "rachael-scott",
   name: "Rachael Scott",
@@ -200,7 +200,8 @@ export const RACHAEL_SCOTT: AFHProfessional = {
   logoAlt: "Ballpark Realty logo",
   phone: "(662) 380-2502",
   email: "rachaelscott.wa@gmail.com",
-  website: "https://www.bizbuysell.com/business-broker/rachael-scott/ballpark-realty/43960/",
+  // Owner, Sept 30, 2026: her website is not BizBuySell; no website until she supplies one.
+  website: "",
   specialty: "Business brokerage — Scott Consulting / Ballpark Realty",
   bio: "",
 };
