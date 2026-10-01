@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AFH_QUICK_LINKS, isAFHClubPath, isActiveQuickLink } from "@/lib/afhQuickLinks";
 
@@ -11,7 +11,8 @@ import { AFH_QUICK_LINKS, isAFHClubPath, isActiveQuickLink } from "@/lib/afhQuic
  * Design (owner chose "Option A", Oct 1, 2026, after the first pale version was
  * "not obvious enough"): AFH Club's dark green (the "AFH Club Featured
  * Professionals" banner), the red-door glyph and "AFH Club" wordmark on the left,
- * a thin red rule underneath, the current section as a cream pill.
+ * a thin red rule underneath, the current section as a cream pill. Owner asked
+ * for "|" between the links (Oct 1, 2026) so each one reads as its own choice.
  *
  * Spacing below the bar (owner: "too close… cluttered"): index.css zeroes the top
  * padding of the first block inside #main-content, so page headings sat right
@@ -29,16 +30,17 @@ const GREEN = "#192A19";
 const CREAM = "#F3F0EA";
 const CSS = `
 .afhq { background: ${GREEN}; border-bottom: 3px solid #7f2028; }
-.afhq .afhq-in { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 6px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.afhq .afhq-in { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 0; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .afhq .afhq-in::-webkit-scrollbar { display: none; }
-.afhq a.afhq-brand { flex: 0 0 auto; display: inline-flex !important; align-items: center; gap: 8px; height: auto !important; margin-right: 10px; padding: 0 16px 0 0 !important; border-right: 1px solid rgba(243,240,234,0.35); text-decoration: none !important; }
+.afhq a.afhq-brand { flex: 0 0 auto; display: inline-flex !important; align-items: center; gap: 8px; height: auto !important; margin-right: 6px; padding: 0 16px 0 0 !important; border-right: 1px solid rgba(243,240,234,0.35); text-decoration: none !important; }
 .afhq a.afhq-brand img { height: 26px; width: auto; display: block; }
 .afhq a.afhq-brand span { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; font-weight: 400 !important; letter-spacing: 0.18em; color: ${CREAM} !important; white-space: nowrap; }
-.afhq a.afhq-link { flex: 0 0 auto; display: inline-flex !important; align-items: center; height: 36px !important; margin: 8px 0; padding: 0 14px !important; border-radius: 999px; font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; font-weight: 600 !important; color: ${CREAM} !important; text-decoration: none !important; white-space: nowrap; }
+.afhq a.afhq-link { flex: 0 0 auto; display: inline-flex !important; align-items: center; height: 36px !important; margin: 8px 0; padding: 0 10px !important; border-radius: 999px; font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; font-weight: 600 !important; color: ${CREAM} !important; text-decoration: none !important; white-space: nowrap; }
 .afhq a.afhq-link[aria-current="page"] { background: ${CREAM}; color: ${GREEN} !important; font-weight: 700 !important; }
+.afhq span.afhq-sep { flex: 0 0 auto; margin: 0 4px; font-size: 18px !important; font-weight: 300 !important; line-height: 1; color: rgba(243,240,234,0.5) !important; user-select: none; }
 @media (hover: hover) { .afhq a.afhq-link:not([aria-current="page"]):hover { background: rgba(243,240,234,0.14); } }
 .afhq a:focus-visible { outline: 2px solid ${CREAM}; outline-offset: 2px; }
-@media (max-width: 640px) { .afhq a.afhq-brand span { font-size: 16px !important; } .afhq a.afhq-link { font-size: 14px !important; padding: 0 12px !important; } }
+@media (max-width: 640px) { .afhq a.afhq-brand span { font-size: 16px !important; } .afhq a.afhq-link { font-size: 14px !important; padding: 0 10px !important; } .afhq span.afhq-sep { margin: 0 3px; } }
 /* Breathing room between the bar and the page (see comment above). */
 .afhq ~ #main-content > *:first-child { padding-top: 28px !important; }
 @media (max-width: 640px) { .afhq ~ #main-content > *:first-child { padding-top: 20px !important; } }
@@ -65,12 +67,15 @@ export default function AFHClubQuickLinks() {
           <img src="/afh-club-glyph.webp" alt="" width={200} height={194} />
           <span aria-hidden="true">AFH Club</span>
         </Link>
-        {AFH_QUICK_LINKS.map((l) => {
+        {AFH_QUICK_LINKS.map((l, i) => {
           const active = isActiveQuickLink(l, pathname);
           return (
-            <Link key={l.href} to={l.href} className="afhq-link" aria-current={active ? "page" : undefined}>
-              {l.label}
-            </Link>
+            <Fragment key={l.href}>
+              {i > 0 && <span className="afhq-sep" aria-hidden="true">|</span>}
+              <Link to={l.href} className="afhq-link" aria-current={active ? "page" : undefined}>
+                {l.label}
+              </Link>
+            </Fragment>
           );
         })}
       </div>
