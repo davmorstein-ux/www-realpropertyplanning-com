@@ -22,6 +22,8 @@ interface ProviderTileProps {
   emailHref?: string;
   bio?: string;
   specialty?: string;
+  /** Headshot ring color. AFH Club pages pass AFH_HEADSHOT_RING (owner, Sept 30, 2026). */
+  ringColor?: string;
 }
 
 export default function ProviderTile({
@@ -30,6 +32,7 @@ export default function ProviderTile({
   company,
   photo,
   photoAlt,
+  ringColor,
   photo2,
   photoAlt2,
   name2,
@@ -174,7 +177,7 @@ export default function ProviderTile({
                         height: 64,
                         borderRadius: "50%",
                         objectFit: "cover",
-                        border: "2px solid #c3525c",
+                        border: ringColor ? `3px solid ${ringColor}` : "2px solid #c3525c",
                       }}
                       sizes="100vw"
                       decoding="async"
@@ -198,7 +201,7 @@ export default function ProviderTile({
                         height: 64,
                         borderRadius: "50%",
                         objectFit: "cover",
-                        border: "2px solid #c3525c",
+                        border: ringColor ? `3px solid ${ringColor}` : "2px solid #c3525c",
                       }}
                       sizes="100vw"
                       decoding="async"
@@ -380,7 +383,7 @@ export default function ProviderTile({
                       height: 100,
                       borderRadius: "50%",
                       objectFit: "cover",
-                      border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
+                      border: ringColor ? `3px solid ${ringColor}` : hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
                       transform: hovered ? "scale(1.05)" : "scale(1)",
                       transition: "transform 0.3s ease, border-color 0.3s ease",
                     }}
@@ -404,7 +407,7 @@ export default function ProviderTile({
                       height: 100,
                       borderRadius: "50%",
                       objectFit: "cover",
-                      border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
+                      border: ringColor ? `3px solid ${ringColor}` : hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
                       transform: hovered ? "scale(1.05)" : "scale(1)",
                       transition: "transform 0.3s ease, border-color 0.3s ease",
                     }}
@@ -440,7 +443,7 @@ export default function ProviderTile({
                   height: 112,
                   borderRadius: "50%",
                   objectFit: "cover",
-                  border: hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
+                  border: ringColor ? `3px solid ${ringColor}` : hovered ? "3px solid #c3525c" : "2px solid #dfc9cb",
                   transform: hovered ? "scale(1.05)" : "scale(1)",
                   transition: "transform 0.3s ease, border-color 0.3s ease",
                 }}

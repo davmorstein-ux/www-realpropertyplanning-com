@@ -8,7 +8,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ProviderTile from "@/components/ProviderTile";
-import { FEATURED_AFH_BROKER } from "@/data/afhProfessionals";
+import { FEATURED_AFH_BROKER, AFH_HEADSHOT_RING } from "@/data/afhProfessionals";
 import { FEATURED_BROKER, FEATURED_APPRAISER, SAME_PERSON } from "@/data/featuredProfessionals";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 
@@ -207,6 +207,7 @@ const AFHRealEstateBroker = () => (
                 company={FEATURED_AFH_BROKER.company}
                 photo={FEATURED_AFH_BROKER.photo}
                 photoAlt={FEATURED_AFH_BROKER.photoAlt}
+                ringColor={AFH_HEADSHOT_RING}
                 logo={FEATURED_AFH_BROKER.logo}
                 logoAlt={FEATURED_AFH_BROKER.logoAlt}
                 phone={FEATURED_AFH_BROKER.phone}

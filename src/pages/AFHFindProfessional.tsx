@@ -9,7 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-find-a-professional.mp3.asset.json";
-import { AFH_FEATURED_PEOPLE, type AFHProfessional } from "@/data/afhProfessionals";
+import { AFH_FEATURED_PEOPLE, AFH_HEADSHOT_RING, type AFHProfessional } from "@/data/afhProfessionals";
 import ArticleCover from "@/components/ArticleCover";
 
 /**
@@ -359,7 +359,7 @@ const AFHFindProfessional = () => (
         .rpp-afhpro .rpp-afhpro-card-profession span { display: block; height: 18px; font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; line-height: 18px !important; font-weight: 700 !important; color: #1c1917 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         /* At two columns (480-767px) each label has ~200px: tighter tracking keeps "House Cleaning" and "Water Damage" whole. */
         @media (min-width: 480px) and (max-width: 767px) { .rpp-afhpro .rpp-afhpro-card-profession { letter-spacing: 0.03em; } }
-        .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 2px solid #f1ede6; margin-bottom: 8px !important; }
+        .rpp-afhpro .rpp-afhpro-card-photo { width: 76px !important; height: 76px !important; max-width: 76px; border-radius: 50%; object-fit: cover; border: 3px solid ${AFH_HEADSHOT_RING}; box-sizing: border-box; margin-bottom: 8px !important; }
         .rpp-afhpro .rpp-afhpro-card-name { height: 20px; font-size: 15px; font-weight: 700; color: #280a0c; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .rpp-afhpro .rpp-afhpro-card-name a { color: inherit !important; text-decoration: none !important; }
         @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-name a:hover { color: #7f2028 !important; } }

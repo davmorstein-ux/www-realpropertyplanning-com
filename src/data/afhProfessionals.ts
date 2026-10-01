@@ -49,6 +49,11 @@ import { BROKER_PHOTO, BROKERAGE_LOGO, BROKERAGE_LOGO_ALT, AFH_BROKER_BIO } from
  * by vite.config.ts; the static HTML for crawlers names the roles in words.
  */
 
+/** Ring around every AFH Club headshot: the deep green of the AFH Club badge
+ *  (public/afh-club-badge-logo.webp ring). Owner, Sept 30, 2026: one ring color
+ *  ties every featured professional to AFH Club. */
+export const AFH_HEADSHOT_RING = "#0f4d3a";
+
 export interface AFHProfessional {
   id: string;
   name: string;
