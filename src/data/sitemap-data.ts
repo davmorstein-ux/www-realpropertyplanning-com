@@ -1144,10 +1144,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
-    path: "/long-term-care/finding-care-roomandcare",
-    links: [],
-  },
-  {
     path: "/long-term-care/hospital-discharge-planning",
     links: [
       "/aging-life-care-managers",

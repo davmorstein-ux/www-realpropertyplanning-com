@@ -1463,10 +1463,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "A hub for understanding long-term care options in Washington State — nursing homes, Medicaid, WA Cares, hospital discharge planning, and how to choose the right care setting.",
     h1: "Understanding Long-Term Care in Washington",
   },
-  "/long-term-care/finding-care-roomandcare": {
-    title: "Finding Care: RoomandCare.com",
-    description: "A guide to evaluating RoomAndCare.com listings and other Adult Family Home options throughout Washington State.",
-  },
   "/long-term-care/hospital-discharge-planning": {
     title: "Planning Your Hospital Discharge: A Guide for Washington Families",
     description: "A comprehensive guide to hospital discharge planning in Washington State — what questions to ask, understanding your options, and how to avoid readmission after a hospital stay.",

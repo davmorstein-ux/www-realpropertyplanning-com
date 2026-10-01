@@ -26,6 +26,9 @@ export interface SiteRedirect {
 }
 
 export const REDIRECTS: SiteRedirect[] = [
+  /* RoomAndCare.com page removed Sept 30, 2026 (owner's decision): it was only ever a
+     "coming soon" placeholder that search engines could index. */
+  { from: "/long-term-care/finding-care-roomandcare", to: "/long-term-care" },
   /* Translated pages retired Sept 30, 2026 (owner's decision: 241 views in 90 days,
      nearly all 0-second visits). Each old address goes to its English page. */
   { from: "/es", to: "/" },

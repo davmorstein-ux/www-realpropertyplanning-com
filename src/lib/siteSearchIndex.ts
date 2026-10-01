@@ -145,7 +145,6 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/join-the-network", label: "Join The Network" },
   { path: "/king-county", label: "King County" },
   { path: "/kitsap-county", label: "Kitsap County" },
-  { path: "/long-term-care/finding-care-roomandcare", label: "Finding Care: RoomAndCare.com" },
   { path: "/long-term-care/hospital-discharge-planning", label: "Planning Your Hospital Discharge" },
   { path: "/long-term-care/how-to-choose-care-settings", label: "How to Choose Between Care Settings" },
   { path: "/long-term-care/medicaid-and-long-term-care", label: "Medicaid & Long-Term Care in Washington State" },

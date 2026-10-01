@@ -168,7 +168,6 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
     label: "Long-term care",
     landing: { href: "/long-term-care", label: "Start here: understanding long-term care" },
     pieces: [
-      { title: "Finding Care: RoomandCare.com", href: "/long-term-care/finding-care-roomandcare" },
       { title: "How to Choose Between Care Settings: A Guide for Washington Families", href: "/long-term-care/how-to-choose-care-settings" },
       { title: "Medicaid & Long-Term Care in Washington State: What Families Need to Know", href: "/long-term-care/medicaid-and-long-term-care" },
       { title: "Nursing Homes in Washington State: What Families Need to Know", href: "/long-term-care/nursing-homes" },

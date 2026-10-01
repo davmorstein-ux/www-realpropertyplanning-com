@@ -277,7 +277,6 @@ const LTCHowToChooseCareSettings = lazy(() => import("./pages/long-term-care/How
 const LTCHospitalDischargePlanning = lazy(() => import("./pages/long-term-care/HospitalDischargePlanning"));
 const CostOfCareHub = lazy(() => import("./pages/CostOfCareHub"));
 const CostOfCareDetail = lazy(() => import("./pages/CostOfCareDetail"));
-const LTCFindingCareRoomAndCare = lazy(() => import("./pages/long-term-care/FindingCareRoomAndCare"));
 // Minimal full-viewport fallback in brand cream — no spinner, no layout shift,
 // matches the page background so navigation feels instant on fast chunks.
 const RouteFallback = () => <div className="min-h-screen bg-cream" aria-hidden="true" />;
@@ -722,7 +721,6 @@ const App = () => (
           <Route path="/long-term-care/wa-cares" element={<LTCWaCares />} />
           <Route path="/long-term-care/how-to-choose-care-settings" element={<LTCHowToChooseCareSettings />} />
           <Route path="/long-term-care/hospital-discharge-planning" element={<LTCHospitalDischargePlanning />} />
-          <Route path="/long-term-care/finding-care-roomandcare" element={<LTCFindingCareRoomAndCare />} />
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
