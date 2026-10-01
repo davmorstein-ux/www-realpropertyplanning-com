@@ -34,12 +34,19 @@ project_id = "zgmoiivyxzppnrpksmfg"
 #
 # Do NOT set verify_jwt = false on anything that lacks that protection.
 #
-# `mcp` is deliberately absent and keeps the secure default. It is generated
-# by Lovable's tooling, is not called from the browser, and has no business
-# accepting unauthenticated traffic.
+# `mcp` (Oct 1, 2026) is public and read-only on purpose: it is how AI
+# assistants read the site (owner's decision: "make the site the source AI
+# assistants quote"). Every tool returns content already on the public site,
+# fetched from /ai/*.json; none writes, sends mail, or touches private data.
+# Its protection is that there is nothing to protect. If a tool that writes or
+# reads private data is ever added, restore auth in src/lib/mcp/index.ts and
+# remove the block below.
 
 [functions.newsletter-subscribe]
 verify_jwt = false
 
 [functions.send-contact-email]
+verify_jwt = false
+
+[functions.mcp]
 verify_jwt = false

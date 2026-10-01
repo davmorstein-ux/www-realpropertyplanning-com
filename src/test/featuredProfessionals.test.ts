@@ -129,12 +129,4 @@ describe("schema: the hub is not a brokerage", () => {
   });
 });
 
-describe("public/llms.txt matches the record", () => {
-  it("names the current featured broker and appraiser with their license numbers", () => {
-    const txt = readFileSync("public/llms.txt", "utf8");
-    expect(txt).toContain(FEATURED_BROKER.name);
-    expect(txt).toContain(FEATURED_BROKER.licenseNumber);
-    expect(txt).toContain(FEATURED_APPRAISER.licenseNumber);
-    expect(txt).not.toMatch(/\bour team\b|\bclients\b/i);
-  });
-});
+// llms.txt is generated at build now (src/lib/aiData.ts); its check lives in src/test/mcpServer.test.ts.

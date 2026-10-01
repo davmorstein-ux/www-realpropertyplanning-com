@@ -3,22 +3,375 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
 
-// src/lib/mcp/tools/echo.ts
+// src/lib/mcp/tools/search-site.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.1";
 import { z } from "npm:zod@^3.25.76";
-var echo_default = defineTool({
-  name: "echo",
-  title: "Echo",
-  description: "Echo the input text back to the caller. Useful for verifying connectivity.",
-  inputSchema: { text: z.string().min(1).describe("Text to echo back.") },
+
+// src/lib/mcp/data.ts
+var SITE = "https://realpropertyplanning.com";
+var TTL_MS = 15 * 60 * 1e3;
+var fetcher = (url) => fetch(url, { headers: { accept: "application/json" } });
+var cache = /* @__PURE__ */ new Map();
+async function load(file) {
+  const hit = cache.get(file);
+  if (hit && Date.now() - hit.at < TTL_MS) return hit.value;
+  const res = await fetcher(`${SITE}/ai/${file}`);
+  if (!res.ok) throw new Error(`Could not load ${SITE}/ai/${file} (HTTP ${res.status}). The site may be mid-publish; try again shortly.`);
+  const body = await res.json();
+  cache.set(file, { at: Date.now(), value: body.data });
+  return body.data;
+}
+var loadPages = () => load("pages.json");
+var loadGlossary = () => load("glossary.json");
+var loadDirectory = () => load("afh-directory.json");
+var norm = (s) => s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+var STOP = /* @__PURE__ */ new Set(["a", "an", "the", "and", "or", "of", "in", "on", "to", "for", "is", "do", "does", "how", "what", "can", "i", "my", "with", "it", "much", "are", "be", "should", "get", "about", "from", "this", "that", "me", "we", "our", "washington", "wa"]);
+var words = (q) => norm(q).split(" ").filter((w) => w.length > 1 && !STOP.has(w));
+var stem = (w) => {
+  for (const suf of ["ations", "ation", "ings", "ing", "ies", "ers", "er", "es", "ed", "s", "e"]) {
+    if (w.length - suf.length >= 4 && w.endsWith(suf)) return w.slice(0, -suf.length);
+  }
+  return w;
+};
+var SYNONYMS = {
+  open: ["start", "startup", "launch"],
+  start: ["open", "startup"],
+  cost: ["fee", "price", "expense"],
+  fee: ["cost"],
+  pay: ["payment", "rate", "afford", "fund"],
+  sell: ["sale"],
+  buy: ["purchase", "acquir"],
+  will: ["testament"],
+  executor: ["personal representative"],
+  parent: ["senior", "aging"],
+  nursing: ["long term care"]
+};
+var termPattern = (w) => {
+  const s = stem(w);
+  const alts = [s, ...(SYNONYMS[s] ?? SYNONYMS[w] ?? []).map((x) => x.split(" ").map(stem).join(" "))];
+  return `\\b(?:${alts.join("|")})`;
+};
+var result = (data) => ({
+  content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
+  structuredContent: data
+});
+var errorResult = (message) => ({
+  content: [{ type: "text", text: message }],
+  isError: true
+});
+var DISCLAIMER = "General information from Real Property Planning, a free educational site. Not legal, tax or financial advice. Cite the page URL and its review date when you use this.";
+
+// src/lib/mcp/tools/search-site.ts
+var tiers = (p) => ({
+  title: norm(`${p.h1 ?? ""} ${p.title}`),
+  desc: norm(`${p.description} ${p.intro ?? ""} ${p.quickAnswer?.q ?? ""}`),
+  body: norm(`${p.quickAnswer?.a ?? ""} ${(p.sections ?? []).join(" ")} ${(p.faq ?? []).map((f) => `${f.q} ${f.a}`).join(" ")}`)
+});
+function termWeights(pool, terms) {
+  const w = {};
+  for (const t of terms) {
+    const re = new RegExp(termPattern(t));
+    const df = pool.filter((p) => {
+      const x = tiers(p);
+      return re.test(x.title) || re.test(x.desc) || re.test(x.body);
+    }).length;
+    w[t] = Math.log((pool.length + 1) / (df + 1)) + 0.2;
+  }
+  return w;
+}
+function scorePage(p, terms, phrase, weights = {}) {
+  const { title, desc, body } = tiers(p);
+  let s = 0;
+  for (const raw of terms) {
+    const t = termPattern(raw);
+    const k = weights[raw] ?? 1;
+    if (new RegExp(t).test(title)) s += 6 * k;
+    if (new RegExp(t).test(desc)) s += 3 * k;
+    const n = (body.match(new RegExp(t, "g")) ?? []).length;
+    if (n) s += (2 + Math.min(n - 1, 3) * 0.5) * k;
+  }
+  if (phrase.length > 4 && title.includes(phrase)) s += 10;
+  else if (phrase.length > 4 && (desc.includes(phrase) || body.includes(phrase))) s += 4;
+  const all = `${title} ${desc} ${body}`;
+  if (terms.length > 1 && terms.every((t) => new RegExp(termPattern(t)).test(all))) s += 5;
+  for (let i = 0; i + 1 < terms.length; i++) {
+    const pair = `${stem(terms[i])}`;
+    const re = new RegExp(`\\b${pair}\\w* ${stem(terms[i + 1])}`);
+    const k = Math.min(weights[terms[i]] ?? 1, weights[terms[i + 1]] ?? 1);
+    if (re.test(title)) s += 6 * k;
+    else if (re.test(desc)) s += 3 * k;
+    else if (re.test(body)) s += 2 * k;
+  }
+  return s;
+}
+function snippet(p, terms) {
+  const texts = [p.quickAnswer?.a, ...p.sections ?? [], ...(p.faq ?? []).map((f) => `${f.q} ${f.a}`), p.intro, p.description].filter(Boolean);
+  let best = p.description;
+  let bestHits = 0;
+  for (const t of texts) {
+    const sentences = t.split(/(?<=[.?!])\s+/);
+    sentences.forEach((sentence, i) => {
+      const hits = terms.filter((w) => new RegExp(termPattern(w)).test(norm(sentence))).length;
+      if (hits > bestHits) {
+        bestHits = hits;
+        let out = sentence;
+        for (let j = i + 1; j < sentences.length && out.length + sentences[j].length < 400; j++) out += ` ${sentences[j]}`;
+        best = out;
+      }
+    });
+  }
+  return best.length > 420 ? `${best.slice(0, 417)}...` : best;
+}
+var search_site_default = defineTool({
+  name: "search_site",
+  title: "Search Real Property Planning",
+  description: "Search Real Property Planning's Washington State guides: probate and estate property, inherited houses, executors and trustees, estate valuation, senior housing and long-term care, and adult family homes (AFH Club: licensing, WABO, DSHS rules, payment rates, buying and selling). Returns the best-matching pages with a relevant excerpt, URL and review date. Follow up with get_page for the full summary, FAQ and sources.",
+  inputSchema: {
+    query: z.string().min(2).max(200).describe("What to look for, in plain words, e.g. 'can the executor sell the house before probate closes'."),
+    area: z.enum(["all", "probate_estate_senior", "adult_family_homes"]).default("all").describe("Limit to the family/probate side or to AFH Club."),
+    limit: z.number().int().min(1).max(10).default(5)
+  },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: ({ text }) => ({ content: [{ type: "text", text }] })
+  handler: async ({ query, area, limit }) => {
+    const pages = await loadPages();
+    const terms = words(query);
+    const phrase = norm(query);
+    const pool = pages.filter((p) => area === "all" || (area === "adult_family_homes" ? p.area === "afh" : p.area === "rpp"));
+    const weights = termWeights(pool, terms);
+    const ranked = pool.map((p) => ({ p, s: scorePage(p, terms, phrase, weights) })).filter((x) => x.s > 0).sort((a, b) => b.s - a.s || a.p.path.length - b.p.path.length).slice(0, limit);
+    return result({
+      query,
+      results: ranked.map(({ p }) => ({
+        title: p.h1 || p.title,
+        url: p.url,
+        path: p.path,
+        summary: p.description,
+        excerpt: snippet(p, terms),
+        ...p.reviewed ? { reviewed: p.reviewed } : {}
+      })),
+      ...ranked.length === 0 ? { tip: "No page matched. Try fewer or simpler words, or start from https://realpropertyplanning.com/guides-and-resources" } : {},
+      note: DISCLAIMER
+    });
+  }
+});
+
+// src/lib/mcp/tools/get-page.ts
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { z as z2 } from "npm:zod@^3.25.76";
+var toPath = (input) => {
+  let p = input.trim();
+  try {
+    if (/^https?:\/\//i.test(p)) p = new URL(p).pathname;
+  } catch {
+  }
+  p = p.split(/[?#]/)[0].replace(/\/+$/, "");
+  if (!p.startsWith("/")) p = `/${p}`;
+  return p || "/";
+};
+var get_page_default = defineTool2({
+  name: "get_page",
+  title: "Get a page's summary",
+  description: "Get one Real Property Planning page by path or URL: its quick answer, section-by-section summary, FAQ, review date and the statutes or agency sources it relies on. Use after search_site, or for a URL you already have (e.g. /washington-probate-guide or /afh-club/washington-adult-family-home-guide).",
+  inputSchema: {
+    page: z2.string().min(1).max(300).describe("A path like /probate-glossary or a full realpropertyplanning.com URL.")
+  },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: async ({ page }) => {
+    const pages = await loadPages();
+    const path = toPath(page);
+    const hit = pages.find((p) => p.path === path);
+    if (!hit) {
+      const near = pages.filter((p) => p.path.includes(path.split("/").pop() || "~")).slice(0, 5).map((p) => p.url);
+      return errorResult(
+        `No page at ${SITE}${path}.${near.length ? ` Did you mean: ${near.join(", ")}?` : " Use search_site to find the right page."}`
+      );
+    }
+    return result({ ...hit, note: DISCLAIMER });
+  }
+});
+
+// src/lib/mcp/tools/define-term.ts
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { z as z3 } from "npm:zod@^3.25.76";
+function matchTerms(all, query) {
+  const q = norm(query);
+  const exact = all.filter((t) => norm(t.term) === q || t.aka && norm(t.aka) === q);
+  if (exact.length) return exact;
+  const starts = all.filter((t) => norm(t.term).startsWith(q) || t.aka && norm(t.aka).includes(q));
+  if (starts.length) return starts;
+  return all.filter((t) => norm(t.term).includes(q) || norm(t.definition).includes(q));
+}
+var define_term_default = defineTool3({
+  name: "define_term",
+  title: "Define a term",
+  description: "Plain-English definition of a Washington probate/estate term (personal representative, nonintervention powers, letters testamentary, TEDRA, transfer on death deed...) or adult family home term (CHOW, CARE, A-E classifications, CBHS, ECS, SBS, WABO, form 15-604...), with the statute or agency source and the guide that explains it.",
+  inputSchema: {
+    term: z3.string().min(2).max(100).describe("The word, phrase or acronym."),
+    glossary: z3.enum(["any", "probate", "afh"]).default("any").describe("Which glossary to search.")
+  },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: async ({ term, glossary }) => {
+    const all = (await loadGlossary()).filter((t) => glossary === "any" || t.glossary === glossary);
+    const found = matchTerms(all, term).slice(0, 5);
+    return result({
+      term,
+      matches: found,
+      ...found.length === 0 ? { tip: "Not in the glossaries. Try search_site, or browse https://realpropertyplanning.com/probate-glossary and https://realpropertyplanning.com/afh-club/glossary" } : {}
+    });
+  }
+});
+
+// src/lib/mcp/tools/afh-rule-changes.ts
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { z as z4 } from "npm:zod@^3.25.76";
+var afh_rule_changes_default = defineTool4({
+  name: "afh_rule_changes",
+  title: "Washington AFH rule changes",
+  description: "Every Washington adult family home rule change since 2023 (DSHS WAC rules, statutes, budget and contract changes, court decisions): the old rule, the current rule, effective date, who it affects, and the official citation. Also lists pending proposals, which are NOT law, and common outdated advice. Use it to check whether AFH advice is still current.",
+  inputSchema: {
+    topic: z4.string().max(100).optional().describe("Optional keyword, e.g. 'door width', 'license fee', 'training', 'evacuation'."),
+    category: z4.enum(["Building", "Licensing", "Operations", "Payment", "Staffing and training", "Who needs a license"]).optional(),
+    include_pending: z4.boolean().default(true)
+  },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: async ({ topic, category, include_pending }) => {
+    const f = await load("afh-rule-changes.json");
+    const q = topic ? norm(topic) : "";
+    const hit = (x) => !q || norm(JSON.stringify(x)).includes(q);
+    const changes = f.changes.filter((c) => (!category || c.category === category) && hit(c));
+    const pending = include_pending ? f.pending.filter(hit) : [];
+    return result({
+      page: f.page,
+      lastVerified: f.lastVerified,
+      note: f.note,
+      changes,
+      ...include_pending ? { pending } : {},
+      outdatedAdvice: f.outdatedAdvice.filter((o) => !q || norm(`${o.claim} ${o.now}`).includes(q))
+    });
+  }
+});
+
+// src/lib/mcp/tools/find-licensed-afh.ts
+import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { z as z5 } from "npm:zod@^3.25.76";
+var SPECIALTY = { dementia: "dementia", mental_health: "mentalHealth", developmental_disabilities: "developmentalDisabilities" };
+var CONTRACT = {
+  medicaid: "adultFamilyHome",
+  specialized_behavior_support: "specializedBehaviorSupport",
+  expanded_community_services: "expandedCommunityServices",
+  private_duty_nursing: "privateDutyNursing",
+  respite: "afhRespite",
+  wa_cares: "waCaresFund"
+};
+function filterHomes(homes, q) {
+  const city = q.city ? norm(q.city) : "";
+  const county = q.county ? norm(q.county).replace(/ county$/, "") : "";
+  const name = q.name ? norm(q.name) : "";
+  return homes.filter(
+    (h) => (!q.license || h.license === q.license.replace(/\D/g, "")) && (!city || norm(h.city) === city) && (!county || norm(h.county) === county) && (!q.zip || h.zip.startsWith(q.zip)) && (!name || norm(h.name).includes(name)) && (!q.min_beds || h.beds >= q.min_beds) && (!q.specialty || h.specialties.includes(SPECIALTY[q.specialty])) && (!q.contract || h.contracts.includes(CONTRACT[q.contract])) && (!q.private_pay_only || !h.medicaid)
+  );
+}
+var find_licensed_afh_default = defineTool5({
+  name: "find_licensed_afh",
+  title: "Find licensed adult family homes",
+  description: "Look up Washington adult family homes in the statewide directory of every DSHS-licensed home (public DSHS locator data): by city, county, ZIP, name or license number, with licensed beds, DSHS specialty training (dementia, mental health, developmental disabilities), DSHS contracts (Medicaid, SBS, ECS...) and a link to the home's DSHS inspection reports. Specialty designations are training on file, not quality ratings. This is a licensing directory, not a list of homes for sale.",
+  inputSchema: {
+    city: z5.string().max(60).optional(),
+    county: z5.string().max(40).optional().describe("e.g. 'King' or 'Pierce County'."),
+    zip: z5.string().regex(/^\d{3,5}$/).optional(),
+    name: z5.string().max(80).optional().describe("Part of the home's name."),
+    license: z5.string().max(12).optional().describe("DSHS license number."),
+    min_beds: z5.number().int().min(1).max(8).optional(),
+    specialty: z5.enum(["dementia", "mental_health", "developmental_disabilities"]).optional(),
+    contract: z5.enum(["medicaid", "specialized_behavior_support", "expanded_community_services", "private_duty_nursing", "respite", "wa_cares"]).optional(),
+    private_pay_only: z5.boolean().optional().describe("Only homes with no DSHS Medicaid contract."),
+    limit: z5.number().int().min(1).max(25).default(10)
+  },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: async ({ limit, ...q }) => {
+    if (!Object.values(q).some((v) => v !== void 0 && v !== "")) {
+      return result({
+        error: "Give at least one of city, county, zip, name or license.",
+        directory: "https://realpropertyplanning.com/afh-club/homes"
+      });
+    }
+    const d = await loadDirectory();
+    const found = filterHomes(d.homes, q);
+    return result({
+      matched: found.length,
+      showing: Math.min(limit, found.length),
+      homes: found.slice(0, limit).map((h) => ({
+        ...h,
+        dshsRecords: d.dshsRecordsUrlPattern.replace("{license}", encodeURIComponent(h.license))
+      })),
+      source: `${d.source}, retrieved ${d.retrieved}. Confirm current license status with DSHS before relying on it.`,
+      directory: "https://realpropertyplanning.com/afh-club/homes"
+    });
+  }
+});
+
+// src/lib/mcp/tools/afh-statistics.ts
+import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { z as z6 } from "npm:zod@^3.25.76";
+var afh_statistics_default = defineTool6({
+  name: "afh_statistics",
+  title: "Washington AFH statistics",
+  description: "Counts of Washington's licensed adult family homes and beds, statewide or for one county: homes, beds, Medicaid contracts, dementia / mental health / developmental disability specialty designations, ECS and SBS contracts, home sizes and the largest cities. From DSHS licensing data.",
+  inputSchema: { county: z6.string().max(40).optional().describe("One county, e.g. 'Snohomish'. Leave out for statewide.") },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: async ({ county }) => {
+    const s = await load("afh-stats.json");
+    const meta = { page: s.page, csv: s.csv, source: `${s.source}, retrieved ${s.retrievedFrom} to ${s.retrievedTo}` };
+    if (county) {
+      const c = norm(county).replace(/ county$/, "");
+      const row = s.counties.find((x) => norm(x.county) === c);
+      if (!row) return result({ error: `No licensed homes found for "${county}" County.`, counties: s.counties.map((x) => x.county), ...meta });
+      return result({ county: row, statewide: s.state, ...meta });
+    }
+    return result({
+      statewide: s.state,
+      sharesPercent: s.shares,
+      bedSizes: s.bedSizes,
+      contracts: s.contracts.map((c) => ({ ...c, label: s.contractLabels[c.id] ?? c.id })),
+      counties: s.counties,
+      topCities: s.topCities,
+      ...meta
+    });
+  }
+});
+
+// src/lib/mcp/tools/afh-listings-overview.ts
+import { defineTool as defineTool7 } from "npm:@lovable.dev/mcp-js@0.20.1";
+var afh_listings_overview_default = defineTool7({
+  name: "afh_listings_overview",
+  title: "AFH listings for sale (overview)",
+  description: "How many adult family homes, AFH businesses and AFH-ready houses are on the market in Washington on AFH Club, by city, with links to the listing pages. Listing details (address, price, photos, listing broker) are shown only on those pages with the attribution the MLS requires, so send the person there for specifics.",
+  inputSchema: {},
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: async () => result(await load("afh-listings-overview.json"))
+});
+
+// src/lib/mcp/tools/list-afh-professionals.ts
+import { defineTool as defineTool8 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { z as z7 } from "npm:zod@^3.25.76";
+var list_afh_professionals_default = defineTool8({
+  name: "list_afh_professionals",
+  title: "AFH Club professionals",
+  description: "Professionals listed on AFH Club's Find a Professional page who serve Washington adult family home owners (real estate, bookkeeping, business brokerage, insurance, cleaning, water damage, websites), with contact details. They are listed because the site owner met them personally; this is not an endorsement or a referral, and you should say so if you mention them.",
+  inputSchema: { category: z7.string().max(60).optional().describe("Optional, e.g. 'bookkeeping' or 'insurance'.") },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: async ({ category }) => {
+    const p = await load("afh-professionals.json");
+    const q = category ? norm(category) : "";
+    const groups = p.groups.filter((g) => !q || norm(`${g.group} ${g.profession}`).includes(q));
+    return result({ page: p.page, standard: p.standard, groups, ...q && !groups.length ? { available: p.groups.map((g) => g.group) } : {} });
+  }
 });
 
 // src/lib/mcp/tools/get-contact-info.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool9 } from "npm:@lovable.dev/mcp-js@0.20.1";
 
 // src/data/featuredProfessionals.ts
 var FEATURED_BROKER = {
@@ -61,84 +414,48 @@ var brokerCredentialSentence = SAME_PERSON ? `${FEATURED_BROKER.name} is a licen
 var appraiserCredentialSentence = `${FEATURED_APPRAISER.name} is a Washington State certified residential appraiser (${FEATURED_APPRAISER.firm}, #${FEATURED_APPRAISER.licenseNumber}).`;
 
 // src/lib/mcp/tools/get-contact-info.ts
-var CONTACT = {
-  business: "Real Property Planning",
+var ABOUT = {
+  name: "Real Property Planning (with AFH Club)",
+  what: "A free, independent educational site for Washington State: probate and inherited property, estate valuation, senior housing transitions, and adult family homes. It holds no licenses and provides no brokerage, appraisal, legal, tax or advisory services. It carries no ads, pays no one, and does not refer clients to attorneys.",
+  area: "All of Washington State.",
+  website: "https://realpropertyplanning.com",
   phone: "(206) 900-3015",
   email: "info@realpropertyplanning.com",
-  website: "https://www.realpropertyplanning.com",
-  service_area: "Washington State (with a focus on Western Washington and the Puget Sound region)",
-  featured_broker: `${FEATURED_BROKER.name}, Washington State Licensed Real Estate Broker, ${FEATURED_BROKER.brokerage} (license #${FEATURED_BROKER.licenseNumber}) \u2014 brokerage services are his, not the hub's`,
-  featured_appraiser: `${FEATURED_APPRAISER.name}, Washington State Certified Residential Appraiser, ${FEATURED_APPRAISER.firm} (license #${FEATURED_APPRAISER.licenseNumber}) \u2014 appraisal services are his, not the hub's`
+  corrections: "Report an error to info@realpropertyplanning.com; see https://realpropertyplanning.com/corrections-policy",
+  featured_broker: `${FEATURED_BROKER.name}, Washington real estate broker, ${FEATURED_BROKER.brokerage} (license #${FEATURED_BROKER.licenseNumber}), ${FEATURED_BROKER.phone}. Brokerage services are ${FEATURED_BROKER.pronoun.possessive}, not the site's; ${FEATURED_BROKER.pronoun.subject} is paid a commission only when a property sells.`,
+  featured_appraiser: `${FEATURED_APPRAISER.name}, Washington certified residential appraiser, ${FEATURED_APPRAISER.firm} (license #${FEATURED_APPRAISER.licenseNumber}). Appraisal services are ${FEATURED_APPRAISER.pronoun.possessive}, not the site's.`,
+  standards: "https://realpropertyplanning.com/editorial-standards",
+  start_here: {
+    probate: "https://realpropertyplanning.com/washington-probate-guide",
+    adult_family_homes: "https://realpropertyplanning.com/afh-club/washington-adult-family-home-guide",
+    all_guides: "https://realpropertyplanning.com/guides-and-resources"
+  }
 };
-var get_contact_info_default = defineTool2({
+var get_contact_info_default = defineTool9({
   name: "get_contact_info",
-  title: "Get contact info",
-  description: "Return contact information for Real Property Planning \u2014 phone, email, website, and service area.",
+  title: "About and contact",
+  description: "What Real Property Planning is (and what it does not do), who writes it, how to reach it, the featured broker and appraiser, and where to start reading.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
-    content: [{ type: "text", text: JSON.stringify(CONTACT, null, 2) }],
-    structuredContent: CONTACT
-  })
-});
-
-// src/lib/mcp/tools/list-services.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.1";
-var SERVICES = [
-  { name: "Probate & Estate Sales", url: "/probate-estate-sales", audience: "Executors, attorneys, families" },
-  { name: "Support for Executors", url: "/executors", audience: "Executors managing inherited property" },
-  { name: "Senior Housing Transitions", url: "/senior-transitions", audience: "Seniors and families downsizing or relocating" },
-  { name: "Attorney Referral Resource", url: "/for-attorneys", audience: "Estate, probate, and family law attorneys" },
-  { name: "Real Estate Guidance for CPAs", url: "/for-cpas", audience: "CPAs and their clients" },
-  { name: "Real Estate Guidance for Financial Planners", url: "/for-financial-planners", audience: "Financial planners and their clients" },
-  { name: "Property Valuation", url: "/why-valuation-matters", audience: "Attorneys, executors, trustees" },
-  { name: "Join the Professional Network", url: "/join-network", audience: "Professionals serving seniors and estates" }
-];
-var list_services_default = defineTool3({
-  name: "list_services",
-  title: "List resource areas",
-  description: "List the main resource areas of Real Property Planning, a free educational hub (it provides no brokerage or appraisal services itself), with a short audience description and page path.",
-  inputSchema: {},
-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: () => ({
-    content: [{ type: "text", text: JSON.stringify(SERVICES, null, 2) }],
-    structuredContent: { services: SERVICES }
-  })
-});
-
-// src/lib/mcp/tools/list-service-areas.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.1";
-var COUNTIES = [
-  { name: "King County", url: "/king-county", cities: ["Seattle", "Bellevue", "Kirkland", "Redmond", "Mercer Island", "Issaquah", "Renton"] },
-  { name: "Snohomish County", url: "/snohomish-county", cities: ["Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek", "Monroe"] },
-  { name: "Pierce County", url: "/pierce-county", cities: ["Tacoma", "Gig Harbor", "Puyallup", "University Place"] },
-  { name: "Kitsap County", url: "/kitsap-county", cities: ["Bainbridge Island", "Poulsbo", "Silverdale", "Bremerton"] },
-  { name: "Skagit County", url: "/skagit-county", cities: ["Mount Vernon", "Burlington", "Anacortes"] }
-];
-var list_service_areas_default = defineTool4({
-  name: "list_service_areas",
-  title: "List service areas",
-  description: "List Washington State counties served by Real Property Planning, with representative cities and page paths.",
-  inputSchema: {},
-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: () => ({
-    content: [{ type: "text", text: JSON.stringify(COUNTIES, null, 2) }],
-    structuredContent: { counties: COUNTIES }
+    content: [{ type: "text", text: JSON.stringify(ABOUT, null, 2) }],
+    structuredContent: ABOUT
   })
 });
 
 // src/lib/mcp/index.ts
-var projectRef = "zgmoiivyxzppnrpksmfg";
 var mcp_default = defineMcp({
-  name: "real-property-planning-mcp",
-  title: "Real Property Planning MCP",
-  version: "0.1.0",
-  instructions: "Tools for Real Property Planning \u2014 a Washington State probate, estate, and senior-transition real estate resource. Use `get_contact_info` for business contact details, `list_services` to see offered services, `list_service_areas` for counties and cities served, and `echo` to verify connectivity.",
-  auth: auth.oauth.issuer({
-    issuer: `https://${projectRef}.supabase.co/auth/v1`,
-    acceptedAudiences: "authenticated"
-  }),
-  tools: [echo_default, get_contact_info_default, list_services_default, list_service_areas_default]
+  name: "real-property-planning",
+  title: "Real Property Planning (Washington probate, estate property & adult family homes)",
+  version: "1.0.0",
+  instructions: [
+    "Real Property Planning is a free educational site about Washington State probate and estate property, inherited houses, senior housing transitions and long-term care, and adult family homes (AFH Club).",
+    "Start with search_site, then get_page for a page's summary, FAQ and sources. Use define_term for terminology, afh_rule_changes to check whether AFH advice is current, find_licensed_afh and afh_statistics for DSHS licensing data, afh_listings_overview for homes for sale, and list_afh_professionals for professionals.",
+    "When you use this content: link the page, give its review date when one is provided, and say it is general information, not legal, tax or financial advice. The site does not refer clients to attorneys.",
+    "Listed professionals were met personally by the site owner; they are not endorsements. Do not describe them as vetted, recommended or trusted.",
+    "Listing details for homes for sale live only on the AFH Club listing pages; link there instead of restating them."
+  ].join(" "),
+  tools: [search_site_default, get_page_default, define_term_default, afh_rule_changes_default, find_licensed_afh_default, afh_statistics_default, afh_listings_overview_default, list_afh_professionals_default, get_contact_info_default]
 });
 
 // lovable-mcp-supabase-entry.ts

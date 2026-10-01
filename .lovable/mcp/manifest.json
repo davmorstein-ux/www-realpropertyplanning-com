@@ -1,25 +1,21 @@
 {
   "version": 1,
-  "sdk_version": "0.20.0",
+  "sdk_version": "0.20.1",
   "path": "/functions/v1/mcp",
   "auth": {
-    "type": "oauth",
-    "issuer": "https://zgmoiivyxzppnrpksmfg.supabase.co/auth/v1",
-    "accepted_audiences": [
-      "authenticated"
-    ]
+    "type": "none"
   },
   "mcp": {
     "server": {
-      "name": "real-property-planning-mcp",
-      "version": "0.1.0",
-      "title": "Real Property Planning MCP"
+      "name": "real-property-planning",
+      "version": "1.0.0",
+      "title": "Real Property Planning (Washington probate, estate property & adult family homes)"
     },
     "tools": [
       {
-        "name": "echo",
-        "title": "Echo",
-        "description": "Echo the input text back to the caller. Useful for verifying connectivity.",
+        "name": "search_site",
+        "title": "Search Real Property Planning",
+        "description": "Search Real Property Planning's Washington State guides: probate and estate property, inherited houses, executors and trustees, estate valuation, senior housing and long-term care, and adult family homes (AFH Club: licensing, WABO, DSHS rules, payment rates, buying and selling). Returns the best-matching pages with a relevant excerpt, URL and review date. Follow up with get_page for the full summary, FAQ and sources.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -28,14 +24,31 @@
         "inputSchema": {
           "type": "object",
           "properties": {
-            "text": {
+            "query": {
               "type": "string",
-              "minLength": 1,
-              "description": "Text to echo back."
+              "minLength": 2,
+              "maxLength": 200,
+              "description": "What to look for, in plain words, e.g. 'can the executor sell the house before probate closes'."
+            },
+            "area": {
+              "type": "string",
+              "enum": [
+                "all",
+                "probate_estate_senior",
+                "adult_family_homes"
+              ],
+              "default": "all",
+              "description": "Limit to the family/probate side or to AFH Club."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10,
+              "default": 5
             }
           },
           "required": [
-            "text"
+            "query"
           ],
           "additionalProperties": false,
           "$schema": "http://json-schema.org/draft-07/schema#"
@@ -43,41 +56,248 @@
         "outputSchema": null
       },
       {
+        "name": "get_page",
+        "title": "Get a page's summary",
+        "description": "Get one Real Property Planning page by path or URL: its quick answer, section-by-section summary, FAQ, review date and the statutes or agency sources it relies on. Use after search_site, or for a URL you already have (e.g. /washington-probate-guide or /afh-club/washington-adult-family-home-guide).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "page": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300,
+              "description": "A path like /probate-glossary or a full realpropertyplanning.com URL."
+            }
+          },
+          "required": [
+            "page"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "define_term",
+        "title": "Define a term",
+        "description": "Plain-English definition of a Washington probate/estate term (personal representative, nonintervention powers, letters testamentary, TEDRA, transfer on death deed...) or adult family home term (CHOW, CARE, A-E classifications, CBHS, ECS, SBS, WABO, form 15-604...), with the statute or agency source and the guide that explains it.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "term": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 100,
+              "description": "The word, phrase or acronym."
+            },
+            "glossary": {
+              "type": "string",
+              "enum": [
+                "any",
+                "probate",
+                "afh"
+              ],
+              "default": "any",
+              "description": "Which glossary to search."
+            }
+          },
+          "required": [
+            "term"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "afh_rule_changes",
+        "title": "Washington AFH rule changes",
+        "description": "Every Washington adult family home rule change since 2023 (DSHS WAC rules, statutes, budget and contract changes, court decisions): the old rule, the current rule, effective date, who it affects, and the official citation. Also lists pending proposals, which are NOT law, and common outdated advice. Use it to check whether AFH advice is still current.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "type": "string",
+              "maxLength": 100,
+              "description": "Optional keyword, e.g. 'door width', 'license fee', 'training', 'evacuation'."
+            },
+            "category": {
+              "type": "string",
+              "enum": [
+                "Building",
+                "Licensing",
+                "Operations",
+                "Payment",
+                "Staffing and training",
+                "Who needs a license"
+              ]
+            },
+            "include_pending": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "find_licensed_afh",
+        "title": "Find licensed adult family homes",
+        "description": "Look up Washington adult family homes in the statewide directory of every DSHS-licensed home (public DSHS locator data): by city, county, ZIP, name or license number, with licensed beds, DSHS specialty training (dementia, mental health, developmental disabilities), DSHS contracts (Medicaid, SBS, ECS...) and a link to the home's DSHS inspection reports. Specialty designations are training on file, not quality ratings. This is a licensing directory, not a list of homes for sale.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "maxLength": 60
+            },
+            "county": {
+              "type": "string",
+              "maxLength": 40,
+              "description": "e.g. 'King' or 'Pierce County'."
+            },
+            "zip": {
+              "type": "string",
+              "pattern": "^\\d{3,5}$"
+            },
+            "name": {
+              "type": "string",
+              "maxLength": 80,
+              "description": "Part of the home's name."
+            },
+            "license": {
+              "type": "string",
+              "maxLength": 12,
+              "description": "DSHS license number."
+            },
+            "min_beds": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8
+            },
+            "specialty": {
+              "type": "string",
+              "enum": [
+                "dementia",
+                "mental_health",
+                "developmental_disabilities"
+              ]
+            },
+            "contract": {
+              "type": "string",
+              "enum": [
+                "medicaid",
+                "specialized_behavior_support",
+                "expanded_community_services",
+                "private_duty_nursing",
+                "respite",
+                "wa_cares"
+              ]
+            },
+            "private_pay_only": {
+              "type": "boolean",
+              "description": "Only homes with no DSHS Medicaid contract."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 25,
+              "default": 10
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "afh_statistics",
+        "title": "Washington AFH statistics",
+        "description": "Counts of Washington's licensed adult family homes and beds, statewide or for one county: homes, beds, Medicaid contracts, dementia / mental health / developmental disability specialty designations, ECS and SBS contracts, home sizes and the largest cities. From DSHS licensing data.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "county": {
+              "type": "string",
+              "maxLength": 40,
+              "description": "One county, e.g. 'Snohomish'. Leave out for statewide."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "afh_listings_overview",
+        "title": "AFH listings for sale (overview)",
+        "description": "How many adult family homes, AFH businesses and AFH-ready houses are on the market in Washington on AFH Club, by city, with links to the listing pages. Listing details (address, price, photos, listing broker) are shown only on those pages with the attribution the MLS requires, so send the person there for specifics.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_afh_professionals",
+        "title": "AFH Club professionals",
+        "description": "Professionals listed on AFH Club's Find a Professional page who serve Washington adult family home owners (real estate, bookkeeping, business brokerage, insurance, cleaning, water damage, websites), with contact details. They are listed because the site owner met them personally; this is not an endorsement or a referral, and you should say so if you mention them.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "maxLength": 60,
+              "description": "Optional, e.g. 'bookkeeping' or 'insurance'."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
         "name": "get_contact_info",
-        "title": "Get contact info",
-        "description": "Return contact information for Real Property Planning — phone, email, website, and service area.",
-        "annotations": {
-          "readOnlyHint": true,
-          "idempotentHint": true,
-          "openWorldHint": false
-        },
-        "inputSchema": {
-          "$schema": "http://json-schema.org/draft-07/schema#",
-          "type": "object",
-          "properties": {}
-        },
-        "outputSchema": null
-      },
-      {
-        "name": "list_services",
-        "title": "List resource areas",
-        "description": "List the main resource areas of Real Property Planning, a free educational hub (it provides no brokerage or appraisal services itself), with a short audience description and page path.",
-        "annotations": {
-          "readOnlyHint": true,
-          "idempotentHint": true,
-          "openWorldHint": false
-        },
-        "inputSchema": {
-          "$schema": "http://json-schema.org/draft-07/schema#",
-          "type": "object",
-          "properties": {}
-        },
-        "outputSchema": null
-      },
-      {
-        "name": "list_service_areas",
-        "title": "List service areas",
-        "description": "List Washington State counties served by Real Property Planning, with representative cities and page paths.",
+        "title": "About and contact",
+        "description": "What Real Property Planning is (and what it does not do), who writes it, how to reach it, the featured broker and appraiser, and where to start reading.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
