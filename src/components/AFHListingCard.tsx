@@ -363,30 +363,40 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
         </a>
       </div>
 
-      {/* Broker compliance */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "6px",
-          paddingTop: "4px",
-          fontSize: "11px",
-          color: GRAY_TEXT,
-          borderTop: `1px solid ${GRAY_BORDER}`,
-        }}
-      >
-        <span style={{ fontWeight: 600, color: SLATE }}>Listing broker:</span>
-        <span>{listing.broker ? `${listing.broker} · ${listing.brokerage}` : listing.brokerage}</span>
+      {/* Listing firm attribution (NWMLS IDX/VOW rule effective Oct 15, 2026).
+          Required form: "Listing Broker: [firm name]; [broker name]; [contact phone];
+          [contact email]", as prominent as the call/email buttons (same size and
+          weight; index.css renders those at 16px / 600) and adjacent to them. NWMLS
+          must still be named as the source. Class afhl-attr carries !important
+          sizes because index.css overrides inline span sizes. */}
+      <style>{`
+        .afhl-attr, .afhl-attr * { font-size: 16px !important; line-height: 1.5 !important; color: #1c1917 !important; }
+        .afhl-attr { font-weight: 600 !important; }
+        .afhl-attr a { text-decoration: underline !important; text-underline-offset: 3px; font-weight: 600 !important; }
+        .afhl-src, .afhl-src * { font-size: 14px !important; color: #3a2d2f !important; }
+      `}</style>
+      <p className="afhl-attr" style={{ margin: 0, overflowWrap: "anywhere" }}>
+        Listing Broker:{" "}
+        {[
+          listing.brokerage,
+          listing.broker,
+          listing.listingContactPhone,
+        ]
+          .filter(Boolean)
+          .join("; ")}
+        {listing.listingContactEmail && (
+          <>
+            {"; "}
+            <a href={`mailto:${listing.listingContactEmail}`}>{listing.listingContactEmail}</a>
+          </>
+        )}
+      </p>
+      <div className="afhl-src" style={{ display: "flex", gap: "6px", borderTop: `1px solid ${GRAY_BORDER}`, paddingTop: "6px" }}>
         {listing.source === "nwmls" ? (
-          <span style={{ marginLeft: "auto" }}>NWMLS</span>
+          <span>Listing information source: NWMLS</span>
         ) : (
-          <a
-            href={listing.sourceUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ marginLeft: "auto", color: TEAL, textDecoration: "underline" }}
-          >
-            View on {AFH_SOURCE_LABELS[listing.source]} listing →
+          <a href={listing.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ color: TEAL, textDecoration: "underline" }}>
+            Source: {AFH_SOURCE_LABELS[listing.source]} listing →
           </a>
         )}
       </div>

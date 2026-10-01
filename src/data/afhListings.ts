@@ -82,6 +82,15 @@ export interface AFHListing {
   /** Listing agent. Optional because some non-NWMLS sources publish only the office. */
   broker?: string;
   brokerage: string;
+  /**
+   * Listing firm contact phone and email, as provided in the NWMLS IDX/VOW
+   * feed (NWMLS rule effective Oct 15, 2026: "Listing Broker: [firm name];
+   * [broker name]; [contact phone]; [contact email]"). Copy them exactly
+   * from the feed or MyNWMLS; never guess or use a firm's general inbox.
+   * src/test/nwmlsAttribution.test.ts reports any NWMLS listing missing them.
+   */
+  listingContactPhone?: string;
+  listingContactEmail?: string;
   /** MLS or source listing number. */
   mlsNum: string;
   /** Business-only and lease listings: licensed capacity, current census, contracts, term. Free text, shown verbatim. */
@@ -1858,6 +1867,7 @@ export const afhListings: AFHListing[] = [
     photo: "/listing-photos/7501_93rd_Ave_Ct_SW_Lakewood.webp",
     broker: "Sharon Oguta",
     brokerage: "Lookup Realty",
+    listingContactPhone: "(253) 342-5940",
     mlsNum: "2583527",
     businessNotes:
       "Licensed adult family home (DSHS license 757823, licensed for 6), vacant with no residents; the price includes the real estate and the business, and it is sold furnished. A buyer still applies for a new license through a change of ownership. The listing mentions room to expand to 8 residents; DSHS approves 7 or 8 only for a provider who meets WAC 388-76-10031, including 24 months of licensed operation. The current owner's Expanded Community Services (ECS) contract does not transfer.",
