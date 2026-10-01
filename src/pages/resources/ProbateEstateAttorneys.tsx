@@ -37,7 +37,8 @@ const ProbateEstateAttorneys = () => (
       </section>
 
       <FeaturedProviderPlaceholder
-        heading="Featured Probate Attorney — Coming Soon"
+        heading="Featured Probate Attorney"
+        seeAlso={{ href: "/for-probate-attorneys", label: "See the featured probate attorney →" }}
         altLabel="featured probate attorney"
       />
 

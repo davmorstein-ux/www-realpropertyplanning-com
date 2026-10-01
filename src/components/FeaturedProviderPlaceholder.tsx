@@ -1,62 +1,38 @@
-import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
-import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
-import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
+import { Link } from "react-router-dom";
 
+/**
+ * "Coming Soon" block for a professional category with nobody listed yet.
+ *
+ * Sept 30, 2026 (owner): these pages should just say Coming Soon. The old
+ * version drew a fake profile card ("Name", "Bio will appear here",
+ * "Address", "Phone"), which read as a broken listing. `seeAlso` points to
+ * the page where a related professional IS featured, when there is one.
+ */
 interface Props {
   heading: string;
-  altLabel: string;
+  /** Kept for existing callers; no longer used (there is no placeholder photo). */
+  altLabel?: string;
+  seeAlso?: { href: string; label: string };
 }
 
-const FeaturedProviderPlaceholder = ({ heading, altLabel }: Props) => (
+const FeaturedProviderPlaceholder = ({ heading, seeAlso }: Props) => (
   <section className="py-16 lg:py-20 bg-background">
     <div className="container px-6 lg:px-8">
       <div className="max-w-[900px] mx-auto">
-        <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm text-center">
-          Featured Providers
-        </p>
-        <h2 className="font-serif text-3xl text-foreground font-semibold mb-8 text-center">
-          {heading}
-        </h2>
-
-        <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
-          <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
-            <div className="shrink-0">
-              <img
-                src="/placeholder.svg"
-                alt={`Photo placeholder for ${altLabel}`}
-                className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
-                loading="lazy" sizes="100vw" decoding="async"/>
-            </div>
-            <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-              <div className="w-full mt-2 text-center sm:text-left">
-                <p className="text-foreground font-semibold text-lg">Name</p>
-                <p className="text-muted-foreground text-sm mb-3">Title · Firm Name</p>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                  Bio will appear here.
-                </p>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                  <span className="font-semibold text-foreground">Memberships:</span> Pending
-                </p>
-                <div className="space-y-1.5 text-sm">
-                  <div className="flex items-start gap-2 justify-center sm:justify-start">
-                    <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" sizes="100vw" decoding="async" width={512} height={512} />
-                    <span className="text-muted-foreground">Address</span>
-                  </div>
-                  <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <span className="text-accent">Phone</span>
-                  </div>
-                  <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={1254} height={1254} />
-                    <span className="text-accent">Email</span>
-                  </div>
-                  <div className="flex items-center gap-2 justify-center sm:justify-start">
-                    <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" sizes="100vw" decoding="async" width={976} height={859} />
-                    <span className="text-accent">Website</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <h2 className="font-serif text-3xl text-foreground font-semibold mb-6 text-center">{heading}</h2>
+        <div className="bg-secondary border border-border rounded-xl p-8 text-center shadow-sm">
+          {!seeAlso && (
+            <p className="text-foreground text-lg leading-relaxed" style={{ margin: 0 }}>
+              Coming soon.
+            </p>
+          )}
+          {seeAlso && (
+            <p className="text-foreground text-lg leading-relaxed" style={{ margin: 0 }}>
+              <Link to={seeAlso.href} className="text-accent hover:text-gold underline underline-offset-4 font-semibold">
+                {seeAlso.label}
+              </Link>
+            </p>
+          )}
         </div>
       </div>
     </div>

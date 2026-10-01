@@ -35,7 +35,7 @@ const HowWeCanHelp = () => (
     <UL>
       <li><strong>Educational guides</strong> on probate, inherited property, senior housing options, and planning ahead</li>
       <li><strong>Plain-language explanations</strong> of key legal, financial, and real estate terms</li>
-      <li><strong>A directory of featured providers and professionals</strong> across Washington State — including CPAs, financial planners, senior living advisors, move managers, real estate brokers, and certified residential appraisers. The directory does not list estate planning or elder law attorneys, and Real Property Planning does not refer clients to attorneys; choose a Washington-licensed attorney and confirm their license with the Washington State Bar Association (wsba.org)</li>
+      <li><strong>A directory of featured providers and professionals</strong> across Washington State — including CPAs, financial planners, senior living advisors, move managers, real estate brokers, certified residential appraisers, and a few independent attorneys (probate and estate planning, elder law, and divorce). Real Property Planning does not refer clients to attorneys: contact a listed attorney directly or choose your own, and confirm any lawyer's license with the Washington State Bar Association (wsba.org)</li>
       <li><strong>Checklists and next-step prompts</strong> to help visitors organize their thinking</li>
     </UL>
 
