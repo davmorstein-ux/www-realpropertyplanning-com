@@ -240,7 +240,7 @@ const AFHROICalculator = () => {
       <main>
         {/* Hero */}
         <div style={{ background: "#faf8f4", padding: "48px 24px 40px", borderBottom: `3px solid ${BLUE}` }}>
-          <div style={{ maxWidth: 960, margin: "0 auto", paddingTop: "var(--header-height, 100px)" }}>
+          <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <div style={{ marginBottom: 24 }}>
               <BackToCalculators accent={BLUE} />
             </div>

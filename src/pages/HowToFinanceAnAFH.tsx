@@ -64,7 +64,7 @@ const HowToFinanceAnAFH = () => {
       <Header />
       <main>
         <div style={{ background: "#faf8f4", padding: "48px 24px 40px", borderBottom: `3px solid ${TEAL}` }}>
-          <div style={{ maxWidth: 900, margin: "0 auto", paddingTop: "var(--header-height, 100px)" }}>
+          <div style={{ maxWidth: 900, margin: "0 auto" }}>
             <ArticleCover src="/afh-how-to-finance-cover.webp" alt="Cover art: How to Finance an Adult Family Home" width={1024} height={1365} />
             <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: TEAL_DARK, marginBottom: 10, fontFamily: "'DM Sans', system-ui, sans-serif" }}>For buyers, sellers &amp; new operators</p>
             <h1 style={{ fontSize: "clamp(30px,4.2vw,44px)", fontWeight: 700, color: INK, marginBottom: 12, lineHeight: 1.2, fontFamily: "'DM Sans', system-ui, sans-serif" }}>How to Finance an Adult Family Home in Washington</h1>

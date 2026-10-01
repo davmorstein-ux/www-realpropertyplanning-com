@@ -3,32 +3,45 @@ import { Link, useLocation } from "react-router-dom";
 import { AFH_QUICK_LINKS, isAFHClubPath, isActiveQuickLink } from "@/lib/afhQuickLinks";
 
 /**
- * AFH Club quick links (owner's request, Oct 1, 2026): a slim row of AFH Club's
- * main pages under the site menu on EVERY AFH Club page, so a visitor on, say,
- * Find a Professional can see that the listings and the directory exist without
- * opening the menu. Rendered once by src/components/Header.tsx (outside <main>,
- * so index.css's first-section reset is untouched); pages add nothing.
+ * AFH Club quick links (owner's request, Oct 1, 2026): a bar of AFH Club's main
+ * pages under the site menu on EVERY AFH Club page, so a visitor on, say, Find a
+ * Professional can see that the listings and the directory exist without opening
+ * the menu. Rendered once by src/components/Header.tsx; pages add nothing.
+ *
+ * Design (owner chose "Option A", Oct 1, 2026, after the first pale version was
+ * "not obvious enough"): AFH Club's dark green (the "AFH Club Featured
+ * Professionals" banner), the red-door glyph and "AFH Club" wordmark on the left,
+ * a thin red rule underneath, the current section as a cream pill.
+ *
+ * Spacing below the bar (owner: "too close… cluttered"): index.css zeroes the top
+ * padding of the first block inside #main-content, so page headings sat right
+ * against the bar. The rule below gives that first block room again, only on pages
+ * that show this bar. Every such first block has its own background colour (checked
+ * on all AFH routes, Oct 1, 2026), so the space takes the page's colour, not a stripe.
  *
  * The links and the "which page counts as which" rules live in
  * src/lib/afhQuickLinks.ts, which vite.config.ts also reads for the static HTML.
- *
  * <nav> is styled as the site header by index.css, so this is a div with
  * role="navigation". Class prefix "afhq-" avoids index.css substring traps.
- * On phones the row scrolls sideways instead of wrapping to three lines.
+ * On phones the row scrolls sideways and centres the current page's link.
  */
 const GREEN = "#192A19";
+const CREAM = "#F3F0EA";
 const CSS = `
-.afhq { position: relative; background: #f3f0ea; border-bottom: 1px solid #ddd6cc; }
-/* Phones: the row scrolls sideways; a fade at the right edge shows there is more. */
-@media (max-width: 1100px) { .afhq::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 36px; pointer-events: none; background: linear-gradient(to right, rgba(243,240,234,0), #f3f0ea 85%); } }
-.afhq .afhq-in { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 4px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.afhq { background: ${GREEN}; border-bottom: 3px solid #7f2028; }
+.afhq .afhq-in { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 6px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .afhq .afhq-in::-webkit-scrollbar { display: none; }
-.afhq .afhq-label { flex: 0 0 auto; font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.12em; text-transform: uppercase; color: ${GREEN} !important; margin-right: 6px; white-space: nowrap; }
-.afhq a.afhq-link { flex: 0 0 auto; display: inline-flex !important; align-items: center; min-height: 44px; height: auto !important; padding: 0 12px !important; font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; font-weight: 600 !important; color: #1c1917 !important; text-decoration: none !important; white-space: nowrap; border-bottom: 3px solid transparent; }
-.afhq a.afhq-link[aria-current="page"] { color: ${GREEN} !important; border-bottom-color: ${GREEN}; font-weight: 700 !important; }
-@media (hover: hover) { .afhq a.afhq-link:hover { color: ${GREEN} !important; text-decoration: underline !important; text-underline-offset: 4px; } }
-.afhq a.afhq-link:focus-visible { outline: 2px solid ${GREEN}; outline-offset: -2px; }
-@media (max-width: 640px) { .afhq .afhq-label { font-size: 12px !important; } .afhq a.afhq-link { font-size: 14px !important; padding: 0 10px !important; } }
+.afhq a.afhq-brand { flex: 0 0 auto; display: inline-flex !important; align-items: center; gap: 8px; height: auto !important; margin-right: 10px; padding: 0 16px 0 0 !important; border-right: 1px solid rgba(243,240,234,0.35); text-decoration: none !important; }
+.afhq a.afhq-brand img { height: 26px; width: auto; display: block; }
+.afhq a.afhq-brand span { font-family: 'DM Sans', sans-serif !important; font-size: 18px !important; font-weight: 400 !important; letter-spacing: 0.18em; color: ${CREAM} !important; white-space: nowrap; }
+.afhq a.afhq-link { flex: 0 0 auto; display: inline-flex !important; align-items: center; height: 36px !important; margin: 8px 0; padding: 0 14px !important; border-radius: 999px; font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; font-weight: 600 !important; color: ${CREAM} !important; text-decoration: none !important; white-space: nowrap; }
+.afhq a.afhq-link[aria-current="page"] { background: ${CREAM}; color: ${GREEN} !important; font-weight: 700 !important; }
+@media (hover: hover) { .afhq a.afhq-link:not([aria-current="page"]):hover { background: rgba(243,240,234,0.14); } }
+.afhq a:focus-visible { outline: 2px solid ${CREAM}; outline-offset: 2px; }
+@media (max-width: 640px) { .afhq a.afhq-brand span { font-size: 16px !important; } .afhq a.afhq-link { font-size: 14px !important; padding: 0 12px !important; } }
+/* Breathing room between the bar and the page (see comment above). */
+.afhq ~ #main-content > *:first-child { padding-top: 28px !important; }
+@media (max-width: 640px) { .afhq ~ #main-content > *:first-child { padding-top: 20px !important; } }
 `;
 
 export default function AFHClubQuickLinks() {
@@ -48,7 +61,10 @@ export default function AFHClubQuickLinks() {
     <div className="afhq" role="navigation" aria-label="AFH Club pages">
       <style>{CSS}</style>
       <div className="afhq-in" ref={row}>
-        <span className="afhq-label">AFH Club</span>
+        <Link to="/afh-club" className="afhq-brand" aria-label="AFH Club home">
+          <img src="/afh-club-glyph.webp" alt="" width={200} height={194} />
+          <span aria-hidden="true">AFH Club</span>
+        </Link>
         {AFH_QUICK_LINKS.map((l) => {
           const active = isActiveQuickLink(l, pathname);
           return (
