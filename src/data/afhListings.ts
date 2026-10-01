@@ -1838,6 +1838,30 @@ export const afhListings: AFHListing[] = [
     brokerage: "KW Greater Seattle",
     mlsNum: "2585127",
   },
+  {
+    id: 89,
+    marketStatus: "active",
+    lastVerified: "2026-10-01",
+    listedDate: "2026-09-23",
+    listingType: "realEstate",
+    source: "nwmls",
+    afhStatus: "licensedNotOperating",
+    businessIncluded: "yes",
+    address: "7501 93rd Avenue Ct SW",
+    city: "Lakewood",
+    state: "WA",
+    beds: 6,
+    bathDisplay: "2",
+    bathDetail: "2 full",
+    sqft: "2,454",
+    price: "$835,000",
+    photo: "/listing-photos/7501_93rd_Ave_Ct_SW_Lakewood.webp",
+    broker: "Sharon Oguta",
+    brokerage: "Lookup Realty",
+    mlsNum: "2583527",
+    businessNotes:
+      "Licensed adult family home (DSHS license 757823, licensed for 6), vacant with no residents; the price includes the real estate and the business, and it is sold furnished. A buyer still applies for a new license through a change of ownership. The listing mentions room to expand to 8 residents; DSHS approves 7 or 8 only for a provider who meets WAC 388-76-10031, including 24 months of licensed operation. The current owner's Expanded Community Services (ECS) contract does not transfer.",
+  },
 ];
 
 /* ---------------------------------------------------------------------------
