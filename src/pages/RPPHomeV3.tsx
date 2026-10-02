@@ -432,6 +432,20 @@ const RPPHomeV3 = () => {
     font-size: clamp(2.25rem, 3.2vw, 3.5rem) !important;
   }
 
+  /* "Choose where to begin" under the heading (owner, Oct 1, 2026: "off
+     center and too small"). Sitewide paragraph rules gave it a left-aligned
+     max-width box, so it sat left of the centered heading. Doubled class beats
+     index.css's "main p" rules. */
+  .rpp-funnel-sub.rpp-funnel-sub {
+    text-align: center !important;
+    max-width: none !important;
+    margin: 0.75rem auto 0 !important;
+    font-family: 'DM Sans', system-ui, sans-serif !important;
+    font-size: clamp(20px, 1.7vw, 26px) !important;
+    font-weight: 500 !important;
+    color: #1B3A6B !important;
+  }
+
               /* Cost of Care tile — three columns on desktop: heading+CTA on
                  the left, rotating figures in the middle, and the full list
                  of care types on the right. Secondary text throughout uses
