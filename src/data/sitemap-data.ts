@@ -1060,6 +1060,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     ],
   },
   {
+    path: "/guides/property-taxes-after-death-washington",
+    links: ["/washington-probate-guide", "/guides/executor-first-steps-house", "/guides/taxes-selling-inherited-house-washington", "/probate-glossary"],
+  },
+  {
     path: "/guides/taxes-selling-inherited-house-washington",
     links: [
       "/contact",

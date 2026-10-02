@@ -18,6 +18,7 @@ import { GLOSSARY_A_TO_Z } from "./src/data/afhGlossary";
 import { PROBATE_GLOSSARY_A_TO_Z } from "./src/data/probateGlossary";
 import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/data/probatePillar";
 import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
+import { PROPERTY_TAX_AFTER_DEATH, PTX_PRERENDER_SECTIONS, PTX_FAQS } from "./src/data/propertyTaxAfterDeath";
 import { AFH_QUICK_LINKS, isAFHClubPath } from "./src/lib/afhQuickLinks";
 import { RULE_CHANGES, PENDING_RULES, OUTDATED_ADVICE } from "./src/data/afhRuleChanges";
 import { readFileSync as readFileSyncForStats } from "node:fs";
@@ -642,6 +643,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Understanding capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
     h1: "What Taxes Do You Pay When Selling an Inherited House in Washington?",
     intro: "Capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
+  },
+  [PROPERTY_TAX_AFTER_DEATH.PATH]: {
+    title: `${PROPERTY_TAX_AFTER_DEATH.TITLE} | Real Property Planning`,
+    description: PROPERTY_TAX_AFTER_DEATH.DESCRIPTION,
+    h1: PROPERTY_TAX_AFTER_DEATH.TITLE,
+    quickAnswerQ: "Who pays the property taxes after someone dies in Washington, and when are they due?",
+    quickAnswerA: PROPERTY_TAX_AFTER_DEATH.SHORT_ANSWER,
+    intro: "For executors and heirs in Washington: the property tax payments that keep coming due after a death, why the October payment is easy to miss, interest, senior exemptions and deferrals, the mortgage escrow, and what happens at the sale. General information, not legal or tax advice.",
+    sections: PTX_PRERENDER_SECTIONS,
+    faq: PTX_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: PROPERTY_TAX_AFTER_DEATH.PUBLISHED, dateModified: PROPERTY_TAX_AFTER_DEATH.REVIEWED },
   },
   "/guides/how-long-sell-probate-property": {
     title: "How Long Does It Take to Sell a Probate Property? | Real Property Planning",

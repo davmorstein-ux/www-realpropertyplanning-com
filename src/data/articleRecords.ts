@@ -136,6 +136,20 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       DSHS_RCS_DOOR_ANSWER,
     ],
   },
+  "/guides/property-taxes-after-death-washington": {
+    published: "2026-10-01",
+    reviewed: "2026-10-01",
+    changes: [],
+    sources: [
+      { label: "RCW 84.56.020: due dates, tax statements, interest and penalties", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=84.56.020" },
+      { label: "RCW 84.60.010 and 84.60.020: the tax lien and its priority", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=84.60.020" },
+      { label: "RCW 84.64.050: certificate of delinquency after three years", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=84.64.050" },
+      { label: "RCW 84.36.381 and WAC 458-16A-150: senior and disabled exemption, and what happens at death", href: "https://app.leg.wa.gov/WAC/default.aspx?cite=458-16A-150" },
+      { label: "Chapter 84.38 RCW: property tax deferral (RCW 84.38.100, 84.38.130, 84.38.150)", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=84.38" },
+      { label: "RCW 84.40.020 and 84.41.030: January 1 valuation and annual revaluation", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=84.41.030" },
+      { label: "Washington Department of Revenue: property tax calendar", href: "https://dor.wa.gov/sites/default/files/2023-10/PropertyTaxCalendarDueDates.pdf" },
+    ],
+  },
   "/washington-probate-guide": {
     published: "2026-09-30",
     reviewed: "2026-09-30",

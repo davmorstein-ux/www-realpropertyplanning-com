@@ -31,6 +31,7 @@ export const PROBATE_START_HERE_ROUTES: string[] = [
   "/guides/probate-vs-trust-sale-washington",
   "/guides/heirs-disagree-selling-house",
   "/guides/taxes-selling-inherited-house-washington",
+  "/guides/property-taxes-after-death-washington",
   "/guides/inherited-house-washington",
   "/guides/who-has-authority-sell-probate-property-washington",
   // Executors & trustees

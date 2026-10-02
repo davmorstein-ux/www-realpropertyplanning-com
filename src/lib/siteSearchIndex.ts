@@ -224,6 +224,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/spokane-probate-estate-real-estate", label: "Spokane Probate Estate" },
   { path: "/tacoma-probate-estate-real-estate", label: "Tacoma Probate Estate" },
   { path: "/guides/taxes-selling-inherited-house-washington", label: "Taxes Selling Inherited House Washington" },
+  { path: "/guides/property-taxes-after-death-washington", label: "Property Taxes After a Death" },
   { path: "/terminology", label: "Terminology" },
   { path: "/testimonials", label: "Testimonials" },
   { path: "/thurston-county", label: "Thurston County" },

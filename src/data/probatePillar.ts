@@ -60,6 +60,7 @@ export const PROBATE_PATHS: { id: string; short: string; title: string; who: str
       { label: "Understanding Your Legal Duties as Executor", href: "/executor-responsibilities-first-steps/legal-duties", note: "What you owe the heirs and creditors, and how to keep records." },
       { label: "Who Has Authority to Sell Probate Property?", href: "/guides/who-has-authority-sell-probate-property-washington", note: "Letters, nonintervention powers and what a title company will ask for." },
       { label: "What Should an Executor Do First With a House?", href: "/guides/executor-first-steps-house", note: "Insurance, utilities, a vacant house and the first decisions." },
+      { label: "Property Taxes After a Death", href: "/guides/property-taxes-after-death-washington", note: "The October payment that comes with no new bill, and what happens to a senior exemption." },
       { label: "Common Executor Mistakes", href: "/executor-responsibilities-first-steps/common-mistakes", note: "The errors that cost estates time and money." },
       { label: "How Out-of-State Families Can Handle a Washington Property Sale", href: "/guides/out-of-state-families", note: "Serving from another state, and managing a house from a distance." },
     ],
