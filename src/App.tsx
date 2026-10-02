@@ -215,6 +215,8 @@ const AFHPropertyClassifications = lazy(() => import("./pages/AFHPropertyClassif
 const AFHDosAndDonts = lazy(() => import("./pages/AFHDosAndDonts"));
 const AFHWashingtonData = lazy(() => import("./pages/AFHWashingtonData"));
 const AFHPillarGuide = lazy(() => import("./pages/AFHPillarGuide"));
+const AFHFlowPage = lazy(() => import("./pages/afh/AFHFlowPage"));
+const AFHRulesAndFigures = lazy(() => import("./pages/afh/AFHRulesAndFigures"));
 const AFHGlossary = lazy(() => import("./pages/AFHGlossary"));
 const ProbatePillarGuide = lazy(() => import("./pages/ProbatePillarGuide"));
 const ProbateFlowPage = lazy(() => import("./pages/probate/ProbateFlowPage"));
@@ -661,6 +663,12 @@ const App = () => (
           <Route path="/afh-club/dos-and-donts-operating-adult-family-home" element={<AFHDosAndDonts />} />
           <Route path="/afh-club/washington-afh-data" element={<AFHWashingtonData />} />
           <Route path="/afh-club/washington-adult-family-home-guide" element={<AFHPillarGuide />} />
+          <Route path="/afh-club/washington-adult-family-home-guide/opening" element={<AFHFlowPage slug="opening" />} />
+          <Route path="/afh-club/washington-adult-family-home-guide/buying" element={<AFHFlowPage slug="buying" />} />
+          <Route path="/afh-club/washington-adult-family-home-guide/selling" element={<AFHFlowPage slug="selling" />} />
+          <Route path="/afh-club/washington-adult-family-home-guide/running" element={<AFHFlowPage slug="running" />} />
+          <Route path="/afh-club/washington-adult-family-home-guide/evaluating" element={<AFHFlowPage slug="evaluating" />} />
+          <Route path="/afh-club/washington-adult-family-home-guide/rules-and-key-figures" element={<AFHRulesAndFigures />} />
           <Route path="/afh-club/glossary" element={<AFHGlossary />} />
           <Route path="/afh-club/washington-afh-rule-changes" element={<AFHRuleChanges />} />
           <Route path="/afh-club/violation-history-lookup" element={<AFHViolationHistory />} />

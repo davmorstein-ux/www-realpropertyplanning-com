@@ -13,7 +13,7 @@ export interface AFHQuickLink {
 
 export const AFH_QUICK_LINKS: AFHQuickLink[] = [
   { label: "AFH Club Home", href: "/afh-club" },
-  { label: "Start Here", href: "/afh-club/washington-adult-family-home-guide" },
+  { label: "Start Here", href: "/afh-club/washington-adult-family-home-guide", alsoActive: ["/afh-club/washington-adult-family-home-guide/"] },
   { label: "Listings for Sale", href: "/afh-club/listings", alsoActive: ["/afh-club/listings/", "/afh-club/sold"] },
   { label: "Home Directory", href: "/afh-club/homes", alsoActive: ["/afh-club/homes/"] },
   { label: "Find a Professional", href: "/afh-club/find-a-professional" },

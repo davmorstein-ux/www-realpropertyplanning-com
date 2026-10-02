@@ -118,6 +118,22 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       DSHS_RCS_DOOR_ANSWER,
       { label: "DSHS Adult Family Home Locator (counts retrieved September 13-14, 2026)", href: "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx" },
     ],
+  },  "/afh-club/washington-adult-family-home-guide/rules-and-key-figures": {
+    published: "2026-09-29",
+    reviewed: "2026-09-29",
+    changes: [],
+    sources: [
+      { label: "RCW 70.128.010: definition of an adult family home", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128.010" },
+      { label: "RCW 70.128.070: inspection frequency", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128.070" },
+      { label: "RCW 70.128.140: zoning", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128.140" },
+      { label: "RCW 70.128.160: enforcement", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=70.128.160" },
+      { label: "WAC 388-76-10031, 10040, 10105, 10106, 10130 and 10700: capacity, residence, change of ownership, notice, qualifications, building inspection", href: WAC("388-76") },
+      { label: "WAC 388-106-0115: CARE classifications", href: WAC("388-106-0115") },
+      { label: "DSHS: BAAU application processing timeline", href: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline" },
+      DSHS_FEE_ANSWER,
+      DSHS_RCS_DOOR_ANSWER,
+      { label: "DSHS Adult Family Home Locator (counts retrieved September 13-14, 2026)", href: "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx" },
+    ],
   },
   "/afh-club/washington-afh-rule-changes": {
     published: "2026-09-29",

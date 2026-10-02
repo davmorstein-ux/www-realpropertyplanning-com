@@ -246,6 +246,12 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
         links: [
           { title: "AFH Club Home", href: "/afh-club" },
           { title: "Washington Adult Family Homes: The Complete Guide", href: "/afh-club/washington-adult-family-home-guide" },
+          { title: "Opening a New Adult Family Home", href: "/afh-club/washington-adult-family-home-guide/opening" },
+          { title: "Buying an Adult Family Home", href: "/afh-club/washington-adult-family-home-guide/buying" },
+          { title: "Selling Your Adult Family Home", href: "/afh-club/washington-adult-family-home-guide/selling" },
+          { title: "Running a Licensed Adult Family Home", href: "/afh-club/washington-adult-family-home-guide/running" },
+          { title: "Evaluating an AFH Property or Investment", href: "/afh-club/washington-adult-family-home-guide/evaluating" },
+          { title: "AFH Rules & Key Figures", href: "/afh-club/washington-adult-family-home-guide/rules-and-key-figures" },
           { title: "AFH Glossary", href: "/afh-club/glossary" },
           { title: "Washington AFH Rules Have Changed: Old vs. New", href: "/afh-club/washington-afh-rule-changes" },
           { title: "Is an Adult Family Home Right for You?", href: "/afh-club/getting-started" },

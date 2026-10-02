@@ -20,6 +20,7 @@ import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/dat
 import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
 import { PROPERTY_TAX_AFTER_DEATH, PTX_PRERENDER_SECTIONS, PTX_FAQS } from "./src/data/propertyTaxAfterDeath";
 import { FLOW_PAGES, FLOW_CHART_TEXT, DEADLINES_PATH, flowPrerenderSections } from "./src/data/probateFlow";
+import { AFH_FLOW_PAGES, AFH_FLOW_CHART_TEXT, AFH_RULES_PATH, afhFlowPrerenderSections } from "./src/data/afhFlow";
 import { AFH_QUICK_LINKS, isAFHClubPath } from "./src/lib/afhQuickLinks";
 import { RULE_CHANGES, PENDING_RULES, OUTDATED_ADVICE } from "./src/data/afhRuleChanges";
 import { readFileSync as readFileSyncForStats } from "node:fs";
@@ -891,6 +892,29 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     heroImage: "/afh-washington-guide-cover.webp",
     quickAnswerQ: "What is an adult family home in Washington?",
     quickAnswerA: "An adult family home is a regular house licensed by DSHS to care for two to six adults who are not related to the provider, or up to eight with DSHS approval (RCW 70.128.010). The license belongs to the provider, not the house, so it never transfers in a sale: every new owner applies for a new one (WAC 388-76-10105). Most homes are paid mainly by Medicaid, at a daily rate set by each resident's CARE classification and where the home is.",
+    intro: "A flow chart for anyone opening, running, buying, selling or investing in an adult family home in Washington: pick what you want to do, and each box opens a short page with your next steps.",
+    sections: AFH_FLOW_CHART_TEXT,
+    article: { datePublished: "2026-09-29", dateModified: "2026-10-01" },
+  },
+  ...Object.fromEntries(
+    AFH_FLOW_PAGES.map((fp) => [
+      fp.path,
+      {
+        title: `${fp.title} | AFH Club`,
+        description: fp.description,
+        h1: fp.title,
+        intro: fp.summary[0],
+        sections: afhFlowPrerenderSections(fp),
+        article: { datePublished: "2026-10-01", dateModified: "2026-10-01" },
+      },
+    ])
+  ),
+  [AFH_RULES_PATH]: {
+    title: "Washington Adult Family Homes: Rules & Key Figures | AFH Club",
+    description: "The rules and figures that matter for a Washington adult family home, each with its source: licensing, capacity, zoning, owner experience, training, the building inspection, fees, inspections, payment, and what happens in a sale.",
+    h1: "Washington Adult Family Homes: Rules & Key Figures",
+    quickAnswerQ: "What is an adult family home in Washington?",
+    quickAnswerA: "An adult family home is a regular house licensed by DSHS to care for two to six adults who are not related to the provider, or up to eight with DSHS approval (RCW 70.128.010). The license belongs to the provider, not the house, so it never transfers in a sale: every new owner applies for a new one (WAC 388-76-10105). Most homes are paid mainly by Medicaid, at a daily rate set by each resident's CARE classification and where the home is.",
     intro: `For anyone opening, running, buying, selling or investing in an adult family home in Washington: the rules that matter, in plain English, with a path to the right guide. Washington has ${afhN(AFH_STATS.state.homes)} licensed adult family homes with ${afhN(AFH_STATS.state.beds)} beds; ${afhSix}% are licensed for six residents and ${AFH_STATS.shares.medicaid}% hold a Medicaid contract (DSHS locator, retrieved ${AFH_STATS.retrievedTo}).`,
     sections: [
       "At a glance — Licensed by DSHS Residential Care Services (chapter 388-76 WAC). Two to six unrelated adults; DSHS may approve seven or eight (RCW 70.128.010, WAC 388-76-10031). The provider, entity representative or a resident manager lives in the home unless it has 24-hour staffing with a decision-maker present (WAC 388-76-10040). A permitted use in every residential or commercial zone (RCW 70.128.140). The provider (for an entity, its entity representative) needs 1,000 hours of direct care in the last 60 months, with physicians, PAs and nurses exempt (WAC 388-76-10130); new applicants also complete AFH Administrator Training. Most caregivers need 75 hours of training and Home Care Aide certification. The local building official passes the house on DSHS form 15-604 (WAC 388-76-10700). Annual license fee $450 per licensed bed since July 2025, per DSHS in writing. Inspections at least every 18 months, 15 on average, and unannounced at any time (RCW 70.128.070).",
@@ -899,14 +923,13 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "How do adult family homes get paid? — Mostly through Medicaid. The CARE assessment places each Medicaid resident in one of 17 classifications from A Low to E High, (WAC 388-106-0115); the classification and the rate region (King, Pierce and Snohomish counties are paid more) set the daily rate. Community Behavioral Health Support (CBHS) pays six tiers on top of the base rate; some homes hold owner-level ECS or SBS contracts. Private-pay rates are set by each home.",
       "What does the house need? — A passed local building inspection on form 15-604: bedroom exits and classifications, escape windows, smoke and CO alarms, doors, ramps, stairs, bathrooms and fire access. WABO helped write the checklist but does not inspect. Homes licensed after September 20, 2026 need 27-inch interior doors where residents pass through (WAC 388-76-10715).",
       "Inspections and the public record — Enforcement ranges from license conditions and civil fines to stop placement, suspension and revocation (RCW 70.128.160). The DSHS Adult Family Home Locator shows each home's license and three years of limits and enforcement.",
-      "Paths — Opening: getting started, training, licensing, building inspection, costs and fees, ownership structure. Running: dos and don'ts, inspections and compliance, CARE classifications, CBHS tiers, payment field guide. Buying or selling: change of ownership, reading AFH listings, violation lookup, financing, selling at retirement, listings. Evaluating: AFH Property Score, ROI calculator, valuation estimator, WABO technical guide, Washington AFH data, licensed-home directory. Glossary: /afh-club/glossary",
     ],
     faq: [
       { q: "Does an adult family home license transfer when the home is sold?", a: "No. A change of ownership requires a new license application and a new license (WAC 388-76-10105). The seller must give DSHS and each resident written notice 60 calendar days before the proposed change (WAC 388-76-10106)." },
       { q: "How long does it take to license an adult family home?", a: "DSHS does not promise a timeline. It posts its application queue online; in late September 2026 it was working on applications received in May 2026, and it allows up to 60 days once an application is complete." },
       { q: "How are Washington adult family homes paid?", a: `Mostly through Medicaid: ${AFH_STATS.shares.medicaid}% of licensed homes hold a DSHS Medicaid contract. DSHS pays a daily rate set by each resident's CARE classification (A Low to E High) and the rate region. Some residents also qualify for CBHS, and some homes hold ECS or SBS contracts. Private-pay rates are set by the home.` },
     ],
-    article: { datePublished: "2026-09-29", dateModified: "2026-09-29" },
+    article: { datePublished: "2026-09-29", dateModified: "2026-10-01" },
   },
   "/afh-club/washington-afh-rule-changes": {
     title: "Washington AFH Rules Have Changed: Old Requirements vs. Today's Standards | AFH Club",

@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { AFH_GLOSSARY, GLOSSARY_A_TO_Z, GLOSSARY_CATEGORIES } from "@/data/afhGlossary";
 
 const app = readFileSync(resolve(__dirname, "../App.tsx"), "utf8");
-const pillar = readFileSync(resolve(__dirname, "../pages/AFHPillarGuide.tsx"), "utf8");
+const pillar = readFileSync(resolve(__dirname, "../pages/afh/AFHRulesAndFigures.tsx"), "utf8");
 
 describe("AFH glossary", () => {
   it("has unique ids and terms", () => {
