@@ -19,6 +19,7 @@ import { PROBATE_GLOSSARY_A_TO_Z } from "./src/data/probateGlossary";
 import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/data/probatePillar";
 import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
 import { PROPERTY_TAX_AFTER_DEATH, PTX_PRERENDER_SECTIONS, PTX_FAQS } from "./src/data/propertyTaxAfterDeath";
+import { FLOW_PAGES, FLOW_CHART_TEXT, DEADLINES_PATH, flowPrerenderSections } from "./src/data/probateFlow";
 import { AFH_QUICK_LINKS, isAFHClubPath } from "./src/lib/afhQuickLinks";
 import { RULE_CHANGES, PENDING_RULES, OUTDATED_ADVICE } from "./src/data/afhRuleChanges";
 import { readFileSync as readFileSyncForStats } from "node:fs";
@@ -688,10 +689,33 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ...(PROBATE_PILLAR.COVER ? { heroImage: PROBATE_PILLAR.COVER } : {}),
     quickAnswerQ: "How does probate work in Washington when there is a house?",
     quickAnswerA: PROBATE_PILLAR.SHORT_ANSWER,
-    intro: "For executors, heirs, trustees and families dealing with a house after a death in Washington: how probate works, who can act, the deadlines that matter, and a path to the right guide for your role. General information, not legal advice.",
-    sections: PROBATE_PILLAR_SECTIONS,
+    intro: "A flow chart for executors, heirs, trustees and families dealing with a house after a death in Washington: answer one question about how the house was owned, and each box opens a short page with your next steps. General information, not legal advice.",
+    sections: FLOW_CHART_TEXT,
+    article: { datePublished: "2026-09-30", dateModified: "2026-10-01" },
+  },
+  ...Object.fromEntries(
+    FLOW_PAGES.map((fp) => [
+      fp.path,
+      {
+        title: `${fp.title} | Washington Probate Guide`,
+        description: fp.description,
+        h1: fp.title,
+        intro: fp.summary[0],
+        sections: flowPrerenderSections(fp),
+        article: { datePublished: "2026-10-01", dateModified: "2026-10-01" },
+      },
+    ])
+  ),
+  [DEADLINES_PATH]: {
+    title: "Washington Probate Deadlines & Key Rules | Real Property Planning",
+    description: "Every Washington probate deadline and rule that matters for a house, in one table with its statute: notice to heirs, inventory, creditor claims, will contests, small estates, transfer on death deeds, estate tax, and common questions.",
+    h1: "Washington Probate Deadlines & Key Rules",
+    quickAnswerQ: "What are the main Washington probate deadlines?",
+    quickAnswerA: "After the court appoints the personal representative: notice to heirs and beneficiaries within 20 days (RCW 11.28.237), the inventory within three months (RCW 11.44.015), and creditor claims due four months after the notice to creditors is first published (RCW 11.40.051). A will contest must be filed within four months of the will being admitted (RCW 11.24.010).",
+    intro: "The dates and rules that matter when there is a house, each with its statute, from the Washington Probate & Estate Property Guide. General information, not legal advice.",
+    sections: PROBATE_PILLAR_SECTIONS.filter((x) => !x.startsWith("Paths")),
     faq: PROBATE_FAQS.map((f) => ({ q: f.question, a: f.answer })),
-    article: { datePublished: "2026-09-30", dateModified: "2026-09-30" },
+    article: { datePublished: "2026-09-30", dateModified: "2026-10-01" },
   },
   "/probate-glossary": {
     title: "Washington Probate & Estate Glossary: Terms Explained | Real Property Planning",

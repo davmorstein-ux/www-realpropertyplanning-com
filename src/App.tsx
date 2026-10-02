@@ -217,6 +217,8 @@ const AFHWashingtonData = lazy(() => import("./pages/AFHWashingtonData"));
 const AFHPillarGuide = lazy(() => import("./pages/AFHPillarGuide"));
 const AFHGlossary = lazy(() => import("./pages/AFHGlossary"));
 const ProbatePillarGuide = lazy(() => import("./pages/ProbatePillarGuide"));
+const ProbateFlowPage = lazy(() => import("./pages/probate/ProbateFlowPage"));
+const ProbateDeadlines = lazy(() => import("./pages/probate/ProbateDeadlines"));
 const ProbateGlossary = lazy(() => import("./pages/ProbateGlossary"));
 const AFHRuleChanges = lazy(() => import("./pages/AFHRuleChanges"));
 const AFHViolationHistory = lazy(() => import("./pages/AFHViolationHistory"));
@@ -342,6 +344,12 @@ const App = () => (
           <Route path="/helping-an-aging-parent" element={<ChoiceFlowPage />} />
           <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />
           <Route path="/washington-probate-guide" element={<ProbatePillarGuide />} />
+          <Route path="/washington-probate-guide/house-in-a-trust" element={<ProbateFlowPage slug="house-in-a-trust" />} />
+          <Route path="/washington-probate-guide/no-probate-needed" element={<ProbateFlowPage slug="no-probate-needed" />} />
+          <Route path="/washington-probate-guide/executor" element={<ProbateFlowPage slug="executor" />} />
+          <Route path="/washington-probate-guide/heir" element={<ProbateFlowPage slug="heir" />} />
+          <Route path="/washington-probate-guide/selling-the-house" element={<ProbateFlowPage slug="selling-the-house" />} />
+          <Route path="/washington-probate-guide/deadlines-and-key-rules" element={<ProbateDeadlines />} />
           <Route path="/probate-glossary" element={<ProbateGlossary />} />
           <Route path="/estate-probate-inherited-property" element={<EstateProbateInheritedProperty />} />
           <Route path="/estate-probate-inherited-property/first-steps" element={<EPIPFirstSteps />} />

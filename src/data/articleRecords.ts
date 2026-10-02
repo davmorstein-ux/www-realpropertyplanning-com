@@ -165,6 +165,21 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "IRS: What's new, estate and gift tax (2026 basic exclusion)", href: "https://www.irs.gov/businesses/small-businesses-self-employed/whats-new-estate-and-gift-tax" },
       { label: "26 U.S.C. § 1014: basis of inherited property", href: "https://www.law.cornell.edu/uscode/text/26/1014" },
     ],
+  },  "/washington-probate-guide/deadlines-and-key-rules": {
+    published: "2026-09-30",
+    reviewed: "2026-10-01",
+    changes: [],
+    sources: [
+      { label: "Title 11 RCW: RCW 11.20.010, 11.24.010, 11.28.120, 11.28.237, 11.28.240, 11.36.010, 11.40.020, 11.40.051, 11.44.015, 11.62.010, 11.68.011, 11.68.090, 11.68.110, 11.96A.050, 11.98.075; chapter 11.56", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11" },
+      { label: "RCW 64.80.060: transfer on death deeds", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=64.80.060" },
+      { label: "RCW 26.16.120: community property agreements", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=26.16.120" },
+      { label: "RCW 43.20B.080 and 74.39A.170: estate recovery", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=43.20B.080" },
+      { label: "RCW 82.87.050: capital gains tax excludes real estate", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=82.87.050" },
+      { label: "WAC 458-61A-202: real estate excise tax and inheritance", href: "https://app.leg.wa.gov/WAC/default.aspx?cite=458-61A-202" },
+      { label: "Washington Department of Revenue: estate tax tables", href: "https://dor.wa.gov/taxes-rates/other-taxes/estate-tax-tables" },
+      { label: "IRS: What's new, estate and gift tax (2026 basic exclusion)", href: "https://www.irs.gov/businesses/small-businesses-self-employed/whats-new-estate-and-gift-tax" },
+      { label: "26 U.S.C. § 1014: basis of inherited property", href: "https://www.law.cornell.edu/uscode/text/26/1014" },
+    ],
   },
   "/probate-glossary": {
     published: "2026-09-30",
