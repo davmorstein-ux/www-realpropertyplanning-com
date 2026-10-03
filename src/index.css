@@ -2210,12 +2210,11 @@ button:not([data-nav-button]),
   inset: 0;
   pointer-events: none;
   z-index: -1;
-  background-image: url("/real-property-planning-logo-pattern.webp");
+  /* Faint wallpaper of the Real Property Planning mark (roof + open door). */
+  background-image: url("/rpp-logo-pattern.svg");
   background-repeat: repeat;
-  background-size: 200px auto;
-  mix-blend-mode: multiply;
-  filter: sepia(1) saturate(2) hue-rotate(5deg) brightness(0.9);
-  opacity: 0.032;
+  background-size: 300px 280px;
+  opacity: 0.035;
 }
 
 /* Exempt RolesAndResponsibilities tile typography from global overrides */
