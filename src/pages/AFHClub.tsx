@@ -1,3 +1,4 @@
+import HandbookDownload from "@/components/afh/HandbookDownload";
 import { Link } from "react-router-dom";
 import { AFH_CITY_PAGES } from "@/data/afhCityPages";
 import Header from "@/components/Header";
@@ -805,6 +806,11 @@ const AFHClub = () => {
               {t("afhClubPage.startHere.glossary")}
             </Link>
           </p>
+        </section>
+
+        {/* The AFH Club Handbook, free PDF (Oct 3, 2026). */}
+        <section style={{ background: "#ffffff", padding: "0 24px 56px" }}>
+          <HandbookDownload />
         </section>
 
         {/* ==================================================================

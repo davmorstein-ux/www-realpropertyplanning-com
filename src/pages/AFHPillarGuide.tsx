@@ -1,3 +1,4 @@
+import HandbookDownload from "@/components/afh/HandbookDownload";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -97,6 +98,10 @@ const AFHPillarGuide = () => (
         <div className="prp-wrap">
           <AFHFlowChart />
         </div>
+      </section>
+
+      <section style={{ background: "#ffffff", padding: "0 16px 44px" }}>
+        <HandbookDownload />
       </section>
 
       <section style={{ background: "#f7f4ef", padding: "36px 16px" }}>
