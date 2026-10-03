@@ -1,222 +1,77 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
 import BackToCalculators from "@/components/BackToCalculators";
-import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import ArticleCover from "@/components/ArticleCover";
+import { CalcShell, CalcSection, CalcField, CalcSegment, CalcHero, CalcStats, CalcBars, CalcWaiting, CalcFoot, AFH_TOOL_COLOR } from "@/components/calc/CalcKit";
 
-const BLUE = "#0047ab";
-const BLUE_LIGHT = "#3b7dd8";
+/**
+ * AFH ROI Calculator (rebuilt Oct 3, 2026 on the premium calculator kit,
+ * src/components/calc/CalcKit.tsx, in AFH green).
+ *
+ * Was DOM-scripted with a "Calculate" button, a browser alert for missing
+ * fields and a random-number "odometer". Now plain React state: results update
+ * as soon as purchase price, down payment and revenue are entered. The maths is
+ * unchanged: standard amortised mortgage; NOI = revenue × occupancy − expenses;
+ * cash-on-cash = (NOI − annual debt service) ÷ cash invested.
+ */
+const C = AFH_TOOL_COLOR;
+const num = (s: string) => {
+  const n = parseFloat(s.replace(/[$,\s]/g, ""));
+  return Number.isFinite(n) ? n : 0;
+};
+const usd = (n: number) => (n < 0 ? "−" : "") + "$" + Math.round(Math.abs(n)).toLocaleString("en-US");
+const pct = (n: number) => `${(Math.round(n * 10) / 10).toFixed(1)}%`;
+
+export function roiResults(i: { price: number; downPct: number; rate: number; term: number; rev: number; exp: number; occ: number }) {
+  const down = i.price * (i.downPct / 100);
+  const loan = i.price - down;
+  const mr = i.rate / 100 / 12;
+  const n = i.term * 12;
+  const mortgage = loan <= 0 ? 0 : mr === 0 ? loan / n : (loan * mr * Math.pow(1 + mr, n)) / (Math.pow(1 + mr, n) - 1);
+  const annualDebt = mortgage * 12;
+  const revenue = i.rev * (i.occ / 100);
+  const noi = revenue - i.exp;
+  const cashFlow = noi - annualDebt;
+  return {
+    down,
+    mortgage,
+    noi,
+    cashFlow,
+    roi: down > 0 ? (cashFlow / down) * 100 : 0,
+    capRate: i.price > 0 ? (noi / i.price) * 100 : 0,
+    margin: revenue > 0 ? (noi / revenue) * 100 : 0,
+    dscr: annualDebt > 0 ? noi / annualDebt : 0,
+  };
+}
 
 const AFHROICalculator = () => {
-  const calcRef = useRef<HTMLDivElement>(null);
+  const [price, setPrice] = useState("");
+  const [rate, setRate] = useState("7.25");
+  const [term, setTerm] = useState("30");
+  const [downMode, setDownMode] = useState<"pct" | "usd">("pct");
+  const [down, setDown] = useState("25");
+  const [rev, setRev] = useState("");
+  const [exp, setExp] = useState("");
+  const [beds, setBeds] = useState("6");
+  const [occ, setOcc] = useState("83");
 
-  useEffect(() => {
-    let dpMode = "pct";
+  const p = num(price);
+  const downPct = downMode === "pct" ? num(down) : p > 0 ? (num(down) / p) * 100 : 0;
+  const ready = p > 0 && num(rev) > 0 && downPct > 0;
+  const r = roiResults({ price: p, downPct, rate: num(rate), term: num(term) || 30, rev: num(rev), exp: num(exp), occ: num(occ) || 0 });
 
-    const fmtD = (n: number) => {
-      if (Math.abs(n) >= 1000000) return "$" + (n / 1000000).toFixed(2) + "M";
-      if (Math.abs(n) >= 1000) return "$" + (n / 1000).toFixed(0) + "K";
-      return "$" + Math.round(n).toLocaleString();
-    };
-    const fmtP = (n: number) => Math.round(n * 10) / 10 + "%";
-
-    const updateDerived = () => {
-      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement)?.value) || 0;
-      const val = parseFloat((document.getElementById("r-down") as HTMLInputElement)?.value) || 0;
-      const el = document.getElementById("dp-derived");
-      if (!el) return;
-      if (dpMode === "pct")
-        el.textContent = price > 0 && val > 0 ? "= $" + Math.round(price * (val / 100)).toLocaleString() : "= —";
-      else {
-        const p = price > 0 ? (val / price) * 100 : 0;
-        el.textContent = price > 0 && val > 0 ? "= " + Math.round(p * 10) / 10 + "%" : "= —";
-      }
-    };
-
-    const setMode = (mode: string) => {
-      dpMode = mode;
-      const pBtn = document.getElementById("btn-pct") as HTMLButtonElement;
-      const dBtn = document.getElementById("btn-dollar") as HTMLButtonElement;
-      const inp = document.getElementById("r-down") as HTMLInputElement;
-      const hint = document.getElementById("dp-hint");
-      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement)?.value) || 0;
-      const cur = parseFloat(inp?.value) || 0;
-      if (!pBtn || !dBtn) return;
-      if (mode === "pct") {
-        pBtn.style.cssText =
-          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#0047ab;color:#ffffff;outline:none;border-radius:6px 0 0 6px";
-        dBtn.style.cssText =
-          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#faf8f4;color:#272421;outline:none;border-radius:0 6px 6px 0";
-        if (inp) inp.placeholder = "25";
-        if (hint) hint.textContent = "Enter percentage of purchase price";
-        if (price > 0 && cur > 0 && inp) inp.value = String(Math.round((cur / price) * 100));
-        else if (inp) inp.value = "";
-      } else {
-        dBtn.style.cssText =
-          "padding:9px 22px;font-size:18px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#0047ab;color:#ffffff;outline:none;border-radius:0 6px 6px 0";
-        pBtn.style.cssText =
-          "padding:9px 22px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans', system-ui, sans-serif;border:none;background:#faf8f4;color:#272421;outline:none;border-radius:6px 0 0 6px";
-        if (inp) inp.placeholder = "212500";
-        if (hint) hint.textContent = "Enter dollar amount of down payment";
-        if (price > 0 && cur > 0 && inp) inp.value = String(Math.round(price * (cur / 100)));
-        else if (inp) inp.value = "";
-      }
-      updateDerived();
-    };
-
-    const odometer = (el: HTMLElement, finalStr: string, duration: number) => {
-      const start = Date.now();
-      const isMoney = finalStr.startsWith("$"),
-        isPct = finalStr.endsWith("%");
-      const tick = () => {
-        if (Date.now() - start < duration) {
-          if (isMoney) {
-            const r = Math.round(Math.random() * 2000000);
-            el.textContent = r >= 1000000 ? "$" + (r / 1000000).toFixed(2) + "M" : "$" + (r / 1000).toFixed(0) + "K";
-          } else if (isPct) el.textContent = (Math.random() * 30).toFixed(1) + "%";
-          else el.textContent = (Math.random() * 10).toFixed(2) + "x";
-          requestAnimationFrame(tick);
-        } else el.textContent = finalStr;
-      };
-      requestAnimationFrame(tick);
-    };
-
-    const getDown = () => {
-      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement)?.value) || 0;
-      const val = parseFloat((document.getElementById("r-down") as HTMLInputElement)?.value) || 0;
-      return dpMode === "pct" ? price * (val / 100) : val;
-    };
-
-    const calcROI = () => {
-      const price = parseFloat((document.getElementById("r-price") as HTMLInputElement).value) || 0;
-      const rate = parseFloat((document.getElementById("r-rate") as HTMLInputElement).value) || 7.25;
-      const term = parseInt((document.getElementById("r-term") as HTMLSelectElement).value) || 30;
-      const rev = parseFloat((document.getElementById("r-rev") as HTMLInputElement).value) || 0;
-      const exp = parseFloat((document.getElementById("r-exp") as HTMLInputElement).value) || 0;
-      const occ = parseFloat((document.getElementById("r-occ") as HTMLInputElement).value) || 83;
-      const downAmt = getDown();
-      if (!price || !rev || !downAmt) {
-        alert("Please enter purchase price, down payment, and annual gross revenue.");
-        return;
-      }
-      const mr = rate / 100 / 12,
-        np = term * 12;
-      const mortgage =
-        mr === 0
-          ? (price - downAmt) / np
-          : ((price - downAmt) * (mr * Math.pow(1 + mr, np))) / (Math.pow(1 + mr, np) - 1);
-      const annMort = mortgage * 12,
-        adjRev = rev * (occ / 100),
-        noi = adjRev - exp;
-      const annCF = noi - annMort,
-        roi = (annCF / downAmt) * 100;
-      const capRate = (noi / price) * 100,
-        margin = (noi / adjRev) * 100;
-      const res = document.getElementById("roi-results")!;
-      res.style.display = "block";
-      res.scrollIntoView({ behavior: "smooth", block: "start" });
-      const DUR = 2000;
-      odometer(document.getElementById("r-roi")!, fmtP(roi), DUR);
-      setTimeout(() => {
-        odometer(document.getElementById("r-cf")!, fmtD(annCF / 12) + "/mo", DUR * 0.6);
-        odometer(document.getElementById("r-noi")!, fmtD(noi), DUR * 0.6);
-        odometer(document.getElementById("r-caprate")!, fmtP(capRate), DUR * 0.6);
-        odometer(document.getElementById("r-mort")!, fmtD(mortgage) + "/mo", DUR * 0.6);
-        odometer(document.getElementById("r-invested")!, fmtD(downAmt), DUR * 0.6);
-        odometer(document.getElementById("r-margin")!, fmtP(margin), DUR * 0.6);
-      }, 300);
-      setTimeout(() => {
-        const bars = [
-          { label: "Cash-on-cash ROI", pct: Math.min(100, Math.max(0, (roi / 30) * 100)), val: fmtP(Math.max(0, roi)) },
-          { label: "Cap rate", pct: Math.min(100, (capRate / 20) * 100), val: fmtP(capRate) },
-          { label: "Operating margin", pct: Math.min(100, Math.max(0, margin)), val: fmtP(margin) },
-          {
-            label: "Debt coverage",
-            pct: Math.min(100, (noi / annMort / 2) * 100),
-            val: Math.round((noi / annMort) * 100) / 100 + "x",
-          },
-        ];
-        const barsEl = document.getElementById("r-bars")!;
-        barsEl.innerHTML = bars
-          .map(
-            (b) =>
-              `<div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
-            <span style="font-size:13px;color:#272421;width:150px;flex-shrink:0;font-weight:600">${b.label}</span>
-            <div style="flex:1;height:7px;background:#d6e2f5;border-radius:4px;overflow:hidden">
-              <div class="roi-bar-fill" data-pct="${Math.max(0, b.pct)}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#0047ab,#3b7dd8);transition:width .9s ease"></div>
-            </div>
-            <span style="font-size:13px;color:#0047ab;width:70px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
-          </div>`,
-          )
-          .join("");
-        setTimeout(() => {
-          document.querySelectorAll(".roi-bar-fill").forEach((el: any) => {
-            el.style.width = el.dataset.pct + "%";
-          });
-        }, 50);
-      }, DUR + 200);
-    };
-
-    updateDerived();
-
-    document.getElementById("btn-pct")?.addEventListener("click", () => setMode("pct"));
-    document.getElementById("btn-dollar")?.addEventListener("click", () => setMode("dollar"));
-    document.getElementById("r-price")?.addEventListener("input", updateDerived);
-    document.getElementById("r-down")?.addEventListener("input", updateDerived);
-    document.getElementById("calc-roi-btn")?.addEventListener("click", calcROI);
-    document.getElementById("contact-btn-roi")?.addEventListener("click", () => (window.location.href = "/contact"));
-  }, []);
-
-  const IS: React.CSSProperties = {
-    width: "100%",
-    background: "#ffffff",
-    border: `1.5px solid #c7d7f0`,
-    borderRadius: 6,
-    color: "#272421",
-    fontSize: 15,
-    padding: "10px 13px",
-    fontFamily: "'DM Sans', system-ui, sans-serif",
-    boxSizing: "border-box",
-    display: "block",
-  };
-  const LS: React.CSSProperties = {
-    display: "block",
-    fontSize: 12,
-    letterSpacing: ".1em",
-    textTransform: "uppercase",
-    color: "#272421",
-    marginBottom: 7,
-    fontWeight: 700,
-  };
-  const PS: React.CSSProperties = {
-    border: `1px solid #c7d7f0`,
-    borderRadius: 10,
-    padding: "1.25rem 1.4rem",
-    marginBottom: 14,
-    background: "#ffffff",
-  };
-  const PT: React.CSSProperties = {
-    fontSize: 14,
-    letterSpacing: ".18em",
-    textTransform: "uppercase",
-    color: "#003580",
-    marginBottom: 14,
-    fontWeight: 700,
-    display: "flex",
-    alignItems: "center",
-    gap: 8,
-  };
-  const DV: React.CSSProperties = {
-    height: 1,
-    background: `linear-gradient(90deg,transparent,${BLUE}30,transparent)`,
-    marginBottom: 16,
+  const switchMode = (m: "pct" | "usd") => {
+    if (m === downMode) return;
+    if (p > 0 && num(down) > 0) setDown(m === "usd" ? String(Math.round(p * (num(down) / 100))) : String(Math.round((num(down) / p) * 1000) / 10));
+    setDownMode(m);
   };
 
   return (
@@ -231,504 +86,134 @@ const AFHROICalculator = () => {
           applicationCategory: "FinanceApplication",
           operatingSystem: "All",
           url: "https://realpropertyplanning.com/afh-club/afh-roi-calculator",
-          description:
-            "Estimate cash flow, cap rate, and return on investment for a Washington State adult family home purchase.",
+          description: "Estimate cash flow, cap rate, and return on investment for a Washington State adult family home purchase.",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         }}
       />
       <Header />
       <main>
-        {/* Hero */}
-        <div style={{ background: "#faf8f4", padding: "48px 24px 40px", borderBottom: `3px solid ${BLUE}` }}>
+        <div style={{ background: "#faf8f4", padding: "48px 24px 36px", borderBottom: `3px solid ${C}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <div style={{ marginBottom: 24 }}>
-              <BackToCalculators accent={BLUE} />
+              <BackToCalculators accent={C} />
             </div>
             <ArticleCover src="/afh-roi-calculator-cover-v2.webp" alt="Cover art: AFH ROI Calculator" width={1024} height={1365} />
-            <p
-              style={{
-                fontSize: 13,
-                fontWeight: 700,
-                letterSpacing: ".15em",
-                textTransform: "uppercase",
-                color: "#003580",
-                marginBottom: 10,
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-              }}
-            >
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: C, marginBottom: 10, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               For buyers &amp; investors
             </p>
-            <h1
-              style={{
-                fontSize: "clamp(28px,4vw,42px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontWeight: 700,
-                color: "#272421",
-                marginBottom: 12,
-                lineHeight: 1.2,
-              }}
-            >
+            <h1 style={{ fontSize: "clamp(28px,4vw,42px)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#272421", marginBottom: 12, lineHeight: 1.2 }}>
               AFH ROI Calculator
             </h1>
-            <p
-              style={{
-                fontSize: 18,
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                color: "#1c1917",
-                lineHeight: 1.7,
-                maxWidth: 600,
-                margin: 0,
-              }}
-            >
+            <p style={{ fontSize: 18, fontFamily: "'DM Sans', system-ui, sans-serif", color: "#1c1917", lineHeight: 1.7, maxWidth: 600, margin: 0 }}>
               Know your numbers before you commit. Analyze cash-on-cash return, cap rate, NOI, and monthly cash flow.
             </p>
           </div>
         </div>
 
-        {/* Calculator */}
-        <div ref={calcRef} style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
-          <div
-            style={{
-              maxWidth: 900,
-              margin: "0 auto",
-              background: "#ffffff",
-              border: `2px solid ${BLUE}40`,
-              borderRadius: 14,
-              padding: "1.5rem 1.25rem",
-              boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
-            }}
-          >
-            <div style={{ textAlign: "center", marginBottom: "1.75rem" }}>
-              <div
-                style={{
-                  fontSize: 13,
-                  letterSpacing: ".25em",
-                  textTransform: "uppercase",
-                  color: BLUE,
-                  marginBottom: 8,
-                  fontWeight: 700,
-                }}
-              >
-                Adult Family Home
-              </div>
-              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#272421" }}>
-                AFH <span style={{ color: BLUE }}>ROI</span> Calculator
-              </h2>
-              <div
-                style={{
-                  fontSize: 13,
-                  color: "#4b4744",
-                  marginTop: 6,
-                  letterSpacing: ".1em",
-                  textTransform: "uppercase",
-                  fontWeight: 600,
-                }}
-              >
-                Know your numbers · Grow with confidence
-              </div>
-            </div>
-
-            {/* Acquisition */}
-            <div style={PS}>
-              <div style={PT}>
-                Acquisition{" "}
-                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${BLUE}30,transparent)` }} />
-              </div>
-              <div style={DV} />
-              {/* 2-col grid — stacks on mobile */}
-              <div
-                className="roi-grid2"
-                style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
-              >
-                <div>
-                  <label style={LS} htmlFor="r-price">Purchase price ($)</label>
-                  <input type="number" id="r-price" placeholder="850000" style={IS} />
-                </div>
-                <div>
-                  <label style={LS} htmlFor="r-rate">Interest rate (%)</label>
-                  <input type="number" id="r-rate" placeholder="7.25" step="0.01" style={IS} />
-                </div>
-              </div>
-              {/* Loan term — full width on mobile, half on desktop */}
-              <div
-                className="roi-grid2"
-                style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
-              >
-                <div>
-                  <label style={LS} htmlFor="r-term">Loan term (years)</label>
-                  <select id="r-term" style={IS}>
-                    <option value="30">30 years</option>
-                    <option value="25">25 years</option>
-                    <option value="20">20 years</option>
-                    <option value="15">15 years</option>
-                  </select>
-                </div>
-                <div />
-              </div>
-              <div style={{ marginTop: 18 }}>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}
+        <div style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
+          <CalcShell color={C} icon="chart" eyebrow="AFH Club Calculator" title="Return on an Adult Family Home" subtitle="Cash flow, cap rate and cash-on-cash return for a purchase">
+            <CalcSection title="The purchase">
+              <div className="ck-grid">
+                <CalcField label="Purchase price" htmlFor="r-price">
+                  <input id="r-price" className="ck-input" inputMode="decimal" placeholder="850,000" value={price} onChange={(e) => setPrice(e.target.value)} />
+                </CalcField>
+                <CalcField
+                  label="Down payment"
+                  htmlFor="r-down"
+                  suffix={p > 0 && num(down) > 0 ? (downMode === "pct" ? `= ${usd(p * (num(down) / 100))}` : `= ${pct(downPct)}`) : undefined}
                 >
-                  <label
-                    htmlFor="r-down"
-                    style={{
-                      fontSize: 12,
-                      letterSpacing: ".1em",
-                      textTransform: "uppercase",
-                      color: BLUE,
-                      fontWeight: 700,
-                    }}
-                  >
-                    Down payment
-                  </label>
-                  <div
-                    style={{
-                      display: "inline-flex",
-                      borderRadius: 8,
-                      overflow: "hidden",
-                      border: `1.5px solid ${BLUE}`,
-                    }}
-                  >
-                    <button
-                      id="btn-pct"
-                      style={{
-                        padding: "9px 22px",
-                        fontSize: 18,
-                        fontWeight: 700,
-                        cursor: "pointer",
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
-                        border: "none",
-                        background: BLUE,
-                        color: "#ffffff",
-                        outline: "none",
-                        borderRadius: "6px 0 0 6px",
-                      }}
-                    >
-                      %
-                    </button>
-                    <button
-                      id="btn-dollar"
-                      style={{
-                        padding: "9px 22px",
-                        fontSize: 15,
-                        fontWeight: 700,
-                        cursor: "pointer",
-                        fontFamily: "'DM Sans', system-ui, sans-serif",
-                        border: "none",
-                        background: "#faf8f4",
-                        color: "#272421",
-                        outline: "none",
-                        borderRadius: "0 6px 6px 0",
-                      }}
-                    >
-                      $
-                    </button>
-                  </div>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <input
-                    type="number"
-                    id="r-down"
-                    placeholder="25"
-                    defaultValue="25"
-                    style={{ ...IS, flex: 1, width: "auto" }}
-                  />
-                  <span
-                    id="dp-derived"
-                    style={{
-                      fontSize: 14,
-                      color: BLUE,
-                      fontWeight: 700,
-                      whiteSpace: "nowrap",
-                      minWidth: 90,
-                      textAlign: "right",
-                    }}
-                  >
-                    = —
-                  </span>
-                </div>
-                <div id="dp-hint" style={{ fontSize: 12, color: "#4b4744", marginTop: 6 }}>
-                  Enter percentage of purchase price
-                </div>
+                  <input id="r-down" className="ck-input" inputMode="decimal" value={down} onChange={(e) => setDown(e.target.value)} />
+                  <CalcSegment label="Down payment as" value={downMode} onChange={switchMode} options={[{ value: "pct", label: "%" }, { value: "usd", label: "$" }]} />
+                </CalcField>
+                <CalcField label="Interest rate (%)" htmlFor="r-rate">
+                  <input id="r-rate" className="ck-input" inputMode="decimal" value={rate} onChange={(e) => setRate(e.target.value)} />
+                </CalcField>
+                <CalcField label="Loan term" htmlFor="r-term">
+                  <select id="r-term" className="ck-input" value={term} onChange={(e) => setTerm(e.target.value)}>
+                    {[30, 25, 20, 15].map((y) => (
+                      <option key={y} value={y}>{y} years</option>
+                    ))}
+                  </select>
+                </CalcField>
               </div>
-            </div>
+            </CalcSection>
 
-            {/* Revenue */}
-            <div style={PS}>
-              <div style={PT}>
-                Revenue &amp; Operations{" "}
-                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${BLUE}30,transparent)` }} />
-              </div>
-              <div style={DV} />
+            <CalcSection title="Revenue & operations">
               <AFHRevenueBuilder
-                accent={BLUE}
-                onApply={(r) => {
-                  const rev = document.getElementById("r-rev") as HTMLInputElement | null;
-                  const cap = document.getElementById("r-cap") as HTMLSelectElement | null;
-                  const occ = document.getElementById("r-occ") as HTMLInputElement | null;
-                  if (rev) rev.value = String(Math.round(r.annualFull));
-                  if (cap && r.beds >= 1 && r.beds <= 8) cap.value = String(r.beds);
-                  if (occ) occ.value = String(r.occupancy);
-                  rev?.scrollIntoView({ behavior: "smooth", block: "center" });
+                accent={C}
+                onApply={(b) => {
+                  setRev(String(Math.round(b.annualFull)));
+                  if (b.beds >= 1 && b.beds <= 8) setBeds(String(b.beds));
+                  setOcc(String(b.occupancy));
+                  document.getElementById("r-rev")?.scrollIntoView({ behavior: "smooth", block: "center" });
                 }}
               />
-              <div
-                className="roi-grid2"
-                style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
-              >
-                <div>
-                  <label style={LS} htmlFor="r-rev">Annual gross revenue at full occupancy ($)</label>
-                  <input type="number" id="r-rev" placeholder="288000" style={IS} />
-                  <div style={{ fontSize: 13, color: "#4b4744", marginTop: 6, lineHeight: 1.4 }}>
-                    Occupancy below is applied to this figure. Use the builder above, or type the actual P&amp;L
-                    number from the seller.
-                  </div>
-                </div>
-                <div>
-                  <label style={LS} htmlFor="r-exp">Annual operating expenses ($)</label>
-                  <input type="number" id="r-exp" placeholder="164000" style={IS} />
-                </div>
-              </div>
-              <div className="roi-grid2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
-                <div>
-                  <label style={LS} htmlFor="r-cap">Licensed capacity</label>
-                  <select id="r-cap" style={IS}>
-                    <option value="1">1 bed</option>
-                    <option value="2">2 beds</option>
-                    <option value="3">3 beds</option>
-                    <option value="4">4 beds</option>
-                    <option value="5">5 beds</option>
-                    <option value="6">6 beds</option>
-                    <option value="7">7 beds</option>
-                    <option value="8">8 beds</option>
+              <div className="ck-grid" style={{ marginTop: 14 }}>
+                <CalcField label="Annual revenue at full occupancy" htmlFor="r-rev" hint="Use the builder above, or the seller's actual P&L figure. Occupancy is applied to it.">
+                  <input id="r-rev" className="ck-input" inputMode="decimal" placeholder="288,000" value={rev} onChange={(e) => setRev(e.target.value)} />
+                </CalcField>
+                <CalcField label="Annual operating expenses" htmlFor="r-exp" hint="Staff, food, utilities, insurance, license fees. Not the mortgage.">
+                  <input id="r-exp" className="ck-input" inputMode="decimal" placeholder="164,000" value={exp} onChange={(e) => setExp(e.target.value)} />
+                </CalcField>
+                <CalcField label="Licensed capacity" htmlFor="r-cap">
+                  <select id="r-cap" className="ck-input" value={beds} onChange={(e) => setBeds(e.target.value)}>
+                    {[1, 2, 3, 4, 5, 6, 7, 8].map((b) => (
+                      <option key={b} value={b}>{b} {b === 1 ? "bed" : "beds"}</option>
+                    ))}
                   </select>
-                </div>
-                <div>
-                  <label style={LS} htmlFor="r-occ">Current occupancy (%)</label>
-                  <input type="number" id="r-occ" placeholder="83" style={IS} />
-                </div>
+                </CalcField>
+                <CalcField label="Occupancy (%)" htmlFor="r-occ">
+                  <input id="r-occ" className="ck-input" inputMode="decimal" value={occ} onChange={(e) => setOcc(e.target.value)} />
+                </CalcField>
               </div>
-            </div>
+            </CalcSection>
 
-            {/* Calculate button */}
-            <button
-              id="calc-roi-btn"
-              style={{
-                width: "100%",
-                padding: "16px",
-                borderRadius: 8,
-                background: BLUE,
-                color: "#ffffff",
-                border: `2px solid ${BLUE}`,
-                fontSize: "20px",
-                fontWeight: 900,
-                letterSpacing: ".16em",
-                textTransform: "uppercase",
-                cursor: "pointer",
-                marginTop: 4,
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                transition: "all 0.2s",
-                display: "block",
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget;
-                el.style.background = "#272421";
-                el.style.borderColor = "#272421";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget;
-                el.style.background = BLUE;
-                el.style.borderColor = BLUE;
-              }}
+            {ready ? (
+              <>
+                <CalcHero
+                  label="Estimated cash-on-cash return"
+                  value={pct(r.roi)}
+                  tone={r.roi < 0 ? "bad" : undefined}
+                  sub={`${usd(r.cashFlow / 12)} a month in cash flow after the mortgage`}
+                  note={num(exp) === 0 ? "No operating expenses entered yet, so this is far too high. Add them above." : undefined}
+                />
+                <CalcStats
+                  items={[
+                    { label: "Annual NOI", value: usd(r.noi), tone: r.noi < 0 ? "bad" : undefined },
+                    { label: "Cap rate", value: pct(r.capRate) },
+                    { label: "Monthly mortgage", value: usd(r.mortgage) },
+                    { label: "Cash invested", value: usd(r.down) },
+                    { label: "Operating margin", value: pct(r.margin) },
+                    { label: "Debt coverage", value: r.dscr > 0 ? `${r.dscr.toFixed(2)}x` : "—", tone: r.dscr > 0 && r.dscr < 1 ? "bad" : undefined },
+                  ]}
+                />
+                <CalcBars
+                  items={[
+                    { label: "Cash-on-cash ROI", pct: (Math.max(0, r.roi) / 30) * 100, value: pct(r.roi) },
+                    { label: "Cap rate", pct: (r.capRate / 20) * 100, value: pct(r.capRate) },
+                    { label: "Operating margin", pct: Math.max(0, r.margin), value: pct(r.margin) },
+                    { label: "Debt coverage", pct: (r.dscr / 2) * 100, value: r.dscr > 0 ? `${r.dscr.toFixed(2)}x` : "—", gold: true },
+                  ]}
+                />
+              </>
+            ) : (
+              <CalcWaiting>Enter the purchase price, down payment and annual revenue to see the return.</CalcWaiting>
+            )}
+
+            <CalcFoot
+              actions={
+                <>
+                  <Link to="/afh-club/afh-valuation-estimator">Estimate the value →</Link>
+                  <Link to="/contact">Ask {FEATURED_BROKER.role} about a deal →</Link>
+                </>
+              }
             >
-              Calculate ROI
-            </button>
-
-            {/* Results */}
-            <div id="roi-results" style={{ display: "none", marginTop: 14 }}>
-              <div
-                style={{
-                  border: `2px solid ${BLUE}40`,
-                  borderRadius: 12,
-                  padding: "1.6rem",
-                  textAlign: "center",
-                  marginBottom: 14,
-                  marginTop: 16,
-                  background: "#faf8f4",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: 12,
-                    letterSpacing: ".2em",
-                    textTransform: "uppercase",
-                    color: BLUE,
-                    marginBottom: 10,
-                    fontWeight: 700,
-                  }}
-                >
-                  Estimated annual ROI
-                </div>
-                <div
-                  id="r-roi"
-                  style={{
-                    fontSize: 50,
-                    fontWeight: 700,
-                    color: BLUE,
-                    lineHeight: 1,
-                    minHeight: 60,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  —
-                </div>
-                <div style={{ fontSize: 14, color: "#272421", marginTop: 8 }}>cash-on-cash return</div>
-              </div>
-              {/* Results metric tiles — 3-col desktop, 2-col mobile */}
-              <div
-                className="roi-results-grid"
-                style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10, marginBottom: 14 }}
-              >
-                {[
-                  ["Monthly cash flow", "r-cf"],
-                  ["Annual NOI", "r-noi"],
-                  ["Cap rate", "r-caprate"],
-                  ["Monthly mortgage", "r-mort"],
-                  ["Cash invested", "r-invested"],
-                  ["Operating margin", "r-margin"],
-                ].map(([lbl, id]) => (
-                  <div
-                    key={id}
-                    style={{
-                      background: "#faf8f4",
-                      border: `1px solid ${BLUE}30`,
-                      borderRadius: 8,
-                      padding: "1rem",
-                      textAlign: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: 11,
-                        letterSpacing: ".1em",
-                        textTransform: "uppercase",
-                        color: BLUE,
-                        marginBottom: 7,
-                        fontWeight: 700,
-                      }}
-                    >
-                      {lbl}
-                    </div>
-                    <div id={id} style={{ fontSize: 18, fontWeight: 700, color: "#272421", minHeight: 28 }}>
-                      —
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div style={{ ...PS, marginBottom: 14 }}>
-                <div style={PT}>
-                  Return Breakdown{" "}
-                  <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${BLUE}30,transparent)` }} />
-                </div>
-                <div style={DV} />
-                <div id="r-bars" />
-              </div>
-              <div
-                style={{
-                  fontSize: 12,
-                  color: "#4b4744",
-                  lineHeight: 1.8,
-                  padding: "12px 16px",
-                  border: `1px solid ${BLUE}20`,
-                  borderRadius: 8,
-                  background: "#faf8f4",
-                }}
-              >
-                Estimates are for informational purposes only. Actual returns depend on financing terms, occupancy,
-                staffing costs, regulatory changes, and market conditions. Consult {FEATURED_BROKER.role} for a professional
-                investment analysis.
-              </div>
-              <div
-                style={{
-                  border: `1px solid ${BLUE}40`,
-                  borderRadius: 10,
-                  padding: "1.2rem 1.5rem",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  gap: 14,
-                  flexWrap: "wrap",
-                  marginTop: 12,
-                  background: "#faf8f4",
-                }}
-              >
-                <div>
-                  <strong style={{ color: BLUE, fontSize: 15, display: "block" }}>
-                    Ready to analyze a specific deal?
-                  </strong>
-                  <p style={{ fontSize: 13, color: "#272421", marginTop: 3 }}>
-                    {FEATURED_BROKER.Role} · Licensed Broker{SAME_PERSON ? " & Certified Appraiser" : ""} · {FEATURED_BROKER.brokerage}
-                  </p>
-                </div>
-                <button
-                  id="contact-btn-roi"
-                  style={{
-                    fontSize: 12,
-                    padding: "10px 22px",
-                    borderRadius: 6,
-                    background: BLUE,
-                    color: "#ffffff",
-                    border: `2px solid ${BLUE}`,
-                    cursor: "pointer",
-                    letterSpacing: ".12em",
-                    textTransform: "uppercase",
-                    fontFamily: "'DM Sans', system-ui, sans-serif",
-                    fontWeight: 700,
-                    whiteSpace: "nowrap",
-                    transition: "all 0.2s",
-                  }}
-                >
-                  Contact {FEATURED_BROKER.firstName} ↗
-                </button>
-              </div>
-            </div>
-
-            <div
-              style={{
-                textAlign: "center",
-                fontSize: 13,
-                color: "#4b4744",
-                letterSpacing: ".12em",
-                textTransform: "uppercase",
-                marginTop: "1.75rem",
-                fontWeight: 600,
-                paddingTop: "1.25rem",
-                borderTop: `1px solid ${BLUE}20`,
-              }}
-            >
-              Courtesy of Real Property Planning
-            </div>
-          </div>
+              Estimates for planning only. Actual returns depend on financing terms, occupancy, staffing costs, rates, rules and the
+              market. Bars are scaled to 30% for return, 20% for cap rate and 2.0x for debt coverage.
+            </CalcFoot>
+          </CalcShell>
         </div>
 
-        <style>{`
-          /* Input grids: 2-col desktop → 1-col mobile */
-          .roi-grid2 { grid-template-columns: 1fr !important; }
-          @media (min-width: 520px) {
-            .roi-grid2 { grid-template-columns: 1fr 1fr !important; }
-          }
-
-          /* Results metric tiles: 3-col desktop → 2-col mobile */
-          .roi-results-grid { grid-template-columns: repeat(2, 1fr) !important; }
-          @media (min-width: 560px) {
-            .roi-results-grid { grid-template-columns: repeat(3, 1fr) !important; }
-          }
-
-          #calc-roi-btn { font-size: 20px !important; font-weight: 900 !important; }
-          #r-occ, #r-cap { box-sizing: border-box !important; padding: 10px 13px !important; }
-        `}</style>
         <BackToAFHClub />
         <section style={{ padding: "1.25rem 1.5rem 0" }}>
           <AFHBuyerSteps current={3} compact />
