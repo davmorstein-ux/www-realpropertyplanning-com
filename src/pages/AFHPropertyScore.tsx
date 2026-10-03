@@ -11,6 +11,8 @@ import { countyIndex } from "@/data/afh/directory";
 import IntentCTA from "@/components/IntentCTA";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import ArticleCover from "@/components/ArticleCover";
+import { AFH_TOOL_COLOR, CK_ICONS, CK_GOLD_ICON } from "@/components/calc/CalcKit";
+import { shade } from "@/lib/careCostMath";
 import {
   NOT_SURE, CATEGORIES, FLAG_LABEL, CURE_LABEL, BEFORE_YOU_COMMIT,
   activeQuestions, scoreProperty, scoreText, scoreLine, encodeAnswers, decodeAnswers,
@@ -36,12 +38,15 @@ import {
  *   - Spacing on <p> and headings is set in PAGE_CSS with !important, because
  *     index.css overrides inline margins on every p and h1-h4.
  *
- * Colour: plum, distinct from ROI (cobalt), valuation (green), financing
- * (teal) and cost by location (orange).
+ * Colour: AFH green with a gold-icon header band, like every AFH Club
+ * calculator since the Oct 3, 2026 redesign (src/components/calc/CalcKit.tsx).
+ * The constants keep their old "PLUM" names to keep this diff small.
  */
 
-const PLUM = "#6b3fa0";
-const PLUM_DARK = "#4c2a78";
+const PLUM = AFH_TOOL_COLOR;
+const PLUM_DARK = shade(AFH_TOOL_COLOR, 0.38);
+const TINT = shade(AFH_TOOL_COLOR, -0.9);
+const SOFT = shade(AFH_TOOL_COLOR, -0.94);
 const INK = "#141210";
 const FONT = "'DM Sans', system-ui, sans-serif";
 const FLAG_COLOR: Record<FlagLevel, { fg: string; bg: string; dot: string }> = {
@@ -62,22 +67,28 @@ const PAGE_CSS = `
   .aps-root h2.aps-q { font-size: clamp(21px, 5.6vw, 27px) !important; line-height: 1.3 !important; margin: 22px 0 18px !important; }
   .aps-root h2.aps-score { font-size: clamp(46px, 13vw, 72px) !important; line-height: 1.05 !important; margin: 8px 0 6px !important; }
   .aps-root h2.aps-withheld { font-size: clamp(24px, 6vw, 30px) !important; line-height: 1.2 !important; margin: 10px 0 10px !important; }
-  .aps-panel { background: #fff; border: 2px solid ${PLUM}; border-radius: 14px; padding: 1.6rem 1.4rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); max-width: 760px; margin: 0 auto 24px; }
+  .aps-panel { background: #fff; border: 1px solid #d3dfe8; border-radius: 16px; padding: 1.6rem 1.4rem; box-shadow: 0 6px 24px rgba(20,40,58,0.08); max-width: 760px; margin: 0 auto 24px; overflow: hidden; }
+  .aps-panel.aps-banded { padding-top: 0; }
+  .aps-band { display: flex; align-items: center; gap: 16px; background: ${PLUM_DARK}; margin: 0 -1.4rem 1.4rem; padding: 18px 1.4rem; }
+  .aps-band svg { flex: 0 0 auto; }
+  .aps-root .aps-band p.aps-bandeye { margin: 0 0 2px !important; font-family: ${FONT} !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: .18em !important; text-transform: uppercase; color: ${CK_GOLD_ICON} !important; }
+  .aps-root .aps-band p.aps-bandtitle { margin: 0 !important; font-family: ${FONT} !important; font-size: clamp(22px, 3vw, 28px) !important; font-weight: 700 !important; line-height: 1.2 !important; color: #fff !important; }
+  .aps-scorebox { background: ${TINT}; border-radius: 14px; padding: 18px 16px 14px; margin: 0 0 14px; }
   .aps-panel.aps-wide { max-width: 900px; }
-  .aps-opt { display: block; width: 100%; text-align: left; min-height: 58px; padding: 14px 18px; margin: 0 0 10px; border-radius: 10px; border: 2px solid #cbbfdc; background: #fff; color: ${INK}; font-family: ${FONT}; font-size: 18px !important; font-weight: 600; line-height: 1.35; cursor: pointer; }
+  .aps-opt { display: block; width: 100%; text-align: left; min-height: 58px; padding: 14px 18px; margin: 0 0 10px; border-radius: 10px; border: 1px solid #c9d7e2; background: #fff; color: ${INK}; font-family: ${FONT}; font-size: 18px !important; font-weight: 600; line-height: 1.35; cursor: pointer; }
   /* Hover only where there is a mouse. On a touch screen the last-tapped spot
      keeps its hover state, which made the option under it on the NEXT question
      look pre-selected. */
-  @media (hover: hover) { .aps-opt:hover { border-color: ${PLUM}; background: #f6f1fb; } }
-  .aps-opt:focus-visible { border-color: ${PLUM}; background: #f6f1fb; outline: 3px solid #c9b3e6; outline-offset: 2px; }
-  .aps-opt[aria-pressed="true"] { border-color: ${PLUM}; background: ${PLUM}; color: #fff; }
+  @media (hover: hover) { .aps-opt:hover { border-color: ${PLUM}; background: ${SOFT}; } }
+  .aps-opt:focus-visible { border-color: ${PLUM}; background: ${SOFT}; outline: 3px solid ${CK_GOLD_ICON}; outline-offset: 2px; }
+  .aps-opt[aria-pressed="true"] { border-color: ${PLUM_DARK}; background: ${PLUM_DARK}; color: #fff; }
   .aps-opt.aps-unsure { font-weight: 500; border-style: dashed; color: #3b3630; }
   .aps-opt.aps-unsure[aria-pressed="true"] { color: #fff; border-style: solid; }
   .aps-go { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 12px 26px; border-radius: 10px; border: 2px solid ${PLUM}; background: ${PLUM}; color: #fff !important; font-family: ${FONT}; font-size: 18px !important; font-weight: 700; cursor: pointer; text-decoration: none; }
   .aps-go.aps-ghost { background: #fff; color: ${PLUM_DARK} !important; }
   .aps-go:disabled { opacity: .45; cursor: not-allowed; }
-  .aps-field { width: 100%; min-height: 52px; padding: 10px 12px; border-radius: 8px; border: 2px solid #cbbfdc; font-family: ${FONT}; font-size: 18px; background: #fff; color: ${INK}; box-sizing: border-box; }
-  .aps-bar { height: 12px; border-radius: 6px; background: #e9e2f3; overflow: hidden; }
+  .aps-field { width: 100%; min-height: 52px; padding: 10px 12px; border-radius: 8px; border: 1px solid #c9d7e2; font-family: ${FONT}; font-size: 18px; background: #fff; color: ${INK}; box-sizing: border-box; }
+  .aps-bar { height: 12px; border-radius: 6px; background: #eef1f4; overflow: hidden; }
   .aps-bar > span { display: block; height: 100%; background: ${PLUM}; border-radius: 6px; }
   .aps-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .aps-printonly { display: none; }
@@ -88,6 +99,7 @@ const PAGE_CSS = `
     /* Let sections flow down the page. Keeping every panel whole put one panel
        per sheet and ran the report to six pages, most of page one blank. Only
        the small pieces (a flag, a checklist line) are kept from splitting. */
+    .aps-band { background: none !important; padding: 0 !important; margin: 0 0 8px !important; } .aps-band svg { display: none; } .aps-root .aps-band p.aps-bandtitle, .aps-root .aps-band p.aps-bandeye { color: #111 !important; }
     .aps-panel { box-shadow: none !important; border-width: 1px !important; max-width: none !important; margin: 0 0 10px !important; padding: 12px 16px !important; break-inside: auto; }
     .aps-panel li, .aps-flag { break-inside: avoid; }
     .aps-root h2.aps-score { font-size: 40px !important; margin: 2px 0 !important; }
@@ -99,6 +111,17 @@ const PAGE_CSS = `
     body { background: #fff !important; }
   }
 `;
+
+/** The gold-icon header band shared with the other AFH Club calculators. */
+const Band = ({ title }: { title: string }) => (
+  <div className="aps-band">
+    <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true" focusable="false">{CK_ICONS.check}</svg>
+    <div>
+      <p className="aps-bandeye">AFH Club Calculator</p>
+      <p className="aps-bandtitle">{title}</p>
+    </div>
+  </div>
+);
 
 const SECTION_LABEL = (q: ScoreQuestion) =>
   q.section === "framing" ? "About the home"
@@ -226,7 +249,8 @@ const AFHPropertyScore = () => {
 
           {/* ---------------- INTRO ---------------- */}
           {view === "intro" && (
-            <div className="aps-panel">
+            <div className="aps-panel aps-banded">
+              <Band title="Could This House Work as an AFH?" />
               <h2 ref={headingRef} tabIndex={-1} className="aps-h2" style={h2}>What you will get</h2>
               <ul style={{ ...body, margin: "0 0 18px", paddingLeft: 22, lineHeight: 1.7 }}>
                 <li>A score out of 100 for how well the <strong>building</strong> suits this use</li>
@@ -263,7 +287,8 @@ const AFHPropertyScore = () => {
 
           {/* ---------------- QUIZ ---------------- */}
           {view === "quiz" && q && (
-            <div className="aps-panel">
+            <div className="aps-panel aps-banded">
+              <Band title="AFH Property Score" />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12, marginBottom: 8, fontFamily: FONT }}>
                 <span style={{ fontSize: 14, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: PLUM_DARK }}>{SECTION_LABEL(q)}</span>
                 <span style={{ fontSize: 16, color: "#3b3630", whiteSpace: "nowrap" }}>{step + 1} of {questions.length}</span>
@@ -302,7 +327,8 @@ const AFHPropertyScore = () => {
           {/* ---------------- RESULTS ---------------- */}
           {view === "results" && (
             <>
-              <div className="aps-panel aps-wide" style={{ textAlign: "center" }}>
+              <div className="aps-panel aps-wide aps-banded" style={{ textAlign: "center" }}>
+                <Band title="Your AFH Property Score" />
                 <div className="aps-printonly" style={{ ...body, textAlign: "left", marginBottom: 12 }}>
                   <strong>AFH Property Score report</strong> · realpropertyplanning.com/afh-club/afh-property-score<br />
                   {address ? <>{address}<br /></> : null}{city ? <>{city.city}, {city.county} County<br /></> : null}Prepared {today}
@@ -314,7 +340,7 @@ const AFHPropertyScore = () => {
                     <p style={body}>You marked {result.unknownIds.length} of {result.total} items "not sure." Use the checklist below at the showing, then come back with this link and fill in what you learned.</p>
                   </>
                 ) : (
-                  <>
+                  <div className="aps-scorebox">
                     <h2 ref={headingRef} tabIndex={-1} className="aps-score" style={{ fontFamily: FONT, fontWeight: 800, color: PLUM_DARK }}>
                       {scoreText(result)}<span style={{ fontSize: "0.4em", fontWeight: 700, color: "#3b3630" }}> / 100</span>
                     </h2>
@@ -328,7 +354,7 @@ const AFHPropertyScore = () => {
                         The score is a range because {result.total - result.answered} of {result.total} {result.total - result.answered === 1 ? "items was" : "items were"} marked "not sure." It narrows to a single number once you know them.
                       </p>
                     )}
-                  </>
+                  </div>
                 )}
                 <p className="aps-tight" style={{ ...body, fontSize: 16, color: "#3b3630", maxWidth: 680, margin: "0 auto" }}>
                   <strong>A good score is not approval.</strong> Based solely on answers entered by the user. Not an inspection, an appraisal, or a building or licensing determination.
@@ -447,7 +473,7 @@ const AFHPropertyScore = () => {
                   <button type="button" className="aps-go aps-ghost" onClick={restart}>Score another property</button>
                 </div>
                 <p style={{ ...body, fontSize: 17 }}>Your answers are saved in the link above, not on a server. Bookmark it, and after the showing come back to replace each "not sure."{!city ? <> For local market figures and the ROI calculator, see <Link to="/afh-club/calculators" style={{ color: PLUM_DARK, fontWeight: 700 }}>AFH Calculators</Link>.</> : null}</p>
-                <div style={{ background: "#f6f1fb", borderRadius: 12, padding: "18px 16px" }}>
+                <div style={{ background: TINT, borderRadius: 12, padding: "18px 16px" }}>
                   <h3 className="aps-h3" style={h2}>Want a second set of eyes before you make an offer?</h3>
                   <p style={body}>Talk with an AFH expert resource about the real estate side of this property and the questions worth asking.</p>
                   <Link to="/contact?reason=afh-buy-sell" className="aps-go">Request a property review</Link>

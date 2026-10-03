@@ -10,10 +10,11 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { AFH_MEDICAID_RATES, AFH_RATE_REGION_LABELS, medicaidRange, monthly } from "@/data/afhMedicaidRates";
 import { FEATURED_APPRAISER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
+import { AFH_TOOL_COLOR } from "@/components/calc/CalcKit";
 
 // Family-facing page (senior-housing side). Uses the same green as the
-// Adult Family Home line in the Cost of Care calculator.
-const GREEN = "#0f6b56";
+// Adult Family Home line in the Cost of Care calculator and every AFH tool.
+const GREEN = AFH_TOOL_COLOR;
 const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
 const money2 = (n: number) => "$" + n.toFixed(2);
 

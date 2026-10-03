@@ -238,12 +238,16 @@ export const CK_CSS = `
 .ck .ck-statlabel.ck-statlabel { font-size: 12px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; color: #5b6874 !important; }
 .ck .ck-statval.ck-statval { font-size: 22px !important; font-weight: 700 !important; color: var(--deep) !important; margin-top: 4px !important; font-variant-numeric: tabular-nums; }
 .ck .ck-bars { margin: 0 0 16px; }
-.ck .ck-barrow { display: grid; grid-template-columns: 170px minmax(0, 1fr) 76px; align-items: center; gap: 12px; margin-bottom: 8px; }
+.ck .ck-barrow { display: grid; grid-template-columns: 170px minmax(0, 1fr) 104px; align-items: center; gap: 12px; margin-bottom: 8px; }
 .ck .ck-barname.ck-barname { font-size: 15px !important; font-weight: 600 !important; color: #14283a !important; }
 .ck .ck-track { height: 14px; background: #f1f4f6; border-radius: 4px; overflow: hidden; }
 .ck .ck-bar { height: 100%; border-radius: 4px; transition: width 250ms ease; }
-.ck .ck-barval.ck-barval { font-size: 15px !important; font-weight: 700 !important; color: var(--c) !important; text-align: right; font-variant-numeric: tabular-nums; }
+.ck .ck-barval.ck-barval { font-size: 15px !important; font-weight: 700 !important; color: var(--c) !important; text-align: right; white-space: nowrap; min-width: 64px; font-variant-numeric: tabular-nums; }
 .ck .ck-goldtext.ck-goldtext { color: ${CK_GOLD_TEXT} !important; }
+.ck ul.ck-notes { list-style: none !important; margin: 0 0 16px !important; padding: 14px 16px !important; background: #f6f8fa; border-radius: 12px; }
+.ck ul.ck-notes li { display: block !important; font-size: 15px !important; line-height: 1.5 !important; color: #3f4a54 !important; padding: 3px 0 3px 18px; position: relative; }
+.ck ul.ck-notes li::before { content: ""; position: absolute; left: 2px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--c); }
+.ck ul.ck-notes li strong { color: #14283a !important; font-size: 15px !important; }
 .ck .ck-waiting.ck-waiting { background: #f6f8fa; border: 1px dashed #c9d7e2; border-radius: 14px; padding: 22px 18px; text-align: center; font-size: 16px !important; color: #3f4a54 !important; margin: 4px 0 14px; }
 .ck .ck-foot { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 20px; margin-top: 6px; padding-top: 14px; border-top: 1px solid #dfe5ea; }
 .ck .ck-source.ck-source { flex: 1 1 340px; padding-left: 12px; border-left: 4px solid #8a1c2b; font-size: 14px !important; font-weight: 400 !important; line-height: 1.5 !important; color: #3f4a54 !important; }
@@ -256,7 +260,7 @@ export const CK_CSS = `
   .ck .ck-body { padding: 18px 14px 16px; }
   .ck .ck-grid, .ck .ck-grid3 { grid-template-columns: minmax(0, 1fr); }
   .ck .ck-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .ck .ck-barrow { grid-template-columns: 110px minmax(0, 1fr) 64px; gap: 8px; }
+  .ck .ck-barrow { grid-template-columns: 104px minmax(0, 1fr) 84px; gap: 8px; }
   .ck .ck-barname.ck-barname, .ck .ck-barval.ck-barval { font-size: 14px !important; line-height: 1.25 !important; }
   .ck .ck-actions { align-items: flex-start; }
 }

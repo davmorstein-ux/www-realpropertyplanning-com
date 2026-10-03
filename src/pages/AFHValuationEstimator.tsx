@@ -1,211 +1,93 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import AFHRevenueBuilder from "@/components/AFHRevenueBuilder";
 import BackToCalculators from "@/components/BackToCalculators";
-import { FEATURED_BROKER, SAME_PERSON } from "@/data/featuredProfessionals";
+import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 import ArticleCover from "@/components/ArticleCover";
+import { CalcShell, CalcSection, CalcField, CalcHero, CalcStats, CalcBars, CalcWaiting, CalcFoot, AFH_TOOL_COLOR } from "@/components/calc/CalcKit";
 
-const GREEN = "#1a7a4a";
-const GREEN_LIGHT = "#2ecc71";
+/**
+ * AFH Valuation Estimator (rebuilt Oct 3, 2026 on the premium calculator kit,
+ * in AFH green). Live results from React state; the maths is unchanged:
+ * business value = net income ÷ a risk-adjusted cap rate (15% base, moved by
+ * payer mix, tenure, occupancy, staffing and license standing, ±2 points for
+ * the range, bounded 10–25%), plus the property value if it is included.
+ */
+const C = AFH_TOOL_COLOR;
+const num = (s: string) => {
+  const n = parseFloat(s.replace(/[$,\s]/g, ""));
+  return Number.isFinite(n) ? n : 0;
+};
+const usd = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+const pct = (n: number) => `${(Math.round(n * 10) / 10).toFixed(1)}%`;
+
+type Payer = "private" | "mixed" | "medicaid";
+type Staff = "full" | "partial" | "none";
+type Dshs = "active" | "conditions" | "expired" | "none";
+
+export function valuation(i: { net: number; rev: number; beds: number; occ: number; yrs: number; payer: Payer; staff: Staff; prop: number; dshs: Dshs }) {
+  let adj = 0;
+  if (i.payer === "private") adj -= 0.02;
+  else if (i.payer === "medicaid") adj += 0.02;
+  if (i.yrs >= 7) adj -= 0.015;
+  else if (i.yrs <= 1) adj += 0.025;
+  if (i.occ >= 100) adj -= 0.01;
+  else if (i.occ <= 50) adj += 0.02;
+  if (i.staff === "full") adj -= 0.01;
+  else if (i.staff === "none") adj += 0.015;
+  if (i.dshs === "active") adj -= 0.005;
+  else if (i.dshs === "conditions" || i.dshs === "expired") adj += 0.03;
+  const lowCap = Math.max(0.1, 0.15 + adj - 0.02);
+  const highCap = Math.min(0.25, 0.15 + adj + 0.02);
+  const midCap = (lowCap + highCap) / 2;
+  const bizMid = i.net / midCap;
+  const totalMid = bizMid + i.prop;
+  return {
+    midCap,
+    bizMid,
+    totalMid,
+    totalLow: i.net / highCap + i.prop,
+    totalHigh: i.net / lowCap + i.prop,
+    margin: i.rev > 0 ? (i.net / i.rev) * 100 : null,
+    perBed: i.beds > 0 ? totalMid / i.beds : null,
+    grm: i.rev > 0 ? totalMid / i.rev : null,
+  };
+}
 
 const AFHValuationEstimator = () => {
-  const calcRef = useRef<HTMLDivElement>(null);
+  const [net, setNet] = useState("");
+  const [rev, setRev] = useState("");
+  const [beds, setBeds] = useState("6");
+  const [occ, setOcc] = useState("83");
+  const [yrs, setYrs] = useState("3");
+  const [payer, setPayer] = useState<Payer>("private");
+  const [staff, setStaff] = useState<Staff>("full");
+  const [prop, setProp] = useState("");
+  const [dshs, setDshs] = useState<Dshs>("active");
 
-  useEffect(() => {
-    const fmtV = (n: number) => {
-      if (!n || isNaN(n)) return "—";
-      if (Math.abs(n) >= 1000000) return "$" + (n / 1000000).toFixed(2) + "M";
-      if (Math.abs(n) >= 1000) return "$" + (n / 1000).toFixed(0) + "K";
-      return "$" + Math.round(n).toLocaleString();
-    };
-    const fmtPV = (n: number) => Math.round(n * 10) / 10 + "%";
+  const ready = num(net) > 0;
+  const v = valuation({ net: num(net), rev: num(rev), beds: num(beds), occ: num(occ), yrs: num(yrs), payer, staff, prop: num(prop), dshs });
 
-    const odometerV = (el: HTMLElement, finalStr: string, duration: number) => {
-      const start = Date.now();
-      const isMoney = finalStr.startsWith("$"),
-        isPct = finalStr.endsWith("%");
-      const tick = () => {
-        if (Date.now() - start < duration) {
-          if (isMoney) {
-            const r = Math.round(Math.random() * 2000000);
-            el.textContent = r >= 1000000 ? "$" + (r / 1000000).toFixed(2) + "M" : "$" + (r / 1000).toFixed(0) + "K";
-          } else if (isPct) el.textContent = (Math.random() * 30).toFixed(1) + "%";
-          else el.textContent = (Math.random() * 10).toFixed(2) + "x";
-          requestAnimationFrame(tick);
-        } else el.textContent = finalStr;
-      };
-      requestAnimationFrame(tick);
-    };
+  const notes: { lead: string; text: string }[] = [];
+  if (payer === "private") notes.push({ lead: "Private-pay mix", text: "lowers the risk premium, which supports value." });
+  if (payer === "medicaid") notes.push({ lead: "Medicaid-heavy", text: "reimbursement risk raises the cap rate a buyer will use." });
+  if (num(yrs) >= 7) notes.push({ lead: "Established operation", text: "tenure signals stability and lowers the cap rate." });
+  if (num(occ) >= 100) notes.push({ lead: "Full occupancy", text: "shows demand at the home's maximum revenue." });
+  if (num(occ) <= 50) notes.push({ lead: "Low occupancy", text: "a buyer will price in the risk of filling beds." });
+  if (staff === "full") notes.push({ lead: "Full staff retained", text: "reduces transition risk for a buyer." });
+  if (dshs === "conditions" || dshs === "expired") notes.push({ lead: "License issues", text: "significantly affect marketability." });
+  if (v.margin !== null && v.margin > 40) notes.push({ lead: `Strong operating margin (${Math.round(v.margin)}%)`, text: "well positioned for the market." });
+  else if (v.margin !== null && v.margin <= 30) notes.push({ lead: `Thin margin (${Math.round(v.margin)}%)`, text: "review expenses before listing." });
 
-    const calcVal = () => {
-      const net = parseFloat((document.getElementById("v-net") as HTMLInputElement).value) || 0;
-      const rev = parseFloat((document.getElementById("v-rev") as HTMLInputElement).value) || 0;
-      const cap = parseInt((document.getElementById("v-cap") as HTMLSelectElement).value) || 0;
-      const occ = parseFloat((document.getElementById("v-occ") as HTMLSelectElement).value) / 100;
-      const yrs = parseInt((document.getElementById("v-yrs") as HTMLSelectElement).value) || 3;
-      const payer = (document.getElementById("v-payer") as HTMLSelectElement).value;
-      const staff = (document.getElementById("v-staff") as HTMLSelectElement).value;
-      const propval = parseFloat((document.getElementById("v-prop") as HTMLInputElement).value) || 0;
-      const dshs = (document.getElementById("v-dshs") as HTMLSelectElement).value;
-      if (!net) {
-        alert("Please enter annual net income to calculate.");
-        return;
-      }
-      let capAdj = 0;
-      if (payer === "private") capAdj -= 0.02;
-      else if (payer === "medicaid") capAdj += 0.02;
-      if (yrs >= 7) capAdj -= 0.015;
-      else if (yrs <= 1) capAdj += 0.025;
-      if (occ >= 1.0) capAdj -= 0.01;
-      else if (occ <= 0.5) capAdj += 0.02;
-      if (staff === "full") capAdj -= 0.01;
-      else if (staff === "none") capAdj += 0.015;
-      if (dshs === "active") capAdj -= 0.005;
-      else if (dshs === "conditions" || dshs === "expired") capAdj += 0.03;
-      const lowCap = Math.max(0.1, 0.15 + capAdj - 0.02);
-      const highCap = Math.min(0.25, 0.15 + capAdj + 0.02);
-      const midCap = (lowCap + highCap) / 2;
-      const bizMid = Math.round(net / midCap),
-        bizLow = Math.round(net / highCap),
-        bizHigh = Math.round(net / lowCap);
-      const totalMid = bizMid + propval,
-        totalLow = bizLow + propval,
-        totalHigh = bizHigh + propval;
-      const margin = rev > 0 ? Math.round((net / rev) * 100) : 0;
-      const perBed = cap > 0 ? Math.round(totalMid / cap) : 0;
-      const grm = rev > 0 ? Math.round((totalMid / rev) * 10) / 10 : 0;
-      const res = document.getElementById("val-results")!;
-      res.style.display = "block";
-      res.scrollIntoView({ behavior: "smooth", block: "start" });
-      const DUR = 2000;
-      odometerV(document.getElementById("v-mid")!, fmtV(totalMid), DUR);
-      document.getElementById("v-range")!.textContent = "Range: " + fmtV(totalLow) + " — " + fmtV(totalHigh);
-      setTimeout(() => {
-        odometerV(document.getElementById("v-biz")!, fmtV(bizMid), DUR * 0.7);
-        odometerV(document.getElementById("v-propout")!, propval > 0 ? fmtV(propval) : "Not included", DUR * 0.7);
-        odometerV(document.getElementById("v-caprate")!, fmtPV(midCap * 100), DUR * 0.7);
-        odometerV(document.getElementById("v-margin")!, rev > 0 ? fmtPV(margin) : "—", DUR * 0.7);
-        odometerV(document.getElementById("v-perbed")!, cap > 0 ? fmtV(perBed) : "—", DUR * 0.7);
-        odometerV(document.getElementById("v-grm")!, rev > 0 ? grm + "x" : "—", DUR * 0.7);
-      }, 300);
-      setTimeout(() => {
-        const bars = [
-          {
-            label: "Payer mix quality",
-            pct: payer === "private" ? 90 : payer === "mixed" ? 65 : 40,
-            val: payer === "private" ? "Private pay" : payer === "mixed" ? "Mixed" : "Medicaid",
-          },
-          { label: "Occupancy strength", pct: Math.round(occ * 100), val: Math.round(occ * 100) + "%" },
-          {
-            label: "Operating tenure",
-            pct: yrs >= 7 ? 90 : yrs >= 3 ? 65 : 30,
-            val: yrs >= 7 ? "10+ yrs" : yrs >= 3 ? "2–5 yrs" : "<2 yrs",
-          },
-          {
-            label: "Staffing continuity",
-            pct: staff === "full" ? 90 : staff === "partial" ? 55 : 25,
-            val: staff === "full" ? "Full" : staff === "partial" ? "Partial" : "None",
-          },
-          {
-            label: "License standing",
-            pct: dshs === "active" ? 95 : dshs === "conditions" ? 50 : 10,
-            val: dshs === "active" ? "Active" : "Issues",
-          },
-        ];
-        const barsEl = document.getElementById("v-bars")!;
-        barsEl.innerHTML = bars
-          .map(
-            (b) =>
-              `<div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
-            <span style="font-size:13px;color:#272421;width:160px;flex-shrink:0;font-weight:600">${b.label}</span>
-            <div style="flex:1;height:7px;background:#dfc9cb;border-radius:4px;overflow:hidden">
-              <div class="val-bar-fill" data-pct="${b.pct}" style="height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#1a7a4a,#2ecc71);transition:width .9s ease"></div>
-            </div>
-            <span style="font-size:13px;color:#1a7a4a;width:80px;text-align:right;flex-shrink:0;font-weight:700">${b.val}</span>
-          </div>`,
-          )
-          .join("");
-        setTimeout(() => {
-          document.querySelectorAll(".val-bar-fill").forEach((el: any) => {
-            el.style.width = el.dataset.pct + "%";
-          });
-        }, 50);
-        let notes: string[] = [];
-        if (payer === "private")
-          notes.push("<strong>Private pay mix</strong> — reduces risk premium, favorable to value");
-        if (payer === "medicaid") notes.push("<strong>Medicaid-heavy</strong> — reimbursement risk increases cap rate");
-        if (yrs >= 7) notes.push("<strong>Established operation</strong> — tenure signals stability, lowers cap rate");
-        if (occ >= 1.0) notes.push("<strong>Full occupancy</strong> — maximum revenue demonstrates demand");
-        if (occ <= 0.5) notes.push("<strong>Low occupancy</strong> — buyer will price in stabilization risk");
-        if (staff === "full") notes.push("<strong>Full staff retained</strong> — reduces transition risk for buyer");
-        if (dshs === "conditions" || dshs === "expired")
-          notes.push("<strong>License issues</strong> — significantly impacts marketability");
-        if (rev > 0 && margin > 40)
-          notes.push(`<strong>Strong operating margin (${margin}%)</strong> — well-positioned for market`);
-        else if (rev > 0 && margin <= 30)
-          notes.push(`<strong>Thin margin (${margin}%)</strong> — review expenses before listing`);
-        document.getElementById("v-assumptions")!.innerHTML =
-          notes.join("<br>") || "No significant risk factors detected.";
-      }, DUR + 200);
-    };
-
-    document.getElementById("calc-val-btn")?.addEventListener("click", calcVal);
-    document.getElementById("contact-btn-val")?.addEventListener("click", () => (window.location.href = "/contact"));
-  }, []);
-
-  const inputStyle: React.CSSProperties = {
-    width: "100%",
-    background: "#ffffff",
-    border: `1.5px solid #b8d8c0`,
-    borderRadius: 6,
-    color: "#272421",
-    fontSize: 15,
-    padding: "10px 13px",
-    fontFamily: "'DM Sans', system-ui, sans-serif",
-    boxSizing: "border-box",
-  };
-  const labelStyle: React.CSSProperties = {
-    fontFamily: "'DM Sans', system-ui, sans-serif",
-    fontSize: 12,
-    letterSpacing: ".1em",
-    textTransform: "uppercase",
-    color: GREEN,
-    marginBottom: 7,
-    fontWeight: 700,
-    minHeight: 30,
-    display: "flex",
-    alignItems: "flex-end",
-    lineHeight: 1.3,
-  } as React.CSSProperties;
-  const panelStyle: React.CSSProperties = {
-    border: `1px solid #b8d8c0`,
-    borderRadius: 10,
-    padding: "1.25rem 1.4rem",
-    marginBottom: 14,
-    background: "#ffffff",
-  };
-  const panelTitleStyle: React.CSSProperties = {
-    fontSize: 14,
-    letterSpacing: ".18em",
-    textTransform: "uppercase",
-    color: GREEN,
-    marginBottom: 14,
-    fontWeight: 700,
-    display: "flex",
-    alignItems: "center",
-    gap: 8,
-  };
-  const dividerStyle: React.CSSProperties = {
-    height: 1,
-    background: `linear-gradient(90deg,transparent,${GREEN}30,transparent)`,
-    marginBottom: 16,
-  };
+  const label = { private: "Private pay", mixed: "Mixed", medicaid: "Medicaid" };
+  const o = num(occ);
+  const y = num(yrs);
 
   return (
     <>
@@ -219,490 +101,154 @@ const AFHValuationEstimator = () => {
           applicationCategory: "FinanceApplication",
           operatingSystem: "All",
           url: "https://realpropertyplanning.com/afh-club/afh-valuation-estimator",
-          description:
-            "Estimate the value of a Washington State adult family home business and property.",
+          description: "Estimate the value of a Washington State adult family home business and property.",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         }}
       />
       <Header />
       <main>
-        {/* Hero */}
-        <div style={{ background: "#faf8f4", padding: "48px 24px 40px", borderBottom: `3px solid ${GREEN}` }}>
+        <div style={{ background: "#faf8f4", padding: "48px 24px 36px", borderBottom: `3px solid ${C}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <div style={{ marginBottom: 24 }}>
-              <BackToCalculators accent={GREEN} />
+              <BackToCalculators accent={C} />
             </div>
             <ArticleCover src="/afh-valuation-estimator-cover-v3.webp" alt="Cover art: AFH Valuation Estimator" width={1024} height={1365} />
-            <p
-              style={{
-                fontSize: 13,
-                fontWeight: 700,
-                letterSpacing: ".15em",
-                textTransform: "uppercase",
-                color: "#6f2a30",
-                marginBottom: 10,
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-              }}
-            >
-              For sellers
-            </p>
-            <h1
-              style={{
-                fontSize: "clamp(28px,4vw,42px)",
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                fontWeight: 700,
-                color: "#272421",
-                marginBottom: 12,
-                lineHeight: 1.2,
-              }}
-            >
-              AFH Valuation Estimator
-            </h1>
-            <p
-              style={{
-                fontSize: 18,
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                color: "#1c1917",
-                lineHeight: 1.7,
-                maxWidth: 600,
-                margin: 0,
-              }}
-            >
-              Know what your AFH is worth before you list. Estimate business and property value using income
-              capitalization.
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: C, marginBottom: 10, fontFamily: "'DM Sans', system-ui, sans-serif" }}>For sellers</p>
+            <h1 style={{ fontSize: "clamp(28px,4vw,42px)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#272421", marginBottom: 12, lineHeight: 1.2 }}>AFH Valuation Estimator</h1>
+            <p style={{ fontSize: 18, fontFamily: "'DM Sans', system-ui, sans-serif", color: "#1c1917", lineHeight: 1.7, maxWidth: 600, margin: 0 }}>
+              Know what your AFH is worth before you list. Estimate business and property value using income capitalization.
             </p>
           </div>
         </div>
 
-        {/* Calculator */}
-        <div ref={calcRef} style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
-          <div
-            style={{
-              maxWidth: 900,
-              margin: "0 auto",
-              background: "#ffffff",
-              border: `2px solid ${GREEN}40`,
-              borderRadius: 14,
-              padding: "1.5rem 1.25rem",
-              boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
-            }}
-          >
-            <div style={{ textAlign: "center", marginBottom: "1.75rem" }}>
-              <div
-                style={{
-                  fontSize: 13,
-                  letterSpacing: ".25em",
-                  textTransform: "uppercase",
-                  color: GREEN,
-                  marginBottom: 8,
-                  fontWeight: 700,
-                }}
-              >
-                Adult Family Home
-              </div>
-              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#272421" }}>
-                AFH <span style={{ color: GREEN }}>Valuation</span> Estimator
-              </h2>
-              <div
-                style={{
-                  fontSize: 13,
-                  color: "#5c3f42",
-                  marginTop: 6,
-                  letterSpacing: ".1em",
-                  textTransform: "uppercase",
-                  fontWeight: 600,
-                }}
-              >
-                Know your value · Plan your next move
-              </div>
-            </div>
-
-            {/* Business Financials */}
-            <div style={panelStyle}>
-              <div style={panelTitleStyle}>
-                Business Financials{" "}
-                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
-              </div>
-              <div style={dividerStyle} />
+        <div style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
+          <CalcShell color={C} icon="scale" eyebrow="AFH Club Calculator" title="What an Adult Family Home Is Worth" subtitle="The business by income capitalization, plus the property if it is included">
+            <CalcSection title="Business financials">
               <AFHRevenueBuilder
-                accent={GREEN}
-                onApply={(r) => {
-                  const rev = document.getElementById("v-rev") as HTMLInputElement | null;
-                  const cap = document.getElementById("v-cap") as HTMLSelectElement | null;
-                  const occ = document.getElementById("v-occ") as HTMLSelectElement | null;
-                  if (rev) rev.value = String(Math.round(r.annualOccupied));
-                  if (cap && r.beds >= 3 && r.beds <= 8) cap.value = String(r.beds);
-                  if (occ) {
-                    const opts = Array.from(occ.options).map((o) => parseInt(o.value));
-                    const nearest = opts.reduce((best, v) => (Math.abs(v - r.occupancy) < Math.abs(best - r.occupancy) ? v : best), opts[0]);
-                    occ.value = String(nearest);
-                  }
-                  rev?.scrollIntoView({ behavior: "smooth", block: "center" });
+                accent={C}
+                onApply={(b) => {
+                  setRev(String(Math.round(b.annualOccupied)));
+                  if (b.beds >= 3 && b.beds <= 8) setBeds(String(b.beds));
+                  setOcc(String(b.occupancy));
+                  document.getElementById("v-rev")?.scrollIntoView({ behavior: "smooth", block: "center" });
                 }}
               />
-              {/* 2-col → 1-col mobile */}
-              <div
-                className="val-grid2"
-                style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 16 }}
-              >
-                <div>
-                  <label style={labelStyle} htmlFor="v-net">Annual net income ($)</label>
-                  <input type="number" id="v-net" placeholder="124000" style={inputStyle} />
-                  <div style={{ fontSize: 12, color: "#5c3f42", marginTop: 5 }}>
-                    After expenses, before owner salary
-                  </div>
-                </div>
-                <div>
-                  <label style={labelStyle} htmlFor="v-rev">Annual gross revenue ($)</label>
-                  <input type="number" id="v-rev" placeholder="288000" style={inputStyle} />
-                </div>
+              <div className="ck-grid" style={{ marginTop: 14 }}>
+                <CalcField label="Annual net income" htmlFor="v-net" hint="After expenses, before the owner's salary.">
+                  <input id="v-net" className="ck-input" inputMode="decimal" placeholder="124,000" value={net} onChange={(e) => setNet(e.target.value)} />
+                </CalcField>
+                <CalcField label="Annual gross revenue" htmlFor="v-rev">
+                  <input id="v-rev" className="ck-input" inputMode="decimal" placeholder="288,000" value={rev} onChange={(e) => setRev(e.target.value)} />
+                </CalcField>
               </div>
-              {/* 3-col → 1-col mobile */}
-              <div
-                className="val-grid3"
-                style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 16 }}
-              >
-                <div>
-                  <label style={labelStyle} htmlFor="v-cap">Licensed capacity</label>
-                  <select id="v-cap" style={inputStyle}>
-                    <option value="">Select...</option>
-                    <option value="3">3 beds</option>
-                    <option value="4">4 beds</option>
-                    <option value="5">5 beds</option>
-                    <option value="6">6 beds</option>
-                    <option value="7">7 beds</option>
-                    <option value="8">8 beds</option>
+              <div className="ck-grid3" style={{ marginTop: 16 }}>
+                <CalcField label="Licensed capacity" htmlFor="v-cap">
+                  <select id="v-cap" className="ck-input" value={beds} onChange={(e) => setBeds(e.target.value)}>
+                    {[3, 4, 5, 6, 7, 8].map((b) => (
+                      <option key={b} value={b}>{b} beds</option>
+                    ))}
                   </select>
-                </div>
-                <div>
-                  <label style={labelStyle} htmlFor="v-occ">Occupancy</label>
-                  <select id="v-occ" style={inputStyle}>
-                    <option value="100">100% full</option>
-                    <option value="83">83% (5/6)</option>
-                    <option value="67">67% (4/6)</option>
-                    <option value="75">75% (3/4)</option>
-                    <option value="50">50% half</option>
-                  </select>
-                </div>
-                <div>
-                  <label style={labelStyle} htmlFor="v-yrs">Years operating</label>
-                  <select id="v-yrs" style={inputStyle}>
-                    <option value="1">Under 2 yrs</option>
+                </CalcField>
+                <CalcField label="Occupancy (%)" htmlFor="v-occ">
+                  <input id="v-occ" className="ck-input" inputMode="decimal" value={occ} onChange={(e) => setOcc(e.target.value)} />
+                </CalcField>
+                <CalcField label="Years operating" htmlFor="v-yrs">
+                  <select id="v-yrs" className="ck-input" value={yrs} onChange={(e) => setYrs(e.target.value)}>
+                    <option value="1">Under 2 years</option>
                     <option value="3">2–5 years</option>
                     <option value="7">5–10 years</option>
                     <option value="12">10+ years</option>
                   </select>
-                </div>
+                </CalcField>
               </div>
-              <div
-                className="val-grid2"
-                style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 0 }}
-              >
-                <div>
-                  <label style={labelStyle} htmlFor="v-payer">Payer mix</label>
-                  <select id="v-payer" style={inputStyle}>
+              <div className="ck-grid" style={{ marginTop: 16 }}>
+                <CalcField label="Payer mix" htmlFor="v-payer">
+                  <select id="v-payer" className="ck-input" value={payer} onChange={(e) => setPayer(e.target.value as Payer)}>
                     <option value="private">Primarily private pay</option>
                     <option value="mixed">Mixed private / Medicaid</option>
                     <option value="medicaid">Primarily Medicaid</option>
                   </select>
-                </div>
-                <div>
-                  <label style={labelStyle} htmlFor="v-staff">Staffing</label>
-                  <select id="v-staff" style={inputStyle}>
+                </CalcField>
+                <CalcField label="Staffing" htmlFor="v-staff">
+                  <select id="v-staff" className="ck-input" value={staff} onChange={(e) => setStaff(e.target.value as Staff)}>
                     <option value="full">Full staff in place</option>
                     <option value="partial">Partial staff available</option>
                     <option value="none">No staff included</option>
                   </select>
-                </div>
+                </CalcField>
               </div>
-            </div>
+            </CalcSection>
 
-            {/* Property */}
-            <div style={panelStyle}>
-              <div style={panelTitleStyle}>
-                Property (if included){" "}
-                <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
-              </div>
-              <div style={dividerStyle} />
-              {/* 3-col → 1-col mobile */}
-              <div
-                className="val-grid3"
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr 1fr",
-                  gap: 14,
-                  marginBottom: 8,
-                  alignItems: "start",
-                }}
-              >
-                <div>
-                  <label style={labelStyle} htmlFor="v-prop">Property value est.</label>
-                  <input type="number" id="v-prop" placeholder="650000" style={inputStyle} />
-                </div>
-                <div>
-                  <label style={labelStyle} htmlFor="v-dshs">DSHS license status</label>
-                  <select id="v-dshs" style={inputStyle}>
-                    <option value="active">Active — good standing</option>
-                    <option value="conditions">Active — with conditions</option>
+            <CalcSection title="Property (if included)">
+              <div className="ck-grid">
+                <CalcField label="Property value" htmlFor="v-prop" hint="Leave blank if selling the business only.">
+                  <input id="v-prop" className="ck-input" inputMode="decimal" placeholder="650,000" value={prop} onChange={(e) => setProp(e.target.value)} />
+                </CalcField>
+                <CalcField label="DSHS license status" htmlFor="v-dshs">
+                  <select id="v-dshs" className="ck-input" value={dshs} onChange={(e) => setDshs(e.target.value as Dshs)}>
+                    <option value="active">Active, good standing</option>
+                    <option value="conditions">Active, with conditions</option>
                     <option value="expired">Expired</option>
                     <option value="none">Never licensed</option>
                   </select>
-                </div>
-                <div>
-                  <label style={labelStyle} htmlFor="v-county">County</label>
-                  <select id="v-county" style={inputStyle}>
-                    <option value="king">King</option>
-                    <option value="snohomish">Snohomish</option>
-                    <option value="pierce">Pierce</option>
-                    <option value="kitsap">Kitsap</option>
-                    <option value="thurston">Thurston</option>
-                    <option value="other">Other WA county</option>
-                  </select>
-                </div>
+                </CalcField>
               </div>
-              <div style={{ fontSize: 12, color: "#5c3f42" }}>Leave property value blank if selling business only.</div>
-            </div>
+            </CalcSection>
 
-            {/* Calculate */}
-            <button
-              id="calc-val-btn"
-              style={{
-                width: "100%",
-                padding: 16,
-                borderRadius: 8,
-                background: GREEN,
-                color: "#ffffff",
-                border: `2px solid ${GREEN}`,
-                fontSize: 19,
-                fontWeight: 700,
-                letterSpacing: ".16em",
-                textTransform: "uppercase",
-                cursor: "pointer",
-                marginTop: 4,
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                transition: "all 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget;
-                el.style.background = "#272421";
-                el.style.borderColor = "#272421";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget;
-                el.style.background = GREEN;
-                el.style.borderColor = GREEN;
-              }}
+            {ready ? (
+              <>
+                <CalcHero
+                  label={num(prop) > 0 ? "Estimated total value" : "Estimated business value"}
+                  value={usd(v.totalMid)}
+                  sub={`Range ${usd(v.totalLow)} to ${usd(v.totalHigh)}`}
+                />
+                <CalcStats
+                  items={[
+                    { label: "Business value", value: usd(v.bizMid) },
+                    { label: "Property value", value: num(prop) > 0 ? usd(num(prop)) : "Not included" },
+                    { label: "Implied cap rate", value: pct(v.midCap * 100) },
+                    { label: "Operating margin", value: v.margin !== null ? pct(v.margin) : "—" },
+                    { label: "Value per bed", value: v.perBed !== null ? usd(v.perBed) : "—" },
+                    { label: "Gross revenue multiple", value: v.grm !== null ? `${v.grm.toFixed(1)}x` : "—" },
+                  ]}
+                />
+                <CalcBars
+                  items={[
+                    { label: "Payer mix", pct: payer === "private" ? 90 : payer === "mixed" ? 65 : 40, value: label[payer] },
+                    { label: "Occupancy", pct: o, value: `${Math.round(o)}%` },
+                    { label: "Operating tenure", pct: y >= 7 ? 90 : y >= 3 ? 65 : 30, value: y >= 12 ? "10+ yrs" : y >= 7 ? "5–10 yrs" : y >= 3 ? "2–5 yrs" : "<2 yrs" },
+                    { label: "Staffing continuity", pct: staff === "full" ? 90 : staff === "partial" ? 55 : 25, value: staff === "full" ? "Full" : staff === "partial" ? "Partial" : "None" },
+                    { label: "License standing", pct: dshs === "active" ? 95 : dshs === "conditions" ? 50 : 10, value: dshs === "active" ? "Active" : "Issues", gold: dshs !== "active" },
+                  ]}
+                />
+                {notes.length > 0 && (
+                  <ul className="ck-notes">
+                    {notes.map((n) => (
+                      <li key={n.lead}>
+                        <strong>{n.lead}</strong>: {n.text}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
+            ) : (
+              <CalcWaiting>Enter the home's annual net income to see an estimated value.</CalcWaiting>
+            )}
+
+            <CalcFoot
+              actions={
+                <>
+                  <Link to="/afh-club/afh-roi-calculator">Check a buyer's return →</Link>
+                  <Link to="/contact">Ask {FEATURED_BROKER.role} for a valuation →</Link>
+                </>
+              }
             >
-              Calculate Estimated Value
-            </button>
-
-            {/* Results */}
-            <div id="val-results" style={{ display: "none", marginTop: 14 }}>
-              <div
-                style={{
-                  border: `2px solid ${GREEN}40`,
-                  borderRadius: 12,
-                  padding: "1.6rem",
-                  textAlign: "center",
-                  marginBottom: 14,
-                  marginTop: 16,
-                  background: "#faf8f4",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: 12,
-                    letterSpacing: ".2em",
-                    textTransform: "uppercase",
-                    color: GREEN,
-                    marginBottom: 10,
-                    fontWeight: 700,
-                  }}
-                >
-                  Estimated total value
-                </div>
-                <div
-                  id="v-mid"
-                  style={{
-                    fontSize: 50,
-                    fontWeight: 700,
-                    color: GREEN,
-                    lineHeight: 1,
-                    minHeight: 60,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  —
-                </div>
-                <div id="v-range" style={{ fontSize: 14, color: "#272421", marginTop: 8 }}>
-                  Range: — to —
-                </div>
-              </div>
-              {/* Results metric tiles — 3-col desktop, 2-col mobile */}
-              <div
-                className="val-results-grid"
-                style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10, marginBottom: 14 }}
-              >
-                {[
-                  ["Business value", "v-biz", "Income approach"],
-                  ["Property value", "v-propout", "As entered"],
-                  ["Implied cap rate", "v-caprate", "Risk-adjusted"],
-                  ["Operating margin", "v-margin", ""],
-                  ["Value per bed", "v-perbed", ""],
-                  ["Gross rent multiplier", "v-grm", ""],
-                ].map(([lbl, id, sub]) => (
-                  <div
-                    key={id}
-                    style={{
-                      background: "#faf8f4",
-                      border: `1px solid ${GREEN}30`,
-                      borderRadius: 8,
-                      padding: "1rem",
-                      textAlign: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: 11,
-                        letterSpacing: ".1em",
-                        textTransform: "uppercase",
-                        color: GREEN,
-                        marginBottom: 7,
-                        fontWeight: 700,
-                      }}
-                    >
-                      {lbl}
-                    </div>
-                    <div id={id} style={{ fontSize: 18, fontWeight: 700, color: "#272421", minHeight: 28 }}>
-                      —
-                    </div>
-                    {sub && <div style={{ fontSize: 11, color: "#5c3f42", marginTop: 3 }}>{sub}</div>}
-                  </div>
-                ))}
-              </div>
-              <div style={{ ...panelStyle, marginBottom: 14 }}>
-                <div style={panelTitleStyle}>
-                  Value Factors{" "}
-                  <span style={{ flex: 1, height: 1, background: `linear-gradient(90deg,${GREEN}30,transparent)` }} />
-                </div>
-                <div style={dividerStyle} />
-                <div id="v-bars" />
-              </div>
-              <div
-                id="v-assumptions"
-                style={{
-                  background: "#faf8f4",
-                  border: `1px solid ${GREEN}25`,
-                  borderRadius: 8,
-                  padding: "1rem 1.25rem",
-                  marginBottom: 12,
-                  fontSize: 14,
-                  color: "#272421",
-                  lineHeight: 2,
-                }}
-              />
-              <div
-                style={{
-                  fontSize: 12,
-                  color: "#5c3f42",
-                  lineHeight: 1.8,
-                  padding: "12px 16px",
-                  border: `1px solid ${GREEN}18`,
-                  borderRadius: 8,
-                  background: "#faf8f4",
-                }}
-              >
-                This estimate uses income capitalization methodology and Washington AFH market data. It is for
-                informational purposes only and does not constitute a certified appraisal or broker opinion of value.
-                Contact {FEATURED_BROKER.name} for a professional certified valuation.
-              </div>
-              <div
-                style={{
-                  border: `1px solid ${GREEN}40`,
-                  borderRadius: 10,
-                  padding: "1.2rem 1.5rem",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  gap: 14,
-                  flexWrap: "wrap",
-                  marginTop: 12,
-                  background: "#faf8f4",
-                }}
-              >
-                <div>
-                  <strong style={{ color: GREEN, fontSize: 15, display: "block" }}>
-                    Get a certified professional valuation
-                  </strong>
-                  <p style={{ fontSize: 13, color: "#272421", marginTop: 3 }}>
-                    {FEATURED_BROKER.Role} · Licensed Broker{SAME_PERSON ? " & Certified Appraiser" : ""} · {FEATURED_BROKER.brokerage}
-                  </p>
-                </div>
-                <button
-                  id="contact-btn-val"
-                  style={{
-                    fontSize: 12,
-                    padding: "10px 22px",
-                    borderRadius: 6,
-                    background: GREEN,
-                    color: "#ffffff",
-                    border: `2px solid ${GREEN}`,
-                    cursor: "pointer",
-                    letterSpacing: ".12em",
-                    textTransform: "uppercase",
-                    fontFamily: "'DM Sans', system-ui, sans-serif",
-                    fontWeight: 700,
-                    whiteSpace: "nowrap",
-                    transition: "all 0.2s",
-                  }}
-                >
-                  Contact {FEATURED_BROKER.firstName} ↗
-                </button>
-              </div>
-            </div>
-
-            <div
-              style={{
-                textAlign: "center",
-                fontSize: 13,
-                color: "#5c3f42",
-                letterSpacing: ".12em",
-                textTransform: "uppercase",
-                marginTop: "1.75rem",
-                fontWeight: 600,
-                paddingTop: "1.25rem",
-                borderTop: `1px solid ${GREEN}20`,
-              }}
-            >
-              Courtesy of Real Property Planning
-            </div>
-          </div>
+              An income-capitalization estimate using Washington AFH market assumptions, for planning only. It is not an appraisal or
+              a broker opinion of value.
+            </CalcFoot>
+          </CalcShell>
         </div>
 
-        <style>{`
-          /* 2-col input grids → 1-col mobile */
-          .val-grid2 { grid-template-columns: 1fr !important; }
-          @media (min-width: 520px) {
-            .val-grid2 { grid-template-columns: 1fr 1fr !important; }
-          }
-
-          /* 3-col input grids → 1-col mobile, 2-col mid */
-          .val-grid3 { grid-template-columns: 1fr !important; }
-          @media (min-width: 400px) {
-            .val-grid3 { grid-template-columns: 1fr 1fr !important; }
-          }
-          @media (min-width: 600px) {
-            .val-grid3 { grid-template-columns: 1fr 1fr 1fr !important; }
-          }
-
-          /* Results metric tiles: 3-col desktop → 2-col mobile */
-          .val-results-grid { grid-template-columns: repeat(2, 1fr) !important; }
-          @media (min-width: 560px) {
-            .val-results-grid { grid-template-columns: repeat(3, 1fr) !important; }
-          }
-        `}</style>
         <BackToAFHClub />
         <section style={{ padding: "1.25rem 1.5rem 0" }}>
           <AFHBuyerSteps current={4} compact />

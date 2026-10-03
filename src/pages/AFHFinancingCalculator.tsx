@@ -8,6 +8,7 @@ import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
 import { confirmedPrivatePayBands, privatePayBandByMarket } from "@/data/afhPrivatePayRanges";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { CalcShell, CalcSection, CalcField, CalcHero, CalcStats, CalcFoot, AFH_TOOL_COLOR, CK_GOLD } from "@/components/calc/CalcKit";
 import IntentCTA from "@/components/IntentCTA";
 import AFHBuyerSteps from "@/components/AFHBuyerSteps";
 
@@ -22,7 +23,9 @@ import AFHBuyerSteps from "@/components/AFHBuyerSteps";
  *
  * Generalised from a real lender-style analysis of a six-bed home: net
  * operating income against annual debt service, by occupancy and price.
- * Colour: teal, distinct from ROI (cobalt) and valuation (green).
+ * Redesigned Oct 3, 2026 on the premium calculator kit in AFH green (all AFH
+ * tools share it): the headline answer is the coverage ratio at today's
+ * occupancy, against the lender's requirement. Maths unchanged.
  */
 
 const FAQS = [
@@ -53,9 +56,8 @@ const FAQS = [
   },
 ];
 
-const TEAL = "#0f766e";
-const TEAL_DARK = "#0b5b55";
-const INK = "#272421";
+const TEAL = AFH_TOOL_COLOR; // name kept from the teal era; AFH green since Oct 3, 2026
+const INK = "#14283a";
 
 const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
 const money0 = (n: number) => (n < 0 ? "(" + money(-n) + ")" : money(n));
@@ -172,56 +174,18 @@ const AFHFinancingCalculator = () => {
   const num = (setter: (v: number) => void) => (e: React.ChangeEvent<HTMLInputElement>) =>
     setter(fmtIn(parseFloat(e.target.value)));
 
-  // Rendered as a <div>, not <label>: index.css forces every <label> in main
-  // down to 14px "eyebrow" size, which made this page hard to read.
-  const label: React.CSSProperties = {
-    display: "block",
-    fontSize: 17,
-    color: "#141210",
-    marginBottom: 7,
-    fontWeight: 700,
-    fontFamily: "'DM Sans', system-ui, sans-serif",
-  };
-  const input: React.CSSProperties = {
-    width: "100%",
-    background: "#fff",
-    border: `2px solid ${TEAL}`,
-    borderRadius: 6,
-    color: "#141210",
-    fontSize: 18,
-    padding: "11px 12px",
-    fontFamily: "'DM Sans', system-ui, sans-serif",
-    boxSizing: "border-box",
-    display: "block",
-  };
-  const section: React.CSSProperties = {
-    fontSize: 22,
-    color: TEAL_DARK,
-    marginBottom: 14,
-    fontWeight: 700,
-    borderBottom: `2px solid ${TEAL}`,
-    paddingBottom: 6,
-  };
-  const card: React.CSSProperties = {
-    background: "#fff",
-    border: `2px solid ${TEAL}`,
-    borderRadius: 14,
-    padding: "1.5rem 1.25rem",
-    boxShadow: "0 4px 24px rgba(0,0,0,0.10)",
-    maxWidth: 900,
-    margin: "0 auto 24px",
-  };
-  const field = (lbl: string, value: number, set: (v: number) => void, opts: { step?: number; min?: number; max?: number; note?: string } = {}) => {
+  /** A numeric field in the calculator kit's style. Money fields echo the amount with commas. */
+  const field = (id: string, lbl: string, value: number, set: (v: number) => void, opts: { step?: number; min?: number; max?: number; note?: string } = {}) => {
     const isMoney = lbl.includes("($");
     return (
-      <div>
-        <div style={label}>{lbl}</div>
-        <input type="number" aria-label={lbl} style={input} value={value} onChange={num(set)} step={opts.step ?? 1} min={opts.min} max={opts.max} onFocus={(e) => e.currentTarget.select()} />
-        {isMoney && (
-          <div style={{ fontSize: 17, fontWeight: 700, color: TEAL_DARK, marginTop: 5 }}>= {money(value)}{lbl.includes("/yr") || lbl.includes("per year") || lbl.includes("Annual") ? " a year" : ""}</div>
-        )}
-        {opts.note && <div style={{ fontSize: 17, color: "#2b2825", marginTop: 4, lineHeight: 1.5 }}>{opts.note}</div>}
-      </div>
+      <CalcField
+        label={lbl.replace(" ($)", "").replace(" ($/yr)", "")}
+        htmlFor={id}
+        hint={opts.note}
+        suffix={isMoney ? `= ${money(value)}` : undefined}
+      >
+        <input id={id} type="number" className="ck-input" value={value} onChange={num(set)} step={opts.step ?? 1} min={opts.min} max={opts.max} onFocus={(e) => e.currentTarget.select()} />
+      </CalcField>
     );
   };
   // Sanity checks: catch a stray zero before it produces nonsense
@@ -246,7 +210,21 @@ const AFHFinancingCalculator = () => {
     return ds > 0 ? noi / ds : 0;
   };
   const inRange = priceProperty >= grid[0].p && priceProperty <= grid[grid.length - 1].p;
-  const seriesColors = ["#6b7280", "#d97706", "#0f766e", "#1B3A6B"];
+  const seriesColors = ["#9aa5ae", CK_GOLD, AFH_TOOL_COLOR, "#14283a"];
+
+  // Headline: the coverage ratio at today's occupancy
+  const todayRow = rows.find((r) => r.n === filledCount);
+  const todayGross = monthlyTotal * 12;
+  const todayNOI = todayGross - fixed - filledCount * variable - wages;
+  const todayRatio = debtService > 0 ? todayNOI / debtService : 0;
+  const todayOk = debtService > 0 && todayRatio >= dscr;
+  const firstOk = rows.find((r) => r.ok);
+  const perResident = avgRate * 12 - variable;
+  const shortBy = perResident > 0 ? Math.max(0, Math.ceil((needNOI - todayNOI) / perResident)) : 0;
+  const otherWages = buyerType === "investor" ? 0 : wagesInput;
+  const otherNOI = todayGross - fixed - filledCount * variable - otherWages;
+  const otherMax = Math.max(0, principalFor(Math.max(0, otherNOI / dscr - taxIns - carryPI), loanRate / 100, term) / (1 - down / 100) - bizIncluded);
+  const thisMax = todayRow?.maxPrice ?? 0;
 
   return (
     <>
@@ -266,199 +244,164 @@ const AFHFinancingCalculator = () => {
       />
       <Header />
       <main>
-        <div style={{ background: "#faf8f4", padding: "48px 24px 40px", borderBottom: `3px solid ${TEAL}` }}>
+        <div style={{ background: "#faf8f4", padding: "48px 24px 36px", borderBottom: `3px solid ${TEAL}` }}>
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <div style={{ marginBottom: 24 }}>
               <BackToCalculators accent={TEAL} />
             </div>
-            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: TEAL_DARK, marginBottom: 10, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: TEAL, marginBottom: 10, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
               For sellers &amp; buyers
             </p>
-            <h1 style={{ fontSize: "clamp(28px,4vw,42px)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: INK, marginBottom: 12, lineHeight: 1.2 }}>
+            <h1 style={{ fontSize: "clamp(28px,4vw,42px)", fontFamily: "'DM Sans', system-ui, sans-serif", fontWeight: 700, color: "#272421", marginBottom: 12, lineHeight: 1.2 }}>
               AFH Occupancy &amp; Financing Calculator
             </h1>
-            <p style={{ fontSize: 19, fontFamily: "'DM Sans', system-ui, sans-serif", color: "#141210", lineHeight: 1.7, maxWidth: 640, margin: 0 }}>
-              At this price, with this many residents, can a buyer get the loan? See how each empty bed changes what a lender will finance.
+            <p style={{ fontSize: 18, fontFamily: "'DM Sans', system-ui, sans-serif", color: "#1c1917", lineHeight: 1.7, maxWidth: 680, margin: 0 }}>
+              At this price, with this many residents, can a buyer get the loan? A lender divides the home's net operating income by
+              the annual loan payment and wants at least <strong>1.25×</strong>. Below that, the loan is declined or reduced and the
+              buyer has to offer less. New to this? Start with{" "}
+              <Link to="/afh-club/how-to-finance-an-afh" style={{ color: TEAL, fontWeight: 700, textDecoration: "underline" }}>How to Finance an Adult Family Home</Link>.
             </p>
           </div>
         </div>
 
         <div style={{ background: "#faf8f4", padding: "2.5rem 1rem 3rem" }}>
-          {/* How lenders decide */}
-          <div style={{ ...card, background: "#ffffff" }}>
-            <div style={section}>How a lender decides</div>
-            <p style={{ fontSize: 19, lineHeight: 1.65, color: "#141210", margin: "0 0 12px" }}>
-              When a buyer applies for a loan to purchase an adult family home, the lender does not ask what the home <em>could</em> earn. It takes last year's income, subtracts operating costs and the wages needed to replace the hours the owners work themselves, and divides what is left by the annual loan payment. That number is the <strong>coverage ratio</strong>, and most SBA lenders want it to be at least <strong>1.25×</strong> — the income must be one and a quarter times the loan payment. (It is a multiple, not a percentage.)
-            </p>
-            <p style={{ fontSize: 19, lineHeight: 1.65, color: "#141210", margin: 0 }}>
-              Below that, the loan is declined or reduced — and the buyer has to offer less. This calculator shows the minimum income a lender needs at a given price, how close the home is at each occupancy, and the most a lender would finance with the residents it has today — for an owner-operator who will work in the home, or for an investor who will hire staff. Those two buyers get very different answers for the same home. New to this? Start with <Link to="/afh-club/how-to-finance-an-afh" style={{ color: TEAL, fontWeight: 700 }}>How to Finance an Adult Family Home in Washington</Link>.
-            </p>
-          </div>
-
-          {/* Inputs */}
-          <div style={card}>
-            <div style={section}>The home</div>
-            <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 20 }}>
-              <div>
-                <div style={label}>Market (sets a typical rate)</div>
-                <select aria-label="Market" style={input} value={market} onChange={(e) => pickMarket(e.target.value)}>
-                  {bands.map((b) => (
-                    <option key={b.market} value={b.market}>
-                      {b.market.startsWith("king-") ? `King — ${b.label.replace(/ \(.*\)$/, "")}` : b.label}
-                    </option>
+          <CalcShell color={TEAL} icon="key" eyebrow="AFH Club Calculator" title="Can a Buyer Get the Loan?" subtitle="Lender coverage by price and occupancy, for an owner-operator or an investor">
+            <CalcSection title="The home">
+              <div className="ck-grid">
+                <CalcField label="Market (sets a typical rate)" htmlFor="f-market">
+                  <select id="f-market" className="ck-input" value={market} onChange={(e) => pickMarket(e.target.value)}>
+                    {bands.map((b) => (
+                      <option key={b.market} value={b.market}>
+                        {b.market.startsWith("king-") ? `King, ${b.label.replace(/ \(.*\)$/, "")}` : b.label}
+                      </option>
+                    ))}
+                  </select>
+                </CalcField>
+                {field("f-beds", "Licensed beds", beds, setBeds, { min: 1, max: 8, note: "Sets how many bed boxes appear below." })}
+              </div>
+              <div className="ck-field" style={{ marginTop: 16 }}>
+                <div className="ck-label" style={{ display: "block", fontSize: 15, fontWeight: 700, color: INK, marginBottom: 6 }}>Monthly rate for each bed (leave empty beds blank)</div>
+                <div className="fin-beds" style={{ display: "grid", gridTemplateColumns: `repeat(${Math.min(beds, 4)}, minmax(0, 1fr))`, gap: 10 }}>
+                  {Array.from({ length: beds }, (_, i) => (
+                    <div key={i}>
+                      <label className="ck-label" htmlFor={`f-bed-${i}`} style={{ fontSize: 13 }}>Bed {i + 1}</label>
+                      <input
+                        id={`f-bed-${i}`}
+                        type="number"
+                        inputMode="numeric"
+                        placeholder="Empty"
+                        className="ck-input"
+                        style={{ textAlign: "center" }}
+                        value={bedRates[i] === 0 ? "" : bedRates[i]}
+                        step={50}
+                        min={0}
+                        onFocus={(e) => e.currentTarget.select()}
+                        onChange={(e) => setBedRate(i, e.target.value === "" ? 0 : fmtIn(parseFloat(e.target.value)))}
+                      />
+                    </div>
                   ))}
-                </select>
-              </div>
-              {field("Licensed beds", beds, setBeds, { min: 1, max: 8, note: "Sets how many bed boxes appear below." })}
-            </div>
-
-            <div style={{ marginBottom: 20 }}>
-              <div style={label}>Monthly rate for each bed ($) — leave empty beds blank</div>
-              <div className="fin-beds" style={{ display: "grid", gridTemplateColumns: `repeat(${Math.min(beds, 4)}, 1fr)`, gap: 12 }}>
-                {Array.from({ length: beds }, (_, i) => (
-                  <div key={i}>
-                    <div style={{ fontSize: 17, fontWeight: 700, color: TEAL_DARK, marginBottom: 4 }}>Bed {i + 1}</div>
-                    {/* Empty bed shows as an empty box, not "0", so typing "8000" gives
-                        8000 rather than "08000". Selecting on focus makes overtyping easy. */}
-                    <input
-                      type="number"
-                      inputMode="numeric"
-                      placeholder="0"
-                      style={{ ...input, textAlign: "center", fontWeight: 700, fontSize: 18 }}
-                      value={bedRates[i] === 0 ? "" : bedRates[i]}
-                      step={50}
-                      min={0}
-                      onFocus={(e) => e.currentTarget.select()}
-                      onChange={(e) => setBedRate(i, e.target.value === "" ? 0 : fmtIn(parseFloat(e.target.value)))}
-                    />
-                  </div>
-                ))}
-              </div>
-              <div style={{ marginTop: 14, background: "#faf8f4", border: `2px solid ${TEAL}`, borderRadius: 10, padding: "12px 16px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-                <div style={{ fontSize: 18, fontWeight: 700, color: INK }}>
-                  Total monthly income today: <span style={{ color: TEAL, fontSize: 24 }}>{money(monthlyTotal)}</span>
                 </div>
-                <div style={{ fontSize: 18, color: "#141210", fontWeight: 600 }}>
-                  {filledCount} of {beds} beds filled · {money(monthlyTotal * 12)} a year
+                <div className="ck-hint">
+                  Today: <strong>{money(monthlyTotal)}</strong> a month from {filledCount} of {beds} beds ({money(monthlyTotal * 12)} a year). Empty beds are modelled at today's average rate ({money(avgRate)}) when residents are added.
                 </div>
               </div>
-              <div style={{ fontSize: 17, color: "#2b2825", marginTop: 8, lineHeight: 1.5 }}>
-                Empty beds are modelled at the average of today's rates ({money(avgRate)}) when the table adds residents.
+              <div className="ck-grid" style={{ marginTop: 16 }}>
+                {field("f-fixed", "Fixed operating costs per year ($)", fixed, setFixed, { step: 1000, note: "Costs that do not change with one more resident: base staff, insurance, utilities, license, maintenance." })}
+                {field("f-var", "Variable cost per resident per year ($)", variable, setVariable, { step: 500, note: "Extra food, supplies and care hours for each added resident." })}
               </div>
-            </div>
+            </CalcSection>
 
-            <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 20 }}>
-              {field("Fixed operating costs per year ($)", fixed, setFixed, { step: 1000, note: "Costs that do not change with one more resident: base staff, insurance, utilities, license, maintenance." })}
-              {field("Variable cost per resident per year ($)", variable, setVariable, { step: 500, note: "Extra food, supplies and care hours for each added resident." })}
-            </div>
-
-            <div style={{ ...section, marginTop: 24 }}>Who is the buyer?</div>
-            <p style={{ fontSize: 18, lineHeight: 1.6, color: "#141210", margin: "0 0 12px" }}>
-              This changes the answer more than anything else. An <strong>owner-operator</strong> does the care and management work themselves, so a lender counts all of the home's income. An <strong>investor</strong> hires staff to do that work, so the lender subtracts those wages first — and the same home supports a much lower price.
-            </p>
-            <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 20 }}>
-              <div>
-                <div style={label}>Buyer type</div>
-                <select aria-label="Buyer type" style={input} value={buyerType} onChange={(e) => setBuyerType(e.target.value as "operator" | "investor")}>
-                  <option value="operator">Owner-operator — will work in the home</option>
-                  <option value="investor">Investor — will hire staff to run it</option>
-                </select>
+            <CalcSection title="Who is the buyer?">
+              <div className="ck-grid">
+                <CalcField
+                  label="Buyer type"
+                  htmlFor="f-buyer"
+                  hint="An owner-operator does the work, so a lender counts all the income. An investor hires staff for it, so the lender subtracts those wages first."
+                >
+                  <select id="f-buyer" className="ck-input" value={buyerType} onChange={(e) => setBuyerType(e.target.value as "operator" | "investor")}>
+                    <option value="operator">Owner-operator (will work in the home)</option>
+                    <option value="investor">Investor (will hire staff to run it)</option>
+                  </select>
+                </CalcField>
+                {buyerType === "investor" && field("f-wages", "Replacement wages for the owners' work ($/yr)", wagesInput, setWagesInput, { step: 1000, note: "What the investor pays staff to replace the hours the current owners work." })}
               </div>
-              {buyerType === "investor" && field("Replacement wages for the owners' work ($/yr)", wagesInput, setWagesInput, { step: 1000, note: "What the investor must pay staff to replace the hours the current owners work themselves." })}
-            </div>
+            </CalcSection>
 
-            <div style={section}>Price and financing</div>
-            <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
-              {field("Property price ($)", priceProperty, setPriceProperty, { step: 5000, note: "The house. This is the price the calculator tests." })}
-              {field("Buyer down payment (%)", down, setDown, { step: 1, min: 0, max: 100, note: "SBA 7(a): typically 10%. Conventional on a house: 20–25%." })}
-              {field("Loan interest rate (%)", loanRate, setLoanRate, { step: 0.05, note: "SBA 7(a) is Prime plus a spread; conventional on the house alone is lower." })}
-              {field("Loan term (years)", term, setTerm, { min: 1, max: 30 })}
-              {field("Annual property tax + insurance ($)", taxIns, setTaxIns, { step: 500 })}
-              {field("Lender coverage requirement (×)", dscr, setDscr, { step: 0.05, note: "Net operating income ÷ annual debt service. Most SBA lenders want 1.25×; some accept 1.15×." })}
-            </div>
-
-            <div style={{ ...section, marginTop: 24 }}>Is the buyer also financing the business?</div>
-            <p style={{ fontSize: 18, lineHeight: 1.6, color: "#141210", margin: "0 0 12px" }}>
-              The license, contracts and residents are often priced separately from the house. However the buyer pays for them, any loan on the business is repaid from the same income — so a lender counts that payment too. Choose how it is handled:
-            </p>
-            <div className="fin-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
-              <div>
-                <div style={label}>Business financing</div>
-                <select aria-label="Business financing" style={input} value={bizMode} onChange={(e) => setBizMode(e.target.value as "cash" | "sameLoan" | "carry")}>
-                  <option value="cash">No — buyer pays cash for the business</option>
-                  <option value="sameLoan">Yes — in the same loan as the house</option>
-                  <option value="carry">Yes — seller carries a note on the business</option>
-                </select>
+            <CalcSection title="Price and financing">
+              <div className="ck-grid">
+                {field("f-price", "Property price ($)", priceProperty, setPriceProperty, { step: 5000, note: "The house. This is the price the calculator tests." })}
+                {field("f-down", "Buyer down payment (%)", down, setDown, { step: 1, min: 0, max: 100, note: "SBA 7(a): typically 10%. Conventional on a house: 20–25%." })}
+                {field("f-rate", "Loan interest rate (%)", loanRate, setLoanRate, { step: 0.05, note: "SBA 7(a) is Prime plus a spread; conventional on the house alone is lower." })}
+                {field("f-term", "Loan term (years)", term, setTerm, { min: 1, max: 30 })}
+                {field("f-taxins", "Annual property tax + insurance ($)", taxIns, setTaxIns, { step: 500 })}
+                {field("f-dscr", "Lender coverage requirement (×)", dscr, setDscr, { step: 0.05, note: "Most SBA lenders want 1.25×; some accept 1.15×." })}
               </div>
-              {field("Business price ($)", priceBusiness, setPriceBusiness, { step: 5000, note: bizMode === "cash" ? "Paid in cash: does not add to the buyer's loan payments." : bizMode === "carry" ? "Financed on a separate note from the seller, on the terms below." : "Added to the main loan at the rate and term above." })}
-              {bizMode === "carry" && field("Seller-carry interest rate (%)", carryRate, setCarryRate, { step: 0.25, note: "Usually below the SBA rate — that is the point of carrying it." })}
-              {bizMode === "carry" && field("Seller-carry term (years)", carryTerm, setCarryTerm, { min: 1, max: 15, note: "Short notes mean higher payments; 5–7 years is common." })}
-            </div>
-          </div>
+            </CalcSection>
 
-          {/* Results */}
-          <div style={card}>
-            <div style={section}>What the lender sees</div>
+            <CalcSection title="Is the buyer also financing the business?">
+              <div className="ck-grid">
+                <CalcField label="Business financing" htmlFor="f-biz" hint="Any loan on the license, contracts and residents is repaid from the same income, so a lender counts it too.">
+                  <select id="f-biz" className="ck-input" value={bizMode} onChange={(e) => setBizMode(e.target.value as "cash" | "sameLoan" | "carry")}>
+                    <option value="cash">No, buyer pays cash for the business</option>
+                    <option value="sameLoan">Yes, in the same loan as the house</option>
+                    <option value="carry">Yes, seller carries a note on the business</option>
+                  </select>
+                </CalcField>
+                {field("f-bizprice", "Business price ($)", priceBusiness, setPriceBusiness, { step: 5000, note: bizMode === "cash" ? "Paid in cash: does not add to the buyer's loan payments." : bizMode === "carry" ? "Financed on a separate note from the seller, on the terms below." : "Added to the main loan at the rate and term above." })}
+                {bizMode === "carry" && field("f-carryrate", "Seller-carry interest rate (%)", carryRate, setCarryRate, { step: 0.25, note: "Usually below the SBA rate; that is the point of carrying it." })}
+                {bizMode === "carry" && field("f-carryterm", "Seller-carry term (years)", carryTerm, setCarryTerm, { min: 1, max: 15, note: "Short notes mean higher payments; 5–7 years is common." })}
+              </div>
+            </CalcSection>
+
             {warnings.length > 0 && (
-              <div role="alert" style={{ background: "#fef2f2", border: "2px solid #b91c1c", borderRadius: 8, padding: "12px 16px", marginBottom: 16, fontSize: 17, lineHeight: 1.55, color: "#7f1d1d" }}>
+              <div role="alert" className="fin-warn">
                 <strong>Check your inputs:</strong>
-                <ul style={{ margin: "6px 0 0", paddingLeft: 22 }}>
+                <ul>
                   {warnings.map((w) => (
                     <li key={w}>{w}</li>
                   ))}
                 </ul>
               </div>
             )}
-            {(() => {
-              // The other kind of buyer, for comparison, at today's occupancy
-              const otherWages = buyerType === "investor" ? 0 : wagesInput;
-              const otherNOI = monthlyTotal * 12 - fixed - filledCount * variable - otherWages;
-              const otherMax = Math.max(0, principalFor(Math.max(0, otherNOI / dscr - taxIns - carryPI), loanRate / 100, term) / (1 - down / 100) - bizIncluded);
-              const thisMax = rows.find((r) => r.n === filledCount)?.maxPrice ?? 0;
-              const todayGross = monthlyTotal * 12;
-              const todayNOI = todayGross - fixed - filledCount * variable - wages;
-              const todayOk = debtService > 0 && todayNOI / debtService >= dscr;
-              const first = rows.find((r) => r.ok);
-              const perResident = avgRate * 12 - variable;
-              const shortBy = perResident > 0 ? Math.max(0, Math.ceil((needNOI - todayNOI) / perResident)) : 0;
-              return (
-                <div style={{ background: "#e6f2f0", borderLeft: `6px solid ${TEAL}`, borderRadius: 8, padding: "16px 18px", marginBottom: 20, fontSize: 20, lineHeight: 1.6, color: INK }}>
-                  At a property price of <strong>{money(priceProperty)}</strong>{bizMode !== "cash" ? <> (plus {money(priceBusiness)} for the business, {bizMode === "carry" ? "seller-carried" : "in the same loan"})</> : null}, a lender needs about <strong>{money(needNOI)}</strong> of net income a year. With today's <strong>{filledCount} of {beds}</strong> beds filled, this home produces <strong>{money0(todayNOI)}</strong>
-                  {todayOk ? (
-                    <> — <strong style={{ color: TEAL }}>the loan works today</strong>.</>
-                  ) : first ? (
-                    <> — <strong style={{ color: "#b91c1c" }}>{shortBy} more resident{shortBy === 1 ? "" : "s"}</strong> short. The loan first works at <strong>{first.n} residents</strong>.</>
-                  ) : (
-                    <> — short even with every bed filled. Lower the price, raise rates, or reduce costs.</>
-                  )}
-                  <div style={{ marginTop: 10, fontSize: 18, borderTop: `1px solid ${TEAL}55`, paddingTop: 10 }}>
-                    Most a lender would finance at today's occupancy: <strong>{money(thisMax)}</strong> for {buyerType === "operator" ? "an owner-operator" : "an investor"} versus <strong>{money(otherMax)}</strong> for {buyerType === "operator" ? "an investor who hires staff" : "an owner-operator who works in the home"}.
-                    {buyerType === "investor" && otherMax > thisMax ? " Marketing to owner-operators reaches the buyers who can pay more." : ""}
-                  </div>
-                </div>
-              );
-            })()}
-            <div className="fin-tiles" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 12, marginBottom: 20 }}>
-              {[
-                ["Property price", money(priceProperty)],
-                ["Buyer's annual debt service", money(debtService)],
-                ["Net income the lender needs", money(needNOI)],
-                ["Total the buyer pays (house + business)", money(dealTotal)],
-              ].map(([k, v]) => (
-                <div key={k} style={{ background: "#faf8f4", border: `2px solid ${TEAL}`, borderRadius: 10, padding: "14px 12px", textAlign: "center" }}>
-                  <div style={{ fontSize: 17, color: "#141210", fontWeight: 700 }}>{k}</div>
-                  <div style={{ fontSize: 26, fontWeight: 700, color: TEAL, marginTop: 4 }}>{v}</div>
-                </div>
-              ))}
-            </div>
 
-            <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", fontSize: 18, borderCollapse: "collapse", color: "#141210" }}>
+            <CalcHero
+              label={`Coverage ratio today · ${filledCount} of ${beds} beds`}
+              value={`${todayRatio.toFixed(2)}×`}
+              tone={todayOk ? undefined : "bad"}
+              sub={
+                todayOk
+                  ? `The lender needs ${dscr.toFixed(2)}×: the loan works today.`
+                  : firstOk
+                    ? `The lender needs ${dscr.toFixed(2)}×: ${shortBy} more resident${shortBy === 1 ? "" : "s"} short. It first works at ${firstOk.n} residents.`
+                    : `The lender needs ${dscr.toFixed(2)}×: short even with every bed filled.`
+              }
+              note={
+                <>
+                  Most a lender would finance at today's occupancy: <strong>{money(thisMax)}</strong> for {buyerType === "operator" ? "an owner-operator" : "an investor"}, versus {money(otherMax)} for {buyerType === "operator" ? "an investor who hires staff" : "an owner-operator"}.
+                </>
+              }
+            />
+            <CalcStats
+              items={[
+                { label: "Net income needed", value: money(needNOI) },
+                { label: "Net income today", value: money0(todayNOI), tone: todayOk ? undefined : "bad" },
+                { label: "Annual debt service", value: money(debtService) },
+                { label: "Property price", value: money(priceProperty) },
+                { label: "Total deal", value: money(dealTotal) },
+                { label: "Max financeable today", value: money(thisMax) },
+              ]}
+            />
+
+            <div className="ck-grouphead" style={{ display: "flex", margin: "8px 0 10px" }}>
+              <h3 className="ck-grouptitle">By occupancy</h3>
+            </div>
+            <div className="fin-tablewrap">
+              <table className="fin-table">
                 <thead>
-                  <tr style={{ borderBottom: `2px solid ${TEAL}` }}>
-                    <th style={{ textAlign: "left", padding: "8px 6px" }}>By occupancy</th>
+                  <tr>
+                    <th scope="col">At this property price</th>
                     {rows.map((r) => (
-                      <th key={r.n} style={{ padding: "8px 6px", textAlign: "center", whiteSpace: "nowrap", background: r.n === filledCount ? "#e6f2f0" : undefined }}>
+                      <th key={r.n} scope="col" className={r.n === filledCount ? "fin-today" : undefined}>
                         {r.n} of {beds} beds{r.n === filledCount ? " (today)" : ""}
                       </th>
                     ))}
@@ -469,23 +412,14 @@ const AFHFinancingCalculator = () => {
                     ["Annual gross income", (r: (typeof rows)[0]) => money(r.gross)],
                     ["Net operating income to a buyer", (r: (typeof rows)[0]) => money0(r.noi)],
                     ["Coverage ratio", (r: (typeof rows)[0]) => r.ratio.toFixed(2) + "×"],
-                    ["Lender approves at this property price?", (r: (typeof rows)[0]) => (r.ok ? "YES" : "NO")],
+                    ["Lender approves?", (r: (typeof rows)[0]) => (r.ok ? "Yes" : "No")],
                     ["Cash to buyer after debt service", (r: (typeof rows)[0]) => money0(r.cash)],
-                    ["Most a lender would finance — property price", (r: (typeof rows)[0]) => money(r.maxPrice)],
+                    ["Most a lender would finance (property)", (r: (typeof rows)[0]) => money(r.maxPrice)],
                   ].map(([k, fn], i) => (
-                    <tr key={k as string} style={{ borderBottom: "1px solid #eee", background: i === 3 || i === 5 ? "#faf8f4" : undefined }}>
-                      <td style={{ padding: "9px 6px", fontWeight: i === 2 || i === 3 || i === 5 ? 700 : 400 }}>{k as string}</td>
+                    <tr key={k as string}>
+                      <th scope="row">{k as string}</th>
                       {rows.map((r) => (
-                        <td
-                          key={r.n}
-                          style={{
-                            padding: "9px 6px",
-                            textAlign: "center",
-                            fontWeight: 700,
-                            color: i === 3 ? (r.ok ? TEAL : "#b91c1c") : INK,
-                            whiteSpace: "nowrap",
-                          }}
-                        >
+                        <td key={r.n} className={`${r.n === filledCount ? "fin-today" : ""}${i === 3 ? (r.ok ? " fin-yes" : " fin-no") : ""}`}>
                           {(fn as (r: (typeof rows)[0]) => string)(r)}
                         </td>
                       ))}
@@ -494,23 +428,18 @@ const AFHFinancingCalculator = () => {
                 </tbody>
               </table>
             </div>
-            <p style={{ fontSize: 18, color: "#141210", lineHeight: 1.6, margin: "16px 0 0" }}>
-              A lender divides the home's net operating income by the annual loan payment and wants at least {dscr.toFixed(2)}×. Net operating income here is what the <strong>buyer you selected</strong> nets. For an investor that is after paying staff to replace the current owners' hours, which is why it is lower than what an owner-operator takes home. The last row is the highest property price a lender would finance at each occupancy, after any business financing; compare it to your asking price to see the gap each resident closes.
-            </p>
-          </div>
 
-          {/* Chart */}
-          <div style={card}>
-            <div style={section}>Coverage ratio by property price</div>
-            {/* Price slider — bound to the same property price as the input above */}
-            <div style={{ background: "#e6f2f0", border: `2px solid ${TEAL}`, borderRadius: 10, padding: "14px 16px 10px", marginBottom: 16 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: 8, marginBottom: 6 }}>
-                <div style={{ fontSize: 18, fontWeight: 700, color: "#141210" }}>Slide to change the property price</div>
-                <div style={{ fontSize: 28, fontWeight: 700, color: TEAL }}>{money(priceProperty)}</div>
+            <div className="ck-grouphead" style={{ display: "flex", margin: "22px 0 10px" }}>
+              <h3 className="ck-grouptitle">Coverage by property price</h3>
+            </div>
+            <div className="fin-slider">
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: 8 }}>
+                <label className="ck-label" htmlFor="f-slider">Slide to change the property price</label>
+                <div className="fin-sliderval">{money(priceProperty)}</div>
               </div>
               <input
+                id="f-slider"
                 type="range"
-                aria-label="Property price"
                 min={SLIDER_MIN}
                 max={SLIDER_MAX}
                 step={5000}
@@ -518,30 +447,21 @@ const AFHFinancingCalculator = () => {
                 onChange={(e) => setPriceProperty(parseInt(e.target.value))}
                 style={{ width: "100%", accentColor: TEAL, height: 32, cursor: "pointer" }}
               />
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 16, color: "#2b2825", fontWeight: 600 }}>
-                <span>$500,000</span>
-                <span>$3,000,000</span>
-              </div>
-              <div style={{ fontSize: 17, color: "#141210", marginTop: 6 }}>
-                Every number on this page — the table, the verdict and the chart — follows the slider.
-              </div>
+              <div className="fin-scale"><span>$500,000</span><span>$3,000,000</span></div>
             </div>
             <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label="Coverage ratio at each purchase price for each occupancy, against the lender requirement" style={{ display: "block", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-              <text x={W - PR} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="end" fill="#b91c1c">- - -  Lender requirement {dscr.toFixed(2)}×</text>
+              <text x={W - PR} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="end" fill="#9b1c1c">- - -  Lender requirement {dscr.toFixed(2)}×</text>
               {[0, 0.5, 1, 1.5, 2, 2.5, 3].filter((v) => v <= yMax).map((v) => (
                 <g key={v}>
-                  <line x1={PL} x2={W - PR} y1={y(v)} y2={y(v)} stroke="#d1d5db" />
-                  <text x={PL - 8} y={y(v) + 4} fontSize="13" fontWeight="600" textAnchor="end" fill="#141210">{v.toFixed(2)}×</text>
+                  <line x1={PL} x2={W - PR} y1={y(v)} y2={y(v)} stroke="#e1e7ec" />
+                  <text x={PL - 8} y={y(v) + 4} fontSize="13" fontWeight="600" textAnchor="end" fill={INK}>{v.toFixed(2)}×</text>
                 </g>
               ))}
-              <line x1={PL} x2={W - PR} y1={y(dscr)} y2={y(dscr)} stroke="#b91c1c" strokeWidth="2" strokeDasharray="6 4" />
-
+              <line x1={PL} x2={W - PR} y1={y(dscr)} y2={y(dscr)} stroke="#9b1c1c" strokeWidth="2" strokeDasharray="6 4" />
               {grid.map((g, i) => (i % 2 === 0 ? (
-                <text key={g.p} x={x(i)} y={H - PB + 18} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">{"$" + (g.p / 1e6).toFixed(1) + "M"}</text>
+                <text key={g.p} x={x(i)} y={H - PB + 18} fontSize="13" fontWeight="600" textAnchor="middle" fill={INK}>{"$" + (g.p / 1e6).toFixed(1) + "M"}</text>
               ) : null))}
               {(() => {
-                // Right-hand labels: start at each line's end, then push apart
-                // (top to bottom) so no two are closer than 18px.
                 const endY = rows.map((_, si) => y(grid[grid.length - 1].ratios[si]));
                 const order = endY.map((v, i) => [v, i] as [number, number]).sort((a, b) => a[0] - b[0]);
                 const placed: number[] = new Array(rows.length);
@@ -557,7 +477,7 @@ const AFHFinancingCalculator = () => {
                   return (
                     <g key={r.n}>
                       <polyline points={pts} fill="none" stroke={col} strokeWidth="4" strokeLinejoin="round" />
-                      <text x={x(grid.length - 1) + 8} y={placed[si] + 5} fontSize="14" fill={col} fontWeight="700">
+                      <text x={x(grid.length - 1) + 8} y={placed[si] + 5} fontSize="14" fill={col === "#9aa5ae" ? "#5b6874" : col} fontWeight="700">
                         {r.n} beds{r.n === filledCount ? " (today)" : ""}
                       </text>
                     </g>
@@ -566,11 +486,10 @@ const AFHFinancingCalculator = () => {
               })()}
               {inRange && (
                 <g>
-                  <line x1={xPrice(priceProperty)} x2={xPrice(priceProperty)} y1={PT} y2={H - PB} stroke="#1B3A6B" strokeWidth="2" strokeDasharray="3 3" />
-                  <text x={xPrice(priceProperty)} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="middle" fill="#1B3A6B">Your property price {money(priceProperty)}</text>
+                  <line x1={xPrice(priceProperty)} x2={xPrice(priceProperty)} y1={PT} y2={H - PB} stroke="#14283a" strokeWidth="2" strokeDasharray="3 3" />
+                  <text x={xPrice(priceProperty)} y={PT - 8} fontSize="13" fontWeight="700" textAnchor="middle" fill="#14283a">Your property price {money(priceProperty)}</text>
                   {(() => {
                     const vals = rows.map((r) => ratioAt(r.noi, priceProperty));
-                    // Labels alternate right/left of the marker; within each side, push apart vertically.
                     const sides = vals.map((_, i) => (i % 2 === 0 ? 1 : -1));
                     const placed: number[] = new Array(vals.length);
                     for (const side of [1, -1]) {
@@ -585,7 +504,7 @@ const AFHFinancingCalculator = () => {
                     return rows.map((r, i) => {
                       const v = vals[i];
                       const ok = v >= dscr;
-                      const col = ok ? "#15803d" : "#b91c1c";
+                      const col = ok ? "#14663f" : "#9b1c1c";
                       const mx = xPrice(priceProperty);
                       const tx = sides[i] === 1 ? mx + 12 : mx - 12;
                       const txt = v.toFixed(2) + "×";
@@ -601,57 +520,72 @@ const AFHFinancingCalculator = () => {
                   })()}
                 </g>
               )}
-              <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill="#141210">Property price</text>
+              <text x={(PL + W - PR) / 2} y={H - 6} fontSize="13" fontWeight="600" textAnchor="middle" fill={INK}>Property price</text>
             </svg>
-            {/* Legend — HTML rather than SVG so it wraps cleanly on phones */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 22px", marginTop: 14, fontSize: 18, color: "#141210", fontWeight: 600 }}>
+            <div className="fin-legend">
               {rows.map((r, si) => {
                 const col = seriesColors[(si + 4 - rows.length) % 4];
                 return (
-                  <div key={r.n} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <span aria-hidden="true" style={{ display: "inline-block", width: 34, height: 6, borderRadius: 3, background: col }} />
-                    {r.n} of {beds} beds filled{r.n === filledCount ? " (today)" : ""}
+                  <div key={r.n}>
+                    <span aria-hidden="true" style={{ display: "inline-block", width: 30, height: 6, borderRadius: 3, background: col }} />
+                    {r.n} of {beds} beds{r.n === filledCount ? " (today)" : ""}
                   </div>
                 );
               })}
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <span aria-hidden="true" style={{ display: "inline-block", width: 34, height: 0, borderTop: "3px dashed #b91c1c" }} />
+              <div>
+                <span aria-hidden="true" style={{ display: "inline-block", width: 30, height: 0, borderTop: "3px dashed #9b1c1c" }} />
                 Lender requirement ({dscr.toFixed(2)}×)
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <span aria-hidden="true" style={{ display: "inline-block", width: 34, height: 0, borderTop: "3px dashed #1B3A6B" }} />
-                The price you entered
-              </div>
             </div>
-            <div style={{ marginTop: 16, background: "#e6f2f0", borderLeft: `6px solid ${TEAL}`, borderRadius: 8, padding: "14px 16px", fontSize: 18, lineHeight: 1.6, color: "#141210" }}>
-              <strong>At your property price of {money(priceProperty)}:</strong>
-              <ul style={{ margin: "6px 0 0", paddingLeft: 22 }}>
-                {rows.map((r) => {
-                  const v = ratioAt(r.noi, priceProperty);
-                  const ok = v >= dscr;
-                  // Highest price (to the nearest $5K) at which this occupancy still clears the requirement
-                  const maxOk = r.maxPrice;
-                  return (
-                    <li key={r.n} style={{ marginBottom: 4 }}>
-                      <strong>{r.n} beds</strong>{r.n === filledCount ? " (today)" : ""}: {v.toFixed(2)}× —{" "}
-                      <span style={{ color: ok ? "#15803d" : "#b91c1c", fontWeight: 700 }}>{ok ? "above the requirement, lender can approve" : "below the requirement"}</span>
-                      {!ok && maxOk > 0 ? <> · works at <strong>{money(Math.floor(maxOk / 5000) * 5000)}</strong> or less</> : null}
-                      {!ok && maxOk <= 0 ? <> · does not work at any price</> : null}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-            <p style={{ fontSize: 18, color: "#141210", lineHeight: 1.6, margin: "14px 0 0" }}>
-              <strong>How to read it:</strong> each line shows how the home's coverage ratio changes as the purchase price goes up, for one number of residents. Where a line is <strong>above</strong> the red dashed requirement, a lender can approve that price at that occupancy; where it is <strong>below</strong>, the buyer would have to offer less or fill more beds. Find your price on the bottom axis and look up.
-            </p>
-          </div>
+            <ul className="ck-notes" style={{ marginTop: 14 }}>
+              {rows.map((r) => {
+                const v = ratioAt(r.noi, priceProperty);
+                const ok = v >= dscr;
+                return (
+                  <li key={r.n}>
+                    <strong>{r.n} beds{r.n === filledCount ? " (today)" : ""}</strong>: {v.toFixed(2)}×,{" "}
+                    {ok ? "above the requirement; a lender can approve" : "below the requirement"}
+                    {!ok && r.maxPrice > 0 ? <>; works at {money(Math.floor(r.maxPrice / 5000) * 5000)} or less</> : null}
+                    {!ok && r.maxPrice <= 0 ? <>; does not work at any price</> : null}
+                  </li>
+                );
+              })}
+            </ul>
 
-          <p style={{ maxWidth: 900, margin: "0 auto", fontSize: 17, color: "#2b2825", lineHeight: 1.6 }}>
-            Working estimates for discussion. SBA 7(a) rates are Prime plus a spread and change with the market; a buyer`s actual terms depend on their lender and file. Not a loan quote or an appraisal. Private-pay defaults come from ${FEATURED_BROKER.role}`s reviewed ranges for King, Snohomish and Pierce counties.
-          </p>
+            <CalcFoot
+              actions={
+                <>
+                  <Link to="/afh-club/how-to-finance-an-afh">How AFH financing works →</Link>
+                  <Link to="/contact">Ask {FEATURED_BROKER.role} about financing →</Link>
+                </>
+              }
+            >
+              Working estimates for discussion. SBA 7(a) rates are Prime plus a spread and change with the market; a buyer's actual
+              terms depend on their lender and file. Not a loan quote or an appraisal. Private-pay defaults come from{" "}
+              {FEATURED_BROKER.role}'s reviewed ranges for King, Snohomish and Pierce counties.
+            </CalcFoot>
+          </CalcShell>
         </div>
-        <style>{`@media (max-width: 640px) { .fin-grid { grid-template-columns: 1fr !important; } .fin-tiles { grid-template-columns: 1fr !important; } .fin-beds { grid-template-columns: repeat(2, 1fr) !important; } }`}</style>
+        <style>{`
+          .ck .fin-warn { background: #fef2f2; border: 1px solid #e3a1a1; border-radius: 12px; padding: 12px 16px; margin: 0 0 14px; font-size: 16px; line-height: 1.5; color: #7f1d1d; }
+          .ck .fin-warn ul { margin: 6px 0 0; padding-left: 20px; }
+          .ck .fin-tablewrap { overflow-x: auto; border: 1px solid #e1e7ec; border-radius: 12px; }
+          .ck table.fin-table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', sans-serif; font-size: 16px; color: ${INK}; }
+          .ck table.fin-table th, .ck table.fin-table td { padding: 10px 12px; border-bottom: 1px solid #eef1f4; text-align: center; white-space: nowrap; font-variant-numeric: tabular-nums; }
+          .ck table.fin-table thead th { background: #f6f8fa; font-size: 14px; font-weight: 700; }
+          .ck table.fin-table tbody th { text-align: left; font-weight: 600; white-space: normal; min-width: 180px; }
+          .ck table.fin-table td { font-weight: 700; }
+          .ck table.fin-table .fin-today { background: var(--tint); }
+          .ck table.fin-table .fin-yes { color: #14663f; }
+          .ck table.fin-table .fin-no { color: #9b1c1c; }
+          .ck table.fin-table tr:last-child th, .ck table.fin-table tr:last-child td { border-bottom: 0; }
+          .ck .fin-slider { background: var(--tint); border-radius: 12px; padding: 14px 16px 10px; margin: 0 0 12px; }
+          .ck .fin-sliderval { font-size: 26px; font-weight: 800; color: var(--deep); font-variant-numeric: tabular-nums; }
+          .ck .fin-scale { display: flex; justify-content: space-between; font-size: 14px; color: #3f4a54; font-weight: 600; }
+          .ck .fin-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 10px; font-size: 15px; color: ${INK}; font-weight: 600; }
+          .ck .fin-legend > div { display: flex; align-items: center; gap: 8px; }
+          @media (max-width: 640px) { .fin-beds { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+        `}</style>
         <PageFAQ faqs={FAQS} heading="Financing an Adult Family Home: Common Questions" eyebrow="Frequently Asked Questions" id="afh-financing" />
         <BackToAFHClub />
         <section style={{ padding: "1.25rem 1.5rem 0" }}>

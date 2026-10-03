@@ -110,7 +110,14 @@ const AFHRevenueBuilder = ({
 
   return (
     <div style={{ border: `1.5px solid ${accent}55`, background: "#faf8f4", borderRadius: 10, padding: "1rem 1.1rem", marginBottom: 16 }}>
-      <style>{`@media (max-width: 640px) { .rb-grid2 { grid-template-columns: 1fr !important; } }`}</style>
+      <style>{`@media (max-width: 640px) {
+  .rb-grid2 { grid-template-columns: 1fr !important; }
+  .rb-table.rb-table { font-size: 14px !important; }
+  .rb-table .rb-note.rb-note { font-size: 13px !important; line-height: 1.4 !important; }
+  .rb-table .rb-beds.rb-beds { width: 52px !important; }
+  .rb-table .rb-rate.rb-rate { font-size: 14px !important; }
+  .rb-table td, .rb-table th { padding-left: 3px !important; padding-right: 3px !important; }
+}`}</style>
       <div style={{ fontSize: 12, letterSpacing: ".18em", textTransform: "uppercase", color: accent, fontWeight: 700, marginBottom: 4 }}>
         Build revenue from market rates
       </div>
@@ -141,7 +148,7 @@ const AFHRevenueBuilder = ({
         </div>
       </div>
 
-      <table style={{ width: "100%", fontSize: 15, borderCollapse: "collapse", marginBottom: 10 }}>
+      <table className="rb-table" style={{ width: "100%", fontSize: 15, borderCollapse: "collapse", marginBottom: 10 }}>
         <thead>
           <tr style={{ textAlign: "left", borderBottom: "2px solid #dccdce" }}>
             <th style={{ padding: "6px 6px" }}>Care level</th>
@@ -154,7 +161,7 @@ const AFHRevenueBuilder = ({
             <tr key={r.key} style={{ borderBottom: "1px solid #eee" }}>
               <td style={{ padding: "8px 6px" }}>
                 <strong style={{ color: "#272421" }}>{r.label}</strong>
-                <div style={{ color: "#3f4a46", fontSize: 16 }}>
+                <div className="rb-note" style={{ color: "#3f4a46", fontSize: 16 }}>
                   {money(r.low)} – {money(r.high)}
                   {r.openEnded ? "+" : ""} · {r.note}
                 </div>
@@ -165,18 +172,18 @@ const AFHRevenueBuilder = ({
                   min={0}
                   max={8}
                   aria-label={`${r.label} beds`}
-                  style={bedsStyle}
+                  className="rb-beds" style={bedsStyle}
                   value={r.n}
                   onChange={(e) => setBeds({ ...beds, [r.key]: Math.max(0, Math.min(8, parseInt(e.target.value) || 0)) })}
                 />
               </td>
-              <td style={{ padding: "8px 6px", textAlign: "right", fontWeight: 700, color: accent, whiteSpace: "nowrap" }}>{money(r.rate)}/mo</td>
+              <td className="rb-rate" style={{ padding: "8px 6px", textAlign: "right", fontWeight: 700, color: accent, whiteSpace: "nowrap" }}>{money(r.rate)}/mo</td>
             </tr>
           ))}
           <tr style={{ borderBottom: "1px solid #eee" }}>
             <td style={{ padding: "8px 6px" }}>
               <strong style={{ color: "#272421" }}>Medicaid</strong>
-              <div style={{ color: "#3f4a46", fontSize: 16 }}>
+              <div className="rb-note" style={{ color: "#3f4a46", fontSize: 16 }}>
                 {money(monthly(med.minDaily))} – {money(monthly(med.maxDaily))} · DSHS {AFH_RATE_REGION_LABELS[region]} rate, lightest to heaviest care
               </div>
             </td>
@@ -186,12 +193,12 @@ const AFHRevenueBuilder = ({
                 min={0}
                 max={8}
                 aria-label="Medicaid beds"
-                style={bedsStyle}
+                className="rb-beds" style={bedsStyle}
                 value={medicaidBeds}
                 onChange={(e) => setMedicaidBeds(Math.max(0, Math.min(8, parseInt(e.target.value) || 0)))}
               />
             </td>
-            <td style={{ padding: "8px 6px", textAlign: "right", fontWeight: 700, color: accent, whiteSpace: "nowrap" }}>{money(medMonthly)}/mo</td>
+            <td className="rb-rate" style={{ padding: "8px 6px", textAlign: "right", fontWeight: 700, color: accent, whiteSpace: "nowrap" }}>{money(medMonthly)}/mo</td>
           </tr>
         </tbody>
       </table>
