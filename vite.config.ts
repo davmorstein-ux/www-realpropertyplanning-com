@@ -19,6 +19,7 @@ import { PROBATE_GLOSSARY_A_TO_Z } from "./src/data/probateGlossary";
 import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/data/probatePillar";
 import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
 import { PROPERTY_TAX_AFTER_DEATH, PTX_PRERENDER_SECTIONS, PTX_FAQS } from "./src/data/propertyTaxAfterDeath";
+import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { FLOW_PAGES, FLOW_CHART_TEXT, DEADLINES_PATH, flowPrerenderSections } from "./src/data/probateFlow";
 import { AFH_FLOW_PAGES, AFH_FLOW_CHART_TEXT, AFH_RULES_PATH, afhFlowPrerenderSections } from "./src/data/afhFlow";
 import { AFH_QUICK_LINKS, isAFHClubPath } from "./src/lib/afhQuickLinks";
@@ -1042,6 +1043,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       { q: "Are zoning or an HOA a problem for an adult family home in Washington?", a: "Generally not. RCW 70.128.140 says an adult family home must be treated as a residential use and is a permitted use in all areas zoned residential or commercial, including single-family zones. RCW 64.38.060 says HOA governing documents may not limit the operation of a licensed adult family home, and makes conflicting provisions unenforceable; an HOA may still apply reasonable rules that cover every home, such as sign and landscaping standards." },
     ],
   },
+  [BEFORE_YOU_BUY.PATH]: {
+    title: `${BEFORE_YOU_BUY.TITLE} | AFH Club`,
+    description: BEFORE_YOU_BUY.DESCRIPTION,
+    h1: BEFORE_YOU_BUY.TITLE,
+    quickAnswerQ: "What should I check before buying an adult family home in Washington?",
+    quickAnswerA: BEFORE_YOU_BUY.SHORT_ANSWER,
+    intro: "For buyers of an operating adult family home in Washington: seven layers to work through before the asking price means anything, and the sales claims to verify. General information, not legal, tax or financial advice.",
+    sections: BYB_PRERENDER_SECTIONS,
+    faq: BYB_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: BEFORE_YOU_BUY.PUBLISHED, dateModified: BEFORE_YOU_BUY.REVIEWED },
+  },
   "/afh-club/afh-payment-field-guide": {
     title: "AFH Tiers, Levels and Classifications Explained | How Washington Adult Family Homes Get Paid | AFH Club",
     description: "CARE classifications A through E, CBHS Tiers 1 through 6, ECS and SBS specialty contracts, and private-pay care levels are four different systems. A field guide for Washington AFH buyers, sellers and owners: who sets each one, who it applies to, and what survives a sale.",
@@ -2008,6 +2020,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerA: "Many retiring owners sell both together, because the buyer can step into an operating home with residents and staff. The license never transfers; the buyer needs a new one. A single transaction is usually simpler, though separating them can make sense in specific situations, such as keeping the real estate as an investment.",
     intro: "Running an Adult Family Home for years — sometimes decades — builds something genuinely difficult to walk away from: relationships with residents and families, a trained staff who trust your leadership, and a business with real value beyond the four walls it sits in. Selling an AFH at retirement runs on two tracks that have to work together: the real estate transaction, and the DSHS Change of Ownership process. Washington AFH licenses are not transferable — the buyer must qualify for a new license of their own.",
     sections: [
+      "Your options — Selling everything together is not the only exit: sell the business and lease the house to the buyer, lease the house to another licensed operator, keep both with a resident manager while you stay the licensee, or hand over gradually. Any new owner of the business applies for its own license through a change of ownership, after 60 days' written notice to DSHS and every resident (WAC 388-76-10106).",
       "Business and building together — Why many retiring owners sell both as a single transaction, and what buyers are paying for in each piece: the house at its residential value, and the operation for its occupancy, staff, inspection record, and referral relationships. Specialty contracts and the Medicaid contract do not transfer.",
       "The license does not transfer — The buyer must complete training, certification, background checks, and a full DSHS application. Your timeline depends on theirs; a buyer who starts qualifying during the contract period closes faster.",
       "Why it takes longer — AFH sales run longer than a typical home sale: DSHS will not estimate how long a change-of-ownership license takes, and the seller must give DSHS and residents 60 days' written notice (WAC 388-76-10106). Plan retirement around the CHOW, not the closing date on the purchase agreement.",

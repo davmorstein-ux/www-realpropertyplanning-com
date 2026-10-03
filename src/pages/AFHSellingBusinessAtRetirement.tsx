@@ -42,7 +42,36 @@ const topics = [
   },
 ];
 
+/* Exit options (Oct 3, 2026, from the owner's AFH Club Handbook draft). */
+const EXIT_OPTIONS = [
+  {
+    title: "Sell the house and the business together",
+    text: "The most common exit. The buyer gets an operating home with residents and staff, and applies for its own license.",
+  },
+  {
+    title: "Sell the business and keep the house",
+    text: "Lease the house to the buyer of the business. You collect rent instead of a lump sum, and the lease needs to allow adult family home use for the length of the buyer's plans.",
+  },
+  {
+    title: "Lease the house to another operator",
+    text: "Another provider can lease the house and run a home there under its own license. Timing matters: DSHS confirmed that a home taken over through a change of ownership keeps the building rules it was first licensed under, while a home whose license lapsed must meet current rules, including 27-inch interior doors. Ask DSHS how your plan will be treated before you close your license.",
+  },
+  {
+    title: "Keep ownership and step back from daily work",
+    text: "A resident manager can run the home day to day, but you stay the licensee and responsible for it. The resident manager must meet the same experience and training rules, including 1,000 hours of direct care.",
+  },
+  {
+    title: "Transition gradually",
+    text: "Some owners hand over in stages: reduce their own hours first, build a staff that can run the home without them, then sell. A home that runs without its owner is easier for a buyer and a lender to value.",
+  },
+];
+
 const faqs = [
+  {
+    question: "Do I have to sell the building when I sell my AFH business?",
+    answer:
+      "No. The business and the real estate can be separate decisions. You can sell both together, sell the business and lease the house to the buyer, lease the house to another licensed operator, or keep both and hire a resident manager while you stay the licensee. Any new owner of the business applies for its own license through a change of ownership.",
+  },
   {
     question: "I'm planning to retire from running my AFH — should I sell the business and the building together, or separately?",
     answer:
@@ -86,7 +115,7 @@ const afhArticleSchema = {
   description: "Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, navigate the DSHS Change of Ownership process, and value your AFH accurately.",
   url: "https://realpropertyplanning.com/afh-club/selling-your-business-at-retirement",
   datePublished: "2026-07-22",
-  dateModified: "2026-09-28",
+  dateModified: "2026-10-03",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -175,6 +204,41 @@ const AFHSellingBusinessAtRetirement = () => (
                 <p className="text-foreground text-[15px] leading-relaxed">{t.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 md:py-20 bg-cream">
+        <div className="container px-5 md:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-gold font-bold tracking-[0.25em] uppercase text-sm md:text-[15px] mb-4 text-center">
+              Your Options
+            </p>
+            <h2 className="font-serif text-[28px] md:text-[40px] lg:text-[44px] font-semibold text-navy leading-tight text-center mb-6">
+              Selling everything is not the only way out
+            </h2>
+            <p className="text-foreground mb-6">
+              The business and the house can be separate decisions. Which one fits depends on whether you need the
+              cash now, how much you still owe on the house, and how involved you want to stay.
+            </p>
+            <ol className="space-y-4" style={{ listStyle: "decimal", paddingLeft: 22 }}>
+              {EXIT_OPTIONS.map((o) => (
+                <li key={o.title} className="text-foreground" style={{ listStyle: "decimal" }}>
+                  <strong style={{ color: GREEN }}>{o.title}.</strong> {o.text}
+                </li>
+              ))}
+            </ol>
+            <p className="text-foreground mt-6">
+              Whichever you choose, a new owner of the business, including a new partner or an LLC you form, applies
+              for its own license through a change of ownership, and you give DSHS and every resident 60 days&apos;
+              written notice first (
+              <a href="https://app.leg.wa.gov/WAC/default.aspx?cite=388-76-10106" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2" style={{ color: GREEN, fontWeight: 700 }}>WAC 388-76-10106</a>
+              ). Buyers will ask for your records whichever way you go:{" "}
+              <Link to="/afh-club/before-you-buy-an-adult-family-home" className="underline underline-offset-2" style={{ color: GREEN, fontWeight: 700 }}>
+                what a careful buyer will verify
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

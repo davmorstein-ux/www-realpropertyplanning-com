@@ -1,0 +1,354 @@
+<!doctype html>
+<!--
+  The AFH Club Handbook (source for public/downloads/afh-club-handbook.pdf).
+  Written by David Stein (draft, Oct 2026); edited Oct 3, 2026 for sources,
+  current DSHS answers and real counts. Facts repeat the reviewed AFH Club
+  guides: change both together. Rebuild the PDF with:
+    node docs/handbook/build-pdf.mjs
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The AFH Club Handbook</title>
+<style>
+  @page { size: Letter; margin: 0.85in 0.9in 0.9in; }
+  :root { --g: #0a5648; --ink: #1c1917; --navy: #1f3a68; --wine: #8a1c3b; --gold: #8a6110; --rule: #d5e2dd; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: "DM Sans", system-ui, sans-serif; font-size: 11.5pt; line-height: 1.55; color: var(--ink); font-weight: 400; }
+  p { margin: 0 0 9pt; }
+  strong { font-weight: 700; color: #14283a; }
+  a { color: var(--g); text-decoration: underline; }
+
+  .cover { height: 9.2in; display: flex; flex-direction: column; justify-content: space-between; page-break-after: always; }
+  .cover .mark { width: 92px; }
+  .cover .eyebrow { font-size: 10.5pt; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--g); margin-top: 36pt; }
+  .cover h1 { font-size: 44pt; line-height: 1.05; margin: 10pt 0 14pt; color: #14283a; letter-spacing: -.01em; }
+  .cover .sub { font-size: 17pt; line-height: 1.35; color: #1f2933; max-width: 5.2in; }
+  .cover .band { border-top: 4px solid var(--g); padding-top: 12pt; font-size: 10.5pt; color: #1f2933; }
+  .cover .band b { color: #14283a; }
+
+  .toc { page-break-after: always; }
+  .toc h2 { margin-top: 0; }
+  .toc ol { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 28pt; }
+  .toc li { break-inside: avoid; margin: 0 0 9pt; }
+  .toc .part { font-size: 9pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--g); }
+  .toc .chs { font-size: 10.5pt; color: #1f2933; }
+
+  .part-title { break-after: avoid; margin-top: 26pt !important; font-size: 9.5pt; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--g); border-bottom: 2px solid var(--g); padding-bottom: 5pt; margin: 0 0 16pt; }
+  h2 { font-size: 17pt; line-height: 1.2; color: #14283a; margin: 20pt 0 7pt; break-after: avoid; }
+  h2 .n { color: var(--g); margin-right: 6pt; }
+  h3 { font-size: 12.5pt; color: var(--g); margin: 13pt 0 4pt; break-after: avoid; }
+  ul, ol { margin: 0 0 10pt; padding-left: 18pt; }
+  li { margin-bottom: 3pt; }
+  .key { border-left: 4px solid var(--g); background: #f2f7f5; padding: 9pt 13pt; margin: 10pt 0 12pt; font-size: 12.5pt; font-weight: 700; color: #14283a; break-inside: avoid; }
+  .flow { font-weight: 700; color: var(--g); letter-spacing: .01em; }
+  .cite { font-size: 9.5pt; color: #2b3640; }
+  .cite a { color: #2b3640; }
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 12pt; font-size: 10.5pt; break-inside: avoid; }
+  th { text-align: left; background: var(--g); color: #fff; padding: 5pt 8pt; font-weight: 700; }
+  td { padding: 5pt 8pt; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .box { border: 1px solid var(--rule); border-radius: 6pt; padding: 10pt 13pt; margin: 10pt 0; break-inside: avoid; }
+  .box h3 { margin-top: 0; }
+  .end { margin-top: 10pt; }
+  .intro { page-break-before: always; }
+  .intro + .part-title { margin-top: 18pt !important; }
+  .small { font-size: 9.5pt; color: #1f2933; }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div>
+    <svg class="mark" viewBox="0 0 92 96" aria-hidden="true"><path d="M6 92 L46 10 L86 92" fill="none" stroke="#1f3a68" stroke-width="11" stroke-linejoin="miter" stroke-miterlimit="10"/><path d="M38 50 L56 44 L56 92 L38 92 Z" fill="#8a1c3b"/><circle cx="51" cy="70" r="2.2" fill="#fff"/></svg>
+    <div class="eyebrow">AFH Club · Real Property Planning</div>
+    <h1>The AFH Club Handbook</h1>
+    <div class="sub">Buying, owning, operating and selling an Adult Family Home in Washington</div>
+  </div>
+  <div class="band">
+    <b>Understand · Qualify · Staff · Sustain</b><br>
+    Reviewed October 3, 2026. General information, not legal, tax or financial advice.<br>
+    realpropertyplanning.com/afh-club
+  </div>
+</section>
+
+<section class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><div class="part">Part 1 · The basics</div><div class="chs">1. What exactly is an Adult Family Home? · 2. Different names around the country · 3. The four things you should never confuse · 4. "AFH-ready" does not mean "licensed" · 5. Operating, former, ready or potential?</div></li>
+    <li><div class="part">Part 2 · The property</div><div class="chs">6. Ask a better question · 7. What makes a property work? · 8. Some problems are cheap. Others aren't. · 9. Building rules change</div></li>
+    <li><div class="part">Part 3 · Qualifying and licensing</div><div class="chs">10. Who can operate an AFH? · 11. Personally or through an LLC? · 12. The license doesn't come with the house · 13. Don't assume a licensing timeline</div></li>
+    <li><div class="part">Part 4 · How AFHs get paid</div><div class="chs">14. Now we get to the money · 15. CARE classifications · 16. Why classification matters · 17. Same six beds, different revenue · 18. Classifications change · 19. What a buyer should request · 20. "Tier" can mean several things · 21. CBHS · 22. ECS and SBS · 23. The payment field guide · 24. What happens to payments at a sale · 25. Private pay</div></li>
+    <li><div class="part">Part 5 · Money in, money out</div><div class="chs">26. Revenue is only half the story · 27. Financing an AFH · 28. Occupancy and financeability · 29. The seller's labor and the price · 30. Real estate value and business value</div></li>
+    <li><div class="part">Part 6 · Operating</div><div class="chs">31. Compliance history · 32. Not passive investing · 33. Staffing · 34. Recurring expenses</div></li>
+    <li><div class="part">Part 7 · Selling</div><div class="chs">35. Selling an AFH · 36. Prepare before going to market · 37. Buyers should verify, not assume</div></li>
+    <li><div class="part">Part 8 · Putting it together</div><div class="chs">38. A better way to evaluate an acquisition · 39. The real question · 40. The big picture · Before you buy, sell or open</div></li>
+  </ol>
+</section>
+
+<section class="intro">
+  <h2 style="margin-top:0">Why this handbook</h2>
+  <div class="key" style="margin-top:6pt">The real estate, the AFH business, the license and the residents are connected, but they are not the same thing. Once you understand that, much of the AFH world becomes easier to navigate.</div>
+  <p>Adult Family Homes are unusual businesses. You're buying or operating a house, but it isn't just a house. You're running a care business, but it isn't just a business. You're dealing with residents, caregivers, state licensing, local building requirements, Medicaid reimbursement, private-pay rates, insurance, financing and, eventually, the sale of both a property and a business.</p>
+  <p>Someone tells you a property is "AFH ready." Another person talks about a resident being "Level 4." A listing advertises a "WABO-approved AFH." Then someone mentions CARE classifications, CBHS tiers, ECS, SBS and ProviderOne. It can sound like everyone is speaking a different language. This handbook is intended to make that language understandable.</p>
+</section>
+
+<div class="part-title">Part 1 · The basics</div>
+
+<h2><span class="n">1</span>What exactly is an Adult Family Home?</h2>
+<p>An Adult Family Home, or AFH, is a residential home licensed by the Washington State Department of Social and Health Services (DSHS) to provide room, board, personal care, supervision and other approved services to adults who need assistance. A simpler way to think about it: <strong>it is a care business operating inside a residential home.</strong> An AFH isn't a nursing home, and it isn't a rental property with caregivers. It is a regulated residential care setting.</p>
+<p>Most Washington AFHs are licensed for up to six residents. DSHS may approve seven or eight for a provider who has held the initial license for at least 24 months and meets added requirements, including compliance history and building and life-safety standards. It isn't a matter of finding a larger house and adding bedrooms. <span class="cite">WAC 388-76-10031</span></p>
+<p>In September 2026, the DSHS locator listed <strong>6,069 licensed adult family homes with 35,306 licensed beds</strong> across 35 counties, making AFHs an important part of the state's long-term care system. They provide something many families value: care in a home rather than an institution.</p>
+
+<h2><span class="n">2</span>Adult Family Homes have different names around the country</h2>
+<p>Washington calls them Adult Family Homes. Elsewhere you'll find adult foster homes, board and care homes, residential care homes, personal care homes, family care homes and residential care facilities. The names change from state to state, and so do the rules. An accurate article about an adult foster home in Oregon or a board and care home in California may not describe Washington's requirements, so make sure what you're reading is Washington-specific before relying on it.</p>
+
+<h2><span class="n">3</span>The four things you should never confuse</h2>
+<p>If you remember one concept from this handbook, make it this one. An operating Adult Family Home involves four separate things: <strong>the real estate, the operating business, the AFH license, and the residents with their payment authorizations.</strong> They interact, but they aren't interchangeable.</p>
+<p>Suppose Mary owns a six-bedroom house and operates a licensed AFH from it, and John wants to buy her operation. John might buy Mary's house and certain assets of her business, and the residents may stay. But John does <strong>not</strong> buy Mary's license; he has to qualify for his own. Each Medicaid resident's authorization is reissued under John's ProviderOne number without a new assessment, but contracts Mary holds as the provider, such as ECS or SBS, do not transfer. You aren't purchasing one thing. You're coordinating several at once.</p>
+
+<h2><span class="n">4</span>"AFH-ready" does not mean "licensed AFH"</h2>
+<p>Listings use phrases such as <em>AFH Ready</em>, <em>WABO Approved</em>, <em>Turnkey AFH</em>, <em>Former AFH</em> and <em>Potential Adult Family Home</em>. They can be useful, but none substitutes for documentation. A house does not become a licensed Adult Family Home because it has six bedrooms, a ramp and wide hallways. There are two approval tracks.</p>
+<h3>The building</h3>
+<p>The local city or county building official inspects the house against the Adult Family Home building requirements and signs DSHS form 15-604. People call this the "WABO inspection" because the Washington Association of Building Officials helped write the checklist, but WABO itself doesn't inspect or approve houses. <span class="cite">WAC 388-76-10700</span></p>
+<h3>The provider</h3>
+<p>DSHS separately licenses the person or entity that operates the home. Passing the building inspection doesn't give anyone permission to operate. <strong>The building has to qualify, and the operator has to qualify. You need both.</strong></p>
+
+<h2><span class="n">5</span>Operating, former, AFH-ready or AFH-potential?</h2>
+<table>
+  <tr><th style="width:24%">Category</th><th>What it means</th></tr>
+  <tr><td><strong>Operating AFH</strong></td><td>A licensed home operating at the property today. A buyer doesn't inherit the license, but there is an existing operation to investigate. It appears on the DSHS locator.</td></tr>
+  <tr><td><strong>Former AFH</strong></td><td>It operated as an AFH but no longer does. Useful history, but a lapsed home must meet today's rules to be licensed again, and may need changes.</td></tr>
+  <tr><td><strong>AFH-ready</strong></td><td>Use carefully. Ideally it means documents show the house passed the local AFH building inspection. Even then, the buyer has no DSHS license.</td></tr>
+  <tr><td><strong>AFH-potential</strong></td><td>A house with features that could make conversion feasible: layout, bedrooms, accessible entrances, parking. A starting point, not an approval.</td></tr>
+</table>
+
+<div class="part-title">Part 2 · The property</div>
+
+<h2><span class="n">6</span>Before buying the house, ask a better question</h2>
+<p>Prospective owners often start with "Can I turn this house into an AFH?" A better question is <strong>"What will it cost to make this house work well as an AFH?"</strong></p>
+<p>House A costs $900,000 and needs $175,000 of structural changes: $1,075,000 in total. House B costs $975,000 and needs $20,000: $995,000. House A looks cheaper and is $80,000 more expensive as an AFH. That's why evaluating a property should include the <strong>cost to cure</strong>. A deficiency that costs a few hundred dollars shouldn't be treated like one that costs $50,000, and something that can't reasonably be corrected isn't a lost point on a score. It's a feasibility question.</p>
+
+<h2><span class="n">7</span>What makes a property work?</h2>
+<h3>Bedrooms</h3>
+<p>Don't just count bedrooms; ask whether they work as <strong>resident</strong> bedrooms. Size, usable floor area, location, evacuation classification and access all matter. A bedroom that works in an ordinary house may not work as a resident room.</p>
+<h3>Bathrooms</h3>
+<p>Look at the number, location and layout of bathrooms, and how a resident with limited mobility will actually reach and use them.</p>
+<h3>Steps and the whole route</h3>
+<p>A few steps look insignificant during a showing. For a resident with a walker or wheelchair, they can be a major issue. Walk the entire route: <span class="flow">parking → entrance → common areas → bedroom → bathroom → exit.</span></p>
+<h3>Evacuation</h3>
+<p>Getting in is half the accessibility question. Residents also have to get <strong>out</strong> in an emergency, so bedroom locations and evacuation classifications matter.</p>
+<h3>Parking, lot and driveway</h3>
+<p>Caregivers, visitors, families, medical providers and deliveries come and go, so poor parking can become an operating problem even when the interior works beautifully. Steep slopes, a difficult driveway or an inaccessible outdoor route can be expensive, or impractical, to correct. This is why the AFH Club Property Score looks beyond bedroom count.</p>
+
+<h2><span class="n">8</span>Some problems are cheap. Others aren't.</h2>
+<p>A house that needs another grab bar is probably not a reason to reject an otherwise excellent property. A house whose only practical resident entrance needs structural rebuilding is different. A useful evaluation reflects those differences rather than treating every missing feature equally:</p>
+<table>
+  <tr><th>Problem</th><th>How to treat it</th></tr>
+  <tr><td>Cheap to cure</td><td>A small concern. Price it and move on.</td></tr>
+  <tr><td>Expensive to cure</td><td>A larger concern. It belongs in the offer price.</td></tr>
+  <tr><td>Effectively incurable</td><td>A feasibility warning. It may end the deal.</td></tr>
+</table>
+
+<h2><span class="n">9</span>Building rules change</h2>
+<p>A house that complied when it was first licensed may not meet every requirement for a newly licensed home today. Homes licensed after <strong>September 20, 2026</strong> need interior doors at least 27 inches wide wherever residents pass through. <span class="cite">WAC 388-76-10715</span></p>
+<p>DSHS confirmed in writing (September 2026) that a continuously licensed home that changes owners is held to the rules in place when it was first licensed, so the 27-inch rule doesn't apply to it. A former AFH whose license lapsed must meet current rules. Two houses may look almost identical: one with continuous licensing history keeps its building standards through the sale; the other has to meet today's. They shouldn't be treated as equivalent, and buyers should verify a property's <strong>actual licensing history</strong> rather than relying on "this used to be an AFH."</p>
+
+<div class="part-title">Part 3 · Qualifying and licensing</div>
+
+<h2><span class="n">10</span>Who can operate an Adult Family Home?</h2>
+<p>Owning a suitable house doesn't qualify anyone to run the business. Washington sets provider requirements for age, education, background checks, training, experience and finances. The one that surprises people most: the provider, entity representative or resident manager needs <strong>1,000 hours of direct care to vulnerable adults within the last 60 months</strong>. Licensed physicians, physician assistants and nurses are exempt. <span class="cite">WAC 388-76-10130</span></p>
+<p>Administrators and caregivers have training requirements too. Most caregivers who aren't otherwise exempt follow the Home Care Aide training and certification path, with added specialty training for residents with dementia, mental health needs or developmental disabilities. Check your own eligibility <strong>before</strong> committing money to a property or business.</p>
+
+<h2><span class="n">11</span>Should you own the AFH personally or through an LLC?</h2>
+<p>An AFH license can be issued to a qualifying business entity, which then needs an <strong>entity representative</strong> who meets the provider requirements. Putting the operation into an LLC doesn't make the personal qualifications disappear. Decide the structure early, because changing it later, including forming an LLC around an existing home, is a change of ownership that needs a new license. Discuss the structure with your legal, tax, insurance and licensing advisers <strong>before</strong> you open. <span class="cite">WAC 388-76-10105</span></p>
+
+<h2><span class="n">12</span>Buying an existing AFH: the license doesn't come with the house</h2>
+<p>A listing says "Turnkey six-bed licensed AFH." A buyer could understandably read that as "I buy it Friday and run the seller's business Saturday." That's not how it works. Washington AFH licenses are not transferable; at a change of ownership, the incoming provider qualifies for and receives a new license. The seller must give DSHS and every resident 60 days' written notice before the proposed change. <span class="cite">WAC 388-76-10010, 388-76-10106</span></p>
+<p>So the parties aren't only coordinating <span class="flow">offer → inspection → financing → closing.</span> They're also coordinating <span class="flow">licensing → DSHS → residents → payment systems → business transition → closing.</span> The purchase agreement and closing timeline have to account for more than the house.</p>
+
+<h2><span class="n">13</span>Don't assume licensing will take a certain number of days</h2>
+<p>DSHS will not estimate how long a license takes. It posts its current application queue, and a complete application avoids delays; incomplete applications, background checks and property issues all affect timing. Check the posted queue, and structure the deal with room for licensing. A closing that happens before the buyer can legally operate creates an obvious problem. <span class="cite">DSHS BAAU application processing timeline</span></p>
+
+<div class="part-title">Part 4 · How AFHs get paid</div>
+
+<h2><span class="n">14</span>Now we get to the money</h2>
+<p>From the outside, AFH revenue looks simple: six residents times a monthly rate. Once Medicaid enters the picture, it isn't. About 96% of Washington's licensed homes hold a DSHS Medicaid contract. Two six-bed homes next door to each other can both be 100% occupied and earn very different amounts, because <strong>a filled bed doesn't tell you what that resident pays.</strong> For Medicaid residents, assessed needs set the rate.</p>
+
+<h2><span class="n">15</span>Understanding CARE classifications</h2>
+<p>Washington's CARE assessment looks at activities of daily living, cognitive performance, clinical complexity, mood and behavior, and exceptional-care needs. It places each Medicaid resident into one of <strong>17 classifications, grouped A through E.</strong> <span class="cite">WAC 388-106-0115</span></p>
+<p>A through E is <strong>not</strong> a five-step scale from easiest to hardest. The groups describe different combinations of needs:</p>
+<table>
+  <tr><th style="width:10%">Group</th><th>Broadly</th></tr>
+  <tr><td><strong>A</strong></td><td>Residents who don't meet the clinical or behavioral criteria that define the other groups</td></tr>
+  <tr><td><strong>B</strong></td><td>Qualifying mood or behavioral characteristics</td></tr>
+  <tr><td><strong>C</strong></td><td>Clinical complexity without the significant cognitive impairment of group D</td></tr>
+  <tr><td><strong>D</strong></td><td>Clinical complexity with significant cognitive impairment</td></tr>
+  <tr><td><strong>E</strong></td><td>Exceptional-care criteria</td></tr>
+</table>
+<p>Within the groups are classifications such as Low, Medium, Medium-High and High.</p>
+
+<h2><span class="n">16</span>Why CARE classification matters financially</h2>
+<p>Under the July 1, 2026 Medicaid base-rate schedule, adult family homes in <strong>King, Pierce and Snohomish counties</strong> are paid from <strong>$144.47 to $279.30 per resident per day</strong>, a $134.83 daily difference. Homes in the rest of the state are paid less. For one resident, that difference approaches <strong>$49,000 a year, for one bed.</strong> So "the home is fully occupied" doesn't tell a buyer enough. You need to know who is in those beds from a reimbursement standpoint.</p>
+
+<h2><span class="n">17</span>Same six beds. Very different revenue.</h2>
+<p>Two hypothetical six-bed homes in King, Pierce or Snohomish County, using July 1, 2026 base rates:</p>
+<table>
+  <tr><th>Home</th><th>Residents</th><th class="num">Daily rate</th><th class="num">Annual base revenue</th></tr>
+  <tr><td>Home One</td><td>Six at B Medium</td><td class="num">$161.66</td><td class="num">$354,035</td></tr>
+  <tr><td>Home Two</td><td>Six at D Medium-High</td><td class="num">$225.32</td><td class="num">$493,451</td></tr>
+  <tr><td colspan="3"><strong>Difference</strong></td><td class="num"><strong>$139,415</strong></td></tr>
+</table>
+<p>Same beds, same occupancy, completely different economics. But higher-acuity residents may need more staffing, supervision and caregiver skill, so higher revenue doesn't automatically mean higher profit. Examine both sides: <strong>revenue and the cost of care.</strong></p>
+
+<h2><span class="n">18</span>CARE classifications can change</h2>
+<p>A classification reflects current assessed need, not a permanent label. Residents are reassessed when their needs change, and a classification can move <strong>up or down</strong>. A home whose revenue depends on one or two high-paying residents carries a risk of its own: if one leaves, passes away or is reassessed lower, revenue changes materially. Occupancy concentration and <strong>revenue concentration</strong> are different things. A full six-bed home can still carry considerable concentration risk.</p>
+
+<h2><span class="n">19</span>What a buyer should request</h2>
+<p>Don't stop at the seller's annual revenue. Ask for a de-identified resident schedule showing each resident's payer type, current CARE classification, authorized daily rate, add-ons and the date of the last assessment. Then compare it with deposits and financial statements. You're establishing a chain: <span class="flow">resident → authorization → reimbursement → bank deposit.</span> If those don't agree, find out why before you put a value on the income.</p>
+
+<h2><span class="n">20</span>"Tier" can mean several different things</h2>
+<p>Someone says, "This resident is Tier 3." Your next question should be <strong>"Tier 3 of what?"</strong> Medicaid CARE classifications aren't numbered tiers; they're lettered A through E. Numbered tiers appear in other programs, and private-pay homes often create their own "Level 1 through 5" pricing. Those systems shouldn't be mixed together.</p>
+
+<h2><span class="n">21</span>CBHS: the actual tier system</h2>
+<p>Community Behavioral Health Support (CBHS) is a Medicaid benefit run by the Health Care Authority with DSHS. It pays for supportive supervision of residents with qualifying behavioral health needs, in <strong>six tiers</strong> defined by hours of dedicated staff time a day, reviewed at least every 12 months. CBHS is paid <strong>in addition to</strong> the resident's CARE base rate, so one resident can have both a CARE classification and a CBHS tier. They describe different parts of the payment. <span class="cite">WAC 182-561-0500</span></p>
+
+<h2><span class="n">22</span>Don't confuse CBHS with ECS or SBS</h2>
+<p><strong>Expanded Community Services (ECS)</strong> and <strong>Specialized Behavior Support (SBS)</strong> are specialty contracts the home itself must qualify for and hold. They're different from CARE reimbursement and different from CBHS. Since July 1, 2025, a resident must first be found not eligible for CBHS before receiving SBS. A buyer may see substantial specialty revenue and assume it stays because the residents stay. Not necessarily: some payments follow the resident, while these depend on <strong>the provider holding the contract</strong>. That distinction can change acquisition economics completely.</p>
+
+<h2><span class="n">23</span>The payment field guide</h2>
+<table>
+  <tr><th>System</th><th>Labels</th><th>What it is</th><th>In a sale</th></tr>
+  <tr><td><strong>Medicaid CARE</strong></td><td>A Low … E High</td><td>The resident's Medicaid base rate, set by DSHS</td><td>Follows the resident; authorization reissued to the new owner</td></tr>
+  <tr><td><strong>CBHS</strong></td><td>Tier 1 … Tier 6</td><td>Behavioral health supervision on top of the base rate</td><td>Follows the resident; confirm what the new owner needs</td></tr>
+  <tr><td><strong>ECS and SBS</strong></td><td>Contracts</td><td>Specialty programs the provider must qualify for</td><td>Does not transfer; the buyer needs its own</td></tr>
+  <tr><td><strong>Private pay</strong></td><td>Often Level 1 … 5</td><td>The home's own pricing categories</td><td>A business decision the next owner can change</td></tr>
+</table>
+<p>When someone says "Level 4" or "Tier 3," don't assume you know what they mean. Ask.</p>
+
+<h2><span class="n">24</span>What happens to those payments when the home sells?</h2>
+<p>Think of reimbursement in two categories. <strong>Resident-related:</strong> a resident's care needs don't change because the home changes owners. DSHS contracting staff confirmed in September 2026 that residents don't need new assessments at a change of ownership; each authorization is reissued under the new owner's ProviderOne number. <strong>Provider-related:</strong> specialty contracts belong to the provider and don't transfer; the buyer must qualify for its own, approved by DSHS program staff.</p>
+<p>So never look at the seller's revenue and say "I'll make the same next year." Ask instead: <strong>which pieces of this revenue survive the ownership change?</strong> That's the number worth underwriting.</p>
+
+<h2><span class="n">25</span>Private pay is different again</h2>
+<p>Private-pay residents aren't paid on the CARE schedule. The home sets its own prices through its residency agreement, by room, care needs, staffing, services or its own care levels, subject to disclosure rules. A "$9,000-a-month resident" at one home may not need the same services as one at another. The important question isn't only "What's the monthly rate?" but <strong>"What services and staffing does it take to earn that rate?"</strong></p>
+
+<div class="part-title">Part 5 · Money in, money out</div>
+
+<h2><span class="n">26</span>Revenue is only half the story</h2>
+<p>A six-bed home earning $600,000 a year may sound more valuable than one earning $500,000. Maybe it is. But suppose the first relies on extensive overnight staffing and outside caregivers while the second is largely run by its owners, or the reverse: the seller and spouse work 100 unpaid hours a week, and a buyer who will hire staff has a very different expense structure. That's why AFH financial analysis should <strong>normalize owner labor</strong>. Ask: <strong>if the current owner disappeared tomorrow, what would it cost to replace everything that person does?</strong></p>
+
+<h2><span class="n">27</span>Financing an AFH</h2>
+<p>Financing depends on what you're buying: the real estate, the business, or both. Depending on the deal, that can mean conventional residential lending in the right circumstances, commercial financing, SBA 7(a), SBA 504 or other structures. Owner occupancy, property use, operating history, borrower qualifications, cash flow, down payment and lender requirements all matter. One concept comes up again and again: <strong>debt service coverage ratio (DSCR).</strong></p>
+<div class="box">
+  <p style="margin:0"><strong>Net operating income ÷ annual debt service = DSCR.</strong> A business with $125,000 available for debt service and $100,000 of annual loan payments has a DSCR of 1.25 (1.25×). Many SBA lenders look for about that, though requirements vary.</p>
+</div>
+
+<h2><span class="n">28</span>Occupancy can affect financeability</h2>
+<p>A seller prices the business on six occupied beds, but four residents live there today. The buyer thinks, "I'll fill the other two immediately." A lender usually won't underwrite it that way; it lends on demonstrated cash flow. That links <span class="flow">occupancy → cash flow → DSCR → borrowing capacity → sale price.</span> Owners thinking about selling should improve occupancy and records well before they list.</p>
+
+<h2><span class="n">29</span>The seller's labor can affect the sale price</h2>
+<p>A husband and wife do most of the caregiving, administration and overnight coverage, and the business looks very profitable. Then they sell to an investor who won't work in the home and must hire people to replace all of that labor. The profit isn't nearly as high, and a lender makes the same adjustment. Distinguish <strong>reported profit</strong> from <strong>normalized profit after replacing owner labor.</strong></p>
+
+<h2><span class="n">30</span>Real estate value and business value are different</h2>
+<p>The house might be worth $1.2 million as real estate. That doesn't mean the AFH is worth $1.2 million, and business value shouldn't simply be added on top. An established home can have real operating value from occupancy, reputation, referral sources, staff, systems, a favorable layout and cash flow, but some of that transfers better than the rest. The improvements stay with the property. The license doesn't. Residents and employees may leave, some contracts don't transfer, and classifications change. The buyer's question: <strong>how durable is this income after the seller is gone?</strong></p>
+
+<div class="part-title">Part 6 · Operating</div>
+
+<h2><span class="n">31</span>Compliance history matters</h2>
+<p>Before buying an operating home, review its regulatory history. DSHS inspects homes and investigates complaints, and its locator shows each home's license with three years of limits and enforcement: inspection reports, complaint investigations, deficiencies, plans of correction, civil penalties, license conditions and stop placements. A <strong>stop placement</strong> blocks new admissions until DSHS lifts it, which matters to a buyer planning to fill empty beds.</p>
+<p>After a change of ownership the new operator gets a new license number, so the current license may not show the property's whole history. Search carefully, and remember: <strong>"no documents found" doesn't mean no problems ever occurred.</strong> Records can be delayed, incomplete or filed under a previous license.</p>
+
+<h2><span class="n">32</span>Running an AFH is not passive real estate investing</h2>
+<p>An AFH operates from a house, but it isn't a rental. Residents need care. Caregivers need training and supervision. Medications must be managed, records kept and meals provided. Emergencies happen, inspections come unannounced, rules change, staff call in sick, families have questions and residents' conditions change. Running an AFH can be rewarding, but the revenue exists because the provider accepts real responsibility for vulnerable people.</p>
+
+<h2><span class="n">33</span>Staffing can make or break the business</h2>
+<p>Labor is one of the largest AFH expenses, and the staffing model depends on the residents. Higher-acuity residents may bring more reimbursement and need more caregiver hours: <strong>the highest-paying resident isn't automatically the most profitable.</strong> A buyer should examine staffing schedules, payroll, overtime, overnight coverage, owner-provided labor, turnover, required specialty training and any agency staffing. A home with excellent revenue and chronic staffing problems may be less attractive than the top line suggests.</p>
+
+<h2><span class="n">34</span>Insurance, licensing and other recurring expenses</h2>
+<p>Costs go well beyond the mortgage: licensing fees, insurance, payroll, training, food, utilities, repairs, supplies, professional services, taxes and administration, plus extra staffing for residents with higher care needs. The license fee is charged <strong>per licensed bed</strong>: $450 per bed a year since July 2025, or $2,700 for a six-bed home, per DSHS in writing. Providers also need the required liability insurance. Build the expense side from the ground up rather than estimating profit from resident rates alone.</p>
+
+<div class="part-title">Part 7 · Selling</div>
+
+<h2><span class="n">35</span>Selling an Adult Family Home</h2>
+<p>Every owner exits eventually, and planning early creates more options. An owner might:</p>
+<ul>
+  <li>sell the property and the business together</li>
+  <li>sell the business and keep the property, leasing it to the buyer</li>
+  <li>lease the property to another licensed operator</li>
+  <li>keep ownership and hire a resident manager, while staying the licensee</li>
+  <li>transition gradually toward retirement</li>
+</ul>
+<p>Someone who needs cash may sell the real estate. Someone with a valuable, lightly mortgaged property may keep it and collect rent. Someone who wants to step back without selling may hire management. <strong>Selling the business and selling the real estate don't have to be the same decision.</strong> Any new owner of the business, including a new partner or entity, applies for its own license through a change of ownership. And if a home's license lapses, the next operator must meet current building rules, so ask DSHS how your plan will be treated before you close your license.</p>
+
+<h2><span class="n">36</span>Sellers should prepare before going to market</h2>
+<p>A buyer, and especially a lender, will ask questions. Organize your records on: property ownership, licensing and licensed capacity, building approval, occupancy, payer mix, CARE classifications, Medicaid authorizations, CBHS revenue, ECS and SBS arrangements, private-pay agreements, staffing, payroll, owner labor, operating expenses, inspection and enforcement history, financial statements, tax returns and normalized cash flow. Think of it as building the story behind the numbers. When you say "this business makes $200,000 a year," a careful buyer will ask <strong>how?</strong> Good records answer that.</p>
+
+<h2><span class="n">37</span>Buyers should verify, not assume</h2>
+<p>AFH deals are full of reassuring statements: "It's WABO approved." "The license transfers." "Those Medicaid rates stay with the home." "All six residents are high-level." "The buyer can get licensed quickly." "It's grandfathered." "The specialty contract continues." "The lender will finance it." Maybe. But each one should get the same answer: <strong>let's verify it.</strong> That isn't distrust; it's good due diligence. Too many agencies, rules, contracts and payment systems are involved to rely on assumptions.</p>
+
+<div class="part-title">Part 8 · Putting it together</div>
+
+<h2><span class="n">38</span>A better way to evaluate an AFH acquisition</h2>
+<p>Instead of starting with the asking price, work through the deal in layers:</p>
+<table>
+  <tr><th style="width:24%">Layer</th><th>Questions</th></tr>
+  <tr><td><strong>1. The property</strong></td><td>Does the house work? What must change, at what cost to cure? Any feasibility problems?</td></tr>
+  <tr><td><strong>2. Licensing</strong></td><td>Does the buyer qualify? Which licensing process and building rules apply? Can the timeline wait for the license?</td></tr>
+  <tr><td><strong>3. Residents</strong></td><td>How many live there? Who pays for each? What are their classifications and authorizations?</td></tr>
+  <tr><td><strong>4. Revenue</strong></td><td>How much is private pay, CARE base, CBHS, ECS or SBS? Which survives the sale?</td></tr>
+  <tr><td><strong>5. Expenses</strong></td><td>What does staffing really cost? How much labor does the seller supply? What are the recurring costs?</td></tr>
+  <tr><td><strong>6. Compliance</strong></td><td>What do inspections and complaints show? Anything unresolved?</td></tr>
+  <tr><td><strong>7. Financing</strong></td><td>What cash flow will a lender recognize, what DSCR does it produce, and how much debt can the business support?</td></tr>
+</table>
+<p>Only after working through those layers does the asking price become meaningful.</p>
+
+<h2><span class="n">39</span>The question isn't "Is this a good AFH?"</h2>
+<p>A better question: <strong>"Is this the right AFH for this buyer, at this price, under these assumptions?"</strong> A property that needs substantial work may be an excellent opportunity at the right price. A beautiful operating home may be a poor buy if its price assumes revenue the buyer won't inherit. A high-revenue home may earn less than expected because of staffing. A former AFH may be inexpensive to buy and expensive to bring into compliance. A full home may have excellent revenue today and real concentration risk. There's rarely one number that tells the whole story.</p>
+
+<h2><span class="n">40</span>The big picture</h2>
+<table>
+  <tr><td style="width:30%"><strong>The house</strong></td><td>The real estate</td></tr>
+  <tr><td><strong>The AFH business</strong></td><td>The operation</td></tr>
+  <tr><td><strong>The provider</strong></td><td>The person or entity responsible for running it</td></tr>
+  <tr><td><strong>The license</strong></td><td>The state's authorization for that provider at that location</td></tr>
+  <tr><td><strong>The residents</strong></td><td>Occupancy</td></tr>
+  <tr><td><strong>CARE classifications</strong></td><td>Medicaid base reimbursement</td></tr>
+  <tr><td><strong>CBHS tiers</strong></td><td>Added behavioral health support payments</td></tr>
+  <tr><td><strong>ECS and SBS</strong></td><td>Separate specialty contracts held by the provider</td></tr>
+  <tr><td><strong>Private-pay rates</strong></td><td>Another system entirely, set by the home</td></tr>
+  <tr><td><strong>Staffing and expenses</strong></td><td>How much revenue becomes profit</td></tr>
+  <tr><td><strong>Compliance history</strong></td><td>Operating risk</td></tr>
+  <tr><td><strong>Cash flow</strong></td><td>What a lender may finance</td></tr>
+</table>
+<p>Put the pieces together and Adult Family Homes stop looking like one complicated puzzle. They become a series of questions that can be answered one at a time.</p>
+
+<section class="end">
+  <div class="box">
+    <h3>Before you buy</h3>
+    <p style="margin:0">Don't buy an AFH because it has six bedrooms, because it's licensed today, because the seller shows impressive gross revenue, or because someone calls it "turnkey." Understand the property, the license, the residents, the revenue, the staffing, what transfers and what doesn't. Then understand the price.</p>
+  </div>
+  <div class="box">
+    <h3>Before you sell</h3>
+    <p style="margin:0">Don't wait until you're exhausted and ready to retire to think about your exit. Keep clean financial records. Know your resident mix and where your revenue comes from. Document your staffing, maintain the property, and keep licensing and compliance records organized. Understand the difference between the value of your real estate and the value of the business you've built. You may have more exit options than you realize.</p>
+  </div>
+  <div class="box">
+    <h3>Before you open your first AFH</h3>
+    <p style="margin:0">Start with yourself before starting with Zillow. Understand the provider qualifications, the experience requirement and the training. Think about how the business will be owned. Then begin evaluating properties. Finding a beautiful six-bedroom house first and learning afterward that the house or the provider doesn't qualify is an expensive way to learn the process.</p>
+  </div>
+
+  <h2>One final thought</h2>
+  <p>Adult Family Homes occupy an unusual place in Washington. They are homes. They are businesses. They are regulated care settings. They are investments. And most importantly, they are where vulnerable adults live. A successful AFH has to work from all of those perspectives: the property, the numbers, the licensing, the staffing, and the care. Good AFH planning isn't about one magic number, one perfect property or one checklist. It's about understanding how the pieces fit together, so you can ask better questions, recognize problems earlier and make better-informed decisions.</p>
+
+  <div class="box" style="margin-top:18pt">
+    <h3>AFH Club · Understand · Qualify · Staff · Sustain</h3>
+    <p>AFH Club is a free educational resource from Real Property Planning for Adult Family Home owners, operators, buyers, sellers and investors. Each topic in this handbook has a full guide with its sources at <strong>realpropertyplanning.com/afh-club</strong>, including the Washington AFH Guide flow chart, the AFH Payment Field Guide, Before You Buy: What to Verify, and the AFH calculators.</p>
+    <p>Written by David Stein, a Washington State licensed real estate broker (eXp Realty, license #133972) and certified residential appraiser (Stein Appraisal, license #1702080). Reviewed October 3, 2026. Corrections: info@realpropertyplanning.com.</p>
+    <p class="small" style="margin:0">Rules, reimbursement rates, licensing requirements and program requirements change. This handbook is general information, not legal, tax or financial advice. Verify current requirements with the appropriate Washington State agency, local jurisdiction, lender, attorney, accountant or other qualified professional before making a financial, legal, licensing or property decision.</p>
+  </div>
+  <p class="small" style="margin-top:12pt"><strong>Sources:</strong> WAC 388-76-10010, -10031, -10105, -10106, -10130, -10700, -10715; WAC 388-106-0115; WAC 182-561-0500; DSHS Medicaid AFH base-rate schedule effective July 1, 2026; DSHS Adult Family Home Locator (September 13–14, 2026); DSHS BAAU application processing timeline; written answers from DSHS contracting and Residential Care Services staff (September 2026).</p>
+</section>
+
+</body>
+</html>

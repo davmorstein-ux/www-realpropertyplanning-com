@@ -235,6 +235,7 @@ const AFHFinancingCalculator = lazy(() => import("./pages/AFHFinancingCalculator
 const HowToFinanceAnAFH = lazy(() => import("./pages/HowToFinanceAnAFH"));
 const AFHPropertyScore = lazy(() => import("./pages/AFHPropertyScore"));
 const AFHPaymentFieldGuide = lazy(() => import("./pages/AFHPaymentFieldGuide"));
+const AFHBeforeYouBuy = lazy(() => import("./pages/afh/AFHBeforeYouBuy"));
 const AFHCareClassifications = lazy(() => import("./pages/AFHCareClassifications"));
 const AFHCBHSTiers = lazy(() => import("./pages/AFHCBHSTiers"));
 const AFHValuationEstimator = lazy(() => import("./pages/AFHValuationEstimator"));
@@ -684,6 +685,7 @@ const App = () => (
           {/* How AFHs get paid: three-part series (Sept 2026). Hub + two deep dives. */}
           <Route path="/afh-club/afh-property-score" element={<AFHPropertyScore />} />
           <Route path="/afh-club/afh-payment-field-guide" element={<AFHPaymentFieldGuide />} />
+          <Route path="/afh-club/before-you-buy-an-adult-family-home" element={<AFHBeforeYouBuy />} />
           <Route path="/afh-club/care-classifications-a-through-e" element={<AFHCareClassifications />} />
           <Route path="/afh-club/cbhs-tiers" element={<AFHCBHSTiers />} />
           {/* Family-facing tool: lives on the senior-housing side, not AFH Club (moved Sept 2026). */}

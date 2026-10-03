@@ -29,6 +29,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
+    path: "/afh-club/before-you-buy-an-adult-family-home",
+    links: ["/afh-club/washington-adult-family-home-guide/buying", "/afh-club/afh-payment-field-guide", "/afh-club/care-classifications-a-through-e", "/afh-club/violation-history-lookup", "/afh-club/afh-financing-calculator"],
+  },
+  {
     path: "/afh-club/buying-selling",
     links: ["/afh-club/selling-your-business-at-retirement", "/contact"],
   },

@@ -268,6 +268,7 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
       {
         links: [
           { title: "Buying or Selling an Adult Family Home", href: "/afh-club/buying-selling" },
+          { title: "Before You Buy an AFH: What to Verify", href: "/afh-club/before-you-buy-an-adult-family-home" },
           { title: "Is It Really an Adult Family Home? Reading AFH Listings", href: "/afh-club/afh-property-classifications" },
           { title: "How to Look Up DSHS Violations & Inspection Reports", href: "/afh-club/violation-history-lookup" },
           { title: "How to Finance an AFH", href: "/afh-club/how-to-finance-an-afh" },

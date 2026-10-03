@@ -84,6 +84,7 @@ export const AFH_FLOW_PAGES: FlowPage[] = [
     ],
     steps: [
       { label: "Buying or Selling an Adult Family Home", href: "/afh-club/buying-selling", note: "The change-of-ownership process from both sides." },
+      { label: "Before You Buy: What to Verify", href: "/afh-club/before-you-buy-an-adult-family-home", note: "Seven layers to check, and the sales claims to prove." },
       { label: "Is It Really an Adult Family Home?", href: "/afh-club/afh-property-classifications", note: "Operating, former, AFH-ready or just marketing." },
       { label: "How to Look Up DSHS Violations", href: "/afh-club/violation-history-lookup", note: "Checking a home's inspection and enforcement record." },
       { label: "How to Finance an AFH", href: "/afh-club/how-to-finance-an-afh", note: "Loan types for the real estate and the business." },
