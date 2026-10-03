@@ -1,420 +1,203 @@
 import { useState, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { CARE_TYPES, formatCurrency, COC_TEAL, COST_SOURCE_LINE, COST_SOURCE_URL } from "@/lib/careTypes";
+import { CARE_TYPES, formatCurrency, COST_SOURCE_LINE, COST_SOURCE_URL } from "@/lib/careTypes";
 import { CARE_INFLATION_RATE } from "@/lib/careInflation";
+import { CARE_CALCULATORS } from "@/lib/careCalculators";
+import { monthlyIn, totalCareCost, shade } from "@/lib/careCostMath";
 import AFHCostByLocationCard from "@/components/AFHCostByLocationCard";
 
-const NAVY = "#272421";
-/* The default growth rate now comes from src/lib/careInflation.ts, which
-   scripts/fetch-care-inflation.mjs writes from the BLS Consumer Price Index.
-   Until that script has run, the module ships a 3.5% seed with
-   CARE_INFLATION_VERIFIED = false, and the caption below must not cite BLS —
-   3.5% is the figure this calculator always assumed, not a sourced one.
+/**
+ * Cost of Care calculator card (redesigned Oct 3, 2026 from the owner-approved
+ * mockup): a header band in the care type's own colour with a gold house-and-
+ * heart icon, two steppers, Washington vs the national median (care-type colour
+ * vs gold) with a bar comparison, and the total on a tinted panel as the one
+ * hero number. Each care type's colour comes from src/lib/careCalculators.ts,
+ * the same colours as the "Compare another option" cards.
+ *
+ * Totals price each year of care at that year's cost (src/lib/careCostMath.ts);
+ * the old card multiplied the first year's cost by the number of years.
+ *
+ * Rendered on the six /cost-of-care-calculator/:slug pages and embedded in
+ * several guides. index.css forces font-size and colour on bare div, span, p
+ * and button with !important, so every rule below is on a doubled "coc2-"
+ * class with !important (and no class contains card, tile, btn or cta).
+ */
 
-   Bounds exist because arrows without them let someone hold a key down and
-   land on 47%, producing a total that destroys the page's credibility. 8% is
-   already far above any sustained historical run. */
 const DEFAULT_INFLATION = CARE_INFLATION_RATE;
-const INFLATION_STEP = 0.1;
-const YEARS_OF_CARE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8];
+const GOLD = "#B8862B"; // national median: large figure and bar
+const GOLD_TEXT = "#8A6110"; // national median: small text (darker for contrast)
+const GOLD_ICON = "#E3B85C";
+const FALLBACK = "#1b3a6b";
+
+/* careTypes.ts ids (9) → careCalculators.ts slugs (6). Written out because
+   the two lists do not line up; adult day and CCRC have no calculator. */
+const ID_TO_SLUG: Record<string, string> = {
+  "independent-living": "independent-living",
+  "adult-family-home": "adult-family-home",
+  "assisted-living": "assisted-living",
+  "memory-care": "memory-care",
+  "in-home": "in-home-care",
+  "nursing-semi": "nursing-home",
+  "nursing-private": "nursing-home",
+};
 
 interface CostOfCareEmbedProps {
   /** Must match an id in src/lib/careTypes.ts */
   careTypeId: string;
 }
 
-const ctrlLabel: React.CSSProperties = {
-  display: "block",
-  fontSize: 17,
-  fontWeight: 700,
-  fontFamily: "'DM Sans', sans-serif",
-  letterSpacing: "0.06em",
-  textTransform: "uppercase",
-  color: "#272421",
-  marginBottom: 8,
-  textAlign: "center",
-};
-const valueBox: React.CSSProperties = {
-  background: "#faf8f4",
-  border: "2px solid #dccdce",
-  borderRadius: 8,
-  padding: "4px 10px",
-  textAlign: "center",
-  minWidth: 60,
-  height: 44,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-};
-const valueText: React.CSSProperties = { fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: 18, color: "#0d5c63", lineHeight: 1 };
-const stepperBtn: React.CSSProperties = {
-  width: 44,
-  height: 44,
-  borderRadius: 8,
-  fontSize: "26px",
-  fontWeight: 700,
-  color: NAVY,
-  background: "#faf8f4",
-  border: "1px solid #dccdce",
-  cursor: "pointer",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexShrink: 0,
-};
-
+const HouseHeart = ({ color }: { color: string }) => (
+  <svg width="54" height="54" viewBox="0 0 64 64" fill="none" aria-hidden="true" focusable="false">
+    <path d="M8 30 L32 9 L56 30" stroke={color} strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M14 26 V54 H50 V26" stroke={color} strokeWidth="4.5" strokeLinejoin="round" />
+    <path d="M32 46 C24 40 21 36.5 21 32.5 C21 29.5 23.3 27.3 26 27.3 C28.4 27.3 30.4 28.8 32 31 C33.6 28.8 35.6 27.3 38 27.3 C40.7 27.3 43 29.5 43 32.5 C43 36.5 40 40 32 46 Z" stroke={color} strokeWidth="3.5" strokeLinejoin="round" />
+  </svg>
+);
 
 const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
   const [yearsOut, setYearsOut] = useState(0);
   const [yearsOfCareNeeded, setYearsOfCareNeeded] = useState(3);
-
-  const careType = useMemo(() => CARE_TYPES.find((c) => c.id === careTypeId) ?? CARE_TYPES[0], [careTypeId]);
-
-  /* This CTA used to point at /cost-of-care-calculator?care=<id>. That route
-     takes a PATH segment (/cost-of-care-calculator/:careSlug), not a query
-     string, so the param was ignored, the bare path matched, and every reader
-     who clicked "Open Full Calculator" was dumped back on the six-option hub.
-
-     Correcting the URL shape alone would not have been enough. Two separate
-     vocabularies are in play and they do not line up:
-
-       careTypes.ts     — 9 ids, drives this embed
-       careCalculators.ts — 6 slugs, all the :careSlug route will accept
-
-     Four ids happen to equal their slug. The rest need translating, and two
-     care types have no calculator at all. Mapping by string manipulation
-     would silently break again the moment either list changes, so the pairs
-     are written out.
-
-     If a calculator is ever built for adult day services or CCRCs, add the
-     slug here as well as in careCalculators.ts, or the link stays on the hub. */
-  /* True when this embed is rendered on the full calculator page itself.
-     Matched from the path rather than passed as a prop deliberately: six
-     article pages render this component, and a prop would mean six chances to
-     forget it. The check is locale-agnostic — /es/cost-of-care-calculator/...
-     and the other six translated paths all contain the same segment. */
-  /* i18n rewired 2026-08-12. The costOfCarePage namespace holds 99 keys,
-     translated into all eight locales — and after the Aug 6 rewrite of
-     CostOfCareCalculator.tsx (commit 0274a1aa) not one of them was referenced
-     by any code. Six calculator pages and seven translated locale routes were
-     rendering hardcoded English on top of translations that already existed.
-     Use these keys; do not reintroduce literal strings here. */
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { pathname } = useLocation();
 
-  /* Growth rate is fixed at the sourced default; the reader-adjustable
-     control was removed in Sept 2026 as more confusing than useful. */
+  const careType = useMemo(() => CARE_TYPES.find((c) => c.id === careTypeId) ?? CARE_TYPES[0], [careTypeId]);
+  const calculatorSlug = ID_TO_SLUG[careType.id];
+  const option = CARE_CALCULATORS.find((o) => o.slug === calculatorSlug);
+  const color = option?.color ?? FALLBACK;
+  const deep = shade(color, 0.38);
+  const tint = shade(color, -0.9);
+
+  /* The growth rate is fixed at the sourced default (reader control removed
+     Sept 2026). The "open the full calculator" link is hidden on the
+     calculator page itself, where it would point at the page being read. */
   const inflation = DEFAULT_INFLATION;
   const onCalculatorPage = pathname.includes("/cost-of-care-calculator");
-
-  const calculatorSlug = useMemo(() => {
-    const ID_TO_SLUG: Record<string, string> = {
-      "independent-living": "independent-living",
-      "adult-family-home": "adult-family-home",
-      "assisted-living": "assisted-living",
-      "memory-care": "memory-care",
-      /* Named differently in the two files. */
-      "in-home": "in-home-care",
-      /* Both nursing tiers share one calculator; it covers semi-private and
-         private rooms internally. */
-      "nursing-semi": "nursing-home",
-      "nursing-private": "nursing-home",
-      /* "adult-day" and "ccrc" are deliberately absent — no calculator exists
-         for either. They fall through to the hub, which is the honest
-         destination, and the CTA label changes to match. */
-    };
-    return ID_TO_SLUG[careType.id];
-  }, [careType.id]);
-
-  const projectedWaMonthly = useMemo(
-    () => careType.waMonthly * Math.pow(1 + inflation / 100, yearsOut),
-    [careType, yearsOut, inflation],
-  );
-  /* Null for adult family homes: the license category is Washington's, so
-     there is no national median to compare against. Every national figure
-     below renders a plain "no national figure" message in that case. */
+  /* Adult family homes are a Washington license type: no national median. */
   const hasNational = careType.nationalMonthly !== null;
-  const projectedNationalMonthly = useMemo(
-    () => (careType.nationalMonthly ?? 0) * Math.pow(1 + inflation / 100, yearsOut),
-    [careType, yearsOut, inflation],
-  );
   const NO_NATIONAL = "No national figure";
-  /* Derived values for the print summary. Restored alongside it from
-     0274a1aa^ — the Aug 6 Lovable rewrite deleted the summary and these with
-     it, while leaving 20-odd translated printSummary keys orphaned in all
-     eight locales. */
+
+  const projectedWaMonthly = monthlyIn(careType.waMonthly, inflation, yearsOut);
+  const projectedNationalMonthly = monthlyIn(careType.nationalMonthly ?? 0, inflation, yearsOut);
   const currentYear = new Date().getFullYear();
   const projectedWaAnnual = projectedWaMonthly * 12;
   const projectedNationalAnnual = projectedNationalMonthly * 12;
-  const totalWaCost = projectedWaMonthly * 12 * yearsOfCareNeeded;
-  const totalNationalCost = projectedNationalMonthly * 12 * yearsOfCareNeeded;
+  const totalWaCost = totalCareCost(careType.waMonthly, inflation, yearsOut, yearsOfCareNeeded);
+  const totalNationalCost = totalCareCost(careType.nationalMonthly ?? 0, inflation, yearsOut, yearsOfCareNeeded);
+  const averageMonthly = totalWaCost / (12 * yearsOfCareNeeded);
+  const diffPct = hasNational ? Math.round((careType.waMonthly / (careType.nationalMonthly as number) - 1) * 100) : 0;
+  const maxMonthly = Math.max(projectedWaMonthly, hasNational ? projectedNationalMonthly : 0);
+  /* English uses the short names from the mockup ("Assisted Living", not
+     "Assisted Living Community"); other locales keep their translated label. */
+  const careLabel =
+    (i18n.language ?? "en").startsWith("en") && option
+      ? option.shortLabel
+      : t(`costOfCarePage.careTypes.${careType.id}.label`, { defaultValue: careType.label });
+  const yearsWord = (n: number) => `${n} ${n === 1 ? "year" : "years"}`;
 
   return (
-    <div
-      style={{
-        background: "#ffffff",
-        border: "2px solid #dccdce",
-        borderRadius: 14,
-        padding: "1.5rem",
-        maxWidth: 640,
-        margin: "0 auto",
-        minWidth: 0,
-        width: "100%",
-        boxSizing: "border-box",
-      }}
-    >
-      {/* Same structure as the Cost by City & County card's header so the two
-          titles render identically: eyebrow, centred h2, tracking subtitle. */}
-      <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
-        <div style={{ fontSize: 13, letterSpacing: ".25em", textTransform: "uppercase", color: "#b62733", marginBottom: 8, fontWeight: 700 }}>
-          {t(`costOfCarePage.careTypes.${careType.id}.label`)}
-        </div>
-        <h2 className="coc-card-title" style={{ fontSize: 28, fontWeight: 700, color: "#272421", margin: 0 }}>
-          Cost of <strong className="coc-card-title-accent">Care Calculator</strong>
-        </h2>
-        <div style={{ fontSize: 13, color: "#3f4a46", marginTop: 6, letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>
-          {hasNational ? "Washington vs. National Median" : "Washington estimate"}
-        </div>
-      </div>
-
-      <div className="coc-controls" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px 12px", margin: "32px 0 18px" }}>
-        {/* Left: when care begins (0–20 years). */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 0 }}>
-          <label style={{ ...ctrlLabel }}>When Might Care Begin?</label>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <button onClick={() => setYearsOut((y) => Math.max(0, y - 1))} style={stepperBtn} aria-label="Care begins one year sooner">
-              −
-            </button>
-            <div className="coc-value" style={valueBox}>
-              <span style={valueText}>{yearsOut === 0 ? "Now" : `${yearsOut} ${yearsOut === 1 ? "yr" : "yrs"}`}</span>
-            </div>
-            <button onClick={() => setYearsOut((y) => Math.min(20, y + 1))} style={stepperBtn} aria-label="Care begins one year later">
-              +
-            </button>
-          </div>
-        </div>
-
-        {/* Right: years of care (1–10). */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 0 }}>
-          <label style={{ ...ctrlLabel }}>{t("costOfCarePage.card2.howManyYears")}</label>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <button onClick={() => setYearsOfCareNeeded((y) => Math.max(1, y - 1))} style={stepperBtn} aria-label={t("costOfCarePage.card2.decreaseYears")}>
-              −
-            </button>
-            <div className="coc-value" style={valueBox}>
-              <span style={valueText}>{yearsOfCareNeeded}</span>
-            </div>
-            <button onClick={() => setYearsOfCareNeeded((y) => Math.min(10, y + 1))} style={stepperBtn} aria-label={t("costOfCarePage.card2.increaseYears")}>
-              +
-            </button>
+    <div className="coc2" style={{ ["--c" as string]: color, ["--deep" as string]: deep, ["--tint" as string]: tint } as React.CSSProperties}>
+      <div className="coc2-head">
+        <HouseHeart color={GOLD_ICON} />
+        <div className="coc2-headtext">
+          <div className="coc2-eyebrow">Cost of Care Calculator</div>
+          <h2 className="coc2-title">{careLabel} in Washington</h2>
+          <div className="coc2-sub">
+            {hasNational ? "What care could cost, compared with the national median" : "What care could cost in Washington"}
           </div>
         </div>
       </div>
 
-      <div
-        className="coc-embed-results"
-        style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 8 }}
-      >
-        <div
-          style={{
-            background: "#faf8f4",
-            border: `2px solid ${COC_TEAL}b3`,
-            borderRadius: 10,
-            padding: "10px 12px",
-            textAlign: "center",
-          }}
-        >
-          <div
-            style={{
-              fontSize: 15,
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-              color: NAVY,
-              fontWeight: 700,
-              fontFamily: "'DM Sans', sans-serif",
-              marginBottom: 2,
-              lineHeight: 1.3,
-            }}
-          >
-            {t("costOfCarePage.results.washington")}
+      <div className="coc2-body">
+        <div className="coc2-controls">
+          <div className="coc2-ctrl">
+            <div className="coc2-label" id="coc2-begin">When might care begin?</div>
+            <div className="coc2-stepper" role="group" aria-labelledby="coc2-begin">
+              <button type="button" className="coc2-step" onClick={() => setYearsOut((y) => Math.max(0, y - 1))} aria-label="Care begins one year sooner" disabled={yearsOut === 0}>−</button>
+              <div className="coc2-val" aria-live="polite">{yearsOut === 0 ? "Now" : `In ${yearsWord(yearsOut)}`}</div>
+              <button type="button" className="coc2-step" onClick={() => setYearsOut((y) => Math.min(20, y + 1))} aria-label="Care begins one year later" disabled={yearsOut === 20}>+</button>
+            </div>
           </div>
-          <div style={{ lineHeight: 1.25, display: "flex", alignItems: "baseline", justifyContent: "center", gap: 6, flexWrap: "wrap" }}>
-            <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(18px,2.6vw,22px)", color: COC_TEAL }}>
-              {formatCurrency(projectedWaMonthly)}
-            </span>
-            <span style={{ fontSize: 15, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif" }}>
-              {t("costOfCarePage.results.perMonth")}
-            </span>
+          <div className="coc2-ctrl">
+            <div className="coc2-label" id="coc2-years">How many years of care?</div>
+            <div className="coc2-stepper" role="group" aria-labelledby="coc2-years">
+              <button type="button" className="coc2-step" onClick={() => setYearsOfCareNeeded((y) => Math.max(1, y - 1))} aria-label={t("costOfCarePage.card2.decreaseYears", { defaultValue: "One year fewer" })} disabled={yearsOfCareNeeded === 1}>−</button>
+              <div className="coc2-val" aria-live="polite">{yearsOfCareNeeded}</div>
+              <button type="button" className="coc2-step" onClick={() => setYearsOfCareNeeded((y) => Math.min(10, y + 1))} aria-label={t("costOfCarePage.card2.increaseYears", { defaultValue: "One year more" })} disabled={yearsOfCareNeeded === 10}>+</button>
+            </div>
           </div>
         </div>
-        <div
-          style={{
-            background: "#faf8f4",
-            border: `2px solid ${COC_TEAL}b3`,
-            borderRadius: 10,
-            padding: "10px 12px",
-            textAlign: "center",
-          }}
-        >
-          <div
-            style={{
-              fontSize: 15,
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-              color: NAVY,
-              fontWeight: 700,
-              fontFamily: "'DM Sans', sans-serif",
-              marginBottom: 2,
-              lineHeight: 1.3,
-            }}
-          >
-            {/* Hard-coded rather than t("costOfCarePage.results.nationalMedian"),
-                whose en.json text reads "National Average"; the figures are medians. */}
-            National Median
+
+        <div className={`coc2-compare${hasNational ? "" : " coc2-single"}`}>
+          <div className="coc2-fig">
+            <div className="coc2-figlabel">Washington</div>
+            <div className="coc2-fignum coc2-wa">{formatCurrency(projectedWaMonthly)}</div>
+            <div className="coc2-figper">per month{yearsOut > 0 ? ` in ${currentYear + yearsOut}` : ""}</div>
           </div>
-          {hasNational ? (
-            <div style={{ lineHeight: 1.25, display: "flex", alignItems: "baseline", justifyContent: "center", gap: 6, flexWrap: "wrap" }}>
-              <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "clamp(18px,2.6vw,22px)", color: NAVY }}>
-                {formatCurrency(projectedNationalMonthly)}
-              </span>
-              <span style={{ fontSize: 15, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif" }}>
-                {t("costOfCarePage.results.perMonth")}
-              </span>
-            </div>
-          ) : (
-            <div style={{ fontSize: 15, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif", lineHeight: 1.3 }}>
-              {NO_NATIONAL}: adult family homes are a Washington license type
+          {hasNational && (
+            <div className="coc2-fig">
+              <div className="coc2-figlabel">National median</div>
+              <div className="coc2-fignum coc2-nat">{formatCurrency(projectedNationalMonthly)}</div>
+              <div className="coc2-figper">per month{yearsOut > 0 ? ` in ${currentYear + yearsOut}` : ""}</div>
             </div>
           )}
         </div>
-      </div>
 
-      <div
-        style={{
-          background: "#faf8f4",
-          border: `2px solid ${COC_TEAL}b3`,
-          borderRadius: 10,
-          padding: "10px 12px",
-          textAlign: "center",
-          marginBottom: 12,
-        }}
-      >
-        <div
-          style={{
-            fontSize: 15,
-            letterSpacing: "0.08em",
-            textTransform: "uppercase",
-            color: NAVY,
-            fontWeight: 700,
-            fontFamily: "'DM Sans', sans-serif",
-            marginBottom: 2,
-            lineHeight: 1.3,
-          }}
-        >
-          {t("costOfCarePage.results.totalPlan", { years: yearsOfCareNeeded })}
-        </div>
-        <div
-          style={{
-            fontFamily: "'Courier New', monospace",
-            fontWeight: 700,
-            fontSize: "clamp(20px,3vw,26px)",
-            color: COC_TEAL,
-            lineHeight: 1.2,
-          }}
-        >
-          {formatCurrency(totalWaCost)}
-        </div>
-        <div
-          style={{ fontSize: 16, fontWeight: 600, color: "#1c1917", fontFamily: "'DM Sans', sans-serif", marginTop: 2, lineHeight: 1.3 }}
-        >
-          {hasNational
-            ? t("costOfCarePage.results.inWashingtonVs", { amount: formatCurrency(totalNationalCost) })
-            : "in Washington"}
-        </div>
-      </div>
-
-      {/* Growth-rate control and its source sentence removed Sept 2026 at
-          David's request. Projections still grow at DEFAULT_INFLATION; the
-          care-type note is also dropped here so the card ends on one line. */}
-      {/* Estimate rows (memory care, adult family home, independent living,
-          CCRC) say so here, so no reader takes them for a survey median. */}
-      {careType.estimate && (
-        <p className="coc-infl-source" style={{ margin: "6px 0 6px", textAlign: "center" }}>
-          {careType.note}
-        </p>
-      )}
-      <p className="coc-infl-source" style={{ margin: "6px 0 16px", textAlign: "center" }}>
-        {/* Source line hard-coded from careTypes.ts (not en.json) so the year
-            and the estimate caveat change with the figures. */}
-        <a href={COST_SOURCE_URL} target="_blank" rel="noopener noreferrer">
-          {COST_SOURCE_LINE}
-        </a>{" "}
-        Future years assume costs rise {inflation}% a year. Prices vary widely by area and care level; projections are estimates.
-      </p>
-
-      {/* AFH only: the statewide median above hides a wide county spread, so
-          the city/county lookup itself sits directly under this calculator. */}
-      {careType.id === "adult-family-home" && (
-        <div className="coc-no-print" style={{ marginBottom: 18 }}>
-          {/* Divider with a label so the lookup reads as a second, related tool
-              rather than a continuation of the projection above. */}
-          <div style={{ display: "flex", alignItems: "center", gap: 14, margin: "22px 0 18px" }}>
-            <span style={{ flex: 1, height: 3, background: "#0047ab" }} />
-            <div className="coc-divider-label">Now check your city or county</div>
-            <span style={{ flex: 1, height: 3, background: "#0047ab" }} />
+        {hasNational ? (
+          <div className="coc2-bars" aria-hidden="true">
+            <div className="coc2-barrow">
+              <div className="coc2-barname">Washington</div>
+              <div className="coc2-track"><div className="coc2-bar" style={{ width: `${(projectedWaMonthly / maxMonthly) * 100}%`, background: "var(--c)" }} /></div>
+              <div className="coc2-barval coc2-wa">{formatCurrency(projectedWaMonthly)}</div>
+            </div>
+            <div className="coc2-barrow">
+              <div className="coc2-barname">National median</div>
+              <div className="coc2-track"><div className="coc2-bar" style={{ width: `${(projectedNationalMonthly / maxMonthly) * 100}%`, background: GOLD }} /></div>
+              <div className="coc2-barval coc2-natsmall">{formatCurrency(projectedNationalMonthly)}</div>
+            </div>
+            <div className="coc2-diff">
+              Washington is about <strong>{Math.abs(diffPct)}% {diffPct >= 0 ? "higher" : "lower"}</strong>
+            </div>
           </div>
-          <AFHCostByLocationCard compact />
+        ) : (
+          <p className="coc2-note">{NO_NATIONAL}: adult family homes are a Washington license type, so there is no national median to compare.</p>
+        )}
+
+        <div className="coc2-result">
+          <div className="coc2-reslabel">Estimated total · {yearsWord(yearsOfCareNeeded)}</div>
+          <div className="coc2-total" aria-live="polite">{formatCurrency(totalWaCost)}</div>
+          {hasNational && <div className="coc2-vs">vs. {formatCurrency(totalNationalCost)} at the national median</div>}
+          <div className="coc2-avg">
+            About {formatCurrency(averageMonthly)} a month on average{yearsOfCareNeeded > 1 ? ", with costs rising each year" : ""}.
+          </div>
         </div>
-      )}
 
-      {/* The CTA is suppressed when this embed is rendered ON the full
-          calculator page, because there it points at the page you are already
-          reading. That was the actual bug behind two different reports: with
-          the old ?care= link it silently dropped the param and bounced the
-          reader to the six-option hub; once the link was correct it navigated
-          to the identical route, so the button looked dead.
+        {/* AFH only: the statewide figure hides a wide county spread, so the
+            city/county lookup sits directly under the calculator. */}
+        {careType.id === "adult-family-home" && (
+          <div className="coc-no-print coc2-afh">
+            <div className="coc2-afhhead">Now check your city or county</div>
+            <AFHCostByLocationCard compact />
+          </div>
+        )}
 
-          CostOfCareDetail renders this embed as its calculator body, so the
-          "open the full calculator" invitation is meaningless there. On the
-          six article pages that embed it, the CTA is the whole point. */}
-      {!onCalculatorPage && (
-        <div style={{ textAlign: "center" }}>
-        <Link
-          to={calculatorSlug ? `/cost-of-care-calculator/${calculatorSlug}` : "/cost-of-care-calculator"}
-          className="marquee-hover"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 8,
-            fontSize: 17,
-            fontWeight: 700,
-            fontFamily: "'DM Sans', sans-serif",
-            color: COC_TEAL,
-            background: "#ffffff",
-            border: `2px solid ${COC_TEAL}`,
-            borderRadius: 8,
-            padding: "12px 20px",
-            textDecoration: "none",
-          }}
-        >
-          {calculatorSlug
-            ? "Open Full Calculator (Compare Care Types) →"
-            : "Compare Care Costs →"}
-        </Link>
+        <div className="coc2-foot">
+          <p className="coc2-source">
+            {careType.estimate && <>{careType.note} </>}
+            <a href={COST_SOURCE_URL} target="_blank" rel="noopener noreferrer">{COST_SOURCE_LINE}</a> Includes a {inflation}% yearly
+            increase in costs. Actual prices vary by community and level of care.
+          </p>
+          <div className="coc2-actions coc-no-print">
+            <button type="button" className="coc2-print" onClick={() => window.print()}>
+              {t("costOfCarePage.printSummary.printButton", { defaultValue: "Print this summary" })} →
+            </button>
+            {!onCalculatorPage && (
+              <Link className="coc2-open" to={calculatorSlug ? `/cost-of-care-calculator/${calculatorSlug}` : "/cost-of-care-calculator"}>
+                {calculatorSlug ? "Open the full calculator →" : "Compare care costs →"}
+              </Link>
+            )}
+          </div>
         </div>
-      )}
-
-      {/* Print button. coc-no-print hides it from the printout itself —
-          a button rendered on paper is noise. */}
-      <div className="coc-no-print" style={{ textAlign: "center", marginBottom: 18 }}>
-        <button
-          type="button"
-          className="coc-print-btn"
-          onClick={() => window.print()}
-        >
-          {t("costOfCarePage.printSummary.printButton", { defaultValue: "Print this summary" })}
-        </button>
       </div>
 
       {/* PRINT SUMMARY — restored from 0274a1aa^ (the Aug 6 Lovable rewrite
@@ -544,141 +327,75 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
       </div>
 
       <style>{`
-        /* Narrow cards (phones, and the calculator column at tablet widths):
-           keep the two steppers side by side by shrinking them, never by
-           stacking. Buttons stay at the 40px tap floor. */
+        .coc2.coc2 { background: #ffffff; border: 1px solid #d3dfe8; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(20,40,58,0.08); max-width: 760px; margin: 0 auto; width: 100%; box-sizing: border-box; font-family: 'DM Sans', system-ui, sans-serif; color: #14283a; }
+        .coc2 .coc2-head { display: flex; align-items: center; gap: 18px; background: var(--deep); padding: 22px 26px; }
+        .coc2 .coc2-head svg { flex: 0 0 auto; }
+        .coc2 .coc2-headtext { min-width: 0; }
+        .coc2 .coc2-eyebrow.coc2-eyebrow { font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.18em !important; text-transform: uppercase; color: ${GOLD_ICON} !important; margin: 0 0 4px !important; }
+        .coc2 h2.coc2-title.coc2-title { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.4vw, 34px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #ffffff !important; margin: 0 !important; text-wrap: balance; }
+        .coc2 .coc2-sub.coc2-sub { font-size: 16px !important; color: rgba(255,255,255,0.88) !important; margin-top: 6px !important; line-height: 1.35 !important; }
+        .coc2 .coc2-body { padding: 24px 26px 20px; }
+        .coc2 .coc2-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; position: relative; }
+        .coc2 .coc2-ctrl { display: flex; flex-direction: column; align-items: center; min-width: 0; }
+        .coc2 .coc2-label.coc2-label { font-size: 17px !important; font-weight: 700 !important; color: #14283a !important; margin: 0 0 10px !important; text-align: center; }
+        .coc2 .coc2-stepper { display: flex; align-items: stretch; border: 1px solid #c9d7e2; border-radius: 12px; overflow: hidden; background: #ffffff; }
+        .coc2 button.coc2-step.coc2-step { width: 54px; min-height: 54px; display: flex; align-items: center; justify-content: center; background: #eef3f7 !important; color: var(--deep) !important; font-size: 28px !important; font-weight: 500 !important; line-height: 1 !important; border: 0 !important; cursor: pointer !important; padding: 0 !important; }
+        .coc2 button.coc2-step.coc2-step:hover:not(:disabled) { background: #dfe8ef !important; }
+        .coc2 button.coc2-step.coc2-step:disabled { color: #a3b1bc !important; cursor: default !important; }
+        .coc2 button.coc2-step.coc2-step:focus-visible { outline: 3px solid var(--c); outline-offset: -3px; }
+        .coc2 .coc2-val.coc2-val { min-width: 96px; padding: 0 12px; display: flex; align-items: center; justify-content: center; border-left: 1px solid #c9d7e2; border-right: 1px solid #c9d7e2; font-size: 22px !important; font-weight: 700 !important; color: #14283a !important; font-variant-numeric: tabular-nums; white-space: nowrap; }
+        .coc2 .coc2-compare { display: grid; grid-template-columns: 1fr 1fr; margin: 26px 0 18px; }
+        .coc2 .coc2-compare.coc2-single { grid-template-columns: 1fr; }
+        .coc2 .coc2-fig { text-align: center; padding: 0 10px; }
+        .coc2 .coc2-fig + .coc2-fig { border-left: 1px solid #dfe5ea; }
+        .coc2 .coc2-figlabel.coc2-figlabel { font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #14283a !important; margin-bottom: 4px !important; }
+        .coc2 .coc2-fignum.coc2-fignum { font-size: clamp(28px, 4vw, 38px) !important; font-weight: 700 !important; line-height: 1.1 !important; font-variant-numeric: tabular-nums; }
+        .coc2 .coc2-wa.coc2-wa { color: var(--c) !important; }
+        .coc2 .coc2-nat.coc2-nat { color: ${GOLD} !important; }
+        .coc2 .coc2-natsmall.coc2-natsmall { color: ${GOLD_TEXT} !important; }
+        .coc2 .coc2-figper.coc2-figper { font-size: 16px !important; color: #3f4a54 !important; margin-top: 2px !important; }
+        .coc2 .coc2-bars { margin: 0 0 20px; }
+        .coc2 .coc2-barrow { display: grid; grid-template-columns: 150px minmax(0, 1fr) 76px; align-items: center; gap: 12px; margin-bottom: 8px; }
+        .coc2 .coc2-barname.coc2-barname { font-size: 16px !important; font-weight: 600 !important; color: #14283a !important; white-space: nowrap; }
+        .coc2 .coc2-track { height: 16px; background: #f1f4f6; border-radius: 4px; overflow: hidden; }
+        .coc2 .coc2-bar { height: 100%; border-radius: 4px; transition: width 200ms ease; }
+        .coc2 .coc2-barval.coc2-barval { font-size: 16px !important; font-weight: 700 !important; font-variant-numeric: tabular-nums; text-align: right; }
+        .coc2 .coc2-diff.coc2-diff { text-align: center; font-size: 16px !important; color: #3f4a54 !important; margin-top: 6px !important; }
+        .coc2 .coc2-diff strong { color: #14283a !important; font-size: 16px !important; }
+        .coc2 .coc2-result { background: var(--tint); border-radius: 14px; padding: 20px 18px 18px; text-align: center; }
+        .coc2 .coc2-reslabel.coc2-reslabel { font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: var(--deep) !important; }
+        .coc2 .coc2-total.coc2-total { font-size: clamp(44px, 7.5vw, 68px) !important; font-weight: 800 !important; line-height: 1.05 !important; color: #14283a !important; font-variant-numeric: tabular-nums; margin: 6px 0 4px !important; letter-spacing: -0.01em; }
+        .coc2 .coc2-vs.coc2-vs { font-size: 17px !important; color: #3f4a54 !important; }
+        .coc2 .coc2-avg.coc2-avg { font-size: 17px !important; font-weight: 400 !important; color: #14283a !important; margin-top: 8px !important; }
+        .coc2 p.coc2-note.coc2-note { font-size: 15px !important; color: #3f4a54 !important; text-align: center; margin: 0 0 16px !important; }
+        .coc2 .coc2-afh { margin-top: 18px; }
+        .coc2 .coc2-afhhead.coc2-afhhead { font-size: 15px !important; font-weight: 700 !important; letter-spacing: 0.1em !important; text-transform: uppercase; color: var(--deep) !important; text-align: center; margin-bottom: 10px !important; }
+        .coc2 .coc2-foot { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 20px; margin-top: 18px; padding-top: 14px; border-top: 1px solid #dfe5ea; }
+        .coc2 p.coc2-source.coc2-source { flex: 1 1 340px; margin: 0 !important; padding-left: 12px; border-left: 4px solid #8a1c2b; font-size: 14px !important; font-weight: 400 !important; line-height: 1.5 !important; color: #3f4a54 !important; }
+        .coc2 p.coc2-source a { color: #3f4a54 !important; font-size: 14px !important; font-weight: 400 !important; text-decoration: underline; text-underline-offset: 2px; }
+        .coc2 .coc2-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+        .coc2 button.coc2-print.coc2-print, .coc2 a.coc2-open.coc2-open { background: none !important; border: 0 !important; padding: 4px 0 !important; min-height: 32px; font-family: 'DM Sans', sans-serif !important; font-size: 16px !important; font-weight: 600 !important; color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; cursor: pointer !important; }
         @media (max-width: 560px) {
-          .coc-controls { gap: 12px 8px !important; }
-          .coc-controls button { width: 40px !important; height: 40px !important; font-size: 22px !important; }
-          .coc-controls .coc-value { min-width: 48px !important; height: 40px !important; padding: 2px 6px !important; }
-          .coc-controls .coc-value span { font-size: 16px !important; }
-          .coc-controls label { font-size: 14px !important; letter-spacing: 0.04em !important; }
+          .coc2 .coc2-head { padding: 18px 16px; gap: 12px; }
+          .coc2 .coc2-head svg { width: 42px; height: 42px; }
+          .coc2 .coc2-body { padding: 18px 14px 16px; }
+          .coc2 .coc2-controls { gap: 12px 8px; }
+          .coc2 .coc2-label.coc2-label { font-size: 15px !important; }
+          .coc2 button.coc2-step.coc2-step { width: 44px; min-height: 48px; font-size: 24px !important; }
+          .coc2 .coc2-val.coc2-val { min-width: 64px; padding: 0 6px; font-size: 18px !important; }
+          .coc2 .coc2-barrow { grid-template-columns: 76px minmax(0, 1fr) 62px; gap: 8px; }
+          .coc2 .coc2-barname.coc2-barname, .coc2 .coc2-barval.coc2-barval { font-size: 14px !important; line-height: 1.25 !important; }
+          .coc2 .coc2-barname.coc2-barname { white-space: normal; }
+          .coc2 .coc2-actions { align-items: flex-start; }
         }
-        @media (max-width: 420px) {
-          .coc-embed-results { grid-template-columns: 1fr !important; }
+        @media (max-width: 400px) {
+          .coc2 .coc2-controls { grid-template-columns: 1fr; }
         }
-
-        /* GROWTH RATE CONTROL.
-           Doubled selectors: index.css sets font-size and colour on bare
-           div/span/p/button with !important. */
-        .coc-infl.coc-infl {
-          margin: 4px 0 18px;
-          padding: 14px 16px;
-          background: #f9f7f3;
-          border: 1px solid #e2d8cd;
-          border-radius: 10px;
-        }
-        .coc-infl-label.coc-infl-label {
-          font-family: "DM Sans", sans-serif !important;
-          font-size: 13px !important;
-          font-weight: 700 !important;
-          letter-spacing: 0.08em !important;
-          text-transform: uppercase !important;
-          color: #1B3A6B !important;
-          margin-bottom: 8px !important;
-        }
-        .coc-infl-row { display: flex; align-items: center; gap: 8px; }
-        /* 44px minimum: these sit under the same standard as every other tap
-           target on the site, and this control is used by people with arthritis. */
-        .coc-infl-btn.coc-infl-btn {
-          min-width: 44px;
-          min-height: 44px;
-          font-size: 22px !important;
-          font-weight: 700 !important;
-          line-height: 1 !important;
-          color: #1B3A6B !important;
-          background: #ffffff !important;
-          border: 2px solid #dccdce !important;
-          border-radius: 8px !important;
-          cursor: pointer !important;
-        }
-        .coc-infl-btn.coc-infl-btn:hover:not(:disabled) { background: #f2ece4 !important; }
-        .coc-infl-btn.coc-infl-btn:disabled { opacity: 0.4; cursor: default !important; }
-        .coc-infl-btn.coc-infl-btn:focus-visible,
-        .coc-infl-value.coc-infl-value:focus-visible {
-          outline: 3px solid #1B3A6B !important;
-          outline-offset: 2px !important;
-        }
-        .coc-infl-value.coc-infl-value {
-          font-family: "Courier New", monospace !important;
-          font-weight: 700 !important;
-          font-size: 24px !important;
-          color: #14655f !important;
-          background: #faf8f4 !important;
-          border: 2px solid #dccdce !important;
-          border-radius: 8px !important;
-          padding: 6px 14px !important;
-          min-width: 84px;
-          text-align: center;
-        }
-        .coc-infl-bars {
-          display: flex;
-          align-items: flex-end;
-          gap: 3px;
-          height: 26px;
-          margin: 12px 0 4px;
-        }
-        .coc-infl-bar {
-          flex: 1;
-          height: 60%;
-          border-radius: 2px;
-          background: #ded5c9;
-          transition: background 140ms ease, height 140ms ease;
-        }
-        .coc-infl-bar.is-filled { background: #14655f; height: 100%; }
-        /* The anchor bar marks the sourced default. Height and colour BOTH
-           change, so it is not signalled by colour alone. */
-        .coc-infl-bar.is-anchor {
-          background: #6b1b22;
-          height: 100%;
-        }
-        .coc-infl-scale {
-          display: flex;
-          justify-content: space-between;
-          font-family: "DM Sans", sans-serif;
-          font-size: 13px;
-          color: #1c1917;
-        }
-        .coc-infl-source.coc-infl-source {
-          font-family: "DM Sans", sans-serif !important;
-          font-size: 14px !important;
-          line-height: 1.5 !important;
-          color: #1c1917 !important;
-          margin: 10px 0 0 !important;
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .coc-infl-bar { transition: none !important; }
-        }
-
-        /* The summary is the print artefact; the interactive card is not.
-           Families print this and take it to siblings or an attorney, so it
-           has to stand alone on paper without steppers or buttons. */
-        .coc-print-btn.coc-print-btn {
-          min-height: 44px;
-          padding: 10px 20px !important;
-          font-family: "DM Sans", sans-serif !important;
-          font-size: 16px !important;
-          font-weight: 700 !important;
-          color: #14655f !important;
-          background: #ffffff !important;
-          border: 2px solid #14655f !important;
-          border-radius: 8px !important;
-          cursor: pointer !important;
-        }
-        .coc-print-btn.coc-print-btn:hover { background: #f2ece4 !important; }
-        .coc-print-btn.coc-print-btn:focus-visible {
-          outline: 3px solid #14655f !important;
-          outline-offset: 3px !important;
-        }
+        @media (prefers-reduced-motion: reduce) { .coc2 .coc2-bar { transition: none; } }
         .coc-print-summary { display: none; }
         @media print {
           .coc-no-print { display: none !important; }
-          .coc-print-summary {
-            display: block !important;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #111;
-            background: #fff;
-          }
+          .coc-print-summary { display: block !important; font-family: Arial, Helvetica, sans-serif; color: #111; background: #fff; }
         }
       `}</style>
     </div>
