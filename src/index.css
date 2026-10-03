@@ -2214,7 +2214,7 @@ button:not([data-nav-button]),
   background-image: url("/rpp-logo-pattern.svg");
   background-repeat: repeat;
   background-size: 300px 280px;
-  opacity: 0.035;
+  opacity: 0.02;
 }
 
 /* Exempt RolesAndResponsibilities tile typography from global overrides */
