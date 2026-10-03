@@ -477,7 +477,7 @@ const AFHFinancingCalculator = () => {
                   return (
                     <g key={r.n}>
                       <polyline points={pts} fill="none" stroke={col} strokeWidth="4" strokeLinejoin="round" />
-                      <text x={x(grid.length - 1) + 8} y={placed[si] + 5} fontSize="14" fill={col === "#9aa5ae" ? "#5b6874" : col} fontWeight="700">
+                      <text x={x(grid.length - 1) + 8} y={placed[si] + 5} fontSize="14" fill={col === "#9aa5ae" ? "#2b3640" : col} fontWeight="700">
                         {r.n} beds{r.n === filledCount ? " (today)" : ""}
                       </text>
                     </g>
@@ -581,7 +581,7 @@ const AFHFinancingCalculator = () => {
           .ck table.fin-table tr:last-child th, .ck table.fin-table tr:last-child td { border-bottom: 0; }
           .ck .fin-slider { background: var(--tint); border-radius: 12px; padding: 14px 16px 10px; margin: 0 0 12px; }
           .ck .fin-sliderval { font-size: 26px; font-weight: 800; color: var(--deep); font-variant-numeric: tabular-nums; }
-          .ck .fin-scale { display: flex; justify-content: space-between; font-size: 14px; color: #3f4a54; font-weight: 600; }
+          .ck .fin-scale { display: flex; justify-content: space-between; font-size: 14px; color: #1f2933; font-weight: 600; }
           .ck .fin-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 10px; font-size: 15px; color: ${INK}; font-weight: 600; }
           .ck .fin-legend > div { display: flex; align-items: center; gap: 8px; }
           @media (max-width: 640px) { .fin-beds { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }

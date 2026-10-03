@@ -110,10 +110,11 @@ const AFHRevenueBuilder = ({
 
   return (
     <div style={{ border: `1.5px solid ${accent}55`, background: "#faf8f4", borderRadius: 10, padding: "1rem 1.1rem", marginBottom: 16 }}>
-      <style>{`@media (max-width: 640px) {
+      <style>{`.rb-table .rb-note.rb-note { color: #1f2933 !important; font-weight: 500 !important; }
+@media (max-width: 640px) {
   .rb-grid2 { grid-template-columns: 1fr !important; }
   .rb-table.rb-table { font-size: 14px !important; }
-  .rb-table .rb-note.rb-note { font-size: 13px !important; line-height: 1.4 !important; }
+  .rb-table .rb-note.rb-note { font-size: 14px !important; line-height: 1.4 !important; }
   .rb-table .rb-beds.rb-beds { width: 52px !important; }
   .rb-table .rb-rate.rb-rate { font-size: 14px !important; }
   .rb-table td, .rb-table th { padding-left: 3px !important; padding-right: 3px !important; }
@@ -161,7 +162,7 @@ const AFHRevenueBuilder = ({
             <tr key={r.key} style={{ borderBottom: "1px solid #eee" }}>
               <td style={{ padding: "8px 6px" }}>
                 <strong style={{ color: "#272421" }}>{r.label}</strong>
-                <div className="rb-note" style={{ color: "#3f4a46", fontSize: 16 }}>
+                <div className="rb-note" style={{ color: "#1f2933", fontSize: 16, fontWeight: 500 }}>
                   {money(r.low)} – {money(r.high)}
                   {r.openEnded ? "+" : ""} · {r.note}
                 </div>
@@ -183,7 +184,7 @@ const AFHRevenueBuilder = ({
           <tr style={{ borderBottom: "1px solid #eee" }}>
             <td style={{ padding: "8px 6px" }}>
               <strong style={{ color: "#272421" }}>Medicaid</strong>
-              <div className="rb-note" style={{ color: "#3f4a46", fontSize: 16 }}>
+              <div className="rb-note" style={{ color: "#1f2933", fontSize: 16, fontWeight: 500 }}>
                 {money(monthly(med.minDaily))} – {money(monthly(med.maxDaily))} · DSHS {AFH_RATE_REGION_LABELS[region]} rate, lightest to heaviest care
               </div>
             </td>
@@ -227,7 +228,7 @@ const AFHRevenueBuilder = ({
       </div>
 
       {overCap && (
-        <p style={{ fontSize: 14, color: "#b62733", margin: "0 0 10px", fontWeight: 600 }}>
+        <p style={{ fontSize: 14, color: "#9b1c1c", margin: "0 0 10px", fontWeight: 600 }}>
           A Washington adult family home is licensed for at most 8 residents; reduce the bed count.
         </p>
       )}
@@ -253,7 +254,7 @@ const AFHRevenueBuilder = ({
       >
         Use this revenue in the calculator
       </button>
-      <p style={{ fontSize: 16, lineHeight: 1.5, color: "#3f4a46", margin: "12px 0 0" }}>
+      <p style={{ fontSize: 16, lineHeight: 1.5, color: "#1f2933", margin: "12px 0 0" }}>
         Private-pay ranges are {FEATURED_APPRAISER.name}'s working bands from brokerage and appraisal experience (reviewed September
         2026); Medicaid rates are the DSHS schedule effective July 1, 2026. You can still type your own gross revenue
         below if you have the actual P&amp;L.{" "}

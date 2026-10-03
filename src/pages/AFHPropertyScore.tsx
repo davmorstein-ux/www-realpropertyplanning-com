@@ -82,7 +82,7 @@ const PAGE_CSS = `
   @media (hover: hover) { .aps-opt:hover { border-color: ${PLUM}; background: ${SOFT}; } }
   .aps-opt:focus-visible { border-color: ${PLUM}; background: ${SOFT}; outline: 3px solid ${CK_GOLD_ICON}; outline-offset: 2px; }
   .aps-opt[aria-pressed="true"] { border-color: ${PLUM_DARK}; background: ${PLUM_DARK}; color: #fff; }
-  .aps-opt.aps-unsure { font-weight: 500; border-style: dashed; color: #3b3630; }
+  .aps-opt.aps-unsure { font-weight: 500; border-style: dashed; color: #1f2933; }
   .aps-opt.aps-unsure[aria-pressed="true"] { color: #fff; border-style: solid; }
   .aps-go { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 12px 26px; border-radius: 10px; border: 2px solid ${PLUM}; background: ${PLUM}; color: #fff !important; font-family: ${FONT}; font-size: 18px !important; font-weight: 700; cursor: pointer; text-decoration: none; }
   .aps-go.aps-ghost { background: #fff; color: ${PLUM_DARK} !important; }
@@ -291,7 +291,7 @@ const AFHPropertyScore = () => {
               <Band title="AFH Property Score" />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12, marginBottom: 8, fontFamily: FONT }}>
                 <span style={{ fontSize: 14, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: PLUM_DARK }}>{SECTION_LABEL(q)}</span>
-                <span style={{ fontSize: 16, color: "#3b3630", whiteSpace: "nowrap" }}>{step + 1} of {questions.length}</span>
+                <span style={{ fontSize: 16, color: "#1f2933", whiteSpace: "nowrap" }}>{step + 1} of {questions.length}</span>
               </div>
               <div className="aps-bar" role="progressbar" aria-valuemin={0} aria-valuemax={questions.length} aria-valuenow={step + 1} aria-label="Progress">
                 <span style={{ width: `${((step + 1) / questions.length) * 100}%` }} />
@@ -342,7 +342,7 @@ const AFHPropertyScore = () => {
                 ) : (
                   <div className="aps-scorebox">
                     <h2 ref={headingRef} tabIndex={-1} className="aps-score" style={{ fontFamily: FONT, fontWeight: 800, color: PLUM_DARK }}>
-                      {scoreText(result)}<span style={{ fontSize: "0.4em", fontWeight: 700, color: "#3b3630" }}> / 100</span>
+                      {scoreText(result)}<span style={{ fontSize: "0.4em", fontWeight: 700, color: "#1f2933" }}> / 100</span>
                     </h2>
                     <p style={{ ...body, fontSize: 20, fontWeight: 700 }}>
                       {result.flagsToInvestigate === 0 ? "No items to investigate" : `${result.flagsToInvestigate} item${result.flagsToInvestigate === 1 ? "" : "s"} to investigate`} · Conversion burden: {result.burden.level}
@@ -356,7 +356,7 @@ const AFHPropertyScore = () => {
                     )}
                   </div>
                 )}
-                <p className="aps-tight" style={{ ...body, fontSize: 16, color: "#3b3630", maxWidth: 680, margin: "0 auto" }}>
+                <p className="aps-tight" style={{ ...body, fontSize: 16, color: "#1f2933", maxWidth: 680, margin: "0 auto" }}>
                   <strong>A good score is not approval.</strong> Based solely on answers entered by the user. Not an inspection, an appraisal, or a building or licensing determination.
                 </p>
               </div>
@@ -411,7 +411,7 @@ const AFHPropertyScore = () => {
                     {result.burden.projects.map((p) => <li key={p.project}><strong>{p.project}</strong>: {CURE_LABEL[p.cls]}</li>)}
                   </ul>
                 )}
-                <p className="aps-tight" style={{ ...body, fontSize: 16, color: "#3b3630" }}>Cost ranges are rough planning figures, not estimates for this house. Several moderate projects together can matter more than any single one.</p>
+                <p className="aps-tight" style={{ ...body, fontSize: 16, color: "#1f2933" }}>Cost ranges are rough planning figures, not estimates for this house. Several moderate projects together can matter more than any single one.</p>
               </div>
 
               {/* Showing checklist */}
@@ -424,7 +424,7 @@ const AFHPropertyScore = () => {
                       <span aria-hidden="true" style={{ flex: "0 0 22px", width: 22, height: 22, border: `2px solid ${PLUM}`, borderRadius: 4, marginTop: 3 }} />
                       <span style={{ ...body, fontSize: 17, lineHeight: 1.5 }}>
                         <strong style={{ display: "block", fontSize: 18 }}>{c.title}</strong>
-                        {c.text}{c.source ? <span style={{ color: "#3b3630", fontSize: 15 }}> ({c.source})</span> : null}
+                        {c.text}{c.source ? <span style={{ color: "#1f2933", fontSize: 15 }}> ({c.source})</span> : null}
                       </span>
                     </li>
                   ))}

@@ -222,20 +222,20 @@ export const CK_CSS = `
 .ck input.ck-input.ck-input, .ck select.ck-input.ck-input { width: 100%; min-height: 48px; box-sizing: border-box; padding: 10px 14px !important; font-family: 'DM Sans', sans-serif !important; font-size: 17px !important; font-weight: 500 !important; color: #14283a !important; background: #ffffff !important; border: 1px solid #c9d7e2 !important; border-radius: 10px !important; font-variant-numeric: tabular-nums; }
 .ck input.ck-input.ck-input:focus, .ck select.ck-input.ck-input:focus { outline: none; border-color: var(--c) !important; box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 22%, transparent); }
 .ck .ck-suffix.ck-suffix { flex: 0 0 auto; font-size: 15px !important; font-weight: 700 !important; color: var(--c) !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.ck .ck-hint.ck-hint { font-size: 14px !important; line-height: 1.45 !important; color: #5b6874 !important; margin-top: 6px !important; }
+.ck .ck-hint.ck-hint { font-size: 14px !important; line-height: 1.45 !important; color: #2b3640 !important; margin-top: 6px !important; }
 .ck .ck-seg { display: inline-flex; flex: 0 0 auto; border: 1px solid #c9d7e2; border-radius: 10px; overflow: hidden; }
-.ck button.ck-segopt.ck-segopt { flex: 0 0 auto; width: 48px !important; min-width: 48px !important; min-height: 46px !important; padding: 0 14px !important; background: #eef3f7 !important; color: #3f4a54 !important; font-family: 'DM Sans', sans-serif !important; font-size: 16px !important; font-weight: 700 !important; border: 0 !important; cursor: pointer !important; }
+.ck button.ck-segopt.ck-segopt { flex: 0 0 auto; width: 48px !important; min-width: 48px !important; min-height: 46px !important; padding: 0 14px !important; background: #eef3f7 !important; color: #1f2933 !important; font-family: 'DM Sans', sans-serif !important; font-size: 16px !important; font-weight: 700 !important; border: 0 !important; cursor: pointer !important; }
 .ck button.ck-segopt.ck-segopt.ck-on { background: var(--deep) !important; color: #ffffff !important; }
 .ck button.ck-segopt.ck-segopt:focus-visible { outline: 3px solid ${CK_GOLD}; outline-offset: -3px; }
 .ck .ck-hero { background: var(--tint); border-radius: 14px; padding: 20px 18px 18px; text-align: center; margin: 4px 0 14px; }
 .ck .ck-herolabel.ck-herolabel { font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: var(--deep) !important; }
 .ck .ck-heronum.ck-heronum { font-size: clamp(44px, 7.5vw, 66px) !important; font-weight: 800 !important; line-height: 1.05 !important; color: #14283a !important; font-variant-numeric: tabular-nums; margin: 6px 0 4px !important; letter-spacing: -0.01em; }
-.ck .ck-herosub.ck-herosub { font-size: 17px !important; color: #3f4a54 !important; }
+.ck .ck-herosub.ck-herosub { font-size: 17px !important; color: #1f2933 !important; font-weight: 500 !important; }
 .ck .ck-heronote.ck-heronote { font-size: 16px !important; color: #14283a !important; margin-top: 8px !important; }
 .ck .ck-bad.ck-bad { color: #9b1c1c !important; }
 .ck .ck-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0 0 16px; }
 .ck .ck-stat { border: 1px solid #e1e7ec; border-radius: 12px; padding: 12px 14px; text-align: center; background: #ffffff; }
-.ck .ck-statlabel.ck-statlabel { font-size: 12px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; color: #5b6874 !important; }
+.ck .ck-statlabel.ck-statlabel { font-size: 12px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase; color: #2b3640 !important; }
 .ck .ck-statval.ck-statval { font-size: 22px !important; font-weight: 700 !important; color: var(--deep) !important; margin-top: 4px !important; font-variant-numeric: tabular-nums; }
 .ck .ck-bars { margin: 0 0 16px; }
 .ck .ck-barrow { display: grid; grid-template-columns: 170px minmax(0, 1fr) 104px; align-items: center; gap: 12px; margin-bottom: 8px; }
@@ -245,13 +245,13 @@ export const CK_CSS = `
 .ck .ck-barval.ck-barval { font-size: 15px !important; font-weight: 700 !important; color: var(--c) !important; text-align: right; white-space: nowrap; min-width: 64px; font-variant-numeric: tabular-nums; }
 .ck .ck-goldtext.ck-goldtext { color: ${CK_GOLD_TEXT} !important; }
 .ck ul.ck-notes { list-style: none !important; margin: 0 0 16px !important; padding: 14px 16px !important; background: #f6f8fa; border-radius: 12px; }
-.ck ul.ck-notes li { display: block !important; font-size: 15px !important; line-height: 1.5 !important; color: #3f4a54 !important; padding: 3px 0 3px 18px; position: relative; }
+.ck ul.ck-notes li { display: block !important; font-size: 15px !important; font-weight: 500 !important; line-height: 1.5 !important; color: #1f2933 !important; padding: 3px 0 3px 18px; position: relative; }
 .ck ul.ck-notes li::before { content: ""; position: absolute; left: 2px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--c); }
 .ck ul.ck-notes li strong { color: #14283a !important; font-size: 15px !important; }
-.ck .ck-waiting.ck-waiting { background: #f6f8fa; border: 1px dashed #c9d7e2; border-radius: 14px; padding: 22px 18px; text-align: center; font-size: 16px !important; color: #3f4a54 !important; margin: 4px 0 14px; }
+.ck .ck-waiting.ck-waiting { background: #f6f8fa; border: 1px dashed #c9d7e2; border-radius: 14px; padding: 22px 18px; text-align: center; font-size: 16px !important; color: #1f2933 !important; margin: 4px 0 14px; }
 .ck .ck-foot { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 20px; margin-top: 6px; padding-top: 14px; border-top: 1px solid #dfe5ea; }
-.ck .ck-source.ck-source { flex: 1 1 340px; padding-left: 12px; border-left: 4px solid #8a1c2b; font-size: 14px !important; font-weight: 400 !important; line-height: 1.5 !important; color: #3f4a54 !important; }
-.ck .ck-source a { color: #3f4a54 !important; font-size: 14px !important; text-decoration: underline; text-underline-offset: 2px; }
+.ck .ck-source.ck-source { flex: 1 1 340px; padding-left: 12px; border-left: 4px solid #8a1c2b; font-size: 14px !important; font-weight: 500 !important; line-height: 1.5 !important; color: #1f2933 !important; }
+.ck .ck-source a { color: #1f2933 !important; font-size: 14px !important; text-decoration: underline; text-underline-offset: 2px; }
 .ck .ck-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
 .ck .ck-actions a, .ck .ck-actions button { background: none !important; border: 0 !important; padding: 4px 0 !important; min-height: 32px; font-family: 'DM Sans', sans-serif !important; font-size: 16px !important; font-weight: 600 !important; color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; cursor: pointer !important; }
 @media (max-width: 640px) {

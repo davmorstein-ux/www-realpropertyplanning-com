@@ -219,7 +219,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         <h2 style={{ fontSize: "22px", margin: "0 0 4px", color: "#111" }}>
           {t("costOfCarePage.printSummary.title")}
         </h2>
-        <p style={{ fontSize: "12px", color: "#555", margin: "0 0 18px" }}>
+        <p style={{ fontSize: "12px", color: "#222", margin: "0 0 18px" }}>
           {t("costOfCarePage.printSummary.preparedVia", {
             date: new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
           })}
@@ -317,7 +317,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           </tbody>
         </table>
         <p
-          style={{ fontSize: "11px", color: "#777", margin: "20px 0 0", borderTop: "1px solid #ccc", paddingTop: 8 }}
+          style={{ fontSize: "11px", color: "#333", margin: "20px 0 0", borderTop: "1px solid #ccc", paddingTop: 8 }}
         >
           {/* Hard-coded: en.json's printSummary.footer credits every figure to
               CareScout/Genworth, which is not true of the estimate rows. */}
@@ -353,26 +353,26 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         .coc2 .coc2-wa.coc2-wa { color: var(--c) !important; }
         .coc2 .coc2-nat.coc2-nat { color: ${GOLD} !important; }
         .coc2 .coc2-natsmall.coc2-natsmall { color: ${GOLD_TEXT} !important; }
-        .coc2 .coc2-figper.coc2-figper { font-size: 16px !important; color: #3f4a54 !important; margin-top: 2px !important; }
+        .coc2 .coc2-figper.coc2-figper { font-size: 16px !important; color: #1f2933 !important; margin-top: 2px !important; }
         .coc2 .coc2-bars { margin: 0 0 20px; }
         .coc2 .coc2-barrow { display: grid; grid-template-columns: 150px minmax(0, 1fr) 76px; align-items: center; gap: 12px; margin-bottom: 8px; }
         .coc2 .coc2-barname.coc2-barname { font-size: 16px !important; font-weight: 600 !important; color: #14283a !important; white-space: nowrap; }
         .coc2 .coc2-track { height: 16px; background: #f1f4f6; border-radius: 4px; overflow: hidden; }
         .coc2 .coc2-bar { height: 100%; border-radius: 4px; transition: width 200ms ease; }
         .coc2 .coc2-barval.coc2-barval { font-size: 16px !important; font-weight: 700 !important; font-variant-numeric: tabular-nums; text-align: right; }
-        .coc2 .coc2-diff.coc2-diff { text-align: center; font-size: 16px !important; color: #3f4a54 !important; margin-top: 6px !important; }
+        .coc2 .coc2-diff.coc2-diff { text-align: center; font-size: 16px !important; color: #1f2933 !important; margin-top: 6px !important; }
         .coc2 .coc2-diff strong { color: #14283a !important; font-size: 16px !important; }
         .coc2 .coc2-result { background: var(--tint); border-radius: 14px; padding: 20px 18px 18px; text-align: center; }
         .coc2 .coc2-reslabel.coc2-reslabel { font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: var(--deep) !important; }
         .coc2 .coc2-total.coc2-total { font-size: clamp(44px, 7.5vw, 68px) !important; font-weight: 800 !important; line-height: 1.05 !important; color: #14283a !important; font-variant-numeric: tabular-nums; margin: 6px 0 4px !important; letter-spacing: -0.01em; }
-        .coc2 .coc2-vs.coc2-vs { font-size: 17px !important; color: #3f4a54 !important; }
+        .coc2 .coc2-vs.coc2-vs { font-size: 17px !important; color: #1f2933 !important; }
         .coc2 .coc2-avg.coc2-avg { font-size: 17px !important; font-weight: 400 !important; color: #14283a !important; margin-top: 8px !important; }
-        .coc2 p.coc2-note.coc2-note { font-size: 15px !important; color: #3f4a54 !important; text-align: center; margin: 0 0 16px !important; }
+        .coc2 p.coc2-note.coc2-note { font-size: 15px !important; color: #1f2933 !important; text-align: center; margin: 0 0 16px !important; }
         .coc2 .coc2-afh { margin-top: 18px; }
         .coc2 .coc2-afhhead.coc2-afhhead { font-size: 15px !important; font-weight: 700 !important; letter-spacing: 0.1em !important; text-transform: uppercase; color: var(--deep) !important; text-align: center; margin-bottom: 10px !important; }
         .coc2 .coc2-foot { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 20px; margin-top: 18px; padding-top: 14px; border-top: 1px solid #dfe5ea; }
-        .coc2 p.coc2-source.coc2-source { flex: 1 1 340px; margin: 0 !important; padding-left: 12px; border-left: 4px solid #8a1c2b; font-size: 14px !important; font-weight: 400 !important; line-height: 1.5 !important; color: #3f4a54 !important; }
-        .coc2 p.coc2-source a { color: #3f4a54 !important; font-size: 14px !important; font-weight: 400 !important; text-decoration: underline; text-underline-offset: 2px; }
+        .coc2 p.coc2-source.coc2-source { flex: 1 1 340px; margin: 0 !important; padding-left: 12px; border-left: 4px solid #8a1c2b; font-size: 14px !important; font-weight: 500 !important; line-height: 1.5 !important; color: #1f2933 !important; }
+        .coc2 p.coc2-source a { color: #1f2933 !important; font-size: 14px !important; font-weight: 400 !important; text-decoration: underline; text-underline-offset: 2px; }
         .coc2 .coc2-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
         .coc2 button.coc2-print.coc2-print, .coc2 a.coc2-open.coc2-open { background: none !important; border: 0 !important; padding: 4px 0 !important; min-height: 32px; font-family: 'DM Sans', sans-serif !important; font-size: 16px !important; font-weight: 600 !important; color: #1B3A6B !important; text-decoration: underline !important; text-underline-offset: 3px; cursor: pointer !important; }
         @media (max-width: 560px) {
