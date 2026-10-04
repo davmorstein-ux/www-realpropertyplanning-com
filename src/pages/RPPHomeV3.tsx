@@ -6,8 +6,8 @@ import Header from "@/components/Header";
    path every working icon on this site already uses: the file is emitted with
    a content hash and the URL is resolved at build time, so it cannot silently
    go missing. */
-import heroDesktop from "@/assets/hero/rpp-hero-2029.webp";
-import heroMobile from "@/assets/hero/rpp-hero-2029-mobile.webp";
+import heroDesktop from "@/assets/hero/rpp-hero-2030.webp";
+import heroMobile from "@/assets/hero/rpp-hero-2030-mobile.webp";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
@@ -68,7 +68,14 @@ const RPPHomeV3 = () => {
         >
           <img
             id="rpp-hero-image"
-            /* rpp-hero-2029 (Sept 2026): photographic entryway — cream wall,
+            /* rpp-hero-2030 (Oct 4, 2026): the same entryway photograph, recut
+               by the owner with more headroom — the lantern, ceiling line,
+               rug and right-hand planter are no longer clipped. Desktop
+               1920x364 (5.27:1); mobile 1200x430, cropped from the right so
+               the console, door and planter all show. The notes below
+               describe rpp-hero-2029, the previous cut of this image.
+
+               rpp-hero-2029 (Sept 2026): photographic entryway — cream wall,
                console with mirror and olive branches, open brick-red front
                door (#B0352A, the AFH Club logo door) onto a garden path.
                Cut from a true panorama render, so the whole room fits the
@@ -101,15 +108,15 @@ const RPPHomeV3 = () => {
             width={1920}
             /* Must match the file. The intrinsic ratio is what reserves
                space before the image loads; a stale value here causes the
-               page to jump as it arrives. 1920x340 is the artwork's own
-               5.65:1 shape. This number has been wrong after an art swap
+               page to jump as it arrives. 1920x364 is the artwork's own
+               5.27:1 shape (was 1920x340 before Oct 4, 2026). This number has been wrong after an art swap
                more than once; change it in the same commit as the images,
                every time.
 
                PREVIOUS ARTWORK WAS 4.66:1 (1920x412). The 2028 replacement
                is a shorter band, so the hero is about 72px shorter at full
                width. */
-            height={340}
+            height={364}
             alt={t("hero.imageAlt")}
             /* IN NORMAL FLOW, NOT ABSOLUTE. The tagline no longer sits on the
                photograph at any width — it stacks beneath it.
