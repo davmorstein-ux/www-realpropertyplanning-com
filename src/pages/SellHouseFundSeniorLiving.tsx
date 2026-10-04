@@ -17,6 +17,7 @@ import fundSeniorLivingIcon from "@/assets/icons/fund-senior-living-icon-washing
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import NextQuestions from "@/components/NextQuestions";
 import QuickAnswers from "@/components/QuickAnswers";
+import MoveOrSellFirst from "@/components/guides/MoveOrSellFirst";
 
 const steps = [
   {
@@ -219,6 +220,9 @@ const SellHouseFundSeniorLiving = () => {
             </div>
           </div>
         </section>
+
+        {/* Section 3b — Move or sell first; paying until it sells (Oct 4, 2026) */}
+        <MoveOrSellFirst />
 
         {/* Section 4 — FAQ */}
         <section className="py-16 md:py-20 bg-secondary">
