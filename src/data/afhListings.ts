@@ -1338,6 +1338,7 @@ export const afhListings: AFHListing[] = [
     broker: "Richard Maxwell",
     brokerage: "Green Path Real Estate",
     listingContactPhone: "(206) 910-5808",
+    listingContactEmail: "rick.maxwell@comcast.net",
     mlsNum: "2411034",
     businessNotes: "Long-running adult family home; the operating business was owned by the tenant and sold separately (NWMLS #2411321) with a simultaneous close.",
   },
