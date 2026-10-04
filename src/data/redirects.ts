@@ -256,4 +256,14 @@ export const REDIRECTS: SiteRedirect[] = [
   { from: "/counties/wahkiakum-county", to: "/wahkiakum-county" },
   { from: "/service-areas/wahkiakum-county", to: "/wahkiakum-county" },
   { from: "/wahkiakum-county-probate-estate-real-estate", to: "/wahkiakum-county" },
+  /* AFH listings that expired or were cancelled (Oct 3, 2026). NWMLS IDX rules do not
+     allow expired or withdrawn listings to be displayed, so their pages were removed. */
+  { from: "/afh-club/listings/edmonds-nwmls-2496559", to: "/afh-club/listings" },
+  { from: "/afh-club/listings/auburn-nwmls-2541949", to: "/afh-club/listings" },
+  { from: "/afh-club/listings/bellevue-nwmls-2482928", to: "/afh-club/listings" },
+  { from: "/afh-club/listings/federal-way-nwmls-2551807", to: "/afh-club/listings" },
+  { from: "/afh-club/listings/kennewick-nwmls-2552319", to: "/afh-club/listings" },
+  { from: "/afh-club/listings/edmonds-nwmls-2471335", to: "/afh-club/listings" },
+  { from: "/afh-club/listings/puyallup-nwmls-2497783", to: "/afh-club/listings" },
+  { from: "/afh-club/listings/milton-nwmls-2536730", to: "/afh-club/listings" },
 ];
