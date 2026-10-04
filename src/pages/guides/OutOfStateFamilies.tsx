@@ -9,6 +9,7 @@ import PremiumTile from "@/components/PremiumTile";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import AuthorByline from "@/components/AuthorByline";
+import QuickAnswers from "@/components/QuickAnswers";
 
 const needs = [
   "Someone local to visit the property, document its condition, and provide an honest assessment",
@@ -90,6 +91,7 @@ const OutOfStateFamilies = () => (
             </div>
           </div>
         </section>
+        <QuickAnswers />
 
       {/* Intro */}
       <section className="py-16 lg:py-20 bg-background">

@@ -19,6 +19,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import ProbateStartHere from "@/components/ProbateStartHere";
+import QuickAnswers from "@/components/QuickAnswers";
 
 const faqs = [
   {
@@ -113,6 +114,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
             </div>
           </div>
         </section>
+        <QuickAnswers />
 
       {/* Section 1 */}
       <section className="py-14 md:py-20 bg-background">

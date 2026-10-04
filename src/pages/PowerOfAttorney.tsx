@@ -8,6 +8,7 @@ import { Home, Heart, Globe, ShieldCheck, FileText, Users, Briefcase } from "luc
 import poaIcon from "@/assets/icons/power-of-attorney-icon-washington.webp";
 import { FEATURED_APPRAISER, FEATURED_BROKER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
+import QuickAnswers from "@/components/QuickAnswers";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -104,6 +105,7 @@ const PowerOfAttorney = () => {
             </div>
           </div>
         </section>
+        <QuickAnswers />
 
         {/* What Is POA */}
         <section className={sectionBase + " bg-background"}>

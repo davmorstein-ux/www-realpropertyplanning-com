@@ -7,6 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { Link } from "react-router-dom";
 import NextQuestions from "@/components/NextQuestions";
+import QuickAnswers from "@/components/QuickAnswers";
 
 const h2Class = "font-serif text-[28px] font-semibold text-[hsl(215,45%,18%)] mt-10 mb-4";
 const pClass = "font-body text-lg leading-[1.8] text-[hsl(220,25%,22%)] mt-6";
@@ -25,6 +26,7 @@ const MedicaidAndLongTermCare = () => {
       <Header />
       <main id="main-content">
 <HeroBandTitle as="h1">Medicaid &amp; Long-Term Care in Washington State: What Families Need to Know</HeroBandTitle>
+<QuickAnswers />
 
         <section className="bg-[hsl(40,20%,98%)] px-6 pt-12 pb-16">
           <div className="max-w-[760px] mx-auto">

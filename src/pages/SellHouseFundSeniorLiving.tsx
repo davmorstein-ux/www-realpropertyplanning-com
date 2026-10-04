@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import fundSeniorLivingIcon from "@/assets/icons/fund-senior-living-icon-washington.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import NextQuestions from "@/components/NextQuestions";
+import QuickAnswers from "@/components/QuickAnswers";
 
 const steps = [
   {
@@ -119,6 +120,7 @@ const SellHouseFundSeniorLiving = () => {
             </div>
           </div>
         </section>
+        <QuickAnswers />
 
         {/* Section 1 */}
         <section className="py-16 md:py-20 bg-background">

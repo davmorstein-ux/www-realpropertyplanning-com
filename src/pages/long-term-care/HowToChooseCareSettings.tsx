@@ -7,6 +7,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { Link } from "react-router-dom";
 import NextQuestions from "@/components/NextQuestions";
+import QuickAnswers from "@/components/QuickAnswers";
 
 const h2Class = "font-serif text-[28px] font-semibold text-[hsl(215,45%,18%)] mt-10 mb-4";
 const h3Class = "font-serif text-[22px] font-semibold text-[hsl(215,45%,18%)] mt-8 mb-3";
@@ -26,6 +27,7 @@ const HowToChooseCareSettings = () => {
       <Header />
       <main id="main-content">
 <HeroBandTitle as="h1">How to Choose Between Care Settings: A Guide for Washington Families</HeroBandTitle>
+<QuickAnswers />
 
         <section className="bg-[hsl(40,20%,98%)] px-6 pt-12 pb-16">
           <div className="max-w-[760px] mx-auto">
