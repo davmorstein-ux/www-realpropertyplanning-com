@@ -204,6 +204,83 @@ const HospitalDischargePlanning = () => {
 
             <hr className={hrClass} />
 
+            <h2 className={h2Class} id="the-house">If Your Parent Can&apos;t Go Home: What Happens to the House</h2>
+            <p className={pClass}>
+              When a discharge leads to rehab or a care home instead of home, the house becomes the family&apos;s next
+              question. It rarely needs an answer that week. A skilled nursing stay may end with your parent going home,
+              so in the first weeks the job is to protect the house and keep every option open.
+            </p>
+
+            <h3 className={h3Class}>In the first few weeks</h3>
+            <p className={pClass}>
+              Treat it as a house that may stand empty. Call the homeowner&apos;s insurance company: policies often limit
+              coverage once a home is unoccupied for a set period, so ask what the policy requires. Keep the heat on in
+              winter, forward the mail, have someone check the house regularly, and keep paying the mortgage, property
+              taxes and utilities.
+            </p>
+
+            <h3 className={h3Class}>Who can make decisions about it</h3>
+            <p className={pClass}>
+              Your parent can, if they still have capacity. Otherwise an agent under a durable power of attorney that
+              covers real estate can. If there is no usable power of attorney and your parent can no longer sign, the
+              family has to ask the court to appoint a conservator, who needs the court&apos;s approval to sell the home.{" "}
+              <Link to="/power-of-attorney#no-usable-poa" className={inlineLink}>
+                When there is no usable power of attorney
+              </Link>
+              .
+            </p>
+
+            <h3 className={h3Class}>Two things to check before selling</h3>
+            <p className={pClass}>
+              <strong>Medicaid.</strong> While your parent intends to return home, or a spouse or dependent relative
+              lives there, the house is generally an exempt asset for Apple Health long-term care. Once it is sold, the
+              cash counts toward the asset limit. Giving the house to family, or selling it to them below fair value,
+              within 60 months before applying can cause a penalty period. If Medicaid is likely, talk to an elder law
+              attorney before listing.
+            </p>
+            <p className={pClass}>
+              <strong>Capital gains.</strong> The federal exclusion of up to $250,000 of gain ($500,000 for a married
+              couple) normally requires living in the home two of the five years before the sale. For someone who moved
+              into a licensed care facility because they could no longer care for themselves, one year of the five is
+              enough, and time in the facility counts toward the rest. A CPA can confirm the dates.
+            </p>
+
+            <h3 className={h3Class}>Keep, rent or sell</h3>
+            <p className={pClass}>
+              Keeping the house empty costs money every month. Renting it brings in income but makes a landlord of
+              whoever manages it, and changes the tax picture. Selling pays for care but ends the option of coming home.
+              It usually makes sense to decide once the care plan is settled, with the numbers in front of you.{" "}
+              <Link to="/sell-house-fund-senior-living#move-or-sell-first" className={inlineLink}>
+                Move first, or sell first?
+              </Link>{" "}
+              and{" "}
+              <Link to="/sell-house-fund-senior-living#paying-until-it-sells" className={inlineLink}>
+                paying for care until the house sells
+              </Link>
+              .
+            </p>
+            <p className={pClass + " text-[15px]"}>
+              Sources:{" "}
+              <a href="https://app.leg.wa.gov/WAC/default.aspx?cite=182-513-1350" target="_blank" rel="noopener noreferrer" className={inlineLink}>
+                WAC 182-513-1350
+              </a>{" "}
+              (home exemption);{" "}
+              <a href="https://app.leg.wa.gov/WAC/default.aspx?cite=182-513-1363" target="_blank" rel="noopener noreferrer" className={inlineLink}>
+                WAC 182-513-1363
+              </a>{" "}
+              (transfer penalty);{" "}
+              <a href="https://app.leg.wa.gov/RCW/default.aspx?cite=11.130.435" target="_blank" rel="noopener noreferrer" className={inlineLink}>
+                RCW 11.130.435
+              </a>{" "}
+              (conservator sales);{" "}
+              <a href="https://www.law.cornell.edu/uscode/text/26/121" target="_blank" rel="noopener noreferrer" className={inlineLink}>
+                26 U.S.C. § 121(d)(7)
+              </a>
+              .
+            </p>
+
+            <hr className={hrClass} />
+
             <h2 className={h2Class}>Planning Before the Crisis</h2>
             <p className={pClass}>
               The best time to think about hospital discharge planning is before anyone is in the hospital.
