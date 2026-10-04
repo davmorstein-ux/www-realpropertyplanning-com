@@ -236,6 +236,7 @@ export const afhListings: AFHListing[] = [
     broker: "Jenn Kaatz",
     brokerage: "Keller Williams South Sound",
     listingContactPhone: "(360) 389-1352",
+    listingContactEmail: "jennkaatz@kw.com",
     mlsNum: "2463643",
   },
   {
@@ -419,6 +420,7 @@ export const afhListings: AFHListing[] = [
     broker: "Minh Nguyen",
     brokerage: "Skyline Properties, Inc.",
     listingContactPhone: "(253) 389-5721",
+    listingContactEmail: "quentoidi@gmail.com",
     mlsNum: "2557892",
   },
   {
@@ -508,6 +510,7 @@ export const afhListings: AFHListing[] = [
     broker: "Gene Hoffman",
     brokerage: "Ballpark Realty",
     listingContactPhone: "(425) 785-9657",
+    listingContactEmail: "gene@esiproperties.com",
     mlsNum: "2504821",
   },
   {
@@ -552,6 +555,7 @@ export const afhListings: AFHListing[] = [
     broker: "Douglas Linton",
     brokerage: "John L. Scott, Inc",
     listingContactPhone: "(253) 433-2003",
+    listingContactEmail: "DougL@johnlscott.com",
     mlsNum: "2566847",
   },
   {
@@ -1721,6 +1725,7 @@ export const afhListings: AFHListing[] = [
     broker: "Adrian Marchis",
     brokerage: "Skyline Properties, Inc.",
     listingContactPhone: "(206) 226-9819",
+    listingContactEmail: "adimarchis@rocketmail.com",
     mlsNum: "2470647",
     businessNotes: "Sound-view home one block from the waterfront with an operating adult family home on the main level; business sold separately for $75,000.",
   },
