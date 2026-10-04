@@ -5,6 +5,7 @@ import BackToLongTermCare from "@/components/BackToLongTermCare";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
+import NextQuestions from "@/components/NextQuestions";
 
 const h2Class = "font-serif text-[28px] font-semibold text-[hsl(215,45%,18%)] mt-10 mb-4";
 const pClass = "font-body text-lg leading-[1.8] text-[hsl(220,25%,22%)] mt-6";
@@ -81,6 +82,7 @@ const ShortTermNursingHomeStays = () => {
 
         <BackToLongTermCare />
         <DisclaimerSection />
+        <NextQuestions />
       </main>
       <Footer />
     </div>

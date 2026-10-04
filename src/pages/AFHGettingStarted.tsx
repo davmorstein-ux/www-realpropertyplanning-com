@@ -10,6 +10,7 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/getting-started.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
+import NextQuestions from "@/components/NextQuestions";
 
 const REALITY_CHECKS = [
   {
@@ -814,6 +815,7 @@ const AFHGettingStarted = () => (
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />
+      <NextQuestions />
     </main>
     <Footer />
   </>

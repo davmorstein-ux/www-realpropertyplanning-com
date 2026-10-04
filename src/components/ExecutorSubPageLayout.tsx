@@ -6,6 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/executor-trustee-hero-washington.webp";
 import ProbateStartHere from "@/components/ProbateStartHere";
+import NextQuestions from "@/components/NextQuestions";
 
 interface ExecutorSubPageLayoutProps {
   seoTitle: string;
@@ -96,6 +97,7 @@ const ExecutorSubPageLayout = ({
             </p>
           </div>
         </section>
+        <NextQuestions />
       </main>
       <Footer />
     </div>

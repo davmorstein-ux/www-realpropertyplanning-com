@@ -10,6 +10,7 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-costs-fees.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
+import NextQuestions from "@/components/NextQuestions";
 
 const STARTUP_COSTS = [
   {
@@ -614,6 +615,7 @@ const AFHCostsFees = () => (
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />
+      <NextQuestions />
     </main>
     <Footer />
   </>

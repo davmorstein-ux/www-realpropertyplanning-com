@@ -13,6 +13,7 @@ import PageFAQ from "@/components/PageFAQ";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
 import ProbateStartHere from "@/components/ProbateStartHere";
+import NextQuestions from "@/components/NextQuestions";
 
 const jsonLd = articleSchema({
   headline: "Trust Property Guide for Trustees",
@@ -83,6 +84,7 @@ const Trustees = () => (
       professional="broker"
     />
     <DisclaimerSection />
+      <NextQuestions />
     </main>
     <Footer />
   </div>

@@ -8,6 +8,7 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
+import NextQuestions from "@/components/NextQuestions";
 
 const label = {
   fontSize: 15,
@@ -394,6 +395,7 @@ const AFHViolationHistory = () => (
           </p>
         </div>
       </section>
+      <NextQuestions />
     </main>
     <AuthorByline context="afh" />
       <BackToAFHClub />

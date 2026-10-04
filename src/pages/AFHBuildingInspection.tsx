@@ -10,6 +10,7 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-building-requirements-and-inspections.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
+import NextQuestions from "@/components/NextQuestions";
 
 const PROPERTY_OPTIONS = [
   {
@@ -710,6 +711,7 @@ const AFHBuildingInspection = () => (
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />
+      <NextQuestions />
     </main>
     <Footer />
   </>

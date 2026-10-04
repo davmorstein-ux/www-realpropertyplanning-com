@@ -49,6 +49,7 @@ import wahkiakumLogo from "@/assets/counties/wahkiakum-county-logo.webp";
 import graysHarborLogo from "@/assets/counties/grays-harbor-county-logo.webp";
 import { services, counties } from "@/lib/service-areas-data";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import NextQuestions from "@/components/NextQuestions";
 
 const COUNTY_WEBSITES: Record<string, string> = {
   "benton-county": `https://www.co.benton.wa.us`,
@@ -747,6 +748,7 @@ const CountyPageTemplate = ({
 
         <RelatedServices currentPath={countyPath} />
         <DisclaimerSection />
+        <NextQuestions />
       </main>
       <Footer />
     </div>

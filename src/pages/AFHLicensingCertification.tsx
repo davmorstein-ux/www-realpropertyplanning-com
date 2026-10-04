@@ -10,6 +10,7 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-licensing-and-certification.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
+import NextQuestions from "@/components/NextQuestions";
 
 const APPLICATION_STEPS = [
   {
@@ -615,6 +616,7 @@ const AFHLicensingCertification = () => (
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />
+      <NextQuestions />
     </main>
     <Footer />
   </>

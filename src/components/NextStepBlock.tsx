@@ -10,14 +10,16 @@ interface NextStepBlockProps {
   heading?: string;
   steps: NextStep[];
   background?: "bg-background" | "bg-secondary";
+  /** 2 = two tiles per row from tablet width up (used by NextQuestions). */
+  columns?: 1 | 2;
 }
 
-const NextStepBlock = ({ heading = "What to Read Next", steps, background = "bg-secondary" }: NextStepBlockProps) => (
+const NextStepBlock = ({ heading = "What to Read Next", steps, background = "bg-secondary", columns = 1 }: NextStepBlockProps) => (
   <section className={`py-14 lg:py-20 ${background}`}>
     <div className="container px-6 lg:px-8">
       <div className="max-w-[1140px] mx-auto">
         <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-8 text-foreground">{heading}</h2>
-        <div className="grid grid-cols-1 gap-4">
+        <div className={columns === 2 ? "grid grid-cols-1 md:grid-cols-2 gap-4" : "grid grid-cols-1 gap-4"}>
           {steps.map((step) => (
             <Link
               key={step.href}

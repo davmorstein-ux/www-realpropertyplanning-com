@@ -6,6 +6,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { Link } from "react-router-dom";
+import NextQuestions from "@/components/NextQuestions";
 
 const h2Class = "font-serif text-[28px] font-semibold text-[hsl(215,45%,18%)] mt-10 mb-4";
 const h3Class = "font-serif text-[22px] font-semibold text-[hsl(215,45%,18%)] mt-8 mb-3";
@@ -232,6 +233,7 @@ const HowToChooseCareSettings = () => {
 
         <BackToLongTermCare />
         <DisclaimerSection />
+        <NextQuestions />
       </main>
       <Footer />
     </div>

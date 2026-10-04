@@ -15,6 +15,7 @@ import {
 import { Link } from "react-router-dom";
 import fundSeniorLivingIcon from "@/assets/icons/fund-senior-living-icon-washington.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import NextQuestions from "@/components/NextQuestions";
 
 const steps = [
   {
@@ -301,6 +302,7 @@ const SellHouseFundSeniorLiving = () => {
             </div>
           </div>
         </section>
+        <NextQuestions />
       </main>
       <DisclaimerSection />
       <Footer />

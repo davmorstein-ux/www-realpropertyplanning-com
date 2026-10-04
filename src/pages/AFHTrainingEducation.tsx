@@ -10,6 +10,7 @@ import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/afh-training-and-education-requirements.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
+import NextQuestions from "@/components/NextQuestions";
 
 const TRAINING_REQUIREMENTS = [
   {
@@ -618,6 +619,7 @@ const AFHTrainingEducation = () => (
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />
+      <NextQuestions />
     </main>
     <Footer />
   </>

@@ -11,6 +11,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
+import NextQuestions from "@/components/NextQuestions";
 
 const tiles = [
   {
@@ -168,6 +169,7 @@ const InheritedHouseWashington = () => (
 
       <AuthorByline context="estate" />
       <DisclaimerSection />
+      <NextQuestions />
     </main>
     <Footer />
   </div>

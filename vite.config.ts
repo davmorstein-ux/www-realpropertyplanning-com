@@ -2309,6 +2309,11 @@ const buildRouteAwareShellScript = () => {
 var R=${mapJson};
 var normalizePath=function(p){var n=p||"/";try{n=decodeURIComponent(n);}catch(e){}if(!n.startsWith("/"))n="/"+n;if(n.endsWith("/index.html"))n=n.slice(0,-11)||"/";if(n.length>1&&n.endsWith("/"))n=n.slice(0,-1);return n||"/";};
 var route=normalizePath(window.location.pathname);
+/* index.html is the homepage, prerendered in full (data-prerendered). The host
+   also serves it for routes without their own file; there it must not show the
+   homepage, and main.tsx must render fresh rather than hydrate it. */
+var root0=document.getElementById("root");
+if(route!=="/"&&root0&&root0.hasAttribute("data-prerendered")){root0.removeAttribute("data-prerendered");root0.innerHTML="";}
 var m=R[route];
 if(!m)return;
 if(m.t)document.title=m.t;
