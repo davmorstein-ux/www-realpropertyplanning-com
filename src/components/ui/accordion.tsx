@@ -31,9 +31,13 @@ const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
+  // forceMount keeps closed answers in the page (hidden), so search engines and AI
+  // crawlers can read every FAQ answer; data-[state=closed]:hidden keeps them collapsed on screen.
   <AccordionPrimitive.Content
     ref={ref}
     data-radix-accordion-content=""
+    forceMount
+    className="data-[state=closed]:hidden"
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>

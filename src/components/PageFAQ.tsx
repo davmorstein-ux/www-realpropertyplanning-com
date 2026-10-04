@@ -119,8 +119,8 @@ const PageFAQ = ({
                       aria-hidden="true"
                     />
                   </button>
-                  {isOpen && (
-                    <div
+                  {(
+                    <div hidden={!isOpen}
                       style={{
                         paddingBottom: "1rem",
                         fontFamily: "'DM Sans', system-ui, sans-serif",
@@ -185,8 +185,8 @@ const PageFAQ = ({
                     aria-hidden="true"
                   />
                 </button>
-                {isOpen && (
-                  <div
+                {(
+                  <div hidden={!isOpen}
                     style={{
                       padding: "0 1.5rem 1.4rem",
                       borderTop: "1px solid #e7d1d3",

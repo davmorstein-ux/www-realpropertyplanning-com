@@ -2477,13 +2477,14 @@ hr {
   background: none !important;
 }
 
+/* Accordion panels stay in the page when closed (forceMount in ui/accordion.tsx, so
+   crawlers can read FAQ answers) and are display:none until opened, so the height
+   variable Radix measures is 0. Animate opacity only. */
 @keyframes accordionDown {
   from {
-    height: 0;
     opacity: 0;
   }
   to {
-    height: var(--radix-accordion-content-height);
     opacity: 1;
   }
 }
