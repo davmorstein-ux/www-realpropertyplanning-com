@@ -71,7 +71,7 @@ export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
       { title: "Power of Attorney", href: "/power-of-attorney", imageSrc: "/tiles/set2/power-of-attorney.webp", altText: "Power of attorney guidance Washington State" },
       { title: "Wills & Estate Docs", href: "/wills", imageSrc: "/tiles/set2/wills.webp", altText: "Wills and estate documents Washington State" },
       { title: "The Probate Process", href: "/how-the-process-works", imageSrc: "/tiles/set2/the-probate-process.webp", altText: "Probate process guidance Washington State" },
-      { title: "Probate Terms", href: "/terminology", imageSrc: "/tiles/set2/probate-terms.webp", altText: "Probate terminology guidance Washington State" },
+      { title: "Probate Terms", href: "/probate-glossary", imageSrc: "/tiles/set2/probate-terms.webp", altText: "Probate terminology guidance Washington State" },
       { title: "Guides & Resources", href: "/guides-and-resources", imageSrc: "/tiles/set3/guides-resources.webp", altText: "Guides and resources Washington State" },
       { title: "Gray Divorce", href: "/gray-divorce", imageSrc: "/tiles/set3/grey-divorce.webp", altText: "Gray divorce real estate guidance Washington State" },
     ],

@@ -47,7 +47,7 @@ const rolesImageTiles: ProfessionalImageTileData[] = [
   { alt: "Trustees roles and responsibilities estate Washington State", href: "/trustees", src: imgTrustees },
   { alt: "Wills last will and testament guidance Washington State", href: "/wills", src: imgWills },
   { alt: "Power of Attorney roles and responsibilities Washington State", href: "/power-of-attorney", src: imgPowerOfAttorney },
-  { alt: "Probate terms and terminology glossary Washington State", href: "/terminology", src: imgProbateTerms },
+  { alt: "Probate terms and terminology glossary Washington State", href: "/probate-glossary", src: imgProbateTerms },
   { alt: "The probate process steps overview Washington State", href: "/how-the-process-works", src: imgTheProcess },
   { alt: "Probate sales estate inventory Washington State", href: "/probate-estate-sales", src: imgProbateSales },
   { alt: "Title and escrow services real estate Washington State", href: "/title-and-escrow", src: imgTitleEscrow },

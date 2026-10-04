@@ -27,7 +27,7 @@ const tileData = [
     title: "Probate Terms",
     tagline: "Key Terms Every Family Should Know",
     img: "/tiles/set2/probate-terms.webp",
-    href: "/terminology",
+    href: "/probate-glossary",
   },
   {
     pill: "Education",

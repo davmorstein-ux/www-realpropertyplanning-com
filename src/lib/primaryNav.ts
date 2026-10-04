@@ -122,7 +122,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "Memory Care Costs", href: "/articles/memory-care-costs" },
       { name: "Aging in Place", href: "/articles/aging-in-place" },
       { name: "Wills, Trusts & Other Options", href: "/articles/wills-trusts-other-options" },
-      { name: "Terminology", href: "/terminology" },
+      { name: "Probate Glossary", href: "/probate-glossary" },
     ],
   },
   {

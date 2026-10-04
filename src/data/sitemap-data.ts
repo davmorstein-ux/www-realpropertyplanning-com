@@ -1448,10 +1448,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: ["/contact"],
   },
   {
-    path: "/terminology",
-    links: [],
-  },
-  {
     path: "/testimonials",
     links: [],
   },

@@ -227,14 +227,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro:
       "Answers to common questions about probate real estate, inherited homes, estate sales, trust-owned property, valuation, executors, and senior transitions in Washington.",
   },
-  "/terminology": {
-    title: "Wills, Probate & Real Property Glossary | Real Property Planning",
-    description:
-      "A clear glossary of wills, probate, inheritance, and real property terms to help attorneys, executors, trustees, and families understand estate-related real estate.",
-    h1: "Wills, Probate, and Real Property Glossary",
-    intro:
-      "A clear glossary of wills, probate, inheritance, and real property terms to help attorneys, executors, trustees, and families understand the process of managing and selling estate-related real estate.",
-  },
   "/contact": {
     title: "Contact Real Property Planning | Get Connected With the Right Help in Washington State",
     description:

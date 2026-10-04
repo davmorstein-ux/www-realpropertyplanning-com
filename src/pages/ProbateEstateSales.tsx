@@ -14,7 +14,7 @@ import ProbateStartHere from "@/components/ProbateStartHere";
 // ── Data ── (images, hrefs — text pulled via t() in the component)
 
 const whatMakesDifferentMeta = [
-  { key: "legalAuthority", image: "/tiles/set2/the-probate-process.webp", href: "/terminology" },
+  { key: "legalAuthority", image: "/tiles/set2/the-probate-process.webp", href: "/guides/who-has-authority-sell-probate-property-washington" },
   { key: "decisionMakers", image: "/tiles/set2/executors.webp", href: "/executors" },
   { key: "propertyCondition", image: "/tiles/set2/probate-estate-sales.webp?v=20260602b", href: "/how-the-process-works" },
   { key: "honestPricing", image: "/tiles/set1/real-estate-appraisers.webp", href: "/why-valuation-matters" },
@@ -23,7 +23,7 @@ const whatMakesDifferentMeta = [
 ] as const;
 
 const comparisonMeta = [
-  { key: "probate", image: "/tiles/set2/probate-property-real.webp", href: "/terminology" },
+  { key: "probate", image: "/tiles/set2/probate-property-real.webp", href: "/guides/how-probate-real-estate-works" },
   { key: "inherited", image: "/tiles/set2/inherited-property-real.webp", href: "/guides/inherited-house-washington" },
 ] as const;
 

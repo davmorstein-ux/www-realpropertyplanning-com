@@ -62,8 +62,8 @@ const routeMap: RouteMatch[] = [
   },
   {
     keywords: ["terminology", "definition", "definitions", "glossary", "what does", "what is", "meaning", "term", "terms", "mean"],
-    path: "/terminology",
-    label: "Probate Terminology",
+    path: "/probate-glossary",
+    label: "Probate & Estate Glossary",
   },
   {
     keywords: ["area", "areas", "county", "counties", "location", "where", "seattle", "tacoma", "washington", "puget", "king", "pierce", "snohomish", "kitsap", "skagit", "serve", "work", "cover"],

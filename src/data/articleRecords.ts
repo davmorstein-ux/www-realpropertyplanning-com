@@ -199,8 +199,10 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
   },
   "/probate-glossary": {
     published: "2026-09-30",
-    reviewed: "2026-09-30",
-    changes: [],
+    reviewed: "2026-10-04",
+    changes: [
+      { date: "2026-10-04", text: "Added 22 terms from the retired /terminology page, with Washington citations: a new Title and ownership group (title, marketable title, preliminary title report, deed, statutory warranty and quitclaim deeds, tenancy in common, life estate, encumbrance, lien, real and personal property, quiet title, homestead, heirs' property), plus testator, testamentary capacity, undue influence, bequest and devise, residuary estate, distribution, fiduciary and court confirmation of sale." },
+    ],
     sources: [
       { label: "Title 11 RCW: Probate and trust law", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11" },
       { label: "Chapter 26.16 RCW: community and separate property", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=26.16" },

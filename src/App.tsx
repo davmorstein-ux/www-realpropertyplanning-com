@@ -79,7 +79,6 @@ const ForFinancialPlanners = lazy(() => import("./pages/ForFinancialPlanners"));
 const About = lazy(() => import("./pages/About"));
 const JoinTheNetwork = lazy(() => import("./pages/JoinTheNetwork"));
 const FAQ = lazy(() => import("./pages/FAQ"));
-const Terminology = lazy(() => import("./pages/Terminology"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Counties = lazy(() => import("./pages/Counties"));
 const KingCounty = lazy(() => import("./pages/counties/KingCounty"));
@@ -586,7 +585,6 @@ const App = () => (
             }
           />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/terminology" element={<Terminology />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/share-your-experience" element={<ShareYourExperience />} />
           <Route path="/sitemap" element={<Sitemap />} />

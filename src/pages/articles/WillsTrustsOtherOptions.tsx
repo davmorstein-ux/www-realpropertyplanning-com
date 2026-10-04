@@ -13,7 +13,7 @@ import ArticleCover from "@/components/ArticleCover";
 const relatedResources = [
   { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
   { label: "Executors, POAs & Trustees", href: "/executors" },
-  { label: "Probate Terminology", href: "/terminology" },
+  { label: "Probate & Estate Glossary", href: "/probate-glossary" },
   { label: "Why Valuation Matters", href: "/why-valuation-matters" },
   { label: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
 ];

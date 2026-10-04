@@ -138,7 +138,7 @@ export const servicePageSequence: ServicePageEntry[] = [
   { path: "/about", label: "About" },
   { path: "/testimonials", label: "Testimonials" },
   { path: "/faq", label: "FAQ" },
-  { path: "/terminology", label: "Terminology" },
+  { path: "/probate-glossary", label: "Probate Glossary" },
   { path: "/contact", label: "Contact" },
 ];
 

@@ -28,7 +28,8 @@ export type ProbateGlossaryCategory =
   | "Property that passes outside probate"
   | "Creditors and debts"
   | "Value and taxes"
-  | "Selling estate property";
+  | "Selling estate property"
+  | "Title and ownership";
 
 export interface ProbateGlossarySource {
   label: string;
@@ -574,6 +575,199 @@ export const PROBATE_GLOSSARY: ProbateGlossaryTerm[] = [
       "A sale of the household contents, usually run by an estate sale company for a percentage of the proceeds, often before the house itself is listed.",
     guide: G.liquidation,
   },
+  /* ---------------- Added Oct 4, 2026 from the retired /terminology page ---------------- */
+  {
+    id: "testator",
+    term: "Testator",
+    category: "Wills and inheritance",
+    definition:
+      "The person who made the will. In Washington, anyone 18 or older and of sound mind can make one.",
+    guide: G.wills,
+    source: src("11.12.010", "who may make a will"),
+  },
+  {
+    id: "testamentary-capacity",
+    term: "Testamentary capacity",
+    category: "Wills and inheritance",
+    definition:
+      "The mental ability the law requires to make a valid will: understanding what property you have, who your natural heirs are, and what the will does with it. A will can be challenged on the ground that the person lacked it when they signed.",
+    guide: G.wills,
+    source: src("11.12.010", "sound mind"),
+  },
+  {
+    id: "undue-influence",
+    term: "Undue influence",
+    category: "Wills and inheritance",
+    definition:
+      "Pressure strong enough to replace the person's own wishes with someone else's when a will was signed or property was transferred. It is one of the usual grounds for a will contest.",
+    guide: G.heirs,
+  },
+  {
+    id: "bequest-and-devise",
+    term: "Bequest and devise",
+    aka: "devisee",
+    category: "Wills and inheritance",
+    definition:
+      "Gifts made in a will. A bequest is traditionally a gift of money or personal property and a devise a gift of real estate; the person who receives a devise is the devisee.",
+    guide: G.wills,
+  },
+  {
+    id: "residuary-estate",
+    term: "Residuary estate",
+    aka: "residue",
+    category: "Wills and inheritance",
+    definition:
+      "Everything left after specific gifts, debts, taxes and the costs of settling the estate are paid. A house not left to anyone by name usually falls into the residue and passes to the residuary beneficiaries.",
+    guide: G.wills,
+  },
+  {
+    id: "distribution",
+    term: "Distribution",
+    category: "Wills and inheritance",
+    definition:
+      "The final handing over of estate property to the heirs or beneficiaries, as cash, as the property itself, or as a share of sale proceeds, after creditors and expenses are paid.",
+    guide: G.timeline,
+  },
+  {
+    id: "fiduciary",
+    term: "Fiduciary",
+    category: "People and roles",
+    definition:
+      "Anyone legally required to act in another person's interest rather than their own: a personal representative, trustee, guardian or agent under a power of attorney. A fiduciary selling a house owes the estate or trust a fair price and full disclosure, and cannot quietly buy it themselves.",
+    guide: G.duties,
+  },
+  {
+    id: "court-confirmation",
+    term: "Court confirmation of sale",
+    category: "Selling estate property",
+    definition:
+      "Court approval of a sale after it is negotiated. Washington requires it only when the personal representative does not have nonintervention powers; with them, the representative signs the sale without returning to court.",
+    guide: G.duringProbate,
+    source: { label: "Chapter 11.56 RCW: sales, exchanges, leases and mortgages", href: rcwChapter("11.56") },
+  },
+  {
+    id: "title",
+    term: "Title",
+    category: "Title and ownership",
+    definition:
+      "Legal ownership of a property, shown by the recorded deeds. After a death, title stays in the person's name until it passes through probate, a trust, or a nonprobate transfer, and a buyer's title company will want to see that chain completed.",
+    guide: G.howWorks,
+  },
+  {
+    id: "marketable-title",
+    term: "Marketable title",
+    aka: "clear title",
+    category: "Title and ownership",
+    definition:
+      "Title free of defects a reasonable buyer would object to, so a title company will insure it. Unpaid liens, missing heirs or an unrecorded transfer can keep an inherited house from having marketable title until they are resolved.",
+    guide: G.howWorks,
+  },
+  {
+    id: "title-report",
+    term: "Preliminary title report",
+    aka: "title commitment",
+    category: "Title and ownership",
+    definition:
+      "The title company's report, ordered early in a sale, showing who holds record title and every lien, easement and other matter that must be paid or cleared before closing. On an estate property it is often the first place problems with the ownership chain surface.",
+    guide: G.timeline,
+  },
+  {
+    id: "deed",
+    term: "Deed",
+    category: "Title and ownership",
+    definition:
+      "The signed, acknowledged document that transfers real estate. Washington requires conveyances of real property to be by deed, and a deed takes effect against later buyers once it is recorded with the county.",
+    guide: G.howWorks,
+    source: src("64.04.020", "requisites of a deed"),
+  },
+  {
+    id: "statutory-warranty-deed",
+    term: "Statutory warranty deed",
+    category: "Title and ownership",
+    definition:
+      "The deed used in most Washington sales, in which the seller guarantees the title against all claims. Estates and trusts usually sell with a personal representative's or trustee's deed instead, which makes narrower promises.",
+    guide: G.howWorks,
+    source: src("64.04.030", "warranty deed form"),
+  },
+  {
+    id: "quitclaim-deed",
+    term: "Quitclaim deed",
+    category: "Title and ownership",
+    definition:
+      "A deed that transfers whatever interest the signer has, if any, with no promise about the title. Heirs sometimes use one to move a share to a sibling in a buyout; it does not cure title problems.",
+    guide: G.heirs,
+    source: src("64.04.050", "quitclaim deed form"),
+  },
+  {
+    id: "tenancy-in-common",
+    term: "Tenancy in common",
+    category: "Title and ownership",
+    definition:
+      "Co-ownership where each owner holds a separate share that passes through their own estate when they die, not to the other owners. In Washington, co-owners hold this way unless the deed declares a joint tenancy or the property is community property. Heirs who inherit a house together usually own it this way.",
+    guide: G.heirs,
+    source: src("64.28.020", "interests in common"),
+  },
+  {
+    id: "life-estate",
+    term: "Life estate",
+    aka: "remainderman",
+    category: "Title and ownership",
+    definition:
+      "The right to own and live in a property for someone's lifetime. When that person dies, it passes automatically to the remaindermen named in the deed, without probate. A life tenant cannot sell the whole property without the remaindermen signing too.",
+    guide: G.passing,
+  },
+  {
+    id: "encumbrance",
+    term: "Encumbrance",
+    category: "Title and ownership",
+    definition:
+      "Anything recorded against a property that limits it or must be paid: a mortgage, lien, easement or restriction. Encumbrances survive the owner's death and show up on the title report when the house is sold.",
+    guide: G.howWorks,
+  },
+  {
+    id: "lien",
+    term: "Lien",
+    category: "Title and ownership",
+    definition:
+      "A claim against a property that secures a debt, such as a mortgage, unpaid property taxes, a judgment or a contractor's claim. Liens are paid from the sale proceeds at closing, and the property tax lien comes ahead of nearly all others.",
+    guide: G.howWorks,
+    source: src("84.60.010", "property tax lien"),
+  },
+  {
+    id: "real-and-personal-property",
+    term: "Real property and personal property",
+    category: "Title and ownership",
+    definition:
+      "Real property is land and what is permanently attached to it, such as the house. Personal property is everything movable, such as furniture, vehicles and accounts. The difference matters because they are handled, valued and sold separately.",
+    guide: G.inherited,
+  },
+  {
+    id: "quiet-title",
+    term: "Quiet title",
+    category: "Title and ownership",
+    definition:
+      "A lawsuit asking the court to declare who owns a property and remove conflicting claims. It is the fix when a title problem, such as an heir who cannot be found or an old unreleased claim, cannot be cleared any other way.",
+    guide: G.heirs,
+    source: { label: "Chapter 7.28 RCW: quieting title", href: rcwChapter("7.28") },
+  },
+  {
+    id: "homestead",
+    term: "Homestead",
+    category: "Title and ownership",
+    definition:
+      "Washington's protection of an owner's home from most unsecured creditors, up to the greater of $125,000 or the county's median single-family sale price for the prior year. It does not protect against mortgages or property tax liens.",
+    guide: G.inherited,
+    source: src("6.13.030", "homestead amount"),
+  },
+  {
+    id: "heirs-property",
+    term: "Heirs' property",
+    category: "Title and ownership",
+    definition:
+      "A house owned by several relatives who inherited it, often over more than one generation, without a completed probate or a clear agreement among them. Washington's Uniform Partition of Heirs Property Act gives co-owners a chance to buy out a relative who sues to force a sale.",
+    guide: G.heirs,
+    source: { label: "Chapter 7.54 RCW: Uniform Partition of Heirs Property Act", href: rcwChapter("7.54") },
+  },
 ];
 
 export const PROBATE_GLOSSARY_CATEGORIES: ProbateGlossaryCategory[] = [
@@ -584,6 +778,7 @@ export const PROBATE_GLOSSARY_CATEGORIES: ProbateGlossaryCategory[] = [
   "Creditors and debts",
   "Value and taxes",
   "Selling estate property",
+  "Title and ownership",
 ];
 
 export const PROBATE_GLOSSARY_A_TO_Z: ProbateGlossaryTerm[] = [...PROBATE_GLOSSARY].sort((a, b) =>

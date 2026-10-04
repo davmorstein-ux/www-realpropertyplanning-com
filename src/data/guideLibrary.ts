@@ -194,7 +194,6 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "Grey Divorce and the Grey Tsunami", href: "/grey-divorce" },
       { title: "How the Process Works", href: "/how-the-process-works" },
       { title: "What Should We Do First?", href: "/what-should-we-do-first" },
-      { title: "Wills, Probate, and Real Property Glossary", href: "/terminology" },
     ],
   },
 ];
