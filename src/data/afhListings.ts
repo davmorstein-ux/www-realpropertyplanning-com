@@ -189,6 +189,7 @@ export const afhListings: AFHListing[] = [
     broker: "Demba Baldeh",
     brokerage: "Skyline Properties, Inc.",
     listingContactPhone: "(425) 205-2135",
+    listingContactEmail: "dbaldeh@gmail.com",
     mlsNum: "2510101",
   },
   {
@@ -1382,6 +1383,7 @@ export const afhListings: AFHListing[] = [
     broker: "Demba Baldeh",
     brokerage: "Skyline Properties, Inc.",
     listingContactPhone: "(425) 319-0884",
+    listingContactEmail: "dbaldeh@gmail.com",
     mlsNum: "2410582",
     businessNotes: "Adult family home licensed for 5 sold together with the business; owner quarters upstairs.",
   },
@@ -1436,6 +1438,7 @@ export const afhListings: AFHListing[] = [
     broker: "Demba Baldeh",
     brokerage: "Skyline Properties, Inc.",
     listingContactPhone: "(425) 319-0884",
+    listingContactEmail: "dbaldeh@gmail.com",
     mlsNum: "2355685",
     businessNotes: "Licensed for 5 and fully occupied; business ($180,000) and real estate ($870,000) sold together.",
   },
