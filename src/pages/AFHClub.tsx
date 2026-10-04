@@ -139,8 +139,9 @@ const PAGE_CSS = `
   .rpp-afh-network li { color: #1c1917 !important; }
 
   .rpp-afh-disclosure p {
-    color: #4a453f !important;
-    font-size: 16px !important;
+    color: #1c1917 !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
     line-height: 1.7 !important;
   }
   .rpp-afh-disclosure strong { color: #1c1917 !important; }
