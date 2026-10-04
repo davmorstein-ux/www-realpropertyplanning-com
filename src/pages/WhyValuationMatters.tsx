@@ -58,12 +58,12 @@ const faqs = [
     answer: "A CMA (Comparative Market Analysis) is a listing agent's pricing opinion based on recent comparable sales — useful for marketing, but not a formal valuation. A BPO is a broker's price opinion, often used by lenders and asset managers. An appraisal is a USPAP-compliant valuation by a state-licensed or certified appraiser, with documented adjustments and a supportable conclusion. For probate, trust accounting, divorce, or any situation where the number has to defend itself, you want an appraisal — or at minimum a CMA built by someone trained as an appraiser.",
   },
   {
-    question: "Do you do date-of-death appraisals for stepped-up basis?",
-    answer: "Yes. A date-of-death valuation establishes the home's fair market value as of the day the owner passed away — the basis the IRS uses to calculate stepped-up basis for heirs. We can produce this as a formal appraisal report when the CPA or attorney requires one, or as a documented broker valuation when the situation allows for less formality.",
+    question: "Can I get a date-of-death appraisal for stepped-up basis?",
+    answer: "Yes. A date-of-death valuation establishes the home's fair market value as of the day the owner passed away — the basis the IRS uses to calculate stepped-up basis for heirs. A certified appraiser can produce it as a formal appraisal report when the CPA or attorney requires one; when the situation allows less formality, a documented broker valuation may be enough.",
   },
   {
     question: "We've already had two agents give us very different prices. How do we know which one to trust?",
-    answer: "Ask both agents to show you the comparables they used and the specific dollar adjustments they made for condition, age, and features. A defensible price has math behind it. A guess has a number behind it. We're happy to do a third opinion that walks you through the actual adjustments — and tells you honestly if one of the first two was right.",
+    answer: "Ask both agents to show you the comparables they used and the specific dollar adjustments they made for condition, age, and features. A defensible price has math behind it. A guess has a number behind it. A third opinion that walks you through the actual adjustments will show you whether either of the first two was right.",
   },
   {
     question: "If you're an appraiser, can you also be the listing agent — isn't that a conflict?",

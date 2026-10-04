@@ -12,7 +12,7 @@ import NextStepBlock from "@/components/NextStepBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
-import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import { FEATURED_APPRAISER, FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
@@ -72,7 +72,7 @@ const AppraisalVsCma = () => (
             Formal appraisals carry legal weight. They are required for most mortgage lending, may be requested by probate courts, and are used for estate tax reporting (IRS Form 706), equitable distribution among heirs, and trust accounting. The appraiser's independence and adherence to professional standards make the resulting value opinion defensible under scrutiny.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            In Washington State, certified residential appraisers are licensed by the Department of Licensing and must meet education, experience, and continuing education requirements. Real Property Planning holds Washington State Certified Residential Appraiser credential #1702080.
+            In Washington State, certified residential appraisers are licensed by the Department of Licensing and must meet education, experience, and continuing education requirements. {FEATURED_APPRAISER.Role} on this site holds Washington State Certified Residential Appraiser credential #{FEATURED_APPRAISER.licenseNumber}; Real Property Planning itself holds no licenses.
           </p>
         </div>
       </div>

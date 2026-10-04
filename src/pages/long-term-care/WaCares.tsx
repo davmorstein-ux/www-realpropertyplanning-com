@@ -162,7 +162,7 @@ const WaCares = () => {
             <h2 className={h2Class}>Adult Family Homes</h2>
             <p className={pClass}>
               Washington has a strong network of licensed{" "}
-              <Link to="/afh-club/listings" className={inlineLink}>
+              <Link to="/afh-club/homes" className={inlineLink}>
                 Adult Family Homes
               </Link>
               , which are an important part of long-term care planning for many families.

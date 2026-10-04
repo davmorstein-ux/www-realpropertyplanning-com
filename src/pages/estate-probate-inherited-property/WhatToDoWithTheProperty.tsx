@@ -43,7 +43,7 @@ const WhatToDoWithTheProperty = () => (
     <P><strong>What to consider:</strong></P>
     <UL>
       <li>The property may need preparation before going to market — cleaning, repairs, cosmetic updates. This takes time and costs money, but typically increases the sale price.</li>
-      <li>The timing of the sale may be constrained by probate — in Washington State, the personal representative generally needs court authority before selling real property.</li>
+      <li>The timing of the sale may be constrained by probate — in Washington State, the personal representative can sell only after the court appoints them, and needs court approval for the sale itself only if the court did not grant nonintervention powers.</li>
       <li>Estate sales often have a different dynamic than standard sales — multiple decision-makers, emotional attachment to the home, and timelines driven by legal and care considerations rather than market conditions.</li>
     </UL>
     <P>

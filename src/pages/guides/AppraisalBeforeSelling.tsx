@@ -122,7 +122,7 @@ const AppraisalBeforeSelling = () => (
             This is especially true when all heirs agree to sell, the estate is straightforward, and there are no court requirements for a formal appraisal. A valuation-informed market analysis considers the same factors a formal appraisal would — comparable sales, condition adjustments, market trends — but delivers the conclusion in a format designed for sale planning rather than legal documentation.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Our <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold underline underline-offset-4">dual credentials as broker and certified appraiser</Link> mean our market assessments carry the analytical rigor of appraisal methodology, giving families confidence in pricing decisions even without a formal appraisal report.
+            {FEATURED_BROKER.Role}'s <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold underline underline-offset-4">dual credentials as broker and certified appraiser</Link> mean those market assessments carry the analytical rigor of appraisal methodology, giving families confidence in pricing decisions even without a formal appraisal report.
           </p>
         </div>
       </div>
@@ -147,7 +147,7 @@ const AppraisalBeforeSelling = () => (
             Overpricing leads to extended market time, price reductions, and stigma. Underpricing means leaving money on the table — money that belongs to the estate and its beneficiaries.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Another common mistake is getting a formal appraisal when it is not needed, spending $500–$800 unnecessarily. Or, conversely, skipping a formal appraisal when the court or a multi-heir dispute actually requires one — which can create legal complications down the road.
+            Another common mistake is getting a formal appraisal when it is not needed, spending $400–$800 or more unnecessarily. Or, conversely, skipping a formal appraisal when the court or a multi-heir dispute actually requires one — which can create legal complications down the road.
           </p>
         </div>
       </div>

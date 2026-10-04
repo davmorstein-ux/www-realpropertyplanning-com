@@ -55,9 +55,9 @@ const PropertyValue = () => (
       <strong>A professional appraisal</strong> is conducted by a state-certified appraiser, follows established methodology, and produces a written report that is defensible in court, accepted by the IRS, and usable for tax and legal purposes.
     </P>
     <P>
-      <strong>A comparative market analysis (CMA)</strong> is typically prepared by a real estate agent to help price a home for listing. It is useful for marketing purposes but is not a certified appraisal and is not acceptable for estate tax filings or probate court.
+      <strong>A comparative market analysis (CMA)</strong> is typically prepared by a real estate agent to help price a home for listing. It is useful for pricing and marketing, but it is not a certified appraisal, and it is the weaker choice wherever a value must stand up to review, such as an estate tax return or a dispute in court.
     </P>
-    <P>For estate purposes, you need a certified appraisal — not a CMA.</P>
+    <P>When the value will be reported for taxes, relied on by a court, or used to divide the estate among heirs, get a certified appraisal. For pricing a straightforward sale, a well-supported broker opinion is often enough.</P>
 
     <Divider />
 

@@ -97,7 +97,7 @@ const AFHSold = () => {
               </div>
               <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mb-4">
                 Adult family homes trade differently from ordinary houses. A licensed, occupied home carries an income
-                stream, a fire-sprinkler system, widened doors and roll-in showers, and often a caregiver suite, and buyers
+                stream, code-required safety features, and often widened doors, roll-in showers and a caregiver suite, and buyers
                 pay for that whether or not the business is included in the deed. A formerly licensed home or a
                 WABO-approved house that was never licensed is a different purchase, which is why each sale below is
                 labelled by its status at closing.

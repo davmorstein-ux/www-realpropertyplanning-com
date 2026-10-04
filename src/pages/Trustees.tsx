@@ -66,7 +66,7 @@ const Trustees = () => (
         },
         {
           question: "What is the trustee's liability if a property sells below market value?",
-          answer: "A trustee who acts prudently, obtains an independent valuation, exposes the property to the open market, and documents the decision-making is generally protected — even if a beneficiary later believes the price was too low. Liability arises when the file is thin: no appraisal, limited marketing, or undisclosed conflicts. Real Property Planning builds the documentation file alongside the sale.",
+          answer: "A trustee who acts prudently, obtains an independent valuation, exposes the property to the open market, and documents the decision-making is generally protected — even if a beneficiary later believes the price was too low. Liability arises when the file is thin: no appraisal, limited marketing, or undisclosed conflicts. Build that file as the sale happens, not after a beneficiary objects.",
         },
       ]}
       heading="Common Trustee Questions"

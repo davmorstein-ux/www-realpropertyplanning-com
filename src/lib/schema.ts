@@ -201,7 +201,7 @@ export const serviceSchemas = [
     "@id": `${SITE_URL}/#service-estate-appraisals`,
     name: "Estate & Probate Appraisals",
     description:
-      "Washington State Certified Residential Appraiser providing defensible valuations for probate, trust administration, estate settlements, date of death valuations, and financial planning purposes throughout the Puget Sound region.",
+      "Washington State Certified Residential Appraiser providing defensible valuations for probate, trust administration, estate settlements, date of death valuations, and financial planning purposes throughout Washington State.",
     provider: { "@id": `${SITE_URL}/#featured-broker` },
     areaServed: areaServed,
     url: `${SITE_URL}/real-estate-appraiser`,

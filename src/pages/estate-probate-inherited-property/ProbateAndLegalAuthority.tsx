@@ -50,7 +50,7 @@ const ProbateAndLegalAuthority = () => (
     <SubH2>Who Has Legal Authority Over the Estate</SubH2>
     <P>This is the question that determines what can and cannot happen:</P>
     <P>
-      <strong>If there is a will:</strong> The person named as executor (called "personal representative" in Washington State) has authority — but only after being formally appointed by the court. Being named in the will alone is not sufficient. The will must be filed with the Superior Court in the county where the deceased lived, and the court must issue Letters Testamentary before the executor can legally act.
+      <strong>If there is a will:</strong> The person named as executor (called "personal representative" in Washington State) has authority — but only after being formally appointed by the court. Being named in the will alone is not sufficient. The will is filed with the Superior Court (any Washington county; a party can later ask to move the case to the county where the person lived), and the court must issue Letters Testamentary before the executor can legally act.
     </P>
     <P>
       <strong>If there is a trust:</strong> The named trustee has authority over assets held in the trust, generally without court involvement.

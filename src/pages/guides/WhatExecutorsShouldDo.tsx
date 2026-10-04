@@ -109,7 +109,7 @@ const WhatExecutorsShouldDo = () => (
             Getting a professional property assessment early in the process helps with multiple decisions: whether to invest in repairs before selling, how to set realistic expectations with beneficiaries, how to plan the estate's finances during administration, and how to respond to early inquiries from potential buyers or neighbors.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Our dual background as a broker and <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">certified residential appraiser</Link> means you get valuation insight grounded in professional methodology — not guesswork.
+            {FEATURED_BROKER.Role}'s dual background as a broker and <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">certified residential appraiser</Link> means executors get valuation insight grounded in professional methodology — not guesswork.
           </p>
         </div>
       </div>

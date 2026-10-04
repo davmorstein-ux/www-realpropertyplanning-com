@@ -42,7 +42,7 @@ const RealEstateAppraiser = () => (
               phone={FEATURED_APPRAISER.phone}
               email={FEATURED_APPRAISER.email}
               website="https://realpropertyplanning.com/real-estate-appraiser"
-              specialty="Estate and date-of-death appraisals, divorce and litigation support, retrospective valuations, and residential appraisals for attorneys, executors, and trustees throughout the Puget Sound region."
+              specialty="Estate and date-of-death appraisals, divorce and litigation support, retrospective valuations, and residential appraisals for attorneys, executors, and trustees throughout Washington State."
               bio={APPRAISER_BIO}
             />
           </div>

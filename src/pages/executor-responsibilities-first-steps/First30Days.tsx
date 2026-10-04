@@ -51,7 +51,7 @@ const First30Days = () => (
 
     <SubH3>File the will with the court</SubH3>
     <P>
-      In Washington State, the will must be filed with the Superior Court in the county where the deceased lived. This begins the probate process if one is required.
+      In Washington State, the will is filed with the Superior Court. The petitioner may choose any county, and within four months a party can ask to move the case to the county where the person lived (RCW 11.96A.050). Filing begins the probate process if one is required.
     </P>
 
     <SubH3>Obtain death certificates</SubH3>

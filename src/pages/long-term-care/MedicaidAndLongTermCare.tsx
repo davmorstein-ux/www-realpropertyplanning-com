@@ -139,7 +139,7 @@ const MedicaidAndLongTermCare = () => {
               personalized care, in a familiar neighborhood, at a cost covered by Medicaid.
             </p>
             <p className={pClass}>
-              Not all adult family homes accept Medicaid, and those that do may have limited Medicaid beds. Families who
+              Most Washington adult family homes hold a Medicaid contract, but holding a contract is not the same as having a Medicaid bed open: many homes limit how many Medicaid residents they take. Families who
               anticipate needing Medicaid coverage for an adult family home placement should begin researching options
               well before the need becomes urgent — because availability is limited and waitlists are common.
             </p>

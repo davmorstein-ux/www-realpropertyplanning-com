@@ -66,7 +66,7 @@ const WorkingWithProfessionals = () => (
     </P>
     <SubH3>Why it matters</SubH3>
     <P>
-      An online estimate is not acceptable for tax or legal purposes. Only a certified appraiser's report meets the standard required by courts, the IRS, and Washington State tax authorities.
+      An online estimate is not a reliable value for tax or legal purposes. When a value will be reported to the IRS or the Washington Department of Revenue, or relied on in a court matter, a certified appraiser's report is the strongest support.
     </P>
 
     <Divider />

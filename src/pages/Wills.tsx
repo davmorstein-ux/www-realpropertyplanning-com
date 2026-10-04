@@ -32,7 +32,7 @@ const willsFaqs = [
   {
     question: "Can an executor sell a house before probate is complete?",
     answer:
-      `In some cases, yes — but it depends on the terms of the will, the type of probate, and court approval. ${FEATURED_BROKER.Role} helps executors understand timing, pricing, and preparation so the property is ready when the time comes.`,
+      `Not before the court appoints the personal representative. Once appointed, the personal representative can sell before probate is closed — with nonintervention powers, usually without further court approval; without them, the sale needs the court's approval. ${FEATURED_BROKER.Role} helps executors understand timing, pricing, and preparation so the property is ready when the time comes.`,
   },
   {
     question: "How does a will affect property valuation?",
