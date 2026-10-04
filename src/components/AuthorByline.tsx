@@ -17,7 +17,7 @@ import ArticleRecord from "@/components/ArticleRecord";
  * (Sept 25, 2026: every competitor outranking those guides names a licensed
  * author on the page; the Article schema already did, the page did not).
  */
-export default function AuthorByline({ reviewed, context = "afh" }: { reviewed?: string; context?: "afh" | "estate" }) {
+export default function AuthorByline({ reviewed, context }: { reviewed?: string; context: "afh" | "estate" }) {
   const focus =
     context === "estate"
       ? "works with executors, trustees, heirs, and attorneys on probate, estate, and inherited-property sales across Washington State, and has valued and sold estate homes in every condition"

@@ -169,7 +169,7 @@ const PaymentGuideShell = ({ id, seoTitle, seoDescription, eyebrow, lede, cover,
         </div>
         <style>{`@media (max-width: 760px) { .pg-top { grid-template-columns: 1fr !important; } }`}</style>
         <div style={{ padding: "0 16px" }}>
-          <AuthorByline />
+          <AuthorByline context="afh" />
         </div>
         <PageFAQ faqs={faqs} heading={faqHeading} eyebrow="Frequently Asked Questions" id={`afh-payment-${id}`} />
         <BackToAFHClub />

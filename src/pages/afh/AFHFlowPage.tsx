@@ -15,6 +15,7 @@ export default function AFHFlowPage({ slug }: { slug: string }) {
     <>
       <style>{AFH_FLOW_CHART_CSS}</style>
       <FlowBranchPage
+        bylineContext="afh"
         page={AFH_FLOW_BY_SLUG[slug]}
         base={AFH_FLOW_BASE}
         guideName="Washington AFH Guide"

@@ -349,7 +349,7 @@ const AFHWhatIsAnAFH = () => {
           </div>
         </section>
 
-        <AuthorByline />
+        <AuthorByline context="afh" />
       <BackToAFHClub />
       </main>
       <Footer />

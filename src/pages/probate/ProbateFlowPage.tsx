@@ -10,6 +10,7 @@ import { FLOW_BY_SLUG, FLOW_BASE, DEADLINES_PATH } from "@/data/probateFlow";
 export default function ProbateFlowPage({ slug }: { slug: string }) {
   return (
     <FlowBranchPage
+        bylineContext="estate"
       page={FLOW_BY_SLUG[slug]}
       base={FLOW_BASE}
       guideName="Washington Probate Guide"

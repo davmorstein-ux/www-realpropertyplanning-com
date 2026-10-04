@@ -115,7 +115,7 @@ const AFHPillarGuide = () => (
         </div>
       </section>
     </main>
-    <AuthorByline />
+    <AuthorByline context="afh" />
     <BackToAFHClub />
     <CTASection />
     <DisclaimerSection />

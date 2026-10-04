@@ -611,7 +611,7 @@ const AFHLicensingCertification = () => (
         </div>
       </section>
 
-      <AuthorByline />
+      <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />

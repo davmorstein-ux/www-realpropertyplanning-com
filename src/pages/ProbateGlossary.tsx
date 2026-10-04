@@ -191,7 +191,7 @@ const ProbateGlossary = () => (
         </div>
       </section>
     </main>
-    <AuthorByline />
+    <AuthorByline context="estate" />
     <DisclaimerSection />
     <Footer />
   </div>

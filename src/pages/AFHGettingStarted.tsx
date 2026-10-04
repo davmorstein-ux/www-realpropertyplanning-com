@@ -810,7 +810,7 @@ const AFHGettingStarted = () => (
         </div>
       </section>
 
-      <AuthorByline />
+      <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />

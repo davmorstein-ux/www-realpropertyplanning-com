@@ -400,7 +400,7 @@ const AFHRulesAndFigures = () => (
 
       <PageFAQ faqs={FAQS} heading="Washington Adult Family Homes: Common Questions" eyebrow="Frequently Asked Questions" id="afh-pillar" />
     </main>
-    <AuthorByline />
+    <AuthorByline context="afh" />
     <BackToAFHClub />
     <CTASection />
     <DisclaimerSection />

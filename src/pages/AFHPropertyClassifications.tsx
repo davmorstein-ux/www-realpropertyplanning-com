@@ -385,7 +385,7 @@ const AFHPropertyClassifications = () => (
 
       <PageFAQ faqs={FAQS} heading="Reading AFH Listings: Common Questions" eyebrow="Frequently Asked Questions" id="afh-classifications" />
     </main>
-    <AuthorByline />
+    <AuthorByline context="afh" />
     <BackToAFHClub />
     <CTASection />
     <DisclaimerSection />

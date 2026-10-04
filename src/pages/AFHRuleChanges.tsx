@@ -390,7 +390,7 @@ const AFHRuleChanges = () => {
 
         <PageFAQ faqs={FAQS} heading="AFH Rule Changes: Common Questions" eyebrow="Frequently Asked Questions" id="afh-rules" />
       </main>
-      <AuthorByline />
+      <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />

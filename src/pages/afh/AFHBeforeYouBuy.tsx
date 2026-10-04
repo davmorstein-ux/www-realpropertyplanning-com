@@ -167,7 +167,7 @@ const AFHBeforeYouBuy = () => (
 
       <PageFAQ faqs={BYB_FAQS} heading="Before You Buy: Common Questions" eyebrow="Frequently Asked Questions" id="afh-before-you-buy" />
     </main>
-    <AuthorByline />
+    <AuthorByline context="afh" />
     <BackToAFHClub />
     <DisclaimerSection />
     <Footer />

@@ -652,7 +652,7 @@ const AFHOwnershipStructure = () => (
         </div>
       </section>
 
-      <AuthorByline />
+      <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />

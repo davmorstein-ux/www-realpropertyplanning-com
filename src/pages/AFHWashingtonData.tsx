@@ -374,7 +374,7 @@ const AFHWashingtonData = () => {
 
         <PageFAQ faqs={FAQS} heading="Washington AFH Data: Common Questions" eyebrow="Frequently Asked Questions" id="afh-data" />
       </main>
-      <AuthorByline />
+      <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />

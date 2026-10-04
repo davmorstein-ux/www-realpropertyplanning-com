@@ -530,7 +530,7 @@ const AFHBuyingSelling = () => (
         </div>
       </section>
 
-      <AuthorByline />
+      <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
       <section style={{ padding: "2rem 1.5rem", background: "#faf8f4" }}>

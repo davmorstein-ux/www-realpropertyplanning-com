@@ -262,7 +262,7 @@ export default function ProbateDeadlines() {
 
       <PageFAQ faqs={PROBATE_FAQS} heading="Washington Probate: Common Questions" eyebrow="Frequently Asked Questions" id="probate-pillar" />
       </main>
-      <AuthorByline />
+      <AuthorByline context="estate" />
       <DisclaimerSection />
       <Footer />
     </div>

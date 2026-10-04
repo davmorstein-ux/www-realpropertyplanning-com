@@ -184,7 +184,7 @@ const PropertyTaxesAfterDeath = () => (
         </div>
       </div>
     </main>
-    <AuthorByline />
+    <AuthorByline context="estate" />
     <DisclaimerSection />
     <Footer />
   </div>

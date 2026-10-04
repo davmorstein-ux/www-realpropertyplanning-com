@@ -857,7 +857,7 @@ const AFHRegulationsCompliance = () => (
         </div>
       </section>
 
-      <AuthorByline />
+      <AuthorByline context="afh" />
       <BackToAFHClub />
       <CTASection />
       <DisclaimerSection />

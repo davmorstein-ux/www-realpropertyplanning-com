@@ -1173,7 +1173,7 @@ const AFHDosAndDonts = () => (
 
       <PageFAQ faqs={FAQS} heading="Operating an AFH: Common Questions" eyebrow="Frequently Asked Questions" id="afh-dos-donts" />
     </main>
-    <AuthorByline />
+    <AuthorByline context="afh" />
     <BackToAFHClub />
     <CTASection />
     <DisclaimerSection />
