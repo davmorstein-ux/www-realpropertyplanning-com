@@ -3871,11 +3871,10 @@ main #rpp-tagline .rpp-tagline-line-v2 {
      800 so the lettering holds its own against the sunlit wall. */
   color: #1F4058 !important;
   font-weight: 800 !important;
-  text-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.75),
-    0 2px 0 rgba(15, 32, 46, 0.18),
-    0 3px 2px rgba(15, 32, 46, 0.22),
-    0 8px 18px rgba(15, 32, 46, 0.22) !important;
+  /* One soft, offset shadow only. The first version stacked a light edge and
+     two dark edges; at normal (1x) screen resolution they blurred the letter
+     edges ("does not look very clean"). Crisp letters, lifted by the glow. */
+  text-shadow: 0 3px 12px rgba(15, 32, 46, 0.28) !important;
 }
 /* Short rule under the tagline, in the front door's brick red (#B0352A, the
    AFH Club logo door). The only red allowed near the headline: the text stays
