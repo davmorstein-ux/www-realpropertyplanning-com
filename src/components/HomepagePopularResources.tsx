@@ -180,6 +180,21 @@ const HomepagePopularResources = () => {
         white-space: nowrap !important;
       }
       .rpp-pr-3d .rpp-pr-card-icon svg { width: 32px !important; height: 32px !important; }
+      /* Circled arrow, matching the "What brings you here" tiles (owner,
+         Oct 4, 2026). Replaces the sitewide ::after arrow on these buttons. */
+      .rpp-pr-3d .rpp-pr-card-cta.rpp-pr-card-cta { gap: 12px !important; }
+      .rpp-pr-3d .rpp-pr-card-cta.rpp-pr-card-cta::after { content: none !important; display: none !important; }
+      .rpp-pr-3d .rpp-pr-arrow.rpp-pr-arrow {
+        flex: 0 0 30px !important; width: 30px !important; height: 30px !important; min-width: 30px !important;
+        padding: 0 !important; margin: 0 !important; box-sizing: border-box;
+        border-radius: 999px; border: 2px solid #ffffff; color: #ffffff;
+        display: inline-flex; align-items: center; justify-content: center;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.25);
+        transition: background-color 0.18s ease, color 0.18s ease;
+      }
+      .rpp-pr-3d:hover .rpp-pr-arrow.rpp-pr-arrow, .rpp-pr-3d:focus-visible .rpp-pr-arrow.rpp-pr-arrow {
+        background-color: #ffffff; color: var(--pr-accent);
+      }
 
       /* Browse all — a solid button, so it reads as the primary next step
          rather than another text link among many. */
@@ -340,10 +355,13 @@ const HomepagePopularResources = () => {
                     <Icon size={26} color={r.accent} strokeWidth={2} aria-hidden="true" />
                   </span>
                   <span className="rpp-pr-card-text">{r.title}</span>
-                  {/* Arrow comes from the sitewide CSS ::after — see the CTA
-                      ARROW block in index.css. */}
                   <span className="rpp-pr-card-cta">
                     Read Guide
+                    <span className="rpp-pr-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg>
+                    </span>
                   </span>
                 </Link>
               </li>
