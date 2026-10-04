@@ -140,7 +140,7 @@ const TrusteeHouseGuide = () => (
           <li>
             <strong>The 15-day notice.</strong> A trustee can send the others written notice of a proposed action,
             such as accepting an offer. A co-trustee who does not object in writing within 15 days of receiving it is
-            treated as approving.
+            treated as approving, unless they earlier told that trustee in writing that the 15-day rule does not apply.
           </li>
           <li>
             <strong>Delegation.</strong> With the other's consent, one co-trustee can delegate a task, such as
@@ -150,7 +150,7 @@ const TrusteeHouseGuide = () => (
         <p>
           If none of that breaks the deadlock, Washington's trust dispute law (TEDRA) offers mediation and, failing
           that, a court petition, which can include asking the court to change a trustee for reasonable cause. Each
-          step costs the trust money, so most families try a neutral appraisal and a written plan first.
+          step costs the trust money, so it usually makes sense to try a neutral appraisal and a written plan first.
         </p>
         <p className="tg-src">
           Sources: <R cite="11.98.016" /> (co-trustees); <R cite="11.98.039" /> (changing a trustee); chapter{" "}
