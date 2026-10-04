@@ -24,9 +24,12 @@ const CSS = `
 @media (max-width: 760px) { .mos-grid { grid-template-columns: 1fr; } }
 .mos-card { background: #fff; border: 1px solid #e3d9cc; border-top: 5px solid var(--c); border-radius: 12px; padding: 1.4rem 1.5rem; }
 .mos-card h3.mos-h3 { font-family: 'DM Sans', system-ui, sans-serif; font-size: 22px !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.8rem !important; }
-.mos-card ul { margin: 0; padding-left: 1.15rem; list-style: disc !important; }
-.mos-card li::marker { color: var(--c); }
-.mos-card li { font-size: 17px; line-height: 1.6; color: #1f2933; margin: 0 0 0.55rem; }
+/* Each reason is its own framed tile so the points don't run together
+   (owner, Oct 4, 2026). */
+.mos-card ul { margin: 0; padding: 0; list-style: none !important; display: grid; gap: 0.7rem; }
+.mos-card li { font-size: 17px; line-height: 1.55; color: #1f2933; margin: 0; padding: 0.8rem 1rem 0.8rem 1.1rem;
+  background: color-mix(in srgb, var(--c) 6%, #ffffff); border: 1px solid color-mix(in srgb, var(--c) 28%, #ffffff);
+  border-left: 4px solid var(--c); border-radius: 8px; }
 .mos-both { margin-top: 1.5rem; background: #fff; border: 1px solid #e3d9cc; border-radius: 12px; padding: 1.4rem 1.5rem; }
 .mos-both h3.mos-h3 { font-family: 'DM Sans', system-ui, sans-serif; font-size: 20px !important; font-weight: 700; color: #1c1917 !important; margin: 0 0 0.7rem !important; }
 .mos-both p { font-size: 17px; line-height: 1.6; color: #1f2933; margin: 0 0 0.7rem; }
