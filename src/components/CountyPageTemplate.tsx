@@ -1,3 +1,4 @@
+import { COUNTY_OFFICIAL_RESOURCES } from "@/data/countyOfficialResources";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
@@ -585,6 +586,33 @@ const CountyPageTemplate = ({
             </div>
           </div>
         </section>
+
+        {/* Official county offices (Oct 4, 2026): src/data/countyOfficialResources.ts */}
+        {COUNTY_OFFICIAL_RESOURCES[countySlug] && (
+          <section className="py-14 lg:py-18 bg-background">
+            <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-2xl text-foreground font-semibold mb-3">Official {countyName} offices for estates and property</h2>
+              <p className="text-foreground text-lg leading-relaxed mb-6">
+                The county offices a personal representative, trustee or heir usually deals with. Each link goes to the county's own website.
+              </p>
+              <ul className="cor-list" style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 14 }}>
+                {COUNTY_OFFICIAL_RESOURCES[countySlug].items.map((r) => (
+                  <li key={r.href} style={{ border: "1px solid #d5dde4", borderRadius: 12, padding: "16px 18px", background: "#ffffff" }}>
+                    <a href={r.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-lg underline underline-offset-4">
+                      {r.office} ↗
+                    </a>
+                    <p className="text-foreground leading-relaxed" style={{ margin: "6px 0 0" }}>{r.use}</p>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-foreground" style={{ marginTop: 14, fontSize: 15 }}>
+                Links checked {new Date(`${COUNTY_OFFICIAL_RESOURCES[countySlug].checked}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}. Real Property Planning is not affiliated with the county.
+              </p>
+            </div>
+            </div>
+          </section>
+        )}
 
         {/* FAQ — short */}
         <PageFAQ faqs={faqs} heading={`${countyName} FAQ`} />

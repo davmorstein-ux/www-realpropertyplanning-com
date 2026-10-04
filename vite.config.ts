@@ -20,6 +20,7 @@ import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/dat
 import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
 import { PROPERTY_TAX_AFTER_DEATH, PTX_PRERENDER_SECTIONS, PTX_FAQS } from "./src/data/propertyTaxAfterDeath";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
+import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
 import { FLOW_PAGES, FLOW_CHART_TEXT, DEADLINES_PATH, flowPrerenderSections } from "./src/data/probateFlow";
 import { AFH_FLOW_PAGES, AFH_FLOW_CHART_TEXT, AFH_RULES_PATH, afhFlowPrerenderSections } from "./src/data/afhFlow";
 import { AFH_QUICK_LINKS, isAFHClubPath } from "./src/lib/afhQuickLinks";
@@ -252,6 +253,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerA: "King County's market is active, but condition-impaired or vacant estate properties don't automatically benefit. Start with an honest, condition-adjusted valuation calibrated to the specific neighborhood and buyer pool — not a county-wide average. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
     intro:
       "From Capitol Hill craftsmans to Mercer Island waterfront and Renton ramblers — King County estate properties demand neighborhood-level pricing, not county averages. This page explains what to know before pricing or preparing a King County estate property, and how to find a broker or appraiser who works the neighborhood.",
+    sections: countyResourcesPrerender("king-county"),
     cities: [
       "Seattle", "Bellevue", "Kirkland", "Redmond", "Bothell", "Woodinville",
       "Issaquah", "Sammamish", "Mercer Island", "Shoreline", "Renton", "Newcastle",
@@ -267,6 +269,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerA: "Snohomish County stretches from Edmonds and Mukilteo waterfronts to Mill Creek suburbs to rural acreage near Monroe and Arlington — each with its own buyer pool. Pricing and preparation should follow the specific neighborhood the home sits in. Real Property Planning explains the process; you can contact its featured Washington licensed broker or certified appraiser directly, or hire anyone you choose.",
     intro:
       "Waterfront homes in Mukilteo, longtime family houses in Mill Creek, rural acreage near Arlington — every Snohomish corner has its own buyer pool. This page explains what to know about pricing and preparing an estate property here, and how to find a broker or appraiser who works the area.",
+    sections: countyResourcesPrerender("snohomish-county"),
     cities: [
       "Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek", "Bothell",
       "Snohomish", "Lake Stevens", "Marysville", "Monroe", "Arlington",
@@ -281,6 +284,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerA: "Pierce County's housing inventory leans older — many estate properties are pre-1950 craftsmans or mid-century homes carrying years of deferred maintenance. The right strategy depends on the specific neighborhood: a Stadium District craftsman is a different conversation than a Lakewood rambler or a Gig Harbor view lot.",
     intro:
       "Tacoma's North End craftsmans, Gig Harbor waterfronts, and Puyallup family homes each face a different buyer pool. This page covers what to know about condition assessment and Pierce-County-specific pricing, and how to find a broker or appraiser who works the market.",
+    sections: countyResourcesPrerender("pierce-county"),
     cities: [
       "Tacoma", "University Place", "Gig Harbor", "Puyallup", "Bonney Lake",
       "Lakewood", "Sumner", "Fircrest", "Milton",
