@@ -627,10 +627,10 @@ export function buildAfhListingRoutes(cityRoutes: Record<string, string>, facili
     );
     b.push(`<h1 style="font-size:2rem;line-height:1.2;margin-bottom:8px">${esc(typeNoun(l))} ${STATUS_HEADLINE[l.marketStatus]}: ${esc(heading)}</h1>`);
     b.push(
-      `<p style="margin:0 0 16px;font-size:1.1rem"><strong style="color:${l.marketStatus === "active" ? "#0a5648" : l.marketStatus === "pending" ? "#6f5410" : "#8a2a2a"}">${AFH_MARKET_STATUS_LABELS[l.marketStatus]}</strong> · ${esc(l.soldPrice && l.marketStatus === "sold" ? `Sold ${l.soldPrice}` : l.price)} · ${esc(afhClassification(l))}</p>`
+      `<p style="margin:0 0 16px;font-size:1.1rem"><strong style="color:${l.marketStatus === "active" ? "#0a5648" : l.marketStatus === "pending" ? "#5c4510" : "#8a2a2a"}">${AFH_MARKET_STATUS_LABELS[l.marketStatus]}</strong> · ${esc(l.soldPrice && l.marketStatus === "sold" ? `Sold ${l.soldPrice}` : l.price)} · ${esc(afhClassification(l))}</p>`
     );
     b.push(`<div style="margin-bottom:24px;padding:20px;border:1px solid #e5e5e5;border-radius:12px;background:#fafafa">`);
-    b.push(`<p style="font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#6f5410;margin:0 0 8px 0">Quick Answer</p>`);
+    b.push(`<p style="font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#5c4510;margin:0 0 8px 0">Quick Answer</p>`);
     b.push(`<h2 style="font-size:1.25rem;line-height:1.3;margin:0 0 8px 0">Is this ${esc(typeNoun(l).toLowerCase())} still available?</h2>`);
     b.push(`<p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0">${esc(availabilityAnswer(l))}</p>`);
     b.push(`</div>`);

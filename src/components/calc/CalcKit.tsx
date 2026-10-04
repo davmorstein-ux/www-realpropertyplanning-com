@@ -206,7 +206,7 @@ export const CK_CSS = `
 .ck .ck-head { display: flex; align-items: center; gap: 18px; background: var(--deep); padding: 22px 26px; }
 .ck .ck-head svg { flex: 0 0 auto; }
 .ck .ck-headtext { min-width: 0; }
-.ck .ck-eyebrow.ck-eyebrow { font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.18em !important; text-transform: uppercase; color: ${CK_GOLD_ICON} !important; margin: 0 0 4px !important; }
+.ck .ck-eyebrow.ck-eyebrow { font-size: 14px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #F0CB7A !important; margin: 0 0 4px !important; }
 .ck h2.ck-title.ck-title { font-family: 'DM Sans', system-ui, sans-serif !important; font-size: clamp(24px, 3.4vw, 34px) !important; line-height: 1.15 !important; font-weight: 700 !important; color: #ffffff !important; margin: 0 !important; text-wrap: balance; }
 .ck .ck-sub.ck-sub { font-size: 16px !important; color: rgba(255,255,255,0.88) !important; margin-top: 6px !important; line-height: 1.4 !important; }
 .ck .ck-body { padding: 22px 26px 20px; }

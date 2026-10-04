@@ -83,7 +83,7 @@ const HomepageFunnel = () => (
         font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 17px !important;
         font-weight: 700 !important;
-        color: #1a7a78 !important;
+        color: #155e5c !important;
         background-color: #ffffff !important;
         padding: 0.65rem 1.5rem !important;
         border-radius: 6px !important;
@@ -175,7 +175,7 @@ const HomepageFunnel = () => (
       <Link to="/afh-club" aria-label="Explore the AFH Club" style={{ textDecoration: "none", display: "block" }}>
         <div
           style={{
-            backgroundColor: "#1a7a78",
+            backgroundColor: "#155e5c",
             borderRadius: "10px",
             padding: "2rem 2.5rem",
             display: "flex",

@@ -361,7 +361,7 @@ const Header = () => {
                     ...NAV_FONT,
                     fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
                     color: "#fff",
-                    background: "#1f6fb2",
+                    background: "#17578f",
                     /* Square icon button, sized to sit level with the language
                        switcher beside it. Height comes from the row (the parent
                        stretches its children) so the two stay matched if either
@@ -534,7 +534,7 @@ const Header = () => {
                   className="rpp-header-phone"
                   style={{
                     color: "#fff",
-                    background: "#1f6fb2",
+                    background: "#17578f",
                     borderRadius: 6,
                     textDecoration: "none",
                     /* Square icon button matching the LanguageSwitcher beside

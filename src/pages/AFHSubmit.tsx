@@ -53,7 +53,7 @@ const SELL_OPTIONS = [
 
 const labelCls = "block text-[14px] font-semibold text-slate-700 mb-1.5 uppercase tracking-wide";
 const inputCls =
-  "w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-[16px] text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#1a7a78]/40 focus:border-[#1a7a78]";
+  "w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-[16px] text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#155e5c]/40 focus:border-[#155e5c]";
 
 const AFHSubmit: React.FC = () => {
   const [form, setForm] = useState<FormState>(initial);
@@ -157,7 +157,7 @@ const AFHSubmit: React.FC = () => {
                 <legend className={labelCls}>What are you looking to sell?</legend>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1">
                   {SELL_OPTIONS.map((opt) => (
-                    <label key={opt} className="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 cursor-pointer hover:border-[#1a7a78]">
+                    <label key={opt} className="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 cursor-pointer hover:border-[#155e5c]">
                       <input
                         type="radio"
                         name="sellType"
@@ -193,7 +193,7 @@ const AFHSubmit: React.FC = () => {
                 <legend className={labelCls}>Are you currently working with a real estate broker?</legend>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {["Yes", "No"].map((opt) => (
-                    <label key={opt} className="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-lg px-5 py-3 cursor-pointer hover:border-[#1a7a78]">
+                    <label key={opt} className="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-lg px-5 py-3 cursor-pointer hover:border-[#155e5c]">
                       <input
                         type="radio"
                         name="workingWithBroker"
@@ -221,7 +221,7 @@ const AFHSubmit: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full md:w-auto inline-flex items-center justify-center bg-[#1a7a78] hover:bg-[#155f5d] text-white text-[16px] font-bold px-8 py-4 rounded-lg transition-colors min-h-[52px]"
+                className="w-full md:w-auto inline-flex items-center justify-center bg-[#155e5c] hover:bg-[#155f5d] text-white text-[16px] font-bold px-8 py-4 rounded-lg transition-colors min-h-[52px]"
               >
                 Send My Inquiry
               </button>

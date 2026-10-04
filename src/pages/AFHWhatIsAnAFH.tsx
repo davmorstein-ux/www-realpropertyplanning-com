@@ -171,7 +171,7 @@ const AFHWhatIsAnAFH = () => {
                   fontWeight: 700,
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "#6f5410",
+                  color: "#5c4510",
                   margin: "0 0 8px",
                 }}
               >

@@ -22,7 +22,7 @@ interface RoadmapDropdownProps {
   mode?: "dropdown" | "current" | "list";
 }
 
-const ACTIVE_COLOR = "#1f6fb2";
+const ACTIVE_COLOR = "#17578f";
 
 /**
  * "dropdown" mode: shows an upfront count of how many topics/pages a guide

@@ -351,7 +351,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         .coc2 .coc2-figlabel.coc2-figlabel { font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: #14283a !important; margin-bottom: 4px !important; }
         .coc2 .coc2-fignum.coc2-fignum { font-size: clamp(28px, 4vw, 38px) !important; font-weight: 700 !important; line-height: 1.1 !important; font-variant-numeric: tabular-nums; }
         .coc2 .coc2-wa.coc2-wa { color: var(--c) !important; }
-        .coc2 .coc2-nat.coc2-nat { color: ${GOLD} !important; }
+        .coc2 .coc2-nat.coc2-nat { color: ${GOLD_TEXT} !important; }
         .coc2 .coc2-natsmall.coc2-natsmall { color: ${GOLD_TEXT} !important; }
         .coc2 .coc2-figper.coc2-figper { font-size: 16px !important; color: #1f2933 !important; margin-top: 2px !important; }
         .coc2 .coc2-bars { margin: 0 0 20px; }

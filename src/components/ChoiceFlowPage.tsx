@@ -70,7 +70,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                 <div className="mb-6 text-center">
                   <Link
                     to="/helping-an-aging-parent"
-                    className="inline-flex items-center gap-2 text-navy font-semibold text-base hover:text-[#1f6fb2] transition-colors underline underline-offset-2"
+                    className="inline-flex items-center gap-2 text-navy font-semibold text-base hover:text-[#17578f] transition-colors underline underline-offset-2"
                   >
                     ← Back to Start
                   </Link>
@@ -120,7 +120,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 };
 
 const ROADMAP_LABELS = ["Where you are", "What you need", "Your guidance"];
-const CURRENT_COLOR = "#1f6fb2";
+const CURRENT_COLOR = "#17578f";
 
 const RoadmapSteps = ({ activeStep, trail }: { activeStep: number; trail: FlowNode[] }) => (
   <ol className="flex items-start justify-center mb-5 max-w-md mx-auto" aria-label="Your progress through this guide">

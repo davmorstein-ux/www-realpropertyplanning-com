@@ -1945,7 +1945,7 @@ main a:not([class*="btn"]):not([role="menuitem"]):not(.no-underline):hover {
     .card-3d-blue-skin
   ):not(.premium-tile):not(.premium-shell-tile)
   .text-gold {
-  color: hsl(42 70% 28%) !important;
+  color: hsl(42 75% 21%) !important; /* 8.8:1 (Oct 4, 2026) */
   font-weight: 600;
   font-size: max(0.9375rem, 15px);
 }
@@ -3328,7 +3328,7 @@ main [style*="#cf7980"] {
 .bg-navy .text-gold,
 [class*="bg-navy"] [class*="text-gold"],
 [class*="bg-primary"] [class*="text-gold"] {
-  color: #dc727b !important;
+  color: #f2b8bd !important; /* 8.7:1 on navy (Oct 4, 2026) */
 }
 
 /* 14. Links — minimum contrast on light backgrounds */
@@ -3339,10 +3339,10 @@ main [style*="#cf7980"] {
    Specificity here is (0,3,2), which beats Tailwind's .text-white at
    (0,1,0) — the button had no way to win. */
 main a:not([class*="bg-"]):not(.btn):not([class*="button"]):not([style*="background"]) {
-  color: #ca2b38;
+  color: #9e1f2b; /* 7.5:1 on cream (Oct 4, 2026; was #ca2b38 at 5:1) */
 }
 main a:not([class*="bg-"]):not(.btn):not([class*="button"]):not([style*="background"]):hover {
-  color: #8a1e27;
+  color: #6e1820;
 }
 /* But don't override navy/primary/foreground branded links */
 main a.text-primary,

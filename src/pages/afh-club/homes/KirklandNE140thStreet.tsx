@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
-const TEAL = "#1a7a78";
+const TEAL = "#155e5c";
 const SLATE = "#443e38";
 const GRAY_BG = "#f4f6f7";
 const GRAY_BORDER = "#dde3e8";

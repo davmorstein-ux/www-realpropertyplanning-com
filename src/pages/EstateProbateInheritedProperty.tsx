@@ -145,7 +145,7 @@ const EstateProbateInheritedProperty = () => {
 
             {/* No currentPath. This previously passed tiles[0].href, which told
                 RoadmapDropdown the reader was standing on "First Steps" — so
-                that one entry rendered in active blue (#1f6fb2) on a page the
+                that one entry rendered in active blue (#17578f) on a page the
                 reader was not on, while the other five stayed burgundy. On a
                 hub, nothing in the list is current; the prop is optional and
                 omitting it leaves every topic in its resting state. */}

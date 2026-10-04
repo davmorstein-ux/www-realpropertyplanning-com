@@ -13,7 +13,7 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import { BROKER_PHOTO, BROKERAGE_LOGO } from "@/data/featuredProfessionalAssets";
 import ArticleCover from "@/components/ArticleCover";
 
-const TEAL = "#1a7a78";
+const TEAL = "#155e5c";
 const TEAL_MID = "#2a9d9a";
 const SLATE = "#443e38";
 const GRAY_BG = "#f4f6f7";

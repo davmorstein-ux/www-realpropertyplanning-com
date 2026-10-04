@@ -4,7 +4,7 @@ import { afhClassification, AFH_SOURCE_LABELS, AFH_MARKET_STATUS_LABELS, formatV
 import { Link } from "react-router-dom";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 
-const TEAL = "#1a7a78";
+const TEAL = "#155e5c";
 const TEAL_MID = "#2a9d9a";
 const SLATE = "#443e38";
 const GRAY_BG = "#f4f6f7";
@@ -163,7 +163,7 @@ const PhotoPanel = ({
         borderRadius: "4px",
         fontSize: "10px",
         fontWeight: 600,
-        color: "#2d7a3a",
+        color: "#1e5b29",
         letterSpacing: "0.05em",
         textTransform: "uppercase" as const,
         fontFamily: "Inter, sans-serif",
@@ -271,7 +271,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
             · {AFH_SOURCE_LABELS[listing.source]}# {listing.mlsNum}
           </div>
           <div style={{ fontSize: "11px", color: GRAY_TEXT, marginTop: "3px" }}>
-            <span style={{ fontWeight: 700, color: listing.marketStatus === "pending" ? "#6f5410" : listing.marketStatus === "active" ? "#0a5648" : "#8a2a2a" }}>
+            <span style={{ fontWeight: 700, color: listing.marketStatus === "pending" ? "#5c4510" : listing.marketStatus === "active" ? "#0a5648" : "#8a2a2a" }}>
               {AFH_MARKET_STATUS_LABELS[listing.marketStatus]}
             </span>{" "}
             · verified {formatVerifiedDate(listing.lastVerified)}
