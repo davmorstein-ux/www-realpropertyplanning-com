@@ -329,16 +329,18 @@ const RPPHomeV3 = () => {
                         border radius for the ring to inherit. */}
                     <div
                       className="marquee-hover group-active:scale-[0.98] transition-transform duration-150"
-                      style={{ borderRadius: 10 }}
+                      style={{ borderRadius: 16 }}
                     >
+                      {/* 3D TILE (Oct 4, 2026, owner's 3D mock-ups): a raised
+                          frame in the tile's colour around the photo and a
+                          bevelled label panel, built in CSS (.rpp-tile3d below)
+                          so the label stays live text — readable by search
+                          engines and screen readers, and translated. */}
                       <div
-                        style={{
-                          borderRadius: 10,
-                          overflow: "hidden",
-                          boxShadow: "0 2px 12px rgba(0,0,0,0.10)",
-                        }}
+                        className="rpp-tile3d"
+                        style={{ ["--tile" as string]: bgColor, backgroundColor: bgColor }}
                       >
-                        <div style={{ position: "relative" }}>
+                        <div className="rpp-tile3d-photo" style={{ position: "relative" }}>
                           {/* Sizing lives in .rpp-funnel-img below, not inline:
                               the height has to differ by breakpoint. width and
                               height attributes are the photos' real proportions
@@ -358,6 +360,7 @@ const RPPHomeV3 = () => {
                               covered part of each photo. */}
                         </div>
                         <div
+                          className="rpp-tile3d-label"
                           style={{
                             backgroundColor: bgColor,
                             /* WAS 1.1rem vertical. Two lines of 20px at 1.25 line-height is
@@ -387,6 +390,11 @@ const RPPHomeV3 = () => {
                             }}
                           >
                             {title}
+                          </span>
+                          <span className="rpp-tile3d-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg>
                           </span>
                           {/* Arrow is the sitewide CSS ::after (CTA ARROW block
                               in index.css) via the rpp-funnel-cta class on the
@@ -422,6 +430,78 @@ const RPPHomeV3 = () => {
      here and the width/height attributes on the <img> together.
 
      Doubled class + !important because index.css carries global img rules. */
+  /* 3D TILES. The frame is the tile colour with a light-to-dark sheen on top,
+     an inner highlight along the top edge and a dark one along the bottom,
+     and a two-layer drop shadow; on hover the tile lifts and the shadow grows.
+     The photo and the label sit inside as inset panels. Live text throughout. */
+  /* Equal heights across the row: the frame fills the grid cell and the label
+     panel takes the leftover space, so one-line and two-line labels line up. */
+  .group:has(> .marquee-hover > .rpp-tile3d), .marquee-hover:has(> .rpp-tile3d) { height: 100%; }
+  .rpp-tile3d {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    border-radius: 16px;
+    padding: 6px;
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.04) 38%, rgba(0,0,0,0.14) 100%);
+    box-shadow:
+      inset 0 1.5px 0 rgba(255,255,255,0.45),
+      inset 0 -3px 0 rgba(0,0,0,0.28),
+      0 2px 3px rgba(0,0,0,0.12),
+      0 10px 22px -6px rgba(0,0,0,0.30);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .group:hover .rpp-tile3d, .group:focus-visible .rpp-tile3d {
+    transform: translateY(-4px);
+    box-shadow:
+      inset 0 1.5px 0 rgba(255,255,255,0.45),
+      inset 0 -3px 0 rgba(0,0,0,0.28),
+      0 4px 6px rgba(0,0,0,0.14),
+      0 18px 32px -8px rgba(0,0,0,0.38);
+  }
+  .rpp-tile3d-photo {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.25), 0 1px 0 rgba(255,255,255,0.35);
+  }
+  .rpp-tile3d-label.rpp-tile3d-label {
+    margin-top: 6px;
+    border-radius: 10px;
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(0,0,0,0.12));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.30), inset 0 -2px 0 rgba(0,0,0,0.22);
+  }
+  .rpp-tile3d .rpp-funnel-cta.rpp-funnel-cta {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+  }
+  /* The circled arrow replaces the sitewide ::after arrow on these tiles. */
+  .rpp-tile3d .rpp-funnel-cta.rpp-funnel-cta::after { content: none !important; display: none !important; }
+  .rpp-tile3d .rpp-funnel-cta.rpp-funnel-cta { flex: 1 1 auto; min-width: 0; }
+  .rpp-tile3d-label.rpp-tile3d-label { padding: 0.7rem 0.85rem 0.7rem 1rem !important; gap: 0.5rem !important; flex: 1 1 auto; flex-direction: row !important; flex-wrap: nowrap !important; }
+  /* The lift and shadow are the hover cue here; the sitewide dashed marquee
+     ring would draw a second outline around the 3D frame. */
+  .marquee-hover:has(> .rpp-tile3d)::before { display: none !important; }
+  .rpp-tile3d-arrow.rpp-tile3d-arrow {
+    flex: 0 0 32px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    border-radius: 999px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.25);
+    transition: background-color 0.18s ease, color 0.18s ease;
+  }
+  .group:hover .rpp-tile3d-arrow.rpp-tile3d-arrow { background-color: #ffffff; color: var(--tile); }
+
   .rpp-funnel-img.rpp-funnel-img {
     display: block !important;
     width: 100% !important;
