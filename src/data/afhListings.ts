@@ -545,6 +545,7 @@ export const afhListings: AFHListing[] = [
     broker: "Richard E Crane",
     brokerage: "Keller Williams Western Realty",
     listingContactPhone: "(360) 790-2240",
+    listingContactEmail: "Richardecrec@gmail.com",
     mlsNum: "2521076",
   },
   {
