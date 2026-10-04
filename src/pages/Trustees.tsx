@@ -14,13 +14,14 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import NextQuestions from "@/components/NextQuestions";
+import TrusteeHouseGuide from "@/components/guides/TrusteeHouseGuide";
 
 const jsonLd = articleSchema({
   headline: "Trust Property Guide for Trustees",
   description: "Practical real estate guidance for trustees, successor trustees, and fiduciaries managing trust-held property in Washington State.",
   url: "/trustees",
   datePublished: "2026-04-09",
-  dateModified: "2026-04-10",
+  dateModified: "2026-10-04",
   about: ["Trustees", "Successor trustees", "Trust administration", "Trust property"],
 });
 
@@ -45,11 +46,13 @@ const Trustees = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
         <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-          This page is for trustees and successor trustees overseeing real property held in a Washington State trust. Practical real estate guidance for trustees managing trust-held property — built around fiduciary duties, beneficiary coordination, and defensible pricing.
+          This page is for trustees and successor trustees responsible for a house held in a Washington trust: what to do first, whether the beneficiaries must approve a sale, what happens when co-trustees disagree, and what to do when a beneficiary is living in the house.
         </p>
         </div>
       </div>
     </section>
+
+    <TrusteeHouseGuide />
 
     <PageFAQ
       faqs={[
@@ -59,7 +62,7 @@ const Trustees = () => (
         },
         {
           question: "Does a trustee need a property appraisal before selling?",
-          answer: "In most cases, yes. A defensible written valuation — ideally a certified appraisal — protects the trustee from later claims that the property was sold below market value. It also establishes the new tax basis for beneficiaries and supports the trust accounting. This is one of the most common reasons trustees are sued years after a sale, and it is fully avoidable.",
+          answer: "In most cases, yes. A defensible written valuation — ideally a certified appraisal — protects the trustee from later claims that the property was sold below market value. It also establishes the new tax basis for beneficiaries and supports the trust accounting. Without one, a beneficiary who later thinks the price was too low has an easy argument.",
         },
         {
           question: "Can a trustee sell property without beneficiary approval in Washington?",
