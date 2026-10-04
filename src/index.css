@@ -3864,6 +3864,18 @@ main #rpp-tagline .rpp-tagline-line-v2 {
   font-style: normal !important;
   font-weight: 700 !important;
   letter-spacing: -0.01em !important;
+  /* RAISED LETTERING (owner, Oct 4, 2026: "looks so flat against the image").
+     A one-pixel light edge above each letter, a tight dark edge below and a
+     soft cast shadow lift the words off the wall without a cartoon
+     extrusion. Colour deepened from denim #2E5368 to #1F4058 and weight to
+     800 so the lettering holds its own against the sunlit wall. */
+  color: #1F4058 !important;
+  font-weight: 800 !important;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.75),
+    0 2px 0 rgba(15, 32, 46, 0.18),
+    0 3px 2px rgba(15, 32, 46, 0.22),
+    0 8px 18px rgba(15, 32, 46, 0.22) !important;
 }
 /* Short rule under the tagline, in the front door's brick red (#B0352A, the
    AFH Club logo door). The only red allowed near the headline: the text stays
