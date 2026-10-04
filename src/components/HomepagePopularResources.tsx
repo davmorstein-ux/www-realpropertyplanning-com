@@ -120,6 +120,67 @@ const HomepagePopularResources = () => {
         text-decoration: none !important;
       }
 
+      /* 3D RESOURCE TILES (Oct 4, 2026, owner's 3D mock-ups), built in CSS so
+         the titles stay live text. A thick frame in the accent colour with a
+         light-to-dark sheen (gradient border on a cream panel), a two-layer
+         drop shadow, a raised icon disc and a bevelled button. Lifts on hover.
+         The doubled class beats the flat .rpp-pr-card rules above. */
+      .rpp-pr-3d.rpp-pr-3d {
+        border: 7px solid transparent !important;
+        border-radius: 18px !important;
+        background:
+          linear-gradient(#faf7f1, #f3eee5) padding-box,
+          linear-gradient(160deg,
+            color-mix(in srgb, var(--pr-accent) 62%, #ffffff) 0%,
+            var(--pr-accent) 38%,
+            color-mix(in srgb, var(--pr-accent) 70%, #000000) 100%) border-box !important;
+        box-shadow:
+          inset 0 2px 0 rgba(255,255,255,0.9),
+          inset 0 0 0 1px rgba(0,0,0,0.10),
+          0 2px 3px rgba(0,0,0,0.12),
+          0 14px 26px -8px rgba(0,0,0,0.32) !important;
+        padding: 1.75rem 1.25rem 1.5rem !important;
+      }
+      .rpp-pr-3d.rpp-pr-3d:hover, .rpp-pr-3d.rpp-pr-3d:focus-visible {
+        transform: translateY(-4px) !important;
+        box-shadow:
+          inset 0 2px 0 rgba(255,255,255,0.9),
+          inset 0 0 0 1px rgba(0,0,0,0.10),
+          0 4px 6px rgba(0,0,0,0.14),
+          0 22px 36px -10px rgba(0,0,0,0.40) !important;
+      }
+      .rpp-pr-3d.rpp-pr-3d::before { display: none !important; }
+      .rpp-pr-3d .rpp-pr-card-icon.rpp-pr-card-icon {
+        width: 64px !important;
+        height: 64px !important;
+        background: color-mix(in srgb, var(--pr-accent) 14%, #ffffff) !important;
+        box-shadow:
+          inset 0 2px 0 rgba(255,255,255,0.9),
+          inset 0 -2px 0 rgba(0,0,0,0.08),
+          0 3px 6px rgba(0,0,0,0.16) !important;
+      }
+      .rpp-pr-3d .rpp-pr-card-text.rpp-pr-card-text {
+        color: color-mix(in srgb, var(--pr-accent) 55%, #000000) !important;
+        font-size: 21px !important;
+      }
+      .rpp-pr-3d .rpp-pr-card-cta.rpp-pr-card-cta {
+        align-self: stretch !important;
+        justify-content: center !important;
+        font-size: 15px !important;
+        padding: 12px 16px !important;
+        border-radius: 10px !important;
+        background-image: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(0,0,0,0.14)) !important;
+        box-shadow:
+          inset 0 1px 0 rgba(255,255,255,0.35),
+          inset 0 -2px 0 rgba(0,0,0,0.25),
+          0 2px 4px rgba(0,0,0,0.22) !important;
+        text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+      }
+      .rpp-pr-3d .rpp-pr-card-icon svg { width: 32px !important; height: 32px !important; }
+
       /* Browse all — a solid button, so it reads as the primary next step
          rather than another text link among many. */
       .rpp-pr-browse.rpp-pr-browse {
@@ -272,7 +333,7 @@ const HomepagePopularResources = () => {
               <li key={r.href}>
                 <Link
                   to={r.href}
-                  className="rpp-pr-card marquee-hover"
+                  className="rpp-pr-card rpp-pr-3d marquee-hover"
                   style={{ ["--pr-accent" as string]: r.accent, ["--pr-accent-soft" as string]: `${r.accent}1a` }}
                 >
                   <span className="rpp-pr-card-icon">
