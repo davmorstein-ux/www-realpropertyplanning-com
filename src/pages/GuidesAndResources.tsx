@@ -64,7 +64,7 @@ const GuidesAndResources = () => {
 
         {/* How many, and a way to jump to a group */}
         <div style={{ background: "#fff", padding: "34px 20px 30px" }}>
-          <style>{LIBRARY_CSS}</style>
+          <style dangerouslySetInnerHTML={{ __html: LIBRARY_CSS }} />
           <p className="rpp-lib-count">
             <strong>{GUIDE_COUNT} guides and articles</strong> for Washington families, executors, and trustees, in {categories.length} groups. Jump to the one that fits where you are.
           </p>

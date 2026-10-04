@@ -214,7 +214,7 @@ const Privacy = () => {
             font-size and colour on bare p / h2 / li with !important, so a single
             class loses. Body text is 18px rather than the site's 17px because
             this page is dense and read by people who need it to be readable. */}
-        <style>{`
+        <style dangerouslySetInnerHTML={{ __html: `
           .rpp-privacy.rpp-privacy p,
           .rpp-privacy.rpp-privacy li {
             font-family: "DM Sans", system-ui, sans-serif !important;
@@ -244,7 +244,7 @@ const Privacy = () => {
             color: #1c1917 !important;
             margin: 0 0 24px !important;
           }
-        `}</style>
+        ` }} />
       </main>
       <Footer />
     </div>

@@ -52,7 +52,7 @@ import { Link } from "react-router-dom";
 const AboutTheHub = () => {
   return (
     <div style={{ margin: "2.25rem 0 2.5rem" }}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .rpp-abouthub-card.rpp-abouthub-card {
           display: block;
           background: #ffffff;
@@ -217,7 +217,7 @@ const AboutTheHub = () => {
             margin: 1rem 0 1.1rem;
           }
         }
-      `}</style>
+      ` }} />
 
       <div className="rpp-abouthub-card rpp-abouthub-card">
         <p className="rpp-abouthub-lead rpp-abouthub-lead">

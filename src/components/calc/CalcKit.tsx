@@ -87,7 +87,7 @@ export function CalcShell({
 }) {
   return (
     <div className="ck" style={{ ...ckVars(color), maxWidth: width }}>
-      <style>{CK_CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CK_CSS }} />
       <div className="ck-head">
         <svg width="54" height="54" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
           {CK_ICONS[icon]}

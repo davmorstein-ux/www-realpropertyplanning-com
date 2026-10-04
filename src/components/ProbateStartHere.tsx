@@ -30,7 +30,7 @@ const CSS = `
 export default function ProbateStartHere() {
   return (
     <div className="psh-band" role="navigation" aria-label="Start here for probate">
-      <style>{CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="psh-in">
         <span className="psh-full">
           <strong>{T.lead}</strong> Start with the{" "}

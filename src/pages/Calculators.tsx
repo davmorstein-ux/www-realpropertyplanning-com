@@ -55,7 +55,7 @@ const Calculators = () => (
       description={`All ${CALCULATOR_COUNT} free calculators in one place. For Washington families: what care costs by care type. For adult family home buyers, owners and investors: property score, ROI, valuation, financing, and cost by city and county.`}
       canonical="https://realpropertyplanning.com/calculators"
     />
-    <style>{PAGE_CSS}</style>
+    <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
     <Header />
     <main className="rpp-calcs">
       <div style={{ background: "#faf8f4", borderBottom: `3px solid ${NAVY}` }}>

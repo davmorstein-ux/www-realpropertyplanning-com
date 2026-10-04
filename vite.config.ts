@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
 import path from "path";
+import { pathToFileURL } from "node:url";
 import { mkdir, readFile, writeFile, stat } from "node:fs/promises";
 import { componentTagger } from "lovable-tagger";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
@@ -2322,7 +2323,7 @@ var canon=route==="/"?"${SITE_URL}":"${SITE_URL}"+route;
 setMeta('meta[property="og:url"]',"content",canon);
 var link=document.querySelector('link[rel="canonical"]');if(link)link.setAttribute("href",canon);else{link=document.createElement("link");link.rel="canonical";link.href=canon;document.head.appendChild(link);}
 var root=document.getElementById("root");
-if(root&&m.h1&&!document.getElementById("ssg-content")){var html='<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">';
+if(root&&!root.hasAttribute("data-prerendered")&&m.h1&&!document.getElementById("ssg-content")){var html='<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">';
 html+='<p style="margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid #e5e1da"><a href="/" style="font-weight:700;color:#1B3A6B;text-decoration:none">Real Property Planning</a> · <a href="/afh-club" style="color:#1B3A6B">AFH Club</a> · <a href="/guides-and-resources" style="color:#1B3A6B">Guides</a> · <a href="/contact" style="color:#1B3A6B">Contact</a></p>';
 html+='<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">'+m.h1+'</h1>';
 if(m.qQ&&m.qA){html+='<div style="margin:20px 0;padding:20px;border:1px solid #e2e2e2;border-radius:12px;background:#fafaf8"><p style="font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;color:#a8892f;margin:0 0 6px 0">Quick Answer</p><h2 style="font-size:1.25rem;line-height:1.3;margin:0 0 8px 0">'+m.qQ+'</h2><p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0">'+m.qA+'</p></div>';}
@@ -2338,14 +2339,94 @@ const injectRouteAwareShell = (html: string) => {
   return html.replace("</body>", `${script}</body>`);
 };
 
+/* ── Full page content for crawlers (Oct 4, 2026) ───────────────────────────
+   Most AI crawlers do not run JavaScript; they read only this static file.
+   The metadata summary (buildSsgContent) left many pages at ~120 words of menu
+   and footer. After the browser build, the app is bundled for Node
+   (src/entry-server.tsx) and each ROUTE_METADATA page is rendered to HTML,
+   which replaces the summary inside #root (marked data-prerendered, so
+   main.tsx hydrates it). The summary's JSON-LD (Article, FAQPage, …) moves to
+   <head>; JSON-LD a page adds itself through Helmet is added when its @type is
+   not already present. Any failure — the whole step or one
+   page — falls back to the summary, so the build never breaks over it. */
+type RenderedPage = { html: string; jsonLd: string[] };
+
+const LD_JSON = /<script[^>]*application\/ld\+json[^>]*>[\s\S]*?<\/script>/g;
+const ldType = (script: string) => script.match(/"@type"\s*:\s*"([^"]+)"/)?.[1] ?? "";
+const visibleWords = (html: string) =>
+  html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+
+/** The rendered page for #root, and the JSON-LD to put in <head> (kept out of
+ * #root so the browser can hydrate the page exactly). null = keep the summary. */
+const withRenderedPage = (ssgContent: string, page: RenderedPage) => {
+  // A page that renders thinner than its summary (a redirect, an empty shell) keeps the summary.
+  if (visibleWords(page.html) < visibleWords(ssgContent)) return null;
+  const keep = ssgContent.match(LD_JSON) ?? [];
+  const types = new Set(keep.map(ldType));
+  const extra = page.jsonLd.filter((sc) => !types.has(ldType(sc)) && !keep.includes(sc));
+  // Tagged so main.tsx can remove them at startup: in the browser, Helmet renders the
+  // page's own JSON-LD, and a second copy would duplicate it (e.g. two FAQPage blocks).
+  const tagged = [...keep, ...extra].map((sc) => sc.replace("<script", "<script data-prerender-ld"));
+  return { body: page.html, jsonLd: tagged.join("\n  ") };
+};
+
+const renderPagesForCrawlers = async (routes: string[]): Promise<Map<string, RenderedPage>> => {
+  const pages = new Map<string, RenderedPage>();
+  const started = Date.now();
+  try {
+    const { build } = await import("vite");
+    const outDir = path.resolve(__dirname, "node_modules/.cache/rpp-ssr");
+    await build({
+      configFile: false,
+      root: __dirname,
+      logLevel: "error",
+      publicDir: false,
+      plugins: [react()],
+      resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
+      build: {
+        ssr: "src/entry-server.tsx",
+        outDir,
+        emptyOutDir: true,
+        ssrEmitAssets: false,
+        rollupOptions: { output: { format: "esm", inlineDynamicImports: true, entryFileNames: "entry-server.mjs" } },
+      },
+      ssr: { noExternal: true },
+    });
+    const mod = await import(`${pathToFileURL(path.join(outDir, "entry-server.mjs")).href}?t=${Date.now()}`);
+    // The app logs layout-effect warnings on the server; they are expected (effects run in the browser).
+    const error = console.error;
+    console.error = () => {};
+    const failed: string[] = [];
+    try {
+      for (let i = 0; i < routes.length; i += 8) {
+        await Promise.all(
+          routes.slice(i, i + 8).map(async (route) => {
+            try {
+              pages.set(route, await mod.render(route));
+            } catch {
+              failed.push(route);
+            }
+          })
+        );
+      }
+    } finally {
+      console.error = error;
+    }
+    console.log(`full-page-render: ${pages.size} pages rendered in ${Math.round((Date.now() - started) / 1000)}s${failed.length ? `; kept the summary for ${failed.length}: ${failed.join(", ")}` : ""}`);
+  } catch (err) {
+    console.warn(`full-page-render: skipped, every page keeps its metadata summary (${String((err as Error)?.message ?? err).slice(0, 300)})`);
+  }
+  return pages;
+};
+
 const applyMetadata = (
   html: string,
   route: string,
   meta: RouteMeta,
-  options: { injectSsg?: boolean } = {}
+  options: { injectSsg?: boolean; ssr?: RenderedPage } = {}
 ) => {
   const { title, description } = meta;
-  const { injectSsg = true } = options;
+  const { injectSsg = true, ssr } = options;
   const canonical = route === "/" ? SITE_URL : `${SITE_URL}${route}`;
   const robotsContent = meta.noIndex ? "noindex,follow" : "index,follow";
 
@@ -2400,11 +2481,13 @@ const applyMetadata = (
 
   if (injectSsg) {
     const ssgContent = buildSsgContent(meta, route);
-    if (ssgContent) {
-    out = out.replace(
-      '<div id="root"></div>',
-      `<div id="root">${ssgContent}</div>`
-    );
+    const page = ssr ? withRenderedPage(ssgContent, ssr) : null;
+    // Function replacements, so "$" in page text (prices) is never read as a pattern.
+    if (page) {
+      out = out.replace('<div id="root"></div>', () => `<div id="root" data-prerendered>${page.body}</div>`);
+      if (page.jsonLd) out = out.replace("</head>", () => `${page.jsonLd}\n  </head>`);
+    } else if (ssgContent) {
+      out = out.replace('<div id="root"></div>', () => `<div id="root">${ssgContent}</div>`);
     }
   }
 
@@ -2536,8 +2619,10 @@ const routeMetadataPlugin = {
       return;
     }
 
+    const rendered = await renderPagesForCrawlers(Object.keys(ROUTE_METADATA));
+
     const rootHtml = injectRouteAwareShell(
-      applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: true })
+      applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: true, ssr: rendered.get("/") })
     );
     await writeFile(baseHtmlPath, rootHtml, "utf8");
 
@@ -2545,7 +2630,7 @@ const routeMetadataPlugin = {
       Object.entries(ROUTE_METADATA)
         .filter(([route]) => route !== "/")
         .map(async ([route, metadata]) => {
-          const routeHtml = applyMetadata(baseHtml, route, metadata);
+          const routeHtml = applyMetadata(baseHtml, route, metadata, { ssr: rendered.get(route) });
           await writeRouteHtml(distDir, route, routeHtml);
         })
     );

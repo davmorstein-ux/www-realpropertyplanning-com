@@ -32,7 +32,7 @@ const PolicyPage = () => {
 
   return (
     <div className="min-h-screen bg-background rpp-policy">
-      <style>{CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <SEOHead title={page.title} description={page.description} canonical={url} />
       <BreadcrumbSchema
         items={[

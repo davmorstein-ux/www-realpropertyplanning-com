@@ -146,7 +146,7 @@ const AFHRuleChanges = () => {
 
   return (
     <div className="afhr">
-      <style>{CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <SEOHead title={`${TITLE} | AFH Club`} description={DESCRIPTION} canonical={CANONICAL} ogType="article" schemaJson={schema} />
       <BreadcrumbSchema
         items={[

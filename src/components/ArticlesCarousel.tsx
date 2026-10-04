@@ -147,7 +147,7 @@ export default function ArticlesCarousel() {
 
       {/* Carousel viewport with arrows on either side */}
       <div style={{ position: "relative", maxWidth: 960, margin: "0 auto" }}>
-        <style>{`
+        <style dangerouslySetInnerHTML={{ __html: `
           .rpp-car-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; }
           .rpp-car-arrow.is-prev { left: -72px; }
           .rpp-car-arrow.is-next { right: -72px; }
@@ -155,7 +155,7 @@ export default function ArticlesCarousel() {
             .rpp-car-arrow.is-prev { left: 8px; }
             .rpp-car-arrow.is-next { right: 8px; }
           }
-        `}</style>
+        ` }} />
         <ArrowButton dir="prev" onClick={prev} />
         <ArrowButton dir="next" onClick={next} />
       <div

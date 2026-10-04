@@ -326,7 +326,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
         </p>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .coc2.coc2 { background: #ffffff; border: 1px solid #d3dfe8; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(20,40,58,0.08); max-width: 760px; margin: 0 auto; width: 100%; box-sizing: border-box; font-family: 'DM Sans', system-ui, sans-serif; color: #14283a; }
         .coc2 .coc2-head { display: flex; align-items: center; gap: 18px; background: var(--deep); padding: 22px 26px; }
         .coc2 .coc2-head svg { flex: 0 0 auto; }
@@ -397,7 +397,7 @@ const CostOfCareEmbed = ({ careTypeId }: CostOfCareEmbedProps) => {
           .coc-no-print { display: none !important; }
           .coc-print-summary { display: block !important; font-family: Arial, Helvetica, sans-serif; color: #111; background: #fff; }
         }
-      `}</style>
+      ` }} />
     </div>
   );
 };

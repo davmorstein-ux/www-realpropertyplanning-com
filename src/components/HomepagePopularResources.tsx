@@ -34,7 +34,7 @@ const HomepagePopularResources = () => {
 
   return (
     <section style={{ backgroundColor: "#ffffff", padding: "3.5rem 0 4rem" }}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
       .rpp-pr-eyebrow {
         font-family: 'DM Sans', system-ui, sans-serif !important;
         font-size: 21px !important;
@@ -255,7 +255,7 @@ const HomepagePopularResources = () => {
       @media (max-width: 520px) {
         .rpp-pr-grid { grid-template-columns: 1fr !important; }
       }
-    `}</style>
+    ` }} />
 
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
         {/* Header */}

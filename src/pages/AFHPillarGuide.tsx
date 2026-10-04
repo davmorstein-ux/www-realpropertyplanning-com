@@ -60,7 +60,7 @@ const HUB_CSS = `
 
 const AFHPillarGuide = () => (
   <div className="prp">
-    <style>{flowCss(AFH_GREEN) + AFH_FLOW_CHART_CSS + HUB_CSS}</style>
+    <style dangerouslySetInnerHTML={{ __html: flowCss(AFH_GREEN) + AFH_FLOW_CHART_CSS + HUB_CSS }} />
     <SEOHead title={`${TITLE} | AFH Club`} description={DESCRIPTION} canonical={CANONICAL} ogType="article" schemaJson={schema} />
     <BreadcrumbSchema
       items={[

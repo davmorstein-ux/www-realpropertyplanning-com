@@ -193,7 +193,7 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
       overflow: "visible",
     }}
   >
-    <style>{AFH_CARD_STYLES}</style>
+    <style dangerouslySetInnerHTML={{ __html: AFH_CARD_STYLES }} />
     <PhotoPanel photo={listing.photo} index={index} total={total} address={listing.address} city={listing.city} />
 
     <div
@@ -369,12 +369,12 @@ export const AFHListingCard = ({ listing, index, total }: { listing: AFHListing;
           weight; index.css renders those at 16px / 600) and adjacent to them. NWMLS
           must still be named as the source. Class afhl-attr carries !important
           sizes because index.css overrides inline span sizes. */}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .afhl-attr, .afhl-attr * { font-size: 16px !important; line-height: 1.5 !important; color: #1c1917 !important; }
         .afhl-attr { font-weight: 600 !important; }
         .afhl-attr a { text-decoration: underline !important; text-underline-offset: 3px; font-weight: 600 !important; }
         .afhl-src, .afhl-src * { font-size: 14px !important; color: #3a2d2f !important; }
-      `}</style>
+      ` }} />
       <p className="afhl-attr" style={{ margin: 0, overflowWrap: "anywhere" }}>
         Listing Broker:{" "}
         {[

@@ -993,7 +993,7 @@ const PointBlock = ({ p, verb }: { p: Point; verb: "Do" | "Don't" }) => (
 
 const AFHDosAndDonts = () => (
   <div className="afhdd">
-    <style>{CSS}</style>
+    <style dangerouslySetInnerHTML={{ __html: CSS }} />
     <SEOHead title={`${TITLE} | AFH Club`} description={DESCRIPTION} canonical={CANONICAL} ogType="article" schemaJson={schema} />
     <BreadcrumbSchema
       items={[

@@ -229,7 +229,7 @@ const AFHPropertyScore = () => {
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         }}
       />
-      <style>{PAGE_CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
       <Header />
       <main>
         <div className="aps-noprint" style={{ background: "#faf8f4", padding: "40px 24px 36px", borderBottom: `3px solid ${PLUM}` }}>

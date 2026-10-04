@@ -37,7 +37,7 @@ const CSS = `
 export default function SiteMapSections({ sections, accents = {} }: { sections: SiteMapSection[]; accents?: Record<string, string> }) {
   return (
     <div className="smap-root">
-      <style>{CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="smap-grid">
         {sections.map((s) => (
           <section

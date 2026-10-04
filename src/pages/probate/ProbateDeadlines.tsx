@@ -56,7 +56,7 @@ const Cite = ({ href, children }: { href: string; children: React.ReactNode }) =
 export default function ProbateDeadlines() {
   return (
     <div className="prp">
-      <style>{PROBATE_CSS + PROBATE_CSS_EXTRA}</style>
+      <style dangerouslySetInnerHTML={{ __html: PROBATE_CSS + PROBATE_CSS_EXTRA }} />
       <SEOHead title={`${TITLE} | Real Property Planning`} description={DESCRIPTION} canonical={CANONICAL} ogType="article" schemaJson={schema} />
       <BreadcrumbSchema
         items={[

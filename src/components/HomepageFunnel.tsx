@@ -37,7 +37,7 @@ const tiles = [
 
 const HomepageFunnel = () => (
   <section id="guided-entry" style={{ backgroundColor: "#faf8f4", padding: "0.5rem 0 4rem" }}>
-    <style>{`
+    <style dangerouslySetInnerHTML={{ __html: `
       @media (max-width: 900px) {
         .rpp-funnel-grid { grid-template-columns: repeat(2,1fr) !important; }
       }
@@ -132,7 +132,7 @@ const HomepageFunnel = () => (
         cursor: pointer !important;
         text-decoration: none !important;
       }
-    `}</style>
+    ` }} />
 
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
       {/* Section header */}

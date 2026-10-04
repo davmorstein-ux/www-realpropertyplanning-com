@@ -35,10 +35,10 @@ const AFHSiteMap = () => (
       <HeroBandTitle as="h1">AFH Club Site Map</HeroBandTitle>
       <section style={{ padding: "40px 16px 24px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <style>{`
+          <style dangerouslySetInnerHTML={{ __html: `
             .smap-intro p.smap-lead { font-family: 'DM Sans', sans-serif !important; font-size: 19px !important; line-height: 1.6 !important; color: #1c1917 !important; margin: 0 0 12px !important; max-width: 820px; }
             .smap-intro p.smap-note { font-family: 'DM Sans', sans-serif !important; font-size: 17px !important; line-height: 1.55 !important; color: #1c1917 !important; margin: 0 0 28px !important; max-width: 820px; }
-          `}</style>
+          ` }} />
           <div className="smap-intro">
             <p className="smap-lead">
               Every AFH Club page, grouped by topic, for people who own, run, buy or sell an adult family home in

@@ -400,7 +400,7 @@ const RPPHomeV3 = () => {
                 index.css forces font-weight 600 on anything declaring it
                 inline. Doubled class names beat the global
                 "main p font-size !important" rule. */}
-            <style>{`
+            <style dangerouslySetInnerHTML={{ __html: `
   /* FUNNEL TILE PHOTOS. The four photos are 1160x793 (1.46:1), and the box
      takes that same shape at every width, so nothing is ever cropped.
 
@@ -649,7 +649,7 @@ const RPPHomeV3 = () => {
                 }
               }
 
-            `}</style>
+            ` }} />
 
             {/* ── Trust bar: the numbers, once, in one row ─────────── */}
             <div style={{ margin: "0 calc(50% - 50vw) 2rem", width: "100vw" }}>

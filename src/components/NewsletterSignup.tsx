@@ -208,7 +208,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
 
   return (
     <div className="rpp-news">
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         /* Doubled class selectors. index.css sets font-size, color and display
            on bare p / input / button / label with !important; a single class
            loses every one of those fights. */
@@ -332,7 +332,7 @@ const NewsletterSignup = ({ variant = "general", source, copy: copyOverride }: N
         @media (prefers-reduced-motion: reduce) {
           .rpp-news-submit.rpp-news-submit { transition: none !important; }
         }
-      `}</style>
+      ` }} />
 
       {status === "done" ? (
         /* role="status" announces without stealing focus. The confirmation

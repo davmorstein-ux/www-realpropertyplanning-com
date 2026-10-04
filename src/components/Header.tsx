@@ -1,5 +1,10 @@
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useLayoutEffect, useState, useRef } from "react";
+
+/* Layout effect in the browser (runs before paint, so the phone header appears
+   with no flicker); plain effect during the build-time render, where layout
+   effects do nothing and only warn. */
+const useBeforePaint = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 import { Link, useLocation } from "react-router-dom";
 import AFHClubQuickLinks from "@/components/AFHClubQuickLinks";
 import WaterfallNav from "./WaterfallNav";
@@ -63,7 +68,10 @@ const CURATED_LINKS = PRIMARY_NAV;
 
 const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
+  /* Starts false on every render, server and browser alike, so a prerendered
+     page hydrates without a mismatch; the effect below sets the real value
+     before the first paint. */
+  const [isMobile, setIsMobile] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
     setSearchOpen(false);
@@ -88,7 +96,7 @@ const Header = () => {
     return () => ro.disconnect();
   }, [isMobile]);
 
-  useEffect(() => {
+  useBeforePaint(() => {
     /* Keyed off WIDTH only. `resize` fires on every URL-bar show/hide during a
        mobile scroll, but the width has not changed — re-running this on height
        changes re-rendered the entire header mid-scroll for no reason. */

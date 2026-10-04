@@ -237,7 +237,7 @@ const About = () => {
                   </div>
                 </dl>
 
-               <style>{`
+               <style dangerouslySetInnerHTML={{ __html: `
                   .rpp-contact-btn.rpp-contact-btn {
                     display: inline-flex;
                     align-items: center;
@@ -275,7 +275,7 @@ const About = () => {
                     outline: 3px solid #1B3A6B;
                     outline-offset: 3px;
                   }
-                `}</style>
+                ` }} />
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <a href="tel:2069003015" className="rpp-contact-btn rpp-contact-btn rpp-contact-btn--solid rpp-contact-btn--solid bg-transparent w-full sm:w-auto">
                     Call (206) 900-3015
@@ -322,7 +322,7 @@ const About = () => {
                   The bg-transparent token in the className below is also load-
                   bearing: it satisfies main a:not([class*="bg-"]), which would
                   otherwise repaint the label text. */}
-              <style>{`
+              <style dangerouslySetInnerHTML={{ __html: `
                 .rpp-next-step.rpp-next-step {
                   text-decoration: none !important;
                 }
@@ -333,7 +333,7 @@ const About = () => {
                   font-size: 1.25rem !important;
                   line-height: 1.375 !important;
                 }
-              `}</style>
+              ` }} />
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
                 Here Is What You Do Next
               </h2>

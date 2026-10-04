@@ -194,7 +194,7 @@ const More = ({ to, children }: { to: string; children: React.ReactNode }) => (
 
 const AFHRulesAndFigures = () => (
   <div className="afhp">
-    <style>{CSS}</style>
+    <style dangerouslySetInnerHTML={{ __html: CSS }} />
     <SEOHead title={`${TITLE} | AFH Club`} description={DESCRIPTION} canonical={CANONICAL} ogType="article" schemaJson={schema} />
     <BreadcrumbSchema
       items={[

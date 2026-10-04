@@ -31,7 +31,7 @@ export default function HandbookDownload({ headingLevel = "h2" }: { headingLevel
   const H = headingLevel;
   return (
     <div className="hbk">
-      <style>{CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <a href={HANDBOOK_PDF} download aria-hidden="true" tabIndex={-1}>
         <img className="hbk-cover" src="/afh-club-handbook-cover.webp" alt="" width={440} height={569} loading="lazy" decoding="async" />
       </a>

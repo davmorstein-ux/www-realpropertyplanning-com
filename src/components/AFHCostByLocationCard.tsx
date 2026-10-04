@@ -241,14 +241,14 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
       ) : (
         !compact && <CalcWaiting>Start typing a city or county above.</CalcWaiting>
       )}
-      <style>{LOOKUP_CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: LOOKUP_CSS }} />
     </>
   );
 
   if (compact) {
     return (
       <div className="ck ck-plain" style={ckVars(GREEN)}>
-        <style>{CK_CSS}</style>
+        <style dangerouslySetInnerHTML={{ __html: CK_CSS }} />
         <div className="ck-body">{body}</div>
       </div>
     );

@@ -167,7 +167,7 @@ const PaymentGuideShell = ({ id, seoTitle, seoDescription, eyebrow, lede, cover,
             <p style={{ ...gs.p, fontSize: 17, color: "#2b2825", marginTop: 28 }}>{disclaimer}</p>
           </div>
         </div>
-        <style>{`@media (max-width: 760px) { .pg-top { grid-template-columns: 1fr !important; } }`}</style>
+        <style dangerouslySetInnerHTML={{ __html: `@media (max-width: 760px) { .pg-top { grid-template-columns: 1fr !important; } }` }} />
         <div style={{ padding: "0 16px" }}>
           <AuthorByline context="afh" />
         </div>

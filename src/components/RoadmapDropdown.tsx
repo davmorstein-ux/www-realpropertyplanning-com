@@ -150,7 +150,7 @@ const RoadmapDropdown = ({
             );
           })}
         </div>
-        <style>{`
+        <style dangerouslySetInnerHTML={{ __html: `
           .rpp-roadmap-list-grid {
             display: grid;
             grid-template-columns: ${topics.some((t) => t.description) ? "1fr" : "1fr 1fr"};
@@ -167,7 +167,7 @@ const RoadmapDropdown = ({
           .rpp-roadmap-list-item:hover {
             background: #faf7f2;
           }
-        `}</style>
+        ` }} />
       </div>
     );
   }

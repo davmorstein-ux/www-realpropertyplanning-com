@@ -110,7 +110,7 @@ const AFHRevenueBuilder = ({
 
   return (
     <div style={{ border: `1.5px solid ${accent}55`, background: "#faf8f4", borderRadius: 10, padding: "1rem 1.1rem", marginBottom: 16 }}>
-      <style>{`.rb-table .rb-note.rb-note { color: #1f2933 !important; font-weight: 500 !important; }
+      <style dangerouslySetInnerHTML={{ __html: `.rb-table .rb-note.rb-note { color: #1f2933 !important; font-weight: 500 !important; }
 @media (max-width: 640px) {
   .rb-grid2 { grid-template-columns: 1fr !important; }
   .rb-table.rb-table { font-size: 14px !important; }
@@ -118,7 +118,7 @@ const AFHRevenueBuilder = ({
   .rb-table .rb-beds.rb-beds { width: 52px !important; }
   .rb-table .rb-rate.rb-rate { font-size: 14px !important; }
   .rb-table td, .rb-table th { padding-left: 3px !important; padding-right: 3px !important; }
-}`}</style>
+}` }} />
       <div style={{ fontSize: 12, letterSpacing: ".18em", textTransform: "uppercase", color: accent, fontWeight: 700, marginBottom: 4 }}>
         Build revenue from market rates
       </div>

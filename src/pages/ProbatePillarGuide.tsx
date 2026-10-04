@@ -53,7 +53,7 @@ const HUB_CSS = `
 
 const ProbatePillarGuide = () => (
   <div className="prp">
-    <style>{PROBATE_CSS + PROBATE_CSS_EXTRA + FLOW_CHART_CSS + HUB_CSS}</style>
+    <style dangerouslySetInnerHTML={{ __html: PROBATE_CSS + PROBATE_CSS_EXTRA + FLOW_CHART_CSS + HUB_CSS }} />
     <SEOHead title={`${TITLE} | Real Property Planning`} description={DESCRIPTION} canonical={CANONICAL} ogType="article" schemaJson={schema} />
     <BreadcrumbSchema
       items={[

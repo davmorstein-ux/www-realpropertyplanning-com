@@ -121,7 +121,7 @@ const InheritedHouseWashington = () => (
             ))}
           </div>
         </div>
-        <style>{`
+        <style dangerouslySetInnerHTML={{ __html: `
           .interior-tile.inherited-tile-outline::before {
             content: none !important;
           }
@@ -135,7 +135,7 @@ const InheritedHouseWashington = () => (
             width: 100% !important;
             min-width: 0 !important;
           }
-        `}</style>
+        ` }} />
       </section>
 
       <PageFAQ faqs={faqs} heading="Inherited Property FAQs" />

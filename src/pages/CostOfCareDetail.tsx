@@ -84,7 +84,7 @@ const CostOfCareDetail = () => {
             the calculator rather than squeezing beside it. */}
         <section className="py-14 md:py-20 bg-background">
           <div className="container px-6 lg:px-8">
-            <style>{`
+            <style dangerouslySetInnerHTML={{ __html: `
               /* Single column: the calculator first at full width, then the
                  other five options as a grid beneath it. The old right-hand
                  rail squeezed the calculator and was easy to miss. */
@@ -111,7 +111,7 @@ const CostOfCareDetail = () => {
                 line-height: 1.3;
                 text-align: center;
               }
-            `}</style>
+            ` }} />
 
             <div className="rpp-calcpage-layout">
               <div className="rpp-calcpage-calc">

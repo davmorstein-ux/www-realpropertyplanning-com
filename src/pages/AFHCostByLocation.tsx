@@ -81,7 +81,7 @@ const CostByLocation = () => {
                 to the heaviest care level, effective {AFH_MEDICAID_RATES.effective}.
               </p>
               <div className="cost-tiles" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 14 }}>
-                <style>{`@media (max-width: 640px) { .cost-tiles { grid-template-columns: 1fr !important; } }`}</style>
+                <style dangerouslySetInnerHTML={{ __html: `@media (max-width: 640px) { .cost-tiles { grid-template-columns: 1fr !important; } }` }} />
                 {(["highCost", "standard"] as const).map((r) => {
                   const rg = medicaidRange(r);
                   return (

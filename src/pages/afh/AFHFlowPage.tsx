@@ -13,7 +13,7 @@ import { AFH_FLOW_BY_SLUG, AFH_FLOW_BASE, AFH_RULES_PATH, AFH_GREEN } from "@/da
 export default function AFHFlowPage({ slug }: { slug: string }) {
   return (
     <>
-      <style>{AFH_FLOW_CHART_CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: AFH_FLOW_CHART_CSS }} />
       <FlowBranchPage
         bylineContext="afh"
         page={AFH_FLOW_BY_SLUG[slug]}

@@ -90,7 +90,7 @@ const WhyValuationMatters = () => {
       <Header />
       <main id="main-content">
         <ProbateStartHere />
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         #valuation-quick-answer-accordion [data-valuation-trigger],
         #valuation-quick-answer-accordion [data-valuation-trigger] span {
           font-size: 18px !important;
@@ -116,7 +116,7 @@ const WhyValuationMatters = () => {
           font-size: 1rem !important;
           line-height: 1.7 !important;
         }
-      `}</style>
+      ` }} />
 
       {/* HERO */}
       <HeroBandTitle as="h1">Pricing &amp; Valuation Expertise</HeroBandTitle>

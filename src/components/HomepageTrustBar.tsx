@@ -31,7 +31,7 @@ const HomepageTrustBar = () => (
         </li>
       ))}
     </ul>
-    <style>{`
+    <style dangerouslySetInnerHTML={{ __html: `
       /* Quiet, but obviously clickable (David, Sept 23): each figure is a
          bordered pill with an arrow, on a cream hairline row. */
       .rpp-trustbar { background: transparent; border-top: 1px solid #e6e0d6; border-bottom: 1px solid #e6e0d6; padding: 1rem 1.5rem; }
@@ -42,7 +42,7 @@ const HomepageTrustBar = () => (
       .rpp-trustbar .rpp-trustbar-arrow { margin-left: 2px; }
       @media (hover: hover) { .rpp-trustbar a:hover { background: #1B3A6B; color: #fff !important; } }
       @media (max-width: 480px) { .rpp-trustbar a { white-space: normal; font-size: 14px; padding: 8px 14px; } }
-    `}</style>
+    ` }} />
   </section>
 );
 

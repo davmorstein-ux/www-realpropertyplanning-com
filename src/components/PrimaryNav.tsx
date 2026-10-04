@@ -117,7 +117,7 @@ const PrimaryNav = () => {
 
   return (
     <div className="rpp-primarynav" ref={navRef}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .rpp-primarynav {
           display: flex;
           align-items: center;
@@ -331,7 +331,7 @@ const PrimaryNav = () => {
         @media (max-width: 950px) {
           .rpp-primarynav { display: none; }
         }
-      `}</style>
+      ` }} />
 
       {PRIMARY_NAV.map((entry, i) => {
         const isOpen = openIndex === i;

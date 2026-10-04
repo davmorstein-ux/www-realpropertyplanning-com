@@ -87,7 +87,7 @@ const fmt = (iso: string) =>
 
 const PropertyTaxesAfterDeath = () => (
   <div className="ptx">
-    <style>{CSS}</style>
+    <style dangerouslySetInnerHTML={{ __html: CSS }} />
     <SEOHead title={`${TITLE} | Real Property Planning`} description={DESCRIPTION} canonical={CANONICAL} ogType="article" schemaJson={schema} />
     <BreadcrumbSchema
       items={[

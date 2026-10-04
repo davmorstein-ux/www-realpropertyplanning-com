@@ -148,7 +148,7 @@ const AFHWashingtonData = () => {
   const maxContract = Math.max(...stats.contracts.map((c) => c.homes));
   return (
     <div className="afhd">
-      <style>{CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <SEOHead
         title="Washington Adult Family Homes by the Numbers | AFH Club"
         description={`${n(S.homes)} licensed adult family homes and ${n(S.beds)} beds in Washington: counts by county, home size, Medicaid, specialty designations, and ECS and SBS contracts, from DSHS data. Free CSV download.`}

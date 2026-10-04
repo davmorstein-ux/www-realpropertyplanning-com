@@ -38,7 +38,7 @@ img.rpp-article-cover {
 export default function ArticleCover({ src, alt, width, height }: Props) {
   return (
     <>
-      <style>{CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <img src={src} alt={alt} width={width} height={height} className="rpp-article-cover" loading="eager" decoding="async" />
     </>
   );

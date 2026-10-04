@@ -45,7 +45,7 @@ const DisclaimerSection = () => {
         </div>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         /* Scoped so the global rule
              main [class*="uppercase"] { font-size: max(0.875rem,14px) !important }
            cannot shrink this label — 0.875rem IS 14px, so that max() always
@@ -59,7 +59,7 @@ const DisclaimerSection = () => {
           color: #6b1b22 !important;
           margin: 0 0 8px 0 !important;
         }
-      `}</style>
+      ` }} />
     </section>
   );
 };

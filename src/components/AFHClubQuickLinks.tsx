@@ -61,7 +61,7 @@ export default function AFHClubQuickLinks() {
   if (!isAFHClubPath(pathname)) return null;
   return (
     <div className="afhq" role="navigation" aria-label="AFH Club pages">
-      <style>{CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="afhq-in" ref={row}>
         <Link to="/afh-club" className="afhq-brand" aria-label="AFH Club home">
           <img src="/afh-club-glyph.webp" alt="" width={200} height={194} />

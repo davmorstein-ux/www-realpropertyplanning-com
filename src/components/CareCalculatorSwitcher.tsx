@@ -39,7 +39,7 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
 
   return (
     <div className="rpp-calcswitch">
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .rpp-calcswitch-grid.rpp-calcswitch-grid {
           display: grid;
           gap: 14px;
@@ -120,7 +120,7 @@ const CareCalculatorSwitcher = ({ currentSlug, heading, layout = "grid" }: Props
           line-height: 1.4;
           margin-top: 2px;
         }
-      `}</style>
+      ` }} />
 
       {heading ? (
         <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-6">{heading}</h2>

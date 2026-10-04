@@ -611,7 +611,7 @@ const AFHClub = () => {
         ]}
       />
       <Header />
-      <style>{PAGE_CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
       <main id="main-content">
         {/* Hero — photograph with the wordmark set as live text over it. */}
         <section className="rpp-afh-hero">

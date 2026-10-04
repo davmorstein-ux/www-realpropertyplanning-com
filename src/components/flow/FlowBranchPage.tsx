@@ -65,7 +65,7 @@ export default function FlowBranchPage({ page: p, base, guideName, chart, refere
   };
   return (
     <div className="prp">
-      <style>{flowCss(accent)}</style>
+      <style dangerouslySetInnerHTML={{ __html: flowCss(accent) }} />
       <SEOHead title={`${p.title} | ${guideName}`} description={p.description} canonical={canonical} ogType="article" schemaJson={schema} />
       <BreadcrumbSchema
         items={[

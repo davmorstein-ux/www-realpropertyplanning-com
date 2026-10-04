@@ -7,7 +7,7 @@ const HomepageTestimonials = () => {
 
   return (
     <section style={{ backgroundColor: "#faf8f4", padding: "3rem 0 3.5rem" }}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .rpp-tm-quote.rpp-tm-quote {
           font-family: 'DM Sans', system-ui, sans-serif;
           font-size: 17px !important;
@@ -32,7 +32,7 @@ const HomepageTestimonials = () => {
           padding-bottom: 2px;
           text-decoration: none !important;
         }
-      `}</style>
+      ` }} />
 
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
         <h2

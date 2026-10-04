@@ -1,4 +1,4 @@
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
@@ -15,8 +15,17 @@ window.addEventListener("vite:preloadError", (event) => {
 });
 
 
-createRoot(document.getElementById("root")!).render(
+/* Pages prerendered at build time carry the real page in #root (marked
+   data-prerendered; see src/entry-server.tsx). Hydrate those so the HTML stays
+   on screen while the page's code loads; every other page renders fresh. */
+const rootEl = document.getElementById("root")!;
+// Build-time copies of the page's JSON-LD are for crawlers that don't run
+// JavaScript; in the browser Helmet renders the page's own, so drop these.
+document.querySelectorAll("script[data-prerender-ld]").forEach((el) => el.remove());
+const app = (
   <HelmetProvider>
     <App />
   </HelmetProvider>
 );
+if (rootEl.hasAttribute("data-prerendered")) hydrateRoot(rootEl, app);
+else createRoot(rootEl).render(app);

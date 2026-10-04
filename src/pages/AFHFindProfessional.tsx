@@ -323,7 +323,7 @@ const AFHFindProfessional = () => (
           "coming soon".
           The guide further down (and its audio narration) is unchanged: it explains
           what to look for in each KIND of professional, which is a different job. */}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .rpp-afhpro h2.rpp-afhpro-h2 { font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important; margin: 0 0 10px !important; }
         .rpp-afhpro h3.rpp-afhpro-h3 { font-size: clamp(20px, 2.4vw, 24px) !important; line-height: 1.25 !important; margin: 0 0 8px !important; }
         .rpp-afhpro p.rpp-afhpro-p { font-size: 18px !important; line-height: 1.75 !important; margin: 0 0 22px !important; }
@@ -376,7 +376,7 @@ const AFHFindProfessional = () => (
         .rpp-afhpro .rpp-afhpro-card-logo a.rpp-afhpro-logo-link::after { content: none !important; display: none !important; }
         @media (hover: hover) { .rpp-afhpro .rpp-afhpro-card-logo a.rpp-afhpro-logo-link:hover img { transform: scale(1.04); } }
         .rpp-afhpro .rpp-afhpro-card-logo img { transition: transform 0.15s ease; max-height: 64px; max-width: 170px; width: auto; height: auto; object-fit: contain; }
-      `}</style>
+      ` }} />
       <section className="rpp-afhpro" style={{ background: "#ffffff", padding: "64px 24px 56px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           {/* Heading set as the AFH Club wordmark on its green, the green hugging the text only (David, Sept 28 2026): the

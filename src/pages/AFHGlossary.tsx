@@ -85,7 +85,7 @@ const CSS = `
 
 const AFHGlossary = () => (
   <div className="afhg">
-    <style>{CSS}</style>
+    <style dangerouslySetInnerHTML={{ __html: CSS }} />
     <SEOHead
       title="Washington Adult Family Home Glossary: AFH Terms Explained | AFH Club"
       description={`${AFH_GLOSSARY.length} Washington adult family home terms in plain English: CHOW, CARE and the A–E classifications, CBHS tiers, ECS and SBS, WABO and form 15-604, license fees, inspections and enforcement, each with its WAC or RCW source.`}

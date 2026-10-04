@@ -203,7 +203,7 @@ const UnderstandingHousingCareOptions = () => {
           </div>
         </section>
 
-        <style>{`
+        <style dangerouslySetInnerHTML={{ __html: `
           /* ---- Existing teal outline ---- */
           .understanding-tile-outline .tile-white__face {
             border: 2px solid #0d9488 !important;
@@ -251,7 +251,7 @@ const UnderstandingHousingCareOptions = () => {
           .understanding-tile-outline.understanding-tile-outline .tile-white__face {
             width: 100% !important;
           }
-        `}</style>
+        ` }} />
 
         <DisclaimerSection />
       </main>

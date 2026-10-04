@@ -5665,3 +5665,17 @@ main .rpp-hero-cta a.rpp-hero-cta-secondary {
   text-underline-offset: 4px;
   text-decoration-color: #b0352a;
 }
+
+/* Prerendered pages on phones, before the scripts load (Oct 4, 2026). The page
+   HTML is rendered at build time with the desktop header (Header picks the
+   phone layout in an effect, once the scripts run). For that moment, keep the
+   desktop header tidy on a narrow screen: a smaller logo and no "Get
+   Connected" button overlapping it. Scoped to prerendered pages and phones. */
+@media (max-width: 768px) {
+  #root[data-prerendered] header[data-nosnippet] a[href="/contact?reason=other"] {
+    display: none !important;
+  }
+  #root[data-prerendered] header[data-nosnippet] div:has(> a.rpp-logo-home) {
+    width: 200px !important;
+  }
+}

@@ -8,7 +8,7 @@ import kccLogo from "@/assets/king-county-collaborative-law-logo.webp";
 const Footer = () => {
   return (
     <footer data-nosnippet="true" style={{ backgroundColor: "#23211f", padding: "2.5rem 0 1.5rem" }}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .rpp-footer-link {
           color: rgba(255,255,255,0.72) !important;
           text-decoration: none !important;
@@ -100,7 +100,7 @@ const Footer = () => {
           color: rgba(255,255,255,0.9) !important;
           text-decoration: underline !important;
         }
-      `}</style>
+      ` }} />
 
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
         {/* Main columns */}

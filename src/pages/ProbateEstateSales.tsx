@@ -240,7 +240,7 @@ const ProbateEstateSales = () => {
           </div>
         </section>
 
-        <style>{`
+        <style dangerouslySetInnerHTML={{ __html: `
           /* MOBILE OVERFLOW FIX.
 
              These grids were inline styles — repeat(2, auto) and
@@ -302,7 +302,7 @@ const ProbateEstateSales = () => {
               grid-template-columns: repeat(3, minmax(0, 380px)) !important;
             }
           }
-        `}</style>
+        ` }} />
 
         {/* SECTION 4 — 3-Step Timeline */}
         <section className="py-16 lg:py-20 bg-background">

@@ -93,7 +93,7 @@ const CSS = `
 
 const ProbateGlossary = () => (
   <div className="prg">
-    <style>{CSS}</style>
+    <style dangerouslySetInnerHTML={{ __html: CSS }} />
     <SEOHead
       title="Washington Probate & Estate Glossary: Terms Explained | Real Property Planning"
       description={`${PROBATE_GLOSSARY.length} Washington probate and estate property terms in plain English: personal representative, letters testamentary, nonintervention powers, creditor claims, transfer on death deeds, stepped-up basis and estate tax, each with its statute.`}

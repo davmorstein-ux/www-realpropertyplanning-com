@@ -237,7 +237,7 @@ const HowToFinanceAnAFH = () => {
             </p>
           </div>
         </div>
-        <style>{`@media (max-width: 640px) { .fin-two { grid-template-columns: 1fr !important; } }`}</style>
+        <style dangerouslySetInnerHTML={{ __html: `@media (max-width: 640px) { .fin-two { grid-template-columns: 1fr !important; } }` }} />
         <PageFAQ faqs={FAQS} heading="Financing an Adult Family Home: Common Questions" eyebrow="Frequently Asked Questions" id="afh-how-to-finance" />
         <BackToAFHClub />
       </main>
