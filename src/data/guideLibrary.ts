@@ -143,6 +143,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "Aging in Place", href: "/senior-living/aging-in-place" },
       { title: "Aging in Place With Support", href: "/articles/aging-in-place" },
       { title: "Can a Parent Afford to Stay at Home? (Worksheet)", href: "/senior-transitions/can-parent-afford-to-stay-home" },
+      { title: "55+ Communities in Washington: What Families Should Know", href: "/senior-transitions/55-plus-communities-washington" },
       { title: "Assisted Living", href: "/senior-living/assisted-living" },
       { title: "Hospice Care in Washington", href: "/articles/hospice-care-washington" },
       { title: "How to Choose Senior Housing", href: "/articles/how-to-choose-senior-housing" },

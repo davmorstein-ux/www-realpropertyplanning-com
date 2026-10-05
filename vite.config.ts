@@ -24,6 +24,7 @@ import { MORTGAGE_AFTER_DEATH, MAD_PRERENDER_SECTIONS, MAD_FAQS } from "./src/da
 import AGING_PARENT_ROUTES from "./src/data/agingParentRoutes.json";
 import { FAMILY_SALE, FS_PRERENDER_SECTIONS, FS_FAQS } from "./src/data/familySaleEstate";
 import { STAY_HOME, SH_PRERENDER_SECTIONS, SH_FAQS } from "./src/data/stayHomeCost";
+import { FIFTY_FIVE, FP_PRERENDER_SECTIONS, FP_FAQS } from "./src/data/fiftyFivePlus";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
@@ -668,6 +669,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     sections: SH_PRERENDER_SECTIONS,
     faq: SH_FAQS.map((f) => ({ q: f.question, a: f.answer })),
     article: { datePublished: STAY_HOME.PUBLISHED, dateModified: STAY_HOME.REVIEWED },
+  },
+  [FIFTY_FIVE.PATH]: {
+    title: `${FIFTY_FIVE.TITLE} | Real Property Planning`,
+    description: FIFTY_FIVE.DESCRIPTION,
+    h1: FIFTY_FIVE.TITLE,
+    quickAnswerQ: "What is a 55+ community, and what should a family know before a parent buys into one in Washington?",
+    quickAnswerA: FIFTY_FIVE.SHORT_ANSWER,
+    intro: "A guide for Washington families: what makes a community legally 55+ or 62+, who can live there, how owning a home on a rented lot works, what to get in writing before buying, and what happens to the home when the owner dies. General information, not legal advice.",
+    sections: FP_PRERENDER_SECTIONS,
+    faq: FP_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: FIFTY_FIVE.PUBLISHED, dateModified: FIFTY_FIVE.REVIEWED },
   },
   [FAMILY_SALE.PATH]: {
     title: `${FAMILY_SALE.TITLE} | Real Property Planning`,

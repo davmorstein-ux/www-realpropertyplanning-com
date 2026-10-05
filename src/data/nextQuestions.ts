@@ -117,6 +117,11 @@ const Q = {
     description: "A worksheet: the real monthly cost of staying home, with care hours at Washington rates, against income and savings.",
     href: "/senior-transitions/can-parent-afford-to-stay-home",
   },
+  fiftyFive: {
+    title: "Is a 55+ community a good next home?",
+    description: "What 55+ and 62+ legally mean, who can live there, renting the lot, and what happens to the home later.",
+    href: "/senior-transitions/55-plus-communities-washington",
+  },
   conversationsNow: {
     title: "What should we talk about before there is a crisis?",
     description: "The questions about wishes, money and the house worth asking a parent early.",
@@ -224,7 +229,8 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
   "/trustees": [Q.familySale, Q.trustVsProbate, Q.pricingTrust, Q.dateOfDeath, Q.heirsDisagree],
   "/guides/inherited-house-washington": [Q.heirsDisagree, Q.mortgage, Q.propertyTaxes, Q.asIsOrFix, Q.dateOfDeath],
   "/guides/executor-buy-or-sell-estate-house-to-family-washington": [Q.heirsDisagree, Q.dateOfDeath, Q.authority, Q.propertyTaxes],
-  "/senior-transitions/can-parent-afford-to-stay-home": [Q.careSettings, Q.careCost, Q.medicaid, Q.houseForCare],
+  "/senior-transitions/can-parent-afford-to-stay-home": [Q.careSettings, Q.careCost, Q.medicaid, Q.houseForCare, Q.fiftyFive],
+  "/senior-transitions/55-plus-communities-washington": [Q.stayHome, Q.careSettings, Q.houseForCare, Q.authority],
   "/guides/mortgage-after-death-washington": [Q.authority, Q.propertyTaxes, Q.heirsDisagree, Q.dateOfDeath],
   "/executor-responsibilities-first-steps/first-30-days": EXECUTOR_STEPS,
   "/executor-responsibilities-first-steps/legal-duties": EXECUTOR_STEPS,

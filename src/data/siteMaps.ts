@@ -124,6 +124,7 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
       {
         links: [
           ...nav("/senior-transitions"),
+          { title: "55+ Communities in Washington", href: "/senior-transitions/55-plus-communities-washington" },
           { title: "Adult Family Homes: A Guide for Families", href: "/senior-living/adult-family-homes" },
           { title: "What Is an Adult Family Home?", href: "/senior-living/what-is-an-adult-family-home" },
           { title: "How to Choose an Adult Family Home: Tour Checklist", href: "/senior-living/choosing-an-adult-family-home" },

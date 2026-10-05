@@ -142,6 +142,7 @@ const PropertyTaxesAfterDeath = lazy(() => import("./pages/guides/PropertyTaxesA
 const MortgageAfterDeath = lazy(() => import("./pages/guides/MortgageAfterDeath"));
 const FamilySaleEstate = lazy(() => import("./pages/guides/FamilySaleEstate"));
 const StayHomeCost = lazy(() => import("./pages/senior-transitions/StayHomeCost"));
+const FiftyFivePlusCommunities = lazy(() => import("./pages/senior-transitions/FiftyFivePlusCommunities"));
 const HowLongSellProbateProperty = lazy(() => import("./pages/guides/HowLongSellProbateProperty"));
 const ExecutorFirstStepsHouse = lazy(() => import("./pages/guides/ExecutorFirstStepsHouse"));
 const SellInheritedHouseAsIsOrFix = lazy(() => import("./pages/guides/SellInheritedHouseAsIsOrFix"));
@@ -330,6 +331,7 @@ export const AppRoutes = () => (
         }
       />
       <Route path="/senior-transitions/can-parent-afford-to-stay-home" element={<StayHomeCost />} />
+      <Route path="/senior-transitions/55-plus-communities-washington" element={<FiftyFivePlusCommunities />} />
       <Route path="/helping-an-aging-parent" element={<ChoiceFlowPage />} />
       <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />
       <Route path="/washington-probate-guide" element={<ProbatePillarGuide />} />

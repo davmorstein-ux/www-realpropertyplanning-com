@@ -177,6 +177,21 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "WAC 458-61A-202: inheritance and the real estate excise tax", href: "https://app.leg.wa.gov/WAC/default.aspx?cite=458-61A-202" },
     ],
   },
+  "/senior-transitions/55-plus-communities-washington": {
+    published: "2026-10-04",
+    reviewed: "2026-10-04",
+    changes: [],
+    sources: [
+      { label: "42 U.S.C. 3607(b): housing for older persons", href: "https://www.law.cornell.edu/uscode/text/42/3607" },
+      { label: "24 CFR 100.300–100.308: HUD rules on 55+ and 62+ housing", href: "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-I/subchapter-A/part-100/subpart-E" },
+      { label: "Washington State Human Rights Commission: familial status", href: "https://hum.wa.gov/fair-housing/familial-status" },
+      { label: "RCW 59.20.073: transfer of rental agreements", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=59.20.073" },
+      { label: "RCW 59.20.090: notice of rent increases", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=59.20.090" },
+      { label: "Attorney General: Manufactured/Mobile Home Landlord-Tenant Act (rent increase limits)", href: "https://www.atg.wa.gov/manufactured-mobile-home-landlord-tenant-act" },
+      { label: "RCW 59.20.325: notice of opportunity to compete to purchase", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=59.20.325" },
+      { label: "RCW 59.30.050: registration of manufactured-home communities", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=59.30.050" },
+    ],
+  },
   "/senior-transitions/can-parent-afford-to-stay-home": {
     published: "2026-10-04",
     reviewed: "2026-10-04",

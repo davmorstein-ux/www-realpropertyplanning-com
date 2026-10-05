@@ -539,6 +539,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     ],
   },
   {
+    path: "/senior-transitions/55-plus-communities-washington",
+    links: ["/downsizing-preparing-for-transition", "/senior-transitions/can-parent-afford-to-stay-home", "/sell-house-fund-senior-living", "/long-term-care/how-to-choose-care-settings", "/guides/who-has-authority-sell-probate-property-washington", "/estate-probate-inherited-property/first-steps"],
+  },
+  {
     path: "/senior-transitions/can-parent-afford-to-stay-home",
     links: ["/articles/aging-in-place", "/cost-of-care-calculator", "/long-term-care/how-to-choose-care-settings", "/long-term-care/medicaid-and-long-term-care", "/sell-house-fund-senior-living"],
   },

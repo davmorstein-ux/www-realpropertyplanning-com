@@ -58,6 +58,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/senior-living/aging-in-place", label: "Aging In Place" },
   { path: "/articles/aging-in-place", label: "Aging In Place Article" },
   { path: "/senior-transitions/can-parent-afford-to-stay-home", label: "Can a Parent Afford to Stay Home? Worksheet" },
+  { path: "/senior-transitions/55-plus-communities-washington", label: "55+ Communities in Washington (age-restricted, 62+, manufactured-home communities)" },
   { path: "/aging-in-place-staying-home-safely", label: "Aging In Place Staying Home Safely" },
   { path: "/aging-life-care-managers", label: "Aging Life Care Managers" },
   { path: "/guides/appraisal-before-selling-inherited-property", label: "Appraisal Before Selling" },
