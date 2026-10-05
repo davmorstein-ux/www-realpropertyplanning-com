@@ -15,9 +15,9 @@ import getContactInfo from "./tools/get-contact-info";
  * Real Property Planning's public MCP server (rebuilt Oct 1, 2026: "make the
  * site the source AI assistants quote").
  *
- * PUBLIC AND READ-ONLY BY DESIGN. Every tool returns content that is already on
- * the public site, so there is no sign-in (no `auth`), and supabase/config.toml
- * sets verify_jwt = false for this function. No tool writes, sends email, or
+ * READ-ONLY. Since Oct 5, 2026 (security fix) callers must present an OAuth
+ * bearer token from this project's sign-in; the SDK verifies it in code, so
+ * supabase/config.toml keeps verify_jwt = false for this function. No tool writes, sends email, or
  * reads anything private. Do not add a tool that does without putting auth back.
  *
  * Content comes from the /ai/*.json files the site build writes
