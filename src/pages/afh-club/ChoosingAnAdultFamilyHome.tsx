@@ -203,6 +203,20 @@ const ChoosingAnAdultFamilyHome = () => (
         </div>
       </section>
 
+      <section className="cafh-sec cafh-noprint" style={{ paddingBottom: 0 }}>
+        <div className="cafh-wrap" style={{ textAlign: "center" }}>
+          <img
+            src="/afh-choosing-a-home-cover.webp"
+            alt="How to Choose an Adult Family Home: a tour checklist for Washington families. Build a shortlist, read the record, what to ask on the tour, compare two homes."
+            style={{ maxWidth: 340, width: "100%", height: "auto", borderRadius: 8, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}
+            loading="lazy"
+            decoding="async"
+            width={1024}
+            height={1365}
+          />
+        </div>
+      </section>
+
       <section className="cafh-sec">
         <div className="cafh-wrap">
           <h2 className="cafh-h2" id="shortlist">1. Build a shortlist</h2>
