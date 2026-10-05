@@ -328,8 +328,41 @@ const HomepagePopularResources = () => {
           letter-spacing: 0.05em;
         }
       }
-      @media (max-width: 520px) {
-        .rpp-pr-grid { grid-template-columns: 1fr !important; }
+      /* PHONES (under 640px): 2 x 2 at about half size (owner, Oct 5, 2026,
+         matching the "What brings you here" tiles above). Each card is about
+         155px wide, so the frame, padding and icon shrink, the title drops to
+         18px (the site minimum) and wraps, and the button keeps "Read Guide"
+         without its circled arrow, which would not fit beside it. Was a single
+         column under 520px. */
+      @media (max-width: 639px) {
+        .rpp-pr-grid.rpp-pr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 0.75rem !important; }
+        .rpp-pr-3d.rpp-pr-3d {
+          border-width: 5px !important;
+          border-radius: 14px !important;
+          padding: 1rem 0.5rem 0.75rem !important;
+          min-height: 0 !important;
+        }
+        .rpp-pr-3d .rpp-pr-card-icon.rpp-pr-card-icon {
+          width: 46px !important;
+          height: 46px !important;
+          margin-bottom: 0.6rem !important;
+        }
+        .rpp-pr-3d .rpp-pr-card-icon svg { width: 24px !important; height: 24px !important; }
+        .rpp-pr-3d .rpp-pr-card-text.rpp-pr-card-text {
+          font-size: 18px !important;
+          line-height: 1.25 !important;
+          margin-bottom: 0.75rem !important;
+          overflow-wrap: break-word;
+          hyphens: auto;
+        }
+        .rpp-pr-3d .rpp-pr-card-cta.rpp-pr-card-cta {
+          font-size: 14px !important;
+          letter-spacing: 0.04em !important;
+          padding: 10px 6px !important;
+          min-height: 44px !important;
+          gap: 0 !important;
+        }
+        .rpp-pr-3d .rpp-pr-arrow.rpp-pr-arrow { display: none !important; }
       }
     ` }} />
 
