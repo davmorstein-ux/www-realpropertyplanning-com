@@ -164,6 +164,19 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "RCW 11.40.020: notice to creditors, including DSHS", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.40.020" },
     ],
   },
+  "/guides/executor-buy-or-sell-estate-house-to-family-washington": {
+    published: "2026-10-04",
+    reviewed: "2026-10-04",
+    changes: [],
+    sources: [
+      { label: "RCW 11.68.090: nonintervention powers, a trustee's powers, and the duty of good faith", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.68.090" },
+      { label: "RCW 11.68.070: petitions against a personal representative with nonintervention powers", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.68.070" },
+      { label: "RCW 11.56.090: private sales in court-supervised estates", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.56.090" },
+      { label: "RCW 11.96A.220: binding written agreements", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.96A.220" },
+      { label: "RCW 11.98.078: trustee duty of loyalty and conflicted transactions", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.98.078" },
+      { label: "WAC 458-61A-202: inheritance and the real estate excise tax", href: "https://app.leg.wa.gov/WAC/default.aspx?cite=458-61A-202" },
+    ],
+  },
   "/guides/mortgage-after-death-washington": {
     published: "2026-10-04",
     reviewed: "2026-10-04",

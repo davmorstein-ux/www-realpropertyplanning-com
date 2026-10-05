@@ -78,7 +78,7 @@ export const QUICK_ANSWERS: Record<string, QuickAnswer[]> = {
     {
       q: "How do heirs agree on a buyout price?",
       a: "Most families agree in writing, before anyone orders a report, to rely on one independent appraisal, and settle two points in advance: the date the value is as of, and whether the selling costs the buying heir avoids are shared. If the buying heir is also the personal representative, they are selling to themselves as a fiduciary, so the price and the other heirs' agreement should be documented.",
-      more: { label: "Date-of-death and estate appraisals", href: "/date-of-death-valuation-property-appraisals" },
+      more: { label: "When the executor or trustee buys the house", href: "/guides/executor-buy-or-sell-estate-house-to-family-washington" },
     },
   ],
 

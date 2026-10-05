@@ -33,6 +33,7 @@ export const PROBATE_START_HERE_ROUTES: string[] = [
   "/guides/taxes-selling-inherited-house-washington",
   "/guides/property-taxes-after-death-washington",
   "/guides/mortgage-after-death-washington",
+  "/guides/executor-buy-or-sell-estate-house-to-family-washington",
   "/guides/inherited-house-washington",
   "/guides/who-has-authority-sell-probate-property-washington",
   // Executors & trustees

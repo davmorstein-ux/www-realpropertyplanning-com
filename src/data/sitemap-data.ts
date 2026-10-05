@@ -1064,6 +1064,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     ],
   },
   {
+    path: "/guides/executor-buy-or-sell-estate-house-to-family-washington",
+    links: ["/guides/heirs-disagree-selling-house", "/trustees", "/date-of-death-valuation-property-appraisals", "/guides/who-has-authority-sell-probate-property-washington", "/guides/taxes-selling-inherited-house-washington"],
+  },
+  {
     path: "/guides/mortgage-after-death-washington",
     links: ["/washington-probate-guide", "/guides/executor-first-steps-house", "/guides/property-taxes-after-death-washington", "/guides/heirs-disagree-selling-house", "/guides/who-has-authority-sell-probate-property-washington", "/probate-glossary"],
   },

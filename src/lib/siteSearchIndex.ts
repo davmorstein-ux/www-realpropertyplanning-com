@@ -240,6 +240,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/washington-probate-guide/deadlines-and-key-rules", label: "Probate Deadlines & Key Rules" },
   { path: "/guides/property-taxes-after-death-washington", label: "Property Taxes After a Death" },
   { path: "/guides/mortgage-after-death-washington", label: "The Mortgage After a Death" },
+  { path: "/guides/executor-buy-or-sell-estate-house-to-family-washington", label: "Executor or Trustee Buying the House" },
   { path: "/probate-glossary", label: "Probate & Estate Glossary" },
   { path: "/testimonials", label: "Testimonials" },
   { path: "/thurston-county", label: "Thurston County" },

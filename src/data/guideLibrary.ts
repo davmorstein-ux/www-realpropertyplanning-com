@@ -69,6 +69,7 @@ export const GUIDE_LIBRARY: GuideGroup[] = [
       { title: "What Happens If Heirs Disagree About Selling?", href: "/guides/heirs-disagree-selling-house" },
       { title: "Property Taxes After a Death in Washington", href: "/guides/property-taxes-after-death-washington" },
       { title: "What Happens to the Mortgage When Someone Dies in Washington", href: "/guides/mortgage-after-death-washington" },
+      { title: "Can an Executor or Trustee Buy the House, or Sell It to Family?", href: "/guides/executor-buy-or-sell-estate-house-to-family-washington" },
       { title: "What Taxes Apply When Selling an Inherited House in Washington?", href: "/guides/taxes-selling-inherited-house-washington" },
       { title: "What to Do With an Inherited House in Washington", href: "/guides/inherited-house-washington" },
       { title: "What To Do With the House", href: "/what-to-do-with-the-house" },

@@ -112,6 +112,11 @@ const Q = {
     description: "Property taxes, exemptions and deadlines after a death in Washington.",
     href: "/guides/property-taxes-after-death-washington",
   },
+  familySale: {
+    title: "Can the executor or trustee buy the house?",
+    description: "Selling the house to the person in charge, or to family: the price, the protections, and taking it as a share instead.",
+    href: "/guides/executor-buy-or-sell-estate-house-to-family-washington",
+  },
   mortgage: {
     title: "What happens to the mortgage?",
     description: "Who keeps paying, getting the servicer to talk to you, and when family can keep the existing loan.",
@@ -206,8 +211,9 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
   "/afh-club/choosing-an-adult-family-home": [Q.findAfh, Q.inspections, Q.afhCost, Q.medicaid, Q.careSettings],
 
   /* Death → authority → the house */
-  "/trustees": [Q.trustVsProbate, Q.pricingTrust, Q.dateOfDeath, Q.propertyTaxes, Q.heirsDisagree],
+  "/trustees": [Q.familySale, Q.trustVsProbate, Q.pricingTrust, Q.dateOfDeath, Q.heirsDisagree],
   "/guides/inherited-house-washington": [Q.heirsDisagree, Q.mortgage, Q.propertyTaxes, Q.asIsOrFix, Q.dateOfDeath],
+  "/guides/executor-buy-or-sell-estate-house-to-family-washington": [Q.heirsDisagree, Q.dateOfDeath, Q.authority, Q.propertyTaxes],
   "/guides/mortgage-after-death-washington": [Q.authority, Q.propertyTaxes, Q.heirsDisagree, Q.dateOfDeath],
   "/executor-responsibilities-first-steps/first-30-days": EXECUTOR_STEPS,
   "/executor-responsibilities-first-steps/legal-duties": EXECUTOR_STEPS,

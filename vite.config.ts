@@ -21,6 +21,7 @@ import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/dat
 import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
 import { PROPERTY_TAX_AFTER_DEATH, PTX_PRERENDER_SECTIONS, PTX_FAQS } from "./src/data/propertyTaxAfterDeath";
 import { MORTGAGE_AFTER_DEATH, MAD_PRERENDER_SECTIONS, MAD_FAQS } from "./src/data/mortgageAfterDeath";
+import { FAMILY_SALE, FS_PRERENDER_SECTIONS, FS_FAQS } from "./src/data/familySaleEstate";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
@@ -645,6 +646,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Understanding capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
     h1: "What Taxes Do You Pay When Selling an Inherited House in Washington?",
     intro: "Capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
+  },
+  [FAMILY_SALE.PATH]: {
+    title: `${FAMILY_SALE.TITLE} | Real Property Planning`,
+    description: FAMILY_SALE.DESCRIPTION,
+    h1: FAMILY_SALE.TITLE,
+    quickAnswerQ: "Can an executor buy the house from the estate, or sell it to a family member, in Washington?",
+    quickAnswerA: FAMILY_SALE.SHORT_ANSWER,
+    intro: "For Washington executors, trustees and heirs: when the person in charge of an estate or trust wants to buy the house or sell it to a relative, how to set a defensible price, the protections that keep the sale from being undone, and taking the house as an inheritance instead. General information, not legal advice.",
+    sections: FS_PRERENDER_SECTIONS,
+    faq: FS_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: FAMILY_SALE.PUBLISHED, dateModified: FAMILY_SALE.REVIEWED },
   },
   [MORTGAGE_AFTER_DEATH.PATH]: {
     title: `${MORTGAGE_AFTER_DEATH.TITLE} | Real Property Planning`,
