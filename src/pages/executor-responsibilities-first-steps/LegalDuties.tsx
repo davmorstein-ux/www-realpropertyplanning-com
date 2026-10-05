@@ -68,6 +68,61 @@ const LegalDuties = () => (
 
     <Divider />
 
+    <SubH2 id="executor-fees">Can the Executor Be Paid?</SubH2>
+    <P>
+      Yes. Washington has no fee schedule or percentage for personal representatives. The rule depends on the will:
+    </P>
+    <UL>
+      <li>
+        <strong>If the will sets the compensation,</strong> that amount is the executor's full pay, unless the executor
+        formally renounces it before qualifying and asks the court to set a fee instead.
+      </li>
+      <li>
+        <strong>If the will is silent,</strong> the executor is entitled to compensation the court considers "just and
+        reasonable" for the work actually done. Keeping a simple log of hours and tasks makes that easy to support.
+      </li>
+      <li>
+        <strong>An executor who fails in their duties</strong> can have their fee reduced or denied altogether by the
+        court.
+      </li>
+    </UL>
+    <P>
+      An executor who is also an heir can choose to take no fee. A fee is taxable income to the executor, while an inheritance
+      generally is not, so when the executor would receive the money either way, waiving the fee can leave more in the
+      family. A CPA can confirm whether that holds for your estate.
+    </P>
+    <P>
+      <strong>How heirs can question the fees.</strong> In most Washington estates, which are settled without court
+      supervision, the executor files a declaration of completion listing the fees paid to the executor, the attorney,
+      appraisers and accountants. Heirs who have not yet received their full share have 30 days after it is filed to ask the court
+      to review whether the fees are reasonable; if no one does, the fees are approved.
+    </P>
+    <P>
+      <span className="text-[15px]">
+        Sources:{" "}
+        <a
+          href="https://app.leg.wa.gov/RCW/default.aspx?cite=11.48.210"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2"
+        >
+          RCW 11.48.210
+        </a>{" "}
+        (compensation);{" "}
+        <a
+          href="https://app.leg.wa.gov/RCW/default.aspx?cite=11.68.110"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2"
+        >
+          RCW 11.68.110
+        </a>{" "}
+        (declaration of completion and fee review).
+      </span>
+    </P>
+
+    <Divider />
+
     <SubH2>When Probate Is Required in Washington State</SubH2>
     <P>
       Not all estates go through probate. Assets that pass by beneficiary designation (retirement accounts, life insurance), assets held in joint tenancy, and assets held in a properly funded trust typically pass outside of probate.

@@ -39,6 +39,8 @@ export interface FlowBranchProps {
   disclaimer: string;
   /** Extra blocks under the article (AFH Club adds its own back link and CTA). */
   after?: ReactNode;
+  /** A full section shown after "Watch out for" (e.g. the heir page's "when the executor isn't acting"). */
+  extra?: ReactNode;
   /** Which author sentence the byline shows: "estate" for probate pages, "afh" for AFH Club. */
   bylineContext: "afh" | "estate";
 }
@@ -49,7 +51,7 @@ const Section = ({ bg, children }: { bg: string; children: ReactNode }) => (
   </section>
 );
 
-export default function FlowBranchPage({ page: p, base, guideName, chart, reference, glossary, accent, heroBg, disclaimer, after, bylineContext }: FlowBranchProps) {
+export default function FlowBranchPage({ page: p, base, guideName, chart, reference, glossary, accent, heroBg, disclaimer, after, extra, bylineContext }: FlowBranchProps) {
   const canonical = `${SITE}${p.path}`;
   const schema = {
     "@context": "https://schema.org",
@@ -134,6 +136,8 @@ export default function FlowBranchPage({ page: p, base, guideName, chart, refere
             ))}
           </div>
         </Section>
+
+        {extra}
 
         <Section bg="#ffffff">
           <div className="prp-nextrow">

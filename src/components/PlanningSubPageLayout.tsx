@@ -172,8 +172,8 @@ export default PlanningSubPageLayout;
 /**
  * Small content helpers so each page reads cleanly.
  */
-export const SubH2 = ({ children }: { children: ReactNode }) => (
-  <h2 className="font-serif text-[26px] md:text-[32px] font-semibold text-navy leading-tight mt-10 mb-4 first:mt-0">
+export const SubH2 = ({ children, id }: { children: ReactNode; id?: string }) => (
+  <h2 id={id} className="font-serif text-[26px] md:text-[32px] font-semibold text-navy leading-tight mt-10 mb-4 first:mt-0">
     {children}
   </h2>
 );
