@@ -2431,7 +2431,7 @@ const visibleWords = (html: string) =>
 const withRenderedPage = (ssgContent: string, page: RenderedPage) => {
   // A page that renders thinner than its summary (a redirect, an empty shell) keeps the summary.
   if (visibleWords(page.html) < visibleWords(ssgContent)) return null;
-  const keep = ssgContent.match(LD_JSON) ?? [];
+  const keep: string[] = [...(ssgContent.match(LD_JSON) ?? [])];
   const types = new Set(keep.map(ldType));
   const extra = page.jsonLd.filter((sc) => !types.has(ldType(sc)) && !keep.includes(sc));
   // Tagged so main.tsx can remove them at startup: in the browser, Helmet renders the

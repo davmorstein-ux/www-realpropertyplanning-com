@@ -111,17 +111,27 @@ serve(async (req) => {
       });
     }
 
+    // Escape every visitor-supplied value before it goes into the HTML email,
+    // so nobody can inject markup or links into the message recipients read.
+    const esc = (v: unknown, max = 5000) =>
+      String(v ?? "")
+        .slice(0, max)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
     const html = `
       <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-      <p><strong>Reason:</strong> ${reason || "Not specified"}</p>
-      <p><strong>I am a:</strong> ${role || "Not specified"}</p>
+      <p><strong>Name:</strong> ${esc(name, 200)}</p>
+      <p><strong>Email:</strong> ${esc(email, 254)}</p>
+      <p><strong>Phone:</strong> ${phone ? esc(phone, 50) : "Not provided"}</p>
+      <p><strong>Reason:</strong> ${reason ? esc(reason, 100) : "Not specified"}</p>
+      <p><strong>I am a:</strong> ${role ? esc(role, 100) : "Not specified"}</p>
       <p><strong>Message:</strong></p>
-      <p>${String(message).replace(/\n/g, "<br>")}</p>
+      <p>${esc(message, 10000).replace(/\n/g, "<br>")}</p>
       <hr>
-      <p style="color:#888;font-size:12px;">Submitted from: ${source_page || "realpropertyplanning.com/contact"}</p>
+      <p style="color:#888;font-size:12px;">Submitted from: ${source_page ? esc(source_page, 300) : "realpropertyplanning.com/contact"}</p>
     `;
 
     const emailResponse = await fetch("https://api.resend.com/emails", {
@@ -134,7 +144,7 @@ serve(async (req) => {
         from: "Real Property Planning <contact@realpropertyplanning.com>",
         to: [RECIPIENT_EMAIL[REASON_RECIPIENT[String(reason)] ?? "general"] ?? TO_EMAIL],
         reply_to: email,
-        subject: `New Contact Form Message from ${name}${reason ? ` [${reason}]` : ""}`,
+        subject: `New Contact Form Message from ${String(name).replace(/[\r\n]+/g, " ").slice(0, 200)}${reason ? ` [${String(reason).replace(/[\r\n]+/g, " ").slice(0, 100)}]` : ""}`,
         html,
       }),
     });

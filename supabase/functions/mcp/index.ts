@@ -3,10 +3,10 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
 
 // src/lib/mcp/tools/search-site.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z } from "npm:zod@^3.25.76";
 
 // src/lib/mcp/data.ts
@@ -158,7 +158,7 @@ var search_site_default = defineTool({
 });
 
 // src/lib/mcp/tools/get-page.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z2 } from "npm:zod@^3.25.76";
 var toPath = (input) => {
   let p = input.trim();
@@ -193,7 +193,7 @@ var get_page_default = defineTool2({
 });
 
 // src/lib/mcp/tools/define-term.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z3 } from "npm:zod@^3.25.76";
 function matchTerms(all, query) {
   const q = norm(query);
@@ -224,7 +224,7 @@ var define_term_default = defineTool3({
 });
 
 // src/lib/mcp/tools/afh-rule-changes.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z4 } from "npm:zod@^3.25.76";
 var afh_rule_changes_default = defineTool4({
   name: "afh_rule_changes",
@@ -254,7 +254,7 @@ var afh_rule_changes_default = defineTool4({
 });
 
 // src/lib/mcp/tools/find-licensed-afh.ts
-import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z5 } from "npm:zod@^3.25.76";
 var SPECIALTY = { dementia: "dementia", mental_health: "mentalHealth", developmental_disabilities: "developmentalDisabilities" };
 var CONTRACT = {
@@ -313,7 +313,7 @@ var find_licensed_afh_default = defineTool5({
 });
 
 // src/lib/mcp/tools/afh-statistics.ts
-import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z6 } from "npm:zod@^3.25.76";
 var afh_statistics_default = defineTool6({
   name: "afh_statistics",
@@ -343,7 +343,7 @@ var afh_statistics_default = defineTool6({
 });
 
 // src/lib/mcp/tools/afh-listings-overview.ts
-import { defineTool as defineTool7 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool7 } from "npm:@lovable.dev/mcp-js@0.20.0";
 var afh_listings_overview_default = defineTool7({
   name: "afh_listings_overview",
   title: "AFH listings for sale (overview)",
@@ -354,7 +354,7 @@ var afh_listings_overview_default = defineTool7({
 });
 
 // src/lib/mcp/tools/list-afh-professionals.ts
-import { defineTool as defineTool8 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool8 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z7 } from "npm:zod@^3.25.76";
 var list_afh_professionals_default = defineTool8({
   name: "list_afh_professionals",
@@ -371,7 +371,7 @@ var list_afh_professionals_default = defineTool8({
 });
 
 // src/lib/mcp/tools/get-contact-info.ts
-import { defineTool as defineTool9 } from "npm:@lovable.dev/mcp-js@0.20.1";
+import { defineTool as defineTool9 } from "npm:@lovable.dev/mcp-js@0.20.0";
 
 // src/data/featuredProfessionals.ts
 var FEATURED_BROKER = {
@@ -459,5 +459,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.1/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.0/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));
