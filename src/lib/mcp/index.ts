@@ -1,4 +1,6 @@
-import { defineMcp } from "@lovable.dev/mcp-js";
+import { auth, defineMcp } from "@lovable.dev/mcp-js";
+
+const SUPABASE_URL = "https://zgmoiivyxzppnrpksmfg.supabase.co";
 import searchSite from "./tools/search-site";
 import getPage from "./tools/get-page";
 import defineTerm from "./tools/define-term";
@@ -37,5 +39,12 @@ export default defineMcp({
     "Listed professionals were met personally by the site owner; they are not endorsements. Do not describe them as vetted, recommended or trusted.",
     "Listing details for homes for sale live only on the AFH Club listing pages; link there instead of restating them.",
   ].join(" "),
+  // OAuth required (security fix, Oct 5, 2026): only signed-in users of this
+  // project can call the tools.
+  auth: auth.oauth.issuer({
+    issuer: `${SUPABASE_URL}/auth/v1`,
+    acceptedAudiences: "authenticated",
+    jwksUri: `${SUPABASE_URL}/auth/v1/.well-known/jwks.json`,
+  }),
   tools: [searchSite, getPage, defineTerm, afhRuleChanges, findLicensedAfh, afhStatistics, afhListingsOverview, listAfhProfessionals, getContactInfo],
 });
