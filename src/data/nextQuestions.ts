@@ -60,7 +60,7 @@ const Q = {
   chooseAfh: {
     title: "How do we choose between adult family homes?",
     description: "Building a shortlist, what to ask on a tour, and a worksheet for comparing two homes side by side.",
-    href: "/afh-club/choosing-an-adult-family-home",
+    href: "/senior-living/choosing-an-adult-family-home",
   },
   inspections: {
     title: "How do we check a home's inspection record?",
@@ -218,7 +218,7 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
   "/long-term-care/how-to-choose-care-settings": [Q.careCost, Q.findAfh, Q.chooseAfh, Q.afhCost, Q.medicaid],
   "/long-term-care/nurse-delegation": [Q.careSettings, Q.findAfh, Q.chooseAfh, Q.afhCost],
   "/afh-club/violation-history-lookup": [Q.chooseAfh, Q.findAfh, Q.afhCost, Q.medicaid],
-  "/afh-club/choosing-an-adult-family-home": [Q.findAfh, Q.inspections, Q.afhCost, Q.medicaid, Q.careSettings],
+  "/senior-living/choosing-an-adult-family-home": [Q.findAfh, Q.inspections, Q.afhCost, Q.medicaid, Q.careSettings],
 
   /* Death → authority → the house */
   "/trustees": [Q.familySale, Q.trustVsProbate, Q.pricingTrust, Q.dateOfDeath, Q.heirsDisagree],

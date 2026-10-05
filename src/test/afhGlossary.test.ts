@@ -15,9 +15,9 @@ describe("AFH glossary", () => {
     for (const id of ids) expect(id).toMatch(/^[a-z0-9-]+$/);
   });
 
-  it("links every term to a live AFH Club route", () => {
+  it("links every term to a live route (AFH Club, or a family guide on adult family homes)", () => {
     for (const t of AFH_GLOSSARY) {
-      expect(t.guide.href.startsWith("/afh-club/")).toBe(true);
+      expect(t.guide.href.startsWith("/afh-club/") || t.guide.href.startsWith("/senior-living/"), t.guide.href).toBe(true);
       expect(app, `${t.id} -> ${t.guide.href}`).toContain(`path="${t.guide.href}"`);
     }
   });

@@ -17,9 +17,11 @@ import ArticleRecord from "@/components/ArticleRecord";
  * (Sept 25, 2026: every competitor outranking those guides names a licensed
  * author on the page; the Article schema already did, the page did not).
  */
-export default function AuthorByline({ reviewed, context }: { reviewed?: string; context: "afh" | "estate" }) {
+export default function AuthorByline({ reviewed, context }: { reviewed?: string; context: "afh" | "estate" | "care" }) {
   const focus =
-    context === "estate"
+    context === "care"
+      ? "works with Washington families on the real estate side of senior housing transitions, including selling a parent's home when they move into care"
+      : context === "estate"
       ? "works with executors, trustees, heirs, and attorneys on probate, estate, and inherited-property sales across Washington State, and has valued and sold estate homes in every condition"
       : "works directly with adult family home buyers, sellers, and operators across Washington State";
   return (

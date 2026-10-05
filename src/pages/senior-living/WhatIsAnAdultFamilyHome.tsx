@@ -5,7 +5,7 @@ import AuthorByline from "@/components/AuthorByline";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import BackToAFHClub from "@/components/BackToAFHClub";
+import BackToLongTermCare from "@/components/BackToLongTermCare";
 import { STATE_TERMS, TERM_FAMILIES, LAST_REVIEWED } from "@/data/afh/state-terms";
 import stats from "@/data/afh/stats.json";
 import ArticleCover from "@/components/ArticleCover";
@@ -15,7 +15,7 @@ const WA = stats.state;
 const SIX_BED_SHARE = Math.round(stats.bedSizes.find((b) => b.beds === 6)?.share ?? 0);
 const RETRIEVED_LABEL = new Date(`${stats.retrievedTo}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
 
-const URL = "https://realpropertyplanning.com/afh-club/what-is-an-adult-family-home";
+const URL = "https://realpropertyplanning.com/senior-living/what-is-an-adult-family-home";
 const TITLE = "What Is an Adult Family Home? Definition and What It's Called in Every State";
 const DESCRIPTION =
   "An adult family home is Washington State's term for a licensed residence caring for up to six adults. The same model is called an adult foster home, personal care home, board and care, or family care home elsewhere. State-by-state table of terms, agencies, and capacities.";
@@ -119,7 +119,8 @@ const AFHWhatIsAnAFH = () => {
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "https://realpropertyplanning.com" },
-          { name: "AFH Club", url: "https://realpropertyplanning.com/afh-club" },
+          { name: "Senior Placement", url: "https://realpropertyplanning.com/senior-placement" },
+          { name: "Adult Family Homes", url: "https://realpropertyplanning.com/senior-living/adult-family-homes" },
           { name: "What Is an Adult Family Home?", url: URL },
         ]}
       />
@@ -140,7 +141,7 @@ const AFHWhatIsAnAFH = () => {
                 margin: "0 0 14px",
               }}
             >
-              AFH Club · Definitions
+              For families · Definitions
             </p>
             <h1
               style={{
@@ -334,10 +335,10 @@ const AFHWhatIsAnAFH = () => {
             <ul style={{ paddingLeft: 22, margin: 0 }}>
               {[
                 ["/afh-club/homes", "Find a licensed adult family home by city"],
-                ["/afh-club/listings", "Adult family homes for sale"],
-                ["/afh-club/licensing-certification", "How to get licensed as a provider"],
-                ["/afh-club/buying-selling", "Buying or selling an adult family home"],
-                ["/afh-club/costs-fees", "What an adult family home costs"],
+                ["/senior-living/choosing-an-adult-family-home", "How to choose an adult family home: tour checklist"],
+                ["/adult-family-home-costs", "What an adult family home costs, by city and county"],
+                ["/long-term-care/medicaid-and-the-family-home", "Medicaid and the family home"],
+                ["/senior-living/adult-family-homes", "Adult family homes next to the other care options"],
               ].map(([to, label]) => (
                 <li key={to} style={{ ...bodyText, margin: "0 0 8px" }}>
                   <Link to={to} style={{ color: "#1a365d", textDecoration: "underline" }}>
@@ -349,8 +350,8 @@ const AFHWhatIsAnAFH = () => {
           </div>
         </section>
 
-        <AuthorByline context="afh" />
-      <BackToAFHClub />
+        <AuthorByline context="care" />
+      <BackToLongTermCare />
       </main>
       <Footer />
     </>

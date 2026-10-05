@@ -33,13 +33,13 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import BackToAFHClub from "@/components/BackToAFHClub";
+import BackToLongTermCare from "@/components/BackToLongTermCare";
 import AuthorByline from "@/components/AuthorByline";
 import NextQuestions from "@/components/NextQuestions";
 import { articleAuthor, articlePublisher } from "@/lib/schema";
 import { DSHS_LOCATOR_URL } from "@/data/afh/inspectionRecord";
 
-const URL = "https://realpropertyplanning.com/afh-club/choosing-an-adult-family-home";
+const URL = "https://realpropertyplanning.com/senior-living/choosing-an-adult-family-home";
 const rcw = (cite: string) => `https://app.leg.wa.gov/RCW/default.aspx?cite=${cite}`;
 
 const schema = {
@@ -170,7 +170,7 @@ const printPage = () => {
 const ChoosingAnAdultFamilyHome = () => (
   <>
     <SEOHead
-      title="How to Choose an Adult Family Home in Washington: Tour Checklist | AFH Club"
+      title="How to Choose an Adult Family Home in Washington: Tour Checklist | Real Property Planning"
       description="A Washington family's guide to choosing an adult family home: building a shortlist, reading the DSHS record, what to ask on a tour, and a worksheet for comparing two homes side by side."
       canonical={URL}
       ogType="article"
@@ -179,7 +179,8 @@ const ChoosingAnAdultFamilyHome = () => (
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "AFH Club", url: "https://realpropertyplanning.com/afh-club" },
+        { name: "Senior Placement", url: "https://realpropertyplanning.com/senior-placement" },
+        { name: "Adult Family Homes", url: "https://realpropertyplanning.com/senior-living/adult-family-homes" },
         { name: "Choosing an Adult Family Home", url: URL },
       ]}
     />
@@ -189,7 +190,7 @@ const ChoosingAnAdultFamilyHome = () => (
 
       <section className="cafh-hero">
         <div className="cafh-wrap">
-          <p className="cafh-eyebrow">AFH Club · For families · Last reviewed October 2026</p>
+          <p className="cafh-eyebrow">For families · Last reviewed October 2026</p>
           <h1 className="cafh-h1">How to Choose an Adult Family Home in Washington</h1>
           <div className="cafh-answer">
             <p>
@@ -240,7 +241,7 @@ const ChoosingAnAdultFamilyHome = () => (
             </li>
           </ol>
           <p>
-            AFH Club's <Link to="/afh-club/homes">directory of licensed homes</Link> lists every home by city and
+            This site's <Link to="/afh-club/homes">directory of licensed homes</Link> lists every home by city and
             county with its capacity, specialty designations and Medicaid status from DSHS records, and the{" "}
             <a href={DSHS_LOCATOR_URL} target="_blank" rel="noopener noreferrer">
               DSHS Adult Family Home Locator
@@ -361,7 +362,7 @@ const ChoosingAnAdultFamilyHome = () => (
             reports available); <a href={rcw("70.128.200")} target="_blank" rel="noopener noreferrer">RCW 70.128.200</a>{" "}
             (complaint number posted); <a href={rcw("70.128.280")} target="_blank" rel="noopener noreferrer">RCW 70.128.280</a>{" "}
             (Disclosure of Services); <a href={rcw("70.129.110")} target="_blank" rel="noopener noreferrer">RCW 70.129.110</a>{" "}
-            (transfer and discharge). AFH Club does not rate, rank or recommend individual homes.
+            (transfer and discharge). This site does not rate, rank or recommend individual homes.
           </p>
         </div>
       </section>
@@ -370,8 +371,8 @@ const ChoosingAnAdultFamilyHome = () => (
         <NextQuestions />
       </div>
     </main>
-    <AuthorByline context="afh" />
-    <BackToAFHClub />
+    <AuthorByline context="care" />
+    <BackToLongTermCare />
     <DisclaimerSection />
     <Footer />
   </>

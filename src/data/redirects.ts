@@ -26,6 +26,10 @@ export interface SiteRedirect {
 }
 
 export const REDIRECTS: SiteRedirect[] = [
+  /* Family-facing adult family home guides moved out of AFH Club (which is
+     for home operators) into the senior living section, Oct 4, 2026. */
+  { from: "/afh-club/what-is-an-adult-family-home", to: "/senior-living/what-is-an-adult-family-home" },
+  { from: "/afh-club/choosing-an-adult-family-home", to: "/senior-living/choosing-an-adult-family-home" },
   /* RoomAndCare.com page removed Sept 30, 2026 (owner's decision): it was only ever a
      "coming soon" placeholder that search engines could index. */
   { from: "/long-term-care/finding-care-roomandcare", to: "/long-term-care" },

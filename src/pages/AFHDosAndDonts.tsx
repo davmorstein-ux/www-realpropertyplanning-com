@@ -1065,7 +1065,7 @@ const AFHDosAndDonts = () => (
         <p>
           This guide is for people considering the adult family home business, newly licensed providers, prospective AFH
           buyers, and owners who want to strengthen their operations. New to the subject? Start with{" "}
-          <L to="/afh-club/what-is-an-adult-family-home">What Is an Adult Family Home?</L> and{" "}
+          <L to="/senior-living/what-is-an-adult-family-home">What Is an Adult Family Home?</L> and{" "}
           <L to="/afh-club/getting-started">Is an Adult Family Home Right for You?</L>
         </p>
         <div className="afhdd-note">

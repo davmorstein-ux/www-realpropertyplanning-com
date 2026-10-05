@@ -61,7 +61,7 @@ const CountyDirectory = () => {
               </p>
               <p>
                 Choosing a home for a parent? Start with{" "}
-                <Link to="/afh-club/choosing-an-adult-family-home" className="underline underline-offset-2 font-semibold">
+                <Link to="/senior-living/choosing-an-adult-family-home" className="underline underline-offset-2 font-semibold">
                   how to choose an adult family home
                 </Link>{" "}
                 (what to ask on a tour, and a worksheet for comparing two homes), and{" "}

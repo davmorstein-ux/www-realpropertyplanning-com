@@ -377,7 +377,7 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "DSHS: AFH food safety and food worker card", href: "https://www.dshs.wa.gov/altsa/residential-care-services/adult-family-homes-food-safety-food-worker-card" },
     ],
   },
-  "/afh-club/what-is-an-adult-family-home": {
+  "/senior-living/what-is-an-adult-family-home": {
     reviewed: "2026-09-28",
     changes: [
       { date: "2026-09-28", text: "Washington section: counts now come from DSHS locator data (6,069 homes and 35,306 beds in 35 of 39 counties) instead of \"more than 6,000 across 39 counties\"; capacity (2-6, with 7-8 under WAC 388-76-10031) and the live-in rule (WAC 388-76-10040) corrected. The other states in the comparison table were not re-reviewed on this date." },

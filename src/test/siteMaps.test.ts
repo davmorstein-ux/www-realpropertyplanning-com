@@ -32,7 +32,7 @@ describe("the two visitor site maps", () => {
   });
 
   it("the AFH Club map stays about adult family homes", () => {
-    const allowedOutside = new Set(["/afh-submit", "/adult-family-home-costs"]);
+    const allowedOutside = new Set(["/afh-submit", "/adult-family-home-costs", "/senior-living/what-is-an-adult-family-home", "/senior-living/choosing-an-adult-family-home"]);
     for (const l of links(AFH_SITE_MAP)) expect(l.href.startsWith("/afh-club") || allowedOutside.has(l.href), l.href).toBe(true);
   });
 

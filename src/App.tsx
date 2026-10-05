@@ -222,7 +222,7 @@ const ProbateDeadlines = lazy(() => import("./pages/probate/ProbateDeadlines"));
 const ProbateGlossary = lazy(() => import("./pages/ProbateGlossary"));
 const AFHRuleChanges = lazy(() => import("./pages/AFHRuleChanges"));
 const AFHViolationHistory = lazy(() => import("./pages/AFHViolationHistory"));
-const AFHChoosingAnAdultFamilyHome = lazy(() => import("./pages/afh-club/ChoosingAnAdultFamilyHome"));
+const AFHChoosingAnAdultFamilyHome = lazy(() => import("./pages/senior-living/ChoosingAnAdultFamilyHome"));
 const AFHCostsFees = lazy(() => import("./pages/AFHCostsFees"));
 const AFHBuyingSelling = lazy(() => import("./pages/AFHBuyingSelling"));
 const AFHRegulationsCompliance = lazy(() => import("./pages/AFHRegulationsCompliance"));
@@ -243,7 +243,7 @@ const queryClient = new QueryClient();
 const AFHResources = lazy(() => import("./pages/AFHResources"));
 const AFHSiteMap = lazy(() => import("./pages/AFHSiteMap"));
 const AFHOwnershipStructure = lazy(() => import("./pages/AFHOwnershipStructure"));
-const AFHWhatIsAnAFH = lazy(() => import("./pages/AFHWhatIsAnAFH"));
+const AFHWhatIsAnAFH = lazy(() => import("./pages/senior-living/WhatIsAnAdultFamilyHome"));
 const AFHListings = lazy(() => import("./pages/AFHListings"));
 const AFHForSaleTacoma = lazy(() => import("./pages/AFHForSaleTacoma"));
 const AFHForSaleKent = lazy(() => import("./pages/AFHForSaleKent"));
@@ -652,7 +652,7 @@ export const AppRoutes = () => (
       <Route path="/afh-club/glossary" element={<AFHGlossary />} />
       <Route path="/afh-club/washington-afh-rule-changes" element={<AFHRuleChanges />} />
       <Route path="/afh-club/violation-history-lookup" element={<AFHViolationHistory />} />
-      <Route path="/afh-club/choosing-an-adult-family-home" element={<AFHChoosingAnAdultFamilyHome />} />
+      <Route path="/senior-living/choosing-an-adult-family-home" element={<AFHChoosingAnAdultFamilyHome />} />
       <Route path="/afh-club/costs-fees" element={<AFHCostsFees />} />
       <Route path="/afh-club/buying-selling" element={<AFHBuyingSelling />} />
       <Route path="/afh-club/regulations-compliance" element={<AFHRegulationsCompliance />} />
@@ -673,7 +673,7 @@ export const AppRoutes = () => (
       <Route path="/afh-club/resources" element={<AFHResources />} />
       <Route path="/afh-club/site-map" element={<AFHSiteMap />} />
       <Route path="/afh-club/ownership-structure" element={<AFHOwnershipStructure />} />
-      <Route path="/afh-club/what-is-an-adult-family-home" element={<AFHWhatIsAnAFH />} />
+      <Route path="/senior-living/what-is-an-adult-family-home" element={<AFHWhatIsAnAFH />} />
       <Route path="/afh-club/listings" element={<AFHListings />} />
       <Route path="/afh-club/listings/properties" element={<AFHListings view="realEstate" />} />
       <Route path="/afh-club/listings/businesses" element={<AFHListings view="business" />} />

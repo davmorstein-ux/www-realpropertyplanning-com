@@ -51,7 +51,7 @@ const LOCATOR = "https://fortress.wa.gov/dshs/adsaapps/lookup/AFHAdvLookup.aspx"
 const CHECKLIST = "https://www.dshs.wa.gov/sites/default/files/forms/pdf/15-604.pdf";
 
 const G = {
-  whatIs: { label: "What Is an Adult Family Home?", href: "/afh-club/what-is-an-adult-family-home" },
+  whatIs: { label: "What Is an Adult Family Home?", href: "/senior-living/what-is-an-adult-family-home" },
   gettingStarted: { label: "Is an Adult Family Home Right for You?", href: "/afh-club/getting-started" },
   licensing: { label: "AFH Licensing & Certification", href: "/afh-club/licensing-certification" },
   training: { label: "Training & Education Requirements", href: "/afh-club/training-education" },

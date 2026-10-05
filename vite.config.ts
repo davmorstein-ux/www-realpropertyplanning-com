@@ -1053,8 +1053,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
     article: { datePublished: "2026-09-13", dateModified: "2026-09-13" },
   },
-  "/afh-club/choosing-an-adult-family-home": {
-    title: "How to Choose an Adult Family Home in Washington: Tour Checklist | AFH Club",
+  "/senior-living/choosing-an-adult-family-home": {
+    title: "How to Choose an Adult Family Home in Washington: Tour Checklist | Real Property Planning",
     description: "A Washington family's guide to choosing an adult family home: building a shortlist, reading the DSHS record, what to ask on a tour, and a worksheet for comparing two homes side by side.",
     h1: "How to Choose an Adult Family Home in Washington",
     quickAnswerQ: "How do I choose an adult family home in Washington?",
@@ -1264,7 +1264,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
-  "/afh-club/what-is-an-adult-family-home": {
+  "/senior-living/what-is-an-adult-family-home": {
     title: "What Is an Adult Family Home? Definition and What It's Called in Every State | Real Property Planning",
     description: "An adult family home is Washington State's term for a licensed residence caring for up to six adults. The same model is called an adult foster home, personal care home, board and care, or family care home elsewhere. State-by-state table of terms, agencies, and capacities.",
     h1: "What is an adult family home — and what is it called in your state?",

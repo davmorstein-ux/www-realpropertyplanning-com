@@ -84,7 +84,7 @@ const G = {
     why: "Check a licensed home's inspection and enforcement record before you make an offer.",
   },
   whatIs: {
-    href: "/afh-club/what-is-an-adult-family-home",
+    href: "/senior-living/what-is-an-adult-family-home",
     title: "What Is an Adult Family Home?",
     why: "The model in plain terms, and how it differs from assisted living.",
   },
