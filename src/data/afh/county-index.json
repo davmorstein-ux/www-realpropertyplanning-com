@@ -152,7 +152,25 @@
     "behaviorSupport": 55,
     "developmentalDisabilities": 127,
     "privatePay": 2,
-    "withReports": 112
+    "withReports": 112,
+    "byCounty": {
+      "King": {
+        "facilityCount": 189,
+        "totalBeds": 1097,
+        "behaviorSupport": 54,
+        "developmentalDisabilities": 125,
+        "privatePay": 2,
+        "withReports": 112
+      },
+      "Pierce": {
+        "facilityCount": 2,
+        "totalBeds": 11,
+        "behaviorSupport": 1,
+        "developmentalDisabilities": 2,
+        "privatePay": 0,
+        "withReports": 0
+      }
+    }
   },
   {
     "city": "Puyallup",
@@ -279,7 +297,25 @@
     "behaviorSupport": 13,
     "developmentalDisabilities": 38,
     "privatePay": 15,
-    "withReports": 70
+    "withReports": 70,
+    "byCounty": {
+      "Snohomish": {
+        "facilityCount": 70,
+        "totalBeds": 411,
+        "behaviorSupport": 12,
+        "developmentalDisabilities": 33,
+        "privatePay": 6,
+        "withReports": 47
+      },
+      "King": {
+        "facilityCount": 26,
+        "totalBeds": 159,
+        "behaviorSupport": 1,
+        "developmentalDisabilities": 5,
+        "privatePay": 9,
+        "withReports": 23
+      }
+    }
   },
   {
     "city": "Des Moines",
@@ -644,7 +680,25 @@
     "behaviorSupport": 2,
     "developmentalDisabilities": 12,
     "privatePay": 1,
-    "withReports": 14
+    "withReports": 14,
+    "byCounty": {
+      "Pierce": {
+        "facilityCount": 17,
+        "totalBeds": 96,
+        "behaviorSupport": 2,
+        "developmentalDisabilities": 12,
+        "privatePay": 1,
+        "withReports": 14
+      },
+      "King": {
+        "facilityCount": 1,
+        "totalBeds": 6,
+        "behaviorSupport": 0,
+        "developmentalDisabilities": 0,
+        "privatePay": 0,
+        "withReports": 0
+      }
+    }
   },
   {
     "city": "Mukilteo",
@@ -799,7 +853,25 @@
     "behaviorSupport": 0,
     "developmentalDisabilities": 2,
     "privatePay": 0,
-    "withReports": 11
+    "withReports": 11,
+    "byCounty": {
+      "King": {
+        "facilityCount": 11,
+        "totalBeds": 62,
+        "behaviorSupport": 0,
+        "developmentalDisabilities": 2,
+        "privatePay": 0,
+        "withReports": 10
+      },
+      "Snohomish": {
+        "facilityCount": 1,
+        "totalBeds": 6,
+        "behaviorSupport": 0,
+        "developmentalDisabilities": 0,
+        "privatePay": 0,
+        "withReports": 1
+      }
+    }
   },
   {
     "city": "Arlington",
@@ -1318,7 +1390,25 @@
     "behaviorSupport": 0,
     "developmentalDisabilities": 3,
     "privatePay": 0,
-    "withReports": 4
+    "withReports": 4,
+    "byCounty": {
+      "Thurston": {
+        "facilityCount": 4,
+        "totalBeds": 20,
+        "behaviorSupport": 0,
+        "developmentalDisabilities": 3,
+        "privatePay": 0,
+        "withReports": 3
+      },
+      "Pierce": {
+        "facilityCount": 1,
+        "totalBeds": 6,
+        "behaviorSupport": 0,
+        "developmentalDisabilities": 0,
+        "privatePay": 0,
+        "withReports": 1
+      }
+    }
   },
   {
     "city": "Airway Heights",

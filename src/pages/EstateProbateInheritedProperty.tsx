@@ -73,7 +73,7 @@ const faqs = [
   {
     question: "How long does probate and settling the property typically take?",
     answer:
-      "It varies quite a bit depending on the estate's complexity, but Washington probate commonly takes several months to a year or more. The property itself can often be prepared and marketed in parallel, once authority to act has been established.",
+      "At least four months: an estate generally cannot be closed until the creditor claim period has run, four months after the notice to creditors is first published (RCW 11.40.051). Beyond that it depends on the estate's complexity. The house does not have to wait for the estate to close: with nonintervention powers the personal representative can prepare, list and sell it once appointed.",
   },
 ];
 

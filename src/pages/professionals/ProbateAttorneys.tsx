@@ -23,7 +23,7 @@ const ProbateAttorneys = () => {
         },
         {
           q: "How long does probate take in Washington?",
-          a: "A straightforward probate in Washington typically takes 4 to 9 months. More complex estates — especially those involving real property, disputes among heirs, or out-of-state assets — can take longer.",
+          a: "At least four months. An estate generally cannot be closed until the creditor claim period has run, four months after the notice to creditors is first published (RCW 11.40.051). How much longer depends on the estate: real property, disputes among heirs, tax returns and out-of-state assets all add time.",
         },
         {
           q: "When should I contact a probate attorney?",

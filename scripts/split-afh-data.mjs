@@ -73,6 +73,25 @@ for (const [citySlug, list] of [...byCity.entries()].sort()) {
     ).length,
     privatePay: list.filter((f) => !f.acceptsMedicaid).length,
     withReports: list.filter((f) => f.hasReports).length,
+    // Split cities only: the same counts for each county's share, so county
+    // totals count each home once (Oct 4, 2026; King showed 1,909 vs 1,819).
+    ...(countiesForCity.length > 1
+      ? {
+          byCounty: Object.fromEntries(
+            countiesForCity.map((cn) => {
+              const part = list.filter((f) => f.address.county === cn);
+              return [cn, {
+                facilityCount: part.length,
+                totalBeds: part.reduce((s, f) => s + f.licensedBeds, 0),
+                behaviorSupport: part.filter((f) => f.contracts.includes("specializedBehaviorSupport")).length,
+                developmentalDisabilities: part.filter((f) => f.specialties.includes("developmentalDisabilities")).length,
+                privatePay: part.filter((f) => !f.acceptsMedicaid).length,
+                withReports: part.filter((f) => f.hasReports).length,
+              }];
+            }),
+          ),
+        }
+      : {}),
   });
 }
 

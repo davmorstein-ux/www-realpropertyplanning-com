@@ -71,7 +71,7 @@ const HowLongSellProbateProperty = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground leading-relaxed mb-5" style={{ fontSize: "18px" }}>
-              Written for executors, attorneys, and families who need a realistic timeline for selling a probate property in Washington State. Most probate property sales in Washington take between 4 and 12 months from the date of death to closing — but the range depends on court timelines, property condition, and family coordination.
+              Written for executors, attorneys, and families who need a realistic timeline for selling a probate property in Washington State. The time from the death to the closing varies widely. It depends on how quickly the executor is appointed, the condition of the house, the market, and how quickly the family agrees.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: "18px" }}>
               This guide breaks down the realistic timeline, explains what affects it, and shows how planning can shorten the process significantly.
@@ -81,10 +81,10 @@ const HowLongSellProbateProperty = () => (
             The timeline for a probate property sale has two distinct phases: the legal phase (getting authority to sell) and the real estate phase (preparing, listing, and closing). Understanding both is essential for setting realistic expectations.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            <strong className="text-foreground">Phase 1: Legal authority (1–4 months).</strong> After someone passes, the will must be filed with the court, an executor appointed, and letters testamentary issued. In straightforward cases, this can happen in a few weeks. Contested situations or complex estates can take several months.
+            <strong className="text-foreground">Phase 1: Legal authority.</strong> The original will goes to the court, and the court may admit it and appoint the executor as soon as the petition is presented, without notice to the heirs (RCW 11.20.020). Letters testamentary issue once the executor's oath is filed and any required bond is posted. In an uncontested case the wait is mostly preparing the petition and the county's processing time. Without a will, a petition by someone other than the surviving spouse needs 10 days' notice to the spouse unless the spouse waives it (RCW 11.28.131). A contested will or appointment can take months.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Phase 2: Property sale (1–4 months).</strong> Once the executor has authority, the property needs assessment, preparation, listing, marketing, negotiation, and closing. A well-prepared property in a strong market may sell in 30 days. A property needing significant work or in a slower market may take longer.
+            <strong className="text-foreground">Phase 2: Property sale.</strong> Once the executor has authority, the property needs assessment, preparation, listing, marketing, negotiation, and closing. A well-prepared property in a strong market may sell in 30 days. A property needing significant work or in a slower market may take longer.
           </p>
         </div>
       </div>
@@ -178,7 +178,7 @@ const HowLongSellProbateProperty = () => (
           <ul className="space-y-4">
             {[
               "Telling heirs the sale will close quickly without accounting for probate timelines — this creates unrealistic expectations and unnecessary pressure",
-              "Waiting until letters testamentary are issued to begin any planning — months of preparation time are lost",
+              "Waiting until letters testamentary are issued to begin any planning, which loses time that could have gone to preparing the house",
               "Rushing the property to market without proper preparation — a poorly presented home sells for less and may take longer to sell",
               "Ignoring title issues until a buyer is under contract — this can delay or kill a sale at the worst possible moment",
               "Not factoring in seasonal market conditions — listing in winter versus spring can meaningfully affect timeline and price",

@@ -29,6 +29,8 @@ export interface AFHCityIndexEntry {
   developmentalDisabilities: number;
   privatePay: number;
   withReports: number;
+  /** Split cities only: the same counts for the homes in each county. */
+  byCounty?: Record<string, Omit<AFHCityIndexEntry, "city" | "citySlug" | "county" | "counties" | "byCounty">>;
 }
 
 export const countyIndex = countyIndexRaw as AFHCityIndexEntry[];
@@ -137,9 +139,15 @@ export function getCountySummary(countyName: string): AFHCountySummary | null {
     .toLowerCase();
   // Match on the full county list so a split city (Bothell, Auburn, Woodinville,
   // Milton) appears under both counties it belongs to.
-  const cities = countyIndex.filter((c) =>
-    (c.counties ?? [c.county]).some((n) => n.toLowerCase() === target),
-  );
+  // A split city counts toward each county only for the homes in that county
+  // (its byCounty share), so county totals match DSHS's county counts. The
+  // city still links to its one page with all of its homes.
+  const cities = countyIndex
+    .filter((c) => (c.counties ?? [c.county]).some((n) => n.toLowerCase() === target))
+    .map((c) => {
+      const key = c.byCounty && Object.keys(c.byCounty).find((n) => n.toLowerCase() === target);
+      return key ? { ...c, ...c.byCounty![key] } : c;
+    });
   if (cities.length === 0) return null;
 
   return {

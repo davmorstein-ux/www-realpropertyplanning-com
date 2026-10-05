@@ -53,7 +53,15 @@ interface CityIndexEntry {
   developmentalDisabilities: number;
   privatePay: number;
   withReports: number;
+  byCounty?: Record<string, { facilityCount: number; totalBeds: number; behaviorSupport: number; developmentalDisabilities: number; privatePay: number; withReports: number }>;
 }
+
+/** A city's entry as counted toward one county: split cities count only the
+ *  homes in that county (byCounty), so totals match DSHS. Oct 4, 2026. */
+const shareFor = (x: CityIndexEntry, county: string): CityIndexEntry => {
+  const key = x.byCounty && Object.keys(x.byCounty).find((n) => n.toLowerCase() === county.toLowerCase());
+  return key ? { ...x, ...x.byCounty![key] } : x;
+};
 
 export interface PrerenderedRoute {
   route: string;
@@ -445,6 +453,7 @@ function buildCountyPage(c: CountyChecked, index: CityIndexEntry[], checked: Cou
   const route = `/afh-club/homes/county/${c.slug}`;
   const cities = index
     .filter((x) => (x.counties ?? [x.county]).some((n) => n.toLowerCase() === c.county.toLowerCase()))
+    .map((x) => shareFor(x, c.county))
     .sort((x, y) => x.city.localeCompare(y.city));
   const cityNames = new Set(cities.map((x) => x.city.toLowerCase()));
   const sales = afhListings.filter((l) => cityNames.has(l.city.toLowerCase()));
@@ -547,7 +556,10 @@ function buildHubPage(index: CityIndexEntry[], retrievedAt: string, checked: Cou
   const byCounty = countyNames
     .map((n) => ({
       county: n,
-      cities: index.filter((c) => (c.counties ?? [c.county]).includes(n)).sort((x, y) => x.city.localeCompare(y.city)),
+      cities: index
+        .filter((c) => (c.counties ?? [c.county]).includes(n))
+        .map((c) => shareFor(c, n))
+        .sort((x, y) => x.city.localeCompare(y.city)),
     }))
     .sort((x, y) => y.cities.reduce((s, c) => s + c.facilityCount, 0) - x.cities.reduce((s, c) => s + c.facilityCount, 0));
 

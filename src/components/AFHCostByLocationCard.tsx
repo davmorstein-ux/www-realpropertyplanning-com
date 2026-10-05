@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { countyIndex, countiesChecked, countySlug } from "@/data/afh/directory";
+import { countyIndex, countiesChecked, countySlug, getCountySummary } from "@/data/afh/directory";
 import {
   AFH_MEDICAID_RATES,
   AFH_RATE_REGION_LABELS,
@@ -71,7 +71,8 @@ const AFHCostByLocationCard = ({ compact = false, accent = DEFAULT_ACCENT }: { c
   const range = region ? medicaidRange(region) : null;
   const band = county ? privatePayBandForPlace(picked?.kind === "city" ? picked.label.split(" (")[0] : null, county) : null;
   const checked = county ? countiesChecked.find((c) => c.county.toLowerCase() === county.toLowerCase()) : null;
-  const countyCities = county ? countyIndex.filter((c) => (c.counties ?? [c.county]).some((n) => n.toLowerCase() === county.toLowerCase())) : [];
+  // getCountySummary counts a split city only for the homes in this county.
+  const countyCities = county ? getCountySummary(county)?.cities ?? [] : [];
   const privatePayOnly = countyCities.reduce((s, c) => s + c.privatePay, 0);
   const cityEntry = picked?.kind === "city" ? countyIndex.find((c) => c.citySlug === picked.citySlug) : null;
   const forSale = picked ? cityPageByCity(picked.kind === "city" ? picked.label.split(" (")[0] : "") : null;

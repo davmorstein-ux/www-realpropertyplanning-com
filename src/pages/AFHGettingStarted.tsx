@@ -304,7 +304,7 @@ const AFHGettingStarted = () => (
               {
                 label: "Food Safety training",
                 detail:
-                  "A current food worker card, or 30 minutes of food safety continuing education each year using the state food workers' manual, per DSHS guidance.",
+                  "Food safety is part of the required caregiver training, so anyone who began working in an adult family home after June 30, 2005 and completed that training does not need a separate food worker card. Someone relying on a food handler permit held before then keeps it current with half an hour of food safety continuing education a year (RCW 70.128.250).",
               },
               {
                 label: "Cleared DSHS background check",
