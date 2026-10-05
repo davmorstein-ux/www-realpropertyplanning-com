@@ -317,7 +317,9 @@ const RPPHomeV3 = () => {
 
             {/* Tiles sit in a narrower column with wider gaps so the row reads
                 as four objects with air around them, not a strip (David, Sept 23). */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-9 mb-5" style={{ maxWidth: 1040, margin: "0 auto 1.25rem" }}>
+            {/* Phones: 2 x 2 at half width (owner, Oct 5, 2026: the four stacked
+                full-width tiles were too large). Tablet stays 2-up, desktop 4-up. */}
+            <div className="rpp-funnel-grid grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 lg:gap-9 mb-5" style={{ maxWidth: 1040, margin: "0 auto 1.25rem" }}>
               {tileMeta.map(({ key, href, bgColor, imgSrc }) => {
                 const title = t(`funnel.tiles.${key}.title`);
                 const imgAlt = t(`funnel.tiles.${key}.imgAlt`);
@@ -501,6 +503,36 @@ const RPPHomeV3 = () => {
     transition: background-color 0.18s ease, color 0.18s ease;
   }
   .group:hover .rpp-tile3d-arrow.rpp-tile3d-arrow { background-color: #ffffff; color: var(--tile); }
+
+  /* PHONES (under 640px): the tiles run 2 x 2, about 155px wide each, so the
+     frame, label and arrow are scaled down to fit. The title stays 18px (the
+     site's minimum for this audience) and wraps to two or three lines; the
+     circled arrow is dropped because it would take a quarter of the label's
+     width — the whole tile is still the link. */
+  @media (max-width: 639px) {
+    /* index.css forces every multi-column grid to one column on phones with
+       [class*="grid-cols-"]:not(...) at (0,2,0), which beats its own
+       .grid-cols-2 exception, so the 2 x 2 needs a stronger selector. */
+    .rpp-funnel-grid.rpp-funnel-grid.rpp-funnel-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    .rpp-tile3d.rpp-tile3d { padding: 4px; border-radius: 12px; }
+    .rpp-tile3d .rpp-tile3d-photo { border-radius: 8px; }
+    .rpp-tile3d-label.rpp-tile3d-label.rpp-tile3d-label {
+      margin-top: 4px;
+      border-radius: 8px;
+      padding: 0.55rem 0.6rem !important;
+      min-height: 0 !important;
+      justify-content: flex-start !important;
+    }
+    .rpp-tile3d .rpp-funnel-cta.rpp-funnel-cta.rpp-funnel-cta {
+      font-size: 18px !important;
+      line-height: 1.2 !important;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    .rpp-tile3d .rpp-tile3d-arrow.rpp-tile3d-arrow { display: none !important; }
+  }
 
   .rpp-funnel-img.rpp-funnel-img {
     display: block !important;
