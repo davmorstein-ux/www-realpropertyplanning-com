@@ -144,7 +144,7 @@ serve(async (req) => {
         from: "Real Property Planning <contact@realpropertyplanning.com>",
         to: [RECIPIENT_EMAIL[REASON_RECIPIENT[String(reason)] ?? "general"] ?? TO_EMAIL],
         reply_to: email,
-        subject: `New Contact Form Message from ${name}${reason ? ` [${reason}]` : ""}`,
+        subject: `New Contact Form Message from ${String(name).replace(/[\r\n]+/g, " ").slice(0, 200)}${reason ? ` [${String(reason).replace(/[\r\n]+/g, " ").slice(0, 100)}]` : ""}`,
         html,
       }),
     });
