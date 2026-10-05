@@ -11,6 +11,7 @@ import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/getting-started.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
 import NextQuestions from "@/components/NextQuestions";
+import WhichGuide from "@/components/WhichGuide";
 
 const REALITY_CHECKS = [
   {
@@ -167,6 +168,7 @@ const AFHGettingStarted = () => (
       </section>
 
       {/* What is an AFH */}
+      <WhichGuide group="afhOpening" />
       <section style={{ background: "#f7f4ef", padding: "72px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p

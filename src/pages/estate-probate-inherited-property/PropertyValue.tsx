@@ -1,4 +1,5 @@
-import EstateSubPageLayout, { SubH2, P, Divider } from "@/components/EstateSubPageLayout";
+import EstateSubPageLayout, { SubH2, P } from "@/components/EstateSubPageLayout";
+import { Link } from "react-router-dom";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult a licensed Washington State probate attorney and a qualified tax professional for guidance specific to your situation.";
@@ -12,75 +13,28 @@ const PropertyValue = () => (
     bandTitle="UNDERSTANDING THE PROPERTY'S VALUE"
     disclaimer={DISCLAIMER}
   >
-    <SubH2>Before Any Decision Is Made, Know What the Property Is Worth.</SubH2>
+    {/* Oct 4, 2026 (Question Map step 8): the full explanation moved to
+        /date-of-death-valuation-property-appraisals, the page whose address
+        matches the search. This step keeps a short summary. */}
+    <SubH2>Before Any Decision Is Made, Know What the Property Is Worth</SubH2>
     <P>
-      Estate property valuation is not the same as a standard market estimate. Getting it right protects heirs financially and legally.
-    </P>
-
-    <Divider />
-
-    <SubH2>Why Valuation Is Different for Estate Property</SubH2>
-    <P>
-      When a home is being sold in a standard transaction, the owner decides what to list it for, gets feedback from the market, and adjusts. There's flexibility.
+      Estate property needs a value as of the date of death. It sets the heirs' tax basis for a later sale, goes into
+      the estate inventory the personal representative must prepare within three months of appointment, feeds any
+      estate tax return, and gives the heirs an independent number to divide the estate by.
     </P>
     <P>
-      Estate property valuation is different. There are legal, tax, and fairness obligations that require a defensible, professional number — not an estimate, not a Zillow figure, and not an opinion from a family member who once worked in real estate.
-    </P>
-
-    <Divider />
-
-    <SubH2>The Date-of-Death Appraisal</SubH2>
-    <P>
-      The most important valuation in an estate is the <strong>date-of-death appraisal</strong> — a professional assessment of the property's fair market value as of the exact date the person passed away.
-    </P>
-    <P><strong>Why it matters:</strong></P>
-    <P>
-      <strong>Estate tax:</strong> Washington State has its own estate tax with a relatively low exemption. The value of real property is a key input into whether estate tax is owed and how much. An inaccurate valuation can result in underpayment (which triggers penalties) or overpayment (which costs heirs money).
+      For those purposes, a certified appraisal holds up where an online estimate or a broker's market analysis may
+      not. The appraisal values the house as it stood on the date of death, and it is easiest to support when it is
+      done soon after.
     </P>
     <P>
-      <strong>Stepped-up cost basis:</strong> When heirs inherit property, their cost basis for capital gains purposes is "stepped up" to the fair market value at the date of death. This means that if a heir sells the property shortly after inheriting it, they typically owe little or no capital gains tax — even if the property appreciated significantly during the deceased's lifetime. Without a professional appraisal to establish that stepped-up basis, heirs may face larger tax bills when they sell.
-    </P>
-    <P>
-      <strong>Equitable distribution:</strong> If the property is being divided among multiple heirs, everyone needs an agreed-upon professional value to work from. An independent appraisal removes the guesswork and the arguments.
-    </P>
-    <P>
-      <strong>The estate inventory:</strong> Washington requires the personal representative to prepare an inventory valuing estate property as of the date of death within three months of appointment (RCW 11.44.015). It need not be filed with the court and the law does not demand a certified appraisal, but an appraisal is the value that holds up if an heir, a creditor or the tax authorities question it; an online estimate does not.
-    </P>
-
-    <Divider />
-
-    <SubH2>Appraisal vs. Comparative Market Analysis (CMA)</SubH2>
-    <P>These are often confused — and the distinction matters:</P>
-    <P>
-      <strong>A professional appraisal</strong> is conducted by a state-certified appraiser, follows established methodology, and produces a written report that is defensible in court, accepted by the IRS, and usable for tax and legal purposes.
-    </P>
-    <P>
-      <strong>A comparative market analysis (CMA)</strong> is typically prepared by a real estate agent to help price a home for listing. It is useful for pricing and marketing, but it is not a certified appraisal, and it is the weaker choice wherever a value must stand up to review, such as an estate tax return or a dispute in court.
-    </P>
-    <P>When the value will be reported for taxes, relied on by a court, or used to divide the estate among heirs, get a certified appraisal. For pricing a straightforward sale, a well-supported broker opinion is often enough.</P>
-
-    <Divider />
-
-    <SubH2>As-Is Condition and Fair Market Value</SubH2>
-    <P>
-      Estate properties are often appraised in their current condition — which may include deferred maintenance, dated finishes, or items left by the deceased. The appraiser's job is to determine what the property would sell for in that condition, between a willing buyer and a willing seller, with neither under pressure.
-    </P>
-    <P>
-      This "as-is" value is the foundation for all subsequent decisions: whether to sell as-is, invest in improvements, or transfer the property to an heir.
-    </P>
-
-    <Divider />
-
-    <SubH2>When to Get an Appraisal</SubH2>
-    <P>
-      As soon as reasonably possible after the death — ideally within the first 30–60 days. While a retroactive appraisal (performed later but reflecting the date-of-death value) is possible, a contemporaneous appraisal is more defensible and less likely to be challenged.
-    </P>
-
-    <Divider />
-
-    <SubH2>Real Property Planning Can Help</SubH2>
-    <P>
-      Any Washington State certified residential appraiser can prepare a date-of-death, retrospective, or current market appraisal. The site's featured certified appraiser does this work, and you can contact the appraiser directly or hire anyone you choose.
+      <strong>
+        The full explanation, with the questions families ask:{" "}
+        <Link to="/date-of-death-valuation-property-appraisals" className="underline underline-offset-2">
+          Date-of-Death Valuation &amp; Property Appraisals
+        </Link>
+        .
+      </strong>
     </P>
   </EstateSubPageLayout>
 );

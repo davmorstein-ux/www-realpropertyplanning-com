@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
+import DateOfDeathEssentials from "@/components/guides/DateOfDeathEssentials";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import { articleSchema } from "@/lib/schema";
@@ -82,12 +83,12 @@ const faqs = [
   {
     question: "What is a date-of-death appraisal?",
     answer:
-      "It is a property valuation that estimates fair market value as of the date someone passed away. Families often consult an appraiser or CPA to understand whether and how this valuation may be used for estate or tax purposes.",
+      "An appraisal of the property's fair market value as of the day the owner died. It documents the heirs' new tax basis, feeds the estate inventory and any estate tax return, and gives heirs an independent value to divide the estate by.",
   },
   {
     question: "Is an appraisal always required?",
     answer:
-      "Not always. The right approach depends on the estate, the property, and applicable tax or legal considerations. A qualified attorney or CPA can help clarify when a formal appraisal is appropriate.",
+      "No. Washington requires the personal representative to value estate property as of the date of death in the inventory (RCW 11.44.015), but does not require a certified appraisal. An appraisal is the value that holds up if heirs, creditors or tax authorities question it, so it is the usual choice when taxes, a dispute or a buyout are involved.",
   },
   {
     question: "What is the difference between an appraisal and a market analysis?",
@@ -211,6 +212,8 @@ const DateOfDeathValuationPropertyAppraisals = () => {
           ]}
         />
 
+
+        <DateOfDeathEssentials />
 
         {/* PATHWAYS */}
         <section id="pathways" className="py-10 lg:py-14 bg-secondary scroll-mt-20">

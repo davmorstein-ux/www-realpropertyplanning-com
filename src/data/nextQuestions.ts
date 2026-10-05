@@ -117,6 +117,11 @@ const Q = {
     description: "A worksheet: the real monthly cost of staying home, with care hours at Washington rates, against income and savings.",
     href: "/senior-transitions/can-parent-afford-to-stay-home",
   },
+  conversationsNow: {
+    title: "What should we talk about before there is a crisis?",
+    description: "The questions about wishes, money and the house worth asking a parent early.",
+    href: "/planning-before-a-crisis/conversations-to-have",
+  },
   familySale: {
     title: "Can the executor or trustee buy the house?",
     description: "Selling the house to the person in charge, or to family: the price, the protections, and taking it as a share instead.",
@@ -242,7 +247,7 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
   /* Helping an Aging Parent: each step points to the long-form guide behind it */
   [`${AGING}/exploring-care-options/comparing-costs`]: [Q.careCost, Q.afhCost, Q.careSettings, Q.houseForCare],
   [`${AGING}/exploring-care-options/eligibility`]: [Q.medicaid, Q.waCares, Q.houseForCare],
-  [`${AGING}/exploring-care-options/having-the-conversation`]: [Q.careManagers, Q.agingInPlace, Q.careSettings],
+  [`${AGING}/exploring-care-options/having-the-conversation`]: [Q.conversationsNow, Q.careManagers, Q.agingInPlace, Q.careSettings],
   [`${AGING}/exploring-care-options/types-of-housing`]: [Q.careSettings, Q.findAfh, Q.careCost],
   [`${AGING}/finances-and-legal/paying-for-care`]: [Q.houseForCare, Q.medicaid, Q.reverseMortgage, Q.careCost],
   [`${AGING}/finances-and-legal/power-of-attorney`]: [Q.poa, Q.legalDocs],

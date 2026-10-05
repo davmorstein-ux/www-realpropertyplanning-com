@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { Link } from "react-router-dom";
+import WhichGuide from "@/components/WhichGuide";
 
 const label = {
   fontSize: 15,
@@ -168,6 +169,7 @@ const AFHWaboGuide = () => (
       </section>
 
       {/* What WABO does */}
+      <WhichGuide group="wabo" />
       <section style={sectionLight}>
         <div style={wrap}>
           <h2 style={h2}>What WABO Does</h2>

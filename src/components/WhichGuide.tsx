@@ -31,6 +31,36 @@ export const WHICH_GUIDE: Record<string, { heading: string; entries: Entry[] }> 
       { href: "/guides/executor-first-steps-house", title: "What Should an Executor Do First With a House?", role: "Just the house: securing, insuring and caring for it until it is sold or distributed." },
     ],
   },
+  authority: {
+    heading: "Guides on who can sell the house",
+    entries: [
+      { href: "/guides/who-has-authority-sell-probate-property-washington", title: "Who Has Authority to Sell Probate Property?", role: "The full answer: letters, nonintervention powers, court-supervised sales and what a title company asks for." },
+      { href: "/estate-probate-inherited-property/probate-and-legal-authority", title: "Understanding Probate & Legal Authority", role: "A step in the estate guide: where authority comes from, in plain terms." },
+      { href: "/washington-probate-guide", title: "Washington Probate Guide (flow chart)", role: "Find your situation: will or no will, trust, joint ownership, and your role." },
+    ],
+  },
+  wabo: {
+    heading: "Guides on WABO and the building inspection",
+    entries: [
+      { href: "/afh-club/wabo-inspection-guide", title: "What Is WABO? A Simple Overview", role: "Start here: what WABO is and what the building inspection does and does not mean." },
+      { href: "/afh-club/wabo-technical-guide", title: "WABO Checklist: The Technical Guide", role: "The checklist itself: requirements, common delays and how to prepare." },
+      { href: "/afh-club/building-inspection", title: "AFH Building Requirements & Inspections", role: "The whole building side: requirements, inspections and how they fit with licensing." },
+    ],
+  },
+  afhOpening: {
+    heading: "Guides on opening an adult family home",
+    entries: [
+      { href: "/afh-club/getting-started", title: "Is an Adult Family Home Right for You?", role: "Before you commit: the steps, the time and what the work involves." },
+      { href: "/afh-club/washington-adult-family-home-guide/opening", title: "Opening a New Adult Family Home (flow chart step)", role: "The opening path in order, with the guides to read at each stage." },
+    ],
+  },
+  conversations: {
+    heading: "Guides on talking with a parent",
+    entries: [
+      { href: "/planning-before-a-crisis/conversations-to-have", title: "The Conversations Worth Having Now", role: "Before a crisis: the questions about wishes, money and the house worth asking early." },
+      { href: "/helping-an-aging-parent/exploring-care-options/having-the-conversation", title: "How Do I Have This Conversation With My Parent?", role: "When care is on the table: how to raise a move or more help." },
+    ],
+  },
 };
 
 const CSS = `

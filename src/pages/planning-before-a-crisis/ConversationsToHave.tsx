@@ -5,6 +5,7 @@ import PlanningSubPageLayout, {
   UL,
   Divider,
 } from "@/components/PlanningSubPageLayout";
+import WhichGuide from "@/components/WhichGuide";
 
 const ConversationsToHave = () => (
   <PlanningSubPageLayout
@@ -15,6 +16,8 @@ const ConversationsToHave = () => (
     bandTitle="THE  CONVERSATIONS  WORTH  HAVING  NOW"
     disclaimer="The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult qualified professionals for your specific situation."
   >
+    <WhichGuide group="conversations" className="!py-0 mb-8" />
+
     <SubH2>Why These Conversations Get Avoided</SubH2>
     <P>
       These conversations feel uncomfortable to start. But families who've been through a crisis almost universally say they wish they'd talked sooner. Asking now is how you honor someone's wishes while they can still tell you what those wishes are.

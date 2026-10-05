@@ -1,4 +1,5 @@
 import EstateSubPageLayout, { SubH2, SubH3, P, UL, Divider } from "@/components/EstateSubPageLayout";
+import WhichGuide from "@/components/WhichGuide";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult a licensed Washington State probate attorney for guidance specific to your situation.";
@@ -12,6 +13,8 @@ const ProbateAndLegalAuthority = () => (
     bandTitle="UNDERSTANDING PROBATE & LEGAL AUTHORITY"
     disclaimer={DISCLAIMER}
   >
+    <WhichGuide group="authority" className="!py-0 mb-8" />
+
     <SubH2>Who Has the Authority to Make Decisions?</SubH2>
     <P>
       Understanding probate and legal authority is the foundation of everything else. Without it, nothing can move forward — and mistakes made here are costly to undo.

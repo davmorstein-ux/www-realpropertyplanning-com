@@ -2,6 +2,7 @@ import FlowBranchPage from "@/components/flow/FlowBranchPage";
 import AFHFlowChart, { AFH_FLOW_CHART_CSS } from "@/components/afh/AFHFlowChart";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import CTASection from "@/components/CTASection";
+import WhichGuide from "@/components/WhichGuide";
 import { AFH_FLOW_BY_SLUG, AFH_FLOW_BASE, AFH_RULES_PATH, AFH_GREEN } from "@/data/afhFlow";
 
 /**
@@ -24,6 +25,7 @@ export default function AFHFlowPage({ slug }: { slug: string }) {
         glossary={{ label: "AFH glossary", href: "/afh-club/glossary" }}
         accent={AFH_GREEN}
         heroBg="#edf0f3"
+        extra={slug === "opening" ? <WhichGuide group="afhOpening" /> : undefined}
         disclaimer="General information, not legal or tax advice."
         after={
           <>

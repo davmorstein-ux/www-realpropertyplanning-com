@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/accordion";
 import ProbateStartHere from "@/components/ProbateStartHere";
 import QuickAnswers from "@/components/QuickAnswers";
+import WhichGuide from "@/components/WhichGuide";
 
 const faqs = [
   {
@@ -115,6 +116,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
           </div>
         </section>
         <QuickAnswers />
+        <WhichGuide group="authority" />
 
       {/* Section 1 */}
       <section className="py-14 md:py-20 bg-background">

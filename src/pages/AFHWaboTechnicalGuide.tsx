@@ -9,6 +9,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToAFHClub from "@/components/BackToAFHClub";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import { Link } from "react-router-dom";
+import WhichGuide from "@/components/WhichGuide";
 
 const label = {
   fontSize: 15,
@@ -106,7 +107,7 @@ const AFHWaboTechnicalGuide = () => (
               margin: "0 0 20px",
             }}
           >
-            What Is WABO? The Technical Guide for Washington Adult Family Homes
+            WABO Checklist: The Technical Guide for Washington Adult Family Homes
           </h1>
           <p style={{ ...body, margin: "0 0 16px", maxWidth: 680 }}>
             If you are opening, buying, remodeling, or expanding an Adult Family Home in Washington, the WABO
@@ -139,6 +140,7 @@ const AFHWaboTechnicalGuide = () => (
       </section>
 
       {/* Intro / how it works */}
+      <WhichGuide group="wabo" />
       <section style={sectionWhite}>
         <div style={wrap}>
           <p style={body}>

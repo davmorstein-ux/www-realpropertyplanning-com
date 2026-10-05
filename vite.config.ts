@@ -889,7 +889,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/afh-club/wabo-technical-guide": {
     title: "WABO Checklist & Technical Requirements | AFH Club | Real Property Planning",
     description: "A technical guide to the WABO Adult Family Home Building Inspection Checklist in Washington State — what the checklist covers, common delays, and why passing does not mean licensed.",
-    h1: "What Is WABO? The Technical Guide for Washington Adult Family Homes",
+    h1: "WABO Checklist: The Technical Guide for Washington Adult Family Homes",
     quickAnswerQ: "What does the WABO Adult Family Home building inspection checklist cover?",
     quickAnswerA: "The checklist addresses resident bedroom exits and classifications, emergency escape windows, smoke and carbon monoxide alarms, doors and hardware, ramps and landings, stairs and handrails, bathroom grab bars, shower dimensions, and fire access and water supply. A passed checklist confirms the building meets AFH code requirements, but it is not the same as a DSHS license — DSHS separately decides whether the provider and home qualify for licensing. DSHS also has physical rules the checklist does not show: homes licensed after September 20, 2026 need interior doors of at least 27 inches wherever residents pass through (WAC 388-76-10715). A continuously licensed home that changes owners is exempt; a lapsed former AFH is not.",
     intro: "The checklist is the code standard an adult family home has to meet. This guide walks the checklist item by item, explains the bedroom classifications that drive most of the cost, and flags the items that most often cause delays.",
