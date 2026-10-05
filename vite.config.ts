@@ -1006,6 +1006,21 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
     article: { datePublished: "2026-09-13", dateModified: "2026-09-13" },
   },
+  "/afh-club/choosing-an-adult-family-home": {
+    title: "How to Choose an Adult Family Home in Washington: Tour Checklist | AFH Club",
+    description: "A Washington family's guide to choosing an adult family home: building a shortlist, reading the DSHS record, what to ask on a tour, and a worksheet for comparing two homes side by side.",
+    h1: "How to Choose an Adult Family Home in Washington",
+    quickAnswerQ: "How do I choose an adult family home in Washington?",
+    quickAnswerA: "Build a shortlist from the state's licensing records, read each home's DSHS inspection record, then visit your top two or three, ideally at a mealtime. On the tour, ask who is on duty overnight, which specialty designations the home holds, whether it has a Medicaid contract, and exactly what your parent's care would cost. Ask for the home's Disclosure of Services and its last three years of inspection reports, and compare the homes on the same points before you decide.",
+    intro: "A guide for Washington families choosing an adult family home for a parent or relative: how to narrow the list by location, care needs and payment, how to read a home's DSHS record, the questions to ask on a tour, and a worksheet for comparing two homes. AFH Club does not rate, rank or recommend individual homes.",
+    faq: [
+      { q: "What questions should I ask when touring an adult family home?", a: "Ask how many residents live there and how many the home is licensed for; whether the provider or a resident manager lives in the home; how many caregivers are on duty day and night; which specialty designations it holds (dementia, mental health, developmental disabilities); whether it works with a delegating nurse; how it handles falls and hospital returns; the private-pay base rate and care-level charges for your parent; whether it has a Medicaid contract; and ask for its Disclosure of Services and last three years of inspection reports." },
+      { q: "How do I compare two adult family homes?", a: "Compare the same facts for each: residents and licensed capacity, who lives in the home, staffing day and night, specialty designations, nurse delegation, Medicaid contract, the total monthly cost at your parent's care level (each home sets its own care levels), the DSHS record over three years, and what the Disclosure of Services says the home cannot do. Then visit both at a mealtime." },
+      { q: "What is an adult family home's Disclosure of Services?", a: "A DSHS form (10-508) each home completes describing what it provides: personal care, medication help, nursing and nurse delegation, specialty designations, staffing, languages, Medicaid and activities. Ask each home for it before you decide; what it says the home does not do matters as much as what it does." },
+      { q: "Can an adult family home ask my parent to leave?", a: "Only for set reasons under Washington's residents' rights law, such as needs the home can no longer meet, a danger to others, unpaid charges or the home closing, and normally with at least 30 days' written notice (RCW 70.129.110). Read the admission agreement's discharge terms before signing." },
+    ],
+    article: { datePublished: "2026-10-04", dateModified: "2026-10-04" },
+  },
   "/afh-club/violation-history-lookup": {
     title: "How to Look Up AFH Violations & Inspection Reports | AFH Club | Real Property Planning",
     description: "A practical guide to using the DSHS Adult Family Home Locator to check violation and inspection history in Washington State — how to search, read reports, spot red flags, and know what the records actually mean.",

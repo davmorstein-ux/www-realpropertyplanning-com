@@ -59,6 +59,17 @@ const CountyDirectory = () => {
                 homes. Choose a county or a city to see every licensed home in it, with capacity, specialty
                 designations, and Medicaid status.
               </p>
+              <p>
+                Choosing a home for a parent? Start with{" "}
+                <Link to="/afh-club/choosing-an-adult-family-home" className="underline underline-offset-2 font-semibold">
+                  how to choose an adult family home
+                </Link>{" "}
+                (what to ask on a tour, and a worksheet for comparing two homes), and{" "}
+                <Link to="/afh-club/violation-history-lookup" className="underline underline-offset-2 font-semibold">
+                  how to read a home's DSHS inspection record
+                </Link>
+                .
+              </p>
             </div>
           </div>
         </section>

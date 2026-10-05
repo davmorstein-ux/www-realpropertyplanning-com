@@ -256,6 +256,7 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "Washington AFH Rules Have Changed: Old vs. New", href: "/afh-club/washington-afh-rule-changes" },
           { title: "Is an Adult Family Home Right for You?", href: "/afh-club/getting-started" },
           { title: "What Is an Adult Family Home?", href: "/afh-club/what-is-an-adult-family-home" },
+          { title: "How to Choose an Adult Family Home: Tour Checklist", href: "/afh-club/choosing-an-adult-family-home" },
           { title: "AFH Resource Library", href: "/afh-club/resources" },
         ],
       },

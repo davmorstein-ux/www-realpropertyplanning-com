@@ -57,6 +57,11 @@ const Q = {
     description: "How Washington's care settings differ, and which fits which needs.",
     href: "/long-term-care/how-to-choose-care-settings",
   },
+  chooseAfh: {
+    title: "How do we choose between adult family homes?",
+    description: "Building a shortlist, what to ask on a tour, and a worksheet for comparing two homes side by side.",
+    href: "/afh-club/choosing-an-adult-family-home",
+  },
   inspections: {
     title: "How do we check a home's inspection record?",
     description: "Finding a licensed home's DSHS inspection reports and enforcement history, and how to read them.",
@@ -184,9 +189,10 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
   "/long-term-care/short-term-nursing-home-stays": [Q.discharge, Q.careSettings, Q.medicaid, Q.houseForCare, Q.careCost],
   "/long-term-care/medicaid-and-long-term-care": [Q.houseForCare, Q.giftingRisks, Q.estateRecovery, Q.afhCost, Q.poa],
   "/sell-house-fund-senior-living": [Q.poa, Q.medicaid, Q.reverseMortgage, Q.downsizing, Q.careCost],
-  "/long-term-care/how-to-choose-care-settings": [Q.careCost, Q.findAfh, Q.afhCost, Q.inspections, Q.medicaid],
-  "/long-term-care/nurse-delegation": [Q.careSettings, Q.findAfh, Q.afhCost, Q.inspections],
-  "/afh-club/violation-history-lookup": [Q.findAfh, Q.afhCost, Q.medicaid, Q.careSettings],
+  "/long-term-care/how-to-choose-care-settings": [Q.careCost, Q.findAfh, Q.chooseAfh, Q.afhCost, Q.medicaid],
+  "/long-term-care/nurse-delegation": [Q.careSettings, Q.findAfh, Q.chooseAfh, Q.afhCost],
+  "/afh-club/violation-history-lookup": [Q.chooseAfh, Q.findAfh, Q.afhCost, Q.medicaid],
+  "/afh-club/choosing-an-adult-family-home": [Q.findAfh, Q.inspections, Q.afhCost, Q.medicaid, Q.careSettings],
 
   /* Death → authority → the house */
   "/trustees": [Q.trustVsProbate, Q.pricingTrust, Q.dateOfDeath, Q.propertyTaxes, Q.heirsDisagree],
