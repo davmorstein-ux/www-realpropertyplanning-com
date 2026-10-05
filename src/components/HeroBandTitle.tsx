@@ -31,7 +31,14 @@ const KEEP_LOWER = new Set([
   "onto",
   "with",
 ]);
-const KEEP_UPPER = new Set(["CPA", "CPAS", "POA", "FAQ", "WA", "AFH", "AFHS"]);
+/* Business suffixes and Roman numerals stay in capitals. Adult family home
+   names in the directory are shown in this band, and "Specialized Home Care II"
+   was rendering as "Care Ii" (and every "LLC" as "Llc") until Oct 5, 2026. */
+const KEEP_UPPER = new Set([
+  "CPA", "CPAS", "POA", "FAQ", "WA", "AFH", "AFHS",
+  "LLC", "PLLC",
+  "II", "III", "IV", "VI", "VII", "VIII", "IX", "XI", "XII",
+]);
 
 const capitalizeWord = (part: string): string => {
   const lowered = part.toLowerCase();
@@ -40,7 +47,7 @@ const capitalizeWord = (part: string): string => {
   return lowered.slice(0, idx) + lowered.charAt(idx).toUpperCase() + lowered.slice(idx + 1);
 };
 
-const titleCase = (input: string): string => {
+export const titleCase = (input: string): string => {
   const parts = input.split(/(\s+)/);
   let firstWordSeen = false;
   return parts.map((part) => {
