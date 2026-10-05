@@ -107,6 +107,11 @@ const Q = {
     description: "Property taxes, exemptions and deadlines after a death in Washington.",
     href: "/guides/property-taxes-after-death-washington",
   },
+  mortgage: {
+    title: "What happens to the mortgage?",
+    description: "Who keeps paying, getting the servicer to talk to you, and when family can keep the existing loan.",
+    href: "/guides/mortgage-after-death-washington",
+  },
   outOfState: {
     title: "We live out of state. Can we handle this from here?",
     description: "Managing a Washington estate or inherited house from another state.",
@@ -196,7 +201,8 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
 
   /* Death → authority → the house */
   "/trustees": [Q.trustVsProbate, Q.pricingTrust, Q.dateOfDeath, Q.propertyTaxes, Q.heirsDisagree],
-  "/guides/inherited-house-washington": [Q.heirsDisagree, Q.propertyTaxes, Q.asIsOrFix, Q.outOfState, Q.dateOfDeath],
+  "/guides/inherited-house-washington": [Q.heirsDisagree, Q.mortgage, Q.propertyTaxes, Q.asIsOrFix, Q.dateOfDeath],
+  "/guides/mortgage-after-death-washington": [Q.authority, Q.propertyTaxes, Q.heirsDisagree, Q.dateOfDeath],
   "/executor-responsibilities-first-steps/first-30-days": EXECUTOR_STEPS,
   "/executor-responsibilities-first-steps/legal-duties": EXECUTOR_STEPS,
   "/executor-responsibilities-first-steps/property-decisions": [Q.authority, Q.heirsDisagree, Q.asIsOrFix, Q.propertyTaxes, Q.dateOfDeath],

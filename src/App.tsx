@@ -142,6 +142,7 @@ const PricingHouseTrustEstate = lazy(() => import("./pages/guides/PricingHouseTr
 const SellHouseDuringProbateWashington = lazy(() => import("./pages/guides/SellHouseDuringProbateWashington"));
 const TaxesSellingInheritedHouseWashington = lazy(() => import("./pages/guides/TaxesSellingInheritedHouseWashington"));
 const PropertyTaxesAfterDeath = lazy(() => import("./pages/guides/PropertyTaxesAfterDeath"));
+const MortgageAfterDeath = lazy(() => import("./pages/guides/MortgageAfterDeath"));
 const HowLongSellProbateProperty = lazy(() => import("./pages/guides/HowLongSellProbateProperty"));
 const ExecutorFirstStepsHouse = lazy(() => import("./pages/guides/ExecutorFirstStepsHouse"));
 const SellInheritedHouseAsIsOrFix = lazy(() => import("./pages/guides/SellInheritedHouseAsIsOrFix"));
@@ -502,6 +503,7 @@ export const AppRoutes = () => (
         element={<TaxesSellingInheritedHouseWashington />}
       />
       <Route path="/guides/property-taxes-after-death-washington" element={<PropertyTaxesAfterDeath />} />
+      <Route path="/guides/mortgage-after-death-washington" element={<MortgageAfterDeath />} />
       <Route path="/guides/how-long-sell-probate-property" element={<HowLongSellProbateProperty />} />
       <Route path="/guides/executor-first-steps-house" element={<ExecutorFirstStepsHouse />} />
       <Route path="/guides/sell-inherited-house-as-is-or-fix" element={<SellInheritedHouseAsIsOrFix />} />

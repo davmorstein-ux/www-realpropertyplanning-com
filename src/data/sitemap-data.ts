@@ -1064,6 +1064,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     ],
   },
   {
+    path: "/guides/mortgage-after-death-washington",
+    links: ["/washington-probate-guide", "/guides/executor-first-steps-house", "/guides/property-taxes-after-death-washington", "/guides/heirs-disagree-selling-house", "/guides/who-has-authority-sell-probate-property-washington", "/probate-glossary"],
+  },
+  {
     path: "/guides/property-taxes-after-death-washington",
     links: ["/washington-probate-guide", "/guides/executor-first-steps-house", "/guides/taxes-selling-inherited-house-washington", "/probate-glossary"],
   },

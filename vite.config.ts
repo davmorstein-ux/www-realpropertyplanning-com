@@ -20,6 +20,7 @@ import { PROBATE_GLOSSARY_A_TO_Z } from "./src/data/probateGlossary";
 import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/data/probatePillar";
 import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
 import { PROPERTY_TAX_AFTER_DEATH, PTX_PRERENDER_SECTIONS, PTX_FAQS } from "./src/data/propertyTaxAfterDeath";
+import { MORTGAGE_AFTER_DEATH, MAD_PRERENDER_SECTIONS, MAD_FAQS } from "./src/data/mortgageAfterDeath";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
 import { FLOW_PAGES, FLOW_CHART_TEXT, DEADLINES_PATH, flowPrerenderSections } from "./src/data/probateFlow";
@@ -643,6 +644,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Understanding capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
     h1: "What Taxes Do You Pay When Selling an Inherited House in Washington?",
     intro: "Capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
+  },
+  [MORTGAGE_AFTER_DEATH.PATH]: {
+    title: `${MORTGAGE_AFTER_DEATH.TITLE} | Real Property Planning`,
+    description: MORTGAGE_AFTER_DEATH.DESCRIPTION,
+    h1: MORTGAGE_AFTER_DEATH.TITLE,
+    quickAnswerQ: "What happens to the mortgage when someone dies in Washington?",
+    quickAnswerA: MORTGAGE_AFTER_DEATH.SHORT_ANSWER,
+    intro: "For Washington executors, heirs and surviving spouses: who keeps paying the mortgage after a death, how to become a confirmed successor in interest with the servicer, when a family member can keep the existing loan, who is personally responsible for the debt, and what happens to a reverse mortgage. General information, not legal or financial advice.",
+    sections: MAD_PRERENDER_SECTIONS,
+    faq: MAD_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: MORTGAGE_AFTER_DEATH.PUBLISHED, dateModified: MORTGAGE_AFTER_DEATH.REVIEWED },
   },
   [PROPERTY_TAX_AFTER_DEATH.PATH]: {
     title: `${PROPERTY_TAX_AFTER_DEATH.TITLE} | Real Property Planning`,

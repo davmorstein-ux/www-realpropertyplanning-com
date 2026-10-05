@@ -152,6 +152,19 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       DSHS_RCS_DOOR_ANSWER,
     ],
   },
+  "/guides/mortgage-after-death-washington": {
+    published: "2026-10-04",
+    reviewed: "2026-10-04",
+    changes: [],
+    sources: [
+      { label: "12 U.S.C. 1701j-3(d) (Garn-St Germain Act): limits on enforcing due-on-sale clauses", href: "https://www.law.cornell.edu/uscode/text/12/1701j-3" },
+      { label: "12 CFR 591.5: due-on-sale limitations, including the occupancy condition", href: "https://www.ecfr.gov/current/title-12/chapter-V/part-591/section-591.5" },
+      { label: "12 CFR 1024.38(b)(1)(vi): servicer duties to potential and confirmed successors in interest", href: "https://www.consumerfinance.gov/rules-policy/regulations/1024/38/" },
+      { label: "CFPB: can my heirs keep or sell my home after I die with a reverse mortgage?", href: "https://www.consumerfinance.gov/ask-cfpb/with-a-reverse-mortgage-loan-can-my-heirs-keep-or-sell-my-home-after-i-die-en-242/" },
+      { label: "HUD: inheriting a home secured by an FHA-insured HECM", href: "https://www.hud.gov/sites/dfiles/SFH/documents/inheriting_hecm_09-23-19.pdf" },
+      { label: "RCW 11.68.090: powers of a personal representative with nonintervention powers", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.68.090" },
+    ],
+  },
   "/guides/property-taxes-after-death-washington": {
     published: "2026-10-01",
     reviewed: "2026-10-01",
