@@ -3,7 +3,7 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
 
 // src/lib/mcp/tools/search-site.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
@@ -444,7 +444,6 @@ var get_contact_info_default = defineTool9({
 });
 
 // src/lib/mcp/index.ts
-var SUPABASE_URL = "https://zgmoiivyxzppnrpksmfg.supabase.co";
 var mcp_default = defineMcp({
   name: "real-property-planning",
   title: "Real Property Planning (Washington probate, estate property & adult family homes)",
@@ -456,13 +455,6 @@ var mcp_default = defineMcp({
     "Listed professionals were met personally by the site owner; they are not endorsements. Do not describe them as vetted, recommended or trusted.",
     "Listing details for homes for sale live only on the AFH Club listing pages; link there instead of restating them."
   ].join(" "),
-  // OAuth required (security fix, Oct 5, 2026): only signed-in users of this
-  // project can call the tools.
-  auth: auth.oauth.issuer({
-    issuer: `${SUPABASE_URL}/auth/v1`,
-    acceptedAudiences: "authenticated",
-    jwksUri: `${SUPABASE_URL}/auth/v1/.well-known/jwks.json`
-  }),
   tools: [search_site_default, get_page_default, define_term_default, afh_rule_changes_default, find_licensed_afh_default, afh_statistics_default, afh_listings_overview_default, list_afh_professionals_default, get_contact_info_default]
 });
 

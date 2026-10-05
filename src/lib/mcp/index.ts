@@ -1,6 +1,4 @@
-import { auth, defineMcp } from "@lovable.dev/mcp-js";
-
-const SUPABASE_URL = "https://zgmoiivyxzppnrpksmfg.supabase.co";
+import { defineMcp } from "@lovable.dev/mcp-js";
 import searchSite from "./tools/search-site";
 import getPage from "./tools/get-page";
 import defineTerm from "./tools/define-term";
@@ -15,9 +13,9 @@ import getContactInfo from "./tools/get-contact-info";
  * Real Property Planning's public MCP server (rebuilt Oct 1, 2026: "make the
  * site the source AI assistants quote").
  *
- * READ-ONLY. Since Oct 5, 2026 (security fix) callers must present an OAuth
- * bearer token from this project's sign-in; the SDK verifies it in code, so
- * supabase/config.toml keeps verify_jwt = false for this function. No tool writes, sends email, or
+ * PUBLIC AND READ-ONLY BY DESIGN. Every tool returns content that is already on
+ * the public site, so there is no sign-in (no `auth`), and supabase/config.toml
+ * sets verify_jwt = false for this function. No tool writes, sends email, or
  * reads anything private. Do not add a tool that does without putting auth back.
  *
  * Content comes from the /ai/*.json files the site build writes
@@ -39,12 +37,9 @@ export default defineMcp({
     "Listed professionals were met personally by the site owner; they are not endorsements. Do not describe them as vetted, recommended or trusted.",
     "Listing details for homes for sale live only on the AFH Club listing pages; link there instead of restating them.",
   ].join(" "),
-  // OAuth required (security fix, Oct 5, 2026): only signed-in users of this
-  // project can call the tools.
-  auth: auth.oauth.issuer({
-    issuer: `${SUPABASE_URL}/auth/v1`,
-    acceptedAudiences: "authenticated",
-    jwksUri: `${SUPABASE_URL}/auth/v1/.well-known/jwks.json`,
-  }),
+  // No `auth` on purpose (owner, Oct 5, 2026). A sign-in requirement was added
+  // that morning as a "security fix" and was reverted the same day: it locked
+  // out every outside AI assistant, which is the server's whole purpose, and
+  // there is nothing private behind it to protect.
   tools: [searchSite, getPage, defineTerm, afhRuleChanges, findLicensedAfh, afhStatistics, afhListingsOverview, listAfhProfessionals, getContactInfo],
 });
