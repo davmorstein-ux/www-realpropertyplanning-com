@@ -63,7 +63,7 @@ const P3Tile = ({ pill, title, tagline, imgSrc, href }) => (
 
 const PlanningAndNextSteps = () => (
   <div className="p3wrap">
-    <style>{styles}</style>
+    <style dangerouslySetInnerHTML={{ __html: styles }} />
     <div className="p3section">
       <div className="p3heading">
         <span className="p3eyebrow">Washington State</span>

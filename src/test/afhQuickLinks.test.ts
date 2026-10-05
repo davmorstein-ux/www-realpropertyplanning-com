@@ -16,6 +16,8 @@ describe("AFH Club quick links (Oct 1, 2026)", () => {
     expect(isAFHClubPath("/afh-club")).toBe(true);
     expect(isAFHClubPath("/afh-club/homes/lakewood/family-love-adult-family-home-2-757823")).toBe(true);
     expect(isAFHClubPath("/afh-submit")).toBe(true);
+    expect(isAFHClubPath("/afh-submit/")).toBe(true);
+    expect(isAFHClubPath("/afh-club/")).toBe(true);
     expect(isAFHClubPath("/senior-living/adult-family-homes")).toBe(false);
     expect(isAFHClubPath("/probate-estate-sales")).toBe(false);
   });

@@ -64,7 +64,7 @@ const RolesAndResponsibilities = () => {
 
   return (
     <>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
         .r2-section { font-family: 'DM Sans', sans-serif !important; padding: 0 40px 64px; }
         .r2-heading { text-align: center; margin-bottom: 40px; padding-top: 48px; }
@@ -86,7 +86,7 @@ const RolesAndResponsibilities = () => {
         .r2-bar { max-width: 1300px; margin: 36px auto 0; background: #6b1a21; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
         .r2-bar-text { font-family: 'DM Sans', sans-serif !important; font-size: 14px !important; color: #e8c8cb; line-height: 1.6; }
         .r2-bar-btn { font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.08em; background: #b35f66; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; }
-      `}</style>
+      ` }} />
       <div className="r2-section">
         <div className="r2-heading">
           <span className="r2-eyebrow">Washington State</span>

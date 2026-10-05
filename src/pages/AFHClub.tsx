@@ -1032,7 +1032,7 @@ const AFHClub = () => {
               style={{
                 fontSize: 18,
                 fontFamily: "'DM Sans', sans-serif",
-                color: "#4a453f",
+                color: "#1c1917",
                 maxWidth: 600,
                 margin: "0 auto 32px",
                 lineHeight: 1.7,
@@ -1096,7 +1096,7 @@ const AFHClub = () => {
 
         {/* Browse by city */}
         <section style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px 56px" }}>
-          <p className="rpp-afh-kicker" style={{ textAlign: "center", color: "#4a453f", marginBottom: 14 }}>
+          <p className="rpp-afh-kicker" style={{ textAlign: "center", color: "#1c1917", marginBottom: 14 }}>
             {t("afhClubPage.browseByCity")}
           </p>
           <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>

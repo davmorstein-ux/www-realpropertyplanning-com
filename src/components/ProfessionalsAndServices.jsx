@@ -54,7 +54,7 @@ const P1Tile = ({ pill, title, tagline, imgSrc, href }) => (
 
 const ProfessionalsAndServices = () => (
   <div className="p1wrap">
-    <style>{styles}</style>
+    <style dangerouslySetInnerHTML={{ __html: styles }} />
     <div className="p1section">
       <div className="p1heading">
         <h2 className="p1h2">Choose the Professional that Meets Your Needs</h2>

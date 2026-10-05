@@ -21,6 +21,7 @@ import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/dat
 import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
 import { PROPERTY_TAX_AFTER_DEATH, PTX_PRERENDER_SECTIONS, PTX_FAQS } from "./src/data/propertyTaxAfterDeath";
 import { MORTGAGE_AFTER_DEATH, MAD_PRERENDER_SECTIONS, MAD_FAQS } from "./src/data/mortgageAfterDeath";
+import AGING_PARENT_ROUTES from "./src/data/agingParentRoutes.json";
 import { FAMILY_SALE, FS_PRERENDER_SECTIONS, FS_FAQS } from "./src/data/familySaleEstate";
 import { STAY_HOME, SH_PRERENDER_SECTIONS, SH_FAQS } from "./src/data/stayHomeCost";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
@@ -84,6 +85,21 @@ interface RouteMeta {
 }
 
 const ROUTE_METADATA: Record<string, RouteMeta> = {
+  /* The 25 /helping-an-aging-parent step pages (Oct 4, 2026), from
+     src/data/agingParentRoutes.json (scripts/build-aging-parent-routes.mjs).
+     Listed first so a hand-written entry below (e.g. the hub) wins. */
+  ...Object.fromEntries(
+    (AGING_PARENT_ROUTES as { path: string; title: string; h1: string; description: string }[]).map((r) => [
+      r.path,
+      { title: r.title, description: r.description, h1: r.h1, intro: r.description },
+    ]),
+  ),
+  "/adult-family-home-costs": {
+    title: "What It Costs to Live in an Adult Family Home, by City and County | AFH Club",
+    description: "What it costs to live in an adult family home in any Washington city or county: the DSHS Medicaid daily and monthly rate for that county, typical private-pay ranges per resident, and how many licensed homes there accept Medicaid.",
+    h1: "What It Costs to Live in an Adult Family Home, by City and County",
+    intro: "Type a Washington city or county to see the DSHS Medicaid rate range for that county by care level, a typical private-pay range where one has been reviewed, and how many licensed adult family homes there accept Medicaid.",
+  },
   /* The six standards pages; words live in src/data/policyPages.ts. */
   ...Object.fromEntries(
     POLICY_PAGES.map((p) => [

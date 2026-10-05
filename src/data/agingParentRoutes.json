@@ -1,0 +1,158 @@
+[
+  {
+    "path": "/helping-an-aging-parent",
+    "title": "Helping an Aging Parent | Real Property Planning",
+    "h1": "Helping an Aging Parent",
+    "description": "Let's help you find the right guidance. Where are you in this journey?"
+  },
+  {
+    "path": "/helping-an-aging-parent/living-independently",
+    "title": "My parent is still living independently | Real Property Planning",
+    "h1": "Living Independently",
+    "description": "What would you like to plan for next?"
+  },
+  {
+    "path": "/helping-an-aging-parent/living-independently/staying-safe-at-home",
+    "title": "Staying safe at home | Real Property Planning",
+    "h1": "Staying safe at home",
+    "description": "Most families don't think about home safety until something happens — a fall, a close call, a neighbor who noticed something was off. The good news is that…"
+  },
+  {
+    "path": "/helping-an-aging-parent/living-independently/early-planning",
+    "title": "Starting early planning conversations | Real Property Planning",
+    "h1": "Starting early planning conversations",
+    "description": "These conversations are rarely comfortable, but families who have them early are almost always glad they did. Waiting until there's a crisis means making…"
+  },
+  {
+    "path": "/helping-an-aging-parent/living-independently/home-modifications",
+    "title": "Home modifications & aging in place | Real Property Planning",
+    "h1": "Home modifications & aging in place",
+    "description": "Many older adults want to stay in their home as long as possible — and with the right modifications, that's often realistic. The goal is to make the home…"
+  },
+  {
+    "path": "/helping-an-aging-parent/living-independently/long-term-financial-prep",
+    "title": "Long-term financial preparation | Real Property Planning",
+    "h1": "Long-term financial preparation",
+    "description": "Senior care is expensive, and most families underestimate the costs until they're in the middle of it. Planning ahead — even imperfectly — puts you in a much…"
+  },
+  {
+    "path": "/helping-an-aging-parent/needs-help-at-home",
+    "title": "My parent needs more help at home | Real Property Planning",
+    "h1": "More Help at Home",
+    "description": "What kind of support are you looking into?"
+  },
+  {
+    "path": "/helping-an-aging-parent/needs-help-at-home/in-home-care",
+    "title": "In-home caregivers & support | Real Property Planning",
+    "h1": "In-home caregivers & support",
+    "description": "When a parent needs more help than family can provide but isn't ready — or doesn't want — to leave home, in-home care is often the right next step.…"
+  },
+  {
+    "path": "/helping-an-aging-parent/needs-help-at-home/family-coordination",
+    "title": "Coordinating family caregivers | Real Property Planning",
+    "h1": "Coordinating family caregivers",
+    "description": "When multiple family members are involved in a parent's care, things can get complicated fast. Miscommunication, uneven workloads, and disagreements about…"
+  },
+  {
+    "path": "/helping-an-aging-parent/needs-help-at-home/safety-modifications",
+    "title": "Safety & home modifications | Real Property Planning",
+    "h1": "Safety & home modifications",
+    "description": "When a parent is receiving help at home, safety modifications become even more important. The goal is to reduce fall risk, support caregiver efficiency, and…"
+  },
+  {
+    "path": "/helping-an-aging-parent/needs-help-at-home/respite-options",
+    "title": "Respite & relief options | Real Property Planning",
+    "h1": "Respite & relief options",
+    "description": "Caring for a parent is meaningful work — and it's exhausting. Caregiver burnout is one of the most common and least talked-about challenges families face.…"
+  },
+  {
+    "path": "/helping-an-aging-parent/exploring-care-options",
+    "title": "We're exploring care or housing options | Real Property Planning",
+    "h1": "Exploring Care & Housing Options",
+    "description": "What are you trying to figure out?"
+  },
+  {
+    "path": "/helping-an-aging-parent/exploring-care-options/types-of-housing",
+    "title": "What types of senior housing exist? | Real Property Planning",
+    "h1": "What types of senior housing exist?",
+    "description": "The senior housing landscape can feel overwhelming — the terminology alone is confusing. Here's a plain-language overview of the main options available in…"
+  },
+  {
+    "path": "/helping-an-aging-parent/exploring-care-options/comparing-costs",
+    "title": "How do I compare costs? | Real Property Planning",
+    "h1": "How do I compare costs?",
+    "description": "Senior care costs vary widely — by type of care, by location, and by what's included in the base price. Understanding what you're actually comparing is the…"
+  },
+  {
+    "path": "/helping-an-aging-parent/exploring-care-options/eligibility",
+    "title": "What does my parent qualify for? | Real Property Planning",
+    "h1": "What does my parent qualify for?",
+    "description": "Eligibility for care programs depends on two things: medical need and financial situation. Understanding both helps you know which doors are open."
+  },
+  {
+    "path": "/helping-an-aging-parent/exploring-care-options/having-the-conversation",
+    "title": "How do I have this conversation with my parent? | Real Property Planning",
+    "h1": "How do I have this conversation with my parent?",
+    "description": "This is the question most families ask — and avoid. The conversation about care and housing is hard because it touches on independence, mortality, and family…"
+  },
+  {
+    "path": "/helping-an-aging-parent/health-crisis",
+    "title": "There's been a health crisis or emergency | Real Property Planning",
+    "h1": "Health Crisis or Emergency",
+    "description": "What do you need help with right now?"
+  },
+  {
+    "path": "/helping-an-aging-parent/health-crisis/hospital-discharge",
+    "title": "Hospital discharge planning | Real Property Planning",
+    "h1": "Hospital discharge planning",
+    "description": "Hospital discharge happens fast — sometimes faster than families are ready for. Understanding the process and knowing what questions to ask can prevent a bad…"
+  },
+  {
+    "path": "/helping-an-aging-parent/health-crisis/urgent-housing",
+    "title": "Urgent housing or care placement | Real Property Planning",
+    "h1": "Urgent housing or care placement",
+    "description": "Sometimes the timeline is very short — a hospitalization, a fall, a sudden cognitive change — and you need to find a place for your parent to go quickly.…"
+  },
+  {
+    "path": "/helping-an-aging-parent/health-crisis/legal-authority",
+    "title": "Legal authority to act quickly | Real Property Planning",
+    "h1": "Legal authority to act quickly",
+    "description": "In a health crisis, the ability to make decisions on your parent's behalf — access medical records, talk to doctors, manage finances — depends entirely on…"
+  },
+  {
+    "path": "/helping-an-aging-parent/health-crisis/managing-the-home",
+    "title": "Managing the home during a crisis | Real Property Planning",
+    "h1": "Managing the home during a crisis",
+    "description": "When a parent is hospitalized or moves suddenly into care, the home doesn't take care of itself. Bills still need to be paid, mail piles up, and the property…"
+  },
+  {
+    "path": "/helping-an-aging-parent/finances-and-legal",
+    "title": "My parent's finances and legal documents need attention | Real Property Planning",
+    "h1": "Finances & Legal Documents",
+    "description": "What would you like to address first?"
+  },
+  {
+    "path": "/helping-an-aging-parent/finances-and-legal/power-of-attorney",
+    "title": "Power of attorney & legal documents | Real Property Planning",
+    "h1": "Power of attorney & legal documents",
+    "description": "Legal documents are the foundation of everything else. Without them, family members who want to help may find themselves legally unable to — even in urgent…"
+  },
+  {
+    "path": "/helping-an-aging-parent/finances-and-legal/wills-and-estate-plan",
+    "title": "Wills & estate planning | Real Property Planning",
+    "h1": "Wills & estate planning",
+    "description": "Estate planning isn't just for wealthy families — it's for anyone who wants their wishes honored and their family spared unnecessary difficulty. For aging…"
+  },
+  {
+    "path": "/helping-an-aging-parent/finances-and-legal/paying-for-care",
+    "title": "Paying for care | Real Property Planning",
+    "h1": "Paying for care",
+    "description": "Senior care is one of the largest expenses families face, and most people don't plan for it until they need it. Understanding the payment landscape early…"
+  },
+  {
+    "path": "/helping-an-aging-parent/finances-and-legal/property-decisions",
+    "title": "Property & real estate decisions | Real Property Planning",
+    "h1": "Property & real estate decisions",
+    "description": "For many families, a parent's home is their largest asset — and decisions about it are rarely straightforward. Whether your parent is considering selling,…"
+  }
+]

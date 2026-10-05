@@ -9,6 +9,13 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { AGING_PARENT_LOOKUP, type FlowNode } from "@/lib/aging-parent-flow";
 import NextQuestions from "@/components/NextQuestions";
 
+/** Same rule as scripts/build-aging-parent-routes.mjs, so the prerendered
+ *  description and the live one agree. */
+const metaDescription = (node: FlowNode) => {
+  const s = node.content?.intro || node.subtext || node.label;
+  return s.length <= 158 ? s : s.slice(0, s.lastIndexOf(" ", 157)) + "…";
+};
+
 /**
  * Renders a single page in the guided choice flow based on the current pathname.
  * Reusable: a future flow can swap the lookup map for another topic tree.
@@ -30,7 +37,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SEOHead title={`${node.label} | Real Property Planning`} description={node.subtext || node.label} />
+      <SEOHead title={`${node.label} | Real Property Planning`} description={metaDescription(node)} />
       <BreadcrumbSchema items={trail.slice(1).map((t) => ({ name: t.label, url: t.path }))} />
       <Header />
 

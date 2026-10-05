@@ -26,8 +26,13 @@ export const AFH_QUICK_LINKS: AFHQuickLink[] = [
 ];
 
 /** AFH Club pages: everything under /afh-club, plus the listing submission form. */
-export const isAFHClubPath = (pathname: string) =>
-  pathname === "/afh-club" || pathname.startsWith("/afh-club/") || pathname === "/afh-submit";
+export const isAFHClubPath = (pathname: string) => {
+  /* Ignore a trailing slash: the host can serve /afh-submit/ as well as
+     /afh-submit, and the prerendered HTML was built for the bare address, so a
+     mismatch here made React throw away and redraw the page on load. */
+  const p = pathname.replace(/\/+$/, "") || "/";
+  return p === "/afh-club" || p.startsWith("/afh-club/") || p === "/afh-submit";
+};
 
 export const isActiveQuickLink = (link: AFHQuickLink, pathname: string) => {
   const p = pathname.replace(/\/+$/, "") || "/";

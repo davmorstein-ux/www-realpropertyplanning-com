@@ -126,14 +126,17 @@ const LegalPlansIdentityProtection = () => (
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-wrap justify-center gap-6 md:gap-8 items-stretch">
               {providers.map((p) => (
-                <a
-                  key={p.name}
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${p.name}, ${p.title} at ${p.company} — Learn more (opens in a new tab)`}
-                  className="interior-tile tile-white group block h-full no-underline w-full sm:w-[340px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-                >
+                <div key={p.name} className="interior-tile tile-white group block h-full w-full sm:w-[340px] focus-within:ring-2 focus-within:ring-gold focus-within:ring-offset-2 relative">
+                  {/* The whole card is one link via this invisible overlay; a card that was itself
+                      a link put the phone and email links inside a link, which is invalid HTML
+                      and broke hydration (Oct 4, 2026). ProviderContact sits above it. */}
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${p.name}, ${p.title} at ${p.company} — Learn more (opens in a new tab)`}
+                    className="absolute inset-0 z-0 rounded-[inherit] focus-visible:outline-none"
+                  />
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face h-full">
                       <div className="flex h-full flex-col items-center text-center p-6">
@@ -197,7 +200,7 @@ const LegalPlansIdentityProtection = () => (
                       </div>
                     </div>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
 
