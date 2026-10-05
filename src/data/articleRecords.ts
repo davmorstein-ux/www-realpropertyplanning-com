@@ -152,6 +152,18 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       DSHS_RCS_DOOR_ANSWER,
     ],
   },
+  "/long-term-care/medicaid-and-the-family-home": {
+    published: "2026-10-04",
+    reviewed: "2026-10-04",
+    changes: [],
+    sources: [
+      { label: "WAC 182-513-1350: resources for long-term care, including the home and the equity limit", href: "https://app.leg.wa.gov/WAC/default.aspx?cite=182-513-1350" },
+      { label: "WAC 182-513-1363: asset transfers, the 60-month look-back and home transfers without a penalty", href: "https://app.leg.wa.gov/WAC/default.aspx?cite=182-513-1363" },
+      { label: "DSHS 14-454: Estate Recovery (rev. 03/2026)", href: "https://www.dshs.wa.gov/sites/default/files/forms/pdf/14-454lp.pdf" },
+      { label: "RCW 43.20B.080: recovery from estates", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=43.20B.080" },
+      { label: "RCW 11.40.020: notice to creditors, including DSHS", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=11.40.020" },
+    ],
+  },
   "/guides/mortgage-after-death-washington": {
     published: "2026-10-04",
     reviewed: "2026-10-04",

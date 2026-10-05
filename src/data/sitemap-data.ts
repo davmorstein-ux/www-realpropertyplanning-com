@@ -1175,6 +1175,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     ],
   },
   {
+    path: "/long-term-care/medicaid-and-the-family-home",
+    links: ["/long-term-care/medicaid-and-long-term-care", "/sell-house-fund-senior-living", "/power-of-attorney", "/long-term-care/hospital-discharge-planning", "/probate-glossary"],
+  },
+  {
     path: "/long-term-care/medicaid-and-long-term-care",
     links: ["/for-elder-law-attorneys", "/professionals/financial-planners", "/senior-living-advisors"],
   },

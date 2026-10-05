@@ -21,6 +21,7 @@ import { PROBATE_PILLAR, PROBATE_PILLAR_SECTIONS, PROBATE_FAQS } from "./src/dat
 import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probateStartHere";
 import { PROPERTY_TAX_AFTER_DEATH, PTX_PRERENDER_SECTIONS, PTX_FAQS } from "./src/data/propertyTaxAfterDeath";
 import { MORTGAGE_AFTER_DEATH, MAD_PRERENDER_SECTIONS, MAD_FAQS } from "./src/data/mortgageAfterDeath";
+import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
 import { FLOW_PAGES, FLOW_CHART_TEXT, DEADLINES_PATH, flowPrerenderSections } from "./src/data/probateFlow";
@@ -1572,6 +1573,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "How to Choose Between Care Settings: A Guide for Washington Families",
     description: "A practical guide to choosing between aging in place, adult family homes, assisted living, memory care, and nursing homes in Washington State — matched to actual care needs and budget.",
     h1: "How to Choose Between Care Settings: A Guide for Washington Families",
+  },
+  [MEDICAID_AND_THE_HOME.PATH]: {
+    title: `${MEDICAID_AND_THE_HOME.TITLE} | Real Property Planning`,
+    description: MEDICAID_AND_THE_HOME.DESCRIPTION,
+    h1: MEDICAID_AND_THE_HOME.TITLE,
+    quickAnswerQ: "What happens to my parent's house if they need Medicaid for long-term care in Washington?",
+    quickAnswerA: MEDICAID_AND_THE_HOME.SHORT_ANSWER,
+    intro: "For Washington families: how Apple Health (Medicaid) long-term care treats a parent's house while they are alive, what changes if it sits empty or is sold, the rules on giving it to family, protections for the spouse at home, and estate recovery after death. General information, not legal advice; figures are for 2026.",
+    sections: MTH_PRERENDER_SECTIONS,
+    faq: MTH_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: MEDICAID_AND_THE_HOME.PUBLISHED, dateModified: MEDICAID_AND_THE_HOME.REVIEWED },
   },
   "/long-term-care/medicaid-and-long-term-care": {
     title: "Medicaid & Long-Term Care in Washington State: What Families Need to Know",

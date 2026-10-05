@@ -149,6 +149,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/long-term-care/hospital-discharge-planning", label: "Planning Your Hospital Discharge" },
   { path: "/long-term-care/how-to-choose-care-settings", label: "How to Choose Between Care Settings" },
   { path: "/long-term-care/medicaid-and-long-term-care", label: "Medicaid & Long-Term Care in Washington State" },
+  { path: "/long-term-care/medicaid-and-the-family-home", label: "Medicaid and the Family Home" },
   { path: "/long-term-care/nurse-delegation", label: "The Nurse Delegation Program in Washington State" },
   { path: "/long-term-care/nursing-homes", label: "Nursing Homes in Washington State" },
   { path: "/long-term-care/short-term-nursing-home-stays", label: "Short-Term Nursing Home Stays" },

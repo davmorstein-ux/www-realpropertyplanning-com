@@ -106,6 +106,14 @@ const MedicaidAndLongTermCare = () => {
               Allowance (up to $162,660 in 2026), as well as a minimum monthly income. These protections exist
               specifically to prevent the healthy spouse from being impoverished by the cost of the other&apos;s care.
             </p>
+            <p className={pClass}>
+              For everything about the house itself (keeping it exempt, an empty house, selling it, giving it to family,
+              the spouse at home and estate recovery after death), see{" "}
+              <Link to="/long-term-care/medicaid-and-the-family-home" className="underline underline-offset-2 font-semibold">
+                Medicaid and the family home
+              </Link>
+              .
+            </p>
 
             <hr className={hrClass} />
 

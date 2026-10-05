@@ -72,6 +72,11 @@ const Q = {
     description: "What a Washington power of attorney lets an agent do, including selling real estate, and what happens without one.",
     href: "/power-of-attorney",
   },
+  medicaidHome: {
+    title: "Does Medicaid count the house, and can we keep it?",
+    description: "The home exemption, an empty house, selling, giving it to family, the spouse at home, and estate recovery.",
+    href: "/long-term-care/medicaid-and-the-family-home",
+  },
   giftingRisks: {
     title: "Should we put the house in a child's name?",
     description: "Wills, trusts, transfer-on-death deeds and adding a child to title, and the tax and Medicaid risks of each.",
@@ -79,8 +84,8 @@ const Q = {
   },
   estateRecovery: {
     title: "Can the state claim the house after death?",
-    description: "Medicaid estate recovery in Washington, in the probate glossary.",
-    href: "/probate-glossary#estate-recovery",
+    description: "Medicaid estate recovery in Washington, when it is deferred, and hardship waivers.",
+    href: "/long-term-care/medicaid-and-the-family-home",
   },
   reverseMortgage: {
     title: "Could a reverse mortgage pay for care instead?",
@@ -192,7 +197,8 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
   /* Illness → care → paying for it → the house */
   "/long-term-care/hospital-discharge-planning": [Q.rehab, Q.careSettings, Q.findAfh, Q.houseForCare, Q.medicaid],
   "/long-term-care/short-term-nursing-home-stays": [Q.discharge, Q.careSettings, Q.medicaid, Q.houseForCare, Q.careCost],
-  "/long-term-care/medicaid-and-long-term-care": [Q.houseForCare, Q.giftingRisks, Q.estateRecovery, Q.afhCost, Q.poa],
+  "/long-term-care/medicaid-and-long-term-care": [Q.medicaidHome, Q.houseForCare, Q.giftingRisks, Q.afhCost, Q.poa],
+  "/long-term-care/medicaid-and-the-family-home": [Q.houseForCare, Q.poa, Q.giftingRisks, Q.afhCost],
   "/sell-house-fund-senior-living": [Q.poa, Q.medicaid, Q.reverseMortgage, Q.downsizing, Q.careCost],
   "/long-term-care/how-to-choose-care-settings": [Q.careCost, Q.findAfh, Q.chooseAfh, Q.afhCost, Q.medicaid],
   "/long-term-care/nurse-delegation": [Q.careSettings, Q.findAfh, Q.chooseAfh, Q.afhCost],
