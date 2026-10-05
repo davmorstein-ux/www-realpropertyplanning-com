@@ -92,7 +92,15 @@ const faqs = [
   },
   {
     q: "Do we need to disclose known defects even if we sell as-is?",
-    a: "Yes. Washington State requires disclosure of known material defects regardless of whether the property is sold as-is. An estate attorney can advise on the specific disclosure requirements for probate properties.",
+    a: "A personal representative selling the estate's house does not have to give the buyer Washington's seller disclosure statement (Form 17); RCW 64.06.010 exempts transfers by a personal representative. That does not make hiding a known problem safe. Ask the estate's attorney what to tell buyers about defects you know of.",
+  },
+  {
+    q: "Should we renovate an inherited home before selling?",
+    a: "Usually not. Full renovations rarely pay for themselves on an estate property. Targeted work (deep cleaning, paint, yard work, minor repairs) is what usually earns its cost back.",
+  },
+  {
+    q: "How do we decide which repairs to skip?",
+    a: "Compare the cost with what the repair is likely to add to the sale price. If a repair costs more than it adds, skip it, unless it would stop buyers from getting a loan or keep the house from selling at all.",
   },
   {
     q: "What if we don't have estate funds available for repairs?",
@@ -109,7 +117,7 @@ const faqs = [
 ];
 
 const relatedCards = [
-  { title: "Probate House Sale Timeline", href: "/guides/probate-house-sale-timeline-washington" },
+  { title: "How Long Does It Take to Sell a Probate Property?", href: "/guides/how-long-sell-probate-property" },
   { title: "Should You Sell As-Is or Fix It First?", href: "/guides/sell-inherited-house-as-is-or-fix" },
   { title: "Probate & Estate Sales", href: "/probate-estate-sales" },
 ];
@@ -255,6 +263,27 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
           <div className="max-w-5xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">Repairs to Skip in Most Cases</h2>
             <CardGrid items={skip} accent="red" />
+          </div>
+        </div>
+      </section>
+
+      {/* Merged from the retired /guides/estate-property-repairs-before-sale
+          (Oct 4, 2026, Question Map step 8). Its dollar example was not
+          carried over (unsourced). */}
+      <section className="py-14 md:py-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Where Executors Go Wrong</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+              The most common mistake is spending too much. Executors understandably want the home to show well, but a
+              large renovation on an estate property rarely adds as much to the sale price as it costs, and the estate
+              absorbs the difference.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              The opposite mistake is doing nothing. A house listed with belongings everywhere, dirty carpets and an
+              overgrown yard signals neglect to buyers even when the house itself is sound. Basic preparation costs
+              relatively little and can noticeably improve the offers.
+            </p>
           </div>
         </div>
       </section>

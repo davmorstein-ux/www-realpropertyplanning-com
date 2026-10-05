@@ -9,6 +9,7 @@ import poaIcon from "@/assets/icons/power-of-attorney-icon-washington.webp";
 import { FEATURED_APPRAISER, FEATURED_BROKER } from "@/data/featuredProfessionals";
 import IntentCTA from "@/components/IntentCTA";
 import QuickAnswers from "@/components/QuickAnswers";
+import PageFAQ from "@/components/PageFAQ";
 import PoaLimits from "@/components/guides/PoaLimits";
 
 const sectionBase = "py-14 md:py-20";
@@ -197,6 +198,56 @@ const PowerOfAttorney = () => {
             </div>
           </div>
         </section>
+
+        {/* FAQ merged from the retired /senior-living/power-of-attorneys page
+            (Oct 4, 2026, Question Map step 8). */}
+        <PageFAQ
+          eyebrow="Power of Attorney FAQ"
+          heading="Power of Attorney and Real Estate: More Questions"
+          id="poa-faq"
+          faqs={[
+            {
+              question: "Can a power of attorney be used to sell a house?",
+              answer:
+                "Yes. A properly executed power of attorney can authorize an agent to list, negotiate, and close the sale of real property on behalf of the principal. The document must give the agent authority over real property, and the title company handling the closing will review it before the sale closes.",
+            },
+            {
+              question: "Does a power of attorney need to be recorded with the county?",
+              answer:
+                "Washington law does not require a power of attorney to be recorded. In practice, title companies usually require a POA used to sell real estate to be recorded with the county auditor's office where the property is located, along with the deed. Recording puts the document in the public record, and a recorded POA is not treated as revoked until a revocation is also recorded there (RCW 65.08.130).",
+            },
+            {
+              question: "Will title companies accept any power of attorney?",
+              answer:
+                "Title companies review every POA, but Washington limits when a notarized one can be refused. Under RCW 11.125.200, a person asked to accept a notarized power of attorney must accept it, or request an agent's certification or a translation, within seven business days, and may refuse only for reasons the statute lists, such as a good-faith belief that the POA is not valid or that the agent lacks authority. A POA that was only witnessed, not notarized, does not get this protection, so notarization is the safer choice for real estate. A qualified attorney can review the document before a sale.",
+            },
+            {
+              question: "What happens if the power of attorney document is outdated?",
+              answer:
+                "An outdated POA may not meet current legal standards or may lack the specific language required by title companies and lenders. If the document was created years ago, it's worth having an attorney review and update it before beginning a real estate transaction. Addressing this early prevents delays later.",
+            },
+            {
+              question: "Can a power of attorney sign listing agreements and purchase contracts?",
+              answer:
+                "Yes, as long as the POA gives the agent authority over real property. The agent acting under the POA signs on behalf of the principal, and the listing agreement and purchase contract should clearly reflect this arrangement.",
+            },
+            {
+              question: "What documentation is required to use a POA in a property sale?",
+              answer:
+                "At minimum, you'll need the power of attorney itself (title companies usually ask for the original or a certified copy), valid identification for the agent, and, in most cases, recording of the POA with the county, which title companies usually require even though state law does not. The title company may also ask the agent to sign a certification that the POA is still in effect. Title companies and lenders may request additional documentation depending on the specifics of the transaction.",
+            },
+            {
+              question: "Can multiple people act as agents under a power of attorney?",
+              answer:
+                "Yes, a power of attorney can name more than one agent. Unless the document says otherwise, Washington requires co-agents to act jointly (RCW 11.125.110), so every named agent may need to sign the listing agreement, purchase contract, and closing documents. A document that lets each agent act alone avoids this.",
+            },
+            {
+              question: "What's the difference between a general and durable power of attorney?",
+              answer:
+                "In Washington, a power of attorney ends when the principal becomes incapacitated unless it says it survives incapacity (RCW 11.125.040); a document with that wording is a durable power of attorney. Every power of attorney ends at the principal's death (RCW 11.125.100). For real estate situations involving aging or illness, a durable POA is usually the more appropriate and practical option.",
+            },
+          ]}
+        />
 
         {/* Legal Authority Note */}
         <section className={sectionBase + " bg-secondary"}>

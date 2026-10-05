@@ -120,14 +120,12 @@ const FeaturedProfessionals = lazy(() => import("./pages/FeaturedProfessionals")
 const RetirementReverseMortgage = lazy(() => import("./pages/RetirementReverseMortgage"));
 const SeniorLivingAndRelocation = lazy(() => import("./pages/SeniorLivingAndRelocation"));
 const AdultFamilyHomes = lazy(() => import("./pages/senior-living/AdultFamilyHomes"));
-const AssistedLivingCommunities = lazy(() => import("./pages/senior-living/AssistedLivingCommunities"));
 const MemoryCare = lazy(() => import("./pages/senior-living/MemoryCare"));
 const NursingAndSkilledCare = lazy(() => import("./pages/senior-living/NursingAndSkilledCare"));
 const IndependentLiving = lazy(() => import("./pages/senior-living/IndependentLiving"));
 const AssistedLiving = lazy(() => import("./pages/senior-living/AssistedLiving"));
 const SkilledNursing = lazy(() => import("./pages/senior-living/SkilledNursing"));
 const AgingInPlace = lazy(() => import("./pages/senior-living/AgingInPlace"));
-const PowerOfAttorneys = lazy(() => import("./pages/senior-living/PowerOfAttorneys"));
 const HowProbateRealEstateWorks = lazy(() => import("./pages/guides/HowProbateRealEstateWorks"));
 const WhatExecutorsShouldDo = lazy(() => import("./pages/guides/WhatExecutorsShouldDo"));
 const AppraisalVsCma = lazy(() => import("./pages/guides/AppraisalVsCma"));
@@ -136,7 +134,6 @@ const SeniorTransitionDifferences = lazy(() => import("./pages/guides/SeniorTran
 const InheritedHouseWashington = lazy(() => import("./pages/guides/InheritedHouseWashington"));
 const ExecutorSellBeforeProbate = lazy(() => import("./pages/guides/ExecutorSellBeforeProbate"));
 const AppraisalBeforeSelling = lazy(() => import("./pages/guides/AppraisalBeforeSelling"));
-const EstatePropertyRepairs = lazy(() => import("./pages/guides/EstatePropertyRepairs"));
 const HeirsDisagreeSelling = lazy(() => import("./pages/guides/HeirsDisagreeSelling"));
 const PricingHouseTrustEstate = lazy(() => import("./pages/guides/PricingHouseTrustEstate"));
 const SellHouseDuringProbateWashington = lazy(() => import("./pages/guides/SellHouseDuringProbateWashington"));
@@ -150,7 +147,6 @@ const ExecutorFirstStepsHouse = lazy(() => import("./pages/guides/ExecutorFirstS
 const SellInheritedHouseAsIsOrFix = lazy(() => import("./pages/guides/SellInheritedHouseAsIsOrFix"));
 const ProbateVsTrustSaleWashington = lazy(() => import("./pages/guides/ProbateVsTrustSaleWashington"));
 const WhoHasAuthoritySellProbateProperty = lazy(() => import("./pages/guides/WhoHasAuthoritySellProbateProperty"));
-const ProbateHouseSaleTimelineWashington = lazy(() => import("./pages/guides/ProbateHouseSaleTimelineWashington"));
 const RepairsBeforeSellingProbateHomeWashington = lazy(
   () => import("./pages/guides/RepairsBeforeSellingProbateHomeWashington"),
 );
@@ -166,7 +162,6 @@ const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
 const Calculators = lazy(() => import("./pages/Calculators"));
 const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
 const GrayDivorce = lazy(() => import("./pages/GrayDivorce"));
-const GreyDivorce = lazy(() => import("./pages/GreyDivorce"));
 const BookkeepingServices = lazy(() => import("./pages/BookkeepingServices"));
 const MedicareProviders = lazy(() => import("./pages/MedicareProviders"));
 const LegalPlansIdentityProtection = lazy(() => import("./pages/LegalPlansIdentityProtection"));
@@ -428,7 +423,6 @@ export const AppRoutes = () => (
       <Route path="/wills" element={<Wills />} />
       <Route path="/power-of-attorney" element={<PowerOfAttorney />} />
       <Route path="/gray-divorce" element={<GrayDivorce />} />
-      <Route path="/grey-divorce" element={<GreyDivorce />} />
       <Route path="/bookkeeping-services" element={<BookkeepingServices />} />
       <Route path="/medicare-providers" element={<MedicareProviders />} />
       <Route path="/legal-plans-identity-protection" element={<LegalPlansIdentityProtection />} />
@@ -498,7 +492,6 @@ export const AppRoutes = () => (
       <Route path="/guides/inherited-house-washington" element={<InheritedHouseWashington />} />
       <Route path="/guides/executor-sell-house-before-probate-washington" element={<ExecutorSellBeforeProbate />} />
       <Route path="/guides/appraisal-before-selling-inherited-property" element={<AppraisalBeforeSelling />} />
-      <Route path="/guides/estate-property-repairs-before-sale" element={<EstatePropertyRepairs />} />
       <Route path="/guides/heirs-disagree-selling-house" element={<HeirsDisagreeSelling />} />
       <Route path="/guides/pricing-house-trust-estate" element={<PricingHouseTrustEstate />} />
       <Route path="/guides/sell-house-during-probate-washington" element={<SellHouseDuringProbateWashington />} />
@@ -516,10 +509,6 @@ export const AppRoutes = () => (
       <Route
         path="/guides/who-has-authority-sell-probate-property-washington"
         element={<WhoHasAuthoritySellProbateProperty />}
-      />
-      <Route
-        path="/guides/probate-house-sale-timeline-washington"
-        element={<ProbateHouseSaleTimelineWashington />}
       />
       <Route
         path="/guides/repairs-before-selling-probate-home-washington"
@@ -542,14 +531,12 @@ export const AppRoutes = () => (
       {/* ─── Senior living reference ──────────────────────────── */}
       <Route path="/senior-living-and-relocation" element={<SeniorLivingAndRelocation />} />
       <Route path="/senior-living/adult-family-homes" element={<AdultFamilyHomes />} />
-      <Route path="/senior-living/assisted-living-communities" element={<AssistedLivingCommunities />} />
       <Route path="/senior-living/memory-care" element={<MemoryCare />} />
       <Route path="/senior-living/nursing-and-skilled-care" element={<NursingAndSkilledCare />} />
       <Route path="/senior-living/independent-living" element={<IndependentLiving />} />
       <Route path="/senior-living/assisted-living" element={<AssistedLiving />} />
       <Route path="/senior-living/skilled-nursing" element={<SkilledNursing />} />
       <Route path="/senior-living/aging-in-place" element={<AgingInPlace />} />
-      <Route path="/senior-living/power-of-attorneys" element={<PowerOfAttorneys />} />
 
       {/* ─── Lending ──────────────────────────────────────────── */}
       <Route path="/lenders-and-financing-specialists" element={<LendersFinancingSpecialists />} />

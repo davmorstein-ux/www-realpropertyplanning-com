@@ -99,7 +99,7 @@ export const PROBATE_PATHS: { id: string; short: string; title: string; who: str
     steps: [
       { label: "Probate Real Estate Sales in Washington", href: "/probate-estate-sales", note: "How an estate sale of real estate differs from an ordinary one." },
       { label: "Can You Sell a House During Probate?", href: "/guides/sell-house-during-probate-washington", note: "Timing, court approval and the creditor period." },
-      { label: "Probate House Sale Timeline in Washington", href: "/guides/probate-house-sale-timeline-washington", note: "From appointment to closing, phase by phase." },
+      { label: "How Long Does It Take to Sell a Probate Property?", href: "/guides/how-long-sell-probate-property", note: "From appointment to closing, and what speeds it up or slows it down." },
       { label: "What Repairs Should Be Made Before Selling a Probate Home?", href: "/guides/repairs-before-selling-probate-home-washington", note: "Cleanout, repairs and what buyers expect." },
       { label: "Estate Liquidation", href: "/estate-liquidation", note: "Clearing the contents before the house is listed." },
       { label: "How the Process Works", href: "/how-the-process-works", note: "The steps of an estate property sale, in order." },

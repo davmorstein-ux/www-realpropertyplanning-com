@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import grayDivorceIcon from "@/assets/gray-divorce-hero-icon.webp";
 import { FEATURED_BROKER } from "@/data/featuredProfessionals";
+import GreyDivorceBackground from "@/components/guides/GreyDivorceBackground";
 
 const GrayDivorce = () => {
   return (
@@ -53,6 +54,8 @@ const GrayDivorce = () => {
             </div>
           </div>
         </section>
+
+        <GreyDivorceBackground part="why" />
 
         {/* Section 2 — Washington Community Property */}
         <section className="py-14 lg:py-20 bg-secondary">
@@ -159,6 +162,8 @@ const GrayDivorce = () => {
             </div>
           </div>
         </section>
+
+        <GreyDivorceBackground part="different" />
 
         {/* Section 6 — Working With the Right Team */}
         <section className="py-14 lg:py-20 bg-secondary">

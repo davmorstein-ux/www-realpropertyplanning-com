@@ -25,7 +25,7 @@ const livingOptions = [
     title: "Assisted Living Communities",
     description:
       "Larger communities that offer varying levels of daily support, social activities, and on-site amenities while maintaining independence.",
-    path: "/senior-living/assisted-living-communities",
+    path: "/senior-living/assisted-living",
   },
   {
     title: "Memory Care",

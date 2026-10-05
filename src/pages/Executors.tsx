@@ -32,7 +32,7 @@ const roles = [
   {
     title: "Powers of Attorney",
     subtitle: "Acting on behalf of a living person",
-    href: "/senior-living/power-of-attorneys",
+    href: "/power-of-attorney",
     image: poaImg,
     alt: "Power of attorney document with pen and estate planning book",
     description:

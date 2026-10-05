@@ -84,7 +84,7 @@ export const REDIRECTS: SiteRedirect[] = [
   { from: "/helping-aging-parents", to: "/helping-an-aging-parent" },
   { from: "/out-of-state-families", to: "/guides/out-of-state-families" },
   { from: "/senior-placement", to: "/senior-living-advisors" },
-  { from: "/executors/power-of-attorney-guide", to: "/senior-living/power-of-attorneys" },
+  { from: "/executors/power-of-attorney-guide", to: "/power-of-attorney" },
   { from: "/executors/trustees-guide", to: "/trustees" },
   { from: "/attorneys/for-divorce-attorneys", to: "/for-divorce-attorneys" },
   { from: "/for-attorneys/probate-attorneys", to: "/for-probate-attorneys" },
@@ -128,8 +128,8 @@ export const REDIRECTS: SiteRedirect[] = [
   { from: "/insights/out-of-state-inherited-house-help", to: "/guides/out-of-state-families" },
   { from: "/insights/out-of-state-executor-case-study", to: "/guides/out-of-state-families" },
   { from: "/insights/estate-property-sale-timeline", to: "/guides/how-long-sell-probate-property" },
-  { from: "/insights/estate-property-cleanout-before-sale", to: "/guides/estate-property-repairs-before-sale" },
-  { from: "/insights/empty-house-before-selling", to: "/guides/estate-property-repairs-before-sale" },
+  { from: "/insights/estate-property-cleanout-before-sale", to: "/guides/repairs-before-selling-probate-home-washington" },
+  { from: "/insights/empty-house-before-selling", to: "/guides/repairs-before-selling-probate-home-washington" },
   { from: "/insights/pricing-inherited-property-differences", to: "/guides/pricing-house-trust-estate" },
   { from: "/insights/sell-inherited-house-without-repairs", to: "/guides/sell-inherited-house-as-is-or-fix" },
   { from: "/insights/family-disagreement-selling-house", to: "/guides/heirs-disagree-selling-house" },
@@ -269,4 +269,14 @@ export const REDIRECTS: SiteRedirect[] = [
   /* /terminology retired Oct 4, 2026: its terms were merged into the Washington probate
      glossary, with statute citations. */
   { from: "/terminology", to: "/probate-glossary" },
+  /* /grey-divorce merged into /gray-divorce Oct 4, 2026 (near-duplicate pages; Question Map step 8). */
+  { from: "/grey-divorce", to: "/gray-divorce" },
+  /* /senior-living/power-of-attorneys merged into /power-of-attorney Oct 4, 2026 (two pages answering the same questions; its FAQ moved over; Question Map step 8). */
+  { from: "/senior-living/power-of-attorneys", to: "/power-of-attorney" },
+  /* /guides/probate-house-sale-timeline-washington merged into /guides/how-long-sell-probate-property Oct 4, 2026 (same question; Question Map step 8). */
+  { from: "/guides/probate-house-sale-timeline-washington", to: "/guides/how-long-sell-probate-property" },
+  /* /guides/estate-property-repairs-before-sale merged into /guides/repairs-before-selling-probate-home-washington Oct 4, 2026 (two what-to-fix pages; Question Map step 8). */
+  { from: "/guides/estate-property-repairs-before-sale", to: "/guides/repairs-before-selling-probate-home-washington" },
+  /* /senior-living/assisted-living-communities merged into /senior-living/assisted-living Oct 4, 2026 (the care-type page set keeps one assisted living page; its cost calculator moved over; Question Map step 8). */
+  { from: "/senior-living/assisted-living-communities", to: "/senior-living/assisted-living" },
 ];

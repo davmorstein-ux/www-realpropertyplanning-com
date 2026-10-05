@@ -27,7 +27,6 @@ export const PROBATE_START_HERE_ROUTES: string[] = [
   "/guides/sell-house-during-probate-washington",
   "/guides/how-long-sell-probate-property",
   "/guides/how-probate-real-estate-works",
-  "/guides/probate-house-sale-timeline-washington",
   "/guides/probate-vs-trust-sale-washington",
   "/guides/heirs-disagree-selling-house",
   "/guides/taxes-selling-inherited-house-washington",
@@ -57,7 +56,6 @@ export const PROBATE_START_HERE_ROUTES: string[] = [
   "/guides/appraisal-before-selling-inherited-property",
   "/guides/pricing-house-trust-estate",
   "/guides/sell-inherited-house-as-is-or-fix",
-  "/guides/estate-property-repairs-before-sale",
   "/guides/repairs-before-selling-probate-home-washington",
   // City probate pages
   "/seattle-probate-estate-real-estate",

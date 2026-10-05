@@ -914,10 +914,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
-    path: "/grey-divorce",
-    links: ["/for-attorneys"],
-  },
-  {
     path: "/guides-and-resources",
     links: ["/resources"],
   },
@@ -941,17 +937,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
       "/guides/how-probate-real-estate-works",
       "/how-the-process-works",
       "/probate-estate-sales",
-      "/why-valuation-matters",
-    ],
-  },
-  {
-    path: "/guides/estate-property-repairs-before-sale",
-    links: [
-      "/contact",
-      "/executors",
-      "/guides/what-executors-should-do",
-      "/probate-estate-sales",
-      "/resources/property-preparation-services",
       "/why-valuation-matters",
     ],
   },
@@ -1023,10 +1008,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     ],
   },
   {
-    path: "/guides/probate-house-sale-timeline-washington",
-    links: ["/contact"],
-  },
-  {
     path: "/guides/probate-vs-trust-sale-washington",
     links: ["/contact"],
   },
@@ -1050,7 +1031,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [
       "/contact",
       "/executors",
-      "/guides/estate-property-repairs-before-sale",
+      "/guides/repairs-before-selling-probate-home-washington",
       "/guides/pricing-house-trust-estate",
       "/probate-estate-sales",
       "/why-valuation-matters",
@@ -1408,10 +1389,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: [],
   },
   {
-    path: "/senior-living/assisted-living-communities",
-    links: ["/contact", "/senior-living-and-relocation"],
-  },
-  {
     path: "/senior-living/independent-living",
     links: [],
   },
@@ -1422,10 +1399,6 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   {
     path: "/senior-living/nursing-and-skilled-care",
     links: ["/contact", "/senior-living-and-relocation"],
-  },
-  {
-    path: "/senior-living/power-of-attorneys",
-    links: ["/contact", "/executors", "/for-attorneys", "/probate-estate-sales", "/senior-transitions"],
   },
   {
     path: "/senior-living/skilled-nursing",
@@ -1535,7 +1508,7 @@ export const SITEMAP_REDIRECTS: SitemapRedirect[] = [
   },
   {
     from: "/executors/power-of-attorney-guide",
-    to: "/senior-living/power-of-attorneys",
+    to: "/power-of-attorney",
   },
   {
     from: "/executors/trustees-guide",
@@ -1707,11 +1680,11 @@ export const SITEMAP_REDIRECTS: SitemapRedirect[] = [
   },
   {
     from: "/insights/estate-property-cleanout-before-sale",
-    to: "/guides/estate-property-repairs-before-sale",
+    to: "/guides/repairs-before-selling-probate-home-washington",
   },
   {
     from: "/insights/empty-house-before-selling",
-    to: "/guides/estate-property-repairs-before-sale",
+    to: "/guides/repairs-before-selling-probate-home-washington",
   },
   {
     from: "/insights/pricing-inherited-property-differences",

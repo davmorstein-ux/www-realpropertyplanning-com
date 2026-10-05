@@ -36,7 +36,7 @@ const pathways: Pathway[] = [
     title: "Assisted Living",
     description:
       "For seniors who may benefit from help with daily activities, meals, medication reminders, transportation, or personal support.",
-    href: "/senior-living/assisted-living-communities",
+    href: "/senior-living/assisted-living",
     icon: iconAssisted,
   },
   {

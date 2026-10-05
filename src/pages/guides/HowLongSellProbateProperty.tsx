@@ -15,6 +15,24 @@ import { FEATURED_BROKER } from "@/data/featuredProfessionals";
 import AuthorByline from "@/components/AuthorByline";
 import ProbateStartHere from "@/components/ProbateStartHere";
 
+const speedUp = [
+  "Starting cleanout and planning while the court appointment is pending",
+  "A property in good condition requiring minimal cleanout or repair",
+  "Heirs who are aligned on pricing and timing from the start",
+  "An estate attorney and broker who communicate regularly and coordinate effectively",
+  "A strong seller's market with high buyer demand",
+];
+
+const slowDown = [
+  "Delays in filing the probate petition — every week of delay adds carrying costs",
+  "Extensive cleanout needed — homes with decades of belongings can take weeks to clear",
+  "Disagreements among heirs about pricing, timing, or whether to sell",
+  "Deferred maintenance that must be assessed before accurate pricing can be set",
+  "Title issues including liens, encumbrances, or unclear ownership",
+  "Properties requiring significant repairs before they can be shown",
+  "A slower buyer's market with limited demand",
+];
+
 const faqs = [
   { question: "What is the fastest a probate property can sell?", answer: "If the executor already has letters testamentary and the property is in good condition, the sale itself can close in as little as 30 to 45 days — similar to a standard real estate transaction. However, the total timeline including probate administration is usually longer." },
   { question: "What delays probate property sales the most?", answer: "The most common delays are waiting for court-issued authority, property preparation and cleanout, disagreements among heirs, title issues, and deferred maintenance that surfaces during inspection. Planning ahead during the probate waiting period can reduce many of these delays." },
@@ -105,6 +123,33 @@ const HowLongSellProbateProperty = () => (
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance on the property questions."
     />
+
+    {/* Speed up / slow down: merged from the retired
+        /guides/probate-house-sale-timeline-washington (Oct 4, 2026, Question
+        Map step 8). Its week-by-week figures were not carried over: they
+        were unsourced and conflicted with this page. */}
+    <section className="py-14 md:py-20 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto grid gap-10 md:grid-cols-2">
+          <div>
+            <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">What Can Speed It Up</h2>
+            <ul className="space-y-3 list-disc pl-5">
+              {speedUp.map((b) => (
+                <li key={b} className="text-foreground text-base leading-relaxed">{b}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">What Can Slow It Down</h2>
+            <ul className="space-y-3 list-disc pl-5">
+              {slowDown.map((b) => (
+                <li key={b} className="text-foreground text-base leading-relaxed">{b}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     {/* How to Think Through This Situation */}
     <section className="py-16 lg:py-24 bg-background">

@@ -206,7 +206,7 @@ const SellInheritedHouseAsIsOrFix = () => (
             <span className="text-muted-foreground/40">·</span>
             <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
             <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/estate-property-repairs-before-sale" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Estate Property Repairs Guide</Link>
+            <Link to="/guides/repairs-before-selling-probate-home-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Estate Property Repairs Guide</Link>
             <span className="text-muted-foreground/40">·</span>
             <Link to="/guides/pricing-house-trust-estate" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Pricing a House in Trust or Estate</Link>
           </div>

@@ -79,7 +79,7 @@ const G = {
   beforeProbate: { label: "Can an Executor Sell Before Probate?", href: "/guides/executor-sell-house-before-probate-washington" },
   duringProbate: { label: "Can You Sell a House During Probate?", href: "/guides/sell-house-during-probate-washington" },
   howWorks: { label: "How Probate Real Estate Works in Washington", href: "/guides/how-probate-real-estate-works" },
-  timeline: { label: "Probate House Sale Timeline in Washington", href: "/guides/probate-house-sale-timeline-washington" },
+  timeline: { label: "How Long Does It Take to Sell a Probate Property?", href: "/guides/how-long-sell-probate-property" },
   probateSales: { label: "Probate Real Estate Sales in Washington", href: "/probate-estate-sales" },
   first30: { label: "Your First 30 Days as Executor", href: "/executor-responsibilities-first-steps/first-30-days" },
   duties: { label: "Understanding Your Legal Duties as Executor", href: "/executor-responsibilities-first-steps/legal-duties" },

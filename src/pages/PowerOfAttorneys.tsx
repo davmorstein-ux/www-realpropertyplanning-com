@@ -710,7 +710,7 @@ const PowerOfAttorneys = () => {
           </div>
         </section>
 
-        <RelatedServices currentPath="/senior-living/power-of-attorneys" />
+        <RelatedServices currentPath="/power-of-attorney" />
         <DisclaimerSection />
       </main>
       <Footer />

@@ -22,11 +22,9 @@ export const servicePageSequence: ServicePageEntry[] = [
   // ── Senior Living & Relocation hub + sub-pages ──
   { path: "/senior-living-and-relocation", label: "Senior Living & Relocation" },
   { path: "/senior-living/adult-family-homes", label: "Adult Family Homes" },
-  { path: "/senior-living/assisted-living-communities", label: "Assisted Living" },
   { path: "/senior-living/memory-care", label: "Memory Care" },
   { path: "/senior-living/nursing-and-skilled-care", label: "Nursing & Skilled Care" },
   { path: "/senior-living/independent-living", label: "Independent Living" },
-  { path: "/senior-living/power-of-attorneys", label: "Power of Attorneys" },
 
   // ── Process & value pages ──
   { path: "/how-we-work", label: "How We Work" },
@@ -77,7 +75,6 @@ export const servicePageSequence: ServicePageEntry[] = [
   { path: "/guides/inherited-house-washington", label: "Inherited House in Washington" },
   { path: "/guides/executor-sell-house-before-probate-washington", label: "Selling Before Probate" },
   { path: "/guides/appraisal-before-selling-inherited-property", label: "Appraisal Before Selling" },
-  { path: "/guides/estate-property-repairs-before-sale", label: "Estate Property Repairs" },
   { path: "/guides/heirs-disagree-selling-house", label: "When Heirs Disagree" },
   { path: "/guides/pricing-house-trust-estate", label: "Pricing a Trust/Estate House" },
   { path: "/guides/sell-house-during-probate-washington", label: "Selling During Probate" },

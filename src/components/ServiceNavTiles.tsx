@@ -60,7 +60,7 @@ const planningImageTiles: ProfessionalImageTileData[] = [
   { alt: "Paying for senior living costs guidance Washington State", href: "/paying-for-senior-living", src: imgPayingSeniorLiving },
   { alt: "Service areas Washington State counties coverage", href: "/service-areas", src: imgServiceAreas },
   { alt: "Guides and resources estate planning Washington State", href: "/guides-and-resources", src: imgGuidesResources },
-  { alt: "Grey divorce family home guidance Washington State", href: "/grey-divorce", src: imgGrayDivorce },
+  { alt: "Grey divorce family home guidance Washington State", href: "/gray-divorce", src: imgGrayDivorce },
   { alt: "Medicare providers senior coverage guidance Washington State", href: "/medicare-providers", src: imgPlanningMedicareProviders },
 ];
 

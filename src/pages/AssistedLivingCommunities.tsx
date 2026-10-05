@@ -61,7 +61,7 @@ const AssistedLivingCommunities = () => (
       </section>
 
       <CTASection />
-      <RelatedServices currentPath="/senior-living/assisted-living-communities" />
+      <RelatedServices currentPath="/senior-living/assisted-living" />
       <DisclaimerSection />
     </main>
     <Footer />

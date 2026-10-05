@@ -86,7 +86,7 @@ const ALL: Record<string, RelatedLink> = {
     description: "Independent attorneys, CPAs, and senior-care professionals across Washington.",
   },
   poa: {
-    href: "/senior-living/power-of-attorneys",
+    href: "/power-of-attorney",
     label: "Power of Attorneys",
     description: "How POA authority connects to real estate decisions during senior transitions.",
   },
@@ -138,7 +138,7 @@ const ALL: Record<string, RelatedLink> = {
     description: "Working through sibling buyouts and conflicting positions.",
   },
   guideRepairs: {
-    href: "/guides/estate-property-repairs-before-sale",
+    href: "/guides/repairs-before-selling-probate-home-washington",
     label: "Repairs Before Sale",
     description: "Which repairs the estate should pay for — and which it shouldn't.",
   },
@@ -207,7 +207,7 @@ const ALL: Record<string, RelatedLink> = {
     description: "Small-residence licensed care in Washington State.",
   },
   slAssisted: {
-    href: "/senior-living/assisted-living-communities",
+    href: "/senior-living/assisted-living",
     label: "Assisted Living",
     description: "Communities that combine housing with daily-living support.",
   },

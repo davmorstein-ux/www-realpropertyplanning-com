@@ -184,7 +184,7 @@ const PricingHouseTrustEstate = () => (
       heading="Continue Learning"
       steps={[
         { title: "Appraisal vs. CMA in Estate Situations", description: "Understand the key differences between formal appraisals and market analyses — and when each is appropriate.", href: "/guides/appraisal-vs-cma" },
-        { title: "What Repairs Should Be Done Before Selling?", description: "A guide to deciding which improvements deliver a return and which ones to skip.", href: "/guides/estate-property-repairs-before-sale" },
+        { title: "What Repairs Should Be Done Before Selling?", description: "A guide to deciding which improvements deliver a return and which ones to skip.", href: "/guides/repairs-before-selling-probate-home-washington" },
         { title: "What Happens If Heirs Disagree?", description: "Practical guidance for navigating family disagreements about inherited property.", href: "/guides/heirs-disagree-selling-house" },
       ]}
     />

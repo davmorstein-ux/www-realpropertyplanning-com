@@ -114,10 +114,10 @@ const PlanningAndNextSteps = () => (
         />
         <P3Tile
           pill="Life Transitions"
-          title="Grey Divorce"
+          title="Gray Divorce"
           tagline="Real Estate & Housing After Divorce"
           imgSrc="/tiles/set3/grey-divorce.webp"
-          href="/grey-divorce"
+          href="/gray-divorce"
         />
         <P3Tile
           pill="Senior Planning"

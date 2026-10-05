@@ -156,7 +156,7 @@ export default function ProbateDeadlines() {
               <Cite href={rcw("11.68.110")}>declaration of completion</Cite>, which becomes final if no one asks the court to review it
               within 30 days.
             </p>
-            <More to="/guides/probate-house-sale-timeline-washington">Read Probate House Sale Timeline in Washington</More>
+            <More to="/guides/how-long-sell-probate-property">Read How Long It Takes to Sell a Probate Property</More>
             </div>
           </details>
           <details className="prp-fold" id="value">

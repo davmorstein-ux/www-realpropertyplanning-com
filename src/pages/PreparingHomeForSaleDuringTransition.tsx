@@ -42,7 +42,7 @@ const pathways: Pathway[] = [
     title: "Deciding Whether Repairs Are Worth Doing",
     description:
       "Guidance for understanding when repairs, updates, or improvements may help — and when they may create unnecessary stress or expense.",
-    href: "/guides/estate-property-repairs-before-sale",
+    href: "/guides/repairs-before-selling-probate-home-washington",
     icon: iconDocument,
   },
   {

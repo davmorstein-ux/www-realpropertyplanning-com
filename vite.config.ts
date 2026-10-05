@@ -618,12 +618,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Do I Need an Appraisal Before Selling Inherited Property?",
     intro: "When a formal appraisal is needed for inherited property — and when a professional market assessment is enough.",
   },
-  "/guides/estate-property-repairs-before-sale": {
-    title: "What Repairs Should Be Done Before Selling an Estate Property? | Real Property Planning",
-    description: "A practical guide to deciding which repairs and improvements are worth making before selling an inherited or estate home — and which ones to skip.",
-    h1: "What Repairs Should Be Done Before Selling an Estate Property?",
-    intro: "Which repairs and improvements are worth making before selling an inherited or estate home — and which ones to skip.",
-  },
   "/guides/heirs-disagree-selling-house": {
     title: "What Happens If Heirs Disagree on Selling a House? | Real Property Planning",
     description: "Practical guidance for families navigating heir disagreements about inherited property — understanding options, reaching agreement, and moving forward.",
@@ -1563,11 +1557,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Guidance for Washington State couples over 50 navigating the family home during divorce. How Washington divides the home, the federal home-sale tax exclusion, and which independent professionals handle each part.",
     h1: "Gray Divorce and Your Home — What Washington Couples Need to Know",
   },
-  "/grey-divorce": {
-    title: "Grey Divorce and the Grey Tsunami: Real Estate, Retirement and Family Planning After 50",
-    description: "Learn what grey divorce means, how it connects to the Grey Tsunami, and why real estate, retirement, estate planning, and senior housing decisions matter for adults divorcing after age 50.",
-    h1: "Grey Divorce and the Grey Tsunami",
-  },
   "/guides/probate-vs-trust-sale-washington": {
     title: "Probate vs Trust Sale in Washington State — What's the Difference? | Real Property Planning",
     description: "Real Property Planning explains the key differences between probate sales and trust sales in Washington State.",
@@ -1774,11 +1763,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Assisted Living",
     description: "Assisted Living communities in Washington State — licensed residential care with help for daily activities, medication management, and 24-hour staff.",
   },
-  "/senior-living/assisted-living-communities": {
-    title: "Assisted Living Communities | Senior Living | Real Property Planning",
-    description: "Learn about assisted living communities offering daily support, social activities, and on-site amenities for seniors throughout Washington State.",
-    h1: "Assisted Living Communities",
-  },
   "/senior-living/independent-living": {
     title: "Independent Living",
     description: "Independent Living communities in Washington State for active, self-sufficient seniors who want convenience, social connection, and freedom from home maintenance.",
@@ -1791,11 +1775,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Nursing & Skilled Care | Senior Living | Real Property Planning",
     description: "Learn about nursing and skilled care facilities providing 24-hour medical support for seniors throughout Washington State.",
     h1: "Nursing & Skilled Care",
-  },
-  "/senior-living/power-of-attorneys": {
-    title: "Power of Attorney & Real Estate Decisions | Real Property Planning",
-    description: "Understanding how a power of attorney works in real estate — for families, executors, and professionals navigating property decisions in Washington State.",
-    h1: "Power of Attorney &amp; Real Estate Decisions",
   },
   "/senior-living/skilled-nursing": {
     title: "Skilled Nursing Care",
@@ -2107,11 +2086,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Executors Working With Professionals | Real Property Planning",
     description: "How executors coordinate with attorneys, CPAs, appraisers, and other professionals during estate administration in Washington State.",
     h1: "Working With Professionals",
-  },
-  "/guides/probate-house-sale-timeline-washington": {
-    title: "Probate House Sale Timeline in Washington State | Real Property Planning",
-    description: "Real Property Planning explains the realistic timeline for selling a probate property in Washington State — from death to distribution of proceeds.",
-    h1: "Probate House Sale Timeline in Washington State",
   },
   "/guides/repairs-before-selling-probate-home-washington": {
     title: "What Repairs Should Be Made Before Selling a Probate Home in Washington? | Real Property Planning",
