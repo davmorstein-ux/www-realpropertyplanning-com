@@ -22,6 +22,7 @@ import { PROBATE_START_HERE, PROBATE_START_HERE_ROUTES } from "./src/data/probat
 import { PROPERTY_TAX_AFTER_DEATH, PTX_PRERENDER_SECTIONS, PTX_FAQS } from "./src/data/propertyTaxAfterDeath";
 import { MORTGAGE_AFTER_DEATH, MAD_PRERENDER_SECTIONS, MAD_FAQS } from "./src/data/mortgageAfterDeath";
 import { FAMILY_SALE, FS_PRERENDER_SECTIONS, FS_FAQS } from "./src/data/familySaleEstate";
+import { STAY_HOME, SH_PRERENDER_SECTIONS, SH_FAQS } from "./src/data/stayHomeCost";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
@@ -646,6 +647,17 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description: "Understanding capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
     h1: "What Taxes Do You Pay When Selling an Inherited House in Washington?",
     intro: "Capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
+  },
+  [STAY_HOME.PATH]: {
+    title: `${STAY_HOME.TITLE} | Real Property Planning`,
+    description: STAY_HOME.DESCRIPTION,
+    h1: STAY_HOME.TITLE,
+    quickAnswerQ: "Can my parent afford to stay in their house with in-home care in Washington?",
+    quickAnswerA: STAY_HOME.SHORT_ANSWER,
+    intro: "A worksheet for Washington families deciding whether a parent can stay at home: the housing costs that continue, the care hours at Washington rates, income and savings, a worked example, and the ways families close the gap. General information, not financial advice.",
+    sections: SH_PRERENDER_SECTIONS,
+    faq: SH_FAQS.map((f) => ({ q: f.question, a: f.answer })),
+    article: { datePublished: STAY_HOME.PUBLISHED, dateModified: STAY_HOME.REVIEWED },
   },
   [FAMILY_SALE.PATH]: {
     title: `${FAMILY_SALE.TITLE} | Real Property Planning`,

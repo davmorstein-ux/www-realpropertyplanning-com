@@ -177,6 +177,16 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "WAC 458-61A-202: inheritance and the real estate excise tax", href: "https://app.leg.wa.gov/WAC/default.aspx?cite=458-61A-202" },
     ],
   },
+  "/senior-transitions/can-parent-afford-to-stay-home": {
+    published: "2026-10-04",
+    reviewed: "2026-10-04",
+    changes: [],
+    sources: [
+      { label: "CareScout Cost of Care Survey, 2025 data (Washington medians)", href: "https://www.businesswire.com/news/home/20260302776244/en/CareScout-Releases-2025-Cost-of-Care-Data-for-Washington" },
+      { label: "Washington Department of Revenue: property tax exemption for senior citizens and people with disabilities", href: "https://www.dor.wa.gov/sites/default/files/2022-02/PTExemption_Senior.pdf" },
+      { label: "RCW 84.36.381 and chapter 84.38 RCW: senior exemption and deferral", href: "https://app.leg.wa.gov/RCW/default.aspx?cite=84.36.381" },
+    ],
+  },
   "/guides/mortgage-after-death-washington": {
     published: "2026-10-04",
     reviewed: "2026-10-04",

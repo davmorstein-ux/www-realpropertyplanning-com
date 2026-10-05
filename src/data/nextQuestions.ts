@@ -112,6 +112,11 @@ const Q = {
     description: "Property taxes, exemptions and deadlines after a death in Washington.",
     href: "/guides/property-taxes-after-death-washington",
   },
+  stayHome: {
+    title: "Can Mom or Dad afford to stay home?",
+    description: "A worksheet: the real monthly cost of staying home, with care hours at Washington rates, against income and savings.",
+    href: "/senior-transitions/can-parent-afford-to-stay-home",
+  },
   familySale: {
     title: "Can the executor or trustee buy the house?",
     description: "Selling the house to the person in charge, or to family: the price, the protections, and taking it as a share instead.",
@@ -214,6 +219,7 @@ export const NEXT_QUESTIONS: Record<string, NextQuestion[]> = {
   "/trustees": [Q.familySale, Q.trustVsProbate, Q.pricingTrust, Q.dateOfDeath, Q.heirsDisagree],
   "/guides/inherited-house-washington": [Q.heirsDisagree, Q.mortgage, Q.propertyTaxes, Q.asIsOrFix, Q.dateOfDeath],
   "/guides/executor-buy-or-sell-estate-house-to-family-washington": [Q.heirsDisagree, Q.dateOfDeath, Q.authority, Q.propertyTaxes],
+  "/senior-transitions/can-parent-afford-to-stay-home": [Q.careSettings, Q.careCost, Q.medicaid, Q.houseForCare],
   "/guides/mortgage-after-death-washington": [Q.authority, Q.propertyTaxes, Q.heirsDisagree, Q.dateOfDeath],
   "/executor-responsibilities-first-steps/first-30-days": EXECUTOR_STEPS,
   "/executor-responsibilities-first-steps/legal-duties": EXECUTOR_STEPS,

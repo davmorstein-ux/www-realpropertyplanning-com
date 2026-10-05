@@ -539,6 +539,10 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     ],
   },
   {
+    path: "/senior-transitions/can-parent-afford-to-stay-home",
+    links: ["/articles/aging-in-place", "/cost-of-care-calculator", "/long-term-care/how-to-choose-care-settings", "/long-term-care/medicaid-and-long-term-care", "/sell-house-fund-senior-living"],
+  },
+  {
     path: "/articles/aging-in-place",
     links: ["/aging-life-care-managers", "/guides-and-resources", "/senior-living-advisors", "/senior-move-managers"],
   },
