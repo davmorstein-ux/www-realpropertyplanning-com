@@ -563,8 +563,14 @@ const PAGE_CSS = `
   @media (max-width: 900px) {
     .rpp-afh-dest-card { flex-basis: calc((100% - 24px) / 2); }
   }
-  @media (max-width: 560px) {
-    .rpp-afh-dest-card { flex-basis: 100%; max-width: 420px; }
+  /* Phones: two covers per row (owner, Oct 5, 2026: smaller tiles to save
+     space; the fifth centres on its own row). Was one 420px cover per row. */
+  @media (max-width: 639px) {
+    .rpp-afh-dest-grid { gap: 12px; }
+    .rpp-afh-dest-card.rpp-afh-dest-card { flex: 0 1 calc((100% - 12px) / 2); width: auto !important; max-width: none; }
+    .rpp-afh-dest-body { padding: 10px 10px 12px; }
+    .rpp-afh-dest-card h3 { font-size: 18px !important; line-height: 1.2 !important; margin: 0 0 4px !important; }
+    .rpp-afh-dest-card p { font-size: 16px !important; line-height: 1.4 !important; }
   }
 `;
 

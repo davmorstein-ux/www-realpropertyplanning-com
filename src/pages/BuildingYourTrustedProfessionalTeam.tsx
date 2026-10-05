@@ -156,7 +156,7 @@ const Section = ({
         {heading}
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="rpp-m2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {cards.map((s) => (
           <Link
             key={s.title + s.href}
@@ -178,7 +178,7 @@ const Section = ({
             >
               {/* Photo */}
 
-              <div style={{ width: "100%", height: "180px", overflow: "hidden" }}>
+              <div className="rpp-m2-photo" style={{ width: "100%", height: "180px", overflow: "hidden" }}>
                 <img
                   src={s.image}
                   alt={s.alt}
@@ -201,9 +201,10 @@ const Section = ({
 
               {/* Card body */}
 
-              <div style={{ padding: "16px 20px 0", flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
-                <div style={{ minHeight: 72 }}>
+              <div className="rpp-m2-pad" style={{ padding: "16px 20px 0", flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
+                <div className="rpp-m2-titlebox" style={{ minHeight: 72 }}>
                   <h3
+                    className="rpp-m2-title"
                     style={{
                       fontFamily: "'DM Sans', system-ui, sans-serif",
                       fontSize: 18,
@@ -215,12 +216,12 @@ const Section = ({
                     {s.title}
                   </h3>
                 </div>
-                <p style={{ fontSize: 14, color: "#5c474a", lineHeight: 1.6, flex: 1 }}>{s.description}</p>
+                <p className="rpp-m2-text" style={{ fontSize: 14, color: "#5c474a", lineHeight: 1.6, flex: 1 }}>{s.description}</p>
               </div>
 
               {/* CTA bar */}
 
-              <div style={{ padding: "12px 20px 16px" }}>
+              <div className="rpp-m2-pad" style={{ padding: "12px 20px 16px" }}>
                 <div
                   style={{
                     background: color,

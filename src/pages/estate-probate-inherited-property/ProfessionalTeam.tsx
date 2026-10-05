@@ -55,7 +55,7 @@ const ProfessionalTeam = () => (
 
     {/* Professional team tiles — same premium card used on the homepage / professional network */}
     <div className="not-prose -mx-4 md:-mx-16 lg:-mx-32">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+      <div className="rpp-m2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
         {teamTiles.map((tile) => (
           <ProfessionalNetworkCard key={tile.title} tile={tile} />
         ))}

@@ -5690,3 +5690,46 @@ main .rpp-hero-cta a.rpp-hero-cta-secondary {
     width: 200px !important;
   }
 }
+
+
+/* =====================================================================
+   PHONES: TWO TILES PER ROW (owner, Oct 5, 2026)
+   Add `rpp-m2` to a grid of picture tiles to show them two to a row under
+   768px instead of one full-width tile per row. Optional hooks inside each
+   tile: rpp-m2-title (18px), rpp-m2-text (16px), rpp-m2-pad (tighter side
+   padding), rpp-m2-photo (photo box follows a 4:3 shape instead of a fixed
+   height), rpp-m2-titlebox (drops a reserved title height).
+   Tripled classes beat the sitewide "every grid is one column on phones"
+   rule ([class*="grid-cols-"]...) and the global h3/p sizes.
+   Only for tiles whose text is a title plus a short line: grids of long
+   text cards were left one per row on purpose.
+   Runs to 767px, not 639px: between 640 and 767 these grids were still
+   one tile per row (md: two columns only starts at 768).
+   ===================================================================== */
+@media (max-width: 767px) {
+  main .rpp-m2.rpp-m2.rpp-m2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+  main .rpp-m2 .rpp-m2-title.rpp-m2-title.rpp-m2-title {
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    overflow-wrap: break-word;
+  }
+  main .rpp-m2 .rpp-m2-text.rpp-m2-text.rpp-m2-text {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+  main .rpp-m2 .rpp-m2-pad.rpp-m2-pad {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  main .rpp-m2 .rpp-m2-photo.rpp-m2-photo {
+    height: auto !important;
+    aspect-ratio: 4 / 3;
+  }
+  main .rpp-m2 .rpp-m2-titlebox.rpp-m2-titlebox { min-height: 0 !important; }
+}

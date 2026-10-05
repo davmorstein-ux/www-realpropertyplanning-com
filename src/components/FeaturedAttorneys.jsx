@@ -22,7 +22,7 @@ const FeaturedAttorneys = () => (
             Featured Attorneys
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
+        <div className="rpp-m2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
           {TILES.map((s) => (
             <Link
               key={s.title}
@@ -41,17 +41,17 @@ const FeaturedAttorneys = () => (
                         loading="lazy"
                       />
                     </div>
-                    <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
+                    <div className="rpp-m2-pad relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
                       <span
                         className="block mb-2 text-[11px] font-bold tracking-[0.18em] uppercase"
                         style={{ color: "#8a3a42", fontFamily: "'DM Sans', sans-serif" }}
                       >
                         {s.pill}
                       </span>
-                      <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center">
+                      <h3 className="rpp-m2-title font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center">
                         {s.title}
                       </h3>
-                      <p className="text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', sans-serif", color: "#5c474a" }}>
+                      <p className="rpp-m2-text text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', sans-serif", color: "#5c474a" }}>
                         {s.tagline}
                       </p>
                       <span className="gold-cta mt-auto">
