@@ -66,6 +66,10 @@ function walk(dir, out = []) {
     const p = join(dir, name);
     const s = statSync(p);
     if (s.isDirectory()) walk(p, out);
+    // AGENTS.md files are notes for developers and AI assistants, not page
+    // copy. They moved under src/ on Oct 5, 2026 and describe the featured-
+    // professional record by name, which the audit then flagged.
+    else if (name === "AGENTS.md") continue;
     else if (TEXT_EXT.test(p)) out.push(p);
   }
   return out;

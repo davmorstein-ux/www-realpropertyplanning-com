@@ -570,7 +570,7 @@ const PAGE_CSS = `
     .rpp-afh-dest-card.rpp-afh-dest-card { flex: 0 1 calc((100% - 12px) / 2); width: auto !important; max-width: none; }
     .rpp-afh-dest-body { padding: 10px 10px 12px; }
     .rpp-afh-dest-card h3 { font-size: 18px !important; line-height: 1.2 !important; margin: 0 0 4px !important; }
-    .rpp-afh-dest-card p { font-size: 16px !important; line-height: 1.4 !important; }
+    .rpp-afh-dest-card p { font-size: 18px !important; line-height: 1.4 !important; }
   }
 `;
 

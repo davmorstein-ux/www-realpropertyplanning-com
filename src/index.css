@@ -5696,7 +5696,7 @@ main .rpp-hero-cta a.rpp-hero-cta-secondary {
    PHONES: TWO TILES PER ROW (owner, Oct 5, 2026)
    Add `rpp-m2` to a grid of picture tiles to show them two to a row under
    768px instead of one full-width tile per row. Optional hooks inside each
-   tile: rpp-m2-title (18px), rpp-m2-text (16px), rpp-m2-pad (tighter side
+   tile: rpp-m2-title (18px), rpp-m2-text (18px, the site's body-text floor), rpp-m2-pad (tighter side
    padding), rpp-m2-photo (photo box follows a 4:3 shape instead of a fixed
    height), rpp-m2-titlebox (drops a reserved title height).
    Tripled classes beat the sitewide "every grid is one column on phones"
@@ -5720,7 +5720,7 @@ main .rpp-hero-cta a.rpp-hero-cta-secondary {
     overflow-wrap: break-word;
   }
   main .rpp-m2 .rpp-m2-text.rpp-m2-text.rpp-m2-text {
-    font-size: 16px !important;
+    font-size: 18px !important;
     line-height: 1.4 !important;
   }
   main .rpp-m2 .rpp-m2-pad.rpp-m2-pad {
