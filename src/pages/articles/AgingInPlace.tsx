@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import ArticleAudioPlayer from "@/components/ArticleAudioPlayer";
 import audioAsset from "@/assets/aging-in-place.mp3.asset.json";
 import ArticleCover from "@/components/ArticleCover";
+import WhichGuide from "@/components/WhichGuide";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -56,6 +57,7 @@ const AgingInPlace = () => {
         <HeroBandTitle as="h1">{"Aging in Place With Support"}</HeroBandTitle>
 
         {/* Article */}
+        <WhichGuide group="agingInPlace" />
         <section className={sectionBase + " bg-background"}>
           <div className={contentWrap}>
             <article className={proseWrap}>

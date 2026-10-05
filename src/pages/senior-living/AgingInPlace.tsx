@@ -1,8 +1,10 @@
 import HousingOptionDetail from "@/components/HousingOptionDetail";
+import WhichGuide from "@/components/WhichGuide";
 
 const AgingInPlace = () => (
   <>
     <HousingOptionDetail
+      extra={<WhichGuide group="agingInPlace" />}
       title="Aging in Place"
       slug="aging-in-place"
       metaDescription="Aging in Place in Washington State — remain in your own home with in-home caregivers, safety modifications, meal delivery, and medical alert services."

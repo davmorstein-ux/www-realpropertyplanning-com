@@ -1570,7 +1570,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/lenders-and-financing-specialists": {
     title: "Lenders & Financing Specialists | Real Property Planning",
     description: "Financing options and long-term planning for Washington seniors and families. Connect with lending professionals who can explain reverse mortgage and retirement strategies.",
-    h1: "Financing Options and Long-Term Planning",
+    h1: "Lenders and Financing Specialists",
   },
   "/long-term-care": {
     title: "Long-Term Care Options in Washington State | Real Property Planning",
@@ -1724,7 +1724,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/retirement-reverse-mortgage": {
     title: "Retirement & Reverse Mortgage Guidance | Real Property Planning",
     description: "Reverse mortgage and retirement financing guidance for Washington seniors and families. Independent lending professionals supporting long-term housing and estate planning decisions.",
-    h1: "Financing Options and Long-Term Planning",
+    h1: "Reverse Mortgages and Retirement in Washington",
   },
   "/roles": {
     title: "Roles & Responsibilities | Executors, Trustees & POA — Washington",

@@ -1,5 +1,6 @@
 import ExecutorSubPageLayout from "@/components/ExecutorSubPageLayout";
 import { SubH2, SubH3, P, UL, Divider } from "@/components/PlanningSubPageLayout";
+import WhichGuide from "@/components/WhichGuide";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult a licensed Washington State probate attorney for guidance specific to your situation.";
@@ -13,6 +14,8 @@ const First30Days = () => (
     bandTitle="YOUR  FIRST  30  DAYS"
     disclaimer={DISCLAIMER}
   >
+    <WhichGuide group="executorFirstSteps" className="!py-0 mb-8" />
+
     <SubH2>You Don't Have to Do Everything at Once</SubH2>
     <P>
       Being named executor or personal representative of an estate is an honor — and a significant responsibility. It's also something most people have never done before, often while also grieving.

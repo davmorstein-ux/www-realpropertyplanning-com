@@ -32,7 +32,7 @@ const RetirementReverseMortgage = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <HeroBandTitle as="h1">Supporting Clients with Financing Options and Long-Term Planning</HeroBandTitle>
+    <HeroBandTitle as="h1">Reverse Mortgages and Retirement in Washington</HeroBandTitle>
 
     {/* Intro — relocated out of the title band. The band carries the
         page title and nothing else, sitewide. */}
@@ -63,19 +63,73 @@ const RetirementReverseMortgage = () => (
       </div>
     </section>
 
-    {/* Reverse Mortgage & Retirement Planning */}
+    {/* Moved from /lenders-and-financing-specialists (Oct 4, 2026, Question Map step 8). */}
+    <section className="py-12 md:py-16 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+            One of the most important — and least understood — applications of a reverse mortgage is helping families manage the cost of senior care when one spouse needs to move into a memory care facility, skilled nursing home, or assisted living community while the other remains at home.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            For many retired couples, the family home represents their largest financial asset. A reverse mortgage allows the spouse remaining at home to convert a portion of that home equity into tax-free funds — without making monthly mortgage payments — while continuing to live in the home. Those funds can then be used to cover the cost of the other spouse's care facility, property taxes, homeowner's insurance, and everyday living expenses.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Using a Reverse Mortgage to Fund Senior Care */}
     <section className="py-16 lg:py-24 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-            Reverse Mortgage & Retirement Planning
+          <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">
+            Using a Reverse Mortgage to Fund Senior Care
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            For seniors, reverse mortgage solutions can be part of a broader financial strategy.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            These conversations should be approached carefully, with a clear understanding of both benefits and considerations.
-          </p>
+
+          <div className="mb-10">
+            <h3 className="font-serif text-2xl text-foreground font-semibold mb-4">
+              How It Works for Couples
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              A common reason seniors seek reverse mortgages is when one spouse requires care and needs to move into a skilled nursing or assisted living community. When both spouses are included on the reverse mortgage agreement and one moves into a care facility, the spouse remaining at home can continue to access the funds. Should the spouse receiving care pass away, the remaining spouse continues to live in the home undisturbed.
+            </p>
+          </div>
+
+          <div className="mb-10">
+            <h3 className="font-serif text-2xl text-foreground font-semibold mb-4">
+              Flexible Payment Options
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Reverse mortgage proceeds can be structured in several ways. Monthly payments create a steady income stream that can cover the monthly cost of a care facility. A line of credit can be particularly useful for unpredictable long-term care needs — and under many plans, unused credit grows over time, giving families more flexibility as needs change.
+            </p>
+          </div>
+
+          <div className="mb-10">
+            <h3 className="font-serif text-2xl text-foreground font-semibold mb-4">
+              Important Considerations
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              If a borrower is away from the home for more than 12 consecutive months in a healthcare facility and there is no co-borrower living in the home, the loan may become due. This is why it is critical to structure the reverse mortgage correctly — with both spouses as co-borrowers whenever possible — before a care need arises. Medicaid eligibility rules for reverse mortgage borrowers are also complex and families should consult with a financial planner and elder law attorney before proceeding.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-serif text-2xl text-foreground font-semibold mb-4">
+              When the Loan Comes Due
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              A reverse mortgage generally becomes due when the last borrower dies or moves out, and the house is then
+              often sold to repay it. Heirs can also pay it off and keep the house, and if the house is worth less than
+              the loan, selling it for at least 95 percent of the appraised value settles a federally insured loan. See{" "}
+              <Link to="/guides/mortgage-after-death-washington#reverse-mortgage" className="text-accent hover:text-gold underline underline-offset-4">
+                what happens to a reverse mortgage after a death
+              </Link>
+              , and for a parent who is staying put,{" "}
+              <Link to="/senior-transitions/can-parent-afford-to-stay-home" className="text-accent hover:text-gold underline underline-offset-4">
+                whether they can afford to stay home
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </div>
     </section>

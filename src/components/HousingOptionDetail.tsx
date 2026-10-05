@@ -26,6 +26,8 @@ export interface HousingOptionDetailProps {
   listingsHref?: string;
   listingsLabel?: string;
   listingsIntro?: string;
+  /** Optional block rendered under the description (e.g. a WhichGuide box). */
+  extra?: React.ReactNode;
 }
 
 const Row = ({ label, children }: { label: string; children: React.ReactNode }) => (
@@ -49,6 +51,7 @@ const HousingOptionDetail = ({
   metaDescription,
   calculatorCareId,
   listingsHref,
+  extra,
   listingsLabel,
   listingsIntro,
 }: HousingOptionDetailProps) => {
@@ -121,6 +124,8 @@ const HousingOptionDetail = ({
             </div>
           </section>
         )}
+
+        {extra}
 
         {calculatorCareId && (
           <section className="py-12 md:py-16 bg-secondary">

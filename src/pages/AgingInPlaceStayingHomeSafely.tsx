@@ -19,6 +19,7 @@ import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.we
 import iconIndependent from "@/assets/icons/senior-independent-living-icon-washington.webp";
 import iconEstatePlanning from "@/assets/icons/estate-wills-planning-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
+import WhichGuide from "@/components/WhichGuide";
 
 interface Pathway {
   letter: string;
@@ -234,6 +235,7 @@ const AgingInPlaceStayingHomeSafely = () => {
         />
 
         {/* REASSURANCE */}
+        <WhichGuide group="agingInPlace" />
         <section className="py-10 lg:py-12 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">

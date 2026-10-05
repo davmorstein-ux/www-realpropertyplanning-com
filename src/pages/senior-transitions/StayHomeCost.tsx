@@ -13,6 +13,7 @@ import {
   STAY_HOME, SH_SECTIONS as PTX_SECTIONS, SH_FAQS as PTX_FAQS,
 } from "@/data/stayHomeCost";
 import StayHomeWorksheet from "@/components/guides/StayHomeWorksheet";
+import WhichGuide from "@/components/WhichGuide";
 
 /**
  * Can a Parent Afford to Stay at Home? (Oct 4, 2026, Question Map step 7).
@@ -114,6 +115,7 @@ const StayHomeCost = () => (
         <BackToPreviousPage variant="top" fallback={{ href: "/senior-transitions", label: "Senior Transitions" }} />
       </Section>
 
+      <WhichGuide group="agingInPlace" />
       <section id="worksheet" style={{ background: "#f7f4ef", padding: "44px 16px" }}>
         <div className="ptx-wrap">
           <h2 className="ptx-h2">Worksheet: what staying home costs each month</h2>

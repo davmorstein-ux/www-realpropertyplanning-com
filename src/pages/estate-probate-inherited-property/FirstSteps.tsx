@@ -1,4 +1,5 @@
 import EstateSubPageLayout, { SubH2, P, UL, Divider } from "@/components/EstateSubPageLayout";
+import WhichGuide from "@/components/WhichGuide";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult a licensed Washington State probate attorney for guidance specific to your situation.";
@@ -12,6 +13,8 @@ const FirstSteps = () => (
     bandTitle="FIRST STEPS AFTER A DEATH"
     disclaimer={DISCLAIMER}
   >
+    <WhichGuide group="executorFirstSteps" className="!py-0 mb-8" />
+
     <SubH2>You Don't Have to Know Everything Yet</SubH2>
     <P>
       The early days after a death are not the time for big decisions. They're the time for a few calm, practical steps that protect everyone involved.
