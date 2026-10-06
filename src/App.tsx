@@ -227,6 +227,9 @@ const AFHChoosingAnAdultFamilyHome = lazy(() => import("./pages/senior-living/Ch
 const AFHCostsFees = lazy(() => import("./pages/AFHCostsFees"));
 const AFHBuyingSelling = lazy(() => import("./pages/AFHBuyingSelling"));
 const AFHRegulationsCompliance = lazy(() => import("./pages/AFHRegulationsCompliance"));
+const AFHMarketReportHub = lazy(() => import("./pages/afh-club/MarketReportHub"));
+const AFHMarketReportEdition = lazy(() => import("./pages/afh-club/MarketReportEdition"));
+const AFHNewLicenses = lazy(() => import("./pages/afh-club/NewLicenses"));
 const AFHCaregiverBoard = lazy(() => import("./pages/afh-club/CaregiverBoard"));
 const AFHFindProfessional = lazy(() => import("./pages/AFHFindProfessional"));
 
@@ -661,6 +664,9 @@ export const AppRoutes = () => (
       <Route path="/afh-club/regulations-compliance" element={<AFHRegulationsCompliance />} />
       <Route path="/afh-club/find-a-professional" element={<AFHFindProfessional />} />
       <Route path="/afh-club/caregivers" element={<AFHCaregiverBoard />} />
+      <Route path="/afh-club/market-report" element={<AFHMarketReportHub />} />
+      <Route path="/afh-club/market-report/:edition" element={<AFHMarketReportEdition />} />
+      <Route path="/afh-club/new-licenses" element={<AFHNewLicenses />} />
       <Route path="/afh-club/calculators" element={<AFHCalculators />} />
       <Route path="/afh-club/afh-roi-calculator" element={<AFHROICalculator />} />
       <Route path="/afh-club/afh-valuation-estimator" element={<AFHValuationEstimator />} />

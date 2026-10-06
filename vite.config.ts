@@ -25,6 +25,7 @@ import AGING_PARENT_ROUTES from "./src/data/agingParentRoutes.json";
 import { FAMILY_SALE, FS_PRERENDER_SECTIONS, FS_FAQS } from "./src/data/familySaleEstate";
 import { STAY_HOME, SH_PRERENDER_SECTIONS, SH_FAQS } from "./src/data/stayHomeCost";
 import { FIFTY_FIVE, FP_PRERENDER_SECTIONS, FP_FAQS } from "./src/data/fiftyFivePlus";
+import { EDITIONS as AFH_EDITIONS, LATEST as AFH_LATEST, LATEST_CHANGES as AFH_CHANGES, editionTitle, editionSummary, editionSections, editionPath, longDate as mktDate } from "./src/data/afhMarketReport";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
 import { countyResourcesPrerender } from "./src/data/countyOfficialResources";
@@ -1209,6 +1210,27 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       { q: "Is liability insurance required?", a: "Yes, under WAC 388-76-10191: general and professional liability of at least $500,000 per occurrence and $1,000,000 aggregate. At the 2019 and 2024 average per-bed premiums, a six-bed home paid about $1,900 to $2,840 per year." },
     ],
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
+  },
+  "/afh-club/market-report": {
+    title: "Washington Adult Family Home Market Report | AFH Club",
+    description: "A regular report on Washington adult family homes: licensed homes and beds from DSHS records, new licenses, ownership changes and closures, and adult family home sales.",
+    h1: "Washington AFH Market Report",
+    intro: `A regular look at Washington's adult family homes, built from DSHS licensing records and the adult family home sales reviewed on AFH Club. Latest edition, ${editionTitle(AFH_LATEST)}: ${editionSummary(AFH_LATEST)}`,
+    sections: AFH_EDITIONS.map((e) => `${editionTitle(e)} edition — ${editionSummary(e)} Full report: https://realpropertyplanning.com${editionPath(e)}`),
+  },
+  ...Object.fromEntries(AFH_EDITIONS.map((e) => [editionPath(e), {
+    title: `Washington Adult Family Home Market Report: ${editionTitle(e)} | AFH Club`,
+    description: editionSummary(e).slice(0, 300),
+    h1: `AFH Market Report: ${editionTitle(e)}`,
+    intro: editionSummary(e),
+    sections: editionSections(e),
+    article: { datePublished: e.published, dateModified: e.published },
+  }])),
+  "/afh-club/new-licenses": {
+    title: "Newly Licensed Adult Family Homes in Washington | AFH Club",
+    description: `Adult family homes newly licensed by DSHS in ${AFH_CHANGES.counties.join(", ")} counties, ${mktDate(AFH_CHANGES.from)} to ${mktDate(AFH_CHANGES.to)}, and homes that changed ownership, with links to each home's licensing record.`,
+    h1: "Newly Licensed Adult Family Homes",
+    intro: `Homes that appeared in DSHS adult family home licensing records in ${AFH_CHANGES.counties.join(", ")} counties between ${mktDate(AFH_CHANGES.from)} and ${mktDate(AFH_CHANGES.to)}: ${AFH_CHANGES.newHomes.length} newly licensed homes and ${AFH_CHANGES.ownershipChanges.length} new licenses at an address that had a different license (usually a change of ownership). ${AFH_CHANGES.closed.length} licenses ended. Updated after each DSHS download.`,
   },
   "/afh-club/caregivers": {
     title: "AFH Caregiver Board: Jobs and Caregivers in Washington | AFH Club",

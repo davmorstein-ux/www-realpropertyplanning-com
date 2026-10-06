@@ -70,6 +70,17 @@ const CountyDirectory = () => {
                 </Link>
                 .
               </p>
+              <p>
+                What changed recently:{" "}
+                <Link to="/afh-club/new-licenses" className="underline underline-offset-2 font-semibold">
+                  newly licensed homes and ownership changes
+                </Link>
+                , and the{" "}
+                <Link to="/afh-club/market-report" className="underline underline-offset-2 font-semibold">
+                  Washington AFH market report
+                </Link>
+                .
+              </p>
             </div>
           </div>
         </section>

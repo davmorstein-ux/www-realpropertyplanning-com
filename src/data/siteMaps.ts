@@ -296,6 +296,9 @@ export const AFH_SITE_MAP: SiteMapSection[] = dedupe([
           { title: "Recent AFH Sales", href: "/afh-club/sold" },
           { title: "Directory of Licensed Adult Family Homes", href: "/afh-club/homes" },
           { title: "Washington Adult Family Homes by the Numbers", href: "/afh-club/washington-afh-data" },
+          { title: "Washington AFH Market Report", href: "/afh-club/market-report" },
+          { title: "AFH Market Report: October 2026", href: "/afh-club/market-report/2026-10" },
+          { title: "Newly Licensed Adult Family Homes", href: "/afh-club/new-licenses" },
         ],
       },
       {

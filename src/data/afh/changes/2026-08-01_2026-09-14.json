@@ -1,0 +1,773 @@
+{
+ "from": "2026-08-01",
+ "to": "2026-09-14",
+ "counties": [
+  "King",
+  "Pierce",
+  "Snohomish"
+ ],
+ "newHomes": [
+  {
+   "license": "759319",
+   "county": "Pierce",
+   "citySlug": "lakewood",
+   "slug": "genesis-manor-759319",
+   "street": "8423 116th St Sw",
+   "beds": 6,
+   "name": "Genesis Manor LLC",
+   "city": "Lakewood"
+  },
+  {
+   "license": "759315",
+   "county": "Pierce",
+   "citySlug": "tacoma",
+   "slug": "the-prestige-manor-care-adult-family-home-759315",
+   "street": "16822 36th Ave E",
+   "beds": 6,
+   "name": "The Prestige Manor Care Adult Family Home LLC",
+   "city": "Tacoma"
+  },
+  {
+   "license": "759310",
+   "county": "King",
+   "citySlug": "renton",
+   "slug": "aurora-haven-adult-family-home-759310",
+   "street": "16855 146th Ave Se",
+   "beds": 6,
+   "name": "Aurora Haven Adult Family Home LLC",
+   "city": "Renton"
+  },
+  {
+   "license": "759304",
+   "county": "Pierce",
+   "citySlug": "tacoma",
+   "slug": "aplus-adult-family-home-759304",
+   "street": "5064 33rd Ct Ne",
+   "beds": 6,
+   "name": "Aplus Adult Family Home LLC",
+   "city": "Tacoma"
+  },
+  {
+   "license": "759303",
+   "county": "Pierce",
+   "citySlug": "puyallup",
+   "slug": "compassionate-planet-759303",
+   "street": "16909 124th Avenue Ct E",
+   "beds": 6,
+   "name": "Compassionate Planet LLC",
+   "city": "Puyallup"
+  },
+  {
+   "license": "759294",
+   "county": "Pierce",
+   "citySlug": "tacoma",
+   "slug": "t-and-m-loving-arms-afh-759294",
+   "street": "605 133rd St S",
+   "beds": 6,
+   "name": "T & M Loving Arms AFH LLC",
+   "city": "Tacoma"
+  },
+  {
+   "license": "759293",
+   "county": "Snohomish",
+   "citySlug": "mountlake-terrace",
+   "slug": "new-horizon-adult-family-home-759293",
+   "street": "23502 Peterson Dr",
+   "beds": 6,
+   "name": "New Horizon Adult Family Home LLC",
+   "city": "Mountlake Terrace"
+  },
+  {
+   "license": "759289",
+   "county": "King",
+   "citySlug": "kent",
+   "slug": "the-safe-care-afh-759289",
+   "street": "11613 Se 225th St",
+   "beds": 3,
+   "name": "The Safe Care AFH LLC",
+   "city": "Kent"
+  },
+  {
+   "license": "759288",
+   "county": "King",
+   "citySlug": "federal-way",
+   "slug": "serene-ii-adult-family-home-759288",
+   "street": "31412 31st Ave Sw",
+   "beds": 6,
+   "name": "Serene II Adult Family Home",
+   "city": "Federal Way"
+  },
+  {
+   "license": "759287",
+   "county": "Pierce",
+   "citySlug": "lakewood",
+   "slug": "evermore-adult-family-home-759287",
+   "street": "6709 80th St Sw",
+   "beds": 6,
+   "name": "Evermore Adult Family Home, LLC",
+   "city": "Lakewood"
+  },
+  {
+   "license": "759286",
+   "county": "Snohomish",
+   "citySlug": "everett",
+   "slug": "cabu-afh-759286",
+   "street": "410 88th St Se",
+   "beds": 4,
+   "name": "Cabu AFH LLC",
+   "city": "Everett"
+  },
+  {
+   "license": "759285",
+   "county": "King",
+   "citySlug": "seatac",
+   "slug": "khan-care-2-afh-759285",
+   "street": "17732 46th Ave S",
+   "beds": 6,
+   "name": "Khan care 2 AFH LLC",
+   "city": "Seatac"
+  },
+  {
+   "license": "759283",
+   "county": "Pierce",
+   "citySlug": "puyallup",
+   "slug": "adorable-care-759283",
+   "street": "17409 85th Avenue Ct E",
+   "beds": 6,
+   "name": "Adorable Care LLC",
+   "city": "Puyallup"
+  },
+  {
+   "license": "759281",
+   "county": "Snohomish",
+   "citySlug": "everett",
+   "slug": "tesfa-afh-759281",
+   "street": "804 91st Pl Se",
+   "beds": 6,
+   "name": "Tesfa AFH LLC",
+   "city": "Everett"
+  },
+  {
+   "license": "759280",
+   "county": "Snohomish",
+   "citySlug": "everett",
+   "slug": "peaceful-care-adult-family-home-759280",
+   "street": "2325 100th St Se",
+   "beds": 6,
+   "name": "Peaceful Care Adult Family Home LLC",
+   "city": "Everett"
+  },
+  {
+   "license": "759278",
+   "county": "King",
+   "citySlug": "kent",
+   "slug": "aman-afh-759278",
+   "street": "4102 Somerset Ln",
+   "beds": 6,
+   "name": "Aman AFH LLC",
+   "city": "Kent"
+  },
+  {
+   "license": "759276",
+   "county": "King",
+   "citySlug": "federal-way",
+   "slug": "caring-heart-1-adult-family-home-759276",
+   "street": "3815 Sw 321st St",
+   "beds": 6,
+   "name": "Caring Heart 1 Adult Family Home",
+   "city": "Federal Way"
+  },
+  {
+   "license": "759275",
+   "county": "Pierce",
+   "citySlug": "puyallup",
+   "slug": "the-cardinals-cottage-adult-family-home-759275",
+   "street": "1015 14th St Nw",
+   "beds": 6,
+   "name": "The Cardinals Cottage Adult Family Home LLC",
+   "city": "Puyallup"
+  },
+  {
+   "license": "759270",
+   "county": "Pierce",
+   "citySlug": "puyallup",
+   "slug": "alderbrook-afh-759270",
+   "street": "2914 Alderbrook Ct S",
+   "beds": 6,
+   "name": "Alderbrook AFH LLC",
+   "city": "Puyallup"
+  },
+  {
+   "license": "759269",
+   "county": "Pierce",
+   "citySlug": "tacoma",
+   "slug": "1st-horizon-sky-afh-759269",
+   "street": "421 114th St S",
+   "beds": 6,
+   "name": "1St Horizon Sky AFH",
+   "city": "Tacoma"
+  },
+  {
+   "license": "759268",
+   "county": "Pierce",
+   "citySlug": "tacoma",
+   "slug": "edencare-adult-family-home-759268",
+   "street": "6715 S D St",
+   "beds": 6,
+   "name": "Edencare Adult Family Home LLC",
+   "city": "Tacoma"
+  },
+  {
+   "license": "759267",
+   "county": "King",
+   "citySlug": "maple-valley",
+   "slug": "1st-senior-care-afh-759267",
+   "street": "21221 Se 271st Pl",
+   "beds": 6,
+   "name": "1st Senior Care AFH LLC",
+   "city": "Maple Valley"
+  },
+  {
+   "license": "759266",
+   "county": "Snohomish",
+   "citySlug": "everett",
+   "slug": "warka-adult-family-home-759266",
+   "street": "10823 23rd Dr Se",
+   "beds": 6,
+   "name": "Warka Adult Family Home LLC",
+   "city": "Everett"
+  },
+  {
+   "license": "759264",
+   "county": "King",
+   "citySlug": "federal-way",
+   "slug": "golden-life-afh-759264",
+   "street": "835 Sw 312th St",
+   "beds": 6,
+   "name": "Golden Life AFH LLC",
+   "city": "Federal Way"
+  },
+  {
+   "license": "759262",
+   "county": "King",
+   "citySlug": "renton",
+   "slug": "safeside-homes-2-fairwood-759262",
+   "street": "15726 Se 168th St",
+   "beds": 6,
+   "name": "SafeSide Homes 2 - Fairwood",
+   "city": "Renton"
+  },
+  {
+   "license": "759259",
+   "county": "Pierce",
+   "citySlug": "puyallup",
+   "slug": "orchid-bee-afh-759259",
+   "street": "10819 152nd Street Ct E",
+   "beds": 6,
+   "name": "Orchid Bee AFH LLC",
+   "city": "Puyallup"
+  },
+  {
+   "license": "759258",
+   "county": "Pierce",
+   "citySlug": "puyallup",
+   "slug": "puyallup-loving-arms-afh-759258",
+   "street": "10024 140th Street Ct E",
+   "beds": 6,
+   "name": "Puyallup Loving Arms AFH LLC",
+   "city": "Puyallup"
+  },
+  {
+   "license": "759255",
+   "county": "Pierce",
+   "citySlug": "lakewood",
+   "slug": "heart-and-home-afh-759255",
+   "street": "7802 Jade Dr Sw",
+   "beds": 6,
+   "name": "Heart & Home AFH LLC",
+   "city": "Lakewood"
+  },
+  {
+   "license": "759252",
+   "county": "Snohomish",
+   "citySlug": "everett",
+   "slug": "umbrella-two-afh-759252",
+   "street": "10524 21st Ave Se",
+   "beds": 6,
+   "name": "Umbrella Two AFH LLC",
+   "city": "Everett"
+  },
+  {
+   "license": "759251",
+   "county": "King",
+   "citySlug": "auburn",
+   "slug": "hopevillas-inc-afh-759251",
+   "street": "1502 Dogwood St Se",
+   "beds": 6,
+   "name": "Hopevillas Inc AFH",
+   "city": "Auburn"
+  },
+  {
+   "license": "759248",
+   "county": "King",
+   "citySlug": "renton",
+   "slug": "ahlam-adult-family-home-759248",
+   "street": "17823 145th Ave Se",
+   "beds": 6,
+   "name": "Ahlam Adult Family Home, LLC",
+   "city": "Renton"
+  },
+  {
+   "license": "759247",
+   "county": "Snohomish",
+   "citySlug": "lake-stevens",
+   "slug": "lake-stevens-afh-759247",
+   "street": "11921 24th Pl Ne",
+   "beds": 4,
+   "name": "Lake Stevens AFH LLC",
+   "city": "Lake Stevens"
+  },
+  {
+   "license": "759246",
+   "county": "Pierce",
+   "citySlug": "puyallup",
+   "slug": "compassionate-afh-759246",
+   "street": "1415 2nd St Se",
+   "beds": 6,
+   "name": "Compassionate AFH",
+   "city": "Puyallup"
+  },
+  {
+   "license": "759243",
+   "county": "Snohomish",
+   "citySlug": "marysville",
+   "slug": "4-saron-adult-family-759243",
+   "street": "5830 92nd Pl Ne",
+   "beds": 6,
+   "name": "4 Saron Adult Family",
+   "city": "Marysville"
+  },
+  {
+   "license": "759238",
+   "county": "Snohomish",
+   "citySlug": "lynnwood",
+   "slug": "avalon-place-adult-family-home-759238",
+   "street": "17702 Spruce Way",
+   "beds": 6,
+   "name": "Avalon Place Adult Family Home LLC",
+   "city": "Lynnwood"
+  },
+  {
+   "license": "759237",
+   "county": "King",
+   "citySlug": "federal-way",
+   "slug": "gift-loving-care-adult-family-home-759237",
+   "street": "608 S 304th St",
+   "beds": 6,
+   "name": "Gift Loving Care Adult Family Home LLC",
+   "city": "Federal Way"
+  },
+  {
+   "license": "759236",
+   "county": "King",
+   "citySlug": "tukwila",
+   "slug": "soka-adult-family-homecare-759236",
+   "street": "14458 58th Ave S",
+   "beds": 5,
+   "name": "Soka Adult Family Homecare LLC",
+   "city": "Tukwila"
+  },
+  {
+   "license": "759235",
+   "county": "Pierce",
+   "citySlug": "lakewood",
+   "slug": "aleph-care-afh-759235",
+   "street": "9218 77th Street Ct Sw",
+   "beds": 6,
+   "name": "Aleph Care AFH",
+   "city": "Lakewood"
+  },
+  {
+   "license": "759234",
+   "county": "King",
+   "citySlug": "federal-way",
+   "slug": "full-of-love-afh-759234",
+   "street": "31904 42nd Ave Sw",
+   "beds": 6,
+   "name": "Full of Love AFH LLC",
+   "city": "Federal Way"
+  },
+  {
+   "license": "759231",
+   "county": "King",
+   "citySlug": "kent",
+   "slug": "khan-1-afh-759231",
+   "street": "20500 120th Ave Se",
+   "beds": 6,
+   "name": "Khan 1 AFH LLC",
+   "city": "Kent"
+  },
+  {
+   "license": "759228",
+   "county": "Snohomish",
+   "citySlug": "everett",
+   "slug": "ima-house-and-memory-care-759228",
+   "street": "9825 36th Dr Se",
+   "beds": 6,
+   "name": "Ima House and Memory Care LLC",
+   "city": "Everett"
+  },
+  {
+   "license": "759227",
+   "county": "Pierce",
+   "citySlug": "tacoma",
+   "slug": "fernhill-gardens-care-home-759227",
+   "street": "7902 Tacoma Ave S",
+   "beds": 6,
+   "name": "Fernhill Gardens Care Home LLC",
+   "city": "Tacoma"
+  },
+  {
+   "license": "759226",
+   "county": "Pierce",
+   "citySlug": "lakewood",
+   "slug": "dreamlight-759226",
+   "street": "3820 101st St Sw",
+   "beds": 6,
+   "name": "Dreamlight LLC",
+   "city": "Lakewood"
+  }
+ ],
+ "ownershipChanges": [
+  {
+   "license": "759309",
+   "county": "King",
+   "citySlug": "renton",
+   "slug": "aashri-care-home-759309",
+   "street": "322 S 15th St",
+   "beds": 6,
+   "name": "Aashri Care Home",
+   "city": "Renton",
+   "previousLicense": "755501",
+   "previousName": "Everest House Adult Family Home"
+  },
+  {
+   "license": "759308",
+   "county": "King",
+   "citySlug": "renton",
+   "slug": "everest-house-adult-family-home-ii-759308",
+   "street": "1622 Talbot Rd S",
+   "beds": 5,
+   "name": "Everest House Adult Family Home II",
+   "city": "Renton",
+   "previousLicense": "758827",
+   "previousName": "Prudent Care Adult Family Home LLC"
+  },
+  {
+   "license": "759307",
+   "county": "Pierce",
+   "citySlug": "puyallup",
+   "slug": "serenity-plus-afh-759307",
+   "street": "3015 26th Ave Se",
+   "beds": 6,
+   "name": "Serenity Plus AFH LLC",
+   "city": "Puyallup",
+   "previousLicense": "757367",
+   "previousName": "Blue Haven AFH of Puyallup LLC"
+  },
+  {
+   "license": "759305",
+   "county": "Pierce",
+   "citySlug": "puyallup",
+   "slug": "infinity-adult-family-home-759305",
+   "street": "1108 10th Ave Se",
+   "beds": 6,
+   "name": "Infinity Adult Family Home LLC",
+   "city": "Puyallup",
+   "previousLicense": "754069",
+   "previousName": "Infinity Adult Family Home LLC"
+  },
+  {
+   "license": "759302",
+   "county": "King",
+   "citySlug": "shoreline",
+   "slug": "carinos-love-adult-family-home-759302",
+   "street": "310 Ne 174th St",
+   "beds": 4,
+   "name": "Carinos Love Adult Family Home LLC",
+   "city": "Shoreline",
+   "previousLicense": "756666",
+   "previousName": "A Loving Care Adult Family Home LLC"
+  },
+  {
+   "license": "759301",
+   "county": "Snohomish",
+   "citySlug": "marysville",
+   "slug": "absolute-care-afh-759301",
+   "street": "10628 63rd Drive Ne",
+   "beds": 6,
+   "name": "Absolute Care AFH LLC",
+   "city": "Marysville",
+   "previousLicense": "755598",
+   "previousName": "Absolute Senior Care LLC"
+  },
+  {
+   "license": "759300",
+   "county": "King",
+   "citySlug": "federal-way",
+   "slug": "evolving-grace-adult-family-home-759300",
+   "street": "2315 S 292nd St",
+   "beds": 6,
+   "name": "Evolving Grace Adult Family Home LLC",
+   "city": "Federal Way",
+   "previousLicense": "757590",
+   "previousName": "Evolving Adult Home Care LLC"
+  },
+  {
+   "license": "759299",
+   "county": "King",
+   "citySlug": "auburn",
+   "slug": "buena-lavida-afh-759299",
+   "street": "2535 26th St Se",
+   "beds": 6,
+   "name": "Buena Lavida AFH",
+   "city": "Auburn",
+   "previousLicense": "757271",
+   "previousName": "Buena Lavida AFH LLC"
+  },
+  {
+   "license": "759282",
+   "county": "King",
+   "citySlug": "kent",
+   "slug": "el-shaddai-adult-family-home-759282",
+   "street": "9701 S 200th St",
+   "beds": 6,
+   "name": "EL Shaddai Adult Family Home LLC",
+   "city": "Kent",
+   "previousLicense": "757427",
+   "previousName": "Evergreen Senior Care Service LLC"
+  },
+  {
+   "license": "759273",
+   "county": "King",
+   "citySlug": "kent",
+   "slug": "md-care-adult-family-home-759273",
+   "street": "25039 21st Ave S",
+   "beds": 6,
+   "name": "MD Care Adult Family Home LLC",
+   "city": "Kent",
+   "previousLicense": "753706",
+   "previousName": "Divine Love Adult Family Home LLC"
+  },
+  {
+   "license": "759257",
+   "county": "King",
+   "citySlug": "kent",
+   "slug": "kent-loving-care-homes-afh-services-759257",
+   "street": "25225 32nd Pl S",
+   "beds": 6,
+   "name": "Kent Loving Care Homes AFH Services LLC",
+   "city": "Kent",
+   "previousLicense": "750754",
+   "previousName": "Kent Loving Care AFH"
+  },
+  {
+   "license": "759240",
+   "county": "King",
+   "citySlug": "shoreline",
+   "slug": "richmond-beach-afh-759240",
+   "street": "14519 Wallingford Ave N",
+   "beds": 6,
+   "name": "Richmond Beach AFH LLC",
+   "city": "Shoreline",
+   "previousLicense": "750117",
+   "previousName": "The Great Shepherds AFH 1"
+  },
+  {
+   "license": "759239",
+   "county": "Pierce",
+   "citySlug": "tacoma",
+   "slug": "love-and-care-afh-2025-759239",
+   "street": "1213 136th St E",
+   "beds": 6,
+   "name": "Love and Care AFH 2025 LLC",
+   "city": "Tacoma",
+   "previousLicense": "758126",
+   "previousName": "1213 Care Direct Homecare LLC"
+  },
+  {
+   "license": "759225",
+   "county": "Snohomish",
+   "citySlug": "bothell",
+   "slug": "loving-adult-family-home-759225",
+   "street": "21807 45th Ave Se - Unit B",
+   "beds": 8,
+   "name": "Loving Adult Family Home",
+   "city": "Bothell",
+   "previousLicense": "753568",
+   "previousName": "Loving Adult Family Home LLC"
+  }
+ ],
+ "closed": [
+  {
+   "license": "758838",
+   "county": "Pierce",
+   "citySlug": "lakewood",
+   "slug": "angel-caring-arms-adult-family-home-758838",
+   "street": "6425 Nyanza Park Dr Sw",
+   "beds": 6,
+   "name": "Angel Caring Arms Adult Family Home LLC",
+   "city": "Lakewood"
+  },
+  {
+   "license": "758370",
+   "county": "Snohomish",
+   "citySlug": "everett",
+   "slug": "tabor-758370",
+   "street": "7814 E Casino Rd",
+   "beds": 4,
+   "name": "Tabor LLC",
+   "city": "Everett"
+  },
+  {
+   "license": "758203",
+   "county": "King",
+   "citySlug": "federal-way",
+   "slug": "full-of-love-afh-758203",
+   "street": "31813 10th Pl Sw",
+   "beds": 6,
+   "name": "Full of Love AFH LLC",
+   "city": "Federal Way"
+  },
+  {
+   "license": "758048",
+   "county": "Snohomish",
+   "citySlug": "everett",
+   "slug": "naafiyo-758048",
+   "street": "3208 21st St",
+   "beds": 3,
+   "name": "Naafiyo LLC",
+   "city": "Everett"
+  },
+  {
+   "license": "757650",
+   "county": "Pierce",
+   "citySlug": "tacoma",
+   "slug": "evercare-homes-757650",
+   "street": "5825 S Pine St",
+   "beds": 6,
+   "name": "Evercare Homes LLC",
+   "city": "Tacoma"
+  },
+  {
+   "license": "757460",
+   "county": "Snohomish",
+   "citySlug": "marysville",
+   "slug": "ahadu-adult-family-home-757460",
+   "street": "4433 131st Pl Ne",
+   "beds": 6,
+   "name": "Ahadu Adult Family Home LLC",
+   "city": "Marysville"
+  },
+  {
+   "license": "757441",
+   "county": "Snohomish",
+   "citySlug": "marysville",
+   "slug": "assured-care-afh-757441",
+   "street": "8427 72nd Pl Ne",
+   "beds": 5,
+   "name": "Assured-Care AFH LLC",
+   "city": "Marysville"
+  },
+  {
+   "license": "757434",
+   "county": "King",
+   "citySlug": "seattle",
+   "slug": "ahlam-adult-family-home-757434",
+   "street": "11516 85th Ave S",
+   "beds": 6,
+   "name": "Ahlam Adult Family Home,llc",
+   "city": "Seattle"
+  },
+  {
+   "license": "757364",
+   "county": "Snohomish",
+   "citySlug": "marysville",
+   "slug": "wellness-retreat-afh-757364",
+   "street": "7718 92nd Pl Ne",
+   "beds": 4,
+   "name": "Wellness Retreat AFH",
+   "city": "Marysville"
+  },
+  {
+   "license": "757293",
+   "county": "Pierce",
+   "citySlug": "parkland",
+   "slug": "tule-lake-residential-center-757293",
+   "street": "13211 Tule Lake Ave S",
+   "beds": 6,
+   "name": "Tule Lake Residential Center",
+   "city": "Parkland"
+  },
+  {
+   "license": "757251",
+   "county": "Snohomish",
+   "citySlug": "lynnwood",
+   "slug": "genuine-care-adult-family-home-757251",
+   "street": "18311 58th Pl W",
+   "beds": 6,
+   "name": "Genuine Care Adult Family Home LLC",
+   "city": "Lynnwood"
+  },
+  {
+   "license": "757131",
+   "county": "King",
+   "citySlug": "kent",
+   "slug": "uplifted-horizons-afh-757131",
+   "street": "4206 S 245th Ct",
+   "beds": 6,
+   "name": "Uplifted Horizons AFH LLC",
+   "city": "Kent"
+  },
+  {
+   "license": "755801",
+   "county": "King",
+   "citySlug": "federal-way",
+   "slug": "twin-lake-afh-755801",
+   "street": "3775 Sw 319th St",
+   "beds": 6,
+   "name": "Twin Lake AFH LLC",
+   "city": "Federal Way"
+  },
+  {
+   "license": "755317",
+   "county": "Snohomish",
+   "citySlug": "marysville",
+   "slug": "silver-crest-adult-family-home-755317",
+   "street": "7120 61st Place Ne",
+   "beds": 6,
+   "name": "Silver Crest Adult Family Home LLC",
+   "city": "Marysville"
+  },
+  {
+   "license": "753170",
+   "county": "King",
+   "citySlug": "seattle",
+   "slug": "magnolia-home-care-753170",
+   "street": "2515 W Halladay St",
+   "beds": 3,
+   "name": "Magnolia Home Care",
+   "city": "Seattle"
+  },
+  {
+   "license": "751179",
+   "county": "Snohomish",
+   "citySlug": "marysville",
+   "slug": "winged-angels-adult-family-home-751179",
+   "street": "3607 100th Place Ne",
+   "beds": 5,
+   "name": "Winged Angels Adult Family Home",
+   "city": "Marysville"
+  }
+ ]
+}

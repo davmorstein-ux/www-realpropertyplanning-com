@@ -39,6 +39,8 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/afh-club/for-sale/renton-wa", label: "AFH For Sale Renton WA" },
   { path: "/afh-club/for-sale/seattle-wa", label: "AFH For Sale Seattle WA" },
   { path: "/afh-club/find-a-professional", label: "AFH Find Professional" },
+  { path: "/afh-club/market-report", label: "Washington AFH Market Report (licenses, ownership changes, sales)" },
+  { path: "/afh-club/new-licenses", label: "Newly Licensed Adult Family Homes" },
   { path: "/afh-club/caregivers", label: "AFH Caregiver Board (caregiver jobs, caregivers looking for work)" },
   { path: "/afh-club/getting-started", label: "AFH Getting Started" },
   { path: "/afh-club/licensing-certification", label: "AFH Licensing Certification" },

@@ -49,6 +49,18 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     links: ["/join-the-network", "/afh-club/caregivers"],
   },
   {
+    path: "/afh-club/market-report",
+    links: ["/afh-club/market-report/2026-10", "/afh-club/new-licenses", "/afh-club/homes", "/afh-club/listings", "/afh-club/sold", "/afh-club/washington-afh-data"],
+  },
+  {
+    path: "/afh-club/market-report/2026-10",
+    links: ["/afh-club/market-report", "/afh-club/new-licenses", "/afh-club/sold", "/afh-club/listings", "/afh-club/homes"],
+  },
+  {
+    path: "/afh-club/new-licenses",
+    links: ["/afh-club/market-report/2026-10", "/afh-club/homes"],
+  },
+  {
     path: "/afh-club/caregivers",
     links: ["/afh-club/find-a-professional", "/afh-club/washington-adult-family-home-guide/running"],
   },

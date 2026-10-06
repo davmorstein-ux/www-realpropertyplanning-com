@@ -1,0 +1,178 @@
+{
+ "edition": "2026-10",
+ "published": "2026-10-06",
+ "dshs": {
+  "asOf": "2026-09-14",
+  "homes": 6069,
+  "beds": 35306,
+  "counties": 35,
+  "avgBeds": 5.82,
+  "shares": {
+   "medicaid": 95.6,
+   "dementia": 98.4,
+   "mentalHealth": 97.8,
+   "developmentalDisabilities": 60.7,
+   "ecs": 48.9,
+   "sbs": 27.2
+  },
+  "topCounties": [
+   {
+    "county": "King",
+    "slug": "king",
+    "homes": 1819,
+    "beds": 10637
+   },
+   {
+    "county": "Snohomish",
+    "slug": "snohomish",
+    "homes": 1179,
+    "beds": 6826
+   },
+   {
+    "county": "Pierce",
+    "slug": "pierce",
+    "homes": 1075,
+    "beds": 6294
+   },
+   {
+    "county": "Spokane",
+    "slug": "spokane",
+    "homes": 608,
+    "beds": 3501
+   },
+   {
+    "county": "Clark",
+    "slug": "clark",
+    "homes": 564,
+    "beds": 3288
+   },
+   {
+    "county": "Thurston",
+    "slug": "thurston",
+    "homes": 312,
+    "beds": 1799
+   },
+   {
+    "county": "Benton",
+    "slug": "benton",
+    "homes": 79,
+    "beds": 458
+   },
+   {
+    "county": "Kitsap",
+    "slug": "kitsap",
+    "homes": 71,
+    "beds": 405
+   }
+  ]
+ },
+ "licensing": {
+  "from": "2026-08-01",
+  "to": "2026-09-14",
+  "counties": [
+   "King",
+   "Pierce",
+   "Snohomish"
+  ],
+  "newHomes": 43,
+  "ownershipChanges": 14,
+  "closed": 16,
+  "byCounty": [
+   {
+    "county": "King",
+    "newHomes": 15,
+    "ownershipChanges": 9,
+    "closed": 5
+   },
+   {
+    "county": "Pierce",
+    "newHomes": 18,
+    "ownershipChanges": 3,
+    "closed": 3
+   },
+   {
+    "county": "Snohomish",
+    "newHomes": 10,
+    "ownershipChanges": 2,
+    "closed": 8
+   }
+  ],
+  "changesFile": "2026-08-01_2026-09-14"
+ },
+ "sales": {
+  "asOf": "2026-10-03",
+  "since": "2025-10-03",
+  "onMarket": 20,
+  "pending": 6,
+  "onMarketCities": 19,
+  "sold": {
+   "count": 35,
+   "medianPrice": 850000,
+   "lowPrice": 440000,
+   "highPrice": 2800000,
+   "medianDaysOnMarket": 78,
+   "withDaysOnMarket": 35
+  },
+  "soldLicensed": {
+   "count": 24,
+   "medianPrice": 835000,
+   "lowPrice": 440000,
+   "highPrice": 2800000,
+   "medianDaysOnMarket": 99,
+   "withDaysOnMarket": 24
+  },
+  "soldOther": {
+   "count": 11,
+   "medianPrice": 850000,
+   "lowPrice": 489999,
+   "highPrice": 1500000,
+   "medianDaysOnMarket": 43,
+   "withDaysOnMarket": 11
+  },
+  "soldWithBusiness": 6,
+  "byQuarter": [
+   {
+    "quarter": "2025 Q4",
+    "count": 7
+   },
+   {
+    "quarter": "2026 Q1",
+    "count": 5
+   },
+   {
+    "quarter": "2026 Q2",
+    "count": 10
+   },
+   {
+    "quarter": "2026 Q3",
+    "count": 13
+   }
+  ],
+  "topCities": [
+   {
+    "city": "Tacoma",
+    "count": 5
+   },
+   {
+    "city": "Everett",
+    "count": 4
+   },
+   {
+    "city": "Kent",
+    "count": 4
+   },
+   {
+    "city": "Federal Way",
+    "count": 3
+   },
+   {
+    "city": "Lynnwood",
+    "count": 3
+   },
+   {
+    "city": "Bothell",
+    "count": 2
+   }
+  ]
+ }
+}
