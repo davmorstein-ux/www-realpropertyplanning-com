@@ -18,7 +18,7 @@
  */
 
 import { readFileSync } from "node:fs";
-import { readableAfhName } from "./lib/afh-display-name.mjs";
+import { readableAfhName, slugBaseName } from "./lib/afh-display-name.mjs";
 
 const SPECIALTY_MAP = {
   "dementia": "dementia",
@@ -207,7 +207,7 @@ export function parseLocator(text, county) {
       licenseNumber,
       name,
       displayName,
-      slug: toFacilitySlug(displayName, licenseNumber),
+      slug: toFacilitySlug(slugBaseName(name), licenseNumber), // slugs predate the display-name tidying; keep URLs stable
       address: { street: street ?? "", city, citySlug: slugify(city), state: "WA", zip, county },
       contactName,
       phone,

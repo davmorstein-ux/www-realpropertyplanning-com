@@ -17,7 +17,7 @@
  */
 
 import { readFileSync } from "node:fs";
-import { readableAfhName } from "./lib/afh-display-name.mjs";
+import { readableAfhName, slugBaseName } from "./lib/afh-display-name.mjs";
 
 const SPECIALTY_MAP = {
   "dementia": "dementia",
@@ -220,7 +220,7 @@ export function importExport(text, { retrievedAt = new Date().toISOString().slic
       licenseNumber,
       name,
       displayName,
-      slug: toFacilitySlug(displayName, licenseNumber),
+      slug: toFacilitySlug(slugBaseName(name), licenseNumber), // slugs predate the display-name tidying; keep URLs stable
       address: {
         street: titleCase(get(C.street)),
         city,

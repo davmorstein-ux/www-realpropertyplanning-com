@@ -45,10 +45,36 @@ function word(w, first) {
 }
 
 /** True when a name has letters and none of them are lower-case. */
-export const isAllCaps = (s) => /[A-Z]/.test(s) && !/[a-z]/.test(s);
+export const isAllCaps = (s) => {
+  const t = s.replace(/\d+(st|nd|rd|th)\b/gi, ""); // "1st EDMONDS BOWL" still counts
+  return /[A-Z]/.test(t) && !/[a-z]/.test(t);
+};
+
+/**
+ * The name as the import scripts cleaned it before Oct 5, 2026. Page addresses
+ * (slugs) are built from this, so tidying the displayed name never moves a URL.
+ */
+export const slugBaseName = (raw) => raw.replace(/^[\s#*·•\-–—]+/, "").replace(/\s{2,}/g, " ").trim();
+
+/**
+ * Remove the characters owners put in front of a name so it sorts first in the
+ * DSHS locator ("1 # Angel's Nest", "! Hebron AFH", "001 Aspen", "1st* Hope").
+ * Real numbers that are part of a name stay: "1st Choice", "7th Heaven",
+ * "100 Acre", and branch numbers such as "Better Place AFH #2".
+ */
+export function stripSortPrefix(name) {
+  let s = name
+    .replace(/^[\s!*@#·•.\-–—]+/, "") // leading symbols
+    .replace(/^0+\d*\s+/, "") // leading zeros: 00001, 001, 01
+    .replace(/^1\s*[#*!][\s#*!]*/, "") // "1 # ", "1* ", "1 ! * "
+    .replace(/^(1st)\s*\*+\s*/i, "$1 "); // "1st* Hope" -> "1st Hope"
+  s = s.replace(/^[\s!*@#]+/, "").trim();
+  if (s === name) return name; // nothing removed: keep the owner's own styling ("iCare")
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
 
 export function readableAfhName(raw) {
-  const clean = raw.replace(/^[\s#*·•\-–—]+/, "").replace(/\s{2,}/g, " ").trim();
+  const clean = stripSortPrefix(slugBaseName(raw));
   if (!isAllCaps(clean)) return clean;
   return clean.split(" ").map((w, i) => word(w, i === 0)).join(" ");
 }
