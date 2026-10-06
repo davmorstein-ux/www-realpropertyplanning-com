@@ -777,7 +777,7 @@ function acquisitionReview(a: Answers): AcquisitionReview | null {
   else if (a.aqPrograms !== "none") {
     known.push(a.aqPrograms === "lots" ? "A lot of the income relies on specialty contracts or CBHS tiers." : "Some income relies on specialty contracts or CBHS tiers.");
     ask.push("ECS and SBS contracts do not transfer to a buyer. What would you need to qualify for your own, and how long does it take?");
-    ask.push("For CBHS, ask the Health Care Authority and each resident's managed care plan what a new owner needs in place to be paid from the day of closing.");
+    ask.push("CBHS follows the resident, but a new owner needs its own Health Care Authority application and a contract with each resident's managed care plan. File with HCA early, and ask each plan how long contracting takes and whether payment is backdated to the new license date.");
   } else known.push("Little or none of the income relies on specialty contracts or CBHS tiers.");
 
   if (a.aqFinancials === "yes") known.push("You have seen at least 12 months of financial statements.");

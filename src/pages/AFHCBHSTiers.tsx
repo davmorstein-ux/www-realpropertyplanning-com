@@ -17,8 +17,14 @@ import { AFH_CBA_SOURCE, SUPPORTIVE_SUPERVISION_TIERS } from "@/data/afhBehavior
  * managed care organizations "shall pay" these per diems and that single case
  * agreements "will strictly adhere" to them, so the rate does not vary by home.
  *
- * STILL OPEN: exactly what a new owner must have in place for CBHS payments to
- * continue after a change of ownership. Posed to the reader as a question.
+ * CHANGE OF OWNERSHIP (added Oct 6, 2026) from DSHS's written answers of
+ * Oct 6, 2026: the authorization follows the client, and the case manager tells
+ * the MCO the provider changed; the new owner completes an HCA application and
+ * contracts with the MCO; the HCA application can be filed before closing
+ * (flagged as a CHOW) but is usually not approved until the DSHS contract is in
+ * place, and MCOs do not start contracting until the HCA application is.
+ * STILL OPEN: whether MCO payment is backdated to the new license date. Posed
+ * to the reader as a question.
  */
 
 const usd = (n: number, d = 2) => n.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: d, maximumFractionDigits: d });
@@ -32,7 +38,8 @@ const FAQS = [
   { question: "Is a CBHS tier the same as a CARE classification?", answer: "No. The CARE classification (A Low through E High) is assigned by DSHS and sets the base daily rate for every Medicaid resident. A CBHS tier is a separate benefit for residents with qualifying behavioral needs. It covers supportive supervision only, not personal care or room and board." },
   { question: "Does every AFH receive CBHS payments?", answer: "No. The tier belongs to the individual resident, and only residents who meet the eligibility criteria have one. Two homes identical in size, location and licensing can have very different CBHS income depending on who lives there." },
   { question: "Can a resident's CBHS tier change?", answer: "Yes. Eligibility is reviewed at least once every 12 months, and a resident may be moved to a different tier. A home that believes a resident is in the wrong tier can submit a re-tiering request to the payer. If a resident moves out, the payment leaves with them." },
-  { question: "What should a buyer verify about CBHS income?", answer: "Which residents carry a tier and when each was last reviewed; that the required daily service logs exist and the hours delivered line up with the tier being paid; what staffing supports those hours; how concentrated the income is; and what the new owner must have in place with the Health Care Authority and the managed care plans for payments to continue after closing." },
+  { question: "What should a buyer verify about CBHS income?", answer: "Which residents carry a tier and when each was last reviewed; that the required daily service logs exist and the hours delivered line up with the tier being paid; what staffing supports those hours; how concentrated the income is; and how soon the new owner can be contracted with each resident's managed care plan, since CBHS payments depend on it after closing." },
+  { question: "Does CBHS continue after an adult family home is sold?", answer: "The resident's CBHS authorization follows the resident, not the provider, so residents do not need a new assessment or authorization because the home changed hands. DSHS staff confirmed in October 2026 that the resident's case manager notifies the managed care plan of the new provider. The new owner must complete a Health Care Authority application and contract with the managed care plan before it can be paid. The HCA application can be filed before closing, but HCA usually does not approve it until the new owner's DSHS contract is in place, and the plans do not start contracting until the HCA application is in place." },
 ];
 
 const AFHCBHSTiers = () => (
@@ -43,7 +50,7 @@ const AFHCBHSTiers = () => (
     eyebrow="For buyers, sellers & owners"
     lede="If an adult family home owner talks about Tier 2 or Tier 4 residents, this is almost certainly the system they mean. It is separate from the A through E classification that sets the base rate."
     cover={{ src: "/afh-cbhs-tiers-cover.webp", alt: "CBHS Tiers: The Add-On Buyers Overlook — understand, qualify, staff, sustain" }}
-    dateModified="2026-09-19"
+    dateModified="2026-10-06"
     faqs={FAQS}
     faqHeading="CBHS Tiers: Common Questions"
     disclaimer="This page is general educational information for people buying, selling, or operating an adult family home. It is not legal, financial, clinical, or reimbursement advice. Rates shown are the negotiated per diems in effect through June 30, 2027; tier and eligibility are decided by the Health Care Authority and the managed care organizations, not by this page. Confirm current rules, rates, and contracting requirements with the Washington State Health Care Authority and the relevant managed care organizations."
@@ -105,13 +112,26 @@ const AFHCBHSTiers = () => (
       For all of those reasons, annualizing last month's CBHS deposits overstates what a buyer can count on.
     </p>
 
+    <h2 style={gs.h2}>When the home is sold</h2>
+    <p style={gs.p}>
+      DSHS staff answered this in writing in October 2026.
+    </p>
+    <ul style={{ margin: "0 0 16px", paddingLeft: 22 }}>
+      <li style={gs.li}><strong>The authorization stays with the resident.</strong> A resident already receiving CBHS does not need a new eligibility assessment or a new authorization because the home has a new owner. The resident&apos;s DSHS case manager notifies the managed care plan that the provider has changed, and the plan contacts the new owner about contracting.</li>
+      <li style={gs.li}><strong>The new owner needs its own paperwork.</strong> To be paid without a gap, the new owner completes an application with the Health Care Authority and contracts with the managed care plan. A home whose CBHS residents are in different plans needs a contract with each.</li>
+      <li style={gs.li}><strong>The order is fixed.</strong> The buyer can file the HCA application before closing and should say on it that the buyer is going through a change of ownership and contracting with DSHS. HCA usually does not approve it until the new owner&apos;s DSHS contract is in place, and the plans do not start contracting until the HCA application is in place.</li>
+    </ul>
+    <p style={gs.p}>
+      In practice: a buyer should file with HCA as early as the change-of-ownership process allows, and ask each plan how long contracting takes once the license and DSHS contract are issued. Until that is known, budget for CBHS deposits to lag in the first weeks after closing.
+    </p>
+
     <h2 style={gs.h2}>Questions for buyers and sellers</h2>
     <ul style={{ margin: "0 0 16px", paddingLeft: 22 }}>
       <li style={gs.li}>Which residents carry a tier, and when was each last reviewed?</li>
       <li style={gs.li}>Do the daily service logs exist, and do the hours delivered line up with the tier being paid? A home paid at Tier 3 whose logs show two hours a day has a problem no buyer wants to inherit.</li>
       <li style={gs.li}>What staffing is in place to deliver those hours, and what does it cost?</li>
       <li style={gs.li}>How concentrated is the income: one Tier 4 resident, or several at lower tiers?</li>
-      <li style={gs.li}><strong>What does the new owner need in place with the Health Care Authority and the managed care plans before CBHS payments continue after closing?</strong> Get that answer in writing before relying on the income.</li>
+      <li style={gs.li}><strong>How long will the new owner's managed care contracts take, and is payment backdated to the new license date?</strong> Ask each resident's managed care plan before relying on the income in the first months after closing.</li>
     </ul>
     <p style={gs.p}>
       Sellers: having those answers organized before you list makes the income credible to a buyer's lender. See <Link to="/afh-club/how-to-finance-an-afh" style={gs.link}>How to Finance an Adult Family Home</Link> for how lenders test a home's income.

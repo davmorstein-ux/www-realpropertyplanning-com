@@ -22,7 +22,11 @@ import { AFH_SPECIALTY_RATES } from "@/data/afhBehavioralRates";
  * Status Sept 28, 2026 (DSHS residential policy reply of Sept 25, forwarded):
  *   - ECS/SBS before closing, and the 12-month rule for a first-time Medicaid
  *     contractor: routed to program managers Pamela Young / James Selby. OPEN.
- *   - CBHS contact at a change of ownership: routed to Ethan Leon. OPEN.
+ *   - CBHS at a change of ownership: ANSWERED Oct 6, 2026 (DSHS, in writing):
+ *     authorization follows the client; new owner needs an HCA application and
+ *     an MCO contract; HCA application can be filed before closing but is not
+ *     usually approved until the DSHS contract is in place. Detail on the CBHS
+ *     page. Still open: whether MCO payment is backdated to the license date.
  *   - How long the new license takes: ANSWERED Sept 28 (RCS, Colleen Jensen):
  *     DSHS will not estimate; a complete application avoids delays. DSHS's
  *     posted BAAU queue is quoted on the A-E page instead.
@@ -37,7 +41,7 @@ const FAQS = [
   { question: "Are Washington adult family homes classified as Tier 1 through Tier 5?", answer: "No. Homes are not tiered at all. The systems people call tiers are assigned to individual residents or, for specialty contracts, held by the owner. The numbered tiers an AFH owner usually means are CBHS supportive supervision tiers, which run 1 through 6 and apply only to residents with qualifying behavioral health needs." },
   { question: "What is the difference between a CARE classification and a CBHS tier?", answer: "A CARE classification (A Low through E High) is assigned by DSHS to every Medicaid resident and sets the base daily rate. A CBHS tier (1 through 6) is a separate Health Care Authority benefit for residents with qualifying behavioral needs, defined by hours of dedicated staff supervision per day, and paid in addition to the base rate." },
   { question: "What is the 2026 five-tier personal care rule I keep finding online?", answer: "It is part of Washington's long-term services presumptive eligibility program. It sets Tier 1 through 5 monthly personal care hours for people receiving care in their own home while their Medicaid application is processed. It does not apply to adult family home residents and has no effect on AFH income." },
-  { question: "Which AFH income survives a sale?", answer: "It depends on the system. Base CARE classifications follow each resident: DSHS contracting staff confirmed in September 2026 that residents do not need new assessments after a change of ownership, though each resident's authorization must be reissued under the new owner's ProviderOne number. CBHS tiers also follow the resident and are reviewed at least yearly. Specialty contracts such as ECS and SBS belong to the owner and do not transfer; a buyer needs its own, approved by DSHS program staff, and residents' other services continue but the specialty services do not unless the new owner is granted those contracts. Private-pay rates are set by the home and can be changed by the next owner." },
+  { question: "Which AFH income survives a sale?", answer: "It depends on the system. Base CARE classifications follow each resident: DSHS contracting staff confirmed in September 2026 that residents do not need new assessments after a change of ownership, though each resident's authorization must be reissued under the new owner's ProviderOne number. CBHS tiers also follow the resident and are reviewed at least yearly; the new owner needs its own Health Care Authority application and a contract with each resident's managed care plan before it can be paid. Specialty contracts such as ECS and SBS belong to the owner and do not transfer; a buyer needs its own, approved by DSHS program staff, and residents' other services continue but the specialty services do not unless the new owner is granted those contracts. Private-pay rates are set by the home and can be changed by the next owner." },
 ];
 
 const AFHPaymentFieldGuide = () => (
@@ -48,7 +52,7 @@ const AFHPaymentFieldGuide = () => (
     eyebrow="For buyers, sellers & owners"
     lede="Spend an afternoon with adult family home owners and you will hear about Tier 3 residents, C High, Level 4 care, and the ECS contract, sometimes in one sentence. These are not one system. They are four."
     cover={{ src: "/afh-field-guide-cover-v2.webp", alt: "Which Tier? The AFH Payment Field Guide — four separate systems: A–E classifications, CBHS tiers, specialty contracts, and private-pay levels" }}
-    dateModified="2026-09-25"
+    dateModified="2026-10-06"
     faqs={FAQS}
     faqHeading="AFH Tiers and Classifications: Common Questions"
     disclaimer="This page is general educational information for people buying, selling, or operating an adult family home. It is not legal, financial, or reimbursement advice. Program rules and rates change; confirm current details with DSHS and the Washington State Health Care Authority."
@@ -118,7 +122,7 @@ const AFHPaymentFieldGuide = () => (
       head={["System", "How often reviewed", "In a sale"]}
       rows={[
         ["CARE classification", "Reassessed as the resident's needs change", "Follows the resident. No new assessment; the authorization is reissued under the new owner"],
-        ["CBHS tier", "At least every 12 months", "Follows the resident; confirm what the new owner must have in place with HCA and the managed care plans"],
+        ["CBHS tier", "At least every 12 months", "Follows the resident; new owner needs an HCA application and a contract with each resident's managed care plan"],
         ["Specialty contract", "Held under contract terms", "Does not transfer. Buyer needs its own, approved by DSHS program staff"],
         ["Private-pay level", "Whenever the home reassesses", "A business decision the next owner can change"],
       ]}
