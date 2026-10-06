@@ -2091,12 +2091,13 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Business and building together — Why many retiring owners sell both as a single transaction, and what buyers are paying for in each piece: the house at its residential value, and the operation for its occupancy, staff, inspection record, and referral relationships. Specialty contracts and the Medicaid contract do not transfer.",
       "The license does not transfer — The buyer must complete training, certification, background checks, and a full DSHS application. Your timeline depends on theirs; a buyer who starts qualifying during the contract period closes faster.",
       "Why it takes longer — AFH sales run longer than a typical home sale: DSHS will not estimate how long a change-of-ownership license takes, and the seller must give DSHS and residents 60 days' written notice (WAC 388-76-10106). Plan retirement around the CHOW, not the closing date on the purchase agreement.",
+      "If the provider dies or can no longer run the home — The license does not pass to the family or estate. Every home must keep a written succession plan (WAC 388-76-10201), and DSHS handles each case individually, depending on the home's advance planning and business structure. In an emergency that forces a change of ownership, a person who qualifies to be a provider can apply for a provisional license to keep the home operating. Residents who must move get 30 days' notice unless staying would endanger them (WAC 388-76-10615 to 10617). A change of ownership keeps the building rules the home was first licensed under; a home that closes and reopens must meet current rules. Source: DSHS Residential Care Services licensing staff, October 2026.",
       "Valuing the business — An operating home can sell for more than the same house as a residence; a residential appraisal values only the real estate. Independent appraisal of the real estate and separate valuation of the business keep the two from being confused.",
     ],
     faq: [
       { q: "Can I sell the business and keep the building?", a: "Yes. Some owners lease the property to the new operator and keep the real estate as an investment. It separates the two assets and requires a written lease and a buyer able to qualify for the license." },
     ],
-    article: { datePublished: "2026-07-22", dateModified: "2026-09-28" },
+    article: { datePublished: "2026-07-22", dateModified: "2026-10-05" },
   },
 
   // ===== Final coverage gap-fill (6 routes missed by the bulk pass) =====

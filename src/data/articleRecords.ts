@@ -433,8 +433,9 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
     ],
   },
   "/afh-club/selling-your-business-at-retirement": {
-    reviewed: "2026-10-03",
+    reviewed: "2026-10-05",
     changes: [
+      { date: "2026-10-05", text: "Added what happens if the provider dies or can no longer run the home: the required succession plan, the provisional license, 30 days' notice for residents, and why keeping the home licensed through a sale matters, from written answers by DSHS licensing staff." },
       { date: "2026-10-03", text: "Added exit options beyond selling everything together: selling the business and leasing the house to the buyer, leasing to another operator (and how DSHS treats building rules at a change of ownership versus a lapsed license), a resident manager while the owner stays licensee, and a gradual handover." },
       { date: "2026-09-28", text: "Replaced general statements about resident notice with the rule: 60 days' written notice to DSHS and each resident and what it must say (WAC 388-76-10106), and the priority-processing waiver (10107). Added the seven- and eight-bed buyer rule (10032) and DSHS's processing queue. Corrected that licensing is \"already in place\" for a buyer, replaced \"home study\" with the DSHS inspection and \"Medicaid certification\" with the Medicaid/private-pay mix, and softened \"most owners\" and \"often nets more\"." },
     ],
@@ -445,6 +446,9 @@ export const ARTICLE_RECORDS: Record<string, ArticleRecordEntry> = {
       { label: "WAC 388-76-10107: priority processing", href: WAC("388-76-10107") },
       { label: "WAC 388-76-10130: 1,000 hours of direct care (provider, entity representative, resident manager)", href: WAC("388-76-10130") },
       DSHS_RCS_DOOR_ANSWER,
+      { label: "WAC 388-76-10201: succession plan and provisional license", href: WAC("388-76-10201") },
+      { label: "WAC 388-76-10616: notice before transfer or discharge", href: WAC("388-76-10616") },
+      { label: "Written answer from DSHS Residential Care Services licensing staff on a provider's death or incapacity (October 5, 2026)" },
       { label: "DSHS: BAAU application processing timeline", href: "https://www.dshs.wa.gov/altsa/baau-application-processing-timeline" },
       { label: "IRS Publication 544: sale of a business and Form 8594 allocation", href: "https://www.irs.gov/publications/p544" },
     ],

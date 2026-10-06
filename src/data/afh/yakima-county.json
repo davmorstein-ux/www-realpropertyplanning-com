@@ -2,7 +2,7 @@
   {
     "licenseNumber": "589700",
     "name": "A PART OF THE FAMILY TOO",
-    "displayName": "A PART OF THE FAMILY TOO",
+    "displayName": "A Part of the Family Too",
     "slug": "a-part-of-the-family-too-589700",
     "address": {
       "street": "412 Warrior Rd",
@@ -32,7 +32,7 @@
   {
     "licenseNumber": "621201",
     "name": "APPLE CREEK",
-    "displayName": "APPLE CREEK",
+    "displayName": "Apple Creek",
     "slug": "apple-creek-621201",
     "address": {
       "street": "525 W Washington Ave",
@@ -61,7 +61,7 @@
   {
     "licenseNumber": "621301",
     "name": "APPLE CREEK",
-    "displayName": "APPLE CREEK",
+    "displayName": "Apple Creek",
     "slug": "apple-creek-621301",
     "address": {
       "street": "517 West Washington Ave",
@@ -90,7 +90,7 @@
   {
     "licenseNumber": "621402",
     "name": "APPLE CREEK",
-    "displayName": "APPLE CREEK",
+    "displayName": "Apple Creek",
     "slug": "apple-creek-621402",
     "address": {
       "street": "521 W Washington Ave",
@@ -179,7 +179,7 @@
   {
     "licenseNumber": "751620",
     "name": "COVENANT HOUSE",
-    "displayName": "COVENANT HOUSE",
+    "displayName": "Covenant House",
     "slug": "covenant-house-751620",
     "address": {
       "street": "226 S 16th Ave",
@@ -208,7 +208,7 @@
   {
     "licenseNumber": "29800",
     "name": "DEAVER ADULT FOSTER HOME",
-    "displayName": "DEAVER ADULT FOSTER HOME",
+    "displayName": "Deaver Adult Foster Home",
     "slug": "deaver-adult-foster-home-29800",
     "address": {
       "street": "1213 Pleasant Ave",
@@ -235,7 +235,7 @@
   {
     "licenseNumber": "389901",
     "name": "HARMONY HOUSE AFH",
-    "displayName": "HARMONY HOUSE AFH",
+    "displayName": "Harmony House AFH",
     "slug": "harmony-house-afh-389901",
     "address": {
       "street": "1501 S 6th Ave",
@@ -265,7 +265,7 @@
   {
     "licenseNumber": "643600",
     "name": "HAWTHORN NORTH",
-    "displayName": "HAWTHORN NORTH",
+    "displayName": "Hawthorn North",
     "slug": "hawthorn-north-643600",
     "address": {
       "street": "1608 Drake Ct Apt D",
@@ -294,7 +294,7 @@
   {
     "licenseNumber": "570100",
     "name": "HAWTHORN SOUTH",
-    "displayName": "HAWTHORN SOUTH",
+    "displayName": "Hawthorn South",
     "slug": "hawthorn-south-570100",
     "address": {
       "street": "1608 Drake Ct Apt C",
@@ -354,7 +354,7 @@
   {
     "licenseNumber": "438300",
     "name": "HOLBROOK NORTH",
-    "displayName": "HOLBROOK NORTH",
+    "displayName": "Holbrook North",
     "slug": "holbrook-north-438300",
     "address": {
       "street": "1700 Cedar Hills Ct # A",
@@ -383,7 +383,7 @@
   {
     "licenseNumber": "444300",
     "name": "HOLBROOK SOUTH",
-    "displayName": "HOLBROOK SOUTH",
+    "displayName": "Holbrook South",
     "slug": "holbrook-south-444300",
     "address": {
       "street": "1700 Cedar Hills Ct #B",
@@ -412,7 +412,7 @@
   {
     "licenseNumber": "751619",
     "name": "IZZY'S ADULT FAMILY HOME",
-    "displayName": "IZZY'S ADULT FAMILY HOME",
+    "displayName": "Izzy's Adult Family Home",
     "slug": "izzys-adult-family-home-751619",
     "address": {
       "street": "600 S 83rd Ave",
@@ -529,7 +529,7 @@
   {
     "licenseNumber": "751882",
     "name": "LOVING HANDS ADULT FAMILY HOME",
-    "displayName": "LOVING HANDS ADULT FAMILY HOME",
+    "displayName": "Loving Hands Adult Family Home",
     "slug": "loving-hands-adult-family-home-751882",
     "address": {
       "street": "7504 W Chestnut Ave",
@@ -590,7 +590,7 @@
   {
     "licenseNumber": "158701",
     "name": "MILLIGAN HOUSE",
-    "displayName": "MILLIGAN HOUSE",
+    "displayName": "Milligan House",
     "slug": "milligan-house-158701",
     "address": {
       "street": "3504 Stanton Rd",
@@ -622,7 +622,7 @@
   {
     "licenseNumber": "208501",
     "name": "MIRANDA CARE",
-    "displayName": "MIRANDA CARE",
+    "displayName": "Miranda Care",
     "slug": "miranda-care-208501",
     "address": {
       "street": "601 N 39th St",
@@ -654,7 +654,7 @@
   {
     "licenseNumber": "602700",
     "name": "OAKRIDGE NORTH",
-    "displayName": "OAKRIDGE NORTH",
+    "displayName": "Oakridge North",
     "slug": "oakridge-north-602700",
     "address": {
       "street": "1608 Drake Ct Apt B",
@@ -683,7 +683,7 @@
   {
     "licenseNumber": "707300",
     "name": "OAKRIDGE SOUTH",
-    "displayName": "OAKRIDGE SOUTH",
+    "displayName": "Oakridge South",
     "slug": "oakridge-south-707300",
     "address": {
       "street": "1608 Drake Ct Apt A",
@@ -743,7 +743,7 @@
   {
     "licenseNumber": "444600",
     "name": "REESE'S RESIDENTIAL CARE AFH",
-    "displayName": "REESE'S RESIDENTIAL CARE AFH",
+    "displayName": "Reese's Residential Care AFH",
     "slug": "reeses-residential-care-afh-444600",
     "address": {
       "street": "9618 Mieras Rd",
@@ -773,7 +773,7 @@
   {
     "licenseNumber": "444400",
     "name": "ROCKENFIELD NORTH",
-    "displayName": "ROCKENFIELD NORTH",
+    "displayName": "Rockenfield North",
     "slug": "rockenfield-north-444400",
     "address": {
       "street": "1701 Cedar Hills Ct # A",
@@ -802,7 +802,7 @@
   {
     "licenseNumber": "444500",
     "name": "ROCKENFIELD SOUTH",
-    "displayName": "ROCKENFIELD SOUTH",
+    "displayName": "Rockenfield South",
     "slug": "rockenfield-south-444500",
     "address": {
       "street": "1701 Cedar Hills Ct #B",
@@ -831,7 +831,7 @@
   {
     "licenseNumber": "240700",
     "name": "ROSA'S ADULT FAMILY HOME",
-    "displayName": "ROSA'S ADULT FAMILY HOME",
+    "displayName": "Rosa's Adult Family Home",
     "slug": "rosas-adult-family-home-240700",
     "address": {
       "street": "817 S 6th St",
@@ -860,7 +860,7 @@
   {
     "licenseNumber": "751735",
     "name": "TAYONS ADULT FAMILY HOME",
-    "displayName": "TAYONS ADULT FAMILY HOME",
+    "displayName": "Tayons Adult Family Home",
     "slug": "tayons-adult-family-home-751735",
     "address": {
       "street": "880 Stover Rd",
@@ -948,7 +948,7 @@
   {
     "licenseNumber": "752148",
     "name": "TRANQUILITY SAINTS ADULT FAMILY HOME LLC",
-    "displayName": "TRANQUILITY SAINTS ADULT FAMILY HOME LLC",
+    "displayName": "Tranquility Saints Adult Family Home LLC",
     "slug": "tranquility-saints-adult-family-home-752148",
     "address": {
       "street": "431 Rainier View Lane",
@@ -1007,7 +1007,7 @@
   {
     "licenseNumber": "724700",
     "name": "YOUR HOME WITH US",
-    "displayName": "YOUR HOME WITH US",
+    "displayName": "Your Home With Us",
     "slug": "your-home-with-us-724700",
     "address": {
       "street": "7004 Mieras Rd",

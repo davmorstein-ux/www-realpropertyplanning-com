@@ -18,6 +18,7 @@
  */
 
 import { readFileSync } from "node:fs";
+import { readableAfhName } from "./lib/afh-display-name.mjs";
 
 const SPECIALTY_MAP = {
   "dementia": "dementia",
@@ -51,11 +52,10 @@ const CITY_CORRECTIONS = {
 };
 
 /** Strip the #, *, and space prefixes operators use to sort first in results. */
+/* All-caps names are also put into readable title case (Oct 5, 2026):
+   scripts/lib/afh-display-name.mjs. */
 function toDisplayName(raw) {
-  return raw
-    .replace(/^[\s#*·•\-–—]+/, "")
-    .replace(/\s{2,}/g, " ")
-    .trim();
+  return readableAfhName(raw);
 }
 
 function slugify(value) {

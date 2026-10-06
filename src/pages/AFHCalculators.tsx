@@ -126,7 +126,7 @@ const AFHCalculators: React.FC = () => {
         <section className="bg-white border-b border-slate-200 py-10 md:py-14">
           <div className="max-w-3xl mx-auto px-6">
             <HeroBandTitle as="h1">AFH Calculators</HeroBandTitle>
-            <ArticleCover src="/afh-calculators-cover-v4.webp" alt="Cover art: AFH Calculators" width={1024} height={1365} />
+            <ArticleCover src="/afh-calculators-cover-v5.webp" alt="Cover art: AFH Calculators" width={1024} height={1365} />
             <p className="text-[18px] md:text-[19px] text-slate-700 mt-4 leading-relaxed">
               Professional financial tools built exclusively for Washington State Adult Family Homes.
             </p>

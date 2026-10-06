@@ -66,6 +66,14 @@ const EXIT_OPTIONS = [
   },
 ];
 
+/* If the provider dies or can no longer run the home (Oct 5, 2026). Sources:
+   WAC 388-76-10201 (succession plan; provisional license, unchanged since WSR
+   20-05-016, checked Oct 5, 2026), WAC 388-76-10130, WAC 388-76-10615 to
+   -10617, and the written answer from DSHS Residential Care Services licensing
+   staff of Oct 5, 2026 (case by case; 30 days' notice; CHOW keeps original
+   building rules, a closed and reopened home meets current rules). */
+const WAC_URL = (c: string) => `https://app.leg.wa.gov/WAC/default.aspx?cite=${c}`;
+
 const faqs = [
   {
     question: "Do I have to sell the building when I sell my AFH business?",
@@ -93,6 +101,11 @@ const faqs = [
       "You must give DSHS and each resident (or their representative) written notice 60 calendar days before the proposed change of ownership. The notice names you and the buyer, the home, the date, the resident's right to decide whether to stay or move, and any change in policies or operations that could affect them — for example, whether the new owner will serve Medicaid residents (WAC 388-76-10106). If DSHS grants priority processing, which you can request in writing, it may waive the 60 days, but notice is still required as early as possible (WAC 388-76-10107). Medicaid residents who stay need no new assessment, but they need new authorizations under the new owner's ProviderOne number.",
   },
   {
+    question: "What happens to an adult family home if the provider dies?",
+    answer:
+      "The license does not pass to the provider's family or estate. Every home must keep a written succession plan for how residents will be cared for if the provider or entity representative can no longer do the job (WAC 388-76-10201), and DSHS handles each case individually, depending on the home's advance planning and business structure. If an emergency forces a change of ownership, a person who qualifies to be a provider can apply for a provisional license that lets the home keep operating. Residents who must move get 30 days' notice unless staying would endanger their health or safety. A change of ownership keeps the building rules the home was first licensed under; if the home closes first, a new home at that address must meet current rules.",
+  },
+  {
     question: "How long does it typically take to sell an AFH business and building?",
     answer:
       "AFH sales generally take longer than a typical residential sale, largely because of the buyer's DSHS license. DSHS will not estimate how long a change-of-ownership license takes; a complete application avoids delays. Its posted queue showed applications received in May 2026 being processed in late September 2026, processing can take up to 60 days once an application is complete, and most applicants do not pass the first inspection (DSHS allows at most three visits). Add the 60-day resident notice. Note that the buyer is applying for their own license through the Change of Ownership process rather than receiving yours — your license is not transferable. Building that timeline into your retirement planning, rather than assuming it'll move at typical real estate speed, avoids unwelcome surprises.",
@@ -115,7 +128,7 @@ const afhArticleSchema = {
   description: "Planning to retire from operating your Adult Family Home? Learn how to sell the business and building together, navigate the DSHS Change of Ownership process, and value your AFH accurately.",
   url: "https://realpropertyplanning.com/afh-club/selling-your-business-at-retirement",
   datePublished: "2026-07-22",
-  dateModified: "2026-10-03",
+  dateModified: "2026-10-05",
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: {
@@ -238,6 +251,66 @@ const AFHSellingBusinessAtRetirement = () => (
                 what a careful buyer will verify
               </Link>
               .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 md:py-20 bg-background" id="if-the-provider-dies">
+        <div className="container px-5 md:px-8">
+          <div className="max-w-3xl mx-auto text-foreground space-y-4">
+            <p className="text-gold font-bold tracking-[0.25em] uppercase text-sm md:text-[15px] mb-4 text-center">
+              Planning Ahead
+            </p>
+            <h2 className="font-serif text-[28px] md:text-[40px] lg:text-[44px] font-semibold text-navy leading-tight text-center mb-6">
+              If the provider dies or can no longer run the home
+            </h2>
+            <p>
+              The license belongs to the provider and does not pass to the family or the estate. That is why every
+              adult family home must keep a written succession plan: how the home will keep meeting the licensing
+              rules and caring for residents if the provider, or an LLC&apos;s entity representative, can no longer
+              do the job. DSHS can ask to see it at any time (
+              <a href={WAC_URL("388-76-10201")} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2" style={{ color: GREEN, fontWeight: 700 }}>WAC 388-76-10201</a>
+              ).
+            </p>
+            <p>
+              When it happens, DSHS handles the home case by case. What is possible depends on how well the home
+              planned ahead and how the business is set up. The requirements for who can serve as provider, entity
+              representative or resident manager are in{" "}
+              <a href={WAC_URL("388-76-10130")} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2" style={{ color: GREEN, fontWeight: 700 }}>WAC 388-76-10130</a>.
+            </p>
+            <ul className="space-y-3" style={{ listStyle: "disc", paddingLeft: 22 }}>
+              <li style={{ listStyle: "disc" }}>
+                <strong style={{ color: GREEN }}>A provisional license is possible.</strong> When an emergency
+                forces a change of ownership because the provider cannot continue, a person who qualifies to be a
+                provider can apply for a provisional license that lets the home keep operating while the change of
+                ownership goes through.
+              </li>
+              <li style={{ listStyle: "disc" }}>
+                <strong style={{ color: GREEN }}>Residents get 30 days&apos; notice.</strong> A resident who has to
+                move gets 30 days&apos; written notice, unless staying would endanger their health or safety (
+                <a href={WAC_URL("388-76-10616")} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2" style={{ color: GREEN, fontWeight: 700 }}>WAC 388-76-10615 to 10617</a>
+                ).
+              </li>
+              <li style={{ listStyle: "disc" }}>
+                <strong style={{ color: GREEN }}>Keeping the license through a sale matters.</strong> A change of
+                ownership keeps the building rules the home was first licensed under. If the home closes and a new
+                home later opens at the same address, it must meet current rules, such as the 27-inch interior doors
+                required of homes licensed after September 20, 2026. For a family selling after a death, a home that
+                stays licensed until a buyer takes over can be worth more than one that has closed.
+              </li>
+            </ul>
+            <p>
+              A succession plan that names who would step in, and how, is what the family and DSHS will work from,
+              so it is worth writing carefully. Who can sign for the estate is covered in{" "}
+              <Link to="/guides/who-has-authority-sell-probate-property-washington" className="underline underline-offset-2" style={{ color: GREEN, fontWeight: 700 }}>
+                who has authority to sell probate property
+              </Link>
+              .
+            </p>
+            <p className="text-[15px]" style={{ color: "#3f3a35" }}>
+              Source: written answers from DSHS Residential Care Services licensing staff, October 2026, and the WAC
+              sections linked above. General information, not legal advice.
             </p>
           </div>
         </div>

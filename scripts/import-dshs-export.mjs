@@ -17,6 +17,7 @@
  */
 
 import { readFileSync } from "node:fs";
+import { readableAfhName } from "./lib/afh-display-name.mjs";
 
 const SPECIALTY_MAP = {
   "dementia": "dementia",
@@ -46,8 +47,9 @@ const CITY_CORRECTIONS = {
 };
 
 /* Same helpers as parse-dshs-locator.mjs so slugs stay identical across sources. */
+/* All-caps names are put into readable title case: scripts/lib/afh-display-name.mjs. */
 function toDisplayName(raw) {
-  return raw.replace(/^[\s#*·•\-–—]+/, "").replace(/\s{2,}/g, " ").trim();
+  return readableAfhName(raw);
 }
 function slugify(value) {
   return value
