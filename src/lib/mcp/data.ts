@@ -10,6 +10,8 @@
  * be treated as an npm package), no Node APIs, nothing read at module load.
  */
 
+import type { ToolHandlerResult } from "@lovable.dev/mcp-js";
+
 export const SITE = "https://realpropertyplanning.com";
 const TTL_MS = 15 * 60 * 1000;
 
@@ -133,14 +135,27 @@ export const termPattern = (w: string) => {
   return `\\b(?:${alts.join("|")})`;
 };
 
-/** Text tool result plus the same object as structured content. */
-export const result = (data: unknown) => ({
-  content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }],
+/**
+ * Text tool result plus the same object as structured content.
+ *
+ * The asResult pass-through is load-bearing, not decoration. The bundler erases
+ * type annotations, so an object literal built inside this file emits
+ * `type: string` into the generated supabase/functions/mcp/index.ts, and Deno's
+ * check of that file rejects it against the SDK's ContentBlock (which needs the
+ * literal "text") — the whole function then fails to build. Handing the finished
+ * object to a pass-through instead leaves the value the handler returns untyped,
+ * which the check accepts. Keep asResult on both helpers, and keep
+ * "noImplicitAny": false in the root deno.json this depends on.
+ */
+const asResult = (r: ToolHandlerResult): ToolHandlerResult => r;
+
+export const result = (data: unknown): ToolHandlerResult => asResult({
+  content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
   structuredContent: data as Record<string, unknown>,
 });
 
-export const errorResult = (message: string) => ({
-  content: [{ type: "text" as const, text: message }],
+export const errorResult = (message: string): ToolHandlerResult => asResult({
+  content: [{ type: "text", text: message }],
   isError: true,
 });
 

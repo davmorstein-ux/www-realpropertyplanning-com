@@ -29,5 +29,6 @@ npx tsc --noEmit -p tsconfig.app.json
 ```
 - If `npm ci` 403s (private registry), use `npm install --no-package-lock --registry https://registry.npmjs.org`; do not commit lockfile changes.
 - The build regenerates `supabase/functions/mcp/index.ts` from `src/lib/mcp`. If you did not touch `src/lib/mcp` or `src/data/featuredProfessionals.ts`, discard that change; if you did, commit it and run `npx lovable-mcp-extract-manifest`.
+- Two things keep that generated file passing the platform's `deno check`: the root `deno.json` (it turns `noImplicitAny` off, because the bundler strips every annotation) and the `asResult` pass-through in `src/lib/mcp/data.ts` (without it the emitted tool results say `type: string` where the SDK needs the literal `"text"`). Both fail the same way — the whole function stops building — so never drop either one.
 - The MCP server is public with no sign-in, on purpose: every tool is read-only and returns only what is already on the public site, and outside AI assistants must be able to call it. A sign-in requirement added as a "security fix" on Oct 5, 2026 locked them all out and was reverted the same day at the owner's call. Do not add `auth` unless a tool ever exposes something private.
 - The Tailwind `Unexpected "section"` build warning is harmless.
