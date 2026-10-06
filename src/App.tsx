@@ -227,6 +227,7 @@ const AFHChoosingAnAdultFamilyHome = lazy(() => import("./pages/senior-living/Ch
 const AFHCostsFees = lazy(() => import("./pages/AFHCostsFees"));
 const AFHBuyingSelling = lazy(() => import("./pages/AFHBuyingSelling"));
 const AFHRegulationsCompliance = lazy(() => import("./pages/AFHRegulationsCompliance"));
+const AFHCaregiverBoard = lazy(() => import("./pages/afh-club/CaregiverBoard"));
 const AFHFindProfessional = lazy(() => import("./pages/AFHFindProfessional"));
 
 const AFHCalculators = lazy(() => import("./pages/AFHCalculators"));
@@ -659,6 +660,7 @@ export const AppRoutes = () => (
       <Route path="/afh-club/buying-selling" element={<AFHBuyingSelling />} />
       <Route path="/afh-club/regulations-compliance" element={<AFHRegulationsCompliance />} />
       <Route path="/afh-club/find-a-professional" element={<AFHFindProfessional />} />
+      <Route path="/afh-club/caregivers" element={<AFHCaregiverBoard />} />
       <Route path="/afh-club/calculators" element={<AFHCalculators />} />
       <Route path="/afh-club/afh-roi-calculator" element={<AFHROICalculator />} />
       <Route path="/afh-club/afh-valuation-estimator" element={<AFHValuationEstimator />} />

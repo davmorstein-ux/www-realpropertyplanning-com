@@ -107,6 +107,7 @@ export const PRIMARY_NAV: PrimaryNavEntry[] = [
       { name: "AFH Calculators", href: "/afh-club/calculators" },
       { name: "Licensing & Certification", href: "/afh-club/licensing-certification" },
       { name: "Find a Professional", href: "/afh-club/find-a-professional" },
+      { name: "Caregiver Job Board", href: "/afh-club/caregivers" },
     ],
   },
   {

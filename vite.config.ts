@@ -1210,6 +1210,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
     article: { datePublished: "2026-07-24", dateModified: "2026-09-28" },
   },
+  "/afh-club/caregivers": {
+    title: "AFH Caregiver Board: Jobs and Caregivers in Washington | AFH Club",
+    description: "A free board for Washington adult family homes hiring caregivers, and for caregivers looking for adult family home work. Posts are reviewed, contact details stay private, and every post expires after 30 days.",
+    h1: "AFH Caregiver Board",
+    intro: "A free place for Washington adult family homes looking for caregivers, resident managers and nurses, and for caregivers looking for adult family home work. Homes include their DSHS license number, which is checked before a post appears. Each post is reviewed and shows for 30 days. Phone numbers and email addresses are never shown; replies go through the site and are forwarded. The board is a connection resource only: it is not the employer, a staffing agency or a recruiter, and does not verify anyone's identity, credentials or background. Homes complete every hiring requirement themselves, including the DSHS background check, and can look up any caregiver credential on the Washington Department of Health provider credential search.",
+  },
   "/afh-club/find-a-professional": {
     title: "Find an AFH Professional | AFH Club | Real Property Planning",
     description: "Professionals who work with Washington adult family homes, each one met with personally: a real estate broker, a bookkeeper, an insurance broker, house cleaning, water damage restoration, and website design and marketing. No one pays to be listed. Plus what to look for when hiring a broker, appraiser, management company, CPA, attorney, or compliance consultant.",

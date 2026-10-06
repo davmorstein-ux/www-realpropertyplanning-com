@@ -399,6 +399,16 @@ const AFHFindProfessional = () => (
               <PersonCard key={person.id} person={person} professionLines={professionLines} />
             ))}
           </div>
+          {/* Caregiver board (Oct 5, 2026): staff are not listed as featured
+              professionals, so the board is pointed to under the grid instead. */}
+          <div style={{ height: 32 }} aria-hidden="true" />
+          <p className="rpp-afhpro-p" style={{ fontFamily: "'DM Sans', sans-serif", color: "#1c1917", maxWidth: 720 }}>
+            Looking for caregivers, or for adult family home work? Post or browse on the free{" "}
+            <Link to="/afh-club/caregivers" style={{ color: "#0a5648", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>
+              AFH Caregiver Job Board
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

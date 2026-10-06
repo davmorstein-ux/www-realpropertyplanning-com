@@ -46,7 +46,11 @@ export const SITEMAP_PAGES: SitemapPage[] = [
   },
   {
     path: "/afh-club/find-a-professional",
-    links: ["/join-the-network"],
+    links: ["/join-the-network", "/afh-club/caregivers"],
+  },
+  {
+    path: "/afh-club/caregivers",
+    links: ["/afh-club/find-a-professional", "/afh-club/washington-adult-family-home-guide/running"],
   },
   {
     path: "/afh-club/for-sale/auburn-wa",
