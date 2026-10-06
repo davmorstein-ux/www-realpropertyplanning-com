@@ -53,11 +53,12 @@ var termPattern = (w) => {
   const alts = [s, ...(SYNONYMS[s] ?? SYNONYMS[w] ?? []).map((x) => x.split(" ").map(stem).join(" "))];
   return `\\b(?:${alts.join("|")})`;
 };
-var result = (data) => Object.freeze({
+var asResult = (r) => r;
+var result = (data) => asResult({
   content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
   structuredContent: data
 });
-var errorResult = (message) => Object.freeze({
+var errorResult = (message) => asResult({
   content: [{ type: "text", text: message }],
   isError: true
 });

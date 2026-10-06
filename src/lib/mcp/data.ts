@@ -136,20 +136,24 @@ export const termPattern = (w: string) => {
 /**
  * Text tool result plus the same object as structured content.
  *
- * Object.freeze is load-bearing here, not decoration. The bundler erases type
- * annotations, so a plain literal emits `type: string` into the generated
- * supabase/functions/mcp/index.ts, and Deno's check of that file rejects it
- * against the SDK's ContentBlock (which needs the literal "text") — the whole
- * function then fails to build. freeze() is a real call that survives bundling
- * and keeps the literal type. Keep it on both helpers.
+ * The asResult pass-through is load-bearing, not decoration. The bundler erases
+ * type annotations, so an object literal built inside this file emits
+ * `type: string` into the generated supabase/functions/mcp/index.ts, and Deno's
+ * check of that file rejects it against the SDK's ContentBlock (which needs the
+ * literal "text") — the whole function then fails to build. Handing the finished
+ * object to a pass-through instead leaves the value the handler returns untyped,
+ * which the check accepts. Keep asResult on both helpers, and keep
+ * "noImplicitAny": false in the root deno.json this depends on.
  */
-export const result = (data: unknown) => Object.freeze({
-  content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }],
+const asResult = (r: ToolHandlerResult): ToolHandlerResult => r;
+
+export const result = (data: unknown): ToolHandlerResult => asResult({
+  content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
   structuredContent: data as Record<string, unknown>,
 });
 
-export const errorResult = (message: string) => Object.freeze({
-  content: [{ type: "text" as const, text: message }],
+export const errorResult = (message: string): ToolHandlerResult => asResult({
+  content: [{ type: "text", text: message }],
   isError: true,
 });
 
