@@ -10,6 +10,8 @@
  * be treated as an npm package), no Node APIs, nothing read at module load.
  */
 
+import type { ToolHandlerResult } from "@lovable.dev/mcp-js";
+
 export const SITE = "https://realpropertyplanning.com";
 const TTL_MS = 15 * 60 * 1000;
 
