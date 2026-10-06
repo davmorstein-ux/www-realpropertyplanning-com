@@ -322,21 +322,9 @@ const PrimaryNav = () => {
           color: var(--pn-color, #25597e) !important;
           outline: none;
         }
-        .rpp-pn-item.rpp-pn-item.is-current {
-          border-left-color: var(--pn-color, #25597e);
-          background: #f6f2ea;
-          color: var(--pn-color, #25597e) !important;
-        }
-        /* Only one row highlighted at a time (owner, Oct 5, 2026): the current
-           page and the hovered row looked identical, so pointing at another
-           item showed two highlights. While the pointer or keyboard focus is
-           on a different row, the current page's row goes back to plain. */
-        .rpp-pn-menu:hover .rpp-pn-item.rpp-pn-item.is-current:not(:hover),
-        .rpp-pn-menu:has(.rpp-pn-item:focus-visible) .rpp-pn-item.rpp-pn-item.is-current:not(:focus-visible) {
-          border-left-color: transparent;
-          background: transparent;
-          color: #272421 !important;
-        }
+        /* No standing highlight for the current page (owner, Oct 5, 2026):
+           a row lights up only while it is hovered or focused. The current
+           page is still announced to screen readers with aria-current. */
 
         @media (max-width: 950px) {
           .rpp-primarynav { display: none; }
@@ -426,6 +414,7 @@ const PrimaryNav = () => {
                     key={item.href + item.name}
                     to={item.href}
                     className={`rpp-pn-item rpp-pn-item bg-transparent${pathname === item.href ? " is-current" : ""}`}
+                    aria-current={pathname === item.href ? "page" : undefined}
                     onClick={() => setOpenIndex(null)}
                   >
                     {item.name}
