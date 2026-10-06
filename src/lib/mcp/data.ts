@@ -133,13 +133,22 @@ export const termPattern = (w: string) => {
   return `\\b(?:${alts.join("|")})`;
 };
 
-/** Text tool result plus the same object as structured content. */
-export const result = (data: unknown) => ({
+/**
+ * Text tool result plus the same object as structured content.
+ *
+ * Object.freeze is load-bearing here, not decoration. The bundler erases type
+ * annotations, so a plain literal emits `type: string` into the generated
+ * supabase/functions/mcp/index.ts, and Deno's check of that file rejects it
+ * against the SDK's ContentBlock (which needs the literal "text") — the whole
+ * function then fails to build. freeze() is a real call that survives bundling
+ * and keeps the literal type. Keep it on both helpers.
+ */
+export const result = (data: unknown) => Object.freeze({
   content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }],
   structuredContent: data as Record<string, unknown>,
 });
 
-export const errorResult = (message: string) => ({
+export const errorResult = (message: string) => Object.freeze({
   content: [{ type: "text" as const, text: message }],
   isError: true,
 });

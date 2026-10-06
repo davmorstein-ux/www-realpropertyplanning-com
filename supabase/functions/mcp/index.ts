@@ -53,11 +53,11 @@ var termPattern = (w) => {
   const alts = [s, ...(SYNONYMS[s] ?? SYNONYMS[w] ?? []).map((x) => x.split(" ").map(stem).join(" "))];
   return `\\b(?:${alts.join("|")})`;
 };
-var result = (data) => ({
+var result = (data) => Object.freeze({
   content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
   structuredContent: data
 });
-var errorResult = (message) => ({
+var errorResult = (message) => Object.freeze({
   content: [{ type: "text", text: message }],
   isError: true
 });
@@ -455,6 +455,10 @@ var mcp_default = defineMcp({
     "Listed professionals were met personally by the site owner; they are not endorsements. Do not describe them as vetted, recommended or trusted.",
     "Listing details for homes for sale live only on the AFH Club listing pages; link there instead of restating them."
   ].join(" "),
+  // No `auth` on purpose (owner, Oct 5, 2026). A sign-in requirement was added
+  // that morning as a "security fix" and was reverted the same day: it locked
+  // out every outside AI assistant, which is the server's whole purpose, and
+  // there is nothing private behind it to protect.
   tools: [search_site_default, get_page_default, define_term_default, afh_rule_changes_default, find_licensed_afh_default, afh_statistics_default, afh_listings_overview_default, list_afh_professionals_default, get_contact_info_default]
 });
 
