@@ -35,7 +35,58 @@ import { FEATURED_BROKER, brokerageAttribution, appraisalAttribution } from "@/d
  * Deleting the revision-2 block from index.css is the real fix for #2. These
  * styles make the page correct either way.
  */
+/* The three first-screen choices (Oct 7, 2026). */
+const CHOICES = [
+  {
+    title: "Buy a home",
+    sub: "Adult family homes for sale now, and what to check before you buy.",
+    href: "/afh-club/listings",
+    more: { label: "Buying guide", href: "/afh-club/washington-adult-family-home-guide/buying" },
+  },
+  {
+    title: "Sell a home",
+    sub: "How a sale works, what homes are selling for, and how to sell quietly.",
+    href: "/afh-club/washington-adult-family-home-guide/selling",
+    more: { label: "Recent sales", href: "/afh-club/sold" },
+  },
+  {
+    title: "Run a home",
+    sub: "Rules, payments, staffing and the professionals owners call.",
+    href: "/afh-club/washington-adult-family-home-guide/running",
+    more: { label: "Find a professional", href: "/afh-club/find-a-professional" },
+  },
+];
+
 const PAGE_CSS = `
+  /* WHAT BRINGS YOU HERE (Oct 7, 2026). Doubled classes and !important because
+     index.css forces margins and sizes on every section, h2, p and link. */
+  section.rpp-afh-choose.rpp-afh-choose { background: #f7f4ef; padding: 26px 20px 30px !important; border-bottom: 1px solid #e3ddd3; }
+  .rpp-afh-choose .rpp-afh-choose-inner { max-width: 1000px; margin: 0 auto; }
+  .rpp-afh-choose h2.rpp-afh-choose-heading.rpp-afh-choose-heading { font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif !important; font-size: clamp(24px, 3vw, 32px) !important; font-weight: 700 !important; line-height: 1.2 !important; color: #1c1917 !important; text-align: center; margin: 0 0 16px !important; }
+  .rpp-afh-choose ul.rpp-afh-choose-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 820px) { .rpp-afh-choose ul.rpp-afh-choose-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; } }
+  .rpp-afh-choose li.rpp-afh-choose-item { display: flex; flex-direction: column; gap: 6px; }
+  .rpp-afh-choose a.rpp-afh-choose-main.rpp-afh-choose-main { position: relative; display: block; background: #0a5648; color: #fff !important; border-radius: 12px; padding: 16px 48px 16px 18px; text-decoration: none !important; min-height: 64px; box-shadow: 0 6px 16px -10px rgba(10,86,72,.7); }
+  @media (hover: hover) { .rpp-afh-choose a.rpp-afh-choose-main.rpp-afh-choose-main:hover { background: #084539; } }
+  .rpp-afh-choose a.rpp-afh-choose-main:focus-visible { outline: 3px solid #f0b429; outline-offset: 2px; }
+  .rpp-afh-choose .rpp-afh-choose-title { display: block; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 22px !important; font-weight: 700; line-height: 1.2; color: #fff !important; }
+  .rpp-afh-choose .rpp-afh-choose-sub { display: block; margin-top: 4px; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16px !important; font-weight: 400; line-height: 1.4; color: #e6f1ee !important; }
+  .rpp-afh-choose .rpp-afh-choose-arrow { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 24px !important; color: #fff !important; }
+  .rpp-afh-choose a.rpp-afh-choose-more.rpp-afh-choose-more { align-self: flex-start; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16px !important; font-weight: 600; color: #0a5648 !important; text-decoration: underline !important; text-underline-offset: 3px; padding: 4px 2px; min-height: 32px; }
+  @media (max-width: 640px) {
+    section.rpp-afh-choose.rpp-afh-choose { padding: 18px 16px 22px !important; }
+    .rpp-afh-choose h2.rpp-afh-choose-heading.rpp-afh-choose-heading { font-size: 24px !important; margin: 0 0 12px !important; }
+    .rpp-afh-choose ul.rpp-afh-choose-list { gap: 10px; }
+    .rpp-afh-choose a.rpp-afh-choose-main.rpp-afh-choose-main { padding: 12px 44px 12px 16px; }
+    .rpp-afh-choose .rpp-afh-choose-title { font-size: 21px !important; }
+    .rpp-afh-choose .rpp-afh-choose-sub { font-size: 15px !important; margin-top: 2px; }
+    /* Phones: the smaller links move to one line under all three choices. */
+    .rpp-afh-choose a.rpp-afh-choose-more.rpp-afh-choose-more { display: none; }
+    .rpp-afh-choose p.rpp-afh-choose-also.rpp-afh-choose-also { display: block; }
+  }
+  .rpp-afh-choose p.rpp-afh-choose-also.rpp-afh-choose-also { display: none; font-family: 'DM Sans', 'DM Sans Fallback', system-ui, sans-serif; font-size: 16px !important; line-height: 1.6 !important; color: #1c1917 !important; text-align: center; margin: 12px 0 0 !important; }
+  .rpp-afh-choose p.rpp-afh-choose-also a { color: #0a5648 !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; font-size: 16px !important; }
+
   .rpp-afh-eyebrow.rpp-afh-eyebrow {
     font-size: 20px !important;
     font-family: 'DM Sans', 'DM Sans Fallback', sans-serif !important;
@@ -341,7 +392,10 @@ const PAGE_CSS = `
         url("/afh-hero-phone.webp");
       background-position: bottom center;
       background-size: auto 100%, cover;
-      padding: 24px 20px 190px;
+      /* Bottom padding shows the porch photo. 190px until Oct 7, 2026; 110px
+         now so the three "What brings you here?" choices reach the first
+         phone screen. The porch still shows beneath the wordmark. */
+      padding: 24px 20px 110px;
     }
     /* ── MOBILE LOCKUP ──────────────────────────────────────────────────
        All three elements — wordmark, subtitle line 2, and the rule — are
@@ -671,6 +725,38 @@ const AFHClub = () => {
               })()}
             </p>
             <hr className="rpp-afh-hero-rule" />
+          </div>
+        </section>
+
+        {/* ==================================================================
+            WHAT BRINGS YOU HERE — three choices, right under the hero (Oct 7,
+            2026, from the phone first-screen audit: the page opened with no
+            obvious next step). One destination each, plus one smaller link.
+            Everything below is unchanged.
+           ================================================================== */}
+        <section className="rpp-afh-choose" aria-labelledby="afh-choose-heading">
+          <div className="rpp-afh-choose-inner">
+            <h2 id="afh-choose-heading" className="rpp-afh-choose-heading">What brings you here?</h2>
+            <ul className="rpp-afh-choose-list">
+              {CHOICES.map((c) => (
+                <li key={c.href} className="rpp-afh-choose-item">
+                  <Link to={c.href} className="rpp-afh-choose-main">
+                    <span className="rpp-afh-choose-title">{c.title}</span>
+                    <span className="rpp-afh-choose-sub">{c.sub}</span>
+                    <span className="rpp-afh-choose-arrow" aria-hidden="true">→</span>
+                  </Link>
+                  <Link to={c.more.href} className="rpp-afh-choose-more">{c.more.label}</Link>
+                </li>
+              ))}
+            </ul>
+            <p className="rpp-afh-choose-also">
+              {CHOICES.map((c, i) => (
+                <span key={c.more.href}>
+                  {i > 0 && <span aria-hidden="true"> · </span>}
+                  <Link to={c.more.href}>{c.more.label}</Link>
+                </span>
+              ))}
+            </p>
           </div>
         </section>
 
