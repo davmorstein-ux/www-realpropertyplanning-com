@@ -1,5 +1,5 @@
 
-import { useEffect, useLayoutEffect, useState, useRef } from "react";
+import { Suspense, useEffect, useLayoutEffect, useState, useRef } from "react";
 
 /* Layout effect in the browser (runs before paint, so the phone header appears
    with no flicker); plain effect during the build-time render, where layout
@@ -8,7 +8,10 @@ const useBeforePaint = typeof window !== "undefined" ? useLayoutEffect : useEffe
 import { Link, useLocation } from "react-router-dom";
 import AFHClubQuickLinks from "@/components/AFHClubQuickLinks";
 import WaterfallNav from "./WaterfallNav";
-import SiteSearchBar from "./SiteSearchBar";
+import { lazy } from "@/lib/chunkRecovery";
+/* Loaded when search is opened (Oct 6, 2026): search sits behind an icon on
+   every screen size now, and its page index was 18 KB of every first download. */
+const SiteSearchBar = lazy(() => import("./SiteSearchBar"));
 import PrimaryNav from "./PrimaryNav";
 import { PRIMARY_NAV } from "@/lib/primaryNav";
 
@@ -338,10 +341,11 @@ const Header = () => {
                   style={{ display: "flex", alignItems: "center", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v9.webp"
+                    src="/rpp-logo-v9-640.webp"
+                    srcSet="/rpp-logo-v9-640.webp 640w, /rpp-logo-v9.webp 1608w"
                     alt=""
                     style={{ height: 38, width: "auto", maxWidth: "100%", display: "block", objectFit: "contain" }}
-                    sizes="100vw"
+                    sizes="185px"
                     decoding="async"
                     width={1608}
                     height={331}
@@ -443,7 +447,7 @@ const Header = () => {
 
             {searchOpen && (
               <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(39,36,33,0.12)" }}>
-                <SiteSearchBar autoFocus />
+                <Suspense fallback={<div style={{ height: 48 }} />}><SiteSearchBar autoFocus /></Suspense>
               </div>
             )}
           </>
@@ -482,7 +486,8 @@ const Header = () => {
                   style={{ display: "block", position: "relative" }}
                 >
                   <img
-                    src="/rpp-logo-v9.webp"
+                    src="/rpp-logo-v9-640.webp"
+                    srcSet="/rpp-logo-v9-640.webp 640w, /rpp-logo-v9.webp 1608w"
                     alt=""
                     style={{
                       width: "100%",
@@ -490,7 +495,9 @@ const Header = () => {
                       display: "block",
                       objectFit: "contain",
                     }}
-                    sizes="100vw"
+                    /* Displayed about 292px wide; the 640px file covers 2x
+                       screens (Oct 6, 2026; the 1608px original was 36 KB). */
+                    sizes="292px"
                     decoding="async"
                     width={1608}
                     height={331}
@@ -543,7 +550,7 @@ const Header = () => {
                       zIndex: 60,
                     }}
                   >
-                    <SiteSearchBar autoFocus />
+                    <Suspense fallback={<div style={{ height: 48 }} />}><SiteSearchBar autoFocus /></Suspense>
                   </div>
                 )}
                 {/* The header's one action, in the hub's voice. */}

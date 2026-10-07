@@ -17,19 +17,17 @@
 import { PassThrough } from "node:stream";
 import { renderToPipeableStream } from "react-dom/server";
 import { HelmetProvider, type HelmetServerState } from "react-helmet-async";
-import { QueryClient } from "@tanstack/react-query";
 import App from "./App";
 import "./i18n/config";
 
 /** The page body plus any JSON-LD the page adds through react-helmet-async. */
 export function render(url: string): Promise<{ html: string; jsonLd: string[] }> {
-  const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
   const helmetContext: { helmet?: HelmetServerState } = {};
   return new Promise((resolve, reject) => {
     let failed: unknown = null;
     const { pipe, abort } = renderToPipeableStream(
       <HelmetProvider context={helmetContext}>
-        <App location={url} client={queryClient} />
+        <App location={url} />
       </HelmetProvider>,
       {
         onAllReady() {

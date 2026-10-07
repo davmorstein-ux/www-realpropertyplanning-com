@@ -1,6 +1,5 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 
 import en from "./locales/en.json";
 
@@ -15,7 +14,6 @@ export const SUPPORTED_LANGUAGES = [
 export type SupportedLanguageCode = (typeof SUPPORTED_LANGUAGES)[number]["code"];
 
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
@@ -26,13 +24,9 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    // Language is driven explicitly by the URL path prefix (see
-    // LanguageRouteSync in App.tsx), not by browser auto-detection —
-    // this keeps the URL and displayed language always in sync, which
-    // matters for SEO (each language gets its own indexable URLs).
-    detection: {
-      order: [],
-    },
+    // No browser language detection: English only, and the detector library
+    // (with detection switched off) was 35 KB of every page's first download.
+    // Removed Oct 6, 2026.
   });
 
 export default i18n;

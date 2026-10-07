@@ -16,6 +16,19 @@ import tilePlanning from "@/assets/tiles/tile-planning-ahead.webp";
 import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
 import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
 import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
+/* 640px copies (Oct 6, 2026): the tiles show at about 180px wide on phones and
+   260px on desktop (half the 1040px grid below 1024px), so the full-size files
+   were two to four times what most screens used. */
+import tilePlanningSm from "@/assets/tiles/tile-planning-ahead-640.webp";
+import tileHelpingSm from "@/assets/tiles/tile-helping-loved-one-640.webp";
+import tileEstateSm from "@/assets/tiles/tile-handling-estate-640.webp";
+import tileProfessionalsSm from "@/assets/tiles/tile-find-professionals-640.webp";
+const TILE_SMALL: Record<string, string> = {
+  [tilePlanning]: tilePlanningSm,
+  [tileHelping]: tileHelpingSm,
+  [tileEstate]: tileEstateSm,
+  [tileProfessionals]: tileProfessionalsSm,
+};
 import HomepagePopularResources from "@/components/HomepagePopularResources";
 import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
@@ -348,7 +361,9 @@ const RPPHomeV3 = () => {
                               height attributes are the photos' real proportions
                               so the browser reserves the space before they load. */}
                           <img
-                            src={imgSrc}
+                            src={TILE_SMALL[imgSrc] ?? imgSrc}
+                            srcSet={TILE_SMALL[imgSrc] ? `${TILE_SMALL[imgSrc]} 640w, ${imgSrc} 1160w` : undefined}
+                            sizes="(max-width: 1023px) 50vw, 260px"
                             alt={imgAlt}
                             loading="lazy"
                             width={1160}

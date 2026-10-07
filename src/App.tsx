@@ -1,18 +1,11 @@
 import { REDIRECTS } from "./data/redirects";
 import { Suspense } from "react";
 import { lazy } from "@/lib/chunkRecovery";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import RPPHome from "./pages/RPPHome";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, StaticRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState, type ReactNode } from "react";
 import ScrollToTop from "./components/ScrollToTop";
-import RPPHomeV2 from "./pages/RPPHomeV2";
 import RPPHomeV3 from "./pages/RPPHomeV3";
 import LanguageRoute from "./components/LanguageRoute";
-import Privacy from "./pages/Privacy";
-import HomepageFinal from "./pages/HomepageFinal";
 
 // All other routes are lazy-loaded so the homepage bundle stays small.
 const ProbateEstateSales = lazy(() => import("./pages/ProbateEstateSales"));
@@ -161,6 +154,7 @@ const OlympiaProbateEstate = lazy(() => import("./pages/OlympiaProbateEstate"));
 const BellinghamProbateEstate = lazy(() => import("./pages/BellinghamProbateEstate"));
 const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
 const Calculators = lazy(() => import("./pages/Calculators"));
+const Privacy = lazy(() => import("./pages/Privacy"));
 const EmbedCalculators = lazy(() => import("./pages/EmbedCalculators"));
 const CostOfCareEmbedPage = lazy(() => import("./pages/embed/CostOfCareEmbedPage"));
 const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
@@ -246,7 +240,6 @@ const AFHCareClassifications = lazy(() => import("./pages/AFHCareClassifications
 const AFHCBHSTiers = lazy(() => import("./pages/AFHCBHSTiers"));
 const AFHValuationEstimator = lazy(() => import("./pages/AFHValuationEstimator"));
 const AFHCostByLocation = lazy(() => import("./pages/AFHCostByLocation"));
-const queryClient = new QueryClient();
 const AFHResources = lazy(() => import("./pages/AFHResources"));
 const AFHSiteMap = lazy(() => import("./pages/AFHSiteMap"));
 const AFHOwnershipStructure = lazy(() => import("./pages/AFHOwnershipStructure"));
@@ -752,20 +745,25 @@ const Router = ({ location, children }: { location?: string; children: ReactNode
   location ? <StaticRouter location={location}>{children}</StaticRouter> : <BrowserRouter>{children}</BrowserRouter>;
 
 /** Toast containers render differently on the server, so they mount after the
- * first browser render; until then there are no toasts to show anyway. */
+ * first browser render; until then there are no toasts to show anyway. Loaded
+ * as their own file (Oct 6, 2026) so the toast libraries are not in the first
+ * download of every page. */
+const ToastContainers = lazy(() => import("./components/ToastContainers"));
 const Toasters = () => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   return mounted ? (
-    <>
-      <Toaster />
-      <Sonner />
-    </>
+    <Suspense fallback={null}>
+      <ToastContainers />
+    </Suspense>
   ) : null;
 };
 
-const App = ({ location, client = queryClient }: { location?: string; client?: QueryClient } = {}) => (
-  <QueryClientProvider client={client}>
+/* No QueryClientProvider (removed Oct 6, 2026): nothing on the site uses
+   react-query, and the provider put its library in every page's first download.
+   If a page ever needs it, add the provider back around that page. */
+const App = ({ location }: { location?: string } = {}) => (
+  <>
     <Toasters />
     <Router location={location}>
       <ScrollToTop />
@@ -783,7 +781,7 @@ const App = ({ location, client = queryClient }: { location?: string; client?: Q
 
       <AppRoutes />
     </Router>
-  </QueryClientProvider>
+  </>
 );
 
 export default App;

@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
     <!-- Canonical host fallback (Sept 25 2026). Search Console showed
          www.realpropertyplanning.com indexed as a separate site, splitting
          every page's signal. The real fix is a 301 at the host (Lovable
@@ -13,12 +12,24 @@
         location.replace("https://realpropertyplanning.com" + location.pathname + location.search + location.hash);
       }
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0X2GPKCW65"></script>
+    <!-- Google Analytics. The page view is queued at once; the gtag library
+         itself loads after the page has finished loading (Oct 6, 2026), so its
+         ~150 KB of script no longer competes with the page on a phone. Queued
+         events are sent when it arrives. A visitor who leaves before the page
+         finishes loading is no longer counted. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-0X2GPKCW65');
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-0X2GPKCW65';
+          document.head.appendChild(s);
+        }, 0);
+      });
     </script>
     <meta name="google-site-verification" content="WqzgPFUggfXVdfdb1HYv-dQdznpmIejwblRWHLJGvRc" />
     <meta charset="UTF-8" />
