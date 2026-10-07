@@ -206,6 +206,7 @@ export const RPP_SITE_MAP: SiteMapSection[] = dedupe([
         links: [
           { title: "Cost of Care Calculator (all care types)", href: "/cost-of-care-calculator" },
           ...CARE_CALCULATORS.map((c) => ({ title: `${c.shortLabel} Cost Calculator`, href: `/cost-of-care-calculator/${c.slug}` })),
+          { title: "Add the Calculator to Your Website", href: "/calculators/embed" },
         ],
       },
     ],
@@ -374,4 +375,5 @@ export const SITE_MAP_EXCLUDED: Record<string, string> = {
   "/": "the homepage; both maps link to it from their introductions",
   "/sitemap": "this page",
   "/afh-club/site-map": "this page",
+  "/embed/cost-of-care": "noindex calculator page other websites frame; the share page, /calculators/embed, is on the map",
 };

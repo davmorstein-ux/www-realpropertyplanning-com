@@ -38,10 +38,16 @@ const KEEP_UPPER = new Set([
   "CPA", "CPAS", "POA", "FAQ", "WA", "AFH", "AFHS",
   "LLC", "PLLC",
   "II", "III", "IV", "VI", "VII", "VIII", "IX", "XI", "XII",
+  /* Street directions in listing addresses ("10702 SE 318th Place" was
+     rendering as "Se 318Th", Oct 6, 2026). */
+  "NE", "NW", "SE", "SW",
 ]);
 
 const capitalizeWord = (part: string): string => {
   const lowered = part.toLowerCase();
+  /* A word that starts with a digit keeps its letters lowercase: "1st",
+     "318th", "6-bed". Capitalising the first letter gave "1St" and "318Th". */
+  if (/^[^A-Za-z]*\d/.test(part)) return lowered;
   const idx = lowered.search(/[a-z]/);
   if (idx === -1) return part;
   return lowered.slice(0, idx) + lowered.charAt(idx).toUpperCase() + lowered.slice(idx + 1);

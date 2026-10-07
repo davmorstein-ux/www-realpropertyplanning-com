@@ -363,6 +363,35 @@ const Header = () => {
                     ))}
                   </Link>
                 ))}
+                {/* Phones: search behind an icon, like desktop (Oct 6, 2026). The
+                    always-open field took a fifth of the first screen on every
+                    page; it opens in the row below when tapped. */}
+                <button
+                  type="button"
+                  onClick={() => setSearchOpen((v) => !v)}
+                  aria-expanded={searchOpen}
+                  aria-label={searchOpen ? "Close site search" : "Search the site"}
+                  className="rpp-header-search-toggle"
+                  style={{
+                    width: 44,
+                    minWidth: 44,
+                    height: 44,
+                    borderRadius: 6,
+                    border: "1px solid rgba(39,36,33,0.25)",
+                    background: searchOpen ? "#272421" : "transparent",
+                    color: searchOpen ? "#fff" : "#272421",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                    padding: 0,
+                  }}
+                >
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                    <circle cx="11" cy="11" r="7" />
+                    <path d="m20 20-3.5-3.5" />
+                  </svg>
+                </button>
                 <a href="tel:2069003015"
                   className="rpp-header-phone"
                   style={{
@@ -412,9 +441,11 @@ const Header = () => {
               </div>
             </nav>
 
-            <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(39,36,33,0.12)" }}>
-              <SiteSearchBar />
-            </div>
+            {searchOpen && (
+              <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(39,36,33,0.12)" }}>
+                <SiteSearchBar autoFocus />
+              </div>
+            )}
           </>
         ) : (
           <>
@@ -512,7 +543,7 @@ const Header = () => {
                       zIndex: 60,
                     }}
                   >
-                    <SiteSearchBar />
+                    <SiteSearchBar autoFocus />
                   </div>
                 )}
                 {/* The header's one action, in the hub's voice. */}
@@ -607,10 +638,10 @@ const Header = () => {
         )}
       </header>
       {/* Holds the fixed mobile header's place in the flow. Height comes from the
-          measured --header-height; 136px is the real mobile height, used only
-          for the first paint before measurement so nothing jumps. */}
+          measured --header-height; 70px is the real mobile height with search
+          closed, used only for the first paint before measurement. */}
       {isMobile && (
-        <div aria-hidden="true" data-header-spacer="" style={{ height: "var(--header-height, 136px)", flexShrink: 0 }} />
+        <div aria-hidden="true" data-header-spacer="" style={{ height: "var(--header-height, 70px)", flexShrink: 0 }} />
       )}
       {/* AFH Club quick links: renders only on AFH Club pages (owner, Oct 1, 2026). */}
       <AFHClubQuickLinks />

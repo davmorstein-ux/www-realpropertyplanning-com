@@ -25,6 +25,8 @@ import AGING_PARENT_ROUTES from "./src/data/agingParentRoutes.json";
 import { FAMILY_SALE, FS_PRERENDER_SECTIONS, FS_FAQS } from "./src/data/familySaleEstate";
 import { STAY_HOME, SH_PRERENDER_SECTIONS, SH_FAQS } from "./src/data/stayHomeCost";
 import { FIFTY_FIVE, FP_PRERENDER_SECTIONS, FP_FAQS } from "./src/data/fiftyFivePlus";
+import { CARE_CALCULATORS } from "./src/lib/careCalculators";
+import { EMBED_BASE } from "./src/lib/calculatorEmbed";
 import { EDITIONS as AFH_EDITIONS, LATEST as AFH_LATEST, LATEST_CHANGES as AFH_CHANGES, editionTitle, editionSummary, editionSections, editionPath, longDate as mktDate } from "./src/data/afhMarketReport";
 import { MEDICAID_AND_THE_HOME, MTH_PRERENDER_SECTIONS, MTH_FAQS } from "./src/data/medicaidAndTheHome";
 import { BEFORE_YOU_BUY, BYB_PRERENDER_SECTIONS, BYB_FAQS } from "./src/data/afhBeforeYouBuy";
@@ -1102,6 +1104,24 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerA: "Eleven free calculators in two groups. For families, six cost-of-care calculators, one each for memory care, independent living, in-home care, nursing homes, assisted living, and adult family homes. For people buying, owning or investing in a Washington adult family home, five tools: the AFH Property Score, an ROI calculator, a valuation estimator, an occupancy and financing calculator, and a lookup of costs by city and county. None asks for contact details.",
     intro: "Every calculator on the site, grouped by who it is for. Families choosing care and people buying or running an adult family home have different questions, so the two groups are kept separate, and each links on to its own section.",
   },
+  "/calculators/embed": {
+    title: "Add the Cost of Care Calculator to Your Website | Real Property Planning",
+    description: "Put Real Property Planning's free Washington cost of care calculator on your own website: assisted living, memory care, adult family homes, in-home care, nursing homes and independent living. Copy one piece of code. No sign-up, no ads.",
+    h1: "Add the Cost of Care Calculator to Your Website",
+    intro: "Placement advisors, elder law and estate planning offices, home care agencies, adult family homes, senior centers and churches can put the free Washington cost of care calculator on their own websites. Choose all six care types or just one, preview it, and copy one piece of code into a page. No sign-up, no ads, and nothing is collected from the people who use it. The adult family home version includes DSHS Medicaid rates and licensed homes by Washington city and county.",
+  },
+  /* The framed calculator pages other websites embed (Oct 6, 2026): noindex,
+     no header or footer (src/pages/embed/CostOfCareEmbedPage.tsx). */
+  [EMBED_BASE]: {
+    title: "Cost of Care Calculator (embed) | Real Property Planning",
+    description: "The Washington cost of care calculator from Real Property Planning, as embedded on other websites.",
+    noIndex: true,
+  },
+  ...Object.fromEntries(CARE_CALCULATORS.map((o) => [`${EMBED_BASE}/${o.slug}`, {
+    title: `${o.shortLabel} Cost Calculator (embed) | Real Property Planning`,
+    description: "The Washington cost of care calculator from Real Property Planning, as embedded on other websites.",
+    noIndex: true,
+  }])),
   "/afh-club/afh-property-score": {
     title: "AFH Property Score: Could This House Work as an Adult Family Home? | AFH Club",
     description: "A free screen for Washington adult family home buyers that takes three to five minutes. Answer questions from the listing and get a 100-point physical suitability score, a feasibility check, the likely conversion projects, and a tape-measure checklist for the showing.",

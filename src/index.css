@@ -4978,6 +4978,17 @@ h2.rpp-hero-band-text.rpp-hero-band-text {
   text-transform: none !important;
 }
 
+/* Phones (Oct 6, 2026): the 32px floor wrapped long titles (a listing address,
+   "What It Costs to Live in an Adult Family Home, by City and County") to four
+   lines and filled the first screen. Slightly smaller, still well above body. */
+@media (max-width: 640px) {
+  h1.rpp-hero-band-text.rpp-hero-band-text,
+  h2.rpp-hero-band-text.rpp-hero-band-text {
+    font-size: clamp(25px, 6.8vw, 30px) !important;
+    line-height: 1.16 !important;
+  }
+}
+
 div.rpp-hero-band-text.rpp-hero-band-text,
 span.rpp-hero-band-text.rpp-hero-band-text {
   font-family: "DM Sans", system-ui, sans-serif !important;

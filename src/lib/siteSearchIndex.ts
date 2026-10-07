@@ -83,6 +83,7 @@ export const siteSearchIndex: SearchEntry[] = [
   { path: "/clark-county", label: "Clark County" },
   { path: "/contact", label: "Contact" },
   { path: "/cost-of-care-calculator", label: "Cost Of Care Calculator" },
+  { path: "/calculators/embed", label: "Add the Cost of Care Calculator to Your Website" },
   { path: "/counties", label: "Counties" },
   { path: "/cowlitz-county", label: "Cowlitz County" },
   { path: "/date-of-death-valuation-property-appraisals", label: "Date Of Death Valuation Property Appraisals" },

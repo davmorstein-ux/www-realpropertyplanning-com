@@ -1,4 +1,4 @@
-import { CARE_TYPES, type CareType } from "@/lib/careTypes";
+import { CARE_TYPES, type CareType } from "./careTypes"; // relative: vite.config.ts imports this file
 
 /**
  * The six housing options shown on the Cost of Care calculator hub, the

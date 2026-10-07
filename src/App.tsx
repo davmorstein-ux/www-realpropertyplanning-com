@@ -161,6 +161,8 @@ const OlympiaProbateEstate = lazy(() => import("./pages/OlympiaProbateEstate"));
 const BellinghamProbateEstate = lazy(() => import("./pages/BellinghamProbateEstate"));
 const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
 const Calculators = lazy(() => import("./pages/Calculators"));
+const EmbedCalculators = lazy(() => import("./pages/EmbedCalculators"));
+const CostOfCareEmbedPage = lazy(() => import("./pages/embed/CostOfCareEmbedPage"));
 const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
 const GrayDivorce = lazy(() => import("./pages/GrayDivorce"));
 const BookkeepingServices = lazy(() => import("./pages/BookkeepingServices"));
@@ -490,6 +492,11 @@ export const AppRoutes = () => (
       {/* Twenty pages live under /guides/..., so a trimmed URL should land on the library, not a 404. */}
       {/* Every calculator on the site, in two groups. Destination of the homepage "10+ calculators" figure. */}
       <Route path="/calculators" element={<Calculators />} />
+      {/* Embeddable Cost of Care calculator (Oct 6, 2026): the share page, and the
+          noindex pages other websites frame. See src/lib/calculatorEmbed.ts. */}
+      <Route path="/calculators/embed" element={<EmbedCalculators />} />
+      <Route path="/embed/cost-of-care" element={<CostOfCareEmbedPage />} />
+      <Route path="/embed/cost-of-care/:careSlug" element={<CostOfCareEmbedPage />} />
       <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
       <Route path="/guides/what-executors-should-do" element={<WhatExecutorsShouldDo />} />
       <Route path="/guides/appraisal-vs-cma" element={<AppraisalVsCma />} />

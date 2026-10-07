@@ -80,6 +80,9 @@ const Calculators = () => (
           <Link to="/cost-of-care-calculator" className="rpp-calcs-more bg-transparent" style={{ color: "#0f5f57" }}>
             Compare all care options side by side
           </Link>
+          <p className="rpp-calcs-p" style={{ fontFamily: FONT, color: INK, paddingTop: 14 }}>
+            Work with families? <Link to="/calculators/embed" style={{ color: "#0f5f57", fontWeight: 700, textDecoration: "underline" }}>Put the cost of care calculator on your own website</Link>, free.
+          </p>
         </div>
       </section>
 

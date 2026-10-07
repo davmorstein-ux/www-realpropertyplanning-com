@@ -10,7 +10,7 @@ import { siteSearchIndex } from "@/lib/siteSearchIndex";
  * since this site's visitors skew older and shouldn't have to figure
  * out a hidden search feature.
  */
-const SiteSearchBar = () => {
+const SiteSearchBar = ({ autoFocus = false }: { autoFocus?: boolean } = {}) => {
   const [query, setQuery] = useState("");
   const [showResults, setShowResults] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -84,6 +84,7 @@ const SiteSearchBar = () => {
             setShowResults(true);
           }}
           onFocus={() => setShowResults(true)}
+          autoFocus={autoFocus}
           placeholder="Search for a page…"
           aria-label="Search this site"
           style={{

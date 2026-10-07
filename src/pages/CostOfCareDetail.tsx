@@ -126,6 +126,9 @@ const CostOfCareDetail = () => {
                     See all six side by side
                   </Link>
                 </p>
+                <p className="text-muted-foreground text-base leading-relaxed mt-3 text-center">
+                  Work with families? <Link to="/calculators/embed" className="text-accent underline underline-offset-4">Add this calculator to your website</Link>, free.
+                </p>
               </section>
             </div>
           </div>

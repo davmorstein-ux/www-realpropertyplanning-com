@@ -50,31 +50,27 @@
          page, empty console, nothing to debug. Describe tags in words. -->
     <link rel="manifest" href="/site.webmanifest?v=2" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <!-- ONE family, DM Sans, served from this site (Oct 6, 2026).
 
-    <!-- ONE family. DM Sans only.
+         It used to load from Google Fonts: two render-blocking stylesheets on
+         another domain (DM Sans, plus Courier Prime, which nothing used after
+         the Sept 2026 tagline change), costing a phone roughly 0.75s before
+         the first paint. The files in public/fonts/ are the same variable font
+         (weight 100-1000 and optical size, as Google served it) from
+         @fontsource-variable/dm-sans 5.3.0, under the SIL Open Font License
+         (public/fonts/DM-Sans-OFL.txt). Latin is preloaded; latin-ext and
+         italics load only when a page uses them. If the files are ever
+         replaced, give them a new -vN name: they are cached for a year.
 
-         Source Serif 4 was loaded here briefly, giving serif headings over a
-         DM Sans interface. Dropped by preference: the site runs on a single
-         face and takes hierarchy from size and weight.
-
-         Removing a family from this line is only half the job. The `serif`
-         token in tailwind.config.ts drives 209 files of headings; when that
-         token pointed at Source Serif 4 while this line did not load it, every
-         heading fell through to the Georgia fallback for four days without
-         anyone noticing. Token and font load must agree.
-
-         Cormorant Garamond stays gone — a third family doing a job the others
-         already covered. -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap" />
-    <!-- Courier Prime 700, ONE weight, homepage hero tagline only. This is the
-         only non-DM Sans face on the site; see the comment on
-         main #rpp-tagline .rpp-tagline-line-v2 in index.css for why. Do not
-         add weights or apply it anywhere else. -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" />
+         Token and font load must agree: tailwind.config.ts and index.css name
+         'DM Sans', which is the family declared here. -->
+    <link rel="preload" href="/fonts/dm-sans-latin-opsz-normal-v5.woff2" as="font" type="font/woff2" crossorigin />
+    <style>
+      @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 100 1000; font-display: swap; src: url(/fonts/dm-sans-latin-opsz-normal-v5.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+      @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 100 1000; font-display: swap; src: url(/fonts/dm-sans-latin-ext-opsz-normal-v5.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+      @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 100 1000; font-display: swap; src: url(/fonts/dm-sans-latin-opsz-italic-v5.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+      @font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 100 1000; font-display: swap; src: url(/fonts/dm-sans-latin-ext-opsz-italic-v5.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+    </style>
 
     <!-- Organization + WebSite only (Sept 27, 2026). Not LocalBusiness: the hub provides no services. Keep in step with hubOrganizationSchema in src/lib/schema.ts. -->
     <script type="application/ld+json">
